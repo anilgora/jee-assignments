@@ -1,0 +1,144 @@
+{
+ "title": "PRT 06 — Paper Analysis (sample excerpt: Q4, Q10, Q11)",
+ "subtitle": "Paper 01 · detailed solutions",
+ "source": "PRT_06_Paper_01.pdf (solutions as printed in the PDF) + Question_Paper_Blueprint_v1.xlsx",
+ "questions": [
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Maximum and minimum distance of a point from a circle"
+   ],
+   "level": 1,
+   "question": "Let $P$ be a point on the line $3x-4y+25=0$ such that its distance from the centre of the circle $C: x^2+y^2-2x-4y+1=0$ is minimum. If $M$ and $m$ are the maximum and minimum distances, respectively, of the point $P$ from the circle $C$, then the value of $M+2m$ is equal to:",
+   "options": [
+    "$14$",
+    "$12$",
+    "$8$",
+    "$10$"
+   ],
+   "answer": "(D) 10",
+   "key_idea": "The nearest point of the line to the centre is at distance $d$; then $M=d+r$ and $m=d-r$.",
+   "solution": [
+    "The circle is $C: x^2+y^2-2x-4y+1=0$. Its centre is $A=(1,2)$ and its radius is $R=\\sqrt{1^2+2^2-1}=2$.",
+    "The point $P$ on the line $3x-4y+25=0$ that is closest to the centre $A$ is the foot of the perpendicular from $A$ to this line.",
+    "The distance $AP$ is the perpendicular distance of $A(1,2)$ from the line: $AP=\\frac{|3(1)-4(2)+25|}{\\sqrt{3^2+(-4)^2}}=\\frac{20}{5}=4$.",
+    "Since $AP=4>R=2$, the point $P$ lies outside the circle.",
+    "The maximum distance of $P$ from the circle is $M=AP+R=4+2=6$.",
+    "The minimum distance of $P$ from the circle is $m=AP-R=4-2=2$.",
+    "Therefore $M+2m=6+2(2)=10$."
+   ],
+   "solution_source": "pdf"
+  },
+  {
+   "q_no": 10,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Types of relations"
+   ],
+   "level": 3,
+   "paragraph": "Paragraph: Let $A=\\{1,2,3,4\\}$ and $X=\\mathcal{P}(A)\\setminus\\{\\emptyset\\}$. On $X$: $R_1=\\{(A_1,A_2): A_1\\cap A_2\\neq\\emptyset\\}$ and $R_2=\\{(A_1,A_2): |A_1\\Delta A_2|\\le1\\}$, where $\\Delta$ is the symmetric difference.",
+   "question": "The total number of ordered pairs $(A_1,A_2)\\in X\\times X$ belonging to $R_1\\cap R_2$ is:",
+   "options": [
+    "$56$",
+    "$71$",
+    "$75$",
+    "$83$"
+   ],
+   "answer": "(B) 71",
+   "key_idea": "$|A_1\\Delta A_2|=1$ means one set is the other plus exactly one element.",
+   "solution": [
+    "We need the number of ordered pairs $(A_1,A_2)\\in X\\times X$ with $A_1\\cap A_2\\neq\\emptyset$ and $|A_1\\Delta A_2|\\le 1$.",
+    "Case 1: $|A_1\\Delta A_2|=0$, i.e. $A_1=A_2$. Since $A_1\\in X$, $A_1\\neq\\emptyset$, so $A_1\\cap A_1\\neq\\emptyset$ holds automatically.",
+    "The number of choices for $A_1$ is $2^4-1=15$, so this case gives $15$ pairs.",
+    "Case 2: $|A_1\\Delta A_2|=1$. One set contains exactly one element more than the other, and it contains the smaller set as a subset.",
+    "Both sets are non-empty, so their intersection equals the smaller set, which is non-empty; hence $A_1\\cap A_2\\neq\\emptyset$ is automatically satisfied.",
+    "Subcase 2a: $A_2=A_1\\cup\\{x\\}$ with $x\\notin A_1$. Let $|A_1|=k$ with $1\\le k\\le 3$. There are $\\binom{4}{k}$ choices for $A_1$ and $4-k$ choices for $x$.",
+    "Total pairs $=\\sum_{k=1}^{3}\\binom{4}{k}(4-k)=\\binom{4}{1}(3)+\\binom{4}{2}(2)+\\binom{4}{3}(1)=12+12+4=28$.",
+    "Subcase 2b: $A_1=A_2\\cup\\{x\\}$ with $x\\notin A_2$. By symmetry this also gives $28$ pairs.",
+    "Total number of ordered pairs in $R_1\\cap R_2$ is $15+28+28=71$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat subsets of $\\{1,2,3,4\\}$ as the vertices of a 4-dimensional cube; $|A_1\\Delta A_2|=1$ means the two vertices are joined by an edge.",
+     "solution": [
+      "Write each subset as a 0–1 string of length 4. Then $|A_1\\Delta A_2|$ is the number of places where the strings differ, so $|A_1\\Delta A_2|=1$ exactly when the vertices are adjacent in the 4-cube.",
+      "The 4-cube has $\\frac{16\\cdot 4}{2}=32$ edges (16 vertices, 4 neighbours each, every edge counted twice).",
+      "$A_1,A_2$ must be non-empty, so discard the $4$ edges at the empty set: $32-4=28$ unordered adjacent pairs.",
+      "Each unordered pair gives $2$ ordered pairs: $2\\times 28=56$.",
+      "Add the $15$ pairs with $A_1=A_2$ (every non-empty set).",
+      "For adjacent non-empty sets the intersection is the smaller set, so $A_1\\cap A_2\\neq\\emptyset$ always holds.",
+      "Hence the total is $56+15=71$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|A\\Delta B|=|A|+|B|-2|A\\cap B|$, so $|A\\Delta B|=1$ exactly when one set is the other plus a single element.",
+    "Subsets of an $n$-set are the vertices of the $n$-cube, and $|A\\Delta B|$ is the distance between them. The number of pairs at distance $1$ is $n\\,2^{n-1}$.",
+    "Pairs at distance exactly $d$: $2^{\\,n-1}\\binom{n}{d}$ unordered pairs.",
+    "Identity behind the case method: $\\sum_{k=0}^{n}\\binom{n}{k}(n-k)=n\\,2^{n-1}$. For $n=4$ the term $k=0$ is $4$, so $\\sum_{k=1}^{3}=32-4=28$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Tangents, normals and chord of contact of a circle"
+   ],
+   "level": 3,
+   "question": "Consider concentric circles $C_1: x^2+y^2=9$ and $C_2: x^2+y^2=18$. From a point $P$ on $C_2$, tangents $PA$ and $PB$ are drawn to $C_1$. Let $N_A$, $N_B$ be the normals to $C_1$ at $A$ and $B$. A line $L$ through $P$ parallel to the chord of contact $AB$ meets $N_A$ and $N_B$ at $D$ and $E$. If $O$ is the origin and $K=\\frac{\\text{area of }\\triangle ODE}{\\text{area of }\\triangle PAB}$, then $K$ is equal to:",
+   "answer": "4",
+   "key_idea": "$OP=r\\sqrt{2}$ makes the tangents perpendicular, so $OAPB$ is a square.",
+   "solution": [
+    "$C_1: x^2+y^2=9$ has radius $r_1=3$ and $C_2: x^2+y^2=18$ has radius $r_2=3\\sqrt2$. Let $P$ be any point of $C_2$, so $OP=3\\sqrt2$.",
+    "$PA$ touches $C_1$ at $A$, so $\\triangle OAP$ is right-angled at $A$. $\\cos(\\angle AOP)=\\frac{OA}{OP}=\\frac{3}{3\\sqrt2}=\\frac{1}{\\sqrt2}\\Rightarrow\\angle AOP=45^\\circ$.",
+    "Similarly $\\angle APO=45^\\circ$ and $PA=\\sqrt{OP^2-OA^2}=\\sqrt{18-9}=3$.",
+    "By symmetry $\\angle BOP=45^\\circ$, $\\angle BPO=45^\\circ$ and $PB=3$. Therefore $\\angle APB=\\angle APO+\\angle BPO=90^\\circ$.",
+    "Area of $\\triangle PAB=\\frac12\\cdot PA\\cdot PB\\cdot\\sin90^\\circ=\\frac12\\cdot3\\cdot3\\cdot1=\\frac92$.",
+    "The normals $N_A$ and $N_B$ to $C_1$ at $A$ and $B$ pass through the centre $O$, so $N_A$ is the line $OA$ and $N_B$ is the line $OB$.",
+    "$OP\\perp AB$ and $L$ is parallel to $AB$ through $P$, so $L\\perp OP$ at $P$.",
+    "In the right triangle $OPD$ (right angle at $P$): $\\tan(\\angle POD)=\\frac{PD}{OP}\\Rightarrow\\tan45^\\circ=\\frac{PD}{3\\sqrt2}\\Rightarrow PD=3\\sqrt2$.",
+    "By symmetry $PE=3\\sqrt2$, so $DE=PD+PE=6\\sqrt2$.",
+    "Area of $\\triangle ODE=\\frac12\\cdot DE\\cdot OP=\\frac12\\cdot6\\sqrt2\\cdot3\\sqrt2=18$.",
+    "The required ratio is $K=\\frac{\\text{Area}(\\triangle ODE)}{\\text{Area}(\\triangle PAB)}=\\frac{18}{9/2}=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Every point of $C_2$ gives a congruent figure, so choose $P=(3,3)$ and work in coordinates.",
+     "solution": [
+      "$P=(3,3)$ lies on $C_2$ because $3^2+3^2=18$.",
+      "The tangents from $P$ to $x^2+y^2=9$ are $x=3$ and $y=3$, touching at $A=(3,0)$ and $B=(0,3)$.",
+      "The normals at $A$ and $B$ pass through $O$: $N_A$ is the $x$-axis and $N_B$ is the $y$-axis. The chord of contact is $AB: x+y=3$.",
+      "$L$ passes through $P$ parallel to $AB$: $x+y=6$. It meets $N_A\\,(y=0)$ at $D=(6,0)$ and $N_B\\,(x=0)$ at $E=(0,6)$.",
+      "Area of $\\triangle ODE=\\frac12\\cdot6\\cdot6=18$ and area of $\\triangle PAB=\\frac12\\cdot3\\cdot3=\\frac92$ (right angle at $P$).",
+      "$K=18\\div\\frac92=4$."
+     ]
+    },
+    {
+     "idea": "$\\triangle ODE$ is $\\triangle OAB$ enlarged by a factor $2$ about $O$, and $\\triangle OAB$ has the same area as $\\triangle PAB$.",
+     "solution": [
+      "$OP=3\\sqrt2=\\sqrt2\\,r_1$, so the tangents from $P$ are perpendicular and $OAPB$ is a square of side $3$.",
+      "$AB$ is a diagonal of this square, so it is the perpendicular bisector of $OP$. Reflection in $AB$ swaps $O$ and $P$, hence $\\triangle PAB\\cong\\triangle OAB$ and $[PAB]=[OAB]$.",
+      "$AB$ is at distance $\\frac{OP}{2}$ from $O$, while $L$ (perpendicular to $OP$ at $P$) is at distance $OP$ from $O$.",
+      "$D$ and $E$ lie on $OA$ and $OB$, and $DE\\parallel AB$. So $\\triangle ODE$ is the image of $\\triangle OAB$ under the enlargement with centre $O$ and ratio $\\frac{OP}{OP/2}=2$.",
+      "Therefore $[ODE]=2^2[OAB]=4[OAB]=4[PAB]$, i.e. $K=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $OP=\\sqrt2\\,r$, the two tangents from $P$ are perpendicular and $OAPB$ is a square of side $r$.",
+    "Tangent length from $P$ at distance $d$ from the centre: $PA=\\sqrt{d^2-r^2}$. The chord of contact is the polar of $P$ (equation $T=0$).",
+    "The chord of contact is at distance $\\frac{r^2}{d}$ from the centre; its length is $\\frac{2r\\sqrt{d^2-r^2}}{d}$.",
+    "Area of the triangle formed by the two tangents and the chord of contact: $\\frac{r\\,(d^2-r^2)^{3/2}}{d^2}$. Here $d=3\\sqrt2,\\ r=3$ gives $\\frac{3\\cdot27}{18}=\\frac92$."
+   ]
+  }
+ ]
+}
