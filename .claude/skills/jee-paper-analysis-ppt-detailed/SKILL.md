@@ -1,5 +1,5 @@
 ---
-name: "jee-paper-analysis-ppt-detailed"
+name: jee-paper-analysis-ppt-detailed
 description: Build the user's "Paper Analysis" PowerPoint (title slide, section dividers, question slides with calibrated difficulty level, difficulty table, summary, difficulty profile, comparison with JEE Advanced papers) with COMPLETE step-by-step solutions copied from the paper's PDF (verified, and corrected where the PDF is wrong) instead of concise ones, plus optional "Alternate Solution" slides and "Useful Result / Pattern" slides for the specific question numbers the user asks for. Produces a content JSON and a Python script the user runs from the terminal. Use whenever the user wants the paper-analysis PPT with detailed, complete or full solutions, or with alternate/elegant solutions, shortcuts, results or patterns for chosen questions. For the standard deck with concise solutions use jee-paper-analysis-ppt instead.
 ---
 

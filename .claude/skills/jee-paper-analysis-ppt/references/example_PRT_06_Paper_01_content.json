@@ -1,0 +1,420 @@
+{
+ "title": "PRT 06 — Paper Analysis",
+ "subtitle": "Paper 01",
+ "source": "PRT_06_Paper_01.pdf + Question_Paper_Blueprint_v1.xlsx",
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Angle between circles and diametrical form of a circle"
+   ],
+   "level": 3,
+   "question": "Consider two circles $S_1: x^2+y^2-2x-4y+4=0$ and $S_2: x^2+y^2-6x-2y+6=0$ in the $xy$-plane. A variable line $L$ passing through the origin with slope $m$ intersects $S_1$ at two distinct real points $P$ and $Q$. Let $C$ be the circle described on $PQ$ as a diameter. If $C$ cuts $S_2$ orthogonally, then the value of $m$ is:",
+   "options": [
+    "$\\frac{1}{3}$",
+    "$2$",
+    "$\\frac{7}{3}$",
+    "$3$"
+   ],
+   "answer": "(B) 2",
+   "key_idea": "The circle on $PQ$ as diameter is $S_1+\\lambda L=0$ with its centre on $L$; then apply the orthogonality condition.",
+   "solution": [
+    "Centre of $S_1$ is $C_1(1,2)$, radius $R_1=\\sqrt{1+4-4}=1$. Line $L: y=mx$.",
+    "Two distinct points: distance of $C_1$ from $L$ is less than 1, i.e. $\\frac{|m-2|}{\\sqrt{1+m^2}}<1 \\Rightarrow m>\\frac{3}{4}$.",
+    "Circle through $P, Q$: $x^2+y^2-2x-4y+4+\\lambda(mx-y)=0$, centre $\\left(1-\\frac{\\lambda m}{2},\\, 2+\\frac{\\lambda}{2}\\right)$.",
+    "$PQ$ is a diameter, so the centre lies on $y=mx$: $\\lambda=\\frac{2(m-2)}{1+m^2}$.",
+    "Orthogonality with $S_2$: $2g_1g_2+2f_1f_2=c_1+c_2$ simplifies to $3m^2-7m+2=0$, so $m=2$ or $m=\\frac{1}{3}$.",
+    "$m=\\frac{1}{3}$ violates $m>\\frac{3}{4}$, hence $m=2$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Venn diagram based problems",
+    "Reflexive, symmetric, transitive and antisymmetric relations"
+   ],
+   "level": 3.5,
+   "question": "Let $U$ be a universal set with $n(U)=100$. Consider non-empty sets $A, B, C \\subseteq U$ with $n(A\\cup B\\cup C)=75$, $n(A\\cap B\\cap C)=10$, $n(A\\cap B)=22$, $n(B\\cap C)=28$, $n(C\\cap A)=20$ and $n(A):n(B):n(C)=4:5:6$. Define $Y_1=A\\setminus B$, $Y_2=B\\setminus C$, $Y_3=C\\setminus A$, $Y_4=(A\\cap B)\\cup(B\\cap C)\\cup(C\\cap A)$ and $S=\\{Y_1,Y_2,Y_3,Y_4\\}$. A relation $R$ on $S$ is defined by $Y_iRY_j \\iff n(Y_i\\setminus Y_j)$ is an even integer. Which statement is CORRECT?",
+   "options": [
+    "$R$ is reflexive and transitive, but neither symmetric nor antisymmetric.",
+    "$R$ is an equivalence relation.",
+    "$R$ is reflexive and symmetric, but not transitive.",
+    "$R$ is a partial order relation."
+   ],
+   "answer": "(A)",
+   "key_idea": "Convert the data into the seven Venn regions first; every $n(Y_i\\setminus Y_j)$ is then just a sum of regions.",
+   "solution": [
+    "Inclusion–exclusion: $n(A)+n(B)+n(C)=75+22+28+20-10=135$; with ratio $4:5:6$: $n(A)=36$, $n(B)=45$, $n(C)=54$.",
+    "Regions: $A$ only $=4$, $B$ only $=5$, $C$ only $=16$; exactly $A\\cap B=12$, $B\\cap C=18$, $C\\cap A=10$; $A\\cap B\\cap C=10$.",
+    "$n(Y_1)=14$, $n(Y_2)=17$, $n(Y_3)=34$, $n(Y_4)=50$. Reflexive: $n(Y_i\\setminus Y_i)=0$ is even.",
+    "Not symmetric: $n(Y_1\\setminus Y_2)=14$ (even) but $n(Y_2\\setminus Y_1)=17$ (odd).",
+    "Not antisymmetric: $n(Y_1\\setminus Y_3)=14$ and $n(Y_3\\setminus Y_1)=34$ are both even, yet $Y_1\\neq Y_3$.",
+    "$Y_2$ is related to no other set ($17$, $17$, $5$ are odd), and every other ordered pair is related, so $R$ is transitive. Hence (A)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Simplification of inverse trigonometric expressions by trigonometric substitutions",
+    "Orthogonality of two circles"
+   ],
+   "level": 2,
+   "question": "For $x\\in(0,1)$, let $f(x)=\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)+\\frac{1}{4}\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)$. Let $\\alpha=f\\left(\\frac{1}{2}\\right)$ and $\\beta=f\\left(\\frac{1}{3}\\right)$. A circle $C_1$ has its centre at $(h,k)$, where $h=\\tan(\\alpha+\\beta)$ and $k=\\cot(\\alpha-\\beta)$. If $C_1$ passes through $(1,1)$ and cuts $C_2: x^2+y^2-6x+4y+p=0$ orthogonally, then the radius of $C_2$ is equal to:",
+   "options": [
+    "$6$",
+    "$\\sqrt{85}$",
+    "$7$",
+    "$8$"
+   ],
+   "answer": "(C) 7",
+   "key_idea": "With $x=\\tan\\theta$ both terms equal $\\frac{\\theta}{2}$, so $f(x)=\\tan^{-1}x$.",
+   "solution": [
+    "Put $x=\\tan\\theta$, $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)$: $\\tan^{-1}\\left(\\frac{\\sec\\theta-1}{\\tan\\theta}\\right)=\\tan^{-1}\\left(\\tan\\frac{\\theta}{2}\\right)=\\frac{\\theta}{2}$.",
+    "$\\frac{1}{4}\\sin^{-1}(\\sin 2\\theta)=\\frac{\\theta}{2}$, so $f(x)=\\theta=\\tan^{-1}x$.",
+    "$\\alpha=\\tan^{-1}\\frac{1}{2}$, $\\beta=\\tan^{-1}\\frac{1}{3}$: $h=\\tan(\\alpha+\\beta)=1$, $\\tan(\\alpha-\\beta)=\\frac{1}{7}$ so $k=7$.",
+    "$C_1$: centre $(1,7)$ through $(1,1)$, radius $6$.",
+    "Orthogonality: $(1-3)^2+(7+2)^2=6^2+r_2^2 \\Rightarrow 85=36+r_2^2 \\Rightarrow r_2=7$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Maximum and minimum distance of a point from a circle"
+   ],
+   "level": 1,
+   "question": "Let $P$ be a point on the line $3x-4y+25=0$ such that its distance from the centre of the circle $C: x^2+y^2-2x-4y+1=0$ is minimum. If $M$ and $m$ are the maximum and minimum distances, respectively, of the point $P$ from the circle $C$, then the value of $M+2m$ is equal to:",
+   "options": [
+    "$14$",
+    "$12$",
+    "$8$",
+    "$10$"
+   ],
+   "answer": "(D) 10",
+   "key_idea": "The nearest point of the line to the centre is at distance $d$; then $M=d+r$ and $m=d-r$.",
+   "solution": [
+    "Centre $A(1,2)$, radius $r=\\sqrt{1+4-1}=2$.",
+    "$P$ is the foot of the perpendicular from $A$: $AP=\\frac{|3-8+25|}{5}=4$.",
+    "$AP=4>r$, so $P$ lies outside the circle.",
+    "$M=AP+r=6$ and $m=AP-r=2$.",
+    "$M+2m=6+4=10$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Equivalence relations and equivalence classes",
+    "One-one and many-one functions"
+   ],
+   "level": 2.5,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\frac{2x}{1+x^2}$. A relation $R$ on $\\mathbb{R}$ is defined by $aRb$ if and only if $f(a)=f(b)$. Let $[a]$ denote the equivalence class containing $a$. Which of the following statement(s) is/are CORRECT?",
+   "options": [
+    "$R$ is an equivalence relation on $\\mathbb{R}$.",
+    "The set of all $a\\in\\mathbb{R}$ for which $[a]$ is a singleton is $\\{-1,1\\}$.",
+    "The restriction $g:[-1,1]\\to[-1,1]$, $g(x)=f(x)$, is a bijection.",
+    "The equivalence class $[3]$ is $\\left\\{3,\\frac{1}{3}\\right\\}$."
+   ],
+   "answer": "(A, C, D)",
+   "key_idea": "$f(a)=f(b)\\iff b=a$ or $b=\\frac{1}{a}$, so classes are $\\left\\{a,\\frac{1}{a}\\right\\}$ - and $0$ is a class on its own.",
+   "solution": [
+    "Equality of $f$-values is reflexive, symmetric and transitive, so $R$ is an equivalence relation. (A) correct.",
+    "$f(a)=f(b) \\iff (a-b)(1-ab)=0 \\iff b=a$ or $b=\\frac{1}{a}$ (for $a\\neq0$).",
+    "Singletons: $a=\\frac{1}{a}$ gives $a=\\pm1$, and $a=0$ has no partner. So singletons are $\\{-1,0,1\\}$. (B) incorrect.",
+    "$f'(x)=\\frac{2(1-x^2)}{(1+x^2)^2}\\ge0$ on $[-1,1]$, $f(\\pm1)=\\pm1$: $g$ is a bijection. (C) correct.",
+    "$[3]=\\left\\{3,\\frac{1}{3}\\right\\}$. (D) correct."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "ITF equations and inequalities"
+   ],
+   "level": 3,
+   "question": "Consider $f:\\mathbb{R}\\setminus\\{-1,1\\}\\to\\mathbb{R}$, $f(x)=\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)+\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)-\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)$. Which statement(s) is/are CORRECT?",
+   "options": [
+    "The equation $f(x)=\\frac{\\pi}{3}$ has exactly 2 real solutions.",
+    "The range of $f(x)$ for $x\\in(-\\infty,-1)$ is $\\left(-\\frac{\\pi}{2},\\pi\\right)$.",
+    "The set of all $x$ satisfying $f(x)\\ge0$ is $(-\\infty,-\\sqrt{3}]\\cup(-1,1)\\cup(1,\\infty)$.",
+    "The equation $f(x)=\\frac{\\pi}{3}$ has exactly 3 real solutions."
+   ],
+   "answer": "(B, C, D)",
+   "key_idea": "Put $x=\\tan\\theta$ and write $f$ separately on each of the four intervals.",
+   "solution": [
+    "Put $x=\\tan\\theta$, $\\theta\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, and reduce each inverse function on each interval.",
+    "$0\\le x<1$: $f=2\\theta$; $-1<x<0$: $f=-2\\theta$; both lie in $\\left[0,\\frac{\\pi}{2}\\right)$.",
+    "$x>1$: $f=2\\pi-2\\theta\\in\\left(\\pi,\\frac{3\\pi}{2}\\right)$; $x<-1$: $f=-2\\pi-6\\theta\\in\\left(-\\frac{\\pi}{2},\\pi\\right)$. (B) correct.",
+    "$f\\ge0$ holds on $(-1,1)$ and $(1,\\infty)$; for $x<-1$ it needs $\\theta\\le-\\frac{\\pi}{3}$, i.e. $x\\le-\\sqrt{3}$. (C) correct.",
+    "$f=\\frac{\\pi}{3}$: $\\theta=\\frac{\\pi}{6}$, $\\theta=-\\frac{\\pi}{6}$ and $\\theta=-\\frac{7\\pi}{18}$ (from $x<-1$); none for $x>1$.",
+    "Exactly 3 solutions: (D) correct, (A) incorrect."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Classification of functions (onto/into) with graph transformations"
+   ],
+   "level": 4,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\lfloor x\\rfloor+(x-\\lfloor x\\rfloor)^3$, where $\\lfloor\\cdot\\rfloor$ is the greatest integer function. Which statement(s) is/are CORRECT?",
+   "options": [
+    "$g_1:\\mathbb{R}\\to[-1,\\infty)$, $g_1(x)=f(|x|-1)$ is onto.",
+    "The equation $f(3-|x+2|)=2$ has exactly three distinct real solutions.",
+    "$h:\\mathbb{R}\\to\\mathbb{R}$, $h(x)=f(x)-f(-x)$ is a bijective function.",
+    "The range of $k(x)=f(|x|)-|f(x)|$ is $\\left[-\\frac{3}{4},0\\right]$."
+   ],
+   "answer": "(A, C, D)",
+   "key_idea": "$f(x)=\\lfloor x\\rfloor+\\{x\\}^3$ is continuous and strictly increasing on $\\mathbb{R}$.",
+   "solution": [
+    "On $[n,n+1)$, $f(x)=n+\\{x\\}^3$: continuous, strictly increasing, and $f(\\mathbb{R})=\\mathbb{R}$.",
+    "(A) $u=|x|-1$ takes all values in $[-1,\\infty)$ and $f$ maps $[-1,\\infty)$ onto $[-1,\\infty)$: onto. Correct.",
+    "(B) $f(t)=2 \\iff t=2$: $3-|x+2|=2 \\Rightarrow x=-1$ or $x=-3$, only 2 solutions. Incorrect.",
+    "(C) $f$ is continuous and strictly increasing, so $-f(-x)$ is too; $h(x)=f(x)-f(-x)$ is continuous, strictly increasing and unbounded both ways: bijective. Correct.",
+    "(D) $x\\ge0$: $k=0$. For $x<0$ with $u=\\{-x\\}$: $k=u^3+(1-u)^3-1=3u^2-3u$, minimum $-\\frac{3}{4}$ at $u=\\frac{1}{2}$. Range $\\left[-\\frac{3}{4},0\\right]$. Correct."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Length of tangent and power of a point with respect to a circle",
+    "Counting reflexive / symmetric / transitive / equivalence relations on a finite set"
+   ],
+   "level": 4.5,
+   "question": "Consider $C_1: x^2+y^2=9$, $C_2: (x-3)^2+y^2=8$ and $C_3: x^2+y^2-4x-2y-23=0$. Let $S$ be the set of all integer points $P(x,y)$ such that (i) tangents of non-zero real length can be drawn from $P$ to both $C_1$ and $C_2$, and the square of the tangent length to $C_1$ is twice that to $C_2$; (ii) the power of $P$ with respect to $C_3$ is strictly negative. On $S$: $A\\mathcal{R}_1B \\iff$ the power of $A$ with respect to the circle on $OB$ as diameter is $0$ ($O$ the origin); $A\\mathcal{R}_2B \\iff$ power of $A$ w.r.t. $C_1$ $\\ge$ power of $B$ w.r.t. $C_1$. Which statement(s) is/are CORRECT?",
+   "options": [
+    "$S$ contains exactly 4 elements.",
+    "$\\mathcal{R}_1$ is an equivalence relation on $S$.",
+    "The number of equivalence relations on $S$ is 5.",
+    "$\\mathcal{R}_2$ is transitive but not symmetric."
+   ],
+   "answer": "(A, B, D)",
+   "key_idea": "The tangent-length condition is itself a circle; the power of a point decides every condition.",
+   "solution": [
+    "(i): $x^2+y^2-9=2\\left[(x-3)^2+y^2-8\\right] \\Rightarrow x^2+y^2-12x+11=0$, i.e. $(x-6)^2+y^2=25$, with $P$ outside $C_1$ and $C_2$.",
+    "(ii): $x^2+y^2-4x-2y-23<0$ (inside $C_3$).",
+    "Integer points on $(x-6)^2+y^2=25$ satisfying both conditions: $(2,3)$, $(2,-3)$, $(3,4)$, $(3,-4)$. So $n(S)=4$. (A) correct.",
+    "$A\\mathcal{R}_1B \\iff \\vec{A}\\cdot(\\vec{A}-\\vec{B})=0$; checking the 4 points, this holds only for $A=B$, so $\\mathcal{R}_1$ is the identity relation - an equivalence relation. (B) correct.",
+    "Equivalence relations on a 4-element set: Bell number $B_4=15$, not 5. (C) incorrect.",
+    "$\\mathcal{R}_2$: $\\ge$ between powers is transitive; powers $16,16,4,4$ give $P_1\\mathcal{R}_2P_3$ but not $P_3\\mathcal{R}_2P_1$: not symmetric. (D) correct."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Types of relations"
+   ],
+   "level": 2.5,
+   "paragraph": "Paragraph: Let $A=\\{1,2,3,4\\}$ and $X=\\mathcal{P}(A)\\setminus\\{\\emptyset\\}$. On $X$: $R_1=\\{(A_1,A_2): A_1\\cap A_2\\neq\\emptyset\\}$ and $R_2=\\{(A_1,A_2): |A_1\\Delta A_2|\\le1\\}$, where $\\Delta$ is the symmetric difference.",
+   "question": "Which of the following statements is CORRECT regarding $R_1$ and $R_2$?",
+   "options": [
+    "Both $R_1$ and $R_2$ are equivalence relations on $X$.",
+    "$R_1$ is an equivalence relation on $X$, but $R_2$ is not.",
+    "Neither $R_1$ nor $R_2$ is transitive, but both are reflexive and symmetric on $X$.",
+    "$R_1$ is reflexive and transitive, whereas $R_2$ is symmetric and transitive on $X$."
+   ],
+   "answer": "(C)",
+   "key_idea": "One small counterexample is enough to break transitivity.",
+   "solution": [
+    "$R_1$: $A_1\\cap A_1=A_1\\neq\\emptyset$ (reflexive); intersection is symmetric.",
+    "$R_1$ not transitive: $\\{1\\}R_1\\{1,2\\}$ and $\\{1,2\\}R_1\\{2\\}$, but $\\{1\\}\\cap\\{2\\}=\\emptyset$.",
+    "$R_2$: $|A_1\\Delta A_1|=0$ (reflexive); $\\Delta$ is symmetric.",
+    "$R_2$ not transitive: $\\{1\\}R_2\\{1,2\\}$, $\\{1,2\\}R_2\\{1,2,3\\}$, but $|\\{1\\}\\Delta\\{1,2,3\\}|=2$.",
+    "Both are reflexive and symmetric, neither is transitive."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Types of relations"
+   ],
+   "level": 3,
+   "paragraph": "Paragraph: Let $A=\\{1,2,3,4\\}$ and $X=\\mathcal{P}(A)\\setminus\\{\\emptyset\\}$. On $X$: $R_1=\\{(A_1,A_2): A_1\\cap A_2\\neq\\emptyset\\}$ and $R_2=\\{(A_1,A_2): |A_1\\Delta A_2|\\le1\\}$, where $\\Delta$ is the symmetric difference.",
+   "question": "The total number of ordered pairs $(A_1,A_2)\\in X\\times X$ belonging to $R_1\\cap R_2$ is:",
+   "options": [
+    "$56$",
+    "$71$",
+    "$75$",
+    "$83$"
+   ],
+   "answer": "(B) 71",
+   "key_idea": "$|A_1\\Delta A_2|=1$ means one set is the other plus exactly one element.",
+   "solution": [
+    "Need $A_1\\cap A_2\\neq\\emptyset$ and $|A_1\\Delta A_2|\\le1$.",
+    "Case $|A_1\\Delta A_2|=0$: $A_1=A_2$, intersection automatically non-empty: $15$ pairs.",
+    "Case $|A_1\\Delta A_2|=1$: one set is the other plus one extra element, and the smaller set is non-empty.",
+    "Unordered count: $\\sum_{|S|=k\\ge1}\\binom{4}{k}(4-k)=4\\cdot3+6\\cdot2+4\\cdot1=28$; ordered: $56$.",
+    "Total $=15+56=71$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Tangents, normals and chord of contact of a circle"
+   ],
+   "level": 3,
+   "question": "Consider concentric circles $C_1: x^2+y^2=9$ and $C_2: x^2+y^2=18$. From a point $P$ on $C_2$, tangents $PA$ and $PB$ are drawn to $C_1$. Let $N_A$, $N_B$ be the normals to $C_1$ at $A$ and $B$. A line $L$ through $P$ parallel to the chord of contact $AB$ meets $N_A$ and $N_B$ at $D$ and $E$. If $O$ is the origin and $K=\\frac{\\text{area of }\\triangle ODE}{\\text{area of }\\triangle PAB}$, then $K$ is equal to:",
+   "answer": "4",
+   "key_idea": "$OP=r\\sqrt{2}$ makes the tangents perpendicular, so $OAPB$ is a square.",
+   "solution": [
+    "$OP=3\\sqrt{2}=\\sqrt{2}\\cdot3$, so $\\angle APB=90^\\circ$ and $OAPB$ is a square of side $3$.",
+    "Tangent length $PA=PB=3$; area of $\\triangle PAB=\\frac{1}{2}\\cdot3\\cdot3=\\frac{9}{2}$.",
+    "Normals $N_A$, $N_B$ are the lines $OA$, $OB$ extended.",
+    "$L\\perp OP$ at $P$ with $OP=3\\sqrt{2}$; $\\angle POD=\\angle POE=45^\\circ$, so $PD=PE=3\\sqrt{2}$.",
+    "Area of $\\triangle ODE=\\frac{1}{2}\\cdot DE\\cdot OP=\\frac{1}{2}\\cdot6\\sqrt{2}\\cdot3\\sqrt{2}=18$.",
+    "$K=\\frac{18}{9/2}=4$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Miscellaneous concepts on limit",
+    "Family of circles"
+   ],
+   "level": 4,
+   "question": "Consider the circle $S\\equiv x^2+y^2-4=0$ and lines $L_\\theta\\equiv x\\cos\\theta+y\\sin\\theta-2\\cos2\\theta=0$, $\\theta\\in\\left(-\\frac{\\pi}{4},\\frac{\\pi}{4}\\right)$. Let $C_\\theta$ be the circle through the intersection points of $S=0$ and $L_\\theta=0$ that passes through the origin. If $R(\\theta)$ is the radius of $C_\\theta$, then $L=\\lim_{\\theta\\to0}\\frac{R(\\theta)-1}{1-\\cos\\theta}$ is equal to:",
+   "answer": "4",
+   "key_idea": "The family $S+\\lambda L=0$ through the origin gives $R(\\theta)=\\frac{1}{\\cos2\\theta}$.",
+   "solution": [
+    "Family: $S+\\lambda L_\\theta=0$. Through the origin: $-4-2\\lambda\\cos2\\theta=0 \\Rightarrow \\lambda=-\\frac{2}{\\cos2\\theta}$.",
+    "$C_\\theta: x^2+y^2-\\frac{2\\cos\\theta}{\\cos2\\theta}x-\\frac{2\\sin\\theta}{\\cos2\\theta}y=0$.",
+    "Radius $R(\\theta)=\\frac{\\sqrt{\\cos^2\\theta+\\sin^2\\theta}}{\\cos2\\theta}=\\frac{1}{\\cos2\\theta}$.",
+    "$R(\\theta)-1=\\frac{1-\\cos2\\theta}{\\cos2\\theta}=\\frac{2\\sin^2\\theta}{\\cos2\\theta}$.",
+    "$L=\\lim_{\\theta\\to0}\\frac{2\\sin^2\\theta}{\\cos2\\theta\\,(1-\\cos\\theta)}=\\lim\\frac{2\\sin^2\\theta}{2\\sin^2(\\theta/2)}=4$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Solution of $a\\sin x+b\\cos x=c$",
+    "Representation of sets"
+   ],
+   "level": 3,
+   "question": "For any integer $k$, let $S_k=\\{x\\in[0,2\\pi]:\\sqrt{3}\\sin x+\\cos x=k\\}$. Let $E=\\{k\\in\\mathbb{Z}: S_k\\neq\\emptyset\\}$ and $O=\\{k\\in E: n(S_k)\\text{ is odd}\\}$. If $M=\\bigcup_{k\\in O}S_k$, then $n(M)$ is equal to:",
+   "answer": "5",
+   "key_idea": "On the closed interval $[0,2\\pi]$ both endpoints can be solutions.",
+   "solution": [
+    "$\\sqrt{3}\\sin x+\\cos x=2\\sin\\left(x+\\frac{\\pi}{6}\\right)=k$, so $E=\\{-2,-1,0,1,2\\}$.",
+    "With $t=x+\\frac{\\pi}{6}\\in\\left[\\frac{\\pi}{6},\\frac{13\\pi}{6}\\right]$ (closed interval, both ends included):",
+    "$k=2$: $x=\\frac{\\pi}{3}$ (1, odd). $k=-2$: $x=\\frac{4\\pi}{3}$ (1, odd).",
+    "$k=1$: $x=0,\\frac{2\\pi}{3},2\\pi$ (3, odd) - both endpoints count.",
+    "$k=0$ and $k=-1$: 2 solutions each (even).",
+    "$n(M)=1+1+3=5$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Locus and position of points relative to a line"
+   ],
+   "level": 2,
+   "question": "Let $P(h,k)$ be a variable point such that the centroid of the triangle formed by $(0,0)$, $P(h,k)$ and $(3,1)$ lies on the line $2x-y-1=0$. If the locus of $P$ is the line $L=0$, then the number of integral values of $\\alpha\\in[-3,3]$ for which $A(\\alpha,1)$ and $B(-1,\\alpha)$ lie on opposite sides of $L=0$ is equal to:",
+   "answer": "6",
+   "key_idea": "Two points are on opposite sides of a line when the line's expression has opposite signs at them.",
+   "solution": [
+    "Centroid $\\left(\\frac{h+3}{3},\\frac{k+1}{3}\\right)$ on $2x-y-1=0$: $2(h+3)-(k+1)-3=0$.",
+    "Locus $L: 2x-y+2=0$.",
+    "Opposite sides: $L(A)\\cdot L(B)<0 \\Rightarrow (2\\alpha+1)(-\\alpha)<0 \\Rightarrow \\alpha(2\\alpha+1)>0$.",
+    "So $\\alpha>0$ or $\\alpha<-\\frac{1}{2}$.",
+    "Integers in $[-3,3]$: $-3,-2,-1,1,2,3$, i.e. $6$ values."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Reflection-based optimisation (minimise PA + PB) and angle between two lines"
+   ],
+   "level": 2,
+   "question": "Let $A(1,3)$ and $B(5,1)$. Let $P$ be a point on $y=0$ such that $PA+PB$ is minimum. Let $L_1$ be the line through $P$ and $A$. If the acute angle between $L_1$ and $L_2: x-3y+5=0$ is $\\theta$, then $\\tan\\theta$ is equal to:",
+   "answer": "2",
+   "key_idea": "Reflect $B$ in the line to minimise $PA+PB$.",
+   "solution": [
+    "$A$ and $B$ are on the same side of $y=0$: reflect $B$ to $B'(5,-1)$.",
+    "$P$ is where $AB'$ meets $y=0$: slope of $AB'=-1$, line $y=-x+4$, so $P(4,0)$.",
+    "Slope of $L_1$ (through $P$ and $A$): $m_1=-1$. Slope of $L_2$: $m_2=\\frac{1}{3}$.",
+    "$\\tan\\theta=\\left|\\frac{m_1-m_2}{1+m_1m_2}\\right|=\\frac{4/3}{2/3}=2$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Domains of standard functions and of their algebraic combinations"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\sqrt{\\log_{0.5}\\left(\\frac{x-1}{5-x}\\right)}+\\ln(x^2-2x)$ and $g(x)=\\sqrt{\\{x\\}-\\frac{1}{3}}+\\frac{1}{\\operatorname{sgn}(\\lfloor x\\rfloor-1)}$, where $\\lfloor\\cdot\\rfloor$ and $\\{\\cdot\\}$ are the greatest integer and fractional part functions. If the domain of $(f+g)(x)$ is $[\\alpha,\\beta)$, then $3\\alpha+5\\beta$ is equal to:",
+   "answer": "22",
+   "key_idea": "$\\log_{0.5}u\\ge0\\iff0<u\\le1$; intersect every domain condition, then check the endpoints.",
+   "solution": [
+    "$f$: $0<\\frac{x-1}{5-x}\\le1 \\Rightarrow 1<x\\le3$; and $x^2-2x>0 \\Rightarrow x<0$ or $x>2$.",
+    "Domain of $f$: $(2,3]$.",
+    "$g$: $\\{x\\}\\ge\\frac{1}{3}$ and $\\lfloor x\\rfloor\\neq1$.",
+    "On $(2,3]$: $\\lfloor x\\rfloor=2$ for $x<3$, and $x=3$ fails since $\\{3\\}=0$. So $x\\in\\left[\\frac{7}{3},3\\right)$.",
+    "$\\alpha=\\frac{7}{3}$, $\\beta=3$: $3\\alpha+5\\beta=7+15=22$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of composite and trigonometric functions"
+   ],
+   "level": 4,
+   "question": "Let $g(x)=\\lim_{t\\to0}\\frac{\\tan(x+t)\\tan(x-t)-\\tan^2x}{t^2}$ and $f(y)=\\lim_{\\theta\\to0}\\frac{e^{y\\sin^2\\theta}-\\cos(y\\theta)}{\\theta\\tan\\theta}$. Evaluate $L=\\lim_{x\\to0}\\frac{2f(g(x))+1-\\sin^8x}{x^{10}}$.",
+   "answer": "4",
+   "key_idea": "$2f(y)+1=(y+1)^2$, so $2f(g(x))+1$ collapses to $\\tan^8x$.",
+   "solution": [
+    "$\\tan(x+t)\\tan(x-t)=\\frac{\\tan^2x-\\tan^2t}{1-\\tan^2x\\tan^2t}$, so $g(x)=\\tan^4x-1$.",
+    "Expansions: $e^{y\\sin^2\\theta}=1+y\\theta^2+O(\\theta^4)$, $\\cos(y\\theta)=1-\\frac{y^2\\theta^2}{2}+O(\\theta^4)$, $\\theta\\tan\\theta=\\theta^2+O(\\theta^4)$.",
+    "Hence $f(y)=y+\\frac{y^2}{2}$, and $2f(y)+1=(y+1)^2$.",
+    "$2f(g(x))+1=(\\tan^4x)^2=\\tan^8x$.",
+    "$L=\\lim\\frac{\\tan^8x-\\sin^8x}{x^{10}}=\\lim\\frac{\\sin^8x}{x^8}\\cdot\\frac{\\sec^8x-1}{x^2}=1\\cdot4=4$."
+   ]
+  }
+ ]
+}
