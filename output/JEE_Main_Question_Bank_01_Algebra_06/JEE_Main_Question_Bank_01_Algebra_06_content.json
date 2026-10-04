@@ -1,0 +1,959 @@
+{
+ "title": "JEE Main Question Bank 01 Algebra 06 — Paper Analysis",
+ "subtitle": "Determinants and Matrices · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Algebra_06.pdf (printed Q101-Q120 renumbered 1-20; no blueprint; concepts self-assigned; marks assumed 4 each)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 1,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 2,
+   "to": 2,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for numerical questions"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 3,
+   "to": 6,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 7,
+   "to": 7,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for numerical questions"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 8,
+   "to": 12,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 13,
+   "to": 13,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for numerical questions"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 14,
+   "to": 20,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  }
+ ],
+ "paper_name": "QB 01 Algebra 06",
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants and polynomial coefficients"
+   ],
+   "level": 2,
+   "question": "If $\\Delta=\\left|\\begin{matrix}x-2&2x-3&3x-4\\\\2x-3&3x-4&4x-5\\\\3x-5&5x-8&10x-17\\end{matrix}\\right|=Ax^3+Bx^2+Cx+D$, then $B+C$ is equal to:",
+   "options": [
+    "$-3$",
+    "$1$",
+    "$9$",
+    "$-1$"
+   ],
+   "answer": "(A) $-3$",
+   "key_idea": "Row and column operations remove most of the $x$ from the entries, so the cubic can be read off after one expansion.",
+   "solution": [
+    "Apply $R_2\\to R_2-2R_1$, $R_3\\to R_3-3R_1$: $\\Delta=\\left|\\begin{matrix}x-2&2x-3&3x-4\\\\1&-x+2&-2x+3\\\\1&-x+1&x-5\\end{matrix}\\right|$.",
+    "Apply $C_2\\to C_2-2C_1$, $C_3\\to C_3-3C_1$: $\\Delta=\\left|\\begin{matrix}x-2&1&2\\\\1&-x&-2x\\\\1&-x-1&x-8\\end{matrix}\\right|$.",
+    "Expand along the first row: $\\Delta=(x-2)\\left[-x(x-8)-2x(x+1)\\right]-1\\left[(x-8)+2x\\right]+2\\left[(-x-1)+x\\right]$.",
+    "The three brackets are $-3x^2+6x$, $3x-8$ and $-1$, so $\\Delta=-3x^3+12x^2-12x-3x+8-2$.",
+    "Hence $-3x^3+12x^2-15x+6=Ax^3+Bx^2+Cx+D$.",
+    "So $B=12$ and $C=-15$, giving $B+C=-3$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$\\Delta$ is a cubic, so $A$, $D$ and $A+B+C+D$ come from the leading coefficient, $\\Delta(0)$ and $\\Delta(1)$; then $B+C=\\Delta(1)-A-D$.",
+     "solution": [
+      "Put $x=1$: rows 1 and 2 both become $(-1,-1,-1)$, so $\\Delta(1)=0$, i.e. $A+B+C+D=0$.",
+      "Put $x=0$: $D=\\Delta(0)=\\left|\\begin{matrix}-2&-3&-4\\\\-3&-4&-5\\\\-5&-8&-17\\end{matrix}\\right|=6$.",
+      "The $x^3$ coefficient is the determinant of the $x$-coefficients: $A=\\left|\\begin{matrix}1&2&3\\\\2&3&4\\\\3&5&10\\end{matrix}\\right|=10-16+3=-3$.",
+      "Hence $B+C=-A-D=3-6=-3$, option (A). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a determinant whose entries are linear in $x$, $\\Delta(x)$ is a polynomial of degree $\\le 3$: $\\Delta(0)$ is the constant term, $\\Delta(1)$ is the sum of all coefficients and the $x^3$ coefficient is the determinant of the matrix of $x$-coefficients.",
+    "Subtracting a multiple of one row (or column) from another does not change a determinant: use it to make entries constants, e.g. $R_2-2R_1$ turns a row of linear terms into $1,\\,-x+2,\\,-2x+3$.",
+    "Spot that two rows coincide at a special value of $x$ (here $x=1$) to get a coefficient sum without any expansion."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Homogeneous linear system: non-trivial integer solutions"
+   ],
+   "level": 2,
+   "question": "Let $S$ be the set of all integer solutions $(x,y,z)$ of the system $x-2y+5z=0$, $-2x+4y+z=0$, $-7x+14y+9z=0$ such that $15\\le x^2+y^2+z^2\\le150$. Then the number of elements in $S$ is equal to ______.",
+   "answer": "8",
+   "key_idea": "The coefficient determinant is $0$, so the solutions form a line; the first two equations give $z=0$, $x=2y$.",
+   "solution": [
+    "The coefficient determinant is $D=1(36-14)+2(-18+7)+5(-28+28)=22-22+0=0$, so there are non-zero solutions.",
+    "Let $y=k$. Then $x-2k+5z=0$ and $-2x+4k+z=0$.",
+    "Add $2\\times$(first) to the second: $11z=0$, so $z=0$, and then $x=2k$.",
+    "Solutions: $(x,y,z)=(2k,k,0)$ with $k$ an integer (the third equation is satisfied automatically since $D=0$).",
+    "Then $x^2+y^2+z^2=4k^2+k^2+0=5k^2$, and $15\\le 5k^2\\le150$ gives $3\\le k^2\\le30$.",
+    "So $k\\in\\{\\pm2,\\pm3,\\pm4,\\pm5\\}$, since $k=\\pm1$ gives $5<15$ and $k=0$ gives $0<15$.",
+    "Hence the number of solutions is $8$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Step 'Hence 1 <= k^2 <= 30' in the PDF should read 3 <= k^2 <= 30 (15 <= 5k^2 <= 150). With 1 <= k^2 the PDF's own list of k (5, 4, 3, 2) would also have to contain 1; the list and the count 8 are right, the printed inequality is wrong. The lower limit 15 is also garbled in the PDF text.",
+   "alternate_solutions": [
+    {
+     "idea": "Two independent equations give the solution line as the cross product of their coefficient vectors; the third equation is a combination of them.",
+     "solution": [
+      "Cross product of $(1,-2,5)$ and $(-2,4,1)$: $(-2\\cdot1-5\\cdot4,\\;5\\cdot(-2)-1\\cdot1,\\;1\\cdot4-(-2)(-2))=(-22,-11,0)\\parallel(2,1,0)$.",
+      "The third row is $R_3=R_1+4R_2$ (check: $1-8=-7$, $-2+16=14$, $5+4=9$), so it adds no new condition: the solution set is exactly the line $t(2,1,0)$.",
+      "Integer points: $(2k,k,0)$, $k\\in\\mathbb Z$ (as $(2,1,0)$ is a primitive vector), with $x^2+y^2+z^2=5k^2$.",
+      "$15\\le5k^2\\le150\\Rightarrow3\\le k^2\\le30\\Rightarrow|k|\\in\\{2,3,4,5\\}$, i.e. $8$ values of $k$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the rank of a $3\\times3$ homogeneous system is $2$, the solution set is the line through the origin along the cross product of any two independent rows.",
+    "If a row is a combination of the others, e.g. $R_3=R_1+4R_2$ here, it carries no new information; finding that combination proves $D=0$ without expanding.",
+    "Lattice points on the line $\\mathbb{R}\\,\\mathbf{v}$ with $\\mathbf{v}$ a primitive integer vector are exactly $k\\mathbf{v}$, $k\\in\\mathbb Z$, and $|k\\mathbf v|^2=k^2|\\mathbf v|^2$; count the $k$ with $m\\le k^2|\\mathbf v|^2\\le M$ and remember the negative $k$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants",
+    "Range of trigonometric functions (cos 2θ)"
+   ],
+   "level": 2,
+   "question": "If the minimum and the maximum values of the function $f:\\left[\\frac\\pi4,\\frac\\pi2\\right]\\to\\mathbb R$, defined by $f(\\theta)=\\left|\\begin{matrix}-\\sin^2\\theta&-1-\\sin^2\\theta&1\\\\-\\cos^2\\theta&-1-\\cos^2\\theta&1\\\\12&10&-2\\end{matrix}\\right|$ are $m$ and $M$ respectively, then the ordered pair $(m,M)$ is equal to:",
+   "options": [
+    "$(0,2\\sqrt2)$",
+    "$(0,4)$",
+    "$(-4,4)$",
+    "$(-4,0)$"
+   ],
+   "answer": "(D) $(-4,0)$",
+   "key_idea": "$C_2\\to C_2-C_1+C_3$ kills the $\\theta$-terms in the second column and leaves $4\\cos2\\theta$.",
+   "solution": [
+    "Apply $C_2\\to C_2-C_1+C_3$: the entries of the new column are $-1-\\sin^2\\theta+\\sin^2\\theta+1=0$, $-1-\\cos^2\\theta+\\cos^2\\theta+1=0$ and $10-12-2=-4$.",
+    "$f(\\theta)=\\left|\\begin{matrix}-\\sin^2\\theta&0&1\\\\-\\cos^2\\theta&0&1\\\\12&-4&-2\\end{matrix}\\right|$.",
+    "Expand along the second column: $f(\\theta)=-(-4)\\cdot\\left|\\begin{matrix}-\\sin^2\\theta&1\\\\-\\cos^2\\theta&1\\end{matrix}\\right|=4\\left(\\cos^2\\theta-\\sin^2\\theta\\right)=4\\cos2\\theta$.",
+    "For $\\theta\\in\\left[\\frac\\pi4,\\frac\\pi2\\right]$, $2\\theta\\in\\left[\\frac\\pi2,\\pi\\right]$, where $\\cos2\\theta$ decreases from $0$ to $-1$.",
+    "So $4\\cos2\\theta\\in[-4,0]$, i.e. $m=-4$, $M=0$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\sin^2\\theta+\\cos^2\\theta=1$ through $R_1-R_2$, which gives a row proportional to $(1,1,0)$ and factors out $\\cos2\\theta$.",
+     "solution": [
+      "$R_1\\to R_1-R_2$: the new row is $(-\\sin^2\\theta+\\cos^2\\theta,\\;-\\sin^2\\theta+\\cos^2\\theta,\\;0)=\\cos2\\theta\\,(1,1,0)$.",
+      "Take $\\cos2\\theta$ out: $f=\\cos2\\theta\\left|\\begin{matrix}1&1&0\\\\-\\cos^2\\theta&-1-\\cos^2\\theta&1\\\\12&10&-2\\end{matrix}\\right|$.",
+      "Expand along the first row: $1\\left[(-1-\\cos^2\\theta)(-2)-10\\right]-1\\left[2\\cos^2\\theta-12\\right]=(2\\cos^2\\theta-8)-(2\\cos^2\\theta-12)=4$.",
+      "So $f=4\\cos2\\theta$, and on $\\left[\\frac\\pi4,\\frac\\pi2\\right]$ it ranges over $[-4,0]$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When entries contain both $\\sin^2\\theta$ and $\\cos^2\\theta$, a row or column difference like $R_1-R_2$ turns them into $\\cos2\\theta$ and a common factor comes out of the row.",
+    "$\\cos2\\theta=\\cos^2\\theta-\\sin^2\\theta$ decreases from $0$ to $-1$ as $\\theta$ goes from $\\frac\\pi4$ to $\\frac\\pi2$ (use the interval of $2\\theta$, not of $\\theta$).",
+    "If a determinant has the form $|u,\\;u\\!-\\!w\\!+\\!\\text{const}\\!\\cdot\\! e,\\;w|$, then $C_2\\to C_2-C_1+C_3$ cancels the $\\theta$-dependent parts: look for such a combination of columns first."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants (row and column operations)"
+   ],
+   "level": 2,
+   "question": "If $a+x=b+y=c+z+1$, where $a,b,c,x,y,z$ are non-zero distinct real numbers, then $\\left|\\begin{matrix}x&a+y&x+a\\\\y&b+y&y+b\\\\z&c+y&z+c\\end{matrix}\\right|$ is equal to:",
+   "options": [
+    "$0$",
+    "$y(b-a)$",
+    "$y(a-b)$",
+    "$y(a-c)$"
+   ],
+   "answer": "(C) $y(a-b)$",
+   "key_idea": "Column operations make the second column $(y,y,y)$ so $y$ factors out; the two given equalities then fix $x-y$ and $y-z$.",
+   "solution": [
+    "Apply $C_3\\to C_3-C_1$: the third column becomes $(a,b,c)$, so $\\Delta=\\left|\\begin{matrix}x&a+y&a\\\\y&b+y&b\\\\z&c+y&c\\end{matrix}\\right|$.",
+    "Apply $C_2\\to C_2-C_3$: the second column becomes $(y,y,y)$, so $\\Delta=\\left|\\begin{matrix}x&y&a\\\\y&y&b\\\\z&y&c\\end{matrix}\\right|$.",
+    "Take $y$ common from $C_2$: $\\Delta=y\\left|\\begin{matrix}x&1&a\\\\y&1&b\\\\z&1&c\\end{matrix}\\right|$.",
+    "Apply $R_1\\to R_1-R_2$, $R_2\\to R_2-R_3$: $\\Delta=y\\left|\\begin{matrix}x-y&0&a-b\\\\y-z&0&b-c\\\\z&1&c\\end{matrix}\\right|$.",
+    "Expand along the second column (the only non-zero entry is $1$ in position $(3,2)$, sign $-$): $\\Delta=-y\\left[(x-y)(b-c)-(y-z)(a-b)\\right]$.",
+    "From $a+x=b+y$: $x-y=b-a$. From $b+y=c+z+1$: $y-z=c-b+1$.",
+    "$\\Delta=-y\\left[(b-a)(b-c)-(c-b+1)(a-b)\\right]=-y(b-a)\\left[(b-c)+(c-b+1)\\right]=-y(b-a)$.",
+    "Hence $\\Delta=y(a-b)$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two slips in the PDF: (1) after C2->C2-C3 the first entry of the second column is printed as x; it should be y (otherwise y cannot be taken out of C2). (2) In the last line the factor is printed (c-b-1); since y-z = c-b+1 (from b+y=c+z+1) it must be (c-b+1). With (c-b-1) the printed expression would give y(b-a), not the stated y(a-b). Final answer (C) unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The result is an identity, so test the options with one admissible set of numbers.",
+     "solution": [
+      "Take $a=1$, $b=2$, $c=5$, $y=3$; then $a+x=b+y=5$ gives $x=4$ and $c+z+1=5$ gives $z=-1$. All six numbers $1,2,5,4,3,-1$ are non-zero and distinct.",
+      "The determinant is $\\left|\\begin{matrix}4&4&5\\\\3&5&5\\\\-1&8&4\\end{matrix}\\right|=4(20-40)-4(12+5)+5(24+5)=-80-68+145=-3$.",
+      "The options give: $0$; $y(b-a)=3$; $y(a-b)=-3$; $y(a-c)=-12$. Only $y(a-b)=-3$ matches: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Adding a multiple of one column to another leaves a determinant unchanged; use it to create repeated entries such as $(y,y,y)$ and then factor the common value out.",
+    "A constraint like $a+x=b+y$ is best used at the end, to replace differences such as $x-y$ by $b-a$.",
+    "For an identity-type MCQ, substituting one admissible numerical set and checking the options (here $-3$) is a fast, reliable check; make sure the chosen numbers satisfy every condition of the question."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Homogeneous linear system with non-zero solution (determinant = 0)"
+   ],
+   "level": 2,
+   "question": "If the system of linear equations $x+y+3z=0$, $x+3y+k^2z=0$, $3x+y+3z=0$ has a non-zero solution $(x,y,z)$ for some $k\\in\\mathbb R$, then $x+\\frac yz$ is equal to:",
+   "options": [
+    "$-9$",
+    "$-3$",
+    "$3$",
+    "$9$"
+   ],
+   "answer": "(B) $-3$",
+   "key_idea": "A non-zero solution needs $D=0$, which fixes $k^2=9$; subtracting two equations then gives $x=0$ and $y/z$.",
+   "solution": [
+    "For a non-zero solution, $D=\\left|\\begin{matrix}1&1&3\\\\1&3&k^2\\\\3&1&3\\end{matrix}\\right|=0$.",
+    "$1(9-k^2)-(3-3k^2)+3(1-9)=0$.",
+    "$9-k^2-3+3k^2-24=0\\Rightarrow2k^2-18=0\\Rightarrow k^2=9$.",
+    "The system becomes $x+y+3z=0$ (1), $x+3y+9z=0$ (2), $3x+y+3z=0$ (3).",
+    "(3) $-$ (1): $2x=0$, so $x=0$.",
+    "Then (1) gives $y+3z=0$, so $\\frac yz=-3$ (and (2) is satisfied).",
+    "Hence $x+\\frac yz=0-3=-3$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Equations 1 and 3 do not contain $k$; subtracting them gives $x=0$ at once, and $y/z$ follows without finding $k$.",
+     "solution": [
+      "(3) $-$ (1): $(3x+y+3z)-(x+y+3z)=2x=0$, so $x=0$ for every $k$.",
+      "Put $x=0$ in (1): $y+3z=0$.",
+      "If $z=0$ then $y=0$ and the solution is trivial; a non-zero solution therefore has $z\\ne0$ and $\\frac yz=-3$.",
+      "(Consistency: equation 2 becomes $3y+k^2z=-9z+k^2z=0$, which holds for $z\\ne0$ exactly when $k^2=9$, so such a $k$ exists.)",
+      "Hence $x+\\frac yz=-3$: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Before computing $D$, look for two equations that do not contain the parameter: combining them can fix the unknowns without finding the parameter.",
+    "A homogeneous system always has the zero solution; non-zero solutions exist iff $D=0$ (rank $<$ number of unknowns), and then only ratios such as $y/z$ are determined.",
+    "When asked for a ratio $y:z$ at the end, always check that the denominator ($z$) cannot be zero for a non-trivial solution."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants",
+    "Range of trigonometric functions (sin 2x)"
+   ],
+   "level": 2,
+   "question": "Let $m$ and $M$ be respectively the minimum and maximum values of $\\left|\\begin{matrix}\\cos^2x&1+\\sin^2x&\\sin2x\\\\1+\\cos^2x&\\sin^2x&\\sin2x\\\\\\cos^2x&\\sin^2x&1+\\sin2x\\end{matrix}\\right|$. Then the ordered pair $(m,M)$ is equal to:",
+   "options": [
+    "$(1,3)$",
+    "$(-3,3)$",
+    "$(-4,-1)$",
+    "$(-3,-1)$"
+   ],
+   "answer": "(D) $(-3,-1)$",
+   "key_idea": "$R_2-R_1$ and $R_3-R_1$ create two rows of constants, leaving $-2-\\sin2x$.",
+   "solution": [
+    "Apply $R_2\\to R_2-R_1$ and $R_3\\to R_3-R_1$.",
+    "$R_2-R_1=(1,\\,-1,\\,0)$ and $R_3-R_1=(0,\\,-1,\\,1)$, so $D=\\left|\\begin{matrix}\\cos^2x&1+\\sin^2x&\\sin2x\\\\1&-1&0\\\\0&-1&1\\end{matrix}\\right|$.",
+    "Expand along the first row: $D=\\cos^2x(-1-0)-(1+\\sin^2x)(1-0)+\\sin2x(-1-0)$.",
+    "$D=-\\cos^2x-1-\\sin^2x-\\sin2x=-2-\\sin2x$.",
+    "Since $-1\\le\\sin2x\\le1$: $-3\\le D\\le-1$, so $m=-3$ and $M=-1$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $R_1-R_3$ and $R_2-R_3$ instead: the first two rows become the constant rows $(0,1,-1)$ and $(1,0,-1)$.",
+     "solution": [
+      "$R_1\\to R_1-R_3$: $(\\cos^2x-\\cos^2x,\\;1+\\sin^2x-\\sin^2x,\\;\\sin2x-1-\\sin2x)=(0,1,-1)$.",
+      "$R_2\\to R_2-R_3$: $(1+\\cos^2x-\\cos^2x,\\;0,\\;\\sin2x-1-\\sin2x)=(1,0,-1)$.",
+      "$D=\\left|\\begin{matrix}0&1&-1\\\\1&0&-1\\\\\\cos^2x&\\sin^2x&1+\\sin2x\\end{matrix}\\right|=-1\\left[(1+\\sin2x)+\\cos^2x\\right]-1\\left[\\sin^2x\\right]$.",
+      "$D=-(1+\\sin2x+\\cos^2x+\\sin^2x)=-2-\\sin2x\\in[-3,-1]$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Differences of rows that share most entries reduce a determinant to a few unit entries; try the differences with every row and keep the pair that gives the most constants.",
+    "For a determinant of the form $a\\pm\\sin2x$ (or $\\sin x\\cos x$), the extreme values come from $\\sin2x=\\pm1$; the range of $p+q\\sin\\phi$ is $[p-|q|,p+|q|]$.",
+    "Always finish by checking that the extremes are really attained in the allowed domain (here $x$ is unrestricted, so both are attained)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Homogeneous linear system: non-zero solutions and determinant"
+   ],
+   "level": 2,
+   "question": "The sum of distinct values of $\\lambda$ for which the system of equations $(\\lambda-1)x+(3\\lambda+1)y+2\\lambda z=0$, $(\\lambda-1)x+(4\\lambda-2)y+(\\lambda+3)z=0$, $2x+(3\\lambda+1)y+3(\\lambda-1)z=0$ has non-zero solutions, is ______.",
+   "answer": "3",
+   "key_idea": "Non-zero solutions need $D=0$; $R_1-R_2$ has the common factor $\\lambda-3$, which splits the work.",
+   "solution": [
+    "For non-zero solutions $D=\\left|\\begin{matrix}\\lambda-1&3\\lambda+1&2\\lambda\\\\\\lambda-1&4\\lambda-2&\\lambda+3\\\\2&3\\lambda+1&3\\lambda-3\\end{matrix}\\right|=0$.",
+    "Apply $R_1\\to R_1-R_2$: the first row becomes $(0,\\,-\\lambda+3,\\,\\lambda-3)$.",
+    "Take $(\\lambda-3)$ common from $R_1$: $(\\lambda-3)\\left|\\begin{matrix}0&-1&1\\\\\\lambda-1&4\\lambda-2&\\lambda+3\\\\2&3\\lambda+1&3\\lambda-3\\end{matrix}\\right|=0$.",
+    "So $\\lambda=3$ or the remaining determinant is $0$. Apply $C_2\\to C_2+C_3$: $\\left|\\begin{matrix}0&0&1\\\\\\lambda-1&5\\lambda+1&\\lambda+3\\\\2&6\\lambda-2&3\\lambda-3\\end{matrix}\\right|=0$.",
+    "Expand along the first row: $(\\lambda-1)(6\\lambda-2)-2(5\\lambda+1)=0$.",
+    "$6\\lambda^2-8\\lambda+2-10\\lambda-2=0\\Rightarrow\\lambda^2-3\\lambda=0\\Rightarrow\\lambda=0,3$.",
+    "The distinct values are $0$ and $3$, so the sum is $0+3=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat it as a system: $R_1-R_2$ forces $y=z$ unless $\\lambda=3$, which reduces the problem to a $2\\times2$ determinant.",
+     "solution": [
+      "Subtract equation 2 from equation 1: $(3-\\lambda)y+(\\lambda-3)z=0$, i.e. $(\\lambda-3)(z-y)=0$.",
+      "Case $\\lambda=3$: equations 1 and 2 become identical, $2x+10y+6z=0$, so the rank is at most $2$ and non-zero solutions exist. So $\\lambda=3$ works.",
+      "Case $\\lambda\\ne3$: $y=z$. Equations 2 and 3 become $(\\lambda-1)x+(5\\lambda+1)y=0$ and $2x+(6\\lambda-2)y=0$.",
+      "These have a non-zero $(x,y)$ iff $(\\lambda-1)(6\\lambda-2)-2(5\\lambda+1)=6\\lambda^2-18\\lambda=0$, i.e. $\\lambda=0$ (since $\\lambda\\ne3$ here).",
+      "Check $\\lambda=0$: $y=z$ and $-x+y=0$ gives $(1,1,1)$, which satisfies all three equations. The distinct values are $0,3$, sum $=3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If two rows of a coefficient matrix differ by a multiple of a vector with a parameter factor, e.g. $R_1-R_2=(\\lambda-3)(0,-1,1)$, then $(\\lambda-3)$ divides $D$, and $D$ vanishes at that value for the trivial reason that two rows coincide.",
+    "The sum of distinct roots asked for is cleaner by factorisation: here $D=6\\lambda(\\lambda-3)^2$, so the distinct roots are $0,3$ (do not add the repeated root twice).",
+    "For a system with a parameter, split into the case that makes a row combination vanish and the generic case, and check the special values directly."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Consistency of linear systems: unique, no and infinitely many solutions"
+   ],
+   "level": 2,
+   "question": "For the system of linear equations $x-2y=1$, $x-y+kz=-2$, $ky+4z=6$, $k\\in\\mathbb R$, consider the statements: (A) The system has a unique solution if $k\\ne2,\\,k\\ne-2$. (B) The system has a unique solution if $k=-2$. (C) The system has a unique solution if $k=2$. (D) The system has no solution if $k=2$. (E) The system has infinitely many solutions if $k\\ne-2$. Which of the statements are correct?",
+   "options": [
+    "(C) and (D) only",
+    "(A) and (E) only",
+    "(B) and (E) only",
+    "(A) and (D) only"
+   ],
+   "answer": "(D) (A) and (D) only",
+   "key_idea": "$D=4-k^2$ separates the unique case from the special values $k=\\pm2$, and $D_x\\ne0$ at $k=2$ shows there is no solution.",
+   "solution": [
+    "$D=\\left|\\begin{matrix}1&-2&0\\\\1&-1&k\\\\0&k&4\\end{matrix}\\right|=4-k^2=(2-k)(2+k)$.",
+    "$D_x=\\left|\\begin{matrix}1&-2&0\\\\-2&-1&k\\\\6&k&4\\end{matrix}\\right|=-(k+10)(k+2)$.",
+    "If $D\\ne0$, i.e. $k\\ne\\pm2$, the system has a unique solution, so (A) is true.",
+    "Statements (B), (C) and (E) are false: for $k=\\pm2$ the determinant $D=0$ so the solution is not unique, and for $k\\ne\\pm2$ the solution is unique (not infinite), so (E) is false.",
+    "If $k=2$: $D=0$ and $D_x=-(12)(4)\\ne0$, so the system has no solution; (D) is true.",
+    "(At $k=-2$: $D=D_x=0$ and the system has infinitely many solutions, which also shows (B) is false.)",
+    "Hence (A) and (D) are the true statements: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $x$ from the first two equations to get a $2\\times2$ system in $y,z$ and read off the three cases directly.",
+     "solution": [
+      "From the first equation $x=1+2y$. Substituting into the second: $1+2y-y+kz=-2$, i.e. $y+kz=-3$.",
+      "With the third equation we have $y+kz=-3$ and $ky+4z=6$, with coefficient determinant $4-k^2$.",
+      "If $k\\ne\\pm2$ this is non-zero: unique $(y,z)$ and hence a unique $x$. So (A) is true.",
+      "$k=2$: $y+2z=-3$ and $2y+4z=6$; the second is $y+2z=3$, contradicting the first, so no solution: (D) is true.",
+      "$k=-2$: $y-2z=-3$ and $-2y+4z=6$ are the same equation, so infinitely many solutions. Thus (B) and (C) are false, and (E) is false (for $k\\ne-2$ the solution is not infinite).",
+      "True statements: (A) and (D), option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A $3\\times3$ system has a unique solution iff $D\\ne0$; if $D=0$ look at $D_x,D_y,D_z$ or reduce the augmented matrix: all $D$'s zero does not by itself prove infinitely many solutions, check the rank.",
+    "At the special values the system may have no solution at one value ($k=2$) and infinitely many at the other ($k=-2$): test each value separately.",
+    "For statements involving a parameter, elimination of one variable gives a smaller system in which the cases show up as a single factor such as $4-k^2$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Unique solution of a linear system (determinant test)"
+   ],
+   "level": 1,
+   "question": "The following system of linear equations $2x+3y+2z=9$, $3x+2y+2z=9$, $x-y+4z=8$: (A) Has infinitely many solutions (B) Has a solution $(\\alpha,\\beta,\\gamma)$ satisfying $\\alpha+\\beta^2+\\gamma^2=12$ (C) Does not have any solution (D) Has a unique solution",
+   "options": [
+    "Has infinitely many solutions",
+    "Has a solution $(\\alpha,\\beta,\\gamma)$ satisfying $\\alpha+\\beta^2+\\gamma^2=12$",
+    "Does not have any solution",
+    "Has a unique solution"
+   ],
+   "answer": "(D) Has a unique solution",
+   "key_idea": "A non-zero coefficient determinant means exactly one solution, which rules out (A), (B)'s extra solution and (C).",
+   "solution": [
+    "$\\Delta=\\left|\\begin{matrix}2&3&2\\\\3&2&2\\\\1&-1&4\\end{matrix}\\right|=2(8+2)-3(12-2)+2(-3-2)$.",
+    "$\\Delta=20-30-10=-20$.",
+    "Since $\\Delta\\ne0$, the system has a unique solution: option (D).",
+    "(Solving gives $(\\alpha,\\beta,\\gamma)=(1,1,2)$ with $\\alpha+\\beta^2+\\gamma^2=1+1+4=6\\ne12$, so (B) is also false.)"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes 2(8+2) - 3(12-2) + 2(-3-2) = 32 - 30 - 10 = -8. The first term is 2*10 = 20, not 32, so the determinant is 20 - 30 - 10 = -20 (checked by computer). It is non-zero either way, so the conclusion (D) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Solve by elimination: subtracting the first two equations gives $x=y$ and the solution drops out.",
+     "solution": [
+      "Eq.1 $-$ Eq.2: $-x+y=0$, so $y=x$.",
+      "Eq.1 becomes $5x+2z=9$ and Eq.3 becomes $x-x+4z=8$, so $z=2$.",
+      "Then $5x=5$, $x=1$, $y=1$: the unique solution is $(1,1,2)$ (check Eq.2: $3+2+4=9$).",
+      "For this solution $\\alpha+\\beta^2+\\gamma^2=1+1+4=6\\ne12$, so (B) fails; the solution is unique, so (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Unique solution of $A\\mathbf x=\\mathbf b$ (square $A$) $\\iff\\det A\\ne0$; the right-hand side does not matter.",
+    "When asked only whether a solution exists and is unique, evaluate $\\det A$ and stop; for statements that quote a particular solution, find the solution too.",
+    "Quick check of a $3\\times3$ determinant: expand along a row with small entries and recompute with a different row."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Consistency of linear systems: infinitely many solutions (Cramer's rule)"
+   ],
+   "level": 2,
+   "question": "Consider the system $x+2y-3z=a$, $2x+6y-11z=b$, $x-2y+7z=c$, where $a,b,c$ are real constants. Then the system of equations: (A) has no solution for all $a,b,c$ (B) has infinite number of solutions when $5a=2b+c$ (C) has a unique solution when $5a=2b+c$ (D) has a unique solution for all $a,b,c$",
+   "options": [
+    "has no solution for all $a,b,c$",
+    "has infinite number of solutions when $5a=2b+c$",
+    "has a unique solution when $5a=2b+c$",
+    "has a unique solution for all $a,b,c$"
+   ],
+   "answer": "(B) has infinite number of solutions when $5a=2b+c$",
+   "key_idea": "$D=0$ rules out (D); the three numerators share the factor $5a-2b-c$, so they vanish together exactly when $5a=2b+c$.",
+   "solution": [
+    "$D=\\left|\\begin{matrix}1&2&-3\\\\2&6&-11\\\\1&-2&7\\end{matrix}\\right|=1(42-22)-2(14+11)-3(-4-6)=20-50+30=0$.",
+    "$D_x=\\left|\\begin{matrix}a&2&-3\\\\b&6&-11\\\\c&-2&7\\end{matrix}\\right|=a(42-22)-b(14-6)+c(-22+18)=20a-8b-4c=4\\,(5a-2b-c)$.",
+    "$D_y=\\left|\\begin{matrix}1&a&-3\\\\2&b&-11\\\\1&c&7\\end{matrix}\\right|=-5\\,(5a-2b-c)$.",
+    "$D_z=\\left|\\begin{matrix}1&2&a\\\\2&6&b\\\\1&-2&c\\end{matrix}\\right|=-2\\,(5a-2b-c)$.",
+    "If $5a-2b-c=0$ then $D=D_x=D_y=D_z=0$ and the system has infinitely many solutions (it is consistent, since the rank of the coefficient matrix is $2$).",
+    "If $5a-2b-c\\ne0$ then $D=0$ but $D_x\\ne0$: no solution. So the system never has a unique solution.",
+    "Hence the system has infinitely many solutions exactly when $5a=2b+c$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Gaussian elimination: the third row reduces to $0=c+2b-5a$, the consistency condition.",
+     "solution": [
+      "$R_2\\to R_2-2R_1$: $2y-5z=b-2a$.",
+      "$R_3\\to R_3-R_1$: $-4y+10z=c-a$.",
+      "$R_3\\to R_3+2R_2$: $0=c-a+2b-4a=2b+c-5a$.",
+      "The system is consistent iff $5a=2b+c$; then only two independent equations remain in three unknowns, so $z$ is free: infinitely many solutions.",
+      "If $5a\\ne2b+c$ there is no solution; a unique solution never occurs. Hence (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a singular matrix $A$, $A\\mathbf x=\\mathbf b$ is consistent iff $\\mathbf b$ is orthogonal to the null vector of $A^{T}$: here $(-5,2,1)A=\\mathbf0$ gives $-5a+2b+c=0$.",
+    "If $D=0$ and some $D_x\\ne0$ the system has no solution; if $D=D_x=D_y=D_z=0$ it is NOT automatic that it has infinitely many (rank may be $1$ with inconsistency): confirm by row reduction.",
+    "The numerators $D_x,D_y,D_z$ are all multiples of the same consistency expression $5a-2b-c$ here, a sign that the rows are dependent."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Homogeneous linear system and circulant-type determinant",
+    "Relations between roots and coefficients of a cubic"
+   ],
+   "level": 3,
+   "question": "Let $\\alpha,\\beta,\\gamma$ be the real roots of the equation $x^3+ax^2+bx+c=0$ ($a,b,c\\in\\mathbb R$ and $a,b\\ne0$). If the system of equations (in $u,v,w$) given by $\\alpha u+\\beta v+\\gamma w=0$; $\\beta u+\\gamma v+\\alpha w=0$; $\\gamma u+\\alpha v+\\beta w=0$ has a non-trivial solution, then the value of $\\frac{a^2}{b}$ is:",
+   "options": [
+    "$5$",
+    "$3$",
+    "$0$",
+    "$1$"
+   ],
+   "answer": "(B) $3$",
+   "key_idea": "The determinant is the circulant $-(\\alpha^3+\\beta^3+\\gamma^3-3\\alpha\\beta\\gamma)$, which vanishes only if $\\alpha+\\beta+\\gamma=0$ or $\\alpha=\\beta=\\gamma$.",
+   "solution": [
+    "A non-trivial solution requires $\\left|\\begin{matrix}\\alpha&\\beta&\\gamma\\\\\\beta&\\gamma&\\alpha\\\\\\gamma&\\alpha&\\beta\\end{matrix}\\right|=0$.",
+    "Expanding, $3\\alpha\\beta\\gamma-\\left(\\alpha^3+\\beta^3+\\gamma^3\\right)=0$, i.e. $\\alpha^3+\\beta^3+\\gamma^3=3\\alpha\\beta\\gamma$.",
+    "Use $\\alpha^3+\\beta^3+\\gamma^3-3\\alpha\\beta\\gamma=\\frac12(\\alpha+\\beta+\\gamma)\\left[(\\alpha-\\beta)^2+(\\beta-\\gamma)^2+(\\gamma-\\alpha)^2\\right]$.",
+    "So $\\alpha=\\beta=\\gamma$ or $\\alpha+\\beta+\\gamma=0$.",
+    "But $\\alpha+\\beta+\\gamma=-a$ and $a\\ne0$, so $\\alpha+\\beta+\\gamma\\ne0$. Hence $\\alpha=\\beta=\\gamma$ (the roots are real, so each square must be $0$).",
+    "Then $3\\alpha=-a$ and $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=3\\alpha^2=b$.",
+    "$\\frac{a^2}{b}=\\frac{9\\alpha^2}{3\\alpha^2}=3$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Express the circulant determinant through Vieta's relations: it equals $a(a^2-3b)$, so $a\\ne0$ forces $a^2=3b$ directly.",
+     "solution": [
+      "$\\det=3\\alpha\\beta\\gamma-(\\alpha^3+\\beta^3+\\gamma^3)=-(\\alpha+\\beta+\\gamma)\\left[\\alpha^2+\\beta^2+\\gamma^2-\\alpha\\beta-\\beta\\gamma-\\gamma\\alpha\\right]$.",
+      "By Vieta, $\\alpha+\\beta+\\gamma=-a$ and $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=b$, so $\\alpha^2+\\beta^2+\\gamma^2=a^2-2b$.",
+      "The bracket is $(a^2-2b)-b=a^2-3b$, so $\\det=a\\left(a^2-3b\\right)$.",
+      "A non-trivial solution needs $\\det=0$; since $a\\ne0$, $a^2=3b$, and $b\\ne0$ gives $\\frac{a^2}{b}=3$: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The circulant determinant $\\left|\\begin{smallmatrix}\\alpha&\\beta&\\gamma\\\\\\beta&\\gamma&\\alpha\\\\\\gamma&\\alpha&\\beta\\end{smallmatrix}\\right|=-(\\alpha^3+\\beta^3+\\gamma^3-3\\alpha\\beta\\gamma)=-(\\alpha+\\beta+\\gamma)(\\alpha^2+\\beta^2+\\gamma^2-\\alpha\\beta-\\beta\\gamma-\\gamma\\alpha)$ is zero iff $\\alpha+\\beta+\\gamma=0$ or $\\alpha=\\beta=\\gamma$ (for real numbers).",
+    "For a cubic $x^3+ax^2+bx+c$ with roots $\\alpha,\\beta,\\gamma$: $\\sum\\alpha=-a$, $\\sum\\alpha\\beta=b$, so $\\sum\\alpha^2-\\sum\\alpha\\beta=a^2-3b$, and $\\alpha^3+\\beta^3+\\gamma^3-3\\alpha\\beta\\gamma=-a(a^2-3b)$.",
+    "The Vieta route works even for non-real roots, while 'all equal' needs the roots to be real: when $a^2=3b$ the cubic need not be a perfect cube, so $c$ is not forced."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Unique and infinitely many solutions of a linear system",
+    "Sign of a quadratic expression (discriminant)"
+   ],
+   "level": 2,
+   "question": "Let $S_1$ and $S_2$ be respectively the sets of all $a\\in\\mathbb R-\\{0\\}$ for which the system of linear equations $ax+2ay-3az=1$, $(2a+1)x+(2a+3)y+(a+1)z=2$, $(3a+5)x+(a+5)y+(a+2)z=3$ has a unique solution and infinitely many solutions. Then:",
+   "options": [
+    "$S_1$ is an infinite set and $n(S_2)=2$",
+    "$S_1=\\mathbb R-\\{0\\}$ and $S_2=\\phi$",
+    "$n(S_1)=2$ and $S_2$ is an infinite set",
+    "$S_1=\\phi$ and $S_2=\\mathbb R-\\{0\\}$"
+   ],
+   "answer": "(B) $S_1=\\mathbb R-\\{0\\}$ and $S_2=\\phi$",
+   "key_idea": "$D=a\\,(15a^2+31a+37)$ and the quadratic factor has negative discriminant, so $D\\ne0$ for every $a\\ne0$.",
+   "solution": [
+    "A unique solution needs $D\\ne0$; infinitely many solutions need $D=0$ (and consistency).",
+    "$D=\\left|\\begin{matrix}a&2a&-3a\\\\2a+1&2a+3&a+1\\\\3a+5&a+5&a+2\\end{matrix}\\right|$; take $a$ out of $R_1$ and clear the first column with $R_2-(2a+1)R_1'$, $R_3-(3a+5)R_1'$.",
+    "The new second and third rows are $(0,\\,1-2a,\\,7a+4)$ and $(0,\\,-5a-5,\\,10a+17)$.",
+    "$D=a\\left[(1-2a)(10a+17)+(5a+5)(7a+4)\\right]=a\\left[(-20a^2-24a+17)+(35a^2+55a+20)\\right]$.",
+    "$D=a\\left(15a^2+31a+37\\right)$.",
+    "The quadratic $15a^2+31a+37$ has discriminant $31^2-4\\cdot15\\cdot37=961-2220=-1259<0$ and positive leading coefficient, so it is positive for all real $a$.",
+    "Hence $D\\ne0$ for all $a\\in\\mathbb R-\\{0\\}$: the system has a unique solution for every such $a$.",
+    "So $S_1=\\mathbb R-\\{0\\}$ and $S_2=\\phi$: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The coefficient matrix printed in the PDF has 2a+1 in the third entry of the second row, but the equation (and the printed value D = a(15a^2+31a+37)) uses a+1; with 2a+1 the determinant would be a(20a^2+36a+37). The matrix entry is corrected to a+1. The PDF also gives no working for D and for the sign of the quadratic; both are added. The answer (B) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The first row sums to $0$, so adding the other two columns into the third column puts a zero at the top.",
+     "solution": [
+      "Row sums: $a+2a-3a=0$; $(2a+1)+(2a+3)+(a+1)=5a+5$; $(3a+5)+(a+5)+(a+2)=5a+12$.",
+      "$C_3\\to C_3+C_1+C_2$: the third column becomes $(0,\\;5a+5,\\;5a+12)^T$; the determinant is unchanged.",
+      "Expand along $C_3$: $D=-(5a+5)\\left[a(a+5)-2a(3a+5)\\right]+(5a+12)\\left[a(2a+3)-2a(2a+1)\\right]$.",
+      "The brackets are $-5a(a+1)$ and $a(1-2a)$, so $D=25a(a+1)^2+a(5a+12)(1-2a)=a\\left[25a^2+50a+25-10a^2-19a+12\\right]$.",
+      "$D=a(15a^2+31a+37)$ with $15a^2+31a+37=15\\left(a+\\tfrac{31}{30}\\right)^2+37-\\tfrac{961}{60}>0$ (completing the square).",
+      "So $D\\ne0$ for $a\\ne0$: unique solution always, $S_1=\\mathbb R-\\{0\\}$, $S_2=\\phi$: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A column (or row) sum trick: if the entries of one row add up to $0$, replace a column by the sum of all columns to create a zero entry before expanding.",
+    "A quadratic $pa^2+qa+r$ with $p>0$ and $q^2-4pr<0$ is positive for all real $a$; use this to show a determinant never vanishes.",
+    "For $n(S)$-type options, decide first whether the determinant can vanish at all: if $D\\ne0$ for all admissible parameter values, then the set for 'infinitely many solutions' is empty."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Determinant evaluation",
+    "Logarithmic equations and arithmetic progression"
+   ],
+   "level": 2,
+   "question": "If $1$, $\\log_{10}(4^x-2)$ and $\\log_{10}\\left(4^x+\\frac{18}5\\right)$ are in arithmetic progression for a real number $x$, then the value of the determinant $\\left|\\begin{matrix}2\\left(x-\\frac12\\right)&x-1&x^2\\\\1&0&x\\\\x&1&0\\end{matrix}\\right|$ is equal to ______.",
+   "answer": "2",
+   "key_idea": "The A.P. condition gives $(4^x-2)^2=10\\cdot4^x+36$, a quadratic in $4^x$ whose admissible root is $16$, so $x=2$.",
+   "solution": [
+    "Since the terms are in A.P., $2\\log_{10}\\left(4^x-2\\right)=1+\\log_{10}\\left(4^x+\\frac{18}5\\right)$.",
+    "So $\\log_{10}\\left(4^x-2\\right)^2=\\log_{10}\\left[10\\left(4^x+\\frac{18}5\\right)\\right]$, i.e. $\\left(4^x-2\\right)^2=10\\cdot4^x+36$.",
+    "Put $4^x=y$: $(y-2)^2=10y+36\\Rightarrow y^2-4y+4=10y+36\\Rightarrow y^2-14y-32=0$.",
+    "$(y-16)(y+2)=0$, so $y=16$ or $y=-2$.",
+    "$y=-2$ is impossible since $4^x>0$. So $4^x=16$ and $x=2$.",
+    "At $x=2$ the entries are $2\\left(2-\\tfrac12\\right)=3$, $x-1=1$, $x^2=4$: the determinant is $\\left|\\begin{matrix}3&1&4\\\\1&0&2\\\\2&1&0\\end{matrix}\\right|$.",
+    "$=3(0-2)-1(0-4)+4(1-0)=-6+4+4=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand the determinant symbolically first: it factorises as $x(x-1)^2$, so the answer is read off at $x=2$ without a numerical $3\\times3$ expansion.",
+     "solution": [
+      "Expand along the first row: $(2x-1)(0\\cdot0-x\\cdot1)-(x-1)(1\\cdot0-x\\cdot x)+x^2(1\\cdot1-0\\cdot x)$.",
+      "$=-x(2x-1)+x^2(x-1)+x^2=x^3-2x^2+x=x(x-1)^2$.",
+      "The A.P. condition again gives $y=4^x=16$, hence $x=2$ (the root $y=-2$ is rejected as $4^x>0$).",
+      "$x(x-1)^2=2\\cdot1^2=2$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Three numbers $p,q,r$ are in A.P. iff $2q=p+r$; with logarithms $2\\log_{10}u=1+\\log_{10}v$ becomes $u^2=10v$ (and $u,v>0$ must hold).",
+    "An equation in $4^x$ (or $a^x$) becomes a quadratic in $y=a^x$; always reject the roots with $y\\le0$ and also those making the log arguments non-positive.",
+    "If a determinant has entries polynomial in $x$ and you must evaluate it at one value of $x$, either evaluate directly or expand symbolically; checking both ways guards against arithmetic slips."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Determinant of a 3×3 matrix",
+    "AM-GM inequality"
+   ],
+   "level": 2,
+   "question": "Let $A=\\begin{bmatrix}2&b&1\\\\b&b^2+1&b\\\\1&b&2\\end{bmatrix}$ where $b>0$. Then the minimum value of $\\frac{\\det(A)}{b}$ is:",
+   "options": [
+    "$\\sqrt3$",
+    "$-2\\sqrt3$",
+    "$-\\sqrt3$",
+    "$2\\sqrt3$"
+   ],
+   "answer": "(D) $2\\sqrt3$",
+   "key_idea": "$\\det A=b^2+3$, so $\\frac{\\det A}b=b+\\frac3b$ and AM-GM gives the minimum.",
+   "solution": [
+    "Expand along the first row: $\\det A=2\\left[2(b^2+1)-b^2\\right]-b\\left[2b-b\\right]+1\\left[b^2-(b^2+1)\\right]$.",
+    "$=2(b^2+2)-b\\cdot b+1\\cdot(-1)=2b^2+4-b^2-1$.",
+    "$\\det A=b^2+3$.",
+    "Let $y=\\frac{\\det A}{b}=b+\\frac3b$.",
+    "By AM$\\ge$GM for $b>0$: $\\frac{b+\\frac3b}{2}\\ge\\sqrt{b\\cdot\\frac3b}=\\sqrt3$.",
+    "So $b+\\frac3b\\ge2\\sqrt3$, with equality at $b=\\sqrt3$. The minimum is $2\\sqrt3$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $A=I+vv^{T}$ with $v=(1,b,1)^T$ and use $\\det(I+vv^T)=1+v^Tv$.",
+     "solution": [
+      "$vv^T=\\begin{bmatrix}1&b&1\\\\b&b^2&b\\\\1&b&1\\end{bmatrix}$, and $I+vv^T=\\begin{bmatrix}2&b&1\\\\b&b^2+1&b\\\\1&b&2\\end{bmatrix}=A$.",
+      "Matrix determinant lemma: $\\det(I+vv^T)=1+v^Tv=1+(1+b^2+1)=b^2+3$.",
+      "$f(b)=\\frac{\\det A}{b}=b+\\frac3b$, $f'(b)=1-\\frac3{b^2}=0\\Rightarrow b=\\sqrt3$ ($b>0$); $f''(b)=\\frac6{b^3}>0$, so it is a minimum.",
+      "$f(\\sqrt3)=\\sqrt3+\\sqrt3=2\\sqrt3$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Matrix determinant lemma: $\\det(I+uv^T)=1+v^Tu$; for $A=I+vv^T$ the determinant is $1+|v|^2$. Recognise a matrix as 'identity plus a rank-one matrix' whenever off-diagonal entries are products $v_iv_j$.",
+    "For $t>0$ and $k>0$: $t+\\frac kt\\ge2\\sqrt k$ with equality at $t=\\sqrt k$; here $k=3$.",
+    "AM-GM needs the terms to be positive and the product to be a constant; check both before using it (here $b>0$ and $b\\cdot\\frac3b=3$)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants",
+    "Maximum and minimum values of trigonometric expressions"
+   ],
+   "level": 2,
+   "question": "If $d\\in\\mathbb R$ and $A=\\begin{bmatrix}-2&4+d&(\\sin\\theta)-2\\\\1&(\\sin\\theta)+2&d\\\\5&(2\\sin\\theta)-d&(-\\sin\\theta)+2+2d\\end{bmatrix}$, $\\theta\\in[0,2\\pi]$. If the minimum value of $\\det(A)$ is $8$, then a value of $d$ is:",
+   "options": [
+    "$-7$",
+    "$-5$",
+    "$2(\\sqrt2+2)$",
+    "$2(\\sqrt2+1)$"
+   ],
+   "answer": "(B) $-5$",
+   "key_idea": "$R_1+R_3-2R_2=(1,0,0)$, which collapses the determinant to $(d+2)^2-\\sin^2\\theta$.",
+   "solution": [
+    "Apply $R_1\\to R_1+R_3-2R_2$: the first entry is $-2+5-2=1$, the second $(4+d)+(2\\sin\\theta-d)-2(\\sin\\theta+2)=0$, the third $(\\sin\\theta-2)+(-\\sin\\theta+2+2d)-2d=0$.",
+    "$\\det A=\\left|\\begin{matrix}1&0&0\\\\1&\\sin\\theta+2&d\\\\5&2\\sin\\theta-d&-\\sin\\theta+2+2d\\end{matrix}\\right|$.",
+    "Expand along the first row: $\\det A=(\\sin\\theta+2)(-\\sin\\theta+2+2d)-d(2\\sin\\theta-d)$.",
+    "$(\\sin\\theta+2)(2+2d-\\sin\\theta)=2d\\sin\\theta-\\sin^2\\theta+4+4d$ and $-d(2\\sin\\theta-d)=-2d\\sin\\theta+d^2$.",
+    "So $\\det A=d^2+4d+4-\\sin^2\\theta=(d+2)^2-\\sin^2\\theta$.",
+    "Since $\\sin^2\\theta\\in[0,1]$, the minimum is $(d+2)^2-1$ (at $\\sin^2\\theta=1$).",
+    "$(d+2)^2-1=8\\Rightarrow(d+2)^2=9\\Rightarrow d+2=\\pm3\\Rightarrow d=1$ or $d=-5$.",
+    "Only $d=-5$ appears among the options: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's expansion line 'A(theta) = (sin t + 2)(2 + 2d - sin t) - sin t + 2 + 2d' is not a correct expansion: the (sin t + 2)(2 + 2d - sin t) term must be followed by -d(2 sin t - d), and the printed tail '- sin t + 2 + 2d' does not occur. The correct expansion is given (it equals (d+2)^2 - sin^2 t, which is what the PDF states next). The values d = 1, -5 and the answer (B) are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$\\det A$ is a quadratic in $s=\\sin\\theta$; split the two $s$-dependent columns and use multilinearity, then read the coefficients.",
+     "solution": [
+      "With $s=\\sin\\theta$ write $C_2=C_2^0+s\\,u$ and $C_3=C_3^0+s\\,w$, where $u=(0,1,2)^T$, $w=(1,0,-1)^T$, $C_2^0=(4+d,\\,2,\\,-d)^T$, $C_3^0=(-2,\\,d,\\,2+2d)^T$, $C_1=(-2,1,5)^T$.",
+      "Multilinearity gives $\\det A=\\det[C_1,C_2^0,C_3^0]+s\\left(\\det[C_1,u,C_3^0]+\\det[C_1,C_2^0,w]\\right)+s^2\\det[C_1,u,w]$.",
+      "$\\det[C_1,u,w]=\\left|\\begin{matrix}-2&0&1\\\\1&1&0\\\\5&2&-1\\end{matrix}\\right|=-1$; $\\det[C_1,u,C_3^0]=2$; $\\det[C_1,C_2^0,w]=-2$; $\\det[C_1,C_2^0,C_3^0]=d^2+4d+4$.",
+      "So $\\det A=(d+2)^2+0\\cdot s-s^2=(d+2)^2-\\sin^2\\theta$, minimum $(d+2)^2-1=8$ at $\\sin^2\\theta=1$.",
+      "$d+2=\\pm3$, $d=1$ or $-5$; only $-5$ is listed: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If every entry of a determinant is linear in a variable $s$, the determinant is a polynomial of degree at most the number of $s$-dependent columns (or rows); its coefficients can be found column by column by multilinearity.",
+    "To minimise $g-\\sin^2\\theta$ over all $\\theta$ use $\\sin^2\\theta\\in[0,1]$: minimum $g-1$ at $\\sin^2\\theta=1$, maximum $g$ at $\\sin^2\\theta=0$.",
+    "A quadratic equation for the parameter usually gives two values ($d=1$ and $d=-5$); the options decide which one is asked for.",
+    "Look for a combination of rows such as $R_1+R_3-2R_2$ that produces a unit vector: the entries are often built so that a second difference cancels."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Powers of a lower-triangular matrix"
+   ],
+   "level": 1,
+   "question": "Let $P=\\begin{bmatrix}1&0&0\\\\3&1&0\\\\9&3&1\\end{bmatrix}$ and $Q=[q_{ij}]$ be two $3\\times3$ matrices such that $Q-P^5=I_3$. Then $\\frac{q_{21}+q_{31}}{q_{32}}$ is equal to:",
+   "options": [
+    "$10$",
+    "$9$",
+    "$15$",
+    "$135$"
+   ],
+   "answer": "(A) $10$",
+   "key_idea": "Compute $P^2,P^3,\\dots,P^5$ (the pattern is regular) and use $Q=I_3+P^5$.",
+   "solution": [
+    "$P^2=\\begin{bmatrix}1&0&0\\\\3+3&1&0\\\\9+9+9&3+3&1\\end{bmatrix}=\\begin{bmatrix}1&0&0\\\\6&1&0\\\\27&6&1\\end{bmatrix}$.",
+    "$P^3=P^2P=\\begin{bmatrix}1&0&0\\\\9&1&0\\\\54&9&1\\end{bmatrix}$ and $P^4=\\begin{bmatrix}1&0&0\\\\12&1&0\\\\90&12&1\\end{bmatrix}$.",
+    "$P^5=\\begin{bmatrix}1&0&0\\\\15&1&0\\\\135&15&1\\end{bmatrix}$.",
+    "$Q-P^5=I_3$ gives $Q=I_3+P^5$.",
+    "$Q=\\begin{bmatrix}2&0&0\\\\15&2&0\\\\135&15&2\\end{bmatrix}$, so $q_{21}=15$, $q_{31}=135$, $q_{32}=15$.",
+    "$\\frac{q_{21}+q_{31}}{q_{32}}=\\frac{15+135}{15}=10$: option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the (3,1) entry of P^2 as 9 + 3x3 + 1, which equals 19; the correct value is 9 + 3x3 + 9 = 27 (row (9,3,1) times column (1,3,9)). It then jumps to P^5 without showing P^3, P^4; P^5 = [[1,0,0],[15,1,0],[135,15,1]] as printed is correct (checked by computer), so the answer 10 is unchanged. P^3 and P^4 are added.",
+   "alternate_solutions": [
+    {
+     "idea": "Write $P=I+N$ with $N$ nilpotent ($N^3=0$) and use the binomial theorem.",
+     "solution": [
+      "$P=I+N$, $N=\\begin{bmatrix}0&0&0\\\\3&0&0\\\\9&3&0\\end{bmatrix}$, and $N^2=\\begin{bmatrix}0&0&0\\\\0&0&0\\\\9&0&0\\end{bmatrix}$, $N^3=O$.",
+      "Since $I$ commutes with $N$: $P^5=I+5N+\\binom52N^2=I+5N+10N^2$.",
+      "Entries: $(2,1)=5\\cdot3=15$, $(3,2)=5\\cdot3=15$, $(3,1)=5\\cdot9+10\\cdot9=135$.",
+      "$Q=I+P^5$ so $q_{21}=15$, $q_{31}=135$, $q_{32}=15$, and $\\frac{15+135}{15}=10$: option (A). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $P=I+N$ with $N^k=O$: $P^n=\\sum_{j<k}\\binom njN^j$; here $P^n=\\begin{bmatrix}1&0&0\\\\3n&1&0\\\\\\frac{9n(n+1)}{2}&3n&1\\end{bmatrix}$ (check $n=5$: $135,15$).",
+    "Strictly triangular matrices are nilpotent: an $m\\times m$ strictly lower-triangular $N$ satisfies $N^m=O$.",
+    "A lower-triangular matrix with $1$s on the diagonal has determinant $1$; its powers keep the shape and the first subdiagonal grows like $n$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Invertibility of a matrix (non-zero determinant)"
+   ],
+   "level": 2,
+   "question": "If $A=\\begin{bmatrix}e^t&e^{-t}\\cos t&e^{-t}\\sin t\\\\e^t&-e^{-t}\\cos t-e^{-t}\\sin t&-e^{-t}\\sin t+e^{-t}\\cos t\\\\e^t&2e^{-t}\\sin t&-2e^{-t}\\cos t\\end{bmatrix}$, then $A$ is:",
+   "options": [
+    "invertible only if $t=\\pi$",
+    "not invertible for any $t\\in\\mathbb R$",
+    "invertible for all $t\\in\\mathbb R$",
+    "invertible only if $t=\\frac\\pi2$"
+   ],
+   "answer": "(C) invertible for all $t\\in\\mathbb R$",
+   "key_idea": "Pull $e^{t}$, $e^{-t}$, $e^{-t}$ out of the three columns; the remaining determinant turns out to be the constant $5$.",
+   "solution": [
+    "Take $e^t$ out of $C_1$ and $e^{-t}$ out of each of $C_2,C_3$: $|A|=e^{-t}\\left|\\begin{matrix}1&\\cos t&\\sin t\\\\1&-\\cos t-\\sin t&-\\sin t+\\cos t\\\\1&2\\sin t&-2\\cos t\\end{matrix}\\right|$.",
+    "Apply $R_2\\to R_2-R_1$, $R_3\\to R_3-R_1$: $|A|=e^{-t}\\left|\\begin{matrix}1&\\cos t&\\sin t\\\\0&-2\\cos t-\\sin t&-2\\sin t+\\cos t\\\\0&2\\sin t-\\cos t&-2\\cos t-\\sin t\\end{matrix}\\right|$.",
+    "Expand along the first column: $|A|=e^{-t}\\left[(2\\cos t+\\sin t)^2+(2\\sin t-\\cos t)^2\\right]$.",
+    "$(2\\cos t+\\sin t)^2+(2\\sin t-\\cos t)^2=4\\cos^2t+4\\sin t\\cos t+\\sin^2t+4\\sin^2t-4\\sin t\\cos t+\\cos^2t=5$.",
+    "So $|A|=5e^{-t}\\ne0$ for every real $t$.",
+    "Hence $A$ is invertible for all $t\\in\\mathbb R$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two slips in the PDF: (1) after R2->R2-R1 the second entry of row 2 is printed as -cos t - sin t; it should be -2cos t - sin t (the value used afterwards, (2cos t + sin t)^2, needs it). (2) The factor e^{-t} (from the columns) is dropped: the PDF ends with |A| = 5, the correct value is |A| = 5e^{-t} (checked by computer). Both do not change the answer (C).",
+   "alternate_solutions": [
+    {
+     "idea": "The three rows are $f,f',f''$ of three functions, so $\\det A$ is a Wronskian and Abel's identity gives $W(t)=W(0)e^{-t}$.",
+     "solution": [
+      "Let $f_1=e^t$, $f_2=e^{-t}\\cos t$, $f_3=e^{-t}\\sin t$. Differentiating the first row gives the second row, and differentiating the second gives the third (e.g. $f_3''=-2e^{-t}\\cos t$).",
+      "So $\\det A=W(t)$, the Wronskian of $f_1,f_2,f_3$.",
+      "These are solutions of the equation with characteristic roots $1,\\,-1\\pm i$: $(r-1)(r^2+2r+2)=r^3+r^2-2$, i.e. $y'''+y''-2y=0$.",
+      "Abel's identity: $W'=-(\\text{coefficient of }y'')\\,W=-W$, so $W(t)=W(0)e^{-t}$.",
+      "$W(0)=\\left|\\begin{matrix}1&1&0\\\\1&-1&1\\\\1&0&-2\\end{matrix}\\right|=1(2-0)-1(-2-1)+0=5$.",
+      "$\\det A=5e^{-t}\\ne0$ for all $t$: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A square matrix is invertible iff its determinant is non-zero; for functions of $t$ check whether the determinant is a non-zero constant times a never-vanishing factor like $e^{-t}$.",
+    "Wronskian of $y'''+py''+qy'+ry=0$: $W(t)=W(0)\\,e^{-pt}$, so a fundamental set of solutions has a Wronskian that never vanishes.",
+    "A column pattern $(f,f',f'')^T$ with $f=e^{\\lambda t},\\,e^{-t}\\cos t,\\,e^{-t}\\sin t$ is a signal to think Wronskian."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Powers of a rotation matrix",
+    "General solution of trigonometric equations"
+   ],
+   "level": 1,
+   "question": "Let $A=\\begin{pmatrix}\\cos\\alpha&-\\sin\\alpha\\\\\\sin\\alpha&\\cos\\alpha\\end{pmatrix}$, $(\\alpha\\in\\mathbb R)$ such that $A^{32}=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$, then a value of $\\alpha$ is:",
+   "options": [
+    "$\\frac\\pi{32}$",
+    "$\\frac\\pi{64}$",
+    "$0$",
+    "$\\frac\\pi{16}$"
+   ],
+   "answer": "(B) $\\frac\\pi{64}$",
+   "key_idea": "$A^n$ is the rotation through $n\\alpha$, so $A^{32}$ has $\\cos32\\alpha=0$ and $\\sin32\\alpha=1$.",
+   "solution": [
+    "$A^2=\\begin{pmatrix}\\cos\\alpha&-\\sin\\alpha\\\\\\sin\\alpha&\\cos\\alpha\\end{pmatrix}^2=\\begin{pmatrix}\\cos2\\alpha&-\\sin2\\alpha\\\\\\sin2\\alpha&\\cos2\\alpha\\end{pmatrix}$.",
+    "$A^4=A^2\\cdot A^2=\\begin{pmatrix}\\cos4\\alpha&-\\sin4\\alpha\\\\\\sin4\\alpha&\\cos4\\alpha\\end{pmatrix}$, and likewise $A^8$ with $8\\alpha$.",
+    "Continuing, $A^{16}$ is the rotation with $16\\alpha$ and $A^{32}=A^{16}A^{16}=\\begin{pmatrix}\\cos32\\alpha&-\\sin32\\alpha\\\\\\sin32\\alpha&\\cos32\\alpha\\end{pmatrix}=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$.",
+    "So $\\sin32\\alpha=1$ and $\\cos32\\alpha=0$.",
+    "$32\\alpha=2n\\pi+\\frac\\pi2\\Rightarrow\\alpha=\\frac{n\\pi}{16}+\\frac\\pi{64}$, $n\\in\\mathbb Z$.",
+    "Put $n=0$: $\\alpha=\\frac\\pi{64}$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Identify the matrix with the complex number $e^{i\\alpha}$: powers become $e^{in\\alpha}$ and the target matrix is $i$.",
+     "solution": [
+      "The matrix $\\begin{pmatrix}\\cos\\alpha&-\\sin\\alpha\\\\\\sin\\alpha&\\cos\\alpha\\end{pmatrix}$ represents multiplication by $e^{i\\alpha}$ on $x+iy$, and the map $z\\mapsto$ matrix respects products.",
+      "So $A^{32}$ represents $e^{32i\\alpha}$, and $\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$ represents $i=e^{i\\pi/2}$.",
+      "$e^{32i\\alpha}=e^{i\\pi/2}\\Rightarrow32\\alpha=\\frac\\pi2+2n\\pi\\Rightarrow\\alpha=\\frac\\pi{64}+\\frac{n\\pi}{16}$.",
+      "Test the options: $\\frac\\pi{32}$ gives $e^{i\\pi}=-1$, $0$ gives $1$, $\\frac\\pi{16}$ gives $e^{2\\pi i}=1$; only $\\frac\\pi{64}$ gives $i$: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$R(\\alpha)=\\begin{pmatrix}\\cos\\alpha&-\\sin\\alpha\\\\\\sin\\alpha&\\cos\\alpha\\end{pmatrix}$ satisfies $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$ and $R(\\alpha)^n=R(n\\alpha)$ for all integers $n$.",
+    "$R(\\alpha)\\leftrightarrow e^{i\\alpha}$: matrix identities become complex-number identities.",
+    "$R(\\pi/2)=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$, $R(\\pi)=-I$, $R(2\\pi)=I$: the order of $R(\\alpha)$ is the smallest $n$ with $n\\alpha\\in2\\pi\\mathbb Z$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Determinant of Vandermonde type",
+    "Arithmetic progression and inequalities"
+   ],
+   "level": 2,
+   "question": "Let the numbers $2,b,c$ be in an A.P. and $A=\\begin{bmatrix}1&1&1\\\\2&b&c\\\\4&b^2&c^2\\end{bmatrix}$. If $\\det(A)\\in[2,16]$, then $c$ lies in the interval:",
+   "options": [
+    "$[2,3)$",
+    "$(2+2^{3/4},4)$",
+    "$[3,2+2^{3/4}]$",
+    "$[4,6]$"
+   ],
+   "answer": "(D) $[4,6]$",
+   "key_idea": "$\\det A$ is a Vandermonde determinant; with common difference $d$ it equals $2d^3$.",
+   "solution": [
+    "$|A|=\\left|\\begin{matrix}1&1&1\\\\2&b&c\\\\4&b^2&c^2\\end{matrix}\\right|$; apply $C_2\\to C_2-C_1$, $C_3\\to C_3-C_1$.",
+    "$|A|=\\left|\\begin{matrix}1&0&0\\\\2&b-2&c-2\\\\4&(b-2)(b+2)&(c-2)(c+2)\\end{matrix}\\right|=(b-2)(c-2)(c-b)$.",
+    "Since $2,b,c$ are in A.P. with common difference $d$: $b-2=c-b=d$ and $c-2=2d$.",
+    "$|A|=d\\cdot2d\\cdot d=2d^3$.",
+    "$|A|\\in[2,16]\\Rightarrow1\\le d^3\\le8\\Rightarrow1\\le d\\le2$.",
+    "$c=2+2d$, so $4\\le2d+2\\le6$, i.e. $4\\le c\\le6$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The determinant is the Vandermonde determinant of the numbers $2,b,c$; quote its product formula.",
+     "solution": [
+      "Rows $(1,1,1)$, $(x_1,x_2,x_3)$, $(x_1^2,x_2^2,x_3^2)$ with $(x_1,x_2,x_3)=(2,b,c)$ give the Vandermonde determinant $\\prod_{i<j}(x_j-x_i)=(b-2)(c-2)(c-b)$.",
+      "For an A.P. $2,\\,2+d,\\,2+2d$ the three differences are $d,\\,2d,\\,d$, so $\\det A=2d^3$.",
+      "$2\\le2d^3\\le16\\Rightarrow1\\le d\\le2$ (the cube function is increasing).",
+      "$c=2+2d\\in[4,6]$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vandermonde: $\\left|\\begin{smallmatrix}1&1&1\\\\x&y&z\\\\x^2&y^2&z^2\\end{smallmatrix}\\right|=(y-x)(z-x)(z-y)$; it vanishes iff two of the numbers coincide.",
+    "For numbers in A.P. with common difference $d$ the Vandermonde determinant is $2d^3$ (differences $d,2d,d$), so its sign is the sign of $d$.",
+    "The map $d\\mapsto2d^3$ is increasing, so an interval condition on the determinant translates to an interval condition on $d$ by taking cube roots."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Product and inverse of unipotent matrices",
+    "Sum of first n natural numbers"
+   ],
+   "level": 1,
+   "question": "If $\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}\\cdot\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}\\cdot\\begin{bmatrix}1&3\\\\0&1\\end{bmatrix}\\cdots\\begin{bmatrix}1&n-1\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&78\\\\0&1\\end{bmatrix}$, then the inverse of $\\begin{bmatrix}1&n\\\\0&1\\end{bmatrix}$ is:",
+   "options": [
+    "$\\begin{bmatrix}1&0\\\\13&1\\end{bmatrix}$",
+    "$\\begin{bmatrix}1&-13\\\\0&1\\end{bmatrix}$",
+    "$\\begin{bmatrix}1&-12\\\\0&1\\end{bmatrix}$",
+    "$\\begin{bmatrix}1&0\\\\12&1\\end{bmatrix}$"
+   ],
+   "answer": "(B) $\\begin{bmatrix}1&-13\\\\0&1\\end{bmatrix}$",
+   "key_idea": "$\\begin{bmatrix}1&p\\\\0&1\\end{bmatrix}\\begin{bmatrix}1&q\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&p+q\\\\0&1\\end{bmatrix}$, so the product adds the upper-right entries.",
+   "solution": [
+    "Since $\\begin{bmatrix}1&p\\\\0&1\\end{bmatrix}\\begin{bmatrix}1&q\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&p+q\\\\0&1\\end{bmatrix}$, the product of the matrices is $\\begin{bmatrix}1&1+2+3+\\cdots+(n-1)\\\\0&1\\end{bmatrix}$.",
+    "So $\\begin{bmatrix}1&1+2+\\cdots+(n-1)\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&78\\\\0&1\\end{bmatrix}$.",
+    "$\\frac{(n-1)n}{2}=78\\Rightarrow n^2-n-156=0\\Rightarrow(n-13)(n+12)=0$.",
+    "$n=13$ (the number of factors is positive).",
+    "The inverse of $\\begin{bmatrix}1&13\\\\0&1\\end{bmatrix}$ is $\\begin{bmatrix}1&-13\\\\0&1\\end{bmatrix}$, since $\\begin{bmatrix}1&13\\\\0&1\\end{bmatrix}\\begin{bmatrix}1&-13\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "The matrices $U(p)=\\begin{bmatrix}1&p\\\\0&1\\end{bmatrix}$ satisfy $U(p)U(q)=U(p+q)$, so $U(p)^{-1}=U(-p)$ and $U(p)^n=U(np)$; they commute with each other.",
+    "$1+2+\\cdots+m=\\frac{m(m+1)}2$; $78=\\frac{12\\cdot13}2$, so $\\frac{(n-1)n}2=78$ is solved by $n-1=12$, i.e. $n=13$ (check by $n(n-1)=156=13\\cdot12$).",
+    "Same idea for lower-triangular $\\begin{bmatrix}1&0\\\\p&1\\end{bmatrix}$: they also add their off-diagonal entries."
+   ]
+  }
+ ]
+}
