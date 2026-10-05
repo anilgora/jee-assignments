@@ -1,0 +1,877 @@
+{
+ "title": "JEE Main Question Bank – Algebra 15 — Paper Analysis",
+ "subtitle": "Binomial Theorem (Q281–Q300) · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Algebra_15.pdf (no blueprint; concepts self-assigned)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 8,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 9,
+   "to": 20,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Ratio of terms from the beginning and from the end in a binomial expansion"
+   ],
+   "level": 2,
+   "question": "If the ratio of the fifth term from the beginning to the fifth term from the end in the expansion of $\\left(2^{1/4}+\\frac{1}{3^{1/4}}\\right)^{n}$ is $\\sqrt{6}:1$, then the third term from the beginning is:",
+   "options": [
+    "$30\\sqrt{3}$",
+    "$60\\sqrt{3}$",
+    "$60\\sqrt{2}$",
+    "$30\\sqrt{2}$"
+   ],
+   "answer": "(B) $60\\sqrt{3}$",
+   "key_idea": "The 5th term from the end is the 5th term of the expansion with the two summands swapped.",
+   "solution": [
+    "The 5th term from the beginning is $T_5={}^nC_4\\,(2^{1/4})^{n-4}\\left(3^{-1/4}\\right)^{4}$.",
+    "The 5th term from the end is the 5th term of the expansion with the summands interchanged: ${}^nC_4\\,(3^{-1/4})^{n-4}(2^{1/4})^{4}$.",
+    "Their ratio is $\\frac{{}^nC_4\\,2^{\\frac{n-4}{4}}\\cdot 3^{-1}}{{}^nC_4\\,3^{-\\frac{n-4}{4}}\\cdot 2}=\\sqrt{6}$; the ${}^nC_4$ cancels.",
+    "This simplifies to $2^{\\frac{n-4}{4}-1}\\cdot 3^{\\frac{n-4}{4}-1}=6^{\\frac{n-8}{4}}=6^{1/2}$.",
+    "Hence $\\frac{n-8}{4}=\\frac12$, so $n=10$.",
+    "The third term from the beginning is $T_3={}^{10}C_2\\,(2^{1/4})^{8}\\,(3^{-1/4})^{2}=45\\cdot 2^{2}\\cdot 3^{-1/2}$.",
+    "So $T_3=\\frac{45\\cdot 4}{\\sqrt{3}}=\\frac{180}{\\sqrt3}=60\\sqrt{3}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Writing the end term as $b^{n-4}a^4$ gives the ratio $(a/b)^{n-8}$ at once.",
+     "solution": [
+      "Let $a=2^{1/4}$ and $b=3^{-1/4}$. Then $T_5=\\binom n4 a^{n-4}b^4$ and the 5th term from the end is $\\binom n4 b^{n-4}a^4$.",
+      "Dividing, the ratio is $\\frac{a^{n-8}}{b^{n-8}}=\\left(\\frac ab\\right)^{n-8}$.",
+      "Here $\\frac ab=2^{1/4}\\cdot 3^{1/4}=6^{1/4}$, so the ratio is $6^{(n-8)/4}$.",
+      "Setting $6^{(n-8)/4}=6^{1/2}$ gives $n=10$.",
+      "Then $T_3=\\binom{10}{2}a^{8}b^{2}=45\\cdot 4\\cdot 3^{-1/2}=60\\sqrt3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $(a+b)^n$ the $k$-th term from the end is the $k$-th term from the beginning of $(b+a)^n$, i.e. $T_{n-k+2}$ of the original.",
+    "Ratio of the $k$-th term from the beginning to the $k$-th from the end: $\\left(\\frac ab\\right)^{n-2k+2}$ (the binomial coefficients cancel).",
+    "Here $k=5$: ratio $=(a/b)^{n-8}$; with $a/b=6^{1/4}$ this gives $n=10$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Coefficient of a given power of $x$ in a binomial expansion"
+   ],
+   "level": 2,
+   "question": "If the coefficients of $x^{7}$ in $\\left(ax^{2}+\\frac{1}{2bx}\\right)^{11}$ and of $x^{-7}$ in $\\left(ax-\\frac{1}{3bx^{2}}\\right)^{11}$ are equal, then:",
+   "options": [
+    "$64ab=243$",
+    "$243ab=64$",
+    "$729ab=32$",
+    "$32ab=729$"
+   ],
+   "answer": "(C) $729ab=32$",
+   "key_idea": "Find the index $r$ of the required term in each expansion from its power of $x$, then equate the coefficients.",
+   "solution": [
+    "In $\\left(ax^2+\\frac{1}{2bx}\\right)^{11}$ the general term is $T_{r+1}={}^{11}C_r\\,(ax^2)^{11-r}\\left(\\frac{1}{2bx}\\right)^{r}$.",
+    "This equals ${}^{11}C_r\\,a^{11-r}\\left(\\frac{1}{2b}\\right)^{r}x^{22-3r}$.",
+    "For $x^7$: $22-3r=7$, so $r=5$.",
+    "The coefficient of $x^7$ is therefore ${}^{11}C_5\\,a^{6}\\left(\\frac{1}{2b}\\right)^{5}$.",
+    "In $\\left(ax-\\frac{1}{3bx^2}\\right)^{11}$ the general term is $T_{r+1}={}^{11}C_r\\,(ax)^{11-r}\\left(-\\frac{1}{3bx^2}\\right)^{r}$.",
+    "This equals ${}^{11}C_r\\,a^{11-r}\\left(-\\frac{1}{3b}\\right)^{r}x^{11-3r}$.",
+    "For $x^{-7}$: $11-3r=-7$, so $r=6$.",
+    "The coefficient of $x^{-7}$ is ${}^{11}C_6\\,a^{5}\\left(\\frac{1}{3b}\\right)^{6}$ (the sign $(-1)^6$ is positive).",
+    "Equating, with ${}^{11}C_5={}^{11}C_6$: $a^{6}\\cdot\\frac{1}{32b^{5}}=a^{5}\\cdot\\frac{1}{729b^{6}}$.",
+    "Cross-multiplying gives $729ab=32$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last two lines read '$^{11}C_5(ab)^6(1/2b)^5=32 \\Rightarrow 729ab=32$', which drops the coefficient of the first expansion and does not show the equation. Corrected: the two coefficients are written out and equated (${}^{11}C_5={}^{11}C_6$ cancels), giving $729ab=32$. The answer (C) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Factor out a power of $x$ so each bracket is a binomial in $x^3$; the required term is then fixed by degree counting.",
+     "solution": [
+      "Write $\\left(ax^2+\\frac{1}{2bx}\\right)^{11}=x^{-11}\\left(ax^{3}+\\frac{1}{2b}\\right)^{11}$.",
+      "The coefficient of $x^{7}$ is the coefficient of $x^{18}$ in $\\left(ax^3+\\frac1{2b}\\right)^{11}$, i.e. the term with $(ax^3)^6$: $\\binom{11}{6}a^6\\left(\\frac1{2b}\\right)^5$.",
+      "Write $\\left(ax-\\frac{1}{3bx^2}\\right)^{11}=x^{-22}\\left(ax^{3}-\\frac{1}{3b}\\right)^{11}$.",
+      "The coefficient of $x^{-7}$ is the coefficient of $x^{15}$ in the bracket, i.e. the term with $(ax^3)^5$: $\\binom{11}{5}a^5\\left(-\\frac1{3b}\\right)^6$.",
+      "Equating and using $\\binom{11}{6}=\\binom{11}{5}$: $\\frac{a^6}{32b^5}=\\frac{a^5}{729b^6}$, so $729ab=32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $(px^{s}+qx^{t})^n$, factor out $x^{tn}$ to get $x^{tn}(px^{s-t}+q)^n$; the required exponent then pins down the index $r$ by one linear equation.",
+    "Term of $(ax^2+\\frac{1}{x})^n$-type expansions: exponent of $x$ is linear in $r$, so every power occurs at most once.",
+    "Always include the sign $(-1)^r$ when the second term is negative; here $r=5$ and $r=6$ so the signs matter only for the second expansion."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Divisibility using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "$25^{190}-19^{190}-8^{190}+2^{190}$ is divisible by:",
+   "options": [
+    "14 but not by 34",
+    "both 14 and 34",
+    "34 but not by 14",
+    "neither 14 nor 34"
+   ],
+   "answer": "(C) 34 but not by 14",
+   "key_idea": "Regroup into pairs $a^n-b^n$ so that the differences $a-b$ expose the prime factors 2, 7 and 17.",
+   "solution": [
+    "Let $N=25^{190}-19^{190}-8^{190}+2^{190}$. Note $14=2\\cdot7$ and $34=2\\cdot17$.",
+    "Group as $(25^{190}-19^{190})-(8^{190}-2^{190})$. Since $a-b\\mid a^n-b^n$, the first bracket is divisible by $25-19=6$ and the second by $8-2=6$.",
+    "Hence $N$ is divisible by $6$; in particular $N$ is even.",
+    "Group as $(25^{190}-8^{190})-(19^{190}-2^{190})$. The first bracket is divisible by $25-8=17$ and the second by $19-2=17$.",
+    "Hence $17\\mid N$, and since $N$ is even, $34\\mid N$.",
+    "Now test 7. $25^{190}-8^{190}$ is not divisible by 7 (it is $\\equiv4^{190}-1\\equiv4-1=3\\pmod 7$).",
+    "But $19^{190}-2^{190}$ is divisible by 7 (it is $\\equiv5^{190}-2^{190}\\equiv2-2=0\\pmod 7$).",
+    "So $N=(25^{190}-8^{190})-(19^{190}-2^{190})$ is not divisible by 7, hence not by 14.",
+    "Therefore $N$ is divisible by 34 but not by 14: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Reduce each prime factor separately with residues: mod 2, mod 17 and mod 7.",
+     "solution": [
+      "Mod 2: $25,19$ are odd and $8,2$ are even, so $N\\equiv1-1-0+0=0$; $N$ is even.",
+      "Mod 17: $25\\equiv8$ and $19\\equiv2$, so $N\\equiv8^{190}-2^{190}-8^{190}+2^{190}=0$. Hence $17\\mid N$ and, with the factor 2, $34\\mid N$.",
+      "Mod 7: $25\\equiv4$, $19\\equiv5$, $8\\equiv1$. As $4^{3}\\equiv1$ and $190=3\\cdot63+1$, $4^{190}\\equiv4$.",
+      "As $5^{6}\\equiv1$ and $190=6\\cdot31+4$, $5^{190}\\equiv5^{4}=625\\equiv2$. Also $8^{190}\\equiv1$ and $2^{190}\\equiv2^{1}=2$ (since $2^3\\equiv1$).",
+      "So $N\\equiv4-2-1+2=3\\not\\equiv0\\pmod7$, hence $14\\nmid N$.",
+      "Therefore $N$ is divisible by 34 but not by 14: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a-b$ divides $a^n-b^n$ for every positive integer $n$; $a+b$ divides $a^n+b^n$ for odd $n$.",
+    "To test divisibility by a composite number, split it into prime factors and regroup the terms so each group has a difference (or sum) that is a multiple of that prime.",
+    "Fermat: $a^{p-1}\\equiv1\\pmod p$ when $p\\nmid a$; use it to cut a large exponent down (here the exponent mod 3 and mod 6 for $p=7$)."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Remainder using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "Let the number $(22)^{2022}+(2022)^{22}$ leave the remainder $\\alpha$ when divided by 3 and $\\beta$ when divided by 7. Then $(\\alpha^2+\\beta^2)$ is equal to:",
+   "options": [
+    "$13$",
+    "$5$",
+    "$20$",
+    "$10$"
+   ],
+   "answer": "(B) 5",
+   "key_idea": "Write each base as (multiple of the divisor) $\\pm1$ so the binomial expansion leaves only the last term.",
+   "solution": [
+    "For $\\alpha$ (divisor 3): $22=21+1$, so $(22)^{2022}=(21+1)^{2022}$.",
+    "Since $2022=3\\cdot674$, $(2022)^{22}$ is divisible by 3.",
+    "By the binomial theorem $(21+1)^{2022}=21(\\ldots)+1$, so the sum is $3K_1+1$ and $\\alpha=1$.",
+    "For $\\beta$ (divisor 7): $(22)^{2022}=(21+1)^{2022}=7\\lambda+1$.",
+    "Write $2022=2023-1$ with $2023=7\\cdot289$; then $(2022)^{22}=(2023-1)^{22}=7\\mu+(-1)^{22}=7\\mu+1$.",
+    "So the sum is $7\\lambda+1+7\\mu+1=7K_2+2$ and $\\beta=2$.",
+    "Therefore $\\alpha^2+\\beta^2=1+4=5$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work with residues directly: $22\\equiv1\\pmod 3$ and $2022\\equiv-1\\pmod 7$.",
+     "solution": [
+      "Mod 3: $22\\equiv1$ and $2022\\equiv0$, so the number is $\\equiv1^{2022}+0=1$; $\\alpha=1$.",
+      "Mod 7: $22\\equiv1$, so $22^{2022}\\equiv1$.",
+      "Mod 7: $2022=7\\cdot288+6\\equiv-1$, so $2022^{22}\\equiv(-1)^{22}=1$.",
+      "Hence the number is $\\equiv1+1=2\\pmod7$; $\\beta=2$.",
+      "$\\alpha^2+\\beta^2=1+4=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $a\\equiv\\pm1\\pmod m$ then $a^n\\equiv(\\pm1)^n\\pmod m$: always look for a multiple of $m$ one away from the base.",
+    "Reducing the base mod $m$ first ($22\\equiv1$ mod 3 and mod 7) is the fastest route; the binomial theorem is the proof behind it.",
+    "A base divisible by the divisor contributes 0 to the remainder."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Ratio of terms from the beginning and from the end in a binomial expansion"
+   ],
+   "level": 2,
+   "question": "If the $1011^{\\text{th}}$ term from the end in the binomial expansion of $\\left(\\frac{4x}{5}-\\frac{5}{2x}\\right)^{2022}$ is $1024$ times the $1011^{\\text{th}}$ term from the beginning, then $|x|$ is equal to:",
+   "options": [
+    "$8$",
+    "$12$",
+    "$10$",
+    "$15$"
+   ],
+   "answer": "$\\frac{5}{16}$ (no option matches; key: (C) 10)",
+   "key_idea": "The $1011^{\\text{th}}$ term from the end swaps the exponents of the two summands, so the ratio of the two terms is $(b/a)^2$.",
+   "solution": [
+    "The $1011^{\\text{th}}$ term from the beginning is $T_{1011}={}^{2022}C_{1010}\\left(\\frac{4x}{5}\\right)^{1012}\\left(\\frac{-5}{2x}\\right)^{1010}$.",
+    "The $1011^{\\text{th}}$ term from the end is ${}^{2022}C_{1010}\\left(\\frac{-5}{2x}\\right)^{1012}\\left(\\frac{4x}{5}\\right)^{1010}$ (the summands are interchanged).",
+    "Given: (term from the end) $=1024\\times$ (term from the beginning), i.e. ${}^{2022}C_{1010}\\left(\\frac{-5}{2x}\\right)^{1012}\\left(\\frac{4x}{5}\\right)^{1010}=2^{10}\\,{}^{2022}C_{1010}\\left(\\frac{4x}{5}\\right)^{1012}\\left(\\frac{-5}{2x}\\right)^{1010}$.",
+    "Cancel the common factors $\\left(\\frac{-5}{2x}\\right)^{1010}\\left(\\frac{4x}{5}\\right)^{1010}$ and ${}^{2022}C_{1010}$: $\\left(\\frac{-5}{2x}\\right)^{2}=2^{10}\\left(\\frac{4x}{5}\\right)^{2}$.",
+    "So $\\frac{25}{4x^2}=1024\\cdot\\frac{16x^2}{25}$, which gives $x^4=\\frac{5^4}{2^{16}}$.",
+    "Taking the fourth root, $|x|=\\frac{5}{2^{4}}=\\frac{5}{16}$.",
+    "This value is not among the options. The key's answer (C) $10$ is obtained if the relation is reversed (the $1011^{\\text{th}}$ term from the beginning is $1024$ times the one from the end): then $\\left(\\frac{4x}{5}\\right)^2=1024\\left(\\frac{5}{2x}\\right)^2$ gives $x^4=10^4$, $|x|=10$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's own working ends at $|x|=5/16$ but its key says (C) 10, and 5/16 is not an option. For the statement as printed (end term $=1024\\times$ beginning term) the correct value is $|x|=5/16$ (verified symbolically). The key (C) 10 is correct only for the reversed statement (beginning term $=1024\\times$ end term), where $x^4=10^4$. Also the PDF prints $x^4=5^4/2^{16}$ then '$|x|=5/16$' without the intermediate step, which is added here.",
+   "alternate_solutions": [
+    {
+     "idea": "The $1011^{\\text{th}}$ term from the end is $T_{1013}$; the ratio $T_{1013}/T_{1011}$ is simply $(b/a)^2$.",
+     "solution": [
+      "With $a=\\frac{4x}{5}$, $b=-\\frac{5}{2x}$ and $n=2022$, the $1011^{\\text{th}}$ term from the end is $T_{n-1011+2}=T_{1013}$.",
+      "$T_{1011}={}^{2022}C_{1010}a^{1012}b^{1010}$ and $T_{1013}={}^{2022}C_{1012}a^{1010}b^{1012}$, with ${}^{2022}C_{1010}={}^{2022}C_{1012}$.",
+      "Hence $\\frac{T_{1013}}{T_{1011}}=\\frac{b^2}{a^2}=1024$, so $\\left|\\frac ba\\right|=32$.",
+      "$\\left|\\frac ba\\right|=\\frac{5/(2|x|)}{4|x|/5}=\\frac{25}{8x^2}=32$, so $x^2=\\frac{25}{256}$ and $|x|=\\frac{5}{16}$.",
+      "For the reversed reading, $\\left|\\frac ba\\right|=\\frac1{32}$ gives $x^2=100$, $|x|=10$, matching the key."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $(a+b)^n$: (term $k$ from the end)/(term $k$ from the beginning) $=(b/a)^{n-2k+2}$; for $n=2022,k=1011$ the exponent is $2$.",
+    "Reading direction matters: always check which of the two terms is the larger before equating, and test the final answer in the original statement.",
+    "A key that does not match your worked answer is a signal to re-read the statement for a reversed ratio."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum of binomial coefficients of the first half of terms"
+   ],
+   "level": 2,
+   "question": "The sum of the coefficients of the first 50 terms in the binomial expansion of $(1-x)^{100}$ is equal to:",
+   "options": [
+    "${}^{99}C_{49}$",
+    "$-{}^{99}C_{49}$",
+    "$-{}^{101}C_{50}$",
+    "${}^{101}C_{50}$"
+   ],
+   "answer": "(B) $-{}^{99}C_{49}$",
+   "key_idea": "Pairing $C_k$ with $C_{100-k}$ (equal values, equal signs) halves the alternating sum around the middle term.",
+   "solution": [
+    "$(1-x)^{100}=C_0-C_1x+C_2x^2-C_3x^3+\\ldots-C_{99}x^{99}+C_{100}x^{100}$, so the coefficients are $(-1)^kC_k$.",
+    "Put $x=1$: $C_0-C_1+C_2-C_3+\\ldots-C_{99}+C_{100}=0$.",
+    "Since ${}^{100}C_k={}^{100}C_{100-k}$ and the signs $(-1)^k$ and $(-1)^{100-k}$ agree, the terms pair up around the middle term $C_{50}$.",
+    "So $2\\left(C_0-C_1+C_2-\\ldots-C_{49}\\right)+C_{50}=0$.",
+    "The required sum $C_0-C_1+C_2-\\ldots-C_{49}$ (first 50 terms) is therefore $-\\frac12\\,C_{50}=-\\frac12\\,{}^{100}C_{50}$.",
+    "$-\\frac12\\cdot\\frac{100!}{50!\\,50!}=-\\frac12\\cdot\\frac{100\\cdot99!}{50\\cdot49!\\,50!}=-\\frac{99!}{49!\\,50!}$.",
+    "This is $-{}^{99}C_{49}$, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's printed lines contain index typos: '$2(C_0-C_1+C_2-\\ldots-C_9)+C_{50}=0$' (should end at $C_{49}$) and '$C_0-C_1+C_2+\\ldots+C_{99}=-\\frac12 C_{50}$' (should end at $C_{49}$, the sum of the first 50 coefficients). Also the step '$-\\frac12\\cdot\\frac{100\\times99!}{50!\\,50!}=-{}^{99}C_{49}$' skips the cancellation. All fixed; the answer (B) is unchanged (verified: the sum equals $-{}^{99}C_{49}$).",
+   "alternate_solutions": [
+    {
+     "idea": "Telescope with Pascal's rule: $\\sum_{k=0}^{m}(-1)^k\\binom nk=(-1)^m\\binom{n-1}{m}$.",
+     "solution": [
+      "Pascal: $\\binom{100}{k}=\\binom{99}{k}+\\binom{99}{k-1}$ (with $\\binom{99}{-1}=0$).",
+      "So $\\sum_{k=0}^{49}(-1)^k\\binom{100}{k}=\\sum_{k=0}^{49}(-1)^k\\binom{99}{k}+\\sum_{k=1}^{49}(-1)^k\\binom{99}{k-1}$.",
+      "In the second sum put $j=k-1$: $\\sum_{j=0}^{48}(-1)^{j+1}\\binom{99}{j}=-\\sum_{j=0}^{48}(-1)^j\\binom{99}{j}$.",
+      "All terms cancel except the last term of the first sum, $(-1)^{49}\\binom{99}{49}=-\\binom{99}{49}$.",
+      "So the sum of the first 50 coefficients is $-{}^{99}C_{49}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=0}^{m}(-1)^k\\binom nk=(-1)^m\\binom{n-1}{m}$ (proved by Pascal's rule; check $n=4,m=2$: $1-4+6=3=\\binom32$).",
+    "For $(1-x)^{2m}$: the first $m$ coefficients sum to $-\\frac12\\binom{2m}{m}$ (here $m=50$).",
+    "Symmetry $\\binom nk=\\binom n{n-k}$ plus the sign pattern lets you replace a half-range alternating sum by the middle term."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Multinomial expansion and coefficient comparison"
+   ],
+   "level": 2,
+   "question": "Let $\\left(a+bx+cx^{2}\\right)^{10}=\\sum_{i=0}^{20}p_ix^{i}$, where $a,b,c\\in\\mathbb{N}$. If $p_1=20$ and $p_2=210$, then $2(a+b+c)$ is equal to:",
+   "options": [
+    "$8$",
+    "$12$",
+    "$6$",
+    "$15$"
+   ],
+   "answer": "(B) 12",
+   "key_idea": "$p_1=10a^9b=20$ forces $a=1,b=2$ in natural numbers; then $p_2$ fixes $c$.",
+   "solution": [
+    "The coefficient of $x$ is $p_1=\\frac{10!}{9!\\,1!}a^{9}b=10a^9b=20$, so $a^9b=2$.",
+    "Since $a,b\\in\\mathbb{N}$, $a=1$ and $b=2$.",
+    "The coefficient of $x^2$ arises in two ways: one factor $cx^2$ and nine factors $a$, or two factors $bx$ and eight factors $a$.",
+    "$p_2=\\frac{10!}{9!\\,1!}a^9c+\\frac{10!}{8!\\,2!}a^8b^2=210$.",
+    "Substituting $a=1,b=2$: $210=10c+45\\cdot4$.",
+    "So $10c=30$ and $c=3$.",
+    "Therefore $2(a+b+c)=2(1+2+3)=12$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat $(a+x(b+cx))^{10}$ as an ordinary binomial in the two terms $a$ and $x(b+cx)$.",
+     "solution": [
+      "Write $(a+bx+cx^2)^{10}=\\left(a+x(b+cx)\\right)^{10}=\\sum_k\\binom{10}{k}a^{10-k}x^k(b+cx)^k$.",
+      "Only $k=1$ and $k=2$ can give $x$ and $x^2$: $k=1$ gives $10a^9x(b+cx)=10a^9bx+10a^9cx^2$.",
+      "$k=2$ gives $45a^8x^2(b+cx)^2=45a^8b^2x^2+\\ldots$ (higher powers).",
+      "So $p_1=10a^9b$ and $p_2=10a^9c+45a^8b^2$.",
+      "$p_1=20\\Rightarrow a=1,b=2$; $p_2=210\\Rightarrow10c+180=210\\Rightarrow c=3$, so $2(a+b+c)=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a trinomial, $(a+x\\,g(x))^n$ turns the expansion into a binomial: the coefficient of $x^k$ only involves $\\binom{n}{j}$ with $j\\le k$.",
+    "Low-order coefficients of $(a+bx+cx^2)^n$: $p_0=a^n$, $p_1=na^{n-1}b$, $p_2=na^{n-1}c+\\binom n2a^{n-2}b^2$.",
+    "A prime-power condition like $a^9b=2$ with natural numbers pins $a=1$ immediately."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficient sums with weights"
+   ],
+   "level": 3,
+   "question": "If $\\sum_{r=0}^{10}\\left(\\frac{10^{r+1}-1}{10^{r}}\\right){}^{11}C_{r+1}=\\frac{\\alpha^{11}-11^{11}}{10^{10}}$, then $\\alpha$ is equal to:",
+   "options": [
+    "$15$",
+    "$20$",
+    "$24$",
+    "$11$"
+   ],
+   "answer": "(B) 20",
+   "key_idea": "Split $\\frac{10^{r+1}-1}{10^r}=10-\\frac{1}{10^r}$ and sum each part with $(1+1)^{11}$ and $\\left(1+\\frac1{10}\\right)^{11}$.",
+   "solution": [
+    "The sum is $(10-1){}^{11}C_1+\\left(\\frac{10^2-1}{10}\\right){}^{11}C_2+\\ldots+\\left(\\frac{10^{11}-1}{10^{10}}\\right){}^{11}C_{11}$.",
+    "Split each bracket as $10-\\frac{1}{10^{r}}$: the sum is $10\\left({}^{11}C_1+{}^{11}C_2+\\ldots+{}^{11}C_{11}\\right)-\\left({}^{11}C_1+\\frac{{}^{11}C_2}{10}+\\ldots+\\frac{{}^{11}C_{11}}{10^{10}}\\right)$.",
+    "The first part is $10(2^{11}-1)$.",
+    "The second part is $10\\left(\\frac{{}^{11}C_1}{10}+\\frac{{}^{11}C_2}{10^2}+\\ldots+\\frac{{}^{11}C_{11}}{10^{11}}\\right)=10\\left(\\left(1+\\frac1{10}\\right)^{11}-1\\right)$.",
+    "This equals $10\\cdot\\frac{11^{11}-10^{11}}{10^{11}}=\\frac{11^{11}-10^{11}}{10^{10}}$.",
+    "So the sum is $10(2^{11}-1)-\\frac{11^{11}-10^{11}}{10^{10}}$.",
+    "Over the common denominator: $\\frac{10^{11}(2^{11}-1)-11^{11}+10^{11}}{10^{10}}=\\frac{2^{11}\\cdot10^{11}-11^{11}}{10^{10}}$.",
+    "Since $2^{11}\\cdot10^{11}=20^{11}$, the sum is $\\frac{20^{11}-11^{11}}{10^{10}}$.",
+    "Comparing with the given form, $\\alpha=20$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Clear denominators first: multiplying by $10^{10}$ turns each term into $10^{11}-10^{11-k}$, which sums to powers of $(1+10)$.",
+     "solution": [
+      "Put $k=r+1$ ($k=1,\\ldots,11$). Then $\\frac{10^{k}-1}{10^{k-1}}\\cdot10^{10}=10^{11}-10^{11-k}$.",
+      "So $10^{10}\\cdot\\text{LHS}=\\sum_{k=1}^{11}\\binom{11}{k}\\left(10^{11}-10^{11-k}\\right)$.",
+      "$\\sum_{k=1}^{11}\\binom{11}{k}10^{11}=10^{11}(2^{11}-1)$.",
+      "$\\sum_{k=1}^{11}\\binom{11}{k}10^{11-k}=(10+1)^{11}-10^{11}=11^{11}-10^{11}$.",
+      "Subtract: $10^{11}2^{11}-10^{11}-11^{11}+10^{11}=20^{11}-11^{11}$, so $\\alpha=20$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=0}^{n}\\binom nk a^{n-k}b^k=(a+b)^n$: partial sums starting at $k=1$ are $(a+b)^n-a^n$.",
+    "Splitting $\\frac{p^{k}-1}{p^{k-1}}=p-p^{1-k}$ separates a weighted sum into two binomial sums.",
+    "Multiply through by the highest power in the denominator to get an integer identity and compare with the target form."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Sum of coefficients of even powers in a product of expansions"
+   ],
+   "level": 1,
+   "question": "If the sum of the coefficients of all even powers of $x$ in the product $\\left(1+x+x^2+\\ldots+x^{2n}\\right)\\left(1-x+x^2-x^3+\\ldots+x^{2n}\\right)$ is $61$, then $n$ is equal to ____.",
+   "answer": "30",
+   "key_idea": "Evaluating the product at $x=1$ and $x=-1$ and adding isolates twice the sum of the even-power coefficients.",
+   "solution": [
+    "Let $(1+x+\\ldots+x^{2n})(1-x+x^2-\\ldots+x^{2n})=a_0+a_1x+a_2x^2+\\ldots+a_{4n}x^{4n}$ ....(1).",
+    "Put $x=1$: the first factor is $2n+1$ and the second is $1$, so $2n+1=a_0+a_1+a_2+\\ldots+a_{4n}$ ....(2).",
+    "Put $x=-1$: the first factor is $1$ and the second is $2n+1$, so $2n+1=a_0-a_1+a_2-\\ldots+a_{4n}$ ....(3).",
+    "Adding (2) and (3): $2\\left(a_0+a_2+a_4+\\ldots+a_{4n}\\right)=4n+2$.",
+    "The sum of the even-power coefficients is $61$, so $2\\times61=2(2n+1)$.",
+    "Hence $2n+1=61$ and $n=30$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Multiply the two geometric sums first: the product collapses to $1+x^2+x^4+\\ldots+x^{4n}$.",
+     "solution": [
+      "$1+x+\\ldots+x^{2n}=\\frac{1-x^{2n+1}}{1-x}$ and $1-x+x^2-\\ldots+x^{2n}=\\frac{1+x^{2n+1}}{1+x}$.",
+      "Their product is $\\frac{1-x^{4n+2}}{1-x^2}=1+x^2+x^4+\\ldots+x^{4n}$.",
+      "So every even power $x^0,x^2,\\ldots,x^{4n}$ has coefficient $1$ and every odd power has coefficient $0$.",
+      "The sum of the even-power coefficients is the number of terms, $2n+1=61$, so $n=30$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $P(x)=\\sum a_kx^k$: $\\sum a_{2k}=\\frac{P(1)+P(-1)}{2}$ and $\\sum a_{2k+1}=\\frac{P(1)-P(-1)}{2}$.",
+    "$\\left(\\sum_{i=0}^{m}x^i\\right)\\left(\\sum_{i=0}^{m}(-x)^i\\right)=\\sum_{j}x^{2j}$ for even $m$ (difference of squares in the geometric forms).",
+    "Here $P(1)=P(-1)=2n+1$, so the odd coefficients sum to $0$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Ratio of coefficients in a trinomial expansion"
+   ],
+   "level": 3,
+   "question": "Let $\\left(2x^{2}+3x+4\\right)^{10}=\\sum_{r=0}^{20}a_rx^{r}$. Then $\\frac{a_7}{a_{13}}$ is equal to ____.",
+   "answer": "8",
+   "key_idea": "$x^2P(2/x)=2P(x)$ for $P=2x^2+3x+4$, so the coefficients satisfy $a_{13}2^{13}=2^{10}a_7$.",
+   "solution": [
+    "The general term of $(2x^2+3x+4)^{10}$ is $\\frac{10!}{p_1!\\,p_2!\\,p_3!}(2x^2)^{p_1}(3x)^{p_2}(4)^{p_3}$ with $p_1+p_2+p_3=10$, $0\\le p_i\\le10$.",
+    "This equals $\\frac{10!}{p_1!p_2!p_3!}2^{p_1}3^{p_2}4^{p_3}x^{2p_1+p_2}$.",
+    "For $a_7$: $2p_1+p_2=7$. The solutions are $(p_1,p_2,p_3)=(3,1,6),(2,3,5),(1,5,4),(0,7,3)$.",
+    "Their coefficients are $\\frac{10!}{3!1!6!}2^{15}3$, $\\frac{10!}{2!3!5!}2^{12}3^{3}$, $\\frac{10!}{1!5!4!}2^{9}3^{5}$ and $\\frac{10!}{7!3!}2^{6}3^{7}$.",
+    "So $a_7=2^{3}\\left(\\frac{10!}{3!1!6!}2^{12}3+\\frac{10!}{2!3!5!}2^{9}3^3+\\frac{10!}{1!5!4!}2^{6}3^5+\\frac{10!}{7!3!}2^{3}3^7\\right)$.",
+    "For $a_{13}$: $2p_1+p_2=13$. The solutions are $(6,1,3),(5,3,2),(4,5,1),(3,7,0)$.",
+    "Their coefficients are $\\frac{10!}{6!1!3!}2^{12}3$, $\\frac{10!}{5!3!2!}2^{9}3^{3}$, $\\frac{10!}{4!5!1!}2^{6}3^5$ and $\\frac{10!}{3!7!}2^{3}3^7$.",
+    "So $a_{13}=\\frac{10!}{6!1!3!}2^{12}3+\\frac{10!}{5!3!2!}2^{9}3^3+\\frac{10!}{4!5!1!}2^{6}3^5+\\frac{10!}{3!7!}2^{3}3^7$, which is the bracket in $a_7$.",
+    "Hence $\\frac{a_7}{a_{13}}=2^3=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry of the quadratic: $x^2P(2/x)=2P(x)$, so $x^{20}Q(2/x)=2^{10}Q(x)$ for $Q=P^{10}$.",
+     "solution": [
+      "Let $P(x)=2x^2+3x+4$ and $Q=P^{10}=\\sum a_rx^r$.",
+      "$x^2P(2/x)=x^2\\left(\\frac{8}{x^2}+\\frac6x+4\\right)=8+6x+4x^2=2P(x)$.",
+      "Raising to the 10th power: $x^{20}Q(2/x)=2^{10}Q(x)$.",
+      "The left side is $\\sum a_r2^rx^{20-r}$; the coefficient of $x^{7}$ on the left is $a_{13}2^{13}$.",
+      "The right side's coefficient of $x^7$ is $2^{10}a_7$, so $a_{13}2^{13}=2^{10}a_7$ and $\\frac{a_7}{a_{13}}=2^3=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $x^kP(c/x)=\\lambda P(x)$ (a 'self-reciprocal up to scaling' polynomial), coefficients obey $a_{k-r}c^{k-r}=\\lambda a_r$: a hidden symmetry that turns a heavy casework count into one line.",
+    "For $P=ax^2+bx+d$ one has $x^2P(c/x)=cP(x)$ with $c=d/a$ (here $c=2$), which is why this quadratic has the reflection symmetry.",
+    "Verification: $a_7=534827520$, $a_{13}=66853440$, ratio $=8$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Finding an exponent from the coefficient of a given power of $x$"
+   ],
+   "level": 2,
+   "question": "The natural number $m$, for which the coefficient of $x$ in the binomial expansion of $\\left(x^{m}+\\frac{1}{x^{2}}\\right)^{22}$ is $1540$, is ____.",
+   "answer": "13",
+   "key_idea": "The condition $\\binom{22}{r}=1540$ gives only two indices, $r=3$ and $r=19$, and the exponent equation then fixes $m$.",
+   "solution": [
+    "The general term is $T_{r+1}={}^{22}C_r\\,(x^m)^{22-r}\\left(\\frac{1}{x^2}\\right)^r$.",
+    "This is ${}^{22}C_r\\,x^{22m-mr-2r}$.",
+    "For the coefficient of $x$: $22m-mr-2r=1$ ....(1)",
+    "and ${}^{22}C_r=1540$.",
+    "Now ${}^{22}C_3=\\frac{22\\times21\\times20}{3\\times2\\times1}=1540$, so $r=3$ or $r=19$ (as ${}^{22}C_{19}={}^{22}C_3$).",
+    "If $r=3$: (1) gives $22m-3m-6=1$, i.e. $m=\\frac{7}{19}$, not an integer.",
+    "If $r=19$: (1) gives $22m-19m-38=1$, i.e. $3m=39$ and $m=13$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Solve (1) for $r$ as a function of $m$: $r=22-\\frac{45}{m+2}$, so $m+2$ must divide $45$.",
+     "solution": [
+      "From $22m-mr-2r=1$: $r(m+2)=22m-1$, so $r=\\frac{22m-1}{m+2}=22-\\frac{45}{m+2}$.",
+      "For $r$ to be an integer, $(m+2)\\mid45$ with $m\\ge1$: $m+2\\in\\{3,5,9,15,45\\}$, i.e. $m\\in\\{1,3,7,13,43\\}$.",
+      "The corresponding $r$ are $7,13,17,19,21$.",
+      "The needed coefficient ${}^{22}C_r$ is $170544,\\,497420,\\,26334,\\,1540,\\,22$ respectively.",
+      "Only $r=19$ gives $1540$, so $m=13$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A coefficient condition on $x^k$ in $(x^m+x^{-2})^n$ is a linear Diophantine equation in $(m,r)$; solve for $r$ as $n-\\frac{\\text{const}}{m+2}$ and test divisors.",
+    "$\\binom nr=\\binom n{n-r}$: a given binomial value normally corresponds to two indices; test both.",
+    "Memorise small values: $\\binom{22}{3}=1540$, $\\binom{22}{2}=231$, $\\binom{22}{4}=7315$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Remainder using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "If the remainder when $x$ is divided by $4$ is $3$, then the remainder when $(2020+x)^{2022}$ is divided by $8$ is ____.",
+   "answer": "1",
+   "key_idea": "Write $2020+x=2024+(4k-1)$ with $8\\mid2024$, so only $(4k-1)^{2022}$ matters.",
+   "solution": [
+    "Let $x=4k+3$. Then $(2020+x)^{2022}=(2023+4k)^{2022}$.",
+    "Write $2023+4k=2024+(4k-1)$, so the number is $\\left(2024+(4k-1)\\right)^{2022}$.",
+    "Expanding, $={}^{2022}C_0(2024)^{2022}+\\ldots+{}^{2022}C_{2021}(2024)(4k-1)^{2021}+{}^{2022}C_{2022}(4k-1)^{2022}$.",
+    "Every term except the last contains the factor $2024=8\\cdot253$, so they sum to $8I$.",
+    "The remaining term is $(4k-1)^{2022}=\\sum_{j=0}^{2022}{}^{2022}C_j(4k)^{j}(-1)^{2022-j}$.",
+    "The $j=0$ term is $(-1)^{2022}=1$; the $j=1$ term is $-2022\\cdot4k=-8088k$, a multiple of 8; every term with $j\\ge2$ contains $(4k)^2=16k^2$, a multiple of 8.",
+    "So $(4k-1)^{2022}=8I_1+1$, and the whole number is $8I+8I_1+1$, leaving remainder $1$ on division by 8."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "An odd number squared leaves remainder $1$ on division by $8$.",
+     "solution": [
+      "$2020+x=2020+4k+3=2023+4k$, which is odd.",
+      "For odd $m=2j+1$, $m^2=4j(j+1)+1$ and $j(j+1)$ is even, so $m^2\\equiv1\\pmod 8$.",
+      "Then $(2023+4k)^{2022}=\\left((2023+4k)^2\\right)^{1011}\\equiv1^{1011}=1\\pmod 8$.",
+      "The remainder is $1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Every odd square is $\\equiv1\\pmod 8$; hence $(\\text{odd})^{2m}\\equiv1\\pmod 8$ for all $m$.",
+    "$(8a\\pm1)^n\\equiv(\\pm1)^n\\pmod 8$; the same trick works for any modulus: write the base as a multiple of the modulus plus a small residue.",
+    "Do not need $x$ exactly: the information $x\\equiv3\\pmod4$ is only used to guarantee that $2020+x$ is odd."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Remainder using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "If $(2021)^{3762}$ is divided by $17$, then the remainder is ____.",
+   "answer": "4",
+   "key_idea": "$2021=2023-2$ with $17\\mid2023$, and $2^4=16=17-1$ turns the power of 2 into $(17-1)^{k}$.",
+   "solution": [
+    "Write $2021=2023-2$ where $2023=17\\cdot119$, so $(2021)^{3762}=(2023-2)^{3762}$.",
+    "Expanding, $(2023-2)^{3762}=17k+(-2)^{3762}=17k+2^{3762}$ for some integer $k$.",
+    "Now $2^{3762}=2^{2}\\cdot2^{3760}=2^2\\left(2^4\\right)^{940}=4\\cdot16^{940}$.",
+    "Write $16=17-1$: $4(17-1)^{940}=4(17\\lambda+1)$ because the exponent 940 is even.",
+    "So $(2021)^{3762}=17k+4(17\\lambda)+4$, which is a multiple of 17 plus $4$.",
+    "The remainder is $4$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's first line writes '$(2021)^{3768}=(2023-z)^{3762}$': the exponent 3768 is a typo for 3762 and 'z' is a typo for 2 (as $2021=2023-2$). Also '$17k+2^{3762}$' is followed by '$2^2(2^4)^{940}$', fine. The working and answer 4 are correct once these typos are fixed (verified: $2021^{3762}\\bmod17=4$).",
+   "alternate_solutions": [
+    {
+     "idea": "Use residues and the order of 2 modulo 17: $2^8\\equiv1$.",
+     "solution": [
+      "$2021=17\\cdot118+15$, so $2021\\equiv15\\equiv-2\\pmod{17}$.",
+      "Then $2021^{3762}\\equiv(-2)^{3762}=2^{3762}$ (even exponent).",
+      "$2^4=16\\equiv-1$, so $2^8\\equiv1\\pmod{17}$.",
+      "$3762=8\\cdot470+2$, so $2^{3762}\\equiv(2^8)^{470}\\cdot2^2\\equiv4$.",
+      "The remainder is $4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The multiplicative order of 2 modulo 17 is 8 ($2^4\\equiv-1$); in general find the first power that is $\\pm1$ and reduce the exponent modulo it.",
+    "Fermat gives the cruder bound $2^{16}\\equiv1\\pmod{17}$; the order divides $p-1$ and is often smaller.",
+    "A base $\\equiv-a$ with an even exponent behaves exactly like $a$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Sum of a series using binomial theorem and geometric progression"
+   ],
+   "level": 3,
+   "question": "Let $n$ be a positive integer. Let $A=\\sum_{k=0}^{n}(-1)^k\\,{}^nC_k\\left[\\left(\\frac12\\right)^k+\\left(\\frac34\\right)^k+\\left(\\frac78\\right)^k+\\left(\\frac{15}{16}\\right)^k+\\left(\\frac{31}{32}\\right)^k\\right]$. If $63A=1-\\frac{1}{2^{30}}$, then $n$ is equal to ____.",
+   "answer": "6",
+   "key_idea": "$\\sum_k(-1)^k\\binom nk t^k=(1-t)^n$ turns $A$ into a geometric series in $2^{-n}$.",
+   "solution": [
+    "Use $\\sum_{k=0}^{n}(-1)^k{}^nC_kt^k=(1-t)^n$ for each of the five values of $t$.",
+    "$A=\\left(1-\\frac12\\right)^n+\\left(1-\\frac34\\right)^n+\\left(1-\\frac78\\right)^n+\\left(1-\\frac{15}{16}\\right)^n+\\left(1-\\frac{31}{32}\\right)^n$.",
+    "So $A=\\frac1{2^n}+\\frac1{4^n}+\\frac1{8^n}+\\frac1{16^n}+\\frac1{32^n}=\\frac1{2^n}+\\frac1{2^{2n}}+\\frac1{2^{3n}}+\\frac1{2^{4n}}+\\frac1{2^{5n}}$.",
+    "This is a G.P. with first term $\\frac1{2^n}$ and ratio $\\frac1{2^n}$: $A=\\frac{\\frac1{2^n}\\left(1-\\frac1{2^{5n}}\\right)}{1-\\frac1{2^n}}$.",
+    "Simplifying, $A=\\frac{1-2^{-5n}}{2^n-1}=\\frac{2^{5n}-1}{2^{5n}\\left(2^n-1\\right)}$.",
+    "Then $63A=\\frac{63}{2^n-1}\\left(1-\\frac1{2^{5n}}\\right)$.",
+    "Comparing with $63A=1-\\frac1{2^{30}}$: $\\frac{63}{2^n-1}=1$ and $2^{5n}=2^{30}$ both give $n=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $y=2^{-n}$, $f(y)=63(y+y^2+\\ldots+y^5)$ is increasing, and $y=2^{-6}$ visibly gives $1-2^{-30}$.",
+     "solution": [
+      "As above $A=y+y^2+y^3+y^4+y^5$ with $y=2^{-n}$, $0<y<1$.",
+      "The right side is $1-2^{-30}=1-z^5$ with $z=2^{-6}=\\frac1{64}$.",
+      "For $y=z$: $63A=63z\\frac{1-z^5}{1-z}=63\\cdot\\frac{1}{64}\\cdot\\frac{64}{63}(1-z^5)=1-z^5$, so $y=\\frac1{64}$ satisfies the equation.",
+      "$f(y)=63(y+\\ldots+y^5)$ is strictly increasing for $y>0$, so the solution is unique.",
+      "Hence $2^{-n}=2^{-6}$ and $n=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k}(-1)^k\\binom nk t^k=(1-t)^n$ and $\\sum_k\\binom nk t^k=(1+t)^n$: weights $t^k$ inside a binomial sum collapse to a single power.",
+    "When $1-t$ is a power of a fixed number (here $t=1-2^{-j}$) the result is a geometric series; recognise the pattern $\\frac12,\\frac34,\\frac78,\\ldots$ as $1-2^{-j}$.",
+    "Matching a monotone expression with a target is often faster than solving: guess from the target ($2^{30}=(2^6)^5$) and prove uniqueness by monotonicity."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Constant term and coefficient of a given power in a binomial expansion"
+   ],
+   "level": 3,
+   "question": "If the constant term in the binomial expansion of $\\left(\\frac{x^{5/2}}{2}-\\frac{4}{x^{l}}\\right)^{9}$ is $-84$ and the coefficient of $x^{-3l}$ is $2^{\\alpha}\\beta$, where $\\beta<0$ is an odd number, then $|\\alpha l-\\beta|$ is equal to ____.",
+   "answer": "98",
+   "key_idea": "The constant-term equation links $l$ and $r$; only one integer pair also gives the coefficient $-84$.",
+   "solution": [
+    "The general term is $T_{r+1}={}^9C_r\\frac{\\left(x^{5/2}\\right)^{9-r}}{2^{9-r}}\\left(\\frac{-4}{x^{l}}\\right)^{r}$.",
+    "This is $(-1)^r\\frac{{}^9C_r}{2^{9-r}}4^rx^{\\frac{45}{2}-\\frac{5r}{2}-lr}$.",
+    "For the constant term: $\\frac{45}{2}-\\frac{5r}{2}-lr=0$, i.e. $45-5r-2lr=0$, so $r=\\frac{45}{5+2l}$ ....(1)",
+    "The constant term equals $-84$: $(-1)^r\\frac{{}^9C_r}{2^{9-r}}4^r=(-1)^r\\,{}^9C_r\\,2^{3r-9}=-84=-21\\cdot4$.",
+    "The power of 2 on the left is $2^{3r-9}$; the only natural $r$ with ${}^9C_r2^{3r-9}=84$ is $r=3$ (then $2^0=1$ and ${}^9C_3=84$, with sign $(-1)^3=-1$).",
+    "Putting $r=3$ in (1): $3=\\frac{45}{5+2l}$, so $l=5$.",
+    "The exponent of $x$ in the general term for $l=5$ is $\\frac{45}{2}-\\frac{5r}{2}-5r=\\frac{45-15r}{2}$; for $x^{-3l}=x^{-15}$: $45-15r=-30$, so $r=5$.",
+    "The coefficient is ${}^9C_5(-1)^5\\frac{4^5}{2^4}=-126\\cdot64=-63\\cdot2^{7}$.",
+    "Comparing with $2^{\\alpha}\\beta$ ($\\beta<0$ odd): $\\alpha=7$ and $\\beta=-63$.",
+    "Therefore $|\\alpha l-\\beta|=|35+63|=98$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat (1) as a divisibility condition: $5+2l$ is an odd divisor of $45$, which leaves only three candidates.",
+     "solution": [
+      "From $r=\\frac{45}{5+2l}$ with $r\\in\\{0,\\ldots,9\\}$ and $l\\ge1$ an integer, $5+2l$ is an odd divisor of $45$ that is at least $7$: $5+2l\\in\\{9,15,45\\}$.",
+      "This gives $(l,r)=(2,5),(5,3),(20,1)$.",
+      "The constant term $(-1)^r\\,{}^9C_r\\,2^{3r-9}$ for these pairs is $-8064$, $-84$, $-\\frac{9}{64}$ respectively.",
+      "Only $(l,r)=(5,3)$ gives $-84$, so $l=5$.",
+      "For $x^{-15}$ the index is $r=5$ and the coefficient is $-126\\cdot64=-8064=-63\\cdot2^7$, so $\\alpha=7,\\beta=-63$ and $|\\alpha l-\\beta|=98$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $(px^{s}+qx^{-t})^n$ the exponent $s(n-r)-tr$ is linear in $r$: a constant term needs $r=\\frac{sn}{s+t}$ to be an integer in $[0,n]$.",
+    "If an exponent parameter like $l$ is unknown, the integer-index condition usually leaves a handful of divisor cases; test each against the given value.",
+    "A coefficient written as $2^{\\alpha}\\beta$ with $\\beta$ odd is the unique 'power of 2 times odd part' factorisation: extract $\\alpha$ by dividing out 2's."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Coefficient of a given power of $x$ in a binomial expansion"
+   ],
+   "level": 2,
+   "question": "Let the sum of the coefficients of the first three terms in the expansion of $\\left(x-\\frac{3}{x^{2}}\\right)^{n}$, $x\\neq0$, $n\\in\\mathbb{N}$, be $376$. Then the coefficient of $x^{4}$ is ____.",
+   "answer": "405",
+   "key_idea": "The coefficients of the first three terms are $1$, $-3n$ and $9\\binom n2$; their sum fixes $n$.",
+   "solution": [
+    "The first three terms have coefficients ${}^nC_0$, $-{}^nC_1\\cdot3$ and ${}^nC_2\\cdot3^2$.",
+    "So ${}^nC_0-{}^nC_1\\cdot3+{}^nC_2\\cdot3^2=376$, i.e. $1-3n+\\frac{9n(n-1)}{2}=376$.",
+    "This simplifies to $9n^2-15n-750=0$, i.e. $3n^2-5n-250=0$, i.e. $(n-10)(3n+25)=0$.",
+    "Since $n\\in\\mathbb{N}$, $n=10$.",
+    "The general term is $T_{r+1}={}^{10}C_r\\left(\\frac{-3}{x^2}\\right)^r(x)^{10-r}={}^{10}C_r(-3)^rx^{10-3r}$.",
+    "For $x^4$: $10-3r=4$, so $r=2$.",
+    "The coefficient of $x^4$ is ${}^{10}C_2(-3)^2=45\\cdot9=405$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "The first three coefficients of $(x+by^{-2})^n$-type expansions are $1$, $nb$, $\\binom n2b^2$ (with $b=-3$ here): quadratic in $n$, so the answer is found by factorising.",
+    "The coefficient of $x^k$ in $(x-3x^{-2})^{n}$ is nonzero only when $n-k$ is divisible by 3.",
+    "Here $n=10$ and $k=4$: $r=\\frac{10-4}{3}=2$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Constant term in a multinomial expansion"
+   ],
+   "level": 2,
+   "question": "The constant term in the expansion of $\\left(2x+\\frac{1}{x^{7}}+3x^{2}\\right)^{5}$ is ____.",
+   "answer": "1080",
+   "key_idea": "Constant term means $n_1-7n_2+2n_3=0$ with $n_1+n_2+n_3=5$; only one non-negative triple works.",
+   "solution": [
+    "The general term is $\\sum\\frac{5!}{n_1!\\,n_2!\\,n_3!}(2x)^{n_1}\\left(x^{-7}\\right)^{n_2}\\left(3x^2\\right)^{n_3}$ with $n_1+n_2+n_3=5$.",
+    "For a constant term the power of $x$ vanishes: $n_1-7n_2+2n_3=0$, i.e. $n_1+2n_3=7n_2$.",
+    "Combine with $n_1+n_2+n_3=5$. If $n_2=0$, then $n_1=n_3=0$, impossible; if $n_2\\ge2$, $n_1+2n_3\\ge14$ cannot hold with $n_1+n_3\\le3$.",
+    "So $n_2=1$: $n_1+2n_3=7$ and $n_1+n_3=4$, giving $n_3=3$, $n_1=1$.",
+    "The only possibility is $(n_1,n_2,n_3)=(1,1,3)$.",
+    "The constant term is $\\frac{5!}{1!\\,1!\\,3!}\\cdot2\\cdot1\\cdot3^3=20\\cdot2\\cdot27=1080$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor out $x^{-35}$: the constant term is the coefficient of $x^{35}$ in $(1+2x^8+3x^9)^5$, a simple exponent equation $8a+9b=35$.",
+     "solution": [
+      "$\\left(2x+x^{-7}+3x^2\\right)^5=x^{-35}\\left(1+2x^{8}+3x^{9}\\right)^5$.",
+      "The constant term is the coefficient of $x^{35}$ in $(1+2x^8+3x^9)^5$.",
+      "Choosing $a$ factors $2x^8$ and $b$ factors $3x^9$ with $a+b\\le5$ needs $8a+9b=35$.",
+      "$35-9b$ must be a non-negative multiple of 8: $b=3$ gives $8$, so $a=1$ ($b=11$ is too large). So $(a,b)=(1,3)$.",
+      "The coefficient is $\\frac{5!}{1!\\,3!\\,1!}\\cdot2\\cdot3^3=20\\cdot54=1080$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a trinomial, factor out the most negative power so it becomes a polynomial; then the required power is a two-variable linear equation in the counts.",
+    "Count multinomial arrangements as $\\frac{n!}{n_1!n_2!n_3!}$ and include the numerical factors of each term raised to its count.",
+    "Always bound the counts ($n_1+n_2+n_3=n$) to discard spurious solutions of the exponent equation."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Remainder using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "The remainder when $(2023)^{2023}$ is divided by $35$ is ____.",
+   "answer": "7",
+   "key_idea": "$2023=7\\cdot289$, so the number is a multiple of 7; its remainder mod 5 then fixes the remainder mod 35.",
+   "solution": [
+    "$2023=7\\cdot289$, so $(2023)^{2023}=7\\cdot\\left(7^{2022}\\cdot289^{2023}\\right)$ is a multiple of 7.",
+    "Let $M=7^{2022}\\cdot289^{2023}$; the number is $7M$ and we need $M$ modulo 5.",
+    "$7^{2022}=49^{1011}=(50-1)^{1011}=5\\lambda-1$, so $7^{2022}\\equiv-1\\pmod5$.",
+    "$289=290-1\\equiv-1\\pmod5$, so $289^{2023}\\equiv(-1)^{2023}=-1\\pmod5$.",
+    "So $M\\equiv(-1)(-1)=1\\pmod5$, i.e. $M=5\\mu+1$.",
+    "Then $(2023)^{2023}=7(5\\mu+1)=35\\mu+7$.",
+    "The remainder when divided by 35 is $7$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working ('$-7^{2023}=-7\\times7^{2022}=-\\frac{7^{2022}}{5}\\ldots=\\frac{5\\lambda-1}{5}$, remainder $+1$') is garbled: it drops the factor $289^{2023}$ (which is $\\equiv-1\\pmod5$ and supplies the sign) and divides by 5 inside the working. Rewritten: $2023=7\\cdot289$, find $7^{2022}289^{2023}\\bmod5=1$, so the remainder is $7\\cdot1=7$. Answer 7 unchanged (verified: $2023^{2023}\\bmod35=7$).",
+   "alternate_solutions": [
+    {
+     "idea": "Chinese remainder theorem: residue $0$ mod 7 and mod 5 via $3^4\\equiv1$.",
+     "solution": [
+      "Mod 7: $2023=7\\cdot289\\equiv0$, so the number is $\\equiv0$.",
+      "Mod 5: $2023\\equiv3$ and $3^4=81\\equiv1$; $2023=4\\cdot505+3$, so $3^{2023}\\equiv3^3=27\\equiv2\\pmod5$.",
+      "We need $x\\in\\{0,\\ldots,34\\}$ with $x\\equiv0\\pmod7$ and $x\\equiv2\\pmod5$: the multiples of 7 are $0,7,14,21,28$, with residues mod 5 of $0,2,4,1,3$.",
+      "Only $x=7$ has residue 2.",
+      "The remainder is $7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "CRT: for a composite modulus $m=m_1m_2$ with $\\gcd(m_1,m_2)=1$, find the remainders mod $m_1$ and $m_2$ separately and combine.",
+    "If the base shares a factor with the modulus, one residue is $0$ and the other is found by Euler/Fermat ($a^{\\varphi(m)}\\equiv1$ when $\\gcd(a,m)=1$).",
+    "A number divisible by $p$ and with residue $r$ mod $q$ equals $p\\cdot(p^{-1}r\\bmod q)$ mod $pq$; here $7\\cdot1$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Exponential series"
+   ],
+   "level": 3,
+   "question": "Let $\\sum_{n=0}^{\\infty}\\frac{n^{3}\\left((2n)!\\right)+(2n-1)\\left(n!\\right)}{(n!)\\left((2n)!\\right)}=ae+\\frac{b}{e}+c$, where $a,b,c\\in\\mathbb{Z}$ and $e=\\sum_{n=0}^{\\infty}\\frac{1}{n!}$. Then $a^{2}-b+c$ is equal to ____.",
+   "answer": "26",
+   "key_idea": "Split into $\\sum\\frac{n^3}{n!}$ and $\\sum\\frac{2n-1}{(2n)!}$; write $n^3$ in factorial form $n(n-1)(n-2)+3n(n-1)+n$.",
+   "solution": [
+    "Split the sum: $\\sum_{n=0}^{\\infty}\\frac{n^3\\,(2n)!}{n!\\,(2n)!}+\\sum_{n=0}^{\\infty}\\frac{(2n-1)\\,n!}{n!\\,(2n)!}$.",
+    "Second sum: $\\frac{2n-1}{(2n)!}=\\frac{2n}{(2n)!}-\\frac{1}{(2n)!}=\\frac{1}{(2n-1)!}-\\frac{1}{(2n)!}$.",
+    "So the second sum is $\\sum_{n}\\frac{1}{(2n-1)!}-\\sum_n\\frac1{(2n)!}=\\frac{e-e^{-1}}{2}-\\frac{e+e^{-1}}{2}=-\\frac1e$ (the $\\frac{1}{(2n-1)!}$ terms are the odd-factorial series $\\sinh1$, the $\\frac1{(2n)!}$ terms are $\\cosh1$).",
+    "First sum: $\\sum_{n=0}^{\\infty}\\frac{n^3}{n!}$. Write $n^3=n(n-1)(n-2)+3n(n-1)+n$ (check: $n=1\\Rightarrow1$; $n=2\\Rightarrow8=0+6+2$).",
+    "So $\\sum\\frac{n^3}{n!}=\\sum_{n\\ge3}\\frac{1}{(n-3)!}+3\\sum_{n\\ge2}\\frac{1}{(n-2)!}+\\sum_{n\\ge1}\\frac{1}{(n-1)!}$.",
+    "Each series equals $e$, so the first sum is $e+3e+e=5e$.",
+    "Total: $5e-\\frac1e$, so $a=5$, $b=-1$, $c=0$.",
+    "Therefore $a^2-b+c=25+1+0=26$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's final simplification line reads '$5e+\\frac e2-\\frac1e-\\frac e2+\\frac{1}{2e}$', which would give $5e-\\frac1{2e}$; the signs/grouping are mis-typeset. The correct contribution of the second sum is $\\frac{e-e^{-1}}2-\\frac{e+e^{-1}}2=-\\frac1e$, so the total is $5e-\\frac1e$ (numerically verified: the series equals $13.2235\\ldots$). Answer 26 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the operator $x\\frac{d}{dx}$ on $e^x$: $\\sum\\frac{n^3}{n!}x^n=(x\\frac d{dx})^3e^x=(x^3+3x^2+x)e^x$.",
+     "solution": [
+      "Let $\\theta=x\\frac{d}{dx}$. Then $\\theta^3e^x=\\sum\\frac{n^3x^n}{n!}$.",
+      "$\\theta e^x=xe^x$, $\\theta^2e^x=(x^2+x)e^x$, $\\theta^3e^x=(x^3+3x^2+x)e^x$.",
+      "At $x=1$: $\\sum\\frac{n^3}{n!}=5e$.",
+      "The other part is $\\sum\\frac{2n-1}{(2n)!}=\\sum\\frac{1}{(2n-1)!}-\\sum\\frac1{(2n)!}=\\sinh1-\\cosh1=-e^{-1}$.",
+      "Sum $=5e-e^{-1}$, so $(a,b,c)=(5,-1,0)$ and $a^2-b+c=26$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{n\\ge0}\\frac{n^k}{n!}=B_ke$ with Bell numbers $B_1=1,B_2=2,B_3=5,B_4=15$ (Dobinski's formula).",
+    "Falling factorials make series telescope: $\\sum\\frac{n(n-1)\\cdots(n-j+1)}{n!}=e$ for every $j$; expand $n^k$ in them ($n^3=n^{\\underline3}+3n^{\\underline2}+n$, coefficients are Stirling numbers of the second kind).",
+    "$\\sum\\frac{1}{(2n)!}=\\cosh1=\\frac{e+e^{-1}}2$ and $\\sum\\frac1{(2n+1)!}=\\sinh1=\\frac{e-e^{-1}}2$; odd/even parts of $e^x$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Remainder using the binomial theorem"
+   ],
+   "level": 2,
+   "question": "The $50^{\\text{th}}$ root of a number $x$ is $12$ and the $50^{\\text{th}}$ root of another number $y$ is $18$. Then the remainder obtained on dividing $(x+y)$ by $25$ is ____.",
+   "answer": "23",
+   "key_idea": "$x+y=6^{50}\\left(2^{50}+3^{50}\\right)$ and $6=5+1$, $4^{25}=(5-1)^{25}$, $9^{25}=(10-1)^{25}$ give residues $1$ and $-2$.",
+   "solution": [
+    "$x^{1/50}=12$ and $y^{1/50}=18$, so $x=12^{50}$ and $y=18^{50}$.",
+    "$x+y=12^{50}+18^{50}=\\left(2^2\\cdot3\\right)^{50}+\\left(3^2\\cdot2\\right)^{50}=6^{50}\\left(2^{50}+3^{50}\\right)$.",
+    "$6^{50}=(5+1)^{50}$ and $2^{50}+3^{50}=4^{25}+9^{25}=(5-1)^{25}+(10-1)^{25}$.",
+    "$(5+1)^{50}=25\\lambda+1$.",
+    "$(5-1)^{25}=25k-1$ (every term with $5^2$ or higher is a multiple of 25, and the term ${}^{25}C_1\\cdot5\\cdot(-1)^{24}=125$ is also a multiple of 25), and $(10-1)^{25}=25\\mu-1$.",
+    "So $4^{25}+9^{25}=25k-1+25\\mu-1=25t-2=25(t-1)+23$.",
+    "Hence $x+y=(25\\lambda+1)(25t-2)\\equiv-2\\equiv23\\pmod{25}$.",
+    "The remainder is $23$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Euler's theorem: $\\varphi(25)=20$, so $12^{50}\\equiv12^{10}$ and $18^{50}\\equiv18^{10}$ modulo 25.",
+     "solution": [
+      "Since $\\gcd(12,25)=\\gcd(18,25)=1$, $a^{20}\\equiv1\\pmod{25}$ gives $12^{50}\\equiv12^{10}$ and $18^{50}\\equiv18^{10}$.",
+      "$12^2=144\\equiv19$, $12^4\\equiv19^2=361\\equiv11$, $12^8\\equiv121\\equiv21$.",
+      "$12^{10}=12^8\\cdot12^2\\equiv21\\cdot19=399\\equiv24\\equiv-1$.",
+      "$18^2=324\\equiv24\\equiv-1$, so $18^{10}=(18^2)^5\\equiv(-1)^5=-1$.",
+      "$x+y\\equiv-1-1=-2\\equiv23\\pmod{25}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Euler: $a^{\\varphi(m)}\\equiv1\\pmod m$ when $\\gcd(a,m)=1$; $\\varphi(25)=20$, $\\varphi(35)=24$.",
+    "$(1+5k)^n\\equiv1+5kn\\pmod{25}$: bases $\\equiv1\\pmod5$ have a very simple residue modulo 25 (here $6^{50}\\equiv1$).",
+    "Factor a sum of powers first: $12^{50}+18^{50}=6^{50}(2^{50}+3^{50})$ reduces the number of residues to compute."
+   ]
+  }
+ ]
+}
