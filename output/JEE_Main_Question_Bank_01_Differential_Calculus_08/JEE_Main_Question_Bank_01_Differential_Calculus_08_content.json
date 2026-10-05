@@ -1,0 +1,916 @@
+{
+ "title": "JEE Main Question Bank 01 — Differential Calculus 08 — Paper Analysis",
+ "subtitle": "Differentiation, Tangent & Normal and Monotonicity · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Differential_Calculus_08.pdf (solutions as printed); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 3,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 4,
+   "to": 6,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 7,
+   "to": 10,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 11,
+   "to": 12,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 13,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiation of a determinant"
+   ],
+   "level": 2,
+   "question": "If $f(x)=\\left|\\begin{matrix} x^{3} & 2x^{2}+1 & 1+3x\\\\ 3x^{2}+2 & 2x & x^{3}+6\\\\ x^{3}-x & 4 & x^{2}-2\\end{matrix}\\right|$ for all $x\\in\\mathbb{R}$, then $2f(0)+f'(0)$ is equal to :",
+   "options": [
+    "48",
+    "18",
+    "24",
+    "42"
+   ],
+   "answer": "(D) 42",
+   "key_idea": "The derivative of a determinant is the sum of three determinants, each with one row differentiated.",
+   "solution": [
+    "$f(x)=\\left|\\begin{matrix} x^{3} & 2x^{2}+1 & 1+3x\\\\ 3x^{2}+2 & 2x & x^{3}+6\\\\ x^{3}-x & 4 & x^{2}-2\\end{matrix}\\right|$.",
+    "Differentiate one row at a time: $f'(x)=\\left|\\begin{matrix} 3x^{2} & 4x & 3\\\\ 3x^{2}+2 & 2x & x^{3}+6\\\\ x^{3}-x & 4 & x^{2}-2\\end{matrix}\\right|+\\left|\\begin{matrix} x^{3} & 2x^{2}+1 & 1+3x\\\\ 6x & 2 & 3x^{2}\\\\ x^{3}-x & 4 & x^{2}-2\\end{matrix}\\right|+\\left|\\begin{matrix} x^{3} & 2x^{2}+1 & 1+3x\\\\ 3x^{2}+2 & 2x & x^{3}+6\\\\ 3x^{2}-1 & 0 & 2x\\end{matrix}\\right|$.",
+    "Put $x=0$: $f(0)=\\left|\\begin{matrix} 0 & 1 & 1\\\\ 2 & 0 & 6\\\\ 0 & 4 & -2\\end{matrix}\\right|=12$, so $2f(0)=24$.",
+    "The first determinant of $f'(0)$ is $\\left|\\begin{matrix} 0 & 0 & 3\\\\ 2 & 0 & 6\\\\ 0 & 4 & -2\\end{matrix}\\right|=3(8-0)=24$.",
+    "The second is $\\left|\\begin{matrix} 0 & 1 & 1\\\\ 0 & 2 & 0\\\\ 0 & 4 & -2\\end{matrix}\\right|=0$ (a column of zeros).",
+    "The third is $\\left|\\begin{matrix} 0 & 1 & 1\\\\ 2 & 0 & 6\\\\ -1 & 0 & 0\\end{matrix}\\right|=-1\\cdot(1\\cdot6-1\\cdot0)=-6$.",
+    "Hence $2f(0)+f'(0)=24+24+0-6=42$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Keep only terms up to the first power of $x$ in every entry before expanding: $f(x)\\approx f(0)+f'(0)x$.",
+     "solution": [
+      "To first order in $x$: row 1 $\\approx(0,\\,1,\\,1+3x)$, row 2 $\\approx(2,\\,2x,\\,6)$, row 3 $\\approx(-x,\\,4,\\,-2)$ (powers $x^{2},x^{3}$ are dropped).",
+      "Expand along the first row: $f\\approx-1\\cdot\\big[2(-2)-6(-x)\\big]+(1+3x)\\big[2\\cdot4-2x\\cdot(-x)\\big]$.",
+      "$=-(-4+6x)+(1+3x)(8+2x^{2})\\approx 4-6x+8+24x=12+18x$.",
+      "So $f(0)=12$ and $f'(0)=18$ (the coefficient of $x$).",
+      "$2f(0)+f'(0)=24+18=42$. Same answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x)=|R_1;R_2;R_3|$ has entries that are functions of $x$, then $f'(x)=\\sum_i|\\dots R_i'\\dots|$ (one row, or one column, differentiated at a time).",
+    "To get only $f(0)$ and $f'(0)$ it is enough to expand every entry to first order in $x$ and take the determinant: $f(x)=f(0)+f'(0)x+O(x^{2})$.",
+    "A determinant with a zero row or column, or two proportional rows or columns, is $0$ - check this before expanding.",
+    "Instance: $f(0)=12$, $f'(0)=18$ here (verified by direct expansion)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a piecewise function",
+    "Logarithmic differentiation"
+   ],
+   "level": 2,
+   "question": "Let $g(x)$ be a linear function and $f(x)=\\begin{cases} g(x), & x\\le0\\\\ \\left(\\dfrac{1+x}{2+x}\\right)^{1/x}, & x>0\\end{cases}$ is continuous at $x=0$. If $f'(1)=f(-1)$, then the value of $g(3)$ is :",
+   "options": [
+    "$\\log_{e}\\left(\\dfrac{4}{9e^{1/3}}\\right)$",
+    "$\\log_{e}\\left(\\dfrac49\\right)-1$",
+    "$\\dfrac13\\log_{e}\\left(\\dfrac49\\right)+1$",
+    "$\\dfrac13\\log_{e}\\left(\\dfrac{4}{9e^{1/3}}\\right)$"
+   ],
+   "answer": "(A) $\\log_{e}\\left(\\dfrac{4}{9e^{1/3}}\\right)$",
+   "key_idea": "Continuity at $0$ kills the constant term of $g$; then $f'(1)$ by logarithmic differentiation fixes the slope.",
+   "solution": [
+    "Let $g(x)=ax+b$. Continuity at $x=0$: $\\lim_{x\\to0^{+}}\\left(\\frac{1+x}{2+x}\\right)^{1/x}=\\left(\\frac12\\right)^{\\infty}=0$.",
+    "The left limit is $\\lim_{x\\to0^{-}}(ax+b)=b$, so $b=0$ and $g(x)=ax$.",
+    "For $x>0$, $\\ln f(x)=\\frac1x\\left[\\ln(1+x)-\\ln(2+x)\\right]$.",
+    "Differentiate: $\\frac{f'(x)}{f(x)}=\\frac{x\\left[\\frac1{1+x}-\\frac1{2+x}\\right]-\\ln\\frac{1+x}{2+x}}{x^{2}}$.",
+    "At $x=1$: $f(1)=\\frac23$, so $f'(1)=\\frac23\\left[\\left(\\frac12-\\frac13\\right)-\\ln\\frac23\\right]=\\frac23\\left[\\frac16-\\ln\\frac23\\right]$. $\\quad(1)$",
+    "Also $f(-1)=g(-1)=-a$. $\\quad(2)$",
+    "From (1) and (2): $-a=\\frac19-\\frac23\\ln\\frac23$, so $a=\\frac23\\ln\\frac23-\\frac19$ and $g(x)=ax$.",
+    "$g(3)=3\\left(\\frac23\\ln\\frac23-\\frac19\\right)=2\\ln\\frac23-\\frac13=\\ln\\frac49-\\ln e^{1/3}$.",
+    "So $g(3)=\\log_{e}\\left(\\dfrac{4}{9e^{1/3}}\\right)$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Estimate $g(3)=-3f'(1)$ numerically and eliminate options by size and sign.",
+     "solution": [
+      "As before $b=0$, and $f'(1)=f(-1)=-a$, so $g(3)=3a=-3f'(1)$.",
+      "From the log-derivative, $f'(1)=\\frac23\\left[\\frac16-\\ln\\frac23\\right]$; since $\\ln\\frac23\\approx-0.4055$, $f'(1)\\approx\\frac23(0.5722)\\approx0.3814>0$.",
+      "Hence $g(3)\\approx-1.144<0$, which already rejects (C) ($\\approx+0.73$).",
+      "Evaluate the others: (A) $\\ln\\frac49-\\frac13\\approx-1.144$; (B) $\\ln\\frac49-1\\approx-1.811$; (D) $\\frac13(-1.144)\\approx-0.381$.",
+      "Only (A) matches $-1.144$. Same answer (A). (A modest alternative: it still needs $f'(1)$ once.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "Piecewise function joined at a point: equate the one-sided limits to the value; this usually fixes a constant (here the intercept of the linear piece).",
+    "For $y=u(x)^{v(x)}$: $\\frac{y'}{y}=v'\\ln u+v\\frac{u'}{u}$. Here $v=\\frac1x$, $u=\\frac{1+x}{2+x}$, which gives the quotient form used above.",
+    "$\\left(\\frac{1+x}{2+x}\\right)^{1/x}\\to0$ as $x\\to0^{+}$ because the base tends to $\\frac12<1$ while the exponent tends to $+\\infty$.",
+    "Instance: $f'(1)=\\frac19-\\frac23\\ln\\frac23\\approx0.3814$ (checked numerically)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiation of trigonometric functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\dfrac{\\sin x+\\cos x-\\sqrt2}{\\sin x-\\cos x}$, $x\\in[0,\\pi]-\\left\\{\\dfrac\\pi4\\right\\}$. Then $f\\left(\\dfrac{7\\pi}{12}\\right)f''\\left(\\dfrac{7\\pi}{12}\\right)$ is equal to :",
+   "options": [
+    "$\\dfrac29$",
+    "$\\dfrac{-2}{3}$",
+    "$\\dfrac{2}{3\\sqrt3}$",
+    "$\\dfrac{-1}{3\\sqrt3}$"
+   ],
+   "answer": "(A) $\\dfrac29$",
+   "key_idea": "Write numerator and denominator with the angle $x-\\frac\\pi4$, so everything depends on one angle.",
+   "solution": [
+    "$f(x)=\\dfrac{\\sqrt2\\left(\\frac1{\\sqrt2}\\sin x+\\frac1{\\sqrt2}\\cos x\\right)-\\sqrt2}{\\sqrt2\\left(\\frac1{\\sqrt2}\\sin x-\\frac1{\\sqrt2}\\cos x\\right)}=\\dfrac{\\sin(x+\\pi/4)-1}{\\sin(x-\\pi/4)}$.",
+    "Quotient rule: $f'(x)=\\dfrac{\\cos(x+\\pi/4)\\sin(x-\\pi/4)-\\cos(x-\\pi/4)\\left(\\sin(x+\\pi/4)-1\\right)}{\\sin^{2}(x-\\pi/4)}$.",
+    "Since $x+\\frac\\pi4=(x-\\frac\\pi4)+\\frac\\pi2$, the numerator simplifies to $\\cos(x-\\pi/4)-1$, so $f'(x)=\\dfrac{\\cos(x-\\pi/4)-1}{\\sin^{2}(x-\\pi/4)}=\\dfrac{-(1-\\cos(x-\\pi/4))}{1-\\cos^{2}(x-\\pi/4)}$.",
+    "Therefore $f'(x)=-\\dfrac1{1+\\cos(x-\\pi/4)}$.",
+    "Differentiate again: $f''(x)=-\\dfrac{\\sin(x-\\pi/4)}{\\left(1+\\cos(x-\\pi/4)\\right)^{2}}$.",
+    "At $x=\\frac{7\\pi}{12}$: $x-\\frac\\pi4=\\frac\\pi3$, and $f\\left(\\frac{7\\pi}{12}\\right)=\\frac{\\sin(5\\pi/6)-1}{\\sin(\\pi/3)}=\\frac{-1/2}{\\sqrt3/2}=-\\frac1{\\sqrt3}$.",
+    "$f''\\left(\\frac{7\\pi}{12}\\right)=-\\dfrac{\\sqrt3/2}{(3/2)^{2}}=-\\dfrac{2\\sqrt3}{9}$.",
+    "$f\\left(\\frac{7\\pi}{12}\\right)f''\\left(\\frac{7\\pi}{12}\\right)=\\left(-\\frac1{\\sqrt3}\\right)\\left(-\\frac{2\\sqrt3}{9}\\right)=\\frac29$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $u=x-\\frac\\pi4$ the function is $\\frac{\\cos u-1}{\\sin u}=-\\tan\\frac u2$ (half-angle identity); differentiate that.",
+     "solution": [
+      "$\\sin(x+\\frac\\pi4)=\\cos u$, so $f=\\dfrac{\\cos u-1}{\\sin u}=\\dfrac{-2\\sin^{2}(u/2)}{2\\sin(u/2)\\cos(u/2)}=-\\tan\\dfrac u2$.",
+      "$f'=-\\frac12\\sec^{2}\\frac u2=-\\frac12\\left(1+f^{2}\\right)$.",
+      "$f''=-f f'=\\frac12 f\\left(1+f^{2}\\right)$.",
+      "At $u=\\frac\\pi3$: $f=-\\tan\\frac\\pi6=-\\frac1{\\sqrt3}$.",
+      "$f f''=\\frac12f^{2}\\left(1+f^{2}\\right)=\\frac12\\cdot\\frac13\\cdot\\frac43=\\frac29$. Same answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\dfrac{1-\\cos u}{\\sin u}=\\tan\\dfrac u2$, so $\\dfrac{\\cos u-1}{\\sin u}=-\\tan\\dfrac u2$; spot half-angle forms before using the quotient rule.",
+    "$a\\sin x+b\\cos x=R\\sin(x+\\varphi)$ with $R=\\sqrt{a^{2}+b^{2}}$: $\\sin x\\pm\\cos x=\\sqrt2\\sin(x\\pm\\frac\\pi4)$.",
+    "If $f=\\tan\\theta$ (here $\\theta=-u/2$), then $f'=\\theta'(1+f^{2})$, so higher derivatives come from $f$ alone with no further trigonometry.",
+    "Instance: $f=-\\frac1{\\sqrt3}$, $f''=-\\frac{2\\sqrt3}{9}$ at $x=\\frac{7\\pi}{12}$ (checked with sympy)."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits using series expansion of cosine"
+   ],
+   "level": 2,
+   "question": "The value of $\\lim_{x\\to0}\\dfrac{2\\left(1-\\cos x\\sqrt{\\cos2x}\\sqrt[3]{\\cos3x}\\cdots\\sqrt[10]{\\cos10x}\\right)}{x^{2}}$ is ______.",
+   "answer": "55",
+   "key_idea": "Near $0$, $\\cos kx\\approx1-\\frac{k^{2}x^{2}}2$, so the $k$-th root contributes $1-\\frac{kx^{2}}2$.",
+   "solution": [
+    "Write each factor with its expansion: $\\cos x\\,(\\cos2x)^{1/2}(\\cos3x)^{1/3}\\cdots(\\cos10x)^{1/10}\\approx\\left(1-\\frac{x^{2}}2\\right)\\left(1-\\frac{2^{2}x^{2}}2\\right)^{1/2}\\cdots\\left(1-\\frac{10^{2}x^{2}}2\\right)^{1/10}$.",
+    "Using $(1-t)^{1/k}\\approx1-\\frac tk$: the $k$-th factor is $1-\\frac{k^{2}x^{2}}{2k}=1-\\frac{kx^{2}}2$.",
+    "The product is $\\approx1-\\left(\\frac{x^{2}}2+\\frac{2x^{2}}2+\\frac{3x^{2}}2+\\cdots+\\frac{10x^{2}}2\\right)$ (products of $x^{2}$-terms are $O(x^{4})$).",
+    "So the numerator is $2\\left[\\frac{x^{2}}2(1+2+\\cdots+10)\\right]=x^{2}\\cdot55$ to leading order.",
+    "$\\lim_{x\\to0}\\dfrac2{x^{2}}\\cdot\\dfrac{x^{2}}2(1+2+\\cdots+10)=\\dfrac{10\\cdot11}2=55$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take logarithms: the product becomes a sum $\\sum\\frac1k\\ln\\cos kx$, and $\\ln\\cos t\\approx-\\frac{t^{2}}2$.",
+     "solution": [
+      "Let $P(x)=\\prod_{k=1}^{10}(\\cos kx)^{1/k}$. Then $\\ln P=\\sum_{k=1}^{10}\\frac1k\\ln\\cos kx$.",
+      "Since $\\ln\\cos t=-\\frac{t^{2}}2+O(t^{4})$: $\\ln P=-\\sum_{k=1}^{10}\\frac1k\\cdot\\frac{k^{2}x^{2}}2=-\\frac{x^{2}}2\\sum_{k=1}^{10}k=-\\frac{55x^{2}}2$.",
+      "So $P=e^{\\ln P}\\approx1-\\frac{55x^{2}}2$ and $1-P\\approx\\frac{55x^{2}}2$.",
+      "$\\lim\\dfrac{2(1-P)}{x^{2}}=2\\cdot\\frac{55}2=55$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to0}\\dfrac{1-\\prod_k\\cos^{a_k}(b_kx)}{x^{2}}=\\dfrac12\\sum_ka_kb_k^{2}$ (for finitely many factors): each factor lowers the product by $\\frac{a_kb_k^{2}x^{2}}2$.",
+    "Here $a_k=\\frac1k$, $b_k=k$ gives $\\frac12\\sum k=\\frac{n(n+1)}4$; with the factor $2$ in front the limit is $\\frac{n(n+1)}2=55$ for $n=10$.",
+    "Cross-terms are $O(x^{4})$ and do not matter; the shortcut works because only the first correction of each factor counts.",
+    "Numerical check: $x=10^{-3}$ gives $54.9997\\ldots$"
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Higher-order derivatives of a polynomial"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=x^{3}+x^{2}f'(1)+xf''(2)+f'''(3)$, $x\\in\\mathbb{R}$. Then $f'(10)$ is equal to ______.",
+   "answer": "202",
+   "key_idea": "$f'(1),f''(2),f'''(3)$ are constants; differentiate three times and set up equations for them.",
+   "solution": [
+    "$f(x)=x^{3}+x^{2}f'(1)+xf''(2)+f'''(3)$.",
+    "$f'(x)=3x^{2}+2xf'(1)+f''(2)$.",
+    "$f''(x)=6x+2f'(1)$.",
+    "$f'''(x)=6$, so $f'''(3)=6$.",
+    "At $x=2$: $f''(2)=12+2f'(1)$. $\\quad(1)$",
+    "At $x=1$: $f'(1)=3+2f'(1)+f''(2)$. $\\quad(2)$",
+    "Adding (1) and (2): $0=15+3f'(1)$, so $f'(1)=-5$ and $f''(2)=12-10=2$.",
+    "Now $f'(10)=300+20(-5)+2=300-100+2=202$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Self-referential polynomial $f=x^{3}+px^{2}+qx+r$ with $p=f'(1)$, $q=f''(2)$, $r=f'''(3)$: differentiate to get a linear system in $p,q,r$. The top-degree derivative is constant, so it is solved first.",
+    "Back-substitution check: $f(x)=x^{3}-5x^{2}+2x+6$ gives $f'(1)=-5$, $f''(2)=2$, $f'''(3)=6$, as required.",
+    "For $f=x^{n}+\\dots$ with constants $f^{(k)}(a_k)$: the $n$-th derivative is the constant $n!$, then work downwards."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Simplification before differentiation",
+    "Differentiation of trigonometric functions"
+   ],
+   "level": 2,
+   "question": "If $y=\\dfrac{(\\sqrt x+1)(x^{2}-\\sqrt x)}{x\\sqrt x+x+\\sqrt x}+\\dfrac1{15}\\left(3\\cos^{2}x-5\\right)\\cos^{3}x$, then $96\\,y'\\left(\\dfrac\\pi6\\right)$ is equal to ______.",
+   "answer": "105",
+   "key_idea": "Factor $x^{2}-\\sqrt x$ as a difference of cubes so the first fraction collapses to $x-1$.",
+   "solution": [
+    "$y=\\dfrac{(\\sqrt x+1)(x^{2}-\\sqrt x)}{x\\sqrt x+x+\\sqrt x}+\\dfrac1{15}\\left(3\\cos^{2}x-5\\right)\\cos^{3}x$.",
+    "$x^{2}-\\sqrt x=\\sqrt x\\left(x\\sqrt x-1\\right)=\\sqrt x\\left((\\sqrt x)^{3}-1^{3}\\right)$.",
+    "The denominator is $x\\sqrt x+x+\\sqrt x=\\sqrt x\\left(x+\\sqrt x+1\\right)$.",
+    "Using $(\\sqrt x)^{3}-1=(\\sqrt x-1)\\left(x+\\sqrt x+1\\right)$, the first term becomes $\\dfrac{(\\sqrt x+1)\\sqrt x(\\sqrt x-1)(x+\\sqrt x+1)}{\\sqrt x(x+\\sqrt x+1)}=(\\sqrt x+1)(\\sqrt x-1)=x-1$.",
+    "So $y=(x-1)+\\frac1{15}\\left[3\\cos^{5}x-5\\cos^{3}x\\right]$.",
+    "$y'=1+\\frac1{15}\\left[15\\cos^{4}x(-\\sin x)-15\\cos^{2}x(-\\sin x)\\right]=1-\\sin x\\left[\\cos^{4}x-\\cos^{2}x\\right]$.",
+    "At $x=\\frac\\pi6$: $\\sin\\frac\\pi6=\\frac12$, $\\cos^{2}\\frac\\pi6=\\frac34$, $\\cos^{4}\\frac\\pi6=\\frac9{16}$, so $y'\\left(\\frac\\pi6\\right)=1-\\frac12\\left[\\frac9{16}-\\frac34\\right]$.",
+    "$=1-\\frac12\\cdot\\frac{9-12}{16}=1+\\frac3{32}=\\frac{35}{32}$.",
+    "$96\\,y'\\left(\\frac\\pi6\\right)=96\\cdot\\frac{35}{32}=105$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Always simplify before differentiating: $a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$ with $a=\\sqrt x$, $b=1$ turns the fraction into $x-1$ (valid for $x>0$).",
+    "Trig shortcut: $\\dfrac d{dx}\\left[\\frac{3\\cos^{5}x-5\\cos^{3}x}{15}\\right]=\\sin x\\cos^{2}x(1-\\cos^{2}x)=\\sin^{3}x\\cos^{2}x$, so $y'=1+\\sin^{3}x\\cos^{2}x$; at $\\frac\\pi6$: $1+\\frac18\\cdot\\frac34=\\frac{35}{32}$.",
+    "Check: $96\\cdot\\frac{35}{32}=105$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal: geometry of two parabolas"
+   ],
+   "level": 3,
+   "question": "The radius of the smallest circle which touches the parabolas $y=x^{2}+2$ and $x=y^{2}+2$ is :",
+   "options": [
+    "$\\dfrac{7\\sqrt2}{2}$",
+    "$\\dfrac{7\\sqrt2}{8}$",
+    "$\\dfrac{7\\sqrt2}{4}$",
+    "$\\dfrac{7\\sqrt2}{16}$"
+   ],
+   "answer": "(B) $\\dfrac{7\\sqrt2}{8}$",
+   "key_idea": "The parabolas are mirror images in $y=x$; the circle sits between the nearest pair of points, where both tangents are parallel to $y=x$.",
+   "solution": [
+    "The two parabolas are reflections of each other in the line $y=x$, so the smallest touching circle has its centre on $y=x$ and touches them at mirror points $P$ and $Q$, where the tangents are parallel to $y=x$.",
+    "For $y=x^{2}+2$: $\\frac{dy}{dx}=2x=1$, so $x=\\frac12$, $y=\\frac94$. The point is $Q\\left(\\frac12,\\frac94\\right)$.",
+    "Its mirror image on $x=y^{2}+2$ is $P\\left(\\frac94,\\frac12\\right)$.",
+    "$PQ=\\sqrt{\\left(\\frac94-\\frac12\\right)^{2}+\\left(\\frac12-\\frac94\\right)^{2}}=\\frac74\\sqrt2=\\frac{7\\sqrt2}4$, and this is the diameter.",
+    "Radius $r=\\dfrac{7\\sqrt2}8$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Distance of each parabola from the line of symmetry $y=x$: the circle's diameter is twice that distance.",
+     "solution": [
+      "For $y=x^{2}+2$, the points lie above $y=x$ because $x^{2}-x+2>0$ for all $x$; the other parabola is its mirror image, below $y=x$.",
+      "Distance of $(x,x^{2}+2)$ from $y=x$ is $\\dfrac{x^{2}-x+2}{\\sqrt2}$, minimum at $x=\\frac12$: $\\dfrac{7/4}{\\sqrt2}=\\dfrac{7\\sqrt2}8$.",
+      "The smallest circle touching both curves has diameter equal to the least gap between them, i.e. twice this distance, $\\frac{7\\sqrt2}4$.",
+      "Radius $=\\dfrac{7\\sqrt2}8$. Same answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Curves symmetric about $y=x$ (a curve and its inverse relation): the least gap between them is twice the least distance from one curve to $y=x$.",
+    "$y=x^{2}+c$ and $x=y^{2}+c$ ($c>\\frac14$): smallest touching circle has $r=\\dfrac{c-1/4}{\\sqrt2}$; $c=2$ gives $\\frac{7/4}{\\sqrt2}=\\frac{7\\sqrt2}8$.",
+    "At the points of closest approach the common normal is perpendicular to both tangents, so tangents there are parallel."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rate of change (related rates)"
+   ],
+   "level": 2,
+   "question": "A spherical chocolate ball has a layer of ice-cream of uniform thickness around it. When the thickness of the ice-cream layer is $1$ cm, the ice-cream melts at the rate of $81\\ \\text{cm}^{3}/\\text{min}$ and the thickness of the ice-cream layer decreases at the rate of $\\dfrac1{4\\pi}$ cm/min. The surface area (in $\\text{cm}^{2}$) of the chocolate ball (without the ice-cream layer) is :",
+   "options": [
+    "$196\\pi$",
+    "$225\\pi$",
+    "$128\\pi$",
+    "$256\\pi$"
+   ],
+   "answer": "(D) $256\\pi$",
+   "key_idea": "The chocolate radius $r$ is constant; the outer volume depends on $r+\\alpha$ with $\\alpha$ the thickness.",
+   "solution": [
+    "Let the ice-cream thickness be $\\alpha$ cm and the chocolate radius $r$ (constant). Initially $\\alpha=1$.",
+    "The ice-cream melts: $\\frac{dV}{dt}=-81\\ \\text{cm}^{3}/\\text{min}$, and the thickness decreases: $\\frac{d\\alpha}{dt}=-\\frac1{4\\pi}$ cm/min.",
+    "Outer volume $V=\\frac43\\pi(r+\\alpha)^{3}$.",
+    "$\\frac{dV}{dt}=\\frac43\\pi\\cdot3(r+\\alpha)^{2}\\frac{d\\alpha}{dt}=4\\pi(r+1)^{2}\\left(-\\frac1{4\\pi}\\right)=-(r+1)^{2}$ at $\\alpha=1$.",
+    "Equate with $-81$: $(r+1)^{2}=81$, so $r+1=9$ and $r=8$.",
+    "Surface area of the chocolate ball $S=4\\pi r^{2}=4\\pi\\cdot64=256\\pi$, option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes dV/dt = -81 but then multiplies by +1/(4 pi), dropping the minus sign of d(alpha)/dt. Correct: d(alpha)/dt = -1/(4 pi), so dV/dt = -(r+1)^2 = -81; the magnitude and the answer are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "A thin shell: change in volume $=$ outer surface area $\\times$ change in thickness.",
+     "solution": [
+      "The volume lost per minute is the area of the outer surface times the rate at which the thickness shrinks: $81=4\\pi R^{2}\\cdot\\frac1{4\\pi}$, where $R=r+1$ is the outer radius.",
+      "So $R^{2}=81$, $R=9$ and the chocolate radius is $r=R-1=8$.",
+      "Surface area of the chocolate ball $=4\\pi\\cdot8^{2}=256\\pi$. Same answer (D). (This is the usual calculus step in shorter form.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a sphere $V=\\frac43\\pi R^{3}$: $\\frac{dV}{dt}=S\\frac{dR}{dt}$ with $S=4\\pi R^{2}$ the surface area; the volume rate is area times the rate of change of the radius.",
+    "Quantities held fixed (here the chocolate radius $r$) are constants in the differentiation; only the thickness varies.",
+    "Instance: $(r+1)^{2}=81$ gives outer radius $9$ and inner radius $8$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal: circle touching a parabola and lines"
+   ],
+   "level": 3,
+   "question": "Let $C$ be the circle of minimum area touching the parabola $y=6-x^{2}$ and the lines $y=\\sqrt3\\,|x|$. Then, which one of the following points lies on the circle $C$ ?",
+   "options": [
+    "$(1,2)$",
+    "$(2,2)$",
+    "$(1,1)$",
+    "$(2,4)$"
+   ],
+   "answer": "(D) $(2,4)$",
+   "key_idea": "By symmetry the centre is on the $y$-axis; the circle meets the lines at $30^{\\circ}$ to the axis, so its radius is half the centre's height.",
+   "solution": [
+    "By symmetry the centre lies on the $y$-axis. The circle touches the parabola at its vertex $(0,6)$, so with radius $r$ the centre is $(0,6-r)$ and the circle is $x^{2}+(y-6+r)^{2}=r^{2}$.",
+    "The distance from the centre to the line $y=\\sqrt3x$ (that is $\\sqrt3x-y=0$) must be $r$: $\\left|\\dfrac{6-r}{2}\\right|=r$.",
+    "So $6-r=2r$, giving $r=2$. The centre is $(0,4)$ and the circle is $x^{2}+(y-4)^{2}=4$.",
+    "Test $(2,4)$: $2^{2}+(4-4)^{2}=4$, so $(2,4)$ lies on the circle. The other options give $(1,2)\\to5$, $(2,2)\\to8$, $(1,1)\\to10$, none equal to $4$.",
+    "Note: this is the circle that touches the parabola at the vertex and the lines at $(\\pm\\sqrt3,3)$; it also cuts the parabola at those two points. The strictly smaller circle $x^{2}+(y-k)^{2}=\\frac{k^{2}}4$ with $k=3\\sqrt3-2\\approx3.196$ lies wholly inside the region, but no option lies on it, so the key (D) refers to the vertex circle above."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Answer key (D) kept. The PDF takes the circle touching the parabola at its vertex (centre (0,4), r=2) without saying why; that circle also crosses the parabola at (+-sqrt3,3). A strictly smaller circle tangent to the lines and to the parabola from inside has centre (0,3sqrt3-2) and r=(3sqrt3-2)/2 (about 1.598), but no option lies on it, so (D) is the only consistent choice. A caution bullet was added; the working is otherwise the PDF's.",
+   "alternate_solutions": [
+    {
+     "idea": "Circle through the three corner points of the region: the vertex $(0,6)$ and the two points $(\\pm\\sqrt3,3)$ where the lines meet the parabola.",
+     "solution": [
+      "The lines $y=\\sqrt3|x|$ meet $y=6-x^{2}$ where $x^{2}+\\sqrt3x-6=0$, i.e. $x=\\sqrt3$ (for $x>0$): points $(\\pm\\sqrt3,3)$.",
+      "Take the circle with centre $(0,k)$ through $(0,6)$ and $(\\sqrt3,3)$: $(6-k)^{2}=3+(3-k)^{2}$, so $36-12k=12-6k$ and $k=4$, $r=2$.",
+      "Check: the foot of the perpendicular from $(0,4)$ to $y=\\sqrt3x$ is $(\\sqrt3,3)$ and the distance is $2=r$, so the circle touches both lines exactly at those points and touches the line $y=6$ (the tangent to the parabola) at $(0,6)$.",
+      "The circle is $x^{2}+(y-4)^{2}=4$ and $(2,4)$ lies on it. Same answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A circle with centre $(0,k)$ touching the lines $y=\\pm\\tan\\beta\\,x$ has radius $k\\cos\\beta$; for $y=\\pm\\sqrt3x$ ($\\beta=60^{\\circ}$) $r=\\frac k2$.",
+    "The perpendicular from $(0,k)$ to $y=\\sqrt3x$ meets it at $\\left(\\frac{\\sqrt3k}4,\\frac{3k}4\\right)$; for $k=4$ this is $(\\sqrt3,3)$.",
+    "Caution: the radius of curvature of $y=6-x^{2}$ at the vertex is $\\frac12$, so a vertex-touching circle of radius $2$ crosses the parabola again (at $(\\pm\\sqrt3,3)$); always check whether 'touching' means tangent at one point or a circle that stays inside."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal: normals parallel to a given line"
+   ],
+   "level": 2,
+   "question": "The number of points on the curve $y=54x^{5}-135x^{4}-70x^{3}+180x^{2}+210x$ at which the normal lines are parallel to $x+90y+2=0$ is :",
+   "options": [
+    "3",
+    "0",
+    "4",
+    "2"
+   ],
+   "answer": "(C) 4",
+   "key_idea": "Normal parallel to a line means tangent slope is the negative reciprocal of that line's slope; count the real roots of $y'=90$.",
+   "solution": [
+    "The line $x+90y+2=0$ has slope $-\\frac1{90}$, so the normal slope is $m_N=-\\frac1{90}$.",
+    "$m_N=-\\dfrac1{\\left(\\frac{dy}{dx}\\right)}$, so $\\dfrac{dy}{dx}=90$ at the required points.",
+    "$\\dfrac{dy}{dx}=270x^{4}-540x^{3}-210x^{2}+360x+210=90$.",
+    "$270x^{4}-540x^{3}-210x^{2}+360x+120=0$, i.e. $30(x-1)(x-2)(3x+1)(3x+2)=0$.",
+    "Roots: $x=1,\\,2,\\,-\\frac13,\\,-\\frac23$ - four distinct values of $x$, hence four points on the curve.",
+    "Hence there are $4$ such normals, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last line reads '(D) normals', which contradicts both its four roots and the key (C); it should read '4 normals' (option C). Working and answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Count sign changes of $9x^{4}-18x^{3}-7x^{2}+12x+4$ with the intermediate value theorem instead of factorising.",
+     "solution": [
+      "Need real roots of $p(x)=9x^{4}-18x^{3}-7x^{2}+12x+4$ (after dividing the equation by $30$). A quartic has at most $4$ real roots.",
+      "Evaluate: $p(-1)=12>0$, $p(-\\frac12)=-\\frac{15}{16}<0$, $p(0)=4>0$, $p(\\frac12)=\\frac{105}{16}>0$, $p(\\frac32)=-\\frac{143}{16}<0$, $p(3)=220>0$.",
+      "Sign changes occur in $(-1,-\\frac12)$, $(-\\frac12,0)$, $(\\frac12,\\frac32)$ and $(\\frac32,3)$: four different intervals, so four distinct real roots.",
+      "A quartic cannot have more, so there are exactly $4$ points. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal to $y=f(x)$ parallel to $ax+by+c=0$ $\\iff$ tangent slope $f'(x)=\\dfrac ba$ (the normal slope is $-\\frac ab$, the tangent slope is its negative reciprocal). Normal parallel to $x$-axis: $f'=\\infty$; tangent parallel to $y=mx$: $f'=m$.",
+    "The number of such points equals the number of distinct real roots of $f'(x)=\\dfrac ba$ (each root gives one point on the curve).",
+    "Counting real roots of a polynomial: if sign changes of $p$ at test points equal the degree, all roots are real and distinct.",
+    "Instance: $f'(x)=90$ has roots $1,2,-\\frac13,-\\frac23$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maximum and minimum of a distance expression (geometric interpretation)"
+   ],
+   "level": 3,
+   "question": "Let the maximum and minimum values of $\\left(\\sqrt{8x-x^{2}-12}-4\\right)^{2}+(x-7)^{2}$, $x\\in\\mathbb{R}$, be $M$ and $m$ respectively. Then $M^{2}-m^{2}$ is equal to ______.",
+   "answer": "1600",
+   "key_idea": "Put $y=\\sqrt{8x-x^{2}-12}$: the expression is the squared distance from $(7,4)$ to a point of the upper semicircle $(x-4)^{2}+y^{2}=4$.",
+   "solution": [
+    "The expression is $(y-4)^{2}+(x-7)^{2}$ with $y=\\sqrt{8x-x^{2}-12}\\ge0$ (domain $2\\le x\\le6$).",
+    "Squaring: $x^{2}+y^{2}-8x+12=0$, i.e. $(x-4)^{2}+y^{2}=4$, so $P(x,y)$ lies on the upper half of the circle with centre $C(4,0)$, radius $2$.",
+    "Hence the expression is $(PQ)^{2}$ where $Q$ is the fixed point $(7,4)$.",
+    "Minimum: $CQ=\\sqrt{3^{2}+4^{2}}=5$, and the nearest point of the circle (along $CQ$) is in the upper half, so $m=(CQ-2)^{2}=3^{2}=9$.",
+    "Maximum: the farthest point of the full circle would lie below the $x$-axis, which is not allowed, so on the upper half the maximum is at the end of the semicircle $(2,0)$: $M=(7-2)^{2}+(4-0)^{2}=25+16=41$ (the other end $(6,0)$ gives only $17$).",
+    "$M^{2}-m^{2}=41^{2}-9^{2}=(41-9)(41+9)=32\\times50=1600$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise the semicircle as $x=4+2\\cos\\theta$, $y=2\\sin\\theta$ ($0\\le\\theta\\le\\pi$) and reduce to $a\\sin\\theta+b\\cos\\theta$.",
+     "solution": [
+      "With $x=4+2\\cos\\theta$, $y=2\\sin\\theta$, $\\theta\\in[0,\\pi]$: $E=(2\\sin\\theta-4)^{2}+(2\\cos\\theta-3)^{2}$.",
+      "$E=4\\sin^{2}\\theta-16\\sin\\theta+16+4\\cos^{2}\\theta-12\\cos\\theta+9=29-4(4\\sin\\theta+3\\cos\\theta)$.",
+      "$4\\sin\\theta+3\\cos\\theta=5\\sin(\\theta+\\varphi)$ with $\\tan\\varphi=\\frac34$, $\\varphi\\approx36.87^{\\circ}$. For $\\theta\\in[0,\\pi]$, $\\theta+\\varphi\\in[\\varphi,\\pi+\\varphi]$.",
+      "Maximum of $5\\sin(\\theta+\\varphi)$ is $5$ (at $\\theta+\\varphi=90^{\\circ}$, allowed): $E_{\\min}=29-20=9$.",
+      "Minimum is at $\\theta=\\pi$, value $-5\\sin\\varphi=-3$ (not $-5$, since $\\theta+\\varphi$ cannot reach $270^{\\circ}$): $E_{\\max}=29+12=41$.",
+      "$M^{2}-m^{2}=1681-81=1600$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left(\\sqrt{R^{2}-(x-h)^{2}}-b\\right)^{2}+(x-p)^{2}$ is the squared distance from $(p,b)$ to a point on the upper semicircle; recognise $y=\\sqrt{\\cdots}$ as a half-circle.",
+    "Distance from an outside point $Q$ to a full circle: nearest $(CQ-r)^{2}$, farthest $(CQ+r)^{2}$; for a semicircle check whether those points are in the allowed half, otherwise use the endpoints.",
+    "On a restricted angle range, $a\\sin\\theta+b\\cos\\theta$ takes its extremes at the interior maximum point or at an endpoint - not automatically $\\pm\\sqrt{a^{2}+b^{2}}$.",
+    "Instance: $m=9$, $M=41$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Largest circle inscribed in an ellipse (minimum distance from a point)"
+   ],
+   "level": 3,
+   "question": "Let $C$ be the largest circle centred at $(2,0)$ and inscribed in the ellipse $\\dfrac{x^{2}}{36}+\\dfrac{y^{2}}{16}=1$. If $(1,\\alpha)$ lies on $C$, then $10\\alpha^{2}$ is equal to ______.",
+   "answer": "118",
+   "key_idea": "The radius of the largest circle is the least distance from $(2,0)$ to the ellipse, reached where the normal passes through $(2,0)$.",
+   "solution": [
+    "The ellipse is $\\frac{x^{2}}{36}+\\frac{y^{2}}{16}=1$. A point is $P(6\\cos\\theta,4\\sin\\theta)$. The largest circle centred at $(2,0)$ touches the ellipse at the nearest point, where the normal at $P$ passes through $(2,0)$.",
+    "Differentiate: $\\frac x{18}+\\frac{yy'}8=0$, so $y'=-\\frac x{18}\\cdot\\frac8y$.",
+    "Slope of the normal $=\\frac{9y}{4x}=\\frac94\\cdot\\frac{4\\sin\\theta}{6\\cos\\theta}=\\frac32\\cdot\\frac{\\sin\\theta}{\\cos\\theta}$.",
+    "Slope of the line from $(2,0)$ to $P$: $\\frac{4\\sin\\theta}{6\\cos\\theta-2}=\\frac{2\\sin\\theta}{3\\cos\\theta-1}$.",
+    "Equate: $\\frac32\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{2\\sin\\theta}{3\\cos\\theta-1}$, so $3(3\\cos\\theta-1)=4\\cos\\theta$ and $\\cos\\theta=\\frac35$.",
+    "Then $\\sin\\theta=\\frac45$ and $P\\left(\\frac{18}5,\\frac{16}5\\right)$.",
+    "$r^{2}=\\left(\\frac{18}5-2\\right)^{2}+\\left(\\frac{16}5\\right)^{2}=\\frac{64+256}{25}=12.8$, so $C:(x-2)^{2}+y^{2}=12.8$.",
+    "$(1,\\alpha)$ on $C$: $1+\\alpha^{2}=12.8$, so $\\alpha^{2}=11.8$ and $10\\alpha^{2}=118$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $y$: the squared distance from $(2,0)$ to a point of the ellipse is a quadratic in $x$; minimise it.",
+     "solution": [
+      "For a point $(x,y)$ on the ellipse, $y^{2}=16-\\frac49x^{2}$, so $d^{2}=(x-2)^{2}+y^{2}=x^{2}-4x+4+16-\\frac49x^{2}=\\frac59x^{2}-4x+20$, with $-6\\le x\\le6$.",
+      "The vertex of this parabola in $x$ is at $x=\\frac{4}{10/9}=\\frac{18}5$, inside $[-6,6]$, so it is the minimum.",
+      "$d^{2}_{\\min}=\\frac59\\cdot\\frac{324}{25}-\\frac{72}5+20=\\frac{36}5-\\frac{72}5+20=\\frac{64}5=12.8$.",
+      "The largest inscribed circle has $r^{2}=12.8$: $1+\\alpha^{2}=12.8$, $\\alpha^{2}=11.8$, so $10\\alpha^{2}=118$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Largest circle centred at $(h,0)$ inside $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$: $d^{2}=\\left(1-\\frac{b^{2}}{a^{2}}\\right)x^{2}-2hx+h^{2}+b^{2}$, minimised at $x=\\frac{ha^{2}}{a^{2}-b^{2}}$ provided this is at most $a$ (i.e. $h\\le\\frac{a^{2}-b^{2}}{a}$); otherwise the nearest point is the vertex $(a,0)$ and $r=a-h$.",
+    "Here $a^{2}-b^{2}=20$, $\\frac{ha^{2}}{a^{2}-b^{2}}=\\frac{72}{20}=\\frac{18}5$ and $r^{2}=b^{2}\\left(1-\\frac{h^{2}}{a^{2}-b^{2}}\\right)=16\\cdot\\frac45=\\frac{64}5$ (formula checked against the direct computation).",
+    "A line from the centre of the circle to the point of contact is the common normal."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form 1 to the power infinity",
+    "Number of real roots of a cubic"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a differentiable function on $\\mathbb{R}$ such that $f(2)=1$, $f'(2)=4$. Let $\\lim_{x\\to0}(f(2+x))^{3/x}=e^{\\alpha}$. Then the number of times the curve $y=4x^{3}-4x^{2}-4(\\alpha-7)x-\\alpha$ meets the $x$-axis is :",
+   "options": [
+    "2",
+    "1",
+    "3",
+    "0"
+   ],
+   "answer": "(A) 2",
+   "key_idea": "The limit is of $1^{\\infty}$ form, so $\\alpha=3f'(2)$; then count the roots of the cubic with the help of its turning points.",
+   "solution": [
+    "$\\lim_{x\\to0}(f(2+x))^{3/x}$ is of the form $1^{\\infty}$ since $f(2)=1$.",
+    "It equals $e^{\\lim_{x\\to0}\\frac3x\\left(f(2+x)-1\\right)}=e^{3f'(2)}$ (the limit in the exponent is a derivative).",
+    "$\\Rightarrow\\alpha=3f'(2)=12$.",
+    "So $y=4x^{3}-4x^{2}-20x-12=4\\left(x^{3}-x^{2}-5x-3\\right)$.",
+    "$\\dfrac{dy}{dx}=4\\left(3x^{2}-2x-5\\right)=0\\Rightarrow(x+1)(3x-5)=0$, so $x=-1,\\ \\frac53$.",
+    "$y(-1)=4(-1-1+5-3)=0$, while $y\\left(\\frac53\\right)=4\\left(\\frac{125}{27}-\\frac{25}9-\\frac{25}3-3\\right)<0$.",
+    "The graph rises to a local maximum at $x=-1$ where it only touches the axis, falls to a negative local minimum at $\\frac53$, then rises through the axis once more. It meets the $x$-axis at two points, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factorise the cubic with the rational-root test: it has a repeated root.",
+     "solution": [
+      "As before, $\\alpha=3f'(2)/f(2)=12$ (for $\\lim f(2+x)^{k/x}$ with $f(2)=1$, the limit is $e^{kf'(2)}$).",
+      "$y=4\\left(x^{3}-x^{2}-5x-3\\right)$. Try $x=-1$: $-1-1+5-3=0$, so $(x+1)$ is a factor.",
+      "Dividing: $x^{3}-x^{2}-5x-3=(x+1)\\left(x^{2}-2x-3\\right)=(x+1)^{2}(x-3)$.",
+      "The distinct real zeros are $x=-1$ (double) and $x=3$: exactly two points of intersection with the $x$-axis. Same answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\lim f(x)=1$, $\\lim g(x)=\\infty$, then $\\lim f^{g}=e^{\\lim g\\,(f-1)}$; for $f(a+x)^{k/x}$ with $f(a)=1$ this is $e^{kf'(a)}$.",
+    "A cubic with local extreme values $y_1,y_2$ has $3$ real roots if $y_1y_2<0$, exactly $2$ distinct if $y_1y_2=0$ (a double root), and $1$ if $y_1y_2>0$.",
+    "The roots of $x^{3}-x^{2}-5x-3$ are $-1,-1,3$ (checked by expansion of $(x+1)^{2}(x-3)$)."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity from the sign of the derivative"
+   ],
+   "level": 2,
+   "question": "Let the function $f(x)=\\dfrac x3+\\dfrac3x+3$, $x\\ne0$ be strictly increasing in $(-\\infty,\\alpha_1)\\cup(\\alpha_2,\\infty)$ and strictly decreasing in $(\\alpha_3,\\alpha_4)\\cup(\\alpha_4,\\alpha_5)$. Then $\\sum_{i=1}^{5}\\alpha_i^{2}$ is equal to :",
+   "options": [
+    "40",
+    "48",
+    "36",
+    "28"
+   ],
+   "answer": "(C) 36",
+   "key_idea": "$f'(x)=\\dfrac{x^{2}-9}{3x^{2}}$ changes sign at $\\pm3$ and is undefined at $0$.",
+   "solution": [
+    "$f(x)=\\dfrac x3+\\dfrac3x+3$, so $f'(x)=\\dfrac13-\\dfrac3{x^{2}}=\\dfrac{x^{2}-9}{3x^{2}}=\\dfrac{(x+3)(x-3)}{3x^{2}}$.",
+    "The denominator $3x^{2}>0$ for $x\\ne0$, so the sign of $f'$ is the sign of $(x+3)(x-3)$: positive for $x<-3$, negative on $(-3,0)\\cup(0,3)$, positive for $x>3$.",
+    "So $f$ is increasing in $(-\\infty,-3)\\cup(3,\\infty)$ and decreasing in $(-3,0)\\cup(0,3)$.",
+    "Matching: $\\alpha_1=-3$, $\\alpha_2=3$, $\\alpha_3=-3$, $\\alpha_4=0$, $\\alpha_5=3$.",
+    "$\\sum\\alpha_i^{2}=9+9+9+0+9=36$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "AM-GM: $\\frac x3+\\frac3x$ has its minimum at $x=3$ for $x>0$, and $f(x)-3$ is an odd function.",
+     "solution": [
+      "For $x>0$, $\\frac x3+\\frac3x\\ge2$ with equality exactly when $\\frac x3=\\frac3x$, i.e. $x=3$; as $x\\to0^{+}$ and $x\\to\\infty$ the function tends to $+\\infty$, so $f$ decreases on $(0,3)$ and increases on $(3,\\infty)$.",
+      "$f(x)-3=\\frac x3+\\frac3x$ is an odd function, so its graph for $x<0$ is the reflection through the origin: increasing on $(-\\infty,-3)$, decreasing on $(-3,0)$.",
+      "Thus the turning points are $\\pm3$ and the break is at $0$, giving $\\alpha_i=-3,3,-3,0,3$.",
+      "$\\sum\\alpha_i^{2}=36$. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x)=px+\\dfrac qx$ with $p,q>0$ has turning points at $x=\\pm\\sqrt{q/p}$: increasing for $|x|>\\sqrt{q/p}$, decreasing on $\\left(-\\sqrt{q/p},0\\right)$ and $\\left(0,\\sqrt{q/p}\\right)$. Here $\\sqrt{q/p}=\\sqrt{9}=3$.",
+    "A point where $f$ is undefined (here $x=0$) splits the decreasing set into separate intervals; they cannot be merged into one interval.",
+    "Instance: $f(3)=5$ (local minimum) and $f(-3)=1$ (local maximum)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity and intervals of increase/decrease"
+   ],
+   "level": 3,
+   "question": "Let $(2,3)$ be the largest open interval in which the function $f(x)=2\\log_{e}(x-2)-x^{2}+ax+1$ is strictly increasing and $(b,c)$ the largest open interval in which the function $g(x)=(x-1)^{3}(x+2-a)^{2}$ is strictly decreasing. Then $100(a+b-c)$ is equal to :",
+   "options": [
+    "420",
+    "280",
+    "360",
+    "160"
+   ],
+   "answer": "(C) 360",
+   "key_idea": "$f'$ is itself decreasing, so $f$ increases exactly up to the point where $f'=0$; that point is $3$, which fixes $a$.",
+   "solution": [
+    "$f'(x)=\\dfrac2{x-2}-2x+a\\ge0$ on $(2,3)$.",
+    "$f''(x)=-\\dfrac2{(x-2)^{2}}-2<0$, so $f'$ is a decreasing function.",
+    "Since $f$ is increasing exactly up to $x=3$, $f'(3)\\ge0$ is needed and the interval $(2,3)$ is the largest only if $f'(3)=0$: $2-6+a=0$, so $a=4$ (for $a>4$ the interval is larger, e.g. $a=5$ gives $\\left(2,\\frac{9+\\sqrt{17}}4\\right)$, longer than $(2,3)$).",
+    "With $a=4$: $g(x)=(x-1)^{3}(x-2)^{2}$ and $g'(x)=3(x-1)^{2}(x-2)^{2}+2(x-1)^{3}(x-2)=(x-1)^{2}(x-2)(5x-8)$.",
+    "$g'\\le0$ when $(x-2)(5x-8)\\le0$ (the factor $(x-1)^{2}\\ge0$): sign pattern $+$ for $x<\\frac85$ (except $x=1$ where it is $0$), $-$ on $\\left(\\frac85,2\\right)$, $+$ for $x>2$.",
+    "So $g$ is strictly decreasing in $\\left(\\frac85,2\\right)$: $b=\\frac85$, $c=2$.",
+    "$100(a+b-c)=100\\left(4+\\frac85-2\\right)=100\\times3.6=360$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last line reads '100(a+b+c) = 10(4+8/5-2) = 360'. It should be 100(a+b-c) = 100(4+8/5-2) = 360 (the sign of c and the factor 100 were mistyped; the number 360 is right). Working otherwise unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Read $a$ off the numerator of $f'$ (its larger root must be $3$); get $b$ by a section-formula trick for $g$.",
+     "solution": [
+      "$f'(x)=\\dfrac{-2x^{2}+(a+4)x-2a+2}{x-2}$. For $x>2$ the sign of $f'$ is the sign of the numerator $N(x)$, a downward parabola, so $f'\\ge0$ between its roots.",
+      "The interval starting at $2$ ends at the larger root of $N$, so $N(3)=0$: $-18+3(a+4)-2a+2=a-4=0$, giving $a=4$.",
+      "For $g=(x-1)^{3}(x-2)^{2}$, $g'=0$ at $x=1,2$ and where $\\frac3{x-1}+\\frac2{x-2}=0$, i.e. $3(x-2)+2(x-1)=0$, $x=\\frac85$ (the weighted point between $1$ and $2$).",
+      "Between the stationary points $\\frac85$ and $2$ the derivative is negative (e.g. $g'(1.8)<0$), so $g$ decreases exactly in $\\left(\\frac85,2\\right)$.",
+      "$100(4+\\frac85-2)=360$. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f'$ is strictly decreasing (i.e. $f''<0$), then $f$ increases on an interval that ends where $f'$ first becomes $0$; the right end of the 'largest increasing interval' is a root of $f'$.",
+    "For $(x-p)^{m}(x-q)^{n}$ with $p<q$, the stationary point between $p$ and $q$ is $x=\\dfrac{np+mq}{m+n}$ (it divides $[p,q]$ in the ratio $m:n$ from $p$). Here $\\frac{2\\cdot1+3\\cdot2}5=\\frac85$; check on $x(x-1)$: $\\frac12$.",
+    "The factor with an even power ($(x-1)^{2}$ in $g'$) does not change the sign of $g'$.",
+    "Instance: $a=4$, $(b,c)=\\left(\\frac85,2\\right)$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity: statements on f and f'"
+   ],
+   "level": 2,
+   "question": "For the function $f(x)=\\sin x+3x-\\dfrac2\\pi\\left(x^{2}+x\\right)$, where $x\\in\\left[0,\\dfrac\\pi2\\right]$, consider the following two statements :\n(I) $f$ is increasing in $\\left(0,\\dfrac\\pi2\\right)$\n(II) $f'$ is decreasing in $\\left(0,\\dfrac\\pi2\\right)$\nBetween the above two statements :",
+   "options": [
+    "only (I) is true",
+    "only (II) is true",
+    "both (I) and (II) are true",
+    "neither (I) nor (II) is true"
+   ],
+   "answer": "(C) both (I) and (II) are true",
+   "key_idea": "$f'(x)>0$ follows from $\\cos x\\ge0$ and a linear lower bound for the remaining part.",
+   "solution": [
+    "$f(x)=\\sin x+3x-\\frac2\\pi(x^{2}+x)$ on $\\left[0,\\frac\\pi2\\right]$.",
+    "$f'(x)=\\cos x+3-\\frac2\\pi(2x+1)=\\cos x-\\frac{4x}\\pi-\\frac2\\pi+3$.",
+    "For $x\\in\\left[0,\\frac\\pi2\\right]$, $\\frac{4x}\\pi\\in[0,2]$, hence $3-\\frac2\\pi-\\frac{4x}\\pi\\ge3-\\frac2\\pi-2=1-\\frac2\\pi>0$.",
+    "Also $\\cos x\\ge0$ on $\\left[0,\\frac\\pi2\\right]$, so $f'(x)>0$ and $f$ is increasing: (I) is true.",
+    "$f''(x)=-\\sin x-\\frac4\\pi<0$ for all $x\\in\\left[0,\\frac\\pi2\\right]$, so $f'$ is decreasing: (II) is true.",
+    "Both statements are true, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Do (II) first: $f'$ is decreasing, so its smallest value is at the right end; one evaluation gives (I).",
+     "solution": [
+      "$f''(x)=-\\sin x-\\frac4\\pi<0$ on $\\left[0,\\frac\\pi2\\right]$, so $f'$ is decreasing - this proves (II).",
+      "A decreasing function has its minimum at the right endpoint: $f'(x)\\ge f'\\left(\\frac\\pi2\\right)=0+3-\\frac2\\pi(\\pi+1)=1-\\frac2\\pi\\approx0.363>0$.",
+      "So $f'>0$ throughout and $f$ is increasing - (I) is true. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f''<0$ on an interval then $f'$ is strictly decreasing, so $f'>0$ everywhere on it as soon as $f'>0$ at the right endpoint (and $f'<0$ everywhere as soon as $f'<0$ at the left endpoint).",
+    "Bounding technique: separate $f'$ into a bounded trigonometric part ($\\cos x\\ge0$) and a linear part whose minimum is at an endpoint.",
+    "Instance: $f'\\left(\\frac\\pi2\\right)=1-\\frac2\\pi$ is the least value of $f'$ on $\\left[0,\\frac\\pi2\\right]$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Critical points"
+   ],
+   "level": 1,
+   "question": "The number of critical points of the function $f(x)=(x-2)^{2/3}(2x+1)$ is :",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": "(C) 2",
+   "key_idea": "Critical points are where $f'=0$ or $f'$ does not exist while $f$ is defined: here $x=1$ and $x=2$.",
+   "solution": [
+    "$f(x)=(x-2)^{2/3}(2x+1)$.",
+    "Product rule: $f'(x)=2(x-2)^{2/3}+(2x+1)\\cdot\\frac23(x-2)^{-1/3}$.",
+    "$f'(x)=2(x-2)^{2/3}+\\dfrac{2(2x+1)}{3(x-2)^{1/3}}$.",
+    "Common denominator: $f'(x)=\\dfrac{6(x-2)+2(2x+1)}{3(x-2)^{1/3}}$.",
+    "$f'(x)=\\dfrac{10x-10}{3(x-2)^{1/3}}=\\dfrac{10(x-1)}{3(x-2)^{1/3}}$.",
+    "$f'=0$ at $x=1$; $f'$ does not exist at $x=2$ although $f(2)=0$ is defined. Critical points: $1$ and $2$, so there are $2$ critical points, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $t=(x-2)^{1/3}$ to get a polynomial in $t$ with no fractional powers.",
+     "solution": [
+      "Let $t=(x-2)^{1/3}$ (a one-one map of $\\mathbb{R}$ onto $\\mathbb{R}$), so $x=t^{3}+2$ and $2x+1=2t^{3}+5$.",
+      "$f=t^{2}(2t^{3}+5)=2t^{5}+5t^{2}$, so $\\dfrac{df}{dt}=10t^{4}+10t=10t(t^{3}+1)$.",
+      "Since $\\dfrac{dt}{dx}=\\dfrac1{3t^{2}}$, $f'(x)=\\dfrac{10t(t^{3}+1)}{3t^{2}}=\\dfrac{10(t^{3}+1)}{3t}=\\dfrac{10(x-1)}{3(x-2)^{1/3}}$.",
+      "$f'=0$ when $t^{3}=-1$, i.e. $x=1$; $f'$ is undefined at $t=0$, i.e. $x=2$.",
+      "Two critical points. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Critical points of $f$: points of the domain of $f$ where $f'(x)=0$ or $f'(x)$ does not exist. Check both kinds, and never count points outside the domain.",
+    "For $f(x)=(x-a)^{p/q}g(x)$ with $0<\\frac pq<1$, $g(a)\\ne0$ and the root real: $x=a$ is a critical point (a cusp or vertical tangent), since $f'$ has a factor $(x-a)^{p/q-1}$.",
+    "Instance: $f'$ changes sign from $+$ to $-$ at $x=1$ (local maximum $f(1)=3$) and from $-$ to $+$ at $x=2$ (cusp, local minimum $f(2)=0$)."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity and number of roots"
+   ],
+   "level": 2,
+   "question": "For the function $f(x)=\\cos x-x+1$, $x\\in\\mathbb{R}$, between the following two statements :\n(S1) $f(x)=0$ for only one value of $x$ in $[0,\\pi]$.\n(S2) $f(x)$ is decreasing in $\\left[0,\\dfrac\\pi2\\right]$ and increasing in $\\left[\\dfrac\\pi2,\\pi\\right]$.",
+   "options": [
+    "Only (S2) is correct.",
+    "Only (S1) is correct.",
+    "Both (S1) and (S2) are correct.",
+    "Both (S1) and (S2) are incorrect."
+   ],
+   "answer": "(B) Only (S1) is correct.",
+   "key_idea": "$f'(x)=-(1+\\sin x)\\le0$ makes $f$ strictly decreasing everywhere, so one sign change means exactly one root.",
+   "solution": [
+    "$f(x)=\\cos x-x+1$, so $f'(x)=-\\sin x-1=-(1+\\sin x)\\le0$ for all $x$.",
+    "$f'(x)=0$ only at isolated points ($\\sin x=-1$), so $f$ is strictly decreasing on all of $\\mathbb{R}$.",
+    "$f(0)=2>0$ and $f(\\pi)=-\\pi<0$, so $f(0)f(\\pi)<0$.",
+    "A continuous strictly decreasing function that changes sign on $[0,\\pi]$ has exactly one zero there. (S1) is correct.",
+    "(S2) says $f$ increases on $\\left[\\frac\\pi2,\\pi\\right]$, but $f$ is decreasing everywhere. (S2) is incorrect.",
+    "Only (S1) is correct, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Graph view: $\\cos x$ decreases on $[0,\\pi]$ while the line $x-1$ increases, so they cross at most once.",
+     "solution": [
+      "$f(x)=0\\iff\\cos x=x-1$. On $[0,\\pi]$, $y=\\cos x$ is decreasing from $1$ to $-1$ and $y=x-1$ is increasing from $-1$ to $\\pi-1$.",
+      "A decreasing and an increasing function intersect at most once; at $x=0$ the cosine is above the line ($1>-1$) and at $x=\\pi$ below it ($-1<\\pi-1$), so they intersect exactly once. (S1) holds.",
+      "For (S2): at $x=\\frac\\pi2$, $f=1-\\frac\\pi2\\approx-0.571$ and at $x=\\pi$, $f=-\\pi\\approx-3.14$; $f(\\pi)<f\\left(\\frac\\pi2\\right)$, so $f$ does not increase on $\\left[\\frac\\pi2,\\pi\\right]$. (S2) fails.",
+      "Only (S1) is correct. Same answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A strictly monotonic continuous function has at most one zero; a sign change on the interval makes it exactly one (intermediate value theorem).",
+    "$f'\\le0$ with zeros only at isolated points still gives a strictly decreasing function (no flat stretch).",
+    "Equations of the form 'decreasing function $=$ increasing function' have at most one solution.",
+    "Instance: $f(0)=2$, $f(\\pi)=-\\pi$, root near $x\\approx1.28$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Number of roots of a cubic",
+    "Triple-angle formula for cosine"
+   ],
+   "level": 3,
+   "question": "Consider the function $f:\\left[\\dfrac12,1\\right]\\to\\mathbb{R}$ defined by $f(x)=4\\sqrt2x^{3}-3\\sqrt2x-1$. Consider the statements :\n(I) The curve $y=f(x)$ intersects the $x$-axis exactly at one point\n(II) The curve $y=f(x)$ intersects the $x$-axis at $x=\\cos\\dfrac\\pi{12}$.\nThen :",
+   "options": [
+    "Only (I) is correct",
+    "Both (I) and (II) are the correct",
+    "Both (I) and (II) are incorrect",
+    "Only (II) is correct"
+   ],
+   "answer": "(B) Both (I) and (II) are correct",
+   "key_idea": "Recognise $4c^{3}-3c=\\cos3\\theta$ for $c=\\cos\\theta$; then use monotonicity on $\\left[\\frac12,1\\right]$ for uniqueness.",
+   "solution": [
+    "Let $\\theta=\\frac\\pi{12}$, so $3\\theta=\\frac\\pi4$ and $\\cos3\\theta=\\frac1{\\sqrt2}$.",
+    "$\\cos3\\theta=4\\cos^{3}\\theta-3\\cos\\theta$, so $4\\cos^{3}\\theta-3\\cos\\theta=\\frac1{\\sqrt2}$.",
+    "Multiplying by $\\sqrt2$: $4\\sqrt2\\cos^{3}\\theta-3\\sqrt2\\cos\\theta-1=0$.",
+    "So $x=\\cos\\frac\\pi{12}$ satisfies $f(x)=0$; it lies in $\\left[\\frac12,1\\right]$ because $\\cos\\frac\\pi{12}\\approx0.966$. Statement (II) is correct.",
+    "$f'(x)=12\\sqrt2x^{2}-3\\sqrt2=3\\sqrt2\\left(4x^{2}-1\\right)\\ge0$ for $x\\in\\left[\\frac12,1\\right]$, and it is positive for $x>\\frac12$ (zero only at the endpoint $x=\\frac12$), so $f$ is strictly increasing there.",
+    "A strictly increasing function has at most one zero, and $\\cos\\frac\\pi{12}$ is one. So the curve meets the $x$-axis at exactly one point: statement (I) is correct.",
+    "Both (I) and (II) are correct, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says 'Let x = pi/12' and then writes cos 3x; the angle should be called theta (the root is x = cos(pi/12)). It also says f'(x) is positive on [1/2,1], but f'(1/2)=0; it is positive for x>1/2, which still gives strict increase. Neither slip changes the answer (B).",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $x=\\cos\\theta$ with $\\theta\\in\\left[0,\\frac\\pi3\\right]$: the cubic becomes $\\sqrt2\\cos3\\theta-1=0$.",
+     "solution": [
+      "For $x\\in\\left[\\frac12,1\\right]$ write $x=\\cos\\theta$ with $\\theta\\in\\left[0,\\frac\\pi3\\right]$ (cosine is one-one there).",
+      "$f(x)=\\sqrt2\\left(4\\cos^{3}\\theta-3\\cos\\theta\\right)-1=\\sqrt2\\cos3\\theta-1$.",
+      "$f=0\\iff\\cos3\\theta=\\frac1{\\sqrt2}$. Now $3\\theta\\in[0,\\pi]$, where cosine is one-one, so the only solution is $3\\theta=\\frac\\pi4$, i.e. $\\theta=\\frac\\pi{12}$.",
+      "Hence there is exactly one root, $x=\\cos\\frac\\pi{12}$. Statements (I) and (II) are both correct. Same answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$4x^{3}-3x=\\cos3\\theta$ when $x=\\cos\\theta$ (Chebyshev polynomial $T_{3}$). Any cubic of the form $4x^{3}-3x-c$ with $|c|\\le1$ is solved by $x=\\cos\\frac{\\arccos c+2k\\pi}3$, $k=0,1,2$ - three real roots.",
+    "Here the three roots of $4\\sqrt2x^{3}-3\\sqrt2x-1=0$ are $\\cos\\frac\\pi{12}\\approx0.966$, $\\cos\\frac{3\\pi}4\\approx-0.707$, $\\cos\\frac{17\\pi}{12}\\approx-0.259$ (each checked in the equation); only the first lies in $\\left[\\frac12,1\\right]$.",
+    "The domain restriction $\\left[\\frac12,1\\right]$ is what makes the answer exactly one root: $\\theta\\in\\left[0,\\frac\\pi3\\right]$.",
+    "Similarly $3\\sin\\theta-4\\sin^{3}\\theta=\\sin3\\theta$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity of a rational function"
+   ],
+   "level": 1,
+   "question": "The function $f(x)=\\dfrac x{x^{2}-6x-16}$, $x\\in\\mathbb{R}-\\{-2,8\\}$ :",
+   "options": [
+    "decreases in $(-\\infty,-2)\\cup(-2,8)\\cup(8,\\infty)$",
+    "increases in $(-\\infty,-2)\\cup(-2,8)\\cup(8,\\infty)$",
+    "decreases in $(-2,8)$ and increases in $(-\\infty,-2)\\cup(8,\\infty)$",
+    "decreases in $(-\\infty,-2)$ and increases in $(8,\\infty)$"
+   ],
+   "answer": "(A) decreases in $(-\\infty,-2)\\cup(-2,8)\\cup(8,\\infty)$",
+   "key_idea": "For $f=\\frac{x}{x^{2}+bx+c}$ the numerator of $f'$ is $c-x^{2}$, here $-(x^{2}+16)<0$.",
+   "solution": [
+    "$f(x)=\\dfrac x{x^{2}-6x-16}=\\dfrac x{(x-8)(x+2)}$.",
+    "Quotient rule: $f'(x)=\\dfrac{\\left(x^{2}-6x-16\\right)-x(2x-6)}{\\left(x^{2}-6x-16\\right)^{2}}$.",
+    "Numerator: $x^{2}-6x-16-2x^{2}+6x=-x^{2}-16$, so $f'(x)=\\dfrac{-(x^{2}+16)}{\\left(x^{2}-6x-16\\right)^{2}}$.",
+    "For all $x\\in\\mathbb{R}-\\{-2,8\\}$ the numerator is negative and the denominator is positive, so $f'(x)<0$.",
+    "So $f$ is decreasing on each of the intervals $(-\\infty,-2)$, $(-2,8)$, $(8,\\infty)$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $f=\\dfrac1{h(x)}$ with $h(x)=x-6-\\dfrac{16}x$, which is increasing on each side of $x=0$.",
+     "solution": [
+      "For $x\\ne0$: $f(x)=\\dfrac1{x-6-16/x}=\\dfrac1{h(x)}$ with $h(x)=x-6-\\dfrac{16}x$.",
+      "$h'(x)=1+\\dfrac{16}{x^{2}}>0$, so $f'=-\\dfrac{h'}{h^{2}}=-\\dfrac{1+16/x^{2}}{\\left(x-6-16/x\\right)^{2}}<0$ wherever $x\\ne0,-2,8$.",
+      "At $x=0$ the function is smooth ($f(0)=0$, $f'(0)=-\\frac{16}{256}=-\\frac1{16}<0$), so there is no break in the decrease across $0$.",
+      "Hence $f$ decreases on each interval of its domain. Same answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f(x)=\\dfrac x{x^{2}+bx+c}$: $f'(x)=\\dfrac{c-x^{2}}{\\left(x^{2}+bx+c\\right)^{2}}$. If $c<0$ then $f'<0$ everywhere and $f$ decreases on every interval of its domain; if $c>0$ then $f$ increases on $\\left(-\\sqrt c,\\sqrt c\\right)$ and decreases outside.",
+    "A function with 'decreasing' on each interval of the domain is decreasing on the union only in the sense of each interval - it need not be decreasing on the union as a single set (values jump across the poles $x=-2,8$).",
+    "Instance: $b=-6$, $c=-16$, so $f'=-\\dfrac{x^{2}+16}{(x^{2}-6x-16)^{2}}$."
+   ]
+  }
+ ]
+}
