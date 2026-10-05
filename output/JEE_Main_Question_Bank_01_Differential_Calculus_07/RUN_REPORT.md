@@ -23,7 +23,7 @@ Marks: none printed, so JEE Advanced defaults were used: 4 marks for every quest
 
 ## Answer key problems
 - None. All 20 keys agree with my checks (sympy / mpmath / brute-force scan for Q5, Q6, Q8-Q20; by hand for Q1-Q4 and Q7).
-- Q4 (printed 124): the PDF uses the labels the other way round from the question text at one point (it calls the number of non-differentiable points m and the continuity count n consistently, matching the question); m+n=3 either way.
+- Q4 (printed 124): the PDF labels agree with the question (m = non-differentiable, n = discontinuous: m=3, n=0); nothing wrong.
 
 ## Alternates and results
 - Alternate solutions given for **19 of 20 questions** (one each): Q1-Q12, Q14-Q20.
