@@ -1,0 +1,910 @@
+{
+ "title": "JEE Main Question Bank 01 — Differential Calculus 04 — Paper Analysis",
+ "subtitle": "Functions and Inverse Trigonometric Functions · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Differential_Calculus_04.pdf (solutions as printed); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 10,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 11,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Composition of functions"
+   ],
+   "level": 2,
+   "question": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\frac{2x}{\\sqrt{1+9x^2}}$. If the composition $(f\\circ f\\circ\\cdots\\circ f)(x)$ of $f$ with itself 10 times equals $\\frac{2^{10}x}{\\sqrt{1+9\\alpha x^2}}$, then the value of $\\sqrt{3\\alpha+1}$ is equal to ______.",
+   "answer": "1024",
+   "key_idea": "Compose a few times and read off the pattern of the coefficient of $9x^2$ under the root: $1,5,21,85,\\dots$",
+   "solution": [
+    "$f(x)=\\frac{2x}{\\sqrt{1+9x^2}}$.",
+    "$(f\\circ f)(x)=\\frac{2f(x)}{\\sqrt{1+9(f(x))^2}}=\\frac{\\frac{4x}{\\sqrt{1+9x^2}}}{\\sqrt{1+9\\cdot\\frac{4x^2}{1+9x^2}}}=\\frac{4x}{\\sqrt{1+45x^2}}$.",
+    "$(f\\circ f\\circ f)(x)=\\frac{4\\cdot\\frac{2x}{\\sqrt{1+9x^2}}}{\\sqrt{1+45\\cdot\\frac{4x^2}{1+9x^2}}}=\\frac{8x}{\\sqrt{1+189x^2}}=\\frac{8x}{\\sqrt{1+21\\cdot9x^2}}$.",
+    "Four times: $\\frac{16x}{\\sqrt{1+765x^2}}=\\frac{16x}{\\sqrt{1+85\\cdot9x^2}}$.",
+    "So the number multiplying $9x^2$ under the root is $1,5,21,85,\\dots$ for 1, 2, 3, 4 compositions, and $\\alpha$ is the 10th term of $1,5,21,85,\\dots$",
+    "These terms are $\\frac{(2^1)^2-1}{3},\\frac{(2^2)^2-1}{3},\\frac{(2^3)^2-1}{3},\\frac{(2^4)^2-1}{3},\\dots$",
+    "Hence $\\alpha=\\frac{(2^{10})^2-1}{3}$.",
+    "$3\\alpha+1=(2^{10})^2$, so $\\sqrt{3\\alpha+1}=2^{10}=1024$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Linearise the iteration: $\\frac1{f^2}$ is an affine function of $\\frac1{x^2}$, so the $n$-fold composite follows from a geometric recursion.",
+     "solution": [
+      "$\\frac1{f(x)^2}=\\frac{1+9x^2}{4x^2}=\\frac14\\cdot\\frac1{x^2}+\\frac94$.",
+      "Let $f_n$ be the $n$-fold composite and $g_n=\\frac1{f_n(x)^2}$, with $g_0=\\frac1{x^2}$. Applying the relation above to the input $f_n(x)$ gives $g_{n+1}=\\frac{g_n}{4}+\\frac94$.",
+      "The fixed point of $g\\mapsto\\frac g4+\\frac94$ is $3$, so $g_{n+1}-3=\\frac14(g_n-3)$.",
+      "Therefore $g_n-3=\\frac1{4^n}\\left(\\frac1{x^2}-3\\right)$, i.e. $g_n=\\frac{1+3(4^n-1)x^2}{4^nx^2}$.",
+      "So $f_n(x)=\\frac{2^nx}{\\sqrt{1+3(4^n-1)x^2}}$.",
+      "For $n=10$ compare with $\\frac{2^{10}x}{\\sqrt{1+9\\alpha x^2}}$: $9\\alpha=3(4^{10}-1)$, so $\\alpha=\\frac{4^{10}-1}{3}$.",
+      "$3\\alpha+1=4^{10}$, so $\\sqrt{3\\alpha+1}=2^{10}=1024$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "To iterate a function with a square root, look at $\\frac1{f^2}$: if it is affine in $\\frac1{x^2}$, the $n$-fold composite follows from a one-line recursion.",
+    "For $f(x)=\\frac{x}{\\sqrt{1+cx^2}}$, $\\frac1{f^2}=\\frac1{x^2}+c$, so $f_n(x)=\\frac{x}{\\sqrt{1+ncx^2}}$.",
+    "The recurrence $\\alpha_{n+1}=4\\alpha_n+1$ with $\\alpha_1=1$ gives $\\alpha_n=\\frac{4^n-1}{3}$ (here $1,5,21,85$); always confirm a guessed pattern by a recursion, as the alternate does.",
+    "In this question $f_n(x)=\\frac{2^nx}{\\sqrt{1+(4^n-1)\\cdot3x^2}}$; for $n=10$, $3\\alpha+1=4^{10}$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Greatest integer and fractional part functions"
+   ],
+   "level": 2,
+   "question": "If $S=\\{a\\in\\mathbb{R}:|2a-1|=3[a]+2\\{a\\}\\}$, where $[t]$ denotes the greatest integer less than or equal to $t$ and $\\{t\\}$ represents the fractional part of $t$, then $72\\sum_{a\\in S}a$ is equal to ______.",
+   "answer": "18",
+   "key_idea": "Use $a=[a]+\\{a\\}$ to turn the equation into a bound on $[a]$, since $0\\le\\{a\\}<1$.",
+   "solution": [
+    "$|2a-1|=3[a]+2\\{a\\}$. Since $a=[a]+\\{a\\}$, the right side is $[a]+2a$.",
+    "Case I: $a\\ge\\frac12$. Then $2a-1=[a]+2a$, so $[a]=-1$.",
+    "Then $a\\in[-1,0)$, but $a\\ge\\frac12$, so there is no value of $a$ in this case.",
+    "Case II: $a<\\frac12$. Then $1-2a=[a]+2a$, so $1=[a]+4a$.",
+    "Writing $a=[a]+\\{a\\}$: $1=5[a]+4\\{a\\}$, i.e. $4\\{a\\}=1-5[a]$.",
+    "Since $0\\le4\\{a\\}<4$: $0\\le1-5[a]<4$.",
+    "This gives $-\\frac35<[a]\\le\\frac15$, so $[a]=0$ and $\\{a\\}=\\frac14$.",
+    "So $a=\\frac14$, which is less than $\\frac12$ as Case II needs; $S=\\{\\frac14\\}$.",
+    "$72\\sum_{a\\in S}a=72\\times\\frac14=18$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF wrote $\\frac13\\ge[a]\\ge-\\frac35$ from $0\\le1-5[a]<4$. The correct bounds are $-\\frac35<[a]\\le\\frac15$ (upper bound $\\frac15$, lower bound strict). Conclusion $[a]=0$, $a=\\frac14$ and answer 18 are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The left side is non-negative, so the right side $3[a]+2\\{a\\}\\ge0$ forces $[a]\\ge0$ and kills most cases at once.",
+     "solution": [
+      "$|2a-1|\\ge0$, so $3[a]+2\\{a\\}\\ge0$.",
+      "If $[a]\\le-1$, then $3[a]+2\\{a\\}<-3+2=-1<0$, impossible. So $[a]\\ge0$.",
+      "If $[a]\\ge1$, then $a\\ge1>\\frac12$ and $|2a-1|=2a-1$; the equation becomes $2a-1=[a]+2a$, i.e. $[a]=-1$, a contradiction.",
+      "So $[a]=0$: $a=\\{a\\}\\in[0,1)$ and the equation is $|2a-1|=2a$.",
+      "If $a\\ge\\frac12$: $2a-1=2a$ is impossible. So $a<\\frac12$ and $1-2a=2a$, giving $a=\\frac14$.",
+      "$S=\\{\\frac14\\}$ and $72\\times\\frac14=18$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For an equation linear in $a$, $[a]$ and $\\{a\\}$, substitute $a=[a]+\\{a\\}$ to reach $c_1[a]+c_2\\{a\\}=c$ and use $0\\le\\{a\\}<1$ to confine $[a]$ to a few integers.",
+    "Use the sign of one side early: an absolute value is $\\ge0$, so the other side must be too. Here $3[a]+2\\{a\\}\\ge0$ gives $[a]\\ge0$.",
+    "Always check each candidate against the case condition: $a=\\frac14$ satisfies $a<\\frac12$ of Case II.",
+    "Check: $a=\\frac14$ gives $|2a-1|=\\frac12$ and $3\\cdot0+2\\cdot\\frac14=\\frac12$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Additive functional equation",
+    "Arithmetic progression sum"
+   ],
+   "level": 1,
+   "question": "If a function $f$ satisfies $f(m+n)=f(m)+f(n)$ for all $m,n\\in\\mathbb{N}$ and $f(1)=1$, then the largest natural number $\\lambda$ such that $\\sum_{k=1}^{2022}f(\\lambda+k)\\le(2022)^2$ is equal to ______.",
+   "answer": "1010",
+   "key_idea": "Additivity on $\\mathbb{N}$ with $f(1)=1$ gives $f(n)=n$, turning the sum into an arithmetic series.",
+   "solution": [
+    "$f(m+n)=f(m)+f(n)$ gives $f(x)=kx$ on $\\mathbb{N}$ (taking $n=1$: $f(m+1)=f(m)+f(1)$, so $f(m)=m\\,f(1)$ by induction).",
+    "$f(1)=1\\Rightarrow k=1$, so $f(x)=x$.",
+    "The condition becomes $\\sum_{k=1}^{2022}(\\lambda+k)\\le(2022)^2$.",
+    "$2022\\lambda+\\frac{2022\\times2023}{2}\\le(2022)^2$.",
+    "$\\lambda\\le2022-\\frac{2023}{2}$.",
+    "$\\lambda\\le1010.5$.",
+    "The largest natural number $\\lambda$ is $1010$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The sum of an arithmetic progression is the number of terms times the middle (average) term, so no sum formula is needed.",
+     "solution": [
+      "With $f(n)=n$, the terms $\\lambda+1,\\lambda+2,\\dots,\\lambda+2022$ form an AP with 2022 terms.",
+      "Its average equals the average of first and last: $\\frac{(\\lambda+1)+(\\lambda+2022)}{2}=\\lambda+\\frac{2023}{2}$.",
+      "So the sum is $2022\\left(\\lambda+\\frac{2023}{2}\\right)$.",
+      "$2022\\left(\\lambda+1011.5\\right)\\le2022^2$, so $\\lambda+1011.5\\le2022$.",
+      "$\\lambda\\le1010.5$, so the largest natural $\\lambda$ is $1010$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(m+n)=f(m)+f(n)$ on $\\mathbb{N}$, then $f(n)=nf(1)$ (induction from $f(m+1)=f(m)+f(1)$).",
+    "$\\sum_{k=1}^{n}(\\lambda+k)=n\\lambda+\\frac{n(n+1)}{2}=n\\left(\\lambda+\\frac{n+1}{2}\\right)$.",
+    "'Largest natural number' means take the floor of the bound: $\\lambda\\le1010.5\\Rightarrow1010$, not 1011.",
+    "Check: $\\lambda=1010$ gives $2022\\times2021.5<2022^2$, while $\\lambda=1011$ gives $2022\\times2022.5>2022^2$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of one-one functions"
+   ],
+   "level": 1,
+   "question": "Let $A=\\{(x,y):2x+3y=23,\\ x,y\\in\\mathbb{N}\\}$ and $B=\\{x:(x,y)\\in A\\}$. Then the number of one-one functions from $A$ to $B$ is equal to ______.",
+   "answer": "24",
+   "key_idea": "List the four natural solutions; $n(A)=n(B)=4$, so one-one functions $A\\to B$ are bijections, $4!$.",
+   "solution": [
+    "Natural solutions of $2x+3y=23$: $x=1,y=7$; $x=4,y=5$; $x=7,y=3$; $x=10,y=1$.",
+    "So $A=\\{(1,7),(4,5),(7,3),(10,1)\\}$ and $n(A)=4$.",
+    "$B$ is the set of first coordinates: $B=\\{1,4,7,10\\}$, so $n(B)=4$. The correspondence is $(1,7)\\to1$, $(4,5)\\to4$, $(7,3)\\to7$, $(10,1)\\to10$.",
+    "A one-one function from a 4-element set to a 4-element set is a bijection.",
+    "The number of one-one functions from $A$ to $B$ is $4!=24$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "The number of one-one functions from an $m$-element set to an $n$-element set is $^nP_m=\\frac{n!}{(n-m)!}$ (zero if $m>n$); for $m=n$ it is $n!$.",
+    "Positive solutions of $ax+by=c$: find one, then $x$ rises by $b$ while $y$ falls by $a$ (here $x$ up by 3, $y$ down by 2). Check $y$ odd: $y=1,3,5,7$.",
+    "Projection $(x,y)\\mapsto x$ is one-one on a line, so $n(B)=n(A)$ here.",
+    "Check: $2x+3y=23$ at $(10,1)$: $20+3=23$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Functions to the power set",
+    "Counting of functions"
+   ],
+   "level": 1,
+   "question": "Let $A=\\{1,2,3,\\dots,7\\}$ and let $P(A)$ denote the power set of $A$. If the number of functions $f:A\\to P(A)$ such that $a\\in f(a)$, $\\forall a\\in A$, is $m^n$, $m,n\\in\\mathbb{N}$ and $m$ is least, then $m+n$ is equal to ______.",
+   "answer": "44",
+   "key_idea": "$f(a)$ must be a subset containing $a$: $2^6$ choices for each of the 7 elements independently.",
+   "solution": [
+    "$n(P(A))=2^7$.",
+    "$a\\in f(a)$ means $f(a)$ is a subset of $A$ that contains $a$.",
+    "Such subsets: $a$ is fixed inside and each of the other 6 elements is free, so there are $2^6$ different subsets.",
+    "Each of the 7 elements $a$ is handled independently: number of functions $=(2^6)^7=2^{42}$.",
+    "$m^n=2^{42}$. With $m$ least, $m=2$ (since $m=1$ gives $1$) and $n=42$.",
+    "$m+n=44$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A function $A\\to P(A)$ is a relation on $A$; $a\\in f(a)$ says the relation is reflexive, so count entries of a $7\\times7$ 0-1 table.",
+     "solution": [
+      "Define a relation $R$ on $A$ by $a\\,R\\,b\\iff b\\in f(a)$. Functions $A\\to P(A)$ correspond one-to-one to relations on $A$.",
+      "$a\\in f(a)$ means $a\\,R\\,a$ for every $a$: $R$ is reflexive.",
+      "Write $R$ as a $7\\times7$ table of 0s and 1s. The 7 diagonal entries are forced to be 1; the $49-7=42$ off-diagonal entries are free.",
+      "Number of such functions $=2^{42}$.",
+      "The least base is $m=2$ with $n=42$, so $m+n=44$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Functions $f:A\\to P(A)$ are in bijection with relations on $A$ ($a\\,R\\,b\\iff b\\in f(a)$), so there are $2^{n^2}$ of them for $|A|=n$.",
+    "Those with $a\\in f(a)$ for all $a$ are the reflexive relations: $2^{n(n-1)}$; the same count holds for $a\\notin f(a)$ (irreflexive). For $n=7$: $2^{42}$.",
+    "For $m^n=2^{42}$ with the least $m$, take $m=2$ ($m=4,16,\\dots$ give larger $m$); $m=1$ is impossible since $1^n=1$.",
+    "Check with $n=2$: reflexive relations number $2^{2}=4$ (formula $2^{2\\cdot1}$)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of onto functions"
+   ],
+   "level": 2,
+   "question": "Let $R=\\{a,b,c,d,e\\}$ and $S=\\{1,2,3,4\\}$. The total number of onto functions $f:R\\to S$ such that $f(a)\\neq1$ is equal to ______.",
+   "answer": "180",
+   "key_idea": "Subtract from all 240 onto functions those with $f(a)=1$, splitting by whether $1$ is also taken by another element.",
+   "solution": [
+    "Total onto functions $R\\to S$: choose the two elements that share an image, $\\frac{5!}{3!\\,2!}=10$ ways, then assign the four groups to $1,2,3,4$ in $4!$ ways: $10\\times24=240$.",
+    "Now count those with $f(a)=1$.",
+    "Case 1: the other four elements $b,c,d,e$ also cover all of $S$ (so $1$ is taken twice): they map onto $S$ in $4!=24$ ways.",
+    "Case 2: $1$ is taken only by $a$, so $b,c,d,e$ map onto $\\{2,3,4\\}$: choose the pair sharing an image, $\\frac{4!}{2!\\,2!}=6$ ways, times $3!=6$ gives $36$.",
+    "Number with $f(a)=1$: $24+36=60$.",
+    "Required number $=240-60=180$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry: relabelling the values of $S$ shows each value of $f(a)$ occurs equally often among the onto functions.",
+     "solution": [
+      "By inclusion-exclusion, the number of onto functions $R\\to S$ is $4^5-4\\cdot3^5+6\\cdot2^5-4=1024-972+192-4=240$.",
+      "Permuting the values $1,2,3,4$ maps onto functions to onto functions bijectively, so the number with $f(a)=1$ equals the number with $f(a)=j$ for any $j$.",
+      "The four classes $f(a)=1,2,3,4$ partition the 240 functions equally, so each has $\\frac{240}{4}=60$.",
+      "Required number: $f(a)\\neq1$ gives $240-60=180$ (equivalently $\\frac34\\times240$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of onto functions from an $m$-set to an $n$-set: $\\sum_{k=0}^{n}(-1)^k\\binom nk(n-k)^m$; for $5\\to4$ it is $240$, for $4\\to3$ it is $36$, for $4\\to4$ it is $24$.",
+    "Shortcut for a point restriction: by symmetry among the values, $f(a)\\neq$ a fixed value removes exactly $\\frac1n$ of the onto functions, so the count is $\\frac{n-1}{n}\\times$ total.",
+    "For $m=n+1$ the number of onto functions is $\\binom{n+1}{2}\\,n!$ ($=10\\times24$ here).",
+    "Check: $\\frac34\\times240=180$ agrees with the $240-60$ casework."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Roots of equations with greatest integer function",
+    "Equations with modulus"
+   ],
+   "level": 3,
+   "question": "Let $m$ and $n$ be the numbers of real roots of the quadratic equations $x^2-12x+[x]+31=0$ and $x^2-5|x+2|-4=0$ respectively, where $[x]$ denotes the greatest integer $\\le x$. Then $m^2+mn+n^2$ is equal to ______.",
+   "answer": "9",
+   "key_idea": "$x^2-12x+31\\ge-5$ forces $[x]\\le5$, so $x<6$; then show the left side stays positive on $[5,6)$ and below $5$.",
+   "solution": [
+    "$x^2-12x+31+[x]=0$ with $x^2-12x+31=(x-6)^2-5\\ge-5$. A root needs $[x]=-(x^2-12x+31)\\le5$, so $x<6$.",
+    "For $5\\le x<6$: $[x]=5$, so the left side is $(x-6)^2-5+5=(x-6)^2>0$. No root here (at $x=5$ and near $x=6$ the left side is $1$ and $\\to0^+$).",
+    "For $x<5$: $[x]>x-1$, so the left side is $>x^2-12x+31+x-1=(x-5)(x-6)>0$. No root here either.",
+    "Hence the first equation has no real root: $m=0$.",
+    "Second equation. Case 1, $x\\ge-2$: $x^2-5(x+2)-4=0$, i.e. $x^2-5x-14=0$, so $x=7$ or $x=-2$ (both satisfy $x\\ge-2$).",
+    "Case 2, $x<-2$: $x^2+5(x+2)-4=0$, i.e. $x^2+5x+6=0$, so $x=-2$ or $x=-3$; only $x=-3$ satisfies $x<-2$.",
+    "The roots are $x=-3,-2,7$ (that is 3 solutions), so $n=3$.",
+    "$m^2+mn+n^2=0+0+9=9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF only observed $[x]\\le5$ and said a root 'could be in $[5,6]$ but does not exist as at $x=5$ and $6$ LHS $=1$' (a statement about two points, not a proof, and nothing about $x<5$). Replaced by a full argument: $(x-6)^2>0$ on $[5,6)$ and LHS $>(x-5)(x-6)>0$ for $x<5$. $m=0$, $n=3$ and the answer 9 are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $k=[x]$: the first equation becomes $(x-6)^2=5-k$, so roots can only be $x=6\\pm\\sqrt{5-k}$ and each can be tested against $[x]=k$.",
+     "solution": [
+      "Let $k=[x]\\in\\mathbb{Z}$. Then $x^2-12x+31=-k$, i.e. $(x-6)^2=5-k$. So $t=5-k$ is a non-negative integer and $x=6\\pm\\sqrt t$.",
+      "For $x=6+\\sqrt t\\ge6$ we get $[x]\\ge6$, but $k=5-t\\le5$. Contradiction.",
+      "For $x=6-\\sqrt t$ we need $[x]=5-t$, i.e. $5-t\\le6-\\sqrt t<6-t$. The right inequality is $\\sqrt t>t$, which needs $0<t<1$: no integer $t$ works (for $t=0$, $x=6$ has $[x]=6\\neq5$).",
+      "So the first equation has no root: $m=0$.",
+      "Second equation: put $u=x+2$: $(u-2)^2-5|u|-4=u^2-4u-5|u|=0$.",
+      "$u\\ge0$: $u^2-9u=0\\Rightarrow u=0,9$, i.e. $x=-2,7$. $u<0$: $u^2+u=0\\Rightarrow u=-1$, i.e. $x=-3$.",
+      "Three roots, $n=3$, and $m^2+mn+n^2=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For equations with $[x]$, set $k=[x]$ and solve for $x$ in terms of the integer $k$; then keep only roots with $[x]=k$. This turns the problem into checking finitely many integers.",
+    "Sandwich bound: $x-1<[x]\\le x$, which lets you bound the left side by an ordinary polynomial (here $(x-5)(x-6)$).",
+    "For $|x-c|$ equations split at $x=c$ and discard roots outside each case range; a root on the boundary ($x=-2$) is counted once.",
+    "Check: at $x=7$, $49-5\\cdot9-4=0$; at $x=-3$, $9-5\\cdot1-4=0$; at $x=-2$, $4-0-4=0$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting of functions with a constraint"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{1,2,3,4,5\\}$ and $B=\\{1,2,3,4,5,6\\}$. Then the number of functions $f:A\\to B$ satisfying $f(1)+f(2)=f(4)-1$ is equal to ______.",
+   "answer": "360",
+   "key_idea": "$f(1)+f(2)+1=f(4)\\le6$; casework on $f(4)$ and the free values $f(3)$, $f(5)$ give a factor $6\\times6$.",
+   "solution": [
+    "$f(1)+f(2)+1=f(4)$, so $f(1)+f(2)\\le5$ (as $f(4)\\le6$). The values $f(3)$ and $f(5)$ are free: $6\\times6=36$ choices.",
+    "$f(4)=6$: $f(1)+f(2)=5$, so $(f(1),f(2))\\in\\{(1,4),(4,1),(2,3),(3,2)\\}$. Ways: $4\\cdot1\\cdot6\\cdot6=144$.",
+    "$f(4)=5$: $f(1)+f(2)=4$, so $(1,3),(3,1),(2,2)$. Ways: $3\\cdot1\\cdot6\\cdot6=108$.",
+    "$f(4)=4$: $f(1)+f(2)=3$, so $(1,2),(2,1)$. Ways: $2\\cdot1\\cdot6\\cdot6=72$.",
+    "$f(4)=3$: $f(1)+f(2)=2$, only $(1,1)$. Ways: $1\\cdot1\\cdot36=36$.",
+    "$f(4)\\le2$ is impossible, since $f(1)+f(2)\\ge2$.",
+    "Total $=144+108+72+36=360$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose $f(1),f(2)$ first: then $f(4)$ is forced, and we only count pairs with $f(1)+f(2)\\le5$ (stars and bars).",
+     "solution": [
+      "Once $f(1)$ and $f(2)$ are chosen, $f(4)=f(1)+f(2)+1$ is determined; it must be at most 6, so $f(1)+f(2)\\le5$.",
+      "Count ordered pairs of positive integers with sum $\\le5$: sums $2,3,4,5$ give $1,2,3,4$ pairs, total $10$ (this is $\\binom52$).",
+      "$f(3)$ and $f(5)$ are unrestricted: $6\\times6=36$.",
+      "Total $=10\\times36=360$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When a condition determines one value from the others, choose the free values first and count the admissible choices; this removes the case split on the determined value.",
+    "The number of ordered pairs of positive integers with sum $\\le s$ is $\\binom s2$; with sum exactly $s$ it is $s-1$.",
+    "Values not mentioned in the condition ($f(3),f(5)$) contribute $|B|$ each independently.",
+    "Check: $4+3+2+1=10=\\binom52$ and $10\\times36=360$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Greatest integer function",
+    "Sum of squares and natural numbers"
+   ],
+   "level": 2,
+   "question": "Let $[\\alpha]$ denote the greatest integer $\\le\\alpha$. Then $[\\sqrt1]+[\\sqrt2]+[\\sqrt3]+\\dots+[\\sqrt{120}]$ is equal to ______.",
+   "answer": "825",
+   "key_idea": "$[\\sqrt k]=r$ for $r^2\\le k\\le r^2+2r$, which is $2r+1$ consecutive values of $k$.",
+   "solution": [
+    "$S=[\\sqrt1]+[\\sqrt2]+\\dots+[\\sqrt{120}]$.",
+    "$[\\sqrt1]$ to $[\\sqrt3]$ are all $1$ (3 terms): contribution $1\\times3$.",
+    "$[\\sqrt4]$ to $[\\sqrt8]$ are all $2$ (5 terms): $2\\times5$.",
+    "$[\\sqrt9]$ to $[\\sqrt{15}]$ are all $3$ (7 terms): $3\\times7$.",
+    "$\\vdots$ and finally $[\\sqrt{100}]$ to $[\\sqrt{120}]$ are all $10$ (21 terms): $10\\times21$.",
+    "$S=1\\times3+2\\times5+3\\times7+\\dots+10\\times21=\\sum_{r=1}^{10}r(2r+1)$.",
+    "$=2\\sum_{r=1}^{10}r^2+\\sum_{r=1}^{10}r$.",
+    "$=\\frac{2\\times10\\times11\\times21}{6}+\\frac{10\\times11}{2}=770+55=825$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by layers: $[\\sqrt k]$ is the number of $j\\ge1$ with $j^2\\le k$, so swap the order of counting.",
+     "solution": [
+      "$[\\sqrt k]=\\#\\{j\\ge1:\\ j\\le\\sqrt k\\}=\\#\\{j\\ge1:\\ j^2\\le k\\}$.",
+      "So $\\sum_{k=1}^{120}[\\sqrt k]=\\sum_{j\\ge1}\\#\\{k\\le120:\\ k\\ge j^2\\}$.",
+      "For fixed $j$ the number of such $k$ is $120-j^2+1=121-j^2$, valid for $j=1,\\dots,10$ (since $11^2=121>120$).",
+      "Sum $=\\sum_{j=1}^{10}(121-j^2)=1210-385=825$, using $\\sum_{j=1}^{10}j^2=385$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[\\sqrt k]=r$ exactly for $k=r^2,r^2+1,\\dots,r^2+2r$: $2r+1$ values.",
+    "Layer-cake formula: $\\sum_{k=1}^{N}[\\sqrt k]=\\sum_{j=1}^{[\\sqrt N]}(N+1-j^2)$, which avoids a partial last block.",
+    "Same ideas work for $[\\sqrt[3]{k}]$ or $[\\log_2k]$: group the $k$ by value, or count by layers.",
+    "Check with $N=15$: blocks give $1\\cdot3+2\\cdot5+3\\cdot7=34$ and the layer formula gives $\\sum_{j=1}^{3}(16-j^2)=48-14=34$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arithmetico-geometric series",
+    "Differentiation"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\sum_{k=1}^{10}kx^k$, $x\\in\\mathbb{R}$. If $2f(2)+f'(2)=119(2)^n+1$, then $n$ is equal to ______.",
+   "answer": "10",
+   "key_idea": "Sum $\\sum kx^k$ with the multiply-by-$x$ and subtract trick, then differentiate and substitute $x=2$.",
+   "solution": [
+    "$f(x)=x+2x^2+\\dots+10x^{10}$.",
+    "$xf(x)=x^2+2x^3+\\dots+9x^{10}+10x^{11}$.",
+    "Subtracting: $f(x)(1-x)=x+x^2+\\dots+x^{10}-10x^{11}$.",
+    "$f(x)=\\frac{x(1-x^{10})}{(1-x)^2}-\\frac{10x^{11}}{1-x}$.",
+    "$f(x)=\\frac{x-x^{11}-10x^{11}+10x^{12}}{(1-x)^2}=\\frac{10x^{12}-11x^{11}+x}{(1-x)^2}$.",
+    "At $x=2$ the denominator is $1$: $f(2)=10\\cdot2^{12}-11\\cdot2^{11}+2=40960-22528+2=18434$.",
+    "Differentiating: $f'(x)=\\frac{(120x^{11}-121x^{10}+1)(1-x)+2(10x^{12}-11x^{11}+x)}{(1-x)^3}$.",
+    "At $x=2$: $f'(2)=\\frac{-(245760-123904+1)+36868}{-1}=84989$.",
+    "$2f(2)+f'(2)=36868+84989=121857=119\\cdot1024+1=119\\cdot2^{10}+1$.",
+    "So $n=10$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF found the closed form of $f(x)$ and then jumped to '$2f(2)+f'(2)=119\\cdot2^{10}+1$' without differentiating or evaluating. The derivative, $f(2)=18434$, $f'(2)=84989$ and the check $121857=119\\cdot2^{10}+1$ were added. Answer 10 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Write $2f(2)+f'(2)=\\sum 2^{k-1}k(k+4)$ and telescope it with $u_k=(k^2+2k-1)2^k$, which gives $119\\cdot2^{10}+1$ immediately.",
+     "solution": [
+      "$2f(2)=\\sum_{k=1}^{10}k\\,2^{k+1}=\\sum2^{k-1}\\cdot4k$ and $f'(2)=\\sum_{k=1}^{10}k^2\\,2^{k-1}$.",
+      "So $2f(2)+f'(2)=\\sum_{k=1}^{10}2^{k-1}\\,(k^2+4k)$.",
+      "Seek $u_k=(ak^2+bk+c)2^k$ with $u_k-u_{k-1}=2^{k-1}(k^2+4k)$. Matching coefficients gives $a=1$, $b=2$, $c=-1$: $u_k=(k^2+2k-1)2^k$.",
+      "Check: $u_{k-1}=(k^2-2)2^{k-1}$ and $u_k=2(k^2+2k-1)2^{k-1}$, so $u_k-u_{k-1}=2^{k-1}(k^2+4k)$.",
+      "The sum telescopes: $u_{10}-u_0=(100+20-1)2^{10}-(-1)=119\\cdot2^{10}+1$.",
+      "Comparing with $119\\cdot2^n+1$: $n=10$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=1}^{n}kx^k=\\frac{x-(n+1)x^{n+1}+nx^{n+2}}{(1-x)^2}$ ($x\\neq1$); at $x=2$ this is $(n-1)2^{n+1}+2$, which gives $18434$ for $n=10$.",
+    "A sum $\\sum_{k=1}^{n}P(k)r^k$ with $P$ a polynomial and $r\\neq1$ telescopes with $u_k=Q(k)r^k$ where $\\deg Q=\\deg P$; find $Q$ by undetermined coefficients.",
+    "When the answer is stated as '$119\\cdot2^n+1$', expect a telescoping closed form $Q(n)2^n-Q(0)$: here $Q(n)=n^2+2n-1$, $Q(10)=119$, $Q(0)=-1$.",
+    "Check with two terms: $\\sum_{k=1}^{2}2^{k-1}k(k+4)=5+24=29$ and $u_2-u_0=28+1=29$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Principal values of inverse trigonometric functions"
+   ],
+   "level": 1,
+   "question": "Considering the principal values of the inverse trigonometric functions, $\\sin^{-1}\\left(\\frac{\\sqrt3}{2}x+\\frac12\\sqrt{1-x^2}\\right)$, $-\\frac12<x<\\frac1{\\sqrt2}$, is equal to :",
+   "options": [
+    "$\\frac{5\\pi}{6}-\\sin^{-1}x$",
+    "$\\frac\\pi4+\\sin^{-1}x$",
+    "$-\\frac{5\\pi}{6}-\\sin^{-1}x$",
+    "$\\frac\\pi6+\\sin^{-1}x$"
+   ],
+   "answer": "(D) $\\frac{\\pi}{6}+\\sin^{-1}x$",
+   "key_idea": "With $x=\\sin\\theta$ the bracket is $\\sin(\\theta+\\frac\\pi6)$, and $\\theta+\\frac\\pi6$ lies in the principal range.",
+   "solution": [
+    "Let $x=\\sin\\theta$, i.e. $\\theta=\\sin^{-1}x$.",
+    "$-\\frac12<x<\\frac1{\\sqrt2}$ gives $-\\frac\\pi6<\\theta<\\frac\\pi4$ (as in the PDF's graph).",
+    "For these $\\theta$, $\\cos\\theta>0$, so $\\sqrt{1-x^2}=\\cos\\theta$ and the expression is $\\sin^{-1}\\left[\\frac{\\sqrt3}{2}\\sin\\theta+\\frac12\\cos\\theta\\right]$.",
+    "$=\\sin^{-1}\\left[\\cos\\frac\\pi6\\sin\\theta+\\sin\\frac\\pi6\\cos\\theta\\right]=\\sin^{-1}\\left(\\sin\\left(\\theta+\\frac\\pi6\\right)\\right)$.",
+    "$0<\\theta+\\frac\\pi6<\\frac\\pi4+\\frac\\pi6=\\frac{5\\pi}{12}$, which lies in $[-\\frac\\pi2,\\frac\\pi2]$.",
+    "So the expression equals $\\theta+\\frac\\pi6=\\frac\\pi6+\\sin^{-1}x$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The identity holds for every $x$ in the interval, so test convenient values of $x$ against the options.",
+     "solution": [
+      "$x=0$ lies in $\\left(-\\frac12,\\frac1{\\sqrt2}\\right)$ and the left side is $\\sin^{-1}\\frac12=\\frac\\pi6$.",
+      "At $x=0$ the options give (A) $\\frac{5\\pi}6$, (B) $\\frac\\pi4$, (C) $-\\frac{5\\pi}6$, (D) $\\frac\\pi6$.",
+      "Only (D) matches.",
+      "Second check, $x=\\frac12$: left side $=\\sin^{-1}\\left(\\frac{\\sqrt3}{4}+\\frac{\\sqrt3}{4}\\right)=\\sin^{-1}\\frac{\\sqrt3}2=\\frac\\pi3$, and (D) gives $\\frac\\pi6+\\frac\\pi6=\\frac\\pi3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^{-1}(\\sin t)=t$ only for $t\\in[-\\frac\\pi2,\\frac\\pi2]$; always find the range of the angle before cancelling.",
+    "If $a^2+b^2=1$, then $a\\sin\\theta+b\\cos\\theta=\\sin(\\theta+\\varphi)$ with $\\cos\\varphi=a$, $\\sin\\varphi=b$ (here $\\varphi=\\frac\\pi6$).",
+    "In a single-correct identity question, substitute a convenient value ($x=0$) to eliminate options quickly.",
+    "Check at $x=\\frac12$: both sides equal $\\frac\\pi3$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Domain of logarithmic functions",
+    "Domain of inverse trigonometric functions"
+   ],
+   "level": 2,
+   "question": "Let the domains of the functions $f(x)=\\log_4\\log_3\\log_7\\left(8-\\log_2(x^2+4x+5)\\right)$ and $g(x)=\\sin^{-1}\\left(\\frac{7x+10}{x-2}\\right)$ be $(\\alpha,\\beta)$ and $[\\gamma,\\delta]$ respectively. Then $\\alpha^2+\\beta^2+\\gamma^2+\\delta^2$ is equal to :",
+   "options": [
+    "13",
+    "15",
+    "14",
+    "16"
+   ],
+   "answer": "(B) 15",
+   "key_idea": "Work from the outside in: each logarithm needs a positive argument, and everything collapses to $8-\\log_2(x^2+4x+5)>7$.",
+   "solution": [
+    "$x^2+4x+5=(x+2)^2+1>0$ for all real $x$, so $\\log_2$ is defined everywhere.",
+    "(1) $\\log_7$ needs $8-\\log_2(x^2+4x+5)>0$.",
+    "(2) $\\log_3$ needs $\\log_7(8-\\log_2(x^2+4x+5))>0$, i.e. $8-\\log_2(x^2+4x+5)>1$.",
+    "(3) $\\log_4$ needs $\\log_3\\log_7(8-\\log_2(x^2+4x+5))>0$, i.e. $\\log_7(\\cdot)>1$, i.e. $8-\\log_2(x^2+4x+5)>7$.",
+    "(3) implies (1) and (2): $\\log_2(x^2+4x+5)<1$, so $x^2+4x+5<2$.",
+    "$x^2+4x+3<0$, $(x+1)(x+3)<0$, so $x\\in(-3,-1)$: $\\alpha=-3$, $\\beta=-1$.",
+    "For $g$: $-1\\le\\frac{7x+10}{x-2}\\le1$.",
+    "$\\frac{7x+10}{x-2}+1\\ge0\\Rightarrow\\frac{8x+8}{x-2}\\ge0\\Rightarrow x\\in(-\\infty,-1]\\cup(2,\\infty)$.",
+    "$\\frac{7x+10}{x-2}-1\\le0\\Rightarrow\\frac{6x+12}{x-2}\\le0\\Rightarrow x\\in[-2,2)$.",
+    "Intersection: $D_g=[-2,-1]$, so $\\gamma=-2$, $\\delta=-1$.",
+    "$\\alpha^2+\\beta^2+\\gamma^2+\\delta^2=9+1+4+1=15$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square for $f$, and square the inequality $\\left|\\frac{7x+10}{x-2}\\right|\\le1$ to get a difference of squares for $g$.",
+     "solution": [
+      "All bases $7,3,4$ exceed 1, so the whole chain reduces to $E=8-\\log_2\\left((x+2)^2+1\\right)>7$.",
+      "$\\log_2\\left((x+2)^2+1\\right)<1\\iff(x+2)^2+1<2\\iff|x+2|<1$, so $x\\in(-3,-1)$.",
+      "For $g$: $\\left|\\frac{7x+10}{x-2}\\right|\\le1$ with $x\\neq2$ is $(7x+10)^2\\le(x-2)^2$.",
+      "Difference of squares: $(7x+10-x+2)(7x+10+x-2)\\le0$, i.e. $(6x+12)(8x+8)\\le0$, i.e. $(x+2)(x+1)\\le0$.",
+      "So $x\\in[-2,-1]$ (and $x=2$ is outside).",
+      "$(-3)^2+(-1)^2+(-2)^2+(-1)^2=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\log_a\\log_b\\cdots$ with all bases $>1$: $\\log_b(E)>0\\iff E>1$ and $\\log_b(E)>1\\iff E>b$; the outermost condition implies the inner ones.",
+    "$|u|\\le1\\iff u^2\\le1$; for $\\left|\\frac{p}{q}\\right|\\le1$ use $p^2\\le q^2$, i.e. $(p-q)(p+q)\\le0$ (with $q\\neq0$).",
+    "Complete the square early: $x^2+4x+5=(x+2)^2+1\\ge1$.",
+    "Check: at $x=-2$, $x^2+4x+5=1$, $\\log_21=0$, so the inner value is $8>7$ and $x=-2$ is in the domain of $f$; at $x=-1$ it is $2$, giving exactly $7$, so $-1$ is excluded."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum of infinite series of inverse trigonometric functions"
+   ],
+   "level": 2,
+   "question": "The sum of the infinite series $\\cot^{-1}\\left(\\frac74\\right)+\\cot^{-1}\\left(\\frac{19}4\\right)+\\cot^{-1}\\left(\\frac{39}4\\right)+\\cot^{-1}\\left(\\frac{67}4\\right)+\\dots$ is :",
+   "options": [
+    "$\\frac\\pi2-\\cot^{-1}\\left(\\frac12\\right)$",
+    "$\\frac\\pi2-\\tan^{-1}\\left(\\frac12\\right)$",
+    "$\\frac\\pi2+\\tan^{-1}\\left(\\frac12\\right)$",
+    "$\\frac\\pi2+\\cot^{-1}\\left(\\frac12\\right)$"
+   ],
+   "answer": "(B) $\\frac{\\pi}{2}-\\tan^{-1}\\left(\\frac12\\right)$",
+   "key_idea": "Find the general term $4n^2+3$, then write $\\tan^{-1}\\frac1{n^2+3/4}$ as $\\tan^{-1}(n+\\frac12)-\\tan^{-1}(n-\\frac12)$ and telescope.",
+   "solution": [
+    "All arguments are positive, so $\\cot^{-1}\\frac a4=\\tan^{-1}\\frac4a$: the series is $\\tan^{-1}\\frac47+\\tan^{-1}\\frac4{19}+\\tan^{-1}\\frac4{39}+\\dots$",
+    "For $T_n$: write $S=7+19+39+67+\\dots+T_n$ and again $S=7+19+39+\\dots+T_n$ shifted one place; subtracting gives $T_n=7+(12+20+28+\\dots)$ with $(n-1)$ terms.",
+    "$T_n=7+\\frac{n-1}2\\left(24+(n-2)8\\right)$.",
+    "$T_n=7+(n-1)(4+4n)=7+4(n^2-1)=4n^2+3$.",
+    "General term: $\\tan^{-1}\\frac4{4n^2+3}=\\tan^{-1}\\frac1{n^2+\\frac34}$.",
+    "Since $(n+\\frac12)-(n-\\frac12)=1$ and $1+(n-\\frac12)(n+\\frac12)=n^2+\\frac34$, the term is $\\tan^{-1}\\frac{(n+\\frac12)-(n-\\frac12)}{1+(n-\\frac12)(n+\\frac12)}$.",
+    "$=\\tan^{-1}\\left(n+\\frac12\\right)-\\tan^{-1}\\left(n-\\frac12\\right)$.",
+    "The sum telescopes: $\\sum_{n=1}^{\\infty}=\\lim_{N\\to\\infty}\\tan^{-1}\\left(N+\\frac12\\right)-\\tan^{-1}\\frac12=\\frac\\pi2-\\tan^{-1}\\frac12$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Guess the partial-sum tangent from the first two sums and prove it by induction, then let $N\\to\\infty$.",
+     "solution": [
+      "Let $S_N$ be the sum of the first $N$ terms $\\tan^{-1}\\frac4{4n^2+3}$. Then $\\tan S_1=\\frac47$ and $\\tan S_2=\\frac{\\frac47+\\frac4{19}}{1-\\frac{16}{133}}=\\frac89$.",
+      "Guess $\\tan S_N=\\frac{4N}{2N+5}$ (gives $\\frac47$ and $\\frac89$).",
+      "Induction step: $\\tan S_{N+1}=\\frac{\\frac{4N}{2N+5}+\\frac4{4N^2+8N+7}}{1-\\frac{16N}{(2N+5)(4N^2+8N+7)}}=\\frac{4(4N^3+8N^2+9N+5)}{8N^3+36N^2+38N+35}$.",
+      "Since $(4N^3+8N^2+9N+5)(2N+7)=(N+1)(8N^3+36N^2+38N+35)$, this equals $\\frac{4(N+1)}{2N+7}$, which is the guess for $N+1$.",
+      "$\\tan S_N>0$ for every $N$ and the terms are positive, so $S_N$ stays in $(0,\\frac\\pi2)$.",
+      "As $N\\to\\infty$, $\\tan S_N\\to2$, so the sum is $\\tan^{-1}2=\\frac\\pi2-\\tan^{-1}\\frac12$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}a-\\tan^{-1}b=\\tan^{-1}\\frac{a-b}{1+ab}$ for $ab>-1$; to telescope $\\tan^{-1}\\frac{c}{1+ab}$ look for $a-b=c$.",
+    "Standard pieces: $\\tan^{-1}\\frac1{1+n(n+1)}=\\tan^{-1}(n+1)-\\tan^{-1}n$ and $\\tan^{-1}\\frac2{n^2}=\\tan^{-1}(n+1)-\\tan^{-1}(n-1)$.",
+    "$\\cot^{-1}u=\\tan^{-1}\\frac1u$ for $u>0$.",
+    "A sequence whose second differences are constant ($7,19,39,67$: differences $12,20,28$) is quadratic; here $4n^2+3$.",
+    "Check: $\\tan S_2=\\frac89$ both from direct addition and from $\\frac{4N}{2N+5}$ at $N=2$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Range of inverse trigonometric functions",
+    "Quadratic maximum and minimum"
+   ],
+   "level": 2,
+   "question": "Using the principal values of the inverse trigonometric functions, the sum of the maximum and the minimum values of $16\\left((\\sec^{-1}x)^2+(\\operatorname{cosec}^{-1}x)^2\\right)$ is :",
+   "options": [
+    "$31\\pi^2$",
+    "$24\\pi^2$",
+    "$22\\pi^2$",
+    "$18\\pi^2$"
+   ],
+   "answer": "(C) $22\\pi^2$",
+   "key_idea": "With $a=\\sec^{-1}x\\in[0,\\pi]$ and $\\operatorname{cosec}^{-1}x=\\frac\\pi2-a$ the expression is a quadratic in $a$.",
+   "solution": [
+    "Let $\\sec^{-1}x=a\\in[0,\\pi]-\\left\\{\\frac\\pi2\\right\\}$.",
+    "Then $\\operatorname{cosec}^{-1}x=\\frac\\pi2-a$.",
+    "$16\\left[a^2+\\left(\\frac\\pi2-a\\right)^2\\right]=16\\left[2a^2-\\pi a+\\frac{\\pi^2}4\\right]$.",
+    "This is an upward parabola in $a$: its maximum on $[0,\\pi]$ is at an endpoint, its minimum at the vertex $a=\\frac\\pi4$ (inside the domain).",
+    "Maximum at $a=\\pi$ (compare $a=0$, which gives only $4\\pi^2$): $16\\left[2\\pi^2-\\pi^2+\\frac{\\pi^2}4\\right]=20\\pi^2$.",
+    "Minimum at $a=\\frac\\pi4$: $16\\left[\\frac{2\\pi^2}{16}-\\frac{\\pi^2}4+\\frac{\\pi^2}4\\right]=2\\pi^2$.",
+    "Sum $=20\\pi^2+2\\pi^2=22\\pi^2$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $A^2+B^2=\\frac{(A+B)^2+(A-B)^2}2$ with $A+B=\\frac\\pi2$ fixed, so only $(A-B)^2$ varies.",
+     "solution": [
+      "Let $A=\\sec^{-1}x$, $B=\\operatorname{cosec}^{-1}x$; $A+B=\\frac\\pi2$ for $|x|\\ge1$.",
+      "$A^2+B^2=\\frac{\\frac{\\pi^2}4+(A-B)^2}2$, so $16(A^2+B^2)=2\\pi^2+8(A-B)^2$.",
+      "$A-B=2A-\\frac\\pi2$ with $A\\in[0,\\pi]$, $A\\neq\\frac\\pi2$, so $A-B\\in\\left[-\\frac\\pi2,\\frac{3\\pi}2\\right]$.",
+      "$(A-B)^2$ is smallest, $0$, at $A=\\frac\\pi4$ ($x=\\sqrt2$), and largest, $\\frac{9\\pi^2}4$, at $A=\\pi$ ($x=-1$).",
+      "Minimum $=2\\pi^2$, maximum $=2\\pi^2+8\\cdot\\frac{9\\pi^2}4=20\\pi^2$; sum $22\\pi^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sec^{-1}x+\\operatorname{cosec}^{-1}x=\\frac\\pi2$ for $|x|\\ge1$; $\\sec^{-1}x\\in[0,\\pi]\\setminus\\{\\frac\\pi2\\}$ and $\\operatorname{cosec}^{-1}x\\in[-\\frac\\pi2,\\frac\\pi2]\\setminus\\{0\\}$.",
+    "For $A+B=S$ fixed, $A^2+B^2=\\frac{S^2+(A-B)^2}2$; extremes come from the extremes of $A-B$.",
+    "A quadratic on a closed interval: maximum at the endpoint farthest from the vertex, minimum at the vertex if it is inside.",
+    "Check: $x=-1$: $16\\left(\\pi^2+\\frac{\\pi^2}4\\right)=20\\pi^2$; $x=\\sqrt2$: $16\\left(\\frac{\\pi^2}{16}+\\frac{\\pi^2}{16}\\right)=2\\pi^2$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Principal values of inverse trigonometric functions"
+   ],
+   "level": 1,
+   "question": "If $\\frac\\pi2\\le x\\le\\frac{3\\pi}4$, then $\\cos^{-1}\\left(\\frac{12}{13}\\cos x+\\frac5{13}\\sin x\\right)$ is equal to :",
+   "options": [
+    "$x-\\tan^{-1}\\frac5{12}$",
+    "$x+\\tan^{-1}\\frac45$",
+    "$x+\\tan^{-1}\\frac5{12}$",
+    "$x-\\tan^{-1}\\frac43$"
+   ],
+   "answer": "(A) $x-\\tan^{-1}\\frac{5}{12}$",
+   "key_idea": "$\\frac{12}{13}\\cos x+\\frac5{13}\\sin x=\\cos(x-\\alpha)$, and $x-\\alpha$ must lie in $[0,\\pi]$ to cancel $\\cos^{-1}\\cos$.",
+   "solution": [
+    "Let $\\cos\\alpha=\\frac{12}{13}$, $\\sin\\alpha=\\frac5{13}$, so $\\tan\\alpha=\\frac5{12}$ and $\\alpha=\\tan^{-1}\\frac5{12}\\in\\left(0,\\frac\\pi2\\right)$.",
+    "$\\cos^{-1}(\\cos\\alpha\\cos x+\\sin\\alpha\\sin x)=\\cos^{-1}(\\cos(x-\\alpha))$.",
+    "For $\\frac\\pi2\\le x\\le\\frac{3\\pi}4$: $0<\\frac\\pi2-\\alpha\\le x-\\alpha\\le\\frac{3\\pi}4-\\alpha<\\pi$, inside $[0,\\pi]$.",
+    "So $\\cos^{-1}(\\cos(x-\\alpha))=x-\\alpha=x-\\tan^{-1}\\frac5{12}$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test the endpoint $x=\\frac\\pi2$ (inside the interval) against all four options.",
+     "solution": [
+      "At $x=\\frac\\pi2$ the expression is $\\cos^{-1}\\frac5{13}$, an angle in $\\left(0,\\frac\\pi2\\right)$.",
+      "(B) $\\frac\\pi2+\\tan^{-1}\\frac45>\\frac\\pi2$ and (C) $\\frac\\pi2+\\tan^{-1}\\frac5{12}>\\frac\\pi2$: both too large.",
+      "(D) $\\frac\\pi2-\\tan^{-1}\\frac43$ has cosine $\\sin\\left(\\tan^{-1}\\frac43\\right)=\\frac45\\neq\\frac5{13}$.",
+      "(A) $\\frac\\pi2-\\tan^{-1}\\frac5{12}$ has cosine $\\sin\\left(\\tan^{-1}\\frac5{12}\\right)=\\frac5{13}$ and lies in $[0,\\pi]$, so it equals $\\cos^{-1}\\frac5{13}$.",
+      "Hence (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a\\cos x+b\\sin x=R\\cos(x-\\alpha)$ with $R=\\sqrt{a^2+b^2}$, $\\tan\\alpha=\\frac ba$; here $R=1$.",
+    "$\\cos^{-1}(\\cos t)=t$ only for $t\\in[0,\\pi]$; for $t\\in[-\\pi,0]$ it is $-t$, for $t\\in[\\pi,2\\pi]$ it is $2\\pi-t$.",
+    "Always compute the range of $x-\\alpha$ numerically: $\\alpha\\approx0.395$, so $x-\\alpha\\in[1.18,1.96]$.",
+    "Check at $x=\\frac\\pi2$: $\\cos(1.176)=0.385=\\frac5{13}$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum of inverse cotangent terms",
+    "Principal value of inverse cotangent"
+   ],
+   "level": 2,
+   "question": "If $\\alpha>\\beta>\\gamma>0$, then the expression $\\cot^{-1}\\left\\{\\beta+\\frac{1+\\beta^2}{\\alpha-\\beta}\\right\\}+\\cot^{-1}\\left\\{\\gamma+\\frac{1+\\gamma^2}{\\beta-\\gamma}\\right\\}+\\cot^{-1}\\left\\{\\alpha+\\frac{1+\\alpha^2}{\\gamma-\\alpha}\\right\\}$ is equal to :",
+   "options": [
+    "$0$",
+    "$\\pi$",
+    "$\\frac\\pi2-(\\alpha+\\beta+\\gamma)$",
+    "$3\\pi$"
+   ],
+   "answer": "(B) $\\pi$",
+   "key_idea": "Each argument simplifies to $\\frac{\\alpha\\beta+1}{\\alpha-\\beta}$-type; the third is negative so it carries an extra $\\pi$.",
+   "solution": [
+    "$\\beta+\\frac{1+\\beta^2}{\\alpha-\\beta}=\\frac{\\alpha\\beta-\\beta^2+1+\\beta^2}{\\alpha-\\beta}=\\frac{\\alpha\\beta+1}{\\alpha-\\beta}$, and similarly for the others.",
+    "The expression is $\\cot^{-1}\\frac{\\alpha\\beta+1}{\\alpha-\\beta}+\\cot^{-1}\\frac{\\beta\\gamma+1}{\\beta-\\gamma}+\\cot^{-1}\\frac{\\gamma\\alpha+1}{\\gamma-\\alpha}$.",
+    "As $\\alpha>\\beta>\\gamma>0$, the first two arguments are positive: $\\cot^{-1}u=\\tan^{-1}\\frac1u$.",
+    "The third argument is negative ($\\gamma<\\alpha$): $\\cot^{-1}u=\\pi+\\tan^{-1}\\frac1u$.",
+    "The expression $=\\tan^{-1}\\frac{\\alpha-\\beta}{1+\\alpha\\beta}+\\tan^{-1}\\frac{\\beta-\\gamma}{1+\\beta\\gamma}+\\pi+\\tan^{-1}\\frac{\\gamma-\\alpha}{1+\\gamma\\alpha}$.",
+    "Using $\\tan^{-1}\\frac{p-q}{1+pq}=\\tan^{-1}p-\\tan^{-1}q$ (valid as $pq>-1$): $=(\\tan^{-1}\\alpha-\\tan^{-1}\\beta)+(\\tan^{-1}\\beta-\\tan^{-1}\\gamma)+\\pi+(\\tan^{-1}\\gamma-\\tan^{-1}\\alpha)$.",
+    "The inverse tangents cancel, leaving $\\pi$: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's first simplified term reads $\\cot^{-1}\\left(\\frac{\\alpha\\beta+1}{\\alpha+\\beta}\\right)$; the correct denominator is $\\alpha-\\beta$ (the PDF's next line already uses $\\alpha-\\beta$). Final answer $\\pi$ unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The result does not depend on $\\alpha,\\beta,\\gamma$, so substitute $\\alpha=3,\\beta=2,\\gamma=1$ and check against the options.",
+     "solution": [
+      "Take $\\alpha=3$, $\\beta=2$, $\\gamma=1$.",
+      "Arguments: $\\beta+\\frac{1+\\beta^2}{\\alpha-\\beta}=2+5=7$; $\\gamma+\\frac{1+\\gamma^2}{\\beta-\\gamma}=1+2=3$; $\\alpha+\\frac{1+\\alpha^2}{\\gamma-\\alpha}=3+\\frac{10}{-2}=-2$.",
+      "$\\cot^{-1}7+\\cot^{-1}3$: $\\tan=\\frac{\\frac17+\\frac13}{1-\\frac1{21}}=\\frac12$, so the sum is $\\tan^{-1}\\frac12$.",
+      "$\\cot^{-1}(-2)=\\pi-\\cot^{-1}2=\\pi-\\tan^{-1}\\frac12$ (principal value in $(0,\\pi)$).",
+      "Total $=\\tan^{-1}\\frac12+\\pi-\\tan^{-1}\\frac12=\\pi$.",
+      "Options: $0$, $\\frac\\pi2-6<0$ and $3\\pi$ do not equal $\\pi$, so (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cot^{-1}u=\\tan^{-1}\\frac1u$ if $u>0$, and $\\pi+\\tan^{-1}\\frac1u$ if $u<0$ (principal value in $(0,\\pi)$).",
+    "$\\beta+\\frac{1+\\beta^2}{\\alpha-\\beta}=\\frac{1+\\alpha\\beta}{\\alpha-\\beta}$: the cyclic pattern $\\sum\\cot^{-1}\\frac{1+\\alpha\\beta}{\\alpha-\\beta}$ telescopes to a multiple of $\\pi$ once the sign of each argument is tracked.",
+    "$\\tan^{-1}p-\\tan^{-1}q=\\tan^{-1}\\frac{p-q}{1+pq}$ only when $pq>-1$; here all of $\\alpha,\\beta,\\gamma>0$.",
+    "Check: $\\cot^{-1}7+\\cot^{-1}3+\\cot^{-1}(-2)=0.1419+0.3218+2.6779=3.1416$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Principal values of inverse trigonometric functions",
+    "Minimum value of an expression with constraint"
+   ],
+   "level": 3,
+   "question": "Given that the inverse trigonometric functions assume principal values only, let $x,y$ be any two real numbers in $[-1,1]$ such that $\\cos^{-1}x-\\sin^{-1}y=\\alpha$, $-\\frac\\pi2\\le\\alpha\\le\\pi$. Then the minimum value of $x^2+y^2+2xy\\sin\\alpha$ is :",
+   "options": [
+    "$-1$",
+    "$\\frac12$",
+    "$-\\frac12$",
+    "$0$"
+   ],
+   "answer": "(D) $0$",
+   "key_idea": "$\\cos^{-1}x+\\cos^{-1}y=\\frac\\pi2+\\alpha$ gives $x^2+y^2+2xy\\sin\\alpha=\\cos^2\\alpha$; then check the minimum $0$ is attained.",
+   "solution": [
+    "$\\sin^{-1}y=\\frac\\pi2-\\cos^{-1}y$, so $\\cos^{-1}x-\\left(\\frac\\pi2-\\cos^{-1}y\\right)=\\alpha$.",
+    "$\\cos^{-1}x+\\cos^{-1}y=\\frac\\pi2+\\alpha$, and $\\frac\\pi2+\\alpha\\in\\left[0,\\frac{3\\pi}2\\right]$.",
+    "Taking cosines of both sides: $xy-\\sqrt{1-x^2}\\sqrt{1-y^2}=\\cos\\left(\\frac\\pi2+\\alpha\\right)=-\\sin\\alpha$.",
+    "So $xy+\\sin\\alpha=\\sqrt{1-x^2}\\sqrt{1-y^2}$.",
+    "Squaring: $x^2y^2+2xy\\sin\\alpha+\\sin^2\\alpha=(1-x^2)(1-y^2)=1-x^2-y^2+x^2y^2$.",
+    "$x^2+y^2+2xy\\sin\\alpha=1-\\sin^2\\alpha=\\cos^2\\alpha$.",
+    "For $\\alpha\\in\\left[-\\frac\\pi2,\\pi\\right]$ the minimum of $\\cos^2\\alpha$ is $0$, at $\\alpha=\\frac\\pi2$.",
+    "It is attained: for $\\alpha=\\frac\\pi2$, $\\cos^{-1}x+\\cos^{-1}y=\\pi$ gives $y=-x$, and then $\\cos^{-1}x-\\sin^{-1}(-x)=\\cos^{-1}x+\\sin^{-1}x=\\frac\\pi2$ for every $x\\in[-1,1]$.",
+    "The minimum value is $0$: option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF wrote $\\cos^{-1}\\left(xy-\\sqrt{1-x^2}\\sqrt{1-y^2}\\right)=\\frac\\pi2+\\alpha$, which is valid only when $\\frac\\pi2+\\alpha\\le\\pi$ (the sum $\\cos^{-1}x+\\cos^{-1}y$ can be up to $2\\pi$); the correct step is to take cosines of both sides. It also did not check that $\\alpha=\\frac\\pi2$ is attainable. Both added; answer 0 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=\\cos u$, $y=\\cos w$: the expression becomes $\\cos^2u+\\cos^2w-2\\cos u\\cos w\\cos(u+w)=\\sin^2(u+w)$, a standard identity.",
+     "solution": [
+      "Let $u=\\cos^{-1}x$ and $w=\\cos^{-1}y$, so $x=\\cos u$, $y=\\cos w$ and $\\sin^{-1}y=\\frac\\pi2-w$.",
+      "The condition $u-\\left(\\frac\\pi2-w\\right)=\\alpha$ gives $u+w=\\frac\\pi2+\\alpha$, so $\\sin\\alpha=-\\cos(u+w)$.",
+      "$x^2+y^2+2xy\\sin\\alpha=\\cos^2u+\\cos^2w-2\\cos u\\cos w\\cos(u+w)$.",
+      "Identity: with $C=\\cos u\\cos w$, $S=\\sin u\\sin w$ the right side is $\\cos^2u+\\cos^2w-2C(C-S)=\\cos^2u+\\cos^2w-2C^2+2CS$, and $\\sin^2(u+w)=\\sin^2u\\cos^2w+\\cos^2u\\sin^2w+2CS$ gives the same expression.",
+      "So the expression equals $\\sin^2(u+w)=\\sin^2\\left(\\frac\\pi2+\\alpha\\right)=\\cos^2\\alpha$.",
+      "Its minimum $0$ occurs at $\\alpha=\\frac\\pi2$, i.e. $u+w=\\pi$, $y=\\cos(\\pi-u)=-x$, which is allowed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\cos^{-1}x+\\cos^{-1}y=\\theta$, then $x^2+y^2-2xy\\cos\\theta=\\sin^2\\theta$ (valid for every $\\theta$, since it comes from $\\cos\\theta=xy-\\sqrt{1-x^2}\\sqrt{1-y^2}$).",
+    "Apply a trig function to both sides of an inverse-trig relation rather than writing $\\cos^{-1}(\\cdot)=\\theta$ unless $\\theta\\in[0,\\pi]$ is known.",
+    "After squaring, confirm that the extreme value is actually attained within the constraints ($y=-x$ works here).",
+    "Instance: $\\theta=\\frac\\pi2+\\alpha$ gives $-\\cos\\theta=\\sin\\alpha$, hence $x^2+y^2+2xy\\sin\\alpha=\\cos^2\\alpha$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric equation",
+    "Roots of a quadratic equation",
+    "Straight line"
+   ],
+   "level": 1,
+   "question": "Let $x=\\frac mn$ ($m,n$ are co-prime natural numbers) be a solution of the equation $\\cos\\left(2\\sin^{-1}x\\right)=\\frac19$ and let $\\alpha,\\beta$ ($\\alpha>\\beta$) be the roots of the equation $mx^2-nx-m+n=0$. Then the point $(\\alpha,\\beta)$ lies on the line :",
+   "options": [
+    "$5x+8y=9$",
+    "$5x-8y=-9$",
+    "$3x+2y=2$",
+    "$3x-2y=-2$"
+   ],
+   "answer": "(A) $5x+8y=9$",
+   "key_idea": "$\\cos2\\theta=1-2x^2$ gives $x=\\frac23$, so $m=2,n=3$ and the quadratic is $2x^2-3x+1=0$.",
+   "solution": [
+    "Let $\\sin^{-1}x=\\theta$; since $x=\\frac mn>0$, $\\theta$ is in the first quadrant. $\\cos2\\theta=\\frac19$.",
+    "$1-2\\sin^2\\theta=\\frac19$, so $\\sin^2\\theta=\\frac49$.",
+    "$x^2=\\frac49$, so $x=\\frac23=\\frac mn$: $m=2$, $n=3$.",
+    "The equation $mx^2-nx-m+n=0$ becomes $2x^2-3x+1=0$.",
+    "Its roots are $1$ and $\\frac12$, so $\\alpha=1$, $\\beta=\\frac12$.",
+    "The point $(1,\\frac12)$: $5(1)+8\\cdot\\frac12=9$, so it lies on $5x+8y=9$: option (A).",
+    "The other lines fail: $3+1=4\\neq2$, $5-4=1\\neq-9$, $3-1=2\\neq-2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The coefficients of $mx^2-nx-m+n$ sum to zero, so $x=1$ is always a root and the other root is the product $\\frac{n-m}m$.",
+     "solution": [
+      "$m-n-m+n=0$, so $x=1$ is a root of $mx^2-nx-m+n=0$ for any $m,n$.",
+      "The product of the roots is $\\frac{-m+n}m=\\frac nm-1$.",
+      "From $\\cos2\\theta=1-2x^2=\\frac19$, $x=\\frac mn=\\frac23$, so $\\frac nm=\\frac32$.",
+      "The other root is $\\frac32-1=\\frac12$, so $\\alpha=1>\\beta=\\frac12$.",
+      "$(1,\\frac12)$ lies on $5x+8y=9$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos(2\\sin^{-1}x)=1-2x^2$ and $\\cos(2\\cos^{-1}x)=2x^2-1$ (valid for all $x\\in[-1,1]$).",
+    "If $a+b+c=0$, then $x=1$ is a root of $ax^2+bx+c=0$ and the other root is $\\frac ca$.",
+    "A natural number ratio $x=\\frac mn$ forces $x>0$, which fixes the sign of the root of $x^2=\\frac49$.",
+    "Check: $2(\\frac12)^2-3\\cdot\\frac12+1=0$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum of inverse sine functions",
+    "Cosine rule (properties of triangles)"
+   ],
+   "level": 2,
+   "question": "For $\\alpha,\\beta,\\gamma\\neq0$, if $\\sin^{-1}\\alpha+\\sin^{-1}\\beta+\\sin^{-1}\\gamma=\\pi$ and $(\\alpha+\\beta+\\gamma)(\\alpha-\\gamma+\\beta)=3\\alpha\\beta$, then $\\gamma$ equals :",
+   "options": [
+    "$\\frac1{\\sqrt2}$",
+    "$\\frac{\\sqrt3}2$",
+    "$\\sqrt3$",
+    "$\\frac{\\sqrt3-1}{2\\sqrt2}$"
+   ],
+   "answer": "(B) $\\frac{\\sqrt3}{2}$",
+   "key_idea": "The sines of angles $A+B+C=\\pi$ are proportional to sides, and $\\alpha^2+\\beta^2-\\gamma^2=\\alpha\\beta$ is the cosine rule with $\\cos C=\\frac12$.",
+   "solution": [
+    "Let $\\sin^{-1}\\alpha=A$, $\\sin^{-1}\\beta=B$, $\\sin^{-1}\\gamma=C$; then $A+B+C=\\pi$.",
+    "Each of $A,B,C$ is nonzero and at most $\\frac\\pi2$; if one were negative the sum would be less than $\\pi$. So all are positive and are the angles of a triangle, with $\\alpha=\\sin A$, $\\beta=\\sin B$, $\\gamma=\\sin C$.",
+    "$(\\alpha+\\beta+\\gamma)(\\alpha+\\beta-\\gamma)=3\\alpha\\beta$, so $(\\alpha+\\beta)^2-\\gamma^2=3\\alpha\\beta$.",
+    "$\\alpha^2+\\beta^2-\\gamma^2=\\alpha\\beta$, so $\\frac{\\alpha^2+\\beta^2-\\gamma^2}{2\\alpha\\beta}=\\frac12$.",
+    "By the law of sines the sines are proportional to the sides, so the left side is $\\cos C$: $\\cos C=\\frac12$, $C=60^\\circ$.",
+    "$\\gamma=\\sin C=\\frac{\\sqrt3}2$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The data determine $\\gamma$ uniquely, so a convenient triple satisfying both conditions must give the answer: the equilateral one.",
+     "solution": [
+      "Try $\\alpha=\\beta=\\gamma=\\sin60^\\circ=\\frac{\\sqrt3}2$.",
+      "Then $\\sin^{-1}\\alpha+\\sin^{-1}\\beta+\\sin^{-1}\\gamma=3\\cdot\\frac\\pi3=\\pi$.",
+      "And $(\\alpha+\\beta+\\gamma)(\\alpha+\\beta-\\gamma)=3\\alpha\\cdot\\alpha=3\\alpha^2=3\\alpha\\beta$.",
+      "Both conditions hold. The question has exactly one correct option, so $\\gamma=\\frac{\\sqrt3}2$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\sin^{-1}\\alpha+\\sin^{-1}\\beta+\\sin^{-1}\\gamma=\\pi$ with $\\alpha,\\beta,\\gamma\\neq0$, all three are positive and are the sines of the angles of a triangle, so the numbers $\\alpha,\\beta,\\gamma$ behave like its sides.",
+    "A condition $\\alpha^2+\\beta^2-\\gamma^2=k\\alpha\\beta$ then reads $\\cos C=\\frac k2$.",
+    "$(\\alpha+\\beta+\\gamma)(\\alpha+\\beta-\\gamma)=(\\alpha+\\beta)^2-\\gamma^2$; recognise differences of squares.",
+    "Check: equilateral values $\\frac{\\sqrt3}2$ satisfy both given conditions."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Principal values of inverse trigonometric functions"
+   ],
+   "level": 1,
+   "question": "If $a=\\sin^{-1}(\\sin5)$ and $b=\\cos^{-1}(\\cos5)$, then $a^2+b^2$ is equal to :",
+   "options": [
+    "$4\\pi^2+25$",
+    "$4\\pi^2-20\\pi+50$",
+    "$8\\pi^2-40\\pi+50$",
+    "$25$"
+   ],
+   "answer": "(C) $8\\pi^2-40\\pi+50$",
+   "key_idea": "Reduce $5$ radians (fourth quadrant, between $\\frac{3\\pi}2$ and $2\\pi$) into the principal ranges.",
+   "solution": [
+    "$5$ radians lies between $\\frac{3\\pi}2\\approx4.71$ and $2\\pi\\approx6.28$.",
+    "$\\sin^{-1}(\\sin5)$ must lie in $[-\\frac\\pi2,\\frac\\pi2]$: $5-2\\pi\\approx-1.28$ is in range and $\\sin(5-2\\pi)=\\sin5$, so $a=5-2\\pi$.",
+    "$\\cos^{-1}(\\cos5)$ must lie in $[0,\\pi]$: $2\\pi-5\\approx1.28$ is in range and $\\cos(2\\pi-5)=\\cos5$, so $b=2\\pi-5$.",
+    "$a^2+b^2=(5-2\\pi)^2+(2\\pi-5)^2$.",
+    "$=2(4\\pi^2-20\\pi+25)=8\\pi^2-40\\pi+50$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\sin^{-1}(\\sin t)=t-2\\pi$ for $t\\in\\left[\\frac{3\\pi}2,\\frac{5\\pi}2\\right]$; $=\\pi-t$ for $t\\in\\left[\\frac\\pi2,\\frac{3\\pi}2\\right]$; $=t$ for $t\\in\\left[-\\frac\\pi2,\\frac\\pi2\\right]$.",
+    "$\\cos^{-1}(\\cos t)=2\\pi-t$ for $t\\in[\\pi,2\\pi]$; $=t$ for $t\\in[0,\\pi]$; $=-t$ for $t\\in[-\\pi,0]$.",
+    "Locate $t$ in radians against $\\frac\\pi2=1.57$, $\\pi=3.14$, $\\frac{3\\pi}2=4.71$, $2\\pi=6.28$ first.",
+    "Here $a=-1.283$ and $b=1.283$, so $a=-b$ and $a^2+b^2=2b^2=2(2\\pi-5)^2$."
+   ]
+  }
+ ]
+}
