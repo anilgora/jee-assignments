@@ -1,0 +1,840 @@
+{
+ "title": "JEE Main Question Bank – Coordinate Geometry 05 — Paper Analysis",
+ "subtitle": "Parabola and Ellipse (PDF Q81–Q100, numbered 1–20) · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Coordinate_Geometry_05.pdf (no blueprint; concepts self-assigned)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 11,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 12,
+   "to": 20,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "q_ref": "Q81",
+   "concepts": [
+    "Pencil of circles touching a parabola",
+    "Condition for a circle to touch the x-axis"
+   ],
+   "level": 2,
+   "question": "Let $r$ be the radius of the circle which touches the $x$-axis at the point $(a,0)$, $a<0$, and the parabola $y^2=9x$ at the point $(4,6)$. Then $r$ is equal to ______.",
+   "answer": "30",
+   "key_idea": "A circle touching the parabola at $P$ is $S+\\lambda T=0$ with $T$ the tangent at $P$; touching the $x$-axis means $g^2=c$.",
+   "solution": [
+    "Tangent to $y^2=9x$ at $P(4,6)$: $y\\cdot6=9\\cdot\\frac{x+4}{2}$, i.e. $12y=9x+36$, so $T:\\,4y-3x-12=0$.",
+    "A circle touching the parabola at $P$ is the point-circle plus a multiple of the tangent: $(x-4)^2+(y-6)^2+\\lambda(4y-3x-12)=0$.",
+    "Expanding: $x^2+y^2-x(8+3\\lambda)-y(12-4\\lambda)+52-12\\lambda=0$ (1).",
+    "It touches the $x$-axis, so $g^2=c$: $\\left(\\frac{8+3\\lambda}{2}\\right)^2=52-12\\lambda$.",
+    "$64+9\\lambda^2+48\\lambda=208-48\\lambda\\Rightarrow 9\\lambda^2+96\\lambda-144=0\\Rightarrow 3\\lambda^2+32\\lambda-48=0$.",
+    "$3\\lambda^2+36\\lambda-4\\lambda-48=0\\Rightarrow3\\lambda(\\lambda+12)-4(\\lambda+12)=0\\Rightarrow\\lambda=-12$ or $\\frac43$.",
+    "For $\\lambda=\\frac43$ the centre abscissa $\\frac{8+3\\lambda}{2}=6>0$, so the touching point has $a>0$: rejected (given $a<0$). For $\\lambda=-12$ it is $-14$, so $a=-14<0$ ✓.",
+    "Equation (1): $x^2+y^2+28x-60y+196=0$.",
+    "$r=\\sqrt{14^2+30^2-196}=\\sqrt{900}=30$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Typographical slips in the PDF's working: $x^3$ written for $x^2$, $-124$ for $-12y$, the constant line ends '= 8' instead of '= 0', and $g^2=6$ for $g^2=c$. Method, $\\lambda=-12$, the circle $x^2+y^2+28x-60y+196=0$ and $r=30$ are all correct; the slips are fixed here.",
+   "alternate_solutions": [
+    {
+     "idea": "The centre lies on the normal at $P$ and its height equals the radius, because the circle touches the $x$-axis.",
+     "solution": [
+      "The tangent at $P$ has slope $\\frac43$, so the normal has direction $(-3,4)$: centre $=(4-3s,\\,6+4s)$ and $r=5|s|$ (distance from $P$).",
+      "Touching the $x$-axis: $r=|\\text{ordinate of centre}|$, so $|6+4s|=5|s|$.",
+      "$6+4s=5s\\Rightarrow s=6$: centre $(-14,30)$, $r=30$, touching point $(-14,0)$ with $a<0$ ✓.",
+      "$6+4s=-5s\\Rightarrow s=-\\frac23$: centre $\\left(6,\\frac{10}{3}\\right)$, touching point $(6,0)$ with $a>0$: rejected.",
+      "Hence $r=30$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A circle touching a curve $S=0$ at $P$ can be written $(\\text{point-circle at }P)+\\lambda\\,(\\text{tangent at }P)=0$; the centre then lies on the normal at $P$.",
+    "A circle touches the $x$-axis iff $g^2=c$ (for $x^2+y^2+2gx+2fy+c=0$); it touches the $y$-axis iff $f^2=c$.",
+    "Tangent to $y^2=4Ax$ at $(x_1,y_1)$ is $yy_1=2A(x+x_1)$; for $y^2=9x$, $4A=9$ gives $6y=\\frac92(x+4)$.",
+    "The two roots of the quadratic in $\\lambda$ correspond to two circles (one on each side of the tangent); the given condition ($a<0$) selects one."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 2,
+   "q_ref": "Q82",
+   "concepts": [
+    "Focus of a parabola",
+    "Circle through the intersection point of two lines"
+   ],
+   "level": 2,
+   "question": "The focus of the parabola $y^2=4x+16$ is the centre of the circle $C$ of radius $5$. If the values of $\\lambda$, for which $C$ passes through the point of intersection of the lines $3x-y=0$ and $x+\\lambda y=4$, are $\\lambda_1$ and $\\lambda_2$, $\\lambda_1<\\lambda_2$, then $12\\lambda_1+29\\lambda_2$ is equal to ______.",
+   "answer": "15",
+   "key_idea": "Shift the origin: $y^2=4(x+4)$ has focus $(-3,0)$, so $C:(x+3)^2+y^2=25$; the intersection point has coordinates depending on $\\lambda$.",
+   "solution": [
+    "$y^2=4(x+4)$ is $Y^2=4X$ with $X=x+4$: vertex $(-4,0)$, $a=1$, so the focus is $(-3,0)$.",
+    "Circle $C$: $(x+3)^2+y^2=25$.",
+    "The point of intersection of $3x-y=0$ and $x+\\lambda y=4$: $y=3x$, $x(1+3\\lambda)=4$, so $\\left(\\frac{4}{3\\lambda+1},\\frac{12}{3\\lambda+1}\\right)$.",
+    "It lies on $C$: $\\left(\\frac{4}{3\\lambda+1}+3\\right)^2+\\frac{144}{(3\\lambda+1)^2}=25$.",
+    "With $u=3\\lambda+1$: $(4+3u)^2+144=25u^2\\Rightarrow16u^2-24u-160=0\\Rightarrow2u^2-3u-20=0\\Rightarrow(2u+5)(u-4)=0$.",
+    "$u=4\\Rightarrow\\lambda=1$; $u=-\\frac52\\Rightarrow\\lambda=-\\frac76$. So $\\lambda_1=-\\frac76$, $\\lambda_2=1$.",
+    "$12\\lambda_1+29\\lambda_2=-14+29=15$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the points where the fixed line $3x-y=0$ meets $C$, then read $\\lambda$ from the line $x+\\lambda y=4$ through each.",
+     "solution": [
+      "The point lies on $y=3x$ and on $C$: $(x+3)^2+9x^2=25\\Rightarrow10x^2+6x-16=0\\Rightarrow5x^2+3x-8=0$.",
+      "$x=1$ or $x=-\\frac85$, giving the points $(1,3)$ and $\\left(-\\frac85,-\\frac{24}{5}\\right)$.",
+      "$x+\\lambda y=4\\Rightarrow\\lambda=\\frac{4-x}{y}$: $(1,3)\\to\\lambda=\\frac33=1$.",
+      "$\\left(-\\frac85,-\\frac{24}{5}\\right)\\to\\lambda=\\frac{4+\\frac85}{-\\frac{24}{5}}=\\frac{28}{-24}=-\\frac76$.",
+      "$\\lambda_1=-\\frac76,\\ \\lambda_2=1$: $12\\lambda_1+29\\lambda_2=-14+29=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Complete the square to read a shifted parabola: $y^2=4(x-h)\\cdot a'$ with vertex $(h,0)$ and focus $(h+a',0)$; here $y^2=4(x+4)$ has focus $(-3,0)$.",
+    "The line $x+\\lambda y=4$ passes through the fixed point $(4,0)$ for every $\\lambda$; $\\lambda$ is just the (inverse) slope parameter of the line from $(4,0)$ to the point.",
+    "When a family of lines is asked about, first intersect the fixed line with the curve (finite points), then recover the parameter: avoids a $\\lambda$-quadratic."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 3,
+   "q_ref": "Q83",
+   "concepts": [
+    "Focal chord of a parabola",
+    "Diameter form of a circle"
+   ],
+   "level": 3,
+   "question": "Let $y^2=12x$ be the parabola and $S$ its focus. Let $PQ$ be a focal chord of the parabola such that $(SP)(SQ)=\\frac{147}{4}$. Let $C$ be the circle described taking $PQ$ as a diameter. If the equation of $C$ is $64x^2+64y^2-\\alpha x-64\\sqrt3y=\\beta$, then $\\beta-\\alpha$ is equal to ______.",
+   "answer": "1328",
+   "key_idea": "For a focal chord $t_1t_2=-1$; the focal distances are $a(1+t^2)$ and $a\\left(1+\\frac1{t^2}\\right)$, and the sign of the $y$-term picks the right chord.",
+   "solution": [
+    "$y^2=12x\\Rightarrow a=3$, $S(3,0)$, directrix $x=-3$. Let $P(3t^2,6t)$; for a focal chord $t_1t_2=-1$, so $Q\\left(\\frac{3}{t^2},-\\frac6t\\right)$.",
+    "$SP\\cdot SQ=PM_1\\cdot QM_2$ (distances from the directrix) $=(3+3t^2)\\left(3+\\frac3{t^2}\\right)=\\frac{147}{4}$.",
+    "$\\frac{(1+t^2)^2}{t^2}=\\frac{49}{12}\\Rightarrow12t^4-25t^2+12=0\\Rightarrow t^2=\\frac34$ or $\\frac43$.",
+    "$t=\\pm\\frac{\\sqrt3}{2},\\ \\pm\\frac{2}{\\sqrt3}$. The $-64\\sqrt3y$ term needs the centre ordinate positive, so take $t=-\\frac{\\sqrt3}{2}$.",
+    "Then $P\\left(\\frac94,-3\\sqrt3\\right)$ and $Q\\left(4,4\\sqrt3\\right)$.",
+    "Circle on $PQ$ as diameter: $\\left(x-4\\right)\\left(x-\\frac94\\right)+\\left(y+3\\sqrt3\\right)\\left(y-4\\sqrt3\\right)=0$.",
+    "$x^2+y^2-\\frac{25}{4}x-\\sqrt3y-27=0$.",
+    "Multiply by 64: $64x^2+64y^2-400x-64\\sqrt3y=1728$, so $\\alpha=400$, $\\beta=1728$ and $\\beta-\\alpha=1328$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\frac1{SP}+\\frac1{SQ}=\\frac1a$ and $SP=x_P+a$ to read off the coordinates of $P,Q$ without any parameter.",
+     "solution": [
+      "For a focal chord of $y^2=4ax$: $\\frac1{SP}+\\frac1{SQ}=\\frac1a=\\frac13$, so $SP+SQ=\\frac{SP\\cdot SQ}{3}=\\frac{147}{12}=\\frac{49}{4}$.",
+      "$SP,SQ$ are the roots of $z^2-\\frac{49}{4}z+\\frac{147}{4}=0\\Rightarrow4z^2-49z+147=0\\Rightarrow z=7,\\ \\frac{21}{4}$.",
+      "Focal distance $=x+a=x+3$, so the abscissae are $x=4$ and $x=\\frac94$; $y^2=12x$ gives $|y|=4\\sqrt3$ and $3\\sqrt3$.",
+      "For a focal chord $y_1y_2=-4a^2=-36$: the ordinates have opposite signs. The $-64\\sqrt3y$ term makes the sum of ordinates positive ($=\\sqrt3$), so $P\\left(\\frac94,-3\\sqrt3\\right)$, $Q\\left(4,4\\sqrt3\\right)$.",
+      "Circle on $PQ$ as diameter: $x^2+y^2-\\frac{25}{4}x-\\sqrt3y-27=0$; multiplying by 64 gives $\\alpha=400$, $\\beta=1728$, $\\beta-\\alpha=1328$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=4ax$: a focal distance is $SP=x_P+a$, and for a focal chord $\\frac1{SP}+\\frac1{SQ}=\\frac1a$, $y_1y_2=-4a^2$, $t_1t_2=-1$, $x_1x_2=a^2$.",
+    "Focal chord length $PQ=SP+SQ=x_1+x_2+2a$; here $\\frac{49}{4}$ (check: $\\frac94+4+6=\\frac{49}{4}$ ✓).",
+    "Circle on $(x_1,y_1),(x_2,y_2)$ as diameter: $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$.",
+    "Each root of $12t^4-25t^2+12=0$ comes with its reciprocal: $t$ and $1/t$ give the same chord up to reflection, which is why the sign of the given $y$-term matters."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 4,
+   "q_ref": "Q84",
+   "concepts": [
+    "Focal chord of a parabola",
+    "Distance of a line from a point"
+   ],
+   "level": 2,
+   "question": "Let the length of the focal chord $PQ$ of the parabola $y^2=12x$ be $15$ units. If the distance of $PQ$ from the origin is $p$, then $10p^2$ is equal to ______.",
+   "answer": "72",
+   "key_idea": "Focal chord of length $15$ has $\\left(t+\\frac1t\\right)^4=25$, so its slope is $\\pm2$ and its distance from the origin follows.",
+   "solution": [
+    "$y^2=12x$, focus $(3,0)$. Take ends $A(3t^2,6t)$ and $B\\left(\\frac3{t^2},-\\frac6t\\right)$.",
+    "$AB^2=9\\left(t^2-\\frac1{t^2}\\right)^2+36\\left(t+\\frac1t\\right)^2=225$.",
+    "Divide by 9: $\\left(t+\\frac1t\\right)^2\\left[\\left(t-\\frac1t\\right)^2+4\\right]=25$.",
+    "But $\\left(t-\\frac1t\\right)^2+4=\\left(t+\\frac1t\\right)^2$, so $\\left(t+\\frac1t\\right)^4=25$.",
+    "$t+\\frac1t=\\pm\\sqrt5\\Rightarrow\\left(t-\\frac1t\\right)^2=5-4=1$, i.e. $t-\\frac1t=\\pm1$.",
+    "Slope of $AB$: $m=\\frac{2t}{t^2-1}=\\frac{2}{t-\\frac1t}=\\pm2$, so $m^2=4$.",
+    "Line $AB$: $y-6t=m(x-3t^2)$; its distance from the origin is $p=\\frac{|3mt^2-6t|}{\\sqrt{1+m^2}}=\\frac{\\left|\\frac{6t}{t^2-1}\\right|}{\\sqrt5}=\\frac{6}{\\sqrt5}$.",
+    "$10p^2=\\frac{10\\times36}{5}=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the polar form of a focal chord: length $=\\frac{4a}{\\sin^2\\theta}$ and distance from the vertex is $a\\sin\\theta$.",
+     "solution": [
+      "For $y^2=4ax$ a focal chord inclined at $\\theta$ to the axis has length $\\frac{4a}{\\sin^2\\theta}$. Here $4a=12$: $\\frac{12}{\\sin^2\\theta}=15\\Rightarrow\\sin^2\\theta=\\frac45$.",
+      "The chord passes through the focus $(a,0)=(3,0)$ at angle $\\theta$, so its distance from the origin is $p=3\\sin\\theta$.",
+      "$p^2=9\\sin^2\\theta=9\\cdot\\frac45=\\frac{36}{5}$.",
+      "$10p^2=72$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Focal chord of $y^2=4ax$ at inclination $\\theta$: length $=\\frac{4a}{\\sin^2\\theta}$ (the latus rectum is $\\theta=90^\\circ$).",
+    "Its distance from the vertex (origin) is $a\\sin\\theta$ because it passes through $(a,0)$.",
+    "Hence length $\\times$ (distance)$^2=4a\\cdot a^2=4a^3$, independent of $\\theta$ — the constant in the next question."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 5,
+   "q_ref": "Q85",
+   "concepts": [
+    "Focal chord of a parabola",
+    "Distance of a line from a point"
+   ],
+   "level": 2,
+   "question": "Suppose $AB$ is a focal chord of the parabola $y^2=12x$ of length $l$ and slope $m<\\sqrt3$. If the distance of the chord $AB$ from the origin is $d$, then $ld^2$ is equal to ______.",
+   "answer": "108",
+   "key_idea": "With the end-point parameter $t$, $l=3\\left(t+\\frac1t\\right)^2$ and $d^2=\\frac{36}{\\left(t+\\frac1t\\right)^2}$, so the product is constant.",
+   "solution": [
+    "$A(3t^2,6t)$ and $B\\left(\\frac3{t^2},-\\frac6t\\right)$ are the ends of a focal chord (focus $(3,0)$).",
+    "Slope $=\\frac{2}{t-\\frac1t}$; equation of $AB$: $y-6t=\\frac{2t}{t^2-1}(x-3t^2)$, which simplifies to $2x-\\left(t-\\frac1t\\right)y-6=0$.",
+    "Length: $l=\\sqrt{36\\left(t+\\frac1t\\right)^2+9\\left(t^2-\\frac1{t^2}\\right)^2}=3\\left(t+\\frac1t\\right)\\sqrt{4+\\left(t-\\frac1t\\right)^2}$.",
+    "Since $4+\\left(t-\\frac1t\\right)^2=\\left(t+\\frac1t\\right)^2$, $l=3\\left(t+\\frac1t\\right)^2$.",
+    "Distance from the origin: $d=\\frac{6}{\\sqrt{4+\\left(t-\\frac1t\\right)^2}}=\\frac{6}{\\left|t+\\frac1t\\right|}$.",
+    "$ld^2=3\\left(t+\\frac1t\\right)^2\\times\\frac{36}{\\left(t+\\frac1t\\right)^2}=108$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Any focal chord has length $\\frac{4a}{\\sin^2\\theta}$ and distance $a\\sin\\theta$ from the vertex, so $ld^2=4a^3$ is constant.",
+     "solution": [
+      "Let the chord make angle $\\theta$ with the axis; it passes through the focus $(3,0)$.",
+      "Focal chord length: $l=\\frac{4a}{\\sin^2\\theta}=\\frac{12}{\\sin^2\\theta}$.",
+      "Distance from the origin: $d=3\\sin\\theta$, so $d^2=9\\sin^2\\theta$.",
+      "$ld^2=\\frac{12}{\\sin^2\\theta}\\cdot9\\sin^2\\theta=108$, whatever the slope (the condition $m<\\sqrt3$ is not needed)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For every focal chord of $y^2=4ax$: $l\\,d^2=4a^3$, where $d$ is its distance from the vertex.",
+    "Equivalent form: $l=\\frac{4a^3}{d^2}$; the shortest focal chord is the latus rectum ($d=a$, $l=4a$).",
+    "The same relation holds for the previous question: $10p^2=10\\cdot\\frac{4a^3}{l}=\\frac{10\\cdot108}{15}=72$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 6,
+   "q_ref": "Q86",
+   "concepts": [
+    "Tangent to a parabola in slope form",
+    "Distance between two points"
+   ],
+   "level": 1,
+   "question": "Let a line perpendicular to the line $2x-y=10$ touch the parabola $y^2=4(x-9)$ at the point $P$. The distance of the point $P$ from the centre of the circle $x^2+y^2-14x-8y+56=0$ is ______.",
+   "answer": "10",
+   "key_idea": "Tangent of slope $m$ to $y^2=4a(x-h)$ is $y=m(x-h)+\\frac am$; the double root of the tangent with the curve gives $P$.",
+   "solution": [
+    "A line perpendicular to $2x-y=10$ (slope $2$) has slope $m=-\\frac12$.",
+    "Tangent to $y^2=4(x-9)$ ($a=1$) with slope $m$: $y=m(x-9)+\\frac1m$, so $y=-\\frac{x-9}{2}-2$.",
+    "$2y=-x+9-4\\Rightarrow x+2y=5$.",
+    "Substitute $y=\\frac{5-x}{2}$ in the parabola: $\\left(\\frac{5-x}{2}\\right)^2=4(x-9)\\Rightarrow x^2-10x+25=16x-144$.",
+    "$x^2-26x+169=0\\Rightarrow(x-13)^2=0$, so $x=13$, $y=-4$ and $P(13,-4)$.",
+    "The circle $x^2+y^2-14x-8y+56=0$ has centre $(7,4)$.",
+    "Distance $=\\sqrt{(13-7)^2+(-4-4)^2}=\\sqrt{36+64}=10$ units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Point of contact of the tangent of slope $m$ to $y^2=4a(x-h)$ is directly $\\left(h+\\frac a{m^2},\\frac{2a}{m}\\right)$.",
+     "solution": [
+      "Slope of the tangent $m=-\\frac12$; parabola $y^2=4(x-9)$ has $a=1$, vertex $(9,0)$.",
+      "Parametrise $P=(9+t^2,2t)$; the tangent slope there is $\\frac1t$, so $\\frac1t=-\\frac12\\Rightarrow t=-2$.",
+      "$P=(9+4,-4)=(13,-4)$, with no need to solve for the double root.",
+      "Centre of the circle $(7,4)$: $PC=\\sqrt{6^2+8^2}=10$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Point of contact for slope $m$ on $y^2=4ax$: $\\left(\\frac a{m^2},\\frac{2a}m\\right)$; shifted parabola $y^2=4a(x-h)$: add $h$ to the abscissa.",
+    "A tangent meets the curve at one (double) point, so substituting its equation gives a perfect square: a built-in check.",
+    "Centre of $x^2+y^2+2gx+2fy+c=0$ is $(-g,-f)$; here $(7,4)$ and the radius is $\\sqrt{49+16-56}=3$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 7,
+   "q_ref": "Q87",
+   "concepts": [
+    "Tangents from a point to a parabola",
+    "Angle bisectors of two lines"
+   ],
+   "level": 3,
+   "question": "Let $L_1,L_2$ be the lines passing through the point $P(0,1)$ and touching the parabola $9x^2+12x+18y-14=0$. Let $Q$ and $R$ be the points on the lines $L_1$ and $L_2$ such that $\\triangle PQR$ is an isosceles triangle with base $QR$. If the slopes of the lines $QR$ are $m_1$ and $m_2$, then $16\\left(m_1^2+m_2^2\\right)$ is equal to ______.",
+   "answer": "68",
+   "key_idea": "In an isosceles triangle with apex $P$ the base $QR$ is perpendicular to the bisector of angle $P$, so $QR$ is parallel to an angle bisector of the two tangents (the two bisectors are perpendicular).",
+   "solution": [
+    "$(3x+2)^2=-18y+14+4\\Rightarrow\\left(x+\\frac23\\right)^2=-2(y-1)$.",
+    "Let a tangent from $P$ be $y=mx+1$. Then $\\left(x+\\frac23\\right)^2=-2(mx+1-1)=-2mx$.",
+    "$x^2+\\left(\\frac43+2m\\right)x+\\frac49=0$. Tangent: $D=0\\Rightarrow\\left(\\frac43+2m\\right)^2-\\frac{16}{9}=0$, so $\\frac43+2m=\\pm\\frac43$.",
+    "$m=0$ or $m=-\\frac43$: tangents $L_1:y=1$ and $L_2:y=-\\frac{4x}{3}+1$, i.e. $4x+3y-3=0$.",
+    "Since $PQ=PR$, $QR$ is perpendicular to the bisector of $\\angle QPR$, hence parallel to the other (perpendicular) bisector; so $QR$ has the slopes of the angle bisectors of $L_1,L_2$.",
+    "Bisectors: $\\frac{4x+3y-3}{5}=\\pm(y-1)$.",
+    "'+': $4x-2y+2=0$, slope $m_1=2$. '−': $4x+8y-8=0$, slope $m_2=-\\frac12$.",
+    "$16\\left(m_1^2+m_2^2\\right)=16\\left(4+\\frac14\\right)=68$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The bisector slope $m$ satisfies $\\tan2\\phi=$ slope of $L_2$ when $L_1$ is the $x$-direction: solve $\\frac{2m}{1-m^2}=-\\frac43$ and use Vieta.",
+     "solution": [
+      "$L_1$ is horizontal (slope $0$) and $L_2$ has slope $-\\frac43$; a bisector of the pair at angle $\\phi$ with $\\tan\\phi=m$ satisfies $\\tan2\\phi=-\\frac43$.",
+      "$\\frac{2m}{1-m^2}=-\\frac43\\Rightarrow6m=-4+4m^2\\Rightarrow2m^2-3m-2=0$.",
+      "The two roots $m_1,m_2$ are the slopes of the two bisectors: $m_1+m_2=\\frac32$, $m_1m_2=-1$ (they are perpendicular).",
+      "$m_1^2+m_2^2=\\frac94+2=\\frac{17}4$, so $16\\left(m_1^2+m_2^2\\right)=68$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For two lines meeting at $P$, the two angle bisectors are perpendicular; the base of an isosceles triangle with apex $P$ and equal sides along the lines is parallel to one bisector and perpendicular to the other.",
+    "Bisectors of $a_1x+b_1y+c_1=0$, $a_2x+b_2y+c_2=0$: $\\frac{a_1x+b_1y+c_1}{\\sqrt{a_1^2+b_1^2}}=\\pm\\frac{a_2x+b_2y+c_2}{\\sqrt{a_2^2+b_2^2}}$.",
+    "Tangents from an external point to a parabola with vertical axis: substitute $y=mx+c$ and put $D=0$; here one of the two tangents is the vertex tangent $y=1$ because $P$ lies on it.",
+    "If one line is horizontal and the other has slope $s$, the bisector slope $m$ satisfies $\\frac{2m}{1-m^2}=s$ (double-angle formula)."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 8,
+   "q_ref": "Q88",
+   "concepts": [
+    "Chord of a circle with given midpoint",
+    "Parabola and circle: points of intersection and locus"
+   ],
+   "level": 3,
+   "question": "Consider the circle $C:x^2+y^2=4$ and the parabola $P:y^2=8x$. If the set of all values of $\\alpha$, for which three chords of the circle $C$ on three distinct lines passing through the point $(\\alpha,0)$ are bisected by the parabola $P$, is the interval $(p,q)$, then $(2q-p)^2$ is equal to ______.",
+   "answer": "80",
+   "key_idea": "A chord bisected at $(x_1,y_1)$ has equation $T=S_1$; passing through $(\\alpha,0)$ gives $\\alpha x_1=x_1^2+y_1^2$, and the midpoint must lie inside the circle.",
+   "solution": [
+    "Let a chord of $C$ be bisected at $(x_1,y_1)=(2t^2,4t)$ on the parabola. Its equation is $T=S_1$: $xx_1+yy_1=x_1^2+y_1^2$.",
+    "It passes through $(\\alpha,0)$: $\\alpha x_1=x_1^2+y_1^2$, i.e. $\\alpha(2t^2)=4t^4+16t^2$.",
+    "Either $t=0$ (midpoint at the origin: the chord is the $x$-axis), or $\\alpha=2t^2+8$, i.e. $t^2=\\frac{\\alpha-8}{2}$.",
+    "Each $t^2>0$ gives two values $\\pm t$, so with the $x$-axis there are three chords when $\\alpha>8$.",
+    "The midpoint must lie inside the circle: $x_1^2+y_1^2<4\\Rightarrow4t^4+16t^2-4<0\\Rightarrow t^4+4t^2-1<0$.",
+    "$t^2<-2+\\sqrt5$, so $\\alpha=2t^2+8<4+2\\sqrt5$.",
+    "$\\alpha\\in\\left(8,\\,4+2\\sqrt5\\right)$: $p=8$, $q=4+2\\sqrt5$.",
+    "$(2q-p)^2=\\left(8+4\\sqrt5-8\\right)^2=80$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The midpoint $M$ of a chord through $A(\\alpha,0)$ satisfies $OM\\perp MA$, so $M$ lies on the circle with diameter $OA$.",
+     "solution": [
+      "If $M(x,y)$ is the midpoint of a chord of $x^2+y^2=4$ through $A(\\alpha,0)$, then $OM\\perp AM$: $M$ lies on $x^2+y^2=\\alpha x$.",
+      "$M$ also lies on the parabola $y^2=8x$: $x^2+8x=\\alpha x\\Rightarrow x=0$ or $x=\\alpha-8$.",
+      "$x=0$ gives the $x$-axis chord. $x=\\alpha-8>0$ gives two midpoints $(\\alpha-8,\\pm\\sqrt{8(\\alpha-8)})$, so three chords need $\\alpha>8$.",
+      "$M$ inside the circle: $x^2+y^2=\\alpha x<4$ with $x=\\alpha-8$: $(\\alpha-8)^2+8(\\alpha-8)<4\\Rightarrow(\\alpha-8)^2+8(\\alpha-8)-4<0$.",
+      "$\\alpha-8<-4+2\\sqrt5$, so $\\alpha<4+2\\sqrt5$, interval $(8,4+2\\sqrt5)$ and $(2q-p)^2=80$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Midpoints of chords through a fixed point $A$ of a circle (centre $O$) lie on the circle with diameter $OA$ (Thales: $OM\\perp AM$).",
+    "Chord of a conic bisected at $(x_1,y_1)$: $T=S_1$. For $x^2+y^2=r^2$: $xx_1+yy_1=x_1^2+y_1^2$.",
+    "A point is the midpoint of a real chord iff it lies inside the circle ($S_1<0$).",
+    "Counting pairs: parameters $\\pm t$ give mirror chords, so a positive $t^2$ gives two chords and $t=0$ the symmetric chord."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 9,
+   "q_ref": "Q89",
+   "concepts": [
+    "Chord of a parabola in parametric form",
+    "Distance between a point and a line (feet of perpendiculars)"
+   ],
+   "level": 3,
+   "question": "Let $A$, $B$ and $C$ be three points on the parabola $y^2=6x$ and let the line segment $AB$ meet the line $L$ through $C$ parallel to the $x$-axis at the point $D$. Let $M$ and $N$ respectively be the feet of the perpendiculars from $A$ and $B$ on $L$. Then $\\left(\\frac{AM\\cdot BN}{CD}\\right)^2$ is equal to ______.",
+   "answer": "36",
+   "key_idea": "With parameters $t_1,t_2,t_3$ for $A,B,C$: $AM=2a|t_3-t_1|$, $BN=2a|t_3-t_2|$ and $CD=a|t_3-t_1||t_3-t_2|$, so the ratio is $4a$.",
+   "solution": [
+    "$y^2=6x$ has $4a=6$. Take $A(at_1^2,2at_1)$, $B(at_2^2,2at_2)$, $C(at_3^2,2at_3)$; $L$ is $y=2at_3$.",
+    "$AM=|2at_1-2at_3|=2a|t_3-t_1|$ and $BN=2a|t_3-t_2|$.",
+    "Chord $AB$: $y=\\frac{2}{t_1+t_2}x+\\frac{2at_1t_2}{t_1+t_2}$.",
+    "$D(\\alpha,2at_3)$ lies on $AB$: $2at_3=\\frac{2}{t_1+t_2}\\alpha+a\\cdot\\frac{2t_1t_2}{t_1+t_2}$, so $\\alpha=a\\left(t_3t_1+t_3t_2-t_1t_2\\right)$.",
+    "$CD=at_3^2-\\alpha=a\\left\\{t_3^2-t_3t_1-t_3t_2+t_1t_2\\right\\}$ in absolute value.",
+    "$=a\\{t_3(t_3-t_1)-t_2(t_3-t_1)\\}=a(t_3-t_1)(t_3-t_2)$.",
+    "$\\frac{AM\\cdot BN}{CD}=\\frac{4a^2(t_3-t_1)(t_3-t_2)}{a(t_3-t_1)(t_3-t_2)}=4a=6$, so the square is $36$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The ratio does not depend on where $C$ is, so place $C$ at the vertex and compute directly.",
+     "solution": [
+      "The value asked is a single number, so it is independent of $C$ (as the parametric proof shows); take $C=(0,0)$: $L$ is the $x$-axis and $D$ is where $AB$ cuts the $x$-axis.",
+      "With $A(at_1^2,2at_1)$, $B(at_2^2,2at_2)$ the chord $AB$ meets $y=0$ at $x=-at_1t_2$ (from $2x=(t_1+t_2)y-2at_1t_2$), so $CD=a|t_1t_2|$.",
+      "$AM=|y_A|=2a|t_1|$, $BN=|y_B|=2a|t_2|$.",
+      "$\\frac{AM\\cdot BN}{CD}=\\frac{4a^2|t_1t_2|}{a|t_1t_2|}=4a=6$, and the answer is $36$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord through parameters $t_1,t_2$ of $y^2=4ax$: $(t_1+t_2)y=2x+2at_1t_2$; it meets the axis at $x=-at_1t_2$.",
+    "For a parabola, the product of the distances of the ends of a chord from a line parallel to the axis, divided by the distance cut from the point $C$, is the constant $4a$: this is the parabola's analogue of the intersecting-chords (power of a point) theorem.",
+    "When a quantity is claimed to be constant, a convenient special position (vertex, axis) gives the answer at once, but check the general proof once."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 10,
+   "q_ref": "Q90",
+   "concepts": [
+    "Chord of a parabola with given midpoint",
+    "Intersection of a line and a parabola"
+   ],
+   "level": 2,
+   "question": "Let $P(\\alpha,\\beta)$ be a point on the parabola $y^2=4x$. If $P$ also lies on the chord of the parabola $x^2=8y$ whose mid point is $\\left(1,\\frac54\\right)$, then $(\\alpha-28)(\\beta-8)$ is equal to ______.",
+   "answer": "192",
+   "key_idea": "The chord with midpoint $(x_1,y_1)$ is $T=S_1$; it intersected with $y^2=4x$ gives a quadratic in $\\beta$.",
+   "solution": [
+    "Parabola $x^2=8y$: the chord with midpoint $(x_1,y_1)$ is $T=S_1$: $xx_1-4(y+y_1)=x_1^2-8y_1$.",
+    "With $(x_1,y_1)=\\left(1,\\frac54\\right)$: $x-4\\left(y+\\frac54\\right)=1-10=-9$.",
+    "So the chord is $x-4y+4=0$ (i).",
+    "$P(\\alpha,\\beta)$ lies on (i): $\\alpha-4\\beta+4=0$ (ii), and on $y^2=4x$: $\\beta^2=4\\alpha$ (iii).",
+    "From (ii),(iii): $\\beta^2=4(4\\beta-4)\\Rightarrow\\beta^2-16\\beta+16=0$.",
+    "$\\beta=8\\pm4\\sqrt3$ and $\\alpha=4\\beta-4=28\\pm16\\sqrt3$.",
+    "The chord of $x^2=8y$ itself is the segment $-2\\le x\\le4$ (roots of $x^2-2x-8=0$); the point $\\left(28-16\\sqrt3,\\,8-4\\sqrt3\\right)\\approx(0.29,1.07)$ lies on it, the other root lies on the line only. Both give the same product.",
+    "$(\\alpha-28)(\\beta-8)=\\left(\\pm16\\sqrt3\\right)\\left(\\pm4\\sqrt3\\right)=192$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "From $\\alpha=4\\beta-4$ we get $\\alpha-28=4(\\beta-8)$, so the product is $4(\\beta-8)^2$, which the quadratic gives without solving it.",
+     "solution": [
+      "Chord of $x^2=8y$ through $\\left(1,\\frac54\\right)$ as midpoint: points $(4p,2p^2),(4q,2q^2)$ with $2(p+q)=1$ and $p^2+q^2=\\frac54$, so slope $=\\frac{p+q}{2}=\\frac14$; line $x-4y+4=0$ as before.",
+      "$\\alpha=4\\beta-4\\Rightarrow\\alpha-28=4\\beta-32=4(\\beta-8)$.",
+      "So $(\\alpha-28)(\\beta-8)=4(\\beta-8)^2$.",
+      "From $\\beta^2=4\\alpha=16\\beta-16$: $\\beta^2-16\\beta+64=48$, i.e. $(\\beta-8)^2=48$.",
+      "$4\\times48=192$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord of the parabola $x^2=4Ay$ with midpoint $(x_1,y_1)$ has slope $\\frac{x_1}{2A}$: here $\\frac{1}{4}$ for $A=2$.",
+    "If the desired expression factors through a linear relation, complete the square on the other relation instead of solving: here $(\\beta-8)^2=48$.",
+    "A point on the line through a chord need not lie on the chord (segment); check whether the problem says 'on the chord' and whether the answer is the same for both roots."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 11,
+   "q_ref": "Q91",
+   "concepts": [
+    "Tangent to a circle (line at a given distance from a point)",
+    "Area of a triangle"
+   ],
+   "level": 2,
+   "question": "Let the line $L:\\sqrt2x+y=\\alpha$ pass through the point of intersection $P$ (in the first quadrant) of the circle $x^2+y^2=3$ and the parabola $x^2=2y$. Let the line $L$ touch two circles $C_1$ and $C_2$ of equal radius $2\\sqrt3$. If the centres $Q_1$ and $Q_2$ of the circles lie on the $y$-axis, then the square of the area of the triangle $PQ_1Q_2$ is equal to ______.",
+   "answer": "72",
+   "key_idea": "Centres $(0,\\beta)$ on the $y$-axis at distance $2\\sqrt3$ from $L$ give $\\beta=9,-3$; the base $Q_1Q_2$ lies on the $y$-axis and the height is the abscissa of $P$.",
+   "solution": [
+    "Solve $x^2+y^2=3$ with $x^2=2y$: $2y+y^2=3\\Rightarrow y=1$ or $-3$ (rejected, as $x^2=2y\\ge0$).",
+    "$P=(\\sqrt2,1)$ (first quadrant). $L$ passes through $P$: $\\alpha=\\sqrt2\\cdot\\sqrt2+1=3$.",
+    "Let a centre be $(0,\\beta)$ and its distance from $L:\\sqrt2x+y-3=0$ equal the radius: $\\frac{|\\beta-3|}{\\sqrt{2+1}}=2\\sqrt3$.",
+    "$|\\beta-3|=6\\Rightarrow\\beta=9$ or $\\beta=-3$: $Q_1(0,9)$, $Q_2(0,-3)$.",
+    "Area of $\\triangle PQ_1Q_2=\\frac12\\times Q_1Q_2\\times(\\text{distance of }P\\text{ from the }y\\text{-axis})=\\frac12\\times12\\times\\sqrt2=6\\sqrt2$.",
+    "Required square $=\\left(6\\sqrt2\\right)^2=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$L$ meets the $y$-axis at $T(0,3)$; each centre is at distance $r/\\sin\\varphi$ from $T$ along the $y$-axis, where $\\varphi$ is the angle between $L$ and the axis.",
+     "solution": [
+      "$L:\\sqrt2x+y=3$ meets the $y$-axis at $T(0,3)$; its direction is $(1,-\\sqrt2)/\\sqrt3$, so the angle $\\varphi$ with the $y$-axis has $\\sin\\varphi=\\frac1{\\sqrt3}$.",
+      "A centre $Q$ on the $y$-axis at distance $TQ$ from $T$ is at distance $TQ\\sin\\varphi$ from $L$; set it equal to $2\\sqrt3$: $TQ=2\\sqrt3\\cdot\\sqrt3=6$.",
+      "So $Q_1(0,9)$, $Q_2(0,-3)$ and $Q_1Q_2=12$ (the circles are on opposite sides of $T$).",
+      "$P=(\\sqrt2,1)$ gives height $\\sqrt2$, area $=\\frac12\\cdot12\\cdot\\sqrt2=6\\sqrt2$, and its square is $72$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distance of $(x_0,y_0)$ from $ax+by+c=0$ is $\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$; for a centre on the $y$-axis it is $\\frac{|\\beta\\,b+c|}{\\sqrt{a^2+b^2}}$.",
+    "For circles of equal radius $r$ touching a line from both sides, their centres are symmetric about any point of the line on the centre line: here $T(0,3)$, giving $\\pm6$ about $T$.",
+    "When the base of a triangle lies on a coordinate axis, the height is just the other coordinate of the opposite vertex."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 12,
+   "q_ref": "Q92",
+   "concepts": [
+    "Focal distances of an ellipse",
+    "Maximum and minimum of a function on an ellipse"
+   ],
+   "level": 2,
+   "question": "If $S$ and $S'$ are the foci of the ellipse $\\frac{x^2}{18}+\\frac{y^2}{9}=1$ and $P$ is a point on the ellipse, then $\\min(SP\\cdot S'P)+\\max(SP\\cdot S'P)$ is equal to :",
+   "answer": "(D) $27$",
+   "key_idea": "With $e=\\frac1{\\sqrt2}$, $SP\\cdot S'P=(a-ex)(a+ex)=a^2-e^2x^2$ ranges over $[9,18]$.",
+   "solution": [
+    "$a^2=18$, $b^2=9$: $a=3\\sqrt2$, and $b^2=a^2(1-e^2)\\Rightarrow9=18(1-e^2)\\Rightarrow e=\\frac1{\\sqrt2}$.",
+    "Directrix: $x=\\frac ae=\\frac{3\\sqrt2}{1/\\sqrt2}=6$; $SP+S'P=2a=2\\cdot3\\sqrt2$.",
+    "Let $P=(3\\sqrt2\\cos\\theta,3\\sin\\theta)$. Its focal distances equal $e\\times$(distance from the directrices $x=\\pm6$).",
+    "$SP\\cdot S'P=\\left|\\frac1{\\sqrt2}\\left(3\\sqrt2\\cos\\theta-6\\right)\\cdot\\frac1{\\sqrt2}\\left(3\\sqrt2\\cos\\theta+6\\right)\\right|$.",
+    "$=\\frac12\\left|18\\cos^2\\theta-36\\right|=18-9\\cos^2\\theta$.",
+    "Maximum $=18$ (at $\\cos\\theta=0$), minimum $=9$ (at $\\cos^2\\theta=1$).",
+    "Sum $=18+9=27$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$SP+S'P=2a$ is constant, so the product is largest when the two distances are equal (AM-GM) and smallest at the extreme values $a\\mp c$.",
+     "solution": [
+      "$a=3\\sqrt2$, $c=\\sqrt{a^2-b^2}=3$; $SP+S'P=2a=6\\sqrt2$.",
+      "Let $s=SP$, so $S'P=6\\sqrt2-s$ with $s\\in[a-c,a+c]=[3\\sqrt2-3,\\,3\\sqrt2+3]$.",
+      "Product $=s(6\\sqrt2-s)=18-(s-3\\sqrt2)^2$, a downward parabola in $s$.",
+      "Maximum at $s=3\\sqrt2$: $18$ (the ends of the minor axis).",
+      "Minimum at an end $s=3\\sqrt2\\pm3$: $18-9=9$ (the ends of the major axis).",
+      "$\\min+\\max=9+18=27$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $SP=a-ex$, $S'P=a+ex$, so $SP\\cdot S'P=a^2-e^2x^2$ and $SP\\cdot S'P\\in[b^2,a^2]$ (here $[9,18]$).",
+    "Since $SP+S'P=2a$ is fixed, the product is largest when $SP=S'P$ (ends of the minor axis, value $a^2$) and smallest at the vertices (value $a^2-c^2=b^2$).",
+    "Also $SP\\cdot S'P=b^2+e^2\\left(a^2-x^2\\right)$ with $a^2-x^2\\in[0,a^2]$, which shows the same range $[b^2,a^2]$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 13,
+   "q_ref": "Q93",
+   "concepts": [
+    "Chord of an ellipse through a point (parametric line form)",
+    "Maximisation of a function of an angle"
+   ],
+   "level": 3,
+   "question": "A line passing through the point $P\\left(\\sqrt5,\\sqrt5\\right)$ intersects the ellipse $\\frac{x^2}{36}+\\frac{y^2}{25}=1$ at $A$ and $B$ such that $(PA)\\cdot(PB)$ is maximum. Then $5\\left(PA^2+PB^2\\right)$ is equal to :",
+   "answer": "(A) $338$",
+   "key_idea": "For a line at angle $\\theta$ through $P$, $PA\\cdot PB=\\left|\\frac{595}{25+11\\sin^2\\theta}\\right|$, maximal for the horizontal line $\\sin\\theta=0$.",
+   "solution": [
+    "Take $A\\left(\\sqrt5+r_1\\cos\\theta,\\ \\sqrt5+r_1\\sin\\theta\\right)$ and $B\\left(\\sqrt5+r_2\\cos\\theta,\\ \\sqrt5+r_2\\sin\\theta\\right)$ with $r_1,r_2$ the signed distances from $P$.",
+    "Substitute $(\\sqrt5+r\\cos\\theta,\\ \\sqrt5+r\\sin\\theta)$ in $25x^2+36y^2=900$: $25(\\sqrt5+r\\cos\\theta)^2+36(\\sqrt5+r\\sin\\theta)^2=900$.",
+    "$\\left(25\\cos^2\\theta+36\\sin^2\\theta\\right)r^2+2\\sqrt5\\left(25\\cos\\theta+36\\sin\\theta\\right)r+(125+180-900)=0$, i.e. constant term $-595$.",
+    "Product of roots: $r_1r_2=\\frac{-595}{25+11\\sin^2\\theta}$, so $PA\\cdot PB=\\frac{595}{25+11\\sin^2\\theta}$.",
+    "Maximum when $\\sin^2\\theta=0$: the line $AB$ is parallel to the $x$-axis, i.e. $y=\\sqrt5$.",
+    "Then $\\frac{x^2}{36}+\\frac15=1\\Rightarrow x^2=\\frac{144}{5}$, $x=\\pm\\frac{12}{\\sqrt5}$.",
+    "$PA=\\frac{12}{\\sqrt5}-\\sqrt5=\\frac7{\\sqrt5}$ and $PB=\\frac{12}{\\sqrt5}+\\sqrt5=\\frac{17}{\\sqrt5}$.",
+    "$PA^2+PB^2=\\frac{49+289}{5}=\\frac{338}{5}$, so $5\\left(PA^2+PB^2\\right)=338$: option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two slips in the PDF's quadratic in $r$: the middle coefficient is printed as $2\\sqrt5\\left(2\\sqrt5\\cos\\theta+36\\sin\\theta\\right)$ but should be $2\\sqrt5\\left(25\\cos\\theta+36\\sin\\theta\\right)$ (it does not affect the product of roots), and $PA\\cdot PB=r_1r_2$ is written without the sign: $r_1r_2=-\\frac{595}{25+11\\sin^2\\theta}$ (opposite sides of $P$), so $PA\\cdot PB$ is its absolute value. The constant term $125+180-900=-595$ is correct; the maximum and the answer 338 are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Stretch the ellipse into the unit circle ($x=6X$, $y=5Y$); $PA\\cdot PB$ becomes the circle's power of the point times a direction-dependent stretch factor.",
+     "solution": [
+      "Map $(x,y)\\to(X,Y)=\\left(\\frac x6,\\frac y5\\right)$: the ellipse becomes $X^2+Y^2=1$, $P\\to P'\\left(\\frac{\\sqrt5}{6},\\frac{\\sqrt5}{5}\\right)$, and ratios along a line are preserved.",
+      "A chord of the circle through $P'$ has $P'A'\\cdot P'B'=1-|OP'|^2=1-\\frac5{36}-\\frac15=\\frac{119}{180}$, for every direction.",
+      "A length $L$ along direction $(\\cos\\theta,\\sin\\theta)$ shrinks by the factor $k=\\sqrt{\\frac{\\cos^2\\theta}{36}+\\frac{\\sin^2\\theta}{25}}$, so $PA\\cdot PB=\\frac{119/180}{k^2}$.",
+      "$k^2$ is smallest when the line is along the longer axis ($\\sin\\theta=0$): $k^2=\\frac1{36}$, giving the maximum $PA\\cdot PB=\\frac{119}{180}\\cdot36=\\frac{119}{5}$ (equal to $\\frac{595}{25}$).",
+      "The line is $y=\\sqrt5$; its chord is $x=\\pm\\frac{12}{\\sqrt5}$, so $PA,PB=\\frac{7}{\\sqrt5},\\frac{17}{\\sqrt5}$ and $5(PA^2+PB^2)=338$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Power of a point for an ellipse: for a chord through an interior point $P(x_0,y_0)$ in direction $\\theta$, $PA\\cdot PB=\\frac{1-\\frac{x_0^2}{a^2}-\\frac{y_0^2}{b^2}}{\\frac{\\cos^2\\theta}{a^2}+\\frac{\\sin^2\\theta}{b^2}}$.",
+    "Hence $PA\\cdot PB$ is largest for the chord parallel to the major axis and smallest for the chord parallel to the minor axis (here $\\frac{595}{25}$ and $\\frac{595}{36}$).",
+    "Here $1-\\frac5{36}-\\frac15>0$ confirms $P$ is inside, so every line through $P$ cuts the ellipse in two points.",
+    "So a numerical test settles such problems quickly: compare the axis-parallel chords ($\\frac{595}{25}$ for the horizontal one, $\\frac{595}{36}$ for the vertical one)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 14,
+   "q_ref": "Q94",
+   "concepts": [
+    "Circle and ellipse: eccentricity and foci",
+    "Area of a triangle (maximisation)"
+   ],
+   "level": 2,
+   "question": "Let $C$ be the circle of minimum area enclosing the ellipse $E:\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with eccentricity $\\frac12$ and foci $(\\pm2,0)$. Let $PQR$ be a variable triangle, whose vertex $P$ is on the circle $C$ and the side $QR$ of length $2a$ is parallel to the major axis of $E$ and contains the point of intersection of $E$ with the negative $y$-axis. Then the maximum area of the triangle $PQR$ is :",
+   "answer": "(B) $8\\left(2+\\sqrt3\\right)$",
+   "key_idea": "The circle has radius $a$ and the base lies on $y=-b$, so the height is largest when $P$ is the top of the circle: $a+b$.",
+   "solution": [
+    "Foci $(\\pm2,0)$ give $ae=2$ and $e=\\frac12$, so $a=4$; $b^2=a^2(1-e^2)=12$, $b=2\\sqrt3$.",
+    "The minimum-area circle enclosing the ellipse is the circle $x^2+y^2=a^2=16$, radius $a=4$.",
+    "$QR=2a=8$ lies on the line $y=-b=-2\\sqrt3$ (it passes through $(0,-b)$ and is parallel to the major axis).",
+    "Take $P=(a\\cos\\theta,a\\sin\\theta)$: height above $QR$ is $a\\sin\\theta+b$.",
+    "Area $=\\frac12\\times2a\\times(a\\sin\\theta+b)=a(a\\sin\\theta+b)$.",
+    "Maximum at $\\sin\\theta=1$: $A_{\\max}=a(a+b)=4\\left(4+2\\sqrt3\\right)=8\\left(2+\\sqrt3\\right)$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [],
+   "useful_results": [
+    "Minimum circle enclosing an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ ($a>b$) is $x^2+y^2=a^2$; the maximum circle inside it is $x^2+y^2=b^2$.",
+    "Foci $(\\pm c,0)$ with $e=\\frac ca$ give $a=\\frac ce$ and $b^2=a^2-c^2$: here $a=4$, $b^2=12$.",
+    "For a triangle with a fixed base, the area is largest when the apex is as far as possible from the base line; with the apex on a circle this is the point of the circle diametrically farthest from the line."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 15,
+   "q_ref": "Q95",
+   "concepts": [
+    "Latus rectum of an ellipse",
+    "Eccentricity and distance between foci"
+   ],
+   "level": 1,
+   "question": "The length of the latus rectum of the ellipse, whose foci are $(2,5)$ and $(2,-3)$ and eccentricity is $\\frac45$, is :",
+   "answer": "(D) $\\frac{18}{5}$",
+   "key_idea": "Distance between foci $2ae=8$ gives $a=5$; then $b^2=a^2(1-e^2)=9$ and the latus rectum is $\\frac{2b^2}{a}$.",
+   "solution": [
+    "Distance between the foci: $2ae=\\sqrt{(2-2)^2+(5+3)^2}=8$, so $ae=4$.",
+    "With $e=\\frac45$: $a\\cdot\\frac45=4\\Rightarrow a=5$.",
+    "$b^2=a^2(1-e^2)=25\\left(1-\\frac{16}{25}\\right)=25-16=9$.",
+    "Length of the latus rectum $=\\frac{2b^2}{a}=\\frac{2\\cdot9}{5}=\\frac{18}{5}$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the focus-directrix definition: the semi-latus rectum is $e$ times the distance from the focus to its directrix.",
+     "solution": [
+      "$ae=4$ (half the focal distance $8$) and $e=\\frac45$ give $a=5$, so the directrices are at distance $\\frac ae=\\frac{25}{4}$ from the centre.",
+      "The focus-to-directrix distance is $\\frac ae-ae=\\frac{25}{4}-4=\\frac94$.",
+      "The semi-latus rectum is $e$ times this distance: $\\frac45\\cdot\\frac94=\\frac95$.",
+      "Latus rectum $=2\\times\\frac95=\\frac{18}{5}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Latus rectum $=\\frac{2b^2}{a}=2a(1-e^2)=2\\cdot\\frac{c}{e}(1-e^2)$ where $c=ae$ is half the focal distance.",
+    "Focal distance $=2ae$; centre = midpoint of the foci; the axis is along the line through the foci (here vertical, $x=2$).",
+    "Semi-latus rectum $=e\\times(\\text{focus-to-directrix distance})=a(1-e^2)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 16,
+   "q_ref": "Q96",
+   "concepts": [
+    "Tangents of given slope to an ellipse",
+    "Area of a quadrilateral"
+   ],
+   "level": 2,
+   "question": "Let for two distinct values of $p$ the lines $y=x+p$ touch the ellipse $E:\\frac{x^2}{4^2}+\\frac{y^2}{3^2}=1$ at the points $A$ and $B$. Let the line $y=x$ intersect $E$ at the points $C$ and $D$. Then the area of the quadrilateral $ABCD$ is equal to :",
+   "answer": "(C) $24$",
+   "key_idea": "Tangency gives $p=\\pm5$; $A,B$ are antipodal and so are $C,D$, so $ABCD$ is a parallelogram with diagonals through the centre.",
+   "solution": [
+    "Intersect $y=x$ with the ellipse: $\\frac{x^2}{16}+\\frac{x^2}{9}=1\\Rightarrow25x^2=144\\Rightarrow x=\\pm\\frac{12}{5}$.",
+    "$C\\left(-\\frac{12}{5},-\\frac{12}{5}\\right)$ and $D\\left(\\frac{12}{5},\\frac{12}{5}\\right)$.",
+    "Tangency of $y=x+p$: $p^2=a^2m^2+b^2=16+9=25$, so $p=\\pm5$.",
+    "Solving $y=x+5$ with $\\frac{x^2}{16}+\\frac{y^2}{9}=1$ gives the point of contact $A\\left(-\\frac{16}{5},\\frac95\\right)$; for $p=-5$, $B\\left(\\frac{16}{5},-\\frac95\\right)$.",
+    "The diagonals $AB$ and $CD$ both pass through the origin, so the area of $ABCD=2\\,[\\triangle ABD]$.",
+    "$2[\\triangle ABD]=\\left|\\begin{matrix}-\\frac{16}{5}&\\frac95&1\\\\ \\frac{16}{5}&-\\frac95&1\\\\ \\frac{12}{5}&\\frac{12}{5}&1\\end{matrix}\\right|=24$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Stretch the ellipse to the unit circle: $A'B'$ and $C'D'$ become perpendicular diameters, so the image is a square of area $2$ and the area scales by $ab=12$.",
+     "solution": [
+      "Map $(x,y)\\to(X,Y)=\\left(\\frac x4,\\frac y3\\right)$: $E\\to X^2+Y^2=1$; areas are multiplied by $\\frac1{12}$ (so the original area $=12\\times$ the image area).",
+      "The lines $y=x+p$ become $3Y=4X+p$, all parallel to the image of $y=x$, which is $3Y=4X$ (direction $(3,4)$).",
+      "The tangents to the unit circle parallel to $3Y=4X$ touch it at the ends $A',B'$ of the diameter perpendicular to $(3,4)$; $C'D'$ is the diameter along $(3,4)$.",
+      "So $A'B'\\perp C'D'$, both of length $2$: the image quadrilateral has perpendicular diagonals $\\Rightarrow$ area $=\\frac12\\cdot2\\cdot2=2$.",
+      "Original area $=12\\times2=24$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent of slope $m$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $y=mx\\pm\\sqrt{a^2m^2+b^2}$; contact point $\\left(\\mp\\frac{a^2m}{\\sqrt{a^2m^2+b^2}},\\ \\pm\\frac{b^2}{\\sqrt{a^2m^2+b^2}}\\right)$.",
+    "The points of contact of two parallel tangents are antipodal, and they lie on the diameter conjugate to the direction of the tangents.",
+    "Affine map $(x,y)\\to\\left(\\frac xa,\\frac yb\\right)$ turns an ellipse into a circle and multiplies all areas by $\\frac1{ab}$; parallelism, midpoints and ratios along lines are preserved.",
+    "Area of a quadrilateral with diagonals $d_1,d_2$ at angle $\\varphi$: $\\frac12d_1d_2\\sin\\varphi$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 17,
+   "q_ref": "Q97",
+   "concepts": [
+    "Latus rectum of an ellipse",
+    "Minimum value of a quadratic function"
+   ],
+   "level": 1,
+   "question": "Let the length of a latus rectum of an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ be $10$. If its eccentricity is the minimum value of the function $f(t)=t^2+t+\\frac{11}{12}$, $t\\in\\mathbb R$, then $a^2+b^2$ is equal to :",
+   "answer": "(B) $126$",
+   "key_idea": "$e=f_{\\min}=\\frac23$; then $\\frac{2b^2}{a}=10$ and $b^2=a^2(1-e^2)$ give $a=9$.",
+   "solution": [
+    "$f(t)=t^2+t+\\frac{11}{12}$ has its minimum at $t=-\\frac12$.",
+    "$f_{\\min}=\\frac14-\\frac12+\\frac{11}{12}=\\frac{3-6+11}{12}=\\frac23$, so $e=\\frac23$.",
+    "$b^2=a^2(1-e^2)=a^2\\left(1-\\frac49\\right)=\\frac{5a^2}{9}$ (1).",
+    "Length of the latus rectum $=\\frac{2b^2}{a}=10\\Rightarrow b^2=5a$ (2).",
+    "From (1),(2): $5a=\\frac{5a^2}{9}\\Rightarrow a=9$, so $b^2=45$.",
+    "$a^2+b^2=81+45=126$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Express everything in terms of $e$ and the latus rectum $\\ell$: $a=\\frac{\\ell}{2(1-e^2)}$ and $a^2+b^2=a^2(2-e^2)$.",
+     "solution": [
+      "$e=\\frac23$ as before, and $\\ell=\\frac{2b^2}{a}=2a(1-e^2)$, so $a=\\frac{\\ell}{2(1-e^2)}=\\frac{10}{2\\cdot\\frac59}=9$.",
+      "$a^2+b^2=a^2+a^2(1-e^2)=a^2(2-e^2)=81\\left(2-\\frac49\\right)=81\\cdot\\frac{14}{9}=126$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Latus rectum $\\ell=\\frac{2b^2}{a}=2a(1-e^2)$; so $a=\\frac{\\ell}{2(1-e^2)}$ and $a^2+b^2=a^2(2-e^2)$.",
+    "Minimum of $t^2+t+k$ is $k-\\frac14$ (at $t=-\\frac12$); here $\\frac{11}{12}-\\frac14=\\frac23$.",
+    "For an ellipse $0<e<1$; a derived value of $e$ must be checked to lie in this range (here $\\frac23$)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 18,
+   "q_ref": "Q98",
+   "concepts": [
+    "Number of triangles and quadrilaterals from the vertices of a polygon",
+    "Eccentricity of an ellipse"
+   ],
+   "level": 1,
+   "question": "Let $p$ be the number of all triangles that can be formed by joining the vertices of a regular polygon $P$ of $n$ sides and $q$ be the number of all quadrilaterals that can be formed by joining the vertices of $P$. If $p+q=126$, then the eccentricity of the ellipse $\\frac{x^2}{16}+\\frac{y^2}{n}=1$ is :",
+   "answer": "(C) $\\frac1{\\sqrt2}$",
+   "key_idea": "$\\binom n3+\\binom n4=\\binom{n+1}4=126=\\binom94$, so $n=8$.",
+   "solution": [
+    "$p=\\binom n3$ and $q=\\binom n4$, so $\\binom n3+\\binom n4=126$.",
+    "By Pascal's rule $\\binom n3+\\binom n4=\\binom{n+1}4=126$.",
+    "$\\binom94=126$ and $\\binom{m}{4}$ is increasing for $m\\ge4$, so $n+1=9$, $n=8$.",
+    "Ellipse $\\frac{x^2}{16}+\\frac{y^2}{8}=1$: $a^2=16>b^2=8$.",
+    "$e^2=1-\\frac{8}{16}=\\frac12$, so $e=\\frac1{\\sqrt2}$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [],
+   "useful_results": [
+    "Pascal's rule: $\\binom nr+\\binom n{r+1}=\\binom{n+1}{r+1}$; it turns a sum of two consecutive binomial coefficients into one.",
+    "$\\binom m4$ is strictly increasing for $m\\ge4$ ($\\binom84=70,\\ \\binom94=126,\\ \\binom{10}4=210$), so the equation has a unique solution.",
+    "For $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$, $e^2=1-\\frac{\\text{smaller}}{\\text{larger}}$ of $a^2,b^2$; check which denominator is larger first (here $16>8$)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 19,
+   "q_ref": "Q99",
+   "concepts": [
+    "Focal distances of a point on an ellipse",
+    "Circle: centre and radius"
+   ],
+   "level": 2,
+   "question": "Let the ellipse $3x^2+py^2=4$ pass through the centre $C$ of the circle $x^2+y^2-2x-4y-11=0$ of radius $r$. Let $f_1,f_2$ be the focal distances of the point $C$ on the ellipse. Then $6f_1f_2-r$ is equal to :",
+   "answer": "(B) $70$",
+   "key_idea": "Major axis is along $y$ here ($b>a$), so $f_1f_2=(b-ey_1)(b+ey_1)=b^2-e^2y_1^2$.",
+   "solution": [
+    "The circle has centre $C(1,2)$ and radius $r=\\sqrt{1+4+11}=4$.",
+    "The ellipse passes through $C$: $3+4p=4$, so $p=\\frac14$.",
+    "Ellipse: $\\frac{x^2}{4/3}+\\frac{y^2}{16}=1$, with $b^2=16>a^2=\\frac43$ (major axis along the $y$-axis).",
+    "$e^2=1-\\frac{a^2}{b^2}=1-\\frac{4/3}{16}=1-\\frac1{12}=\\frac{11}{12}$.",
+    "Focal distances of $(x_1,y_1)$: $b-ey_1$ and $b+ey_1$, so $f_1f_2=b^2-e^2y_1^2=16-\\frac{11}{12}\\times4$.",
+    "$f_1f_2=16-\\frac{11}{3}=\\frac{37}{3}$, so $6f_1f_2=96-22=74$.",
+    "$6f_1f_2-r=74-4=70$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compute the two focal distances directly from the coordinates of the foci $(0,\\pm c)$, instead of using the focal-radius formulas.",
+     "solution": [
+      "$c^2=b^2-a^2=16-\\frac43=\\frac{44}{3}$, foci $(0,\\pm c)$; $C=(1,2)$.",
+      "$f_1^2=1+(2-c)^2=5-4c+c^2=\\frac{59}{3}-4c$ and $f_2^2=1+(2+c)^2=\\frac{59}{3}+4c$.",
+      "$f_1^2f_2^2=\\left(\\frac{59}{3}\\right)^2-16c^2=\\frac{3481}{9}-\\frac{704}{3}=\\frac{3481-2112}{9}=\\frac{1369}{9}$.",
+      "$f_1f_2=\\frac{37}{3}$, $6f_1f_2=74$ and the answer is $74-4=70$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For an ellipse with major axis along the $y$-axis the focal distances are $b\\mp ey_1$, so $f_1f_2=b^2-e^2y_1^2$ and $f_1+f_2=2b$; along the $x$-axis replace $b\\to a$, $y_1\\to x_1$.",
+    "For $3x^2+py^2=4$ divide by 4 and read $a^2,b^2$ as the denominators of $x^2,y^2$; the larger one decides the major axis.",
+    "A circle $x^2+y^2+2gx+2fy+c=0$ has centre $(-g,-f)$ and radius $\\sqrt{g^2+f^2-c}$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 20,
+   "q_ref": "Q100",
+   "concepts": [
+    "Focal distances of a point on an ellipse",
+    "Eccentricity of an ellipse (condition for a point on the curve)"
+   ],
+   "level": 2,
+   "question": "Let the product of the focal distances of the point $\\left(\\sqrt3,\\frac12\\right)$ on the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$, $(a>b)$, be $\\frac74$. Then the absolute difference of the eccentricities of two such ellipses is :",
+   "answer": "(C) $\\frac{3-2\\sqrt2}{2\\sqrt3}$",
+   "key_idea": "$a^2-e^2x_1^2=\\frac74$ with $x_1^2=3$ and the point on the curve give a quadratic in $e^2$: $12e^4-17e^2+6=0$.",
+   "solution": [
+    "Product of focal distances $=(a+ex_1)(a-ex_1)=a^2-e^2x_1^2=a^2-3e^2=\\frac74$, so $4a^2=7+12e^2$.",
+    "The point $\\left(\\sqrt3,\\frac12\\right)$ lies on the ellipse: $\\frac3{a^2}+\\frac1{4b^2}=1$.",
+    "With $b^2=a^2(1-e^2)$: $\\frac3{a^2}+\\frac1{4a^2(1-e^2)}=1$, so $12(1-e^2)+1=4a^2(1-e^2)$.",
+    "$13-12e^2=(7+12e^2)(1-e^2)=7-7e^2+12e^2-12e^4$.",
+    "$12e^4-17e^2+6=0\\Rightarrow e^2=\\frac{17\\pm\\sqrt{289-288}}{24}=\\frac{17\\pm1}{24}=\\frac34$ or $\\frac23$.",
+    "$e=\\frac{\\sqrt3}{2}$ or $\\sqrt{\\frac23}$.",
+    "Difference $=\\frac{\\sqrt3}{2}-\\sqrt{\\frac23}=\\frac{3-2\\sqrt2}{2\\sqrt3}$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $a^2,b^2$ using $w=a^2-3$: the two conditions collapse to a quadratic in $w$.",
+     "solution": [
+      "Let $u=a^2$, $v=b^2$. The point on the curve: $\\frac3u+\\frac1{4v}=1\\Rightarrow v=\\frac{u}{4(u-3)}$.",
+      "Product of focal distances: $a^2-e^2x_1^2=u-\\frac{3(u-v)}{u}=u-3+\\frac{3v}{u}=\\frac74$.",
+      "Put $w=u-3$: $\\frac{3v}{u}=\\frac{3}{4w}$, so $w+\\frac3{4w}=\\frac74\\Rightarrow4w^2-7w+3=0\\Rightarrow w=1$ or $\\frac34$.",
+      "$w=1$: $a^2=4$, $b^2=1$, $e^2=\\frac34$. $w=\\frac34$: $a^2=\\frac{15}4$, $b^2=\\frac54$, $e^2=\\frac23$ (both have $a>b$ ✓).",
+      "$|e_1-e_2|=\\frac{\\sqrt3}{2}-\\sqrt{\\frac23}=\\frac{3-2\\sqrt2}{2\\sqrt3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $P(x_1,y_1)$ on $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ ($a>b$): $SP=a-ex_1$, $S'P=a+ex_1$, product $a^2-e^2x_1^2=a^2-\\frac{c^2}{a^2}x_1^2$.",
+    "A condition 'the point lies on the ellipse' together with a given product of focal distances usually gives two ellipses: expect a quadratic in $e^2$ (or in $a^2$) with two admissible roots.",
+    "Check the constraint $a>b$ for each root: $a^2=4,b^2=1$ and $a^2=\\frac{15}4,b^2=\\frac54$.",
+    "Shortcut: choose a substitution that centres the equations, such as $w=a^2-x_1^2$, to reduce the system to a single quadratic."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  }
+ ]
+}
