@@ -1,0 +1,885 @@
+{
+ "title": "JEE Main Question Bank – Algebra 16 — Paper Analysis",
+ "subtitle": "Binomial Theorem and Complex Numbers (Q301–Q320) · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Algebra_16.pdf (no blueprint; concepts self-assigned)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 7,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 8,
+   "to": 20,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "General term of a binomial expansion and the exponent of $x$"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha>0$ be the smallest number such that the expansion of $\\left(x^{2/3}+\\frac{2}{x^{3}}\\right)^{30}$ has a term $\\beta x^{-\\alpha}$, $\\beta\\in\\mathbb{N}$. Then $\\alpha$ is equal to ______ .",
+   "answer": "2",
+   "key_idea": "The exponent of $x$ in $T_{r+1}$ is linear in $r$, so the smallest $\\alpha>0$ comes from the first $r$ making it negative.",
+   "solution": [
+    "The general term is $T_{r+1}={}^{30}C_r\\left(x^{2/3}\\right)^{30-r}\\left(\\frac{2}{x^{3}}\\right)^{r}$.",
+    "The power of $x$ is $\\frac{2(30-r)}{3}-3r=20-\\frac{2r}{3}-3r$.",
+    "So $T_{r+1}={}^{30}C_r\\,(2)^r\\,x^{\\frac{60-11r}{3}}$, for $0\\le r\\le 30$.",
+    "We need $x^{-\\alpha}$ with $\\alpha>0$, so $\\frac{60-11r}{3}<0$, i.e. $11r>60$, i.e. $r\\ge 6$.",
+    "For $r=5$ the power is $\\frac{5}{3}>0$ (not allowed); for $r=6$ it is $\\frac{60-66}{3}=-2$.",
+    "As $r$ increases the power decreases by $\\frac{11}{3}$ each time, so $r=6$ gives the smallest positive $\\alpha$.",
+    "$T_7={}^{30}C_6(2)^6x^{-2}$ with coefficient $\\beta={}^{30}C_6\\,2^6\\in\\mathbb{N}$, so $\\alpha=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=t^{3}$ so every exponent becomes an integer and the sign test is done on integers.",
+     "solution": [
+      "With $x=t^3$ the expression is $\\left(t^{2}+\\frac{2}{t^{9}}\\right)^{30}$ and $x^{-\\alpha}=t^{-3\\alpha}$.",
+      "Its general term is ${}^{30}C_r\\,t^{2(30-r)}\\,2^r\\,t^{-9r}={}^{30}C_r\\,2^r\\,t^{60-11r}$.",
+      "We need $60-11r=-3\\alpha$, i.e. $3\\alpha=11r-60$ with $\\alpha>0$.",
+      "The smallest positive value of $11r-60$ over integers $r$: $r=5$ gives $-5$, $r=6$ gives $6$, and larger $r$ gives larger values.",
+      "So $3\\alpha=6$ and $\\alpha=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $\\left(x^{p}+\\frac{c}{x^{q}}\\right)^n$ the power of $x$ in $T_{r+1}$ is $p(n-r)-qr=pn-(p+q)r$, an arithmetic progression in $r$ with common difference $-(p+q)$.",
+    "For fractional powers substitute $x=t^{k}$ (here $k=3$) so that all exponents become integers and the integrality of $r$ can be tested directly.",
+    "The first term with a negative power is the first $r$ with $r>\\frac{pn}{p+q}$; here $r>\\frac{60}{11}$, so $r=6$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Remainder on division using the binomial expansion"
+   ],
+   "level": 1,
+   "question": "The remainder on dividing $5^{99}$ by 11 is ______ .",
+   "answer": "9",
+   "key_idea": "Rewrite the power through $5^5=3125=11\\cdot284+1$, which is $1$ more than a multiple of 11.",
+   "solution": [
+    "$5^{99}=5^{4}\\cdot5^{95}$.",
+    "$=625\\,\\left[5^{5}\\right]^{19}$.",
+    "$=625\\,[3125]^{19}$.",
+    "Since $3125=11\\cdot 284+1$, this is $625\\,[11\\cdot284+1]^{19}$.",
+    "By the binomial theorem $[11\\cdot284+1]^{19}=11k+1$ for some integer $k$, so $5^{99}=625\\,(11k+1)$.",
+    "$=625\\cdot 11k+625$.",
+    "Now $625=616+9=11\\cdot56+9$, so $5^{99}=11k_1+616+9=11(k_2)+9$.",
+    "Remainder $=9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $3125=2124+1$ (and then $[11k\\times19+1]$); $3125-1=3124=11\\cdot284$, so '2124' is a typo for 3124, and $(11\\cdot284+1)^{19}$ is simply $11k+1$ by the binomial theorem. Corrected both lines; the answer 9 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Fermat's little theorem: $5^{10}\\equiv1\\pmod{11}$, so $5^{99}\\equiv 5^{-1}$.",
+     "solution": [
+      "11 is prime and $\\gcd(5,11)=1$, so $5^{10}\\equiv1\\pmod{11}$.",
+      "Hence $5^{100}=\\left(5^{10}\\right)^{10}\\equiv1$, so $5\\cdot5^{99}\\equiv1\\pmod{11}$.",
+      "So $5^{99}$ is the inverse of $5$ modulo 11.",
+      "Since $5\\cdot9=45=44+1\\equiv1$, the inverse is $9$.",
+      "Remainder $=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Fermat: for prime $p\\nmid a$, $a^{p-1}\\equiv1\\pmod p$; so $a^{k(p-1)-1}\\equiv a^{-1}$, which is quick when the exponent is one less than a multiple of $p-1$.",
+    "If $a^m=1+(\\text{multiple of }p)$ for a small $m$ (here $5^5=3125=1+11\\cdot284$), then every power of $a^m$ is $\\equiv1\\pmod p$.",
+    "Check: $5^{99}\\bmod 11$ computed directly is $9$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Remainder on division using the binomial expansion"
+   ],
+   "level": 2,
+   "question": "The remainder, when $19^{200}+23^{200}$ is divided by 49, is ______ .",
+   "answer": "29",
+   "key_idea": "Write $19=21-2$ and $23=21+2$; in the sum the odd powers of $21$ cancel and $21^2=9\\cdot49$ kills the rest.",
+   "solution": [
+    "Write $19=21-2$ and $23=21+2$, so the number is $(21-2)^{200}+(21+2)^{200}$.",
+    "On expansion the terms with odd powers of $21$ cancel, and every term with $21^{2j}$, $j\\ge1$, is a multiple of $21^2=441=9\\cdot49$.",
+    "So $(21-2)^{200}+(21+2)^{200}=49\\lambda+2\\cdot2^{200}=49\\lambda+2^{201}$.",
+    "$2^{201}=2^{3\\cdot67}=8^{67}=(7+1)^{67}$.",
+    "$(7+1)^{67}=49\\mu+{}^{67}C_1\\cdot7+1=49\\mu+7\\cdot67+1$, since all terms from $7^2$ onward are multiples of 49.",
+    "$=49\\mu+470$.",
+    "$470=49\\cdot9+29$, so the whole number is $49(\\lambda+\\mu+9)+29$.",
+    "The remainder is $29$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "After reducing to $2^{201}$, use that $2$ has order $21$ modulo 49 to shorten the exponent.",
+     "solution": [
+      "As in the main solution the number is $\\equiv 2^{201}\\pmod{49}$ (odd powers of $21$ cancel, $21^2\\equiv0$).",
+      "Compute powers of 2 modulo 49: $2^{10}=1024=49\\cdot20+44\\equiv-5$, so $2^{20}\\equiv25$ and $2^{21}\\equiv50\\equiv1$.",
+      "So the order of 2 divides 21, and $2^{201}=2^{21\\cdot9+12}\\equiv2^{12}$.",
+      "$2^{12}=4096=49\\cdot83+29$.",
+      "Remainder $=29$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $a=m-d$ and $b=m+d$: $a^{n}+b^{n}$ with $n$ even equals $2\\sum_{j\\ even}\\binom{n}{j}m^{j}d^{n-j}$; if $m^2$ is divisible by the modulus only the $j=0$ term $2d^{n}$ survives.",
+    "Choosing the centre $m$ as a multiple of the prime ($21$ for modulus $49=7^2$) kills all but the first terms; $(7+1)^N\\equiv1+7N\\pmod{49}$.",
+    "Euler: $\\varphi(49)=42$; orders divide 42. Here ord$_{49}(2)=21$, so $2^{201}\\equiv2^{12}\\equiv29$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Binomial coefficients in A.P. and a given term of the expansion"
+   ],
+   "level": 3,
+   "question": "Let the sixth term in the binomial expansion of $\\left(\\left(2^{\\log_2(10-3^{x})}\\right)^{1/2}+\\left(2^{(x-2)\\log_2 3}\\right)^{1/5}\\right)^{m}$, in the increasing powers of $2^{(x-2)\\log_2 3}$, be $21$. If the binomial coefficients of the second, third and fourth terms in the expansion are respectively the first, third and fifth terms of an A.P., then the sum of the squares of all possible values of $x$ is ______ .",
+   "answer": "4",
+   "key_idea": "The A.P. condition on $\\binom m1,\\binom m2,\\binom m3$ fixes $m$; then the sixth term becomes a quadratic in $3^x$.",
+   "solution": [
+    "Since $2^{\\log_2(10-3^x)}=10-3^x$ and $2^{(x-2)\\log_23}=3^{x-2}$, the expansion is $\\left((10-3^x)^{1/2}+3^{(x-2)/5}\\right)^m$.",
+    "The sixth term is $T_6={}^mC_5\\,(10-3^x)^{\\frac{m-5}{2}}\\,\\left(3^{x-2}\\right)=21$ ... (1).",
+    "The binomial coefficients of the 2nd, 3rd and 4th terms are ${}^mC_1,{}^mC_2,{}^mC_3$; they are the 1st, 3rd and 5th terms of an A.P.",
+    "The middle one of three equally spaced terms is the mean, so $2\\cdot{}^mC_2={}^mC_1+{}^mC_3$.",
+    "Solving, $m(m-1)=m+\\frac{m(m-1)(m-2)}{6}$, which gives $m^2-9m+14=0$, so $m=2$ or $m=7$.",
+    "$m=2$ is rejected (a sixth term needs $m\\ge5$), so $m=7$.",
+    "Put $m=7$ in (1): ${}^7C_5=21$ and the power is $(10-3^x)^{1}$, so $21\\,(10-3^x)\\cdot\\frac{3^x}{9}=21$.",
+    "Hence $(10-3^x)3^x=9$; with $t=3^x$: $t^2-10t+9=0$, so $t=1$ or $t=9$.",
+    "Thus $3^x=3^0$ or $3^2$, i.e. $x=0,2$ (both give $10-3^x>0$).",
+    "The sum of the squares of all possible values of $x$ is $0+4=4$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Three terms $a_1,a_3,a_5$ of an A.P. satisfy $2a_3=a_1+a_5$ (the middle one is the mean); do not use consecutive-term spacing.",
+    "Coefficients $\\binom{m}{1},\\binom m2,\\binom m3$ with $2\\binom m2=\\binom m1+\\binom m3$ give $m^2-9m+14=0$, i.e. $m=7$ (and $m=2$, which is too small for the 6th term). Row 7: $1,7,21,35,35,21,7,1$ contains $7,21,35$ in A.P.",
+    "Always clean log-power forms first: $a^{\\log_a f}=f$ and $2^{k\\log_2 3}=3^k$.",
+    "An equation $(c-t)t=\\text{const}$ with $t=b^x$ is a quadratic in $t$; roots must be checked against domain conditions such as $10-3^x>0$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Constant term, sum of coefficients and a particular term of a binomial expansion"
+   ],
+   "level": 3,
+   "question": "Let $\\alpha$ be the constant term in the binomial expansion of $\\left(\\sqrt{x}-\\frac{6}{x^{3/2}}\\right)^{n}$, $n\\le15$. If the sum of the coefficients of the remaining terms in the expansion is $649$ and the coefficient of $x^{-n}$ is $\\lambda\\alpha$, then $\\lambda$ is equal to ______ .",
+   "answer": "36",
+   "key_idea": "Sum of all coefficients is $(-5)^n$, so $(-5)^n-\\alpha=649$ pins down $n$; then compare the $x^{-n}$ and constant coefficients.",
+   "solution": [
+    "The general term is $T_{k+1}={}^nC_k\\,(\\sqrt x)^{n-k}(-6)^k\\left(x^{-3/2}\\right)^k={}^nC_k(-6)^k\\,x^{\\frac{n-4k}{2}}$.",
+    "The constant term needs $\\frac{n-k}{2}-\\frac{3k}{2}=0$, i.e. $n-4k=0$, so $n$ is a multiple of 4 and $k=\\frac n4$.",
+    "Then $\\alpha={}^nC_{n/4}(-6)^{n/4}$.",
+    "The sum of the coefficients of all terms is $(1-6)^n=(-5)^n$; removing the constant term gives $(-5)^n-{}^nC_{n/4}(-6)^{n/4}=649$.",
+    "Since $n\\le15$ and $4\\mid n$, $n\\in\\{4,8,12\\}$: $n=8$ gives $389617$ and $n=12$ gives $244188145$, neither is $649$.",
+    "$n=4$ works: $(-5)^4-{}^4C_1(-6)=625+24=649$. So $n=4$, $k=1$ and $\\alpha=-24$.",
+    "The coefficient of $x^{-4}$ in $\\left(\\sqrt x-\\frac{6}{x^{3/2}}\\right)^4$: $\\frac{4-4k}{2}=-4$ gives $k=3$.",
+    "It is ${}^4C_3(-6)^3=4(-216)=-864$.",
+    "So $\\lambda=\\frac{-864}{-24}=36$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the base as $(\\sqrt4-6/x^{3/2})^4$ (should be $\\sqrt x$) and the coefficient as ${}^4C_1(-6)^3$ (the term is $k=3$, ${}^4C_3(-6)^3$; numerically equal since ${}^4C_1={}^4C_3$), and says 'by observation' for $n=4$ without excluding $n=8,12$. Corrected the base and the index and added the exclusion of $n=8,12$. Answer 36 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Compare the two terms through symmetry ${}^4C_3={}^4C_1$: $\\lambda=\\frac{{}^4C_3(-6)^3}{{}^4C_1(-6)}=(-6)^2$.",
+     "solution": [
+      "With $n=4$ (found from $(-5)^n-\\alpha=649$) the term with $x^{\\frac{4-4k}{2}}$ has coefficient ${}^4C_k(-6)^k$.",
+      "Constant term: $k=1$; term in $x^{-4}$: $k=3$.",
+      "Since ${}^4C_3={}^4C_1=4$, the ratio $\\lambda=\\frac{(-6)^3}{(-6)^1}=(-6)^2$.",
+      "So $\\lambda=36$ without computing $\\alpha=-24$ or $-864$ separately."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Sum of all coefficients of $f(x)$ is $f(1)$; for $\\left(\\sqrt x-\\frac{6}{x^{3/2}}\\right)^n$ it is $(-5)^n$. 'Sum of the remaining coefficients' $=f(1)-\\text{(removed term)}$.",
+    "Term $k$ and term $n-k$ have equal binomial coefficients, so their coefficient ratio in $(ax^p+bx^{-q})^n$ is $(a/b)^{n-2k}$-type, free of $\\binom nk$.",
+    "Constant term of $(x^p+c\\,x^{-q})^n$ exists iff $(p+q)\\mid pn$; here $(1/2,-3/2)$ gives $4\\mid n$.",
+    "Use size to prune: $|(-5)^n|$ grows far faster than the single term, so only small $n$ can give $649$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Remainder of a power on division by a prime (modular arithmetic)"
+   ],
+   "level": 2,
+   "question": "The remainder, when $7^{103}$ is divided by 17, is ______ .",
+   "answer": "12",
+   "key_idea": "Keep squaring modulo 17 until $7^{8}\\equiv-1$, hence $7^{16}\\equiv1$ and the exponent reduces mod 16.",
+   "solution": [
+    "We want $7^{103}\\bmod 17$. $7\\equiv7\\pmod{17}$.",
+    "$7^2=49\\equiv-2\\pmod{17}$.",
+    "$7^6=\\left(7^2\\right)^3\\equiv(-2)^3=-8\\pmod{17}$.",
+    "$7^8=7^6\\cdot7^2\\equiv(-8)(-2)=16\\equiv-1\\pmod{17}$.",
+    "$7^{16}=\\left(7^8\\right)^2\\equiv1\\pmod{17}$.",
+    "$103=6\\cdot16+7$, so $7^{103}=\\left(7^{16}\\right)^6\\cdot7^7\\equiv7^7=7^6\\cdot7\\equiv-56\\pmod{17}$.",
+    "$-56\\equiv-56+68=12$, so $7^{103}\\equiv12\\pmod{17}$. Remainder $=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use a negative exponent: $7^{112}\\equiv1$ so $7^{103}\\equiv7^{-9}=5^{9}$, with $7^{-1}\\equiv5$.",
+     "solution": [
+      "By Fermat, $7^{16}\\equiv1\\pmod{17}$, and $112=7\\cdot16$, so $7^{112}\\equiv1$.",
+      "Hence $7^{103}=7^{112-9}\\equiv\\left(7^{-1}\\right)^{9}\\pmod{17}$.",
+      "$7\\cdot5=35=34+1\\equiv1$, so $7^{-1}\\equiv5$.",
+      "$5^2=25\\equiv8$, $5^4\\equiv64\\equiv13\\equiv-4$, $5^8\\equiv16\\equiv-1$.",
+      "So $5^9=5^8\\cdot5\\equiv-5\\equiv12$.",
+      "Remainder $=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $a^{k}\\equiv-1\\pmod p$ then $a^{2k}\\equiv1$: finding $-1$ is a quick route to the order of $a$.",
+    "For a power just below a multiple of the period $p-1$, use negative exponents: $a^{N(p-1)-r}\\equiv\\left(a^{-1}\\right)^{r}$ with $r$ small.",
+    "Check: $7^{103}\\bmod 17=12$ by direct computation."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Divisibility of $3^n-3$ by 7 and counting integers (modular arithmetic)"
+   ],
+   "level": 2,
+   "question": "The number of elements in the set $\\{n\\in\\mathbb{N}:10\\le n\\le100\\ \\text{and}\\ 3^{n}-3\\ \\text{is a multiple of}\\ 7\\}$ is ______ .",
+   "answer": "15",
+   "key_idea": "$3$ has order $6$ modulo $7$, so $3^n\\equiv3$ exactly when $n\\equiv1\\pmod6$.",
+   "solution": [
+    "Here $n\\in[10,100]$ and $3^n-3$ is a multiple of $7$, i.e. $3^n=7\\lambda+3$.",
+    "Powers of $3$ modulo 7 are $3,2,6,4,5,1$ for $n=1,\\dots,6$, then repeat with period 6.",
+    "So $3^n\\equiv3\\pmod 7$ exactly when $n\\equiv1\\pmod 6$: $n=1,7,13,19,25,\\dots,97$.",
+    "Those in $[10,100]$ are $13,19,25,\\dots,97$ (the values $1$ and $7$ are below 10).",
+    "The number of terms is $\\frac{97-13}{6}+1=15$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF lists 'n = 1, 7, 13, 20, ..... 97' ('20' is a typo for 19), does not justify the period 6, and does not drop $n=1,7$ which lie outside $[10,100]$ before counting 15. Added the cycle of residues, fixed 20 to 19 and excluded 1 and 7. Answer 15 is unchanged.",
+   "useful_results": [
+    "The powers of $a$ modulo a prime $p$ are periodic with period equal to the order of $a$ (a divisor of $p-1$). Powers of 3 mod 7: $3,2,6,4,5,1$ (3 is a primitive root).",
+    "$a^n\\equiv a^m\\pmod p\\iff n\\equiv m\\pmod{\\text{ord}_p(a)}$ for $p\\nmid a$, so counting solutions in a range is counting an arithmetic progression.",
+    "Number of terms of $a,a+d,\\dots,l$ is $\\frac{l-a}{d}+1$; clip the progression to the stated range first."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Complex numbers with $|z|=1$ and a real parameter",
+    "Maximum distance of a point from a circle"
+   ],
+   "level": 2,
+   "question": "Let $z$ be a complex number such that $|z|=1$. If $\\frac{2+k^{2}z}{k+\\bar z}=kz$, $k\\in\\mathbb{R}$, then the maximum distance of $k+ik^{2}$ from the circle $|z-(1+2i)|=1$ is:",
+   "options": [
+    "$3$",
+    "$\\sqrt3+1$",
+    "$\\sqrt5+1$",
+    "$2$"
+   ],
+   "answer": "(C) $\\sqrt5+1$",
+   "key_idea": "Clearing the denominator and using $z\\bar z=|z|^2=1$ gives $k$ at once; then use farthest point $=$ distance to centre $+\\,r$.",
+   "solution": [
+    "Cross-multiplying: $2+k^2z=kz(k+\\bar z)=k^2z+k\\,z\\bar z=k^2z+k|z|^2$.",
+    "So $2=k|z|^2$, and with $|z|=1$ this gives $k=2$.",
+    "The point $k+ik^2$ is $P(2,4)$; the circle $|z-(1+2i)|=1$ has centre $C(1,2)$ and radius $r=1$.",
+    "$P$ lies outside the circle, since $CP=\\sqrt{1+4}=\\sqrt5>1$.",
+    "The maximum distance from $P$ to a point of the circle is $CP+r$ (the point on ray $PC$ extended beyond $C$).",
+    "Maximum distance $=\\sqrt5+1$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "On the unit circle $\\bar z=1/z$, which turns the equation into $2z=kz$ and gives $k$ immediately.",
+     "solution": [
+      "Since $|z|=1$, $\\bar z=\\frac1z$, so $k+\\bar z=\\frac{kz+1}{z}$.",
+      "The equation becomes $\\frac{(2+k^2z)\\,z}{kz+1}=kz$, i.e. $2z+k^2z^2=kz(kz+1)=k^2z^2+kz$.",
+      "Hence $2z=kz$ and, as $z\\neq0$, $k=2$.",
+      "The point is $(k,k^2)=(2,4)$ and the centre of the circle is $(1,2)$, so the distance to the centre is $\\sqrt5$.",
+      "By the triangle inequality $|P-w|\\le|P-C|+|C-w|=\\sqrt5+1$ for $w$ on the circle, with equality on the line $PC$.",
+      "Maximum distance $=\\sqrt5+1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|z|=1$: $\\bar z=\\frac1z$, $z\\bar z=1$, and $\\bar z$ can be eliminated from any equation.",
+    "Maximum distance from an external or internal point $P$ to a circle (centre $C$, radius $r$) is $PC+r$; the minimum is $|PC-r|$.",
+    "Real parameters in a complex equation: compare coefficients of $z$ (here $k^2z$ cancels) to read off the parameter."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Quadratic equation in $z$ with complex coefficients and sum of squares of roots"
+   ],
+   "level": 2,
+   "question": "Let $z\\in\\mathbb{C}$ be such that $\\frac{z^{2}+3i}{z-2+i}=2+3i$. Then the sum of all possible values of $z^{2}$ is:",
+   "options": [
+    "$-19+2i$",
+    "$-19-2i$",
+    "$19-2i$",
+    "$19+2i$"
+   ],
+   "answer": "(B) $-19-2i$",
+   "key_idea": "Clear the denominator to get a quadratic in $z$, then $z_1^2+z_2^2=(z_1+z_2)^2-2z_1z_2$.",
+   "solution": [
+    "Clearing the denominator: $z^2+3i=(2+3i)(z-2+i)=z(2+3i)-(7+4i)$.",
+    "So $z^2-z(2+3i)+7+7i=0$, a quadratic with roots $z_1,z_2$.",
+    "Sum of roots $z_1+z_2=2+3i$ and product $z_1z_2=7+7i$.",
+    "$z_1^2+z_2^2=(z_1+z_2)^2-2z_1z_2=(2+3i)^2-2(7+7i)$.",
+    "$(2+3i)^2=4+12i-9=-5+12i$, so $z_1^2+z_2^2=-5+12i-14-14i=-19-2i$.",
+    "Neither root equals $2-i$ (at $z=2-i$ the quadratic has value $3-i\\neq0$), so both are valid.",
+    "The required sum is $-19-2i$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each root satisfies $z^2=(2+3i)z-(7+7i)$; add this over the two roots instead of squaring the sum.",
+     "solution": [
+      "From $z^2-(2+3i)z+(7+7i)=0$, every root obeys $z^2=(2+3i)z-(7+7i)$.",
+      "Add the relation for $z_1$ and $z_2$: $z_1^2+z_2^2=(2+3i)(z_1+z_2)-2(7+7i)$.",
+      "Substituting $z_1+z_2=2+3i$: $z_1^2+z_2^2=(2+3i)^2-14-14i=(-5+12i)-14-14i$.",
+      "$=-19-2i$, the same answer, with no $z_1z_2$ computation needed beyond the constant term."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $az^2+bz+c=0$: $z_1^2+z_2^2=\\frac{b^2-2ac}{a^2}$; this holds for complex coefficients too.",
+    "Vieta's formulas need no real-ness: a quadratic over $\\mathbb{C}$ always has two roots (with multiplicity) with sum $-b/a$, product $c/a$.",
+    "Always exclude values that make the original denominator zero ($z=2-i$ here)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Equilateral triangle in the complex plane and its centroid"
+   ],
+   "level": 2,
+   "question": "If $z_1,z_2,z_3\\in\\mathbb{C}$ are the vertices of an equilateral triangle, whose centroid is $z_0$, then $\\sum_{k=1}^{3}(z_k-z_0)^2$ is equal to:",
+   "options": [
+    "$-i$",
+    "$1$",
+    "$0$",
+    "$i$"
+   ],
+   "answer": "(C) $0$",
+   "key_idea": "For an equilateral triangle $z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1$, so $\\sum z_k^2=3z_0^2$.",
+   "solution": [
+    "The centroid gives $z_1+z_2+z_3=3z_0$.",
+    "Square it: $(z_1+z_2+z_3)^2=9z_0^2$, i.e. $z_1^2+z_2^2+z_3^2+2(z_1z_2+z_2z_3+z_3z_1)=9z_0^2$.",
+    "For an equilateral triangle $z_1z_2+z_2z_3+z_3z_1=z_1^2+z_2^2+z_3^2$, so this becomes $3(z_1^2+z_2^2+z_3^2)=9z_0^2$.",
+    "Hence $z_1^2+z_2^2+z_3^2=3z_0^2$.",
+    "$\\sum(z_k-z_0)^2=(z_1^2+z_2^2+z_3^2)+3z_0^2-2(z_1+z_2+z_3)z_0$.",
+    "$=3z_0^2+3z_0^2-2(3z_0)z_0=6z_0^2-6z_0^2=0$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes '$z_1^2+z_2^2+z_3^2=3z_6^2$' (typo for $3z_0^2$) and uses $\\sum z_iz_j=\\sum z_i^2$ without stating that it is the equilateral-triangle condition. Corrected the typo and stated the condition; answer 0 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Place the centroid at the origin: the vertices are $z,\\ \\omega z,\\ \\omega^2z$, so the sum is $z^2(1+\\omega^2+\\omega^4)=0$.",
+     "solution": [
+      "Let $w_k=z_k-z_0$; these are the vertices of the same triangle with centroid $0$.",
+      "An equilateral triangle centred at $0$ has vertices that are rotations of one another by $120^\\circ$: $w_1=w,\\ w_2=\\omega w,\\ w_3=\\omega^2w$ with $\\omega=e^{2\\pi i/3}$ (or the reverse orientation).",
+      "$\\sum w_k^2=w^2\\left(1+\\omega^2+\\omega^4\\right)=w^2\\left(1+\\omega^2+\\omega\\right)$ since $\\omega^3=1$.",
+      "As $1+\\omega+\\omega^2=0$, the sum is $0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$z_1,z_2,z_3$ form an equilateral triangle $\\iff z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1$ (equivalently $\\sum\\frac1{z-\\ldots}$ forms, or $\\omega$-rotation relation).",
+    "The centroid is $\\frac{z_1+z_2+z_3}{3}$; relative to it an equilateral triangle is $\\{w,\\omega w,\\omega^2w\\}$, so $\\sum(z_k-z_0)^m=0$ whenever $3\\nmid m$.",
+    "Check: vertices $1,\\omega,\\omega^2$ (centroid 0): $1+\\omega^2+\\omega^4=0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Product of complex numbers",
+    "Range of $a+b\\sin2\theta$"
+   ],
+   "level": 2,
+   "question": "Let the product of $\\omega_1=(8+i)\\sin\\theta+(7+4i)\\cos\\theta$ and $\\omega_2=(1+8i)\\sin\\theta+(4+7i)\\cos\\theta$ be $\\alpha+i\\beta$, $i=\\sqrt{-1}$. Let $p$ and $q$ be the maximum and the minimum values of $\\alpha+\\beta$ respectively. Then $p+q$ is equal to:",
+   "options": [
+    "$160$",
+    "$150$",
+    "$140$",
+    "$130$"
+   ],
+   "answer": "(D) $130$",
+   "key_idea": "Multiply out; the real parts all vanish, leaving $\\alpha=0$ and $\\beta=65+60\\sin2\\theta$.",
+   "solution": [
+    "$\\omega_1\\omega_2=(8+i)(1+8i)\\sin^2\\theta+(8+i)(4+7i)\\sin\\theta\\cos\\theta+(7+4i)(1+8i)\\sin\\theta\\cos\\theta+(7+4i)(4+7i)\\cos^2\\theta$.",
+    "$(8+i)(1+8i)=65i$; $(8+i)(4+7i)=25+60i$; $(7+4i)(1+8i)=-25+60i$; $(7+4i)(4+7i)=65i$.",
+    "So $\\omega_1\\omega_2=65i\\sin^2\\theta+120i\\sin\\theta\\cos\\theta+65i\\cos^2\\theta$.",
+    "$=65i+60i\\sin2\\theta$.",
+    "Hence $\\alpha=0$ and $\\beta=65+60\\sin2\\theta$.",
+    "$\\alpha+\\beta$ ranges over $[5,125]$: $p=125$, $q=5$, so $p+q=130$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Note $\\omega_2=i\\,\\overline{\\omega_1}$ for real $\\theta$, so the product is $i|\\omega_1|^2$, purely imaginary.",
+     "solution": [
+      "$1+8i=i(8-i)$ and $4+7i=i(7-4i)$, so $\\omega_2=i\\left[(8-i)\\sin\\theta+(7-4i)\\cos\\theta\\right]=i\\,\\overline{\\omega_1}$ for real $\\theta$.",
+      "Hence $\\omega_1\\omega_2=i|\\omega_1|^2$, so $\\alpha=0$ and $\\beta=|\\omega_1|^2$.",
+      "$|\\omega_1|^2=|8+i|^2\\sin^2\\theta+|7+4i|^2\\cos^2\\theta+2\\,\\mathrm{Re}\\!\\left[(8+i)\\overline{(7+4i)}\\right]\\sin\\theta\\cos\\theta$.",
+      "$(8+i)(7-4i)=60-25i$, real part $60$, so $\\beta=65+120\\sin\\theta\\cos\\theta=65+60\\sin2\\theta$.",
+      "Therefore $\\alpha+\\beta\\in[5,125]$ and $p+q=130$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $w_2=i\\,\\overline{w_1}$ (or $\\lambda\\overline{w_1}$) the product $w_1w_2=\\lambda|w_1|^2$; spotting conjugate structure avoids long multiplication.",
+    "$|A\\sin\\theta+B\\cos\\theta|^2=|A|^2\\sin^2\\theta+|B|^2\\cos^2\\theta+2\\,\\mathrm{Re}(A\\bar B)\\sin\\theta\\cos\\theta$ for complex $A,B$ and real $\\theta$.",
+    "$a+b\\sin2\\theta$ has maximum $a+|b|$ and minimum $a-|b|$; here $65\\pm60$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Möbius expressions of a point on the unit circle (real and purely imaginary values)"
+   ],
+   "level": 3,
+   "question": "Among the statements\n(S1): The set $\\left\\{z\\in\\mathbb{C}-\\{-i\\}:|z|=1\\ \\text{and}\\ \\frac{z-i}{z+i}\\ \\text{is purely real}\\right\\}$ contains exactly two elements, and\n(S2): The set $\\left\\{z\\in\\mathbb{C}-\\{-1\\}:|z|=1\\ \\text{and}\\ \\frac{z-1}{z+1}\\ \\text{is purely imaginary}\\right\\}$ contains infinitely many elements.",
+   "options": [
+    "both are incorrect",
+    "only (S2) is correct",
+    "only (S1) is correct",
+    "both are correct"
+   ],
+   "answer": "(B) only (S2) is correct",
+   "key_idea": "On $|z|=1$ replace $\\bar z$ by $1/z$; the conjugate-equality test then reduces each statement to a one-line identity.",
+   "solution": [
+    "S1: $\\frac{z-i}{z+i}$ is real iff it equals its conjugate: $\\frac{z-i}{z+i}=\\frac{\\bar z+i}{\\bar z-i}$.",
+    "Cross-multiplying, $(z-i)(\\bar z-i)=(z+i)(\\bar z+i)$, i.e. $|z|^2-i(z+\\bar z)-1=|z|^2+i(z+\\bar z)-1$.",
+    "This gives $z+\\bar z=0$, i.e. $\\mathrm{Re}\\,z=0$.",
+    "With $|z|=1$ this means $z=\\pm i$; $z=-i$ is excluded, so only $z=i$ remains: one element, not two. S1 is false.",
+    "S2: $\\frac{z-1}{z+1}$ is purely imaginary iff $\\frac{z-1}{z+1}+\\frac{\\bar z-1}{\\bar z+1}=0$.",
+    "Using $\\bar z=\\frac1z$: $\\frac{\\bar z-1}{\\bar z+1}=\\frac{\\frac1z-1}{\\frac1z+1}=\\frac{1-z}{1+z}$.",
+    "So the left side is $\\frac{z-1}{z+1}+\\frac{1-z}{1+z}=0$ for every $z$ on the unit circle, $z\\neq-1$.",
+    "Hence S2 holds for all points of the circle (apart from $-1$, and $z=1$ where the value is $0$): infinitely many. S2 is correct, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $z=e^{i\\theta}$; half-angle formulas give $\\frac{z-1}{z+1}=i\\tan\\frac\\theta2$ and $\\frac{z-i}{z+i}=i\\tan\\frac{\\theta-\\pi/2}{2}$.",
+     "solution": [
+      "For $z=e^{i\\theta}$: $\\frac{z-1}{z+1}=\\frac{e^{i\\theta/2}\\cdot2i\\sin\\frac\\theta2}{e^{i\\theta/2}\\cdot2\\cos\\frac\\theta2}=i\\tan\\frac\\theta2$.",
+      "This is purely imaginary for every $\\theta\\ne\\pi$, so S2 has infinitely many elements: correct.",
+      "Similarly $\\frac{z-i}{z+i}$ is $\\frac{e^{i\\theta}-e^{i\\pi/2}}{e^{i\\theta}+e^{i\\pi/2}}=i\\tan\\frac{\\theta-\\pi/2}{2}$, again purely imaginary.",
+      "It is real only when $\\tan\\frac{\\theta-\\pi/2}{2}=0$, i.e. $\\theta=\\frac\\pi2$, $z=i$ (value $0$): a single point. S1 has one element, so it is false.",
+      "Only S2 is correct: (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|z|=1$ and unit complex $a$, $\\frac{z-a}{z+a}$ is purely imaginary (or 0): $z$ and $a$ are on the circle, so $\\frac{z-a}{z+a}=i\\tan\\frac{\\arg z-\\arg a}{2}$.",
+    "Thales: $\\angle$ at $z$ subtended by diameter $(a,-a)$ is $90^\\circ$, i.e. $\\frac{z-a}{z+a}$ is purely imaginary for all $z$ on the circle.",
+    "Real test: $w$ real iff $w=\\bar w$; purely imaginary iff $w+\\bar w=0$ (and $w\\ne0$ if $0$ is excluded)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Locus of a complex number (circle) from a real-part condition"
+   ],
+   "level": 3,
+   "question": "If the locus of $z\\in\\mathbb{C}$, such that $\\mathrm{Re}\\left(\\frac{z-1}{2z+i}\\right)+\\mathrm{Re}\\left(\\frac{\\bar z-1}{2\\bar z-i}\\right)=2$, is a circle of radius $r$ and centre $(a,b)$, then $\\frac{15ab}{r^2}$ is equal to:",
+   "options": [
+    "12",
+    "24",
+    "18",
+    "16"
+   ],
+   "answer": "(C) 18",
+   "key_idea": "The two terms are conjugates, so the condition is $\\mathrm{Re}\\frac{z-1}{2z+i}=1$; put $z=x+iy$ and read off the circle.",
+   "solution": [
+    "Let $c=\\frac{z-1}{2z+i}$; the second term is $\\bar c$, and $\\mathrm{Re}(c)+\\mathrm{Re}(\\bar c)=2\\,\\mathrm{Re}(c)$.",
+    "Put $z=x+iy$: $c=\\frac{x+iy-1}{2x+2iy+i}=\\frac{(x-1)+iy}{2x+i(2y+1)}$.",
+    "Multiply by the conjugate: $c=\\frac{\\left((x-1)+iy\\right)\\left(2x-i(2y+1)\\right)}{4x^2+(2y+1)^2}$.",
+    "$\\mathrm{Re}(c)=\\frac{2x(x-1)+y(2y+1)}{4x^2+(2y+1)^2}$.",
+    "Given $2\\,\\mathrm{Re}(c)=2$: $\\frac{2x^2-2x+2y^2+y}{4x^2+4y^2+4y+1}=1$.",
+    "So $2x^2-2x+2y^2+y=4x^2+4y^2+4y+1$, i.e. $x^2+y^2+x+\\frac{3y}{2}+\\frac12=0$.",
+    "Centre $\\left(-\\frac12,-\\frac34\\right)$, and $r^2=\\frac14+\\frac9{16}-\\frac12=\\frac5{16}$.",
+    "$ab=\\frac12\\cdot\\frac34=\\frac38$, so $\\frac{15ab}{r^2}=15\\cdot\\frac38\\cdot\\frac{16}{5}=18$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$\\mathrm{Re}\\,c=1$ means $|c|=|c-2|$; this turns into an Apollonius circle $|z-1|=3\\left|z+\\frac{1+2i}{3}\\right|$.",
+     "solution": [
+      "With $c=\\frac{z-1}{2z+i}$, $\\mathrm{Re}\\,c=1\\iff c$ is equidistant from $0$ and $2$, i.e. $|c|=|c-2|$.",
+      "$c-2=\\frac{z-1-4z-2i}{2z+i}=\\frac{-(3z+1+2i)}{2z+i}$, so $|c|=|c-2|$ becomes $|z-1|=|3z+1+2i|=3\\left|z+\\frac{1+2i}{3}\\right|$.",
+      "Thus $|z-A|=3|z-B|$ with $A=1$, $B=-\\frac{1+2i}{3}$: an Apollonius circle with $k=3$.",
+      "Centre $=\\frac{A-k^2B}{1-k^2}=\\frac{1+3(1+2i)}{-8}=-\\frac12-\\frac34i$, so $(a,b)=\\left(-\\frac12,-\\frac34\\right)$.",
+      "Radius $=\\frac{k|A-B|}{|k^2-1|}=\\frac{3\\cdot\\frac{|4+2i|}{3}}{8}=\\frac{\\sqrt{20}}{8}$, so $r^2=\\frac{20}{64}=\\frac5{16}$.",
+      "$\\frac{15ab}{r^2}=15\\cdot\\frac38\\cdot\\frac{16}5=18$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Re}\\,w+\\mathrm{Re}\\,\\bar w=2\\,\\mathrm{Re}\\,w$: a sum of conjugate terms is just double the real part.",
+    "Apollonius: $|z-A|=k|z-B|$ ($k\\ne1$) is a circle with centre $\\frac{A-k^2B}{1-k^2}$ and radius $\\frac{k|A-B|}{|1-k^2|}$.",
+    "$\\mathrm{Re}\\,c=\\lambda\\iff|c|^2-\\ldots$: for $\\lambda=1$ use $|c|=|c-2|$; a Möbius image of a line is a circle."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Cube roots of unity",
+    "Row-vector–matrix product giving a zero vector"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha$ be a solution of $x^2+x+1=0$, and for some $a$ and $b\\in\\mathbb{R}$, $\\begin{bmatrix}4&a&b\\end{bmatrix}\\begin{bmatrix}1&16&13\\\\-1&-1&2\\\\-2&-14&-8\\end{bmatrix}=\\begin{bmatrix}0&0&0\\end{bmatrix}$. If $\\frac4{\\alpha^4}+\\frac m{\\alpha^a}+\\frac n{\\alpha^b}=3$, then $m+n$ is equal to:",
+   "options": [
+    "8",
+    "7",
+    "3",
+    "11"
+   ],
+   "answer": "(D) 11",
+   "key_idea": "Each column of the matrix gives a linear equation for $a,b$; then $\\alpha^3=1$ reduces the powers to $1,\\alpha,\\alpha^2$.",
+   "solution": [
+    "Multiplying the row by each column: $4-a-2b=0$, $64-a-14b=0$, $52+2a-8b=0$.",
+    "Solving, $a=-6$ and $b=5$ (check in the third: $52-12-40=0$).",
+    "Now $\\alpha=\\omega$ is a non-real cube root of unity, so $\\omega^3=1$ and $1+\\omega+\\omega^2=0$.",
+    "$\\frac4{\\alpha^4}+\\frac m{\\alpha^a}+\\frac n{\\alpha^b}=3$ becomes $\\frac4{\\omega^4}+\\frac m{\\omega^{-6}}+\\frac n{\\omega^5}=3$.",
+    "$\\frac4{\\omega^4}=4\\omega^{-1}=4\\omega^2$, $\\omega^{-6}=1$, $\\frac1{\\omega^5}=\\omega^{-5}=\\omega$, so $4\\omega^2+m+n\\omega=3$.",
+    "Divide by 4: $\\left(\\frac{m-3}{4}\\right)+\\left(\\frac n4\\right)\\omega+\\omega^2=0$.",
+    "Using $1+\\omega+\\omega^2=0$ (and that $1,\\omega$ are independent over $\\mathbb{R}$): $\\frac{m-3}4=1$ and $\\frac n4=1$.",
+    "So $m=7$, $n=4$ and $m+n=11$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$x^2+x+1=0\\Rightarrow x^3=1$, so $\\alpha^k$ depends only on $k\\bmod3$, with $\\alpha^{-1}=\\alpha^2$ and $1+\\alpha+\\alpha^2=0$.",
+    "If $p+q\\omega=0$ with $p,q$ real then $p=q=0$ ($\\omega$ is non-real); with $\\omega^2=-1-\\omega$, reduce any combination to $p+q\\omega$ first.",
+    "$[c_1\\ c_2\\ c_3]M=0$ means the rows of $M$ are linearly dependent with weights $c_i$; here $4R_1-6R_2+5R_3=0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Real part of a complex fraction",
+    "Trigonometric equation $\\tan^2\\theta=1$ in $[0,2\\pi]$"
+   ],
+   "level": 2,
+   "question": "Let $A=\\left\\{\\theta\\in[0,2\\pi]:1+10\\,\\mathrm{Re}\\left(\\frac{2\\cos\\theta+i\\sin\\theta}{\\cos\\theta-3i\\sin\\theta}\\right)=0\\right\\}$. Then $\\sum_{\\theta\\in A}\\theta^{2}$ is equal to:",
+   "options": [
+    "$6\\pi^2$",
+    "$8\\pi^2$",
+    "$\\frac{27}{4}\\pi^2$",
+    "$\\frac{21}{4}\\pi^2$"
+   ],
+   "answer": "(D) $\\frac{21}{4}\\pi^2$",
+   "key_idea": "Rationalise to get the real part $\\frac{2\\cos^2\\theta-3\\sin^2\\theta}{\\cos^2\\theta+9\\sin^2\\theta}$; the equation collapses to $\\tan^2\\theta=1$.",
+   "solution": [
+    "Multiply numerator and denominator by $\\cos\\theta+3i\\sin\\theta$: the real part is $\\frac{2\\cos^2\\theta-3\\sin^2\\theta}{\\cos^2\\theta+9\\sin^2\\theta}$.",
+    "The condition $1+10\\left(\\frac{2\\cos^2\\theta-3\\sin^2\\theta}{\\cos^2\\theta+9\\sin^2\\theta}\\right)=0$ becomes $\\cos^2\\theta+9\\sin^2\\theta+20\\cos^2\\theta-30\\sin^2\\theta=0$.",
+    "That is $21\\cos^2\\theta-21\\sin^2\\theta=0$, so $\\tan^2\\theta=1$.",
+    "In $[0,2\\pi]$: $\\theta=\\frac\\pi4,\\frac{3\\pi}4,\\frac{5\\pi}4,\\frac{7\\pi}4$.",
+    "$\\sum\\theta^2=\\frac{\\pi^2}{16}+\\frac{9\\pi^2}{16}+\\frac{25\\pi^2}{16}+\\frac{49\\pi^2}{16}=\\frac{84\\pi^2}{16}=\\frac{21\\pi^2}{4}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Divide by $\\cos\\theta$ to work with $t=\\tan\\theta$, and sum the squares of odd multiples of $\\frac\\pi4$ with $\\sum_{k=1}^n(2k-1)^2=\\frac{n(4n^2-1)}3$.",
+     "solution": [
+      "Divide numerator and denominator by $\\cos\\theta$ ($\\cos\\theta\\neq0$ is needed, else denominator is $-3i\\sin\\theta$ and the real part is $0\\ne-\\frac1{10}$): the fraction is $\\frac{2+it}{1-3it}$ with $t=\\tan\\theta$.",
+      "$\\frac{2+it}{1-3it}=\\frac{(2+it)(1+3it)}{1+9t^2}$ has real part $\\frac{2-3t^2}{1+9t^2}$.",
+      "$1+10\\cdot\\frac{2-3t^2}{1+9t^2}=0\\Rightarrow 1+9t^2+20-30t^2=0\\Rightarrow t^2=1$.",
+      "So $\\theta=(2k-1)\\frac\\pi4$, $k=1,2,3,4$.",
+      "$\\sum\\theta^2=\\frac{\\pi^2}{16}\\sum_{k=1}^4(2k-1)^2=\\frac{\\pi^2}{16}\\cdot\\frac{4\\cdot63}{3}=\\frac{84\\pi^2}{16}=\\frac{21\\pi^2}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Re}\\frac{a+ib}{c+id}=\\frac{ac+bd}{c^2+d^2}$; with $a=2\\cos\\theta,\\ b=\\sin\\theta,\\ c=\\cos\\theta,\\ d=-3\\sin\\theta$ this gives $\\frac{2\\cos^2\\theta-3\\sin^2\\theta}{\\cos^2\\theta+9\\sin^2\\theta}$.",
+    "For ratio expressions in $\\cos\\theta,\\sin\\theta$ of equal degree, divide by $\\cos^n\\theta$ and use $t=\\tan\\theta$ (after checking $\\cos\\theta=0$ separately).",
+    "$\\sum_{k=1}^{n}(2k-1)^2=\\frac{n(2n-1)(2n+1)}{3}$; check $n=4$: $1+9+25+49=84$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Modulus and argument of unit complex numbers (Euler form)"
+   ],
+   "level": 2,
+   "question": "Let $z_1,z_2$ and $z_3$ be three complex numbers on the circle $|z|=1$ with $\\arg(z_1)=-\\frac\\pi4$, $\\arg(z_2)=0$ and $\\arg(z_3)=\\frac\\pi4$. If $\\left|z_1\\bar z_2+z_2\\bar z_3+z_3\\bar z_1\\right|^2=\\alpha+\\beta\\sqrt2$, $\\alpha,\\beta\\in\\mathbb{Z}$, then the value of $\\alpha^2+\\beta^2$ is:",
+   "options": [
+    "31",
+    "24",
+    "29",
+    "41"
+   ],
+   "answer": "(C) 29",
+   "key_idea": "Write $z_k=e^{i\\theta_k}$; each $z_i\\bar z_j=e^{i(\\theta_i-\\theta_j)}$ is a unit vector, so the sum is easy.",
+   "solution": [
+    "$z_1=e^{-i\\pi/4}$, $z_2=1$, $z_3=e^{i\\pi/4}$.",
+    "$z_1\\bar z_2=e^{-i\\pi/4}$, $z_2\\bar z_3=e^{-i\\pi/4}$, $z_3\\bar z_1=e^{i\\pi/4}e^{i\\pi/4}=e^{i\\pi/2}=i$.",
+    "The sum is $2e^{-i\\pi/4}+i=\\sqrt2-\\sqrt2\\,i+i=\\sqrt2+(1-\\sqrt2)i$.",
+    "$|\\cdot|^2=(\\sqrt2)^2+(1-\\sqrt2)^2=2+1+2-2\\sqrt2=5-2\\sqrt2$.",
+    "So $\\alpha=5$ and $\\beta=-2$, giving $\\alpha^2+\\beta^2=25+4=29$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF concludes '$\\alpha=5,\\ \\beta=2$' from $5-2\\sqrt2$; since $5-2\\sqrt2=\\alpha+\\beta\\sqrt2$ gives $\\beta=-2$. The sign slip does not change $\\alpha^2+\\beta^2=29$. Corrected to $\\beta=-2$.",
+   "alternate_solutions": [
+    {
+     "idea": "For unit vectors $u_k$, $|u_1+u_2+u_3|^2=3+2\\sum\\cos(\\text{angle between pairs})$.",
+     "solution": [
+      "The three terms are unit vectors at angles $-\\frac\\pi4,\\ -\\frac\\pi4,\\ \\frac\\pi2$.",
+      "For unit complex numbers $u_1,u_2,u_3$: $|u_1+u_2+u_3|^2=3+2\\left[\\cos(\\phi_1-\\phi_2)+\\cos(\\phi_2-\\phi_3)+\\cos(\\phi_3-\\phi_1)\\right]$.",
+      "The angle differences are $0,\\ \\frac{3\\pi}4,\\ \\frac{3\\pi}4$ (in absolute value), with cosines $1,\\ -\\frac{\\sqrt2}2,\\ -\\frac{\\sqrt2}2$.",
+      "$|S|^2=3+2\\left(1-\\sqrt2\\right)=5-2\\sqrt2$, so $\\alpha=5,\\ \\beta=-2$ and $\\alpha^2+\\beta^2=29$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|z|=1$, $z_i\\bar z_j=e^{i(\\theta_i-\\theta_j)}$: such cyclic sums depend only on the angle differences, so rotating all $z_k$ by a common angle leaves $\\sum z_i\\bar z_j$ unchanged.",
+    "$\\left|\\sum u_k\\right|^2=n+2\\sum_{j<k}\\cos(\\phi_j-\\phi_k)$ for unit complex $u_k$.",
+    "If $\\alpha+\\beta\\sqrt2$ is the value, match rational and irrational parts (with the correct signs): $5-2\\sqrt2$ means $\\beta=-2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Locus of a line in complex form",
+    "Area of a circular segment"
+   ],
+   "level": 3,
+   "question": "Let the curve $z(1+i)+\\bar z(1-i)=4$, $z\\in\\mathbb{C}$, divide the region $|z-3|\\le1$ into two parts of areas $\\alpha$ and $\\beta$. Then $|\\alpha-\\beta|$ is equal to:",
+   "options": [
+    "$1+\\frac\\pi2$",
+    "$1+\\frac\\pi6$",
+    "$1+\\frac\\pi3$",
+    "$1+\\frac\\pi4$"
+   ],
+   "answer": "(A) $1+\\frac\\pi2$",
+   "key_idea": "The curve is the line $x-y=2$, which cuts the unit disc centred at $(3,0)$ in a chord subtending $90^\\circ$ at the centre.",
+   "solution": [
+    "Put $z=x+iy$: $(x+iy)(1+i)+(x-iy)(1-i)=4$.",
+    "Expanding: $x-y+iy+ix+x-ix-iy-y=4$... that is $2x-2y=4$, so $x-y=2$.",
+    "$|z-3|\\le1$ is the disc with centre $C(3,0)$ and radius $1$.",
+    "The line $x-y=2$ meets the circle at $A(2,0)$ and $B(3,1)$ (both satisfy $x-y=2$ and lie on the circle).",
+    "$\\alpha+\\beta=\\pi r^2=\\pi$.",
+    "The smaller part is $\\alpha=$ area of sector $-$ area of $\\triangle ACB=\\frac{\\pi(1)^2}{4}-\\frac12\\cdot1\\cdot1=\\frac\\pi4-\\frac12$, since $\\angle ACB=90^\\circ$.",
+    "Then $\\beta=\\pi-\\alpha$, so $|\\alpha-\\beta|=|2\\alpha-\\pi|=\\left|\\frac\\pi2-1-\\pi\\right|=\\left|-1-\\frac\\pi2\\right|$.",
+    "$|\\alpha-\\beta|=1+\\frac\\pi2$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare with the diameter parallel to the chord: the difference of the two parts is twice the strip between them, found by integration.",
+     "solution": [
+      "The chord $x-y=2$ is at distance $d=\\frac{|3-0-2|}{\\sqrt2}=\\frac1{\\sqrt2}$ from the centre.",
+      "The diameter parallel to it halves the disc, each half having area $\\frac\\pi2$.",
+      "The smaller part is $\\alpha=\\frac\\pi2-S$ and the larger $\\beta=\\frac\\pi2+S$, where $S$ is the area of the strip between the diameter and the chord.",
+      "Width $2\\sqrt{1-t^2}$ at distance $t$ from the diameter, so $S=\\int_0^{d}2\\sqrt{1-t^2}\\,dt=d\\sqrt{1-d^2}+\\sin^{-1}d$.",
+      "With $d=\\frac1{\\sqrt2}$: $S=\\frac1{\\sqrt2}\\cdot\\frac1{\\sqrt2}+\\frac\\pi4=\\frac12+\\frac\\pi4$.",
+      "$|\\alpha-\\beta|=2S=1+\\frac\\pi2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$z(1+i)+\\overline{z(1+i)}=2\\,\\mathrm{Re}\\left[z(1+i)\\right]$, so $\\mathrm{Re}[z(a+ib)]=c$ is a straight line; in general $\\bar az+a\\bar z=2c$ is a line with normal direction $a$.",
+    "Segment area for central angle $\\varphi$ and radius $r$: $\\frac{r^2}{2}(\\varphi-\\sin\\varphi)$; here $\\varphi=\\frac\\pi2$ gives $\\frac12\\left(\\frac\\pi2-1\\right)$.",
+    "Difference of the two parts cut by a chord at distance $d$ from the centre (radius 1): $2\\left(d\\sqrt{1-d^2}+\\sin^{-1}d\\right)$; at $d=\\frac1{\\sqrt2}$: $1+\\frac\\pi2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Locus of a complex number (circle from a modulus ratio)",
+    "Area of a triangle (coordinate geometry)"
+   ],
+   "level": 3,
+   "question": "Let $\\left|\\frac{\\bar z-i}{2\\bar z+i}\\right|=\\frac13$, $z\\in\\mathbb{C}$, be the equation of a circle with centre at $C$. If the area of the triangle, whose vertices are at the points $(0,0)$, $C$ and $(\\alpha,0)$ is $11$ square units, then $\\alpha^2$ equals:",
+   "options": [
+    "50",
+    "$\\frac{121}{25}$",
+    "100",
+    "$\\frac{81}{25}$"
+   ],
+   "answer": "(C) 100",
+   "key_idea": "Square the modulus condition to get the circle $5x^2+5y^2+22y+8=0$ and read off $C\\left(0,-\\frac{11}5\\right)$.",
+   "solution": [
+    "With $z=x+iy$: $3|x-iy-i|=|2(x-iy)+i|$, i.e. $3|x-i(y+1)|=|2x+i(1-2y)|$.",
+    "Squaring: $9\\left(x^2+(y+1)^2\\right)=4x^2+(1-2y)^2$.",
+    "$9x^2+9y^2+18y+9=4x^2+4y^2-4y+1$, so $5x^2+5y^2+22y+8=0$.",
+    "That is $x^2+y^2+\\frac{22}5y+\\frac85=0$, with centre $C\\left(0,-\\frac{11}5\\right)$.",
+    "Area of the triangle with vertices $(0,0)$, $\\left(0,-\\frac{11}5\\right)$, $(\\alpha,0)$: $\\frac12\\left|\\begin{matrix}0&0&1\\\\0&-\\frac{11}5&1\\\\\\alpha&0&1\\end{matrix}\\right|=11$.",
+    "So $\\left|\\frac{11\\alpha}5\\right|=22$, i.e. $\\left|\\frac\\alpha5\\right|=2$.",
+    "$|\\alpha|=10$, so $\\alpha^2=100$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Conjugation preserves modulus, so the condition is the Apollonius circle $3|z+i|=2\\left|z-\\frac i2\\right|$, whose centre has a formula.",
+     "solution": [
+      "$|\\bar z-i|=|\\overline{z+i}|=|z+i|$ and $|2\\bar z+i|=|\\overline{2z-i}|=|2z-i|=2\\left|z-\\frac i2\\right|$.",
+      "So $\\frac{|z+i|}{2|z-i/2|}=\\frac13$, i.e. $|z-A|=k|z-B|$ with $A=-i$, $B=\\frac i2$, $k=\\frac23$.",
+      "Centre $=\\frac{A-k^2B}{1-k^2}=\\frac{-i-\\frac49\\cdot\\frac i2}{\\frac59}=\\frac{-\\frac{11i}9}{\\frac59}=-\\frac{11}5i$, so $C\\left(0,-\\frac{11}5\\right)$.",
+      "Triangle with base $|\\alpha|$ on the $x$-axis and height $\\frac{11}5$: $\\frac12\\cdot|\\alpha|\\cdot\\frac{11}5=11$.",
+      "$|\\alpha|=10$, so $\\alpha^2=100$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|\\bar w|=|w|$, so $\\left|\\frac{\\bar z-a}{\\bar z-b}\\right|=\\left|\\frac{z-\\bar a}{z-\\bar b}\\right|$: conjugating inside a modulus ratio only conjugates the fixed points.",
+    "$\\left|\\frac{z-A}{z-B}\\right|=k\\ne1$ is a circle with centre $\\frac{A-k^2B}{1-k^2}$; the centre lies on line $AB$.",
+    "Triangle with a vertex at the origin, one on an axis: area $=\\frac12\\cdot\\text{base}\\cdot\\text{height}$ — no determinant needed."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Complex numbers on the unit circle and a modulus equation"
+   ],
+   "level": 2,
+   "question": "The number of complex numbers $z$, satisfying $|z|=1$ and $\\left|\\frac z{\\bar z}+\\frac{\\bar z}{z}\\right|=1$, is:",
+   "options": [
+    "6",
+    "4",
+    "10",
+    "8"
+   ],
+   "answer": "(D) 8",
+   "key_idea": "On $|z|=1$ put $z=e^{i\\theta}$; then $\\frac z{\\bar z}+\\frac{\\bar z}z=2\\cos2\\theta$, so the equation is $|\\cos2\\theta|=\\frac12$.",
+   "solution": [
+    "Let $z=e^{i\\theta}$, so $\\bar z=e^{-i\\theta}$ and $\\frac z{\\bar z}=e^{2i\\theta}$.",
+    "The condition becomes $\\left|e^{2i\\theta}+e^{-2i\\theta}\\right|=1$.",
+    "$|\\cos2\\theta+i\\sin2\\theta+\\cos2\\theta-i\\sin2\\theta|=|2\\cos2\\theta|=1$.",
+    "So $|\\cos2\\theta|=\\frac12$, i.e. $\\cos2\\theta=\\pm\\frac12$.",
+    "For $\\theta\\in[0,2\\pi)$, $2\\theta\\in[0,4\\pi)$: $\\cos2\\theta=\\frac12$ has 4 solutions and $\\cos2\\theta=-\\frac12$ has 4 solutions.",
+    "Number of solutions $=8$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Set $w=z^2$ (unit modulus): $|w+\\frac1w|=1$ gives a quadratic with 4 roots of $w$, each with two square roots $z$.",
+     "solution": [
+      "For $|z|=1$, $\\bar z=\\frac1z$, so $\\frac z{\\bar z}=z^2=w$ and $\\frac{\\bar z}z=\\frac1w$, with $|w|=1$.",
+      "$w+\\frac1w=2\\cos2\\theta$ is real, so $\\left|w+\\frac1w\\right|=1$ means $w+\\frac1w=\\pm1$.",
+      "$w^2-w+1=0$ gives $w=e^{\\pm i\\pi/3}$; $w^2+w+1=0$ gives $w=e^{\\pm2i\\pi/3}$: four distinct values of $w$.",
+      "Each $w$ with $|w|=1$ has exactly two square roots $z$.",
+      "Total $=4\\times2=8$ values of $z$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|z|=1$: $\\frac z{\\bar z}=z^2$, $z+\\bar z=2\\cos\\theta$, $z^n+z^{-n}=2\\cos n\\theta$.",
+    "$\\cos k\\theta=c$ ($|c|<1$) has exactly $2k$ solutions for $\\theta\\in[0,2\\pi)$; here $k=2$ gives 4 for each of $\\pm\\frac12$.",
+    "Counting trick: $z\\mapsto z^2$ is $2$-to-$1$ on the unit circle, so the number of $z$ is twice the number of $w=z^2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Roots of a quadratic with complex coefficients and symmetric functions of roots"
+   ],
+   "level": 3,
+   "question": "If $\\alpha$ and $\\beta$ are the roots of the equation $2z^2-3z-2i=0$, where $i=\\sqrt{-1}$, then $16\\cdot\\mathrm{Re}\\left(\\frac{\\alpha^{19}+\\beta^{19}+\\alpha^{11}+\\beta^{11}}{\\alpha^{15}+\\beta^{15}}\\right)\\cdot\\mathrm{Im}\\left(\\frac{\\alpha^{19}+\\beta^{19}+\\alpha^{11}+\\beta^{11}}{\\alpha^{15}+\\beta^{15}}\\right)$ is equal to:",
+   "options": [
+    "398",
+    "409",
+    "441",
+    "312"
+   ],
+   "answer": "(C) 441",
+   "key_idea": "Each root satisfies $\\alpha-\\frac i\\alpha=\\frac32$, which yields $\\alpha^4+\\alpha^{-4}$, and the ratio factors as $\\alpha^{4}+\\alpha^{-4}$.",
+   "solution": [
+    "$\\alpha$ is a root of $2z^2-3z-2i=0$, so $2\\alpha^2-3\\alpha-2i=0$, i.e. $2\\alpha^2-2i=3\\alpha$.",
+    "Dividing by $2\\alpha$: $\\alpha-\\frac i\\alpha=\\frac32$.",
+    "Squaring: $\\alpha^2-2i-\\frac1{\\alpha^2}=\\frac94$, so $\\alpha^2-\\frac1{\\alpha^2}=\\frac94+2i$.",
+    "Squaring again: $\\alpha^4+\\frac1{\\alpha^4}-2=\\frac{81}{16}-4+9i$.",
+    "So $\\alpha^4+\\frac1{\\alpha^4}=\\frac{81-32}{16}+9i=\\frac{49}{16}+9i$.",
+    "Similarly $\\beta^4+\\frac1{\\beta^4}=\\frac{49}{16}+9i$.",
+    "Now $\\frac{\\alpha^{19}+\\beta^{19}+\\alpha^{11}+\\beta^{11}}{\\alpha^{15}+\\beta^{15}}=\\frac{\\alpha^{15}\\left(\\alpha^4+\\frac1{\\alpha^4}\\right)+\\beta^{15}\\left(\\beta^4+\\frac1{\\beta^4}\\right)}{\\alpha^{15}+\\beta^{15}}$.",
+    "$=\\frac{\\left(\\frac{49}{16}+9i\\right)\\left(\\alpha^{15}+\\beta^{15}\\right)}{\\alpha^{15}+\\beta^{15}}=\\frac{49}{16}+9i$.",
+    "The required value is $16\\cdot\\frac{49}{16}\\cdot9=441$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Since $\\alpha\\beta=-i$ we have $\\beta^4=\\alpha^{-4}$, so the ratio equals $\\alpha^4+\\beta^4$, found by Newton's identities.",
+     "solution": [
+      "For $2z^2-3z-2i=0$: $\\alpha+\\beta=\\frac32$ and $\\alpha\\beta=-i$.",
+      "$\\beta=\\frac{-i}{\\alpha}$, so $\\beta^4=\\frac{(-i)^4}{\\alpha^4}=\\frac1{\\alpha^4}$ and also $\\alpha^4=\\frac1{\\beta^4}$.",
+      "Hence $\\alpha^{19}+\\alpha^{11}=\\alpha^{15}\\left(\\alpha^4+\\beta^4\\right)$ and $\\beta^{19}+\\beta^{11}=\\beta^{15}\\left(\\beta^4+\\alpha^4\\right)$.",
+      "So the fraction equals $\\alpha^4+\\beta^4$ (valid while $\\alpha^{15}+\\beta^{15}\\ne0$).",
+      "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta=\\frac94+2i$.",
+      "$\\alpha^4+\\beta^4=\\left(\\alpha^2+\\beta^2\\right)^2-2(\\alpha\\beta)^2=\\left(\\frac{81}{16}-4+9i\\right)-2(-1)=\\frac{49}{16}+9i$.",
+      "$16\\cdot\\frac{49}{16}\\cdot9=441$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\alpha\\beta=c$ with $c^4=1$ (here $c=-i$), then $\\beta^4=\\alpha^{-4}$: powers $\\alpha^{k+4}+\\alpha^{k-4}$ can be grouped as $\\alpha^k\\left(\\alpha^4+\\alpha^{-4}\\right)$.",
+    "Newton's sums for a quadratic: $p_1=s$, $p_2=s^2-2e$, $p_4=p_2^2-2e^2$ where $s=\\alpha+\\beta$, $e=\\alpha\\beta$.",
+    "A ratio $\\frac{x_\\alpha A+x_\\beta B}{A+B}$ with $x_\\alpha=x_\\beta$ collapses to the common value; check the denominator is non-zero (here $|\\alpha^{15}+\\beta^{15}|\\ne0$)."
+   ]
+  }
+ ]
+}
