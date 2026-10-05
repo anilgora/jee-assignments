@@ -1,0 +1,902 @@
+{
+ "title": "JEE Main Question Bank 01 Algebra 11 — Paper Analysis",
+ "subtitle": "Probability · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Algebra_11.pdf (printed Q201-Q220 renumbered 1-20; no blueprint; concepts self-assigned; marks assumed 4 each)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  }
+ ],
+ "paper_name": "QB 01 Algebra 11",
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Bayes' theorem"
+   ],
+   "level": 2,
+   "question": "Three identical bags each contain 10 balls: Bag I has 3 Red, 2 Blue, 5 Green; Bag II has 4 Red, 3 Blue, 3 Green; Bag III has 5 Red, 1 Blue, 4 Green. A person chooses a bag at random and takes out a ball. If the ball is Red, the probability that it is from Bag I is $p$; if the ball is Green, the probability that it is from Bag III is $q$. Then the value of $\\frac{1}{p}+\\frac{1}{q}$ is:",
+   "options": [
+    "$9$",
+    "$8$",
+    "$7$",
+    "$6$"
+   ],
+   "answer": "(C) $7$",
+   "key_idea": "Equal priors $\\frac13$ cancel in Bayes' formula, so each posterior is a ratio of likelihoods.",
+   "solution": [
+    "Let $B_1,B_2,B_3$ be the bags, each chosen with probability $\\frac13$; $R$ and $G$ denote a red and a green ball.",
+    "$p=P(B_1\\mid R)=\\frac{P(B_1)\\,P(R\\mid B_1)}{P(R)}$ by Bayes' theorem.",
+    "$p=\\frac{\\frac13\\cdot\\frac{3}{10}}{\\frac13\\cdot\\frac{3}{10}+\\frac13\\cdot\\frac{4}{10}+\\frac13\\cdot\\frac{5}{10}}$.",
+    "$p=\\frac{3}{3+4+5}=\\frac{1}{4}$.",
+    "$q=P(B_3\\mid G)=\\frac{P(B_3)\\,P(G\\mid B_3)}{P(G)}=\\frac{\\frac13\\cdot\\frac{4}{10}}{\\frac13\\cdot\\frac{5}{10}+\\frac13\\cdot\\frac{3}{10}+\\frac13\\cdot\\frac{4}{10}}$.",
+    "$q=\\frac{4}{5+3+4}=\\frac{1}{3}$.",
+    "$\\frac1p+\\frac1q=4+3=7$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Equal bags chosen equally means a ball drawn from a random bag is a uniform draw from all 30 balls.",
+     "solution": [
+      "A random bag and then a random ball from it (all bags have 10 balls) is the same as picking one of the 30 balls uniformly.",
+      "Red balls in total: $3+4+5=12$, of which $3$ are in Bag I, so $p=\\frac{3}{12}=\\frac14$.",
+      "Green balls in total: $5+3+4=12$, of which $4$ are in Bag III, so $q=\\frac{4}{12}=\\frac13$.",
+      "$\\frac1p+\\frac1q=4+3=7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the bags are equally likely, Bayes' theorem reduces to $P(B_i\\mid E)=\\frac{P(E\\mid B_i)}{\\sum_j P(E\\mid B_j)}$: the priors cancel.",
+    "If the bags are also of equal size, $P(B_i\\mid E)=\\frac{\\text{favourable balls in }B_i}{\\text{favourable balls in all bags}}$ (count balls of that colour).",
+    "Check: the posteriors over all bags must add to $1$ (here for Red: $\\frac3{12}+\\frac4{12}+\\frac5{12}=1$)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability distribution of a discrete random variable"
+   ],
+   "level": 2,
+   "question": "If the probability that the random variable $X$ takes the value $x$ is given by $P(X=x)=k(x+1)3^{-x}$, $x=0,1,2,3,\\dots$, where $k$ is a constant, then $P(X\\ge 3)$ is equal to:",
+   "options": [
+    "$\\frac{8}{27}$",
+    "$\\frac{4}{9}$",
+    "$\\frac{1}{9}$",
+    "$\\frac{7}{27}$"
+   ],
+   "answer": "(C) $\\frac{1}{9}$",
+   "key_idea": "Find $k$ from $\\sum P=1$ by the ``subtract $\\frac13$ of the series'' trick, then use the complement.",
+   "solution": [
+    "The probabilities add to $1$: $\\sum_{x=0}^{\\infty}k(x+1)3^{-x}=1$.",
+    "$\\frac1k=1+\\frac23+\\frac{3}{3^2}+\\frac{4}{3^3}+\\dots$ ...(1)",
+    "Multiply by $\\frac13$: $\\frac{1}{3k}=\\frac13+\\frac{2}{3^2}+\\frac{3}{3^3}+\\dots$ ...(2)",
+    "Subtract (2) from (1): $\\frac1k-\\frac1{3k}=1+\\frac13+\\frac1{3^2}+\\dots$, an infinite G.P. with sum $\\frac{1}{1-\\frac13}=\\frac32$.",
+    "So $\\frac{2}{3k}=\\frac32$, giving $k=\\frac49$.",
+    "$P(X\\ge3)=1-P(X=0)-P(X=1)-P(X=2)$.",
+    "$=1-k\\left(1+\\frac23+\\frac39\\right)=1-\\frac49\\cdot 2=\\frac19$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$P(X=x)=(x+1)p^2q^x$ is the number of failures before the 2nd success, so $X\\ge3$ is a statement about 4 trials.",
+     "solution": [
+      "With $q=\\frac13,\\ p=\\frac23$: $P(X=x)=\\binom{x+1}{1}p^2q^x=\\frac49(x+1)3^{-x}$, so $k=\\frac49$ (negative binomial: failures before the 2nd success).",
+      "The 2nd success occurs on trial $X+2$; $X\\ge3$ means the 2nd success is on trial $5$ or later.",
+      "That happens exactly when the first $4$ trials contain at most $1$ success.",
+      "$P=q^4+4\\,p\\,q^3=\\frac1{81}+4\\cdot\\frac23\\cdot\\frac1{27}=\\frac{1}{81}+\\frac{8}{81}=\\frac19$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|r|<1$: $\\sum_{x\\ge0}r^x=\\frac1{1-r}$ and $\\sum_{x\\ge0}(x+1)r^x=\\frac1{(1-r)^2}$ (here $r=\\frac13$ gives $\\frac94$, so $k=\\frac49$).",
+    "``Multiply by $r$ and subtract'' turns an arithmetico-geometric series into a G.P.",
+    "$P(X=x)=(x+1)(1-r)^2r^x$ is a negative binomial law (failures before the 2nd success); tail events become binomial statements about a fixed number of trials."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of a random variable"
+   ],
+   "level": 2,
+   "question": "A box contains $10$ pens of which $3$ are defective. A sample of $2$ pens is drawn at random and let $X$ denote the number of defective pens. Then the variance of $X$ is:",
+   "options": [
+    "$\\frac{28}{75}$",
+    "$\\frac{2}{15}$",
+    "$\\frac{3}{5}$",
+    "$\\frac{11}{15}$"
+   ],
+   "answer": "(A) $\\frac{28}{75}$",
+   "key_idea": "Tabulate $P(X=0,1,2)$ with combinations, then use $\\sigma^2=\\sum p_ix_i^2-\\mu^2$.",
+   "solution": [
+    "Out of $10$ pens, $3$ are defective and $7$ good; $X\\in\\{0,1,2\\}$.",
+    "$P(X=0)=\\frac{{}^7C_2}{{}^{10}C_2}=\\frac{7\\cdot6}{10\\cdot9}=\\frac{7}{15}$.",
+    "$P(X=1)=\\frac{{}^7C_1\\cdot{}^3C_1}{{}^{10}C_2}=\\frac{7\\cdot3}{\\frac{10\\cdot9}{2}}=\\frac{7}{15}$.",
+    "$P(X=2)=\\frac{{}^3C_2}{{}^{10}C_2}=\\frac{3}{45}=\\frac{1}{15}$. (Check: $\\frac7{15}+\\frac7{15}+\\frac1{15}=1$.)",
+    "Mean $\\mu=\\sum p_ix_i=\\frac{7}{15}+\\frac{2}{15}=\\frac{9}{15}=\\frac35$.",
+    "$\\sigma^2=\\sum p_ix_i^2-\\mu^2=\\frac{7}{15}\\cdot1+\\frac{1}{15}\\cdot4-\\left(\\frac35\\right)^2=\\frac{11}{15}-\\frac{9}{25}$.",
+    "$\\sigma^2=\\frac{55-27}{75}=\\frac{28}{75}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$X$ is hypergeometric, so use the closed form $n\\frac KN\\left(1-\\frac KN\\right)\\frac{N-n}{N-1}$.",
+     "solution": [
+      "$X$ counts defectives in a sample of $n=2$ from $N=10$ pens with $K=3$ defective: hypergeometric.",
+      "For a hypergeometric law, $\\mathrm{Var}(X)=n\\cdot\\frac KN\\left(1-\\frac KN\\right)\\cdot\\frac{N-n}{N-1}$.",
+      "$\\mathrm{Var}(X)=2\\cdot\\frac3{10}\\cdot\\frac7{10}\\cdot\\frac{8}{9}=\\frac{336}{900}=\\frac{28}{75}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hypergeometric ($n$ draws, $K$ marked out of $N$, no replacement): mean $=n\\frac KN$, variance $=n\\frac KN\\left(1-\\frac KN\\right)\\frac{N-n}{N-1}$; the factor $\\frac{N-n}{N-1}$ is the correction to the binomial variance.",
+    "Always check that the probabilities sum to $1$ before computing moments.",
+    "$\\mathrm{Var}(X)=E(X^2)-[E(X)]^2$; for $X\\in\\{0,1,2\\}$ it is quick to get $E(X^2)$ directly."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability with combinations (committee selection)"
+   ],
+   "level": 2,
+   "question": "The probability of forming a $12$-person committee from $4$ engineers, $2$ doctors and $10$ professors containing at least $3$ engineers and at least $1$ doctor is:",
+   "options": [
+    "$\\frac{103}{182}$",
+    "$\\frac{17}{26}$",
+    "$\\frac{19}{26}$",
+    "$\\frac{129}{182}$"
+   ],
+   "answer": "(D) $\\frac{129}{182}$",
+   "key_idea": "List the four admissible (engineers, doctors) splits and count each with $\\binom{4}{e}\\binom{2}{d}\\binom{10}{12-e-d}$.",
+   "solution": [
+    "There are $16$ people ($4$ engineers, $2$ doctors, $10$ professors); total committees $={}^{16}C_{12}=1820$.",
+    "Case 1: $3$E + $1$ Doc + $8$ Prof: ${}^4C_3\\cdot{}^2C_1\\cdot{}^{10}C_8=4\\cdot2\\cdot45=360$.",
+    "Case 2: $3$E + $2$ Doc + $7$ Prof: ${}^4C_3\\cdot{}^2C_2\\cdot{}^{10}C_7=4\\cdot1\\cdot120=480$.",
+    "Case 3: $4$E + $1$ Doc + $7$ Prof: ${}^4C_4\\cdot{}^2C_1\\cdot{}^{10}C_7=1\\cdot2\\cdot120=240$.",
+    "Case 4: $4$E + $2$ Doc + $6$ Prof: ${}^4C_4\\cdot{}^2C_2\\cdot{}^{10}C_6=1\\cdot1\\cdot210=210$.",
+    "Favourable committees $=360+480+240+210=1290$.",
+    "Probability $=\\frac{1290}{{}^{16}C_{12}}=\\frac{1290}{1820}=\\frac{129}{182}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose the $4$ people left out instead of the $12$ chosen: at most one engineer out and not both doctors out.",
+     "solution": [
+      "A $12$-committee is the same as choosing the $4$ people excluded; there are ${}^{16}C_4=1820$ such sets.",
+      "At least $3$ engineers in $\\iff$ at most $1$ engineer excluded; at least $1$ doctor in $\\iff$ at most $1$ doctor excluded.",
+      "Excluded $(e,d)=(0,0)$: $4$ professors, ${}^{10}C_4=210$.",
+      "$(0,1)$: ${}^2C_1\\cdot{}^{10}C_3=240$.\\ \\ $(1,0)$: ${}^4C_1\\cdot{}^{10}C_3=480$.\\ \\ $(1,1)$: ${}^4C_1\\cdot{}^2C_1\\cdot{}^{10}C_2=360$.",
+      "Total $=210+240+480+360=1290$, so the probability is $\\frac{1290}{1820}=\\frac{129}{182}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Choosing $r$ from $n$ equals choosing the $n-r$ left out: ${}^nC_r={}^nC_{n-r}$; use whichever side has the smaller numbers.",
+    "``At least'' constraints on groups: enumerate the finitely many admissible splits and multiply binomials for each group.",
+    "Sanity check for such counts: the sum over ALL splits must give ${}^{16}C_{12}$ (Vandermonde-type identity)."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Bayes' theorem"
+   ],
+   "level": 1,
+   "question": "A bag contains $19$ unbiased coins and one coin with head on both sides. One coin drawn at random is tossed and head turns up. If the probability that the drawn coin was unbiased is $\\frac mn$, $\\gcd(m,n)=1$, then $n^2-m^2$ is equal to:",
+   "options": [
+    "$64$",
+    "$80$",
+    "$60$",
+    "$72$"
+   ],
+   "answer": "(B) $80$",
+   "key_idea": "Bayes: compare $P(\\text{unbiased and head})$ with $P(\\text{biased and head})$.",
+   "solution": [
+    "Required probability $=\\frac{P(\\text{unbiased and head})}{P(\\text{biased and head})+P(\\text{unbiased and head})}$.",
+    "$P(\\text{unbiased and head})=\\frac{19}{20}\\cdot\\frac12$ and $P(\\text{biased and head})=\\frac{1}{20}\\cdot1$.",
+    "Probability $=\\frac{\\frac{19}{20}\\cdot\\frac12}{\\frac{19}{20}\\cdot\\frac12+\\frac1{20}\\cdot1}=\\frac{19}{19+2}=\\frac{19}{21}$.",
+    "So $m=19,\\ n=21$ (coprime).",
+    "$n^2-m^2=21^2-19^2=441-361=80$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Natural frequencies: list all $40$ equally likely (coin, face) outcomes and count the heads.",
+     "solution": [
+      "Each of the $20$ coins has two faces; the $40$ (coin, face) pairs are equally likely.",
+      "The $19$ fair coins contribute $19$ heads and $19$ tails; the double-headed coin contributes $2$ heads.",
+      "Heads in total: $19+2=21$; of these $19$ belong to fair coins.",
+      "Probability $=\\frac{19}{21}$, so $n^2-m^2=441-361=80$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A coin with $P(\\text{head})=h$ multiplies the odds: posterior odds (fair : two-headed) $=$ prior odds $\\times$ likelihood ratio $=19:1\\times\\frac12:1=19:2$.",
+    "Counting equally likely sides/outcomes (natural frequencies) avoids fractions in Bayes problems.",
+    "$n^2-m^2=(n-m)(n+m)=2\\cdot40=80$ gives a quick finish."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and expectation of a random variable"
+   ],
+   "level": 1,
+   "question": "Let a random variable $X$ take values $0,1,2,3$ with $P(X=0)=P(X=1)=p$, $P(X=2)=P(X=3)$ and $E(X^2)=2E(X)$. Then the value of $8p-1$ is:",
+   "options": [
+    "$3$",
+    "$0$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": "(D) $2$",
+   "key_idea": "Write $E(X^2)=2E(X)$ with the probabilities and solve the two linear equations.",
+   "solution": [
+    "Let $P(X=2)=P(X=3)=q$. Total probability $=1$: $2p+2q=1$, so $p+q=\\frac12$ ...(1)",
+    "Given $E(X^2)=2E(X)$, i.e. $\\sum P_iX_i^2=2\\sum P_iX_i$.",
+    "$p(0)^2+p(1)^2+q(2)^2+q(3)^2=2\\left(p(0)+p(1)+q(2)+q(3)\\right)$.",
+    "$p+13q=2p+10q$, so $p=3q$ ...(2)",
+    "From (1) and (2): $p=\\frac38,\\ q=\\frac18$.",
+    "$8p-1=3-1=2$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$E(X^2)-2E(X)=E\\big(X(X-2)\\big)=0$: only the values where $X(X-2)\\neq0$ matter.",
+     "solution": [
+      "$E(X^2)=2E(X)\\iff E\\big(X(X-2)\\big)=0$.",
+      "$X(X-2)$ equals $0,-1,0,3$ for $X=0,1,2,3$.",
+      "So $-p+3q=0$, i.e. $p=3q$.",
+      "With $2p+2q=1$: $8q=1$ so $p=\\frac38$ and $8p-1=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$E(X^2)=kE(X)\\iff E\\big(X(X-k)\\big)=0$: values $0$ and $k$ drop out, leaving a one-line equation.",
+    "Total probability $=1$ together with one moment condition fixes two unknown probabilities.",
+    "Check: $E(X)=p+5q=\\frac38+\\frac58=1$ and $E(X^2)=p+13q=\\frac38+\\frac{13}8=2=2E(X)$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability and set operations on events"
+   ],
+   "level": 2,
+   "question": "If $A$ and $B$ are two events such that $P(A)=0.7$, $P(B)=0.4$ and $P(A\\cap\\bar{B})=0.5$, where $\\bar{B}$ denotes the complement of $B$, then $P\\left(B\\mid A\\cup\\bar{B}\\right)$ is equal to:",
+   "options": [
+    "$\\frac16$",
+    "$\\frac12$",
+    "$\\frac14$",
+    "$\\frac13$"
+   ],
+   "answer": "(C) $\\frac14$",
+   "key_idea": "$B\\cap(A\\cup\\bar B)=A\\cap B$, and $P(A\\cap B)=P(A)-P(A\\cap\\bar B)$.",
+   "solution": [
+    "$P\\left(B\\mid A\\cup\\bar B\\right)=\\frac{P\\left(B\\cap(A\\cup\\bar B)\\right)}{P(A\\cup\\bar B)}$.",
+    "$B\\cap(A\\cup\\bar B)=(B\\cap A)\\cup(B\\cap\\bar B)=A\\cap B$, so the numerator is $P(A\\cap B)$.",
+    "$P(A\\cap\\bar B)=P(A)-P(A\\cap B)$, i.e. $0.5=0.7-P(A\\cap B)$, so $P(A\\cap B)=0.2$.",
+    "$P(A\\cup\\bar B)=1-P(\\overline{A\\cup\\bar B})=1-P(\\bar A\\cap B)$ by De Morgan.",
+    "$P(\\bar A\\cap B)=P(B)-P(A\\cap B)=0.4-0.2=0.2$, so $P(A\\cup\\bar B)=1-0.2=0.8$.",
+    "$P\\left(B\\mid A\\cup\\bar B\\right)=\\frac{0.2}{0.8}=\\frac14$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split the sample space into four disjoint regions and read the probabilities off the table.",
+     "solution": [
+      "Regions: $A\\cap B=x$, $A\\cap\\bar B=0.5$, $\\bar A\\cap B=y$, $\\bar A\\cap\\bar B=z$, adding to $1$.",
+      "$P(A)=x+0.5=0.7\\Rightarrow x=0.2$; $P(B)=x+y=0.4\\Rightarrow y=0.2$; then $z=1-0.5-0.2-0.2=0.1$.",
+      "$A\\cup\\bar B$ consists of every region except $\\bar A\\cap B$: $0.5+0.2+0.1=0.8$.",
+      "Of these, the part inside $B$ is $A\\cap B=0.2$, so the answer is $\\frac{0.2}{0.8}=\\frac14$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two events split the sample space into four disjoint regions; $P(A),P(B)$ and one more number determine all of them.",
+    "$\\overline{A\\cup\\bar B}=\\bar A\\cap B$ (De Morgan); $P(X\\cup Y)=1-P(\\bar X\\cap\\bar Y)$.",
+    "$P(A\\cap\\bar B)=P(A)-P(A\\cap B)$ and $B\\cap(A\\cup\\bar B)=A\\cap B$: conditioning on a union often collapses to an intersection."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability (sampling without replacement)"
+   ],
+   "level": 1,
+   "question": "Two balls are selected at random one by one without replacement from a bag containing $4$ white and $6$ black balls. If the probability that the first selected ball is black, given that the second selected ball is also black, is $\\frac mn$, where $\\gcd(m,n)=1$, then $m+n$ is equal to:",
+   "options": [
+    "$4$",
+    "$14$",
+    "$13$",
+    "$11$"
+   ],
+   "answer": "(B) $14$",
+   "key_idea": "$P(\\text{1st black}\\mid\\text{2nd black})=\\frac{P(\\text{both black})}{P(\\text{2nd black})}$, splitting $P(\\text{2nd black})$ by the first ball.",
+   "solution": [
+    "Let $B_1,B_2$ be the events that the first and second ball are black. Required $=\\frac{P(B_1\\cap B_2)}{P(B_2)}$.",
+    "$P(B_1\\cap B_2)=\\frac{6}{10}\\cdot\\frac59$.",
+    "$P(B_2)=P(B_1B_2)+P(W_1B_2)=\\frac6{10}\\cdot\\frac59+\\frac4{10}\\cdot\\frac69$.",
+    "Required $=\\frac{\\frac{6}{10}\\cdot\\frac{5}{9}}{\\frac{4}{10}\\cdot\\frac69+\\frac{6}{10}\\cdot\\frac59}=\\frac{30}{24+30}=\\frac59$.",
+    "$m=5,\\ n=9$, so $m+n=14$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Exchangeability: given the second ball is black, the first is a uniformly random one of the other $9$ balls.",
+     "solution": [
+      "Draws without replacement are exchangeable: fix the second ball as a particular black ball.",
+      "The first ball is then equally likely to be any of the remaining $9$ balls.",
+      "Those $9$ contain $5$ black balls, so the probability is $\\frac59$.",
+      "$m+n=5+9=14$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Without replacement, the draws are exchangeable: $P(\\text{k-th ball has a property})=P(\\text{1st ball has it})$, and conditioning on a later draw leaves the earlier ones uniform on the rest.",
+    "Reverse conditioning: $P(\\text{1st black}\\mid\\text{2nd black})=\\frac{b-1}{N-1}$ for $b$ black out of $N$; here $\\frac{5}{9}$.",
+    "The ``backward'' probability equals the ``forward'' one: $P(B_2\\mid B_1)=P(B_1\\mid B_2)=\\frac59$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of a random variable",
+    "Classical probability"
+   ],
+   "level": 2,
+   "question": "A coin is tossed three times. Let $X$ denote the number of times a tail follows a head. If $\\mu$ and $\\sigma^2$ denote the mean and variance of $X$, then the value of $64(\\mu+\\sigma^2)$ is:",
+   "options": [
+    "$64$",
+    "$48$",
+    "$32$",
+    "$51$"
+   ],
+   "answer": "(B) $48$",
+   "key_idea": "In 3 tosses ``H immediately followed by T'' can occur at most once, so $X\\in\\{0,1\\}$.",
+   "solution": [
+    "List the $8$ outcomes and count the occurrences of ``HT'' (tail right after a head).",
+    "$X=0$: TTT, HHH, THH, TTH, which is $4$ outcomes, so $P(X=0)=\\frac12$.",
+    "$X=1$: HHT, HTH, THT, HTT, which is $4$ outcomes, so $P(X=1)=\\frac12$.",
+    "$\\mu=\\sum xP(x)=0\\cdot\\frac12+1\\cdot\\frac12=\\frac12$.",
+    "$\\sigma^2=\\sum x^2P(x)-\\mu^2=0^2\\cdot\\frac12+1^2\\cdot\\frac12-\\frac14=\\frac14$.",
+    "$64(\\mu+\\sigma^2)=64\\left(\\frac12+\\frac14\\right)=16\\cdot3=48$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$X=I_1+I_2$ for the two adjacent pairs; the indicators cannot both be $1$, so $X$ is itself an indicator.",
+     "solution": [
+      "Let $I_1$ = [toss 1 is H, toss 2 is T] and $I_2$ = [toss 2 is H, toss 3 is T]; $X=I_1+I_2$.",
+      "$E(I_1)=E(I_2)=\\frac14$, so $\\mu=\\frac12$ by linearity.",
+      "$I_1I_2=0$ because toss 2 cannot be both T and H; so $X\\in\\{0,1\\}$ and $P(X=1)=\\frac12$.",
+      "A $0/1$ variable with $P(1)=\\frac12$ has variance $\\frac12\\cdot\\frac12=\\frac14$.",
+      "$64\\left(\\frac12+\\frac14\\right)=48$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Linearity of expectation with indicators: the expected number of occurrences of a pattern $=$ (number of positions) $\\times$ (probability of the pattern at one position).",
+    "A variable taking only values $0,1$ with $P(1)=p$ has mean $p$ and variance $p(1-p)$.",
+    "Overlap check: patterns such as HT cannot start at adjacent positions (the middle toss would have to be both), so the indicators are mutually exclusive."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability and Vieta's relations"
+   ],
+   "level": 2,
+   "question": "If $A$ and $B$ are two events such that $P(A\\cap B)=0.1$, and $P(A\\mid B)$ and $P(B\\mid A)$ are the roots of the equation $12x^2-7x+1=0$, then the value of $\\frac{P(\\bar A\\cup\\bar B)}{P(\\bar A\\cap\\bar B)}$ is:",
+   "options": [
+    "$\\frac94$",
+    "$\\frac53$",
+    "$\\frac74$",
+    "$\\frac43$"
+   ],
+   "answer": "(A) $\\frac94$",
+   "key_idea": "Factor the quadratic to get $P(A|B),P(B|A)$, hence $P(A),P(B)$; then De Morgan on the ratio.",
+   "solution": [
+    "$12x^2-7x+1=0\\Rightarrow(3x-1)(4x-1)=0$, so the roots are $\\frac13$ and $\\frac14$.",
+    "Let $P(A\\mid B)=\\frac13$ and $P(B\\mid A)=\\frac14$.",
+    "$\\frac{P(A\\cap B)}{P(B)}=\\frac13\\Rightarrow P(B)=0.3$ and $\\frac{P(A\\cap B)}{P(A)}=\\frac14\\Rightarrow P(A)=0.4$.",
+    "$\\frac{P(\\bar A\\cup\\bar B)}{P(\\bar A\\cap\\bar B)}=\\frac{P(\\overline{A\\cap B})}{P(\\overline{A\\cup B})}=\\frac{1-P(A\\cap B)}{1-P(A\\cup B)}$ by De Morgan.",
+    "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=0.4+0.3-0.1=0.6$.",
+    "Ratio $=\\frac{0.9}{1-0.6}=\\frac{0.9}{0.4}=\\frac94$, option (A). (Swapping the two roots gives the same $P(A\\cup B)$.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use Vieta's sum and product of the roots directly to get $P(A)P(B)$ and $P(A)+P(B)$, without finding the roots.",
+     "solution": [
+      "With $c=P(A\\cap B)=0.1$: roots $\\frac{c}{P(B)}$ and $\\frac{c}{P(A)}$; product $=\\frac{1}{12}$ gives $P(A)P(B)=12c^2=0.12$.",
+      "Sum $=\\frac7{12}$: $c\\cdot\\frac{P(A)+P(B)}{P(A)P(B)}=\\frac7{12}$, so $P(A)+P(B)=\\frac{7}{12}\\cdot\\frac{0.12}{0.1}=0.7$.",
+      "$P(A\\cup B)=0.7-0.1=0.6$.",
+      "The ratio is $\\frac{1-0.1}{1-0.6}=\\frac94$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "De Morgan: $\\bar A\\cup\\bar B=\\overline{A\\cap B}$ and $\\bar A\\cap\\bar B=\\overline{A\\cup B}$.",
+    "Both conditional probabilities share the numerator $P(A\\cap B)$, so their reciprocals are $\\frac{P(B)}{P(A\\cap B)}$ and $\\frac{P(A)}{P(A\\cap B)}$; symmetric functions of the roots give symmetric functions of $P(A),P(B)$.",
+    "Whenever only $P(A\\cup B)$ and $P(A\\cap B)$ are needed, the labelling of which root is which does not matter."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability with two unfair dice"
+   ],
+   "level": 2,
+   "question": "One die has two faces marked $1$, two faces marked $2$, one face marked $3$ and one face marked $4$. Another die has one face marked $1$, two faces marked $2$, two faces marked $3$ and one face marked $4$. The probability of getting the sum of numbers to be $4$ or $5$, when both the dice are thrown together, is:",
+   "options": [
+    "$\\frac49$",
+    "$\\frac23$",
+    "$\\frac12$",
+    "$\\frac35$"
+   ],
+   "answer": "(C) $\\frac12$",
+   "key_idea": "List the face pairs with sum $4$ and with sum $5$, weighting each by the product of the face probabilities.",
+   "solution": [
+    "Die 1 faces: $1,1,2,2,3,4$; Die 2 faces: $1,2,2,3,3,4$; each face has probability $\\frac16$.",
+    "Sum $=4$: $(1,3)$ gives $\\frac26\\cdot\\frac26$; $(2,2)$ gives $\\frac26\\cdot\\frac26$; $(3,1)$ gives $\\frac16\\cdot\\frac16$.",
+    "Total for sum $4=\\frac{4+4+1}{36}=\\frac{9}{36}=\\frac14$.",
+    "Sum $=5$: $(1,4)$ gives $\\frac26\\cdot\\frac16$; $(2,3)$ gives $\\frac26\\cdot\\frac26$; $(3,2)$ gives $\\frac16\\cdot\\frac26$; $(4,1)$ gives $\\frac16\\cdot\\frac16$.",
+    "Total for sum $5=\\frac{2+4+2+1}{36}=\\frac{9}{36}=\\frac14$.",
+    "$P(\\text{sum }4\\text{ or }5)=\\frac14+\\frac14=\\frac12$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's table for sum = 5 lists the pair (3,2) twice (rows 3 and 4, with weights 1/6 x 2/6 and 1/6 x 1/6). The last row must be (4,1) with weight 1/6 x 1/6 (die 1 has one 4, die 2 has one 1). The total 9/36 printed by the PDF is correct and unchanged. Answer (C) unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Encode each die by a generating polynomial; the product's coefficients are the pair counts for each sum.",
+     "solution": [
+      "Die 1: $2x+2x^2+x^3+x^4$; Die 2: $x+2x^2+2x^3+x^4$ (coefficient = number of faces).",
+      "Coefficient of $x^4$ in the product: $2\\cdot2+2\\cdot2+1\\cdot1=9$ (from $x\\!\\cdot\\!x^3,\\ x^2\\!\\cdot\\!x^2,\\ x^3\\!\\cdot\\!x$).",
+      "Coefficient of $x^5$: $2\\cdot1+2\\cdot2+1\\cdot2+1\\cdot1=9$ (from $x\\!\\cdot\\!x^4,\\ x^2x^3,\\ x^3x^2,\\ x^4x$).",
+      "Favourable $=9+9=18$ out of $6\\times6=36$ equally likely face pairs, so the probability is $\\frac12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For sums of independent discrete variables, multiply their generating polynomials; the coefficient of $x^s$ counts (or weights) the ways to get sum $s$.",
+    "Unequal faces on the dice: treat the $36$ ordered face pairs (die faces are distinguishable) as equally likely.",
+    "Check: all coefficients of the product must add to $6\\times6=36$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability (counting adjacent pairs on a grid)"
+   ],
+   "level": 1,
+   "question": "A board has $16$ squares arranged as a $4\\times4$ grid. Out of these $16$ squares, two squares are chosen at random. The probability that they have no side in common is:",
+   "options": [
+    "$\\frac45$",
+    "$\\frac35$",
+    "$\\frac{23}{30}$",
+    "$\\frac{7}{10}$"
+   ],
+   "answer": "(A) $\\frac45$",
+   "key_idea": "Use the complement: count the pairs sharing a side (adjacent cells) in the grid.",
+   "solution": [
+    "Total ways to choose $2$ squares: ${}^{16}C_2=120$.",
+    "Pairs that share a side: horizontal neighbours: $3$ per row $\\times\\,4$ rows $=12$.",
+    "Vertical neighbours: $3$ per column $\\times\\,4$ columns $=12$; total sharing a side $=24$.",
+    "Required probability $=1-\\frac{24}{{}^{16}C_2}=1-\\frac{24}{120}$.",
+    "$=1-\\frac15=\\frac45$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count directly: for each square, the number of squares not sharing a side with it depends only on its position.",
+     "solution": [
+      "Fix the first square; the second must be one of the other $15$ squares that is not a side-neighbour.",
+      "Corner squares ($4$ of them) have $2$ neighbours: $15-2=13$ choices each.",
+      "Edge non-corner squares ($8$) have $3$ neighbours: $12$ choices; interior squares ($4$) have $4$ neighbours: $11$ choices.",
+      "Ordered pairs $=4\\cdot13+8\\cdot12+4\\cdot11=52+96+44=192$, so unordered pairs $=96$.",
+      "Probability $=\\frac{96}{120}=\\frac45$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of adjacent pairs in an $m\\times n$ grid $=m(n-1)+n(m-1)$; for $4\\times4$ it is $24$.",
+    "Degree-sum (handshake) check: $\\sum\\deg=2\\times24=48=4\\cdot2+8\\cdot3+4\\cdot4$.",
+    "``No side in common'' problems: complement first, since adjacent pairs are easier to count than non-adjacent ones."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Geometric-series probability (alternating trials)"
+   ],
+   "level": 2,
+   "question": "$A$ and $B$ alternately throw a pair of dice. $A$ wins if he throws a sum of $5$ before $B$ throws a sum of $8$, and $B$ wins if he throws a sum of $8$ before $A$ throws a sum of $5$. The probability that $A$ wins if $A$ makes the first throw is:",
+   "options": [
+    "$\\frac{9}{19}$",
+    "$\\frac{8}{19}$",
+    "$\\frac{8}{17}$",
+    "$\\frac{9}{17}$"
+   ],
+   "answer": "(A) $\\frac{9}{19}$",
+   "key_idea": "$A$ wins on throw $1,3,5,\\dots$: sum an infinite G.P. with common ratio $(1-p)(1-q)$.",
+   "solution": [
+    "$P(\\text{sum }5)=\\frac{4}{36}$ (outcomes $(1,4),(2,3),(3,2),(4,1)$) and $P(\\text{sum }8)=\\frac{5}{36}$.",
+    "$A$ wins if he gets his sum on throw 1, or both miss and he gets it on his 2nd throw, and so on.",
+    "$P(A\\text{ wins})=P(A)+P(\\bar A\\bar BA)+P(\\bar A\\bar B\\bar A\\bar BA)+\\dots$",
+    "$=\\frac{4}{36}+\\frac{32}{36}\\cdot\\frac{31}{36}\\cdot\\frac{4}{36}+\\dots$, an infinite G.P. with first term $\\frac{4}{36}$ and ratio $\\frac{32}{36}\\cdot\\frac{31}{36}$.",
+    "$=\\frac{\\frac4{36}}{1-\\frac{32\\cdot31}{36^2}}=\\frac{4}{36}\\cdot\\frac{36^2}{1296-992}$.",
+    "$=\\frac{144}{304}=\\frac{9}{19}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A round that ends the game restarts the game, so $P(A\\text{ wins}):P(B\\text{ wins})$ is the ratio of their ``first-success'' chances in one round.",
+     "solution": [
+      "In any round, $A$ wins with $\\frac4{36}$; $B$ wins with $\\frac{32}{36}\\cdot\\frac{5}{36}$; otherwise the game restarts identically.",
+      "So $P(A\\text{ wins}):P(B\\text{ wins})=\\frac{4}{36}:\\frac{32\\cdot5}{36^2}=144:160=9:10$.",
+      "The game ends with probability $1$, so $P(A\\text{ wins})=\\frac{9}{9+10}=\\frac9{19}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $A$ throws first with success probabilities $p$ (for $A$) and $q$ (for $B$): $P(A\\text{ wins})=\\frac{p}{1-(1-p)(1-q)}=\\frac{p}{p+q-pq}$.",
+    "Sum probabilities of two dice: sum $5$ has $4$ ways, sum $8$ has $5$ ways, out of $36$.",
+    "Restart argument: $P(A)=p+(1-p)(1-q)P(A)$ gives the same result without a series."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability: counting favourable outcomes with matrices"
+   ],
+   "level": 1,
+   "question": "Let $A=[a_{ij}]$ be a square matrix of order $2$ with entries either $0$ or $1$. Let $E$ be the event that $A$ is an invertible matrix. Then the probability $P(E)$ is:",
+   "options": [
+    "$\\frac18$",
+    "$\\frac58$",
+    "$\\frac3{16}$",
+    "$\\frac38$"
+   ],
+   "answer": "(D) $\\frac38$",
+   "key_idea": "Invertible means $a_{11}a_{22}-a_{12}a_{21}\\neq0$; count the $0$-$1$ matrices that satisfy it among $2^4$.",
+   "solution": [
+    "Each of the $4$ entries is $0$ or $1$, so the total number of matrices is $2^4=16$.",
+    "$A$ is invertible exactly when $\\det A=a_{11}a_{22}-a_{12}a_{21}\\neq0$.",
+    "The favourable matrices are $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix},\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix},\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix},\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix},\\begin{pmatrix}0&1\\\\1&1\\end{pmatrix},\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ (their determinants are $\\pm1$).",
+    "There are $6$ favourable matrices, so $P(E)=\\frac{6}{16}=\\frac38$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$\\det\\neq0$ iff exactly one of the products $a_{11}a_{22}$ and $a_{12}a_{21}$ equals $1$; the two products are independent.",
+     "solution": [
+      "Each product of two independent fair $0/1$ entries equals $1$ with probability $\\frac14$.",
+      "The products use disjoint entries, so they are independent.",
+      "$\\det\\neq0\\iff$ the two products differ $\\iff$ exactly one equals $1$.",
+      "$P=2\\cdot\\frac14\\cdot\\frac34=\\frac{6}{16}=\\frac38$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$2\\times2$ matrices with entries in $\\{0,1\\}$: $16$ in all, $6$ invertible, $10$ singular (determinant values $-1,0,1$ with counts $3,10,3$).",
+    "For entries in $\\{0,1\\}$, $\\det=ad-bc\\neq0\\iff ad\\neq bc$ (both products are $0$ or $1$).",
+    "The same count over $\\mathbb{F}_2$ gives $|GL_2(\\mathbb{F}_2)|=(4-1)(4-2)=6$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Complex numbers: powers of $i$",
+    "Classical probability"
+   ],
+   "level": 2,
+   "question": "Two numbers $k_1$ and $k_2$ are randomly chosen from the set of natural numbers. Then the probability that the value of $i^{k_1}+i^{k_2}$, $\\left(i=\\sqrt{-1}\\right)$, is non-zero equals:",
+   "options": [
+    "$\\frac12$",
+    "$\\frac34$",
+    "$\\frac23$",
+    "$\\frac14$"
+   ],
+   "answer": "(B) $\\frac34$",
+   "key_idea": "Only $k\\bmod4$ matters: $i^k$ takes the $4$ values $1,i,-1,-i$ equally often; count the pairs that cancel.",
+   "solution": [
+    "$i^{k}$ takes one of $4$ values $i,-1,-i,1$, according to $k\\bmod4$, each equally likely.",
+    "Total cases for $(i^{k_1},i^{k_2})$: $4\\times4=16$.",
+    "Unfavourable cases are those with $i^{k_1}+i^{k_2}=0$, i.e. the two values are negatives of each other.",
+    "These are $(1,-1),(-1,1),(i,-i),(-i,i)$: $4$ cases.",
+    "Probability of a non-zero value $=\\frac{16-4}{16}=\\frac34$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix $k_2$; the sum vanishes iff $i^{k_1-k_2}=-1$, which singles out exactly one residue of $k_1$ out of four.",
+     "solution": [
+      "$i^{k_1}+i^{k_2}=0\\iff i^{k_1}=-i^{k_2}\\iff i^{k_1-k_2}=-1$.",
+      "$i^m=-1\\iff m\\equiv2\\pmod4$.",
+      "For any given $k_2$, exactly one of the four residues of $k_1$ mod $4$ gives $k_1-k_2\\equiv2$, so the probability of zero is $\\frac14$.",
+      "Non-zero probability $=1-\\frac14=\\frac34$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Powers of $i$ are periodic with period $4$; ``randomly chosen natural number'' is interpreted as $k\\bmod4$ uniform on $\\{0,1,2,3\\}$.",
+    "$i^m=-1\\iff m\\equiv2\\pmod4$; $i^m=1\\iff m\\equiv0\\pmod4$.",
+    "General pattern: $\\omega^{a}+\\omega^{b}=0$ for an $n$-th root of unity $\\omega$ ($n$ even) iff $a-b\\equiv\\frac n2\\pmod n$, probability $\\frac1n$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of a random variable"
+   ],
+   "level": 2,
+   "question": "Three defective oranges are accidentally mixed with seven good ones and on looking at them, it is not possible to differentiate between them. Two oranges are drawn at random from the lot. If $x$ denotes the number of defective oranges, then the variance of $x$ is:",
+   "options": [
+    "$\\frac{26}{75}$",
+    "$\\frac{28}{75}$",
+    "$\\frac{18}{25}$",
+    "$\\frac{14}{25}$"
+   ],
+   "answer": "(B) $\\frac{28}{75}$",
+   "key_idea": "Tabulate the law of $x\\in\\{0,1,2\\}$ with combinations, then $\\sigma^2=\\sum p_ix_i^2-\\mu^2$.",
+   "solution": [
+    "The lot has $10$ oranges: $7$ good and $3$ defective; $x\\in\\{0,1,2\\}$.",
+    "$P(x=0)=\\frac{{}^7C_2}{{}^{10}C_2}=\\frac{21}{45}=\\frac{42}{90}$.",
+    "$P(x=1)=\\frac{{}^7C_1\\cdot{}^3C_1}{{}^{10}C_2}=\\frac{21}{45}=\\frac{42}{90}$.",
+    "$P(x=2)=\\frac{{}^3C_2}{{}^{10}C_2}=\\frac{3}{45}=\\frac{6}{90}$.",
+    "Mean $\\mu=\\sum x_iP_i=\\frac{42}{90}+\\frac{12}{90}=\\frac{54}{90}$.",
+    "$\\sum P_ix_i^2=\\frac{42}{90}+\\frac{24}{90}=\\frac{66}{90}$.",
+    "$\\sigma^2=\\frac{66}{90}-\\left(\\frac{54}{90}\\right)^2=\\frac{11}{15}-\\frac{9}{25}=\\frac{28}{75}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $x=I_1+I_2$ (indicator for each drawn orange being defective) and use $\\mathrm{Var}=\\sum\\mathrm{Var}(I_j)+2\\,\\mathrm{Cov}$.",
+     "solution": [
+      "Let $I_j=1$ if the $j$-th drawn orange is defective; $P(I_j=1)=\\frac3{10}$, so $\\mathrm{Var}(I_j)=\\frac3{10}\\cdot\\frac7{10}=\\frac{21}{100}$.",
+      "$P(I_1I_2=1)=\\frac3{10}\\cdot\\frac29=\\frac1{15}$, so $\\mathrm{Cov}(I_1,I_2)=\\frac1{15}-\\frac{9}{100}=-\\frac{7}{300}$.",
+      "$\\mathrm{Var}(x)=2\\cdot\\frac{21}{100}+2\\cdot\\left(-\\frac7{300}\\right)=\\frac{126-14}{300}=\\frac{112}{300}$.",
+      "$=\\frac{28}{75}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Sampling without replacement makes the indicators negatively correlated: $\\mathrm{Cov}(I_1,I_2)=-\\frac{p(1-p)}{N-1}$ (here $-\\frac{21/100}{9}=-\\frac7{300}$).",
+    "Hypergeometric variance $=n\\frac KN\\frac{N-K}{N}\\frac{N-n}{N-1}$; this question is identical in data to Q3 ($N=10,K=3,n=2$).",
+    "Mean of $x$ is $n\\frac KN=\\frac35$ whichever way the sample is drawn."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Total probability and Bayes' theorem"
+   ],
+   "level": 1,
+   "question": "Bag $B_1$ contains $6$ white and $4$ blue balls, Bag $B_2$ contains $4$ white and $6$ blue balls, and Bag $B_3$ contains $5$ white and $5$ blue balls. One of the bags is selected at random and a ball is drawn from it. If the ball is white, then the probability that the ball is drawn from Bag $B_2$ is:",
+   "options": [
+    "$\\frac25$",
+    "$\\frac13$",
+    "$\\frac4{15}$",
+    "$\\frac23$"
+   ],
+   "answer": "(C) $\\frac{4}{15}$",
+   "key_idea": "Bayes: $P(B_2\\mid W)=\\frac{P(B_2)P(W\\mid B_2)}{\\sum_iP(B_i)P(W\\mid B_i)}$ with equal priors.",
+   "solution": [
+    "Each bag is chosen with probability $\\frac13$; $W$ is the event that the ball is white.",
+    "$P(B_2\\mid W)=\\frac{P(B_2\\cap W)}{P(W)}$.",
+    "Numerator: $\\frac13\\cdot\\frac4{10}$.",
+    "Denominator: $P(W)=\\frac13\\left(\\frac6{10}+\\frac4{10}+\\frac5{10}\\right)$.",
+    "$P(B_2\\mid W)=\\frac{\\frac{4}{10}}{\\frac{15}{10}}=\\frac{4}{15}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The bags have equal size and equal chance, so the draw is uniform over all $30$ balls: count white balls.",
+     "solution": [
+      "Choosing a bag uniformly and then a ball uniformly from a $10$-ball bag is the same as choosing one of the $30$ balls uniformly.",
+      "White balls in all: $6+4+5=15$.",
+      "White balls belonging to $B_2$: $4$.",
+      "Given a white ball, the probability it came from $B_2$ is $\\frac{4}{15}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Equal priors and equal bag sizes: $P(B_i\\mid E)=\\frac{\\text{favourable balls in }B_i}{\\text{all favourable balls}}$.",
+    "Law of total probability: $P(W)=\\sum_iP(B_i)P(W\\mid B_i)=\\frac13\\cdot\\frac{15}{10}=\\frac12$.",
+    "Posteriors for the three bags: $\\frac{6}{15},\\frac{4}{15},\\frac{5}{15}$, which add to $1$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Total probability (ball transfer between bags)"
+   ],
+   "level": 2,
+   "question": "Bag $1$ contains $4$ white balls and $5$ black balls, and Bag $2$ contains $n$ white balls and $3$ black balls. One ball is drawn randomly from Bag $1$ and transferred to Bag $2$. A ball is then drawn randomly from Bag $2$. If the probability that the ball drawn is white is $\\frac{29}{45}$, then $n$ is equal to:",
+   "options": [
+    "$3$",
+    "$5$",
+    "$4$",
+    "$6$"
+   ],
+   "answer": "(D) $6$",
+   "key_idea": "Condition on the colour transferred: Bag 2 then has $n+1$ or $n$ white balls out of $n+4$.",
+   "solution": [
+    "Bag 1 $=\\{4W,5B\\}$ and Bag 2 $=\\{nW,3B\\}$. Let the transferred ball be white ($W_1$) or black ($B_1$).",
+    "$P(W)=P(W_1)P\\left(W\\mid W_1\\right)+P(B_1)P\\left(W\\mid B_1\\right)=\\frac{29}{45}$.",
+    "If a white ball is moved, Bag 2 has $n+1$ white among $n+4$: $P(W\\mid W_1)=\\frac{n+1}{n+4}$; if black, $\\frac{n}{n+4}$.",
+    "$\\frac49\\cdot\\frac{n+1}{n+4}+\\frac59\\cdot\\frac{n}{n+4}=\\frac{29}{45}$.",
+    "$\\frac{9n+4}{9(n+4)}=\\frac{29}{45}\\Rightarrow5(9n+4)=29(n+4)$, so $45n+20=29n+116$.",
+    "$16n=96$, so $n=6$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Bag 2 always has $n+4$ balls; the probability a random ball is white is the expected white count divided by $n+4$.",
+     "solution": [
+      "After the transfer Bag 2 has $n+4$ balls; its white count is $n$ plus $1$ if a white ball was moved.",
+      "Expected white count $=n+\\frac49$.",
+      "$P(\\text{white})=\\frac{E[\\text{white count}]}{n+4}=\\frac{n+\\frac49}{n+4}=\\frac{29}{45}$.",
+      "$45n+20=29n+116\\Rightarrow n=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$P(\\text{white from a bag of fixed size }m)=\\frac{E[\\#\\text{white}]}{m}$: expectation replaces the case split when the bag size does not depend on the transfer.",
+    "Transfer problems: condition on what moved (here $4/9$ white, $5/9$ black).",
+    "Result: $P=\\frac{n+\\frac49}{n+4}$ is increasing in $n$; check $n=6$ gives $\\frac{58/9}{10}=\\frac{29}{45}$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of a random variable",
+    "Determinants"
+   ],
+   "level": 2,
+   "question": "Let $A=[a_{ij}]$ be a $2\\times2$ matrix such that $a_{ij}\\in\\{0,1\\}$ for all $i$ and $j$. Let the random variable $X$ denote the possible values of the determinant of the matrix $A$. Then, the variance of $X$ is:",
+   "options": [
+    "$\\frac58$",
+    "$\\frac34$",
+    "$\\frac14$",
+    "$\\frac38$"
+   ],
+   "answer": "(D) $\\frac38$",
+   "key_idea": "$\\det A=a_{11}a_{22}-a_{21}a_{12}\\in\\{-1,0,1\\}$; find $P(-1),P(0),P(1)$ among the $16$ matrices.",
+   "solution": [
+    "$\\det A=a_{11}a_{22}-a_{21}a_{12}$, so $X\\in\\{-1,0,1\\}$.",
+    "$P(X=-1)=\\frac3{16}$ (the matrices with $a_{11}a_{22}=0$ and $a_{12}a_{21}=1$), $P(X=1)=\\frac3{16}$ by symmetry, $P(X=0)=\\frac{10}{16}$.",
+    "$\\sum P_iX_i=-\\frac3{16}+0+\\frac3{16}=0$.",
+    "$\\sum P_iX_i^2=\\frac3{16}+0+\\frac3{16}=\\frac38$.",
+    "$\\mathrm{var}(X)=\\sum P_iX_i^2-\\left(\\sum P_iX_i\\right)^2=\\frac38-0=\\frac38$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$X=U-V$ with $U=a_{11}a_{22}$ and $V=a_{12}a_{21}$ independent Bernoulli$\\left(\\frac14\\right)$ variables, so variances add.",
+     "solution": [
+      "$U$ and $V$ involve disjoint entries, so they are independent; each is $1$ with probability $\\frac14$.",
+      "$\\mathrm{Var}(U)=\\mathrm{Var}(V)=\\frac14\\cdot\\frac34=\\frac3{16}$.",
+      "For independent variables $\\mathrm{Var}(U-V)=\\mathrm{Var}(U)+\\mathrm{Var}(V)=\\frac3{16}+\\frac3{16}=\\frac38$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For independent $U,V$: $\\mathrm{Var}(U\\pm V)=\\mathrm{Var}(U)+\\mathrm{Var}(V)$ (the sign does not matter).",
+    "For a $2\\times2$ $0$-$1$ matrix, $P(\\det=1)=P(\\det=-1)=\\frac3{16}$ and $P(\\det=0)=\\frac58$, so $E(\\det)=0$.",
+    "Bernoulli$(p)$ has variance $p(1-p)$; a product of two independent fair bits is Bernoulli$\\left(\\frac14\\right)$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of a random variable"
+   ],
+   "level": 2,
+   "question": "If the mean of the following probability distribution of a random variable $X$ is $\\frac{46}{9}$, then the variance of the distribution is:\n$X$: $0,\\ 2,\\ 4,\\ 6,\\ 8$ with $P(X)$: $a,\\ 2a,\\ a+b,\\ 2b,\\ 3b$ respectively.",
+   "options": [
+    "$\\frac{173}{27}$",
+    "$\\frac{566}{81}$",
+    "$\\frac{581}{81}$",
+    "$\\frac{151}{27}$"
+   ],
+   "answer": "(B) $\\frac{566}{81}$",
+   "key_idea": "Two equations, $\\sum P=1$ and the given mean, fix $a$ and $b$; then variance $=\\sum p_ix_i^2-\\bar x^2$.",
+   "solution": [
+    "$\\sum P_i=1\\Rightarrow a+2a+(a+b)+2b+3b=1$, i.e. $4a+6b=1$ ...(1)",
+    "Mean: $\\sum p_ix_i=4a+4(a+b)+12b+24b=8a+40b=\\frac{46}{9}$, i.e. $4a+20b=\\frac{23}{9}$ ...(2)",
+    "Subtract (1) from (2): $14b=\\frac{23}{9}-1=\\frac{14}{9}$, so $b=\\frac19$, and then $a=\\frac{1-\\frac69}{4}=\\frac1{12}$.",
+    "$\\sum p_ix_i^2=2a\\cdot4+(a+b)\\cdot16+2b\\cdot36+3b\\cdot64=24a+280b$.",
+    "$\\sum p_ix_i^2=24\\cdot\\frac1{12}+280\\cdot\\frac19=2+\\frac{280}{9}=\\frac{298}{9}$.",
+    "Variance $=\\frac{298}{9}-\\left(\\frac{46}{9}\\right)^2=\\frac{2682-2116}{81}=\\frac{566}{81}$, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF solves (1) and (2) and states a = 1/12, b = 1/3. b = 1/3 is wrong: it would make 4a + 6b = 1/3 + 2 = 7/3, not 1,. The correct solution is b = 1/9 (14b = 14/9), a = 1/12. The PDF's later expression 24a + 280b - (46/9)^2 and its final value 566/81 are correct (they hold only for b = 1/9), so the answer (B) is unchanged; the correction is to the printed value of b and the missing intermediate sum 24a+280b = 298/9.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $Y=\\frac X2\\in\\{0,1,2,3,4\\}$: smaller numbers, and $\\mathrm{Var}(X)=4\\,\\mathrm{Var}(Y)$.",
+     "solution": [
+      "$Y=\\frac X2$ has the same probabilities $a,2a,a+b,2b,3b$ on $0,1,2,3,4$; $E(Y)=\\frac{23}{9}$.",
+      "From $4a+6b=1$ and $4a+20b=\\frac{23}9$ we get $b=\\frac19,\\ a=\\frac1{12}$.",
+      "$E(Y^2)=1\\cdot2a+4(a+b)+9\\cdot2b+16\\cdot3b=6a+70b$.",
+      "$6a+70b=\\frac12+\\frac{70}9=\\frac{149}{18}$, so $\\mathrm{Var}(Y)=\\frac{149}{18}-\\left(\\frac{23}{9}\\right)^2=\\frac{1341-1058}{162}=\\frac{283}{162}$.",
+      "$\\mathrm{Var}(X)=4\\cdot\\frac{283}{162}=\\frac{566}{81}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Var}(cX)=c^2\\mathrm{Var}(X)$ and $\\mathrm{Var}(X+d)=\\mathrm{Var}(X)$: rescale a distribution on $0,2,4,\\dots$ to $0,1,2,\\dots$ before computing.",
+    "A table with unknown parameters: use $\\sum p=1$ and the given mean as two linear equations; verify $p_i\\ge0$ afterwards ($a=\\frac1{12},b=\\frac19$ both positive).",
+    "Check by recomputing the mean: $8a+40b=\\frac23+\\frac{40}9=\\frac{46}9$."
+   ]
+  }
+ ]
+}
