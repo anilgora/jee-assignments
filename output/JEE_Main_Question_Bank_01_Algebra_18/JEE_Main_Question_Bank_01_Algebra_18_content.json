@@ -1,0 +1,896 @@
+{
+ "title": "JEE Main Question Bank – Algebra 18 — Paper Analysis",
+ "subtitle": "Complex Numbers and Statistics (Q341–Q360) · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Algebra_18.pdf (no blueprint; concepts self-assigned)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 4,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 5,
+   "to": 16,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Single Correct Type (Statistics)",
+   "from": 17,
+   "to": 20,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Inequalities in the Argand plane with $\\mathrm{Re}$ and $\\mathrm{Im}$ of a complex expression"
+   ],
+   "level": 2,
+   "question": "For $a\\in\\mathbb{C}$, let $A=\\{z\\in\\mathbb{C}:\\mathrm{Re}(a+\\bar z)>\\mathrm{Im}(\\bar a+z)\\}$ and $B=\\{z\\in\\mathbb{C}:\\mathrm{Re}(a+\\bar z)<\\mathrm{Im}(\\bar a+z)\\}$. Then among the two statements:\n(S1): If $\\mathrm{Re}(a),\\mathrm{Im}(a)>0$, then the set $A$ contains all the real numbers.\n(S2): If $\\mathrm{Re}(a),\\mathrm{Im}(a)<0$, then the set $B$ contains all the real numbers.",
+   "options": [
+    "only (S1) is true",
+    "both are false",
+    "only (S2) is true",
+    "both are true"
+   ],
+   "answer": "(B) both are false",
+   "key_idea": "Writing $a=x_1+iy_1$, $z=x+iy$ turns each set into a half-plane, and one real $z$ outside it disproves the statement.",
+   "solution": [
+    "Let $a=x_1+iy_1$ and $z=x+iy$.",
+    "S1: $\\mathrm{Re}(a+\\bar z)>\\mathrm{Im}(\\bar a+z)$ gives $x_1+x>-y_1+y$.",
+    "Take $\\mathrm{Re}(a)=x_1=2>0$, $\\mathrm{Im}(a)=y_1=10>0$ and the real number $z=-12$ ($x=-12$, $y=0$).",
+    "Then $x_1+x=-10$ and $-y_1+y=-10$, so the strict inequality $-10>-10$ is not valid: $z=-12\\notin A$.",
+    "Hence $A$ does not contain all real numbers: S1 is false.",
+    "S2: $\\mathrm{Re}(a+\\bar z)<\\mathrm{Im}(\\bar a+z)$ gives $x_1+x<-y_1+y$.",
+    "Take $x_1=-2<0$, $y_1=-10<0$ and the real number $z=12$ ($x=12$, $y=0$).",
+    "Then $x_1+x=10$ and $-y_1+y=10$, so $10<10$ is not valid: $z=12\\notin B$.",
+    "Hence S2 is false too. Both statements are false: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each set is an open half-plane bounded by a line of slope $1$; the real axis crosses that line, so it cannot lie wholly inside either set.",
+     "solution": [
+      "With $a=x_1+iy_1$, $z=x+iy$: $A$ is $x-y>-(x_1+y_1)$ and $B$ is $x-y<-(x_1+y_1)$.",
+      "The boundary of both is the line $x-y=-(x_1+y_1)$, which has slope $1$.",
+      "$A$ and $B$ are the two open half-planes on either side of this line.",
+      "The real axis $y=0$ has slope $0$, so it is not parallel to the boundary and meets it at $x=-(x_1+y_1)$.",
+      "A line that crosses the boundary has points on both sides, so the real axis lies in neither half-plane completely.",
+      "For real $z=x$: $A\\cap\\mathbb{R}=\\{x>-(x_1+y_1)\\}$ and $B\\cap\\mathbb{R}=\\{x<-(x_1+y_1)\\}$, each only a half-line.",
+      "This holds for every $a$, so both statements are false: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Re}(a+\\bar z)=x_1+x$ and $\\mathrm{Im}(\\bar a+z)=y-y_1$: a linear inequality in $x,y$ always describes a half-plane.",
+    "A line (here the real axis) lies wholly inside an open half-plane only if it is parallel to the boundary and on the correct side; a transversal line never does.",
+    "To disprove a 'contains all reals' claim, test one real $z$ on the boundary (equality makes a strict inequality fail), e.g. $z=-(x_1+y_1)$ for $A$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Collinear points and the circle in the Argand plane (product of distances from the centre)"
+   ],
+   "level": 2,
+   "question": "Let $C$ be the circle in the complex plane with centre $z_0=\\frac12(1+3i)$ and radius $r=1$. Let $z_1=1+i$ and the complex number $z_2$ be outside the circle $C$ such that $|z_1-z_0||z_2-z_0|=1$. If $z_0,z_1$ and $z_2$ are collinear, then the smaller value of $|z_2|^2$ is equal to:",
+   "options": [
+    "$\\frac72$",
+    "$\\frac{13}{2}$",
+    "$\\frac32$",
+    "$\\frac52$"
+   ],
+   "answer": "(D) $\\frac52$",
+   "key_idea": "$|z_1-z_0|=\\frac1{\\sqrt2}$ forces $|z_2-z_0|=\\sqrt2$, so $z_2$ lies on the line $z_0z_1$ at distance $\\sqrt2$ from $z_0$, on either side.",
+   "solution": [
+    "$z_1-z_0=\\frac{1-i}{2}$, so $|z_1-z_0|=\\frac{1}{\\sqrt2}$.",
+    "From $|z_1-z_0||z_2-z_0|=1$: $|z_2-z_0|=\\sqrt2$, and the centre is $z_0\\left(\\frac12,\\frac32\\right)$ with $z_1(1,1)$.",
+    "The line through $z_0$ and $z_1$ has slope $\\frac{1-3/2}{1-1/2}=-1$, so $\\tan\\theta=-1$ and $\\theta=135^\\circ$.",
+    "$z_2$ is at distance $\\sqrt2$ from $z_0$ along this line: $z_2=\\left(\\frac12+\\sqrt2\\cos135^\\circ,\\ \\frac32+\\sqrt2\\sin135^\\circ\\right)$ or $\\left(\\frac12-\\sqrt2\\cos135^\\circ,\\ \\frac32-\\sqrt2\\sin135^\\circ\\right)$.",
+    "So $z_2=\\left(-\\frac12,\\frac52\\right)$ or $z_2=\\left(\\frac32,\\frac12\\right)$ (both are outside $C$, since $\\sqrt2>1$).",
+    "$|z_2|^2=\\frac14+\\frac{25}{4}=\\frac{26}{4}=\\frac{13}{2}$ or $|z_2|^2=\\frac94+\\frac14=\\frac52$.",
+    "The smaller value is $|z_2|^2=\\frac52$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Collinearity means $z_2-z_0=t(z_1-z_0)$ with real $t$; the product condition fixes $|t|=2$, so $z_2=2z_1-z_0$ or $3z_0-2z_1$ with no angles.",
+     "solution": [
+      "Collinear: $z_2-z_0=t(z_1-z_0)$ for a real $t$.",
+      "Taking moduli: $|t|\\,|z_1-z_0|^2=1$, and $|z_1-z_0|^2=\\frac12$, so $|t|=2$.",
+      "$t=2$: $z_2=z_0+2(z_1-z_0)=2z_1-z_0=(2+2i)-\\left(\\frac12+\\frac32i\\right)=\\frac32+\\frac12i$.",
+      "$t=-2$: $z_2=z_0-2(z_1-z_0)=3z_0-2z_1=\\left(\\frac32+\\frac92i\\right)-(2+2i)=-\\frac12+\\frac52i$.",
+      "$|z_2|^2$ is $\\frac94+\\frac14=\\frac52$ for the first and $\\frac14+\\frac{25}{4}=\\frac{13}2$ for the second.",
+      "Smaller value: $\\frac52$, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|z_1-z_0||z_2-z_0|=r^2$ with $z_0,z_1,z_2$ collinear and $z_1,z_2$ on the same side of $z_0$ means $z_2$ is the inverse of $z_1$ in the circle of radius $r$ about $z_0$: $z_2-z_0=\\frac{r^2}{\\overline{z_1-z_0}}$.",
+    "The question also allows $z_2$ on the opposite side of $z_0$, so two answers appear; read 'smaller/larger' as a hint that both are meant.",
+    "Collinear points: $z_2-z_0=t(z_1-z_0)$ with $t\\in\\mathbb{R}$; this avoids slopes and angles."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Polar form and powers of the roots of a quadratic with complex roots"
+   ],
+   "level": 1,
+   "question": "Let $\\alpha,\\beta$ be the roots of the equation $x^2-\\sqrt2x+2=0$. Then $\\alpha^{14}+\\beta^{14}$ is equal to:",
+   "options": [
+    "$-64$",
+    "$-128$",
+    "$-64\\sqrt2$",
+    "$-128\\sqrt2$"
+   ],
+   "answer": "(B) $-128$",
+   "key_idea": "Write the roots as $\\sqrt2e^{\\pm i\\pi/3}$; then $\\alpha^{14}+\\beta^{14}=2\\cdot2^7\\cos\\frac{14\\pi}{3}$.",
+   "solution": [
+    "$x=\\frac{\\sqrt2\\pm\\sqrt{2-8}}{2}=\\frac{\\sqrt2\\pm\\sqrt6\\,i}{2}$.",
+    "$\\alpha=\\frac{\\sqrt2+\\sqrt6\\,i}{2}=\\sqrt2e^{i\\pi/3}$ and $\\beta=\\sqrt2e^{-i\\pi/3}$ (modulus $\\sqrt{\\frac{2+6}{4}}=\\sqrt2$, $\\tan\\theta=\\sqrt3$).",
+    "$\\alpha^{14}=2^7e^{i14\\pi/3}=128\\,e^{i2\\pi/3}$.",
+    "$\\beta^{14}=128\\,e^{-i2\\pi/3}$.",
+    "$\\alpha^{14}+\\beta^{14}=128\\cdot2\\cos\\frac{2\\pi}{3}=256\\cdot\\left(-\\frac12\\right)=-128$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "From $\\alpha^2=\\sqrt2\\alpha-2$ get $\\alpha^3=-2\\sqrt2$ for both roots, so $\\alpha^{14}=(\\alpha^3)^4\\alpha^2$ and the sum reduces to $64(\\alpha^2+\\beta^2)$.",
+     "solution": [
+      "$\\alpha+\\beta=\\sqrt2$ and $\\alpha\\beta=2$, so $\\alpha^2+\\beta^2=2-4=-2$.",
+      "$\\alpha^2=\\sqrt2\\alpha-2$, so $\\alpha^3=\\sqrt2\\alpha^2-2\\alpha=\\sqrt2(\\sqrt2\\alpha-2)-2\\alpha=-2\\sqrt2$.",
+      "The same calculation for $\\beta$ gives $\\beta^3=-2\\sqrt2$.",
+      "$\\alpha^{14}=(\\alpha^3)^4\\alpha^2=(-2\\sqrt2)^4\\alpha^2=64\\alpha^2$ and likewise $\\beta^{14}=64\\beta^2$.",
+      "$\\alpha^{14}+\\beta^{14}=64(\\alpha^2+\\beta^2)=64(-2)=-128$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A quadratic $x^2-px+q=0$ with $p^2<4q$ has roots $\\sqrt q\\,e^{\\pm i\\theta}$ with $\\cos\\theta=\\frac{p}{2\\sqrt q}$; then $\\alpha^n+\\beta^n=2q^{n/2}\\cos n\\theta$.",
+    "If $\\alpha^3$ turns out to be real (here $-2\\sqrt2$), every high power reduces to $\\alpha^{3k+r}$; check by squaring or by $\\arg\\alpha=\\frac{\\pi}{3}$.",
+    "Quick check for this instance: $\\theta=\\frac\\pi3$, $n=14$, $\\cos\\frac{14\\pi}{3}=\\cos\\frac{2\\pi}{3}=-\\frac12$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Solving an equation in $z$, $\\bar z$ and $\\mathrm{Re}(z)$ by separating real and imaginary parts"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{z\\in\\mathbb{C}:\\bar z=i(z^2+\\mathrm{Re}(\\bar z))\\}$. Then $\\sum_{z\\in S}|z|^2$ is equal to:",
+   "options": [
+    "$\\frac52$",
+    "$4$",
+    "$3$",
+    "$\\frac72$"
+   ],
+   "answer": "(B) 4",
+   "key_idea": "Put $z=x+iy$ and split into real and imaginary parts: the real part gives $x(2y+1)=0$, a product of two lines.",
+   "solution": [
+    "Let $z=x+iy$, so $\\mathrm{Re}(\\bar z)=x$ and $\\bar z=i(z^2+x)$ becomes $x-iy=i(x^2-y^2+2ixy+x)$.",
+    "$x-iy=i(x^2-y^2+x)-2xy$.",
+    "Real parts: $x=-2xy$, i.e. $x(2y+1)=0$, so $x=0$ or $y=-\\frac12$ ....(i)",
+    "Imaginary parts: $-y=x^2-y^2+x$ ....(ii)",
+    "Case 1, $x=0$: (ii) gives $-y=-y^2$, i.e. $y^2-y=0$, so $y=0$ or $y=1$; $z=0$ or $z=i$.",
+    "Case 2, $y=-\\frac12$: (ii) gives $\\frac12=x^2-\\frac14+x$, i.e. $x^2+x-\\frac34=0$, so $4x^2+4x-3=0$.",
+    "$(2x-1)(2x+3)=0$, so $x=\\frac12$ or $x=-\\frac32$; $z=\\frac12-\\frac12i$ or $z=-\\frac32-\\frac12i$.",
+    "$\\sum|z|^2=0+1+\\frac12+\\frac52=4$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Equation (ii) factors as $(x+y)(x-y+1)=0$, so the solutions are the intersections of two pairs of lines.",
+     "solution": [
+      "With $z=x+iy$ the two real equations are $x(2y+1)=0$ and $x^2+x-y^2+y=0$.",
+      "Factor the second: $x^2-y^2+(x+y)=(x+y)(x-y+1)=0$, i.e. the lines $y=-x$ and $y=x+1$.",
+      "The first gives the lines $x=0$ and $y=-\\frac12$.",
+      "$x=0$ meets $y=-x$ at $(0,0)$ and $y=x+1$ at $(0,1)$.",
+      "$y=-\\frac12$ meets $y=-x$ at $\\left(\\frac12,-\\frac12\\right)$ and $y=x+1$ at $\\left(-\\frac32,-\\frac12\\right)$.",
+      "$\\sum|z|^2=0+1+\\frac12+\\frac52=4$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For equations in $z,\\bar z$, write $z=x+iy$ and treat the real and imaginary parts as two curves; factorising one often turns the problem into intersecting lines.",
+    "A homogeneous-looking quadratic like $x^2-y^2+(x+y)$ factors as $(x+y)(x-y+1)$ because $x^2-y^2=(x+y)(x-y)$.",
+    "Always substitute the candidate points back: here $z=i$ gives $\\bar z=-i=i(i^2+0)$, confirming it."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Intersection of a circle and a line in the Argand plane"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{z\\in\\mathbb{C}:|z-2-i|=3\\}$, $B=\\{z\\in\\mathbb{C}:\\mathrm{Re}(z-iz)=2\\}$ and $S=A\\cap B$. Then $\\sum_{z\\in S}|z|^2$ is equal to ______.",
+   "answer": "22",
+   "key_idea": "$\\mathrm{Re}(z-iz)=x+y$, so $B$ is the line $x+y=2$ cutting the circle $A$ in two points; sum $|z|^2$ over them.",
+   "solution": [
+    "$A$: $(x-2)^2+(y-1)^2=9$ ....(i)",
+    "$B$: $z-iz=(x+y)+i(y-x)$, so $\\mathrm{Re}(z-iz)=x+y=2$ ....(ii)",
+    "Solving (i) and (ii): $y=2-x$ gives $(x-2)^2+(1-x)^2=9$, i.e. $x^2-3x-2=0$.",
+    "$x=\\frac{3\\pm\\sqrt{17}}{2}$ and $y=\\frac{1\\mp\\sqrt{17}}{2}$.",
+    "$x^2=\\frac{26\\pm6\\sqrt{17}}{4}$ and $y^2=\\frac{18\\mp2\\sqrt{17}}{4}$; the surds cancel when the two points are added.",
+    "$\\sum_{z\\in S}|z|^2=\\sum x^2+\\sum y^2=\\frac14[2\\times26+2\\times18]=\\frac{88}{4}=22$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the circle's equation to write $|z|^2=4x+2y+4$, then only $\\sum x$ and $\\sum y$ (Vieta) are needed - no surds.",
+     "solution": [
+      "The circle $(x-2)^2+(y-1)^2=9$ gives $x^2+y^2=4x+2y+4$ for every point of $A$.",
+      "So on $S$: $|z|^2=4x+2y+4$, and $\\sum_{z\\in S}|z|^2=4\\sum x+2\\sum y+8$ (two points).",
+      "The line $x+y=2$ meets the circle where $x^2-3x-2=0$, so $x_1+x_2=3$.",
+      "Then $y_1+y_2=(2-x_1)+(2-x_2)=4-3=1$.",
+      "$\\sum|z|^2=4(3)+2(1)+8=22$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a circle $|z-c|=r$, $|z|^2=2\\mathrm{Re}(\\bar c z)+r^2-|c|^2$: on the circle, $|z|^2$ is linear in $x,y$, so sums over intersection points follow from Vieta.",
+    "Sum of $|z|^2$ over the two intersection points of a line and circle is symmetric in the roots - no need to find the points.",
+    "$\\mathrm{Re}(z-iz)=\\mathrm{Re}\\{(1-i)z\\}=x+y$: multiplying by $1-i$ and taking the real part gives a line of slope $-1$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Cube roots of unity and sums of powers"
+   ],
+   "level": 2,
+   "question": "If $\\alpha$ is a root of the equation $x^2+x+1=0$ and $\\sum_{k=1}^{n}\\left(\\alpha^k+\\frac1{\\alpha^k}\\right)^2=20$, then $n$ is equal to ______.",
+   "answer": "11",
+   "key_idea": "$\\alpha=\\omega$ or $\\omega^2$, so each term is $(-1)^2=1$ unless $3\\mid k$, when it is $2^2=4$ (period 3).",
+   "solution": [
+    "$\\alpha=\\omega$ or $\\omega^2$ (the answer is the same for both).",
+    "The sum is $\\left(\\omega+\\frac1\\omega\\right)^2+\\left(\\omega^2+\\frac1{\\omega^2}\\right)^2+\\left(\\omega^3+\\frac1{\\omega^3}\\right)^2+\\left(\\omega^4+\\frac1{\\omega^4}\\right)^2+\\dots=20$.",
+    "$\\left(\\omega+\\omega^2\\right)^2+\\left(\\omega^2+\\omega\\right)^2+2^2+\\left(\\omega+\\omega^2\\right)^2+\\dots=20$, using $\\frac1{\\omega^k}=\\omega^{-k}$ and $\\omega^3=1$.",
+    "$(-1)^2+(-1)^2+4+(-1)^2+\\dots=20$: the terms run $1,1,4,1,1,4,\\dots$",
+    "Terms $k=1,\\dots,11$: $k=3,6,9$ give $4$ each ($12$) and the other eight give $1$ each ($8$), total $20$.",
+    "So $n=11$ (n=10 gives 19 and n=12 gives 24)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand each square: $\\sum\\left(\\alpha^{2k}+\\alpha^{-2k}+2\\right)=2n+2\\mathrm{Re}\\sum\\alpha^{2k}$ and evaluate the geometric sum by the residue of $n$ mod $3$.",
+     "solution": [
+      "$\\left(\\alpha^k+\\alpha^{-k}\\right)^2=\\alpha^{2k}+\\alpha^{-2k}+2$, so the sum is $2n+\\sum_{k=1}^{n}\\left(\\omega^{2k}+\\omega^{-2k}\\right)$ and the last part is real.",
+      "Any three consecutive $k$ give $\\omega^{2k}$ summing to $0$ (powers of a cube root of unity), so only the leftover $n\\bmod3$ terms matter.",
+      "$n\\equiv0$: leftover $0$, sum $=2n=20$ gives $n=10$, not a multiple of $3$ - rejected.",
+      "$n\\equiv1$: leftover term $\\omega^{2n}+\\omega^{-2n}=-1$, so $2n-1=20$ has no integer solution.",
+      "$n\\equiv2$: the two leftover terms contribute $-1-1=-2$ (each $\\omega^{2k}+\\omega^{-2k}=-1$ for $3\\nmid k$), so $2n-2=20$ and $n=11$, and $11\\equiv2$ checks.",
+      "Hence $n=11$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\omega$ a primitive cube root of unity, $\\omega^k+\\omega^{-k}=2$ if $3\\mid k$ and $-1$ otherwise; any sum of powers is periodic with period $3$.",
+    "$1+\\omega+\\omega^2=0$ and $\\omega^3=1$: a full block of three consecutive powers sums to $0$.",
+    "When the summand is periodic, compute one period's sum, then use the quotient and remainder of $n$ by the period."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Binomial expansion (odd-indexed binomial coefficients)",
+    "Cube roots of unity and powers of $1\\pm\\sqrt3 i$"
+   ],
+   "level": 3,
+   "question": "If $\\alpha=1+\\sum_{r=1}^{6}(-3)^{r-1}\\,{}^{12}C_{2r-1}$, then the distance of the point $\\left(12,\\sqrt3\\right)$ from the line $\\alpha x-\\sqrt3y+1=0$ is ______.",
+   "answer": "5",
+   "key_idea": "With $x=\\sqrt3 i$, $(-3)^{r-1}=\\frac{x^{2r-1}}{x}$, so the sum is the odd part of $(1+x)^{12}$ divided by $x$.",
+   "solution": [
+    "$\\alpha=1+\\sum_{r=1}^{6}(-1)^{r-1}\\,{}^{12}C_{2r-1}\\,3^{r-1}$.",
+    "Let $x=\\sqrt3 i$. Then $(-3)^{r-1}=\\frac{\\left(\\sqrt3 i\\right)^{2r-1}}{\\sqrt3 i}$, so $\\alpha=1+\\frac{1}{\\sqrt3 i}\\left({}^{12}C_1x+{}^{12}C_3x^3+\\dots+{}^{12}C_{11}x^{11}\\right)$.",
+    "The bracket is the odd part of the expansion: $\\frac{(1+x)^{12}-(1-x)^{12}}{2}$.",
+    "$\\alpha=1+\\frac{1}{\\sqrt3 i}\\cdot\\frac{\\left(1+\\sqrt3 i\\right)^{12}-\\left(1-\\sqrt3 i\\right)^{12}}{2}$.",
+    "$1+\\sqrt3 i=-2\\omega^2$ and $1-\\sqrt3 i=-2\\omega$, so the numerator is $\\left(-2\\omega^2\\right)^{12}-\\left(-2\\omega\\right)^{12}=2^{12}-2^{12}=0$ (as $\\omega^{24}=\\omega^{12}=1$).",
+    "Hence $\\alpha=1$ and the line is $x-\\sqrt3y+1=0$.",
+    "Distance of $\\left(12,\\sqrt3\\right)$: $\\frac{\\left|12-3+1\\right|}{\\sqrt{1+3}}=\\frac{10}{2}=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take the imaginary part of $\\left(1+i\\sqrt3\\right)^{12}$ in polar form: $2e^{i\\pi/3}$ raised to $12$ is real, so the odd-index sum is $0$.",
+     "solution": [
+      "$\\left(1+i\\sqrt3\\right)^{12}=\\sum_k{}^{12}C_k\\left(i\\sqrt3\\right)^k$, and the imaginary part comes from odd $k=2r-1$.",
+      "$\\left(i\\sqrt3\\right)^{2r-1}=i\\sqrt3\\,(-3)^{r-1}$, so $\\mathrm{Im}\\left(1+i\\sqrt3\\right)^{12}=\\sqrt3\\sum_{r=1}^{6}(-3)^{r-1}\\,{}^{12}C_{2r-1}$.",
+      "In polar form $1+i\\sqrt3=2e^{i\\pi/3}$, so $\\left(1+i\\sqrt3\\right)^{12}=2^{12}e^{i4\\pi}=4096$, a real number.",
+      "Hence its imaginary part is $0$, so $\\sum(-3)^{r-1}\\,{}^{12}C_{2r-1}=0$ and $\\alpha=1$.",
+      "Distance of $\\left(12,\\sqrt3\\right)$ from $x-\\sqrt3y+1=0$ is $\\frac{|12-3+1|}{2}=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Odd-index binomial sums: $\\sum_k{}^nC_{2k+1}x^{2k+1}=\\frac{(1+x)^n-(1-x)^n}{2}$; even-index: $\\frac{(1+x)^n+(1-x)^n}{2}$.",
+    "Alternating-sign sums such as $\\sum(-3)^{r}{}^nC_{2r}$ or $\\sum(-1)^r 3^r\\,{}^nC_{2r+1}$ are real/imaginary parts of $\\left(1+i\\sqrt3\\right)^n$ or $\\left(1+i\\right)^n$: recognise the powers $(\\sqrt3 i)^{2r}=(-3)^r$.",
+    "$1+i\\sqrt3=2e^{i\\pi/3}=-2\\omega^2$ and $1-i\\sqrt3=2e^{-i\\pi/3}=-2\\omega$; $\\left(1\\pm i\\sqrt3\\right)^n$ is real when $6\\mid n$ (here $n=12$)."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Determinant with cube roots of unity as entries",
+    "Locus $|z-a|=|z+b|$ (perpendicular bisector) in the Argand plane"
+   ],
+   "level": 3,
+   "question": "Let integers $a,b\\in[-3,3]$ be such that $a+b\\neq0$. Then the number of all possible ordered pairs $(a,b)$, for which $\\left|\\frac{z-a}{z+b}\\right|=1$ and $\\left|\\begin{matrix} z+1&\\omega&\\omega^2\\\\ \\omega&z+\\omega^2&1\\\\ \\omega^2&1&z+\\omega\\end{matrix}\\right|=1$, $z\\in\\mathbb{C}$, where $\\omega$ and $\\omega^2$ are the roots of $x^2+x+1=0$, is equal to ______.",
+   "answer": "10",
+   "key_idea": "The determinant equals $z^3$, so $z$ is a cube root of unity; then $|z-a|=|z+b|$ must hold for $z=1$ or $z=\\omega,\\omega^2$, each giving a line $b=a+\\text{const}$.",
+   "solution": [
+    "$a,b\\in\\mathbb{Z}$, $-3\\le a,b\\le3$, $a+b\\neq0$, and $\\left|\\frac{z-a}{z+b}\\right|=1$ means $|z-a|=|z+b|$.",
+    "Operate $R_1\\to R_1+R_2+R_3$ (using $1+\\omega+\\omega^2=0$): the first row becomes $z,\\ z,\\ z$.",
+    "Take $z$ common from $R_1$: $z\\left|\\begin{matrix}1&1&1\\\\ \\omega&z+\\omega^2&1\\\\ \\omega^2&1&z+\\omega\\end{matrix}\\right|=1$.",
+    "$C_2\\to C_2-C_1$, $C_3\\to C_3-C_1$: $z\\left|\\begin{matrix}1&0&0\\\\ \\omega&z+\\omega^2-\\omega&1-\\omega\\\\ \\omega^2&1-\\omega^2&z+\\omega-\\omega^2\\end{matrix}\\right|=1$.",
+    "The $2\\times2$ determinant is $\\left(z^2-(\\omega^2-\\omega)^2\\right)-(1-\\omega)(1-\\omega^2)=(z^2+3)-3=z^2$, so $z^3=1$.",
+    "Hence $z=1,\\ \\omega$ or $\\omega^2$.",
+    "For $z=1$: $|1-a|=|1+b|$, i.e. $(1-a)^2-(1+b)^2=-(a+b)(2-a+b)=0$; as $a+b\\neq0$, $b=a-2$. This gives $(a,b)=(-1,-3),(0,-2),(2,0),(3,1)$ (the pair $(1,-1)$ has $a+b=0$, rejected): $4$ pairs.",
+    "For $z=\\omega$ (and $\\omega^2$): $|\\omega-a|^2=1+a+a^2$ and $|\\omega+b|^2=1-b+b^2$; equal gives $(a+b)(a-b+1)=0$, so $b=a+1$: $(a,b)=(-3,-2),(-2,-1),(-1,0),(0,1),(1,2),(2,3)$, all with $a+b\\neq0$: $6$ pairs.",
+    "The two families ($b=a-2$ and $b=a+1$) do not overlap, so the number of ordered pairs is $4+6=10$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF stops at $z^3=1$ and writes 'Now $|1-a|=|1+b|$ $\\Rightarrow$ 10 pairs': it treats only $z=1$ (which alone gives 4 pairs) and gives no count. The counting for $z=1$ and for $z=\\omega,\\omega^2$ (6 pairs) was missing and has been added; the answer 10 is correct (verified by brute force).",
+   "alternate_solutions": [
+    {
+     "idea": "The matrix is $zI+vv^T$ with $v=(1,\\omega,\\omega^2)^T$ (rank one), so its determinant is $z^3+z^2\\,v^Tv=z^3$; then $|z-a|=|z+b|$ says $z$ lies on the perpendicular bisector of the real points $a$ and $-b$.",
+     "solution": [
+      "The matrix equals $zI+N$ where $N_{ij}=\\omega^{i+j}$ (indices $0,1,2$), i.e. $N=vv^T$ with $v=(1,\\omega,\\omega^2)^T$: rank one.",
+      "For a rank-one update, $\\det(zI+vv^T)=z^3+z^2\\,(v^Tv)$, and $v^Tv=1+\\omega^2+\\omega^4=1+\\omega^2+\\omega=0$, so the determinant is $z^3$.",
+      "$z^3=1$ gives the three points $1,\\ \\omega,\\ \\omega^2$ (vertices of an equilateral triangle on the unit circle).",
+      "$|z-a|=|z+b|$ says $z$ is equidistant from the real points $a$ and $-b$: it lies on their perpendicular bisector, the vertical line $x=\\frac{a-b}{2}$ (since $a\\neq-b$).",
+      "$z=1$ lies on this line when $\\frac{a-b}{2}=1$, i.e. $b=a-2$: $(-1,-3),(0,-2),(2,0),(3,1)$ and the rejected $(1,-1)$: $4$ pairs.",
+      "$z=\\omega,\\omega^2$ have real part $-\\frac12$, so $\\frac{a-b}{2}=-\\frac12$, i.e. $b=a+1$: $a=-3,\\dots,2$ gives $6$ pairs, none with $a+b=0$.",
+      "Total $4+6=10$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Circulant-type shortcut: adding all rows into one row (or using $1+\\omega+\\omega^2=0$) pulls out a factor $z$; for a matrix $zI+N$ with $N$ of rank one, $\\det=z^3+z^2\\,\\mathrm{tr}N$.",
+    "$|z-p|=|z-q|$ for real $p\\neq q$ is the vertical line $\\mathrm{Re}\\,z=\\frac{p+q}{2}$; here $p=a$, $q=-b$, so $\\mathrm{Re}\\,z=\\frac{a-b}{2}$.",
+    "Roots of $z^3=1$ have real parts $1,-\\frac12,-\\frac12$, so only the two values $\\frac{a-b}2=1$ or $-\\frac12$ matter; count lattice pairs on each line and remove those with $a+b=0$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Roots of a polynomial and factorisation $P(x)=4\\prod(x-x_k)$",
+    "Modulus of a complex number"
+   ],
+   "level": 3,
+   "question": "Let $x_1,x_2,x_3,x_4$ be the solutions of the equation $4x^4+8x^3-17x^2-12x+9=0$ and $\\left(4+x_1^2\\right)\\left(4+x_2^2\\right)\\left(4+x_3^2\\right)\\left(4+x_4^2\\right)=\\frac{125}{16}m$. Then the value of $m$ is ______.",
+   "answer": "221",
+   "key_idea": "$4+x_k^2=|2i-x_k|^2$ for real roots, so evaluate the polynomial at $x=2i$ and take its modulus.",
+   "solution": [
+    "$4x^4+8x^3-17x^2-12x+9=4(x-x_1)(x-x_2)(x-x_3)(x-x_4)$.",
+    "Put $x=2i$: $4(2i)^4+8(2i)^3-17(2i)^2-12(2i)+9=4\\left[(2i-x_1)(2i-x_2)(2i-x_3)(2i-x_4)\\right]$.",
+    "Left side: $64-64i+68-24i+9=141-88i$.",
+    "Take moduli: $|141-88i|=4\\,|(2i-x_1)(2i-x_2)(2i-x_3)(2i-x_4)|$.",
+    "Square both sides: $141^2+88^2=16\\prod|2i-x_k|^2=16\\prod\\left(4+x_k^2\\right)$ (true as the coefficients are real, so roots are real or in conjugate pairs).",
+    "$\\prod\\left(4+x_k^2\\right)=\\frac{19881+7744}{16}=\\frac{27625}{16}$.",
+    "$\\frac{27625}{16}=\\frac{125}{16}m$, so $m=\\frac{27625}{125}=221$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor the quartic by the rational-root test: $(x+1)(x+3)(2x-1)(2x-3)$, then multiply $4+x^2$ over the four roots directly.",
+     "solution": [
+      "Try $x=-1$: $4-8-17+12+9=0$, so $(x+1)$ is a factor; try $x=-3$: $324-216-153+36+9=0$, so $(x+3)$ is a factor.",
+      "Dividing out gives $4x^4+8x^3-17x^2-12x+9=(x+1)(x+3)(4x^2-8x+3)=(x+1)(x+3)(2x-1)(2x-3)$.",
+      "The roots are $-1,\\ -3,\\ \\frac12,\\ \\frac32$.",
+      "$\\prod\\left(4+x_k^2\\right)=(4+1)(4+9)\\left(4+\\frac14\\right)\\left(4+\\frac94\\right)=5\\cdot13\\cdot\\frac{17}{4}\\cdot\\frac{25}{4}=\\frac{27625}{16}$.",
+      "$\\frac{27625}{16}=\\frac{125}{16}m$ gives $m=221$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\prod\\left(x_k^2+k^2\\right)=\\frac{|P(ik)|^2}{a_n^2}$ for a real polynomial $P=a_n\\prod(x-x_k)$: $\\prod(x_k-ik)(x_k+ik)=\\frac{P(ik)P(-ik)}{a_n^2}=\\frac{|P(ik)|^2}{a_n^2}$.",
+    "Products such as $\\prod(a-x_k)$ are just $\\frac{P(a)}{a_n}$; evaluating at a convenient (possibly complex) point avoids finding the roots.",
+    "For quartics with integer coefficients try rational roots $\\pm\\frac{p}{q}$ ($p\\mid9$, $q\\mid4$ here) first - a full factorisation is often available."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Lattice points in a region of the Argand plane (disc and perpendicular-bisector half-plane)"
+   ],
+   "level": 2,
+   "question": "The sum of the squares of the modulus of the elements in the set $\\{z=a+ib:\\ a,b\\in\\mathbb{Z},\\ z\\in\\mathbb{C},\\ |z-1|\\le1,\\ |z-5|\\le|z-5i|\\}$ is ______.",
+   "answer": "9",
+   "key_idea": "$|z-5|\\le|z-5i|$ is the half-plane $b\\le a$; list the lattice points of the unit disc about $1$ that lie in it.",
+   "solution": [
+    "$|z-1|\\le1$: the closed disc with centre $(1,0)$ and radius $1$.",
+    "$|z-5|\\le|z-5i|$: $z$ is at least as near to $5$ as to $5i$, i.e. $(a-5)^2+b^2\\le a^2+(b-5)^2$, which simplifies to $b\\le a$ (the half-plane on or below the line $y=x$).",
+    "Integer points $(a,b)$ with $(a-1)^2+b^2\\le1$: $(1,0),(0,0),(2,0),(1,1),(1,-1)$.",
+    "Each satisfies $b\\le a$: $(0,0)$ and $(1,1)$ lie on the line $y=x$, and the others lie below it.",
+    "So $(a,b)\\in\\{(0,0),(1,1),(1,0),(1,-1),(2,0)\\}$.",
+    "$|z|^2=a^2+b^2\\in\\{0,2,1,2,4\\}$.",
+    "Sum $=0+2+1+2+4=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "On the lattice points of the disc, $(a-1)^2+b^2\\in\\{0,1\\}$ gives $a^2+b^2=2a-1$ or $2a$, so the required sum needs only the values of $a$.",
+     "solution": [
+      "Integer $(a,b)$ with $(a-1)^2+b^2\\le1$ must have $(a-1)^2+b^2=0$ or $1$.",
+      "Expanding, $a^2+b^2=2a-1+\\left[(a-1)^2+b^2\\right]$: it is $2a-1$ for the centre and $2a$ for the four points at distance $1$.",
+      "The condition $|z-5|\\le|z-5i|$ reduces to $b\\le a$, which holds for the centre $(1,0)$ and for all four neighbours $(0,0),(2,0),(1,1),(1,-1)$.",
+      "Centre: $a^2+b^2=2(1)-1=1$.",
+      "Neighbours: $a=0,2,1,1$, so $\\sum(a^2+b^2)=2(0+2+1+1)=8$.",
+      "Total $1+8=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|z-p|\\le|z-q|$ is the closed half-plane on the side of $p$ of the perpendicular bisector of $p$ and $q$; for $p=5,q=5i$ the bisector is $y=x$.",
+    "Lattice points of a disc of radius $1$ about an integer point: exactly $5$ (the centre and its four neighbours).",
+    "On a circle $|z-c|=r$ with real $c$, $|z|^2=2c\\,\\mathrm{Re}\\,z+r^2-c^2$: $|z|^2$ becomes linear in $a$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Cube roots of unity: reducing powers of $\\alpha$",
+    "Binomial expansion of $(1+\\alpha)^7$"
+   ],
+   "level": 2,
+   "question": "If $\\alpha$ satisfies the equation $x^2+x+1=0$ and $(1+\\alpha)^7=A+B\\alpha+C\\alpha^2$, $A,B,C\\ge0$, then $5(3A-2B-C)$ is equal to ______.",
+   "answer": "5",
+   "key_idea": "Since $1+\\alpha+\\alpha^2=0$, $(A,B,C)$ can shift by $(t,t,t)$ without changing the number, and $3A-2B-C$ is unchanged by that shift.",
+   "solution": [
+    "$\\alpha^2+\\alpha+1=0$ gives $\\alpha=\\omega$ or $\\omega^2$, and $\\alpha^3=1$.",
+    "$(1+\\alpha)^7=1+{}^7C_1\\alpha+{}^7C_2\\alpha^2+{}^7C_3\\alpha^3+{}^7C_4\\alpha^4+{}^7C_5\\alpha^5+{}^7C_6\\alpha^6+{}^7C_7\\alpha^7$.",
+    "$=1+7\\alpha+21\\alpha^2+35\\alpha^3+35\\alpha^4+21\\alpha^5+7\\alpha^6+\\alpha^7$.",
+    "Using $\\alpha^3=1$: $=1+7\\alpha+21\\alpha^2+35+35\\alpha+21\\alpha^2+7+\\alpha$.",
+    "$=43+43\\alpha+42\\alpha^2$, so $A=43,\\ B=43,\\ C=42$.",
+    "$5(3A-2B-C)=5(129-86-42)=5(129-128)=5$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's second line reads $1+7\\alpha+21\\alpha^2+35\\alpha^3+35\\alpha^4+24\\alpha^5+7\\alpha^6+\\alpha^9$: the coefficient ${}^7C_5=21$ (not 24) and the last term is $\\alpha^7$ (not $\\alpha^9$). Its next line has the correct values, so the final working and the answer are unchanged. The PDF also does not mention that $A,B,C$ are not unique (any $(A+t,B+t,C+t)$ works because $1+\\alpha+\\alpha^2=0$); the expression asked is the same for all of them.",
+   "alternate_solutions": [
+    {
+     "idea": "$1+\\alpha=-\\alpha^2$, so $(1+\\alpha)^7=-\\alpha^{14}=-\\alpha^2=1+\\alpha$: read off $(A,B,C)=(1,1,0)$ at once; every other valid triple differs by $(t,t,t)$, which leaves $3A-2B-C$ unchanged.",
+     "solution": [
+      "From $\\alpha^2+\\alpha+1=0$: $1+\\alpha=-\\alpha^2$.",
+      "$(1+\\alpha)^7=(-\\alpha^2)^7=-\\alpha^{14}$, and $\\alpha^{14}=\\alpha^{12}\\alpha^2=\\alpha^2$, so $(1+\\alpha)^7=-\\alpha^2$.",
+      "Again using $-\\alpha^2=1+\\alpha$: $(1+\\alpha)^7=1+\\alpha$, which is $A+B\\alpha+C\\alpha^2$ with $(A,B,C)=(1,1,0)$.",
+      "Any other representation differs by $t(1+\\alpha+\\alpha^2)=0$, i.e. $(A,B,C)\\to(A+t,B+t,C+t)$; then $3A-2B-C\\to3A-2B-C+t(3-2-1)=3A-2B-C$, unchanged.",
+      "So $5(3A-2B-C)=5(3-2-0)=5$ (consistent with $(43,43,42)$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+\\omega=-\\omega^2$ and $1+\\omega^2=-\\omega$: $(1+\\omega)^n=(-1)^n\\omega^{2n}$ - one line instead of a full binomial expansion.",
+    "Because $1+\\omega+\\omega^2=0$, the representation $A+B\\omega+C\\omega^2$ is not unique; only differences like $A-C$ and $B-C$ are determined. Check that the asked expression is invariant (here the coefficients $3,-2,-1$ sum to $0$).",
+    "Sum of binomial coefficients by residue class: $\\sum_{k\\equiv j\\ (3)}{}^nC_k$ gives the coefficients $A,B,C$ of the expansion of $(1+\\omega)^n$ before reducing."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Circle in the Argand plane and the inverse point $\\frac1{\\bar\\alpha}$ (modulus relations)"
+   ],
+   "level": 3,
+   "question": "Let the complex numbers $\\alpha$ and $\\frac{1}{\\bar\\alpha}$ lie on the circles $|z-z_0|^2=4$ and $|z-z_0|^2=16$ respectively, where $z_0=1+i$. Then the value of $100|\\alpha|^2$ is ______.",
+   "answer": "20",
+   "key_idea": "Expand both circle conditions: the cross term $\\alpha\\bar z_0+\\bar\\alpha z_0$ appears in both and can be eliminated, leaving an equation in $|\\alpha|^2$ only.",
+   "solution": [
+    "$|\\alpha-z_0|^2=4\\Rightarrow(\\alpha-z_0)(\\bar\\alpha-\\bar z_0)=4$.",
+    "$|\\alpha|^2-\\alpha\\bar z_0-\\bar\\alpha z_0+|z_0|^2=4$, and $|z_0|^2=2$, so $|\\alpha|^2-\\alpha\\bar z_0-\\bar\\alpha z_0=2$ ......(i)",
+    "$\\left|\\frac1{\\bar\\alpha}-z_0\\right|^2=16\\Rightarrow\\left(1-\\bar\\alpha z_0\\right)\\left(1-\\alpha\\bar z_0\\right)=16|\\alpha|^2$.",
+    "$1-\\bar\\alpha z_0-\\alpha\\bar z_0+|\\alpha|^2\\cdot2=16|\\alpha|^2$ ......(ii)",
+    "Subtract (i) from (ii): $1+|\\alpha|^2=16|\\alpha|^2-2$ (the cross terms cancel).",
+    "$15|\\alpha|^2=3$, so $5|\\alpha|^2=1$ and $|\\alpha|^2=\\frac15$.",
+    "$100|\\alpha|^2=20$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use polar form $\\alpha=re^{i\\theta}$, $z_0=\\sqrt2e^{i\\pi/4}$: both circle conditions contain the same $\\cos\\left(\\theta-\\frac\\pi4\\right)$, which is eliminated.",
+     "solution": [
+      "Let $\\alpha=re^{i\\theta}$, $z_0=\\sqrt2e^{i\\pi/4}$ and $c=\\cos\\left(\\theta-\\frac\\pi4\\right)$.",
+      "$|\\alpha-z_0|^2=r^2+2-2\\sqrt2\\,rc=4$, so $2\\sqrt2\\,c=\\frac{r^2-2}{r}$.",
+      "$\\frac1{\\bar\\alpha}=\\frac1re^{i\\theta}$, so $\\left|\\frac1{\\bar\\alpha}-z_0\\right|^2=\\frac1{r^2}+2-\\frac{2\\sqrt2c}{r}=16$.",
+      "Substitute $2\\sqrt2c$: $\\frac1{r^2}+2-\\frac{r^2-2}{r^2}=16$.",
+      "$\\frac{3-r^2}{r^2}+2=16$, so $3+r^2=16r^2$ and $15r^2=3$, $r^2=\\frac15$.",
+      "$100|\\alpha|^2=20$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac1{\\bar\\alpha}$ is the inverse of $\\alpha$ in the unit circle: it lies on the same ray from $0$ and $\\left|\\frac1{\\bar\\alpha}\\right|=\\frac1{|\\alpha|}$.",
+    "For two conditions on $\\alpha$ built from the same cross term $\\mathrm{Re}(\\alpha\\bar z_0)$, eliminate that term by subtraction or substitution rather than solving for $\\alpha$.",
+    "$|w-z_0|^2=|w|^2-2\\mathrm{Re}(w\\bar z_0)+|z_0|^2$ is the working formula; keep $|z_0|^2=2$ for $z_0=1+i$."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Reducing powers of the roots of a quadratic using the equation $x^2=x-2$"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha,\\beta$ be the roots of the equation $x^2-x+2=0$ with $\\mathrm{Im}(\\alpha)>\\mathrm{Im}(\\beta)$. Then $\\alpha^6+\\alpha^4+\\beta^4-5\\alpha^2$ is equal to ______.",
+   "answer": "13",
+   "key_idea": "Reduce $x^6$ and $x^4$ using $x^2+2=x$ so the expression becomes a function of $\\alpha^2+\\beta^2=1-4$.",
+   "solution": [
+    "$x^2+2=x$; squaring, $x^4+4+4x^2=x^2$, so $x^4=-4-3x^2$.",
+    "$x^6=x^2\\cdot x^4=-4x^2-3x^4=-4x^2-3(-4-3x^2)$, so $x^6=12+5x^2$.",
+    "Hence $\\alpha^6-5\\alpha^2=12$ and the expression becomes $\\alpha^4+\\beta^4+12$.",
+    "$\\alpha^4+\\beta^4=\\left(-4-3\\alpha^2\\right)+\\left(-4-3\\beta^2\\right)=-8-3(\\alpha^2+\\beta^2)$, so the expression is $4-3(\\alpha^2+\\beta^2)$.",
+    "$\\alpha+\\beta=1$, $\\alpha\\beta=2$, so $\\alpha^2+\\beta^2=1-4=-3$.",
+    "Value $=4-3(-3)=13$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Reduce every power to the form $px+q$ by repeatedly using $x^2=x-2$, then apply $\\alpha+\\beta=1$.",
+     "solution": [
+      "$x^2=x-2$.",
+      "$x^4=(x-2)^2=x^2-4x+4=(x-2)-4x+4=-3x+2$.",
+      "$x^6=x^2x^4=(x-2)(-3x+2)=-3x^2+8x-4=-3(x-2)+8x-4=5x+2$.",
+      "$\\alpha^6-5\\alpha^2=(5\\alpha+2)-5(\\alpha-2)=12$.",
+      "$\\alpha^4+\\beta^4=-3(\\alpha+\\beta)+4=-3+4=1$.",
+      "Total $=12+1=13$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a quadratic root $x$, every power $x^n$ reduces to $p_nx+q_n$ via $x^2=sx-p$; then sums over both roots need only $\\alpha+\\beta$ and $\\alpha\\beta$.",
+    "Sums of equal powers of both roots: $\\alpha^n+\\beta^n=s\\,S_{n-1}-p\\,S_{n-2}$ (here $S_n=S_{n-1}-2S_{n-2}$), giving $S_2=-3$, $S_4=1$.",
+    "The ordering condition $\\mathrm{Im}\\,\\alpha>\\mathrm{Im}\\,\\beta$ is irrelevant when the expression's $\\alpha^6,\\alpha^2$ part reduces to a constant (here $12$); check this before choosing a root."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Polar form and powers of the roots of a quadratic with complex roots"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha,\\beta$ be the roots of the equation $x^2-\\sqrt6x+3=0$ such that $\\mathrm{Im}(\\alpha)>\\mathrm{Im}(\\beta)$. Let $a,b$ be integers not divisible by $3$ and $n$ be a natural number such that $\\frac{\\alpha^{99}}{\\beta}+\\alpha^{98}=3^n(a+ib)$, $i=\\sqrt{-1}$. Then $n+a+b$ is equal to ______.",
+   "answer": "49",
+   "key_idea": "Factor $\\alpha^{98}\\left(\\frac\\alpha\\beta+1\\right)=\\frac{\\alpha^{98}(\\alpha+\\beta)}{\\beta}$ and use the polar forms $\\sqrt3e^{\\pm i\\pi/4}$.",
+   "solution": [
+    "$x=\\frac{\\sqrt6\\pm i\\sqrt6}{2}=\\frac{\\sqrt6}{2}(1\\pm i)$.",
+    "$\\alpha=\\sqrt3e^{i\\pi/4}$ and $\\beta=\\sqrt3e^{-i\\pi/4}$ (as $\\mathrm{Im}\\,\\alpha>\\mathrm{Im}\\,\\beta$).",
+    "$\\frac{\\alpha^{99}}{\\beta}+\\alpha^{98}=\\alpha^{98}\\left(\\frac\\alpha\\beta+1\\right)=\\frac{\\alpha^{98}(\\alpha+\\beta)}{\\beta}$.",
+    "$\\alpha+\\beta=\\sqrt6$ and $\\frac{\\sqrt6}{\\beta}=\\sqrt2e^{i\\pi/4}$, so the expression is $3^{49}e^{i98\\pi/4}\\cdot\\sqrt2e^{i\\pi/4}=3^{49}\\sqrt2\\,e^{i99\\pi/4}$.",
+    "$\\frac{99\\pi}{4}=24\\pi+\\frac{3\\pi}{4}$, so $e^{i99\\pi/4}=e^{i3\\pi/4}=\\frac{-1+i}{\\sqrt2}$.",
+    "The expression is $3^{49}(-1+i)=3^n(a+ib)$.",
+    "$n=49,\\ a=-1,\\ b=1$ (neither $a$ nor $b$ is divisible by $3$).",
+    "$n+a+b=49-1+1=49$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$\\frac\\alpha\\beta=e^{i\\pi/2}=i$ and $\\alpha^2=3i$, so the whole expression is $(\\alpha^2)^{49}(i+1)$ with no large angles.",
+     "solution": [
+      "$\\alpha=\\sqrt3e^{i\\pi/4}$, $\\beta=\\sqrt3e^{-i\\pi/4}$, so $\\frac\\alpha\\beta=e^{i\\pi/2}=i$.",
+      "$\\alpha^2=3e^{i\\pi/2}=3i$, so $\\alpha^{98}=(3i)^{49}=3^{49}i^{49}=3^{49}i$ (as $i^{48}=1$).",
+      "$\\frac{\\alpha^{99}}{\\beta}+\\alpha^{98}=\\alpha^{98}\\left(\\frac\\alpha\\beta+1\\right)=3^{49}i(i+1)=3^{49}(-1+i)$.",
+      "Hence $n=49$, $a=-1$, $b=1$ and $n+a+b=49$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\alpha=\\sqrt{q}\\,e^{i\\theta}$, $\\beta=\\bar\\alpha$ then $\\frac\\alpha\\beta=e^{2i\\theta}$ and $\\alpha^2=qe^{2i\\theta}$; for $\\theta=\\frac\\pi4$ these are $i$ and $qi$, so even powers cycle through $\\pm1,\\pm i$.",
+    "Reduce large angles mod $2\\pi$ first: $\\frac{99\\pi}{4}\\equiv\\frac{3\\pi}{4}$; or reduce the exponent of $i$ mod $4$.",
+    "$\\alpha+\\beta=2\\mathrm{Re}\\,\\alpha$ and $\\alpha\\beta=|\\alpha|^2$ for conjugate roots: $\\sqrt6$ and $3$ here."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Simplifying complex expressions, modulus and argument",
+    "Number of solutions of an exponential equation"
+   ],
+   "level": 2,
+   "question": "If $\\alpha$ denotes the number of solutions of $|1-i|^x=2^x$ and $\\beta=\\left(\\frac{|z|}{\\arg(z)}\\right)$, where $z=\\frac\\pi4(1+i)^4\\left[\\frac{1-\\sqrt\\pi i}{\\sqrt\\pi+i}+\\frac{\\sqrt\\pi-i}{1+\\sqrt\\pi i}\\right]$, $i=\\sqrt{-1}$, then the distance of the point $(\\alpha,\\beta)$ from the line $4x-3y=7$ is ______.",
+   "answer": "3",
+   "key_idea": "Both fractions equal $\\frac1i=-i$ (their numerators are $-i$ times their denominators), so $z=2\\pi i$.",
+   "solution": [
+    "Over the common denominator the bracket is $\\frac{(1-\\sqrt\\pi i)(1+\\sqrt\\pi i)+(\\sqrt\\pi-i)(\\sqrt\\pi+i)}{(\\sqrt\\pi+i)(1+\\sqrt\\pi i)}=\\frac{1+\\pi+\\pi+1}{i(1+\\pi)-\\sqrt\\pi+\\sqrt\\pi}=\\frac{2(1+\\pi)}{i(1+\\pi)}=\\frac2i$.",
+    "$z=\\frac\\pi4(1+i)^4\\cdot\\frac2i=\\frac\\pi2\\cdot\\frac{(1+i)^4}{i}=-\\frac{\\pi}{2}\\,i\\,(1+i)^4$.",
+    "$|z|=\\frac\\pi2\\cdot|i|\\cdot|1+i|^4=\\frac\\pi2\\cdot4=2\\pi$.",
+    "$(1+i)^4=(2i)^2=-4$, so $z=-\\frac\\pi2\\cdot i\\cdot(-4)=2\\pi i$ and $\\arg z=\\frac\\pi2$.",
+    "$\\beta=\\frac{|z|}{\\arg z}=\\frac{2\\pi}{\\pi/2}=4$.",
+    "$|1-i|^x=2^x$ means $\\left(\\sqrt2\\right)^x=2^x$, which holds only for $x=0$ (as $\\sqrt2\\neq2$).",
+    "So there is one solution: $\\alpha=1$, and the point is $(1,4)$.",
+    "Distance from $4x-3y=7$: $\\frac{|4(1)-3(4)-7|}{5}=\\frac{15}{5}=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Spot that $1-\\sqrt\\pi i=-i\\left(\\sqrt\\pi+i\\right)$ and $\\sqrt\\pi-i=-i\\left(1+\\sqrt\\pi i\\right)$, so each fraction is exactly $-i$ with no algebra.",
+     "solution": [
+      "$-i\\left(\\sqrt\\pi+i\\right)=-i\\sqrt\\pi+1=1-\\sqrt\\pi i$, so $\\frac{1-\\sqrt\\pi i}{\\sqrt\\pi+i}=-i$.",
+      "$-i\\left(1+\\sqrt\\pi i\\right)=-i+\\sqrt\\pi$, so $\\frac{\\sqrt\\pi-i}{1+\\sqrt\\pi i}=-i$.",
+      "The bracket is $-2i$, and $(1+i)^4=(2i)^2=-4$, so $z=\\frac\\pi4(-4)(-2i)=2\\pi i$.",
+      "$|z|=2\\pi$ and $\\arg z=\\frac\\pi2$ give $\\beta=4$.",
+      "$\\left(\\frac{|1-i|}{2}\\right)^x=\\left(\\frac1{\\sqrt2}\\right)^x=1$ has only the solution $x=0$, so $\\alpha=1$.",
+      "Distance of $(1,4)$ from $4x-3y-7=0$ is $\\frac{|4-12-7|}{5}=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Look for a numerator equal to $\\pm i$ times the denominator: $\\frac{1-ti}{t+i}=-i$ for any real $t$ (because $-i(t+i)=1-ti$).",
+    "$(1+i)^2=2i$, $(1+i)^4=-4$, $(1+i)^8=16$: memorise these.",
+    "$a^x=b^x$ with $a\\neq b>0$ has exactly one solution, $x=0$ (take $\\left(\\frac ab\\right)^x=1$)."
+   ]
+  },
+  {
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Maximum and minimum of $|z-z_0|$ over a region of the Argand plane (disc cut by a half-plane)"
+   ],
+   "level": 3,
+   "question": "Let $P=\\{z\\in\\mathbb{C}:|z+2-3i|\\le1\\}$ and $Q=\\{z\\in\\mathbb{C}:z(1+i)+\\bar z(1-i)\\le-8\\}$. Let in $P\\cap Q$, $|z-3+2i|$ be maximum and minimum at $z_1$ and $z_2$ respectively. If $|z_1|^2+2|z_2|^2=\\alpha+\\beta\\sqrt2$, where $\\alpha,\\beta$ are integers, then $\\alpha+\\beta$ equals ______.",
+   "answer": "36",
+   "key_idea": "$|z-3+2i|$ is the distance from $P_0(3,-2)$: the farthest point is on the line through $P_0$ and the disc's centre, the nearest is where that line (perpendicular to the boundary) meets $x-y+4=0$.",
+   "solution": [
+    "$P$: the disc $(x+2)^2+(y-3)^2\\le1$, centre $(-2,3)$, radius $1$.",
+    "$Q$: $z(1+i)+\\bar z(1-i)=2\\,\\mathrm{Re}\\{(1+i)z\\}=2(x-y)\\le-8$, i.e. $x-y+4\\le0$: the half-plane above $L_2:x-y+4=0$.",
+    "$|z-3+2i|$ is the distance from the point $(3,-2)$, which lies on $L_1:x+y-1=0$ together with the centre $(-2,3)$.",
+    "The maximum $z_1$ is the intersection of the circle with $L_1$ farthest from $(3,-2)$: $L_1$ meets the circle at $z_1\\left(-2-\\frac1{\\sqrt2},\\ 3+\\frac1{\\sqrt2}\\right)$.",
+    "The minimum $z_2$ is the intersection of $L_1$ and $L_2$ ($L_1\\perp L_2$, so this is the foot of the perpendicular from $(3,-2)$ to $L_2$): solving, $z_2\\left(-\\frac32,\\frac52\\right)$, at distance $\\frac1{\\sqrt2}<1$ from the centre, so it lies in the disc.",
+    "$|z_1|^2=\\left(2+\\frac1{\\sqrt2}\\right)^2+\\left(3+\\frac1{\\sqrt2}\\right)^2=14+5\\sqrt2$ and $|z_2|^2=\\frac94+\\frac{25}4=\\frac{17}2$.",
+    "$|z_1|^2+2|z_2|^2=14+5\\sqrt2+17=31+5\\sqrt2$.",
+    "So $\\alpha=31$, $\\beta=5$, and $\\alpha+\\beta=36$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use vectors: $z_1=C+\\hat u$ with $\\hat u$ the unit vector from $P_0$ to the centre $C$, so $|z_1|^2=|C|^2+2C\\cdot\\hat u+1$; and $z_2$ is the foot of the perpendicular from $P_0$ to $L_2$ by the formula, which lies inside the disc.",
+     "solution": [
+      "$P_0=(3,-2)$, $C=(-2,3)$, $\\hat u=\\frac{C-P_0}{|C-P_0|}=\\frac{(-5,5)}{5\\sqrt2}=\\frac{(-1,1)}{\\sqrt2}$; the farthest point of the disc is $z_1=C+\\hat u$.",
+      "$|z_1|^2=|C|^2+2\\,C\\cdot\\hat u+1=13+2\\cdot\\frac{2+3}{\\sqrt2}+1=14+5\\sqrt2$.",
+      "Foot of the perpendicular from $P_0$ to $x-y+4=0$: $P_0-\\frac{3+2+4}{2}(1,-1)=(3,-2)-\\frac92(1,-1)=\\left(-\\frac32,\\frac52\\right)$.",
+      "This foot is at distance $\\frac{1}{\\sqrt2}<1$ from $C$, so it lies in the disc and is the nearest point of $P\\cap Q$: $z_2=\\left(-\\frac32,\\frac52\\right)$, $|z_2|^2=\\frac{17}2$.",
+      "$z_1$ is in $Q$: $y-x-4=\\left(3+\\frac1{\\sqrt2}\\right)-\\left(-2-\\frac1{\\sqrt2}\\right)-4=1+\\sqrt2>0$, so the farthest point of the disc is allowed.",
+      "$|z_1|^2+2|z_2|^2=14+5\\sqrt2+17=31+5\\sqrt2$, so $\\alpha+\\beta=31+5=36$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Over a disc with centre $C$ and radius $r$, the distance from an outside point $P_0$ ranges over $[\\,|P_0C|-r,\\ |P_0C|+r\\,]$, attained on line $P_0C$; for a disc cut by a half-plane, check that these points lie in the half-plane, else use the boundary line.",
+    "The nearest point of a line to $P_0$ is the foot of the perpendicular: $P_0-\\frac{ax_0+by_0+c}{a^2+b^2}(a,b)$.",
+    "$z(1+i)+\\bar z(1-i)=2\\,\\mathrm{Re}\\{(1+i)z\\}=2(x-y)$; $\\;\\alpha z+\\bar\\alpha\\bar z$ is always real $=2\\mathrm{Re}(\\alpha z)$ and describes a line or half-plane."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Mean and variance with two unknown observations"
+   ],
+   "level": 2,
+   "question": "If the mean and the variance of $6,4,a,8,b,12,10,13$ are $9$ and $9.25$ respectively, then $a+b+ab$ is equal to:",
+   "options": [
+    "$100$",
+    "$105$",
+    "$106$",
+    "$103$"
+   ],
+   "answer": "(D) 103",
+   "key_idea": "Mean gives $a+b$, variance (via $\\sum x^2$) gives $a^2+b^2$; then $ab=\\frac{(a+b)^2-(a^2+b^2)}{2}$.",
+   "solution": [
+    "Mean $=\\frac{6+4+a+8+b+12+10+13}{8}=9$, so $53+a+b=72$ and $a+b=19$.",
+    "Variance: $\\frac{36+16+a^2+64+b^2+144+100+169}{8}-9^2=9.25$.",
+    "$\\frac{529+a^2+b^2}{8}=90.25$, so $529+a^2+b^2=722$ and $a^2+b^2=193$.",
+    "$a+b=19$ and $a^2+b^2=193$ give $ab=\\frac{361-193}{2}=84$, so $\\{a,b\\}=\\{7,12\\}$.",
+    "$a+b+ab=19+84=103$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work with deviations from the mean $9$: they sum to $0$ and their squares sum to $8\\times9.25=74$; the numbers are small, and $a+b+ab=(a+1)(b+1)-1$.",
+     "solution": [
+      "Deviations from $9$: $-3,-5,-1,3,1,4$ for the known values, summing to $-1$.",
+      "Let $p=a-9$, $q=b-9$. The deviations sum to $0$: $p+q=1$.",
+      "Sum of squares of deviations $=8\\times9.25=74$; known ones give $9+25+1+9+1+16=61$, so $p^2+q^2=13$.",
+      "$p+q=1$, $p^2+q^2=13$ give $pq=-6$, so $\\{p,q\\}=\\{3,-2\\}$ and $\\{a,b\\}=\\{12,7\\}$.",
+      "$a+b+ab=(a+1)(b+1)-1=8\\cdot13-1=103$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Variance equals the mean of squared deviations from the mean, so shifting the origin to the mean makes the numbers small: $\\sum d_i=0$ and $\\sum d_i^2=n\\sigma^2$.",
+    "From $s=a+b$ and $q=a^2+b^2$: $ab=\\frac{s^2-q}{2}$; and $a+b+ab=(a+1)(b+1)-1$.",
+    "Check: with $a=7,b=12$ the mean is $\\frac{72}{8}=9$ and $\\sum x^2=722$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Mean and variance with unknown observations; variance of $n+x_n$"
+   ],
+   "level": 2,
+   "question": "Let the mean and variance of five observations $x_1=1,x_2=3,x_3=a,x_4=7$ and $x_5=b$, $a>b$, be $5$ and $10$ respectively. Then the variance of the observations $n+x_n$, $n=1,2,\\dots,5$ is:",
+   "options": [
+    "$16$",
+    "$17.4$",
+    "$17$",
+    "$16.4$"
+   ],
+   "answer": "(A) 16",
+   "key_idea": "Mean and variance fix $a+b=14$ and $a^2+b^2=116$, hence $a=10$, $b=4$; then compute the variance of $2,5,13,11,9$.",
+   "solution": [
+    "Mean: $\\bar x=\\frac{1+3+a+7+b}{5}=5$, so $a+b=14$.",
+    "Variance: $\\sigma^2=\\frac{\\sum x_i^2}{n}-\\bar x^2$, so $\\frac{1^2+3^2+a^2+7^2+b^2}{5}-25=10$.",
+    "$1+9+49+a^2+b^2=175$, so $a^2+b^2=116$.",
+    "$a+b=14$, $a^2+b^2=116$ give $ab=\\frac{196-116}{2}=40$; with $a>b$: $a=10$, $b=4$.",
+    "The new observations $n+x_n$ are $2,5,13,11,9$.",
+    "$\\sigma^2=\\frac{2^2+5^2+13^2+11^2+9^2}{5}-\\left(\\frac{2+5+13+11+9}{5}\\right)^2$.",
+    "$=80-64=16$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\mathrm{Var}(x_n+n)=\\mathrm{Var}(x)+\\mathrm{Var}(n)+2\\,\\mathrm{Cov}(x,n)$ with $\\mathrm{Var}(n)=2$ for $1,\\dots,5$.",
+     "solution": [
+      "After $a=10$, $b=4$ (from mean $5$, variance $10$): the data are $x=(1,3,10,7,4)$ against $n=(1,2,3,4,5)$.",
+      "$\\mathrm{Var}(n)=\\frac{1+4+9+16+25}{5}-9=2$.",
+      "$\\mathrm{Cov}(x,n)=\\frac{\\sum nx_n}{5}-\\bar n\\,\\bar x=\\frac{1+6+30+28+20}{5}-3\\cdot5=17-15=2$.",
+      "$\\mathrm{Var}(x+n)=10+2+2(2)=16$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Var}(X+Y)=\\mathrm{Var}X+\\mathrm{Var}Y+2\\mathrm{Cov}(X,Y)$ with $\\mathrm{Cov}=\\overline{XY}-\\bar X\\bar Y$; the variance of $1,\\dots,n$ is $\\frac{n^2-1}{12}$ ($=2$ for $n=5$).",
+    "Variance is unchanged by shifting all data by a constant and scales by $k^2$ for multiplication by $k$.",
+    "Two unknowns with given sum and sum of squares: $ab=\\frac{(a+b)^2-(a^2+b^2)}2$, then solve the quadratic $t^2-(a+b)t+ab=0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Mean, standard deviation and mean deviation about the mode"
+   ],
+   "level": 2,
+   "question": "Let the mean and the standard deviation of the observations $2,3,3,4,5,7,a,b$ be $4$ and $\\sqrt2$ respectively. Then the mean deviation about the mode of these observations is:",
+   "options": [
+    "$\\frac34$",
+    "$\\frac12$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": "(C) 1",
+   "key_idea": "Mean and variance give $a+b=8$ and $a^2+b^2=32$, forcing $a=b=4$ (so the mode is $4$).",
+   "solution": [
+    "Mean $=\\frac{24+a+b}{8}=4$, so $a+b=8$ ....(1)",
+    "Variance $=\\frac{\\sum x_i^2}{n}-\\bar x^2=2$, so $\\frac{112+a^2+b^2}{8}-16=2$.",
+    "$a^2+b^2=32$ ....(2)",
+    "From (1) and (2): $ab=\\frac{64-32}{2}=16$, so $(a-b)^2=64-64=0$ and $a=b=4$.",
+    "The observations are $2,3,3,4,4,4,5,7$, so the mode is $4$ (it occurs three times).",
+    "Mean deviation about the mode $=\\frac{2+1+1+0+1+3+0+0}{8}$ (the six listed deviations plus $|a-4|=|b-4|=0$).",
+    "$=\\frac88=1$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Variance is the mean squared deviation about the mean $4$: the six known values already contribute $16=8\\sigma^2$, so $(a-4)^2+(b-4)^2=0$ at once.",
+     "solution": [
+      "Deviations from the mean $4$ of the known values $2,3,3,4,5,7$: $-2,-1,-1,0,1,3$.",
+      "Their squares sum to $4+1+1+0+1+9=16$.",
+      "Total required: $8\\sigma^2=8\\times2=16$, so $(a-4)^2+(b-4)^2=0$ and $a=b=4$ (consistent with $a+b=8$).",
+      "The mode is $4$, equal to the mean, so the mean deviation about the mode equals the mean absolute deviation about the mean $=\\frac{2+1+1+0+1+3+0+0}{8}=1$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$n\\sigma^2=\\sum(x_i-\\bar x)^2$: if the known data already use up $n\\sigma^2$, every unknown must equal the mean.",
+    "Variance as a sum of squares: it vanishes only when every deviation is $0$; use this to solve unknowns instantly.",
+    "Mean deviation about a point $c$ is $\\frac1n\\sum|x_i-c|$ (absolute values); it is smallest when $c$ is the median."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Correcting the mean and standard deviation for a wrongly recorded observation"
+   ],
+   "level": 2,
+   "question": "The mean and standard deviation of $100$ observations are $40$ and $5.1$, respectively. By mistake one observation is taken as $50$ instead of $40$. If the correct mean and the correct standard deviation are $\\mu$ and $\\sigma$ respectively, then $10(\\mu+\\sigma)$ is equal to:",
+   "options": [
+    "$451$",
+    "$447$",
+    "$449$",
+    "$445$"
+   ],
+   "answer": "(C) 449",
+   "key_idea": "Recover $\\sum x_i^2$ from the old mean and variance, replace $50^2$ by $40^2$, and recompute.",
+   "solution": [
+    "Correct mean: $\\mu=\\frac{100\\times40-50+40}{100}=39.9$.",
+    "Old data: $(5.1)^2=\\frac{\\sum x_i^2}{100}-(40)^2$, so $\\sum x_i^2=100\\times40^2+100\\times(5.1)^2=162601$.",
+    "Correct sum of squares: $162601-50^2+40^2=161701$.",
+    "$\\sigma^2=\\frac{161701}{100}-\\mu^2=1617.01-1592.01=25$, so $\\sigma=5$.",
+    "$10(\\mu+\\sigma)=10(39.9+5)=449$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes $\\sigma^2=\\frac{\\sum x_i^2-52^2+40^2}{100}-\\mu^2=25$: the square of the wrong value is $50^2$, not $52^2$ (with $52^2$ the result is $22.96$, not $25$). Its last line also reads $100(\\mu+\\sigma)$ where $10(\\mu+\\sigma)$ is meant. Corrected to $50^2$ and $10(\\mu+\\sigma)$; answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Measure deviations from $40$: the wrong value $50$ contributed $(50-40)^2=100$ to $\\sum(x-40)^2$ and the correct value $40$ contributes $0$.",
+     "solution": [
+      "Old data have mean $40$, so $\\sum(x_i-40)^2=100\\times(5.1)^2=2601$.",
+      "The wrong observation $50$ contributed $(50-40)^2=100$; the correct one $40$ contributes $0$. Corrected $\\sum(x_i-40)^2=2601-100=2501$.",
+      "Correct mean $\\mu=39.9$, so $\\mu-40=-0.1$.",
+      "$\\sigma^2=\\frac{\\sum(x_i-40)^2}{100}-(\\mu-40)^2=25.01-0.01=25$, so $\\sigma=5$.",
+      "$10(\\mu+\\sigma)=10(39.9+5)=449$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Variance about any reference point $c$: $\\sigma^2=\\frac{\\sum(x_i-c)^2}{n}-(\\bar x-c)^2$; choosing $c$ near the mean keeps the numbers small.",
+    "A wrong value $w$ replaced by the right value $r$ changes the mean by $\\frac{r-w}{n}$ and $\\sum x^2$ by $r^2-w^2$.",
+    "Recompute the mean first: the corrected mean enters the variance formula as $\\mu^2$, not the old $40^2$."
+   ]
+  }
+ ]
+}
