@@ -1,0 +1,890 @@
+{
+ "title": "JEE Main Question Bank 01 Algebra 14 — Paper Analysis",
+ "subtitle": "Binomial Theorem · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Algebra_14.pdf (printed Q261-Q280 renumbered 1-20; no blueprint; concepts self-assigned; marks assumed 4 each)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "4 marks each (assumed: no marks printed in the paper)",
+    "JEE Advanced default for single-correct questions"
+   ]
+  }
+ ],
+ "paper_name": "QB 01 Algebra 14",
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion: coefficients of a product"
+   ],
+   "level": 2,
+   "question": "If the coefficients of $x^2$ and $x^3$ are both zero, in the expansion of the expression $(1+ax+bx^2)(1-3x)^{15}$ in powers of $x$, then the ordered pair $(a,b)$ is equal to:",
+   "options": [
+    "$(-54,315)$",
+    "$(28,861)$",
+    "$(-21,714)$",
+    "$(28,315)$"
+   ],
+   "answer": "(D) $(28,315)$",
+   "key_idea": "Collect each coefficient from $(1-3x)^{15}$ with $1,\\,ax,\\,bx^2$ and solve the two linear equations in $a,b$.",
+   "solution": [
+    "Coefficient of $x^2$ in $(1+ax+bx^2)(1-3x)^{15}$ is $1\\cdot{}^{15}C_2(-3)^2+a\\cdot{}^{15}C_1(-3)+b\\cdot{}^{15}C_0=0$.",
+    "$\\frac{15\\cdot14}{2}\\times9-15\\times3a+b=0$, so $945-45a+b=0\\quad\\ldots(i)$",
+    "Coefficient of $x^3$: ${}^{15}C_3(-3)^3+a\\cdot{}^{15}C_2(-3)^2+b\\cdot{}^{15}C_1(-3)=0$.",
+    "$\\frac{15\\cdot14\\cdot13}{3\\cdot2}(-3\\cdot3\\cdot3)+a\\,\\frac{15\\cdot14}{2}\\cdot9-b\\times3\\times15=0$.",
+    "Take out $15\\times3$: $15\\times3\\left[-3\\times7\\times13+a\\times7\\times3-b\\right]=0$.",
+    "So $21a-b=273\\quad\\ldots(ii)$",
+    "Adding $(i)$ and $(ii)$: $945-24a=273$, so $a=28$; then $b=45\\cdot28-945=315$.",
+    "$(a,b)=(28,315)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use one equation to eliminate options, then confirm the survivor with the second equation.",
+     "solution": [
+      "Only the $x^2$ condition is needed to filter: $945-45a+b=0$.",
+      "Test $(A)$: $945+2430+315\\neq0$. Test $(B)$: $945-1260+861\\neq0$. Test $(C)$: $945+945+714\\neq0$.",
+      "Test $(D)$: $945-45\\cdot28+315=945-1260+315=0$.",
+      "Check $(D)$ in the $x^3$ condition: $-12285+28\\cdot945+315\\cdot(-45)=-12285+26460-14175=0$.",
+      "So $(a,b)=(28,315)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a product $P(x)\\,(1+u)^n$ with a short polynomial $P$, the coefficient of $x^k$ is $\\sum_j p_j\\,[x^{k-j}](1+u)^n$: only $\\deg P+1$ terms are needed.",
+    "$[x^k](1+cx)^n={}^nC_k\\,c^k$; for $(1-3x)^{15}$ the first coefficients are $1,\\,-45,\\,945,\\,-12285$.",
+    "With options, a single easy equation (here the $x^2$ one) usually kills three options; verify the survivor with the second equation."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion: general term and coefficient condition"
+   ],
+   "level": 2,
+   "question": "The smallest natural number $n$, such that the coefficient of $x$ in the expansion of $\\left(x^2+\\frac1{x^3}\\right)^n$ is ${}^nC_{23}$, is:",
+   "options": [
+    "$58$",
+    "$35$",
+    "$38$",
+    "$23$"
+   ],
+   "answer": "(C) $38$",
+   "key_idea": "${}^nC_r={}^nC_{23}$ forces $r=23$ or $n-r=23$; each case, together with $2n-5r=1$, fixes $n$.",
+   "solution": [
+    "General term: $T_{r+1}={}^nC_r(x^2)^{n-r}\\left(\\frac1{x^3}\\right)^r$.",
+    "$T_{r+1}={}^nC_r\\,x^{2n-5r}$.",
+    "For the coefficient of $x$: $2n-5r=1$.",
+    "Given that the coefficient is ${}^nC_r={}^nC_{23}$, so $r=23$ or $n-r=23$.",
+    "If $r=23$: $2n=1+115=116$, so $n=58$.",
+    "If $n-r=23$, i.e. $r=n-23$: $2n-5(n-23)=1$, so $3n=114$ and $n=38$.",
+    "The minimum value is $n=38$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A congruence filter: $5r=2n-1$ forces $n\\equiv3\\pmod5$, which leaves very few $n$ to test.",
+     "solution": [
+      "From $2n-5r=1$: $2n\\equiv1\\pmod5$, so $n\\equiv3\\pmod5$ and $r=\\frac{2n-1}5$.",
+      "${}^nC_{23}\\neq0$ needs $n\\ge23$, and ${}^nC_r={}^nC_{23}$ needs $r=23$ or $r=n-23$.",
+      "Candidates with $n\\equiv3\\pmod 5$ and $23\\le n\\le37$: $n=23,28,33$.",
+      "$n=23$: $r=9$, but ${}^{23}C_9\\neq{}^{23}C_{23}$. $n=28$: $r=11$, but $11\\neq23$ and $28-11=17\\neq23$. $n=33$: $r=13$, but $33-13=20\\neq23$.",
+      "$n=38$: $r=15$ and $38-15=23$, so ${}^{38}C_{15}={}^{38}C_{23}$. Hence the smallest $n$ is $38$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\left(ax^p+\\frac b{x^q}\\right)^n$ the general term is ${}^nC_r\\,a^{n-r}b^r\\,x^{p(n-r)-qr}$; the exponent is linear in $r$, so the integrality of $r$ gives a congruence on $n$.",
+    "${}^nC_a={}^nC_b\\iff a=b$ or $a+b=n$ (for $0\\le a,b\\le n$): the source of the two cases.",
+    "Always check the smaller candidate satisfies $0\\le r\\le n$ before accepting it."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion: coefficient in a product of polynomials"
+   ],
+   "level": 2,
+   "question": "The coefficient of $x^{18}$ in the product $(1+x)(1-x)^{10}(1+x+x^2)^9$ is:",
+   "options": [
+    "$84$",
+    "$-126$",
+    "$-84$",
+    "$126$"
+   ],
+   "answer": "(A) $84$",
+   "key_idea": "$(1-x)(1+x+x^2)=1-x^3$ turns the product into $(1-x^3)^9(1-x^2)$.",
+   "solution": [
+    "Regroup: $(1+x)(1-x)^{10}(1+x+x^2)^9=(1+x)(1-x)\\cdot\\left[(1-x)(1+x+x^2)\\right]^9$.",
+    "Since $(1-x)(1+x+x^2)=1-x^3$ and $(1+x)(1-x)=1-x^2$, the product is $(1-x^3)^9(1-x^2)$.",
+    "$=(1-x^3)^9-x^2(1-x^3)^9$.",
+    "Coefficient of $x^{18}$ = (coefficient of $x^{18}$ in $(1-x^3)^9$) $-$ (coefficient of $x^{16}$ in $(1-x^3)^9$).",
+    "$(1-x^3)^9$ has only powers $x^{3j}$; $16$ is not a multiple of $3$, so the second coefficient is $0$.",
+    "$x^{18}=(x^3)^6$: coefficient is ${}^9C_6(-1)^6={}^9C_6=\\frac{9!}{6!\\,3!}=\\frac{7\\cdot8\\cdot9}{6}=84$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$(1-x)(1+x+\\cdots+x^{m-1})=1-x^m$; with $m=3$ this collapses $(1-x)^9(1+x+x^2)^9$ into $(1-x^3)^9$. Look for such a pairing whenever $(1-x)$ and $(1+x+x^2)$ appear with matching exponents.",
+    "$[x^k](1-x^m)^n$ is $0$ unless $m\\mid k$, and equals $(-1)^{k/m}\\,{}^nC_{k/m}$ otherwise.",
+    "A factor $x^s$ times a polynomial in $x^m$ contributes to $x^k$ only when $m\\mid(k-s)$: a quick divisibility test."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficient identities and summation"
+   ],
+   "level": 2,
+   "question": "If ${}^{20}C_1+(2^2)\\,{}^{20}C_2+(3^2)\\,{}^{20}C_3+\\cdots+(20^2)\\,{}^{20}C_{20}=A(2^\\beta)$, then the ordered pair $(A,\\beta)$ is equal to",
+   "options": [
+    "$(420,19)$",
+    "$(380,19)$",
+    "$(420,18)$",
+    "$(380,18)$"
+   ],
+   "answer": "(C) $(420,18)$",
+   "key_idea": "Use $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$ twice (writing $r=(r-1)+1$) to reduce $\\sum r^2\\,{}^{20}C_r$ to $\\sum{}^{19}C_{r}$-type sums.",
+   "solution": [
+    "The sum is $\\sum_{r=1}^{20}r^2\\,{}^{20}C_r$.",
+    "Use $r\\,{}^{20}C_r=20\\,{}^{19}C_{r-1}$: sum $=20\\sum_{r=1}^{20}r\\,{}^{19}C_{r-1}$.",
+    "Write $r=(r-1)+1$: $=20\\left[\\sum_{r=1}^{20}(r-1)\\,{}^{19}C_{r-1}+\\sum_{r=1}^{20}{}^{19}C_{r-1}\\right]$.",
+    "Second sum: $\\sum_{r=1}^{20}{}^{19}C_{r-1}=2^{19}$.",
+    "First sum: $(r-1)\\,{}^{19}C_{r-1}=19\\,{}^{18}C_{r-2}$, so it is $19\\sum_{r=2}^{20}{}^{18}C_{r-2}=19\\cdot2^{18}$.",
+    "Total $=20\\left[19\\cdot2^{18}+2^{19}\\right]=20\\cdot2^{18}(19+2)$.",
+    "$=20\\times21\\times2^{18}=420\\times2^{18}$.",
+    "So $A=420$ and $\\beta=18$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Binomial$(20,\\frac12)$: the sum is $2^{20}\\,E[X^2]$, and $E[X^2]=\\operatorname{Var}X+(EX)^2$.",
+     "solution": [
+      "$\\sum_{r}r^2\\,{}^{20}C_r=2^{20}\\sum_r r^2\\,{}^{20}C_r\\left(\\frac12\\right)^{20}=2^{20}E[X^2]$ for $X\\sim B\\left(20,\\frac12\\right)$.",
+      "$E[X]=np=10$ and $\\operatorname{Var}X=npq=20\\cdot\\frac14=5$.",
+      "$E[X^2]=5+10^2=105$.",
+      "Sum $=105\\cdot2^{20}=105\\cdot4\\cdot2^{18}=420\\cdot2^{18}$, so $(A,\\beta)=(420,18)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r=0}^{n}r\\,{}^nC_r=n\\,2^{n-1}$, $\\ \\sum_{r=0}^{n}r(r-1)\\,{}^nC_r=n(n-1)\\,2^{n-2}$, hence $\\sum r^2\\,{}^nC_r=n(n+1)\\,2^{n-2}$ (check $n=2$: $2+4=6=2\\cdot3\\cdot1$).",
+    "Absorption identity: $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$.",
+    "Probabilistic reading: $\\sum f(r)\\,{}^nC_r=2^n E[f(X)]$ with $X\\sim B(n,\\frac12)$; $E[X]=\\frac n2$, $\\operatorname{Var}X=\\frac n4$.",
+    "Here $n(n+1)2^{n-2}=20\\cdot21\\cdot2^{18}=420\\cdot2^{18}$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Term independent of $x$ in a binomial expansion"
+   ],
+   "level": 2,
+   "question": "The term independent of $x$ in expansion of $\\left(\\frac1{60}-\\frac{x^8}{81}\\right)\\left(2x^2-\\frac3{x^2}\\right)^6$ is equal to",
+   "options": [
+    "$-108$",
+    "$-36$",
+    "$-72$",
+    "$36$"
+   ],
+   "answer": "(B) $-36$",
+   "key_idea": "Split the product: the constant term needs $x^0$ with $\\frac1{60}$ and $x^{-8}$ with $-\\frac{x^8}{81}$ from the sixth power.",
+   "solution": [
+    "Expression $=\\frac1{60}\\left(2x^2-\\frac3{x^2}\\right)^6-\\frac{x^8}{81}\\left(2x^2-\\frac3{x^2}\\right)^6$.",
+    "Coefficient of $x^0$ in the product = $\\frac1{60}\\times$ (coefficient of $x^0$ in $(\\cdot)^6$) $-\\frac1{81}\\times$ (coefficient of $x^{-8}$ in $(\\cdot)^6$).",
+    "General term of $(\\cdot)^6$: ${}^6C_r(2x^2)^{6-r}\\left(-\\frac3{x^2}\\right)^r\\propto x^{12-4r}$.",
+    "$x^0$: $r=3$, coefficient ${}^6C_3(2)^3(-3)^3=20\\cdot8\\cdot(-27)=-4320$.",
+    "$x^{-8}$: $12-4r=-8$, $r=5$, coefficient ${}^6C_5(2)(-3)^5=6\\cdot2\\cdot(-243)=-2916$.",
+    "Constant term $=\\frac1{60}(-4320)-\\frac1{81}(-2916)=-\\frac1{60}\\,{}^6C_3\\,2^3\\,3^3+\\frac1{81}\\,{}^6C_5\\,2\\cdot3^5$.",
+    "$=-72+36=-36$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Clear the negative powers: $\\left(2x^2-\\frac3{x^2}\\right)^6=\\frac{(2x^4-3)^6}{x^{12}}$, so the question becomes picking powers of $v=x^4$.",
+     "solution": [
+      "$\\left(2x^2-\\frac3{x^2}\\right)^6=\\frac{(2x^4-3)^6}{x^{12}}$; let $v=x^4$: it equals $x^{-12}(2v-3)^6$.",
+      "The product is $\\left(\\frac1{60}-\\frac{x^8}{81}\\right)x^{-12}(2v-3)^6$. The first part is constant when $x^{-12}v^j$ has $4j=12$, i.e. $j=3$.",
+      "The second part is $-\\frac1{81}x^{8-12}v^j=-\\frac1{81}x^{4j-4}$, constant when $j=1$.",
+      "$[v^3](2v-3)^6=20\\cdot8\\cdot(-27)=-4320$; $[v^1](2v-3)^6=6\\cdot2\\cdot(-3)^5=-2916$.",
+      "Constant term $=\\frac{-4320}{60}-\\frac{-2916}{81}=-72+36=-36$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If every exponent in a binomial is even (or a multiple of $m$), substitute $v=x^m$ to turn the problem into counting $v$-powers.",
+    "For $\\left(ax^p+\\frac b{x^q}\\right)^n$ the exponents are $p(n-r)-qr$; here $p=q=2$, $n=6$ gives $12-4r$, so only exponents $\\equiv0\\pmod4$ occur.",
+    "For $P(x)\\,Q(x)^n$, a constant term is $\\sum_j p_j\\,[x^{-j}]Q^n$: list the exponents of $P$ and match them one by one (a parity or divisibility check often kills terms)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Divisibility and geometric progression sum"
+   ],
+   "level": 2,
+   "question": "The greatest positive integer $k$, for which $49^k+1$ is a factor of the sum $49^{125}+49^{124}+\\cdots+49^2+49+1$, is:",
+   "options": [
+    "$60$",
+    "$63$",
+    "$65$",
+    "$32$"
+   ],
+   "answer": "(B) $63$",
+   "key_idea": "The G.P. sum is $\\frac{49^{126}-1}{48}$ and $49^{126}-1=(49^{63}+1)(49^{63}-1)$, which exhibits the factor $49^{63}+1$.",
+   "solution": [
+    "Sum $=\\frac{49^{126}-1}{49-1}$ (G.P. with $126$ terms, ratio $49$).",
+    "$49^{126}-1=(49^{63}+1)(49^{63}-1)$.",
+    "Sum $=\\frac{(49^{63}+1)(49^{63}-1)}{49-1}$.",
+    "$\\frac{49^{63}-1}{49-1}=1+49+\\cdots+49^{62}$ is an integer, so $49^{63}+1$ divides the sum: $k=63$ works.",
+    "Maximality: if $49^k+1$ divides the sum, it divides $49^{126}-1$ (as $48\\cdot$ sum), and $49^k+1\\mid49^{2k}-1$ gives order of $49$ mod $49^k+1$ equal to $2k$, which must divide $126$.",
+    "So $k\\mid63$, hence $k\\le63$ and the greatest is $k=63$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF stops at the factorisation and states k=63 without showing why no larger k works (the option 65 is excluded only by the order argument added in the last two bullets). Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Split the $126$ terms into two halves of $63$: the sum factors as $(1+49^{63})(1+49+\\cdots+49^{62})$ with no formula needed.",
+     "solution": [
+      "Write the sum as $(1+49+\\cdots+49^{62})+(49^{63}+49^{64}+\\cdots+49^{125})$.",
+      "Second bracket $=49^{63}(1+49+\\cdots+49^{62})$.",
+      "Sum $=(1+49^{63})(1+49+\\cdots+49^{62})$.",
+      "So $49^{63}+1$ is a factor and $k=63$ works.",
+      "Why not more: $49^k+1$ with $k>63$ would have to divide $49^{126}-1$ and so $2k\\mid126$ (order argument); e.g. $k=65$ fails. Hence $k=63$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+a+\\cdots+a^{2m-1}=(1+a^m)(1+a+\\cdots+a^{m-1})$: a G.P. with an even number of terms splits into halves.",
+    "$a^k+1\\mid a^n-1$ (for $a>1$) iff $n$ is an even multiple of $k$, i.e. $2k\\mid n$; more generally $a^m-1\\mid a^n-1\\iff m\\mid n$.",
+    "Quick check of the identity: $a=2$, $m=2$: $1+2+4+8=15=(1+4)(1+2)$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficients and integer solutions"
+   ],
+   "level": 2,
+   "question": "The number of ordered pairs $(r,k)$ for which $6\\cdot{}^{35}C_r=(k^2-3)\\cdot{}^{36}C_{r+1}$, where $k$ is an integer, is:",
+   "options": [
+    "$3$",
+    "$4$",
+    "$2$",
+    "$6$"
+   ],
+   "answer": "(B) $4$",
+   "key_idea": "${}^{36}C_{r+1}=\\frac{36}{r+1}\\,{}^{35}C_r$ reduces the equation to $r+1=6(k^2-3)$ with $0\\le r\\le35$.",
+   "solution": [
+    "Rewrite: $\\frac{k^2-3}{6}=\\frac{{}^{35}C_r}{{}^{36}C_{r+1}}$.",
+    "Since ${}^{36}C_{r+1}=\\frac{36}{r+1}\\,{}^{35}C_r$, the ratio is $\\frac{r+1}{36}$.",
+    "So $\\frac{k^2-3}{6}=\\frac{r+1}{36}$, i.e. $6k^2=r+19$ (that is $r=6k^2-19$).",
+    "$r$ must satisfy $0\\le r\\le35$: $0\\le6k^2-19\\le35$, so $\\frac{19}{6}\\le k^2\\le9$.",
+    "$k=\\pm2$: $r=24-19=5$, which is allowed.",
+    "$k=\\pm3$: $r=54-19=35$.",
+    "The ordered pairs are $(5,2),(5,-2),(35,3),(35,-3)$: total $4$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes 'k=2 => r=+/-5' (and 'k=-2 => r=5'); r=6k^2-19 gives r=5 for k=+/-2, and r=-5 is impossible. Count of 4 pairs unchanged; verified by brute force.",
+   "alternate_solutions": [
+    {
+     "idea": "Bound the integer $\\frac{r+1}{6}=k^2-3$ first, then find perfect squares.",
+     "solution": [
+      "From ${}^{36}C_{r+1}=\\frac{36}{r+1}\\,{}^{35}C_r$ the equation gives $6=(k^2-3)\\frac{36}{r+1}$, i.e. $r+1=6(k^2-3)$.",
+      "$r+1\\in\\{1,\\dots,36\\}$ and must be a multiple of $6$, so $k^2-3=\\frac{r+1}6\\in\\{1,2,3,4,5,6\\}$.",
+      "Hence $k^2\\in\\{4,5,6,7,8,9\\}$; only $4$ and $9$ are perfect squares.",
+      "$k^2=4$ gives $r+1=6$, $r=5$ with $k=\\pm2$; $k^2=9$ gives $r+1=36$, $r=35$ with $k=\\pm3$.",
+      "Four ordered pairs."
+     ]
+    }
+   ],
+   "useful_results": [
+    "${}^{n+1}C_{r+1}=\\frac{n+1}{r+1}\\,{}^nC_r$ (and ${}^nC_{r+1}=\\frac{n-r}{r+1}\\,{}^nC_r$): ratio of consecutive binomial coefficients turns a coefficient equation into an algebraic one.",
+    "The range $0\\le r\\le n$ is part of the problem: always use it to bound the integer unknown before testing values.",
+    "Pairs with $\\pm k$ come in twos when only $k^2$ appears."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion with surds: even/odd terms"
+   ],
+   "level": 2,
+   "question": "If $\\alpha$ and $\\beta$ be the coefficients of $x^4$ and $x^2$ respectively in the expansion of $\\left(x+\\sqrt{x^2-1}\\right)^6+\\left(x-\\sqrt{x^2-1}\\right)^6$, then:",
+   "options": [
+    "$\\alpha+\\beta=-30$",
+    "$\\alpha+\\beta=60$",
+    "$\\alpha-\\beta=60$",
+    "$\\alpha-\\beta=-132$"
+   ],
+   "answer": "(D) $\\alpha-\\beta=-132$",
+   "key_idea": "$(a+b)^6+(a-b)^6$ keeps only the even powers of $b=\\sqrt{x^2-1}$, so every surd disappears.",
+   "solution": [
+    "$(a+b)^n+(a-b)^n=2\\left[{}^nC_0a^n+{}^nC_2a^{n-2}b^2+\\cdots\\right]$ with $a=x$, $b^2=x^2-1$.",
+    "Expression $=2\\left[{}^6C_0x^6+{}^6C_2x^4(x^2-1)+{}^6C_4x^2(x^2-1)^2+{}^6C_6(x^2-1)^3\\right]$.",
+    "$=2\\left[x^6+15x^4(x^2-1)+15x^2(x^2-1)^2+(x^2-1)^3\\right]$.",
+    "$=2\\left[32x^6-48x^4+18x^2-1\\right]$.",
+    "$=64x^6-96x^4+36x^2-2$.",
+    "Coefficient of $x^4$: $\\alpha=-96$.",
+    "Coefficient of $x^2$: $\\beta=36$.",
+    "$\\alpha-\\beta=-132$ and $\\alpha+\\beta=-60$, so only $(D)$ holds."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF labels the coefficient -96 as 'Coefficient of x^2 (alpha)'; -96 is the coefficient of x^4 (alpha) and 36 that of x^2 (beta). Values and answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=\\cos\\theta$: the expression is $2\\cos6\\theta=2T_6(x)$, a Chebyshev polynomial.",
+     "solution": [
+      "For $|x|\\le1$ let $x=\\cos\\theta$; then $\\sqrt{x^2-1}=i\\sin\\theta$ and $x\\pm\\sqrt{x^2-1}=e^{\\pm i\\theta}$.",
+      "The expression is $e^{6i\\theta}+e^{-6i\\theta}=2\\cos6\\theta=2T_6(x)$.",
+      "$\\cos6\\theta=32\\cos^6\\theta-48\\cos^4\\theta+18\\cos^2\\theta-1$ (from $\\cos3\\phi=4\\cos^3\\phi-3\\cos\\phi$ with $\\phi=2\\theta$ and $\\cos2\\theta=2x^2-1$: $4(2x^2-1)^3-3(2x^2-1)$).",
+      "Check: $4(8x^6-12x^4+6x^2-1)-6x^2+3=32x^6-48x^4+18x^2-1$.",
+      "Since both sides are polynomials in $x$ they agree for all $x$: $\\alpha=-96$, $\\beta=36$, $\\alpha-\\beta=-132$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(x+\\sqrt{x^2-1})^n+(x-\\sqrt{x^2-1})^n=2T_n(x)$, the Chebyshev polynomial, with $T_n(\\cos\\theta)=\\cos n\\theta$; $T_6=32x^6-48x^4+18x^2-1$.",
+    "$(a+b)^n+(a-b)^n$ contains only even powers of $b$; $(a+b)^n-(a-b)^n$ only odd powers: the standard way to remove surds.",
+    "Coefficient check: $T_n(1)=1$: $32-48+18-1=1$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Term independent of $x$ in a binomial expansion",
+    "Range of $\\sin 2\\theta$"
+   ],
+   "level": 2,
+   "question": "In the expansion of $\\left(\\frac{x}{\\cos\\theta}+\\frac1{x\\sin\\theta}\\right)^{16}$, if $l_1$ is the least value of the term independent of $x$ when $\\frac\\pi8\\le\\theta\\le\\frac\\pi4$ and $l_2$ is the least value of the term independent of $x$ when $\\frac\\pi{16}\\le\\theta\\le\\frac\\pi8$, then the ratio $l_2:l_1$ is equal to:",
+   "options": [
+    "$1:16$",
+    "$16:1$",
+    "$1:8$",
+    "$8:1$"
+   ],
+   "answer": "(B) $16:1$",
+   "key_idea": "The $x$-free term is $\\frac{{}^{16}C_8\\,2^8}{\\sin^82\\theta}$, minimal where $\\sin2\\theta$ is largest on the interval.",
+   "solution": [
+    "$T_{r+1}={}^{16}C_r\\left(\\frac x{\\cos\\theta}\\right)^{16-r}\\left(\\frac1{x\\sin\\theta}\\right)^r={}^{16}C_r\\,x^{16-2r}(\\cos\\theta)^{r-16}(\\sin\\theta)^{-r}$.",
+    "Independent of $x$: $16-2r=0$, so $r=8$.",
+    "Term $={}^{16}C_8(\\cos\\theta)^{-8}(\\sin\\theta)^{-8}={}^{16}C_8\\,\\frac1{(\\sin\\theta\\cos\\theta)^8}$.",
+    "$=\\,{}^{16}C_8\\times\\frac{2^8}{(\\sin2\\theta)^8}$.",
+    "For $\\frac\\pi8\\le\\theta\\le\\frac\\pi4$: $\\frac\\pi4\\le2\\theta\\le\\frac\\pi2$; $\\sin2\\theta$ is at most $1$, so the least term is $l_1={}^{16}C_8\\times2^8$.",
+    "For $\\frac\\pi{16}\\le\\theta\\le\\frac\\pi8$: $\\frac\\pi8\\le2\\theta\\le\\frac\\pi4$; $\\sin2\\theta\\le\\frac1{\\sqrt2}$, so $(\\sin2\\theta)^8\\le\\frac1{16}$ and $l_2={}^{16}C_8\\times2^8\\times16={}^{16}C_8\\times2^{12}$.",
+    "$l_2:l_1=2^4:1=16:1$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\sin\\theta\\cos\\theta=\\frac12\\sin2\\theta$ turns products of reciprocal trig terms into a single function of $2\\theta$; remember the interval for $2\\theta$ is double the interval for $\\theta$.",
+    "$\\sin2\\theta$ is increasing for $2\\theta\\in[0,\\frac\\pi2]$ and decreasing afterwards, so on a given interval its extremes sit at an end point or at $2\\theta=\\frac\\pi2$.",
+    "Term independent of $x$ in $(ax+\\frac bx)^{2m}$ is ${}^{2m}C_m(ab)^m$; here $ab=\\frac1{\\sin\\theta\\cos\\theta}$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficient sums with alternating signs",
+    "Differentiation of the binomial expansion"
+   ],
+   "level": 3,
+   "question": "The value of $-{}^{15}C_1+2\\cdot{}^{15}C_2-3\\cdot{}^{15}C_3+\\cdots-15\\cdot{}^{15}C_{15}+{}^{14}C_1+{}^{14}C_3+{}^{14}C_5+\\cdots+{}^{14}C_{11}$ is:",
+   "options": [
+    "$2^{13}-14$",
+    "$2^{14}$",
+    "$2^{16}-1$",
+    "$2^{13}-13$"
+   ],
+   "answer": "(A) $2^{13}-14$",
+   "key_idea": "Differentiate $(1+x)^{15}$ and put $x=-1$ to kill the alternating part; the odd-index sum of ${}^{14}C_r$ is $2^{13}$.",
+   "solution": [
+    "$(1+x)^{15}={}^{15}C_0+{}^{15}C_1x+{}^{15}C_2x^2+\\cdots+{}^{15}C_{15}x^{15}$.",
+    "Differentiate w.r.t. $x$: $15(1+x)^{14}={}^{15}C_1+2\\cdot{}^{15}C_2x+\\cdots+15\\cdot{}^{15}C_{15}x^{14}$.",
+    "Put $x=-1$: $0={}^{15}C_1-2\\cdot{}^{15}C_2+3\\cdot{}^{15}C_3-\\cdots+15\\cdot{}^{15}C_{15}$, so $-{}^{15}C_1+2\\cdot{}^{15}C_2-\\cdots-15\\cdot{}^{15}C_{15}=0$.",
+    "Sum of odd-indexed coefficients of $(1+x)^{14}$: ${}^{14}C_1+{}^{14}C_3+\\cdots+{}^{14}C_{11}+{}^{14}C_{13}=2^{13}$.",
+    "${}^{14}C_{13}=14$, so ${}^{14}C_1+{}^{14}C_3+\\cdots+{}^{14}C_{11}=2^{13}-14$.",
+    "The required value $S=0+2^{13}-14=2^{13}-14$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Absorption identity $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$ turns the alternating sum into $15(1-1)^{14}$.",
+     "solution": [
+      "$r\\,{}^{15}C_r=15\\,{}^{14}C_{r-1}$, so $\\sum_{r=1}^{15}(-1)^r\\,r\\,{}^{15}C_r=15\\sum_{r=1}^{15}(-1)^r\\,{}^{14}C_{r-1}$.",
+      "$=-15\\sum_{s=0}^{14}(-1)^s\\,{}^{14}C_s=-15(1-1)^{14}=0$.",
+      "The given alternating part $-{}^{15}C_1+2\\cdot{}^{15}C_2-\\cdots-15\\cdot{}^{15}C_{15}$ is exactly $\\sum_{r=1}^{15}(-1)^r\\,r\\,{}^{15}C_r=0$.",
+      "Odd-size subsets: ${}^{14}C_1+{}^{14}C_3+\\cdots+{}^{14}C_{13}$ counts the odd-size subsets of a $14$-set, which are exactly half of $2^{14}$, i.e. $2^{13}$.",
+      "Remove the last term ${}^{14}C_{13}=14$: $2^{13}-14$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r}(-1)^r\\,r\\,{}^nC_r=0$ for $n\\ge2$ (it is $-1$ for $n=1$); more generally $\\sum(-1)^r\\,r^j\\,{}^nC_r=0$ for $0\\le j<n$.",
+    "${}^nC_1+{}^nC_3+\\cdots={}^nC_0+{}^nC_2+\\cdots=2^{n-1}$ for $n\\ge1$.",
+    "Differentiating $(1+x)^n$ and putting $x=\\pm1$ is the standard route for sums with a factor $r$ in front.",
+    "Watch the number of terms: the last term of an incomplete odd-index sum may need to be subtracted (here ${}^{14}C_{13}$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Summation of binomial coefficients ${}^kC_2$ (hockey stick)"
+   ],
+   "level": 2,
+   "question": "If $n\\ge2$ is a positive integer, then the sum of the series ${}^{n+1}C_2+2\\left({}^2C_2+{}^3C_2+{}^4C_2+\\cdots+{}^nC_2\\right)$ is:",
+   "options": [
+    "$\\frac{n(n+1)^2(n+2)}{12}$",
+    "$\\frac{n(n+1)(2n+1)}6$",
+    "$\\frac{n(2n+1)(3n+1)}6$",
+    "$\\frac{n(n-1)(2n+1)}6$"
+   ],
+   "answer": "(B) $\\frac{n(n+1)(2n+1)}6$",
+   "key_idea": "The hockey-stick identity gives ${}^2C_2+{}^3C_2+\\cdots+{}^nC_2={}^{n+1}C_3$.",
+   "solution": [
+    "$E={}^{n+1}C_2+2\\left({}^2C_2+{}^3C_2+\\cdots+{}^nC_2\\right)$; write ${}^2C_2={}^3C_3$.",
+    "${}^3C_3+{}^3C_2={}^4C_3$, then ${}^4C_3+{}^4C_2={}^5C_3$, and so on, up to ${}^nC_3+{}^nC_2={}^{n+1}C_3$.",
+    "So the bracket equals ${}^{n+1}C_3$ and $E={}^{n+1}C_2+2\\,{}^{n+1}C_3$.",
+    "$E=\\frac{(n+1)n}2+\\frac{2(n+1)n(n-1)}6$.",
+    "$=\\frac{n(n+1)(3+2n-2)}6$.",
+    "$=\\frac{n(n+1)(2n+1)}6$, option $(B)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand ${}^kC_2=\\frac{k(k-1)}2$: the series is secretly $1^2+2^2+\\cdots+n^2$.",
+     "solution": [
+      "$2\\,{}^kC_2=k(k-1)$, so $2\\sum_{k=2}^n{}^kC_2=\\sum_{k=1}^nk(k-1)=\\sum k^2-\\sum k$.",
+      "${}^{n+1}C_2=\\frac{n(n+1)}2=\\sum_{k=1}^nk$.",
+      "Hence $E=\\sum k+\\left(\\sum k^2-\\sum k\\right)=\\sum_{k=1}^nk^2$.",
+      "$\\sum_{k=1}^nk^2=\\frac{n(n+1)(2n+1)}6$ (check $n=2$: $E=3+2\\cdot1=5=1+4$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hockey stick: $\\sum_{k=r}^{n}{}^kC_r={}^{n+1}C_{r+1}$.",
+    "$k^2=2\\,{}^kC_2+{}^kC_1$, so $\\sum_{k=1}^nk^2=2\\,{}^{n+1}C_3+{}^{n+1}C_2$: the bridge between powers and binomial coefficients.",
+    "$k^3=6\\,{}^kC_3+6\\,{}^kC_2+{}^kC_1$ gives $\\sum k^3$ the same way."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Term independent of $t$ in a binomial expansion",
+    "Maxima of a function (AM-GM)"
+   ],
+   "level": 3,
+   "question": "The maximum value of the term independent of '$t$' in the expansion of $\\left(tx^{1/5}+\\frac{(1-x)^{1/10}}{t}\\right)^{10}$ where $x\\in(0,1)$ is:",
+   "options": [
+    "$\\frac{2\\cdot10!}{3\\sqrt3\\,(5!)^2}$",
+    "$\\frac{2\\cdot10!}{3\\,(5!)^2}$",
+    "$\\frac{10!}{3\\sqrt3\\,(5!)^2}$",
+    "$\\frac{10!}{3\\,(5!)^2}$"
+   ],
+   "answer": "(A) $\\frac{2\\cdot10!}{3\\sqrt3\\,(5!)^2}$",
+   "key_idea": "The $t$-free term is the middle term ${}^{10}C_5\\,x\\sqrt{1-x}$; maximise it on $(0,1)$.",
+   "solution": [
+    "The term independent of $t$ is the middle term ($r=5$), where $t^5\\cdot t^{-5}=1$.",
+    "$f(x)={}^{10}C_5\\,(x^{1/5})^5\\left((1-x)^{1/10}\\right)^5={}^{10}C_5\\cdot x\\cdot(1-x)^{1/2}$, $x\\in(0,1)$.",
+    "$f'(x)={}^{10}C_5\\left[(1-x)^{1/2}-\\frac x2(1-x)^{-1/2}\\right]=0$.",
+    "$\\Rightarrow1-x=\\frac x2\\Rightarrow\\frac{3x}2=1\\Rightarrow x=\\frac23$.",
+    "$f(0^+)=f(1^-)=0$ and $f>0$ inside, so $x=\\frac23$ is the point of maximum.",
+    "$f\\left(\\frac23\\right)={}^{10}C_5\\times\\frac23\\times\\left(1-\\frac23\\right)^{1/2}={}^{10}C_5\\cdot\\frac23\\cdot\\frac1{\\sqrt3}$.",
+    "$=\\frac2{3\\sqrt3}\\cdot\\frac{10!}{5!\\,5!}=\\frac{2\\cdot10!}{3\\sqrt3\\,(5!)^2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Maximise $x^2(1-x)$ by weighted AM-GM instead of differentiating: write it as $4\\cdot\\frac x2\\cdot\\frac x2\\cdot(1-x)$.",
+     "solution": [
+      "$g=x\\sqrt{1-x}>0$ is maximal exactly when $g^2=x^2(1-x)$ is.",
+      "$x^2(1-x)=4\\cdot\\frac x2\\cdot\\frac x2\\cdot(1-x)\\le4\\left(\\frac{\\frac x2+\\frac x2+1-x}3\\right)^3=4\\cdot\\frac1{27}$ (the three factors have constant sum $1$).",
+      "Equality iff $\\frac x2=1-x$, i.e. $x=\\frac23$.",
+      "So $g_{\\max}=\\sqrt{\\frac4{27}}=\\frac2{3\\sqrt3}$.",
+      "Maximum term $={}^{10}C_5\\cdot\\frac2{3\\sqrt3}=252\\cdot\\frac2{3\\sqrt3}=\\frac{2\\cdot10!}{3\\sqrt3\\,(5!)^2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $\\left(at+\\frac bt\\right)^{2m}$ the $t$-free term is the middle term ${}^{2m}C_m(ab)^m$.",
+    "Weighted AM-GM: to maximise $x^p(1-x)^q$ write it as a product of $p+q$ equal-sum factors: maximum at $x=\\frac p{p+q}$; here $p=2,q=1$ gives $\\frac23$.",
+    "Check of the answer: $252\\cdot\\frac{2}{3\\sqrt3}\\approx96.99$, matching a direct scan of $252\\,x\\sqrt{1-x}$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Even and odd coefficients of a polynomial (evaluation at $\\pm1$)"
+   ],
+   "level": 2,
+   "question": "Let $[x]$ denote greatest integer less than or equal to $x$. If for $n\\in\\mathbb N$, $(1-x+x^3)^n=\\sum_{j=0}^{3n}a_jx^j$, then $\\sum_{j=0}^{\\lfloor3n/2\\rfloor}a_{2j}+4\\sum_{j=0}^{\\lfloor(3n-1)/2\\rfloor}a_{2j+1}$ is equal to:",
+   "options": [
+    "$n$",
+    "$2^{n-1}$",
+    "$2$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "The two sums are the sums of the even-indexed and odd-indexed coefficients of $f(x)=(1-x+x^3)^n$: use $f(1)$ and $f(-1)$.",
+   "solution": [
+    "Let $f(x)=(1-x+x^3)^n$. The floor limits cover exactly all even indices $0\\le2j\\le3n$ and all odd indices $1\\le2j+1\\le3n$.",
+    "$f(1)=1$ and $f(-1)=(1+1-1)^n=1$.",
+    "Sum of even-indexed coefficients: $\\sum a_{2j}=\\frac{f(1)+f(-1)}2=\\frac{1+1}2=1$.",
+    "Sum of odd-indexed coefficients: $\\sum a_{2j+1}=\\frac{f(1)-f(-1)}2=\\frac{1-1}2=0$.",
+    "Required sum $=1+4(0)=1$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $f(x)=\\sum a_jx^j$: $\\sum a_{2j}=\\frac{f(1)+f(-1)}2$ and $\\sum a_{2j+1}=\\frac{f(1)-f(-1)}2$.",
+    "Reading the limits: $\\lfloor\\frac{N}{2}\\rfloor$ and $\\lfloor\\frac{N-1}2\\rfloor$ are just the largest allowed even and odd indices for degree $N$.",
+    "Weighted combos such as $\\sum a_{even}+4\\sum a_{odd}=\\frac{5f(1)-3f(-1)}2$; here it equals $\\frac{5-3}{2}=1$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficient identities: sum of squares (Vandermonde)"
+   ],
+   "level": 2,
+   "question": "If $\\left({}^{30}C_1\\right)^2+2\\left({}^{30}C_2\\right)^2+3\\left({}^{30}C_3\\right)^2+\\cdots+30\\left({}^{30}C_{30}\\right)^2=\\frac{\\alpha\\,60!}{(30!)^2}$, then $\\alpha$ is equal to:",
+   "options": [
+    "$15$",
+    "$60$",
+    "$10$",
+    "$30$"
+   ],
+   "answer": "(A) $15$",
+   "key_idea": "Reverse the order of the sum ($r\\to30-r$) and add: $2S=30\\sum\\left({}^{30}C_r\\right)^2=30\\,{}^{60}C_{30}$.",
+   "solution": [
+    "$S=0\\cdot({}^{30}C_0)^2+1\\cdot({}^{30}C_1)^2+2\\cdot({}^{30}C_2)^2+\\cdots+30\\cdot({}^{30}C_{30})^2$.",
+    "Write it backwards and use ${}^{30}C_r={}^{30}C_{30-r}$: $S=30\\cdot({}^{30}C_0)^2+29\\cdot({}^{30}C_1)^2+28\\cdot({}^{30}C_2)^2+\\cdots+0\\cdot({}^{30}C_{30})^2$.",
+    "Add: $2S=30\\left[({}^{30}C_0)^2+({}^{30}C_1)^2+\\cdots+({}^{30}C_{30})^2\\right]$.",
+    "Using $\\sum_{r}({}^nC_r)^2={}^{2n}C_n$: $2S=30\\,{}^{60}C_{30}$, so $S=15\\,{}^{60}C_{30}$.",
+    "$S=15\\cdot\\frac{60!}{(30!)^2}$.",
+    "Comparing with $\\frac{\\alpha\\cdot60!}{(30!)^2}$: $\\alpha=15$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Vandermonde: $r\\,{}^{30}C_r=30\\,{}^{29}C_{r-1}$, then $\\sum{}^{29}C_{r-1}\\,{}^{30}C_{30-r}={}^{59}C_{29}$.",
+     "solution": [
+      "$r\\left({}^{30}C_r\\right)^2=30\\cdot{}^{29}C_{r-1}\\cdot{}^{30}C_r=30\\cdot{}^{29}C_{r-1}\\cdot{}^{30}C_{30-r}$.",
+      "$\\sum_{r=1}^{30}{}^{29}C_{r-1}\\,{}^{30}C_{30-r}$: the lower indices add to $29$, so by Vandermonde this is ${}^{59}C_{29}$.",
+      "$S=30\\cdot{}^{59}C_{29}$.",
+      "${}^{60}C_{30}={}^{59}C_{29}+{}^{59}C_{30}=2\\,{}^{59}C_{29}$, so $S=15\\,{}^{60}C_{30}$ and $\\alpha=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r=0}^n r\\left({}^nC_r\\right)^2=\\frac n2\\,{}^{2n}C_n=n\\,{}^{2n-1}C_{n-1}$ (check $n=2$: $4+2=6=2\\cdot3$).",
+    "$\\sum_r\\left({}^nC_r\\right)^2={}^{2n}C_n$; reversing the index ($r\\to n-r$) and adding is the quick way to handle a linear weight $r$.",
+    "Vandermonde: $\\sum_r{}^mC_r\\,{}^nC_{k-r}={}^{m+n}C_k$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Ratio of consecutive binomial coefficients and power sums"
+   ],
+   "level": 2,
+   "question": "If $a_r$ is the coefficient of $x^{10-r}$ in the Binomial expansion of $(1+x)^{10}$, then $\\sum_{r=1}^{10}r^3\\left(\\frac{a_r}{a_{r-1}}\\right)^2$ is equal to:",
+   "options": [
+    "$4895$",
+    "$5445$",
+    "$3025$",
+    "$1210$"
+   ],
+   "answer": "(D) $1210$",
+   "key_idea": "$\\frac{a_r}{a_{r-1}}=\\frac{11-r}{r}$, so the summand simplifies to $r(11-r)^2$, a cubic in $r$.",
+   "solution": [
+    "Coefficient of $x^{10-r}$ in $(1+x)^{10}$ is ${}^{10}C_{10-r}$, so $a_r={}^{10}C_r$.",
+    "$\\frac{a_r}{a_{r-1}}=\\frac{{}^{10}C_r}{{}^{10}C_{r-1}}=\\frac{10-r+1}r=\\frac{11-r}r$.",
+    "$\\sum_{r=1}^{10}r^3\\left(\\frac{11-r}r\\right)^2=\\sum_{r=1}^{10}r(11-r)^2$.",
+    "$=\\sum_{r=1}^{10}\\left(r^3-22r^2+121r\\right)$.",
+    "$=\\sum r^3-22\\sum r^2+121\\sum r=\\left(\\frac{10\\cdot11}2\\right)^2-22\\cdot\\frac{10\\cdot11\\cdot21}6+121\\cdot\\frac{10\\cdot11}2$.",
+    "$=55^2-11\\times11\\times70+5\\times11^3=11^2\\left[25-70+55\\right]$.",
+    "$=11^2\\times10=1210$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the sums from r=0, but the given sum starts at r=1 (a_{-1} is undefined). The r=0 term of r(11-r)^2 is 0, so the value 1210 is unchanged; written here from r=1.",
+   "alternate_solutions": [
+    {
+     "idea": "Pair $r$ with $11-r$: $r(11-r)^2+(11-r)r^2=11\\,r(11-r)$, so $2S=11\\sum r(11-r)$.",
+     "solution": [
+      "$S=\\sum_{r=1}^{10}r(11-r)^2$. Replace $r$ by $11-r$ (the range $1..10$ is symmetric): $S=\\sum_{r=1}^{10}(11-r)r^2$.",
+      "Add: $2S=\\sum_{r=1}^{10}r(11-r)\\left[(11-r)+r\\right]=11\\sum_{r=1}^{10}r(11-r)$.",
+      "$\\sum_{r=1}^{10}r(11-r)=11\\cdot55-385=605-385=220$.",
+      "$2S=11\\cdot220=2420$, so $S=1210$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{{}^nC_r}{{}^nC_{r-1}}=\\frac{n-r+1}r$: the ratio of consecutive binomial coefficients is linear fractional in $r$, so powers of $r$ often cancel.",
+    "$\\sum_{r=1}^nr=\\frac{n(n+1)}2$, $\\ \\sum r^2=\\frac{n(n+1)(2n+1)}6$, $\\ \\sum r^3=\\left(\\frac{n(n+1)}2\\right)^2$.",
+    "For a sum over $1..N$ symmetric under $r\\to N+1-r$, adding the sum to its reversal often makes it a multiple of a simpler sum."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion: odd-power coefficients and middle term"
+   ],
+   "level": 3,
+   "question": "Let $K$ be the sum of the coefficients of the odd powers of $x$ in the expansion of $(1+x)^{99}$. Let $a$ be the middle term in the expansion of $\\left(2+\\frac1{\\sqrt2}\\right)^{200}$. If $\\frac{{}^{200}C_{99}\\,K}{a}=\\frac{2^\\ell m}n$, where $m$ and $n$ are odd numbers, then the ordered pair $(\\ell,n)$ is equal to",
+   "options": [
+    "$(50,51)$",
+    "$(51,101)$",
+    "$(50,101)$",
+    "$(51,99)$"
+   ],
+   "answer": "(C) $(50,101)$",
+   "key_idea": "$K=2^{98}$, $a={}^{200}C_{100}\\,2^{50}$, and ${}^{200}C_{99}={}^{200}C_{100}\\cdot\\frac{100}{101}$, so the ratio is $\\frac{25\\cdot2^{50}}{101}$.",
+   "solution": [
+    "Sum of odd-power coefficients of $(1+x)^{99}$: $K=\\frac{2^{99}-0}2=2^{98}$.",
+    "The expansion of $\\left(2+\\frac1{\\sqrt2}\\right)^{200}$ has $201$ terms, so the middle term is $T_{101}$.",
+    "$a={}^{200}C_{100}\\,(2)^{100}\\left(\\frac1{\\sqrt2}\\right)^{100}={}^{200}C_{100}\\,\\frac{2^{100}}{2^{50}}={}^{200}C_{100}\\,2^{50}$.",
+    "${}^{200}C_{99}=\\frac{200!}{99!\\,101!}=\\frac{100}{101}\\cdot\\frac{200!}{100!\\,100!}=\\frac{100}{101}\\,{}^{200}C_{100}$.",
+    "$\\frac{{}^{200}C_{99}\\,K}{a}=\\frac{\\frac{100}{101}\\,{}^{200}C_{100}\\cdot2^{98}}{{}^{200}C_{100}\\cdot2^{50}}=\\frac{100\\cdot2^{48}}{101}$.",
+    "$100\\cdot2^{48}=25\\cdot4\\cdot2^{48}=25\\cdot2^{50}$, so the ratio is $\\frac{2^{50}\\cdot25}{101}$.",
+    "Comparing with $\\frac{2^\\ell m}n$ ($m=25$, $n=101$ odd): $\\ell=50$, $n=101$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{{}^nC_{r+1}}{{}^nC_r}=\\frac{n-r}{r+1}$; for $n=200$, $r=99$ this gives ${}^{200}C_{100}=\\frac{101}{100}\\,{}^{200}C_{99}$.",
+    "The sum of coefficients of the odd powers of $(1+x)^N$ equals $2^{N-1}$ for $N\\ge1$.",
+    "Writing a number as $2^\\ell\\cdot\\frac mn$ with $m,n$ odd is just extracting its $2$-adic valuation $\\ell$ (here Kummer's theorem also works: $v_2\\left({}^{200}C_{99}\\right)=5$)."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Geometric progression of binomial terms"
+   ],
+   "level": 2,
+   "question": "The coefficient of $x^{301}$ in $(1+x)^{500}+x(1+x)^{499}+x^2(1+x)^{498}+\\cdots+x^{500}$ is:",
+   "options": [
+    "${}^{501}C_{302}$",
+    "${}^{500}C_{300}$",
+    "${}^{500}C_{301}$",
+    "${}^{501}C_{200}$"
+   ],
+   "answer": "(D) ${}^{501}C_{200}$",
+   "key_idea": "The terms form a G.P. with ratio $\\frac x{1+x}$ whose sum is $(1+x)^{501}-x^{501}$.",
+   "solution": [
+    "The sum has $501$ terms, first term $(1+x)^{500}$ and common ratio $\\frac x{1+x}$.",
+    "Sum $=(1+x)^{500}\\cdot\\frac{1-\\left(\\frac x{1+x}\\right)^{501}}{1-\\frac x{1+x}}$.",
+    "$1-\\frac x{1+x}=\\frac1{1+x}$, so Sum $=(1+x)^{501}\\left[1-\\frac{x^{501}}{(1+x)^{501}}\\right]$.",
+    "$=(1+x)^{501}-x^{501}$.",
+    "Coefficient of $x^{301}$ in $(1+x)^{501}-x^{501}$: the term $x^{501}$ contributes nothing to $x^{301}$.",
+    "So it is ${}^{501}C_{301}={}^{501}C_{200}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count term by term and apply the hockey-stick identity.",
+     "solution": [
+      "$x^k(1+x)^{500-k}$ contributes ${}^{500-k}C_{301-k}={}^{500-k}C_{199}$ to $x^{301}$, for $k=0,1,\\dots,301$ (for $k>301$ no contribution).",
+      "Put $m=500-k$: the coefficient is $\\sum_{m=199}^{500}{}^mC_{199}$.",
+      "Hockey stick: $\\sum_{m=199}^{500}{}^mC_{199}={}^{501}C_{200}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=0}^{n}x^k(1+x)^{n-k}=(1+x)^{n+1}-x^{n+1}$ (G.P. of $n+1$ terms with ratio $\\frac x{1+x}$).",
+    "Hockey stick: $\\sum_{m=r}^{n}{}^mC_r={}^{n+1}C_{r+1}$.",
+    "For $k<n+1$ the subtracted $x^{n+1}$ never affects the coefficient of $x^k$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion with surds",
+    "Greatest integer function (integral part and parity)"
+   ],
+   "level": 3,
+   "question": "Let $x=\\left(8\\sqrt3+13\\right)^{13}$ and $y=\\left(7\\sqrt2+9\\right)^9$. If $[t]$ denotes the greatest integer $\\le t$, then",
+   "options": [
+    "$[x]$ is even but $[y]$ is odd",
+    "$[x]+[y]$ is even",
+    "$[x]$ and $[y]$ are both odd",
+    "$[x]$ is odd but $[y]$ is even"
+   ],
+   "answer": "(B) $[x]+[y]$ is even",
+   "key_idea": "$x-x'$ is an even integer for the conjugate $x'=(8\\sqrt3-13)^{13}$, and $0<x'<1$, so $[x]=x-x'$.",
+   "solution": [
+    "$x=(8\\sqrt3+13)^{13}={}^{13}C_0(8\\sqrt3)^{13}+{}^{13}C_1(8\\sqrt3)^{12}13+\\cdots$.",
+    "Let $x'=(8\\sqrt3-13)^{13}={}^{13}C_0(8\\sqrt3)^{13}-{}^{13}C_1(8\\sqrt3)^{12}13+\\cdots$.",
+    "$x-x'=2\\left[{}^{13}C_1(8\\sqrt3)^{12}13+{}^{13}C_3(8\\sqrt3)^{10}13^3+\\cdots\\right]$: only even powers of $8\\sqrt3$ occur, which are integers, so $x-x'$ is an even integer.",
+    "$8\\sqrt3=\\sqrt{192}\\in(\\sqrt{169},\\sqrt{196})=(13,14)$, so $0<8\\sqrt3-13<1$ and $0<x'<1$.",
+    "Hence $x=(x-x')+x'$ has integer part $[x]=x-x'$, which is even.",
+    "Similarly $y=(7\\sqrt2+9)^9$ and $y'=(7\\sqrt2-9)^9$: $y-y'=2\\left[{}^9C_1(7\\sqrt2)^8\\cdot9+{}^9C_3(7\\sqrt2)^6\\cdot9^3+\\cdots\\right]$ is an even integer.",
+    "$7\\sqrt2=\\sqrt{98}\\in(9,10)$, so $0<y'<1$ and $[y]=y-y'$ is even.",
+    "Both $[x]$ and $[y]$ are even, so $[x]+[y]$ is even: option $(B)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF concludes '[x] is even' from 'x - x' is an even integer' without proving 0 < x' < 1 (needed for [x] = x - x'); same for y. The two bounding bullets were added. Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Power sums satisfy a recurrence $T_n=sT_{n-1}-pT_{n-2}$ whose parity is constant; the conjugate power is negative and small.",
+     "solution": [
+      "Let $u=13+8\\sqrt3$, $v=13-8\\sqrt3$: $u+v=26$, $uv=-23$. $T_n=u^n+v^n$ satisfies $T_n=26T_{n-1}+23T_{n-2}$ with $T_0=2$, $T_1=26$.",
+      "Mod $2$: $T_n\\equiv T_{n-2}$, and $T_0,T_1$ are even, so every $T_n$ is even; in particular $T_{13}$ is an even integer.",
+      "$v=13-8\\sqrt3\\in(-1,0)$ (as $8\\sqrt3\\approx13.86$), so $v^{13}\\in(-1,0)$ and $x=T_{13}-v^{13}\\in(T_{13},T_{13}+1)$: $[x]=T_{13}$ is even.",
+      "For $y$: $s=9+7\\sqrt2$, $t=9-7\\sqrt2$, $s+t=18$, $st=-17$; $T_n=18T_{n-1}+17T_{n-2}$, again $T_n\\equiv T_{n-2}\\pmod2$ with $T_0=2$, $T_1=18$ even.",
+      "$t\\in(-1,0)$, $t^9\\in(-1,0)$, so $[y]=T_9$ is even.",
+      "Check: $T_{13}=3781139627706655994$ and $T_9=307646363250$ (both even, equal to $[x]$, $[y]$). Hence $[x]+[y]$ is even."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $a>0$ and $a<\\sqrt b<a+1$: $T_n=(\\sqrt b+a)^n+(a-\\sqrt b)^n$ is an integer, and for odd $n$ the conjugate power $(a-\\sqrt b)^n\\in(-1,0)$, so $\\left[(\\sqrt b+a)^n\\right]=T_n$.",
+    "The standard device: $(p+q)^n\\pm(p-q)^n$ keeps only even (or only odd) powers of $q$, so surds vanish; always verify $|p-q|<1$.",
+    "Recurrence for $T_n=u^n+v^n$: $T_n=(u+v)T_{n-1}-uv\\,T_{n-2}$; it makes parity or divisibility checks immediate."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum of odd-indexed binomial coefficients"
+   ],
+   "level": 1,
+   "question": "The value of $\\frac1{1!\\,50!}+\\frac1{3!\\,48!}+\\frac1{5!\\,46!}+\\cdots+\\frac1{49!\\,2!}+\\frac1{51!\\,1!}$ is:",
+   "options": [
+    "$\\frac{2^{51}}{51!}$",
+    "$\\frac{2^{50}}{51!}$",
+    "$\\frac{2^{51}}{50!}$",
+    "$\\frac{2^{50}}{50!}$"
+   ],
+   "answer": "(B) $\\frac{2^{50}}{51!}$",
+   "key_idea": "Each term is $\\frac{1}{i!\\,(51-i)!}=\\frac{{}^{51}C_i}{51!}$ with $i$ odd, so the sum is the odd-index binomial sum $2^{50}$ over $51!$.",
+   "solution": [
+    "The general term is $\\frac1{(2r-1)!\\,(51-(2r-1))!}$ for $r=1,\\dots,26$ (the last term has $51!$ with $0!=1!=1$).",
+    "$\\frac1{(2r-1)!\\,(51-(2r-1))!}=\\frac{{}^{51}C_{2r-1}}{51!}$.",
+    "Sum $=\\frac1{51!}\\left\\{{}^{51}C_1+{}^{51}C_3+\\cdots+{}^{51}C_{51}\\right\\}$.",
+    "Sum of odd-indexed binomial coefficients of $(1+x)^{51}$ is $2^{50}$.",
+    "Sum $=\\frac1{51!}\\cdot2^{50}=\\frac{2^{50}}{51!}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating functions: the sum is the coefficient of $x^{51}$ in $\\sinh x\\cdot e^x=\\frac{e^{2x}-1}2$.",
+     "solution": [
+      "$\\sinh x=\\sum_{i\\text{ odd}}\\frac{x^i}{i!}$ and $e^x=\\sum_j\\frac{x^j}{j!}$, so $[x^{51}]\\,\\sinh x\\,e^x=\\sum_{i\\text{ odd}}\\frac1{i!\\,(51-i)!}$, the required sum.",
+      "$\\sinh x\\,e^x=\\frac{e^{x}-e^{-x}}2e^x=\\frac{e^{2x}-1}2$.",
+      "$[x^{51}]\\frac{e^{2x}-1}2=\\frac12\\cdot\\frac{2^{51}}{51!}=\\frac{2^{50}}{51!}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac1{i!\\,(n-i)!}=\\frac{{}^nC_i}{n!}$: a sum of reciprocal factorial pairs with $i+j=n$ is a binomial sum divided by $n!$.",
+    "Odd-index and even-index binomial sums are both $2^{n-1}$ ($n\\ge1$).",
+    "The last term $\\frac1{51!\\,1!}$ equals $\\frac1{51!\\,0!}$ numerically, so the printed $1!$ does not change the value."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Exponential series ($\\cosh1$, $\\sinh1$) and summation"
+   ],
+   "level": 2,
+   "question": "The sum $\\sum_{n=1}^{\\infty}\\frac{2n^2+3n+4}{(2n)!}$ is equal to:",
+   "options": [
+    "$\\frac{13e}4+\\frac5{4e}$",
+    "$\\frac{13e}4+\\frac5{4e}-4$",
+    "$\\frac{11e}2+\\frac7{2e}$",
+    "$\\frac{11e}2+\\frac7{2e}-4$"
+   ],
+   "answer": "(B) $\\frac{13e}4+\\frac5{4e}-4$",
+   "key_idea": "Write the numerator as $2n(2n-1)+8n+8$ (twice the given one) so each part cancels into $\\frac1{(2n-2)!},\\frac1{(2n-1)!},\\frac1{(2n)!}$.",
+   "solution": [
+    "$2(2n^2+3n+4)=4n^2+6n+8=2n(2n-1)+8n+8$.",
+    "$\\sum_{n=1}^\\infty\\frac{2n^2+3n+4}{(2n)!}=\\frac12\\sum_{n=1}^\\infty\\frac{2n(2n-1)+8n+8}{(2n)!}$.",
+    "$=\\frac12\\sum_{n=1}^\\infty\\left\\{\\frac1{(2n-2)!}+\\frac4{(2n-1)!}+\\frac8{(2n)!}\\right\\}$.",
+    "$\\sum_{n\\ge1}\\frac1{(2n-2)!}=\\frac{e+e^{-1}}2$, $\\ \\sum_{n\\ge1}\\frac1{(2n-1)!}=\\frac{e-e^{-1}}2$, $\\ \\sum_{n\\ge1}\\frac1{(2n)!}=\\frac{e+e^{-1}}2-1$.",
+    "$=\\frac12\\left\\{\\frac{e+e^{-1}}2+4\\cdot\\frac{e-e^{-1}}2+8\\left(\\frac{e+e^{-1}}2-1\\right)\\right\\}$.",
+    "$=\\frac14\\left(13e+5e^{-1}-16\\right)$.",
+    "$=\\frac{13}4e+\\frac5{4e}-4$, option $(B)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Operator method: with $\\theta=x\\frac d{dx}$, $\\ n\\to\\frac\\theta2$ acting on $\\cosh x=\\sum\\frac{x^{2n}}{(2n)!}$.",
+     "solution": [
+      "Let $F(x)=\\sum_{n\\ge1}\\frac{x^{2n}}{(2n)!}=\\cosh x-1$. Then $\\theta x^{2n}=2n\\,x^{2n}$, so $n\\leftrightarrow\\frac\\theta2$.",
+      "$\\sum\\frac{(2n^2+3n+4)x^{2n}}{(2n)!}=\\left(\\frac{\\theta^2}2+\\frac{3\\theta}2+4\\right)F$ (since $2n^2=\\frac{(2n)^2}2$).",
+      "$\\theta\\cosh x=x\\sinh x$ and $\\theta^2\\cosh x=x\\sinh x+x^2\\cosh x$; at $x=1$: $\\theta F=\\sinh1$, $\\theta^2F=\\sinh1+\\cosh1=e$.",
+      "Value $=\\frac e2+\\frac32\\sinh1+4(\\cosh1-1)=\\frac e2+\\frac{3(e-e^{-1})}4+2(e+e^{-1})-4$.",
+      "$=\\frac{13e}4+\\frac5{4e}-4$ (numerically $5.29427$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{n\\ge0}\\frac1{(2n)!}=\\cosh1=\\frac{e+e^{-1}}2$, $\\ \\sum_{n\\ge1}\\frac1{(2n-1)!}=\\sinh1=\\frac{e-e^{-1}}2$.",
+    "Strategy for $\\sum\\frac{P(n)}{m!}$: rewrite $P$ in falling factorials $m(m-1),\\,m,\\,1$ so that each term cancels into a plain factorial.",
+    "$\\frac{m(m-1)}{m!}=\\frac1{(m-2)!}$ and $\\frac m{m!}=\\frac1{(m-1)!}$.",
+    "Remember the sum starts at $n=1$: subtract the $n=0$ term, e.g. $\\sum_{n\\ge1}\\frac1{(2n)!}=\\cosh1-1$."
+   ]
+  }
+ ]
+}
