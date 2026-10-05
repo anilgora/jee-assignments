@@ -1,0 +1,528 @@
+{
+ "title": "JEE Main Question Bank – Algebra 19 — Paper Analysis",
+ "subtitle": "Statistics (Q361–Q372) · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Algebra_19.pdf (no blueprint; concepts self-assigned)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 10,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 11,
+   "to": 12,
+   "marking": [
+    "4 marks each (JEE Advanced default; no marks printed in the paper)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "marks": 4,
+   "concepts": [
+    "Median of grouped data"
+   ],
+   "level": 1,
+   "question": "Marks obtained by all the students of class 12 are presented in a frequency distribution with classes of equal width. Let the median of this grouped data be $14$ with median class interval $12\\text{-}18$ and median class frequency $12$. If the number of students whose marks are less than $12$ is $18$, then the total number of students is:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$52$",
+    "$44$",
+    "$40$",
+    "$48$"
+   ],
+   "answer": "(B) $44$",
+   "key_idea": "The median formula $M=l+\\frac{N/2-C}{f}h$ is linear in $N$, so $N$ drops out of one equation.",
+   "solution": [
+    "Median formula: $M=l+\\left(\\frac{\\frac N2-C}{f}\\right)h$.",
+    "Here $l=12$, $C=18$, $M=14$, $f=12$, $h=6$ and $N$ is unknown.",
+    "$14=12+\\frac{\\frac N2-18}{12}\\times6$.",
+    "$\\frac{\\frac N2-18}{2}=2$, so $\\frac N2-18=4$.",
+    "$\\frac N2=22$, hence $N=44$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Median of grouped data: $M=l+\\frac{N/2-C}{f}h$ with $C$ the cumulative frequency before the median class; it is linear interpolation inside the class.",
+    "Always compare $N/2$ (not $N$) with the cumulative frequencies to locate the median class.",
+    "Check: $N=44$ gives $N/2=22$, which lies in $(18,30]$, the cumulative range of class $12\\text{-}18$ ($18+12=30$), so the class is consistent."
+   ]
+  },
+  {
+   "q_no": 2,
+   "marks": 4,
+   "concepts": [
+    "Mean and variance of data with corrected observations"
+   ],
+   "level": 2,
+   "question": "For a statistical data $x_1,x_2,\\ldots,x_{10}$ of $10$ values, a student obtained the mean as $5.5$ and $\\sum_{i=1}^{10}x_i^2=371$. He later found that he had noted two values in the data incorrectly as $4$ and $5$, instead of the correct values $6$ and $8$, respectively. The variance of the corrected data is:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$9$",
+    "$4$",
+    "$7$",
+    "$5$"
+   ],
+   "answer": "(C) $7$",
+   "key_idea": "Correct $\\sum x$ and $\\sum x^2$ by removing the wrong values and adding the right ones, then use $\\sigma^2=\\frac{\\sum x^2}{n}-\\bar x^2$.",
+   "solution": [
+    "Let the other eight values be $x_1,\\ldots,x_8$. Mean $5.5$ gives $x_1+\\cdots+x_8+4+5=55$ ...(1).",
+    "Also $x_1^2+\\cdots+x_8^2+4^2+5^2=371$ ...(2).",
+    "Corrected mean $=\\frac{x_1+\\cdots+x_8+6+8}{10}=\\frac{55-9+6+8}{10}=6$.",
+    "Use $\\sigma^2+\\bar x^2=\\frac1n\\sum x_i^2$, so $\\sigma^2+6^2=\\frac1{10}\\left(371-4^2-5^2+6^2+8^2\\right)$.",
+    "$=\\frac1{10}(471-41)=\\frac{430}{10}=43$.",
+    "$\\sigma^2=43-36=7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift the origin to the new mean $6$: the variance is $\\frac1n\\sum(x_i-6)^2$ because the new mean is exactly $6$.",
+     "solution": [
+      "New sum: $\\sum x=55-9+14=60$, so the new mean is $6$.",
+      "New sum of squares: $\\sum x^2=371-16-25+36+64=430$.",
+      "Because the mean is $6$, $\\sigma^2=\\frac1{10}\\sum(x_i-6)^2$.",
+      "$\\sum(x_i-6)^2=\\sum x_i^2-12\\sum x_i+10\\cdot36=430-720+360=70$.",
+      "$\\sigma^2=\\frac{70}{10}=7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Correcting data: update $\\sum x$ and $\\sum x^2$ only by the difference of the old and new values; never recompute from scratch.",
+    "$\\sigma^2=\\frac1n\\sum(x_i-a)^2-(\\bar x-a)^2$ for any shift $a$; with $a=\\bar x$ the second term vanishes.",
+    "Check: here $\\sum(x-6)^2=70$, $\\bar x-6=0$, giving $7$, same as $\\frac{430}{10}-36$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "marks": 4,
+   "concepts": [
+    "Mean and variance under a linear transformation"
+   ],
+   "level": 2,
+   "question": "Let $x_1,x_2,\\ldots,x_{10}$ be ten observations such that $\\sum_{i=1}^{10}(x_i-2)=30$, $\\sum_{i=1}^{10}(x_i-\\beta)^2=98$, $\\beta>2$ and their variance is $\\frac45$. If $\\mu$ and $\\sigma^2$ are respectively the mean and the variance of $2(x_1-1)+4\\beta,\\ 2(x_2-1)+4\\beta,\\ldots,2(x_{10}-1)+4\\beta$, then $\\frac{\\beta\\mu}{\\sigma^2}$ is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$110$",
+    "$90$",
+    "$120$",
+    "$100$"
+   ],
+   "answer": "(D) $100$",
+   "key_idea": "$\\sum(x_i-\\beta)^2$ and the given variance fix $\\beta$ (a quadratic, only the root $>2$ is allowed); the new data is $2x+(4\\beta-2)$.",
+   "solution": [
+    "$\\sum(x_i-2)=30$ gives $\\sum x_i-20=30$, so $\\sum x_i=50$ and the mean is $5$.",
+    "$\\sum(x_i-\\beta)^2=98$ gives $\\sum x_i^2+10\\beta^2-2\\beta\\cdot50=98$, so $\\sum x_i^2=98-10\\beta^2+100\\beta$.",
+    "Variance: $\\frac{\\sum x_i^2}{10}-\\left(\\frac{50}{10}\\right)^2=\\frac45$, i.e. $\\frac{98-10\\beta^2+100\\beta}{10}-25=\\frac45$.",
+    "This simplifies to $\\beta^2-10\\beta+16=0$, so $\\beta=2$ or $8$; since $\\beta>2$, $\\beta=8$.",
+    "New data: $2x_i-2+32=2x_i+30$.",
+    "$\\mu=\\frac{\\sum(2x_i+30)}{10}=2\\times5+30=40$.",
+    "$\\sigma^2=\\frac{\\sum(2x_i+30)^2}{10}-40^2=4\\cdot\\frac45=\\frac{16}{5}$ (variance is multiplied by $2^2$, the shift does not change it).",
+    "$\\frac{\\beta\\mu}{\\sigma^2}=\\frac{8\\times40}{16/5}=100$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split $\\sum(x_i-\\beta)^2=n\\sigma^2+n(\\bar x-\\beta)^2$, so $\\beta$ comes from a perfect square.",
+     "solution": [
+      "$\\bar x=5$ and $\\sigma^2=\\frac45$ (given).",
+      "$\\sum(x_i-\\beta)^2=10\\sigma^2+10(\\bar x-\\beta)^2=8+10(5-\\beta)^2$.",
+      "Set equal to $98$: $(\\beta-5)^2=9$, so $\\beta=8$ or $2$; $\\beta>2$ gives $\\beta=8$.",
+      "New data $2x+30$: $\\mu=40$ and $\\sigma^2=4\\cdot\\frac45=\\frac{16}5$.",
+      "$\\frac{\\beta\\mu}{\\sigma^2}=\\frac{320}{16/5}=100$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum(x_i-a)^2=n\\sigma^2+n(\\bar x-a)^2$: the sum of squares about any point $a$ is smallest at $a=\\bar x$.",
+    "For $y=px+q$: $\\bar y=p\\bar x+q$, $\\sigma_y^2=p^2\\sigma_x^2$ (shift is irrelevant).",
+    "Check: $\\beta=2$ and $\\beta=8$ are symmetric about the mean $5$, both give $8+90=98$, so the condition $\\beta>2$ is what selects $8$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "marks": 4,
+   "concepts": [
+    "Mean deviation about the median for a frequency distribution"
+   ],
+   "level": 2,
+   "question": "The frequency distribution of the age of students in a class of $40$ students is given below:\nAge: $15,16,17,18,19,20$; No. of students: $5,8,5,12,x,y$.\nIf the mean deviation about the median is $1.25$, then $4x+5y$ is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$43$",
+    "$46$",
+    "$44$",
+    "$47$"
+   ],
+   "answer": "(C) $44$",
+   "key_idea": "The cumulative frequency $30$ at age $18$ already passes $N/2=20$, so the median is $18$ whatever $x,y$ are.",
+   "solution": [
+    "Cumulative frequencies: $5,13,18,30,30+x,30+x+y$.",
+    "$N=\\sum f_i=30+x+y=40$, so $x+y=10$ ...(1).",
+    "$\\frac N2=20$ lies in the cumulative range $(18,30]$ of age $18$, so the median is $18$.",
+    "$\\sum f_i|x_i-18|=15+16+5+0+x+2y=36+x+2y$.",
+    "Mean deviation $=\\frac{\\sum f_i|x_i-18|}{\\sum f_i}=\\frac{36+x+2y}{40}=1.25$.",
+    "$36+x+2y=50$, so $x+2y=14$ ...(2).",
+    "From (1) and (2): $y=4$, $x=6$.",
+    "$4x+5y=24+20=44$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the total absolute deviation: each of the last $10$ students adds $1$ or $2$, so the extra above the base total fixes how many add $2$.",
+     "solution": [
+      "Median $=18$ (cumulative frequency $30\\ge20$), and the total absolute deviation must be $1.25\\times40=50$.",
+      "Students aged $15,16,17,18$ contribute $15+16+5+0=36$.",
+      "The remaining $x+y=10$ students contribute $1$ each (age $19$) or $2$ each (age $20$), so at least $10$; need $50-36=14$.",
+      "The excess $14-10=4$ means exactly $4$ students are aged $20$: $y=4$, $x=6$.",
+      "$4x+5y=24+20=44$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Mean deviation about the median needs the median first; locate it with the cumulative frequency $\\ge N/2$.",
+    "Once the median is a data value, the deviations are small integers, so the unknown frequencies are fixed by a counting argument.",
+    "$\\sum f_i|x_i-M|$ is the minimum over all centres $M$ when $M$ is the median."
+   ]
+  },
+  {
+   "q_no": 5,
+   "marks": 4,
+   "concepts": [
+    "Variance of a frequency distribution"
+   ],
+   "level": 2,
+   "question": "If the variance of the frequency distribution $x: c,2c,3c,4c,5c,6c$ with $f: 2,1,1,1,1,1$ is $160$, then the value of $c\\in\\mathbb{N}$ is:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$6$",
+    "$7$",
+    "$8$",
+    "$5$"
+   ],
+   "answer": "(B) $7$",
+   "key_idea": "Scaling every $x$ by $c$ scales the variance by $c^2$, so $c^2\\cdot\\frac{160}{49}=160$.",
+   "solution": [
+    "$\\sigma^2=\\frac{\\sum f_ix_i^2}{\\sum f_i}-\\left(\\frac{\\sum f_ix_i}{\\sum f_i}\\right)^2=160$ with $\\sum f_i=7$.",
+    "$\\frac{c^2(2+4+9+16+25+36)}{7}-\\left(\\frac{c(2+2+3+4+5+6)}{7}\\right)^2=160$.",
+    "$c^2\\cdot\\frac{92}{7}-c^2\\left(\\frac{22}{7}\\right)^2=160$.",
+    "$\\frac{c^2}{49}\\left(92\\times7-4\\times121\\right)=160$.",
+    "$\\frac{c^2}{49}\\times160=160$, so $c^2=49$.",
+    "$c=7$ (as $c\\in\\mathbb{N}$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take the assumed mean $3$ (deviations $d=x/c-3$), compute the variance of the base data $1,\\ldots,6$ once, then scale by $c^2$.",
+     "solution": [
+      "Let $u=x/c$ take values $1,2,3,4,5,6$ with frequencies $2,1,1,1,1,1$; $\\sigma_x^2=c^2\\sigma_u^2$.",
+      "Take $d=u-3$: $-2,-1,0,1,2,3$. $\\sum fd=-4-1+0+1+2+3=1$, $\\sum fd^2=8+1+0+1+4+9=23$.",
+      "$\\sigma_u^2=\\frac{23}{7}-\\left(\\frac17\\right)^2=\\frac{161-1}{49}=\\frac{160}{49}$.",
+      "$c^2\\cdot\\frac{160}{49}=160$ gives $c^2=49$, $c=7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sigma^2(cX)=c^2\\sigma^2(X)$; compute the variance of the 'unit' data once and rescale.",
+    "Assumed-mean method: $\\sigma^2=\\frac{\\sum fd^2}{\\sum f}-\\left(\\frac{\\sum fd}{\\sum f}\\right)^2$ for $d=x-a$, any $a$; choosing $a$ near the mean keeps numbers small.",
+    "Check: base data $1,1,2,3,4,5,6$ has variance $\\frac{160}{49}\\approx3.27$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "marks": 4,
+   "concepts": [
+    "Standard deviation from sum and sum of pairwise products"
+   ],
+   "level": 1,
+   "question": "Let $a_1,a_2,\\ldots,a_{10}$ be $10$ observations such that $\\sum_{k=1}^{10}a_k=50$ and $\\sum_{\\forall k<j}a_ka_j=1100$. Then the standard deviation of $a_1,\\ldots,a_{10}$ is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$\\sqrt{115}$",
+    "$10$",
+    "$\\sqrt5$",
+    "$5$"
+   ],
+   "answer": "(C) $\\sqrt5$",
+   "key_idea": "$\\left(\\sum a_k\\right)^2=\\sum a_k^2+2\\sum_{k<j}a_ka_j$ turns the pair sum into $\\sum a_k^2$.",
+   "solution": [
+    "$\\sum a_k=50$, so the mean is $\\mu=5$.",
+    "Variance $=\\frac{\\sum a_i^2}{n}-\\mu^2$ ...(1).",
+    "$(a_1+a_2+\\cdots+a_{10})^2=\\sum a_i^2+2\\sum_{k<j}a_ka_j$.",
+    "$(50)^2=\\sum a_i^2+2(1100)$, so $\\sum a_i^2=2500-2200=300$.",
+    "Variance $=\\frac{300}{10}-25=5$.",
+    "Standard deviation $=\\sqrt5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Express the variance through pairwise differences, $\\sum_{k<j}(a_k-a_j)^2=(n-1)S^2-2nP$, which never needs $\\sum a^2$ explicitly.",
+     "solution": [
+      "Identity: $\\sum_{k<j}(a_k-a_j)^2=(n-1)\\sum a^2-2P$ with $P=\\sum_{k<j}a_ka_j$, and $\\sum a^2=S^2-2P$ with $S=\\sum a$.",
+      "Substituting: $\\sum_{k<j}(a_k-a_j)^2=(n-1)S^2-2nP=9(2500)-20(1100)=500$.",
+      "Also $\\sigma^2=\\frac1{n^2}\\sum_{k<j}(a_k-a_j)^2=\\frac{500}{100}=5$.",
+      "$\\sigma=\\sqrt5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$S^2=\\sum a^2+2P$: a sum and the sum of pairwise products fix $\\sum a^2$.",
+    "$\\sigma^2=\\frac1{n^2}\\sum_{k<j}(a_k-a_j)^2$: variance is the mean squared pairwise difference over $n^2$ (all ordered pairs, with a $\\frac12$).",
+    "Check on $1,2,3$: $S=6$, $P=11$, $\\sigma^2=\\frac{(36-22)}{3}-4=\\frac23$ and $\\frac{1}{9}(1+4+1)=\\frac23$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "marks": 4,
+   "concepts": [
+    "Variance of a subset of observations"
+   ],
+   "level": 2,
+   "question": "If the mean and variance of five observations are $\\frac{24}{5}$ and $\\frac{194}{25}$ respectively, and the mean of the first four observations is $\\frac72$, then the variance of the first four observations is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$\\frac{77}{12}$",
+    "$\\frac54$",
+    "$\\frac45$",
+    "$\\frac{105}{4}$"
+   ],
+   "answer": "(B) $\\frac54$",
+   "key_idea": "From the mean and variance of all five, get $x_5$ and $\\sum_{i\\le4}x_i^2$, then recompute the variance of four.",
+   "solution": [
+    "$\\frac{x_1+\\cdots+x_5}{5}=\\frac{24}{5}$, so $x_1+\\cdots+x_5=24$.",
+    "$\\frac{x_1+x_2+x_3+x_4}{4}=\\frac72$, so $x_1+\\cdots+x_4=14$ and $x_5=10$.",
+    "$\\frac{\\sum_{i=1}^5x_i^2}{5}-\\left(\\frac{24}{5}\\right)^2=\\frac{194}{25}$, i.e. $\\frac{\\sum x_i^2}{5}=\\frac{576}{25}+\\frac{194}{25}=\\frac{770}{25}$, so $\\sum_{i=1}^5x_i^2=154$.",
+    "Hence $x_1^2+x_2^2+x_3^2+x_4^2=154-10^2=54$.",
+    "Variance of the first four $=\\frac{\\sum_{i=1}^4x_i^2}{4}-\\left(\\frac{\\sum_{i=1}^4x_i}{4}\\right)^2=\\frac{54}{4}-\\frac{49}{4}=\\frac54$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the combined-variance formula for the groups $\\{x_1..x_4\\}$ and $\\{x_5\\}$.",
+     "solution": [
+      "Groups: $n_1=4$, mean $\\frac72$, variance $s^2$ (unknown); $n_2=1$, value $x_5=10$, variance $0$.",
+      "$x_5=24-14=10$; overall mean $\\frac{24}{5}$.",
+      "Deviations of group means from overall mean: $d_1=\\frac72-\\frac{24}5=-\\frac{13}{10}$, $d_2=10-\\frac{24}5=\\frac{26}5$.",
+      "$5\\cdot\\frac{194}{25}=4s^2+4\\cdot\\frac{169}{100}+1\\cdot\\frac{676}{25}$, i.e. $\\frac{194}5=4s^2+\\frac{169}{25}+\\frac{676}{25}$.",
+      "$\\frac{970}{25}-\\frac{845}{25}=\\frac{125}{25}=5=4s^2$, so $s^2=\\frac54$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Combined variance: $n\\sigma^2=\\sum n_i\\sigma_i^2+\\sum n_id_i^2$ (within-group plus between-group).",
+    "Removing one observation: from the two sums $\\sum x$ and $\\sum x^2$ recover its value and the new variance.",
+    "Check: the values $2,3,4,5$ have mean $\\frac72$ and variance $\\frac54$, a valid first four."
+   ]
+  },
+  {
+   "q_no": 8,
+   "marks": 4,
+   "concepts": [
+    "Median of grouped data"
+   ],
+   "level": 1,
+   "question": "Let $M$ denote the median of the following frequency distribution: class $0\\text{-}4,4\\text{-}8,8\\text{-}12,12\\text{-}16,16\\text{-}20$ with frequency $3,9,10,8,6$. Then $20M$ is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$416$",
+    "$208$",
+    "$104$",
+    "$52$"
+   ],
+   "answer": "(B) $208$",
+   "key_idea": "$N/2=18$ falls in the third class (cumulative $12<18\\le22$), so interpolate there.",
+   "solution": [
+    "Cumulative frequencies: $3,12,22,30,36$, so $N=36$ and $\\frac N2=18$.",
+    "$18$ lies between $12$ and $22$: the median class is $8\\text{-}12$ with $l=8$, $C=12$, $f=10$, $h=4$.",
+    "$M=l+\\left(\\frac{\\frac N2-C}{f}\\right)h=8+\\frac{18-12}{10}\\times4$.",
+    "$M=8+2.4=10.4$.",
+    "$20M=208$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "The median class is the first class whose cumulative frequency is $\\ge N/2$.",
+    "Equal class widths $h$ are needed for $M=l+\\frac{N/2-C}{f}h$ to be used as written.",
+    "Check: $M=10.4$ lies inside $[8,12]$, as the median class requires."
+   ]
+  },
+  {
+   "q_no": 9,
+   "marks": 4,
+   "concepts": [
+    "Mean deviation about the median and about the mean"
+   ],
+   "level": 3,
+   "question": "Let the median and the mean deviation about the median of $7$ observations $170,125,230,190,210,a,b$ be $170$ and $\\frac{205}{7}$ respectively. Then the mean deviation about the mean of these $7$ observations is:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$31$",
+    "$28$",
+    "$30$",
+    "$32$"
+   ],
+   "answer": "(C) $30$",
+   "key_idea": "Median $170$ with $190,210,230$ above it forces $a,b\\le170$, so the signs of $|x-170|$ are known and $a+b$ is linear.",
+   "solution": [
+    "Arranged: $125,a,b,170,190,210,230$ (the median is the 4th term, so $a,b\\le170$).",
+    "Mean deviation about the median: $\\frac{(170-125)+(170-a)+(170-b)+0+(190-170)+(210-170)+(230-170)}{7}=\\frac{205}{7}$.",
+    "$45+340-a-b+20+40+60=205$, so $a+b=300$.",
+    "Mean $\\bar x=\\frac{a+b+125+170+190+210+230}{7}=\\frac{1225}{7}=175$.",
+    "Mean deviation about the mean $=\\frac{|175-125|+|175-a|+|175-b|+|175-170|+|190-175|+|210-175|+|230-175|}{7}$.",
+    "Since $a,b\\le170<175$: $=\\frac{50+(350-300)+5+15+35+55}{7}=\\frac{210}{7}=30$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The sum of absolute deviations about a centre equals (sum of upper half) minus (sum of lower half) when the centre separates them; likewise about the mean the positive and negative deviations balance.",
+     "solution": [
+      "About the median $170$: the three values above are $190,210,230$ and the three below are $125,a,b$ (the median itself deviates $0$).",
+      "$\\sum|x-170|=(190+210+230)-(125+a+b)=630-125-a-b=205$, so $a+b=300$.",
+      "Mean $=\\frac{1225}{7}=175$. Only $190,210,230$ lie above $175$ (as $a,b\\le170$); their deviations total $630-3(175)=105$.",
+      "Positive and negative deviations about the mean cancel, so the negative ones also total $105$.",
+      "$\\sum|x-\\bar x|=2\\times105=210$ and the mean deviation is $\\frac{210}{7}=30$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Mean deviation about the median $=\\frac{\\text{(sum of upper half)}-\\text{(sum of lower half)}}{n}$ for odd $n$.",
+    "About the mean, $\\sum(x-\\bar x)=0$, so $\\sum|x-\\bar x|=2\\times$ (sum of the positive deviations).",
+    "Position of the median fixes the sign pattern: here the three given values above $170$ force $a,b\\le170$ (if either exceeded $170$ the median would change)."
+   ]
+  },
+  {
+   "q_no": 10,
+   "marks": 4,
+   "concepts": [
+    "Mean and variance with parameters in sums of deviations"
+   ],
+   "level": 2,
+   "question": "Consider $10$ observations $x_1,\\ldots,x_{10}$ such that $\\sum_{i=1}^{10}(x_i-\\alpha)=2$ and $\\sum_{i=1}^{10}(x_i-\\beta)^2=40$, where $\\alpha,\\beta$ are positive integers. Let the mean and the variance of the observations be $\\frac65$ and $\\frac{84}{25}$ respectively. Then $\\frac\\beta\\alpha$ is equal to:",
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "options": [
+    "$\\frac52$",
+    "$2$",
+    "$1$",
+    "$\\frac32$"
+   ],
+   "answer": "(B) $2$",
+   "key_idea": "Mean gives $\\sum x_i$ and variance gives $\\sum x_i^2$; each condition then determines one parameter.",
+   "solution": [
+    "$\\frac{\\sum x_i}{10}=\\frac65$, so $\\sum x_i=12$.",
+    "$\\frac{\\sum x_i^2}{10}-\\left(\\frac65\\right)^2=\\frac{84}{25}$, so $\\sum x_i^2=48$.",
+    "$\\sum(x_i-\\alpha)=2$: $\\sum x_i-10\\alpha=2$, so $12-10\\alpha=2$ and $\\alpha=1$.",
+    "$\\sum(x_i^2-2x_i\\beta+\\beta^2)=40$: $\\sum x_i^2-2\\beta\\sum x_i+10\\beta^2=40$.",
+    "$48-2\\beta(12)+10\\beta^2=40$, so $10\\beta^2-24\\beta+8=0$, i.e. $5\\beta^2-12\\beta+4=0$.",
+    "$(\\beta-2)(5\\beta-2)=0$; $\\beta$ is a positive integer, so $\\beta=2$.",
+    "$\\frac\\beta\\alpha=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\sum(x_i-a)=n(\\bar x-a)$ and $\\sum(x_i-a)^2=n\\sigma^2+n(\\bar x-a)^2$ directly.",
+     "solution": [
+      "$\\sum(x_i-\\alpha)=10\\left(\\frac65-\\alpha\\right)=2$, so $\\frac65-\\alpha=\\frac15$ and $\\alpha=1$.",
+      "$\\sum(x_i-\\beta)^2=10\\cdot\\frac{84}{25}+10\\left(\\frac65-\\beta\\right)^2=40$.",
+      "$\\left(\\beta-\\frac65\\right)^2=4-\\frac{84}{25}=\\frac{16}{25}$, so $\\beta-\\frac65=\\pm\\frac45$.",
+      "$\\beta=2$ or $\\frac25$; positive integer gives $\\beta=2$.",
+      "$\\frac\\beta\\alpha=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum(x_i-a)=n(\\bar x-a)$ and $\\sum(x_i-a)^2=n\\left[\\sigma^2+(\\bar x-a)^2\\right]$.",
+    "Quadratic conditions like this give two roots symmetric about the mean ($\\bar x\\pm$ something); the integer/positivity condition picks one.",
+    "Check: roots $2$ and $\\frac25$ average to $\\frac65=\\bar x$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "marks": 4,
+   "concepts": [
+    "Variance of an arithmetic progression"
+   ],
+   "level": 2,
+   "question": "The variance of the numbers $8,21,34,47,\\ldots,320$ is ___.",
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "answer": "$8788$",
+   "key_idea": "The numbers form an AP with common difference $13$, whose variance has a closed form in $n$ and $d$.",
+   "solution": [
+    "The numbers are in AP: $8+(n-1)13=320$, so $13n=325$ and $n=25$.",
+    "Mean $\\mu=\\frac{\\sum x_i}{n}=\\frac{\\frac{25}{2}(8+320)}{25}=164$.",
+    "Variance $\\sigma^2=\\frac{\\sum x_i^2}{n}-\\mu^2=\\frac{8^2+21^2+\\cdots+320^2}{25}-164^2$.",
+    "Evaluating the sum of squares: $\\sum x_i^2=25(8788+164^2)=892100$, so $\\sigma^2=8788$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the variance as '(8^2+21^2+...+320^2)/13 - 164^2' with denominator 13; the divisor must be n = 25 (with 13 the value is 68623 - 164^2, not 8788). Also the PDF gives the answer 8788 without evaluating the sum of squares; the value 892100 (so that sum/25 - 164^2 = 8788) was added and verified.",
+   "alternate_solutions": [
+    {
+     "idea": "The variance of an AP depends only on $n$ and $d$: $\\sigma^2=\\frac{d^2(n^2-1)}{12}$, since the data is $d$ times $1,2,\\ldots,n$ shifted.",
+     "solution": [
+      "The data is $13k-5$ for $k=1,\\ldots,25$, i.e. $13\\times(1,2,\\ldots,25)$ shifted by $-5$.",
+      "Shifting does not change variance; scaling by $13$ multiplies it by $13^2$.",
+      "Variance of $1,2,\\ldots,n$ is $\\frac{n^2-1}{12}=\\frac{625-1}{12}=52$.",
+      "$\\sigma^2=169\\times52=8788$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Variance of $1,2,\\ldots,n$ is $\\frac{n^2-1}{12}$; for an AP with common difference $d$: $\\sigma^2=\\frac{d^2(n^2-1)}{12}$.",
+    "Mean of an AP is the average of the first and last terms.",
+    "Check: $1,2,3$ has variance $\\frac23=\\frac{9-1}{12}$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "marks": 4,
+   "concepts": [
+    "Mean, mean deviation and variance with natural-number unknowns"
+   ],
+   "level": 3,
+   "question": "Let $a,b,c\\in\\mathbb{N}$ and $a<b<c$. Let the mean, the mean deviation about the mean and the variance of the $5$ observations $9,25,a,b,c$ be $18$, $4$ and $\\frac{136}{5}$, respectively. Then $2a+b-c$ is equal to ___.",
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "answer": "$33$",
+   "key_idea": "The three deviations $18-a,18-b,18-c$ satisfy $\\sum|d|=4$ and $\\sum d^2=6$, which forces the pattern $\\{1,1,4\\}$ for the squares.",
+   "solution": [
+    "Mean: $\\frac{9+25+a+b+c}{5}=18$, so $a+b+c=56$.",
+    "Mean deviation: $\\frac{\\sum|x_i-\\bar x|}{5}=4$, so $9+7+|18-a|+|18-b|+|18-c|=20$, i.e. $|18-a|+|18-b|+|18-c|=4$.",
+    "Variance: $\\frac{81+49+(18-a)^2+(18-b)^2+(18-c)^2}{5}=\\frac{136}{5}$, so $(18-a)^2+(18-b)^2+(18-c)^2=6$.",
+    "Integer squares summing to $6$ are $1,1,4$ (matching $|d|$ sum $1+1+2=4$): $(18-a)^2=1$, $(18-b)^2=1$, $(18-c)^2=4$.",
+    "With $a<b<c$ and $a+b+c=56$: $18-a=1$, $18-b=-1$, $18-c=-2$, so $a=17$, $b=19$, $c=20$.",
+    "Check: $17+19+20=56$.",
+    "$2a+b-c=34+19-20=33$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Deviations about the mean cancel: positive total equals negative total, which fixes the signs without using $a+b+c=56$ or listing triples.",
+     "solution": [
+      "Let $d=x-18$. The known values give $d=-9$ and $d=+7$; total $\\sum|d|=5\\times4=20$.",
+      "Positive deviations balance negative ones, so each side totals $10$.",
+      "So among $a,b,c$ the negative deviations total $10-9=1$ and the positive total $10-7=3$.",
+      "One value has $d=-1$ ($a=17$); the other two are positive, summing to $3$ with $d^2$ summing to $6-1=5$: $\\{1,2\\}$.",
+      "So $d=-1,+1,+2$, i.e. $a=17$, $b=19$, $c=20$, and $2a+b-c=33$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "About the mean, $\\sum(x-\\bar x)=0$: positive and negative deviations have equal totals, each equal to half of $\\sum|x-\\bar x|$.",
+    "For integer deviations $d^2\\ge|d|$, so $\\sum d^2$ and $\\sum|d|$ together restrict the possible deviation patterns sharply.",
+    "Check: data $9,25,17,19,20$ has mean $18$, deviations $9,7,1,1,2$ (sum $20$) and squares sum $136$."
+   ]
+  }
+ ]
+}
