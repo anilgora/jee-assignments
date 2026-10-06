@@ -1,0 +1,153 @@
+{
+ "title": "JEE Main Question Bank 01 Trigonometry 02 — Paper Analysis",
+ "subtitle": "Questions 1–3 (printed 21–23) · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Trigonometry_02.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 3,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for the correct numerical value · 0 if unanswered (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Discriminant condition and range of $\\sin^2 2\\theta$",
+    "Powers of sine and cosine"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{\\sin^2 2\\theta:(\\sin^4\\theta+\\cos^4\\theta)x^2+(\\sin 2\\theta)x+(\\sin^6\\theta+\\cos^6\\theta)=0$ has real roots$\\}$. If $\\alpha$ and $\\beta$ are the smallest and largest elements of the set $S$, respectively, then $3\\left((\\alpha-2)^2+(\\beta-1)^2\\right)$ equals ______.",
+   "answer": "4",
+   "key_idea": "Write $\\sin^4\\theta+\\cos^4\\theta$ and $\\sin^6\\theta+\\cos^6\\theta$ in $t=\\sin^2 2\\theta$, so $D\\ge0$ becomes a quadratic inequality in $t$.",
+   "solution": [
+    "For real roots the discriminant must satisfy $D\\ge 0$.",
+    "$\\sin^2 2\\theta-4(\\sin^4\\theta+\\cos^4\\theta)(\\sin^6\\theta+\\cos^6\\theta)\\ge 0$.",
+    "Put $t=\\sin^2 2\\theta$. Then $\\sin^4\\theta+\\cos^4\\theta=1-\\frac{t}{2}$ and $\\sin^6\\theta+\\cos^6\\theta=1-\\frac{3t}{4}$.",
+    "So $t-4\\left(1-\\frac{t}{2}\\right)\\left(1-\\frac{3t}{4}\\right)\\ge 0$.",
+    "Expanding, $3t^2-12t+8\\le 0$.",
+    "Hence $t\\in\\left[2-\\frac{2}{\\sqrt3},\\,2+\\frac{2}{\\sqrt3}\\right]$  ... (1)",
+    "But $t=\\sin^2 2\\theta\\in[0,1]$  ... (2)",
+    "Intersecting (1) and (2): $t\\in\\left[2-\\frac{2}{\\sqrt3},\\,1\\right]$, so $\\alpha=2-\\frac{2}{\\sqrt3}$ and $\\beta=1$.",
+    "$3\\left((\\alpha-2)^2+(\\beta-1)^2\\right)=3\\left(\\frac{4}{3}+0\\right)=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Let $f(t)=t-4\\left(1-\\frac t2\\right)\\left(1-\\frac{3t}{4}\\right)$ and use monotonicity on $[0,1]$: only the smaller root of $f$ matters.",
+     "solution": [
+      "The condition $D\\ge0$ is $f(t)\\ge 0$ where $f(t)=-\\frac{3}{2}t^2+6t-4$, with $t=\\sin^2 2\\theta\\in[0,1]$ (every value in $[0,1]$ is attained).",
+      "$f'(t)=-3t+6>0$ for $t<2$, so $f$ is strictly increasing on $[0,1]$.",
+      "$f(0)=-4<0$ and $f(1)=-\\frac32+6-4=\\frac12>0$, so $f$ has exactly one zero $t_0$ in $[0,1]$ and $f\\ge0$ exactly on $[t_0,1]$.",
+      "Hence $S=[t_0,1]$: $\\beta=1$ with no need to find the upper root of $f$.",
+      "$t_0$ is the root of $3t^2-12t+8=0$ lying below $1$: $t_0=\\frac{12-\\sqrt{144-96}}{6}=2-\\frac{2}{\\sqrt3}$, so $\\alpha-2=-\\frac{2}{\\sqrt3}$.",
+      "$3\\left((\\alpha-2)^2+(\\beta-1)^2\\right)=3\\cdot\\frac43=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^4\\theta+\\cos^4\\theta=1-2\\sin^2\\theta\\cos^2\\theta=1-\\frac12\\sin^22\\theta$ and $\\sin^6\\theta+\\cos^6\\theta=1-3\\sin^2\\theta\\cos^2\\theta=1-\\frac34\\sin^22\\theta$; both depend only on $\\sin^2 2\\theta$.",
+    "Whenever an equation involves only $\\sin^2 2\\theta$ (or $\\sin 2\\theta$), replace it by $t\\in[0,1]$ (or $[-1,1]$) and always intersect the algebraic range with this natural range.",
+    "A quadratic inequality $f(t)\\ge0$ with the vertex outside $[0,1]$ is monotone there, so the solution set is a single interval with one end at the boundary.",
+    "Here $\\alpha=2-\\frac{2}{\\sqrt3}\\approx0.845$: the equation has real roots only for $\\sin^22\\theta\\ge0.845$, i.e. $\\theta$ near odd multiples of $\\frac\\pi4$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric equations: factorisation and graphical counting of solutions"
+   ],
+   "level": 3,
+   "question": "The number of solutions of $\\sin^2 x+(2+2x-x^2)\\sin x-3(x-1)^2=0$, where $-\\pi\\le x\\le\\pi$, is ______.",
+   "answer": "2",
+   "key_idea": "Write $2+2x-x^2=3-(x-1)^2$; the expression then factors as $(\\sin x+3)(\\sin x-(x-1)^2)$.",
+   "solution": [
+    "$2+2x-x^2=3-(x-1)^2$, so the equation is $\\sin^2 x+\\left(3-(x-1)^2\\right)\\sin x-3(x-1)^2=0$.",
+    "Expanding: $\\sin^2 x+3\\sin x-(x-1)^2\\sin x-3(x-1)^2=0$.",
+    "Grouping: $\\sin x(\\sin x+3)-(x-1)^2(\\sin x+3)=0$, i.e. $(\\sin x+3)\\left(\\sin x-(x-1)^2\\right)=0$.",
+    "$\\sin x=-3$ is not possible.",
+    "Hence $\\sin x=(x-1)^2$: we count the intersections of $y=\\sin x$ and the parabola $y=(x-1)^2$ (vertex $(1,0)$) on $[-\\pi,\\pi]$.",
+    "For $x<0$ we have $\\sin x<0<(x-1)^2$, and for $x>2$ we have $(x-1)^2>1\\ge\\sin x$, so there is no intersection outside $[0,2]$.",
+    "On $[0,2]$ let $h(x)=\\sin x-(x-1)^2$: $h(0)=-1<0$, $h(1)=\\sin 1>0$, $h(2)=\\sin 2-1<0$.",
+    "So there is a crossing in $(0,1)$ and another in $(1,2)$; the graph shows exactly two intersections (made rigorous in the alternate solution).",
+    "Number of solutions $=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF only sketches the two graphs and says there are two intersections; it does not restrict the search to [0, 2] or check signs at x = 0, 1, 2. The final answer 2 is correct. I added the range restriction and the sign checks, and the proof that there are exactly two roots is in the alternate solution.",
+   "alternate_solutions": [
+    {
+     "idea": "$h(x)=\\sin x-(x-1)^2$ is concave on $[0,2]$, so it rises then falls and can cross zero at most twice.",
+     "solution": [
+      "After factorisation the roots are the zeros of $h(x)=\\sin x-(x-1)^2$ on $[-\\pi,\\pi]$; as before they lie in $[0,2]$.",
+      "$h''(x)=-\\sin x-2<0$ for all $x$, so $h$ is strictly concave.",
+      "A strictly concave function has at most two zeros (a line can meet a concave graph in at most two points).",
+      "$h(0)=-1<0$, $h(1)=\\sin1>0$ and $h(2)=\\sin2-1<0$, so by the intermediate value theorem there is a zero in $(0,1)$ and one in $(1,2)$.",
+      "Therefore there are exactly two zeros, and the number of solutions is $2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When an equation is quadratic in $\\sin x$ with coefficients involving $x$, look for a factorisation of the form $(\\sin x+p)(\\sin x-q)$ with $p+(-q)$ and $-pq$ matching the coefficients; here $p=3$, $q=(x-1)^2$.",
+    "Since $|\\sin x|\\le1$, a factor like $\\sin x+3$ can never vanish; discard it at once.",
+    "Equations of the form $\\sin x=g(x)$: first use $|g(x)|\\le1$ to cut the domain, then count with sign checks plus monotonicity or concavity ($h''<0$ gives at most two zeros, $h''>0$ at most two as well).",
+    "Quick check of the factorisation: at $x=1$ the equation is $\\sin^2 1+3\\sin 1=\\sin 1(\\sin 1+3)$, matching $(\\sin1+3)(\\sin1-0)$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Range of parameter for which a trigonometric equation is solvable",
+    "Trigonometric values of standard and related angles"
+   ],
+   "level": 2,
+   "question": "Let the set of all $a\\in\\mathbb{R}$ such that the equation $\\cos 2x+a\\sin x=2a-7$ has a solution be $[p,q]$ and $r=\\tan 9^\\circ-\\tan 27^\\circ-\\frac{1}{\\cot 63^\\circ}+\\tan 81^\\circ$. Then $pqr$ is equal to ______.",
+   "answer": "48",
+   "key_idea": "The equation factors as $(\\sin x-2)\\left(2(\\sin x+2)-a\\right)=0$, so $a=2(\\sin x+2)$ since $\\sin x\\ne2$.",
+   "solution": [
+    "$\\cos 2x=1-2\\sin^2x$, so the equation becomes $a(\\sin x-2)=2(\\sin x-2)(\\sin x+2)$.",
+    "So $(\\sin x-2)\\left(a-2(\\sin x+2)\\right)=0$.",
+    "$\\sin x=2$ is impossible, hence $a=2(\\sin x+2)$.",
+    "As $\\sin x$ takes every value in $[-1,1]$, $a\\in[2,6]$.",
+    "So $p=2$ and $q=6$.",
+    "Since $\\frac{1}{\\cot63^\\circ}=\\tan63^\\circ=\\cot27^\\circ$ and $\\tan81^\\circ=\\cot9^\\circ$: $r=\\tan9^\\circ+\\cot9^\\circ-\\tan27^\\circ-\\cot27^\\circ$.",
+    "Using $\\tan A+\\cot A=\\frac{1}{\\sin A\\cos A}$: $r=\\frac{1}{\\sin9^\\circ\\cos9^\\circ}-\\frac{1}{\\sin27^\\circ\\cos27^\\circ}$.",
+    "$r=2\\left[\\frac{4}{\\sqrt5-1}-\\frac{4}{\\sqrt5+1}\\right]$, using $\\sin18^\\circ=\\frac{\\sqrt5-1}{4}$ and $\\sin54^\\circ=\\frac{\\sqrt5+1}{4}$.",
+    "$r=2\\cdot\\frac{4\\cdot2}{4}=4$.",
+    "$pqr=2\\times6\\times4=48$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat it as a quadratic in $s=\\sin x$ needing a root in $[-1,1]$ (sign test), and combine $r$ with sum-to-product instead of surds.",
+     "solution": [
+      "With $s=\\sin x$ the equation is $g(s)=2s^2-as+2a-8=0$, and we need a root with $s\\in[-1,1]$.",
+      "$g(2)=8-2a+2a-8=0$, so $s=2$ is always a root; the other root is $\\frac a2-2$ (sum of roots $=\\frac a2$), and $2$ lies outside $[-1,1]$.",
+      "So the condition is that the other root lies in $[-1,1]$, i.e. $-1\\le\\frac a2-2\\le1$, which gives $2\\le a\\le6$ (equivalently $g(-1)g(1)\\le0$: $(3a-6)(a-6)\\le0$). Thus $p=2$, $q=6$.",
+      "$r=2\\left(\\frac{1}{\\sin18^\\circ}-\\frac{1}{\\sin54^\\circ}\\right)=\\frac{2(\\sin54^\\circ-\\sin18^\\circ)}{\\sin18^\\circ\\sin54^\\circ}$ (using $\\tan A+\\cot A=\\frac{2}{\\sin2A}$ as before).",
+      "$\\sin54^\\circ-\\sin18^\\circ=2\\cos36^\\circ\\sin18^\\circ$, so $r=\\frac{4\\cos36^\\circ}{\\sin54^\\circ}$.",
+      "$\\sin54^\\circ=\\cos36^\\circ$, hence $r=4$ with no surds, and $pqr=2\\cdot6\\cdot4=48$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\cos 2x+a\\sin x=\\text{const}$ the equation is quadratic in $\\sin x$; the range of $a$ is found by requiring a root in $[-1,1]$, either by solving for $a$ in terms of $\\sin x$ or by the sign test $g(-1)g(1)\\le0$ (valid when the other root is outside).",
+    "$\\tan A+\\cot A=\\frac{2}{\\sin2A}$ and $\\cot A-\\tan A=2\\cot2A$ for any $A$ where defined.",
+    "Complementary angles: $\\tan(90^\\circ-A)=\\cot A$; so $\\tan81^\\circ=\\cot9^\\circ$, $\\tan63^\\circ=\\cot27^\\circ$.",
+    "The sum $\\tan9^\\circ-\\tan27^\\circ-\\tan63^\\circ+\\tan81^\\circ=4$ is the classical identity (checked numerically: $3.99999\\ldots$); also $\\sin18^\\circ=\\frac{\\sqrt5-1}{4}$, $\\cos36^\\circ=\\frac{\\sqrt5+1}{4}$."
+   ]
+  }
+ ]
+}
