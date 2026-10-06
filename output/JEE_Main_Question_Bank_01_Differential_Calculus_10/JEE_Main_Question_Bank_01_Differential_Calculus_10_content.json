@@ -1,0 +1,717 @@
+{
+ "title": "JEE Main Question Bank 01 — Differential Calculus 10 — Paper Analysis",
+ "subtitle": "Maxima & Minima, Extreme Values and Roots · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Differential_Calculus_10.pdf (printed Q181-Q196; solutions as printed); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 12,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 13,
+   "to": 16,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Maxima of a function and comparison of exponentials"
+   ],
+   "level": 2,
+   "question": "If the function $f(x)=\\left(\\frac1x\\right)^{2x}$, $x>0$ attains the maximum value at $x=\\frac1e$, then :",
+   "options": [
+    "$e^{2\\pi}<(2\\pi)^e$",
+    "$e^{\\pi}>\\pi^{e}$",
+    "$e^{\\pi}<\\pi^{e}$",
+    "$(2e)^{\\pi}>\\pi^{(2e)}$"
+   ],
+   "answer": "(B) $e^{\\pi}>\\pi^{e}$",
+   "key_idea": "Since $x=\\frac1e$ is the maximum, $f\\left(\\frac1e\\right)>f\\left(\\frac1\\pi\\right)$ turns into $e^{\\pi}>\\pi^{e}$.",
+   "solution": [
+    "$f(x)=\\left(\\frac1x\\right)^{2x}$, so $\\ln f=-2x\\ln x$ and $\\frac{f'}{f}=-2(\\ln x+1)$; $f'=0$ at $x=\\frac1e$, where $f'$ changes from $+$ to $-$: the maximum, as given.",
+    "The maximum is the greatest value, and $\\frac1\\pi\\neq\\frac1e$, so $f\\left(\\frac1e\\right)>f\\left(\\frac1\\pi\\right)$.",
+    "$f\\left(\\frac1e\\right)=e^{2/e}$ and $f\\left(\\frac1\\pi\\right)=\\pi^{2/\\pi}$, so $e^{2/e}>\\pi^{2/\\pi}$.",
+    "Take the positive square root: $e^{1/e}>\\pi^{1/\\pi}$. Raise both sides to the power $e\\pi>0$: $e^{\\pi}>\\pi^{e}$.",
+    "Option (B) is correct.",
+    "Check of the others: $e^{2\\pi}\\approx535>(2\\pi)^e\\approx148$, so (A) is false and hence (C) is false; $(2e)^\\pi\\approx204<\\pi^{2e}\\approx504$, so (D) is false."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Tangent-line inequality $e^t\\ge et$ at $t=\\frac\\pi e$ gives $e^{\\pi/e}>\\pi$ directly.",
+     "solution": [
+      "$h(t)=e^t$ is convex, so it lies above its tangent at $t=1$: $e^t\\ge e\\,t$ for all $t$, with equality only at $t=1$.",
+      "Put $t=\\frac{\\pi}{e}\\neq1$: $e^{\\pi/e}>e\\cdot\\frac{\\pi}{e}=\\pi$.",
+      "Raise both sides to the power $e>0$: $e^{\\pi}>\\pi^{e}$.",
+      "So (B) holds. Numerically $e^\\pi\\approx23.14>\\pi^e\\approx22.46$ (and (A), (D) are false by size, as before). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $x>0$, $x\\neq e$: $e^x>x^e$ (from $e^t\\ge et$ with $t=\\frac xe$). So $e^\\pi>\\pi^e$ and, for any $a>0$, $e^a\\ge ea$.",
+    "$\\frac{\\ln x}{x}$ increases on $(0,e)$ and decreases on $(e,\\infty)$ with maximum at $x=e$; hence for $a,b\\ge e$ with $a<b$: $a^b>b^a$.",
+    "$x^{1/x}$ has its maximum at $x=e$ and $\\left(\\frac1x\\right)^{x}$ at $x=\\frac1e$ - take logarithms and set the derivative to $0$.",
+    "Comparing $a^b$ with $b^a$: compare $\\frac{\\ln a}{a}$ with $\\frac{\\ln b}{b}$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Local maxima and minima by the first derivative test"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=4\\cos^3x+3\\sqrt3\\cos^2x-10$. The number of points of local maxima of $f$ in the interval $(0,2\\pi)$ is :",
+   "options": [
+    "4",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": "(C) 2",
+   "key_idea": "Factor $f'(x)=-6\\sin x\\cos x\\,(2\\cos x+\\sqrt3)$ and read the sign changes on $(0,2\\pi)$.",
+   "solution": [
+    "$f'(x)=-12\\cos^2x\\sin x+6\\sqrt3\\cos x\\,(-\\sin x)$.",
+    "$f'(x)=-6\\sin x\\,\\left[2\\cos^2x+\\sqrt3\\cos x\\right]=-6\\sin x\\cos x\\,(2\\cos x+\\sqrt3)$.",
+    "Zeros of $f'$ in $(0,2\\pi)$: $\\sin x=0$ at $\\pi$; $\\cos x=0$ at $\\frac\\pi2,\\frac{3\\pi}2$; $\\cos x=-\\frac{\\sqrt3}2$ at $\\frac{5\\pi}6,\\frac{7\\pi}6$.",
+    "Signs of $f'$ on the intervals $\\left(0,\\frac\\pi2\\right),\\left(\\frac\\pi2,\\frac{5\\pi}6\\right),\\left(\\frac{5\\pi}6,\\pi\\right),\\left(\\pi,\\frac{7\\pi}6\\right),\\left(\\frac{7\\pi}6,\\frac{3\\pi}2\\right),\\left(\\frac{3\\pi}2,2\\pi\\right)$ are $-,+,-,+,-,+$.",
+    "$f'$ changes from $+$ to $-$ at $\\frac{5\\pi}6$ and at $\\frac{7\\pi}6$ only: local maxima there.",
+    "So the number of points of local maxima is $2$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $f=g(c)$ with $c=\\cos x$; maxima of $g$ at interior values of $c$ pull back to the points of $x$.",
+     "solution": [
+      "$f(x)=g(c)$, $g(c)=4c^3+3\\sqrt3c^2-10$, $c=\\cos x\\in[-1,1]$.",
+      "$g'(c)=12c^2+6\\sqrt3\\,c=6c(2c+\\sqrt3)$, zero at $c=0$ and $c=-\\frac{\\sqrt3}2$; $g''(c)=24c+6\\sqrt3$.",
+      "$g''\\left(-\\frac{\\sqrt3}2\\right)=-6\\sqrt3<0$: $g$ has a local maximum at $c=-\\frac{\\sqrt3}2$; $g''(0)=6\\sqrt3>0$: a local minimum at $c=0$.",
+      "Where $\\sin x\\neq0$, $c=\\cos x$ is strictly monotonic in $x$ locally, so local maxima/minima of $f$ in $x$ correspond to those of $g$ in $c$.",
+      "$\\cos x=-\\frac{\\sqrt3}2$ has two roots in $(0,2\\pi)$: $\\frac{5\\pi}6$ and $\\frac{7\\pi}6$, both local maxima; $\\cos x=0$ gives minima.",
+      "At $x=\\pi$ ($c=-1$, where $\\sin x=0$): $g'(-1)=6(-1)(\\sqrt3-2)>0$, so $f$ has a local minimum there, since $\\cos x\\ge-1$ rises on both sides.",
+      "Hence exactly $2$ local maxima: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f(x)=g(\\cos x)$ or $g(\\sin x)$: $f'=-g'(\\cos x)\\sin x$, so critical points come from $g'(c)=0$ and from $\\sin x=0$ (the ends $c=\\pm1$ of the range).",
+    "At an interior critical value $c_0$ of $g$ a local max of $g$ gives a local max of $f$ at every $x$ with $\\cos x=c_0$.",
+    "Near $x=\\pi$, $\\cos x\\approx-1+\\frac{(x-\\pi)^2}2$, so $f$ has a local minimum there iff $g'(-1)>0$ (and near $x=0$ or $2\\pi$, a local minimum iff $g'(1)<0$).",
+    "Sign table on $(0,2\\pi)$ alternates only across factors with odd multiplicity."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Local maxima and minima of a cubic",
+    "Quadratic equation with given roots"
+   ],
+   "level": 1,
+   "question": "If the function $f(x)=2x^3-9ax^2+12a^2x+1$, $a>0$ has a local maximum at $x=\\alpha$ and a local minimum at $x=\\alpha^2$, then $\\alpha$ and $\\alpha^2$ are the roots of the equation :",
+   "options": [
+    "$8x^2+6x-1=0$",
+    "$x^2+6x+8=0$",
+    "$x^2-6x+8=0$",
+    "$8x^2-6x+1=0$"
+   ],
+   "answer": "(C) $x^2-6x+8=0$",
+   "key_idea": "The critical points are $a$ and $2a$, and the maximum comes first, so $\\alpha=a$ and $\\alpha^2=2a$.",
+   "solution": [
+    "$f'(x)=6x^2-18ax+12a^2$.",
+    "$f'(x)=6\\left(x^2-3ax+2a^2\\right)=6(x-a)(x-2a)$.",
+    "$f'(x)=0$ gives $x=a,\\,2a$. As $a>0$, the leading coefficient is positive, so the local maximum is at the smaller value $a$ and the local minimum at $2a$.",
+    "$a=\\alpha$ and $2a=\\alpha^2$, so $\\alpha^2=2\\alpha$, i.e. $\\alpha=0$ or $\\alpha=2$.",
+    "$a>0$ rejects $\\alpha=0$: $\\alpha=2$ (so $a=2$) and $\\alpha^2=4$.",
+    "The roots $2$ and $4$ have sum $6$ and product $8$: the equation is $x^2-6x+8=0$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the factor as (x^2 - 3a + 2a^2); the middle term must be 3ax: f'(x) = 6(x^2 - 3ax + 2a^2). The factorisation (x-a)(x-2a) and the answer (C) are right.",
+   "alternate_solutions": [
+    {
+     "idea": "The two critical points are $a$ apart, so $\\alpha^2-\\alpha=a=\\alpha$ at once.",
+     "solution": [
+      "$f'(x)=6(x-a)(x-2a)$: critical points $a$ and $2a$, with the maximum at the smaller one.",
+      "Their gap is $2a-a=a$, while the given points are $\\alpha$ and $\\alpha^2$, whose gap is $\\alpha^2-\\alpha$ (positive, as min is to the right of max).",
+      "Also the maximum point is $\\alpha=a$ itself, so $\\alpha^2-\\alpha=a=\\alpha$, i.e. $\\alpha^2=2\\alpha$ and $\\alpha=2$ (as $\\alpha=a>0$).",
+      "The required equation has sum of roots $\\alpha+\\alpha^2=6$ and product $\\alpha^3=8$: $x^2-6x+8=0$. Same answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a cubic with positive leading coefficient, the local maximum is at the smaller root of $f'$ and the local minimum at the larger; reverse for a negative leading coefficient.",
+    "$f(x)=2x^3-3(p+q)x^2+6pqx+c$ has $f'=6(x-p)(x-q)$: critical points are exactly $p$ and $q$; here $p=a$, $q=2a$.",
+    "A quadratic with roots $r,s$ is $x^2-(r+s)x+rs=0$; here $\\alpha+\\alpha^2=6$, $\\alpha\\cdot\\alpha^2=\\alpha^3=8$.",
+    "Always reject solutions that violate the stated sign condition ($a>0$ removes $\\alpha=0$)."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Maxima and minima in word problems (arithmetic progression)"
+   ],
+   "level": 2,
+   "question": "In an A.P., the sixth term $a_6=2$. If the product $a_1a_4a_5$ is the greatest, then the common difference of the A.P. is equal to :",
+   "options": [
+    "$\\frac58$",
+    "$\\frac85$",
+    "$\\frac23$",
+    "$\\frac32$"
+   ],
+   "answer": "(B) $\\frac85$",
+   "key_idea": "Use $a_6=2$ to write $a_1,a_4,a_5$ in terms of $d$, then maximise the cubic $P(d)$.",
+   "solution": [
+    "Let the first term be $a$ and the common difference $d$. Given $a+5d=2$ ... (1).",
+    "$P=a_1a_4a_5=a(a+3d)(a+4d)$.",
+    "From (1), $a=2-5d$, $a+3d=2-2d$, $a+4d=2-d$: $P=(2-5d)(2-d)(2-2d)$.",
+    "$\\frac{dP}{dd}=(2-5d)(2-d)(-2)+(2-5d)(2-2d)(-1)+(-5)(2-d)(2-2d)$.",
+    "$\\frac{dP}{dd}=-2\\left[(d-2)(5d-2)+(d-1)(5d-2)+5(d-1)(d-2)\\right]$.",
+    "$=-2\\left[(5d^2-12d+4)+(5d^2-7d+2)+(5d^2-15d+10)\\right]=-2\\left[15d^2-34d+16\\right]$.",
+    "$\\frac{dP}{dd}=0\\Rightarrow 15d^2-34d+16=0\\Rightarrow d=\\frac{34\\pm14}{30}=\\frac85$ or $\\frac23$.",
+    "$\\frac{dP}{dd}$ is negative for $d<\\frac23$, positive for $\\frac23<d<\\frac85$ and negative for $d>\\frac85$, so $P$ has its local maximum at $d=\\frac85$ ($P=\\frac{72}{25}$) and a local minimum at $d=\\frac23$.",
+    "The common difference is $\\frac85$: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the product as a1 a5 a6 = a(a+4d)(a+3d); the product in the question is a1 a4 a5 = a(a+3d)(a+4d) (the expression used afterwards is right). Also, P(d) = -10d^3 + ... tends to +infinity as d -> -infinity, so P has no global maximum; the question means the local maximum d = 8/5. Key (B) kept.",
+   "useful_results": [
+    "In an A.P. with $a_n$ given, write every term as $a_n+(k-n)d$ and reduce to a single variable $d$.",
+    "A cubic with negative leading coefficient has its local maximum at the larger root of $P'$ (and its local minimum at the smaller).",
+    "Beware 'greatest' for an unbounded cubic: the maximum is local unless $d$ is restricted (e.g. positive terms). Here $P(8/5)=72/25$.",
+    "Product of three terms with two moving factors: use $\\frac{P'}{P}=\\sum\\frac{c_i}{x_i}$ when the factors are linear."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Local maxima and minima at a cusp and at a stationary point"
+   ],
+   "level": 2,
+   "question": "The function $f(x)=2x+3\\,x^{2/3}$, $x\\in\\mathbb{R}$, has :",
+   "options": [
+    "exactly one point of local minima and no point of local maxima",
+    "exactly two points of local maxima and exactly one point of local minima",
+    "exactly one point of local maxima and exactly one point of local minima",
+    "exactly one point of local maxima and no point of local minima"
+   ],
+   "answer": "(C) exactly one point of local maxima and exactly one point of local minima",
+   "key_idea": "$f'$ vanishes at $x=-1$ and does not exist at $x=0$ (a cusp): check the sign change at both.",
+   "solution": [
+    "$f(x)=2x+3x^{2/3}$.",
+    "$f'(x)=2+2x^{-1/3}$ for $x\\neq0$.",
+    "$f'(x)=2\\left(1+\\frac1{x^{1/3}}\\right)=2\\left(\\frac{x^{1/3}+1}{x^{1/3}}\\right)$.",
+    "$f'(x)=0$ at $x=-1$, and $f'$ does not exist at $x=0$ (while $f$ is continuous there).",
+    "For $x<-1$: numerator $<0$, denominator $<0$, so $f'>0$. For $-1<x<0$: numerator $>0$, denominator $<0$, so $f'<0$. For $x>0$: $f'>0$. Signs: $+,\\,-,\\,+$.",
+    "So the maximum (M) is at $x=-1$ and the minimum (m) at $x=0$.",
+    "Exactly one local maximum and exactly one local minimum: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $t=x^{1/3}$ (an increasing bijection of $\\mathbb{R}$): the cusp becomes an ordinary cubic.",
+     "solution": [
+      "$t=x^{1/3}$ is strictly increasing and one-one on $\\mathbb{R}$, so local maxima/minima of $f$ in $x$ are those of $F(t)=2t^3+3t^2$ in $t$.",
+      "$F'(t)=6t^2+6t=6t(t+1)$, zero at $t=-1$ and $t=0$.",
+      "$F'$ is $+$ for $t<-1$, $-$ for $-1<t<0$, $+$ for $t>0$ (a cubic with positive leading coefficient).",
+      "So $F$ has a local maximum at $t=-1$ (i.e. $x=-1$) and a local minimum at $t=0$ (i.e. $x=0$).",
+      "One local maximum and one local minimum: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^{p/q}$ terms give points where $f'$ does not exist; these must be tested as candidates (cusp / vertical tangent) along with $f'=0$.",
+    "Substituting $t=x^{1/q}$ (odd $q$, increasing and one-one) turns $f$ into a polynomial and preserves local extrema.",
+    "For $x^{2/3}$ the graph has a cusp pointing down at the origin: $x^{2/3}\\ge0$ gives a local minimum at $0$ for $f=x^{2/3}$ alone.",
+    "A point where $f'$ is undefined is an extremum only if $f$ is continuous there and $f'$ changes sign."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Maximum area of a triangle (optimisation)"
+   ],
+   "level": 1,
+   "question": "The maximum area of a triangle whose one vertex is at $(0,0)$ and the other two vertices lie on the curve $y=-2x^2+54$ at points $(x,y)$ and $(-x,y)$, where $y>0$, is :",
+   "options": [
+    "$122$",
+    "$88$",
+    "$92$",
+    "$108$"
+   ],
+   "answer": "(D) $108$",
+   "key_idea": "Base $2x$ and height $y=54-2x^2$ give the area as a cubic in $x$.",
+   "solution": [
+    "The vertices are $(0,0)$, $(x,y)$ and $(-x,y)$: base $=2x$ (the chord $y=\\text{const}$), height $=y=54-2x^2$.",
+    "Area $=\\frac12(2x)\\left(54-2x^2\\right)$.",
+    "$A=54x-2x^3$, so $\\frac{dA}{dx}=54-6x^2$.",
+    "$\\frac{dA}{dx}=0\\Rightarrow x=\\pm3$; with $x>0$ take $x=3$ ($\\frac{d^2A}{dx^2}=-12x<0$, a maximum; also $A=0$ at $x=0$ and $x=3\\sqrt3$).",
+    "Maximum area $A=(54-18)\\cdot3=108$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "AM-GM on $4x^2,\\ 54-2x^2,\\ 54-2x^2$, whose sum is the constant $108$.",
+     "solution": [
+      "$A=x\\left(54-2x^2\\right)$ with $0<x<3\\sqrt3$, so $A^2=x^2\\left(54-2x^2\\right)^2$.",
+      "Write $A^2=\\frac14\\cdot\\left(4x^2\\right)\\left(54-2x^2\\right)\\left(54-2x^2\\right)$; the three factors are positive with constant sum $4x^2+2(54-2x^2)=108$.",
+      "AM-GM: product $\\le\\left(\\frac{108}{3}\\right)^3=36^3$, so $A^2\\le\\frac{36^3}{4}=11664$ and $A\\le108$.",
+      "Equality when $4x^2=54-2x^2$, i.e. $x^2=9$, $x=3$ - attainable. Maximum area $108$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Triangle with a vertex at the origin and the other two at $(\\pm x,y)$: area $=xy$.",
+    "Maximise $x^p(c-qx^2)^r$-type products without calculus by AM-GM: split into pieces whose sum is constant.",
+    "For $A=ax-bx^3$ the maximum is at $x=\\sqrt{\\frac{a}{3b}}$ with value $\\frac{2a}{3}\\sqrt{\\frac a{3b}}$; here $a=54,b=2$: $x=3$, $A=108$.",
+    "Check the endpoints of the admissible domain ($y>0$ means $0<x<3\\sqrt3$) - both give zero area."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Absolute maximum and minimum on a closed interval"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=(x+3)^2(x-2)^3$, $x\\in[-4,4]$. If $M$ and $m$ are the maximum and minimum values of $f$, respectively in $[-4,4]$, then the value of $M-m$ is :",
+   "options": [
+    "392",
+    "600",
+    "108",
+    "608"
+   ],
+   "answer": "(D) 608",
+   "key_idea": "Absolute extrema on $[-4,4]$ are among the endpoints and the critical points $-3,-1,2$.",
+   "solution": [
+    "$f'(x)=(x+3)^2\\cdot3(x-2)^2+(x-2)^3\\cdot2(x+3)$.",
+    "$f'(x)=(x+3)(x-2)^2\\left[3(x+3)+2(x-2)\\right]=5(x+3)(x-2)^2(x+1)$.",
+    "$f'(x)=0$ at $x=-3,\\,-1,\\,2$. Signs of $f'$ on $(-4,-3),(-3,-1),(-1,2),(2,4)$: $+,-,+,+$.",
+    "Endpoints: $f(-4)=(-1)^2(-6)^3=-216$ and $f(4)=7^2\\cdot2^3=49\\times8=392$.",
+    "Critical points: $f(-3)=0$, $f(-1)=4\\cdot(-27)=-108$, $f(2)=0$.",
+    "Largest value $M=392$; smallest value $m=-216$.",
+    "$M-m=392+216=608$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "No derivative: bound $f$ piece by piece, using AM-GM for the dip between $-3$ and $2$.",
+     "solution": [
+      "On $[2,4]$ both $(x+3)^2$ and $(x-2)^3$ are non-negative and increasing, so $0\\le f\\le f(4)=392$. On $[-4,2]$, $f\\le0$. Hence $M=392$.",
+      "On $[-4,-3]$: $(x+3)^2\\le1$ and $(2-x)^3\\le216$, so $f=-(x+3)^2(2-x)^3\\ge-216$, with equality at $x=-4$.",
+      "On $[-3,2]$ apply AM-GM to the five non-negative numbers $\\frac{x+3}2,\\frac{x+3}2,\\frac{2-x}3,\\frac{2-x}3,\\frac{2-x}3$ whose sum is $5$.",
+      "So $\\frac{(x+3)^2}{4}\\cdot\\frac{(2-x)^3}{27}\\le1^5$, i.e. $(x+3)^2(2-x)^3\\le108$, and $f\\ge-108>-216$ (equality at $x=-1$).",
+      "Hence $m=-216$, and $M-m=392+216=608$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Absolute extrema of a continuous function on $[a,b]$: compare $f$ at the endpoints and at all critical points (including where $f'$ does not exist).",
+    "For $f=(x-a)^p(x-b)^q$: $f'=(x-a)^{p-1}(x-b)^{q-1}\\left[p(x-b)+q(x-a)\\right]$; the extra critical point is $x=\\frac{pb+qa}{p+q}$, here $\\frac{2\\cdot2+3(-3)}{5}=-1$.",
+    "AM-GM with weights: $(x-a)^p(b-x)^q\\le p^pq^q\\left(\\frac{b-a}{p+q}\\right)^{p+q}$ on $[a,b]$, with equality at $x=\\frac{pb+qa}{p+q}$.",
+    "The factor $(x-2)^2$ in $f'$ has even power, so $x=2$ is a stationary point of inflection, not an extremum; $x=-3$ is a local maximum and $x=-1$ a local minimum."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Maximum of a function on a closed interval",
+    "Multiple-angle trigonometric identities"
+   ],
+   "level": 2,
+   "question": "$\\max_{0\\le x\\le\\pi}\\left\\{x-2\\sin x\\cos x+\\frac13\\sin3x\\right\\}=$",
+   "options": [
+    "$\\pi$",
+    "$\\frac{5\\pi+2+3\\sqrt3}{6}$",
+    "$0$",
+    "$\\frac{\\pi+2-3\\sqrt3}{6}$"
+   ],
+   "answer": "(B) $\\frac{5\\pi+2+3\\sqrt3}{6}$",
+   "key_idea": "$f'=(\\cos x-1)(4\\cos^2x-3)$ has simple roots $\\frac\\pi6,\\frac{5\\pi}6$; compare the maximum with the endpoint $f(\\pi)$.",
+   "solution": [
+    "$f(x)=x-\\sin2x+\\frac13\\sin3x$ (since $2\\sin x\\cos x=\\sin2x$).",
+    "$f'(x)=1-2\\cos2x+\\cos3x=0$. With $c=\\cos x$ this is $(c-1)(4c^2-3)=0$, so in $(0,\\pi)$: $x=\\frac{5\\pi}6,\\ \\frac\\pi6$.",
+    "$f''(x)=4\\sin2x-3\\sin3x$.",
+    "$f''\\left(\\frac{5\\pi}6\\right)=4\\sin\\frac{5\\pi}3-3\\sin\\frac{5\\pi}2=-2\\sqrt3-3<0$, so $x=\\frac{5\\pi}6$ is a point of maxima.",
+    "$f\\left(\\frac{5\\pi}6\\right)=\\frac{5\\pi}6-\\sin\\frac{5\\pi}3+\\frac13\\sin\\frac{5\\pi}2=\\frac{5\\pi}6+\\frac{\\sqrt3}2+\\frac13=\\frac{5\\pi+3\\sqrt3+2}6\\approx3.82$.",
+    "The interval is closed, so compare with the endpoints: $f(0)=0$ and $f(\\pi)=\\pi\\approx3.14<3.82$ (and $x=\\frac\\pi6$ is a local minimum).",
+    "The maximum is $\\frac{5\\pi+2+3\\sqrt3}{6}$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$1-2\\cos2x+\\cos3x=(\\cos x-1)(4\\cos^2x-3)$: use $\\cos2x=2c^2-1$, $\\cos3x=4c^3-3c$ to factor trigonometric derivatives.",
+    "For $F(x)=x-\\sin2x+\\frac13\\sin3x$ the derivative $\\ge0$ exactly where $4\\cos^2x\\le3$ on $(0,\\pi)$, i.e. between $\\frac\\pi6$ and $\\frac{5\\pi}6$.",
+    "On a closed interval always compare local extremum values with the endpoint values; here the endpoint value $\\pi$ is less than the local maximum $3.82$.",
+    "Double and triple-angle formulas: $\\sin2x=2\\sin x\\cos x$, $\\sin3x=3\\sin x-4\\sin^3x$, $\\cos3x=4\\cos^3x-3\\cos x$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Condition for local maximum and minimum of a cubic (roots of the derivative)"
+   ],
+   "level": 1,
+   "question": "Let the function $f(x)=2x^3+(2p-7)x^2+3(2p-9)x-6$ have a maxima for some value of $x<0$ and a minima for some value of $x>0$. Then, the set of all values of $p$ is",
+   "options": [
+    "$\\left(\\frac92,\\infty\\right)$",
+    "$\\left(-\\infty,\\frac92\\right)$",
+    "$\\left(-\\frac92,\\frac92\\right)$",
+    "$\\left(0,\\frac92\\right)$"
+   ],
+   "answer": "(B) $\\left(-\\infty,\\frac92\\right)$",
+   "key_idea": "A cubic with positive leading coefficient has its maximum at the smaller root of $f'$ and its minimum at the larger, so $f'$ must have roots of opposite signs.",
+   "solution": [
+    "$f'(x)=6x^2+2(2p-7)x+3(2p-9)$, an upward parabola.",
+    "Its smaller root gives the maximum and its larger root the minimum, so we need the smaller root $<0<$ the larger root.",
+    "For an upward parabola this happens exactly when $f'(0)<0$.",
+    "$f'(0)=3(2p-9)<0\\Rightarrow2p-9<0$.",
+    "$p<\\frac92$, i.e. $p\\in\\left(-\\infty,\\frac92\\right)$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Vieta: the roots of $f'$ have opposite signs iff their product is negative.",
+     "solution": [
+      "$f'(x)=6x^2+2(2p-7)x+3(2p-9)=0$ has roots $x_1<x_2$ with product $x_1x_2=\\frac{3(2p-9)}{6}=\\frac{2p-9}2$.",
+      "The maximum is at $x_1$ and the minimum at $x_2$ (positive leading coefficient), so we need $x_1<0<x_2$, i.e. $x_1x_2<0$.",
+      "$x_1x_2<0\\Rightarrow\\frac{2p-9}2<0\\Rightarrow p<\\frac92$; a negative product also forces real distinct roots, so no discriminant condition is needed.",
+      "$p\\in\\left(-\\infty,\\frac92\\right)$: option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A quadratic with positive leading coefficient has roots of opposite signs iff $f'(0)<0$ (equivalently product of roots $<0$): this alone guarantees real distinct roots.",
+    "If the maximum is required at $x<0$ and the minimum at $x>0$ for $ax^3+\\dots$ with $a>0$, the condition is $\\frac{c}{3a}<0$ where $c$ is the coefficient of $x$.",
+    "Reverse the roles for a negative leading coefficient (then the maximum is at the larger root).",
+    "Other positional conditions on roots of $f'$: both roots positive iff sum $>0$, product $>0$, discriminant $>0$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Common extreme point and common root of derivatives"
+   ],
+   "level": 1,
+   "question": "If the functions $f(x)=\\frac{x^3}3+2bx+\\frac{ax^2}2$ and $g(x)=\\frac{x^3}3+ax+bx^2$, $a\\neq2b$ have a common extreme point, then $a+2b+7$ is equal to :",
+   "options": [
+    "4",
+    "$\\frac32$",
+    "6",
+    "3"
+   ],
+   "answer": "(C) 6",
+   "key_idea": "A common extreme point is a common root of $f'$ and $g'$; subtracting forces that root to be $x=1$.",
+   "solution": [
+    "$f'(x)=x^2+2b+ax$ and $g'(x)=x^2+a+2bx$.",
+    "A common extreme point is a common root of $f'(x)=0$ and $g'(x)=0$; subtract: $(2b-a)-x(2b-a)=0$.",
+    "$(2b-a)(1-x)=0$ and $a\\neq2b$, so $x=1$ is the common root.",
+    "Put $x=1$ in $f'(x)=0$ (or $g'(x)=0$): $1+2b+a=0$.",
+    "Hence $a+2b=-1$ and $a+2b+7=6$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The two derivatives are mirror images ($a\\leftrightarrow2b$), so $x=1$ is special at once.",
+     "solution": [
+      "$f'(x)=x^2+ax+2b$ and $g'(x)=x^2+2bx+a$ differ by swapping $a$ and $2b$.",
+      "At $x=1$: $f'(1)=1+a+2b=g'(1)$ for every $a,b$, so $1$ is a root of one iff it is a root of both.",
+      "Any other common root $r$ would satisfy $f'(r)-g'(r)=(a-2b)(r-1)=0$, impossible for $a\\neq2b$ unless $r=1$.",
+      "So the common root is $x=1$ and $1+a+2b=0$, giving $a+2b+7=6$: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two polynomials $x^2+ax+c$ and $x^2+cx+a$ always share the root $x=1$ iff $1+a+c=0$; the difference of the two equations is $(a-c)(x-1)$.",
+    "A common root of $P(x)=0$ and $Q(x)=0$ also satisfies $P(x)-Q(x)=0$: subtract to lower the degree.",
+    "An extreme point needs $f'=0$ and a sign change; with roots $1$ and $2b$ (for $f'$) and $1$ and $a$ (for $g'$) this needs $2b\\neq1$ and $a\\neq1$.",
+    "Here Vieta gives the other roots as $2b$ and $a$ from the products of roots."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Bounds on derivatives and comparison of functions",
+    "Monotonicity of increasing functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=2x+\\tan^{-1}x$ and $g(x)=\\log_e\\left(\\sqrt{1+x^2}+x\\right)$, $x\\in[0,3]$. Then :",
+   "options": [
+    "$\\min f'(x)=1+\\max g'(x)$",
+    "there exist $0<x_1<x_2<3$ such that $f(x)<g(x),\\ \\forall x\\in(x_1,x_2)$",
+    "there exists $\\hat x\\in[0,3]$ such that $f'(\\hat x)<g'(\\hat x)$",
+    "$\\max f(x)>\\max g(x)$"
+   ],
+   "answer": "(D) $\\max f(x)>\\max g(x)$",
+   "key_idea": "Bound $f'$ and $g'$ on $[0,3]$; both functions are increasing, so each maximum is at $x=3$.",
+   "solution": [
+    "$f(x)=2x+\\tan^{-1}x$, so $f'(x)=2+\\frac1{1+x^2}$; and $g'(x)=\\frac1{\\sqrt{1+x^2}}$.",
+    "For $0\\le x\\le3$: $0\\le x^2\\le9$, so $1\\le1+x^2\\le10$.",
+    "Hence $2+\\frac1{10}\\le f'(x)\\le3$, i.e. $\\frac{21}{10}\\le f'(x)\\le3$, and $\\frac1{\\sqrt{10}}\\le g'(x)\\le1$.",
+    "(A): $\\min f'=\\frac{21}{10}$ but $1+\\max g'=2$, so (A) is false.",
+    "(C): $f'(x)\\ge\\frac{21}{10}>1\\ge g'(x)$ for all $x$ in $[0,3]$, so no $\\hat x$ has $f'(\\hat x)<g'(\\hat x)$: (C) is false.",
+    "(B): $g'(x)<f'(x)$ on $[0,3]$ and $f(0)=g(0)=0$, so $f(x)>g(x)$ for $x\\in(0,3]$: (B) is false.",
+    "$f'$ and $g'$ are both positive, so $f$ and $g$ are increasing: $\\max f=f(3)=6+\\tan^{-1}3\\approx7.25$.",
+    "$\\max g=g(3)=\\ln\\left(3+\\sqrt{10}\\right)\\approx1.82$, and $6+\\tan^{-1}3>\\ln\\left(3+\\sqrt{10}\\right)$, so (D) is true."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's option numbering is inconsistent: after bounding f' and g' it says 'option (4) is incorrect' (it means (C); (D) is the correct option), and it never discusses (B). Corrected so that (A), (B), (C) are shown false and (D) true; answer D unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Study $h=f-g$: $h(0)=0$ and $h'>0$, so $f>g$ throughout and no logarithm values are needed.",
+     "solution": [
+      "Let $h(x)=f(x)-g(x)$; then $h(0)=0$ and $h'(x)=2+\\frac1{1+x^2}-\\frac1{\\sqrt{1+x^2}}\\ge2+\\frac1{1+x^2}-1>1>0$.",
+      "So $h$ is increasing and $h(x)>0$ for $x\\in(0,3]$: $f>g$ there, so no interval $(x_1,x_2)\\subset(0,3)$ has $f<g$ - (B) is false.",
+      "$h'>0$ means $f'>g'$ everywhere, so (C) is false.",
+      "(A): $\\min f'=f'(3)=\\frac{21}{10}$ and $\\max g'=g'(0)=1$, so $\\min f'\\neq1+\\max g'=2$ - false.",
+      "(D): both functions are increasing, so $\\max f=f(3)>g(3)=\\max g$ because $h(3)>0$. Hence (D). Same answer.",
+      "(Also without logs: $g'\\le1$ gives $g(3)\\le3<6\\le f(3)$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "To compare $\\max f$ and $\\max g$ of increasing functions, compare $f(b)$ and $g(b)$ - or study $h=f-g$ and its sign.",
+    "$\\ln\\left(x+\\sqrt{1+x^2}\\right)=\\sinh^{-1}x$ has derivative $\\frac1{\\sqrt{1+x^2}}$, $\\int\\frac{dx}{\\sqrt{1+x^2}}=\\ln\\left(x+\\sqrt{1+x^2}\\right)$.",
+    "If $f(a)=g(a)$ and $f'>g'$ on $(a,b]$, then $f>g$ on $(a,b]$ (the Mean Value Theorem argument for $h=f-g$).",
+    "Bounds on $\\frac1{1+x^2}$ over $[0,3]$ come from the monotone decrease: it ranges from $1$ down to $\\frac1{10}$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Absolute maximum and minimum of a modulus function"
+   ],
+   "level": 2,
+   "question": "The sum of the absolute maximum and minimum values of the function $f(x)=|x^2-5x+6|-3x+2$ in the interval $[-1,3]$ is equal to :",
+   "options": [
+    "12",
+    "24",
+    "10",
+    "13"
+   ],
+   "answer": "(C) 10",
+   "key_idea": "Remove the modulus using the sign of $(x-2)(x-3)$ and show $f$ is decreasing on $[-1,3]$, so the extremes are at the ends.",
+   "solution": [
+    "$x^2-5x+6=(x-2)(x-3)\\ge0$ on $[-1,2]$ and $\\le0$ on $[2,3]$.",
+    "$f(x)=x^2-5x+6-3x+2=x^2-8x+8$ for $x\\in[-1,2]$.",
+    "$f(x)=-(x^2-5x+6)-3x+2=-x^2+2x-4$ for $x\\in[2,3]$.",
+    "$f'(x)=2x-8$ on $[-1,2]$ and $f'(x)=-2x+2$ on $[2,3]$; both are negative, so $f$ is decreasing on $[-1,3]$ (the pieces meet at $f(2)=-4$).",
+    "$f(2)=4-16+8=-4$.",
+    "Absolute maximum $f(-1)=1+8+8=17$; absolute minimum $f(3)=-9+6-4=-7$.",
+    "Sum $=17+(-7)=10$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes 'f(2) = 4 - 16 + 8 = -4 = 4' (the value is -4, not 4) and labels its sketch 'max = 17, min = -17'; the correct values are f(2) = -4, max = 17, min = -7. Final answer 10 unchanged. The decreasing argument was added.",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square on each piece: both vertices lie outside their pieces on the right side, so $f$ decreases throughout.",
+     "solution": [
+      "On $[-1,2]$: $f=x^2-8x+8=(x-4)^2-8$, a parabola with vertex at $x=4$, to the right of $2$, so it is decreasing on $[-1,2]$.",
+      "On $[2,3]$: $f=-x^2+2x-4=-(x-1)^2-3$, vertex at $x=1$, to the left of $2$, so it is decreasing on $[2,3]$.",
+      "Both pieces equal $-4$ at $x=2$, so $f$ is continuous and decreasing on $[-1,3]$.",
+      "Hence the maximum is $f(-1)=(-5)^2-8=17$ and the minimum is $f(3)=-4-3=-7$.",
+      "Sum $=17-7=10$: option (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|q(x)|+\\text{linear}$ on an interval, split at the roots of $q$ and write each piece as a quadratic; the absolute extrema occur at endpoints, roots of $q$ (kinks) or the vertices lying in the pieces.",
+    "A piecewise function that is decreasing on every piece and continuous is decreasing: its extremes are at the two ends.",
+    "At the kinks $x=2,3$ (roots of $x^2-5x+6$), $f$ may be non-differentiable; test them as candidates, here $f(2)=-4$ is neither extreme.",
+    "Vertex of $x^2+bx+c$ is at $x=-\\frac b2$; compare with the piece's interval before using the vertex."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of real roots of a cubic by its local extreme values"
+   ],
+   "level": 1,
+   "question": "If the set of all values of $a$, for which the equation $5x^3-15x-a=0$ has three distinct real roots, is the interval $(\\alpha,\\beta)$, then $\\beta-2\\alpha$ is equal to ___________.",
+   "answer": "30",
+   "key_idea": "A cubic has three distinct real roots iff its local maximum and minimum values have opposite signs.",
+   "solution": [
+    "Let $f(x)=5x^3-15x-a$.",
+    "$f'(x)=15x^2-15=0\\Rightarrow x=\\pm1$.",
+    "Three distinct real roots need the local maximum $f(-1)=10-a$ and local minimum $f(1)=-10-a$ to have opposite signs: $f(1)f(-1)<0$.",
+    "$(-10-a)(10-a)<0\\Rightarrow(a+10)(a-10)<0$.",
+    "$-10<a<10$, so $a\\in(-10,10)$, i.e. $\\alpha=-10$, $\\beta=10$.",
+    "$\\beta-2\\alpha=10-2(-10)=30$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the discriminant: $x^3+px+q=0$ has three distinct real roots iff $4p^3+27q^2<0$.",
+     "solution": [
+      "Divide by $5$: $x^3-3x-\\frac a5=0$, with $p=-3$ and $q=-\\frac a5$.",
+      "Three distinct real roots iff $4p^3+27q^2<0$: $4(-27)+27\\cdot\\frac{a^2}{25}<0$.",
+      "$\\frac{27a^2}{25}<108\\Rightarrow a^2<100\\Rightarrow-10<a<10$.",
+      "So $\\alpha=-10$, $\\beta=10$ and $\\beta-2\\alpha=30$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $ax^3+bx^2+cx+d=0$ with $f'$ having real roots $x_1<x_2$: three distinct real roots iff $f(x_1)\\cdot f(x_2)<0$; a repeated root iff the product is $0$; one real root iff $>0$.",
+    "Equivalent graphical view: $a=5x^3-15x$ is cut by the horizontal line at height $a$ in three points iff $a$ lies strictly between local min value $-10$ and local max value $10$.",
+    "Depressed cubic $x^3+px+q$: discriminant $-4p^3-27q^2$; three distinct real roots iff it is positive.",
+    "The interval for $a$ here is symmetric because $5x^3-15x$ is an odd function."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maximum area of an inscribed rectangle (optimisation)"
+   ],
+   "level": 1,
+   "question": "Let $A$ be the region enclosed by the parabola $y^2=2x$ and the line $x=24$. Then the maximum area of the rectangle inscribed in the region $A$ is ___________.",
+   "answer": "128",
+   "key_idea": "Take the rectangle symmetric about the axis with corners $(x,\\pm y)$ on the parabola and the far side on $x=24$.",
+   "solution": [
+    "Take the rectangle with vertices $(x,\\pm y)$ on the parabola $y^2=2x$ and its other two vertices on the line $x=24$.",
+    "Length $=24-x$ and width $=2y$, so Area $=(24-x)\\,2y$.",
+    "With $x=\\frac{y^2}2$: Area $=\\left(24-\\frac{y^2}2\\right)2y$.",
+    "$A=48y-y^3$.",
+    "$\\frac{dA}{dy}=48-3y^2=0\\Rightarrow y=4$ (as $y>0$) and $x=8$; $\\frac{d^2A}{dy^2}=-6y<0$, a maximum.",
+    "Area $=(24-8)(2\\times4)=128$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "AM-GM on $2y^2,\\ 48-y^2,\\ 48-y^2$, whose sum is the constant $96$.",
+     "solution": [
+      "$A=y\\left(48-y^2\\right)$, $0<y<4\\sqrt3$, so $A^2=y^2\\left(48-y^2\\right)^2=\\frac12\\left(2y^2\\right)\\left(48-y^2\\right)\\left(48-y^2\\right)$.",
+      "The three factors are positive with constant sum $2y^2+2(48-y^2)=96$; AM-GM gives product $\\le32^3$.",
+      "$A^2\\le\\frac{32^3}2=16384$, so $A\\le128$.",
+      "Equality when $2y^2=48-y^2$, i.e. $y=4$ - attainable. Maximum area $128$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rectangle inscribed in the region $y^2=4ax$, $x\\le h$: with corners $(x,\\pm y)$ the area is $2y(h-x)$; maximum at $x=\\frac h3$, i.e. $y^2=\\frac{4ah}{3}$.",
+    "Here $h=24$ and $y^2=2x$: $x=\\frac{24}3=8$, $y=4$ and the area is $2\\cdot4\\cdot16=128$.",
+    "Make the single variable the one that removes the square root ($y$ rather than $x$).",
+    "At $x\\to0$ and $x\\to24$ the area tends to $0$, so the stationary point is the maximum."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Local minimum of a cubic",
+    "Rational inequality"
+   ],
+   "level": 2,
+   "question": "Let the set of all positive values of $\\lambda$, for which the point of local minimum of the function $\\left(1+x(\\lambda^2-x^2)\\right)$ satisfies $\\frac{x^2+x+2}{x^2+5x+6}<0$, be $(\\alpha,\\beta)$. Then $\\alpha^2+\\beta^2$ is equal to ___________.",
+   "answer": "39",
+   "key_idea": "The local minimum is at $x=-\\frac{\\lambda}{\\sqrt3}$, and the inequality reduces to $(x+2)(x+3)<0$ since $x^2+x+2>0$.",
+   "solution": [
+    "$f(x)=1+x(\\lambda^2-x^2)=-x^3+\\lambda^2x+1$.",
+    "$f'(x)=-3x^2+\\lambda^2=0\\Rightarrow x=\\pm\\frac{\\lambda}{\\sqrt3}$.",
+    "$f''(x)=-6x$ is positive at $x=-\\frac\\lambda{\\sqrt3}$, so the point of local minimum is $x=-\\frac{\\lambda}{\\sqrt3}$; it must satisfy $\\frac{x^2+x+2}{x^2+5x+6}<0$.",
+    "$x^2+x+2>0$ for all real $x$ (discriminant $1-8<0$), so the inequality is equivalent to $\\frac1{(x+2)(x+3)}<0$.",
+    "That is $(x+2)(x+3)<0$, so $x\\in(-3,-2)$.",
+    "$-3<-\\frac\\lambda{\\sqrt3}<-2\\Rightarrow-3\\sqrt3<-\\lambda<-2\\sqrt3$.",
+    "$2\\sqrt3<\\lambda<3\\sqrt3$, so $\\alpha=2\\sqrt3$ and $\\beta=3\\sqrt3$.",
+    "$\\alpha^2+\\beta^2=\\left(2\\sqrt3\\right)^2+\\left(3\\sqrt3\\right)^2=12+27=39$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF replaces (x^2+x+2)/((x+2)(x+3)) by 1/((x+2)(x+3)), which is not equal; only the sign matters since x^2+x+2>0, so the interval (-3,-2) is right. The justification (x^2+x+2>0, and f''>0 at the local minimum) was added. Answer 39 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "At a critical point $\\lambda^2=3x^2$, so $\\lambda^2$ runs over $\\left(3\\cdot4,\\,3\\cdot9\\right)$ without taking square roots.",
+     "solution": [
+      "$f'(x)=-3x^2+\\lambda^2=0$ gives $\\lambda^2=3x^2$ at the critical points; $\\lambda>0$ and the minimum is at the negative one, $x=-\\frac\\lambda{\\sqrt3}$.",
+      "The inequality needs $x\\in(-3,-2)$, so $x^2\\in(4,9)$.",
+      "Then $\\lambda^2=3x^2\\in(12,27)$ and, with $\\lambda>0$, the interval is $(\\alpha,\\beta)$ with $\\alpha^2=12$, $\\beta^2=27$.",
+      "$\\alpha^2+\\beta^2=12+27=39$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f=-x^3+kx+c$ (negative leading coefficient) the local minimum is at the smaller critical point and the local maximum at the larger; $f''=-6x$.",
+    "Sign of a rational function: a quadratic with negative discriminant and positive leading coefficient is always positive and can be dropped from a sign analysis.",
+    "If a parameter enters only through $x^2$ at the critical points ($\\lambda^2=3x^2$), work with $\\lambda^2$ directly.",
+    "$x^2+5x+6=(x+2)(x+3)$: the sign is negative exactly between the roots $-3$ and $-2$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Local extrema of an integral function (Leibniz / FTC)",
+    "Sign scheme of a product with odd and even powers"
+   ],
+   "level": 2,
+   "question": "Let $S=(-1,\\infty)$ and $f:S\\to\\mathbb{R}$ be defined as $f(x)=\\int_{-1}^{x}\\left(e^t-1\\right)^{11}(2t-1)^5(t-2)^7(t-3)^{12}(2t-10)^{61}dt$. Let $p=$ sum of squares of the values of $x$, where $f(x)$ attains local maxima on $S$, and $q=$ sum of the values of $x$, where $f(x)$ attains local minima on $S$. Then, the value of $p^2+2q$ is ___________.",
+   "answer": "27",
+   "key_idea": "$f'(x)$ is the integrand; only factors with an odd power change its sign, so $x=3$ (power $12$) is neither a maximum nor a minimum.",
+   "solution": [
+    "By the Fundamental Theorem of Calculus, $f'(x)=\\left(e^x-1\\right)^{11}(2x-1)^5(x-2)^7(x-3)^{12}(2x-10)^{61}$.",
+    "Its zeros are $x=0,\\ \\frac12,\\ 2,\\ 3,\\ 5$, all in $S=(-1,\\infty)$.",
+    "The powers $11,5,7,61$ are odd, so $f'$ changes sign at $0,\\frac12,2,5$; the power $12$ is even, so it does not change sign at $3$.",
+    "For $x>5$ every factor is positive, so $f'>0$. Moving left, the sign alternates at $5,\\,2,\\,\\frac12,\\,0$ (and not at $3$): $+$ on $(-1,0)$, $-$ on $\\left(0,\\frac12\\right)$, $+$ on $\\left(\\frac12,2\\right)$, $-$ on $(2,5)$, $+$ on $(5,\\infty)$.",
+    "Local minima ($-$ to $+$) at $x=\\frac12$ and $x=5$; local maxima ($+$ to $-$) at $x=0$ and $x=2$; $x=3$ gives neither.",
+    "$p=0^2+2^2=4$ and $q=\\frac12+5=\\frac{11}2$.",
+    "$p^2+2q=16+11=27$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If $f(x)=\\int_a^x\\varphi(t)\\,dt$ then $f'(x)=\\varphi(x)$; local extrema of $f$ are the sign changes of $\\varphi$.",
+    "Wavy-curve rule: a root of odd multiplicity changes the sign of $f'$, a root of even multiplicity does not (no extremum there).",
+    "Sign of the factors $\\left(e^x-1\\right)^{n}$: $e^x-1$ has the sign of $x$, and $2x-10$ the sign of $x-5$ - replace each factor by the simple linear factor with the same sign.",
+    "The domain $S=(-1,\\infty)$ is open: an endpoint $-1$ is not a point of local extremum of $f$ on $S$."
+   ]
+  }
+ ]
+}
