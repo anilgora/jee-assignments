@@ -1,0 +1,908 @@
+{
+ "title": "JEE Main Question Bank 01 Integral Calculus 05 — Paper Analysis",
+ "subtitle": "Questions 81–100 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Integral_Calculus_05.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 8,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for a correct answer · 0 otherwise (assumed)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 9,
+   "to": 20,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+3 if only the correct option is chosen · 0 if unanswered (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Substitution in definite integrals with fractional powers of $\\cos x$"
+   ],
+   "level": 3,
+   "question": "If the integral $525\\int_{0}^{\\pi/2}\\sin 2x\\,\\cos^{11/2}x\\,\\left(1+\\cos^{5/2}x\\right)^{1/2}dx$ is equal to $\\left(n\\sqrt{2}-64\\right)$, then $n$ is equal to ________.",
+   "answer": "176",
+   "key_idea": "Put $\\sqrt{\\cos x}=t$; the integrand becomes $t^{14}\\sqrt{1+t^5}$, and $1+t^5=u^2$ makes it a polynomial in $u$.",
+   "solution": [
+    "Put $\\sqrt{\\cos x}=t$, so $\\cos x=t^2$ and $\\sin x\\,dx=-2t\\,dt$. As $x$ goes from $0$ to $\\pi/2$, $t$ goes from $1$ to $0$ (the minus sign reverses the limits).",
+    "Write $\\sin 2x=2\\sin x\\cos x$. Then $I=525\\int_{0}^{1}2(2t)\\,t^{2}\\,t^{11}\\sqrt{1+t^{5}}\\,dt$.",
+    "So $I=525\\times 4\\int_{0}^{1}\\sqrt{1+t^{5}}\\;t^{14}\\,dt=2100\\int_{0}^{1}\\sqrt{1+t^{5}}\\;t^{14}\\,dt$.",
+    "Put $\\sqrt{1+t^5}=u$, so $1+t^5=u^2$ and $5t^4\\,dt=2u\\,du$. The limits become $u=1$ to $u=\\sqrt2$, and $t^{10}=(u^2-1)^2$.",
+    "$I=2100\\int_{1}^{\\sqrt2}u\\cdot\\frac{2u}{5}\\left(u^2-1\\right)^2du=840\\int_{1}^{\\sqrt2}u^2\\left(u^4-2u^2+1\\right)du$.",
+    "$I=840\\int_{1}^{\\sqrt2}\\left(u^6-2u^4+u^2\\right)du=840\\left[\\frac{u^7}{7}-\\frac{2u^5}{5}+\\frac{u^3}{3}\\right]_{1}^{\\sqrt2}$.",
+    "At $u=\\sqrt2$: $u^7=8\\sqrt2,\\ u^5=4\\sqrt2,\\ u^3=2\\sqrt2$, so $I=840\\left[\\frac{8\\sqrt2}{7}-\\frac{8\\sqrt2}{5}+\\frac{2\\sqrt2}{3}-\\frac17+\\frac25-\\frac13\\right]$.",
+    "$\\sqrt2$ part: $840\\sqrt2\\left(\\frac87-\\frac85+\\frac23\\right)=176\\sqrt2$. Constant part: $840\\left(-\\frac17+\\frac25-\\frac13\\right)=-120+336-280=-64$.",
+    "So $I=176\\sqrt2-64$. Comparing with $n\\sqrt2-64$ gives $n=176$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "One substitution $w=1+\\cos^{5/2}x$ works directly, because $\\sin x\\cos^{3/2}x\\,dx$ is a multiple of $dw$.",
+     "solution": [
+      "Write the integrand as $2\\sin x\\cos^{13/2}x\\sqrt{1+\\cos^{5/2}x}=2\\left[\\sin x\\cos^{3/2}x\\right]\\left(\\cos^{5/2}x\\right)^{2}\\sqrt{1+\\cos^{5/2}x}$.",
+      "Put $w=1+\\cos^{5/2}x$. Then $dw=-\\frac52\\cos^{3/2}x\\sin x\\,dx$, so $\\sin x\\cos^{3/2}x\\,dx=-\\frac25\\,dw$, and $\\cos^{5/2}x=w-1$.",
+      "Limits: $x=0\\Rightarrow w=2$ and $x=\\pi/2\\Rightarrow w=1$; the minus sign turns $\\int_{2}^{1}$ into $\\int_{1}^{2}$.",
+      "$I=525\\cdot2\\cdot\\frac25\\int_{1}^{2}(w-1)^2\\sqrt{w}\\,dw=420\\int_{1}^{2}\\left(w^{5/2}-2w^{3/2}+w^{1/2}\\right)dw$.",
+      "$I=420\\left[\\frac27w^{7/2}-\\frac45w^{5/2}+\\frac23w^{3/2}\\right]_{1}^{2}$.",
+      "At $w=2$: $\\sqrt2\\left(\\frac{16}{7}-\\frac{16}{5}+\\frac43\\right)=\\frac{44\\sqrt2}{105}$. At $w=1$: $\\frac27-\\frac45+\\frac23=\\frac{16}{105}$.",
+      "$I=420\\cdot\\frac{44\\sqrt2-16}{105}=4\\left(44\\sqrt2-16\\right)=176\\sqrt2-64$, so $n=176$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int x^{m-1}(a+bx^{n})^{p}dx$, if $m/n$ is an integer, the substitution $u^{q}=a+bx^{n}$ ($q$ = denominator of $p$) turns it into a polynomial in $u$. Here $m=15,\\ n=5$, $p=\\frac12$.",
+    "Fractional powers of trigonometric functions: choose the substitution whose differential contains the leftover $\\sin x$, e.g. $\\sin x\\cos^{k}x\\,dx=-\\frac{d(\\cos^{k+1}x)}{k+1}$.",
+    "Quick check of the final form: $\\int_{1}^{\\sqrt2}u^2(u^2-1)^2du$ is positive, so the answer must be positive: $176\\sqrt2-64\\approx184.9$ ($525\\times0.352$)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "King property and symmetry of definite integrals"
+   ],
+   "level": 3,
+   "question": "$\\left|\\frac{120}{\\pi^{3}}\\int_{0}^{\\pi}\\frac{x^{2}\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}\\,dx\\right|$ is equal to ________.",
+   "answer": "15",
+   "key_idea": "Pair $x$ with $\\pi-x$ so that $x^2-(\\pi-x)^2=\\pi(2x-\\pi)$, then use the king property again on $[0,\\pi/2]$.",
+   "solution": [
+    "Let $I=\\int_{0}^{\\pi}\\frac{x^{2}\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$. Replacing $x$ by $\\pi-x$ leaves $\\sin x$ unchanged and changes the sign of $\\cos x$, so $I=\\int_{0}^{\\pi}\\frac{-(\\pi-x)^{2}\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$.",
+    "Adding the two forms: $2I=\\int_{0}^{\\pi}\\frac{\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}\\left(x^{2}-(\\pi-x)^{2}\\right)dx$.",
+    "Since $x^2-(\\pi-x)^2=\\pi(2x-\\pi)$, we get $2I=\\pi\\int_{0}^{\\pi}\\frac{(2x-\\pi)\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$.",
+    "The integrand is unchanged under $x\\to\\pi-x$ (both $2x-\\pi$ and $\\cos x$ change sign), so $\\int_{0}^{\\pi}=2\\int_{0}^{\\pi/2}$. Hence $I=\\pi\\int_{0}^{\\pi/2}\\frac{(2x-\\pi)\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$.",
+    "On $[0,\\pi/2]$ the factor $\\frac{\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}$ is unchanged by $x\\to\\frac\\pi2-x$, while $2x-\\pi$ becomes $-2x$. So $I=\\pi\\int_{0}^{\\pi/2}\\frac{-2x\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$.",
+    "Use $x\\to\\frac\\pi2-x$ once more on $\\int x\\,h(x)\\,dx$ with $h=\\frac{\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}$: the integral equals $\\frac\\pi4\\int_{0}^{\\pi/2}h\\,dx$. Hence $2I=-\\pi^{2}\\int_{0}^{\\pi/2}\\frac{\\sin x\\cos x}{\\sin^{4}x+\\cos^{4}x}dx$.",
+    "So $I=-\\frac{\\pi^{2}}{4}\\int_{0}^{\\pi/2}\\frac{\\sin 2x}{\\sin^{4}x+\\cos^{4}x}dx=-\\frac{\\pi^{2}}{4}\\int_{0}^{\\pi/2}\\frac{2\\tan x\\sec^{2}x}{\\tan^{4}x+1}dx$ (divide numerator and denominator by $\\cos^4x$ and use $\\sin 2x=\\frac{2\\tan x}{1+\\tan^2x}$).",
+    "With $\\tan^{2}x=s$: $\\int_{0}^{\\pi/2}\\frac{2\\tan x\\sec^{2}x}{\\tan^{4}x+1}dx=\\left[\\tan^{-1}\\left(\\tan^{2}x\\right)\\right]_{0}^{\\pi/2}=\\frac\\pi2$.",
+    "Therefore $I=-\\frac{\\pi^{2}}{4}\\cdot\\frac{\\pi}{2}=-\\frac{\\pi^{3}}{8}$.",
+    "$\\left|\\frac{120}{\\pi^{3}}\\cdot\\left(-\\frac{\\pi^{3}}{8}\\right)\\right|=15$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes $I=\\frac{-\\pi}{2\\times2}\\int\\ldots$ for the step after $2I=-\\pi^{2}\\int_{0}^{\\pi/2}\\ldots$; the correct constant is $-\\frac{\\pi^{2}}{4}$ (the PDF dropped the square, and later uses $-\\pi^2/4$ so its final answer $-\\pi^3/8$ is right). The PDF also skips the justification of why $2x-\\pi$ may be replaced by $-2x$ (king property on $[0,\\pi/2]$) and why $\\int_0^\\pi$ halves; these are added as separate steps.",
+   "alternate_solutions": [
+    {
+     "idea": "Shift to $x=\\frac\\pi2+u$: the weight $\\frac{\\sin x\\cos x}{\\sin^4x+\\cos^4x}$ becomes an odd function of $u$, so only the cross term survives.",
+     "solution": [
+      "Put $x=\\frac\\pi2+u$, $u\\in\\left[-\\frac\\pi2,\\frac\\pi2\\right]$. Then $\\sin x\\cos x=-\\sin u\\cos u$ and $\\sin^4x+\\cos^4x=\\sin^4u+\\cos^4u$.",
+      "So $I=-\\int_{-\\pi/2}^{\\pi/2}\\left(\\frac\\pi2+u\\right)^{2}g(u)\\,du$ with $g(u)=\\frac{\\sin u\\cos u}{\\sin^{4}u+\\cos^{4}u}$, which is an odd function of $u$.",
+      "Expand $\\left(\\frac\\pi2+u\\right)^2=\\frac{\\pi^2}{4}+\\pi u+u^2$. The terms $\\frac{\\pi^2}{4}g(u)$ and $u^2g(u)$ are odd, so their integrals over the symmetric interval are $0$.",
+      "Only $-\\pi\\int_{-\\pi/2}^{\\pi/2}u\\,g(u)\\,du$ remains, and $u\\,g(u)$ is even, so $I=-2\\pi\\int_{0}^{\\pi/2}u\\,g(u)\\,du$.",
+      "By the king property on $[0,\\pi/2]$ ($g(\\frac\\pi2-u)=g(u)$): $\\int_{0}^{\\pi/2}u\\,g\\,du=\\frac\\pi4\\int_{0}^{\\pi/2}g\\,du$. So $I=-\\frac{\\pi^2}{2}\\int_{0}^{\\pi/2}g\\,du$.",
+      "Since $\\sin^4u+\\cos^4u=\\frac{1+\\cos^22u}{2}$, $\\int_{0}^{\\pi/2}g\\,du=\\int_{0}^{\\pi/2}\\frac{\\sin 2u}{1+\\cos^{2}2u}du$. With $w=\\cos 2u$ this is $\\frac12\\int_{-1}^{1}\\frac{dw}{1+w^{2}}=\\frac\\pi4$.",
+      "$I=-\\frac{\\pi^2}{2}\\cdot\\frac\\pi4=-\\frac{\\pi^3}{8}$, so the required value is $\\frac{120}{\\pi^3}\\cdot\\frac{\\pi^3}{8}=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\varphi(a-x)=\\varphi(x)$, then $\\int_{0}^{a}x\\,\\varphi(x)\\,dx=\\frac a2\\int_{0}^{a}\\varphi(x)\\,dx$. (Used with $a=\\frac\\pi2$.)",
+    "$\\sin^4x+\\cos^4x=1-\\frac12\\sin^22x=\\frac{1+\\cos^22x}{2}$, which turns $\\int\\frac{\\sin 2x}{\\sin^4x+\\cos^4x}dx$ into an $\\tan^{-1}$ integral: $\\int_{0}^{\\pi/2}\\frac{\\sin2x\\,dx}{\\sin^4x+\\cos^4x}=\\frac\\pi2$.",
+    "Centre the interval: for $\\int_{0}^{\\pi}$ with symmetry about $\\frac\\pi2$, put $x=\\frac\\pi2+u$ and use odd/even parts. Odd integrands vanish on $[-a,a]$.",
+    "Pairing $x$ with $\\pi-x$ turns $x^2$ into $x^2-(\\pi-x)^2=\\pi(2x-\\pi)$, lowering the power of $x$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "King property with $\\frac{1}{1+e^{f(x)}}$ type integrands",
+    "Integration of $\\frac{1}{1+x^{4}}$"
+   ],
+   "level": 3,
+   "question": "If $\\int_{-\\pi/2}^{\\pi/2}\\frac{8\\sqrt{2}\\cos x\\,dx}{\\left(1+e^{\\sin x}\\right)\\left(1+\\sin^{4}x\\right)}=\\alpha\\pi+\\beta\\log_{e}\\left(3+2\\sqrt{2}\\right)$, where $\\alpha,\\beta$ are integers, then $\\alpha^{2}+\\beta^{2}$ equals ________.",
+   "answer": "8",
+   "key_idea": "Adding the integral to its $x\\to-x$ copy kills $1+e^{\\sin x}$, because $\\frac{1}{1+e^{s}}+\\frac{1}{1+e^{-s}}=1$.",
+   "solution": [
+    "Let $I=\\int_{-\\pi/2}^{\\pi/2}\\frac{8\\sqrt2\\cos x}{\\left(1+e^{\\sin x}\\right)\\left(1+\\sin^4x\\right)}dx$. Replace $x$ by $-x$: $I=\\int_{-\\pi/2}^{\\pi/2}\\frac{8\\sqrt2\\cos x\\,e^{\\sin x}}{\\left(1+e^{\\sin x}\\right)\\left(1+\\sin^4x\\right)}dx$.",
+    "Add the two forms: $2I=\\int_{-\\pi/2}^{\\pi/2}\\frac{8\\sqrt2\\cos x}{1+\\sin^4x}dx$.",
+    "The integrand is even, so $I=\\int_{0}^{\\pi/2}\\frac{8\\sqrt2\\cos x}{1+\\sin^4x}dx$.",
+    "Put $\\sin x=t$, $\\cos x\\,dx=dt$: $I=\\int_{0}^{1}\\frac{8\\sqrt2}{1+t^4}dt$.",
+    "Write $\\frac{1}{1+t^4}=\\frac12\\left[\\frac{1+\\frac1{t^2}}{t^2+\\frac1{t^2}}-\\frac{1-\\frac1{t^2}}{t^2+\\frac1{t^2}}\\right]$, so $I=4\\sqrt2\\int_{0}^{1}\\left[\\frac{1+\\frac1{t^2}}{\\left(t-\\frac1t\\right)^2+2}-\\frac{1-\\frac1{t^2}}{\\left(t+\\frac1t\\right)^2-2}\\right]dt$.",
+    "Let $t-\\frac1t=z$ in the first part ($dz=\\left(1+\\frac1{t^2}\\right)dt$, $z$ from $-\\infty$ to $0$) and $t+\\frac1t=k$ in the second ($dk=\\left(1-\\frac1{t^2}\\right)dt$, $k$ from $\\infty$ to $2$).",
+    "$I=4\\sqrt2\\left[\\int_{-\\infty}^{0}\\frac{dz}{z^2+2}-\\int_{\\infty}^{2}\\frac{dk}{k^2-2}\\right]$.",
+    "$\\int_{-\\infty}^{0}\\frac{dz}{z^2+2}=\\frac{1}{\\sqrt2}\\left[\\tan^{-1}\\frac{z}{\\sqrt2}\\right]_{-\\infty}^{0}=\\frac{\\pi}{2\\sqrt2}$. $\\int_{\\infty}^{2}\\frac{dk}{k^2-2}=\\frac{1}{2\\sqrt2}\\left[\\ln\\frac{k-\\sqrt2}{k+\\sqrt2}\\right]_{\\infty}^{2}=\\frac{1}{2\\sqrt2}\\ln\\frac{2-\\sqrt2}{2+\\sqrt2}$.",
+    "$I=4\\sqrt2\\left[\\frac{\\pi}{2\\sqrt2}-\\frac{1}{2\\sqrt2}\\ln\\frac{2-\\sqrt2}{2+\\sqrt2}\\right]=2\\pi+2\\ln\\frac{2+\\sqrt2}{2-\\sqrt2}=2\\pi+2\\ln\\left(3+2\\sqrt2\\right)$.",
+    "Hence $\\alpha=2,\\ \\beta=2$ and $\\alpha^2+\\beta^2=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Finish $\\int_{0}^{1}\\frac{dt}{1+t^4}$ by partial fractions, using $1+t^4=\\left(t^2+\\sqrt2t+1\\right)\\left(t^2-\\sqrt2t+1\\right)$.",
+     "solution": [
+      "The first part is identical: after the king property and $\\sin x=t$, $I=8\\sqrt2\\int_{0}^{1}\\frac{dt}{1+t^4}$.",
+      "Factor $1+t^4=\\left(t^2+\\sqrt2t+1\\right)\\left(t^2-\\sqrt2t+1\\right)$ and split: $\\frac{1}{1+t^4}=\\frac{1}{2\\sqrt2}\\left[\\frac{t+\\sqrt2}{t^2+\\sqrt2t+1}-\\frac{t-\\sqrt2}{t^2-\\sqrt2t+1}\\right]$.",
+      "Integrating gives the antiderivative $\\frac{1}{4\\sqrt2}\\ln\\frac{t^2+\\sqrt2t+1}{t^2-\\sqrt2t+1}+\\frac{1}{2\\sqrt2}\\left[\\tan^{-1}\\left(\\sqrt2t+1\\right)+\\tan^{-1}\\left(\\sqrt2t-1\\right)\\right]$.",
+      "At $t=1$: $\\ln\\frac{2+\\sqrt2}{2-\\sqrt2}=\\ln\\left(3+2\\sqrt2\\right)$ and $\\tan^{-1}(\\sqrt2+1)+\\tan^{-1}(\\sqrt2-1)=\\frac{3\\pi}{8}+\\frac{\\pi}{8}=\\frac\\pi2$. At $t=0$ both parts are $0$.",
+      "So $\\int_{0}^{1}\\frac{dt}{1+t^4}=\\frac{\\ln(3+2\\sqrt2)}{4\\sqrt2}+\\frac{\\pi}{4\\sqrt2}$.",
+      "$I=8\\sqrt2\\left[\\frac{\\pi}{4\\sqrt2}+\\frac{\\ln(3+2\\sqrt2)}{4\\sqrt2}\\right]=2\\pi+2\\ln\\left(3+2\\sqrt2\\right)$, so $\\alpha=\\beta=2$ and $\\alpha^2+\\beta^2=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\varphi$ is even and $f$ is odd, then $\\int_{-a}^{a}\\frac{\\varphi(x)}{1+e^{f(x)}}dx=\\int_{0}^{a}\\varphi(x)\\,dx$; the same holds with $1+k^{f(x)}$ for any $k>0$.",
+    "Standard value: $\\int_{0}^{\\infty}\\frac{dx}{1+x^{4}}=\\frac{\\pi}{2\\sqrt2}$; and $\\int_{0}^{1}\\frac{dx}{1+x^4}=\\frac{\\pi+2\\ln(1+\\sqrt2)}{4\\sqrt2}\\approx0.8670$.",
+    "For $\\frac{1}{x^4+1}$ or $\\frac{x^2\\pm1}{x^4+1}$-type integrals, divide by $x^2$ and put $x\\pm\\frac1x=z$.",
+    "$3+2\\sqrt2=\\left(1+\\sqrt2\\right)^{2}$, so $\\ln(3+2\\sqrt2)=2\\ln(1+\\sqrt2)$; useful for recognising answer forms."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiation of an integral (Leibniz rule)",
+    "Summation of an arithmetic series"
+   ],
+   "level": 2,
+   "question": "Let $f:(0,\\infty)\\to\\mathbb R$ and $F(x)=\\int_{0}^{x}t\\,f(t)\\,dt$. If $F(x^{2})=x^{4}+x^{5}$, then $\\sum_{r=1}^{12}f\\left(r^{2}\\right)$ is equal to ________.",
+   "answer": "219",
+   "key_idea": "Differentiate $F(x^2)$ with the chain rule and use $F'(x)=xf(x)$ to read off $f$.",
+   "solution": [
+    "$F(x)=\\int_{0}^{x}t\\,f(t)\\,dt$, so $F'(x)=xf(x)$, and it is given that $F(x^2)=x^4+x^5$.",
+    "Differentiate $F(x^2)=x^4+x^5$ with respect to $x$: $2x\\,F'(x^2)=4x^3+5x^4$.",
+    "Divide by $2x$: $F'(x^2)=2x^2+\\frac52x^3$, i.e. $2F'(x^2)=4x^2+5x^3$.",
+    "Replace $x^2$ by $x$ (so $x^3=x^{3/2}$): $2F'(x)=4x+5x^{3/2}$, i.e. $F'(x)=2x+\\frac52x^{3/2}$.",
+    "Since $F'(x)=xf(x)$: $xf(x)=2x+\\frac52x^{3/2}$, so $f(x)=2+\\frac52x^{1/2}$.",
+    "Therefore $f\\left(x^2\\right)=2+\\frac52x$ for $x>0$, and $f\\left(r^2\\right)=2+\\frac52r$.",
+    "$\\sum_{r=1}^{12}f\\left(r^2\\right)=\\sum_{r=1}^{12}\\left(2+\\frac52r\\right)=24+\\frac52\\sum_{r=1}^{12}r$.",
+    "$\\sum_{r=1}^{12}r=\\frac{12\\times13}{2}=78$, so the sum is $24+\\frac52\\times78=24+195=219$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate $F(x^2)$ using the chain rule on the integral itself: $\\frac{d}{dx}F(x^2)=x^2f(x^2)\\cdot2x$, which gives $f(x^2)$ directly with no back-substitution.",
+     "solution": [
+      "By the Leibniz rule, $\\frac{d}{dx}F\\left(x^2\\right)=\\frac{d}{dx}\\int_{0}^{x^2}t\\,f(t)\\,dt=x^2f\\left(x^2\\right)\\cdot2x=2x^3f\\left(x^2\\right)$.",
+      "Differentiating the right side $x^4+x^5$ gives $4x^3+5x^4$, so $2x^3f(x^2)=4x^3+5x^4$.",
+      "Hence $f\\left(x^2\\right)=2+\\frac52x$ directly (for $x>0$), which is exactly the quantity needed in the sum.",
+      "$\\sum_{r=1}^{12}f(r^2)=\\sum_{r=1}^{12}\\left(2+\\frac{5r}{2}\\right)=24+\\frac52\\cdot78=219$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Leibniz rule: $\\frac{d}{dx}\\int_{a}^{g(x)}h(t)\\,dt=h(g(x))\\,g'(x)$. With $h(t)=t\\,f(t)$ and $g(x)=x^2$ the result is $2x^3f(x^2)$.",
+    "If $G(x^2)$ is known, $f(x^2)$ is obtained directly by differentiating, with no need to find $f(x)$ first when the question asks for $f$ at perfect squares.",
+    "$\\sum_{r=1}^{n}(a+br)=na+b\\frac{n(n+1)}{2}$; here $n=12$, $a=2$, $b=\\frac52$.",
+    "Check: $F(x^2)=\\int_{0}^{x^2}\\left(2t+\\frac52t^{3/2}\\right)dt=x^4+x^5$ ✓."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Greatest integer function in definite integrals",
+    "Graphs of $\\csc x$ and $\\cot x$"
+   ],
+   "level": 2,
+   "question": "Let $[t]$ denote the greatest integer $\\le t$. Then $\\frac{2}{\\pi}\\int_{\\pi/6}^{5\\pi/6}\\left(8[\\operatorname{cosec}x]-5[\\cot x]\\right)dx$ is equal to ________.",
+   "answer": "14",
+   "key_idea": "Split $\\left[\\frac\\pi6,\\frac{5\\pi}{6}\\right]$ at the points where $\\cot x$ equals $1,0,-1$, so that $[\\cot x]$ is constant on each piece.",
+   "solution": [
+    "For $x\\in\\left(\\frac\\pi6,\\frac{5\\pi}6\\right)$: $\\sin x\\in\\left(\\frac12,1\\right]$, so $\\operatorname{cosec}x\\in[1,2)$ and $[\\operatorname{cosec}x]=1$ throughout.",
+    "$\\cot x$ decreases from $\\sqrt3$ (at $\\frac\\pi6$) through $1$ (at $\\frac\\pi4$), $0$ (at $\\frac\\pi2$), $-1$ (at $\\frac{3\\pi}4$) to $-\\sqrt3$ (at $\\frac{5\\pi}6$).",
+    "On $\\left(\\frac\\pi6,\\frac\\pi4\\right)$: $\\cot x\\in(1,\\sqrt3)$, so $[\\cot x]=1$. On $\\left(\\frac\\pi4,\\frac\\pi2\\right)$: $\\cot x\\in(0,1)$, so $[\\cot x]=0$.",
+    "On $\\left(\\frac\\pi2,\\frac{3\\pi}4\\right)$: $\\cot x\\in(-1,0)$, so $[\\cot x]=-1$. On $\\left(\\frac{3\\pi}4,\\frac{5\\pi}6\\right)$: $\\cot x\\in(-\\sqrt3,-1)$, so $[\\cot x]=-2$.",
+    "$\\int_{\\pi/6}^{5\\pi/6}8[\\operatorname{cosec}x]\\,dx=8\\cdot\\frac{2\\pi}{3}=\\frac{16\\pi}{3}$.",
+    "$\\int_{\\pi/6}^{5\\pi/6}5[\\cot x]\\,dx=5\\left[1\\cdot\\frac{\\pi}{12}+0\\cdot\\frac\\pi4+(-1)\\cdot\\frac\\pi4+(-2)\\cdot\\frac{\\pi}{12}\\right]=5\\left(-\\frac{\\pi}{3}\\right)=-\\frac{5\\pi}{3}$.",
+    "The integral is $\\frac{16\\pi}{3}+\\frac{5\\pi}{3}=7\\pi$.",
+    "So $\\frac2\\pi\\cdot7\\pi=14$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Reflect $x\\to\\pi-x$: $\\cot$ changes sign and $[-t]=-[t]-1$, so $\\int[\\cot x]\\,dx$ is found from a single equation, with no case split.",
+     "solution": [
+      "The interval $\\left[\\frac\\pi6,\\frac{5\\pi}6\\right]$ is symmetric about $\\frac\\pi2$, and $\\cot(\\pi-x)=-\\cot x$. Let $J=\\int_{\\pi/6}^{5\\pi/6}[\\cot x]\\,dx$.",
+      "Under $x\\to\\pi-x$: $J=\\int_{\\pi/6}^{5\\pi/6}[-\\cot x]\\,dx$.",
+      "For non-integer $t$, $[-t]=-[t]-1$. $\\cot x$ is an integer only at three points (measure zero), so $J=\\int_{\\pi/6}^{5\\pi/6}\\left(-[\\cot x]-1\\right)dx=-J-\\frac{2\\pi}{3}$.",
+      "Hence $2J=-\\frac{2\\pi}3$, so $J=-\\frac\\pi3$.",
+      "Also $[\\operatorname{cosec}x]=1$ on the whole interval, so $\\int8[\\operatorname{cosec}x]\\,dx=\\frac{16\\pi}3$.",
+      "The integral equals $\\frac{16\\pi}3-5\\left(-\\frac\\pi3\\right)=7\\pi$, so the required value is $\\frac2\\pi\\cdot7\\pi=14$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[-t]=-[t]-1$ for every non-integer $t$ (and $[-t]=-[t]$ for integer $t$). Over a symmetric interval, a GIF of an odd function integrates to $-\\frac12\\times$ (length of the interval).",
+    "On $\\left(\\frac\\pi6,\\frac{5\\pi}6\\right)$, $\\sin x>\\frac12$, so $\\operatorname{cosec}x\\in[1,2)$ and $[\\operatorname{cosec}x]=1$; the endpoints (where $\\operatorname{cosec}x=2$) form a set of measure $0$.",
+    "To integrate $[g(x)]$, list the points where $g(x)$ takes integer values inside the interval and integrate piece by piece; for monotone $g$ this is always a finite list.",
+    "Landmark values: $\\cot\\frac\\pi6=\\sqrt3$, $\\cot\\frac\\pi4=1$, $\\cot\\frac{3\\pi}4=-1$, $\\cot\\frac{5\\pi}6=-\\sqrt3$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by parts and exact derivatives of products"
+   ],
+   "level": 3,
+   "question": "For $m,n>0$, let $\\alpha(m,n)=\\int_{0}^{2}t^{m}(1+3t)^{n}\\,dt$. If $11\\,\\alpha(10,6)+18\\,\\alpha(11,5)=p\\,(14)^{6}$, then $p$ is equal to ________.",
+   "answer": "32",
+   "key_idea": "Integrate $t^{10}(1+3t)^6$ by parts; the leftover integral is exactly $-18\\,\\alpha(11,5)$, which cancels.",
+   "solution": [
+    "By definition $11\\,\\alpha(10,6)+18\\,\\alpha(11,5)=11\\int_{0}^{2}t^{10}(1+3t)^{6}dt+18\\int_{0}^{2}t^{11}(1+3t)^{5}dt$.",
+    "Integrate the first integral by parts, taking $(1+3t)^6$ as the first function and $t^{10}$ as the second.",
+    "$11\\int_{0}^{2}t^{10}(1+3t)^{6}dt=11\\left\\{\\left[(1+3t)^{6}\\frac{t^{11}}{11}\\right]_{0}^{2}-\\int_{0}^{2}6(1+3t)^{5}\\cdot3\\cdot\\frac{t^{11}}{11}dt\\right\\}$.",
+    "$=\\left[t^{11}(1+3t)^{6}\\right]_{0}^{2}-18\\int_{0}^{2}t^{11}(1+3t)^{5}dt$.",
+    "Adding $18\\int_{0}^{2}t^{11}(1+3t)^{5}dt$, the two remaining integrals cancel: the expression equals $\\left[t^{11}(1+3t)^{6}\\right]_{0}^{2}$.",
+    "At $t=2$: $2^{11}\\cdot7^{6}$; at $t=0$: $0$. So the value is $2^{11}\\cdot7^{6}$.",
+    "$2^{11}\\cdot7^{6}=2^{5}\\cdot2^{6}\\cdot7^{6}=2^{5}\\cdot14^{6}=32\\cdot14^{6}$, so $p=32$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the second term as $+10\\int_{0}^{2}t^{11}(1+3t)^{5}dt$ in its first line of working, but the expression in the question has $+18\\,\\alpha(11,5)$ (the PDF itself uses $+18$ in the next line). Corrected the first line to $+18$; nothing else changes.",
+   "alternate_solutions": [
+    {
+     "idea": "Spot that $11t^{10}(1+3t)^6+18t^{11}(1+3t)^5$ is exactly the product-rule derivative of $t^{11}(1+3t)^6$, so no integration by parts is needed.",
+     "solution": [
+      "Combine the two integrals: $11\\,\\alpha(10,6)+18\\,\\alpha(11,5)=\\int_{0}^{2}\\left[11t^{10}(1+3t)^{6}+18t^{11}(1+3t)^{5}\\right]dt$.",
+      "Differentiate $u(t)=t^{11}(1+3t)^6$ by the product rule: $u'(t)=11t^{10}(1+3t)^{6}+t^{11}\\cdot6(1+3t)^{5}\\cdot3=11t^{10}(1+3t)^{6}+18t^{11}(1+3t)^{5}$.",
+      "So the integrand is exactly $u'(t)$, and the integral equals $u(2)-u(0)=2^{11}\\cdot7^{6}-0$.",
+      "$2^{11}\\cdot7^6=2^5\\cdot(2\\cdot7)^6=32\\cdot14^6$, so $p=32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dt}\\left[t^{m+1}(1+ct)^{n+1}\\right]=(m+1)t^{m}(1+ct)^{n+1}+c(n+1)t^{m+1}(1+ct)^{n}$. Whenever the coefficients in front of two such integrals are $m+1$ and $c(n)$ in this pattern, the sum is a boundary term.",
+    "General reduction: $(m+1)\\,\\alpha(m,n)+cn\\,\\alpha(m+1,n-1)=\\left[t^{m+1}(1+ct)^{n}\\right]_{0}^{2}$. Here $m=10,\\ n=6,\\ c=3$: $11\\cdot\\alpha(10,6)+18\\,\\alpha(11,5)=2^{11}\\cdot7^6$.",
+    "Recognition cue: two integrals of the same family with unequal exponents and 'strange' coefficients like $11$ and $18$ signal integration by parts or a total derivative.",
+    "Numerical check: $\\alpha(10,6)$ and $\\alpha(11,5)$ evaluated numerically give $11\\alpha(10,6)+18\\alpha(11,5)=240945152=32\\cdot14^6$ ✓."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Recursively defined polynomial sequences by integration"
+   ],
+   "level": 2,
+   "question": "Let for $x\\in\\mathbb R$, $S_{0}(x)=x$, $S_{k}(x)=C_{k}x+k\\int_{0}^{x}S_{k-1}(t)\\,dt$, where $C_{0}=1$, $C_{k}=1-\\int_{0}^{1}S_{k-1}(x)\\,dx$, $k=1,2,3,\\ldots$ Then $S_{2}(3)+6C_{3}$ is equal to ________.",
+   "answer": "18",
+   "key_idea": "Build the sequence step by step: each $C_k$ needs $\\int_0^1 S_{k-1}$, and each $S_k$ is a polynomial one degree higher.",
+   "solution": [
+    "$C_{1}=1-\\int_{0}^{1}S_{0}(x)\\,dx=1-\\int_{0}^{1}x\\,dx=1-\\frac12=\\frac12$.",
+    "$S_{1}(x)=C_{1}x+\\int_{0}^{x}t\\,dt=\\frac12x+\\frac{x^2}{2}=\\frac{x+x^2}{2}$.",
+    "$C_{2}=1-\\int_{0}^{1}\\frac{x+x^{2}}{2}dx=1-\\frac12\\left(\\frac12+\\frac13\\right)=1-\\frac{5}{12}=\\frac{7}{12}$.",
+    "$S_{2}(x)=C_{2}x+2\\int_{0}^{x}\\frac{t+t^{2}}{2}dt=\\frac{7}{12}x+\\left(\\frac{x^2}{2}+\\frac{x^3}{3}\\right)=\\frac{7x+6x^{2}+4x^{3}}{12}$.",
+    "$S_{2}(3)=\\frac{21+54+108}{12}=\\frac{183}{12}=\\frac{61}{4}$.",
+    "$C_{3}=1-\\int_{0}^{1}\\frac{7x+6x^{2}+4x^{3}}{12}dx=1-\\frac{1}{12}\\left[\\frac72+\\frac63+\\frac44\\right]$.",
+    "$C_3=1-\\frac1{12}\\left(\\frac72+3\\right)=\\frac{24-7-6}{24}=\\frac{11}{24}$.",
+    "$S_{2}(3)+6C_{3}=\\frac{61}{4}+\\frac{11}{4}=\\frac{72}{4}=18$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For a recursion defined through $S_k(x)=C_kx+k\\int_0^xS_{k-1}$, always $S_k(0)=0$ and $S_k(1)=C_k+k\\int_0^1S_{k-1}=C_k+k(1-C_k)=k-(k-1)C_k$. Use this as a check: $S_2(1)=\\frac{17}{12}=2-\\frac{7}{12}$ ✓.",
+    "$\\int_{0}^{1}x^{n}dx=\\frac1{n+1}$ lets $C_k$ be read off term by term: if $S_{k-1}=\\sum a_jx^j$, then $C_k=1-\\sum\\frac{a_j}{j+1}$.",
+    "Degree of $S_k$ is $k+1$, so only a handful of steps are needed; compute exact fractions and keep a common denominator ($12,24$ here) to avoid slips."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Substitution in definite integrals leading to a perfect derivative",
+    "Sum of first $n$ odd numbers"
+   ],
+   "level": 4,
+   "question": "Let $f_{n}=\\int_{0}^{\\pi/2}\\left(\\sum_{k=1}^{n}\\sin^{k-1}x\\right)\\left(\\sum_{k=1}^{n}(2k-1)\\sin^{k-1}x\\right)\\cos x\\,dx$, $n\\in\\mathbb N$. Then $f_{21}-f_{20}$ is equal to ________.",
+   "answer": "41",
+   "key_idea": "Multiply and divide by $\\sqrt{\\sin x}$: the first sum becomes $t=\\sum\\sin^{(2k-1)/2}x$ and the second sum is exactly $2\\sqrt{\\sin x}\\,\\frac{dt}{\\cos x\\,dx}$.",
+   "solution": [
+    "Write the integrand with $s=\\sin x$: $\\left(1+s+s^2+\\cdots+s^{n-1}\\right)\\left(1+3s+5s^2+\\cdots+(2n-1)s^{n-1}\\right)\\cos x\\,dx$.",
+    "Multiply and divide by $\\sqrt{s}$: the first bracket becomes $\\left(s^{1/2}+s^{3/2}+s^{5/2}+\\cdots+s^{(2n-1)/2}\\right)\\Big/\\sqrt s$.",
+    "So $f_n=\\int_{0}^{\\pi/2}\\left(s^{1/2}+s^{3/2}+\\cdots+s^{\\frac{2n-1}{2}}\\right)\\left(1+3s+5s^2+\\cdots+(2n-1)s^{n-1}\\right)\\frac{\\cos x}{\\sqrt{s}}dx$.",
+    "Put $t=s^{1/2}+s^{3/2}+s^{5/2}+\\cdots+s^{\\frac{2n-1}{2}}$, where $s=\\sin x$.",
+    "Then $dt=\\left(\\frac12s^{-1/2}+\\frac32s^{1/2}+\\cdots+\\frac{2n-1}{2}s^{\\frac{2n-3}{2}}\\right)\\cos x\\,dx=\\frac{1}{2}\\cdot\\frac{1+3s+5s^2+\\cdots+(2n-1)s^{n-1}}{\\sqrt s}\\cos x\\,dx$.",
+    "Hence the second bracket times $\\frac{\\cos x}{\\sqrt s}\\,dx$ equals $2\\,dt$, and $f_n=2\\int t\\,dt$.",
+    "Limits: $x=0\\Rightarrow s=0\\Rightarrow t=0$; $x=\\frac\\pi2\\Rightarrow s=1\\Rightarrow t=1+1+\\cdots+1=n$.",
+    "$f_n=2\\int_{0}^{n}t\\,dt=n^{2}$.",
+    "$f_{21}-f_{20}=21^{2}-20^{2}=441-400=41$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Prove $f_n-f_{n-1}=2n-1$ by induction: expanding $A_nB_n-A_{n-1}B_{n-1}$ and integrating term by term gives $n$ pairs, each contributing $2$, plus a final $1$.",
+     "solution": [
+      "Let $s=\\sin x$, $A_n=\\sum_{k=1}^{n}s^{k-1}$, $B_n=\\sum_{k=1}^{n}(2k-1)s^{k-1}$, so $f_n=\\int_{0}^{1}A_nB_n\\,ds$ (put $s=\\sin x$).",
+      "$A_n=A_{n-1}+s^{n-1}$ and $B_n=B_{n-1}+(2n-1)s^{n-1}$, so $A_nB_n-A_{n-1}B_{n-1}=(2n-1)s^{n-1}A_{n-1}+s^{n-1}B_{n-1}+(2n-1)s^{2n-2}$.",
+      "Integrate over $[0,1]$ using $\\int_{0}^{1}s^{a}ds=\\frac1{a+1}$: $f_n-f_{n-1}=\\sum_{k=1}^{n-1}\\frac{(2n-1)+(2k-1)}{n+k-1}+\\frac{2n-1}{2n-1}$.",
+      "Each term in the sum is $\\frac{2n+2k-2}{n+k-1}=2$, and there are $n-1$ of them. So $f_n-f_{n-1}=2(n-1)+1=2n-1$.",
+      "Therefore $f_{21}-f_{20}=2\\cdot21-1=41$.",
+      "(Consistently $f_1=\\int_0^1 1\\cdot1\\,ds=1$, and summing $2n-1$ gives $f_n=n^2$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=1}^{n}(2k-1)=n^{2}$; so $f_n=n^2$ means $f_n-f_{n-1}=2n-1$ (consecutive squares differ by consecutive odd numbers).",
+    "Pattern: $\\left(\\sum a_k s^{k-1}\\right)$ multiplied by $\\sqrt s$-shifted powers is a derivative: $\\frac{d}{ds}\\sum s^{(2k-1)/2}=\\frac{1}{2\\sqrt s}\\sum(2k-1)s^{k-1}$. Whenever a sum of weights $(2k-1)$ appears, think of $\\frac{d}{ds}s^{k-1/2}$.",
+    "For $\\int AB\\,ds$ with long sums, test small $n$ ($n=1,2,3$): $f_1=1$, $f_2=4$, $f_3=9$ suggest the pattern $n^2$ quickly.",
+    "Reduction to $\\int_{0}^{1}s^{a}ds$ term by term is always available for polynomial products in $\\sin x$ with a $\\cos x\\,dx$ factor."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Differentiation of an integral equation (Leibniz rule)",
+    "Linear differential equation (integrating factor)"
+   ],
+   "level": 2,
+   "question": "Let $f:[1,\\infty)\\to[2,\\infty)$ be a differentiable function. If $10\\int_{1}^{x}f(t)\\,dt=5xf(x)-x^{5}-9$ for all $x\\ge1$, then the value of $f(3)$ is:",
+   "options": [
+    "$18$",
+    "$22$",
+    "$26$",
+    "$32$"
+   ],
+   "answer": "(D) 32",
+   "key_idea": "Differentiate the integral equation to get a linear ODE, and fix the constant using $x=1$, where the integral vanishes.",
+   "solution": [
+    "$10\\int_{1}^{x}f(t)\\,dt=5xf(x)-x^5-9$. Differentiate both sides with respect to $x$: $10f(x)=5f(x)+5xf'(x)-5x^4$.",
+    "So $5f(x)=5xf'(x)-5x^4$.",
+    "Let $y=f(x)$, $\\frac{dy}{dx}=f'(x)$. Then $5y=5x\\frac{dy}{dx}-5x^4$, i.e. $\\frac{dy}{dx}-\\frac yx=x^3$.",
+    "This is linear with $P=-\\frac1x$. The integrating factor is $e^{\\int-\\frac1xdx}=e^{-\\ln x}=\\frac1x$.",
+    "$y\\cdot\\frac1x=\\int x^3\\cdot\\frac1x\\,dx=\\frac{x^3}{3}+C$, so $y=\\frac{x^4}{3}+Cx$.",
+    "Put $x=1$ in the given equation: the left side is $10\\int_{1}^{1}f(t)\\,dt=0$, so $0=5f(1)-1-9$ and $f(1)=2$.",
+    "$f(1)=\\frac13+C=2\\Rightarrow C=\\frac53$.",
+    "$f(3)=\\frac{3^4}{3}+\\frac53\\cdot3=3^3+5=32$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$xf'-f=x^4$ is the numerator of the quotient rule: $\\left(\\frac fx\\right)'=\\frac{xf'-f}{x^2}$, so integrate directly.",
+     "solution": [
+      "As before, differentiating gives $5f(x)=5xf'(x)-5x^4$, i.e. $xf'(x)-f(x)=x^4$.",
+      "Divide by $x^2$: $\\frac{xf'(x)-f(x)}{x^2}=x^2$. The left side is $\\frac{d}{dx}\\left(\\frac{f(x)}{x}\\right)$.",
+      "So $\\frac{d}{dx}\\left(\\frac{f(x)}{x}\\right)=x^2$ and $\\frac{f(x)}{x}=\\frac{x^3}{3}+C$.",
+      "Putting $x=1$ in the original equation gives $f(1)=2$, so $2=\\frac13+C$ and $C=\\frac53$.",
+      "$\\frac{f(3)}{3}=\\frac{27}{3}+\\frac53=9+\\frac53=\\frac{32}{3}$, hence $f(3)=32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x y'-y=g(x)\\iff\\left(\\frac yx\\right)'=\\frac{g(x)}{x^{2}}$. Similarly $y'+\\frac yx=\\frac{g}{x}\\iff(xy)'=g$ and in general $y'-\\frac{k}{x}y=g\\iff\\left(yx^{-k}\\right)'=gx^{-k}$.",
+    "In $\\int_{a}^{x}f=\\ldots$ equations, setting $x=a$ gives the missing initial condition ($f(a)$) for free; here $x=1$ gives $f(1)=2$.",
+    "Quick sanity check of the answer: $f(x)=\\frac{x^4}{3}+\\frac{5x}{3}$ satisfies $f:[1,\\infty)\\to[2,\\infty)$ since $f(1)=2$ and $f$ is increasing."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Differentiation of an integral equation (Leibniz rule)",
+    "Linear differential equation (integrating factor)"
+   ],
+   "level": 2,
+   "question": "Let $g$ be a differentiable function such that $\\int_{0}^{x}g(t)\\,dt=x-\\int_{0}^{x}t\\,g(t)\\,dt$, $x\\ge0$, and let $y=y(x)$ satisfy the differential equation $\\frac{dy}{dx}-y\\tan x=2(x+1)\\sec x\\;g(x)$, $x\\in\\left[0,\\frac\\pi2\\right)$. If $y(0)=0$, then $y\\left(\\frac\\pi3\\right)$ is equal to:",
+   "options": [
+    "$\\frac{2\\pi}{3\\sqrt3}$",
+    "$\\frac{4\\pi}{3\\sqrt3}$",
+    "$\\frac{4\\pi}{3}$",
+    "$\\frac{2\\pi}{3}$"
+   ],
+   "answer": "(C) $\\frac{4\\pi}{3}$",
+   "key_idea": "Differentiating the integral relation gives $g=\\frac1{1+x}$, which cancels the factor $(x+1)$ in the ODE and leaves $y'-y\\tan x=2\\sec x$.",
+   "solution": [
+    "Differentiate $\\int_{0}^{x}g(t)\\,dt=x-\\int_{0}^{x}t\\,g(t)\\,dt$: $g(x)=1-x\\,g(x)$.",
+    "So $(1+x)g(x)=1$ and $g(x)=\\frac{1}{1+x}$.",
+    "Then $2(x+1)\\sec x\\,g(x)=2\\sec x$, and the ODE becomes $\\frac{dy}{dx}-y\\tan x=2\\sec x$.",
+    "The integrating factor is $e^{-\\int\\tan x\\,dx}=e^{\\ln\\cos x}=\\cos x$.",
+    "$y\\cos x=\\int2\\sec x\\cos x\\,dx=\\int2\\,dx=2x+c$.",
+    "$y(0)=0\\Rightarrow c=0$, so $y=\\frac{2x}{\\cos x}$.",
+    "$y\\left(\\frac\\pi3\\right)=\\frac{2\\cdot\\frac\\pi3}{\\cos\\frac\\pi3}=\\frac{2\\pi/3}{1/2}=\\frac{4\\pi}{3}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Merge the two integrals into one, $\\int_0^x(1+t)g(t)\\,dt=x$, to get $g$ in one line; then note $y'-y\\tan x$ is $\\frac{(y\\cos x)'}{\\cos x}$.",
+     "solution": [
+      "Bring the integrals together: $\\int_{0}^{x}(1+t)\\,g(t)\\,dt=x$. Differentiating gives $(1+x)g(x)=1$ immediately.",
+      "Substituting, the right side of the ODE is $2(x+1)\\sec x\\cdot\\frac{1}{1+x}=2\\sec x$.",
+      "Multiply the ODE by $\\cos x$: $\\cos x\\cdot y'-y\\sin x=2$. The left side is $\\frac{d}{dx}(y\\cos x)$.",
+      "So $\\frac{d}{dx}(y\\cos x)=2$, giving $y\\cos x=2x$ (using $y(0)=0$).",
+      "At $x=\\frac\\pi3$: $y\\cdot\\frac12=\\frac{2\\pi}{3}$, so $y=\\frac{4\\pi}{3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$y'-y\\tan x=\\frac{(y\\cos x)'}{\\cos x}$ and $y'+y\\cot x=\\frac{(y\\sin x)'}{\\sin x}$: multiply by $\\cos x$ (or $\\sin x$) to spot the exact derivative without computing an integrating factor.",
+    "$\\int_0^xg=x-\\int_0^xtg$ can be merged as $\\int_0^x(1+t)g(t)\\,dt=x$, so $g(x)=\\frac1{1+x}$. Always combine integrals with the same limits before differentiating.",
+    "A factor such as $(x+1)$ multiplied by an unknown function usually exists to cancel against it: use this as a check on $g$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation (integrating factor)"
+   ],
+   "level": 1,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\frac{dy}{dx}+3\\left(\\tan^{2}x\\right)y+3y=\\sec^{2}x$, $y(0)=\\frac13+e^{3}$. Then $y\\left(\\frac\\pi4\\right)$ is equal to:",
+   "options": [
+    "$\\frac23+e^{3}$",
+    "$\\frac43$",
+    "$\\frac43+e^{3}$",
+    "$\\frac23$"
+   ],
+   "answer": "(B) $\\frac{4}{3}$",
+   "key_idea": "$3\\tan^2x+3=3\\sec^2x$, so the equation is linear with integrating factor $e^{3\\tan x}$.",
+   "solution": [
+    "Since $\\tan^2x+1=\\sec^2x$, the equation is $\\frac{dy}{dx}+\\left(3\\sec^2x\\right)y=\\sec^2x$.",
+    "Integrating factor: $e^{3\\int\\sec^2x\\,dx}=e^{3\\tan x}$.",
+    "$y\\,e^{3\\tan x}=\\int e^{3\\tan x}\\sec^2x\\,dx+c=\\frac{e^{3\\tan x}}{3}+c$.",
+    "At $x=0$, $y=e^3+\\frac13$: $e^{3}+\\frac13=\\frac13+c$, so $c=e^{3}$.",
+    "So $y\\,e^{3\\tan x}=\\frac{e^{3\\tan x}}{3}+e^{3}$.",
+    "At $x=\\frac\\pi4$, $\\tan x=1$: $y\\,e^{3}=\\frac{e^{3}}{3}+e^{3}=\\frac{4e^3}{3}$.",
+    "Hence $y\\left(\\frac\\pi4\\right)=\\frac43$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A constant particular solution $y=\\frac13$ exists by inspection, so $y-\\frac13$ satisfies a separable equation.",
+     "solution": [
+      "The equation is $y'+3\\sec^2x\\left(y-\\frac13\\right)=0$, because $3\\sec^2x\\cdot\\frac13=\\sec^2x$.",
+      "Let $u=y-\\frac13$. Then $u'=-3\\sec^2x\\;u$, which is separable: $\\frac{du}{u}=-3\\sec^2x\\,dx$.",
+      "Integrating: $\\ln|u|=-3\\tan x+c$, so $u=Ce^{-3\\tan x}$.",
+      "$y(0)=\\frac13+e^3\\Rightarrow u(0)=e^3=C$.",
+      "$y\\left(\\frac\\pi4\\right)=\\frac13+e^{3}e^{-3}=\\frac13+1=\\frac43$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $y'+P(x)\\,y=k\\,P(x)$ with $k$ a constant, then $y=k+Ce^{-\\int P\\,dx}$: $y=k$ is a particular solution. Here $P=3\\sec^2x$, $k=\\frac13$.",
+    "Identities that hide a linear ODE: $1+\\tan^2x=\\sec^2x$, $\\int\\sec^2x\\,dx=\\tan x$, so $e^{\\int\\sec^2x}=e^{\\tan x}$.",
+    "The IVP value $y(0)=\\frac13+e^3$ was designed so that $C=e^3$ cancels $e^{-3\\tan\\frac\\pi4}=e^{-3}$; whenever the answer options contain a $e^3$-term, check that it cancels."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Integral equation of Volterra type, reducing to a linear differential equation",
+    "Area bounded by a line and the coordinate axes"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,\\infty)\\to\\mathbb R$ be a differentiable function such that $f(x)=1-2x+\\int_{0}^{x}e^{x-t}f(t)\\,dt$ for all $x\\in[0,\\infty)$. Then the area of the region bounded by $y=f(x)$ and the coordinate axes is:",
+   "options": [
+    "$\\sqrt2$",
+    "$2$",
+    "$\\sqrt5$",
+    "$\\frac12$"
+   ],
+   "answer": "(D) $\\frac{1}{2}$",
+   "key_idea": "Write $e^{x-t}=e^{x}e^{-t}$ so that $e^x$ comes outside the integral; differentiating then gives a linear ODE in $f$.",
+   "solution": [
+    "$f(x)=1-2x+e^{x}\\int_{0}^{x}e^{-t}f(t)\\,dt\\quad\\cdots(1)$, valid for all $x\\ge0$.",
+    "Differentiate: $f'(x)=-2+e^{x}\\int_{0}^{x}e^{-t}f(t)\\,dt+e^{x}e^{-x}f(x)$.",
+    "From (1), $e^{x}\\int_{0}^{x}e^{-t}f(t)\\,dt=f(x)-1+2x$. So $f'(x)=-2+f(x)-1+2x+f(x)$.",
+    "Hence with $y=f(x)$: $\\frac{dy}{dx}=2y+2x-3$, i.e. $\\frac{dy}{dx}-2y=2x-3$.",
+    "Here $P=-2$, $Q=2x-3$, and the integrating factor is $e^{-2x}$.",
+    "$y\\,e^{-2x}=\\int e^{-2x}(2x-3)\\,dx=-\\frac{e^{-2x}}{2}(2x-3)-\\frac{e^{-2x}}{2}+C$.",
+    "So $y=\\frac{3-2x}{2}-\\frac12+Ce^{2x}$.",
+    "At $x=0$, (1) gives $f(0)=1$: $1=\\frac32-\\frac12+C$, so $C=0$.",
+    "Hence $y=\\frac{3-2x-1}{2}=\\frac{2-2x}{2}=1-x$.",
+    "The line $y=1-x$ meets the axes at $(0,1)$ and $(1,0)$, so the area of the triangle is $\\frac12\\times1\\times1=\\frac12$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Try $f(x)=a+bx$ directly in the integral equation: the $e^x$ terms must cancel, which fixes $a+b=0$, and uniqueness of the solution does the rest.",
+     "solution": [
+      "The integral equation, with $f(0)=1$, is equivalent to the first-order linear IVP found by differentiating, which has exactly one solution. So any function satisfying the integral equation is the answer.",
+      "Try $f(t)=a+bt$. Then $\\int_{0}^{x}e^{x-t}(a+bt)\\,dt=a\\left(e^{x}-1\\right)+b\\left(e^{x}-x-1\\right)$ (using $\\int_0^xte^{x-t}dt=e^x-x-1$).",
+      "The right side of the equation becomes $1-2x+(a+b)e^{x}-a-b-bx=(1-a-b)-(2+b)x+(a+b)e^{x}$.",
+      "Matching with $a+bx$: the coefficient of $e^{x}$ requires $a+b=0$. The constant term gives $a=1-a-b=1$, and the $x$ term gives $b=-(2+b)$, so $b=-1$.",
+      "These are consistent ($a+b=0$), so $f(x)=1-x$ is the solution.",
+      "The triangle bounded by $y=1-x$ and the axes has area $\\frac12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Convolution-type equations $f(x)=g(x)+\\int_0^xe^{x-t}f(t)\\,dt$: write $e^{x-t}=e^xe^{-t}$ and differentiate once to get $f'=g'+f+(f-g)$, i.e. $f'-2f=g'-g$.",
+    "The ODE $f'-2f=g'-g$ with $f(0)=g(0)$ often has a polynomial solution of the same degree as $g$; trying $f=a+bx$ is quick (here $g=1-2x$, $g'-g=2x-3$).",
+    "The area bounded by $y=mx+c$ and the axes is $\\frac{c^2}{2|m|}$; here $c=1$, $m=-1$ gives $\\frac12$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation with $x$ as a function of $y$ and substitution $\\cos y=t$",
+    "Integration of $x^{2}e^{x}$ by parts"
+   ],
+   "level": 3,
+   "question": "If a curve $y=y(x)$ passes through the point $\\left(1,\\frac\\pi2\\right)$ and satisfies the differential equation $\\left(7x^{4}\\cot y-e^{x}\\operatorname{cosec}y\\right)\\frac{dx}{dy}=x^{5}$, $x\\ge1$, then at $x=2$ the value of $\\cos y$ is:",
+   "options": [
+    "$\\frac{2e^{2}-e}{64}$",
+    "$\\frac{2e^{2}+e}{128}$",
+    "$\\frac{2e^{2}-e}{128}$",
+    "$\\frac{2e^{2}+e}{64}$"
+   ],
+   "answer": "(C) $\\frac{2e^{2}-e}{128}$",
+   "key_idea": "Multiplying by $\\sin y$ and putting $\\cos y=t$ turns the equation into a linear ODE in $t$ with integrating factor $x^7$.",
+   "solution": [
+    "The equation is $\\left(7x^{4}\\cot y-e^{x}\\operatorname{cosec}y\\right)\\frac{dx}{dy}=x^{5}$. Taking the reciprocal, $\\frac{dy}{dx}=\\frac{7x^4\\cot y-e^x\\operatorname{cosec}y}{x^5}$.",
+    "Multiply by $x^{5}\\sin y$: $7x^{4}\\cos y-e^{x}=x^{5}\\sin y\\,\\frac{dy}{dx}$.",
+    "Put $\\cos y=t$, so $-\\sin y\\,\\frac{dy}{dx}=\\frac{dt}{dx}$: $7x^{4}t-e^{x}=-x^{5}\\frac{dt}{dx}$.",
+    "Divide by $x^{5}$: $\\frac{7}{x}t-\\frac{e^{x}}{x^{5}}=-\\frac{dt}{dx}$, i.e. $\\frac{dt}{dx}+\\frac7xt=\\frac{e^x}{x^5}$.",
+    "Integrating factor: $e^{\\int\\frac7xdx}=e^{7\\ln x}=x^{7}$.",
+    "$t\\,x^{7}=\\int e^{x}x^{2}\\,dx+c$.",
+    "By parts: $\\int x^{2}e^{x}dx=x^{2}e^{x}-2xe^{x}+2e^{x}$. So $x^{7}\\cos y=x^{2}e^{x}-2xe^{x}+2e^{x}+c$.",
+    "At $(1,\\frac\\pi2)$: $\\cos\\frac\\pi2=0$, so $0=e-2e+2e+c=e+c$ and $c=-e$.",
+    "At $x=2$: $128\\cos y=4e^{2}-4e^{2}+2e^{2}-e=2e^{2}-e$.",
+    "So $\\cos y=\\frac{2e^{2}-e}{128}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rearranged, the equation says $d\\left(x^{7}\\cos y\\right)=x^{2}e^{x}\\,dx$: multiply by $x^{2}$ and the left side becomes an exact differential.",
+     "solution": [
+      "From $7x^{4}\\cos y-e^{x}=x^{5}\\sin y\\,\\frac{dy}{dx}$ we get $7x^{4}\\cos y\\,dx-x^{5}\\sin y\\,dy=e^{x}dx$.",
+      "Multiply by $x^{2}$: $7x^{6}\\cos y\\,dx-x^{7}\\sin y\\,dy=x^{2}e^{x}dx$.",
+      "The left side is exactly $d\\left(x^{7}\\cos y\\right)$, since $d(x^7\\cos y)=7x^6\\cos y\\,dx-x^7\\sin y\\,dy$.",
+      "Hence $x^{7}\\cos y=\\int x^{2}e^{x}dx=e^{x}\\left(x^{2}-2x+2\\right)+c$.",
+      "The point $\\left(1,\\frac\\pi2\\right)$ gives $0=e+c$, so $c=-e$.",
+      "At $x=2$: $128\\cos y=2e^{2}-e$, so $\\cos y=\\frac{2e^{2}-e}{128}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$d\\left(x^{n}\\cos y\\right)=nx^{n-1}\\cos y\\,dx-x^{n}\\sin y\\,dy$: the combination $7x^6\\cos y\\,dx-x^7\\sin y\\,dy$ is a signal to look for $x^7\\cos y$.",
+    "Equations containing $\\cot y$ and $\\operatorname{cosec}y$ together: multiply by $\\sin y$, then $t=\\cos y$.",
+    "$\\int x^{n}e^{x}dx=e^{x}\\left(x^{n}-nx^{n-1}+n(n-1)x^{n-2}-\\cdots\\right)$; for $n=2$: $e^{x}(x^2-2x+2)$.",
+    "Check the final form with the initial point first: at $(1,\\frac\\pi2)$, $\\cos y=0$ gives $e(1-2+2)+c=0$, so $c=-e$ (a one-line way to catch sign slips)."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation (integrating factor)"
+   ],
+   "level": 3,
+   "question": "Let $y=y(x)$ be the solution curve of the differential equation $x\\left(x^{2}+e^{x}\\right)dy+\\left(e^{x}(x-2)y-x^{3}\\right)dx=0$, $x>0$, passing through the point $(1,0)$. Then $y(2)$ is equal to:",
+   "options": [
+    "$\\frac{2}{2-e^{2}}$",
+    "$\\frac{4}{4+e^{2}}$",
+    "$\\frac{4}{4-e^{2}}$",
+    "$\\frac{2}{2+e^{2}}$"
+   ],
+   "answer": "(B) $\\frac{4}{4+e^{2}}$",
+   "key_idea": "The integrating factor is $1+\\frac{e^{x}}{x^{2}}$, because $\\frac{d}{dx}\\left(\\frac{e^x}{x^2}\\right)=\\frac{e^x(x-2)}{x^3}$.",
+   "solution": [
+    "Write the equation as $x\\left(x^{2}+e^{x}\\right)\\frac{dy}{dx}+e^{x}(x-2)y=x^{3}$.",
+    "Divide by $x\\left(x^2+e^x\\right)$: $\\frac{dy}{dx}+\\frac{e^{x}(x-2)}{x\\left(x^{2}+e^{x}\\right)}y=\\frac{x^{2}}{x^{2}+e^{x}}$.",
+    "Integrating factor $=e^{\\int\\frac{e^{x}(x-2)}{x(x^2+e^x)}dx}$. Divide numerator and denominator by $x^{3}$ inside: $\\int\\frac{e^{x}\\left(\\frac1{x^{2}}-\\frac2{x^{3}}\\right)}{1+\\frac{e^{x}}{x^{2}}}dx$.",
+    "Put $1+\\frac{e^{x}}{x^{2}}=t$; then $dt=\\frac{x^{2}e^{x}-2xe^{x}}{x^{4}}dx=e^{x}\\left(\\frac1{x^2}-\\frac{2}{x^3}\\right)dx$, so the exponent is $\\int\\frac{dt}{t}=\\ln t$.",
+    "So the integrating factor is $1+\\frac{e^{x}}{x^{2}}$.",
+    "$y\\left(1+\\frac{e^{x}}{x^{2}}\\right)=\\int\\frac{x^{2}}{x^{2}+e^{x}}\\cdot\\frac{x^{2}+e^{x}}{x^{2}}dx=\\int dx=x+C$.",
+    "The curve passes through $(1,0)$: $0=1+C$, so $C=-1$.",
+    "$y=\\frac{x-1}{1+\\frac{e^{x}}{x^{2}}}$.",
+    "$y(2)=\\frac{1}{1+\\frac{e^{2}}{4}}=\\frac{4}{4+e^{2}}$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Divide the whole equation by $x^{3}$: it becomes $d\\left(y\\left(1+\\frac{e^x}{x^2}\\right)\\right)=dx$, an exact product derivative, so no integrating-factor integral is needed.",
+     "solution": [
+      "Divide $x\\left(x^{2}+e^{x}\\right)dy+\\left(e^{x}(x-2)y-x^{3}\\right)dx=0$ by $x^{3}$: $\\left(1+\\frac{e^{x}}{x^{2}}\\right)dy+y\\,\\frac{e^{x}(x-2)}{x^{3}}dx-dx=0$.",
+      "Let $u=1+\\frac{e^{x}}{x^{2}}$. Then $du=\\frac{e^{x}x^2-2xe^{x}}{x^{4}}dx=\\frac{e^{x}(x-2)}{x^{3}}dx$.",
+      "So the equation reads $u\\,dy+y\\,du=dx$, i.e. $d(uy)=dx$.",
+      "Hence $y\\left(1+\\frac{e^{x}}{x^{2}}\\right)=x+C$, and $(1,0)$ gives $C=-1$.",
+      "At $x=2$: $y\\left(1+\\frac{e^2}{4}\\right)=1$, so $y(2)=\\frac{4}{4+e^{2}}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(\\frac{e^{x}}{x^{n}}\\right)=\\frac{e^{x}(x-n)}{x^{n+1}}$. The factor $e^x(x-2)$ is the signal for $\\frac{e^x}{x^2}$.",
+    "Before computing an integrating factor, try dividing by a power of $x$ to see whether the coefficient of $y$ is the derivative of the coefficient of $y'$ (then $d(uy)$ is exact).",
+    "For $P\\,y'+P'y=Q$ the equation is $(Py)'=Q$; check this form first."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation (integrating factor)",
+    "Definite integral of even and odd functions"
+   ],
+   "level": 2,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\left(x^{2}+1\\right)y'-2xy=\\left(x^{4}+2x^{2}+1\\right)\\cos x$, $y(0)=1$. Then $\\int_{-3}^{3}y(x)\\,dx$ is:",
+   "options": [
+    "$36$",
+    "$18$",
+    "$24$",
+    "$30$"
+   ],
+   "answer": "(C) 24",
+   "key_idea": "Dividing by $(x^2+1)^2$ turns the left side into $\\frac{d}{dx}\\left(\\frac{y}{1+x^{2}}\\right)$; the odd part of $y$ then integrates to zero on $[-3,3]$.",
+   "solution": [
+    "Since $x^4+2x^2+1=(x^2+1)^2$, the equation is $\\left(x^{2}+1\\right)\\frac{dy}{dx}-2xy=\\left(x^{2}+1\\right)^{2}\\cos x$.",
+    "Divide by $(x^{2}+1)^{2}$: $\\frac{1}{x^{2}+1}\\frac{dy}{dx}-\\frac{2x}{(x^{2}+1)^{2}}y=\\cos x$.",
+    "The left side is $\\frac{d}{dx}\\left(y\\cdot\\frac{1}{1+x^{2}}\\right)$, so $\\frac{d}{dx}\\left(\\frac{y}{1+x^2}\\right)=\\cos x$.",
+    "Integrating: $\\frac{y}{1+x^{2}}=\\sin x+c$.",
+    "$y(0)=1$ gives $1=0+c$, so $c=1$ and $y=(\\sin x+1)(x^{2}+1)$.",
+    "$\\int_{-3}^{3}y\\,dx=\\int_{-3}^{3}\\sin x\\left(x^{2}+1\\right)dx+\\int_{-3}^{3}\\left(x^{2}+1\\right)dx$.",
+    "The first integrand is odd, so its integral is $0$. The second is even: $2\\left[\\frac{x^{3}}{3}+x\\right]_{0}^{3}=2(9+3)=24$.",
+    "So $\\int_{-3}^{3}y\\,dx=24$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(\\frac{y}{u}\\right)=\\frac{u\\,y'-u'y}{u^2}$. Here $u=1+x^2$ and $u'=2x$, so $(x^2+1)y'-2xy=u^{2}\\left(\\frac yu\\right)'$: spot the quotient rule.",
+    "On a symmetric interval $[-a,a]$: odd parts of the integrand vanish, even parts double. So only the even part $(x^2+1)$ of $y$ contributes.",
+    "$y'-\\frac{u'}{u}y=g\\iff\\left(\\frac yu\\right)'=\\frac{g}{u}$; for $u=1+x^{2}$, $\\frac{u'}{u}=\\frac{2x}{1+x^{2}}$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Composition of functions",
+    "Linear differential equation (integrating factor)"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=x-1$ and $g(x)=e^{x}$ for $x\\in\\mathbb R$. If $\\frac{dy}{dx}=\\left(e^{-2\\sqrt x}\\,g\\left(f\\left(f(x)\\right)\\right)-\\frac{y}{\\sqrt x}\\right)$, $y(0)=0$, then $y(1)$ is:",
+   "options": [
+    "$\\frac{1-e^{2}}{e^{4}}$",
+    "$\\frac{2e-1}{e^{3}}$",
+    "$\\frac{e-1}{e^{4}}$",
+    "$\\frac{1-e^{3}}{e^{4}}$"
+   ],
+   "answer": "(C) $\\frac{e-1}{e^{4}}$",
+   "key_idea": "$g(f(f(x)))=e^{x-2}$, and with integrating factor $e^{2\\sqrt x}$ the right side collapses to $e^{x-2}$.",
+   "solution": [
+    "$f(f(x))=(x-1)-1=x-2$, so $g(f(f(x)))=e^{x-2}$.",
+    "The equation becomes $\\frac{dy}{dx}=e^{-2\\sqrt x}e^{x-2}-\\frac{1}{\\sqrt x}y$, i.e. $\\frac{dy}{dx}+\\frac{1}{\\sqrt x}y=e^{-2\\sqrt x+x-2}\\quad\\cdots(1)$.",
+    "Integrating factor: $e^{\\int\\frac{dx}{\\sqrt x}}=e^{2\\sqrt x}$.",
+    "$y\\,e^{2\\sqrt x}=\\int e^{2\\sqrt x}e^{-2\\sqrt x+x-2}\\,dx=\\int e^{x-2}dx$.",
+    "$y\\,e^{2\\sqrt x}=e^{x-2}+C$.",
+    "$y(0)=0$: $0=e^{-2}+C$, so $C=-e^{-2}$.",
+    "$y(1)\\,e^{2}=e^{-1}-e^{-2}$, so $y(1)=\\frac{e^{-1}-e^{-2}}{e^{2}}=\\frac{e-1}{e^{4}}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int\\frac{dx}{\\sqrt x}=2\\sqrt x$, so an equation $y'+\\frac{y}{\\sqrt x}=\\ldots$ has integrating factor $e^{2\\sqrt x}$; when the right side contains $e^{-2\\sqrt x}$ the factors cancel.",
+    "Compositions of shifts: $f(f(x))=x-2$ for $f(x)=x-1$; $g\\circ f\\circ f(x)=e^{x-2}$.",
+    "General: $y'+p(x)y=q(x)e^{-\\int p}$ implies $\\left(ye^{\\int p}\\right)'=q$; so the answer is $\\int q$ with no further integration trouble."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation in $\\frac{dx}{dy}$ form"
+   ],
+   "level": 2,
+   "question": "Let $x=x(y)$ be the solution of the differential equation $y^{2}\\,dx+\\left(x-\\frac1y\\right)dy=0$. If $x(1)=1$, then $x\\left(\\frac12\\right)$ is:",
+   "options": [
+    "$3-e$",
+    "$\\frac12+e$",
+    "$\\frac32+e$",
+    "$3+e$"
+   ],
+   "answer": "(A) $3-e$",
+   "key_idea": "Treat $x$ as the dependent variable: the equation is linear in $x$ with integrating factor $e^{-1/y}$.",
+   "solution": [
+    "$y^{2}dx+\\left(x-\\frac1y\\right)dy=0\\Rightarrow\\frac{dx}{dy}=-\\frac{x}{y^{2}}+\\frac{1}{y^{3}}$.",
+    "So $\\frac{dx}{dy}+\\frac{x}{y^{2}}=\\frac{1}{y^{3}}$, linear in $x$.",
+    "Integrating factor: $e^{\\int\\frac{1}{y^{2}}dy}=e^{-1/y}$.",
+    "$x\\,e^{-1/y}=\\int e^{-1/y}\\cdot\\frac{1}{y^{3}}dy+C$.",
+    "Put $-\\frac1y=t$, so $\\frac{1}{y^{2}}dy=dt$ and $\\frac1y=-t$: $\\frac{1}{y^3}dy=-t\\,dt$.",
+    "$x\\,e^{-1/y}=-\\int e^{t}\\,t\\,dt+C=-\\left[te^{t}-e^{t}\\right]+C=e^{t}(1-t)+C$.",
+    "So $x\\,e^{-1/y}=e^{-1/y}\\left(1+\\frac1y\\right)+C$.",
+    "$x(1)=1$: $1\\cdot e^{-1}=e^{-1}(1+1)+C$, so $C=-\\frac1e$.",
+    "Put $y=\\frac12$: $x\\,e^{-2}=e^{-2}(1+2)-e^{-1}$, so $x=3-e$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=\\frac1y$: the equation becomes constant-coefficient, $\\frac{dx}{du}-x=-u$, and a linear trial solution $x=au+b$ finds the particular solution without any integration by parts.",
+     "solution": [
+      "Let $u=\\frac1y$. Then $dy=-\\frac{du}{u^{2}}$ and $\\frac{dx}{dy}=-u^{2}\\frac{dx}{du}$.",
+      "The equation $\\frac{dx}{dy}+\\frac{x}{y^{2}}=\\frac1{y^3}$ becomes $-u^{2}\\frac{dx}{du}+u^{2}x=u^{3}$, i.e. $\\frac{dx}{du}-x=-u$.",
+      "Try $x=au+b$: $a-au-b=-u$ gives $a=1$ and $b=a=1$. So a particular solution is $x=u+1$.",
+      "The complementary solution of $\\frac{dx}{du}-x=0$ is $Ce^{u}$, so $x=u+1+Ce^{u}$.",
+      "At $y=1$ ($u=1$): $1=2+Ce$, so $C=-\\frac1e$.",
+      "At $y=\\frac12$ ($u=2$): $x=3-\\frac{e^{2}}{e}=3-e$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When the equation is $dx+\\ldots dy$ with $x$ appearing linearly and $dx/dy$ present, treat $x$ as the dependent variable: $\\frac{dx}{dy}+P(y)x=Q(y)$ with IF $=e^{\\int P\\,dy}$.",
+    "$\\int te^{t}dt=(t-1)e^{t}$ and $\\int t^2e^t\\,dt=(t^2-2t+2)e^t$.",
+    "Substituting $u=\\frac1y$ converts $\\frac1{y^2}dy$ into $-du$ and often changes variable-coefficient linear ODEs into constant-coefficient ones."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Functional equation leading to a differential equation",
+    "Summation of an arithmetic series"
+   ],
+   "level": 2,
+   "question": "Let $f(x)$ be a real differentiable function such that $f(0)=1$ and $f(x+y)=f(x)f'(y)+f'(x)f(y)$ for all $x,y\\in\\mathbb R$. Then $\\sum_{n=1}^{100}\\log_{e}f(n)$ is equal to:",
+   "options": [
+    "$2406$",
+    "$5220$",
+    "$2525$",
+    "$2384$"
+   ],
+   "answer": "(C) 2525",
+   "key_idea": "Put $y=0$ in the functional equation: after finding $f'(0)=\\frac12$ it becomes $f'(x)=\\frac12f(x)$.",
+   "solution": [
+    "Put $x=y=0$: $f(0)=2f(0)f'(0)$. Since $f(0)=1$, $f'(0)=\\frac12$.",
+    "Put $y=0$ in the given equation: $f(x)=f(x)f'(0)+f(0)f'(x)$.",
+    "So $f(x)=\\frac12f(x)+f'(x)$, i.e. $f'(x)=\\frac12f(x)$.",
+    "Separate variables with $y=f(x)$: $\\int\\frac{dy}{y}=\\int\\frac{dx}{2}$, so $\\ln y=\\frac x2+C$.",
+    "$f(0)=1$ gives $0=0+C$, so $C=0$ and $f(x)=e^{x/2}$.",
+    "(Check: $f(x)f'(y)+f'(x)f(y)=\\frac12e^{(x+y)/2}+\\frac12e^{(x+y)/2}=e^{(x+y)/2}=f(x+y)$ ✓.)",
+    "Then $\\ln f(x)=\\frac x2$ and $\\sum_{n=1}^{100}\\ln f(n)=\\frac12+\\frac22+\\cdots+\\frac{100}{2}=\\frac12\\cdot\\frac{100\\times101}{2}=2525$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $f(x+y)=\\ldots$ with $f$ differentiable, substitute $y=0$ (and $x=y=0$) first: it converts the functional equation into an ODE in $f$ alone.",
+    "$f'=kf,\\ f(0)=1\\Rightarrow f=e^{kx}$; here $k=f'(0)=\\frac12$. Always verify the solution in the original functional equation.",
+    "$\\sum_{n=1}^{N}n=\\frac{N(N+1)}{2}$; with $\\ln f(n)=\\frac n2$: $\\frac{5050}{2}=2525$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Linear differential equation in $\\frac{dx}{dy}$ form",
+    "Inverse trigonometric function $\\tan^{-1}$"
+   ],
+   "level": 2,
+   "question": "If $x=f(y)$ is the solution of the differential equation $\\left(1+y^{2}\\right)+\\left(x-2e^{\\tan^{-1}y}\\right)\\frac{dy}{dx}=0$, $y\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$, with $f(0)=1$, then $f\\left(\\frac{1}{\\sqrt3}\\right)$ is equal to:",
+   "options": [
+    "$e^{\\pi/6}$",
+    "$e^{\\pi/4}$",
+    "$e^{\\pi/12}$",
+    "$e^{\\pi/3}$"
+   ],
+   "answer": "(A) $e^{\\pi/6}$",
+   "key_idea": "Multiply by $\\frac{dx}{dy}$ to see the equation is linear in $x$, with integrating factor $e^{\\tan^{-1}y}$.",
+   "solution": [
+    "Multiply the equation by $\\frac{dx}{dy}$: $\\left(1+y^{2}\\right)\\frac{dx}{dy}+x-2e^{\\tan^{-1}y}=0$.",
+    "So $\\frac{dx}{dy}+\\frac{1}{1+y^{2}}x=\\frac{2e^{\\tan^{-1}y}}{1+y^{2}}$, with $P=\\frac1{1+y^2}$ and $Q=\\frac{2e^{\\tan^{-1}y}}{1+y^{2}}$.",
+    "Integrating factor: $e^{\\int\\frac{dy}{1+y^{2}}}=e^{\\tan^{-1}y}$.",
+    "$x\\,e^{\\tan^{-1}y}=\\int\\frac{2e^{\\tan^{-1}y}}{1+y^{2}}e^{\\tan^{-1}y}dy+C=\\int\\frac{2e^{2\\tan^{-1}y}}{1+y^{2}}dy+C$.",
+    "Put $e^{2\\tan^{-1}y}=z$; then $e^{2\\tan^{-1}y}\\cdot\\frac{2}{1+y^{2}}dy=dz$, so $x\\,e^{\\tan^{-1}y}=\\int dz+C=z+C$.",
+    "$x\\,e^{\\tan^{-1}y}=e^{2\\tan^{-1}y}+C$, i.e. $x=e^{\\tan^{-1}y}+Ce^{-\\tan^{-1}y}$.",
+    "$f(0)=1$: $y=0,\\ x=1$ gives $1=1+C$, so $C=0$ and $x=e^{\\tan^{-1}y}$.",
+    "At $y=\\frac1{\\sqrt3}$: $\\tan^{-1}\\frac{1}{\\sqrt3}=\\frac\\pi6$, so $x=e^{\\pi/6}$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $y=\\tan\\theta$: $\\frac{dy}{1+y^{2}}=d\\theta$, so the equation becomes $\\frac{dx}{d\\theta}+x=2e^{\\theta}$ with constant coefficients.",
+     "solution": [
+      "Let $\\theta=\\tan^{-1}y$, so $d\\theta=\\frac{dy}{1+y^{2}}$. The equation $\\left(1+y^2\\right)\\frac{dx}{dy}+x=2e^{\\tan^{-1}y}$ becomes $\\frac{dx}{d\\theta}+x=2e^{\\theta}$.",
+      "Try $x=ae^{\\theta}$: $ae^{\\theta}+ae^{\\theta}=2e^{\\theta}$ gives $a=1$. The complementary solution is $Ce^{-\\theta}$, so $x=e^{\\theta}+Ce^{-\\theta}$.",
+      "At $y=0$ ($\\theta=0$): $x=1$, so $1=1+C$, $C=0$.",
+      "Thus $x=e^{\\theta}$; at $y=\\frac{1}{\\sqrt3}$, $\\theta=\\frac\\pi6$ and $x=e^{\\pi/6}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The pair $\\frac{dy}{1+y^{2}}$ and $\\tan^{-1}y$ signals the substitution $y=\\tan\\theta$ (the equation then becomes constant-coefficient).",
+    "For $x'+x=ke^{\\theta}$ the particular solution is $\\frac k2e^\\theta$ (resonance would occur only for $e^{-\\theta}$).",
+    "Domain check: $\\tan^{-1}$ keeps $\\theta\\in(-\\frac\\pi2,\\frac\\pi2)$, so $x=e^\\theta>0$ and the solution is defined for all real $y$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Homogeneous differential equation",
+    "Double-angle formula for cosine"
+   ],
+   "level": 3,
+   "question": "Let $x=x(y)$ be the solution of the differential equation $y=\\left(x-y\\frac{dx}{dy}\\right)\\sin\\left(\\frac xy\\right)$, $y>0$ and $x(1)=\\frac\\pi2$. Then $\\cos(x(2))$ is equal to:",
+   "options": [
+    "$2\\left(\\log_{e}2\\right)^{2}-1$",
+    "$2\\left(\\log_{e}2\\right)-1$",
+    "$1-2\\left(\\log_{e}2\\right)$",
+    "$1-2\\left(\\log_{e}2\\right)^{2}$"
+   ],
+   "answer": "(A) $2\\left(\\log_{e}2\\right)^{2}-1$",
+   "key_idea": "$x\\,dy-y\\,dx=-y^{2}\\,d\\left(\\frac xy\\right)$, so the equation separates in the variables $y$ and $\\frac xy$.",
+   "solution": [
+    "$y=\\left(x-y\\frac{dx}{dy}\\right)\\sin\\frac xy$. Multiply by $dy$: $y\\,dy=(x\\,dy-y\\,dx)\\sin\\frac xy$.",
+    "Divide by $y^{2}$: $\\frac{dy}{y}=\\frac{x\\,dy-y\\,dx}{y^{2}}\\sin\\frac xy$.",
+    "Now $d\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^{2}}$, so $\\frac{x\\,dy-y\\,dx}{y^{2}}=-d\\left(\\frac xy\\right)$ and $\\frac{dy}{y}=-\\sin\\left(\\frac xy\\right)d\\left(\\frac xy\\right)$.",
+    "Integrate: $\\ln y=\\cos\\frac xy+c$.",
+    "$x(1)=\\frac\\pi2$ means $y=1,\\ x=\\frac\\pi2$: $0=\\cos\\frac\\pi2+c$, so $c=0$ and $\\ln y=\\cos\\frac xy$.",
+    "For $y=2$: $\\ln2=\\cos\\frac x2$.",
+    "$\\cos x=2\\cos^{2}\\frac x2-1=2\\left(\\ln2\\right)^{2}-1$. Option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes $\\frac{x\\,dy-y\\,dx}{y^2}=d\\left(\\frac xy\\right)$, which has the wrong sign (the correct identity is $d\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^2}$). It therefore gets $\\ln y=-\\cos\\frac xy+c$. The correct integral is $\\ln y=\\cos\\frac xy+c$. The final answer $2(\\ln2)^2-1$ is unchanged because $\\cos\\frac x2$ enters only through $\\cos^2\\frac x2$; the corrected solution also satisfies the ODE (checked numerically).",
+   "alternate_solutions": [
+    {
+     "idea": "Treat it as a homogeneous equation: put $x=vy$ so that $x-y\\frac{dx}{dy}=-y^{2}\\frac{dv}{dy}$ and the variables separate.",
+     "solution": [
+      "Let $x=vy$, so $\\frac{dx}{dy}=v+y\\frac{dv}{dy}$ and $x-y\\frac{dx}{dy}=vy-vy-y^{2}\\frac{dv}{dy}=-y^{2}\\frac{dv}{dy}$.",
+      "The equation becomes $y=-y^{2}\\frac{dv}{dy}\\sin v$, i.e. $\\sin v\\,dv=-\\frac{dy}{y}$.",
+      "Integrating: $-\\cos v=-\\ln y+c$, so $\\cos v=\\ln y-c$.",
+      "$y=1,\\ v=\\frac\\pi2$: $0=0-c$, so $c=0$ and $\\cos\\frac xy=\\ln y$.",
+      "At $y=2$: $\\cos\\frac x2=\\ln2$, so $\\cos x=2\\cos^2\\frac x2-1=2(\\ln2)^2-1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$d\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^{2}}$ and $d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^{2}}$: keep the sign straight. Equations with the combination $x\\,dy-y\\,dx$ are homogeneous.",
+    "For $\\frac{dx}{dy}$ homogeneous equations, the substitution $x=vy$ always separates the variables.",
+    "$\\cos x=2\\cos^2\\frac x2-1$: the answer only needs $\\cos^2\\frac x2$, which is why the sign slip in the PDF did not change the answer.",
+    "Verification of the corrected solution: from $\\ln y=\\cos\\frac xy$, differentiating w.r.t. $y$ gives $\\frac1y=-\\sin\\frac xy\\cdot\\frac{y\\,x'-x}{y^{2}}$, i.e. $y=\\left(x-yx'\\right)\\sin\\frac xy$ ✓."
+   ]
+  }
+ ]
+}
