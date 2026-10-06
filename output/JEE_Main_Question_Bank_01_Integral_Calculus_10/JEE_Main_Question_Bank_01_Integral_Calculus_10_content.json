@@ -1,0 +1,492 @@
+{
+ "title": "JEE Main Question Bank 01 Integral Calculus 10 — Paper Analysis",
+ "subtitle": "Questions 181–191 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_01_Integral_Calculus_10.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 11,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for the correct numerical value · 0 if unanswered (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "level": 3,
+   "concepts": [
+    "Area of a region bounded by parabolas and a line"
+   ],
+   "question": "Let the area of the region $\\{(x,y): x-2y+4\\ge0,\\ x+2y^2\\ge0,\\ x+4y^2\\le8,\\ y\\ge0\\}$ be $\\frac mn$, where $m$ and $n$ are coprime numbers. Then $m+n$ is equal to ______.",
+   "answer": "119",
+   "key_idea": "Read the region as $y\\le\\frac{x+4}2$, outside $x=-2y^2$, inside $x=8-4y^2$, then cut the $x$-axis at $-2,-1,0,8$.",
+   "solution": [
+    "Boundaries: line $y=\\frac{x+4}2$ (region below it), parabola $x=-2y^2$ (region on its right, i.e. $y\\ge\\sqrt{-x/2}$ for $x<0$), parabola $x=8-4y^2$ (region inside it, $y\\le\\sqrt{\\frac{8-x}4}$) and $y\\ge0$.",
+    "The line meets $x=-2y^2$ at $(-2,1)$ and meets $x=8-4y^2$ at $\\left(-1,\\frac32\\right)$, so the upper boundary is the line for $-2\\le x\\le-1$ and the right parabola for $x\\ge-1$.",
+    "$A=\\int_{-2}^{-1}\\left(\\frac{x+4}2-\\sqrt{\\frac{-x}2}\\right)dx+\\int_{-1}^{0}\\left(\\sqrt{\\frac{8-x}4}-\\sqrt{\\frac{-x}2}\\right)dx+\\int_0^8\\sqrt{\\frac{8-x}4}\\,dx$.",
+    "First integral: $\\left[\\frac{x^2}4+2x\\right]_{-2}^{-1}=\\frac54$ and $\\int_{-2}^{-1}\\sqrt{\\frac{-x}2}\\,dx=\\frac43-\\frac{\\sqrt2}3$, so it equals $-\\frac1{12}+\\frac{\\sqrt2}3$.",
+    "Second integral: $\\int_{-1}^0\\sqrt{\\frac{8-x}4}\\,dx=\\frac13\\left(27-16\\sqrt2\\right)=9-\\frac{16\\sqrt2}3$ and $\\int_{-1}^0\\sqrt{\\frac{-x}2}\\,dx=\\frac{\\sqrt2}3$, so it equals $9-\\frac{17\\sqrt2}3$.",
+    "Third integral: $\\frac12\\int_0^8\\sqrt{8-x}\\,dx=\\frac12\\cdot\\frac23\\cdot8^{3/2}=\\frac{16\\sqrt2}3$.",
+    "Adding, the $\\sqrt2$ terms cancel ($\\frac13-\\frac{17}3+\\frac{16}3=0$): $A=-\\frac1{12}+9=\\frac{107}{12}$.",
+    "$\\frac mn=\\frac{107}{12}$ with $\\gcd(107,12)=1$, so $m+n=119$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Slice horizontally: for each $y$ the strip runs between two parabola/line $x$-values, so only two ranges of $y$ are needed.",
+     "solution": [
+      "Write every boundary as $x$ in terms of $y$: $x\\ge-2y^2$, $x\\ge2y-4$ (from $x-2y+4\\ge0$) and $x\\le8-4y^2$, with $y\\ge0$.",
+      "The curves $x=-2y^2$ and $x=2y-4$ cross where $y^2+y-2=0$, i.e. $y=1$; so the left boundary is $-2y^2$ for $0\\le y\\le1$ and $2y-4$ for $y\\ge1$.",
+      "The line meets $x=8-4y^2$ where $2y-4=8-4y^2$, i.e. $2y^2+y-6=0$, $y=\\frac32$; the region ends at $y=\\frac32$.",
+      "For $0\\le y\\le1$ the strip width is $8-4y^2+2y^2=8-2y^2$; for $1\\le y\\le\\frac32$ it is $8-4y^2-(2y-4)=12-4y^2-2y$.",
+      "$\\int_0^1(8-2y^2)\\,dy=8-\\frac23=\\frac{22}3$.",
+      "$\\int_1^{3/2}(12-4y^2-2y)\\,dy=6-\\frac43\\left(\\frac{27}8-1\\right)-\\left(\\frac94-1\\right)=6-\\frac{19}6-\\frac54=\\frac{19}{12}$.",
+      "$A=\\frac{22}3+\\frac{19}{12}=\\frac{107}{12}$, so $m+n=107+12=119$; no surds appear at all."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For regions bounded by parabolas $x=f(y)$ and lines, integrate in $y$: each boundary is a polynomial in $y$ and no square roots (hence no surds) appear.",
+    "Choose the direction with fewer breakpoints: here $y$-strips need two ranges, $x$-strips need three; breakpoints are where two boundaries cross.",
+    "A line $y=\\frac{x+4}2$ meets $x=-2y^2$ by substituting $x$: $y^2+y-2=0$; reject the root that violates a given condition such as $y\\ge0$.",
+    "If the answer is rational but the working has surds (like $\\sqrt2$), their coefficients must cancel - here $1-17+16=0$ - a quick self-check."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 2,
+   "level": 2,
+   "concepts": [
+    "Area of a region under the minimum of two curves"
+   ],
+   "question": "If the area of the region $\\left\\{(x,y):0\\le y\\le\\min\\left\\{2x,\\ 6x-x^2\\right\\}\\right\\}$ is $A$, then $12A$ is equal to ______.",
+   "answer": "304",
+   "key_idea": "$\\min\\{2x,6x-x^2\\}$ switches from the line to the parabola at their intersection $x=4$.",
+   "solution": [
+    "Solve $y=2x$ with $y=6x-x^2$: $2x=6x-x^2\\Rightarrow x^2-4x=0$, so $x=0,4$ and the points are $(0,0)$ and $(4,8)$.",
+    "For $0\\le x\\le4$ the line $y=2x$ is the smaller one; for $4\\le x\\le6$ the parabola is smaller (it meets the $x$-axis at $x=6$).",
+    "$A=\\frac12\\cdot4\\cdot8+\\int_4^6\\left(6x-x^2\\right)dx$, the first term being the triangle under the line.",
+    "$A=16+\\left[3x^2-\\frac{x^3}3\\right]_4^6$.",
+    "$A=16+3(36-16)-\\frac13(216-64)$.",
+    "$A=16+60-\\frac{152}3=16+\\frac{28}3=\\frac{76}3$.",
+    "$12A=304$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take the whole area under the parabola and remove the sliver between the parabola and the chord $y=2x$ using the parabola-segment formula.",
+     "solution": [
+      "The region is the area under $y=6x-x^2$ from $x=0$ to $6$, with the part above the line $y=2x$ (for $0\\le x\\le4$) removed.",
+      "Area under the parabola: $\\int_0^6(6x-x^2)\\,dx=\\frac{6^3}6=36$ (a parabola $y=-x^2+\\dots$ with roots $0$ and $6$).",
+      "The removed piece lies between the parabola and its chord from $(0,0)$ to $(4,8)$: area $=\\frac{|a|w^3}6$ with $a=-1$ and $w=4$, which is $\\frac{64}6=\\frac{32}3$.",
+      "$A=36-\\frac{32}3=\\frac{76}3$.",
+      "$12A=304$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y=\\min\\{f,g\\}$ (or $\\max$) split the integral at the crossing points of $f$ and $g$ and use the smaller (larger) one on each piece.",
+    "Area between a parabola $y=ax^2+bx+c$ and a chord whose end abscissae differ by $w$ is $\\frac{|a|\\,w^3}6$; area between the parabola and the $x$-axis is the same formula with $w=$ root difference.",
+    "Here $\\int_0^6(6x-x^2)dx=\\frac{6^3}6=36$ and the chord from $x=0$ to $x=4$ cuts a segment of $\\frac{4^3}6=\\frac{32}3$.",
+    "Area under a line through the origin up to $x=p$ is the triangle $\\frac12p\\cdot f(p)$ - no integral needed."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 3,
+   "level": 3,
+   "concepts": [
+    "Area of a circular segment cut off by a line"
+   ],
+   "question": "The area (in sq. units) of the part of the circle $x^2+y^2=169$ which is below the line $5x-y=13$ is $\\frac{\\pi\\alpha}{2\\beta}-\\frac{65}2+\\frac\\alpha\\beta\\sin^{-1}\\left(\\frac{12}{13}\\right)$, where $\\alpha,\\beta$ are coprime numbers. Then $\\alpha+\\beta$ is equal to ______.",
+   "answer": "171",
+   "key_idea": "The line cuts the circle at $(0,-13)$ and $(5,12)$; use segment area $\\frac12r^2(\\theta-\\sin\\theta)$ with $\\theta=\\frac\\pi2+\\varphi$.",
+   "solution": [
+    "Solving $y=5x-13$ with $x^2+y^2=169$: $26x^2-130x=0$, so $x=0,5$ and the line meets the circle at $(0,-13)$ and $(5,12)$.",
+    "Let $\\varphi$ be the angle of the radius to $(5,12)$ with the $x$-axis: $\\tan\\varphi=\\frac{12}5$, $\\sin\\varphi=\\frac{12}{13}$, $\\cos\\varphi=\\frac5{13}$.",
+    "The radius to $(0,-13)$ points along the negative $y$-axis, so the angle between the two radii is $\\theta=\\frac\\pi2+\\varphi$, and $\\sin\\theta=\\sin\\left(\\frac\\pi2+\\varphi\\right)=\\cos\\varphi=\\frac5{13}$.",
+    "The origin lies above the line ($0>-13$), so the part below the line is the minor segment: area $=\\frac12r^2(\\theta-\\sin\\theta)$.",
+    "Area $=\\frac12\\cdot169\\left[\\frac\\pi2+\\sin^{-1}\\frac{12}{13}-\\frac5{13}\\right]=\\frac{169}2\\left[\\frac\\pi2+\\sin^{-1}\\frac{12}{13}-\\frac5{13}\\right]$.",
+    "Area $=\\frac{169\\pi}4+\\frac{169}2\\sin^{-1}\\frac{12}{13}-\\frac{65}2$.",
+    "Compare with $\\frac{\\pi\\alpha}{2\\beta}-\\frac{65}2+\\frac\\alpha\\beta\\sin^{-1}\\frac{12}{13}$: $\\frac\\alpha\\beta=\\frac{169}2$, and $\\gcd(169,2)=1$, so $\\alpha=169$, $\\beta=2$.",
+    "$\\alpha+\\beta=171$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take the right half-disc and subtract (sector from the centre) + (triangle from the centre), avoiding the segment formula.",
+     "solution": [
+      "The line meets the circle at $P(5,12)$ and $R(0,-13)$; the part of the disc above the line and to the right of the $y$-axis is what must be removed from the right half-disc.",
+      "Right half-disc: $\\frac{\\pi\\cdot169}2$. The part removed (above the line, $x\\ge0$) is the sector $O$ from $(0,13)$ to $P$ plus the triangle $OPR$.",
+      "The sector angle is $\\frac\\pi2-\\varphi$ where $\\sin\\varphi=\\frac{12}{13}$, i.e. $\\sin^{-1}\\frac5{13}=\\frac\\pi2-\\sin^{-1}\\frac{12}{13}$; sector area $=\\frac{169}2\\left(\\frac\\pi2-\\sin^{-1}\\frac{12}{13}\\right)$.",
+      "Triangle $OPR$ with $O(0,0)$, $P(5,12)$, $R(0,-13)$: area $=\\frac12\\left|5\\cdot(-13)-0\\right|=\\frac{65}2$.",
+      "Required area $=\\frac{169\\pi}2-\\frac{169}2\\left(\\frac\\pi2-\\sin^{-1}\\frac{12}{13}\\right)-\\frac{65}2=\\frac{169\\pi}4+\\frac{169}2\\sin^{-1}\\frac{12}{13}-\\frac{65}2$.",
+      "This matches the form given, so $\\frac\\alpha\\beta=\\frac{169}2$, $\\alpha=169$, $\\beta=2$ and $\\alpha+\\beta=171$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area of the minor segment of a circle of radius $r$ with central angle $\\theta<\\pi$ is $\\frac12r^2(\\theta-\\sin\\theta)$; the major segment is $\\pi r^2$ minus this.",
+    "If the chord is at distance $d$ from the centre: $\\cos\\frac\\theta2=\\frac dr$ and segment area $=r^2\\cos^{-1}\\frac dr-d\\sqrt{r^2-d^2}$. Here $d=\\frac{13}{\\sqrt{26}}$ gives the same $199.6$.",
+    "Pythagorean triple $5,12,13$: $\\sin^{-1}\\frac{12}{13}=\\cos^{-1}\\frac5{13}=\\tan^{-1}\\frac{12}5$ - convert freely to match the answer format.",
+    "To decide which side is the minor segment test the centre: it lies on the opposite side of the line from the minor segment (here $O$ is above $5x-y=13$)."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 4,
+   "level": 1,
+   "concepts": [
+    "Area of a region under the minimum of two curves"
+   ],
+   "question": "Let the area of the region $\\left\\{(x,y):0\\le x\\le3,\\ 0\\le y\\le\\min\\left\\{x^2+2,\\ 2x+2\\right\\}\\right\\}$ be $A$. Then $12A$ is equal to ______.",
+   "answer": "164",
+   "key_idea": "$x^2+2\\le2x+2\\iff0\\le x\\le2$, so the upper boundary changes from the parabola to the line at $x=2$.",
+   "solution": [
+    "The curves $y=x^2+2$ and $y=2x+2$ meet where $x^2=2x$, i.e. at $(0,2)$ and $(2,6)$.",
+    "For $0\\le x\\le2$ the parabola is the lower curve; for $2\\le x\\le3$ the line is the lower curve, so $A=\\int_0^2(x^2+2)\\,dx+\\int_2^3(2x+2)\\,dx$.",
+    "$A=\\left[\\frac{x^3}3+2x\\right]_0^2+\\left[x^2+2x\\right]_2^3$.",
+    "First part: $\\frac83+4=\\frac{20}3$. Second part: $(9+6)-(4+4)=7$.",
+    "$A=\\frac{20}3+7=\\frac{41}3$.",
+    "$12A=164$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Start from the trapezoid under the line on $[0,3]$ and subtract the thin region between the line and the parabola on $[0,2]$.",
+     "solution": [
+      "Under the line $y=2x+2$ on $[0,3]$ the region is a trapezoid with parallel sides $2$ and $8$ and width $3$: area $\\frac12(2+8)\\cdot3=15$.",
+      "On $[0,2]$ the true upper boundary is the parabola, lower than the line by $(2x+2)-(x^2+2)=2x-x^2$.",
+      "Region to remove: $\\int_0^2(2x-x^2)\\,dx=4-\\frac83=\\frac43$.",
+      "$A=15-\\frac43=\\frac{41}3$.",
+      "$12A=164$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\min\\{f,g\\}=f$ exactly where $f\\le g$: here $x^2+2\\le2x+2\\iff x(x-2)\\le0\\iff0\\le x\\le2$.",
+    "Area under a straight line over an interval is a trapezoid: $\\frac12(\\text{sum of end heights})\\times\\text{width}$ - no integral needed.",
+    "For $\\min$ the area is the area under the lower curve; for $\\max$ it is under the upper curve; equivalently, area under $\\max$ minus area between the two curves gives the area under $\\min$.",
+    "Always check the endpoint $x=3$ is beyond the crossing $x=2$; otherwise the second piece would not occur."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 5,
+   "level": 3,
+   "concepts": [
+    "Area between a parabola and a chord",
+    "AM-GM inequality"
+   ],
+   "question": "Three points $O(0,0)$, $P(a,a^2)$, $Q(-b,b^2)$, $a>0$, $b>0$, are on the parabola $y=x^2$. Let $S_1$ be the area of the region bounded by the line $PQ$ and the parabola, and $S_2$ the area of the triangle $OPQ$. If the minimum value of $\\frac{S_1}{S_2}$ is $\\frac mn$, $\\gcd(m,n)=1$, then $m+n$ is equal to ______.",
+   "answer": "7",
+   "key_idea": "$S_1=\\frac{(a+b)^3}6$ and $S_2=\\frac{ab(a+b)}2$, so $\\frac{S_1}{S_2}=\\frac13\\left(\\frac ab+\\frac ba+2\\right)\\ge\\frac43$ by AM-GM.",
+   "solution": [
+    "Line $PQ$: $y-b^2=\\frac{a^2-b^2}{a+b}(x+b)$, which simplifies to $y=(a-b)x+ab$.",
+    "$S_1=\\int_{-b}^{a}\\left((a-b)x+ab-x^2\\right)dx$ (the line lies above the parabola between $x=-b$ and $x=a$).",
+    "$S_1=\\left[\\frac{(a-b)}2x^2+abx-\\frac{x^3}3\\right]_{-b}^{a}$.",
+    "On substituting the limits and simplifying: $S_1=\\frac16(a+b)^3$.",
+    "$S_2=\\frac12\\left|\\begin{matrix}-b&b^2&1\\\\0&0&1\\\\a&a^2&1\\end{matrix}\\right|=\\frac12ab(a+b)$.",
+    "$\\frac{S_1}{S_2}=\\frac{\\frac16(a+b)^3}{\\frac12ab(a+b)}=\\frac13\\cdot\\frac{(a+b)^2}{ab}$.",
+    "$\\frac{S_1}{S_2}=\\frac13\\left(\\frac ab+\\frac ba+2\\right)$.",
+    "Since $\\frac ba+\\frac ab\\ge2$ (AM-GM, equality at $a=b$): $\\left(\\frac{S_1}{S_2}\\right)_{\\min}=\\frac13(2+2)=\\frac43=\\frac mn$.",
+    "$m+n=4+3=7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Archimedes: the parabolic segment is $\\frac43$ of the largest triangle on chord $PQ$, and no inscribed triangle on $PQ$ beats that apex.",
+     "solution": [
+      "For a chord $PQ$ of a parabola, the triangle $PQM$ of largest area has its apex $M$ at the point where the tangent is parallel to $PQ$. Archimedes: $S_1=\\frac43\\,[PQM]$.",
+      "The vertex $O$ also lies on the parabola, so $OPQ$ is a triangle on the same base $PQ$ with its apex on the arc between $P$ and $Q$, hence $S_2=[OPQ]\\le[PQM]$.",
+      "Therefore $\\frac{S_1}{S_2}=\\frac43\\cdot\\frac{[PQM]}{[OPQ]}\\ge\\frac43$, with equality exactly when $O=M$.",
+      "$M$ has slope $2x_M=a-b$ (slope of $PQ$), so $x_M=\\frac{a-b}2$; $M=O$ needs $a=b$, which is allowed.",
+      "So the minimum of $\\frac{S_1}{S_2}$ is $\\frac43$, giving $m=4$, $n=3$ and $m+n=7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between $y=x^2$ and the chord joining the points with abscissae $p<q$ is $\\frac{(q-p)^3}6$; the chord is $y=(p+q)x-pq$. Here $p=-b$, $q=a$.",
+    "Archimedes: a parabolic segment has area $\\frac43$ of the inscribed triangle with the same base and apex at the point whose tangent is parallel to the chord.",
+    "The area of a triangle with vertices on $y=x^2$ at abscissae $x_1,x_2,x_3$ is $\\frac12|(x_1-x_2)(x_2-x_3)(x_3-x_1)|$; here $\\frac12\\cdot b\\cdot a\\cdot(a+b)$.",
+    "For ratios like $\\frac{(a+b)^2}{ab}$ use $\\frac ab+\\frac ba+2\\ge4$ (positive $a,b$); the minimum occurs at $a=b$, i.e. when the chord is perpendicular to the axis."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 6,
+   "level": 3,
+   "concepts": [
+    "Area between two parabolas",
+    "Maxima and minima of a function"
+   ],
+   "question": "The sum of squares of all possible values of $k$, for which the area of the region bounded by the parabolas $2y^2=kx$ and $ky^2=2(y-x)$ is maximum, is equal to ______.",
+   "answer": "8",
+   "key_idea": "The area simplifies to $A(k)=\\frac23\\cdot\\frac{k^2}{(k^2+4)^2}$, which is maximised at $k^2=4$.",
+   "solution": [
+    "The parabolas are $x=\\frac{2y^2}k$ and $x=y-\\frac{ky^2}2$; equating, $y\\left(\\frac{2y}k+\\frac{ky}2-1\\right)=0$, so $y=0$ or $y=\\frac{2k}{k^2+4}$.",
+    "Between the intersection points the second parabola is on the right: $A=\\int_0^{\\frac{2k}{k^2+4}}\\left[\\left(y-\\frac{ky^2}2\\right)-\\frac{2y^2}k\\right]dy$ (for $k>0$).",
+    "$A=\\left[\\frac{y^2}2-\\left(\\frac k2+\\frac2k\\right)\\frac{y^3}3\\right]_0^{\\frac{2k}{k^2+4}}$.",
+    "With $y_1=\\frac{2k}{k^2+4}$ we have $\\left(\\frac k2+\\frac2k\\right)y_1=\\frac{k^2+4}{2k}\\cdot\\frac{2k}{k^2+4}=1$, so $A=\\frac{y_1^2}2-\\frac{y_1^2}3$.",
+    "$A=\\frac{y_1^2}6=\\frac16\\cdot\\frac{4k^2}{(k^2+4)^2}=\\frac23\\cdot\\frac{k^2}{(k^2+4)^2}$.",
+    "The area is unchanged by $(x,y,k)\\to(-x,-y,-k)$, so $A(k)$ is even and the same formula holds for $k<0$.",
+    "$A'(k)=\\frac23\\cdot\\frac{2k(k^2+4)^2-k^2\\cdot2(k^2+4)(2k)}{(k^2+4)^4}=\\frac23\\cdot\\frac{2k(k^2+4)\\left(4-k^2\\right)}{(k^2+4)^4}$.",
+    "$A'(k)=0$ at $k=0,\\ 2,\\ -2$. The sign of $A'$ is $+,-,+,-$ across $-2,\\ 0,\\ 2$, so $k=\\pm2$ are local maxima and $k=0$ is a minimum.",
+    "The values of $k$ giving maximum area are $\\pm2$; the sum of squares is $(-2)^2+2^2=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For $x=\\alpha y^2$ and $x=y-\\beta y^2$ the area is $\\frac1{6(\\alpha+\\beta)^2}$, so it is maximal when $|\\alpha+\\beta|=\\left|\\frac2k+\\frac k2\\right|$ is least (AM-GM).",
+     "solution": [
+      "Write the parabolas as $x=\\alpha y^2$ and $x=y-\\beta y^2$ with $\\alpha=\\frac2k$, $\\beta=\\frac k2$.",
+      "They meet at $y=0$ and at $y=y_1=\\frac1{\\alpha+\\beta}$ (from $\\alpha y=1-\\beta y$).",
+      "The width between them is $y-(\\alpha+\\beta)y^2=(\\alpha+\\beta)\\,y\\,(y_1-y)$, and $\\int_0^{y_1}y(y_1-y)\\,dy=\\frac{y_1^3}6$.",
+      "Hence $A=(\\alpha+\\beta)\\frac{y_1^3}6=\\frac1{6(\\alpha+\\beta)^2}$ with $\\alpha+\\beta=\\frac{k^2+4}{2k}$.",
+      "The area is largest when $|\\alpha+\\beta|$ is smallest. For $k>0$, $\\frac k2+\\frac2k\\ge2$ with equality at $k=2$; by the symmetry $k\\to-k$, for $k<0$ the minimum of $\\left|\\frac k2+\\frac2k\\right|$ is $2$ at $k=-2$.",
+      "Maximum area is $\\frac1{24}$ at $k=\\pm2$, and the sum of squares is $4+4=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between the parabolas $x=\\alpha y^2$ and $x=y-\\beta y^2$ ($\\alpha,\\beta>0$) is $\\frac1{6(\\alpha+\\beta)^2}$; they meet at $y=0$ and $y=\\frac1{\\alpha+\\beta}$. Check: $k=2$ gives $\\frac1{24}$.",
+    "Area between $y=ax^2+bx+c$ and a chord: $\\frac{|a|w^3}6$ where $w$ is the difference of the $x$-coordinates of the intersection points; the same with roles of $x,y$ swapped.",
+    "Maximising $\\frac{k^2}{(k^2+4)^2}$: put $t=k^2$; $\\frac t{(t+4)^2}=\\frac1{t+8+16/t}$ is largest when $t+\\frac{16}t$ is least, at $t=4$.",
+    "If a parameter family is symmetric under $k\\to-k$ (with a reflection of the figure), both signs give equal areas - do not forget the negative value in 'all possible values of $k$'."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 7,
+   "level": 3,
+   "concepts": [
+    "Area of a region bounded by a parabola, a circle and a line"
+   ],
+   "question": "If the area of the region $S=\\left\\{(x,y):2y-y^2\\le x^2\\le2y,\\ x\\ge y\\right\\}$ is equal to $\\frac{n+2}{n+1}-\\frac\\pi{n-1}$, then the natural number $n$ is equal to ______.",
+   "answer": "5",
+   "key_idea": "$2y-y^2\\le x^2$ is the exterior of the circle $x^2+(y-1)^2=1$ and $x^2\\le2y$ is inside the parabola; integrate in $y$ with a break at $y=1$.",
+   "solution": [
+    "$2y-y^2\\le x^2$ means $x^2+(y-1)^2\\ge1$ (outside the circle centred $(0,1)$, radius $1$); $x^2\\le2y$ means on or above the parabola $y=\\frac{x^2}2$; and $x\\ge y$ means on or below the line $y=x$.",
+    "The line $y=x$ meets the parabola at $(0,0)$ and $(2,2)$; the circle touches the parabola at the origin and meets the line at $(1,1)$.",
+    "For $1\\le y\\le2$: $y^2\\ge2y-y^2$ so $x\\ge y$ already keeps us outside the circle; $x$ runs from $y$ to $\\sqrt{2y}$. For $0\\le y\\le1$: $x$ runs from $\\sqrt{2y-y^2}$ to $\\sqrt{2y}$.",
+    "$A=\\int_1^2\\left(\\sqrt{2y}-y\\right)dy+\\int_0^1\\left(\\sqrt{2y}-\\sqrt{2y-y^2}\\right)dy$.",
+    "First: $\\frac{2\\sqrt2}3\\left(2\\sqrt2-1\\right)-\\frac32=\\frac{8-2\\sqrt2}3-\\frac32=\\frac{7-2^{5/2}}6$.",
+    "Second: $\\int_0^1\\sqrt{2y}\\,dy=\\frac{2\\sqrt2}3$ and $\\int_0^1\\sqrt{2y-y^2}\\,dy=\\frac\\pi4$ (a quarter of the unit disc), so it is $\\frac{2\\sqrt2}3-\\frac\\pi4=\\frac{2^{7/2}-3\\pi}{12}$.",
+    "$A=\\frac{14-2^{7/2}+2^{7/2}-3\\pi}{12}=\\frac76-\\frac\\pi4$.",
+    "Compare with $\\frac{n+2}{n+1}-\\frac\\pi{n-1}$: $\\frac\\pi{n-1}=\\frac\\pi4$ gives $n=5$, and then $\\frac{7}{6}$ also matches.",
+    "$n=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Area between the line $y=x$ and the parabola, minus the circular segment cut off by chord $y=x$ - a geometric reading with no strips.",
+     "solution": [
+      "$S$ is the set with $\\frac{x^2}2\\le y\\le x$ (between the parabola and the line) and outside the circle $x^2+(y-1)^2=1$.",
+      "Area between $y=\\frac{x^2}2$ and $y=x$ over $[0,2]$: $\\int_0^2\\left(x-\\frac{x^2}2\\right)dx=2-\\frac43=\\frac23$.",
+      "The circle meets $y=x$ at $(0,0)$ and $(1,1)$ and touches the parabola at the origin, lying above the parabola, so the part of that region inside the circle is the circular segment below the chord $y=x$.",
+      "The chord has length $\\sqrt2$ in a unit circle, so the central angle is $\\frac\\pi2$; segment area $=\\frac12\\left(\\frac\\pi2-\\sin\\frac\\pi2\\right)=\\frac\\pi4-\\frac12$.",
+      "$A=\\frac23-\\left(\\frac\\pi4-\\frac12\\right)=\\frac76-\\frac\\pi4$.",
+      "Matching $\\frac{n+2}{n+1}-\\frac\\pi{n-1}$ gives $n-1=4$, so $n=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$2y-y^2\\le x^2\\iff x^2+(y-1)^2\\ge1$: complete the square to recognise the circle inside an inequality.",
+    "Area between $y=ax^2$ and the chord from the origin to abscissa $w$ is $\\frac{aw^3}6$; here $a=\\frac12$, $w=2$ gives $\\frac23$.",
+    "A circular segment cut by a chord of length $\\ell$ in a circle of radius $r$ has central angle $2\\sin^{-1}\\frac\\ell{2r}$; for $\\ell=\\sqrt2$, $r=1$ it is a quarter-disc minus a triangle: $\\frac\\pi4-\\frac12$.",
+    "$\\int_0^1\\sqrt{2y-y^2}\\,dy=\\int_0^1\\sqrt{1-(y-1)^2}\\,dy=\\frac\\pi4$ - recognise quarter-circle areas instead of substituting.",
+    "The circle $x^2+(y-1)^2=1$ and the parabola $y=\\frac{x^2}2$ have equal curvature $1$ at the origin, so they touch there."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 8,
+   "level": 2,
+   "concepts": [
+    "Area of a region bounded by a step function and a curve"
+   ],
+   "question": "Let the area enclosed by the lines $x+y=2$, $y=0$, $x=0$ and the curve $f(x)=\\min\\left\\{x^2+\\frac34,\\ 1+[x]\\right\\}$, where $[x]$ denotes the greatest integer $\\le x$, be $A$. Then the value of $12A$ is ______.",
+   "answer": "17",
+   "key_idea": "On $[0,1)$, $[x]=0$ so $f=\\min\\left\\{x^2+\\frac34,1\\right\\}$ switches at $x=\\frac12$; for $x\\ge1$ the line $x+y=2$ lies below $f$.",
+   "solution": [
+    "For $0\\le x<1$: $[x]=0$ and $x^2+\\frac34\\le1\\iff x\\le\\frac12$, so $f(x)=x^2+\\frac34$ on $\\left[0,\\frac12\\right]$ and $f(x)=1$ on $\\left[\\frac12,1\\right)$.",
+    "For $x\\ge1$: $1+[x]\\ge2$ and $x^2+\\frac34\\ge\\frac74$, so $f(x)\\ge\\frac74>1\\ge2-x$; the line $x+y=2$ is the upper boundary and the region ends at $(2,0)$.",
+    "$A=\\int_0^{1/2}\\left(x^2+\\frac34\\right)dx+$ (area of the trapezoid on $\\left[\\frac12,2\\right]$ under $y=\\min\\{1,2-x\\}$).",
+    "The trapezoid has parallel sides $\\frac32$ (the base from $x=\\frac12$ to $2$) and $\\frac12$ (the top from $\\frac12$ to $1$) and height $1$: area $\\frac12\\left(\\frac32+\\frac12\\right)\\cdot1=1$.",
+    "$\\int_0^{1/2}\\left(x^2+\\frac34\\right)dx=\\frac13\\cdot\\frac18+\\frac34\\cdot\\frac12=\\frac1{24}+\\frac38$.",
+    "$A=\\frac1{24}+\\frac38+1$.",
+    "$12A=\\frac12+\\frac92+12=17$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the trapezoid term as (1/2)(3/2+1/2) x 2, which equals 2; its next line (and the final answer 17) correctly uses 1. The factor 2 should be 1 (the trapezoid height is 1). Also the PDF's remark that the line bounds the region for x>=1 was added here as an explicit step. Answer 17 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Complement: take the triangle cut by $x+y=2$ on the axes (area $2$) and subtract the part lying above $f$.",
+     "solution": [
+      "The triangle with vertices $(0,0)$, $(2,0)$, $(0,2)$ has area $\\frac12\\cdot2\\cdot2=2$; $A$ is this triangle with the part above the curve $f$ removed.",
+      "For $0\\le x\\le\\frac12$ the part above $f$ lies between $y=x^2+\\frac34$ and $y=2-x$: height $\\frac54-x-x^2$.",
+      "For $\\frac12\\le x\\le1$ it lies between $y=1$ and $y=2-x$: height $1-x$; for $x\\ge1$ nothing is removed.",
+      "$\\int_0^{1/2}\\left(\\frac54-x-x^2\\right)dx=\\frac58-\\frac18-\\frac1{24}=\\frac{11}{24}$ and $\\int_{1/2}^1(1-x)\\,dx=\\frac18=\\frac3{24}$.",
+      "Removed area $=\\frac{11}{24}+\\frac3{24}=\\frac7{12}$, so $A=2-\\frac7{12}=\\frac{17}{12}$.",
+      "$12A=17$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x]$ is constant on each $[n,n+1)$: split the integral at integers and treat $1+[x]$ as a horizontal line on each piece; the step jumps up at integers, so the graph has vertical jumps there.",
+    "For $\\min\\{g,h\\}$ with $g$ continuous and $h$ a step, solve $g(x)=h$ separately on each unit interval (here $x^2+\\frac34=1$ at $x=\\frac12$; $x^2+\\frac34=2$ at $x=\\frac{\\sqrt5}2>1$).",
+    "A bounding line such as $x+y=2$ can cut the region off before a jump matters: at $x=1$ the line is at $1$, below $f(1)=1.75$.",
+    "Rectangles, triangles and trapezoids under linear/constant pieces need no integration; use $\\frac12(a+b)h$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 9,
+   "level": 2,
+   "concepts": [
+    "Area of a region bounded by a parabola and a circle"
+   ],
+   "question": "Let $y=p(x)$ be the parabola passing through the points $(-1,0)$, $(0,1)$ and $(1,0)$. If the area of the region $\\left\\{(x,y):(x+1)^2+(y-1)^2\\le1,\\ y\\le p(x)\\right\\}$ is $A$, then $12(\\pi-4A)$ is equal to ______.",
+   "answer": "16",
+   "key_idea": "The region is the quarter-disc of the circle minus the corner of the unit square above the parabola; $\\int_{-1}^0(1-x^2)dx=\\frac23$.",
+   "solution": [
+    "$y=p(x)$ is a quadratic through the three points; with vertex $(0,1)$ write $x^2=-4a(y-1)$.",
+    "It passes through $(1,0)$: $1=-4a(0-1)=4a$, so $a=\\frac14$ and the parabola is $x^2=-(y-1)$, i.e. $y=1-x^2$.",
+    "The circle has centre $(-1,1)$ and radius $1$, and passes through $(-1,0)$ and $(0,1)$; the region lies inside the circle and below the parabola, which is the lens in the unit square $[-1,0]\\times[0,1]$.",
+    "Area under the parabola in the square: $\\int_{-1}^0(1-x^2)\\,dx=\\left[x-\\frac{x^3}3\\right]_{-1}^0=(0-0)-\\left(-1+\\frac13\\right)=\\frac23$.",
+    "Required area $=$ area of the sector (quarter disc) $-$ {area of the square $-$ area under the parabola}.",
+    "$A=\\frac\\pi4-\\left\\{1-\\frac23\\right\\}=\\frac\\pi4-\\frac13$.",
+    "$12(\\pi-4A)=12\\left[\\pi-4\\left(\\frac\\pi4-\\frac13\\right)\\right]=12\\left[\\pi-\\pi+\\frac43\\right]$.",
+    "$12(\\pi-4A)=16$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's antiderivative bracket for the integral of (1-x^2) has printed limits b and 1 instead of 0 and -1 (the value 2/3 it obtains is the value for limits -1 to 0). The PDF's opening remark that infinitely many parabolas pass through the points is about parabolas with a non-vertical axis; y=p(x) is a quadratic polynomial, so p(x)=1-x^2 is unique. Answer 16 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Vertical strips directly: between the lower arc of the circle and the parabola the width is $\\sqrt{1-(x+1)^2}-x^2$, so the area is quarter-disc minus $\\int x^2$.",
+     "solution": [
+      "$p(x)=a(x+1)(x-1)$ with $p(0)=1$ gives $a=-1$, so $p(x)=1-x^2$.",
+      "For $-1\\le x\\le0$ the circle's lower arc is $y=1-\\sqrt{1-(x+1)^2}$; for these $x$ the circle's upper arc is above the parabola, so the region is between the lower arc and the parabola.",
+      "Width of the strip: $(1-x^2)-\\left(1-\\sqrt{1-(x+1)^2}\\right)=\\sqrt{1-(x+1)^2}-x^2$.",
+      "$A=\\int_{-1}^0\\sqrt{1-(x+1)^2}\\,dx-\\int_{-1}^0x^2\\,dx=\\frac\\pi4-\\frac13$ (a quarter of the unit disc, and $\\frac13$).",
+      "$12(\\pi-4A)=12\\cdot\\frac43=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A quadratic $y=p(x)$ through three points with distinct abscissae is unique; if two of them are the roots $\\pm1$, write $p(x)=a(x-1)(x+1)$ and use the third point to fix $a$.",
+    "$\\int_{-1}^0\\sqrt{1-(x+1)^2}\\,dx=\\frac\\pi4$ and $\\int_{-1}^0x^2\\,dx=\\frac13$: recognise quarter-circle areas without trigonometric substitution.",
+    "In expressions like $12(\\pi-4A)$ the $\\pi$ cancels by design; if it does not cancel in your working, an area is wrong.",
+    "The circle with centre $(-1,1)$ and radius $1$ touches $y=0$ at $(-1,0)$ and $x=0$ at $(0,1)$, so its lower-right quarter fills the corner of the unit square $[-1,0]\\times[0,1]$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 10,
+   "level": 3,
+   "concepts": [
+    "Area bounded by a parabola, its tangent and a line",
+    "Equation of tangent to a parabola"
+   ],
+   "question": "If $A$ is the area in the first quadrant enclosed by the curve $C:2x^2-y+1=0$, the tangent to $C$ at the point $(1,3)$ and the line $x+y=1$, then the value of $60A$ is ______.",
+   "answer": "16",
+   "key_idea": "Area under the curve minus the area under the broken path $T\\to S\\to P$, which splits into triangles on the axis.",
+   "solution": [
+    "The curve is $y=2x^2+1$; it cuts the $y$-axis at $T(0,1)$ and passes through $P(1,3)$.",
+    "Tangent at $(1,3)$: slope $\\frac{dy}{dx}=4x=4$, so $y-3=4(x-1)$, i.e. $y=4x-1$.",
+    "The line $x+y=1$ meets the axes at $T(0,1)$ and $Q(1,0)$; the tangent meets the $x$-axis at $R\\left(\\frac14,0\\right)$ and the line at $S\\left(\\frac25,\\frac35\\right)$ (from $4x-1=1-x$).",
+    "The region is bounded by the arc $TP$, the tangent $PS$ and the line $ST$.",
+    "The area under the broken path $T\\to S\\to P$ equals $[\\triangle QOT]+[\\triangle PQR]-[\\triangle QRS]$, since $S$ lies on $PR$.",
+    "$A=\\int_0^1\\left(2x^2+1\\right)dx-[\\triangle QOT]-[\\triangle PQR]+[\\triangle QRS]$.",
+    "$[\\triangle QOT]=\\frac12$, $[\\triangle PQR]=\\frac12\\cdot\\frac34\\cdot3=\\frac98$, $[\\triangle QRS]=\\frac12\\cdot\\frac34\\cdot\\frac35=\\frac9{40}$.",
+    "$A=\\left(\\frac23+1\\right)-\\frac12-\\frac98+\\frac9{40}=\\frac{16}{60}$.",
+    "$60A=16$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The parabola lies above its tangent by exactly $2(x-1)^2$, so the area between them on $[0,1]$ is $\\frac23$; then cut off the triangle below the line $x+y=1$.",
+     "solution": [
+      "$y_{\\text{curve}}-y_{\\text{tangent}}=2x^2+1-(4x-1)=2(x-1)^2$.",
+      "Area between the curve and its tangent over $[0,1]$: $\\int_0^1 2(x-1)^2dx=\\frac23$.",
+      "This region also contains the part below the line $x+y=1$, which is not wanted: on $[0,\\frac25]$, between the tangent $y=4x-1$ and the line $y=1-x$.",
+      "That part is a triangle with vertices $(0,-1)$, $(0,1)$ and $S\\left(\\frac25,\\frac35\\right)$: base $2$ on the $y$-axis, height $\\frac25$, area $\\frac25$.",
+      "$A=\\frac23-\\frac25=\\frac4{15}$.",
+      "$60A=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y=ax^2+bx+c$ the vertical gap between the curve and its tangent at $x_0$ is $a(x-x_0)^2$; the area between them from $x_0$ to $x_1$ is $\\frac{|a||x_1-x_0|^3}3$. Here $a=2$, $x_0=1$: $\\frac23$.",
+    "Tangent to $y=2x^2+1$ at $(x_0,y_0)$: $y=y_0+4x_0(x-x_0)$; intersect with another line by equating, e.g. $4x-1=1-x\\Rightarrow x=\\frac25$.",
+    "For a region bounded by a curve and two lines, 'area under the curve minus areas of triangles on the axis' works when the lines meet the axes at simple points.",
+    "Triangle areas from coordinates: $\\frac12\\cdot\\text{base}\\cdot\\text{height}$ with the base on the $x$-axis, e.g. $\\frac12\\cdot\\frac34\\cdot3$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 11,
+   "level": 2,
+   "concepts": [
+    "Area of a region bounded by a parabola, a line and a circle"
+   ],
+   "question": "If the area bounded by the curve $2y^2=3x$, lines $x+y=3$, $y=0$ and outside the circle $(x-3)^2+y^2=2$ is $A$, then $4(\\pi+4A)$ is equal to ______.",
+   "answer": "42",
+   "key_idea": "The line $x+y=3$ passes through the centre $(3,0)$, so the circle takes an exact eighth of its disc out of the region.",
+   "solution": [
+    "The parabola $x=\\frac{2y^2}3$ meets the line $x=3-y$ where $2y^2+3y-9=0$, i.e. $y=\\frac32$ (point $\\left(\\frac32,\\frac32\\right)$).",
+    "The circle has centre $(3,0)$ on the line $x+y=3$, radius $\\sqrt2$; the line and the $x$-axis meet at the centre at $45^\\circ$, so the part of the disc inside the region is an eighth of the disc.",
+    "$A=\\int_0^{3/2}\\left(3-y-\\frac{2y^2}3\\right)dy-\\pi\\left(\\sqrt2\\right)^2\\cdot\\frac18$.",
+    "$\\int_0^{3/2}\\left(3-y-\\frac{2y^2}3\\right)dy=\\frac92-\\frac98-\\frac34=\\frac{36-9-6}8=\\frac{21}8$.",
+    "The removed eighth of the disc has area $\\frac{2\\pi}8=\\frac\\pi4$.",
+    "$A=\\frac{21}8-\\frac\\pi4$.",
+    "$4(\\pi+4A)=4\\pi+16A=4\\pi+42-4\\pi=42$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Build the region from the triangle under the line and the parabola-chord segment, then subtract the eighth-disc.",
+     "solution": [
+      "Let $S\\left(\\frac32,\\frac32\\right)$ be the meeting point of the parabola and line, $O$ the origin, $B(3,0)$ the line's $x$-intercept.",
+      "The triangle $OBS$ (bounded by $y=0$, the line and the chord $OS$, $y=x$) has area $\\frac12\\cdot3\\cdot\\frac32=\\frac94$.",
+      "On the arc $OS$ the parabola $x=\\frac{2y^2}3$ lies to the left of the chord $x=y$, so the region contains also the parabola segment between the chord and the arc: $\\int_0^{3/2}\\left(y-\\frac{2y^2}3\\right)dy=\\frac98-\\frac34=\\frac38$.",
+      "Region before removing the circle: $\\frac94+\\frac38=\\frac{21}8$ (agrees with the strip integral).",
+      "Remove the eighth of the disc: $A=\\frac{21}8-\\frac\\pi4$, so $4(\\pi+4A)=42$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A line through the centre of a circle cuts sectors by angle: a ray along the $x$-axis and the line $x+y=3$ meet at $45^\\circ$, so the sector is $\\frac{45}{360}=\\frac18$ of the disc.",
+    "Before integrating, check that the circle's sector lies completely inside the region (its points have $x\\ge3-\\sqrt2\\approx1.59$, while the parabola has $x\\le\\frac23$ for $y\\le1$), so it can be subtracted whole.",
+    "A parabola $x=\\frac{2y^2}3$ and line $x=3-y$ meet by substitution: $2y^2+3y-9=0$; take the root with $y\\ge0$.",
+    "Designed answers: $4(\\pi+4A)$ cancels $\\pi$ from $A=\\frac{21}8-\\frac\\pi4$; if $\\pi$ remains, the circle part is wrong."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  }
+ ]
+}
