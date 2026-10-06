@@ -1,0 +1,866 @@
+{
+ "title": "JEE Main Question Bank 01 — Integral Calculus 01 — Paper Analysis",
+ "subtitle": "Indefinite Integration · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Integral_Calculus_01.pdf (printed Q1-Q20; solutions as printed); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 14,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 15,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution"
+   ],
+   "level": 1,
+   "question": "Let $f(x)=\\int x^3\\sqrt{3-x^2}\\,dx$. If $5f(\\sqrt2)=-4$, then $f(1)$ is equal to:",
+   "options": [
+    "$-\\frac{2\\sqrt2}{5}$",
+    "$-\\frac{6\\sqrt2}{5}$",
+    "$-\\frac{8\\sqrt2}{5}$",
+    "$-\\frac{4\\sqrt2}{5}$"
+   ],
+   "answer": "(B) $-\\frac{6\\sqrt2}{5}$",
+   "key_idea": "Put $3-x^2=t^2$ so that $x\\,dx=-t\\,dt$ and $x^2=3-t^2$ turns the integrand into a polynomial in $t$.",
+   "solution": [
+    "Put $3-x^2=t^2$. Then $x\\,dx=-t\\,dt$.",
+    "$\\int x^3\\sqrt{3-x^2}\\,dx=\\int x^2\\sqrt{3-x^2}\\,(x\\,dx)=\\int(3-t^2)\\,t\\,(-t)\\,dt$.",
+    "$=\\int(t^4-3t^2)\\,dt=\\frac{t^5}{5}-t^3+C$.",
+    "So $f(x)=\\frac{(3-x^2)^{5/2}}{5}-(3-x^2)^{3/2}+C$.",
+    "At $x=\\sqrt2$: $3-x^2=1$, so $f(\\sqrt2)=\\frac15-1+C=-\\frac45+C$.",
+    "Given $5f(\\sqrt2)=-4$, i.e. $f(\\sqrt2)=-\\frac45$, hence $C=0$.",
+    "At $x=1$: $3-x^2=2$, so $f(1)=\\frac{2^{5/2}}{5}-2^{3/2}=\\frac{4\\sqrt2}{5}-2\\sqrt2=-\\frac{6\\sqrt2}{5}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Avoid the constant: write $f(1)=f(\\sqrt2)+\\int_{\\sqrt2}^{1}x^3\\sqrt{3-x^2}\\,dx$ and evaluate the definite integral with $u=3-x^2$.",
+     "solution": [
+      "From the data, $f(\\sqrt2)=-\\frac45$.",
+      "$f(1)-f(\\sqrt2)=\\int_{\\sqrt2}^{1}x^3\\sqrt{3-x^2}\\,dx$. With $u=3-x^2$: $x\\,dx=-\\frac{du}{2}$, $x^2=3-u$; the limits $x=\\sqrt2,1$ become $u=1,2$.",
+      "The integral is $-\\frac12\\int_1^2(3-u)\\sqrt u\\,du=-\\frac12\\left[2u^{3/2}-\\frac25u^{5/2}\\right]_1^2$.",
+      "At $u=2$: $4\\sqrt2-\\frac{8\\sqrt2}{5}=\\frac{12\\sqrt2}{5}$. At $u=1$: $2-\\frac25=\\frac85$.",
+      "So the integral is $-\\frac12\\left(\\frac{12\\sqrt2}{5}-\\frac85\\right)=-\\frac{6\\sqrt2}{5}+\\frac45$.",
+      "$f(1)=-\\frac45-\\frac{6\\sqrt2}{5}+\\frac45=-\\frac{6\\sqrt2}{5}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int x^{2k+1}\\,g(x^2)\\,dx$: put $u=x^2$ (or $u=\\sqrt{a-x^2}$ when a root is present); odd powers of $x$ always supply the $du$.",
+    "In general $\\int x^3\\sqrt{a-x^2}\\,dx=\\frac{(a-x^2)^{5/2}}{5}-\\frac{a\\,(a-x^2)^{3/2}}{3}+C$; for $a=3$ this is the antiderivative found above.",
+    "A condition such as $f(x_0)=k$ fixes the constant $C$ only after you have a closed-form antiderivative; a definite integral from $x_0$ avoids $C$ altogether."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration of $e^x\\{f(x)+f'(x)\\}$"
+   ],
+   "level": 2,
+   "question": "If $\\int e^{x}\\left(\\frac{x\\sin^{-1}x}{\\sqrt{1-x^2}}+\\frac{\\sin^{-1}x}{(1-x^2)^{3/2}}+\\frac{x}{1-x^2}\\right)dx=g(x)+C$, where $C$ is the constant of integration, then $g\\left(\\frac12\\right)$ equals:",
+   "options": [
+    "$\\frac{\\pi}{6}\\sqrt{\\frac e2}$",
+    "$\\frac{\\pi}{6}\\sqrt{\\frac e3}$",
+    "$\\frac{\\pi}{4}\\sqrt{\\frac e2}$",
+    "$\\frac{\\pi}{4}\\sqrt{\\frac e3}$"
+   ],
+   "answer": "(B) $\\frac{\\pi}{6}\\sqrt{\\frac e3}$",
+   "key_idea": "Recognise the bracket as $f(x)+f'(x)$ with $f(x)=\\frac{x\\sin^{-1}x}{\\sqrt{1-x^2}}$, so the integral is $e^xf(x)$.",
+   "solution": [
+    "Let $f(x)=\\frac{x\\sin^{-1}x}{\\sqrt{1-x^2}}$. Then $f'(x)=\\frac{\\sin^{-1}x}{(1-x^2)^{3/2}}+\\frac{x}{1-x^2}$, so the bracket is $f(x)+f'(x)$.",
+    "Use $\\int e^x\\{f(x)+f'(x)\\}\\,dx=e^xf(x)+C$.",
+    "Hence $g(x)=e^x\\,\\frac{x\\sin^{-1}x}{\\sqrt{1-x^2}}$.",
+    "At $x=\\frac12$: $\\sin^{-1}\\frac12=\\frac\\pi6$ and $\\sqrt{1-\\frac14}=\\frac{\\sqrt3}{2}$.",
+    "$g\\left(\\frac12\\right)=e^{1/2}\\cdot\\frac12\\cdot\\frac{\\pi/6}{\\sqrt3/2}=\\frac{\\pi}{6}\\sqrt{\\frac e3}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int e^{x}\\{f(x)+f'(x)\\}dx=e^xf(x)+C$ (reverse of the product rule). Also $\\int e^{ax}\\{af(x)+f'(x)\\}dx=e^{ax}f(x)+C$.",
+    "Recognition cue: after removing $e^x$, the bracket splits into a 'function' part and its derivative; look for the part with the most complicated factor (here $\\sin^{-1}x$) and differentiate it.",
+    "Derivative used: $\\frac{d}{dx}\\frac{x}{\\sqrt{1-x^2}}=\\frac{1}{(1-x^2)^{3/2}}$, and $\\frac{d}{dx}\\sin^{-1}x=\\frac1{\\sqrt{1-x^2}}$.",
+    "Check on this question: at $x=0$ the bracket is $0$, and $\\frac{d}{dx}\\left[e^xf(x)\\right]_{x=0}=f(0)+f'(0)=0$, consistent."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (Möbius-type) with fractional powers"
+   ],
+   "level": 2,
+   "question": "Let $I(x)=\\int\\frac{dx}{(x-11)^{11/13}(x+15)^{15/13}}$. If $I(37)-I(24)=\\frac14\\left(\\frac{1}{b^{1/13}}-\\frac{1}{c^{1/13}}\\right)$, $b,c\\in\\mathbb N$, then $3(b+c)$ is equal to:",
+   "options": [
+    "$40$",
+    "$39$",
+    "$26$",
+    "$22$"
+   ],
+   "answer": "(B) 39",
+   "key_idea": "The exponents add to $2$, so factor out $(x+15)^2$ and substitute $t=\\frac{x-11}{x+15}$, whose differential is $\\frac{26\\,dx}{(x+15)^2}$.",
+   "solution": [
+    "Write the integrand as $\\frac{1}{\\left(\\frac{x-11}{x+15}\\right)^{11/13}(x+15)^{2}}$, because $\\frac{11}{13}+\\frac{15}{13}=2$.",
+    "Let $t=\\frac{x-11}{x+15}$. Then $dt=\\frac{26\\,dx}{(x+15)^2}$, i.e. $\\frac{dx}{(x+15)^2}=\\frac{dt}{26}$.",
+    "$I(x)=\\frac1{26}\\int t^{-11/13}\\,dt=\\frac1{26}\\cdot\\frac{t^{2/13}}{2/13}+C=\\frac14\\,t^{2/13}+C$.",
+    "So $I(x)=\\frac14\\left(\\frac{x-11}{x+15}\\right)^{2/13}+C$.",
+    "At $x=37$: $t=\\frac{26}{52}=\\frac12$. At $x=24$: $t=\\frac{13}{39}=\\frac13$.",
+    "$I(37)-I(24)=\\frac14\\left\\{\\left(\\frac12\\right)^{2/13}-\\left(\\frac13\\right)^{2/13}\\right\\}=\\frac14\\left\\{\\frac1{4^{1/13}}-\\frac1{9^{1/13}}\\right\\}$.",
+    "So $b=4$, $c=9$ and $3(b+c)=3(4+9)=39$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int\\frac{dx}{(x-a)^{m}(x-b)^{n}}$ with $m+n=2$, $m\\neq1$: put $t=\\frac{x-a}{x-b}$; then $dt=\\frac{(a-b)\\,dx}{(x-b)^2}$ and the integral is $\\frac{1}{(a-b)(1-m)}\\left(\\frac{x-a}{x-b}\\right)^{1-m}+C$.",
+    "For $m=1$ (so $n=1$) the same substitution gives $\\frac1{a-b}\\ln\\left|\\frac{x-a}{x-b}\\right|+C$.",
+    "Recognition cue: two linear factors raised to fractional powers whose exponents sum to $2$ (or the form $\\frac{1}{(x-a)^{k}(x-b)^{2-k}}$).",
+    "Check here: $m=\\frac{11}{13}$, $a-b=26$, so coefficient $\\frac{1}{26\\cdot 2/13}=\\frac14$, as found."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by parts (repeated)"
+   ],
+   "level": 1,
+   "question": "Let $\\int x^3\\sin x\\,dx=g(x)+C$, where $C$ is the constant of integration. If $8\\left(g\\left(\\frac\\pi2\\right)+g'\\left(\\frac\\pi2\\right)\\right)=\\alpha\\pi^3+\\beta\\pi^2+\\gamma$, $\\alpha,\\beta,\\gamma\\in\\mathbb Z$, then $\\alpha+\\beta-\\gamma$ equals:",
+   "options": [
+    "$48$",
+    "$55$",
+    "$62$",
+    "$47$"
+   ],
+   "answer": "(B) 55",
+   "key_idea": "Repeated integration by parts (tabular method) for polynomial $\\times$ trigonometric, and $g'(x)=x^3\\sin x$ directly.",
+   "solution": [
+    "Tabular method for $\\int x^3\\sin x\\,dx$: derivatives of $x^3$ are $3x^2,\\,6x,\\,6,\\,0$; integrals of $\\sin x$ are $-\\cos x,\\,-\\sin x,\\,\\cos x,\\,\\sin x$ with alternating signs $+,-,+,-$.",
+    "$g(x)=-x^3\\cos x+3x^2\\sin x+6x\\cos x-6\\sin x$ (taking $C$ separately).",
+    "At $x=\\frac\\pi2$: $\\cos=0$, $\\sin=1$, so $g\\left(\\frac\\pi2\\right)=\\frac{3\\pi^2}{4}-6$.",
+    "Since $g'(x)=x^3\\sin x$, $g'\\left(\\frac\\pi2\\right)=\\frac{\\pi^3}{8}$.",
+    "$8\\left[g\\left(\\frac\\pi2\\right)+g'\\left(\\frac\\pi2\\right)\\right]=8\\left(\\frac{3\\pi^2}{4}-6+\\frac{\\pi^3}{8}\\right)=\\pi^3+6\\pi^2-48$.",
+    "So $\\alpha=1$, $\\beta=6$, $\\gamma=-48$ and $\\alpha+\\beta-\\gamma=1+6+48=55$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take the imaginary part of $\\int x^3e^{ix}\\,dx$, which needs only the formula $\\int x^ne^{ax}dx=e^{ax}\\sum(-1)^k\\frac{n!}{(n-k)!}\\frac{x^{n-k}}{a^{k+1}}$.",
+     "solution": [
+      "$\\int x^3e^{ix}dx=e^{ix}\\left(\\frac{x^3}{i}-\\frac{3x^2}{i^2}+\\frac{6x}{i^3}-\\frac{6}{i^4}\\right)$.",
+      "With $\\frac1i=-i$, $\\frac1{i^2}=-1$, $\\frac1{i^3}=i$, $\\frac1{i^4}=1$ this is $e^{ix}\\left(-ix^3+3x^2+6ix-6\\right)=(\\cos x+i\\sin x)\\left[(3x^2-6)+i(6x-x^3)\\right]$.",
+      "The imaginary part gives $\\int x^3\\sin x\\,dx=(3x^2-6)\\sin x+(6x-x^3)\\cos x+C$, the same $g(x)$.",
+      "At $\\frac\\pi2$ this is $\\frac{3\\pi^2}{4}-6$, and $g'\\left(\\frac\\pi2\\right)=\\frac{\\pi^3}{8}$, so $8(g+g')=\\pi^3+6\\pi^2-48$ and $\\alpha+\\beta-\\gamma=55$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tabular (DI) method: for $\\int P(x)\\,\\{\\sin x\\ \\text{or}\\ \\cos x\\ \\text{or}\\ e^{ax}\\}dx$ with polynomial $P$, differentiate $P$ down to $0$, integrate the other factor repeatedly, pair diagonally with signs $+,-,+,\\dots$.",
+    "$\\int P(x)e^{ax}dx=e^{ax}\\left(\\frac{P}{a}-\\frac{P'}{a^2}+\\frac{P''}{a^3}-\\cdots\\right)$; put $a=i$ and take real/imaginary part for $\\cos$/$\\sin$.",
+    "Never integrate to evaluate $g'$: if $\\int h=g+C$, then $g'=h$. Here $g'\\left(\\frac\\pi2\\right)=\\left(\\frac\\pi2\\right)^3\\cdot1$.",
+    "Numerical check: at $x=\\frac\\pi2$, $g=\\frac{3\\pi^2}{4}-6\\approx1.2$; $8(g+g')\\approx42.22=\\pi^3+6\\pi^2-48$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (fractional powers)"
+   ],
+   "level": 2,
+   "question": "If $f(x)=\\int\\frac{1}{x^{1/4}\\left(1+x^{1/4}\\right)}dx$, $f(0)=-6$, then $f(1)$ is equal to:",
+   "options": [
+    "$2-\\log_e2$",
+    "$4(\\log_e2-2)$",
+    "$\\log_e2+2$",
+    "$4(\\log_e2+2)$"
+   ],
+   "answer": "(B) $4(\\log_e2-2)$",
+   "key_idea": "Put $x^{1/4}=t$: then $dx=4t^3dt$ and the integrand becomes the rational function $\\frac{4t^2}{1+t}$.",
+   "solution": [
+    "Put $x^{1/4}=t$, so $x=t^4$ and $dx=4t^3\\,dt$.",
+    "$f(x)=\\int\\frac{4t^3\\,dt}{t(1+t)}=\\int\\frac{4t^2}{1+t}\\,dt$.",
+    "Since $t^2=(t^2-1)+1$: $f(x)=4\\int\\frac{(t^2-1)+1}{1+t}\\,dt=4\\int\\left[(t-1)+\\frac1{1+t}\\right]dt$.",
+    "$f(x)=4\\left(\\frac{t^2}{2}-t+\\ln(1+t)\\right)+C$.",
+    "Back in $x$: $f(x)=4\\left(\\frac{x^{1/2}}{2}-x^{1/4}+\\ln\\left(1+x^{1/4}\\right)\\right)+C$.",
+    "$f(0)=4\\ln1+C=-6$, so $C=-6$.",
+    "$f(1)=4\\left(\\frac12-1+\\ln2\\right)-6=4\\ln2-2-6=4\\ln2-8=4(\\ln2-2)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=1+x^{1/4}$ and use a definite integral from $x=0$ to $x=1$, so the constant $C$ never appears.",
+     "solution": [
+      "$f(1)=f(0)+\\int_0^1\\frac{dx}{x^{1/4}(1+x^{1/4})}$, with $f(0)=-6$.",
+      "Let $u=1+x^{1/4}$: $x^{1/4}=u-1$, $dx=4(u-1)^3du$; $x=0,1$ give $u=1,2$.",
+      "The integrand becomes $\\frac{4(u-1)^3}{(u-1)\\,u}du=\\frac{4(u-1)^2}{u}du=4\\left(u-2+\\frac1u\\right)du$.",
+      "$\\int_1^2 4\\left(u-2+\\frac1u\\right)du=4\\left[\\frac{u^2}{2}-2u+\\ln u\\right]_1^2=4\\left[(2-4+\\ln2)-\\left(\\frac12-2\\right)\\right]=4\\ln2-2$.",
+      "$f(1)=-6+4\\ln2-2=4(\\ln2-2)$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int R\\left(x^{p/q}\\right)dx$: put $x=t^q$ (the lcm of the denominators of the exponents) to reach a rational function in $t$.",
+    "$\\frac{t^2}{1+t}=t-1+\\frac{1}{1+t}$ (divide first when the numerator degree is at least the denominator's).",
+    "The condition $f(0)=-6$ is used as $x\\to0^+$: then $x^{1/4}\\to0$ and $\\ln(1+0)=0$, which fixes $C=-6$.",
+    "Check: $f'(x)=x^{-1/2}-x^{-3/4}+\\frac{x^{-3/4}}{1+x^{1/4}}$; at $x=1$ this is $1-1+\\frac12=\\frac12$, the value of the integrand at $x=1$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Standard integral $\\int\\frac{dx}{a^2\\sin^2x+b^2\\cos^2x}$",
+    "Maximum value of $a\\sin x+b\\cos x$"
+   ],
+   "level": 2,
+   "question": "If $\\int\\frac{1}{a^2\\sin^2x+b^2\\cos^2x}dx=\\frac1{12}\\tan^{-1}(3\\tan x)+\\text{constant}$, then the maximum value of $a\\sin x+b\\cos x$ is:",
+   "options": [
+    "$\\sqrt{40}$",
+    "$\\sqrt{42}$",
+    "$\\sqrt{39}$",
+    "$\\sqrt{41}$"
+   ],
+   "answer": "(A) $\\sqrt{40}$",
+   "key_idea": "Divide by $\\cos^2x$ and put $\\tan x=t$ to compare with $\\frac1{12}\\tan^{-1}(3t)$; the maximum of $a\\sin x+b\\cos x$ is $\\sqrt{a^2+b^2}$.",
+   "solution": [
+    "Divide numerator and denominator by $\\cos^2x$: $\\int\\frac{\\sec^2x\\,dx}{a^2\\tan^2x+b^2}$.",
+    "Put $\\tan x=t$, $\\sec^2x\\,dx=dt$: $\\int\\frac{dt}{a^2t^2+b^2}=\\frac1{a^2}\\int\\frac{dt}{t^2+\\left(\\frac ba\\right)^2}$.",
+    "$=\\frac1{a^2}\\cdot\\frac{1}{b/a}\\tan^{-1}\\left(\\frac{t}{b/a}\\right)+c=\\frac1{ab}\\tan^{-1}\\left(\\frac ab\\tan x\\right)+c$.",
+    "Comparing with $\\frac1{12}\\tan^{-1}(3\\tan x)$: $\\frac ab=3$ and $ab=12$.",
+    "Then $a=6$, $b=2$ (the pair $a=-6,b=-2$ gives the same maximum).",
+    "The maximum value of $a\\sin x+b\\cos x$ is $\\sqrt{a^2+b^2}=\\sqrt{36+4}=\\sqrt{40}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the given antiderivative: the integrand must equal its derivative, which reads off $a^2$ and $b^2$ directly.",
+     "solution": [
+      "$\\frac{d}{dx}\\left[\\frac1{12}\\tan^{-1}(3\\tan x)\\right]=\\frac1{12}\\cdot\\frac{3\\sec^2x}{1+9\\tan^2x}=\\frac{1}{4(\\cos^2x+9\\sin^2x)}$.",
+      "So $\\frac1{a^2\\sin^2x+b^2\\cos^2x}=\\frac{1}{36\\sin^2x+4\\cos^2x}$ for all $x$.",
+      "Hence $a^2=36$ and $b^2=4$ (compare the values at $x=0$ and $x=\\frac\\pi2$).",
+      "Maximum of $a\\sin x+b\\cos x$ is $\\sqrt{a^2+b^2}=\\sqrt{40}$; no need to fix the signs of $a,b$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{dx}{a^2\\sin^2x+b^2\\cos^2x}=\\frac1{ab}\\tan^{-1}\\left(\\frac ab\\tan x\\right)+C$ for $ab>0$ (divide by $\\cos^2x$).",
+    "Only $a^2$ and $b^2$ appear in the integrand, so the question determines $\\sqrt{a^2+b^2}$ uniquely even though the signs of $a,b$ are free.",
+    "$\\max(a\\sin x+b\\cos x)=\\sqrt{a^2+b^2}$, $\\min=-\\sqrt{a^2+b^2}$ (write it as $R\\sin(x+\\phi)$).",
+    "Similarly $\\int\\frac{dx}{a+b\\sin^2x}$ and $\\int\\frac{dx}{a+b\\cos^2x}$ use the same $\\tan x=t$ substitution."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (trigonometric)"
+   ],
+   "level": 2,
+   "question": "Let $I(x)=\\int\\frac{6}{\\sin^2x(1-\\cot x)^2}dx$. If $I(0)=3$, then $I\\left(\\frac\\pi{12}\\right)$ is equal to:",
+   "options": [
+    "$2\\sqrt3$",
+    "$\\sqrt3$",
+    "$3\\sqrt3$",
+    "$6\\sqrt3$"
+   ],
+   "answer": "(C) $3\\sqrt3$",
+   "key_idea": "Write $\\sin^2x(1-\\cot x)^2=(\\sin x-\\cos x)^2$, divide by $\\cos^2x$ and put $\\tan x=t$ to get $\\int\\frac{6\\,dt}{(t-1)^2}$.",
+   "solution": [
+    "$\\sin^2x(1-\\cot x)^2=\\sin^2x\\cdot\\frac{(\\sin x-\\cos x)^2}{\\sin^2x}=1-2\\sin x\\cos x$.",
+    "$I(x)=\\int\\frac{6\\,dx}{1-2\\sin x\\cos x}=\\int\\frac{6\\sec^2x\\,dx}{1+\\tan^2x-2\\tan x}=\\int\\frac{6\\sec^2x\\,dx}{(\\tan x-1)^2}$.",
+    "Put $\\tan x=t$, $\\sec^2x\\,dx=dt$: $I=6\\int(t-1)^{-2}dt=-\\frac{6}{t-1}+C$.",
+    "$I(x)=-\\frac{6}{\\tan x-1}+C$.",
+    "$I(0)=3$: $-\\frac6{-1}+C=6+C=3$, so $C=-3$.",
+    "$I\\left(\\frac\\pi{12}\\right)=-\\frac{6}{2-\\sqrt3-1}-3=-\\frac{6}{1-\\sqrt3}-3$, since $\\tan\\frac\\pi{12}=2-\\sqrt3$.",
+    "Rationalise: $-\\frac{6}{1-\\sqrt3}\\cdot\\frac{1+\\sqrt3}{1+\\sqrt3}=\\frac{6(1+\\sqrt3)}{2}=3+3\\sqrt3$.",
+    "$I\\left(\\frac\\pi{12}\\right)=3+3\\sqrt3-3=3\\sqrt3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\csc^2x\\,dx=-d(\\cot x)$ directly: put $u=1-\\cot x$, so no division by $\\cos^2x$ is needed (the condition $I(0)=3$ is used as a limit).",
+     "solution": [
+      "$\\frac{6}{\\sin^2x(1-\\cot x)^2}dx=\\frac{6\\csc^2x}{(1-\\cot x)^2}dx$ and $d(1-\\cot x)=\\csc^2x\\,dx$.",
+      "With $u=1-\\cot x$: $I=\\int\\frac{6\\,du}{u^2}=-\\frac6u+C=-\\frac{6}{1-\\cot x}+C$.",
+      "As $x\\to0^+$, $\\cot x\\to\\infty$ so $-\\frac{6}{1-\\cot x}\\to0$; hence $I(0)=3$ gives $C=3$.",
+      "At $x=\\frac\\pi{12}$: $\\cot\\frac\\pi{12}=2+\\sqrt3$, so $1-\\cot x=-(1+\\sqrt3)$.",
+      "$I\\left(\\frac\\pi{12}\\right)=\\frac{6}{1+\\sqrt3}+3=3(\\sqrt3-1)+3=3\\sqrt3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\csc^2x\\,dx=-d(\\cot x)$ and $\\sec^2x\\,dx=d(\\tan x)$: if the integrand is a function of $\\cot x$ (or $\\tan x$) times $\\csc^2x$ (or $\\sec^2x$), substitute at once.",
+    "Two antiderivatives of the same function differ by a constant: here $-\\frac6{1-\\cot x}=-\\frac{6}{\\tan x-1}-6$, which is why the constants $3$ and $-3$ differ.",
+    "$\\tan\\frac\\pi{12}=2-\\sqrt3$, $\\cot\\frac\\pi{12}=2+\\sqrt3$; $\\tan\\frac{5\\pi}{12}=2+\\sqrt3$.",
+    "Check: $\\tan\\frac\\pi{12}=0.2679$, so $-\\frac{6}{0.2679-1}-3=8.196-3=5.196=3\\sqrt3$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration of $\\frac{a\\cos x+b\\sin x}{c\\cos x+d\\sin x}$ by the derivative method"
+   ],
+   "level": 2,
+   "question": "Let $\\int\\frac{2-\\tan x}{3+\\tan x}dx=\\frac12\\left(\\alpha x+\\log_e|\\beta\\sin x+\\gamma\\cos x|\\right)+C$, where $C$ is the constant of integration. Then $\\alpha+\\frac\\gamma\\beta$ is equal to:",
+   "options": [
+    "$3$",
+    "$1$",
+    "$7$",
+    "$7$"
+   ],
+   "answer": "$4$ (printed key (D) $7$ is wrong)",
+   "key_idea": "Convert to $\\frac{2\\cos x-\\sin x}{3\\cos x+\\sin x}$ and write the numerator as $a\\,(\\text{denominator})'+b\\,(\\text{denominator})$.",
+   "solution": [
+    "$\\int\\frac{2-\\tan x}{3+\\tan x}dx=\\int\\frac{2\\cos x-\\sin x}{3\\cos x+\\sin x}dx$.",
+    "Write $2\\cos x-\\sin x=a(-3\\sin x+\\cos x)+b(3\\cos x+\\sin x)$, where $-3\\sin x+\\cos x$ is the derivative of the denominator.",
+    "Comparing the coefficients of $\\cos x$ and $\\sin x$: $a+3b=2$ ... (i) and $-3a+b=-1$ ... (ii).",
+    "Solving (i) and (ii): $a=b=\\frac12$.",
+    "$I=\\frac12\\int\\frac{-3\\sin x+\\cos x}{3\\cos x+\\sin x}dx+\\frac12\\int dx=\\frac12\\ln|3\\cos x+\\sin x|+\\frac12x$.",
+    "$I=\\frac12\\left(x+\\ln|\\sin x+3\\cos x|\\right)+C$.",
+    "Comparing with $\\frac12\\left(\\alpha x+\\ln|\\beta\\sin x+\\gamma\\cos x|\\right)$: $\\alpha=1$, $\\beta=1$, $\\gamma=3$.",
+    "$\\alpha+\\frac\\gamma\\beta=1+\\frac31=4$. (The key (D) $7$ does not match this; the printed options (C) and (D) are both $7$, so the option list is faulty.)"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working gives alpha=1, beta=1, gamma=3 and alpha+gamma/beta=4, which is correct, but its answer key says D (=7), which is wrong; options C and D are both printed as 7 and none equals 4. Kept 4 as the answer and flagged the key. Scaling beta, gamma by a common factor only changes the constant, so gamma/beta=3 is forced.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $t=\\tan x$ and use partial fractions in $t$: $\\frac{2-t}{(3+t)(1+t^2)}$.",
+     "solution": [
+      "With $t=\\tan x$, $dx=\\frac{dt}{1+t^2}$, so $I=\\int\\frac{2-t}{(3+t)(1+t^2)}dt$.",
+      "Let $\\frac{2-t}{(3+t)(1+t^2)}=\\frac{A}{3+t}+\\frac{Bt+C}{1+t^2}$, i.e. $2-t=A(1+t^2)+(Bt+C)(3+t)$.",
+      "Put $t=-3$: $5=10A$, so $A=\\frac12$. Coefficient of $t^2$: $0=A+B$, so $B=-\\frac12$. Constant term: $2=A+3C$, so $C=\\frac12$. (Check, coefficient of $t$: $-1=3B+C=-1$.)",
+      "$I=\\frac12\\ln|3+t|-\\frac14\\ln(1+t^2)+\\frac12\\tan^{-1}t$.",
+      "With $t=\\tan x$: $\\frac12\\ln|3+\\tan x|+\\frac12\\ln|\\cos x|+\\frac x2=\\frac12\\left(x+\\ln|3\\cos x+\\sin x|\\right)$ (since $-\\frac14\\ln\\sec^2x=\\frac12\\ln|\\cos x|$).",
+      "So $\\alpha=1$, $\\beta=1$, $\\gamma=3$ and $\\alpha+\\frac\\gamma\\beta=4$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{a\\cos x+b\\sin x}{c\\cos x+d\\sin x}dx$: write numerator $=A\\,(c\\cos x+d\\sin x)'+B\\,(c\\cos x+d\\sin x)$; then the integral is $A\\ln|c\\cos x+d\\sin x|+Bx+C$.",
+    "For $\\int\\frac{p\\sin x+q\\cos x+r}{\\ldots}$ with a constant added, the numerator takes a third term $C$ and one more standard integral $\\int\\frac{dx}{c\\cos x+d\\sin x}$ remains.",
+    "Only the ratio $\\gamma:\\beta$ is determined by such an identity: multiplying $\\beta,\\gamma$ by $k>0$ adds $\\frac12\\ln k$ to the constant.",
+    "Check: derivative of $\\frac12\\left(x+\\ln(\\sin x+3\\cos x)\\right)$ at $x=0$ is $\\frac12\\left(1+\\frac13\\right)=\\frac23$, and $\\frac{2-0}{3+0}=\\frac23$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (inverse trigonometric function of $x^3+x^{-3}$)"
+   ],
+   "level": 2,
+   "question": "The integral $\\int\\frac{\\left(x^8-x^2\\right)dx}{\\left(x^{12}+3x^6+1\\right)\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)}$ is equal to:",
+   "options": [
+    "$\\log_e\\left(\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|\\right)^{1/3}+C$",
+    "$\\log_e\\left(\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|\\right)^{1/2}+C$",
+    "$\\log_e\\left(\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|\\right)+C$",
+    "$\\log_e\\left(\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|\\right)^{3}+C$"
+   ],
+   "answer": "(A) $\\log_e\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|^{1/3}+C$",
+   "key_idea": "Put $t=\\tan^{-1}\\left(x^3+x^{-3}\\right)$; then $dt$ reproduces $\\frac{3(x^8-x^2)}{x^{12}+3x^6+1}dx$ and the integral is $\\frac13\\int\\frac{dt}t$.",
+   "solution": [
+    "Let $\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)=t$.",
+    "$dt=\\frac{\\left(3x^2-\\frac3{x^4}\\right)dx}{1+\\left(x^3+\\frac1{x^3}\\right)^2}$.",
+    "Simplify: $\\frac{3(x^6-1)\\,dx}{x^4\\left(1+x^6+\\frac1{x^6}+2\\right)}=dt$.",
+    "The denominator $x^4\\left(x^6+3+\\frac1{x^6}\\right)=\\frac{x^{12}+3x^6+1}{x^2}$, so $dt=\\frac{3(x^8-x^2)}{x^{12}+3x^6+1}dx$.",
+    "The given integral is therefore $\\frac13\\int\\frac{dt}{t}$.",
+    "$=\\frac13\\ln|t|+c=\\log_e\\left|\\tan^{-1}\\left(x^3+\\frac1{x^3}\\right)\\right|^{1/3}+c$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Form $\\int\\frac{f'(x)}{f(x)}dx=\\ln|f(x)|+C$ with $f=\\tan^{-1}u$: the derivative $f'=\\frac{u'}{1+u^2}$ is the other factor to spot.",
+    "For $u=x^n+x^{-n}$: $1+u^2=x^{2n}+3+x^{-2n}$ and $u'=n(x^{n-1}-x^{-n-1})$; multiply through by $x^{2n}$ to get $x^{4n}+3x^{2n}+1$.",
+    "Recognition cue: a polynomial of the shape $x^{12}+3x^6+1$ (palindromic) hints at dividing by $x^6$ and putting $x^3\\pm x^{-3}=w$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution",
+    "Standard integral $\\int\\frac{1+t^2}{1+t^4}dt$"
+   ],
+   "level": 3,
+   "question": "For $x\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$, if $y(x)=\\int\\frac{\\csc x+\\sin x}{\\csc x\\sec x+\\tan x\\sin^2x}dx$, and $\\lim_{x\\to\\left(\\frac\\pi2\\right)^-}y(x)=0$, then $y\\left(\\frac\\pi4\\right)$ is equal to:",
+   "options": [
+    "$\\tan^{-1}\\left(\\frac1{\\sqrt2}\\right)$",
+    "$\\frac1{\\sqrt2}\\tan^{-1}\\left(-\\frac12\\right)$",
+    "$-\\frac1{\\sqrt2}\\tan^{-1}\\left(\\frac1{\\sqrt2}\\right)$",
+    "$\\frac12\\tan^{-1}\\left(\\frac1{\\sqrt2}\\right)$"
+   ],
+   "answer": "(B) $\\frac1{\\sqrt2}\\tan^{-1}\\left(-\\frac12\\right)$",
+   "key_idea": "After simplifying to $\\frac{(1+\\sin^2x)\\cos x}{1+\\sin^4x}$, put $\\sin x=t$ and divide by $t^2$: $\\int\\frac{1+t^{-2}}{t^2+t^{-2}}dt$ with $u=t-\\frac1t$.",
+   "solution": [
+    "Write numerator and denominator over $\\sin x$ and $\\sin x\\cos x$: $\\csc x+\\sin x=\\frac{1+\\sin^2x}{\\sin x}$; $\\csc x\\sec x+\\tan x\\sin^2x=\\frac{1+\\sin^4x}{\\sin x\\cos x}$.",
+    "So $y=\\int\\frac{(1+\\sin^2x)\\cos x}{1+\\sin^4x}dx$.",
+    "Put $\\sin x=t$, $\\cos x\\,dx=dt$: $y=\\int\\frac{1+t^2}{1+t^4}dt=\\int\\frac{1+\\frac1{t^2}}{t^2+\\frac1{t^2}}dt$.",
+    "Let $t-\\frac1t=u$; then $\\left(1+\\frac1{t^2}\\right)dt=du$ and $t^2+\\frac1{t^2}=u^2+2$.",
+    "$y=\\int\\frac{du}{u^2+2}=\\frac1{\\sqrt2}\\tan^{-1}\\frac{u}{\\sqrt2}+c$.",
+    "$y(x)=\\frac1{\\sqrt2}\\tan^{-1}\\left(\\frac{\\sin x-\\frac1{\\sin x}}{\\sqrt2}\\right)+c$.",
+    "As $x\\to\\frac\\pi2$, $\\sin x\\to1$ so $u\\to0$ and $y\\to c$; hence $c=0$.",
+    "At $x=\\frac\\pi4$: $u=\\frac1{\\sqrt2}-\\sqrt2=-\\frac1{\\sqrt2}$, so $\\frac{u}{\\sqrt2}=-\\frac12$ and $y\\left(\\frac\\pi4\\right)=\\frac1{\\sqrt2}\\tan^{-1}\\left(-\\frac12\\right)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF labels the antiderivative f(x) and writes f'(pi/2)=0, f'(pi/4); these should be y(x) with limit y(x) -> 0 as x -> pi/2 and y(pi/4). Notation only; the working and answer (B) are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $1+t^4=(t^2+\\sqrt2t+1)(t^2-\\sqrt2t+1)$ and split $\\frac{1+t^2}{1+t^4}$ into two arctangent integrals.",
+     "solution": [
+      "$\\frac{1+t^2}{1+t^4}=\\frac12\\left[\\frac1{t^2+\\sqrt2t+1}+\\frac1{t^2-\\sqrt2t+1}\\right]$ (add the two fractions to check: numerator $2(t^2+1)$).",
+      "$\\int\\frac{dt}{t^2\\pm\\sqrt2t+1}=\\sqrt2\\tan^{-1}\\left(\\sqrt2t\\pm1\\right)$, since the completed square is $\\left(t\\pm\\frac1{\\sqrt2}\\right)^2+\\frac12$.",
+      "So $y=\\frac1{\\sqrt2}\\left[\\tan^{-1}(\\sqrt2t+1)+\\tan^{-1}(\\sqrt2t-1)\\right]+c$ with $t=\\sin x$.",
+      "At $t=1$: $(\\sqrt2+1)(\\sqrt2-1)=1$, so the two angles add to $\\frac\\pi2$; the limit condition gives $0=\\frac1{\\sqrt2}\\cdot\\frac\\pi2+c$, so $c=-\\frac{\\pi}{2\\sqrt2}$.",
+      "At $t=\\frac1{\\sqrt2}$: $\\sqrt2t=1$, so $y=\\frac1{\\sqrt2}\\left[\\tan^{-1}2+\\tan^{-1}0\\right]-\\frac\\pi{2\\sqrt2}=\\frac1{\\sqrt2}\\left(\\tan^{-1}2-\\frac\\pi2\\right)$.",
+      "As $\\tan^{-1}2+\\tan^{-1}\\frac12=\\frac\\pi2$, $y=-\\frac1{\\sqrt2}\\tan^{-1}\\frac12=\\frac1{\\sqrt2}\\tan^{-1}\\left(-\\frac12\\right)$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{1+t^2}{1+t^4}dt=\\frac1{\\sqrt2}\\tan^{-1}\\frac{t^2-1}{\\sqrt2\\,t}+C$ and $\\int\\frac{1-t^2}{1+t^4}dt=\\frac1{2\\sqrt2}\\ln\\left|\\frac{t^2+\\sqrt2t+1}{t^2-\\sqrt2t+1}\\right|+C$ (divide by $t^2$ and use $t-\\frac1t$ or $t+\\frac1t$).",
+    "Rule: $\\frac{1+t^{-2}}{\\ldots}$ pairs with $u=t-\\frac1t$ ($du=(1+t^{-2})dt$, $t^2+t^{-2}=u^2+2$); $\\frac{1-t^{-2}}{\\ldots}$ pairs with $u=t+\\frac1t$ ($t^2+t^{-2}=u^2-2$).",
+    "$1+t^4=(t^2+\\sqrt2t+1)(t^2-\\sqrt2t+1)$ (Sophie Germain-type factorisation of $a^4+4b^4$ with $b^4=\\frac14$).",
+    "A limit condition such as $y\\to0$ at an end point of the domain fixes $C$ when the integrand is not defined there."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (trigonometric, radicals)"
+   ],
+   "level": 3,
+   "question": "If $\\int\\frac{\\sin^{3/2}x+\\cos^{3/2}x}{\\sqrt{\\sin^3x\\cos^3x\\sin(x-\\theta)}}dx=A\\sqrt{\\cos\\theta\\tan x-\\sin\\theta}+B\\sqrt{\\cos\\theta-\\sin\\theta\\cot x}+C$, where $C$ is the integration constant, then $AB$ is equal to:",
+   "options": [
+    "$4\\sec\\theta$",
+    "$4\\csc2\\theta$",
+    "$2\\sec\\theta$",
+    "$8\\csc2\\theta$"
+   ],
+   "answer": "(D) $8\\csc2\\theta$",
+   "key_idea": "Split the numerator; each part becomes $\\frac{\\sec^2x\\,dx}{\\sqrt{\\tan x\\cos\\theta-\\sin\\theta}}$ or the cosecant analogue, because $\\sec x\\sin(x-\\theta)=\\cos\\theta\\tan x-\\sin\\theta$.",
+   "solution": [
+    "Split: $I=\\int\\frac{\\sec^{3/2}x\\,dx}{\\sqrt{\\sin(x-\\theta)}}+\\int\\frac{\\csc^{3/2}x\\,dx}{\\sqrt{\\sin(x-\\theta)}}$, since $\\frac{\\sin^{3/2}x}{\\sqrt{\\sin^3x\\cos^3x}}=\\sec^{3/2}x$ and similarly for $\\cos^{3/2}x$.",
+    "Rewrite as $I=\\int\\frac{\\sec^2x\\,dx}{\\sqrt{\\sec x\\sin(x-\\theta)}}+\\int\\frac{\\csc^2x\\,dx}{\\sqrt{\\csc x\\sin(x-\\theta)}}$.",
+    "Now $\\sec x\\sin(x-\\theta)=\\tan x\\cos\\theta-\\sin\\theta$ and $\\csc x\\sin(x-\\theta)=\\cos\\theta-\\cot x\\sin\\theta$, so $I=I_1+I_2$ with $I_1=\\int\\frac{\\sec^2x\\,dx}{\\sqrt{\\tan x\\cos\\theta-\\sin\\theta}}$.",
+    "In $I_1$ let $\\tan x\\cos\\theta-\\sin\\theta=t^2$; then $\\sec^2x\\,dx=\\frac{2t\\,dt}{\\cos\\theta}$.",
+    "$I_1=\\int\\frac{2t\\,dt}{t\\cos\\theta}=\\frac{2t}{\\cos\\theta}+C_1=\\frac2{\\cos\\theta}\\sqrt{\\tan x\\cos\\theta-\\sin\\theta}+C_1$.",
+    "Similarly (put $\\cos\\theta-\\sin\\theta\\cot x=u^2$, $\\csc^2x\\,dx=\\frac{2u\\,du}{\\sin\\theta}$): $I_2=\\frac2{\\sin\\theta}\\sqrt{\\cos\\theta-\\sin\\theta\\cot x}+C_2$.",
+    "Comparing with the given form: $A=\\frac2{\\cos\\theta}$ and $B=\\frac2{\\sin\\theta}$.",
+    "$AB=\\frac4{\\sin\\theta\\cos\\theta}=\\frac8{\\sin2\\theta}=8\\csc2\\theta$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes I1 = (2/cos theta) sqrt(tan x cot theta - sin theta); the radicand must be tan x cos theta - sin theta (cos, not cot). Later working and answer (D) are right.",
+   "useful_results": [
+    "Two-term integrands with $\\sin^{3/2}$, $\\cos^{3/2}$ over $\\sqrt{\\sin^3x\\cos^3x\\,\\cdot}$: divide by $\\sin^{3/2}x\\cos^{3/2}x$ to get $\\sec^{3/2}x$ and $\\csc^{3/2}x$, then write each as $\\frac{\\sec^2x}{\\sqrt{\\sec x\\,(\\cdot)}}$.",
+    "$\\sin(x-\\theta)=\\sin x\\cos\\theta-\\cos x\\sin\\theta$, hence $\\frac{\\sin(x-\\theta)}{\\cos x}=\\tan x\\cos\\theta-\\sin\\theta$ and $\\frac{\\sin(x-\\theta)}{\\sin x}=\\cos\\theta-\\cot x\\sin\\theta$.",
+    "$\\int\\frac{f'(x)\\,dx}{\\sqrt{f(x)}}=2\\sqrt{f(x)}+C$; with $f=\\tan x\\cos\\theta-\\sin\\theta$, $f'=\\cos\\theta\\sec^2x$ giving the factor $\\frac2{\\cos\\theta}$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by parts (derivative of a quotient)"
+   ],
+   "level": 3,
+   "question": "Let $I(x)=\\int\\frac{x^2\\left(x\\sec^2x+\\tan x\\right)}{(x\\tan x+1)^2}dx$. If $I(0)=0$, then $I\\left(\\frac\\pi4\\right)$ is equal to:",
+   "options": [
+    "$\\log_e\\frac{(\\pi+4)^2}{16}+\\frac{\\pi^2}{4(\\pi+4)}$",
+    "$\\log_e\\frac{(\\pi+4)^2}{32}-\\frac{\\pi^2}{4(\\pi+4)}$",
+    "$\\log_e\\frac{(\\pi+4)^2}{32}+\\frac{\\pi^2}{4(\\pi+4)}$",
+    "$\\log_e\\frac{(\\pi+4)^2}{16}-\\frac{\\pi^2}{4(\\pi+4)}$"
+   ],
+   "answer": "(B) $\\log_e\\frac{(\\pi+4)^2}{32}-\\frac{\\pi^2}{4(\\pi+4)}$",
+   "key_idea": "$x\\sec^2x+\\tan x=(x\\tan x+1)'$, so integrate $x^2\\cdot\\frac{w'}{w^2}$ by parts with $w=x\\tan x+1$.",
+   "solution": [
+    "Let $w=x\\tan x+1$; then $w'=x\\sec^2x+\\tan x$ and the integrand is $x^2\\cdot\\frac{w'}{w^2}$.",
+    "$\\int x^2\\cdot\\frac{w'}{w^2}dx=-\\frac{x^2}{w}+\\int\\frac{2x}{w}dx$ (by parts with $\\int\\frac{w'}{w^2}dx=-\\frac1w$).",
+    "$I=-\\frac{x^2}{x\\tan x+1}+2\\int\\frac{x}{x\\tan x+1}dx$.",
+    "$\\int\\frac{x}{x\\tan x+1}dx=\\int\\frac{x\\cos x}{x\\sin x+\\cos x}dx$.",
+    "Let $x\\sin x+\\cos x=t$; then $dt=(x\\cos x+\\sin x-\\sin x)dx=x\\cos x\\,dx$.",
+    "$2\\int\\frac{dt}{t}=2\\ln|x\\sin x+\\cos x|+c$.",
+    "So $I(x)=-\\frac{x^2}{x\\tan x+1}+2\\ln|x\\sin x+\\cos x|+c$.",
+    "$I(0)=0$ gives $0+2\\ln1+c=0$, so $c=0$.",
+    "At $x=\\frac\\pi4$: $-\\frac{\\pi^2/16}{\\frac\\pi4+1}=-\\frac{\\pi^2}{4(\\pi+4)}$ and $x\\sin x+\\cos x=\\frac1{\\sqrt2}\\left(\\frac\\pi4+1\\right)=\\frac{\\pi+4}{4\\sqrt2}$.",
+    "$2\\ln\\frac{\\pi+4}{4\\sqrt2}=\\ln\\frac{(\\pi+4)^2}{32}$, so $I\\left(\\frac\\pi4\\right)=\\ln\\frac{(\\pi+4)^2}{32}-\\frac{\\pi^2}{4(\\pi+4)}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's evaluation line reads -pi/((pi/4)(1)+1), i.e. numerator pi instead of x^2 = pi^2/16, and -x^2/(x tan x+1) at pi/4 is -pi^2/(4(pi+4)). The PDF's final line has the right value. Also the PDF splits the integrand without saying it is x^2 w'/w^2; the by-parts step was written out. Answer (B) unchanged.",
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(\\frac{g}{w}\\right)=\\frac{g'w-gw'}{w^2}$: when the numerator contains $w'$ times a simple factor $g$, integrate by parts: $\\int g\\frac{w'}{w^2}=-\\frac gw+\\int\\frac{g'}{w}$.",
+    "$\\frac{d}{dx}(x\\tan x+1)=x\\sec^2x+\\tan x$ and $\\frac{d}{dx}(x\\sin x+\\cos x)=x\\cos x$: both are standard 'x times trig' derivatives worth remembering.",
+    "Pattern: $\\int\\frac{x\\cos x}{x\\sin x+\\cos x}dx=\\ln|x\\sin x+\\cos x|+C$ (numerator is the derivative of the denominator).",
+    "Numerical check: $\\frac{(\\pi+4)^2}{32}\\approx1.5935$, $\\ln1.5935\\approx0.4661$; $\\frac{\\pi^2}{4(\\pi+4)}\\approx0.3455$; difference $\\approx0.1206=I\\left(\\frac\\pi4\\right)$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration of $e^{f(x)}\\{g'(x)+f'(x)g(x)\\}$"
+   ],
+   "level": 2,
+   "question": "If $I(x)=\\int e^{\\sin^2x}(\\cos x\\sin2x-\\sin x)\\,dx$ and $I(0)=1$, then $I\\left(\\frac\\pi3\\right)$ is equal to:",
+   "options": [
+    "$e^{3/4}$",
+    "$-\\frac12e^{3/4}$",
+    "$-e^{3/4}$",
+    "$\\frac12e^{3/4}$"
+   ],
+   "answer": "(D) $\\frac12e^{3/4}$",
+   "key_idea": "With $f=\\sin^2x$ and $g=\\cos x$: $f'g+g'=\\cos x\\sin2x-\\sin x$, so the integrand is $\\frac{d}{dx}\\left(e^{f}g\\right)$.",
+   "solution": [
+    "Use $\\int e^{f(x)}\\left(g'(x)+f'(x)g(x)\\right)dx=e^{f(x)}g(x)+C$.",
+    "Take $f(x)=\\sin^2x$, so $f'(x)=\\sin2x$, and $g(x)=\\cos x$, so $g'(x)=-\\sin x$.",
+    "Then $g'+f'g=-\\sin x+\\sin2x\\cos x$, exactly the bracket.",
+    "So $I=e^{\\sin^2x}\\cos x+c$.",
+    "$I(0)=e^0\\cdot1+c=1$, so $c=0$ and $I=e^{\\sin^2x}\\cos x$.",
+    "$I\\left(\\frac\\pi3\\right)=e^{3/4}\\cdot\\frac12=\\frac12e^{3/4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=\\cos x$: the integrand becomes $e^{1-u^2}(1-2u^2)\\,du$, which is $\\frac{d}{du}\\left(u\\,e^{1-u^2}\\right)$.",
+     "solution": [
+      "$\\cos x\\sin2x-\\sin x=\\sin x\\,(2\\cos^2x-1)$, so $I=\\int e^{\\sin^2x}\\sin x\\,(2\\cos^2x-1)\\,dx$.",
+      "Put $u=\\cos x$: $\\sin x\\,dx=-du$, $\\sin^2x=1-u^2$. Then $I=-\\int e^{1-u^2}(2u^2-1)\\,du=\\int e^{1-u^2}(1-2u^2)\\,du$.",
+      "$\\frac{d}{du}\\left(u\\,e^{1-u^2}\\right)=e^{1-u^2}-2u^2e^{1-u^2}=e^{1-u^2}(1-2u^2)$.",
+      "So $I=u\\,e^{1-u^2}+c=\\cos x\\,e^{\\sin^2x}+c$; $I(0)=1$ gives $c=0$.",
+      "$I\\left(\\frac\\pi3\\right)=\\frac12e^{3/4}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(e^{f}g\\right)=e^{f}\\left(g'+f'g\\right)$: recognise integrands of the shape $e^{f}\\times(\\text{sum of } g' \\text{ and } f'g)$.",
+    "Special case $g=1$: $\\int f'e^{f}dx=e^{f}+C$; special case $f=x$: $\\int e^x(g+g')dx=e^xg+C$.",
+    "Integrals like $\\int e^{-u^2}(1-2u^2)du=ue^{-u^2}+C$ close in elementary form even though $\\int e^{-u^2}du$ does not.",
+    "Numerical check: $\\int_0^{\\pi/3}e^{\\sin^2x}(\\cos x\\sin2x-\\sin x)dx\\approx0.0585=\\frac12e^{3/4}-1$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (logarithmic differentiation of $(x/e)^{2x}$)"
+   ],
+   "level": 3,
+   "question": "For $\\alpha,\\beta,\\gamma,\\delta\\in\\mathbb N$, if $\\int\\left(\\left(\\frac xe\\right)^{2x}+\\left(\\frac ex\\right)^{2x}\\right)\\log_ex\\,dx=\\frac1\\alpha\\left(\\frac xe\\right)^{\\beta x}-\\frac1\\gamma\\left(\\frac ex\\right)^{\\delta x}+C$, where $e=\\sum_{n=0}^\\infty\\frac1{n!}$ and $C$ is the constant of integration, then $\\alpha+2\\beta+3\\gamma-4\\delta$ is equal to:",
+   "options": [
+    "$-4$",
+    "$1$",
+    "$4$",
+    "$-8$"
+   ],
+   "answer": "(C) 4",
+   "key_idea": "With $t=\\left(\\frac xe\\right)^{2x}$, $\\ln t=2x(\\ln x-1)$ and $\\frac{dt}{t}=2\\ln x\\,dx$, which supplies the $\\log_ex\\,dx$.",
+   "solution": [
+    "Let $\\left(\\frac xe\\right)^{2x}=t$. Taking logarithms: $\\ln t=2x(\\ln x-1)$.",
+    "Differentiate: $\\frac{dt}{t}=\\left[2(\\ln x-1)+2x\\cdot\\frac1x\\right]dx=2\\ln x\\,dx$, so $\\ln x\\,dx=\\frac{dt}{2t}$.",
+    "Also $\\left(\\frac ex\\right)^{2x}=\\frac1t$.",
+    "$I=\\int\\left(t+\\frac1t\\right)\\frac{dt}{2t}=\\frac12\\int\\left(1+\\frac1{t^2}\\right)dt$.",
+    "$=\\frac12\\left(t-\\frac1t\\right)+C$.",
+    "$=\\frac12\\left(\\frac xe\\right)^{2x}-\\frac12\\left(\\frac ex\\right)^{2x}+C$.",
+    "Comparing: $\\alpha=2$, $\\beta=2$, $\\gamma=2$, $\\delta=2$.",
+    "$\\alpha+2\\beta+3\\gamma-4\\delta=2+4+6-8=4$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(\\frac xe\\right)^{x}=\\left(\\frac xe\\right)^{x}\\ln x$ (since $\\frac{d}{dx}\\,x(\\ln x-1)=\\ln x$): the pair $x^x e^{-x}$ and $\\ln x$ is the standard hidden derivative.",
+    "General: $\\frac{d}{dx}\\left(\\frac xe\\right)^{kx}=k\\ln x\\left(\\frac xe\\right)^{kx}$; so $\\int\\left(\\frac xe\\right)^{kx}\\ln x\\,dx=\\frac1k\\left(\\frac xe\\right)^{kx}+C$.",
+    "For sums $t+\\frac1t$ with $dt=t\\cdot(\\ldots)$, after dividing you get $\\int(1+t^{-2})dt=t-t^{-1}$.",
+    "Check on this question: $\\frac{d}{dx}\\frac12\\left[\\left(\\frac xe\\right)^{2x}-\\left(\\frac ex\\right)^{2x}\\right]$ at $x=e$ is $\\frac12(2+2)\\cdot1=2=(1+1)\\ln e$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (hyperbolic/trigonometric) for $\\sqrt{1+x^2}\\pm x$"
+   ],
+   "level": 4,
+   "question": "If $\\int\\frac{\\left(\\sqrt{1+x^2}+x\\right)^{10}}{\\left(\\sqrt{1+x^2}-x\\right)^{9}}dx=\\frac1m\\left(\\left(\\sqrt{1+x^2}+x\\right)^{n}\\left(n\\sqrt{1+x^2}-x\\right)\\right)+C$, where $C$ is the constant of integration and $m,n\\in\\mathbb N$, then $m+n$ is equal to ___________.",
+   "answer": "379",
+   "key_idea": "Since $(\\sqrt{1+x^2}+x)(\\sqrt{1+x^2}-x)=1$, the integrand is $\\left(\\sqrt{1+x^2}+x\\right)^{19}$; put $z=\\sqrt{1+x^2}+x$ after $x=\\tan\\theta$.",
+   "solution": [
+    "Put $x=\\tan\\theta$. The integral becomes $\\int\\frac{(\\sec\\theta+\\tan\\theta)^{10}}{(\\sec\\theta-\\tan\\theta)^{9}}\\sec^2\\theta\\,d\\theta$.",
+    "Since $\\sec\\theta-\\tan\\theta=\\frac1{\\sec\\theta+\\tan\\theta}$, this is $\\int(\\sec\\theta+\\tan\\theta)^{19}\\sec^2\\theta\\,d\\theta$.",
+    "Put $z=\\sec\\theta+\\tan\\theta$; then $dz=\\sec\\theta(\\sec\\theta+\\tan\\theta)\\,d\\theta$, so $\\sec\\theta\\,d\\theta=\\frac{dz}{z}$.",
+    "$\\sec\\theta-\\tan\\theta=\\frac1z$, so $\\sec\\theta=\\frac12\\left(z+\\frac1z\\right)$.",
+    "$\\int z^{19}\\sec\\theta\\cdot\\frac{dz}{z}=\\int z^{18}\\cdot\\frac12\\left(z+\\frac1z\\right)dz=\\frac12\\int\\left(z^{19}+z^{17}\\right)dz$.",
+    "$=\\frac12\\left(\\frac{z^{20}}{20}+\\frac{z^{18}}{18}\\right)+c$.",
+    "With $z=\\sqrt{1+x^2}+x$: $=\\frac12\\cdot\\frac{z^{18}}{2}\\left(\\frac{z^2}{10}+\\frac19\\right)=\\frac14\\left(\\sqrt{1+x^2}+x\\right)^{19}\\left\\{\\frac{\\sqrt{1+x^2}+x}{10}+\\frac19\\left(\\sqrt{1+x^2}-x\\right)\\right\\}$, using $\\frac1z=\\sqrt{1+x^2}-x$.",
+    "The brace is $\\frac{9\\left(\\sqrt{1+x^2}+x\\right)+10\\left(\\sqrt{1+x^2}-x\\right)}{90}=\\frac{19\\sqrt{1+x^2}-x}{90}$.",
+    "So the integral is $\\frac1{360}\\left(\\sqrt{1+x^2}+x\\right)^{19}\\left(19\\sqrt{1+x^2}-x\\right)+c$, giving $m=360$, $n=19$.",
+    "$m+n=360+19=379$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=\\sinh u$: then $\\sqrt{1+x^2}\\pm x=e^{\\pm u}$ and the integrand collapses to $e^{19u}\\cosh u$.",
+     "solution": [
+      "$x=\\sinh u$, $\\sqrt{1+x^2}=\\cosh u$, $dx=\\cosh u\\,du$; $\\sqrt{1+x^2}+x=e^u$ and $\\sqrt{1+x^2}-x=e^{-u}$.",
+      "$\\int\\frac{e^{10u}}{e^{-9u}}\\cosh u\\,du=\\int e^{19u}\\cdot\\frac{e^u+e^{-u}}{2}du=\\frac12\\int\\left(e^{20u}+e^{18u}\\right)du$.",
+      "$=\\frac12\\left(\\frac{e^{20u}}{20}+\\frac{e^{18u}}{18}\\right)+c=\\frac{e^{19u}}{2}\\left(\\frac{e^{u}}{20}+\\frac{e^{-u}}{18}\\right)+c$.",
+      "With $e^u=z=\\sqrt{1+x^2}+x$ and $e^{-u}=\\sqrt{1+x^2}-x$: bracket $=\\frac{9\\left(\\sqrt{1+x^2}+x\\right)+10\\left(\\sqrt{1+x^2}-x\\right)}{180}=\\frac{19\\sqrt{1+x^2}-x}{180}$.",
+      "So the integral is $\\frac{1}{360}z^{19}\\left(19\\sqrt{1+x^2}-x\\right)+c$; $m=360$, $n=19$, $m+n=379$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left(\\sqrt{1+x^2}+x\\right)\\left(\\sqrt{1+x^2}-x\\right)=1$: reciprocal pair, so $\\left(\\sqrt{1+x^2}-x\\right)^{-9}=\\left(\\sqrt{1+x^2}+x\\right)^{9}$ and the integrand is $\\left(\\sqrt{1+x^2}+x\\right)^{19}$.",
+    "With $x=\\sinh u$: $\\int\\left(\\sqrt{1+x^2}+x\\right)^{k}dx=\\int e^{ku}\\cosh u\\,du=\\frac12\\left[\\frac{e^{(k+1)u}}{k+1}+\\frac{e^{(k-1)u}}{k-1}\\right]$ for $k\\ne\\pm1$.",
+    "Similarly $\\int\\left(x+\\sqrt{x^2-1}\\right)^kdx$ uses $x=\\cosh u$ and $\\int\\left(\\sqrt{a^2+x^2}+x\\right)^kdx$ uses $x=a\\sinh u$.",
+    "Check: for $F=\\frac1{360}z^{19}\\left(19\\sqrt{1+x^2}-x\\right)$ at $x=0$ ($z=1$, $z'=1$): $F'(0)=\\frac1{360}(19\\cdot19-1)=1$, the value of the integrand at $x=0$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (fractional power of $3x^{-1}+x^{-3}$)"
+   ],
+   "level": 3,
+   "question": "If $\\int\\left(\\frac1x+\\frac1{x^3}\\right)\\left(\\sqrt[23]{3x^{-24}+x^{-26}}\\right)dx=-\\frac{\\alpha}{3(\\alpha+1)}\\left(3x^\\beta+x^\\gamma\\right)^{\\frac{\\alpha+1}{\\alpha}}+C$, $x>0$, $(\\alpha,\\beta,\\gamma\\in\\mathbb Z)$, where $C$ is the constant of integration, then $\\alpha+\\beta+\\gamma$ is equal to ___________.",
+   "answer": "19",
+   "key_idea": "Pull one factor $x^{-1}$ out of the root so the integrand is $\\left(x^{-2}+x^{-4}\\right)\\left(3x^{-1}+x^{-3}\\right)^{1/23}$, and put $t=3x^{-1}+x^{-3}$.",
+   "solution": [
+    "$I=\\int\\left(\\frac1x+\\frac1{x^3}\\right)\\left(\\frac3{x^{24}}+\\frac1{x^{26}}\\right)^{1/23}dx$.",
+    "$\\left(\\frac3{x^{24}}+\\frac1{x^{26}}\\right)^{1/23}=\\left(\\frac1{x^{23}}\\left(\\frac3x+\\frac1{x^3}\\right)\\right)^{1/23}=\\frac1x\\left(\\frac3x+\\frac1{x^3}\\right)^{1/23}$.",
+    "So $I=\\int\\left(\\frac1{x^2}+\\frac1{x^4}\\right)\\left(\\frac3x+\\frac1{x^3}\\right)^{1/23}dx$.",
+    "Let $\\frac3x+\\frac1{x^3}=t$; then $\\left(-\\frac3{x^2}-\\frac3{x^4}\\right)dx=dt$, i.e. $\\left(\\frac1{x^2}+\\frac1{x^4}\\right)dx=-\\frac{dt}3$.",
+    "$I=-\\frac13\\int t^{1/23}dt=-\\frac13\\cdot\\frac{23}{24}\\,t^{24/23}+c$.",
+    "$I=-\\frac13\\cdot\\frac{23}{24}\\left(3x^{-1}+x^{-3}\\right)^{24/23}+c$.",
+    "Comparing with $-\\frac{\\alpha}{3(\\alpha+1)}\\left(3x^\\beta+x^\\gamma\\right)^{(\\alpha+1)/\\alpha}$: $\\alpha=23$, $\\beta=-1$, $\\gamma=-3$.",
+    "$\\alpha+\\beta+\\gamma=23-1-3=19$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int f'(x)\\,[f(x)]^{p}dx=\\frac{[f(x)]^{p+1}}{p+1}+C$: look for the inner function $f$ whose derivative appears as the other factor (here $f=3x^{-1}+x^{-3}$, $f'=-3(x^{-2}+x^{-4})$).",
+    "Factor out the common power under a root to expose $f$: $(3x^{-24}+x^{-26})=x^{-23}\\,(3x^{-1}+x^{-3})$.",
+    "For $\\int(a+bx^{-m})^{p}x^{-m-1}dx$-type integrals, the substitution $t=a+bx^{-m}$ works; the exponent $1/23$ plays no role beyond the power rule.",
+    "Check: the answer's exponent $\\frac{\\alpha+1}{\\alpha}=\\frac{24}{23}=1+\\frac1{23}$, consistent with $p+1$ for $p=\\frac1{23}$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration of $\\frac{px^2+qx+r}{\\sqrt{ax^2+bx+c}}$"
+   ],
+   "level": 2,
+   "question": "If $\\int\\frac{2x^2+5x+9}{\\sqrt{x^2+x+1}}dx=x\\sqrt{x^2+x+1}+\\alpha\\sqrt{x^2+x+1}+\\beta\\log_e\\left|x+\\frac12+\\sqrt{x^2+x+1}\\right|+C$, where $C$ is the constant of integration, then $\\alpha+2\\beta$ is equal to ___________.",
+   "answer": "16",
+   "key_idea": "Differentiate both sides: the derivative of the right side over the common denominator $2\\sqrt{x^2+x+1}$ must have numerator $2(2x^2+5x+9)$.",
+   "solution": [
+    "Differentiate both sides with respect to $x$. Let $s=\\sqrt{x^2+x+1}$, so $s'=\\frac{2x+1}{2s}$.",
+    "$\\frac{2x^2+5x+9}{s}=s+x\\cdot\\frac{2x+1}{2s}+\\alpha\\cdot\\frac{2x+1}{2s}+\\beta\\cdot\\frac1s$, because $\\frac{d}{dx}\\ln\\left|x+\\frac12+s\\right|=\\frac{1+\\frac{2x+1}{2s}}{x+\\frac12+s}=\\frac1s$.",
+    "Put everything over $2s$: $s=\\frac{2s^2}{2s}=\\frac{2x^2+2x+2}{2s}$.",
+    "Numerator on the right: $2x^2+2x+2+x(2x+1)+\\alpha(2x+1)+2\\beta=4x^2+(3+2\\alpha)x+2+\\alpha+2\\beta$.",
+    "So $\\frac{2x^2+5x+9}{s}=\\frac{4x^2+(3+2\\alpha)x+2+\\alpha+2\\beta}{2s}$, i.e. $4x^2+10x+18=4x^2+(3+2\\alpha)x+2+\\alpha+2\\beta$.",
+    "Coefficient of $x$: $10=3+2\\alpha$, so $\\alpha=\\frac72$.",
+    "Constant term: $18=2+\\frac72+2\\beta$, so $2\\beta=16-\\frac72=\\frac{25}{2}$ and $\\beta=\\frac{25}4$.",
+    "$\\alpha+2\\beta=\\frac72+\\frac{25}{2}=16$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square, $x+\\frac12=s$, and use the three standard integrals $\\int\\frac{s^2}{\\sqrt{s^2+k}},\\int\\frac{s}{\\sqrt{s^2+k}},\\int\\frac{1}{\\sqrt{s^2+k}}$.",
+     "solution": [
+      "Let $s=x+\\frac12$. Then $x^2+x+1=s^2+\\frac34$ and $2x^2+5x+9=2s^2+3s+7$.",
+      "$\\int\\frac{2s^2+3s+7}{\\sqrt{s^2+\\frac34}}ds$. Use $\\int\\frac{s^2}{\\sqrt{s^2+k}}ds=\\frac s2\\sqrt{s^2+k}-\\frac k2\\ln\\left(s+\\sqrt{s^2+k}\\right)$, $\\int\\frac{s\\,ds}{\\sqrt{s^2+k}}=\\sqrt{s^2+k}$, $\\int\\frac{ds}{\\sqrt{s^2+k}}=\\ln\\left(s+\\sqrt{s^2+k}\\right)$.",
+      "With $k=\\frac34$: $2\\left[\\frac s2\\sqrt{\\cdot}-\\frac38\\ln\\right]+3\\sqrt{\\cdot}+7\\ln=(s+3)\\sqrt{\\cdot}+\\left(7-\\frac34\\right)\\ln=(s+3)\\sqrt{\\cdot}+\\frac{25}4\\ln$.",
+      "$s+3=x+\\frac72$, so the integral is $x\\sqrt{x^2+x+1}+\\frac72\\sqrt{x^2+x+1}+\\frac{25}4\\ln\\left|x+\\frac12+\\sqrt{x^2+x+1}\\right|+C$.",
+      "So $\\alpha=\\frac72$, $\\beta=\\frac{25}4$ and $\\alpha+2\\beta=16$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{P_2(x)}{\\sqrt{ax^2+bx+c}}dx=(px+q)\\sqrt{ax^2+bx+c}+\\lambda\\int\\frac{dx}{\\sqrt{ax^2+bx+c}}$: differentiate both sides to find $p,q,\\lambda$.",
+    "$\\int\\frac{dx}{\\sqrt{x^2+x+1}}=\\ln\\left|x+\\frac12+\\sqrt{x^2+x+1}\\right|+C$, and $\\frac{d}{dx}\\ln\\left|x+\\frac12+s\\right|=\\frac1s$ (general: $\\frac{d}{dx}\\ln\\left|x+\\sqrt{x^2+k}\\right|=\\frac1{\\sqrt{x^2+k}}$).",
+    "For a degree-$n$ numerator over $\\sqrt{\\text{quadratic}}$ the ansatz is (polynomial of degree $n-1$)$\\cdot\\sqrt{\\cdot}+\\lambda\\int\\frac{dx}{\\sqrt{\\cdot}}$.",
+    "Check at $x=0$ ($s=1$, $s'=\\frac12$): derivative of the right side $=s+xs'+\\alpha s'+\\frac\\beta s=1+0+\\frac74+\\frac{25}4=9$, the integrand at $x=0$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by parts (reduction formula for $\\int\\csc^nx\\,dx$)"
+   ],
+   "level": 3,
+   "question": "If $\\int\\csc^5x\\,dx=\\alpha\\cot x\\csc x\\left(\\csc^2x+\\frac32\\right)+\\beta\\log_e\\left|\\tan\\frac x2\\right|+C$ where $\\alpha,\\beta\\in\\mathbb R$ and $C$ is the constant of integration, then the value of $8(\\alpha+\\beta)$ equals ___________.",
+   "answer": "1",
+   "key_idea": "Integrate $\\csc^3x\\cdot\\csc^2x$ by parts (with $\\int\\csc^2x=-\\cot x$) and use $\\cot^2x=\\csc^2x-1$ to get a reduction formula.",
+   "solution": [
+    "Let $I=\\int\\csc^3x\\cdot\\csc^2x\\,dx$. By parts, taking $\\csc^3x$ as the first function and $\\csc^2x$ as the second.",
+    "$I=-\\cot x\\csc^3x-\\int(-\\cot x)\\left(-3\\csc^3x\\cot x\\right)dx=-\\cot x\\csc^3x-3\\int\\cot^2x\\csc^3x\\,dx$.",
+    "Use $\\cot^2x=\\csc^2x-1$: $I=-\\cot x\\csc^3x-3\\int\\csc^3x\\left(\\csc^2x-1\\right)dx$.",
+    "$I=-\\cot x\\csc^3x-3I+3\\int\\csc^3x\\,dx$.",
+    "Let $I_1=\\int\\csc^3x\\,dx=-\\csc x\\cot x-\\int\\cot^2x\\csc x\\,dx=-\\csc x\\cot x-\\int\\left(\\csc^2x-1\\right)\\csc x\\,dx$.",
+    "$I_1=-\\csc x\\cot x-I_1+\\int\\csc x\\,dx$, so $2I_1=-\\csc x\\cot x+\\ln\\left|\\tan\\frac x2\\right|$ and $I_1=-\\frac12\\csc x\\cot x+\\frac12\\ln\\left|\\tan\\frac x2\\right|$.",
+    "From step 4: $4I=-\\cot x\\csc^3x+3I_1=-\\cot x\\csc^3x-\\frac32\\csc x\\cot x+\\frac32\\ln\\left|\\tan\\frac x2\\right|+4c$.",
+    "$I=-\\frac14\\csc x\\cot x\\left(\\csc^2x+\\frac32\\right)+\\frac38\\ln\\left|\\tan\\frac x2\\right|+c$.",
+    "So $\\alpha=-\\frac14$, $\\beta=\\frac38$, and $8(\\alpha+\\beta)=8\\cdot\\frac18=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's second line reads I = -cot x cosec^3 x - 3I - 3 integral(cosec^3 x (cosec^2 x - 1)) dx, which counts the -3I term twice (the integral -3 int cosec^3(cosec^2-1) already equals -3I + 3 int cosec^3). The next line, I = -cot x cosec^3 x - 3I + 3 int cosec^3 x dx, and all later working and the answer 1 are correct. Extra '-3I' removed.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the standard reduction formula $\\int\\csc^nx\\,dx=-\\frac{\\csc^{n-2}x\\cot x}{n-1}+\\frac{n-2}{n-1}\\int\\csc^{n-2}x\\,dx$ twice.",
+     "solution": [
+      "For $n=5$: $\\int\\csc^5x\\,dx=-\\frac{\\csc^3x\\cot x}4+\\frac34\\int\\csc^3x\\,dx$.",
+      "For $n=3$: $\\int\\csc^3x\\,dx=-\\frac{\\csc x\\cot x}2+\\frac12\\int\\csc x\\,dx=-\\frac{\\csc x\\cot x}{2}+\\frac12\\ln\\left|\\tan\\frac x2\\right|$.",
+      "Combine: $\\int\\csc^5x\\,dx=-\\frac14\\csc^3x\\cot x-\\frac38\\csc x\\cot x+\\frac38\\ln\\left|\\tan\\frac x2\\right|+C$.",
+      "$=-\\frac14\\csc x\\cot x\\left(\\csc^2x+\\frac32\\right)+\\frac38\\ln\\left|\\tan\\frac x2\\right|+C$, so $\\alpha=-\\frac14$, $\\beta=\\frac38$.",
+      "$8(\\alpha+\\beta)=1$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reduction: $\\int\\csc^nx\\,dx=-\\frac{\\csc^{n-2}x\\cot x}{n-1}+\\frac{n-2}{n-1}\\int\\csc^{n-2}x\\,dx$, and the same with $\\sec$: $\\int\\sec^nx\\,dx=\\frac{\\sec^{n-2}x\\tan x}{n-1}+\\frac{n-2}{n-1}\\int\\sec^{n-2}x\\,dx$.",
+    "Base cases: $\\int\\csc x\\,dx=\\ln\\left|\\tan\\frac x2\\right|+C$, $\\int\\csc^2x\\,dx=-\\cot x+C$, $\\int\\sec x\\,dx=\\ln|\\sec x+\\tan x|+C$.",
+    "For odd $n$ a log term appears; for even $n$ the result is a polynomial in $\\cot x$ (or $\\tan x$).",
+    "Check: $\\frac{d}{dx}\\left[-\\frac14\\csc x\\cot x\\left(\\csc^2x+\\frac32\\right)+\\frac38\\ln\\tan\\frac x2\\right]$ at $x=\\frac\\pi2$ is $\\csc^5\\frac\\pi2=1$ (numerically verified)."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution",
+    "Standard integral $\\int\\sqrt{t^2+a^2}\\,dt$"
+   ],
+   "level": 2,
+   "question": "Let $I(x)=\\int\\sqrt{\\frac{x+7}{x}}\\,dx$ and $I(9)=12+7\\log_e7$. If $I(1)=\\alpha+7\\log_e\\left(1+2\\sqrt2\\right)$, then $\\alpha^4$ is equal to ___________.",
+   "answer": "64",
+   "key_idea": "Write $\\sqrt{\\frac{x+7}x}=\\frac{\\sqrt{x+7}}{\\sqrt x}$ and put $\\sqrt x=t$ to reach $2\\int\\sqrt{t^2+7}\\,dt$, a standard integral.",
+   "solution": [
+    "$I(x)=\\int\\sqrt{\\frac{x+7}x}\\,dx=\\int\\frac{\\sqrt{(\\sqrt x)^2+(\\sqrt7)^2}}{\\sqrt x}dx$.",
+    "Let $\\sqrt x=t$; then $\\frac1{2\\sqrt x}dx=dt$, i.e. $\\frac{dx}{\\sqrt x}=2\\,dt$.",
+    "$I=2\\int\\sqrt{t^2+7}\\,dt=2\\left(\\frac t2\\sqrt{t^2+7}+\\frac72\\ln\\left(t+\\sqrt{t^2+7}\\right)\\right)+c$.",
+    "$I(x)=\\sqrt x\\sqrt{x+7}+7\\ln\\left(\\sqrt x+\\sqrt{x+7}\\right)+c$.",
+    "$I(9)=3\\cdot4+7\\ln(3+4)+c=12+7\\ln7+c$. Given $I(9)=12+7\\ln7$, so $c=0$.",
+    "$I(1)=\\sqrt8+7\\ln\\left(1+\\sqrt8\\right)=2\\sqrt2+7\\ln\\left(1+2\\sqrt2\\right)$.",
+    "So $\\alpha=2\\sqrt2=\\sqrt8$ and $\\alpha^4=64$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rationalise to $\\frac{x+7}{\\sqrt{x^2+7x}}$, split off the derivative of the radicand, and use $\\int\\frac{dx}{\\sqrt{x^2+7x}}$.",
+     "solution": [
+      "$\\sqrt{\\frac{x+7}x}=\\frac{x+7}{\\sqrt{x^2+7x}}=\\frac12\\cdot\\frac{2x+7}{\\sqrt{x^2+7x}}+\\frac72\\cdot\\frac1{\\sqrt{x^2+7x}}$.",
+      "$I(x)=\\sqrt{x^2+7x}+\\frac72\\ln\\left(x+\\frac72+\\sqrt{x^2+7x}\\right)+c'$.",
+      "$I(9)$: $\\sqrt{144}=12$ and $\\ln\\left(9+3.5+12\\right)=\\ln\\frac{49}2$, so $12+\\frac72\\ln\\frac{49}{2}+c'=12+7\\ln7$, giving $c'=\\frac72\\ln2$.",
+      "$I(1)=\\sqrt8+\\frac72\\ln\\left(\\frac92+\\sqrt8\\right)+\\frac72\\ln2=2\\sqrt2+\\frac72\\ln\\left(9+4\\sqrt2\\right)$.",
+      "$9+4\\sqrt2=\\left(1+2\\sqrt2\\right)^2$, so $I(1)=2\\sqrt2+7\\ln\\left(1+2\\sqrt2\\right)$, $\\alpha=2\\sqrt2$, $\\alpha^4=64$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\sqrt{t^2+a^2}\\,dt=\\frac t2\\sqrt{t^2+a^2}+\\frac{a^2}2\\ln\\left(t+\\sqrt{t^2+a^2}\\right)+C$.",
+    "$\\int\\sqrt{\\frac{x+a}{x}}dx=\\sqrt{x(x+a)}+a\\ln\\left(\\sqrt x+\\sqrt{x+a}\\right)+C$ for $x>0$, $a>0$; here $a=7$.",
+    "Different routes give antiderivatives that differ by a constant (here $\\frac72\\ln 2$ in the alternate form), so always fix $C$ using the given value in the same form.",
+    "Check: $\\frac{d}{dx}\\left[\\sqrt{x(x+7)}+7\\ln(\\sqrt x+\\sqrt{x+7})\\right]$ at $x=1$ is $\\frac{9}{2\\sqrt8}+\\frac{7}{2\\sqrt8}=\\frac{16}{2\\sqrt8}=\\sqrt8$, and $\\sqrt{\\frac{8}{1}}=\\sqrt8$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integration by substitution (reciprocal, then radical)",
+    "Constant of integration from a limit at $x=0$"
+   ],
+   "level": 4,
+   "question": "Let $f(x)=\\int\\frac{dx}{\\left(3+4x^2\\right)\\sqrt{4-3x^2}}$, $|x|<\\frac2{\\sqrt3}$. If $f(0)=0$ and $f(1)=\\frac1{\\alpha\\beta}\\tan^{-1}\\left(\\frac\\alpha\\beta\\right)$, $\\alpha,\\beta>0$, then $\\alpha^2+\\beta^2$ is equal to ___________.",
+   "answer": "28",
+   "key_idea": "Put $x=\\frac1t$, then $4t^2-3=p^2$: the integral becomes $-\\int\\frac{dp}{3p^2+25}$, an arctangent.",
+   "solution": [
+    "For $x>0$ let $x=\\frac1t$, $dx=-\\frac{dt}{t^2}$. Then $f=\\int\\frac{-\\frac1{t^2}\\,dt}{\\left(3+\\frac4{t^2}\\right)\\sqrt{4-\\frac3{t^2}}}=-\\int\\frac{t\\,dt}{(3t^2+4)\\sqrt{4t^2-3}}$.",
+    "Let $4t^2-3=p^2$; then $4t\\,dt=p\\,dp$, i.e. $t\\,dt=\\frac p4dp$, and $3t^2+4=\\frac{3p^2+9}{4}+4=\\frac{3p^2+25}4$.",
+    "$f=-\\int\\frac{\\frac p4dp}{\\frac{3p^2+25}{4}\\cdot p}=-\\int\\frac{dp}{3p^2+25}$.",
+    "$f=-\\frac1{5\\sqrt3}\\tan^{-1}\\left(\\frac{\\sqrt3\\,p}{5}\\right)+C$.",
+    "$p=\\sqrt{4t^2-3}=\\sqrt{\\frac4{x^2}-3}=\\frac{\\sqrt{4-3x^2}}{x}$ for $x>0$, so $f(x)=-\\frac1{5\\sqrt3}\\tan^{-1}\\left(\\frac{\\sqrt3\\sqrt{4-3x^2}}{5x}\\right)+C$.",
+    "$f$ is continuous at $0$, so use $f(0)=\\lim_{x\\to0^+}f(x)$: $p\\to\\infty$ and $0=-\\frac1{5\\sqrt3}\\cdot\\frac\\pi2+C$, so $C=\\frac{\\pi}{10\\sqrt3}$.",
+    "$f(1)=-\\frac1{5\\sqrt3}\\tan^{-1}\\frac{\\sqrt3}{5}+\\frac\\pi{10\\sqrt3}=\\frac1{5\\sqrt3}\\left(\\frac\\pi2-\\tan^{-1}\\frac{\\sqrt3}5\\right)$.",
+    "$=\\frac1{5\\sqrt3}\\cot^{-1}\\frac{\\sqrt3}{5}=\\frac1{5\\sqrt3}\\tan^{-1}\\frac5{\\sqrt3}$.",
+    "So $\\alpha=5$, $\\beta=\\sqrt3$ and $\\alpha^2+\\beta^2=25+3=28$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $u=\\frac{x}{\\sqrt{4-3x^2}}$: then $\\frac{dx}{(4-3x^2)^{3/2}}=\\frac{du}{4}$ and the integral is $\\int\\frac{du}{3+25u^2}$, with $f(0)=0$ at $u=0$ and no limit needed.",
+     "solution": [
+      "$u=\\frac{x}{\\sqrt{4-3x^2}}$, so $\\frac{du}{dx}=\\frac{(4-3x^2)+3x^2}{(4-3x^2)^{3/2}}=\\frac4{(4-3x^2)^{3/2}}$.",
+      "From $u^2=\\frac{x^2}{4-3x^2}$: $x^2=\\frac{4u^2}{1+3u^2}$, $4-3x^2=\\frac4{1+3u^2}$, and $3+4x^2=\\frac{3+25u^2}{1+3u^2}$.",
+      "$\\frac{dx}{(3+4x^2)\\sqrt{4-3x^2}}=\\frac{du}{4}\\cdot\\frac{4-3x^2}{3+4x^2}=\\frac{du}4\\cdot\\frac4{3+25u^2}=\\frac{du}{3+25u^2}$.",
+      "$f=\\int\\frac{du}{25u^2+3}=\\frac1{5\\sqrt3}\\tan^{-1}\\frac{5u}{\\sqrt3}+C$; $f(0)=0$ at $u=0$ gives $C=0$.",
+      "At $x=1$: $u=1$, so $f(1)=\\frac1{5\\sqrt3}\\tan^{-1}\\frac5{\\sqrt3}$, giving $\\alpha=5$, $\\beta=\\sqrt3$.",
+      "$\\alpha^2+\\beta^2=28$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int\\frac{dx}{(a+bx^2)\\sqrt{c-dx^2}}$ put $u=\\frac{x}{\\sqrt{c-dx^2}}$ (or $x=\\frac1t$): the radical disappears and the integral becomes $\\int\\frac{du}{A+Bu^2}$. Here $\\frac{du}{dx}=\\frac{c}{(c-dx^2)^{3/2}}$.",
+    "$\\frac{d}{dx}\\frac{x}{\\sqrt{c-dx^2}}=\\frac{c}{(c-dx^2)^{3/2}}$ is the key derivative; compare $\\frac{d}{dx}\\frac{x}{\\sqrt{1-x^2}}=\\frac1{(1-x^2)^{3/2}}$.",
+    "The antiderivative here is odd in $x$ ($\\frac{1}{5\\sqrt3}\\tan^{-1}\\frac{5x}{\\sqrt3\\sqrt{4-3x^2}}$), so $f(0)=0$ is automatic for it; a formula valid only for $x>0$ needs the limit $x\\to0^+$.",
+    "$\\tan^{-1}a+\\cot^{-1}a=\\frac\\pi2$ and $\\cot^{-1}a=\\tan^{-1}\\frac1a$ for $a>0$; used to rewrite the answer in the required form."
+   ]
+  }
+ ]
+}
