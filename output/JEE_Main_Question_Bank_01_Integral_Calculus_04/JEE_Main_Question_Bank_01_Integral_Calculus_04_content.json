@@ -1,0 +1,813 @@
+{
+ "title": "JEE Main Question Bank 01 — Integral Calculus 04 — Paper Analysis",
+ "subtitle": "Definite Integration · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Integral_Calculus_04.pdf (printed Q61-Q80, numbered 1-20 in the deck); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 5,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 6,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Definite integration of powers of trigonometric functions"
+   ],
+   "level": 1,
+   "question": "If $\\int_0^{\\pi/3}\\cos^4x\\,dx=a\\pi+b\\sqrt3$, where $a$ and $b$ are rational numbers, then $9a+8b$ is equal to:",
+   "options": [
+    "$\\frac32$",
+    "$2$",
+    "$1$",
+    "$3$"
+   ],
+   "answer": "(B) 2",
+   "key_idea": "Reduce $\\cos^4x$ to multiple angles with $\\cos^2x=\\frac{1+\\cos2x}{2}$ twice, then integrate term by term.",
+   "solution": [
+    "$\\cos^4x=\\left(\\frac{1+\\cos2x}{2}\\right)^2=\\frac14\\left(1+2\\cos2x+\\cos^22x\\right)$.",
+    "$\\cos^22x=\\frac{1+\\cos4x}{2}$, so $\\int_0^{\\pi/3}\\cos^4x\\,dx=\\frac14\\left[\\int_0^{\\pi/3}dx+2\\int_0^{\\pi/3}\\cos2x\\,dx+\\int_0^{\\pi/3}\\frac{1+\\cos4x}{2}dx\\right]$.",
+    "$=\\frac14\\left[\\frac{\\pi}{3}+\\left(\\sin2x\\right)_0^{\\pi/3}+\\frac12\\cdot\\frac{\\pi}{3}+\\frac18\\left(\\sin4x\\right)_0^{\\pi/3}\\right]$.",
+    "$\\sin\\frac{2\\pi}{3}=\\frac{\\sqrt3}{2}$ and $\\sin\\frac{4\\pi}{3}=-\\frac{\\sqrt3}{2}$, so the bracket is $\\frac{\\pi}{2}+\\frac{\\sqrt3}{2}+\\frac18\\left(-\\frac{\\sqrt3}{2}\\right)$.",
+    "$=\\frac14\\left[\\frac{\\pi}{2}+\\frac{7\\sqrt3}{16}\\right]=\\frac{\\pi}{8}+\\frac{7\\sqrt3}{64}$.",
+    "Hence $a=\\frac18$ and $b=\\frac{7}{64}$.",
+    "$9a+8b=\\frac98+\\frac78=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF repeats one line twice and its last line reads $\\frac{\\pi}{2}+\\frac{7\\sqrt3}{64}$; it should be $\\frac14\\left[\\frac{\\pi}{2}+\\ldots\\right]=\\frac{\\pi}{8}+\\frac{7\\sqrt3}{64}$ (the PDF then correctly uses $a=\\frac18$). Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the reduction formula $\\int\\cos^nx\\,dx=\\frac{\\cos^{n-1}x\\sin x}{n}+\\frac{n-1}{n}\\int\\cos^{n-2}x\\,dx$ instead of expanding.",
+     "solution": [
+      "With $n=4$: $\\int\\cos^4x\\,dx=\\frac{\\cos^3x\\sin x}{4}+\\frac34\\int\\cos^2x\\,dx$.",
+      "At the limits: $\\left[\\frac{\\cos^3x\\sin x}{4}\\right]_0^{\\pi/3}=\\frac14\\cdot\\frac18\\cdot\\frac{\\sqrt3}{2}=\\frac{\\sqrt3}{64}$.",
+      "$\\int_0^{\\pi/3}\\cos^2x\\,dx=\\left[\\frac x2+\\frac{\\sin2x}{4}\\right]_0^{\\pi/3}=\\frac{\\pi}{6}+\\frac{\\sqrt3}{8}$.",
+      "So the integral is $\\frac{\\sqrt3}{64}+\\frac34\\left(\\frac\\pi6+\\frac{\\sqrt3}{8}\\right)=\\frac{\\pi}{8}+\\frac{\\sqrt3}{64}+\\frac{6\\sqrt3}{64}=\\frac\\pi8+\\frac{7\\sqrt3}{64}$.",
+      "$a=\\frac18$, $b=\\frac7{64}$, so $9a+8b=2$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos^4x=\\frac{3+4\\cos2x+\\cos4x}{8}$ and $\\sin^4x=\\frac{3-4\\cos2x+\\cos4x}{8}$; the average of $\\cos^4x$ over a period is $\\frac38$.",
+    "Reduction: $\\int\\cos^nx\\,dx=\\frac{\\cos^{n-1}x\\sin x}{n}+\\frac{n-1}{n}\\int\\cos^{n-2}x\\,dx$ (check $n=2$: $\\frac{\\cos x\\sin x}{2}+\\frac x2$).",
+    "Wallis: $\\int_0^{\\pi/2}\\cos^4x\\,dx=\\frac{3\\pi}{16}$, but here the upper limit is $\\frac\\pi3$, so the full expansion is needed."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Leibniz rule for integral equations",
+    "Linear differential equations"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a differentiable function such that $x^2f(x)-x=4\\int_0^xtf(t)\\,dt$, $f(1)=\\frac23$. Then $18f(3)$ is equal to:",
+   "options": [
+    "$180$",
+    "$210$",
+    "$160$",
+    "$150$"
+   ],
+   "answer": "(C) 160",
+   "key_idea": "Differentiate the integral equation to get a linear ODE in $f$, then use $\\left(\\frac{y}{x^2}\\right)'=\\frac{x^2y'-2xy}{x^4}$.",
+   "solution": [
+    "Differentiate both sides: $2xf(x)+x^2f'(x)-1=4xf(x)$.",
+    "With $y=f(x)$: $x^2\\frac{dy}{dx}-2xy=1$, i.e. $\\frac{dy}{dx}+\\left(-\\frac2x\\right)y=\\frac1{x^2}$.",
+    "Integrating factor $=e^{\\int-\\frac2x dx}=\\frac1{x^2}$.",
+    "$y\\cdot\\frac1{x^2}=\\int\\frac1{x^4}dx=-\\frac1{3x^3}+c$.",
+    "$y=-\\frac1{3x}+cx^2$.",
+    "$f(1)=\\frac23\\Rightarrow-\\frac13+c=\\frac23\\Rightarrow c=1$, so $f(x)=x^2-\\frac1{3x}$.",
+    "$f(3)=9-\\frac19=\\frac{80}{9}$, so $18f(3)=160$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $F(x)=\\int_0^xtf(t)dt$ so that $F'=xf$; the equation becomes a first-order ODE in $F$ alone.",
+     "solution": [
+      "$x^2f=x\\cdot(xf)=xF'$, so the equation reads $xF'=x+4F$, i.e. $F'-\\frac4xF=1$.",
+      "Integrating factor $x^{-4}$: $\\left(\\frac{F}{x^4}\\right)'=\\frac1{x^4}$, so $\\frac F{x^4}=-\\frac1{3x^3}+C$ and $F=-\\frac x3+Cx^4$.",
+      "$f=\\frac{F'}{x}=\\frac{-\\frac13+4Cx^3}{x}=-\\frac1{3x}+4Cx^2$.",
+      "$f(1)=-\\frac13+4C=\\frac23$ gives $4C=1$, so $f(x)=x^2-\\frac1{3x}$.",
+      "$18f(3)=18\\left(9-\\frac19\\right)=162-2=160$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Equations of the form $x^2f(x)=\\ldots+\\int_0^xt^kf(t)dt$: differentiate once (Leibniz) to remove the integral, and check the original equation at $x=0$ if the domain includes it.",
+    "$x^2y'-2xy=g(x)$ is exactly $x^4\\left(\\frac{y}{x^2}\\right)'=g(x)$, so $\\frac y{x^2}=\\int\\frac{g}{x^4}dx$ (here $g=1$, so $\\frac y{x^2}=-\\frac1{3x^3}+c$).",
+    "Quick check of any solution: substitute it back, e.g. $x^2f-x=x^4-\\frac{4x}{3}$ and $4\\int_0^xt f\\,dt=x^4-\\frac{4x}3$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Leibniz rule for differentiation under the integral sign"
+   ],
+   "level": 1,
+   "question": "Let $f$ be a continuous function satisfying $\\int_0^{t^2}\\left(f(x)+x^2\\right)dx=\\frac43t^3$ for all $t>0$. Then $f\\left(\\frac{\\pi^2}{4}\\right)$ is equal to:",
+   "options": [
+    "$\\left(1-\\pi\\left(1+\\frac{\\pi^3}{16}\\right)\\right)$",
+    "$-\\pi\\left(1-\\frac{\\pi^2}{16}\\right)$",
+    "$\\pi^2\\left(1-\\frac{\\pi^3}{16}\\right)$",
+    "$\\pi\\left(1-\\frac{\\pi^3}{16}\\right)$"
+   ],
+   "answer": "(D) $\\pi\\left(1-\\frac{\\pi^3}{16}\\right)$",
+   "key_idea": "Differentiate with respect to $t$ using the Leibniz rule with upper limit $t^2$, then put $t=\\frac\\pi2$.",
+   "solution": [
+    "Differentiate both sides w.r.t. $t$: $\\left(f(t^2)+t^4\\right)\\cdot2t=4t^2$.",
+    "Since $t>0$, divide by $2t$: $f(t^2)+t^4=2t$.",
+    "So $f(t^2)=2t-t^4$.",
+    "Put $t=\\frac\\pi2$ so that $t^2=\\frac{\\pi^2}{4}$: $f\\left(\\frac{\\pi^2}{4}\\right)=2\\cdot\\frac\\pi2-\\frac{\\pi^4}{16}$.",
+    "$=\\pi-\\frac{\\pi^4}{16}=\\pi\\left(1-\\frac{\\pi^3}{16}\\right)$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{d}{dt}\\int_a^{u(t)}F(x)dx=F(u(t))\\,u'(t)$; to evaluate $f$ at a point, write the point as $u(t)$ for a convenient $t$.",
+    "The same integral gives $\\int_0^u\\left(f+x^2\\right)dx=\\frac43u^{3/2}$, i.e. $f(u)+u^2=2\\sqrt u$ for all $u>0$ (instance: $f(u)=2\\sqrt u-u^2$).",
+    "Continuity of $f$ is what makes the integral differentiable; conversely such an equation determines $f$ completely."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Definite integration by substitution and by parts"
+   ],
+   "level": 2,
+   "question": "The value of the integral $\\int_{-\\log_e2}^{\\log_e2}e^x\\left(\\log_e\\left(e^x+\\sqrt{1+e^{2x}}\\right)\\right)dx$ is equal to:",
+   "options": [
+    "$\\log_e\\left(\\frac{2(2+\\sqrt5)}{\\sqrt{1+\\sqrt5}}\\right)-\\frac{\\sqrt5}{2}$",
+    "$\\log_e\\left(\\frac{\\sqrt2(2+\\sqrt5)^2}{\\sqrt{1+\\sqrt5}}\\right)-\\frac{\\sqrt5}{2}$",
+    "$\\log_e\\left(\\frac{(2+\\sqrt5)^2}{\\sqrt{1+\\sqrt5}}\\right)+\\frac{\\sqrt5}{2}$",
+    "$\\log_e\\left(\\frac{\\sqrt2(3-\\sqrt5)^2}{\\sqrt{1+\\sqrt5}}\\right)+\\frac{\\sqrt5}{2}$"
+   ],
+   "answer": "(B) $\\log_e\\left(\\frac{\\sqrt2(2+\\sqrt5)^2}{\\sqrt{1+\\sqrt5}}\\right)-\\frac{\\sqrt5}{2}$",
+   "key_idea": "Put $e^x=t$ to get $\\int\\ln\\left(t+\\sqrt{1+t^2}\\right)dt$ and integrate by parts.",
+   "solution": [
+    "Put $e^x=t$, $e^xdx=dt$; the limits become $\\frac12$ and $2$: $I=\\int_{1/2}^2\\log_e\\left(t+\\sqrt{1+t^2}\\right)dt$.",
+    "By parts: $I=\\left[t\\ln\\left(\\sqrt{t^2+1}+t\\right)\\right]_{1/2}^2-\\int_{1/2}^2\\frac{t}{\\sqrt{t^2+1}}dt$.",
+    "$\\int\\frac{t}{\\sqrt{t^2+1}}dt=\\sqrt{t^2+1}$, so $I=\\left[t\\ln\\left(\\sqrt{t^2+1}+t\\right)-\\sqrt{t^2+1}\\right]_{1/2}^2$.",
+    "At $t=2$: $2\\ln\\left(2+\\sqrt5\\right)-\\sqrt5$.",
+    "At $t=\\frac12$: $\\frac12\\ln\\left(\\frac{\\sqrt5}{2}+\\frac12\\right)-\\frac{\\sqrt5}{2}$.",
+    "$I=2\\ln(2+\\sqrt5)-\\frac12\\ln\\frac{1+\\sqrt5}{2}-\\sqrt5+\\frac{\\sqrt5}{2}$.",
+    "$=\\ln\\left(\\frac{(2+\\sqrt5)^2\\sqrt2}{\\sqrt{1+\\sqrt5}}\\right)-\\frac{\\sqrt5}{2}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's value at $t=2$ is printed as $2\\ln\\sqrt5+2-\\sqrt5$; it should be $2\\ln\\left(2+\\sqrt5\\right)-\\sqrt5$ (the antiderivative is $t\\ln(t+\\sqrt{t^2+1})-\\sqrt{t^2+1}$). The PDF's final expression is right.",
+   "alternate_solutions": [
+    {
+     "idea": "The integrand is $\\sinh^{-1}t$; integrate the inverse function using the area formula $\\int_a^bf=bf(b)-af(a)-\\int_{f(a)}^{f(b)}f^{-1}$.",
+     "solution": [
+      "After $e^x=t$: $I=\\int_{1/2}^2\\sinh^{-1}t\\,dt$, since $\\ln\\left(t+\\sqrt{1+t^2}\\right)=\\sinh^{-1}t$.",
+      "Let $u_2=\\sinh^{-1}2=\\ln(2+\\sqrt5)$ and $u_1=\\sinh^{-1}\\frac12=\\ln\\frac{1+\\sqrt5}{2}$.",
+      "Inverse-function formula: $I=2u_2-\\frac12u_1-\\int_{u_1}^{u_2}\\sinh u\\,du$.",
+      "$\\int_{u_1}^{u_2}\\sinh u\\,du=\\cosh u_2-\\cosh u_1=\\sqrt5-\\frac{\\sqrt5}{2}=\\frac{\\sqrt5}{2}$ (as $\\cosh\\sinh^{-1}t=\\sqrt{1+t^2}$).",
+      "$I=2\\ln(2+\\sqrt5)-\\frac12\\ln\\frac{1+\\sqrt5}{2}-\\frac{\\sqrt5}{2}=\\ln\\frac{\\sqrt2(2+\\sqrt5)^2}{\\sqrt{1+\\sqrt5}}-\\frac{\\sqrt5}{2}$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\ln\\left(x+\\sqrt{1+x^2}\\right)dx=x\\ln\\left(x+\\sqrt{1+x^2}\\right)-\\sqrt{1+x^2}+C$ (differentiate to check).",
+    "$\\ln\\left(x+\\sqrt{1+x^2}\\right)=\\sinh^{-1}x$ is an odd function, and $\\ln(x+\\sqrt{1+x^2})+\\ln(-x+\\sqrt{1+x^2})=0$.",
+    "Inverse-function integral: $\\int_a^bf(x)dx+\\int_{f(a)}^{f(b)}f^{-1}(y)dy=bf(b)-af(a)$ for increasing $f$.",
+    "The substitution $e^x=t$ turns $\\int_{-a}^{a}e^xg(e^x)dx$ into $\\int_{e^{-a}}^{e^a}g(t)dt$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Greatest integer and fractional part functions",
+    "Definite integration of piecewise-defined functions"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,2]\\to\\mathbb R$ be defined as $f(x)=\\begin{cases}e^{\\min\\{x^2,\\,x-[x]\\}}, & x\\in[0,1)\\\\ e^{[x-\\log_ex]}, & x\\in[1,2]\\end{cases}$ where $[t]$ denotes the greatest integer less than or equal to $t$. Then the value of the integral $\\int_0^2xf(x)dx$ is:",
+   "options": [
+    "$2e-1$",
+    "$1+\\frac{3e}{2}$",
+    "$2e-\\frac12$",
+    "$(e-1)\\left(e^2+\\frac12\\right)$"
+   ],
+   "answer": "(C) $2e-\\frac12$",
+   "key_idea": "On $[0,1)$ $x-[x]=x\\ge x^2$, and on $[1,2]$ $x-\\ln x$ stays in $[1,2)$, so $f$ is $e^{x^2}$ and then the constant $e$.",
+   "solution": [
+    "For $x\\in[0,1)$: $[x]=0$, so $x-[x]=x$; and $x^2\\le x$, hence $\\min\\{x^2,x\\}=x^2$ and $f(x)=e^{x^2}$.",
+    "For $x\\in[1,2]$: $h(x)=x-\\ln x$ has $h'(x)=1-\\frac1x\\ge0$, so it increases from $h(1)=1$ to $h(2)=2-\\ln2\\approx1.31$.",
+    "So $[x-\\ln x]=1$ on $[1,2]$ and $f(x)=e$ there.",
+    "$\\int_0^2xf(x)dx=\\int_0^1xe^{x^2}dx+\\int_1^2x\\cdot e\\,dx$.",
+    "$\\int_0^1xe^{x^2}dx=\\left[\\frac{e^{x^2}}{2}\\right]_0^1=\\frac{e-1}{2}$ and $\\int_1^2ex\\,dx=e\\cdot\\frac{4-1}{2}=\\frac{3e}{2}$.",
+    "Sum $=\\frac{e-1}{2}+\\frac{3e}{2}=2e-\\frac12$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$x-[x]=\\{x\\}$, which equals $x$ on $[0,1)$; compare $x^2$ with $x$ there (smaller for $0<x<1$).",
+    "$[g(x)]$ is constant while $g$ stays between consecutive integers: check the range of $g$ on the interval (monotonicity via $g'$).",
+    "$\\ln x\\le x-1$, so $x-\\ln x\\ge1$ for $x>0$, with equality only at $x=1$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integral of the greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let $[\\,.\\,]$ denote the greatest integer function. If $\\int_0^{e^3}\\left[\\frac1{e^{x-1}}\\right]dx=\\alpha-\\log_e2$, then $\\alpha^3$ is equal to ______.",
+   "answer": "8",
+   "key_idea": "$\\frac1{e^{x-1}}=e^{1-x}$ is decreasing; find where it crosses $2$ and $1$ and split the interval there.",
+   "solution": [
+    "$f(x)=\\frac1{e^{x-1}}=e^{1-x}$ is decreasing; $f(0)=e\\approx2.71$.",
+    "$f(x)=2\\Rightarrow x=1-\\ln2$ and $f(x)=1\\Rightarrow x=1$; also $f(e^3)=e^{1-e^3}\\in(0,1)$.",
+    "So $[f]=2$ on $[0,1-\\ln2)$, $[f]=1$ on $[1-\\ln2,1)$ and $[f]=0$ on $[1,e^3]$.",
+    "$I=\\int_0^{1-\\ln2}2\\,dx+\\int_{1-\\ln2}^{1}1\\,dx+\\int_1^{e^3}0\\,dx$.",
+    "$=2(1-\\ln2)+\\left(1-1+\\ln2\\right)+0=2-\\ln2$.",
+    "So $\\alpha=2$ and $\\alpha^3=8$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the first piece as $(1-\\ln2-0)$, dropping the factor $2$ of $\\int2\\,dx$; with that line the sum would be $1$, not $2-\\ln2$. The correct first piece is $2(1-\\ln2)$. Answer $\\alpha=2$ unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Layer-cake: for $g\\ge0$, $\\int[g]dx=\\sum_{n\\ge1}\\left|\\{x:g(x)\\ge n\\}\\right|$, so just measure how long $e^{1-x}\\ge n$.",
+     "solution": [
+      "$[g(x)]=\\sum_{n\\ge1}\\mathbf 1_{\\{g(x)\\ge n\\}}$, so $\\int_0^{e^3}[g]dx=\\sum_{n\\ge1}\\ell_n$ with $\\ell_n$ the length of $\\{x\\in[0,e^3]:e^{1-x}\\ge n\\}$.",
+      "$e^{1-x}\\ge n\\iff x\\le1-\\ln n$.",
+      "$n=1$: $x\\le1$, length $1$. $n=2$: $x\\le1-\\ln2$, length $1-\\ln2$.",
+      "$n\\ge3$: $1-\\ln n<0$ (as $e<3$), so the set is empty.",
+      "$I=1+(1-\\ln2)=2-\\ln2$, so $\\alpha=2$ and $\\alpha^3=8$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Layer-cake for the floor: $\\int_a^b[g(x)]dx=\\sum_{n\\ge1}\\left|\\{x\\in[a,b]:g(x)\\ge n\\}\\right|$ for $g\\ge0$ (check: $g=x$ on $[0,3]$ gives $2+1+0=3=\\int_0^3[x]dx$).",
+    "For monotone $g$ each set is an interval, found by solving $g(x)=n$.",
+    "Here $e<3$ means $e^{1-x}<3$ for all $x\\ge0$ and $e^{1-x}<1$ for $x>1$, so nothing beyond $x=1$ contributes and $n\\ge3$ is never reached."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Functional-integral equation: substitution $t=\\lambda x$",
+    "Variable-separable differential equations"
+   ],
+   "level": 3,
+   "question": "Let $f:(0,\\infty)\\to\\mathbb R$ be a twice differentiable function. If for some $a\\ne0$, $\\int_0^1f(\\lambda x)d\\lambda=af(x)$, $f(1)=1$ and $f(16)=\\frac18$, then $16-f'\\left(\\frac1{16}\\right)$ is equal to ______.",
+   "answer": "112",
+   "key_idea": "The substitution $t=\\lambda x$ turns the equation into $\\int_0^xf=axf(x)$; differentiating gives a separable ODE whose solutions are powers.",
+   "solution": [
+    "Put $\\lambda x=t$, $x\\,d\\lambda=dt$: $\\int_0^1f(\\lambda x)d\\lambda=\\frac1x\\int_0^xf(t)dt=af(x)$, so $\\int_0^xf(t)dt=axf(x)$.",
+    "Differentiate: $f(x)=a\\left(xf'(x)+f(x)\\right)$, i.e. $(1-a)y=ax\\frac{dy}{dx}$ with $y=f(x)$.",
+    "Separate: $\\int(1-a)\\frac{dx}{x}=\\int a\\frac{dy}{y}$, so $(1-a)\\ln x=a\\ln y+C$.",
+    "At $x=1$, $y=1$: $0=0+C$, so $C=0$ and $(1-a)\\ln x=a\\ln f(x)$.",
+    "At $x=16$: $(1-a)\\ln16=a\\ln\\frac18$, i.e. $4(1-a)\\ln2=-3a\\ln2$.",
+    "$4-4a=-3a\\Rightarrow a=4$.",
+    "Then $-3\\ln x=4\\ln f(x)$, so $\\ln f(x)=-\\frac34\\ln x$ and $f(x)=x^{-3/4}$.",
+    "$f'(x)=-\\frac34x^{-7/4}$, so $f'\\left(\\frac1{16}\\right)=-\\frac34\\cdot16^{7/4}=-\\frac34\\cdot2^7=-96$.",
+    "$16-f'\\left(\\frac1{16}\\right)=16+96=112$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $f(x)=x^{3/4}$ after $\\ln f=-\\frac34\\ln x$; the exponent is $-\\frac34$ (the next line, $f'=-\\frac34x^{-7/4}$, uses the correct one). Its last lines also mix $2^{-4\\times(-7/4)}$; the value $f'(1/16)=-96$ and the answer $112$ are right.",
+   "alternate_solutions": [
+    {
+     "idea": "The averaging operator maps $x^m$ to $\\frac{x^m}{m+1}$, so try $f(x)=x^m$ and read $a$ and $m$ from the data.",
+     "solution": [
+      "For $m>-1$: $\\int_0^1(\\lambda x)^md\\lambda=\\frac{x^m}{m+1}$, so $f=x^m$ satisfies the equation with $a=\\frac1{m+1}$.",
+      "The equation $(1-a)f=axf'$ is an Euler equation whose only solutions are $f=Cx^{(1-a)/a}=Cx^m$; $f(1)=1$ gives $C=1$.",
+      "$f(16)=16^m=\\frac18\\Rightarrow2^{4m}=2^{-3}\\Rightarrow m=-\\frac34$ (this is $>-1$, so the integral converges).",
+      "Then $a=\\frac1{m+1}=4$ and $f(x)=x^{-3/4}$.",
+      "$f'\\left(\\frac1{16}\\right)=-\\frac34\\cdot16^{7/4}=-96$, so $16-f'\\left(\\frac1{16}\\right)=112$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^1f(\\lambda x)d\\lambda=\\frac1x\\int_0^xf(t)dt$ is the mean value of $f$ on $[0,x]$; such conditions force power functions.",
+    "$\\frac1x\\int_0^xf=af(x)$ has solutions $f=Cx^{(1-a)/a}$ (check: $f=x^m$ gives $a=\\frac1{m+1}$, so $\\frac{1-a}{a}=m$).",
+    "Homogeneous equations $(1-a)f=axf'$ are separable: $\\frac{f'}{f}=\\frac{1-a}{a}\\cdot\\frac1x$.",
+    "$16^{7/4}=2^7=128$; keep powers of $2$ explicit to avoid slips."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form $1^\\infty$",
+    "Definite integral of $(ax+b)^t$"
+   ],
+   "level": 3,
+   "question": "If $\\lim_{t\\to0}\\left(\\int_0^1(3x+5)^tdx\\right)^{1/t}=\\frac{\\alpha}{5e}\\left(\\frac85\\right)^{2/3}$, then $\\alpha$ is equal to ______.",
+   "answer": "64",
+   "key_idea": "At $t=0$ the integral is $1$, so the limit is of the form $1^\\infty$ and equals $e^{\\lim\\frac{I(t)-1}{t}}$.",
+   "solution": [
+    "$\\int_0^1(3x+5)^tdx=\\left[\\frac{(3x+5)^{t+1}}{3(t+1)}\\right]_0^1=\\frac{8^{t+1}-5^{t+1}}{3(t+1)}$, which tends to $\\frac{8-5}{3}=1$ as $t\\to0$: a $1^\\infty$ form.",
+    "$L=e^{\\lim_{t\\to0}\\frac1t\\left(\\frac{8^{t+1}-5^{t+1}}{3(t+1)}-1\\right)}=e^{\\lim_{t\\to0}\\frac{8^{t+1}-5^{t+1}-3t-3}{3t(t+1)}}$.",
+    "The limit is $0/0$; by L'Hopital's rule the numerator derivative is $8^{t+1}\\ln8-5^{t+1}\\ln5-3\\to8\\ln8-5\\ln5-3$ and the denominator derivative tends to $3$.",
+    "$L=e^{\\frac{8\\ln8-5\\ln5-3}{3}}=e^{-1}\\cdot\\frac{8^{8/3}}{5^{5/3}}$.",
+    "Split off $\\left(\\frac85\\right)^{2/3}$: $\\frac{8^{8/3}}{5^{5/3}}=\\left(\\frac85\\right)^{2/3}\\cdot\\frac{8^{2}}{5}=\\frac{64}{5}\\left(\\frac85\\right)^{2/3}$.",
+    "So $L=\\frac{64}{5e}\\left(\\frac85\\right)^{2/3}=\\frac{\\alpha}{5e}\\left(\\frac85\\right)^{2/3}$.",
+    "Comparing, $\\alpha=64$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's final lines drop the factor $e^{-1}$: it writes $\\left(\\frac85\\right)^{2/3}\\frac{64}{5}$ for $e^{\\frac{8\\ln8-5\\ln5-3}{3}}$, which equals $\\frac{64}{5e}\\left(\\frac85\\right)^{2/3}$; the $e$ in the denominator is restored here. $\\alpha=64$ unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Take logarithms: $\\ln L=\\lim\\frac{\\ln I(t)}{t}=\\frac{I'(0)}{I(0)}$, and $I'(0)=\\int_0^1\\ln(3x+5)dx$ by differentiating under the integral sign.",
+     "solution": [
+      "Let $I(t)=\\int_0^1(3x+5)^tdx$; $I(0)=1$, and $\\ln L=\\lim_{t\\to0}\\frac{\\ln I(t)}{t}=\\frac{I'(0)}{I(0)}=I'(0)$.",
+      "$I'(t)=\\int_0^1(3x+5)^t\\ln(3x+5)dx$, so $I'(0)=\\int_0^1\\ln(3x+5)dx$.",
+      "$\\int_0^1\\ln(3x+5)dx=\\frac13\\int_5^8\\ln u\\,du=\\frac13\\left[u\\ln u-u\\right]_5^8=\\frac{8\\ln8-5\\ln5-3}{3}$.",
+      "So $L=e^{\\frac{8\\ln8-5\\ln5-3}{3}}=\\frac{64}{5e}\\left(\\frac85\\right)^{2/3}$, giving $\\alpha=64$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{t\\to0}\\left(\\int_a^bg(x)^tdx\\right)^{1/t}$ (with $b-a=1$) is the geometric mean $e^{\\int_a^b\\ln g}$; in general $\\exp\\left(\\frac1{b-a}\\int_a^b\\ln g\\right)$ (power-mean limit).",
+    "$\\int\\ln u\\,du=u\\ln u-u$, hence $\\int_0^1\\ln(3x+5)dx=\\frac{8\\ln8-5\\ln5-3}{3}\\approx1.863$.",
+    "For any $1^\\infty$ limit, $\\lim u^v=e^{\\lim v(u-1)}$ (here $v=\\frac1t$, $u=I(t)$).",
+    "Simplify $\\frac{8^{8/3}}{5^{5/3}}$ by splitting off the target factor $\\left(\\frac85\\right)^{2/3}$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integral with modulus and greatest integer functions"
+   ],
+   "level": 2,
+   "question": "If $24\\int_0^{\\pi/4}\\left(\\sin\\left|4x-\\frac\\pi{12}\\right|+[2\\sin x]\\right)dx=2\\pi+\\alpha$, where $[\\,.\\,]$ denotes the greatest integer function, then $\\alpha$ is equal to ______.",
+   "answer": "12",
+   "key_idea": "Split at $x=\\frac\\pi{48}$ (where $4x-\\frac\\pi{12}$ changes sign) and at $x=\\frac\\pi6$ (where $2\\sin x$ reaches $1$).",
+   "solution": [
+    "$4x-\\frac\\pi{12}<0$ for $x<\\frac\\pi{48}$; and $[2\\sin x]=0$ for $x<\\frac\\pi6$, $=1$ for $\\frac\\pi6\\le x\\le\\frac\\pi4$ (as $2\\sin\\frac\\pi4=\\sqrt2<2$).",
+    "The integral equals $\\int_0^{\\pi/48}\\sin\\left(\\frac\\pi{12}-4x\\right)dx+\\int_{\\pi/48}^{\\pi/4}\\sin\\left(4x-\\frac\\pi{12}\\right)dx+\\int_0^{\\pi/6}0\\,dx+\\int_{\\pi/6}^{\\pi/4}1\\,dx$.",
+    "First: $\\left[\\frac{\\cos\\left(\\frac\\pi{12}-4x\\right)}{4}\\right]_0^{\\pi/48}=\\frac{1-\\cos\\frac\\pi{12}}{4}$.",
+    "Second: $\\left[-\\frac{\\cos\\left(4x-\\frac\\pi{12}\\right)}{4}\\right]_{\\pi/48}^{\\pi/4}=\\frac{-\\cos\\frac{11\\pi}{12}+1}{4}=\\frac{1+\\cos\\frac\\pi{12}}{4}$.",
+    "The two sine pieces add to $\\frac{1-\\cos\\frac\\pi{12}}{4}+\\frac{1+\\cos\\frac\\pi{12}}{4}=\\frac12$.",
+    "The last piece is $\\frac\\pi4-\\frac\\pi6=\\frac\\pi{12}$.",
+    "$24\\left(\\frac12+\\frac\\pi{12}\\right)=12+2\\pi$, so $\\alpha=12$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int\\sin|ax+b|$: substitute $u=ax+b$ and use that $\\sin|u|$ is even; $\\int_{-p}^{q}\\sin|u|du=(1-\\cos p)+(1-\\cos q)$.",
+    "When the two ends satisfy $p+q=\\pi$ the sum is exactly $2$ (since $\\cos q=-\\cos p$): here $p=\\frac\\pi{12}$, $q=\\frac{11\\pi}{12}$.",
+    "$[2\\sin x]$ steps up at $\\sin x=\\frac12,1,\\ldots$, i.e. at $x=\\frac\\pi6,\\frac\\pi2,\\ldots$ in the first quadrant."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Shortest distance between skew lines",
+    "Definite integral of the greatest integer function"
+   ],
+   "level": 2,
+   "question": "If the shortest distance between the lines $\\frac{x+2}{2}=\\frac{y+3}{3}=\\frac{z-5}{4}$ and $\\frac{x-3}{1}=\\frac{y-2}{-3}=\\frac{z+4}{2}$ is $\\frac{38}{3\\sqrt5}k$, and $\\int_0^k[x^2]dx=\\alpha-\\sqrt\\alpha$, where $[x]$ denotes the greatest integer function, then $6\\alpha^3$ is equal to ______.",
+   "answer": "48",
+   "key_idea": "Shortest distance $=\\frac{|(\\vec b-\\vec a)\\cdot(\\vec d_1\\times\\vec d_2)|}{|\\vec d_1\\times\\vec d_2|}$ gives $k=\\frac32$; then split $[x^2]$ at $1$ and $\\sqrt2$.",
+   "solution": [
+    "$L_1$: point $(-2,-3,5)$, direction $(2,3,4)$; $L_2$: point $(3,2,-4)$, direction $(1,-3,2)$. The vector between points is $(5,5,-9)$.",
+    "$\\vec d_1\\times\\vec d_2=(3\\cdot2-4\\cdot(-3),\\,4\\cdot1-2\\cdot2,\\,2\\cdot(-3)-3\\cdot1)=(18,0,-9)$, with magnitude $\\sqrt{18^2+0+9^2}=9\\sqrt5$.",
+    "Scalar triple product $=\\left|\\begin{matrix}5&5&-9\\\\2&3&4\\\\1&-3&2\\end{matrix}\\right|=90+0+81=171$.",
+    "Shortest distance $=\\frac{171}{9\\sqrt5}=\\frac{19}{\\sqrt5}$.",
+    "$\\frac{38}{3\\sqrt5}k=\\frac{19}{\\sqrt5}\\Rightarrow k=\\frac32$.",
+    "$\\int_0^{3/2}[x^2]dx=\\int_0^1[x^2]dx+\\int_1^{\\sqrt2}[x^2]dx+\\int_{\\sqrt2}^{3/2}[x^2]dx$, since $[x^2]=0,1,2$ on these pieces ($\\left(\\frac32\\right)^2=2.25<3$).",
+    "$=0+\\left(\\sqrt2-1\\right)+2\\left(\\frac32-\\sqrt2\\right)=2-\\sqrt2$.",
+    "So $\\alpha=2$ and $6\\alpha^3=48$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For the integral, use the layer-cake formula $\\int_0^k[x^2]dx=\\sum_{n\\ge1}\\left(k-\\sqrt n\\right)^+$; the distance is as before.",
+     "solution": [
+      "Distance: unit normal $\\hat n=\\frac{(18,0,-9)}{9\\sqrt5}=\\frac{(2,0,-1)}{\\sqrt5}$, and $\\left|(5,5,-9)\\cdot\\hat n\\right|=\\frac{|10+9|}{\\sqrt5}=\\frac{19}{\\sqrt5}$, so $k=\\frac32$.",
+      "$[x^2]=\\sum_{n\\ge1}\\mathbf 1_{\\{x^2\\ge n\\}}$, so $\\int_0^{3/2}[x^2]dx=\\sum_{n\\ge1}\\left(\\frac32-\\sqrt n\\right)^+$.",
+      "Only $n=1$ and $n=2$ contribute ($\\sqrt3>\\frac32$): $\\left(\\frac32-1\\right)+\\left(\\frac32-\\sqrt2\\right)$.",
+      "$=\\frac12+\\frac32-\\sqrt2=2-\\sqrt2$.",
+      "$\\alpha=2$, $6\\alpha^3=48$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Skew lines: $d=\\frac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec d_1\\times\\vec d_2)|}{|\\vec d_1\\times\\vec d_2|}$; factor common numbers out of the cross product first ($(18,0,-9)=9(2,0,-1)$).",
+    "$\\int_0^k[x^2]dx=\\sum_{n\\ge1}\\left(k-\\sqrt n\\right)^+$; e.g. for $k=3$ it is $\\sum_{n=1}^{8}(3-\\sqrt n)$.",
+    "The equation $\\alpha-\\sqrt\\alpha=2-\\sqrt2$ is solved by $\\alpha=2$ (the map $\\alpha\\mapsto\\alpha-\\sqrt\\alpha$ is increasing for $\\alpha>\\frac14$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integration by substitution $t=\\tan x$ and partial fractions"
+   ],
+   "level": 3,
+   "question": "If $\\int_0^{\\pi/4}\\frac{\\sin^2x}{1+\\sin x\\cos x}dx=\\frac1a\\log_e\\left(\\frac a3\\right)+\\frac\\pi{b\\sqrt3}$, where $a,b\\in\\mathbb N$, then $a+b$ is equal to ______.",
+   "answer": "8",
+   "key_idea": "Write $1=\\sin^2x+\\cos^2x$ in the denominator, divide by $\\cos^4x$ to use $t=\\tan x$, then split into partial fractions.",
+   "solution": [
+    "$I=\\int_0^{\\pi/4}\\frac{\\sin^2x}{\\sin^2x+\\cos^2x+\\sin x\\cos x}dx$; divide numerator and denominator by $\\cos^2x$: $I=\\int_0^{\\pi/4}\\frac{\\tan^2x}{1+\\tan x+\\tan^2x}dx$.",
+    "Write $dx=\\frac{\\sec^2x\\,dx}{1+\\tan^2x}$: $I=\\int_0^{\\pi/4}\\frac{\\tan^2x\\sec^2x\\,dx}{(1+\\tan^2x)(1+\\tan x+\\tan^2x)}$.",
+    "Put $\\tan x=t$: $I=\\int_0^1\\frac{t^2}{(1+t^2)(1+t+t^2)}dt$.",
+    "Partial fractions: $\\frac{t^2}{(1+t^2)(1+t+t^2)}=\\frac{t}{1+t^2}-\\frac{t}{1+t+t^2}$ (since $t(1+t+t^2)-t(1+t^2)=t^2$).",
+    "$\\int_0^1\\frac{t}{1+t^2}dt=\\frac12\\ln2$.",
+    "$\\int_0^1\\frac{t\\,dt}{1+t+t^2}=\\frac12\\int_0^1\\frac{2t+1}{1+t+t^2}dt-\\frac12\\int_0^1\\frac{dt}{\\left(t+\\frac12\\right)^2+\\frac34}=\\frac12\\ln3-\\frac1{\\sqrt3}\\left[\\tan^{-1}\\frac{2t+1}{\\sqrt3}\\right]_0^1$.",
+    "$=\\frac12\\ln3-\\frac1{\\sqrt3}\\left(\\frac\\pi3-\\frac\\pi6\\right)=\\frac12\\ln3-\\frac{\\pi}{6\\sqrt3}$.",
+    "$I=\\frac12\\ln2-\\frac12\\ln3+\\frac\\pi{6\\sqrt3}=\\frac12\\ln\\frac23+\\frac\\pi{6\\sqrt3}$, so $a=2$, $b=6$ and $a+b=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Pair $I=\\int\\frac{\\sin^2x}{1+\\sin x\\cos x}$ with $J=\\int\\frac{\\cos^2x}{1+\\sin x\\cos x}$: $I-J$ is a logarithmic derivative and $I+J$ is a simple $\\tan$-integral.",
+     "solution": [
+      "$I-J=-\\int_0^{\\pi/4}\\frac{\\cos2x}{1+\\frac12\\sin2x}dx=-\\int_0^{\\pi/4}\\frac{2\\cos2x}{2+\\sin2x}dx=-\\left[\\ln(2+\\sin2x)\\right]_0^{\\pi/4}=-\\ln\\frac32$.",
+      "$I+J=\\int_0^{\\pi/4}\\frac{dx}{1+\\sin x\\cos x}=\\int_0^{\\pi/4}\\frac{\\sec^2x\\,dx}{\\sec^2x+\\tan x}=\\int_0^1\\frac{dt}{1+t+t^2}$ (with $t=\\tan x$).",
+      "$\\int_0^1\\frac{dt}{1+t+t^2}=\\frac2{\\sqrt3}\\left[\\tan^{-1}\\frac{2t+1}{\\sqrt3}\\right]_0^1=\\frac2{\\sqrt3}\\cdot\\frac\\pi6=\\frac\\pi{3\\sqrt3}$.",
+      "$I=\\frac12\\left[(I+J)+(I-J)\\right]=\\frac\\pi{6\\sqrt3}-\\frac12\\ln\\frac32=\\frac12\\ln\\frac23+\\frac\\pi{6\\sqrt3}$.",
+      "So $a=2$, $b=6$, $a+b=8$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int\\frac{P(\\sin x,\\cos x)}{\\sin^2x+\\cos^2x+\\sin x\\cos x}$, divide by $\\cos^2x$ and use $t=\\tan x$; the denominator becomes $1+t+t^2$.",
+    "$\\int_0^1\\frac{dt}{1+t+t^2}=\\frac\\pi{3\\sqrt3}$ and $\\int\\frac{dt}{t^2+t+1}=\\frac2{\\sqrt3}\\tan^{-1}\\frac{2t+1}{\\sqrt3}$.",
+    "Companion-integral trick: if $I+J$ and $I-J$ are both easy, so is $I$ (here $I-J$ has numerator $\\propto$ derivative of the denominator).",
+    "Partial fractions: $\\frac{t^2}{(1+t^2)(1+t+t^2)}=\\frac t{1+t^2}-\\frac t{1+t+t^2}$ (check at $t=1$: $\\frac16=\\frac12-\\frac13$)."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "King property and integrals of rational trigonometric functions"
+   ],
+   "level": 3,
+   "question": "If $f(t)=\\int_0^\\pi\\frac{2x\\,dx}{1-\\cos^2t\\sin^2x}$, $0<t<\\pi$, then the value of $\\int_0^{\\pi/2}\\frac{\\pi^2dt}{f(t)}$ equals ______.",
+   "answer": "1",
+   "key_idea": "King property $x\\to\\pi-x$ gives $f(t)=\\pi\\int_0^\\pi\\frac{dx}{1-\\cos^2t\\sin^2x}$, which is a standard $\\tan$ integral.",
+   "solution": [
+    "Replace $x\\to\\pi-x$ (and $\\sin x$ is unchanged): $f(t)=\\int_0^\\pi\\frac{2(\\pi-x)dx}{1-\\cos^2t\\sin^2x}=2\\pi\\int_0^\\pi\\frac{dx}{1-\\cos^2t\\sin^2x}-f(t)$.",
+    "So $f(t)=\\pi\\int_0^\\pi\\frac{dx}{1-\\cos^2t\\sin^2x}=2\\pi\\int_0^{\\pi/2}\\frac{dx}{1-\\cos^2t\\sin^2x}$ (the integrand is symmetric about $\\frac\\pi2$).",
+    "Divide by $\\cos^2x$: $\\int\\frac{\\sec^2x\\,dx}{\\sec^2x-\\cos^2t\\tan^2x}$; with $\\sec^2x=1+\\tan^2x$ the denominator is $1+\\sin^2t\\tan^2x$.",
+    "Put $u=\\tan x$: $\\int_0^{\\infty}\\frac{du}{1+\\sin^2t\\,u^2}=\\frac1{\\sin t}\\left[\\tan^{-1}(u\\sin t)\\right]_0^\\infty=\\frac{\\pi}{2\\sin t}$ (here $\\sin t>0$).",
+    "The indefinite form is $\\frac1{\\sin t}\\tan^{-1}\\left(\\sin t\\tan x\\right)$, giving $f(t)=2\\pi\\cdot\\frac{\\pi}{2\\sin t}=\\frac{\\pi^2}{\\sin t}$.",
+    "$\\int_0^{\\pi/2}\\frac{\\pi^2dt}{f(t)}=\\int_0^{\\pi/2}\\sin t\\,dt=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In the PDF's substitution $\\lambda=\\cos t\\tan x$ the integral is written as $\\frac1{\\cos t\\tan^2t}\\int\\frac{d\\lambda}{\\lambda^2+\\cos^2t}$ and then $\\frac1{\\cos t\\tan^2t}\\cdot\\frac1{\\cos t}\\tan^{-1}(\\lambda\\tan t)$; the correct constants are $\\lambda^2+\\cot^2t$ and a factor $\\tan t$ from the integral, giving $\\frac1{\\sin t}\\tan^{-1}(\\sin t\\tan x)$ as the PDF states. Rewritten with $u=\\tan x$. Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the standard $\\int_0^{2\\pi}\\frac{du}{A+B\\cos u}=\\frac{2\\pi}{\\sqrt{A^2-B^2}}$ after converting $\\sin^2x$ to $\\cos2x$.",
+     "solution": [
+      "After the king property, $f(t)=\\pi\\int_0^\\pi\\frac{dx}{1-\\cos^2t\\sin^2x}$.",
+      "$1-c^2\\sin^2x=\\frac{2-c^2+c^2\\cos2x}{2}$ with $c=\\cos t$, so $\\int_0^\\pi\\frac{dx}{1-c^2\\sin^2x}=\\int_0^\\pi\\frac{2\\,dx}{2-c^2+c^2\\cos2x}$.",
+      "Put $u=2x$: $=\\int_0^{2\\pi}\\frac{du}{2-c^2+c^2\\cos u}=\\frac{2\\pi}{\\sqrt{(2-c^2)^2-c^4}}=\\frac{2\\pi}{\\sqrt{4-4c^2}}=\\frac\\pi{\\sin t}$.",
+      "So $f(t)=\\frac{\\pi^2}{\\sin t}$ and $\\int_0^{\\pi/2}\\frac{\\pi^2dt}{f(t)}=\\int_0^{\\pi/2}\\sin t\\,dt=1$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "King property: $\\int_0^\\pi xF(\\sin x)dx=\\frac\\pi2\\int_0^\\pi F(\\sin x)dx$ (here $F=\\frac{2}{1-c^2\\sin^2x}$ gives $\\pi\\int_0^\\pi\\frac{dx}{1-c^2\\sin^2x}$).",
+    "$\\int_0^{\\pi/2}\\frac{dx}{a^2\\cos^2x+b^2\\sin^2x}=\\frac\\pi{2ab}$ for $a,b>0$; here $1-\\cos^2t\\sin^2x=\\cos^2x+\\sin^2t\\sin^2x$ gives $a=1$, $b=\\sin t$.",
+    "$\\int_0^{2\\pi}\\frac{du}{A+B\\cos u}=\\frac{2\\pi}{\\sqrt{A^2-B^2}}$ for $A>|B|$.",
+    "The outcome $f(t)=\\frac{\\pi^2}{\\sin t}$ makes $\\frac{\\pi^2}{f}$ the simple function $\\sin t$ (instance: $t=\\frac\\pi2$ gives $f=\\pi^2$)."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Reduction formula for $\\int_0^1(1-x^m)^kdx$",
+    "Summation of an arithmetic progression"
+   ],
+   "level": 3,
+   "question": "Let $r_k=\\frac{\\int_0^1(1-x^7)^kdx}{\\int_0^1(1-x^7)^{k+1}dx}$, $k\\in\\mathbb N$. Then the value of $\\sum_{k=1}^{10}\\frac1{7(r_k-1)}$ is equal to ______.",
+   "answer": "65",
+   "key_idea": "Split $(1-x^7)^{k+1}=(1-x^7)^k(1-x^7)$ and integrate $x\\cdot x^6(1-x^7)^k$ by parts to get $r_k=\\frac{7k+8}{7k+7}$.",
+   "solution": [
+    "Let $I_k=\\int_0^1(1-x^7)^kdx$. Then $I_{k+1}=\\int_0^1(1-x^7)^k(1-x^7)dx=I_k-\\int_0^1x^7(1-x^7)^kdx$.",
+    "$\\int_0^1x\\cdot x^6(1-x^7)^kdx$ by parts with $u=x$, $dv=x^6(1-x^7)^kdx$, $v=-\\frac{(1-x^7)^{k+1}}{7(k+1)}$.",
+    "$=\\left[-\\frac{x(1-x^7)^{k+1}}{7(k+1)}\\right]_0^1+\\frac1{7(k+1)}\\int_0^1(1-x^7)^{k+1}dx=0+\\frac{I_{k+1}}{7(k+1)}$.",
+    "So $I_{k+1}=I_k-\\frac{I_{k+1}}{7(k+1)}$, i.e. $I_{k+1}\\left(1+\\frac1{7(k+1)}\\right)=I_k$.",
+    "$r_k=\\frac{I_k}{I_{k+1}}=1+\\frac1{7(k+1)}=\\frac{7k+8}{7(k+1)}$.",
+    "Then $r_k-1=\\frac1{7(k+1)}$, so $\\frac1{7(r_k-1)}=k+1$.",
+    "$\\sum_{k=1}^{10}(k+1)=\\frac{10\\cdot11}{2}+10=55+10=65$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $I_k$ as a Beta integral with $u=x^7$; the ratio of consecutive Gamma functions collapses by $\\Gamma(z+1)=z\\Gamma(z)$.",
+     "solution": [
+      "$u=x^7$: $I_k=\\frac17\\int_0^1u^{\\frac17-1}(1-u)^kdu=\\frac17B\\left(\\frac17,k+1\\right)=\\frac{\\Gamma\\left(\\frac17\\right)\\Gamma(k+1)}{7\\,\\Gamma\\left(k+1+\\frac17\\right)}$.",
+      "$r_k=\\frac{I_k}{I_{k+1}}=\\frac{\\Gamma(k+1)}{\\Gamma(k+2)}\\cdot\\frac{\\Gamma\\left(k+2+\\frac17\\right)}{\\Gamma\\left(k+1+\\frac17\\right)}$.",
+      "$\\frac{\\Gamma(k+1)}{\\Gamma(k+2)}=\\frac1{k+1}$ and $\\frac{\\Gamma\\left(k+\\frac{15}7\\right)}{\\Gamma\\left(k+\\frac87\\right)}=k+\\frac87$.",
+      "$r_k=\\frac{k+\\frac87}{k+1}=\\frac{7k+8}{7k+7}$, so $\\frac1{7(r_k-1)}=k+1$ and the sum is $65$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^1(1-x^m)^kdx=\\frac{k!}{\\prod_{j=1}^{k}\\left(j+\\frac1m\\right)}$; ratio $\\frac{I_k}{I_{k+1}}=\\frac{mk+m+1}{m(k+1)}$ (check $m=7$, $k=1$: $I_1=\\frac78$, $I_2=\\frac{49}{60}$, so $\\frac{I_1}{I_2}=\\frac{15}{14}=\\frac{7\\cdot1+8}{7\\cdot2}$).",
+    "Beta form: $\\int_0^1x^{p-1}(1-x^m)^kdx=\\frac1mB\\left(\\frac pm,k+1\\right)$.",
+    "Pattern: integrating $x\\cdot x^{m-1}(1-x^m)^k$ by parts always returns a multiple of $I_{k+1}$, giving a one-step recurrence.",
+    "Here $\\frac1{7(r_k-1)}=k+1$ turns the sum into an arithmetic series."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integral of greatest integer functions of $x^2$"
+   ],
+   "level": 3,
+   "question": "Let $[t]$ denote the largest integer less than or equal to $t$. If $\\int_0^3\\left([x^2]+\\left[\\frac{x^2}{2}\\right]\\right)dx=a+b\\sqrt2-\\sqrt3-\\sqrt5+c\\sqrt6-\\sqrt7$, where $a,b,c\\in\\mathbb Z$, then $a+b+c$ is equal to ______.",
+   "answer": "23",
+   "key_idea": "Treat $\\int_0^3[x^2]dx$ and $\\int_0^3\\left[\\frac{x^2}2\\right]dx$ separately, splitting at $x=\\sqrt n$ and $x=\\sqrt{2n}$.",
+   "solution": [
+    "$[x^2]=n$ on $[\\sqrt n,\\sqrt{n+1})$ for $n=0,1,\\ldots,8$ (breakpoints $0,1,\\sqrt2,\\sqrt3,2,\\sqrt5,\\sqrt6,\\sqrt7,\\sqrt8,3$).",
+    "$\\int_0^3[x^2]dx=0(1)+1(\\sqrt2-1)+2(\\sqrt3-\\sqrt2)+3(2-\\sqrt3)+4(\\sqrt5-2)+5(\\sqrt6-\\sqrt5)+6(\\sqrt7-\\sqrt6)+7(\\sqrt8-\\sqrt7)+8(3-\\sqrt8)$.",
+    "Collecting terms (each breakpoint $\\sqrt n$ gets coefficient $-1$): $=24-(1+\\sqrt2+\\sqrt3+2+\\sqrt5+\\sqrt6+\\sqrt7+2\\sqrt2)=21-3\\sqrt2-\\sqrt3-\\sqrt5-\\sqrt6-\\sqrt7$.",
+    "$\\left[\\frac{x^2}2\\right]=n$ on $[\\sqrt{2n},\\sqrt{2n+2})$, $n=0,\\ldots,4$ (breakpoints $0,\\sqrt2,2,\\sqrt6,\\sqrt8,3$).",
+    "$\\int_0^3\\left[\\frac{x^2}{2}\\right]dx=1(2-\\sqrt2)+2(\\sqrt6-2)+3(\\sqrt8-\\sqrt6)+4(3-\\sqrt8)$, which simplifies to $12-(\\sqrt2+2+\\sqrt6+2\\sqrt2)=10-3\\sqrt2-\\sqrt6$.",
+    "Sum: $31-6\\sqrt2-\\sqrt3-\\sqrt5-2\\sqrt6-\\sqrt7$.",
+    "Compare with $a+b\\sqrt2-\\sqrt3-\\sqrt5+c\\sqrt6-\\sqrt7$: $a=31$, $b=-6$, $c=-2$ (the surds $\\sqrt2,\\sqrt3,\\sqrt5,\\sqrt6,\\sqrt7$ are linearly independent over $\\mathbb Q$).",
+    "$a+b+c=31-6-2=23$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by layers: $[x^2]=\\sum_{n\\ge1}\\mathbf 1_{\\{x\\ge\\sqrt n\\}}$, so the integral is just $\\sum_n\\left(3-\\sqrt n\\right)$ with no piecewise bookkeeping.",
+     "solution": [
+      "$\\int_0^3[x^2]dx=\\sum_{n=1}^{9}\\left(3-\\sqrt n\\right)^+=\\sum_{n=1}^{8}\\left(3-\\sqrt n\\right)=24-\\sum_{n=1}^{8}\\sqrt n$.",
+      "$\\left[\\frac{x^2}2\\right]=\\sum_{n\\ge1}\\mathbf 1_{\\{x\\ge\\sqrt{2n}\\}}$, so $\\int_0^3\\left[\\frac{x^2}2\\right]dx=\\sum_{n=1}^{4}\\left(3-\\sqrt{2n}\\right)=12-\\left(\\sqrt2+2+\\sqrt6+2\\sqrt2\\right)$.",
+      "Total: $36-\\left(1+\\sqrt2+\\sqrt3+2+\\sqrt5+\\sqrt6+\\sqrt7+2\\sqrt2\\right)-\\left(\\sqrt2+2+\\sqrt6+2\\sqrt2\\right)=31-6\\sqrt2-\\sqrt3-\\sqrt5-2\\sqrt6-\\sqrt7$.",
+      "So $a=31$, $b=-6$, $c=-2$ and $a+b+c=23$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^N[x^2]dx=\\sum_{n=1}^{N^2-1}\\left(N-\\sqrt n\\right)$ for integer $N$ (check $N=2$: $(2-1)+(2-\\sqrt2)+(2-\\sqrt3)=5-\\sqrt2-\\sqrt3\\approx1.854$).",
+    "$\\int_0^N\\left[\\frac{x^2}c\\right]dx=\\sum_{n\\ge1}\\left(N-\\sqrt{cn}\\right)^+$.",
+    "Distinct square roots of square-free integers are linearly independent over $\\mathbb Q$, so coefficients can be matched; remember $\\sqrt8=2\\sqrt2$ merges with $\\sqrt2$.",
+    "Sanity check: the answer's value $31-6\\sqrt2-\\sqrt3-\\sqrt5-2\\sqrt6-\\sqrt7\\approx11.0$ must lie between $\\int_0^3[x^2]$ and $\\int_0^3\\left(x^2+\\frac{x^2}2\\right)=13.5$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limit of a sum as a definite integral and substitution $x+\\frac1x=t$"
+   ],
+   "level": 4,
+   "question": "Let $\\lim_{n\\to\\infty}\\left(\\frac n{\\sqrt{n^4+1}}-\\frac{2n}{(n^2+1)\\sqrt{n^4+1}}+\\frac n{\\sqrt{n^4+16}}-\\frac{8n}{(n^2+4)\\sqrt{n^4+16}}+\\cdots+\\frac n{\\sqrt{n^4+n^4}}-\\frac{2n\\cdot n^2}{(n^2+n^2)\\sqrt{n^4+n^4}}\\right)$ be $\\frac\\pi k$, using only the principal values of the inverse trigonometric functions. Then $k^2$ is equal to ______.",
+   "answer": "32",
+   "key_idea": "The general term is $\\frac1n\\left[\\frac1{\\sqrt{1+x^4}}-\\frac{2x^2}{(1+x^2)\\sqrt{1+x^4}}\\right]$ with $x=\\frac rn$; then use $t=x+\\frac1x$.",
+   "solution": [
+    "General term ($r=1,\\ldots,n$): $\\frac n{\\sqrt{n^4+r^4}}-\\frac{2nr^2}{(n^2+r^2)\\sqrt{n^4+r^4}}$.",
+    "Divide by $n^2$ inside: $=\\frac1n\\left[\\frac1{\\sqrt{1+\\left(\\frac rn\\right)^4}}-\\frac{2\\left(\\frac rn\\right)^2}{\\left(1+\\left(\\frac rn\\right)^2\\right)\\sqrt{1+\\left(\\frac rn\\right)^4}}\\right]$.",
+    "As $n\\to\\infty$ the sum becomes $\\int_0^1\\left[\\frac1{\\sqrt{1+x^4}}-\\frac{2x^2}{(1+x^2)\\sqrt{1+x^4}}\\right]dx=\\int_0^1\\frac{1-x^2}{(1+x^2)\\sqrt{1+x^4}}dx$.",
+    "Divide numerator and denominator by $x^2$: $\\int_0^1\\frac{\\frac1{x^2}-1}{\\left(x+\\frac1x\\right)\\sqrt{x^2+\\frac1{x^2}}}dx=\\int_0^1\\frac{\\frac1{x^2}-1}{\\left(x+\\frac1x\\right)\\sqrt{\\left(x+\\frac1x\\right)^2-2}}dx$.",
+    "Put $x+\\frac1x=t$, $\\left(1-\\frac1{x^2}\\right)dx=dt$; $x:0\\to1$ means $t:\\infty\\to2$, so the integral is $-\\int_\\infty^2\\frac{dt}{t\\sqrt{t^2-2}}=\\int_2^\\infty\\frac{dt}{t\\sqrt{t^2-2}}$.",
+    "Put $t^2-2=\\alpha^2$, $t\\,dt=\\alpha\\,d\\alpha$: $\\int\\frac{t\\,dt}{t^2\\sqrt{t^2-2}}=\\int\\frac{d\\alpha}{\\alpha^2+2}$, with $\\alpha:\\sqrt2\\to\\infty$.",
+    "$=\\frac1{\\sqrt2}\\left[\\tan^{-1}\\frac\\alpha{\\sqrt2}\\right]_{\\sqrt2}^{\\infty}=\\frac1{\\sqrt2}\\left(\\frac\\pi2-\\frac\\pi4\\right)=\\frac\\pi{4\\sqrt2}$.",
+    "So $\\frac\\pi k=\\frac\\pi{4\\sqrt2}$, $k=4\\sqrt2$ and $k^2=32$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's penultimate line reads $\\frac1{\\sqrt2}\\left\\{\\frac\\pi2-\\frac\\pi4\\right\\}\\Rightarrow\\frac\\pi{\\sqrt2}=\\frac\\pi K$; the value is $\\frac\\pi{4\\sqrt2}$, which is what gives $K=4\\sqrt2$ and $K^2=32$ as the PDF states. Also the second term of the sum in the question is printed as $\\frac{8}{(n^2+4)\\sqrt{n^4+16}}$ (numerator $8$); the general term (with $r=2$) has numerator $8n$, which is used here.",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=\\frac x{\\sqrt{1+x^4}}$: its derivative contains $1-x^4$, and $\\frac{1+x^4}{(1+x^2)^2}=\\frac1{1+2u^2}$ turns the integrand into $\\frac{du}{1+2u^2}$.",
+     "solution": [
+      "Same Riemann-sum step: the limit equals $\\int_0^1\\frac{1-x^2}{(1+x^2)\\sqrt{1+x^4}}dx$.",
+      "Let $u=\\frac x{\\sqrt{1+x^4}}$; then $\\frac{du}{dx}=\\frac{(1+x^4)-2x^4}{(1+x^4)^{3/2}}=\\frac{1-x^4}{(1+x^4)^{3/2}}$.",
+      "Multiply and divide the integrand by $(1+x^2)$: $\\frac{1-x^2}{(1+x^2)\\sqrt{1+x^4}}=\\frac{1-x^4}{(1+x^2)^2\\sqrt{1+x^4}}=\\frac{du}{dx}\\cdot\\frac{1+x^4}{(1+x^2)^2}$.",
+      "$\\frac{(1+x^2)^2}{1+x^4}=1+\\frac{2x^2}{1+x^4}=1+2u^2$, so the integrand is $\\frac{du}{1+2u^2}$.",
+      "$x:0\\to1$ gives $u:0\\to\\frac1{\\sqrt2}$, so the integral is $\\int_0^{1/\\sqrt2}\\frac{du}{1+2u^2}=\\frac1{\\sqrt2}\\tan^{-1}(\\sqrt2u)\\Big|_0^{1/\\sqrt2}=\\frac1{\\sqrt2}\\cdot\\frac\\pi4$.",
+      "$\\frac\\pi k=\\frac\\pi{4\\sqrt2}$, so $k^2=32$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{n\\to\\infty}\\sum_{r=1}^{n}\\frac1nF\\left(\\frac rn\\right)=\\int_0^1F(x)dx$; divide each term by $n^2$ (or $n^4$) inside to expose $\\frac rn$.",
+    "When the integrand has the shape $\\frac{1\\mp\\frac1{x^2}}{(\\ldots)}$ with $x^2+\\frac1{x^2}$ around, use $t=x\\pm\\frac1x$ (so $t^2=x^2+\\frac1{x^2}\\pm2$).",
+    "$\\int_c^\\infty\\frac{dt}{t\\sqrt{t^2-b^2}}=\\frac1b\\left(\\frac\\pi2-\\sec^{-1}\\frac cb\\right)$; here $c=2$, $b=\\sqrt2$ gives $\\frac1{\\sqrt2}\\cdot\\frac\\pi4$.",
+    "Another route: $\\frac{d}{dx}\\frac{x}{\\sqrt{1+x^4}}=\\frac{1-x^4}{(1+x^4)^{3/2}}$, a recurring derivative for integrands with $\\sqrt{1+x^4}$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Properties of definite integrals: odd functions and the $\\frac1{1+e^x}$ trick"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\int_0^xg(t)\\log_e\\left(\\frac{1-t}{1+t}\\right)dt$, where $g$ is a continuous odd function. If $\\int_{-\\pi/2}^{\\pi/2}\\left(f(x)+\\frac{x^2\\cos x}{1+e^x}\\right)dx=\\left(\\frac\\pi\\alpha\\right)^2-\\alpha$, then $\\alpha$ is equal to ______.",
+   "answer": "2",
+   "key_idea": "$f$ is odd, so it integrates to zero; the remaining part is handled by pairing $x$ with $-x$, which turns $\\frac1{1+e^x}$ into a constant.",
+   "solution": [
+    "$f(-x)=\\int_0^{-x}g(t)\\ln\\frac{1-t}{1+t}dt$; put $t=-y$: $=-\\int_0^xg(-y)\\ln\\frac{1+y}{1-y}dy$.",
+    "As $g$ is odd, $g(-y)=-g(y)$ and $\\ln\\frac{1+y}{1-y}=-\\ln\\frac{1-y}{1+y}$, so $f(-x)=-\\int_0^xg(y)\\ln\\frac{1-y}{1+y}dy=-f(x)$: $f$ is odd.",
+    "Let $I=\\int_{-\\pi/2}^{\\pi/2}\\left(f(x)+\\frac{x^2\\cos x}{1+e^x}\\right)dx$. Replace $x\\to-x$: $I=\\int_{-\\pi/2}^{\\pi/2}\\left(f(-x)+\\frac{x^2e^x\\cos x}{1+e^x}\\right)dx$.",
+    "Add the two forms, using $f(x)+f(-x)=0$: $2I=\\int_{-\\pi/2}^{\\pi/2}x^2\\cos x\\,dx=2\\int_0^{\\pi/2}x^2\\cos x\\,dx$ (even integrand).",
+    "$I=\\int_0^{\\pi/2}x^2\\cos x\\,dx=\\left[x^2\\sin x\\right]_0^{\\pi/2}-\\int_0^{\\pi/2}2x\\sin x\\,dx=\\frac{\\pi^2}{4}-2\\left[-x\\cos x+\\sin x\\right]_0^{\\pi/2}$.",
+    "$=\\frac{\\pi^2}{4}-2(0+1)=\\frac{\\pi^2}{4}-2=\\left(\\frac\\pi2\\right)^2-2$.",
+    "Comparing with $\\left(\\frac\\pi\\alpha\\right)^2-\\alpha$: $\\alpha=2$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int_{-a}^{a}\\frac{F(x)}{1+e^{x}}dx=\\int_0^aF(x)dx$ when $F$ is even (and $=\\frac12\\int_{-a}^aF$ in general for even $F$); check: $F=1$ gives $a$.",
+    "If $\\varphi$ is even then $\\int_0^x\\varphi$ is odd; here $f'(x)=g(x)\\ln\\frac{1-x}{1+x}$ is even (odd $\\times$ odd).",
+    "$\\int x^2\\cos x\\,dx=x^2\\sin x+2x\\cos x-2\\sin x+C$, so $\\int_0^{\\pi/2}x^2\\cos x\\,dx=\\frac{\\pi^2}4-2$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Slope of a straight line",
+    "L'Hopital's rule applied to an integral (Leibniz rule)"
+   ],
+   "level": 2,
+   "question": "Let the slope of the line $45x+5y+3=0$ be $27r_1+\\frac{9r_2}{2}$ for some $r_1,r_2\\in\\mathbb R$. Then $\\lim_{x\\to3}\\left(\\int_3^x\\frac{8t^2}{\\frac{3r_2x}{2}-r_2x^2-r_1x^3-3x}dt\\right)$ is equal to ______.",
+   "answer": "12",
+   "key_idea": "The slope condition makes the denominator vanish at $x=3$, so the limit is $0/0$ and L'Hopital with the Leibniz rule applies.",
+   "solution": [
+    "Slope of $45x+5y+3=0$ is $-\\frac{45}{5}=-9$, so $27r_1+\\frac{9r_2}{2}=-9$.",
+    "Let $D(x)=\\frac{3r_2x}{2}-r_2x^2-r_1x^3-3x$. Then $D(3)=\\frac{9r_2}{2}-9r_2-27r_1-9=-\\left(27r_1+\\frac{9r_2}{2}\\right)-9=9-9=0$.",
+    "Since the numerator $\\int_3^x8t^2dt\\to0$, the limit is $\\frac00$; apply L'Hopital's rule (the Leibniz rule gives the numerator derivative $8x^2$).",
+    "$\\lim_{x\\to3}\\frac{8x^2}{\\frac{3r_2}{2}-2r_2x-3r_1x^2-3}=\\frac{8\\times9}{\\frac{3r_2}{2}-6r_2-27r_1-3}$.",
+    "The denominator is $-\\frac{9r_2}{2}-27r_1-3=-\\left(27r_1+\\frac{9r_2}{2}\\right)-3=9-3=6$.",
+    "Limit $=\\frac{8\\times9}{6}=12$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "The slope of $ax+by+c=0$ is $-\\frac ab$; a given relation among $r_1,r_2$ often makes a hidden $\\frac00$ appear.",
+    "$\\lim_{x\\to a}\\frac{\\int_a^x\\varphi(t)dt}{D(x)}=\\frac{\\varphi(a)}{D'(a)}$ whenever $D(a)=0$ and $D'(a)\\ne0$ (check: $\\varphi=1$, $D=x-a$ gives $1$).",
+    "Always check the denominator at the limit point before applying L'Hopital; here $D(3)=0$ exactly because of the slope relation."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integral of $\\sqrt{1-\\sin2x}$ using a modulus"
+   ],
+   "level": 2,
+   "question": "If $\\int_{\\pi/6}^{\\pi/3}\\sqrt{1-\\sin2x}\\,dx=\\alpha+\\beta\\sqrt2+\\gamma\\sqrt3$, where $\\alpha,\\beta$ and $\\gamma$ are rational numbers, then $3\\alpha+4\\beta-\\gamma$ is equal to ______.",
+   "answer": "6",
+   "key_idea": "$1-\\sin2x=(\\sin x-\\cos x)^2$, so the integrand is $|\\sin x-\\cos x|$, which changes sign at $x=\\frac\\pi4$.",
+   "solution": [
+    "$\\sqrt{1-\\sin2x}=\\sqrt{(\\sin x-\\cos x)^2}=|\\sin x-\\cos x|$.",
+    "On $\\left[\\frac\\pi6,\\frac\\pi4\\right]$, $\\cos x\\ge\\sin x$; on $\\left[\\frac\\pi4,\\frac\\pi3\\right]$, $\\sin x\\ge\\cos x$.",
+    "$\\int_{\\pi/6}^{\\pi/4}(\\cos x-\\sin x)dx+\\int_{\\pi/4}^{\\pi/3}(\\sin x-\\cos x)dx$.",
+    "First: $\\left[\\sin x+\\cos x\\right]_{\\pi/6}^{\\pi/4}=\\sqrt2-\\frac{1+\\sqrt3}{2}$.",
+    "Second: $\\left[-\\cos x-\\sin x\\right]_{\\pi/4}^{\\pi/3}=-\\frac{1+\\sqrt3}{2}+\\sqrt2$.",
+    "Sum $=2\\sqrt2-1-\\sqrt3$, so $\\alpha=-1$, $\\beta=2$, $\\gamma=-1$.",
+    "$3\\alpha+4\\beta-\\gamma=-3+8+1=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $1-\\sin2x=2\\sin^2\\left(x-\\frac\\pi4\\right)$ and shift to $u=x-\\frac\\pi4$, where the integral is symmetric.",
+     "solution": [
+      "$1-\\sin2x=1-\\cos\\left(\\frac\\pi2-2x\\right)=2\\sin^2\\left(\\frac\\pi4-x\\right)$, so $\\sqrt{1-\\sin2x}=\\sqrt2\\left|\\sin\\left(x-\\frac\\pi4\\right)\\right|$.",
+      "Put $u=x-\\frac\\pi4$: the limits $\\frac\\pi6,\\frac\\pi3$ become $-\\frac\\pi{12},\\frac\\pi{12}$.",
+      "$I=\\sqrt2\\int_{-\\pi/12}^{\\pi/12}|\\sin u|du=2\\sqrt2\\int_0^{\\pi/12}\\sin u\\,du=2\\sqrt2\\left(1-\\cos\\frac\\pi{12}\\right)$ (the integrand is even).",
+      "$\\cos\\frac\\pi{12}=\\frac{\\sqrt6+\\sqrt2}{4}$, so $I=2\\sqrt2-\\frac{2\\sqrt2(\\sqrt6+\\sqrt2)}{4}=2\\sqrt2-\\frac{4\\sqrt3+4}{4}=2\\sqrt2-\\sqrt3-1$.",
+      "$\\alpha=-1$, $\\beta=2$, $\\gamma=-1$, so $3\\alpha+4\\beta-\\gamma=6$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{1\\pm\\sin2x}=|\\sin x\\pm\\cos x|$ and $\\sqrt{1\\pm\\cos2x}=\\sqrt2\\,|\\cos x|$ or $\\sqrt2\\,|\\sin x|$.",
+    "$1-\\sin2x=2\\sin^2\\left(x-\\frac\\pi4\\right)$, so the sign change is at $x=\\frac\\pi4$; a symmetric interval about $\\frac\\pi4$ halves the work.",
+    "$\\cos\\frac\\pi{12}=\\frac{\\sqrt6+\\sqrt2}4$, $\\sin\\frac\\pi{12}=\\frac{\\sqrt6-\\sqrt2}4$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Definite integral of the greatest integer function of an algebraic function"
+   ],
+   "level": 2,
+   "question": "The value of $9\\int_0^9\\left[\\sqrt{\\frac{10x}{x+1}}\\right]dx$, where $[t]$ denotes the greatest integer less than or equal to $t$, is ______.",
+   "answer": "155",
+   "key_idea": "$g(x)=\\frac{10x}{x+1}$ increases from $0$ to $9$, so $\\left[\\sqrt g\\right]$ jumps where $g=1,4,9$.",
+   "solution": [
+    "$g(x)=\\frac{10x}{x+1}$ is increasing on $[0,9]$ with $g(0)=0$, $g(9)=9$; so $\\sqrt g\\in[0,3]$ and $\\left[\\sqrt g\\right]\\in\\{0,1,2\\}$ (value $3$ only at $x=9$).",
+    "$\\frac{10x}{x+1}=1\\Rightarrow x=\\frac19$; $\\frac{10x}{x+1}=4\\Rightarrow x=\\frac23$; $\\frac{10x}{x+1}=9\\Rightarrow x=9$.",
+    "$I=\\int_0^{1/9}0\\,dx+\\int_{1/9}^{2/3}1\\,dx+\\int_{2/3}^{9}2\\,dx$.",
+    "$=0+\\left(\\frac23-\\frac19\\right)+2\\left(9-\\frac23\\right)$.",
+    "$=\\frac59+18-\\frac43=\\frac59+\\frac{50}{3}=\\frac{155}{9}$.",
+    "$9I=155$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Layer-cake: $\\int_0^9[\\sqrt g]dx=\\sum_{n\\ge1}\\left|\\{x:\\sqrt g\\ge n\\}\\right|$, and $\\sqrt g\\ge n\\iff x\\ge\\frac{n^2}{10-n^2}$.",
+     "solution": [
+      "$\\left[\\sqrt g\\right]=\\sum_{n\\ge1}\\mathbf 1_{\\{g(x)\\ge n^2\\}}$.",
+      "$\\frac{10x}{x+1}\\ge m\\iff x\\ge\\frac m{10-m}$ (for $m<10$), so the set for $n^2=m$ is $\\left[\\frac m{10-m},9\\right]$ of length $9-\\frac m{10-m}$.",
+      "$n=1$ ($m=1$): length $9-\\frac19$. $n=2$ ($m=4$): length $9-\\frac46=9-\\frac23$. $n=3$ ($m=9$): length $9-9=0$.",
+      "$I=18-\\frac19-\\frac23=\\frac{162-1-6}{9}=\\frac{155}9$, so $9I=155$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a monotone $g$, $[g]$ is constant between solutions of $g(x)=n$; for $g=\\frac{px}{x+1}$ the solution is $x=\\frac n{p-n}$ (here $p=10$).",
+    "Layer-cake: $\\int[h]dx=\\sum_{n\\ge1}\\left|\\{h\\ge n\\}\\right|$; with $h=\\sqrt g$ the thresholds are $g=n^2$.",
+    "Check endpoint behaviour: $g(9)=9$ gives $\\sqrt g=3$ exactly, but a single point does not change the integral."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Property $f(x)+f(1-x)=1$ and the King property of definite integrals"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a function defined by $f(x)=\\frac{4^x}{4^x+2}$ and $M=\\int_{f(a)}^{f(1-a)}x\\sin^4\\left(x(1-x)\\right)dx$, $N=\\int_{f(a)}^{f(1-a)}\\sin^4\\left(x(1-x)\\right)dx$; $a\\ne\\frac12$. If $\\alpha M=\\beta N$, $\\alpha,\\beta\\in\\mathbb N$, then the least value of $\\alpha^2+\\beta^2$ is equal to ______.",
+   "answer": "5",
+   "key_idea": "$f(x)+f(1-x)=1$ makes the limits sum to $1$, so $x\\to1-x$ (King property) gives $M=N-M$.",
+   "solution": [
+    "$f(x)+f(1-x)=\\frac{4^x}{4^x+2}+\\frac{4^{1-x}}{4^{1-x}+2}=\\frac{4^x}{4^x+2}+\\frac4{4+2\\cdot4^x}=\\frac{4^x+2}{4^x+2}=1$.",
+    "So $f(a)+f(1-a)=1$: the limits of $M$ and $N$ add up to $1$.",
+    "In $M$ replace $x\\to f(a)+f(1-a)-x=1-x$: $M=\\int_{f(a)}^{f(1-a)}(1-x)\\sin^4\\left((1-x)x\\right)dx$.",
+    "Hence $M=N-M$, so $N=2M$ and $\\frac MN=\\frac12$.",
+    "$\\alpha M=\\beta N\\Rightarrow\\frac\\beta\\alpha=\\frac MN=\\frac12$, i.e. $\\alpha=2\\beta$.",
+    "The least natural numbers are $\\beta=1$, $\\alpha=2$, so $\\left(\\alpha^2+\\beta^2\\right)_{\\min}=4+1=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The interval $[f(a),f(1-a)]$ is symmetric about $\\frac12$ and $\\sin^4(x(1-x))$ is symmetric about $\\frac12$: write $x=\\frac12+s$ and drop the odd part.",
+     "solution": [
+      "The limits sum to $1$, so the interval is $[\\frac12-h,\\frac12+h]$ with $h=f(1-a)-\\frac12\\ne0$.",
+      "Put $x=\\frac12+s$: $x(1-x)=\\frac14-s^2$, so $\\sin^4\\left(x(1-x)\\right)=\\psi(s)$ is an even function of $s$.",
+      "$M=\\int_{-h}^{h}\\left(\\frac12+s\\right)\\psi(s)ds=\\frac12\\int_{-h}^{h}\\psi(s)ds+\\int_{-h}^{h}s\\,\\psi(s)ds=\\frac N2+0$ (odd integrand).",
+      "So $N=2M$ and $\\alpha M=\\beta N=2\\beta M$ gives $\\alpha=2\\beta$, hence the least value is $2^2+1^2=5$ (Same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x)+f(1-x)=1$, then the integration interval $[f(a),f(1-a)]$ is symmetric about $\\frac12$ (its endpoints add to $1$).",
+    "Symmetric-interval rule: $\\int_{c-h}^{c+h}x\\,\\psi(x)dx=c\\int_{c-h}^{c+h}\\psi(x)dx$ when $\\psi(c+s)=\\psi(c-s)$; here $c=\\frac12$.",
+    "General King: $\\int_p^qxh(x)dx=\\frac{p+q}{2}\\int_p^qh(x)dx$ when $h(p+q-x)=h(x)$ (instance: $p+q=1$, $\\frac MN=\\frac12$).",
+    "Condition $a\\ne\\frac12$ ensures the interval is non-degenerate, so $N\\ne0$ (as the integrand is positive) and the ratio $\\frac MN$ makes sense."
+   ]
+  }
+ ]
+}
