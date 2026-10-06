@@ -1,0 +1,944 @@
+{
+ "title": "JEE Main Question Bank 01 — Integral Calculus 02 — Paper Analysis",
+ "subtitle": "Definite Integration · detailed solutions",
+ "source": "JEE_Main_Question_Bank_01_Integral_Calculus_02.pdf (printed Q21-Q40, numbered 1-20 in the deck; solutions as printed); concepts self-assigned (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "JEE Advanced default assumed: +4 per question"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Intersection of a parabola and a line",
+    "King property with 1/(1+a^x) and even functions"
+   ],
+   "level": 3,
+   "question": "Let $(a,b)$ be the point of intersection of the curve $x^2=2y$ and the straight line $y-2x-6=0$ in the second quadrant. Then the integral $I=\\int_a^b\\frac{9x^2}{1+5^x}\\,dx$ is equal to:",
+   "options": [
+    "$24$",
+    "$18$",
+    "$21$",
+    "$27$"
+   ],
+   "answer": "(A) 24",
+   "key_idea": "Since $\\frac{1}{1+5^x}+\\frac{1}{1+5^{-x}}=1$ and the limits are symmetric, adding $I$ to its reflected copy removes the denominator.",
+   "solution": [
+    "Substitute $y=\\frac{x^2}{2}$ in $y-2x-6=0$: $\\frac{x^2}{2}-2x-6=0$, i.e. $x^2-4x-12=0$.",
+    "Factor: $x^2-6x+2x-12=0\\Rightarrow(x-6)(x+2)=0$.",
+    "The intersection points are $(6,18)$ and $(-2,2)$; the one in the second quadrant is $(-2,2)$, so $a=-2$, $b=2$.",
+    "$I=\\int_{-2}^{2}\\frac{9x^2}{1+5^x}dx$ ...(1).",
+    "Using $\\int_a^bf(x)dx=\\int_a^bf(a+b-x)dx$ with $a+b=0$: $I=\\int_{-2}^{2}\\frac{9x^2}{1+5^{-x}}dx$ ...(2).",
+    "Adding (1) and (2), with $\\frac{1}{1+5^{-x}}=\\frac{5^x}{5^x+1}$: $2I=\\int_{-2}^{2}9x^2\\left(\\frac{1}{1+5^x}+\\frac{5^x}{5^x+1}\\right)dx=\\int_{-2}^{2}9x^2dx$.",
+    "$9x^2$ is even, so $I=9\\int_0^2x^2dx$.",
+    "$I=9\\left[\\frac{x^3}{3}\\right]_0^2=9\\cdot\\frac83=24$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split $\\frac{1}{1+5^x}=\\frac12-\\frac12\\cdot\\frac{5^x-1}{5^x+1}$; the second part is odd and integrates to zero.",
+     "solution": [
+      "$\\frac{1}{1+5^x}=\\frac12-\\frac12\\cdot\\frac{5^x-1}{5^x+1}$ (check: $\\frac{(5^x+1)-(5^x-1)}{2(5^x+1)}=\\frac{1}{5^x+1}$).",
+      "$\\phi(x)=\\frac{5^x-1}{5^x+1}$ is odd: $\\phi(-x)=\\frac{5^{-x}-1}{5^{-x}+1}=\\frac{1-5^x}{1+5^x}=-\\phi(x)$.",
+      "So $9x^2\\phi(x)$ is odd and $\\int_{-2}^{2}9x^2\\phi(x)dx=0$.",
+      "$I=\\frac12\\int_{-2}^{2}9x^2dx=\\frac12\\cdot48=24$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For even $g$ and $k>0$: $\\int_{-a}^{a}\\frac{g(x)}{1+k^x}dx=\\int_0^ag(x)dx$, because $\\frac1{1+k^x}+\\frac1{1+k^{-x}}=1$.",
+    "Recognition cue: symmetric limits $[-a,a]$, an even factor in the numerator and $1+k^x$ (or $1+e^x$) in the denominator; the base $k$ never matters.",
+    "Intersection of a parabola and a line: substitute and solve the quadratic, then check the quadrant of each point before assigning $a,b$.",
+    "Check here: $\\int_{-2}^{2}\\frac{9x^2}{1+5^x}dx=\\int_0^29x^2dx=24$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rationalisation of surds and standard integral of $\\sqrt{x^2+a^2}$"
+   ],
+   "level": 2,
+   "question": "$4\\int_0^1\\frac{1}{\\sqrt{3+x^2}+\\sqrt{1+x^2}}dx-3\\log_e\\left(\\sqrt3\\right)$ is equal to:",
+   "options": [
+    "$2+\\sqrt2-\\log_e\\left(1+\\sqrt2\\right)$",
+    "$2+\\sqrt2+\\log_e\\left(1+\\sqrt2\\right)$",
+    "$2-\\sqrt2+\\log_e\\left(1+\\sqrt2\\right)$",
+    "$2-\\sqrt2-\\log_e\\left(1+\\sqrt2\\right)$"
+   ],
+   "answer": "(D) $2-\\sqrt2-\\log_e\\left(1+\\sqrt2\\right)$",
+   "key_idea": "The radicands $3+x^2$ and $1+x^2$ differ by $2$, so rationalising leaves two standard $\\sqrt{x^2+a^2}$ integrals.",
+   "solution": [
+    "$I=4\\int_0^1\\frac{dx}{\\sqrt{3+x^2}+\\sqrt{1+x^2}}$; multiply by the conjugate, using $(3+x^2)-(1+x^2)=2$.",
+    "$I=2\\int_0^1\\left(\\sqrt{3+x^2}-\\sqrt{1+x^2}\\right)dx=2\\left[\\int_0^1\\sqrt{x^2+3}\\,dx-\\int_0^1\\sqrt{x^2+1}\\,dx\\right]$.",
+    "Use $\\int\\sqrt{x^2+a^2}\\,dx=\\frac x2\\sqrt{x^2+a^2}+\\frac{a^2}{2}\\ln\\left|x+\\sqrt{x^2+a^2}\\right|$.",
+    "$I=2\\left[\\left(\\frac12x\\sqrt{x^2+3}+\\frac32\\ln\\left|\\sqrt{3+x^2}+x\\right|\\right)-\\left(\\frac12x\\sqrt{1+x^2}+\\frac12\\ln\\left|\\sqrt{1+x^2}+x\\right|\\right)\\right]_0^1$.",
+    "Substituting the limits: $I=2\\left[\\left(1+\\frac32\\ln3-\\frac32\\ln\\sqrt3\\right)-\\left(\\frac{\\sqrt2}{2}+\\frac12\\ln\\left(\\sqrt2+1\\right)\\right)\\right]$.",
+    "Since $\\frac32\\ln\\sqrt3=\\frac34\\ln3$: $I=2\\left(1+\\frac34\\ln3-\\frac1{\\sqrt2}-\\frac12\\ln\\left(\\sqrt2+1\\right)\\right)$.",
+    "$I=2+\\frac32\\ln3-\\sqrt2-\\ln\\left(\\sqrt2+1\\right)=3\\ln\\sqrt3+2-\\sqrt2-\\ln\\left(\\sqrt2+1\\right)$.",
+    "Subtracting $3\\ln\\sqrt3$: $I-3\\ln\\sqrt3=2-\\sqrt2-\\ln\\left(1+\\sqrt2\\right)$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Evaluate $J_a=\\int_0^1\\sqrt{x^2+a^2}\\,dx$ by parts, so no memorised formula is needed.",
+     "solution": [
+      "By parts with $u=\\sqrt{x^2+a^2}$, $dv=dx$: $J_a=\\left[x\\sqrt{x^2+a^2}\\right]_0^1-\\int_0^1\\frac{x^2}{\\sqrt{x^2+a^2}}dx$.",
+      "Write $x^2=(x^2+a^2)-a^2$: $\\int_0^1\\frac{x^2}{\\sqrt{x^2+a^2}}dx=J_a-a^2\\int_0^1\\frac{dx}{\\sqrt{x^2+a^2}}$.",
+      "With $\\int_0^1\\frac{dx}{\\sqrt{x^2+a^2}}=\\ln\\frac{1+\\sqrt{1+a^2}}{a}$ this gives $2J_a=\\sqrt{1+a^2}+a^2\\ln\\frac{1+\\sqrt{1+a^2}}{a}$.",
+      "For $a^2=3$: $2J_{\\sqrt3}=2+3\\ln\\frac{3}{\\sqrt3}=2+3\\ln\\sqrt3$.",
+      "For $a^2=1$: $2J_1=\\sqrt2+\\ln\\left(1+\\sqrt2\\right)$.",
+      "$I=2\\left(J_{\\sqrt3}-J_1\\right)=2+3\\ln\\sqrt3-\\sqrt2-\\ln\\left(1+\\sqrt2\\right)$, so $I-3\\ln\\sqrt3=2-\\sqrt2-\\ln\\left(1+\\sqrt2\\right)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{1}{\\sqrt{p}+\\sqrt{q}}$ with $p-q=c$ a constant: rationalise to $\\frac{\\sqrt p-\\sqrt q}{c}$.",
+    "$\\int\\sqrt{x^2+a^2}\\,dx=\\frac x2\\sqrt{x^2+a^2}+\\frac{a^2}2\\ln\\left(x+\\sqrt{x^2+a^2}\\right)+C$ and $\\int\\sqrt{x^2-a^2}\\,dx=\\frac x2\\sqrt{x^2-a^2}-\\frac{a^2}2\\ln\\left|x+\\sqrt{x^2-a^2}\\right|+C$.",
+    "The term $-3\\log_e\\sqrt3$ in the question cancels the $\\frac32\\ln3$ left after evaluation; a subtracted constant like this is a hint of the expected log terms.",
+    "Numerical check: the whole expression equals $2-\\sqrt2-\\ln(1+\\sqrt2)\\approx-0.2956$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Domain of nested logarithmic functions",
+    "Integral of the greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let the domain of the function $f(x)=\\log_2\\log_4\\log_6\\left(3+4x-x^2\\right)$ be $(a,b)$. If $\\int_0^{b-a}\\left[x^2\\right]dx=p-\\sqrt q-\\sqrt r$, $p,q,r\\in\\mathbb N$, $\\gcd(p,q,r)=1$, where $[\\cdot]$ is the greatest integer function, then $p+q+r$ is equal to:",
+   "options": [
+    "$11$",
+    "$10$",
+    "$8$",
+    "$9$"
+   ],
+   "answer": "(B) 10",
+   "key_idea": "The domain needs $\\log_6(\\cdot)>1$, so the argument must exceed $6$; then split $[x^2]$ at $\\sqrt1,\\sqrt2,\\sqrt3$.",
+   "solution": [
+    "$f$ is defined when $\\log_4\\log_6\\left(3+4x-x^2\\right)>0$ (the outer $\\log_2$ needs a positive argument).",
+    "$\\log_4y>0\\Rightarrow y>1$, so $\\log_6\\left(3+4x-x^2\\right)>1$.",
+    "$\\log_6z>1\\Rightarrow z>6$: $3+4x-x^2>6\\Rightarrow x^2-4x+3<0\\Rightarrow x\\in(1,3)$; this also makes $3+4x-x^2>0$.",
+    "So $a=1$, $b=3$ and $b-a=2$.",
+    "$\\int_0^2\\left[x^2\\right]dx=\\int_0^1\\left[x^2\\right]dx+\\int_1^{\\sqrt2}\\left[x^2\\right]dx+\\int_{\\sqrt2}^{\\sqrt3}\\left[x^2\\right]dx+\\int_{\\sqrt3}^{2}\\left[x^2\\right]dx$.",
+    "On these intervals $[x^2]=0,1,2,3$ respectively.",
+    "$=0+\\left(\\sqrt2-1\\right)+2\\left(\\sqrt3-\\sqrt2\\right)+3\\left(2-\\sqrt3\\right)$.",
+    "$=5-\\sqrt2-\\sqrt3$, so $p=5$, $q=2$, $r=3$ and $p+q+r=10$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Layer-cake count: $\\int_0^2[x^2]dx$ adds up, for each integer $k\\ge1$, the length of the set where $x^2\\ge k$.",
+     "solution": [
+      "$[x^2]$ equals the number of integers $k\\ge1$ with $k\\le x^2$, so $\\int_0^2[x^2]dx=\\sum_{k\\ge1}\\text{length}\\{x\\in[0,2]:x^2\\ge k\\}$.",
+      "For $k=1,2,3$ the set is $[\\sqrt k,2]$ of length $2-\\sqrt k$; for $k\\ge4$ it is at most the single point $x=2$, of length $0$.",
+      "Sum: $(2-1)+\\left(2-\\sqrt2\\right)+\\left(2-\\sqrt3\\right)=5-\\sqrt2-\\sqrt3$.",
+      "Hence $p=5$, $q=2$, $r=3$ and $p+q+r=10$ (the domain step is unchanged)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Layer-cake: for increasing continuous $g\\ge0$ on $[0,c]$ with $g(0)=0$, $\\int_0^c[g(x)]dx=\\sum_{k=1}^{[g(c)]}\\left(c-g^{-1}(k)\\right)$. Here $g=x^2$, $c=2$.",
+    "Nested logs: work from the outside in. For base $>1$, $\\log_by>0\\iff y>1$; so $\\log_2\\log_4\\log_6u$ is defined iff $u>6$.",
+    "Because $1,\\sqrt2,\\sqrt3$ are linearly independent over $\\mathbb Q$, an expression $p-\\sqrt q-\\sqrt r$ determines $p,q,r$ uniquely.",
+    "Greatest-integer integrals: break the interval at the points where $g(x)$ crosses an integer; here $x=1,\\sqrt2,\\sqrt3,2$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property and integrals of trigonometric functions"
+   ],
+   "level": 3,
+   "question": "The integral $\\int_0^\\pi\\frac{8x\\,dx}{4\\cos^2x+\\sin^2x}$ is equal to:",
+   "options": [
+    "$\\frac{3\\pi^2}{2}$",
+    "$\\pi^2$",
+    "$4\\pi^2$",
+    "$2\\pi^2$"
+   ],
+   "answer": "(D) $2\\pi^2$",
+   "key_idea": "King property $x\\to\\pi-x$ removes the factor $x$ (the denominator is unchanged), then $\\tan x=t$ on $[0,\\frac\\pi2]$.",
+   "solution": [
+    "$I=\\int_0^\\pi\\frac{8x}{4\\cos^2x+\\sin^2x}dx$ ...(1).",
+    "Replace $x$ by $\\pi-x$ (the denominator is unchanged): $I=\\int_0^\\pi\\frac{8(\\pi-x)}{4\\cos^2x+\\sin^2x}dx$ ...(2).",
+    "Add (1) and (2): $2I=\\int_0^\\pi\\frac{8\\pi}{4\\cos^2x+\\sin^2x}dx$.",
+    "$4\\cos^2x+\\sin^2x=1+3\\cos^2x$, so $I=4\\pi\\int_0^\\pi\\frac{dx}{1+3\\cos^2x}$.",
+    "The integrand is symmetric about $x=\\frac\\pi2$, so $I=8\\pi\\int_0^{\\pi/2}\\frac{dx}{1+3\\cos^2x}$.",
+    "Divide by $\\cos^2x$: $I=8\\pi\\int_0^{\\pi/2}\\frac{\\sec^2x}{\\sec^2x+3}dx=8\\pi\\int_0^{\\pi/2}\\frac{\\sec^2x}{4+\\tan^2x}dx$.",
+    "Put $\\tan x=t$, $\\sec^2x\\,dx=dt$; $x:0\\to\\frac\\pi2$ gives $t:0\\to\\infty$. $I=8\\pi\\int_0^\\infty\\frac{dt}{t^2+2^2}$.",
+    "$I=8\\pi\\cdot\\frac12\\left[\\tan^{-1}\\frac t2\\right]_0^\\infty=4\\pi\\cdot\\frac\\pi2=2\\pi^2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the line after $\\tan x=t$ as $I=\\int_0^\\infty\\frac{dt}{t^2+2^2}$, dropping the constant $8\\pi$, and then continues with $4\\pi\\tan^{-1}(t/2)$ (which silently uses it) and a stray 'U ='. Restored the factor $8\\pi$ in that line. The final value $2\\pi^2$ is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Rewrite $1+3\\cos^2x=\\frac{5+3\\cos2x}{2}$ and use the standard periodic integral $\\int_0^{2\\pi}\\frac{du}{a+b\\cos u}=\\frac{2\\pi}{\\sqrt{a^2-b^2}}$.",
+     "solution": [
+      "After the king step, $I=4\\pi\\int_0^\\pi\\frac{dx}{1+3\\cos^2x}$ as above.",
+      "$1+3\\cos^2x=\\frac{5+3\\cos2x}{2}$, so $\\int_0^\\pi\\frac{dx}{1+3\\cos^2x}=\\int_0^\\pi\\frac{2\\,dx}{5+3\\cos2x}$.",
+      "Put $u=2x$: this equals $\\int_0^{2\\pi}\\frac{du}{5+3\\cos u}$.",
+      "Use $\\int_0^{2\\pi}\\frac{du}{a+b\\cos u}=\\frac{2\\pi}{\\sqrt{a^2-b^2}}$ for $a>|b|$: $\\frac{2\\pi}{\\sqrt{25-9}}=\\frac\\pi2$.",
+      "$I=4\\pi\\cdot\\frac\\pi2=2\\pi^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $g(\\pi-x)=g(x)$ then $\\int_0^\\pi x\\,g(x)dx=\\frac\\pi2\\int_0^\\pi g(x)dx$.",
+    "$\\int_0^{\\pi}\\frac{dx}{a^2\\cos^2x+b^2\\sin^2x}=\\frac{\\pi}{ab}$ for $a,b>0$, so $\\int_0^\\pi\\frac{x\\,dx}{a^2\\cos^2x+b^2\\sin^2x}=\\frac{\\pi^2}{2ab}$.",
+    "$\\int_0^{2\\pi}\\frac{du}{a+b\\cos u}=\\frac{2\\pi}{\\sqrt{a^2-b^2}}$ for $a>|b|$.",
+    "Check here: $a=2$, $b=1$ gives $\\frac{\\pi^2}{4}$, and $8\\cdot\\frac{\\pi^2}{4}=2\\pi^2$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property with absolute value and even functions"
+   ],
+   "level": 3,
+   "question": "The value of $\\int_{-1}^{1}\\frac{\\left(1+\\sqrt{|x|-x}\\right)e^x+\\left(\\sqrt{|x|-x}\\right)e^{-x}}{e^x+e^{-x}}dx$ is equal to:",
+   "options": [
+    "$2+\\frac{2\\sqrt2}{3}$",
+    "$3-\\frac{2\\sqrt2}{3}$",
+    "$1-\\frac{2\\sqrt2}{3}$",
+    "$1+\\frac{2\\sqrt2}{3}$"
+   ],
+   "answer": "(D) $1+\\frac{2\\sqrt2}{3}$",
+   "key_idea": "Under $x\\to-x$ the denominator is unchanged and $\\sqrt{|x|-x}$ becomes $\\sqrt{|x|+x}$; adding the two copies makes the numerator a multiple of the denominator.",
+   "solution": [
+    "$I=\\int_{-1}^{1}\\frac{\\left(1+\\sqrt{|x|-x}\\right)e^x+\\sqrt{|x|-x}\\,e^{-x}}{e^x+e^{-x}}dx$ ...(1).",
+    "King property ($a+b=0$, replace $x$ by $-x$): $I=\\int_{-1}^{1}\\frac{\\left(1+\\sqrt{|x|+x}\\right)e^{-x}+\\sqrt{|x|+x}\\,e^{x}}{e^{-x}+e^{x}}dx$ ...(2).",
+    "Add (1) and (2): $2I=\\int_{-1}^{1}\\frac{e^x\\left\\{1+\\sqrt{|x|-x}+\\sqrt{|x|+x}\\right\\}+e^{-x}\\left\\{\\sqrt{|x|-x}+1+\\sqrt{|x|+x}\\right\\}}{e^x+e^{-x}}dx$.",
+    "The two braces are equal, so $e^x+e^{-x}$ cancels: $2I=\\int_{-1}^{1}\\left(1+\\sqrt{|x|-x}+\\sqrt{|x|+x}\\right)dx$.",
+    "The integrand is even (replacing $x$ by $-x$ swaps the two radicals), so $I=\\int_0^1\\left(1+\\sqrt{|x|-x}+\\sqrt{|x|+x}\\right)dx$.",
+    "For $0\\le x\\le1$: $\\sqrt{|x|-x}=0$ and $\\sqrt{|x|+x}=\\sqrt{2x}$, so $I=\\int_0^1\\left(1+\\sqrt{2x}\\right)dx$.",
+    "$I=1+\\sqrt2\\cdot\\left[\\frac{2x^{3/2}}{3}\\right]_0^1=1+\\frac{2\\sqrt2}{3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split the numerator as $e^x+\\sqrt{|x|-x}\\,(e^x+e^{-x})$; the integral then separates with no king property.",
+     "solution": [
+      "$\\left(1+\\sqrt{|x|-x}\\right)e^x+\\sqrt{|x|-x}\\,e^{-x}=e^x+\\sqrt{|x|-x}\\left(e^x+e^{-x}\\right)$.",
+      "So the integrand is $\\frac{e^x}{e^x+e^{-x}}+\\sqrt{|x|-x}$.",
+      "$\\int_{-1}^{1}\\frac{e^x}{e^x+e^{-x}}dx=\\int_{-1}^{1}\\frac{e^{2x}}{e^{2x}+1}dx=\\left[\\frac12\\ln\\left(e^{2x}+1\\right)\\right]_{-1}^{1}=\\frac12\\ln\\frac{e^2+1}{e^{-2}+1}=\\frac12\\ln e^2=1$.",
+      "$\\sqrt{|x|-x}=0$ for $x\\ge0$ and $=\\sqrt{-2x}$ for $x<0$, so $\\int_{-1}^{1}\\sqrt{|x|-x}\\,dx=\\int_{-1}^{0}\\sqrt{-2x}\\,dx=\\sqrt2\\cdot\\frac23=\\frac{2\\sqrt2}{3}$.",
+      "Total: $1+\\frac{2\\sqrt2}{3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Before using a symmetry trick, try writing the numerator as (denominator) $\\times$ (simple) + remainder; here $N=e^x+\\sqrt{|x|-x}\\,D$.",
+    "$\\int_{-a}^{a}\\frac{e^x}{e^x+e^{-x}}dx=a$, since $\\frac{e^x}{e^x+e^{-x}}+\\frac{e^{-x}}{e^x+e^{-x}}=1$ pairs $x$ with $-x$.",
+    "$\\sqrt{|x|-x}$ lives only on $x<0$ (value $\\sqrt{2|x|}$) and $\\sqrt{|x|+x}$ only on $x>0$.",
+    "With $a+b=0$ the king property replaces $x$ by $-x$: it keeps $e^x+e^{-x}$ and swaps $e^x\\leftrightarrow e^{-x}$ in the numerator."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Functional equation $f(x)+2f(1/x)$",
+    "Definite integration of algebraic functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)+2f\\left(\\frac1x\\right)=x^2+5$ and $2g(x)-3g\\left(\\frac12\\right)=x$, $x>0$. If $\\alpha=\\int_1^2f(x)dx$ and $\\beta=\\int_1^2g(x)dx$, then the value of $9\\alpha+\\beta$ is:",
+   "options": [
+    "$0$",
+    "$10$",
+    "$11$",
+    "$1$"
+   ],
+   "answer": "(C) 11",
+   "key_idea": "Replace $x$ by $\\frac1x$ to get a second equation and solve for $f$; for $g$, put $x=\\frac12$ to find the constant $g(\\frac12)$.",
+   "solution": [
+    "$f(x)+2f\\left(\\frac1x\\right)=x^2+5$ ...(1).",
+    "Replace $x$ by $\\frac1x$: $f\\left(\\frac1x\\right)+2f(x)=\\frac1{x^2}+5$ ...(2).",
+    "Subtract $2\\times$(2) from (1): $-3f(x)=x^2+5-\\frac2{x^2}-10$.",
+    "$f(x)=-\\frac13\\left(x^2-\\frac2{x^2}-5\\right)$.",
+    "$\\alpha=-\\frac13\\left[\\frac{x^3}{3}+\\frac2x-5x\\right]_1^2$.",
+    "$\\alpha=-\\frac13\\left[\\left(\\frac83+1-10\\right)-\\left(\\frac13+2-5\\right)\\right]=-\\frac13\\left(\\frac73-6\\right)=-\\frac13\\left(-\\frac{11}3\\right)=\\frac{11}9$.",
+    "For $g$: put $x=\\frac12$ in $2g(x)-3g\\left(\\frac12\\right)=x$: $2g\\left(\\frac12\\right)-3g\\left(\\frac12\\right)=\\frac12$, so $g\\left(\\frac12\\right)=-\\frac12$.",
+    "Then $2g(x)=x-\\frac32$, i.e. $g(x)=\\frac12\\left(x-\\frac32\\right)$.",
+    "$\\beta=\\frac12\\left[\\frac{x^2}2-\\frac32x\\right]_1^2=\\frac12\\left[(2-3)-\\left(\\frac12-\\frac32\\right)\\right]=\\frac12(-1+1)=0$.",
+    "$9\\alpha+\\beta=9\\cdot\\frac{11}9+0=11$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Undetermined coefficients: the equation is symmetric under $x\\to\\frac1x$, so try $f(x)=Ax^2+\\frac{B}{x^2}+C$.",
+     "solution": [
+      "$f(x)+2f\\left(\\frac1x\\right)=(A+2B)x^2+\\frac{B+2A}{x^2}+3C$.",
+      "Match with $x^2+5$: $A+2B=1$, $2A+B=0$, $3C=5$, so $A=-\\frac13$, $B=\\frac23$, $C=\\frac53$.",
+      "The solution of the functional equation is unique (elimination shows it), so $f(x)=\\frac{-x^2+2x^{-2}+5}{3}$.",
+      "$\\alpha=\\frac13\\int_1^2\\left(-x^2+2x^{-2}+5\\right)dx=\\frac13\\left(-\\frac73+1+5\\right)=\\frac{11}9$.",
+      "For $g$: write $g(x)=\\frac{x+c}2$ with the constant $c=3g\\left(\\frac12\\right)$. At $x=\\frac12$: $g\\left(\\frac12\\right)=\\frac{\\frac12+3g(1/2)}{2}$ gives $g\\left(\\frac12\\right)=-\\frac12$, $c=-\\frac32$.",
+      "$\\beta=\\frac12\\int_1^2\\left(x-\\frac32\\right)dx=\\frac12\\left(\\frac32-\\frac32\\right)=0$, so $9\\alpha+\\beta=11$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f(x)+kf\\left(\\frac1x\\right)=\\phi(x)$ with $k^2\\ne1$: $f(x)=\\frac{\\phi(x)-k\\,\\phi(1/x)}{1-k^2}$. Here $k=2$, giving $\\frac{x^2+5-2(x^{-2}+5)}{-3}$.",
+    "A functional equation under an involution ($x\\to\\frac1x$, $x\\to-x$, $x\\to a-x$): substitute the involution to get a second equation and solve the $2\\times2$ linear system.",
+    "$ag(x)+bg(c)=h(x)$ with a fixed point $c$: $g$ is determined once $g(c)$ is known; evaluate at $x=c$ to get it.",
+    "You cannot integrate $f(x)+2f(1/x)$ term by term to find $\\int f$, since $\\int f(1/x)dx\\ne\\int f(x)dx$; find $f$ first."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property with trigonometric functions"
+   ],
+   "level": 3,
+   "question": "The integral $\\int_0^\\pi\\frac{(x+3)\\sin x}{1+3\\cos^2x}dx$ is equal to:",
+   "options": [
+    "$\\frac{\\pi}{\\sqrt3}(\\pi+2)$",
+    "$\\frac{\\pi}{\\sqrt3}(\\pi+1)$",
+    "$\\frac{\\pi}{3\\sqrt3}(\\pi+6)$",
+    "$\\frac{\\pi}{2\\sqrt3}(\\pi+4)$"
+   ],
+   "answer": "(C) $\\frac{\\pi}{3\\sqrt3}(\\pi+6)$",
+   "key_idea": "King property $x\\to\\pi-x$ turns $x+3$ into $\\pi-x+3$, so the sum is the constant $\\pi+6$ and $\\frac{\\sin x}{1+3\\cos^2x}$ is ready for $t=\\cos x$.",
+   "solution": [
+    "$I=\\int_0^\\pi\\frac{(x+3)\\sin x}{1+3\\cos^2x}dx$.",
+    "Replace $x$ by $\\pi-x$ ($\\sin x$ and $\\cos^2x$ are unchanged): $I=\\int_0^\\pi\\frac{(\\pi-x+3)\\sin x}{1+3\\cos^2x}dx$.",
+    "Add: $2I=\\int_0^\\pi\\frac{(\\pi+6)\\sin x}{1+3\\cos^2x}dx$.",
+    "The integrand is symmetric about $x=\\frac\\pi2$: $2I=2(\\pi+6)\\int_0^{\\pi/2}\\frac{\\sin x}{1+3\\cos^2x}dx$, so $I=(\\pi+6)\\int_0^{\\pi/2}\\frac{\\sin x\\,dx}{1+3\\cos^2x}$.",
+    "Put $\\sqrt3\\cos x=t$, so $\\sqrt3\\sin x\\,dx=-dt$; $x:0\\to\\frac\\pi2$ gives $t:\\sqrt3\\to0$.",
+    "$\\int_0^{\\pi/2}\\frac{\\sin x\\,dx}{1+3\\cos^2x}=\\frac1{\\sqrt3}\\int_0^{\\sqrt3}\\frac{dt}{1+t^2}=\\frac1{\\sqrt3}\\tan^{-1}\\sqrt3=\\frac{\\pi}{3\\sqrt3}$.",
+    "$I=\\frac{\\pi}{3\\sqrt3}(\\pi+6)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift to the centre: put $x=\\frac\\pi2+t$, so the linear factor becomes $\\frac\\pi2+3+t$ and the odd part $t$ drops out.",
+     "solution": [
+      "Put $x=\\frac\\pi2+t$, $t\\in\\left[-\\frac\\pi2,\\frac\\pi2\\right]$. Then $\\sin x=\\cos t$ and $\\cos x=-\\sin t$.",
+      "$I=\\int_{-\\pi/2}^{\\pi/2}\\frac{\\left(\\frac\\pi2+3+t\\right)\\cos t}{1+3\\sin^2t}dt$.",
+      "$\\frac{t\\cos t}{1+3\\sin^2t}$ is odd, so its integral over $\\left[-\\frac\\pi2,\\frac\\pi2\\right]$ is $0$.",
+      "$I=\\left(\\frac\\pi2+3\\right)\\cdot2\\int_0^{\\pi/2}\\frac{\\cos t\\,dt}{1+3\\sin^2t}$. With $u=\\sqrt3\\sin t$: $\\int_0^{\\pi/2}\\frac{\\cos t\\,dt}{1+3\\sin^2t}=\\frac1{\\sqrt3}\\tan^{-1}\\sqrt3=\\frac{\\pi}{3\\sqrt3}$.",
+      "$I=\\frac{\\pi+6}{2}\\cdot2\\cdot\\frac{\\pi}{3\\sqrt3}=\\frac{\\pi(\\pi+6)}{3\\sqrt3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $g(\\pi-x)=g(x)$ then $\\int_0^\\pi(x+c)\\,g(x)dx=\\left(\\frac\\pi2+c\\right)\\int_0^\\pi g(x)dx$: the linear factor is replaced by its value at the centre.",
+    "More generally, if $g$ is symmetric about $m=\\frac{a+b}2$, then $\\int_a^bx\\,g(x)dx=m\\int_a^bg(x)dx$.",
+    "$\\int_0^\\pi\\frac{\\sin x}{1+k^2\\cos^2x}dx=\\frac2k\\tan^{-1}k$; for $k=\\sqrt3$ this is $\\frac{2\\pi}{3\\sqrt3}$.",
+    "Recognition: $\\sin x$ in the numerator with an even power of $\\cos x$ in the denominator signals the substitution $t=\\cos x$ right after the king step."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property with a quadratic argument $f(t(1-t))$"
+   ],
+   "level": 3,
+   "question": "Let $f(x)$ be a positive function and $I_1=\\int_{-1/2}^{1}2xf\\left(2x(1-2x)\\right)dx$ and $I_2=\\int_{-1}^{2}f\\left(x(1-x)\\right)dx$. Then the value of $\\frac{I_2}{I_1}$ is equal to:",
+   "options": [
+    "$9$",
+    "$4$",
+    "$12$",
+    "$6$"
+   ],
+   "answer": "(B) 4",
+   "key_idea": "Putting $2x=t$ turns $I_1$ into $\\frac12\\int_{-1}^2t\\,f(t(1-t))dt$; the map $t\\to1-t$ keeps $t(1-t)$ and the interval $[-1,2]$, pairing $t$ with $1-t$.",
+   "solution": [
+    "In $I_1$ put $2x=t$, $dx=\\frac{dt}2$; $x:-\\frac12\\to1$ gives $t:-1\\to2$.",
+    "$I_1=\\int_{-1}^{2}t\\,f\\left(t(1-t)\\right)\\frac{dt}2$ ...(i).",
+    "Use $\\int_a^bF(t)dt=\\int_a^bF(a+b-t)dt$ with $a+b=1$; $t(1-t)$ is unchanged: $I_1=\\int_{-1}^{2}(1-t)f\\left(t(1-t)\\right)\\frac{dt}2$ ...(ii).",
+    "Add (i) and (ii): $2I_1=\\int_{-1}^{2}f\\left(t(1-t)\\right)\\frac{dt}2$.",
+    "$\\int_{-1}^{2}f\\left(t(1-t)\\right)dt=I_2$, so $2I_1=\\frac{I_2}2$, i.e. $4I_1=I_2$.",
+    "$\\frac{I_2}{I_1}=4$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF labels the first line after the substitution ($\\int t\\,f(t(1-t))\\frac{dt}2$, marked (i)) as $I_2$; it is $I_1$. The later line '$4I_1=\\int f(t(1-t))dt=I_2$' is correct, so the answer 4 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The answer must be one number for every positive $f$, so test with $f\\equiv1$ (and check with one more positive $f$).",
+     "solution": [
+      "The options are fixed numbers, so $\\frac{I_2}{I_1}$ is the same for every positive $f$; choose $f\\equiv1$.",
+      "$I_1=\\int_{-1/2}^{1}2x\\,dx=\\left[x^2\\right]_{-1/2}^{1}=1-\\frac14=\\frac34$.",
+      "$I_2=\\int_{-1}^2dx=3$, so $\\frac{I_2}{I_1}=\\frac{3}{3/4}=4$.",
+      "Check with $f(u)=u+10$ (positive, since $t(1-t)\\in\\left[-2,\\frac14\\right]$ on $[-1,2]$): $I_1=\\frac{57}8$ and $I_2=\\frac{57}2$, ratio $4$ again."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the answer to a question about an arbitrary $f$ is a single number, a test function ($f=1$, $f=u+c$) gives it quickly and also checks a long derivation.",
+    "If $F(a+b-t)=F(t)$ then $\\int_a^bt\\,F(t)dt=\\frac{a+b}2\\int_a^bF(t)dt$. Here $\\frac{a+b}2=\\frac12$, so $\\int_{-1}^{2}t\\,f(t(1-t))dt=\\frac12I_2$ and $I_1=\\frac{I_2}4$.",
+    "A quadratic argument $t(1-t)$ or $x(a-x)$ is symmetric about its vertex: a cue for the king property on any interval whose midpoint is that vertex.",
+    "Substituting $2x=t$ first is what makes the argument $t(1-t)$ and the limits $[-1,2]$ line up."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integral of a modulus function"
+   ],
+   "level": 2,
+   "question": "The integral $\\int_{-1}^{3/2}\\left|\\pi^2x\\sin(\\pi x)\\right|dx$ is equal to:",
+   "options": [
+    "$1+3\\pi$",
+    "$2+3\\pi$",
+    "$4+\\pi$",
+    "$3+2\\pi$"
+   ],
+   "answer": "(A) $1+3\\pi$",
+   "key_idea": "Put $\\pi x=t$ to get $\\int_{-\\pi}^{3\\pi/2}|t\\sin t|dt$; $t\\sin t\\ge0$ on $(-\\pi,\\pi)$ and $<0$ on $\\left(\\pi,\\frac{3\\pi}2\\right)$.",
+   "solution": [
+    "$I=\\int_{-1}^{3/2}\\left|\\pi^2x\\sin\\pi x\\right|dx=\\int_{-1}^{3/2}\\pi\\left|\\pi x\\sin\\pi x\\right|dx$.",
+    "Let $\\pi x=t$, $\\pi\\,dx=dt$: $I=\\int_{-\\pi}^{3\\pi/2}|t\\sin t|\\,dt$.",
+    "$t\\sin t$ is even, so $\\int_{-\\pi}^{0}=\\int_0^\\pi$; it is $\\ge0$ on $(0,\\pi)$ and $<0$ on $\\left(\\pi,\\frac{3\\pi}2\\right)$.",
+    "$I=2\\int_0^\\pi t\\sin t\\,dt-\\int_\\pi^{3\\pi/2}t\\sin t\\,dt$.",
+    "By parts: $\\int t\\sin t\\,dt=-t\\cos t+\\sin t$.",
+    "$I=2\\left[-t\\cos t+\\sin t\\right]_0^\\pi-\\left[-t\\cos t+\\sin t\\right]_\\pi^{3\\pi/2}$.",
+    "$\\left[-t\\cos t+\\sin t\\right]_0^\\pi=\\pi$ and $\\left[-t\\cos t+\\sin t\\right]_\\pi^{3\\pi/2}=(0-1)-(\\pi+0)=-1-\\pi$.",
+    "$I=2\\pi-(-1-\\pi)=2\\pi+\\pi+1=1+3\\pi$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work directly in $x$: $x\\sin\\pi x$ is even, so the part on $[-1,0]$ equals the part on $[0,1]$; then fix the sign on $\\left(1,\\frac32\\right)$.",
+     "solution": [
+      "$I=2\\int_0^1\\pi^2x\\sin\\pi x\\,dx+\\int_1^{3/2}\\left|\\pi^2x\\sin\\pi x\\right|dx$.",
+      "An antiderivative of $x\\sin\\pi x$ is $G(x)=-\\frac{x\\cos\\pi x}{\\pi}+\\frac{\\sin\\pi x}{\\pi^2}$.",
+      "$\\int_0^1\\pi^2x\\sin\\pi x\\,dx=\\pi^2\\left(G(1)-G(0)\\right)=\\pi^2\\cdot\\frac1\\pi=\\pi$.",
+      "On $\\left(1,\\frac32\\right)$, $\\sin\\pi x<0$, so $\\int_1^{3/2}\\left|\\cdot\\right|dx=-\\pi^2\\left(G\\left(\\tfrac32\\right)-G(1)\\right)=-\\pi^2\\left(-\\frac1{\\pi^2}-\\frac1\\pi\\right)=1+\\pi$.",
+      "$I=2\\pi+1+\\pi=1+3\\pi$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Check parity first: $x\\sin\\pi x$ is even, so $|\\cdot|$ of it is even and $\\int_{-a}^{0}=\\int_0^a$.",
+    "Sign of $x\\sin\\pi x$ on $\\left(-1,\\frac32\\right)$: positive on $(-1,0)$ and $(0,1)$, negative on $\\left(1,\\frac32\\right)$ ($\\sin\\pi x$ changes sign at integers, $x$ at $0$).",
+    "$\\int x\\sin ax\\,dx=\\frac{\\sin ax}{a^2}-\\frac{x\\cos ax}{a}+C$ (tabular integration by parts).",
+    "Scaling $t=\\pi x$ turns $\\pi^2x\\sin\\pi x$ into $\\pi\\,t\\sin t$ and the factor $\\frac1\\pi$ from $dx$ cancels it."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration by parts with a $\\tan x=t$ substitution"
+   ],
+   "level": 3,
+   "question": "Let for $f(x)=7\\tan^8x+7\\tan^6x-3\\tan^4x-3\\tan^2x$, $I_1=\\int_0^{\\pi/4}f(x)dx$ and $I_2=\\int_0^{\\pi/4}x\\,f(x)dx$. Then $7I_1+12I_2$ is equal to:",
+   "options": [
+    "$2$",
+    "$2\\pi$",
+    "$\\pi$",
+    "$1$"
+   ],
+   "answer": "(D) 1",
+   "key_idea": "$f(x)=\\left(7\\tan^6x-3\\tan^2x\\right)\\sec^2x$, so $\\tan x=t$ makes $I_1$ trivial and gives $I_2$ a by-parts integral against $\\tan^{-1}t$.",
+   "solution": [
+    "Factor: $f(x)=7\\tan^6x\\left(\\tan^2x+1\\right)-3\\tan^2x\\left(\\tan^2x+1\\right)=\\left(7\\tan^6x-3\\tan^2x\\right)\\sec^2x$.",
+    "In $I_1$ put $\\tan x=t$, $\\sec^2x\\,dx=dt$; $x:0\\to\\frac\\pi4$ gives $t:0\\to1$.",
+    "$I_1=\\int_0^1\\left(7t^6-3t^2\\right)dt=\\left[t^7-t^3\\right]_0^1=0$.",
+    "$I_2=\\int_0^{\\pi/4}x\\,f(x)dx=\\int_0^1\\tan^{-1}t\\,\\left(7t^6-3t^2\\right)dt$ (since $x=\\tan^{-1}t$).",
+    "By parts (first function $\\tan^{-1}t$): $I_2=\\left[\\tan^{-1}t\\left(t^7-t^3\\right)\\right]_0^1-\\int_0^1\\left(t^7-t^3\\right)\\frac1{1+t^2}dt$.",
+    "The bracket is $0$ at both limits, and $-\\frac{t^7-t^3}{1+t^2}=\\frac{t^3\\left(1-t^4\\right)}{1+t^2}=t^3\\left(1-t^2\\right)$ because $1-t^4=\\left(1-t^2\\right)\\left(1+t^2\\right)$.",
+    "$I_2=\\int_0^1t^3\\left(1-t^2\\right)dt=\\frac14-\\frac16=\\frac1{12}$.",
+    "$7I_1+12I_2=0+12\\cdot\\frac1{12}=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Spot that $f=G'$ with $G(x)=\\tan^7x-\\tan^3x$ and do the by-parts in $x$, using $G(0)=G(\\frac\\pi4)=0$.",
+     "solution": [
+      "$G(x)=\\tan^7x-\\tan^3x$ has $G'(x)=\\left(7\\tan^6x-3\\tan^2x\\right)\\sec^2x=f(x)$.",
+      "$I_1=G\\left(\\frac\\pi4\\right)-G(0)=(1-1)-0=0$.",
+      "$I_2=\\int_0^{\\pi/4}x\\,G'(x)dx=\\left[xG(x)\\right]_0^{\\pi/4}-\\int_0^{\\pi/4}G(x)dx=-\\int_0^{\\pi/4}\\left(\\tan^7x-\\tan^3x\\right)dx$.",
+      "$\\tan^3x-\\tan^7x=\\tan^3x\\left(1-\\tan^2x\\right)\\sec^2x$, so with $t=\\tan x$: $I_2=\\int_0^1t^3\\left(1-t^2\\right)dt=\\frac1{12}$.",
+      "$7I_1+12I_2=1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^nx\\left(1+\\tan^2x\\right)=\\tan^nx\\sec^2x=\\frac{d}{dx}\\frac{\\tan^{n+1}x}{n+1}$; here $f$ is exactly $\\frac{d}{dx}\\left(\\tan^7x-\\tan^3x\\right)$.",
+    "If $G(0)=G(b)=0$ and $G'=f$, then $\\int_0^bx\\,f(x)dx=-\\int_0^bG(x)dx$.",
+    "By parts with $\\tan^{-1}t$: $\\int\\tan^{-1}t\\,P'(t)dt=\\tan^{-1}t\\,P(t)-\\int\\frac{P(t)}{1+t^2}dt$; it is cleanest when $1+t^2$ divides $P$, as for $P=t^3(t^2-1)(t^2+1)$.",
+    "Quick check: $I_1=\\int_0^1(7t^6-3t^2)dt=1-1=0$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property with logarithmic substitution"
+   ],
+   "level": 2,
+   "question": "The value of $\\int_{e^2}^{e^4}\\frac1x\\left(\\frac{e^{\\left(\\left(\\log_ex\\right)^2+1\\right)^{-1}}}{e^{\\left(\\left(\\log_ex\\right)^2+1\\right)^{-1}}+e^{\\left(\\left(6-\\log_ex\\right)^2+1\\right)^{-1}}}\\right)dx$ is:",
+   "options": [
+    "$2$",
+    "$\\log_e2$",
+    "$e^2$",
+    "$1$"
+   ],
+   "answer": "(D) 1",
+   "key_idea": "After $\\ln x=t$ the limits $2,4$ sum to $6$, and $t\\to6-t$ swaps the two exponentials in the fraction.",
+   "solution": [
+    "Put $\\ln x=t$, $\\frac{dx}x=dt$; $x:e^2\\to e^4$ gives $t:2\\to4$.",
+    "$I=\\int_2^4\\frac{e^{\\left(t^2+1\\right)^{-1}}}{e^{\\left(t^2+1\\right)^{-1}}+e^{\\left((6-t)^2+1\\right)^{-1}}}dt$.",
+    "King property ($a+b=6$): replace $t$ by $6-t$, which swaps the two exponentials: $I=\\int_2^4\\frac{e^{\\left((6-t)^2+1\\right)^{-1}}}{e^{\\left((6-t)^2+1\\right)^{-1}}+e^{\\left(t^2+1\\right)^{-1}}}dt$.",
+    "Add: $2I=\\int_2^41\\,dt=2$.",
+    "$I=1$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int_a^b\\frac{\\phi(x)}{\\phi(x)+\\phi(a+b-x)}dx=\\frac{b-a}2$ for any $\\phi>0$ on $[a,b]$.",
+    "Disguises: logarithms and $x=e^t$ substitutions. First reduce to the form $\\frac{\\phi(t)}{\\phi(t)+\\phi(a+b-t)}$; here $a+b=6$ shows up as the $6-t$ in the second exponent.",
+    "The complicated exponents are irrelevant: once the two terms are $\\phi(t)$ and $\\phi(6-t)$, the integral is half the interval length.",
+    "Check with $\\phi=1$: the integrand is $\\frac12$ and the integral is $\\frac{b-a}2$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Beta function integrals"
+   ],
+   "level": 2,
+   "question": "If $I(m,n)=\\int_0^1x^{m-1}(1-x)^{n-1}dx$, $m,n>0$, then $I(9,14)+I(10,13)$ is:",
+   "options": [
+    "$I(9,13)$",
+    "$I(1,13)$",
+    "$I(19,27)$",
+    "$I(9,1)$"
+   ],
+   "answer": "(A) $I(9,13)$",
+   "key_idea": "The Beta integral becomes $2\\int_0^{\\pi/2}\\sin^{2m-1}\\theta\\cos^{2n-1}\\theta\\,d\\theta$, and the two terms combine through $\\sin^2\\theta+\\cos^2\\theta=1$.",
+   "solution": [
+    "Put $x=\\sin^2\\theta$, $dx=2\\sin\\theta\\cos\\theta\\,d\\theta$; $x:0\\to1$ gives $\\theta:0\\to\\frac\\pi2$.",
+    "$I(m,n)=2\\int_0^{\\pi/2}(\\sin\\theta)^{2m-1}(\\cos\\theta)^{2n-1}d\\theta$.",
+    "$I(9,14)=2\\int_0^{\\pi/2}\\sin^{17}\\theta\\cos^{27}\\theta\\,d\\theta$ and $I(10,13)=2\\int_0^{\\pi/2}\\sin^{19}\\theta\\cos^{25}\\theta\\,d\\theta$.",
+    "Add and factor out $\\sin^{17}\\theta\\cos^{25}\\theta$: $2\\int_0^{\\pi/2}\\sin^{17}\\theta\\cos^{25}\\theta\\left(\\cos^2\\theta+\\sin^2\\theta\\right)d\\theta$.",
+    "$=2\\int_0^{\\pi/2}\\sin^{17}\\theta\\cos^{25}\\theta\\,d\\theta=I(9,13)$, because $2m-1=17$ and $2n-1=25$ give $m=9$, $n=13$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the substitution as $x=\\sin2\\theta$; it must be $x=\\sin^2\\theta$ (with $dx=2\\sin\\theta\\cos\\theta\\,d\\theta$, as the PDF itself uses). The rest of the working and the answer are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Pascal-type identity with no substitution: multiply $x^8(1-x)^{12}$ by $(1-x)+x=1$.",
+     "solution": [
+      "$I(9,14)=\\int_0^1x^{8}(1-x)^{13}dx=\\int_0^1x^8(1-x)^{12}(1-x)\\,dx$.",
+      "$I(10,13)=\\int_0^1x^{9}(1-x)^{12}dx=\\int_0^1x^8(1-x)^{12}\\,x\\,dx$.",
+      "Add: $\\int_0^1x^8(1-x)^{12}\\left[(1-x)+x\\right]dx=\\int_0^1x^8(1-x)^{12}dx$.",
+      "This is $I(9,13)$, since $m-1=8$ and $n-1=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$I(m,n+1)+I(m+1,n)=I(m,n)$, from $x+(1-x)=1$ (a Pascal-type identity for the Beta function).",
+    "$I(m,n)=\\frac{\\Gamma(m)\\Gamma(n)}{\\Gamma(m+n)}=B(m,n)$ and $I(m,n)=I(n,m)$.",
+    "$\\int_0^{\\pi/2}\\sin^p\\theta\\cos^q\\theta\\,d\\theta=\\frac12B\\left(\\frac{p+1}{2},\\frac{q+1}{2}\\right)$.",
+    "Check with Gamma functions: $I(9,14)+I(10,13)=\\frac{\\Gamma(9)\\Gamma(13)(13+9)}{\\Gamma(23)}=\\frac{\\Gamma(9)\\Gamma(13)}{\\Gamma(22)}=I(9,13)$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property with $1/(1+e^x)$ and integration by parts"
+   ],
+   "level": 3,
+   "question": "If $\\int_{-\\pi/2}^{\\pi/2}\\frac{96x^2\\cos^2x}{1+e^x}dx=\\pi\\left(\\alpha\\pi^2+\\beta\\right)$, $\\alpha,\\beta\\in\\mathbb Z$, then $(\\alpha+\\beta)^2$ equals:",
+   "options": [
+    "$196$",
+    "$64$",
+    "$144$",
+    "$100$"
+   ],
+   "answer": "(D) 100",
+   "key_idea": "$\\frac1{1+e^x}+\\frac1{1+e^{-x}}=1$ and $96x^2\\cos^2x$ is even, so the integral equals $\\int_0^{\\pi/2}96x^2\\cos^2x\\,dx$.",
+   "solution": [
+    "King property on $\\left[-\\frac\\pi2,\\frac\\pi2\\right]$: with the even function $g(x)=96x^2\\cos^2x$, adding $I$ and its reflection gives $2I=\\int_{-\\pi/2}^{\\pi/2}g(x)dx$, so $I=\\int_0^{\\pi/2}96x^2\\cos^2x\\,dx$.",
+    "$I=48\\int_0^{\\pi/2}x^2\\left(1+\\cos2x\\right)dx$.",
+    "$I=48\\left[\\left[\\frac{x^3}{3}\\right]_0^{\\pi/2}+\\int_0^{\\pi/2}x^2\\cos2x\\,dx\\right]=48\\left[\\frac{\\pi^3}{24}+\\int_0^{\\pi/2}x^2\\cos2x\\,dx\\right]$.",
+    "By parts: $\\int_0^{\\pi/2}x^2\\cos2x\\,dx=\\left[\\frac{x^2\\sin2x}{2}\\right]_0^{\\pi/2}-\\int_0^{\\pi/2}x\\sin2x\\,dx=0-\\int_0^{\\pi/2}x\\sin2x\\,dx$.",
+    "$\\int_0^{\\pi/2}x\\sin2x\\,dx=\\left[-\\frac{x\\cos2x}{2}\\right]_0^{\\pi/2}+\\int_0^{\\pi/2}\\frac{\\cos2x}{2}dx=\\frac\\pi4+0$, so $\\int_0^{\\pi/2}x^2\\cos2x\\,dx=-\\frac\\pi4$.",
+    "$I=48\\left(\\frac{\\pi^3}{24}-\\frac\\pi4\\right)=2\\pi^3-12\\pi=\\pi\\left(2\\pi^2-12\\right)$.",
+    "So $\\alpha=2$, $\\beta=-12$ and $(\\alpha+\\beta)^2=100$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\frac1{1+e^x}=\\frac12-\\frac12\\tanh\\frac x2$; the $\\tanh$ part is odd and drops out. Then use tabular integration.",
+     "solution": [
+      "$\\frac1{1+e^x}=\\frac12-\\frac12\\tanh\\frac x2$, where $\\tanh\\frac x2=\\frac{e^x-1}{e^x+1}$ is odd.",
+      "$96x^2\\cos^2x$ is even, so the $\\tanh$ part integrates to $0$: $I=48\\int_{-\\pi/2}^{\\pi/2}x^2\\cos^2x\\,dx=96\\int_0^{\\pi/2}x^2\\cos^2x\\,dx=48\\int_0^{\\pi/2}x^2(1+\\cos2x)dx$.",
+      "Tabular (DI) integration: $\\int x^2\\cos2x\\,dx=\\frac{x^2\\sin2x}{2}+\\frac{x\\cos2x}{2}-\\frac{\\sin2x}{4}$.",
+      "Between $0$ and $\\frac\\pi2$ this equals $0+\\frac{\\pi}{2}\\cdot\\frac{-1}{2}-0=-\\frac\\pi4$.",
+      "$I=48\\left(\\frac{\\pi^3}{24}-\\frac\\pi4\\right)=\\pi\\left(2\\pi^2-12\\right)$, so $\\alpha=2$, $\\beta=-12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For even $g$ and $k>0$: $\\int_{-a}^{a}\\frac{g(x)}{1+k^x}dx=\\int_0^ag(x)dx$.",
+    "$\\int x^2\\cos2x\\,dx=\\frac{x^2\\sin2x}2+\\frac{x\\cos2x}2-\\frac{\\sin2x}4+C$ (differentiate $x^2$ down, integrate $\\cos2x$ up).",
+    "$\\int_0^{\\pi/2}x^2\\cos^2x\\,dx=\\frac{\\pi^3}{48}-\\frac\\pi8$, which is $\\frac{I}{96}$ here.",
+    "For integers $\\alpha,\\beta$ in $\\pi\\left(\\alpha\\pi^2+\\beta\\right)$ compare the coefficients of $\\pi^3$ and $\\pi$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Newton-Leibniz differentiation of an integral function",
+    "Summation of arithmetic series"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a real valued continuous function defined on the positive real axis such that $g(x)=\\int_0^xt\\,f(t)\\,dt$. If $g\\left(x^3\\right)=x^6+x^7$, then the value of $\\sum_{r=1}^{15}f\\left(r^3\\right)$ is:",
+   "options": [
+    "$340$",
+    "$320$",
+    "$270$",
+    "$310$"
+   ],
+   "answer": "(D) 310",
+   "key_idea": "Differentiate $g(x^3)$ in two ways: $g'(x^3)\\cdot3x^2$ with $g'(x^3)=x^3f(x^3)$ gives $f(x^3)$ directly.",
+   "solution": [
+    "$g(x)=\\int_0^xt\\,f(t)dt\\Rightarrow g'(x)=x\\,f(x)$, so $g'\\left(x^3\\right)=x^3f\\left(x^3\\right)$.",
+    "Differentiate $g\\left(x^3\\right)=x^6+x^7$: $g'\\left(x^3\\right)\\cdot3x^2=6x^5+7x^6$.",
+    "$x^3f\\left(x^3\\right)\\cdot3x^2=6x^5+7x^6$, i.e. $3x^5f\\left(x^3\\right)=x^5(6+7x)$.",
+    "$f\\left(x^3\\right)=\\frac{6+7x}{3}$.",
+    "$\\sum_{r=1}^{15}f\\left(r^3\\right)=\\sum_{r=1}^{15}\\frac{6+7r}{3}=2\\sum_{r=1}^{15}1+\\frac73\\sum_{r=1}^{15}r$.",
+    "$=2(15)+\\frac73\\cdot\\frac{15\\cdot16}{2}=30+\\frac73\\cdot120=30+280$.",
+    "$=310$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=x^3$ first, so $g(u)=u^2+u^{7/3}$, and differentiate once in $u$.",
+     "solution": [
+      "Let $u=x^3$: $x^6=u^2$ and $x^7=u^{7/3}$, so $g(u)=u^2+u^{7/3}$ for $u>0$.",
+      "$g'(u)=2u+\\frac73u^{4/3}$, and also $g'(u)=u\\,f(u)$.",
+      "So $f(u)=2+\\frac73u^{1/3}$, hence $f\\left(r^3\\right)=2+\\frac{7r}{3}$.",
+      "$\\sum_{r=1}^{15}\\left(2+\\frac{7r}3\\right)=30+\\frac73\\cdot120=310$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $g(x)=\\int_0^xh(t)dt$ with $h$ continuous then $g'(x)=h(x)$ (Fundamental Theorem); for a composite $g(\\phi(x))$ either use the chain rule or substitute $u=\\phi(x)$ first.",
+    "$g(x)=\\int_0^xt\\,f(t)dt\\Rightarrow f(x)=\\frac{g'(x)}{x}$: the weight $t$ is stripped by division.",
+    "$\\sum_{r=1}^nr=\\frac{n(n+1)}2$; here $f(r^3)$ is linear in $r$, so the sum is an arithmetic series.",
+    "Consistency: $g(0)=0$ agrees with $u^2+u^{7/3}\\to0$ as $u\\to0^+$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Repeated integration by parts"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a twice differentiable function such that $f(2)=1$. If $F(x)=x\\,f(x)$ for all $x\\in\\mathbb R$, $\\int_0^2xF'(x)dx=6$ and $\\int_0^2x^2F''(x)dx=40$, then $F'(2)+\\int_0^2F(x)dx$ is equal to:",
+   "options": [
+    "$11$",
+    "$15$",
+    "$13$",
+    "$9$"
+   ],
+   "answer": "(A) 11",
+   "key_idea": "Integrate $\\int xF'$ by parts to bring in $\\int x^2F''$ (giving $F'(2)$), and integrate $\\int F$ by parts to bring in $\\int xF'$.",
+   "solution": [
+    "$F(x)=x\\,f(x)$ and $f(2)=1$, so $F(2)=2f(2)=2$.",
+    "By parts on $\\int_0^2x\\,F'(x)dx=6$ (first function $F'$, second $x$): $\\left[F'(x)\\frac{x^2}2\\right]_0^2-\\int_0^2F''(x)\\frac{x^2}2dx=6$.",
+    "$2F'(2)-\\frac12\\int_0^2x^2F''(x)dx=6$, i.e. $2F'(2)-\\frac{40}{2}=6$.",
+    "$2F'(2)=26\\Rightarrow F'(2)=13$.",
+    "$\\int_0^2F(x)dx=\\left[x\\,F(x)\\right]_0^2-\\int_0^2x\\,F'(x)dx=2F(2)-6$.",
+    "$2F(2)=2\\cdot2\\cdot f(2)=4$, so $\\int_0^2F(x)dx=4-6=-2$.",
+    "$F'(2)+\\int_0^2F(x)dx=13-2=11$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Only the listed data matter, so test with a cubic $F(x)=ax+bx^2+cx^3$ (which has $F(0)=0$, as $F=xf$) that meets all conditions.",
+     "solution": [
+      "Take $F=ax+bx^2+cx^3$, i.e. $f=a+bx+cx^2$; the answer is the same for every admissible $F$, so one admissible $F$ reveals it.",
+      "$f(2)=1$: $a+2b+4c=1$.",
+      "$\\int_0^2xF'dx=2a+\\frac{16}3b+12c=6$ and $\\int_0^2x^2F''dx=\\frac{16}3b+24c=40$.",
+      "Solving the three equations: $c=3$, $b=-6$, $a=1$, so $F(x)=x-6x^2+3x^3$ (check $f(2)=1-12+12=1$).",
+      "$F'(2)=1-24+36=13$ and $\\int_0^2F\\,dx=2-16+12=-2$.",
+      "$F'(2)+\\int_0^2F\\,dx=13-2=11$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Ladder of integrals: $\\int_0^bxF'dx=bF(b)-\\int_0^bF\\,dx$ and $\\int_0^bx^2F''dx=b^2F'(b)-2bF(b)+2\\int_0^bF\\,dx$ when $F(0)=0$.",
+    "Here $b=2$, $F(2)=2$: $6=4-\\int_0^2F$ and $40=4F'(2)-8+2\\int_0^2F$, two equations for the two unknowns $\\int_0^2F=-2$ and $F'(2)=13$.",
+    "$F=x\\,f$ gives $F(0)=0$, which removes every lower-limit boundary term in these parts integrals.",
+    "When the data determine the answer, any admissible polynomial test function (here a cubic) gives it and checks the by-parts algebra."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Definite integral as a function of the upper limit",
+    "Monotonicity and range of a function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\int_0^xt\\left(t^2-9t+20\\right)dt$, $1\\le x\\le5$. If the range of $f$ is $[\\alpha,\\beta]$, then $4(\\alpha+\\beta)$ equals:",
+   "options": [
+    "$157$",
+    "$253$",
+    "$154$",
+    "$125$"
+   ],
+   "answer": "(A) 157",
+   "key_idea": "$f'(x)=x(x-4)(x-5)$ shows $f$ rises on $[1,4]$ and falls on $[4,5]$, so the maximum is $f(4)$ and the minimum is the smaller of $f(1)$, $f(5)$.",
+   "solution": [
+    "$f'(x)=x^3-9x^2+20x=x(x-4)(x-5)$.",
+    "Sign of $f'$: positive on $(0,4)$, negative on $(4,5)$ (the sign changes at $0$, $4$, $5$).",
+    "So on $[1,5]$, $f$ increases on $[1,4]$ and decreases on $[4,5]$; the maximum is at $x=4$.",
+    "$f(x)=\\frac{x^4}4-3x^3+10x^2$.",
+    "$f(1)=\\frac14-3+10=\\frac{29}4$.",
+    "$f(4)=\\frac{256}4-3(64)+10(16)=64-192+160=32$.",
+    "$f(5)=\\frac{625}4-375+250=\\frac{125}4$, which exceeds $f(1)=\\frac{29}4$, so the minimum is $f(1)$.",
+    "The range is $\\left[\\frac{29}4,32\\right]$: $\\alpha=\\frac{29}4$, $\\beta=32$.",
+    "$4(\\alpha+\\beta)=29+128=157$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF prints a half-finished line '$f(4)=\\frac{256}{4}-3(64)$' before the full evaluation, and takes $\\alpha=f(1)$ without comparing with $f(5)$. Added the comparison $f(5)=\\frac{125}{4}>f(1)=\\frac{29}{4}$ that justifies $\\alpha=f(1)$. The answer 157 is right.",
+   "useful_results": [
+    "Range of $f(x)=\\int_a^xh(t)dt$ on $[p,q]$: study the sign of $h$; extrema occur where $h$ changes sign and at the endpoints $p,q$, so compare all of them.",
+    "A function that rises then falls has its minimum at whichever endpoint is lower; here $f(1)=7.25<f(5)=31.25$.",
+    "Factored form helps evaluation: $f(x)=x^2\\left(\\frac{x^2}4-3x+10\\right)$ gives $f(4)=16\\cdot2=32$ and $f(1)=\\frac{29}4$.",
+    "$\\int_0^xt^ndt=\\frac{x^{n+1}}{n+1}$, so $f$ is a polynomial and the extreme values are plain evaluations at the roots of $f'$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integration of piecewise and modulus functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=-2$ for $-2\\le x\\le0$ and $f(x)=x-2$ for $0<x\\le2$, and $h(x)=f(|x|)+|f(x)|$. Then $\\int_{-2}^{2}h(x)dx$ is equal to:",
+   "options": [
+    "$2$",
+    "$6$",
+    "$4$",
+    "$1$"
+   ],
+   "answer": "(A) 2",
+   "key_idea": "Write $f(|x|)$ and $|f(x)|$ piecewise: they cancel on $[0,2]$ and add to $-x$ on $[-2,0]$.",
+   "solution": [
+    "$f(|x|)$: for $x\\in(0,2]$ it is $x-2$; for $x<0$ it is $f(-x)=-x-2$ (the mirror image); and $f(0)=-2$.",
+    "$|f(x)|$: it is $2$ on $[-2,0]$ and $|x-2|=2-x$ on $(0,2]$.",
+    "For $x\\in[-2,0]$: $h(x)=(-x-2)+2=-x$.",
+    "For $x\\in(0,2]$: $h(x)=(x-2)+(2-x)=0$.",
+    "So $h(x)=-x$ on $[-2,0]$ and $h(x)=0$ on $[0,2]$.",
+    "$\\int_{-2}^{2}h(x)dx=\\int_{-2}^{0}(-x)dx=\\left[-\\frac{x^2}2\\right]_{-2}^{0}=0-(-2)=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$f\\le0$ everywhere on $[-2,2]$, so $|f|=-f$ and $h=f(|x|)-f(x)$; integrate each part with no casework on $h$.",
+     "solution": [
+      "On $[-2,2]$, $f(x)\\le0$ ($-2$ on $[-2,0]$; $x-2\\le0$ on $(0,2]$), so $|f(x)|=-f(x)$ and $h(x)=f(|x|)-f(x)$.",
+      "$f(|x|)$ is even, so $\\int_{-2}^{2}f(|x|)dx=2\\int_0^2f(x)dx=2\\int_0^2(x-2)dx=2(-2)=-4$.",
+      "$\\int_{-2}^{2}f(x)dx=\\int_{-2}^{0}(-2)dx+\\int_0^2(x-2)dx=-4-2=-6$.",
+      "$\\int_{-2}^{2}h(x)dx=-4-(-6)=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f\\le0$ on an interval then $|f|=-f$ there; so $f(|x|)+|f(x)|=f(|x|)-f(x)$, which is $0$ for $x\\ge0$ and $f(-x)-f(x)$ for $x<0$.",
+    "$\\int_{-a}^{a}f(|x|)dx=2\\int_0^af(x)dx$ for any integrable $f$.",
+    "Area view: the region under $h(x)=-x$ on $[-2,0]$ is a right triangle with legs $2$ and $2$, area $2$.",
+    "Piecewise or modulus integrands: split at the points where each piece changes (here $x=0$ and $x=2$) and sketch before integrating."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "King property and integral of an even function"
+   ],
+   "level": 2,
+   "question": "If the value of the integral $\\int_{-1}^{1}\\frac{\\cos\\alpha x}{1+3^x}dx$ is $\\frac2\\pi$. Then, a value of $\\alpha$ is:",
+   "options": [
+    "$\\frac\\pi6$",
+    "$\\frac\\pi4$",
+    "$\\frac\\pi2$",
+    "$\\frac\\pi3$"
+   ],
+   "answer": "(C) $\\frac\\pi2$",
+   "key_idea": "$\\frac1{1+3^x}+\\frac1{1+3^{-x}}=1$ and $\\cos\\alpha x$ is even, so the integral equals $\\int_0^1\\cos\\alpha x\\,dx=\\frac{\\sin\\alpha}{\\alpha}$.",
+   "solution": [
+    "$I=\\int_{-1}^{1}\\frac{\\cos\\alpha x}{1+3^x}dx$ ...(1).",
+    "Using $\\int_a^bf(x)dx=\\int_a^bf(a+b-x)dx$ with $a+b=0$ (and $\\cos$ even): $I=\\int_{-1}^{1}\\frac{\\cos\\alpha x}{1+3^{-x}}dx$ ...(2).",
+    "Add: $2I=\\int_{-1}^{1}\\cos\\alpha x\\left(\\frac1{1+3^x}+\\frac{3^x}{3^x+1}\\right)dx=\\int_{-1}^{1}\\cos\\alpha x\\,dx=2\\int_0^1\\cos\\alpha x\\,dx$.",
+    "$I=\\int_0^1\\cos\\alpha x\\,dx=\\frac{\\sin\\alpha}{\\alpha}$.",
+    "Given $I=\\frac2\\pi$: $\\frac{\\sin\\alpha}{\\alpha}=\\frac2\\pi$, which holds for $\\alpha=\\frac\\pi2$ since $\\frac{\\sin(\\pi/2)}{\\pi/2}=\\frac2\\pi$.",
+    "The other options give $\\frac{\\sin\\alpha}{\\alpha}=\\frac3\\pi,\\ \\frac{2\\sqrt2}{\\pi},\\ \\frac{3\\sqrt3}{2\\pi}$ for $\\frac\\pi6,\\frac\\pi4,\\frac\\pi3$, none equal to $\\frac2\\pi$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split $\\frac1{1+3^x}=\\frac12-\\frac12\\cdot\\frac{3^x-1}{3^x+1}$ (the second part is odd), then use that $\\frac{\\sin\\alpha}\\alpha$ is monotonic.",
+     "solution": [
+      "$\\frac1{1+3^x}=\\frac12-\\frac12\\cdot\\frac{3^x-1}{3^x+1}$ and $\\frac{3^x-1}{3^x+1}$ is odd.",
+      "$\\cos\\alpha x\\cdot\\frac{3^x-1}{3^x+1}$ is odd, so it integrates to $0$ over $[-1,1]$.",
+      "$I=\\frac12\\int_{-1}^{1}\\cos\\alpha x\\,dx=\\int_0^1\\cos\\alpha x\\,dx=\\frac{\\sin\\alpha}\\alpha$.",
+      "$\\frac{\\sin\\alpha}{\\alpha}$ is strictly decreasing on $(0,\\pi]$ (derivative $\\frac{\\alpha\\cos\\alpha-\\sin\\alpha}{\\alpha^2}<0$), so $\\frac{\\sin\\alpha}\\alpha=\\frac2\\pi$ has exactly one solution there, $\\alpha=\\frac\\pi2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For even $g$ and $k>0$: $\\int_{-a}^{a}\\frac{g(x)}{1+k^x}dx=\\int_0^ag(x)dx$; the base $k$ is irrelevant.",
+    "$\\int_0^1\\cos\\alpha x\\,dx=\\frac{\\sin\\alpha}{\\alpha}$ (the sinc function), strictly decreasing on $(0,\\pi]$ from $1$ to $0$.",
+    "With options, test them: $\\frac{\\sin\\alpha}{\\alpha}=\\frac2\\pi$ is most easily satisfied at $\\alpha=\\frac\\pi2$, where $\\sin\\alpha=1$.",
+    "The same method gives $\\int_{-1}^{1}\\frac{\\cos\\alpha x}{1+k^x}dx=\\frac{\\sin\\alpha}{\\alpha}$ for every $k>0$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Definite integral as a function of the upper limit",
+    "Limits and L'Hopital's rule"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\int_0^x\\left(t+\\sin\\left(1-e^t\\right)\\right)dt$, $x\\in\\mathbb R$. Then $\\lim_{x\\to0}\\frac{f(x)}{x^3}$ is equal to:",
+   "options": [
+    "$\\frac16$",
+    "$-\\frac16$",
+    "$-\\frac23$",
+    "$\\frac23$"
+   ],
+   "answer": "(B) $-\\frac16$",
+   "key_idea": "The limit is $\\frac00$; differentiating the numerator removes the integral, and the repeated $\\frac00$ forms need three applications in all.",
+   "solution": [
+    "$f(0)=0$, so $\\frac{f(x)}{x^3}$ is $\\frac00$ as $x\\to0$. L'Hopital: $\\lim_{x\\to0}\\frac{f'(x)}{3x^2}=\\lim_{x\\to0}\\frac{x+\\sin\\left(1-e^x\\right)}{3x^2}$.",
+    "This is again $\\frac00$ (since $\\sin\\left(1-e^0\\right)=0$). L'Hopital: $\\lim_{x\\to0}\\frac{1-e^x\\cos\\left(1-e^x\\right)}{6x}$.",
+    "Still $\\frac00$ (since $1-1\\cdot\\cos0=0$). L'Hopital once more: the numerator's derivative is $-e^x\\cos\\left(1-e^x\\right)-e^{2x}\\sin\\left(1-e^x\\right)$ and the denominator's is $6$.",
+    "At $x=0$: $\\frac{-1\\cdot1-1\\cdot0}{6}=-\\frac16$.",
+    "$\\lim_{x\\to0}\\frac{f(x)}{x^3}=-\\frac16$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF goes from the first L'Hopital line straight to a third-derivative expression over $6$; the middle step $\\frac{1-e^x\\cos(1-e^x)}{6x}$ (still $\\frac00$) is missing. Also its sine term has the wrong sign: the numerator's derivative is $-e^x\\cos(1-e^x)-e^{2x}\\sin(1-e^x)$, not $-\\left[\\sin(1-e^x)(-e^x)e^x+\\cos(1-e^x)e^x\\right]$. The value at $x=0$ is unaffected, so $-\\frac16$ stands.",
+   "alternate_solutions": [
+    {
+     "idea": "Maclaurin series of the integrand: cancel the linear term, read off $-\\frac{t^2}2$, and integrate.",
+     "solution": [
+      "Let $u=1-e^t=-t-\\frac{t^2}2-\\frac{t^3}6-\\cdots$ and use $\\sin u=u-\\frac{u^3}6+\\cdots$.",
+      "$u^3=-t^3+O\\left(t^4\\right)$, so $\\sin\\left(1-e^t\\right)=\\left(-t-\\frac{t^2}2-\\frac{t^3}6\\right)+\\frac{t^3}6+O\\left(t^4\\right)=-t-\\frac{t^2}2+O\\left(t^4\\right)$.",
+      "$t+\\sin\\left(1-e^t\\right)=-\\frac{t^2}2+O\\left(t^4\\right)$.",
+      "$f(x)=\\int_0^x\\left(-\\frac{t^2}2+O\\left(t^4\\right)\\right)dt=-\\frac{x^3}6+O\\left(x^5\\right)$.",
+      "$\\lim_{x\\to0}\\frac{f(x)}{x^3}=-\\frac16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x)=\\int_0^xh(t)dt$ and $h(t)\\sim c\\,t^k$ as $t\\to0$, then $f(x)\\sim\\frac{c}{k+1}x^{k+1}$, so $\\lim\\frac{f(x)}{x^{k+1}}=\\frac c{k+1}$. Here $c=-\\frac12$, $k=2$ gives $-\\frac16$.",
+    "First cancel low-order terms: $t+\\sin\\left(1-e^t\\right)=-\\frac{t^2}2+O\\left(t^4\\right)$, so the leading behaviour starts at $t^2$.",
+    "L'Hopital on $\\frac{\\int_0^xh}{x^n}$ gives $\\frac{h(x)}{n\\,x^{n-1}}$; keep applying while the form is $\\frac00$ and count the derivatives used (three here).",
+    "Expansions: $e^t-1=t+\\frac{t^2}2+\\frac{t^3}6+\\cdots$ and $\\sin u=u-\\frac{u^3}6+\\cdots$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integrals of the form $(a\\sin x+b\\cos x)/(c\\sin x+d\\cos x)$"
+   ],
+   "level": 2,
+   "question": "The integral $\\int_0^{\\pi/4}\\frac{136\\sin x}{3\\sin x+5\\cos x}dx$ is equal to:",
+   "options": [
+    "$3\\pi-30\\log_e2+20\\log_e5$",
+    "$3\\pi-50\\log_e2+20\\log_e5$",
+    "$3\\pi-10\\log_e\\left(2\\sqrt2\\right)+10\\log_e5$",
+    "$3\\pi-25\\log_e2+10\\log_e5$"
+   ],
+   "answer": "(B) $3\\pi-50\\log_e2+20\\log_e5$",
+   "key_idea": "Write the numerator as $\\lambda\\times$ (denominator) $+\\,\\mu\\times$ (derivative of the denominator).",
+   "solution": [
+    "Write $136\\sin x=\\lambda(3\\sin x+5\\cos x)+\\mu(3\\cos x-5\\sin x)$; note $3\\cos x-5\\sin x$ is the derivative of the denominator.",
+    "Compare the coefficients of $\\sin x$ and $\\cos x$: $136=3\\lambda-5\\mu$ ...(1) and $0=5\\lambda+3\\mu$ ...(2).",
+    "Multiply (1) by $3$ and (2) by $5$ and add: $408=34\\lambda$, so $\\lambda=12$.",
+    "From (2): $\\mu=-\\frac{5\\lambda}3=-20$.",
+    "$\\int_0^{\\pi/4}\\frac{136\\sin x}{3\\sin x+5\\cos x}dx=12\\int_0^{\\pi/4}dx-20\\int_0^{\\pi/4}\\frac{3\\cos x-5\\sin x}{3\\sin x+5\\cos x}dx$.",
+    "$=12\\cdot\\frac\\pi4-20\\left[\\ln\\left(3\\sin x+5\\cos x\\right)\\right]_0^{\\pi/4}$.",
+    "At $\\frac\\pi4$: $3\\sin x+5\\cos x=\\frac8{\\sqrt2}=4\\sqrt2$; at $0$: $5$. So the value is $3\\pi-20\\left[\\ln\\left(4\\sqrt2\\right)-\\ln5\\right]$.",
+    "$\\ln\\left(4\\sqrt2\\right)=\\frac52\\ln2$, so the value is $3\\pi-50\\ln2+20\\ln5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Pair of integrals: with $S=\\int\\frac{\\sin x}{D}$ and $C=\\int\\frac{\\cos x}{D}$, solve two linear equations in $S$ and $C$.",
+     "solution": [
+      "Let $D=3\\sin x+5\\cos x$, $S=\\int_0^{\\pi/4}\\frac{\\sin x}{D}dx$, $C=\\int_0^{\\pi/4}\\frac{\\cos x}{D}dx$.",
+      "$3S+5C=\\int_0^{\\pi/4}dx=\\frac\\pi4$.",
+      "$3C-5S=\\int_0^{\\pi/4}\\frac{D'}{D}dx=\\ln\\frac{D(\\pi/4)}{D(0)}=\\ln\\frac{4\\sqrt2}{5}=:L$.",
+      "Multiply the first by $3$ and the second by $5$ and subtract: $34S=\\frac{3\\pi}4-5L$.",
+      "$136S=4\\left(\\frac{3\\pi}4-5L\\right)=3\\pi-20\\ln\\frac{4\\sqrt2}5=3\\pi-50\\ln2+20\\ln5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{a\\sin x+b\\cos x}{c\\sin x+d\\cos x}dx=\\lambda x+\\mu\\ln|D|+C$, where $D=c\\sin x+d\\cos x$ and the numerator equals $\\lambda D+\\mu D'$.",
+    "$\\lambda=\\frac{ac+bd}{c^2+d^2}$ and $\\mu=\\frac{bc-ad}{c^2+d^2}$. Here $a=136$, $b=0$, $c=3$, $d=5$ give $\\lambda=12$, $\\mu=-20$.",
+    "Reduce every logarithm to $\\ln2$ and $\\ln5$ (here $\\ln4\\sqrt2=\\frac52\\ln2$) before matching the options.",
+    "Numerical check: $3\\pi-50\\ln2+20\\ln5\\approx6.956$."
+   ]
+  }
+ ]
+}
