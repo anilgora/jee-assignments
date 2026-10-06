@@ -4,8 +4,7 @@ Paper: 9 numerical questions printed as Q61-Q69 (all Vector / 3D). The deck numb
 
 ## Difficulty
 - Marks-weighted difficulty index (adjusted levels): **2.11** (19 / 9 questions, 4 marks each). No equivalence-relation adjustment or MCQ floor applied (all numerical).
-- Questions per level: Level 0: none | Level 1: 1 (Q9) | Level 2: 5 (Q1, Q2, Q5, Q6, Q7, Q8 -> six: Q1, Q2, Q5, Q6, Q7, Q8) | Level 3: 2 (Q3, Q4) | Levels 4 and 5: none.
-  (Exact count: L1 = 1, L2 = 6, L3 = 2.)
+- Questions per level: Level 0: none | Level 1: 1 (Q9) | Level 2: 6 (Q1, Q2, Q5, Q6, Q7, Q8) | Level 3: 2 (Q3, Q4) | Levels 4 and 5: none.
 - All ratings are Medium confidence; JEE Main-style bank, well below the JEE Advanced range.
 
 ## Blueprint
