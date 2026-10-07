@@ -1,0 +1,927 @@
+{
+ "title": "JEE Main Question Bank 02 Coordinate Geometry (Paper 02) — Paper Analysis",
+ "subtitle": "Questions 1–20 (printed 21–40) · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Coordinate_Geometry_02.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for a correct answer · 0 otherwise (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "concepts": [
+    "Pair of tangents to a circle; angle between tangents; area of triangles"
+   ],
+   "level": 2,
+   "question": "Two tangents are drawn from a point $P$ to the circle $x^2+y^2-2x-4y+4=0$, such that the angle between these tangents is $\\tan^{-1}\\left(\\frac{12}{5}\\right)$, where $\\tan^{-1}\\left(\\frac{12}{5}\\right)\\in(0,\\pi)$. If the centre of the circle is denoted by $C$ and these tangents touch the circle at points $A$ and $B$, then the ratio of the areas of $\\triangle PAB$ and $\\triangle CAB$ is:",
+   "options": [
+    "$11:4$",
+    "$9:4$",
+    "$3:1$",
+    "$2:1$"
+   ],
+   "answer": "(B) $9:4$",
+   "key_idea": "Both triangles have the same base angle data, so the area ratio is $\\frac{PA^2}{r^2}$, and $\\tan\\frac\\theta2=\\frac{r}{PA}$ gives $PA$.",
+   "solution": [
+    "The circle is $(x-1)^2+(y-2)^2=1$, so the centre is $C(1,2)$ and the radius is $r=1$.",
+    "Let $PA=PB=\\sqrt{S_1}$ (the length of the tangent) and let $\\angle APB=\\theta$. Then $\\triangle PAB$ has two sides $\\sqrt{S_1}$ with included angle $\\theta$.",
+    "Area of $\\triangle PAB=\\frac12S_1\\sin\\theta$.",
+    "In $\\triangle CAB$ the sides $CA=CB=r$ include the angle $\\angle ACB=\\pi-\\theta$ (quadrilateral $CAPB$ has two right angles at $A$ and $B$).",
+    "Area of $\\triangle CAB=\\frac12r^2\\sin(\\pi-\\theta)=\\frac12r^2\\sin\\theta$.",
+    "In the right triangle $CAP$: $\\tan\\frac\\theta2=\\frac{r}{\\sqrt{S_1}}=\\frac{1}{\\sqrt{S_1}}$, and it is given that $\\tan\\theta=\\frac{12}{5}$.",
+    "$\\tan\\theta=\\frac{2\\tan\\frac\\theta2}{1-\\tan^2\\frac\\theta2}$, so $\\frac{\\frac{2}{\\sqrt{S_1}}}{1-\\frac{1}{S_1}}=\\frac{12}{5}$.",
+    "This gives $\\sqrt{S_1}=\\frac32$ and hence $S_1=\\frac94$.",
+    "$\\frac{\\triangle PAB}{\\triangle CAB}=\\frac{S_1}{r^2}=\\frac{9/4}{1}=\\frac94$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work with the distance $CP$: $\\cos\\theta=1-2\\sin^2\\frac\\theta2=1-\\frac{2r^2}{CP^2}$ gives $CP$, then $PA^2=CP^2-r^2$ by Pythagoras.",
+     "solution": [
+      "Since $\\tan\\theta=\\frac{12}{5}$ with $\\theta\\in(0,\\pi)$, $\\theta$ is acute and $\\cos\\theta=\\frac{5}{13}$.",
+      "In right triangle $CAP$, $\\sin\\frac\\theta2=\\frac{CA}{CP}=\\frac{1}{CP}$.",
+      "$\\cos\\theta=1-2\\sin^2\\frac\\theta2$, so $\\frac5{13}=1-\\frac{2}{CP^2}$, i.e. $\\frac{2}{CP^2}=\\frac8{13}$ and $CP^2=\\frac{13}{4}$.",
+      "$PA^2=CP^2-CA^2=\\frac{13}{4}-1=\\frac94$.",
+      "Both triangles have the same $\\sin\\theta$ factor, so $\\frac{\\triangle PAB}{\\triangle CAB}=\\frac{PA^2}{CA^2}=\\frac{9/4}{1}=\\frac94$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For tangents from $P$ at angle $\\theta$ to a circle of radius $r$: $PA=r\\cot\\frac\\theta2$, $CP=r\\csc\\frac\\theta2$, and $\\angle ACB=\\pi-\\theta$.",
+    "$\\frac{\\triangle PAB}{\\triangle CAB}=\\frac{PA^2}{r^2}=\\cot^2\\frac\\theta2$ - independent of the position of the circle (here $\\cot^2\\frac\\theta2=\\frac94$).",
+    "From $\\tan\\theta=t$ with $\\theta$ acute: $\\tan\\frac\\theta2=\\frac{\\sqrt{1+t^2}-1}{t}$; here $\\frac{13/5-1}{12/5}=\\frac23$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 2,
+   "concepts": [
+    "Tangents to a parabola; perpendicular tangents"
+   ],
+   "level": 3,
+   "question": "Let $L_1$ be a tangent to the parabola $y^2=4(x+1)$ and $L_2$ be a tangent to the parabola $y^2=8(x+2)$ such that $L_1$ and $L_2$ intersect at right angles. Then $L_1$ and $L_2$ meet on the straight line:",
+   "options": [
+    "$2x+1=0$",
+    "$x+3=0$",
+    "$x+2=0$",
+    "$x+2y=0$"
+   ],
+   "answer": "(B) $x+3=0$",
+   "key_idea": "Write both tangents in slope form, impose $m_1m_2=-1$, and the difference of the two equations factorises as $(m_1-m_2)(x+3)$.",
+   "solution": [
+    "For $y^2=4(x+1)$ (here $a=1$, vertex $(-1,0)$) the tangent of slope $m_1$ is $L_1:\\ y=m_1(x+1)+\\frac{1}{m_1}$.",
+    "For $y^2=8(x+2)$ (here $a=2$, vertex $(-2,0)$) the tangent of slope $m_2$ is $L_2:\\ y=m_2(x+2)+\\frac{2}{m_2}$.",
+    "At the common point the two values of $y$ are equal; subtracting: $(m_1-m_2)x+(m_1-2m_2)+\\frac{1}{m_1}-\\frac{2}{m_2}=0$.",
+    "Combine the fractions: $\\frac1{m_1}-\\frac2{m_2}=\\frac{m_2-2m_1}{m_1m_2}$.",
+    "The lines are perpendicular, so $m_1m_2=-1$ and this fraction equals $\\frac{m_2-2m_1}{-1}=2m_1-m_2$.",
+    "Hence $(m_1-m_2)x+(m_1-2m_2)+(2m_1-m_2)=0$, i.e. $(m_1-m_2)x+3(m_1-m_2)=0$.",
+    "$(m_1-m_2)(x+3)=0$, and $m_1\\neq m_2$ (since $m_1m_2=-1$), so $x+3=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Both parabolas have the same focus $O$; the foot of the perpendicular from the focus to any tangent lies on the tangent at the vertex, and a rectangle appears.",
+     "solution": [
+      "$y^2=4(x+1)$ has vertex $(-1,0)$ and $a=1$, so its focus is $(0,0)$. $y^2=8(x+2)$ has vertex $(-2,0)$ and $a=2$, so its focus is also $(0,0)=O$.",
+      "Property: the foot of the perpendicular from the focus to any tangent lies on the tangent at the vertex. So the foot $M_1$ on $L_1$ lies on $x=-1$ and the foot $M_2$ on $L_2$ lies on $x=-2$.",
+      "Let $L_1$ and $L_2$ meet at $P$. Then $OM_1\\perp L_1$, $OM_2\\perp L_2$ and $L_1\\perp L_2$, so $OM_1PM_2$ has three right angles: it is a rectangle.",
+      "In a rectangle $\\vec{OP}=\\vec{OM_1}+\\vec{OM_2}$, so $x_P=x_{M_1}+x_{M_2}=-1+(-2)=-3$.",
+      "Hence $P$ lies on $x+3=0$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Foot-of-perpendicular property: for a parabola $y^2=4a(x-h)$ the foot of the perpendicular from the focus to any tangent lies on the vertex tangent $x=h$.",
+    "Perpendicular tangents to $y^2=4ax$ meet on the directrix $x=-a$. For two confocal parabolas of the same axis with vertices at $x=h_1,h_2$, perpendicular tangents meet on $x=h_1+h_2$ (here $-1-2=-3$).",
+    "Tangent of slope $m$ to $y^2=4a(x-h)$: $y=m(x-h)+\\frac am$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 3,
+   "concepts": [
+    "Locus of a point; angle between two straight lines"
+   ],
+   "level": 2,
+   "question": "The locus of the mid-points of the perpendiculars drawn from points on the line $x=2y$ to the line $x=y$ is:",
+   "options": [
+    "$5x-7y=0$",
+    "$3x-2y=0$",
+    "$2x-3y=0$",
+    "$7x-5y=0$"
+   ],
+   "answer": "(A) $5x-7y=0$",
+   "key_idea": "The midpoint $M$ of $PN$ satisfies $\\tan\\phi=\\frac12\\tan\\theta$, so $OM$ is a fixed line making a fixed angle with $x=y$.",
+   "solution": [
+    "Let $P$ be a variable point on $x=2y$ and $PN$ the perpendicular from $P$ to the line $x=y$; $M(h,k)$ is the midpoint of $PN$ and $O$ is the origin.",
+    "Let $\\theta$ be the angle between the lines $x=y$ and $x=2y$: $\\tan\\theta=\\frac{1-\\frac12}{1+\\frac12}=\\frac13$.",
+    "In the right triangle $ONP$: $\\tan\\theta=\\frac{PN}{ON}=\\frac13$.",
+    "Let $\\phi=\\angle MON$. Since $M$ is the midpoint of $PN$, $MN=\\frac{PN}{2}$, so $\\tan\\phi=\\frac{MN}{ON}=\\frac{PN}{2\\,ON}=\\frac12\\tan\\theta=\\frac16$.",
+    "So $M$ always lies on a line through $O$ making angle $\\phi$ with $x=y$. If its slope is $m$: $\\tan\\phi=\\left|\\frac{1-m}{1+m}\\right|=\\frac16$.",
+    "$\\frac{1-m}{1+m}=\\frac16$ gives $m=\\frac57$; $\\frac{1-m}{1+m}=-\\frac16$ gives $m=\\frac75$.",
+    "$M$ lies between the lines $x=y$ (slope $1$) and $x=2y$ (slope $\\frac12$), so $\\frac12<m<1$; reject $m=\\frac75$ and keep $m=\\frac57$.",
+    "Locus of $M$: $y-0=\\frac57(x-0)$, i.e. $5x-7y=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise $P=(2t,t)$ on $x=2y$, write the foot $N$ on $y=x$ directly, and eliminate $t$ from the midpoint.",
+     "solution": [
+      "Take $P=(2t,t)$, a general point of $x=2y$.",
+      "The foot of the perpendicular from $P$ on $y=x$ is $N=\\left(\\frac{2t+t}{2},\\frac{2t+t}{2}\\right)=\\left(\\frac{3t}{2},\\frac{3t}{2}\\right)$.",
+      "Midpoint $M=\\left(\\frac{2t+\\frac{3t}{2}}{2},\\frac{t+\\frac{3t}{2}}{2}\\right)=\\left(\\frac{7t}{4},\\frac{5t}{4}\\right)$.",
+      "So $x=\\frac{7t}{4}$ and $y=\\frac{5t}{4}$; eliminating $t$ gives $\\frac xy=\\frac75$, i.e. $5x-7y=0$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Foot of the perpendicular from $(x_1,y_1)$ on $y=x$ is $\\left(\\frac{x_1+y_1}2,\\frac{x_1+y_1}2\\right)$ (reflect across the line and average).",
+    "A point dividing a moving segment in a fixed ratio traces a line (or curve) obtained from the original by a similarity: scaling $PN$ by $\\frac12$ halves the tangent of the angle, $\\tan\\phi=\\frac12\\tan\\theta$.",
+    "Loci of this kind are straight lines through the intersection point of the given lines - parametrise by one parameter $t$ and eliminate."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 4,
+   "concepts": [
+    "Normal form of a straight line; angle between two straight lines"
+   ],
+   "level": 2,
+   "question": "A straight line $L$ at a distance of $4$ units from the origin makes positive intercepts on the coordinate axes and the perpendicular from the origin to this line makes an angle of $60^\\circ$ with the line $x+y=0$. Then an equation of the line $L$ is:",
+   "options": [
+    "$(\\sqrt3+1)x+(\\sqrt3-1)y=8\\sqrt2$",
+    "$(\\sqrt3-1)x+(\\sqrt3+1)y=8\\sqrt2$",
+    "$\\sqrt3x+y=8$",
+    "$x+\\sqrt3y=8$"
+   ],
+   "answer": "(A) or (B) - both are correct (the key gives A/B)",
+   "key_idea": "The normal direction makes $60^\\circ$ with $x+y=0$ (direction $135^\\circ$), so it points at $75^\\circ$ or $15^\\circ$ to the $x$-axis, and $p=4$ gives both lines.",
+   "solution": [
+    "The line $x+y=0$ makes $135^\\circ$ (equivalently $45^\\circ$ as an undirected line) with the $x$-axis.",
+    "The perpendicular from $O$ to $L$ makes $60^\\circ$ with $x+y=0$ and $L$ has positive intercepts, so the perpendicular points into the first quadrant: it makes $15^\\circ$ or $75^\\circ$ with the $x$-axis.",
+    "Normal form with $p=4$: $x\\cos75^\\circ+y\\sin75^\\circ=4$ or $x\\cos15^\\circ+y\\sin15^\\circ=4$.",
+    "$\\cos75^\\circ=\\frac{\\sqrt3-1}{2\\sqrt2}$, $\\sin75^\\circ=\\frac{\\sqrt3+1}{2\\sqrt2}$, $\\cos15^\\circ=\\frac{\\sqrt3+1}{2\\sqrt2}$, $\\sin15^\\circ=\\frac{\\sqrt3-1}{2\\sqrt2}$.",
+    "Multiplying by $2\\sqrt2$: $(\\sqrt3-1)x+(\\sqrt3+1)y=8\\sqrt2$ or $(\\sqrt3+1)x+(\\sqrt3-1)y=8\\sqrt2$.",
+    "The first is option (B) and the second is option (A); both have positive intercepts $\\frac{8\\sqrt2}{\\sqrt3\\mp1}$ and both satisfy the conditions, so the key is A/B."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last sentence ('By rotating the normal towards x + y = 0 in anticlockwise sense we get the answer (B)') singles out (B), but its own working (and the answer line 'A/B') shows both (A) and (B) satisfy the conditions: normals at 15 degrees and 75 degrees both make 60 degrees with x + y = 0. The deck states the answer as (A) or (B); the working is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Test the four options directly: for $ax+by=c$ the distance is $\\frac{c}{\\sqrt{a^2+b^2}}$ and the normal $(a,b)$ must satisfy $\\cos60^\\circ=\\frac{|a-b|}{\\sqrt2\\sqrt{a^2+b^2}}$.",
+     "solution": [
+      "For a line $ax+by=c$ the normal direction is $(a,b)$, and the line $x+y=0$ has direction $(1,-1)$, so the angle $\\alpha$ between the normal and $x+y=0$ satisfies $\\cos\\alpha=\\frac{|a-b|}{\\sqrt2\\sqrt{a^2+b^2}}$.",
+      "We need $\\frac{c}{\\sqrt{a^2+b^2}}=4$ and $\\cos\\alpha=\\frac12$.",
+      "(A): $a=\\sqrt3+1$, $b=\\sqrt3-1$: $a^2+b^2=8$, distance $=\\frac{8\\sqrt2}{2\\sqrt2}=4$; $|a-b|=2$, so $\\cos\\alpha=\\frac{2}{\\sqrt2\\cdot2\\sqrt2}=\\frac12$. Satisfied.",
+      "(B): $a$ and $b$ interchanged; $a^2+b^2=8$, $|a-b|=2$: distance $4$ and $\\cos\\alpha=\\frac12$. Satisfied.",
+      "(C): $a=\\sqrt3$, $b=1$: $a^2+b^2=4$, distance $\\frac82=4$ but $\\cos\\alpha=\\frac{\\sqrt3-1}{2\\sqrt2}\\approx0.259\\neq\\frac12$ (this is $75^\\circ$). Fails; (D) is the same with $a,b$ swapped and also fails.",
+      "So (A) and (B) are the correct options (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal form $x\\cos\\alpha+y\\sin\\alpha=p$: the normal direction is at angle $\\alpha$ with the $x$-axis; positive intercepts need $0<\\alpha<90^\\circ$.",
+    "Angle between a normal $(a,b)$ and a line of direction $(d_1,d_2)$: $\\cos\\alpha=\\frac{|ad_1+bd_2|}{\\sqrt{a^2+b^2}\\sqrt{d_1^2+d_2^2}}$ - useful for testing options without trigonometry.",
+    "$\\cos75^\\circ=\\sin15^\\circ=\\frac{\\sqrt3-1}{2\\sqrt2}$ and $\\sin75^\\circ=\\cos15^\\circ=\\frac{\\sqrt3+1}{2\\sqrt2}$ - they make the surds $\\sqrt3\\pm1$ appear."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 5,
+   "concepts": [
+    "Area of a triangle; equation of a straight line; intersection of lines"
+   ],
+   "level": 3,
+   "question": "Let $A(-1,1)$, $B(3,4)$ and $C(2,0)$ be given three points. A line $y=mx$, $m>0$, intersects the lines $AC$ and $BC$ at points $P$ and $Q$ respectively. Let $A_1$ and $A_2$ be the areas of $\\triangle ABC$ and $\\triangle PQC$ respectively, such that $A_1=3A_2$. Then the value of $m$ is equal to:",
+   "options": [
+    "$\\frac{4}{15}$",
+    "$1$",
+    "$2$",
+    "$3$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "The area condition becomes $12m^2=\\left|(3m+1)(4-m)\\right|$; the sign choice gives one quadratic with no real root and one with the root $m=1$.",
+   "solution": [
+    "Line $AC$: $x+3y=2$. Line $BC$: $4x-y=8$.",
+    "Intersect $y=mx$ with $AC$: $x(1+3m)=2$, so $P=\\left(\\frac{2}{3m+1},\\frac{2m}{3m+1}\\right)$. With $BC$: $4x-mx=8$, so $Q=\\left(\\frac{8}{4-m},\\frac{8m}{4-m}\\right)$.",
+    "$A_1=\\frac12\\left|\\begin{matrix}-1&1&1\\\\3&4&1\\\\2&0&1\\end{matrix}\\right|=\\frac{13}{2}$ and $A_2=\\frac{A_1}{3}=\\frac{13}{6}$.",
+    "$A_2=\\frac12\\left|\\begin{matrix}2&0&1\\\\\\frac{2}{3m+1}&\\frac{2m}{3m+1}&1\\\\\\frac{8}{4-m}&\\frac{8m}{4-m}&1\\end{matrix}\\right|=\\frac{13}{6}$ (the vertex $C$ is $(2,0)$).",
+    "Clear the denominators by multiplying rows 2 and 3 by $(3m+1)$ and $(4-m)$: $\\frac{1}{(3m+1)(4-m)}\\left|\\begin{matrix}2&0&1\\\\2&2m&3m+1\\\\8&8m&4-m\\end{matrix}\\right|=\\pm\\frac{13}{3}$.",
+    "Expanding, the determinant is $2\\left(2m(4-m)-8m(3m+1)\\right)+(16m-16m)=-52m^2$.",
+    "Case $-52m^2=+\\frac{13}{3}(3m+1)(4-m)$: $-12m^2=-3m^2+11m+4$, i.e. $9m^2+11m+4=0$ with discriminant $121-144<0$: no real $m$.",
+    "Case $-52m^2=-\\frac{13}{3}(3m+1)(4-m)$: $12m^2=-3m^2+11m+4$, i.e. $15m^2-11m-4=0$, so $(m-1)(15m+4)=0$ and $m=1$ or $m=-\\frac4{15}$.",
+    "Since $m>0$: $m=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's two quadratics are wrong. It prints (+) m^2 + 11m + 4 = 0 and (-) 7m^2 - 11m - 4 = 0 with roots m = 1 or -4/7. Expanding the determinant (= -52 m^2) gives 9m^2 + 11m + 4 = 0 (no real root) and 15m^2 - 11m - 4 = 0 (roots m = 1 and -4/15). m = 1 does not satisfy 7m^2 - 11m - 4 = 0 as printed. The final answer m = 1 is right; the printed 4/15 in option (A) is a distractor (the actual root is -4/15, rejected by m > 0).",
+   "alternate_solutions": [
+    {
+     "idea": "$\\triangle PQC$ and $\\triangle ABC$ share the angle at $C$, so $\\frac{A_2}{A_1}=\\frac{CP}{CA}\\cdot\\frac{CQ}{CB}$; find the two ratios along the sides.",
+     "solution": [
+      "$P$ lies on line $CA$ and $Q$ on line $CB$, and $\\angle PCQ=\\angle ACB$ (or its vertical angle), so $\\frac{[PQC]}{[ABC]}=\\frac{CP}{CA}\\cdot\\frac{CQ}{CB}$.",
+      "$\\vec{CA}=(-3,1)$ and $P-C=\\left(\\frac{-6m}{3m+1},\\frac{2m}{3m+1}\\right)=\\frac{2m}{3m+1}(-3,1)$, so $\\frac{CP}{CA}=\\frac{2m}{3m+1}$.",
+      "$\\vec{CB}=(1,4)$ and $Q-C=\\left(\\frac{2m}{4-m},\\frac{8m}{4-m}\\right)=\\frac{2m}{4-m}(1,4)$, so $\\frac{CQ}{CB}=\\frac{2m}{|4-m|}$.",
+      "$\\frac{A_2}{A_1}=\\frac13$ gives $\\frac{4m^2}{(3m+1)|4-m|}=\\frac13$, i.e. $12m^2=(3m+1)|4-m|$ for $m>0$.",
+      "For $0<m<4$: $12m^2=-3m^2+11m+4$, i.e. $15m^2-11m-4=0$ and $m=1$. For $m>4$: $12m^2=3m^2-11m-4$ has no positive root.",
+      "$m=1$ (same answer; check: $\\frac{CP}{CA}=\\frac12$, $\\frac{CQ}{CB}=\\frac23$, product $\\frac13$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $P$ is on line $CA$ and $Q$ on line $CB$ then $\\frac{[CPQ]}{[CAB]}=\\frac{CP\\cdot CQ}{CA\\cdot CB}$ - no determinants needed.",
+    "A point of the line through $C$ in direction $\\vec{CA}$ is $C+t\\vec{CA}$; the line $y=mx$ cuts it at $t=\\frac{2m}{3m+1}$ here, so ratios can be read off directly.",
+    "Whenever a determinant area equals $\\pm k$, always solve both signs; here one sign produced a quadratic with negative discriminant (a built-in check: $9m^2+11m+4=0$ has $\\Delta=-23$)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 6,
+   "concepts": [
+    "Reflection of a curve in a line; tangent to a parabola"
+   ],
+   "level": 1,
+   "question": "Let $C$ be the locus of the mirror image of a point on the parabola $y^2=4x$ with respect to the line $y=x$. Then the equation of the tangent to $C$ at $P(2,1)$ is:",
+   "options": [
+    "$x+2y=4$",
+    "$2x+y=4$",
+    "$x-y=1$",
+    "$x+3y=5$"
+   ],
+   "answer": "(C) $x-y=1$",
+   "key_idea": "Reflection in $y=x$ swaps $x$ and $y$, so $C$ is $x^2=4y$, and the tangent at $P$ comes from $T=0$.",
+   "solution": [
+    "The mirror image of $(x,y)$ in $y=x$ is $(y,x)$. Hence the image of $y^2=4x$ is obtained by interchanging $x$ and $y$.",
+    "$C:\\ x^2=4y$.",
+    "The point $P(2,1)$ lies on $C$ since $4=4\\cdot1$.",
+    "Tangent at $(x_1,y_1)$ to $x^2=4y$ is $xx_1=2(y+y_1)$; this is the $T=0$ form: $x\\cdot2=4\\left(\\frac{y+1}{2}\\right)$.",
+    "$2x=2(y+1)$, i.e. $x-y=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Reflect the tangent instead of the curve: the tangent to $C$ at $P(2,1)$ is the mirror image of the tangent to $y^2=4x$ at the mirror point $(1,2)$.",
+     "solution": [
+      "The image of $P(2,1)$ in $y=x$ is $P'(1,2)$, which lies on $y^2=4x$ ($4=4$).",
+      "Tangent to $y^2=4x$ at $(1,2)$: $yy_1=2(x+x_1)$, so $2y=2(x+1)$, i.e. $y=x+1$.",
+      "A reflection in $y=x$ maps tangents of the original parabola to tangents of its image, so the required tangent is the mirror image of $y=x+1$: interchange $x$ and $y$ to get $x=y+1$.",
+      "$x-y=1$ (same answer; also by calculus, $\\frac{dy}{dx}=\\frac x2=1$ at $x=2$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reflection in $y=x$ interchanges $x$ and $y$ in every equation (curve, tangent, normal); reflection in $y=-x$ replaces $(x,y)$ by $(-y,-x)$.",
+    "Reflection is an isometry, so tangency, tangent lines and normals are carried to tangency, tangents and normals of the image.",
+    "Tangent at $(x_1,y_1)$ to $x^2=4ay$ is $xx_1=2a(y+y_1)$; to $y^2=4ax$ is $yy_1=2a(x+x_1)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 7,
+   "concepts": [
+    "Orthocentre of a triangle; family of lines; tangent to a parabola"
+   ],
+   "level": 3,
+   "question": "The equations of the sides $AB$ and $AC$ of a triangle $ABC$ are $(\\lambda+1)x+\\lambda y=4$ and $\\lambda x+(1-\\lambda)y+\\lambda=0$ respectively. Its vertex $A$ is on the $y$-axis and its orthocentre is $(1,2)$. The length of the tangent from the point $C$ to the part of the parabola $y^2=6x$ in the first quadrant is:",
+   "options": [
+    "$2\\sqrt2$",
+    "$2$",
+    "$4$",
+    "$\\sqrt6$"
+   ],
+   "answer": "(A) $2\\sqrt2$",
+   "key_idea": "$A$ on the $y$-axis forces the two $y$-intercepts to coincide, which fixes $\\lambda=2$; then $HC\\perp AB$ locates $C$.",
+   "solution": [
+    "$AB:(\\lambda+1)x+\\lambda y=4$ and $AC:\\lambda x+(1-\\lambda)y+\\lambda=0$. $A$ lies on the $y$-axis, so put $x=0$ in both.",
+    "$AB$ gives $y=\\frac4\\lambda$ and $AC$ gives $y=\\frac{\\lambda}{\\lambda-1}$. Both give the $y$-coordinate of $A$, so $\\frac4\\lambda=\\frac{\\lambda}{\\lambda-1}$.",
+    "$4(\\lambda-1)=\\lambda^2$, i.e. $(\\lambda-2)^2=0$, so $\\lambda=2$.",
+    "$AB:3x+2y=4$ and $AC:2x-y+2=0$; hence $A=(0,2)$.",
+    "$C$ lies on $AC$, so let $C=(\\alpha,2\\alpha+2)$. The orthocentre is $H(1,2)$ and $CH\\perp AB$.",
+    "Slope of $CH=\\frac{2\\alpha+2-2}{\\alpha-1}=\\frac{2\\alpha}{\\alpha-1}$ and slope of $AB=-\\frac32$, so $\\left(\\frac{2\\alpha}{\\alpha-1}\\right)\\left(-\\frac32\\right)=-1$.",
+    "$6\\alpha=2\\alpha-2$, so $\\alpha=-\\frac12$ and $C=\\left(-\\frac12,1\\right)$.",
+    "For $y^2=6x$: $a=\\frac32$. A tangent of slope $m$ is $y=mx+\\frac{3}{2m}$. Through $C$: $1=-\\frac m2+\\frac{3}{2m}$, i.e. $m^2+2m-3=0$, so $m=1$ or $m=-3$.",
+    "The point of contact is $T=\\left(\\frac{a}{m^2},\\frac{2a}{m}\\right)=\\left(\\frac{3}{2m^2},\\frac3m\\right)$: $m=1$ gives $\\left(\\frac32,3\\right)$ (first quadrant), $m=-3$ gives $\\left(\\frac16,-1\\right)$ (fourth quadrant).",
+    "So $T=\\left(\\frac32,3\\right)$ and $CT=\\sqrt{\\left(\\frac32+\\frac12\\right)^2+(3-1)^2}=\\sqrt{4+4}=2\\sqrt2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Since $AH$ is horizontal, $BC$ is vertical, so $x_C=x_B$; $B$ comes from the altitude $BH\\perp AC$ - no unknown parameter on $AC$.",
+     "solution": [
+      "With $\\lambda=2$: $A=(0,2)$, $AB:3x+2y=4$, $AC:2x-y+2=0$ (slope $2$); $H=(1,2)$.",
+      "$AH$ is the line $y=2$ (horizontal), and $AH\\perp BC$, so $BC$ is vertical: $x_C=x_B$.",
+      "$BH\\perp AC$ (slope $2$), so $BH$ has slope $-\\frac12$: $y-2=-\\frac12(x-1)$, i.e. $x+2y=5$.",
+      "$B=AB\\cap BH$: subtracting $x+2y=5$ from $3x+2y=4$ gives $2x=-1$, so $x_B=-\\frac12$.",
+      "$C$ is on $AC$ with $x_C=-\\frac12$: $y_C=2\\left(-\\frac12\\right)+2=1$, so $C=\\left(-\\frac12,1\\right)$.",
+      "Tangent at parameter $t$ to $y^2=6x$ (point $\\left(\\frac32t^2,3t\\right)$): $ty=x+\\frac32t^2$. Through $C$: $t=-\\frac12+\\frac32t^2$, i.e. $3t^2-2t-1=0$, so $t=1$ or $t=-\\frac13$.",
+      "First quadrant: $t>0$, so $t=1$ and $T=\\left(\\frac32,3\\right)$; $CT=\\sqrt{2^2+2^2}=2\\sqrt2$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two lines of a family meeting the $y$-axis at the same point: equate their $y$-intercepts - gives the parameter without finding the intersection first.",
+    "In a triangle the altitude from $A$ is perpendicular to $BC$: if $AH$ is horizontal then $BC$ is vertical (and vice versa), so $x_B=x_C$.",
+    "Parametric tangent to $y^2=4ax$ at $(at^2,2at)$: $ty=x+at^2$; the roots $t$ of the quadratic from an external point are the parameters of the two points of contact. Tangent length is NOT $\\sqrt{S_1}$ for a parabola - compute $CT$ from the contact point."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 8,
+   "concepts": [
+    "Intercept form of a straight line; family of lines through a fixed point"
+   ],
+   "level": 1,
+   "question": "A man is walking on a straight line. The arithmetic mean of the reciprocals of the intercepts of this line on the coordinate axes is $\\frac14$. Three stones $A$, $B$ and $C$ are placed at the points $(1,1)$, $(2,2)$ and $(4,4)$ respectively. Then which of these stones is/are on the path of the man?",
+   "options": [
+    "$C$ only",
+    "$B$ only",
+    "All the three",
+    "$A$ only"
+   ],
+   "answer": "(B) $B$ only",
+   "key_idea": "$\\frac{1}{a}+\\frac1b=\\frac12$ means $2\\left(\\frac1a+\\frac1b\\right)=1$, so every such line passes through $(2,2)$.",
+   "solution": [
+    "Let the $x$-intercept be $a$ and the $y$-intercept be $b$; the line is $\\frac xa+\\frac yb=1$.",
+    "The arithmetic mean of the reciprocals is $\\frac{\\frac1a+\\frac1b}{2}=\\frac14$.",
+    "So $\\frac1a+\\frac1b=\\frac12$.",
+    "Multiply by $2$: $\\frac2a+\\frac2b=1$.",
+    "This says that the point $(2,2)$ satisfies $\\frac xa+\\frac yb=1$, i.e. $(2,2)$ lies on the line for every such $a,b$.",
+    "Hence the stone $B(2,2)$ is always on the man's path.",
+    "The points $(1,1)$ and $(4,4)$ would need $\\frac1a+\\frac1b=1$ and $\\frac1a+\\frac1b=\\frac14$ respectively, which contradicts $\\frac1a+\\frac1b=\\frac12$. So only $B$ is on the path."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If the intercepts satisfy $\\frac pa+\\frac qb=1$ for fixed $p,q$, every line $\\frac xa+\\frac yb=1$ passes through the fixed point $(p,q)$; with $\\frac1a+\\frac1b=\\frac1k$ the fixed point is $(k,k)$.",
+    "Standard variants: $a+b=k$ (the family envelops a parabola, no fixed point); $ab=k$ (envelope a hyperbola); $\\frac1a+\\frac1b=\\frac1k$ (fixed point $(k,k)$) - recognise which one before computing.",
+    "Quick test for a single-answer question: a special member of the family ($a=b=4$, line $x+y=4$) already rules out $(1,1)$ and $(4,4)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 9,
+   "concepts": [
+    "Incentre of a triangle; focus of a parabola"
+   ],
+   "level": 3,
+   "question": "Let $A(0,1)$, $B(1,1)$ and $C(1,0)$ be the mid-points of the sides of a triangle with incentre at the point $D$. If the focus of the parabola $y^2=4ax$ passing through $D$ is $(\\alpha+\\beta\\sqrt2,0)$, where $\\alpha$ and $\\beta$ are rational numbers, then $\\frac{\\alpha}{\\beta^2}$ is equal to:",
+   "options": [
+    "$\\frac92$",
+    "$12$",
+    "$6$",
+    "$8$"
+   ],
+   "answer": "(D) $8$",
+   "key_idea": "The vertices are $(0,2),(0,0),(2,0)$ - a right isosceles triangle - so the incentre is $(r,r)$ with $r=2-\\sqrt2$.",
+   "solution": [
+    "The mid-points $(0,1)$, $(1,1)$, $(1,0)$ belong to the triangle with vertices $P(0,2)$, $Q(0,0)$, $R(2,0)$ (the vertex opposite each mid-point is found by $V=M_1+M_2-M_3$).",
+    "Sides: $QR=2$ (opposite $P$), $PR=2\\sqrt2$ (opposite $Q$), $PQ=2$ (opposite $R$).",
+    "Incentre $D=\\frac{2\\cdot P+2\\sqrt2\\cdot Q+2\\cdot R}{2+2\\sqrt2+2}$, so $D=\\left(\\frac{0+0+4}{4+2\\sqrt2},\\frac{4+0+0}{4+2\\sqrt2}\\right)$.",
+    "$D=\\left(\\frac{2}{2+\\sqrt2},\\frac{2}{2+\\sqrt2}\\right)=\\left(2-\\sqrt2,\\,2-\\sqrt2\\right)$.",
+    "$D$ lies on $y^2=4ax$: $(2-\\sqrt2)^2=4a(2-\\sqrt2)$, so $a=\\frac{2-\\sqrt2}{4}$.",
+    "The focus is $(a,0)=\\left(\\frac12-\\frac{\\sqrt2}{4},0\\right)$. Comparing with $(\\alpha+\\beta\\sqrt2,0)$: $\\alpha=\\frac12$ and $\\beta=-\\frac14$.",
+    "$\\frac{\\alpha}{\\beta^2}=\\frac{1/2}{1/16}=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The medial-triangle's parent is a right isosceles triangle with legs $2$; its inradius $r=\\frac{\\text{leg}+\\text{leg}-\\text{hypotenuse}}{2}$ and the incentre is $(r,r)$.",
+     "solution": [
+      "The triangle is right-angled at $Q(0,0)$ with legs $QP=QR=2$ and hypotenuse $PR=2\\sqrt2$.",
+      "Inradius of a right triangle: $r=\\frac{QP+QR-PR}{2}=\\frac{4-2\\sqrt2}{2}=2-\\sqrt2$.",
+      "The incentre is at distance $r$ from both legs lying on the axes, so $D=(r,r)=(2-\\sqrt2,2-\\sqrt2)$.",
+      "$y^2=4ax$ through $D$: $a=\\frac{y^2}{4x}=\\frac{(2-\\sqrt2)^2}{4(2-\\sqrt2)}=\\frac{2-\\sqrt2}{4}$; focus $\\left(\\frac12-\\frac14\\sqrt2,0\\right)$.",
+      "$\\alpha=\\frac12$, $\\beta=-\\frac14$, $\\frac{\\alpha}{\\beta^2}=8$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Mid-points $M_1,M_2,M_3$ of the sides: the vertices are $M_1+M_2-M_3$, $M_2+M_3-M_1$, $M_3+M_1-M_2$ (the original triangle is twice the medial triangle).",
+    "Right triangle with legs $p,q$ and hypotenuse $h$: inradius $r=\\frac{p+q-h}{2}=\\frac{pq}{p+q+h}$; if the legs lie along the axes the incentre is $(r,r)$.",
+    "For a point $(x_1,y_1)$ on $y^2=4ax$: $a=\\frac{y_1^2}{4x_1}$ - the focus is then $(a,0)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 10,
+   "concepts": [
+    "Pair of lines (homogenisation); angle subtended by a chord at the origin; ellipse"
+   ],
+   "level": 3,
+   "question": "If the curve $x^2+2y^2=2$ intersects the line $x+y=1$ at two points $P$ and $Q$, then the angle subtended by the line segment $PQ$ at the origin is:",
+   "options": [
+    "$\\frac\\pi2-\\tan^{-1}\\left(\\frac13\\right)$",
+    "$\\frac\\pi2+\\tan^{-1}\\left(\\frac14\\right)$",
+    "$\\frac\\pi2+\\tan^{-1}\\left(\\frac13\\right)$",
+    "$\\frac\\pi2-\\tan^{-1}\\left(\\frac14\\right)$"
+   ],
+   "answer": "(B) $\\frac\\pi2+\\tan^{-1}\\left(\\frac14\\right)$",
+   "key_idea": "Homogenise the ellipse with $\\frac{x+y}{1}=1$ to get the pair of lines $OP,OQ$ through the origin, then pick the obtuse angle.",
+   "solution": [
+    "Homogenise: replace $2$ by $2(x+y)^2$ (since $x+y=1$): $x^2+2y^2=2(x+y)^2$.",
+    "$x^2+2y^2=2x^2+4xy+2y^2$, so $x^2+4xy=0$ is the pair of lines $OP$ and $OQ$.",
+    "The lines are $L_1:x=0$ (vertical) and $L_2:x+4y=0$ (slope $m_2=-\\frac14$).",
+    "The angle between them: $L_1$ is vertical, so $\\tan\\theta=\\left|\\frac{1}{m_2}\\right|=4$ for the acute angle, i.e. $\\theta=\\tan^{-1}(4)$.",
+    "The points are $P(0,1)$ and $Q\\left(\\frac43,-\\frac13\\right)$ on opposite sides of the $y$-axis with $\\vec{OP}\\cdot\\vec{OQ}=-\\frac13<0$, so the angle subtended is the obtuse one.",
+    "Obtuse angle $=\\pi-\\tan^{-1}(4)=\\pi-\\cot^{-1}\\left(\\frac14\\right)=\\pi-\\left(\\frac\\pi2-\\tan^{-1}\\frac14\\right)$.",
+    "$=\\frac\\pi2+\\tan^{-1}\\left(\\frac14\\right)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Skip homogenisation: solve for $P$ and $Q$ explicitly and use the dot product of $\\vec{OP}$ and $\\vec{OQ}$.",
+     "solution": [
+      "Substitute $x=1-y$ in $x^2+2y^2=2$: $(1-y)^2+2y^2=2$, so $3y^2-2y-1=0$ and $y=1$ or $y=-\\frac13$.",
+      "$P=(0,1)$ and $Q=\\left(\\frac43,-\\frac13\\right)$.",
+      "$\\cos\\angle POQ=\\frac{\\vec{OP}\\cdot\\vec{OQ}}{|OP||OQ|}=\\frac{-\\frac13}{1\\cdot\\frac{\\sqrt{17}}{3}}=-\\frac{1}{\\sqrt{17}}$, so the angle is obtuse and equals $\\pi-\\cos^{-1}\\frac1{\\sqrt{17}}=\\pi-\\tan^{-1}4$.",
+      "$\\pi-\\tan^{-1}4=\\frac\\pi2+\\left(\\frac\\pi2-\\tan^{-1}4\\right)=\\frac\\pi2+\\tan^{-1}\\frac14$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Homogenisation: for a conic $S=0$ and a chord $lx+my=1$, the pair of lines joining the origin to the intersection points is $S$ with its constant part multiplied by $(lx+my)^2$.",
+    "Two lines through the origin $ax^2+2hxy+by^2=0$ meet at $\\tan\\theta=\\frac{2\\sqrt{h^2-ab}}{|a+b|}$ (acute angle); the angle is $90^\\circ$ iff $a+b=0$. Here $a=1,h=2,b=0$: $\\tan\\theta=4$.",
+    "'Angle subtended at the origin' is the angle $\\angle POQ\\in(0,\\pi)$: decide acute or obtuse by the sign of $\\vec{OP}\\cdot\\vec{OQ}$ - options often list both."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 11,
+   "concepts": [
+    "Normals to a parabola"
+   ],
+   "level": 2,
+   "question": "If the three normals drawn to the parabola $y^2=2x$ pass through the point $(a,0)$, $a\\neq0$, then $a$ must be greater than:",
+   "options": [
+    "$-1$",
+    "$1$",
+    "$\\frac12$",
+    "$-\\frac12$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "The normal in slope form is a cubic in $m$ with the root $m=0$; two further real roots need $m^2=2(a-1)>0$.",
+   "solution": [
+    "Compare $y^2=2x$ with $y^2=4cx$: $c=\\frac12$ (the letter $a$ is kept for the given point).",
+    "The normal of slope $m$ is $y=mx-2cm-cm^3$, i.e. $y=mx-m-\\frac{m^3}{2}$.",
+    "It passes through $(a,0)$: $0=am-m-\\frac{m^3}{2}$.",
+    "Multiply by $-2$ and factorise: $m^3=2(a-1)m$, i.e. $m\\left(m^2-2(a-1)\\right)=0$.",
+    "$m=0$ is always a root; three distinct normals need two more real, distinct, non-zero roots from $m^2=2(a-1)$.",
+    "This requires $2(a-1)>0$, so $a>1$ (and $a=1$ would give only the one normal $m=0$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The subnormal of a parabola $y^2=4cx$ is constant ($2c$), so the normal at $(x_1,y_1)$ cuts the axis at $x_1+2c$; match this with $a$.",
+     "solution": [
+      "For $y^2=2x$ ($c=\\frac12$) the subnormal is constant $=2c=1$: the normal at $(x_1,y_1)$ meets the axis at $(x_1+1,0)$.",
+      "The normal passes through $(a,0)$ iff $x_1+1=a$, i.e. $x_1=a-1$, with $y_1^2=2x_1=2(a-1)$.",
+      "For $a>1$ this gives two points $y_1=\\pm\\sqrt{2(a-1)}$; for $a=1$ it gives only the vertex; for $a<1$ none.",
+      "The normal at the vertex is the axis itself, which passes through $(a,0)$ for every $a$ - this is the third normal.",
+      "Three distinct normals exist exactly when $a>1$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normals to $y^2=4cx$ from a point $(h,k)$: $cm^3+(2c-h)m+k=0$; three real normals need the cubic to have three real roots. For a point $(h,0)$ on the axis three normals exist iff $h>2c$.",
+    "For $y^2=4cx$ the subnormal is the constant $2c$ - a quick way to locate where any normal meets the axis.",
+    "Count normals by counting real roots of the slope (or parameter) cubic; the root $m=0$ is the axis (normal at the vertex)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 12,
+   "concepts": [
+    "Tangent circles; common tangent of circles"
+   ],
+   "level": 3,
+   "question": "Three circles of radii $a,b,c$ ($a<b<c$) touch each other externally. If they have the $x$-axis as a common tangent, then:",
+   "options": [
+    "$a,b,c$ are in A.P.",
+    "$\\frac1{\\sqrt a}=\\frac1{\\sqrt b}+\\frac1{\\sqrt c}$",
+    "$\\sqrt a,\\sqrt b,\\sqrt c$ are in A.P.",
+    "$\\frac1{\\sqrt b}=\\frac1{\\sqrt a}+\\frac1{\\sqrt c}$"
+   ],
+   "answer": "(B) $\\frac1{\\sqrt a}=\\frac1{\\sqrt b}+\\frac1{\\sqrt c}$",
+   "key_idea": "Two circles of radii $r,s$ touching externally and touching a line have their contact points $2\\sqrt{rs}$ apart on that line.",
+   "solution": [
+    "Let the circles touch the $x$-axis at $(\\beta,0)$, $(\\alpha,0)$, $(\\gamma,0)$ with centres $(\\beta,b)$, $(\\alpha,a)$, $(\\gamma,c)$; the smallest circle lies between the other two, so $\\beta<\\alpha<\\gamma$.",
+    "The circles of radii $a$ and $b$ touch externally: $(\\alpha-\\beta)^2+(b-a)^2=(a+b)^2$.",
+    "$(\\alpha-\\beta)^2=(a+b)^2-(b-a)^2=4ab$, so $\\alpha-\\beta=2\\sqrt{ab}$ ...(1).",
+    "Similarly for the circles of radii $b$ and $c$: $\\gamma-\\beta=2\\sqrt{bc}$ ...(2).",
+    "Similarly for the circles of radii $a$ and $c$: $\\gamma-\\alpha=2\\sqrt{ac}$ ...(3).",
+    "Add (1) and (3): $\\gamma-\\beta=2\\sqrt{ab}+2\\sqrt{ac}$. Compare with (2): $\\sqrt{bc}=\\sqrt{ab}+\\sqrt{ac}$.",
+    "Divide by $\\sqrt{abc}$: $\\frac{1}{\\sqrt a}=\\frac1{\\sqrt c}+\\frac1{\\sqrt b}$.",
+    "(Why $a$ is the middle circle: if $b$ were between the others the same argument gives $\\frac1{\\sqrt b}=\\frac1{\\sqrt a}+\\frac1{\\sqrt c}>\\frac1{\\sqrt a}$, i.e. $b<a$, contradicting $a<b$. Hence the smallest circle is the middle one.)"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes (2) as 'beta - gamma = 2 sqrt(bc)' right after 'gamma - beta = 2 sqrt(bc)'. The sign in (2) is wrong (gamma > alpha > beta so gamma - beta is the positive quantity); it must read gamma - beta = 2 sqrt(bc). The PDF also refers to '(A) + (2) + (3)' meaning (1) + (3) = (2). The result is unchanged. The justification that the smallest circle is the middle one was added.",
+   "alternate_solutions": [
+    {
+     "idea": "Descartes' circle theorem with the line as a circle of curvature $0$: for two circles of curvature $k_1,k_2$ and the line, the third circle tangent to all has $k=k_1+k_2\\pm2\\sqrt{k_1k_2}$.",
+     "solution": [
+      "Treat the $x$-axis as a circle of curvature $0$ and use curvatures $k=\\frac1r$: $b$ and $c$ give $k_b=\\frac1b$ and $k_c=\\frac1c$.",
+      "The circle tangent to both and to the line in the gap between them has curvature $k_a=k_b+k_c+2\\sqrt{k_bk_c}$ (the '$+$' root is the small circle in the gap; the '$-$' root is the larger one outside).",
+      "$\\frac1a=\\frac1b+\\frac1c+\\frac{2}{\\sqrt{bc}}=\\left(\\frac1{\\sqrt b}+\\frac1{\\sqrt c}\\right)^2$.",
+      "Taking square roots (all quantities positive): $\\frac1{\\sqrt a}=\\frac1{\\sqrt b}+\\frac1{\\sqrt c}$ (same answer).",
+      "Check: $b=c=1$ gives $\\frac{1}{\\sqrt a}=2$, $a=\\frac14$ - the classical small circle between two equal unit circles on a line."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two circles of radii $r,s$ touching externally and touching the same line (on the same side) have contact points at distance $2\\sqrt{rs}$ on the line.",
+    "Chain of circles on a line (Ford-type chain): $\\frac1{\\sqrt{r_{\\text{mid}}}}=\\frac1{\\sqrt{r_{\\text{left}}}}+\\frac1{\\sqrt{r_{\\text{right}}}}$, with the middle circle the smallest.",
+    "Descartes with a line (curvature $0$): $k_3=k_1+k_2\\pm2\\sqrt{k_1k_2}$ - e.g. $r=1,r=4$ give the middle radius $\\frac{4}{9}$ ($\\frac1{\\sqrt a}=1+\\frac12=\\frac32$)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 13,
+   "concepts": [
+    "Eccentricity and latus rectum of a hyperbola"
+   ],
+   "level": 2,
+   "question": "Let $0<\\theta<\\frac\\pi2$. If the eccentricity of the hyperbola $\\frac{x^2}{\\cos^2\\theta}-\\frac{y^2}{\\sin^2\\theta}=1$ is greater than $2$, then the length of its latus rectum lies in the interval:",
+   "options": [
+    "$(3,\\infty)$",
+    "$(2,3]$",
+    "$\\left(1,\\frac32\\right]$",
+    "$\\left(\\frac32,2\\right]$"
+   ],
+   "answer": "(A) $(3,\\infty)$",
+   "key_idea": "$e=\\sec\\theta$ restricts $\\theta$ to $\\left(\\frac\\pi3,\\frac\\pi2\\right)$, and the latus rectum $2\\tan\\theta\\sin\\theta$ is increasing there.",
+   "solution": [
+    "Here $a^2=\\cos^2\\theta$ and $b^2=\\sin^2\\theta$, so $e^2=1+\\frac{b^2}{a^2}=1+\\tan^2\\theta=\\sec^2\\theta$, i.e. $e=\\sec\\theta$.",
+    "$e>2$ gives $\\sec\\theta>2$, so $\\cos\\theta<\\frac12$ and $\\theta\\in\\left(\\frac\\pi3,\\frac\\pi2\\right)$.",
+    "Length of the latus rectum: $LL'=\\frac{2b^2}{a}=\\frac{2\\sin^2\\theta}{\\cos\\theta}=2\\tan\\theta\\sin\\theta$.",
+    "On $\\left(\\frac\\pi3,\\frac\\pi2\\right)$ both $\\tan\\theta$ and $\\sin\\theta$ are positive and increasing, so $LL'$ is increasing.",
+    "At $\\theta=\\frac\\pi3$: $LL'=2\\times\\sqrt3\\times\\frac{\\sqrt3}{2}=3$ (not attained since $\\theta>\\frac\\pi3$), and $LL'\\to\\infty$ as $\\theta\\to\\frac\\pi2$.",
+    "Hence $LL'\\in(3,\\infty)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $c=\\cos\\theta$: $LL'=\\frac{2(1-c^2)}{c}=2\\left(\\frac1c-c\\right)$ is decreasing in $c$, and $e>2$ means $0<c<\\frac12$.",
+     "solution": [
+      "$LL'=\\frac{2\\sin^2\\theta}{\\cos\\theta}=\\frac{2(1-c^2)}{c}=2\\left(\\frac1c-c\\right)$ with $c=\\cos\\theta\\in(0,1)$.",
+      "$f(c)=\\frac1c-c$ is strictly decreasing for $c>0$.",
+      "$e=\\sec\\theta=\\frac1c>2$ means $0<c<\\frac12$.",
+      "So $f(c)>f\\left(\\frac12\\right)=2-\\frac12=\\frac32$, and $f(c)\\to\\infty$ as $c\\to0^+$: $LL'=2f(c)\\in(3,\\infty)$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $e^2=1+\\frac{b^2}{a^2}$ and latus rectum $\\frac{2b^2}{a}$. For this hyperbola $e=\\sec\\theta$ and $LL'=2\\sin\\theta\\tan\\theta$.",
+    "Range questions: reduce to one variable, show monotonicity, then evaluate the (open) endpoints - the interval is open at an end the variable does not reach.",
+    "$2\\left(\\frac1c-c\\right)$ type expressions: decreasing in $c>0$, so a bound $c<c_0$ gives a lower bound on the expression."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 14,
+   "concepts": [
+    "Intersection of lines; integral solutions (divisibility)"
+   ],
+   "level": 2,
+   "question": "The number of integral values of $m$ so that the abscissa of the point of intersection of the lines $3x+4y=9$ and $y=mx+1$ is also an integer, is:",
+   "options": [
+    "$1$",
+    "$0$",
+    "$3$",
+    "$2$"
+   ],
+   "answer": "(D) $2$",
+   "key_idea": "The abscissa is $\\frac{5}{3+4m}$, so $3+4m$ must be a divisor of $5$; only the divisors congruent to $3\\pmod4$ give integer $m$.",
+   "solution": [
+    "Substitute $y=mx+1$ in $3x+4y=9$: $3x+4(mx+1)=9$.",
+    "$x(3+4m)=9-4=5$, so $x=\\frac{5}{3+4m}$.",
+    "For $x$ to be an integer, $3+4m$ must divide $5$: $3+4m\\in\\{1,-1,5,-5\\}$.",
+    "$3+4m=1\\Rightarrow m=-\\frac12$; $\\;3+4m=-1\\Rightarrow m=-1$; $\\;3+4m=5\\Rightarrow m=\\frac12$; $\\;3+4m=-5\\Rightarrow m=-2$.",
+    "Only $m=-1$ and $m=-2$ are integers.",
+    "So there are $2$ integral values of $m$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For integer $m$, $3+4m\\equiv3\\pmod4$; among the divisors of $5$ only $-1$ and $-5$ are $\\equiv3\\pmod4$, so the count follows without solving for each $m$.",
+     "solution": [
+      "If $m$ is an integer then $3+4m\\equiv3\\pmod4$, i.e. it is an odd integer of the form $4k+3$.",
+      "The divisors of $5$ are $1,-1,5,-5$ with residues mod $4$: $1\\to1$, $-1\\to3$, $5\\to1$, $-5\\to3$.",
+      "Only $-1$ and $-5$ are $\\equiv3\\pmod4$, giving $m=-1$ and $m=-2$.",
+      "Check: $m=-1$: $x=\\frac{5}{-1}=-5$; $m=-2$: $x=\\frac{5}{-5}=-1$ - both integers. Hence $2$ values (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x=\\frac{N}{px+q\\text{-type denominator}}$ questions: integrality means the denominator divides the numerator - list divisors (with both signs) and then impose the congruence on the parameter.",
+    "For a denominator $3+4m$ with $m\\in\\mathbb Z$ only divisors $\\equiv3\\pmod4$ qualify, halving the work; always include negative divisors.",
+    "Lines $3x+4y=9$ and $y=mx+1$: the second passes through the fixed point $(0,1)$, so the intersection is $x=\\frac{5}{3+4m}$ (the lines are parallel only if $3+4m=0$, impossible for integer $m$)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 15,
+   "concepts": [
+    "Chord of a circle; length of a chord"
+   ],
+   "level": 2,
+   "question": "The sum of the squares of the lengths of the chords intercepted on the circle $x^2+y^2=16$ by the lines $x+y=n$, $n\\in\\mathbb N$, where $\\mathbb N$ is the set of all natural numbers, is:",
+   "options": [
+    "$105$",
+    "$160$",
+    "$320$",
+    "$210$"
+   ],
+   "answer": "(D) $210$",
+   "key_idea": "A chord at distance $d$ from the centre has length $2\\sqrt{r^2-d^2}$, and the line meets the circle only for $\\frac{n}{\\sqrt2}<4$.",
+   "solution": [
+    "Let the line $x+y=n$ cut $x^2+y^2=16$ at $A$ and $B$; the radius is $4$.",
+    "The perpendicular distance from $O$ to the line is $\\frac{|0+0-n|}{\\sqrt{1^2+1^2}}=\\frac{n}{\\sqrt2}$.",
+    "Length of the chord: $AB=2\\sqrt{4^2-\\left(\\frac{n}{\\sqrt2}\\right)^2}=2\\sqrt{16-\\frac{n^2}{2}}$.",
+    "A real chord needs $\\frac{n}{\\sqrt2}<4$, i.e. $n<4\\sqrt2\\approx5.66$, so $n=1,2,3,4,5$.",
+    "$AB^2=4\\left(16-\\frac{n^2}{2}\\right)=64-2n^2$.",
+    "Sum $=\\sum_{n=1}^{5}\\left(64-2n^2\\right)=64\\times5-2\\cdot\\frac{5\\cdot6\\cdot11}{6}=320-110=210$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $y$ to get a quadratic in $x$; Vieta gives $(x_1-x_2)^2$ and the chord$^2=2(x_1-x_2)^2$, with the discriminant giving the range of $n$ at once.",
+     "solution": [
+      "Put $y=n-x$ in $x^2+y^2=16$: $2x^2-2nx+n^2-16=0$.",
+      "Roots $x_1,x_2$: $x_1+x_2=n$, $x_1x_2=\\frac{n^2-16}{2}$, so $(x_1-x_2)^2=n^2-2(n^2-16)=32-n^2$.",
+      "Real intersection needs $32-n^2>0$, i.e. $n\\le5$ for natural $n$.",
+      "The chord is along $y=-x+n$ so $AB^2=(x_1-x_2)^2+(y_1-y_2)^2=2(x_1-x_2)^2=64-2n^2$.",
+      "$\\sum_{n=1}^{5}(64-2n^2)=320-110=210$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord length: $2\\sqrt{r^2-d^2}$; for a family of parallel lines the squares $4(r^2-d^2)$ are polynomial in the parameter, so sums reduce to $\\sum n^2=\\frac{N(N+1)(2N+1)}{6}$.",
+    "For a line $x+y=n$ the distance from the origin is $\\frac{n}{\\sqrt2}$; it meets $x^2+y^2=r^2$ iff $n\\le r\\sqrt2$ (tangent at $n=r\\sqrt2$ gives chord length $0$).",
+    "Chord$^2$ via Vieta: for a line with slope $-1$, chord$^2=2(x_1-x_2)^2=2\\left[(x_1+x_2)^2-4x_1x_2\\right]$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 16,
+   "concepts": [
+    "Tangent and normal to an ellipse; circle with given diameter; tangents from a point (pole of a chord)"
+   ],
+   "level": 3,
+   "question": "Let the tangent and normal at the point $(3\\sqrt3,1)$ on the ellipse $\\frac{x^2}{36}+\\frac{y^2}{4}=1$ meet the $y$-axis at the points $A$ and $B$ respectively. Let the circle $C$ be drawn taking $AB$ as a diameter and the line $x=2\\sqrt5$ intersect $C$ at the points $P$ and $Q$. If the tangents at the points $P$ and $Q$ on the circle intersect at the point $(\\alpha,\\beta)$, then $\\alpha^2-\\beta^2$ is equal to:",
+   "options": [
+    "$\\frac{314}{5}$",
+    "$61$",
+    "$\\frac{304}{5}$",
+    "$13$"
+   ],
+   "answer": "(C) $\\frac{304}{5}$",
+   "key_idea": "$(\\alpha,\\beta)$ is the pole of the chord $PQ$ ($x=2\\sqrt5$) with respect to the circle; it can also be found directly as the intersection of the two tangents.",
+   "solution": [
+    "Tangent at $(3\\sqrt3,1)$ to $\\frac{x^2}{36}+\\frac{y^2}{4}=1$: $\\frac{3\\sqrt3\\,x}{36}+\\frac y4=1$, i.e. $\\frac{\\sqrt3x}{12}+\\frac y4=1$. At $x=0$: $y=4$, so $A(0,4)$.",
+    "Normal: $\\frac{x-3\\sqrt3}{\\frac{3\\sqrt3}{36}}=\\frac{y-1}{\\frac14}$, i.e. $\\frac{12(x-3\\sqrt3)}{\\sqrt3}=4(y-1)$.",
+    "Simplify: $3x-9\\sqrt3=\\sqrt3y-\\sqrt3$, i.e. $N:\\ 3x-\\sqrt3y=8\\sqrt3$. At $x=0$: $y=-8$, so $B(0,-8)$.",
+    "Circle on $AB$ as diameter: $x^2+(y-4)(y+8)=0$, i.e. $C:\\ x^2+y^2+4y-32=0$.",
+    "Put $x=2\\sqrt5$: $20+y^2+4y-32=0$, so $y^2+4y-12=0$ and $(y+6)(y-2)=0$.",
+    "$P=(2\\sqrt5,-6)$ and $Q=(2\\sqrt5,2)$.",
+    "Tangent at $(x_1,y_1)$: $xx_1+yy_1+2y+2y_1-32=0$. At $P$: $2\\sqrt5x-6y+2y-12-32=0$, i.e. $2\\sqrt5x-4y=44$, so $T_1:\\ \\sqrt5x-2y=22$ ...(i).",
+    "At $Q$: $2\\sqrt5x+2y+2y+4-32=0$, i.e. $2\\sqrt5x+4y=28$, so $T_2:\\ \\sqrt5x+2y=14$ ...(ii).",
+    "Adding (i) and (ii): $2\\sqrt5x=36$, so $\\alpha=\\frac{18}{\\sqrt5}$; subtracting: $4y=-8$, so $\\beta=-2$.",
+    "$\\alpha^2-\\beta^2=\\frac{324}{5}-4=\\frac{304}{5}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use pole and polar: the chord $PQ$ is the polar of $(\\alpha,\\beta)$ with respect to $C$, so comparing the polar with $x=2\\sqrt5$ gives $\\alpha,\\beta$ without finding $P,Q$.",
+     "solution": [
+      "Circle $C$: $x^2+y^2+4y-32=0$ (centre $(0,-2)$, radius $6$). The chord of contact of tangents from $(\\alpha,\\beta)$ is its polar: $\\alpha x+\\beta y+2(y+\\beta)-32=0$.",
+      "This is $\\alpha x+(\\beta+2)y+(2\\beta-32)=0$.",
+      "It must be the line $PQ$: $x=2\\sqrt5$, i.e. $x-2\\sqrt5=0$ with no $y$-term, so $\\beta+2=0$ and $\\beta=-2$.",
+      "Then $\\alpha x+(2\\beta-32)=0$ with $2\\beta-32=-36$ must match $x=2\\sqrt5$: $\\alpha\\cdot2\\sqrt5=36$, so $\\alpha=\\frac{18}{\\sqrt5}$.",
+      "$\\alpha^2-\\beta^2=\\frac{324}{5}-4=\\frac{304}{5}$ (same answer). Check: $\\beta=-2$ is the $y$-coordinate of the centre, as it should be since the chord $PQ$ is vertical."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The pole of a chord of a circle is where the tangents at its ends meet; for a vertical chord $x=k$ the pole is on the line through the centre parallel to the $x$-axis, at $x=\\frac{r^2}{k-x_0}+x_0$ (here centre $x_0=0$: $\\frac{36}{2\\sqrt5}=\\frac{18}{\\sqrt5}$).",
+    "Tangent at $(x_1,y_1)$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $\\frac{xx_1}{a^2}+\\frac{yy_1}{b^2}=1$; normal: $\\frac{a^2x}{x_1}-\\frac{b^2y}{y_1}=a^2-b^2$ (here $\\frac{36x}{3\\sqrt3}-4y=32$, i.e. $\\sqrt3x-y=8$, the same line as above).",
+    "Circle on the join of $(x_1,y_1),(x_2,y_2)$ as diameter: $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$ - here $x^2+(y-4)(y+8)=0$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 17,
+   "concepts": [
+    "Intercepts made by a circle on the axes; tangent to a circle (condition of tangency)"
+   ],
+   "level": 2,
+   "question": "Let the lengths of intercepts on the $x$-axis and $y$-axis made by the circle $x^2+y^2+ax+2ay+c=0$ ($a<0$) be $2\\sqrt2$ and $2\\sqrt5$ respectively. Then the shortest distance from the origin to a tangent to this circle which is perpendicular to the line $x+2y=0$ is equal to:",
+   "options": [
+    "$\\sqrt6$",
+    "$\\sqrt{11}$",
+    "$\\sqrt7$",
+    "$\\sqrt{10}$"
+   ],
+   "answer": "(A) $\\sqrt6$",
+   "key_idea": "Intercept lengths give $g^2-c=2$ and $f^2-c=5$, so $a=-2$, $c=-1$; the tangent then follows from the condition of tangency.",
+   "solution": [
+    "For $x^2+y^2+2gx+2fy+c=0$: here $2g=a$ and $2f=2a$, so $g=\\frac a2$, $f=a$.",
+    "$x$-intercept $=2\\sqrt{g^2-c}=2\\sqrt2$, so $g^2-c=2$, i.e. $\\frac{a^2}{4}-c=2$ ...(i).",
+    "$y$-intercept $=2\\sqrt{f^2-c}=2\\sqrt5$, so $f^2-c=5$, i.e. $a^2-c=5$ ...(ii).",
+    "(ii)$-$(i): $\\frac{3a^2}{4}=3$, so $a^2=4$; with $a<0$, $a=-2$. Then (ii) gives $c=-1$.",
+    "Circle: $x^2+y^2-2x-4y-1=0$, i.e. $(x-1)^2+(y-2)^2=6$: centre $(1,2)$, radius $\\sqrt6$.",
+    "A line perpendicular to $x+2y=0$ has the form $2x-y+\\lambda=0$.",
+    "Condition of tangency: $\\frac{|2(1)-2+\\lambda|}{\\sqrt5}=\\sqrt6$, so $|\\lambda|=\\sqrt{30}$ and the tangents are $2x-y\\pm\\sqrt{30}=0$.",
+    "Distance from the origin: $\\frac{|0-0\\pm\\sqrt{30}|}{\\sqrt5}=\\sqrt6$ for both tangents."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The centre $(1,2)$ lies on the line through $O$ parallel to the tangents, so $O$ is at the same distance from each tangent as the centre: the radius $\\sqrt6$.",
+     "solution": [
+      "Centre $\\left(-\\frac a2,-a\\right)$; its distances from the axes are $|a|$ (from the $x$-axis) and $\\frac{|a|}{2}$ (from the $y$-axis). With $r^2=\\frac{5a^2}{4}-c$, chord lengths give $r^2-a^2=2$ (the $x$-axis chord is $2\\sqrt{r^2-a^2}$) and $r^2-\\frac{a^2}{4}=5$.",
+      "Subtracting: $\\frac{3a^2}{4}=3$, so $a=-2$ (as $a<0$), centre $(1,2)$, and $r^2=2+a^2=6$.",
+      "Tangents perpendicular to $x+2y=0$ are parallel to its normal direction $(1,2)$, which is exactly the direction of $\\vec{OC}=(1,2)$.",
+      "So the line $OC$ is parallel to every such tangent: the distance from $O$ to a tangent equals the distance from $C$ to that tangent, which is the radius $r=\\sqrt6$ (same answer, with no need to find $\\lambda$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Intercept lengths of $x^2+y^2+2gx+2fy+c=0$: on the $x$-axis $2\\sqrt{g^2-c}$, on the $y$-axis $2\\sqrt{f^2-c}$ (real only if the expressions are $\\ge0$).",
+    "Two parallel lines are at the same distance from every point of a line parallel to them: if the origin and the centre lie on a line parallel to the tangents, the origin-to-tangent distance is the radius.",
+    "Tangents of direction $(p,q)$ to a circle with centre $C$, radius $r$: they are the lines parallel to $(p,q)$ at distance $r$ from $C$ on either side."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 18,
+   "concepts": [
+    "Tangent to a circle; incentre and inradius of a right triangle"
+   ],
+   "level": 2,
+   "question": "Let the tangent to the circle $x^2+y^2=25$ at the point $R(3,4)$ meet the $x$-axis and $y$-axis at points $P$ and $Q$ respectively. If $r$ is the radius of the circle passing through the origin $O$ and having centre at the incentre of the triangle $OPQ$, then $r^2$ is equal to:",
+   "options": [
+    "$\\frac{585}{66}$",
+    "$\\frac{625}{72}$",
+    "$\\frac{125}{72}$",
+    "$\\frac{529}{64}$"
+   ],
+   "answer": "(B) $\\frac{625}{72}$",
+   "key_idea": "The circle through $O$ centred at the incentre has radius $r=OI$, and the incentre of a right triangle at the origin is $(\\rho,\\rho)$.",
+   "solution": [
+    "Tangent at $R(3,4)$ to $x^2+y^2=25$: $3x+4y=25$.",
+    "$P$ (on the $x$-axis): $\\left(\\frac{25}{3},0\\right)$; $Q$ (on the $y$-axis): $\\left(0,\\frac{25}{4}\\right)$.",
+    "In $\\triangle OPQ$: $OP=\\frac{25}{3}$, $OQ=\\frac{25}{4}$ and $PQ=\\sqrt{\\frac{625}{9}+\\frac{625}{16}}=\\frac{125}{12}$ (a $3$-$4$-$5$ shape).",
+    "Incentre $I(\\alpha,\\beta)=\\frac{PQ\\cdot O+OQ\\cdot P+OP\\cdot Q}{PQ+OQ+OP}$ with $PQ+OQ+OP=\\frac{125+75+100}{12}=25$.",
+    "$\\alpha=\\frac{OQ\\cdot\\frac{25}{3}}{25}=\\frac{\\frac{25}{4}\\cdot\\frac{25}{3}}{25}=\\frac{25}{12}$ and $\\beta=\\frac{OP\\cdot\\frac{25}{4}}{25}=\\frac{25}{12}$.",
+    "The circle through $O$ with centre $I$ has radius $r=IO=\\sqrt{\\frac{625}{144}+\\frac{625}{144}}$.",
+    "$r^2=\\frac{625}{72}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For a right triangle with the right angle at $O$ the inradius is $\\rho=\\frac{OP+OQ-PQ}{2}$ and $I=(\\rho,\\rho)$, so $r^2=2\\rho^2$.",
+     "solution": [
+      "$OP=\\frac{25}3=\\frac{100}{12}$, $OQ=\\frac{25}4=\\frac{75}{12}$, $PQ=\\frac{125}{12}$.",
+      "$\\rho=\\frac{OP+OQ-PQ}{2}=\\frac{1}{2}\\cdot\\frac{100+75-125}{12}=\\frac{25}{12}$.",
+      "The incentre is at distance $\\rho$ from both axes, so $I=(\\rho,\\rho)$ and $r^2=OI^2=2\\rho^2=2\\cdot\\frac{625}{144}=\\frac{625}{72}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Inradius of a right triangle with legs $p,q$ and hypotenuse $h$: $\\rho=\\frac{p+q-h}{2}$ (equal tangent lengths from the right-angle vertex); the incentre is $(\\rho,\\rho)$ if the legs lie on the axes.",
+    "The tangent to $x^2+y^2=r_0^2$ at $(x_1,y_1)$ meets the axes at $\\left(\\frac{r_0^2}{x_1},0\\right)$ and $\\left(0,\\frac{r_0^2}{y_1}\\right)$; $\\triangle OPQ$ is similar to the $3$-$4$-$5$ triangle here.",
+    "Incentre by the weighted formula: $\\frac{aA+bB+cC}{a+b+c}$, where $a,b,c$ are the sides opposite $A,B,C$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 19,
+   "concepts": [
+    "Intercept form of a line; ellipse; sum of series"
+   ],
+   "level": 2,
+   "question": "Consider ellipses $E_k:kx^2+k^2y^2=1$, $k=1,2,\\ldots,20$. Let $C_k$ be the circle which touches the four chords joining the end points (one on the minor axis and another on the major axis) of the ellipse $E_k$. If $r_k$ is the radius of the circle $C_k$, then the value of $\\sum_{k=1}^{20}\\frac{1}{r_k^2}$ is:",
+   "options": [
+    "$3320$",
+    "$2870$",
+    "$3210$",
+    "$3080$"
+   ],
+   "answer": "(D) $3080$",
+   "key_idea": "Each chord is $\\frac{x}{1/\\sqrt k}+\\frac{y}{1/k}=1$, and its distance from the origin gives $\\frac1{r_k^2}=k+k^2$.",
+   "solution": [
+    "Write $E_k$ as $\\frac{x^2}{\\left(\\frac1{\\sqrt k}\\right)^2}+\\frac{y^2}{\\left(\\frac1k\\right)^2}=1$: semi-axes $\\frac1{\\sqrt k}$ (along $x$) and $\\frac1k$ (along $y$).",
+    "The chord joining $\\left(\\frac1{\\sqrt k},0\\right)$ and $\\left(0,\\frac1k\\right)$ is $L_k:\\ \\frac{x}{1/\\sqrt k}+\\frac{y}{1/k}=1$, i.e. $\\sqrt k\\,x+ky-1=0$.",
+    "The four chords are symmetric about the axes, so $C_k$ is centred at the origin and $r_k$ is the distance of $L_k$ from $(0,0)$.",
+    "$r_k=\\frac{|-1|}{\\sqrt{k+k^2}}$, so $r_k^2=\\frac{1}{k+k^2}$ and $\\frac1{r_k^2}=k+k^2$.",
+    "$\\sum_{k=1}^{20}\\frac1{r_k^2}=\\sum_{k=1}^{20}k+\\sum_{k=1}^{20}k^2=\\frac{20\\cdot21}{2}+\\frac{20\\cdot21\\cdot41}{6}$.",
+    "$=210+2870=3080$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "In the right triangle formed by the chord and the semi-axes, $r_k$ is the altitude to the hypotenuse, so $\\frac1{r_k^2}=\\frac1{a^2}+\\frac1{b^2}$ with the semi-axes $a,b$.",
+     "solution": [
+      "The triangle with vertices $O$, $\\left(\\frac1{\\sqrt k},0\\right)$, $\\left(0,\\frac1k\\right)$ is right-angled at $O$ with legs $a=\\frac1{\\sqrt k}$ and $b=\\frac1k$.",
+      "$r_k$ is the altitude from $O$ to the hypotenuse. Area: $\\frac12ab=\\frac12r_k\\sqrt{a^2+b^2}$, so $r_k=\\frac{ab}{\\sqrt{a^2+b^2}}$ and $\\frac1{r_k^2}=\\frac1{a^2}+\\frac1{b^2}$.",
+      "Here $\\frac1{a^2}=k$ and $\\frac1{b^2}=k^2$, so $\\frac1{r_k^2}=k+k^2$.",
+      "$\\sum(k+k^2)=210+2870=3080$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a right triangle with legs $a,b$ the altitude $h$ to the hypotenuse satisfies $\\frac1{h^2}=\\frac1{a^2}+\\frac1{b^2}$ (reciprocal Pythagoras) - equals the distance of $\\frac xa+\\frac yb=1$ from the origin.",
+    "Ellipse $kx^2+k^2y^2=1$ has semi-axes $\\frac1{\\sqrt k},\\frac1k$: read $\\frac1{a^2},\\frac1{b^2}$ directly as the coefficients of $x^2,y^2$, so $\\frac1{r_k^2}=$ sum of the coefficients $=k+k^2$.",
+    "$\\sum_{k=1}^{n}k=\\frac{n(n+1)}2$ and $\\sum_{k=1}^{n}k^2=\\frac{n(n+1)(2n+1)}6$; for $n=20$: $210$ and $2870$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 20,
+   "concepts": [
+    "Circles: centre and radius from the general equation; special quadrilaterals"
+   ],
+   "level": 1,
+   "question": "For the four circles $M,N,O$ and $P$, the following four equations are given: Circle $M$: $x^2+y^2=1$; Circle $N$: $x^2+y^2-2x=0$; Circle $O$: $x^2+y^2-2x-2y+1=0$; Circle $P$: $x^2+y^2-2y=0$. If the centre of circle $M$ is joined with the centre of circle $N$, the centre of $N$ with the centre of $O$, the centre of $O$ with the centre of $P$, and lastly the centre of $P$ with the centre of $M$, then these lines form the sides of a:",
+   "options": [
+    "Square",
+    "Rectangle",
+    "Parallelogram",
+    "Rhombus"
+   ],
+   "answer": "(A) Square",
+   "key_idea": "The centres are $(0,0),(1,0),(1,1),(0,1)$ - the vertices of a unit square.",
+   "solution": [
+    "Centre of $M:\\ x^2+y^2=1$ is $C_1(0,0)$.",
+    "Centre of $N:\\ x^2+y^2-2x=0$ is $C_2(1,0)$.",
+    "Centre of $O:\\ x^2+y^2-2x-2y+1=0$ is $C_3(1,1)$.",
+    "Centre of $P:\\ x^2+y^2-2y=0$ is $C_4(0,1)$.",
+    "The four sides $C_1C_2,C_2C_3,C_3C_4,C_4C_1$ each have length $1$, and the diagonals $C_1C_3$ and $C_2C_4$ both have length $\\sqrt2$.",
+    "A quadrilateral with four equal sides and equal diagonals is a square. So the points are the vertices of a square."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry: the rotation by $90^\\circ$ about $\\left(\\frac12,\\frac12\\right)$ maps each centre to the next, so the quadrilateral has all sides equal and all angles equal.",
+     "solution": [
+      "Rotate by $90^\\circ$ anticlockwise about $Z\\left(\\frac12,\\frac12\\right)$: $(x,y)\\mapsto\\left(\\frac12-\\left(y-\\frac12\\right),\\frac12+\\left(x-\\frac12\\right)\\right)=(1-y,x)$.",
+      "$(0,0)\\mapsto(1,0)\\mapsto(1,1)\\mapsto(0,1)\\mapsto(0,0)$: the rotation permutes the four centres cyclically.",
+      "A rotation preserves lengths and angles, so $C_1C_2=C_2C_3=C_3C_4=C_4C_1$ and $\\angle C_1C_2C_3=\\angle C_2C_3C_4=\\angle C_3C_4C_1=\\angle C_4C_1C_2$; the angles sum to $360^\\circ$, so each is $90^\\circ$.",
+      "A quadrilateral with equal sides and four right angles is a square (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Centre of $x^2+y^2+2gx+2fy+c=0$ is $(-g,-f)$ and the radius is $\\sqrt{g^2+f^2-c}$ - here all four circles have radius $1$.",
+    "Square test: equal sides and equal diagonals; or one rotation by $90^\\circ$ about a point permuting the vertices cyclically.",
+    "Rectangle: equal diagonals; rhombus: perpendicular diagonals; parallelogram: diagonals bisect each other. A square needs both equal and perpendicular diagonals that bisect each other."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  }
+ ]
+}
