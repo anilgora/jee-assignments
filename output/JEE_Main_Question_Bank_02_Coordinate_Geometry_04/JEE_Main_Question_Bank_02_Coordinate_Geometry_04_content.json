@@ -1,0 +1,697 @@
+{
+ "title": "JEE Main Question Bank 02 Coordinate Geometry (Paper 04) — Paper Analysis",
+ "subtitle": "Questions 1–17 (printed 61–77) · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Coordinate_Geometry_04.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 17,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for a correct answer · 0 otherwise (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "concepts": [
+    "Tangent to a parabola; area of a triangle"
+   ],
+   "level": 1,
+   "question": "Let a line $y=mx$ $(m>0)$ intersect the parabola $y^2=x$ at a point $P$, other than the origin. Let the tangent to it at $P$ meet the $x$-axis at the point $Q$. If area $(\\triangle OPQ)=4$ sq. units, then $m$ is equal to ______.",
+   "answer": "0.5",
+   "key_idea": "The tangent at $P(x_1,y_1)$ meets the axis at $(-x_1,0)$, so $\\triangle OPQ$ has base $x_1$ and height $y_1$.",
+   "solution": [
+    "Put $y=mx$ in $y^2=x$: $m^2x^2=x$, so $x=\\frac1{m^2}$ (the point other than the origin) and $y=\\frac1m$. Hence $P\\left(\\frac1{m^2},\\frac1m\\right)$.",
+    "Tangent to $y^2=x$ at $P$ (the $T=0$ form, $yy_1=\\frac{x+x_1}{2}$): $y\\cdot\\frac1m=\\frac12\\left(x+\\frac1{m^2}\\right)$.",
+    "Simplify: $\\frac{2y}{m}=x+\\frac1{m^2}$.",
+    "Put $y=0$ to meet the $x$-axis: $x=-\\frac1{m^2}$, so $Q\\left(-\\frac1{m^2},0\\right)$.",
+    "$\\triangle OPQ$ has base $OQ=\\frac1{m^2}$ and height equal to the ordinate of $P$, $\\frac1m$.",
+    "Area $=\\frac12\\cdot\\frac1{m^2}\\cdot\\frac1m=\\frac1{2m^3}=4$.",
+    "So $m^3=\\frac18$ and $m=\\frac12=0.5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise the parabola as $(t^2,t)$ and use the sub-tangent property: the tangent meets the axis at $(-x_1,0)$.",
+     "solution": [
+      "Write $P=(t^2,t)$ with $t>0$ on $y^2=x$; $P$ lies on $y=mx$, so $t=mt^2$, i.e. $m=\\frac1t$.",
+      "For a parabola the tangent at $(x_1,y_1)$ cuts the axis at $(-x_1,0)$ (sub-tangent $=2x_1$), so $Q=(-t^2,0)$.",
+      "Base $OQ=t^2$ and height of $P$ above the axis $=t$.",
+      "Area $=\\frac12\\,t^2\\cdot t=\\frac{t^3}{2}=4$, so $t^3=8$ and $t=2$.",
+      "$m=\\frac1t=\\frac12$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parabola $y^2=4ax$: tangent at $(x_1,y_1)$ is $yy_1=2a(x+x_1)$; it meets the axis at $(-x_1,0)$, so the sub-tangent is $2x_1$ and the tangent point's foot $M$ satisfies $OM=OQ$.",
+    "For $y^2=4ax$ and a line $y=mx$ through the vertex, $P\\left(\\frac{4a}{m^2},\\frac{4a}m\\right)$ and $\\text{area}(\\triangle OPQ)=\\frac{8a^2}{m^3}$ (here $a=\\frac14$ gives $\\frac1{2m^3}$).",
+    "Parametric point $(at^2,2at)$: tangent $ty=x+at^2$; this form usually shortens area and intercept questions."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 2,
+   "concepts": [
+    "Tangent to a parabola; area of a triangle; natural-number conditions"
+   ],
+   "level": 2,
+   "question": "Let $S$ be the set of all $a\\in\\mathbb N$ such that the area of the triangle formed by the tangent at the point $P(b,c)$, $b,c\\in\\mathbb N$, on the parabola $y^2=2ax$ and the lines $x=b$, $y=0$ is $16$ unit$^2$. Then $\\sum_{a\\in S}a$ is equal to ______.",
+   "answer": "146",
+   "key_idea": "The tangent meets the axis at $(-b,0)$, so the triangle has legs $2b$ and $c$ and area $bc$.",
+   "solution": [
+    "$P(b,c)$ lies on the parabola, so $c^2=2ab$ ... (1).",
+    "Tangent at $P$ (point form $yy_1=2a\\cdot\\frac{x+x_1}{2}$): $yc=a(x+b)$.",
+    "Put $y=0$: $x=-b$, so the tangent meets the $x$-axis at $B(-b,0)$. The line $x=b$ meets the axis at $A(b,0)$.",
+    "$\\triangle PBA$ is right-angled at $A$ with $AB=2b$ and $AP=c$: area $=\\frac12\\cdot2b\\cdot c=16$, so $bc=16$.",
+    "As $b,c\\in\\mathbb N$: $(b,c)=(1,16),(2,8),(4,4),(8,2),(16,1)$.",
+    "From (1), $a=\\frac{c^2}{2b}$ must be a natural number: this holds for $(1,16),(2,8),(4,4)$ and fails for $(8,2)$ and $(16,1)$.",
+    "The values of $a$ are $128$, $16$ and $2$.",
+    "Hence $\\sum a=128+16+2=146$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $b$ using $bc=16$: $a=\\frac{c^3}{32}$, then use a divisibility (power-of-2) argument.",
+     "solution": [
+      "The tangent at $P(b,c)$ meets the axis at $(-b,0)$, so the triangle has base $2b$ and height $c$; area $bc=16$, i.e. $b=\\frac{16}{c}$.",
+      "From $c^2=2ab$: $a=\\frac{c^2}{2b}=\\frac{c^2\\cdot c}{32}=\\frac{c^3}{32}$.",
+      "$a\\in\\mathbb N$ needs $32\\mid c^3$. Since $32=2^5$, we need $3\\,v_2(c)\\ge5$, i.e. $v_2(c)\\ge2$, so $4\\mid c$.",
+      "Also $b=\\frac{16}{c}\\in\\mathbb N$ forces $c\\mid16$. Hence $c\\in\\{4,8,16\\}$ (so $b\\in\\{4,2,1\\}$).",
+      "$a=\\frac{64}{32},\\frac{512}{32},\\frac{4096}{32}=2,16,128$.",
+      "Sum $=146$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=2ax$ (or any parabola $y^2=4Ax$) the triangle formed by the tangent at $(b,c)$, the ordinate $x=b$ and the axis has legs $2b$ and $c$, so its area is $bc$.",
+    "Lattice/natural-number conditions: eliminate to one variable, here $a=\\frac{c^3}{2S}$ where $bc=S$ is the area; then use divisibility or $p$-adic valuations to bound the candidates.",
+    "Always check the second family of conditions ($a\\in\\mathbb N$) on every divisor pair; here only 3 of 5 factor pairs survive."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 3,
+   "concepts": [
+    "Centroid of a triangle; intersection of lines"
+   ],
+   "level": 2,
+   "question": "The equations of the sides $AB$, $BC$ and $CA$ of a triangle $ABC$ are $2x+y=0$, $x+py=21a$ $(a\\neq0)$ and $x-y=3$ respectively. Let $P(2,a)$ be the centroid of $\\triangle ABC$. Then $(BC)^2$ is equal to ______.",
+   "answer": "122",
+   "key_idea": "Each vertex lies on two given lines, so $B(\\beta,-2\\beta)$, $C(\\alpha,\\alpha-3)$ and the centroid equations fix $\\alpha,\\beta$ in terms of $a$.",
+   "solution": [
+    "$A=AB\\cap CA$: $2x+y=0$ and $x-y=3$ give $A(1,-2)$. Take $B(\\beta,-2\\beta)$ on $AB$ and $C(\\alpha,\\alpha-3)$ on $CA$.",
+    "Centroid abscissa: $\\frac{1+\\alpha+\\beta}{3}=2$, so $\\alpha+\\beta=5$ ... (1).",
+    "Centroid ordinate: $\\frac{-2-2\\beta+\\alpha-3}{3}=a$, so $\\alpha-2\\beta=3a+5$ ... (2).",
+    "Subtract (1) from (2): $-3\\beta=3a$, so $\\beta=-a$ and $\\alpha=a+5$.",
+    "Hence $B(-a,2a)$ and $C(a+5,a+2)$.",
+    "Both lie on $x+py=21a$. From $B$: $-a+2ap=21a$, so $p=11$ (as $a\\neq0$).",
+    "From $C$: $(a+5)+11(a+2)=21a$, so $12a+27=21a$ and $a=3$.",
+    "Then $B(-3,6)$, $C(8,5)$ and $BC^2=11^2+1^2=122$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Centroid $=\\frac{A+B+C}{3}$ coordinatewise: the sum of vertex coordinates equals $3\\times$ the centroid, giving two linear equations immediately.",
+    "A vertex lying on two given sides is the intersection of those lines; a vertex lying on one side is a one-parameter point (e.g. $(\\beta,-2\\beta)$ on $2x+y=0$). Count unknowns against equations before computing.",
+    "A side line containing two vertices gives equations (here $p$ and $a$) once those vertices are known in terms of one parameter."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 4,
+   "concepts": [
+    "Circumcentre and orthocentre of a triangle",
+    "Multiple angle formula for cosine"
+   ],
+   "level": 3,
+   "question": "Let $\\tan\\alpha$, $\\tan\\beta$ and $\\tan\\gamma$; $\\alpha,\\beta,\\gamma\\neq\\frac{(2n-1)\\pi}{2}$, $n\\in\\mathbb N$, be the slopes of three line segments $OA$, $OB$ and $OC$ respectively, where $O$ is the origin. If the circumcentre of $\\triangle ABC$ coincides with the origin and its orthocentre lies on the $y$-axis, then the value of $\\left(\\frac{\\cos3\\alpha+\\cos3\\beta+\\cos3\\gamma}{\\cos\\alpha\\cos\\beta\\cos\\gamma}\\right)^2$ is equal to ______.",
+   "answer": "144",
+   "key_idea": "With circumcentre $O$, the centroid $G$ divides $HO$ in $2:1$, so $H$ on the $y$-axis forces $\\cos\\alpha+\\cos\\beta+\\cos\\gamma=0$.",
+   "solution": [
+    "$O$ is the circumcentre, so $OA=OB=OC=a$ (the circumradius): $A(a\\cos\\alpha,a\\sin\\alpha)$, $B(a\\cos\\beta,a\\sin\\beta)$, $C(a\\cos\\gamma,a\\sin\\gamma)$.",
+    "The centroid is $G\\left(\\frac{a\\sum\\cos\\alpha}{3},\\frac{a\\sum\\sin\\alpha}{3}\\right)$. On the Euler line, $G$ divides the segment $HO$ (with $H$ the orthocentre) in the ratio $2:1$.",
+    "$H$ lies on the $y$-axis: $H(0,y)$. By the section formula the abscissa of $G$ is $\\frac{2\\cdot0+1\\cdot0}{2+1}=0$.",
+    "So $\\frac{a\\sum\\cos\\alpha}{3}=0$, i.e. $\\cos\\alpha+\\cos\\beta+\\cos\\gamma=0$.",
+    "Since the sum of three numbers is $0$: $\\cos^3\\alpha+\\cos^3\\beta+\\cos^3\\gamma=3\\cos\\alpha\\cos\\beta\\cos\\gamma$.",
+    "$\\cos3\\theta=4\\cos^3\\theta-3\\cos\\theta$, so $\\sum\\cos3\\alpha=4\\sum\\cos^3\\alpha-3\\sum\\cos\\alpha=4\\cdot3\\cos\\alpha\\cos\\beta\\cos\\gamma-0=12\\cos\\alpha\\cos\\beta\\cos\\gamma$.",
+    "The product $\\cos\\alpha\\cos\\beta\\cos\\gamma\\neq0$ (as $\\alpha,\\beta,\\gamma\\neq\\frac{(2n-1)\\pi}2$), so the ratio is $12$.",
+    "The required value is $12^2=144$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The answer is a fixed number, so evaluate it on one admissible triangle with circumcentre $O$ and orthocentre on the $y$-axis (here an equilateral one).",
+     "solution": [
+      "With circumcentre $O$ the orthocentre is $H=A+B+C$ (position vectors), so $H$ on the $y$-axis means $\\sum\\cos=0$ (for unit circumradius).",
+      "Take $\\alpha=60^\\circ$, $\\beta=-60^\\circ$, $\\gamma=180^\\circ$: $\\cos$ values $\\frac12,\\frac12,-1$ add to $0$, and all slopes ($\\sqrt3,-\\sqrt3,0$) exist.",
+      "Then $A\\left(\\frac12,\\frac{\\sqrt3}2\\right)$, $B\\left(\\frac12,-\\frac{\\sqrt3}2\\right)$, $C(-1,0)$ are on the unit circle, and $H=A+B+C=(0,0)$ lies on the $y$-axis. The configuration is admissible.",
+      "$\\cos3\\alpha=\\cos180^\\circ=-1$, $\\cos3\\beta=-1$, $\\cos3\\gamma=\\cos540^\\circ=-1$, so the numerator is $-3$.",
+      "$\\cos\\alpha\\cos\\beta\\cos\\gamma=\\frac12\\cdot\\frac12\\cdot(-1)=-\\frac14$.",
+      "Ratio $=\\frac{-3}{-1/4}=12$, so the value is $144$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With circumcentre at the origin, $H=A+B+C$ (vectors) and $G=\\frac{A+B+C}{3}$; $O,G,H$ are collinear with $OG:GH=1:2$. 'Orthocentre on the $y$-axis' therefore means $\\sum x_i=0$.",
+    "If $x+y+z=0$ then $x^3+y^3+z^3=3xyz$.",
+    "$\\cos3\\theta=4\\cos^3\\theta-3\\cos\\theta$; so whenever $\\sum\\cos\\theta_i=0$, $\\sum\\cos3\\theta_i=12\\prod\\cos\\theta_i$ (the same holds for sines: $\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta$)."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 5,
+   "concepts": [
+    "Diameter of a circle; distance of a point from a line; maxima of a trigonometric expression"
+   ],
+   "level": 2,
+   "question": "Let $PQ$ be a diameter of the circle $x^2+y^2=9$. If $\\alpha$ and $\\beta$ are the lengths of the perpendiculars from $P$ and $Q$ on the line $x+y=2$ respectively, then the maximum value of $\\alpha\\beta$ is ______.",
+   "answer": "7",
+   "key_idea": "Opposite ends of a diameter are $(\\pm3\\cos\\theta,\\pm3\\sin\\theta)$, so $\\alpha\\beta=\\frac{|9(\\cos\\theta+\\sin\\theta)^2-4|}{2}$.",
+   "solution": [
+    "Let $P(3\\cos\\theta,3\\sin\\theta)$; then $Q(-3\\cos\\theta,-3\\sin\\theta)$ (the other end of the diameter).",
+    "Distance of $P$ from $x+y=2$: $\\alpha=\\frac{|3\\cos\\theta+3\\sin\\theta-2|}{\\sqrt2}$.",
+    "Distance of $Q$: $\\beta=\\frac{|-3\\cos\\theta-3\\sin\\theta-2|}{\\sqrt2}=\\frac{|3\\cos\\theta+3\\sin\\theta+2|}{\\sqrt2}$.",
+    "$\\alpha\\beta=\\frac{|9(\\cos\\theta+\\sin\\theta)^2-4|}{2}$.",
+    "$(\\cos\\theta+\\sin\\theta)^2=1+\\sin2\\theta$ ranges over $[0,2]$; the expression $9u-4$ is linear in $u=(\\cos\\theta+\\sin\\theta)^2$, so $|9u-4|$ is largest at an end: $u=2$ gives $14$, $u=0$ gives $4$.",
+    "$(\\alpha\\beta)_{\\max}=\\left|\\frac{9\\times2-4}{2}\\right|=7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rotate the picture so that the normal of the line is the axis: the distances of $\\pm$ ends of a diameter from the line are $|3u\\mp\\sqrt2|$, $u=\\cos\\varphi\\in[-1,1]$.",
+     "solution": [
+      "The centre $O$ is at distance $d=\\frac{|0+0-2|}{\\sqrt2}=\\sqrt2$ from the line.",
+      "Let $\\varphi$ be the angle between $OP$ and the unit normal of the line. The signed distance of $P$ from the line is $3\\cos\\varphi-\\sqrt2$ (up to sign), and that of the opposite end $Q$ is $-3\\cos\\varphi-\\sqrt2$.",
+      "$\\alpha\\beta=|(3\\cos\\varphi-\\sqrt2)(-3\\cos\\varphi-\\sqrt2)|=|2-9\\cos^2\\varphi|$.",
+      "For $\\cos^2\\varphi\\in[0,1]$, $|2-9c|$ is largest at $c=1$ (value $7$); at $c=0$ it is only $2$.",
+      "Maximum $=7$, attained when $P,Q$ lie on the normal through $O$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a diameter $PQ$ of a circle of radius $r$ and a line at distance $d$ from the centre: $\\alpha\\beta=|r^2\\cos^2\\varphi-d^2|$, where $\\varphi$ is the angle between $OP$ and the line's normal; the maximum is $\\max(|r^2-d^2|,\\,d^2)$ (here $\\max(7,2)=7$).",
+    "For a diameter, the signed distances of the two ends are $\\pm r\\cos\\varphi-d$, so $\\alpha+\\beta$ or $\\alpha\\beta$ depends on only $\\cos\\varphi$.",
+    "$(\\cos\\theta+\\sin\\theta)^2=1+\\sin2\\theta\\in[0,2]$; a function of this that is linear (or monotone) has its extremum at an end of the range."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 6,
+   "concepts": [
+    "Tangents to a parabola; parametric form"
+   ],
+   "level": 2,
+   "question": "The ordinates of the points $P$ and $Q$ on the parabola with focus $(3,0)$ and directrix $x=-3$ are in the ratio $3:1$. If $R(\\alpha,\\beta)$ is the point of intersection of the tangents to the parabola at $P$ and $Q$, then $\\frac{\\beta^2}{\\alpha}$ is equal to ______.",
+   "answer": "16",
+   "key_idea": "Tangents at $t_1,t_2$ meet at $(at_1t_2,\\,a(t_1+t_2))$, so $\\frac{\\beta^2}{\\alpha}$ depends only on the ratio $t_2:t_1$.",
+   "solution": [
+    "Focus $(3,0)$ and directrix $x=-3$ give the parabola $y^2=12x$, i.e. $a=3$.",
+    "Let $P(at_1^2,2at_1)$ and $Q(at_2^2,2at_2)$. The tangents at $P$ and $Q$ meet at $R$ with $\\alpha=at_1t_2$ and $\\beta=a(t_1+t_2)$.",
+    "The ordinates are in the ratio $3:1$: take $2at_2=3\\cdot2at_1$, so $t_2=3t_1$ (swapping the labels $P,Q$ changes nothing since the final expression is symmetric in $t_1,t_2$).",
+    "$\\frac{\\beta^2}{\\alpha}=\\frac{a^2(t_1+t_2)^2}{at_1t_2}=\\frac{a(4t_1)^2}{t_1\\cdot3t_1}$, using $t_1+t_2=4t_1$ and $t_1t_2=3t_1^2$.",
+    "$=\\frac{3\\cdot16t_1^2}{3t_1^2}=16$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the chord of contact of $R$: its intersections with the parabola give a quadratic in $y$ whose roots are the ordinates of $P$ and $Q$ (Vieta).",
+     "solution": [
+      "Parabola $y^2=12x$. The chord of contact $PQ$ of $R(\\alpha,\\beta)$ is $\\beta y=6(x+\\alpha)$.",
+      "Substitute $x=\\frac{y^2}{12}$: $\\beta y=\\frac{y^2}{2}+6\\alpha$, i.e. $y^2-2\\beta y+12\\alpha=0$.",
+      "The roots are the ordinates of $P,Q$: sum $=2\\beta$, product $=12\\alpha$.",
+      "Ratio $3:1$: roots $3k$ and $k$, so $4k=2\\beta\\Rightarrow k=\\frac\\beta2$ and $3k^2=12\\alpha\\Rightarrow\\frac{3\\beta^2}{4}=12\\alpha$.",
+      "Hence $\\frac{\\beta^2}{\\alpha}=16$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=4ax$: tangents at $t_1,t_2$ meet at $(at_1t_2,\\,a(t_1+t_2))$; the chord of contact of $(\\alpha,\\beta)$ is $\\beta y=2a(x+\\alpha)$, whose ordinates satisfy $y_1+y_2=2\\beta$, $y_1y_2=4a\\alpha$.",
+    "If the ordinates are in ratio $k:1$ then $\\frac{\\beta^2}{\\alpha}=\\frac{a(k+1)^2}{k}$ (here $a=3,k=3$ gives $16$). For $k=1$ ($P=Q$) it gives $4a$, i.e. $R$ lies on the parabola $\\beta^2=4a\\alpha$, as it should.",
+    "$\\frac{(t_1+t_2)^2}{t_1t_2}$ is scale-invariant: only the ratio of the parameters matters."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 7,
+   "concepts": [
+    "Circle tangent to the sides of a square and to another circle",
+    "Tangents from an external point; trigonometric ratio of 15 degrees"
+   ],
+   "level": 3,
+   "question": "Let $ABCD$ be a square of side of unit length. Let a circle $C_1$ centred at $A$ with unit radius be drawn. Another circle $C_2$ which touches $C_1$ and the lines $AD$ and $AB$ are tangent to it, is also drawn. Let a tangent line from the point $C$ to the circle $C_2$ meet the side $AB$ at $E$. If the length of $EB$ is $\\alpha+\\sqrt3\\beta$, where $\\alpha,\\beta$ are integers, then $\\alpha+\\beta$ is equal to ______.",
+   "answer": "1",
+   "key_idea": "$C_2$ sits on the diagonal $AC$, so $\\sin\\theta=\\frac{r}{PC}$ gives $\\theta=30^\\circ$ and the tangent makes $45^\\circ-30^\\circ=15^\\circ$ with $CB$.",
+   "solution": [
+    "Take $A(0,0)$, $B(1,0)$, $C(1,1)$, $D(0,1)$. $C_2$ touches $AB$ and $AD$, so its centre is $P(r,r)$ with radius $r$ (on the diagonal $AC$).",
+    "$C_2$ touches $C_1$ (radius $1$, centre $A$): $AP=\\sqrt2\\,r=|1-r|$. Since $r<1$, $\\sqrt2r=1-r$ (internal contact).",
+    "$(\\sqrt2+1)r=1$, so $r=\\sqrt2-1$.",
+    "$PC=AC-AP=\\sqrt2-\\sqrt2r=\\sqrt2-\\sqrt2(\\sqrt2-1)=2(\\sqrt2-1)$.",
+    "Let $\\theta$ be the angle between $CP$ (the diagonal $CA$) and a tangent from $C$ to $C_2$: $\\sin\\theta=\\frac rPC=\\frac{\\sqrt2-1}{2(\\sqrt2-1)}=\\frac12$.",
+    "So $\\theta=30^\\circ$. The diagonal $CA$ makes $\\frac\\pi4$ with $CB$, so the tangent $CE$ makes the angle $\\frac\\pi4-\\theta$ with $CB$.",
+    "$\\frac{BE}{BC}=\\tan\\left(\\frac\\pi4-\\theta\\right)=\\tan15^\\circ$, and $BC=1$, so $BE=\\tan15^\\circ=2-\\sqrt3$.",
+    "Compare with $\\alpha+\\sqrt3\\beta$: $\\alpha=2$, $\\beta=-1$, so $\\alpha+\\beta=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Coordinates: the line through $C(1,1)$ and $E(1-s,0)$ must be at distance $r$ from the centre $(r,r)$; this gives a quadratic for $s=EB$.",
+     "solution": [
+      "$A(0,0)$, $C(1,1)$, $C_2$: centre $(r,r)$, $r=\\sqrt2-1$ (as in the main solution). Let $E=(1-s,0)$, so $EB=s$.",
+      "Line $CE$ through $(1,1)$ and $(1-s,0)$: $x-sy-(1-s)=0$.",
+      "Distance from $(r,r)$ equals $r$: $\\frac{|r-sr-(1-s)|}{\\sqrt{1+s^2}}=r$, i.e. $\\frac{(1-s)(1-r)}{\\sqrt{1+s^2}}=r$.",
+      "With $1-r=2-\\sqrt2=\\sqrt2(\\sqrt2-1)=\\sqrt2\\,r$ this becomes $\\sqrt2(1-s)=\\sqrt{1+s^2}$.",
+      "Square: $2(1-s)^2=1+s^2\\Rightarrow s^2-4s+1=0\\Rightarrow s=2\\pm\\sqrt3$. Only $s=2-\\sqrt3<1$ puts $E$ on the side $AB$.",
+      "$EB=2-\\sqrt3$, so $\\alpha=2,\\beta=-1$ and $\\alpha+\\beta=1$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A circle in the corner of a square (touching two sides) has centre on the diagonal. If it touches the quarter-circle of radius $R$ internally, $r=\\frac{R}{1+\\sqrt2}=R(\\sqrt2-1)$.",
+    "From an external point at distance $d$ from the centre of a circle of radius $r$, the two tangents make angles $\\pm\\arcsin\\frac rd$ with the line to the centre.",
+    "$\\tan15^\\circ=2-\\sqrt3$, $\\tan75^\\circ=2+\\sqrt3$. The other tangent from $C$ here makes $75^\\circ$ with $CB$ and meets $AB$ extended at $E'$ with $BE'=2+\\sqrt3>1$, outside the side $AB$, so it is rejected. The externally tangent circle ($r=\\sqrt2+1$) contains $C$, so gives no tangents."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 8,
+   "concepts": [
+    "Hyperbola: eccentricity and latus rectum",
+    "Rational squares and divisibility"
+   ],
+   "level": 3,
+   "question": "Let $H_n:\\frac{x^2}{1+n}-\\frac{y^2}{3+n}=1$, $n\\in\\mathbb N$. Let $k$ be the smallest even value of $n$ such that the eccentricity of $H_k$ is a rational number. If $l$ is the length of the latus rectum of $H_k$, then $21l$ is equal to ______.",
+   "answer": "306",
+   "key_idea": "$e^2=\\frac{2(n+2)}{n+1}$ is a rational square only when the odd number $n+1$ is a perfect square, which reduces the search to $n+1=9,25,49,\\dots$",
+   "solution": [
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ we have $b^2=a^2(e^2-1)$. Here $a^2=1+n$, $b^2=3+n$: $3+n=(1+n)(e^2-1)$.",
+    "$e^2=\\frac{2n+4}{n+1}=\\frac{2(n+2)}{n+1}$.",
+    "$n$ even means $n+1$ is odd; $e$ is rational only if $2(n+1)(n+2)$ is a perfect square, which (because $n+1$ is odd and coprime to $2(n+2)$) forces $n+1$ to be an odd perfect square: $n+1=9,25,49,\\dots$ (the case $n+1=1$ gives $n=0\\notin\\mathbb N$).",
+    "$n=8$: $e^2=\\frac{20}{9}$, not a rational square.",
+    "$n=24$: $e^2=\\frac{52}{25}$, not a rational square.",
+    "$n=48$: $e^2=\\frac{100}{49}$, so $e=\\frac{10}{7}$ is rational. Hence $k=48$.",
+    "Latus rectum $l=\\frac{2b^2}{a}=\\frac{2(n+3)}{\\sqrt{n+1}}=\\frac{2\\cdot51}{7}=\\frac{102}{7}$.",
+    "$21l=21\\cdot\\frac{102}{7}=42\\cdot\\frac{n+3}{\\sqrt{n+1}}=\\frac{42\\cdot51}{7}=306$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Make 'e is rational' exact: coprime factors with a square product are squares, which turns the search into a Pell equation $s^2-2u^2=-1$.",
+     "solution": [
+      "Let $m=n+1$ (odd for even $n$). Then $e^2=\\frac{2(m+1)}{m}$ and $e$ is rational $\\iff2m(m+1)$ is a perfect square.",
+      "$\\gcd(m,\\,2(m+1))=1$ ($m$ odd and $\\gcd(m,m+1)=1$), so the two coprime factors $m$ and $2(m+1)$ must both be perfect squares: $m=s^2$, $2(s^2+1)=t^2$.",
+      "$t$ is even, $t=2u$: $s^2+1=2u^2$, i.e. the Pell-type equation $s^2-2u^2=-1$ with solutions $(s,u)=(1,1),(7,5),(41,29),\\dots$.",
+      "$s=1$ gives $m=1$, $n=0\\notin\\mathbb N$. The next solution $s=7$ gives $m=49$, $n=48$ (even), and nothing smaller works.",
+      "So $k=48$, $a^2=49$, $b^2=51$, $e^2=\\frac{100}{49}$, $l=\\frac{2b^2}{a}=\\frac{102}{7}$ and $21l=306$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $e^2=1+\\frac{b^2}{a^2}$, latus rectum $=\\frac{2b^2}{a}$; ellipse: $e^2=1-\\frac{b^2}{a^2}$.",
+    "If $uv$ is a perfect square and $\\gcd(u,v)=1$ (both positive), then $u$ and $v$ are perfect squares. This turns 'is the eccentricity rational' into a short list of candidates.",
+    "$s^2-2u^2=-1$ has solutions $s=1,7,41,239,\\dots$ (generated by $(1+\\sqrt2)^{2k+1}$): the squares $m=s^2=1,49,1681,\\dots$ are exactly those $m$ with $\\frac{2(m+1)}{m}$ a rational square."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 9,
+   "concepts": [
+    "Circle with a given diameter; tangents to a circle"
+   ],
+   "level": 2,
+   "question": "Points $P(-3,2)$, $Q(9,10)$ and $R(\\alpha,4)$ lie on a circle $C$ with $PR$ as its diameter. The tangents to $C$ at the points $Q$ and $R$ intersect at the point $S$. If $S$ lies on the line $2x-ky=1$, then $k$ is equal to ______.",
+   "answer": "3",
+   "key_idea": "$PR$ is a diameter, so $\\angle PQR=90^\\circ$ fixes $\\alpha$; each tangent is perpendicular to the radius to its point of contact.",
+   "solution": [
+    "$PR$ is a diameter, so $\\angle PQR=90^\\circ$ and $m_{PQ}\\cdot m_{QR}=-1$.",
+    "$\\frac{10-2}{9+3}\\times\\frac{10-4}{9-\\alpha}=-1$, which gives $\\alpha=13$, so $R(13,4)$.",
+    "The centre $O'$ is the midpoint of $PR$: $(5,3)$. Slope of the radius $O'Q=\\frac{10-3}{9-5}=\\frac74$, so the tangent $QS$ has slope $-\\frac47$.",
+    "Tangent at $Q$: $y-10=-\\frac47(x-9)$, i.e. $4x+7y=106$ ... (1).",
+    "Slope of the radius $O'R=\\frac{4-3}{13-5}=\\frac18$, so the tangent $RS$ has slope $-8$.",
+    "Tangent at $R$: $y-4=-8(x-13)$, i.e. $8x+y=108$ ... (2).",
+    "Solving (1) and (2): $x_1=\\frac{25}2$, $y_1=8$, so $S\\left(\\frac{25}{2},8\\right)$.",
+    "$S$ lies on $2x-ky=1$: $25-8k=1$, so $8k=24$ and $k=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$S$ is the pole of the chord $QR$: match the polar of $S(x_1,y_1)$ with the line $QR$.",
+     "solution": [
+      "With $R(13,4)$, the circle on diameter $PR$ is $(x+3)(x-13)+(y-2)(y-4)=0$, i.e. $x^2+y^2-10x-6y-31=0$.",
+      "Chord $QR$ through $(9,10)$ and $(13,4)$: slope $-\\frac32$, line $3x+2y=47$ (check: $27+20=47$, $39+8=47$).",
+      "$S(x_1,y_1)$ is the pole of $QR$, so its polar $xx_1+yy_1-5(x+x_1)-3(y+y_1)-31=0$, i.e. $(x_1-5)x+(y_1-3)y-(5x_1+3y_1+31)=0$, is the line $3x+2y-47=0$.",
+      "Proportionality: $\\frac{x_1-5}{3}=\\frac{y_1-3}{2}=\\frac{5x_1+3y_1+31}{47}=\\lambda$, so $x_1=5+3\\lambda$, $y_1=3+2\\lambda$.",
+      "$5(5+3\\lambda)+3(3+2\\lambda)+31=65+21\\lambda=47\\lambda\\Rightarrow\\lambda=\\frac52$, so $S\\left(\\frac{25}2,8\\right)$.",
+      "$2\\cdot\\frac{25}2-8k=1\\Rightarrow k=3$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Circle on the diameter with ends $(x_1,y_1),(x_2,y_2)$: $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$. A point $Q$ on it satisfies $m_{PQ}m_{QR}=-1$ (Thales).",
+    "The tangents at $Q$ and $R$ meet at the pole $S$ of the chord $QR$: the polar of $S$ w.r.t. $x^2+y^2+2gx+2fy+c=0$ is $xx_1+yy_1+g(x+x_1)+f(y+y_1)+c=0$. Also $SQ=SR$ and $O'S\\perp QR$.",
+    "Note: the figure in the PDF labels the centre $(6,3)$; the correct centre is $(5,3)$, midpoint of $P(-3,2)$ and $R(13,4)$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 10,
+   "concepts": [
+    "Circle: radius, chord and right-angle (Pythagoras) relations"
+   ],
+   "level": 1,
+   "question": "Let $P(a_1,b_1)$ and $Q(a_2,b_2)$ be two distinct points on a circle with centre $C(\\sqrt2,\\sqrt3)$. Let $O$ be the origin and $OC$ be perpendicular to both $CP$ and $CQ$. If the area of the triangle $OCP$ is $\\frac{\\sqrt{35}}{2}$, then $a_1^2+b_1^2+a_2^2+b_2^2$ is equal to ______.",
+   "answer": "24",
+   "key_idea": "$OC\\perp CP$ gives a right triangle, so $OP^2=OC^2+CP^2$, and $CQ=CP$ gives the same for $OQ$.",
+   "solution": [
+    "$OC=\\sqrt{(\\sqrt2)^2+(\\sqrt3)^2}=\\sqrt5$.",
+    "$\\triangle OCP$ is right-angled at $C$: area $=\\frac12\\cdot OC\\cdot CP=\\frac12\\cdot\\sqrt5\\cdot CP=\\frac{\\sqrt{35}}{2}$, so $CP=\\sqrt7$ (the radius).",
+    "$a_1^2+b_1^2=OP^2=OC^2+CP^2=5+7=12$.",
+    "$CQ=CP=\\sqrt7$ and $OC\\perp CQ$, so likewise $a_2^2+b_2^2=OQ^2=5+7=12$.",
+    "$a_1^2+b_1^2+a_2^2+b_2^2=OP^2+OQ^2=2(5+7)=24$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$P,Q$ are diametrically opposite ($C$ is their midpoint), so the median (parallelogram) formula gives $OP^2+OQ^2=2(OC^2+CP^2)$.",
+     "solution": [
+      "$CP\\perp OC$ and $CQ\\perp OC$ at the same point $C$, so $P,C,Q$ are collinear; as $CP=CQ$ and $P\\neq Q$, $C$ is the midpoint of $PQ$.",
+      "Area of $\\triangle OCP=\\frac12\\,OC\\cdot CP=\\frac{\\sqrt{35}}2$ with $OC=\\sqrt5$ gives $CP=\\sqrt7$.",
+      "Apollonius' theorem for the median $OC$ of $\\triangle OPQ$: $OP^2+OQ^2=2\\,OC^2+2\\,CP^2$.",
+      "$=2(5)+2(7)=24$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If two radii $CP,CQ$ are both perpendicular to the same line through $C$, then $PQ$ is a diameter. For any point $O$: $OP^2+OQ^2=2(OC^2+r^2)$ (Apollonius / parallelogram law).",
+    "If $OC\\perp CP$ then $OP^2=OC^2+r^2$: the squared distance from the origin to $P$ is $|OC|^2+r^2$ regardless of the direction of $CP$ in that situation.",
+    "Area of a triangle with a right angle at $C$: $\\frac12\\,OC\\cdot CP$. Use it to read off $r$ directly."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 11,
+   "concepts": [
+    "Angle bisector of two lines; image of a point in a line"
+   ],
+   "level": 2,
+   "question": "If the line $l_1:3y-2x=3$ is the angular bisector of the lines $l_2:x-y+1=0$ and $l_3:\\alpha x+\\beta y+17=0$, then $\\alpha^2+\\beta^2-\\alpha-\\beta$ is equal to ______.",
+   "answer": "348",
+   "key_idea": "A bisector contains the common point of the two lines, and the image of a point of $l_2$ in $l_1$ must lie on $l_3$.",
+   "solution": [
+    "$l_1\\cap l_2$: from $x-y+1=0$, $y=x+1$; then $3(x+1)-2x=3$ gives $x=0$, so the point is $P(0,1)$.",
+    "The bisector $l_1$ passes through the intersection of $l_2$ and $l_3$, so $P(0,1)$ lies on $l_3$: $\\beta+17=0$, $\\beta=-17$.",
+    "Take a point $Q(-1,0)$ on $l_2$. Reflect it in the bisector $l_1$ ($-2x+3y-3=0$): the image $Q'$ must lie on $l_3$.",
+    "Image formula: $\\frac{x+1}{-2}=\\frac{y-0}{3}=-\\frac{2(2+0-3)}{13}=\\frac2{13}$, giving $Q'\\left(-\\frac{17}{13},\\frac6{13}\\right)$.",
+    "$Q'$ lies on $\\alpha x+\\beta y+17=0$: $-\\frac{17\\alpha}{13}+\\frac{6\\beta}{13}+17=0$.",
+    "With $\\beta=-17$: $-17\\alpha-102+221=0$, so $\\alpha=7$.",
+    "$\\alpha^2+\\beta^2-\\alpha-\\beta=49+289-7+17=348$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes that $Q$ is reflected about $l_2:x-y+1=0$; $Q$ lies on $l_2$, so that image would be $Q$ itself. The reflection must be taken in the bisector $l_1:3y-2x=3$ (its numbers $Q'(-17/13,6/13)$ and $\\alpha=7$ are those of the reflection in $l_1$). Only the naming of the mirror line was wrong; all values and the answer 348 are correct.",
+   "alternate_solutions": [
+    {
+     "idea": "Equal angles: the angle from $l_2$ to $l_1$ equals the angle from $l_1$ to $l_3$ (tangent formula with slopes).",
+     "solution": [
+      "$P(0,1)$ lies on $l_3$ (common point), so $\\beta=-17$ as before. Slopes: $m_2=1$, $m_1=\\frac23$, $m_3=-\\frac\\alpha\\beta=\\frac{\\alpha}{17}$.",
+      "$l_1$ bisects the angle: $\\frac{m_1-m_2}{1+m_1m_2}=\\frac{m_3-m_1}{1+m_1m_3}$.",
+      "LHS $=\\frac{\\frac23-1}{1+\\frac23}=\\frac{-1/3}{5/3}=-\\frac15$.",
+      "RHS $=\\frac{m_3-\\frac23}{1+\\frac23m_3}=\\frac{3m_3-2}{3+2m_3}$. Equate: $5(3m_3-2)=-(3+2m_3)$, so $17m_3=7$ and $m_3=\\frac7{17}$.",
+      "$\\frac\\alpha{17}=\\frac7{17}$, so $\\alpha=7$.",
+      "$\\alpha^2+\\beta^2-\\alpha-\\beta=49+289-7+17=348$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reflection of $(x_1,y_1)$ in $ax+by+c=0$: $\\frac{x-x_1}{a}=\\frac{y-y_1}{b}=-\\frac{2(ax_1+by_1+c)}{a^2+b^2}$.",
+    "If $l_1$ bisects the angle between $l_2$ and $l_3$, then $l_3$ is the mirror image of $l_2$ in $l_1$: one point's image (plus the common point) fixes $l_3$.",
+    "Bisector in slope form: the directed angles are equal, $\\frac{m_1-m_2}{1+m_1m_2}=\\frac{m_3-m_1}{1+m_1m_3}$ (the two lines are symmetric about $l_1$)."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 12,
+   "concepts": [
+    "Parallelogram: vertices and diagonals",
+    "Distance of a point from a line"
+   ],
+   "level": 2,
+   "question": "Let the equations of two adjacent sides of a parallelogram $ABCD$ be $2x-3y=-23$ and $5x+4y=23$. If the equation of its one diagonal $AC$ is $3x+7y=23$ and the distance of $A$ from the other diagonal is $d$, then $50d^2$ is equal to ______.",
+   "answer": "529",
+   "key_idea": "The sides and the diagonal $AC$ give $A,C$ (and $B$); the other diagonal $BD$ passes through $B$ and the midpoint of $AC$.",
+   "solution": [
+    "Let $AB:2x-3y=-23$ and $BC:5x+4y=23$. Vertex $A=AB\\cap AC$: solving $2x-3y=-23$, $3x+7y=23$ gives $A(-4,5)$.",
+    "Vertex $C=BC\\cap AC$: solving $5x+4y=23$, $3x+7y=23$ gives $C(3,2)$.",
+    "Vertex $B=AB\\cap BC$: solving $2x-3y=-23$, $5x+4y=23$ gives $B(-1,7)$.",
+    "The diagonals bisect each other: the midpoint of $AC$ is $\\left(-\\frac12,\\frac72\\right)$.",
+    "The other diagonal $BD$ passes through $B(-1,7)$ and $\\left(-\\frac12,\\frac72\\right)$: slope $\\frac{7-7/2}{-1+1/2}=-7$, so $y-7=-7(x+1)$, i.e. $7x+y=0$.",
+    "Distance of $A(-4,5)$ from $7x+y=0$: $d=\\frac{|7(-4)+5|}{\\sqrt{50}}=\\frac{23}{\\sqrt{50}}$.",
+    "$50d^2=23^2=529$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find $D$ from the parallel sides (no midpoint needed) and use $d=\\frac{2\\,[ABD]}{BD}$ with the shoelace area.",
+     "solution": [
+      "$A(-4,5)$, $B(-1,7)$, $C(3,2)$ as in the main solution.",
+      "$D$ lies on the line through $A$ parallel to $BC$ ($5x+4y=5(-4)+4(5)=0$) and on the line through $C$ parallel to $AB$ ($2x-3y=2(3)-3(2)=0$): $D=(0,0)$.",
+      "$BD=\\sqrt{(-1)^2+7^2}=\\sqrt{50}$.",
+      "$[ABD]=\\frac12|(-1+4)(0-5)-(0+4)(7-5)|=\\frac12|-15-8|=\\frac{23}2$.",
+      "$d=\\frac{2[ABD]}{BD}=\\frac{23}{\\sqrt{50}}$, so $50d^2=529$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parallelogram: $D=A+C-B$ (vectors); the diagonals bisect each other. Whichever of the two sides is called $AB$, $A$ and $C$ are equidistant from $BD$ (the diagonal $BD$ passes through the midpoint of $AC$), so $d$ does not depend on the labelling.",
+    "The area of the parallelogram is $2[ABD]=BD\\cdot d$; distance of a vertex from the other diagonal $=\\frac{\\text{area}}{BD}$.",
+    "The line through $(x_1,y_1)$ parallel to $ax+by=c$ is $ax+by=ax_1+by_1$: quick way to find the fourth vertex."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 13,
+   "concepts": [
+    "Tangents to a parabola and a circle",
+    "Circumradius of a triangle"
+   ],
+   "level": 2,
+   "question": "A triangle is formed by the tangents at the point $(2,2)$ on the curves $y^2=2x$ and $x^2+y^2=4x$, and the line $x+y+2=0$. If $r$ is the radius of its circumcircle, then $r^2$ is equal to ______.",
+   "answer": "10",
+   "key_idea": "Find the two tangents and their vertices on $x+y+2=0$, then use $r=\\frac{abc}{4\\Delta}$ (or $\\frac{a}{2\\sin A}$).",
+   "solution": [
+    "$P(2,2)$ lies on both curves $S_1:y^2=2x$ ($4=4$) and $S_2:x^2+y^2=4x$ ($8=8$).",
+    "Tangent $T_1$ to $S_1$ at $P$ (form $yy_1=x+x_1$): $2y=x+2$, i.e. $x-2y+2=0$.",
+    "Tangent $T_2$ to $S_2$ at $P$ (form $xx_1+yy_1=2(x+x_1)$): $2x+2y=2(x+2)$, i.e. $y=2$.",
+    "The third line is $L_3:x+y+2=0$. Vertices: $P(2,2)$, $Q=T_1\\cap L_3=(-2,0)$, $R=T_2\\cap L_3=(-4,2)$.",
+    "Sides: $PQ=a=\\sqrt{20}$, $QR=b=\\sqrt8$, $RP=c=6$.",
+    "Area $\\Delta=\\frac12\\cdot RP\\cdot(\\text{height of }Q\\text{ above }y=2\\text{, which is }2)=\\frac12\\cdot6\\cdot2=6$.",
+    "$r=\\frac{abc}{4\\Delta}=\\frac{\\sqrt{20}\\cdot\\sqrt8\\cdot6}{24}=\\frac{\\sqrt{160}}{4}=\\sqrt{10}$, so $r^2=10$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Sine rule: $r=\\frac{QR}{2\\sin P}$, where the angle at $P$ is the angle between the two tangents ($\\tan P=\\frac12$).",
+     "solution": [
+      "$T_1$ has slope $\\frac12$ and $T_2$ ($y=2$) is horizontal, so the angle between them at $P$ satisfies $\\tan P=\\frac12$ (acute, as $Q,R$ lie below-left and left of $P$).",
+      "$\\sin P=\\frac{1}{\\sqrt{1+4}}=\\frac1{\\sqrt5}$.",
+      "The side opposite $P$ lies on $x+y+2=0$ between $Q(-2,0)$ and $R(-4,2)$: $QR=\\sqrt{4+4}=2\\sqrt2$.",
+      "$r=\\frac{QR}{2\\sin P}=\\frac{2\\sqrt2}{2/\\sqrt5}=\\sqrt{10}$, so $r^2=10$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent at $(x_1,y_1)$: to $y^2=4ax$: $yy_1=2a(x+x_1)$; to $x^2+y^2+2gx+2fy+c=0$: $xx_1+yy_1+g(x+x_1)+f(y+y_1)+c=0$.",
+    "Circumradius: $R=\\frac{abc}{4\\Delta}=\\frac{a}{2\\sin A}$. When one angle is the angle between two known lines and the opposite side is easy, the sine rule is shorter than computing the area.",
+    "Here the curves meet at $(2,2)$ with tangent directions of slope $\\frac12$ and $0$, so the angle between the curves there is $\\tan^{-1}\\frac12$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 14,
+   "concepts": [
+    "Rectangular hyperbola xy = ±1; square inscribed in a curve"
+   ],
+   "level": 3,
+   "question": "A square $ABCD$ has all its vertices on the curve $x^2y^2=1$. The midpoints of its sides also lie on the same curve. Then, the square of the area of $ABCD$ is ______.",
+   "answer": "80",
+   "key_idea": "The curve is $xy=\\pm1$; with vertices $(t,\\frac1t)$ and its $90^\\circ$ rotations, the midpoint condition gives $\\frac1{t^2}-t^2=4$.",
+   "solution": [
+    "$x^2y^2=1$ means $xy=1$ or $xy=-1$ (a pair of rectangular hyperbolas).",
+    "By the symmetry of the curve take the square centred at the origin with $A\\left(t,\\frac1t\\right)$, $C\\left(-t,-\\frac1t\\right)$, $B\\left(\\frac1t,-t\\right)$, $D\\left(-\\frac1t,t\\right)$ (each lies on $x^2y^2=1$).",
+    "Midpoint of $AB$: $\\left(\\frac{t+\\frac1t}{2},\\frac{\\frac1t-t}{2}\\right)$; it lies on $xy=1$: $\\frac{\\left(t+\\frac1t\\right)\\left(\\frac1t-t\\right)}{4}=1$.",
+    "So $\\frac1{t^2}-t^2=4$, i.e. $t^4+4t^2-1=0$.",
+    "$\\left(t^2+\\frac1{t^2}\\right)^2=\\left(t^2-\\frac1{t^2}\\right)^2+4=16+4=20$, so $t^2+\\frac1{t^2}=\\sqrt{20}$.",
+    "Side: $AB^2=\\left(t-\\frac1t\\right)^2+\\left(\\frac1t+t\\right)^2=2\\left(t^2+\\frac1{t^2}\\right)$.",
+    "Area $=AB^2=2\\left(t^2+\\frac1{t^2}\\right)=2\\sqrt{20}$.",
+    "(Area)$^2=4\\times20=80$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Polar form of the curve: $r^2=\\frac{2}{|\\sin2\\theta|}$. The square's vertices (angles $\\theta+k\\frac\\pi2$) and its side-midpoints (angle $+\\frac\\pi4$, radius $\\frac{r}{\\sqrt2}$) both lie on it.",
+     "solution": [
+      "$x^2y^2=1$ in polar form: $r^4\\sin^2\\theta\\cos^2\\theta=1$, i.e. $r^2=\\frac{2}{|\\sin2\\theta|}$.",
+      "A square centred at the origin has vertices at angles $\\theta,\\theta+\\frac\\pi2,\\dots$ at the same distance $r$; $|\\sin2\\theta|$ is unchanged by these rotations, so all four lie on the curve when one does.",
+      "The midpoint of a side is at angle $\\theta+\\frac\\pi4$ and distance $\\frac r{\\sqrt2}$: on the curve means $\\frac{r^2}{2}=\\frac{2}{|\\sin(2\\theta+\\frac\\pi2)|}=\\frac2{|\\cos2\\theta|}$, i.e. $r^2=\\frac4{|\\cos2\\theta|}$.",
+      "Equating $\\frac2{|\\sin2\\theta|}=\\frac4{|\\cos2\\theta|}$: $|\\cos2\\theta|=2|\\sin2\\theta|$, so $\\sin^22\\theta=\\frac15$ and $r^2=\\frac{2}{1/\\sqrt5}=2\\sqrt5$.",
+      "A square of circumradius $r$ has area $2r^2=4\\sqrt5$, so (area)$^2=80$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^2y^2=k^2$ is the pair $xy=\\pm k$; a point $\\left(t,\\frac kt\\right)$ rotated through $90^\\circ$ becomes $\\left(\\frac kt,-t\\right)$, which lies on the conjugate branch: the pair is invariant under rotation by $90^\\circ$.",
+    "In polar form $x^2y^2=1$ is $r^2=\\frac{2}{|\\sin2\\theta|}$. A square centred at $O$ with circumradius $r$ has area $2r^2$, and its side midpoints are at distance $\\frac r{\\sqrt2}$ in the directions of the bisectors.",
+    "Useful identity: $\\left(t^2+\\frac1{t^2}\\right)^2=\\left(t^2-\\frac1{t^2}\\right)^2+4$."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 15,
+   "concepts": [
+    "Ellipse: latus rectum, eccentricity and focal properties"
+   ],
+   "level": 2,
+   "question": "Let an ellipse with centre $(1,0)$ and latus rectum of length $\\frac12$ have its major axis along the $x$-axis. If its minor axis subtends an angle $60^\\circ$ at the foci, then the square of the sum of the lengths of its minor and major axes is equal to ______.",
+   "answer": "9",
+   "key_idea": "Half of the $60^\\circ$ angle gives $\\tan30^\\circ=\\frac{b}{ae}$; with $\\frac{2b^2}{a}=\\frac12$ this fixes $a$ and $b$.",
+   "solution": [
+    "Latus rectum $\\frac{2b^2}{a}=\\frac12$, so $4b^2=a$ ... (i).",
+    "The ellipse is $\\frac{(x-1)^2}{a^2}+\\frac{y^2}{b^2}=1$; focus $F_1(1+ae,0)$ and an end of the minor axis $B_1(1,b)$.",
+    "The minor axis subtends $60^\\circ$ at the focus, so $F_1B_1$ makes $30^\\circ$ with the major axis: $\\frac{b}{ae}=\\frac1{\\sqrt3}$.",
+    "$3b^2=a^2e^2=a^2-b^2$ (as $a^2e^2=a^2-b^2$), so $4b^2=a^2$ ... (ii).",
+    "From (i) and (ii): $a=a^2$, so $a=1$ and $b^2=\\frac14$, $b=\\frac12$.",
+    "$(2a+2b)^2=(2+1)^2=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The distance from a focus to an end of the minor axis equals $a$, so the triangle $B_1F_1B_2$ is equilateral and $2b=a$.",
+     "solution": [
+      "For any ellipse, $FB_1=\\sqrt{(ae)^2+b^2}=a$ (the focus-to-minor-end distance equals the semi-major axis), and $FB_2=a$ too.",
+      "$\\angle B_1FB_2=60^\\circ$ with $FB_1=FB_2$, so $\\triangle B_1FB_2$ is equilateral: $B_1B_2=2b=a$.",
+      "Latus rectum $\\frac{2b^2}{a}=\\frac{2b^2}{2b}=b=\\frac12$, so $b=\\frac12$ and $a=1$.",
+      "$(2a+2b)^2=(2+1)^2=9$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Ellipse: $b^2=a^2(1-e^2)$, latus rectum $\\frac{2b^2}{a}$, and the distance from a focus to either end of the minor axis is exactly $a$.",
+    "If the minor axis subtends an angle $2\\varphi$ at a focus, then $\\sin\\varphi=\\frac ba=\\sqrt{1-e^2}$ (here $\\varphi=30^\\circ$, $\\frac ba=\\frac12$).",
+    "The centre $(1,0)$ only translates the ellipse: lengths of axes are unaffected."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 16,
+   "concepts": [
+    "Lattice points inside a triangle; inequalities and multiples"
+   ],
+   "level": 2,
+   "question": "A triangle is formed by the $X$-axis, $Y$-axis and the line $3x+4y=60$. Then the number of points $P(a,b)$ which lie strictly inside the triangle, where $a$ is an integer and $b$ is a multiple of $a$, is ______.",
+   "answer": "31",
+   "key_idea": "Strictly inside means $a>0$, $b>0$ and $3a+4b<60$; fix $a$ and count the multiples of $a$ with $b<\\frac{60-3a}{4}$.",
+   "solution": [
+    "Strictly inside: $a\\ge1$, $b\\ge1$ and $3a+4b<60$, i.e. $b<\\frac{60-3a}{4}$; $b$ is a multiple of $a$.",
+    "$a=1$: $b<\\frac{57}{4}=14.25$; $b=1,2,\\dots,14$: $14$ points.",
+    "$a=2$: $b<\\frac{27}{2}=13.5$; $b=2,4,\\dots,12$: $6$ points.",
+    "$a=3$: $b<\\frac{51}{4}=12.75$; $b=3,6,9,12$: $4$ points.",
+    "$a=4$: $b<12$ (strict, so $12$ is excluded); $b=4,8$: $2$ points.",
+    "$a=5$: $b<\\frac{45}{4}=11.25$; $b=5,10$: $2$ points.",
+    "$a=6$: $b<\\frac{21}{2}=10.5$; $b=6$: $1$ point.",
+    "$a=7$: $b<\\frac{39}{4}=9.75$; $b=7$: $1$ point. $a=8$: $b<9$; $b=8$: $1$ point.",
+    "$a=9$: $b<\\frac{33}{4}=8.25<a$, so no point (and none for $a\\ge9$ since $b\\ge a$ would give $3a+4b\\ge63$).",
+    "Total $=14+6+4+2+2+1+1+1=31$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by the multiplier instead of by the abscissa: put $b=ka$ ($k\\ge1$), so the condition becomes $a(3+4k)<60$.",
+     "solution": [
+      "Write $b=ka$ with $k\\in\\mathbb N$ (since $b>0$, $a>0$). The point is strictly inside iff $a(3+4k)<60$, i.e. $a<\\frac{60}{3+4k}$.",
+      "For each $k$ the number of positive integers $a$ is $\\lceil\\frac{60}{3+4k}\\rceil-1$: $k=1$: $a<\\frac{60}7$, $8$ values; $k=2$: $a<\\frac{60}{11}$, $5$; $k=3$: $a<4$, $3$; $k=4$: $a<\\frac{60}{19}$, $3$; $k=5$: $a<\\frac{60}{23}$, $2$; $k=6$: $a<\\frac{60}{27}$, $2$.",
+      "$k=7,8,\\dots,14$: $a<\\frac{60}{3+4k}$ lies between $1$ and $2$ (for $k=14$: $\\frac{60}{59}>1$), so only $a=1$: $8$ values of $k$ give $1$ point each.",
+      "$k\\ge15$: $3+4k\\ge63>60$, no point.",
+      "Total $=8+5+3+3+2+2+8=31$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of lattice points strictly inside the triangle with vertices $(0,0),(p,0),(0,q)$: $\\frac{(p-1)(q-1)-(g-1)}{2}$ with $g=\\gcd(p,q)$ (Pick's theorem). For $p=20,q=15$ this is $131$; the extra condition '$b$ a multiple of $a$' here keeps only $31$ of them.",
+    "With a strict inequality the boundary points are excluded: when $\\frac{60-3a}{4}$ is an integer (here $a=4$ gives $12$) the top value is not counted.",
+    "A divisibility condition 'b is a multiple of a' can be counted either by fixing $a$ and counting multiples, or by fixing the ratio $k=\\frac ba$ and counting $a$; the second often has fewer cases for large ranges."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  },
+  {
+   "q_no": 17,
+   "concepts": [
+    "Linear constraints (feasible region); maximum of a quadratic"
+   ],
+   "level": 2,
+   "question": "The maximum value of $z=6xy+y^2$, where $3x+4y\\le100$ and $4x+3y\\le75$ for $x\\ge0$ and $y\\ge0$, is ______.",
+   "answer": "904 (exact maximum 50625/56 ≈ 904.02; key gives the integer part)",
+   "key_idea": "$z$ increases with both $x$ and $y$, so the maximum lies on the binding edge $4x+3y=75$; there $z$ is a quadratic in $y$.",
+   "solution": [
+    "The feasible region (with $x,y\\ge0$) is the triangle with vertices $(0,0)$, $\\left(\\frac{75}4,0\\right)$ and $(0,25)$; the constraint $3x+4y\\le100$ is satisfied throughout it (it only touches the region at $(0,25)$).",
+    "$z=y(6x+y)$ increases when $x$ or $y$ increases (both $\\ge0$), so the maximum is on the edge $4x+3y=75$, $0\\le y\\le25$.",
+    "On this edge $x=\\frac{75-3y}{4}$, so $z=y\\left(\\frac{75-3y}{4}\\cdot6+y\\right)=\\frac{225}{2}y-\\frac72y^2$.",
+    "This is a downward parabola in $y$; its vertex is at $y=\\frac{225}{14}\\approx16.07\\in[0,25]$, so the maximum is at the vertex.",
+    "$z_{\\max}=\\frac{-D}{4a}=\\frac{225\\cdot225}{4\\cdot2\\cdot7}=\\frac{50625}{56}=904.017857\\ldots$",
+    "The paper's key $904$ is the integer part of this value."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "On the edge write $6x+y$ in terms of $y$ only; $z$ is then a product of two terms with constant sum, so AM-GM gives the maximum without a derivative.",
+     "solution": [
+      "On $4x+3y=75$: $6x+y=\\frac32(4x+3y)-\\frac72y=\\frac{225}{2}-\\frac72y$.",
+      "$z=y\\left(\\frac{225}2-\\frac72y\\right)=\\frac27\\cdot\\left(\\frac72y\\right)\\left(\\frac{225}2-\\frac72y\\right)$.",
+      "The two brackets have constant sum $\\frac{225}2$, so their product is at most $\\left(\\frac{225}4\\right)^2$ (AM-GM, equality when $\\frac72y=\\frac{225}4$, i.e. $y=\\frac{225}{14}$).",
+      "$z_{\\max}=\\frac27\\cdot\\frac{225^2}{16}=\\frac{50625}{56}\\approx904.02$.",
+      "Equality point: $y=\\frac{225}{14}$, $x=\\frac{375}{56}\\ge0$ and $3x+4y=\\frac{1125}{56}+\\frac{900}{14}<100$: feasible (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Maximising an expression that is increasing in each variable over a convex polygon: the maximum is on the 'upper-right' boundary; find which constraint is binding by comparing intercepts ($\\frac{75}{4}<\\frac{100}{3}$ and $25=25$).",
+    "For $z=Ay-By^2$ on an interval, the maximum is at $y=\\frac{A}{2B}$ if it lies in the interval: $z_{\\max}=\\frac{A^2}{4B}$ (here $A=\\frac{225}2$, $B=\\frac72$).",
+    "A maximum of a continuous function on a region need not be an integer; with an integer-type key, the key is the integer part ($\\frac{50625}{56}=904.017\\ldots$)."
+   ],
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4
+  }
+ ]
+}
