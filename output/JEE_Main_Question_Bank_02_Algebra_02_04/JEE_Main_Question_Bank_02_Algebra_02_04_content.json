@@ -1,0 +1,891 @@
+{
+ "title": "JEE Main Question Bank 02 Algebra 02 (Set 04) — Paper Analysis",
+ "subtitle": "Questions 1–20 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Algebra_02_04.pdf (no blueprint; PDF questions 61–80 numbered 1–20 here)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper; JEE Advanced default assumed:",
+    "4 marks for a correct answer (assumed) · no negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "concepts": [
+    "Locus in the Argand plane (modulus of a Möbius map of a real parameter)"
+   ],
+   "level": 1,
+   "question": "All the points in the set $S=\\left\\{\\frac{\\alpha+i}{\\alpha-i}:\\alpha\\in\\mathbb{R}\\right\\}$ $(i=\\sqrt{-1})$ lie on a :",
+   "options": [
+    "Straight line whose slope is 1",
+    "Circle whose radius is $\\sqrt2$",
+    "Circle whose radius is 1",
+    "Straight line whose slope is $-1$"
+   ],
+   "answer": "(C) Circle whose radius is 1",
+   "key_idea": "For real $\\alpha$, $\\alpha+i$ and $\\alpha-i$ are conjugates, so the quotient has modulus 1.",
+   "solution": [
+    "Let $x+iy=\\frac{\\alpha+i}{\\alpha-i}$ with $\\alpha\\in\\mathbb{R}$.",
+    "Rationalise: $x+iy=\\frac{(\\alpha+i)^2}{\\alpha^2+1}$.",
+    "Expand the numerator: $x+iy=\\frac{\\alpha^2-1}{\\alpha^2+1}+i\\,\\frac{2\\alpha}{\\alpha^2+1}$.",
+    "Compare both sides: $x=\\frac{\\alpha^2-1}{\\alpha^2+1}\\;\\dots(i)$ and $y=\\frac{2\\alpha}{\\alpha^2+1}\\;\\dots(ii)$.",
+    "Square and add: $x^2+y^2=\\frac{(\\alpha^2-1)^2+4\\alpha^2}{(\\alpha^2+1)^2}=\\frac{(\\alpha^2+1)^2}{(\\alpha^2+1)^2}=1$.",
+    "So every point lies on the circle $x^2+y^2=1$, whose radius is 1. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For real $\\alpha$ the numerator and denominator are complex conjugates, so $|w|=1$ at once.",
+     "solution": [
+      "Let $w=\\frac{\\alpha+i}{\\alpha-i}$. Since $\\alpha$ is real, $\\overline{\\alpha-i}=\\alpha+i$.",
+      "So $w=\\frac{\\bar d}{d}$ with $d=\\alpha-i$, and $|w|=\\frac{|\\bar d|}{|d|}=1$.",
+      "Hence $|w|=1$ for every real $\\alpha$: all points lie on the unit circle (centre $0$, radius 1).",
+      "Cross-check: put $\\alpha=\\cot\\theta$; then $w=\\frac{\\cos\\theta+i\\sin\\theta}{\\cos\\theta-i\\sin\\theta}=e^{2i\\theta}$, a point of the unit circle.",
+      "Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left|\\frac{z}{\\bar z}\\right|=1$ for every $z\\ne0$; so $\\frac{\\alpha+i}{\\alpha-i}$ ($\\alpha$ real) always has modulus 1.",
+    "The map $\\alpha\\mapsto\\frac{\\alpha+i}{\\alpha-i}$ (Cayley map) sends the real line onto the unit circle minus the point $1$ (it is the limit $\\alpha\\to\\infty$).",
+    "Parametrisation: $\\alpha=\\cot\\theta$ gives $e^{2i\\theta}$; equivalently $\\frac{1+it}{1-it}=e^{2i\\tan^{-1}t}$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 2,
+   "concepts": [
+    "Series: exponential series and sums of $\\frac{1}{r!}$ over odd/even indices"
+   ],
+   "level": 2,
+   "question": "The sum of the series $\\sum_{n=1}^{\\infty}\\frac{n^2+6n+10}{(2n+1)!}$ is equal to :",
+   "options": [
+    "$-\\frac{41}{8}e+\\frac{19}{8}e^{-1}-10$",
+    "$\\frac{41}{8}e+\\frac{19}{8}e^{-1}+10$",
+    "$\\frac{41}{8}e-\\frac{19}{8}e^{-1}-10$",
+    "$\\frac{41}{8}e+\\frac{19}{8}e^{-1}-10$"
+   ],
+   "answer": "(C) $\\frac{41}{8}e-\\frac{19}{8}e^{-1}-10$",
+   "key_idea": "Put $r=2n+1$ and write $r^2+10r+29=r(r-1)+11r+29$ so each part telescopes into a factorial series.",
+   "solution": [
+    "Put $2n+1=r$. For $n=1,2,3,\\dots$, $r=3,5,7,\\dots$ and $n=\\frac{r-1}{2}$.",
+    "Sum $=\\sum_{r=3,5,7,\\dots}\\frac{\\left(\\frac{r-1}{2}\\right)^2+6\\cdot\\frac{r-1}{2}+10}{r!}$.",
+    "Multiply numerator and denominator by 4: $\\frac{(r-1)^2+12(r-1)+40}{4\\,r!}$.",
+    "Expand the numerator: $(r-1)^2+12(r-1)+40=r^2+10r+29$, so the sum is $\\sum\\frac{r^2+10r+29}{4\\,r!}$.",
+    "Split $r^2+10r+29=r(r-1)+11r+29$: term $=\\frac{1}{4(r-2)!}+\\frac{11}{4(r-1)!}+\\frac{29}{4}\\cdot\\frac{1}{r!}$.",
+    "For $r=3,5,7,\\dots$ this is $\\frac14\\left(\\frac1{1!}+\\frac1{3!}+\\frac1{5!}+\\dots\\right)+\\frac{11}{4}\\left(\\frac1{2!}+\\frac1{4!}+\\frac1{6!}+\\dots\\right)+\\frac{29}{4}\\left(\\frac1{3!}+\\frac1{5!}+\\frac1{7!}+\\dots\\right)$.",
+    "Use $\\frac1{1!}+\\frac1{3!}+\\dots=\\frac{e-e^{-1}}{2}$, $\\frac1{2!}+\\frac1{4!}+\\dots=\\frac{e+e^{-1}-2}{2}$, $\\frac1{3!}+\\frac1{5!}+\\dots=\\frac{e-e^{-1}-2}{2}$.",
+    "Sum $=\\frac14\\cdot\\frac{e-e^{-1}}{2}+\\frac{11}{4}\\cdot\\frac{e+e^{-1}-2}{2}+\\frac{29}{4}\\cdot\\frac{e-e^{-1}-2}{2}$.",
+    "$=\\frac18\\left[e-\\frac1e+11e+\\frac{11}{e}-22+29e-\\frac{29}{e}-58\\right]$.",
+    "$=\\frac18\\left[41e-\\frac{19}{e}-80\\right]=\\frac{41}{8}e-\\frac{19}{8}e^{-1}-10$. Option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's second line reads $\\frac{(r-1)^2+12(r-1)+10}{4\\,r!}$; the constant must be 40 (since $4\\cdot10=40$), not 10. The next line $r^2+10r+29$ is only correct with 40 ($1-12+40=29$), so the later working and the answer are unaffected. Series value checked numerically: 3.0574807.",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\sinh x=\\sum_{m\\ \\mathrm{odd}}\\frac{x^m}{m!}$ and apply $x^2\\frac{d^2}{dx^2}$ and $x\\frac{d}{dx}$ to produce $m(m-1)$ and $m$ in the numerator.",
+     "solution": [
+      "With $m=2n+1$ (odd, $m\\ge3$) the term is $\\frac{m^2+10m+29}{4\\,m!}$, as before.",
+      "Let $f(x)=\\sinh x=\\sum_{m\\ \\mathrm{odd}}\\frac{x^m}{m!}$. Then $x f'=\\sum\\frac{m\\,x^m}{m!}$ and $x^2f''=\\sum\\frac{m(m-1)x^m}{m!}$.",
+      "At $x=1$: $\\sum_{m\\ \\mathrm{odd}}\\frac{m^2+10m+29}{m!}=f''(1)+11f'(1)+29f(1)=\\sinh1+11\\cosh1+29\\sinh1=30\\sinh1+11\\cosh1$.",
+      "This sum includes $m=1$, whose term is $\\frac{1+10+29}{1!}=40$; remove it: $\\sum_{m\\ge3}=30\\sinh1+11\\cosh1-40$.",
+      "Divide by 4: $\\frac14\\left[15\\left(e-e^{-1}\\right)+\\frac{11}{2}\\left(e+e^{-1}\\right)-40\\right]=\\frac{41}{8}e-\\frac{19}{8}e^{-1}-10$.",
+      "Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r\\ \\mathrm{odd}}\\frac{1}{r!}=\\sinh1=\\frac{e-e^{-1}}{2}$ and $\\sum_{r\\ \\mathrm{even}\\ge0}\\frac1{r!}=\\cosh1=\\frac{e+e^{-1}}{2}$; remember to subtract the first terms when the sum starts later.",
+    "For $\\sum\\frac{P(r)}{r!}$ write $P(r)$ in the falling-factorial basis $r(r-1),\\ r,\\ 1$; then $\\frac{r(r-1)}{r!}=\\frac1{(r-2)!}$ and $\\frac{r}{r!}=\\frac1{(r-1)!}$.",
+    "Operator view: $\\left(x\\frac{d}{dx}\\right)$ multiplies the coefficient of $x^r$ by $r$; $x^2\\frac{d^2}{dx^2}$ multiplies by $r(r-1)$.",
+    "Sanity check: the $n=1$ term is $\\frac{17}{3!}\\approx2.83$ and later terms fall quickly, so a total near $3.06$ is reasonable."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 3,
+   "concepts": [
+    "Probability: classical definition with counting of arithmetic progressions"
+   ],
+   "level": 1,
+   "question": "Out of 11 consecutive natural numbers if three numbers are selected at random (without repetition), then the probability that they are in A.P. with positive common difference, is :",
+   "options": [
+    "$\\frac{5}{33}$",
+    "$\\frac{5}{101}$",
+    "$\\frac{15}{101}$",
+    "$\\frac{10}{99}$"
+   ],
+   "answer": "(A) $\\frac{5}{33}$",
+   "key_idea": "Count A.P.s by common difference $d$: the first term can be any of the first $11-2d$ numbers.",
+   "solution": [
+    "Call the numbers $a_1,a_2,\\dots,a_{11}$.",
+    "Common difference $1$: the triple runs from $\\{a_1,a_2,a_3\\}$ to $\\{a_9,a_{10},a_{11}\\}$, so $9$ triples.",
+    "Common difference $2$: $7$ triples.",
+    "Common difference $3$: $5$ triples.",
+    "Common difference $4$: $3$ triples.",
+    "Common difference $5$: $1$ triple. Total favourable $=9+7+5+3+1=25$.",
+    "Total ways of choosing 3 numbers $={}^{11}C_3=165$.",
+    "$P=\\frac{25}{{}^{11}C_3}=\\frac{25}{165}=\\frac{5}{33}$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Three numbers are in A.P. exactly when the outer two have the same parity (the middle one is their average).",
+     "solution": [
+      "If $a<b<c$ are in A.P. then $b=\\frac{a+c}{2}$, so $a+c$ is even: $a$ and $c$ have the same parity.",
+      "Conversely any two numbers $a<c$ of the same parity have an integer midpoint $b$ strictly between them.",
+      "So favourable triples correspond one-to-one with pairs of same parity. Among $1,\\dots,11$: 6 odd and 5 even numbers.",
+      "Count $={}^{6}C_2+{}^{5}C_2=15+10=25$.",
+      "$P=\\frac{25}{165}=\\frac{5}{33}$. Option (A), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of 3-term A.P.s in $\\{1,\\dots,n\\}$: $\\left\\lfloor\\frac{(n-1)^2}{4}\\right\\rfloor$. Check $n=11$: $\\frac{100}{4}=25$.",
+    "Three numbers $a<b<c$ are in A.P. $\\iff a\\equiv c\\pmod2$ (then $b$ is forced); this reduces the count to pairs of equal parity: ${}^{\\lceil n/2\\rceil}C_2+{}^{\\lfloor n/2\\rfloor}C_2$.",
+    "Selection 'at random without repetition' of a set is unordered; a set in A.P. with $d>0$ has exactly one ordering, so no factor 6 or 2 appears."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 4,
+   "concepts": [
+    "Binomial coefficients: greatest value of $^nC_r$ and ratio of coefficients"
+   ],
+   "level": 1,
+   "question": "If $a$, $b$ and $c$ are the greatest values of ${}^{19}C_p$, ${}^{20}C_q$ and ${}^{21}C_r$ respectively, then :",
+   "options": [
+    "$\\frac{a}{10}=\\frac{b}{11}=\\frac{c}{21}$",
+    "$\\frac{a}{10}=\\frac{b}{11}=\\frac{c}{42}$",
+    "$\\frac{a}{11}=\\frac{b}{22}=\\frac{c}{42}$",
+    "$\\frac{a}{11}=\\frac{b}{22}=\\frac{c}{21}$"
+   ],
+   "answer": "(C) $\\frac{a}{11}=\\frac{b}{22}=\\frac{c}{42}$",
+   "key_idea": "$^nC_r$ is greatest at the middle $r$; relate neighbours with ${}^nC_r=\\frac nr\\,{}^{n-1}C_{r-1}$.",
+   "solution": [
+    "${}^{19}C_p$ is greatest at the middle: $a={}^{19}C_{10}={}^{19}C_{9}$.",
+    "${}^{20}C_q$ is greatest at the middle: $b={}^{20}C_{10}$.",
+    "${}^{21}C_r$ is greatest at the middle: $c={}^{21}C_{10}={}^{21}C_{11}$.",
+    "Use ${}^nC_r=\\frac nr\\,{}^{n-1}C_{r-1}$: $b={}^{20}C_{10}=\\frac{20}{10}\\,{}^{19}C_9=2a$.",
+    "$c={}^{21}C_{11}=\\frac{21}{11}\\,{}^{20}C_{10}=\\frac{21}{11}\\cdot\\frac{20}{10}\\,{}^{19}C_9=\\frac{42}{11}a$.",
+    "So $\\frac{a}{{}^{19}C_9}=\\frac{b}{\\frac{20}{10}{}^{19}C_9}=\\frac{c}{\\frac{21}{11}\\cdot\\frac{20}{10}{}^{19}C_9}$, i.e. $\\frac a1=\\frac b2=\\frac{c}{42/11}$.",
+    "Multiply by 11: $\\frac{a}{11}=\\frac{b}{22}=\\frac{c}{42}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Pascal's rule plus symmetry: $^{20}C_{10}={}^{19}C_9+{}^{19}C_{10}=2\\,{}^{19}C_9$, and similarly for $c$.",
+     "solution": [
+      "$a={}^{19}C_9={}^{19}C_{10}$ by symmetry.",
+      "Pascal: $b={}^{20}C_{10}={}^{19}C_{9}+{}^{19}C_{10}=2a$.",
+      "Pascal again: $c={}^{21}C_{10}={}^{20}C_{9}+{}^{20}C_{10}$.",
+      "Neighbour ratio: ${}^{20}C_{9}={}^{20}C_{10}\\cdot\\frac{10}{11}$, because $\\frac{{}^{n}C_{r-1}}{{}^{n}C_{r}}=\\frac{r}{n-r+1}$ with $n=20,r=10$.",
+      "So $c=b\\left(\\frac{10}{11}+1\\right)=\\frac{21}{11}\\,b=\\frac{21}{11}\\cdot2a=\\frac{42}{11}a$.",
+      "Hence $a:b:c=1:2:\\frac{42}{11}=11:22:42$. Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "${}^nC_r$ is maximal at $r=\\frac n2$ for even $n$, and at $r=\\frac{n\\pm1}{2}$ (two equal values) for odd $n$.",
+    "${}^nC_r=\\frac nr\\,{}^{n-1}C_{r-1}$ and $\\frac{{}^nC_{r-1}}{{}^nC_r}=\\frac{r}{n-r+1}$ turn any ratio of binomial coefficients into a product of simple fractions.",
+    "Central binomial recurrence: ${}^{2m}C_m=\\frac{2(2m-1)}{m}\\,{}^{2m-2}C_{m-1}$; e.g. ${}^{20}C_{10}=\\frac{2\\cdot19}{10}\\cdot{}^{18}C_9=3.8\\times48620=184756$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 5,
+   "concepts": [
+    "Total probability (two-stage experiment)"
+   ],
+   "level": 1,
+   "question": "An unbiased coin is tossed. If the outcome is a head then a pair of unbiased dice is rolled and the sum of the numbers obtained on them is noted. If the toss of the coin results in tail then a card from a well-shuffled pack of nine cards numbered $1,2,3,\\dots,9$ is randomly picked and the number on the card is noted. The probability that the noted number is either 7 or 8 is:",
+   "options": [
+    "$\\frac{13}{36}$",
+    "$\\frac{15}{72}$",
+    "$\\frac{19}{72}$",
+    "$\\frac{19}{36}$"
+   ],
+   "answer": "(C) $\\frac{19}{72}$",
+   "key_idea": "Condition on the coin: weight each branch's probability of '7 or 8' by $\\frac12$.",
+   "solution": [
+    "Head (probability $\\frac12$): the sum of two dice is 7 in 6 ways and 8 in 5 ways, so $P(\\text{7 or 8}\\mid H)=\\frac{11}{36}$.",
+    "Tail (probability $\\frac12$): one of the nine cards is picked, and 7 or 8 are 2 cards, so $P(\\text{7 or 8}\\mid T)=\\frac29$.",
+    "$P(A)=\\frac12\\times\\frac{11}{36}+\\frac12\\times\\frac29$.",
+    "$=\\frac{11}{72}+\\frac{8}{72}=\\frac{19}{72}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Law of total probability: $P(A)=\\sum_iP(B_i)P(A\\mid B_i)$ over a partition $\\{B_i\\}$ (here the coin: $H,T$).",
+    "Number of ways of getting a sum $s$ with two dice: $6-|s-7|$ for $2\\le s\\le12$ (sum 7: 6, sum 8: 5).",
+    "Draw a two-branch tree first; multiply along a path, add across the paths that satisfy the event."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 6,
+   "concepts": [
+    "Matrix powers (periodicity of a matrix)",
+    "Cube roots of unity"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha$ be a root of the equation $x^2+x+1=0$ and the matrix $A=\\frac{1}{\\sqrt3}\\begin{pmatrix}1&1&1\\\\1&\\alpha&\\alpha^2\\\\1&\\alpha^2&\\alpha^4\\end{pmatrix}$, then the matrix $A^{31}$ is equal to :",
+   "options": [
+    "$I_3$",
+    "$A^3$",
+    "$A$",
+    "$A^2$"
+   ],
+   "answer": "(B) $A^3$",
+   "key_idea": "Show $A^2$ is a permutation matrix, so $A^4=I$ and $A^{31}=A^{28}A^3=A^3$.",
+   "solution": [
+    "Since $\\alpha$ is a root of $x^2+x+1=0$, $\\alpha$ is a primitive cube root of unity: $\\alpha^3=1$, $1+\\alpha+\\alpha^2=0$, and $\\alpha^4=\\alpha$.",
+    "$A^2=\\frac13\\begin{pmatrix}1&1&1\\\\1&\\alpha&\\alpha^2\\\\1&\\alpha^2&\\alpha^4\\end{pmatrix}\\begin{pmatrix}1&1&1\\\\1&\\alpha&\\alpha^2\\\\1&\\alpha^2&\\alpha^4\\end{pmatrix}$.",
+    "Each entry is a sum of three cube roots of unity: it is $3$ when the exponents add to a multiple of 3, else $0$.",
+    "$A^2=\\frac13\\begin{pmatrix}3&0&0\\\\0&0&3\\\\0&3&0\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}$.",
+    "$A^4=A^2\\cdot A^2=\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}\\begin{pmatrix}1&0&0\\\\0&0&1\\\\0&1&0\\end{pmatrix}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&1\\end{pmatrix}=I$.",
+    "So $A^{31}=A^{28}\\cdot A^3=(A^4)^7A^3=A^3$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$A$ is the normalised $3\\times3$ discrete Fourier matrix; its square sends index $j$ to $-j\\pmod 3$, a transposition, so $A^4=I$.",
+     "solution": [
+      "Number rows and columns $0,1,2$: the $(j,k)$ entry of $\\sqrt3A$ is $\\alpha^{jk}$ (since $\\alpha^4=\\alpha^{2\\cdot2}$).",
+      "The $(j,l)$ entry of $A^2$ is $\\frac13\\sum_{k=0}^{2}\\alpha^{jk}\\alpha^{kl}=\\frac13\\sum_{k=0}^{2}\\left(\\alpha^{j+l}\\right)^k$.",
+      "This geometric sum is $3$ if $j+l\\equiv0\\pmod3$ and $\\frac{1-\\alpha^{3(j+l)}}{1-\\alpha^{j+l}}=0$ otherwise.",
+      "So $A^2$ has a 1 exactly where $l\\equiv-j$: it swaps indices $1\\leftrightarrow2$ and fixes $0$, a permutation $P$ with $P^2=I$.",
+      "Hence $A^4=P^2=I$, so $A^{31}=A^{31-28}=A^3$. Option (B), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The normalised DFT matrix $F=\\frac1{\\sqrt n}\\left(\\omega^{jk}\\right)$, $\\omega=e^{2\\pi i/n}$, is unitary, $F^2$ is the 'reversal' permutation $j\\mapsto-j\\pmod n$, and $F^4=I$ for every $n$.",
+    "For a primitive $n$-th root of unity $\\omega$: $\\sum_{k=0}^{n-1}\\omega^{mk}=n$ if $n\\mid m$, else $0$.",
+    "If $A^k=I$ then $A^m=A^{m\\bmod k}$; always look for the smallest $k$ (here $A^2\\neq I$, so $k=4$).",
+    "Check: $\\mathrm{tr}A^2=1$ matches the trace of the permutation matrix (one fixed index)."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 7,
+   "concepts": [
+    "Square root of a complex number",
+    "Real and imaginary parts"
+   ],
+   "level": 1,
+   "question": "The imaginary part of $\\left(3+2\\sqrt{-54}\\right)^{\\frac12}-\\left(3-2\\sqrt{-54}\\right)^{\\frac12}$ can be :",
+   "options": [
+    "$-\\sqrt6$",
+    "$\\sqrt6$",
+    "$6$",
+    "$-2\\sqrt6$"
+   ],
+   "answer": "(D) $-2\\sqrt6$",
+   "key_idea": "$3\\pm6\\sqrt6\\,i=\\left(3\\pm\\sqrt6\\,i\\right)^2$, so both square roots are $\\pm\\left(3\\pm\\sqrt6\\,i\\right)$.",
+   "solution": [
+    "$\\left(3+2\\sqrt{-54}\\right)^{\\frac12}=\\left(3+2\\sqrt{54}\\,i\\right)^{\\frac12}$ and $2\\sqrt{54}=2\\cdot3\\sqrt6=6\\sqrt6$.",
+    "So it equals $\\left(3+2\\cdot3\\sqrt6\\,i\\right)^{\\frac12}$.",
+    "Recognise a square: $3^2+(\\sqrt6\\,i)^2+2\\cdot3\\cdot\\sqrt6\\,i=9-6+6\\sqrt6\\,i=3+6\\sqrt6\\,i$.",
+    "Hence $\\left(3+2\\sqrt{-54}\\right)^{\\frac12}=\\left((3+\\sqrt6\\,i)^2\\right)^{\\frac12}=\\pm\\left(3+\\sqrt6\\,i\\right)$.",
+    "Similarly $\\left(3-2\\sqrt{-54}\\right)^{\\frac12}=\\left(3-6\\sqrt6\\,i\\right)^{\\frac12}=\\left((3-\\sqrt6\\,i)^2\\right)^{\\frac12}=\\pm\\left(3-\\sqrt6\\,i\\right)$.",
+    "The difference is $\\pm(3+\\sqrt6\\,i)\\mp(3-\\sqrt6\\,i)$ with independent signs: $\\pm2\\sqrt6\\,i$ or $\\pm6$.",
+    "The imaginary part is therefore $\\pm2\\sqrt6$ (or $0$ in the real cases $\\pm6$), so $-2\\sqrt6$ is possible. Option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's first line prints $\\left(3+2\\sqrt{54}\\right)^{1/2}$ on the right-hand side of the final equation (missing the $-$ sign inside the root; should be $\\sqrt{-54}$). It also states the imaginary part is $\\pm2\\sqrt6$ without noting that the two real values $\\pm6$ have imaginary part $0$. Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The two radicands are conjugates, so the roots are $w$ and $\\pm\\bar w$; the difference is $2i\\,\\mathrm{Im}\\,w$ or $2\\,\\mathrm{Re}\\,w$.",
+     "solution": [
+      "Let $z=3+6\\sqrt6\\,i$; the other radicand is $\\bar z$. If $w^2=z$ then $\\left(\\bar w\\right)^2=\\bar z$, so the roots of $\\bar z$ are $\\pm\\bar w$.",
+      "The expression is $\\pm w\\mp'\\bar w$: either $w-\\bar w=2i\\,\\mathrm{Im}(w)$ (purely imaginary) or $w+\\bar w=2\\,\\mathrm{Re}(w)$ (real), up to sign.",
+      "$|z|=\\sqrt{9+216}=15$. For $w=p+iq$: $p^2=\\frac{|z|+3}{2}=9$, $q^2=\\frac{|z|-3}{2}=6$.",
+      "So $\\mathrm{Re}\\,w=\\pm3$, $\\mathrm{Im}\\,w=\\pm\\sqrt6$ (same sign by $2pq=6\\sqrt6>0$).",
+      "Imaginary part of the expression: $\\pm2\\sqrt6$ in the first case, $0$ in the second. Hence $-2\\sqrt6$ is possible. Option (D), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $w=p+iq$ and $w^2=a+ib$ then $p^2=\\frac{|a+ib|+a}{2}$, $q^2=\\frac{|a+ib|-a}{2}$, and $\\mathrm{sign}(pq)=\\mathrm{sign}(b)$.",
+    "$\\sqrt{a+ib}$ is a perfect square when $|a+ib|$ is a perfect square: here $|z|=15$ gave $9$ and $6$.",
+    "Radicands $z$ and $\\bar z$ give $w$ and $\\pm\\bar w$, so $\\sqrt z\\pm\\sqrt{\\bar z}$ is $2\\,\\mathrm{Re}\\sqrt z$ or $2i\\,\\mathrm{Im}\\sqrt z$.",
+    "Every non-zero complex number has two square roots, $\\pm w$; 'can be' questions need all sign choices."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 8,
+   "concepts": [
+    "Statistics: mean and variance of combined data"
+   ],
+   "level": 1,
+   "question": "The mean and variance of a set of 15 numbers are 12 and 14 respectively. The mean and variance of another set of 15 numbers are 14 and $\\sigma^2$ respectively. If the variance of all the 30 numbers in the two sets is 13, then $\\sigma^2$ is equal to :",
+   "options": [
+    "9",
+    "12",
+    "10",
+    "11"
+   ],
+   "answer": "(C) $10$",
+   "key_idea": "Combined variance $=\\frac{n_1\\sigma_1^2+n_2\\sigma_2^2}{n_1+n_2}+\\frac{n_1n_2(m_1-m_2)^2}{(n_1+n_2)^2}$.",
+   "solution": [
+    "Combined variance $=\\frac{n_1\\sigma_1^2+n_2\\sigma_2^2}{n_1+n_2}+\\frac{n_1n_2(m_1-m_2)^2}{(n_1+n_2)^2}$.",
+    "$13=\\frac{15\\cdot14+15\\cdot\\sigma^2}{30}+\\frac{15\\cdot15\\,(12-14)^2}{30\\times30}$.",
+    "$13=\\frac{14+\\sigma^2}{2}+\\frac44$.",
+    "$13=\\frac{14+\\sigma^2}{2}+1\\Rightarrow\\frac{14+\\sigma^2}{2}=12\\Rightarrow\\sigma^2=10$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take deviations from the combined mean: each set's mean is exactly 1 away from 13, so $13=\\frac12\\left[(14+1)+(\\sigma^2+1)\\right]$.",
+     "solution": [
+      "Equal sizes $\\Rightarrow$ combined mean $=\\frac{12+14}{2}=13$.",
+      "Total variance $=$ average over the sets of $\\left[\\text{variance}+(\\text{mean}-13)^2\\right]$.",
+      "Set 1: $14+(12-13)^2=15$. Set 2: $\\sigma^2+(14-13)^2=\\sigma^2+1$.",
+      "$13=\\frac{15+\\sigma^2+1}{2}\\Rightarrow\\sigma^2+16=26\\Rightarrow\\sigma^2=10$. Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Combined variance $=$ (weighted average of the variances) $+$ (weighted variance of the means); for equal sizes the second term is $\\frac{(m_1-m_2)^2}{4}$.",
+    "Equivalently $\\sigma^2=\\frac{\\sum n_i\\left[\\sigma_i^2+(m_i-M)^2\\right]}{\\sum n_i}$ where $M$ is the combined mean.",
+    "Raw-sum check: $\\sum x^2=n(\\sigma^2+m^2)$ for each set; here $15\\cdot158+15(196+10)=5460=30\\cdot(13^2+13)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 9,
+   "concepts": [
+    "Regions in the Argand plane (disc, half-planes)"
+   ],
+   "level": 1,
+   "question": "Let $S_1$, $S_2$ and $S_3$ be three sets defined as\n$S_1=\\{z\\in\\mathbb{C}:|z-1|\\le\\sqrt2\\}$, $S_2=\\{z\\in\\mathbb{C}:\\mathrm{Re}\\,((1-i)z)\\ge1\\}$, $S_3=\\{z\\in\\mathbb{C}:\\mathrm{Im}(z)\\le1\\}$.\nThen the set $S_1\\cap S_2\\cap S_3$ :",
+   "options": [
+    "has infinitely many elements",
+    "has exactly two elements",
+    "has exactly three elements",
+    "is a singleton"
+   ],
+   "answer": "(A) has infinitely many elements",
+   "key_idea": "Translate each set into $x,y$: a closed disc and two half-planes; their overlap has non-empty interior.",
+   "solution": [
+    "$S_1$: $|z-1|\\le\\sqrt2$, i.e. $|x+iy-1|\\le\\sqrt2$, so $(x-1)^2+y^2\\le2$ (disc, centre $(1,0)$, radius $\\sqrt2$).",
+    "$S_2$: $\\mathrm{Re}\\left((x+iy)(1-i)\\right)\\ge1$; $(x+iy)(1-i)=(x+y)+i(y-x)$, so $x+y\\ge1$ (half-plane).",
+    "$S_3$: $\\mathrm{Im}(z)\\le1$ gives $y\\le1$ (half-plane).",
+    "On the figure the disc, the line $x+y=1$ and the line $y=1$ cut out a shaded region with non-empty interior.",
+    "A region with interior contains infinitely many points, so $S_1\\cap S_2\\cap S_3$ has infinitely many elements. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Skip the picture: exhibit an explicit infinite family inside all three sets.",
+     "solution": [
+      "Take $z=1+it$ with $0\\le t\\le1$, so $x=1$, $y=t$.",
+      "$S_1$: $(x-1)^2+y^2=t^2\\le1\\le2$. True.",
+      "$S_2$: $x+y=1+t\\ge1$. True.",
+      "$S_3$: $y=t\\le1$. True.",
+      "Every $t\\in[0,1]$ gives a different point of the intersection, so it is infinite. Option (A), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With $z=x+iy$: $\\mathrm{Re}\\left((a+ib)z\\right)=ax-by$, so $\\mathrm{Re}\\left((1-i)z\\right)=x+y$.",
+    "A system of inequalities with a strict interior point (or a segment) has infinitely many solutions; finitely many solutions arise only at tangent/touching positions.",
+    "Quick test of non-emptiness: check a convenient point such as the disc's centre or a point on a boundary line; here $\\left(1,\\tfrac12\\right)$ is inside all three."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 10,
+   "concepts": [
+    "Locus in the Argand plane (difference of squared distances is a line)",
+    "Intercepts of a line"
+   ],
+   "level": 1,
+   "question": "Let $z_1=2+3i$ and $z_2=3+4i$. The set $S=\\left\\{z\\in\\mathbb{C}:|z-z_1|^2-|z-z_2|^2=|z_1-z_2|^2\\right\\}$ represents a :",
+   "options": [
+    "straight line with the sum of its intercepts on the coordinate axes equals $-18$",
+    "hyperbola with eccentricity 2",
+    "straight line with the sum of its intercepts on the coordinate axes equals 14",
+    "hyperbola with the length of the transverse axis 7"
+   ],
+   "answer": "(C) straight line with the sum of its intercepts on the coordinate axes equals 14",
+   "key_idea": "The squares of $x$ and $y$ cancel, leaving a straight line.",
+   "solution": [
+    "Put $z=x+iy$ and $|z_1-z_2|^2=|{-1}-i|^2=1+1=2$.",
+    "$\\left((x-2)^2+(y-3)^2\\right)-\\left((x-3)^2+(y-4)^2\\right)=1+1$.",
+    "$(x-2)^2-(x-3)^2=2x-5$ and $(y-3)^2-(y-4)^2=2y-7$.",
+    "So $2x-5+2y-7=2\\Rightarrow x+y=7$.",
+    "This is a straight line with intercepts $7$ and $7$ on the axes; their sum is $14$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The condition is Pythagoras: $|z-z_1|^2=|z-z_2|^2+|z_2-z_1|^2$ means a right angle at $z_2$, so $z$ lies on the perpendicular to $z_1z_2$ through $z_2$.",
+     "solution": [
+      "The relation reads $|z-z_1|^2=|z-z_2|^2+|z_2-z_1|^2$ (since $|z_1-z_2|=|z_2-z_1|$).",
+      "By the converse of Pythagoras the triangle with vertices $z,z_2,z_1$ has a right angle at $z_2$, i.e. $(z-z_2)\\perp(z_1-z_2)$.",
+      "So $z$ lies on the line through $z_2=(3,4)$ perpendicular to $z_1z_2$, whose direction is $(1,1)$; the line has normal $(1,1)$.",
+      "The line is $1(x-3)+1(y-4)=0$, i.e. $x+y=7$ (the degenerate point $z=z_2$ is on it).",
+      "Intercepts $7+7=14$. Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|z-z_1|^2-|z-z_2|^2=k$ is always a straight line perpendicular to $z_1z_2$ (the $|z|^2$ terms cancel); $k=0$ gives the perpendicular bisector.",
+    "$|z-z_1|^2-|z-z_2|^2=|z_1-z_2|^2$ is the line through $z_2$ perpendicular to $z_1z_2$.",
+    "Intercepts of $ax+by=c$ on the axes are $\\frac ca$ and $\\frac cb$; for $x+y=7$ both equal 7.",
+    "Conics need $|z-z_1|\\pm|z-z_2|=k$ (ellipse/hyperbola); squares of distances alone cannot give a hyperbola."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 11,
+   "concepts": [
+    "Modulus of a complex number and the circle $|z-z_1|=k|z-z_2|$",
+    "Greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let $a,b$ be two real numbers such that $ab<0$. If the complex number $\\frac{1+ai}{b+i}$ is of unit modulus and $a+ib$ lies on the circle $|z-1|=2|z|$, then a possible value of $\\frac{1+[a]}{4b}$, where $[t]$ is the greatest integer function, is :",
+   "options": [
+    "$\\frac12$",
+    "$-\\frac12$",
+    "$1$",
+    "$-1$"
+   ],
+   "answer": "Dropped in the PDF - no option matches (computed values: $0$ or $-\\frac{1+\\sqrt7}{4}$)",
+   "key_idea": "Unit modulus gives $|a|=|b|$, so $b=-a$; the circle condition then fixes $a$ by a quadratic.",
+   "solution": [
+    "Given $ab<0$ and $\\left|\\frac{1+ai}{b+i}\\right|=1$, so $|1+ai|=|b+i|$.",
+    "$a^2+1=b^2+1\\Rightarrow a=\\pm b$; since $ab<0$, $b=-a$.",
+    "$a+ib$ lies on $|z-1|=2|z|$: $|a+ib-1|=2|a+ib|$.",
+    "Square: $(a-1)^2+b^2=4\\left(a^2+b^2\\right)$. With $b^2=a^2$: $(a-1)^2+a^2=4\\cdot2a^2$.",
+    "$1-2a=6a^2$ (from $2a^2-2a+1=8a^2$), so $6a^2+2a-1=0$.",
+    "$a=\\frac{-2\\pm\\sqrt{28}}{12}=\\frac{-1\\pm\\sqrt7}{6}$.",
+    "Case $a=\\frac{\\sqrt7-1}{6}\\approx0.274$: $b=\\frac{1-\\sqrt7}{6}$ and $[a]=0$, so $\\frac{1+[a]}{4b}=\\frac{6}{4(1-\\sqrt7)}=-\\frac{1+\\sqrt7}{4}\\approx-0.911$.",
+    "Case $a=\\frac{-1-\\sqrt7}{6}\\approx-0.608$: $b=\\frac{1+\\sqrt7}{6}$ and $[a]=-1$, so $1+[a]=0$ and the value is $0$.",
+    "The possible values are $-\\frac{1+\\sqrt7}{4}$ and $0$; none equals $\\pm\\frac12$ or $\\pm1$, so no option matches (the PDF drops the question)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF stops after the first case ('Similarly it is not matching with $a=\\frac{-1-\\sqrt7}{6}$') without computing the second case. The second case is now written out: $[a]=-1$, so the value is $0$. Verified numerically; the key 'Drop' is right for the printed question. (If the stem were read as $1+\\frac{[a]}{4b}$, the case $[a]=0$ would give $1$, option (C), which is probably what the author intended.)",
+   "alternate_solutions": [
+    {
+     "idea": "Skip solving the quadratic: the sign of $b$ and the value of $[a]$ show that no option can occur, and a direct substitution rejects the rest.",
+     "solution": [
+      "As before $b=-a$ and $a$ satisfies $6a^2+2a-1=0$. The sum of the roots is $-\\frac13$ and the product $-\\frac16$, so one root is positive and one negative.",
+      "The circle $|z-1|=2|z|$ gives $3(x^2+y^2)+2x-1=0$: centre $\\left(-\\frac13,0\\right)$, radius $\\frac23$, so $-1\\le a\\le\\frac13$ and $[a]\\in\\{-1,0\\}$.",
+      "If $[a]=-1$ the numerator $1+[a]=0$, so the value is $0$, which is not an option.",
+      "If $[a]=0$ then $0\\le a<1$, so $b=-a<0$ and the value $\\frac{1}{4b}<0$: only $-\\frac12$ or $-1$ could occur, i.e. $b=-\\frac12$ or $b=-\\frac14$.",
+      "Test in $6a^2+2a-1$ with $a=-b$: $a=\\frac12$ gives $\\frac32+1-1=\\frac32\\neq0$; $a=\\frac14$ gives $\\frac38+\\frac12-1=-\\frac18\\neq0$.",
+      "So no option occurs: the question has no correct option (same conclusion)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left|\\frac{p+qi}{r+si}\\right|=1\\iff p^2+q^2=r^2+s^2$; here $1+a^2=b^2+1$.",
+    "Apollonius circle: $|z-z_1|=k|z-z_2|$ with $k\\ne1$ is a circle; for $|z-1|=2|z|$ it has centre $-\\frac13$ and radius $\\frac23$ (so $x\\in[-1,\\frac13]$).",
+    "When an answer is requested 'a possible value', list all cases (here two roots, two values of $[a]$) before matching options.",
+    "Check readings of the stem: $\\frac{1+[a]}{4b}$ and $1+\\frac{[a]}{4b}$ differ; the second would give $1$ for $[a]=0$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 12,
+   "concepts": [
+    "Locus in the Argand plane (Möbius transformation)",
+    "Distance between intercepts of a curve"
+   ],
+   "level": 2,
+   "question": "Let $u=\\frac{2z+i}{z-ki}$, $z=x+iy$ and $k>0$. If the curve represented by $\\mathrm{Re}(u)+\\mathrm{Im}(u)=1$ intersects the $y$-axis at the points $P$ and $Q$ where $PQ=5$, then the value of $k$ is :",
+   "options": [
+    "$\\frac32$",
+    "$2$",
+    "$4$",
+    "$\\frac12$"
+   ],
+   "answer": "(B) $2$",
+   "key_idea": "Put $x=0$ in the curve: it becomes a quadratic in $y$ whose root difference is $PQ$.",
+   "solution": [
+    "$u=\\frac{2x+2iy+i}{x+iy-ki}=\\frac{2x+(2y+1)i}{x+(y-k)i}$.",
+    "Multiply by the conjugate: $u=\\frac{2x+(2y+1)i}{x+(y-k)i}\\times\\frac{x-(y-k)i}{x-(y-k)i}$.",
+    "Numerator: $2x^2-2x(y-k)i+x(2y+1)i+(2y+1)(y-k)$; denominator $x^2+(y-k)^2$.",
+    "$\\mathrm{Re}(u)=\\frac{2x^2+(2y+1)(y-k)}{x^2+(y-k)^2}$.",
+    "$\\mathrm{Im}(u)=\\frac{(2y+1)x-2x(y-k)}{x^2+(y-k)^2}=\\frac{x(1+2k)}{x^2+(y-k)^2}$.",
+    "Curve: $\\mathrm{Re}(u)+\\mathrm{Im}(u)=1\\Rightarrow 2x^2+(2y+1)(y-k)+x(1+2k)=x^2+(y-k)^2\\;\\dots(1)$.",
+    "On the $y$-axis put $x=0$: $(2y+1)(y-k)=(y-k)^2\\Rightarrow2y^2-2yk+y-k=y^2-2yk+k^2$.",
+    "$y^2+y-k-k^2=0$ with roots $y_1,y_2$.",
+    "$PQ=|y_1-y_2|=\\frac{\\sqrt D}{|a|}$, so $5=\\sqrt{1+4k+4k^2}$, i.e. $25=1+4k+4k^2$.",
+    "$4(k^2+k)=24\\Rightarrow k^2+k-6=0\\Rightarrow(k+3)(k-2)=0$; since $k>0$, $k=2$. Option (B).",
+    "Remark: $y^2+y-k-k^2=(y-k)(y+k+1)$; the root $y=k$ is the pole $z=ki$ of $u$, which the question takes as a point of the curve (its closure), so the chord is $|2k+1|=5$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Working and answer are right for the intended question. Gap filled with a final remark: the quadratic $y^2+y-k-k^2=(y-k)(y+k+1)$ has the root $y=k$, i.e. $z=ki$, where $u$ is undefined (denominator zero), so strictly the curve itself meets the $y$-axis only at $y=-k-1$; the question intends the curve's closure through $z=ki$, and $PQ=|2k+1|=5$ gives $k=2$ as keyed. Checked with sympy.",
+   "alternate_solutions": [
+    {
+     "idea": "Divide first: $u=2+\\frac{(2k+1)i}{z-ki}$, which turns the curve into a circle through $ki$ with a simple intercept chord.",
+     "solution": [
+      "$2z+i=2(z-ki)+(2k+1)i$, so $u=2+\\frac{(2k+1)i}{z-ki}$.",
+      "With $\\rho^2=x^2+(y-k)^2$: $\\frac{1}{z-ki}=\\frac{x-(y-k)i}{\\rho^2}$, so $u=2+\\frac{(2k+1)\\left[(y-k)+ix\\right]}{\\rho^2}$.",
+      "$\\mathrm{Re}(u)+\\mathrm{Im}(u)=2+\\frac{(2k+1)(y-k+x)}{\\rho^2}=1\\Rightarrow\\rho^2+(2k+1)(x+y-k)=0$.",
+      "Curve: $x^2+(y-k)^2+(2k+1)(x+y-k)=0$, a circle passing through $ki=(0,k)$.",
+      "At $x=0$: $(y-k)^2+(2k+1)(y-k)=(y-k)(y+k+1)=0$, so $y=k$ or $y=-k-1$.",
+      "$PQ=|k-(-k-1)|=2k+1=5\\Rightarrow k=2$. Option (B), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Divide the numerator by the denominator before substituting: $\\frac{az+b}{z-c}=a+\\frac{b+ac}{z-c}$; then the real and imaginary parts have the same denominator and are easy.",
+    "Real and imaginary parts of $\\frac{1}{z-w}$ are $\\frac{x-p}{\\rho^2}$ and $\\frac{-(y-q)}{\\rho^2}$ with $w=p+iq$.",
+    "A condition $\\mathrm{Re}\\,u+\\mathrm{Im}\\,u=c$ for a Möbius $u$ is a circle (or line) through the pole.",
+    "Chord on $x=0$ of $y^2+By+C=0$: length $\\sqrt{B^2-4C}$; here $B=1,C=-k-k^2$ gives $2k+1$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 13,
+   "concepts": [
+    "Coordinate geometry: area of a triangle with a vertex at the origin",
+    "Counting divisors of an integer"
+   ],
+   "level": 1,
+   "question": "Let $S$ be the set of all triangles in the $xy$-plane, each having one vertex at the origin and the other two vertices lie on coordinate axes with integral coordinates. If each triangle in $S$ has area 50 sq. units, then the number of elements in the set $S$ is :",
+   "options": [
+    "18",
+    "36",
+    "32",
+    "9"
+   ],
+   "answer": "(B) 36",
+   "key_idea": "Area $\\frac12|ab|=50$ forces $|ab|=100$; count divisors of 100 and signs.",
+   "solution": [
+    "The vertices are $O(0,0)$, $A(a,0)$ and $B(0,b)$ on the axes with $a,b$ non-zero integers.",
+    "Area $=\\frac12|ab|=50\\Rightarrow|ab|=100$.",
+    "Prime factorisation: $100=2^2\\times5^2$.",
+    "Number of positive divisors $=3\\times3=9$, so $9$ choices of $|a|$ (and then $|b|=\\frac{100}{|a|}$).",
+    "Each of $a$ and $b$ can be positive or negative: $4$ sign choices.",
+    "Total elements in $S$ $=9\\times4=36$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Number of positive divisors of $p^{\\alpha}q^{\\beta}$ is $(\\alpha+1)(\\beta+1)$; for $100=2^25^2$ it is $9$.",
+    "Triangle $O(0,0),A(a,0),B(0,b)$ has area $\\frac12|ab|$; distinct pairs $(a,b)$ (with signs) give distinct triangles.",
+    "Integer solutions of $|ab|=N$ with $ab\\ne0$: $4\\,\\tau(N)$ (here $4\\times9=36$); for $ab=N>0$ exactly it is $2\\,\\tau(N)$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 14,
+   "concepts": [
+    "Remainder theorem with binomial expansion (divisibility)"
+   ],
+   "level": 1,
+   "question": "The remainder when $\\left((64)^{(64)}\\right)^{(64)}$ is divided by 7 is equal to :",
+   "options": [
+    "6",
+    "4",
+    "3",
+    "1"
+   ],
+   "answer": "(D) 1",
+   "key_idea": "$64=63+1=1+9\\cdot7$, so every power of 64 leaves remainder 1.",
+   "solution": [
+    "$\\left((64)^{64}\\right)^{64}=(64)^{64^2}=64^n$ where $n=64^2$ is a positive integer.",
+    "Write $64^n=(1+63)^n$.",
+    "Binomial expansion: $(1+63)^n=1+{}^nC_1\\cdot63+{}^nC_2\\cdot63^2+\\dots=1+63I$ for an integer $I$.",
+    "$63$ is divisible by 7, so $1+63I=7(9I)+1$.",
+    "The remainder is $1$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fermat's little theorem with $64=2^6$: $2^6\\equiv1\\pmod7$.",
+     "solution": [
+      "$64=2^6$, so $64^n=2^{6n}=\\left(2^6\\right)^n$.",
+      "By Fermat, $2^{6}\\equiv1\\pmod 7$ (as $7$ is prime and $\\gcd(2,7)=1$).",
+      "So $64^n\\equiv1^n=1\\pmod 7$ for every positive integer $n$.",
+      "The remainder is $1$. Option (D), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $a\\equiv1\\pmod m$ then $a^n\\equiv1\\pmod m$ for every $n\\ge0$; $64\\equiv1\\pmod 7$ and $\\pmod 9$ and $\\pmod{21}$ as $63=7\\cdot9$.",
+    "Reduce the base first; a huge exponent tower is irrelevant when the base is $\\equiv1$ (or $\\equiv-1$: sign $(-1)^n$).",
+    "General: $(1+km)^n=1+m(\\dots)$, so $(1+km)^n\\equiv1\\pmod m$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 15,
+   "concepts": [
+    "Binomial theorem: coefficient extraction",
+    "Sum of binomial coefficients (hockey-stick identity)"
+   ],
+   "level": 2,
+   "question": "The coefficient of $x^{70}$ in $x^2(1+x)^{98}+x^3(1+x)^{97}+x^4(1+x)^{96}+\\dots+x^{54}(1+x)^{46}$ is ${}^{99}C_p-{}^{46}C_q$. Then a possible value of $p+q$ is :",
+   "options": [
+    "68",
+    "83",
+    "55",
+    "61"
+   ],
+   "answer": "(B) 83",
+   "key_idea": "Each term gives ${}^{n}C_{30}$ with $n=98,97,\\dots,46$; sum them with the hockey-stick identity.",
+   "solution": [
+    "Coefficient of $x^{70}$ in $x^k(1+x)^{100-k}$ is the coefficient of $x^{70-k}$ in $(1+x)^{100-k}$, i.e. ${}^{100-k}C_{70-k}$.",
+    "For $k=2,3,\\dots,54$: ${}^{98}C_{68}+{}^{97}C_{67}+{}^{96}C_{66}+\\dots+{}^{47}C_{17}+{}^{46}C_{16}$.",
+    "By symmetry ${}^{n}C_{n-30}={}^{n}C_{30}$, so this is ${}^{46}C_{30}+{}^{47}C_{30}+\\dots+{}^{98}C_{30}$.",
+    "Write ${}^{46}C_{30}={}^{46}C_{31}+{}^{46}C_{30}-{}^{46}C_{31}$, so the sum is $\\left({}^{46}C_{31}+{}^{46}C_{30}\\right)+{}^{47}C_{30}+\\dots+{}^{98}C_{30}-{}^{46}C_{31}$.",
+    "Pascal: ${}^{46}C_{31}+{}^{46}C_{30}={}^{47}C_{31}$; then ${}^{47}C_{31}+{}^{47}C_{30}={}^{48}C_{31}$, and so on up to ${}^{98}C_{31}+{}^{98}C_{30}={}^{99}C_{31}$.",
+    "The coefficient is ${}^{99}C_{31}-{}^{46}C_{31}={}^{99}C_p-{}^{46}C_q$.",
+    "Using symmetry, $p\\in\\{31,68\\}$ and $q\\in\\{31,15\\}$, so $p+q\\in\\{62,99,46,83\\}$; among the options only $83$ occurs ($p=68$, $q=15$). Option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the possible values as '62, 83, 99, 46' without saying how they arise, and its last lines (${}^{99}C_{31}-{}^{46}C_{31}={}^{99}C_p-{}^{46}C_q$) skip the use of symmetry; the step choosing $p\\in\\{31,68\\},q\\in\\{15,31\\}$ is added. All values verified by brute force: coefficient $={}^{99}C_{31}-{}^{46}C_{31}$.",
+   "alternate_solutions": [
+    {
+     "idea": "The series is geometric with ratio $\\frac{x}{1+x}$; sum it in closed form, then read the coefficient directly.",
+     "solution": [
+      "The expression is $\\sum_{k=2}^{54}x^k(1+x)^{100-k}=x^2(1+x)^{98}\\sum_{j=0}^{52}\\left(\\frac{x}{1+x}\\right)^j$.",
+      "Geometric sum with ratio $r=\\frac{x}{1+x}$: $\\frac{1-r^{53}}{1-r}=(1+x)\\left[1-\\frac{x^{53}}{(1+x)^{53}}\\right]$ since $1-r=\\frac1{1+x}$.",
+      "So the expression equals $x^2(1+x)^{99}-x^{55}(1+x)^{46}$.",
+      "Coefficient of $x^{70}$: $[x^{68}](1+x)^{99}-[x^{15}](1+x)^{46}={}^{99}C_{68}-{}^{46}C_{15}$.",
+      "So $p=68$, $q=15$ and $p+q=83$ (also valid: $p=31$, $q=31$ gives $62$, etc.). Option (B), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hockey stick: $\\sum_{n=r}^{N}{}^{n}C_r={}^{N+1}C_{r+1}$; here $\\sum_{n=30}^{98}{}^nC_{30}={}^{99}C_{31}$.",
+    "Series $\\sum x^k(1+x)^{m-k}$ is geometric with ratio $\\frac{x}{1+x}$: $\\sum_{k=a}^{b}x^k(1+x)^{m-k}=x^a(1+x)^{m-a+1}-x^{b+1}(1+x)^{m-b}$.",
+    "${}^nC_r={}^nC_{n-r}$ means 'possible values' of subscripts come in pairs $r,\\,n-r$.",
+    "Check: $a=b=2$, $m=4$ gives $x^2(1+x)^3-x^3(1+x)^2=x^2(1+x)^2$, as it should."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 16,
+   "concepts": [
+    "Binomial coefficients: ratios of consecutive coefficients",
+    "Locus of the centroid of a triangle (circle)"
+   ],
+   "level": 2,
+   "question": "Let ${}^nC_{r-1}=28$, ${}^nC_r=56$ and ${}^nC_{r+1}=70$. Let $A(4\\cos t,4\\sin t)$, $B(2\\sin t,-2\\cos t)$ and $C(3r-n,\\,r^2-n-1)$ be the vertices of a triangle $ABC$, where $t$ is a parameter. If $(3x-1)^2+(3y)^2=\\alpha$ is the locus of the centroid of triangle $ABC$, then $\\alpha$ equals :",
+   "options": [
+    "6",
+    "20",
+    "18",
+    "8"
+   ],
+   "answer": "(B) $20$",
+   "key_idea": "Consecutive-coefficient ratios give $n=8,r=3$; then $A\\perp B$ so $|A+B|$ is constant and the centroid traces a circle.",
+   "solution": [
+    "${}^nC_{r-1}=28,\\ {}^nC_r=56\\Rightarrow\\frac{{}^nC_{r-1}}{{}^nC_r}=\\frac{28}{56}$.",
+    "$\\frac{\\frac{n!}{(r-1)!(n-r+1)!}}{\\frac{n!}{r!(n-r)!}}=\\frac12\\Rightarrow\\frac{r}{n-r+1}=\\frac12\\Rightarrow3r=n+1\\;\\dots(i)$.",
+    "$\\frac{{}^nC_r}{{}^nC_{r+1}}=\\frac{56}{70}\\Rightarrow\\frac{r+1}{n-r}=\\frac{56}{70}\\Rightarrow9r=4n-5\\;\\dots(ii)$.",
+    "From (i) and (ii): $n=3r-1$, so $9r=12r-4-5\\Rightarrow r=3$ and $n=8$.",
+    "Then $C=(3r-n,\\ r^2-n-1)=(9-8,\\ 9-8-1)=(1,0)$.",
+    "Centroid $(x,y)$: $x=\\frac{4\\cos t+2\\sin t+1}{3}$ and $y=\\frac{4\\sin t-2\\cos t+0}{3}$.",
+    "So $3x-1=4\\cos t+2\\sin t$ and $3y=4\\sin t-2\\cos t$.",
+    "Square and add: $(3x-1)^2+(3y)^2=(16+4)\\left(\\cos^2t+\\sin^2t\\right)+\\left(16\\cos t\\sin t-16\\cos t\\sin t\\right)=20$.",
+    "So $\\alpha=20$. Option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working stops at '(r = 3), (n = 8)'; the centroid part of the question is not solved in the PDF at all. Written here: $C=(1,0)$, centroid coordinates and $(3x-1)^2+(3y)^2=20$. Answer B agrees with the key; checked with sympy.",
+   "alternate_solutions": [
+    {
+     "idea": "Row 8 of Pascal's triangle is $1,8,28,56,70$; and $\\vec{OB}$ is $\\vec{OA}$ turned through $-90^\\circ$ and halved, so $|A+B|$ is constant.",
+     "solution": [
+      "Recognise $28,56,70$ as consecutive entries of row $n=8$: ${}^8C_2,{}^8C_3,{}^8C_4$, so $r-1=2$, $r=3$, $n=8$.",
+      "$C=(3r-n,\\ r^2-n-1)=(1,0)$ is a fixed point.",
+      "$\\vec{OA}\\cdot\\vec{OB}=(4\\cos t)(2\\sin t)+(4\\sin t)(-2\\cos t)=0$, so $OA\\perp OB$ with $|OA|=4$ and $|OB|=2$.",
+      "Hence $|\\vec{OA}+\\vec{OB}|=\\sqrt{16+4}=\\sqrt{20}$ for every $t$.",
+      "Centroid $G=\\frac{A+B+C}{3}$, so $3G-C=A+B$ and $|3G-C|^2=20$.",
+      "With $C=(1,0)$: $(3x-1)^2+(3y)^2=20$. So $\\alpha=20$. Option (B), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For consecutive coefficients $\\frac{{}^nC_{r}}{{}^nC_{r-1}}=\\frac{n-r+1}{r}$; two ratios give two linear equations in $n,r$.",
+    "If $\\vec a\\perp\\vec b$ then $|\\vec a+\\vec b|^2=|\\vec a|^2+|\\vec b|^2$: $(4\\cos t,4\\sin t)$ and $(2\\sin t,-2\\cos t)$ are perpendicular vectors of lengths $4,2$.",
+    "Centroid locus when two vertices move on a circle-like path and the third is fixed is a circle: $3G-C=A+B$.",
+    "$(p\\cos t+q\\sin t)^2+(p\\sin t-q\\cos t)^2=p^2+q^2$ for all $t$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 17,
+   "concepts": [
+    "Bayes' theorem (conditional probability)"
+   ],
+   "level": 1,
+   "question": "In a group of 400 people, 160 are smokers and non-vegetarian; 100 are smokers and vegetarian and the remaining 140 are non-smokers and vegetarian. Their chances of getting a particular chest disorder are 35%, 20% and 10% respectively. A person is chosen from the group at random and is found to be suffering from the chest disorder. The probability that the selected person is a smoker and non-vegetarian is :",
+   "options": [
+    "$\\frac{8}{45}$",
+    "$\\frac{14}{45}$",
+    "$\\frac{7}{45}$",
+    "$\\frac{28}{45}$"
+   ],
+   "answer": "(D) $\\frac{28}{45}$",
+   "key_idea": "Bayes' theorem: weight each group by its size and its chance of the disorder.",
+   "solution": [
+    "The three groups are $E_1$: smokers and non-vegetarian ($160$), $E_2$: smokers and vegetarian ($100$), $E_3$: non-smokers and vegetarian ($140$); let $D$ be the disorder.",
+    "$P(D\\mid E_1)=\\frac{35}{100}$, $P(D\\mid E_2)=\\frac{20}{100}$, $P(D\\mid E_3)=\\frac{10}{100}$.",
+    "Bayes: $P(E_1\\mid D)=\\frac{160\\times\\frac{35}{100}}{160\\times\\frac{35}{100}+100\\times\\frac{20}{100}+140\\times\\frac{10}{100}}$.",
+    "$=\\frac{56}{56+20+14}=\\frac{56}{90}=\\frac{28}{45}$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Bayes: $P(E_i\\mid D)=\\frac{P(E_i)P(D\\mid E_i)}{\\sum_jP(E_j)P(D\\mid E_j)}$; group sizes can replace probabilities because the common factor $\\frac1{400}$ cancels.",
+    "Sanity check: the three posteriors $\\frac{56}{90},\\frac{20}{90},\\frac{14}{90}$ add to 1.",
+    "Expected number of sufferers: $56+20+14=90$ of 400; the answer is the share of group 1 among them."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 18,
+   "concepts": [
+    "Geometric progression condition",
+    "Probability: sum of two dice"
+   ],
+   "level": 1,
+   "question": "Let $N$ be the sum of the numbers appeared when two fair dice are rolled and let the probability that $N-2,\\ \\sqrt{3N},\\ N+2$ are in geometric progression be $\\frac{k}{48}$. Then the value of $k$ is",
+   "options": [
+    "4",
+    "16",
+    "2",
+    "8"
+   ],
+   "answer": "(A) $4$",
+   "key_idea": "Three terms are in G.P. iff the middle squared equals the product of the outer terms, giving $N=4$.",
+   "solution": [
+    "The sample space has $n(S)=36$ outcomes.",
+    "G.P. condition: $\\left(\\sqrt{3N}\\right)^2=(N-2)(N+2)$, i.e. $3N=N^2-4$.",
+    "$N^2-3N-4=0\\Rightarrow(N-4)(N+1)=0\\Rightarrow N=4$ or $N=-1$.",
+    "$N=-1$ is rejected (a sum of two dice is at least 2).",
+    "Sum $=4$ occurs for $\\{(1,3),(3,1),(2,2)\\}$, so $n(A)=3$.",
+    "$P(A)=\\frac{3}{36}=\\frac{1}{12}=\\frac{4}{48}\\Rightarrow k=4$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$a,b,c$ are in G.P. iff $b^2=ac$ (for non-zero terms); in A.P. iff $2b=a+c$.",
+    "Ways to get sum $s$ with two dice: $6-|s-7|$; sum $4$ gives $3$.",
+    "For $N=4$ the terms $2,\\sqrt{12},6$ have ratio $\\sqrt3$, confirming the G.P."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 19,
+   "concepts": [
+    "Binomial distribution: mean and standard deviation"
+   ],
+   "level": 0,
+   "question": "A bag contains 30 white balls and 10 red balls. 16 balls are drawn one by one randomly from the bag with replacement. If $X$ be the number of white balls drawn, then $\\left(\\frac{\\text{mean of }X}{\\text{standard deviation of }X}\\right)$ is equal to :",
+   "options": [
+    "4",
+    "$3\\sqrt2$",
+    "$\\frac{4\\sqrt3}{3}$",
+    "$4\\sqrt3$"
+   ],
+   "answer": "(D) $4\\sqrt3$",
+   "key_idea": "Drawing with replacement makes $X$ binomial with $n=16$, $p=\\frac34$.",
+   "solution": [
+    "$P(\\text{white})=\\frac{30}{40}=\\frac34=p$, $q=\\frac14$ and $n=16$.",
+    "$X$ is binomial $B\\left(16,\\frac34\\right)$, so mean $=np=16\\times\\frac34=12$.",
+    "Standard deviation $=\\sqrt{npq}=\\sqrt{16\\times\\frac34\\times\\frac14}=\\sqrt3$.",
+    "$\\frac{\\text{mean}}{\\text{s.d.}}=\\frac{12}{\\sqrt3}=4\\sqrt3$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$B(n,p)$: mean $np$, variance $npq$; the ratio mean/s.d. is $\\sqrt{\\frac{np}{q}}$ ($=\\sqrt{16\\cdot3}=4\\sqrt3$ here).",
+    "'With replacement' keeps $p$ constant, giving a binomial; 'without replacement' gives a hypergeometric distribution with smaller variance.",
+    "Mean $>$ variance for every binomial ($q<1$); this is a quick test for the distribution."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  },
+  {
+   "q_no": 20,
+   "concepts": [
+    "Conditional probability for nested events"
+   ],
+   "level": 1,
+   "question": "Let $A$ and $B$ be two non-null events such that $A\\subset B$. Then, which of the following statements is always correct?",
+   "options": [
+    "$P(A\\mid B)=P(B)-P(A)$",
+    "$P(A\\mid B)\\le P(A)$",
+    "$P(A\\mid B)\\ge P(A)$",
+    "$P(A\\mid B)=1$"
+   ],
+   "answer": "(C) $P(A\\mid B)\\ge P(A)$",
+   "key_idea": "$A\\subset B$ gives $A\\cap B=A$, so $P(A\\mid B)=\\frac{P(A)}{P(B)}\\ge P(A)$ because $P(B)\\le1$.",
+   "solution": [
+    "Since $A\\subset B$, $A\\cap B=A$.",
+    "$P\\left(\\frac AB\\right)=\\frac{P(A\\cap B)}{P(B)}$.",
+    "So $P\\left(\\frac AB\\right)=\\frac{P(A)}{P(B)}$.",
+    "Since $P(B)\\le1$, $\\frac{P(A)}{P(B)}\\ge P(A)$.",
+    "So $P\\left(\\frac AB\\right)\\ge P(A)$. Option (C). (Options A, B, D hold only in special cases.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Elimination by a counterexample: a die with $A=\\{1\\}\\subset B=\\{1,2\\}$.",
+     "solution": [
+      "Take one die: $A=\\{1\\}$, $B=\\{1,2\\}$, so $A\\subset B$ with $P(A)=\\frac16$, $P(B)=\\frac13$ and $P(A\\mid B)=\\frac12$.",
+      "(A): $P(B)-P(A)=\\frac13-\\frac16=\\frac16\\neq\\frac12$. False.",
+      "(B): $\\frac12\\le\\frac16$ is false. (D): $\\frac12\\neq1$. False.",
+      "(C): $\\frac12\\ge\\frac16$ holds; and for $B$ equal to the whole space, $P(A\\mid B)=P(A)$ so (C) holds with equality. Only (C) survives. Option (C), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $A\\subset B$: $P(A\\mid B)=\\frac{P(A)}{P(B)}\\ge P(A)$, with equality iff $P(B)=1$ (or $P(A)=0$); also $P(B\\mid A)=1$.",
+    "Conditioning on an event that contains $A$ can only raise the probability of $A$ (the sample space shrinks).",
+    "Quick test of 'always true' statements: try one nested pair on a die, e.g. $A=\\{1\\}\\subset B=\\{1,2\\}$."
+   ],
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4
+  }
+ ]
+}
