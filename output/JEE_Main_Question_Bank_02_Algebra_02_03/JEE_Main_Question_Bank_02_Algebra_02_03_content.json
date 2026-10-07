@@ -1,0 +1,868 @@
+{
+ "title": "JEE Main Question Bank 02 Algebra 02 (Set 03) — Paper Analysis",
+ "subtitle": "Questions 1–20 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Algebra_02_03.pdf (no blueprint; PDF questions 41–60 numbered 1–20 here)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper; JEE Advanced default assumed:",
+    "4 marks for a correct answer (assumed) · no negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Probability of independent trials with a stopping rule"
+   ],
+   "level": 2,
+   "question": "In a random experiment, a fair die is rolled until two fours are obtained in succession. The probability that the experiment will end in the fifth throw of the die is equal to :",
+   "options": [
+    "$\\frac{175}{6^5}$",
+    "$\\frac{200}{6^5}$",
+    "$\\frac{150}{6^5}$",
+    "$\\frac{225}{6^5}$"
+   ],
+   "answer": "(A) $\\frac{175}{6^5}$",
+   "key_idea": "Ending exactly at throw 5 means throws 4, 5 are fours, throw 3 is not a four, and throws 1, 2 are not both fours.",
+   "solution": [
+    "The experiment ends at the fifth throw only if throws 4 and 5 are both $4$ (the pair $44$), with $44$ not having occurred earlier.",
+    "Throw 3 must not be a $4$, otherwise throws 3 and 4 would already be $44$ and the experiment would end at throw 4.",
+    "Case 1: none of throws 1, 2, 3 is a $4$: probability $\\frac56\\cdot\\frac56\\cdot\\frac56\\cdot\\frac16\\cdot\\frac16$.",
+    "Case 2: a $4$ at throw 1 only: $\\frac16\\cdot\\frac56\\cdot\\frac56\\cdot\\frac16\\cdot\\frac16$. Case 3: a $4$ at throw 2 only: the same value, so the two cases give $2\\times\\frac{1}{6}\\cdot\\frac56\\cdot\\frac56\\cdot\\frac16\\cdot\\frac16$.",
+    "A $4$ at both throws 1 and 2 is excluded (it would end the experiment at throw 2).",
+    "Total $=\\frac{125+25+25}{6^5}=\\frac{175}{6^5}$. Option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Gap, not an error: the PDF shows the three cases only as box diagrams and never says why throw 3 must not be a $4$ or why $4,4$ in throws 1-2 is excluded. These reasons were added; the answer $\\frac{175}{6^5}$ is unchanged (confirmed by brute force over all $6^5$ sequences).",
+   "alternate_solutions": [
+    {
+     "idea": "Choose the last three throws as $x44$ with $x\\ne4$, then count the first two throws as any pair except $44$.",
+     "solution": [
+      "The sequence is $t_1t_2\\,t_3\\,4\\,4$ with $t_3\\ne 4$ (so the pair $44$ first appears at throws 4, 5).",
+      "There are $5$ choices for $t_3$.",
+      "The first two throws may be anything except the pair $(4,4)$, which would have ended the experiment: $36-1=35$ choices.",
+      "Favourable sequences: $5\\times35=175$, out of $6^5$ equally likely sequences.",
+      "Probability $=\\frac{175}{6^5}$. Option (A) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "\\\"First occurrence of a pattern at position $n$\\\": fix the pattern at the end, forbid the character that would complete it earlier, and forbid the pattern in the prefix.",
+    "Here the prefix count is $36-1=35$ (all ordered pairs except $44$) and the \\\"not 4\\\" choice for the third throw is $5$.",
+    "Check by the total: $P(\\text{ends at throw }2)=\\frac1{36}$, at throw 3 $=\\frac5{216}$, so later ends are rarer by the factor $\\frac56$ per throw."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Purely imaginary condition on complex numbers"
+   ],
+   "level": 1,
+   "question": "If $\\frac{z-\\alpha}{z+\\alpha}$ $(\\alpha\\in R)$ is a purely imaginary number and $|z|=2$, then a value of $\\alpha$ is :",
+   "options": [
+    "$\\frac12$",
+    "$1$",
+    "$2$",
+    "$\\sqrt2$"
+   ],
+   "answer": "(C) $2$",
+   "key_idea": "A purely imaginary number $w$ satisfies $w+\\bar w=0$, which collapses to $z\\bar z=\\alpha^2$.",
+   "solution": [
+    "Let $w=\\frac{z-\\alpha}{z+\\alpha}$. $w$ is purely imaginary, so $w+\\bar w=0$.",
+    "Since $\\alpha$ is real, $\\bar w=\\frac{\\bar z-\\alpha}{\\bar z+\\alpha}$, so $\\frac{z-\\alpha}{z+\\alpha}+\\frac{\\bar z-\\alpha}{\\bar z+\\alpha}=0$.",
+    "Multiply out: $(z-\\alpha)(\\bar z+\\alpha)+(\\bar z-\\alpha)(z+\\alpha)=0$.",
+    "$z\\bar z+z\\alpha-\\alpha\\bar z-\\alpha^2+z\\bar z-z\\alpha+\\bar z\\alpha-\\alpha^2=0$.",
+    "The terms $\\pm z\\alpha$ and $\\pm\\alpha\\bar z$ cancel, leaving $2z\\bar z-2\\alpha^2=0$, i.e. $z\\bar z=\\alpha^2$.",
+    "$|z|^2=\\alpha^2=4$, so $\\alpha=\\pm2$. Among the options, $\\alpha=2$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Thales: $\\arg\\frac{z-\\alpha}{z+\\alpha}=\\pm\\frac\\pi2$ means the angle at $z$ subtended by the segment from $-\\alpha$ to $\\alpha$ is a right angle.",
+     "solution": [
+      "$\\frac{z-\\alpha}{z+\\alpha}$ is the ratio of the vectors from $-\\alpha$ to $z$ and from $\\alpha$ to $z$ turned by the angle at $z$.",
+      "Its argument is $\\pm\\frac{\\pi}{2}$ exactly when the angle between those vectors is a right angle, i.e. $\\angle(-\\alpha)\\,z\\,\\alpha=90^\\circ$.",
+      "By Thales' theorem $z$ lies on the circle with diameter joining $-\\alpha$ and $\\alpha$ on the real axis: centre $0$, radius $|\\alpha|$.",
+      "So $|z|=|\\alpha|$; given $|z|=2$, $\\alpha=\\pm2$, and $\\alpha=2$ is in the options. Option (C) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$w$ purely imaginary $\\iff w+\\bar w=0$ (and $w\\ne0$); $w$ real $\\iff w=\\bar w$.",
+    "$\\frac{z-a}{z+a}$ ($a$ real) is purely imaginary exactly on the circle $|z|=|a|$ (Thales circle on diameter $[-a,a]$), and real exactly on the real axis.",
+    "Generally, $\\arg\\frac{z-z_1}{z-z_2}=\\pm\\frac\\pi2$ gives the circle on $z_1z_2$ as diameter."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Mean and standard deviation of data"
+   ],
+   "level": 1,
+   "question": "If the data $x_1,x_2,\\ldots,x_{10}$ is such that the mean of first four of these is $11$, the mean of the remaining six is $16$ and the sum of squares of all of these is $2{,}000$; then the standard deviation of this data is :",
+   "options": [
+    "$2\\sqrt2$",
+    "$4$",
+    "$2$",
+    "$\\sqrt2$"
+   ],
+   "answer": "(C) $2$",
+   "key_idea": "The mean of all ten comes from the two group sums, and then $\\sigma^2=\\frac{\\sum x_i^2}{N}-\\bar x^2$.",
+   "solution": [
+    "$\\frac{x_1+x_2+x_3+x_4}{4}=11$, so $x_1+x_2+x_3+x_4=44$.",
+    "$\\frac{x_5+x_6+\\cdots+x_{10}}{6}=16$, so $x_5+x_6+\\cdots+x_{10}=96$.",
+    "Hence $\\sum x_i=44+96=140$ and $\\bar x=\\frac{140}{10}=14$; also $\\sum x_i^2=2000$.",
+    "$\\sigma^2=\\frac{\\sum x_i^2}{N}-(\\bar x)^2$.",
+    "$\\sigma^2=\\frac{2000}{10}-\\left(\\frac{140}{10}\\right)^2=200-196=4$.",
+    "$\\sigma=2$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take deviations about the mean: $\\sum(x_i-14)^2=\\sum x_i^2-28\\sum x_i+10\\cdot14^2$, no variance formula to remember.",
+     "solution": [
+      "From the group sums, $\\sum x_i=44+96=140$, so the mean is $14$.",
+      "Expand $\\sum(x_i-14)^2=\\sum x_i^2-28\\sum x_i+10\\cdot196$.",
+      "$=2000-28\\cdot140+1960=2000-3920+1960=40$.",
+      "Variance $=\\frac{\\sum(x_i-14)^2}{10}=\\frac{40}{10}=4$.",
+      "Standard deviation $=2$. Option (C) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sigma^2=\\frac{\\sum x_i^2}{N}-\\bar x^2=\\frac{\\sum(x_i-a)^2}{N}-(\\bar x-a)^2$ for any shift $a$.",
+    "The combined mean of groups is the weighted mean of the group means: $\\frac{4\\cdot11+6\\cdot16}{10}=14$.",
+    "Remark on this data: a group of $n$ numbers with sum $S$ has $\\sum x^2\\ge S^2/n$, so $\\sum x^2\\ge\\frac{44^2}4+\\frac{96^2}6=2020>2000$; the data are in fact impossible, but the key follows the formula."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Combinations: triangles and quadrilaterals from points on the sides of a rectangle"
+   ],
+   "level": 2,
+   "question": "Consider a rectangle $ABCD$ having $5,7,6,9$ points in the interior of the line segments $AB,CD,BC,DA$ respectively. Let $\\alpha$ be the number of triangles having these points from different sides as vertices and $\\beta$ be the number of quadrilaterals having these points from different sides as vertices. Then $(\\beta-\\alpha)$ is equal to :",
+   "options": [
+    "$1890$",
+    "$717$",
+    "$1173$",
+    "$795$"
+   ],
+   "answer": "(B) $717$",
+   "key_idea": "A triangle uses points from three of the four sides, a quadrilateral one from each, so both counts are sums of products of ${}^nC_1$ factors.",
+   "solution": [
+    "The four sides carry $5,7,6,9$ points; a triangle takes one point from each of three different sides, a quadrilateral one point from each of all four sides.",
+    "$\\alpha={}^5C_1\\cdot{}^7C_1\\cdot{}^6C_1+{}^7C_1\\cdot{}^6C_1\\cdot{}^9C_1+{}^6C_1\\cdot{}^9C_1\\cdot{}^5C_1+{}^9C_1\\cdot{}^5C_1\\cdot{}^7C_1$.",
+    "$\\alpha=210+378+270+315=1173$.",
+    "$\\beta={}^5C_1\\cdot{}^7C_1\\cdot{}^6C_1\\cdot{}^9C_1=5\\cdot7\\cdot6\\cdot9=1890$.",
+    "$\\beta-\\alpha=1890-1173=717$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The counts are elementary symmetric functions of $5,7,6,9$: they are read off the coefficients of $(x+5)(x+7)(x+6)(x+9)$.",
+     "solution": [
+      "Let $e_3$ and $e_4$ be the sums of products of three and of all four of the numbers $5,7,6,9$; then $\\alpha=e_3$ and $\\beta=e_4$.",
+      "$(x+5)(x+9)=x^2+14x+45$ and $(x+7)(x+6)=x^2+13x+42$.",
+      "Product: $x^4+27x^3+269x^2+(14\\cdot42+45\\cdot13)x+45\\cdot42=x^4+27x^3+269x^2+1173x+1890$.",
+      "Coefficient of $x$ is $e_3=1173=\\alpha$ and the constant term is $e_4=1890=\\beta$.",
+      "$\\beta-\\alpha=717$. Option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "\\\"One point from each of several different groups\\\": multiply the group sizes; \\\"choose which groups\\\" first and add the cases.",
+    "The sum of products over all $k$-subsets of $\\{n_1,\\ldots,n_m\\}$ is the coefficient of $x^{m-k}$ in $\\prod(x+n_i)$ (Vieta).",
+    "Interior points on different sides of a rectangle are never collinear for three points, so every triple gives a genuine triangle."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Binomial distribution: independent trials and 'at least once'"
+   ],
+   "level": 1,
+   "question": "If the probability of hitting a target by a shooter, in any shot, is $\\frac13$, then the minimum number of independent shots at the target required by him so that the probability of hitting the target at least once is greater than $\\frac56$, is :",
+   "options": [
+    "$3$",
+    "$4$",
+    "$6$",
+    "$5$"
+   ],
+   "answer": "(D) $5$",
+   "key_idea": "\\\"At least one hit\\\" is the complement of \\\"all $n$ shots miss\\\", which has probability $\\left(\\frac23\\right)^n$.",
+   "solution": [
+    "$P(H)=\\frac13$ and $P(\\bar H)=\\frac23$ for each shot.",
+    "For $n$ independent shots, $P(\\text{at least one hit})=1-{}^nC_0\\left(\\frac13\\right)^0\\left(\\frac23\\right)^n>\\frac56$.",
+    "$1-\\left(\\frac23\\right)^n>\\frac56$.",
+    "$\\frac16>\\left(\\frac23\\right)^n$.",
+    "$n=4$: $\\left(\\frac23\\right)^4=\\frac{16}{81}\\approx0.198>\\frac16$ (fails); $n=5$: $\\frac{32}{243}\\approx0.132<\\frac16$ (works).",
+    "The minimum value is $n=5$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$P(\\text{at least one success in }n\\text{ trials})=1-q^n$; the smallest $n$ with $1-q^n>p_0$ is the smallest $n$ with $n\\ln\\frac1q>\\ln\\frac1{1-p_0}$.",
+    "Quick integer check: $\\left(\\frac23\\right)^n<\\frac16\\iff 6\\cdot2^n<3^n$; $n=4$: $96>81$, $n=5$: $192<243$.",
+    "The answer is the first $n$ for which $q^n$ drops below the threshold; since $q^n$ decreases, once it works it keeps working."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Exponential series and sum of an infinite series"
+   ],
+   "level": 2,
+   "question": "The sum $1+\\frac{1+3}{2!}+\\frac{1+3+5}{3!}+\\frac{1+3+5+7}{4!}+\\cdots$ upto $\\infty$ terms, is equal to :",
+   "options": [
+    "$3e$",
+    "$6e$",
+    "$4e$",
+    "$2e$"
+   ],
+   "answer": "(D) $2e$",
+   "key_idea": "The sum of the first $r$ odd numbers is $r^2$, so the series is $\\sum\\frac{r^2}{r!}$, and $r^2=r(r-1)+r$ or $(r-1)+1$ over $r$.",
+   "solution": [
+    "The numerator of the $r$-th term is $1+3+\\cdots+(2r-1)=r^2$.",
+    "So $S=1+\\frac{2^2}{2!}+\\frac{3^2}{3!}+\\frac{4^2}{4!}+\\cdots=\\sum_{r=1}^{\\infty}\\frac{r^2}{r!}$.",
+    "$\\frac{r^2}{r!}=\\frac{r}{(r-1)!}=\\frac{(r-1)+1}{(r-1)!}$.",
+    "$S=\\sum_{r=2}^{\\infty}\\frac{1}{(r-2)!}+\\sum_{r=1}^{\\infty}\\frac{1}{(r-1)!}$.",
+    "Each sum is $1+\\frac1{1!}+\\frac1{2!}+\\cdots=e$.",
+    "$S=e+e=2e$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating function: $\\sum\\frac{r^2x^r}{r!}=\\left(x\\frac{d}{dx}\\right)^2e^x=(x^2+x)e^x$, then put $x=1$.",
+     "solution": [
+      "As before the general term is $\\frac{r^2}{r!}$, so $S=\\sum_{r\\ge0}\\frac{r^2}{r!}$ (the $r=0$ term is $0$).",
+      "Start with $e^x=\\sum\\frac{x^r}{r!}$ and apply the operator $\\theta=x\\frac{d}{dx}$ twice: $\\theta^2e^x=\\sum\\frac{r^2x^r}{r!}$.",
+      "$\\theta e^x=xe^x$ and $\\theta(xe^x)=x(e^x+xe^x)=(x+x^2)e^x$.",
+      "At $x=1$: $S=(1+1)e=2e$. Option (D) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+3+\\cdots+(2r-1)=r^2$. In series with $r!$ in the denominator, rewrite the numerator in the falling-factorial basis: $r^2=r(r-1)+r$.",
+    "$\\sum\\frac{r}{r!}=e$, $\\sum\\frac{r(r-1)}{r!}=e$, $\\sum\\frac{r(r-1)(r-2)}{r!}=e$; hence $\\sum\\frac{r^k}{r!}=B_ke$ with Bell numbers $B_2=2,B_3=5,B_4=15$.",
+    "Instance: $\\sum\\frac{r^3}{r!}=5e$ by the same method."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Modulus of complex numbers and inequalities",
+    "Möbius transformation"
+   ],
+   "level": 2,
+   "question": "Let $z\\in C$ be such that $|z|<1$. If $\\omega=\\frac{5+3z}{5(1-z)}$, then :",
+   "options": [
+    "$5\\,\\mathrm{Re}(\\omega)>4$",
+    "$5\\,\\mathrm{Re}(\\omega)>1$",
+    "$4\\,\\mathrm{Im}(\\omega)>5$",
+    "$5\\,\\mathrm{Im}(\\omega)<1$"
+   ],
+   "answer": "(B) $5\\,\\mathrm{Re}(\\omega)>1$",
+   "key_idea": "Solve for $z$ in terms of $\\omega$ and impose $|z|<1$, using $|u|^2=u\\bar u$.",
+   "solution": [
+    "$\\omega=\\frac{5+3z}{5-5z}\\Rightarrow5\\omega-5\\omega z=5+3z$.",
+    "$5\\omega-5=z(3+5\\omega)$, so $z=\\frac{5(\\omega-1)}{3+5\\omega}$.",
+    "$|z|<1\\Rightarrow5|\\omega-1|<|3+5\\omega|$.",
+    "Square (using $|u|^2=u\\bar u$): $25(\\omega-1)(\\bar\\omega-1)<(3+5\\omega)(3+5\\bar\\omega)$.",
+    "$25(\\omega\\bar\\omega-\\omega-\\bar\\omega+1)<9+25\\omega\\bar\\omega+15\\omega+15\\bar\\omega$.",
+    "$16<40\\omega+40\\bar\\omega\\Rightarrow\\omega+\\bar\\omega>\\frac25$.",
+    "$2\\,\\mathrm{Re}(\\omega)>\\frac25\\Rightarrow\\mathrm{Re}(\\omega)>\\frac15$, i.e. $5\\,\\mathrm{Re}(\\omega)>1$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$z\\mapsto\\omega$ is a Möbius map; the unit circle passes through its pole $z=1$, so its image is a straight line and the disc maps to a half-plane.",
+     "solution": [
+      "$\\omega=\\frac{5+3z}{5(1-z)}$ is a Möbius transformation with pole at $z=1$, which lies on the circle $|z|=1$.",
+      "A circle through the pole maps to a straight line. The line passes through $\\omega(-1)=\\frac{5-3}{10}=\\frac15$ and is symmetric about the real axis (real coefficients), so it is the vertical line $\\mathrm{Re}\\,\\omega=\\frac15$.",
+      "The centre $z=0$ maps to $\\omega=1>\\frac15$, so the disc $|z|<1$ maps to the half-plane $\\mathrm{Re}\\,\\omega>\\frac15$.",
+      "Hence $5\\,\\mathrm{Re}(\\omega)>1$. Option (B) (same answer). (Option (A) fails, e.g. $\\omega=0.3$ is attained.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "A Möbius map sends a circle through its pole to a line and any other circle to a circle; the inside maps to a side determined by one test point.",
+    "The same expansion trick: $|u|^2<|v|^2\\iff u\\bar u<v\\bar v$ gives a linear inequality in $\\omega+\\bar\\omega$ when the $\\omega\\bar\\omega$ terms cancel (the image is a half-plane).",
+    "Check of the bound: $z\\to-1$ gives $\\mathrm{Re}\\,\\omega\\to\\frac15$, which is the infimum, never attained for $|z|<1$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Probability of ordered outcomes in independent trials with replacement"
+   ],
+   "level": 2,
+   "question": "In a box, there are $20$ cards, out of which $10$ are labelled as A and the remaining $10$ are labelled as B. Cards are drawn at random, one after the other and with replacement, till a second A-card is obtained. The probability that the second A-card appears before the third B-card is :",
+   "options": [
+    "$\\frac{15}{16}$",
+    "$\\frac{9}{16}$",
+    "$\\frac{13}{16}$",
+    "$\\frac{11}{16}$"
+   ],
+   "answer": "(D) $\\frac{11}{16}$",
+   "key_idea": "List the draw sequences that end with the second A and contain at most two B's.",
+   "solution": [
+    "$P(A)=\\frac{10}{20}=\\frac12$ and $P(B)=\\frac{10}{20}=\\frac12$ on every draw.",
+    "The second A must appear before the third B: the sequence ends at the second A and has at most two B's before it.",
+    "Required probability $=AA+ABA+BAA+ABBA+BBAA+BABA$.",
+    "$=\\frac12\\cdot\\frac12+\\frac12\\cdot\\frac12\\cdot\\frac12+\\frac12\\cdot\\frac12\\cdot\\frac12+\\frac12\\cdot\\frac12\\cdot\\frac12\\cdot\\frac12+\\frac12\\cdot\\frac12\\cdot\\frac12\\cdot\\frac12+\\frac12\\cdot\\frac12\\cdot\\frac12\\cdot\\frac12$.",
+    "$=\\frac14+\\frac18+\\frac18+\\frac1{16}+\\frac1{16}+\\frac1{16}=\\frac{11}{16}$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The event is decided within four draws: the second A comes before the third B exactly when the first four draws contain at least two A's.",
+     "solution": [
+      "Imagine drawing exactly four cards. If the first four contain at least two A's, the second A has appeared with at most two B's before it.",
+      "If they contain at most one A, then they contain at least three B's, so the third B arrives first. So the event $\\iff$ at least two A's in four draws.",
+      "Number of A's is Binomial$\\left(4,\\frac12\\right)$: $P(\\text{at most one A})=\\frac{{}^4C_0+{}^4C_1}{16}=\\frac5{16}$.",
+      "Required probability $=1-\\frac5{16}=\\frac{11}{16}$. Option (D) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "\\\"$r$-th success before $s$-th failure\\\" $\\iff$ at least $r$ successes in the first $r+s-1$ trials (Pascal / Banach-match trick).",
+    "Instance: $r=2,s=3$ gives $r+s-1=4$ trials: $P=\\sum_{k\\ge2}{}^4C_k\\left(\\frac12\\right)^4=\\frac{11}{16}$.",
+    "Valid for independent trials with a constant success probability; with replacement the draws are independent."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Binomial coefficients in arithmetic progression"
+   ],
+   "level": 2,
+   "question": "If the coefficients of $x^4$, $x^5$ and $x^6$ in the expansion of $(1+x)^n$ are in the arithmetic progression, then the maximum value of $n$ is :",
+   "options": [
+    "$28$",
+    "$7$",
+    "$21$",
+    "$14$"
+   ],
+   "answer": "(D) $14$",
+   "key_idea": "AP means $2\\binom n5=\\binom n4+\\binom n6$; dividing by a common factorial makes it a quadratic in $n$.",
+   "solution": [
+    "The coefficients are ${}^nC_4,{}^nC_5,{}^nC_6$; in AP: $2\\,{}^nC_5={}^nC_4+{}^nC_6$.",
+    "$\\frac{2\\cdot n!}{5!(n-5)!}=\\frac{n!}{4!(n-4)!}+\\frac{n!}{6!(n-6)!}$.",
+    "Cancel $n!$ and $4!$, expand the factorials: $\\frac{2}{5(n-5)}=\\frac{1}{(n-4)(n-5)}+\\frac1{30}$.",
+    "Multiply by $(n-4)$: $\\frac{2(n-4)}{5}=1+\\frac{(n-4)(n-5)}{30}$.",
+    "Multiply by $30$: $12(n-4)=30+(n-4)(n-5)$, i.e. $12n-48=30+n^2-9n+20$.",
+    "$n^2-21n+98=0\\Rightarrow(n-7)(n-14)=0$, so $n=7$ or $n=14$.",
+    "The maximum value is $n=14$. Option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's line \\\"$12n-40=30+n^2-9n+20$\\\" has a slip: $12(n-4)=12n-48$, not $12n-40$. The PDF's next line $n^2-21n+98=0$ is the one that follows from $12n-48$, so $n=14,7$ is right. Corrected the line.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the ratios of consecutive binomial coefficients, $\\frac{{}^nC_{r+1}}{{}^nC_r}=\\frac{n-r}{r+1}$, instead of factorials.",
+     "solution": [
+      "Divide the AP condition $2\\,{}^nC_5={}^nC_4+{}^nC_6$ by ${}^nC_5$: $2=\\frac{{}^nC_4}{{}^nC_5}+\\frac{{}^nC_6}{{}^nC_5}$.",
+      "$\\frac{{}^nC_5}{{}^nC_4}=\\frac{n-4}{5}$ and $\\frac{{}^nC_6}{{}^nC_5}=\\frac{n-5}{6}$.",
+      "So $2=\\frac{5}{n-4}+\\frac{n-5}{6}$.",
+      "Multiply by $6(n-4)$: $12(n-4)=30+(n-4)(n-5)$, giving $n^2-21n+98=0$.",
+      "$n=7$ or $14$; the maximum is $14$. Option (D) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{{}^nC_{r+1}}{{}^nC_r}=\\frac{n-r}{r+1}$ turns every binomial-coefficient relation into algebra without factorials.",
+    "Coefficients of $x^r,x^{r+1},x^{r+2}$ in $(1+x)^n$ are in AP $\\iff n^2-(4r+5)n+4(r+1)^2-2=0$. For $r=4$: $n^2-21n+98=0$; for $r=1$: $n^2-9n+14=0$, $n=7$ gives $7,21,35$.",
+    "Always check that the roots satisfy $n\\ge r+2$ so that all three coefficients exist ($n=7,14$ both satisfy $n\\ge6$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Conditional probability with two dice"
+   ],
+   "level": 1,
+   "question": "A die is thrown two times and the sum of the scores appearing on the die is observed to be a multiple of $4$. Then the conditional probability that the score $4$ has appeared atleast once is :",
+   "options": [
+    "$\\frac14$",
+    "$\\frac13$",
+    "$\\frac19$",
+    "$\\frac18$"
+   ],
+   "answer": "(C) $\\frac19$",
+   "key_idea": "Write the reduced sample space (sums $4,8,12$) and count the pairs that contain a $4$.",
+   "solution": [
+    "The sum of two dice is a multiple of $4$ when it is $4$, $8$ or $12$: this is the reduced sample space $S$.",
+    "Sum $4$: $(1,3),(2,2),(3,1)$.",
+    "Sum $8$: $(2,6),(3,5),(4,4),(5,3),(6,2)$.",
+    "Sum $12$: $(6,6)$. So $n(S)=3+5+1=9$.",
+    "Only $(4,4)$ contains a $4$, so $P(\\text{at least one }4)=\\frac19$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by residues mod $4$: pair a residue $a$ with residue $-a$.",
+     "solution": [
+      "Die faces by residue mod $4$: residue $0$: $\\{4\\}$ (1 face); residue $1$: $\\{1,5\\}$ (2); residue $2$: $\\{2,6\\}$ (2); residue $3$: $\\{3\\}$ (1).",
+      "Sum $\\equiv0\\pmod4$ needs residues $(0,0)$, $(1,3)$, $(3,1)$ or $(2,2)$.",
+      "Counts: $(0,0)$: $1\\cdot1=1$; $(1,3)$: $2\\cdot1=2$; $(3,1)$: $1\\cdot2=2$; $(2,2)$: $2\\cdot2=4$. Total $=9$.",
+      "A $4$ appears only in the residue-$0$ face, so only the $(0,0)$ outcome $(4,4)$: $1$ outcome.",
+      "Probability $=\\frac19$. Option (C) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Conditional probability with equally likely outcomes: $P(E\\mid F)=\\frac{n(E\\cap F)}{n(F)}$ - list $F$ first.",
+    "Number of pairs of dice with sum $\\equiv0\\pmod m$ can be counted by residue classes; for $m=4$ there are $9$ of $36$.",
+    "The sum of two dice is a multiple of $4$ with probability $\\frac14$ ($=\\frac9{36}$); of $3$: $\\frac13$; of $2$: $\\frac12$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Geometric progression"
+   ],
+   "level": 2,
+   "question": "Let $a_1,a_2,a_3,\\ldots$ be a G.P. of increasing positive numbers. Let the sum of its $6^{th}$ and $8^{th}$ terms be $2$ and the product of its $3^{rd}$ and $5^{th}$ terms be $\\frac19$. Then $6(a_2+a_4)(a_4+a_6)$ is equal to :",
+   "options": [
+    "$3$",
+    "$2$",
+    "$3\\sqrt3$",
+    "$2\\sqrt2$"
+   ],
+   "answer": "(A) $3$",
+   "key_idea": "Write every term as $ar^{k}$; $a_3a_5=a_4^2$ gives $ar^3=\\frac13$ at once, then solve for $r^2$.",
+   "solution": [
+    "Let the G.P. be $a,ar,ar^2,\\ldots$ with $a>0$, $r>1$ (increasing, positive).",
+    "$a_6+a_8=2\\Rightarrow ar^5+ar^7=2$. $\\quad(\\mathrm{i})$",
+    "$a_3a_5=\\frac19\\Rightarrow a^2r^2\\cdot r^4=\\frac19\\Rightarrow ar^3=\\frac13$ (positive terms).",
+    "Substitute $ar^3=\\frac13$ in (i): $ar^5+ar^7=ar^3(r^2+r^4)=\\frac{r^2+r^4}{3}=2$.",
+    "$r^4+r^2=6\\Rightarrow(r^2+3)(r^2-2)=0\\Rightarrow r^2=2$.",
+    "$ar^3=ar\\cdot r^2=2ar=\\frac13\\Rightarrow ar=\\frac16$.",
+    "$6(a_2+a_4)(a_4+a_6)=6(ar+ar^3)(ar^3+ar^5)=6\\left(\\frac16+\\frac13\\right)\\left(\\frac13+\\frac23\\right)$.",
+    "$=6\\cdot\\frac12\\cdot1=3$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Centre everything on $a_4=\\frac13$: with $q=r^2$, the target is $6a_4^2\\left(\\frac1q+1\\right)(1+q)$, so only $q$ is needed.",
+     "solution": [
+      "$a_3a_5=a_4^2=\\frac19$ and the terms are positive, so $a_4=\\frac13$.",
+      "Then $a_6=a_4q$ and $a_8=a_4q^2$ with $q=r^2>1$: $a_4(q+q^2)=2$, so $q^2+q=6$ and $q=2$.",
+      "$a_2=\\frac{a_4}{q}$ and $a_6=a_4q$, so $(a_2+a_4)(a_4+a_6)=a_4^2\\left(\\frac1q+1\\right)(1+q)=\\frac19\\cdot\\frac32\\cdot3=\\frac12$.",
+      "$6\\cdot\\frac12=3$. Option (A) (same answer). The first term $a$ was never needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In a G.P. $a_{m-k}a_{m+k}=a_m^2$; so a product of two terms symmetric about a term gives that term (positive case).",
+    "Take the middle term as the base: $a_{4+k}=a_4r^k$ shortens every expression symmetric about it.",
+    "Sum/product conditions on G.P. terms usually reduce to a quadratic in $r^2$; reject roots with $r^2\\le1$ when the G.P. is increasing and positive."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Geometry of complex numbers: conjugates and a square"
+   ],
+   "level": 1,
+   "question": "If the four complex numbers $z,\\bar z,\\bar z-2\\,\\mathrm{Re}(\\bar z)$ and $z-2\\,\\mathrm{Re}(z)$ represent the vertices of a square of side $4$ units in the Argand plane, then $|z|$ is equal to :",
+   "options": [
+    "$2\\sqrt2$",
+    "$2$",
+    "$4$",
+    "$4\\sqrt2$"
+   ],
+   "answer": "(A) $2\\sqrt2$",
+   "key_idea": "With $z=x+iy$ the four points are $(\\pm x,\\pm y)$, a rectangle centred at the origin with sides $2|x|$ and $2|y|$.",
+   "solution": [
+    "Let $z=x+iy$, so $\\bar z=x-iy$.",
+    "$\\bar z-2\\,\\mathrm{Re}(\\bar z)=x-iy-2x=-x-iy$.",
+    "$z-2\\,\\mathrm{Re}(z)=x+iy-2x=-x+iy$.",
+    "$|z-\\bar z|=|2iy|=2|y|=4\\Rightarrow y=\\pm2$.",
+    "$\\left|z-(z-2\\,\\mathrm{Re}(z))\\right|=|2x|=4\\Rightarrow x=\\pm2$.",
+    "$|z|=\\sqrt{x^2+y^2}=\\sqrt{4+4}=2\\sqrt2$. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The vertices are $\\pm z,\\pm\\bar z$, a figure centred at the origin, so $|z|$ is the circumradius: half the diagonal.",
+     "solution": [
+      "$\\bar z-2\\,\\mathrm{Re}(\\bar z)=-z$ and $z-2\\,\\mathrm{Re}(z)=-\\bar z$, so the vertices are $z,\\bar z,-z,-\\bar z$.",
+      "They are symmetric about the origin, so the origin is the centre of the square.",
+      "The distance from the centre to each vertex is $|z|$, the half-diagonal.",
+      "For a square of side $4$ the diagonal is $4\\sqrt2$, so $|z|=\\frac{4\\sqrt2}{2}=2\\sqrt2$. Option (A) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$w-2\\,\\mathrm{Re}(w)=-\\bar w$: the point $-\\bar w$ is the reflection of $w$ in the imaginary axis.",
+    "$z,\\bar z,-z,-\\bar z$ are the vertices of a rectangle centred at $0$ with sides $2|x|,2|y|$; a square iff $|x|=|y|$, i.e. $\\arg z$ is an odd multiple of $\\frac\\pi4$.",
+    "Square of side $s$ centred at the origin: distance of each vertex from the centre is $\\frac{s}{\\sqrt2}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Permutations with repeated objects (digit-sum conditions)"
+   ],
+   "level": 2,
+   "question": "The number of seven digit integers with sum of the digits equal to $10$ formed by using the digits $1,2$ and $3$ only is :",
+   "options": [
+    "$42$",
+    "$77$",
+    "$82$",
+    "$35$"
+   ],
+   "answer": "(B) $77$",
+   "key_idea": "Seven digits from $\\{1,2,3\\}$ have minimum sum $7$, so the extra $3$ is spread as $\\{1,1,1\\}$ or $\\{2,1\\}$ over the positions.",
+   "solution": [
+    "Seven digits from $\\{1,2,3\\}$ with sum $10$: the multiset of digits must be $1,1,1,1,1,2,3$ or $1,1,1,1,2,2,2$.",
+    "Check: $5\\cdot1+2+3=10$ and $4\\cdot1+3\\cdot2=10$; no other multiset works.",
+    "Arrangements of $1111123$: $\\frac{7!}{5!}=42$.",
+    "Arrangements of $1111222$: $\\frac{7!}{4!\\,3!}=35$.",
+    "Total $=42+35=77$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract $1$ from every digit: non-negative solutions of $y_1+\\cdots+y_7=3$ with each $y_i\\le2$, counted by stars and bars with one exclusion.",
+     "solution": [
+      "Put $y_i=d_i-1\\in\\{0,1,2\\}$; then $\\sum y_i=10-7=3$.",
+      "Without the bound $y_i\\le2$: ${}^{3+7-1}C_{3}={}^9C_3=84$ solutions.",
+      "Solutions violating the bound have some $y_i=3$ (the rest $0$): $7$ of them.",
+      "$84-7=77$. Option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Digits from $\\{1,\\ldots,k\\}$ with fixed length and sum: shift by $1$ and use stars and bars with the upper bound handled by inclusion-exclusion.",
+    "Number of non-negative solutions of $y_1+\\cdots+y_m=s$ is ${}^{s+m-1}C_{m-1}$; subtract those with some $y_i\\ge k+1$ once the bound $y_i\\le k$ is imposed.",
+    "For a small extra sum the multiset method is faster: list partitions of the extra, then count arrangements with $\\frac{n!}{\\prod m_i!}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Argument of a complex number",
+    "Parabola: focal condition and chord slope"
+   ],
+   "level": 3,
+   "question": "If $z_1,z_2$ are complex numbers such that $\\mathrm{Re}(z_1)=|z_1-1|$, $\\mathrm{Re}(z_2)=|z_2-1|$ and $\\arg(z_1-z_2)=\\frac\\pi6$, then $\\mathrm{Im}(z_1+z_2)$ is equal to :",
+   "options": [
+    "$\\frac{\\sqrt3}{2}$",
+    "$\\frac1{\\sqrt3}$",
+    "$2\\sqrt3$",
+    "$\\frac2{\\sqrt3}$"
+   ],
+   "answer": "(C) $2\\sqrt3$",
+   "key_idea": "$\\mathrm{Re}(z)=|z-1|$ is the parabola $y^2=2x-1$, and subtracting the two equations brings in the chord slope $\\frac{2}{y_1+y_2}$.",
+   "solution": [
+    "Let $z_1=x_1+iy_1$, $z_2=x_2+iy_2$. $\\mathrm{Re}(z_1)=|z_1-1|$ gives $x_1=|x_1-1+iy_1|$.",
+    "Squaring: $x_1^2=(x_1-1)^2+y_1^2$, so $y_1^2+1=2x_1$. $\\quad(1)$",
+    "Similarly $y_2^2+1=2x_2$. $\\quad(2)$",
+    "$(1)-(2)$: $y_1^2-y_2^2=2(x_1-x_2)$, so $(y_1+y_2)(y_1-y_2)=2(x_1-x_2)$.",
+    "$\\frac{y_1-y_2}{x_1-x_2}=\\frac{2}{y_1+y_2}$. $\\quad(3)$",
+    "$\\arg(z_1-z_2)=\\frac\\pi6\\Rightarrow\\tan^{-1}\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)=\\frac\\pi6\\Rightarrow\\frac{y_1-y_2}{x_1-x_2}=\\frac1{\\sqrt3}$.",
+    "By (3): $\\frac1{\\sqrt3}=\\frac{2}{y_1+y_2}$, so $y_1+y_2=2\\sqrt3$.",
+    "$\\mathrm{Im}(z_1+z_2)=y_1+y_2=2\\sqrt3$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise the parabola by $y=t$: $z=\\frac{t^2+1}{2}+it$, so $z_1-z_2=(t_1-t_2)\\left(\\frac{t_1+t_2}{2}+i\\right)$.",
+     "solution": [
+      "$y^2=2x-1$ gives the points $z=\\frac{t^2+1}{2}+it$ (with $y=t$).",
+      "$z_1-z_2=\\frac{t_1^2-t_2^2}{2}+i(t_1-t_2)=(t_1-t_2)\\left(\\frac{t_1+t_2}{2}+i\\right)$.",
+      "$\\arg(z_1-z_2)=\\frac\\pi6$ has a positive imaginary part, so $t_1>t_2$ and $z_1-z_2$ points along $\\frac{t_1+t_2}{2}+i$.",
+      "Then $\\tan\\frac\\pi6=\\frac{1}{(t_1+t_2)/2}$, so $\\frac1{\\sqrt3}=\\frac{2}{t_1+t_2}$ and $t_1+t_2=2\\sqrt3$ (positive, as the real part must be positive).",
+      "$\\mathrm{Im}(z_1+z_2)=t_1+t_2=2\\sqrt3$. Option (C) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Re}(z)=|z-a|$ (distance to the focus $a$ equals distance to the line $x=0$) is a parabola with focus $a$; here $y^2=2x-1$ has vertex $\\left(\\frac12,0\\right)$.",
+    "Chord of $y^2=4a(x-h)$ joining points with ordinates $y_1,y_2$ has slope $\\frac{4a}{y_1+y_2}$; here $4a=2$, so slope $\\frac{2}{y_1+y_2}$.",
+    "Slope $\\tan\\theta$ of a chord gives the sum of the ordinates directly: $y_1+y_2=\\frac{2}{\\tan\\theta}$ for this parabola; $\\theta=\\frac\\pi6$ gives $2\\sqrt3$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Probability: alternating game and infinite geometric series"
+   ],
+   "level": 2,
+   "question": "In a game two players A and B take turns in throwing a pair of fair dice starting with player A and total of scores on the two dice, in each throw is noted. A wins the game if he throws a total of $6$ before B throws a total of $7$ and B wins the game if he throws a total of $7$ before A throws a total of six. The game stops as soon as either of the players wins. The probability of A winning the game is :",
+   "options": [
+    "$\\frac56$",
+    "$\\frac5{31}$",
+    "$\\frac{31}{61}$",
+    "$\\frac{30}{61}$"
+   ],
+   "answer": "(D) $\\frac{30}{61}$",
+   "key_idea": "A wins on his $k$-th throw if both players miss in the first $k-1$ rounds, which gives a geometric series of ratio $P(\\bar A)P(\\bar B)$.",
+   "solution": [
+    "A scores $6$ with $(1,5),(2,4),(3,3),(4,2),(5,1)$: $P(A)=\\frac5{36}$ and $P(\\bar A)=\\frac{31}{36}$.",
+    "B scores $7$ with $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$: $P(B)=\\frac6{36}$ and $P(\\bar B)=\\frac{30}{36}$.",
+    "$P(A\\text{ wins})=\\frac5{36}+\\frac{31}{36}\\cdot\\frac{30}{36}\\cdot\\frac5{36}+\\frac{31}{36}\\cdot\\frac{30}{36}\\cdot\\frac{31}{36}\\cdot\\frac{30}{36}\\cdot\\frac5{36}+\\cdots$",
+    "This is an infinite G.P. with first term $\\frac5{36}$ and common ratio $\\frac{31}{36}\\cdot\\frac{30}{36}$.",
+    "$P(A\\text{ wins})=\\frac{\\frac5{36}}{1-\\frac{31}{36}\\cdot\\frac{30}{36}}=\\frac{\\frac5{36}}{1-\\frac{31}{36}\\cdot\\frac56}$.",
+    "$=\\frac{30}{61}$. Option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Typo in the PDF's series: the third term is printed with $\\frac{31}{30}$ instead of $\\frac{31}{36}$. The common ratio $\\frac{31}{36}\\cdot\\frac{30}{36}$ and the final value $\\frac{30}{61}$ are right. Also, the option letter (C) is printed as (3) in the PDF.",
+   "alternate_solutions": [
+    {
+     "idea": "First-step analysis: after A and B both miss, the game restarts, so $p=\\frac5{36}+\\frac{31}{36}\\cdot\\frac{30}{36}\\,p$ - no series needed.",
+     "solution": [
+      "Let $p$ be the probability that A wins.",
+      "A wins at once with probability $\\frac5{36}$. Otherwise A misses ($\\frac{31}{36}$) and B misses ($\\frac{30}{36}$); then the game is in the same state as at the start.",
+      "$p=\\frac5{36}+\\frac{31}{36}\\cdot\\frac{30}{36}\\,p=\\frac5{36}+\\frac{930}{1296}p$.",
+      "$p\\left(1-\\frac{930}{1296}\\right)=\\frac5{36}\\Rightarrow p\\cdot\\frac{366}{1296}=\\frac5{36}\\Rightarrow p=\\frac{5\\cdot36}{366}=\\frac{30}{61}$.",
+      "Option (D) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Alternating game, first player wins a round with probability $a$, second with $b$: $P(\\text{first wins})=\\frac{a}{1-(1-a)(1-b)}$ and $P(\\text{second wins})=\\frac{(1-a)b}{1-(1-a)(1-b)}$.",
+    "Here $a=\\frac5{36}$, $b=\\frac6{36}$: A wins with probability $\\frac{30}{61}$ and B with $\\frac{31}{61}$, and $\\frac{30}{61}+\\frac{31}{61}=1$ (the game ends with probability $1$).",
+    "Use \\\"state repeats\\\" equations ($p=\\ldots+\\text{(miss probability)}\\,p$) instead of summing the series whenever the process regenerates."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Mean of a frequency distribution"
+   ],
+   "level": 1,
+   "question": "If for some $x\\in R$, the frequency distribution of the marks obtained by $20$ students in a test is : Marks $2,3,5,7$ with frequency $(x+1)^2,\\ 2x-5,\\ x^2-3x,\\ x$ respectively. Then the mean of the marks is :",
+   "options": [
+    "$3.2$",
+    "$3.0$",
+    "$2.5$",
+    "$2.8$"
+   ],
+   "answer": "(D) $2.8$",
+   "key_idea": "The frequencies sum to $20$, which fixes $x$; the root giving a negative frequency is rejected.",
+   "solution": [
+    "Number of students: $(x+1)^2+(2x-5)+(x^2-3x)+x=20$.",
+    "$2x^2+2x-4=20\\Rightarrow x^2+x-12=0$.",
+    "$(x+4)(x-3)=0$, so $x=-4$ or $x=3$.",
+    "$x=-4$ gives frequency $2x-5=-13<0$, so it is rejected; $x=3$.",
+    "Frequencies for marks $2,3,5,7$: $16,\\ 1,\\ 0,\\ 3$ (sum $20$).",
+    "Mean $=\\frac{2\\cdot16+3\\cdot1+5\\cdot0+7\\cdot3}{20}=\\frac{32+3+0+21}{20}=\\frac{56}{20}=2.8$. Option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Gap: the PDF states $x=3$ without rejecting the other root $x=-4$ (which makes the frequency $2x-5=-13$ negative). Reason added; answer unchanged.",
+   "useful_results": [
+    "Frequencies must be non-negative integers: use this to discard roots of the equation $\\sum f_i=N$.",
+    "Mean of a frequency table: $\\bar x=\\frac{\\sum f_ix_i}{\\sum f_i}$; a zero frequency simply drops out.",
+    "Quick check: the mean $2.8$ lies between $2$ and $7$ and is close to $2$ because $16$ of the $20$ students scored $2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Probability with position-dependent independent events"
+   ],
+   "level": 2,
+   "question": "Let a computer program generate only the digit $0$ and $1$ to form a string of binary numbers with probability of occurence of $0$ at even places be $\\frac12$ and probability of occurrence of $0$ at the odd place be $\\frac13$. Then the probability that '10' is followed by '01' is equal to :",
+   "options": [
+    "$\\frac19$",
+    "$\\frac16$",
+    "$\\frac13$",
+    "$\\frac1{18}$"
+   ],
+   "answer": "(A) $\\frac19$",
+   "key_idea": "The block '10' followed by '01' is the string $1001$, which can start at an odd or an even place; the two cases are separate.",
+   "solution": [
+    "'10' followed by '01' is the block $1001$ (four consecutive digits). Its first digit sits at an odd place (O) or an even place (E), so the places read OEOE or EOEO.",
+    "Probabilities: at an odd place $P(0)=\\frac13$, $P(1)=\\frac23$; at an even place $P(0)=\\frac12$, $P(1)=\\frac12$.",
+    "Case OEOE: $P(1)\\cdot P(0)\\cdot P(0)\\cdot P(1)=\\frac23\\cdot\\frac12\\cdot\\frac13\\cdot\\frac12=\\frac1{18}$.",
+    "Case EOEO: $\\frac12\\cdot\\frac13\\cdot\\frac12\\cdot\\frac23=\\frac1{18}$.",
+    "The block may start at an odd or an even place, and these two cases are disjoint, so they add: $\\frac1{18}+\\frac1{18}=\\frac19$. Option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF works out the string $0110$ (that is, '01' followed by '10') instead of $1001$ ('10' followed by '01'). By the symmetry of the factors it gives the same value, so the answer is unchanged, but the order was reversed; corrected to $1001$. The PDF also does not say why the two start-place cases are added: the question does not fix where the block starts, so both OEOE and EOEO are counted. (If the block were required to start at place 1, the value would be $\\frac1{18}$, option D; the key $\\frac19$ is kept.)",
+   "useful_results": [
+    "For position-dependent probabilities, list the possible parity patterns of the consecutive places and multiply digit by digit.",
+    "A pattern whose start place is not fixed: add the disjoint start-parity cases (each case already includes its own place-probabilities).",
+    "Read the order of the pattern carefully: $1001$ and $0110$ are different strings, even though the two products happen to coincide here."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Fundamental principle of counting"
+   ],
+   "level": 1,
+   "question": "Team 'A' consists of $7$ boys and $n$ girls and Team 'B' has $4$ boys and $6$ girls. If a total of $52$ single matches can be arranged between these two teams when a boy plays against a boy and a girl plays against a girl, then $n$ is equal to :",
+   "options": [
+    "$6$",
+    "$4$",
+    "$5$",
+    "$2$"
+   ],
+   "answer": "(B) $4$",
+   "key_idea": "Boy-boy matches and girl-girl matches are separate cases; each match is a choice of one player from each team.",
+   "solution": [
+    "A boy-boy match: choose one of $7$ boys of team A and one of $4$ boys of team B: ${}^7C_1\\cdot{}^4C_1=28$.",
+    "A girl-girl match: ${}^nC_1\\cdot{}^6C_1=6n$.",
+    "Total: ${}^7C_1\\,{}^4C_1+{}^nC_1\\,{}^6C_1=52$.",
+    "$28+6n=52$.",
+    "$n=4$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Matches between two teams with restrictions: add over the allowed categories, multiply within a category.",
+    "Single (one-on-one) match count between sets of sizes $p$ and $q$ is $p\\cdot q$; teams are different, so there is no division by $2$.",
+    "Verification: $n=4$ gives $7\\cdot4+4\\cdot6=28+24=52$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Probability: counting pairs of subsets"
+   ],
+   "level": 2,
+   "question": "The probability that two randomly selected subsets of the set $\\{1,2,3,4,5\\}$ have exactly two elements in their intersection, is :",
+   "options": [
+    "$\\frac{35}{2^7}$",
+    "$\\frac{65}{2^7}$",
+    "$\\frac{135}{2^9}$",
+    "$\\frac{65}{2^8}$"
+   ],
+   "answer": "(C) $\\frac{135}{2^9}$",
+   "key_idea": "Each element has $4$ choices (A only, B only, both, neither), so exactly two common elements means choosing them and giving the rest $3$ options each.",
+   "solution": [
+    "For a pair of subsets $(A,B)$, each of the $5$ elements is in one of $4$ states: only $A$, only $B$, both, or neither.",
+    "Sample space: $n(S)=4^5=2^{10}$.",
+    "Event $n(A\\cap B)=2$: choose the $2$ common elements in ${}^5C_2$ ways.",
+    "Each of the other $3$ elements has $3$ states (not both): $3^3$ ways.",
+    "$n(\\text{Event})={}^5C_2\\times3^3=10\\times27=270$.",
+    "$P=\\frac{10\\times27}{2^{10}}=\\frac{135}{2^9}$. Option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each element is in $A$ and in $B$ independently with probability $\\frac12$ each, so it is in both with probability $\\frac14$: the number of common elements is Binomial$\\left(5,\\frac14\\right)$.",
+     "solution": [
+      "Choose $A$ and $B$ uniformly: each element belongs to $A$ with probability $\\frac12$ and to $B$ with probability $\\frac12$, independently of other elements and of each other.",
+      "An element is in $A\\cap B$ with probability $\\frac12\\cdot\\frac12=\\frac14$.",
+      "The number of elements of $A\\cap B$ is Binomial$\\left(5,\\frac14\\right)$.",
+      "$P(|A\\cap B|=2)={}^5C_2\\left(\\frac14\\right)^2\\left(\\frac34\\right)^3=\\frac{10\\cdot27}{1024}=\\frac{135}{512}=\\frac{135}{2^9}$. Option (C) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A uniformly random subset of an $n$-set includes each element independently with probability $\\frac12$; so two random subsets are $2n$ independent fair coin flips.",
+    "$P(|A\\cap B|=k)={}^nC_k\\left(\\frac14\\right)^k\\left(\\frac34\\right)^{n-k}$; similarly $|A\\cup B|$ is Binomial$\\left(n,\\frac34\\right)$.",
+    "Number of ordered pairs $(A,B)$ with $|A\\cap B|=k$ is ${}^nC_k3^{n-k}$; total over $k$ is $4^n$ (binomial theorem for $(1+3)^n$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "De Moivre's theorem: real and imaginary parts"
+   ],
+   "level": 1,
+   "question": "Let $z=\\left(\\frac{\\sqrt3}{2}+\\frac i2\\right)^5+\\left(\\frac{\\sqrt3}{2}-\\frac i2\\right)^5$. If $R(z)$ and $I(z)$ respectively denote the real and imaginary parts of $z$, then :",
+   "options": [
+    "$R(z)=-3$",
+    "$I(z)=0$",
+    "$R(z)>0$ and $I(z)>0$",
+    "$R(z)<0$ and $I(z)>0$"
+   ],
+   "answer": "(B) $I(z)=0$",
+   "key_idea": "$\\frac{\\sqrt3}{2}\\pm\\frac i2=e^{\\pm i\\pi/6}$, so $z$ is $w^5+\\bar w^5=2\\,\\mathrm{Re}(w^5)$, a real number.",
+   "solution": [
+    "$\\frac{\\sqrt3}{2}+\\frac i2=e^{i\\pi/6}$ and $\\frac{\\sqrt3}{2}-\\frac i2=e^{-i\\pi/6}$.",
+    "$z=\\left(e^{i\\pi/6}\\right)^5+\\left(e^{-i\\pi/6}\\right)^5$.",
+    "$z=\\cos\\frac{5\\pi}6+i\\sin\\frac{5\\pi}6+\\cos\\frac{5\\pi}6-i\\sin\\frac{5\\pi}6$.",
+    "$z=2\\cos\\frac{5\\pi}6=-2\\cos\\frac\\pi6$.",
+    "$z=-2\\cdot\\frac{\\sqrt3}{2}=-\\sqrt3<0$.",
+    "So $R(z)=-\\sqrt3$ (not $-3$, so (A) is false) and $I(z)=0$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $w=e^{i\\pi/6}$ we have $w^6=-1$, so $w^5=-\\bar w$ and $z=-(w+\\bar w)$.",
+     "solution": [
+      "Let $w=e^{i\\pi/6}$, so $\\bar w=w^{-1}$ and $w^6=e^{i\\pi}=-1$.",
+      "$w^5=\\frac{w^6}{w}=-\\bar w$, and similarly $\\bar w^5=-w$.",
+      "$z=w^5+\\bar w^5=-(w+\\bar w)=-2\\cos\\frac\\pi6=-\\sqrt3$.",
+      "Hence $R(z)=-\\sqrt3$, $I(z)=0$. Option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$w^n+\\bar w^n=2\\,\\mathrm{Re}(w^n)=2r^n\\cos n\\theta$ is always real: the imaginary part is $0$ for any conjugate pair.",
+    "$e^{\\pm i\\pi/6}=\\frac{\\sqrt3}2\\pm\\frac i2$, $e^{\\pm i\\pi/3}=\\frac12\\pm\\frac{\\sqrt3}{2}i$, $e^{\\pm i\\pi/4}=\\frac{1\\pm i}{\\sqrt2}$: recognise them on sight.",
+    "If $w^6=-1$ then $w^{5}=-w^{-1}$; roots of $w^6=-1$ include $e^{\\pm i\\pi/6}$ and these satisfy $w^2-\\sqrt3w+1=0$."
+   ]
+  }
+ ]
+}
