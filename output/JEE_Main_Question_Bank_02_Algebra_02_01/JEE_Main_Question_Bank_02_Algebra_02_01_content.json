@@ -1,0 +1,899 @@
+{
+ "title": "JEE Main Question Bank 02 Algebra 02 — Paper Analysis",
+ "subtitle": "Questions 1–20 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Algebra_02_01.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper; JEE Advanced default assumed:",
+    "4 marks for a correct answer (assumed) · no negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "General term and rational terms in a binomial expansion"
+   ],
+   "level": 1,
+   "question": "The sum of all rational terms in the expansion of $\\left(2+\\sqrt3\\right)^8$ is :",
+   "options": [
+    "$18817$",
+    "$33845$",
+    "$16923$",
+    "$3763$"
+   ],
+   "answer": "(A) 18817",
+   "key_idea": "A term is rational exactly when the power of $\\sqrt3$ is even, i.e. $r$ is even.",
+   "solution": [
+    "The general term of $\\left(2+\\sqrt3\\right)^8$ is $T_{r+1}={}^8C_r\\,2^{8-r}\\left(\\sqrt3\\right)^r$.",
+    "$\\left(\\sqrt3\\right)^r$ is rational only for even $r$, so $r=0,2,4,6,8$ give the rational terms.",
+    "Sum $={}^8C_0\\,2^8+{}^8C_2\\,2^6\\left(\\sqrt3\\right)^2+{}^8C_4\\,2^4\\left(\\sqrt3\\right)^4+{}^8C_6\\,2^2\\left(\\sqrt3\\right)^6+{}^8C_8\\left(\\sqrt3\\right)^8$.",
+    "The five terms are $256$, $28\\cdot64\\cdot3=5376$, $70\\cdot16\\cdot9=10080$, $28\\cdot4\\cdot27=3024$ and $81$.",
+    "Sum $=256+5376+10080+3024+81=18817$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rational terms of $(2+\\sqrt3)^8$ are half of $(2+\\sqrt3)^8+(2-\\sqrt3)^8$, which obeys a simple recurrence.",
+     "solution": [
+      "Let $a=2+\\sqrt3,\\ b=2-\\sqrt3$. The odd-$r$ terms of $(2+\\sqrt3)^8$ and $(2-\\sqrt3)^8$ cancel in the sum, the even-$r$ (rational) terms double.",
+      "So the required sum is $\\frac12\\left(a^8+b^8\\right)=\\frac12 S_8$ where $S_n=a^n+b^n$.",
+      "$a+b=4$ and $ab=4-3=1$, hence $S_n=4S_{n-1}-S_{n-2}$ with $S_0=2,\\ S_1=4$.",
+      "$S_2=14,\\ S_3=52,\\ S_4=194,\\ S_5=724,\\ S_6=2702,\\ S_7=10084,\\ S_8=37634$.",
+      "Required sum $=\\frac12(37634)=18817$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $(p+q\\sqrt s)^n$ with $p,q$ rational and $\\sqrt s$ irrational, the rational part is $\\frac12\\left[(p+q\\sqrt s)^n+(p-q\\sqrt s)^n\\right]$ and the irrational part is $\\frac12\\left[(p+q\\sqrt s)^n-(p-q\\sqrt s)^n\\right]$.",
+    "$S_n=a^n+b^n$ satisfies $S_n=(a+b)S_{n-1}-abS_{n-2}$; here $a+b=4,\\ ab=1$.",
+    "Cue: 'sum of rational terms' of an expansion with a surd means pairing with the conjugate expansion."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Binomial coefficients: ratios of consecutive coefficients"
+   ],
+   "level": 1,
+   "question": "Let $0\\le r\\le n$. If ${}^{n+1}C_{r+1}:{}^nC_r:{}^{n-1}C_{r-1}=55:35:21$, then $2n+5r$ is equal to :",
+   "options": [
+    "$55$",
+    "$60$",
+    "$62$",
+    "$50$"
+   ],
+   "answer": "(D) 50",
+   "key_idea": "Write each coefficient as a multiple of ${}^nC_r$: $\\frac{n+1}{r+1}\\,{}^nC_r$ and $\\frac rn\\,{}^nC_r$.",
+   "solution": [
+    "${}^{n+1}C_{r+1}=\\frac{n+1}{r+1}\\,{}^nC_r$ and ${}^{n-1}C_{r-1}=\\frac rn\\,{}^nC_r$, so the ratio becomes $\\frac{n+1}{r+1}\\,{}^nC_r:{}^nC_r:\\frac rn\\,{}^nC_r=55:35:21$.",
+    "First two terms: $\\frac{n+1}{r+1}=\\frac{55}{35}=\\frac{11}{7}$, so $7(n+1)=11(r+1)$, i.e. $7n-11r=4$ ...(1)",
+    "Last two terms: $\\frac nr=\\frac{35}{21}=\\frac53$, so $3n=5r$, i.e. $3n-5r=0$ ...(2)",
+    "From (2) $n=\\frac{5r}{3}$; put in (1): $\\frac{35r}{3}-11r=4\\Rightarrow\\frac{2r}{3}=4$.",
+    "So $r=6$ and $n=10$.",
+    "$2n+5r=20+30=50$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF wrote (n+1)/(r+1)=55/34 (should be 55/35=11/7) and equation (2) as 3n-5r=4 (should be 3n-5r=0 because n/r=35/21=5/3). Solving the PDF's own equations gives r=-8, so its 'r=6, n=10' did not follow; with the corrected equations r=6, n=10 and the answer 50 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$\\frac nr=\\frac53$ forces $n=5k,\\ r=3k$, so $2n+5r=25k$ must be a multiple of $25$.",
+     "solution": [
+      "Because ${}^nC_r:{}^{n-1}C_{r-1}=\\frac nr$, we get $\\frac nr=\\frac{35}{21}=\\frac53$.",
+      "Hence $n=5k,\\ r=3k$ for a positive integer $k$.",
+      "Then $2n+5r=10k+15k=25k$, a multiple of $25$.",
+      "Among $55,\\,60,\\,62,\\,50$ only $50$ is a multiple of $25$, giving $k=2$.",
+      "Check with $k=2$: $n=10,\\ r=6$ and $\\frac{n+1}{r+1}=\\frac{11}{7}=\\frac{55}{35}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\binom{n+1}{r+1}=\\frac{n+1}{r+1}\\binom nr$, $\\ \\binom{n-1}{r-1}=\\frac rn\\binom nr$, $\\ \\binom n{r}=\\frac{n-r+1}{r}\\binom n{r-1}$.",
+    "Ratio of consecutive coefficients $\\binom n{r+1}:\\binom nr=(n-r):(r+1)$ gives linear equations in $n,r$; one ratio of non-adjacent type gives a ratio such as $\\frac nr$.",
+    "A ratio like $n:r=5:3$ gives $n=5k,r=3k$, and divisibility of the target expression can eliminate options immediately."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Complex numbers: polar form and cube roots of unity"
+   ],
+   "level": 2,
+   "question": "If $z=\\frac{\\sqrt3}{2}+\\frac i2$ where $i=\\sqrt{-1}$, then $\\left(1+iz+z^5+iz^8\\right)^9$ is equal to",
+   "options": [
+    "$0$",
+    "$(-1+2i)^9$",
+    "$-1$",
+    "$1$"
+   ],
+   "answer": "(C) −1",
+   "key_idea": "Write $z=-i\\omega$ with $\\omega$ a cube root of unity, so $iz=\\omega$ and the $\\omega^2$ terms cancel.",
+   "solution": [
+    "$z=\\frac{\\sqrt3}{2}+\\frac i2=-i\\left(-\\frac12+\\frac{\\sqrt3}{2}i\\right)=-i\\omega$, where $\\omega$ is a non-real cube root of unity ($\\omega^3=1,\\ 1+\\omega+\\omega^2=0$).",
+    "$iz=i(-i\\omega)=\\omega$.",
+    "$z^5=(-i)^5\\omega^5=-i\\omega^2$ and $z^8=(-i)^8\\omega^8=\\omega^2$, so $iz^8=i\\omega^2$.",
+    "$1+iz+z^5+iz^8=1+\\omega-i\\omega^2+i\\omega^2=1+\\omega$.",
+    "$1+\\omega=-\\omega^2$, so $\\left(1+iz+z^5+iz^8\\right)^9=(-\\omega^2)^9$.",
+    "$(-\\omega^2)^9=-\\omega^{18}=-1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use polar form $z=e^{i\\pi/6}$: the terms $z^5$ and $iz^8$ are antipodal points and cancel.",
+     "solution": [
+      "$z=\\cos\\frac\\pi6+i\\sin\\frac\\pi6=e^{i\\pi/6}$ and $i=e^{i\\pi/2}$.",
+      "$iz=e^{i(\\pi/2+\\pi/6)}=e^{i2\\pi/3}$, $\\ z^5=e^{i5\\pi/6}$, $\\ iz^8=e^{i(\\pi/2+4\\pi/3)}=e^{i11\\pi/6}$.",
+      "$z^5+iz^8=e^{i5\\pi/6}+e^{i11\\pi/6}=e^{i5\\pi/6}\\left(1+e^{i\\pi}\\right)=0$.",
+      "So the bracket is $1+e^{i2\\pi/3}=1+\\left(-\\frac12+\\frac{\\sqrt3}2i\\right)=\\frac12+\\frac{\\sqrt3}{2}i=e^{i\\pi/3}$.",
+      "$\\left(e^{i\\pi/3}\\right)^9=e^{i3\\pi}=-1$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{\\sqrt3}2+\\frac i2=e^{i\\pi/6}$; multiplying by $i$ rotates by $90^\\circ$; $e^{i\\theta}+e^{i(\\theta+\\pi)}=0$.",
+    "$1+\\omega=-\\omega^2=e^{i\\pi/3}$, so $(1+\\omega)^6=1$ and $(1+\\omega)^3=-1$.",
+    "Cue: unusual powers of a number like $\\frac{\\sqrt3}2\\pm\\frac i2$ - convert to polar form or to $\\pm i^k\\omega^m$ before expanding."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Binomial theorem: remainders and divisibility"
+   ],
+   "level": 2,
+   "question": "The remainder, when $7^{103}$ is divided by $23$, is equal to :",
+   "options": [
+    "$17$",
+    "$6$",
+    "$9$",
+    "$14$"
+   ],
+   "answer": "(D) 14",
+   "key_idea": "Reduce the base to $(\\text{multiple of }23)\\pm\\text{small}$: $343=345-2$, then $2^{34}$ via $256=253+3$.",
+   "solution": [
+    "$7^{103}=7\\left(7^{102}\\right)=7(343)^{34}=7(345-2)^{34}$.",
+    "Since $345=23\\cdot15$, $7^{103}=23K_1+7\\cdot2^{34}$.",
+    "Now $7\\cdot2^{34}=7\\cdot2^2\\cdot2^{32}=28\\cdot(256)^4=28(253+3)^4$.",
+    "As $253=23\\cdot11$, $(253+3)^4=23(\\cdot)+3^4=23(\\cdot)+81$, so $28\\times81\\Rightarrow(23+5)(69+12)$.",
+    "This equals $23K_2+5\\cdot12=23K_2+60$.",
+    "$60=2\\cdot23+14$, so the remainder is $14$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Euler's criterion: $7^{11}\\equiv-1\\pmod{23}$, so $7^{22}\\equiv1$ and the exponent can be cut down to $15$.",
+     "solution": [
+      "Mod 23: $7^2=49\\equiv3$, $\\ 7^4\\equiv9$, $\\ 7^8\\equiv81\\equiv12$.",
+      "$7^{11}=7^8\\cdot7^2\\cdot7\\equiv12\\cdot3\\cdot7=252\\equiv-1\\pmod{23}$ (as $252=11\\cdot23-1$).",
+      "Hence $7^{22}\\equiv1$, and $103=4\\cdot22+15$ gives $7^{103}\\equiv7^{15}$.",
+      "$7^{15}=7^{11}\\cdot7^4\\equiv(-1)(9)=-9\\equiv14\\pmod{23}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Fermat: $a^{p-1}\\equiv1\\pmod p$ for prime $p\\nmid a$; Euler's criterion: $a^{(p-1)/2}\\equiv\\pm1$ according as $a$ is a quadratic residue or not.",
+    "Binomial method: write $a^k=(Mp\\pm c)^m$ with small $c$; only the last term $(\\pm c)^m$ survives mod $p$.",
+    "Reduce the exponent modulo the order of the base (a divisor of $p-1$); finding the first power equal to $\\pm1$ shortens everything."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Events: mutually exclusive, independent, counting favourable cases"
+   ],
+   "level": 2,
+   "question": "Two dice are thrown independently. Let $A$ be the event that the number appeared on the 1st die is less than the number appeared on the 2nd die, $B$ be the event that the number appeared on the 1st die is even and that on the second die is odd, and $C$ be the event that the number appeared on the 1st die is odd and that on the 2nd is even. Then :",
+   "options": [
+    "the number of favourable cases of the event $(A\\cup B)\\cap C$ is $6$",
+    "$A$ and $B$ are mutually exclusive",
+    "the number of favourable cases of the events $A$, $B$ and $C$ are $15$, $6$ and $6$ respectively",
+    "$B$ and $C$ are independent"
+   ],
+   "answer": "(A)",
+   "key_idea": "Distribute: $(A\\cup B)\\cap C=(A\\cap C)\\cup(B\\cap C)$, and $B\\cap C=\\varnothing$ because the parity conditions on the 1st die clash.",
+   "solution": [
+    "The sample space has $36$ ordered pairs $(\\text{1st die},\\text{2nd die})$; $A$: 1st $<$ 2nd, $B$: (even, odd), $C$: (odd, even).",
+    "$n(A)=15$, $n(B)=3\\times3=9$, $n(C)=3\\times3=9$.",
+    "$n(A\\cap B)=3$, $\\ n(A\\cap C)=6$, $\\ n(B\\cap C)=0$, $\\ n(A\\cap B\\cap C)=0$.",
+    "$n\\big((A\\cup B)\\cap C\\big)=n(A\\cap C)+n(B\\cap C)-n(A\\cap B\\cap C)=6+0-0=6$, so (A) is correct.",
+    "(B) is false since $n(A\\cap B)=3\\ne0$, e.g. $(2,3)$ lies in both.",
+    "(C) is false since $n(B)=n(C)=9$, not $6$.",
+    "(D) is false: $P(B\\cap C)=0$ but $P(B)P(C)=\\frac14\\cdot\\frac14\\ne0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count $n(A)$ by symmetry and $n(A\\cap C)$ by complement inside $C$.",
+     "solution": [
+      "The pairs with equal numbers number $6$; by symmetry between the two dice, $n(1\\text{st}<2\\text{nd})=n(1\\text{st}>2\\text{nd})=\\frac{36-6}{2}=15$, so $n(A)=15$.",
+      "$C$ has $9$ outcomes (odd, even). In $C$ the two numbers are never equal (different parity), so each outcome is in $A$ or in 'first $>$ second'.",
+      "Pairs in $C$ with first $>$ second: $(3,2),(5,2),(5,4)$, which is $3$ pairs; hence $n(A\\cap C)=9-3=6$.",
+      "$B\\cap C=\\varnothing$, so $n\\big((A\\cup B)\\cap C\\big)=6$ (same answer, option (A))."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For two fair dice, $P(\\text{1st}<\\text{2nd})=\\frac{1-P(\\text{equal})}{2}=\\frac5{12}$ (15 of 36 outcomes).",
+    "$(A\\cup B)\\cap C=(A\\cap C)\\cup(B\\cap C)$; events that fix different values or parities of the same die are mutually exclusive.",
+    "Mutually exclusive events with non-zero probability are never independent: $P(B\\cap C)=0\\ne P(B)P(C)$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Counting numbers with digit restrictions",
+    "Classical probability"
+   ],
+   "level": 3,
+   "question": "Let $A$ be a set of all $4$-digit natural numbers whose exactly one digit is $7$. Then the probability that a randomly chosen element of $A$ leaves remainder $2$ when divided by $5$ is :",
+   "options": [
+    "$\\frac15$",
+    "$\\frac{97}{297}$",
+    "$\\frac29$",
+    "$\\frac{122}{297}$"
+   ],
+   "answer": "(B) $\\frac{97}{297}$",
+   "key_idea": "Remainder $2$ on division by $5$ means the last digit is $2$ or $7$; then count by the position of the single $7$, keeping the first digit non-zero.",
+   "solution": [
+    "Sample space: $7$ in the first place gives $1\\times9\\times9\\times9=729$ numbers.",
+    "$7$ in one of the other three places: the first digit is non-zero and not $7$ ($8$ ways), the other two free digits have $9$ ways each: ${}^3C_1\\times8\\times9\\times9=1944$.",
+    "$n(S)=729+1944=2673$.",
+    "Event: the last digit is $2$ or $7$. Last digit $7$: the first three digits contain no $7$, giving $8\\times9\\times9=648$.",
+    "Last digit $2$ with $7$ in the first place: $7\\_\\_2$ gives $9\\times9=81$.",
+    "Last digit $2$ with $7$ in the 2nd or 3rd place: ${}^2C_1\\times8\\times9=144$.",
+    "$n(E)=648+81+144=873$.",
+    "$P(E)=\\frac{873}{2673}=\\frac{97}{297}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF figure labels the count for '7 not in the first place' as 3C1 x 9 x 9 x 9 (=2187). The correct factor is 3C1 x 8 x 9 x 9, because the first digit cannot be 0 or 7 (8 choices). The PDF's total 1944 and all later numbers (2673, 873, 97/297) are correct; verified by brute force over 1000-9999.",
+   "alternate_solutions": [
+    {
+     "idea": "Count all digit strings (leading zero allowed) with exactly one $7$, then subtract the strings that begin with $0$.",
+     "solution": [
+      "Strings of 4 digits with exactly one $7$: choose its position ($4$ ways), other three digits have $9$ choices each: $4\\cdot9^3=2916$.",
+      "Those with leading $0$: remaining three places contain exactly one $7$: $3\\cdot9^2=243$. So $n(S)=2916-243=2673$.",
+      "Last digit $7$ (first three free of $7$): $9^3=729$; last digit $2$ (exactly one $7$ among the first three): $3\\cdot9^2=243$; total $972$.",
+      "Remove strings starting with $0$: last digit $7$: $0\\,\\_\\,\\_\\,7$ with no $7$ in the middle gives $9^2=81$; last digit $2$: $0\\,\\_\\,\\_\\,2$ with one $7$ in the middle gives $2\\cdot9=18$.",
+      "$n(E)=972-81-18=873$ and $P=\\frac{873}{2673}=\\frac{97}{297}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of $n$-digit strings (zeros allowed) with exactly one given digit is $n\\cdot9^{n-1}$; subtract the ones with leading $0$ to get $n$-digit numbers.",
+    "The remainder on division by $5$ (or $2$, $10$) depends only on the last digit: remainder $2$ mod $5$ means last digit $2$ or $7$.",
+    "When the condition involves the last digit and a digit-count condition, split on whether the special digit sits in the last place."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Binomial theorem: summation of series involving binomial coefficients"
+   ],
+   "level": 2,
+   "question": "If $\\sum_{r=1}^{9}\\left(\\frac{r+3}{2^r}\\right){}^9C_r=\\alpha\\left(\\frac32\\right)^9-\\beta$, $\\alpha,\\beta\\in N$, then $(\\alpha+\\beta)^2$ is equal to :",
+   "options": [
+    "$27$",
+    "$81$",
+    "$18$",
+    "$9$"
+   ],
+   "answer": "(B) 81",
+   "key_idea": "Split $r+3$ and use $r\\,{}^9C_r=9\\,{}^8C_{r-1}$, then sum with $(1+x)^n$ at $x=\\frac12$.",
+   "solution": [
+    "$\\sum_{r=1}^{9}\\left(\\frac{r+3}{2^r}\\right){}^9C_r=\\sum_{r=1}^9\\frac{r}{2^r}\\,{}^9C_r+\\sum_{r=1}^9\\frac3{2^r}\\,{}^9C_r$.",
+    "Using $r\\,{}^9C_r=9\\,{}^8C_{r-1}$, the first sum is $\\sum_{r=1}^{9}\\frac{9}{2^r}\\,{}^8C_{r-1}$ and the second is $3\\sum_{r=1}^9{}^9C_r\\left(\\frac12\\right)^r$.",
+    "First sum $=\\frac92\\sum_{r=1}^9{}^8C_{r-1}\\left(\\frac12\\right)^{r-1}$, second $=3\\left(\\sum_{r=0}^{9}{}^9C_r\\left(\\frac12\\right)^r-1\\right)$.",
+    "Binomial theorem: first sum $=\\frac92\\left(1+\\frac12\\right)^8$, second $=3\\left(\\left(1+\\frac12\\right)^9-1\\right)$.",
+    "Total $=\\frac92\\left(\\frac32\\right)^8+3\\left(\\frac32\\right)^9-3=3\\left(\\frac32\\right)^9+3\\left(\\frac32\\right)^9-3$.",
+    "So the sum is $6\\left(\\frac32\\right)^9-3$, giving $\\alpha=6,\\ \\beta=3$ and $(\\alpha+\\beta)^2=81$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rewrite the weights $\\binom9r\\left(\\frac12\\right)^r$ as $\\left(\\frac32\\right)^9$ times a binomial probability with $p=\\frac13$, so the sum is an expectation.",
+     "solution": [
+      "$\\left(\\frac32\\right)^9\\binom9r\\left(\\frac13\\right)^r\\left(\\frac23\\right)^{9-r}=\\binom9r\\frac{2^{9-r}}{2^9}=\\binom9r\\left(\\frac12\\right)^r$.",
+      "So $\\sum_{r=0}^{9}(r+3)\\binom9r\\frac1{2^r}=\\left(\\frac32\\right)^9E[R+3]$ where $R\\sim\\mathrm{Bin}\\left(9,\\frac13\\right)$.",
+      "$E[R]=9\\cdot\\frac13=3$, so the full sum is $\\left(\\frac32\\right)^9(3+3)=6\\left(\\frac32\\right)^9$.",
+      "The given sum starts at $r=1$, so subtract the $r=0$ term $\\frac{3}{1}\\binom90=3$: result $6\\left(\\frac32\\right)^9-3$.",
+      "Hence $\\alpha=6,\\ \\beta=3$ and $(\\alpha+\\beta)^2=81$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r=0}^n\\binom nrx^r=(1+x)^n$ and $\\sum_{r=0}^n r\\binom nrx^r=nx(1+x)^{n-1}$.",
+    "$\\binom nrx^r=(1+x)^n\\binom nrp^rq^{n-r}$ with $p=\\frac x{1+x},\\ q=\\frac1{1+x}$: a weighted binomial sum is $(1+x)^n$ times an expectation under $\\mathrm{Bin}(n,p)$ (here $x=\\frac12,\\ p=\\frac13$).",
+    "Check of the answer: $6\\left(\\frac32\\right)^9-3=\\frac{58281}{256}$, matching the term-by-term sum."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Classical probability: favourable triangles from vertices of a regular hexagon"
+   ],
+   "level": 1,
+   "question": "If three of the six vertices of a regular hexagon are chosen at random, then the probability that the triangle formed with these chosen vertices is equilateral is :",
+   "options": [
+    "$\\frac3{20}$",
+    "$\\frac15$",
+    "$\\frac3{10}$",
+    "$\\frac1{10}$"
+   ],
+   "answer": "(D) $\\frac1{10}$",
+   "key_idea": "Only alternate vertices form an equilateral triangle, so exactly two triangles ($ACE$ and $BDF$) qualify.",
+   "solution": [
+    "Label the hexagon $ABCDEF$. Only two equilateral triangles can be formed from its vertices: $\\triangle ACE$ and $\\triangle BDF$.",
+    "Total ways to choose three vertices: ${}^6C_3=20$.",
+    "Required probability $=\\frac{2}{{}^6C_3}=\\frac2{20}=\\frac1{10}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count equilateral triangles by rotational symmetry: such a triangle must have vertices exactly two steps apart.",
+     "solution": [
+      "The vertices of a regular hexagon lie on a circle at $60^\\circ$ steps; an equilateral inscribed triangle has arcs of $120^\\circ$ between its vertices.",
+      "So its vertices are $V_i,V_{i+2},V_{i+4}$ for a starting vertex $i\\in\\{1,\\dots,6\\}$.",
+      "Each triangle arises from $3$ choices of starting vertex, so the number of triangles is $\\frac63=2$.",
+      "$P=\\frac2{\\binom63}=\\frac2{20}=\\frac1{10}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In a regular $n$-gon, equilateral triangles from the vertices exist only if $3\\mid n$, and there are $\\frac n3$ of them.",
+    "Number of triangles from the vertices of a convex $n$-gon is $\\binom n3$; so $P(\\text{equilateral})=\\frac{n/3}{\\binom n3}$: $\\frac1{10}$ for $n=6$, $\\frac1{28}$ for $n=9$, $\\frac1{55}$ for $n=12$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Random variable: probability distribution and mathematical expectation"
+   ],
+   "level": 2,
+   "question": "An unbiased coin is tossed $5$ times. Suppose that a variable $X$ is assigned the value $k$ when $k$ consecutive heads are obtained for $k=3,4,5$, otherwise $X$ takes the value $-1$. Then the expected value of $X$, is :",
+   "options": [
+    "$\\frac3{16}$",
+    "$-\\frac18$",
+    "$-\\frac3{16}$",
+    "$\\frac18$"
+   ],
+   "answer": "(D) $\\frac18$",
+   "key_idea": "List the sequences with a run of exactly $5$, $4$, $3$ heads; every other outcome (probability $\\frac34$) gives $-1$.",
+   "solution": [
+    "$P(X=5)=\\frac1{32}$: only HHHHH.",
+    "$P(X=4)=\\frac2{32}$: HHHHT or THHHH.",
+    "$P(X=3)=\\frac5{32}$: HHHTT, HHHTH, THHHT, TTHHH, HTHHH.",
+    "$P(\\text{none of these})=1-\\frac8{32}=\\frac34$.",
+    "$E(X)=\\sum x_ip(x_i)=5\\times\\frac1{32}+4\\times\\frac2{32}+3\\times\\frac5{32}-1\\times\\frac34$.",
+    "$E(X)=\\frac{5+8+15}{32}-\\frac{24}{32}=\\frac4{32}=\\frac18$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count with tail probabilities $P(\\text{run}\\ge k)$ and the tail-sum formula for expectation, avoiding listing the exact-run sequences.",
+     "solution": [
+      "Let $Y=X+1$, so $Y=0$ for 'otherwise' and $Y=k+1$ (that is $4,5,6$) for $k=3,4,5$; $E[X]=E[Y]-1$.",
+      "Sequences with a run of at least $3$ heads: inclusion-exclusion on blocks HHH at positions $1\\text{-}3,\\,2\\text{-}4,\\,3\\text{-}5$: $12-(2+2+1)+1=8$, so $P(\\ge3)=\\frac8{32}$.",
+      "At least $4$ heads in a row: HHHHT, THHHH, HHHHH, i.e. $\\frac3{32}$; at least $5$: $\\frac1{32}$.",
+      "Tail-sum: $E[Y]=4P(\\ge3)+1\\cdot P(\\ge4)+1\\cdot P(\\ge5)=\\frac{32+3+1}{32}=\\frac98$.",
+      "$E[X]=\\frac98-1=\\frac18$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a variable taking values in $\\{0,1,2,\\dots\\}$, $E[Y]=\\sum_{k\\ge1}P(Y\\ge k)$; for a jump variable use the weighted version $E[Y]=\\sum_k(y_k-y_{k-1})P(Y\\ge y_k)$.",
+    "Number of binary strings of length $n$ with no $3$ consecutive heads is tribonacci: $1,2,4,7,13,24$ for $n=0,\\dots,5$; so $32-24=8$ strings contain HHH.",
+    "'Otherwise' cases are cheapest as a complement: $1-P(\\text{listed values})$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Statistics: variance and its properties"
+   ],
+   "level": 1,
+   "question": "The outcome of each of $30$ items was observed; $10$ items gave an outcome $\\frac12-d$ each, $10$ items gave outcome $\\frac12$ each and the remaining $10$ items gave outcome $\\frac12+d$ each. If the variance of this outcome data is $\\frac43$ then $|d|$ equals :",
+   "options": [
+    "$\\frac{\\sqrt5}2$",
+    "$2$",
+    "$\\sqrt2$",
+    "$\\frac23$"
+   ],
+   "answer": "(C) $\\sqrt2$",
+   "key_idea": "Variance does not change when the data is shifted, so shift everything by $\\frac12$ to get $-d,0,d$.",
+   "solution": [
+    "Variance is independent of origin, so shift the data by $\\frac12$: the values become $-d$ ($10$ times), $0$ ($10$ times) and $d$ ($10$ times).",
+    "The shifted mean is $0$.",
+    "$\\sigma^2=\\frac{10d^2+10\\times0^2+10d^2}{30}-(0)^2=\\frac{2d^2}{3}$.",
+    "Set $\\frac{2d^2}{3}=\\frac43$, so $d^2=2$.",
+    "$|d|=\\sqrt2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the pairwise identity $\\sigma^2=\\frac1{n^2}\\sum_{i<j}(x_i-x_j)^2$, which needs no mean at all.",
+     "solution": [
+      "For $n$ data, $\\sum_{i<j}(x_i-x_j)^2=n\\sum x_i^2-\\left(\\sum x_i\\right)^2=n^2\\sigma^2$.",
+      "Pairs between the groups $\\left(\\frac12-d,\\frac12\\right)$: $10\\times10=100$ pairs, each with squared difference $d^2$; likewise $100$ pairs $\\left(\\frac12,\\frac12+d\\right)$ with $d^2$.",
+      "Pairs $\\left(\\frac12-d,\\frac12+d\\right)$: $100$ pairs with squared difference $4d^2$; pairs inside a group contribute $0$.",
+      "Total $=100d^2+100d^2+400d^2=600d^2$, so $\\sigma^2=\\frac{600d^2}{900}=\\frac{2d^2}3$.",
+      "$\\frac{2d^2}3=\\frac43\\Rightarrow d^2=2$, $|d|=\\sqrt2$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Variance is unchanged by $x\\to x+c$ and scales by $c^2$ under $x\\to cx$.",
+    "Equal numbers of observations at $m-d,\\,m,\\,m+d$ have variance $\\frac{2d^2}3$; at $m\\pm d$ only, variance $d^2$.",
+    "$\\sigma^2=\\frac1{n^2}\\sum_{i<j}(x_i-x_j)^2$; check on $\\{0,2\\}$: $\\frac14\\cdot4=1$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Selections of objects: identical and distinct objects"
+   ],
+   "level": 2,
+   "question": "The number of ways of choosing $10$ objects out of $31$ objects of which $10$ are identical and the remaining $21$ are distinct, is :",
+   "options": [
+    "$2^{20}+1$",
+    "$2^{21}$",
+    "$2^{20}-1$",
+    "$2^{20}$"
+   ],
+   "answer": "(D) $2^{20}$",
+   "key_idea": "A selection is fixed by how many distinct objects are taken ($k\\le10$); the identical ones fill the rest. Then use $\\sum_{k\\le10}{}^{21}C_k=\\frac{2^{21}}2$.",
+   "solution": [
+    "Write I for an identical object and D for a distinct object. A selection of $10$ is $(10I,0D)$ or $(9I,1D)$ or $(8I,2D)$ or ... or $(0I,10D)$.",
+    "The number of ways is $1+{}^{21}C_1+{}^{21}C_2+\\dots+{}^{21}C_{10}$, i.e. $\\sum_{k=0}^{10}{}^{21}C_k$.",
+    "Since ${}^{21}C_k={}^{21}C_{21-k}$, the terms $k=0,\\dots,10$ are exactly half of $\\sum_{k=0}^{21}{}^{21}C_k=2^{21}$.",
+    "So the number of ways is $\\frac{2^{21}}2=2^{20}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split ${}^{21}C_k={}^{20}C_k+{}^{20}C_{k-1}$ (Pascal) and use the symmetry of the even row $20$.",
+     "solution": [
+      "$\\sum_{k=0}^{10}{}^{21}C_k=\\sum_{k=0}^{10}{}^{20}C_k+\\sum_{k=0}^{10}{}^{20}C_{k-1}=\\sum_{k=0}^{10}{}^{20}C_k+\\sum_{j=0}^{9}{}^{20}C_j$.",
+      "Row $20$ is symmetric with a middle term: $\\sum_{k=0}^{10}{}^{20}C_k=\\frac{2^{20}+{}^{20}C_{10}}2$.",
+      "Hence $\\sum_{j=0}^{9}{}^{20}C_j=\\frac{2^{20}-{}^{20}C_{10}}2$.",
+      "Adding, the middle terms cancel and the total is $\\frac{2^{20}}2+\\frac{2^{20}}2=2^{20}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Choosing $r$ objects from $n$ distinct plus at least $r$ identical ones: $\\sum_{k=0}^{r}\\binom nk$.",
+    "For odd $n$: $\\sum_{k=0}^{(n-1)/2}\\binom nk=2^{n-1}$; for even $n$: $\\sum_{k=0}^{n/2-1}\\binom nk=\\frac{2^n-\\binom n{n/2}}2$.",
+    "General count of selections with identicals: coefficient of $x^r$ in $\\left(1+x+\\dots\\right)(1+x)^n$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Mathematical expectation: expected gain in a repeated game"
+   ],
+   "level": 2,
+   "question": "In a game, a man wins Rs. $100$ if he gets $5$ or $6$ on a throw of a fair die and loses Rs. $50$ for getting any other number on the die. If he decides to throw the die either till he gets a five or a six or to a maximum of three throws, then his expected gain/loss (in rupees) is :",
+   "options": [
+    "$\\frac{400}3$ gain",
+    "$\\frac{400}3$ loss",
+    "$0$",
+    "$\\frac{400}9$ loss"
+   ],
+   "answer": "(C) 0",
+   "key_idea": "List the outcomes of the stopping rule with their net gains: $+100$, $+50$, $0$, $-150$, with probabilities $\\frac13,\\frac29,\\frac4{27},\\frac8{27}$.",
+   "solution": [
+    "$P(5\\text{ or }6)=\\frac13$ on each throw; $\\frac23$ otherwise.",
+    "Stops on the 1st throw: net gain $100$, probability $\\frac13$; contribution $\\frac13\\times100$.",
+    "Stops on the 2nd throw: one loss then a win, net $-50+100=50$, probability $\\frac23\\cdot\\frac13=\\frac29$; contribution $\\frac29\\times50$.",
+    "Stops on the 3rd throw with a win: two losses then a win, net $-100+100=0$, probability $\\frac49\\cdot\\frac13=\\frac4{27}$; contribution $0$.",
+    "Three losses: net $-150$, probability $\\left(\\frac23\\right)^3=\\frac8{27}$; contribution $-150\\times\\frac8{27}$.",
+    "$E=\\frac{100}3+\\frac{100}9+0-\\frac{400}9=\\frac{300+100-400}9=0$, so there is no gain or loss."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's first-throw gain is written as 1/2 x 100 (should be 1/3 x 100), the case 'three throws all losing' (net -150, probability 8/27) is missing (it lists only 'two loss + 1 gain'), and it never adds the contributions - it just states 'overall gain/loss = 0'. Corrected working lists all four outcomes and sums them; final answer 0 is unchanged and checked with exact fractions.",
+   "alternate_solutions": [
+    {
+     "idea": "Every throw is a fair bet (mean $0$), so any bounded stopping rule has expected total $0$ (Wald's identity).",
+     "solution": [
+      "Per throw the payoff is $+100$ with probability $\\frac13$ and $-50$ with probability $\\frac23$: mean $=\\frac{100}3-\\frac{100}3=0$.",
+      "The total gain is the sum of the payoffs of the throws actually made, $G=X_1+\\dots+X_N$, where $N\\in\\{1,2,3\\}$ is the (bounded) number of throws.",
+      "Whether the $k$-th throw is made depends only on the earlier throws, so $E[X_k\\mathbf 1_{N\\ge k}]=E[X_k]\\,P(N\\ge k)=0$.",
+      "Hence $E[G]=\\sum_{k=1}^{3}E[X_k]\\,P(N\\ge k)=0\\cdot E[N]=0$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Wald's identity: if the throws are independent with equal mean $\\mu$ and $N$ is a bounded stopping time, $E[\\text{total}]=\\mu\\,E[N]$.",
+    "A game that is fair per trial stays fair under any stopping rule (no betting strategy changes the mean).",
+    "Here $E[N]=1+\\frac23+\\frac49=\\frac{19}9$; if the loss were Rs. $40$ instead, the mean per throw is $\\frac{100}3-\\frac{80}3=\\frac{20}3$, so $E=\\frac{20}3\\cdot\\frac{19}9=\\frac{380}{27}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Binomial expansion: number of integral terms"
+   ],
+   "level": 3,
+   "question": "The least value of $n$ for which the number of integral terms in the Binomial expansion of $\\left(\\sqrt[3]7+\\sqrt[12]{11}\\right)^n$ is $183$, is :",
+   "options": [
+    "$2148$",
+    "$2196$",
+    "$2172$",
+    "$2184$"
+   ],
+   "answer": "(D) 2184",
+   "key_idea": "$T_{r+1}$ is an integer iff $12\\mid r$ and $3\\mid(n-r)$; the second condition forces $3\\mid n$.",
+   "solution": [
+    "$\\left(7^{1/3}+11^{1/12}\\right)^n$ has $T_{r+1}={}^nC_r\\left(7^{1/3}\\right)^{n-r}\\left(11^{1/12}\\right)^{r}$.",
+    "The $11$-part is an integer iff $12\\mid r$, so $r=12k$ with $k\\in W$ (whole numbers).",
+    "The $7$-part is an integer iff $3\\mid(n-r)$; since $12k$ is divisible by $3$, this requires $3\\mid n$.",
+    "The number of integral terms is the number of $k$ with $0\\le12k\\le n$, i.e. $\\left\\lfloor\\frac n{12}\\right\\rfloor+1=183$.",
+    "So $\\left\\lfloor\\frac n{12}\\right\\rfloor=182$, giving $2184\\le n\\le2195$; the largest $r$ is $12\\cdot182=2184$.",
+    "The smallest such $n$ divisible by $3$ is $2184$ (and $2184=3\\cdot728$ works)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF only states 'r must be a multiple of 12' and 'max r = 12(182) = 2184', and then writes 2184. It never uses the second condition 3 | (n-r) (hence 3 | n) nor shows that n = 2184 is the least value; it should state n lies in [2184, 2195] and 3 | n. The answer 2184 is unchanged (verified by brute force).",
+   "useful_results": [
+    "In $\\left(a^{1/p}+b^{1/q}\\right)^n$ (with $a,b$ not perfect powers), $T_{r+1}$ is an integer iff $q\\mid r$ and $p\\mid(n-r)$.",
+    "The number of multiples of $m$ in $\\{0,1,\\dots,n\\}$ is $\\left\\lfloor\\frac nm\\right\\rfloor+1$.",
+    "For 'least $n$': solve the count condition for an interval of $n$, then apply the divisibility constraint to pick the smallest member."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Infinite geometric series",
+    "Probability on a countable sample space"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{w_1,w_2,\\dots\\}$ be the sample space associated to a random experiment. Let $P(w_n)=\\frac{P(w_{n-1})}2,\\ n\\ge2$. Let $A=\\{2k+3l:k,l\\in N\\}$ and $B=\\{w_n:n\\in A\\}$. Then $P(B)$ is equal to",
+   "options": [
+    "$\\frac3{32}$",
+    "$\\frac1{16}$",
+    "$\\frac1{32}$",
+    "$\\frac3{64}$"
+   ],
+   "answer": "(D) $\\frac3{64}$",
+   "key_idea": "Find $P(w_n)=2^{-n}$ from total probability $1$, then identify $A=N\\setminus\\{1,2,3,4,6\\}$ and subtract the missing terms.",
+   "solution": [
+    "Let $P(w_1)=\\lambda$; then $P(w_2)=\\frac\\lambda2,\\dots,P(w_n)=\\frac\\lambda{2^{n-1}}$.",
+    "$\\sum_{k=1}^\\infty P(w_k)=\\frac{\\lambda}{1-\\frac12}=1\\Rightarrow\\lambda=\\frac12$.",
+    "So $P(w_n)=\\frac1{2^n}$.",
+    "$A=\\{2k+3l:k,l\\in N\\}=\\{5,7,8,9,10,\\dots\\}$ (so $6\\notin A$, since $6$ would need $k$ or $l=0$), i.e. $A=N-\\{1,2,3,4,6\\}$.",
+    "$B=\\{w_5,w_7,w_8,w_9,w_{10},w_{11},\\dots\\}$.",
+    "$P(B)=1-\\left[P(w_1)+P(w_2)+P(w_3)+P(w_4)+P(w_6)\\right]=1-\\left[\\frac12+\\frac14+\\frac18+\\frac1{16}+\\frac1{64}\\right]$.",
+    "$P(B)=1-\\frac{32+16+8+4+1}{64}=\\frac3{64}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Sum $P(w_n)$ directly over $A$: the tail from $5$ is a geometric series, minus the single missing term $n=6$.",
+     "solution": [
+      "$P(w_n)=2^{-n}$ (from $\\sum P=1$ and the halving rule).",
+      "With $k,l\\ge1$, $2k+3l=5+2(k-1)+3(l-1)$, so $A$ is $5$ plus numbers formed from $2$'s and $3$'s: $\\{0,2,3,4,5,\\dots\\}$ without $1$; hence $A=\\{5,7,8,9,\\dots\\}$ and the only gap above $4$ is $6$.",
+      "Tail $\\sum_{n\\ge5}2^{-n}=\\frac{2^{-5}}{1-\\frac12}=\\frac1{16}$.",
+      "$P(B)=\\frac1{16}-P(w_6)=\\frac1{16}-\\frac1{64}=\\frac3{64}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{n\\ge k}2^{-n}=2^{1-k}$, and $\\sum_{n\\ge1}2^{-n}=1$.",
+    "For coprime positive $a,b$, the numbers $ak+bl$ with $k,l\\ge1$ include every integer $>ab$ and the largest non-representable one is $ab$ (here $6$); with $k,l\\ge0$ it is $ab-a-b=1$.",
+    "Normalise a halving/geometric probability law first: $P(w_1)=\\frac12$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Distribution of distinct objects into distinct boxes",
+    "Classical probability"
+   ],
+   "level": 3,
+   "question": "If $10$ different balls are to be placed in $4$ distinct boxes at random, then the probability that two of these boxes contain exactly $2$ and $3$ balls is :",
+   "options": [
+    "$\\frac{965}{2^{10}}$",
+    "$\\frac{945}{2^{11}}$",
+    "$\\frac{945}{2^{10}}$",
+    "$\\frac{965}{2^{11}}$"
+   ],
+   "answer": "Bonus - no option is correct; the probability is $\\frac{945\\times17}{2^{15}}=\\frac{16065}{2^{15}}$",
+   "key_idea": "Split by the occupancy pattern of all four boxes: $(2,3,0,5)$, $(2,3,1,4)$ and $(2,3,2,3)$; the last needs the $\\frac{4!}{2!2!}$ box-arrangement.",
+   "solution": [
+    "The possible distributions (up to order of boxes) are $P_1:(3,2,0,5)$, $P_2:(3,2,1,4)$, $P_3:(3,2,3,2)$.",
+    "$P_1=\\frac{\\frac{10!}{3!\\,2!\\,0!\\,5!}\\times4!}{4^{10}}=\\frac{2520\\times24}{4^{10}}=\\frac{60480}{4^{10}}$.",
+    "$P_2=\\frac{\\frac{10!}{3!\\,2!\\,1!\\,4!}\\times4!}{4^{10}}=\\frac{12600\\times24}{4^{10}}=\\frac{302400}{4^{10}}$.",
+    "$P_3=\\frac{\\frac{10!}{3!\\,2!\\,3!\\,2!}\\times\\frac{4!}{2!\\,2!}}{4^{10}}=\\frac{25200\\times6}{4^{10}}=\\frac{151200}{4^{10}}$.",
+    "Desired probability $=P_1+P_2+P_3=\\frac{514080}{4^{10}}=\\frac{945\\times17}{2^{15}}$.",
+    "This is $\\frac{16065}{32768}\\approx0.49$, equal to none of the four options, so the question is a Bonus."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count ordered (box with 2, box with 3) choices, then correct for patterns that are counted more than once.",
+     "solution": [
+      "Fix a box $i$ for exactly $2$ balls and a different box $j$ for exactly $3$ balls: ${}^{10}C_2\\cdot{}^8C_3\\cdot2^5=45\\cdot56\\cdot32=80640$ placements (remaining $5$ balls go to the other two boxes freely).",
+      "There are $4\\cdot3=12$ ordered pairs $(i,j)$, giving $12\\cdot80640=967680$ counts.",
+      "A placement is counted once for each (box with exactly $2$, box with exactly $3$) it has. Patterns with other two boxes not holding exactly $2$ or $3$ are counted once; the pattern $(2,3,2,3)$ is counted $2\\times2=4$ times.",
+      "Number of $(2,3,2,3)$ placements: $\\frac{10!}{2!3!2!3!}\\cdot6=151200$. Overcount $=3\\times151200=453600$.",
+      "Favourable $=967680-453600=514080$, so $P=\\frac{514080}{4^{10}}=\\frac{945\\times17}{2^{15}}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Placing $n$ distinct objects with box occupancies $(n_1,\\dots,n_k)$: $\\frac{n!}{n_1!\\cdots n_k!}$ ways; multiply by the number of distinct box-assignments of that occupancy pattern ($\\frac{k!}{\\text{repeats}!}$).",
+    "When 'one box has $a$ and another has $b$' is applied box by box, patterns in which several boxes qualify are over-counted; fix with multiplicities or work with whole occupancy patterns.",
+    "Official-style options $\\frac{945}{2^{10}}$ come from the over-counted figure $12\\cdot80640=967680$ (not a valid probability for the stated event) - a trap to recognise."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Arithmetic progression",
+    "Statistics: mean and variance"
+   ],
+   "level": 2,
+   "question": "Let the six numbers $a_1,a_2,a_3,a_4,a_5,a_6$ be in A.P. and $a_1+a_3=10$. If the mean of these six numbers is $\\frac{19}2$ and their variance is $\\sigma^2$, then $8\\sigma^2$ is equal to :",
+   "options": [
+    "$220$",
+    "$105$",
+    "$200$",
+    "$210$"
+   ],
+   "answer": "(D) 210",
+   "key_idea": "Two linear equations in $a,d$ from the mean and $a_1+a_3$ give $a=2,\\ d=3$; then compute the variance of $2,5,8,11,14,17$.",
+   "solution": [
+    "Mean $=\\frac{\\frac62[2a+5d]}6=\\frac{19}2$, so $2a+5d=19$ ...(i)",
+    "$a_1+a_3=10\\Rightarrow a+a+2d=10$, so $2a+2d=10$ ...(ii)",
+    "Subtracting (ii) from (i): $3d=9$, so $d=3$ and $a=2$.",
+    "The numbers are $2,5,8,11,14,17$.",
+    "$\\sigma^2=\\frac{2^2+5^2+8^2+11^2+14^2+17^2}6-\\left(\\frac{19}2\\right)^2=\\frac{699}6-\\frac{361}4$.",
+    "$\\sigma^2=\\frac{233}2-\\frac{361}4=\\frac{466-361}4=\\frac{105}4$.",
+    "$8\\sigma^2=210$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the sum of squares as 2^2+5^2+8^2+11^3+14^2+17^2 (a typo: 11^3 instead of 11^2). The value it then uses, 699, is the correct sum of squares (4+25+64+121+196+289), so every later line and the answer 210 are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Variance of an A.P. depends only on the common difference: $\\sigma^2=\\frac{d^2(n^2-1)}{12}$.",
+     "solution": [
+      "Mean of an A.P. is $a+\\frac{5d}2=\\frac{19}2$ and $a_1+a_3=2a+2d=10$, so $a+d=5$.",
+      "Subtract: $\\frac{3d}2=\\frac92$, so $d=3$ (the first term is not needed for the variance).",
+      "For $n$ terms in A.P., $\\sigma^2=\\frac{d^2(n^2-1)}{12}$ since the deviations from the mean are $\\pm\\frac d2,\\pm\\frac{3d}2,\\dots$.",
+      "$\\sigma^2=\\frac{9\\cdot35}{12}=\\frac{105}4$ and $8\\sigma^2=210$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Variance of $n$ terms in A.P. with common difference $d$: $\\frac{d^2(n^2-1)}{12}$ (check $n=2$: $\\frac{d^2}4$).",
+    "Mean of an A.P. equals the average of first and last terms (also of the two middle terms).",
+    "Variance is shift-invariant, so the first term never matters; sum of squares of $1,\\dots,n$ is $\\frac{n(n+1)(2n+1)}6$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Subsets with a given sum",
+    "Classical probability"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{1,2,\\dots,20\\}$. A subset $B$ of $S$ is said to be 'nice', if the sum of the elements of $B$ is $203$. Then the probability that a randomly chosen subset of $S$ is 'nice' is :",
+   "options": [
+    "$\\frac7{2^{20}}$",
+    "$\\frac6{2^{20}}$",
+    "$\\frac5{2^{20}}$",
+    "$\\frac4{2^{20}}$"
+   ],
+   "answer": "(C) $\\frac5{2^{20}}$",
+   "key_idea": "The total is $210$, so a subset sums to $203$ iff its complement sums to $7$; count subsets with sum $7$.",
+   "solution": [
+    "Sum of all elements of $S$: $\\frac{20\\times21}2=210$.",
+    "A subset has sum $203$ iff its complement has sum $210-203=7$.",
+    "Subsets of $S$ with sum $7$: $\\{7\\},\\{1,6\\},\\{2,5\\},\\{3,4\\},\\{1,2,4\\}$, i.e. $5$ subsets.",
+    "Total number of subsets is $2^{20}$, so $P=\\frac5{2^{20}}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the subsets with sum $7$ as partitions of $7$ into distinct parts, using Euler's distinct-parts = odd-parts theorem.",
+     "solution": [
+      "Complement of a nice subset has sum $7$, and its elements are distinct, so it is a partition of $7$ into distinct parts (all parts $\\le7\\le20$ automatically).",
+      "By Euler's theorem the number of partitions of $7$ into distinct parts equals the number into odd parts.",
+      "Partitions of $7$ into odd parts: $7;\\ 5+1+1;\\ 3+3+1;\\ 3+1+1+1+1;\\ 1\\times7$, which is $5$.",
+      "So there are $5$ nice subsets and $P=\\frac5{2^{20}}$ (same answer, matches the list $\\{7\\},\\{1,6\\},\\{2,5\\},\\{3,4\\},\\{1,2,4\\}$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Subset sum $s$ of $\\{1,\\dots,n\\}$ $\\iff$ complement sum $\\frac{n(n+1)}2-s$; pick the smaller of the two to count.",
+    "For small sums $m\\le n$, the number of subsets of $\\{1,\\dots,n\\}$ with sum $m$ is the number of partitions of $m$ into distinct parts: $1,1,2,2,3,4,5,6,8,10$ for $m=1,\\dots,10$.",
+    "Euler: partitions into distinct parts $=$ partitions into odd parts."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Binomial coefficients in A.P."
+   ],
+   "level": 2,
+   "question": "For some $n\\ne10$, let the coefficients of the $5$th, $6$th and $7$th terms in the binomial expansion of $(1+x)^{n+4}$ be in A.P. Then the largest coefficient in the expansion of $(1+x)^{n+4}$ is :",
+   "options": [
+    "$70$",
+    "$20$",
+    "$35$",
+    "$10$"
+   ],
+   "answer": "(C) 35",
+   "key_idea": "The coefficients are ${}^{n+4}C_4,{}^{n+4}C_5,{}^{n+4}C_6$; the A.P. condition gives $n^2-13n+30=0$, and $n\\ne10$ forces $n=3$.",
+   "solution": [
+    "The coefficients ${}^{n+4}C_4,\\ {}^{n+4}C_5,\\ {}^{n+4}C_6$ are in A.P., so $2\\,{}^{n+4}C_5={}^{n+4}C_4+{}^{n+4}C_6$.",
+    "$\\frac{2\\,(n+4)!}{(n-1)!\\,5!}=\\frac{(n+4)!}{n!\\,4!}+\\frac{(n+4)!}{(n-2)!\\,6!}$.",
+    "Multiply by $\\frac{6!\\,n!}{(n+4)!}$: $2(6)n=(6)(5)+n(n-1)$.",
+    "$12n=30+n^2-n$, so $n^2-13n+30=0$.",
+    "$(n-3)(n-10)=0$, so $n=3$ or $10$; as $n\\ne10$, $n=3$.",
+    "The expansion is $(1+x)^7$, whose greatest binomial coefficient is ${}^7C_4={}^7C_3=\\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1}=35$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the standard criterion: ${}^NC_{k-1},{}^NC_k,{}^NC_{k+1}$ are in A.P. iff $(N-2k)^2=N+2$.",
+     "solution": [
+      "Let $N=n+4$. Dividing $2\\,{}^NC_k={}^NC_{k-1}+{}^NC_{k+1}$ by ${}^NC_k$: $2=\\frac k{N-k+1}+\\frac{N-k}{k+1}$.",
+      "Clearing denominators and simplifying gives $(N-2k)^2=N+2$.",
+      "Here the coefficients are of the $5$th, $6$th, $7$th terms, so $k=5$: $(N-10)^2=N+2$, i.e. $N^2-21N+98=0$.",
+      "$(N-7)(N-14)=0$, so $N=7$ or $14$, i.e. $n=3$ or $10$; $n\\ne10$ gives $N=7$.",
+      "Largest coefficient of $(1+x)^7$ is ${}^7C_3=35$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Three consecutive binomial coefficients $\\binom N{k-1},\\binom Nk,\\binom N{k+1}$ are in A.P. iff $(N-2k)^2=N+2$ (check: $N=7,k=5$: $9=9$; $N=14,k=5$: $16=16$).",
+    "The greatest coefficient in $(1+x)^N$ is $\\binom N{\\lfloor N/2\\rfloor}$.",
+    "Always apply the stated exclusion ($n\\ne10$) before using a root."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Probability with non-standard dice"
+   ],
+   "level": 1,
+   "question": "Two dices are rolled. If both dices have six faces numbered $1,2,3,5,7$ and $11$, then the probability that the sum of the numbers on the top faces is less than or equal to $8$ is :",
+   "options": [
+    "$\\frac12$",
+    "$\\frac49$",
+    "$\\frac{17}{36}$",
+    "$\\frac5{12}$"
+   ],
+   "answer": "(C) $\\frac{17}{36}$",
+   "key_idea": "List the favourable ordered pairs row by row (first die value) and divide by $36$.",
+   "solution": [
+    "$n(S)=6\\times6=36$ ordered pairs.",
+    "First die $1$: $(1,1),(1,2),(1,3),(1,5),(1,7)$, which is $5$ pairs.",
+    "First die $2$: $(2,1),(2,2),(2,3),(2,5)$, which is $4$ pairs; first die $3$: $(3,1),(3,2),(3,3),(3,5)$, $4$ pairs.",
+    "First die $5$: $(5,1),(5,2),(5,3)$, $3$ pairs; first die $7$: $(7,1)$, $1$ pair; first die $11$: none.",
+    "Favourable pairs $=5+4+4+3+1=17$.",
+    "Probability $=\\frac{17}{36}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count only unordered pairs $a\\le b$ and double the off-diagonal ones.",
+     "solution": [
+      "Pairs $a\\le b$ with $a+b\\le8$ from $\\{1,2,3,5,7,11\\}$: $(1,1),(1,2),(1,3),(1,5),(1,7),(2,2),(2,3),(2,5),(3,3),(3,5)$, that is $10$ pairs.",
+      "Three of them, $(1,1),(2,2),(3,3)$, are on the diagonal (one ordered outcome each); the other $7$ come in two orders.",
+      "Ordered favourable outcomes $=3+2\\cdot7=17$.",
+      "$P=\\frac{17}{36}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For two identical (non-standard) dice, count unordered pairs $a\\le b$ and weight $1$ (equal) or $2$ (unequal); $k$ faces give $k^2$ ordered outcomes.",
+    "Row-by-row counts $5,4,4,3,1,0$ (for first die $1,2,3,5,7,11$) make the table quick; the largest face $11$ never occurs in a sum $\\le8$.",
+    "Complement check: $P(\\text{sum}\\ge9)=\\frac{19}{36}$ and $\\frac{17}{36}+\\frac{19}{36}=1$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Total probability: two-stage experiment"
+   ],
+   "level": 1,
+   "question": "An urn contains $5$ red and $2$ green balls. A ball is drawn at random from the urn. If the drawn ball is green, then a red ball is added to the urn and if the drawn ball is red, then a green ball is added to the urn; the original ball is not returned to the urn. Now, a second ball is drawn at random from it. The probability that the second ball is red, is :",
+   "options": [
+    "$\\frac{26}{49}$",
+    "$\\frac{32}{49}$",
+    "$\\frac{27}{49}$",
+    "$\\frac{21}{49}$"
+   ],
+   "answer": "(B) $\\frac{32}{49}$",
+   "key_idea": "Condition on the colour of the first ball: the urn then holds $6$ red $+1$ green, or $4$ red $+3$ green.",
+   "solution": [
+    "First ball green (probability $\\frac27$): it is removed and a red ball is added, so the urn has $6$ red and $1$ green.",
+    "Then the second ball is red with probability $\\frac67$.",
+    "First ball red (probability $\\frac57$): it is removed and a green ball is added, so the urn has $4$ red and $3$ green; the second ball is red with probability $\\frac47$.",
+    "$P(E)=\\frac27\\times\\frac67+\\frac57\\times\\frac47$.",
+    "$P=\\frac{12+20}{49}=\\frac{32}{49}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The urn always has $7$ balls, so $P(\\text{2nd red})=\\frac{E[\\#\\text{red}]}7$; the red count is $6-2\\cdot\\mathbf 1_{\\{\\text{1st red}\\}}$.",
+     "solution": [
+      "After step $1$ the urn has $7$ balls. If the first ball was green the red count is $5+1=6$; if red it is $5-1=4$.",
+      "So $R=6-2\\cdot\\mathbf 1_{\\{1\\text{st red}\\}}$ and $E[R]=6-2\\cdot\\frac57=\\frac{32}7$.",
+      "The second ball is drawn uniformly from $7$ balls, hence $P(\\text{red})=\\frac{E[R]}7=\\frac{32}{49}$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Law of total probability: $P(E)=\\sum_iP(H_i)P(E\\mid H_i)$ over the colour of the first draw.",
+    "If the urn size after the first stage is fixed ($N$), $P(\\text{2nd red})=\\frac{E[R]}N$, where $R$ is the (random) number of red balls then.",
+    "Without the added ball, the unconditional chance of red on the second draw equals that on the first (symmetry of draws); the added ball is what changes it ($\\frac{32}{49}\\ne\\frac57=\\frac{35}{49}$)."
+   ]
+  }
+ ]
+}
