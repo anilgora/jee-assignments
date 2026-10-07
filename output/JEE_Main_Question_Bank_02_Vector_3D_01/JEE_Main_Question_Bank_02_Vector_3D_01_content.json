@@ -1,0 +1,900 @@
+{
+ "title": "JEE Main Question Bank 02 Vector 3D 01 — Paper Analysis",
+ "subtitle": "Questions 1–20 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Vector_3D_01.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marking not printed in the paper; JEE Advanced default assumed:",
+    "+4 for a correct answer · 0 otherwise (assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rotation of a vector and projection of a vector"
+   ],
+   "level": 3,
+   "question": "The vector $\\vec a=-\\hat i+2\\hat j+\\hat k$ is rotated through a right angle, passing through the $y$-axis in its way, and the resulting vector is $\\vec b$. Then the projection of $3\\vec a+\\sqrt2\\,\\vec b$ on $\\vec c=5\\hat i+4\\hat j+3\\hat k$ is:",
+   "options": [
+    "$\\sqrt6$",
+    "$2\\sqrt3$",
+    "$1$",
+    "$3\\sqrt2$"
+   ],
+   "answer": "(D) $3\\sqrt2$",
+   "key_idea": "$\\vec b$ lies in the plane of $\\vec a$ and $\\hat j$, is perpendicular to $\\vec a$, so $\\vec b\\parallel\\vec a\\times(\\vec a\\times\\hat j)$.",
+   "solution": [
+    "$\\vec b$ lies in the plane of $\\vec a$ and $\\hat j$ and $\\vec b\\perp\\vec a$, so $\\vec b=\\lambda\\,\\vec a\\times(\\vec a\\times\\hat j)$.",
+    "$\\vec a\\times(\\vec a\\times\\hat j)=\\vec a(\\vec a\\cdot\\hat j)-\\hat j|\\vec a|^2=2\\vec a-6\\hat j=-2\\hat i-2\\hat j+2\\hat k$, so $\\vec b=\\lambda(-2\\hat i-2\\hat j+2\\hat k)$.",
+    "Rotation keeps the length: $|\\vec b|=|\\vec a|$, so $\\sqrt6=\\sqrt{12}\\,|\\lambda|$, giving $\\lambda=\\pm\\dfrac1{\\sqrt2}$.",
+    "$\\lambda=\\dfrac1{\\sqrt2}$ is rejected because $\\vec b$ must make an acute angle with the $y$-axis ($\\vec b\\cdot\\hat j>0$ needs $\\lambda<0$).",
+    "So $\\lambda=-\\dfrac1{\\sqrt2}$ and $\\vec b=-\\sqrt2(-\\hat i-\\hat j+\\hat k)=\\sqrt2\\hat i+\\sqrt2\\hat j-\\sqrt2\\hat k$.",
+    "$3\\vec a+\\sqrt2\\vec b=(-3,6,3)+(2,2,-2)=(-1,8,1)$.",
+    "Projection on $\\vec c$ $=\\dfrac{(3\\vec a+\\sqrt2\\vec b)\\cdot\\vec c}{|\\vec c|}=\\dfrac{-5+32+3}{\\sqrt{50}}=\\dfrac{30}{5\\sqrt2}=3\\sqrt2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $\\vec b=\\lambda\\vec a\\times(\\vec a\\times\\hat j)\\Rightarrow\\vec b=\\lambda(-2\\hat i-2\\hat j+2\\hat k)\\vec a$ (a stray $\\vec a$ at the end); the expansion of the triple product, the check $\\vec b\\cdot\\hat j>0$ and the final dot product were not shown and are added. Result $3\\sqrt2$ unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Build $\\vec b$ directly as the unit direction of the component of $\\hat j$ perpendicular to $\\vec a$, scaled to $|\\vec a|$; then project term by term.",
+     "solution": [
+      "The component of $\\hat j$ perpendicular to $\\vec a$ is $\\hat j-\\dfrac{\\hat j\\cdot\\vec a}{|\\vec a|^2}\\vec a=\\hat j-\\dfrac{\\vec a}{3}=\\left(\\tfrac13,\\tfrac13,-\\tfrac13\\right)$.",
+      "Rotating $\\vec a$ through $90^\\circ$ towards (and past) $\\hat j$ gives $\\vec b$ along this direction, so $\\vec b=\\sqrt6\\cdot\\dfrac{(1,1,-1)}{\\sqrt3}=\\sqrt2(1,1,-1)$.",
+      "Projection is linear: $\\vec a\\cdot\\vec c=-5+8+3=6$ and $\\vec b\\cdot\\vec c=\\sqrt2(5+4-3)=6\\sqrt2$.",
+      "Projection of $3\\vec a+\\sqrt2\\vec b$ $=\\dfrac{3(6)+\\sqrt2(6\\sqrt2)}{|\\vec c|}=\\dfrac{18+12}{5\\sqrt2}=3\\sqrt2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any vectors $\\vec a,\\vec u$: $\\vec a\\times(\\vec a\\times\\vec u)=\\vec a(\\vec a\\cdot\\vec u)-\\vec u|\\vec a|^2$ is perpendicular to $\\vec a$, lies in their plane and points away from $\\vec u$.",
+    "A $90^\\circ$ rotation of $\\vec a$ within the plane of $\\vec a,\\vec u$ towards $\\vec u$ gives $|\\vec a|\\,\\dfrac{\\vec u_\\perp}{|\\vec u_\\perp|}$, where $\\vec u_\\perp=\\vec u-\\dfrac{\\vec u\\cdot\\vec a}{|\\vec a|^2}\\vec a$.",
+    "The scalar projection of $\\vec x$ on $\\vec c$ is $\\dfrac{\\vec x\\cdot\\vec c}{|\\vec c|}$; it is linear in $\\vec x$, so project each term separately."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Projection of a vector",
+    "Cosine rule in a triangle"
+   ],
+   "level": 1,
+   "question": "In a triangle $ABC$, if $|\\overrightarrow{BC}|=8,\\ |\\overrightarrow{CA}|=7,\\ |\\overrightarrow{AB}|=10$, then the projection of the vector $\\overrightarrow{AB}$ on $\\overrightarrow{AC}$ is equal to:",
+   "options": [
+    "$\\dfrac{127}{20}$",
+    "$\\dfrac{115}{16}$",
+    "$\\dfrac{25}{4}$",
+    "$\\dfrac{85}{14}$"
+   ],
+   "answer": "(D) $\\dfrac{85}{14}$",
+   "key_idea": "Projection of $\\overrightarrow{AB}$ on $\\overrightarrow{AC}$ is $|AB|\\cos A$, and $\\cos A$ comes from the cosine rule.",
+   "solution": [
+    "Let $\\theta=\\angle A$ be the angle between $\\overrightarrow{AB}$ and $\\overrightarrow{AC}$; projection $=|\\overrightarrow{AB}|\\cos\\theta=10\\cos\\theta$.",
+    "Cosine rule: $\\cos\\theta=\\dfrac{|AB|^2+|CA|^2-|BC|^2}{2\\,|AB|\\,|CA|}$.",
+    "$\\cos\\theta=\\dfrac{100+49-64}{2\\times10\\times7}=\\dfrac{85}{10\\times2\\times7}$.",
+    "Projection $=10\\times\\dfrac{85}{10\\times2\\times7}=\\dfrac{85}{14}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $A$ at the origin and $C$ on the $x$-axis; the projection of $\\overrightarrow{AB}$ on $\\overrightarrow{AC}$ is just the $x$-coordinate of $B$.",
+     "solution": [
+      "Take $A=(0,0)$, $C=(7,0)$ and $B=(x,y)$.",
+      "$AB=10$ gives $x^2+y^2=100$, and $BC=8$ gives $(x-7)^2+y^2=64$.",
+      "Subtract: $-14x+49=-36$, so $x=\\dfrac{85}{14}$.",
+      "The projection of $\\overrightarrow{AB}$ on $\\overrightarrow{AC}$ (which lies along the $x$-axis) is $x=\\dfrac{85}{14}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In $\\triangle ABC$ with sides $a,b,c$, the projection of $\\overrightarrow{AB}$ on $\\overrightarrow{AC}$ is $c\\cos A=\\dfrac{b^2+c^2-a^2}{2b}$ (here $\\dfrac{49+100-64}{14}=\\dfrac{85}{14}$).",
+    "Equivalently $\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=\\dfrac{b^2+c^2-a^2}{2}$ (polarisation of $|\\overrightarrow{BC}|^2=|\\overrightarrow{AC}-\\overrightarrow{AB}|^2$).",
+    "Projections of the sides on one another satisfy $a=b\\cos C+c\\cos B$ (projection formula)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Equation of a plane in intercept form",
+    "Algebraic identity for $a+b+c=0$"
+   ],
+   "level": 2,
+   "question": "If $(x,y,z)$ is an arbitrary point on the plane $P$ passing through $(42,0,0),(0,42,0),(0,0,42)$, then $3+\\dfrac{x-11}{(y-19)^2(z-12)^2}+\\dfrac{y-19}{(x-11)^2(z-12)^2}+\\dfrac{z-12}{(x-11)^2(y-19)^2}-\\dfrac{x+y+z}{14(x-11)(y-19)(z-12)}$ is equal to:",
+   "options": [
+    "$-45$",
+    "$39$",
+    "$3$",
+    "$0$"
+   ],
+   "answer": "(C) $3$",
+   "key_idea": "$11+19+12=42$, so $a=x-11,\\ b=y-19,\\ c=z-12$ satisfy $a+b+c=0$ and then $a^3+b^3+c^3=3abc$.",
+   "solution": [
+    "The plane is $P:\\ x+y+z=42$.",
+    "Since $11+19+12=42$, $(x-11)+(y-19)+(z-12)=0$.",
+    "Let $x-11=a,\\ y-19=b,\\ z-12=c$; then $a+b+c=0$ and $x+y+z=42$.",
+    "The expression becomes $3+\\dfrac a{b^2c^2}+\\dfrac b{a^2c^2}+\\dfrac c{a^2b^2}-\\dfrac{42}{14abc}$.",
+    "Over the common denominator: $3+\\dfrac{a^3+b^3+c^3}{a^2b^2c^2}-\\dfrac3{abc}$.",
+    "As $a+b+c=0$, $a^3+b^3+c^3=3abc$, so this is $3+\\dfrac{3abc}{a^2b^2c^2}-\\dfrac3{abc}$.",
+    "$=3+\\dfrac3{abc}-\\dfrac3{abc}=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The value is the same for every point of the plane, so evaluate at one convenient point.",
+     "solution": [
+      "The answer is constant on the plane, so choose $a=1,\\ b=1,\\ c=-2$ (i.e. $(x,y,z)=(12,20,10)$, and $12+20+10=42$ is on the plane).",
+      "$\\dfrac a{b^2c^2}=\\dfrac14,\\ \\dfrac b{a^2c^2}=\\dfrac14,\\ \\dfrac c{a^2b^2}=-2$, which add up to $-\\dfrac32$.",
+      "$\\dfrac{42}{14abc}=\\dfrac3{-2}=-\\dfrac32$.",
+      "Value $=3-\\dfrac32-\\left(-\\dfrac32\\right)=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $a+b+c=0$ then $a^3+b^3+c^3=3abc$ (from $a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)$).",
+    "The plane through $(p,0,0),(0,p,0),(0,0,p)$ is $x+y+z=p$.",
+    "When a question says the value is the same for 'an arbitrary point' of a plane or line, test one convenient point to find (or check) the answer."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Coplanar vectors and angle bisector of two vectors"
+   ],
+   "level": 3,
+   "question": "A vector $\\vec a=\\alpha\\hat i+2\\hat j+\\beta\\hat k\\ (\\alpha,\\beta\\in\\mathbb R)$ lies in the plane of the vectors $\\vec b=\\hat i+\\hat j$ and $\\vec c=\\hat i-\\hat j+4\\hat k$. If $\\vec a$ bisects the angle between $\\vec b$ and $\\vec c$, then:",
+   "options": [
+    "$\\vec a\\cdot\\hat k+4=0$",
+    "$\\vec a\\cdot\\hat k+2=0$",
+    "$\\vec a\\cdot\\hat i+1=0$",
+    "$\\vec a\\cdot\\hat i+3=0$"
+   ],
+   "answer": "(B) $\\vec a\\cdot\\hat k+2=0$",
+   "key_idea": "A vector along a bisector of $\\vec b,\\vec c$ is $\\hat b\\pm\\hat c$; only the external one ($\\hat b-\\hat c$) matches an option.",
+   "solution": [
+    "$\\vec a,\\vec b,\\vec c$ are coplanar: $\\begin{vmatrix}\\alpha&2&\\beta\\\\1&1&0\\\\1&-1&4\\end{vmatrix}=0$, i.e. $4\\alpha-8-2\\beta=0$ (this relation is checked below).",
+    "If $\\vec a$ is along the bisector, $\\vec a=\\lambda(\\hat b+\\hat c)=\\lambda\\left(\\dfrac{\\hat i+\\hat j}{\\sqrt2}+\\dfrac{\\hat i-\\hat j+4\\hat k}{3\\sqrt2}\\right)$.",
+    "So $\\alpha\\hat i+2\\hat j+\\beta\\hat k=\\lambda\\left(\\dfrac4{3\\sqrt2}\\hat i+\\dfrac2{3\\sqrt2}\\hat j+\\dfrac4{3\\sqrt2}\\hat k\\right)$.",
+    "Comparing the $\\hat j$ term: $\\dfrac{2\\lambda}{3\\sqrt2}=2\\Rightarrow\\lambda=3\\sqrt2$.",
+    "Then $\\alpha=4,\\ \\beta=4$, $\\vec a=4\\hat i+2\\hat j+4\\hat k$, which satisfies none of the options.",
+    "So take the other bisector (of the pair $\\vec b,-\\vec c$): $\\vec a=\\mu(\\hat b-\\hat c)=\\mu\\left(\\dfrac2{3\\sqrt2}\\hat i+\\dfrac4{3\\sqrt2}\\hat j-\\dfrac4{3\\sqrt2}\\hat k\\right)$.",
+    "Comparing the $\\hat j$ term: $\\dfrac{4\\mu}{3\\sqrt2}=2\\Rightarrow\\mu=\\dfrac{3\\sqrt2}2$, giving $\\vec a=\\hat i+2\\hat j-2\\hat k$.",
+    "Hence $\\vec a\\cdot\\hat k=-2$, i.e. $\\vec a\\cdot\\hat k+2=0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two points. (1) The PDF's coplanarity determinant has the middle entry $1$ in the first row; it should be $2$ (the $\\hat j$ coefficient of $\\vec a$): $4\\alpha-8-2\\beta=0$. Both $(4,2,4)$ and $(1,2,-2)$ satisfy the corrected relation. (2) Strictly, the internal bisector of the angle between $\\vec b$ and $\\vec c$ is $\\vec a=(4,2,4)$, which matches no option; the key (B) is the vector along $\\hat b-\\hat c$ (external bisector). The key (B) is kept because it is the only option consistent with the problem, but the stem is loosely worded.",
+   "alternate_solutions": [
+    {
+     "idea": "A vector on a bisector makes equal angles with $\\vec b$ and $\\vec c$, so $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}=\\pm\\dfrac{\\vec a\\cdot\\vec c}{|\\vec c|}$; combine each sign with coplanarity.",
+     "solution": [
+      "$\\vec a\\cdot\\vec b=\\alpha+2$, $|\\vec b|=\\sqrt2$; $\\vec a\\cdot\\vec c=\\alpha-2+4\\beta$, $|\\vec c|=3\\sqrt2$.",
+      "Coplanarity gives $4\\alpha-8-2\\beta=0$, i.e. $\\beta=2\\alpha-4$.",
+      "Sign $+$: $3(\\alpha+2)=\\alpha-2+4\\beta\\Rightarrow\\beta=\\dfrac{\\alpha+4}2$; with $\\beta=2\\alpha-4$ this gives $\\alpha=4,\\ \\beta=4$ (no option matches).",
+      "Sign $-$: $3(\\alpha+2)=-(\\alpha-2+4\\beta)\\Rightarrow\\beta=-\\alpha-1$; with $\\beta=2\\alpha-4$ this gives $\\alpha=1,\\ \\beta=-2$.",
+      "So $\\vec a=\\hat i+2\\hat j-2\\hat k$ and $\\vec a\\cdot\\hat k+2=0$, option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vectors along the two bisectors (internal and external) of the angle between $\\vec b$ and $\\vec c$ are $\\hat b+\\hat c$ and $\\hat b-\\hat c$.",
+    "$\\vec a$ lies in the plane of $\\vec b,\\vec c$ iff $[\\vec a\\ \\vec b\\ \\vec c]=0$.",
+    "A vector $\\vec a$ in the plane makes equal angles with $\\vec b$ and $\\vec c$ iff $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}=\\dfrac{\\vec a\\cdot\\vec c}{|\\vec c|}$ (internal bisector line); with a minus sign it is the external one.",
+    "When an answer is to be matched with options and the first natural case fails to match, check the other bisector (the sign ambiguity)."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Position vectors of triangle centres (Euler line)"
+   ],
+   "level": 1,
+   "question": "If the points $P$ and $Q$ are respectively the circumcentre and the orthocentre of a $\\triangle ABC$, then $\\overrightarrow{PA}+\\overrightarrow{PB}+\\overrightarrow{PC}$ is:",
+   "options": [
+    "$2\\overrightarrow{PQ}$",
+    "$\\overrightarrow{QP}$",
+    "$2\\overrightarrow{QP}$",
+    "$\\overrightarrow{PQ}$"
+   ],
+   "answer": "(D) $\\overrightarrow{PQ}$",
+   "key_idea": "The centroid $G$ lies on $PQ$ with $PG:GQ=1:2$, so $3\\overrightarrow{PG}=\\overrightarrow{PQ}$.",
+   "solution": [
+    "Take position vectors $\\vec a,\\vec b,\\vec c$ of $A,B,C$ with the circumcentre $P$ as the origin.",
+    "Then $\\overrightarrow{PA}+\\overrightarrow{PB}+\\overrightarrow{PC}=\\vec a+\\vec b+\\vec c$.",
+    "The centroid $G$ has $\\overrightarrow{PG}=\\dfrac{\\vec a+\\vec b+\\vec c}3$.",
+    "$G$ divides $PQ$ (circumcentre to orthocentre) in the ratio $1:2$, so $\\vec a+\\vec b+\\vec c=3\\overrightarrow{PG}=\\overrightarrow{PQ}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test a right triangle, where the orthocentre is the right-angle vertex and the circumcentre is the midpoint of the hypotenuse.",
+     "solution": [
+      "Take $A(0,0),\\ B(2,0),\\ C(0,2)$ (right angle at $A$).",
+      "Circumcentre $P=$ midpoint of $BC=(1,1)$; orthocentre $Q=A=(0,0)$.",
+      "$\\overrightarrow{PA}+\\overrightarrow{PB}+\\overrightarrow{PC}=(-1,-1)+(1,-1)+(-1,1)=(-1,-1)$.",
+      "$\\overrightarrow{PQ}=Q-P=(-1,-1)$, so the sum equals $\\overrightarrow{PQ}$, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With the circumcentre as origin, the orthocentre is $H=\\vec a+\\vec b+\\vec c$ and the centroid is $G=\\dfrac{\\vec a+\\vec b+\\vec c}3$ (Sylvester's relation); $O,G,H$ are collinear with $OG:GH=1:2$.",
+    "For a right triangle the orthocentre is the right-angle vertex and the circumcentre is the midpoint of the hypotenuse - a quick test case.",
+    "If the circumcentre is $O$ then $\\overrightarrow{OA}+\\overrightarrow{OB}+\\overrightarrow{OC}=\\overrightarrow{OH}$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Vector triple product and scalar product of two cross products"
+   ],
+   "level": 2,
+   "question": "Let $\\vec a,\\vec b,\\vec c$ be non-zero vectors with $\\vec b\\cdot\\vec c=0$ and $\\vec a\\times(\\vec b\\times\\vec c)=\\dfrac{\\vec b-\\vec c}2$. If $\\vec d$ is a vector with $\\vec b\\cdot\\vec d=\\vec a\\cdot\\vec b$, then $(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)$ is equal to:",
+   "options": [
+    "$\\dfrac14$",
+    "$\\dfrac34$",
+    "$-\\dfrac14$",
+    "$\\dfrac12$"
+   ],
+   "answer": "(A) $\\dfrac14$",
+   "key_idea": "Expand the triple product to read off $\\vec a\\cdot\\vec c$ and $\\vec a\\cdot\\vec b$, then use $(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$.",
+   "solution": [
+    "$\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c=\\dfrac{\\vec b}2-\\dfrac{\\vec c}2$.",
+    "$\\vec b,\\vec c$ are non-zero and $\\vec b\\cdot\\vec c=0$, so they are not parallel; comparing coefficients, $\\vec a\\cdot\\vec c=\\dfrac12$ and $\\vec a\\cdot\\vec b=\\dfrac12$.",
+    "Given $\\vec b\\cdot\\vec d=\\vec a\\cdot\\vec b=\\dfrac12$.",
+    "$(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$.",
+    "$=\\dfrac12\\cdot\\dfrac12-(\\vec a\\cdot\\vec d)\\cdot0=\\dfrac14$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose coordinates adapted to the data ($\\vec b\\perp\\vec c$) and compute both cross products explicitly.",
+     "solution": [
+      "Take $\\vec b=\\hat i,\\ \\vec c=\\hat j$ (then $\\vec b\\cdot\\vec c=0$ and $\\vec b\\times\\vec c=\\hat k$).",
+      "$\\vec a\\times\\hat k=(a_y,-a_x,0)$ must equal $\\dfrac{\\vec b-\\vec c}2=\\left(\\tfrac12,-\\tfrac12,0\\right)$, so $\\vec a=\\left(\\tfrac12,\\tfrac12,t\\right)$.",
+      "$\\vec b\\cdot\\vec d=\\vec a\\cdot\\vec b=\\tfrac12$ gives $\\vec d=\\left(\\tfrac12,d_y,d_z\\right)$.",
+      "$\\vec a\\times\\vec b=\\left(0,\\,t,\\,-\\tfrac12\\right)$ and $\\vec c\\times\\vec d=\\left(d_z,\\,0,\\,-\\tfrac12\\right)$.",
+      "Dot product $=0+0+\\tfrac14=\\tfrac14$, independent of $t,d_y,d_z$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "BAC-CAB: $\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$.",
+    "Lagrange/Binet-Cauchy identity: $(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$.",
+    "If $\\vec b,\\vec c$ are non-parallel and $x\\vec b+y\\vec c=\\vec 0$ then $x=y=0$; this lets you compare coefficients in a vector equation."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Line parallel to a plane and intersecting a given line",
+    "Distance of a point from a line"
+   ],
+   "level": 2,
+   "question": "Let the line $L$ pass through $(0,1,2)$, intersect the line $\\dfrac{x-1}2=\\dfrac{y-2}3=\\dfrac{z-3}4$ and be parallel to the plane $2x+y-3z=4$. Then the distance of $P(1,-9,2)$ from $L$ is:",
+   "options": [
+    "$\\sqrt{74}$",
+    "$9$",
+    "$\\sqrt{69}$",
+    "$\\sqrt{54}$"
+   ],
+   "answer": "(A) $\\sqrt{74}$",
+   "key_idea": "$L$ joins $A(0,1,2)$ to a point $B$ of the given line, and $\\overrightarrow{AB}\\perp$ normal of the plane fixes $B$.",
+   "solution": [
+    "Let $A=(0,1,2)$ and let $L$ meet the given line at $B(1+2\\lambda,\\,2+3\\lambda,\\,3+4\\lambda)$.",
+    "$L$ is parallel to the plane, so $\\overrightarrow{AB}\\perp\\vec n=(2,1,-3)$: $(1+2\\lambda,1+3\\lambda,1+4\\lambda)\\cdot(2,1,-3)=0$.",
+    "$2+4\\lambda+1+3\\lambda-3-12\\lambda=0\\Rightarrow-5\\lambda=0\\Rightarrow\\lambda=0$.",
+    "So $B=(1,2,3)$ and $L:\\ \\vec r=\\hat j+2\\hat k+\\mu(\\hat i+\\hat j+\\hat k)$.",
+    "Let $Q(\\mu,\\,1+\\mu,\\,2+\\mu)$ be the foot of the perpendicular from $P(1,-9,2)$; $\\overrightarrow{PQ}=(\\mu-1,\\,10+\\mu,\\,\\mu)$.",
+    "$\\overrightarrow{PQ}\\cdot(1,1,1)=0\\Rightarrow(\\mu-1)+(10+\\mu)+\\mu=0\\Rightarrow3\\mu=-9\\Rightarrow\\mu=-3$.",
+    "$\\overrightarrow{PQ}=(-4,7,-3)$, so the distance $=\\sqrt{16+49+9}=\\sqrt{74}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Minor sign slip: the PDF writes $5\\lambda=0$; the expansion $2+4\\lambda+1+3\\lambda-3-12\\lambda$ equals $-5\\lambda$. $\\lambda=0$ and the answer $\\sqrt{74}$ are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the cross-product distance formula $\\dfrac{|\\overrightarrow{AP}\\times\\vec d|}{|\\vec d|}$, with no foot of perpendicular.",
+     "solution": [
+      "Direction of $L$ is $\\vec d=(1,1,1)$ (as found from $\\lambda=0$) and $A=(0,1,2)$ is on $L$.",
+      "$\\overrightarrow{AP}=(1,-10,0)$.",
+      "$\\overrightarrow{AP}\\times\\vec d=(-10,\\,-1,\\,11)$, so $|\\overrightarrow{AP}\\times\\vec d|^2=100+1+121=222$.",
+      "Distance$^2=\\dfrac{222}{|\\vec d|^2}=\\dfrac{222}3=74$, so the distance is $\\sqrt{74}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distance of a point $P$ from the line through $A$ with direction $\\vec d$ is $\\dfrac{|\\overrightarrow{AP}\\times\\vec d|}{|\\vec d|}$ (here $\\sqrt{74}$).",
+    "A line with direction $\\vec d$ is parallel to the plane $\\vec n\\cdot\\vec r=k$ iff $\\vec d\\cdot\\vec n=0$.",
+    "To find a line through a point $A$ meeting a given line: write the general point $B$ of that line and impose the extra condition (here $\\overrightarrow{AB}\\cdot\\vec n=0$) on $\\overrightarrow{AB}$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Cross product orthogonality and dot product of vectors"
+   ],
+   "level": 2,
+   "question": "Let $\\vec u=\\hat i-\\hat j-2\\hat k,\\ \\vec v=2\\hat i+\\hat j-\\hat k,\\ \\vec v\\cdot\\vec w=2$ and $\\vec v\\times\\vec w=\\vec u+\\lambda\\vec v$. Then $\\vec u\\cdot\\vec w$ is equal to:",
+   "options": [
+    "$-\\dfrac23$",
+    "$\\dfrac32$",
+    "$2$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "$\\vec v\\times\\vec w$ is perpendicular to both $\\vec v$ and $\\vec w$, so dotting the given equation with $\\vec v$ and then $\\vec w$ removes the cross product.",
+   "solution": [
+    "$\\vec v\\times\\vec w=\\vec u+\\lambda\\vec v$.",
+    "Dot with $\\vec v$: $(\\vec v\\times\\vec w)\\cdot\\vec v=\\vec u\\cdot\\vec v+\\lambda\\vec v\\cdot\\vec v\\Rightarrow0=\\vec u\\cdot\\vec v+\\lambda|\\vec v|^2$.",
+    "$\\lambda=-\\dfrac{\\vec u\\cdot\\vec v}{|\\vec v|^2}=-\\dfrac{2-1+2}6=-\\dfrac12$.",
+    "Dot with $\\vec w$: $(\\vec v\\times\\vec w)\\cdot\\vec w=\\vec u\\cdot\\vec w+\\lambda\\vec v\\cdot\\vec w\\Rightarrow0=\\vec u\\cdot\\vec w+2\\lambda$.",
+    "$\\vec u\\cdot\\vec w=-2\\lambda=-2\\left(-\\dfrac12\\right)=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $(\\vec v\\times\\vec w)\\vec v=\\ldots$ and $(\\vec v\\times\\vec w)\\vec w=\\ldots$ without the dot between the factors; the dot product is meant. Values and answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Find $\\vec w$ itself: from $\\vec v\\times(\\vec v\\times\\vec w)=\\vec v(\\vec v\\cdot\\vec w)-\\vec w|\\vec v|^2$.",
+     "solution": [
+      "With $\\lambda=-\\tfrac12$, $\\vec s=\\vec v\\times\\vec w=\\vec u-\\tfrac12\\vec v=\\left(0,-\\tfrac32,-\\tfrac32\\right)$.",
+      "$\\vec v\\times\\vec s=\\vec v(\\vec v\\cdot\\vec w)-\\vec w|\\vec v|^2=2\\vec v-6\\vec w$.",
+      "$\\vec v\\times\\vec s=(2,1,-1)\\times\\left(0,-\\tfrac32,-\\tfrac32\\right)=(-3,3,-3)$, so $6\\vec w=2\\vec v-(-3,3,-3)=(7,-1,1)$ and $\\vec w=\\tfrac16(7,-1,1)$.",
+      "Check: $\\vec v\\cdot\\vec w=\\dfrac{14-1-1}6=2$ and $\\vec u\\cdot\\vec w=\\dfrac{7+1-2}6=1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\vec v\\times\\vec w$ is perpendicular to both $\\vec v$ and $\\vec w$, so $(\\vec v\\times\\vec w)\\cdot\\vec v=(\\vec v\\times\\vec w)\\cdot\\vec w=0$.",
+    "Whenever an equation has the form $\\vec v\\times\\vec w=\\vec p$, dotting with $\\vec v$ or $\\vec w$ kills the left side and gives scalar equations.",
+    "$\\vec v\\times(\\vec v\\times\\vec w)=\\vec v(\\vec v\\cdot\\vec w)-\\vec w|\\vec v|^2$ recovers $\\vec w$ from $\\vec v\\times\\vec w$ and $\\vec v\\cdot\\vec w$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Section formula, equation of a plane and distance in 3D"
+   ],
+   "level": 2,
+   "question": "The plane $2x-y+z=4$ intersects the line segment joining $A(a,-2,4)$ and $B(2,b,-3)$ at the point $C$ in the ratio $2:1$ and the distance of $C$ from the origin is $\\sqrt5$. If $ab<0$ and $P$ is the point $(a-b,\\,b,\\,2b-a)$, then $CP^2$ is equal to:",
+   "options": [
+    "$\\dfrac{16}3$",
+    "$\\dfrac{97}3$",
+    "$\\dfrac{17}3$",
+    "$\\dfrac{73}3$"
+   ],
+   "answer": "(C) $\\dfrac{17}3$",
+   "key_idea": "Section formula gives $C$ in terms of $a,b$; the plane gives $a-b=2$ and $OC=\\sqrt5$ gives a quadratic in $b$, solved with $ab<0$.",
+   "solution": [
+    "$AC:CB=2:1$, so $C=\\left(\\dfrac{a+4}3,\\dfrac{2b-2}3,\\dfrac{-2}3\\right)$.",
+    "$C$ lies on $2x-y+z=4$: $\\dfrac{2a+8}3-\\dfrac{2b-2}3-\\dfrac23=4\\Rightarrow a-b=2$ ....(1)",
+    "$OC=\\sqrt5$: $\\left(\\dfrac{a+4}3\\right)^2+\\left(\\dfrac{2b-2}3\\right)^2+\\dfrac49=5$ ....(2)",
+    "Using (1) in (2): $(b+6)^2+(2b-2)^2=41\\Rightarrow5b^2+4b-1=0$.",
+    "$b=-1$ or $b=\\dfrac15$, so $a=1$ or $a=\\dfrac{11}5$.",
+    "$ab<0$ gives $(a,b)=(1,-1)$.",
+    "$C=\\left(\\dfrac53,-\\dfrac43,-\\dfrac23\\right)$ and $P=(a-b,b,2b-a)=(2,-1,-3)$.",
+    "$CP^2=\\dfrac19+\\dfrac19+\\dfrac{49}9=\\dfrac{51}9=\\dfrac{17}3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find $C$ first as a point of the plane lying on the sphere $|OC|^2=5$ with $z=-\\tfrac23$, then recover $a,b$ from the section formula.",
+     "solution": [
+      "$z_C=\\dfrac{2(-3)+1(4)}3=-\\dfrac23$, so $2x-y=4+\\dfrac23=\\dfrac{14}3$ and $x^2+y^2=5-\\dfrac49=\\dfrac{41}9$.",
+      "Put $y=2x-\\dfrac{14}3$: $45x^2-168x+155=0$, so $x=\\dfrac53$ or $x=\\dfrac{31}{15}$.",
+      "$x=\\tfrac53\\Rightarrow y=-\\tfrac43$; $x=\\tfrac{31}{15}\\Rightarrow y=-\\tfrac8{15}$.",
+      "From $x=\\dfrac{a+4}3,\\ y=\\dfrac{2b-2}3$: $(x,y)=\\left(\\tfrac53,-\\tfrac43\\right)$ gives $(a,b)=(1,-1)$, while $\\left(\\tfrac{31}{15},-\\tfrac8{15}\\right)$ gives $\\left(\\tfrac{11}5,\\tfrac15\\right)$ with $ab>0$ (rejected).",
+      "So $C=\\left(\\tfrac53,-\\tfrac43,-\\tfrac23\\right)$, $P=(2,-1,-3)$ and $CP^2=\\dfrac{17}3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A point dividing $AB$ internally in the ratio $m:n$ is $\\dfrac{n\\vec A+m\\vec B}{m+n}$; for any linear $f=px+qy+rz-s$, $f(C)=\\dfrac{n f(A)+m f(B)}{m+n}$, so $f(C)=0$ gives $n f(A)+m f(B)=0$ at once.",
+    "Here $f(A)=2a+2$, $f(B)=-b-3$, and $f(A)+2f(B)=0$ gives $a-b=2$.",
+    "Squared-distance conditions give quadratics; use any sign condition ($ab<0$) to discard roots."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rotation of axes and components of a vector"
+   ],
+   "level": 1,
+   "question": "A vector $\\vec a$ has components $3p$ and $1$ with respect to a rectangular cartesian system. The system is rotated through a certain angle about the origin in the counter-clockwise sense. If, with respect to the new system, $\\vec a$ has components $p+1$ and $\\sqrt{10}$, then a value of $p$ is equal to:",
+   "options": [
+    "$1$",
+    "$\\dfrac45$",
+    "$-\\dfrac54$",
+    "$-1$"
+   ],
+   "answer": "(D) $-1$",
+   "key_idea": "A rotation of the axes does not change the length of the vector.",
+   "solution": [
+    "The length of $\\vec a$ does not change under rotation of axes: $\\sqrt{(3p)^2+1^2}=\\sqrt{(p+1)^2+(\\sqrt{10})^2}$.",
+    "$9p^2+1=p^2+2p+1+10\\Rightarrow8p^2-2p-10=0\\Rightarrow4p^2-p-5=0$.",
+    "$4p^2-5p+4p-5=0\\Rightarrow(4p-5)(p+1)=0$.",
+    "$p=-1$ or $p=\\dfrac54$; the only value among the options is $p=-1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test the four options directly against the invariance $x^2+y^2=x'^2+y'^2$.",
+     "solution": [
+      "$p=1$: $9+1=10$ but $4+10=14$; rejected.",
+      "$p=\\dfrac45$: $\\dfrac{144}{25}+1=\\dfrac{169}{25}$ but $\\dfrac{81}{25}+10=\\dfrac{331}{25}$; rejected.",
+      "$p=-\\dfrac54$: $\\dfrac{225}{16}+1=\\dfrac{241}{16}$ but $\\dfrac1{16}+10=\\dfrac{161}{16}$; rejected.",
+      "$p=-1$: $9+1=10$ and $0+10=10$; equal lengths, so a rotation exists (components $(-3,1)\\to(0,\\sqrt{10})$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Under rotation of axes the components $(x,y)\\to(x',y')$ satisfy $x^2+y^2=x'^2+y'^2$; the transformation $x'=x\\cos\\theta+y\\sin\\theta,\\ y'=-x\\sin\\theta+y\\cos\\theta$ is length-preserving.",
+    "Two quantities that must be equal under a transformation give an equation in the unknown directly; the angle itself is never needed.",
+    "A quadratic can give two roots ($p=-1,\\ \\tfrac54$); pick the one listed among the options."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Angle between two vectors",
+    "Sum of cosines of angles in arithmetic progression"
+   ],
+   "level": 3,
+   "question": "Let $a,b,c\\in\\mathbb R$ with $a^2+b^2+c^2=1$. If $a\\cos\\theta=b\\cos\\left(\\theta+\\dfrac{2\\pi}3\\right)=c\\cos\\left(\\theta+\\dfrac{4\\pi}3\\right)$, where $\\theta=\\dfrac\\pi9$, then the angle between the vectors $a\\hat i+b\\hat j+c\\hat k$ and $b\\hat i+c\\hat j+a\\hat k$ is:",
+   "options": [
+    "$\\dfrac\\pi2$",
+    "$\\dfrac\\pi9$",
+    "$\\dfrac{2\\pi}3$",
+    "$0$"
+   ],
+   "answer": "(A) $\\dfrac\\pi2$",
+   "key_idea": "Equal products give $\\dfrac1a+\\dfrac1b+\\dfrac1c\\propto\\cos\\theta+\\cos\\left(\\theta+\\tfrac{2\\pi}3\\right)+\\cos\\left(\\theta+\\tfrac{4\\pi}3\\right)=0$, so $ab+bc+ca=0$.",
+   "solution": [
+    "Let $a\\cos\\theta=b\\cos\\left(\\theta+\\tfrac{2\\pi}3\\right)=c\\cos\\left(\\theta+\\tfrac{4\\pi}3\\right)=K$.",
+    "$K\\neq0$: otherwise $a=b=c=0$ (none of the three cosines is zero for $\\theta=\\tfrac\\pi9$), contradicting $a^2+b^2+c^2=1$.",
+    "So $\\dfrac Ka=\\cos\\theta,\\ \\dfrac Kb=\\cos\\left(\\theta+\\tfrac{2\\pi}3\\right),\\ \\dfrac Kc=\\cos\\left(\\theta+\\tfrac{4\\pi}3\\right)$.",
+    "Adding: $K\\left(\\dfrac1a+\\dfrac1b+\\dfrac1c\\right)=\\cos\\theta+\\cos\\left(\\theta+\\tfrac{2\\pi}3\\right)+\\cos\\left(\\theta+\\tfrac{4\\pi}3\\right)=0$.",
+    "Hence $\\dfrac1a+\\dfrac1b+\\dfrac1c=0$, i.e. $ab+bc+ca=0$.",
+    "$\\cos\\alpha=\\dfrac{(a,b,c)\\cdot(b,c,a)}{\\sqrt{a^2+b^2+c^2}\\sqrt{b^2+c^2+a^2}}=\\dfrac{ab+bc+ca}1=0$.",
+    "So $\\alpha=\\dfrac\\pi2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF divides by $a,b,c$ and uses $\\dfrac1a+\\dfrac1b+\\dfrac1c$ without checking that $K\\neq0$ and $abc\\neq0$; this justification is added (otherwise $a=b=c=0$, contradicting $a^2+b^2+c^2=1$). Result unchanged.",
+   "useful_results": [
+    "For any $\\theta$: $\\cos\\theta+\\cos\\left(\\theta+\\tfrac{2\\pi}3\\right)+\\cos\\left(\\theta+\\tfrac{4\\pi}3\\right)=0$ (three equally spaced unit phasors add to zero); same for sines.",
+    "If $ax=by=cz=K\\neq0$ then $a,b,c\\propto\\dfrac1x,\\dfrac1y,\\dfrac1z$; so $\\dfrac1a+\\dfrac1b+\\dfrac1c=\\dfrac{x+y+z}K$.",
+    "The angle between $(a,b,c)$ and its cyclic shift $(b,c,a)$ has $\\cos=\\dfrac{ab+bc+ca}{a^2+b^2+c^2}$; it is $\\dfrac\\pi2$ iff $ab+bc+ca=0$.",
+    "Always rule out $K=0$ (the degenerate case) before dividing."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Vector triple product and cross product of vectors"
+   ],
+   "level": 3,
+   "question": "Let $\\lambda\\in\\mathbb R$, $\\vec a=\\lambda\\hat i+2\\hat j-3\\hat k,\\ \\vec b=\\hat i-\\lambda\\hat j+2\\hat k$. If $\\big((\\vec a+\\vec b)\\times(\\vec a\\times\\vec b)\\big)\\times(\\vec a-\\vec b)=8\\hat i-40\\hat j-24\\hat k$, then $\\big|\\lambda(\\vec a+\\vec b)\\times(\\vec a-\\vec b)\\big|^2$ is equal to:",
+   "options": [
+    "$136$",
+    "$140$",
+    "$144$",
+    "$132$"
+   ],
+   "answer": "(B) $140$",
+   "key_idea": "Use $\\vec X\\times(\\vec a-\\vec b)=(\\vec b-\\vec a)\\times\\vec X$ and BAC-CAB: the expression collapses to $(|\\vec a|^2-|\\vec b|^2)(\\vec a\\times\\vec b)$.",
+   "solution": [
+    "$\\big((\\vec a+\\vec b)\\times(\\vec a\\times\\vec b)\\big)\\times(\\vec a-\\vec b)=(\\vec b-\\vec a)\\times\\big((\\vec a+\\vec b)\\times(\\vec a\\times\\vec b)\\big)$.",
+    "BAC-CAB: $=(\\vec a+\\vec b)\\big((\\vec b-\\vec a)\\cdot(\\vec a\\times\\vec b)\\big)-(\\vec a\\times\\vec b)\\big((\\vec b-\\vec a)\\cdot(\\vec a+\\vec b)\\big)$; the first bracket is $0$.",
+    "So the expression $=(|\\vec a|^2-|\\vec b|^2)(\\vec a\\times\\vec b)$, with $|\\vec a|^2-|\\vec b|^2=(\\lambda^2+13)-(\\lambda^2+5)=8$.",
+    "Thus $8(\\vec a\\times\\vec b)=8\\hat i-40\\hat j-24\\hat k$.",
+    "$\\vec a\\times\\vec b=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\\\lambda&2&-3\\\\1&-\\lambda&2\\end{vmatrix}=(4-3\\lambda)\\hat i-(2\\lambda+3)\\hat j+(-\\lambda^2-2)\\hat k$.",
+    "Equating with $\\hat i-5\\hat j-3\\hat k$: $\\lambda=1$ (check: $2\\lambda+3=5$, $\\lambda^2+2=3$).",
+    "$\\vec a=\\hat i+2\\hat j-3\\hat k,\\ \\vec b=\\hat i-\\hat j+2\\hat k$, so $\\vec a+\\vec b=2\\hat i+\\hat j-\\hat k$ and $\\vec a-\\vec b=3\\hat j-5\\hat k$.",
+    "$(\\vec a+\\vec b)\\times(\\vec a-\\vec b)=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\2&1&-1\\\\0&3&-5\\end{vmatrix}=-2\\hat i+10\\hat j+6\\hat k$.",
+    "Required value $=1^2\\left(4+100+36\\right)=140$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $(\\vec a+\\vec b)\\times(\\vec a-\\vec b)=2\\hat i+10\\hat j+6\\hat k$; the $\\hat i$ coefficient is $1\\cdot(-5)-(-1)(3)=-2$, so the vector is $-2\\hat i+10\\hat j+6\\hat k$ (equal to $-2\\,\\vec a\\times\\vec b$). The squared length $4+100+36=140$ and the answer are unchanged. The PDF also jumps from the triple product to $8(\\vec a\\times\\vec b)$; the BAC-CAB step is added.",
+   "alternate_solutions": [
+    {
+     "idea": "$\\vec a\\times\\vec b$ is perpendicular to $\\vec a$ and $\\vec b$, so the given vector (a multiple of $\\vec a\\times\\vec b$) must be perpendicular to $\\vec a$; this gives $\\lambda$ at once. Also $(\\vec a+\\vec b)\\times(\\vec a-\\vec b)=-2\\,\\vec a\\times\\vec b$.",
+     "solution": [
+      "As in the main solution, the given vector equals $8(\\vec a\\times\\vec b)$, so $\\vec a\\times\\vec b=(1,-5,-3)$.",
+      "This is perpendicular to $\\vec a=(\\lambda,2,-3)$: $\\lambda-10+9=0\\Rightarrow\\lambda=1$ (no cross product needs to be expanded).",
+      "$(\\vec a+\\vec b)\\times(\\vec a-\\vec b)=-\\vec a\\times\\vec b+\\vec b\\times\\vec a=-2(\\vec a\\times\\vec b)=(-2,10,6)$.",
+      "$|\\lambda(\\vec a+\\vec b)\\times(\\vec a-\\vec b)|^2=1\\cdot4(1+25+9)=140$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(\\vec a+\\vec b)\\times(\\vec a-\\vec b)=-2\\,\\vec a\\times\\vec b$.",
+    "$\\big((\\vec a+\\vec b)\\times(\\vec a\\times\\vec b)\\big)\\times(\\vec a-\\vec b)=(|\\vec a|^2-|\\vec b|^2)(\\vec a\\times\\vec b)$ for all $\\vec a,\\vec b$ (verified here with $\\lambda=1$: $8(1,-5,-3)$).",
+    "$\\vec a\\times\\vec b$ is perpendicular to both $\\vec a$ and $\\vec b$: a vector known to be a multiple of $\\vec a\\times\\vec b$ gives scalar equations by dotting with $\\vec a$ or $\\vec b$.",
+    "$|\\vec a\\times\\vec b|^2=|\\vec a|^2|\\vec b|^2-(\\vec a\\cdot\\vec b)^2$ (Lagrange)."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Plane through the intersection of two planes",
+    "Perpendicular planes"
+   ],
+   "level": 2,
+   "question": "If the plane containing the line $x+2y+3z-4=0=2x+y-z+5$ and perpendicular to the plane $\\vec r=(\\hat i-\\hat j)+\\lambda(\\hat i+\\hat j+\\hat k)+\\mu(\\hat i-2\\hat j+3\\hat k)$ is $ax+by+cz=4$, then $a-b+c$ is equal to:",
+   "options": [
+    "$18$",
+    "$22$",
+    "$20$",
+    "$24$"
+   ],
+   "answer": "(B) $22$",
+   "key_idea": "A plane through the line is $P_1+\\lambda P_2=0$; its normal must be perpendicular to the normal $(1,1,1)\\times(1,-2,3)$ of the given plane.",
+   "solution": [
+    "A plane containing the line of intersection of the two planes: $P_1+\\lambda P_2=0\\Rightarrow(1+2\\lambda)x+(2+\\lambda)y+(3-\\lambda)z+(5\\lambda-4)=0$ ....(1)",
+    "The given plane $\\vec r=(\\hat i-\\hat j)+\\lambda(\\hat i+\\hat j+\\hat k)+\\mu(\\hat i-2\\hat j+3\\hat k)$ ....(2)",
+    "Normal of plane (2) $=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\1&1&1\\\\1&-2&3\\end{vmatrix}=5\\hat i-2\\hat j-3\\hat k$.",
+    "Planes (1) and (2) are perpendicular, so their normals are perpendicular: $5(1+2\\lambda)-2(2+\\lambda)-3(3-\\lambda)=0$.",
+    "$-8+11\\lambda=0\\Rightarrow\\lambda=\\dfrac8{11}$.",
+    "Plane: $\\dfrac{27}{11}x+\\dfrac{30}{11}y+\\dfrac{25}{11}z-\\dfrac4{11}=0$.",
+    "$27x+30y+25z=4$, so $a-b+c=27-30+25=22$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the plane's normal as a cross product: it is perpendicular to the line's direction and to the given plane's normal.",
+     "solution": [
+      "Direction of the line: $(1,2,3)\\times(2,1,-1)=(-5,7,-3)$.",
+      "The required normal $\\vec n$ is perpendicular to this direction and to $(5,-2,-3)$ (the normal of the given plane): $\\vec n\\parallel(-5,7,-3)\\times(5,-2,-3)=(-27,-30,-25)$.",
+      "So the plane is $27x+30y+25z=k$. The line passes through $(-\\tfrac{14}3,\\tfrac{13}3,0)$ (put $z=0$ in both planes).",
+      "$k=27\\left(-\\tfrac{14}3\\right)+30\\left(\\tfrac{13}3\\right)=-126+130=4$, so the plane is $27x+30y+25z=4$ and $a-b+c=22$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Every plane through the line $P_1=0=P_2$ is $P_1+\\lambda P_2=0$ (one parameter).",
+    "Planes are perpendicular iff their normals are perpendicular ($\\vec n_1\\cdot\\vec n_2=0$).",
+    "The plane $\\vec r=\\vec r_0+\\lambda\\vec u+\\mu\\vec v$ has normal $\\vec u\\times\\vec v$.",
+    "A plane containing a line and perpendicular to a plane has normal $=\\vec d\\times\\vec n_2$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Foot of the perpendicular on a plane and distance between points"
+   ],
+   "level": 2,
+   "question": "If for $a>0$ the feet of the perpendiculars from $A(a,-2a,3)$ and $B(0,4,5)$ on the plane $lx+my+nz=0$ are $C(0,-a,-1)$ and $D$ respectively, then the length of segment $CD$ is equal to:",
+   "options": [
+    "$\\sqrt{55}$",
+    "$\\sqrt{31}$",
+    "$\\sqrt{66}$",
+    "$\\sqrt{41}$"
+   ],
+   "answer": "(C) $\\sqrt{66}$",
+   "key_idea": "$\\overrightarrow{CA}$ is normal to the plane and $C$ lies on it; this fixes $a$, then $D$ is the foot from $B$ along the normal.",
+   "solution": [
+    "The normal of the plane is along $\\overrightarrow{CA}=(a-0,\\,-2a+a,\\,3+1)=(a,-a,4)$.",
+    "The plane passes through the origin: $ax-ay+4z=0$.",
+    "$C(0,-a,-1)$ lies on it: $0+a^2-4=0\\Rightarrow a=2$ (as $a>0$).",
+    "The plane is $2x-2y+4z=0$, i.e. $x-y+2z=0$, and $C=(0,-2,-1)$.",
+    "Line $BD$ (through $B$ along the normal): $\\vec r=(0,4,5)+\\lambda(1,-1,2)$, so $D(\\lambda,\\,4-\\lambda,\\,5+2\\lambda)$.",
+    "$D$ lies on the plane: $\\lambda-(4-\\lambda)+2(5+2\\lambda)=0\\Rightarrow6\\lambda=-6\\Rightarrow\\lambda=-1$.",
+    "$D(-1,5,3)$, so $CD=\\sqrt{1+49+16}=\\sqrt{66}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the normal as $\\overrightarrow{AC}=(a,-a,-4)$ but then uses $ax-ay+4z=0$; the normal along $\\overrightarrow{CA}$ is $(a,-a,4)$ (with $\\overrightarrow{AC}=(-a,a,-4)$). The plane $x-y+2z=0$, $a=2$, $D$ and the answer are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$CD$ is the projection of $AB$ on the plane, so $CD^2=AB^2-(\\overrightarrow{AB}\\cdot\\hat n)^2$.",
+     "solution": [
+      "As before $\\vec n\\parallel(a,-a,4)$ and $a=2$, so $\\hat n=\\dfrac{(1,-1,2)}{\\sqrt6}$.",
+      "$A=(2,-4,3),\\ B=(0,4,5)$, so $\\overrightarrow{AB}=(-2,8,2)$ and $AB^2=72$.",
+      "$\\overrightarrow{AB}\\cdot\\hat n=\\dfrac{-2-8+4}{\\sqrt6}=-\\dfrac6{\\sqrt6}$, so $(\\overrightarrow{AB}\\cdot\\hat n)^2=6$.",
+      "$CD^2=72-6=66$, so $CD=\\sqrt{66}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a plane through the origin and the foot $C$ of the perpendicular from $A$: the normal is along $\\overrightarrow{CA}$ and $\\vec n\\cdot\\vec C=0$.",
+    "If $C,D$ are the feet of perpendiculars from $A,B$ on a plane with unit normal $\\hat n$, then $CD^2=AB^2-(\\overrightarrow{AB}\\cdot\\hat n)^2$ (here $72-6=66$).",
+    "Foot of the perpendicular from $B$ on $ax+by+cz+d=0$: $B-\\dfrac{ax_0+by_0+cz_0+d}{a^2+b^2+c^2}(a,b,c)$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mid-point of a segment and vector addition in a quadrilateral"
+   ],
+   "level": 1,
+   "question": "Let $ABCD$ be a quadrilateral. If $E$ and $F$ are the mid-points of the diagonals $AC$ and $BD$ respectively and $(\\overrightarrow{AB}-\\overrightarrow{BC})+(\\overrightarrow{AD}-\\overrightarrow{DC})=k\\,\\overrightarrow{FE}$, then $k$ is equal to:",
+   "options": [
+    "$4$",
+    "$-2$",
+    "$2$",
+    "$-4$"
+   ],
+   "answer": "(D) $-4$",
+   "key_idea": "Write every vector as (head - tail) in position vectors; the sum becomes $2(\\vec b+\\vec d)-2(\\vec a+\\vec c)$, i.e. a multiple of $\\overrightarrow{EF}$.",
+   "solution": [
+    "Let the position vectors of $A,B,C,D$ be $\\vec a,\\vec b,\\vec c,\\vec d$.",
+    "Mid-point of $AC$: $E=\\dfrac{\\vec a+\\vec c}2$; mid-point of $BD$: $F=\\dfrac{\\vec b+\\vec d}2$.",
+    "$(\\overrightarrow{AB}-\\overrightarrow{BC})+(\\overrightarrow{AD}-\\overrightarrow{DC})=(\\vec b-\\vec a)-(\\vec c-\\vec b)+(\\vec d-\\vec a)-(\\vec c-\\vec d)$.",
+    "$=2\\vec b-2\\vec a-2\\vec c+2\\vec d=2(\\vec b+\\vec d)-2(\\vec a+\\vec c)$.",
+    "$=4\\left[\\dfrac{\\vec b+\\vec d}2-\\dfrac{\\vec a+\\vec c}2\\right]=4\\overrightarrow{EF}=-4\\overrightarrow{FE}$, so $k=-4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test a concrete (non-parallelogram) quadrilateral.",
+     "solution": [
+      "Take $A(0,0),\\ B(2,0),\\ C(3,2),\\ D(0,1)$.",
+      "$\\overrightarrow{AB}=(2,0),\\ \\overrightarrow{BC}=(1,2),\\ \\overrightarrow{AD}=(0,1),\\ \\overrightarrow{DC}=(3,1)$.",
+      "$(\\overrightarrow{AB}-\\overrightarrow{BC})+(\\overrightarrow{AD}-\\overrightarrow{DC})=(1,-2)+(-3,0)=(-2,-2)$.",
+      "$E=\\left(\\tfrac32,1\\right),\\ F=\\left(1,\\tfrac12\\right)$, $\\overrightarrow{FE}=\\left(\\tfrac12,\\tfrac12\\right)$, so $k=-4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any quadrilateral $ABCD$: $\\overrightarrow{AB}+\\overrightarrow{AD}+\\overrightarrow{CB}+\\overrightarrow{CD}=4\\overrightarrow{EF}$, where $E,F$ are the mid-points of $AC,BD$.",
+    "$E=F$ (the diagonals bisect each other) iff $ABCD$ is a parallelogram.",
+    "$\\overrightarrow{AB}-\\overrightarrow{BC}$ is not a side-chain: rewrite with $-\\overrightarrow{BC}=\\overrightarrow{CB}$ before adding."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Intersection of a line and a plane, distance of a point from a plane",
+    "Quadratic equation with given roots"
+   ],
+   "level": 2,
+   "question": "Let $P$ be the point of intersection of the line $\\dfrac{x+3}3=\\dfrac{y+2}1=\\dfrac{1-z}2$ and the plane $x+y+z=2$. If the distance of $P$ from the plane $3x-4y+12z=32$ is $q$, then $q$ and $2q$ are the roots of the equation:",
+   "options": [
+    "$x^2-18x-72=0$",
+    "$x^2+18x-72=0$",
+    "$x^2+18x+72=0$",
+    "$x^2-18x+72=0$"
+   ],
+   "answer": "(D) $x^2-18x+72=0$",
+   "key_idea": "Parametrise the line to get $P$, find $q$ with the distance formula, and use sum $3q$ and product $2q^2$ of the roots.",
+   "solution": [
+    "Put $\\dfrac{x+3}3=\\dfrac{y+2}1=\\dfrac{1-z}2=\\lambda$: a point is $(3\\lambda-3,\\ \\lambda-2,\\ 1-2\\lambda)$.",
+    "On $x+y+z=2$: $3\\lambda-3+\\lambda-2+1-2\\lambda=2\\Rightarrow2\\lambda-4=2$.",
+    "$2\\lambda=6\\Rightarrow\\lambda=3$, so $P(6,1,-5)$.",
+    "$q=\\dfrac{|18-4-60-32|}{\\sqrt{9+16+144}}=\\dfrac{78}{13}=6$.",
+    "The equation with roots $q$ and $2q$ is $x^2-3qx+2q^2=0$.",
+    "$x^2-18x+72=0$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Distance of $(x_0,y_0,z_0)$ from $ax+by+cz=d$ is $\\dfrac{|ax_0+by_0+cz_0-d|}{\\sqrt{a^2+b^2+c^2}}$; here $\\sqrt{9+16+144}=13$.",
+    "The equation with roots $r,s$ is $x^2-(r+s)x+rs=0$; for roots $q,2q$ it is $x^2-3qx+2q^2=0$.",
+    "In the symmetric form $\\dfrac{1-z}2$, the $z$-coordinate is $1-2\\lambda$ (direction ratio $-2$), not $1+2\\lambda$.",
+    "Sum $3q=18$ and product $2q^2=72$ are both positive, which rules out options (A), (B) and (C)."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Vector triple product and unit vector perpendicular to a vector"
+   ],
+   "level": 2,
+   "question": "If $\\vec a,\\vec b,\\vec c$ are non-zero vectors and $\\hat n$ is a unit vector perpendicular to $\\vec c$ such that $\\vec a=\\alpha\\vec b-\\hat n\\ (\\alpha\\neq0)$ and $\\vec b\\cdot\\vec c=12$, then $|\\vec c\\times(\\vec a\\times\\vec b)|$ is equal to:",
+   "options": [
+    "$12$",
+    "$9$",
+    "$6$",
+    "$15$"
+   ],
+   "answer": "(A) $12$",
+   "key_idea": "Expand $\\vec c\\times(\\vec a\\times\\vec b)$ by BAC-CAB, use $\\vec a\\cdot\\vec c=12\\alpha$ to get $12(\\vec a-\\alpha\\vec b)=-12\\hat n$.",
+   "solution": [
+    "$\\hat n\\cdot\\vec c=0$, $|\\hat n|=1$, $\\vec a=\\alpha\\vec b-\\hat n$ and $\\vec b\\cdot\\vec c=12$.",
+    "$\\vec a\\cdot\\vec c=\\alpha\\,\\vec b\\cdot\\vec c-\\hat n\\cdot\\vec c=12\\alpha-0=12\\alpha$.",
+    "$\\vec c\\times(\\vec a\\times\\vec b)=(\\vec c\\cdot\\vec b)\\vec a-(\\vec c\\cdot\\vec a)\\vec b$.",
+    "$=12\\vec a-12\\alpha\\vec b=12(\\vec a-\\alpha\\vec b)$.",
+    "$\\vec a-\\alpha\\vec b=-\\hat n$, so $|\\vec c\\times(\\vec a\\times\\vec b)|=12|\\hat n|=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $\\vec a$ first: $\\vec a\\times\\vec b=(\\alpha\\vec b-\\hat n)\\times\\vec b=-\\hat n\\times\\vec b$.",
+     "solution": [
+      "$\\vec a\\times\\vec b=\\alpha(\\vec b\\times\\vec b)-\\hat n\\times\\vec b=-\\hat n\\times\\vec b$.",
+      "$\\vec c\\times(\\vec a\\times\\vec b)=-\\vec c\\times(\\hat n\\times\\vec b)=-\\big[\\hat n(\\vec c\\cdot\\vec b)-\\vec b(\\vec c\\cdot\\hat n)\\big]$.",
+      "$\\vec c\\cdot\\vec b=12$ and $\\vec c\\cdot\\hat n=0$, so the vector equals $-12\\hat n$.",
+      "Magnitude $=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "BAC-CAB: $\\vec p\\times(\\vec q\\times\\vec r)=\\vec q(\\vec p\\cdot\\vec r)-\\vec r(\\vec p\\cdot\\vec q)$.",
+    "If $\\vec a=\\alpha\\vec b+\\vec w$ then $\\vec a\\times\\vec b=\\vec w\\times\\vec b$ (the part of $\\vec a$ parallel to $\\vec b$ drops out).",
+    "$\\vec c\\times(\\vec a\\times\\vec b)$ lies in the plane of $\\vec a,\\vec b$ and is perpendicular to $\\vec c$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Direction cosines and equation of a plane normal to a vector"
+   ],
+   "level": 1,
+   "question": "A vector $\\vec v$ in the first octant is inclined to the $x$-axis at $60^\\circ$, to the $y$-axis at $45^\\circ$ and to the $z$-axis at an acute angle. If a plane passing through the points $(\\sqrt2,-1,1)$ and $(a,b,c)$ is normal to $\\vec v$, then:",
+   "options": [
+    "$a+\\sqrt2b+c=1$",
+    "$\\sqrt2a+b+c=1$",
+    "$a+b+\\sqrt2c=1$",
+    "$\\sqrt2a-b+c=1$"
+   ],
+   "answer": "(A) $a+\\sqrt2\\,b+c=1$",
+   "key_idea": "Direction cosines $\\left(\\tfrac12,\\tfrac1{\\sqrt2},\\tfrac12\\right)$ give the normal; the plane is $\\vec v\\cdot(\\vec r-\\vec r_0)=0$.",
+   "solution": [
+    "Let $\\vec v=l\\hat i+m\\hat j+n\\hat k$ (direction cosines); $l=\\cos60^\\circ=\\dfrac12$ and $m=\\cos45^\\circ=\\dfrac1{\\sqrt2}$.",
+    "$l^2+m^2+n^2=1\\Rightarrow n^2=\\dfrac14$.",
+    "$n=\\pm\\dfrac12$; $n=-\\dfrac12$ is rejected because $\\vec v$ is in the first octant, so $n=\\dfrac12$.",
+    "Direction ratios of the normal can be taken as $1,\\sqrt2,1$.",
+    "Plane through $(\\sqrt2,-1,1)$: $1(a-\\sqrt2)+\\sqrt2(b+1)+1(c-1)=0$.",
+    "$a+\\sqrt2b+c=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The given point $(\\sqrt2,-1,1)$ lies on the plane, so it must satisfy the correct relation: test the four options with $(a,b,c)=(\\sqrt2,-1,1)$.",
+     "solution": [
+      "(A): $\\sqrt2+\\sqrt2(-1)+1=1$ - true.",
+      "(B): $\\sqrt2\\cdot\\sqrt2-1+1=2\\neq1$.",
+      "(C): $\\sqrt2-1+\\sqrt2=2\\sqrt2-1\\neq1$.",
+      "(D): $\\sqrt2\\cdot\\sqrt2+1+1=4\\neq1$. Only (A) holds."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Direction cosines satisfy $l^2+m^2+n^2=1$; a first-octant vector has all of $l,m,n>0$ (here $n=\\tfrac12$).",
+    "The plane through $\\vec r_0$ normal to $\\vec v$ is $\\vec v\\cdot(\\vec r-\\vec r_0)=0$; any scalar multiple of $\\vec v$ may be used.",
+    "If a point is given to lie on the plane, substituting it into candidate answers eliminates options quickly."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Coplanarity of four points"
+   ],
+   "level": 2,
+   "question": "If the four points with position vectors $3\\hat i-4\\hat j+2\\hat k,\\ \\hat i+2\\hat j-\\hat k,\\ -2\\hat i-\\hat j+3\\hat k$ and $5\\hat i-2\\alpha\\hat j+4\\hat k$ are coplanar, then $\\alpha$ is equal to:",
+   "options": [
+    "$-\\dfrac{73}{17}$",
+    "$\\dfrac{107}{17}$",
+    "$\\dfrac{73}{17}$",
+    "$-\\dfrac{107}{17}$"
+   ],
+   "answer": "(C) $\\dfrac{73}{17}$",
+   "key_idea": "Four points are coplanar iff the three vectors from one point to the others have zero scalar triple product.",
+   "solution": [
+    "Take the vectors from the fourth point $D(5,-2\\alpha,4)$ to $A(3,-4,2),\\ B(1,2,-1),\\ C(-2,-1,3)$; coplanarity gives a zero determinant.",
+    "$\\begin{vmatrix}3-5&-4+2\\alpha&2-4\\\\3-1&-4-2&2+1\\\\3+2&-4+1&2-3\\end{vmatrix}=\\begin{vmatrix}-2&2\\alpha-4&-2\\\\2&-6&3\\\\5&-3&-1\\end{vmatrix}=0$.",
+    "Expand along the first row: $-2(6+9)-(2\\alpha-4)(-2-15)-2(-6+30)=0$.",
+    "$-30+17(2\\alpha-4)-48=0\\Rightarrow34\\alpha-146=0$, i.e. $-17(\\alpha-2)+39=0$.",
+    "$\\alpha-2=\\dfrac{39}{17}\\Rightarrow\\alpha=\\dfrac{34+39}{17}=\\dfrac{73}{17}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's step 'reduced determinant' replaces the first row by $(0,2\\alpha-4,-2)$ and changes the first column of the other rows to $-1$ and $6$ without stating an operation that does this (no single row or column operation of the shown determinant gives it). The reduced determinant still evaluates to $17(2\\alpha-4)-78=34\\alpha-146$, the same as the direct expansion, so the final value is unchanged; the solution is written with a direct expansion instead.",
+   "alternate_solutions": [
+    {
+     "idea": "Find the plane through the first three points via a cross product and require the fourth to lie on it.",
+     "solution": [
+      "$\\overrightarrow{P_1P_2}=(-2,6,-3)$ and $\\overrightarrow{P_1P_3}=(-5,3,1)$ with $P_1(3,-4,2),P_2(1,2,-1),P_3(-2,-1,3)$.",
+      "Normal $=\\overrightarrow{P_1P_2}\\times\\overrightarrow{P_1P_3}=(6+9,\\ 15+2,\\ -6+30)=(15,17,24)$.",
+      "Plane: $15(x-3)+17(y+4)+24(z-2)=0$.",
+      "$P_4(5,-2\\alpha,4)$: $15(2)+17(4-2\\alpha)+24(2)=0\\Rightarrow30+68-34\\alpha+48=0\\Rightarrow\\alpha=\\dfrac{146}{34}=\\dfrac{73}{17}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Four points $A,B,C,D$ are coplanar iff $[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}]=0$ (a $3\\times3$ determinant of differences).",
+    "The plane through three points has normal $\\overrightarrow{AB}\\times\\overrightarrow{AC}$.",
+    "Row/column operations may be used on the determinant, but keep each operation legitimate; compare the unknown coefficient directly."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Coplanarity of four points and scalar triple product"
+   ],
+   "level": 2,
+   "question": "If four distinct points with position vectors $\\vec a,\\vec b,\\vec c,\\vec d$ are coplanar, then $[\\vec a\\ \\vec b\\ \\vec c]$ is equal to:",
+   "options": [
+    "$[\\vec a\\,\\vec d\\,\\vec b]+[\\vec d\\,\\vec c\\,\\vec a]+[\\vec d\\,\\vec b\\,\\vec c]$",
+    "$[\\vec d\\,\\vec b\\,\\vec a]+[\\vec a\\,\\vec c\\,\\vec d]+[\\vec d\\,\\vec b\\,\\vec c]$",
+    "$[\\vec d\\,\\vec c\\,\\vec a]+[\\vec b\\,\\vec d\\,\\vec a]+[\\vec c\\,\\vec d\\,\\vec b]$",
+    "$[\\vec b\\,\\vec c\\,\\vec d]+[\\vec d\\,\\vec a\\,\\vec c]+[\\vec d\\,\\vec b\\,\\vec a]$"
+   ],
+   "answer": "(C) $[\\vec d\\,\\vec c\\,\\vec a]+[\\vec b\\,\\vec d\\,\\vec a]+[\\vec c\\,\\vec d\\,\\vec b]$",
+   "key_idea": "Coplanar points mean $\\vec b-\\vec a,\\ \\vec c-\\vec a,\\ \\vec d-\\vec a$ are coplanar; expand the zero triple product and match the options by cyclic order.",
+   "solution": [
+    "The points are coplanar, so $\\vec b-\\vec a,\\ \\vec c-\\vec a,\\ \\vec d-\\vec a$ are coplanar: $[\\vec b-\\vec a\\ \\ \\vec c-\\vec a\\ \\ \\vec d-\\vec a]=0$.",
+    "Expanding (terms with a repeated vector vanish): $[\\vec b\\,\\vec c\\,\\vec d]-[\\vec b\\,\\vec c\\,\\vec a]-[\\vec b\\,\\vec a\\,\\vec d]-[\\vec a\\,\\vec c\\,\\vec d]=0$.",
+    "$[\\vec b\\,\\vec c\\,\\vec a]=[\\vec a\\,\\vec b\\,\\vec c]$, so $[\\vec a\\,\\vec b\\,\\vec c]=[\\vec b\\,\\vec c\\,\\vec d]-[\\vec b\\,\\vec a\\,\\vec d]-[\\vec a\\,\\vec c\\,\\vec d]$.",
+    "$=[\\vec b\\,\\vec c\\,\\vec d]+[\\vec a\\,\\vec b\\,\\vec d]+[\\vec a\\,\\vec d\\,\\vec c]$ (swapping two vectors changes the sign).",
+    "Cyclic permutations keep a triple product: $[\\vec b\\,\\vec c\\,\\vec d]=[\\vec c\\,\\vec d\\,\\vec b]$, $[\\vec a\\,\\vec b\\,\\vec d]=[\\vec b\\,\\vec d\\,\\vec a]$, $[\\vec a\\,\\vec d\\,\\vec c]=[\\vec d\\,\\vec c\\,\\vec a]$.",
+    "So $[\\vec a\\,\\vec b\\,\\vec c]=[\\vec d\\,\\vec c\\,\\vec a]+[\\vec b\\,\\vec d\\,\\vec a]+[\\vec c\\,\\vec d\\,\\vec b]$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Coplanar points satisfy $\\vec d=x\\vec a+y\\vec b+z\\vec c$ with $x+y+z=1$; substitute in each bracket of option (C).",
+     "solution": [
+      "Write $\\vec d=x\\vec a+y\\vec b+z\\vec c$ with $x+y+z=1$ (affine combination, since the four points are coplanar and $\\vec a,\\vec b,\\vec c$ are non-collinear).",
+      "$[\\vec d\\,\\vec c\\,\\vec a]=y[\\vec b\\,\\vec c\\,\\vec a]=y[\\vec a\\,\\vec b\\,\\vec c]$ (the $\\vec a,\\vec c$ parts vanish).",
+      "$[\\vec b\\,\\vec d\\,\\vec a]=z[\\vec b\\,\\vec c\\,\\vec a]=z[\\vec a\\,\\vec b\\,\\vec c]$ and $[\\vec c\\,\\vec d\\,\\vec b]=x[\\vec c\\,\\vec a\\,\\vec b]=x[\\vec a\\,\\vec b\\,\\vec c]$.",
+      "Sum $=(x+y+z)[\\vec a\\,\\vec b\\,\\vec c]=[\\vec a\\,\\vec b\\,\\vec c]$, confirming (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Four points are coplanar iff $\\vec d=x\\vec a+y\\vec b+z\\vec c$ with $x+y+z=1$, iff $[\\vec b-\\vec a\\ \\ \\vec c-\\vec a\\ \\ \\vec d-\\vec a]=0$.",
+    "A scalar triple product is unchanged by cyclic permutation and changes sign on swapping two vectors; it is zero if two vectors repeat.",
+    "Equivalent symmetric form: $[\\vec b\\,\\vec c\\,\\vec d]-[\\vec a\\,\\vec c\\,\\vec d]+[\\vec a\\,\\vec b\\,\\vec d]-[\\vec a\\,\\vec b\\,\\vec c]=0$ for coplanar points."
+   ]
+  }
+ ]
+}
