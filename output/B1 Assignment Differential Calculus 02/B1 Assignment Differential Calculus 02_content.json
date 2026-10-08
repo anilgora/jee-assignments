@@ -1,0 +1,2270 @@
+{
+ "title": "B1 Assignment Differential Calculus 02 — Paper Analysis",
+ "subtitle": "Detailed solutions",
+ "source": "B1 Assignment Differential Calculus 02.pdf (no blueprint; marks assumed)",
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Product rule and derivative of inverse trigonometric functions",
+    "Inverse trigonometric identities"
+   ],
+   "level": 0,
+   "question": "Let $y=(1+x^2)\\tan^{-1}x-x$ & $f(x)=\\frac{dy}{dx}$, then $f(x)+\\cot^{-1}x$ is equal to :",
+   "options": [
+    "$0$",
+    "$\\frac{\\pi}{2}$",
+    "$-\\frac{\\pi}{2}$",
+    "$\\pi$"
+   ],
+   "answer": "(B)",
+   "key_idea": "The $+1-1$ cancels, so $y'=2x\\tan^{-1}x$; dividing by $2x$ leaves $\\tan^{-1}x$, which pairs with $\\cot^{-1}x$.",
+   "solution": [
+    "Differentiate $y=(1+x^2)\\tan^{-1}x-x$ by the product rule: $\\frac{dy}{dx}=2x\\tan^{-1}x+(1+x^2)\\cdot\\frac{1}{1+x^2}-1$.",
+    "So $\\frac{dy}{dx}=2x\\tan^{-1}x+1-1=2x\\tan^{-1}x$.",
+    "As printed, $f(x)=\\frac{dy}{dx}$ would give $2x\\tan^{-1}x+\\cot^{-1}x$, which is not constant and matches no option; the intended definition (used in the PDF's working) is $f(x)=\\frac{1}{2x}\\frac{dy}{dx}$.",
+    "With that definition $f(x)=\\frac{dy}{2x\\,dx}=\\tan^{-1}x$.",
+    "Then $f(x)+\\cot^{-1}x=\\tan^{-1}x+\\cot^{-1}x=\\frac{\\pi}{2}$ for every real $x$, which is option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The question as printed defines f(x)=dy/dx, but the PDF's working (and the key B) uses f(x)=(dy/dx)/(2x)=tan^-1 x; with f=dy/dx the expression is 2x tan^-1 x + cot^-1 x, not constant. The working is correct for the intended f; the missing 1/(2x) is noted in the solution.",
+   "useful_results": [
+    "$\\tan^{-1}x+\\cot^{-1}x=\\frac{\\pi}{2}$ for all real $x$ (with $\\cot^{-1}x\\in(0,\\pi)$); similarly $\\sin^{-1}x+\\cos^{-1}x=\\frac{\\pi}{2}$ on $[-1,1]$.",
+    "$\\frac{d}{dx}\\tan^{-1}x=\\frac{1}{1+x^2}$, so in $(1+x^2)\\tan^{-1}x$ the second product-rule term is exactly $1$ and cancels the $-x$ term's derivative.",
+    "Equivalent integral: $\\int 2x\\tan^{-1}x\\,dx=(1+x^2)\\tan^{-1}x-x+C$ (integration by parts).",
+    "Always compare a printed definition with what the options require; a missing factor such as $\\frac{1}{2x}$ is the usual reason an expression fails to simplify."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Implicit differentiation",
+    "Homogeneous equation as a pair of lines through the origin"
+   ],
+   "level": 1,
+   "question": "For the curve $32x^2y^2=(x+y)^4$ the value of $\\frac{d^2y}{dx^2}$ at $(1,1)$ is :",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "$\\frac{1}{2}$"
+   ],
+   "answer": "(A)",
+   "key_idea": "A homogeneous equation $F(x,y)=0$ is a set of lines through the origin, so $y'=\\frac{y}{x}$ and $y''=0$.",
+   "solution": [
+    "Both sides of $32x^2y^2=(x+y)^4$ are homogeneous of degree $4$ in $x,y$, so the equation is unchanged under $(x,y)\\to(\\lambda x,\\lambda y)$.",
+    "Putting $y=mx$ gives $32m^2=(1+m)^4$, a condition on $m$ alone; hence the curve is a set of straight lines $y=mx$ through the origin, each with constant $m$.",
+    "On such a line $\\frac{dy}{dx}=m=\\frac{y}{x}$.",
+    "Differentiating again, $\\frac{d^2y}{dx^2}=\\frac{x\\,y'-y}{x^2}=\\frac{y-y}{x^2}=0$ (equivalently $y=mx$ is linear).",
+    "So $\\frac{d^2y}{dx^2}=0$ at every point of the curve, giving option (A). (As printed, $(1,1)$ gives $32\\neq16$, so it is not on the curve; the intended answer $0$ is unaffected.)"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF working and answer (A) are correct. Question defect: the point (1,1) does not satisfy 32x^2y^2=(x+y)^4 (32 vs 16). A remark to this effect was added; the result y''=0 holds at every point of the curve.",
+   "alternate_solutions": [
+    {
+     "idea": "Factorise $(x+y)^4-32x^2y^2$ into two homogeneous quadratics, which show explicitly that the curve is four lines through the origin.",
+     "solution": [
+      "Write $(x+y)^4-32x^2y^2=\\left[(x+y)^2-4\\sqrt2\\,xy\\right]\\left[(x+y)^2+4\\sqrt2\\,xy\\right]$, a difference of squares since $32x^2y^2=(4\\sqrt2\\,xy)^2$.",
+      "The factors are $x^2+(2-4\\sqrt2)xy+y^2$ and $x^2+(2+4\\sqrt2)xy+y^2$, each homogeneous of degree $2$.",
+      "Each, with $y=mx$, is $m^2+(2\\mp4\\sqrt2)m+1=0$ with discriminant $(2\\mp4\\sqrt2)^2-4>0$, so two real slopes each: four real lines through the origin.",
+      "On each line $y=mx$ with $m$ constant, $y'=m$ and $y''=0$.",
+      "So $\\frac{d^2y}{dx^2}=0$ at every point of the curve: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $F(x,y)$ is a homogeneous polynomial, then $F(x,y)=0$ is a union of lines through the origin ($y=mx$ with $m$ a root of $F(1,m)=0$).",
+    "Euler: for $F$ homogeneous of degree $n$, $xF_x+yF_y=nF$; on $F=0$ this gives $y'=-\\frac{F_x}{F_y}=\\frac{y}{x}$.",
+    "For $y'=\\frac{y}{x}$: $y''=\\frac{xy'-y}{x^2}=0$. A line through the origin has zero second derivative.",
+    "Check that the given point lies on the curve; here $(1,1)$ does not, but the conclusion holds at every point that does."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Parametric differentiation and second derivative"
+   ],
+   "level": 1,
+   "question": "If $x=2+t^3$, $y=3t^2$ and value of $\\left(\\frac{d^2y}{dx^2}\\right)\\left(\\frac{dy}{dx}\\right)^n$ is constant, then value of $n$ is :",
+   "options": [
+    "$1$",
+    "$2$",
+    "$3$",
+    "$4$"
+   ],
+   "answer": "(D)",
+   "key_idea": "Get $y''=\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)\\cdot\\frac{dt}{dx}$ and match the powers of $t$ in $y''$ and $(y')^n$.",
+   "solution": [
+    "$x=2+t^3,\\ y=3t^2$ give $\\frac{dx}{dt}=3t^2$ and $\\frac{dy}{dt}=6t$.",
+    "$\\frac{dy}{dx}=\\frac{6t}{3t^2}=\\frac{2}{t}$.",
+    "$\\frac{d^2y}{dx^2}=\\frac{d}{dt}\\left(\\frac{2}{t}\\right)\\frac{dt}{dx}=-\\frac{2}{t^2}\\cdot\\frac{dt}{dx}=-\\frac{2}{t^2\\left(\\frac{dx}{dt}\\right)}$.",
+    "With $\\frac{dx}{dt}=3t^2$ this is $\\frac{d^2y}{dx^2}=-\\frac{2}{3t^4}$.",
+    "The product exactly as printed, $y''\\,(y')^n=-\\frac{2^{n+1}}{3}t^{-4-n}$, is constant only for $n=-4$, which is not an option. The key and the PDF's working use the quotient $\\frac{y''}{(y')^n}$.",
+    "$\\frac{y''}{(y')^n}=\\frac{-2}{3t^4\\left(\\frac{2}{t}\\right)^n}=-\\frac{2^{1-n}}{3}\\,t^{\\,n-4}$.",
+    "This is constant iff $n-4=0$, so $n=4$: option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF working is correct but it evaluates the QUOTIENT y''/(y')^n; the question as printed has the PRODUCT y''(y')^n, which is constant for n=-4 (not an option). The key D (n=4) matches the quotient reading, so the question text is probably misprinted. Kept answer D and added a bullet saying so.",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate the parameter: $t=(x-2)^{1/3}$ gives $y=3(x-2)^{2/3}$, and then only power-rule derivatives are needed.",
+     "solution": [
+      "From $x=2+t^3$, $t=(x-2)^{1/3}$, so $y=3t^2=3(x-2)^{2/3}$.",
+      "$\\frac{dy}{dx}=2(x-2)^{-1/3}$.",
+      "$\\frac{d^2y}{dx^2}=-\\frac{2}{3}(x-2)^{-4/3}$.",
+      "The quotient is $\\frac{y''}{(y')^n}=-\\frac{2}{3}\\cdot2^{-n}\\,(x-2)^{-\\frac43+\\frac n3}$.",
+      "It is constant iff $-\\frac43+\\frac n3=0$, i.e. $n=4$ (the printed product would need $-\\frac43-\\frac n3=0$, $n=-4$): option (D) as in the key."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parametric derivatives: $y'=\\frac{\\dot y}{\\dot x}$ and $y''=\\frac{\\dot x\\,\\ddot y-\\dot y\\,\\ddot x}{\\dot x^{3}}$. Here $\\frac{3t^2\\cdot6-6t\\cdot6t}{27t^6}=-\\frac{2}{3t^4}$.",
+    "Common error: $y''\\ne\\frac{d^2y/dt^2}{d^2x/dt^2}$; always differentiate $\\frac{dy}{dx}$ with respect to $t$ and then multiply by $\\frac{dt}{dx}$.",
+    "When both $y'$ and $y''$ are monomials in $t$, an expression $y''(y')^k$ is constant exactly when the exponents of $t$ cancel.",
+    "If $t$ is easily eliminated ($t=(x-2)^{1/3}$ here), differentiate $y(x)$ directly as a cross-check."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Graph of $f(|x|)$ and even functions",
+    "Local extrema of rational functions"
+   ],
+   "level": 2,
+   "question": "If $f(x)=\\frac{(x-1)(x-2)}{(x-3)(x-4)}$, then number of local extremas for $g(x)$, where $g(x)=f(|x|)$ :",
+   "options": [
+    "$3$",
+    "$4$",
+    "$5$",
+    "None of these"
+   ],
+   "answer": "(C)",
+   "key_idea": "$g(x)=f(|x|)$ is even: extrema for $x>0$ are mirrored, and $f'(0)\\neq0$ makes $x=0$ a corner extremum.",
+   "solution": [
+    "$g(x)=f(|x|)=\\frac{(|x|-1)(|x|-2)}{(|x|-3)(|x|-4)}$.",
+    "$g$ is an even function, so the number of extrema for $x>0$ equals the number for $x<0$.",
+    "At $x=0$: $g(0)=\\frac16$. For $x>0$, $g(x)=f(x)$ and $f'(0)=-\\frac{11}{72}<0$, so $g$ decreases to the right of $0$ and (by evenness) increases to its left: $x=0$ is a local maximum. (Evenness alone does not force an extremum; here $f'(0)\\neq0$ does.)",
+    "For $x>0$, $g(x)=f(x)=\\frac{(x-1)(x-2)}{(x-3)(x-4)}$ and $f'(x)=\\frac{(2x-3)(x^2-7x+12)-(x^2-3x+2)(2x-7)}{(x-3)^2(x-4)^2}=\\frac{-2(2x^2-10x+11)}{(x-3)^2(x-4)^2}$.",
+    "$2x^2-10x+11=0$ gives $x=\\frac{5\\pm\\sqrt3}{2}\\approx1.63,\\ 3.37$: two simple roots, both positive and different from $3,4$, so $f'$ changes sign at each: $2$ extrema for $x>0$.",
+    "By symmetry there are $2$ more for $x<0$, and one at $x=0$.",
+    "Total number of local extrema $=2+2+1=5$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF says 'g is even so there is an extremum at x=0' and 'number of extrema for x>0 is 2' without proof. Evenness alone does not give an extremum at 0; added f'(0)=-11/72 != 0 (corner max) and the derivative computation showing exactly 2 extrema for x>0. Answer 5 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Split $f$ into partial fractions, $f=1-\\frac{2}{x-3}+\\frac{6}{x-4}$, so that $f'=0$ becomes the simple equation $(x-4)^2=3(x-3)^2$.",
+     "solution": [
+      "$f(x)=1+\\frac{4x-10}{(x-3)(x-4)}=1-\\frac{2}{x-3}+\\frac{6}{x-4}$.",
+      "$f'(x)=\\frac{2}{(x-3)^2}-\\frac{6}{(x-4)^2}$, which is $0$ iff $(x-4)^2=3(x-3)^2$, i.e. $x-4=\\pm\\sqrt3\\,(x-3)$.",
+      "The two roots are $x=\\frac{5\\pm\\sqrt3}{2}$, both in $(0,\\infty)$ and not equal to $3,4$; $f'$ changes sign at each, so $f$ has $2$ extrema on $x>0$.",
+      "$g(x)=f(|x|)$ is even, so $2$ more extrema on $x<0$; and $f'(0)=\\frac{2}{9}-\\frac{6}{16}=-\\frac{11}{72}\\neq0$, so $g$ has a corner maximum at $x=0$.",
+      "Total $=2+2+1=5$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The graph of $g(x)=f(|x|)$ is the part of $f$ for $x\\ge0$ together with its mirror image in the $y$-axis; extrema on $x>0$ are copied to $x<0$.",
+    "If $f$ has $k$ extrema on $(0,\\infty)$ and $f'(0)\\neq0$ exists, $g=f(|x|)$ has $2k+1$ extrema (the point $x=0$ is a corner extremum: max if $f'(0)<0$, min if $f'(0)>0$). If $f'(0)=0$ check separately.",
+    "For a rational function the critical points are zeros of the numerator of $f'$; poles (here $x=3,4$) are not extrema.",
+    "$\\frac{(x-a)(x-b)}{(x-c)(x-d)}=1+\\frac{A}{x-c}+\\frac{B}{x-d}$ makes $f'$ easy: $f'=-\\frac{A}{(x-c)^2}-\\frac{B}{(x-d)^2}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Definite integrals of trigonometric functions",
+    "Maximum of a function of a parameter"
+   ],
+   "level": 3,
+   "question": "The value of $t$ for which $\\frac{\\int_0^{\\pi/2}(\\sin x+t\\cos x)\\,dx}{\\sqrt{\\int_0^{\\pi/2}(\\sin x+t\\cos x)^2\\,dx}}$ is maximum lies in the interval :",
+   "options": [
+    "$\\left(0,\\frac12\\right)$",
+    "$\\left(\\frac12,\\frac34\\right)$",
+    "$\\left(\\frac34,\\frac32\\right)$",
+    "$\\left(\\frac32,\\frac52\\right)$"
+   ],
+   "answer": "(C)",
+   "key_idea": "Integrate to get a function of $t$, maximise its square (the quantity is positive near the maximum): the derivative has factor $(1+t)(1-t)$.",
+   "solution": [
+    "$\\int_0^{\\pi/2}(\\sin x+t\\cos x)\\,dx=1+t$.",
+    "$\\int_0^{\\pi/2}(\\sin x+t\\cos x)^2dx=\\frac{\\pi}{4}(1+t^2)+t$, using $\\int\\sin^2x=\\int\\cos^2x=\\frac\\pi4$ and $\\int2t\\sin x\\cos x=t$.",
+    "So $y(t)=\\frac{1+t}{\\sqrt{\\frac{\\pi}{4}(1+t^2)+t}}$, and $y^2(t)=\\frac{(1+t)^2}{\\frac\\pi4(1+t^2)+t}$.",
+    "$y(t)>0$ for $t>-1$ and $y(t)\\le0$ for $t\\le-1$, hence the maximum of $y$ occurs at some $t_0>-1$.",
+    "For $t>-1$, $y$ and $y^2$ attain their maximum at the same $t_0$.",
+    "With $D=\\frac\\pi4(1+t^2)+t$: $\\frac{d}{dt}y^2=\\frac{2(t+1)}{D}-\\frac{(t+1)^2\\left(\\frac\\pi2t+1\\right)}{D^2}$.",
+    "$=\\frac{(1+t)\\left[\\frac\\pi2(1+t^2)+2t-(t+1)\\left(\\frac\\pi2t+1\\right)\\right]}{D^2}=\\frac{(1+t)(1-t)\\left(\\frac\\pi2-1\\right)}{D^2}$.",
+    "Since $\\frac\\pi2-1>0$, $y^2$ increases on $(-1,1)$ and decreases for $t>1$: maximum at $t=1$ and minimum at $t=-1$.",
+    "So $t_0=1\\in\\left(\\frac34,\\frac32\\right)$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Cauchy–Schwarz: the ratio is $\\frac{\\int u}{\\|u\\|}$, bounded by the length of the best approximation of $1$ by $\\sin x,\\cos x$, with equality when $u\\propto\\sin x+\\cos x$.",
+     "solution": [
+      "Let $s=\\sin x$, $c=\\cos x$, $u=s+tc$; all integrals are over $\\left[0,\\frac\\pi2\\right]$. The ratio is $\\frac{\\int u\\,dx}{\\sqrt{\\int u^2dx}}$.",
+      "Use $\\int s=\\int c=1$, $\\int s^2=\\int c^2=\\frac\\pi4$, $\\int sc=\\frac12$. Take $p=\\alpha(s+c)$ with $\\alpha\\left(\\frac\\pi4+\\frac12\\right)=1$, i.e. $\\alpha=\\frac{4}{\\pi+2}$.",
+      "Then $\\int(1-p)s\\,dx=\\int(1-p)c\\,dx=0$, so $\\int(1-p)u\\,dx=0$ for every $u=s+tc$, i.e. $\\int u\\,dx=\\int u\\,p\\,dx$.",
+      "Cauchy–Schwarz: $\\int up\\,dx\\le\\sqrt{\\int u^2dx}\\sqrt{\\int p^2dx}$, so the ratio is at most $\\sqrt{\\int p^2dx}$, with equality iff $u$ is a positive multiple of $p$.",
+      "$u=s+tc$ is a multiple of $p\\propto s+c$ exactly when $t=1$.",
+      "So the maximum is at $t=1\\in\\left(\\frac34,\\frac32\\right)$ (value $\\sqrt{\\frac{8}{\\pi+2}}$, agreeing with $y(1)$): option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^{\\pi/2}\\sin^2x\\,dx=\\int_0^{\\pi/2}\\cos^2x\\,dx=\\frac\\pi4$ and $\\int_0^{\\pi/2}\\sin x\\cos x\\,dx=\\frac12$.",
+    "To maximise a quantity known to be positive, maximise its square; the radical disappears and the derivative factorises.",
+    "Cauchy–Schwarz for integrals: $\\left(\\int_a^bu\\,v\\,dx\\right)^2\\le\\int_a^bu^2dx\\int_a^bv^2dx$; with $v=1$, $\\frac{\\left(\\int u\\right)^2}{\\int u^2}\\le b-a$ (here $\\le\\frac\\pi2$).",
+    "Maximum of $\\frac{\\int u}{\\sqrt{\\int u^2}}$ over a family $u\\in\\text{span}\\{\\sin x,\\cos x\\}$ occurs when $u$ is proportional to the orthogonal projection of $1$ onto that span."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Piecewise form of modulus functions, minimum and derivative",
+    "Definite integral of a modulus function"
+   ],
+   "level": 1,
+   "question": "$f(x)=|x-1|+|x-2|$, $I=\\int_0^3f(x)\\,dx$, $M=$ the minimum value of $f$, $N=f'(x)$ for $x<-4$ and $C=$ the value of $f''(4)$. Then the value of $\\frac{M^2-N^2+IC}{2}$ is :",
+   "options": [
+    "$-\\frac32$",
+    "$-\\frac52$",
+    "$\\frac32$",
+    "$\\frac52$"
+   ],
+   "answer": "(A)",
+   "key_idea": "Rewrite $f$ piecewise: it is linear with slopes $-2,0,2$, so $f''=0$ away from the corners and $I$ is a simple area.",
+   "solution": [
+    "$f(x)=3-2x$ for $x<1$, $f(x)=1$ for $1\\le x<2$, and $f(x)=2x-3$ for $x\\ge2$.",
+    "$I=\\int_0^1(3-2x)\\,dx+\\int_1^21\\,dx+\\int_2^3(2x-3)\\,dx=2+1+2=5$ (using the piecewise definition).",
+    "$M=1$: $f$ decreases (slope $-2$) up to $x=1$, equals $1$ on $[1,2]$ and increases afterwards.",
+    "$N=-2$: for $x<-4<1$, $f(x)=3-2x$ so $f'(x)=-2$.",
+    "$C=0$: for $x=4>2$, $f(x)=2x-3$ is linear, so $f''(4)=0$.",
+    "$\\frac{M^2-N^2+IC}{2}=\\frac{1-4+5\\cdot0}{2}=-\\frac32$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the triangle inequality for $M$ and triangle areas under $|x-1|$ and $|x-2|$ for $I$.",
+     "solution": [
+      "$|x-1|+|x-2|\\ge|(x-1)-(x-2)|=1$, with equality iff $(x-1)(x-2)\\le0$, i.e. $1\\le x\\le2$; so $M=1$.",
+      "$\\int_0^3|x-1|\\,dx$ is the area of two right triangles with legs $1,1$ and $2,2$: $\\frac12+2=\\frac52$.",
+      "$\\int_0^3|x-2|\\,dx$ is the area of triangles with legs $2,2$ and $1,1$: $2+\\frac12=\\frac52$. Hence $I=5$.",
+      "For $x<-4$ both $x-1$ and $x-2$ are negative, so $f=(1-x)+(2-x)=3-2x$ and $N=-2$.",
+      "For $x>2$, $f=2x-3$ is linear, so $C=f''(4)=0$.",
+      "$\\frac{1-4+0}{2}=-\\frac32$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|x-a|+|x-b|\\ge|a-b|$, with equality exactly for $x$ between $a$ and $b$; so the minimum of $|x-1|+|x-2|$ is $1$ on $[1,2]$.",
+    "For $\\sum|x-a_i|$ the slope at $x$ is (number of $a_i<x$) $-$ (number of $a_i>x$): here $-2,0,2$ on the three pieces.",
+    "$\\int_a^b|x-c|\\,dx=\\frac{(c-a)^2+(b-c)^2}{2}$ for $a\\le c\\le b$ (two triangles); here $\\frac{1+4}{2}=\\frac52$ for $c=1$ on $[0,3]$.",
+    "A piecewise linear function has $f''=0$ except at corners, where $f'$ (and hence $f''$) does not exist."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Derivative of a sum of squares and zero derivative implies constant function"
+   ],
+   "level": 1,
+   "question": "If $f(x)$ is a function such that $f(x)+f''(x)=0$ and $g(x)=(f(x))^2+(f'(x))^2$ and $g(3)=8$, then $g(8)=$ :",
+   "options": [
+    "$0$",
+    "$3$",
+    "$5$",
+    "$8$"
+   ],
+   "answer": "(D)",
+   "key_idea": "$g'=2f'(f+f'')=0$, so $g$ is constant.",
+   "solution": [
+    "$g(x)=(f(x))^2+(f'(x))^2\\Rightarrow g'(x)=2f(x)f'(x)+2f'(x)f''(x)$.",
+    "Using $f''(x)=-f(x)$: $g'(x)=2f(x)f'(x)-2f'(x)f(x)=0$ for all $x$.",
+    "So $g'(x)=0$ everywhere, hence $g(x)=c$ is a constant function.",
+    "$g(3)=8$ gives $c=8$, so $g(8)=8$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Solve the equation $f''+f=0$ explicitly: $f=a\\cos x+b\\sin x$, and $g$ becomes $a^2+b^2$.",
+     "solution": [
+      "$f''+f=0$ has the general solution $f(x)=a\\cos x+b\\sin x$ with constants $a,b$.",
+      "Then $f'(x)=-a\\sin x+b\\cos x$.",
+      "$g=(a\\cos x+b\\sin x)^2+(-a\\sin x+b\\cos x)^2=a^2(\\cos^2x+\\sin^2x)+b^2(\\sin^2x+\\cos^2x)=a^2+b^2$ (cross terms cancel).",
+      "So $g$ is constant; $g(3)=8$ gives $g(8)=8$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f''+\\omega^2f=0$, $g=f^2+\\frac{f'^2}{\\omega^2}$ is constant (energy conservation); here $\\omega=1$.",
+    "For $f''=f$ the analogue is $f^2-f'^2$ constant: its derivative is $2f'(f-f'')=0$.",
+    "First-integral trick: multiply the ODE by $f'$: $f'f''+ff'=0$, which is $\\frac{d}{dx}\\left[\\frac{f'^2+f^2}{2}\\right]=0$.",
+    "If $g'(x)=0$ for all $x$ in an interval then $g$ is constant there (mean value theorem)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Chain rule for composite functions"
+   ],
+   "level": 1,
+   "question": "Let $f$ and $g$ be differentiable functions on $\\mathbb{R}$ (the set of all real numbers) such that $g(1)=2=g'(1)$ and $f'(0)=4$. If $h(x)=f(2xg(x)+\\cos\\pi x-3)$ then $h'(1)$ is equal to :",
+   "options": [
+    "$28$",
+    "$24$",
+    "$32$",
+    "$18$"
+   ],
+   "answer": "(C)",
+   "key_idea": "At $x=1$ the inner expression equals $0$, which is exactly where $f'(0)=4$ is given.",
+   "solution": [
+    "$h(x)=f(2xg(x)+\\cos\\pi x-3)$.",
+    "By the chain rule, $h'(x)=f'(2xg(x)+\\cos\\pi x-3)\\left[2g(x)+2xg'(x)-\\pi\\sin\\pi x\\right]$.",
+    "At $x=1$ the argument is $2g(1)+\\cos\\pi-3=4-1-3=0$ (the PDF writes it as $2g(1)-4=0$), so the first factor is $f'(0)=4$.",
+    "At $x=1$ the bracket is $2g(1)+2g'(1)-\\pi\\sin\\pi=4+4-0=8$.",
+    "$h'(1)=4\\times8=32$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Chain rule: $\\frac{d}{dx}f(u(x))=f'(u(x))\\,u'(x)$; first evaluate $u(x_0)$ to see at which point $f'$ is needed.",
+    "Product rule inside the argument: $(2xg(x))'=2g(x)+2xg'(x)$.",
+    "$\\frac{d}{dx}\\cos\\pi x=-\\pi\\sin\\pi x$, which vanishes at every integer $x$.",
+    "To find $h'(x_0)$ one needs only $f'(u(x_0))$, $g(x_0)$ and $g'(x_0)$, not the functions themselves."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Logarithmic differentiation"
+   ],
+   "level": 1,
+   "question": "If $f(x)=\\frac{(x+1)^7\\sqrt{1+x^2}}{(x^2-x+1)^6}$, then the value of $f'(0)$ is equal to :",
+   "options": [
+    "$10$",
+    "$11$",
+    "$13$",
+    "$15$"
+   ],
+   "answer": "(C)",
+   "key_idea": "Take $\\ln f$ so that the product, root and power become a sum; then $f'(0)=f(0)\\cdot(\\ln f)'(0)$ with $f(0)=1$.",
+   "solution": [
+    "$f(0)=\\frac{1^7\\cdot1}{1^6}=1$.",
+    "$\\ln f(x)=7\\ln(1+x)+\\frac12\\ln(1+x^2)-6\\ln(x^2-x+1)$ (valid since $f>0$ near $0$).",
+    "Differentiating, $\\frac{f'(x)}{f(x)}=\\frac{7}{1+x}+\\frac{x}{1+x^2}-\\frac{6(2x-1)}{x^2-x+1}$.",
+    "At $x=0$: $\\frac{f'(0)}{f(0)}=7+0+6=13$.",
+    "Since $f(0)=1$, $f'(0)=13$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Linearise each factor at $x=0$: keep only first-order terms, since $f'(0)$ is the coefficient of $x$ in $f$.",
+     "solution": [
+      "Near $x=0$: $(1+x)^7=1+7x+O(x^2)$.",
+      "$\\sqrt{1+x^2}=1+O(x^2)$, which contributes no first-order term.",
+      "$(1-x+x^2)^{-6}=1+6x+O(x^2)$.",
+      "$f(x)=(1+7x)(1+6x)+O(x^2)=1+13x+O(x^2)$.",
+      "The coefficient of $x$ is $f'(0)=13$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f=\\frac{u^a v^b}{w^c}$: $\\frac{f'}{f}=a\\frac{u'}{u}+b\\frac{v'}{v}-c\\frac{w'}{w}$; then $f'(x_0)=f(x_0)\\cdot\\frac{f'}{f}(x_0)$ when $f(x_0)\\ne0$.",
+    "Use $\\ln|f|$ if $f$ may be negative; the derivative formula $\\frac{f'}{f}$ is unchanged.",
+    "Linearisation: $(1+x)^m\\approx1+mx$, and $\\frac{f'(0)}{f(0)}=\\sum(\\text{exponent})\\times(\\text{linear coefficient})$: $7(1)+\\frac12(0)-6(-1)=13$.",
+    "Choose $x_0$ where factors equal $1$ (here $x_0=0$) so that $f(x_0)$ is trivial."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Relation between function values and derivatives at common points (counterexamples)"
+   ],
+   "level": 3,
+   "question": "Let $f,g$ be differentiable functions on the real line $\\mathbb{R}$ with $f(0)>g(0)$. Assume that the set $M=\\{t\\in\\mathbb{R}\\mid f(t)=g(t)\\}$ is non-empty and that $f'(t)\\ge g'(t)$ for all $t\\in M$. Then which of the following is necessarily true ?",
+   "options": [
+    "if $t\\in M$, then $t<0$",
+    "for any $t\\in M$, $f'(t)>g'(t)$",
+    "For any $t\\notin M$, $f(t)>g(t)$",
+    "None of these"
+   ],
+   "answer": "(D)",
+   "key_idea": "Take $g=0$ and $f$ with a double root at $1$ and a simple root at $-1$: all hypotheses hold but (A), (B), (C) fail.",
+   "solution": [
+    "To show that (D) is correct we need one pair $f,g$ satisfying all hypotheses for which (A), (B), (C) are all false.",
+    "Take $g(t)=0$ and $f(t)=(t+1)(t-1)^2$. Then $f(0)=1>0=g(0)$.",
+    "$M=\\{t\\in\\mathbb{R}:(t+1)(t-1)^2=0\\}=\\{-1,1\\}$, which is non-empty.",
+    "$f'(t)=(t-1)^2+2(t+1)(t-1)=(t-1)(3t+1)$ and $g'(t)=0$.",
+    "$f'(-1)=(-2)(-2)=4>0=g'(-1)$ and $f'(1)=0=g'(1)$, so $f'\\ge g'$ on $M$: the hypotheses hold.",
+    "(A) is false: $1\\in M$ but $1\\not<0$.",
+    "(B) is false: $1\\in M$ and $f'(1)=g'(1)=0$, so $f'(1)>g'(1)$ fails.",
+    "(C) is false: $-2\\notin M$ but $f(-2)=(-1)(9)=-9<0=g(-2)$.",
+    "So none of (A), (B), (C) is necessarily true: option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF computed f'(t)=(t-1)(2t+1) and f'(-1)=2; the correct derivative is (t-1)(3t+1) (since (t-1)^2+2(t+1)(t-1)=(t-1)(3t+1)) and f'(-1)=4. Conclusions unchanged. PDF text also had garbled characters ('isnotempty') and did not check (C) explicitly; f(-2)=-9<0 added. Kept answer D.",
+   "useful_results": [
+    "For a 'which is necessarily true' question with a 'None of these' option, one example satisfying all hypotheses but violating each of the other options settles it.",
+    "Put $h=f-g$: the hypotheses say $h(0)>0$, $h(t_0)=0\\Rightarrow h'(t_0)\\ge0$. Zeros with $h'=0$ are allowed, so $h$ may touch $0$ (double root) or even change sign downward, e.g. $h=(1-t)^3$.",
+    "Hence $f\\ge g$ cannot be concluded even for $t>0$, and $f'>g'$ strict fails at repeated roots.",
+    "Derivative of a product with a repeated factor: $\\frac{d}{dt}\\left[(t+1)(t-1)^2\\right]=(t-1)(3t+1)$; a double root is a root of the derivative."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits: L'Hôpital's rule and the derivative at a point",
+    "Slope of tangent and normal"
+   ],
+   "level": 2,
+   "question": "If the normal to the curve $y=f(x)$ at $x=0$ is $3x-y+3=0$, then the value of $\\lim_{x\\to1}(x-1)^2\\left\\{f\\left((x-1)^2\\right)-5f\\left(4(x-1)^2\\right)+4f\\left(7(x-1)^2\\right)\\right\\}^{-1}$ is:",
+   "options": [
+    "$-\\frac{1}{3}$",
+    "$\\frac{1}{3}$",
+    "$3$",
+    "$-3$"
+   ],
+   "answer": "(A) $-\\frac{1}{3}$",
+   "key_idea": "The coefficients $1,-5,4$ sum to $0$, so the denominator vanishes and only $f'(0)$ (from the normal's slope) survives.",
+   "solution": [
+    "The normal $3x-y+3=0$ has slope $3$, so the tangent at $x=0$ has slope $f'(0)=-\\frac{1}{3}$.",
+    "$L=\\lim_{x\\to1}\\frac{(x-1)^2}{f((x-1)^2)-5f(4(x-1)^2)+4f(7(x-1)^2)}$. At $x=1$ the denominator is $f(0)(1-5+4)=0$, so the form is $\\frac{0}{0}$.",
+    "Apply L'Hôpital's rule (differentiate numerator and denominator, using the chain rule), assuming $f'$ is continuous at $0$.",
+    "Numerator: $\\frac{d}{dx}(x-1)^2=2(x-1)$. Denominator: $2(x-1)f'((x-1)^2)-40(x-1)f'(4(x-1)^2)+56(x-1)f'(7(x-1)^2)$.",
+    "$L=\\lim_{x\\to1}\\frac{2(x-1)}{2(x-1)f'((x-1)^2)-40(x-1)f'(4(x-1)^2)+56(x-1)f'(7(x-1)^2)}$.",
+    "Cancel the common factor $(x-1)$: $L=\\lim_{x\\to1}\\frac{2}{2f'((x-1)^2)-40f'(4(x-1)^2)+56f'(7(x-1)^2)}$.",
+    "As $x\\to1$ every argument tends to $0$, so $L=\\frac{2}{2f'(0)-40f'(0)+56f'(0)}=\\frac{1}{f'(0)-20f'(0)+28f'(0)}$.",
+    "Substitute $f'(0)=-\\frac{1}{3}$: $L=\\frac{1}{-\\frac{1}{3}-20\\left(-\\frac{1}{3}\\right)+28\\left(-\\frac{1}{3}\\right)}$.",
+    "$L=\\frac{1}{-\\frac{1}{3}+\\frac{20}{3}-\\frac{28}{3}}=\\frac{1}{-3}=-\\frac{1}{3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $h=(x-1)^2\\to0$ and use $f(u)=f(0)+f'(0)u+o(u)$; the $f(0)$ terms cancel because $1-5+4=0$.",
+     "solution": [
+      "Let $h=(x-1)^2\\to0^+$. The limit becomes $\\lim_{h\\to0^+}\\frac{h}{f(h)-5f(4h)+4f(7h)}$.",
+      "$f$ is differentiable at $0$, so $f(u)=f(0)+f'(0)u+o(u)$ as $u\\to0$.",
+      "Hence $f(h)-5f(4h)+4f(7h)=f(0)(1-5+4)+f'(0)\\,h\\,(1-20+28)+o(h)=9f'(0)\\,h+o(h)$.",
+      "So the limit equals $\\lim_{h\\to0^+}\\frac{h}{9f'(0)h+o(h)}=\\frac{1}{9f'(0)}$.",
+      "With $f'(0)=-\\frac{1}{3}$ (slope of the normal is $3$), the limit is $\\frac{1}{9\\cdot(-1/3)}=-\\frac{1}{3}$.",
+      "This needs only differentiability of $f$ at $0$, not continuity of $f'$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is differentiable at $0$, then $f(ch)=f(0)+cf'(0)h+o(h)$; so $\\sum a_if(c_ih)=f(0)\\sum a_i+f'(0)h\\sum a_ic_i+o(h)$.",
+    "When $\\sum a_i=0$ the $f(0)$ terms cancel and the combination behaves like $h\\,f'(0)\\sum a_ic_i$. Here $\\sum a_ic_i=1-20+28=9$.",
+    "If the tangent slope at a point is $m\\ne0$, the normal slope is $-\\frac{1}{m}$; a normal of slope $3$ means $f'(0)=-\\frac{1}{3}$.",
+    "L'Hôpital's rule needs the limit of the ratio of derivatives to exist (here: $f'$ continuous at $0$); the chain rule gives $\\frac{d}{dx}f(c(x-1)^2)=2c(x-1)f'(c(x-1)^2)$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity: constant sign of a non-vanishing derivative",
+    "Limits and differentiability at a point"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be any twice differentiable function such that its second derivative is continuous and $\\frac{df(x)}{dx}\\neq0$ for all $x\\neq0$. If $\\lim_{x\\to0}\\frac{f(x)}{x^2}=\\pi$, then:",
+   "options": [
+    "for all $x\\neq0$, $f(x)>f(0)$",
+    "for all $x\\neq0$, $f(x)<f(0)$",
+    "for all $x$, $\\frac{d^2f(x)}{dx^2}>0$",
+    "for all $x$, $\\frac{d^2f(x)}{dx^2}<0$"
+   ],
+   "answer": "(A)",
+   "key_idea": "A continuous derivative that never vanishes keeps one sign on each side of $0$, and $f(x)>x^2>0=f(0)$ near $0$ fixes those signs.",
+   "solution": [
+    "$\\lim_{x\\to0}\\frac{f(x)}{x^2}=\\pi$ is finite, so $f(0)=0$ (otherwise the limit would not exist in $\\mathbb{R}$).",
+    "Since $\\pi>1$, there is $\\epsilon>0$ such that $f(x)>x^2>0$ for all $x\\in(-\\epsilon,\\epsilon)\\setminus\\{0\\}$.",
+    "$f'$ is continuous and $f'(x)\\neq0$ for $x\\neq0$, so by the intermediate value theorem $f'$ keeps one sign on $(0,\\infty)$ and one sign on $(-\\infty,0)$.",
+    "Take $x\\in(0,\\epsilon)$. Since $f(0)=0$ and $f(x)>0$, the mean value theorem gives $f'(c)=\\frac{f(x)}{x}>0$ for some $c\\in(0,x)$, so $f'>0$ on all of $(0,\\infty)$.",
+    "Hence $f$ is increasing on $[0,\\infty)$ and $f(x)>f(0)$ for every $x>0$.",
+    "Take $x\\in(-\\epsilon,0)$. Since $f(x)>0=f(0)$, the mean value theorem gives $f'(c)=\\frac{f(x)}{x}<0$ for some $c\\in(x,0)$, so $f'<0$ on all of $(-\\infty,0)$.",
+    "Hence $f$ is decreasing on $(-\\infty,0]$ and $f(x)>f(0)$ for every $x<0$.",
+    "So $f(x)>f(0)$ for all $x\\neq0$: (A) is true and (B) is false.",
+    "(C), (D): $f(x)=\\frac{\\pi x^2}{1+x^2}$ satisfies every hypothesis, and $f''(x)=\\frac{2\\pi(1-3x^2)}{(1+x^2)^3}$ is positive at $0$ but negative for $|x|>\\frac{1}{\\sqrt3}$.",
+    "So $f''$ need not be positive everywhere, and $f''(0)=2\\pi>0$ rules out $f''<0$ everywhere: (C) and (D) are not necessarily true. Answer (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF proves only that f(x) > f(0) for x != 0 (option A) and stops; it never rules out (B), (C), (D) and has a typo '(-eps, eps){0}' for (-eps,eps)\\{0}. I added the MVT sign steps with explicit inequalities and the counterexample f = pi x^2/(1+x^2) for (C), (D). No result of the PDF was wrong.",
+   "alternate_solutions": [
+    {
+     "idea": "Peano–Taylor at $0$ gives $f(0)=f'(0)=0$ and $f''(0)=2\\pi>0$: a strict local minimum, and $0$ is the only critical point.",
+     "solution": [
+      "$f$ is twice differentiable at $0$: $f(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2+o(x^2)$.",
+      "$\\frac{f(x)}{x^2}$ has a finite limit only if $f(0)=0$ and $f'(0)=0$; then the limit is $\\frac{f''(0)}{2}$, so $f''(0)=2\\pi>0$.",
+      "By the second derivative test, $x=0$ is a strict local minimum of $f$.",
+      "As $f'(x)\\neq0$ for $x\\neq0$, $0$ is the only critical point, and $f'(x)=f''(0)x+o(x)$ is negative just left of $0$ and positive just right of $0$.",
+      "By continuity $f'$ cannot change sign again, so $f'<0$ on $(-\\infty,0)$ and $f'>0$ on $(0,\\infty)$.",
+      "So $0$ is a global strict minimum: $f(x)>f(0)$ for all $x\\neq0$. This is (A).",
+      "$f''(0)=2\\pi>0$ kills (D), and $\\frac{\\pi x^2}{1+x^2}$ (with $f''<0$ for $|x|>\\frac{1}{\\sqrt3}$) kills (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is twice differentiable at $0$ and $\\lim_{x\\to0}\\frac{f(x)}{x^2}=L$ is finite, then $f(0)=f'(0)=0$ and $f''(0)=2L$ (Taylor with Peano remainder).",
+    "A continuous function with no zero on an interval has constant sign there (IVT). So a continuous $f'$ with $f'(x)\\neq0$ for $x\\neq0$ makes $f$ strictly monotonic on each side of $0$.",
+    "A strict local minimum that is the only critical point of a differentiable function is its global strict minimum.",
+    "Information about $f''$ at one point does not fix its sign elsewhere; to refute 'for all $x$' options, use an explicit example such as $f(x)=\\frac{\\pi x^2}{1+x^2}$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Optimisation: maxima and minima word problem"
+   ],
+   "level": 2,
+   "question": "A factory D is to be connected by a road with a straight railway line on which a town A is situated. The distance $DB$ of the factory to the railway line is $5\\sqrt{3}$ km. Length $AB$ of the railway line is $20$ km. Freight charges on the road are twice the charges on the railway. The point $P$ ($AP<AB$) on the railway line should the road $DP$ be connected so as to ensure minimum freight charges from the factory to the town is:",
+   "options": [
+    "$BP=5$ km",
+    "$AP=5$ km",
+    "$BP=7.5$ km",
+    "None of these"
+   ],
+   "answer": "(A) $BP=5$ km",
+   "key_idea": "Total cost is $k\\,AP+2k\\,DP$; setting its derivative to zero gives $(x-20)^2=25$ and the domain $AP<AB$ picks the root.",
+   "solution": [
+    "Let $AP=x$ km (so $0<x<20$) and let the charge on the railway be $k$ Rs/km; the road costs $2k$ Rs/km. Since $DB=5\\sqrt3$, $DP=\\sqrt{(20-x)^2+75}$.",
+    "Total freight charges: $T=kx+2k\\sqrt{(20-x)^2+75}$.",
+    "For a minimum, $\\frac{dT}{dx}=0$: $k+2k\\cdot\\frac{2(x-20)}{2\\sqrt{(x-20)^2+75}}=0$.",
+    "So $\\sqrt{(x-20)^2+75}=2(20-x)$; squaring gives $4(x-20)^2=75+(x-20)^2$.",
+    "$3(x-20)^2=75$, i.e. $(x-20)^2=25$.",
+    "$x=25$ or $x=15$. Since $AP<AB=20$, $x=15$ (and $x=25$ would also make $2(20-x)$ negative).",
+    "It is a minimum: $\\frac{d^2T}{dx^2}=\\frac{150k}{\\left((x-20)^2+75\\right)^{3/2}}>0$.",
+    "$PB=AB-AP=20-15=5$ km, so option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the angle $\\theta=\\angle DPB$ as variable; the cost becomes $20+5\\sqrt3\\,\\frac{2-\\cos\\theta}{\\sin\\theta}$ and the optimum is the refraction condition $\\cos\\theta=\\frac12$.",
+     "solution": [
+      "Let $\\theta=\\angle DPB$. Then $DP=\\frac{5\\sqrt3}{\\sin\\theta}$, $PB=5\\sqrt3\\cot\\theta$ and $AP=20-5\\sqrt3\\cot\\theta$.",
+      "Cost divided by $k$: $C=AP+2DP=20-5\\sqrt3\\cot\\theta+\\frac{10\\sqrt3}{\\sin\\theta}=20+5\\sqrt3\\,\\frac{2-\\cos\\theta}{\\sin\\theta}$.",
+      "$\\frac{d}{d\\theta}\\left(\\frac{2-\\cos\\theta}{\\sin\\theta}\\right)=\\frac{\\sin^2\\theta-(2-\\cos\\theta)\\cos\\theta}{\\sin^2\\theta}=\\frac{1-2\\cos\\theta}{\\sin^2\\theta}$.",
+      "This is $0$ at $\\cos\\theta=\\frac12$, i.e. $\\theta=60^\\circ$; it is negative for $\\theta<60^\\circ$ and positive after, so $C$ is minimum there.",
+      "$PB=5\\sqrt3\\cot60^\\circ=5\\sqrt3\\cdot\\frac{1}{\\sqrt3}=5$ km, so $AP=15$ km and the minimum cost is $k(20+15)=35k$. Option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Minimising $(\\text{rate}_1)\\cdot\\text{length}_1+(\\text{rate}_2)\\cdot\\text{length}_2$ over a point on a line gives a Snell-type condition: $\\cos\\theta=\\frac{\\text{rail rate}}{\\text{road rate}}=\\frac12$, independent of $DB$.",
+    "With $r=\\frac{\\text{rail rate}}{\\text{road rate}}<1$ the optimal foot satisfies $PB=\\frac{r\\,DB}{\\sqrt{1-r^2}}$; for $r=\\frac12$, $PB=\\frac{DB}{\\sqrt3}=5$ km.",
+    "After squaring an equation like $\\sqrt{u}=2(20-x)$, discard roots that make the right side negative or violate the stated domain (here $x=25$).",
+    "Confirm a minimum by a sign change of $T'$ or $T''>0$, and compare with the end points of the domain ($T(15)=35k<T(20)\\approx37.3k<T(0)\\approx43.6k$)."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric functions: simplifying $\\sin^{-1}\\frac{2t}{1+t^2}$",
+    "Monotonicity of a composite function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\sin^{-1}\\left(\\frac{2g(x)}{1+g(x)^2}\\right)$, then which are correct?\n(i) $f(x)$ is decreasing if $g(x)$ is increasing and $|g(x)|>1$\n(ii) $f(x)$ is an increasing function if $g(x)$ is increasing and $|g(x)|\\le1$\n(iii) $f(x)$ is decreasing function if $g(x)$ is decreasing and $|g(x)|>1$",
+   "options": [
+    "(i) and (iii)",
+    "(i) and (ii)",
+    "(i), (ii) and (iii)",
+    "(iii)"
+   ],
+   "answer": "(B) (i) and (ii)",
+   "key_idea": "$\\sin^{-1}\\frac{2t}{1+t^2}$ equals $2\\tan^{-1}t$ only for $|t|\\le1$; for $|t|>1$ it is $\\pm\\pi-2\\tan^{-1}t$, which reverses the direction.",
+   "solution": [
+    "Write $t=g(x)$. Then $f(x)=2\\tan^{-1}g(x)$ for $|g(x)|\\le1$.",
+    "$f(x)=\\pi-2\\tan^{-1}g(x)$ for $g(x)>1$.",
+    "$f(x)=-\\pi-2\\tan^{-1}g(x)$ for $g(x)<-1$.",
+    "Differentiating: $f'(x)=\\frac{2g'(x)}{1+(g(x))^2}$ for $|g(x)|<1$.",
+    "And $f'(x)=-\\frac{2g'(x)}{1+(g(x))^2}$ for $|g(x)|>1$.",
+    "(i) $g$ increasing means $g'\\ge0$; with $|g|>1$, $f'=-\\frac{2g'}{1+g^2}\\le0$, so $f$ is decreasing: true.",
+    "(ii) $g$ increasing, $|g|\\le1$: $f'=\\frac{2g'}{1+g^2}\\ge0$, so $f$ is increasing: true.",
+    "(iii) $g$ decreasing means $g'\\le0$; with $|g|>1$, $f'=-\\frac{2g'}{1+g^2}\\ge0$, so $f$ is increasing, not decreasing: false.",
+    "Hence only (i) and (ii) are correct: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's piecewise formulas for f and f' are correct but it stops there and never evaluates statements (i)-(iii). I added the three verdicts (statement (iii) is false: f is increasing there). Answer key (B) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "$h(t)=\\sin^{-1}\\frac{2t}{1+t^2}$ is unchanged by $t\\to\\frac1t$, so on $|t|>1$ it mirrors the increasing branch with the direction reversed.",
+     "solution": [
+      "Let $h(t)=\\sin^{-1}\\frac{2t}{1+t^2}$, so $f=h\\circ g$. Because $\\frac{2t}{1+t^2}$ is unchanged by $t\\to\\frac1t$, $h(t)=h\\left(\\frac1t\\right)$ for $t\\neq0$.",
+      "On $[-1,1]$, $h(t)=2\\tan^{-1}t$ is increasing.",
+      "For $t>1$, $h(t)=h\\left(\\frac1t\\right)=2\\tan^{-1}\\frac1t$; as $t\\to\\frac1t$ is decreasing, $h$ is decreasing on $(1,\\infty)$.",
+      "Similarly $h(t)=2\\tan^{-1}\\frac1t$ is decreasing on $(-\\infty,-1)$.",
+      "A differentiable $g$ is continuous, so if $|g|>1$ throughout, $g$ stays in one of $(1,\\infty)$, $(-\\infty,-1)$, where $h$ is decreasing.",
+      "Composition rule: (increasing, increasing) gives increasing; (decreasing $h$, increasing $g$) gives decreasing; (decreasing $h$, decreasing $g$) gives increasing.",
+      "(i) true, (ii) true, (iii) false (decreasing $\\circ$ decreasing is increasing). Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^{-1}\\frac{2t}{1+t^2}=2\\tan^{-1}t$ for $|t|\\le1$; $=\\pi-2\\tan^{-1}t$ for $t\\ge1$; $=-\\pi-2\\tan^{-1}t$ for $t\\le-1$.",
+    "Also $\\cos^{-1}\\frac{1-t^2}{1+t^2}=2\\tan^{-1}|t|$ for all real $t$; always check the principal range before collapsing an inverse trig expression.",
+    "For $f=h\\circ g$ the direction of $f$ is the product of directions: (inc, inc) and (dec, dec) give increasing; (inc, dec) and (dec, inc) give decreasing.",
+    "$h(t)=\\sin^{-1}\\frac{2t}{1+t^2}$ is increasing on $[-1,1]$ but decreasing on $(-\\infty,-1]$ and on $[1,\\infty)$; in one formula $f'=\\frac{2g'}{1+g^2}\\cdot\\operatorname{sgn}(1-g^2)$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal to curves; two curves touching each other"
+   ],
+   "level": 2,
+   "question": "For the curves $y=x^2-x+1$ and $x=y^2-y+1$ which of the following is/are true:",
+   "options": [
+    "$y=x$ is their common tangent",
+    "$y+x=2$ is their common normal",
+    "both the curves touch each other",
+    "both the curves never touch each other"
+   ],
+   "answer": "(A, B, C)",
+   "key_idea": "The curves are mirror images in $y=x$ and meet only at $(1,1)$, where both have slope $1$.",
+   "solution": [
+    "The curves are $y=x^2-x+1$ ... (1) and $x=y^2-y+1$ ... (2).",
+    "From (2), $x=y(y-1)+1$; substituting $y=x^2-x+1$ from (1): $x=(x^2-x+1)(x^2-x)+1$.",
+    "Expanding: $x=(x^2-x)^2+(x^2-x)+1$, so $(x^2-x)^2+x^2-2x+1=0$, i.e. $x^2(x-1)^2+(x-1)^2=0$.",
+    "$(x-1)^2(x^2+1)=0$ gives only the real root $x=1$, so $y=1$: the curves meet only at $(1,1)$.",
+    "Slopes at $(1,1)$: from (1), $\\frac{dy}{dx}=2x-1=1$; from (2), $\\frac{dx}{dy}=2y-1=1$, so $\\frac{dy}{dx}=1$. Same point and same tangent, so the curves touch each other at $x=1$: (C) true, (D) false.",
+    "Tangent at $(1,1)$ to both: $y-1=1\\cdot(x-1)$, i.e. $y=x$: (A) true.",
+    "Normal at $(1,1)$ to both (slope $-1$): $y-1=-(x-1)$, i.e. $x+y=2$: (B) true.",
+    "So (A), (B), (C) are correct."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The curves are reflections of each other in $y=x$, and $y-x=(x-1)^2\\ge0$ puts one curve above the line and the other below it.",
+     "solution": [
+      "Interchanging $x$ and $y$ turns (1) into (2): the curves are mirror images in the line $y=x$.",
+      "On (1): $y-x=(x-1)^2\\ge0$, so the curve lies on or above $y=x$ and meets it only at $(1,1)$ (a double root, so $y=x$ is tangent there).",
+      "By reflection, (2) lies on or below $y=x$ and is tangent to it at the same point $(1,1)$: $y=x$ is a common tangent (A).",
+      "The curves lie on opposite sides of $y=x$, so they can meet only on the line, i.e. at $(1,1)$, where they share a tangent: they touch each other (C), and (D) is false.",
+      "The normal at $(1,1)$ is perpendicular to $y=x$ through $(1,1)$: $x+y=2$, the same for both curves (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A line is tangent to a parabola iff the intersection equation has a double root; here $(x^2-x+1)-x=(x-1)^2$.",
+    "The curves $F(x,y)=0$ and $F(y,x)=0$ are mirror images in $y=x$; if one is tangent to $y=x$ at $P$, so is the other, and $P$ is a common point.",
+    "Two curves touch at a point when they share the point and the tangent; substituting one into the other, touching shows up as a repeated factor (here $(x-1)^2$, while $x^2+1$ has no real root).",
+    "Normal to $y=f(x)$ at $(a,f(a))$: $y-f(a)=-\\frac{1}{f'(a)}(x-a)$ for $f'(a)\\neq0$; for $x=g(y)$ use $\\frac{dx}{dy}$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Extrema and range of a composite function of the type $(\\cos x)^{\\cos x}$"
+   ],
+   "level": 3,
+   "question": "If $f(x)=\\ln\\left((\\cos x)^{\\cos x}+1\\right)$, $x\\in\\left(0,\\frac{\\pi}{2}\\right)$ then which of the following is true?",
+   "options": [
+    "$f(x)_{\\min}=\\ln\\left(\\left(\\frac{1}{e}\\right)^{1/e}+1\\right)$",
+    "$f(x)_{\\max}=\\infty$",
+    "$f(x)_{\\min}=\\log2$",
+    "$y\\in\\left[\\ln\\left(\\left(\\frac{1}{e}\\right)^{1/e}+1\\right),\\ln2\\right]$"
+   ],
+   "answer": "(A, D)",
+   "key_idea": "Put $t=\\cos x\\in(0,1)$; $t^t$ has its minimum at $t=\\frac1e$ and tends to $1$ at both ends, so $\\ln 2$ is approached but never attained.",
+   "solution": [
+    "Let $t=\\cos x$. Since $x\\in\\left(0,\\frac{\\pi}{2}\\right)$, $t\\in(0,1)$.",
+    "Then $f=\\ln(t^t+1)$. Because $\\ln$ is increasing, the extrema of $f$ occur where $t^t$ has extrema.",
+    "Let $\\phi(t)=t^t=e^{t\\ln t}$. Differentiating, $\\phi'(t)=t^t(\\ln t+1)$.",
+    "$\\phi'(t)=0$ gives $\\ln t=-1$, so $t=\\frac1e$.",
+    "For $0<t<\\frac1e$, $\\phi'(t)<0$ and $\\phi$ is decreasing; for $\\frac1e<t<1$, $\\phi'(t)>0$ and $\\phi$ is increasing.",
+    "Hence $\\phi$ has its minimum at $t=\\frac1e$, and the minimum value is $\\phi\\left(\\frac1e\\right)=\\left(\\frac1e\\right)^{1/e}$.",
+    "Therefore $f_{\\min}=\\ln\\left(\\left(\\frac1e\\right)^{1/e}+1\\right)$, so (A) is true.",
+    "On $(0,1)$, $t\\ln t<0$ so $t^t<1$ and $f(x)<\\ln2$. As $t\\to1^-$ (and also as $t\\to0^+$) $t^t\\to1$, so $f\\to\\ln2$, but this value is not attained because $x\\in\\left(0,\\frac\\pi2\\right)$.",
+    "So $f$ is bounded above and has no finite maximum, but $f_{\\max}=\\infty$ is false: (B) is false.",
+    "(C) is false because the minimum is $\\ln\\left(\\left(\\frac1e\\right)^{1/e}+1\\right)<\\ln2$, not $\\log2$.",
+    "By continuity the range of $f$ is $\\left[\\ln\\left(\\left(\\frac1e\\right)^{1/e}+1\\right),\\ln2\\right)$, which lies inside the closed interval of (D), so $y\\in$ that closed interval is true.",
+    "Therefore the correct options are (A) and (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The tangent-line inequality $\\ln s\\le\\frac se$ with $s=\\frac1t$ gives $t\\ln t\\ge-\\frac1e$ at once, with equality at $t=\\frac1e$.",
+     "solution": [
+      "For all $s>0$, $\\ln s\\le\\frac se$, with equality only at $s=e$ (the function $\\ln s-\\frac se$ has maximum $0$ at $s=e$).",
+      "Put $s=\\frac1t$ with $t\\in(0,1)$: $-\\ln t\\le\\frac{1}{et}$, i.e. $t\\ln t\\ge-\\frac1e$.",
+      "So $t^t=e^{t\\ln t}\\ge e^{-1/e}=\\left(\\frac1e\\right)^{1/e}$, with equality iff $\\frac1t=e$, i.e. $\\cos x=\\frac1e$, which is attainable.",
+      "Hence $f_{\\min}=\\ln\\left(\\left(\\frac1e\\right)^{1/e}+1\\right)$: (A) true.",
+      "Also $t\\ln t<0$ for $0<t<1$ gives $t^t<1$, and $t^t\\to1$ at both ends, so $f<\\ln2$ with $\\ln2$ approached but never attained.",
+      "So $f$ has no maximum value and its minimum is not $\\log2$: (B), (C) false; the range $[\\cdot,\\ln2)$ lies in the closed interval of (D): true."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$t^t$ on $(0,\\infty)$ has its minimum $e^{-1/e}\\approx0.692$ at $t=\\frac1e$, and $t^t\\to1$ as $t\\to0^+$; equivalently $t\\ln t\\ge-\\frac1e$.",
+    "Differentiating $u^v$: write $u^v=e^{v\\ln u}$, so $\\frac{d}{dx}u^v=u^v\\left(v'\\ln u+\\frac{vu'}{u}\\right)$.",
+    "Composing with an increasing function ($\\ln(\\cdot+1)$) keeps the location of extrema; the range of $f$ is the image of the range of $t^t$.",
+    "On an open interval, check whether a supremum or infimum is actually attained; a value approached only at excluded end points is not a maximum, which matters for options phrased with closed or half-open intervals."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Convexity: second derivative, monotonic $f'$ and behaviour at infinity"
+   ],
+   "level": 3,
+   "question": "Which of the following function(s) $y=f(x)$ cannot exist?",
+   "options": [
+    "$\\frac{d^2y}{dx^2}>0$ for all $x\\in\\mathbb{R}$, $\\left(\\frac{dy}{dx}\\right)_{x=0}=\\left(\\frac{dy}{dx}\\right)_{x=1}=1$",
+    "$\\frac{d^2y}{dx^2}>0$ for all $x\\in\\mathbb{R}$, $\\left(\\frac{dy}{dx}\\right)_{x=0}=15$, $\\left(\\frac{dy}{dx}\\right)_{x=1}=11$",
+    "$\\frac{d^2y}{dx^2}\\ge0$ for all $x\\in\\mathbb{R}$, $f'(0)=\\frac{1}{2017}$ and $\\lim_{x\\to\\infty}f(x)=2017$",
+    "$\\frac{d^2y}{dx^2}>0$ for all $x\\in\\mathbb{R}$, $\\left(\\frac{dy}{dx}\\right)_{x=0}=1$ and $f(x)<1$ for all $x<0$"
+   ],
+   "answer": "(A, B, C)",
+   "key_idea": "$f''>0$ makes $f'$ strictly increasing; a convex function with positive slope at $0$ must grow without bound.",
+   "solution": [
+    "$\\frac{d^2y}{dx^2}>0$ means $f'$ is strictly increasing; $\\frac{d^2y}{dx^2}\\ge0$ means $f'$ is non-decreasing.",
+    "(A) $f'$ strictly increasing gives $f'(0)<f'(1)$, but the option needs $f'(0)=f'(1)=1$. Such a function cannot exist.",
+    "(B) $f'(0)=15>f'(1)=11$ contradicts $f'$ increasing. Such a function cannot exist.",
+    "(C) $f''\\ge0$ means the graph is concave up, and $f'(x)\\ge f'(0)=\\frac{1}{2017}>0$ for all $x\\ge0$.",
+    "By the mean value theorem, for $x>0$: $f(x)-f(0)=xf'(c)\\ge\\frac{x}{2017}$, so $f(x)\\ge f(0)+\\frac{x}{2017}\\to\\infty$ as $x\\to\\infty$, contradicting $\\lim_{x\\to\\infty}f(x)=2017$ (the graph would have to change concavity). Cannot exist.",
+    "(D) $f(x)=e^x$ satisfies $f''(x)=e^x>0$, $f'(0)=1$ and $f(x)<1$ for $x<0$. Such a function exists.",
+    "The functions that cannot exist are given by (A), (B) and (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's argument for (C) ('graph has to change concavity, which is not possible') was only a sketch; I replaced it by the rigorous MVT inequality f(x) >= f(0) + x/2017 -> infinity. Statements (A), (B), (D) and the key (A, B, C) are correct.",
+   "alternate_solutions": [
+    {
+     "idea": "A convex function lies on or above each tangent line, so slopes at two points and growth at infinity follow from tangent-line inequalities.",
+     "solution": [
+      "If $f''>0$ everywhere, the tangent at any $a$ lies strictly below the graph: $f(x)>f(a)+f'(a)(x-a)$ for $x\\neq a$.",
+      "(A), (B): use the tangents at $0$ and at $1$. $f(1)>f(0)+f'(0)$ and $f(0)>f(1)-f'(1)$.",
+      "Together these give $f'(0)<f(1)-f(0)<f'(1)$, so $f'(0)<f'(1)$: impossible for (A) (both equal $1$) and for (B) ($15>11$).",
+      "(C): $f''\\ge0$ gives $f(x)\\ge f(0)+f'(0)x=f(0)+\\frac{x}{2017}$ for all $x$, which tends to $\\infty$ as $x\\to\\infty$, so $\\lim f(x)=2017$ is impossible.",
+      "(D): $e^x$ works. So (A), (B), (C) cannot exist."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f''>0$ on an interval $\\iff$ $f'$ strictly increasing there: slopes strictly increase from left to right, so two points can never have equal (or decreasing) slopes.",
+    "A convex function ($f''\\ge0$) lies on or above all its tangents: $f(x)\\ge f(a)+f'(a)(x-a)$.",
+    "A convex function on $\\mathbb{R}$ with a finite limit at $+\\infty$ must be non-increasing ($f'\\le0$ everywhere): a positive slope anywhere forces $f\\to\\infty$.",
+    "To show a function can exist, give an explicit example; $e^x$ is convex with $f'(0)=1$ and $f<1$ for $x<0$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Local maximum and minimum of a cubic: condition on $f'$ having two distinct real roots"
+   ],
+   "level": 1,
+   "question": "The function $f(x)=2x^3-3(\\lambda+2)x^2+2\\lambda x+5$ has a maximum and a minimum for:",
+   "options": [
+    "$\\lambda\\in(-4,\\infty)$",
+    "$\\lambda\\in(-\\infty,0)$",
+    "$\\lambda\\in(-3,3)$",
+    "$\\lambda\\in(1,\\infty)$"
+   ],
+   "answer": "(A, B, C, D)",
+   "key_idea": "A cubic has a local maximum and minimum iff $f'$ has two distinct real roots; here the discriminant $12(3\\lambda^2+8\\lambda+12)$ is positive for every real $\\lambda$.",
+   "solution": [
+    "$f(x)=2x^3-3(\\lambda+2)x^2+2\\lambda x+5$ is a cubic with positive leading coefficient; it has a local maximum and a local minimum iff $f'(x)=0$ has two distinct real roots.",
+    "$f'(x)=6x^2-6(\\lambda+2)x+2\\lambda=0$ must have two real roots.",
+    "So the discriminant $D>0$: $36(\\lambda+2)^2-48\\lambda>0$, i.e. $12\\left(3\\lambda^2+8\\lambda+12\\right)>0\\Rightarrow3\\lambda^2+8\\lambda+12>0$.",
+    "The quadratic $3\\lambda^2+8\\lambda+12$ has discriminant $64-144=-80<0$ and positive leading coefficient (equivalently $3\\left(\\lambda+\\frac43\\right)^2+\\frac{20}{3}>0$), so it is positive for all $\\lambda$.",
+    "$\\Rightarrow\\lambda\\in\\mathbb{R}$.",
+    "Each interval in (A), (B), (C), (D) is a subset of $\\mathbb{R}$, so all four options are correct."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$f'\\left(\\frac13\\right)=-\\frac{10}{3}$ for every $\\lambda$, so the upward parabola $f'$ always has two distinct real roots.",
+     "solution": [
+      "$f'(x)=6x^2-6(\\lambda+2)x+2\\lambda$.",
+      "At $x=\\frac13$: $f'\\left(\\frac13\\right)=\\frac23-2(\\lambda+2)+2\\lambda=-\\frac{10}{3}$, independent of $\\lambda$.",
+      "The leading coefficient $6$ is positive, so $f'(x)\\to+\\infty$ as $x\\to\\pm\\infty$ while $f'\\left(\\frac13\\right)<0$.",
+      "By the intermediate value theorem $f'$ has a root in $\\left(-\\infty,\\frac13\\right)$ and another in $\\left(\\frac13,\\infty\\right)$: two distinct real roots for every real $\\lambda$.",
+      "$f'$ changes sign at each, so there is always one local maximum and one local minimum; $\\lambda\\in\\mathbb{R}$ and all of (A)-(D) are correct."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A cubic $ax^3+bx^2+cx+d$ has both a local maximum and a local minimum iff $b^2-3ac>0$; if $b^2-3ac\\le0$ it is monotonic. Here $b^2-3ac=3\\left(3\\lambda^2+8\\lambda+12\\right)>0$.",
+    "With positive leading coefficient the local maximum is at the smaller root of $f'$ and the local minimum at the larger.",
+    "If the parameter condition reduces to an inequality true for all real values, every option that is a subset of $\\mathbb{R}$ is correct; mark all of them.",
+    "To prove an upward parabola always has two real roots, find a point where it is negative for every parameter value (here $x=\\frac13$ gives $-\\frac{10}{3}$)."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Maxima and minima under a constraint $x+y=k$ (weighted AM-GM / derivative)"
+   ],
+   "level": 2,
+   "question": "Let $m$ and $n$ be positive integers and $x,y>0$ and $x+y=k$, where $k$ is a constant. Let $f(x,y)=x^my^n$, then:",
+   "options": [
+    "$f(x,y)$ is maximum when $x=\\frac{mk}{m+n}$",
+    "$f(x,y)$ is maximum where $x=y$",
+    "maximum value of $f(x,y)$ is $\\frac{m^mn^nk^{m+n}}{(m+n)^{m+n}}$",
+    "maximum value of $f(x,y)$ is $\\frac{k^{m+n}m^mn^n}{(m+n)^{m+n}}$"
+   ],
+   "answer": "(A, C, D)",
+   "key_idea": "Eliminate $y=k-x$; $f'$ factors as $x^{m-1}(k-x)^{n-1}[m(k-x)-nx]$, which vanishes at $x=\\frac{mk}{m+n}$.",
+   "solution": [
+    "Since $x+y=k$, $f(x,y)=x^m(k-x)^n$ for $0<x<k$.",
+    "$f'(x)=mx^{m-1}(k-x)^n-x^mn(k-x)^{n-1}=x^{m-1}(k-x)^{n-1}\\left[m(k-x)-nx\\right]=0$.",
+    "As $x,k-x>0$, $m(k-x)=nx$, so $x=\\frac{mk}{m+n}$ (and $y=\\frac{nk}{m+n}$).",
+    "For $x<\\frac{mk}{m+n}$ the bracket is positive and for $x>\\frac{mk}{m+n}$ it is negative, so $f'$ changes from $+$ to $-$: a maximum at $x=\\frac{mk}{m+n}$. (A) true.",
+    "Maximum value $=\\left(\\frac{mk}{m+n}\\right)^m\\left(\\frac{nk}{m+n}\\right)^n=\\frac{m^mn^nk^{m+n}}{(m+n)^{m+n}}$.",
+    "Options (C) and (D) state this same value (only the order of the factors differs), so both are true.",
+    "(B) is false in general: at the maximum $x:y=m:n$, so $x=y$ only when $m=n$.",
+    "Therefore the correct options are (A), (C) and (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's key 'A, D' is wrong: options (C) m^m n^n k^(m+n)/(m+n)^(m+n) and (D) k^(m+n) m^m n^n/(m+n)^(m+n) are the identical expression, so (C) is also correct; the key should be (A, C, D). The PDF working also has a typo (f'(x,y)mx^{m-1}... missing '=' and the factorisation) and omits the check that x = mk/(m+n) is a maximum and the evaluation of the maximum value; I added these.",
+   "alternate_solutions": [
+    {
+     "idea": "Weighted AM-GM on $m$ copies of $\\frac xm$ and $n$ copies of $\\frac yn$, whose sum is the constant $k$.",
+     "solution": [
+      "Take $m$ numbers each equal to $\\frac xm$ and $n$ numbers each equal to $\\frac yn$; their sum is $x+y=k$.",
+      "AM-GM: $\\left(\\frac xm\\right)^m\\left(\\frac yn\\right)^n\\le\\left(\\frac{x+y}{m+n}\\right)^{m+n}=\\left(\\frac{k}{m+n}\\right)^{m+n}$.",
+      "Multiply by $m^mn^n$: $x^my^n\\le\\frac{m^mn^nk^{m+n}}{(m+n)^{m+n}}$, which is (C) and (D).",
+      "Equality holds iff all the numbers are equal: $\\frac xm=\\frac yn=\\frac{k}{m+n}$, so $x=\\frac{mk}{m+n}$: (A).",
+      "$x=y$ would need $m=n$, so (B) is not true in general. Answer (A, C, D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Weighted AM-GM: for $x,y>0$ with $x+y=k$, $x^my^n\\le\\frac{m^mn^nk^{m+n}}{(m+n)^{m+n}}$, with equality iff $\\frac xm=\\frac yn$ (check: $m=3,n=2,k=5$ gives $108$).",
+    "The maximum of $x^my^n$ under $x+y=k$ occurs where $x:y=m:n$; it is at $x=y$ only when $m=n$.",
+    "Derivative shortcut: $\\frac{d}{dx}\\left[x^m(k-x)^n\\right]=x^{m-1}(k-x)^{n-1}\\left[mk-(m+n)x\\right]$.",
+    "Always compare option expressions term by term: two options may be the same value written in a different order, and then both are correct."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Derivatives of an inverse function"
+   ],
+   "level": 2,
+   "question": "If $f(x)=2^x+x^3+1$ and $g(x)=f^{-1}(x)$, then: (where dash $(')$ denotes derivative)",
+   "options": [
+    "$g'(2)=1$",
+    "$g'(2)=\\log_2e$",
+    "$g''(2)=(\\ln2)^2$",
+    "$g''(2)=-\\log_2e$"
+   ],
+   "answer": "(B, D)",
+   "key_idea": "Since $f(0)=2$, use $g'(f(x))=\\frac{1}{f'(x)}$ and $g''(f(x))=-\\frac{f''(x)}{(f'(x))^3}$ at $x=0$.",
+   "solution": [
+    "$f'(x)=2^x\\ln2+3x^2>0$ for all $x$, so $f$ is strictly increasing (and onto $\\mathbb{R}$); hence $g=f^{-1}$ exists.",
+    "$f(x)=2^x+x^3+1\\Rightarrow f'(x)=2^x\\ln2+3x^2\\Rightarrow f''(x)=2^x(\\ln2)^2+6x$.",
+    "$f(0)=1+0+1=2$, so $g(2)=0$. Also $g(f(x))=x$.",
+    "Differentiating $g(f(x))=x$: $g'(f(x))f'(x)=1\\Rightarrow g'(f(x))=\\frac{1}{f'(x)}$.",
+    "Differentiating again: $g''(f(x))\\,(f'(x))^2+g'(f(x))f''(x)=0\\Rightarrow g''(f(x))=-\\frac{f''(x)}{(f'(x))^3}$.",
+    "At $x=0$: $f'(0)=\\ln2$ and $f''(0)=(\\ln2)^2$.",
+    "$g'(2)=\\frac{1}{f'(0)}=\\frac{1}{\\ln2}=\\log_2e$. So (B) is true and (A) is false.",
+    "$g''(2)=-\\frac{f''(0)}{(f'(0))^3}=-\\frac{(\\ln2)^2}{(\\ln2)^3}=-\\frac{1}{\\ln2}=-\\log_2e$. So (D) is true and (C) is false."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes \"g''(2) = 1/f'(0) = 1/ln2 = log2 e\" in the middle, which should be g'(2); it then gives g''(2) = -log2 e without evaluating -f''(0)/f'(0)^3 (f''(0) = (ln2)^2 is never computed). I fixed the label and added the evaluation and the invertibility check. Final answer (B, D) is correct.",
+   "alternate_solutions": [
+    {
+     "idea": "Expand $f$ to second order at $0$ and invert the series: if $t-2=ax+bx^2+\\dots$ then $x=\\frac{t-2}{a}-\\frac{b(t-2)^2}{a^3}+\\dots$.",
+     "solution": [
+      "$f(0)=2$, $f'(0)=\\ln2$, $f''(0)=(\\ln2)^2$, so $f(x)-2=ax+bx^2+O(x^3)$ with $a=\\ln2$, $b=\\frac{(\\ln2)^2}{2}$.",
+      "Put $u=t-2=ax+bx^2+\\dots$ and solve for $x$: $x=\\frac ua-\\frac{b}{a^3}u^2+O(u^3)$ (check: $a\\left(\\frac ua-\\frac{bu^2}{a^3}\\right)+b\\frac{u^2}{a^2}=u$).",
+      "Since $g(t)=x$, we read off $g'(2)=\\frac1a$ and $\\frac{g''(2)}{2}=-\\frac{b}{a^3}$, so $g''(2)=-\\frac{2b}{a^3}$.",
+      "$g'(2)=\\frac{1}{\\ln2}=\\log_2e$ and $g''(2)=-\\frac{(\\ln2)^2}{(\\ln2)^3}=-\\frac{1}{\\ln2}=-\\log_2e$. Answer (B, D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $g=f^{-1}$: $g'(f(a))=\\frac{1}{f'(a)}$ and $g''(f(a))=-\\frac{f''(a)}{(f'(a))^3}$, valid when $f'(a)\\neq0$.",
+    "To evaluate $g$ at a value $b$, find $a$ with $f(a)=b$ by inspection (here $f(0)=2$); never try to find $g$ explicitly.",
+    "A strictly increasing function ($f'>0$) that is onto $\\mathbb{R}$ is invertible; the sum of increasing functions $2^x+x^3$ is increasing.",
+    "$\\frac{1}{\\ln2}=\\log_2e$ (change of base). If $f'>0$ then $g''$ and $f''$ have opposite signs: a convex increasing function has a concave inverse."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Higher-order derivatives by partial fractions",
+    "Even and odd functions"
+   ],
+   "level": 2.5,
+   "question": "If $f(x)=\\frac{1}{x^2-1}$, then identify the CORRECT option(s) (where $f^n(x)$ represents $\\frac{d^nf(x)}{dx^n}$):",
+   "options": [
+    "$f^{2013}(x)$ is an odd function",
+    "$f^{2014}(x)$ is an even function",
+    "$f^n(x)$ is always an odd function",
+    "$f^n(x)=\\frac{(-1)^n n!}{2}\\left[\\frac{(x+1)^{n+1}-(x-1)^{n+1}}{(x^2-1)^{n+1}}\\right]$"
+   ],
+   "answer": "(A, B, D)",
+   "key_idea": "Partial fractions give $f=\\frac12\\left[\\frac1{x-1}-\\frac1{x+1}\\right]$, and each differentiation flips the parity of the function.",
+   "solution": [
+    "$f(-x)=\\frac{1}{(-x)^2-1}=\\frac{1}{x^2-1}=f(x)$, so $f$ is an even function.",
+    "The derivative of an even function is odd and the derivative of an odd function is even. So $f'$ is odd, $f''$ is even, and in general $f^n$ is odd for odd $n$ and even for even $n$.",
+    "$2013$ is odd, so $f^{2013}(x)$ is an odd function: (A) is correct.",
+    "$2014$ is even, so $f^{2014}(x)$ is an even function: (B) is correct.",
+    "$f^n$ is even when $n$ is even (for example $f^{2}$ and $f$ itself), so it is not always odd: (C) is incorrect.",
+    "Partial fractions: $f(x)=\\frac{1}{(x-1)(x+1)}=\\frac12\\left[\\frac{1}{x-1}-\\frac{1}{x+1}\\right]$.",
+    "Using $\\frac{d^n}{dx^n}\\frac{1}{x-a}=\\frac{(-1)^n n!}{(x-a)^{n+1}}$, we get $f^n(x)=\\frac{(-1)^n n!}{2}\\left[\\frac{1}{(x-1)^{n+1}}-\\frac{1}{(x+1)^{n+1}}\\right]$.",
+    "Over a common denominator: $f^n(x)=\\frac{(-1)^n n!}{2}\\left[\\frac{(x+1)^{n+1}-(x-1)^{n+1}}{(x^2-1)^{n+1}}\\right]$. This is the formula in (D) (the printed option has garbled exponents), so (D) is correct.",
+    "Correct options: (A), (B), (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{d^n}{dx^n}(ax+b)^{-1}=\\frac{(-1)^n n!\\,a^n}{(ax+b)^{n+1}}$ for every $n\\ge1$; check $n=1$: $-a(ax+b)^{-2}$.",
+    "For distinct $a,b$: $\\frac{1}{(x-a)(x-b)}=\\frac{1}{a-b}\\left[\\frac{1}{x-a}-\\frac{1}{x-b}\\right]$. This is the standard first step for the $n$th derivative of a rational function.",
+    "Parity under differentiation: if $f$ is even then $f'$ is odd, and if $f$ is odd then $f'$ is even; hence $f^n$ has the parity of $f$ multiplied by $(-1)^n$.",
+    "Quick check of the formula in this question: for $n=1$ it gives $f'(x)=\\frac{-2x}{(x^2-1)^2}$, which agrees with direct differentiation."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity of composite functions"
+   ],
+   "level": 1,
+   "question": "Let $y=f(x)$ be a differentiable function such that $f'(x)>0\\ \\forall x\\in\\mathbb{R}$, then which of the following is/are correct?",
+   "options": [
+    "$f(3-4x)$ is an increasing function",
+    "$f(3-4x)$ is a decreasing function",
+    "$f(x^2-x)$ is increasing $\\forall x>\\frac12$",
+    "$y=(f(x))^3$ is an increasing function"
+   ],
+   "answer": "(B, C, D)",
+   "key_idea": "By the chain rule the sign of the derivative of a composite is the product of the signs of the outer and inner derivatives.",
+   "solution": [
+    "$\\frac{d}{dx}f(3-4x)=-4f'(3-4x)$.",
+    "Since $f'>0$ everywhere, $-4f'(3-4x)<0$ for all $x$. So $f(3-4x)$ is decreasing: (A) is incorrect and (B) is correct.",
+    "$\\frac{d}{dx}f(x^2-x)=(2x-1)f'(x^2-x)$.",
+    "For $x>\\frac12$ we have $2x-1>0$ and $f'(x^2-x)>0$, so the derivative is positive and $f(x^2-x)$ is increasing: (C) is correct.",
+    "$\\frac{d}{dx}(f(x))^3=3f'(x)(f(x))^2\\ge0$, with equality only where $f(x)=0$. Since $f$ is strictly increasing it vanishes at most at one point, so $(f(x))^3$ is increasing: (D) is correct.",
+    "Correct options: (B), (C), (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $3f'(x)(f(x))^2>0$. This is only $\\ge0$: it is $0$ at a point where $f(x)=0$ if $f$ has a zero. The conclusion (D) is unchanged because a derivative that is positive except at one isolated point still gives a strictly increasing function.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the composition rule for monotonic functions instead of differentiating.",
+     "solution": [
+      "$f'>0$ on $\\mathbb{R}$, so $f$ is strictly increasing on $\\mathbb{R}$.",
+      "$3-4x$ is strictly decreasing, and an increasing function of a decreasing function is decreasing. So $f(3-4x)$ is decreasing: (A) incorrect, (B) correct.",
+      "$x^2-x$ has its vertex at $x=\\frac12$ and is increasing for $x>\\frac12$. An increasing function of an increasing function is increasing, so $f(x^2-x)$ is increasing for $x>\\frac12$: (C) correct.",
+      "$t\\mapsto t^3$ is strictly increasing on $\\mathbb{R}$, and $f$ is strictly increasing, so $f^3$ is a composite of two increasing functions and is increasing: (D) correct.",
+      "Correct options: (B), (C), (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Composition rule: $g\\circ h$ is increasing when $g,h$ are both increasing or both decreasing, and decreasing when exactly one of them is decreasing.",
+    "$\\frac{d}{dx}f(ax+b)=a\\,f'(ax+b)$, so for $f'>0$ the function $f(ax+b)$ increases if $a>0$ and decreases if $a<0$.",
+    "If $f'\\ge0$ and $f'=0$ only at isolated points, $f$ is still strictly increasing (for example $x^3$ at $0$).",
+    "$f(x^2-x)$ has derivative $(2x-1)f'(x^2-x)$: it decreases for $x<\\frac12$, increases for $x>\\frac12$ and has a minimum at $x=\\frac12$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Rolle's theorem and its conditions"
+   ],
+   "level": 3,
+   "question": "Let $f(x)$ be a differentiable function with $f(1)f(-1)\\neq0$. Define a function $g(x)=\\frac{x^2-1}{f(x)}$. If $g(x)$ does not follow Rolle's theorem in $[-1,1]$, then which of the following options is/are false?",
+   "options": [
+    "$f(x)=0$ cannot have any root in $[-1,1]$",
+    "$f(x)=0$ has at least one root in $[-1,1]$",
+    "$f'(x)$ is zero at atleast one point in $[-1,1]$",
+    "$f(x)$ cannot satisfy Rolle's theorem in $[-1,1]$"
+   ],
+   "answer": "(A, C, D)",
+   "key_idea": "Since $g(\\pm1)=0$, the only way $g$ can fail Rolle's theorem is that $f$ vanishes at some point of $(-1,1)$, where $g$ is undefined.",
+   "solution": [
+    "$g(\\pm1)=\\frac{0}{f(\\pm1)}=0$ because $f(1)f(-1)\\neq0$. So $g$ is defined at $\\pm1$ and $g(-1)=g(1)$.",
+    "$f$ is differentiable, hence continuous. Wherever $f\\neq0$, $g$ is continuous and differentiable.",
+    "If $f$ had no zero in $[-1,1]$, then $g$ would be continuous on $[-1,1]$, differentiable on $(-1,1)$ and $g(-1)=g(1)$, so Rolle's theorem would apply to $g$.",
+    "So $g$ satisfies Rolle's theorem unless $f(x)=0$ for some $x\\in(-1,1)$. Since it does not, $f(x)=0$ has at least one root in $(-1,1)$.",
+    "Hence (B) is true, and (A) ($f(x)=0$ cannot have any root in $[-1,1]$) is false.",
+    "So far as $f'(x)$ and Rolle's theorem for $f$ are concerned, nothing definite can be said without further information. So (C) and (D) are not guaranteed, i.e. these statements are false.",
+    "False options: (A), (C), (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test the four statements with two admissible functions, $f(x)=x$ and $f(x)=x^2-\\frac12$.",
+     "solution": [
+      "Take $f(x)=x$: $f(1)f(-1)=-1\\neq0$, and $g(x)=\\frac{x^2-1}{x}$ is undefined at $0\\in(-1,1)$, so $g$ fails Rolle's theorem. Hence $f(x)=x$ is an admissible function.",
+      "For $f(x)=x$ the root $x=0$ lies in $[-1,1]$, which contradicts (A). So (A) is false.",
+      "For $f(x)=x$, $f'(x)=1$ is never zero, so (C) is not always true: (C) is false.",
+      "Take $f(x)=x^2-\\frac12$: $f(\\pm1)=\\frac12\\neq0$ and $g$ is undefined at $x=\\pm\\frac{1}{\\sqrt2}\\in(-1,1)$, so $g$ fails Rolle's theorem. Hence this $f$ is also admissible.",
+      "This $f$ is a polynomial with $f(-1)=f(1)=\\frac12$, so it satisfies Rolle's theorem on $[-1,1]$. So (D) is false.",
+      "(B) cannot fail, because it was proved above that a root in $(-1,1)$ is forced. False options: (A), (C), (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rolle's theorem needs three things: continuity on $[a,b]$, differentiability on $(a,b)$ and $g(a)=g(b)$. A pole inside the interval (zero of the denominator) is enough to break it.",
+    "For $g=\\frac{p}{f}$, check the zeros of the denominator on the interval first. Failure of Rolle's theorem can be traced to such a zero when the end values already match.",
+    "Rolle's theorem is an existence result: it says that $g'(c)=0$ for some $c$. It gives no information about the zeros of $f'$ for a different function $f$.",
+    "To show that a statement is not always true, give one admissible example in which it fails; here $f(x)=x$ and $f(x)=x^2-\\frac12$ do all the work."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Lagrange's mean value theorem",
+    "AM-GM inequality"
+   ],
+   "level": 3,
+   "question": "Let a function $f$ be continuous and differentiable with $f(0)=1$ and $f(1)=2$. Then, for $\\forall n\\in\\mathbb{N},\\,n\\ge2$, there exists at least one $c\\in[0,1]$ such that:",
+   "options": [
+    "$f'(c)[f(c)]^{n-1}>\\sqrt{2^{n-1}}$",
+    "$f'(c)[f(c)]^{n-1}<\\sqrt{2^{n-1}}$",
+    "$f'(c)[f(c)]^{n-1}>1$",
+    "$f'(c)[f(c)]^{n-1}<1$"
+   ],
+   "answer": "(A, C)",
+   "key_idea": "Apply LMVT to $g=f^n$ to get $f'(c)[f(c)]^{n-1}=\\frac{2^n-1}{n}$, then bound this mean value from below by AM-GM.",
+   "solution": [
+    "Let $g(x)=[f(x)]^n$. As $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$, so is $g$.",
+    "By LMVT there is $c\\in(0,1)$ with $g'(c)=\\frac{g(1)-g(0)}{1-0}$.",
+    "Here $g(1)-g(0)=2^n-1$ and $g'(c)=n[f(c)]^{n-1}f'(c)$, so $nf'(c)[f(c)]^{n-1}=2^n-1=1+2+2^2+\\dots+2^{n-1}$.",
+    "Hence $f'(c)[f(c)]^{n-1}=\\frac{1+2+2^2+\\dots+2^{n-1}}{n}$.",
+    "AM $\\ge$ GM for the $n$ positive numbers $1,2,\\dots,2^{n-1}$: $\\frac{1+2+\\dots+2^{n-1}}{n}\\ge\\sqrt[n]{2^{0+1+\\dots+(n-1)}}$.",
+    "The right side is $2^{\\frac{(n-1)n}{2}\\cdot\\frac1n}=2^{\\frac{n-1}{2}}$. Equality in AM-GM would need all the numbers equal, but $1\\neq2$ for $n\\ge2$, so the inequality is strict.",
+    "Therefore $f'(c)[f(c)]^{n-1}>2^{\\frac{n-1}{2}}=\\sqrt{2^{n-1}}\\ge\\sqrt2>1$ for $n\\ge2$. So (A) and (C) hold.",
+    "(B) and (D) are not guaranteed: for $f(x)=\\left(1+(2^n-1)x\\right)^{1/n}$ we get $f'(x)[f(x)]^{n-1}=\\frac{2^n-1}{n}$ for every $x$, which exceeds both $\\sqrt{2^{n-1}}$ and $1$.",
+    "Correct options: (A), (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two slips in the PDF. (1) It writes LMVT as $g'(c)=\\frac{f(1)-f(0)}{1-0}$; it must be $\\frac{g(1)-g(0)}{1-0}$ with $g=f^n$ (the next line, $\\frac{2^n-1}{1}$, is correct). (2) The GM is written as $\\sqrt[n]{2^{1+2+\\dots+n}}$; the exponents of $1,2,\\dots,2^{n-1}$ add to $0+1+\\dots+(n-1)=\\frac{n(n-1)}{2}$ (the PDF's next line uses this). The result and the answer are unchanged.",
+   "useful_results": [
+    "To make LMVT produce an expression such as $f'(c)[f(c)]^{n-1}$, apply it to a function whose derivative is that expression: $g=f^n$ here ($g'=nf^{n-1}f'$); similarly $\\ln f$ gives $f'/f$ and $e^{f}$ gives $f'e^{f}$.",
+    "AM-GM: for positive $a_1,\\dots,a_n$, $\\frac{a_1+\\dots+a_n}{n}\\ge\\sqrt[n]{a_1\\cdots a_n}$, with equality iff all $a_i$ are equal. Also $1+2+\\dots+2^{n-1}=2^n-1$.",
+    "LMVT only gives the existence of one $c$. A statement of the type 'there exists $c$ with value $>k$' is guaranteed when the mean value exceeds $k$; the opposite inequality must be tested with an $f$ whose $g'$ is constant.",
+    "For $n\\ge2$, $\\frac{2^n-1}{n}$ is larger than $2^{(n-1)/2}$ (for example $n=2$: $1.5>1.41$; $n=3$: $2.33>2$), so the bound from AM-GM is never attained."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Stationary points of polynomials: roots of $p'$, Rolle's theorem and extrema"
+   ],
+   "level": 3,
+   "question": "A stationary point of a function $f$ is a real number $r$ such that $f'(r)=0$. Consider a polynomial $p(x)$.",
+   "options": [
+    "If $p(x)$ is of degree $2022$, then $p(x)$ must have at least one stationary point.",
+    "If the number of distinct real roots of $p(x)$ is $2021$, then $p(x)$ must have at least $2020$ stationary points.",
+    "If the number of distinct real roots of $p(x)$ is $2021$, then $p(x)$ can have at most $2020$ stationary points.",
+    "If $r$ is a stationary point of $p(x)$ AND $p''(r)=0$, then the point $(r,p(r))$ is neither a local maximum nor a local minimum point on the graph of $p(x)$."
+   ],
+   "answer": "(A, B)",
+   "key_idea": "Odd degree of $p'$ guarantees a real root for (A); Rolle's theorem between consecutive roots of $p$ gives (B); (C) and (D) fail on explicit polynomials.",
+   "solution": [
+    "(A) $p$ has degree $2022$, so $p'(x)$ is a polynomial of degree $2021$, which is odd.",
+    "A polynomial of odd degree has opposite signs as $x\\to+\\infty$ and $x\\to-\\infty$, so by the intermediate value theorem $p'$ has a real root. So $p$ has at least one stationary point: (A) is true.",
+    "(B) Let $p$ have $2021$ distinct real roots $a_1<a_2<\\dots<a_{2021}$. Between two consecutive roots the graph of $p$ has to turn (Rolle's theorem), giving a stationary point, in fact a local maximum or minimum, in each of the $2020$ gaps.",
+    "So $p$ has at least $2020$ stationary points: (B) is true.",
+    "(C) The graph of $p$ can turn more than once between two zeros, or turn outside the extreme zeros, or have stationary points that are not maxima or minima. So $p$ can have more than $2020$ stationary points: (C) is false.",
+    "For example, $p(x)=x^2(x-1)(x-2)\\cdots(x-2020)$ has $2021$ distinct roots $0,1,\\dots,2020$, at least $2020$ stationary points in the gaps, and one more at the double root $x=0$.",
+    "(D) is false: for $p(x)=x^4$ and $r=0$ we have $p'(0)=0$ and $p''(0)=0$, but $(0,0)$ is a local minimum.",
+    "Correct options: (A), (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Prove (A) by a global-extremum argument and test (C) and (D) with explicit polynomials.",
+     "solution": [
+      "(A) $p$ has even degree $2022$. If the leading coefficient is positive then $p(x)\\to+\\infty$ as $x\\to\\pm\\infty$, so there is $M$ with $p(x)>p(0)$ for $|x|>M$.",
+      "$p$ is continuous on $[-M,M]$, so it attains a minimum there. This minimum is at most $p(0)$, hence it is a global minimum of $p$ on $\\mathbb{R}$ and it is attained at an interior point $r$. At such a point $p'(r)=0$ (if the leading coefficient is negative, use $-p$). So (A) is true.",
+      "(B) Between any two consecutive distinct roots of $p$, Rolle's theorem gives a zero of $p'$; the $2021$ roots leave $2020$ gaps, so there are at least $2020$ stationary points: (B) is true.",
+      "(C) Take $p(x)=x^2(x-1)\\cdots(x-2020)$: the $2021$ distinct roots are $0,1,\\dots,2020$; it has a stationary point in each of the $2020$ gaps and another at $x=0$ (double root). That is at least $2021>2020$ stationary points, so (C) is false.",
+      "(D) Take $p(x)=x^4$: $p'(0)=p''(0)=0$ but $0$ is a minimum, so (D) is false.",
+      "Correct options: (A), (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A polynomial of even degree $\\ge2$ always has a stationary point (it has a global maximum or minimum), while for odd degree it may have none: $x^3+x$.",
+    "If $p$ has $k$ distinct real roots, Rolle's theorem gives at least $k-1$ distinct roots of $p'$, one in each gap; a real root of $p'$ may also occur at a repeated root of $p$ or outside the extreme roots.",
+    "A polynomial of degree $d$ has at most $d-1$ stationary points, and at most $d-2$ points of inflection.",
+    "When $p'(r)=p''(r)=0$ the second-derivative test is silent: $x^4$ has a minimum, $-x^4$ a maximum and $x^3$ neither at $0$. Look at the sign change of $p'$ (first non-zero derivative: even order gives an extremum, odd order gives none)."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Optimisation: minimum cost on a closed interval"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: A factory is connected with a straight railway track by a highway. Town $A$ lies on the railway track. The distance $DB$ from the factory to the railway track is $5$ km. The segment $AB$ of the railway track is equal to $\\ell$ kms. Freight charges on the highway are $2$ times higher than on the railway. A highway $DP$ is connected to the railway track such that $AP$ is $x$ kms. (Figure: $D$ is the factory, $B$ is the foot of the perpendicular from $D$ to the track, and $P$ lies on $AB$.)",
+   "question": "If $\\ell=\\frac{185}{\\sqrt3}$ kms, then the value of $x$ for which freight charge is minimum:",
+   "options": [
+    "$\\frac{60}{\\sqrt3}$ kms",
+    "$60\\sqrt3$ kms",
+    "$120\\sqrt3$ kms",
+    "$75\\sqrt3$ kms"
+   ],
+   "answer": "(B) $60\\sqrt3$ kms",
+   "key_idea": "Write the cost as $x+2\\sqrt{25+(\\ell-x)^2}$, set its derivative to zero and keep only the root that lies in $[0,\\ell]$.",
+   "solution": [
+    "Take the railway rate as $1$ per km, so the highway rate is $2$ per km. The freight charge is $f(x)=x+2\\sqrt{25+(\\ell-x)^2}$ ... (i), where $0\\le x\\le\\ell$ ($AP=x$ is by rail, $DP=\\sqrt{25+(\\ell-x)^2}$ is by highway).",
+    "$f'(x)=1-\\frac{2(\\ell-x)}{\\sqrt{25+(\\ell-x)^2}}$ ... (ii).",
+    "$f'(x)=\\frac{\\sqrt{25+(\\ell-x)^2}-2(\\ell-x)}{\\sqrt{25+(\\ell-x)^2}}$.",
+    "$f'(x)=0$ gives $\\sqrt{25+(\\ell-x)^2}=2(\\ell-x)$; squaring, $25+(\\ell-x)^2=4(\\ell-x)^2$.",
+    "So $3(\\ell-x)^2=25$, i.e. $\\sqrt3(\\ell-x)=\\pm5$ and $x=\\ell\\pm\\frac{5}{\\sqrt3}$.",
+    "Only $x=\\ell-\\frac{5}{\\sqrt3}$ is admissible: $x=\\ell+\\frac5{\\sqrt3}$ lies outside $[0,\\ell]$ and does not satisfy $2(\\ell-x)=\\sqrt{\\cdots}>0$ (squaring introduced it).",
+    "$f''(x)=\\frac{50}{\\left(25+(\\ell-x)^2\\right)^{3/2}}>0$, so this critical point gives the minimum.",
+    "For $\\ell=\\frac{185}{\\sqrt3}$: $x=\\frac{185}{\\sqrt3}-\\frac{5}{\\sqrt3}=\\frac{180}{\\sqrt3}=60\\sqrt3$ km, which lies in $[0,\\ell]$ (since $60\\sqrt3\\approx103.9<\\ell\\approx106.8$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise by the angle $\\theta=\\angle DPB$ so that the cost becomes a function of $\\theta$ with a very simple derivative (Snell's law).",
+     "solution": [
+      "Let $\\theta=\\angle DPB$. Then $DP=\\frac{5}{\\sin\\theta}$ and $PB=5\\cot\\theta$, so $x=AP=\\ell-5\\cot\\theta$.",
+      "Cost (railway rate $1$, highway rate $2$): $C(\\theta)=x+2\\,DP=\\ell-5\\cot\\theta+\\frac{10}{\\sin\\theta}$.",
+      "$C'(\\theta)=\\frac{5}{\\sin^2\\theta}-\\frac{10\\cos\\theta}{\\sin^2\\theta}=\\frac{5(1-2\\cos\\theta)}{\\sin^2\\theta}$.",
+      "$C'(\\theta)=0$ gives $\\cos\\theta=\\frac12$, $\\theta=60^\\circ$. For $\\theta<60^\\circ$, $\\cos\\theta>\\frac12$ and $C'<0$; for $\\theta>60^\\circ$, $C'>0$. So $\\theta=60^\\circ$ gives the minimum.",
+      "Then $PB=5\\cot60^\\circ=\\frac{5}{\\sqrt3}$, so $x=\\ell-\\frac5{\\sqrt3}=\\frac{185}{\\sqrt3}-\\frac{5}{\\sqrt3}=\\frac{180}{\\sqrt3}=60\\sqrt3$ km, independent of the value of $\\ell$ (as long as $\\ell\\ge\\frac5{\\sqrt3}$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Refraction pattern: to minimise $a\\cdot AP+b\\cdot DP$ with $b>a$, the optimal angle $\\theta=\\angle DPB$ satisfies $\\cos\\theta=\\frac{a}{b}$ (Snell's law); here $a:b=1:2$ gives $\\theta=60^\\circ$.",
+    "With perpendicular distance $h$ from $D$ to the track, the optimal $PB=\\frac{h}{\\sqrt{(b/a)^2-1}}$. Here $h=5$, $b/a=2$ gives $PB=\\frac5{\\sqrt3}$.",
+    "Squaring $\\sqrt{u}=v$ can create extraneous roots: always check $v\\ge0$ and that the solution lies in the domain.",
+    "A cost of the form $x+k\\sqrt{c^2+(\\ell-x)^2}$ is convex ($f''>0$), so its only critical point is the global minimum on the interval."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Maximum of a convex function on a closed interval"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: A factory is connected with a straight railway track by a highway. Town $A$ lies on the railway track. The distance $DB$ from the factory to the railway track is $5$ km. The segment $AB$ of the railway track is equal to $\\ell$ kms. Freight charges on the highway are $2$ times higher than on the railway. A highway $DP$ is connected to the railway track such that $AP$ is $x$ kms. (Figure: $D$ is the factory, $B$ is the foot of the perpendicular from $D$ to the track, and $P$ lies on $AB$.)",
+   "question": "If $\\ell=10$ kms, then the value of $x$ for which freight charges are maximum:",
+   "options": [
+    "$10$ kms",
+    "$10-\\frac{5}{\\sqrt3}$ kms",
+    "$\\frac{10}{\\sqrt3}$ kms",
+    "$0$ km"
+   ],
+   "answer": "(D) 0 km",
+   "key_idea": "The cost function is convex, so on $[0,\\ell]$ its maximum lies at an endpoint; compare $f(0)$ and $f(\\ell)$.",
+   "solution": [
+    "The freight charge is $f(x)=x+2\\sqrt{25+(\\ell-x)^2}$ ... (i), for $0\\le x\\le\\ell$.",
+    "$f''(x)=\\frac{50}{(25+(\\ell-x)^2)^{3/2}}>0$, so $f$ is convex and its maximum on the closed interval $[0,\\ell]$ lies at an endpoint: $x=0$ or $x=10$ for $\\ell=10$.",
+    "For $\\ell=10$: $f(x)=x+2\\sqrt{25+(10-x)^2}$.",
+    "$f(0)=2\\sqrt{25+100}=10\\sqrt5\\approx22.36$.",
+    "$f(10)=10+2\\sqrt{25}=20$.",
+    "Since $10\\sqrt5>20$, the maximum freight is $10\\sqrt5$ at $x=0$ (the critical point $x=10-\\frac5{\\sqrt3}$ in option (B) gives the minimum).",
+    "So $x=0$ km."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A convex function ($f''\\ge0$) on $[a,b]$ attains its maximum at an endpoint; a concave function attains its minimum at an endpoint.",
+    "Closed-interval method: compare the values at all critical points and at both endpoints. Here the minimum is $f\\left(10-\\frac{5}{\\sqrt3}\\right)=10+5\\sqrt3\\approx18.66$, the endpoint values are $22.36$ and $20$.",
+    "$x\\mapsto\\sqrt{c^2+(\\ell-x)^2}$ is the length of a vector depending affinely on $x$, hence convex; a sum of convex functions is convex.",
+    "Quick sanity check of the answer: $f(5)=5+2\\sqrt{50}\\approx19.14$, which is smaller than both endpoint values."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Curve tracing from $f'$ and $f''$ and number of roots of an equation"
+   ],
+   "level": 4,
+   "paragraph": "Paragraph: A function $f:\\mathbb{R}\\to\\mathbb{R}$ satisfies the following properties: $f'(x)>0\\ \\forall x\\in(-\\infty,-2)\\cup(3,\\infty)$, $f'(x)\\le0\\ \\forall x\\in(-2,3)$, $\\lim_{x\\to\\infty}f(x)=0$ (printed as $x\\to2$ in the paper, taken as $x\\to\\infty$); $f$ is continuous $\\forall x\\in\\mathbb{R}-\\{3\\}$, $f$ is differentiable $\\forall x\\in\\mathbb{R}-\\{-2,3\\}$, $\\lim_{x\\to3}f(x)\\to-\\infty$, $f''(x)>0\\ \\forall x\\in(-\\infty,0)-\\{-2\\}$, $f''(x)<0\\ \\forall x\\in(0,\\infty)-\\{3\\}$, $\\lim_{x\\to-\\infty}f(x)=3$, and $f(0)=0$. Now, answer the following questions:",
+   "question": "Let $\\lambda$ be the maximum number of solutions of $f(x)=|x|$. If $f'(0)>-3$ and $f(-2)>6$, then number of solutions of $f(x)+3x=0$ is equal to:",
+   "options": [
+    "$\\lambda+1$",
+    "$\\lambda-1$",
+    "$2\\lambda-1$",
+    "$3\\lambda-4$"
+   ],
+   "answer": "(C) $2\\lambda-1$",
+   "key_idea": "Count the roots piece by piece: a strictly monotone piece has at most one root, a strictly convex or concave piece at most two.",
+   "solution": [
+    "Reading the data. On $(-\\infty,-2)$, $f$ increases from the horizontal asymptote $3$, so $f>3$ there; at $x=-2$ there is a corner (not differentiable) and $f(-2)>3$.",
+    "On $[-2,3)$, $f$ decreases (strictly, since $f''\\neq0$) to $-\\infty$ as $x\\to3^-$. On $(3,\\infty)$, $f$ increases from $-\\infty$ to the limit $0$ at $\\infty$.",
+    "With $f(0)=0$: $f>0$ on $(-2,0)$, $f<0$ on $(0,3)$ and $f<0$ on $(3,\\infty)$ (increasing to the limit $0$).",
+    "Concavity: $f$ is convex on $(-\\infty,-2)$ and on $(-2,0]$, and concave on $[0,3)$ and on $(3,\\infty)$.",
+    "Finding $\\lambda$. For $x>0$: $f(x)<0<|x|$, so there is no solution. At $x=0$: $f(0)=0=|0|$, a solution.",
+    "For $x<0$, $|x|=-x$. Let $g(x)=f(x)+x$. On $(-\\infty,-2)$: $g'=f'+1>0$, $g\\to-\\infty$ as $x\\to-\\infty$ and $g(-2)=f(-2)-2>1>0$, so there is exactly one root.",
+    "On $(-2,0)$: $g$ is convex with $g(-2)>0$ and $g(0)=0$. If $g'(0)=f'(0)+1>0$, then $g<0$ just left of $0$, so there is exactly one more root in $(-2,0)$. If $f'(0)\\le-1$ there is none.",
+    "So the maximum number of solutions of $f(x)=|x|$ is $1+1+1=3$ (attained when $f'(0)>-1$): $\\lambda=3$.",
+    "Now let $h(x)=f(x)+3x$. $h(0)=0$ is one root, and $h'(0)=f'(0)+3>0$ (given).",
+    "On $(-\\infty,-2)$: $h'=f'+3>0$, $h\\to-\\infty$ as $x\\to-\\infty$ and $h(-2)=f(-2)-6>0$ (given): exactly one root. On $(-2,0)$: $h$ is convex, $h(-2)>0$, $h(0)=0$, $h'(0)>0$ so $h<0$ just left of $0$: exactly one root.",
+    "On $(0,3)$: $h$ is concave, $h(0)=0$, $h'(0)>0$ so $h>0$ just right of $0$, and $h\\to-\\infty$ as $x\\to3^-$: exactly one root. On $(3,\\infty)$: $h'=f'+3>0$, $h\\to-\\infty$ as $x\\to3^+$ and $h\\to+\\infty$ as $x\\to\\infty$: exactly one root.",
+    "Total number of solutions of $f(x)+3x=0$ is $1+1+1+1+1=5=2\\lambda-1$. So the answer is (C). (The PDF key (A), $\\lambda+1=4$, does not match this count.)"
+   ],
+   "solution_source": "written",
+   "useful_results": [
+    "Root counting by pieces: on an interval where $h$ is strictly monotone there is at most one root; where $h''$ keeps one sign there are at most two. The intermediate value theorem plus end signs then fixes the exact number.",
+    "Equations $f(x)=mx$ always have the root $0$ when $f(0)=0$. Compare $f'(0)$ with the slope $m$ to see on which side of the line the graph lies just to the left and right of $0$.",
+    "Limits give end signs: $f\\to3$ at $-\\infty$ makes $f(x)+3x\\to-\\infty$; the vertical asymptote $f\\to-\\infty$ at $3$ makes $f(x)+3x\\to-\\infty$ on both sides of $3$; $f\\to0$ at $+\\infty$ makes $f(x)+3x\\to+\\infty$.",
+    "A sign change of $f'$ at a point where $f$ is not differentiable (positive on the left, non-positive on the right) is a corner and a local maximum, here at $x=-2$."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Continuity and differentiability of the composite $f(-|x|)$",
+    "Graph transformations involving the modulus"
+   ],
+   "level": 3,
+   "paragraph": "Paragraph: A function $f:\\mathbb{R}\\to\\mathbb{R}$ satisfies the following properties: $f'(x)>0\\ \\forall x\\in(-\\infty,-2)\\cup(3,\\infty)$, $f'(x)\\le0\\ \\forall x\\in(-2,3)$, $\\lim_{x\\to\\infty}f(x)=0$ (printed as $x\\to2$ in the paper, taken as $x\\to\\infty$); $f$ is continuous $\\forall x\\in\\mathbb{R}-\\{3\\}$, $f$ is differentiable $\\forall x\\in\\mathbb{R}-\\{-2,3\\}$, $\\lim_{x\\to3}f(x)\\to-\\infty$, $f''(x)>0\\ \\forall x\\in(-\\infty,0)-\\{-2\\}$, $f''(x)<0\\ \\forall x\\in(0,\\infty)-\\{3\\}$, $\\lim_{x\\to-\\infty}f(x)=3$, and $f(0)=0$. Now, answer the following questions:",
+   "question": "The function $y=f(-|x|)$ is:",
+   "options": [
+    "differentiable $\\forall x\\in\\mathbb{R}$, iff $f'(0)=0$",
+    "continuous but NOT differentiable at two points, iff $f'(0)=0$",
+    "continuous but NOT differentiable at one point, iff $f'(0)=0$",
+    "dis-continuous at two points if $f'(0)=0$"
+   ],
+   "answer": "(B)",
+   "key_idea": "$f(-|x|)$ is the mirror image of the part $x\\le0$ of the graph of $f$; its one-sided derivatives at $0$ are $\\mp f'(0)$, and the corner of $f$ at $-2$ appears at $x=\\pm2$.",
+   "solution": [
+    "Since $-|x|\\le0$, $y=f(-|x|)$ uses only the part $x\\le0$ of $f$: $y=f(x)$ for $x\\le0$ and $y=f(-x)$ for $x\\ge0$. It is an even function.",
+    "$f$ is continuous on $(-\\infty,0]$ (its only discontinuity is at $x=3$) and $-|x|$ is continuous, so $y$ is continuous for all $x\\in\\mathbb{R}$. So (D) is incorrect.",
+    "For $x\\neq0$, $y$ is differentiable wherever $f$ is differentiable at $-|x|$. On $(-\\infty,0)$ the only point where $f$ is not differentiable is $-2$ (a corner, $f'>0$ on its left and $f'\\le0$ on its right).",
+    "$-|x|=-2$ for $x=\\pm2$, and near $x=\\pm2$ the one-sided derivatives of $y$ are $\\pm$ the one-sided derivatives of $f$ at $-2$, which differ. So $y$ is not differentiable at $x=2$ and $x=-2$.",
+    "At $x=0$: the right derivative is $\\lim_{h\\to0^+}\\frac{f(-h)-f(0)}{h}=-f'(0)$ and the left derivative is $\\lim_{h\\to0^-}\\frac{f(h)-f(0)}{h}=f'(0)$.",
+    "These are equal iff $f'(0)=0$. So $y$ is differentiable at $0$ iff $f'(0)=0$.",
+    "Hence if $f'(0)=0$, $y$ is continuous everywhere and fails to be differentiable at exactly two points, $x=\\pm2$; if $f'(0)\\neq0$ there are three such points. Option (A) is false because of $\\pm2$, (C) is false because there are two points, and (D) is false.",
+    "So the correct option is (B). (The PDF gives no solution; it is assumed that $f$ has a genuine corner at $x=-2$, as the paragraph excludes $-2$ from the points of differentiability.)"
+   ],
+   "solution_source": "written",
+   "useful_results": [
+    "The graph of $y=f(-|x|)$ is obtained by keeping the part $x\\le0$ of the graph of $f$ and reflecting it in the $y$-axis (the part $x>0$ is discarded); $y=f(|x|)$ keeps $x\\ge0$ instead.",
+    "If $f'(0)$ exists, the one-sided derivatives of $f(\\pm|x|)$ at $0$ are $\\pm f'(0)$ and $\\mp f'(0)$; so $f(|x|)$ and $f(-|x|)$ are differentiable at $0$ iff $f'(0)=0$.",
+    "Each non-differentiable point $a<0$ of $f$ produces two non-differentiable points $\\pm a$ of $f(-|x|)$; points of $f$ with $x>0$ (such as the discontinuity at $3$) are never visited.",
+    "Composing with $-|x|$ keeps continuity because $-|x|$ is continuous and $f$ is continuous on $(-\\infty,0]$."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Points of inflection of polynomials and Rolle's theorem applied to $f'$"
+   ],
+   "level": 4,
+   "question": "Let $f(x)$ be a polynomial of degree $2016$ satisfying $f(1)=\\frac12$, $f(2)=2$, $f(3)=-5$, $f(-4)=3$. If $f(x)$ is an even function and minimum number of points of inflection of $f(x)$ is $n$, then the value of $\\frac1n$ is ________.",
+   "answer": "0.25",
+   "key_idea": "Evenness doubles the zeros of $f'$ to $\\pm\\alpha,\\pm\\beta$ and $0$; Rolle's theorem on $f'$ then forces four points of inflection.",
+   "solution": [
+    "$f$ is even, so $f(-1)=\\frac12$, $f(-2)=2$, $f(-3)=-5$, $f(4)=f(-4)=3$; also $f'$ is odd, so $f'(0)=0$ and $f'(-x)=-f'(x)$.",
+    "The values at $1,2,3,4$ are $\\frac12,2,-5,3$: $f$ increases from $1$ to $2$, decreases from $2$ to $3$ and increases from $3$ to $4$.",
+    "By LMVT, $f'(c_1)>0$ for some $c_1\\in(1,2)$, $f'(c_2)<0$ for some $c_2\\in(2,3)$ and $f'(c_3)>0$ for some $c_3\\in(3,4)$.",
+    "By the intermediate value theorem there are $\\alpha\\in(c_1,c_2)$ and $\\beta\\in(c_2,c_3)$ with $f'(\\alpha)=f'(\\beta)=0$, and $\\alpha<c_2<\\beta$.",
+    "Since $f'$ is odd, $f'(-\\alpha)=f'(-\\beta)=0$. Hence $f'(\\alpha)=f'(\\beta)=f'(-\\alpha)=f'(-\\beta)=f'(0)=0$: five distinct zeros $-\\beta<-\\alpha<0<\\alpha<\\beta$.",
+    "Between consecutive zeros $u<v$ of $f'$ (four such gaps), $f'$ is not identically zero. If $f'(m)>0$ for some $m$, then $f''>0$ somewhere in $(u,m)$ and $f''<0$ somewhere in $(m,v)$ (use LMVT for $f'$); the case $f'(m)<0$ is the same with the signs reversed.",
+    "So $f''$ changes sign in each of the four gaps, and the four gaps are disjoint: there are at least $4$ points of inflection, i.e. $n\\ge4$.",
+    "$n=4$ is attained. Take $f''(x)=c(x^2-a^2)(x^2-b^2)(1+10^{-4}x^2)^{1005}$, an even polynomial of degree $2014$ with exactly four simple real roots, integrate twice with $f'(0)=0$ to get an even $f$ of degree $2016$.",
+    "The four value conditions fix $a\\approx1.0339$, $b\\approx3.0016$, $c\\approx0.4399$ and $f(0)\\approx-1.2853$ (solved numerically). So the minimum number of points of inflection is $n=4$ and $\\frac1n=0.25$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For an even polynomial, $f'$ is odd (so $f'(0)=0$) and $f''$ is even. Points of inflection occur in pairs $\\pm c$, and possibly at $0$.",
+    "If $f'$ has $k$ distinct real zeros, then $f''$ has at least $k-1$ real zeros, one in each gap, and each of them is a sign change when $f'$ does not change sign inside the gap. If $f$ has $k$ distinct real zeros, $f''$ has at least $k-2$.",
+    "A zigzag of values such as $f(1)<f(2)>f(3)<f(4)$ forces a local maximum and a local minimum in between, so $f'$ has two zeros there, and by symmetry two more.",
+    "A point of inflection needs a sign change of $f''$, not just $f''=0$: $x^4$ has $f''(0)=0$ but no inflection. For a polynomial, a sign change occurs at every zero of odd multiplicity."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maximum volume of a cuboid inscribed in a sphere (AM-GM)"
+   ],
+   "level": 2,
+   "question": "A cuboid, length of whose one edge is $\\sqrt2$ units, is inscribed in a sphere of radius $\\sqrt2$ units. If maximum possible volume of cuboid is $V$ cubic units, then $\\frac{V}{2\\sqrt2}$ is ________.",
+   "answer": "1.50",
+   "key_idea": "The space diagonal equals the diameter, so the other two edges satisfy $a^2+b^2=6$ and AM-GM bounds $ab$.",
+   "solution": [
+    "Let the other two edges be $a$ and $b$. The sphere has radius $\\sqrt2$, so the space diagonal of the cuboid is the diameter $2\\sqrt2$.",
+    "Half the face diagonal $\\frac{\\sqrt{a^2+b^2}}{2}$ and half the edge $\\frac{\\sqrt2}{2}$ form a right triangle whose hypotenuse is the radius: $\\left(\\frac{\\sqrt{a^2+b^2}}{2}\\right)^2+\\left(\\frac{\\sqrt2}{2}\\right)^2=2$ (Pythagoras).",
+    "$\\frac{a^2+b^2}{4}+\\frac{2}{4}=2$, so $a^2+b^2=6$.",
+    "Volume of the cuboid $=ab\\sqrt2$.",
+    "AM-GM: $\\frac{a^2+b^2}{2}\\ge\\sqrt{a^2b^2}$, i.e. $\\frac{a^2+b^2}{2}\\ge ab$, so $ab\\le3$ (equality when $a=b=\\sqrt3$).",
+    "Therefore $V_{\\max}=3\\sqrt2$.",
+    "$\\frac{V}{2\\sqrt2}=\\frac{3\\sqrt2}{2\\sqrt2}=1.5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "View the base as a rectangle of fixed diagonal $\\sqrt6$; among such rectangles the square has the largest area.",
+     "solution": [
+      "The space diagonal is $2\\sqrt2$, so with edges $\\sqrt2,a,b$: $2+a^2+b^2=8$, hence $a^2+b^2=6$.",
+      "The $a\\times b$ face is a rectangle with diagonal $d=\\sqrt6$.",
+      "A rectangle with diagonals $d$ meeting at angle $\\psi$ has area $\\frac{1}{2}d^2\\sin\\psi\\le\\frac{1}{2}d^2=3$, with equality when the diagonals are perpendicular, i.e. for the square $a=b=\\sqrt3$.",
+      "So $ab\\le3$ and $V_{\\max}=\\sqrt2\\cdot3=3\\sqrt2$.",
+      "$\\frac{V}{2\\sqrt2}=\\frac{3\\sqrt2}{2\\sqrt2}=1.5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A cuboid with edges $a,b,c$ inscribed in a sphere of radius $R$ satisfies $a^2+b^2+c^2=4R^2$ (space diagonal $=$ diameter).",
+    "For a fixed sum of squares $a^2+b^2=k$, the product $ab$ is largest when $a=b$: $ab\\le\\frac{k}{2}$ (AM-GM).",
+    "Of all cuboids inscribed in a sphere of radius $R$ the cube has the greatest volume, $\\frac{8R^3}{3\\sqrt3}$.",
+    "A rectangle of diagonal $d$ has area $\\le\\frac{d^2}{2}$, equality for a square. Here $d^2=6$, giving $3$."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Greatest value of a rational function (reciprocal-polynomial substitution)"
+   ],
+   "level": 3,
+   "question": "The greatest value of the function $f(x)=\\frac{(x+1)^4}{x^4-x^3+x^2-x+1}$ is:",
+   "answer": "16",
+   "key_idea": "Dividing by $x^2$ and putting $g=x+\\frac{1}{x}$ turns $f$ into $\\frac{(g+2)^2}{g^2-g-1}$ with $|g|\\ge2$; then study this function of $g$.",
+   "solution": [
+    "$f(x)=\\frac{(x+1)^4}{x^4-x^3+x^2-x+1}=\\frac{x^4+4x^3+6x^2+4x+1}{x^4-x^3+x^2-x+1}$.",
+    "Divide numerator and denominator by $x^2$: $f=\\frac{\\left(x^2+\\frac{1}{x^2}\\right)+4\\left(x+\\frac{1}{x}\\right)+6}{\\left(x^2+\\frac{1}{x^2}\\right)-\\left(x+\\frac{1}{x}\\right)+1}$.",
+    "Let $g=x+\\frac{1}{x}$, so $x^2+\\frac{1}{x^2}=g^2-2$ and $f=\\frac{g^2+4g+4}{g^2-g-1}=\\frac{(g+2)^2}{g^2-g-1}=h(g)$, where $|g|\\ge2$ for real $x\\ne0$ (and $f(0)=1$).",
+    "Differentiate with respect to $g$: $h'(g)=\\frac{(g+2)\\left[2(g^2-g-1)-(g+2)(2g-1)\\right]}{(g^2-g-1)^2}=\\frac{-5g(g+2)}{(g^2-g-1)^2}$.",
+    "For $g\\ge2$: $h'(g)<0$, so $h$ decreases and its largest value is at $g=2$, i.e. $x=1$: $h(2)=\\frac{16}{1}=16$.",
+    "For $g\\le-2$: $h'(g)<0$ for $g<-2$, so $h$ decreases from its limit $1$ (as $g\\to-\\infty$) to $h(-2)=0$; all these values are below $16$ (these correspond to $x<0$).",
+    "Hence the greatest value of $f$ is $f(1)=\\frac{2+8+6}{2-2+1}=16$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF set $g'(x)=0$, got $x=\\pm1$ and evaluated $f(1)$. That only finds stationary points of $g=x+\\frac{1}{x}$, not of $f$ (and $f(-1)=0$, not $16$). Corrected: study $h(g)=\\frac{(g+2)^2}{g^2-g-1}$, $h'(g)=\\frac{-5g(g+2)}{(g^2-g-1)^2}$, decreasing for $g\\ge2$, so the maximum is at $g=2$ ($x=1$). The answer 16 is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Since $x^4-x^3+x^2-x+1=\\frac{x^5+1}{x+1}$, we get $f=\\frac{(x+1)^5}{x^5+1}$ and convexity of $t^5$ bounds it.",
+     "solution": [
+      "$(x+1)(x^4-x^3+x^2-x+1)=x^5+1$, and the quartic is positive for all real $x$. So $f(x)=\\frac{(x+1)^5}{x^5+1}$ for $x\\ne-1$, and $f(-1)=0$.",
+      "For $x\\ge0$: $t^5$ is convex on $[0,\\infty)$, so $\\left(\\frac{x+1}{2}\\right)^5\\le\\frac{x^5+1}{2}$, i.e. $(x+1)^5\\le16(x^5+1)$ and $f\\le16$, with equality at $x=1$.",
+      "For $-1<x<0$: $0<1+x<1$ gives $(1+x)^5<1+x$, and $x^5>x$ gives $1+x^5>1+x$; hence $0<f<1$.",
+      "For $x<-1$ put $t=-x>1$: $f=\\frac{(t-1)^5}{t^5-1}$ and $t^5-1=(t-1)(t^4+t^3+t^2+t+1)>(t-1)^5$, so $0<f<1$.",
+      "So the greatest value is $f(1)=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A palindromic polynomial of even degree $2m$ becomes a polynomial of degree $m$ in $t=x+\\frac{1}{x}$ after dividing by $x^m$; for real $x$, $|t|\\ge2$ (never use $-2<t<2$).",
+    "$x^2+\\frac{1}{x^2}=t^2-2$ and $x^3+\\frac{1}{x^3}=t^3-3t$.",
+    "$g'(x)=0$ only locates stationary points of the inner function $g$; extrema of $h(g(x))$ must be found from $h'(g)$ over the range of $g$.",
+    "For $x\\ge0$ and $n\\ge1$: $(x+1)^n\\le2^{n-1}(x^n+1)$ (power-mean / convexity), equality at $x=1$."
+   ]
+  },
+  {
+   "q_no": 33,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of real roots of a quartic using derivative and Rolle's theorem"
+   ],
+   "level": 2,
+   "question": "The number of distinct real roots of equation $2x^4-8x^3+8x^2-1=0$ is $n$, then the value of $\\frac{1}{n}$ is ________.",
+   "answer": "0.25",
+   "key_idea": "Locate the critical points of the quartic and read the signs of $f$ there: $-1,\\,1,\\,-1$ give four sign changes.",
+   "solution": [
+    "Let $f(x)=2x^4-8x^3+8x^2-1$.",
+    "$f'(x)=8x^3-24x^2+16x$.",
+    "$f'(x)=8x(x^2-3x+2)=8x(x-1)(x-2)$, so the critical points are $0,1,2$.",
+    "$f(0)=-1,\\ f(1)=1,\\ f(2)=-1$.",
+    "Since $f(x)\\to+\\infty$ as $x\\to\\pm\\infty$, the sign pattern $+,-,+,-,+$ gives a root in each of $(-\\infty,0),(0,1),(1,2),(2,\\infty)$.",
+    "So $f(x)$ has $4$ distinct roots, $n=4$ and $\\frac{1}{n}=0.25$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write the quartic part as $2x^2(x-2)^2$ so the equation splits into two quadratics.",
+     "solution": [
+      "$2x^4-8x^3+8x^2=2x^2(x^2-4x+4)=2x^2(x-2)^2$, so the equation is $2x^2(x-2)^2=1$.",
+      "Hence $[x(x-2)]^2=\\frac{1}{2}$, i.e. $x(x-2)=\\pm\\frac{1}{\\sqrt2}$.",
+      "Write $x(x-2)=(x-1)^2-1$: then $(x-1)^2=1\\pm\\frac{1}{\\sqrt2}$, and both right-hand sides are positive ($1-\\frac{1}{\\sqrt2}\\approx0.29$).",
+      "Each gives two roots $x=1\\pm\\sqrt{1\\pm\\frac{1}{\\sqrt2}}$, and the four values are distinct. So $n=4$ and $\\frac{1}{n}=0.25$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A polynomial of degree $m$ has at most $1+(\\text{number of real roots of } f')$ real roots (Rolle); the extreme count is reached when the values of $f$ at consecutive critical points alternate in sign.",
+    "For a quartic with positive leading coefficient and three real critical points $c_1<c_2<c_3$: $f(c_1)<0,\\ f(c_2)>0,\\ f(c_3)<0$ gives $4$ real roots.",
+    "Look for hidden structure: $a x^4+bx^3+cx^2$ with a perfect square factor, here $2x^2(x-2)^2$, is symmetric about $x=1$ ($f(x)=f(2-x)$).",
+    "Roots of $f=0$ separated by critical points: check the signs at the critical points rather than solving the cubic $f'=0$ numerically."
+   ]
+  },
+  {
+   "q_no": 34,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rolle's theorem on $f'$ and on $f'f''$; symmetry of $f$"
+   ],
+   "level": 4,
+   "question": "Let $f(x)$ be a non-constant thrice differentiable function defined on $(-\\infty,\\infty)$ such that $f(x)=f(6-x)$ and $f'(0)=0=f'(2)=f'(5)$. If $n$ is the minimum number of roots of $(f''(x))^2+f'(x)f'''(x)=0$ in the interval $[0,6]$, then the value of $n$ is ________.",
+   "answer": "12",
+   "key_idea": "$(f'')^2+f'f'''=(f'f'')'$, so count the zeros of $f'f''$ (at least $13$) and apply Rolle once more.",
+   "solution": [
+    "Given $f(x)=f(6-x)$ ... (1). Differentiating (1): $f'(x)=-f'(6-x)$ ... (2).",
+    "Put $x=0$ in (2): $f'(0)=-f'(6)=0$, so $f'(6)=0$. Put $x=2$: $f'(2)=-f'(4)$, so $f'(4)=0$.",
+    "Put $x=3$: $f'(3)=-f'(3)$, so $f'(3)=0$. Put $x=5$: $f'(5)=-f'(1)$, so $f'(1)=0$.",
+    "Hence $f'(0)=f'(1)=f'(2)=f'(3)=f'(4)=f'(5)=f'(6)=0$: $f'(x)=0$ has at least seven roots in $[0,6]$.",
+    "Apply Rolle's theorem to $f'$ on $[0,1],[1,2],[2,3],[3,4],[4,5],[5,6]$: $f''(x)=0$ has at least one root in each open interval, i.e. at least six roots.",
+    "Let $h(x)=f'(x)f''(x)$. Then $h'(x)=(f''(x))^2+f'(x)f'''(x)$, the expression in the question.",
+    "$h$ vanishes at the seven points $0,1,\\dots,6$ (zeros of $f'$) and at six further non-integer points (zeros of $f''$ inside the open intervals): at least $13$ distinct roots of $h(x)=0$ in $[0,6]$.",
+    "Applying Rolle's theorem to $h$ between consecutive roots, $h'(x)=0$ has at least $12$ roots in $[0,6]$. So $n=12$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF applies Rolle to $f''$ and claims $f'''=0$ has six roots, which is not justified (Rolle on $f'$ gives six roots of $f''$; $f'''$ would only get five and is not needed). It also states $13$ roots of $h=f'f''$ but jumps to the answer $12$ without the final Rolle step. Corrected accordingly; the answer $12$ is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Note $(f'f'')'=\\frac{1}{2}\\left((f')^2\\right)''$, and show $12$ is attained by $f'(x)=x(x-1)\\cdots(x-6)$.",
+     "solution": [
+      "Let $u=(f')^2\\ge0$. Then $u'=2f'f''$ and $u''=2\\left[(f'')^2+f'f'''\\right]$, so we must count zeros of $u''$.",
+      "$f'$ vanishes at $0,1,\\dots,6$ (from the symmetry $f'(x)=-f'(6-x)$ and the three given zeros), so $u$ has seven zeros, each double, hence $u'=0$ at these seven points.",
+      "Between consecutive zeros of $u$ Rolle gives a zero of $u'$ (six more, in the open intervals). So $u'$ has at least $13$ zeros and $u''$ has at least $12$.",
+      "The bound is attained: take $f'(x)=x(x-1)\\cdots(x-6)$, which satisfies $f'(6-x)=-f'(x)$; then $f$ is a degree-$8$ polynomial with $f(x)=f(6-x)$, and $f'f''$ has degree $13$, so $(f'f'')'$ has degree $12$ and at most $12$ roots.",
+      "Hence the minimum number of roots is $12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x)=f(a-x)$, then $f'(x)=-f'(a-x)$, so $f'\\left(\\frac{a}{2}\\right)=0$ and zeros of $f'$ occur in pairs symmetric about $\\frac{a}{2}$.",
+    "Rolle: if a differentiable $\\varphi$ has $m$ distinct zeros in $[p,q]$, then $\\varphi'$ has at least $m-1$ zeros in $(p,q)$.",
+    "Recognise derivatives of products: $(f'f'')'=(f'')^2+f'f'''$ and $\\left(f'^2\\right)'=2f'f''$.",
+    "Zeros created by Rolle lie strictly between the old zeros, so they are distinct from them; count the two families separately and add.",
+    "To show a Rolle lower bound is sharp, use a polynomial whose degree equals the bound (degree of $h'$ here is $12$)."
+   ]
+  },
+  {
+   "q_no": 35,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Composite functions: finding $f$ from $f(g(x))$",
+    "Local maxima of a cubic"
+   ],
+   "level": 2,
+   "question": "If $f(g(x))=4-x+5x^{1/3}-x^{2/3}$ and $g(x)=2-x^{1/3}$ then local maxima value of $f(x)$ is equal to",
+   "answer": "7",
+   "key_idea": "Since $x^{1/3}=2-g(x)$, rewrite the right side in terms of $g$ to get $f$ explicitly.",
+   "solution": [
+    "From $g(x)=2-x^{1/3}$ we get $x^{1/3}=2-g(x)$ and $x=(2-g(x))^3$.",
+    "Hence $f(g(x))=4-(2-g)^3+5(2-g)-(2-g)^2$ with $g=g(x)$ taking all real values, so $f(x)=4-(2-x)^3+5(2-x)-(2-x)^2$.",
+    "Expanding: $f(x)=x^3-7x^2+11x+2$.",
+    "$f'(x)=3x^2-14x+11=(3x-11)(x-1)=0$ gives $x=1,\\ \\frac{11}{3}$.",
+    "$f''(x)=6x-14$, so $f''(1)=-8<0$: $f$ has a local maximum at $x=1$ (and a local minimum at $x=\\frac{11}{3}$).",
+    "$f(1)=1-7+11+2=7$, so the local maximum value is $7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Local maxima of $f$ and of $f\\circ g$ coincide as values because $g(x)=2-x^{1/3}$ is a decreasing bijection of $\\mathbb R$.",
+     "solution": [
+      "Let $H(t)=f(g(x))$ with $t=x^{1/3}$: $H(t)=4-t^3+5t-t^2$, and $g=2-t$ runs over $\\mathbb R$ as $t$ does.",
+      "$g$ is a bijection of $\\mathbb R$ onto $\\mathbb R$, so $f$ and $H$ take the same set of values and their local maxima values coincide (a decreasing homeomorphism swaps left and right but preserves local maxima).",
+      "$H'(t)=-3t^2-2t+5=-(3t+5)(t-1)$, zero at $t=1$ and $t=-\\frac{5}{3}$.",
+      "$H''(t)=-6t-2$: $H''(1)=-8<0$ (local maximum), $H''\\left(-\\frac{5}{3}\\right)=8>0$ (local minimum).",
+      "$H(1)=-1-1+5+4=7$, so the local maximum value of $f$ is $7$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(g(x))$ is given and $g$ is invertible, substitute $u=g(x)$ (so $x=g^{-1}(u)$) to get $f(u)$ explicitly.",
+    "If $g$ is a continuous strictly monotone bijection of $\\mathbb R$, local extreme values of $f$ and $f\\circ g$ are the same.",
+    "Cubic $ax^3+bx^2+cx+d$ with $a>0$ and two critical points: local maximum at the smaller one, local minimum at the larger.",
+    "Check: $f'(x)=3x^2-14x+11$ has roots with sum $\\frac{14}{3}$ and product $\\frac{11}{3}$, matching $1$ and $\\frac{11}{3}$."
+   ]
+  },
+  {
+   "q_no": 36,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Composite functions and monotonicity",
+    "Number of solutions of an equation using monotonicity"
+   ],
+   "level": 2,
+   "question": "If $f:[2,\\infty)\\to R$; $f(x)$ is a function which is differentiable as well as increasing and $f(2)=2$; then the number of solution of equation $f(f(x))=\\frac{4}{x^2-4x+6}$ is ________.",
+   "answer": "1",
+   "key_idea": "An increasing left side and a decreasing right side meet at most once, and $x=2$ already works.",
+   "solution": [
+    "$f$ is increasing with $f(2)=2$, so $f(x)\\ge2$ for $x\\ge2$; thus $f(f(x))$ is defined and is also an increasing function.",
+    "Let $y=\\frac{4}{x^2-4x+6}$. Then $\\frac{dy}{dx}=-\\frac{4(2x-4)}{(x^2-4x+6)^2}=-\\frac{8(x-2)}{(x^2-4x+6)^2}\\le0$ for $x\\ge2$, so $y$ is a decreasing function.",
+    "An increasing function and a decreasing function intersect at most once: at most one solution.",
+    "$x=2$ is a solution: $f(f(2))=f(2)=2$ and $\\frac{4}{4-8+6}=2$.",
+    "Hence there is exactly one solution."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF only proves that there is at most one solution (increasing versus decreasing) and says 'only one solution is possible', but never shows that a solution exists. Added: $x=2$ satisfies the equation ($f(f(2))=2=\\frac{4}{4-8+6}$) so there is exactly one. The answer 1 is right.",
+   "alternate_solutions": [
+    {
+     "idea": "For $x>2$ compare the two sides with the number $2$: the left side is at least $2$, the right side is below $2$.",
+     "solution": [
+      "Since $f$ is increasing and $f(2)=2$, for $x\\ge2$ we have $f(x)\\ge2$, so $f(f(x))\\ge f(2)=2$.",
+      "$x^2-4x+6=(x-2)^2+2\\ge2$, so $\\frac{4}{x^2-4x+6}\\le2$, with equality only at $x=2$.",
+      "For $x>2$: left side $\\ge2>$ right side, so there is no solution.",
+      "At $x=2$ both sides equal $2$ ($f(f(2))=f(2)=2$). So exactly one solution."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\varphi$ is increasing and $\\psi$ is decreasing on an interval, $\\varphi(x)=\\psi(x)$ has at most one solution (and exactly one if a crossing is shown).",
+    "A composition of increasing functions is increasing; an increasing $f$ with $f(a)=a$ keeps $[a,\\infty)$ in $[a,\\infty)$.",
+    "Always show existence as well as uniqueness; a monotonic argument gives only $\\le1$ solution.",
+    "$x^2-4x+6=(x-2)^2+2$: completing the square gives the exact range of the right side."
+   ]
+  },
+  {
+   "q_no": 37,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Rate of change: related rates on a circular path"
+   ],
+   "level": 2,
+   "question": "Raghav and his father are standing together on a circular track of radius $100$ meters. When father gives a signal Raghav starts to run around the track at a speed of $10\\,\\mathrm{m/s}$. If the displacement of Raghav from his father is increasing at the rate of $\\ell\\sqrt2$ m/s when Raghav has run $\\frac{1}{4}$ of the way around the track then $\\ell$ is ________.",
+   "answer": "5",
+   "key_idea": "The chord length satisfies $x^2=2R^2(1-\\cos\\theta)$ with $\\dot\\theta=\\frac{v}{R}$; differentiate and set $\\theta=\\frac{\\pi}{2}$.",
+   "solution": [
+    "Let $\\theta$ be the angle at the centre between father and Raghav and $x$ their distance apart. By the cosine rule $x^2=100^2+100^2-2(100)^2\\cos\\theta=2\\cdot100^2\\,[1-\\cos\\theta]$ ... (1).",
+    "Differentiate (1) with respect to $t$: $2x\\frac{dx}{dt}=2\\cdot10^4\\sin\\theta\\,\\frac{d\\theta}{dt}$.",
+    "Arc length $s=100\\theta$, so $\\frac{ds}{dt}=100\\frac{d\\theta}{dt}$. Since $\\frac{ds}{dt}=10$, $\\frac{d\\theta}{dt}=\\frac{1}{10}$ ... (2).",
+    "After $\\frac{1}{4}$ of the way, $\\theta=\\frac{\\pi}{2}$, and then $x^2=2\\cdot10^4$, i.e. $x=100\\sqrt2$.",
+    "Substituting in the derivative: $\\frac{dx}{dt}=\\frac{2\\cdot10^4\\cdot1\\cdot\\frac{1}{10}}{2\\cdot100\\sqrt2}=\\frac{2000}{200\\sqrt2}=5\\sqrt2$ m/s.",
+    "Given $\\frac{dx}{dt}=\\ell\\sqrt2$, so $\\ell=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The rate of change of the distance from a fixed point is the component of the velocity along the line to that point; the tangent-chord angle is $\\frac{\\theta}{2}$.",
+     "solution": [
+      "Distance from the father's fixed position $F$ to Raghav's position $P$ is $x=|FP|$, so $\\frac{dx}{dt}=\\vec v\\cdot\\hat{u}$ where $\\hat u$ is the unit vector from $F$ to $P$ and $|\\vec v|=10$.",
+      "$\\vec v$ is along the tangent at $P$, and the angle between the tangent at $P$ and the chord $FP$ equals half the central angle (tangent-chord theorem): $\\frac{\\theta}{2}$.",
+      "So $\\frac{dx}{dt}=10\\cos\\frac{\\theta}{2}$. After a quarter of the track $\\theta=\\frac{\\pi}{2}$: $\\frac{dx}{dt}=10\\cos\\frac{\\pi}{4}=5\\sqrt2$.",
+      "Equating with $\\ell\\sqrt2$ gives $\\ell=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord of a circle of radius $R$ subtending angle $\\theta$ at the centre: $x=2R\\sin\\frac{\\theta}{2}$, so $\\frac{dx}{dt}=R\\cos\\frac{\\theta}{2}\\cdot\\frac{d\\theta}{dt}$.",
+    "For motion at constant speed $v$ on a circle, $\\frac{d\\theta}{dt}=\\frac{v}{R}$ and the distance from the starting point changes at $v\\cos\\frac{\\theta}{2}$: fastest ($v$) at the start, zero at the diametrically opposite point.",
+    "If $P$ moves with velocity $\\vec v$ and $F$ is fixed, $\\frac{d|FP|}{dt}=\\vec v\\cdot\\widehat{FP}$.",
+    "Related-rates recipe: write a relation between the quantities, differentiate with respect to $t$, then substitute the instant's values."
+   ]
+  },
+  {
+   "q_no": 38,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Maximum of a rational function using $x-\\frac{1}{x}$ and AM-GM",
+    "System of linear equations with infinitely many solutions"
+   ],
+   "level": 3,
+   "question": "Let the maximum value of the expression $y=\\frac{x^4-x^2}{x^6+2x^3-1}$ for $x>1$ is $\\frac{p}{q}$ where $p$ and $q$ are relatively prime positive integers. The value of $(p+q)$ is $k$. For a unique value of $\\mu$ & $\\lambda$, the system of equations given by $x+y+z=6,\\ x+2y+3z=14,\\ 2x+5y+\\lambda z=\\mu$ has infinitely many solutions, then $\\frac{\\mu-\\lambda}{4}-k$ is equal to ________.",
+   "answer": "0",
+   "key_idea": "Dividing by $x^3$ and putting $t=x-\\frac{1}{x}$ gives $y=\\frac{1}{t^2+\\frac{2}{t}+3}$; AM-GM gives $y_{\\max}=\\frac{1}{6}$.",
+   "solution": [
+    "Divide numerator and denominator by $x^3$: $y=\\frac{x-\\frac{1}{x}}{x^3-\\frac{1}{x^3}+2}$.",
+    "Let $t=x-\\frac{1}{x}>0$ for $x>1$. Then $x^3-\\frac{1}{x^3}=t^3+3t=t(t^2+3)$, so $y=\\frac{t}{t(t^2+3)+2}=\\frac{t}{t^3+3t+2}=\\frac{1}{t^2+\\frac{2}{t}+3}$.",
+    "$t^2+\\frac{2}{t}=t^2+\\frac{1}{t}+\\frac{1}{t}\\ge3$ by AM-GM (equality at $t=1$), so $t^2+\\frac{2}{t}+3\\ge6$.",
+    "$y_{\\max}=\\frac{1}{6}$ (attained at $x-\\frac{1}{x}=1$, i.e. $x=\\frac{1+\\sqrt5}{2}>1$). So $p=1,\\ q=6$ and $k=7$.",
+    "For the system: $D=\\begin{vmatrix}1&1&1\\\\1&2&3\\\\2&5&\\lambda\\end{vmatrix}=\\lambda-8$. Infinitely many solutions need $D=0$, so $\\lambda=8$.",
+    "$D_3=\\begin{vmatrix}1&1&6\\\\1&2&14\\\\2&5&\\mu\\end{vmatrix}=\\mu-36=0$, so $\\mu=36$.",
+    "Check: for $\\lambda=8,\\mu=36$ the third equation equals $-1\\times$(first)$+3\\times$(second) ($-6+42=36$), so the system is consistent with infinitely many solutions.",
+    "$\\frac{\\mu-\\lambda}{4}-k=\\frac{36-8}{4}-7=7-7=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Maximise $g(t)=\\frac{t}{t^3+3t+2}$ by calculus, and solve the system by row reduction instead of determinants.",
+     "solution": [
+      "With $t=x-\\frac{1}{x}$ (range $(0,\\infty)$ for $x>1$), $y=g(t)=\\frac{t}{t^3+3t+2}$.",
+      "$g'(t)=\\frac{(t^3+3t+2)-t(3t^2+3)}{(t^3+3t+2)^2}=\\frac{2(1-t^3)}{(t^3+3t+2)^2}$: positive for $t<1$, negative for $t>1$, so the maximum is $g(1)=\\frac{1}{6}$. Thus $k=1+6=7$.",
+      "Row reduction: $R_2-R_1$: $y+2z=8$; $R_3-2R_1$: $3y+(\\lambda-2)z=\\mu-12$.",
+      "Then $R_3-3(R_2)$: $(\\lambda-8)z=\\mu-36$. Infinitely many solutions need $\\lambda-8=0$ and $\\mu-36=0$, so $\\lambda=8,\\mu=36$.",
+      "$\\frac{\\mu-\\lambda}{4}-k=7-7=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $t=x-\\frac{1}{x}$: $x^2+\\frac{1}{x^2}=t^2+2$ and $x^3-\\frac{1}{x^3}=t^3+3t$ (check at $x=2$: $t=\\frac{3}{2}$, $8-\\frac{1}{8}=\\frac{63}{8}=\\frac{27}{8}+\\frac{9}{2}$).",
+    "AM-GM for a minimum: split terms to make products constant and terms equal, e.g. $t^2+\\frac{1}{t}+\\frac{1}{t}\\ge3\\sqrt[3]{t^2\\cdot\\frac{1}{t}\\cdot\\frac{1}{t}}=3$.",
+    "A $3\\times3$ system with $D=0$ has infinitely many solutions only if it is also consistent: $D_1=D_2=D_3=0$ is necessary but check the rank (here rank $2$).",
+    "When the left sides are dependent, $R_3=aR_1+bR_2$, consistency forces the same relation on the right sides."
+   ]
+  },
+  {
+   "q_no": 39,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Principal values of inverse trigonometric functions",
+    "Functional equation and definite integral of an odd-plus-constant function"
+   ],
+   "level": 3,
+   "question": "The value of $7+\\frac{2}{\\pi}\\sin^{-1}\\left[\\cos\\left\\{\\cos^{-1}(\\cos x)+\\sin^{-1}(\\sin x)\\right\\}\\right]$ where $\\frac{\\pi}{2}<x<\\pi$ is $k$. A differentiable function $f$ satisfying a relation $f(x+y)=f(x)+f(y)+2xy(x+y)-\\frac{1}{3}\\ \\forall x,y\\in R$ and $\\lim_{h\\to0}\\frac{3f(h)-1}{kh}=\\frac{2}{3}$. Find the value of definite integral $\\int_{-3}^{3}f(x)\\,dx$ ________.",
+   "answer": "2",
+   "key_idea": "$k=6$ from principal values; then $f'(x)=f'(0)+2x^2$ and the odd part of $f$ integrates to zero over $[-3,3]$.",
+   "solution": [
+    "For $x\\in\\left(\\frac{\\pi}{2},\\pi\\right)$: $\\cos^{-1}(\\cos x)=x$ and $\\sin^{-1}(\\sin x)=\\pi-x$, so the sum is $\\pi$ and $\\cos\\pi=-1$.",
+    "$\\sin^{-1}(-1)=-\\frac{\\pi}{2}$, so $k=7+\\frac{2}{\\pi}\\left(-\\frac{\\pi}{2}\\right)=6$.",
+    "Put $x=y=0$ in the relation: $f(0)=2f(0)-\\frac{1}{3}$, so $f(0)=\\frac{1}{3}$.",
+    "With $k=6$: $\\lim_{h\\to0}\\frac{3f(h)-1}{6h}=\\frac{2}{3}$, so $\\lim\\frac{3\\left(f(h)-f(0)\\right)}{h}=4$ and $f'(0)=\\frac{4}{3}$.",
+    "$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=\\lim_{h\\to0}\\left[\\frac{f(h)-\\frac{1}{3}}{h}+2x(x+h)\\right]$.",
+    "$f'(x)=f'(0)+2x^2=\\frac{4}{3}+2x^2$.",
+    "Integrating: $f(x)=\\frac{4}{3}x+\\frac{2}{3}x^3+C$, and $f(0)=\\frac{1}{3}$ gives $C=\\frac{1}{3}$, so $f(x)=\\frac{2}{3}x^3+\\frac{4}{3}x+\\frac{1}{3}$.",
+    "$\\int_{-3}^{3}f(x)\\,dx=\\int_{-3}^{3}\\left(\\frac{2}{3}x^3+\\frac{4}{3}x\\right)dx+\\int_{-3}^{3}\\frac{1}{3}\\,dx=0+\\frac{1}{3}\\cdot6=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's solution is garbled (notation lost) and omits three steps: the value $k=6$ from the inverse-trigonometric expression, $f(0)=\\frac{1}{3}$, and $f'(0)=\\frac{4}{3}$ obtained from the limit. These are added; the rest is unchanged. The answer $2$ is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract the cubic $\\frac{2}{3}x^3$ and the constant $\\frac{1}{3}$ so the remaining function is additive, hence linear.",
+     "solution": [
+      "As before $k=6$, $f(0)=\\frac{1}{3}$ and $f'(0)=\\frac{4}{3}$.",
+      "Use $(x+y)^3-x^3-y^3=3xy(x+y)$. Define $g(x)=f(x)-\\frac{2}{3}x^3-\\frac{1}{3}$.",
+      "Then $g(x+y)-g(x)-g(y)=\\left[f(x+y)-f(x)-f(y)\\right]-\\frac{2}{3}\\cdot3xy(x+y)-\\frac{1}{3}+\\frac{1}{3}+\\frac{1}{3}=\\left[2xy(x+y)-\\frac{1}{3}\\right]-2xy(x+y)+\\frac{1}{3}=0$.",
+      "So $g$ is additive and differentiable, hence $g(x)=cx$ with $c=g'(0)=f'(0)=\\frac{4}{3}$ (because $\\frac{2}{3}x^3$ has zero derivative at $0$).",
+      "Therefore $f(x)=\\frac{2}{3}x^3+\\frac{4}{3}x+\\frac{1}{3}$ and $\\int_{-3}^{3}f(x)dx=\\frac{1}{3}\\cdot6=2$ since the other two terms are odd."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Principal values: $\\cos^{-1}(\\cos x)=x$ for $x\\in[0,\\pi]$; $\\sin^{-1}(\\sin x)=\\pi-x$ for $x\\in\\left[\\frac{\\pi}{2},\\frac{3\\pi}{2}\\right]$.",
+    "For $f(x+y)=f(x)+f(y)+P(x,y)$ put $x=y=0$ for $f(0)$ and use $f'(x)=\\lim\\frac{f(x+h)-f(x)}{h}$ with $y=h$ to get $f'(x)$ in terms of $f'(0)$.",
+    "A differentiable (indeed continuous) additive function $g(x+y)=g(x)+g(y)$ is $g(x)=cx$.",
+    "$\\int_{-a}^{a}\\varphi(x)\\,dx=0$ for odd $\\varphi$; for $f=\\text{odd}+c$ the integral is $2ac$.",
+    "Standard cubic identity: $(x+y)^3-x^3-y^3=3xy(x+y)$ (check $x=y=1$: $8-2=6=3\\cdot2$)."
+   ]
+  },
+  {
+   "q_no": 40,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Local maximum of a piecewise function at the junction point",
+    "Comparison of $\\sin\\lambda$ with $\\sin1$ (trigonometric inequality)"
+   ],
+   "level": 3,
+   "question": "If $f(x)=\\begin{cases}\\sin(\\cos x)+\\cos(\\sin x), & x\\in\\left[-\\frac{\\pi}{2},0\\right]\\\\ \\sin(\\lambda\\cos x)-x+1, & x\\in\\left(0,\\frac{\\pi}{2}\\right]\\end{cases}$ has a maximum at $x=0$, then number of all possible integral values of $\\lambda\\in[0,2\\pi]$ is :",
+   "answer": "6",
+   "key_idea": "Left of $0$ the function is increasing, so the maximum at $0$ needs only $f(0)\\ge f(0^+)$, i.e. $\\sin\\lambda\\le\\sin1$.",
+   "solution": [
+    "$f(0)=\\sin(\\cos0)+\\cos(\\sin0)=\\sin1+1$ (the PDF wrote $\\sin1+(-1)$, but $\\cos0=1$).",
+    "$f(0^+)=\\sin(\\lambda\\cos0)-0+1=\\sin\\lambda+1$.",
+    "For $x\\in\\left(-\\frac{\\pi}{2},0\\right)$: $f'(x)=-\\sin x\\cos(\\cos x)-\\cos x\\sin(\\sin x)>0$, so $f$ increases up to $x=0$; the left side never exceeds $f(0)$.",
+    "A maximum at $x=0$ requires $f(0)\\ge f(0^+)$, i.e. $\\sin\\lambda\\le\\sin1$. (If $\\sin\\lambda=\\sin1$, $f$ is continuous and $f'(0^+)=-1<0$, so $0$ is still a maximum; the PDF's strict sign would wrongly drop $\\lambda=1$.)",
+    "For $\\lambda\\in[0,2\\pi]$: $\\sin\\lambda\\le\\sin1$ holds for $\\lambda\\in[0,1]\\cup[\\pi-1,\\,2\\pi]=[0,1]\\cup[2.14,\\,6.28]$.",
+    "Integers: $\\lambda=0,1,3,4,5,6$ ($\\lambda=2$ fails since $\\sin2\\approx0.909>\\sin1\\approx0.841$). Number of values $=6$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF wrote $f(0)=\\sin1+(-1)$ (it is $\\sin1+1$) and used a strict inequality $f(0)>f(0^+)$, which would exclude $\\lambda=1$ although the PDF's list includes it. Correct condition is $\\sin\\lambda\\le\\sin1$ (equality allowed, since $f'(0^+)=-1<0$), and the left side is shown to be increasing. The list $\\lambda=0,1,3,4,5,6$ and the answer $6$ are right (also verified as the global maximum numerically).",
+   "useful_results": [
+    "At a junction point $c$ of a piecewise function, a local maximum needs $f(c)\\ge f(c^-)$ and $f(c)\\ge f(c^+)$ (with continuity or a jump the right way); if a limit equals $f(c)$, check the one-sided derivative.",
+    "$\\sin\\lambda\\le\\sin a$ on $[0,2\\pi]$ (with $0<a<\\frac{\\pi}{2}$) holds for $\\lambda\\in[0,a]\\cup[\\pi-a,2\\pi]$.",
+    "$\\sin(\\cos x)+\\cos(\\sin x)$ is increasing on $\\left[-\\frac{\\pi}{2},0\\right]$ because both terms have positive derivatives there.",
+    "For integer counting in an interval, check the values near the endpoints $a$ and $\\pi-a$: here $2<\\pi-1=2.14<3$, so $2$ is excluded and $3$ is included."
+   ]
+  },
+  {
+   "q_no": 41,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Optimisation: least rectangle containing two non-overlapping squares",
+    "Maximisation of a function of $a$ by calculus"
+   ],
+   "level": 4,
+   "question": "For any $2$ squares, the sum of whose area is $1$, a rectangle of area $A$ exists into which the squares can be placed without overlapping of interior points (Assume that the squares are to be placed with their sides parallel to the sides of the rectangle). The least value of $A$ can be expressed as $\\frac{1+\\sqrt\\alpha}{\\beta}$ where $\\alpha$ and $\\beta$ are natural numbers, then $(\\alpha+\\beta)$.",
+   "answer": "4",
+   "key_idea": "The rectangle must work for every pair, so $A$ is the maximum over pairs of the area $(a+b)b$ of the smallest enclosing rectangle.",
+   "solution": [
+    "Let the sides be $a<b$ with $a^2+b^2=1$ ... (1).",
+    "Squares with parallel sides and disjoint interiors have disjoint projections on one axis, so the smallest rectangle is $(a+b)\\times b$ (squares side by side): $A=(a+b)b$. The required rectangle must fit every pair, so the least such $A$ is the maximum of this over all pairs.",
+    "$A=(a+b)b=a\\sqrt{1-a^2}+(1-a^2)$.",
+    "$\\frac{dA}{da}=\\sqrt{1-a^2}-\\frac{a^2}{\\sqrt{1-a^2}}-2a=0\\Rightarrow1-2a^2=2a\\sqrt{1-a^2}\\Rightarrow8a^4-8a^2+1=0$.",
+    "So $a^2=\\frac{2\\mp\\sqrt2}{4}$; $a<b$ needs $a^2<\\frac{1}{2}$, hence $a^2=\\frac{2-\\sqrt2}{4}$.",
+    "$b^2=1-a^2=\\frac{2+\\sqrt2}{4}$ and $ab=\\frac{\\sqrt{(2-\\sqrt2)(2+\\sqrt2)}}{4}=\\frac{\\sqrt2}{4}$.",
+    "$A=ab+b^2=\\frac{\\sqrt2}{4}+\\frac{2+\\sqrt2}{4}=\\frac{1+\\sqrt2}{2}$.",
+    "So $\\frac{1+\\sqrt\\alpha}{\\beta}=\\frac{1+\\sqrt2}{2}$ gives $\\alpha=2,\\ \\beta=2$ and $\\alpha+\\beta=4$ (lowest terms)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $a=\\sin\\varphi,\\ b=\\cos\\varphi$ so $A=\\frac{1+\\sin2\\varphi+\\cos2\\varphi}{2}$ and use the bound $p\\sin\\theta+q\\cos\\theta\\le\\sqrt{p^2+q^2}$.",
+     "solution": [
+      "Let $a=\\sin\\varphi$, $b=\\cos\\varphi$ with $0<\\varphi<\\frac{\\pi}{4}$ (so $a<b$) and $a^2+b^2=1$.",
+      "Smallest enclosing rectangle for the pair: $(a+b)\\times b$, area $A=ab+b^2=\\sin\\varphi\\cos\\varphi+\\cos^2\\varphi=\\frac{\\sin2\\varphi+\\cos2\\varphi+1}{2}$.",
+      "$\\sin2\\varphi+\\cos2\\varphi\\le\\sqrt2$, with equality at $2\\varphi=\\frac{\\pi}{4}$, i.e. $\\varphi=\\frac{\\pi}{8}\\in\\left(0,\\frac{\\pi}{4}\\right)$ (so the pair is valid).",
+      "The rectangle must fit every pair, so $A=\\max=\\frac{1+\\sqrt2}{2}$, giving $\\alpha=\\beta=2$ and $\\alpha+\\beta=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two axis-parallel non-overlapping rectangles have disjoint projections on at least one axis, so their bounding box has width $\\ge$ sum of widths (or height $\\ge$ sum of heights).",
+    "'Least $A$ that works for every configuration' is the maximum over configurations of the minimal required $A$ (a max-min).",
+    "$p\\sin\\theta+q\\cos\\theta$ has maximum $\\sqrt{p^2+q^2}$; parametrising $a^2+b^2=1$ by $(\\sin\\varphi,\\cos\\varphi)$ avoids square roots.",
+    "$\\sin^2\\frac{\\pi}{8}=\\frac{2-\\sqrt2}{4}$ and $\\frac{1+\\sqrt2}{2}=\\frac{1+\\sqrt8}{4}=\\frac{1+\\sqrt{18}}{6}$ (so $\\alpha+\\beta$ is unique only in lowest terms)."
+   ]
+  },
+  {
+   "q_no": 42,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Maxima and minima on a restricted domain"
+   ],
+   "level": 2,
+   "question": "The sum of max. and the min. values of $f(x)=x^3-3x$ subject to condition $x^4+36\\le13x^2$.",
+   "answer": "0",
+   "key_idea": "The constraint is a quadratic in $x^2$, giving $4\\le x^2\\le9$; on this domain $f$ is monotonic so the extremes sit at the endpoints.",
+   "solution": [
+    "The given condition is $x^4+36-13x^2\\le0$, i.e. $x^4-13x^2+36\\le0$.",
+    "Factorise: $(x^2-9)(x^2-4)\\le0$, i.e. $(x+3)(x-3)(x+2)(x-2)\\le0$.",
+    "Hence $4\\le x^2\\le9$, so $x\\in[-3,-2]\\cup[2,3]$.",
+    "Now $f(x)=x^3-3x$ and $f'(x)=3x^2-3=3(x-1)(x+1)$, which vanishes only at $x=\\pm1$.",
+    "These points do not lie in the domain, and $f'(x)>0$ for $|x|\\ge2$, so $f$ is increasing on each of the two intervals; the extremes occur at the endpoints.",
+    "Endpoint values: $f(2)=8-6=2$, $f(-2)=-8+6=-2$, $f(3)=27-9=18$, $f(-3)=-27+9=-18$.",
+    "Thus the maximum value of $f$ is $18$ (at $x=3$) and the minimum value is $-18$ (at $x=-3$).",
+    "Sum of maximum and minimum $=18+(-18)=0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF also lists f(1) and f(-1) as if they were candidates for the extremes; x=±1 lie outside the domain [-3,-2]∪[2,3] and are irrelevant. The working now says so and uses only the endpoint values. The answer 0 is unchanged.",
+   "useful_results": [
+    "For $(x^2-p)(x^2-q)\\le0$ with $0<p<q$, the solution set is $p\\le x^2\\le q$, i.e. $[-\\sqrt q,-\\sqrt p]\\cup[\\sqrt p,\\sqrt q]$.",
+    "A continuous function on a closed bounded set attains its maximum and minimum; they occur at interior critical points or at the boundary of the set.",
+    "Critical points that lie outside the feasible set are irrelevant: here $x=\\pm1$ are not in the domain, so only the endpoints matter.",
+    "If $f$ is odd and the feasible set is symmetric about $0$, then $\\min f=-\\max f$, so their sum is $0$ at once."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "$f$ is odd and the constraint set is symmetric about $0$, so the minimum is the negative of the maximum.",
+     "solution": [
+      "The constraint depends only on $x^2$, so the feasible set $[-3,-2]\\cup[2,3]$ is symmetric about $0$, and it is closed and bounded.",
+      "$f(-x)=-x^3+3x=-f(x)$, so $f$ is an odd function.",
+      "$f$ is continuous on a closed bounded set, so it attains a maximum $M$ at some feasible $x_0$.",
+      "Then $-x_0$ is feasible and $f(-x_0)=-M$; for any feasible $x$, $f(-x)=-f(x)\\ge-M$, hence $f(x)\\ge -M$ everywhere, so the minimum is exactly $-M$.",
+      "Therefore maximum $+$ minimum $=M+(-M)=0$, with no need to find $M$ (which is $18$)."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 43,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Derivative of an inverse function",
+    "Differentiation of exponential and power functions"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=-4e^{\\frac{1-x}{2}}+\\frac{x^3}{3}+\\frac{x^2}{2}+x+1$ and let $g$ be the inverse function of $f$. Let $h(x)=\\frac{a+bx^{3/2}}{x^{5/4}}$ and $h'(5)=0$. Then find $\\frac{a^2}{5b^2\\,g'\\left(-\\frac76\\right)}$.",
+   "answer": "5",
+   "key_idea": "$g'(f(x_0))=\\frac{1}{f'(x_0)}$, and $f(x_0)=-\\frac76$ is solved by inspection at $x_0=1$ where the exponential becomes $e^0$.",
+   "solution": [
+    "$g(f(x))=x$, so differentiating, $g'(f(x))\\,f'(x)=1$.",
+    "We need $g'\\left(-\\frac76\\right)$, so solve $f(x)=-\\frac76$: $f(1)=-4+\\frac13+\\frac12+1+1=-\\frac76$, so $x=1$ (unique, as $f'>0$ makes $f$ increasing).",
+    "Hence $g'\\left(-\\frac76\\right)f'(1)=1$, i.e. $g'\\left(-\\frac76\\right)=\\frac{1}{f'(1)}$.",
+    "$f'(x)=-4e^{\\frac{1-x}{2}}\\left(-\\frac12\\right)+x^2+x+1$.",
+    "$f'(1)=2+1+1+1=5$, so $g'\\left(-\\frac76\\right)=\\frac15$.",
+    "Write $h(x)=ax^{-5/4}+bx^{1/4}$.",
+    "$h'(x)=-\\frac{5a}{4}x^{-9/4}+\\frac b4x^{-3/4}$.",
+    "$h'(5)=0\\Rightarrow-\\frac{5a}{4}\\cdot5^{-9/4}+\\frac b4\\cdot5^{-3/4}=0$.",
+    "Multiplying by $4\\cdot5^{3/4}$: $5a\\cdot5^{-3/2}=b$.",
+    "So $\\frac ab=5^{1/2}$ and $\\left(\\frac ab\\right)^2=5$.",
+    "Therefore $\\frac{a^2}{5b^2\\,g'\\left(-\\frac76\\right)}=\\frac{5}{5\\cdot\\frac15}=5$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The question is garbled in the PDF: it prints h(x)=(a+bx^2)/x^{5/3} and never says what to find. The PDF's own working uses h(x)=ax^{-5/4}+bx^{1/4}, i.e. (a+bx^{3/2})/x^{5/4} (with the printed h one would get (a/b)^2=25, not the key 5), and the quantity a^2/(5b^2 g'(-7/6)) appears in a misplaced fragment with value 5. The question text was reconstructed to match the PDF's working and key; the working itself is unchanged except for the added uniqueness remark.",
+   "useful_results": [
+    "If $g$ is the inverse of $f$ then $g'(y_0)=\\frac{1}{f'(x_0)}$ where $f(x_0)=y_0$; $f$ must be strictly monotonic, here $f'(x)=2e^{(1-x)/2}+x^2+x+1>0$.",
+    "To find $x_0$ with $f(x_0)=y_0$, look for the value that kills the exponential term ($x=1$ here), then use monotonicity to claim uniqueness.",
+    "Before differentiating $\\frac{a+bx^p}{x^q}$, split it as $ax^{-q}+bx^{p-q}$ and apply the power rule term by term.",
+    "$h'(x_0)=0$ for $h=ax^{-m}+bx^{k}$ gives $\\frac ab=\\frac km x_0^{\\,k+m}$; here $m=\\frac54$, $k=\\frac14$, $x_0=5$ give $\\frac15\\cdot5^{3/2}=\\sqrt5$."
+   ]
+  },
+  {
+   "q_no": 44,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Higher derivatives of an inverse function"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=x+\\frac{x^2}{2}+\\frac{x^3}{3}+\\frac{x^4}{4}+\\frac{x^5}{5}$ and let $g(x)=f^{-1}(x)$. Find $g'''(0)$.",
+   "answer": "1",
+   "key_idea": "Differentiate $g(f(x))=x$ three times to express $g'''(f(x))$ through $f',f'',f'''$, then put $x=0$.",
+   "solution": [
+    "$f'(x)=1+x+x^2+x^3+x^4$, $f''(x)=1+2x+3x^2+4x^3$, $f'''(x)=2+6x+12x^2$; so $f(0)=0$, $f'(0)=1$, $f''(0)=1$, $f'''(0)=2$.",
+    "$g(f(x))=x\\Rightarrow g'(f(x))\\,f'(x)=1$.",
+    "Differentiate again: $g''(f(x))=\\frac{-f''(x)}{(f'(x))^3}$.",
+    "Differentiate once more: $g'''(f(x))\\,f'(x)=-\\frac{(f'(x))^3f'''(x)-3(f''(x))^2(f'(x))^2}{(f'(x))^6}$.",
+    "Put $x=0$ (so $f(0)=0$): $g'''(0)\\cdot1=-\\left[\\frac{1\\times2-3\\times1}{1}\\right]=1$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $g=f^{-1}$, with $x=g(y)$: $g'=\\frac1{f'}$, $g''=-\\frac{f''}{(f')^3}$, $g'''=\\frac{3(f'')^2-f'f'''}{(f')^5}$ (check here: $\\frac{3-2}{1}=1$).",
+    "If $f(x)=x+a_2x^2+a_3x^3+\\dots$ then $g(y)=y-a_2y^2+(2a_2^2-a_3)y^3+\\dots$; so $g'''(0)=6(2a_2^2-a_3)$, here $6\\left(\\frac12-\\frac13\\right)=1$.",
+    "$f'(x)=1+x+x^2+x^3+x^4>0$ for all real $x$, so $f$ is strictly increasing and $g$ is defined on all of $\\mathbb R$.",
+    "Derivatives of an inverse at $0$ only need the Taylor data of $f$ at $0$ because $f(0)=0$ gives $g(0)=0$."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "Write $g(y)=y+\\alpha y^2+\\beta y^3+\\dots$ and compare coefficients in $f(g(y))=y$ (series reversion).",
+     "solution": [
+      "$f(0)=0$ and $f'(0)=1$, so $g(0)=0$, $g'(0)=1$; write $g(y)=y+\\alpha y^2+\\beta y^3+O(y^4)$. Then $g'''(0)=6\\beta$.",
+      "Substitute $t=g(y)$ into $f(t)=t+\\frac{t^2}{2}+\\frac{t^3}{3}+\\dots=y$.",
+      "$t^2=y^2+2\\alpha y^3+\\dots$ and $t^3=y^3+\\dots$, so $f(g(y))=y+\\left(\\alpha+\\frac12\\right)y^2+\\left(\\beta+\\alpha+\\frac13\\right)y^3+\\dots$.",
+      "Coefficient of $y^2$ must vanish: $\\alpha=-\\frac12$.",
+      "Coefficient of $y^3$ must vanish: $\\beta=-\\alpha-\\frac13=\\frac12-\\frac13=\\frac16$.",
+      "Hence $g'''(0)=6\\beta=1$."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 45,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Rolle's theorem and intermediate value theorem (number of roots)"
+   ],
+   "level": 3,
+   "question": "Let $y=f(x)$ be a differentiable function such that $f(1)=1$, $f(2)=-3$, $f(3)=4$, $f(4)=-1$ and $f(5)=2$. Let $y=g(x)$ be a differentiable function such that $f'(x)g(x)\\ne g'(x)f(x)$. Then the minimum number of real roots of the equation $(g'(x))^2+g(x)g''(x)=0$ is ______.",
+   "answer": "4",
+   "key_idea": "$(g')^2+gg''=(gg')'$, so count roots of $gg'$ using interlacing of zeros of $f$ and $g$ and then apply Rolle once more.",
+   "solution": [
+    "$f(1)>0,\\ f(2)<0,\\ f(3)>0,\\ f(4)<0,\\ f(5)>0$: by the intermediate value theorem $f(x)=0$ has at least $4$ real roots, one in each of $(1,2),(2,3),(3,4),(4,5)$.",
+    "At a root $x_0$ of $f$ we have $g(x_0)\\ne0$: if $g(x_0)=0$ too, both sides of $f'g\\ne g'f$ would be $0$ at $x_0$.",
+    "Between two consecutive roots $\\alpha<\\beta$ of $f$, $g$ has a root: if not, $\\frac fg$ is differentiable on $[\\alpha,\\beta]$ and vanishes at both ends, so by Rolle $\\left(\\frac fg\\right)'=\\frac{f'g-g'f}{g^2}=0$ somewhere, contradicting $f'g\\ne g'f$.",
+    "Hence $g(x)=0$ has at least $3$ real roots (one between each pair of consecutive roots of $f$).",
+    "Between two consecutive roots of $g$, $g'$ has a root (Rolle), and it is not a root of $g$ (else $f'g-g'f=0$ there); so $g'$ has at least $2$ more roots.",
+    "So $g'(x)\\cdot g(x)=0$ has at least $3+2=5$ real roots.",
+    "Since $(g')^2+gg''=(gg')'$, Rolle's theorem applied to $gg'$ gives at least $5-1=4$ real roots of $(g')^2+gg''=0$.",
+    "Hence the minimum number of real roots is $4$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF working is correct but only states each count (4 roots of f, 3 of g, 5 of gg', 4 of the final equation). The justifications were added: roots of f are not roots of g, why g has a root between consecutive roots of f (Rolle on f/g), why the roots of g' are new, and the identity (g')^2+gg''=(gg')'. No error in the result.",
+   "useful_results": [
+    "Rolle: if $\\varphi$ is continuous on $[\\alpha,\\beta]$, differentiable inside and $\\varphi(\\alpha)=\\varphi(\\beta)$, then $\\varphi'(c)=0$ for some $c\\in(\\alpha,\\beta)$; so if $\\varphi$ has $n$ distinct real roots then $\\varphi'$ has at least $n-1$.",
+    "$f'g-g'f\\ne0$ means $\\left(\\frac fg\\right)'\\ne0$ wherever $g\\ne0$: $f/g$ cannot repeat a value, so between two zeros of $f$ there is a zero of $g$ (zeros of $f$ and $g$ interlace, as for $\\sin$ and $\\cos$).",
+    "Recognise derivatives of products: $(g')^2+gg''=(gg')'=\\frac12(g^2)''$, and $f'g-g'f=g^2\\left(\\frac fg\\right)'$.",
+    "A sign change of $f$ between two points forces a root between them (IVT); the values $1,-3,4,-1,2$ alternate in sign, giving $4$ roots."
+   ]
+  },
+  {
+   "q_no": 46,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rolle's theorem and intermediate value theorem"
+   ],
+   "level": 2,
+   "question": "A differentiable function $f:\\mathbb R\\to\\mathbb R$ satisfies $f(1)=2$, $f(2)=3$ and $f(3)=1$. Show that $f'(x)=0$ for some $x$.",
+   "answer": "Proved: $f'(x)=0$ for some $x\\in(1,3)$",
+   "key_idea": "Use the intermediate value theorem to find a point $c$ with $f(c)=f(1)$, then apply Rolle's theorem on $[1,c]$.",
+   "solution": [
+    "Since $f$ is differentiable, it is continuous.",
+    "$f(2)=3>2>1=f(3)$, so by the intermediate value theorem there is a $c\\in(2,3)$ with $f(c)=2=f(1)$.",
+    "Now $f$ is continuous on $[1,c]$, differentiable on $(1,c)$ and $f(1)=f(c)$.",
+    "By Rolle's theorem there is $x\\in(1,c)\\subset(1,3)$ with $f'(x)=0$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Rolle's theorem: $\\varphi$ continuous on $[a,b]$, differentiable on $(a,b)$ and $\\varphi(a)=\\varphi(b)$ imply $\\varphi'(c)=0$ for some $c\\in(a,b)$.",
+    "Fermat: at an interior local maximum or minimum of a differentiable function the derivative is $0$.",
+    "Darboux: a derivative has the intermediate value property even when it is not continuous, so a derivative that takes a positive and a negative value must vanish between them.",
+    "Recognition cue: if a differentiable function goes up and then down (or takes the same value twice), look for a critical point between."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "The continuous function $f$ attains its maximum on $[1,3]$; it cannot be at an end point, so it is interior and $f'=0$ there (Fermat).",
+     "solution": [
+      "$f$ is continuous on the closed interval $[1,3]$, so it attains an absolute maximum there.",
+      "The maximum cannot be at $x=1$ since $f(2)=3>f(1)=2$, and cannot be at $x=3$ since $f(2)=3>f(3)=1$.",
+      "So the maximum is attained at an interior point $x\\in(1,3)$.",
+      "$f$ is differentiable at this interior maximum, so by Fermat's theorem $f'(x)=0$."
+     ]
+    },
+    {
+     "idea": "Mean value theorem gives a positive and a negative value of $f'$; Darboux's theorem then gives a zero in between.",
+     "solution": [
+      "By the mean value theorem on $[1,2]$: $f'(y)=\\frac{3-2}{2-1}=1>0$ for some $y\\in(1,2)$.",
+      "On $[2,3]$: $f'(z)=\\frac{1-3}{3-2}=-2<0$ for some $z\\in(2,3)$.",
+      "A derivative has the intermediate value property (Darboux's theorem), even if $f'$ is not continuous; this must be said, because $f'$ need not be continuous.",
+      "So $f'(x)=0$ for some $x$ between $y$ and $z$."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 47,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Graphs of rational functions: asymptotes, sign changes and inflection points"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=\\frac{x^4}{(x-1)(x-2)\\dots(x-n)}$ where the denominator is a product of $n$ factors, $n$ being a positive integer. It is also given that the $X$-axis is a horizontal asymptote for the graph of $f$. Answer the independent questions below by choosing the correct option from the given ones.\na. How many vertical asymptotes does the graph of $f$ have?\n(A) $n$ (B) less than $n$ (C) more than $n$ (D) impossible to decide\nb. What can you deduce about the value of $n$?\n(A) $n<4$ (B) $n=4$ (C) $n>4$ (D) impossible to decide\nc. As one travels along the graph of $f$ from left to right, at which of the following points is the sign of $f(x)$ guaranteed to change from positive to negative?\n(A) $x=0$ (B) $x=1$ (C) $x=n-1$ (D) $x=n$\nd. How many inflection points does the graph of $f$ have in the region $x<0$?",
+   "answer": "(a) (A) $n$; (b) (C) $n>4$; (c) (C) $x=n-1$; (d) more than $1$ (at least $2$)",
+   "key_idea": "Zeros of the denominator are simple (vertical asymptotes, sign changes), $x^4$ gives a non-sign-changing zero at $0$, and a positive function vanishing at both ends of $(-\\infty,0)$ must bend both ways.",
+   "solution": [
+    "(a) The denominator vanishes at $x=1,2,\\dots,n$ and the numerator is non-zero there, so the graph has $n$ vertical asymptotes, at $x=1,2,\\dots,n$. Answer (A).",
+    "(b) $\\lim_{x\\to\\pm\\infty}f(x)=0$ requires the degree of the denominator to exceed that of the numerator, so $n>4$. Answer (C).",
+    "(c) $f(x)>0$ for $x>n$, and $f$ changes sign precisely when it passes through $x=1,2,\\dots,n$ (simple zeros of the denominator).",
+    "So $f<0$ on $(n-1,n)$ and $f>0$ on $(n-2,n-1)$ (valid since $n>4$): the sign changes from positive to negative at $x=n-1$. Answer (C).",
+    "At $x=n$ the sign goes from negative to positive; at $x=0$ there is no change ($x^4$); at $x=1$ the change depends on the parity of $n$.",
+    "(d) $f(x)=0$ only at $x=0$, with multiplicity $4$. Without loss of generality let $n$ be even (if $n$ is odd, $-f$ is positive for $x<0$ and the reasoning is the same).",
+    "For $n$ even, $f>0$ for $x<1$, $x\\ne0$, and $f$ has all derivatives for $x<1$.",
+    "Due to the multiple root at $x=0$, $f\\approx cx^4$ with $c>0$, so the graph is concave up ($f''>0$) near $x=0$.",
+    "As $x\\to-\\infty$, $f(x)\\sim x^{4-n}\\to0$ from above, and $f''\\sim(4-n)(3-n)x^{2-n}>0$: concave up for large $|x|$.",
+    "$f''$ cannot be $\\ge0$ throughout $(-\\infty,0]$: a convex function with limit $0$ at $-\\infty$ and value $0$ at $0$ would be $\\le0$, contradicting $f>0$. So the graph is concave down somewhere between.",
+    "Concave up near both ends and concave down in between means $f''$ changes sign at least twice: at least $2$ inflection points, i.e. more than $1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's argument is right but ends with a duplicated, garbled fragment ('xcept at x=0. As one traces the graph leftward...'); it was dropped. The PDF also asserts that the graph 'must become concave down at least once' without a reason; the convexity argument (a convex function vanishing at both ends cannot be positive) was added. Answers unchanged.",
+   "useful_results": [
+    "Vertical asymptotes of a rational function occur at the zeros of the denominator that are not cancelled by the numerator; a horizontal asymptote $y=0$ needs $\\deg(\\text{num})<\\deg(\\text{den})$.",
+    "A zero of odd multiplicity changes the sign of $f$, a zero of even multiplicity (like $x^4$) does not; poles of odd order also change the sign.",
+    "If $f>0$ on $(-\\infty,0)$ and $f\\to0$ at both ends, then $f$ has an interior maximum, so $f''<0$ somewhere while $f''>0$ near both ends: at least two inflection points.",
+    "For this $f$ the count in $x<0$ is exactly $2$ for $n=5,6,7,8$ (checked numerically), e.g. $n=6$: $x\\approx-11.07,\\ -1.75$."
+   ]
+  },
+  {
+   "q_no": 48,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Extreme values of a function on a closed interval",
+    "Convexity and case analysis in a parameter"
+   ],
+   "level": 4,
+   "question": "Consider the function $f(x)=ax+\\frac1{x+1}$, where $a$ is a positive constant. Let $L=$ the largest value of $f(x)$ and $S=$ the smallest value of $f(x)$ for $x\\in[0,1]$. Show that $L-S>\\frac1{12}$ for any $a>0$.",
+   "answer": "Proved: $L-S\\ge\\frac32-\\sqrt2>\\frac1{12}$ for every $a>0$",
+   "key_idea": "Split on the sign pattern of $f'(x)=a-\\frac1{(x+1)^2}$ and show $L-S$ is smallest, $\\frac32-\\sqrt2$, at $a=\\frac12$, which exceeds $\\frac1{12}$ because $17^2>2\\cdot12^2$.",
+   "solution": [
+    "$f(0)=1$, $f(1)=a+\\frac12$ and $f'(x)=a-\\frac1{(x+1)^2}$.",
+    "Over $[0,1]$ the value of $f'(x)$ increases from $a-1$ at $x=0$ to $a-\\frac14$ at $x=1$. We consider the sign of $f'(x)$ in cases.",
+    "(1) $a\\le\\frac14$: $\\frac1{(x+1)^2}\\ge\\frac14\\ge a$ on $[0,1]$, so $f'\\le0$; the maximum is at $0$ and the minimum at $1$. $L-S=1-\\left(\\frac12+a\\right)=\\frac12-a\\ge\\frac14>\\frac1{12}$.",
+    "(2) $a\\ge1$: $f'\\ge0$ on $[0,1]$, so the maximum is at $1$ and the minimum at $0$. $L-S=a+\\frac12-1=a-\\frac12\\ge\\frac12>\\frac1{12}$.",
+    "(3) $\\frac14<a<1$: $f'(x)=0$ at $\\tilde x=\\frac1{\\sqrt a}-1\\in(0,1)$. In $[0,\\tilde x]$, $f'\\le0$ and in $[\\tilde x,1]$, $f'\\ge0$, so the minimum is at $\\tilde x$.",
+    "$S=f(\\tilde x)=a\\left(\\frac1{\\sqrt a}-1\\right)+\\sqrt a=2\\sqrt a-a$, and $L=\\max\\left\\{1,\\,a+\\frac12\\right\\}$ (the larger end value).",
+    "(3i) $\\frac14<a\\le\\frac12$: then $f(0)\\ge f(1)$, so $L=1$ and $L-S=1+a-2\\sqrt a=(1-\\sqrt a)^2$.",
+    "This decreases as $a$ increases, so for $a\\le\\frac12$: $L-S\\ge\\left(1-\\frac1{\\sqrt2}\\right)^2=\\frac32-\\sqrt2$.",
+    "(3ii) $\\frac12<a<1$: then $f(1)>f(0)$, so $L=a+\\frac12$ and $L-S=2a+\\frac12-2\\sqrt a=2\\left(\\sqrt a-\\frac12\\right)^2$.",
+    "This increases with $a$ here, so $L-S>2\\left(\\frac1{\\sqrt2}-\\frac12\\right)^2=\\frac32-\\sqrt2$.",
+    "Finally $\\frac32-\\sqrt2>\\frac1{12}\\iff\\frac{17}{12}>\\sqrt2\\iff289>288$, which is true. So $L-S>\\frac1{12}$ for every $a>0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's solution is cut off in case (3i): after '(1-sqrt a)^2. This is smallest when sqrt a is closest to 1 and so xa + yb ...' it continues with unrelated text about the GCD, xa+yb and the Chinese remainder theorem (belonging to a different problem). Cases (1), (2), (3) and the start of (3i) are kept; the rest of (3i), case (3ii) and the final comparison with 1/12 were written and checked numerically (min of L-S is 0.08579 at a=1/2).",
+   "useful_results": [
+    "On a closed interval, a convex function ($f''>0$) attains its maximum at an end point; its minimum is at the critical point if that lies inside, else at an end point.",
+    "$f(x)=a(x+1)+\\frac1{x+1}-a\\ge2\\sqrt a-a$ by AM-GM, with equality at $x+1=\\frac1{\\sqrt a}$; this is the interior minimum $S=2\\sqrt a-a$ in the middle case.",
+    "For $L-S$ (the oscillation) of a family in a parameter, split the parameter range by where the critical point enters the interval and by which end value is larger; the answer is smallest where the two end values coincide ($a=\\frac12$ here).",
+    "To compare surds with a rational, square: $\\frac32-\\sqrt2>\\frac1{12}\\iff\\sqrt2<\\frac{17}{12}\\iff2<\\frac{289}{144}$."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "Use $L-S\\ge f(p)-f(q)$ for any two points; the points $0,\\frac12,1$ already give $\\frac1{12}$, and strictness is checked at $a=\\frac12$.",
+     "solution": [
+      "For any $p,q\\in[0,1]$, $L\\ge f(p)$ and $S\\le f(q)$, so $L-S\\ge f(p)-f(q)$.",
+      "Compute $f\\left(\\frac12\\right)=\\frac a2+\\frac23$; then $f(0)-f\\left(\\frac12\\right)=\\frac13-\\frac a2$ and $f(1)-f\\left(\\frac12\\right)=\\frac a2-\\frac16$.",
+      "If $a\\le\\frac12$: $L-S\\ge\\frac13-\\frac a2\\ge\\frac13-\\frac14=\\frac1{12}$, with equality only if $a=\\frac12$.",
+      "If $a\\ge\\frac12$: $L-S\\ge\\frac a2-\\frac16\\ge\\frac14-\\frac16=\\frac1{12}$, with equality only if $a=\\frac12$.",
+      "For $a=\\frac12$: $f'\\left(\\frac12\\right)=\\frac12-\\frac49=\\frac1{18}\\ne0$, so $x=\\frac12$ is an interior point with non-zero derivative and cannot be the minimum point: $S<f\\left(\\frac12\\right)=\\frac{11}{12}$.",
+      "Also $L\\ge f(0)=1$, so at $a=\\frac12$, $L-S>1-\\frac{11}{12}=\\frac1{12}$. Hence $L-S>\\frac1{12}$ for every $a>0$."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 49,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rate of change of volume (related rates)",
+    "Similar triangles and volume of a frustum"
+   ],
+   "level": 2,
+   "question": "A pond has been dug at the IIT Bombay as an inverted truncated pyramid with a square base. The depth of the pond is $6$ m. The square at the bottom has side length $2$ m and the top square has side length $8$ m. Water is filled in at a rate of $\\frac{19}{3}$ cubic meters per hour. At what rate is the water level rising exactly $1$ hour after the water started to fill the pond?",
+   "answer": "$\\frac{19}{27}$ m per hour",
+   "key_idea": "The water surface has side $h+2$ at depth $h$, so the volume is $\\frac13\\left((h+2)^3-8\\right)$ and $V'=(h+2)^2h'$.",
+   "solution": [
+    "Let $V(t)$ be the volume of water $t$ hours after filling started: $V(t)=\\frac{19}3t$. Let $h(t)$ be the water level and $a(t)$ the side of the water surface.",
+    "Extend the truncated pyramid to the full pyramid and let $x$ be the height of the added part. Similar triangles give $\\frac{x}{x+h(t)}=\\frac2{a(t)}$ and $\\frac{x+h(t)}{x+6}=\\frac{a(t)}8$.",
+    "Multiplying them: $\\frac x{x+6}=\\frac14$, so $x=2$.",
+    "Hence $a(t)=h(t)+2$.",
+    "$V(t)=\\frac{h(t)}3\\left(4+a(t)^2+2a(t)\\right)=\\frac{h(t)}3\\left(4+h(t)^2+4h(t)+4+2h(t)+4\\right)=\\frac{h(t)}3\\left(h(t)^2+6h(t)+12\\right)=\\frac13\\left((h(t)+2)^3-8\\right)$.",
+    "Differentiate: $V'(t)=(h(t)+2)^2h'(t)$.",
+    "Then $h'(1)=\\frac{V'(1)}{(h(1)+2)^2}$, and $(h(1)+2)^2=(3V(1)+8)^{2/3}=27^{2/3}=9$ since $V(1)=\\frac{19}3$.",
+    "$h'(1)=\\frac{19}3\\cdot\\frac19=\\frac{19}{27}$ m per hour (so the level is $h(1)=1$ m and rises at $\\frac{19}{27}$ m/h)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF final line has two slips: the denominator is written (3V(1)+8)^3 where it should be (3V(1)+8)^{2/3} (so that it equals (h+2)^2=9), and the answer is given as 19/27 'meters per second' although the rate is given per hour; the correct unit is metres per hour. The value 19/27 is right.",
+   "useful_results": [
+    "Related rates: $\\frac{dV}{dt}=A(h)\\frac{dh}{dt}$, where $A(h)$ is the area of the water surface at level $h$.",
+    "Frustum volume: $V=\\frac h3\\left(A_1+A_2+\\sqrt{A_1A_2}\\right)$; for a pyramid-like pond whose side grows linearly with depth, the surface side at height $s$ is $2+s$ here, so $A(s)=(2+s)^2$.",
+    "Extending a frustum to the full pyramid (apex at distance $x$ above the small face, $\\frac{x}{x+H}=\\frac{s_1}{s_2}$) turns the problem into similar triangles; here $\\frac{x}{x+6}=\\frac14$ gives $x=2$.",
+    "Check units: $\\frac{19}3$ m$^3$/h divided by area in m$^2$ gives m/h; at $t=1$ h: $V=\\frac{19}3$, $h=1$ m, $A=9$ m$^2$."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "Integrate the cross-section area $A(s)=(2+s)^2$ to get $V(h)$ and use $\\frac{dV}{dt}=A(h)\\frac{dh}{dt}$ directly.",
+     "solution": [
+      "The side of the square cross-section grows linearly from $2$ to $8$ over the depth $6$, so at height $s$ above the base it is $2+s$ and the area is $A(s)=(2+s)^2$.",
+      "Volume of water at level $h$: $V=\\int_0^h(2+s)^2\\,ds=\\frac{(h+2)^3-8}3$.",
+      "At $t=1$ h, $V=\\frac{19}3$, so $(h+2)^3=27$ and $h=1$ m.",
+      "Differentiating $V$ with respect to $t$ (or by the fundamental theorem of calculus): $\\frac{dV}{dt}=A(h)\\frac{dh}{dt}=(h+2)^2\\frac{dh}{dt}$.",
+      "$\\frac{19}3=9\\frac{dh}{dt}$, so $\\frac{dh}{dt}=\\frac{19}{27}$ m per hour."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 50,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Maxima and minima of area functions",
+    "Definite integral for area"
+   ],
+   "level": 2,
+   "question": "Consider a circle with unit radius whose chord $AB$ is at a perpendicular distance $x$ from the centre $C$. Let the area of triangle $ACB$ be given by the function $y=f(x)$. On the curve $y=f(x)$ a variable point $P(x,f(x))$ is taken and perpendiculars $PQ$ and $PR$ are drawn on the $x$ and $y$ axes respectively. The area of rectangle $QPRO$ is given by $y=g(x)$ (where $O$ is the origin).\nColumn-I:\n(a) The greatest area of $ACB$ is\n(b) The greatest area of rectangle $QPRO$ is\n(c) The greatest vertical distance between $y=f(x)$ and $y=g(x)$ occurs at $x$ equal to\n(d) The area bounded by $y=f(x)$, $y=0$ and $x=1$ is\nColumn-II:\n(p) $\\frac{2}{3\\sqrt3}$\n(q) $\\frac{\\sqrt{13}-1}{6}$\n(r) $\\frac13$\n(s) $\\frac12$\nChoose the correct option.",
+   "options": [
+    "$a\\to p;\\ b\\to s;\\ c\\to q;\\ d\\to r$",
+    "$a\\to p;\\ b\\to q;\\ c\\to s;\\ d\\to r$",
+    "$a\\to p;\\ b\\to q;\\ c\\to r;\\ d\\to s$",
+    "$a\\to s;\\ b\\to p;\\ c\\to q;\\ d\\to r$"
+   ],
+   "answer": "(D) a $\\to$ s; b $\\to$ p; c $\\to$ q; d $\\to$ r",
+   "key_idea": "The area is $f(x)=x\\sqrt{1-x^2}$ and the rectangle is $g(x)=xf(x)$; each item is then an optimisation or an integral of these.",
+   "solution": [
+    "Half the chord is $\\sqrt{1-x^2}$, so the area of $\\triangle ACB=\\frac12\\cdot2\\sqrt{1-x^2}\\cdot x$, i.e. $f(x)=x\\sqrt{1-x^2}$, $0\\le x\\le1$.",
+    "(a) $f'(x)=\\frac{(1-\\sqrt2x)(1+\\sqrt2x)}{\\sqrt{1-x^2}}$, which vanishes at $x=\\frac1{\\sqrt2}$ in $(0,1)$; the greatest area is $f\\left(\\frac1{\\sqrt2}\\right)=\\frac12$ (range $\\left[0,\\frac12\\right]$). So (a) $\\to$ (s).",
+    "(b) The rectangle $QPRO$ has sides $x$ and $f(x)$, so $g(x)=xf(x)=x^2\\sqrt{1-x^2}$.",
+    "$g'(x)=\\frac{x(2-3x^2)}{\\sqrt{1-x^2}}$, which vanishes at $x^2=\\frac23$; $g_{\\max}=\\frac23\\cdot\\frac1{\\sqrt3}=\\frac2{3\\sqrt3}$ (range $\\left[0,\\frac2{3\\sqrt3}\\right]$). So (b) $\\to$ (p).",
+    "(c) Since $f(x)>g(x)$ on $(0,1)$, the vertical distance is $h(x)=f(x)-g(x)=\\sqrt{1-x^2}\\,(x-x^2)$.",
+    "$h'(x)=\\frac{(1-x)(1-x-3x^2)}{\\sqrt{1-x^2}}$; $h'=0$ in $(0,1)$ when $3x^2+x-1=0$, i.e. $x=\\frac{\\sqrt{13}-1}{6}$, where $h'$ changes from positive to negative (maximum). So (c) $\\to$ (q).",
+    "(d) Required area $=\\int_0^1x\\sqrt{1-x^2}\\,dx=\\frac13$. So (d) $\\to$ (r).",
+    "Hence a $\\to$ s; b $\\to$ p; c $\\to$ q; d $\\to$ r, which is option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A chord at distance $d$ from the centre of a circle of radius $r$ has length $2\\sqrt{r^2-d^2}$, so the triangle on it with the centre has area $d\\sqrt{r^2-d^2}$, maximal ($=\\frac{r^2}2$) when $d=\\frac r{\\sqrt2}$.",
+    "To maximise $x^m(1-x^2)^{n}$ it is often quicker to maximise its square or use AM-GM with weights; here $g^2=x^4(1-x^2)$ peaks at $x^2=\\frac23$.",
+    "The greatest vertical distance between two curves on an interval is found by maximising $f-g$, i.e. where $f'=g'$ (check the end points as well).",
+    "$\\int_0^1x(1-x^2)^{1/2}dx=\\frac12\\int_0^1u^{1/2}du=\\frac13$ with $u=1-x^2$ (check numerically: $0.3333$)."
+   ],
+   "alternate_solutions": [
+    {
+     "idea": "Use $x=\\sin\\theta$ and AM-GM instead of differentiating for the two area maxima, and a $u$-substitution for the integral.",
+     "solution": [
+      "Put $x=\\sin\\theta$, $\\theta\\in\\left[0,\\frac\\pi2\\right]$: $f=\\sin\\theta\\cos\\theta=\\frac12\\sin2\\theta\\le\\frac12$, with equality at $\\theta=\\frac\\pi4$. So (a) $=\\frac12$, i.e. (s).",
+      "For (b), $g^2=x^4(1-x^2)=\\frac12\\cdot x^2\\cdot x^2\\cdot(2-2x^2)$, a product of three positive terms whose sum $x^2+x^2+2-2x^2=2$ is constant.",
+      "By AM-GM, $x^2\\cdot x^2\\cdot(2-2x^2)\\le\\left(\\frac23\\right)^3=\\frac8{27}$, so $g^2\\le\\frac4{27}$ and $g\\le\\frac2{3\\sqrt3}$, with equality when $x^2=2-2x^2$, i.e. $x^2=\\frac23$. So (b) $\\to$ (p).",
+      "For (c) there is no shortcut: maximise $h=\\sqrt{1-x^2}\\,x(1-x)$; $h'\\propto(1-x)(3x^2+x-1)$ gives $x=\\frac{\\sqrt{13}-1}6$, i.e. (q).",
+      "For (d), $u=1-x^2$ gives $\\int_0^1x\\sqrt{1-x^2}\\,dx=\\frac12\\int_0^1\\sqrt u\\,du=\\frac12\\cdot\\frac23=\\frac13$, i.e. (r).",
+      "So a $\\to$ s; b $\\to$ p; c $\\to$ q; d $\\to$ r, option (D)."
+     ]
+    }
+   ]
+  },
+  {
+   "q_no": 51,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Polynomial with given critical points and roots",
+    "Roots of polynomial equations"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a polynomial of degree $4$ having real coefficients satisfying $f'(0)=f'(1)=f'(-1)=0$ and $f(0)=4$, $f''\\left(\\frac12\\right)=-1$.\nMatch the following column:\nColumn-I:\n(a) $f(x)=0$ has\n(b) $4-f(x)=0$ has\n(c) $f'(x)+x-1=0$ has\n(d) $xf'(x)-4f(x)=0$ has\nColumn-II:\n(p) root at $x=2$\n(q) root at $x=1$\n(r) $2$ equal real roots\n(s) no real roots\nChoose the CORRECT option:",
+   "options": [
+    "a-s; b-r; c-q,r; d-p",
+    "a-p; b-q; c-p; d-s",
+    "a-p,r,s; b-q,s; c-p; d-r",
+    "a-q; b-p; c-s; d-r"
+   ],
+   "answer": "(A) a-s; b-r; c-q,r; d-p",
+   "key_idea": "$f'$ is a cubic with roots $0,\\pm1$, which determines $f=x^4-2x^2+4$ completely; then each equation is a short factorisation.",
+   "solution": [
+    "$f'$ is a cubic with roots $0,1,-1$: $f'(x)=\\lambda x(x-1)(x+1)=\\lambda(x^3-x)$, so $f(x)=\\lambda\\left(\\frac{x^4}4-\\frac{x^2}2\\right)+C$.",
+    "$f(0)=4$ gives $C=4$; $f''(x)=\\lambda(3x^2-1)$ and $f''\\left(\\frac12\\right)=-\\frac\\lambda4=-1$ gives $\\lambda=4$.",
+    "Using the conditions, we get $f(x)=x^4-2x^2+4$.",
+    "(a) $f(x)=(x^2-1)^2+3>0$, so $f(x)=0$ has no real roots: (a) $\\to$ (s).",
+    "(b) $4-f(x)=2x^2-x^4=x^2(2-x^2)$: roots $0,0,\\pm\\sqrt2$, so it has $2$ equal real roots ($x=0$ twice): (b) $\\to$ (r).",
+    "(c) $f'(x)+x-1=4x^3-4x+x-1=4x^3-3x-1=(x-1)(2x+1)^2$: root $x=1$ and the double root $x=-\\frac12$: (c) $\\to$ (q), (r).",
+    "(d) $xf'(x)-4f(x)=4x^4-4x^2-4x^4+8x^2-16=4x^2-16=4(x-2)(x+2)$: root at $x=2$: (d) $\\to$ (p).",
+    "So a-s; b-r; c-q,r; d-p, which is option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A polynomial of degree $4$ whose derivative has the three given roots has $f'=\\lambda\\prod(x-x_i)$; integrate and fix the constant and $\\lambda$ from the remaining conditions.",
+    "$x^4-2x^2+4=(x^2-1)^2+3\\ge3$ and its roots satisfy $t^2-2t+4=0$ for $t=x^2$ (discriminant $-12<0$), so there are no real roots.",
+    "For $f=\\sum a_kx^k$, $xf'-nf=\\sum(k-n)a_kx^k$: the $x^n$ term cancels, so here $4x^4$ cancels and only $4x^2-16$ remains.",
+    "Factor cubics with rational-root tests: $4x^3-3x-1$ has root $1$, then the quotient $4x^2+4x+1=(2x+1)^2$ gives a repeated root."
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 14,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 4 marks assumed"
+   ]
+  },
+  {
+   "title": "One or more than one Correct Type",
+   "from": 15,
+   "to": 25,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 4 marks assumed"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 26,
+   "to": 29,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 3 marks assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 30,
+   "to": 34,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 4 marks assumed"
+   ]
+  },
+  {
+   "title": "Integer Type(0 to 9)",
+   "from": 35,
+   "to": 45,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 4 marks assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 46,
+   "to": 49,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 4 marks assumed"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 50,
+   "to": 51,
+   "marking": [
+    "No marking scheme printed; JEE Advanced default of 3 marks assumed"
+   ]
+  }
+ ]
+}
