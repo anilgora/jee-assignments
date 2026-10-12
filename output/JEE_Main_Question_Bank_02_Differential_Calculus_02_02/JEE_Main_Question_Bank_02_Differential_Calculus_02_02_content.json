@@ -1,0 +1,906 @@
+{
+ "title": "JEE Main Question Bank 02 (Differential Calculus 02_02) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions (printed Q21–Q40, numbered 1–20)",
+ "source": "JEE_Main_Question_Bank_02_Differential_Calculus_02_02.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 18,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 marks assumed",
+    "No negative marking assumed"
+   ]
+  },
+  {
+   "title": "Integer Type (0 to 9)",
+   "from": 19,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 marks assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Tangent to an ellipse (parametric form)",
+    "Minimising a sum using derivatives"
+   ],
+   "level": 2,
+   "question": "Let a tangent be drawn to the ellipse $\\frac{x^2}{27}+y^2=1$ at $(3\\sqrt3\\cos\\theta,\\sin\\theta)$ where $\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)$. Then the value of $\\theta$ such that the sum of intercepts on axes made by this tangent is minimum is equal to -",
+   "options": [
+    "$\\frac{\\pi}{3}$",
+    "$\\frac{\\pi}{6}$",
+    "$\\frac{\\pi}{4}$",
+    "$\\frac{\\pi}{8}$"
+   ],
+   "answer": "(B) $\\frac{\\pi}{6}$",
+   "key_idea": "The tangent has intercepts $3\\sqrt3\\sec\\theta$ and $\\csc\\theta$; minimise their sum with $f'(\\theta)=0$.",
+   "solution": [
+    "The ellipse is $\\frac{x^2}{27}+y^2=1$. Differentiating, $\\frac{2x}{27}+2yy'=0$, so $y'=-\\frac{x}{27y}$.",
+    "At $(3\\sqrt3\\cos\\theta,\\sin\\theta)$: $y'=-\\frac{3\\sqrt3\\cos\\theta}{27\\sin\\theta}=-\\frac{\\sqrt3\\cos\\theta}{9\\sin\\theta}=-\\frac{\\cot\\theta}{3\\sqrt3}$.",
+    "Tangent: $y-\\sin\\theta=-\\frac{\\cot\\theta}{3\\sqrt3}\\left(x-3\\sqrt3\\cos\\theta\\right)$.",
+    "Put $x=0$: $y-\\sin\\theta=\\cos\\theta\\cot\\theta$, so $y=\\cos\\theta\\cot\\theta+\\sin\\theta=\\frac{\\cos^2\\theta+\\sin^2\\theta}{\\sin\\theta}=\\frac{1}{\\sin\\theta}$.",
+    "Put $y=0$: $-\\sin\\theta=-\\frac{\\cot\\theta}{3\\sqrt3}\\left(x-3\\sqrt3\\cos\\theta\\right)$, so $\\frac{3\\sqrt3\\sin^2\\theta}{\\cos\\theta}=x-3\\sqrt3\\cos\\theta$.",
+    "Hence $x=\\frac{3\\sqrt3\\sin^2\\theta+3\\sqrt3\\cos^2\\theta}{\\cos\\theta}=\\frac{3\\sqrt3}{\\cos\\theta}$.",
+    "Sum of intercepts: $f(\\theta)=x_{int}+y_{int}=\\frac{3\\sqrt3}{\\cos\\theta}+\\frac1{\\sin\\theta}=3\\sqrt3\\sec\\theta+\\csc\\theta$.",
+    "$f'(\\theta)=3\\sqrt3\\sec\\theta\\tan\\theta-\\csc\\theta\\cot\\theta=\\frac{3\\sqrt3\\sin\\theta}{\\cos^2\\theta}-\\frac{\\cos\\theta}{\\sin^2\\theta}$.",
+    "$f'(\\theta)=0\\Rightarrow3\\sqrt3\\sin^3\\theta=\\cos^3\\theta\\Rightarrow\\cot^3\\theta=3\\sqrt3=3^{3/2}\\Rightarrow\\cot\\theta=\\sqrt3$, so $\\tan\\theta=\\frac1{\\sqrt3}$ and $\\theta=\\frac\\pi6$.",
+    "$f'<0$ just before $\\frac\\pi6$ and $f'>0$ just after it (the $\\sin^3\\theta$ term grows, the $\\cos^3\\theta$ term shrinks), so this is a minimum; $f\\left(\\frac\\pi6\\right)=6+2=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Hölder's inequality bounds $\\frac{a}{\\cos\\theta}+\\frac{b}{\\sin\\theta}$ below with no derivative.",
+     "solution": [
+      "The intercepts are $\\frac{3\\sqrt3}{\\cos\\theta}$ and $\\frac1{\\sin\\theta}$ (tangent $\\frac{x\\cos\\theta}{3\\sqrt3}+y\\sin\\theta=1$), so $S=\\frac{3\\sqrt3}{\\cos\\theta}+\\frac{1}{\\sin\\theta}$.",
+      "Hölder: $\\left(\\frac{a}{c}+\\frac{b}{s}\\right)^2(c^2+s^2)\\ge\\left(a^{2/3}+b^{2/3}\\right)^3$ for positive $a,b,c,s$.",
+      "With $a=3\\sqrt3$, $b=1$: $a^{2/3}=3$, $b^{2/3}=1$, and $c^2+s^2=1$, so $S^2\\ge(3+1)^3=64$, i.e. $S\\ge8$.",
+      "Equality holds when $\\frac{a}{c^3}=\\frac{b}{s^3}$, i.e. $\\tan^3\\theta=\\frac{b}{a}=\\frac{1}{3\\sqrt3}$, so $\\tan\\theta=\\frac1{\\sqrt3}$.",
+      "Hence the minimum $S=8$ occurs at $\\theta=\\frac\\pi6$ (check: $3\\sqrt3\\cdot\\frac{2}{\\sqrt3}+2=8$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ at $(a\\cos\\theta,b\\sin\\theta)$ is $\\frac{x\\cos\\theta}{a}+\\frac{y\\sin\\theta}{b}=1$, with intercepts $a\\sec\\theta$ and $b\\csc\\theta$.",
+    "$\\min\\left(a\\sec\\theta+b\\csc\\theta\\right)=\\left(a^{2/3}+b^{2/3}\\right)^{3/2}$ at $\\tan\\theta=\\left(\\frac ba\\right)^{1/3}$ (here $a=3\\sqrt3,b=1$ gives $8$ at $\\theta=\\frac\\pi6$).",
+    "The shortest tangent segment between the axes has length $a+b$, and the least area of the triangle cut off is $ab$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Lagrange's mean value theorem"
+   ],
+   "level": 1,
+   "question": "The position of a moving car at time $t$ is given by $f(t)=at^2+bt+c$, $t>0$, where $a$, $b$ and $c$ are real numbers greater than $1$. Then the average speed of the car over the time interval $[t_1,t_2]$ is attained at the point :",
+   "options": [
+    "$2a(t_1+t_2)+b$",
+    "$\\frac{t_2-t_1}{2}$",
+    "$a(t_2-t_1)+b$",
+    "$\\frac{t_1+t_2}{2}$"
+   ],
+   "answer": "(D) $\\frac{t_1+t_2}{2}$",
+   "key_idea": "Lagrange's mean value theorem: the average rate $\\frac{f(t_2)-f(t_1)}{t_2-t_1}$ equals $f'(t)$ at some interior $t$.",
+   "solution": [
+    "$f$ is a polynomial, hence continuous on $[t_1,t_2]$ and differentiable on $(t_1,t_2)$, so Lagrange's mean value theorem applies.",
+    "It gives a point $t$ with $f'(t)=\\frac{f(t_2)-f(t_1)}{t_2-t_1}=V_{avg}$.",
+    "Here $f'(t)=2at+b$, and $\\frac{f(t_2)-f(t_1)}{t_2-t_1}=\\frac{a(t_2^2-t_1^2)+b(t_2-t_1)}{t_2-t_1}$.",
+    "So $2at+b=\\frac{a(t_2^2-t_1^2)+b(t_2-t_1)}{t_2-t_1}=a(t_1+t_2)+b$.",
+    "Hence $2at=a(t_1+t_2)$, i.e. $t=\\frac{t_1+t_2}{2}$ (as $a>1$, so $a\\ne0$). Since $f'(t)=2at+b>0$ the speed equals the velocity, so this is where the average speed is attained."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Centre the time at the midpoint $m=\\frac{t_1+t_2}2$: the even part of a quadratic cancels in the chord slope.",
+     "solution": [
+      "Put $t=m+u$ with $m=\\frac{t_1+t_2}2$ and $h=\\frac{t_2-t_1}2$, so the interval is $u\\in[-h,h]$.",
+      "Expand: $f(m+u)=au^2+(2am+b)u+\\left(am^2+bm+c\\right)$.",
+      "Chord slope $=\\frac{f(m+h)-f(m-h)}{2h}$. The terms $au^2$ and the constant are even in $u$, so they cancel; only $(2am+b)(2h)$ survives.",
+      "So $V_{avg}=2am+b$, which is exactly $f'(m)$ because $f'(m+u)=2au+(2am+b)$ at $u=0$.",
+      "Hence the average speed is attained at $t=m=\\frac{t_1+t_2}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For every quadratic $\\alpha t^2+\\beta t+\\gamma$ the mean-value point of $[t_1,t_2]$ is the midpoint $\\frac{t_1+t_2}2$ (the tangent at the midpoint is parallel to the chord - Archimedes' property of the parabola).",
+    "The mean-value point does not depend on $a$, $b$, $c$; for a cubic it is not the midpoint (for $t^3$ on $[t_1,t_2]$: $\\xi^2=m^2+\\frac{h^2}{3}$).",
+    "If $f'$ is linear, the average of $f'$ over $[t_1,t_2]$ equals $\\frac{f'(t_1)+f'(t_2)}2=f'(\\text{midpoint})$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Implicit differentiation"
+   ],
+   "level": 1,
+   "question": "If $\\left(a+\\sqrt2b\\cos x\\right)\\left(a-\\sqrt2b\\cos y\\right)=a^2-b^2$, where $a>b>0$, then $\\frac{dx}{dy}$ at $\\left(\\frac\\pi4,\\frac\\pi4\\right)$ is :",
+   "options": [
+    "$\\frac{a-2b}{a+2b}$",
+    "$\\frac{2a+b}{2a-b}$",
+    "$\\frac{a-b}{a+b}$",
+    "$\\frac{a+b}{a-b}$"
+   ],
+   "answer": "(D) $\\frac{a+b}{a-b}$",
+   "key_idea": "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$, then invert $\\frac{dy}{dx}$.",
+   "solution": [
+    "The relation is $\\left(a+\\sqrt2b\\cos x\\right)\\left(a-\\sqrt2b\\cos y\\right)=a^2-b^2$. Differentiate with respect to $x$ (product rule).",
+    "$\\left(-\\sqrt2b\\sin x\\right)\\left(a-\\sqrt2b\\cos y\\right)+\\left(a+\\sqrt2b\\cos x\\right)\\left(\\sqrt2b\\sin y\\right)y'=0$.",
+    "At $\\left(\\frac\\pi4,\\frac\\pi4\\right)$: $\\sqrt2b\\sin\\frac\\pi4=b$ and $\\sqrt2b\\cos\\frac\\pi4=b$, so $(-b)(a-b)+(a+b)(b)y'=0$.",
+    "$y'=\\frac{b(a-b)}{b(a+b)}=\\frac{a-b}{a+b}$, i.e. $\\frac{dy}{dx}=\\frac{a-b}{a+b}$.",
+    "Therefore $\\frac{dx}{dy}=\\frac{a+b}{a-b}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take logarithms: for a product $u(x)v(y)=\\text{const}$, $\\frac{u'}{u}dx+\\frac{v'}{v}dy=0$ gives $\\frac{dx}{dy}$ directly.",
+     "solution": [
+      "The point lies on the curve: $(a+b)(a-b)=a^2-b^2$, and both factors are positive, so take $\\ln$: $\\ln\\left(a+\\sqrt2b\\cos x\\right)+\\ln\\left(a-\\sqrt2b\\cos y\\right)=\\ln(a^2-b^2)$.",
+      "Differentiate in differentials: $\\frac{-\\sqrt2b\\sin x}{a+\\sqrt2b\\cos x}dx+\\frac{\\sqrt2b\\sin y}{a-\\sqrt2b\\cos y}dy=0$.",
+      "At $\\left(\\frac\\pi4,\\frac\\pi4\\right)$ the fractions become $\\frac{-b}{a+b}dx+\\frac{b}{a-b}dy=0$.",
+      "So $\\frac{b}{a+b}dx=\\frac{b}{a-b}dy$ and $\\frac{dx}{dy}=\\frac{a+b}{a-b}$ directly - no inversion needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $F(x,y)=0$: $\\frac{dy}{dx}=-\\frac{F_x}{F_y}$ and $\\frac{dx}{dy}=-\\frac{F_y}{F_x}$, so $\\frac{dx}{dy}$ can be found in one step by differentiating with respect to $y$.",
+    "For a product $u(x)v(y)=k$ use logarithmic differentiation: $\\frac{dx}{dy}=-\\frac{v'(y)/v(y)}{u'(x)/u(x)}$.",
+    "Always confirm the given point lies on the curve; here $(a+b)(a-b)=a^2-b^2$ does."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Limits using L'Hôpital's rule"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to0}\\frac{\\sin^{-1}x-\\tan^{-1}x}{3x^3}$ is equal to $L$, then the value of $(6L+1)$ is :",
+   "options": [
+    "$\\frac12$",
+    "$6$",
+    "$\\frac16$",
+    "$2$"
+   ],
+   "answer": "(D) $2$",
+   "key_idea": "The limit is of $\\frac00$ form; one application of L'Hôpital's rule leaves a quotient that rationalises to $\\frac16$.",
+   "solution": [
+    "As $x\\to0$, $\\sin^{-1}x-\\tan^{-1}x\\to0$ and $3x^3\\to0$: the form is $\\frac00$, so apply L'Hôpital's rule.",
+    "$L=\\lim_{x\\to0}\\frac{\\frac1{\\sqrt{1-x^2}}-\\frac1{1+x^2}}{9x^2}$.",
+    "Combine: $L=\\lim_{x\\to0}\\frac{1+x^2-\\sqrt{1-x^2}}{\\sqrt{1-x^2}\\,(1+x^2)\\,9x^2}$.",
+    "Multiply numerator and denominator by $1+x^2+\\sqrt{1-x^2}$: the numerator becomes $(1+x^2)^2-(1-x^2)=x^4+3x^2$.",
+    "$L=\\lim_{x\\to0}\\frac{x^4+3x^2}{\\sqrt{1-x^2}\\,(1+x^2)\\,9x^2\\left(1+x^2+\\sqrt{1-x^2}\\right)}$; the factors other than $9x^2$ tend to $1\\cdot1\\cdot2=2$ in the denominator.",
+    "$L=\\lim_{x\\to0}\\frac{x^4+3x^2}{18x^2}=\\lim_{x\\to0}\\frac{x^2+3}{18}=\\frac3{18}=\\frac16$.",
+    "Therefore $6L+1=6\\cdot\\frac16+1=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Maclaurin series: $\\sin^{-1}x=x+\\frac{x^3}6+\\dots$ and $\\tan^{-1}x=x-\\frac{x^3}3+\\dots$ expose the $x^3$ coefficient at once.",
+     "solution": [
+      "$\\sin^{-1}x=x+\\frac{x^3}{6}+O(x^5)$ and $\\tan^{-1}x=x-\\frac{x^3}{3}+O(x^5)$.",
+      "Subtract: $\\sin^{-1}x-\\tan^{-1}x=\\left(\\frac16+\\frac13\\right)x^3+O(x^5)=\\frac{x^3}{2}+O(x^5)$.",
+      "Divide by $3x^3$: $L=\\lim_{x\\to0}\\left(\\frac16+O(x^2)\\right)=\\frac16$.",
+      "So $6L+1=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Standard expansions: $\\sin^{-1}x=x+\\frac{x^3}6+\\dots$, $\\tan^{-1}x=x-\\frac{x^3}3+\\dots$, $\\sin x=x-\\frac{x^3}6+\\dots$, $\\tan x=x+\\frac{x^3}3+\\dots$.",
+    "Hence $\\sin^{-1}x-\\tan^{-1}x\\sim\\frac{x^3}2$, $\\tan x-\\sin x\\sim\\frac{x^3}2$, $\\sin^{-1}x-x\\sim\\frac{x^3}6$ and $x-\\tan^{-1}x\\sim\\frac{x^3}3$ as $x\\to0$.",
+    "When two functions agree to first order, their difference is governed by the $x^3$ coefficients - L'Hôpital twice or a series both work, but the series is faster."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Chain rule for composite functions"
+   ],
+   "level": 3,
+   "question": "Let $y=f(x)=\\sin^3\\left(\\frac\\pi3\\left(\\cos\\left(\\frac{\\pi}{3\\sqrt2}\\left(-4x^3+5x^2+1\\right)^{3/2}\\right)\\right)\\right)$. Then, at $x=1$,",
+   "options": [
+    "$\\sqrt2y'-3\\pi^2y=0$",
+    "$y'+3\\pi^2y=0$",
+    "$2y'+3\\pi^2y=0$",
+    "$2y'+\\sqrt3\\pi^2y=0$"
+   ],
+   "answer": "(C) $2y'+3\\pi^2y=0$",
+   "key_idea": "Split into layers $g\\to v\\to u\\to y$, differentiate layer by layer, and evaluate each layer at $x=1$ where the angles are standard.",
+   "solution": [
+    "Let $g=-4x^3+5x^2+1$, $v=\\frac{\\pi}{3\\sqrt2}g^{3/2}$, $u=\\frac\\pi3\\cos v$, so $y=\\sin^3u$.",
+    "$\\frac{dy}{dx}=3\\sin^2u\\cdot\\cos u\\cdot\\frac{du}{dx}$ with $\\frac{du}{dx}=-\\frac\\pi3\\sin v\\cdot\\frac{dv}{dx}$ and $\\frac{dv}{dx}=\\frac{\\pi}{3\\sqrt2}\\cdot\\frac32g^{1/2}\\cdot\\left(-12x^2+10x\\right)$.",
+    "At $x=1$: $g=-4+5+1=2$, so $g^{3/2}=2\\sqrt2$ and $v=\\frac{\\pi}{3\\sqrt2}\\cdot2\\sqrt2=\\frac{2\\pi}3$.",
+    "Then $u=\\frac\\pi3\\cos\\frac{2\\pi}3=\\frac\\pi3\\left(-\\frac12\\right)=-\\frac\\pi6$.",
+    "$y=f(1)=\\sin^3\\left(-\\frac\\pi6\\right)=\\left(-\\frac12\\right)^3=-\\frac18$.",
+    "Values of the factors at $x=1$: $\\sin^2u=\\frac14$, $\\cos u=\\frac{\\sqrt3}2$, $\\sin v=\\frac{\\sqrt3}2$, $\\frac{dv}{dx}=\\frac{\\pi}{3\\sqrt2}\\cdot\\frac32\\cdot\\sqrt2\\cdot(-2)=-\\pi$.",
+    "$\\left(\\frac{dy}{dx}\\right)_{x=1}=3\\cdot\\frac14\\cdot\\frac{\\sqrt3}2\\cdot\\left(-\\frac\\pi3\\right)\\cdot\\frac{\\sqrt3}2\\cdot(-\\pi)=\\frac{3\\pi^2}{16}$.",
+    "Check option (C): $2y'+3\\pi^2y=2\\cdot\\frac{3\\pi^2}{16}+3\\pi^2\\left(-\\frac18\\right)=\\frac{3\\pi^2}8-\\frac{3\\pi^2}8=0$. Hence (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\sin^3u=\\frac{3\\sin u-\\sin3u}{4}$; at $u=-\\frac\\pi6$ the term $\\cos3u$ vanishes, so $y'$ is a single product.",
+     "solution": [
+      "$\\sin^3u=\\frac{3\\sin u-\\sin3u}{4}$, so $y=\\frac{3\\sin u-\\sin3u}4$ and $\\frac{dy}{dx}=\\frac34\\left(\\cos u-\\cos3u\\right)\\frac{du}{dx}$.",
+      "At $x=1$: $u=-\\frac\\pi6$ (as before), so $y=\\frac{3\\left(-\\frac12\\right)-\\sin\\left(-\\frac\\pi2\\right)}{4}=\\frac{-\\frac32+1}{4}=-\\frac18$.",
+      "$\\cos u=\\frac{\\sqrt3}2$ and $\\cos3u=\\cos\\left(-\\frac\\pi2\\right)=0$, so $\\frac{dy}{dx}=\\frac34\\cdot\\frac{\\sqrt3}2\\cdot u'=\\frac{3\\sqrt3}8u'$.",
+      "$u'=-\\frac\\pi3\\sin v\\cdot v'=-\\frac\\pi3\\cdot\\frac{\\sqrt3}2\\cdot(-\\pi)=\\frac{\\sqrt3\\pi^2}{6}$ (with $v=\\frac{2\\pi}3$, $v'=-\\pi$).",
+      "$y'=\\frac{3\\sqrt3}8\\cdot\\frac{\\sqrt3\\pi^2}6=\\frac{9\\pi^2}{48}=\\frac{3\\pi^2}{16}$, and $2y'+3\\pi^2y=0$ as before."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^3u=\\frac{3\\sin u-\\sin3u}4$ and $\\cos^3u=\\frac{3\\cos u+\\cos3u}4$ turn a power into a sum and often make a derivative evaluate at a special angle.",
+    "For a tower of functions, first compute the inner values at the given point (here $g=2$, $v=\\frac{2\\pi}3$, $u=-\\frac\\pi6$) - the designed values are standard angles; only then multiply the local derivatives.",
+    "$\\frac{d}{dx}g^{3/2}=\\frac32\\sqrt g\\,g'$. When the options are linear relations between $y$ and $y'$, compute $y$ and $y'$ separately and substitute."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Monotonicity of functions"
+   ],
+   "level": 3,
+   "question": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\begin{cases}\\left(2\\sin\\left(\\frac1x\\right)\\right)|x|, & x\\ne0\\\\ 0, & x=0\\end{cases}$. Then $f$ is:",
+   "options": [
+    "monotonic on $(-\\infty,0)$ only",
+    "monotonic on $(0,\\infty)$ only",
+    "not monotonic on $(-\\infty,0)$ and $(0,\\infty)$",
+    "monotonic on $(-\\infty,0)\\cup(0,\\infty)$"
+   ],
+   "answer": "(C) not monotonic on $(-\\infty,0)$ and $(0,\\infty)$",
+   "key_idea": "Near $0$ the derivative $2\\sin\\frac1x-\\frac2x\\cos\\frac1x$ keeps changing sign, so $f$ cannot be monotonic on either side.",
+   "solution": [
+    "For $x>0$, $f(x)=2x\\sin\\frac1x$; for $x<0$, $f(x)=-2x\\sin\\frac1x$ (since $|x|=-x$).",
+    "For $x>0$: $f'(x)=2\\sin\\frac1x+2x\\cos\\frac1x\\cdot\\left(-\\frac1{x^2}\\right)=2\\sin\\frac1x-\\frac2x\\cos\\frac1x$.",
+    "For $x<0$: $f'(x)=-2\\sin\\frac1x+\\frac2x\\cos\\frac1x$.",
+    "At $x=\\frac1{2n\\pi}$ ($n\\ge1$): $\\sin\\frac1x=0$, $\\cos\\frac1x=1$, so $f'(x)=-4n\\pi<0$; the same value occurs at $x=-\\frac1{2n\\pi}$ (here $f'$ is even because $f$ is odd).",
+    "At $x=\\frac1{(2n+1)\\pi}$: $\\sin\\frac1x=0$, $\\cos\\frac1x=-1$, so $f'(x)=2(2n+1)\\pi>0$; again the same value at $x=-\\frac1{(2n+1)\\pi}$.",
+    "So $f'$ takes both signs in every interval $(0,\\delta)$ and $(-\\delta,0)$: $f'(x)$ is an oscillating function and $f$ is not monotonic on $(0,\\infty)$ nor on $(-\\infty,0)$.",
+    "Hence (A) and (B) fail (monotonic on one side only is false) and (D) fails too: the answer is (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The question prints f(x) = (2 sin(1/x))|x|, but the PDF's solution works with f(x) = (2 - sin(1/x))x for x>0 and -(2 - sin(1/x))x for x<0, i.e. a different function (the intended one is probably (2 - sin(1/x))|x|; the printed question looks like a misprint of it). I solved the printed function. Both functions are non-monotonic on each side (for 2 - sin(1/x): f' = 2 - sin(1/x) + cos(1/x)/x is +ve at x=1/(2n pi) and -ve at x=1/((2n+1)pi) for n>=1), so the key (C) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Compare values: $f$ vanishes at $\\frac1{n\\pi}$ but is positive and negative in between, so it goes up and down - no derivative needed.",
+     "solution": [
+      "For $x>0$ take $x_k=\\frac{2}{(2k+1)\\pi}$; then $\\sin\\frac1{x_k}=\\sin\\frac{(2k+1)\\pi}2=(-1)^k$ and $f(x_k)=2x_k(-1)^k$.",
+      "Take also $z_k=\\frac{1}{k\\pi}$ where $f(z_k)=0$. The points interlace: $\\frac2{7\\pi}<\\frac1{3\\pi}<\\frac2{5\\pi}<\\frac1{2\\pi}$.",
+      "Values: $f\\left(\\frac2{7\\pi}\\right)=-\\frac4{7\\pi}<0$, $f\\left(\\frac1{3\\pi}\\right)=0$, $f\\left(\\frac2{5\\pi}\\right)=\\frac4{5\\pi}>0$, $f\\left(\\frac1{2\\pi}\\right)=0$.",
+      "Moving to the right the values go $-,0,+,0$: increasing from $\\frac2{7\\pi}$ to $\\frac2{5\\pi}$, then decreasing to $\\frac1{2\\pi}$. So $f$ is not monotonic on $(0,\\infty)$.",
+      "$f$ is odd ($f(-x)=2|x|\\sin\\left(-\\frac1x\\right)=-f(x)$), and an odd function is increasing on $(0,\\infty)$ iff it is increasing on $(-\\infty,0)$ (same for decreasing). So $f$ is not monotonic on $(-\\infty,0)$ either: (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x\\sin\\frac1x$ (with value $0$ at $0$) is continuous at $0$ but is not monotone in any neighbourhood of $0$; its zeros $\\frac1{n\\pi}$ and extrema near $\\frac2{(2k+1)\\pi}$ alternate.",
+    "If $f$ is odd, then monotonicity on $(0,\\infty)$ and on $(-\\infty,0)$ are equivalent (same direction); for an even function the directions are opposite. So 'monotonic on exactly one side' is impossible for odd or even $f$.",
+    "Monotonic $\\Rightarrow$ $f'$ of constant sign; an oscillating derivative with unbounded swings (here $\\frac{2}{x}\\cos\\frac1x$) rules out monotonicity."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Principal values of inverse trigonometric functions",
+    "Differentiation of a piecewise-defined function"
+   ],
+   "level": 3,
+   "question": "If $2y=\\left(\\cot^{-1}\\left(\\frac{\\sqrt3\\cos x+\\sin x}{\\cos x-\\sqrt3\\sin x}\\right)\\right)^2$, $x\\in\\left(0,\\frac\\pi2\\right)$ then $\\frac{dy}{dx}$ is equal to",
+   "options": [
+    "$2x-\\frac\\pi3$",
+    "$x-\\frac\\pi6$",
+    "$\\frac\\pi3-x$",
+    "$\\frac\\pi6-x$"
+   ],
+   "answer": "(B) $x-\\frac\\pi6$ (valid on $\\left(0,\\frac\\pi6\\right)$)",
+   "key_idea": "Divide by $2$ to get $\\frac{\\cos(\\frac\\pi6-x)}{\\sin(\\frac\\pi6-x)}=\\cot\\left(\\frac\\pi6-x\\right)$, then reduce into the principal range $(0,\\pi)$ of $\\cot^{-1}$.",
+   "solution": [
+    "Divide numerator and denominator by $2$: $\\frac{\\frac{\\sqrt3}2\\cos x+\\frac12\\sin x}{\\frac12\\cos x-\\frac{\\sqrt3}2\\sin x}=\\frac{\\cos\\left(\\frac\\pi6-x\\right)}{\\sin\\left(\\frac\\pi6-x\\right)}$.",
+    "So $2y=\\left[\\cot^{-1}\\left(\\cot\\left(\\frac\\pi6-x\\right)\\right)\\right]^2$.",
+    "Since $x\\in\\left(0,\\frac\\pi2\\right)$, $\\frac\\pi6-x\\in\\left(-\\frac\\pi3,\\frac\\pi6\\right)$, and $\\cot^{-1}(\\cot t)=t$ only for $t\\in(0,\\pi)$.",
+    "If $\\frac\\pi6-x\\in\\left(-\\frac\\pi3,0\\right)$ (i.e. $x\\in\\left(\\frac\\pi6,\\frac\\pi2\\right)$): $\\cot^{-1}(\\cot t)=t+\\pi$, so $2y=\\left(\\frac{7\\pi}6-x\\right)^2$.",
+    "If $\\frac\\pi6-x\\in\\left(0,\\frac\\pi6\\right)$ (i.e. $x\\in\\left(0,\\frac\\pi6\\right)$): $2y=\\left(\\frac\\pi6-x\\right)^2$.",
+    "Differentiate: $2y'=-2\\left(c-x\\right)$, so $\\frac{dy}{dx}=x-\\frac{7\\pi}6$ for $x\\in\\left(\\frac\\pi6,\\frac\\pi2\\right)$ and $\\frac{dy}{dx}=x-\\frac\\pi6$ for $x\\in\\left(0,\\frac\\pi6\\right)$.",
+    "Only one of the given options can match: $x-\\frac\\pi6$, which is option (B) (for $x\\in\\left(0,\\frac\\pi6\\right)$; on $\\left(\\frac\\pi6,\\frac\\pi2\\right)$ the derivative is $x-\\frac{7\\pi}6$, which is not among the options)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two things. (1) The PDF's second line writes the denominator as 1/2 cos x + (sqrt3/2) sin x, which is a sign slip; the question has cos x - sqrt3 sin x, i.e. 1/2 cos x - (sqrt3/2) sin x = sin(pi/6 - x). The PDF's next line (sin(pi/6 - x)) is right, so only the displayed middle step is fixed. (2) The PDF does not say that the key (B) holds only for x in (0, pi/6); on (pi/6, pi/2) the derivative is x - 7pi/6. This is stated in the last bullet. (Also 2y jumps at x = pi/6 where the argument is undefined.)",
+   "alternate_solutions": [
+    {
+     "idea": "Divide by $\\cos x$: the argument is $\\tan\\left(\\frac\\pi3+x\\right)$, so $\\cot^{-1}=\\frac\\pi2-\\tan^{-1}(\\cdot)$ and branches follow from $\\tan^{-1}\\tan\\theta$.",
+     "solution": [
+      "Divide the numerator and denominator by $\\cos x$: $\\frac{\\sqrt3+\\tan x}{1-\\sqrt3\\tan x}=\\tan\\left(\\frac\\pi3+x\\right)$.",
+      "Use $\\cot^{-1}z=\\frac\\pi2-\\tan^{-1}z$ (valid for all real $z$ with $\\cot^{-1}z\\in(0,\\pi)$): $2y=\\left[\\frac\\pi2-\\tan^{-1}\\tan\\left(\\frac\\pi3+x\\right)\\right]^2$.",
+      "For $x\\in\\left(0,\\frac\\pi6\\right)$: $\\frac\\pi3+x\\in\\left(\\frac\\pi3,\\frac\\pi2\\right)$, so $\\tan^{-1}\\tan\\left(\\frac\\pi3+x\\right)=\\frac\\pi3+x$ and $2y=\\left(\\frac\\pi6-x\\right)^2$.",
+      "For $x\\in\\left(\\frac\\pi6,\\frac\\pi2\\right)$: $\\frac\\pi3+x\\in\\left(\\frac\\pi2,\\frac{5\\pi}6\\right)$, so $\\tan^{-1}\\tan\\theta=\\theta-\\pi$ and $2y=\\left(\\frac{7\\pi}6-x\\right)^2$.",
+      "Differentiating gives $\\frac{dy}{dx}=x-\\frac\\pi6$ on $\\left(0,\\frac\\pi6\\right)$ and $x-\\frac{7\\pi}6$ on $\\left(\\frac\\pi6,\\frac\\pi2\\right)$ - the same as before."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cot^{-1}(\\cot t)=t-k\\pi$ where $k$ is the integer with $t-k\\pi\\in(0,\\pi)$; $\\tan^{-1}(\\tan t)=t-k\\pi$ with $t-k\\pi\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$. Always locate the angle in the principal range before simplifying.",
+    "$a\\cos x+b\\sin x=R\\cos(x-\\alpha)$ and $\\frac{\\sqrt3\\cos x+\\sin x}{\\cos x-\\sqrt3\\sin x}=\\cot\\left(\\frac\\pi6-x\\right)=\\tan\\left(\\frac\\pi3+x\\right)$ - spot the $\\frac\\pi6$ and $\\frac\\pi3$ angles.",
+    "A branch change makes the function jump (here at $x=\\frac\\pi6$): the derivative formula can differ on each side. Check which interval the option corresponds to."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Local extrema of polynomial functions"
+   ],
+   "level": 2,
+   "question": "If $f(x)$ is a non-zero polynomial of degree four, having local extreme points at $x=-1,0,1$; then the set $S=\\{x\\in\\mathbb{R}:f(x)=f(0)\\}$ contains exactly :",
+   "options": [
+    "Four irrational numbers",
+    "Four rational numbers",
+    "Two irrational and one rational number",
+    "Two irrational and two rational numbers"
+   ],
+   "answer": "(C) Two irrational and one rational number",
+   "key_idea": "A quartic with critical points $-1,0,1$ has $f'(x)=A(x+1)x(x-1)$, so $f(x)-f(0)=A\\left(\\frac{x^4}4-\\frac{x^2}2\\right)$.",
+   "solution": [
+    "$f$ has degree $4$, so $f'$ has degree $3$; its roots are the local extreme points $-1,0,1$, so $f'(x)=A(x+1)\\,x\\,(x-1)$ with $A\\ne0$.",
+    "$f'(x)=A\\left(x^3-x\\right)$.",
+    "Integrate: $f(x)=A\\left(\\frac{x^4}4-\\frac{x^2}2\\right)+C$, and $f(0)=C$.",
+    "$f(x)=f(0)\\Rightarrow A\\left(\\frac{x^4}4-\\frac{x^2}2\\right)=0\\Rightarrow\\frac{x^2}2\\left(\\frac{x^2}2-1\\right)=0$ (as $A\\ne0$).",
+    "So $x^2=0$ or $x^2=2$, i.e. $x=0,-\\sqrt2,\\sqrt2$.",
+    "$S=\\{0,-\\sqrt2,\\sqrt2\\}$: one rational number ($0$) and two irrational numbers ($\\pm\\sqrt2$), so (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry: $f'$ is odd, so $f$ is even; $f(x)-f(0)$ is then even with a double root at $0$ and has the form $x^2(\\alpha x^2+\\beta)$.",
+     "solution": [
+      "Critical points $-1,0,1$ are symmetric and $f'$ is a cubic with these three roots, so $f'(x)=A(x^3-x)$ is an odd function.",
+      "An even-degree polynomial whose derivative is odd is even: $f(x)=\\alpha x^4+\\beta x^2+C$ (no odd powers).",
+      "Then $f(x)-f(0)=\\alpha x^4+\\beta x^2=x^2\\left(\\alpha x^2+\\beta\\right)$, with $\\alpha\\ne0$; $x=0$ is a root (double).",
+      "$f'(x)=4\\alpha x^3+2\\beta x=A(x^3-x)$ gives $\\beta=-2\\alpha$ (compare the ratio of coefficients: $\\frac{2\\beta}{4\\alpha}=-1$).",
+      "So $f(x)-f(0)=\\alpha x^2\\left(x^2-2\\right)$, with roots $0,\\pm\\sqrt2$: one rational and two irrational numbers (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A polynomial of degree $n$ with $n-1$ distinct critical points has $f'(x)=A\\prod(x-c_i)$; its derivative is determined up to the constant $A$.",
+    "If $f'$ is odd then $f$ is even (and if $f'$ is even then $f=\\text{odd}+C$). Then $f(x)=f(0)$ is a polynomial equation in $x^2$.",
+    "Each root of $f(x)=f(0)$ that is also a critical point (here $x=0$) is a repeated root; the set $S$ lists it once."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Monotonicity using the first derivative"
+   ],
+   "level": 2,
+   "question": "The function $f(x)=\\frac{4x^3-3x^2}{6}-2\\sin x+(2x-1)\\cos x$ :",
+   "options": [
+    "Decreases in $\\left[\\frac12,\\infty\\right)$",
+    "Decreases in $\\left(-\\infty,\\frac12\\right]$",
+    "Increases in $\\left(-\\infty,\\frac12\\right]$",
+    "Increases in $\\left[\\frac12,\\infty\\right)$"
+   ],
+   "answer": "(D) Increases in $\\left[\\frac12,\\infty\\right)$",
+   "key_idea": "The terms $\\mp2\\cos x$ cancel in $f'$, leaving $f'(x)=(2x-1)(x-\\sin x)$, and $x-\\sin x\\ge0$ for $x\\ge0$.",
+   "solution": [
+    "$\\frac{d}{dx}\\frac{4x^3-3x^2}{6}=\\frac{12x^2-6x}{6}=2x^2-x$.",
+    "$\\frac{d}{dx}\\left[-2\\sin x+(2x-1)\\cos x\\right]=-2\\cos x+2\\cos x-(2x-1)\\sin x=-(2x-1)\\sin x$.",
+    "So $f'(x)=2x^2-x-(2x-1)\\sin x=x(2x-1)-(2x-1)\\sin x=(2x-1)(x-\\sin x)$.",
+    "For $x\\ge0$ we have $x\\ge\\sin x$ (equality only at $x=0$), so $x-\\sin x\\ge0$; for $x\\ge\\frac12$ also $2x-1\\ge0$.",
+    "Hence $f'(x)\\ge0$ for $x\\in\\left[\\frac12,\\infty\\right)$ ($=0$ only at $x=\\frac12$): $f(x)$ is increasing for $x\\in\\left[\\frac12,\\infty\\right)$.",
+    "Option (A) is false ($f'\\ge0$ there). For $0<x<\\frac12$, $2x-1<0$ and $x-\\sin x>0$, so $f'<0$ there: $f$ is not increasing on $\\left(-\\infty,\\frac12\\right]$ (C false). For $x<0$, $f'>0$, so $f$ is not decreasing on $\\left(-\\infty,\\frac12\\right]$ (B false). Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$x>\\sin x$ for $x>0$ and $x<\\sin x$ for $x<0$, so $x-\\sin x$ has the sign of $x$ and vanishes only at $0$.",
+    "$\\frac{d}{dx}\\left[(\\alpha x+\\beta)\\cos x-\\alpha\\sin x\\right]=-(\\alpha x+\\beta)\\sin x$: such terms cancel the $\\cos x$ part in $f'$ (integration-by-parts pattern); in this question $\\alpha=2,\\beta=-1$.",
+    "If $f'=(\\text{linear})\\times(\\text{factor of fixed sign on a half-line})$, the sign table is read from the linear factor alone; check the other half-lines for the options that say 'decreasing'."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Bounds on a function and its derivative from derivative inequalities"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a twice differentiable function on $(1,6)$. If $f(2)=8$, $f'(2)=5$, $f'(x)\\ge1$ and $f''(x)\\ge4$, for all $x\\in(1,6)$, then :",
+   "options": [
+    "$f(5)+f'(5)\\ge28$",
+    "$f(5)+f'(5)\\le26$",
+    "$f(5)\\le10$",
+    "$f'(5)+f''(5)\\le20$"
+   ],
+   "answer": "(A) $f(5)+f'(5)\\ge28$",
+   "key_idea": "Integrate $f'\\ge1$ and $f''\\ge4$ over $[2,5]$ to bound $f(5)$ and $f'(5)$ from below.",
+   "solution": [
+    "$f'(x)\\ge1$ on $[2,5]$, so $\\int_2^5f'(x)\\,dx\\ge\\int_2^51\\,dx$.",
+    "$[f(x)]_2^5\\ge5-2$, i.e. $f(5)-f(2)\\ge3$.",
+    "$f(5)\\ge3+f(2)=3+8=11$ ..... (I)",
+    "$f''(x)\\ge4$ on $[2,5]$, so $\\int_2^5f''(x)\\,dx\\ge\\int_2^54\\,dx$.",
+    "$[f'(x)]_2^5\\ge4(5-2)=12$, i.e. $f'(5)-f'(2)\\ge12$.",
+    "$f'(5)\\ge12+f'(2)=12+5=17$ ..... (II)",
+    "Adding (I) and (II): $f(5)+f'(5)\\ge11+17=28$, which is option (A).",
+    "Options (B) and (C) contradict (I) and (II) (they would need $f(5)+f'(5)\\le26$, $f(5)\\le10$); (D) fails as $f'(5)+f''(5)\\ge17+4=21>20$. Hence (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Taylor's theorem with Lagrange remainder: $f''\\ge4$ forces $f$ above the parabola $8+5(x-2)+2(x-2)^2$.",
+     "solution": [
+      "Taylor with remainder about $2$: $f(5)=f(2)+f'(2)(3)+\\frac{f''(\\xi)}{2}(3)^2$ for some $\\xi\\in(2,5)$.",
+      "With $f''(\\xi)\\ge4$: $f(5)\\ge8+15+\\frac92\\cdot4=41$.",
+      "For the derivative, apply the mean value theorem to $f'$ on $[2,5]$: $f'(5)-f'(2)=3f''(\\eta)\\ge12$, so $f'(5)\\ge17$.",
+      "Hence $f(5)+f'(5)\\ge41+17=58\\ge28$, so option (A) holds (with room to spare).",
+      "The sharper bounds also reject the others at once: $f(5)\\ge41>10$ kills (C) and (B), and $f'(5)+f''(5)\\ge17+4=21>20$ kills (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f''\\ge k$ on $[a,b]$ then $f'(b)\\ge f'(a)+k(b-a)$ and $f(b)\\ge f(a)+f'(a)(b-a)+\\frac k2(b-a)^2$ (the graph lies above the parabola with second derivative $k$).",
+    "Inequalities between functions may be integrated over an interval: $g\\ge h\\Rightarrow\\int g\\ge\\int h$. Do it twice for a bound on $f''$.",
+    "The first-order bound ($f(5)\\ge11$) is weaker than the second-order one ($f(5)\\ge41$), but both are valid and either is enough here."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Simplification of inverse trigonometric expressions",
+    "Differentiation and constants of integration"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=\\left(\\sin(\\tan^{-1}x)+\\sin(\\cot^{-1}x)\\right)^2-1$, $|x|>1$. If $\\frac{dy}{dx}=\\frac12\\frac{d}{dx}\\left(\\sin^{-1}(f(x))\\right)$ and $y(\\sqrt3)=\\frac\\pi6$, then $y(-\\sqrt3)$ is equal to :",
+   "options": [
+    "$\\frac{5\\pi}6$",
+    "$\\frac\\pi3$",
+    "$\\frac{2\\pi}3$",
+    "$-\\frac\\pi6$"
+   ],
+   "answer": "(A) $\\frac{5\\pi}{6}$",
+   "key_idea": "$f(x)=\\sin(2\\tan^{-1}x)$, and $\\sin^{-1}\\sin\\theta$ must be reduced to $[-\\frac\\pi2,\\frac\\pi2]$ separately for $x>1$ and $x<-1$.",
+   "solution": [
+    "$\\cot^{-1}x=\\frac\\pi2-\\tan^{-1}x$, so $f(x)=\\left(\\sin(\\tan^{-1}x)+\\sin\\left(\\frac\\pi2-\\tan^{-1}x\\right)\\right)^2-1$.",
+    "$f(x)=1+2\\sin(\\tan^{-1}x)\\cos(\\tan^{-1}x)-1=\\sin\\left(2\\tan^{-1}x\\right)$.",
+    "For $x>1$: $2\\tan^{-1}x\\in\\left(\\frac\\pi2,\\pi\\right)$, so $\\sin^{-1}f(x)=\\sin^{-1}\\sin\\left(2\\tan^{-1}x\\right)=\\pi-2\\tan^{-1}x$ (for $x=\\sqrt3$ this is $\\frac\\pi3$).",
+    "For $x<-1$: $2\\tan^{-1}x\\in\\left(-\\pi,-\\frac\\pi2\\right)$, so $\\sin^{-1}f(x)=-\\pi-2\\tan^{-1}x$.",
+    "Both expressions have the same derivative $-\\frac2{1+x^2}$, so $\\frac{dy}{dx}=\\frac12\\cdot\\left(-\\frac{2}{1+x^2}\\right)=-\\frac1{1+x^2}$, i.e. $\\frac{dy}{dx}=\\frac12\\frac{d}{dx}\\left(\\pi-2\\tan^{-1}x\\right)$.",
+    "Integrate: $y=-\\tan^{-1}x+c$.",
+    "Using $y(\\sqrt3)=\\frac\\pi6$: $\\frac\\pi6=-\\frac\\pi3+c$, so $c=\\frac\\pi2$ and $y=-\\tan^{-1}x+\\frac\\pi2$.",
+    "Taking the same formula for $x=-\\sqrt3$: $y(-\\sqrt3)=\\frac\\pi3+\\frac\\pi2=\\frac{5\\pi}6$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes sin^-1 f(x) = pi - 2 tan^-1 x 'since x = sqrt3' and then uses the same formula for x = -sqrt3. For x < -1 the correct reduction is sin^-1 f(x) = -pi - 2 tan^-1 x (the PDF's formula is valid only for x > 1). The derivative is the same on both sides (-2/(1+x^2)), so the working still leads to y = -tan^-1 x + c, but the answer 5pi/6 depends on taking ONE constant c for both pieces of the disconnected domain |x|>1 (the question gives y at only one point). Strictly the data do not fix y(-sqrt3); the key (A) is the intended answer under the single-constant reading.",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate directly: $f(x)=\\frac{2x}{1+x^2}$ and $\\sqrt{1-f^2}=\\frac{x^2-1}{1+x^2}$ for $|x|>1$, so the branch question never arises.",
+     "solution": [
+      "$f(x)=\\sin(2\\tan^{-1}x)=\\frac{2x}{1+x^2}$ for every real $x$.",
+      "$1-f^2=\\frac{(1+x^2)^2-4x^2}{(1+x^2)^2}=\\left(\\frac{1-x^2}{1+x^2}\\right)^2$, so $\\sqrt{1-f^2}=\\frac{|1-x^2|}{1+x^2}=\\frac{x^2-1}{1+x^2}$ for $|x|>1$.",
+      "$f'(x)=\\frac{2(1-x^2)}{(1+x^2)^2}$, so $\\frac{d}{dx}\\sin^{-1}f=\\frac{f'}{\\sqrt{1-f^2}}=\\frac{2(1-x^2)}{(1+x^2)^2}\\cdot\\frac{1+x^2}{x^2-1}=-\\frac2{1+x^2}$ for all $|x|>1$ (both signs of $x$).",
+      "So $y'=-\\frac1{1+x^2}$ and $y=-\\tan^{-1}x+c$; $y(\\sqrt3)=\\frac\\pi6$ gives $c=\\frac\\pi2$.",
+      "With the same constant, $y(-\\sqrt3)=\\frac\\pi3+\\frac\\pi2=\\frac{5\\pi}6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}x+\\cot^{-1}x=\\frac\\pi2$ for all real $x$ (principal values $\\cot^{-1}x\\in(0,\\pi)$), so $\\sin(\\tan^{-1}x)+\\sin(\\cot^{-1}x)$ becomes $\\sin\\theta+\\cos\\theta$.",
+    "$\\sin^{-1}\\frac{2x}{1+x^2}=2\\tan^{-1}x$ for $|x|\\le1$; $=\\pi-2\\tan^{-1}x$ for $x\\ge1$; $=-\\pi-2\\tan^{-1}x$ for $x\\le-1$ (e.g. at $x=2$ both sides give $0.9273$).",
+    "On a disconnected domain (like $|x|>1$) an antiderivative may carry different constants on each piece: $y(\\sqrt3)$ alone need not fix $y(-\\sqrt3)$ unless a single formula is intended."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Maxima and minima of the slope of a curve"
+   ],
+   "level": 2,
+   "question": "The maximum slope of the curve $y=\\frac12x^4-5x^3+18x^2-19x$ occurs at the point :",
+   "options": [
+    "$(0,0)$",
+    "$\\left(3,\\frac{21}{2}\\right)$",
+    "$(2,2)$",
+    "$(2,9)$"
+   ],
+   "answer": "(C) $(2,2)$",
+   "key_idea": "The slope is $m=y'$; its maximum is found from $\\frac{dm}{dx}=y''=0$ and the sign change of $y''$.",
+   "solution": [
+    "Slope $m=\\frac{dy}{dx}=2x^3-15x^2+36x-19$.",
+    "To find the maximum of $m$ differentiate: $\\frac{dm}{dx}=6x^2-30x+36=6(x-2)(x-3)=0\\Rightarrow x=2$ or $x=3$.",
+    "Sign of $\\frac{dm}{dx}$: $+$ for $x<2$, $-$ for $2<x<3$, $+$ for $x>3$.",
+    "So $x=2$ is a point of (local) maximum of the slope and $x=3$ is a point of minimum.",
+    "The point of maximum slope has $x=2$: $y=\\frac12(2)^4-5(2)^3+18(2)^2-19(2)=8-40+72-38=2$.",
+    "The point is $(2,2)$, option (C). (The slope there is $m(2)=16-60+72-19=9$.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift to the inflection centre $t=x-\\frac52$: the slope becomes $2t^3-\\frac32t+\\text{const}$, whose local maximum is at $t=-\\frac12$.",
+     "solution": [
+      "Put $x=t+\\frac52$. Then $m'(x)=6(x-2)(x-3)=6\\left(t^2-\\frac14\\right)$, so $m=2t^3-\\frac32t+m\\left(\\frac52\\right)$ with $m\\left(\\frac52\\right)=\\frac{17}2$.",
+      "$m=2t^3-\\frac32t+\\frac{17}2$ is a cubic with positive leading coefficient and turning points at $t=\\pm\\frac12$; the left one, $t=-\\frac12$ (that is $x=2$), is the local maximum: $m=2\\left(-\\frac18\\right)+\\frac34+\\frac{17}2=9$.",
+      "Check against the other candidates: $m(3)=8<9$ and $m(0)=-19$; $(2,9)$ is not on the curve because $y(2)=2$.",
+      "Hence the maximum slope occurs at $x=2$, i.e. at $(2,2)$ (option C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The slope of a curve is largest/smallest where $y''=0$ and $y''$ changes sign: extrema of the slope are inflection points of the curve.",
+    "For a quartic with positive leading coefficient the slope $y'$ is a cubic: unbounded in both directions, so 'maximum slope' means the local maximum (at the smaller root of $y''=0$ here, $x=2$).",
+    "Give the point, not just $x$: always substitute back into $y$ (an option like $(2,9)$ may not even lie on the curve)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Optimisation: maximum area of an inscribed triangle"
+   ],
+   "level": 2,
+   "question": "The triangle of maximum area that can be inscribed in a given circle of radius 'r' is :",
+   "options": [
+    "An equilateral triangle of height $\\frac{2r}{3}$.",
+    "A right angle triangle having two of its sides of length $2r$ and $r$.",
+    "An equilateral triangle having each of its side of length $\\sqrt3\\,r$.",
+    "An isosceles triangle with base equal to $2r$."
+   ],
+   "answer": "(C) An equilateral triangle having each side of length $\\sqrt3\\,r$",
+   "key_idea": "With circumradius $r$: area $\\Delta=\\frac{abc}{4r}$, and AM-GM with $a+b+c\\le3\\sqrt3\\,r$ bounds it by equality at $a=b=c$.",
+   "solution": [
+    "For a triangle $ABC$ inscribed in a circle of radius $r$, the area is $\\Delta=\\frac{abc}{4r}$.",
+    "$\\frac{a}{2r}=\\sin A$ etc., so $\\frac{a+b+c}{2r}=\\sin A+\\sin B+\\sin C$.",
+    "Since $\\sin$ is concave on $(0,\\pi)$ (centroid of the points $(A,\\sin A)$, $(B,\\sin B)$, $(C,\\sin C)$ lies below the curve): $\\frac{\\sin A+\\sin B+\\sin C}{3}\\le\\sin\\left(\\frac{A+B+C}{3}\\right)=\\sin\\frac\\pi3$.",
+    "So $\\sin A+\\sin B+\\sin C\\le\\frac{3\\sqrt3}{2}$, i.e. $\\frac{a+b+c}{2r}\\le\\frac{3\\sqrt3}2$ and $\\frac{a+b+c}{3}\\le\\sqrt3\\,r$.",
+    "AM-GM: $(abc)^{1/3}\\le\\frac{a+b+c}{3}$, so $abc\\le\\left(\\frac{a+b+c}{3}\\right)^3$.",
+    "$\\Delta=\\frac{abc}{4r}\\le\\frac1{4r}\\left(\\frac{a+b+c}3\\right)^3\\le\\frac1{4r}\\left(\\sqrt3\\,r\\right)^3$.",
+    "$\\Delta\\le\\frac{3\\sqrt3}{4}r^2$, so $\\Delta_{max}=\\frac{3\\sqrt3}4r^2$, with equality when $a=b=c$.",
+    "So the triangle is equilateral, with side $a=\\sqrt3\\,r$ (option C). (Option A is false: the height of this triangle is $\\frac{3r}2$, not $\\frac{2r}3$.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Smoothing: for a fixed side the area is greatest when the third vertex is on the perpendicular bisector, so the maximum triangle has equal sides.",
+     "solution": [
+      "For a fixed chord $BC$, the area $\\frac12\\cdot BC\\cdot(\\text{height of }A)$ is greatest when $A$ is farthest from $BC$, i.e. at the midpoint of the major arc: $AB=AC$.",
+      "The maximum-area triangle (it exists, as the area is continuous on a compact set of positions) must be optimal for each of its three sides in this way, so $AB=AC$, $BA=BC$ and $CA=CB$.",
+      "Hence $a=b=c$: the triangle is equilateral, with $A=B=C=\\frac\\pi3$ and side $a=2r\\sin\\frac\\pi3=\\sqrt3\\,r$.",
+      "Area $=\\frac{\\sqrt3}{4}a^2=\\frac{\\sqrt3}4\\cdot3r^2=\\frac{3\\sqrt3}4r^2$, which beats the others: the isosceles triangle with base $2r$ has area $r^2$, and the right triangle with sides $r$ and $\\sqrt3r$ has area $\\frac{\\sqrt3}2r^2<\\frac{3\\sqrt3}4r^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a triangle of circumradius $R$: $\\Delta=\\frac{abc}{4R}=2R^2\\sin A\\sin B\\sin C$.",
+    "Inscribed in a circle of radius $R$: maximum area $\\frac{3\\sqrt3}4R^2$, maximum perimeter $3\\sqrt3\\,R$, both for the equilateral triangle; in general the regular $n$-gon has the maximum area $\\frac n2R^2\\sin\\frac{2\\pi}n$ (for $n=3$: $1.299R^2$).",
+    "Jensen: for concave $\\sin$ on $(0,\\pi)$, $\\sin A+\\sin B+\\sin C\\le3\\sin\\frac{A+B+C}3=\\frac{3\\sqrt3}2$; for $\\ln\\sin$ the product $\\sin A\\sin B\\sin C\\le\\frac{3\\sqrt3}8$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Monotonicity of a function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\frac{x}{\\sqrt{a^2+x^2}}-\\frac{d-x}{\\sqrt{b^2+(d-x)^2}}$, $x\\in\\mathbb{R}$, where $a$, $b$ and $d$ are non-zero real constants. Then :",
+   "options": [
+    "$f$ is neither increasing nor decreasing function of $x$",
+    "$f'$ is not a continuous function of $x$",
+    "$f$ is a decreasing function of $x$",
+    "$f$ is an increasing function of $x$"
+   ],
+   "answer": "(D) $f$ is an increasing function of $x$",
+   "key_idea": "Each term's derivative is a positive quantity: $\\frac{d}{dx}\\frac{x}{\\sqrt{a^2+x^2}}=\\frac{a^2}{(a^2+x^2)^{3/2}}$.",
+   "solution": [
+    "$f(x)=\\frac{x}{\\sqrt{a^2+x^2}}-\\frac{d-x}{\\sqrt{b^2+(d-x)^2}}$.",
+    "$\\frac{d}{dx}\\frac{x}{\\sqrt{a^2+x^2}}=\\frac{\\sqrt{a^2+x^2}-\\frac{x^2}{\\sqrt{a^2+x^2}}}{a^2+x^2}=\\frac{a^2}{\\left(a^2+x^2\\right)^{3/2}}$.",
+    "Similarly $\\frac{d}{dx}\\left[-\\frac{d-x}{\\sqrt{b^2+(d-x)^2}}\\right]=\\frac{b^2}{\\left(b^2+(d-x)^2\\right)^{3/2}}$.",
+    "$f'(x)=\\frac{a^2}{\\left(a^2+x^2\\right)^{3/2}}+\\frac{b^2}{\\left(b^2+(d-x)^2\\right)^{3/2}}>0$ for all $x\\in\\mathbb{R}$ ($a,b\\ne0$).",
+    "$f'$ is also continuous (a quotient of continuous functions with a non-zero denominator), so (B) is false; $f'>0$ gives (D): $f$ is an increasing function of $x$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Structure: $\\frac{t}{\\sqrt{c^2+t^2}}=\\frac{u}{\\sqrt{1+u^2}}$ with $u=\\frac t{|c|}$ is an increasing function of $t$, and $f$ is a sum of two such terms.",
+     "solution": [
+      "Write $\\frac{x}{\\sqrt{a^2+x^2}}=\\sin\\left(\\tan^{-1}\\frac{x}{|a|}\\right)$: $\\tan^{-1}\\frac{x}{|a|}$ increases with $x$ on $\\left(-\\frac\\pi2,\\frac\\pi2\\right)$ and $\\sin$ increases there, so this term is increasing.",
+      "Likewise $-\\frac{d-x}{\\sqrt{b^2+(d-x)^2}}=\\frac{x-d}{\\sqrt{b^2+(x-d)^2}}=\\sin\\left(\\tan^{-1}\\frac{x-d}{|b|}\\right)$ is increasing in $x$.",
+      "A sum of increasing functions is increasing, so $f$ is an increasing function of $x$ (D).",
+      "(Interpretation: $f$ is the derivative of the path length $L(x)=\\sqrt{a^2+x^2}+\\sqrt{b^2+(d-x)^2}$, so $f'>0$ says $L$ is convex - the reflection-law problem has a unique minimum.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\frac{x}{\\sqrt{a^2+x^2}}=\\frac{a^2}{(a^2+x^2)^{3/2}}>0$; the function is odd, increasing, bounded in $(-1,1)$ and equals $\\sin\\left(\\tan^{-1}\\frac x{|a|}\\right)$.",
+    "$f(x)=L'(x)$ for $L(x)=\\sqrt{a^2+x^2}+\\sqrt{b^2+(d-x)^2}$ (shortest broken path / law of reflection); $f'>0$ means $L''>0$, so $L$ is convex with a unique minimum where $f=0$, i.e. $\\sin\\theta_1=\\sin\\theta_2$.",
+    "A sum of increasing functions is increasing; a function whose derivative is a sum of positive terms needs no sign analysis."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Rate of change of quantities (related rates)"
+   ],
+   "level": 1,
+   "question": "A water tank has the shape of an inverted right circular cone, whose semi-vertical angle is $\\tan^{-1}\\left(\\frac12\\right)$. Water is poured into it at a constant rate of 5 cubic metre per minute. Then the rate (in m/min.), at which the level of water is rising at the instant when the depth of water in the tank is 10 m; is :",
+   "options": [
+    "$\\frac2\\pi$",
+    "$\\frac1{15\\pi}$",
+    "$\\frac1{10\\pi}$",
+    "$\\frac1{5\\pi}$"
+   ],
+   "answer": "(D) $\\frac1{5\\pi}$",
+   "key_idea": "$\\tan\\theta=\\frac rh=\\frac12$ gives $h=2r$, so $V$ and $\\frac{dV}{dt}$ can be written with $h$ alone.",
+   "solution": [
+    "Given $\\frac{dV}{dt}=5\\,\\text{m}^3/\\text{min}$. Let $r$ and $h$ be the radius and depth of the water at any time.",
+    "$V=\\frac13\\pi r^2h$ ..... (i)",
+    "$\\tan\\theta=\\frac rh=\\frac12\\Rightarrow h=2r$, so $\\frac{dh}{dt}=2\\frac{dr}{dt}$ ..... (ii)",
+    "Differentiate (i): $\\frac{dV}{dt}=\\frac13\\pi\\left(2r\\frac{dr}{dt}h+r^2\\frac{dh}{dt}\\right)=\\frac13\\left(100\\pi\\cdot\\frac12+25\\pi\\right)\\frac{dh}{dt}$ (using $r=5$, $h=10$, $\\frac{dr}{dt}=\\frac12\\frac{dh}{dt}$).",
+    "At $h=10$, $r=5$: $5=\\frac{75\\pi}{3}\\frac{dh}{dt}=25\\pi\\frac{dh}{dt}$.",
+    "$\\frac{dh}{dt}=\\frac{1}{5\\pi}$ m/min, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rate of rise $=\\frac{\\text{rate of filling}}{\\text{area of the water surface}}$, since $dV=A\\,dh$.",
+     "solution": [
+      "A thin layer of thickness $dh$ at the surface has volume $A\\,dh$, where $A$ is the area of the free surface: $\\frac{dV}{dt}=A\\frac{dh}{dt}$.",
+      "At depth $h=10$ the surface radius is $r=h\\tan\\theta=10\\cdot\\frac12=5$, so $A=\\pi r^2=25\\pi$.",
+      "$\\frac{dh}{dt}=\\frac{5}{25\\pi}=\\frac1{5\\pi}$ m/min (D).",
+      "Check with $V=\\frac{\\pi}{12}h^3$: $\\frac{dV}{dt}=\\frac\\pi4h^2\\frac{dh}{dt}=25\\pi\\frac{dh}{dt}$ at $h=10$ - the same $25\\pi$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any vessel, $\\frac{dV}{dt}=A(h)\\frac{dh}{dt}$ where $A(h)$ is the area of the free surface at depth $h$.",
+    "Cone with semi-vertical angle $\\alpha$, apex down: $V=\\frac\\pi3\\tan^2\\alpha\\,h^3$, so $\\frac{dV}{dt}=\\pi\\tan^2\\alpha\\,h^2\\frac{dh}{dt}$; for $\\tan\\alpha=\\frac12$ this is $\\frac{\\pi h^2}{4}\\frac{dh}{dt}$.",
+    "Eliminate extra variables with the fixed ratio ($r=\\frac h2$) before differentiating - it avoids a product rule."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Monotonicity of a function"
+   ],
+   "level": 3,
+   "question": "Let $f:(-1,\\infty)\\to\\mathbb{R}$ be defined by $f(0)=1$ and $f(x)=\\frac1x\\log_e(1+x)$, $x\\ne0$. Then the function $f$ :",
+   "options": [
+    "decreases in $(-1,\\infty)$.",
+    "decreases in $(-1,0)$ and increases in $(0,\\infty)$.",
+    "increases in $(-1,\\infty)$.",
+    "increases in $(-1,0)$ and decreases in $(0,\\infty)$."
+   ],
+   "answer": "(A) decreases in $(-1,\\infty)$",
+   "key_idea": "$f'(x)$ has the sign of $h(x)=x-(1+x)\\ln(1+x)$, and $h$ has its maximum $h(0)=0$.",
+   "solution": [
+    "For $x\\ne0$: $f'(x)=\\frac{x\\cdot\\frac1{1+x}-\\ln(1+x)\\cdot1}{x^2}$.",
+    "$f'(x)=\\frac{x-(1+x)\\ln(1+x)}{x^2(1+x)}$, and $x^2(1+x)>0$ for $x>-1$, $x\\ne0$.",
+    "Let $h(x)=x-(1+x)\\ln(1+x)$. Then $h'(x)=1-\\left(\\ln(1+x)+1\\right)=-\\ln(1+x)$.",
+    "Sign of $h'$: $+$ on $(-1,0)$ and $-$ on $(0,\\infty)$, so $h$ increases up to $x=0$ and decreases after it.",
+    "Hence $h$ has its maximum at $x=0$: $h(x)\\le h(0)=0$, i.e. $h(x)<0$ for $x\\ne0$.",
+    "So $f'(x)<0$ for all $x\\ne0$ in $(-1,\\infty)$.",
+    "$f$ is continuous at $0$ since $\\lim_{x\\to0}\\frac{\\ln(1+x)}x=1=f(0)$, so $f$ is decreasing in the whole of $(-1,\\infty)$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\frac{\\ln(1+x)}{x}=\\int_0^1\\frac{dt}{1+xt}$; the integrand decreases in $x$ for each $t$, so the integral does too.",
+     "solution": [
+      "For $x>-1$ and $t\\in[0,1]$: $\\int_0^1\\frac{dt}{1+xt}=\\left[\\frac{\\ln(1+xt)}{x}\\right]_0^1=\\frac{\\ln(1+x)}x$ for $x\\ne0$, and $=\\int_0^11\\,dt=1$ at $x=0$.",
+      "So $f(x)=\\int_0^1\\frac{dt}{1+xt}$ for every $x\\in(-1,\\infty)$ - including the given value $f(0)=1$.",
+      "For each fixed $t\\in(0,1]$, $x\\mapsto\\frac1{1+xt}$ is strictly decreasing on $(-1,\\infty)$ (the denominator $1+xt>0$ increases with $x$).",
+      "An integral of strictly decreasing functions is strictly decreasing, so $f$ decreases on $(-1,\\infty)$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{\\ln(1+x)}x$ is the slope of the chord of the concave curve $y=\\ln(1+x)$ from $(0,0)$, and chord slopes from a fixed point of a concave function decrease; hence $\\frac{\\ln(1+x)}{x}$ decreases on $(-1,\\infty)$ with value $1$ at $0$.",
+    "Consequence: $(1+x)\\ln(1+x)>x$ for $x>-1$, $x\\ne0$ (e.g. $x=1$: $2\\ln2=1.386>1$), and $\\ln(1+x)\\le x$.",
+    "$(1+x)^{1/x}=e^{f(x)}$ also decreases on $(-1,\\infty)$, tending to $e$ at $0$. Representing a quotient as $\\int_0^1$ is a useful monotonicity trick."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Monotonicity of a piecewise-defined function"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}-55x, & \\text{if }x<-5\\\\ 2x^3-3x^2-120x, & \\text{if }-5\\le x\\le4\\\\ 2x^3-3x^2-36x-336, & \\text{if }x>4,\\end{cases}$ Let $A=\\{x\\in\\mathbb{R}:f\\text{ is increasing}\\}$. Then $A$ is equal to :",
+   "options": [
+    "$(-5,\\infty)$",
+    "$(-\\infty,-5)\\cup(4,\\infty)$",
+    "$(-5,-4)\\cup(4,\\infty)$",
+    "$(-\\infty,-5)\\cup(-4,\\infty)$"
+   ],
+   "answer": "(C) $(-5,-4)\\cup(4,\\infty)$",
+   "key_idea": "Differentiate piece by piece and take, in each piece, the $x$ with $f'>0$; the pieces join continuously.",
+   "solution": [
+    "$f'(x)=-55$ for $x<-5$; $f'(x)=6x^2-6x-120$ for $-5<x<4$; $f'(x)=6x^2-6x-36$ for $x>4$.",
+    "Case I, $x<-5$: $f'(x)=-55<0$, so $f$ is decreasing.",
+    "Case II, $-5<x<4$: $6x^2-6x-120=6(x-5)(x+4)>0\\Rightarrow x\\in(-\\infty,-4)\\cup(5,\\infty)$.",
+    "Intersecting with $(-5,4)$: $x\\in(-5,-4)$, so $f$ is increasing there.",
+    "Case III, $x>4$: $6(x^2-x-6)=6(x-3)(x+2)>0\\Rightarrow x\\in(-\\infty,-2)\\cup(3,\\infty)$.",
+    "Intersecting with $x>4$: $x\\in(4,\\infty)$, so $f$ is increasing there.",
+    "($f$ is continuous at the junctions: $f(-5)=275$ from both sides' formulas, and $f(4)=-400$ from both.) Hence $A=(-5,-4)\\cup(4,\\infty)$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For a piecewise function, check continuity at each junction first; then find the sign of $f'$ on each piece and intersect with the piece's interval.",
+    "The increasing set is a union of intervals; the answer lists open intervals even though $f$ is also increasing on the closed intervals $[-5,-4]$ and $[4,\\infty)$.",
+    "$f'$ need not be continuous at junctions: here the one-sided derivatives at $x=4$ are $-48$ and $36$ (a corner that turns decreasing into increasing)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Rolle's theorem (repeated application)"
+   ],
+   "level": 2,
+   "question": "For all twice differentiable functions $f:\\mathbb{R}\\to\\mathbb{R}$, with $f(0)=f(1)=f'(0)=0$,",
+   "options": [
+    "$f''(x)=0$, for some $x\\in(0,1)$",
+    "$f''(x)\\ne0$ at every point $x\\in(0,1)$",
+    "$f''(0)=0$",
+    "$f''(x)=0$, at every point $x\\in(0,1)$"
+   ],
+   "answer": "(A) $f''(x)=0$, for some $x\\in(0,1)$",
+   "key_idea": "Apply Rolle's theorem to $f$ on $[0,1]$, then to $f'$ between its two zeros $0$ and $\\alpha$.",
+   "solution": [
+    "$f:\\mathbb{R}\\to\\mathbb{R}$ is twice differentiable, with $f(0)=f(1)=f'(0)=0$.",
+    "Apply Rolle's theorem to $y=f(x)$ on $[0,1]$: $f(0)=f(1)=0$, so $f'(\\alpha)=0$ for some $\\alpha\\in(0,1)$.",
+    "Now apply Rolle's theorem to $y=f'(x)$ on $[0,\\alpha]$.",
+    "$f'(0)=f'(\\alpha)=0$ ($f'$ is continuous and differentiable since $f$ is twice differentiable).",
+    "So $f''(\\beta)=0$ for some $\\beta\\in(0,\\alpha)\\subset(0,1)$.",
+    "Therefore $f''(x)=0$ for some $x\\in(0,1)$: option (A).",
+    "Example $f(x)=x^2(x-1)$: $f''(x)=6x-2$ vanishes only at $x=\\frac13$, so it is false that $f''\\ne0$ everywhere (B), false that $f''(0)=0$ (C: $f''(0)=-2$) and false that $f''=0$ everywhere (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "If $f''$ never vanishes it has one sign (Darboux), so $f$ is strictly convex or concave; but a strictly convex $f$ with $f'(0)=0$ lies strictly above its tangent $y=0$, contradicting $f(1)=0$.",
+     "solution": [
+      "Suppose $f''(x)\\ne0$ for every $x\\in(0,1)$. $f''$ is the derivative of $f'$, so by Darboux's theorem it cannot change sign without being $0$: either $f''>0$ throughout $(0,1)$ or $f''<0$ throughout.",
+      "If $f''>0$ on $(0,1)$ then $f'$ is strictly increasing on $[0,1]$, so $f'(x)>f'(0)=0$ for $x\\in(0,1]$ and $f$ is strictly increasing: $f(1)>f(0)=0$.",
+      "This contradicts $f(1)=0$. If $f''<0$, in the same way $f'(x)<0$ for $x>0$, so $f(1)<f(0)=0$ - again a contradiction.",
+      "Hence $f''(x)=0$ for some $x\\in(0,1)$ - option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Generalised Rolle: if $f$ has $n+1$ zeros counted with multiplicity ($f(0)=f'(0)=0$ is a double zero at $0$, plus $f(1)=0$: three zeros) then $f^{(n)}$ vanishes somewhere inside - here $f''$.",
+    "Rolle needs continuity on $[a,b]$ and differentiability on $(a,b)$; applying it to $f'$ needs $f'$ differentiable, which is why 'twice differentiable' is given.",
+    "A derivative has the intermediate-value (Darboux) property, so a nowhere-zero derivative has constant sign even if it is not continuous."
+   ]
+  },
+  {
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Minimum value of a trigonometric expression",
+    "Range of a function using derivatives"
+   ],
+   "level": 2,
+   "question": "The minimum value of $\\alpha$ for which the equation $\\frac4{\\sin x}+\\frac1{1-\\sin x}=\\alpha$ has at least one solution in $\\left(0,\\frac\\pi2\\right)$ is ________.",
+   "answer": "9",
+   "key_idea": "The equation has a solution iff $\\alpha$ is in the range of $f(x)=\\frac4{\\sin x}+\\frac1{1-\\sin x}$, so $\\alpha_{\\min}=\\min f$ (at $\\sin x=\\frac23$).",
+   "solution": [
+    "$f(x)=\\frac4{\\sin x}+\\frac1{1-\\sin x}=\\frac{4-3\\sin x}{\\sin x(1-\\sin x)}$ on $\\left(0,\\frac\\pi2\\right)$, where $0<\\sin x<1$.",
+    "$f'(x)=\\cos x\\left[-\\frac4{\\sin^2x}+\\frac1{(1-\\sin x)^2}\\right]=\\frac{\\cos x\\,(2-\\sin x)(3\\sin x-2)}{\\sin^2x\\,(1-\\sin x)^2}$.",
+    "On $\\left(0,\\frac\\pi2\\right)$, $\\cos x>0$ and $2-\\sin x>0$, so the sign of $f'$ is the sign of $3\\sin x-2$: negative for $\\sin x<\\frac23$ and positive for $\\sin x>\\frac23$.",
+    "So $f$ has its minimum at $\\sin x=\\frac23$.",
+    "$\\alpha_{\\min}=\\frac{4}{2/3}+\\frac1{1-2/3}=6+3=9$.",
+    "As $\\sin x\\to0^+$ or $\\sin x\\to1^-$, $f\\to\\infty$, so the range of $f$ is $[9,\\infty)$ and the equation has a solution iff $\\alpha\\ge9$. The minimum value of $\\alpha$ is $9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes f'(x) = (2 - sin x)(3 sin x - 2)/(sin^2 x (1 - sin x)^2), omitting the factor cos x that comes from differentiating with respect to x (d/dx of 1/sin x is -cos x / sin^2 x). Since cos x > 0 on (0, pi/2) the sign analysis and the answer 9 are unchanged. The PDF also does not argue that f is unbounded above (so the range is [9, infinity)); added.",
+   "alternate_solutions": [
+    {
+     "idea": "Titu's lemma (Cauchy-Schwarz): $\\frac{2^2}{s}+\\frac{1^2}{1-s}\\ge\\frac{(2+1)^2}{s+(1-s)}=9$.",
+     "solution": [
+      "Let $s=\\sin x\\in(0,1)$. Then $\\frac4s+\\frac1{1-s}=\\frac{2^2}{s}+\\frac{1^2}{1-s}$.",
+      "By Cauchy-Schwarz (Titu's form) $\\frac{2^2}{s}+\\frac{1^2}{1-s}\\ge\\frac{(2+1)^2}{s+(1-s)}=\\frac91=9$.",
+      "Equality needs $\\frac2s=\\frac1{1-s}$, i.e. $s=\\frac23$, which is attainable in $(0,1)$ ($x=\\sin^{-1}\\frac23\\in\\left(0,\\frac\\pi2\\right)$).",
+      "So the minimum value of $\\alpha$ is $9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Titu/Engel form: $\\frac{a^2}x+\\frac{b^2}{1-x}\\ge(a+b)^2$ for $x\\in(0,1)$, with equality at $x=\\frac{a}{a+b}$; equivalently $\\min\\left(\\frac px+\\frac q{1-x}\\right)=(\\sqrt p+\\sqrt q)^2$ (here $p=4,q=1$: $9$ at $x=\\frac23$).",
+    "Trigonometric version: $\\frac{a^2}{\\sin^2\\theta}+\\frac{b^2}{\\cos^2\\theta}\\ge(a+b)^2$, e.g. $\\csc^2\\theta+\\sec^2\\theta\\ge4$.",
+    "'Least $\\alpha$ such that $g(x)=\\alpha$ has a solution' is $\\min g$ when $g$ is continuous and unbounded above; check the behaviour at the ends of the interval."
+   ]
+  },
+  {
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Tangents and normals",
+    "Normal to a parabola"
+   ],
+   "level": 2,
+   "question": "If the tangent to the curve, $y=e^x$ at a point $(c,e^c)$ and the normal to the parabola, $y^2=4x$ at the point $(1,2)$ intersect at the same point on the $x$-axis, then the value of $c$ is ________.",
+   "answer": "4",
+   "key_idea": "Find where the normal to the parabola meets the $x$-axis, then match it with the $x$-intercept $c-1$ of the tangent to $e^x$.",
+   "solution": [
+    "Parabola $y^2=4x$: $2y\\frac{dy}{dx}=4$, so $\\frac{dy}{dx}=\\frac4{2\\times2}=1$ at $(1,2)$.",
+    "Slope of the tangent $m_T=1$, so slope of the normal $m_N=-1$.",
+    "Normal at $(1,2)$: $y-2=-1(x-1)$, i.e. $x+y-3=0$ ..... (i)",
+    "Curve $y=e^x$: $\\frac{dy}{dx}=e^x$, so at $(c,e^c)$ the slope is $e^c$.",
+    "Tangent at $(c,e^c)$: $y-e^c=e^c(x-c)$ ..... (ii)",
+    "The normal (i) meets the $x$-axis ($y=0$) at $x=3$.",
+    "Put $y=0$ in (ii): $-e^c=e^c(x-c)\\Rightarrow x=c-1$.",
+    "Both lines meet at the same point of the $x$-axis: $c-1=3$, so $c=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subnormal and subtangent: the parabola's subnormal is the constant $2a=2$ and the subtangent of $e^x$ is the constant $1$.",
+     "solution": [
+      "For $y^2=4ax$ ($a=1$) the subnormal (projection of the normal on the axis) is constant, $=2a=2$. So the normal at $(1,2)$ meets the $x$-axis at $x=1+2=3$.",
+      "For $y=e^x$ the subtangent is $\\frac{y}{y'}=\\frac{e^c}{e^c}=1$, so the tangent at $(c,e^c)$ meets the $x$-axis at $x=c-1$.",
+      "Setting $c-1=3$ gives $c=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parabola $y^2=4ax$: the normal at $(x_1,y_1)$ meets the axis at $x=x_1+2a$ (subnormal $=2a$ always); the tangent meets the axis at $x=-x_1$.",
+    "For $y=e^{kx}$ the subtangent is the constant $\\frac1k$: the tangent at $x=c$ meets the $x$-axis at $c-\\frac1k$.",
+    "For tangents/normals meeting on the $x$-axis, equate the $x$-intercepts: set $y=0$ in each line."
+   ]
+  }
+ ]
+}
