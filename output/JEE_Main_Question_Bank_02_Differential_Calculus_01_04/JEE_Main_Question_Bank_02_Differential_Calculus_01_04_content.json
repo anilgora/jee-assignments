@@ -1,0 +1,810 @@
+{
+ "title": "JEE Main Question Bank 02 (Differential Calculus 01_04) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions (printed Q61–Q80, numbered 1–20 here)",
+ "source": "JEE_Main_Question_Bank_02_Differential_Calculus_01_04.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 3,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 marks assumed",
+    "No negative marking assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 4,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 marks assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits (1^∞ form, sandwich theorem)",
+    "Harmonic sums"
+   ],
+   "level": 2,
+   "question": "$\\lim_{n\\to\\infty}\\left(1+\\frac{1+\\frac12+\\cdots+\\frac1n}{n^2}\\right)^n$ is equal to :",
+   "options": [
+    "$\\frac1e$",
+    "$\\frac12$",
+    "$0$",
+    "$1$"
+   ],
+   "answer": "(D) 1",
+   "key_idea": "For a $1^\\infty$ form the limit is $e^{\\lim n\\cdot(\\text{base}-1)}$, and $H_n=1+\\frac12+\\cdots+\\frac1n$ grows far slower than $n$.",
+   "solution": [
+    "Write $H_n=1+\\frac12+\\frac13+\\cdots+\\frac1n$. The limit is of the form $1^\\infty$, so $L=e^{\\lim\\limits_{n\\to\\infty}n\\cdot\\frac{H_n}{n^2}}=e^{k}$ with $k=\\lim\\limits_{n\\to\\infty}\\frac{H_n}{n}$.",
+    "Choose $p$ with $n=2^p+\\lambda$, where $\\lambda\\in\\{0,1,2,\\ldots,2^p-1\\}$.",
+    "Group the terms of $H_n$ in blocks of $2,4,8,\\ldots$: $H_n=1+\\left(\\frac12+\\frac13\\right)+\\left(\\frac14+\\cdots+\\frac17\\right)+\\cdots+\\left(\\frac1{2^{p-1}}+\\cdots+\\frac1{2^p-1}\\right)+\\left(\\frac1{2^p}+\\cdots+\\frac1{2^p+\\lambda}\\right)$.",
+    "Replace every term of a block by the first (largest) term of that block: each of the first $p-1$ blocks is less than $1$, and the last block ($\\lambda+1$ terms) is at most $\\frac{\\lambda+1}{2^p}\\le1$.",
+    "So $H_n<1+(p-1)+\\frac{\\lambda+1}{2^p}<p+1$.",
+    "Since $n\\ge2^p$: $\\frac{H_n}{n}<\\frac{p+1}{2^p}$, hence $k\\le\\lim\\limits_{p\\to\\infty}\\frac{p+1}{2^p}=0$.",
+    "Lower bound: each of the $n$ terms is at least $\\frac1n$, so $H_n>\\frac1n+\\cdots+\\frac1n=1$ and $k\\ge\\lim\\limits_{n\\to\\infty}\\frac1n=0$.",
+    "Hence $k=0$ and $L=e^0=1$: option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF defines S without naming it as H_n, writes the last block as (lambda+1)/2p (should be (lambda+1)/2^p) and then 'k <= lim (p+1)/2p = 0' (as printed (p+1)/2p tends to 1/2, and the division by n >= 2^p is never stated). Fixed: bound S/n by (p+1)/2^p using n >= 2^p. Key D is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Compare $H_n$ with $1+\\ln n$ (integral bound) and squeeze $n\\ln(1+\\ldots)$ using $\\ln(1+t)\\le t$.",
+     "solution": [
+      "For $k\\ge2$: $\\frac1k<\\int_{k-1}^{k}\\frac{dt}{t}$, so $H_n<1+\\ln n$.",
+      "Let $L_n=\\left(1+\\frac{H_n}{n^2}\\right)^n$. Since $H_n>0$, $L_n>1$, so $\\ln L_n>0$.",
+      "Use $\\ln(1+t)\\le t$ for $t>-1$: $\\ln L_n=n\\ln\\left(1+\\frac{H_n}{n^2}\\right)\\le n\\cdot\\frac{H_n}{n^2}=\\frac{H_n}{n}<\\frac{1+\\ln n}{n}$.",
+      "Thus $0<\\ln L_n<\\frac{1+\\ln n}{n}\\to0$ as $n\\to\\infty$ (logarithm grows slower than $n$).",
+      "By the sandwich theorem $\\ln L_n\\to0$, so $L_n\\to e^0=1$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ form: $\\lim f^g=e^{\\lim g\\,(f-1)}$ when $f\\to1$ and $g\\to\\infty$ (here $g=n,\\ f-1=\\frac{H_n}{n^2}$).",
+    "$\\ln(n+1)<H_n<1+\\ln n$ for $n\\ge1$; so $H_n\\sim\\ln n$ and $\\frac{H_n}{n}\\to0$.",
+    "Stolz–Cesàro: $\\lim\\frac{a_n}{b_n}=\\lim\\frac{a_{n+1}-a_n}{b_{n+1}-b_n}$ ($b_n\\uparrow\\infty$); here $\\frac{H_n}{n}\\to\\lim\\frac1{n+1}=0$.",
+    "Whenever the exponent grows like $n$ but the correction term is $o(1/n)$, a $1^\\infty$ limit equals $1$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Domain of inverse trigonometric functions",
+    "Greatest integer and fractional part functions"
+   ],
+   "level": 1,
+   "question": "The real valued function $f(x)=\\frac{\\operatorname{cosec}^{-1}x}{\\sqrt{x-[x]}}$, where $[x]$ denotes the greatest integer less than or equal to $x$, is defined for all $x$ belonging to :",
+   "options": [
+    "All reals except integers",
+    "All non-integers except the interval $[-1,1]$",
+    "All integers except $0,-1,1$",
+    "All reals except the interval $[-1,1]$"
+   ],
+   "answer": "(B) All non-integers except the interval $[-1,1]$",
+   "key_idea": "$x-[x]=\\{x\\}\\ge0$ is zero exactly at integers, so only the non-integers survive, and $\\operatorname{cosec}^{-1}x$ needs $|x|\\ge1$.",
+   "solution": [
+    "The numerator $\\operatorname{cosec}^{-1}x$ is defined only for $x\\in(-\\infty,-1]\\cup[1,\\infty)$.",
+    "The denominator is $\\sqrt{x-[x]}=\\sqrt{\\{x\\}}$, where $\\{x\\}$ is the fractional part, and $\\{x\\}\\ge0$ always.",
+    "The denominator must be non-zero: $\\{x\\}\\ne0\\Rightarrow x$ is not an integer.",
+    "Combine: $|x|\\ge1$ and $x$ not an integer. (The integers $\\pm1$ are already removed, so the excluded set is the whole interval $[-1,1]$ plus all integers.)",
+    "Domain = all non-integers except the interval $[-1,1]$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$x-[x]=\\{x\\}\\in[0,1)$, and $\\{x\\}=0\\iff x\\in\\mathbb Z$.",
+    "Domains: $\\sin^{-1}x,\\cos^{-1}x:\\ [-1,1]$; $\\sec^{-1}x,\\operatorname{cosec}^{-1}x:\\ |x|\\ge1$; $\\tan^{-1}x,\\cot^{-1}x:\\ \\mathbb R$.",
+    "For $\\frac{\\text{something}}{\\sqrt{g(x)}}$ the condition is $g(x)>0$ (strict), not $g(x)\\ge0$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric functions (principal values)"
+   ],
+   "level": 2,
+   "question": "$\\tan^{-1}\\left(\\frac{1+\\sqrt3}{3+\\sqrt3}\\right)+\\sec^{-1}\\left(\\sqrt{\\frac{8+4\\sqrt3}{6+3\\sqrt3}}\\right)$ is equal to :",
+   "options": [
+    "$\\frac{\\pi}{6}$",
+    "$\\frac{\\pi}{2}$",
+    "$\\frac{\\pi}{4}$",
+    "$\\frac{\\pi}{3}$"
+   ],
+   "answer": "(D) $\\frac{\\pi}{3}$",
+   "key_idea": "Rationalise: $3+\\sqrt3=\\sqrt3(\\sqrt3+1)$ and $8+4\\sqrt3=4(2+\\sqrt3)$, so both radicals collapse to simple values.",
+   "solution": [
+    "First term: $\\frac{1+\\sqrt3}{3+\\sqrt3}=\\frac{1+\\sqrt3}{\\sqrt3(\\sqrt3+1)}=\\frac1{\\sqrt3}$.",
+    "Second term: multiply numerator and denominator by $2$: $\\frac{16+8\\sqrt3}{12+6\\sqrt3}=\\frac{4(\\sqrt3+1)^2}{(3+\\sqrt3)^2}$, because $4(\\sqrt3+1)^2=16+8\\sqrt3$ and $(3+\\sqrt3)^2=12+6\\sqrt3$.",
+    "Hence $\\sqrt{\\frac{16+8\\sqrt3}{12+6\\sqrt3}}=\\frac{2(\\sqrt3+1)}{3+\\sqrt3}=\\frac{2(\\sqrt3+1)}{\\sqrt3(\\sqrt3+1)}=\\frac2{\\sqrt3}$.",
+    "So $E=\\tan^{-1}\\frac1{\\sqrt3}+\\sec^{-1}\\frac2{\\sqrt3}=\\tan^{-1}\\frac1{\\sqrt3}+\\cos^{-1}\\frac{\\sqrt3}2$.",
+    "$\\tan^{-1}\\frac1{\\sqrt3}=\\frac\\pi6$ and $\\cos^{-1}\\frac{\\sqrt3}2=\\frac\\pi6$.",
+    "$E=\\frac\\pi6+\\frac\\pi6=\\frac\\pi3$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Turn $\\sec^{-1}$ into $\\tan^{-1}$ so that both terms are equal, then use $2\\tan^{-1}t=\\tan^{-1}\\frac{2t}{1-t^2}$.",
+     "solution": [
+      "$\\frac{8+4\\sqrt3}{6+3\\sqrt3}=\\frac{4(2+\\sqrt3)}{3(2+\\sqrt3)}=\\frac43$, so the second term is $\\sec^{-1}\\frac2{\\sqrt3}$.",
+      "If $\\sec\\theta=\\frac2{\\sqrt3}$ with $\\theta\\in\\left[0,\\frac\\pi2\\right)$, then $\\tan\\theta=\\sqrt{\\sec^2\\theta-1}=\\sqrt{\\frac43-1}=\\frac1{\\sqrt3}$, so $\\theta=\\tan^{-1}\\frac1{\\sqrt3}$.",
+      "The first term is also $\\tan^{-1}\\frac1{\\sqrt3}$ (as $\\frac{1+\\sqrt3}{3+\\sqrt3}=\\frac1{\\sqrt3}$), so $E=2\\tan^{-1}\\frac1{\\sqrt3}$.",
+      "$2\\tan^{-1}t=\\tan^{-1}\\frac{2t}{1-t^2}$ for $|t|<1$: with $t=\\frac1{\\sqrt3}$ this is $\\tan^{-1}\\frac{2/\\sqrt3}{2/3}=\\tan^{-1}\\sqrt3=\\frac\\pi3$.",
+      "$E=\\frac\\pi3$: option (D). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $x\\ge1$: $\\sec^{-1}x=\\cos^{-1}\\frac1x=\\tan^{-1}\\sqrt{x^2-1}$ (principal value in $\\left[0,\\frac\\pi2\\right)$).",
+    "Cancel common factors before using any identity: $\\frac{1+\\sqrt3}{\\sqrt3(1+\\sqrt3)}=\\frac1{\\sqrt3}$ and $\\frac{4(2+\\sqrt3)}{3(2+\\sqrt3)}=\\frac43$ turn ugly surds into standard angles.",
+    "$\\tan15^\\circ=2-\\sqrt3,\\ \\tan75^\\circ=2+\\sqrt3,\\ \\tan30^\\circ=\\frac1{\\sqrt3}$: surds like $2\\pm\\sqrt3$ signal $15^\\circ/75^\\circ$.",
+    "$2\\tan^{-1}t=\\tan^{-1}\\frac{2t}{1-t^2}$ only for $|t|<1$; for $t>1$ add $\\pi$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity of composite functions",
+    "Piecewise-defined functions"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ and $g:\\mathbb R\\to\\mathbb R$ be defined as $f(x)=\\begin{cases}x+a,&x<0\\\\|x-1|,&x\\ge0\\end{cases}$ and $g(x)=\\begin{cases}x+1,&x<0\\\\(x-1)^2+b,&x\\ge0\\end{cases}$, where $a,b$ are non-negative real numbers. If $(g\\circ f)(x)$ is continuous for all $x\\in\\mathbb R$, then $a+b$ is equal to ____.",
+   "answer": "1",
+   "key_idea": "$g$ is discontinuous only at $0$ (jump $1\\to1+b$), so $g\\circ f$ must be checked where $f$ crosses $0$ and where $f$ itself jumps.",
+   "solution": [
+    "$g(f(x))=\\begin{cases}f(x)+1,&f(x)<0\\\\(f(x)-1)^2+b,&f(x)\\ge0.\\end{cases}$",
+    "For $x<0$, $f(x)=x+a<0\\iff x<-a$. For $x\\ge0$, $f(x)=|x-1|\\ge0$. So (for $a>0$) $g(f(x))=\\begin{cases}x+a+1,&x<-a\\\\(x+a-1)^2+b,&-a\\le x<0\\\\(|x-1|-1)^2+b,&x\\ge0.\\end{cases}$",
+    "Continuity at $x=-a$: left limit $=(-a+a)+1=1$; value and right limit $=(0-1)^2+b=1+b$. So $1=1+b\\Rightarrow b=0$.",
+    "Continuity at $x=0$: left limit $=(a-1)^2+b$; value and right limit $=(|0-1|-1)^2+b=b$. So $(a-1)^2+b=b\\Rightarrow a=1$.",
+    "The remaining points are fine: each branch is continuous on its own interval, and at $x=1$ the inner function $|x-1|$ stays $\\ge0$ on both sides, where $g$ is continuous.",
+    "The case $a=0$ (excluded in the PDF): then $f(0^-)\\to0^-$ and $f(0)=1$, so $g(f(0^-))=1$ and $g(f(0))=g(1)=b$ force $b=1$; the right side at $0$ equals $b=1$ as well, so $(a,b)=(0,1)$ also works.",
+    "Both cases give $a+b=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's working is correct for a>0 but silently assumes a>0 (the break point -a coincides with 0 when a=0, and a, b are only said to be non-negative). Added the case a=0, b=1, which also makes g o f continuous; a+b = 1 in both cases. Key 1 right.",
+   "alternate_solutions": [
+    {
+     "idea": "Look at the outer function: $g$ has a jump only at $u=0$, so $g\\circ f$ can only break where $f$ passes through $0$ or where $f$ jumps between two points where $g$ differs.",
+     "solution": [
+      "$g(u)=u+1$ for $u<0$ and $(u-1)^2+b$ for $u\\ge0$; $g$ is continuous everywhere except possibly at $u=0$, where $g(0^-)=1$ and $g(0)=1+b$. So $g$ is continuous at $u=0$ iff $b=0$.",
+      "$f$ is continuous except at $x=0$ (jump from $f(0^-)=a$ to $f(0)=1$). It meets the level $u=0$ at $x=-a$ (crossing from below) and touches it at $x=1$ (from above, staying $\\ge0$).",
+      "At $x=-a$, $f$ crosses $u=0$ going from $u<0$ to $u\\ge0$: $g\\circ f$ is continuous there iff $g$ is continuous at $0$, i.e. $b=0$. At $x=1$ only $u\\ge0$ values occur, where $g$ is continuous: no condition.",
+      "At $x=0$, $f$ jumps from $a$ to $1$: $g\\circ f$ is continuous iff $g(a)=g(1)$, i.e. $(a-1)^2+b=0+b$, so $a=1$.",
+      "So $a=1,\\ b=0$ and $a+b=1$. (If $a=0$ the crossing and the jump coincide at $x=0$: the same two conditions become $b=1$ alone, again giving $a+b=1$.) Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$g\\circ f$ can fail to be continuous only where $f$ is discontinuous, or where $f(x)$ lands on a discontinuity of $g$; list these points first and test only them.",
+    "If $f$ jumps from $p$ to $q$ at $x_0$ and $g$ is continuous at both $p$ and $q$, continuity of $g\\circ f$ at $x_0$ needs $g(p)=g(q)$.",
+    "At a point where $f$ merely touches a discontinuity level of $g$ from one side only (like $|x-1|\\ge0$ at $x=1$), no condition arises.",
+    "Parameters restricted to $a\\ge0$ include the boundary $a=0$: always test the degenerate case separately."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Trigonometric limits (standard limits and series)"
+   ],
+   "level": 2,
+   "question": "If the function $f(x)=\\frac{\\cos(\\sin x)-\\cos x}{x^4}$ is continuous at each point in its domain and $f(0)=\\frac1k$, then $k$ is :",
+   "answer": "6",
+   "key_idea": "Continuity at $0$ means $f(0)=\\lim\\limits_{x\\to0}f(x)$; turn the numerator into a product with $\\cos A-\\cos B$.",
+   "solution": [
+    "Continuity at $x=0$: $\\frac1k=\\lim\\limits_{x\\to0}\\frac{\\cos(\\sin x)-\\cos x}{x^4}$.",
+    "Use $\\cos A-\\cos B=2\\sin\\frac{A+B}2\\sin\\frac{B-A}2$ with $A=\\sin x,\\ B=x$: numerator $=2\\sin P\\,\\sin R$, where $P=\\frac{\\sin x+x}2$ and $R=\\frac{x-\\sin x}2$.",
+    "So $\\frac1k=\\lim\\limits_{x\\to0}2\\cdot\\frac{\\sin P}{P}\\cdot\\frac{\\sin R}{R}\\cdot\\frac Px\\cdot\\frac R{x^3}$.",
+    "As $x\\to0$ both $P\\to0$ and $R\\to0$, so $\\frac{\\sin P}P\\to1$ and $\\frac{\\sin R}R\\to1$.",
+    "$\\frac Px=\\frac12\\left(\\frac{\\sin x}x+1\\right)\\to1$.",
+    "$\\frac R{x^3}=\\frac12\\cdot\\frac{x-\\sin x}{x^3}\\to\\frac12\\cdot\\frac16=\\frac1{12}$, because $x-\\sin x=\\frac{x^3}6-\\cdots$.",
+    "$\\frac1k=2\\cdot1\\cdot1\\cdot1\\cdot\\frac1{12}=\\frac16$, so $k=6$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the product of the two limits as lim (sin x + x)/2 times lim (x - sin x)/2 with the powers of x and the factor 2 missing from the display, then '= 1 x 1/6'. Rewritten with explicit factors 2, P/x -> 1 and R/x^3 -> 1/12 (product 1/6). Key 6 right.",
+   "alternate_solutions": [
+    {
+     "idea": "Replace both cosines by their Maclaurin series after expanding $\\sin x$, and read off the $x^4$ coefficient.",
+     "solution": [
+      "$\\sin x=x-\\frac{x^3}6+O(x^5)$, so $\\sin^2x=x^2-\\frac{x^4}3+O(x^6)$ and $\\sin^4x=x^4+O(x^6)$.",
+      "$\\cos(\\sin x)=1-\\frac{\\sin^2x}2+\\frac{\\sin^4x}{24}-\\cdots=1-\\frac{x^2}2+\\frac{x^4}6+\\frac{x^4}{24}+O(x^6)$.",
+      "$\\cos x=1-\\frac{x^2}2+\\frac{x^4}{24}-\\cdots$.",
+      "Subtract: $\\cos(\\sin x)-\\cos x=\\frac{x^4}6+O(x^6)$ (the $x^2$ terms cancel and $\\frac{x^4}{24}$ cancels).",
+      "So $\\frac1k=\\lim\\limits_{x\\to0}\\frac{x^4/6+O(x^6)}{x^4}=\\frac16$ and $k=6$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos A-\\cos B=-2\\sin\\frac{A+B}2\\sin\\frac{A-B}2$ turns a difference of cosines into a product whose small factors can be matched to standard limits.",
+    "Expansions to remember: $x-\\sin x\\sim\\frac{x^3}6$, $\\ \\tan x-x\\sim\\frac{x^3}3$, $\\ 1-\\cos x\\sim\\frac{x^2}2$ as $x\\to0$.",
+    "$\\cos(\\sin x)-\\cos x\\sim\\frac{x^4}6$; similarly $\\sin(\\tan x)-\\sin x\\sim\\frac{x^3}2$ (always check with a series).",
+    "Removable-discontinuity questions: $f(0)$ must equal the limit; if $f(0)=\\frac1k$, solve $\\frac1k=\\lim f(x)$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity and discontinuity",
+    "Greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=x\\left[\\frac x2\\right]$, for $-10<x<10$, where $[t]$ denotes the greatest integer function. Then the number of points of discontinuity of $f$ is equal to _____.",
+   "answer": "8",
+   "key_idea": "$\\left[\\frac x2\\right]$ can break only at even integers, and at $x=2k$ the product $x\\cdot[\\cdot]$ stays continuous only when the multiplier $x$ is $0$.",
+   "solution": [
+    "$\\left[\\frac x2\\right]$ is constant between consecutive even integers and can break only where $\\frac x2$ is an integer, i.e. $x=2k$. In $(-10,10)$ the candidates are $-8,-6,-4,-2,0,2,4,6,8$ (nine points).",
+    "At $x=2k$: $f(2k)=2k\\cdot k=2k^2$.",
+    "Right-hand limit: for $x\\to2k^+$, $\\left[\\frac x2\\right]=k$, so $f(2k^+)=2k\\cdot k=2k^2=f(2k)$.",
+    "Left-hand limit: for $x\\to2k^-$, $\\left[\\frac x2\\right]=k-1$, so $f(2k^-)=2k(k-1)$.",
+    "Continuity needs $f(a^-)=f(a)=f(a^+)$, i.e. $2k(k-1)=2k^2\\iff k=0$.",
+    "So $f$ is continuous at $0$ (indeed $f(0^-)=0\\cdot(-1)=0$) and discontinuous at the other eight points $\\pm2,\\pm4,\\pm6,\\pm8$.",
+    "Number of points of discontinuity $=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Measure the jump: $\\left[\\frac x2\\right]$ jumps by exactly $1$ at each even integer, so $f=x\\left[\\frac x2\\right]$ jumps by $x\\cdot1$ there.",
+     "solution": [
+      "Write $f(x)=x\\cdot u(x)$ with $u=\\left[\\frac x2\\right]$. At $x=2k$, $u(2k^+)-u(2k^-)=1$ and $u$ is right-continuous.",
+      "Since $x$ is continuous, $f(2k^+)-f(2k^-)=2k\\cdot\\left(u(2k^+)-u(2k^-)\\right)=2k$.",
+      "The jump $2k$ vanishes only for $k=0$; for $k=\\pm1,\\pm2,\\pm3,\\pm4$ it is non-zero, so $f$ is discontinuous at $2k$.",
+      "That gives $8$ points. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x/n]$ breaks exactly at the multiples of $n$, with a jump of $1$ (right-continuous).",
+    "For $g(x)\\,[h(x)]$ with $g$ continuous: the jump at a break point $a$ equals $g(a)\\times(\\text{jump of }[h])$, so it is continuous there iff $g(a)=0$.",
+    "Hence $x[x]$ is discontinuous at every non-zero integer but continuous at $0$.",
+    "Count end-points carefully: $x=\\pm10$ are excluded by the open interval $(-10,10)$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric functions (principal value)",
+    "Differentiation of a sum"
+   ],
+   "level": 2,
+   "question": "If $y=\\sum\\limits_{k=1}^{6}k\\cos^{-1}\\left\\{\\frac35\\cos kx-\\frac45\\sin kx\\right\\}$, then $\\frac{dy}{dx}$ at $x=0$ is ____________.",
+   "answer": "91",
+   "key_idea": "$\\frac35\\cos kx-\\frac45\\sin kx=\\cos(kx+\\theta)$ with $\\cos\\theta=\\frac35$, and $\\cos^{-1}\\cos(kx+\\theta)=kx+\\theta$ near $x=0$.",
+   "solution": [
+    "Let $\\cos\\theta=\\frac35$, so $\\sin\\theta=\\frac45$, with $\\theta\\in\\left(0,\\frac\\pi2\\right)$.",
+    "$\\frac35\\cos kx-\\frac45\\sin kx=\\cos\\theta\\cos kx-\\sin\\theta\\sin kx=\\cos(kx+\\theta)$.",
+    "So $y=\\sum\\limits_{k=1}^{6}k\\cos^{-1}\\left(\\cos(kx+\\theta)\\right)$.",
+    "For $x$ near $0$ we have $kx+\\theta\\in(0,\\pi)$ (since $0<\\theta<\\frac\\pi2$), where $\\cos^{-1}(\\cos t)=t$. Hence $y=\\sum\\limits_{k=1}^{6}k(kx+\\theta)$.",
+    "$\\frac{dy}{dx}=\\sum\\limits_{k=1}^{6}k^2=\\frac{6(6+1)(12+1)}{6}=91$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate each inverse cosine directly with $\\frac{d}{dx}\\cos^{-1}u=-\\frac{u'}{\\sqrt{1-u^2}}$ and evaluate at $x=0$; no phase-shift identity needed.",
+     "solution": [
+      "Let $u_k=\\frac35\\cos kx-\\frac45\\sin kx$. At $x=0$: $u_k=\\frac35$ and $\\sqrt{1-u_k^2}=\\frac45$.",
+      "$u_k'=-\\frac{3k}5\\sin kx-\\frac{4k}5\\cos kx$, so $u_k'(0)=-\\frac{4k}5$.",
+      "$\\frac{d}{dx}\\cos^{-1}u_k\\Big|_{x=0}=-\\frac{u_k'(0)}{\\sqrt{1-u_k^2}}=\\frac{4k/5}{4/5}=k$.",
+      "So $\\frac{dy}{dx}\\Big|_{0}=\\sum\\limits_{k=1}^{6}k\\cdot k=\\sum k^2=1+4+9+16+25+36=91$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a\\cos t+b\\sin t=R\\cos(t-\\varphi)$, $R=\\sqrt{a^2+b^2}$; with $a=\\frac35,\\ b=-\\frac45$: $R=1$, so the inverse cosine of a $\\cos(\\cdot)$ simplifies.",
+    "$\\cos^{-1}(\\cos t)=t$ only for $t\\in[0,\\pi]$; otherwise reduce $t$ first. At a point, check that the argument lies strictly inside this range before differentiating.",
+    "$\\frac{d}{dx}\\cos^{-1}(\\cos(kx+\\theta))=k$ whenever $kx+\\theta\\in(0,\\pi)$.",
+    "$\\sum\\limits_{k=1}^{n}k^2=\\frac{n(n+1)(2n+1)}6$ ($=91$ for $n=6$)."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Second-order differentiability of piecewise functions",
+    "Differentiability"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be defined as $f(x)=\\begin{cases}x^5\\sin\\left(\\frac1x\\right)+5x^2,&x<0\\\\0,&x=0\\\\x^5\\cos\\left(\\frac1x\\right)+\\lambda x^2,&x>0.\\end{cases}$ The value of $\\lambda$ for which $f''(0)$ exists, is ___________.",
+   "answer": "5",
+   "key_idea": "The oscillating parts $x^5\\sin\\frac1x,\\ x^5\\cos\\frac1x$ are twice differentiable at $0$ with zero derivatives, so only the $x^2$ parts matter: $10=2\\lambda$.",
+   "solution": [
+    "Write $f(x)=\\begin{cases}g(x)+5x^2,&x<0\\\\0,&x=0\\\\h(x)+\\lambda x^2,&x>0\\end{cases}$ with $g(x)=x^5\\sin\\frac1x$ and $h(x)=x^5\\cos\\frac1x$.",
+    "$f'(0)$: $\\frac{f(x)}{x}=x^4\\sin\\frac1x+5x\\to0$ for $x\\to0^-$ and $x^4\\cos\\frac1x+\\lambda x\\to0$ for $x\\to0^+$, so $f'(0)=0$. Also $g'(0)=h'(0)=0$.",
+    "For $x\\ne0$: $f'(x)=\\begin{cases}g'(x)+10x,&x<0\\\\h'(x)+2\\lambda x,&x>0\\end{cases}$ where $g'(x)=5x^4\\sin\\frac1x-x^3\\cos\\frac1x$ and $h'(x)=5x^4\\cos\\frac1x+x^3\\sin\\frac1x$.",
+    "$g''(0)=\\lim\\limits_{x\\to0}\\frac{g'(x)}x=\\lim\\left(5x^3\\sin\\frac1x-x^2\\cos\\frac1x\\right)=0$, and in the same way $h''(0)=0$.",
+    "Left-hand second derivative: $f''(0^-)=\\lim\\limits_{x\\to0^-}\\frac{f'(x)-f'(0)}x=g''(0)+10=10$.",
+    "Right-hand second derivative: $f''(0^+)=\\lim\\limits_{x\\to0^+}\\frac{f'(x)-f'(0)}x=h''(0)+2\\lambda=2\\lambda$.",
+    "$f''(0)$ exists iff $10=2\\lambda$, so $\\lambda=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "If $f''(0)$ exists, Taylor's formula with Peano remainder gives $f(x)=\\frac12f''(0)x^2+o(x^2)$ on both sides, so the $x^2$-coefficients from the two sides must agree.",
+     "solution": [
+      "Because $|x^5\\sin\\frac1x|\\le|x|^5$ and $|x^5\\cos\\frac1x|\\le|x|^5$, we have $f(x)=5x^2+o(x^2)$ for $x<0$ and $f(x)=\\lambda x^2+o(x^2)$ for $x>0$.",
+      "If $f''(0)$ exists (with $f(0)=f'(0)=0$), then $f(x)=\\frac12f''(0)\\,x^2+o(x^2)$ as $x\\to0$ from both sides.",
+      "Compare the left side: $\\frac12f''(0)=5$. Compare the right side: $\\frac12f''(0)=\\lambda$. Hence $\\lambda=5$ is necessary.",
+      "Sufficiency: for $\\lambda=5$ the one-sided limits of $\\frac{f'(x)}x$ are $10$ and $10$ (shown in the main solution), so $f''(0)=10$ exists. Same answer: $\\lambda=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^n\\sin\\frac1x$ (value $0$ at $0$) is differentiable at $0$ iff $n\\ge2$ and twice differentiable at $0$ iff $n\\ge4$ (derivative $\\frac{g'(x)}x$ must have a limit).",
+    "Piecewise $f$ with different quadratics on the two sides: $f''(0)$ exists iff $f'(0)$ exists and the two $x^2$ coefficients agree; here $5x^2$ vs $\\lambda x^2$ gives $\\lambda=5$.",
+    "A term $o(x^2)$ cannot affect $f''(0)$: oscillating factors multiplied by high powers of $x$ are ignored.",
+    "$f''(0)$ is defined as $\\lim\\limits_{x\\to0}\\frac{f'(x)-f'(0)}x$, so $f'$ must exist near $0$ and $f'(0)$ must be computed first."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Functional equation $f(x+y)=f(x)f(y)$",
+    "Derivative from the definition"
+   ],
+   "level": 1,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ satisfy the equation $f(x+y)=f(x)\\cdot f(y)$ for all $x,y\\in\\mathbb R$ and $f(x)\\ne0$ for any $x\\in\\mathbb R$. If the function $f$ is differentiable at $x=0$ and $f'(0)=3$, then $\\lim\\limits_{h\\to0}\\frac1h\\left(f(h)-1\\right)$ is equal to _______ .",
+   "answer": "3",
+   "key_idea": "$f(x+y)=f(x)f(y)$ forces an exponential $f(x)=a^x$ with $f(0)=1$, so the limit is just $f'(0)$.",
+   "solution": [
+    "$f(x+y)=f(x)f(y)$ is the exponential functional equation, so $f(x)=a^x$ ($a>0$).",
+    "$f'(x)=a^x\\ln a$, so $f'(0)=a^0\\ln a=\\ln a=3$, hence $a=e^3$.",
+    "So $f(x)=e^{3x}$.",
+    "$\\lim\\limits_{h\\to0}\\frac{f(h)-1}h=\\lim\\limits_{h\\to0}\\frac{e^{3h}-1}{h}=\\lim\\limits_{h\\to0}\\frac{e^{3h}-1}{3h}\\times3=1\\times3=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Do not solve the functional equation: $f(0)=1$ follows from it, and then the limit is the definition of $f'(0)$.",
+     "solution": [
+      "Put $x=y=0$: $f(0)=f(0)^2$. Since $f(0)\\ne0$, $f(0)=1$.",
+      "Hence $\\frac{f(h)-1}{h}=\\frac{f(h)-f(0)}{h-0}$.",
+      "As $h\\to0$ this is the definition of $f'(0)$, which is given as $3$.",
+      "So the limit is $3$. Same answer, and no formula for $f$ is needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x+y)=f(x)f(y)$ with $f\\not\\equiv0$ gives $f(0)=1$, $f(x)>0$ (as $f(x)=f(x/2)^2$) and $f'(x)=f'(0)f(x)$.",
+    "If such $f$ is differentiable at $0$ it is differentiable everywhere and $f(x)=e^{f'(0)x}$.",
+    "Whenever a limit looks like $\\frac{f(h)-f(0)}{h}$, it equals $f'(0)$: check $f(0)$ from the given equation first.",
+    "$\\lim\\limits_{h\\to0}\\frac{e^{ch}-1}h=c$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "One-one functions",
+    "Power set and counting chains of subsets"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{1,2,3,4,5,6\\}$. Then the number of one-one functions $f:S\\to P(S)$, where $P(S)$ denotes the power set of $S$, such that $f(n)\\subset f(m)$ where $n<m$ is _________ .",
+   "answer": "3240",
+   "key_idea": "$f(1)\\subset f(2)\\subset\\cdots\\subset f(6)$ is a strict chain, so the set sizes strictly increase: six sizes out of $0,1,\\ldots,6$, i.e. exactly one size is skipped.",
+   "solution": [
+    "$P(S)$ has $2^6=64$ elements. $f(n)\\subset f(m)$ for $n<m$ gives a chain $f(1)\\subset f(2)\\subset\\cdots\\subset f(6)$ of proper inclusions (a one-one $f$ cannot take equal values), so the sizes strictly increase.",
+    "Six increasing sizes out of $0,1,\\ldots,6$ means exactly one size is missing. We count the possibilities for each missing size.",
+    "Case 1: $f(6)=S$ (1 option), $f(5)$ a $5$-subset of $S$ (6), $f(4)$ a $4$-subset of it (5), $f(3)$ a $3$-subset (4), $f(2)$ a $2$-subset (3), $f(1)$ a $1$-subset of $f(2)$ or $\\phi$ (3 options). Total $1\\cdot6\\cdot5\\cdot4\\cdot3\\cdot3=1080$ (size $0$ or size $1$ is missing).",
+    "Case 2: $f(6)$ a $5$-subset (6), $f(5)$ a $4$-subset (5), $f(4)$ a $3$-subset (4), $f(3)$ a $2$-subset (3), $f(2)$ a $1$-subset (2), $f(1)=\\phi$ (1). Total $6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1=720$.",
+    "Case 3: $f(6)=S$, $f(5)$ a $4$-subset of $S$ ($\\binom64=15$), $f(4)$ a $3$-subset (4), $f(3)$ a $2$-subset (3), $f(2)$ a $1$-subset (2), $f(1)=\\phi$. Total $15\\cdot4\\cdot3\\cdot2=360$.",
+    "Case 4: $f(6)=S$, $f(5)$ a $5$-subset (6), $f(4)$ a $3$-subset of it ($\\binom53=10$), $f(3)$ a $2$-subset (3), $f(2)$ a $1$-subset (2), $f(1)=\\phi$. Total $6\\cdot10\\cdot3\\cdot2=360$.",
+    "Case 5: $f(6)=S$, $f(5)$ a $5$-subset (6), $f(4)$ a $4$-subset (5), $f(3)$ a $2$-subset of it ($\\binom42=6$), $f(2)$ a $1$-subset (2), $f(1)=\\phi$. Total $6\\cdot5\\cdot6\\cdot2=360$.",
+    "Case 6: $f(6)=S$, $f(5)$ a $5$-subset (6), $f(4)$ a $4$-subset (5), $f(3)$ a $3$-subset (4), $f(2)$ a $1$-subset (3), $f(1)=\\phi$. Total $6\\cdot5\\cdot4\\cdot3=360$.",
+    "Number of functions $=1080+720+360+360+360+360=3240$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Record, for each element of $S$, the first index $t(x)$ at which it enters the chain; strictness becomes a surjectivity condition counted by inclusion-exclusion.",
+     "solution": [
+      "For a chain $A_1\\subset A_2\\subset\\cdots\\subset A_6$ let $t(x)=\\min\\{i:x\\in A_i\\}$, and $t(x)=7$ if $x$ is in no $A_i$. This gives a bijection between chains $A_1\\subseteq\\cdots\\subseteq A_6$ and maps $t:S\\to\\{1,2,\\ldots,7\\}$.",
+      "$A_i\\subset A_{i+1}$ is strict iff some element enters exactly at step $i+1$. So the chain is strict iff each of the values $2,3,4,5,6$ is taken by $t$; the values $1$ and $7$ are unrestricted.",
+      "Count maps $S\\to\\{1,\\ldots,7\\}$ that hit all of $2,3,4,5,6$ by inclusion-exclusion: $\\sum_{j=0}^{5}(-1)^j\\binom5j(7-j)^6$.",
+      "$=7^6-5\\cdot6^6+10\\cdot5^6-10\\cdot4^6+5\\cdot3^6-2^6=117649-233280+156250-40960+3645-64=3240$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A one-one $f$ with $f(n)\\subseteq f(m)$ for $n<m$ automatically has $f(n)\\subset f(m)$ (equal sets would break one-one), so $\\subset$ and $\\subseteq$ give the same count.",
+    "Strict chains $A_1\\subset\\cdots\\subset A_m$ in $P(S)$ with $|S|=n$ correspond to maps $S\\to\\{1,\\ldots,m+1\\}$ taking each of $2,\\ldots,m$: count $=\\sum_{j}(-1)^j\\binom{m-1}j(m+1-j)^n$.",
+    "The number of complete chains $\\phi\\subset A_1\\subset\\cdots\\subset S$ (every size once) is $n!$ (add the elements one at a time); here that is Case 2, $6!=720$.",
+    "From a set of size $s$ the number of subsets of size $r$ is $\\binom sr$, so a chain count multiplies successive binomials, as in the cases above."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Subsets with a given sum (residues mod 3)",
+    "Combinations"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{1,2,3,5,7,10,11\\}$. The number of non-empty subsets of $S$ that have the sum of all elements a multiple of $3$, is __________.",
+   "answer": "43",
+   "key_idea": "Sort the elements by remainder mod $3$ (one of type $3k$, three of type $3k+1$, three of type $3k+2$) and count the combinations whose remainders add to $0$.",
+   "solution": [
+    "Remainders mod $3$: $3\\to0$; $1,7,10\\to1$ (type $3k+1$); $2,5,11\\to2$ (type $3k+2$). So one element is of type $3k$, three of type $3k+1$ and three of type $3k+2$.",
+    "1 element: only $\\{3\\}$: $1$ subset.",
+    "2 elements: one of type $3k+1$ and one of type $3k+2$: $3\\times3=9$.",
+    "3 elements: one of each type $3k,\\ 3k+1,\\ 3k+2$: $9$; three of type $3k+1$: $1$; three of type $3k+2$: $1$. Total $11$.",
+    "4 elements: type $3k$ with three of type $3k+1$: $1$; type $3k$ with three of type $3k+2$: $1$; two of type $3k+1$ and two of type $3k+2$: $\\binom32\\binom32=9$. Total $11$.",
+    "5 elements: type $3k$ with two of type $3k+1$ and two of type $3k+2$: $9$.",
+    "6 elements: three of type $3k+1$ and three of type $3k+2$: $1$.",
+    "7 elements: the whole set (sum $39$): $1$.",
+    "Total $=1+9+11+11+9+1+1=43$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Roots-of-unity filter: the number of subsets with sum $\\equiv0\\pmod3$ is $\\frac13\\sum_{j=0}^{2}\\prod_i\\left(1+\\omega^{j r_i}\\right)$.",
+     "solution": [
+      "Let $\\omega=e^{2\\pi i/3}$ and $r_i$ be the remainders: $0$ (once), $1$ (three times), $2$ (three times). The number of subsets (including $\\phi$) with sum $\\equiv0\\pmod3$ is $N=\\frac13\\sum_{j=0}^{2}\\prod_i\\left(1+\\omega^{jr_i}\\right)$.",
+      "$j=0$: the product is $2^7=128$.",
+      "$j=1$: $(1+1)(1+\\omega)^3(1+\\omega^2)^3$. Since $1+\\omega=-\\omega^2$ and $1+\\omega^2=-\\omega$: $(1+\\omega)^3=-1$, $(1+\\omega^2)^3=-1$. The product is $2\\cdot(-1)(-1)=2$.",
+      "$j=2$ gives the complex conjugate, also $2$.",
+      "$N=\\frac13(128+2+2)=44$. Remove the empty set: $44-1=43$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Classify by remainder: a subset sum is $\\equiv0\\pmod m$ iff the remainders add to a multiple of $m$; count combinations residue class by residue class.",
+    "Roots-of-unity filter: number of subsets with sum $\\equiv0\\pmod m$ is $\\frac1m\\sum_{j=0}^{m-1}\\prod_i\\left(1+\\omega^{jr_i}\\right)$, $\\omega=e^{2\\pi i/m}$.",
+    "$1+\\omega=-\\omega^2$ and $1+\\omega^2=-\\omega$ for a cube root of unity $\\omega$.",
+    "The empty set has sum $0$: remember to subtract it when the question asks for non-empty subsets."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Functions: one-one and range",
+    "Counting functions"
+   ],
+   "level": 1,
+   "question": "Let $A=\\{a,b,c\\}$ and $B=\\{1,2,3,4\\}$. Then the number of elements in the set $C=\\{f:A\\to B\\ |\\ 2\\in f(A)\\text{ and }f\\text{ is not one-one}\\}$ is _______.",
+   "answer": "19",
+   "key_idea": "A function on $3$ elements is not one-one iff its range has at most $2$ elements, so split on range size $1$ or $2$ (containing $2$).",
+   "solution": [
+    "$f$ is not one-one and $|A|=3$, so $|f(A)|\\le2$; also $2\\in f(A)$.",
+    "Case 1: the range has exactly one element, which must be $2$: $f(a)=f(b)=f(c)=2$. Number of ways $=1$.",
+    "Case 2: the range has exactly two elements, one of which is $2$. The other element can be chosen in $\\binom31=3$ ways (from $1,3,4$).",
+    "Map $A$ onto these two values: choose which two elements of $A$ share an image, $\\frac{3!}{2!\\,1!}=3$ ways, then assign the two values to the two groups in $2!$ ways.",
+    "Case 2 total $=3\\times\\frac{3!}{2!\\,1!}\\times2!=3\\times3\\times2=18$.",
+    "Total $=1+18=19$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complementary counting: (all functions with $2$ in the range) $-$ (one-one functions with $2$ in the range).",
+     "solution": [
+      "Functions $A\\to B$ with $2\\in f(A)$: total $4^3$ minus those that avoid $2$ ($3^3$) $=64-27=37$.",
+      "One-one functions with $2\\in f(A)$: choose which element of $A$ maps to $2$ ($3$ ways), then map the other two elements one-one into $\\{1,3,4\\}$: $3\\cdot2=6$ ways. Total $3\\cdot6=18$.",
+      "Required number $=37-18=19$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of functions $A\\to B$ whose range contains a fixed element is $|B|^{|A|}-(|B|-1)^{|A|}$ ($=37$ here).",
+    "Number of onto functions from an $m$-set to a $2$-set is $2^m-2$ (here $6$).",
+    "For $|A|=3$: not one-one $\\iff|f(A)|\\le2$.",
+    "One-one functions $A\\to B$: $^{|B|}P_{|A|}$; with a prescribed value in the range, multiply the position choices by the arrangements of the rest."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations: reflexive and symmetric closure"
+   ],
+   "level": 2.5,
+   "question": "Let $A=\\{-4,-3,-2,0,1,3,4\\}$ and $R=\\{(a,b)\\in A\\times A:b=|a|\\text{ or }b^2=a+1\\}$ be a relation on $A$. Then the minimum number of elements that must be added to the relation $R$ so that it becomes reflexive and symmetric, is _________.",
+   "answer": "7",
+   "key_idea": "Only the missing diagonal pairs (for reflexive) and the missing mirror pairs $(b,a)$ (for symmetric) have to be added, and these two sets do not overlap.",
+   "solution": [
+    "$b=|a|$ with $b\\in A$: $(-4,4),(-3,3),(0,0),(1,1),(3,3),(4,4)$ (for $a=-2$ we would need $b=2\\notin A$).",
+    "$b^2=a+1$ with $b\\in A$: $a=0$ gives $b=\\pm1$, so $(0,1)$ (as $-1\\notin A$); $a=3$ gives $b=\\pm2$, so $(3,-2)$ (as $2\\notin A$). Other $a$ give no $b\\in A$.",
+    "$R=\\{(-4,4),(-3,3),(3,-2),(0,1),(0,0),(1,1),(4,4),(3,3)\\}$ (8 elements).",
+    "Reflexive: $(0,0),(1,1),(3,3),(4,4)$ are already present. Missing: $(-2,-2),(-4,-4),(-3,-3)$, so $3$ elements must be added.",
+    "Symmetric: the reverse pairs $(4,-4),(3,-3),(-2,3),(1,0)$ are absent (the diagonal pairs are their own reverses), so $4$ elements must be added.",
+    "The added reflexive pairs are on the diagonal and the added symmetric pairs are off the diagonal, so nothing is counted twice.",
+    "Minimum number to add $=3+4=7$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Reflexive closure adds the missing pairs $(a,a)$; symmetric closure adds $(b,a)$ for each $(a,b)\\in R$ whose reverse is absent. Diagonal pairs never need a symmetric partner.",
+    "Minimum additions to make $R$ reflexive and symmetric $=|R\\cup\\Delta\\cup R^{-1}|-|R|$, where $\\Delta$ is the diagonal.",
+    "When listing pairs satisfying $b^2=a+1$, remember $b$ can be negative and must lie in $A$.",
+    "For a symmetric closure, count only the one-way pairs: $\\#\\text{added}=\\#\\{(a,b)\\in R:(b,a)\\notin R\\}$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Composition of functions",
+    "Linear fractional (Möbius) functions"
+   ],
+   "level": 2,
+   "question": "Let $f^1(x)=\\frac{3x+2}{2x+3},\\ x\\in\\mathbb R-\\left\\{\\frac{-3}2\\right\\}$; for $n\\ge2$, define $f^n(x)=f^1\\circ f^{n-1}(x)$. If $f^5(x)=\\frac{ax+b}{bx+a}$, $\\gcd(a,b)=1$, then $a+b$ is equal to ________ .",
+   "answer": "3125",
+   "key_idea": "Composing $\\frac{px+q}{qx+p}$ with $f^1$ gives a function of the same shape, so each step is a simple update of the pair $(a,b)$.",
+   "solution": [
+    "$f^1(x)=\\frac{3x+2}{2x+3}$.",
+    "$f^2(x)=f^1\\left(f^1(x)\\right)=\\frac{3(3x+2)+2(2x+3)}{2(3x+2)+3(2x+3)}=\\frac{13x+12}{12x+13}$.",
+    "$f^3(x)=f^1\\left(f^2(x)\\right)=\\frac{3(13x+12)+2(12x+13)}{2(13x+12)+3(12x+13)}=\\frac{63x+62}{62x+63}$.",
+    "$f^4(x)=f^1\\left(f^3(x)\\right)=\\frac{3(63x+62)+2(62x+63)}{2(63x+62)+3(62x+63)}=\\frac{313x+312}{312x+313}$ (the PDF skips this line).",
+    "$f^5(x)=f^1\\left(f^4(x)\\right)=\\frac{3(313x+312)+2(312x+313)}{2(313x+312)+3(312x+313)}=\\frac{1563x+1562}{1562x+1563}$.",
+    "So $a=1563,\\ b=1562$ and $\\gcd(1563,1562)=1$.",
+    "$a+b=3125$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the fixed points $x=\\pm1$ of $f^1$: $\\frac{f(x)-1}{f(x)+1}=\\frac15\\cdot\\frac{x-1}{x+1}$, so iterating just multiplies by $\\frac15$.",
+     "solution": [
+      "$\\frac{f^1(x)-1}{f^1(x)+1}=\\frac{(3x+2)-(2x+3)}{(3x+2)+(2x+3)}=\\frac{x-1}{5(x+1)}$.",
+      "Let $u=\\frac{x-1}{x+1}$. One application of $f^1$ multiplies $u$ by $\\frac15$, so after $5$ applications $\\frac{f^5(x)-1}{f^5(x)+1}=\\frac{u}{5^5}=tu$ with $t=\\frac1{3125}$.",
+      "Solve for $f^5$: $f^5=\\frac{1+tu}{1-tu}=\\frac{(x+1)+t(x-1)}{(x+1)-t(x-1)}=\\frac{(1+t)x+(1-t)}{(1-t)x+(1+t)}$.",
+      "Multiply numerator and denominator by $\\frac{3125}2$: $f^5(x)=\\frac{1563x+1562}{1562x+1563}$ (since $\\frac{3125+1}2=1563$ and $\\frac{3125-1}2=1562$).",
+      "$a+b=1563+1562=3125$. Same answer; in general $a_n+b_n=5^n$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Composition of $\\frac{px+q}{rx+s}$ corresponds to multiplication of the matrices $\\begin{pmatrix}p&q\\\\r&s\\end{pmatrix}$.",
+    "For $M=\\begin{pmatrix}p&q\\\\q&p\\end{pmatrix}$: $M^n=\\begin{pmatrix}a_n&b_n\\\\b_n&a_n\\end{pmatrix}$ with $a_n=\\frac{(p+q)^n+(p-q)^n}2$, $b_n=\\frac{(p+q)^n-(p-q)^n}2$. Here $p+q=5$, $p-q=1$, so $a_n+b_n=5^n$.",
+    "For $f(x)=\\frac{px+q}{qx+p}$ the fixed points are $x=\\pm1$ and $\\frac{f(x)-1}{f(x)+1}=\\frac{p-q}{p+q}\\cdot\\frac{x-1}{x+1}$: iterating multiplies by $\\left(\\frac{p-q}{p+q}\\right)^n$.",
+    "Fixed-point (conjugation) trick: send the fixed points to $0$ and $\\infty$ and the map becomes $z\\mapsto kz$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of modulus functions",
+    "Composition of functions"
+   ],
+   "level": 2,
+   "question": "Let $S$ be the set of points where the function $f(x)=\\left|2-|x-3|\\right|,\\ x\\in\\mathbb R$, is not differentiable. Then $\\sum\\limits_{x\\in S}f(f(x))$ is equal to ______ .",
+   "answer": "3",
+   "key_idea": "A modulus function has corners exactly where an inner modulus has its corner, and where an inner expression with non-zero slope changes sign: here $x=1,3,5$.",
+   "solution": [
+    "$f(x)=\\left|2-|x-3|\\right|=\\left||x-3|-2\\right|$.",
+    "Piecewise: for $x\\le1$, $f(x)=1-x$; for $1\\le x\\le3$, $f(x)=x-1$; for $3\\le x\\le5$, $f(x)=5-x$; for $x\\ge5$, $f(x)=x-5$.",
+    "Graph (points on the zigzag): $(0,1),(1,0),(2,1),(3,2),(4,1),(5,0),(6,1)$.",
+    "The slope changes at $x=1$ ($-1\\to+1$), at $x=3$ ($+1\\to-1$) and at $x=5$ ($-1\\to+1$), so $f$ is not differentiable exactly at these points and $S=\\{1,3,5\\}$.",
+    "$f(1)=0,\\ f(3)=2,\\ f(5)=0$.",
+    "$f(f(1))=f(0)=|2-3|=1,\\ \\ f(f(3))=f(2)=|2-1|=1,\\ \\ f(f(5))=f(0)=1$.",
+    "$\\sum\\limits_{x\\in S}f(f(x))=1+1+1=3$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF solution stops after 'f(x)=||x-3|-2|. The graph of f(x) is shown below' and the graph; it never states S or evaluates f(f(x)). Written in full from the PDF's own graph points. Key 3 right.",
+   "useful_results": [
+    "$|g(x)|$ is non-differentiable at a zero of $g$ where $g'\\ne0$ (corner), and at any point where $g$ itself has a corner and $g\\ne0$ (the corner survives).",
+    "Nested moduli $\\left||x-a|-b\\right|$ ($b>0$) give a zigzag with corners at $x=a$ and $x=a\\pm b$.",
+    "Count corners by writing the function piecewise and checking where the slope changes.",
+    "$f(f(x))$ at a corner of the graph: evaluate the inner value first, e.g. $f(1)=f(5)=0,\\ f(3)=2$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric equations",
+    "Principal values of $\\tan^{-1}$ and $\\cot^{-1}$"
+   ],
+   "level": 3,
+   "question": "If the sum of all the solutions of $\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)+\\cot^{-1}\\left(\\frac{1-x^2}{2x}\\right)=\\frac\\pi3,\\ -1<x<1,\\ x\\ne0$, is $\\alpha-\\frac4{\\sqrt3}$, then $\\alpha$ is equal to _________.",
+   "answer": "2",
+   "key_idea": "$\\cot^{-1}y=\\tan^{-1}\\frac1y$ for $y>0$ but $\\pi+\\tan^{-1}\\frac1y$ for $y<0$, so the equation splits into $x>0$ and $x<0$.",
+   "solution": [
+    "Let $t=\\frac{2x}{1-x^2}$; for $-1<x<1,\\ x\\ne0$ the sign of $t$ is the sign of $x$, and $\\cot^{-1}\\left(\\frac{1-x^2}{2x}\\right)=\\cot^{-1}\\frac1t$.",
+    "Case I: $x>0$. Then $\\frac1t>0$ and $\\cot^{-1}\\frac1t=\\tan^{-1}t$, so the equation is $\\tan^{-1}\\frac{2x}{1-x^2}+\\tan^{-1}\\frac{2x}{1-x^2}=\\frac\\pi3$.",
+    "$\\tan^{-1}t=\\frac\\pi6$, i.e. $\\frac{2x}{1-x^2}=\\frac1{\\sqrt3}$, i.e. $x^2+2\\sqrt3x-1=0$, so $x=-\\sqrt3\\pm2$. Only $x=2-\\sqrt3\\in(0,1)$ is valid.",
+    "Case II: $x<0$. Then $\\frac1t<0$ and $\\cot^{-1}\\frac1t=\\pi+\\tan^{-1}t$, so the equation is $2\\tan^{-1}\\frac{2x}{1-x^2}+\\pi=\\frac\\pi3$.",
+    "$\\tan^{-1}t=-\\frac\\pi3$, i.e. $\\frac{2x}{1-x^2}=-\\sqrt3$, i.e. $\\sqrt3x^2-2x-\\sqrt3=0$, so $x=\\sqrt3$ or $x=-\\frac1{\\sqrt3}$. Only $x=-\\frac1{\\sqrt3}\\in(-1,0)$ is valid.",
+    "Sum of all solutions $=2-\\sqrt3-\\frac1{\\sqrt3}=2-\\frac{3+1}{\\sqrt3}=2-\\frac4{\\sqrt3}$.",
+    "Comparing with $\\alpha-\\frac4{\\sqrt3}$: $\\alpha=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=\\tan\\theta$ with $\\theta\\in\\left(-\\frac\\pi4,\\frac\\pi4\\right)$: then $\\frac{2x}{1-x^2}=\\tan2\\theta$ and $\\frac{1-x^2}{2x}=\\cot2\\theta$.",
+     "solution": [
+      "With $x=\\tan\\theta$, $\\theta\\in\\left(-\\frac\\pi4,0\\right)\\cup\\left(0,\\frac\\pi4\\right)$: $\\tan^{-1}(\\tan2\\theta)=2\\theta$ since $2\\theta\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$.",
+      "$\\cot^{-1}(\\cot2\\theta)=2\\theta$ if $2\\theta\\in(0,\\pi)$, i.e. $\\theta>0$; and $=2\\theta+\\pi$ if $2\\theta\\in\\left(-\\frac\\pi2,0\\right)$, i.e. $\\theta<0$ (range of $\\cot^{-1}$ is $(0,\\pi)$).",
+      "$\\theta>0$: $4\\theta=\\frac\\pi3\\Rightarrow\\theta=\\frac\\pi{12}$, so $x=\\tan15^\\circ=2-\\sqrt3$.",
+      "$\\theta<0$: $4\\theta+\\pi=\\frac\\pi3\\Rightarrow\\theta=-\\frac\\pi6\\in\\left(-\\frac\\pi4,0\\right)$, so $x=\\tan(-30^\\circ)=-\\frac1{\\sqrt3}$.",
+      "Sum $=2-\\sqrt3-\\frac1{\\sqrt3}=2-\\frac4{\\sqrt3}$, so $\\alpha=2$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cot^{-1}y=\\begin{cases}\\tan^{-1}\\frac1y,&y>0\\\\\\pi+\\tan^{-1}\\frac1y,&y<0\\end{cases}$ (principal range $(0,\\pi)$).",
+    "$\\tan^{-1}\\frac{2x}{1-x^2}=2\\tan^{-1}x$ for $|x|<1$: the substitution $x=\\tan\\theta$ turns $\\frac{2x}{1-x^2}$ into $\\tan2\\theta$.",
+    "$\\tan15^\\circ=2-\\sqrt3,\\ \\tan30^\\circ=\\frac1{\\sqrt3}$.",
+    "When an inverse-trig equation has a sign-dependent identity, split by the sign of the variable and re-check each root against its own case."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations: symmetric closure"
+   ],
+   "level": 2.5,
+   "question": "Let $A=\\{0,3,4,6,7,8,9,10\\}$ and $R$ be the relation defined on $A$ such that $R=\\{(x,y)\\in A\\times A:x-y\\text{ is odd positive integer or }x-y=2\\}$. The minimum number of elements that must be added to the relation $R$, so that it is a symmetric relation, is equal to _________.",
+   "answer": "19",
+   "key_idea": "Every pair in $R$ has $x>y$, so no reverse pair is present: the symmetric closure needs exactly $|R|$ new pairs.",
+   "solution": [
+    "Order $A=\\{10,9,8,7,6,4,3,0\\}$ and list the pairs with $x-y$ odd positive or equal to $2$.",
+    "$x=10$: $(10,9),(10,8),(10,7),(10,3)$ ($4$ pairs). $x=9$: $(9,8),(9,7),(9,6),(9,4),(9,0)$ ($5$ pairs). $x=8$: $(8,7),(8,6),(8,3)$ ($3$ pairs).",
+    "$x=7$: $(7,6),(7,4),(7,0)$ ($3$ pairs). $x=6$: $(6,4),(6,3)$ ($2$ pairs). $x=4$: $(4,3)$ ($1$ pair). $x=3$: $(3,0)$ ($1$ pair). $x=0$: none.",
+    "$R=\\{(10,9),(10,8),(10,7),(10,3),(9,8),(9,7),(9,6),(9,4),(9,0),(8,7),(8,6),(8,3),(7,6),(7,4),(7,0),(6,4),(6,3),(4,3),(3,0)\\}$, so $|R|=19$.",
+    "All the elements $(a,b)$ of $R$ are of the type $a>b$, so for no pair is the reverse $(b,a)$ in $R$.",
+    "For symmetry each of the $19$ reverse pairs must be added, and they are distinct. Hence we need to add a total of $19$ more elements."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by parity: an odd difference means opposite parity, so count opposite-parity pairs and then the pairs with difference $2$.",
+     "solution": [
+      "Even elements of $A$: $\\{0,4,6,8,10\\}$ ($5$ of them). Odd elements: $\\{3,7,9\\}$ ($3$ of them).",
+      "A positive odd difference $x-y$ means $x,y$ have opposite parity and $x>y$. Each of the $5\\times3=15$ opposite-parity unordered pairs gives exactly one ordered pair $(x,y)$ with $x>y$: $15$ elements of $R$.",
+      "Difference exactly $2$ (even, so no overlap with the previous count): $(10,8),(8,6),(6,4),(9,7)$ and none else ($(3,1)$, $(4,2)$, $(2,0)$ need $1$ or $2\\notin A$): $4$ elements.",
+      "$|R|=15+4=19$ and, as no reverse is present, $19$ pairs must be added. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $R\\subseteq\\{(a,b):a>b\\}$ (strictly one-directional), then $R\\cap R^{-1}=\\phi$ and the symmetric closure adds exactly $|R|$ pairs.",
+    "In general $\\#\\text{pairs to add for symmetry}=\\#\\{(a,b)\\in R:a\\ne b,\\ (b,a)\\notin R\\}$.",
+    "$x-y$ odd $\\iff x,y$ have opposite parity; the number of opposite-parity unordered pairs is $(\\#\\text{even})\\times(\\#\\text{odd})$.",
+    "For $n$ elements, a relation that is antisymmetric with no diagonal pairs has at most $\\binom n2$ elements."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations (counting elements of a relation)",
+    "Linear Diophantine equations"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{1,2,3,4\\}$ and $R$ be a relation on the set $A\\times A$ defined by $R=\\left\\{((a,b),(c,d)):2a+3b=4c+5d\\right\\}$. Then the number of elements in $R$ is _________.",
+   "answer": "6",
+   "key_idea": "List the possible values of $2a+3b$ and of $4c+5d$ in two $4\\times4$ tables and match equal values, counting multiplicities.",
+   "solution": [
+    "Let $\\alpha=2a+3b=4c+5d$. Possible $2a\\in\\{2,4,6,8\\}$ and $3b\\in\\{3,6,9,12\\}$; possible $4c\\in\\{4,8,12,16\\}$ and $5d\\in\\{5,10,15,20\\}$.",
+    "Values of $2a+3b$ (rows $a=1..4$): $\\{5,8,11,14\\},\\ \\{7,10,13,16\\},\\ \\{9,12,15,18\\},\\ \\{11,14,17,20\\}$.",
+    "Values of $4c+5d$ (rows $c=1..4$): $\\{9,14,19,24\\},\\ \\{13,18,23,28\\},\\ \\{17,22,27,32\\},\\ \\{21,26,31,36\\}$.",
+    "Common values: $\\alpha=9,13,14,17,18$. Counting how many $(a,b)$ and $(c,d)$ give each: $9$ ($1\\times1$), $13$ ($1\\times1$), $14$ ($2\\times1$: $(1,4)$ and $(4,2)$), $17$ ($1\\times1$), $18$ ($1\\times1$).",
+    "So the possible values of $\\alpha$, with repetition, are $9,13,14,14,17,18$.",
+    "The six elements of $R$ are $((3,1),(1,1)),\\ ((2,3),(2,1)),\\ ((1,4),(1,2)),\\ ((4,2),(1,2)),\\ ((4,3),(3,1)),\\ ((3,4),(2,2))$.",
+    "Number of elements in $R=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parity: $2a+3b=4c+5d$ forces $3b-5d$ even, so $b\\equiv d\\pmod2$; then solve $2c-a=\\frac{3b-5d}2$ within its small range.",
+     "solution": [
+      "Rearrange: $3b-5d=4c-2a=2(2c-a)$ is even, so $b$ and $d$ have the same parity: $8$ pairs $(b,d)$.",
+      "For each, $m=\\frac{3b-5d}2=2c-a$ must lie in the range of $2c-a$, which is $[2-4,8-1]=[-2,7]$.",
+      "$(1,1):m=-1$; $(1,3):-6$ (out); $(3,1):2$; $(3,3):-3$ (out); $(2,2):-2$; $(2,4):-7$ (out); $(4,2):1$; $(4,4):-4$ (out).",
+      "Solutions of $2c-a=m$ with $a,c\\in\\{1,..,4\\}$: $m=-1$: $(a,c)=(3,1)$; $m=2$: $(2,2),(4,3)$; $m=-2$: $(4,1)$; $m=1$: $(1,1),(3,2)$.",
+      "Counts: $1+2+1+2=6$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Relation on a Cartesian product: count solutions of the defining equation over all four variables, not the number of values of $\\alpha$.",
+    "Match two value-tables and multiply multiplicities: the number of solutions $=\\sum_\\alpha n_1(\\alpha)n_2(\\alpha)$.",
+    "Parity or mod-$k$ conditions cut a Diophantine search drastically ($3b-5d$ must be even here).",
+    "Bound the combination (e.g. $2c-a\\in[-2,7]$) before enumerating."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Composition and inverse of functions"
+   ],
+   "level": 2,
+   "question": "For some $a,b,c\\in\\mathbb N$, let $f(x)=ax-3$ and $g(x)=x^b+c,\\ x\\in\\mathbb R$. If $(f\\circ g)^{-1}(x)=\\left(\\frac{x-7}2\\right)^{\\frac13}$, then $(f\\circ g)(ac)+(g\\circ f)(b)$ is equal to __________.",
+   "answer": "2039",
+   "key_idea": "Invert the given inverse to get $(f\\circ g)(x)=2x^3+7$, then match coefficients with $a(x^b+c)-3$.",
+   "solution": [
+    "Let $h=f\\circ g$. Given $h^{-1}(x)=\\left(\\frac{x-7}2\\right)^{1/3}$. If $y=h^{-1}(x)$ then $y^3=\\frac{x-7}2$, i.e. $x=2y^3+7$, so $h(x)=(f\\circ g)(x)=2x^3+7$.",
+    "Also $(f\\circ g)(x)=a\\left(x^b+c\\right)-3=ax^b+(ac-3)$.",
+    "Comparing with $2x^3+7$: $a=2,\\ b=3,\\ ac-3=7\\Rightarrow c=5$ (all natural numbers).",
+    "$(f\\circ g)(ac)=(f\\circ g)(10)=2\\cdot10^3+7=2007$.",
+    "$(g\\circ f)(x)=g(2x-3)=(2x-3)^3+5$, so $(g\\circ f)(b)=(g\\circ f)(3)=3^3+5=32$.",
+    "Sum $=2007+32=2039$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If $h^{-1}(x)=\\phi(x)$ then $h(x)=\\phi^{-1}(x)$: solve $y=\\phi(x)$ for $x$.",
+    "Coefficient comparison on polynomials $ax^b+(ac-3)=2x^3+7$ fixes $a,b,c$ at once when they are naturals.",
+    "$(f\\circ g)(x)=f(g(x))$ but $(g\\circ f)(x)=g(f(x))$: with $f=2x-3,\\ g=x^3+5$, $(f\\circ g)\\ne(g\\circ f)$ in general.",
+    "Check: $(f\\circ g)^{-1}(2007)=\\left(\\frac{2000}2\\right)^{1/3}=10=ac$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations (counting elements of a relation)",
+    "Quadratic expressions in integers"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{1,2,3,4,\\ldots,10\\}$ and $B=\\{0,1,2,3,4\\}$. The number of elements in the relation $R=\\{(a,b)\\in A\\times A:2(a-b)^2+3(a-b)\\in B\\}$ is _________.",
+   "answer": "18",
+   "key_idea": "Put $d=a-b$: $d(2d+3)\\in\\{0,1,2,3,4\\}$ leaves only $d=0$ and $d=-2$; then count the pairs with each difference.",
+   "solution": [
+    "Let $d=a-b$, an integer. $2(a-b)^2+3(a-b)=2d^2+3d=d(2d+3)$, and it must be one of $0,1,2,3,4$.",
+    "$d=0$ gives $0$ (valid); $d=-2$ gives $(-2)(-1)=2$ (valid).",
+    "Other integers do not work: $d=1\\to5,\\ d=-1\\to-1,\\ d=2\\to14,\\ d=-3\\to9$, and for $d\\ge2$ or $d\\le-3$ the value $d(2d+3)\\ge9$ (e.g. $d=3\\to27$, $d=-4\\to20$).",
+    "So $a=b$ or $a-b=-2$.",
+    "$a=b$: $10$ ordered pairs.",
+    "$a-b=-2$, i.e. $b=a+2$ with $a,b\\in\\{1,\\ldots,10\\}$: $a=1,\\ldots,8$, which gives $8$ ordered pairs.",
+    "Total $=10+8=18$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Substitute the difference $d=a-b$: the number of ordered pairs in $\\{1,\\ldots,n\\}^2$ with $a-b=d$ is $n-|d|$.",
+    "A quadratic in an integer variable that must lie in a small set has only a few integer solutions: factorise ($d(2d+3)$) and check the values near the vertex.",
+    "$2d^2+3d$ is $\\ge-1$ for integers (minimum $-1$ at $d=-1$), and exceeds $4$ for $d\\ge2$ or $d\\le-3$.",
+    "For $n=10$: $d=0$ gives $10$ pairs and $d=-2$ gives $8$ pairs."
+   ]
+  }
+ ]
+}
