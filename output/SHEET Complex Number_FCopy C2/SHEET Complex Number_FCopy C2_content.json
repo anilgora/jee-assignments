@@ -1,0 +1,1366 @@
+{
+ "title": "Complex Number (Exercise C-II) — Paper Analysis",
+ "subtitle": "Sheet C2 · detailed solutions",
+ "source": "papers/SHEET Complex Number_FCopy C2.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "Complex Number C2",
+ "sections": [
+  {
+   "title": "Subjective / Numerical Type",
+   "from": 1,
+   "to": 22,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default for subjective / integer / numerical)"
+   ]
+  },
+  {
+   "title": "Comprehension Type (Paragraph Based Single Correct)",
+   "from": 23,
+   "to": 30,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for paragraph)",
+    "Q25 has three correct options per the key; Q29-30 sit under a paragraph header but carry no passage"
+   ]
+  },
+  {
+   "title": "Match the Column Type",
+   "from": 31,
+   "to": 32,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for matching)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Section formula and convex combination of complex numbers"
+   ],
+   "level": 2,
+   "question": "Let $z_1,z_2,z_3$ be three pairwise distinct complex numbers and $t_1,t_2,t_3$ non-negative real numbers such that $t_1+t_2+t_3=1$. Prove that the complex number $z=t_1z_1+t_2z_2+t_3z_3$ lies inside the triangle with vertices $z_1,z_2,z_3$ or on its boundary.",
+   "answer": "Proved",
+   "key_idea": "Apply the section formula twice: $D$ on $BC$, then $E$ on $AD$ gives exactly $z=\\sum t_kz_k$.",
+   "solution": [
+    "Let $A,B,C$ be the points $z_1,z_2,z_3$. We show that $z=t_1z_1+t_2z_2+t_3z_3$ with $t_k\\ge0$, $\\sum t_k=1$ lies in or on $\\triangle ABC$.",
+    "If $t_2+t_3=0$ then $t_2=t_3=0$, $t_1=1$ and $z=z_1$, a vertex. Otherwise let $D$ divide $BC$ internally in the ratio $t_3:t_2$; $D$ lies on segment $BC$.",
+    "By the section formula the affix of $D$ is $\\frac{t_2z_2+t_3z_3}{t_2+t_3}$.",
+    "Let $E$ divide $AD$ internally in the ratio $(t_2+t_3):t_1$, so $E$ lies on segment $AD$ joining a vertex to a point of the opposite side; hence $E$ is in or on the triangle.",
+    "The affix of $E$ is $\\frac{t_1z_1+(t_2+t_3)\\cdot\\frac{t_2z_2+t_3z_3}{t_2+t_3}}{t_1+t_2+t_3}=\\frac{t_1z_1+t_2z_2+t_3z_3}{t_1+t_2+t_3}$.",
+    "Since $t_1+t_2+t_3=1$, this is exactly $z$. So $z=E$ lies inside the triangle or on its boundary. $\\blacksquare$"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF never says that A, B, C denote z1, z2, z3 and it ignores the degenerate case t2+t3=0 (then D is undefined and z is the vertex z1). Both were added; the argument itself is the PDF's.",
+   "alternate_solutions": [
+    {
+     "idea": "Use barycentric (affine) coordinates: $z=z_1+t_2(z_2-z_1)+t_3(z_3-z_1)$ with $t_2,t_3\\ge0$, $t_2+t_3\\le1$ describes the filled triangle.",
+     "solution": [
+      "The vertices form a triangle, so $z_2-z_1$ and $z_3-z_1$ are not parallel; every point of the plane is $w=z_1+\\lambda(z_2-z_1)+\\mu(z_3-z_1)$ for a unique pair of reals $(\\lambda,\\mu)$.",
+      "The closed triangular region is exactly the set of points with $\\lambda\\ge0,\\ \\mu\\ge0,\\ \\lambda+\\mu\\le1$ (the sides are $\\lambda=0$, $\\mu=0$, $\\lambda+\\mu=1$).",
+      "Since $t_1=1-t_2-t_3$: $z=t_1z_1+t_2z_2+t_3z_3=z_1+t_2(z_2-z_1)+t_3(z_3-z_1)$, so $\\lambda=t_2$, $\\mu=t_3$.",
+      "Here $\\lambda=t_2\\ge0$, $\\mu=t_3\\ge0$ and $\\lambda+\\mu=1-t_1\\le1$.",
+      "Hence $z$ lies in the closed triangle; it is interior when all $t_k>0$ and on the boundary when some $t_k=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$z=\\sum t_kz_k$ with $t_k\\ge0$, $\\sum t_k=1$ describes exactly the convex hull of the points $z_k$; for three non-collinear points it is the filled triangle (all $t_k>0$: interior; some $t_k=0$: boundary).",
+    "Section formula: the point dividing $z_1,z_2$ internally in the ratio $m:n$ is $\\frac{nz_1+mz_2}{m+n}$. Nesting it twice proves barycentric statements such as the concurrency of medians.",
+    "Special cases: $t_1=t_2=t_3=\\frac13$ gives the centroid; $t_1=0$ gives a point of side $BC$; $t_2=t_3=0$ gives the vertex $A$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Properties and expansion of determinants",
+    "Euler's form of a complex number"
+   ],
+   "level": 2,
+   "question": "If $A,B,C$ are the angles of a triangle, find the value of $D=\\left|\\begin{matrix} e^{-2iA} & e^{iC} & e^{iB}\\\\ e^{iC} & e^{-2iB} & e^{iA}\\\\ e^{iB} & e^{iA} & e^{-2iC}\\end{matrix}\\right|$, where $i=\\sqrt{-1}$.",
+   "answer": "$-4$",
+   "key_idea": "After expanding, every term collapses to a power of $e^{i(A+B+C)}=e^{i\\pi}=-1$.",
+   "solution": [
+    "Since $A,B,C$ are angles of a triangle, $A+B+C=\\pi$.",
+    "Expand along the first row: $D=e^{-2iA}\\left\\{e^{-2i(B+C)}-e^{2iA}\\right\\}-e^{iC}\\left\\{e^{-iC}-e^{i(A+B)}\\right\\}+e^{iB}\\left\\{e^{i(A+C)}-e^{-iB}\\right\\}$.",
+    "Multiply out the first bracket: $e^{-2iA}e^{-2i(B+C)}-e^{-2iA}e^{2iA}=e^{-2i(A+B+C)}-1$.",
+    "Second bracket: $-e^{iC}e^{-iC}+e^{iC}e^{i(A+B)}=-1+e^{i(A+B+C)}$. Third bracket: $e^{iB}e^{i(A+C)}-e^{iB}e^{-iB}=e^{i(A+B+C)}-1$.",
+    "So $D=\\left[e^{-2i(A+B+C)}-1\\right]-1+2e^{i(A+B+C)}-1$.",
+    "With $A+B+C=\\pi$: $e^{-2i\\pi}=1$ and $e^{i\\pi}=-1$, so $D=(1-1)-1+2(-1)-1=-2+2e^{i\\pi}$.",
+    "$D=-2-2=-4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Scale rows to get $2I-N$ with $N$ of rank one; its eigenvalues are $3,0,0$, so $\\det(2I-N)=(2-3)\\cdot2\\cdot2$.",
+     "solution": [
+      "Let $p=e^{iA}$, $q=e^{iB}$, $r=e^{iC}$, so $pqr=e^{i\\pi}=-1$ and $e^{-2iA}=p^{-2}$ etc.",
+      "Multiply rows 1, 2, 3 by $p^2,q^2,r^2$: the determinant gets multiplied by $p^2q^2r^2=1$, so $D$ is unchanged.",
+      "Row 1 becomes $(1,\\ p^2r,\\ p^2q)$. Using $pr=-\\frac1q$ and $pq=-\\frac1r$ this is $\\left(1,\\ -\\frac pq,\\ -\\frac pr\\right)$; likewise rows 2, 3 are $\\left(-\\frac qp,\\ 1,\\ -\\frac qr\\right)$ and $\\left(-\\frac rp,\\ -\\frac rq,\\ 1\\right)$.",
+      "So the matrix is $2I-N$ where $N_{jk}=\\frac{v_j}{v_k}$ with $v=(p,q,r)$: all diagonal entries of $N$ are $1$ and $2I-N$ has diagonal $2-1=1$.",
+      "$N=v\\,w^{T}$ with $w=\\left(\\frac1p,\\frac1q,\\frac1r\\right)$ has rank one; its eigenvalues are $w^{T}v=3$ and $0,0$.",
+      "Hence $\\det(2I-N)=(2-3)(2-0)(2-0)=-4$, so $D=-4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a triangle $A+B+C=\\pi$, so $e^{i(A+B+C)}=-1$ and $e^{2i(A+B+C)}=1$; products such as $e^{-2iA}e^{-2i(B+C)}$ collapse at once.",
+    "A matrix $aI+uv^{T}$ (rank-one perturbation of a scalar matrix) has $\\det=a^{n-1}\\left(a+v^{T}u\\right)$ - here $2I-vw^T$ gives $2^2(2-3)=-4$.",
+    "Multiplying row $j$ by $x_j$ multiplies the determinant by $x_j$; scaling by powers of $e^{i\\theta}$ often reveals a symmetric structure."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Cube roots of unity and polar form of complex numbers"
+   ],
+   "level": 2,
+   "question": "If $x=1+i\\sqrt3$, $y=1-i\\sqrt3$ and $z=2$, prove that $x^p+y^p=z^p$ for every prime $p>3$.",
+   "answer": "Proved",
+   "key_idea": "$\\frac x2=-\\omega^2$ and $\\frac y2=-\\omega$, and $\\omega^p+\\omega^{2p}=-1$ whenever $3\\nmid p$.",
+   "solution": [
+    "Divide by $z^p=2^p$: we must show $\\left(\\frac xz\\right)^p+\\left(\\frac yz\\right)^p=1$.",
+    "With $\\omega=\\frac{-1+i\\sqrt3}{2}$: $\\frac xz=\\frac{1+i\\sqrt3}{2}=-\\omega^2$ and $\\frac yz=\\frac{1-i\\sqrt3}{2}=-\\omega$.",
+    "So the left side is $(-\\omega^2)^p+(-\\omega)^p=-\\left(\\omega^{2p}+\\omega^{p}\\right)$, because $p$ is odd.",
+    "This equals $1$ exactly when $1+\\omega^p+\\omega^{2p}=0$.",
+    "A prime $p>3$ is not a multiple of $3$, so $\\omega^p$ is $\\omega$ or $\\omega^2$ and $\\{\\omega^p,\\omega^{2p}\\}=\\{\\omega,\\omega^2\\}$.",
+    "Hence $1+\\omega^p+\\omega^{2p}=1+\\omega+\\omega^2=0$, so the left side is $1$.",
+    "Multiplying by $2^p$: $x^p+y^p=2^p=z^p$. $\\blacksquare$"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $x,y$ in polar form: $x^p+y^p=2^{p+1}\\cos\\frac{p\\pi}{3}$, and primes $>3$ are $\\equiv\\pm1\\pmod 6$.",
+     "solution": [
+      "$x=2e^{i\\pi/3}$ and $y=2e^{-i\\pi/3}$ (modulus $2$, arguments $\\pm60^\\circ$).",
+      "By De Moivre, $x^p+y^p=2^p\\left(e^{ip\\pi/3}+e^{-ip\\pi/3}\\right)=2^{p+1}\\cos\\frac{p\\pi}{3}$.",
+      "A prime $p>3$ is odd and not divisible by $3$, so $p\\equiv\\pm1\\pmod 6$, i.e. $p=6m\\pm1$.",
+      "Then $\\frac{p\\pi}{3}=2m\\pi\\pm\\frac\\pi3$, so $\\cos\\frac{p\\pi}3=\\cos\\frac\\pi3=\\frac12$.",
+      "Therefore $x^p+y^p=2^{p+1}\\cdot\\frac12=2^p=z^p$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+\\omega^k+\\omega^{2k}=0$ if $3\\nmid k$ and $=3$ if $3\\mid k$.",
+    "$(1\\pm i\\sqrt3)^n=2^ne^{\\pm in\\pi/3}$, so $x^n+y^n=2^{n+1}\\cos\\frac{n\\pi}3$; this equals $2^n$ iff $n\\equiv\\pm1\\pmod 6$.",
+    "Every prime $p>3$ satisfies $p\\equiv\\pm1\\pmod6$; this reduces many questions on primes to two residue cases.",
+    "For conjugates $x,\\bar x$: $x^n+\\bar x^n=2\\,\\mathrm{Re}(x^n)$ is always real."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Triangle inequality for complex numbers",
+    "Sum of an infinite geometric series"
+   ],
+   "level": 3,
+   "question": "Prove that there exists no complex number $z$ with $|z|<\\frac13$ and $\\sum_{r=1}^{n}a_rz^r=1$, where $|a_r|<2$.",
+   "answer": "Proved",
+   "key_idea": "Bound $\\left|\\sum a_rz^r\\right|$ by a geometric series; it forces $|z|>\\frac13$ - contradiction.",
+   "solution": [
+    "Suppose such a $z$ exists. Then $1=\\left|\\sum a_rz^r\\right|\\le\\sum|a_r||z|^r$ (triangle inequality).",
+    "As $|a_r|<2$ (and $z\\ne0$, since $z=0$ makes the sum $0$): $1<2\\left(|z|+|z|^2+\\dots+|z|^n\\right)$.",
+    "Equivalently, $1+|z|+|z|^2+\\dots+|z|^n>\\frac32$.",
+    "Case I, $|z|<1$: the finite sum is less than the infinite series, so $\\frac1{1-|z|}>\\frac32$, i.e. $2>3-3|z|$.",
+    "This gives $|z|>\\frac13$, contradicting $|z|<\\frac13$.",
+    "Case II, $|z|\\ge1$: then $|z|<\\frac13$ is false at once.",
+    "In both cases $|z|<\\frac13$ and $\\sum a_rz^r=1$ cannot hold together. $\\blacksquare$"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Bound directly: for $t=|z|<\\frac13$, $\\frac{t}{1-t}<\\frac12$, so $\\left|\\sum a_rz^r\\right|<2\\cdot\\frac12=1$.",
+     "solution": [
+      "Take $0<|z|<\\frac13$ (for $z=0$ the sum is $0\\ne1$) and let $t=|z|$.",
+      "$\\left|\\sum_{r=1}^na_rz^r\\right|\\le\\sum|a_r|t^r<2\\left(t+t^2+\\dots+t^n\\right)$.",
+      "For $0<t<1$ the finite sum is less than the infinite series: $t+\\dots+t^n<\\frac{t}{1-t}$.",
+      "The function $\\frac t{1-t}$ increases on $(0,1)$ and equals $\\frac12$ at $t=\\frac13$; so $\\frac t{1-t}<\\frac12$ when $t<\\frac13$.",
+      "Hence $\\left|\\sum a_rz^r\\right|<2\\cdot\\frac12=1$, so the sum can never equal $1$. $\\blacksquare$"
+     ]
+    }
+   ],
+   "useful_results": [
+    "To show a polynomial has no zero in a disc, bound $\\left|\\sum a_rz^r\\right|\\le\\sum|a_r||z|^r$ and sum the tail as a geometric series.",
+    "If $|a_r|\\le M$ and $|z|<\\frac1{M+1}$ then $\\left|\\sum_{r\\ge1}a_rz^r\\right|<1$, because $\\frac{Mt}{1-t}<1\\iff t<\\frac1{M+1}$. Here $M=2$ gives $\\frac13$.",
+    "For $0<t<1$: $t+t^2+\\dots+t^n<\\frac t{1-t}$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Cube roots of a complex number"
+   ],
+   "level": 2,
+   "question": "Let $Z=18+26i$ and let $Z_0=x_0+iy_0$ ($x_0,y_0\\in\\mathbb R$) be the cube root of $Z$ having the least positive argument. Find the value of $x_0y_0(x_0+y_0)$.",
+   "answer": "12",
+   "key_idea": "The cube root with least positive argument has argument $\\frac\\theta3$; $\\tan\\frac\\theta3$ solves the triple-angle cubic.",
+   "solution": [
+    "$|Z|=\\sqrt{18^2+26^2}=10\\sqrt{10}$ and $Z=10\\sqrt{10}\\,e^{i\\theta}$ with $\\tan\\theta=\\frac{26}{18}=\\frac{13}{9}$, $\\theta$ acute.",
+    "The cube roots are $(10\\sqrt{10})^{1/3}e^{i(2k\\pi+\\theta)/3}$, $k=0,1,2$; the least positive argument is for $k=0$, namely $\\frac\\theta3$.",
+    "So $x_0=(10\\sqrt{10})^{1/3}\\cos\\frac\\theta3$ and $y_0=(10\\sqrt{10})^{1/3}\\sin\\frac\\theta3$, where $(10\\sqrt{10})^{1/3}=\\sqrt{10}$.",
+    "Let $x=\\tan\\frac\\theta3$. From $\\tan\\theta=\\frac{3x-x^3}{1-3x^2}=\\frac{13}{9}$: $9(3x-x^3)=13(1-3x^2)$.",
+    "This is $9x^3-39x^2-27x+13=0$, i.e. $(3x-1)(3x^2-12x-13)=0$.",
+    "Since $\\theta<90^\\circ$, $\\frac\\theta3<30^\\circ$ and $0<x<\\frac1{\\sqrt3}$; the other roots of the cubic are $\\approx4.9$ and $\\approx-0.89$, so $x=\\frac13$.",
+    "Hence $\\tan\\frac\\theta3=\\frac13$, $\\cos\\frac\\theta3=\\frac3{\\sqrt{10}}$ and $\\sin\\frac\\theta3=\\frac1{\\sqrt{10}}$.",
+    "$x_0=\\sqrt{10}\\cdot\\frac3{\\sqrt{10}}=3$ and $y_0=\\sqrt{10}\\cdot\\frac1{\\sqrt{10}}=1$, i.e. $Z_0=3+i$.",
+    "$x_0y_0(x_0+y_0)=3\\cdot1\\cdot(3+1)=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the modulus: $|Z_0|^2=\\sqrt[3]{|Z|^2}=10$, so look for integers with $x_0^2+y_0^2=10$.",
+     "solution": [
+      "$|Z|=10\\sqrt{10}$, so $|Z_0|^3=10\\sqrt{10}$ and $x_0^2+y_0^2=10$.",
+      "Cubing $Z_0$: $x_0^3-3x_0y_0^2=18$ and $3x_0^2y_0-y_0^3=26$.",
+      "The integer pair with $x_0^2+y_0^2=10$ and $x_0>y_0>0$ is $(3,1)$: $27-9=18$ and $27-1=26$.",
+      "Indeed $(3+i)^3=(8+6i)(3+i)=24+8i+18i-6=18+26i$, so $3+i$ is a cube root of $Z$.",
+      "The other cube roots are $(3+i)\\omega$ and $(3+i)\\omega^2$, with arguments $\\arg(3+i)+120^\\circ$ and $+240^\\circ$; so $3+i$ ($\\arg\\approx18.4^\\circ$) has the least positive argument.",
+      "$x_0y_0(x_0+y_0)=3\\cdot1\\cdot4=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The three cube roots of $Z$ are $Z_0,\\ Z_0\\omega,\\ Z_0\\omega^2$ with arguments $\\frac{\\theta}3+\\frac{2k\\pi}3$; the one with the smallest positive argument has $k=0$.",
+    "If $|Z|$ is a perfect cube of a Gaussian-integer norm, try small Gaussian integers: $(1+i)^3=-2+2i$, $(2+i)^3=2+11i$, $(3+i)^3=18+26i$, $(2+3i)^3=-46+9i$.",
+    "$\\tan3\\varphi=\\frac{3t-t^3}{1-3t^2}$ with $t=\\tan\\varphi$: the root in the correct quadrant gives $\\tan\\frac\\theta3$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Roots of complex numbers",
+    "Binomial theorem for a positive integral index"
+   ],
+   "level": 3,
+   "question": "If $\\omega$ is the fifth root of $2$ and $x=\\omega+\\omega^2$, prove that $x^5=10x^2+10x+6$.",
+   "answer": "Proved",
+   "key_idea": "Factor $x=\\omega(1+\\omega)$ so that $x^5=\\omega^5(1+\\omega)^5=2(1+\\omega)^5$, then regroup the expansion in powers of $x$.",
+   "solution": [
+    "$\\omega^5=2$, so $x^5=(\\omega+\\omega^2)^5=\\omega^5(1+\\omega)^5=2(1+\\omega)^5$.",
+    "Expand: $(1+\\omega)^5={}^5C_0\\omega^5+{}^5C_1\\omega^4+{}^5C_2\\omega^3+{}^5C_3\\omega^2+{}^5C_4\\omega+{}^5C_5$.",
+    "Using $\\omega^5=2$: $(1+\\omega)^5=2+5\\omega^4+10\\omega^3+10\\omega^2+5\\omega+1$, so $x^5=2\\left[5\\omega^4+10\\omega^3+10\\omega^2+5\\omega+3\\right]$.",
+    "Regroup: $x^5=2\\left[5\\left(\\omega^4+2\\omega^3+\\omega^2\\right)+5\\left(\\omega^2+\\omega\\right)+3\\right]$.",
+    "Since $x=\\omega+\\omega^2$, $x^2=\\omega^2+2\\omega^3+\\omega^4$.",
+    "Hence $x^5=2\\left[5x^2+5x+3\\right]=10x^2+10x+6$. $\\blacksquare$"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat $\\omega$ as a variable $t$ and show $t^5-2$ divides $P(t)=(t+t^2)^5-10(t+t^2)^2-10(t+t^2)-6$.",
+     "solution": [
+      "Let $P(t)=(t+t^2)^5-10(t+t^2)^2-10(t+t^2)-6$. We show $P(t)=(t^5-2)\\cdot R(t)$; then $P(\\omega)=0$ because $\\omega^5=2$.",
+      "$(t+t^2)^5=t^5(1+t)^5=t^{10}+5t^9+10t^8+10t^7+5t^6+t^5$.",
+      "$10(t+t^2)^2+10(t+t^2)+6=10t^4+20t^3+10t^2+10t+10t^2+6=10t^4+20t^3+20t^2+10t+6$.",
+      "So $P(t)=t^{10}+5t^9+10t^8+10t^7+5t^6+t^5-10t^4-20t^3-20t^2-10t-6$.",
+      "Multiplying out confirms $(t^5-2)\\left(t^5+5t^4+10t^3+10t^2+5t+3\\right)=P(t)$.",
+      "Therefore $P(\\omega)=(\\omega^5-2)\\cdot R(\\omega)=0$, i.e. $x^5=10x^2+10x+6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\omega^n=a$ then $\\omega$ is a root of $t^n-a$; any polynomial identity in $\\omega$ can be proved by divisibility by $t^n-a$ or by reducing powers with $\\omega^n=a$.",
+    "Factoring out the lowest power, $\\omega+\\omega^2=\\omega(1+\\omega)$, turns a fifth power into $\\omega^5(1+\\omega)^5=2(1+\\omega)^5$.",
+    "$x^5-10x^2-10x-6$ is the minimal polynomial of $\\omega+\\omega^2$ over $\\mathbb Q$: it is irreducible by Eisenstein's criterion at $2$ (coefficients $10,10,6$ divisible by $2$, $6$ not divisible by $4$)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Algebraic identities for complex numbers and real-valued expressions"
+   ],
+   "level": 3,
+   "question": "Let $z_1,z_2\\in\\mathbb C$ such that $z_1^2+z_2^2\\in\\mathbb R$. If $z_1(z_1^2-3z_2^2)=10$ and $z_2(3z_1^2-z_2^2)=30$, find the value of $z_1^2+z_2^2$.",
+   "answer": "10",
+   "key_idea": "$z_1^3-3z_1z_2^2+i\\left(3z_1^2z_2-z_2^3\\right)=(z_1+iz_2)^3$; multiplying it by its partner gives $(z_1^2+z_2^2)^3$.",
+   "solution": [
+    "We are given $z_1^3-3z_1z_2^2=10$ and $z_2\\left(3z_1^2-z_2^2\\right)=3z_1^2z_2-z_2^3=30$.",
+    "Multiply the second by $i$ and add: $z_1^3-3z_1z_2^2+3iz_1^2z_2-iz_2^3=10+30i$.",
+    "The left side is $(z_1+iz_2)^3$, so $(z_1+iz_2)^3=10+30i$ ... (A).",
+    "Multiply the second equation by $-i$ and add: $(z_1-iz_2)^3=10-30i$ ... (B).",
+    "Multiply (A) and (B): $\\left[(z_1+iz_2)(z_1-iz_2)\\right]^3=(10+30i)(10-30i)=1000$.",
+    "Since $(z_1+iz_2)(z_1-iz_2)=z_1^2+z_2^2$, we get $\\left(z_1^2+z_2^2\\right)^3=1000$.",
+    "$z_1^2+z_2^2$ is real and the only real cube root of $1000$ is $10$, so $z_1^2+z_2^2=10$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the polynomial identity $(a^2+b^2)^3=(a^3-3ab^2)^2+(3a^2b-b^3)^2$ - no complex multiplication needed.",
+     "solution": [
+      "For any numbers $a,b$: $(a^3-3ab^2)^2+(3a^2b-b^3)^2=a^6+3a^4b^2+3a^2b^4+b^6=(a^2+b^2)^3$ (expand both squares).",
+      "Put $a=z_1,\\ b=z_2$: $\\left(z_1^2+z_2^2\\right)^3=10^2+30^2=1000$.",
+      "$z_1^2+z_2^2$ is real, so it is the real cube root of $1000$.",
+      "Hence $z_1^2+z_2^2=10$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For real $x,y$: $x^3-3xy^2=\\mathrm{Re}(x+iy)^3$ and $3x^2y-y^3=\\mathrm{Im}(x+iy)^3$ (the $\\cos3\\theta,\\sin3\\theta$ patterns).",
+    "Identity: $(a^2+b^2)^3=(a^3-3ab^2)^2+(3a^2b-b^3)^2$ ($|w^3|=|w|^3$ for $w=a+ib$); it holds for complex $a,b$ as a polynomial identity.",
+    "The hypothesis $z_1^2+z_2^2\\in\\mathbb R$ selects the real cube root: otherwise $10,\\ 10\\omega,\\ 10\\omega^2$ would all be possible."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Locus $|z-z_1|=|z-z_2|$ and real and imaginary parts of roots",
+    "Relations between roots and coefficients"
+   ],
+   "level": 2,
+   "question": "If the equation $(z+1)^7+z^7=0$ has roots $z_1,z_2,\\dots,z_7$, find the value of (a) $\\sum_{r=1}^{7}\\mathrm{Re}(z_r)$ and (b) $\\sum_{r=1}^{7}\\mathrm{Im}(z_r)$.",
+   "answer": "(a) $-\\frac72$, (b) $0$",
+   "key_idea": "$(z+1)^7=-z^7$ forces $|z+1|=|z|$, so every root lies on the line $x=-\\frac12$.",
+   "solution": [
+    "$(z+1)^7+z^7=0\\Rightarrow(z+1)^7=-z^7$.",
+    "Taking moduli: $|z+1|^7=|-z|^7=|z|^7$, so $|z+1|=|z|$.",
+    "So $z$ is equidistant from $(0,0)$ and $(-1,0)$ and lies on the perpendicular bisector $x=-\\frac12$.",
+    "Hence all seven roots have real part $-\\frac12$, and $\\sum\\mathrm{Re}(z_r)=7\\cdot\\left(-\\frac12\\right)=-\\frac72$.",
+    "The equation is $2z^7+7z^6+\\dots=0$, so by Vieta $z_1+z_2+\\dots+z_7=-\\frac72$, a real number.",
+    "Its imaginary part is therefore $0$: $\\sum\\mathrm{Im}(z_r)=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Solve explicitly: $\\frac{z+1}{z}$ is a 7th root of $-1$, giving $z=-\\frac12-\\frac i2\\cot\\frac\\alpha2$.",
+     "solution": [
+      "For $z\\ne0$: $\\left(\\frac{z+1}{z}\\right)^7=-1$, so $\\frac{z+1}z=e^{i\\alpha_k}$ with $\\alpha_k=\\frac{(2k+1)\\pi}7$, $k=0,1,\\dots,6$.",
+      "$z_k=\\frac1{e^{i\\alpha_k}-1}=\\frac{e^{-i\\alpha_k/2}}{2i\\sin(\\alpha_k/2)}=-\\frac12-\\frac i2\\cot\\frac{\\alpha_k}2$.",
+      "Each root has real part $-\\frac12$, so $\\sum\\mathrm{Re}\\,z_k=-\\frac72$.",
+      "The imaginary parts are $-\\frac12\\cot\\frac{(2k+1)\\pi}{14}$; the terms for $k$ and $6-k$ are $\\cot\\vartheta$ and $\\cot(\\pi-\\vartheta)=-\\cot\\vartheta$, which cancel in pairs.",
+      "The middle term $k=3$ is $\\cot\\frac\\pi2=0$, so $\\sum\\mathrm{Im}\\,z_k=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|z-a|=|z-b|$ is the perpendicular bisector of $a,b$; here $|z+1|=|z|$ gives the line $x=-\\frac12$.",
+    "For $\\left(\\frac{z+1}{z}\\right)^n=\\pm1$ all roots lie on $\\mathrm{Re}\\,z=-\\frac12$, and $\\frac1{e^{i\\alpha}-1}=-\\frac12-\\frac i2\\cot\\frac\\alpha2$.",
+    "A real polynomial has $\\sum\\mathrm{Im}(z_r)=0$ automatically (conjugate pairs), so only the real part needs work; for $az^n+bz^{n-1}+\\dots$ the sum of the roots is $-\\frac ba$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Roots of unity and factorisation over the reals",
+    "Exact values of trigonometric ratios of $18^\\circ$ and $36^\\circ$"
+   ],
+   "level": 3,
+   "question": "If $z^5-32$ is factorised into linear and quadratic factors over real coefficients as $z^5-32=(z-2)(z^2-pz+4)(z^2-qz+4)$, find the value of $p^2+2p$.",
+   "answer": "4",
+   "key_idea": "Pair the conjugate roots: $\\left(z-2e^{i\\theta}\\right)\\left(z-2e^{-i\\theta}\\right)=z^2-4z\\cos\\theta+4$, so $p=4\\cos72^\\circ$.",
+   "solution": [
+    "$z^5=32=2^5e^{2ik\\pi}$ gives $z=2e^{2ik\\pi/5}$, $k=0,1,2,3,4$: the roots are $2,\\ 2e^{\\pm2\\pi i/5},\\ 2e^{\\pm4\\pi i/5}$.",
+    "Pairing conjugate roots: $z^5-32=(z-2)\\left(z-2e^{2\\pi i/5}\\right)\\left(z-2e^{-2\\pi i/5}\\right)\\left(z-2e^{4\\pi i/5}\\right)\\left(z-2e^{-4\\pi i/5}\\right)$.",
+    "$\\left(z-2e^{i\\theta}\\right)\\left(z-2e^{-i\\theta}\\right)=z^2-2z\\left(e^{i\\theta}+e^{-i\\theta}\\right)+4=z^2-4z\\cos\\theta+4$.",
+    "So $p=2\\left(e^{2\\pi i/5}+e^{-2\\pi i/5}\\right)=4\\cos\\frac{2\\pi}5$ and $q=4\\cos\\frac{4\\pi}5$ (the two factors are interchangeable; the final value is the same for $q$).",
+    "$p^2+2p=16\\cos^2\\frac{2\\pi}5+8\\cos\\frac{2\\pi}5=8\\left[2\\cos^2\\frac{2\\pi}5+\\cos\\frac{2\\pi}5\\right]$.",
+    "Since $\\frac{2\\pi}5=72^\\circ$ and $\\cos72^\\circ=\\sin18^\\circ$: $8\\left[2\\sin^218^\\circ+\\sin18^\\circ\\right]=8\\left[1-\\cos36^\\circ+\\sin18^\\circ\\right]$.",
+    "With $\\cos36^\\circ=\\frac{\\sqrt5+1}4$ and $\\sin18^\\circ=\\frac{\\sqrt5-1}4$: $8\\left[1-\\frac{\\sqrt5+1}4+\\frac{\\sqrt5-1}4\\right]=8\\cdot\\frac12=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare coefficients: $\\frac{z^5-32}{z-2}=z^4+2z^3+4z^2+8z+16$ forces $p+q=-2$, $pq=-4$, so $p^2+2p-4=0$.",
+     "solution": [
+      "Dividing, $\\frac{z^5-32}{z-2}=z^4+2z^3+4z^2+8z+16$.",
+      "Expand $(z^2-pz+4)(z^2-qz+4)=z^4-(p+q)z^3+(pq+8)z^2-4(p+q)z+16$.",
+      "Compare with $z^4+2z^3+4z^2+8z+16$: $-(p+q)=2$ and $pq+8=4$ (the $z$-coefficient $-4(p+q)=8$ agrees).",
+      "So $p+q=-2$ and $pq=-4$: $p$ and $q$ are the roots of $t^2+2t-4=0$.",
+      "Hence $p^2+2p-4=0$, i.e. $p^2+2p=4$ (and the same for $q$) - no trigonometry needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$z^n-a^n$ factors over $\\mathbb R$ into $(z-a)$ and quadratics $z^2-2a\\cos\\frac{2k\\pi}nz+a^2$, $k=1,\\dots,\\frac{n-1}2$ for odd $n$.",
+    "Comparing coefficients with $z^4+2z^3+4z^2+8z+16$ gives $\\cos72^\\circ+\\cos144^\\circ=-\\frac12$ and $\\cos72^\\circ\\cos144^\\circ=-\\frac14$.",
+    "Exact values: $\\cos36^\\circ=\\frac{\\sqrt5+1}4$, $\\sin18^\\circ=\\cos72^\\circ=\\frac{\\sqrt5-1}4$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Complex numbers as points in the Argand plane",
+    "Square inscribed in a triangle (coordinate geometry)"
+   ],
+   "level": 3,
+   "question": "Let $z_i$ ($i=1,2,3,4$) represent the vertices of a square, all of which lie on the sides of the triangle with vertices $(0,0),(2,1)$ and $(3,0)$. If $z_1$ and $z_2$ are purely real, then the area of the triangle formed by $z_3$, $z_4$ and the origin is $\\frac mn$ (lowest terms). Find $m+n$.",
+   "answer": "41",
+   "key_idea": "Two real vertices put one side of the square on the base; the vertex heights and the side length give two linear equations.",
+   "solution": [
+    "The triangle is $O(0,0)$, $A(2,1)$, $B(3,0)$. Line $OA$: $y=\\frac x2$; line $AB$: $y=3-x$.",
+    "$z_1,z_2$ are real, so they are on the side $OB$ of the triangle; the square stands on $OB$. Let $z_1=(a,0)$, $z_2=(b,0)$, $b>a$.",
+    "The upper vertices are $z_4=P\\left(a,\\frac a2\\right)$ on $OA$ and $z_3=Q(b,\\,3-b)$ on $AB$.",
+    "$PQ$ is horizontal, so the two heights are equal: $3-b=\\frac a2$ ... (1).",
+    "Side length: $b-a=\\frac a2$ (the height of $P$), so $2b=3a$ ... (2).",
+    "Solving (1),(2): $3-\\frac{3a}2=\\frac a2$, so $a=\\frac32$, $b=\\frac94$ and the side is $\\frac34$.",
+    "$z_4=\\left(\\frac32,\\frac34\\right)$ and $z_3=\\left(\\frac94,\\frac34\\right)$.",
+    "Area of $\\triangle Oz_3z_4=\\frac12\\cdot\\frac34\\cdot\\frac34=\\frac9{32}$ (base $z_3z_4=\\frac34$, height from $O$ to the line $y=\\frac34$ is $\\frac34$).",
+    "$\\frac mn=\\frac9{32}$ in lowest terms, so $m+n=41$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Similar triangles give the side directly: the small triangle above the square is similar to the whole, so $\\frac s3=\\frac{1-s}1$.",
+     "solution": [
+      "The square of side $s$ stands on the base $OB=3$; the triangle's height is $1$ (from $A(2,1)$).",
+      "The part above the square is similar to the whole triangle, with base $s$ and height $1-s$: $\\frac s3=\\frac{1-s}{1}$.",
+      "$s=3-3s\\Rightarrow s=\\frac34$.",
+      "So $z_3z_4$ is the horizontal top side of length $\\frac34$ at height $\\frac34$.",
+      "Area $=\\frac12\\cdot z_3z_4\\cdot(\\text{distance from }O\\text{ to }y=\\tfrac34)=\\frac12\\cdot\\frac34\\cdot\\frac34=\\frac9{32}$, so $m+n=9+32=41$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The largest square with a side on the base $b$ of a triangle of height $h$ has side $\\frac{bh}{b+h}$ (here $\\frac{3\\cdot1}{3+1}=\\frac34$).",
+    "Triangle with a vertex at $O$ and base on a horizontal line $y=h$ has area $\\frac12\\cdot\\text{base}\\cdot h$, whatever the abscissae of the base endpoints.",
+    "Two real vertices of a square inscribed in a triangle lie on the same side of the triangle (a diagonal along that side would put a vertex outside)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Cube roots of unity",
+    "Sums of binomial coefficients using roots of unity"
+   ],
+   "level": 3,
+   "question": "(i) Let $C_r$ denote the binomial coefficients in the expansion of $(1+x)^n$, $n\\in\\mathbb N$. If the integers $a_n=C_0+C_3+C_6+C_9+\\dots$, $b_n=C_1+C_4+C_7+C_{10}+\\dots$ and $c_n=C_2+C_5+C_8+C_{11}+\\dots$, prove that (a) $a_n^3+b_n^3+c_n^3-3a_nb_nc_n=2^n$, (b) $(a_n-b_n)^2+(b_n-c_n)^2+(c_n-a_n)^2=2$.\n(ii) Prove the identity $(C_0-C_2+C_4-C_6+\\dots)^2+(C_1-C_3+C_5-C_7+\\dots)^2=2^n$.",
+   "answer": "Proved",
+   "key_idea": "Evaluate $(1+x)^n$ at $1,\\omega,\\omega^2$ to get $a_n,b_n,c_n$, and use $a^3+b^3+c^3-3abc=(a+b+c)(a+b\\omega+c\\omega^2)(a+b\\omega^2+c\\omega)$.",
+   "solution": [
+    "Put $x=\\omega$ in $(1+x)^n=\\sum C_rx^r$: $(1+\\omega)^n=C_0+C_1\\omega+C_2\\omega^2+C_3+\\dots=(-\\omega^2)^n$ ... (1).",
+    "Put $x=\\omega^2$: $(1+\\omega^2)^n=C_0+C_1\\omega^2+C_2\\omega^4+C_3+\\dots=(-\\omega)^n$ ... (2). Put $x=1$: $2^n=C_0+C_1+C_2+\\dots+C_n$ ... (3).",
+    "Add (1), (2), (3): the coefficient of $C_r$ is $1+\\omega^r+\\omega^{2r}$, which is $3$ if $3\\mid r$ and $0$ otherwise; so $a_n=\\frac{2^n+(-\\omega^2)^n+(-\\omega)^n}3$.",
+    "Similarly $\\omega^2\\cdot(1)+\\omega\\cdot(2)+(3)$ gives $b_n=\\frac{2^n+\\omega^2(-\\omega^2)^n+\\omega(-\\omega)^n}3$ and $\\omega\\cdot(1)+\\omega^2\\cdot(2)+(3)$ gives $c_n=\\frac{2^n+\\omega(-\\omega^2)^n+\\omega^2(-\\omega)^n}3$.",
+    "(a) $a^3+b^3+c^3-3abc=(a+b+c)(a+b\\omega+c\\omega^2)(a+b\\omega^2+c\\omega)$. From the formulas: $a_n+b_n+c_n=2^n$, $a_n+b_n\\omega+c_n\\omega^2=(-\\omega^2)^n$ and $a_n+b_n\\omega^2+c_n\\omega=(-\\omega)^n$.",
+    "So $a_n^3+b_n^3+c_n^3-3a_nb_nc_n=2^n(-\\omega^2)^n(-\\omega)^n=2^n(\\omega^3)^n=2^n$.",
+    "(b) Also $a^3+b^3+c^3-3abc=(a+b+c)\\cdot\\frac12\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]$. With $a_n+b_n+c_n=2^n$ and the value $2^n$ from (a): $2^n=2^n\\cdot\\frac12\\left[\\dots\\right]$.",
+    "Hence $(a_n-b_n)^2+(b_n-c_n)^2+(c_n-a_n)^2=2$. $\\blacksquare$",
+    "(ii) Put $x=i$: $(1+i)^n=\\left(C_0-C_2+C_4-\\dots\\right)+i\\left(C_1-C_3+C_5-\\dots\\right)$, with both brackets real.",
+    "Taking $|\\cdot|^2$: $(C_0-C_2+\\dots)^2+(C_1-C_3+\\dots)^2=|1+i|^{2n}=\\left(\\sqrt2\\right)^{2n}=2^n$. $\\blacksquare$"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF solves only (i)(a) and (i)(b); part (ii) is missing. Added: put x=i in (1+x)^n and take the squared modulus, |1+i|^(2n)=2^n. Parts (a) and (b) are the PDF's, with the three combinations (a+b+c), (a+b w+c w^2), (a+b w^2+c w) spelled out.",
+   "alternate_solutions": [
+    {
+     "idea": "Read $a_n+b_n\\omega+c_n\\omega^2$ directly as $\\sum C_r\\omega^r=(1+\\omega)^n$ - no need to find $a_n,b_n,c_n$.",
+     "solution": [
+      "$\\omega^r$ depends only on $r\\bmod3$, so $a_n+b_n\\omega+c_n\\omega^2=\\sum C_r\\omega^r=(1+\\omega)^n$; similarly $a_n+b_n\\omega^2+c_n\\omega=(1+\\omega^2)^n$ and $a_n+b_n+c_n=2^n$.",
+      "(a) $a^3+b^3+c^3-3abc=(a+b+c)(a+b\\omega+c\\omega^2)(a+b\\omega^2+c\\omega)=2^n(1+\\omega)^n(1+\\omega^2)^n$.",
+      "$(1+\\omega)(1+\\omega^2)=1+\\omega+\\omega^2+\\omega^3=1$, so the product is $2^n$.",
+      "(b) $a^2+b^2+c^2-ab-bc-ca=(a+b\\omega+c\\omega^2)(a+b\\omega^2+c\\omega)=(1+\\omega)^n(1+\\omega^2)^n=1$.",
+      "Since $(a-b)^2+(b-c)^2+(c-a)^2=2\\left(a^2+b^2+c^2-ab-bc-ca\\right)$, the sum equals $2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Roots-of-unity filter: $\\sum_{r\\equiv s\\,(\\mathrm{mod}\\ m)}C_r=\\frac1m\\sum_{j=0}^{m-1}\\varepsilon^{-js}\\left(1+\\varepsilon^{j}\\right)^n$ with $\\varepsilon=e^{2\\pi i/m}$.",
+    "$a^3+b^3+c^3-3abc=(a+b+c)(a+b\\omega+c\\omega^2)(a+b\\omega^2+c\\omega)$ and $a^2+b^2+c^2-ab-bc-ca=\\left|a+b\\omega+c\\omega^2\\right|^2$ for real $a,b,c$.",
+    "Real and imaginary parts of $(1+i)^n$ are the alternating sums $C_0-C_2+\\dots$ and $C_1-C_3+\\dots$; their squares add to $|1+i|^{2n}=2^n$.",
+    "Check, $n=2$: $a=1,b=2,c=1$ give $1+8+1-6=4=2^2$ and $(a-b)^2+(b-c)^2+(c-a)^2=1+1+0=2$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Rotation of a complex number (vertices of a square)"
+   ],
+   "level": 2,
+   "question": "Let $z_1,z_2,z_3,z_4$ be the vertices $A,B,C,D$ respectively of a square on the Argand diagram taken in anticlockwise direction. Prove that (i) $2z_2=(1+i)z_1+(1-i)z_3$ and (ii) $2z_4=(1-i)z_1+(1+i)z_3$.",
+   "answer": "Proved",
+   "key_idea": "Each side is the previous side rotated by $90^\\circ$ anticlockwise: multiply by $e^{i\\pi/2}=i$.",
+   "solution": [
+    "(i) In the anticlockwise square, side $BC$ is side $AB$ turned through $90^\\circ$ with the same length: $z_3-z_2=(z_2-z_1)e^{i\\pi/2}=(z_2-z_1)i$.",
+    "$z_3-z_2=iz_2-iz_1$, so $z_2(1+i)=z_3+iz_1$.",
+    "$z_2=\\frac{z_3}{1+i}+\\frac{iz_1}{1+i}=\\frac{z_3(1-i)}2+\\frac{iz_1(1-i)}{2}$.",
+    "Since $i(1-i)=1+i$: $2z_2=(1-i)z_3+(1+i)z_1$, which is (i).",
+    "(ii) Side $AD$ is side $AB$ turned through $90^\\circ$ anticlockwise: $z_4-z_1=(z_2-z_1)i$, so $z_4=iz_2+(1-i)z_1$ ... (1).",
+    "Opposite sides $AB$ and $DC$ are equal and parallel: $z_2-z_1=z_3-z_4$, so $z_2=z_3-z_4+z_1$ ... (2).",
+    "Substitute (2) in (1): $z_4=i(z_3-z_4+z_1)+(1-i)z_1$, so $z_4(1+i)=iz_3+z_1$.",
+    "$z_4=\\frac{iz_3}{1+i}+\\frac{z_1}{1+i}=\\frac{(1+i)z_3}2+\\frac{(1-i)z_1}2$ (using $\\frac i{1+i}=\\frac{1+i}2$ and $\\frac1{1+i}=\\frac{1-i}2$).",
+    "So $2z_4=(1+i)z_3+(1-i)z_1$, which is (ii). $\\blacksquare$"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rotate about the centre: the diagonals bisect each other at $m=\\frac{z_1+z_3}2$ and $z_2-m=i(z_1-m)$.",
+     "solution": [
+      "The diagonals of a square bisect each other: centre $m=\\frac{z_1+z_3}2=\\frac{z_2+z_4}2$.",
+      "A rotation of $90^\\circ$ anticlockwise about $m$ takes $A\\to B$: $z_2-m=i(z_1-m)$, so $z_2=(1-i)m+iz_1$.",
+      "$2z_2=(1-i)(z_1+z_3)+2iz_1=(1+i)z_1+(1-i)z_3$, which is (i).",
+      "Likewise $D$ is $A$ rotated by $-90^\\circ$ about $m$: $z_4-m=-i(z_1-m)$, so $z_4=(1+i)m-iz_1$.",
+      "$2z_4=(1+i)(z_1+z_3)-2iz_1=(1-i)z_1+(1+i)z_3$, which is (ii)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rotation by $90^\\circ$ anticlockwise about $c$: $w-c=i(z-c)$; by $-90^\\circ$: $w-c=-i(z-c)$.",
+    "Given a diagonal $z_1,z_3$ of a square, the other vertices are $\\frac{(1\\pm i)z_1+(1\\mp i)z_3}2$.",
+    "In a square (or parallelogram) opposite vertices have the same midpoint: $z_1+z_3=z_2+z_4$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "De Moivre's theorem",
+    "Binomial theorem: trigonometric sums"
+   ],
+   "level": 2,
+   "question": "Prove that\n(a) $\\cos x+{}^nC_1\\cos2x+{}^nC_2\\cos3x+\\dots+{}^nC_n\\cos(n+1)x=2^n\\cos^n\\frac x2\\cos\\left(\\frac{n+2}2\\right)x$\n(b) $\\sin x+{}^nC_1\\sin2x+{}^nC_2\\sin3x+\\dots+{}^nC_n\\sin(n+1)x=2^n\\cos^n\\frac x2\\sin\\left(\\frac{n+2}2\\right)x$",
+   "answer": "Proved",
+   "key_idea": "$1+e^{i\\theta}=2\\cos\\frac\\theta2\\,e^{i\\theta/2}$: factor out the half-angle phase and read off real and imaginary parts.",
+   "solution": [
+    "$(1+x)^n=\\sum_{k=0}^n{}^nC_kx^k$; put $x=e^{i\\theta}$: $\\left(1+e^{i\\theta}\\right)^n=\\sum_k{}^nC_ke^{ik\\theta}$.",
+    "Multiply by $e^{i\\theta}$: $e^{i\\theta}\\left(1+e^{i\\theta}\\right)^n=\\sum_k{}^nC_ke^{i(k+1)\\theta}=\\sum_k{}^nC_k\\cos(k+1)\\theta+i\\sum_k{}^nC_k\\sin(k+1)\\theta$ ... (*).",
+    "$1+e^{i\\theta}=(1+\\cos\\theta)+i\\sin\\theta=2\\cos^2\\frac\\theta2+2i\\sin\\frac\\theta2\\cos\\frac\\theta2=2\\cos\\frac\\theta2\\left(\\cos\\frac\\theta2+i\\sin\\frac\\theta2\\right)$.",
+    "So $\\left(1+e^{i\\theta}\\right)^n=2^n\\cos^n\\frac\\theta2\\left(\\cos\\frac\\theta2+i\\sin\\frac\\theta2\\right)^n=2^n\\cos^n\\frac\\theta2\\,e^{in\\theta/2}$ (De Moivre).",
+    "Hence $e^{i\\theta}\\left(1+e^{i\\theta}\\right)^n=2^n\\cos^n\\frac\\theta2\\,e^{i\\theta\\left(\\frac n2+1\\right)}=2^n\\cos^n\\frac\\theta2\\left[\\cos\\frac{(n+2)\\theta}2+i\\sin\\frac{(n+2)\\theta}2\\right]$.",
+    "Equate real and imaginary parts with (*) and put $\\theta=x$: the real part gives (a), the imaginary part gives (b). $\\blacksquare$"
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF stops at 2^n cos^n(theta/2) e^{i theta (n/2+1)} and never equates real and imaginary parts to obtain (a) and (b). The final step was added; everything before it is the PDF's.",
+   "useful_results": [
+    "$1+e^{i\\theta}=2\\cos\\frac\\theta2\\,e^{i\\theta/2}$ and $1-e^{i\\theta}=-2i\\sin\\frac\\theta2\\,e^{i\\theta/2}$: factor out the half-angle phase to get a real modulus.",
+    "Without the extra factor $e^{i\\theta}$: $\\sum{}^nC_k\\cos k\\theta=2^n\\cos^n\\frac\\theta2\\cos\\frac{n\\theta}2$ and $\\sum{}^nC_k\\sin k\\theta=2^n\\cos^n\\frac\\theta2\\sin\\frac{n\\theta}2$.",
+    "Alternating version: $\\sum(-1)^k{}^nC_k\\cos k\\theta=\\left(2\\sin\\frac\\theta2\\right)^n\\cos\\frac{n(\\theta-\\pi)}2$ (from $1-e^{i\\theta}$).",
+    "Check $n=1$: $\\cos x+\\cos2x=2\\cos\\frac x2\\cos\\frac{3x}2$, the sum-to-product formula."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Conjugate roots of a polynomial with real coefficients",
+    "Relations between roots and coefficients"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=ax^3+bx^2+cx+d$ be a cubic polynomial with real coefficients satisfying $f(i)=0$ and $f(1+i)=5$. Find the value of $a^2+b^2+c^2+d^2$.",
+   "answer": "26",
+   "key_idea": "Real coefficients and $f(i)=0$ give the factor $x^2+1$; the third root is real and the imaginary part of $f(1+i)=5$ fixes it.",
+   "solution": [
+    "$f$ has real coefficients and $f(i)=0$, so $f(-i)=0$ too; let the third root be $\\alpha$ (it is real, as non-real roots occur in pairs).",
+    "$f(x)=a(x-i)(x+i)(x-\\alpha)=a(x^2+1)(x-\\alpha)$.",
+    "$f(1+i)=a\\,(1+i+i)(1+i-i)(1+i-\\alpha)=a(1+2i)(1+i-\\alpha)=5$.",
+    "$(1+2i)(1+i-\\alpha)=1+i-\\alpha+2i-2-2\\alpha i=(-1-\\alpha)+i(3-2\\alpha)$.",
+    "So $a(-1-\\alpha)+i\\,a(3-2\\alpha)=5$. Real part: $a(1+\\alpha)=-5$ ... (1). Imaginary part: $a(3-2\\alpha)=0$.",
+    "$a\\ne0$, so $\\alpha=\\frac32$; then (1) gives $a\\cdot\\frac52=-5$, $a=-2$.",
+    "$f(x)=-2(x^2+1)\\left(x-\\frac32\\right)=-2x^3+3x^2-2x+3$.",
+    "$a=-2,\\ b=3,\\ c=-2,\\ d=3$, so $a^2+b^2+c^2+d^2=4+9+4+9=26$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Real and imaginary parts of $f(i)=0$ give $c=a$, $d=b$ at once; then $f(1+i)=5$ gives two linear equations.",
+     "solution": [
+      "$f(i)=-ai-b+ci+d=(d-b)+i(c-a)=0$ with real coefficients, so $d=b$ and $c=a$.",
+      "Hence $f(x)=a(x^3+x)+b(x^2+1)$ and $a^2+b^2+c^2+d^2=2(a^2+b^2)$.",
+      "$(1+i)^2=2i$ and $(1+i)^3=-2+2i$, so $f(1+i)=a(-2+2i+1+i)+b(2i+1)=a(-1+3i)+b(1+2i)$.",
+      "Set this equal to $5$: real part $-a+b=5$, imaginary part $3a+2b=0$.",
+      "Solving: $a=-2$, $b=3$, so the required sum is $2(4+9)=26$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A real polynomial vanishing at $i$ is divisible by $x^2+1$; if it vanishes at a non-real $\\alpha$, then $x^2-2\\mathrm{Re}(\\alpha)x+|\\alpha|^2$ divides it.",
+    "For real coefficients, $f(i)=0$ splits into real and imaginary parts: for a cubic, $d=b$ and $c=a$ (even coefficients equal, odd coefficients equal).",
+    "A real cubic with a non-real root has exactly one real root (the third root is real)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Circle $|z-z_0|=r$ in the Argand plane and rotation"
+   ],
+   "level": 3,
+   "question": "A particle starts to travel from a point $P$ on the curve $C_1:|z-3-4i|=5$, where $|z|$ is maximum. From $P$ the particle moves through an angle $\\tan^{-1}\\frac13$ in anticlockwise direction on $|z-3-4i|=5$ and reaches the point $Q$. From $Q$ it comes down parallel to the imaginary axis by $2$ units and reaches $R$. Find the complex number corresponding to the point $R$ in the Argand plane.",
+   "answer": "$3+7i$",
+   "key_idea": "The origin lies on the circle and $P$ is diametrically opposite to it; the angle $\\tan^{-1}\\frac13$ is turned at the origin, so $OQ$ has slope $3$.",
+   "solution": [
+    "Circle $C_1$: centre $C(3,4)$, radius $5$; it passes through the origin since $|0-3-4i|=5$.",
+    "$|z|$ is largest at the end of the diameter through the origin: $P=2(3+4i)=6+8i$, with $|OP|=10$.",
+    "The direction of $OP$ makes angle $\\alpha$ with the real axis, $\\tan\\alpha=\\frac43$.",
+    "The particle goes anticlockwise until $OQ$ has turned through $\\theta=\\tan^{-1}\\frac13$ from $OP$ (angle measured at the origin, which lies on the circle - the reading under which the printed answer arises).",
+    "$\\tan(\\alpha+\\theta)=\\frac{\\frac43+\\frac13}{1-\\frac49}=\\frac{5/3}{5/9}=3$, so $Q$ lies on the line $y=3x$.",
+    "Put $y=3x$ in $(x-3)^2+(y-4)^2=25$: $(x^2-6x+9)+(9x^2-24x+16)=25$, so $10x^2-30x=0$ and $x=0$ or $x=3$.",
+    "$x=0$ is the origin itself (not a new point); so $x=3$, $y=9$ and $Q=3+9i$.",
+    "Coming down $2$ units parallel to the imaginary axis: $R=3+9i-2i=3+7i$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF does not say at which point the angle tan^-1(1/3) is measured; its working (line y=3x through the origin) uses the angle at the origin O, which lies on the circle. If the angle were the central angle at C(3,4), Q would be 3+sqrt(10)/2 + i(4+3 sqrt(10)/2), a non-nice point that does not match the printed key 3+7i. The key is kept; the assumption is now stated, and the rejection of the root x=0 (the origin) is written out.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the polar equation of a circle through the origin: a point at polar angle $\\phi$ has $|OQ|=10\\cos(\\phi-\\alpha)$.",
+     "solution": [
+      "$OP$ is a diameter of length $10$ in direction $\\alpha$, where $\\cos\\alpha=\\frac35$, $\\sin\\alpha=\\frac45$.",
+      "A point $Q$ of the circle at polar angle $\\phi$ has $|OQ|=10\\cos(\\phi-\\alpha)$, because $\\angle OQP=90^\\circ$ (angle in a semicircle).",
+      "With $\\phi-\\alpha=\\theta$, $\\cos\\theta=\\frac3{\\sqrt{10}}$ and $\\sin\\theta=\\frac1{\\sqrt{10}}$: $|OQ|=10\\cdot\\frac3{\\sqrt{10}}=3\\sqrt{10}$.",
+      "$Q=3\\sqrt{10}\\,e^{i\\alpha}e^{i\\theta}=3\\sqrt{10}\\cdot\\frac{3+4i}5\\cdot\\frac{3+i}{\\sqrt{10}}=\\frac35(3+4i)(3+i)$.",
+      "$(3+4i)(3+i)=9+3i+12i-4=5+15i$, so $Q=3+9i$ and $R=Q-2i=3+7i$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A circle through the origin with centre $c$ has polar equation $|z|=2|c|\\cos(\\arg z-\\arg c)$; the point farthest from $O$ is $2c$.",
+    "Farthest and nearest points of $|z-c|=r$ from the origin are $c\\pm r\\frac{c}{|c|}$ (distances $|c|\\pm r$).",
+    "Inscribed angle theorem: an angle at a point of the circle is half the central angle on the same arc (here $\\theta=\\tan^{-1}\\frac13$ at $O$ is a central angle of about $36.9^\\circ$ at $C$).",
+    "Unit complex numbers from Pythagorean triples: $\\frac{3+4i}5$ and $\\frac{3+i}{\\sqrt{10}}$ multiply without square roots."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Sum of roots of unity",
+    "Arithmetico-geometric series"
+   ],
+   "level": 3,
+   "question": "Evaluate $\\sum_{p=1}^{32}(3p+2)\\left(\\sum_{q=1}^{10}\\left(\\sin\\frac{2q\\pi}{11}-i\\cos\\frac{2q\\pi}{11}\\right)\\right)^p$.",
+   "answer": "$48(1-i)$",
+   "key_idea": "$\\sin x-i\\cos x=-ie^{ix}$ and the roots of unity sum to $-1$ (without $1$), so the inner sum is $i$; the outer sum is a series in $i^p$.",
+   "solution": [
+    "$\\sin\\frac{2q\\pi}{11}-i\\cos\\frac{2q\\pi}{11}=-i\\left(\\cos\\frac{2q\\pi}{11}+i\\sin\\frac{2q\\pi}{11}\\right)=-ie^{2iq\\pi/11}$.",
+    "Let $\\theta=\\frac{2\\pi}{11}$: the inner sum is $-i\\left(e^{i\\theta}+e^{2i\\theta}+\\dots+e^{10i\\theta}\\right)$.",
+    "By the G.P. formula $\\frac{e^{i\\theta}\\left(1-e^{10i\\theta}\\right)}{1-e^{i\\theta}}=\\frac{e^{i\\theta}-e^{11i\\theta}}{1-e^{i\\theta}}=\\frac{e^{i\\theta}-1}{1-e^{i\\theta}}=-1$ (as $e^{11i\\theta}=1$).",
+    "So the inner sum is $-i\\cdot(-1)=i$.",
+    "The required sum is $\\sum_{p=1}^{32}(3p+2)i^p=3\\sum_{p=1}^{32}p\\,i^p+2\\sum_{p=1}^{32}i^p$.",
+    "$\\sum_{p=1}^{32}i^p=0$ (eight complete cycles $i-1-i+1$).",
+    "Let $S=i+2i^2+3i^3+\\dots+32i^{32}$, so $iS=i^2+2i^3+\\dots+31i^{32}+32i^{33}$.",
+    "Subtract: $S(1-i)=\\left(i+i^2+\\dots+i^{32}\\right)-32i^{33}=0-32i$, so $S=\\frac{-32i}{1-i}$.",
+    "$S=\\frac{-32i(1+i)}2=-16i+16=16(1-i)$.",
+    "Total $=3\\cdot16(1-i)+2\\cdot0=48(1-i)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "After the inner sum $=i$, group the terms $p=4m+1,\\dots,4m+4$: each block of four contributes the same $6(1-i)$.",
+     "solution": [
+      "The inner sum is $i$ (as above), so we need $\\sum_{p=1}^{32}(3p+2)i^p$.",
+      "The powers $i^p$ repeat with period $4$: $i,-1,-i,1$ for $p=4m+1,4m+2,4m+3,4m+4$.",
+      "Block $m$: $(12m+5)i-(12m+8)-(12m+11)i+(12m+14)=-6i+6$.",
+      "Every block gives $6(1-i)$, independent of $m$.",
+      "There are $8$ blocks ($p=1,\\dots,32$), so the sum is $8\\cdot6(1-i)=48(1-i)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos x+i\\sin x=e^{ix}$, $\\sin x-i\\cos x=-ie^{ix}$, $\\sin x+i\\cos x=ie^{-ix}$.",
+    "$\\sum_{q=1}^{n-1}e^{2\\pi iq/n}=-1$, i.e. $\\sum\\cos\\frac{2\\pi q}n=-1$ and $\\sum\\sin\\frac{2\\pi q}n=0$.",
+    "For $\\sum p\\,x^p$ use $S-xS$ (arithmetico-geometric); at $x=i$ the period is $4$, and a full block $\\sum_{p=4m+1}^{4m+4}(3p+2)i^p=6(1-i)$ is independent of $m$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Roots of unity in a cyclic system of equations"
+   ],
+   "level": 4,
+   "question": "Let $a,b,c$ be distinct complex numbers such that $\\frac a{1-b}=\\frac b{1-c}=\\frac c{1-a}=k$. Find the value of $k$.",
+   "answer": "$k=-\\omega$ or $k=-\\omega^2$ (i.e. $\\frac{1\\pm i\\sqrt3}2$)",
+   "key_idea": "Eliminate $b$ and $c$ to get $(k^2-k+1)(ak+a-k)=0$; distinctness of $a,b,c$ kills the second factor.",
+   "solution": [
+    "From $\\frac a{1-b}=\\frac b{1-c}=\\frac c{1-a}=k$: $a=k-bk$, $b=k-kc$, $c=k-ak$.",
+    "Substitute $b$: $a=k-k(k-kc)=k-k^2+k^2c$.",
+    "Substitute $c$: $a=k-k^2+k^2(k-ak)=k-k^2+k^3-ak^3$.",
+    "So $a(k^3+1)=k(k^2-k+1)$, i.e. $a(k+1)(k^2-k+1)=k(k^2-k+1)$, i.e. $(k^2-k+1)(ak+a-k)=0$.",
+    "Either $k^2-k+1=0$ or $ak+a-k=0$, i.e. $k=\\frac a{1-a}$.",
+    "Starting the elimination from $b$ or $c$ gives in the same way $(k^2-k+1)(bk+b-k)=0$ and $(k^2-k+1)(ck+c-k)=0$.",
+    "If $k^2-k+1\\ne0$ then $a(k+1)=b(k+1)=c(k+1)=k$; $k=-1$ would give $0=-1$, so $k\\ne-1$ and $a=b=c=\\frac k{k+1}$, contradicting distinctness.",
+    "Hence $k^2-k+1=0$, so $k=\\frac{1\\pm i\\sqrt3}2=-\\omega^2$ or $-\\omega$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF dismisses the factor k = a/(1-a) with the bare words 'is not possible'. The reason (the same elimination from b and c would force a=b=c, contradicting distinctness) was added; the printed ending 'Hence Proved' is irrelevant to this find-k question.",
+   "alternate_solutions": [
+    {
+     "idea": "The equations are linear in $a,b,c$: the coefficient determinant is $1+k^3$, and a unique solution would be $a=b=c$.",
+     "solution": [
+      "Write the system as $a+kb=k$, $b+kc=k$, $c+ka=k$ (linear in $a,b,c$).",
+      "Coefficient determinant: $\\begin{vmatrix}1&k&0\\\\0&1&k\\\\k&0&1\\end{vmatrix}=1+k^3$.",
+      "If $1+k^3\\ne0$ the solution is unique, and $a=b=c=\\frac k{1+k}$ is one (valid for $k\\ne-1$) - contradicting distinctness; and $k=-1$ is inconsistent (adding the equations gives $0=-3$).",
+      "So $k^3=-1$ with $k\\ne-1$, i.e. $k^2-k+1=0$: $k=-\\omega$ or $-\\omega^2$.",
+      "These values do occur: then the system has a line of solutions $a=\\frac k{1+k}+t$, $b=\\frac k{1+k}-\\frac tk$, $c=\\frac k{1+k}+\\frac t{k^2}$ with $t\\ne0$, and $1,\\ -\\frac1k,\\ \\frac1{k^2}$ are pairwise distinct, so $a,b,c$ are distinct."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Cyclic systems $a=f(b)$, $b=f(c)$, $c=f(a)$ are solved by composing three times, or - when $f$ is linear - as a linear system with a circulant determinant, here $1+k^3$.",
+    "Distinctness of the unknowns is typically used to discard the symmetric solution $a=b=c$.",
+    "$k^2-k+1=0\\iff k=e^{\\pm i\\pi/3}=-\\omega^{2},-\\omega$ (primitive sixth roots of unity), and $k^3=-1$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Locus of a point in the Argand plane: circle"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha,\\beta$ be fixed complex numbers and $z$ a variable complex number such that $|z-\\alpha|^2+|z-\\beta|^2=k$. Find the limits for $k$ such that the locus of $z$ is a circle. Find also the centre and radius of the circle.",
+   "answer": "$k>\\frac12|\\alpha-\\beta|^2$; centre $\\frac{\\alpha+\\beta}2$, radius $\\frac12\\sqrt{2k-|\\alpha-\\beta|^2}$",
+   "key_idea": "Expand with $|w|^2=w\\bar w$ and compare with $z\\bar z-\\bar cz-c\\bar z+|c|^2-r^2=0$.",
+   "solution": [
+    "$|z-\\alpha|^2+|z-\\beta|^2=(z-\\alpha)(\\bar z-\\bar\\alpha)+(z-\\beta)(\\bar z-\\bar\\beta)=k$.",
+    "$2z\\bar z-(\\bar\\alpha+\\bar\\beta)z-(\\alpha+\\beta)\\bar z+|\\alpha|^2+|\\beta|^2-k=0$.",
+    "Divide by $2$: $z\\bar z-\\frac{\\bar\\alpha+\\bar\\beta}2z-\\frac{\\alpha+\\beta}2\\bar z+\\frac{|\\alpha|^2+|\\beta|^2-k}2=0$.",
+    "A circle with centre $c$ and radius $r$ is $z\\bar z-\\bar cz-c\\bar z+|c|^2-r^2=0$; so the centre is $c=\\frac{\\alpha+\\beta}2$.",
+    "$r^2=|c|^2-\\frac{|\\alpha|^2+|\\beta|^2-k}2=\\frac{|\\alpha+\\beta|^2-2|\\alpha|^2-2|\\beta|^2+2k}4$.",
+    "Since $|\\alpha+\\beta|^2=|\\alpha|^2+|\\beta|^2+\\alpha\\bar\\beta+\\bar\\alpha\\beta$: $r^2=\\frac{2k-\\left(|\\alpha|^2+|\\beta|^2-\\alpha\\bar\\beta-\\bar\\alpha\\beta\\right)}4=\\frac{2k-|\\alpha-\\beta|^2}4$.",
+    "A genuine circle needs $r^2>0$: $2k>|\\alpha-\\beta|^2$, i.e. $k>\\frac12|\\alpha-\\beta|^2$; radius $=\\frac12\\sqrt{2k-|\\alpha-\\beta|^2}$ (equality gives the single point $\\frac{\\alpha+\\beta}2$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Apollonius' median theorem: $PA^2+PB^2=2PM^2+\\frac12AB^2$, with $M$ the midpoint of $AB$.",
+     "solution": [
+      "Let $A,B$ be the points $\\alpha,\\beta$, $P$ the point $z$, and $M=\\frac{\\alpha+\\beta}2$ the midpoint of $AB$.",
+      "Median theorem (parallelogram law): $|z-\\alpha|^2+|z-\\beta|^2=2\\left|z-\\frac{\\alpha+\\beta}2\\right|^2+\\frac12|\\alpha-\\beta|^2$.",
+      "So the condition becomes $2\\left|z-\\frac{\\alpha+\\beta}2\\right|^2=k-\\frac12|\\alpha-\\beta|^2$.",
+      "This is a circle with centre $\\frac{\\alpha+\\beta}2$ and radius$^2=\\frac k2-\\frac{|\\alpha-\\beta|^2}4=\\frac{2k-|\\alpha-\\beta|^2}4$.",
+      "It exists (positive radius) iff $k>\\frac12|\\alpha-\\beta|^2$; at equality it is a point, below it the locus is empty."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Apollonius median theorem: $PA^2+PB^2=2PM^2+\\frac12AB^2$; so $PA^2+PB^2=k$ is a circle about the midpoint $M$.",
+    "$z\\bar z+\\bar az+a\\bar z+b=0$ ($b$ real) is a circle with centre $-a$ and radius $\\sqrt{|a|^2-b}$ when $|a|^2>b$.",
+    "Special case $k=|\\alpha-\\beta|^2$: radius $\\frac{|\\alpha-\\beta|}2$, the circle on $AB$ as diameter ($PA^2+PB^2=AB^2$, Pythagoras)."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Roots of unity as vertices of a polygon and its area"
+   ],
+   "level": 3,
+   "question": "If the area of the polygon whose vertices are the solutions (in the complex plane) of the equation $x^7+x^6+x^5+x^4+x^3+x^2+x+1=0$ can be expressed in the simplest form as $\\frac{a\\sqrt b+c}d$, find the value of $a+b+c+d$.",
+   "answer": "8",
+   "key_idea": "$x^7+\\dots+1=\\frac{1-x^8}{1-x}$: the roots are the 8th roots of unity except $1$, a regular octagon with one vertex missing.",
+   "solution": [
+    "$x^7+x^6+\\dots+x+1=\\frac{1-x^8}{1-x}=0$ with $x\\ne1$, so $x^8=1$, $x\\ne1$.",
+    "The roots are $x=e^{2ik\\pi/8}$, $k=1,2,\\dots,7$: the 8th roots of unity except $1$, on the unit circle at $45^\\circ$ spacing.",
+    "The polygon has these $7$ vertices; join the origin to each. Between consecutive vertices ($k=1$ to $7$) there are $6$ triangles with central angle $\\frac\\pi4$.",
+    "Each has area $\\frac12\\cdot1\\cdot1\\cdot\\sin\\frac\\pi4=\\frac1{2\\sqrt2}$, so these six give $6\\cdot\\frac1{2\\sqrt2}=\\frac3{\\sqrt2}$.",
+    "The last side joins $e^{-i\\pi/4}$ to $e^{i\\pi/4}$ (the neighbours of the missing vertex $1$): central angle $\\frac\\pi2$, area $\\frac12\\cdot1\\cdot1\\cdot\\sin\\frac\\pi2=\\frac12$.",
+    "Total area $=\\frac3{\\sqrt2}+\\frac12=\\frac{3\\sqrt2+1}2$.",
+    "So $a=3,\\ b=2,\\ c=1,\\ d=2$ and $a+b+c+d=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complement: regular octagon minus the corner triangle with vertices $e^{-i\\pi/4},\\,1,\\,e^{i\\pi/4}$.",
+     "solution": [
+      "The regular octagon of circumradius $1$ has area $8\\cdot\\frac12\\sin\\frac\\pi4=2\\sqrt2$.",
+      "Removing the vertex $1$ cuts off the triangle with vertices $e^{-i\\pi/4}$, $1$, $e^{i\\pi/4}$.",
+      "Its base (the chord between $e^{\\pm i\\pi/4}$) is $\\sqrt2$ and its height is $1-\\cos\\frac\\pi4=1-\\frac{\\sqrt2}2$.",
+      "Area of the triangle $=\\frac12\\cdot\\sqrt2\\left(1-\\frac{\\sqrt2}2\\right)=\\frac{\\sqrt2-1}2$.",
+      "Polygon area $=2\\sqrt2-\\frac{\\sqrt2-1}2=\\frac{3\\sqrt2+1}2$, so $a+b+c+d=3+2+1+2=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+x+\\dots+x^{n-1}=0\\iff x^n=1,\\ x\\ne1$: the roots are the non-trivial $n$th roots of unity.",
+    "The $n$th roots of unity form a regular $n$-gon of area $\\frac n2\\sin\\frac{2\\pi}n$ (circumradius $1$); here $n=8$ gives $2\\sqrt2$.",
+    "A polygon with one vertex removed is the full polygon minus the triangle on the two neighbours of that vertex."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Real and imaginary parts of $(a+ib)^3$",
+    "Integer solutions using prime factorisation"
+   ],
+   "level": 3,
+   "question": "If $a$ and $b$ are positive integers such that $N=(a+ib)^3-107i$ is a positive integer, find $N$.",
+   "answer": "198",
+   "key_idea": "$N$ real forces $\\mathrm{Im}=3a^2b-b^3-107=0$, i.e. $b(3a^2-b^2)=107$ with $107$ prime.",
+   "solution": [
+    "$N=(a+ib)^3-107i=a^3+3a^2bi-3ab^2-b^3i-107i=\\left(a^3-3ab^2\\right)+i\\left(3a^2b-b^3-107\\right)$.",
+    "$N$ is a (real) integer, so the imaginary part vanishes: $3a^2b-b^3=107$, i.e. $b\\left(3a^2-b^2\\right)=107$.",
+    "$107$ is prime and $b>0$, so $b=1$ (with $3a^2-b^2=107$) or $b=107$ (with $3a^2-b^2=1$).",
+    "$b=107$ would need $3a^2=1+107^2=11450$, which is not divisible by $3$ (digit sum $11$): impossible.",
+    "So $b=1$: $3a^2=108$, $a^2=36$, $a=6$.",
+    "$N=a^3-3ab^2=6^3-3\\cdot6\\cdot1^2=216-18=198$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes b(3a^2-b^2)=107=107x1 and simply takes b=1. The other factorisation b=107 was not excluded; it is excluded now because 3a^2=11450 is not a multiple of 3. Answer unchanged.",
+   "useful_results": [
+    "$(a+ib)^3=\\left(a^3-3ab^2\\right)+i\\left(3a^2b-b^3\\right)$.",
+    "A real-integer condition makes the imaginary part zero and turns the problem into a product of two integers equal to a prime: test only $1\\cdot p$ and $p\\cdot1$.",
+    "Modulus check: $N^2+107^2=(a^2+b^2)^3$; here $198^2+107^2=50653=37^3$ with $37=6^2+1^2$."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Conjugate roots of a real polynomial",
+    "Relations between roots and coefficients"
+   ],
+   "level": 3,
+   "question": "If the biquadratic $x^4+ax^3+bx^2+cx+d=0$ ($a,b,c,d\\in\\mathbb R$) has $4$ non-real roots, two with sum $3+4i$ and the other two with product $13+i$, find the value of $b$.",
+   "answer": "51",
+   "key_idea": "A non-real sum means the two roots are not conjugates, so the other two roots are their conjugates; then $\\alpha\\beta=\\overline{13+i}$.",
+   "solution": [
+    "The polynomial is real with four non-real roots, so they form two conjugate pairs: roots $\\alpha,\\beta,\\bar\\alpha,\\bar\\beta$.",
+    "Take $\\alpha+\\beta=3+4i$ (non-real, so $\\alpha,\\beta$ are not conjugates of each other); the other two roots are then $\\bar\\alpha,\\bar\\beta$, and $\\bar\\alpha+\\bar\\beta=3-4i$.",
+    "Their product is $\\bar\\alpha\\bar\\beta=13+i$, so $\\alpha\\beta=13-i$.",
+    "$b=\\sum$ of products of roots two at a time $=\\alpha\\beta+\\alpha\\bar\\alpha+\\alpha\\bar\\beta+\\beta\\bar\\alpha+\\beta\\bar\\beta+\\bar\\alpha\\bar\\beta$.",
+    "Group: $b=\\left(\\alpha\\beta+\\bar\\alpha\\bar\\beta\\right)+\\left(\\alpha+\\beta\\right)\\left(\\bar\\alpha+\\bar\\beta\\right)$.",
+    "$b=(13-i+13+i)+(3+4i)(3-4i)=26+(9+16)=51$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Real polynomial: non-real roots occur in conjugate pairs; if two roots have a non-real sum they cannot be conjugates of each other, so the remaining two are their conjugates.",
+    "Coefficient of $x^2$ for roots $\\alpha,\\beta,\\gamma,\\delta$: $b=\\alpha\\beta+\\gamma\\delta+(\\alpha+\\beta)(\\gamma+\\delta)$.",
+    "Equivalent factor form: $\\left(x^2-sx+p\\right)\\left(x^2-\\bar sx+\\bar p\\right)$ with $s=3+4i$, $p=13-i$; its $x^2$ coefficient is $p+\\bar p+|s|^2=26+25$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Cube roots of unity and modulus",
+    "Integer solutions of a quadratic form"
+   ],
+   "level": 3,
+   "question": "If $\\omega$ is the imaginary cube root of unity, find the number of ordered pairs of integers $(a,b)$ such that $|a\\omega+b|=1$.",
+   "answer": "6",
+   "key_idea": "$|a\\omega+b|^2=a^2-ab+b^2=(a-b)^2+ab$; integrality limits $(a-b)^2$ to $0$ or $1$.",
+   "solution": [
+    "$|a\\omega+b|=1\\Rightarrow|a\\omega+b|^2=(a\\omega+b)(a\\bar\\omega+b)=1$.",
+    "$a^2\\omega\\bar\\omega+ab(\\omega+\\bar\\omega)+b^2=1$; with $\\omega\\bar\\omega=1$ and $\\omega+\\bar\\omega=-1$: $a^2-ab+b^2=1$.",
+    "Rewrite: $(a-b)^2+ab=1$ ... (1).",
+    "Let $m=(a-b)^2\\ge0$ (a perfect square). Then $ab=1-m$ and $(a+b)^2=(a-b)^2+4ab=4-3m\\ge0$, so $m\\le\\frac43$ and $m\\in\\{0,1\\}$.",
+    "$m=0$, $ab=1$: $a=b=\\pm1$, giving $(1,1)$ and $(-1,-1)$.",
+    "$m=1$, $ab=0$: one of $a,b$ is $0$ and $|a-b|=1$, giving $(0,1),(1,0),(0,-1),(-1,0)$.",
+    "In all there are $2+4=6$ ordered pairs."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF lists the cases (a-b)^2=0 and (a-b)^2=1 without proving that no other value of (a-b)^2 is possible. The bound (a+b)^2 = 4-3(a-b)^2 >= 0 was added to show the case list is complete. Answer 6 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$a\\omega+b$ is an Eisenstein integer of norm $a^2-ab+b^2$; norm $1$ means a unit, and there are exactly six units.",
+     "solution": [
+      "The numbers $a\\omega+b$ ($a,b\\in\\mathbb Z$) form a triangular lattice, and $|a\\omega+b|^2=a^2-ab+b^2$.",
+      "In this lattice each point has exactly six nearest neighbours at distance $1$ from the origin: $\\pm1,\\ \\pm\\omega,\\ \\pm\\omega^2$ (the sixth roots of unity).",
+      "Express each as $a\\omega+b$ using $\\omega^2=-1-\\omega$: $1\\to(0,1)$, $-1\\to(0,-1)$, $\\omega\\to(1,0)$, $-\\omega\\to(-1,0)$.",
+      "$\\omega^2=-1-\\omega\\to(-1,-1)$ and $-\\omega^2=1+\\omega\\to(1,1)$.",
+      "Hence exactly $6$ ordered pairs."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|a+b\\omega|^2=a^2-ab+b^2$ (norm form of Eisenstein integers), and $|a+b\\omega+c\\omega^2|^2=a^2+b^2+c^2-ab-bc-ca$.",
+    "Completing the square, $a^2-ab+b^2=\\left(a-\\frac b2\\right)^2+\\frac34b^2=1$ gives $|b|\\le\\frac2{\\sqrt3}$, so $|b|\\le1$ (and likewise $|a|\\le1$): only nine pairs to test.",
+    "Number of integer solutions of $a^2-ab+b^2=n$: $n=1$: $6$; $n=3$: $6$; $n=7$: $12$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Loci in the Argand plane: half-plane, line and circle"
+   ],
+   "level": 2,
+   "paragraph": "Let $A,B,C$ be three sets of complex numbers as defined below: $A=\\{z:\\mathrm{Im}\\,z\\ge1\\}$, $B=\\{z:|z-2-i|=3\\}$, $C=\\{z:\\mathrm{Re}\\left((1-i)z\\right)=\\sqrt2\\}$. [JEE-2008]",
+   "question": "The number of elements in the set $A\\cap B\\cap C$ is:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$\\infty$"
+   ],
+   "answer": "(B) 1",
+   "key_idea": "$C$ is the line $x+y=\\sqrt2$ and $B$ a circle; the line cuts the circle in two points and $\\mathrm{Im}\\,z\\ge1$ keeps only one.",
+   "solution": [
+    "Let $z=x+iy$. $C$: $\\mathrm{Re}\\left[(1-i)(x+iy)\\right]=x+y=\\sqrt2$, the line $x+y=\\sqrt2$.",
+    "$B$: the circle $(x-2)^2+(y-1)^2=9$ (centre $(2,1)$, radius $3$). $A$: the closed half-plane $y\\ge1$.",
+    "Intersect line and circle: put $x=\\sqrt2-y$: $(y+2-\\sqrt2)^2+(y-1)^2=9$, i.e. $y^2+(1-\\sqrt2)y-(1+2\\sqrt2)=0$.",
+    "Discriminant $(1-\\sqrt2)^2+4(1+2\\sqrt2)=7+6\\sqrt2>0$, so $y=\\frac{(\\sqrt2-1)\\pm\\sqrt{7+6\\sqrt2}}2\\approx2.18$ or $-1.76$.",
+    "Only $y\\approx2.18\\ge1$ lies in $A$; the other point has $y<1$.",
+    "So $A\\cap B\\cap C$ is a single point $S\\approx(-0.76,\\,2.18)$: the number of elements is $1$. Option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says 'x=0, (y-1)^2=5, y=1+-sqrt5' and 'Only perpendicular point'. x=0 does not satisfy x+y=sqrt2 with those y (the point (0, 1+sqrt5) is not on the line), so that working is wrong. Correct: intersect x+y=sqrt2 with the circle, getting y=((sqrt2-1)+-sqrt(7+6 sqrt2))/2, and keep the root with y>=1. The count 1 and option (B) are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Count geometrically: the line meets the circle in a chord that crosses the line $y=1$ inside the circle, so exactly one end has $y>1$.",
+     "solution": [
+      "The centre of $B$ is $(2,1)$; the distance to the line $x+y=\\sqrt2$ is $\\frac{|2+1-\\sqrt2|}{\\sqrt2}=\\frac{3-\\sqrt2}{\\sqrt2}\\approx1.12<3$, so the line cuts the circle in a chord.",
+      "The line meets $y=1$ at $(\\sqrt2-1,\\,1)$, at distance $2-(\\sqrt2-1)=3-\\sqrt2\\approx1.59<3$ from the centre: this point lies inside the circle, on the chord.",
+      "So the chord crosses $y=1$ in its interior: one endpoint has $y>1$, the other $y<1$.",
+      "Only the endpoint with $y\\ge1$ belongs to $A$, so $A\\cap B\\cap C$ has exactly $1$ element."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\mathrm{Re}\\left[(1-i)z\\right]=\\sqrt2$ is the line $x+y=\\sqrt2$; $\\mathrm{Re}(\\lambda z)=c$ is always a line.",
+    "Line versus circle: compare the distance from the centre with the radius; two intersection points if the distance is smaller.",
+    "A chord with an interior point on a horizontal line has its endpoints on opposite sides of it - this counts intersections with a half-plane without solving."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Loci in the Argand plane: circle and its diameter"
+   ],
+   "level": 3,
+   "paragraph": "Let $A,B,C$ be three sets of complex numbers as defined below: $A=\\{z:\\mathrm{Im}\\,z\\ge1\\}$, $B=\\{z:|z-2-i|=3\\}$, $C=\\{z:\\mathrm{Re}\\left((1-i)z\\right)=\\sqrt2\\}$. [JEE-2008]",
+   "question": "Let $z$ be any point in $A\\cap B\\cap C$. Then $|z+1-i|^2+|z-5-i|^2$ lies between:",
+   "options": [
+    "$25$ and $29$",
+    "$30$ and $34$",
+    "$35$ and $39$",
+    "$40$ and $44$"
+   ],
+   "answer": "(C) 35 and 39",
+   "key_idea": "$-1+i$ and $5+i$ are the ends of a diameter of $B$, so the angle at $z$ is a right angle and Pythagoras applies.",
+   "solution": [
+    "$z=S$ is the single point of $A\\cap B\\cap C$ found in Q23; it lies on the circle $B$ (centre $2+i$, radius $3$).",
+    "$|z+1-i|$ is the distance from $z$ to $P(-1,1)$ and $|z-5-i|$ is the distance from $z$ to $Q(5,1)$.",
+    "$P$ and $Q$ are at distance $3$ from the centre $(2,1)$ and on a horizontal line through it: they are the ends of a diameter of $B$, with $PQ=6$.",
+    "$S$ lies on the circle, so $\\angle PSQ=90^\\circ$ (angle in a semicircle).",
+    "By Pythagoras, $|z+1-i|^2+|z-5-i|^2=PS^2+QS^2=PQ^2=6^2=36$.",
+    "$36$ lies between $35$ and $39$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parallelogram law: $z+1-i=(z-2-i)+3$ and $z-5-i=(z-2-i)-3$.",
+     "solution": [
+      "Let $u=z-2-i$; $z$ is on $B$, so $|u|=3$.",
+      "$z+1-i=u+3$ and $z-5-i=u-3$.",
+      "$|u+3|^2+|u-3|^2=2|u|^2+2\\cdot3^2$ (parallelogram law).",
+      "$=2\\cdot9+2\\cdot9=36$, which is between $35$ and $39$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parallelogram law: $|u+v|^2+|u-v|^2=2|u|^2+2|v|^2$.",
+    "For a point $X$ on the circle with diameter $PQ$: $XP^2+XQ^2=PQ^2$ (Thales + Pythagoras).",
+    "For any point $X$ with $M$ the midpoint of $PQ$: $XP^2+XQ^2=2XM^2+\\frac12PQ^2$ (median theorem); on this circle $XM=3$ gives $18+18=36$."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Modulus and triangle inequality for complex numbers"
+   ],
+   "level": 3,
+   "paragraph": "Let $A,B,C$ be three sets of complex numbers as defined below: $A=\\{z:\\mathrm{Im}\\,z\\ge1\\}$, $B=\\{z:|z-2-i|=3\\}$, $C=\\{z:\\mathrm{Re}\\left((1-i)z\\right)=\\sqrt2\\}$. [JEE-2008]",
+   "question": "Let $z$ be any point in $A\\cap B\\cap C$ and let $w$ be any point satisfying $|w-2-i|<3$. Then $|z|-|w|+3$ lies between:",
+   "options": [
+    "$-6$ and $3$",
+    "$-3$ and $6$",
+    "$-6$ and $6$",
+    "$-3$ and $9$"
+   ],
+   "answer": "(B, C, D)",
+   "key_idea": "'Lies between' holds for every option whose interval contains the whole range; find the exact range from $|z|=|S|$ and $|w|\\in[0,\\sqrt5+3)$.",
+   "solution": [
+    "$w$ lies inside the circle $B$ (centre $2+i$, radius $3$); $z=S$ lies on $B$, so $|z-w|<6$.",
+    "Hence $\\left||z|-|w|\\right|\\le|z-w|<6$, i.e. $|z|-|w|\\in(-6,6)$ and $|z|-|w|+3\\in(-3,9)$ - this alone only supports (D).",
+    "'Lies between' is true for every option whose interval contains the whole set of values, so we need the exact range of $E=|z|-|w|+3$.",
+    "$S=(x,y)$ is on $x+y=\\sqrt2$ and on the circle $(x-2)^2+(y-1)^2=9$, which gives $x^2+y^2=4x+2y+4$; so $|S|^2=3\\sqrt2+5-\\sqrt{7+6\\sqrt2}\\approx5.31$ and $|S|\\approx2.30$.",
+    "$|w|$ takes every value in $\\left[0,\\ \\sqrt5+3\\right)$: $w=0$ is allowed because $|0-2-i|=\\sqrt5<3$, and $|2+i|+3=\\sqrt5+3$ is the supremum.",
+    "So $E=|S|-|w|+3$ ranges over $\\left(|S|-\\sqrt5,\\ |S|+3\\right]\\approx(0.07,\\ 5.30]$.",
+    "This interval lies inside $(-3,6)$, $(-6,6)$ and $(-3,9)$, but not inside $(-6,3)$, since values up to $5.30>3$ occur (e.g. $w=0$).",
+    "Hence options (B), (C) and (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF derives only |z|-|w|+3 in (-3,9), which supports option (D) alone, yet its key is BCD. The coarse range cannot justify (B) or (C). The exact range (about 0.07 to 5.30) was computed from |S| and the range of |w|; it lies inside the intervals of B, C and D but not A, matching the key BCD.",
+   "alternate_solutions": [
+    {
+     "idea": "Estimate instead of solving: $|S|^2=4\\sqrt2+4-2y$ with $y\\in[1,4]$ traps $|S|$ between $1.28$ and $2.77$.",
+     "solution": [
+      "Let $S=(x,y)$. It lies on the line $x+y=\\sqrt2$ and on the circle, so $1\\le y\\le4$ ($y\\ge1$ from $A$, and the top of the circle is $y=4$).",
+      "The circle gives $x^2+y^2=4x+2y+4$; with $x=\\sqrt2-y$: $|S|^2=4\\sqrt2+4-2y$.",
+      "So $|S|^2\\in[4\\sqrt2-4,\\ 4\\sqrt2+2]\\approx[1.66,\\ 7.66]$ and $1.28<|S|<2.77$.",
+      "Since $|w|\\in[0,\\ \\sqrt5+3)$: $E=|S|-|w|+3\\le|S|+3<5.77<6$ and $E>|S|-\\sqrt5>1.28-2.24>-1$.",
+      "So $E$ lies in $(-1,\\ 5.77)$, inside the intervals of (B), (C), (D); and $E=|S|+3>3$ when $w=0$, so (A) fails."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left||z|-|w|\\right|\\le|z-w|$; for $|z-c|=r$: $\\left||c|-r\\right|\\le|z|\\le|c|+r$.",
+    "For 'lies between' with overlapping intervals, find the exact range first; every option whose interval contains the range is correct.",
+    "Range of $|w|$ over the disc $|w-c|<r$: from $\\max(0,|c|-r)$ up to (not including) $|c|+r$; it starts at $0$ when the origin is inside the disc."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Cube roots of unity",
+    "Sums of binomial coefficients in steps of three"
+   ],
+   "level": 2,
+   "paragraph": "Let $(1+x)^n=C_0+C_1x+C_2x^2+\\dots+C_nx^n$. For the sum of the series $C_0+C_1+C_2+\\dots$ put $x=1$. For the sum of $C_0+C_2+C_4+C_6+\\dots$ or $C_1+C_3+C_5+\\dots$ add or subtract the equations obtained by putting $x=1$ and $x=-1$. For the sum of $C_0+C_3+C_6+\\dots$ or $C_1+C_4+C_7+\\dots$ or $C_2+C_5+C_8+\\dots$ we substitute $x=1,\\ x=\\omega,\\ x=\\omega^2$ and add or manipulate the results. Similarly, if the suffixes differ by $p$, we substitute the $p$th roots of unity and add.",
+   "question": "$C_0+C_3+C_6+C_9+\\dots=$",
+   "options": [
+    "$\\frac13\\left[2^n-2\\cos\\frac{n\\pi}3\\right]$",
+    "$\\frac13\\left[2^n+2\\cos\\frac{n\\pi}3\\right]$",
+    "$\\frac13\\left[2^n-2\\sin\\frac{n\\pi}3\\right]$",
+    "$\\frac13\\left[2^n+2\\sin\\frac{n\\pi}3\\right]$"
+   ],
+   "answer": "(B) $\\frac13\\left[2^n+2\\cos\\frac{n\\pi}3\\right]$",
+   "key_idea": "Add $(1+x)^n$ at $x=1,\\omega,\\omega^2$: $1+\\omega^r+\\omega^{2r}$ is $3$ when $3\\mid r$ and $0$ otherwise.",
+   "solution": [
+    "$(1+x)^n=C_0+C_1x+C_2x^2+C_3x^3+\\dots$. Put $x=1$: $2^n=C_0+C_1+C_2+C_3+\\dots$ ... (1).",
+    "Put $x=\\omega$: $(1+\\omega)^n=C_0+C_1\\omega+C_2\\omega^2+C_3+\\dots$ ... (2).",
+    "Put $x=\\omega^2$: $(1+\\omega^2)^n=C_0+C_1\\omega^2+C_2\\omega^4+C_3\\omega^6+\\dots$ ... (3).",
+    "Add (1)+(2)+(3): the coefficient of $C_r$ is $1+\\omega^r+\\omega^{2r}$, which is $3$ if $3\\mid r$ and $0$ otherwise; so $2^n+(1+\\omega)^n+(1+\\omega^2)^n=3\\left(C_0+C_3+C_6+\\dots\\right)$.",
+    "$1+\\omega=-\\omega^2=e^{i\\pi/3}$ and $1+\\omega^2=-\\omega=e^{-i\\pi/3}$.",
+    "$C_0+C_3+C_6+\\dots=\\frac{2^n+e^{in\\pi/3}+e^{-in\\pi/3}}3=\\frac13\\left[2^n+2\\cos\\frac{n\\pi}3\\right]$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The formula must hold for every $n$: test $n=1,2$ where the series is just $C_0=1$, and eliminate options.",
+     "solution": [
+      "For $n=1$ and $n=2$ the series $C_0+C_3+\\dots$ equals $C_0=1$.",
+      "$n=1$: (A) $\\frac13(2-2\\cos60^\\circ)=\\frac13$ - no; (C) $\\frac13\\left(2-2\\sin60^\\circ\\right)\\approx0.09$ - no; (D) $\\frac13\\left(2+2\\sin60^\\circ\\right)\\approx1.24$ - no.",
+      "(B) at $n=1$: $\\frac13(2+2\\cos60^\\circ)=\\frac13\\cdot3=1$ - yes.",
+      "Check (B) at $n=2$: $\\frac13\\left(4+2\\cos120^\\circ\\right)=\\frac13(4-1)=1=C_0$ - yes (and at $n=3$: $\\frac13(8-2)=2=C_0+C_3$).",
+      "Only (B) survives. (Option elimination - the derivation above proves it.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "Roots-of-unity filter: $\\sum_{r\\equiv s\\,(\\mathrm{mod}\\ m)}C_r=\\frac1m\\sum_{j=0}^{m-1}\\varepsilon^{-js}(1+\\varepsilon^j)^n$, $\\varepsilon=e^{2\\pi i/m}$.",
+    "$1+\\omega^r+\\omega^{2r}=3$ if $3\\mid r$, else $0$; and $1+\\omega=e^{i\\pi/3}$, $1+\\omega^2=e^{-i\\pi/3}$ give the $\\cos\\frac{n\\pi}3$.",
+    "The other classes: $C_1+C_4+\\dots=\\frac13\\left[2^n+2\\cos\\frac{(n-2)\\pi}3\\right]$ and $C_2+C_5+\\dots=\\frac13\\left[2^n+2\\cos\\frac{(n-4)\\pi}3\\right]$; the three sum to $2^n$."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Fourth roots of unity",
+    "Sums of binomial coefficients in steps of four"
+   ],
+   "level": 3,
+   "paragraph": "Let $(1+x)^n=C_0+C_1x+C_2x^2+\\dots+C_nx^n$. For the sum of the series $C_0+C_1+C_2+\\dots$ put $x=1$. For the sum of $C_0+C_2+C_4+C_6+\\dots$ or $C_1+C_3+C_5+\\dots$ add or subtract the equations obtained by putting $x=1$ and $x=-1$. For the sum of $C_0+C_3+C_6+\\dots$ or $C_1+C_4+C_7+\\dots$ or $C_2+C_5+C_8+\\dots$ we substitute $x=1,\\ x=\\omega,\\ x=\\omega^2$ and add or manipulate the results. Similarly, if the suffixes differ by $p$, we substitute the $p$th roots of unity and add.",
+   "question": "$C_1+C_5+C_9+\\dots=$",
+   "options": [
+    "$\\frac14\\left[2^n-2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n+2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n-2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n+2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$"
+   ],
+   "answer": "(D) $\\frac14\\left[2^n+2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$",
+   "key_idea": "Use $x=1,-1,i,-i$ with weights $1,-1,-i,i$: the coefficient of $C_r$ is $4$ only for $r\\equiv1\\pmod4$.",
+   "solution": [
+    "Put $x=1,-1,i,-i$ in $(1+x)^n=\\sum C_rx^r$: (1) $2^n=C_0+C_1+C_2+\\dots$; (2) $0=C_0-C_1+C_2-C_3+\\dots$ (for $n\\ge1$).",
+    "(3) $(1+i)^n=C_0+iC_1-C_2-iC_3+C_4+iC_5-\\dots$; (4) $(1-i)^n=C_0-iC_1-C_2+iC_3+C_4-iC_5-\\dots$.",
+    "Form $(1)-(2)-i(3)+i(4)$: the coefficient of $C_r$ is $1-(-1)^r-i\\cdot i^r+i(-i)^r$, which is $4$ for $r\\equiv1\\pmod4$ and $0$ otherwise.",
+    "So $4\\left(C_1+C_5+C_9+\\dots\\right)=2^n-0-i(1+i)^n+i(1-i)^n=2^n-i\\left[(1+i)^n-(1-i)^n\\right]$.",
+    "$1\\pm i=\\sqrt2e^{\\pm i\\pi/4}$, so $(1+i)^n-(1-i)^n=2^{n/2}\\left(e^{in\\pi/4}-e^{-in\\pi/4}\\right)=2^{n/2}\\cdot2i\\sin\\frac{n\\pi}4$.",
+    "$4\\left(C_1+C_5+\\dots\\right)=2^n-i\\cdot2^{n/2}\\cdot2i\\sin\\frac{n\\pi}4=2^n+2^{n/2}\\cdot2\\sin\\frac{n\\pi}4$.",
+    "$C_1+C_5+C_9+\\dots=\\frac14\\left[2^n+2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test small $n$: $n=1$ gives $C_1=1$ and $n=2$ gives $C_1=2$; two substitutions eliminate three options.",
+     "solution": [
+      "For $n=1$: $C_1+C_5+\\dots=1$. For $n=2$: $=C_1=2$.",
+      "$n=1$: $2^{n/2}\\cdot2\\cdot\\cos\\frac\\pi4=2^{n/2}\\cdot2\\cdot\\sin\\frac\\pi4=\\sqrt2\\cdot2\\cdot\\frac{\\sqrt2}2=2$, so (A) $\\frac14(2-2)=0$ - no, (C) $0$ - no; (B) and (D) both give $\\frac14(2+2)=1$.",
+      "$n=2$: $2^{n/2}\\cdot2=4$, $\\cos\\frac\\pi2=0$, $\\sin\\frac\\pi2=1$: (B) gives $\\frac14(4+0)=1\\ne2$ - no.",
+      "(D) gives $\\frac14(4+4)=2$ - yes. Only (D) survives."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Filter for steps of $4$: $\\sum_{r\\equiv s\\,(4)}C_r=\\frac14\\sum_{j=0}^3i^{-js}(1+i^j)^n$; the term $j=2$ is $0^n=0$ for $n\\ge1$.",
+    "$(1+i)^n+(1-i)^n=2^{n/2}\\cdot2\\cos\\frac{n\\pi}4$ and $(1+i)^n-(1-i)^n=2^{n/2}\\cdot2i\\sin\\frac{n\\pi}4$.",
+    "All four classes: $C_0+C_4+\\dots=\\frac14\\left[2^n+2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$, $C_3+C_7+\\dots=\\frac14\\left[2^n-2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$; with Q27, Q28 they sum to $2^n$. Check $n=4$: $C_1=4=\\frac14\\cdot16$."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Fourth roots of unity",
+    "Sums of binomial coefficients in steps of four"
+   ],
+   "level": 3,
+   "paragraph": "Let $(1+x)^n=C_0+C_1x+C_2x^2+\\dots+C_nx^n$. For the sum of the series $C_0+C_1+C_2+\\dots$ put $x=1$. For the sum of $C_0+C_2+C_4+C_6+\\dots$ or $C_1+C_3+C_5+\\dots$ add or subtract the equations obtained by putting $x=1$ and $x=-1$. For the sum of $C_0+C_3+C_6+\\dots$ or $C_1+C_4+C_7+\\dots$ or $C_2+C_5+C_8+\\dots$ we substitute $x=1,\\ x=\\omega,\\ x=\\omega^2$ and add or manipulate the results. Similarly, if the suffixes differ by $p$, we substitute the $p$th roots of unity and add.",
+   "question": "$C_2+C_6+C_{10}+\\dots=$",
+   "options": [
+    "$\\frac14\\left[2^n-2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n+2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n-2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$",
+    "$\\frac14\\left[2^n+2^{n/2}\\cdot2\\sin\\frac{n\\pi}4\\right]$"
+   ],
+   "answer": "(A) $\\frac14\\left[2^n-2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$",
+   "key_idea": "Form $(1)-(2)+(3)-(4)$ from $x=1,i,-1,-i$: the coefficient of $C_r$ is $4$ only for $r\\equiv2\\pmod4$.",
+   "solution": [
+    "Put $x=1,i,-1,-i$: (1) $2^n=C_0+C_1+C_2+\\dots$; (2) $(1+i)^n=C_0+iC_1-C_2-iC_3+C_4+\\dots$.",
+    "(3) $0=C_0-C_1+C_2-C_3+\\dots$ (for $n\\ge1$); (4) $(1-i)^n=C_0-iC_1-C_2+iC_3+C_4-\\dots$.",
+    "Form $(1)-(2)+(3)-(4)$: the coefficient of $C_r$ is $1-i^r+(-1)^r-(-i)^r$, which is $4$ for $r\\equiv2\\pmod4$ and $0$ otherwise.",
+    "So $4\\left(C_2+C_6+C_{10}+\\dots\\right)=2^n-(1+i)^n+0-(1-i)^n=2^n-\\left[(1+i)^n+(1-i)^n\\right]$.",
+    "$(1+i)^n+(1-i)^n=2^{n/2}\\left(e^{in\\pi/4}+e^{-in\\pi/4}\\right)=2^{n/2}\\cdot2\\cos\\frac{n\\pi}4$.",
+    "$C_2+C_6+C_{10}+\\dots=\\frac14\\left[2^n-2^{n/2}\\cdot2\\cos\\frac{n\\pi}4\\right]$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test small $n$: $n=1$ gives $0$, $n=2$ gives $C_2=1$; two substitutions leave only (A).",
+     "solution": [
+      "For $n=1$: $C_2+C_6+\\dots=0$. For $n=2$: $=C_2=1$.",
+      "$n=1$: $2^{n/2}\\cdot2\\cos\\frac\\pi4=2^{n/2}\\cdot2\\sin\\frac\\pi4=2$, so (A) $\\frac14(2-2)=0$ yes, (C) $0$ yes; (B) $\\frac14(2+2)=1$ no, (D) $1$ no.",
+      "$n=2$: $2^{n/2}\\cdot2=4$, $\\cos\\frac\\pi2=0$, $\\sin\\frac\\pi2=1$: (A) gives $\\frac14(4-0)=1$ - yes; (C) gives $\\frac14(4-4)=0\\ne1$ - no.",
+      "Only (A) survives."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Filter for the class $r\\equiv2\\pmod4$: $\\frac14\\sum_{j=0}^3i^{-2j}(1+i^j)^n=\\frac14\\left[2^n-(1+i)^n+0-(1-i)^n\\right]$.",
+    "Quick sanity checks for such formulas: $n=4$ gives $C_2+C_6=6=\\frac14\\left(16+8\\right)$; the four residue classes of $r$ mod $4$ must sum to $2^n$.",
+    "A general pattern: a class sum is $\\frac1m\\sum_j\\varepsilon^{-js}(1+\\varepsilon^j)^n$, and $|1+\\varepsilon^j|=2\\left|\\cos\\frac{j\\pi}m\\right|$ gives the $2^{n/2}$, $\\cos\\frac{n\\pi}4$ factors."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Cube roots of unity"
+   ],
+   "level": 1,
+   "question": "If $w\\,(\\ne1)$ is a cube root of unity and $(1+w)^7=A+Bw$, then $A$ and $B$ are respectively the numbers:",
+   "options": [
+    "$0,\\ 1$",
+    "$1,\\ 1$",
+    "$1,\\ 0$",
+    "$-1,\\ 1$"
+   ],
+   "answer": "(B) 1, 1",
+   "key_idea": "$1+w=-w^2$, so $(1+w)^7=-w^{14}=-w^2=1+w$.",
+   "solution": [
+    "$1+w+w^2=0$, so $1+w=-w^2$.",
+    "$(1+w)^7=(-w^2)^7=-w^{14}$.",
+    "$w^{14}=w^{12}\\cdot w^2=w^2$ (as $w^3=1$), so $(1+w)^7=-w^2$.",
+    "Again $-w^2=1+w$.",
+    "Thus $A+Bw=1+w$; since $1$ and $w$ are independent over the reals, $A=1$ and $B=1$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$(1+w)^2=w$, so $(1+w)^6=w^3=1$ and $(1+w)^7=1+w$.",
+     "solution": [
+      "$(1+w)^2=1+2w+w^2=w+\\left(1+w+w^2\\right)=w$.",
+      "$(1+w)^6=\\left[(1+w)^2\\right]^3=w^3=1$.",
+      "$(1+w)^7=(1+w)^6(1+w)=1+w$.",
+      "Hence $A=B=1$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+w=-w^2$, $1+w^2=-w$, $(1+w)^2=w$ and $(1+w)^6=1$; indeed $1+w=e^{i\\pi/3}$ is a primitive sixth root of unity.",
+    "$A+Bw=A'+B'w$ with real (or rational) numbers forces $A=A'$ and $B=B'$, because $1,w$ are independent over $\\mathbb R$.",
+    "Reduce powers of $w$ modulo $3$: $w^n=w^{n\\bmod3}$."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Properties of determinants: row and column operations",
+    "Cube roots of unity"
+   ],
+   "level": 2,
+   "question": "If $\\omega\\,(\\ne1)$ is a cube root of unity, then $\\left|\\begin{matrix}1&1+i+\\omega^2&\\omega^2\\\\1-i&-1&\\omega^2-1\\\\-i&-i+\\omega-1&-1\\end{matrix}\\right|=$",
+   "options": [
+    "$0$",
+    "$1$",
+    "$i$",
+    "$\\omega$"
+   ],
+   "answer": "(A) 0",
+   "key_idea": "Using $1+\\omega+\\omega^2=0$, adding row 3 to row 1 makes it identical to row 2.",
+   "solution": [
+    "Let $\\Delta$ be the given determinant, using $1+\\omega+\\omega^2=0$ to simplify entries.",
+    "Apply $R_1\\to R_1+R_3$; this leaves $\\Delta$ unchanged.",
+    "New first entry: $1+(-i)=1-i$.",
+    "New second entry: $(1+i+\\omega^2)+(-i+\\omega-1)=\\omega+\\omega^2=-1$.",
+    "New third entry: $\\omega^2+(-1)=\\omega^2-1$.",
+    "So the new first row is $(1-i,\\ -1,\\ \\omega^2-1)$, identical to the second row.",
+    "A determinant with two identical rows is $0$: $\\Delta=0$, option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF labels its step 'C3 -> C3 + C1' and shows a matrix with first row (1, i-w, w^2) and with rows 2 and 3 identical; that matrix cannot come from the given determinant by that operation. The valid step is R1 -> R1 + R3, which turns row 1 into (1-i, -1, w^2-1) = row 2. The answer 0 is right.",
+   "useful_results": [
+    "Look for a linear dependence of rows or columns before expanding: here $R_1+R_3=R_2$, so $\\Delta=0$.",
+    "Simplify entries with $1+\\omega+\\omega^2=0$: e.g. $\\omega+\\omega^2=-1$ and $1+\\omega^2=-\\omega$.",
+    "$R_i\\to R_i\\pm R_j$ never changes a determinant; two equal rows (or proportional rows) make it $0$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Argument of a complex number on the unit circle",
+    "Triangle of vectors and definite integration (mixed statements)"
+   ],
+   "level": 3,
+   "question": "Match the statements given in Column I with the values given in Column II. [JEE-2011]\n\nColumn I\n(A) If $\\vec a=\\hat j+\\sqrt3\\hat k$, $\\vec b=-\\hat j+\\sqrt3\\hat k$ and $\\vec c=2\\sqrt3\\hat k$ form a triangle, then the internal angle of the triangle between $\\vec a$ and $\\vec b$ is:\n(B) If $\\int_a^b\\left(f(x)-3x\\right)dx=a^2-b^2$, then the value of $f\\left(\\frac\\pi6\\right)$ is:\n(C) The value of $\\frac{\\pi^2}{\\ln3}\\int_{7/6}^{5/6}\\sec(\\pi x)\\,dx$ is:\n(D) The maximum value of $\\left|\\mathrm{Arg}\\left(\\frac1{1-z}\\right)\\right|$ for $|z|=1,\\ z\\ne1$ is given by:\n\nColumn II\n(p) $\\frac\\pi6$   (q) $\\frac{2\\pi}3$   (r) $\\frac\\pi3$   (s) $\\pi$   (t) $\\frac\\pi2$",
+   "answer": "(A)–(q); (B)–(p); (C)–(s); (D)–(t)",
+   "key_idea": "Each part has one trap: the interior angle is $\\pi$ minus the vector angle; $\\int_a^bg$ known for all $a,b$ means differentiate; reversed limits; $\\left|\\mathrm{Arg}\\right|$ only approaches $\\frac\\pi2$.",
+   "solution": [
+    "(A) $\\vec a\\cdot\\vec b=-1+3=2$ and $|\\vec a|=|\\vec b|=2$, so the angle between the vectors is $\\theta$ with $\\cos\\theta=\\frac24=\\frac12$, $\\theta=\\frac\\pi3$.",
+    "Here $\\vec c=\\vec a+\\vec b$ (lengths $2,2,2\\sqrt3$), so $\\vec a,\\vec b$ are the sides taken head to tail; the interior angle between them is $\\pi-\\frac\\pi3=\\frac{2\\pi}3$, opposite the longest side. (A)$\\to$(q).",
+    "(B) $\\int_a^bf(x)\\,dx=\\frac32\\left(b^2-a^2\\right)+a^2-b^2=\\frac{b^2-a^2}2$ for all $a,b$; differentiating w.r.t. $b$ gives $f(b)=b$, so $f(x)=x$ and $f\\left(\\frac\\pi6\\right)=\\frac\\pi6$. (B)$\\to$(p).",
+    "(C) $\\int\\sec(\\pi x)\\,dx=\\frac1\\pi\\ln\\left|\\sec\\pi x+\\tan\\pi x\\right|$. At $x=\\frac56$: $\\sec=-\\frac2{\\sqrt3}$, $\\tan=-\\frac1{\\sqrt3}$, so $\\left|\\sec+\\tan\\right|=\\sqrt3$; at $x=\\frac76$: $\\sec=-\\frac2{\\sqrt3}$, $\\tan=\\frac1{\\sqrt3}$, so the value is $\\frac1{\\sqrt3}$.",
+    "$\\int_{7/6}^{5/6}\\sec\\pi x\\,dx=\\frac1\\pi\\left[\\ln\\sqrt3-\\ln\\frac1{\\sqrt3}\\right]=\\frac{\\ln3}\\pi$, so the expression equals $\\frac{\\pi^2}{\\ln3}\\cdot\\frac{\\ln3}\\pi=\\pi$. (C)$\\to$(s).",
+    "(D) Let $u=\\frac1{1-z}$, so $z=1-\\frac1u$ and $|z|=1$ gives $\\left|1-\\frac1u\\right|=1$, i.e. $|u-1|=|u|$: $u$ lies on the perpendicular bisector of $0$ and $1$, $\\mathrm{Re}\\,u=\\frac12$.",
+    "On this line $\\mathrm{Arg}\\,u$ takes every value in $\\left(-\\frac\\pi2,\\frac\\pi2\\right)$; $\\left|\\mathrm{Arg}\\,u\\right|$ approaches $\\frac\\pi2$ but never attains it ($u\\to\\infty$ means $z\\to1$), so the supremum is $\\frac\\pi2$. (D)$\\to$(t)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A quicker check for each part: cosine rule on sides $2,2,2\\sqrt3$; differentiate in $b$; use that $\\sec$ is even after $x=1+t$; write $z=e^{i\\theta}$.",
+     "solution": [
+      "(A) The sides have lengths $|\\vec a|=|\\vec b|=2$ and $|\\vec c|=2\\sqrt3$. By the cosine rule the angle between the two equal sides satisfies $\\cos\\gamma=\\frac{4+4-12}{2\\cdot2\\cdot2}=-\\frac12$, so $\\gamma=\\frac{2\\pi}3$ - no head-to-tail confusion. (q)",
+      "(B) Differentiate $\\int_a^b(f(x)-3x)\\,dx=a^2-b^2$ w.r.t. $b$: $f(b)-3b=-2b$, so $f(b)=b$ and $f\\left(\\frac\\pi6\\right)=\\frac\\pi6$. (p)",
+      "(C) Put $x=1+t$: $\\sec(\\pi+\\pi t)=-\\sec\\pi t$ and $t$ runs from $\\frac16$ to $-\\frac16$, so the integral equals $\\int_{-1/6}^{1/6}\\sec\\pi t\\,dt=2\\int_0^{1/6}\\sec\\pi t\\,dt$ (even integrand).",
+      "$=\\frac2\\pi\\ln\\left(\\sec\\frac\\pi6+\\tan\\frac\\pi6\\right)=\\frac2\\pi\\ln\\sqrt3=\\frac{\\ln3}\\pi$, so the value is $\\frac{\\pi^2}{\\ln3}\\cdot\\frac{\\ln3}\\pi=\\pi$. (s)",
+      "(D) For $z=e^{i\\theta}$ ($0<\\theta<2\\pi$): $1-z=-2i\\sin\\frac\\theta2\\,e^{i\\theta/2}$, so $\\frac1{1-z}=\\frac12+\\frac i2\\cot\\frac\\theta2$.",
+      "Its argument is $\\tan^{-1}\\left(\\cot\\frac\\theta2\\right)=\\frac\\pi2-\\frac\\theta2\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$; $|\\mathrm{Arg}|$ comes arbitrarily close to $\\frac\\pi2$ as $\\theta\\to0^+$ or $2\\pi^-$ but never reaches it: supremum $\\frac\\pi2$. (t)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a triangle with side vectors $\\vec a,\\vec b$ (head to tail), the interior angle between those sides is $\\pi-\\angle(\\vec a,\\vec b)$; use the cosine rule on the side lengths to avoid sign confusion.",
+    "If $\\int_a^bg\\,dx=F(b)-F(a)$ holds for all $a,b$, differentiate: $g(b)=F'(b)$.",
+    "$\\int\\sec\\theta\\,d\\theta=\\ln|\\sec\\theta+\\tan\\theta|$; $\\sec$ is even, so symmetric limits double the half-integral.",
+    "For $|z|=1$, $z\\ne1$: $\\frac1{1-z}=\\frac12+\\frac i2\\cot\\frac\\theta2$ lies on the line $\\mathrm{Re}=\\frac12$ and its argument fills $(-\\frac\\pi2,\\frac\\pi2)$ - the 'maximum' $\\frac\\pi2$ is a supremum, not attained."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Locus on the unit circle: real part of $\\frac{2iz}{1-z^2}$",
+    "Domain of $\\sin^{-1}$, determinants and monotonicity (mixed statements)"
+   ],
+   "level": 3,
+   "question": "Match the statements given in Column I with the intervals / unions of intervals given in Column II. [JEE-2011]\n\nColumn I\n(A) The set $\\left\\{\\mathrm{Re}\\left(\\frac{2iz}{1-z^2}\\right):z\\text{ is a complex number},\\ |z|=1,\\ z\\ne\\pm1\\right\\}$ is\n(B) The domain of the function $f(x)=\\sin^{-1}\\left(\\frac{8(3)^{x-2}}{1-3^{2(x-1)}}\\right)$ is\n(C) If $f(\\theta)=\\left|\\begin{matrix}1&\\tan\\theta&1\\\\-\\tan\\theta&1&\\tan\\theta\\\\-1&-\\tan\\theta&1\\end{matrix}\\right|$, then the set $\\left\\{f(\\theta):0\\le\\theta<\\frac\\pi2\\right\\}$ is\n(D) If $f(x)=x^{3/2}(3x-10),\\ x\\ge0$, then $f(x)$ is increasing in\n\nColumn II\n(p) $(-\\infty,-1)\\cup(1,\\infty)$   (q) $(-\\infty,0)\\cup(0,\\infty)$   (r) $[2,\\infty)$   (s) $(-\\infty,-1]\\cup[1,\\infty)$   (t) $(-\\infty,0]\\cup[2,\\infty)$",
+   "answer": "(A)–(s); (B)–(t); (C)–(r); (D)–(r)",
+   "key_idea": "Four short computations: $\\frac{2iz}{1-z^2}=-\\frac1y$ on the unit circle; the $\\sin^{-1}$ argument is $\\frac{8t}{9-t^2}$ with $t=3^x$; the determinant is $2\\sec^2\\theta$; $f'=\\frac{15}2\\sqrt x(x-2)$.",
+   "solution": [
+    "(A) Let $z=x+iy$, $x^2+y^2=1$, so $1-x^2=y^2$, and $z\\ne\\pm1$ means $y\\ne0$. Then $1-z^2=(1-x^2+y^2)-2ixy=2y^2-2ixy=2y(y-ix)$ and $2iz=2(ix-y)=-2(y-ix)$.",
+    "So $\\frac{2iz}{1-z^2}=\\frac{-2(y-ix)}{2y(y-ix)}=-\\frac1y$, which is real, with $0<|y|\\le1$; hence the set is $(-\\infty,-1]\\cup[1,\\infty)$. (A)$\\to$(s).",
+    "(B) Need $-1\\le\\frac{8\\cdot3^{x-2}}{1-3^{2(x-1)}}\\le1$ with $x\\ne1$. Let $t=3^x>0$: $3^{x-2}=\\frac t9$ and $3^{2(x-1)}=\\frac{t^2}9$, so the expression is $\\frac{8t}{9-t^2}$, $t\\ne3$.",
+    "Case $0<t<3$ ($9-t^2>0$): the lower bound is automatic; $\\frac{8t}{9-t^2}\\le1\\Rightarrow t^2+8t-9\\le0\\Rightarrow(t+9)(t-1)\\le0\\Rightarrow t\\le1\\Rightarrow x\\le0$.",
+    "Case $t>3$ ($9-t^2<0$): the upper bound is automatic; $\\frac{8t}{9-t^2}\\ge-1\\Rightarrow t^2-8t-9\\ge0\\Rightarrow(t-9)(t+1)\\ge0\\Rightarrow t\\ge9\\Rightarrow x\\ge2$.",
+    "Domain $(-\\infty,0]\\cup[2,\\infty)$. (B)$\\to$(t).",
+    "(C) Apply $R_1\\to R_1+R_3$: the first row becomes $(0,\\ 0,\\ 2)$. Expand along it: $f(\\theta)=2\\left|\\begin{matrix}-\\tan\\theta&1\\\\-1&-\\tan\\theta\\end{matrix}\\right|=2\\left(\\tan^2\\theta+1\\right)=2\\sec^2\\theta$.",
+    "For $0\\le\\theta<\\frac\\pi2$, $\\sec^2\\theta$ takes all values in $[1,\\infty)$, so the set is $[2,\\infty)$. (C)$\\to$(r).",
+    "(D) $f(x)=3x^{5/2}-10x^{3/2}$; $f'(x)=\\frac32\\sqrt x\\,(3x-10)+3x^{3/2}=\\frac{15}2\\sqrt x\\,(x-2)$.",
+    "$f'(x)\\ge0$ for $x\\ge2$ and $f'<0$ on $(0,2)$, so $f$ is increasing in $[2,\\infty)$. (D)$\\to$(r)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "(A) on the unit circle $\\frac{z}{1-z^2}=\\frac1{\\bar z-z}$; (B) write $3^{x-1}=\\tan\\varphi$ so the argument is $\\frac43\\tan2\\varphi$.",
+     "solution": [
+      "(A) For $|z|=1$: $\\frac z{1-z^2}=\\frac1{1/z-z}=\\frac1{\\bar z-z}=\\frac1{-2i\\,\\mathrm{Im}\\,z}=\\frac{i}{2\\,\\mathrm{Im}\\,z}$.",
+      "So $\\frac{2iz}{1-z^2}=2i\\cdot\\frac i{2\\,\\mathrm{Im}\\,z}=-\\frac1{\\mathrm{Im}\\,z}=-\\frac1{\\sin\\theta}$; with $0<|\\sin\\theta|\\le1$ this covers $(-\\infty,-1]\\cup[1,\\infty)$. (s)",
+      "(B) Put $u=3^{x-1}>0$, $u\\ne1$: the argument is $\\frac{8u/3}{1-u^2}=\\frac43\\cdot\\frac{2u}{1-u^2}$. With $u=\\tan\\varphi$, $0<\\varphi<\\frac\\pi2$, this is $\\frac43\\tan2\\varphi$.",
+      "The condition is $|\\tan2\\varphi|\\le\\frac34$. Now $\\tan2\\varphi=\\frac34$ at $\\tan\\varphi=\\frac13$ and $\\tan2\\varphi=-\\frac34$ at $\\tan\\varphi=3$ (since $\\frac{2\\cdot3}{1-9}=-\\frac34$).",
+      "So $|\\tan2\\varphi|\\le\\frac34$ exactly when $\\tan\\varphi\\le\\frac13$ or $\\tan\\varphi\\ge3$, i.e. $u\\le\\frac13$ or $u\\ge3$.",
+      "$3^{x-1}\\le3^{-1}\\Rightarrow x\\le0$ and $3^{x-1}\\ge3\\Rightarrow x\\ge2$: domain $(-\\infty,0]\\cup[2,\\infty)$. (t)",
+      "(Parts (C) and (D) have no different method of comparable length: (C) is a direct expansion and (D) a derivative sign chart.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|z|=1$, $z\\ne\\pm1$: $\\frac{2iz}{1-z^2}=-\\frac1{\\sin\\theta}$ (real), so its real-part set is $(-\\infty,-1]\\cup[1,\\infty)$.",
+    "Domain of $\\sin^{-1}g$: solve $|g|\\le1$; with $t=3^x$ the argument is the rational function $\\frac{8t}{9-t^2}$, and $\\frac{2u}{1-u^2}=\\tan(2\\tan^{-1}u)$ gives the same result by the double-angle formula.",
+    "$\\left|\\begin{matrix}1&t&1\\\\-t&1&t\\\\-1&-t&1\\end{matrix}\\right|=2(1+t^2)$, so $f(\\theta)=2\\sec^2\\theta\\in[2,\\infty)$ for $\\theta\\in[0,\\frac\\pi2)$.",
+    "For $f=x^p(\\cdot)$ style functions, factor the derivative: $f'=\\frac{15}2\\sqrt x\\,(x-2)$ shows the monotonic intervals at once."
+   ]
+  }
+ ]
+}
