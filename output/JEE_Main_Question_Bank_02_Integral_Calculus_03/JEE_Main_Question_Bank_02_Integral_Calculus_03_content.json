@@ -1,0 +1,910 @@
+{
+ "title": "JEE Main Question Bank 02 (Integral Calculus 03) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions · 20 single-correct questions (printed Q41–Q60)",
+ "source": "JEE_Main_Question_Bank_02_Integral_Calculus_03.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: 4 marks per question assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Fundamental theorem of calculus (integral equation)",
+    "Linear differential equation"
+   ],
+   "level": 2,
+   "question": "Let a differentiable function $f$ satisfy $f(x)+\\int_3^x\\frac{f(t)}{t}dt=\\sqrt{x+1},\\ x\\ge3$. Then $12f(8)$ is equal to :",
+   "options": [
+    "$1$",
+    "$34$",
+    "$19$",
+    "$17$"
+   ],
+   "answer": "(D) $17$",
+   "key_idea": "Differentiating removes the integral and leaves a linear DE $y'+\\frac{y}{x}=\\frac{1}{2\\sqrt{x+1}}$ with I.F. $x$.",
+   "solution": [
+    "Differentiate both sides with respect to $x$: $f'(x)+\\frac{f(x)}{x}=\\frac{1}{2\\sqrt{x+1}}$.",
+    "This is linear: $\\frac{dy}{dx}+\\frac{y}{x}=\\frac{1}{2\\sqrt{x+1}}$.",
+    "I.F. $=e^{\\int\\frac1x dx}=x$.",
+    "$y\\cdot x=\\int x\\cdot\\frac{1}{2\\sqrt{x+1}}dx+c$. Put $x+1=t^2$, $dx=2t\\,dt$.",
+    "$y\\cdot x=\\frac12\\int\\frac{(t^2-1)\\,2t\\,dt}{t}+c$.",
+    "$y\\cdot x=\\frac12\\left(\\frac23t^3-2t\\right)+c$.",
+    "$y\\cdot x=\\frac{(\\sqrt{x+1})^3}{3}-\\sqrt{x+1}+c$.",
+    "Putting $x=3$ in the given equation (the integral vanishes): $f(3)=\\sqrt4=2$, so $3f(3)=6$.",
+    "$6=\\frac{2^3}{3}-2+c$, so $c=8-\\frac83=\\frac{16}{3}$.",
+    "$f(x)=\\frac1x\\left(\\frac{(\\sqrt{x+1})^3}{3}-\\sqrt{x+1}+\\frac{16}{3}\\right)$.",
+    "$12f(8)=\\frac{12}{8}\\left(\\frac{27}{3}-3+\\frac{16}{3}\\right)=\\frac32\\left(6+\\frac{16}{3}\\right)=17$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Note $(xf)'=xf'+f=\\frac{x}{2\\sqrt{x+1}}$ and integrate between the limits $3$ and $8$ - no constant $c$ and no I.F. talk.",
+     "solution": [
+      "From $f'+\\frac fx=\\frac{1}{2\\sqrt{x+1}}$, multiply by $x$: $\\frac{d}{dx}\\left(xf(x)\\right)=\\frac{x}{2\\sqrt{x+1}}$.",
+      "Integrate from $3$ to $8$: $8f(8)-3f(3)=\\int_3^8\\frac{x}{2\\sqrt{x+1}}dx$, and $f(3)=2$.",
+      "With $u=\\sqrt{x+1}$ ($x=u^2-1$, $dx=2u\\,du$, $u:2\\to3$): $\\int_3^8\\frac{x\\,dx}{2\\sqrt{x+1}}=\\int_2^3(u^2-1)du$.",
+      "$\\int_2^3(u^2-1)du=\\left[\\frac{u^3}{3}-u\\right]_2^3=(9-3)-\\left(\\frac83-2\\right)=6-\\frac23=\\frac{16}{3}$.",
+      "$8f(8)=6+\\frac{16}{3}=\\frac{34}{3}$, so $12f(8)=\\frac{12}{8}\\cdot\\frac{34}{3}=17$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f+\\int_a^x\\frac{f}{t}dt=g(x)$, then $f(a)=g(a)$ and $(xf)'=x\\,g'(x)$ - so $xf(x)=af(a)+\\int_a^x t\\,g'(t)\\,dt$ with no constant to find.",
+    "For $y'+\\frac yx=q(x)$ the I.F. is $x$, i.e. $(xy)'=xq$. Check: $y=1$ gives $q=\\frac1x$ and $(x)'=1=x\\cdot\\frac1x$.",
+    "Integrals of $\\frac{x}{\\sqrt{x+a}}$: put $x+a=u^2$, giving the polynomial $2(u^2-a)du$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Area bounded by parabola and a line",
+    "Area of a circle"
+   ],
+   "level": 1,
+   "question": "The area of the region, enclosed by the circle $x^2+y^2=2$ which is not common to the region bounded by the parabola $y^2=x$ and the straight line $y=x$, is :",
+   "options": [
+    "$\\frac16(12\\pi-1)$",
+    "$\\frac16(24\\pi-1)$",
+    "$\\frac13(12\\pi-1)$",
+    "$\\frac13(24\\pi-1)$"
+   ],
+   "answer": "(A) $\\frac16(12\\pi-1)$",
+   "key_idea": "The parabola-line region lies wholly inside the circle (both meet it at $(0,0)$ and $(1,1)$), so subtract its area from the circle's.",
+   "solution": [
+    "Area of the circle $x^2+y^2=2$ is $\\pi r^2=2\\pi$ (as $r^2=2$).",
+    "The parabola $y^2=x$ and the line $y=x$ meet at $(0,0)$ and $(1,1)$; both points lie on the circle, and the region between them lies inside the circle.",
+    "Area bounded by $y^2=x$ and $y=x$: $A_2=\\int_0^1(\\sqrt x-x)\\,dx$.",
+    "$A_2=\\left[\\frac{2x^{3/2}}{3}-\\frac{x^2}{2}\\right]_0^1=\\frac23-\\frac12=\\frac16$.",
+    "Desired area $=A_1-A_2=2\\pi-\\frac16=\\frac{12\\pi-1}{6}$ units. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Slice horizontally: the area of a parabolic segment is $\\frac{|a|\\,(\\Delta y)^3}{6}$ for $x=ay^2$ cut by a chord, with no square roots.",
+     "solution": [
+      "Write the parabola as $x=y^2$ ($a=1$). The chord $y=x$ meets it at $y=0$ and $y=1$, so $\\Delta y=1$.",
+      "Between $y=0$ and $y=1$ the line is to the right of the parabola: $\\int_0^1(y-y^2)\\,dy=\\frac12-\\frac13=\\frac16$.",
+      "This agrees with the segment formula $\\frac{|a|(\\Delta y)^3}{6}=\\frac16$.",
+      "The circle has area $2\\pi$, so the required area is $2\\pi-\\frac16=\\frac{12\\pi-1}{6}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between $x=ay^2+by+c$ and a chord whose end-points have ordinates $y_1,y_2$: $\\frac{|a|\\,|y_2-y_1|^3}{6}$. Check: $y^2=x$, chord $y=x$: $\\frac{1}{6}$.",
+    "Before subtracting a region from a circle, test that it lies inside it: if the curve's end-points lie on the circle and the region is convex-bounded by them, it does.",
+    "Area of a circle $x^2+y^2=r^2$ is $\\pi r^2$ - read $r^2=2$ directly (do not take $r=2$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Definite integrals with the greatest integer function",
+    "Properties of definite integrals (odd function)"
+   ],
+   "level": 2,
+   "question": "The value of the integral $\\int_{-2}^{2}\\frac{\\sin^2x}{\\left[\\frac{x}{\\pi}\\right]+\\frac12}dx$ (where $[x]$ denotes the greatest integer less than or equal to $x$) is :",
+   "options": [
+    "$4-\\sin4$",
+    "$4$",
+    "$0$",
+    "$\\sin4$"
+   ],
+   "answer": "(C) $0$",
+   "key_idea": "$\\left[\\frac x\\pi\\right]+\\left[\\frac{-x}{\\pi}\\right]=-1$ (for $x\\notin\\pi\\mathbb Z$) makes the integrand odd about $0$.",
+   "solution": [
+    "Use $\\int_{-2}^{2}h(x)dx=\\int_0^2\\left(h(x)+h(-x)\\right)dx$ with $h(x)=\\frac{\\sin^2x}{\\left[\\frac x\\pi\\right]+\\frac12}$.",
+    "So $I=\\int_0^2\\left(\\frac{\\sin^2x}{\\left[\\frac x\\pi\\right]+\\frac12}+\\frac{\\sin^2x}{\\left[\\frac{-x}{\\pi}\\right]+\\frac12}\\right)dx$.",
+    "For $x$ not a multiple of $\\pi$: $\\left[\\frac x\\pi\\right]+\\left[\\frac{-x}{\\pi}\\right]=-1$, so $\\left[\\frac{-x}{\\pi}\\right]=-1-\\left[\\frac x\\pi\\right]$.",
+    "Then $\\left[\\frac{-x}{\\pi}\\right]+\\frac12=-\\frac12-\\left[\\frac x\\pi\\right]=-\\left(\\left[\\frac x\\pi\\right]+\\frac12\\right)$.",
+    "$I=\\int_0^2\\left(\\frac{\\sin^2x}{\\left[\\frac x\\pi\\right]+\\frac12}-\\frac{\\sin^2x}{\\left[\\frac x\\pi\\right]+\\frac12}\\right)dx=0$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Evaluate the greatest-integer function directly on $[-2,0)$ and $[0,2]$, since $-\\pi<-2$ and $2<\\pi$.",
+     "solution": [
+      "For $-2\\le x<0$: $-1<\\frac x\\pi<0$ (as $\\frac2\\pi<1$), so $\\left[\\frac x\\pi\\right]=-1$ and the denominator is $-\\frac12$.",
+      "For $0\\le x\\le2$: $0\\le\\frac x\\pi<1$, so $\\left[\\frac x\\pi\\right]=0$ and the denominator is $\\frac12$.",
+      "$I=-2\\int_{-2}^{0}\\sin^2x\\,dx+2\\int_0^2\\sin^2x\\,dx$.",
+      "$\\sin^2x$ is even, so $\\int_{-2}^0\\sin^2x\\,dx=\\int_0^2\\sin^2x\\,dx$ and the two terms cancel: $I=0$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $x\\notin\\mathbb Z$: $[x]+[-x]=-1$; for $x\\in\\mathbb Z$: $0$. The same holds for $\\left[\\frac x\\pi\\right]$ when $x\\notin\\pi\\mathbb Z$ (a null set, so integrals are unaffected).",
+    "If $\\varphi(x)=[x]+\\frac12$ then $\\varphi(-x)=-\\varphi(x)$ (except at integers), so $\\frac{\\text{even}}{\\varphi}$ is odd and integrates to $0$ over $[-a,a]$.",
+    "Always locate the interval against the jumps of $[\\cdot]$ first: here $\\frac{x}{\\pi}\\in\\left[-\\frac2\\pi,\\frac2\\pi\\right]$ crosses only $0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Definite integral of a quadratic (Simpson's rule)"
+   ],
+   "level": 2,
+   "question": "If for all real triplets $(a,b,c)$, $f(x)=a+bx+cx^2$, then $\\int_0^1f(x)dx$ is equal to :",
+   "options": [
+    "$\\frac12\\left\\{f(1)+3f\\left(\\frac12\\right)\\right\\}$",
+    "$\\frac16\\left\\{f(0)+f(1)+4f\\left(\\frac12\\right)\\right\\}$",
+    "$2\\left\\{3f(1)+2f\\left(\\frac12\\right)\\right\\}$",
+    "$\\frac13\\left\\{f(0)+f\\left(\\frac12\\right)\\right\\}$"
+   ],
+   "answer": "(B) $\\frac16\\left\\{f(0)+f(1)+4f\\left(\\frac12\\right)\\right\\}$",
+   "key_idea": "Express $\\int_0^1f$ and the options in $a,b,c$; the combination $f(0)+f(1)+4f(\\tfrac12)=6a+3b+2c$ is $6\\int_0^1f$.",
+   "solution": [
+    "$\\int_0^1f(x)dx=\\left[ax+\\frac{bx^2}{2}+\\frac{cx^3}{3}\\right]_0^1$.",
+    "$\\int_0^1f(x)dx=a+\\frac b2+\\frac c3$.",
+    "$f(0)=a$ and $f(1)=a+b+c$.",
+    "$f\\left(\\frac12\\right)=a+\\frac b2+\\frac c4$, so $4f\\left(\\frac12\\right)=4a+2b+c$.",
+    "$f(0)+f(1)+4f\\left(\\frac12\\right)=a+(a+b+c)+(4a+2b+c)=6a+3b+2c$.",
+    "Hence $\\int_0^1f(x)dx=a+\\frac b2+\\frac c3=\\frac16\\left(6a+3b+2c\\right)=\\frac16\\left\\{f(0)+f(1)+4f\\left(\\frac12\\right)\\right\\}$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The identity must hold for every $(a,b,c)$, so test the options on the basis functions $f=1$, $x$, $x^2$ (no integration of $f$ in general).",
+     "solution": [
+      "Take $f=1$: $\\int_0^1f=1$. Option (A) gives $\\frac12(1+3)=2$; (C) gives $2(3+2)=10$; (D) gives $\\frac13(1+1)=\\frac23$ - all fail. Option (B) gives $\\frac16(1+1+4)=1$.",
+      "Check (B) on $f=x$: $\\int_0^1x\\,dx=\\frac12$ and $\\frac16\\left(0+1+4\\cdot\\frac12\\right)=\\frac12$.",
+      "Check (B) on $f=x^2$: $\\int_0^1x^2dx=\\frac13$ and $\\frac16\\left(0+1+4\\cdot\\frac14\\right)=\\frac13$.",
+      "By linearity (B) holds for every $a+bx+cx^2$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Simpson's rule: $\\int_p^q f\\,dx=\\frac{q-p}{6}\\left\\{f(p)+4f\\left(\\frac{p+q}{2}\\right)+f(q)\\right\\}$ is exact for every polynomial of degree $\\le3$. Check: $f=x^3$ on $[0,1]$: $\\frac14=\\frac16\\left(0+\\frac12+1\\right)$.",
+    "To identify a formula valid for all quadratics, test on the basis $1,x,x^2$ - three checks suffice by linearity.",
+    "Trapezium rule $\\frac{q-p}{2}\\{f(p)+f(q)\\}$ is exact only for degree $\\le1$; Simpson's is the first rule exact for a quadratic."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Region represented by inequalities with modulus",
+    "Area of a square / rhombus"
+   ],
+   "level": 1,
+   "question": "The region represented by $|x-y|\\le2$ and $|x+y|\\le2$ is bounded by a :",
+   "options": [
+    "Square of side length $2\\sqrt2$ units",
+    "Square of area $16$ sq. units",
+    "Rhombus of side length $2$ units",
+    "Rhombus of area $8\\sqrt2$ sq. units"
+   ],
+   "answer": "(A) Square of side length $2\\sqrt2$ units",
+   "key_idea": "The four boundary lines meet at $(\\pm2,0)$ and $(0,\\pm2)$, so the region is a square with perpendicular equal diagonals of length $4$.",
+   "solution": [
+    "$C_1:|y-x|\\le2$ is the strip between the parallel lines $y=x+2$ and $y=x-2$.",
+    "$C_2:|y+x|\\le2$ is the strip between the parallel lines $y+x=2$ and $y+x=-2$.",
+    "The two strips are perpendicular to each other, so their intersection is a rectangle; its vertices are $(0,2)$, $(2,0)$, $(0,-2)$, $(-2,0)$.",
+    "Each side joins consecutive vertices, e.g. $(0,2)$ to $(2,0)$: length $=\\sqrt{2^2+2^2}=2\\sqrt2$.",
+    "All four sides equal $2\\sqrt2$ and the sides are perpendicular, so the region is a square of side $2\\sqrt2$ (area $8$). Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Change variables to $u=x-y$, $v=x+y$: the region becomes the square $|u|\\le2$, $|v|\\le2$, and areas scale by the Jacobian.",
+     "solution": [
+      "In the $(u,v)$ plane the region is $|u|\\le2,\\ |v|\\le2$: a square of area $4\\times4=16$.",
+      "$\\frac{\\partial(u,v)}{\\partial(x,y)}=\\left|\\begin{matrix}1&-1\\\\1&1\\end{matrix}\\right|=2$, so $dA_{xy}=\\frac12dA_{uv}$ and the area in the $xy$-plane is $\\frac{16}{2}=8$.",
+      "The lines $u=\\pm2$ and $v=\\pm2$ are perpendicular, so the shape is a rectangle; it is a square because $u$ and $v$ both have half-width $2$ and the map is a rotation-scaling by $\\sqrt2$.",
+      "Area $8$ gives side $\\sqrt8=2\\sqrt2$, a square. Same answer, and this shows (B) and (D) are wrong."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|x-y|\\le a$ and $|x+y|\\le a$ together give the square with vertices $(\\pm a,0),(0,\\pm a)$: side $a\\sqrt2$, area $2a^2$. Check: $a=2$ gives $8$.",
+    "$|x|+|y|\\le a$ is the same square; $\\max(|x|,|y|)\\le a$ is the axis-parallel square of side $2a$ and area $4a^2$.",
+    "A quadrilateral with equal, perpendicular, bisecting diagonals is a square (area $\\frac12d^2$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Definite integral by recognising an exact derivative"
+   ],
+   "level": 3,
+   "question": "The integral $\\int_{\\pi/6}^{\\pi/3}\\tan^3x\\cdot\\sin^23x\\,(2\\sec^2x\\cdot\\sin^23x+3\\tan x\\cdot\\sin6x)\\,dx$ is :",
+   "options": [
+    "$-\\frac1{18}$",
+    "$-\\frac19$",
+    "$\\frac7{18}$",
+    "$\\frac92$"
+   ],
+   "answer": "(A) $-\\frac1{18}$",
+   "key_idea": "Using $\\sin6x=2\\sin3x\\cos3x$, the integrand is $\\frac12\\frac{d}{dx}\\left(\\tan^4x\\sin^43x\\right)$.",
+   "solution": [
+    "Since $\\sin6x=2\\sin3x\\cos3x$, the integrand is $2\\tan^3x\\sec^2x\\sin^43x+6\\tan^4x\\sin^33x\\cos3x$.",
+    "So $I=\\frac12\\int_{\\pi/6}^{\\pi/3}\\left\\{\\left(4\\tan^3x\\sec^2x\\right)\\sin^43x+\\left(4\\sin^33x\\cos3x\\cdot3\\right)\\tan^4x\\right\\}dx$.",
+    "$4\\tan^3x\\sec^2x=\\frac{d}{dx}\\left(\\tan^4x\\right)$ and $4\\sin^33x\\cos3x\\cdot3=\\frac{d}{dx}\\left(\\sin^43x\\right)$.",
+    "$I=\\frac12\\int_{\\pi/6}^{\\pi/3}\\left\\{\\sin^43x\\frac{d}{dx}\\left(\\tan^4x\\right)+\\tan^4x\\frac{d}{dx}\\left(\\sin^43x\\right)\\right\\}dx$.",
+    "By the product rule $I=\\frac12\\int_{\\pi/6}^{\\pi/3}\\frac{d}{dx}\\left(\\tan^4x\\sin^43x\\right)dx=\\frac12\\left[\\tan^4x\\sin^43x\\right]_{\\pi/6}^{\\pi/3}$.",
+    "At $x=\\frac\\pi3$: $\\sin\\pi=0$, so the value is $0$. At $x=\\frac\\pi6$: $\\tan^4\\frac\\pi6=\\frac19$ and $\\sin^4\\frac\\pi2=1$, so the value is $\\frac19$.",
+    "$I=\\frac12\\left[0-\\frac19\\right]=-\\frac1{18}$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=\\tan x\\,\\sin3x$: the whole integrand collapses to $2u^3\\,du$.",
+     "solution": [
+      "Let $u=\\tan x\\sin3x$. Then $\\frac{du}{dx}=\\sec^2x\\sin3x+3\\tan x\\cos3x$.",
+      "Rewrite the integrand: $\\tan^3x\\sin^23x\\left(2\\sec^2x\\sin^23x+6\\tan x\\sin3x\\cos3x\\right)=2\\tan^3x\\sin^33x\\left(\\sec^2x\\sin3x+3\\tan x\\cos3x\\right)=2u^3\\frac{du}{dx}$.",
+      "Limits: $x=\\frac\\pi6\\Rightarrow u=\\frac1{\\sqrt3}\\cdot1=\\frac1{\\sqrt3}$; $x=\\frac\\pi3\\Rightarrow u=\\sqrt3\\cdot0=0$.",
+      "$I=\\int_{1/\\sqrt3}^{0}2u^3du=\\left[\\frac{u^4}{2}\\right]_{1/\\sqrt3}^{0}=-\\frac12\\cdot\\frac19=-\\frac1{18}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A product $A^pB^q$ of two functions: $\\frac{d}{dx}(A^pB^q)=A^{p-1}B^{q-1}(pA'B+qAB')$. Spotting this shape turns a messy integral into $\\left[A^pB^q\\right]$.",
+    "Rewrite $\\sin2\\theta=2\\sin\\theta\\cos\\theta$ so that all terms have the same powers of $\\sin3x$ and $\\tan x$ - matching powers is the recognition cue.",
+    "$\\int u^n\\,du$ after $u=\\tan x\\sin3x$: with $n=3$ and the factor $2$, the answer is $\\frac{u^4}{2}$ - consistent with the product-rule form."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Linear differential equation (with $x$ as dependent variable)"
+   ],
+   "level": 3,
+   "question": "Let $x=x(y)$ be the solution of the differential equation $2(y+2)\\log_e(y+2)\\,dx+\\left(x+4-2\\log_e(y+2)\\right)dy=0,\\ y>-1$ with $x\\left(e^4-2\\right)=1$. Then $x\\left(e^9-2\\right)$ is equal to :",
+   "options": [
+    "$\\frac{10}{3}$",
+    "$\\frac49$",
+    "$3$",
+    "$\\frac{32}{9}$"
+   ],
+   "answer": "(D) $\\frac{32}{9}$",
+   "key_idea": "With $t=\\ln(y+2)$ the equation becomes linear in $x$: $\\frac{dx}{dt}+\\frac{x}{2t}=\\frac{2t-4}{2t}$, with I.F. $\\sqrt t$.",
+   "solution": [
+    "Divide by $dy$ and by $(y+2)$: $2\\ln(y+2)+\\left(x+4-2\\ln(y+2)\\right)\\frac{1}{y+2}\\frac{dy}{dx}=0$.",
+    "Let $\\ln(y+2)=t$, so $\\frac{1}{y+2}\\frac{dy}{dx}=\\frac{dt}{dx}$: $2t+(x+4-2t)\\frac{dt}{dx}=0$.",
+    "$(x+4-2t)\\frac{dt}{dx}=-2t$, so $\\frac{dx}{dt}=\\frac{2t-4-x}{2t}$.",
+    "$\\frac{dx}{dt}+\\frac{x}{2t}=\\frac{2t-4}{2t}$. I.F. $=e^{\\int\\frac{dt}{2t}}=t^{1/2}$.",
+    "$x\\,t^{1/2}=\\int\\frac{2t-4}{2t}t^{1/2}dt=\\int\\left(t^{1/2}-\\frac{2}{t^{1/2}}\\right)dt$.",
+    "$x\\,t^{1/2}=\\frac{t^{3/2}}{3/2}-2\\cdot\\frac{t^{1/2}}{1/2}+C=\\frac23t^{3/2}-4t^{1/2}+C$.",
+    "$x=\\frac23t-4+C\\,t^{-1/2}$, i.e. $x=\\frac23\\ln(y+2)-4+C\\left(\\ln(y+2)\\right)^{-1/2}$.",
+    "Put $y=e^4-2$ (so $t=4$), $x=1$: $1=\\frac23\\cdot4-4+C\\cdot\\frac12$.",
+    "$\\frac C2=5-\\frac83=\\frac73\\Rightarrow C=\\frac{14}{3}$.",
+    "For $y=e^9-2$, $t=9$: $x=\\frac23\\cdot9-4+\\frac{14}{3}\\cdot\\frac13=2+\\frac{14}{9}=\\frac{32}{9}$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Solve $\\frac{dx}{dt}+\\frac{x}{2t}=1-\\frac2t$ by undetermined coefficients: homogeneous solution $Ct^{-1/2}$ plus a linear particular solution.",
+     "solution": [
+      "Homogeneous part: $\\frac{dx}{dt}=-\\frac{x}{2t}\\Rightarrow x_h=Ct^{-1/2}$.",
+      "Try $x_p=\\alpha t+\\beta$: $\\alpha+\\frac{\\alpha t+\\beta}{2t}=1-\\frac2t\\Rightarrow\\frac32\\alpha+\\frac{\\beta}{2t}=1-\\frac2t$.",
+      "Matching: $\\frac32\\alpha=1\\Rightarrow\\alpha=\\frac23$ and $\\frac\\beta2=-2\\Rightarrow\\beta=-4$.",
+      "$x=\\frac23t-4+Ct^{-1/2}$; $x=1$ at $t=4$ gives $1=\\frac83-4+\\frac C2$, so $C=\\frac{14}{3}$.",
+      "At $t=9$: $x=6-4+\\frac{14}{9}=\\frac{32}{9}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When a DE has $\\frac{dy}{y+2}$ and $\\ln(y+2)$ together, set $t=\\ln(y+2)$; treat $x$ as the dependent variable if $x$ appears only to the first power with $dy$.",
+    "For $\\frac{dx}{dt}+\\frac{x}{2t}=q(t)$ the I.F. is $\\sqrt t$; in general $\\frac{dx}{dt}+\\frac{k}{t}x=q$ has I.F. $t^k$. Check: $k=\\frac12$, $x=t^{-1/2}$ solves the homogeneous part.",
+    "For a linear DE with polynomial right-hand side, try a polynomial of the same degree plus the homogeneous solution (undetermined coefficients) - it avoids the integral."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Definite integrals: King's property ($a+b-x$)"
+   ],
+   "level": 2,
+   "question": "Which of the following statements is incorrect for the function $g(\\alpha)$ for $\\alpha\\in\\mathbb R$ such that $g(\\alpha)=\\int_{\\pi/6}^{\\pi/3}\\frac{\\sin^\\alpha x}{\\cos^\\alpha x+\\sin^\\alpha x}dx$",
+   "options": [
+    "$g(\\alpha)$ is an even function",
+    "$g(\\alpha)$ is a strictly increasing function",
+    "$g(\\alpha)$ has an inflection point at $\\alpha=-\\frac12$",
+    "$g(\\alpha)$ is a strictly decreasing function"
+   ],
+   "answer": "Printed key (A); but (B), (C) and (D) are the incorrect statements - see note",
+   "key_idea": "Replace $x$ by $\\frac\\pi2-x$ and add: the integrand pair sums to $1$, so $g(\\alpha)=\\frac\\pi{12}$ for every $\\alpha$ - a constant.",
+   "solution": [
+    "$g(\\alpha)=\\int_{\\pi/6}^{\\pi/3}\\frac{(\\sin x)^\\alpha}{(\\sin x)^\\alpha+(\\cos x)^\\alpha}dx$ ...(1)",
+    "Apply King's property $x\\to\\frac\\pi6+\\frac\\pi3-x=\\frac\\pi2-x$ (it swaps $\\sin$ and $\\cos$): $g(\\alpha)=\\int_{\\pi/6}^{\\pi/3}\\frac{(\\cos x)^\\alpha}{(\\cos x)^\\alpha+(\\sin x)^\\alpha}dx$ ...(2)",
+    "Add (1) and (2): $2g(\\alpha)=\\int_{\\pi/6}^{\\pi/3}dx=\\frac\\pi3-\\frac\\pi6=\\frac\\pi6$.",
+    "$g(\\alpha)=\\frac\\pi{12}$ for every real $\\alpha$: a constant function.",
+    "(A) A constant function is even: this statement is true.",
+    "(B) A constant function is not strictly increasing: false, so (B) is incorrect.",
+    "(C) A constant function has $g''=0$ everywhere but its concavity never changes, so there is no inflection point: false, so (C) is incorrect.",
+    "(D) A constant function is not strictly decreasing: false, so (D) is incorrect. The only true statement is (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The printed question asks which statement is INCORRECT and the key says (A). But $g(\\alpha)=\\pi/12$ is constant, so (A) 'even' is TRUE and (B), (C), (D) are all incorrect - three options fit the wording. The key (A) fits only if the question were 'which statement is correct'. The PDF's working (g = pi/12) is right; the PDF does not discuss the options at all, so option-by-option verdicts were added.",
+   "alternate_solutions": [
+    {
+     "idea": "Do not rely on symmetry: compute $g(0)$ and $g(1)$ with an explicit antiderivative and see that they are equal, so $g$ cannot be strictly monotonic.",
+     "solution": [
+      "$\\alpha=0$: $g(0)=\\int_{\\pi/6}^{\\pi/3}\\frac12dx=\\frac\\pi{12}$.",
+      "$\\alpha=1$: let $J=\\int\\frac{\\sin x}{\\sin x+\\cos x}dx$ and $K=\\int\\frac{\\cos x}{\\sin x+\\cos x}dx$ over $\\left[\\frac\\pi6,\\frac\\pi3\\right]$; $J+K=\\frac\\pi6$.",
+      "$J-K=\\int\\frac{\\sin x-\\cos x}{\\sin x+\\cos x}dx=-\\left[\\ln(\\sin x+\\cos x)\\right]_{\\pi/6}^{\\pi/3}$.",
+      "$\\sin x+\\cos x$ equals $\\frac{\\sqrt3+1}{2}$ at both $x=\\frac\\pi6$ and $x=\\frac\\pi3$, so $J-K=0$ and $J=g(1)=\\frac\\pi{12}=g(0)$.",
+      "So $g(0)=g(1)$: $g$ is neither strictly increasing nor strictly decreasing, which rules out (B) and (D); (A) is true for the constant. Same conclusion."
+     ]
+    }
+   ],
+   "useful_results": [
+    "King's property: $\\int_a^bf(x)dx=\\int_a^bf(a+b-x)dx$. Whenever $f(x)+f(a+b-x)=k$, the integral is $\\frac{k(b-a)}{2}$. Check: here $k=1$, $b-a=\\frac\\pi6$.",
+    "$\\int_a^b\\frac{\\varphi(x)^\\alpha}{\\varphi(x)^\\alpha+\\varphi(a+b-x)^\\alpha}dx=\\frac{b-a}{2}$ for every $\\alpha$ - the answer does not depend on the parameter.",
+    "If a function of a parameter turns out constant, every 'increasing / decreasing / extremum / inflection' statement is false; only 'even / odd / periodic / bounded' kinds can hold."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Differential equations reducible to variable-separable form (substitution $y+3x=t$)"
+   ],
+   "level": 2,
+   "question": "The solution of the differential equation $\\frac{dy}{dx}-\\frac{y+3x}{\\log_e(y+3x)}+3=0$ is : (where $C$ is a constant of integration.)",
+   "options": [
+    "$x-2\\log_e(y+3x)=C$",
+    "$x-\\frac12\\left(\\log_e(y+3x)\\right)^2=C$",
+    "$x-\\log_e(y+3x)=C$",
+    "$y+3x-\\frac12\\left(\\log_ex\\right)^2=C$"
+   ],
+   "answer": "(B) $x-\\frac12\\left(\\log_e(y+3x)\\right)^2=C$",
+   "key_idea": "With $t=y+3x$ the equation reduces to $\\frac{dt}{dx}=\\frac{t}{\\ln t}$, which separates.",
+   "solution": [
+    "Write the equation as $\\frac{dy}{dx}+3=\\frac{y+3x}{\\ln(y+3x)}$.",
+    "Let $y+3x=t$. Then $\\frac{dt}{dx}=\\frac{dy}{dx}+3$, so $\\frac{dt}{dx}=\\frac{t}{\\ln t}$.",
+    "Separate the variables: $\\int\\frac{\\ln t}{t}dt=\\int dx$.",
+    "Let $\\ln t=p$, $\\frac1tdt=dp$: $\\int p\\,dp=\\int dx$.",
+    "$\\frac{p^2}{2}=x+c$, i.e. $\\frac{\\ln^2t}{2}=x+c$.",
+    "$\\frac12\\left(\\ln(y+3x)\\right)^2=x+c$, i.e. $x-\\frac12\\left(\\log_e(y+3x)\\right)^2=C$. Answer (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF substitutes y-3x (printed 'y-3x' in the DE and in the final line) and writes dy/dx-3=dt/dx. With the DE as printed in the question the correct substitution is t=y+3x with dt/dx=dy/dx+3. The PDF's method and the final result x=(ln t)^2/2 - c are right; signs/variable were corrected.",
+   "alternate_solutions": [
+    {
+     "idea": "Treat $x$ as a function of $t=y+3x$: $\\frac{dx}{dt}=\\frac{\\ln t}{t}$ is an immediate integral, and the answer can be confirmed by implicit differentiation.",
+     "solution": [
+      "From $\\frac{dt}{dx}=\\frac{t}{\\ln t}$ take the reciprocal: $\\frac{dx}{dt}=\\frac{\\ln t}{t}=\\frac{d}{dt}\\left(\\frac{\\ln^2t}{2}\\right)$.",
+      "So $x=\\frac12\\ln^2t+C'$, i.e. $x-\\frac12\\ln^2(y+3x)=C$.",
+      "Check by differentiating: $1-\\frac{\\ln t}{t}(y'+3)=0\\Rightarrow y'+3=\\frac{t}{\\ln t}$, which is the given equation. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{dy}{dx}=F(ax+by+c)$ put $t=ax+by+c$: $\\frac{dt}{dx}=a+bF(t)$, which separates. Here $a=3,b=1$.",
+    "$\\int\\frac{\\ln^nt}{t}dt=\\frac{\\ln^{n+1}t}{n+1}$. Check: $n=1$ gives $\\frac{\\ln^2t}{2}$.",
+    "If $\\frac{dt}{dx}=\\frac{t}{g(t)}$ then $x=\\int\\frac{g(t)}{t}dt$ - invert the derivative when it is easier."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Definite integral of trigonometric function (partial fractions, substitution)"
+   ],
+   "level": 2,
+   "question": "The value of $\\int_{\\pi/3}^{\\pi/2}\\frac{(2+3\\sin x)}{\\sin x(1+\\cos x)}dx$ is equal to",
+   "options": [
+    "$\\frac{10}{3}-\\sqrt3-\\log_e\\sqrt3$",
+    "$-2+3\\sqrt3+\\log_e\\sqrt3$",
+    "$\\frac{10}{3}-\\sqrt3+\\log_e\\sqrt3$",
+    "$\\frac72-\\sqrt3-\\log_e\\sqrt3$"
+   ],
+   "answer": "(C) $\\frac{10}{3}-\\sqrt3+\\log_e\\sqrt3$",
+   "key_idea": "Split $\\frac{2}{\\sin x(1+\\cos x)}=\\frac{2(1-\\cos x)}{\\sin^3x}$ and $\\frac{3}{1+\\cos x}=\\frac32\\sec^2\\frac x2$.",
+   "solution": [
+    "$\\frac{2+3\\sin x}{\\sin x(1+\\cos x)}=\\frac{2}{\\sin x(1+\\cos x)}+\\frac{3}{1+\\cos x}$.",
+    "$\\frac{2}{\\sin x(1+\\cos x)}=\\frac{2(1-\\cos x)}{\\sin x(1-\\cos^2x)}=\\frac{2(1-\\cos x)}{\\sin^3x}$, so $I=\\int_{\\pi/3}^{\\pi/2}\\frac{2(1-\\cos x)}{\\sin^3x}dx+\\int_{\\pi/3}^{\\pi/2}\\frac{3}{1+\\cos x}dx$.",
+    "$I=\\int_{\\pi/3}^{\\pi/2}\\frac{2}{\\sin^3x}dx-2\\int_{\\pi/3}^{\\pi/2}\\cot x\\csc^2x\\,dx+\\frac32\\int_{\\pi/3}^{\\pi/2}\\sec^2\\frac x2dx$.",
+    "$\\frac{2}{\\sin^3x}=2\\csc x\\csc^2x=2\\sqrt{1+\\cot^2x}\\,\\csc^2x$ and $\\frac32\\int\\sec^2\\frac x2dx=3\\tan\\frac x2$.",
+    "Let $\\cot x=t$, $-\\csc^2x\\,dx=dt$; the limits $\\frac\\pi3,\\frac\\pi2$ become $\\frac1{\\sqrt3},0$: $I=-2\\int_{1/\\sqrt3}^{0}\\sqrt{1+t^2}dt+2\\int_{1/\\sqrt3}^{0}t\\,dt+3\\left[\\tan\\frac x2\\right]_{\\pi/3}^{\\pi/2}$.",
+    "$I=2\\left[\\frac t2\\sqrt{1+t^2}+\\frac12\\ln\\left(t+\\sqrt{1+t^2}\\right)\\right]_0^{1/\\sqrt3}-\\left[t^2\\right]_0^{1/\\sqrt3}+3\\left(1-\\frac1{\\sqrt3}\\right)$.",
+    "At $t=\\frac1{\\sqrt3}$: $\\sqrt{1+t^2}=\\frac2{\\sqrt3}$, so the first bracket gives $\\frac{2}{3}+\\ln\\sqrt3$ (since $\\frac1{\\sqrt3}+\\frac2{\\sqrt3}=\\sqrt3$).",
+    "$I=\\frac23+\\ln\\sqrt3-\\frac13+3-\\sqrt3=\\frac{10}{3}-\\sqrt3+\\frac12\\ln3$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Weierstrass substitution $t=\\tan\\frac x2$ turns the whole integrand into the elementary $t+3+\\frac1t$.",
+     "solution": [
+      "$\\sin x=\\frac{2t}{1+t^2}$, $1+\\cos x=\\frac{2}{1+t^2}$, $dx=\\frac{2\\,dt}{1+t^2}$; limits $t=\\tan\\frac\\pi6=\\frac1{\\sqrt3}$ to $\\tan\\frac\\pi4=1$.",
+      "$2+3\\sin x=\\frac{2(1+t^2)+6t}{1+t^2}$ and $\\sin x(1+\\cos x)=\\frac{4t}{(1+t^2)^2}$.",
+      "The integrand times $dx$: $\\frac{2t^2+6t+2}{1+t^2}\\cdot\\frac{(1+t^2)^2}{4t}\\cdot\\frac{2}{1+t^2}dt=\\frac{t^2+3t+1}{t}dt=\\left(t+3+\\frac1t\\right)dt$.",
+      "$I=\\left[\\frac{t^2}{2}+3t+\\ln t\\right]_{1/\\sqrt3}^{1}=\\left(\\frac12-\\frac16\\right)+3\\left(1-\\frac1{\\sqrt3}\\right)+\\ln\\sqrt3$.",
+      "$I=\\frac13+3-\\sqrt3+\\ln\\sqrt3=\\frac{10}{3}-\\sqrt3+\\ln\\sqrt3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With $t=\\tan\\frac x2$: $\\sin x=\\frac{2t}{1+t^2}$, $\\cos x=\\frac{1-t^2}{1+t^2}$, $1+\\cos x=\\frac2{1+t^2}$, $dx=\\frac{2dt}{1+t^2}$. Integrands containing $\\sin x(1+\\cos x)$ simplify at once.",
+    "$\\frac{1}{1+\\cos x}=\\frac12\\sec^2\\frac x2$ and $\\frac{1}{1-\\cos x}=\\frac12\\csc^2\\frac x2$. Check at $x=\\frac\\pi2$: both sides equal $1$.",
+    "$\\int\\sqrt{1+t^2}dt=\\frac t2\\sqrt{1+t^2}+\\frac12\\ln\\left(t+\\sqrt{1+t^2}\\right)+C$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Definite integrals with the greatest integer function",
+    "Substitution in definite integrals"
+   ],
+   "level": 2,
+   "question": "If $[t]$ denotes the greatest integer $\\le t$, then the value of $\\frac{3(e-1)}{e}\\int_1^2x^2e^{[x]+[x^3]}dx$ is :",
+   "options": [
+    "$e^8-1$",
+    "$e^7-1$",
+    "$e^8-e$",
+    "$e^9-1$"
+   ],
+   "answer": "(C) $e^8-e$",
+   "key_idea": "On $[1,2)$, $[x]=1$; put $x^3=t$ so that $x^2dx=\\frac{dt}{3}$ and the integral becomes a geometric series in $e^{[t]}$.",
+   "solution": [
+    "For $1\\le x<2$, $[x]=1$ (the single point $x=2$ does not affect the integral), so $\\frac{3(e-1)}{e}\\int_1^2x^2e^{[x]+[x^3]}dx=\\frac{3(e-1)}{e}k$ with $k=\\int_1^2x^2e^{1+[x^3]}dx$.",
+    "Put $x^3=t$, $3x^2dx=dt$; limits $1\\to8$.",
+    "$k=\\frac13\\int_1^8e\\cdot e^{[t]}dt$.",
+    "On each unit interval $[j,j+1)$, $[t]=j$, so $\\int_1^8e^{[t]}dt=e+e^2+e^3+\\dots+e^7$.",
+    "$k=\\frac e3\\left[e+e^2+\\dots+e^7\\right]=\\frac{e^2}{3}\\left(\\frac{e^7-1}{e-1}\\right)$ (G.P. with first term $e$, ratio $e$, 7 terms).",
+    "$\\frac{3(e-1)}{e}k=\\frac{3(e-1)}{e}\\cdot\\frac{e^2}{3}\\cdot\\frac{e^7-1}{e-1}=e\\left(e^7-1\\right)$.",
+    "$=e^8-e$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $\\int_a^bf'(x)\\,g([\\varphi(x)])\\,dx$ with $\\varphi$ increasing, substitute $t=\\varphi(x)$ first, then split at integers of $t$: $\\int_m^n g([t])dt=\\sum_{j=m}^{n-1}g(j)$. Check: $\\int_1^3[t]dt=1+2=3$.",
+    "G.P. sum: $e+e^2+\\dots+e^{n}=\\frac{e(e^n-1)}{e-1}$. For $n=7$ this is $\\frac{e(e^7-1)}{e-1}$.",
+    "Split $e^{[x]+[x^3]}=e^{[x]}\\cdot e^{[x^3]}$ and first decide the value of the outer $[x]$ on the interval - it is constant here."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Indefinite integration of trigonometric functions (product-to-sum identity)"
+   ],
+   "level": 1,
+   "question": "$\\int\\frac{\\sin\\frac{5x}{2}}{\\sin\\frac x2}dx$ is equal to (where $c$ is a constant of integration)",
+   "options": [
+    "$2x+\\sin x+2\\sin2x+c$",
+    "$x+2\\sin x+2\\sin2x+c$",
+    "$x+2\\sin x+\\sin2x+c$",
+    "$2x+\\sin x+\\sin2x+c$"
+   ],
+   "answer": "(C) $x+2\\sin x+\\sin2x+c$",
+   "key_idea": "Multiply by $2\\cos\\frac x2$ to turn $\\frac{\\sin(5x/2)}{\\sin(x/2)}$ into $\\frac{\\sin3x+\\sin2x}{\\sin x}=1+2\\cos2x+2\\cos x$.",
+   "solution": [
+    "$\\int\\frac{\\sin\\frac{5x}{2}}{\\sin\\frac x2}dx=\\int\\frac{2\\cos\\frac x2\\sin\\frac{5x}{2}}{2\\cos\\frac x2\\sin\\frac x2}dx$.",
+    "$2\\cos\\frac x2\\sin\\frac{5x}{2}=\\sin3x+\\sin2x$ and $2\\cos\\frac x2\\sin\\frac x2=\\sin x$, so the integral is $\\int\\frac{\\sin3x+\\sin2x}{\\sin x}dx$.",
+    "Use $\\sin2x=2\\sin x\\cos x$ and $\\sin3x=3\\sin x-4\\sin^3x$.",
+    "$\\frac{\\sin3x}{\\sin x}=3-4\\sin^2x=1+2\\cos2x$ and $\\frac{\\sin2x}{\\sin x}=2\\cos x$.",
+    "$\\int(1+2\\cos x+2\\cos2x)\\,dx$.",
+    "$=x+2\\sin x+\\sin2x+c$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Recognise the Dirichlet kernel: $\\frac{\\sin(n+\\frac12)x}{\\sin\\frac x2}=1+2\\sum_{k=1}^n\\cos kx$, here $n=2$.",
+     "solution": [
+      "With $z=e^{ix}$: $\\frac{\\sin\\frac{5x}{2}}{\\sin\\frac x2}=\\frac{z^{5/2}-z^{-5/2}}{z^{1/2}-z^{-1/2}}=z^{2}+z+1+z^{-1}+z^{-2}$ (a geometric sum).",
+      "$z^2+z^{-2}=2\\cos2x$ and $z+z^{-1}=2\\cos x$, so the integrand is $1+2\\cos x+2\\cos2x$.",
+      "Integrate: $x+2\\sin x+\\sin2x+c$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Dirichlet kernel: $\\frac{\\sin\\left(n+\\frac12\\right)x}{\\sin\\frac x2}=1+2\\cos x+2\\cos2x+\\dots+2\\cos nx$. Check: $x=\\pi,\\ n=2$: LHS $=\\sin\\frac{5\\pi}2/1=1$, RHS $=1-2+2=1$.",
+    "Fejér-type companion: $\\frac{\\sin nx}{\\sin x}=\\sum$ of $\\cos$ terms (e.g. $\\frac{\\sin3x}{\\sin x}=1+2\\cos2x$).",
+    "$\\int_0^\\pi\\frac{\\sin\\left(n+\\frac12\\right)x}{\\sin\\frac x2}dx=\\pi$ for every integer $n\\ge0$, since all cosine terms integrate to $0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Differential equations: homogeneous / reducible to Bernoulli form"
+   ],
+   "level": 2,
+   "question": "The general solution of the differential equation $\\left(y^2-x^3\\right)dx-xy\\,dy=0$ $(x\\ne0)$ is : (where $c$ is a constant of integration)",
+   "options": [
+    "$y^2+2x^3+cx^2=0$",
+    "$y^2-2x^2+cx^3=0$",
+    "$y^2-2x^3+cx^2=0$",
+    "$y^2+2x^2+cx^3=0$"
+   ],
+   "answer": "(A) $y^2+2x^3+cx^2=0$",
+   "key_idea": "Write $y^2dx-xy\\,dy=y\\,(y\\,dx-x\\,dy)=-x^2y\\,d\\!\\left(\\frac yx\\right)$ and the equation separates in $\\frac yx$.",
+   "solution": [
+    "$y^2dx-xy\\,dy=x^3dx$.",
+    "$\\frac{(y\\,dx-x\\,dy)\\,y}{x^2}=x\\,dx$.",
+    "Since $d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2}$: $-y\\,d\\left(\\frac yx\\right)=x\\,dx$.",
+    "Divide by $x$: $-\\frac yx\\,d\\left(\\frac yx\\right)=dx$.",
+    "Integrate: $-\\frac12\\left(\\frac yx\\right)^2=x+c_1$.",
+    "Multiply by $-2x^2$: $y^2=-2x^3-2c_1x^2$, i.e. $y^2+2x^3+cx^2=0$ with $c=2c_1$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Make it linear by $z=y^2$ (Bernoulli equation with $n=-1$ in $y$): $z'-\\frac{2z}{x}=-2x^2$.",
+     "solution": [
+      "$\\frac{dy}{dx}=\\frac{y^2-x^3}{xy}\\Rightarrow y\\frac{dy}{dx}=\\frac{y^2}{x}-x^2$.",
+      "Let $z=y^2$, $\\frac{dz}{dx}=2y\\frac{dy}{dx}$: $\\frac12\\frac{dz}{dx}=\\frac zx-x^2$, i.e. $\\frac{dz}{dx}-\\frac2xz=-2x^2$.",
+      "I.F. $=e^{-2\\int\\frac{dx}{x}}=x^{-2}$, so $\\frac{d}{dx}\\left(\\frac z{x^2}\\right)=-2$.",
+      "$\\frac{z}{x^2}=-2x+c$, so $y^2=-2x^3+cx^2$, i.e. $y^2+2x^3-cx^2=0$ (the constant's sign is arbitrary), matching (A). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2}$ and $d(xy)=x\\,dy+y\\,dx$: spot $y\\,dx-x\\,dy$ and divide by $x^2$.",
+    "Equations $y\\frac{dy}{dx}+P(x)y^2=Q(x)$ are Bernoulli with $z=y^2$: $\\frac{dz}{dx}+2Pz=2Q$.",
+    "A quick option test: put the constant to $0$ and differentiate; options $y^2\\pm2x^3=0$ differ in sign of $x^3$, so one derivative check decides it. Check: $y^2=-2x^3$ gives $2yy'=-6x^2$, and the DE gives $yy'=\\frac{y^2}{x}-x^2=-3x^2$ ✓."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Variable-separable differential equation (partial fractions)"
+   ],
+   "level": 2,
+   "question": "If $x^3dy+xy\\,dx=x^2dy+2y\\,dx$; $y(2)=e$ and $x>1$, then $y(4)$ is equal to :",
+   "options": [
+    "$\\frac{\\sqrt e}{2}$",
+    "$\\frac12+\\sqrt e$",
+    "$\\frac32\\sqrt e$",
+    "$\\frac32+\\sqrt e$"
+   ],
+   "answer": "(C) $\\frac32\\sqrt e$",
+   "key_idea": "Collect $dy$ and $dx$ terms: $\\frac{dy}{y}=\\frac{2-x}{x^2(x-1)}dx$, then use partial fractions.",
+   "solution": [
+    "$x^3dy+xy\\,dx=2y\\,dx+x^2dy\\Rightarrow(x^3-x^2)\\,dy=(2-x)\\,y\\,dx$.",
+    "$\\frac{dy}{y}=\\frac{2-x}{x^2(x-1)}dx$, so $\\int\\frac{dy}{y}=\\int\\frac{2-x}{x^2(x-1)}dx$.",
+    "Let $\\frac{2-x}{x^2(x-1)}=\\frac Ax+\\frac B{x^2}+\\frac C{x-1}$, so $2-x=Ax(x-1)+B(x-1)+Cx^2$.",
+    "By comparison (put $x=0$: $B=-2$; $x=1$: $C=1$; coefficient of $x^2$: $A+C=0$): $C=1$, $B=-2$, $A=-1$.",
+    "$\\int\\frac{dy}{y}=\\int\\left\\{-\\frac1x-\\frac2{x^2}+\\frac1{x-1}\\right\\}dx$.",
+    "$\\ln y=-\\ln x+\\frac2x+\\ln|x-1|+C$.",
+    "$y(2)=e$: $\\ln e=-\\ln2+\\frac22+\\ln1+C\\Rightarrow C=\\ln2$.",
+    "$\\ln y=-\\ln x+\\frac2x+\\ln|x-1|+\\ln2$.",
+    "At $x=4$: $\\ln y(4)=-\\ln4+\\frac12+\\ln3+\\ln2=\\ln\\frac32+\\frac12$.",
+    "$y(4)=\\frac32e^{1/2}$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write the right-hand side as an exact derivative $\\frac{d}{dx}\\left[\\ln\\frac{x-1}{x}+\\frac2x\\right]$ and use the definite integral from $2$ to $4$, so no constant of integration appears.",
+     "solution": [
+      "$\\frac{2-x}{x^2(x-1)}=\\frac{1}{x-1}-\\frac1x-\\frac2{x^2}=\\frac{d}{dx}\\left[\\ln\\frac{x-1}{x}+\\frac2x\\right]$ (for $x>1$).",
+      "So $\\ln\\frac{y(4)}{y(2)}=\\left[\\ln\\frac{x-1}{x}+\\frac2x\\right]_2^4$.",
+      "$=\\left(\\ln\\frac34+\\frac12\\right)-\\left(\\ln\\frac12+1\\right)=\\ln\\frac32-\\frac12$.",
+      "$\\ln y(4)=\\ln e+\\ln\\frac32-\\frac12=\\ln\\frac32+\\frac12$, so $y(4)=\\frac32\\sqrt e$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{dy}{y}=R(x)dx$ with an initial value, $y(b)=y(a)\\exp\\left(\\int_a^bR\\right)$ - no constant to find.",
+    "$\\frac{1}{x(x-1)}=\\frac1{x-1}-\\frac1x$; hence $\\frac{2-x}{x^2(x-1)}=\\frac1{x-1}-\\frac1x-\\frac2{x^2}$. Check at $x=2$: LHS $0$, RHS $1-\\frac12-\\frac12=0$.",
+    "Sort the equation as (coefficient of $dy$)$\\,dy=$ (coefficient of $dx$)$\\,dx$ and factor: here $x^2(x-1)$ and $(2-x)y$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Area under curves with the greatest integer function"
+   ],
+   "level": 1,
+   "question": "The area (in sq. units) of the region $A=\\left\\{(x,y):(x-1)[x]\\le y\\le2\\sqrt x,\\ 0\\le x\\le2\\right\\}$, where $[t]$ denotes the greatest integer function, is :",
+   "options": [
+    "$\\frac83\\sqrt2-1$",
+    "$\\frac43\\sqrt2+1$",
+    "$\\frac43\\sqrt2-\\frac12$",
+    "$\\frac83\\sqrt2-\\frac12$"
+   ],
+   "answer": "(D) $\\frac83\\sqrt2-\\frac12$",
+   "key_idea": "$[x]=0$ on $[0,1)$ and $1$ on $[1,2)$: the lower boundary is $y=0$ then $y=x-1$, so the region is the area under $2\\sqrt x$ minus a triangle.",
+   "solution": [
+    "For $0\\le x<1$: $[x]=0$, so $0\\le y\\le2\\sqrt x$.",
+    "For $1\\le x<2$: $[x]=1$, so $x-1\\le y\\le2\\sqrt x$.",
+    "So the region is the area under $y=2\\sqrt x$ on $[0,2]$ minus the triangle between $y=0$ and $y=x-1$ on $[1,2]$ (vertices $(1,0),(2,0),(2,1)$).",
+    "Required area $=\\int_0^22\\sqrt x\\,dx-\\frac12(1)(1)$.",
+    "$=2\\left[\\frac{x^{3/2}}{3/2}\\right]_0^2-\\frac12=\\frac43\\left[2\\sqrt2\\right]-\\frac12$.",
+    "$=\\frac{8\\sqrt2}{3}-\\frac12$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Slice horizontally: $x$ runs from $\\frac{y^2}{4}$ to $2$ for $0\\le y\\le2\\sqrt2$, then remove the triangle.",
+     "solution": [
+      "$y\\le2\\sqrt x\\iff x\\ge\\frac{y^2}{4}$. The region under the curve up to $x=2$ has horizontal width $2-\\frac{y^2}{4}$ at height $y\\in[0,2\\sqrt2]$.",
+      "$\\int_0^{2\\sqrt2}\\left(2-\\frac{y^2}{4}\\right)dy=4\\sqrt2-\\frac{(2\\sqrt2)^3}{12}=4\\sqrt2-\\frac{16\\sqrt2}{12}=\\frac{8\\sqrt2}{3}$.",
+      "Remove the triangle $(1,0),(2,0),(2,1)$ of area $\\frac12$: area $=\\frac{8\\sqrt2}{3}-\\frac12$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For regions bounded by $[x]$, split the $x$-range at integers: on $[n,n+1)$ the boundary $(x-1)[x]$ is the straight line $n(x-1)$.",
+    "$\\int_0^a2\\sqrt x\\,dx=\\frac43a^{3/2}$; for $a=2$ this is $\\frac{8\\sqrt2}{3}$.",
+    "Subtract a missing triangle with its geometric formula $\\frac12bh$ rather than integrating."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Indefinite integration by substitution ($2x-1=t^2$)"
+   ],
+   "level": 1,
+   "question": "If $\\int\\frac{x+1}{\\sqrt{2x-1}}dx=f(x)\\sqrt{2x-1}+C$, where $C$ is a constant of integration, then $f(x)$ is equal to :",
+   "options": [
+    "$\\frac23(x+2)$",
+    "$\\frac23(x-4)$",
+    "$\\frac13(x+1)$",
+    "$\\frac13(x+4)$"
+   ],
+   "answer": "(D) $\\frac13(x+4)$",
+   "key_idea": "Put $2x-1=t^2$, so $dx=t\\,dt$ and $x+1=\\frac{t^2+3}{2}$ - the integrand becomes a polynomial in $t$.",
+   "solution": [
+    "Let $2x-1=t^2$, so $2\\,dx=2t\\,dt\\Rightarrow dx=t\\,dt$, and $x=\\frac{t^2+1}{2}$.",
+    "$x+1=\\frac{t^2+3}{2}$, so $\\int\\frac{x+1}{\\sqrt{2x-1}}dx=\\int\\frac{t^2+3}{2t}\\cdot t\\,dt=\\frac12\\int t^2dt+\\frac32\\int dt$.",
+    "$=\\frac12\\cdot\\frac{t^3}{3}+\\frac32t+c$.",
+    "$=\\frac16(2x-1)^{3/2}+\\frac32(2x-1)^{1/2}+c$.",
+    "$=\\sqrt{2x-1}\\left[\\frac{2x-1}{6}+\\frac32\\right]+c=\\sqrt{2x-1}\\left[\\frac{2x-1+9}{6}\\right]+c$.",
+    "$=\\sqrt{2x-1}\\left(\\frac{x+4}{3}\\right)+c$, so $f(x)=\\frac{x+4}{3}$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate both sides and match with a linear trial $f(x)=ax+b$ (undetermined coefficients).",
+     "solution": [
+      "Differentiate: $f'\\sqrt{2x-1}+\\frac{f}{\\sqrt{2x-1}}=\\frac{x+1}{\\sqrt{2x-1}}$, i.e. $(2x-1)f'(x)+f(x)=x+1$.",
+      "Try $f=ax+b$: $(2x-1)a+ax+b=3ax+(b-a)=x+1$.",
+      "So $3a=1\\Rightarrow a=\\frac13$ and $b-a=1\\Rightarrow b=\\frac43$.",
+      "$f(x)=\\frac{x+4}{3}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int\\frac{P(x)}{\\sqrt{ax+b}}dx$ put $ax+b=t^2$; the integrand becomes a polynomial in $t$, and $\\int=\\sqrt{ax+b}\\times$(polynomial).",
+    "If $\\int\\frac{P(x)}{\\sqrt{ax+b}}dx=f(x)\\sqrt{ax+b}+C$ with $P$ of degree $d$, then $f$ is a polynomial of degree $d$ (here $d=1$), so a trial $f=\\alpha x+\\beta$ works. Check: $\\frac{d}{dx}\\left(x\\sqrt{x}\\right)=\\frac{3x}{2\\sqrt x}$ has $d=1$.",
+    "Check of the result: derivative of $\\frac{x+4}{3}\\sqrt{2x-1}$ at $x=1$ is $\\frac13+\\frac53=2=\\frac{1+1}{1}$ ✓."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Indefinite integration of $e^{g(x)}\\left(g'f+f'\\right)$ form"
+   ],
+   "level": 2,
+   "question": "If $\\int e^{\\sec x}\\left(\\sec x\\tan x\\,f(x)+\\sec x\\tan x+\\sec^2x\\right)dx=e^{\\sec x}f(x)+C$, then a possible choice of $f(x)$ is :",
+   "options": [
+    "$\\sec x-\\tan x-\\frac12$",
+    "$\\sec x+\\tan x+\\frac12$",
+    "$\\sec x+x\\tan x-\\frac12$",
+    "$x\\sec x+\\tan x+\\frac12$"
+   ],
+   "answer": "(B) $\\sec x+\\tan x+\\frac12$",
+   "key_idea": "$\\frac{d}{dx}\\left(e^{\\sec x}f\\right)=e^{\\sec x}\\left(\\sec x\\tan x\\,f+f'\\right)$, so $f'=\\sec x\\tan x+\\sec^2x$.",
+   "solution": [
+    "We know $\\int e^{g(x)}\\left(g'(x)f(x)+f'(x)\\right)dx=e^{g(x)}f(x)+C$; here $g=\\sec x$, $g'=\\sec x\\tan x$.",
+    "Comparing with the given integrand, $f'(x)=\\sec x\\tan x+\\sec^2x$.",
+    "$f(x)=\\int\\left(\\sec x\\tan x+\\sec^2x\\right)dx$.",
+    "$f(x)=\\sec x+\\tan x+C$ for any constant $C$.",
+    "Among the options, only (B) has this form, with $C=\\frac12$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the claimed identity and compare; then test the options by their derivatives only (a constant is free).",
+     "solution": [
+      "Differentiate $e^{\\sec x}f(x)+C$: $e^{\\sec x}\\left(\\sec x\\tan x\\,f+f'\\right)$. Equating with the integrand gives $f'=\\sec x\\tan x+\\sec^2x$.",
+      "Derivatives of the options: (A) $\\sec x\\tan x-\\sec^2x$; (B) $\\sec x\\tan x+\\sec^2x$; (C) $\\sec x\\tan x+\\tan x+x\\sec^2x$; (D) $\\sec x+x\\sec x\\tan x+\\sec^2x$.",
+      "Only (B) has $f'=\\sec x\\tan x+\\sec^2x$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int e^{g(x)}\\left(g'(x)f(x)+f'(x)\\right)dx=e^{g(x)}f(x)+C$ (product rule backwards). Special case $g=x$: $\\int e^x(f+f')dx=e^xf$.",
+    "$f$ is determined only up to an additive constant when the integrand has $f'$ and $g'f$ both - so options differing by a constant can both seem right; the question says 'a possible choice'.",
+    "$\\frac{d}{dx}(\\sec x+\\tan x)=\\sec x(\\sec x+\\tan x)$, so $y=\\sec x+\\tan x$ satisfies $y'=y\\sec x$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Definite integrals: substitution $x\\to\\frac1x$ (reciprocal property)"
+   ],
+   "level": 2,
+   "question": "The value of the integral $\\int_{1/2}^2\\frac{\\tan^{-1}x}{x}dx$ is equal to",
+   "options": [
+    "$\\pi\\log_e2$",
+    "$\\frac12\\log_e2$",
+    "$\\frac\\pi4\\log_e2$",
+    "$\\frac\\pi2\\log_e2$"
+   ],
+   "answer": "(D) $\\frac\\pi2\\log_e2$",
+   "key_idea": "$x\\to\\frac1x$ maps $[\\frac12,2]$ to itself and turns $\\tan^{-1}x$ into $\\cot^{-1}x$; adding gives $\\frac\\pi2\\int\\frac{dx}{x}$.",
+   "solution": [
+    "$I=\\int_{1/2}^2\\frac{\\tan^{-1}x}{x}dx$ ...(i)",
+    "Put $x=\\frac1t$, $dx=-\\frac{1}{t^2}dt$; limits $2$ and $\\frac12$.",
+    "$I=-\\int_2^{1/2}\\frac{\\tan^{-1}\\frac1t}{\\frac1t}\\cdot\\frac1{t^2}dt=-\\int_2^{1/2}\\frac{\\tan^{-1}\\frac1t}{t}dt$.",
+    "$I=\\int_{1/2}^2\\frac{\\cot^{-1}t}{t}dt=\\int_{1/2}^2\\frac{\\cot^{-1}x}{x}dx$ ...(ii)",
+    "Add (i) and (ii): $2I=\\int_{1/2}^2\\frac{\\tan^{-1}x+\\cot^{-1}x}{x}dx=\\frac\\pi2\\int_{1/2}^2\\frac{dx}{x}$.",
+    "$2I=\\frac\\pi2\\left[\\ln x\\right]_{1/2}^2=\\frac\\pi2\\left(\\ln2-\\ln\\frac12\\right)=\\pi\\ln2$.",
+    "$I=\\frac\\pi2\\ln2$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate by parts with $u=\\tan^{-1}x$, $dv=\\frac{dx}{x}$: the leftover integral $\\int\\frac{\\ln x}{1+x^2}dx$ vanishes by the oddness of $\\ln x$ under $x\\to\\frac1x$.",
+     "solution": [
+      "$I=\\left[\\ln x\\tan^{-1}x\\right]_{1/2}^2-\\int_{1/2}^2\\frac{\\ln x}{1+x^2}dx$.",
+      "Boundary term: $\\ln2\\tan^{-1}2-\\ln\\frac12\\tan^{-1}\\frac12=\\ln2\\left(\\tan^{-1}2+\\tan^{-1}\\frac12\\right)=\\ln2\\cdot\\frac\\pi2$.",
+      "For $J=\\int_{1/2}^2\\frac{\\ln x}{1+x^2}dx$ put $x=\\frac1t$: $\\frac{dx}{1+x^2}=-\\frac{dt}{1+t^2}$ and $\\ln x=-\\ln t$, so $J=-\\int_{1/2}^2\\frac{\\ln t}{1+t^2}dt=-J$ and $J=0$.",
+      "$I=\\frac\\pi2\\ln2$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}x+\\cot^{-1}x=\\frac\\pi2$ and $\\tan^{-1}x+\\tan^{-1}\\frac1x=\\frac\\pi2$ for $x>0$. Check: $x=1$: $\\frac\\pi4+\\frac\\pi4$.",
+    "For $\\int_{1/a}^{a}\\frac{f(x)}{x}dx$ the substitution $x\\to\\frac1x$ preserves $\\frac{dx}{x}$ (up to sign) and the limits swap back - ideal when $f(x)+f\\left(\\frac1x\\right)$ is constant.",
+    "Generalisation: $\\int_{1/a}^a\\frac{\\tan^{-1}x}{x}dx=\\frac\\pi2\\ln a$ ($a>0$). Check: $a=2$ gives $\\frac\\pi2\\ln2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Homogeneous differential equation"
+   ],
+   "level": 3,
+   "question": "The solution of the differential equation $\\frac{dy}{dx}=-\\left(\\frac{x^2+3y^2}{3x^2+y^2}\\right)$, $y(1)=0$ is",
+   "options": [
+    "$\\log_e|x+y|-\\frac{xy}{(x+y)^2}=0$",
+    "$\\log_e|x+y|+\\frac{xy}{(x+y)^2}=0$",
+    "$\\log_e|x+y|+\\frac{2xy}{(x+y)^2}=0$",
+    "$\\log_e|x+y|-\\frac{2xy}{(x+y)^2}=0$"
+   ],
+   "answer": "(C) $\\log_e|x+y|+\\frac{2xy}{(x+y)^2}=0$",
+   "key_idea": "Put $y=vx$; the equation becomes $\\frac{v^2+3}{(v+1)^3}dv+\\frac{dx}{x}=0$, and $v^2+3=(v+1)^2-2(v+1)+4$.",
+   "solution": [
+    "Let $y=vx$: $v+x\\frac{dv}{dx}=-\\left(\\frac{1+3v^2}{3+v^2}\\right)$.",
+    "$x\\frac{dv}{dx}=-\\frac{1+3v^2+3v+v^3}{3+v^2}=-\\frac{(v+1)^3}{v^2+3}$, so $\\frac{v^2+3}{(v+1)^3}dv+\\frac1xdx=0$.",
+    "Write $v^2+3=(v+1)^2-2(v+1)+4$: $\\int\\frac{4}{(v+1)^3}dv+\\int\\frac1{v+1}dv-\\int\\frac2{(v+1)^2}dv+\\int\\frac1xdx=0$.",
+    "$\\frac{-2}{(v+1)^2}+\\ln|v+1|+\\frac{2}{v+1}+\\ln|x|=c$.",
+    "Substitute $v+1=\\frac{x+y}{x}$: $-\\frac{2x^2}{(x+y)^2}+\\ln\\left|\\frac{x+y}{x}\\right|+\\frac{2x}{x+y}+\\ln|x|=c$.",
+    "$-\\frac{2x^2}{(x+y)^2}+\\frac{2x(x+y)}{(x+y)^2}=\\frac{2xy}{(x+y)^2}$ and $\\ln\\left|\\frac{x+y}x\\right|+\\ln|x|=\\ln|x+y|$, so $\\frac{2xy}{(x+y)^2}+\\ln|x+y|=c$.",
+    "$y(1)=0$: $0+\\ln1=c\\Rightarrow c=0$.",
+    "$\\frac{2xy}{(x+y)^2}+\\ln|x+y|=0$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For a homogeneous $M\\,dx+N\\,dy=0$ the integrating factor is $\\frac{1}{Mx+Ny}=\\frac{1}{(x+y)^3}$; check that the result is exact.",
+     "solution": [
+      "$M=x^2+3y^2$, $N=3x^2+y^2$ (equation $M\\,dx+N\\,dy=0$). $Mx+Ny=x^3+3xy^2+3x^2y+y^3=(x+y)^3$.",
+      "Multiply by $\\frac1{(x+y)^3}$: with $F=\\ln(x+y)+\\frac{2xy}{(x+y)^2}$, $F_x=\\frac1s+\\frac{2y}{s^2}-\\frac{4xy}{s^3}=\\frac{s^2+2sy-4xy}{s^3}=\\frac{x^2+3y^2}{s^3}$ where $s=x+y$.",
+      "By symmetry $F_y=\\frac{3x^2+y^2}{s^3}$, so $dF=\\frac{M\\,dx+N\\,dy}{(x+y)^3}=0$ and $F=c$.",
+      "$y(1)=0$: $F=\\ln1+0=0$, so $c=0$ and $\\ln|x+y|+\\frac{2xy}{(x+y)^2}=0$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a homogeneous equation $M\\,dx+N\\,dy=0$ with $Mx+Ny\\ne0$, $\\frac{1}{Mx+Ny}$ is an integrating factor (Euler). Check: $M=y,\\ N=-x$ gives $\\frac{1}{0}$ - the exceptional case, solved by $\\frac yx$ directly.",
+    "Partial-fraction trick: $\\frac{v^2+3}{(v+1)^3}$ - write the numerator in powers of $(v+1)$: $v^2+3=(v+1)^2-2(v+1)+4$.",
+    "All four options vanish at $(1,0)$, so the initial condition cannot discriminate between them; decide by the coefficient of $\\frac{xy}{(x+y)^2}$ (here $2$) from the integration or the exactness check."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Definite integration by recognising an exact derivative"
+   ],
+   "level": 2,
+   "question": "The integral $\\int_1^2e^x\\cdot x^x\\left(2+\\log_ex\\right)dx$ equals :",
+   "options": [
+    "$4e^2-1$",
+    "$e(2e-1)$",
+    "$e(4e+1)$",
+    "$e(4e-1)$"
+   ],
+   "answer": "(D) $e(4e-1)$",
+   "key_idea": "$\\frac{d}{dx}\\left(e^xx^x\\right)=e^xx^x(2+\\ln x)$, so the integral is $\\left[e^xx^x\\right]_1^2$.",
+   "solution": [
+    "$\\int_1^2e^x\\cdot x^x\\left(2+\\log_ex\\right)dx=\\int_1^2e^x\\left(2x^x+x^x\\log_ex\\right)dx$.",
+    "$=\\int_1^2e^x\\left(x^x+x^x(1+\\log_ex)\\right)dx$.",
+    "Let $f(x)=x^x$; then $f'(x)=x^x(1+\\ln x)$, so the integrand is $e^x\\left(f(x)+f'(x)\\right)$.",
+    "$\\int e^x\\left(f(x)+f'(x)\\right)dx=e^xf(x)+c$, so the integral is $\\left[e^xx^x\\right]_1^2$.",
+    "$=e^2\\cdot4-e=4e^2-e=e(4e-1)$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $x^x=e^{x\\ln x}$: the integrand becomes $e^{w}\\,w'$ with $w=x+x\\ln x$.",
+     "solution": [
+      "$e^xx^x=e^{x+x\\ln x}$. Let $w=x+x\\ln x$; then $\\frac{dw}{dx}=1+\\ln x+1=2+\\ln x$.",
+      "The integral is $\\int_{w(1)}^{w(2)}e^w\\,dw$ with $w(1)=1$ and $w(2)=2+2\\ln2$.",
+      "$=e^{2+2\\ln2}-e^1=4e^2-e=e(4e-1)$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(x^x\\right)=x^x(1+\\ln x)$ (logarithmic differentiation). Check at $x=1$: $1$.",
+    "$\\int e^x\\left(f+f'\\right)dx=e^xf$. Variation: $\\int e^{ax}\\left(af+f'\\right)dx=e^{ax}f$.",
+    "Whenever the integrand is $e^{\\varphi}\\,\\varphi'$ in disguise ($\\varphi=x\\ln x+x$ here), the answer is $e^{\\varphi}$; compute $\\varphi'$ of the exponent to test."
+   ]
+  }
+ ]
+}
