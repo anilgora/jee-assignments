@@ -1,0 +1,873 @@
+{
+ "title": "Binomial Theorem (Exercise C-II) — Paper Analysis",
+ "subtitle": "Sheet C2 · detailed solutions",
+ "source": "papers/SHEET BINOMIAL THEOREM_FCopy C2.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "Binomial Theorem C2",
+ "sections": [
+  {
+   "title": "Subjective / Integer Type",
+   "from": 1,
+   "to": 13,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default for subjective / integer)"
+   ]
+  },
+  {
+   "title": "Comprehension Type (Paragraph Based Single Correct)",
+   "from": 14,
+   "to": 19,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for paragraph)"
+   ]
+  },
+  {
+   "title": "Match the Column Type",
+   "from": 20,
+   "to": 20,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 for the match (JEE Advanced default for matching)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Binomial expansion about a shifted point (re-centring a polynomial)"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=1-x+x^2-x^3+\\dots+x^{16}-x^{17}=a_0+a_1(1+x)+a_2(1+x)^2+\\dots+a_{17}(1+x)^{17}$. Find the value of $a_2$.",
+   "answer": "$816$",
+   "key_idea": "Sum the series as $\\frac{1-x^{18}}{1+x}$, put $1+x=t$ and read off a coefficient of a binomial expansion.",
+   "solution": [
+    "$f(x)=1-x+x^2-\\dots-x^{17}$ is a G.P. with first term $1$, ratio $-x$ and $18$ terms.",
+    "So $f(x)=\\frac{1-(-x)^{18}}{1-(-x)}=\\frac{1-x^{18}}{1+x}$.",
+    "Hence $\\frac{1-x^{18}}{1+x}=a_0+a_1(1+x)+\\dots+a_{17}(1+x)^{17}$.",
+    "Multiply by $(1+x)$: $1-x^{18}=a_0(1+x)+a_1(1+x)^2+a_2(1+x)^3+\\dots+a_{17}(1+x)^{18}$.",
+    "Let $1+x=t$, so $x=t-1$: $1-(t-1)^{18}=a_0t+a_1t^2+a_2t^3+\\dots+a_{17}t^{18}$.",
+    "So $a_2$ is the coefficient of $t^3$ on the left-hand side.",
+    "Since $(t-1)^{18}=(1-t)^{18}=\\binom{18}{0}-\\binom{18}{1}t+\\binom{18}{2}t^2-\\binom{18}{3}t^3+\\dots$, the left side is $1-(1-t)^{18}$, whose $t^3$ coefficient is $+\\binom{18}{3}$.",
+    "$a_2=\\binom{18}{3}=\\frac{18\\cdot17\\cdot16}{3\\cdot2\\cdot1}=816$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand every power $(-x)^j=(1-t)^j$ in $t=1+x$ and add the $t^2$ coefficients with the hockey-stick identity.",
+     "solution": [
+      "Put $t=1+x$, so $-x=1-t$ and $f=\\sum_{j=0}^{17}(1-t)^j$.",
+      "$a_2$ is the coefficient of $t^2$; in $(1-t)^j$ it is $(-1)^2\\binom{j}{2}=\\binom{j}{2}$.",
+      "So $a_2=\\sum_{j=0}^{17}\\binom{j}{2}$.",
+      "By the hockey-stick identity $\\sum_{j=2}^{17}\\binom{j}{2}=\\binom{18}{3}$.",
+      "$a_2=\\binom{18}{3}=816$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $N$ terms of the series $1-x+x^2-\\dots$ re-centred at $t=1+x$: $\\sum_{j=0}^{N-1}(1-t)^j=\\frac{1-(1-t)^N}{t}$, so $a_k=(-1)^k\\binom{N}{k+1}$.",
+    "Hockey-stick: $\\sum_{j=k}^{m}\\binom{j}{k}=\\binom{m+1}{k+1}$. Here $k=2$, $m=17$ gives $\\binom{18}{3}=816$.",
+    "A G.P. with ratio $-x$ always collapses to $\\frac{1-(-x)^N}{1+x}$; multiplying by the denominator is the standard way to make the shifted-power coefficients visible."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Summation of binomial series with a parameter (closed form of $\\sum \\binom{n}{r}a^{r-1}$)"
+   ],
+   "level": 2,
+   "question": "Let $a=4^{1/401}-1$ and let $b_n=\\binom{n}{1}+\\binom{n}{2}a+\\binom{n}{3}a^2+\\dots+\\binom{n}{n}a^{n-1}$. Find the value of $(b_{2006}-b_{2005})$.",
+   "answer": "$2^{10}=1024$",
+   "key_idea": "Multiply $b_n$ by $a$ to complete the binomial expansion: $ab_n=(1+a)^n-1$.",
+   "solution": [
+    "$b_n=\\binom{n}{1}+\\binom{n}{2}a+\\binom{n}{3}a^2+\\dots+\\binom{n}{n}a^{n-1}$.",
+    "Multiply by $a$: $ab_n=\\binom{n}{1}a+\\binom{n}{2}a^2+\\dots+\\binom{n}{n}a^{n}$.",
+    "Adding $\\binom{n}{0}$ to both sides completes the expansion: $ab_n+\\binom{n}{0}=(1+a)^n$, so $ab_n=(1+a)^n-1$.",
+    "$b_{2006}=\\frac{(1+a)^{2006}}{a}-\\frac{1}{a}$ and $b_{2005}=\\frac{(1+a)^{2005}}{a}-\\frac{1}{a}$.",
+    "$b_{2006}-b_{2005}=\\frac{(1+a)^{2006}-(1+a)^{2005}}{a}=\\frac{(1+a)^{2005}\\{1+a-1\\}}{a}=(1+a)^{2005}$.",
+    "Since $1+a=4^{1/401}$: $(1+a)^{2005}=4^{2005/401}=4^{5}=2^{10}=1024$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use Pascal's rule $\\binom{n+1}{k}=\\binom{n}{k}+\\binom{n}{k-1}$ to get a recurrence $b_{n+1}-b_n=(1+a)^n$ directly.",
+     "solution": [
+      "Write $b_{n+1}=\\sum_{k=1}^{n+1}\\binom{n+1}{k}a^{k-1}$ and split $\\binom{n+1}{k}=\\binom{n}{k}+\\binom{n}{k-1}$.",
+      "The first part gives $\\sum_{k=1}^{n}\\binom{n}{k}a^{k-1}=b_n$ (the $k=n+1$ term has $\\binom{n}{n+1}=0$).",
+      "The second part is $\\sum_{k=1}^{n+1}\\binom{n}{k-1}a^{k-1}=\\sum_{j=0}^{n}\\binom{n}{j}a^j=(1+a)^n$.",
+      "Hence $b_{n+1}-b_n=(1+a)^n$ for every $n$ - no division by $a$ is needed.",
+      "With $n=2005$: $b_{2006}-b_{2005}=(1+a)^{2005}=4^{2005/401}=4^5=1024$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=1}^{n}\\binom{n}{k}a^{k-1}=\\frac{(1+a)^n-1}{a}$ for $a\\ne0$ - the 'divide by $a$' trick turns a shifted-power binomial sum into a closed form.",
+    "Consecutive differences telescope neatly: $b_{n+1}-b_n=(1+a)^n$ (check: $a=1$, $n=1$: $b_2-b_1=(2+1)-1=2=2^1$).",
+    "Choose parameters like $4^{1/401}$ so that $(1+a)^{2005}$ becomes a perfect power: always reduce the exponent $2005/401=5$ first."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Alternating binomial sums and closed form via $(a-1)^n$"
+   ],
+   "level": 3,
+   "question": "Let $a=3^{1/223}+1$ and let $f(n)=\\binom{n}{0}a^{n-1}-\\binom{n}{1}a^{n-2}+\\binom{n}{2}a^{n-3}-\\dots+(-1)^{n-1}\\binom{n}{n-1}a^{0}$. If the value of $f(2007)+f(2008)=9k$ where $k\\in\\mathbb{N}$, then find $k$.",
+   "answer": "$2187$",
+   "key_idea": "Multiply $f(n)$ by $a$ to complete $(a-1)^n$: $af(n)+(-1)^n=(a-1)^n$.",
+   "solution": [
+    "$a=3^{1/223}+1$, so $a-1=3^{1/223}$.",
+    "$f(n)=\\binom{n}{0}a^{n-1}-\\binom{n}{1}a^{n-2}+\\dots+(-1)^{n-1}\\binom{n}{n-1}a^0$.",
+    "Multiply by $a$: $af(n)=\\binom{n}{0}a^n-\\binom{n}{1}a^{n-1}+\\dots+(-1)^{n-1}\\binom{n}{n-1}a$.",
+    "Add the missing last term $(-1)^n\\binom{n}{n}a^0$ to complete the expansion: $af(n)+(-1)^n=(a-1)^n$.",
+    "For $n=2007$ (odd): $af(2007)-1=(a-1)^{2007}$. For $n=2008$ (even): $af(2008)+1=(a-1)^{2008}$.",
+    "Add: $a\\{f(2007)+f(2008)\\}=(a-1)^{2007}\\{1+(a-1)\\}=a(a-1)^{2007}$.",
+    "So $f(2007)+f(2008)=(a-1)^{2007}=3^{2007/223}=3^{9}$ since $2007=223\\times9$.",
+    "$3^9=9k\\Rightarrow k=3^7=2187$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $a^n-b^n$ to write $f(n)=\\sum_{k=0}^{n-1}(a-1)^k(-1)^{n-1-k}$; this gives $f(n+1)+f(n)=(a-1)^n$ at once.",
+     "solution": [
+      "The given sum is $\\frac{(a-1)^n-(-1)^n}{a}$, with $u=a-1$ and $v=-1$ we have $u-v=a$.",
+      "By the factorisation $u^n-v^n=(u-v)\\sum_{k=0}^{n-1}u^kv^{n-1-k}$, $f(n)=\\sum_{k=0}^{n-1}(a-1)^k(-1)^{n-1-k}$.",
+      "Then $f(n+1)=\\sum_{k=0}^{n}(a-1)^k(-1)^{n-k}=(a-1)^n-\\sum_{k=0}^{n-1}(a-1)^k(-1)^{n-1-k}=(a-1)^n-f(n)$.",
+      "So $f(n+1)+f(n)=(a-1)^n$ for every $n$.",
+      "With $n=2007$: $f(2008)+f(2007)=(a-1)^{2007}=3^{9}=9\\cdot2187$, so $k=2187$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=0}^{n-1}(-1)^k\\binom{n}{k}a^{n-1-k}=\\frac{(a-1)^n-(-1)^n}{a}$; the same pattern with plus signs gives $\\frac{(a+1)^n-1}{a}$.",
+    "Identity: with this $f$, $f(n+1)+f(n)=(a-1)^n$ (check $a=2$: $f(1)=1$, $f(2)=\\binom20\\cdot2-\\binom21=0$, so $f(2)+f(1)=1=(2-1)^1$).",
+    "Design pattern: exponents like $2007/223=9$ are chosen so the final power of $3$ is an integer - always reduce the exponent before computing."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integral and fractional part of $(a+\\sqrt{b})^n$ (binomial theorem)"
+   ],
+   "level": 2,
+   "question": "Let $P=(2+\\sqrt{3})^5$ and $f=P-[P]$, where $[P]$ denotes the greatest integer function. Find the value of $\\left(\\frac{f^2}{1-f}\\right)$.",
+   "answer": "$722$",
+   "key_idea": "The conjugate $F=(2-\\sqrt3)^5$ lies in $(0,1)$ and $I+f+F$ is an integer, so $f+F=1$; also $(I+f)F=1$.",
+   "solution": [
+    "Let $P=I+f=(2+\\sqrt3)^5$ with $I=[P]$, and $F=(2-\\sqrt3)^5$.",
+    "$I+f+F=2\\left[\\binom50 2^5+\\binom52 2^3\\cdot3+\\binom54 2\\cdot3^2\\right]$ - the odd powers of $\\sqrt3$ cancel.",
+    "$=2[32+10\\cdot24+5\\cdot18]=2[32+240+90]=724$.",
+    "Since $0<f<1$ and $0<F<1$, $0<f+F<2$; the sum is an integer, so $f+F=1$ and $I=723$.",
+    "Thus $F=1-f$. Also $(I+f)F=(2+\\sqrt3)^5(2-\\sqrt3)^5=1$, i.e. $([P]+f)F=1$.",
+    "$[P]=\\frac{1}{F}-f=\\frac{1}{1-f}-f=\\frac{1-f+f^2}{1-f}=1+\\frac{f^2}{1-f}$.",
+    "$723=1+\\frac{f^2}{1-f}\\Rightarrow\\frac{f^2}{1-f}=722$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $P+Q=724$ and $PQ=1$, express $f=1-Q$ and $\\frac{f^2}{1-f}=\\frac{(1-Q)^2}{Q}=P+Q-2$ at once.",
+     "solution": [
+      "Let $Q=(2-\\sqrt3)^5$. Then $PQ=1$ and $P+Q=u_5$ where $u_n=(2+\\sqrt3)^n+(2-\\sqrt3)^n$ satisfies $u_{n+1}=4u_n-u_{n-1}$ (roots of $z^2-4z+1=0$).",
+      "$u_0=2,\\ u_1=4,\\ u_2=14,\\ u_3=52,\\ u_4=194,\\ u_5=724$, so $P+Q=724$.",
+      "As $0<Q<1$ and $P=724-Q$, we get $[P]=723$ and $f=P-723=1-Q$, so $1-f=Q$.",
+      "$\\frac{f^2}{1-f}=\\frac{(1-Q)^2}{Q}=\\frac{1}{Q}-2+Q=P-2+Q$ (using $\\frac1Q=P$).",
+      "$=724-2=722$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $a^2-b=1$ and $0<a-\\sqrt b<1$, then for $P=(a+\\sqrt b)^n$ and $Q=(a-\\sqrt b)^n=\\frac1P$: $P+Q\\in\\mathbb{Z}$, so $f=1-Q$ when $0<Q<1$ (true here since $a-\\sqrt b>0$).",
+    "Trace recurrence: $u_n=P+Q$ obeys $u_{n+1}=2a\\,u_n-(a^2-b)u_{n-1}$ - gives $P+Q$ without expanding the binomial.",
+    "Then $f^2/(1-f)=P+Q-2$ and $P\\cdot(1-f)=1$ are immediate (here $722$)."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Binomial coefficient identities and summation of series"
+   ],
+   "level": 2,
+   "question": "Prove that, where $C_r=\\binom{n}{r}$:\n(a) $\\frac{C_1}{C_0}+\\frac{2C_2}{C_1}+\\frac{3C_3}{C_2}+\\dots+\\frac{nC_n}{C_{n-1}}=\\frac{n(n+1)}{2}$\n(b) $C_0+\\frac{C_1}{2}+\\frac{C_2}{3}+\\dots+\\frac{C_n}{n+1}=\\frac{2^{n+1}-1}{n+1}$\n(c) $2C_0+\\frac{2^2C_1}{2}+\\frac{2^3C_2}{3}+\\dots+\\frac{2^{n+1}C_n}{n+1}=\\frac{3^{n+1}-1}{n+1}$\n(d) $C_0-\\frac{C_1}{2}+\\frac{C_2}{3}-\\dots+(-1)^n\\frac{C_n}{n+1}=\\frac{1}{n+1}$",
+   "answer": "All four identities proved",
+   "key_idea": "Use $\\frac{1}{r+1}\\binom{n}{r}=\\frac{1}{n+1}\\binom{n+1}{r+1}$ and $\\frac{\\binom nr}{\\binom n{r-1}}=\\frac{n-r+1}{r}$.",
+   "solution": [
+    "(a) The general term is $\\frac{r\\binom{n}{r}}{\\binom{n}{r-1}}$; since $\\binom nr=\\frac{n-r+1}{r}\\binom n{r-1}$, it equals $n-r+1$.",
+    "(a) So the sum is $\\sum_{r=1}^{n}(n-r+1)=n^2-\\frac{n(n+1)}{2}+n=\\frac{2n^2-n^2-n+2n}{2}=\\frac{n^2+n}{2}=\\frac{n(n+1)}{2}$.",
+    "(b) The sum is $\\sum_{r=0}^{n}\\frac{\\binom nr}{r+1}$, and $\\frac{1}{r+1}\\binom nr=\\frac{1}{n+1}\\binom{n+1}{r+1}$.",
+    "(b) So it equals $\\frac{1}{n+1}\\left[\\binom{n+1}{1}+\\binom{n+1}{2}+\\dots+\\binom{n+1}{n+1}\\right]=\\frac{1}{n+1}\\left[2^{n+1}-\\binom{n+1}{0}\\right]=\\frac{2^{n+1}-1}{n+1}$.",
+    "(c) The general term is $\\frac{2^{r+1}\\binom nr}{r+1}=\\frac{2^{r+1}}{n+1}\\binom{n+1}{r+1}$.",
+    "(c) Summing, $\\frac{1}{n+1}\\left[2\\binom{n+1}{1}+2^2\\binom{n+1}{2}+\\dots+2^{n+1}\\binom{n+1}{n+1}\\right]=\\frac{1}{n+1}\\left[(1+2)^{n+1}-1\\right]=\\frac{3^{n+1}-1}{n+1}$.",
+    "(d) The general term is $\\frac{(-1)^r\\binom nr}{r+1}=\\frac{(-1)^r}{n+1}\\binom{n+1}{r+1}$.",
+    "(d) The sum is $\\frac{1}{n+1}\\left[\\binom{n+1}{1}-\\binom{n+1}{2}+\\binom{n+1}{3}-\\dots+(-1)^n\\binom{n+1}{n+1}\\right]$.",
+    "(d) Since $\\binom{n+1}{0}-\\binom{n+1}{1}+\\binom{n+1}{2}-\\dots=(1-1)^{n+1}=0$, the bracket equals $\\binom{n+1}{0}=1$, so the sum is $\\frac{1}{n+1}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Part (d): the PDF ends with '(1/(n+1)){1}' without saying why the bracket equals 1. The justification (the alternating sum of all binomial coefficients of order n+1 is 0, so the bracket equals C(n+1,0)=1) is added. Parts (a)-(c) are as printed; (a)'s intermediate factorial form is replaced by the equivalent ratio C(n,r)/C(n,r-1)=(n-r+1)/r.",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate $(1+x)^n$ (and $(1-x)^n$) over suitable intervals: $\\int x^r\\,dx=\\frac{x^{r+1}}{r+1}$ produces the $\\frac1{r+1}$ factors.",
+     "solution": [
+      "(b) $\\int_0^1(1+x)^n\\,dx=\\sum_{r=0}^{n}\\binom nr\\int_0^1x^r\\,dx=\\sum_{r=0}^{n}\\frac{\\binom nr}{r+1}$.",
+      "(b) The left side is $\\left[\\frac{(1+x)^{n+1}}{n+1}\\right]_0^1=\\frac{2^{n+1}-1}{n+1}$.",
+      "(c) $\\int_0^2(1+x)^n\\,dx=\\sum_{r=0}^{n}\\binom nr\\frac{2^{r+1}}{r+1}$ and the left side is $\\frac{3^{n+1}-1}{n+1}$.",
+      "(d) $\\int_0^1(1-x)^n\\,dx=\\sum_{r=0}^{n}(-1)^r\\binom nr\\frac{1}{r+1}$ and the left side is $\\left[-\\frac{(1-x)^{n+1}}{n+1}\\right]_0^1=\\frac{1}{n+1}$.",
+      "(a) is not an integral sum; use $\\frac{C_r}{C_{r-1}}=\\frac{n-r+1}{r}$ so each term equals $n-r+1$ and the sum is $n+(n-1)+\\dots+1=\\frac{n(n+1)}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{1}{r+1}\\binom nr=\\frac{1}{n+1}\\binom{n+1}{r+1}$ converts any $\\sum\\frac{\\binom nr}{r+1}x^{r+1}$ into $\\frac{(1+x)^{n+1}-1}{n+1}$.",
+    "General form: $\\sum_{r=0}^{n}\\binom nr\\frac{x^{r+1}}{r+1}=\\frac{(1+x)^{n+1}-1}{n+1}$; $x=1,2,-1$ give parts (b), (c), (d) (check $n=2$, $x=1$: $1+1+\\frac13=\\frac73=\\frac{2^3-1}{3}$).",
+    "$\\frac{\\binom nr}{\\binom n{r-1}}=\\frac{n-r+1}{r}$ - ratio of consecutive binomial coefficients, the key to every sum of the type $\\sum r\\frac{C_r}{C_{r-1}}$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Properties of binomial coefficients: $\\sum C_r$ and $\\sum C_r^2$ (Vandermonde)"
+   ],
+   "level": 3,
+   "question": "Let $\\sum_{r=0}^{100}\\sum_{s=0}^{100}\\left(C_r^2+C_s^2+C_rC_s\\right)=m\\left(\\binom{2n}{n}\\right)+2^{p}$ where $m,n$ and $p$ are even natural numbers and $C_r$ represents the coefficient of $x^r$ in the expansion of $(1+x)^{100}$. Find the value of $(m+n+p)$.",
+   "answer": "$502$",
+   "key_idea": "Split the double sum: $\\sum C_r^2=\\binom{200}{100}$ and $\\sum C_r=2^{100}$, then match with $m\\binom{2n}{n}+2^p$.",
+   "solution": [
+    "Here $C_r=\\binom{100}{r}$. For each fixed $r$, $\\sum_{s=0}^{100}\\left(C_r^2+C_s^2+C_rC_s\\right)=101\\,C_r^2+\\sum_{s}C_s^2+C_r\\sum_{s}C_s$.",
+    "Let $p'=\\sum_{s=0}^{100}C_s^2$ and $q=\\sum_{s=0}^{100}C_s$. Multiply $(1+x)^{100}$ by $(x+1)^{100}=\\sum C_rx^{100-r}$ and compare the coefficient of $x^{100}$: $p'=\\binom{200}{100}$.",
+    "Put $x=1$ in $(1+x)^{100}$: $q=2^{100}$.",
+    "So the double sum is $\\sum_{r=0}^{100}\\left[101\\,C_r^2+\\binom{200}{100}+2^{100}C_r\\right]$.",
+    "$=101\\sum C_r^2+101\\binom{200}{100}+2^{100}\\sum C_r=101\\binom{200}{100}+101\\binom{200}{100}+2^{100}\\cdot2^{100}$.",
+    "$=202\\binom{200}{100}+2^{200}$.",
+    "Comparing with $m\\binom{2n}{n}+2^p$: $m=202$, $n=100$, $p=200$ (all even).",
+    "$m+n+p=202+100+200=502$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Prove $\\sum C_r^2=\\binom{200}{100}$ by counting committees instead of comparing coefficients, then use symmetry of the three terms.",
+     "solution": [
+      "From 100 men and 100 women choose a committee of 100. Counting by the number $r$ of men gives $\\sum_r\\binom{100}{r}\\binom{100}{100-r}=\\sum_r C_r^2$ (using $\\binom{100}{100-r}=C_r$), and counting directly gives $\\binom{200}{100}$.",
+      "Hence $\\sum_rC_r^2=\\binom{200}{100}$; subsets of a 100-set give $\\sum_rC_r=2^{100}$.",
+      "The double sum is symmetric: $\\sum_{r,s}C_r^2=\\sum_{r,s}C_s^2=101\\sum_rC_r^2$ and $\\sum_{r,s}C_rC_s=\\left(\\sum_rC_r\\right)^2$.",
+      "Total $=2\\cdot101\\binom{200}{100}+\\left(2^{100}\\right)^2=202\\binom{200}{100}+2^{200}$.",
+      "So $m=202$, $n=100$, $p=200$ and $m+n+p=502$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vandermonde: $\\sum_{r=0}^{n}\\binom nr^2=\\binom{2n}{n}$ (check $n=3$: $1+9+9+1=20=\\binom63$).",
+    "$\\sum_{r}\\sum_{s}f(r)g(s)=\\left(\\sum f\\right)\\left(\\sum g\\right)$, so $\\sum_{r,s}C_rC_s=(2^n)^2$ and $\\sum_{r,s}C_r^2=(n+1)\\binom{2n}{n}$ - the double sum factorises.",
+    "Instance: $n=100$ gives $202\\binom{200}{100}+2^{200}$; matching forms with even parameters is only a bookkeeping step (it assumes this representation is the intended one)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Properties of binomial coefficients (sum of products taken two at a time)"
+   ],
+   "level": 1,
+   "question": "If $(1+x)^n=C_0+C_1x+C_2x^2+\\dots+C_nx^n$, then show that the sum of the products of the $C_i$'s taken two at a time, represented by $\\sum\\sum_{0\\le i<j\\le n}C_iC_j$, is equal to $2^{2n-1}-\\frac{2n!}{2(n!)^2}$.",
+   "answer": "Proved",
+   "key_idea": "Square the sum of the coefficients: $\\left(\\sum C_i\\right)^2=\\sum C_i^2+2\\sum_{i<j}C_iC_j$.",
+   "solution": [
+    "Let $S=\\sum\\sum_{0\\le i<j\\le n}C_iC_j$. Using $(a_0+a_1+\\dots+a_n)^2=\\sum a_i^2+2\\sum_{i<j}a_ia_j$:",
+    "$S=\\frac{1}{2}\\left[(C_0+C_1+\\dots+C_n)^2-\\left(C_0^2+C_1^2+\\dots+C_n^2\\right)\\right]$.",
+    "$C_0+C_1+\\dots+C_n=2^n$ (put $x=1$), and $C_0^2+C_1^2+\\dots+C_n^2=\\binom{2n}{n}=\\frac{(2n)!}{(n!)^2}$ (Vandermonde).",
+    "$2S=2^{2n}-\\binom{2n}{n}$.",
+    "$S=2^{2n-1}-\\frac{\\binom{2n}{n}}{2}=2^{2n-1}-\\frac{(2n)!}{2(n!)^2}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's answer line for 7 is blank and its working stops at 2S = 2^{2n} - C(2n,n) without stating the value of sum C_i^2 or expanding binomial(2n,n) to match the required form. Those two steps are added. (The problem prints 2n!/(2(n!)^2), which must be read as (2n)!/(2 (n!)^2); the statement is only true with (2n)!.)",
+   "alternate_solutions": [
+    {
+     "idea": "Pair products via the Laurent polynomial $(1+x)^n(1+x^{-1})^n=\\sum_{i,j}C_iC_jx^{i-j}$: the constant term collects the diagonal, and $x\\to x^{-1}$ symmetry splits the rest equally.",
+     "solution": [
+      "$(1+x)^n\\left(1+\\frac1x\\right)^n=\\frac{(1+x)^{2n}}{x^n}=\\sum_{i,j}C_iC_jx^{i-j}$.",
+      "The $x^0$ term (all $i=j$) is $\\sum C_i^2$; from the left side it is the coefficient of $x^n$ in $(1+x)^{2n}$, i.e. $\\binom{2n}{n}$.",
+      "The terms with $i<j$ (negative powers) and $i>j$ (positive powers) have equal total $S$ by the symmetry $x\\to\\frac1x$.",
+      "Put $x=1$: $2^{2n}=\\binom{2n}{n}+2S$.",
+      "So $S=2^{2n-1}-\\frac{1}{2}\\binom{2n}{n}=2^{2n-1}-\\frac{(2n)!}{2(n!)^2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{i<j}a_ia_j=\\frac12\\left[\\left(\\sum a_i\\right)^2-\\sum a_i^2\\right]$ for any numbers; for $a_i=\\binom ni$ it is $2^{2n-1}-\\frac12\\binom{2n}{n}$ (check $n=2$: $1\\cdot2+1\\cdot1+2\\cdot1=5=8-3$).",
+    "Constant-term trick: $\\left[(1+x)(1+x^{-1})\\right]^n$ has constant term $\\sum C_i^2$ - a quick proof of Vandermonde's $\\binom{2n}{n}$.",
+    "Related: the sum over $i\\neq j$ is $2^{2n}-\\binom{2n}{n}$; the pair-sum includes each unordered pair once."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Properties of binomial coefficients: $\\left(\\sum C_r\\right)^2$",
+    "Powers and divisors (least value of $a+b$ with $a^b=2^{200}$)"
+   ],
+   "level": 2,
+   "question": "Let $S_1=\\sum\\sum_{0\\le i<j\\le100}C_iC_j$, $S_2=\\sum\\sum_{0\\le j<i\\le100}C_iC_j$ and $S_3=\\sum\\sum_{0\\le i=j\\le100}C_iC_j$ where $C_r$ represents the coefficient of $x^r$ in the binomial expansion of $(1+x)^{100}$. If $S_1+S_2+S_3=a^b$ where $a,b\\in\\mathbb{N}$, then find the least value of $(a+b)$.",
+   "answer": "$66$",
+   "key_idea": "$S_1,S_2,S_3$ together cover every ordered pair $(i,j)$, so the total is $\\left(\\sum C_r\\right)^2=2^{200}$.",
+   "solution": [
+    "The three index sets $i<j$, $j<i$, $i=j$ together give all ordered pairs, so $S_1+S_2+S_3=\\sum_{i=0}^{100}\\sum_{j=0}^{100}C_iC_j$.",
+    "This equals $\\left(\\binom{100}{0}+\\binom{100}{1}+\\dots+\\binom{100}{100}\\right)^2=\\left(2^{100}\\right)^2=2^{200}$.",
+    "So $a^b=2^{200}$, which forces $a=2^k$ and $b=\\frac{200}{k}$ with $k$ a divisor of $200$.",
+    "$2^{200}=4^{100}=16^{50}=32^{40}=\\dots$",
+    "$a+b=2^k+\\frac{200}{k}$: $k=1:202$, $k=2:104$, $k=4:16+50=66$, $k=5:32+40=72$, $k=8:256+25=281$, larger $k$ gives larger values.",
+    "The least value of $a+b$ is $16+50=66$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF lists 2^200 = 4^100 = 16^50 = 32^40 and concludes 'least value 16+50 = 66' without showing that the other divisors give larger sums. A short check of the divisors k of 200 is added. The answer 66 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Count ordered pairs of subsets of a 100-element set: $\\sum_{i,j}\\binom{100}{i}\\binom{100}{j}=2^{100}\\cdot2^{100}$; then minimise $2^k+\\frac{200}{k}$ by size.",
+     "solution": [
+      "$\\sum_i\\binom{100}{i}\\binom{100}{j}$ summed over all $i,j$ counts ordered pairs $(A,B)$ of subsets of a 100-element set with $|A|=i$, $|B|=j$.",
+      "There are $2^{100}$ choices for each of $A$ and $B$, so the total is $2^{200}$ - the same as $S_1+S_2+S_3$.",
+      "Write $a=2^k$ (since $a^b$ is a power of $2$), so $kb=200$ and $a+b=2^k+\\frac{200}{k}$.",
+      "The term $2^k$ doubles with each step of $k$ while $\\frac{200}{k}$ falls slowly; comparing $k=3$ (not a divisor), $k=4$ ($66$) and $k=5$ ($72$) shows the minimum at $k=4$.",
+      "$a=16$, $b=50$, so $a+b=66$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left(\\sum_iC_i\\right)\\left(\\sum_jC_j\\right)=\\sum_{i,j}C_iC_j=S_{i<j}+S_{i>j}+S_{i=j}$, so 'all ordered pairs' collapses to $(2^n)^2$.",
+    "If $a^b=N=2^{E}$ then $a=2^k$ with $k\\mid E$; minimise $2^k+\\frac{E}{k}$ over divisors. For $E=200$ the minimum $66$ occurs at $k=4$.",
+    "Pitfall: $b$ is a natural number, so $a=2^{k}$ with non-divisor $k$ (such as $k=3$) is not allowed."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Multinomial product of polynomials: number of terms, symmetry and sums of coefficients"
+   ],
+   "level": 3,
+   "question": "The expressions $1+x,\\ 1+x+x^2,\\ 1+x+x^2+x^3,\\dots,1+x+x^2+\\dots+x^n$ are multiplied together and the terms of the product are arranged in increasing powers of $x$ in the form $a_0+a_1x+a_2x^2+\\dots$. Then:\n(a) how many terms are there in the product?\n(b) show that the coefficients of the terms in the product, equidistant from the beginning and end, are equal.\n(c) show that the sum of the odd coefficients $=$ the sum of the even coefficients $=\\frac{(n+1)!}{2}$.",
+   "answer": "(a) $\\frac{n^2+n+2}{2}$; (b), (c) proved",
+   "key_idea": "Degrees add up to $\\frac{n(n+1)}{2}$; replacing $x\\to\\frac1x$ returns the same polynomial; $x=1$ and $x=-1$ give the sums.",
+   "solution": [
+    "Let $P(x)=(1+x)(1+x+x^2)\\cdots(1+x+\\dots+x^n)=a_0+a_1x+a_2x^2+\\dots+a_Nx^N$.",
+    "(a) The highest power of $x$ is $1+2+3+\\dots+n=\\frac{n(n+1)}{2}=N$, so the powers $x^0,x^1,\\dots,x^N$ give $1+\\frac{n(n+1)}{2}=\\frac{n^2+n+2}{2}$ terms.",
+    "(b) Replace $x$ by $\\frac1x$ in every factor: $1+\\frac1x+\\dots+\\frac1{x^k}=\\frac{x^k+x^{k-1}+\\dots+1}{x^k}$.",
+    "(b) So $P\\left(\\frac1x\\right)=\\frac{P(x)}{x^{1+2+\\dots+n}}=\\frac{P(x)}{x^N}$, i.e. $a_0+\\frac{a_1}{x}+\\dots+\\frac{a_N}{x^N}=\\frac{a_0+a_1x+\\dots+a_Nx^N}{x^N}$.",
+    "(b) Multiplying by $x^N$: $a_0x^N+a_1x^{N-1}+\\dots+a_N=a_0+a_1x+\\dots+a_Nx^N$. Comparing coefficients, $a_r=a_{N-r}$ for all $r$.",
+    "(c) Put $x=1$: $2\\cdot3\\cdot4\\cdots(n+1)=(n+1)!=a_0+a_1+a_2+\\dots+a_N$.",
+    "(c) Put $x=-1$: the first factor $(1+x)$ becomes $0$, so $0=a_0-a_1+a_2-\\dots$, i.e. the sum of even-index coefficients equals the sum of odd-index ones.",
+    "(c) Hence each equals $\\frac{(n+1)!}{2}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In part (b) the PDF's displayed lines are garbled (the exponent n(n+1)/2 - 1 is printed as (n^2+n-2)/2 and the factor x^{n(n+1)/2} is not explained). The substitution x -> 1/x is restated cleanly as P(1/x) = P(x)/x^N. In part (c) the PDF's step 'a0+a2+...+an = (n+1)!/2' follows from the two equations; both equations are shown explicitly here. Result unchanged. Note: the PDF's answer line gives only part (a).",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $P(x)=(1+x)Q(x)$: coefficient $a_k=q_k+q_{k-1}$, so every $q_k$ feeds one even and one odd position - the even and odd sums are both $Q(1)$.",
+     "solution": [
+      "Write $P(x)=(1+x)Q(x)$ with $Q(x)=(1+x+x^2)\\cdots(1+x+\\dots+x^n)=\\sum q_kx^k$.",
+      "Then $a_k=q_k+q_{k-1}$: each $q_k$ appears in $a_k$ and in $a_{k+1}$, which have opposite parities.",
+      "So $\\sum_{k\\text{ even}}a_k=\\sum_kq_k=\\sum_{k\\text{ odd}}a_k=Q(1)$.",
+      "$Q(1)=3\\cdot4\\cdots(n+1)=\\frac{(n+1)!}{2}$.",
+      "Hence both sums equal $\\frac{(n+1)!}{2}$ - and the same pairing, $a_k=q_k+q_{k-1}$ with $q$ itself symmetric, gives $a_k=a_{N-k}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A product of self-reciprocal (palindromic) polynomials is palindromic; $1+x+\\dots+x^k$ is palindromic, so $a_r=a_{N-r}$ with $N=\\frac{n(n+1)}{2}$ (check $n=2$: $(1+x)(1+x+x^2)=1+2x+2x^2+x^3$).",
+    "Whenever a factor $(1+x)$ appears, $P(-1)=0$, so the even-indexed and odd-indexed coefficient sums are equal and each is $\\frac{P(1)}{2}$.",
+    "Number of terms of a product of polynomials with degrees $d_1,\\dots,d_m$ (all coefficients positive): $1+\\sum d_i$ (no gaps)."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Fractional part of $(a+\\sqrt{b})^n$ (binomial theorem)",
+    "Divisibility and remainders (Fermat-type residues mod 31)"
+   ],
+   "level": 4,
+   "question": "Let $x=\\left(3\\sqrt6+7\\right)^{89}$. If $\\{x\\}$ denotes the fractional part of $x$, then find the remainder when $x\\{x\\}+\\left(x\\{x\\}\\right)^2+\\left(x\\{x\\}\\right)^3$ is divided by $31$.",
+   "answer": "$0$",
+   "key_idea": "Here $F=(7-3\\sqrt6)^{89}$ is negative, so $I+f+F$ is an even integer and $f=-F$; then $x\\{x\\}=5^{89}$.",
+   "solution": [
+    "Let $x=I+f=(7+3\\sqrt6)^{89}$ and $F=(7-3\\sqrt6)^{89}$. Since $3\\sqrt6\\approx7.35$, $7-3\\sqrt6\\approx-0.35$, so $-1<F<0$.",
+    "$I+f+F=2\\left[\\binom{89}{0}7^{89}+\\binom{89}{2}7^{87}(3\\sqrt6)^2+\\dots+\\binom{89}{88}7(3\\sqrt6)^{88}\\right]$ is an even integer.",
+    "$0<f<1$ and $-1<F<0$ give $-1<f+F<1$; as $I$ is an integer, $f+F$ is an integer, so $f+F=0$.",
+    "Hence $\\{x\\}=f=-F=-(7-3\\sqrt6)^{89}=(3\\sqrt6-7)^{89}$.",
+    "$x\\{x\\}=(3\\sqrt6+7)^{89}(3\\sqrt6-7)^{89}=\\left[(3\\sqrt6)^2-7^2\\right]^{89}=(54-49)^{89}=5^{89}$.",
+    "Let $y=5^{89}$. The required number is $y+y^2+y^3=y(1+y+y^2)$.",
+    "$5^3=125=4\\cdot31+1\\equiv1\\pmod{31}$, so $y=5^{87}\\cdot5^2\\equiv25$, $y^2\\equiv625\\equiv5$, $y^3\\equiv125\\equiv1\\pmod{31}$.",
+    "$y+y^2+y^3\\equiv25+5+1=31\\equiv0\\pmod{31}$.",
+    "So the remainder is $0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last step writes 5^89{5+25+125}, treating x{x}+(x{x})^2+(x{x})^3 as 5^89(5+5^2+5^3). That is wrong: (x{x})^2 = 5^178, not 5^89*25. The correct expression is y+y^2+y^3 with y = 5^89, reduced modulo 31 using 5^3 = 125 = 1 (mod 31). The remainder 0 is unchanged (verified: (5^89 + 5^178 + 5^267) mod 31 = 0).",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $y+y^2+y^3=\\frac{y(y^3-1)}{y-1}$: $31\\mid5^{267}-1$ because $124=4\\cdot31$ divides $5^{3\\cdot89}-1$, and $31\\nmid y-1$.",
+     "solution": [
+      "With $y=5^{89}$: $y(1+y+y^2)=\\frac{y\\,(y^3-1)}{y-1}$ and $y^3-1=5^{267}-1=(5^3)^{89}-1$.",
+      "$5^3-1=124=4\\cdot31$ divides $(5^3)^{89}-1$ (since $a-1\\mid a^m-1$), so $31\\mid y^3-1$.",
+      "$y\\equiv25\\pmod{31}$ (as $5^{87}\\equiv1$), so $y-1\\equiv24\\not\\equiv0$; $31$ is prime, so $31\\mid1+y+y^2$ from $(y-1)(1+y+y^2)=y^3-1$.",
+      "Hence $31\\mid y(1+y+y^2)$ and the remainder is $0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $(a+\\sqrt b)^n$ with $0<a-\\sqrt b<1$: $f=1-F$ (so $f+F=1$). If $a-\\sqrt b<0$ and $n$ odd, $-1<F<0$ and instead $f=-F$ - always check the sign of the conjugate.",
+    "Then $x\\{x\\}=\\left|(a+\\sqrt b)(a-\\sqrt b)\\right|^n=|a^2-b|^n$ (here $54-49=5$, giving $5^{89}$).",
+    "Mod a prime $p$: $y+y^2+y^3\\equiv0$ whenever $y$ has order $3$, since $1+y+y^2=\\frac{y^3-1}{y-1}$; here $y\\equiv25$ has order $3$ mod $31$ because $5^3\\equiv1$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "General term of a binomial expansion",
+    "Logarithm identities and exponential equations"
+   ],
+   "level": 2,
+   "question": "Find the sum of possible real values of $x$ for which the sixth term of $\\left(3^{\\log_3\\sqrt{9^{|x-2|}}}+7^{\\left(\\frac15\\right)\\log_7\\left(3^{|x-2|-9}\\right)}\\right)^7$ equals $567$.",
+   "answer": "$4$",
+   "key_idea": "$a^{\\log_ab}=b$ simplifies both terms to powers of $3$; then $T_6=\\binom75A^2B^5$ gives an equation in $3^{|x-2|}$.",
+   "solution": [
+    "First term: $3^{\\log_3\\sqrt{9^{|x-2|}}}=\\sqrt{9^{|x-2|}}=3^{|x-2|}$.",
+    "Second term: $7^{\\frac15\\log_7\\left(3^{|x-2|-9}\\right)}=\\left(3^{|x-2|-9}\\right)^{1/5}=3^{\\frac{|x-2|-9}{5}}$.",
+    "Let $A=3^{|x-2|}$ and $B=3^{\\frac{|x-2|-9}{5}}$. The sixth term of $(A+B)^7$ is $T_6=\\binom75A^{2}B^{5}=21\\,A^2B^5$.",
+    "$21\\,\\left(3^{|x-2|}\\right)^2\\cdot3^{|x-2|-9}=567\\Rightarrow3^{2|x-2|}\\cdot3^{|x-2|-9}=\\frac{567}{21}=27$.",
+    "Let $3^{|x-2|}=t$: $t^2\\cdot\\frac{t}{3^9}=27\\Rightarrow t^3=3^{12}\\Rightarrow t=3^4$.",
+    "So $|x-2|=4\\Rightarrow x-2=\\pm4\\Rightarrow x=6$ or $x=-2$.",
+    "Sum of possible values $=6+(-2)=4$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF solves t^3 = 3^12 as t = 3^9 and gets |x-2| = 9, x = 11, -7. Correct: t^3 = 3^12 gives t = 3^4, so |x-2| = 4 and x = 6, -2. The sum is 4 in both cases (11 + (-7) = 6 + (-2) = 4), so the key 4 is right, but the printed values of x are wrong (verified: for |x-2|=4, T6 = 21*3^3 = 567; for |x-2|=9, T6 = 21*3^18, not 567).",
+   "useful_results": [
+    "$a^{\\log_ab}=b$ and $a^{\\frac1k\\log_ab}=b^{1/k}$ - use them to strip logarithms from exponents before expanding.",
+    "General term of $(A+B)^n$: $T_{r+1}=\\binom nrA^{n-r}B^r$; the sixth term is $r=5$.",
+    "Equation $3^{|x-2|}=3^c$ has two roots $x=2\\pm c$ whose sum is $4$ for any $c>0$ - the sum of roots of $|x-a|=c$ is always $2a$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Binomial sums with $\\sum r\\binom nr$ and $\\sum 3^r\\binom nr$",
+    "Location of roots of a quadratic"
+   ],
+   "level": 3,
+   "question": "Let $1+\\sum_{r=1}^{10}\\left(3^r\\binom{10}{r}+r\\binom{10}{r}\\right)=2^{10}\\left(\\alpha\\cdot4^5+\\beta\\right)$ where $\\alpha,\\beta\\in\\mathbb{N}$ and $f(x)=x^2-2x-k^2+1$. If $\\alpha,\\beta$ lies between the roots of $f(x)=0$, then find the smallest positive integral value of $k$.",
+   "answer": "$5$",
+   "key_idea": "Evaluate the sum as $4^{10}+10\\cdot2^9=2^{10}(4^5+5)$ to get $(\\alpha,\\beta)=(1,5)$, then require $f(1)<0$ and $f(5)<0$.",
+   "solution": [
+    "$1+\\sum_{r=1}^{10}3^r\\binom{10}{r}=\\sum_{r=0}^{10}3^r\\binom{10}{r}=(1+3)^{10}=4^{10}$.",
+    "$\\sum_{r=1}^{10}r\\binom{10}{r}=\\sum_{r=1}^{10}r\\cdot\\frac{10}{r}\\binom{9}{r-1}=10\\left[\\binom90+\\binom91+\\dots+\\binom99\\right]=10\\cdot2^9$.",
+    "The total is $4^{10}+10\\cdot2^9=4^{10}+5\\cdot2^{10}=2^{10}\\left[4^5+5\\right]$ (as $4^{10}=2^{10}\\cdot4^5$).",
+    "Comparing with $2^{10}(\\alpha\\cdot4^5+\\beta)$: $\\alpha=1$, $\\beta=5$.",
+    "$f(x)=x^2-2x-k^2+1$ is an upward parabola; $1$ and $5$ lie between its roots iff $f(1)<0$ and $f(5)<0$.",
+    "$f(1)=1-2-k^2+1=-k^2<0\\Rightarrow k\\ne0$.",
+    "$f(5)=25-10-k^2+1=16-k^2<0\\Rightarrow k\\in(-\\infty,-4)\\cup(4,\\infty)$.",
+    "The smallest positive integral value of $k$ is $5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square, $f(x)=(x-1)^2-k^2$, so the roots are $1\\pm|k|$ and 'both between the roots' means $5<1+|k|$.",
+     "solution": [
+      "$f(x)=x^2-2x+1-k^2=(x-1)^2-k^2$, so $f(x)=0$ gives $x=1\\pm|k|$.",
+      "The interval between the roots is $(1-|k|,1+|k|)$, centred at $1$.",
+      "$\\alpha=1$ is always inside when $k\\ne0$; $\\beta=5$ is inside iff $5<1+|k|$, i.e. $|k|>4$.",
+      "Smallest positive integer with $|k|>4$ is $5$.",
+      "For the sum: differentiate $(1+x)^{10}$ at $x=1$ to get $\\sum r\\binom{10}{r}=10\\cdot2^9$, confirming $(\\alpha,\\beta)=(1,5)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r=0}^{n}r\\binom nr=n2^{n-1}$ and $\\sum_{r=0}^{n}\\binom nrx^r=(1+x)^n$ (differentiate at $x=1$ for the first) - check $n=3$: $3+6+3=12=3\\cdot4$.",
+    "For an upward parabola, points $p<q$ both lie strictly between the roots iff $f(p)<0$ and $f(q)<0$.",
+    "For $f(x)=(x-h)^2-k^2$ the roots are $h\\pm|k|$: a point $c$ lies between them iff $|c-h|<|k|$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Roots of unity filter for sums of binomial coefficients"
+   ],
+   "level": 3,
+   "question": "Let $n\\in\\mathbb{N}$; $S_n=\\sum_{r=0}^{3n}\\binom{3n}{r}$ and $T_n=\\sum_{r=0}^{n}\\binom{3n}{3r}$. Find $|S_n-3T_n|$.",
+   "answer": "$2$",
+   "key_idea": "Use the cube roots of unity: $\\binom{m}{0}+\\binom m3+\\binom m6+\\dots=\\frac13\\left[2^m+(1+\\omega)^m+(1+\\omega^2)^m\\right]$.",
+   "solution": [
+    "$S_n=\\sum_{r=0}^{3n}\\binom{3n}{r}$; put $x=1$ in $(1+x)^{3n}$: $S_n=2^{3n}$.",
+    "$T_n=\\binom{3n}{0}+\\binom{3n}{3}+\\binom{3n}{6}+\\dots+\\binom{3n}{3n}$ takes every third coefficient.",
+    "Write $(1+x)^{3n}=\\sum_{k}\\binom{3n}{k}x^k$ and put $x=1,\\omega,\\omega^2$ ($\\omega$ a cube root of unity) and add.",
+    "Since $1+\\omega^k+\\omega^{2k}$ is $3$ if $3\\mid k$ and $0$ otherwise: $2^{3n}+(1+\\omega)^{3n}+(1+\\omega^2)^{3n}=3T_n$.",
+    "$1+\\omega=-\\omega^2$ and $1+\\omega^2=-\\omega$, so $(1+\\omega)^{3n}+(1+\\omega^2)^{3n}=(-\\omega^2)^{3n}+(-\\omega)^{3n}=(-1)^{3n}+(-1)^{3n}=2(-1)^{n}$.",
+    "Hence $3T_n=2^{3n}+2(-1)^{n}$ and $S_n-3T_n=-2(-1)^n$.",
+    "$|S_n-3T_n|=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's line '2^{3n} + (1+w)^{3n} + (1+w^2)^{3n} = 3[T_n]' is correct but its justification is a garbled list (the sum 2*C0 + C1(-1) + C2(-1) + 2*C3 + ... is shown incompletely, with '+ (A)' added mid-line). The root-of-unity filter is restated step by step. The simplification (-1)^{3n} has the same parity as (-1)^n. The final value 2 is unchanged (checked n = 1..6).",
+   "alternate_solutions": [
+    {
+     "idea": "Track $e_r=3A_r-2^m$ (with $A_r=\\sum_{k\\equiv r\\,(3)}\\binom mk$) through Pascal's rule: each step multiplies the vector by $-\\sigma^2$, so three steps give $-1$.",
+     "solution": [
+      "Let $A_r(m)=\\sum_{k\\equiv r\\pmod3}\\binom mk$ and $e_r(m)=3A_r(m)-2^m$; then $e_0+e_1+e_2=0$.",
+      "Pascal's rule gives $A_r(m+1)=A_r(m)+A_{r-1}(m)$ (indices mod $3$), so $e_r(m+1)=e_r(m)+e_{r-1}(m)$.",
+      "On vectors with zero sum $e_r+e_{r-1}=-e_{r-2}$, so each step sends $e_r\\mapsto-e_{r+1}$ (a cyclic shift with a sign).",
+      "Three steps give $(-1)^3$ times the original vector: $e_r(m+3)=-e_r(m)$.",
+      "Start from $m=0$: $e_0=3\\cdot1-1=2$. So $e_0(3n)=2(-1)^n$, i.e. $3T_n-S_n=2(-1)^n$ and $|S_n-3T_n|=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Root-of-unity filter: $\\sum_{3\\mid k}\\binom mk=\\frac{2^m+2\\cos\\frac{m\\pi}{3}}{3}$, since $1+\\omega=e^{i\\pi/3}$ (check $m=3$: $\\frac{8+2\\cos\\pi}{3}=2=\\binom30+\\binom33$).",
+    "For $m=3n$: $\\sum\\binom{3n}{3r}=\\frac{8^n+2(-1)^n}{3}$, which is why $|S_n-3T_n|=2$ - the other residue classes are $\\frac{8^n-(-1)^n}{3}$.",
+    "Recognise: sums of every $k$-th binomial coefficient call for the $k$-th roots of unity."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Integral and fractional part of $(a+\\sqrt{b})^n$ (binomial theorem)"
+   ],
+   "level": 3,
+   "paragraph": "Consider the binomial expansion $R=(1+2x)^n=I+f$ where $I$ is the integral part of $R$ and $f$ is the fractional part of $R$, $n\\in\\mathbb{N}$. Also the sum of the coefficients of $R$ is $6561$.",
+   "question": "The value of $(n+R-Rf)$ for $x=\\frac{1}{\\sqrt2}$ equals:",
+   "options": [
+    "$7$",
+    "$8$",
+    "$9$",
+    "$10$"
+   ],
+   "answer": "(C) $9$",
+   "key_idea": "$R(1-f)=R\\cdot F$ where $F=(1-\\sqrt2)^8$ is the conjugate, and $(1+\\sqrt2)(1-\\sqrt2)=-1$.",
+   "solution": [
+    "The sum of coefficients of $(1+2x)^n$ is its value at $x=1$: $3^n=6561=3^8$, so $n=8$.",
+    "For $x=\\frac1{\\sqrt2}$: $R=I+f=(1+\\sqrt2)^8$. Let $F=(1-\\sqrt2)^8$; since $|1-\\sqrt2|<1$, $0<F<1$.",
+    "$I+f+F=2\\left[\\binom80+\\binom82\\cdot2+\\binom84\\cdot2^2+\\binom86\\cdot2^3+\\binom88\\cdot2^4\\right]=2\\times577=1154$, an integer.",
+    "As $0<f<1$ and $0<F<1$, $0<f+F<2$, so $f+F=1$ and $I=1153$.",
+    "Thus $F=1-f$, and $n+R-Rf=n+R(1-f)=8+(1+\\sqrt2)^8(1-\\sqrt2)^8$.",
+    "$=8+\\{(1+\\sqrt2)(1-\\sqrt2)\\}^8=8+(1-2)^8=8+1=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compute $R$ exactly by repeated squaring: $R=577+408\\sqrt2$, then $1-f=577-408\\sqrt2$ and $R(1-f)=577^2-2\\cdot408^2=1$.",
+     "solution": [
+      "$(1+\\sqrt2)^2=3+2\\sqrt2$, $(3+2\\sqrt2)^2=17+12\\sqrt2$, $(17+12\\sqrt2)^2=577+408\\sqrt2=R$.",
+      "$408\\sqrt2\\approx576.99913$, so $R\\approx1153.99913$; hence $I=1153$ and $f=R-1153=408\\sqrt2-576$.",
+      "$1-f=577-408\\sqrt2$.",
+      "$R(1-f)=(577+408\\sqrt2)(577-408\\sqrt2)=577^2-2\\cdot408^2=332929-332928=1$.",
+      "$n+R-Rf=8+1=9$ (with $n=8$ from $3^n=6561$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $R=(a+\\sqrt b)^n$ and $F=(a-\\sqrt b)^n\\in(0,1)$ with $R+F\\in\\mathbb{Z}$ then $1-f=F$, so $R(1-f)=(a^2-b)^n$; here $(1-2)^8=1$.",
+    "Sum of coefficients of $(a+bx)^n$ is $(a+b)^n$ ($x=1$): $3^n=6561\\Rightarrow n=8$.",
+    "The expression $n+R-Rf$ is just $n+R(1-f)=n+(a^2-b)^n$ for such conjugate pairs."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Greatest term of a binomial expansion"
+   ],
+   "level": 2,
+   "paragraph": "Consider the binomial expansion $R=(1+2x)^n=I+f$ where $I$ is the integral part of $R$ and $f$ is the fractional part of $R$, $n\\in\\mathbb{N}$. Also the sum of the coefficients of $R$ is $6561$.",
+   "question": "If $i^{\\text{th}}$ term is the greatest term for $x=\\frac12$, then $i$ equals:",
+   "options": [
+    "$4$",
+    "$5$",
+    "$6$",
+    "$7$"
+   ],
+   "answer": "(B) $5$",
+   "key_idea": "At $x=\\frac12$ the terms of $(1+2x)^8$ equal $\\binom8r$, so the greatest term is the middle one, $T_5$.",
+   "solution": [
+    "From the paragraph $n=8$, so $R=(1+2x)^8$; compare $T_{r+1}=\\binom8r(2x)^r$ with $T_r$.",
+    "$T_{r+1}\\ge T_r\\iff\\frac{9-r}{r}|2x|\\ge1\\iff r\\le\\frac{n+1}{1+\\left|\\frac ab\\right|}$ with $a=1$, $b=2x$.",
+    "For $x=\\frac12$: $\\left|\\frac ab\\right|=\\frac{1}{2x}=1$, so the bound is $\\frac{9}{1+1}=\\frac92=4.5$.",
+    "So $T_{r+1}\\ge T_r$ for $r\\le4$ and $T_{r+1}<T_r$ for $r\\ge5$: the greatest term is $T_{r+1}$ with $r=4$.",
+    "Hence the greatest term is $T_5$, the $5^{\\text{th}}$ term, so $i=5$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF uses the formula (n+1)/(1+|a/b|) - 1 <= i <= (n+1)/(1+|a/b|), where its 'i' is the index r of T_{r+1}, obtains 3.5 <= i <= 4.5, i = 4, and only then says 'so term will be 5th'. The index r and the term number i of the question are confused (the paragraph asks for the term number). The step is restated with r = 4 giving the term number i = r+1 = 5. Answer (B) unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "For $x=\\frac12$ we have $2x=1$, so the terms are the binomial coefficients $1,8,28,56,70,56,28,8,1$ and the largest is the middle one.",
+     "solution": [
+      "$n=8$ and $2x=1$, so $T_{r+1}=\\binom8r\\cdot1^r=\\binom8r$.",
+      "The terms are $1,8,28,56,70,56,28,8,1$ for $r=0,\\dots,8$.",
+      "The largest, $70=\\binom84$, is $T_5$.",
+      "Hence $i=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $(a+b)^n$ the ratio $\\frac{T_{r+1}}{T_r}=\\frac{n-r+1}{r}\\cdot\\left|\\frac ba\\right|$ is $\\ge1$ iff $r\\le\\frac{n+1}{1+|a/b|}$; if this bound is an integer $m$, then $T_m$ and $T_{m+1}$ are equal and greatest.",
+    "If $|b/a|=1$ the greatest term is the middle binomial coefficient: $T_{n/2+1}$ for even $n$.",
+    "Remember $T_{r+1}$ is the $(r+1)^{\\text{th}}$ term - the formula gives $r$, not the term number."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Greatest binomial coefficient and greatest term of a binomial expansion"
+   ],
+   "level": 3,
+   "paragraph": "Consider the binomial expansion $R=(1+2x)^n=I+f$ where $I$ is the integral part of $R$ and $f$ is the fractional part of $R$, $n\\in\\mathbb{N}$. Also the sum of the coefficients of $R$ is $6561$.",
+   "question": "If $k^{\\text{th}}$ term is having greatest coefficient, then sum of all possible value(s) of $k$ is:",
+   "options": [
+    "$6$",
+    "$7$",
+    "$11$",
+    "$13$"
+   ],
+   "answer": "(D) $13$",
+   "key_idea": "The coefficients of $(1+2x)^8$ are $\\binom8r2^r$, not $\\binom8r$, so 'middle term' is wrong; they equal the terms at $x=1$ and tie.",
+   "solution": [
+    "With $n=8$ the coefficient of the $(r+1)^{\\text{th}}$ term of $(1+2x)^8$ is $c_r=\\binom8r2^r$.",
+    "These are the terms of the expansion at $x=1$ (with $a=1$, $b=2$), so the greatest coefficient is found with the greatest-term rule.",
+    "$\\frac{n+1}{1+\\left|\\frac ab\\right|}=\\frac{9}{1+\\frac12}=6$, an integer.",
+    "When the bound is an integer $m=6$, the terms $T_6$ and $T_7$ are equal and greatest.",
+    "Check: $c_5=\\binom85\\cdot2^5=56\\cdot32=1792$ and $c_6=\\binom86\\cdot2^6=28\\cdot64=1792$ (the other coefficients are smaller, e.g. $c_4=1120$, $c_7=1024$).",
+    "So $k=6$ or $k=7$, and the sum of all possible values of $k$ is $6+7=13$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says 'n = 8, so greatest coefficient will be middle term' - that is only true for the binomial coefficients C(8,r); the coefficients of (1+2x)^8 are C(8,r)*2^r, whose maximum is not in the middle (the middle term would give k = 5 only, answer 5, which is not an option). The correct reasoning is given above: two equal greatest coefficients at k = 6 and 7, sum 13, which does agree with the key (D).",
+   "alternate_solutions": [
+    {
+     "idea": "List all nine coefficients $\\binom8r2^r$ and read off the maximum, which occurs twice.",
+     "solution": [
+      "Coefficients of $(1+2x)^8$: $r=0\\!:\\,1$, $r=1\\!:\\,8\\cdot2=16$, $r=2\\!:\\,28\\cdot4=112$, $r=3\\!:\\,56\\cdot8=448$, $r=4\\!:\\,70\\cdot16=1120$.",
+      "$r=5\\!:\\,56\\cdot32=1792$, $r=6\\!:\\,28\\cdot64=1792$, $r=7\\!:\\,8\\cdot128=1024$, $r=8\\!:\\,256$.",
+      "The maximum $1792$ occurs at $r=5$ and $r=6$, i.e. at the $6^{\\text{th}}$ and $7^{\\text{th}}$ terms.",
+      "Sum of all possible $k$: $6+7=13$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Coefficient of $x^r$ in $(a+bx)^n$ is $\\binom nra^{n-r}b^r$; it is NOT $\\binom nr$ unless $a=b=1$. 'Greatest coefficient' = greatest term at $x=1$.",
+    "$\\frac{c_{r+1}}{c_r}=\\frac{(n-r)b}{(r+1)a}$: here $\\frac{2(8-r)}{r+1}=1$ at $r=5$, hence the tie $c_5=c_6$.",
+    "A tie occurs exactly when $\\frac{(n+1)b}{a+b}$ is an integer (here $9\\cdot\\frac23=6$)."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Sums of alternate coefficients of a binomial expansion"
+   ],
+   "level": 1,
+   "paragraph": "Let us consider the expansion $(3+4x)^n=a_0+a_1x+a_2x^2+a_3x^3+\\dots+a_nx^n$, then",
+   "question": "$a_1+a_3+a_5+a_7+\\dots$ is equal to:",
+   "options": [
+    "$\\frac{7^n+(-1)^n}{2}$",
+    "$\\frac{7^n-(-1)^n}{2}$",
+    "$\\frac{7^{n-1}-(-1)^{n-1}}{2}$",
+    "$\\frac{7^{n-1}+(-1)^{n-1}}{2}$"
+   ],
+   "answer": "(B) $\\frac{7^n-(-1)^n}{2}$",
+   "key_idea": "Put $x=1$ and $x=-1$, then add or subtract to separate even- and odd-indexed coefficients.",
+   "solution": [
+    "$(3+4x)^n=a_0+a_1x+a_2x^2+\\dots+a_nx^n$.",
+    "Put $x=1$: $7^n=a_0+a_1+a_2+a_3+\\dots+a_n$.",
+    "Put $x=-1$: $(-1)^n=a_0-a_1+a_2-a_3+\\dots$.",
+    "Adding: $\\frac{7^n+(-1)^n}{2}=a_0+a_2+a_4+\\dots$.",
+    "Subtracting the second from the first and dividing by $2$: $\\frac{7^n-(-1)^n}{2}=a_1+a_3+a_5+\\dots$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Multiply by $(3+4x)$ repeatedly: even and odd sums $E_n,O_n$ obey $E_{n+1}=3E_n+4O_n$, $O_{n+1}=3O_n+4E_n$, giving eigenvalues $7$ and $-1$.",
+     "solution": [
+      "In $(3+4x)P(x)$ the new coefficient is $a_k'=3a_k+4a_{k-1}$, so for $E=\\sum_{k\\ \\text{even}}a_k$, $O=\\sum_{k\\ \\text{odd}}a_k$: $E'=3E+4O$, $O'=3O+4E$.",
+      "Then $E'+O'=7(E+O)$ and $E'-O'=-(E-O)$.",
+      "Start with $n=0$: $E_0=1$, $O_0=0$, so $E_n+O_n=7^n$ and $E_n-O_n=(-1)^n$.",
+      "$O_n=\\frac{7^n-(-1)^n}{2}$, matching option (B).",
+      "Check $n=1$: $a_1=4=\\frac{7+1}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $P(x)=\\sum a_kx^k$: even-indexed sum $=\\frac{P(1)+P(-1)}{2}$, odd-indexed sum $=\\frac{P(1)-P(-1)}{2}$.",
+    "For $(a+bx)^n$: odd-indexed sum $=\\frac{(a+b)^n-(a-b)^n}{2}$ (here $(3+4)^n$ and $(3-4)^n=(-1)^n$).",
+    "Check $n=2$: $(3+4x)^2=9+24x+16x^2$, odd sum $=24=\\frac{49-1}{2}$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Sums of alternate coefficients of a binomial expansion",
+    "Polar form of a complex number (De Moivre)"
+   ],
+   "level": 3,
+   "paragraph": "Let us consider the expansion $(3+4x)^n=a_0+a_1x+a_2x^2+a_3x^3+\\dots+a_nx^n$, then",
+   "question": "$a_0-a_2+a_4-a_6+\\dots$ is equal to:",
+   "options": [
+    "$5^n\\cos\\left(n\\tan^{-1}\\frac43\\right)$",
+    "$7^n\\cos\\left(n\\tan^{-1}\\frac34\\right)$",
+    "$7^n\\cos\\left(n\\tan^{-1}\\frac43\\right)$",
+    "$5^n\\cos\\left(n\\tan^{-1}\\frac34\\right)$"
+   ],
+   "answer": "(A) $5^n\\cos\\left(n\\tan^{-1}\\frac43\\right)$",
+   "key_idea": "Put $x=i$: the real part of $(3+4i)^n$ is $a_0-a_2+a_4-\\dots$, and $3+4i=5e^{i\\tan^{-1}(4/3)}$.",
+   "solution": [
+    "Put $x=i$ in $(3+4x)^n$: $(3+4i)^n=a_0+a_1i-a_2-a_3i+a_4+a_5i-a_6-\\dots$.",
+    "So $(3+4i)^n=(a_0-a_2+a_4-a_6+\\dots)+i(a_1-a_3+a_5-a_7+\\dots)$.",
+    "$3+4i=5\\left(\\frac35+\\frac45i\\right)=5e^{i\\tan^{-1}\\frac43}$, since $|3+4i|=5$ and $\\arg=\\tan^{-1}\\frac43$.",
+    "$(3+4i)^n=5^ne^{in\\tan^{-1}\\frac43}=5^n\\left\\{\\cos\\left(n\\tan^{-1}\\frac43\\right)+i\\sin\\left(n\\tan^{-1}\\frac43\\right)\\right\\}$.",
+    "Equating real parts: $a_0-a_2+a_4-a_6+\\dots=5^n\\cos\\left(n\\tan^{-1}\\frac43\\right)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test small $n$: $n=1$ gives $a_0=3$ and $n=2$ gives $a_0-a_2=-7$; only option (A) fits both.",
+     "solution": [
+      "For $n=1$: $(3+4x)=3+4x$, so $a_0-a_2+\\dots=3$.",
+      "Option (A) at $n=1$: $5\\cos\\left(\\tan^{-1}\\frac43\\right)=5\\cdot\\frac35=3$ ✓. Option (B): $7\\cdot\\frac45=5.6$, (C): $7\\cdot\\frac35=4.2$, (D): $5\\cdot\\frac45=4$ ✗.",
+      "For $n=2$: $(3+4x)^2=9+24x+16x^2$, so $a_0-a_2=9-16=-7$.",
+      "Option (A) at $n=2$: $25\\cos\\left(2\\tan^{-1}\\frac43\\right)=25\\cdot\\frac{1-\\frac{16}{9}}{1+\\frac{16}{9}}=25\\cdot\\left(-\\frac{7}{25}\\right)=-7$ ✓.",
+      "So (A) is the only option consistent with both values."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x=i$ separates coefficients by index mod $4$: $\\operatorname{Re}P(i)=a_0-a_2+a_4-\\dots$ and $\\operatorname{Im}P(i)=a_1-a_3+a_5-\\dots$.",
+    "$(p+qi)^n=r^n(\\cos n\\theta+i\\sin n\\theta)$ with $r=\\sqrt{p^2+q^2}$, $\\theta=\\tan^{-1}\\frac qp$; here $r=5$, $\\theta=\\tan^{-1}\\frac43$.",
+    "Check: $\\cos 2\\theta=\\frac{1-\\tan^2\\theta}{1+\\tan^2\\theta}=-\\frac7{25}$, giving $25\\cos2\\theta=-7=9-16$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Modulus of a complex number (sum of squares of alternate coefficients)"
+   ],
+   "level": 2,
+   "paragraph": "Let us consider the expansion $(3+4x)^n=a_0+a_1x+a_2x^2+a_3x^3+\\dots+a_nx^n$, then",
+   "question": "$\\left(a_0-a_2+a_4-a_6+\\dots\\right)^2+\\left(a_1-a_3+a_5-\\dots\\right)^2$ equals:",
+   "options": [
+    "$7^{2n}$",
+    "$5^n$",
+    "$5^{2n}$",
+    "$7^n$"
+   ],
+   "answer": "(C) $5^{2n}$",
+   "key_idea": "The two brackets are the real and imaginary parts of $(3+4i)^n$, so the expression is $\\left|(3+4i)^n\\right|^2$.",
+   "solution": [
+    "From Q18, $(3+4i)^n=A+iB$ with $A=a_0-a_2+a_4-\\dots$ and $B=a_1-a_3+a_5-\\dots$.",
+    "Also $(3+4i)^n=5^n\\{\\cos(n\\theta)+i\\sin(n\\theta)\\}$ with $\\theta=\\tan^{-1}\\frac43$, so $A=5^n\\cos n\\theta$ and $B=5^n\\sin n\\theta$.",
+    "$A^2+B^2=5^{2n}\\left(\\cos^2n\\theta+\\sin^2n\\theta\\right)$.",
+    "Since $\\sin^2+\\cos^2=1$, $A^2+B^2=5^{2n}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Norm is multiplicative: $A^2+B^2=|3+4i|^{2n}=(3^2+4^2)^n=25^n$ (Brahmagupta identity), no angle needed.",
+     "solution": [
+      "$A+iB=(3+4i)^n$ so $A^2+B^2=(A+iB)(A-iB)=(3+4i)^n(3-4i)^n$ (coefficients are real).",
+      "$(3+4i)(3-4i)=9+16=25$, so the product is $25^n$.",
+      "$25^n=5^{2n}$.",
+      "Check $n=1$: $A=3,B=4$, $A^2+B^2=25$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left[\\operatorname{Re}P(i)\\right]^2+\\left[\\operatorname{Im}P(i)\\right]^2=|P(i)|^2$ for a real-coefficient polynomial $P$.",
+    "For $P(x)=(p+qx)^n$: $|P(i)|^2=(p^2+q^2)^n$ - here $(9+16)^n=25^n$ (compare: the Brahmagupta-Fibonacci identity).",
+    "Check $n=2$: $A=-7$, $B=24$, $A^2+B^2=49+576=625=25^2$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Coefficients of $(1+x+x^2)^n$ (multinomial / evaluation at special values)"
+   ],
+   "level": 3,
+   "question": "If $(1+x+x^2)^n=a_0+a_1x+a_2x^2+\\dots+a_{2n}x^{2n}$, then:\nColumn I\n(A) $a_0+a_1+\\dots+a_{2n}$\n(B) $a_0-a_1+a_2-a_3+\\dots+a_{2n}$\n(C) $a_0-2a_1+3a_2-\\dots+(2n+1)a_{2n}$\n(D) $a_0-2a_1+4a_2-8a_3+\\dots+2^{2n}a_{2n}$\nColumn II\n(P) $n+1$\n(Q) $1$\n(R) $3n$\n(S) $3^n$",
+   "answer": "(A) – S, (B) – Q, (C) – P, (D) – S",
+   "key_idea": "Each column-I sum is $f(c)$ or $\\frac{d}{dx}\\left[xf(x)\\right]$ at a special $x$: $x=1,-1$, derivative at $-1$, and $x=-2$.",
+   "solution": [
+    "Let $f(x)=(1+x+x^2)^n=\\sum_{k=0}^{2n}a_kx^k$.",
+    "(A) Put $x=1$: $a_0+a_1+\\dots+a_{2n}=3^n$, so (A) $\\to$ (S).",
+    "(B) Put $x=-1$: $a_0-a_1+a_2-\\dots+a_{2n}=(1-1+1)^n=1$, so (B) $\\to$ (Q).",
+    "(C) Consider $g(x)=x f(x)=a_0x+a_1x^2+\\dots+a_{2n}x^{2n+1}$; then $g'(x)=a_0+2a_1x+3a_2x^2+\\dots+(2n+1)a_{2n}x^{2n}$.",
+    "(C) $g'(x)=(1+x+x^2)^n+nx(1+2x)(1+x+x^2)^{n-1}$.",
+    "(C) At $x=-1$: $1+x+x^2=1$ and $x(1+2x)=(-1)(-1)=1$, so $g'(-1)=1+n$; and $g'(-1)=a_0-2a_1+3a_2-\\dots+(2n+1)a_{2n}$. So (C) $\\to$ (P).",
+    "(D) $a_0-2a_1+4a_2-8a_3+\\dots+2^{2n}a_{2n}=\\sum a_k(-2)^k=f(-2)=(1-2+4)^n=3^n$, so (D) $\\to$ (S).",
+    "Hence (A) – S, (B) – Q, (C) – P, (D) – S."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Part (C): the PDF first writes '[C] -> Q' and then differentiates (x^n + x^{n+1} + x^{n+2})^n (the identity x*(1+x+x^2)^n = (x^n+x^{n+1}+x^{n+2})^n is false; the correct factorisation is x(1+x+x^2)^n only) and ends with n(n+1), which is not an option. The correct value is f(-1) + (-1)f'(-1) = 1 + n, i.e. (P), which matches the printed key (C - P). Part (D) has no working in the PDF (it only appears in the key); f(-2) = 3^n added. The key itself (A-S, B-Q, C-P, D-S) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Coefficients of $(1+x+x^2)^n$ are symmetric, $a_k=a_{2n-k}$, so pairing $k$ with $2n-k$ turns (C) into $(n+1)\\times$ (B).",
+     "solution": [
+      "$1+x+x^2$ is palindromic, so $f$ is palindromic: $a_k=a_{2n-k}$.",
+      "In $\\sum_{k=0}^{2n}(k+1)(-1)^ka_k$ pair the terms $k$ and $2n-k$: they have the same sign $(-1)^k=(-1)^{2n-k}$ and the same $a_k$.",
+      "Their weights add to $(k+1)+(2n-k+1)=2n+2$, so each pair contributes $(n+1)\\times$ (twice the average), giving $\\sum(k+1)(-1)^ka_k=(n+1)\\sum(-1)^ka_k$.",
+      "$\\sum(-1)^ka_k=f(-1)=1$ (part (B)), so (C) $=n+1$, i.e. (P).",
+      "Check $n=1$: $1-2\\cdot1+3\\cdot1=2=n+1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Weighted sums of coefficients come from $\\frac{d}{dx}\\left[x^mf(x)\\right]$: $\\sum(k+m)a_kx^{k+m-1}$; at $x=-1$ they give $\\sum(k+m)(-1)^{k+m-1}a_k$.",
+    "For a palindromic polynomial $a_k=a_{N-k}$: $\\sum k\\,a_kx^k$ at symmetric points reduces to $\\frac N2f(x)$, so $\\sum(k+1)(-1)^ka_k=\\frac{N+2}{2}f(-1)$ when $N$ is even.",
+    "$\\sum a_k(-2)^k=f(-2)$ - substitute $x=c$ to get $\\sum a_kc^k$ (here $(1-2+4)^n=3^n$)."
+   ]
+  }
+ ]
+}
