@@ -1,0 +1,867 @@
+{
+ "title": "JEE Main Question Bank 02 — Paper Analysis",
+ "subtitle": "Trigonometry 01 · detailed solutions",
+ "source": "papers/JEE_Main_Question_Bank_02_Trigonometry_01.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "JEE Main QB 02 Trigonometry 01",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 15,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Integer Type",
+   "from": 16,
+   "to": 18,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Power-reduction and product-to-sum transformations"
+   ],
+   "level": 1,
+   "question": "The value of $\\cos^2 10^\\circ-\\cos 10^\\circ\\cos 50^\\circ+\\cos^2 50^\\circ$ is:",
+   "options": [
+    "$\\frac{3}{4}$",
+    "$\\frac{3}{2}\\left(1+\\cos 20^\\circ\\right)$",
+    "$\\frac{3}{2}$",
+    "$\\frac{3}{4}+\\cos 20^\\circ$"
+   ],
+   "answer": "(A) 3/4",
+   "key_idea": "Lower every square with $\\cos^2 A=\\frac{1+\\cos 2A}{2}$ and every product with $2\\cos A\\cos B=\\cos(A+B)+\\cos(A-B)$.",
+   "solution": [
+    "Write the expression as $\\left(\\frac{1+\\cos 20^\\circ}{2}\\right)+\\left(\\frac{1+\\cos 100^\\circ}{2}\\right)-\\frac{1}{2}\\left(2\\cos 10^\\circ\\cos 50^\\circ\\right)$.",
+    "$=1+\\frac{1}{2}\\left(\\cos 20^\\circ+\\cos 100^\\circ\\right)-\\frac{1}{2}\\left[\\cos 60^\\circ+\\cos 40^\\circ\\right]$, using $2\\cos A\\cos B=\\cos(A+B)+\\cos(A-B)$.",
+    "Since $\\cos 60^\\circ=\\frac{1}{2}$: $=\\left(1-\\frac{1}{4}\\right)+\\frac{1}{2}\\left[\\cos 20^\\circ+\\cos 100^\\circ-\\cos 40^\\circ\\right]$.",
+    "$\\cos 20^\\circ+\\cos 100^\\circ=2\\cos 60^\\circ\\cos 40^\\circ$, so the expression $=\\frac{3}{4}+\\frac{1}{2}\\left[2\\cos 60^\\circ\\cos 40^\\circ-\\cos 40^\\circ\\right]$.",
+    "$2\\cos 60^\\circ\\cos 40^\\circ=\\cos 40^\\circ$, so the bracket vanishes and the value is $\\frac{3}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read it as the cosine rule in sine form for a triangle with angles $80^\\circ, 40^\\circ, 60^\\circ$.",
+     "solution": [
+      "$\\cos 10^\\circ=\\sin 80^\\circ$ and $\\cos 50^\\circ=\\sin 40^\\circ$, and $\\cos 60^\\circ=\\frac{1}{2}$.",
+      "So the expression is $\\sin^2 80^\\circ+\\sin^2 40^\\circ-2\\sin 80^\\circ\\sin 40^\\circ\\cos 60^\\circ$.",
+      "In a triangle with angles $A=80^\\circ, B=40^\\circ, C=60^\\circ$ the sine rule gives $a:b:c=\\sin A:\\sin B:\\sin C$.",
+      "The cosine rule $c^2=a^2+b^2-2ab\\cos C$ then reads $\\sin^2 C=\\sin^2 A+\\sin^2 B-2\\sin A\\sin B\\cos C$.",
+      "Hence the expression $=\\sin^2 60^\\circ=\\frac{3}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $A+B+C=180^\\circ$: $\\sin^2 A+\\sin^2 B-2\\sin A\\sin B\\cos C=\\sin^2 C$ (the cosine rule in sine form).",
+    "Consequence: if $x+y=60^\\circ$ then $\\cos^2 x-\\cos x\\cos y+\\cos^2 y=\\frac{3}{4}$ (here $10^\\circ+50^\\circ=60^\\circ$; check $x=0, y=60^\\circ$: $1-\\frac{1}{2}+\\frac{1}{4}=\\frac{3}{4}$).",
+    "Likewise, if $x+y=60^\\circ$ then $\\sin^2 x+\\sin x\\sin y+\\sin^2 y=\\frac{3}{4}$ (triangle with angles $x, y, 120^\\circ$).",
+    "Recognition cue: $a^2\\pm ab+b^2$ with trigonometric $a, b$ is the cosine rule with an angle of $60^\\circ$ or $120^\\circ$.",
+    "Useful step: $\\cos(60^\\circ-\\theta)+\\cos(60^\\circ+\\theta)=\\cos\\theta$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric inequalities using double-angle identities"
+   ],
+   "level": 2,
+   "question": "All possible values of $\\theta\\in[0,2\\pi]$ for which $\\sin 2\\theta+\\tan 2\\theta>0$ lie in:",
+   "options": [
+    "$\\left(0,\\frac{\\pi}{2}\\right)\\cup\\left(\\pi,\\frac{3\\pi}{2}\\right)$",
+    "$\\left(0,\\frac{\\pi}{4}\\right)\\cup\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)\\cup\\left(\\frac{3\\pi}{2},\\frac{11\\pi}{6}\\right)$",
+    "$\\left(0,\\frac{\\pi}{4}\\right)\\cup\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)\\cup\\left(\\pi,\\frac{5\\pi}{4}\\right)\\cup\\left(\\frac{3\\pi}{2},\\frac{7\\pi}{4}\\right)$",
+    "$\\left(0,\\frac{\\pi}{2}\\right)\\cup\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)\\cup\\left(\\pi,\\frac{7\\pi}{6}\\right)$"
+   ],
+   "answer": "(C)",
+   "key_idea": "$\\sin 2\\theta+\\tan 2\\theta=\\tan 2\\theta\\,(1+\\cos 2\\theta)=\\tan 2\\theta\\cdot 2\\cos^2\\theta$, and $2\\cos^2\\theta\\ge 0$.",
+   "solution": [
+    "We need $\\sin 2\\theta+\\tan 2\\theta>0$, i.e. $\\sin 2\\theta+\\frac{\\sin 2\\theta}{\\cos 2\\theta}>0$.",
+    "Taking $\\sin 2\\theta$ common: $\\sin 2\\theta\\left(\\frac{\\cos 2\\theta+1}{\\cos 2\\theta}\\right)>0$.",
+    "Since $1+\\cos 2\\theta=2\\cos^2\\theta$, this is $\\tan 2\\theta\\left(2\\cos^2\\theta\\right)>0$.",
+    "$2\\cos^2\\theta>0$ whenever it is non-zero ($\\cos^2\\theta\\neq 0$), so the condition is $\\tan 2\\theta>0$.",
+    "$\\theta\\in[0,2\\pi]$ gives $2\\theta\\in[0,4\\pi]$.",
+    "$\\tan 2\\theta>0$ for $2\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)\\cup\\left(\\pi,\\frac{3\\pi}{2}\\right)\\cup\\left(2\\pi,\\frac{5\\pi}{2}\\right)\\cup\\left(3\\pi,\\frac{7\\pi}{2}\\right)$.",
+    "Hence $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)\\cup\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)\\cup\\left(\\pi,\\frac{5\\pi}{4}\\right)\\cup\\left(\\frac{3\\pi}{2},\\frac{7\\pi}{4}\\right)$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Multiply by the positive quantity $\\cos^2 2\\theta$: the sign of the expression is the sign of $\\sin 4\\theta$.",
+     "solution": [
+      "Where it is defined, $\\sin 2\\theta+\\tan 2\\theta=\\frac{\\sin 2\\theta\\,(1+\\cos 2\\theta)}{\\cos 2\\theta}$; multiply top and bottom by $\\cos 2\\theta$.",
+      "$=\\frac{\\sin 2\\theta\\cos 2\\theta\\,(1+\\cos 2\\theta)}{\\cos^2 2\\theta}=\\frac{\\sin 4\\theta\\cdot 2\\cos^2\\theta}{2\\cos^2 2\\theta}$.",
+      "The factor $\\frac{\\cos^2\\theta}{\\cos^2 2\\theta}$ is positive except where $\\cos\\theta=0$ (value $0$ there, so excluded).",
+      "So we need $\\sin 4\\theta>0$: $4\\theta\\in(0,\\pi)\\cup(2\\pi,3\\pi)\\cup(4\\pi,5\\pi)\\cup(6\\pi,7\\pi)$ for $4\\theta\\in[0,8\\pi]$.",
+      "Dividing by $4$: $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)\\cup\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)\\cup\\left(\\pi,\\frac{5\\pi}{4}\\right)\\cup\\left(\\frac{3\\pi}{2},\\frac{7\\pi}{4}\\right)$; $\\theta=\\frac{\\pi}{2},\\frac{3\\pi}{2}$ are endpoints, not inside. Option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin x+\\tan x=\\tan x\\,(1+\\cos x)$ and $\\tan x-\\sin x=\\tan x\\,(1-\\cos x)$: both have the sign of $\\tan x$ (where non-zero).",
+    "Sign of $\\frac{f}{g}$ = sign of $f\\cdot g$ (for $g\\neq 0$): multiply by $g^2>0$ instead of splitting into cases.",
+    "$\\tan kx>0 \\iff \\sin 2kx>0$ (where defined), since $\\tan kx=\\frac{\\sin 2kx}{2\\cos^2 kx}$.",
+    "Option check: pick one point inside an interval that only one option contains, e.g. $\\theta=\\frac{9\\pi}{8}$ only in (C): $\\sin\\frac{9\\pi}{4}+\\tan\\frac{9\\pi}{4}=\\frac{1}{\\sqrt{2}}+1>0$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Triple-angle identities and sums of cubes"
+   ],
+   "level": 2,
+   "question": "The value of $\\cos^3\\left(\\frac{\\pi}{8}\\right)\\cos\\left(\\frac{3\\pi}{8}\\right)+\\sin^3\\left(\\frac{\\pi}{8}\\right)\\sin\\left(\\frac{3\\pi}{8}\\right)$ is:",
+   "options": [
+    "$\\frac{1}{4}$",
+    "$\\frac{1}{2}$",
+    "$\\frac{1}{2\\sqrt{2}}$",
+    "$\\frac{1}{\\sqrt{2}}$"
+   ],
+   "answer": "(C) $\\frac{1}{2\\sqrt{2}}$",
+   "key_idea": "With $\\theta=\\frac{\\pi}{8}$ the angles are $\\theta$ and $3\\theta$: expand $\\cos 3\\theta, \\sin 3\\theta$ and collect.",
+   "solution": [
+    "Let $\\theta=\\frac{\\pi}{8}$; the expression is $\\cos^3\\theta\\cos 3\\theta+\\sin^3\\theta\\sin 3\\theta$.",
+    "$=\\cos^3\\theta\\left(4\\cos^3\\theta-3\\cos\\theta\\right)+\\sin^3\\theta\\left(3\\sin\\theta-4\\sin^3\\theta\\right)$.",
+    "$=4\\left(\\cos^6\\theta-\\sin^6\\theta\\right)+3\\left[\\sin^4\\theta-\\cos^4\\theta\\right]$.",
+    "$=4\\left(\\cos^2\\theta-\\sin^2\\theta\\right)\\left(\\cos^4\\theta+\\cos^2\\theta\\sin^2\\theta+\\sin^4\\theta\\right)+3\\left(\\sin^2\\theta-\\cos^2\\theta\\right)\\cdot 1$.",
+    "$=4\\cos 2\\theta\\left(\\left(\\cos^2\\theta+\\sin^2\\theta\\right)^2-\\sin^2\\theta\\cos^2\\theta\\right)-3\\cos 2\\theta$.",
+    "$=4\\cos 2\\theta\\left(1-\\frac{1}{4}\\sin^2 2\\theta\\right)-3\\cos 2\\theta$, and at $\\theta=\\frac{\\pi}{8}$: $\\cos 2\\theta=\\sin 2\\theta=\\frac{1}{\\sqrt{2}}$, so $3\\cos 2\\theta=\\frac{3}{\\sqrt{2}}$.",
+    "$=\\frac{4}{\\sqrt{2}}\\times\\frac{7}{8}-\\frac{3}{\\sqrt{2}}$, since $1-\\frac{1}{4}\\cdot\\frac{1}{2}=\\frac{7}{8}$.",
+    "$=\\frac{7}{2\\sqrt{2}}-\\frac{6}{2\\sqrt{2}}=\\frac{1}{2\\sqrt{2}}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $4\\cos^3\\theta=\\cos 3\\theta+3\\cos\\theta$ and $4\\sin^3\\theta=3\\sin\\theta-\\sin 3\\theta$: the sum collapses to $\\cos^3 2\\theta$.",
+     "solution": [
+      "$4\\left(\\cos^3\\theta\\cos 3\\theta+\\sin^3\\theta\\sin 3\\theta\\right)=\\left(\\cos 3\\theta+3\\cos\\theta\\right)\\cos 3\\theta+\\left(3\\sin\\theta-\\sin 3\\theta\\right)\\sin 3\\theta$.",
+      "$=\\left(\\cos^2 3\\theta-\\sin^2 3\\theta\\right)+3\\left(\\cos\\theta\\cos 3\\theta+\\sin\\theta\\sin 3\\theta\\right)=\\cos 6\\theta+3\\cos 2\\theta$.",
+      "$\\cos 6\\theta+3\\cos 2\\theta=4\\cos^3 2\\theta$ (triple-angle formula for the angle $2\\theta$).",
+      "So $\\cos^3\\theta\\cos 3\\theta+\\sin^3\\theta\\sin 3\\theta=\\cos^3 2\\theta$ for every $\\theta$.",
+      "At $\\theta=\\frac{\\pi}{8}$: $\\cos^3\\frac{\\pi}{4}=\\left(\\frac{1}{\\sqrt{2}}\\right)^3=\\frac{1}{2\\sqrt{2}}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Identity: $\\cos^3\\theta\\cos 3\\theta+\\sin^3\\theta\\sin 3\\theta=\\cos^3 2\\theta$ (check $\\theta=0$: $1=1$).",
+    "Companion: $\\cos^3\\theta\\sin 3\\theta+\\sin^3\\theta\\cos 3\\theta=\\frac{3}{4}\\sin 4\\theta$ (check $\\theta=\\frac{\\pi}{8}$: both $=\\frac{3}{4}$).",
+    "Power reduction: $\\cos^3\\theta=\\frac{\\cos 3\\theta+3\\cos\\theta}{4}$, $\\sin^3\\theta=\\frac{3\\sin\\theta-\\sin 3\\theta}{4}$ - use it whenever cubes meet triple angles.",
+    "$\\cos^6\\theta-\\sin^6\\theta=\\cos 2\\theta\\left(1-\\frac{1}{4}\\sin^2 2\\theta\\right)$ and $\\cos^6\\theta+\\sin^6\\theta=1-\\frac{3}{4}\\sin^2 2\\theta$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Identities in powers of sine and cosine"
+   ],
+   "level": 1,
+   "question": "For any $\\theta\\in\\left(\\frac{\\pi}{4},\\frac{\\pi}{2}\\right)$ the expression $3(\\sin\\theta-\\cos\\theta)^4+6(\\sin\\theta+\\cos\\theta)^2+4\\sin^6\\theta$ equals:",
+   "options": [
+    "$13-4\\cos^2\\theta+6\\sin^2\\theta\\cos^2\\theta$",
+    "$13-4\\cos^4\\theta+2\\sin^2\\theta\\cos^2\\theta$",
+    "$13-4\\cos^2\\theta+6\\cos^4\\theta$",
+    "$13-4\\cos^6\\theta$"
+   ],
+   "answer": "(D) $13-4\\cos^6\\theta$",
+   "key_idea": "$(\\sin\\theta\\mp\\cos\\theta)^2=1\\mp 2\\sin\\theta\\cos\\theta$: the $\\sin\\theta\\cos\\theta$ terms cancel, then write all in $\\cos^2\\theta$.",
+   "solution": [
+    "$\\theta\\in\\left(\\frac{\\pi}{4},\\frac{\\pi}{2}\\right)$; use $(\\sin\\theta-\\cos\\theta)^2=1-2\\sin\\theta\\cos\\theta$ and $(\\sin\\theta+\\cos\\theta)^2=1+2\\sin\\theta\\cos\\theta$.",
+    "The expression is $3(1-2\\sin\\theta\\cos\\theta)^2+6(1+2\\sin\\theta\\cos\\theta)+4\\sin^6\\theta$.",
+    "$=3\\left(1+4\\sin^2\\theta\\cos^2\\theta-4\\sin\\theta\\cos\\theta\\right)+6+12\\sin\\theta\\cos\\theta+4\\sin^6\\theta$.",
+    "$=3+12\\sin^2\\theta\\cos^2\\theta+6+4\\sin^6\\theta$ (the terms $\\mp 12\\sin\\theta\\cos\\theta$ cancel).",
+    "$=9+12\\cos^2\\theta\\left(1-\\cos^2\\theta\\right)+4\\left(1-\\cos^2\\theta\\right)^3$.",
+    "$=9+12\\cos^2\\theta-12\\cos^4\\theta+4\\left(1-\\cos^6\\theta+3\\cos^4\\theta-3\\cos^2\\theta\\right)$.",
+    "$=13-4\\cos^6\\theta$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "An identity true for all $\\theta$ can be tested at one convenient angle; $\\theta=\\frac{\\pi}{3}$ separates the options.",
+     "solution": [
+      "Take $\\theta=\\frac{\\pi}{3}\\in\\left(\\frac{\\pi}{4},\\frac{\\pi}{2}\\right)$: $\\sin\\theta=\\frac{\\sqrt{3}}{2}$, $\\cos\\theta=\\frac{1}{2}$.",
+      "$(\\sin\\theta-\\cos\\theta)^2=1-\\frac{\\sqrt{3}}{2}$, so $3(\\sin\\theta-\\cos\\theta)^4=3\\left(1-\\frac{\\sqrt{3}}{2}\\right)^2=\\frac{21-12\\sqrt{3}}{4}$.",
+      "$6(\\sin\\theta+\\cos\\theta)^2=6\\left(1+\\frac{\\sqrt{3}}{2}\\right)=6+3\\sqrt{3}$, and $4\\sin^6\\theta=4\\cdot\\frac{27}{64}=\\frac{27}{16}$.",
+      "Sum: $\\frac{84-48\\sqrt{3}}{16}+\\frac{96+48\\sqrt{3}}{16}+\\frac{27}{16}=\\frac{207}{16}$.",
+      "Options at $\\cos^2\\theta=\\frac{1}{4}, \\sin^2\\theta=\\frac{3}{4}$: (A) $\\frac{210}{16}$, (B) $\\frac{210}{16}$, (C) $\\frac{198}{16}$, (D) $13-\\frac{4}{64}=\\frac{207}{16}$.",
+      "Only (D) matches."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(\\sin\\theta\\pm\\cos\\theta)^2=1\\pm\\sin 2\\theta$; so $(\\sin\\theta-\\cos\\theta)^4=(1-\\sin 2\\theta)^2$.",
+    "Classic: $3(\\sin\\theta-\\cos\\theta)^4+6(\\sin\\theta+\\cos\\theta)^2+4(\\sin^6\\theta+\\cos^6\\theta)=13$ for all $\\theta$ (here the $\\cos^6\\theta$ term is missing, hence $13-4\\cos^6\\theta$).",
+    "$\\sin^6\\theta+\\cos^6\\theta=1-3\\sin^2\\theta\\cos^2\\theta$ and $\\sin^4\\theta+\\cos^4\\theta=1-2\\sin^2\\theta\\cos^2\\theta$.",
+    "In single-correct identity questions, substitute a special angle (not $0$ or $\\frac{\\pi}{4}$ if options coincide there) to eliminate options."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Half-angle (power-reduction) formulas"
+   ],
+   "level": 1,
+   "question": "If $L=\\sin^2\\left(\\frac{\\pi}{16}\\right)-\\sin^2\\left(\\frac{\\pi}{8}\\right)$ and $M=\\cos^2\\left(\\frac{\\pi}{16}\\right)-\\sin^2\\left(\\frac{\\pi}{8}\\right)$, then:",
+   "options": [
+    "$L=-\\frac{1}{2\\sqrt{2}}+\\frac{1}{2}\\cos\\frac{\\pi}{8}$",
+    "$M=\\frac{1}{2\\sqrt{2}}+\\frac{1}{2}\\cos\\frac{\\pi}{8}$",
+    "$M=\\frac{1}{4\\sqrt{2}}+\\frac{1}{4}\\cos\\frac{\\pi}{8}$",
+    "$L=\\frac{1}{4\\sqrt{2}}-\\frac{1}{4}\\cos\\frac{\\pi}{8}$"
+   ],
+   "answer": "(B)",
+   "key_idea": "Replace each square by a first power: $\\sin^2 x=\\frac{1-\\cos 2x}{2}$, $\\cos^2 x=\\frac{1+\\cos 2x}{2}$.",
+   "solution": [
+    "$L=\\left(\\frac{1-\\cos\\frac{\\pi}{8}}{2}\\right)-\\left(\\frac{1-\\cos\\frac{\\pi}{4}}{2}\\right)$.",
+    "$L=\\frac{\\cos\\frac{\\pi}{4}-\\cos\\frac{\\pi}{8}}{2}=\\frac{1}{2\\sqrt{2}}-\\frac{1}{2}\\cos\\frac{\\pi}{8}$, which matches neither (A) nor (D).",
+    "$M=\\left(\\frac{1+\\cos\\frac{\\pi}{8}}{2}\\right)-\\left(\\frac{1-\\cos\\frac{\\pi}{4}}{2}\\right)$.",
+    "$M=\\frac{\\cos\\frac{\\pi}{8}+\\cos\\frac{\\pi}{4}}{2}=\\frac{1}{2\\sqrt{2}}+\\frac{1}{2}\\cos\\frac{\\pi}{8}$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\sin^2 A-\\sin^2 B=\\sin(A+B)\\sin(A-B)$ and $\\cos^2 A-\\sin^2 B=\\cos(A+B)\\cos(A-B)$, then product-to-sum.",
+     "solution": [
+      "With $A=\\frac{\\pi}{16}, B=\\frac{\\pi}{8}$: $M=\\cos^2 A-\\sin^2 B=\\cos(A+B)\\cos(A-B)=\\cos\\frac{3\\pi}{16}\\cos\\frac{\\pi}{16}$.",
+      "Product-to-sum: $M=\\frac{1}{2}\\left[\\cos\\frac{4\\pi}{16}+\\cos\\frac{2\\pi}{16}\\right]=\\frac{1}{2}\\cos\\frac{\\pi}{4}+\\frac{1}{2}\\cos\\frac{\\pi}{8}$.",
+      "$=\\frac{1}{2\\sqrt{2}}+\\frac{1}{2}\\cos\\frac{\\pi}{8}$: option (B).",
+      "Likewise $L=\\sin(A+B)\\sin(A-B)=-\\sin\\frac{3\\pi}{16}\\sin\\frac{\\pi}{16}=\\frac{1}{2}\\left[\\cos\\frac{\\pi}{4}-\\cos\\frac{\\pi}{8}\\right]$, ruling out (A) and (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^2 A-\\sin^2 B=\\sin(A+B)\\sin(A-B)=\\cos^2 B-\\cos^2 A$.",
+    "$\\cos^2 A-\\sin^2 B=\\cos(A+B)\\cos(A-B)$ (check $A=B$: $\\cos 2A=\\cos 2A\\cdot 1$).",
+    "$M-L=\\cos^2 A-\\sin^2 A=\\cos 2A$ - a quick consistency check on any claimed $L, M$ (here $\\cos\\frac{\\pi}{8}$).",
+    "Power reduction turns differences of squares of angles $x, 2x$ into linear combinations of $\\cos 2x, \\cos 4x$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Telescoping products using the triple-angle identity"
+   ],
+   "level": 2,
+   "question": "The value of $36\\left(4\\cos^2 9^\\circ-1\\right)\\left(4\\cos^2 27^\\circ-1\\right)\\left(4\\cos^2 81^\\circ-1\\right)\\left(4\\cos^2 243^\\circ-1\\right)$ is:",
+   "options": [
+    "$54$",
+    "$27$",
+    "$18$",
+    "$36$"
+   ],
+   "answer": "(D) 36",
+   "key_idea": "$4\\cos^2\\theta-1=3-4\\sin^2\\theta=\\frac{\\sin 3\\theta}{\\sin\\theta}$, and the angles triple from factor to factor.",
+   "solution": [
+    "$4\\cos^2\\theta-1=4\\left(1-\\sin^2\\theta\\right)-1=3-4\\sin^2\\theta=\\frac{\\sin 3\\theta}{\\sin\\theta}$.",
+    "So the given expression can be written as $36\\times\\frac{\\sin 27^\\circ}{\\sin 9^\\circ}\\times\\frac{\\sin 81^\\circ}{\\sin 27^\\circ}\\times\\frac{\\sin 243^\\circ}{\\sin 81^\\circ}\\times\\frac{\\sin 729^\\circ}{\\sin 243^\\circ}$.",
+    "The product telescopes: $36\\times\\frac{\\sin 729^\\circ}{\\sin 9^\\circ}$.",
+    "$\\sin 729^\\circ=\\sin\\left(720^\\circ+9^\\circ\\right)=\\sin 9^\\circ$, so the value is $36$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $4\\cos^2\\theta-1=(2\\cos\\theta+1)(2\\cos\\theta-1)$ and telescope each factor with half-angles.",
+     "solution": [
+      "$2\\cos\\theta+1=\\frac{\\sin\\frac{3\\theta}{2}}{\\sin\\frac{\\theta}{2}}$ and $2\\cos\\theta-1=\\frac{\\cos\\frac{3\\theta}{2}}{\\cos\\frac{\\theta}{2}}$ (from $\\sin 3x=\\sin x(2\\cos 2x+1)$, $\\cos 3x=\\cos x(2\\cos 2x-1)$).",
+      "For $\\theta=9^\\circ, 27^\\circ, 81^\\circ, 243^\\circ$ the half-angles are $4.5^\\circ, 13.5^\\circ, 40.5^\\circ, 121.5^\\circ$ and the $\\frac{3\\theta}{2}$ values are $13.5^\\circ, 40.5^\\circ, 121.5^\\circ, 364.5^\\circ$.",
+      "$\\prod(2\\cos\\theta+1)=\\frac{\\sin 364.5^\\circ}{\\sin 4.5^\\circ}=1$, since $364.5^\\circ=360^\\circ+4.5^\\circ$.",
+      "$\\prod(2\\cos\\theta-1)=\\frac{\\cos 364.5^\\circ}{\\cos 4.5^\\circ}=1$.",
+      "Hence the four brackets multiply to $1\\cdot 1=1$ and the value is $36$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$4\\cos^2\\theta-1=1+2\\cos 2\\theta=\\frac{\\sin 3\\theta}{\\sin\\theta}$ and $4\\cos^2\\theta-3=\\frac{\\cos 3\\theta}{\\cos\\theta}$.",
+    "So $\\prod_{k=0}^{n-1}\\left(4\\cos^2 3^k\\theta-1\\right)=\\frac{\\sin 3^n\\theta}{\\sin\\theta}$ (check $n=1$, $\\theta=30^\\circ$: $4\\cdot\\frac{3}{4}-1=2=\\frac{\\sin 90^\\circ}{\\sin 30^\\circ}$).",
+    "Pattern: when angles in a product go up by a fixed factor $m$, look for $f(m\\theta)/f(\\theta)$ (factor $2$: $\\cos\\theta=\\frac{\\sin 2\\theta}{2\\sin\\theta}$; factor $3$: as above).",
+    "The answer is the constant when $3^n\\theta\\equiv\\theta\\pmod{360^\\circ}$, i.e. here $81\\cdot 9^\\circ=729^\\circ\\equiv 9^\\circ$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Range of trigonometric expressions reducible to a quadratic"
+   ],
+   "level": 1,
+   "question": "The set of all values of $\\lambda$ for which the equation $\\cos^2 2x-2\\sin^4 x-2\\cos^2 x=\\lambda$ has a real solution $x$, is:",
+   "options": [
+    "$\\left[-1,-\\frac{1}{2}\\right]$",
+    "$\\left[-2,-\\frac{3}{2}\\right]$",
+    "$[-2,-1]$",
+    "$\\left[-\\frac{3}{2},-1\\right]$"
+   ],
+   "answer": "(D) $\\left[-\\frac{3}{2},-1\\right]$",
+   "key_idea": "Write everything in $t=\\cos^2 x\\in[0,1]$ and find the range of the resulting quadratic on that interval.",
+   "solution": [
+    "$\\lambda=\\cos^2 2x-2\\sin^4 x-2\\cos^2 x$; convert everything into $\\cos x$.",
+    "$\\lambda=\\left(2\\cos^2 x-1\\right)^2-2\\left(1-\\cos^2 x\\right)^2-2\\cos^2 x$.",
+    "$=4\\cos^4 x-4\\cos^2 x+1-2\\left(1-2\\cos^2 x+\\cos^4 x\\right)-2\\cos^2 x$.",
+    "$=2\\cos^4 x-2\\cos^2 x+1-2=2\\cos^4 x-2\\cos^2 x-1$.",
+    "$=2\\left[\\cos^4 x-\\cos^2 x-\\frac{1}{2}\\right]=2\\left[\\left(\\cos^2 x-\\frac{1}{2}\\right)^2-\\frac{3}{4}\\right]$.",
+    "$\\cos^2 x\\in[0,1]$, so $\\left(\\cos^2 x-\\frac{1}{2}\\right)^2\\in\\left[0,\\frac{1}{4}\\right]$.",
+    "$\\lambda_{max}=2\\left[\\frac{1}{4}-\\frac{3}{4}\\right]=2\\times\\left(-\\frac{2}{4}\\right)=-1$ and $\\lambda_{min}=2\\left[0-\\frac{3}{4}\\right]=-\\frac{3}{2}$.",
+    "So the range is $\\left[-\\frac{3}{2},-1\\right]$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work in $c=\\cos 2x$ instead: the linear terms cancel and $\\lambda=\\frac{c^2-3}{2}$.",
+     "solution": [
+      "Let $c=\\cos 2x\\in[-1,1]$; then $\\sin^2 x=\\frac{1-c}{2}$ and $\\cos^2 x=\\frac{1+c}{2}$.",
+      "$\\lambda=c^2-2\\cdot\\frac{(1-c)^2}{4}-2\\cdot\\frac{1+c}{2}=c^2-\\frac{1-2c+c^2}{2}-1-c$.",
+      "$=\\frac{c^2}{2}-\\frac{3}{2}$ (the terms in $c$ cancel).",
+      "$c^2\\in[0,1]$, so $\\lambda\\in\\left[-\\frac{3}{2},-1\\right]$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Range questions: reduce to one function $t$ of $x$, record the exact interval of $t$, then find the range of the polynomial in $t$ on that interval.",
+    "For $f(t)=a(t-h)^2+k$ on $[p,q]$: extreme values are at $t=h$ (if $h\\in[p,q]$) and at the end points.",
+    "Choosing $\\cos 2x$ rather than $\\cos^2 x$ as the variable often removes the linear term (here $\\lambda=\\frac{\\cos^2 2x-3}{2}$).",
+    "$\\sin^4 x=\\frac{(1-\\cos 2x)^2}{4}$, $\\cos^4 x=\\frac{(1+\\cos 2x)^2}{4}$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Exponential equations reducible to quadratics",
+    "Trigonometric ratios of $15^\\circ$"
+   ],
+   "level": 2,
+   "question": "Let $S=\\left\\{x\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right): 9^{1-\\tan^2 x}+9^{\\tan^2 x}=10\\right\\}$ and $\\beta=\\sum_{x\\in S}\\tan^2\\left(\\frac{x}{3}\\right)$, then $\\frac{1}{6}(\\beta-14)^2$ is equal to:",
+   "options": [
+    "$32$",
+    "$64$",
+    "$16$",
+    "$8$"
+   ],
+   "answer": "(A) 32",
+   "key_idea": "$y=9^{\\tan^2 x}$ turns the equation into $y^2-10y+9=0$; then $\\tan^2 x\\in\\{0,1\\}$.",
+   "solution": [
+    "$9^{1-\\tan^2 x}+9^{\\tan^2 x}=10\\Rightarrow\\frac{9}{y}+y=10$, where $9^{\\tan^2 x}=y$.",
+    "So $9+y^2=10y$, i.e. $y^2-10y+9=0$, i.e. $(y-1)(y-9)=0$.",
+    "So $9^{\\tan^2 x}=1$ or $9^{\\tan^2 x}=9$, giving $\\tan^2 x=0$ or $\\tan^2 x=1$.",
+    "In $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$: $\\tan x=0\\Rightarrow x=0$; $\\tan x=1\\Rightarrow x=\\frac{\\pi}{4}$; $\\tan x=-1\\Rightarrow x=-\\frac{\\pi}{4}$.",
+    "Now $\\beta=\\sum\\tan^2\\frac{x}{3}=\\tan^2 0+\\tan^2\\frac{\\pi}{12}+\\tan^2\\left(-\\frac{\\pi}{12}\\right)=2\\tan^2\\frac{\\pi}{12}$.",
+    "$=2\\left(2-\\sqrt{3}\\right)^2=2\\left(7-4\\sqrt{3}\\right)$.",
+    "$\\beta=14-8\\sqrt{3}\\Rightarrow\\frac{1}{6}(\\beta-14)^2=\\frac{1}{6}\\cdot 192=32$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$g(t)=9^{1-t}+9^t$ is symmetric about $t=\\frac{1}{2}$ and convex, so the two obvious roots $t=0, 1$ are the only ones.",
+     "solution": [
+      "Let $t=\\tan^2 x\\ge 0$ and $g(t)=9^{1-t}+9^t$. Then $g(1-t)=g(t)$: the graph is symmetric about $t=\\frac{1}{2}$.",
+      "$g$ is a sum of two convex exponentials, so it is convex; a convex function takes a value at most twice.",
+      "By inspection $g(0)=9+1=10$ and $g(1)=1+9=10$, so $\\tan^2 x\\in\\{0,1\\}$ and $S=\\left\\{0,\\pm\\frac{\\pi}{4}\\right\\}$.",
+      "$\\beta=2\\tan^2 15^\\circ$, and $\\tan^2 15^\\circ+\\cot^2 15^\\circ=(7-4\\sqrt{3})+(7+4\\sqrt{3})=14$, so $\\beta-14=\\tan^2 15^\\circ-\\cot^2 15^\\circ$.",
+      "$\\tan^2 15^\\circ-\\cot^2 15^\\circ=-8\\sqrt{3}$, so $\\frac{1}{6}(\\beta-14)^2=\\frac{192}{6}=32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a^{k-t}+a^{t}=c$: put $y=a^t$ to get $y^2-cy+a^k=0$; roots $y_1y_2=a^k$, so the $t$-values add to $k$.",
+    "$\\tan 15^\\circ=2-\\sqrt{3}$, $\\tan 75^\\circ=2+\\sqrt{3}$, $\\tan^2 15^\\circ=7-4\\sqrt{3}$, $\\tan^2 15^\\circ+\\tan^2 75^\\circ=14$.",
+    "$\\tan(-x)=-\\tan x$, so roots $\\pm x$ contribute equally to a sum of $\\tan^2$ - count both.",
+    "Convex function + symmetry: once two roots are found by inspection there are no more."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "AM-GM inequality",
+    "Compound angle formulas"
+   ],
+   "level": 3,
+   "question": "If $\\sin^4\\alpha+4\\cos^4\\beta+2=4\\sqrt{2}\\sin\\alpha\\cos\\beta$; $\\alpha,\\beta\\in[0,\\pi]$, then $\\cos(\\alpha+\\beta)-\\cos(\\alpha-\\beta)$ is equal to:",
+   "options": [
+    "$0$",
+    "$-\\sqrt{2}$",
+    "$\\sqrt{2}$",
+    "$-1$"
+   ],
+   "answer": "(B) $-\\sqrt{2}$",
+   "key_idea": "Split $2=1+1$ and apply AM-GM to the four terms: equality forces each term to be $1$.",
+   "solution": [
+    "Given $\\sin^4\\alpha+4\\cos^4\\beta+2=4\\sqrt{2}\\sin\\alpha\\cos\\beta$, with $\\alpha,\\beta\\in[0,\\pi]$.",
+    "AM $\\ge$ GM for $\\sin^4\\alpha, 4\\cos^4\\beta, 1, 1$: $\\frac{\\sin^4\\alpha+4\\cos^4\\beta+1+1}{4}\\ge\\sqrt[4]{\\sin^4\\alpha\\cos^4\\beta\\cdot 1\\cdot 1\\cdot 4}$.",
+    "So $\\sin^4\\alpha+4\\cos^4\\beta+2\\ge 4\\sqrt{2}\\left|\\sin\\alpha\\cos\\beta\\right|\\ge 4\\sqrt{2}\\sin\\alpha\\cos\\beta$.",
+    "The given equation says equality holds, so AM $=$ GM: all four terms are equal, $\\sin^4\\alpha=4\\cos^4\\beta=1$.",
+    "$\\sin\\alpha\\ge 0$ on $[0,\\pi]$, so $\\sin\\alpha=1$; and $\\cos\\beta=\\pm\\frac{1}{\\sqrt{2}}$, where the right side must equal $4>0$, so $\\cos\\beta=\\frac{1}{\\sqrt{2}}$.",
+    "Either way $\\sin\\beta=\\frac{1}{\\sqrt{2}}$ for $\\beta\\in[0,\\pi]$.",
+    "$\\cos(\\alpha+\\beta)-\\cos(\\alpha-\\beta)=-2\\sin\\alpha\\sin\\beta$.",
+    "$=-2\\cdot 1\\cdot\\frac{1}{\\sqrt{2}}=-\\sqrt{2}$: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes cos(beta) = +-1/sqrt2 without discarding the negative sign (the right side 4*sqrt2*sin(alpha)cos(beta) must equal 4 > 0, so cos(beta) = +1/sqrt2) and its last line reads '-2*sqrt2' although the previous line is -2*(1/sqrt2) = -sqrt2. Corrected the sign argument and the final value to -sqrt2 (option B, as in the key).",
+   "alternate_solutions": [
+    {
+     "idea": "Rewrite the condition as a sum of three squares equal to zero.",
+     "solution": [
+      "Let $s=\\sin\\alpha, c=\\cos\\beta$. Check: $(s^2-1)^2+(2c^2-1)^2+2(s-\\sqrt{2}c)^2=s^4+4c^4+2-4\\sqrt{2}sc$.",
+      "So the condition is $(s^2-1)^2+(2c^2-1)^2+2\\left(s-\\sqrt{2}c\\right)^2=0$.",
+      "Each square is $0$: $s^2=1$, $c^2=\\frac{1}{2}$ and $s=\\sqrt{2}c$.",
+      "$s\\ge 0$ on $[0,\\pi]$ gives $\\sin\\alpha=1$, then $\\cos\\beta=\\frac{1}{\\sqrt{2}}$: $\\alpha=\\frac{\\pi}{2}, \\beta=\\frac{\\pi}{4}$.",
+      "$\\cos\\frac{3\\pi}{4}-\\cos\\frac{\\pi}{4}=-\\frac{1}{\\sqrt{2}}-\\frac{1}{\\sqrt{2}}=-\\sqrt{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "AM-GM with padding: $a^4+b^4+1+1\\ge 4|ab|$ (equality iff $a^4=b^4=1$); split constants into equal parts to match the right side.",
+    "An equation of the form 'expression $=$ its AM-GM lower bound' forces all terms equal - it pins the variables down.",
+    "Equivalent route: write expression $-$ bound as a sum of squares; each square must vanish.",
+    "$\\cos(A+B)-\\cos(A-B)=-2\\sin A\\sin B$, $\\cos(A+B)+\\cos(A-B)=2\\cos A\\cos B$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric equations solved by bounding both sides"
+   ],
+   "level": 1,
+   "question": "The number of solutions of the equation $1+\\sin^4 x=\\cos^2 3x$, $x\\in\\left[-\\frac{5\\pi}{2},\\frac{5\\pi}{2}\\right]$ is:",
+   "options": [
+    "$3$",
+    "$5$",
+    "$4$",
+    "$7$"
+   ],
+   "answer": "(B) 5",
+   "key_idea": "The left side is at least $1$ and the right side at most $1$, so both must equal $1$.",
+   "solution": [
+    "$1+\\sin^4 x=\\cos^2 3x$; L.H.S. $=1+\\sin^4 x$, R.H.S. $=\\cos^2 3x$.",
+    "L.H.S. $\\ge 1$ and R.H.S. $\\le 1$.",
+    "$\\Rightarrow$ L.H.S. $=$ R.H.S. $=1$.",
+    "So $\\sin^4 x=0$ and $\\cos^2 3x=1$.",
+    "$\\sin x=0$ and $\\left(4\\cos^2 x-3\\right)^2\\cos^2 x=1$ (as $\\cos 3x=\\cos x(4\\cos^2 x-3)$).",
+    "$\\sin x=0$ gives $\\cos^2 x=1$, and then $(4-3)^2\\cdot 1=1$ holds automatically.",
+    "In $\\left[-\\frac{5\\pi}{2},\\frac{5\\pi}{2}\\right]$: $x=0, \\pm\\pi, \\pm 2\\pi$.",
+    "Total number of solutions is $5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Move $\\cos^2 3x$ across: $1-\\cos^2 3x=\\sin^2 3x$, so the equation is a sum of two squares equal to zero.",
+     "solution": [
+      "$1+\\sin^4 x=\\cos^2 3x\\iff\\sin^4 x+\\left(1-\\cos^2 3x\\right)=0\\iff\\sin^4 x+\\sin^2 3x=0$.",
+      "Both terms are non-negative, so $\\sin x=0$ and $\\sin 3x=0$.",
+      "$\\sin x=0\\Rightarrow x=n\\pi$, and then $\\sin 3x=\\sin 3n\\pi=0$ automatically.",
+      "$x=n\\pi\\in\\left[-\\frac{5\\pi}{2},\\frac{5\\pi}{2}\\right]$ gives $n=-2,-1,0,1,2$: $5$ solutions."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x)\\ge k\\ge g(x)$, then $f(x)=g(x)\\iff f(x)=g(x)=k$ (bounding method).",
+    "Sum of non-negative terms $=0\\iff$ each term $=0$; $1-\\cos^2 u=\\sin^2 u$ often exposes such a sum.",
+    "$\\sin x=0\\Rightarrow\\sin nx=0$ and $\\cos^2 nx=1$ for every integer $n$.",
+    "Counting $x=n\\pi$ in $[-a,a]$: $2\\lfloor a/\\pi\\rfloor+1$ values (here $a=\\frac{5\\pi}{2}$ gives $5$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric equations by factorisation and counting solutions in an interval"
+   ],
+   "level": 2,
+   "question": "The number of elements in the set $S=\\left\\{\\theta\\in[0,2\\pi]: 3\\cos^4\\theta-5\\cos^2\\theta-2\\sin^6\\theta+2=0\\right\\}$ is:",
+   "options": [
+    "$9$",
+    "$10$",
+    "$8$",
+    "$12$"
+   ],
+   "answer": "(A) 9",
+   "key_idea": "Split $-5\\cos^2\\theta=-3\\cos^2\\theta-2\\cos^2\\theta$ and use $2-2\\cos^2\\theta=2\\sin^2\\theta$ to factor out $\\sin^2\\theta\\cos^2\\theta$.",
+   "solution": [
+    "$3\\cos^4\\theta-5\\cos^2\\theta-2\\sin^6\\theta+2=0$",
+    "$\\Rightarrow 3\\cos^4\\theta-3\\cos^2\\theta-2\\cos^2\\theta-2\\sin^6\\theta+2=0$",
+    "$\\Rightarrow 3\\cos^4\\theta-3\\cos^2\\theta+2\\sin^2\\theta-2\\sin^6\\theta=0$ (since $2-2\\cos^2\\theta=2\\sin^2\\theta$).",
+    "$\\Rightarrow 3\\cos^2\\theta\\left(\\cos^2\\theta-1\\right)+2\\sin^2\\theta\\left(1-\\sin^4\\theta\\right)=0$",
+    "$\\Rightarrow -3\\cos^2\\theta\\sin^2\\theta+2\\sin^2\\theta\\left(1+\\sin^2\\theta\\right)\\cos^2\\theta=0$ (as $1-\\sin^4\\theta=\\cos^2\\theta(1+\\sin^2\\theta)$).",
+    "$\\Rightarrow\\sin^2\\theta\\cos^2\\theta\\left(2+2\\sin^2\\theta-3\\right)=0\\Rightarrow\\sin^2\\theta\\cos^2\\theta\\left(2\\sin^2\\theta-1\\right)=0$.",
+    "Case 1: $\\sin^2\\theta=0$: $3$ solutions, $\\theta\\in\\{0,\\pi,2\\pi\\}$.",
+    "Case 2: $\\cos^2\\theta=0$: $2$ solutions, $\\theta\\in\\left\\{\\frac{\\pi}{2},\\frac{3\\pi}{2}\\right\\}$.",
+    "Case 3: $\\sin^2\\theta=\\frac{1}{2}$: $4$ solutions, $\\theta\\in\\left\\{\\frac{\\pi}{4},\\frac{3\\pi}{4},\\frac{5\\pi}{4},\\frac{7\\pi}{4}\\right\\}$.",
+    "Number of solutions $=3+2+4=9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF line 4 reads 3cos^2(cos^2-1) + 2sin^2(sin^4 - 1) = 0; the sign of the second bracket is wrong (2sin^2 - 2sin^6 = 2sin^2(1 - sin^4)). PDF line 5 also ends with a stray '... cos^2 - 1' instead of '= 0'. Both fixed; the factorisation sin^2 cos^2 (2sin^2 - 1) = 0 and the count 9 are correct.",
+   "alternate_solutions": [
+    {
+     "idea": "Put $t=\\sin^2\\theta$: the equation becomes the cubic $-t(t-1)(2t-1)=0$.",
+     "solution": [
+      "Let $t=\\sin^2\\theta\\in[0,1]$, so $\\cos^2\\theta=1-t$.",
+      "$3(1-t)^2-5(1-t)-2t^3+2=3-6t+3t^2-5+5t-2t^3+2=-2t^3+3t^2-t$.",
+      "$-2t^3+3t^2-t=-t\\left(2t^2-3t+1\\right)=-t(t-1)(2t-1)$.",
+      "So $\\sin^2\\theta\\in\\left\\{0,\\frac{1}{2},1\\right\\}$.",
+      "In $[0,2\\pi]$: $\\sin^2\\theta=0$ gives $3$ values, $\\sin^2\\theta=1$ gives $2$, $\\sin^2\\theta=\\frac{1}{2}$ gives $4$: total $9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "An equation in even powers of $\\sin\\theta, \\cos\\theta$ is a polynomial in $t=\\sin^2\\theta$ (or $\\cos^2\\theta$) - factor that polynomial.",
+    "In $[0,2\\pi]$: $\\sin^2\\theta=0$ has $3$ solutions (both end points), $\\sin^2\\theta=1$ has $2$, and $\\sin^2\\theta=k\\in(0,1)$ has $4$.",
+    "On a closed interval $[0,2\\pi]$ remember the end point $2\\pi$ - it changes the count for $\\sin\\theta=0$.",
+    "$1-\\sin^4\\theta=\\cos^2\\theta\\left(1+\\sin^2\\theta\\right)$, $1-\\sin^6\\theta=\\cos^2\\theta\\left(1+\\sin^2\\theta+\\sin^4\\theta\\right)$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Relation between roots and coefficients of a quadratic",
+    "Compound angle formula for $\\tan(\\alpha+\\beta)$"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha$ and $\\beta$ be two real roots of the equation $(k+1)\\tan^2 x-\\sqrt{2}\\lambda\\tan x=(1-k)$, where $k\\,(\\neq -1)$ and $\\lambda$ are real numbers. If $\\tan^2(\\alpha+\\beta)=50$, then a value of $\\lambda$ is:",
+   "options": [
+    "$5\\sqrt{2}$",
+    "$10\\sqrt{2}$",
+    "$10$",
+    "$5$"
+   ],
+   "answer": "(C) 10",
+   "key_idea": "$\\tan\\alpha, \\tan\\beta$ are the roots of a quadratic in $\\tan x$: use their sum and product in $\\tan(\\alpha+\\beta)$.",
+   "solution": [
+    "The equation is $(k+1)\\tan^2 x-\\sqrt{2}\\lambda\\tan x+(k-1)=0$, a quadratic in $\\tan x$ with roots $\\tan\\alpha, \\tan\\beta$.",
+    "$\\tan\\alpha+\\tan\\beta=\\frac{\\sqrt{2}\\lambda}{k+1}$.",
+    "and $\\tan\\alpha\\tan\\beta=\\frac{k-1}{k+1}$.",
+    "$\\tan(\\alpha+\\beta)=\\frac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}=\\frac{\\frac{\\sqrt{2}\\lambda}{k+1}}{1-\\frac{k-1}{k+1}}=\\frac{\\frac{\\sqrt{2}\\lambda}{k+1}}{\\frac{2}{k+1}}=\\frac{\\lambda}{\\sqrt{2}}$.",
+    "$\\tan^2(\\alpha+\\beta)=50=\\frac{\\lambda^2}{2}$.",
+    "$\\Rightarrow\\lambda^2=100\\Rightarrow\\lambda=\\pm 10$; a value of $\\lambda$ is $10$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the denominator of tan(alpha+beta) as '1 - tan(alpha) + tan(beta)'; it must be '1 - tan(alpha)tan(beta)'. The PDF's computed value lambda/sqrt2 already uses the correct product, so only the formula line was fixed; the intermediate step 1 - (k-1)/(k+1) = 2/(k+1) was added.",
+   "alternate_solutions": [
+    {
+     "idea": "Divide by $\\sec^2 x$: the equation becomes $\\cos 2x+\\frac{\\lambda}{\\sqrt{2}}\\sin 2x=k$, and two roots of $a\\cos\\phi+b\\sin\\phi=k$ satisfy $\\tan\\frac{\\phi_1+\\phi_2}{2}=\\frac{b}{a}$.",
+     "solution": [
+      "Multiply by $\\cos^2 x$: $(k+1)\\sin^2 x-\\sqrt{2}\\lambda\\sin x\\cos x+(k-1)\\cos^2 x=0$.",
+      "$k\\left(\\sin^2 x+\\cos^2 x\\right)-\\left(\\cos^2 x-\\sin^2 x\\right)-\\frac{\\lambda}{\\sqrt{2}}\\sin 2x=0$, i.e. $\\cos 2x+\\frac{\\lambda}{\\sqrt{2}}\\sin 2x=k$.",
+      "Write $\\cos 2x+\\frac{\\lambda}{\\sqrt{2}}\\sin 2x=R\\cos(2x-\\delta)$ with $\\tan\\delta=\\frac{\\lambda}{\\sqrt{2}}$.",
+      "The roots satisfy $2\\alpha-\\delta=\\gamma+2m\\pi$ and $2\\beta-\\delta=-\\gamma+2n\\pi$ (two different roots), so $\\alpha+\\beta=\\delta+(m+n)\\pi$.",
+      "Hence $\\tan(\\alpha+\\beta)=\\tan\\delta=\\frac{\\lambda}{\\sqrt{2}}$; $\\frac{\\lambda^2}{2}=50$ gives $\\lambda=\\pm 10$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\tan\\alpha, \\tan\\beta$ are roots of $at^2+bt+c=0$, then $\\tan(\\alpha+\\beta)=\\frac{-b}{a-c}$ (here $\\frac{\\sqrt{2}\\lambda}{2}$).",
+    "Three roots of $at^3+bt^2+ct+d=0$: $\\tan(\\alpha+\\beta+\\gamma)=\\frac{-b/a+d/a}{1-c/a}=\\frac{d-b}{a-c}$.",
+    "For two solutions $\\phi_1, \\phi_2$ of $a\\cos\\phi+b\\sin\\phi=k$ (not differing by $2\\pi$): $\\tan\\frac{\\phi_1+\\phi_2}{2}=\\frac{b}{a}$.",
+    "Remember to keep the sign: $\\lambda^2=100$ gives $\\pm 10$ - choose the value offered in the options."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Product of cosines with angles in geometric progression (doubling)"
+   ],
+   "level": 1,
+   "question": "$96\\cos\\frac{\\pi}{33}\\cos\\frac{2\\pi}{33}\\cos\\frac{4\\pi}{33}\\cos\\frac{8\\pi}{33}\\cos\\frac{16\\pi}{33}$ is equal to:",
+   "options": [
+    "$4$",
+    "$1$",
+    "$2$",
+    "$3$"
+   ],
+   "answer": "(D) 3",
+   "key_idea": "Multiply and divide by $\\sin A$ and use $2\\sin x\\cos x=\\sin 2x$ repeatedly.",
+   "solution": [
+    "Let $\\frac{\\pi}{33}=A$; the expression is $96\\cos A\\cos 2A\\cos 2^2A\\cos 2^3A\\cos 2^4A$.",
+    "Multiplying and dividing by $2^5\\sin A$ and applying $2\\sin x\\cos x=\\sin 2x$ five times: $=96\\frac{\\sin 2^5A}{2^5\\sin A}$.",
+    "$=\\frac{96\\sin\\frac{32\\pi}{33}}{32\\sin\\frac{\\pi}{33}}=\\frac{96\\sin\\left(\\pi-\\frac{\\pi}{33}\\right)}{32\\sin\\frac{\\pi}{33}}$.",
+    "$=\\frac{96\\sin\\frac{\\pi}{33}}{32\\sin\\frac{\\pi}{33}}=3$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $z=e^{i\\pi/33}$, $2\\cos 2^kA=z^{2^k}+z^{-2^k}$ and $(w-w^{-1})(w+w^{-1})=w^2-w^{-2}$ telescopes.",
+     "solution": [
+      "Let $z=e^{i\\pi/33}$; then $2\\cos 2^k A=z^{2^k}+z^{-2^k}$ and $z-z^{-1}=2i\\sin\\frac{\\pi}{33}\\neq 0$.",
+      "$(z-z^{-1})(z+z^{-1})=z^2-z^{-2}$, then $(z^2-z^{-2})(z^2+z^{-2})=z^4-z^{-4}$, and so on.",
+      "So $\\prod_{k=0}^{4}\\left(z^{2^k}+z^{-2^k}\\right)=\\frac{z^{32}-z^{-32}}{z-z^{-1}}=\\frac{2i\\sin\\frac{32\\pi}{33}}{2i\\sin\\frac{\\pi}{33}}=1$.",
+      "Hence $2^5\\prod\\cos 2^kA=1$, the product of cosines is $\\frac{1}{32}$, and $96\\cdot\\frac{1}{32}=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos A\\cos 2A\\cos 4A\\cdots\\cos 2^{n-1}A=\\frac{\\sin 2^nA}{2^n\\sin A}$ ($\\sin A\\neq 0$).",
+    "If $A=\\frac{\\pi}{2^n+1}$ the product is $\\frac{1}{2^n}$; if $A=\\frac{\\pi}{2^n-1}$ it is $-\\frac{1}{2^n}$ (check $n=2$, $A=\\frac{\\pi}{5}$: $\\cos 36^\\circ\\cos 72^\\circ=\\frac{1}{4}$).",
+    "Here $33=2^5+1$, so the product is $\\frac{1}{32}$ at once.",
+    "Watch for angles not exactly doubling (e.g. $\\cos\\frac{\\pi}{7}\\cos\\frac{3\\pi}{7}\\cos\\frac{5\\pi}{7}$): first convert using $\\cos(\\pi-x)=-\\cos x$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Logarithms: change of base",
+    "Trigonometric equations"
+   ],
+   "level": 2,
+   "question": "If the solution of the equation $\\log_{\\cos x}\\cot x+4\\log_{\\sin x}\\tan x=1$, $x\\in\\left(0,\\frac{\\pi}{2}\\right)$, is $\\sin^{-1}\\left(\\frac{\\alpha+\\sqrt{\\beta}}{2}\\right)$ where $\\alpha,\\beta$ are integers, then $\\alpha+\\beta$ is equal to:",
+   "options": [
+    "$6$",
+    "$3$",
+    "$4$",
+    "$5$"
+   ],
+   "answer": "(C) 4",
+   "key_idea": "In a common base, with $a=\\log\\sin x, b=\\log\\cos x$, the equation becomes the perfect square $(a-2b)^2=0$.",
+   "solution": [
+    "$\\log_{\\cos x}\\cot x+4\\log_{\\sin x}\\tan x=1$.",
+    "Changing to a common base: $\\frac{\\log\\cos x-\\log\\sin x}{\\log\\cos x}+4\\frac{\\left(\\log\\sin x-\\log\\cos x\\right)}{\\log\\sin x}=1$.",
+    "Multiplying by $\\log\\sin x\\log\\cos x$ and simplifying: $(\\log\\sin x)^2-4(\\log\\sin x)(\\log\\cos x)+4(\\log\\cos x)^2=0$.",
+    "So $(\\log\\sin x-2\\log\\cos x)^2=0$, i.e. $\\log\\sin x=2\\log\\cos x$.",
+    "$\\sin x=\\cos^2 x=1-\\sin^2 x\\Rightarrow\\sin^2 x+\\sin x-1=0$.",
+    "$\\sin x=\\frac{-1\\pm\\sqrt{5}}{2}$; as $\\sin x>0$, $\\sin x=\\frac{-1+\\sqrt{5}}{2}$, so $x=\\sin^{-1}\\left(\\frac{-1+\\sqrt{5}}{2}\\right)$.",
+    "$\\alpha=-1, \\beta=5$.",
+    "$\\alpha+\\beta=4$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes (log sin x)^2 - 4(log sin x)(log cos x) + 4(log cos x)^2 = 1; the right side must be 0 (multiplying the equation by log sin x * log cos x cancels the 1 against the product term). With '= 1' the next line log sin x = 2 log cos x would not follow. Fixed to '= 0', added the perfect-square step and the rejection of the negative root.",
+   "alternate_solutions": [
+    {
+     "idea": "Use one variable $t=\\log_{\\cos x}\\sin x>0$: then $\\log_{\\sin x}\\cos x=\\frac{1}{t}$ and the equation is $t+\\frac{4}{t}=4$.",
+     "solution": [
+      "Let $t=\\log_{\\cos x}\\sin x$; for $x\\in\\left(0,\\frac{\\pi}{2}\\right)$ both bases lie in $(0,1)$, so $t>0$ and $\\log_{\\sin x}\\cos x=\\frac{1}{t}$.",
+      "$\\log_{\\cos x}\\cot x=\\log_{\\cos x}\\cos x-\\log_{\\cos x}\\sin x=1-t$.",
+      "$\\log_{\\sin x}\\tan x=1-\\log_{\\sin x}\\cos x=1-\\frac{1}{t}$.",
+      "Equation: $1-t+4-\\frac{4}{t}=1\\iff t+\\frac{4}{t}=4\\iff(t-2)^2=0\\iff t=2$.",
+      "$t=2$ means $\\sin x=\\cos^2 x$, so $\\sin x=\\frac{-1+\\sqrt{5}}{2}$, $\\alpha=-1, \\beta=5$, $\\alpha+\\beta=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\log_a b\\cdot\\log_b a=1$ ($a,b>0$, $\\neq 1$): equations in $\\log_a b$ and $\\log_b a$ become $t$ and $\\frac{1}{t}$.",
+    "$t+\\frac{k^2}{t}\\ge 2k$ for $t>0$ (equality at $t=k$): a sum like $t+\\frac{4}{t}=4$ forces $t=2$.",
+    "$\\sin x=\\cos^2 x\\Rightarrow\\sin x=\\frac{\\sqrt{5}-1}{2}$, which is also $2\\sin 18^\\circ$ (golden-ratio value).",
+    "For $x\\in\\left(0,\\frac{\\pi}{2}\\right)$ all of $\\sin x, \\cos x\\in(0,1)$, so logs to these bases need no sign casework."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sum-to-product transformations and extreme values of trigonometric expressions"
+   ],
+   "level": 3,
+   "question": "If $0<x,y<\\pi$ and $\\cos x+\\cos y-\\cos(x+y)=\\frac{3}{2}$, then $\\sin x+\\cos y$ is equal to:",
+   "options": [
+    "$\\frac{1+\\sqrt{3}}{2}$",
+    "$\\frac{\\sqrt{3}}{2}$",
+    "$\\frac{1-\\sqrt{3}}{2}$",
+    "$\\frac{1}{2}$"
+   ],
+   "answer": "(A) $\\frac{1+\\sqrt{3}}{2}$",
+   "key_idea": "In terms of $\\cos\\frac{x+y}{2}$ the left side is at most $\\frac{3}{2}$, so the equation forces the equality case.",
+   "solution": [
+    "$\\cos x+\\cos y-\\cos(x+y)=\\frac{3}{2}$ gives $2\\cos\\frac{x+y}{2}\\cos\\frac{x-y}{2}-2\\cos^2\\frac{x+y}{2}+1=\\frac{3}{2}$ ... (1).",
+    "Also $2\\cos\\frac{x+y}{2}\\left[\\cos\\frac{x-y}{2}-\\cos\\frac{x+y}{2}\\right]=\\frac{1}{2}$, i.e. $2\\cos\\frac{x+y}{2}\\cdot 2\\sin\\frac{x}{2}\\sin\\frac{y}{2}=\\frac{1}{2}$, with $0<x,y<\\pi$.",
+    "$\\sin\\frac{x}{2}$ and $\\sin\\frac{y}{2}$ are positive, so $\\cos\\frac{x+y}{2}$ is also positive.",
+    "$1\\ge\\cos\\frac{x-y}{2}$, so $2\\cos\\frac{x+y}{2}\\ge 2\\cos\\frac{x+y}{2}\\cos\\frac{x-y}{2}$ (because $\\cos\\frac{x+y}{2}>0$).",
+    "Hence $2\\cos\\frac{x+y}{2}-2\\cos^2\\frac{x+y}{2}+1\\ge 2\\cos\\frac{x+y}{2}\\cos\\frac{x-y}{2}-2\\cos^2\\frac{x+y}{2}+1$.",
+    "By (1) the right side is $\\frac{3}{2}$: $2\\cos\\frac{x+y}{2}-2\\cos^2\\frac{x+y}{2}+1\\ge\\frac{3}{2}$.",
+    "$\\Rightarrow\\left(2\\cos\\frac{x+y}{2}-1\\right)^2\\le 0\\Rightarrow\\cos\\frac{x+y}{2}=\\frac{1}{2}\\Rightarrow\\frac{x+y}{2}=\\frac{\\pi}{3}$, so $x+y=\\frac{2\\pi}{3}$.",
+    "From (1): $2\\cos\\frac{\\pi}{3}\\cos\\frac{x-y}{2}-2\\cos^2\\frac{\\pi}{3}+1=\\frac{3}{2}\\Rightarrow\\cos\\frac{x-y}{2}=1\\Rightarrow x-y=0$, so $x=y$.",
+    "Put $x=y=\\frac{\\pi}{3}$: $\\sin x+\\cos y=\\frac{\\sqrt{3}}{2}+\\frac{1}{2}=\\frac{1+\\sqrt{3}}{2}$: option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF's second line has the typo 2cos((x+5)/2) for 2cos((x+y)/2). The PDF also stops at 'put x = y = pi/3' without evaluating sin x + cos y; the final evaluation (sqrt3/2 + 1/2 = (1+sqrt3)/2) was added.",
+   "alternate_solutions": [
+    {
+     "idea": "Treat (1) as a quadratic in $u=\\cos\\frac{x+y}{2}$: a real root needs a non-negative discriminant, which forces $\\cos\\frac{x-y}{2}=1$.",
+     "solution": [
+      "Let $u=\\cos\\frac{x+y}{2}$, $v=\\cos\\frac{x-y}{2}$. Then (1) is $2uv-2u^2+1=\\frac{3}{2}$, i.e. $4u^2-4uv+1=0$.",
+      "$u$ is real, so the discriminant $16v^2-16\\ge 0$, i.e. $v^2\\ge 1$; but $v^2\\le 1$, so $v^2=1$.",
+      "$0<x,y<\\pi$ gives $\\frac{x-y}{2}\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, so $v=1$ and $x=y$.",
+      "Then $4u^2-4u+1=0$, $u=\\frac{1}{2}$, so $\\frac{x+y}{2}=\\frac{\\pi}{3}$ and $x=y=\\frac{\\pi}{3}$.",
+      "$\\sin x+\\cos y=\\frac{\\sqrt{3}}{2}+\\frac{1}{2}=\\frac{1+\\sqrt{3}}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With $C=\\pi-(x+y)$ the expression is $\\cos A+\\cos B+\\cos C$; for a triangle, $\\cos A+\\cos B+\\cos C\\le\\frac{3}{2}$ with equality only for the equilateral triangle.",
+    "In general $\\cos x+\\cos y-\\cos(x+y)\\le\\frac{3}{2}$ for all real $x,y$ (discriminant argument above).",
+    "'Expression $=$ its maximum' questions: write it as a quadratic in one cosine and use discriminant $\\ge 0$ to force the extreme case.",
+    "Similarly $\\sin A+\\sin B+\\sin C\\le\\frac{3\\sqrt{3}}{2}$ in a triangle, equality iff equilateral."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric ratios of complementary angles in right-angled triangles"
+   ],
+   "level": 3,
+   "question": "In the figure ($ABDC$ is a rectangle: $AB$ is the base, $C$ is above $A$, $D$ is above $B$; $E$ lies on $BD$ produced beyond $D$, so $\\angle CDE=90^\\circ$; $\\theta_1=\\angle CBA$ and $\\theta_2=\\angle ECD$), $\\theta_1+\\theta_2=\\frac{\\pi}{2}$ and $\\sqrt{3}(BE)=4(AB)$. If the area of $\\triangle CAB$ is $2\\sqrt{3}-3$ unit$^2$, when $\\frac{\\theta_2}{\\theta_1}$ is the largest, then the perimeter (in unit) of $\\triangle CED$ is equal to ________.",
+   "answer": "6",
+   "key_idea": "With $AB=CD$ and $AC=BD$: $\\tan\\theta_1+\\tan\\theta_2=\\frac{BE}{AB}=\\frac{4}{\\sqrt{3}}$ and $\\tan\\theta_1\\tan\\theta_2=1$.",
+   "solution": [
+    "Let $AB=CD=a$ and $AC=BD$. Then $\\tan\\theta_1=\\frac{AC}{AB}$ and $\\tan\\theta_2=\\frac{DE}{CD}=\\frac{BE-AC}{AB}$.",
+    "$\\tan\\theta_2=\\frac{4}{\\sqrt{3}}-\\tan\\theta_1\\Rightarrow\\tan\\theta_1+\\tan\\theta_2=\\frac{4}{\\sqrt{3}}$ ... (1).",
+    "Now $\\theta_1+\\theta_2=\\frac{\\pi}{2}\\Rightarrow\\tan\\theta_1\\tan\\theta_2=1$ ... (2).",
+    "Let $\\tan\\theta_1=x$ and $\\tan\\theta_2=y$: $x+y=\\frac{4}{\\sqrt{3}}$, $xy=1$, so $x+\\frac{1}{x}=\\frac{4}{\\sqrt{3}}$, i.e. $\\sqrt{3}x^2-4x+\\sqrt{3}=0$.",
+    "$\\sqrt{3}x\\left(x-\\sqrt{3}\\right)-1\\left(x-\\sqrt{3}\\right)=0\\Rightarrow x=\\sqrt{3}$ or $x=\\frac{1}{\\sqrt{3}}$; correspondingly $y=\\frac{1}{\\sqrt{3}}$ or $y=\\sqrt{3}$.",
+    "$\\frac{\\theta_2}{\\theta_1}$ is the largest ($=2$) when $\\theta_2=60^\\circ$ and $\\theta_1=30^\\circ$, i.e. $\\tan\\theta_1=\\frac{1}{\\sqrt{3}}$ and $AC=\\frac{a}{\\sqrt{3}}$.",
+    "Area of $\\triangle CAB=\\frac{1}{2}\\cdot a\\cdot\\frac{a}{\\sqrt{3}}=\\frac{a^2}{2\\sqrt{3}}=2\\sqrt{3}-3\\Rightarrow a^2=12-6\\sqrt{3}=\\left(3-\\sqrt{3}\\right)^2$, so $a=3-\\sqrt{3}$.",
+    "In $\\triangle CED$: $CD=a$, $\\theta_2=60^\\circ$, so $DE=a\\sqrt{3}$ and $CE=2a$.",
+    "Perimeter $=a+a\\sqrt{3}+2a=a\\left(3+\\sqrt{3}\\right)=\\left(3-\\sqrt{3}\\right)\\left(3+\\sqrt{3}\\right)=6$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF solution is incomplete and mislabelled: it writes 'x = 60 deg, y = 30 deg' although x, y were defined as tan(theta1), tan(theta2) (the intended case is theta1 = 30 deg, theta2 = 60 deg), and it stops at the ratio theta2/theta1 = 2 without using the area or computing the perimeter. Added: AC = a/sqrt3, area gives a = 3 - sqrt3, sides a, a*sqrt3, 2a of triangle CED, perimeter 6 (matches the key).",
+   "alternate_solutions": [
+    {
+     "idea": "$\\tan\\theta+\\cot\\theta=\\frac{2}{\\sin 2\\theta}$ gives $\\sin 2\\theta_1=\\frac{\\sqrt{3}}{2}$ at once; then scale the $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle.",
+     "solution": [
+      "$\\theta_2=90^\\circ-\\theta_1$, so (1) reads $\\tan\\theta_1+\\cot\\theta_1=\\frac{4}{\\sqrt{3}}$, i.e. $\\frac{2}{\\sin 2\\theta_1}=\\frac{4}{\\sqrt{3}}$.",
+      "$\\sin 2\\theta_1=\\frac{\\sqrt{3}}{2}$, so $\\theta_1=30^\\circ$ or $60^\\circ$; $\\frac{\\theta_2}{\\theta_1}$ is largest for $\\theta_1=30^\\circ, \\theta_2=60^\\circ$.",
+      "Area of $\\triangle CAB=\\frac{1}{2}AB^2\\tan 30^\\circ=\\frac{AB^2}{2\\sqrt{3}}$, and $\\triangle CED$ has $CD=AB$ with sides in ratio $1:\\sqrt{3}:2$.",
+      "Perimeter $=(3+\\sqrt{3})AB$ and $AB^2=2\\sqrt{3}(2\\sqrt{3}-3)=12-6\\sqrt{3}$, so perimeter$^2=(12+6\\sqrt{3})(12-6\\sqrt{3})=144-108=36$.",
+      "Perimeter $=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan\\theta+\\cot\\theta=\\frac{2}{\\sin 2\\theta}=2\\,\\mathrm{cosec}\\,2\\theta$ and $\\cot\\theta-\\tan\\theta=2\\cot 2\\theta$.",
+    "$A+B=\\frac{\\pi}{2}\\Rightarrow\\tan A\\tan B=1$; $A+B=\\frac{\\pi}{4}\\Rightarrow(1+\\tan A)(1+\\tan B)=2$.",
+    "In a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle the sides are $1:\\sqrt{3}:2$; perimeter $=(3+\\sqrt{3})\\times$ shortest side.",
+    "Figure questions: name equal lengths first (opposite sides of a rectangle), then convert every given length into tangents of the marked angles."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "General solution of tangent equations with domain restrictions"
+   ],
+   "level": 3,
+   "question": "Let $S=\\left\\{\\theta\\in[0,2\\pi): \\tan(\\pi\\cos\\theta)+\\tan(\\pi\\sin\\theta)=0\\right\\}$. Then $\\sum_{\\theta\\in S}\\sin^2\\left(\\theta+\\frac{\\pi}{4}\\right)$ is equal to ________.",
+   "answer": "2",
+   "key_idea": "$\\tan A=\\tan(-B)\\Rightarrow A=n\\pi-B$, so $\\sin\\theta+\\cos\\theta=n$ with $|n|\\le\\sqrt{2}$.",
+   "solution": [
+    "$\\tan(\\pi\\cos\\theta)+\\tan(\\pi\\sin\\theta)=0$",
+    "$\\tan(\\pi\\cos\\theta)=-\\tan(\\pi\\sin\\theta)=\\tan(-\\pi\\sin\\theta)$",
+    "$\\pi\\cos\\theta=n\\pi-\\pi\\sin\\theta$, $n\\in I$.",
+    "$\\sin\\theta+\\cos\\theta=n$, and $\\sin\\theta+\\cos\\theta\\in\\left[-\\sqrt{2},\\sqrt{2}\\right]$.",
+    "Then the possible values are $n=-1, 0, 1$.",
+    "Now $\\sin\\theta+\\cos\\theta=1$: $\\theta=0, \\frac{\\pi}{2}$.",
+    "$\\sin\\theta+\\cos\\theta=0$: $\\tan\\theta=-1$, $\\theta=\\frac{3\\pi}{4}, \\frac{7\\pi}{4}$.",
+    "$\\sin\\theta+\\cos\\theta=-1$: $\\theta=\\pi, \\frac{3\\pi}{2}$ (at all six values both tangents are defined, since $\\cos\\theta,\\sin\\theta\\neq\\pm\\frac{1}{2}$).",
+    "So $\\sum_{\\theta\\in S}\\sin^2\\left(\\theta+\\frac{\\pi}{4}\\right)=4\\left(\\frac{1}{2}\\right)+2(0)=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes 'tan theta - 1' for the case sin + cos = 0; it should read tan(theta) = -1. Also added the check that both tangents are defined at the six values (the PDF does not mention it). Final answer 2 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$\\tan A+\\tan B=\\frac{\\sin(A+B)}{\\cos A\\cos B}$, so the equation is $\\sin\\left(\\pi\\sqrt{2}\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)\\right)=0$ - work with $\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)$ throughout.",
+     "solution": [
+      "$\\tan A+\\tan B=\\frac{\\sin(A+B)}{\\cos A\\cos B}=0\\iff\\sin(A+B)=0$ (with $\\cos A,\\cos B\\neq 0$).",
+      "So $\\sin\\left(\\pi(\\sin\\theta+\\cos\\theta)\\right)=0$, i.e. $\\sqrt{2}\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)=n\\in\\{-1,0,1\\}$.",
+      "Hence $\\sin^2\\left(\\theta+\\frac{\\pi}{4}\\right)=\\frac{n^2}{2}$: it is $\\frac{1}{2}$ when $n=\\pm 1$ and $0$ when $n=0$.",
+      "Each of $\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)=\\frac{1}{\\sqrt{2}}, -\\frac{1}{\\sqrt{2}}, 0$ has $2$ solutions in $[0,2\\pi)$ (all with defined tangents).",
+      "Sum $=2\\cdot\\frac{1}{2}+2\\cdot\\frac{1}{2}+2\\cdot 0=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan A+\\tan B=\\frac{\\sin(A+B)}{\\cos A\\cos B}$ and $\\tan A-\\tan B=\\frac{\\sin(A-B)}{\\cos A\\cos B}$.",
+    "$\\tan A=\\tan B\\iff A=n\\pi+B$ (both defined); always check the excluded points $\\cos A=0$ or $\\cos B=0$.",
+    "$\\sin\\theta+\\cos\\theta=\\sqrt{2}\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)\\in\\left[-\\sqrt{2},\\sqrt{2}\\right]$.",
+    "$\\tan(\\pi\\cos\\theta)$ is undefined exactly when $\\cos\\theta=\\pm\\frac{1}{2}$ - test candidate solutions against this."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Half-angle formulas and tangent of compound angles"
+   ],
+   "level": 1,
+   "question": "If $\\frac{\\sqrt{2}\\sin\\alpha}{\\sqrt{1+\\cos 2\\alpha}}=\\frac{1}{7}$ and $\\sqrt{\\frac{1-\\cos 2\\beta}{2}}=\\frac{1}{\\sqrt{10}}$, $\\alpha,\\beta\\in\\left(0,\\frac{\\pi}{2}\\right)$, then $\\tan(\\alpha+2\\beta)$ is equal to ________.",
+   "answer": "1",
+   "key_idea": "$1+\\cos 2\\alpha=2\\cos^2\\alpha$ and $\\frac{1-\\cos 2\\beta}{2}=\\sin^2\\beta$ reduce the data to $\\tan\\alpha$ and $\\sin\\beta$.",
+   "solution": [
+    "$\\frac{\\sqrt{2}\\sin\\alpha}{\\sqrt{1+\\cos 2\\alpha}}=\\frac{1}{7}$, $\\alpha,\\beta\\in\\left(0,\\frac{\\pi}{2}\\right)$.",
+    "$\\frac{\\sqrt{2}\\sin\\alpha}{\\sqrt{2}\\cos\\alpha}=\\frac{1}{7}\\Rightarrow\\tan\\alpha=\\frac{1}{7}$ ($\\cos\\alpha>0$).",
+    "$\\sqrt{\\frac{1-\\cos 2\\beta}{2}}=\\frac{1}{\\sqrt{10}}$ gives $\\sin\\beta=\\frac{1}{\\sqrt{10}}$.",
+    "$\\tan\\beta=\\frac{1}{3}$ (since $\\cos\\beta=\\frac{3}{\\sqrt{10}}$).",
+    "$\\tan 2\\beta=\\frac{2\\cdot\\frac{1}{3}}{1-\\frac{1}{9}}=\\frac{3}{4}$.",
+    "$\\tan(\\alpha+2\\beta)=\\frac{\\tan\\alpha+\\tan 2\\beta}{1-\\tan\\alpha\\tan 2\\beta}=\\frac{\\frac{1}{7}+\\frac{3}{4}}{1-\\frac{1}{7}\\times\\frac{3}{4}}$.",
+    "$\\tan(\\alpha+2\\beta)=\\frac{25/28}{25/28}=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF labels the compound-angle line 'tan(alpha + beta) = (tan alpha + tan 2beta)/(1 - tan alpha tan 2beta)'; the left side should be tan(alpha + 2beta). Answer 1 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Angles add when complex numbers multiply: $\\arg\\left[(7+i)(3+i)^2\\right]=\\alpha+2\\beta$.",
+     "solution": [
+      "$\\tan\\alpha=\\frac{1}{7}$ and $\\tan\\beta=\\frac{1}{3}$ with $\\alpha,\\beta$ acute, so $\\alpha=\\arg(7+i)$ and $\\beta=\\arg(3+i)$.",
+      "$(3+i)^2=9+6i-1=8+6i$.",
+      "$(7+i)(8+6i)=56+42i+8i-6=50+50i$.",
+      "So $\\tan(\\alpha+2\\beta)=\\frac{50}{50}=1$ (indeed $\\alpha+2\\beta=\\frac{\\pi}{4}$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{\\frac{1-\\cos 2x}{2}}=|\\sin x|$, $\\sqrt{\\frac{1+\\cos 2x}{2}}=|\\cos x|$ - the sign comes from the quadrant.",
+    "If $\\tan A=\\frac{b}{a}$ ($a>0$) then $A=\\arg(a+ib)$; sums of such angles are arguments of products.",
+    "Known: $\\tan^{-1}\\frac{1}{7}+2\\tan^{-1}\\frac{1}{3}=\\frac{\\pi}{4}$; also $\\tan^{-1}\\frac{1}{2}+\\tan^{-1}\\frac{1}{3}=\\frac{\\pi}{4}$.",
+    "$\\tan 2\\beta=\\frac{2\\tan\\beta}{1-\\tan^2\\beta}$; for $\\tan\\beta=\\frac{1}{3}$ it is $\\frac{3}{4}$ (a $3$-$4$-$5$ angle)."
+   ]
+  }
+ ]
+}
