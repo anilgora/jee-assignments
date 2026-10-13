@@ -1,0 +1,960 @@
+{
+ "title": "JEE Main Question Bank 02 (Integral Calculus 01) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions · 20 single-correct questions",
+ "source": "JEE_Main_Question_Bank_02_Integral_Calculus_01.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: 4 marks per question assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Trigonometric equations",
+    "Definite integral of $\\cos^2$ over whole periods"
+   ],
+   "level": 2,
+   "question": "If $\\theta_1$ and $\\theta_2$ are respectively the smallest and the largest values of $\\theta$ in $(0,2\\pi)-\\{\\pi\\}$ which satisfy the equation $2\\cot^2\\theta-\\frac{5}{\\sin\\theta}+4=0$, then $\\int_{\\theta_1}^{\\theta_2}\\cos^2 3\\theta\\,d\\theta$ is equal to:",
+   "options": [
+    "$\\frac{\\pi}{3}$",
+    "$\\frac{2\\pi}{3}$",
+    "$\\frac{\\pi}{3}+\\frac16$",
+    "$\\frac{\\pi}{9}$"
+   ],
+   "answer": "(A) $\\frac{\\pi}{3}$",
+   "key_idea": "Reduce the equation to a quadratic in $\\operatorname{cosec}\\theta$; then $\\cos^2 3\\theta$ is integrated by the double-angle formula.",
+   "solution": [
+    "$2\\cot^2\\theta-5\\operatorname{cosec}\\theta+4=0$.",
+    "Use $\\cot^2\\theta=\\operatorname{cosec}^2\\theta-1$: $2(\\operatorname{cosec}^2\\theta-1)-5\\operatorname{cosec}\\theta+4=0$.",
+    "$2\\operatorname{cosec}^2\\theta-5\\operatorname{cosec}\\theta+2=0$.",
+    "$(2\\operatorname{cosec}\\theta-1)(\\operatorname{cosec}\\theta-2)=0$, so $\\operatorname{cosec}\\theta=\\frac12$ (impossible, as $|\\operatorname{cosec}\\theta|\\ge1$) or $\\operatorname{cosec}\\theta=2$.",
+    "$\\sin\\theta=\\frac12\\Rightarrow\\theta=\\frac{\\pi}{6},\\frac{5\\pi}{6}$ in $(0,2\\pi)$; so $\\theta_1=\\frac{\\pi}{6}$, $\\theta_2=\\frac{5\\pi}{6}$.",
+    "$I=\\int_{\\pi/6}^{5\\pi/6}\\cos^2(3\\theta)\\,d\\theta=\\int_{\\pi/6}^{5\\pi/6}\\frac{1+\\cos6\\theta}{2}\\,d\\theta$.",
+    "$I=\\left[\\frac{\\theta}{2}+\\frac{\\sin6\\theta}{12}\\right]_{\\pi/6}^{5\\pi/6}=\\frac12\\cdot\\frac{2\\pi}{3}+\\frac{\\sin5\\pi-\\sin\\pi}{12}$.",
+    "$I=\\frac{\\pi}{3}+0=\\frac{\\pi}{3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "No antiderivative needed: the interval has length $\\frac{2\\pi}{3}$, exactly two periods of $\\cos^2 3\\theta$, so the integral is length $\\times$ average value $\\frac12$.",
+     "solution": [
+      "As in the main solution, the equation gives $\\sin\\theta=\\frac12$ and $\\theta_1=\\frac{\\pi}{6}$, $\\theta_2=\\frac{5\\pi}{6}$.",
+      "$\\cos^2 3\\theta=\\frac{1+\\cos6\\theta}{2}$ has period $\\frac{2\\pi}{6}=\\frac{\\pi}{3}$.",
+      "The interval $\\left[\\frac{\\pi}{6},\\frac{5\\pi}{6}\\right]$ has length $\\frac{2\\pi}{3}=2\\cdot\\frac{\\pi}{3}$, i.e. exactly two full periods.",
+      "Over whole periods $\\int\\cos6\\theta\\,d\\theta=0$, so the integral equals $\\frac12\\times$ length.",
+      "$I=\\frac12\\cdot\\frac{2\\pi}{3}=\\frac{\\pi}{3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Over a whole number of periods, $\\int\\cos^2(k\\theta)\\,d\\theta=\\int\\sin^2(k\\theta)\\,d\\theta=\\frac12\\times$ length (average value $\\frac12$). Check: $\\int_0^{\\pi}\\cos^2 2\\theta\\,d\\theta=\\frac{\\pi}{2}$.",
+    "$\\cot^2\\theta=\\operatorname{cosec}^2\\theta-1$ turns mixed $\\cot$/$\\operatorname{cosec}$ equations into a quadratic in one ratio; reject roots with $|\\operatorname{cosec}\\theta|<1$.",
+    "In this question $\\operatorname{cosec}\\theta=\\frac12$ is rejected since $\\sin\\theta=2$ is impossible; the excluded point $\\theta=\\pi$ is where $\\cot\\theta$, $\\operatorname{cosec}\\theta$ are undefined."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Linear differential equation (identifying the coefficient $p(x)$)"
+   ],
+   "level": 1,
+   "question": "If $y=\\left(\\frac{2x}{\\pi}-1\\right)\\operatorname{cosec}x$ is the solution of the differential equation $\\frac{dy}{dx}+p(x)\\,y=\\frac{2}{\\pi}\\operatorname{cosec}x$, $0<x<\\frac{\\pi}{2}$, then the function $p(x)$ is equal to:",
+   "options": [
+    "$\\tan x$",
+    "$\\sec x$",
+    "$\\cot x$",
+    "$\\operatorname{cosec}x$"
+   ],
+   "answer": "(C) $\\cot x$",
+   "key_idea": "Differentiate the given solution and rewrite $\\frac{dy}{dx}$ in the form $\\frac{dy}{dx}+p\\,y=\\ldots$",
+   "solution": [
+    "$y=\\left(\\frac{2x}{\\pi}-1\\right)\\operatorname{cosec}x$.",
+    "$\\frac{dy}{dx}=\\left(\\frac{2x}{\\pi}-1\\right)(-\\operatorname{cosec}x\\cot x)+\\operatorname{cosec}x\\left(\\frac{2}{\\pi}\\right)$.",
+    "$\\frac{dy}{dx}=-\\left[\\left(\\frac{2x}{\\pi}-1\\right)\\operatorname{cosec}x\\right]\\cot x+\\frac{2}{\\pi}\\operatorname{cosec}x=-y\\cot x+\\frac{2}{\\pi}\\operatorname{cosec}x$.",
+    "Hence $\\frac{dy}{dx}+y\\cot x=\\frac{2}{\\pi}\\operatorname{cosec}x$.",
+    "Comparing with $\\frac{dy}{dx}+p(x)\\,y=\\frac{2}{\\pi}\\operatorname{cosec}x$: $p(x)=\\cot x$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute a convenient point: $p(x)=\\dfrac{Q-y'}{y}$ at $x=\\frac{\\pi}{6}$ must match exactly one option.",
+     "solution": [
+      "From the equation, $p=\\frac{Q-y'}{y}$ with $Q=\\frac{2}{\\pi}\\operatorname{cosec}x$.",
+      "At $x=\\frac{\\pi}{6}$: $\\operatorname{cosec}x=2$, $\\cot x=\\sqrt3$, so $Q=\\frac{4}{\\pi}$ and $y=\\left(\\frac13-1\\right)\\cdot2=-\\frac43$.",
+      "$y'=\\frac{2}{\\pi}\\operatorname{cosec}x-\\left(\\frac{2x}{\\pi}-1\\right)\\operatorname{cosec}x\\cot x=\\frac{4}{\\pi}-\\left(-\\frac23\\right)(2)(\\sqrt3)=\\frac{4}{\\pi}+\\frac{4\\sqrt3}{3}$.",
+      "$p\\left(\\frac{\\pi}{6}\\right)=\\frac{\\frac4\\pi-\\frac4\\pi-\\frac{4\\sqrt3}{3}}{-\\frac43}=\\sqrt3$.",
+      "At $x=\\frac{\\pi}{6}$: $\\tan x=\\frac{1}{\\sqrt3}$, $\\sec x=\\frac{2}{\\sqrt3}$, $\\cot x=\\sqrt3$, $\\operatorname{cosec}x=2$; only $\\cot x$ equals $\\sqrt3$, so $p(x)=\\cot x$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $y=u(x)\\,e^{-\\int p\\,dx}$ then $y'+py=u'(x)\\,e^{-\\int p\\,dx}$. Here $e^{-\\int\\cot x\\,dx}=\\operatorname{cosec}x$, so $p=\\cot x$ and $u'=\\frac2\\pi$.",
+    "Given a solution of a linear first-order ODE, $p=\\frac{Q-y'}{y}$ wherever $y\\ne0$; a single test point usually separates the options.",
+    "Standard integrating factors: $\\int\\cot x\\,dx=\\ln|\\sin x|$ gives I.F. $\\sin x$; $\\int\\tan x\\,dx=-\\ln|\\cos x|$ gives I.F. $\\cos x$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Definite integral of the greatest integer function",
+    "Shifting the variable"
+   ],
+   "level": 2,
+   "question": "The value of the integral $\\int_1^3\\left[x^2-2x-2\\right]dx$, where $[x]$ denotes the greatest integer less than or equal to $x$, is:",
+   "options": [
+    "$-5$",
+    "$-\\sqrt2-\\sqrt3+1$",
+    "$-\\sqrt2-\\sqrt3-1$",
+    "$-4$"
+   ],
+   "answer": "(C) $-\\sqrt2-\\sqrt3-1$",
+   "key_idea": "Complete the square, $x^2-2x-2=(x-1)^2-3$; the $-3$ leaves the bracket, and $[t^2]$ is a step function.",
+   "solution": [
+    "$I=\\int_1^3\\left[x^2-2x-2\\right]dx=\\int_1^3\\left[(x-1)^2-3\\right]dx$.",
+    "Put $x-1=t$: limits become $t=0$ to $2$.",
+    "$I=\\int_0^2\\left[t^2-3\\right]dt=\\int_0^2\\left[t^2\\right]dt-3\\int_0^2dt$ (as $-3$ is an integer).",
+    "$[t^2]$ is $0$ on $[0,1)$, $1$ on $[1,\\sqrt2)$, $2$ on $[\\sqrt2,\\sqrt3)$, $3$ on $[\\sqrt3,2)$.",
+    "$\\int_0^2\\left[t^2\\right]dt=\\int_0^1 0\\,dt+\\int_1^{\\sqrt2}1\\,dt+\\int_{\\sqrt2}^{\\sqrt3}2\\,dt+\\int_{\\sqrt3}^{2}3\\,dt$.",
+    "$=(\\sqrt2-1)+2(\\sqrt3-\\sqrt2)+3(2-\\sqrt3)=5-\\sqrt2-\\sqrt3$.",
+    "$I=5-\\sqrt2-\\sqrt3-6=-\\sqrt2-\\sqrt3-1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Layer-cake: for $t\\ge0$, $[t^2]=\\sum_{k\\ge1}\\mathbf 1[t^2\\ge k]$, so $\\int_0^2[t^2]\\,dt=\\sum_k(2-\\sqrt k)$.",
+     "solution": [
+      "Shift as before: $I=\\int_0^2[t^2]\\,dt-6$.",
+      "For $t\\in[0,2]$, $[t^2]\\in\\{0,1,2,3\\}$ and $[t^2]=\\sum_{k=1}^{3}\\mathbf 1\\{t^2\\ge k\\}$.",
+      "$\\int_0^2\\mathbf 1\\{t\\ge\\sqrt k\\}\\,dt=2-\\sqrt k$ for $k=1,2,3$.",
+      "$\\int_0^2[t^2]\\,dt=(2-1)+(2-\\sqrt2)+(2-\\sqrt3)=5-\\sqrt2-\\sqrt3$.",
+      "$I=5-\\sqrt2-\\sqrt3-6=-1-\\sqrt2-\\sqrt3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For an increasing $g\\ge0$ on $[0,T]$: $\\int_0^T[g(t)]\\,dt=\\sum_{k\\ge1}\\left(T-g^{-1}(k)\\right)$ over the integers $k\\le g(T)$ - one term per step instead of one integral per step.",
+    "$[x+n]=[x]+n$ for any integer $n$, so integer constants can be pulled out of the bracket before integrating.",
+    "Always complete the square first when the argument of $[\\,\\cdot\\,]$ is a quadratic: the breakpoints are then $\\sqrt{k}$ values around the vertex."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Definite integral of trigonometric functions using the $\\tan x=t$ substitution"
+   ],
+   "level": 3,
+   "question": "The integral $\\int_{\\pi/6}^{\\pi/4}\\frac{dx}{\\sin2x\\left(\\tan^5x+\\cot^5x\\right)}$ equals:",
+   "options": [
+    "$\\frac{\\pi}{40}$",
+    "$\\frac{1}{20}\\tan^{-1}\\left(\\frac{1}{9\\sqrt3}\\right)$",
+    "$\\frac{1}{10}\\left(\\frac{\\pi}{4}-\\tan^{-1}\\left(\\frac{1}{9\\sqrt3}\\right)\\right)$",
+    "$\\frac15\\left(\\frac{\\pi}{4}-\\tan^{-1}\\left(\\frac{1}{3\\sqrt3}\\right)\\right)$"
+   ],
+   "answer": "(C) $\\frac{1}{10}\\left(\\frac{\\pi}{4}-\\tan^{-1}\\frac{1}{9\\sqrt3}\\right)$",
+   "key_idea": "Write $\\sin2x=2\\sin x\\cos x$ and $\\tan^5x+\\cot^5x=\\frac{\\tan^{10}x+1}{\\tan^5x}$ to expose $\\tan^4x\\sec^2x\\,dx$, then put $\\tan^5x=U$.",
+   "solution": [
+    "$I=\\int_{\\pi/6}^{\\pi/4}\\frac{dx}{\\sin2x\\left(\\tan^5x+\\cot^5x\\right)}=\\frac12\\int_{\\pi/6}^{\\pi/4}\\frac{dx}{\\sin x\\cos x\\,\\frac{\\tan^{10}x+1}{\\tan^5x}}$.",
+    "$=\\frac12\\int_{\\pi/6}^{\\pi/4}\\frac{\\tan^5x\\,dx}{\\sin x\\cos x\\left(\\tan^{10}x+1\\right)}$.",
+    "Divide numerator and denominator by $\\cos^2x$: $\\sin x\\cos x=\\tan x\\cos^2x$, so $=\\frac12\\int_{\\pi/6}^{\\pi/4}\\frac{\\tan^4x\\sec^2x\\,dx}{1+\\tan^{10}x}$.",
+    "Put $\\tan x=t$, $\\sec^2x\\,dx=dt$; limits $t=\\frac{1}{\\sqrt3}$ to $1$: $I=\\frac12\\int_{1/\\sqrt3}^{1}\\frac{t^4\\,dt}{1+t^{10}}$.",
+    "Put $t^5=U$: $5t^4\\,dt=dU$, so $t^4\\,dt=\\frac{dU}{5}$; limits $U=\\left(\\frac1{\\sqrt3}\\right)^5=\\frac{1}{9\\sqrt3}$ to $1$.",
+    "$I=\\frac1{10}\\int_{1/(9\\sqrt3)}^{1}\\frac{dU}{1+U^2}=\\frac1{10}\\left[\\tan^{-1}U\\right]_{1/(9\\sqrt3)}^{1}$.",
+    "$I=\\frac1{10}\\left(\\frac{\\pi}{4}-\\tan^{-1}\\frac{1}{9\\sqrt3}\\right)$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int\\frac{\\tan^{n-1}x\\sec^2x}{1+\\tan^{2n}x}\\,dx=\\frac1n\\tan^{-1}\\left(\\tan^nx\\right)+C$: any $\\frac{1}{\\sin2x\\,(\\tan^nx+\\cot^nx)}$ reduces to this, because $\\frac{1}{\\sin2x\\,(\\tan^n+\\cot^n)}=\\frac{\\tan^{n-1}x\\sec^2x}{2(1+\\tan^{2n}x)}$.",
+    "$\\tan^nx+\\cot^nx=\\frac{\\tan^{2n}x+1}{\\tan^nx}$ - rewrite sums of reciprocals as one fraction before substituting.",
+    "Check: $n=1$ gives $\\int\\frac{dx}{\\sin2x(\\tan x+\\cot x)}=\\int\\frac{dx}{2}=\\frac x2$, and the formula gives $\\frac12\\tan^{-1}(\\tan x)=\\frac x2$.",
+    "Limits transform as $t=\\tan x$: $\\tan\\frac\\pi6=\\frac1{\\sqrt3}$, $\\tan\\frac\\pi4=1$; then $t^5$ at $\\frac1{\\sqrt3}$ is $\\frac{1}{9\\sqrt3}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Definite integral of trigonometric ratios ($\\cot x$, $\\operatorname{cosec}x$)",
+    "Half-angle identities"
+   ],
+   "level": 2,
+   "question": "If $\\int_0^{\\pi/2}\\frac{\\cot x}{\\cot x+\\operatorname{cosec}x}\\,dx=m(\\pi+n)$, then $m\\cdot n$ is equal to:",
+   "options": [
+    "$\\frac12$",
+    "$1$",
+    "$-1$",
+    "$-\\frac12$"
+   ],
+   "answer": "(C) $-1$",
+   "key_idea": "$\\frac{\\cot x}{\\cot x+\\operatorname{cosec}x}=\\frac{\\cos x}{1+\\cos x}=1-\\frac{1}{1+\\cos x}$, and $1+\\cos x=2\\cos^2\\frac x2$.",
+   "solution": [
+    "$\\frac{\\cot x}{\\cot x+\\operatorname{cosec}x}=\\frac{\\cos x}{\\cos x+1}$ (multiply numerator and denominator by $\\sin x$).",
+    "$I=\\int_0^{\\pi/2}\\frac{\\cos x}{1+\\cos x}\\,dx=\\int_0^{\\pi/2}\\left(1-\\frac{1}{1+\\cos x}\\right)dx$.",
+    "$I=\\left[x\\right]_0^{\\pi/2}-\\int_0^{\\pi/2}\\frac{dx}{2\\cos^2\\frac x2}$.",
+    "$I=\\frac\\pi2-\\frac12\\int_0^{\\pi/2}\\sec^2\\frac x2\\,dx$.",
+    "$I=\\frac\\pi2-\\frac12\\left[2\\tan\\frac x2\\right]_0^{\\pi/2}=\\frac\\pi2-\\left[\\tan\\frac x2\\right]_0^{\\pi/2}$.",
+    "$I=\\frac\\pi2-\\left[1-0\\right]=\\frac\\pi2-1=\\frac12(\\pi-2)$.",
+    "Comparing with $m(\\pi+n)$: $m=\\frac12$, $n=-2$, so $m\\cdot n=-1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Weierstrass substitution $t=\\tan\\frac x2$ turns $\\frac{\\cos x}{1+\\cos x}$ into a rational function with no half-angle manipulation.",
+     "solution": [
+      "$\\frac{\\cot x}{\\cot x+\\operatorname{cosec}x}=\\frac{\\cos x}{1+\\cos x}$ as before.",
+      "Put $t=\\tan\\frac x2$: $\\cos x=\\frac{1-t^2}{1+t^2}$, $1+\\cos x=\\frac{2}{1+t^2}$, $dx=\\frac{2\\,dt}{1+t^2}$; limits $t=0$ to $1$.",
+      "$\\frac{\\cos x}{1+\\cos x}\\,dx=\\frac{1-t^2}{2}\\cdot\\frac{2\\,dt}{1+t^2}=\\frac{1-t^2}{1+t^2}\\,dt=\\left(\\frac{2}{1+t^2}-1\\right)dt$.",
+      "$I=\\left[2\\tan^{-1}t-t\\right]_0^1=\\frac\\pi2-1$.",
+      "So $m=\\frac12$, $n=-2$ and $mn=-1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{\\cot x}{\\cot x+\\operatorname{cosec}x}=\\frac{\\cos x}{1+\\cos x}$ and $\\frac{\\operatorname{cosec}x}{\\cot x+\\operatorname{cosec}x}=\\frac{1}{1+\\cos x}$ - convert everything to $\\sin,\\cos$ first.",
+    "$\\frac{1}{1+\\cos x}=\\frac12\\sec^2\\frac x2$ and $\\frac{1}{1-\\cos x}=\\frac12\\operatorname{cosec}^2\\frac x2$, with antiderivatives $\\tan\\frac x2$ and $-\\cot\\frac x2$.",
+    "$t=\\tan\\frac x2$ makes every rational function of $\\sin x,\\cos x$ rational in $t$; use it when nothing simpler works."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Area of the region bounded by modulus curves and a parabola"
+   ],
+   "level": 3,
+   "question": "The area (in sq. units) of the region $A=\\{(x,y):|x|+|y|\\le1,\\ 2y^2\\ge|x|\\}$ is:",
+   "options": [
+    "$\\frac76$",
+    "$\\frac16$",
+    "$\\frac13$",
+    "$\\frac56$"
+   ],
+   "answer": "(D) $\\frac56$",
+   "key_idea": "Both curves are symmetric in both axes, so find the first-quadrant area (square corner minus the parabola part) and multiply by 4.",
+   "solution": [
+    "$|x|+|y|\\le1$ is the square (diamond) with vertices $(\\pm1,0),(0,\\pm1)$; $2y^2\\ge|x|$ is the region outside the parabolas $2y^2=x$ and $2y^2=-x$ (which open to the right and the left).",
+    "Both bounds are symmetric about both axes, so $A=4\\times$ (area in the first quadrant).",
+    "In the first quadrant the parabola $x=2y^2$ meets $x+y=1$: $2y^2+y-1=0\\Rightarrow y=\\frac12$, $x=\\frac12$, i.e. at $\\left(\\frac12,\\frac12\\right)$.",
+    "First-quadrant triangle $x+y\\le1$ has area $\\frac12\\cdot1\\cdot1$; the region needed lies where $x\\le2y^2$, i.e. above the curve $y=\\sqrt{x/2}$.",
+    "So subtract the area under $y=\\sqrt{x/2}$ for $0\\le x\\le\\frac12$, which is $\\int_0^{1/2}\\sqrt{\\frac x2}\\,dx$, and the small triangle with vertices $\\left(\\frac12,0\\right),(1,0),\\left(\\frac12,\\frac12\\right)$, of area $\\frac12\\cdot\\frac12\\cdot\\frac12$.",
+    "$A=4\\left(\\frac12\\cdot1\\cdot1-\\int_0^{1/2}\\sqrt{\\frac x2}\\,dx-\\frac12\\cdot\\frac12\\cdot\\frac12\\right)$.",
+    "$\\int_0^{1/2}\\sqrt{\\frac x2}\\,dx=\\frac{1}{\\sqrt2}\\cdot\\frac23\\left(\\frac12\\right)^{3/2}=\\frac16$.",
+    "$A=4\\left(\\frac12-\\frac16-\\frac18\\right)=4\\cdot\\frac{5}{24}=\\frac56$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Slice horizontally: at height $y$ the allowed half-width is $\\min(2y^2,\\,1-|y|)$, so no square roots appear.",
+     "solution": [
+      "By symmetry $A=4\\times$ (first-quadrant area) $=4\\int_0^1 m(y)\\,dy$, where for each $y\\in[0,1]$ the strip is $0\\le x\\le m(y)$ with $m(y)=\\min\\left(2y^2,\\,1-y\\right)$.",
+      "The two bounds cross at $2y^2=1-y$, i.e. $y=\\frac12$; for $y<\\frac12$, $2y^2<1-y$, and for $y>\\frac12$, $1-y<2y^2$.",
+      "$\\int_0^{1/2}2y^2\\,dy=\\frac23\\cdot\\frac18=\\frac1{12}$.",
+      "$\\int_{1/2}^1(1-y)\\,dy=\\frac12\\cdot\\frac12\\cdot\\frac12=\\frac18$.",
+      "$A=4\\left(\\frac1{12}+\\frac18\\right)=4\\cdot\\frac5{24}=\\frac56$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When curves are of the form $x=f(y)$ (parabolas opening sideways), integrate with respect to $y$: it avoids square roots and the number of regions is often smaller.",
+    "Area of $|x|+|y|\\le a$ is $2a^2$; the diamond has area $2$ here. Complement check: the part of the diamond with $2y^2<|x|$ has area $2-\\frac56=\\frac76$ (option (A) is that complement).",
+    "For regions symmetric in both axes, compute one quadrant and multiply by 4; always find the intersection points of the curves in that quadrant first."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Integration of trigonometric functions",
+    "Double-angle identities and the substitution $\\tan\\theta=t$"
+   ],
+   "level": 2,
+   "question": "If $\\int\\frac{d\\theta}{\\cos^2\\theta\\left(\\tan2\\theta+\\sec2\\theta\\right)}=\\lambda\\tan\\theta+2\\log_e|f(\\theta)|+C$, where $C$ is a constant of integration, then the ordered pair $(\\lambda,f(\\theta))$ is equal to:",
+   "options": [
+    "$(1,\\,1-\\tan\\theta)$",
+    "$(1,\\,1+\\tan\\theta)$",
+    "$(-1,\\,1+\\tan\\theta)$",
+    "$(-1,\\,1-\\tan\\theta)$"
+   ],
+   "answer": "(C) $(-1,\\ 1+\\tan\\theta)$",
+   "key_idea": "$\\tan2\\theta+\\sec2\\theta=\\frac{1+\\sin2\\theta}{\\cos2\\theta}=\\frac{(\\cos\\theta+\\sin\\theta)^2}{(\\cos\\theta-\\sin\\theta)(\\cos\\theta+\\sin\\theta)}$, which collapses to $\\frac{1+\\tan\\theta}{1-\\tan\\theta}$.",
+   "solution": [
+    "$\\tan2\\theta+\\sec2\\theta=\\frac{1+\\sin2\\theta}{\\cos2\\theta}$, so the integrand is $\\frac{\\cos2\\theta}{\\cos^2\\theta\\,(1+\\sin2\\theta)}$.",
+    "$\\cos2\\theta=(\\cos\\theta-\\sin\\theta)(\\cos\\theta+\\sin\\theta)$ and $1+\\sin2\\theta=(\\cos\\theta+\\sin\\theta)^2$.",
+    "$\\int\\frac{(\\cos\\theta-\\sin\\theta)(\\cos\\theta+\\sin\\theta)}{\\cos^2\\theta\\,(\\cos\\theta+\\sin\\theta)^2}\\,d\\theta=\\int\\sec^2\\theta\\cdot\\frac{1-\\tan\\theta}{1+\\tan\\theta}\\,d\\theta$.",
+    "Put $\\tan\\theta=t$, $\\sec^2\\theta\\,d\\theta=dt$: $\\int\\frac{1-t}{1+t}\\,dt$.",
+    "Put $1+t=u$, $dt=du$: $\\int\\frac{1-(u-1)}{u}\\,du=\\int\\frac{2-u}{u}\\,du=2\\int\\frac{du}{u}-\\int du$.",
+    "$=2\\ln|u|-u+C=2\\ln|1+t|-(1+t)+C$.",
+    "$=2\\ln|1+\\tan\\theta|-\\tan\\theta+C'$ (the constant $-1$ is absorbed in $C'$).",
+    "Comparing with $\\lambda\\tan\\theta+2\\log_e|f(\\theta)|+C$: $\\lambda=-1$, $f(\\theta)=1+\\tan\\theta$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the candidate form and match it with the integrand: this fixes $\\lambda$ and rules out each wrong option.",
+     "solution": [
+      "The integrand simplifies to $\\sec^2\\theta\\,\\frac{1-t}{1+t}$ with $t=\\tan\\theta$ (as in the main solution, or using $\\tan2\\theta+\\sec2\\theta=\\tan\\left(\\frac\\pi4+\\theta\\right)=\\frac{1+t}{1-t}$).",
+      "For $f=1+\\tan\\theta$: $\\frac{d}{d\\theta}\\left[\\lambda\\tan\\theta+2\\ln(1+t)\\right]=\\sec^2\\theta\\left[\\lambda+\\frac{2}{1+t}\\right]=\\sec^2\\theta\\,\\frac{\\lambda(1+t)+2}{1+t}$.",
+      "Equate to $\\sec^2\\theta\\,\\frac{1-t}{1+t}$: $\\lambda(1+t)+2=1-t$ for all $t$, which forces $\\lambda=-1$ (then $-1-t+2=1-t$).",
+      "For $f=1-\\tan\\theta$ the derivative is $\\sec^2\\theta\\left[\\lambda-\\frac{2}{1-t}\\right]=\\sec^2\\theta\\,\\frac{\\lambda(1-t)-2}{1-t}$, whose denominator $1-t$ differs from $1+t$; no $\\lambda$ works.",
+      "So the pair is $(-1,\\,1+\\tan\\theta)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan2\\theta+\\sec2\\theta=\\frac{1+\\sin2\\theta}{\\cos2\\theta}=\\tan\\left(\\frac\\pi4+\\theta\\right)=\\frac{1+\\tan\\theta}{1-\\tan\\theta}$; likewise $\\sec2\\theta-\\tan2\\theta=\\frac{1-\\tan\\theta}{1+\\tan\\theta}$.",
+    "$1\\pm\\sin2\\theta=(\\cos\\theta\\pm\\sin\\theta)^2$ and $\\cos2\\theta=(\\cos\\theta-\\sin\\theta)(\\cos\\theta+\\sin\\theta)$.",
+    "$\\int\\frac{1-t}{1+t}\\,dt=2\\ln|1+t|-t+C$; in general divide first: $\\frac{1-t}{1+t}=\\frac{2}{1+t}-1$.",
+    "For an 'identify the form' question, differentiating the RHS and matching is a fast check of each option."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Variable separable differential equation",
+    "Integration by substitution ($1+x^2=t^2$)"
+   ],
+   "level": 3,
+   "question": "The general solution of the differential equation $\\sqrt{1+x^2+y^2+x^2y^2}+xy\\frac{dy}{dx}=0$ is: (where $C$ is a constant of integration)",
+   "options": [
+    "$\\sqrt{1+y^2}+\\sqrt{1+x^2}=\\frac12\\log_e\\left(\\frac{\\sqrt{1+x^2}+1}{\\sqrt{1+x^2}-1}\\right)+C$",
+    "$\\sqrt{1+y^2}-\\sqrt{1+x^2}=\\frac12\\log_e\\left(\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}\\right)+C$",
+    "$\\sqrt{1+y^2}+\\sqrt{1+x^2}=\\frac12\\log_e\\left(\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}\\right)+C$",
+    "$\\sqrt{1+y^2}-\\sqrt{1+x^2}=\\frac12\\log_e\\left(\\frac{\\sqrt{1+x^2}+1}{\\sqrt{1+x^2}-1}\\right)+C$"
+   ],
+   "answer": "(A) $\\sqrt{1+y^2}+\\sqrt{1+x^2}=\\frac12\\log_e\\left(\\frac{\\sqrt{1+x^2}+1}{\\sqrt{1+x^2}-1}\\right)+C$",
+   "key_idea": "Factor $1+x^2+y^2+x^2y^2=(1+x^2)(1+y^2)$ to separate the variables, then use $1+x^2=t^2$ and $1+y^2=k^2$.",
+   "solution": [
+    "$1+x^2+y^2+x^2y^2=(1+x^2)(1+y^2)$, so $\\sqrt{(1+x^2)(1+y^2)}=-xy\\frac{dy}{dx}$.",
+    "Separate: $\\frac{\\sqrt{1+x^2}}{x}\\,dx=\\frac{-y}{\\sqrt{1+y^2}}\\,dy$.",
+    "Multiply and divide the left side by $x$: $\\int\\frac{\\sqrt{1+x^2}}{x^2}\\,(x\\,dx)=\\int\\frac{-y}{\\sqrt{1+y^2}}\\,dy$.",
+    "Put $1+x^2=t^2$ (so $x\\,dx=t\\,dt$) and $1+y^2=k^2$ (so $y\\,dy=k\\,dk$).",
+    "$\\int\\frac{t^2}{t^2-1}\\,dt=\\int-dk$, since $x^2=t^2-1$ and $\\frac{y\\,dy}{\\sqrt{1+y^2}}=dk$.",
+    "$\\int\\left(1+\\frac{1}{t^2-1}\\right)dt=-k+C$.",
+    "$t+\\frac12\\ln\\left|\\frac{t-1}{t+1}\\right|=-k+C$.",
+    "$\\sqrt{1+x^2}+\\frac12\\ln\\left(\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}\\right)=-\\sqrt{1+y^2}+C$.",
+    "$\\sqrt{1+x^2}+\\sqrt{1+y^2}=\\frac12\\ln\\left(\\frac{\\sqrt{1+x^2}+1}{\\sqrt{1+x^2}-1}\\right)+C$, which is option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Hyperbolic substitution $x=\\sinh u$, $y=\\sinh v$ makes $\\sqrt{1+x^2}=\\cosh u$ and the equation separates at sight.",
+     "solution": [
+      "Put $x=\\sinh u$, $y=\\sinh v$: $\\sqrt{1+x^2}=\\cosh u$, $\\sqrt{1+y^2}=\\cosh v$, $dx=\\cosh u\\,du$, $dy=\\cosh v\\,dv$.",
+      "The equation $\\sqrt{(1+x^2)(1+y^2)}\\,dx=-xy\\,dy$ becomes $\\cosh u\\cosh v\\cosh u\\,du=-\\sinh u\\sinh v\\cosh v\\,dv$.",
+      "Divide by $\\sinh u\\cosh v$: $\\frac{\\cosh^2u}{\\sinh u}\\,du=-\\sinh v\\,dv$, i.e. $\\left(\\sinh u+\\frac{1}{\\sinh u}\\right)du=-\\sinh v\\,dv$.",
+      "Integrate: $\\cosh u+\\ln\\tanh\\frac u2=-\\cosh v+C$, using $\\int\\frac{du}{\\sinh u}=\\ln\\tanh\\frac u2$.",
+      "$\\tanh\\frac u2=\\frac{\\cosh u-1}{\\sinh u}=\\sqrt{\\frac{\\cosh u-1}{\\cosh u+1}}$, so $\\ln\\tanh\\frac u2=\\frac12\\ln\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}$.",
+      "$\\cosh u+\\cosh v=-\\frac12\\ln\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}+C=\\frac12\\ln\\frac{\\sqrt{1+x^2}+1}{\\sqrt{1+x^2}-1}+C$, which is option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1+x^2+y^2+x^2y^2=(1+x^2)(1+y^2)$ - spotting a product hidden in a sum is the usual way to separate variables.",
+    "For $\\sqrt{1+x^2}$, either $x=\\tan\\theta$ or $x=\\sinh u$ rationalises; $\\int\\frac{dx}{x\\sqrt{1+x^2}}=\\frac12\\ln\\left|\\frac{\\sqrt{1+x^2}-1}{\\sqrt{1+x^2}+1}\\right|+C$.",
+    "$\\int\\frac{dt}{t^2-1}=\\frac12\\ln\\left|\\frac{t-1}{t+1}\\right|+C$; $\\frac{t^2}{t^2-1}=1+\\frac{1}{t^2-1}$ (divide before integrating).",
+    "Quick sign check on options: differentiating $\\frac12\\ln\\frac{p+1}{p-1}$ ($p=\\sqrt{1+x^2}$) gives $-\\frac{1}{xp}$, matching the equation only for the $+$ combination in (A)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Integration of $\\frac{1}{(\\text{quadratic})^2}$ by trigonometric substitution"
+   ],
+   "level": 2,
+   "question": "If $\\int\\frac{dx}{\\left(x^2-2x+10\\right)^2}=A\\left(\\tan^{-1}\\left(\\frac{x-1}{3}\\right)+\\frac{f(x)}{x^2-2x+10}\\right)+C$, where $C$ is a constant of integration, then:",
+   "options": [
+    "$A=\\frac1{81}$ and $f(x)=3(x-1)$",
+    "$A=\\frac1{54}$ and $f(x)=3(x-1)$",
+    "$A=\\frac1{27}$ and $f(x)=9(x-1)$",
+    "$A=\\frac1{54}$ and $f(x)=9(x-1)^2$"
+   ],
+   "answer": "(B) $A=\\frac{1}{54}$ and $f(x)=3(x-1)$",
+   "key_idea": "Complete the square, $x^2-2x+10=(x-1)^2+9$, and put $x-1=3\\tan\\theta$ to get $\\int\\cos^2\\theta\\,d\\theta$.",
+   "solution": [
+    "$\\int\\frac{dx}{(x^2-2x+10)^2}=\\int\\frac{dx}{\\left((x-1)^2+9\\right)^2}$.",
+    "Put $(x-1)^2=9\\tan^2\\theta$, i.e. $\\tan\\theta=\\frac{x-1}{3}$ and $dx=3\\sec^2\\theta\\,d\\theta$.",
+    "$I=\\int\\frac{3\\sec^2\\theta\\,d\\theta}{\\left(9\\sec^2\\theta\\right)^2}=\\int\\frac{3\\sec^2\\theta}{81\\sec^4\\theta}\\,d\\theta=\\frac1{27}\\int\\cos^2\\theta\\,d\\theta$.",
+    "$I=\\frac1{27}\\cdot\\frac12\\int(1+\\cos2\\theta)\\,d\\theta=\\frac1{54}\\left\\{\\theta+\\frac{\\sin2\\theta}{2}\\right\\}+c$.",
+    "$\\sin2\\theta=\\frac{2\\tan\\theta}{1+\\tan^2\\theta}=\\frac{2\\cdot\\frac{x-1}{3}}{1+\\frac{(x-1)^2}{9}}$.",
+    "$\\frac{\\sin2\\theta}{2}=\\frac{\\frac{x-1}{3}}{1+\\frac{(x-1)^2}{9}}=\\frac{3(x-1)}{(x-1)^2+9}=\\frac{3(x-1)}{x^2-2x+10}$.",
+    "$I=\\frac1{54}\\left[\\tan^{-1}\\left(\\frac{x-1}{3}\\right)+\\frac{3(x-1)}{x^2-2x+10}\\right]+c$.",
+    "So $A=\\frac{1}{54}$ and $f(x)=3(x-1)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the standard reduction $\\int\\frac{du}{(u^2+a^2)^2}=\\frac{1}{2a^2}\\left[\\frac{u}{u^2+a^2}+\\frac1a\\tan^{-1}\\frac ua\\right]$, obtained from $\\frac{d}{du}\\frac{u}{u^2+a^2}$.",
+     "solution": [
+      "Put $u=x-1$, $a=3$: $x^2-2x+10=u^2+9$.",
+      "$\\frac{d}{du}\\left(\\frac{u}{u^2+a^2}\\right)=\\frac{1}{u^2+a^2}-\\frac{2u^2}{(u^2+a^2)^2}=-\\frac{1}{u^2+a^2}+\\frac{2a^2}{(u^2+a^2)^2}$.",
+      "Integrate: $\\frac{u}{u^2+a^2}=-\\int\\frac{du}{u^2+a^2}+2a^2\\int\\frac{du}{(u^2+a^2)^2}$.",
+      "$\\int\\frac{du}{(u^2+a^2)^2}=\\frac{1}{2a^2}\\left[\\frac{u}{u^2+a^2}+\\frac1a\\tan^{-1}\\frac ua\\right]+C$.",
+      "With $a=3$: $\\frac1{18}\\left[\\frac{u}{u^2+9}+\\frac13\\tan^{-1}\\frac u3\\right]=\\frac1{54}\\left[\\tan^{-1}\\frac u3+\\frac{3u}{u^2+9}\\right]$.",
+      "Hence $A=\\frac1{54}$ and $f(x)=3(x-1)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{dx}{(x^2+a^2)^2}=\\frac{1}{2a^2}\\left[\\frac{x}{x^2+a^2}+\\frac1a\\tan^{-1}\\frac xa\\right]+C$ (valid for $a\\ne0$). Check: $a=1$, derivative of $\\frac12\\left[\\frac{x}{x^2+1}+\\tan^{-1}x\\right]$ is $\\frac{1}{(x^2+1)^2}$.",
+    "$x=a\\tan\\theta$ turns $\\frac{1}{(x^2+a^2)^n}$ into $a^{1-2n}\\cos^{2n-2}\\theta\\,d\\theta$; and $\\sin2\\theta=\\frac{2\\tan\\theta}{1+\\tan^2\\theta}$ converts back.",
+    "Complete the square first: $x^2-2x+10=(x-1)^2+9$; shifting by $x-1$ first reduces the work."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "King property of definite integrals",
+    "Symmetry of a function ($f(a+b+1-x)=f(x)$)"
+   ],
+   "level": 3,
+   "question": "If $f(a+b+1-x)=f(x)$ for all $x$, where $a$ and $b$ are fixed positive real numbers, then $\\frac{1}{a+b}\\int_a^b x\\left(f(x)+f(x+1)\\right)dx$ is equal to:",
+   "options": [
+    "$\\int_{a-1}^{b-1}f(x+1)\\,dx$",
+    "$\\int_{a+1}^{b+1}f(x)\\,dx$",
+    "$\\int_{a-1}^{b-1}f(x)\\,dx$",
+    "$\\int_{a+1}^{b+1}f(x+1)\\,dx$"
+   ],
+   "answer": "(A) and (B) are both correct (each equals $\\int_a^b f(x)\\,dx$); the printed key (C) is wrong",
+   "key_idea": "Apply $x\\to a+b-x$ and use $f(a+b-x)=f(x+1)$ to get a second expression; adding gives $\\int_a^b\\left(f(x)+f(x+1)\\right)dx$.",
+   "solution": [
+    "$I=\\frac{1}{a+b}\\int_a^bx\\left(f(x)+f(x+1)\\right)dx$ ....(1)",
+    "Using $\\int_a^bg(x)\\,dx=\\int_a^bg(a+b-x)\\,dx$: $I=\\frac1{a+b}\\int_a^b(a+b-x)\\left(f(a+b-x)+f(a+b-x+1)\\right)dx$ ....(2)",
+    "The given relation $f(a+b+1-x)=f(x)$ gives $f(a+b-x+1)=f(x)$, and (replacing $x$ by $x+1$) $f(a+b-x)=f(x+1)$.",
+    "So (2) becomes $I=\\frac1{a+b}\\int_a^b(a+b-x)\\left(f(x+1)+f(x)\\right)dx$ ....(3)",
+    "Adding (1) and (3): $2I=\\frac1{a+b}\\int_a^b(a+b)\\left(f(x)+f(x+1)\\right)dx=\\int_a^b\\left(f(x)+f(x+1)\\right)dx$.",
+    "$2I=\\int_a^bf(x)\\,dx+\\int_a^bf(x+1)\\,dx$, and $\\int_a^bf(x)\\,dx=\\int_a^bf(a+b-x)\\,dx=\\int_a^bf(x+1)\\,dx$.",
+    "So $2I=2\\int_a^bf(x+1)\\,dx$, i.e. $I=\\int_a^bf(x+1)\\,dx$ (also $=\\int_a^bf(x)\\,dx$).",
+    "Put $x+1=t$: $I=\\int_{a+1}^{b+1}f(t)\\,dt$, which is option (B).",
+    "Also $I=\\int_a^bf(x)\\,dx=\\int_{a-1}^{b-1}f(x+1)\\,dx$ (put $x=y+1$), which is option (A). Options (C) and (D) are not equal to $I$ in general."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF ends with $I=\\int_{a-1}^{b-1}f(x)\\,dx$ (key C). That is wrong: $\\int_a^bf(x+1)\\,dx$ becomes $\\int_{a+1}^{b+1}f(t)\\,dt$ (limits shift by $+1$, not $-1$). Counter-example $f(x)=(x-2)^2$, $a=1$, $b=2$: $I=\\frac13$, option (B) $=\\frac13$, option (A) $=\\frac13$, but option (C) $=\\frac73$. Options (A) and (B) are both equal to $I$, so the question as printed has two correct options.",
+   "alternate_solutions": [
+    {
+     "idea": "Centroid/symmetry: $g(x)=f(x)+f(x+1)$ is symmetric about $x=\\frac{a+b}{2}$, so $\\int_a^bx\\,g(x)\\,dx=\\frac{a+b}{2}\\int_a^bg(x)\\,dx$.",
+     "solution": [
+      "Let $g(x)=f(x)+f(x+1)$. Using $f(a+b-x)=f(x+1)$ and $f(a+b-x+1)=f(x)$: $g(a+b-x)=f(x+1)+f(x)=g(x)$.",
+      "So $g$ is symmetric about the midpoint $\\frac{a+b}{2}$ of $[a,b]$; the 'centre of mass' of $x\\,g(x)$ over $[a,b]$ is at $\\frac{a+b}{2}$.",
+      "Hence $\\int_a^bx\\,g(x)\\,dx=\\frac{a+b}{2}\\int_a^bg(x)\\,dx$, and $I=\\frac12\\int_a^bg(x)\\,dx$.",
+      "$\\int_a^bf(x)\\,dx=\\int_a^bf(a+b-x)\\,dx=\\int_a^bf(x+1)\\,dx$, so $\\int_a^bg=2\\int_a^bf(x+1)\\,dx$.",
+      "$I=\\int_a^bf(x+1)\\,dx=\\int_{a+1}^{b+1}f(t)\\,dt$ (option B), and equals $\\int_a^bf(x)\\,dx=\\int_{a-1}^{b-1}f(x+1)\\,dx$ (option A).",
+      "Numerical check: $f(x)=\\cosh(x-3)$, $a=2$, $b=3$ (symmetric about $\\frac{a+b+1}{2}=3$): $I=\\sinh1\\approx1.1752$, option (B) $=1.1752$, option (C) $=\\int_1^2\\cosh(x-3)\\,dx\\approx2.4517$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $g(a+b-x)=g(x)$ then $\\int_a^bx\\,g(x)\\,dx=\\frac{a+b}{2}\\int_a^bg(x)\\,dx$ (the weight $x$ can be replaced by its average $\\frac{a+b}{2}$). Check: $g=1$ on $[0,2]$: $\\int_0^2x\\,dx=2=1\\cdot2$.",
+    "$f(c+x)=f(c-x)$ means $f$ is symmetric about $x=c$; here $c=\\frac{a+b+1}{2}$, so $\\int_a^bf=\\int_{a+1}^{b+1}f$ (reflection maps $[a,b]$ onto $[a+1,b+1]$).",
+    "Shifting limits: $\\int_a^bf(x+k)\\,dx=\\int_{a+k}^{b+k}f(t)\\,dt$ - the limits move the same way as the shift, not the opposite way.",
+    "When an answer key looks doubtful, test a symmetric function ($(x-c)^2$, $\\cosh(x-c)$) on specific $a,b$; here it shows (C) is wrong."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Integrals of the form $\\int e^{h(x)}\\left(\\ldots\\right)dx$",
+    "Substitution $u=e^x+e^{-x}+x$"
+   ],
+   "level": 3,
+   "question": "If $\\int\\left(e^{2x}+2e^x-e^{-x}-1\\right)e^{\\left(e^x+e^{-x}\\right)}dx=g(x)\\,e^{\\left(e^x+e^{-x}\\right)}+c$, where $c$ is a constant of integration, then $g(0)$ is equal to:",
+   "options": [
+    "$2$",
+    "$e$",
+    "$e^2$",
+    "$1$"
+   ],
+   "answer": "(A) $2$",
+   "key_idea": "Split the bracket as $\\left(e^x-e^{-x}\\right)+e^x\\left(e^x-e^{-x}+1\\right)$; each part is an exact derivative of $e^{h}$ for $h=e^x+e^{-x}$ or $h=e^x+e^{-x}+x$.",
+   "solution": [
+    "$I=\\int\\left(e^{2x}+2e^x-e^{-x}-1\\right)e^{e^x+e^{-x}}\\,dx$.",
+    "Split: $I=\\int\\left(e^x-e^{-x}\\right)e^{e^x+e^{-x}}\\,dx+\\int\\left(e^{2x}+e^x-1\\right)e^{e^x+e^{-x}}\\,dx=I_1+I_2$.",
+    "$I_1$: put $e^x+e^{-x}=t$, $\\left(e^x-e^{-x}\\right)dx=dt$; $I_1=\\int e^t\\,dt=e^t+C=e^{e^x+e^{-x}}+C$.",
+    "$I_2=\\int e^x\\left(e^x-e^{-x}+1\\right)e^{e^x+e^{-x}}\\,dx=\\int\\left(e^x-e^{-x}+1\\right)e^{e^x+e^{-x}+x}\\,dx$ (since $e^{2x}+e^x-1=e^x\\left(e^x-e^{-x}+1\\right)$).",
+    "Put $u=e^x+e^{-x}+x$, $du=\\left(e^x-e^{-x}+1\\right)dx$.",
+    "$I_2=\\int e^u\\,du=e^u+C=e^{e^x+e^{-x}+x}+C$.",
+    "$I=I_1+I_2=e^{e^x+e^{-x}}\\left(e^x+1\\right)+C$.",
+    "So $g(x)=e^x+1$ and $g(0)=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the second integrand as $\\left(e^{2x}-e^{-x}-1\\right)$; the correct remainder after removing $\\left(e^x-e^{-x}\\right)$ is $e^{2x}+e^x-1=e^x\\left(e^x-e^{-x}+1\\right)$. The later steps and the answer (A) 2 are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Undetermined $g$: for $\\int G\\,e^{h}dx=g\\,e^h$ we need $g'+g\\,h'=G$; with $h'=e^x-e^{-x}$ try $g=e^x+c$.",
+     "solution": [
+      "Differentiating $g(x)e^{h(x)}$ with $h=e^x+e^{-x}$: $\\left(g'+g\\,h'\\right)e^h$, so we need $g'+g\\left(e^x-e^{-x}\\right)=e^{2x}+2e^x-e^{-x}-1$.",
+      "Try $g=e^x+c$: $g'+g\\,h'=e^x+(e^x+c)\\left(e^x-e^{-x}\\right)=e^{2x}+e^x-1+c\\,e^x-c\\,e^{-x}$.",
+      "Matching with $e^{2x}+2e^x-e^{-x}-1$: coefficient of $e^x$ gives $1+c=2$, and of $e^{-x}$ gives $-c=-1$; both give $c=1$.",
+      "So $g(x)=e^x+1$ works, and $g(0)=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\left(g'+g\\,h'\\right)e^h\\,dx=g\\,e^h+C$: to find $g$, solve $g'+g\\,h'=$ integrand$/e^h$ with a guess of the same 'shape' as the integrand.",
+    "$\\frac{d}{dx}e^{h(x)}=h'(x)e^{h(x)}$; so $\\int e^x\\,e^{e^x}\\,dx=e^{e^x}+C$ and generally $\\int h'e^h=e^h$.",
+    "Absorb a factor into the exponent: $e^x\\,e^{h}=e^{h+x}$, then $\\frac{d}{dx}(h+x)=h'+1$ - this is how $e^x\\left(e^x-e^{-x}+1\\right)e^{h}$ becomes an exact derivative.",
+    "Check: $\\frac{d}{dx}\\left[(e^x+1)e^{e^x+e^{-x}}\\right]=e^{e^x+e^{-x}}\\left[e^{x}+(e^x+1)(e^x-e^{-x})\\right]=\\left(e^{2x}+2e^x-e^{-x}-1\\right)e^{e^x+e^{-x}}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Linear differential equation (integrating factor)",
+    "Weierstrass substitution $\\tan\\frac x2=t$"
+   ],
+   "level": 3,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\cos x\\left(3\\sin x+\\cos x+3\\right)dy=\\left(1+y\\sin x\\left(3\\sin x+\\cos x+3\\right)\\right)dx$, $0\\le x\\le\\frac\\pi2$, $y(0)=0$. Then $y\\left(\\frac\\pi3\\right)$ is equal to:",
+   "options": [
+    "$2\\log_e\\left(\\frac{2\\sqrt3+10}{11}\\right)$",
+    "$2\\log_e\\left(\\frac{\\sqrt3+7}{2}\\right)$",
+    "$2\\log_e\\left(\\frac{2\\sqrt3+9}{6}\\right)$",
+    "$2\\log_e\\left(\\frac{3\\sqrt3-8}{4}\\right)$"
+   ],
+   "answer": "(A) $2\\log_e\\left(\\frac{2\\sqrt3+10}{11}\\right)$",
+   "key_idea": "The equation is linear with integrating factor $\\cos x$, leaving $\\int\\frac{dx}{3\\sin x+\\cos x+3}$, which the substitution $\\tan\\frac x2=t$ makes rational.",
+   "solution": [
+    "Divide by $\\cos x\\,(3\\sin x+\\cos x+3)\\,dx$: $\\frac{dy}{dx}-y\\tan x=\\frac{1}{\\cos x\\,(3\\sin x+\\cos x+3)}$.",
+    "Integrating factor $=e^{-\\int\\tan x\\,dx}=\\cos x$.",
+    "$y\\cos x=\\int\\cos x\\cdot\\frac{dx}{\\cos x\\,(3\\sin x+\\cos x+3)}=\\int\\frac{dx}{3\\sin x+\\cos x+3}$.",
+    "Put $\\tan\\frac x2=t$: $\\sin x=\\frac{2t}{1+t^2}$, $\\cos x=\\frac{1-t^2}{1+t^2}$, so $3\\sin x+\\cos x+3=\\frac{6t+(1-t^2)+3(1+t^2)}{1+t^2}=\\frac{2t^2+6t+4}{1+t^2}$.",
+    "$y\\cos x=\\int\\frac{\\sec^2\\frac x2\\,dx}{2\\tan^2\\frac x2+6\\tan\\frac x2+4}=\\frac12\\int\\frac{\\sec^2\\frac x2\\,dx}{t^2+3t+2}$.",
+    "With $\\frac12\\sec^2\\frac x2\\,dx=dt$: $y\\cos x=\\int\\frac{dt}{t^2+3t+2}=\\int\\frac{dt}{(t+1)(t+2)}=\\ln\\left|\\frac{t+1}{t+2}\\right|+C$.",
+    "At $x=0$: $y=0$, $t=0$: $0=\\ln\\frac12+C$, so $C=-\\ln\\frac12=\\ln2$.",
+    "$y\\cos x=\\ln\\left|\\frac{\\tan\\frac x2+1}{\\tan\\frac x2+2}\\right|-\\ln\\frac12$.",
+    "At $x=\\frac\\pi3$: $\\cos x=\\frac12$, $t=\\tan\\frac\\pi6=\\frac1{\\sqrt3}$: $\\frac y2=\\ln\\left|\\frac{1+\\sqrt3}{1+2\\sqrt3}\\right|-\\ln\\frac12$.",
+    "$\\frac{1+\\sqrt3}{1+2\\sqrt3}\\cdot\\frac{2\\sqrt3-1}{2\\sqrt3-1}=\\frac{(1+\\sqrt3)(2\\sqrt3-1)}{11}=\\frac{5+\\sqrt3}{11}$.",
+    "$\\frac y2=\\ln\\frac{5+\\sqrt3}{11}-\\ln\\frac12=\\ln\\frac{2(5+\\sqrt3)}{11}$, so $y\\left(\\frac\\pi3\\right)=2\\ln\\frac{10+2\\sqrt3}{11}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $\\frac{dy}{dx}+P\\,y=Q$ the I.F. is $e^{\\int P\\,dx}$; for $P=-\\tan x$ it is $\\cos x$, and then $\\frac{d}{dx}(y\\cos x)=\\cos x\\cdot Q$.",
+    "Weierstrass: $\\sin x=\\frac{2t}{1+t^2}$, $\\cos x=\\frac{1-t^2}{1+t^2}$, $dx=\\frac{2\\,dt}{1+t^2}$, $t=\\tan\\frac x2$. Here it turns $3\\sin x+\\cos x+3$ into $\\frac{2(t+1)(t+2)}{1+t^2}$.",
+    "Factorisation check: $3\\sin x+\\cos x+3=2\\left(\\cos\\frac x2+\\sin\\frac x2\\right)\\left(2\\cos\\frac x2+\\sin\\frac x2\\right)$.",
+    "$\\int\\frac{dt}{(t+a)(t+b)}=\\frac{1}{b-a}\\ln\\left|\\frac{t+a}{t+b}\\right|+C$ ($a\\ne b$); rationalise surds in the final value by multiplying by the conjugate."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Definite integral by substitution (rational function of $x$)"
+   ],
+   "level": 2,
+   "question": "The integral $16\\int_1^2\\frac{dx}{x^3\\left(x^2+2\\right)^2}$ is equal to:",
+   "options": [
+    "$\\frac{11}{6}+\\log_e4$",
+    "$\\frac{11}{12}+\\log_e4$",
+    "$\\frac{11}{6}-\\log_e4$",
+    "$\\frac{11}{12}-\\log_e4$"
+   ],
+   "answer": "(C) $\\frac{11}{6}-\\log_e4$",
+   "key_idea": "Factor $x^4$ out of $x^3(x^2+2)^2$ to get $x^7\\left(1+\\frac2{x^2}\\right)^2$, then put $t=1+\\frac{2}{x^2}$.",
+   "solution": [
+    "$I=\\int_1^2\\frac{dx}{x^3\\left(x^2+2\\right)^2}=\\int_1^2\\frac{dx}{x^3\\,x^4\\left(1+\\frac{2}{x^2}\\right)^2}$.",
+    "Let $1+\\frac2{x^2}=t$, so $-\\frac{4}{x^3}\\,dx=dt$; limits $x=1\\to t=3$, $x=2\\to t=\\frac32$.",
+    "$\\frac1{x^2}=\\frac{t-1}{2}$, so $\\frac{1}{x^4}=\\frac{(t-1)^2}{4}$ and $\\frac{dx}{x^3}=-\\frac{dt}{4}$.",
+    "$I=-\\frac14\\int_3^{3/2}\\left(\\frac{t-1}{2}\\right)^2\\frac{dt}{t^2}=-\\frac1{16}\\int_3^{3/2}\\frac{t^2-2t+1}{t^2}\\,dt$.",
+    "$I=-\\frac1{16}\\int_3^{3/2}\\left(1-\\frac2t+\\frac1{t^2}\\right)dt=-\\frac1{16}\\left[t-2\\ln t-\\frac1t\\right]_3^{3/2}$.",
+    "At $t=\\frac32$: $\\frac32-2\\ln\\frac32-\\frac23$; at $t=3$: $3-2\\ln3-\\frac13$.",
+    "Difference $=\\left(\\frac32-3\\right)-2\\ln\\frac32+2\\ln3-\\frac23+\\frac13=-\\frac32+2\\ln2-\\frac13=-\\frac{11}{6}+2\\ln2$.",
+    "$I=-\\frac1{16}\\left(-\\frac{11}6+2\\ln2\\right)=\\frac{1}{16}\\left(\\frac{11}{6}-\\ln4\\right)$.",
+    "$16I=\\frac{11}{6}-\\ln4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $u=x^2$ ($x\\,dx=\\frac{du}{2}$) and split $\\frac{1}{u^2(u+2)^2}$ by partial fractions.",
+     "solution": [
+      "$\\frac{dx}{x^3(x^2+2)^2}=\\frac{x\\,dx}{x^4(x^2+2)^2}=\\frac{du}{2u^2(u+2)^2}$ with $u=x^2$, limits $1$ to $4$.",
+      "$\\frac1{u(u+2)}=\\frac12\\left(\\frac1u-\\frac1{u+2}\\right)$, so $\\frac1{u^2(u+2)^2}=\\frac14\\left(\\frac1{u^2}-\\frac{2}{u(u+2)}+\\frac{1}{(u+2)^2}\\right)=\\frac14\\left(\\frac1{u^2}-\\frac1u+\\frac1{u+2}+\\frac1{(u+2)^2}\\right)$.",
+      "$\\int_1^4\\frac{du}{u^2}=\\frac34$; $\\int_1^4\\left(\\frac1u-\\frac1{u+2}\\right)du=\\ln4-\\ln\\frac63=\\ln2$; $\\int_1^4\\frac{du}{(u+2)^2}=\\frac13-\\frac16=\\frac16$.",
+      "$\\int_1^4\\frac{du}{u^2(u+2)^2}=\\frac14\\left(\\frac34-\\ln2+\\frac16\\right)=\\frac14\\left(\\frac{11}{12}-\\ln2\\right)$.",
+      "$I=\\frac12\\cdot\\frac14\\left(\\frac{11}{12}-\\ln2\\right)$, so $16I=2\\left(\\frac{11}{12}-\\ln2\\right)=\\frac{11}{6}-\\ln4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int\\frac{dx}{x^{2k+1}(x^2+a)^m}$ put $u=x^2$ (odd power of $x$ gives $x\\,dx=\\frac{du}2$); for $\\frac{1}{x^n(x^2+a)^m}$ with large $n$ the substitution $t=1+\\frac{a}{x^2}$ also works.",
+    "$\\frac{1}{u(u+a)}=\\frac1a\\left(\\frac1u-\\frac1{u+a}\\right)$; squaring it gives the partial fractions of $\\frac{1}{u^2(u+a)^2}$ at once.",
+    "After substitution, always convert the limits and re-check which limit is larger (here $t$ runs from $3$ down to $\\frac32$, which supplies the minus sign)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Definite integral of the greatest integer function",
+    "King property ($x\\to2\\pi-x$) and $[t]+[-t]=-1$"
+   ],
+   "level": 3,
+   "question": "The value of $\\int_0^{2\\pi}\\left[\\sin2x\\left(1+\\cos3x\\right)\\right]dx$, where $[t]$ denotes the greatest integer function, is:",
+   "options": [
+    "$\\pi$",
+    "$-\\pi$",
+    "$-2\\pi$",
+    "$2\\pi$"
+   ],
+   "answer": "(B) $-\\pi$",
+   "key_idea": "With $x\\to2\\pi-x$, $\\sin2x(1+\\cos3x)$ changes sign, and $[t]+[-t]=-1$ for non-integer $t$, so the two copies of the integral add to $-2\\pi$.",
+   "solution": [
+    "$I=\\int_0^{2\\pi}\\left[\\sin2x\\left(1+\\cos3x\\right)\\right]dx$ ....(i)",
+    "Use $\\int_0^af(x)\\,dx=\\int_0^af(a-x)\\,dx$ with $a=2\\pi$: $\\sin2(2\\pi-x)=-\\sin2x$ and $\\cos3(2\\pi-x)=\\cos3x$.",
+    "$I=\\int_0^{2\\pi}\\left[-\\sin2x\\left(1+\\cos3x\\right)\\right]dx$ ....(ii)",
+    "Add (i) and (ii): $2I=\\int_0^{2\\pi}\\left(\\left[g(x)\\right]+\\left[-g(x)\\right]\\right)dx$ with $g(x)=\\sin2x\\,(1+\\cos3x)$.",
+    "$[t]+[-t]=-1$ unless $t$ is an integer; $g$ is an integer only at isolated points, which do not affect the integral.",
+    "So $2I=\\int_0^{2\\pi}(-1)\\,dx=-\\left[x\\right]_0^{2\\pi}=-2\\pi$.",
+    "$I=-\\pi$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $[g]=g-\\{g\\}$: the first part integrates to $0$ by odd symmetry about $\\pi$, the fractional parts pair up to $1$.",
+     "solution": [
+      "Let $g(x)=\\sin2x\\,(1+\\cos3x)$. Then $g(2\\pi-x)=-g(x)$, so $g$ is odd about $x=\\pi$ and $\\int_0^{2\\pi}g\\,dx=0$.",
+      "$\\int_0^{2\\pi}[g]\\,dx=\\int_0^{2\\pi}g\\,dx-\\int_0^{2\\pi}\\{g\\}\\,dx=-\\int_0^{2\\pi}\\{g\\}\\,dx$.",
+      "For non-integer $t$, $\\{t\\}+\\{-t\\}=1$; since $g(2\\pi-x)=-g(x)$, $\\{g(x)\\}+\\{g(2\\pi-x)\\}=1$ almost everywhere.",
+      "Hence $\\int_0^{2\\pi}\\{g\\}\\,dx=\\frac12\\int_0^{2\\pi}\\left(\\{g(x)\\}+\\{g(2\\pi-x)\\}\\right)dx=\\frac12\\cdot2\\pi=\\pi$.",
+      "$\\int_0^{2\\pi}[g]\\,dx=-\\pi$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[t]+[-t]=-1$ for $t\\notin\\mathbb Z$ (and $=0$ for $t\\in\\mathbb Z$); $\\{t\\}+\\{-t\\}=1$ for $t\\notin\\mathbb Z$.",
+    "If $g(a-x)=-g(x)$ then $\\int_0^a[g(x)]\\,dx=-\\frac a2$ (provided $g$ is non-integer almost everywhere); here $a=2\\pi$ gives $-\\pi$.",
+    "Do not try to find the breakpoints of $[\\sin2x(1+\\cos3x)]$ directly - it takes many pieces; look for a symmetry that makes pairs cancel.",
+    "Check with a simple case: $\\int_0^{2\\pi}[\\sin x]\\,dx$: $g=\\sin x$ obeys $g(2\\pi-x)=-g(x)$ and the formula gives $-\\pi$ (direct: $\\int_0^\\pi0\\,dx+\\int_\\pi^{2\\pi}(-1)\\,dx=-\\pi$, ignoring the point $\\frac\\pi2$ where $[\\sin x]=1$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Area bounded by a closed curve (domain and symmetry)",
+    "King property of definite integrals"
+   ],
+   "level": 2,
+   "question": "The area bounded by the curve $4y^2=x^2(4-x)(x-2)$ is equal to:",
+   "options": [
+    "$\\frac{3\\pi}{8}$",
+    "$\\frac{3\\pi}{2}$",
+    "$\\frac{\\pi}{16}$",
+    "$\\frac{\\pi}{8}$"
+   ],
+   "answer": "(B) $\\frac{3\\pi}{2}$",
+   "key_idea": "The curve exists only for $2\\le x\\le4$ and is symmetric about the $x$-axis; the area is $\\int_2^4x\\sqrt{(4-x)(x-2)}\\,dx$, and $x\\to6-x$ turns the weight $x$ into $3$.",
+   "solution": [
+    "$y=\\pm\\frac x2\\sqrt{(4-x)(x-2)}$.",
+    "Real $y$ needs $(4-x)(x-2)\\ge0$, i.e. $(x-2)(x-4)\\le0$, so $x\\in[2,4]$.",
+    "Upper branch $y_1=\\frac x2\\sqrt{(4-x)(x-2)}$; lower branch $y_2=-\\frac x2\\sqrt{(4-x)(x-2)}$.",
+    "Area $=\\int_2^4(y_1-y_2)\\,dx=\\int_2^4x\\sqrt{(4-x)(x-2)}\\,dx=I$.",
+    "Using $\\int_2^4f(x)\\,dx=\\int_2^4f(6-x)\\,dx$: $I=\\int_2^4(6-x)\\sqrt{(x-2)(4-x)}\\,dx$.",
+    "Adding: $2I=\\int_2^46\\sqrt{(x-2)(4-x)}\\,dx$, so $I=3\\int_2^4\\sqrt{(x-2)(4-x)}\\,dx$.",
+    "$(x-2)(4-x)=1-(x-3)^2$, so $I=3\\int_2^4\\sqrt{1-(x-3)^2}\\,dx$.",
+    "$\\int_2^4\\sqrt{1-(x-3)^2}\\,dx$ is the area of a semicircle of radius $1$, i.e. $\\frac\\pi2$.",
+    "$I=3\\times\\frac\\pi2=\\frac{3\\pi}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Centroid view: $\\int x\\,h(x)\\,dx=\\bar x\\cdot$ area, where $h=\\sqrt{1-(x-3)^2}$ bounds a semicircle centred over $x=3$, so $\\bar x=3$.",
+     "solution": [
+      "As before, the area is $\\int_2^4x\\sqrt{1-(x-3)^2}\\,dx$.",
+      "The region $0\\le y\\le\\sqrt{1-(x-3)^2}$ is a semicircle (area $\\frac\\pi2$) symmetric about the line $x=3$.",
+      "Hence the first moment $\\int_2^4x\\,h(x)\\,dx=\\bar x\\times\\text{area}=3\\cdot\\frac\\pi2$, with $\\bar x=3$ by symmetry.",
+      "Equivalently put $x=3+u$: $\\int_{-1}^1(3+u)\\sqrt{1-u^2}\\,du=3\\cdot\\frac\\pi2+0$, since $u\\sqrt{1-u^2}$ is odd.",
+      "Area $=\\frac{3\\pi}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=F(x)$ the curve is defined only where $F(x)\\ge0$ and is symmetric about the $x$-axis; the area is $2\\int\\sqrt{F(x)}\\,dx$ over those intervals.",
+    "$\\int_{c-r}^{c+r}x\\sqrt{r^2-(x-c)^2}\\,dx=c\\cdot\\frac{\\pi r^2}{2}$ (first moment of a semicircle, the odd part vanishes). Check: $c=3,r=1$ gives $\\frac{3\\pi}2$.",
+    "$(x-p)(q-x)=\\left(\\frac{q-p}2\\right)^2-\\left(x-\\frac{p+q}{2}\\right)^2$ - a product of two linear factors is a circle in disguise."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Inverse trigonometric identities ($\\cot^{-1}$ to $\\tan^{-1}$ difference)",
+    "Definite integration by parts"
+   ],
+   "level": 3,
+   "question": "The value of the integral $\\int_0^1x\\cot^{-1}\\left(1-x^2+x^4\\right)dx$ is:",
+   "options": [
+    "$\\frac\\pi4-\\log_e2$",
+    "$\\frac\\pi2-\\log_e2$",
+    "$\\frac\\pi2-\\frac12\\log_e2$",
+    "$\\frac\\pi4-\\frac12\\log_e2$"
+   ],
+   "answer": "(D) $\\frac\\pi4-\\frac12\\log_e2$",
+   "key_idea": "Since $1-x^2+x^4>0$, $\\cot^{-1}(\\cdot)=\\tan^{-1}\\frac{1}{(\\cdot)}$, and $\\frac{1}{1+x^2(x^2-1)}$ is the difference form $\\frac{a-b}{1+ab}$ with $a=x^2$, $b=x^2-1$.",
+   "solution": [
+    "$\\int_0^1x\\cot^{-1}\\left(1-x^2+x^4\\right)dx=\\int_0^1x\\tan^{-1}\\left(\\frac{1}{1+x^4-x^2}\\right)dx$ (the argument is positive).",
+    "$\\frac{1}{1+x^2(x^2-1)}=\\frac{x^2-(x^2-1)}{1+x^2(x^2-1)}$, so $\\tan^{-1}(\\cdot)=\\tan^{-1}x^2-\\tan^{-1}(x^2-1)$.",
+    "$I=\\int_0^1x\\tan^{-1}x^2\\,dx-\\int_0^1x\\tan^{-1}\\left(x^2-1\\right)dx$.",
+    "First integral: put $x^2=t$, $2x\\,dx=dt$; second: put $x^2-1=k$, $2x\\,dx=dk$ (limits $k=-1$ to $0$).",
+    "$I=\\frac12\\int_0^1\\tan^{-1}t\\,dt-\\frac12\\int_{-1}^0\\tan^{-1}k\\,dk$.",
+    "By parts: $\\int\\tan^{-1}t\\,dt=t\\tan^{-1}t-\\int\\frac{t}{1+t^2}\\,dt=t\\tan^{-1}t-\\frac12\\ln\\left(1+t^2\\right)$.",
+    "$\\int_0^1\\tan^{-1}t\\,dt=\\frac\\pi4-\\frac12\\ln2$ and $\\int_{-1}^0\\tan^{-1}k\\,dk=0-\\left(\\frac\\pi4-\\frac12\\ln2\\right)$.",
+    "$I=\\frac12\\left(\\frac\\pi4-\\frac12\\ln2\\right)+\\frac12\\left(\\frac\\pi4-\\frac12\\ln2\\right)$.",
+    "$I=\\frac\\pi4-\\frac12\\ln2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last lines are mis-typed: the second bracket is printed as $\\left(-\\frac\\pi8-\\frac14\\ln2\\right)$ followed by '$10-\\ln2$'; the correct value of $\\frac12\\int_{-1}^{0}\\tan^{-1}k\\,dk$ is $-\\frac\\pi8+\\frac14\\ln2$, and subtracting it gives $\\frac\\pi4-\\frac12\\ln2$. The PDF's final answer (D) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Reflect $t\\to1-t$ to see the two $\\tan^{-1}$ pieces are equal, and get $\\int_0^1\\tan^{-1}t\\,dt$ as an area using the inverse function.",
+     "solution": [
+      "After $t=x^2$ and the identity, $I=\\frac12\\int_0^1\\left[\\tan^{-1}t-\\tan^{-1}(t-1)\\right]dt$.",
+      "In $\\int_0^1\\tan^{-1}(t-1)\\,dt$ put $u=1-t$: $\\tan^{-1}(t-1)=-\\tan^{-1}u$, so it equals $-\\int_0^1\\tan^{-1}u\\,du$.",
+      "Hence $I=\\frac12\\cdot2\\int_0^1\\tan^{-1}t\\,dt=\\int_0^1\\tan^{-1}t\\,dt$.",
+      "Area view: the region under $y=\\tan^{-1}t$, $0\\le t\\le1$, and the region left of it up to $y=\\frac\\pi4$ together fill the rectangle $[0,1]\\times\\left[0,\\frac\\pi4\\right]$.",
+      "So $\\int_0^1\\tan^{-1}t\\,dt=\\frac\\pi4-\\int_0^{\\pi/4}\\tan y\\,dy=\\frac\\pi4-\\left[-\\ln\\cos y\\right]_0^{\\pi/4}=\\frac\\pi4-\\ln\\sqrt2$.",
+      "$I=\\frac\\pi4-\\frac12\\ln2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cot^{-1}z=\\tan^{-1}\\frac1z$ only for $z>0$ (for $z<0$ it differs by $\\pi$); $1-x^2+x^4>0$ always, so it is safe here.",
+    "$\\tan^{-1}a-\\tan^{-1}b=\\tan^{-1}\\frac{a-b}{1+ab}$ when $ab>-1$; the denominator $1+x^2(x^2-1)$ is of the form $1+ab$ with $a=x^2$, $b=x^2-1$. Check: $x=1$: $\\tan^{-1}1-\\tan^{-1}0=\\frac\\pi4=\\cot^{-1}1$.",
+    "$\\int_0^1\\tan^{-1}t\\,dt=\\frac\\pi4-\\frac12\\ln2$ (and $\\int_0^1f+\\int_0^{f(1)}f^{-1}=1\\cdot f(1)$ for an increasing $f$ with $f(0)=0$ - the area-of-inverse trick).",
+    "Telescoping patterns: $1+k(k+1)$, $1-x^2+x^4$ etc. in $\\tan^{-1}$ arguments often signal the difference formula."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Determinant of a function and its derivative (Wronskian) $=0$",
+    "Solving the differential equation $f'=c\\,f$"
+   ],
+   "level": 2,
+   "question": "Let $f$ be a twice differentiable function defined on $\\mathbb R$ such that $f(0)=1$, $f'(0)=2$ and $f'(x)\\ne0$ for all $x\\in\\mathbb R$. If $\\begin{vmatrix}f(x)&f'(x)\\\\f'(x)&f''(x)\\end{vmatrix}=0$ for all $x\\in\\mathbb R$, then the value of $f(1)$ lies in the interval:",
+   "options": [
+    "$(3,6)$",
+    "$(6,9)$",
+    "$(0,3)$",
+    "$(9,12)$"
+   ],
+   "answer": "(B) $(6,9)$",
+   "key_idea": "The determinant condition is $ff''-f'^2=0$, which is $\\frac{d}{dx}\\left(\\frac{f'}{f}\\right)=0$: so $f'=c\\,f$.",
+   "solution": [
+    "The determinant gives $f(x)f''(x)-\\left(f'(x)\\right)^2=0$ for all $x\\in\\mathbb R$.",
+    "$f$ is never $0$: if $f(x_0)=0$ the equation would force $f'(x_0)=0$, contradicting $f'\\ne0$. So we may divide by $f^2$.",
+    "$\\frac{d}{dx}\\left(\\frac{f'(x)}{f(x)}\\right)=\\frac{ff''-f'^2}{f^2}=0$.",
+    "$\\frac{f'(x)}{f(x)}=c$ (a constant).",
+    "Since $f(0)=1$ and $f'(0)=2$: $c=2$, so $\\frac{f'(x)}{f(x)}=2$.",
+    "Integrate: $\\int\\frac{dy}{y}=\\int2\\,dx$, so $\\ln y=2x+\\ln k$, i.e. $y=k\\,e^{2x}$.",
+    "$f(0)=1\\Rightarrow k=1$, so $f(x)=e^{2x}$.",
+    "$f(1)=e^2\\approx7.39\\in(6,9)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the given $f'\\ne0$ instead of $f\\ne0$: divide $ff''=f'^2$ by $ff'$ to get $\\frac{f''}{f'}=\\frac{f'}{f}$.",
+     "solution": [
+      "$f f''=f'^2$ and $f'\\ne0$. Also $f\\ne0$ (else $f'=0$ there), so divide by $f\\,f'$: $\\frac{f''}{f'}=\\frac{f'}{f}$.",
+      "Integrate both sides: $\\ln|f'|=\\ln|f|+\\ln|c|$, so $f'=c\\,f$.",
+      "$c=\\frac{f'(0)}{f(0)}=2$, so $f'=2f$ and $\\left(f\\,e^{-2x}\\right)'=0$.",
+      "Thus $f\\,e^{-2x}$ is constant, equal to its value $1$ at $x=0$; $f(x)=e^{2x}$ and $f(1)=e^2\\in(6,9)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f f''-f'^2=0\\iff\\left(\\ln f\\right)''=0\\iff f=a\\,e^{kx}$ (when $f\\ne0$); the determinant $\\begin{vmatrix}f&f'\\\\f'&f''\\end{vmatrix}$ is the Wronskian of $f$ and $f'$.",
+    "$\\frac{d}{dx}\\frac{f'}{f}=\\frac{ff''-f'^2}{f^2}$ is the quotient-rule form to remember; $\\frac{d}{dx}\\frac{f}{f'}=\\frac{f'^2-ff''}{f'^2}$ works the same way.",
+    "$f'=kf$ with $f(0)=A$ has the unique solution $f=Ae^{kx}$ (check $\\left(fe^{-kx}\\right)'=0$); here $k=2$, $A=1$.",
+    "Estimate $e^2\\approx7.389$: remember $e\\approx2.718$, $e^2\\approx7.39$, $e^3\\approx20.1$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Indefinite integration of an irrational function by trigonometric substitution"
+   ],
+   "level": 1,
+   "question": "Let $f(x)=\\int\\frac{\\sqrt x}{(1+x)^2}\\,dx$ $(x\\ge0)$. Then $f(3)-f(1)$ is equal to:",
+   "options": [
+    "$\\frac\\pi6+\\frac12-\\frac{\\sqrt3}{4}$",
+    "$\\frac{\\pi}{12}+\\frac12-\\frac{\\sqrt3}{4}$",
+    "$-\\frac\\pi6+\\frac12+\\frac{\\sqrt3}{4}$",
+    "$-\\frac{\\pi}{12}+\\frac12+\\frac{\\sqrt3}{4}$"
+   ],
+   "answer": "(B) $\\frac{\\pi}{12}+\\frac12-\\frac{\\sqrt3}{4}$",
+   "key_idea": "Put $\\sqrt x=\\tan\\theta$: the integrand becomes $2\\sin^2\\theta\\,d\\theta$.",
+   "solution": [
+    "Let $\\sqrt x=\\tan\\theta$, so $x=\\tan^2\\theta$ and $dx=2\\tan\\theta\\sec^2\\theta\\,d\\theta$.",
+    "$I=\\int\\frac{\\tan\\theta\\cdot2\\tan\\theta\\sec^2\\theta\\,d\\theta}{\\left(1+\\tan^2\\theta\\right)^2}=\\int\\frac{2\\tan^2\\theta\\sec^2\\theta}{\\sec^4\\theta}\\,d\\theta$.",
+    "$=\\int\\frac{2\\left(\\sec^2\\theta-1\\right)}{\\sec^2\\theta}\\,d\\theta=\\int2\\left(1-\\cos^2\\theta\\right)d\\theta=\\int2\\sin^2\\theta\\,d\\theta$.",
+    "$=\\int(1-\\cos2\\theta)\\,d\\theta=\\theta-\\frac{\\sin2\\theta}{2}+C=\\theta-\\frac{\\tan\\theta}{1+\\tan^2\\theta}+C$.",
+    "$f(x)=\\tan^{-1}\\sqrt x-\\frac{\\sqrt x}{1+x}+C$.",
+    "$f(3)=\\tan^{-1}\\sqrt3-\\frac{\\sqrt3}{4}+C=\\frac\\pi3-\\frac{\\sqrt3}{4}+C$.",
+    "$f(1)=\\tan^{-1}1-\\frac12+C=\\frac\\pi4-\\frac12+C$.",
+    "$f(3)-f(1)=\\frac\\pi3-\\frac\\pi4+\\frac12-\\frac{\\sqrt3}{4}=\\frac{\\pi}{12}+\\frac12-\\frac{\\sqrt3}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rationalise with $x=u^2$ and integrate by parts: $\\int\\frac{2u^2}{(1+u^2)^2}du=\\int u\\cdot\\frac{2u}{(1+u^2)^2}du$.",
+     "solution": [
+      "Put $x=u^2$, $dx=2u\\,du$: $f=\\int\\frac{2u^2}{(1+u^2)^2}\\,du$; limits $u=1$ to $\\sqrt3$.",
+      "Note $\\frac{2u}{(1+u^2)^2}=\\frac{d}{du}\\left(-\\frac{1}{1+u^2}\\right)$.",
+      "By parts with $u$ and $-\\frac{1}{1+u^2}$: $\\int u\\cdot\\frac{2u}{(1+u^2)^2}du=-\\frac{u}{1+u^2}+\\int\\frac{du}{1+u^2}$.",
+      "$=\\tan^{-1}u-\\frac{u}{1+u^2}+C$.",
+      "$f(3)-f(1)=\\left[\\tan^{-1}u-\\frac{u}{1+u^2}\\right]_1^{\\sqrt3}=\\left(\\frac\\pi3-\\frac{\\sqrt3}4\\right)-\\left(\\frac\\pi4-\\frac12\\right)=\\frac\\pi{12}+\\frac12-\\frac{\\sqrt3}4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{\\sqrt x}{(1+x)^2}\\,dx=\\tan^{-1}\\sqrt x-\\frac{\\sqrt x}{1+x}+C$; more generally $\\int\\frac{dx}{(1+x^2)^2}$-type integrals come out as $\\tan^{-1}$ plus a rational term.",
+    "$2\\sin^2\\theta=1-\\cos2\\theta$ and $\\sin2\\theta=\\frac{2\\tan\\theta}{1+\\tan^2\\theta}$ convert back to $x$ quickly.",
+    "In $f(3)-f(1)$ the constant $C$ cancels - never carry it.",
+    "Check: derivative of $\\tan^{-1}\\sqrt x-\\frac{\\sqrt x}{1+x}$ is $\\frac{1}{2\\sqrt x(1+x)}-\\frac{1-x}{2\\sqrt x(1+x)^2}=\\frac{\\sqrt x}{(1+x)^2}$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Area under a parabola"
+   ],
+   "level": 1,
+   "question": "Let $S(\\alpha)=\\{(x,y):y^2\\le x,\\ 0\\le x\\le\\alpha\\}$ and $A(\\alpha)$ be the area of the region $S(\\alpha)$. If for a $\\lambda$, $0<\\lambda<4$, $A(\\lambda):A(4)=2:5$, then $\\lambda$ equals:",
+   "options": [
+    "$2\\left(\\frac25\\right)^{1/3}$",
+    "$2\\left(\\frac{4}{25}\\right)^{1/3}$",
+    "$4\\left(\\frac25\\right)^{1/3}$",
+    "$4\\left(\\frac4{25}\\right)^{1/3}$"
+   ],
+   "answer": "(D) $4\\left(\\frac{4}{25}\\right)^{1/3}$",
+   "key_idea": "$A(\\lambda)=2\\int_0^\\lambda\\sqrt x\\,dx=\\frac43\\lambda^{3/2}$, so the ratio condition is $\\left(\\frac\\lambda4\\right)^{3/2}=\\frac25$.",
+   "solution": [
+    "$S(\\lambda)$ is the part of $y^2\\le x$ with $0\\le x\\le\\lambda$: bounded by $y=\\pm\\sqrt x$ and the line $x=\\lambda$.",
+    "$A(\\lambda)=2\\int_0^\\lambda\\sqrt x\\,dx=2\\cdot\\frac23\\lambda^{3/2}=\\frac43\\lambda^{3/2}$.",
+    "$A(4)=\\frac43\\cdot4^{3/2}=\\frac43\\cdot8$.",
+    "$\\frac{A(\\lambda)}{A(4)}=\\frac{\\lambda^{3/2}}{8}=\\frac25$.",
+    "$\\lambda^{3/2}=\\frac{16}{5}$, so $\\lambda=\\left(\\frac{16}{5}\\right)^{2/3}=\\left(\\frac{256}{25}\\right)^{1/3}$.",
+    "$\\left(\\frac{256}{25}\\right)^{1/3}=\\left(64\\cdot\\frac{4}{25}\\right)^{1/3}=4\\left(\\frac4{25}\\right)^{1/3}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $A(\\lambda)=\\frac43\\lambda$ and $\\frac{\\lambda}{8}=\\frac25$; the area is $\\frac43\\lambda^{3/2}$ and the equation is $\\frac{\\lambda^{3/2}}{8}=\\frac25$ (the PDF then uses $\\lambda=\\left(\\frac{16}{5}\\right)^{2/3}$, which only follows from the correct equation). Answer (D) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Scaling: stretching $x$ by $s$ stretches $y$ by $\\sqrt s$ on the family $y^2=x$, so the area scales as $s^{3/2}$.",
+     "solution": [
+      "The region $S(\\lambda)$ is the image of $S(4)$ under $(x,y)\\to\\left(\\frac\\lambda4x,\\sqrt{\\frac\\lambda4}\\,y\\right)$, which maps $y^2=x$ to itself.",
+      "This map multiplies areas by $\\frac\\lambda4\\cdot\\sqrt{\\frac\\lambda4}=\\left(\\frac\\lambda4\\right)^{3/2}$.",
+      "So $\\frac{A(\\lambda)}{A(4)}=\\left(\\frac\\lambda4\\right)^{3/2}=\\frac25$.",
+      "$\\frac\\lambda4=\\left(\\frac25\\right)^{2/3}=\\left(\\frac4{25}\\right)^{1/3}$, hence $\\lambda=4\\left(\\frac4{25}\\right)^{1/3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area of the segment of $y^2=4ax$ cut off by $x=h$ is $\\frac83\\sqrt a\\,h^{3/2}$, i.e. two-thirds of the enclosing rectangle $h\\times4\\sqrt{ah}$. For $y^2=x$ ($a=\\frac14$): $\\frac43h^{3/2}$.",
+    "For $y^2=kx$ the area up to $x=\\lambda$ is proportional to $\\lambda^{3/2}$: ratio questions need only the exponent $\\frac32$, never the constant.",
+    "$\\left(\\frac25\\right)^{2/3}=\\left(\\frac4{25}\\right)^{1/3}$; convert fractional powers into one cube root to match options."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Definite integration with algebraic division ($\\frac{t^{50}}{1-t}$)",
+    "Logarithmic series $\\ln(1-x)$"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha\\in(0,1)$ and $\\beta=\\log_e(1-\\alpha)$. Let $P_n(x)=x+\\frac{x^2}{2}+\\frac{x^3}{3}+\\dots+\\frac{x^n}{n}$, $x\\in(0,1)$. Then the integral $\\int_0^\\alpha\\frac{t^{50}}{1-t}\\,dt$ is equal to:",
+   "options": [
+    "$-\\left(\\beta+P_{50}(\\alpha)\\right)$",
+    "$\\beta+P_{50}(\\alpha)$",
+    "$\\beta-P_{50}(\\alpha)$",
+    "$P_{50}(\\alpha)-\\beta$"
+   ],
+   "answer": "(A) $-\\left(\\beta+P_{50}(\\alpha)\\right)$",
+   "key_idea": "Write $t^{50}=\\left(t^{50}-1\\right)+1$ so that $\\frac{t^{50}-1}{1-t}=-\\left(1+t+\\dots+t^{49}\\right)$.",
+   "solution": [
+    "$\\int_0^\\alpha\\frac{t^{50}}{1-t}\\,dt=\\int_0^\\alpha\\frac{t^{50}-1+1}{1-t}\\,dt$.",
+    "$\\frac{t^{50}-1}{1-t}=-\\frac{1-t^{50}}{1-t}=-\\left(1+t+\\dots+t^{49}\\right)$.",
+    "$I=-\\int_0^\\alpha\\left(1+t+\\dots+t^{49}\\right)dt+\\int_0^\\alpha\\frac{dt}{1-t}$.",
+    "$-\\int_0^\\alpha\\left(1+t+\\dots+t^{49}\\right)dt=-\\left(\\alpha+\\frac{\\alpha^2}{2}+\\dots+\\frac{\\alpha^{50}}{50}\\right)=-P_{50}(\\alpha)$.",
+    "$\\int_0^\\alpha\\frac{dt}{1-t}=\\left[-\\ln(1-t)\\right]_0^\\alpha=-\\ln(1-\\alpha)=-\\beta$.",
+    "$I=-P_{50}(\\alpha)-\\beta=-\\left(\\beta+P_{50}(\\alpha)\\right)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand $\\frac{1}{1-t}=\\sum_{k\\ge0}t^k$ and integrate term by term: the tail from $t^{50}$ onwards equals $-\\ln(1-\\alpha)$ minus the first 50 terms.",
+     "solution": [
+      "For $0\\le t<1$: $\\frac{t^{50}}{1-t}=t^{50}+t^{51}+t^{52}+\\dots$",
+      "$\\int_0^\\alpha\\frac{t^{50}}{1-t}\\,dt=\\sum_{k=50}^{\\infty}\\frac{\\alpha^{k+1}}{k+1}=\\sum_{m=51}^{\\infty}\\frac{\\alpha^m}{m}$.",
+      "$-\\ln(1-\\alpha)=\\sum_{m=1}^\\infty\\frac{\\alpha^m}{m}$, so $\\sum_{m=51}^\\infty\\frac{\\alpha^m}{m}=-\\ln(1-\\alpha)-\\sum_{m=1}^{50}\\frac{\\alpha^m}{m}$.",
+      "$=-\\beta-P_{50}(\\alpha)=-\\left(\\beta+P_{50}(\\alpha)\\right)$.",
+      "Check: $\\alpha=0.9$: the integral is $0.000788840493$ and $-\\beta-P_{50}(0.9)$ is $0.000788840493$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^\\alpha\\frac{t^n}{1-t}\\,dt=-\\ln(1-\\alpha)-\\sum_{k=1}^n\\frac{\\alpha^k}{k}$ for $\\alpha\\in(0,1)$ (division: $\\frac{t^n}{1-t}=\\frac{1}{1-t}-\\left(1+t+\\dots+t^{n-1}\\right)$).",
+    "$-\\ln(1-x)=x+\\frac{x^2}2+\\frac{x^3}3+\\dots$ for $|x|<1$; so $P_n(x)$ is the $n$-th partial sum and $-\\ln(1-x)-P_n(x)>0$ is its tail.",
+    "Geometric factorisation $1-t^n=(1-t)\\left(1+t+\\dots+t^{n-1}\\right)$ is the key to any $\\frac{t^n}{1-t}$ integral.",
+    "Sign check: the integrand is positive, so the answer must be positive: $-\\beta=-\\ln(1-\\alpha)>P_{50}(\\alpha)$, so $-\\beta-P_{50}>0$ (option A), whereas (B) and (C) are negative for small $\\alpha$."
+   ]
+  }
+ ]
+}
