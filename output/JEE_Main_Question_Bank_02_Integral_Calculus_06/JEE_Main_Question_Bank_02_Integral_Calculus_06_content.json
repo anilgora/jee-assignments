@@ -1,0 +1,689 @@
+{
+ "title": "JEE Main Question Bank 02 (Integral Calculus 06) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions · 16 numerical questions (printed Q101–Q116)",
+ "source": "JEE_Main_Question_Bank_02_Integral_Calculus_06.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 16,
+   "marking": [
+    "Marks not printed in the paper: 4 marks per question assumed",
+    "Answers are numbers, not limited to 0-9; no negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Linear differential equation (integrating factor)",
+    "Integration of irrational functions $\\int\\frac{dx}{\\sqrt{x^2-a^2}}$"
+   ],
+   "question": "If $y=y(x)$ is the solution of the differential equation $\\frac{dy}{dx}+\\frac{4x}{x^2-1}y=\\frac{x+2}{(x^2-1)^{5/2}}$, $x>1$ such that $y(2)=\\frac29\\log_e(2+\\sqrt3)$ and $y(\\sqrt2)=\\alpha\\log_e(\\sqrt\\alpha+\\beta)+\\beta-\\sqrt\\gamma$, $\\alpha,\\beta,\\gamma\\in\\mathbb N$, then $\\alpha\\beta\\gamma$ is equal to ______ .",
+   "answer": "$6$",
+   "key_idea": "Since $\\frac{4x}{x^2-1}=2\\cdot\\frac{(x^2-1)'}{x^2-1}$, the integrating factor is $(x^2-1)^2$ and it cancels the power $\\frac52$ in the right side.",
+   "solution": [
+    "The equation $\\frac{dy}{dx}+\\frac{4x}{x^2-1}y=\\frac{x+2}{(x^2-1)^{5/2}}$, $x>1$, is linear in $y$.",
+    "I.F. $=e^{\\int\\frac{4x}{x^2-1}dx}=e^{2\\ln(x^2-1)}=(x^2-1)^2$.",
+    "$y(x^2-1)^2=\\int\\frac{x+2}{(x^2-1)^{5/2}}(x^2-1)^2dx+c=\\int\\frac{x+2}{\\sqrt{x^2-1}}dx+c$.",
+    "$\\int\\frac{x+2}{\\sqrt{x^2-1}}dx=\\sqrt{x^2-1}+2\\ln\\left(x+\\sqrt{x^2-1}\\right)$, so $y(x^2-1)^2=\\sqrt{x^2-1}+2\\ln\\left(x+\\sqrt{x^2-1}\\right)+c$.",
+    "Use $y(2)=\\frac29\\ln(2+\\sqrt3)$: $\\frac29\\ln(2+\\sqrt3)\\cdot9=\\sqrt3+2\\ln(2+\\sqrt3)+c$, hence $c=-\\sqrt3$.",
+    "Put $x=\\sqrt2$: $y(\\sqrt2)\\cdot1=1+2\\ln(\\sqrt2+1)-\\sqrt3$.",
+    "Compare with $\\alpha\\ln(\\sqrt\\alpha+\\beta)+\\beta-\\sqrt\\gamma$: $\\alpha=2$, $\\beta=1$, $\\gamma=3$.",
+    "Therefore $\\alpha\\beta\\gamma=2\\cdot1\\cdot3=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate the exact derivative $\\left(y(x^2-1)^2\\right)'$ between the two given points, so the constant never appears.",
+     "solution": [
+      "The I.F. step gives $\\frac{d}{dx}\\left[y(x^2-1)^2\\right]=\\frac{x+2}{\\sqrt{x^2-1}}$.",
+      "Integrate from $x=2$ to $x=\\sqrt2$: $y(\\sqrt2)\\cdot1-y(2)\\cdot9=\\int_2^{\\sqrt2}\\frac{x+2}{\\sqrt{x^2-1}}dx$.",
+      "The antiderivative is $F(x)=\\sqrt{x^2-1}+2\\ln\\left(x+\\sqrt{x^2-1}\\right)$, so the right side is $F(\\sqrt2)-F(2)=\\left(1+2\\ln(\\sqrt2+1)\\right)-\\left(\\sqrt3+2\\ln(2+\\sqrt3)\\right)$.",
+      "Hence $y(\\sqrt2)=9\\cdot\\frac29\\ln(2+\\sqrt3)+1+2\\ln(\\sqrt2+1)-\\sqrt3-2\\ln(2+\\sqrt3)=1+2\\ln(\\sqrt2+1)-\\sqrt3$.",
+      "Matching with $\\alpha\\ln(\\sqrt\\alpha+\\beta)+\\beta-\\sqrt\\gamma$ gives $\\alpha=2$, $\\beta=1$, $\\gamma=3$ and $\\alpha\\beta\\gamma=6$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the coefficient is $P=n\\frac{g'}{g}$, the integrating factor is $g^n$: here $P=\\frac{4x}{x^2-1}$ gives $(x^2-1)^2$.",
+    "$\\int\\frac{dx}{\\sqrt{x^2-a^2}}=\\ln\\left|x+\\sqrt{x^2-a^2}\\right|$ and $\\int\\frac{x\\,dx}{\\sqrt{x^2-a^2}}=\\sqrt{x^2-a^2}$.",
+    "With two given values of $y$, write $\\left[y\\cdot\\mathrm{IF}\\right]_{x_1}^{x_2}=\\int_{x_1}^{x_2}Q\\cdot\\mathrm{IF}\\,dx$: no constant is needed."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Homogeneous differential equation",
+    "Area under curves"
+   ],
+   "question": "Let $y=y(x)$ be the solution of the differential equation $x\\,dy-y\\,dx=\\sqrt{x^2-y^2}\\,dx$, $x\\ge1$ with $y(1)=0$. If the area bounded by the line $x=1$, $x=e^{\\pi}$, $y=0$ and $y=y(x)$ is $\\alpha e^{2\\pi}+\\beta$, then the value of $10(\\alpha+\\beta)$ is equal to ______ .",
+   "answer": "$4$",
+   "key_idea": "$x\\,dy-y\\,dx=x^2\\,d\\!\\left(\\frac yx\\right)$ turns the equation into $\\frac{du}{\\sqrt{1-u^2}}=\\frac{dx}x$ with $u=\\frac yx$.",
+   "solution": [
+    "$x\\,dy-y\\,dx=\\sqrt{x^2-y^2}\\,dx$; divide by $x^2$: $\\frac{x\\,dy-y\\,dx}{x^2}=\\frac1x\\sqrt{1-\\frac{y^2}{x^2}}\\,dx$.",
+    "$\\int\\frac{d\\left(\\frac yx\\right)}{\\sqrt{1-\\frac{y^2}{x^2}}}=\\int\\frac{dx}x$, so $\\sin^{-1}\\frac yx=\\ln|x|+c$.",
+    "$x=1,\\ y=0\\Rightarrow c=0$. Hence $\\frac yx=\\sin(\\ln x)$ and $y=x\\sin(\\ln x)$.",
+    "For $1\\le x\\le e^\\pi$, $\\ln x\\in[0,\\pi]$ so $y\\ge0$ and the area is $A=\\int_1^{e^\\pi}x\\sin(\\ln x)\\,dx$.",
+    "Put $x=e^t$, $dx=e^t\\,dt$: $A=\\int_0^\\pi e^t\\sin(\\ln e^t)\\,e^t\\,dt=\\int_0^\\pi e^{2t}\\sin t\\,dt$.",
+    "$A=\\left[\\frac{e^{2t}}5\\left(2\\sin t-\\cos t\\right)\\right]_0^\\pi$.",
+    "$=\\frac{e^{2\\pi}}5\\left(2\\sin\\pi-\\cos\\pi\\right)-\\frac15\\left(2\\sin0-\\cos0\\right)=\\frac{e^{2\\pi}}5(0+1)-\\frac15(-1)$.",
+    "$A=\\frac{e^{2\\pi}}5+\\frac15=\\frac15\\left(e^{2\\pi}+1\\right)$, so $\\alpha=\\frac15$, $\\beta=\\frac15$.",
+    "$10(\\alpha+\\beta)=10\\left(\\frac15+\\frac15\\right)=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\sin(\\ln x)$ as an imaginary part, $x\\sin(\\ln x)=\\mathrm{Im}\\left(x^{1+i}\\right)$, and integrate a power.",
+     "solution": [
+      "Since $x^{i}=e^{i\\ln x}$, we have $x\\sin(\\ln x)=\\mathrm{Im}\\left(x^{1+i}\\right)$.",
+      "$A=\\mathrm{Im}\\int_1^{e^\\pi}x^{1+i}dx=\\mathrm{Im}\\left[\\frac{x^{2+i}}{2+i}\\right]_1^{e^\\pi}$.",
+      "At $x=e^\\pi$: $x^{2+i}=e^{2\\pi}e^{i\\pi}=-e^{2\\pi}$; at $x=1$: $x^{2+i}=1$. So the bracket is $\\frac{-e^{2\\pi}-1}{2+i}$.",
+      "$\\frac{-(e^{2\\pi}+1)}{2+i}=\\frac{-(e^{2\\pi}+1)(2-i)}5$, whose imaginary part is $\\frac{e^{2\\pi}+1}5$.",
+      "So $A=\\frac15\\left(e^{2\\pi}+1\\right)$, $\\alpha=\\beta=\\frac15$ and $10(\\alpha+\\beta)=4$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x\\,dy-y\\,dx=x^2\\,d\\!\\left(\\frac yx\\right)$ and $y\\,dx-x\\,dy=y^2\\,d\\!\\left(\\frac xy\\right)$: spot these combinations first in homogeneous-type equations.",
+    "$\\int_0^{\\pi}e^{at}\\sin t\\,dt=\\frac{1+e^{a\\pi}}{1+a^2}$; with $a=2$ this is $\\frac{1+e^{2\\pi}}5$ (the $\\sin$ vanishes at $\\pi$, only the $t=0$ term and the $\\cos\\pi=-1$ term survive).",
+    "Substituting $x=e^t$ turns $\\sin(\\ln x)$ into $\\sin t$ and $x\\,dx$ into $e^{2t}dt$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Indefinite integration by substitution (reciprocal-power trick)"
+   ],
+   "question": "If $f(x)=\\int\\frac{5x^8+7x^6}{(x^2+1+2x^7)^2}\\,dx$, $(x\\ge0)$, $f(0)=0$ and $f(1)=\\frac1K$, then the value of $K$ is ______ .",
+   "answer": "$4$",
+   "key_idea": "Divide numerator and denominator by $x^{14}$; the numerator becomes exactly $-\\,d\\!\\left(\\frac1{x^5}+\\frac1{x^7}\\right)$.",
+   "solution": [
+    "$f(x)=\\int\\frac{5x^8+7x^6}{(x^2+1+2x^7)^2}dx$; divide the numerator and the denominator by $x^{14}$.",
+    "$f(x)=\\int\\frac{\\frac5{x^6}+\\frac7{x^8}}{\\left(\\frac1{x^5}+\\frac1{x^7}+2\\right)^2}dx$.",
+    "Let $\\frac1{x^5}+\\frac1{x^7}+2=t$, so $\\left(-\\frac5{x^6}-\\frac7{x^8}\\right)dx=dt$.",
+    "$f(x)=-\\int\\frac{dt}{t^2}=\\frac1t+c$.",
+    "$f(x)=\\frac1{\\frac1{x^5}+\\frac1{x^7}+2}+c=\\frac{x^7}{x^2+1+2x^7}+c$.",
+    "$f(0)=0\\Rightarrow c=0$.",
+    "$f(1)=\\frac14=\\frac1K$, hence $K=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Recognise the integrand as a quotient-rule derivative $\\left(\\frac NS\\right)'=\\frac{N'S-NS'}{S^2}$ with $N=x^7$, $S=x^2+1+2x^7$.",
+     "solution": [
+      "The denominator is a square $S^2$ with $S=x^2+1+2x^7$, which suggests $\\int\\frac{N'S-NS'}{S^2}dx=\\frac NS$.",
+      "Try $N=x^7$: $N'S-NS'=7x^6\\left(x^2+1+2x^7\\right)-x^7\\left(2x+14x^6\\right)$.",
+      "$=7x^8+7x^6+14x^{13}-2x^8-14x^{13}=5x^8+7x^6$, exactly the numerator.",
+      "So $f(x)=\\frac{x^7}{x^2+1+2x^7}+c$, and $f(0)=0$ gives $c=0$.",
+      "$f(1)=\\frac1{1+1+2}=\\frac14$, so $K=4$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\int\\frac{N}{S^2}dx$, test whether $N=N_0'S-N_0S'$ for a simple $N_0$ (power of $x$): then the integral is $\\frac{N_0}{S}$.",
+    "Dividing by a high power of $x$ (here $x^{14}$) makes the denominator $S^2/x^{14}=\\left(S/x^7\\right)^2$ and the numerator an exact derivative of $S/x^7$.",
+    "In general $\\frac{d}{dx}\\left(\\frac{x^m}{S}\\right)=\\frac{mx^{m-1}S-x^mS'}{S^2}$; for $S=x^2+1+2x^7$, $m=7$ it gives $\\frac{5x^8+7x^6}{S^2}$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Tangent, intercepts and section formula",
+    "Differential equations (variable separable and exponential form)"
+   ],
+   "question": "Let the tangent at any point $P$ on a curve passing through the points $(1,1)$ and $\\left(\\frac1{10},100\\right)$, intersect positive $x$-axis and $y$-axis at the points $A$ and $B$ respectively. If $PA:PB=1:k$ and $y=y(x)$ is the solution of the differential equation $e^{dy/dx}=kx+\\frac k2$, $y(0)=k$, then $4y(1)-5\\log_e3$ is equal to ______ .",
+   "answer": "Bonus (the expression equals $4+\\ln3$, which is not a single number)",
+   "key_idea": "$P$ divides $AB$ in the ratio $1:k$, so the intercepts are $\\frac{k+1}kx$ and $(k+1)y$ and the slope is $-\\frac{ky}x$.",
+   "solution": [
+    "Tangent at $P(x,y)$: $Y-y=\\frac{dy}{dx}(X-x)$. Put $Y=0$: $X=-\\frac{y\\,dx}{dy}+x$, the abscissa of $A(\\alpha,0)$.",
+    "$P$ divides $AB$, $B(0,\\beta)$, with $PA:PB=1:k$, so $x=\\frac{k\\alpha+0}{k+1}$ (the PDF prints $=0$ here, a slip for $=x$), giving $\\alpha=\\frac{k+1}kx$.",
+    "Equate the two values of $\\alpha$: $\\frac{k+1}kx=-y\\frac{dx}{dy}+x$, i.e. $x+\\frac xk=-y\\frac{dx}{dy}+x$.",
+    "So $x\\frac{dy}{dx}+ky=0$, i.e. $\\frac{dy}{dx}+\\frac kxy=0$, whose solution is $y\\,x^k=C$.",
+    "The curve passes through $(1,1)$: $C=1$. It passes through $\\left(\\frac1{10},100\\right)$: $100\\left(\\frac1{10}\\right)^k=1$, so $k=2$.",
+    "Now $e^{dy/dx}=2x+1$, so $\\frac{dy}{dx}=\\ln(2x+1)$ with $y(0)=2$.",
+    "$y=\\frac{2x+1}2\\left(\\ln(2x+1)-1\\right)+C$.",
+    "$y(0)=2$: $2=\\frac12(0-1)+C$, so $C=2+\\frac12=\\frac52$.",
+    "$y(1)=\\frac32(\\ln3-1)+\\frac52=\\frac32\\ln3+1$.",
+    "$4y(1)=6\\ln3+4$, so $4y(1)-5\\ln3=4+\\ln3$. This is not a single number (the intended form was $4+\\ell\\ln3$); the PDF's key is Bonus."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF step 'kα+0 / k+1 = 0' should read '= x' (the abscissa of P); the next line $\\alpha=\\frac{k+1}kx$ is right. All later working is correct: $k=2$, $y(1)=\\frac32\\ln3+1$ and $4y(1)-5\\ln3=4+\\ln3\\approx5.0986$. The key 'Bonus' is right because the question has no single numerical value.",
+   "alternate_solutions": [
+    {
+     "idea": "The slope of $AB$ is $-\\beta/\\alpha$ with $\\alpha=\\frac{k+1}kx$, $\\beta=(k+1)y$; and $y(1)$ is a definite integral from $y(0)=2$.",
+     "solution": [
+      "From the section formula, $x=\\frac{k\\alpha}{k+1}$ and $y=\\frac\\beta{k+1}$, so $\\alpha=\\frac{(k+1)x}k$ and $\\beta=(k+1)y$.",
+      "The tangent is the line $AB$, so its slope is $-\\frac\\beta\\alpha=-\\frac{(k+1)y\\cdot k}{(k+1)x}=-\\frac{ky}x$.",
+      "$\\frac{dy}{y}=-k\\frac{dx}x\\Rightarrow x^ky=C$; $(1,1)$ gives $C=1$ and $\\left(\\frac1{10},100\\right)$ gives $k=2$.",
+      "With $k=2$: $y(1)=y(0)+\\int_0^1\\ln(2x+1)dx=2+\\left[\\frac{(2x+1)\\ln(2x+1)}2-x\\right]_0^1$.",
+      "$=2+\\frac32\\ln3-1=1+\\frac32\\ln3$, so $4y(1)-5\\ln3=4+\\ln3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $P(x,y)$ divides the intercept segment $AB$ with $AP:PB=1:k$, then $A=\\left(\\frac{(k+1)x}k,0\\right)$, $B=(0,(k+1)y)$ and the tangent slope is $-\\frac{ky}x$, so the curve is $x^ky=\\text{const}$. For $k=1$ ($P$ the midpoint) it is the rectangular hyperbola $xy=c$.",
+    "$\\int\\ln(ax+b)\\,dx=\\frac{(ax+b)\\left(\\ln(ax+b)-1\\right)}a+C$.",
+    "An equation $e^{y'}=g(x)$ is solved directly as $y'=\\ln g(x)$ and integrated."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Definite integrals of fractional part and greatest integer functions",
+    "Geometric progression"
+   ],
+   "question": "Let $\\{x\\}$ and $[x]$ denote the fractional part of $x$ and the greatest integer $\\le x$ respectively of a real number $x$. If $\\int_0^n\\{x\\}\\,dx$, $\\int_0^n[x]\\,dx$ and $10(n^2-n)$, $(n\\in\\mathbb N,\\ n>1)$ are three consecutive terms of a G.P., then $n$ is equal to ______ .",
+   "answer": "$21$",
+   "key_idea": "$\\{x\\}$ has period 1, so $\\int_0^n\\{x\\}dx=\\frac n2$, and $[x]=x-\\{x\\}$ gives $\\int_0^n[x]dx=\\frac{n^2-n}2$.",
+   "solution": [
+    "$\\{x\\}$ has period 1, so $\\int_0^n\\{x\\}dx=n\\int_0^1x\\,dx=n\\cdot\\frac12=\\frac n2$ (the PDF writes the upper limit of the inner integral as $n$, a slip).",
+    "$\\int_0^n[x]dx=\\int_0^n(x-\\{x\\})dx=\\int_0^nx\\,dx-\\int_0^n\\{x\\}dx=\\frac{n^2}2-\\frac n2$.",
+    "The three terms are $\\frac n2,\\ \\frac{n^2-n}2$ and $10(n^2-n)$, in G.P.",
+    "Middle term squared equals the product of the others: $\\left(\\frac{n^2-n}2\\right)^2=\\frac n2\\cdot10(n^2-n)$.",
+    "Divide by $n^2-n\\ne0$: $\\frac{n^2-n}4=5n$, so $n^2-n=20n$ and $n-1=20$ (the PDF writes $n-20=20$, a slip).",
+    "Hence $n=21$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes $\\int_0^n\\{x\\}dx=n\\int_0^n x\\,dx$ (the inner limit should be $1$) and the step 'n - 20 = 20' (should be $n-1=20$). Both are slips; the value $\\frac n2$, the G.P. equation and the answer $n=21$ are right (checked numerically: terms $10.5,\\,210,\\,4200$ with ratio $20$).",
+   "alternate_solutions": [
+    {
+     "idea": "Read the integrals as areas (a sawtooth of $n$ triangles and a staircase), and use the common ratio $r$ of the G.P.",
+     "solution": [
+      "$\\int_0^n\\{x\\}dx$ is $n$ triangles each of area $\\frac12$, so it is $\\frac n2$.",
+      "$\\int_0^n[x]dx$ is the staircase $0+1+2+\\cdots+(n-1)=\\frac{n(n-1)}2$.",
+      "The common ratio is $r=\\frac{n(n-1)/2}{n/2}=n-1$.",
+      "The third term must be $\\frac{n(n-1)}2\\cdot r=\\frac{n(n-1)^2}2$, and it equals $10n(n-1)$.",
+      "Dividing by $\\frac{n(n-1)}2$ gives $n-1=20$, so $n=21$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $n\\in\\mathbb N$: $\\int_0^n\\{x\\}dx=\\frac n2$ and $\\int_0^n[x]dx=\\frac{n(n-1)}2$; also $\\int_0^{n}\\{x\\}^kdx=\\frac n{k+1}$.",
+    "A periodic $f$ of period $T$: $\\int_0^{nT}f=n\\int_0^Tf$ (used for $\\{x\\}$, $\\sin^2x$, $|\\sin x|$...).",
+    "Three numbers $a,b,c$ in G.P. $\\iff b^2=ac$; with $a,b$ known the ratio is $b/a$ and $c=b\\cdot\\frac ba$ (here $r=n-1$)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Linear differential equation (integrating factor)"
+   ],
+   "question": "If the solution curve of the differential equation $\\left(y-2\\log_ex\\right)dx+\\left(x\\log_ex^2\\right)dy=0$, $x>1$ passes through the points $\\left(e,\\frac43\\right)$ and $\\left(e^4,\\alpha\\right)$, then $\\alpha$ is equal to ______ .",
+   "answer": "$3$",
+   "key_idea": "Since $\\log_ex^2=2\\log_ex$ and $\\int\\frac{dx}{2x\\ln x}=\\frac12\\ln\\ln x$, the integrating factor is $\\sqrt{\\ln x}$.",
+   "solution": [
+    "$\\log_ex^2=2\\ln x$, so $(y-2\\ln x)dx+(2x\\ln x)dy=0$.",
+    "$2x\\ln x\\frac{dy}{dx}+y=2\\ln x$, i.e. $\\frac{dy}{dx}+\\frac y{2x\\ln x}=\\frac1x$.",
+    "I.F. $=e^{\\int\\frac1{2x\\ln x}dx}=\\sqrt{\\ln x}$.",
+    "$y\\sqrt{\\ln x}=\\int\\frac{\\sqrt{\\ln x}}x\\,dx$.",
+    "$y\\sqrt{\\ln x}=\\frac23(\\ln x)^{3/2}+C\\ \\ \\cdots$ (i)",
+    "Equation (i) passes through $\\left(e,\\frac43\\right)$: $\\frac43\\cdot1=\\frac23+C$, so $C=\\frac23$.",
+    "$y\\sqrt{\\ln x}=\\frac23(\\ln x)^{3/2}+\\frac23\\ \\ \\cdots$ (ii)",
+    "(ii) passes through $(e^4,\\alpha)$: $\\alpha\\sqrt4=\\frac23\\cdot8+\\frac23=6$, so $\\alpha=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $t=\\ln x$, then solve as particular solution $+$ complementary function: $y=at+\\dfrac{C}{\\sqrt t}$.",
+     "solution": [
+      "With $t=\\ln x$ the equation $2x\\ln x\\frac{dy}{dx}+y=2\\ln x$ becomes $2t\\frac{dy}{dt}+y=2t$ (since $x\\frac{dy}{dx}=\\frac{dy}{dt}$).",
+      "Complementary function: $2t\\,y'+y=0\\Rightarrow\\frac{dy}y=-\\frac{dt}{2t}\\Rightarrow y_h=Ct^{-1/2}$.",
+      "Particular solution: try $y=at$: $2at+at=2t$, so $a=\\frac23$. Hence $y=\\frac23t+Ct^{-1/2}$.",
+      "At $x=e$ ($t=1$): $\\frac43=\\frac23+C$, so $C=\\frac23$.",
+      "At $x=e^4$ ($t=4$): $\\alpha=\\frac23\\cdot4+\\frac23\\cdot\\frac12=\\frac83+\\frac13=3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{dy}{dx}+\\frac{y}{x\\,g(\\ln x)}$-type equations put $t=\\ln x$; then $x\\frac{dy}{dx}=\\frac{dy}{dt}$ and the equation has constant or simple power-law coefficients.",
+    "$\\int\\frac{dx}{x\\ln x}=\\ln|\\ln x|$; $\\int\\frac{(\\ln x)^n}xdx=\\frac{(\\ln x)^{n+1}}{n+1}$.",
+    "A linear equation $y'+Py=Q$ with $Q$ a power of the variable usually has a power-law particular solution (undetermined coefficients), saving the integral."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Definite integral of modulus and greatest integer functions"
+   ],
+   "question": "If $\\int_{-a}^{a}\\left(|x|+|x-2|\\right)dx=22$ $(a>2)$ and $[x]$ denotes the greatest integer $\\le x$, then $\\int_a^{-a}\\left(x+[x]\\right)dx$ is equal to ______ .",
+   "answer": "$3$",
+   "key_idea": "For $a>2$ split $|x-2|$ at $2$; then $\\int_{-3}^{3}x\\,dx=0$ and the reversed limits flip the sign of $\\int_{-3}^3[x]dx=-3$.",
+   "solution": [
+    "$I=\\int_{-a}^{a}|x|\\,dx+\\int_{-a}^{a}|x-2|\\,dx=22$, with $a>2$.",
+    "$\\int_{-a}^a|x|\\,dx=2\\int_0^ax\\,dx=a^2$.",
+    "$\\int_{-a}^a|x-2|\\,dx=\\int_{-a}^{2}(2-x)dx+\\int_2^a(x-2)dx=\\frac{(a+2)^2}2+\\frac{(a-2)^2}2=a^2+4$.",
+    "$a^2+a^2+4=22\\Rightarrow a^2=9$, so $a=3$ (as $a>2$).",
+    "$\\int_a^{-a}\\left(x+[x]\\right)dx=\\int_3^{-3}x\\,dx+\\int_3^{-3}[x]dx$.",
+    "$\\int_3^{-3}x\\,dx=0$ (odd function, limits symmetric about $0$).",
+    "$\\int_{-3}^3[x]dx=(-3)+(-2)+(-1)+0+1+2=-3$ (value $k$ on $[k,k+1)$), so $\\int_3^{-3}[x]dx=3$.",
+    "Hence the required value is $0+3=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $[x]+[-x]=-1$ for non-integers, and read $\\int|x-2|$ as two triangles.",
+     "solution": [
+      "$|x-2|$ on $[-a,a]$ ($a>2$): a triangle left of $2$ with base $a+2$, height $a+2$ and one right of $2$ with base and height $a-2$, total $\\frac{(a+2)^2+(a-2)^2}2=a^2+4$.",
+      "With $\\int|x|=a^2$ this gives $2a^2+4=22$, so $a=3$.",
+      "$\\int_{-3}^3[x]dx=\\int_0^3\\left([x]+[-x]\\right)dx$ (replace $x\\to-x$ on $[-3,0]$).",
+      "For non-integer $x$, $[x]+[-x]=-1$, so $\\int_0^3\\left([x]+[-x]\\right)dx=-3$.",
+      "$\\int_3^{-3}\\left(x+[x]\\right)dx=-\\left(0+(-3)\\right)=3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x]+[-x]=-1$ for $x\\notin\\mathbb Z$ and $0$ for $x\\in\\mathbb Z$, so $\\int_{-n}^{n}[x]dx=-n$ and $\\int_{-n}^n\\{x\\}dx=n$.",
+    "$\\int_{-a}^a\\left(|x-p|\\right)dx=a^2+p^2$ for $a\\ge|p|$ (two triangles); here $p=2$ gives $a^2+4$.",
+    "$\\int_b^a f=-\\int_a^bf$: reversed limits change the sign, and odd integrands vanish on $[-a,a]$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 1,
+   "concepts": [
+    "Linear differential equation (integrating factor)"
+   ],
+   "question": "If for $x\\ge0$, $y=y(x)$ is the solution of the differential equation $(x+1)dy=\\left((x+1)^2+y-3\\right)dx$, $y(2)=0$, then $y(3)$ is equal to ______ .",
+   "answer": "$3$",
+   "key_idea": "Write it as $\\frac{dy}{dx}-\\frac y{x+1}=\\frac{(x+1)^2-3}{x+1}$, linear with I.F. $\\frac1{x+1}$.",
+   "solution": [
+    "$(x+1)dy=\\left((x+1)^2+y-3\\right)dx$, so $\\frac{dy}{dx}=\\frac{(x+1)^2-3}{x+1}+\\frac y{x+1}$.",
+    "$\\frac{dy}{dx}-\\frac y{x+1}=\\frac{(x+1)^2-3}{x+1}$, linear in $y$.",
+    "I.F. $=e^{-\\int\\frac{dx}{x+1}}=e^{-\\ln(1+x)}=\\frac1{1+x}$.",
+    "$y\\cdot\\frac1{1+x}=\\int\\frac{(x+1)^2-3}{x+1}\\cdot\\frac1{1+x}dx+c=\\int\\left(1-\\frac3{(1+x)^2}\\right)dx+c$.",
+    "$\\frac y{1+x}=x+\\frac3{1+x}+c$, so $y=x(x+1)+3+c(1+x)$.",
+    "$y(2)=0$: $0=6+3+3c$, so $c=-3$.",
+    "$y=x^2+x+3-3-3x=x^2-2x$.",
+    "$y(3)=9-6=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Undetermined coefficients: find a polynomial particular solution by inspection and add $c(x+1)$ from the homogeneous part.",
+     "solution": [
+      "The homogeneous equation $(x+1)y'=y$ has solution $y_h=c(x+1)$.",
+      "Try $y_p=x^2+k$: $(x+1)\\cdot2x=2x^2+2x$ and the right side is $(x+1)^2+x^2+k-3=2x^2+2x+k-2$, so $k=2$.",
+      "General solution: $y=x^2+2+c(x+1)$.",
+      "$y(2)=0$: $6+3c=0$, so $c=-2$ and $y=x^2+2-2x-2=x^2-2x$.",
+      "$y(3)=9-6=3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\left(\\frac y{x+1}\\right)=\\frac{(x+1)y'-y}{(x+1)^2}$: an equation $(x+1)y'-y=R(x)$ is exactly $(x+1)^2\\,d\\!\\left(\\frac y{x+1}\\right)=R\\,dx$.",
+    "If $Q(x)$ is a polynomial, try a polynomial particular solution of the same degree and add the complementary function.",
+    "General: $y'-\\frac{y}{x+1}=Q$ has I.F. $\\frac1{x+1}$, i.e. $y=(x+1)\\left[\\int\\frac{Q}{x+1}dx+c\\right]$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Leibniz rule for differentiating an integral equation",
+    "Variable-separable differential equation with inverse trigonometric integral"
+   ],
+   "question": "Let $f$ be a differentiable function defined on $\\left[0,\\frac\\pi2\\right]$ such that $f(x)>0$ and $f(x)+\\int_0^xf(t)\\sqrt{1-\\left(\\log_ef(t)\\right)^2}\\,dt=e$, $\\forall x\\in\\left[0,\\frac\\pi2\\right]$. Then $\\left(6\\log_ef\\left(\\frac\\pi6\\right)\\right)^2$ is equal to ______ .",
+   "answer": "$27$",
+   "key_idea": "Differentiating gives $f'+f\\sqrt{1-(\\ln f)^2}=0$; with $u=\\ln f$ it is $\\frac{du}{\\sqrt{1-u^2}}=-dx$.",
+   "solution": [
+    "The relation is $f(x)+\\int_0^xf(t)\\sqrt{1-(\\ln f(t))^2}\\,dt=e$. At $x=0$: $f(0)=e$, so $\\ln f(0)=1$.",
+    "Differentiate both sides: $f'(x)+f(x)\\sqrt{1-(\\ln f(x))^2}=0$.",
+    "$\\int\\frac{f'(x)\\,dx}{f(x)\\sqrt{1-(\\ln f(x))^2}}=-\\int dx$.",
+    "Let $\\ln f(x)=u$, so $\\frac{f'(x)}{f(x)}dx=du$ and $\\int\\frac{du}{\\sqrt{1-u^2}}=-\\int dx$.",
+    "$\\sin^{-1}\\left(\\ln f(x)\\right)=-x+c$.",
+    "Put $x=0$: $\\sin^{-1}\\left(\\ln f(0)\\right)=\\sin^{-1}1=c$, so $c=\\frac\\pi2$.",
+    "$\\sin^{-1}\\left(\\ln f(x)\\right)=\\frac\\pi2-x$, so $\\ln f(x)=\\sin\\left(\\frac\\pi2-x\\right)=\\cos x$.",
+    "$f(x)=e^{\\cos x}$ and $f\\left(\\frac\\pi6\\right)=e^{\\sqrt3/2}$.",
+    "$\\left(6\\ln f\\left(\\frac\\pi6\\right)\\right)^2=\\left(6\\cdot\\frac{\\sqrt3}2\\right)^2=27$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Guess $\\ln f=\\cos x$ (since $\\sqrt{1-\\cos^2}=\\sin$) and verify it in the integral equation; use $u=\\cos\\theta$ to see why.",
+     "solution": [
+      "Differentiating gives $u'=-\\sqrt{1-u^2}$ for $u=\\ln f$, with $u(0)=1$.",
+      "Write $u=\\cos\\theta(x)$ with $\\theta\\in[0,\\pi]$, $\\theta(0)=0$: then $-\\sin\\theta\\,\\theta'=-\\sin\\theta$, so $\\theta'=1$ and $\\theta=x$.",
+      "Hence $u=\\cos x$ and $f=e^{\\cos x}$.",
+      "Check in the original equation: $e^{\\cos x}+\\int_0^xe^{\\cos t}\\sin t\\,dt=e^{\\cos x}+\\left[-e^{\\cos t}\\right]_0^x=e^{\\cos x}-e^{\\cos x}+e=e$ ✓.",
+      "$\\ln f\\left(\\frac\\pi6\\right)=\\cos\\frac\\pi6=\\frac{\\sqrt3}2$, so $\\left(6\\cdot\\frac{\\sqrt3}2\\right)^2=27$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f+\\int_0^xg(f(t))\\,dt=\\text{const}$ differentiates to $f'=-g(f)$, an autonomous separable equation; the constant fixes $f(0)$.",
+    "$\\int\\frac{du}{\\sqrt{1-u^2}}=\\sin^{-1}u$; the substitution $u=\\cos\\theta$ turns $\\sqrt{1-u^2}$ into $\\sin\\theta$ and makes the equation $\\theta'=1$.",
+    "Caution: at $x=0$ we have $u=1$ where $\\sqrt{1-u^2}=0$, so uniqueness is not guaranteed ($f\\equiv e$ also satisfies the integral equation); the intended solution is the non-constant $e^{\\cos x}$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Integral equation with a constant definite integral",
+    "Linear differential equation (integrating factor)"
+   ],
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a differentiable function such that $f'(x)+f(x)=\\int_0^2f(t)\\,dt$. If $f(0)=e^{-2}$, then $2f(0)-f(2)$ is equal to ______ .",
+   "answer": "$1$",
+   "key_idea": "$\\int_0^2f(t)dt$ is a constant $k$, so $f'+f=k$ is an ordinary linear equation; then $k$ is fixed by its own definition.",
+   "solution": [
+    "Let $k=\\int_0^2f(t)\\,dt$, a constant. Then $\\frac{dy}{dx}+y=k$ with $y=f(x)$.",
+    "I.F. $=e^x$, so $y\\,e^x=k\\,e^x+c$.",
+    "$f(0)=e^{-2}$: $e^{-2}=k+c$, so $c=e^{-2}-k$.",
+    "$y=k+\\left(e^{-2}-k\\right)e^{-x}$.",
+    "Now $k=\\int_0^2\\left(k+\\left(e^{-2}-k\\right)e^{-x}\\right)dx=2k+\\left(e^{-2}-k\\right)\\left(1-e^{-2}\\right)$.",
+    "This simplifies to $0=e^{-2}\\left(1-e^{-2}+k\\right)$, so $k=e^{-2}-1$.",
+    "$f(x)=\\left(e^{-2}-1\\right)+e^{-x}$.",
+    "$f(2)=2e^{-2}-1$ and $f(0)=e^{-2}$.",
+    "$2f(0)-f(2)=2e^{-2}-2e^{-2}+1=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate the equation over $[0,2]$ to get $k=f(2)-f(0)$; then $f=k+Ce^{-x}$ makes the answer simply $C$.",
+     "solution": [
+      "Integrate $f'+f=k$ over $[0,2]$: $f(2)-f(0)+k=2k$, so $k=f(2)-f(0)$.",
+      "Hence $2f(0)-f(2)=f(0)-k$.",
+      "Solving $f'+f=k$: $f=k+Ce^{-x}$, so $f(0)=k+C$ and $f(0)-k=C$.",
+      "Also $k=f(2)-f(0)=C\\left(e^{-2}-1\\right)$, so $f(0)=k+C=Ce^{-2}$.",
+      "$f(0)=e^{-2}$ gives $C=1$, so $2f(0)-f(2)=C=1$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "An integral with constant limits, $\\int_a^bf$, is a number: name it $k$ and solve the equation with $k$ as a parameter, then close the loop with $k=\\int_a^bf$.",
+    "$f'+f=k\\Rightarrow f=k+Ce^{-x}$; then $\\int_0^2f=2k+C(1-e^{-2})$.",
+    "Integrating the equation itself over the interval ($\\int f'=f(b)-f(a)$) gives a free relation between $k$ and the end values."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Exact differential / Bernoulli differential equation",
+    "Point of intersection of two lines"
+   ],
+   "question": "If the curve $y=y(x)$ represented by the solution of the differential equation $(2xy^2-y)dx+x\\,dy=0$, passes through the intersection of the lines $2x-3y=1$ and $3x+2y=8$, then $|y(1)|$ is equal to ______ .",
+   "answer": "$1$",
+   "key_idea": "After dividing by $y^2$, $-\\frac1ydx+\\frac x{y^2}dy=-d\\!\\left(\\frac xy\\right)$ and the equation becomes $2x\\,dx=d\\!\\left(\\frac xy\\right)$.",
+   "solution": [
+    "$(2xy^2-y)dx+x\\,dy=0$, i.e. $2xy^2dx-y\\,dx+x\\,dy=0$.",
+    "Divide by $y^2$: $2x\\,dx-\\frac1ydx+\\frac x{y^2}dy=0$.",
+    "$2x\\,dx=\\frac1ydx-\\frac x{y^2}dy=d\\!\\left(\\frac xy\\right)$.",
+    "Integrate: $x^2=\\frac xy+c$.",
+    "The lines $2x-3y=1$ and $3x+2y=8$ meet at $(2,1)$.",
+    "The curve passes through $(2,1)$: $4=2+c$, so $c=2$.",
+    "$x^2=\\frac xy+2$. At $x=1$: $1=\\frac1y+2$, so $y(1)=-1$.",
+    "$|y(1)|=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "It is a Bernoulli equation in $y$ ($n=2$): the substitution $v=\\frac1y$ makes it linear.",
+     "solution": [
+      "Rewrite: $\\frac{dy}{dx}=\\frac{y-2xy^2}x=\\frac yx-2y^2$, a Bernoulli equation with $y^2$.",
+      "Divide by $y^2$ and put $v=\\frac1y$: $-\\frac{dv}{dx}=\\frac vx-2$, i.e. $\\frac{dv}{dx}+\\frac vx=2$.",
+      "I.F. $=x$: $\\frac{d}{dx}(xv)=2x$, so $xv=x^2+c$, i.e. $\\frac xy=x^2+c$.",
+      "Through $(2,1)$: $2=4+c$, so $c=-2$ and $\\frac xy=x^2-2$.",
+      "At $x=1$: $\\frac1y=-1$, so $y(1)=-1$ and $|y(1)|=1$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Recognise $d\\!\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^2}$, $d\\!\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2}$, $d(xy)=x\\,dy+y\\,dx$ in $M\\,dx+N\\,dy=0$ by regrouping terms.",
+    "Bernoulli $y'+Py=Qy^n$ becomes linear under $v=y^{1-n}$ (here $n=2$, $v=\\frac1y$).",
+    "Lines $2x-3y=1$, $3x+2y=8$: solve simultaneously; the DE's general solution then fixes the constant."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Area bounded by piecewise curves (min and max functions)"
+   ],
+   "question": "Let $f:[-3,1]\\to\\mathbb R$ be given as $f(x)=\\begin{cases}\\min\\left\\{(x+6),x^2\\right\\}, & -3\\le x\\le0\\\\ \\max\\left\\{\\sqrt x,x^2\\right\\}, & 0\\le x\\le1\\end{cases}$. If the area bounded by $y=f(x)$ and $x$-axis is $A$, then the value of $6A$ is equal to ______ .",
+   "answer": "$41$",
+   "key_idea": "Sketch $\\min$ and $\\max$ branches: the lower of $x+6$, $x^2$ switches at $x=-2$, and $\\sqrt x$ is the upper branch on $[0,1]$.",
+   "solution": [
+    "On $[-3,0]$, $f=\\min\\{x+6,x^2\\}$; the curves meet where $x^2=x+6$, i.e. $x=-2$ (the root $3$ is outside).",
+    "For $-3\\le x\\le-2$, $x+6\\le x^2$, so $f=x+6$; for $-2\\le x\\le0$, $f=x^2$.",
+    "On $[0,1]$, $\\sqrt x\\ge x^2$, so $f=\\max\\{\\sqrt x,x^2\\}=\\sqrt x$.",
+    "$f\\ge0$ throughout, so $A=\\int_{-3}^{-2}(x+6)\\,dx+\\int_{-2}^0x^2\\,dx+\\int_0^1\\sqrt x\\,dx$.",
+    "$\\int_{-3}^{-2}(x+6)dx=\\left[\\frac{x^2}2+6x\\right]_{-3}^{-2}=(2-12)-\\left(\\frac92-18\\right)=\\frac72$.",
+    "$\\int_{-2}^0x^2dx=\\frac83$ and $\\int_0^1\\sqrt x\\,dx=\\frac23$.",
+    "$A=\\frac72+\\frac83+\\frac23=\\frac{41}6$, so $6A=41$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "First piece is a trapezoid (no integration), and $\\int_0^1\\sqrt x\\,dx=1-\\int_0^1y^2dy$ because $\\sqrt x$ and $x^2$ are inverse functions.",
+     "solution": [
+      "On $[-3,-2]$ the region under $y=x+6$ is a trapezoid with parallel sides $3$ and $4$ and width $1$: area $\\frac{3+4}2=\\frac72$.",
+      "On $[-2,0]$: $\\int x^2dx=\\frac{8}{3}$.",
+      "On $[0,1]$ the curves $y=\\sqrt x$ and $y=x^2$ are mirror images in $y=x$, so $\\int_0^1\\sqrt x\\,dx+\\int_0^1x^2dx=1\\cdot1=1$ (the unit square).",
+      "Hence $\\int_0^1\\sqrt x\\,dx=1-\\frac13=\\frac23$.",
+      "$A=\\frac72+\\frac83+\\frac23=\\frac{41}6$, so $6A=41$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For an increasing $f$ with $f(0)=0$, $f(1)=1$: $\\int_0^1f+\\int_0^1f^{-1}=1$ (areas on the two sides of $y=x$ fill the unit square).",
+    "For $\\min\\{u,v\\}$ or $\\max\\{u,v\\}$: sketch both, find crossover points, and integrate branch by branch.",
+    "On $[0,1]$: $x^2\\le x\\le\\sqrt x$; on $[-3,0]$ the line $y=x+6$ meets $y=x^2$ only at $x=-2$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Area between curves with modulus functions"
+   ],
+   "question": "Let the area of the region $\\left\\{(x,y):|2x-1|\\le y\\le\\left|x^2-x\\right|,\\ 0\\le x\\le1\\right\\}$ be $A$. Then $(6A+11)^2$ is equal to ______ .",
+   "answer": "$125$",
+   "key_idea": "Both bounding curves are symmetric about $x=\\frac12$, so double the area on $\\left[\\frac{3-\\sqrt5}2,\\frac12\\right]$ where the curves cross.",
+   "solution": [
+    "The region is $|2x-1|\\le y\\le|x^2-x|$. For $0\\le x\\le1$, $|x^2-x|=x-x^2$.",
+    "Both curves are symmetric about $x=\\frac12$, so the area is twice the area on $\\left[0,\\frac12\\right]$.",
+    "For $x<\\frac12$, $|2x-1|=1-2x$. Intersection: $1-2x=x-x^2\\Rightarrow x^2-3x+1=0\\Rightarrow x=\\frac{3-\\sqrt5}2$ (the root in $[0,\\frac12]$).",
+    "$A=2\\int_{\\frac{3-\\sqrt5}2}^{\\frac12}\\left((x-x^2)-(1-2x)\\right)dx=2\\int_{\\frac{3-\\sqrt5}2}^{\\frac12}\\left(-x^2+3x-1\\right)dx$.",
+    "$A=2\\left[-\\frac{x^3}3+\\frac32x^2-x\\right]_{\\frac{3-\\sqrt5}2}^{\\frac12}$.",
+    "Upper limit: $-\\frac1{24}+\\frac38-\\frac12=-\\frac16$.",
+    "Lower limit with $a=\\frac{3-\\sqrt5}2$, $a^2=3a-1$, $a^3=8a-3$: $-\\frac{8a-3}3+\\frac32(3a-1)-a=\\frac56a-\\frac12=\\frac{9-5\\sqrt5}{12}$.",
+    "$A=2\\left(-\\frac16-\\frac{9-5\\sqrt5}{12}\\right)=\\frac{5\\sqrt5-11}6$.",
+    "$6A+11=5\\sqrt5$, so $(6A+11)^2=125$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last lines are cut ('on solving 6A+ = 5√5'): the constant $11$ is missing from the printed line and the evaluation of the integral is not shown. Filled in: $A=\\frac{5\\sqrt5-11}6\\approx0.03006$ (numerical quadrature agrees) and $(6A+11)^2=125$. Answer unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Shift the origin to $x=\\frac12$ ($t=x-\\frac12$): the region becomes $2|t|\\le y\\le\\frac14-t^2$, symmetric in $t$.",
+     "solution": [
+      "Put $t=x-\\frac12$: $|2x-1|=2|t|$ and $x-x^2=\\frac14-t^2$.",
+      "The region is $2|t|\\le y\\le\\frac14-t^2$, symmetric about $t=0$, so $A=2\\int_0^{t_0}\\left(\\frac14-t^2-2t\\right)dt$.",
+      "$t_0$: $t^2+2t-\\frac14=0\\Rightarrow t_0=\\frac{-2+\\sqrt5}2$.",
+      "$A=2\\left[\\frac{t_0}4-\\frac{t_0^3}3-t_0^2\\right]$. Reduce powers with $t_0^2=\\frac14-2t_0$, so $t_0^3=\\frac{17t_0}4-\\frac12$.",
+      "$A=2\\left[\\frac{t_0}4-\\frac{17t_0}{12}+\\frac16-\\frac14+2t_0\\right]=2\\left[\\frac{10t_0}{12}-\\frac1{12}\\right]=\\frac{10t_0-1}6$.",
+      "With $t_0=\\frac{\\sqrt5-2}2$: $A=\\frac{5\\sqrt5-11}6$, so $6A+11=5\\sqrt5$ and $(6A+11)^2=125$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Shift the origin to the axis of symmetry to remove asymmetry ($t=x-\\frac12$ here); then integrate over half the region and double.",
+    "Area between a parabola $y=ax^2+bx+c$ and a chord with intersection abscissae $\\alpha<\\beta$ is $\\frac{|a|(\\beta-\\alpha)^3}6$ (checked: $y=x^2$ and $y=x+2$, $\\alpha=-1,\\beta=2$ gives $4.5$).",
+    "For $a$ a root of $x^2-3x+1=0$ use $a^2=3a-1$, $a^3=8a-3$ to reduce powers instead of expanding surds."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Linear differential equation with trigonometric and logarithmic coefficients"
+   ],
+   "question": "Let the solution curve $x=x(y)$, $0<y<\\frac\\pi2$, of the differential equation $\\left(\\log_e(\\cos y)\\right)^2\\cos y\\,dx-\\left(1+3x\\log_e(\\cos y)\\right)\\sin y\\,dy=0$ satisfy $x\\left(\\frac\\pi3\\right)=\\frac1{2\\log_e2}$. If $x\\left(\\frac\\pi6\\right)=\\frac1{\\log_em-\\log_en}$, where $m$ and $n$ are coprime, then $mn$ is equal to ______ .",
+   "answer": "$12$",
+   "key_idea": "Treat $x$ as the unknown; with $t=\\ln\\cos y$ we have $dt=-\\tan y\\,dy$, so the integrating factor is $t^3$.",
+   "solution": [
+    "$\\cos y\\,\\ln^2(\\cos y)\\,dx=\\left(1+3x\\ln\\cos y\\right)\\sin y\\,dy$.",
+    "$\\frac{dx}{dy}=\\tan y\\left(\\frac{3x}{\\ln\\cos y}+\\frac1{\\ln^2\\cos y}\\right)$.",
+    "$\\frac{dx}{dy}-\\left(\\frac{3\\tan y}{\\ln\\cos y}\\right)x=\\frac{\\tan y}{\\ln^2\\cos y}$, linear in $x$.",
+    "I.F. $=e^{-\\int\\frac{3\\tan y}{\\ln\\cos y}dy}$. Put $\\ln\\cos y=t$, so $-\\tan y\\,dy=dt$ and the exponent is $3\\int\\frac{dt}t$.",
+    "I.F. $=e^{3\\ln t}=t^3=\\ln^3\\cos y$.",
+    "$x\\ln^3\\cos y=\\int\\frac{\\sin y}{\\cos y}\\ln\\cos y\\,dy+C$.",
+    "$x\\ln^3\\cos y=-\\frac{\\ln^2\\cos y}2+C$.",
+    "$x\\left(\\frac\\pi3\\right)=\\frac1{2\\ln2}$: $\\frac1{2\\ln2}\\ln^3\\frac12=-\\frac{\\ln^2\\frac12}2+C$, i.e. $-\\frac{\\ln^22}2=-\\frac{\\ln^22}2+C$, so $C=0$.",
+    "At $y=\\frac\\pi6$: $x\\ln^3\\frac{\\sqrt3}2=-\\frac12\\ln^2\\frac{\\sqrt3}2$, so $x=-\\frac1{2\\ln\\frac{\\sqrt3}2}$.",
+    "$x=-\\frac1{\\ln\\frac34}=\\frac1{\\ln\\frac43}=\\frac1{\\ln4-\\ln3}$, so $m=4$, $n=3$ and $mn=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Change the independent variable to $t=\\ln\\cos y$ first; the equation becomes an Euler-type linear equation in $t$.",
+     "solution": [
+      "With $t=\\ln\\cos y$, $\\frac{dt}{dy}=-\\tan y$, so $\\frac{dx}{dt}=-\\frac1{\\tan y}\\frac{dx}{dy}=-\\left(\\frac{3x}t+\\frac1{t^2}\\right)$.",
+      "$\\frac{dx}{dt}+\\frac{3x}t=-\\frac1{t^2}$; multiply by $t^3$: $\\frac{d}{dt}\\left(t^3x\\right)=-t$.",
+      "$t^3x=-\\frac{t^2}2+C$, so $x=-\\frac1{2t}+\\frac C{t^3}$.",
+      "At $y=\\frac\\pi3$: $t=-\\ln2$ and $x=\\frac1{2\\ln2}=-\\frac1{2t}$, so $C=0$ and $x=-\\frac1{2t}=-\\frac1{2\\ln\\cos y}$.",
+      "At $y=\\frac\\pi6$: $t=\\ln\\frac{\\sqrt3}2=\\frac12\\ln\\frac34$, so $x=-\\frac1{\\ln\\frac34}=\\frac1{\\ln4-\\ln3}$ and $mn=12$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When $\\tan y\\,dy$ (or $\\tan x\\,dx$) accompanies $\\ln\\cos y$, substitute $t=\\ln\\cos y$: $dt=-\\tan y\\,dy$.",
+    "Linear equation $\\frac{dx}{dt}+\\frac ntx=g(t)$ has I.F. $t^n$, so $t^nx=\\int t^ng\\,dt$.",
+    "The solution curve here is simply $2x\\ln\\cos y=-1$ (when $C=0$), which satisfies the given equation and the condition $x\\left(\\frac\\pi3\\right)=\\frac1{2\\ln2}$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Orthogonal trajectories: normals through a fixed point (differential equation)",
+    "Circle through given points"
+   ],
+   "question": "Let the normals at all the points on a given curve pass through a fixed point $(a,b)$. If the curve passes through $(3,-3)$ and $\\left(4,-2\\sqrt2\\right)$, and given that $a-2\\sqrt2\\,b=3$, then $\\left(a^2+b^2+ab\\right)$ is equal to ______ .",
+   "answer": "$9$",
+   "key_idea": "Normals all through $(a,b)$ means every point is stationary in its distance from $(a,b)$: the curve is a circle centred at $(a,b)$.",
+   "solution": [
+    "Normal at $P(x,y)$: $Y-y=-\\frac{dx}{dy}(X-x)$. It passes through $(a,b)$: $b-y=-\\frac{dx}{dy}(a-x)$.",
+    "$(b-y)\\,dy=(x-a)\\,dx$.",
+    "Integrate both sides: $by-\\frac{y^2}2=\\frac{x^2}2-ax+k$, i.e. $x^2+y^2-2ax-2by=C$, a circle with centre $(a,b)$. (The PDF drops the constant and takes $C=0$ without reason.)",
+    "Through $(3,-3)$: $9+9-6a+6b=C$. Through $\\left(4,-2\\sqrt2\\right)$: $16+8-8a+4\\sqrt2\\,b=C$.",
+    "Subtract: $18-6a+6b=24-8a+4\\sqrt2\\,b$, i.e. $2a+\\left(6-4\\sqrt2\\right)b=6$.",
+    "Use the given $a=3+2\\sqrt2\\,b$: $6+4\\sqrt2\\,b+6b-4\\sqrt2\\,b=6$, so $6b=0$, $b=0$ and $a=3$.",
+    "(Then $C=18-18=0$, so the PDF's choice $C=0$ is consistent.)",
+    "$a^2+b^2+ab=3^2+0+0=9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF sets the constant of integration to $0$ ('$x^2+y^2-2ax-2by=0$') without justification and then solves $a-b=3$, $2a-\\sqrt2b=6$, never using the given relation $a-2\\sqrt2\\,b=3$. Corrected: keep $C$, subtract the two point conditions to eliminate $C$, and use the given relation; this gives $b=0$, $a=3$ (and $C=0$ follows). The answer $9$ is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Geometric: the curve is a circle with centre $(a,b)$, so the centre is equidistant from the two points.",
+     "solution": [
+      "Normals at every point pass through $(a,b)$, so $\\frac{d}{ds}\\left((x-a)^2+(y-b)^2\\right)=0$ along the curve: the distance from $(a,b)$ is constant. The curve is a circle centred at $(a,b)$.",
+      "Hence $(a,b)$ is equidistant from $(3,-3)$ and $\\left(4,-2\\sqrt2\\right)$: $(3-a)^2+(3+b)^2=(4-a)^2+\\left(2\\sqrt2+b\\right)^2$.",
+      "Expanding: $18-6a+6b=24-8a+4\\sqrt2\\,b$, i.e. $2a+\\left(6-4\\sqrt2\\right)b=6$.",
+      "With $a=3+2\\sqrt2\\,b$ this gives $6b=0$, so $b=0$, $a=3$ and $a^2+b^2+ab=9$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If all normals of a curve pass through one fixed point, the curve is a circle centred at that point; if all tangents do, it is a straight line through that point.",
+    "Two equations from points on a circle, $x^2+y^2-2ax-2by=C$, can be subtracted to eliminate $C$ (the perpendicular-bisector line of the chord).",
+    "Here the centre $(3,0)$ and radius $3$: the circle $(x-3)^2+y^2=9$ contains both points ($(3-3)^2+9=9$, $1+8=9$)."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Composition of functions",
+    "Area bounded by curves"
+   ],
+   "question": "Let for $x\\in\\mathbb R$, $f(x)=\\frac{x+|x|}2$ and $g(x)=\\begin{cases}x, & x<0\\\\ x^2, & x\\ge0\\end{cases}$. The area bounded by the curve $y=(f\\circ g)(x)$ and the lines $y=0$, $2y-x=15$ is equal to ______ .",
+   "answer": "$72$",
+   "key_idea": "$f(x)=\\max(x,0)$, so $f\\circ g=x^2$ for $x\\ge0$ and $0$ for $x<0$; the region is a triangle plus a parabola-line piece.",
+   "solution": [
+    "$f(x)=\\frac{x+|x|}2=x$ for $x\\ge0$ and $0$ for $x<0$; $g(x)=x^2$ for $x\\ge0$, $x$ for $x<0$.",
+    "$f(g(x))=g(x)$ when $g(x)\\ge0$ and $0$ when $g(x)<0$.",
+    "For $x\\ge0$, $g=x^2\\ge0$, so $f\\circ g=x^2$; for $x<0$, $g=x<0$, so $f\\circ g=0$.",
+    "The line $2y-x=15$, i.e. $y=\\frac{x+15}2$, meets $y=0$ at $(-15,0)$, the $y$-axis at $\\left(0,\\frac{15}2\\right)$ and $y=x^2$ at $x=3$ (from $2x^2-x-15=0$), the point $(3,9)$.",
+    "$A=\\int_0^3\\left(\\frac{x+15}2-x^2\\right)dx+\\frac12\\cdot\\frac{15}2\\cdot15$, the triangle for $x<0$ having base $15$ and height $\\frac{15}2$.",
+    "$\\int_0^3\\left(\\frac{x+15}2-x^2\\right)dx=\\left[\\frac{x^2}4+\\frac{15x}2-\\frac{x^3}3\\right]_0^3=\\frac94+\\frac{45}2-9$.",
+    "$A=\\frac94+\\frac{45}2-9+\\frac{225}4=\\frac{9+90-36+225}4=\\frac{288}4=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Horizontal strips: for each $y\\in[0,9]$, $x$ runs from the line $x=2y-15$ to the parabola branch $x=\\sqrt y$; one integral, no triangle.",
+     "solution": [
+      "The region is bounded on the left by the line $x=2y-15$ and on the right by $x=\\sqrt y$ (the right branch of $y=x^2$; for $x<0$ the curve is the axis $y=0$).",
+      "The strips run for $y$ from $0$ to $9$ (the line meets the parabola at $(3,9)$).",
+      "$A=\\int_0^9\\left(\\sqrt y-(2y-15)\\right)dy=\\int_0^9\\left(\\sqrt y-2y+15\\right)dy$.",
+      "$=\\left[\\frac23y^{3/2}-y^2+15y\\right]_0^9=18-81+135=72$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x)=\\frac{x+|x|}2=\\max(x,0)$, so $f(g(x))=\\max(g(x),0)$: it keeps the positive part of $g$ and flattens the rest to $0$.",
+    "When the boundary curves are simple functions of $y$ (a line and $x=\\sqrt y$), integrate in $y$: it removes the need to split the area into a triangle and a curved piece.",
+    "Line $y=\\frac{x+15}2$ cuts $y=x^2$ at $x=3$ and $x=-\\frac52$; only $x=3$ matters because the curve is $0$ for $x<0$."
+   ]
+  }
+ ]
+}
