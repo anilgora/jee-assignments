@@ -1,0 +1,966 @@
+{
+ "title": "Conic Section (Exercise C-II) — Paper Analysis",
+ "subtitle": "Sheet C2 · detailed solutions",
+ "source": "papers/SHEET CONIC SECTION_FCopy C2.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "Conic Section C2",
+ "sections": [
+  {
+   "title": "Subjective / Integer Type",
+   "from": 1,
+   "to": 22,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default for subjective / integer)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent to an ellipse and auxiliary circle",
+    "Pair of lines through the origin (homogenisation)"
+   ],
+   "level": 2,
+   "question": "The tangent at the point $\\alpha$ (eccentric angle) on a standard ellipse meets the auxiliary circle in two points which subtend a right angle at the centre. Show that the eccentricity of the ellipse is $(1+\\sin^2\\alpha)^{-1/2}$.",
+   "answer": "$e=(1+\\sin^2\\alpha)^{-1/2}$",
+   "key_idea": "Homogenise the circle with the tangent: the pair $OA,OB$ is perpendicular exactly when the coefficients of $x^2$ and $y^2$ add to zero.",
+   "solution": [
+    "Auxiliary circle: $x^2+y^2=a^2$ ....(1).",
+    "Tangent at $P(a\\cos\\alpha,\\,b\\sin\\alpha)$: $\\frac{x}{a}\\cos\\alpha+\\frac{y}{b}\\sin\\alpha=1$ ....(2).",
+    "The pair of lines $OA,OB$ is obtained by homogenising (1) with the help of (2): $x^2+y^2=a^2\\left(\\frac{x}{a}\\cos\\alpha+\\frac{y}{b}\\sin\\alpha\\right)^2$.",
+    "Expanding: $(1-\\cos^2\\alpha)x^2-\\frac{2xya\\sin\\alpha\\cos\\alpha}{b}+y^2\\left(1-\\frac{a^2}{b^2}\\sin^2\\alpha\\right)=0$.",
+    "Since $\\angle AOB=90^\\circ$, the sum of the coefficients of $x^2$ and $y^2$ is zero.",
+    "So $1-\\cos^2\\alpha+1-\\frac{a^2}{b^2}\\sin^2\\alpha=0$, i.e. $1+\\sin^2\\alpha-\\frac{a^2}{b^2}\\sin^2\\alpha=0$.",
+    "Hence $1=\\frac{a^2-b^2}{b^2}\\sin^2\\alpha$.",
+    "Using $b^2=a^2(1-e^2)$ and $a^2-b^2=a^2e^2$: $1=\\frac{a^2e^2}{a^2(1-e^2)}\\sin^2\\alpha$.",
+    "So $1-e^2=e^2\\sin^2\\alpha$, i.e. $e^2(1+\\sin^2\\alpha)=1$ and $e=(1+\\sin^2\\alpha)^{-1/2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A chord of the auxiliary circle that subtends $90^\\circ$ at the centre lies at distance $\\frac{a}{\\sqrt2}$ from it, so equate this with the centre-to-tangent distance.",
+     "solution": [
+      "The chord $AB$ of the circle $x^2+y^2=a^2$ subtends $90^\\circ$ at $O$, so $\\triangle OAB$ is right isosceles with $OA=OB=a$.",
+      "Hence the distance of $O$ from the line $AB$ is $\\frac{a}{\\sqrt2}$ (half the hypotenuse $a\\sqrt2$).",
+      "But $AB$ is the tangent $\\frac{x}{a}\\cos\\alpha+\\frac{y}{b}\\sin\\alpha=1$; its distance from $O$ is $\\frac{1}{\\sqrt{\\frac{\\cos^2\\alpha}{a^2}+\\frac{\\sin^2\\alpha}{b^2}}}$.",
+      "Equating: $\\frac{\\cos^2\\alpha}{a^2}+\\frac{\\sin^2\\alpha}{b^2}=\\frac{2}{a^2}$, i.e. $\\cos^2\\alpha+\\frac{a^2}{b^2}\\sin^2\\alpha=2$.",
+      "So $\\frac{a^2}{b^2}\\sin^2\\alpha=1+\\sin^2\\alpha$, i.e. $\\frac{\\sin^2\\alpha}{1-e^2}=1+\\sin^2\\alpha$.",
+      "Therefore $1-e^2=\\frac{\\sin^2\\alpha}{1+\\sin^2\\alpha}$ and $e^2=\\frac{1}{1+\\sin^2\\alpha}$, giving the same $e=(1+\\sin^2\\alpha)^{-1/2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A chord of a circle of radius $R$ subtending $90^\\circ$ at the centre is at distance $\\frac{R}{\\sqrt2}$ from the centre (and has length $R\\sqrt2$).",
+    "Homogenisation: for a line $lx+my=1$ and a curve through the origin's neighbourhood, $x^2+y^2=R^2(lx+my)^2$ is the pair of lines from the origin to the intersection points; the lines are perpendicular iff coeff of $x^2$ + coeff of $y^2=0$.",
+    "Distance of the origin from the tangent at eccentric angle $\\alpha$ of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $p=\\frac{ab}{\\sqrt{b^2\\cos^2\\alpha+a^2\\sin^2\\alpha}}$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to an ellipse at an eccentric angle",
+    "Point on the ellipse (double angle)"
+   ],
+   "level": 2,
+   "question": "If the normal at the point $P(\\theta)$ to the ellipse $\\frac{x^2}{14}+\\frac{y^2}{5}=1$ intersects it again at the point $Q(2\\theta)$, show that $\\cos\\theta=-\\frac{2}{3}$.",
+   "answer": "$\\cos\\theta=-\\frac{2}{3}$",
+   "key_idea": "Substitute $Q(2\\theta)$ in the normal at $P(\\theta)$ and use $\\sin2\\theta/\\sin\\theta=2\\cos\\theta$ to get a quadratic in $\\cos\\theta$.",
+   "solution": [
+    "Normal at $P(\\theta)$: $\\frac{\\sqrt{14}\\,x}{\\cos\\theta}-\\frac{\\sqrt5\\,y}{\\sin\\theta}=14-5=9$.",
+    "It passes through $Q(2\\theta)=(\\sqrt{14}\\cos2\\theta,\\ \\sqrt5\\sin2\\theta)$: $\\frac{14\\cos2\\theta}{\\cos\\theta}-\\frac{5\\sin2\\theta}{\\sin\\theta}=9$.",
+    "Let $\\cos\\theta=t$. Since $\\sin2\\theta=2\\sin\\theta\\cos\\theta$: $\\frac{14(2t^2-1)}{t}-10t=9$.",
+    "Multiply by $t$: $14(2t^2-1)-10t^2=9t$.",
+    "So $18t^2-9t-14=0$, i.e. $(3t+2)(6t-7)=0$.",
+    "Hence $\\cos\\theta=-\\frac{2}{3}$ or $\\frac{7}{6}$.",
+    "$\\cos\\theta=\\frac{7}{6}$ is impossible for any $\\theta$, so $\\cos\\theta=-\\frac{2}{3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Instead of substituting into the normal, equate the slope of the chord $PQ$ with the slope $\\frac{a}{b}\\tan\\theta$ of the normal, factorising with sum-to-product.",
+     "solution": [
+      "Tangent slope at $P$ is $-\\frac{b}{a}\\cot\\theta$, so the normal slope is $\\frac{a}{b}\\tan\\theta=\\frac{a}{b}\\cdot\\frac{\\sin\\theta}{\\cos\\theta}$.",
+      "Slope of the chord $PQ$ with $P=(a\\cos\\theta,b\\sin\\theta)$, $Q=(a\\cos2\\theta,b\\sin2\\theta)$ is $\\frac{b}{a}\\cdot\\frac{\\sin2\\theta-\\sin\\theta}{\\cos2\\theta-\\cos\\theta}$.",
+      "With $c=\\cos\\theta$: $\\sin2\\theta-\\sin\\theta=\\sin\\theta(2c-1)$ and $\\cos2\\theta-\\cos\\theta=2c^2-c-1=(2c+1)(c-1)$.",
+      "$PQ$ is the normal at $P$: $\\frac{b}{a}\\cdot\\frac{\\sin\\theta\\,(2c-1)}{(2c+1)(c-1)}=\\frac{a}{b}\\cdot\\frac{\\sin\\theta}{c}$ with $\\sin\\theta\\neq0$ (otherwise $Q=P$).",
+      "So $b^2c(2c-1)=a^2(2c+1)(c-1)$; with $a^2=14,\\ b^2=5$: $5c(2c-1)=14(2c^2-c-1)$, i.e. $18c^2-9c-14=0$.",
+      "Roots $c=-\\frac23,\\ \\frac76$; only $c=-\\frac23$ is admissible, so $\\cos\\theta=-\\frac{2}{3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The normal at $P(\\theta)$ of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $\\frac{ax}{\\cos\\theta}-\\frac{by}{\\sin\\theta}=a^2-b^2$.",
+    "The normal at $\\theta$ meets the ellipse again at $\\varphi$ iff $\\tan\\theta\\tan\\frac{\\theta+\\varphi}{2}=-\\frac{b^2}{a^2}$ (slope of chord $PQ$ is $-\\frac{b}{a}\\cot\\frac{\\theta+\\varphi}{2}$).",
+    "Always reject roots with $|\\cos\\theta|>1$ (or $|\\sin\\theta|>1$) after solving for a trigonometric ratio.",
+    "Double-angle shortcuts: $\\frac{\\sin2\\theta}{\\sin\\theta}=2\\cos\\theta$ and $\\frac{\\cos2\\theta}{\\cos\\theta}=2\\cos\\theta-\\sec\\theta$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Locus from a sum of focal distances (ellipse)",
+    "Circles in the Argand plane (contact of circles)"
+   ],
+   "level": 2,
+   "question": "Let circles $C_1$ and $C_2$ on the Argand plane be given by $|z+1|=3$ and $|z-2|=7$ respectively. If a variable circle $|z-z_0|=r$ be inside circle $C_2$ such that it touches $C_1$ externally and $C_2$ internally, then the locus of $z_0$ describes a conic $E$. If the eccentricity of $E$ can be written in simplest form as $\\frac{p}{q}$ where $p,q\\in\\mathbb N$, find the value of $(p+q)$.",
+   "answer": "$13$",
+   "key_idea": "The distances of the centre $z_0$ from the two fixed centres add up to $r_1+r_2$, independent of $r$: an ellipse with those centres as foci.",
+   "solution": [
+    "$C_1$ has centre $S_1(-1,0)$, radius $r_1=3$; $C_2$ has centre $S_2(2,0)$, radius $r_2=7$. Let $P=z_0$ be the centre of the variable circle, radius $r$.",
+    "External contact with $C_1$: $PS_1=r_1+r$. Internal contact with $C_2$: $PS_2=r_2-r$.",
+    "Adding: $PS_1+PS_2=r_1+r+r_2-r=r_1+r_2=10$, a constant (and $10>S_1S_2=3$).",
+    "So $P$ moves on an ellipse with foci $S_1,S_2$ and $2a=10$.",
+    "The distance between the foci is $2ae=S_1S_2=3$.",
+    "Hence $e=\\frac{2ae}{2a}=\\frac{3}{10}$, already in lowest terms, so $p+q=3+10=13$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the two vertices of the locus directly from the two extreme circles lying along the line of centres.",
+     "solution": [
+      "Along the $x$-axis the variable circle can sit in two extreme positions; its centre is then an end of the major axis.",
+      "Right end: it touches $C_1$ externally at its rightmost point $(2,0)$ and $C_2$ internally at $(9,0)$. Diameter $[2,9]$, so the centre is $z_0=5.5$.",
+      "Left end: it touches $C_1$ externally at its leftmost point $(-4,0)$ and $C_2$ internally at $(-5,0)$. Diameter $[-5,-4]$, so the centre is $z_0=-4.5$.",
+      "So the major axis runs from $-4.5$ to $5.5$: $2a=10$, centre $0.5$ (the midpoint of the foci $-1$ and $2$, as it must be).",
+      "Distance of the centre $0.5$ from a focus: $ae=1.5$, so $e=\\frac{1.5}{5}=\\frac{3}{10}$ and $p+q=13$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If a circle touches $C_1$ externally and $C_2$ internally (with $C_1$ inside $C_2$), the sum of the distances of its centre from the two centres is $r_1+r_2$: ellipse with foci at the centres.",
+    "If a circle touches two circles in the same way (both externally, or both internally), the difference of the distances is $|r_1-r_2|$: a branch of a hyperbola.",
+    "In every such locus the foci are the centres of the fixed circles, so $2ae$ = distance between the centres and $2a$ = the constant sum or difference.",
+    "Instance here: $2a=r_1+r_2=10$, $2ae=3$, $e=\\frac{3}{10}$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent and focal radius of an ellipse (angles)",
+    "Sine rule in a triangle"
+   ],
+   "level": 3,
+   "question": "If the tangent at any point of an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ makes an angle $\\alpha$ with the major axis and an angle $\\beta$ with the focal radius of the point of contact, then show that the eccentricity $e$ of the ellipse is given by the absolute value of $\\frac{\\cos\\beta}{\\cos\\alpha}$.",
+   "answer": "$e=\\left|\\frac{\\cos\\beta}{\\cos\\alpha}\\right|$",
+   "key_idea": "Apply the sine rule in $\\triangle PST$ to get $\\cos\\theta=\\frac{\\sin\\alpha}{\\sin\\beta}$, then eliminate $\\theta$ using the tangent's slope.",
+   "solution": [
+    "Let $P(a\\cos\\theta,b\\sin\\theta)$ be the point of contact, $S(ae,0)$ the focus and $T(a\\sec\\theta,0)$ the point where the tangent meets the major axis. In $\\triangle PST$ apply the sine rule: $\\frac{PS}{\\sin(\\pi-\\alpha)}=\\frac{ST}{\\sin\\beta}$.",
+    "Here $PS=a(1-e\\cos\\theta)$ and $ST=a\\sec\\theta-ae=\\frac{a(1-e\\cos\\theta)}{\\cos\\theta}$.",
+    "So $\\frac{a(1-e\\cos\\theta)}{\\sin\\alpha}=\\frac{a(1-e\\cos\\theta)}{\\cos\\theta\\,\\sin\\beta}$, which gives $\\cos\\theta=\\frac{\\sin\\alpha}{\\sin\\beta}$ ....(1).",
+    "Slope of the tangent: $-\\frac{b}{a}\\cot\\theta=\\tan\\alpha$.",
+    "Hence $\\frac{b^2}{a^2}=\\tan^2\\alpha\\,\\tan^2\\theta=\\tan^2\\alpha(\\sec^2\\theta-1)$.",
+    "Using (1), $\\sec^2\\theta=\\frac{\\sin^2\\beta}{\\sin^2\\alpha}$, so $\\frac{b^2}{a^2}=\\tan^2\\alpha\\cdot\\frac{\\sin^2\\beta-\\sin^2\\alpha}{\\sin^2\\alpha}=\\frac{\\sin^2\\beta-\\sin^2\\alpha}{\\cos^2\\alpha}$.",
+    "Then $e^2=1-\\frac{b^2}{a^2}=\\frac{\\cos^2\\alpha-\\sin^2\\beta+\\sin^2\\alpha}{\\cos^2\\alpha}=\\frac{1-\\sin^2\\beta}{\\cos^2\\alpha}=\\frac{\\cos^2\\beta}{\\cos^2\\alpha}$.",
+    "Therefore $e=\\left|\\frac{\\cos\\beta}{\\cos\\alpha}\\right|$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use both foci: the tangent makes the same angle $\\beta$ with $PS$ and $PS'$, so $\\triangle SPS'$ has angles $\\pi-2\\beta,\\ \\alpha+\\beta,\\ \\beta-\\alpha$, and $e=\\frac{SS'}{PS+PS'}$.",
+     "solution": [
+      "Let $S,S'$ be the foci. By the reflection property the tangent at $P$ makes equal angles with $PS$ and $PS'$, so $\\angle SPS'=\\pi-2\\beta$.",
+      "In $\\triangle PST$ (with $T$ on the axis, beyond $S$) the angles are $\\alpha$ at $T$, $\\beta$ at $P$; so the exterior angle at $S$ is $\\angle PSS'=\\alpha+\\beta$.",
+      "Therefore $\\angle PS'S=\\pi-(\\pi-2\\beta)-(\\alpha+\\beta)=\\beta-\\alpha$.",
+      "Sine rule in $\\triangle SPS'$ with the standard ratio property: $\\frac{SS'}{\\sin\\angle P}=\\frac{PS+PS'}{\\sin\\angle S'+\\sin\\angle S}$, i.e. $\\frac{2ae}{\\sin 2\\beta}=\\frac{2a}{\\sin(\\beta-\\alpha)+\\sin(\\beta+\\alpha)}$.",
+      "$\\sin(\\beta-\\alpha)+\\sin(\\beta+\\alpha)=2\\sin\\beta\\cos\\alpha$, so $e=\\frac{\\sin2\\beta}{2\\sin\\beta\\cos\\alpha}=\\frac{\\cos\\beta}{\\cos\\alpha}$ (absolute value for orientation)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any triangle, $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$ implies $\\frac{a}{\\sin A}=\\frac{b+c}{\\sin B+\\sin C}$: with $a=SS'$, $b+c=PS+PS'=2a_{\\text{ell}}$ this gives $e=\\frac{\\sin P}{\\sin S+\\sin S'}$.",
+    "Reflection property: the tangent (normal) at $P$ makes equal angles with the two focal radii (bisects the external (internal) angle).",
+    "Focal distances: $PS=a(1-e\\cos\\theta)$, $PS'=a(1+e\\cos\\theta)$, so $PS+PS'=2a$.",
+    "The tangent at $\\theta$ meets the major axis at $T(a\\sec\\theta,0)$ and $CT\\cdot CN=a^2$ where $N$ is the foot of the ordinate."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangents to a parabola in parameter form",
+    "Area of the triangle formed by three tangents"
+   ],
+   "level": 3,
+   "question": "Tangents are drawn to the parabola $y^2=12x$ at the points $A,B$ and $C$ such that the three tangents form a triangle $PQR$. If $\\theta_1,\\theta_2,\\theta_3$ are the inclinations of these tangents with the axis of $x$ such that their cotangents form an arithmetical progression (in the same order) with common difference $2$, find the area of the triangle $PQR$.",
+   "answer": "$72$",
+   "key_idea": "The tangent at $t$ has slope $\\frac1t$, so $\\cot\\theta_i=t_i$: the parameters themselves are in A.P., and the tangent-triangle area depends only on $(t_i-t_j)$.",
+   "solution": [
+    "$y^2=12x$ gives $a=3$. The slopes of the tangents at $A(t_1),B(t_2),C(t_3)$ are $\\frac{1}{t_1},\\frac{1}{t_2},\\frac{1}{t_3}$.",
+    "So $\\tan\\theta_i=\\frac{1}{t_i}$, i.e. $\\cot\\theta_1=t_1,\\ \\cot\\theta_2=t_2,\\ \\cot\\theta_3=t_3$.",
+    "Thus $t_1,t_2,t_3$ are in A.P. with common difference $d=2$: $t_2-t_1=2$, $t_3-t_1=4$.",
+    "The vertices of $PQR$ are the intersections of pairs of tangents, $(at_it_j,\\ a(t_i+t_j))$.",
+    "Area $=\\frac12\\left|\\begin{matrix}at_1t_2&a(t_1+t_2)&1\\\\at_2t_3&a(t_2+t_3)&1\\\\at_3t_1&a(t_3+t_1)&1\\end{matrix}\\right|=\\frac{a^2}{2}\\left|(t_1-t_2)(t_2-t_3)(t_3-t_1)\\right|$.",
+    "Here $|(t_1-t_2)(t_2-t_3)(t_3-t_1)|=2\\cdot2\\cdot4=2d^3=16$.",
+    "Area $=\\frac{9}{2}\\times16=9\\times 8=a^2d^3=72$ square units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The shear $(x,y)\\to(x+cy+ac^2,\\ y+2ac)$ maps the point $t$ to $t+c$ and has determinant $1$, so the area is unchanged: take the parameters $0,2,4$.",
+     "solution": [
+      "The map $(x,y)\\mapsto(x+cy+ac^2,\\ y+2ac)$ sends $(at^2,2at)$ to $(a(t+c)^2,\\ 2a(t+c))$, so it preserves the parabola and shifts every parameter by $c$.",
+      "Its matrix part is $\\begin{pmatrix}1&c\\\\0&1\\end{pmatrix}$ with determinant $1$: it preserves areas (and maps tangents to tangents).",
+      "So the area of the tangent triangle is unchanged if $(t_1,t_2,t_3)=(t,t+2,t+4)$ is shifted to $(0,2,4)$.",
+      "The vertices $(at_it_j,a(t_i+t_j))$ are then $(0,2a)$, $(0,4a)$ and $(8a,6a)$.",
+      "Base along $x=0$ is $4a-2a=2a$ and the height is $8a$, so the area is $\\frac12\\cdot2a\\cdot8a=8a^2=72$ for $a=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=4ax$, the tangents at $t_i,t_j$ meet at $(at_it_j,\\ a(t_i+t_j))$.",
+    "Area of the triangle formed by tangents at $t_1,t_2,t_3$ is $\\frac{a^2}{2}\\left|(t_1-t_2)(t_2-t_3)(t_3-t_1)\\right|$; the area of the triangle of the three contact points is $a^2\\left|(t_1-t_2)(t_2-t_3)(t_3-t_1)\\right|$ (twice as big).",
+    "If $\\theta$ is the inclination of the tangent at $t$, then $\\cot\\theta=t$ (slope $=\\frac1t$).",
+    "For parameters in A.P. with common difference $d$ the tangent-triangle area is $a^2d^3$ (here $9\\cdot8=72$)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal at a point of a parabola",
+    "Distance formula and normal-chord parameter"
+   ],
+   "level": 2,
+   "question": "In the parabola $y^2=4ax$, the tangent at the point $P$, whose abscissa is equal to the latus rectum, meets the axis in $T$ and the normal at $P$ cuts the parabola again in $Q$. Prove that $PT:PQ=4:5$.",
+   "answer": "$PT:PQ=4:5$",
+   "key_idea": "Abscissa $=4a$ gives $t=2$; the normal chord has second parameter $t_2=-t-\\frac2t=-3$.",
+   "solution": [
+    "Let $P=(at^2,2at)$. The abscissa equals the latus rectum $4a$: $at^2=4a$, so $t=\\pm2$; take $t=2$, $P(4a,4a)$.",
+    "Tangent at $P$: $ty=x+at^2$, i.e. $2y=x+4a$. It meets the axis ($y=0$) at $T(-4a,0)$.",
+    "The normal at $P(t_1)$ meets the parabola again at $Q(t_2)$ with $t_2=-t_1-\\frac{2}{t_1}=-2-1=-3$.",
+    "So $Q=(at_2^2,2at_2)=(9a,-6a)$.",
+    "$PT=\\sqrt{(4a+4a)^2+(4a)^2}=\\sqrt{80a^2}$.",
+    "$PQ=\\sqrt{(4a-9a)^2+(4a+6a)^2}=\\sqrt{125a^2}$.",
+    "$\\frac{PT}{PQ}=\\sqrt{\\frac{80}{125}}=\\frac45$, so $PT:PQ=4:5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write both lengths for a general parameter $t$: $PT=2at\\sqrt{1+t^2}$ and normal-chord length $PQ=\\frac{4a(1+t^2)^{3/2}}{t^2}$, so $\\frac{PT}{PQ}=\\frac{t^3}{2(1+t^2)}$.",
+     "solution": [
+      "For $P(at^2,2at)$ the tangent meets the axis at $T(-at^2,0)$, so $PT^2=(2at^2)^2+(2at)^2=4a^2t^2(1+t^2)$, i.e. $PT=2at\\sqrt{1+t^2}$.",
+      "The normal meets the parabola again at $t_2=-t-\\frac2t$, so the parameter difference is $t-t_2=2t+\\frac2t=\\frac{2(t^2+1)}{t}$.",
+      "Chord length between parameters $t,t_2$: $PQ=a|t-t_2|\\sqrt{(t+t_2)^2+4}=a\\cdot\\frac{2(t^2+1)}{t}\\sqrt{\\frac{4}{t^2}+4}=\\frac{4a(1+t^2)^{3/2}}{t^2}$.",
+      "Therefore $\\frac{PT}{PQ}=\\frac{2at\\sqrt{1+t^2}\\cdot t^2}{4a(1+t^2)^{3/2}}=\\frac{t^3}{2(1+t^2)}$.",
+      "Abscissa $=4a$ gives $t=2$: $\\frac{PT}{PQ}=\\frac{8}{2\\cdot5}=\\frac45$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal at $t_1$ meets $y^2=4ax$ again at $t_2=-t_1-\\frac{2}{t_1}$; the pair satisfies $t_1^2+t_1t_2+2=0$.",
+    "Tangent at $t$ meets the axis at $(-at^2,0)$; normal at $t$ meets the axis at $(a(t^2+2),0)$.",
+    "Length of the chord joining parameters $t_1,t_2$: $a|t_1-t_2|\\sqrt{(t_1+t_2)^2+4}$.",
+    "For this question: $SP=x+a=5a=ST$, so $\\triangle SPT$ is isosceles ($ST=SP$ for every tangent: the focus is equidistant from $P$ and $T$)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangents to a parabola (parametric form)",
+    "Locus of the point of intersection of two tangents"
+   ],
+   "level": 2,
+   "question": "Two tangents to the parabola $y^2=8x$ meet the tangent at its vertex in the points $P$ and $Q$. If $PQ=4$ units, prove that the locus of the point of intersection of the two tangents is $y^2=8(x+2)$.",
+   "answer": "$y^2=8(x+2)$",
+   "key_idea": "The tangent at $t$ cuts the $y$-axis at $y=at$, so $PQ=a|t_1-t_2|$; combine this with $h=at_1t_2,\\ k=a(t_1+t_2)$.",
+   "solution": [
+    "For $y^2=8x$, $a=2$. The tangent at $P(t_1)$ is $t_1y=x+2t_1^2$.",
+    "The tangent at the vertex is $x=0$; putting $x=0$ gives $y=2t_1$. So the tangents meet it at $(0,2t_1)$ and $(0,2t_2)$.",
+    "$PQ=2|t_1-t_2|=4$ ....(1).",
+    "The tangents meet at $(h,k)$ with $h=at_1t_2$, $k=a(t_1+t_2)$.",
+    "From (1): $(t_1-t_2)^2=4$, i.e. $(t_1+t_2)^2-4t_1t_2=4$.",
+    "So $\\frac{k^2}{a^2}-\\frac{4h}{a}=4$, i.e. $k^2=4a^2+4ah=16+8h$.",
+    "Hence $y^2=8(x+2)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix the external point $(h,k)$ first: the $y$-intercepts of the two tangents from it are the roots of a quadratic, and their difference is $PQ$.",
+     "solution": [
+      "A tangent to $y^2=8x$ is $y=mx+\\frac2m$; its $y$-intercept is $c=\\frac2m$, so $m=\\frac2c$.",
+      "If it passes through $(h,k)$: $k=\\frac{2h}{c}+c$, i.e. $c^2-kc+2h=0$.",
+      "The two tangents from $(h,k)$ have $y$-intercepts $c_1,c_2$ (the points $P,Q$), roots of this quadratic.",
+      "$PQ=|c_1-c_2|=\\sqrt{k^2-8h}=4$, so $k^2-8h=16$.",
+      "Hence the locus of $(h,k)$ is $y^2=8x+16=8(x+2)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The tangent at $t$ to $y^2=4ax$ cuts the tangent at the vertex at $(0,at)$.",
+    "Tangents from $(h,k)$: $y=mx+\\frac am$ through $(h,k)$ gives $hm^2-km+a=0$ (roots $m_1,m_2$, with $m_1+m_2=\\frac kh,\\ m_1m_2=\\frac ah$).",
+    "The $y$-intercepts $c_1,c_2$ of the two tangents from $(h,k)$ are roots of $c^2-kc+ah=0$, so $c_1-c_2=\\sqrt{k^2-4ah}$; $P,Q$ at fixed distance $d$ give the parabola $k^2=4ah+d^2$.",
+    "Two tangents meet at $(at_1t_2,\\ a(t_1+t_2))$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangents to parabolas $y^2=4ax$ and $x^2=4by$",
+    "Locus by elimination of the slope"
+   ],
+   "level": 3,
+   "question": "Two straight lines, one being a tangent to $y^2=4ax$ and the other to $x^2=4by$, are at right angles. Find the locus of their point of intersection.",
+   "answer": "$(ax+by)(x^2+y^2)+(bx-ay)^2=0$",
+   "key_idea": "Perpendicularity ties the slopes of the two tangents together; the intersection point then gives two quadratics in $m$ with a common root.",
+   "solution": [
+    "Tangent to $y^2=4ax$: $y=mx+\\frac{a}{m}$ ....(1).",
+    "Tangent to $x^2=4by$: $x=m_1y+\\frac{b}{m_1}$ ....(2) (its slope is $\\frac1{m_1}$).",
+    "Perpendicular: $m\\cdot\\frac{1}{m_1}=-1$, so $m_1=-m$.",
+    "Let the intersection be $P(h,k)$. From (1): $k=mh+\\frac am$, i.e. $m^2h-mk+a=0$.",
+    "From (2) with $m_1=-m$: $h=-mk-\\frac bm$, i.e. $m^2k+mh+b=0$.",
+    "Cross-multiplying: $\\frac{m^2}{-kb-ah}=\\frac{m}{ak-bh}=\\frac{1}{h^2+k^2}$.",
+    "Using $m^2=(m)^2$: $\\frac{-(kb+ah)}{h^2+k^2}=\\frac{(ak-bh)^2}{(h^2+k^2)^2}$, so $-(h^2+k^2)(kb+ah)=(bh-ak)^2$.",
+    "Locus: $(x^2+y^2)(ax+by)+(bx-ay)^2=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Instead of eliminating, solve for the intersection point as a function of $m$ and show it satisfies the locus identically.",
+     "solution": [
+      "Tangent to $y^2=4ax$: $y=mx+\\frac am$. The perpendicular tangent to $x^2=4by$ has slope $M=-\\frac1m$ and equation $y=Mx-bM^2=-\\frac xm-\\frac{b}{m^2}$.",
+      "Equate: $mx+\\frac am=-\\frac xm-\\frac b{m^2}$, so $x\\,\\frac{m^2+1}{m}=-\\frac{am+b}{m^2}$, giving $x=-\\frac{am+b}{m(m^2+1)}$.",
+      "Then $y=mx+\\frac am=\\frac{a-bm}{m(m^2+1)}$.",
+      "Compute: $ax+by=\\frac{-a^2m-ab+ab-b^2m}{m(m^2+1)}=-\\frac{a^2+b^2}{m^2+1}$ and $bx-ay=\\frac{-b^2-abm-a^2+abm}{m(m^2+1)}=-\\frac{a^2+b^2}{m(m^2+1)}$.",
+      "Also $x^2+y^2=\\frac{(am+b)^2+(a-bm)^2}{m^2(m^2+1)^2}=\\frac{(a^2+b^2)(m^2+1)}{m^2(m^2+1)^2}=\\frac{a^2+b^2}{m^2(m^2+1)}$.",
+      "Therefore $(ax+by)(x^2+y^2)=-\\frac{(a^2+b^2)^2}{m^2(m^2+1)^2}$ and $(bx-ay)^2=\\frac{(a^2+b^2)^2}{m^2(m^2+1)^2}$; they cancel, so $(ax+by)(x^2+y^2)+(bx-ay)^2=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent to $y^2=4ax$: $y=mx+\\frac am$; tangent to $x^2=4by$: $y=Mx-bM^2$.",
+    "Two quadratics $p_1m^2+q_1m+r_1=0$ and $p_2m^2+q_2m+r_2=0$ have a common root iff $(p_1r_2-p_2r_1)^2=(p_1q_2-p_2q_1)(q_1r_2-q_2r_1)$ (resultant).",
+    "Cross-multiplication $\\frac{m^2}{\\cdot}=\\frac{m}{\\cdot}=\\frac1{\\cdot}$ eliminates a parameter from two equations that are quadratic in it.",
+    "Parametrise the intersection by the common slope; useful to check a locus identically."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Orthocentre of a triangle inscribed in a parabola",
+    "Symmetric functions of parameters (Vieta)"
+   ],
+   "level": 4,
+   "question": "Let $A(at_1^2,2at_1)$, $B(at_2^2,2at_2)$, $C(at_3^2,2at_3)$ be three points on the parabola $y^2=4ax$. If the orthocentre of the triangle $ABC$ is at the focus, then find $\\left|t_1+t_2+t_3+t_1t_2t_3+t_1t_2+t_2t_3+t_3t_1\\right|$.",
+   "answer": "$5$",
+   "key_idea": "The altitude condition $CS\\perp AB$ makes $t_3$ a root of a cubic whose coefficients involve only $u=t_1+t_2+t_3$; by symmetry $t_1,t_2$ are roots too, so Vieta applies.",
+   "solution": [
+    "The orthocentre is the focus $S(a,0)$, so the altitude from $C$ passes through $S$: $CS\\perp AB$.",
+    "Slope of $AB=\\frac{2}{t_1+t_2}$; slope of $CS=\\frac{2at_3}{a(t_3^2-1)}=\\frac{2t_3}{t_3^2-1}$.",
+    "Their product is $-1$: $\\frac{2}{t_1+t_2}\\cdot\\frac{2t_3}{t_3^2-1}=-1$, so $\\frac{2}{t_1+t_2}=\\frac{1-t_3^2}{2t_3}$.",
+    "Hence $t_1+t_2=\\frac{4t_3}{1-t_3^2}$.",
+    "Let $t_1+t_2+t_3=u$. Then $u=\\frac{4t_3}{1-t_3^2}+t_3=\\frac{5t_3-t_3^3}{1-t_3^2}$ ....(1).",
+    "So $t_3$ is a root of $t^3-ut^2-5t+u=0$ ....(2).",
+    "By symmetry (the other two altitudes also pass through $S$), $t_1$ and $t_2$ are roots of (2) with the same $u$. Hence the roots of (2) are $t_1,t_2,t_3$.",
+    "Vieta: $t_1+t_2+t_3=u$, $t_1t_2t_3=-u$, $t_1t_2+t_2t_3+t_3t_1=-5$.",
+    "So $t_1+t_2+t_3+t_1t_2t_3=0$ and the required value is $|0+(-5)|=5$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF labels the product of slopes as 'slope of AB x slope of BC' but the slopes it actually writes are those of AB and of CS (the altitude from C through the focus). Relabelled as CS perpendicular to AB; the working and the answer 5 are unchanged. Also added that the three parameters must be distinct so that they are exactly the three roots of the cubic.",
+   "useful_results": [
+    "For $y^2=4ax$: chord through $t_1,t_2$ has slope $\\frac{2}{t_1+t_2}$ and equation $2x-(t_1+t_2)y+2at_1t_2=0$; the chord through $t$ and the focus has slope $\\frac{2t}{t^2-1}$.",
+    "When the same relation holds for each of three variables with a common symmetric quantity (here $u=\\sum t_i$), the three variables are the roots of one cubic: use Vieta.",
+    "Orthocentre of the triangle on $y^2=4ax$ at the focus $\\iff t_1t_2+t_2t_3+t_3t_1=-5$ and $t_1+t_2+t_3+t_1t_2t_3=0$ (distinct parameters).",
+    "Check: $t=(0,\\sqrt5,-\\sqrt5)$ gives $\\sum t_it_j=-5$ and $\\sum t_i+t_1t_2t_3=0$; the triangle $O,(5a,2\\sqrt5a),(5a,-2\\sqrt5a)$ has orthocentre $(a,0)$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Chord of a parabola touching another parabola",
+    "Locus of the pole (tangents at the ends of a chord)"
+   ],
+   "level": 3,
+   "question": "A variable chord of the parabola $y^2=8x$ touches the parabola $y^2=2x$. The locus of the point of intersection of the tangents at the ends of the chord is a parabola. Find its latus rectum.",
+   "answer": "$32$",
+   "key_idea": "The chord is tangent to $y^2=2x$: the condition $c=\\frac{a'}{m}$ links $t_1t_2$ and $t_1+t_2$, which are exactly $h,k$ up to constants.",
+   "solution": [
+    "$y^2=8x$ has $a=2$. The tangents at $t_1,t_2$ meet at $(h,k)$: $h=2t_1t_2$, $k=2(t_1+t_2)$ ....(1).",
+    "The chord joining $t_1,t_2$: $2x-(t_1+t_2)y+4t_1t_2=0$.",
+    "In slope form: $y=\\frac{2}{t_1+t_2}x+\\frac{4t_1t_2}{t_1+t_2}$ ....(2).",
+    "(2) touches $y^2=2x$ (for which $a'=\\frac12$): condition $c=\\frac{a'}{m}$, so $\\frac{4t_1t_2}{t_1+t_2}=\\frac{t_1+t_2}{2\\cdot2}$.",
+    "Hence $16t_1t_2=(t_1+t_2)^2$.",
+    "From (1): $(t_1+t_2)^2=\\frac{k^2}{4}$ and $t_1t_2=\\frac h2$, so $\\frac{(t_1+t_2)^2}{t_1t_2}=\\frac{k^2}{4}\\cdot\\frac2h=16$.",
+    "So $k^2=32h$: the locus is $y^2=32x$, a parabola with latus rectum $32$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The chord is the polar (chord of contact) of the external point $(h,k)$; require this polar line to be tangent to $y^2=2x$.",
+     "solution": [
+      "The tangents at the ends of the chord meet at $(h,k)$, so the chord is the polar of $(h,k)$ with respect to $y^2=8x$: $ky=4(x+h)$.",
+      "Rewrite as $y=\\frac4k x+\\frac{4h}{k}$: slope $m=\\frac4k$ and intercept $c=\\frac{4h}{k}$.",
+      "It touches $y^2=2x$ iff $c=\\frac{1/2}{m}=\\frac{k}{8}$.",
+      "So $\\frac{4h}{k}=\\frac k8$, i.e. $k^2=32h$.",
+      "Locus $y^2=32x$; latus rectum $32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The chord of contact (polar) of $(h,k)$ with respect to $y^2=4ax$ is $ky=2a(x+h)$.",
+    "Line $y=mx+c$ touches $y^2=4ax$ iff $c=\\frac am$.",
+    "The pole of a chord that touches a second conic traces a conic: a short route is always 'polar of $(h,k)$ is tangent to the second curve'.",
+    "Generally, chords of $y^2=4a_1x$ that touch $y^2=4a_2x$ have their poles on $y^2=\\frac{4a_1^2}{a_2}x$; here $a_1=2,\\ a_2=\\frac12$ gives $y^2=32x$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normals to a parabola (normal chord parameter)",
+    "Condition for distinct real roots (discriminant)"
+   ],
+   "level": 2,
+   "question": "Show that the normals at two suitable distinct real points on the parabola $y^2=4ax\\ (a>0)$ intersect at a point on the parabola whose abscissa is greater than $8a$.",
+   "answer": "Abscissa of the common point $=at_1^2>8a$",
+   "key_idea": "If the normal at $P(t)$ passes through $Q(t_1)$ on the parabola then $t^2+t_1t+2=0$; two distinct real feet $t$ need a positive discriminant.",
+   "solution": [
+    "Let the normals at two distinct real points $P(t)$ and $P'(t')$ meet at the point $Q(t_1)\\equiv(at_1^2,2at_1)$ on the parabola.",
+    "The normal at $P(t)$ meets the parabola again at $Q(t_1)$ with $t_1=-t-\\frac{2}{t}$.",
+    "So $t^2+t_1t+2=0$ - a quadratic in $t$ whose two roots are the parameters of the two feet.",
+    "For two distinct real feet the discriminant must be positive: $t_1^2-8>0$.",
+    "So $t_1^2>8$.",
+    "Hence the abscissa of the common point is $at_1^2>8a$. (Conversely every $t_1$ with $t_1^2>8$ gives two real feet, so such a point exists.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use Vieta on $t^2+t_1t+2=0$: the feet satisfy $tt'=2$, $t+t'=-t_1$; two distinct reals with positive product have $|t+t'|>2\\sqrt{tt'}$ (AM-GM).",
+     "solution": [
+      "The two feet $t,t'$ are the roots of $t^2+t_1t+2=0$, so $tt'=2$ and $t+t'=-t_1$.",
+      "Since $tt'=2>0$, $t$ and $t'$ have the same sign, so $|t+t'|=|t|+|t'|$.",
+      "AM-GM: $|t|+|t'|\\ge2\\sqrt{|t||t'|}=2\\sqrt2$, with equality only if $|t|=|t'|$, i.e. $t=t'$ (same sign). The feet are distinct, so the inequality is strict.",
+      "So $|t_1|=|t+t'|>2\\sqrt2$, i.e. $t_1^2>8$ and the abscissa $at_1^2>8a$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal at $t_1$ passes through the point $t_2$ of the parabola iff $t_1^2+t_1t_2+2=0$.",
+    "Equivalently, the normals at $t,t'$ meet on the parabola iff $tt'=2$; then they meet at $t_1=-(t+t')$.",
+    "From any point of the parabola with $t_1^2>8$ there are two real normals other than the one at the point itself (3 normals in all).",
+    "Quadratic $t^2+pt+q=0$ has distinct real roots iff $p^2>4q$; for $q=2$: $p^2>8$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to a parabola at a point",
+    "Locus of a point defined by a midpoint relation"
+   ],
+   "level": 2,
+   "question": "$PC$ is the normal at $P$ to the parabola $y^2=4ax$, $C$ being on the axis. $CP$ is produced outwards to $Q$ so that $PQ=CP$. Show that the locus of $Q$ is a parabola.",
+   "answer": "$y^2=16a(x+2a)$, a parabola",
+   "key_idea": "$P$ is the midpoint of $CQ$, so $Q=2P-C$; the normal at $P(t)$ meets the axis at $C(a(2+t^2),0)$.",
+   "solution": [
+    "Normal at $P(at^2,2at)$: $y=-tx+2at+at^3$.",
+    "Put $y=0$: $x=a(2+t^2)$, so $C\\equiv(a(2+t^2),0)$.",
+    "Let $Q=(h,k)$. Since $PQ=CP$ with $Q$ beyond $P$, $P$ is the midpoint of $CQ$.",
+    "$\\frac{h+a(2+t^2)}{2}=at^2$ ....(1).",
+    "$\\frac{k+0}{2}=2at$, so $t=\\frac{k}{4a}$.",
+    "Put in (1): $h+2a+a\\left(\\frac{k}{4a}\\right)^2=2a\\left(\\frac{k}{4a}\\right)^2$.",
+    "So $h+2a=a\\left(\\frac{k}{4a}\\right)^2=\\frac{k^2}{16a}$, i.e. $k^2=16a(h+2a)$.",
+    "The locus $y^2=16a(x+2a)$ is a parabola."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The subnormal of a parabola is constant ($2a$), so $C$ is simply $2a$ to the right of the foot of the ordinate of $P$; then $Q=2P-C$.",
+     "solution": [
+      "For $y^2=4ax$ the subnormal (projection of $PC$ on the axis) is $2a$ at every point.",
+      "So $C=(x_P+2a,\\ 0)=(at^2+2a,\\ 0)$.",
+      "$P$ is the midpoint of $CQ$, so $Q=2P-C=(2at^2-at^2-2a,\\ 4at)=(at^2-2a,\\ 4at)$.",
+      "With $Q=(h,k)$: $k=4at$ and $h=at^2-2a=\\frac{k^2}{16a}-2a$.",
+      "Hence $k^2=16a(h+2a)$: the locus of $Q$ is the parabola $y^2=16a(x+2a)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Subnormal of $y^2=4ax$ is $2a$ (constant), subtangent is $2x_P$; hence the normal meets the axis at $(x_P+2a,0)$.",
+    "Locus of the point $Q$ that divides a moving segment in a fixed ratio is the image of the curve under a homothety; here $Q=2P-C$ with $C$ on the axis.",
+    "Dilating $y^2=4ax$ about the origin by factor $2$ gives $y^2=8ax$; the locus here is a parabola with latus rectum $16a$ (four times the original).",
+    "Normal at $t$: $y=-tx+2at+at^3$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Chord of a parabola through a fixed point on the axis",
+    "Parameter relation $t_1t_2=-\\frac{c}{a}$"
+   ],
+   "level": 3,
+   "question": "A quadrilateral is inscribed in a parabola $y^2=4ax$ and three of its sides pass through fixed points on the axis. Show that the fourth side also passes through a fixed point on the axis of the parabola.",
+   "answer": "The fourth side passes through the fixed point $\\left(\\frac{ce}{d},0\\right)$ on the axis",
+   "key_idea": "A chord $t_1t_2$ passes through $(c,0)$ iff $t_1t_2=-\\frac ca$; multiply the three relations so that the common parameters cancel.",
+   "solution": [
+    "Let $ABCD$ have vertices $A(t_1),B(t_2),C(t_3),D(t_4)$ on $y^2=4ax$, with $AB,BC,CD$ passing through $(c,0)$, $(d,0)$, $(e,0)$ respectively.",
+    "The chord $AB$ is $2x-(t_1+t_2)y+2at_1t_2=0$. It passes through $(c,0)$: $t_1t_2=-\\frac ca$ ....(1).",
+    "Similarly $BC$ through $(d,0)$: $t_2t_3=-\\frac da$ ....(2).",
+    "And $CD$ through $(e,0)$: $t_3t_4=-\\frac ea$ ....(3).",
+    "Multiply (1) and (3): $t_1t_2t_3t_4=\\left(-\\frac ca\\right)\\left(-\\frac ea\\right)=\\frac{ce}{a^2}$.",
+    "Use (2) for $t_2t_3$: $t_1t_4\\left(-\\frac da\\right)=\\frac{ce}{a^2}$.",
+    "So $t_1t_4=-\\frac{ce}{ad}$.",
+    "A chord $t_1t_4$ meets the axis at $\\left(-at_1t_4,0\\right)=\\left(\\frac{ce}{d},0\\right)$, a fixed point. Hence the fourth side $AD$ passes through a fixed point on the axis."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each chord through a point of the axis defines the involution $t\\mapsto-\\frac{k}{at}$ on the parameters; compose three involutions and read off the last.",
+     "solution": [
+      "A chord through $(k,0)$ joins $t$ and $t'=-\\frac{k}{at}$ (since $tt'=-\\frac ka$).",
+      "Going around: $t_3=g_e(t_4)$ with $g_e(t)=-\\frac{e}{at}$, then $t_2=g_d(t_3)$, then $t_1=g_c(t_2)$.",
+      "$g_d(g_e(t))=-\\frac{d}{a}\\cdot\\frac{1}{-e/(at)}=\\frac{d}{e}\\,t$.",
+      "Then $t_1=g_c\\left(\\frac{d}{e}t_4\\right)=-\\frac{c}{a}\\cdot\\frac{e}{d\\,t_4}$, so $t_1t_4=-\\frac{ce}{ad}$.",
+      "So $AD$ meets the axis at $\\left(-at_1t_4,0\\right)=\\left(\\frac{ce}{d},0\\right)$, a fixed point."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord through $t_1,t_2$ of $y^2=4ax$ meets the axis at $(-at_1t_2,0)$; it passes through a fixed axis point $(c,0)$ iff $t_1t_2=-\\frac ca$.",
+    "The map $t\\mapsto-\\frac{k}{at}$ is an involution; the composition of an odd number of such involutions is again an involution of the same kind.",
+    "For a quadrilateral with consecutive sides through $(c,0),(d,0),(e,0)$ the fourth side passes through $\\left(\\frac{ce}{d},0\\right)$ (so for a cyclic order $c,d,e$ the product rule is $x_4=\\frac{x_1x_3}{x_2}$).",
+    "Chord through the focus: $t_1t_2=-1$; chord through the vertex: $t_1t_2=0$ (degenerate)."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Normals to a parabola meeting on the curve",
+    "Foot parameters via Vieta"
+   ],
+   "level": 3,
+   "question": "Let $P(a,b)$ and $Q(c,d)$ be two points on the parabola $y^2=8x$ such that the normals at them meet in $(18,12)$. Find the product $abcd$.",
+   "answer": "$512$",
+   "key_idea": "$R(18,12)$ lies on the parabola, so the feet of the normals through it satisfy $t_1t_2=2$; combining with the intersection coordinates gives $t_1+t_2=-3$.",
+   "solution": [
+    "$y^2=8x$ is $y^2=4ax$ with $a=2$ (in the formulas below $a$ means this $2$, not the abscissa of $P$). $R(18,12)$ lies on the parabola ($144=8\\times18$).",
+    "Since the normals at $P(t_1)$ and $Q(t_2)$ meet on the parabola, $t_1t_2=2$ (both feet satisfy $t^2+t_Rt+2=0$).",
+    "The point of intersection of the normals at $t_1,t_2$ is $\\left(a(t_1^2+t_2^2+t_1t_2+2),\\ -at_1t_2(t_1+t_2)\\right)$.",
+    "Equating to $(18,12)$: $a(t_1^2+t_2^2+t_1t_2+2)=18$ ....(1) and $-at_1t_2(t_1+t_2)=12$ ....(2).",
+    "From (1) with $a=2$, $t_1t_2=2$: $2(t_1^2+t_2^2+4)=18$, so $t_1^2+t_2^2=5$.",
+    "From (2): $-4(t_1+t_2)=12$, so $t_1+t_2=-3$.",
+    "Then $t_1,t_2$ are roots of $t^2+3t+2=0$: $t_1=-1$, $t_2=-2$.",
+    "$P\\equiv(2(-1)^2,\\ 2\\cdot2\\cdot(-1))=(2,-4)$ and $Q\\equiv(2\\cdot4,\\ 2\\cdot2\\cdot(-2))=(8,-8)$.",
+    "$abcd=2\\times(-4)\\times8\\times(-8)=512$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $R$ as the parameter $t_3$: the normal at $P$ through $R$ gives $t^2+t_3t+2=0$, whose two roots are the parameters of $P$ and $Q$ - no need for the intersection formula.",
+     "solution": [
+      "$R=(2t_3^2,\\ 4t_3)=(18,12)$ gives $t_3=3$.",
+      "The normal at the point $t$ meets the parabola again at $-t-\\frac2t$. For $P$ and $Q$ this second point is $R$: $-t-\\frac2t=3$.",
+      "So $t^2+3t+2=0$, i.e. $t=-1$ or $t=-2$: these are the parameters of $P$ and $Q$.",
+      "$P=(2,-4)$ and $Q=(8,-8)$.",
+      "$abcd=2\\cdot(-4)\\cdot8\\cdot(-8)=512$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal at $t$ meets the parabola again at $-t-\\frac2t$, i.e. normals at $t_1,t_2$ meet on the curve at $t_3$ iff $t_1,t_2$ are the roots of $t^2+t_3t+2=0$.",
+    "Normals at $t_1,t_2$ of $y^2=4ax$ meet at $\\left(a(t_1^2+t_2^2+t_1t_2+2),\\ -at_1t_2(t_1+t_2)\\right)$.",
+    "Three normals from a point are concurrent iff $t_1+t_2+t_3=0$; here the third foot is $R$ itself ($t_3=3=-(t_1+t_2)$).",
+    "Both feet $t=-1,-2$ are negative, so $P$ and $Q$ lie below the axis: $b,d<0$ and $abcd>0$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Contact of two congruent parabolas",
+    "Locus of the vertex of a variable parabola"
+   ],
+   "level": 3,
+   "question": "A fixed parabola $y^2=4ax$ touches a variable parabola. Find the equation to the locus of the vertex of the variable parabola. Assume that the two parabolas are equal and the axis of the variable parabola remains parallel to the $x$-axis.",
+   "answer": "$y^2=8ax$",
+   "key_idea": "Two equal parabolas that touch (with parallel axes) are point-reflections of each other about the point of contact, so the vertex is twice as far from the origin as the point of contact; alternatively set the discriminant to zero.",
+   "solution": [
+    "Fixed parabola: $y^2=4ax$ ....(1).",
+    "Variable parabola (equal, opposite opening, axis parallel to the $x$-axis, vertex $(h,k)$): $(y-k)^2=-4a(x-h)$ ....(2).",
+    "Solve (1) and (2): substituting $x=\\frac{y^2}{4a}$ in (2): $(y-k)^2=-y^2+4ah$, i.e. $2y^2-2yk+k^2-4ah=0$.",
+    "Tangency means equal roots, so $D=0$: $4k^2-8(k^2-4ah)=0$.",
+    "$-4k^2+32ah=0$, i.e. $k^2=8ah$.",
+    "The locus of $(h,k)$ is $y^2=8ax$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The contact point $M$ is the midpoint of the two vertices: reflecting the fixed parabola in $M$ gives the variable one.",
+     "solution": [
+      "The point reflection in the point of contact $M$ preserves the tangent line at $M$ and maps the fixed parabola to an equal parabola, opening the other way, with axis parallel to the $x$-axis and touching the fixed one at $M$.",
+      "Hence the variable parabola (unique with this orientation) is that image, and its vertex $V'$ is the image of the origin: $V'=2M-O=2M$.",
+      "Let $M=(x_0,y_0)$ with $y_0^2=4ax_0$. Then $(h,k)=(2x_0,2y_0)$.",
+      "So $\\left(\\frac k2\\right)^2=4a\\cdot\\frac h2$, i.e. $k^2=8ah$.",
+      "The locus of the vertex is $y^2=8ax$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two equal parabolas with parallel axes touch at $M$ iff each is the reflection of the other in the point $M$ (opposite openings); the vertices are symmetric about $M$.",
+    "General rule: if $A$ and $A'$ are the two congruent curves touching at $M$ with a common tangent, a point reflection about $M$ swaps them.",
+    "Two parabolas $y^2=4ax$ and $(y-k)^2=-4a(x-h)$ touch iff $k^2=8ah$.",
+    "A dilation by factor $2$ about the origin turns $y^2=4ax$ into $y^2=8ax$: the locus is the original curve scaled by $2$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal chord of a parabola",
+    "Circle through the vertex and the ends of a normal chord (locus of centre)"
+   ],
+   "level": 3,
+   "question": "Prove that the locus of the centre of the circle which passes through the vertex of the parabola $y^2=4ax$ and through its intersection with a normal chord is $2y^2=ax-a^2$.",
+   "answer": "$2y^2=ax-a^2$",
+   "key_idea": "The normal chord has $t_1^2+t_1t_2=-2$; the circle through the vertex gives one cubic relation in $t_1$ and one in $t_2$; eliminate them.",
+   "solution": [
+    "Let the normal chord be $PQ$ with $P(t_1)$, $Q(t_2)$ on $y^2=4ax$. Then $t_2=-t_1-\\frac{2}{t_1}$, i.e. $t_1^2+t_1t_2=-2$.",
+    "Circle through the vertex with centre $(h,k)$: $x^2+y^2-2hx-2ky=0$.",
+    "It passes through $P$ and $Q$: $at_1^3+4at_1-2ht_1-4k=0$ ....(1) and $at_2^3+4at_2-2ht_2-4k=0$ ....(2) (after dividing by $at_i$).",
+    "(1)$-$(2): $a(t_1^3-t_2^3)+4a(t_1-t_2)-2h(t_1-t_2)=0$, so $a(t_1^2+t_2^2+t_1t_2)+4a-2h=0$.",
+    "Use $t_1^2+t_1t_2=-2$: $a(t_2^2-2)+4a-2h=0$, i.e. $at_2^2+2a-2h=0$ ....(3).",
+    "Now (1)$\\times t_2-$(2)$\\times t_1$: $at_1t_2(t_1^2-t_2^2)+4k(t_1-t_2)=0$, so $at_1t_2(t_1+t_2)+4k=0$.",
+    "Since $t_1(t_1+t_2)=-2$, $t_1t_2(t_1+t_2)=-2t_2$: $-2at_2+4k=0$, so $t_2=\\frac{2k}{a}$.",
+    "Put in (3): $a\\cdot\\frac{4k^2}{a^2}+2a-2h=0$, i.e. $2k^2+a^2-ah=0$.",
+    "The locus of $(h,k)$ is $2y^2=ax-a^2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes -2a t2 + 4f = 0 and concludes t2 = -2k/a. The correct solution is t2 = +2k/a (and 'f' should be 'k'). Because t2 is only used squared, the final locus 2y^2 = ax - a^2 is unchanged. Corrected the sign and the typo.",
+   "alternate_solutions": [
+    {
+     "idea": "The cubic $at^3+(4a-2h)t-4k=0$ gives the three intersections of the circle with the parabola other than the vertex; Vieta on it gives the locus with no elimination.",
+     "solution": [
+      "Circle through the vertex $x^2+y^2-2hx-2ky=0$ meets the parabola at $t=0$ (vertex) and at the roots of $at^3+(4a-2h)t-4k=0$ ....(*) (substituting $(at^2,2at)$ and dividing by $at$).",
+      "$P$ and $Q$ are two roots; let the third be $t_3$. (*) has no $t^2$ term, so $t_1+t_2+t_3=0$ and $t_3=-(t_1+t_2)$.",
+      "Vieta: $t_1t_2t_3=\\frac{4k}{a}$ and $t_1t_2+t_2t_3+t_3t_1=\\frac{4a-2h}{a}$.",
+      "Normal chord: $t_1(t_1+t_2)=-2$. Then $t_1t_2t_3=-t_1t_2(t_1+t_2)=2t_2=\\frac{4k}{a}$, so $t_2=\\frac{2k}{a}$.",
+      "$t_1t_2+t_3(t_1+t_2)=t_1t_2-(t_1+t_2)^2=-(t_1^2+t_1t_2+t_2^2)=-(t_2^2-2)=2-t_2^2$, and this equals $4-\\frac{2h}{a}$.",
+      "So $\\frac{2h}{a}=2+t_2^2=2+\\frac{4k^2}{a^2}$, i.e. $2k^2=ah-a^2$: $2y^2=ax-a^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Circle through the vertex meets $y^2=4ax$ again at three points with parameters summing to $0$ (the four intersection parameters of a circle and the parabola always add to $0$).",
+    "Normal chord: $t_2=-t_1-\\frac{2}{t_1}$.",
+    "Cubic $at^3+(4a-2h)t-4k=0$ has $\\sum t=0$, $\\sum t_it_j=\\frac{4a-2h}{a}$, $\\prod t_i=\\frac{4k}{a}$.",
+    "Numerical check ($a=1$, $t_1=1$, $t_2=-3$): $t_3=2$, $\\sum t_it_j=-3-6+2=-7$ gives $h=\\frac{11}{2}$ and $\\prod t_i=-6$ gives $k=-\\frac32$; then $2k^2=\\frac92=h-1$, as the locus requires."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangents to a parabola (foot of perpendicular from the focus)",
+    "Focal chords and directrix"
+   ],
+   "level": 3,
+   "question": "The equations of two tangents to a parabola are $L_1:\\ y+3=-\\frac13(x+1)$ and $L_2:\\ y-4=\\frac14(x+1)$, and one more tangent at the vertex is $L_3:\\ x+1=0$. The straight line $L:\\ y-3=m\\left(x-\\frac3m\\right),\\ m\\neq0$ is a variable chord of the parabola.\\n(a) Find the minimum length of the focal chord.\\n(b) Find the locus of the point of intersection of the tangents drawn at the extremities of the variable chord $L$.\\n(c) If $L'$ is the family of lines perpendicular to the variable chord $L$ which pass through the point of concurrency of $L$, find the locus of the middle point of the point of intersection of $L'$ with the directrix of the parabola and the point of concurrency of $L'$.",
+   "answer": "(a) $4$; (b) $x+2=0$; (c) $x+1=0$",
+   "key_idea": "The foot of the perpendicular from the focus on any tangent lies on the vertex tangent, so the perpendiculars at $L_1\\cap L_3$ and $L_2\\cap L_3$ meet at the focus.",
+   "solution": [
+    "$L_3:\\ x+1=0$ is the tangent at the vertex. $L_1\\cap L_3=(-1,-3)$ and $L_2\\cap L_3=(-1,4)$.",
+    "The foot of the perpendicular from the focus to a tangent lies on the vertex tangent. So the focus lies on the perpendicular to $L_1$ through $(-1,-3)$: slope $3$, $y+3=3(x+1)$, i.e. $y=3x$ ....(i).",
+    "It also lies on the perpendicular to $L_2$ through $(-1,4)$: slope $-4$, $y-4=-4(x+1)$, i.e. $y=-4x$ ....(ii).",
+    "(i) and (ii) meet at the focus $S(0,0)$.",
+    "(a) The minimum focal chord is the latus rectum: $4a=4\\times(\\text{distance from the focus to the vertex tangent})=4\\times1=4$.",
+    "The variable chord $L:\\ y-3=m\\left(x-\\frac3m\\right)$ simplifies to $y=mx$, which passes through the focus $(0,0)$: it is a focal chord.",
+    "(b) The tangents at the ends of a focal chord meet on the directrix. The vertex tangent $x=-1$ is at distance $a=1$ from the focus, so the directrix is $x+2=0$.",
+    "(c) $L'$ is perpendicular to $L$ through the focus; as $m$ varies, $L'$ again runs over all the lines through the focus $S$ (the same family as $L$).",
+    "Let $P(h,k)$ be the midpoint of $S$ and the point $T$ where $L'$ meets the directrix. Then $T=(2h,2k)$ lies on $x=-2$: $2h=-2$.",
+    "The locus of $P$ is $x+1=0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In part (c) the PDF says the family of lines L' perpendicular to L through the point of concurrency 'is L itself'. L' is perpendicular to L, so it is not L. What is true (and is what the argument needs) is that, as m varies, L' runs over the same family of lines through the focus. Reworded; the locus x + 1 = 0 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The orthocentre of the triangle formed by three tangents lies on the directrix: find it from the three given tangents.",
+     "solution": [
+      "$L_1\\cap L_2$: put $X=x+1$; $-\\frac X3-3=\\frac X4+4$ gives $X=-12$, so the point is $(-13,1)$. The triangle has vertices $(-1,-3),(-1,4),(-13,1)$.",
+      "$L_3$ is vertical, so the altitude from $(-13,1)$ is the horizontal line $y=1$.",
+      "The altitude from $(-1,-3)$ is perpendicular to $L_2$ (slope $\\frac14$): $y+3=-4(x+1)$; at $y=1$ this gives $x=-2$. The orthocentre is $(-2,1)$.",
+      "The orthocentre of a triangle formed by three tangents of a parabola lies on its directrix, so the directrix is $x=-2$ (perpendicular to the axis): (b) $x+2=0$.",
+      "The vertex tangent $x=-1$ is midway between the focus and the directrix, so $a=1$ and the minimum focal chord (latus rectum) is $4a=4$: (a) $4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The foot of the perpendicular from the focus to any tangent lies on the tangent at the vertex.",
+    "The orthocentre of the triangle formed by any three tangents to a parabola lies on the directrix.",
+    "Tangents at the ends of a focal chord are perpendicular and meet on the directrix; the least focal chord is the latus rectum $4a$.",
+    "Distances along the axis: focus to vertex $=a$, vertex to directrix $=a$; so latus rectum $=4a=2\\times$ (focus-directrix distance)."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normals at the ends of a chord of contact (parabola)",
+    "Concyclic points and circumcentre of a tangent triangle"
+   ],
+   "level": 4,
+   "question": "$TP$ and $TQ$ are two tangents to the parabola $y^2=8x$ such that the normals at the points $P$ and $Q$ intersect the curve at $R$.\\n(a) Find the locus of the middle points of the chord $PQ$.\\n(b) The chord $PQ$ always passes through a fixed point $F$. Find the distance of $F$ from the focus of the given parabola.\\n(c) Find the locus of the centre of the circle circumscribing the triangle $TPQ$.",
+   "answer": "(a) $y^2=4(x+4)$; (b) $6$; (c) $y^2=x-2$",
+   "key_idea": "Normals at $P,Q$ meeting on the curve force $t_1t_2=2$; and since $TP\\perp PR$, $TQ\\perp QR$ the circle on $TR$ as diameter passes through $T,P,Q,R$.",
+   "solution": [
+    "$y^2=8x$ gives $a=2$. The normals at $P(t_1)$ and $Q(t_2)$ meet the parabola again at $R(t_3)$, so $t_1,t_2$ are the roots of $t^2+t_3t+2=0$: $t_1t_2=2$ and $t_1+t_2+t_3=0$.",
+    "(a) Midpoint $(h,k)$: $2h=a(t_1^2+t_2^2)$ and $2k=2a(t_1+t_2)$.",
+    "$k^2=a^2(t_1+t_2)^2=a^2\\left[(t_1^2+t_2^2)+2t_1t_2\\right]=a^2\\left[\\frac{2h}{a}+4\\right]$.",
+    "So $k^2=2ah+4a^2=2a(h+2a)$, i.e. $y^2=4(x+4)$.",
+    "(b) The chord $PQ$: $2x-(t_1+t_2)y+2at_1t_2=0$, i.e. $2x-(t_1+t_2)y+8=0$.",
+    "Rewrite: $2(x+4)=(t_1+t_2)y$, i.e. $(x+4)+\\lambda y=0$: it passes through the fixed point $F(-4,0)$.",
+    "The focus is $(2,0)$, so $FS=6$.",
+    "(c) $TP$ is a tangent and $PR$ is the normal at $P$, so $\\angle TPR=90^\\circ$; likewise $\\angle TQR=90^\\circ$. Hence $T,P,R,Q$ are concyclic with $TR$ as diameter.",
+    "The tangents at $t_1,t_2$ meet at $T=(at_1t_2,\\ a(t_1+t_2))=(2a,\\ -at_3)$ and $R=(at_3^2,\\ 2at_3)$. Let the centre (midpoint of $TR$) be $(x_1,y_1)$.",
+    "$2x_1=at_1t_2+at_3^2=2a+at_3^2$ ....(1).",
+    "$2y_1=a(t_1+t_2)+2at_3=-at_3+2at_3=at_3$, so $t_3=\\frac{2y_1}{a}$.",
+    "Put in (1): $2x_1=2a+\\frac{4y_1^2}{a}$, so $ax_1=a^2+2y_1^2$, i.e. $2y_1^2=a(x_1-a)$.",
+    "With $a=2$: $y_1^2=x_1-2$. The locus is $y^2=x-2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Part (c): the PDF writes 2x1 = 4a + a t3^2, but a t1 t2 = 2a (not 4a), giving y^2 - x + 4 = 0. Correct: 2x1 = 2a + a t3^2 and the locus is y^2 = x - 2 (checked with t1=1, t2=2: T=(4,6), R=(18,-12), centre (11,-3), 9 = 11-2). Parts (a) and (b) are correct. The printed answer key lists only (a) and (b).",
+   "alternate_solutions": [
+    {
+     "idea": "Pole-polar view: $T$ lies on $x=at_1t_2=4$, so its polar $PQ$ passes through the pole of the line $x=4$, namely $(-4,0)$; then use the midpoint-chord equation $T=S_1$.",
+     "solution": [
+      "Since $t_1t_2=2$, the tangents meet at $T$ with abscissa $at_1t_2=4$: $T$ lies on the line $x=4$.",
+      "$PQ$ is the polar of $T(4,\\tau)$: $\\tau y=4(x+4)$. This passes through $(-4,0)$ for every $\\tau$ - the fixed point $F$ (b). $FS=2-(-4)=6$.",
+      "(a) The chord with midpoint $(h,k)$ of $y^2=8x$ has equation $T=S_1$: $ky-4(x+h)=k^2-8h$.",
+      "It passes through $F(-4,0)$: $-4(h-4)=k^2-8h$, i.e. $16-4h=k^2-8h$, so $k^2=4h+16$.",
+      "Locus $y^2=4(x+4)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normals at $t_1,t_2$ of $y^2=4ax$ meet on the curve iff $t_1t_2=2$; they then meet at $t_3=-(t_1+t_2)$.",
+    "For $t_1t_2=2$: tangents at $t_1,t_2$ meet on $x=2a$, and the chord $t_1t_2$ passes through $(-2a,0)$ (here $F=(-4,0)$ for $a=2$).",
+    "Tangent at $P$ and normal at $P$ are perpendicular, so $T,P,R,Q$ (with $TP\\perp PR$, $TQ\\perp QR$) are concyclic on the circle with diameter $TR$.",
+    "Circumcentre of $TPQ$ here $=\\left(a+\\frac{at_3^2}{2},\\ \\frac{at_3}{2}\\right)$, which traces $y^2=\\frac a2\\,(x-a)$ i.e. $y^2=x-2$ for $a=2$ (check: $t_1=1,t_2=2$ gives $T(4,6),R(18,-12)$, centre $(11,-3)$, and $9=11-2$)."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Two equal parabolas touching each other",
+    "Area bounded by parabolas and the $x$-axis"
+   ],
+   "level": 3,
+   "question": "Two equal parabolas $P_1$ and $P_2$ have their vertices at $V_1(0,4)$ and $V_2(6,0)$ respectively. $P_1$ and $P_2$ are tangent to each other and have vertical axes of symmetry.\\n(a) Find the sum of the abscissa and ordinate of their point of contact.\\n(b) Find the length of the latus rectum.\\n(c) Find the area of the region enclosed by $P_1$, $P_2$ and the $x$-axis.",
+   "answer": "(a) $5$; (b) $\\frac92$; (c) $4\\left(3-2\\sqrt2\\right)$",
+   "key_idea": "Equal touching parabolas with vertical axes open in opposite directions, so equating the slopes at the contact point fixes it at $x=3$.",
+   "solution": [
+    "The parabolas are equal with vertical axes, and touch each other, so they open in opposite directions: $P_1$ (vertex $(0,4)$) opens downwards, $P_2$ (vertex $(6,0)$) opens upwards.",
+    "$P_1:\\ x^2=-4a(y-4)$. Differentiating, $2x=-4ay'$, so $y'=-\\frac{x}{2a}$ ....(1).",
+    "$P_2:\\ (x-6)^2=4ay$. Differentiating, $2(x-6)=4ay'$, so $y'=\\frac{x-6}{2a}$ ....(2).",
+    "For tangency (1) = (2): $-x=x-6$, so $x=3$.",
+    "Put $x=3$ in both parabolas: $-4a(y-4)=4ay$, so $4-y=y$ and $y=2$.",
+    "The point $(3,2)$ lies on $P_2$: $9=4a\\cdot2$, so $a=\\frac98$.",
+    "(a) $3+2=5$.",
+    "(b) Latus rectum $=4a=\\frac92$.",
+    "(c) $P_1:\\ y=4-\\frac{2x^2}{9}$ meets the $x$-axis at $x=3\\sqrt2$; $P_2:\\ y=\\frac{2(x-6)^2}{9}$ touches the $x$-axis at $x=6$.",
+    "The region lies under $P_2$ for $3\\le x\\le6$ and above $P_1$: Area $=\\int_3^6\\frac{2(x-6)^2}{9}dx-\\int_3^{3\\sqrt2}\\left(4-\\frac{2x^2}{9}\\right)dx$.",
+    "First integral: $\\frac{2}{27}\\left[(x-6)^3\\right]_3^6=\\frac{2}{27}\\cdot27=2$. Second: $\\left[4x-\\frac{2x^3}{27}\\right]_3^{3\\sqrt2}=8\\sqrt2-10$.",
+    "Area $=2-(8\\sqrt2-10)=12-8\\sqrt2=4\\left(3-2\\sqrt2\\right)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF states the answer to (c), 4(3 - 2*sqrt2), with no working. Added the integral set-up and its evaluation (and noted which curve opens up/down). Answers (a) 5, (b) 9/2, (c) 4(3 - 2*sqrt2) are right (checked: area 12 - 8*sqrt2 = 0.686).",
+   "alternate_solutions": [
+    {
+     "idea": "Equal touching parabolas are point-reflections in the contact point, so the contact point is the midpoint of the vertices; for the area, integrate over horizontal strips.",
+     "solution": [
+      "The contact point of two equal parabolas with parallel axes is the midpoint of their vertices: $\\left(\\frac{0+6}{2},\\frac{4+0}{2}\\right)=(3,2)$. (a) $3+2=5$.",
+      "$P_2:\\ (x-6)^2=4ay$ passes through $(3,2)$: $9=8a$, so $a=\\frac98$ and (b) the latus rectum is $4a=\\frac92$.",
+      "Horizontal strips for $0\\le y\\le2$: left boundary is the right branch of $P_1$, $x_1=\\frac{3}{\\sqrt2}\\sqrt{4-y}$ (from $x^2=\\frac92(4-y)$); right boundary is the left branch of $P_2$, $x_2=6-\\frac{3}{\\sqrt2}\\sqrt y$.",
+      "Area $=\\int_0^2(x_2-x_1)\\,dy=12-\\frac{3}{\\sqrt2}\\cdot\\frac23\\left[y^{3/2}\\right]_0^2-\\frac{3}{\\sqrt2}\\cdot\\frac23\\left[-(4-y)^{3/2}\\right]_0^2$.",
+      "$=12-4-\\sqrt2\\,(8-2\\sqrt2)=8-8\\sqrt2+4=12-8\\sqrt2=4\\left(3-2\\sqrt2\\right)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two equal parabolas with parallel axes that touch are point-reflections of each other in the contact point, so the contact point is the midpoint of the two vertices.",
+    "Area under $y=k(x-p)^2$ between $x=p$ and $x=p+w$ is $\\frac{kw^3}{3}$ (here $k=\\frac29$, $w=3$ gives $2$).",
+    "Chord-parabola area: the region between $y=kx^2$ and a chord meeting it at $x=\\alpha,\\beta$ is $\\frac{k(\\beta-\\alpha)^3}{6}$.",
+    "Choose $x$-strips or $y$-strips according to which gives single-valued boundaries; here both work, $y$-strips avoid splitting."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal chords of a parabola",
+    "Locus of the pole (intersection of tangents at the ends of a chord)"
+   ],
+   "level": 3,
+   "question": "Find the locus of the points of intersection of tangents drawn at the ends of all normal chords of the parabola $y^2=8(x-1)$.",
+   "answer": "$(x+3)y^2+32=0$",
+   "key_idea": "Shift to $Y^2=4aX$ with $X=x-1$; for a normal chord $t_1^2+t_1t_2=-2$, so both $h$ and $k$ become functions of $t_1$ alone.",
+   "solution": [
+    "Let the parabola be $Y^2=4aX$ with $X=x-1,\\ Y=y,\\ a=2$.",
+    "For a normal chord $PQ$ (normal at $P(t_1)$ meeting the curve at $Q(t_2)$): $t_1+t_2=-\\frac{2}{t_1}$, i.e. $t_1^2+t_1t_2=-2$.",
+    "The tangents at the ends meet at $(h,k)$ with $h=at_1t_2$, $k=a(t_1+t_2)$ (in $X,Y$ coordinates).",
+    "So $h=a\\left(-2-t_1^2\\right)$ and $k=-\\frac{2a}{t_1}$.",
+    "From the second, $t_1=-\\frac{2a}{k}$.",
+    "Substitute: $h=-2a-a\\left(-\\frac{2a}{k}\\right)^2=-2a-\\frac{4a^3}{k^2}$.",
+    "For $a=2$: $X=-4-\\frac{32}{Y^2}$, i.e. $x-1=-4-\\frac{32}{y^2}$.",
+    "So $x+3=-\\frac{32}{y^2}$: the locus is $(x+3)y^2+32=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The chord is the polar of $(h,k)$; a line $y=mx+c$ is a normal of $y^2=4ax$ iff $c=-2am-am^3$.",
+     "solution": [
+      "In shifted coordinates $Y^2=4aX$ ($a=2$), the chord with the tangents meeting at $(h,k)$ is the polar $kY=2a(X+h)$.",
+      "Its slope is $m=\\frac{2a}{k}$ and its intercept is $c=\\frac{2ah}{k}$.",
+      "A line $Y=mX+c$ is a normal to $Y^2=4aX$ iff $c=-2am-am^3$, so $\\frac{2ah}{k}=-\\frac{4a^2}{k}-\\frac{8a^4}{k^3}$.",
+      "Multiply by $\\frac{k}{2a}$: $h=-2a-\\frac{4a^3}{k^2}$.",
+      "With $a=2$: $(x-1)=-4-\\frac{32}{y^2}$, i.e. $(x+3)y^2+32=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal line of $y^2=4ax$ in slope form: $y=mx-2am-am^3$ (equivalently $c=-2am-am^3$).",
+    "Normal chord at $t_1$: $t_2=-t_1-\\frac{2}{t_1}$, and the tangents at its ends meet at $\\left(-a(2+t_1^2),\\,-\\frac{2a}{t_1}\\right)$.",
+    "For $y^2=4ax$ itself the locus of the poles of normal chords is $(x+2a)y^2+4a^3=0$; here, in the shifted coordinates $X=x-1,\\ Y=y$ with $a=2$, it is $(X+4)Y^2+32=0$.",
+    "Always shift the vertex to the origin first: replace $x$ by $x-x_0$ and restore it at the end."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Normals from a point to a parabola (slope form)",
+    "Relations between the roots of a cubic"
+   ],
+   "level": 3,
+   "question": "Normals are drawn from the point $P$ with slopes $m_1,m_2,m_3$ to the parabola $y^2=4x$. If the locus of $P$ with $m_1m_2=\\alpha$ is a part of the parabola itself, then find $\\alpha$.",
+   "answer": "$\\alpha=2$",
+   "key_idea": "The normals from $P(h,k)$ have slopes that are the three roots of $m^3+(2-h)m+k=0$; with $m_1m_2=\\alpha$ the third root is $-\\frac{k}{\\alpha}$, and substituting it gives the locus.",
+   "solution": [
+    "Let $P=(h,k)$. The normal of slope $m$ to $y^2=4x$ is $y=mx-2m-m^3$.",
+    "It passes through $(h,k)$: $mh-k-2m-m^3=0$, i.e. $m^3+(2-h)m+k=0$ ....(1).",
+    "This cubic has three roots $m_1,m_2,m_3$, and $m_1m_2m_3=-k$.",
+    "Given $m_1m_2=\\alpha$: $m_3=-\\frac{k}{\\alpha}$.",
+    "$m_3$ satisfies (1): $-\\frac{k^3}{\\alpha^3}-\\frac{(2-h)k}{\\alpha}+k=0$.",
+    "Divide by $k$ ($k\\ne0$) and multiply by $-\\alpha^3$: $k^2+(2-h)\\alpha^2-\\alpha^3=0$, i.e. $k^2=\\alpha^2h+\\alpha^3-2\\alpha^2$.",
+    "The locus of $P(h,k)$ is $y^2=\\alpha^2x+(\\alpha^3-2\\alpha^2)$ ....(2).",
+    "But the locus is a part of $y^2=4x$, so comparing: $\\alpha^2=4$ and $\\alpha^3-2\\alpha^2=0$.",
+    "The second gives $\\alpha=2$ (or $0$), and with $\\alpha^2=4$ we get $\\alpha=2$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's intermediate line 'k^2 - 2 alpha^2 - h alpha^2 - alpha^3 = 0' has the signs of the alpha^2 and alpha^3 terms wrong. Substituting m3 = -k/alpha gives k^2 + (2-h) alpha^2 - alpha^3 = 0, i.e. k^2 = alpha^2 h + alpha^3 - 2 alpha^2, which is exactly the locus (2) the PDF then states. Answer alpha = 2 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "For a point $P$ on $y^2=4x$ one normal is the normal at $P$ itself; the other two feet have $t_it_j=2$, so those two slopes multiply to a constant $2$.",
+     "solution": [
+      "Normals from $(h,k)$ have feet $t_i$ with $t_1+t_2+t_3=0$, $\\sum t_it_j=2-h$ and $t_1t_2t_3=k$ (slopes $m_i=-t_i$).",
+      "If $P(s^2,2s)$ lies on the parabola, the normal at $s$ passes through it: $t_3=s$, and the other two feet satisfy $t^2+st+2=0$ (the relation $t_i^2+t_it_j+2=0$).",
+      "So the product of those two feet is $2$, and the product of their slopes is $m_1m_2=t_1t_2=2$, independent of $P$.",
+      "Hence the locus $m_1m_2=\\alpha$ can lie along $y^2=4x$ only for $\\alpha=2$.",
+      "Check with (2): $\\alpha=2$ gives $y^2=4x+(8-8)=4x$ exactly."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The normal to $y^2=4x$ with slope $m$ is $y=mx-2m-m^3$; for $y^2=4ax$ it is $y=mx-2am-am^3$.",
+    "From a point $(h,k)$ the three normal slopes satisfy $m_1+m_2+m_3=0$, $\\sum m_im_j=2a-h$, $m_1m_2m_3=-k$.",
+    "Normals from a point $P$ of the parabola: one is at $P$, the other two have feet with product $2$ (so slopes with product $2$).",
+    "Locus of $P$ for which two normals have slopes with a fixed product $\\alpha$: $y^2=\\alpha^2(x-2+\\alpha)$ for $y^2=4x$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to an ellipse (point on the major axis)",
+    "Locus of a point defined by a midpoint relation (ellipse eccentricity)"
+   ],
+   "level": 2,
+   "question": "$PG$ is the normal to a standard ellipse at $P$, $G$ being on the major axis. $GP$ is produced outwards to $Q$ so that $PQ=GP$. Show that the locus of $Q$ is an ellipse whose eccentricity is $\\frac{a^2-b^2}{a^2+b^2}$.",
+   "answer": "Locus is an ellipse with eccentricity $\\frac{a^2-b^2}{a^2+b^2}$",
+   "key_idea": "$P$ is the midpoint of $GQ$ and $G=(ae^2\\cos\\theta,0)$, so $Q$ has coordinates $\\left(a(2-e^2)\\cos\\theta,\\ 2b\\sin\\theta\\right)$.",
+   "solution": [
+    "Normal at $P(a\\cos\\theta,b\\sin\\theta)$: $ax\\sec\\theta-by\\operatorname{cosec}\\theta=a^2e^2$ (since $a^2-b^2=a^2e^2$).",
+    "Put $y=0$: $x=ae^2\\cos\\theta$, so $G\\equiv(ae^2\\cos\\theta,0)$.",
+    "Let $Q=(h,k)$. $P$ is the midpoint of $QG$ (as $PQ=GP$, $Q$ beyond $P$): $a\\cos\\theta=\\frac{h+ae^2\\cos\\theta}{2}$ and $b\\sin\\theta=\\frac{k}{2}$.",
+    "So $h=(2a-ae^2)\\cos\\theta=a(2-e^2)\\cos\\theta$ and $\\sin\\theta=\\frac{k}{2b}$.",
+    "Using $\\cos^2\\theta+\\sin^2\\theta=1$: $\\frac{h^2}{a^2(2-e^2)^2}+\\frac{k^2}{4b^2}=1$ - an ellipse.",
+    "Since $2-e^2=\\frac{a^2+b^2}{a^2}$, its semi-axes are $A=\\frac{a^2+b^2}{a}$ (along $x$) and $B=2b$, with $A\\ge B$ because $a^2+b^2\\ge2ab$.",
+    "$E^2=1-\\frac{B^2}{A^2}=1-\\frac{4a^2b^2}{(a^2+b^2)^2}=\\frac{(a^2+b^2)^2-4a^2b^2}{(a^2+b^2)^2}=\\frac{(a^2-b^2)^2}{(a^2+b^2)^2}$.",
+    "Hence $E=\\frac{a^2-b^2}{a^2+b^2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$Q=2P-G$ is the image of $P$ under the axis-scaling $(x,y)\\mapsto((2-e^2)x,\\ 2y)$, because $G=(e^2x_P,0)$; so the locus is the ellipse with semi-axes $(2-e^2)a$ and $2b$.",
+     "solution": [
+      "For $P(x_P,y_P)$ on the ellipse the normal meets the major axis at $G=(e^2x_P,0)$.",
+      "Since $P$ is the midpoint of $GQ$: $Q=2P-G=\\left((2-e^2)x_P,\\ 2y_P\\right)$.",
+      "So $Q$ is the image of $P$ under the scaling $x\\to(2-e^2)x$, $y\\to2y$; the image of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $\\frac{x^2}{a^2(2-e^2)^2}+\\frac{y^2}{4b^2}=1$.",
+      "Here $a(2-e^2)=\\frac{a^2+b^2}{a}\\ge2b$, so the major semi-axis is $\\frac{a^2+b^2}{a}$ and the minor is $2b$.",
+      "$E^2=1-\\frac{4a^2b^2}{(a^2+b^2)^2}=\\left(\\frac{a^2-b^2}{a^2+b^2}\\right)^2$, so $E=\\frac{a^2-b^2}{a^2+b^2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The normal at $P(x_P,y_P)$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ meets the major axis at $G=(e^2x_P,0)$, so the subnormal is $x_P-e^2x_P=\\frac{b^2}{a^2}x_P$.",
+    "A linear (axis-scaling) map sends an ellipse to an ellipse; the image of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ under $x\\to px,\\ y\\to qy$ has semi-axes $pa,\\ qb$.",
+    "Eccentricity of an ellipse with semi-axes $A\\ge B$: $E=\\sqrt{1-\\frac{B^2}{A^2}}$.",
+    "$\\left(a^2+b^2\\right)^2-4a^2b^2=(a^2-b^2)^2$ is the identity that makes the eccentricity a perfect square."
+   ]
+  }
+ ]
+}
