@@ -1,0 +1,1259 @@
+{
+ "title": "Area Under Curve (Exercise C-II) — Paper Analysis",
+ "subtitle": "Sheet C2 · detailed solutions",
+ "source": "papers/SHEET AREA UNDER CURVE_FCopy C2.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "Area Under Curve C2",
+ "sections": [
+  {
+   "title": "Subjective / Integer Type",
+   "from": 1,
+   "to": 21,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default for subjective / integer)"
+   ]
+  },
+  {
+   "title": "Comprehension Type (Paragraph Based Single Correct)",
+   "from": 22,
+   "to": 28,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for paragraph)"
+   ]
+  },
+  {
+   "title": "Match the Column Type",
+   "from": 29,
+   "to": 31,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for matching)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by a parabola and a straight line"
+   ],
+   "level": 1,
+   "question": "Find the area bounded by the curve $y=2x-x^2$ and the straight line $y=-x$.",
+   "answer": "$\\frac{9}{2}$ sq. units",
+   "key_idea": "Between two curves the area is $\\int(\\text{upper}-\\text{lower})\\,dx$ between their intersection abscissae.",
+   "solution": [
+    "The parabola is $y=2x-x^2$; $\\frac{dy}{dx}=2-2x=0$ gives the vertex at $x=1$ (it opens downwards, maximum $y=1$).",
+    "To find the limits, solve $y=2x-x^2$ and $y=-x$: $-x=2x-x^2\\Rightarrow x^2-3x=0\\Rightarrow x=0$ or $x=3$.",
+    "Between $x=0$ and $x=3$ the parabola lies above the line, so $A=\\int_0^3\\left[(2x-x^2)-(-x)\\right]dx$.",
+    "This simplifies to $A=\\int_0^3(3x-x^2)\\,dx$.",
+    "$A=\\left[\\frac{3x^2}{2}-\\frac{x^3}{3}\\right]_0^3=\\frac{27}{2}-9=\\frac{9}{2}$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the parabola–chord area formula $\\frac{|a|}{6}(\\beta-\\alpha)^3$ instead of integrating.",
+     "solution": [
+      "The difference of the two curves is $(2x-x^2)-(-x)=-x^2+3x=-x(x-3)$, a quadratic with leading coefficient $a=-1$.",
+      "Its roots are $\\alpha=0$ and $\\beta=3$.",
+      "The area between a parabola and a chord is $\\frac{|a|}{6}(\\beta-\\alpha)^3$ (the integral of $-|a|(x-\\alpha)(x-\\beta)$).",
+      "$A=\\frac{1}{6}(3-0)^3=\\frac{27}{6}=\\frac{9}{2}$ sq. units."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between $y=ax^2+bx+c$ and a line cutting it at $x=\\alpha,\\beta$ is $\\frac{|a|}{6}(\\beta-\\alpha)^3$; the same holds for two parabolas with equal leading coefficients, or with $a$ replaced by the difference of the leading coefficients.",
+    "Intersection abscissae come from equating the two functions; always decide which curve is on top before integrating.",
+    "Here $a=-1$, $\\beta-\\alpha=3$, so $A=\\frac{27}{6}=\\frac{9}{2}$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to a parabola with a given slope",
+    "Area bounded by a parabola and a straight line"
+   ],
+   "level": 2,
+   "question": "Find the area enclosed by the parabola $y=1+x^2$ and a normal drawn to it with gradient $-1$.",
+   "answer": "$\\frac{4}{3}$ sq. units",
+   "key_idea": "A normal of slope $-1$ is at a point where the tangent has slope $1$, i.e. $2x_1=1$.",
+   "solution": [
+    "For $y=1+x^2$, $\\frac{dy}{dx}=2x$, so the slope of the normal at $(x_1,y_1)$ is $m=-\\frac{1}{2x_1}$.",
+    "Putting $m=-1$: $x_1=\\frac{-1}{2m}=\\frac{1}{2}$ and $y_1=1+x_1^2=1+\\frac{1}{4}=\\frac{5}{4}$.",
+    "The normal at $\\left(\\frac{1}{2},\\frac{5}{4}\\right)$ with slope $-1$ is $y-\\frac{5}{4}=-\\left(x-\\frac{1}{2}\\right)$, i.e. $x+y=\\frac{7}{4}$.",
+    "Intersect with the parabola: $1+x^2=-x+\\frac{7}{4}\\Rightarrow 4x^2+4x-3=0\\Rightarrow x=-\\frac{3}{2}$ or $x=\\frac{1}{2}$.",
+    "The line lies above the parabola between these points: $A=\\int_{-3/2}^{1/2}\\left[\\left(\\frac{7}{4}-x\\right)-(1+x^2)\\right]dx=\\int_{-3/2}^{1/2}\\left(\\frac{3}{4}-x-x^2\\right)dx$.",
+    "$A=\\left[\\frac{3x}{4}-\\frac{x^2}{2}-\\frac{x^3}{3}\\right]_{-3/2}^{1/2}=\\left(\\frac{3}{8}-\\frac{1}{8}-\\frac{1}{24}\\right)-\\left(-\\frac{9}{8}-\\frac{9}{8}+\\frac{9}{8}\\right)=\\frac{5}{24}+\\frac{9}{8}$.",
+    "$A=\\frac{5}{24}+\\frac{27}{24}=\\frac{32}{24}=\\frac{4}{3}$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Apply $\\frac{|a|}{6}(\\beta-\\alpha)^3$ to the parabola and the normal.",
+     "solution": [
+      "The normal $x+y=\\frac{7}{4}$ meets $y=1+x^2$ where $x^2+x-\\frac{3}{4}=0$, i.e. $4x^2+4x-3=0$.",
+      "The roots are $\\alpha=-\\frac{3}{2}$ and $\\beta=\\frac{1}{2}$, so $\\beta-\\alpha=2$.",
+      "The leading coefficient of $(\\text{line})-(\\text{parabola})=-x^2-x+\\frac{3}{4}$ is $|a|=1$.",
+      "$A=\\frac{1}{6}\\cdot 2^3=\\frac{8}{6}=\\frac{4}{3}$ sq. units."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal of slope $m_n$ at a point means tangent slope $-\\frac{1}{m_n}$; for $y=ax^2+\\dots$ solve $2ax+b=-\\frac{1}{m_n}$ directly.",
+    "For a parabola cut by any chord, $A=\\frac{|a|}{6}(\\beta-\\alpha)^3$ – no antiderivative is needed.",
+    "Here the chord meets the parabola again at $x=-\\frac{3}{2}$ (the normal at $x=\\frac12$ is also a chord through the point $(\\frac12,\\frac54)$)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Formation and solution of a differential equation (variables separable)",
+    "Area bounded by a parabola and a straight line"
+   ],
+   "level": 2,
+   "question": "Let $C$ be a curve passing through $M(2,2)$ such that the slope of the tangent at any point to the curve is reciprocal of the ordinate of the point. If the area bounded by curve $C$ and line $x=2$ is expressed as a rational $\\frac{p}{q}$ (where $p$ and $q$ are in their lowest form), then find $(p+q)$.",
+   "answer": "$19$",
+   "key_idea": "Slope $=\\frac{1}{y}$ gives $y\\,dy=dx$, so the curve is the parabola $y^2=2x$.",
+   "solution": [
+    "Let $P(x,y)$ be any point of $C$. The slope of the tangent is the reciprocal of the ordinate: $\\frac{dy}{dx}=\\frac{1}{y}$.",
+    "Separate the variables: $y\\,dy=dx$, so $\\frac{y^2}{2}=x+k$.",
+    "The curve passes through $M(2,2)$: $\\frac{4}{2}=2+k$, so $k=0$ and $y^2=2x$.",
+    "The area bounded by $y^2=2x$ and $x=2$ is symmetric about the $x$-axis, so $A=2\\int_0^2\\sqrt{2x}\\,dx$.",
+    "$A=2\\sqrt{2}\\cdot\\frac{2}{3}\\left[x^{3/2}\\right]_0^2=\\frac{4\\sqrt{2}}{3}\\cdot 2\\sqrt{2}=\\frac{16}{3}$ sq. units.",
+    "So $\\frac{p}{q}=\\frac{16}{3}$ with $\\gcd(16,3)=1$, hence $p+q=19$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Archimedes: a parabolic segment has area $\\frac{2}{3}\\times\\text{base}\\times\\text{height}$.",
+     "solution": [
+      "The curve is $y^2=2x$ and the line $x=2$ is a chord perpendicular to the axis of the parabola.",
+      "The chord has endpoints $(2,\\pm2)$, so its length (base) is $4$.",
+      "The distance from the vertex $(0,0)$ to the chord is $2$ (height).",
+      "Area of a parabolic segment $=\\frac{2}{3}\\times4\\times2=\\frac{16}{3}$, so $p+q=16+3=19$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Archimedes: area of a parabolic segment cut by a chord $=\\frac{2}{3}\\times(\\text{chord})\\times(\\text{perpendicular distance from the vertex to the chord, measured along the axis})$ when the chord is perpendicular to the axis; in general $\\frac{4}{3}\\times$ (area of the inscribed triangle on the chord with the farthest point).",
+    "$\\frac{dy}{dx}=\\frac{1}{y}$ and $\\frac{dy}{dx}=\\frac{k}{y}$ always give parabolas $y^2=2kx+c$ (subtangent/subnormal constants).",
+    "Area of $y^2=4ax$ cut by the latus-rectum is $\\frac{8}{3}a^2$ (check: $a=\\frac12$, $y^2=2x$, $x=\\frac12$ gives $\\frac23\\cdot2\\cdot\\frac12=\\frac23$)."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Slope of a rotated tangent (angle between lines)",
+    "Area bounded by a parabola and a chord"
+   ],
+   "level": 3,
+   "question": "Let $l$ be the line created by rotating the tangent line to the parabola $y=x^2$ at the point $A(1,1)$, about $A$ by an angle of $\\left(-\\frac{\\pi}{4}\\right)$. Let $B$ be the other intersection of the line $l$ with $y=x^2$. If the area enclosed by the line $l$ and the parabola is $\\frac{a_1}{a_2}$ where $a_1$ and $a_2$ are coprime, find $(a_1+a_2)$.",
+   "answer": "$287$",
+   "key_idea": "Rotating by $-\\frac{\\pi}{4}$ reduces the inclination $\\theta$ by $\\frac{\\pi}{4}$, so $m=\\tan\\left(\\theta-\\frac{\\pi}{4}\\right)=\\frac{\\tan\\theta-1}{1+\\tan\\theta}$.",
+   "solution": [
+    "For $y=x^2$: $\\frac{dy}{dx}\\Big|_{A(1,1)}=2x=2$, so the tangent has $\\tan\\theta=2$.",
+    "The rotated line $l$ makes angle $\\phi=\\theta-\\frac{\\pi}{4}$ with the $x$-axis, so $m_l=\\tan\\phi=\\frac{\\tan\\theta-1}{1+\\tan\\theta}=\\frac{2-1}{1+2}=\\frac{1}{3}$.",
+    "The line $l$ is $y-1=\\frac{1}{3}(x-1)$, i.e. $3y=x+2$.",
+    "Intersect with $y=x^2$: $3x^2=x+2\\Rightarrow 3x^2-x-2=0$. The product of roots is $x_1x_2=-\\frac{2}{3}$ and one root is $x_2=1$, so $x_1=-\\frac{2}{3}$.",
+    "The line is above the parabola between $x_1$ and $x_2$: $A=\\int_{-2/3}^{1}\\left(\\frac{x+2}{3}-x^2\\right)dx=\\frac{1}{3}\\int_{-2/3}^{1}(x+2-3x^2)\\,dx=\\frac{1}{3}\\left[\\frac{x^2}{2}+2x-x^3\\right]_{-2/3}^{1}$.",
+    "At $x=1$: $\\frac{1}{2}+2-1=\\frac{3}{2}$. At $x=-\\frac{2}{3}$: $\\frac{2}{9}-\\frac{4}{3}+\\frac{8}{27}=\\frac{6-36+8}{27}=-\\frac{22}{27}$.",
+    "$A=\\frac{1}{3}\\left[\\frac{3}{2}+\\frac{22}{27}\\right]=\\frac{1}{3}\\cdot\\frac{81+44}{54}=\\frac{125}{162}$.",
+    "So $a_1=125$, $a_2=162$ (coprime) and $a_1+a_2=287$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rotate the tangent's direction vector using complex numbers, then use $\\frac{|a|}{6}(\\beta-\\alpha)^3$.",
+     "solution": [
+      "The tangent at $A$ has direction $1+2i$ (slope $2$). Rotating by $-\\frac{\\pi}{4}$ multiplies by $e^{-i\\pi/4}\\propto(1-i)$.",
+      "$(1+2i)(1-i)=1-i+2i-2i^2=3+i$, so the new direction is $(3,1)$ and the slope is $\\frac{1}{3}$.",
+      "The line $l$ is $y=1+\\frac{x-1}{3}$ and meets $y=x^2$ at $x=1$ and, by Vieta on $3x^2-x-2=0$, at $x=-\\frac{2}{3}$.",
+      "The area between a parabola ($|a|=1$) and a chord is $\\frac{1}{6}(\\beta-\\alpha)^3=\\frac{1}{6}\\left(\\frac{5}{3}\\right)^3=\\frac{125}{162}$.",
+      "Hence $a_1+a_2=125+162=287$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rotating a line of slope $m$ by an angle $\\delta$ (anticlockwise) gives slope $\\frac{m+\\tan\\delta}{1-m\\tan\\delta}$; for $\\delta=-\\frac{\\pi}{4}$ this is $\\frac{m-1}{1+m}$.",
+    "For a parabola and a chord through a point of the parabola, the other root follows from Vieta: sum or product of the roots of the quadratic, no need to solve it.",
+    "Area between $y=x^2$ and a chord meeting it at $x=\\alpha,\\beta$ is $\\frac{(\\beta-\\alpha)^3}{6}$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by parabolas and straight lines (equal-area condition)",
+    "Greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=x-x^2$ and $g(x)=ax$, $a<0$. If the area bounded by $f(x)$ and $g(x)$ is equal to the area bounded by the curves $x=3y-y^2$ and $x+y=3$, then find the value of $|[a]|$. [Note: $[k]$ denotes the greatest integer less than or equal to $k$.]",
+   "answer": "$1$",
+   "key_idea": "Compute the second area first ($\\frac{4}{3}$), then the first area is $\\frac{(1-a)^3}{6}$, giving $(1-a)^3=8$.",
+   "solution": [
+    "Area between $x=3y-y^2$ and $x+y=3$: put $3y-y^2=3-y\\Rightarrow y^2-4y+3=0\\Rightarrow y=1$ or $y=3$.",
+    "Integrating along $y$ (the parabola is to the right of the line): $A=\\int_1^3\\left[(3y-y^2)-(3-y)\\right]dy=\\int_1^3(4y-y^2-3)\\,dy$.",
+    "$A=\\left[2y^2-\\frac{y^3}{3}-3y\\right]_1^3=(18-9-9)-\\left(2-\\frac{1}{3}-3\\right)=0+\\frac{4}{3}=\\frac{4}{3}$.",
+    "For $f(x)=x-x^2$ and $g(x)=ax$ with $a<0$: $x-x^2=ax\\Rightarrow x(x+a-1)=0$, so the curves meet at $x=0$ and $x=1-a$ (positive, since $a<0$).",
+    "Between these points $f\\ge g$, so $A=\\int_0^{1-a}\\left[(x-x^2)-ax\\right]dx=\\int_0^{1-a}\\left[(1-a)x-x^2\\right]dx=\\frac{(1-a)^3}{2}-\\frac{(1-a)^3}{3}=\\frac{(1-a)^3}{6}$.",
+    "Equal areas: $\\frac{(1-a)^3}{6}=\\frac{4}{3}\\Rightarrow(1-a)^3=8\\Rightarrow 1-a=2\\Rightarrow a=-1$.",
+    "Then $[a]=[-1]=-1$ and $|[a]|=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\frac{|a|}{6}(\\beta-\\alpha)^3$ for both regions (the second one in the variable $y$).",
+     "solution": [
+      "Region 2: in the variable $y$ the difference $(3y-y^2)-(3-y)=-y^2+4y-3=-(y-1)(y-3)$ has $|a|=1$ and roots $1,3$, so $A_2=\\frac{1}{6}\\cdot2^3=\\frac{4}{3}$.",
+      "Region 1: $f-g=-x^2+(1-a)x=-x(x-(1-a))$ has $|a|=1$ and roots $0,1-a$, so $A_1=\\frac{(1-a)^3}{6}$.",
+      "$A_1=A_2\\Rightarrow(1-a)^3=8\\Rightarrow a=-1$, so $|[a]|=1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When a curve is a parabola with axis parallel to the $x$-axis, integrate with respect to $y$; the formula $\\frac{|a|}{6}(\\beta-\\alpha)^3$ works in either variable.",
+    "The parabola $y=x-x^2$ and the line $y=ax$ through the origin: area $=\\frac{(1-a)^3}{6}$ (for $a<1$); for $a=0$ it is $\\frac{1}{6}$, the area under the arch.",
+    "Read the data of the question: $a<0$ guarantees the line lies below the $x$-axis, where the bounded area is larger than $\\frac{1}{6}$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Graph of $\\cos^{-1}|\\cos x|$ (inverse trigonometric functions)",
+    "Area between curves with a symmetric, periodic region"
+   ],
+   "level": 3,
+   "question": "If the area bounded by the curves $f(x)=\\left(\\cos^{-1}|\\cos x|\\right)^2$, $g(x)=\\cos^{-1}|\\cos x|$ and $|x|=\\frac{\\pi}{2}$ is $a\\pi^3+b\\pi^2+c$, then find the minimum value of $(|a|+|b|+|c|)$.",
+   "answer": "$1$",
+   "key_idea": "On $\\left[0,\\frac{\\pi}{2}\\right]$, $\\cos^{-1}|\\cos x|=x$, so the curves are $y=x^2$ and $y=x$, which cross at $x=1$ inside the interval.",
+   "solution": [
+    "On $\\left[0,\\frac{\\pi}{2}\\right]$, $|\\cos x|=\\cos x$ and $\\cos^{-1}(\\cos x)=x$, so $f(x)=x^2$ and $g(x)=x$. Both functions are even, so the region is symmetric about the $y$-axis.",
+    "The curves $y=x^2$ and $y=x$ meet at $x=0$ and $x=1$ (and $1<\\frac{\\pi}{2}$). On $(0,1)$, $x>x^2$; on $\\left(1,\\frac{\\pi}{2}\\right)$, $x^2>x$.",
+    "Required area $=2\\left[\\int_0^1(x-x^2)\\,dx+\\int_1^{\\pi/2}(x^2-x)\\,dx\\right]$.",
+    "$\\int_0^1(x-x^2)dx=\\frac{1}{2}-\\frac{1}{3}=\\frac{1}{6}$ and $\\int_1^{\\pi/2}(x^2-x)dx=\\left(\\frac{\\pi^3}{24}-\\frac{\\pi^2}{8}\\right)-\\left(\\frac{1}{3}-\\frac{1}{2}\\right)=\\frac{\\pi^3}{24}-\\frac{\\pi^2}{8}+\\frac{1}{6}$.",
+    "Adding and doubling: $2\\left[\\frac{\\pi^3}{24}-\\frac{\\pi^2}{8}+\\frac{1}{3}\\right]=\\frac{\\pi^3}{12}-\\frac{\\pi^2}{4}+\\frac{2}{3}$.",
+    "Comparing with $a\\pi^3+b\\pi^2+c$ (rational $a,b,c$): $a=\\frac{1}{12}$, $b=-\\frac{1}{4}$, $c=\\frac{2}{3}$.",
+    "$|a|+|b|+|c|=\\frac{1}{12}+\\frac{1}{4}+\\frac{2}{3}=\\frac{1+3+8}{12}=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's piecewise definitions of f and g beyond pi/2 are not needed; the working itself is correct. The question is ill-posed as stated: for real a, b, c the representation a*pi^3+b*pi^2+c is not unique (it is unique only for rational a, b, c, since pi is transcendental), and the true real minimum of |a|+|b|+|c| would be Area/pi^3 = 0.0253. The key 1 assumes rational a, b, c; this is stated in the last-but-one step.",
+   "useful_results": [
+    "$\\cos^{-1}(\\cos x)=|x|$ on $[-\\pi,\\pi]$, and $\\cos^{-1}|\\cos x|$ is the even, $\\pi$-periodic 'triangle wave' equal to $x$ on $\\left[0,\\frac{\\pi}{2}\\right]$ and $\\pi-x$ on $\\left[\\frac{\\pi}{2},\\pi\\right]$.",
+    "Sketch before integrating: curves like $y=x$ and $y=x^2$ swap order at $x=1$, so split the integral at the crossing point.",
+    "A statement like '$a\\pi^3+b\\pi^2+c$' is meant with rational $a,b,c$ (unique representation since $\\pi$ is transcendental)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Polynomial functional equation $f(x+1)-f(x)=2x+1$",
+    "Tangents from a point and area between a curve and its tangents"
+   ],
+   "level": 2,
+   "question": "A polynomial function $f(x)$ satisfies the condition $f(x+1)=f(x)+2x+1$. Find $f(x)$ if $f(0)=1$. Find also the equations of the pair of tangents from the origin on the curve $y=f(x)$ and compute the area enclosed by the curve and the pair of tangents.",
+   "answer": "$f(x)=x^2+1$; tangents $y=\\pm2x$; area $=\\frac{2}{3}$ sq. units",
+   "key_idea": "Differencing a polynomial lowers its degree by one, so $f$ is a quadratic, and the tangents from the origin touch the parabola at $x=\\pm1$.",
+   "solution": [
+    "$f(x+1)=f(x)+2x+1$ for all $x$. Differentiating twice, $f''(x+1)=f''(x)$ for all $x\\in\\mathbb{R}$, so the polynomial $f''$ is constant. Let $f''(x)=a$.",
+    "Then $f'(x)=ax+b$ and $f(x)=\\frac{ax^2}{2}+bx+c$. Since $f(0)=1$, $c=1$.",
+    "Now $f(x+1)-f(x)=\\left[\\frac{a}{2}(x+1)^2+b(x+1)+c\\right]-\\left[\\frac{ax^2}{2}+bx+c\\right]=ax+\\frac{a}{2}+b$.",
+    "This must equal $2x+1$: comparing coefficients, $a=2$ and $\\frac{a}{2}+b=1\\Rightarrow b=0$.",
+    "Hence $f(x)=x^2+1$.",
+    "A tangent from the origin is $y=mx$. Substituting in $y=x^2+1$: $x^2-mx+1=0$; tangency needs a double root, i.e. discriminant $m^2-4=0$, so $m=\\pm2$.",
+    "The tangents are $y=2x$ and $y=-2x$ (touching the parabola at $(1,2)$ and $(-1,2)$).",
+    "By symmetry about the $y$-axis, $A=2\\int_0^1\\left[(x^2+1)-2x\\right]dx=2\\int_0^1(x-1)^2dx=2\\cdot\\frac{1}{3}=\\frac{2}{3}$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$f(x)-x^2$ is a periodic polynomial, hence constant; use points of contact for the tangents.",
+     "solution": [
+      "Note $(x+1)^2-x^2=2x+1$, so $g(x)=f(x)-x^2$ satisfies $g(x+1)=g(x)$ for all $x$.",
+      "A polynomial with $g(x+1)=g(x)$ takes the value $g(0)$ at $0,1,2,3,\\dots$ (infinitely many points), so $g\\equiv g(0)=f(0)=1$ and $f(x)=x^2+1$.",
+      "Tangent at $(t,t^2+1)$: $y-(t^2+1)=2t(x-t)$. It passes through $(0,0)$ iff $-(t^2+1)=-2t^2$, i.e. $t^2=1$, $t=\\pm1$, giving $y=\\pm2x$.",
+      "On $[0,1]$ the area between the curve and the tangent $y=2x$ is $\\int_0^1(x-1)^2dx=\\frac{1}{3}$; the other half is the mirror image.",
+      "Total area $=2\\cdot\\frac{1}{3}=\\frac{2}{3}$ sq. units."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $g(x+1)=g(x)$ and $g$ is a polynomial then $g$ is constant; so $f(x+1)-f(x)=p(x)$ determines $f$ up to a constant, and the degree of $f$ is $\\deg p+1$.",
+    "Tangents from an external point to a parabola: use the double-root condition (discriminant $=0$) on the line $y=mx$ or the point of contact.",
+    "Area between a parabola and its tangent, from the point of contact $x_0$ to any $x_1$, is $\\frac{|a|}{3}|x_1-x_0|^3$ (here $\\frac{1}{3}$)."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Area under a curve and area of a triangle",
+    "Limits: L'Hôpital's rule with an integral function"
+   ],
+   "level": 1,
+   "question": "The figure shows two regions in the first quadrant: $A(t)$ is the area under the curve $y=\\sin x^2$ from $0$ to $t$, and $B(t)$ is the area of the triangle with vertices $O$, $P(t,\\sin t^2)$ and $M(t,0)$. Find $\\lim_{t\\to0}\\frac{A(t)}{B(t)}$.",
+   "answer": "$\\frac{2}{3}$",
+   "key_idea": "The ratio is of the form $\\frac{0}{0}$; differentiate numerator and denominator (the numerator by the Leibniz rule).",
+   "solution": [
+    "$A(t)=\\int_0^t\\sin x^2\\,dx$ and $B(t)=\\frac{1}{2}\\times t\\times\\sin t^2$ (base $OM=t$, height $PM=\\sin t^2$).",
+    "$\\lim_{t\\to0}\\frac{A(t)}{B(t)}=\\lim_{t\\to0}\\frac{\\int_0^t\\sin x^2dx}{\\frac{1}{2}t\\sin t^2}=\\lim_{t\\to0}\\frac{2\\int_0^t\\sin x^2dx}{t\\sin t^2}$.",
+    "As $t\\to0$, $t\\sin t^2\\sim t^3$; the expression is $\\frac{0}{0}$, so write it as $\\frac{2\\int_0^t\\sin x^2dx}{t^3}\\cdot\\frac{t^3}{t\\sin t^2}$ and note $\\frac{t^3}{t\\sin t^2}=\\frac{t^2}{\\sin t^2}\\to1$.",
+    "Apply L'Hôpital's rule (DLH) to $\\frac{2\\int_0^t\\sin x^2dx}{t^3}$: the derivative of the numerator is $2\\sin t^2$ and of the denominator $3t^2$.",
+    "$\\lim_{t\\to0}\\frac{2\\sin t^2}{3t^2}=\\frac{2}{3}\\lim_{t\\to0}\\frac{\\sin t^2}{t^2}=\\frac{2}{3}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF applies L'Hopital directly to 2*Integral/t^3 after rewriting the ratio as 2*Int/(t^3) without justifying t*sin t^2 ~ t^3 (it silently replaces the denominator t*sin t^2 by t^3). Added the factor t^2/sin t^2 -> 1 so the step is valid. Answer 2/3 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Replace $\\sin x^2$ by its Maclaurin series $x^2-\\frac{x^6}{6}+\\dots$ and compare leading terms.",
+     "solution": [
+      "$\\sin x^2=x^2-\\frac{x^6}{6}+\\cdots$, so $A(t)=\\frac{t^3}{3}-\\frac{t^7}{42}+\\cdots$",
+      "$B(t)=\\frac{1}{2}t\\sin t^2=\\frac{1}{2}t\\left(t^2-\\frac{t^6}{6}+\\cdots\\right)=\\frac{t^3}{2}-\\frac{t^7}{12}+\\cdots$",
+      "Divide by $t^3$: $\\frac{A(t)}{B(t)}=\\frac{\\frac{1}{3}-\\frac{t^4}{42}+\\cdots}{\\frac{1}{2}-\\frac{t^4}{12}+\\cdots}\\to\\frac{1/3}{1/2}=\\frac{2}{3}$ as $t\\to0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For small $t$, $\\int_0^t h(x)\\,dx\\approx\\int_0^t h_0\\,x^k\\,dx$ where $h\\sim h_0x^k$ is the leading term, so compare leading powers instead of applying L'Hôpital repeatedly.",
+    "Leibniz: $\\frac{d}{dt}\\int_0^t h(x)dx=h(t)$; so $\\lim_{t\\to0}\\frac{\\int_0^th}{t^{k+1}}=\\frac{h_0}{k+1}$ whenever $h\\sim h_0x^k$.",
+    "Here $h=\\sin x^2\\sim x^2$ gives $A\\sim\\frac{t^3}{3}$ while the triangle gives $B\\sim\\frac{t^3}{2}$, ratio $\\frac{2}{3}$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent to $y=x^n$ and area between the curve, the $x$-axis and the tangent",
+    "Maxima and minima of the area as a function of $n$"
+   ],
+   "level": 2,
+   "question": "Consider the curve $y=x^n$ where $n>1$ in the $1^{st}$ quadrant. If the area bounded by the curve, the $x$-axis and the tangent line to the graph of $y=x^n$ at the point $(1,1)$ is maximum then find the value of $n$.",
+   "answer": "$n=\\sqrt{2}+1$",
+   "key_idea": "The area is $\\int_0^1x^ndx$ minus the triangle cut off by the tangent: $A(n)=\\frac{n-1}{2n(n+1)}$, then maximise in $n$.",
+   "solution": [
+    "$y=x^n\\Rightarrow\\frac{dy}{dx}=nx^{n-1}$, so the tangent at $(1,1)$ has slope $m_T=n$.",
+    "Tangent $L$: $y-1=n(x-1)$, i.e. $y=nx-n+1$; its $x$-intercept is $\\left(\\frac{n-1}{n},0\\right)$.",
+    "The shaded area is the area under the curve from $0$ to $1$ minus the triangle bounded by the tangent, the $x$-axis and $x=1$: $A=\\int_0^1x^n\\,dx-\\frac{1}{2}\\left(1-\\frac{n-1}{n}\\right)\\times1$.",
+    "$A=\\frac{1}{n+1}-\\frac{1}{2}\\cdot\\frac{1}{n}=\\frac{1}{n+1}-\\frac{1}{2n}=\\frac{2n-(n+1)}{2n(n+1)}=\\frac{n-1}{2n(n+1)}$.",
+    "For the maximum put $\\frac{dA}{dn}=0$: $\\frac{d}{dn}\\left[\\frac{n-1}{2(n^2+n)}\\right]=\\frac{(n^2+n)-(n-1)(2n+1)}{2(n^2+n)^2}$.",
+    "The numerator is $n^2+n-(2n^2-n-1)=-n^2+2n+1$, so $-n^2+2n+1=0$, i.e. $n^2-2n-1=0$.",
+    "$n=\\frac{2\\pm\\sqrt{4+4}}{2}=1\\pm\\sqrt{2}$. Since $n>1$, $n=1+\\sqrt{2}$ (the derivative changes from $+$ to $-$ here, so it is a maximum)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $u=n-1>0$ and use AM–GM on the denominator – no differentiation.",
+     "solution": [
+      "From the area $A=\\frac{n-1}{2n(n+1)}$ put $u=n-1>0$: $n(n+1)=(u+1)(u+2)=u^2+3u+2$.",
+      "$A=\\frac{u}{2(u^2+3u+2)}=\\frac{1}{2\\left(u+\\frac{2}{u}+3\\right)}$.",
+      "By AM–GM, $u+\\frac{2}{u}\\ge2\\sqrt{2}$ with equality iff $u=\\frac{2}{u}$, i.e. $u=\\sqrt{2}$.",
+      "So $A$ is maximum when $u=\\sqrt{2}$, i.e. $n=1+\\sqrt{2}$ (maximum area $\\frac{1}{2(3+2\\sqrt{2})}=\\frac{3-2\\sqrt2}{2}$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The tangent to the convex curve $y=x^n$ at $(1,1)$ cuts the $x$-axis at $\\frac{n-1}{n}$; the area between curve, tangent and axis is $\\frac{n-1}{2n(n+1)}$ (check $n=2$: $\\frac{1}{12}$, and directly $\\frac13-\\frac14=\\frac1{12}$).",
+    "For optimising a rational function $\\frac{u}{(u+p)(u+q)}$, write it as $\\frac{1}{u+\\frac{pq}{u}+p+q}$ and use AM–GM: the optimum is at $u=\\sqrt{pq}$.",
+    "For a convex curve a tangent lies below it, so the region between curve and tangent is easy to describe as 'upper curve minus tangent'."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between $y=f(x)$ and $y=\\sin x$ (areas $A_1,A_2,A_3$)",
+    "Differentiation of an integral (Leibniz rule) and integration by parts"
+   ],
+   "level": 3,
+   "question": "In the adjacent figure, graphs of two functions $y=f(x)$ and $y=\\sin x$ are given. $y=\\sin x$ intersects $y=f(x)$ at $A(a,f(a))$, $B(\\pi,0)$ and $C(2\\pi,0)$. $A_i$ ($i=1,2,3$) is the area bounded by the curves $y=f(x)$ and $y=\\sin x$ between $x=0$ and $x=a$, $i=1$; between $x=a$ and $x=\\pi$, $i=2$; between $x=\\pi$ and $x=2\\pi$, $i=3$. If $A_1=1-\\sin a+(a-1)\\cos a$, determine the function $f(x)$. Hence determine $a$ and $A_1$. Also calculate $A_2$ and $A_3$.",
+   "answer": "$f(x)=x\\sin x$, $a=1$; $A_1=1-\\sin1$; $A_2=\\pi-1-\\sin1$; $A_3=3\\pi-2$",
+   "key_idea": "Treat $A_1(a)=\\int_0^a(\\sin x-f(x))dx$ as a function of $a$ and differentiate it: $\\sin a-f(a)=A_1'(a)$.",
+   "solution": [
+    "From the figure $\\sin x\\ge f(x)$ on $[0,a]$, so $A_1=\\int_0^a\\left(\\sin x-f(x)\\right)dx$ ... (i).",
+    "Given $A_1=1-\\sin a+(a-1)\\cos a$. Also $\\int_0^a\\sin x\\,dx=[-\\cos x]_0^a=1-\\cos a$, so $1-\\sin a+(a-1)\\cos a=1-\\cos a-\\int_0^af(x)dx$.",
+    "Hence $\\int_0^af(x)\\,dx=1-\\cos a-1+\\sin a-(a-1)\\cos a=\\sin a-a\\cos a$.",
+    "Differentiate both sides with respect to $a$ (Newton–Leibniz): $f(a)=\\cos a-\\left[a(-\\sin a)+\\cos a\\right]=\\cos a+a\\sin a-\\cos a=a\\sin a$, so $f(x)=x\\sin x$ ... (ii).",
+    "The curves $y=\\sin x$ and $y=x\\sin x$ meet where $(x-1)\\sin x=0$, i.e. $x=1$ or $\\sin x=0$ (the next such points are $x=\\pi,2\\pi$ – the points $B$ and $C$); the first intersection $A$ is at $x=1$, so $a=1$.",
+    "$A_1=1-\\sin1+(1-1)\\cos1=1-\\sin1$.",
+    "$A_2=\\int_1^\\pi(x\\sin x-\\sin x)\\,dx=\\int_1^\\pi(x-1)\\sin x\\,dx=\\left[-(x-1)\\cos x\\right]_1^\\pi+\\int_1^\\pi\\cos x\\,dx$.",
+    "$A_2=-(\\pi-1)\\cos\\pi+0+\\sin\\pi-\\sin1=(\\pi-1)-\\sin1=\\pi-1-\\sin1$.",
+    "$A_3=\\int_\\pi^{2\\pi}\\left|x\\sin x-\\sin x\\right|dx=-\\int_\\pi^{2\\pi}(x-1)\\sin x\\,dx$ (since $\\sin x\\le0$ there) $=\\left[(x-1)\\cos x\\right]_\\pi^{2\\pi}-\\int_\\pi^{2\\pi}\\cos x\\,dx=(2\\pi-1)+(\\pi-1)-0=3\\pi-2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the given expression for $A_1(a)$ directly: $A_1'(a)=\\sin a-f(a)$ – no need to evaluate the integral.",
+     "solution": [
+      "$A_1(a)=\\int_0^a(\\sin x-f(x))dx$, so by the fundamental theorem $A_1'(a)=\\sin a-f(a)$.",
+      "Differentiate the given $A_1(a)=1-\\sin a+(a-1)\\cos a$: $A_1'(a)=-\\cos a+\\cos a-(a-1)\\sin a=\\sin a-a\\sin a$.",
+      "Equate: $\\sin a-f(a)=\\sin a-a\\sin a\\Rightarrow f(a)=a\\sin a$, i.e. $f(x)=x\\sin x$.",
+      "Intersections: $x\\sin x=\\sin x\\Rightarrow(x-1)\\sin x=0$; the first is $x=1$, so $a=1$ and $A_1=1-\\sin1$.",
+      "With antiderivative $F(x)=\\int(x-1)\\sin x\\,dx=\\sin x-(x-1)\\cos x$: $A_2=F(\\pi)-F(1)=(\\pi-1)-\\sin1$ and $A_3=-[F(2\\pi)-F(\\pi)]=-[-(2\\pi-1)-(\\pi-1)]=3\\pi-2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $A(a)=\\int_0^a h(x)dx$ then $A'(a)=h(a)$: information about an area as a function of the variable endpoint determines the integrand by differentiating.",
+    "$\\int(x-1)\\sin x\\,dx=\\sin x-(x-1)\\cos x+C$ (by parts); use one antiderivative for all three areas to avoid repeated work.",
+    "Take absolute values region by region: on $[\\pi,2\\pi]$, $\\sin x\\le0$, so the curve $x\\sin x$ is below $\\sin x$ exactly when $x>1$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between the curves $y=\\frac{1}{x^2}$ and $y=\\frac{1}{4(x-1)}$ with logarithmic integrals"
+   ],
+   "level": 3,
+   "question": "Consider the two curves $y=\\frac{1}{x^2}$ and $y=\\frac{1}{4(x-1)}$. (i) At what value of $a$ $(a>2)$ is the reciprocal of the area of the figure bounded by the curves, the lines $x=2$ and $x=a$ equal to $a$ itself? (ii) At what value of $b$ $(1<b<2)$ is the area of the figure bounded by these curves, the lines $x=b$ and $x=2$ equal to $1-\\frac{1}{b}$?",
+   "answer": "(i) $a=1+e^2$; (ii) $b=1+e^{-2}$",
+   "key_idea": "The curves touch at $x=2$ and $\\frac{1}{4(x-1)}\\ge\\frac{1}{x^2}$ for all $x>1$, so each area is $\\int\\left(\\frac{1}{4(x-1)}-\\frac{1}{x^2}\\right)dx$.",
+   "solution": [
+    "Points of intersection: $\\frac{1}{x^2}=\\frac{1}{4(x-1)}\\Rightarrow x^2-4x+4=0\\Rightarrow x=2$ (a double root – the curves touch).",
+    "Moreover $\\frac{1}{4(x-1)}-\\frac{1}{x^2}=\\frac{(x-2)^2}{4x^2(x-1)}\\ge0$ for $x>1$, so $y=\\frac{1}{4(x-1)}$ is the upper curve on both sides of $x=2$.",
+    "(i) For $a>2$: $A=\\int_2^a\\left(\\frac{1}{4(x-1)}-\\frac{1}{x^2}\\right)dx=\\left[\\frac{1}{4}\\ln(x-1)+\\frac{1}{x}\\right]_2^a=\\frac{1}{4}\\ln(a-1)+\\frac{1}{a}-\\frac{1}{2}$.",
+    "The condition 'reciprocal of the area is $a$' means $A=\\frac{1}{a}$: $\\frac{1}{4}\\ln(a-1)+\\frac{1}{a}-\\frac{1}{2}=\\frac{1}{a}$.",
+    "So $\\ln(a-1)=2$, i.e. $a-1=e^2$ and $a=1+e^2$ (which is $>2$).",
+    "(ii) For $1<b<2$: $A=\\int_b^2\\left(\\frac{1}{4(x-1)}-\\frac{1}{x^2}\\right)dx=\\left[\\frac{1}{4}\\ln(x-1)+\\frac{1}{x}\\right]_b^2=\\frac{1}{2}-\\frac{1}{b}-\\frac{1}{4}\\ln(b-1)$.",
+    "Given $A=1-\\frac{1}{b}$: $\\frac{1}{2}-\\frac{1}{b}-\\frac{1}{4}\\ln(b-1)=1-\\frac{1}{b}$, so $-\\frac{1}{4}\\ln(b-1)=\\frac{1}{2}$.",
+    "$\\ln(b-1)=-2$, so $b=1+e^{-2}$ (which lies in $(1,2)$)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Curves that touch (double root) have a perfect square as their difference, so the sign of the integrand never changes – no case-work on the side of the touching point.",
+    "$\\int\\frac{dx}{4(x-1)}=\\frac{1}{4}\\ln|x-1|$; equations of the form $\\frac{1}{4}\\ln(t)=k$ give $t=e^{4k}$.",
+    "The function $h(a)=A(a)-\\frac1a$ has $h'(a)=\\frac{1}{4(a-1)}>0$, so the root $a=1+e^2$ is unique."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area under $y=\\frac{\\ln x-c}{x}$ and its maximum point",
+    "Maxima of a function by differentiation"
+   ],
+   "level": 2,
+   "question": "Show that the area bounded by the curve $y=\\frac{\\ln x-c}{x}$, the $x$-axis and the vertical line through the maximum point of the curve is independent of the constant $c$.",
+   "answer": "Area $=\\frac{1}{2}$, independent of $c$",
+   "key_idea": "The curve meets the $x$-axis at $x=e^c$ and has its maximum at $x=e^{1+c}$, and $\\frac{\\ln x-c}{x}dx=(\\ln x-c)\\,d(\\ln x)$.",
+   "solution": [
+    "$y=\\frac{\\ln x-c}{x}=0\\Rightarrow\\ln x=c$, so the curve cuts the $x$-axis at $x=e^c$.",
+    "$\\frac{dy}{dx}=\\frac{1-(\\ln x-c)}{x^2}=0\\Rightarrow\\ln x=1+c$, so $x=e^{1+c}$; $y'$ changes from $+$ to $-$ there, so this is the maximum point.",
+    "The area bounded by the curve, the $x$-axis and the vertical line $x=e^{1+c}$ is $A=\\int_{e^c}^{e^{1+c}}\\frac{\\ln x-c}{x}\\,dx$.",
+    "Antiderivative: $\\int\\frac{\\ln x-c}{x}dx=\\frac{(\\ln x-c)^2}{2}$ (put $t=\\ln x-c$).",
+    "$A=\\left[\\frac{(\\ln x-c)^2}{2}\\right]_{e^c}^{e^{1+c}}=\\frac{1^2}{2}-\\frac{0^2}{2}=\\frac{1}{2}$, which does not contain $c$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift the variable: $u=\\ln x-c$ turns the whole problem into one with no $c$ at all.",
+     "solution": [
+      "Put $u=\\ln x-c$, so $x=e^{c+u}$ and $\\frac{dx}{x}=du$. Then $y\\,dx=\\frac{u}{x}\\,dx=u\\,du$.",
+      "The curve meets the axis at $u=0$; the maximum satisfies $\\frac{dy}{dx}=\\frac{1-u}{x^2}=0$, i.e. $u=1$.",
+      "$A=\\int_{u=0}^{u=1}u\\,du=\\frac{1}{2}$ – the integrand and limits in $u$ do not involve $c$, so $A$ is independent of $c$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The substitution $t=\\ln x$ turns $\\int\\frac{g(\\ln x)}{x}dx$ into $\\int g(t)\\,dt$; the parameter $c$ is just a horizontal shift in the $\\ln x$-scale.",
+    "A multiplicative shift $x\\to e^{c}x$ (a horizontal stretch) leaves $\\int y\\,\\frac{dx}{x}$ unchanged: this explains why the area does not depend on $c$.",
+    "Area under $y=\\frac{\\ln x}{x}$ between $1$ and $e$ is $\\frac12$ (the case $c=0$)."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between the hyperbolas $y=\\frac{1}{x}$ and $y=\\frac{1}{2x-1}$ with case analysis on $a$"
+   ],
+   "level": 4,
+   "question": "For what value of $a$ is the area of the figure bounded by the lines $y=\\frac{1}{x}$, $y=\\frac{1}{2x-1}$, $x=2$ and $x=a$, $a>0$ equal to $\\ln\\frac{4}{\\sqrt{5}}$?",
+   "answer": "$a=8$ or $a=\\frac{2}{5}\\left(6-\\sqrt{21}\\right)$",
+   "key_idea": "The curves cross at $x=1$ and $y=\\frac{1}{2x-1}$ has an asymptote at $x=\\frac{1}{2}$, so split into cases $a>2$, $1<a<2$, $\\frac{1}{2}<a<1$ (and $a<\\frac{1}{2}$ gives infinite area).",
+   "solution": [
+    "Intersection: $\\frac{1}{x}=\\frac{1}{2x-1}\\Rightarrow x=2x-1\\Rightarrow x=1$. For $x>1$, $2x-1>x$, so $\\frac{1}{x}>\\frac{1}{2x-1}$; for $\\frac{1}{2}<x<1$, $\\frac{1}{2x-1}>\\frac{1}{x}$.",
+    "Case I, $a>2$: $A=\\int_2^a\\left(\\frac{1}{x}-\\frac{1}{2x-1}\\right)dx=\\left[\\ln x-\\frac{1}{2}\\ln(2x-1)\\right]_2^a=\\ln\\frac{a}{2}-\\frac{1}{2}\\ln\\frac{2a-1}{3}$.",
+    "Set $A=\\ln\\frac{4}{\\sqrt5}$: $\\frac{1}{2}\\ln\\frac{2a-1}{3}=\\ln\\frac{a}{2}\\cdot\\frac{\\sqrt5}{4}$, so $\\frac{2a-1}{3}=\\frac{5a^2}{64}$, i.e. $15a^2-128a+64=0$.",
+    "$(15a-8)(a-8)=0\\Rightarrow a=\\frac{8}{15}$ or $a=8$. Since $a>2$, $a=8$.",
+    "Case II, $1<a<2$: $A=\\int_a^2\\left(\\frac{1}{x}-\\frac{1}{2x-1}\\right)dx=\\frac{1}{2}\\ln\\frac{2a-1}{3}-\\ln\\frac{a}{2}$. Setting this equal to $\\ln\\frac{4}{\\sqrt5}$ gives $\\frac{4a^2}{5}=\\frac{2a-1}{3}$, i.e. $12a^2-10a+5=0$.",
+    "Its discriminant is $100-240<0$, so there is no solution in this case.",
+    "Case III, $\\frac{1}{2}<a<1$: $A=\\int_a^1\\left(\\frac{1}{2x-1}-\\frac{1}{x}\\right)dx+\\int_1^2\\left(\\frac{1}{x}-\\frac{1}{2x-1}\\right)dx=\\frac{1}{2}\\ln\\frac{a^2}{2a-1}+\\frac{1}{2}\\ln\\frac{4}{3}$.",
+    "Equating to $\\frac{1}{2}\\ln\\frac{16}{5}$: $\\frac{a^2}{2a-1}\\cdot\\frac{4}{3}=\\frac{16}{5}$, so $5a^2=12(2a-1)$, i.e. $5a^2-24a+12=0$.",
+    "$a=\\frac{24\\pm\\sqrt{576-240}}{10}=\\frac{12\\pm2\\sqrt{21}}{5}=\\frac{2}{5}\\left(6\\pm\\sqrt{21}\\right)$. Only $\\frac{2}{5}\\left(6-\\sqrt{21}\\right)\\approx0.567$ lies in $\\left(\\frac{1}{2},1\\right)$.",
+    "For $0<a\\le\\frac{1}{2}$ the region contains the asymptote $x=\\frac{1}{2}$ and its area is infinite (not equal to $\\ln\\frac{4}{\\sqrt{5}}$).",
+    "Hence $a=8$ or $a=\\frac{2}{5}\\left(6-\\sqrt{21}\\right)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF omits the case 0<a<=1/2: the region then contains the vertical asymptote x=1/2 of y=1/(2x-1), so its area is infinite and no value of a arises. Added this step; the PDF's other cases and its answer a=8 or (2/5)(6-sqrt21) are correct (checked numerically: areas 0.58158 for both values).",
+   "alternate_solutions": [
+    {
+     "idea": "Introduce $G(x)=\\ln x-\\frac{1}{2}\\ln(2x-1)=\\frac{1}{2}\\ln\\frac{x^2}{2x-1}$ and use $G\\ge0$ with $G(1)=0$.",
+     "solution": [
+      "Since $x^2-(2x-1)=(x-1)^2\\ge0$, $G(x)=\\frac{1}{2}\\ln\\frac{x^2}{2x-1}\\ge0$ with minimum $G(1)=0$; $G$ decreases on $\\left(\\frac{1}{2},1\\right)$ and increases on $(1,\\infty)$. Also $G(2)=\\frac{1}{2}\\ln\\frac{4}{3}$.",
+      "The target area is $\\ln\\frac{4}{\\sqrt5}=\\frac{1}{2}\\ln\\frac{16}{5}$.",
+      "If $a>1$ the area is $|G(a)-G(2)|$. Case $G(a)=G(2)+\\frac{1}{2}\\ln\\frac{16}{5}=\\frac{1}{2}\\ln\\frac{64}{15}$: $15a^2=64(2a-1)\\Rightarrow a=8$ (the other root $\\frac{8}{15}<1$ is rejected). Case $G(a)=G(2)-\\frac{1}{2}\\ln\\frac{16}{5}=\\frac{1}{2}\\ln\\frac{5}{12}<0$: impossible because $G\\ge0$.",
+      "If $\\frac{1}{2}<a<1$ the region crosses $x=1$, so the area is $G(a)+G(2)$: $G(a)=\\frac{1}{2}\\ln\\frac{16}{5}-\\frac{1}{2}\\ln\\frac{4}{3}=\\frac{1}{2}\\ln\\frac{12}{5}$, so $5a^2=12(2a-1)$ and $a=\\frac{2}{5}\\left(6-\\sqrt{21}\\right)$ (the root in $\\left(\\frac{1}{2},1\\right)$).",
+      "For $a\\le\\frac{1}{2}$ the area is infinite. So $a=8$ or $\\frac{2}{5}\\left(6-\\sqrt{21}\\right)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Before integrating between two curves check their intersections and asymptotes inside the interval; a vertical asymptote between the limits makes the area infinite.",
+    "For $y=\\frac1x$ and $y=\\frac{1}{px-q}$ the antiderivative of the difference is $\\ln x-\\frac{1}{p}\\ln(px-q)$; equalities of areas then reduce to quadratics in $a$ after exponentiating.",
+    "$\\frac{x^2}{2x-1}\\ge1$ (AM–GM / $(x-1)^2\\ge0$) shows $\\ln\\frac{x^2}{2x-1}\\ge0$, a quick way to discard impossible cases."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by chords from the origin and the curve $y=\\frac{1}{1+x^2}$",
+    "Minimisation using derivatives"
+   ],
+   "level": 3,
+   "question": "For the curve $f(x)=\\frac{1}{1+x^2}$, let two points on it be $A(\\alpha,f(\\alpha))$, $B\\left(-\\frac{1}{\\alpha},f\\left(-\\frac{1}{\\alpha}\\right)\\right)$ $(\\alpha>0)$. Find the minimum area bounded by the line segments $OA$, $OB$ and $f(x)$, where $O$ is the origin.",
+   "answer": "$\\frac{\\pi-1}{2}$ sq. units",
+   "key_idea": "Area $=\\int_{-1/\\alpha}^{\\alpha}f\\,dx$ minus the two triangles under $OA$ and $OB$; the integral is exactly $\\frac{\\pi}{2}$ because $\\tan^{-1}\\alpha+\\tan^{-1}\\frac{1}{\\alpha}=\\frac{\\pi}{2}$.",
+   "solution": [
+    "$f(\\alpha)=\\frac{1}{1+\\alpha^2}$ and $f\\left(-\\frac{1}{\\alpha}\\right)=\\frac{1}{1+\\frac{1}{\\alpha^2}}=\\frac{\\alpha^2}{1+\\alpha^2}$.",
+    "Area $=$ (area under the curve from $x=-\\frac{1}{\\alpha}$ to $x=\\alpha$) $-$ (triangle $O$, $B$ and the foot of $B$) $-$ (triangle $O$, $A$ and the foot of $A$).",
+    "$A=\\int_{-1/\\alpha}^{\\alpha}\\frac{dx}{1+x^2}-\\frac{1}{2}\\cdot\\frac{1}{\\alpha}\\cdot\\frac{\\alpha^2}{1+\\alpha^2}-\\frac{1}{2}\\cdot\\alpha\\cdot\\frac{1}{1+\\alpha^2}$.",
+    "$A=\\left[\\tan^{-1}x\\right]_{-1/\\alpha}^{\\alpha}-\\frac{1}{2}\\frac{\\alpha}{1+\\alpha^2}-\\frac{1}{2}\\frac{\\alpha}{1+\\alpha^2}=\\tan^{-1}\\alpha+\\tan^{-1}\\frac{1}{\\alpha}-\\frac{\\alpha}{1+\\alpha^2}$.",
+    "For $\\alpha>0$, $\\tan^{-1}\\alpha+\\cot^{-1}\\alpha=\\frac{\\pi}{2}$, so $A=\\frac{\\pi}{2}-\\frac{\\alpha}{1+\\alpha^2}$.",
+    "$\\frac{dA}{d\\alpha}=-\\frac{(1+\\alpha^2)-2\\alpha^2}{(1+\\alpha^2)^2}=-\\frac{1-\\alpha^2}{(1+\\alpha^2)^2}$. Setting it to $0$: $\\alpha=1$ (as $\\alpha>0$).",
+    "$\\frac{dA}{d\\alpha}<0$ for $\\alpha<1$ and $>0$ for $\\alpha>1$, so $A$ is minimum at $\\alpha=1$: $A_{\\min}=\\frac{\\pi}{2}-\\frac{1}{2}=\\frac{\\pi-1}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $\\alpha=\\tan\\theta$: then $\\frac{\\alpha}{1+\\alpha^2}=\\frac{1}{2}\\sin2\\theta\\le\\frac{1}{2}$ – no calculus.",
+     "solution": [
+      "With $\\alpha=\\tan\\theta$ ($0<\\theta<\\frac{\\pi}{2}$): $\\frac{\\alpha}{1+\\alpha^2}=\\frac{\\tan\\theta}{\\sec^2\\theta}=\\sin\\theta\\cos\\theta=\\frac{1}{2}\\sin2\\theta$.",
+      "So $A=\\frac{\\pi}{2}-\\frac{1}{2}\\sin2\\theta$.",
+      "$\\sin2\\theta\\le1$ with equality at $\\theta=\\frac{\\pi}{4}$, i.e. $\\alpha=1$.",
+      "Hence $A_{\\min}=\\frac{\\pi}{2}-\\frac{1}{2}=\\frac{\\pi-1}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}x+\\tan^{-1}\\frac{1}{x}=\\frac{\\pi}{2}$ for $x>0$; the limits $\\alpha$ and $-\\frac{1}{\\alpha}$ are chosen so that $\\int\\frac{dx}{1+x^2}$ is exactly $\\frac{\\pi}{2}$.",
+    "$\\frac{t}{1+t^2}\\le\\frac{1}{2}$ for $t>0$ (AM–GM, $1+t^2\\ge2t$) with equality at $t=1$.",
+    "Area between a curve and chords from a point = area under the curve minus triangles; avoid integrating the straight parts."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between a parabola and a variable line through a fixed point",
+    "Minimisation using derivatives"
+   ],
+   "level": 3,
+   "question": "Let $c$ be the constant number such that $c>1$. If the least area of the figure given by the line passing through the point $(1,c)$ with gradient $m$ and the parabola $y=x^2$ is $36$ sq. units, find the value of $(c^2+m^2)$.",
+   "answer": "$104$",
+   "key_idea": "The area between $y=x^2$ and the chord is $\\frac{(x_2-x_1)^3}{6}=\\frac{\\left(m^2-4m+4c\\right)^{3/2}}{6}$, so minimise $m^2-4m+4c$ over $m$.",
+   "solution": [
+    "The line is $y-c=m(x-1)$, i.e. $y=mx+c-m$. With $y=x^2$: $x^2-mx+m-c=0$ with roots $x_1<x_2$.",
+    "$x_1+x_2=m$, $x_1x_2=m-c$, so $(x_2-x_1)^2=m^2-4(m-c)=m^2-4m+4c$ and $x_2-x_1=\\sqrt{m^2-4m+4c}$. (It is real because $c>1$ puts $(1,c)$ outside the parabola.)",
+    "$A=\\int_{x_1}^{x_2}\\left(mx+c-m-x^2\\right)dx=\\frac{m}{2}(x_2^2-x_1^2)+(c-m)(x_2-x_1)-\\frac{1}{3}(x_2^3-x_1^3)$.",
+    "Factor $(x_2-x_1)$: $A=(x_2-x_1)\\left[\\frac{m}{2}(x_1+x_2)+(c-m)-\\frac{1}{3}\\left(x_1^2+x_1x_2+x_2^2\\right)\\right]$, and $x_1^2+x_1x_2+x_2^2=(x_1+x_2)^2-x_1x_2=m^2-m+c$.",
+    "$A=\\sqrt{m^2-4m+4c}\\left[\\frac{m^2}{2}+c-m-\\frac{m^2-m+c}{3}\\right]=\\sqrt{m^2-4m+4c}\\left(\\frac{m^2}{6}-\\frac{2m}{3}+\\frac{2c}{3}\\right)$.",
+    "Note $\\frac{m^2}{6}-\\frac{2m}{3}+\\frac{2c}{3}=\\frac{m^2-4m+4c}{6}$, so $A=\\frac{(m^2-4m+4c)^{3/2}}{6}$.",
+    "For minimum area $\\frac{dA}{dm}=0$: $\\frac{dA}{dm}=\\frac{1}{6}\\cdot\\frac{3}{2}\\sqrt{D}\\,(2m-4)=\\frac{(m-2)\\sqrt{D}}{2}$. Since $D>0$ (two distinct intersection points), the only critical value is $m=2$, and $A$ falls for $m<2$ and rises for $m>2$.",
+    "Then $A_{\\min}=\\sqrt{4c-4}\\left(\\frac{4}{6}-\\frac{4}{3}+\\frac{2c}{3}\\right)=2\\sqrt{c-1}\\cdot\\frac{2(c-1)}{3}=\\frac{4}{3}(c-1)^{3/2}$.",
+    "$\\frac{4}{3}(c-1)^{3/2}=36\\Rightarrow(c-1)^{3/2}=27\\Rightarrow c-1=9\\Rightarrow c=10$.",
+    "Hence $c^2+m^2=100+4=104$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF differentiates sqrt(m^2-4m+4c) as (2m-4)/sqrt(...) instead of (2m-4)/(2 sqrt(...)) - a factor-2 slip that does not change the root m=2. Replaced by the cleaner route A = D^(3/2)/6, dA/dm = (m-2)sqrt(D)/2. The values m=2, c=10 and the answer 104 are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use $A=\\frac{(\\text{discriminant})^{3/2}}{6}$ and complete the square – no differentiation.",
+     "solution": [
+      "For $y=x^2$ and a line meeting it at $x_1,x_2$: $A=\\frac{(x_2-x_1)^3}{6}=\\frac{D^{3/2}}{6}$ with $D=m^2-4m+4c$.",
+      "Complete the square: $D=(m-2)^2+4(c-1)\\ge4(c-1)$, with equality iff $m=2$.",
+      "So $A_{\\min}=\\frac{(4(c-1))^{3/2}}{6}=\\frac{8(c-1)^{3/2}}{6}=\\frac{4}{3}(c-1)^{3/2}=36$, giving $(c-1)^{3/2}=27$ and $c=10$.",
+      "$c^2+m^2=100+4=104$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parabola $y=x^2$ and a line $y=mx+k$: $A=\\frac{\\left(m^2+4k\\right)^{3/2}}{6}$; here $k=c-m$.",
+    "Minimising an area that is a power of $D$ is minimising $D$; if $D$ is a quadratic in the parameter, complete the square.",
+    "Geometric meaning: the least-area chord through $(1,c)$ has slope $m=2$, the slope of the tangent at the point of the parabola with $x=1$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Reduction formula for $\\int\\tan^nx\\,dx$ and bounds from monotonicity of $A_n$"
+   ],
+   "level": 3,
+   "question": "Let $A_n$ be the area bounded by the curve $y=(\\tan x)^n$ and the lines $x=0$, $y=0$ and $x=\\frac{\\pi}{4}$. Prove that for $n>2$, $A_n+A_{n-2}=\\frac{1}{n-1}$ and deduce that $\\frac{1}{2n+2}<A_n<\\frac{1}{2n-2}$.",
+   "answer": "Proved: $A_n+A_{n-2}=\\frac{1}{n-1}$ and $\\frac{1}{2n+2}<A_n<\\frac{1}{2n-2}$",
+   "key_idea": "$\\tan^n x+\\tan^{n-2}x=\\tan^{n-2}x\\sec^2x$ is an exact derivative, and $A_n$ is decreasing in $n$ because $0<\\tan x<1$.",
+   "solution": [
+    "$A_n=\\int_0^{\\pi/4}(\\tan x)^n\\,dx$, so $A_n+A_{n-2}=\\int_0^{\\pi/4}\\left[(\\tan x)^n+(\\tan x)^{n-2}\\right]dx$.",
+    "Factor: $(\\tan x)^n+(\\tan x)^{n-2}=(\\tan x)^{n-2}\\left(\\tan^2x+1\\right)=(\\tan x)^{n-2}\\sec^2x$.",
+    "Put $t=\\tan x$ ($dt=\\sec^2x\\,dx$; $t$ runs from $0$ to $1$): $A_n+A_{n-2}=\\int_0^1t^{n-2}dt=\\left[\\frac{t^{n-1}}{n-1}\\right]_0^1=\\frac{1}{n-1}$ (valid since $n>2$).",
+    "On $\\left(0,\\frac{\\pi}{4}\\right)$, $0<\\tan x<1$, so $(\\tan x)^{n+2}<(\\tan x)^n<(\\tan x)^{n-2}$; integrating, $A_{n+2}<A_n<A_{n-2}$.",
+    "Upper bound: $2A_n<A_n+A_{n-2}=\\frac{1}{n-1}$, so $A_n<\\frac{1}{2n-2}$.",
+    "Lower bound: applying the identity with $n+2$ in place of $n$, $A_{n+2}+A_n=\\frac{1}{n+1}$; since $A_{n+2}<A_n$, $2A_n>\\frac{1}{n+1}$, so $A_n>\\frac{1}{2n+2}$.",
+    "Therefore $\\frac{1}{2n+2}<A_n<\\frac{1}{2n-2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $t=\\tan x$ to get $A_n=\\int_0^1\\frac{t^n}{1+t^2}dt$ and use $2t\\le1+t^2\\le2$ on $[0,1]$.",
+     "solution": [
+      "With $t=\\tan x$, $dx=\\frac{dt}{1+t^2}$, so $A_n=\\int_0^1\\frac{t^n}{1+t^2}dt$.",
+      "Recurrence: $A_n+A_{n-2}=\\int_0^1\\frac{t^{n}+t^{n-2}}{1+t^2}dt=\\int_0^1t^{n-2}dt=\\frac{1}{n-1}$.",
+      "For $0<t<1$: $1+t^2<2$, so $\\frac{t^n}{1+t^2}>\\frac{t^n}{2}$ and $A_n>\\frac{1}{2}\\int_0^1t^ndt=\\frac{1}{2n+2}$.",
+      "Also $1+t^2\\ge2t$ (AM–GM), so $\\frac{t^n}{1+t^2}\\le\\frac{t^{n-1}}{2}$, with strict inequality for $t\\ne1$: $A_n<\\frac{1}{2}\\int_0^1t^{n-1}dt=\\frac{1}{2n}$.",
+      "Hence $\\frac{1}{2n+2}<A_n<\\frac{1}{2n}<\\frac{1}{2n-2}$ – even slightly stronger than required."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^{\\pi/4}\\tan^nx\\,dx$ satisfies the standard reduction $I_n+I_{n-2}=\\frac{1}{n-1}$ (check $n=3$: $I_1=\\frac{\\ln2}{2}\\approx0.3466$ and $I_3=\\frac{1}{2}-\\frac{\\ln2}{2}\\approx0.1534$, sum $0.5$).",
+    "A sequence $A_n$ that is decreasing and satisfies $A_n+A_{n-2}=f(n)$ is trapped between $\\frac{f(n+2)}{2}$ and $\\frac{f(n)}{2}$.",
+    "With $t=\\tan x$, $\\frac{1}{2}\\le\\frac{1}{1+t^2}\\le1$ on $[0,1]$ and $\\frac{1}{1+t^2}\\le\\frac{1}{2t}$ give quick two-sided bounds for such integrals."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between shifted cosine curves $y=1+\\cos x$ and $y=1+\\cos(x-\\alpha)$"
+   ],
+   "level": 4,
+   "question": "Consider the two curves $C_1:y=1+\\cos x$ and $C_2:y=1+\\cos(x-\\alpha)$ for $\\alpha\\in\\left(0,\\frac{\\pi}{2}\\right)$; $x\\in[0,\\pi]$. Find the value of $\\alpha$ for which the area of the figure bounded by the curves $C_1$, $C_2$ and $x=0$ is the same as that of the figure bounded by $C_2$, $y=1$ and $x=\\pi$. For this value of $\\alpha$, find the ratio in which the line $y=1$ divides the area of the figure bounded by the curves $C_1$, $C_2$ and $x=\\pi$.",
+   "answer": "$\\alpha=\\frac{\\pi}{3}$; ratio $=2:\\sqrt{3}$",
+   "key_idea": "$C_1$ and $C_2$ meet where $\\cos x=\\cos(x-\\alpha)$, i.e. $x=\\frac{\\alpha}{2}$; the second part is the area above and below $y=1$ inside the region between $C_1,C_2$ and $x=\\pi$.",
+   "solution": [
+    "Intersection of $C_1,C_2$: $\\cos x=\\cos(x-\\alpha)\\Rightarrow x=\\pm(x-\\alpha)$; $x=-(x-\\alpha)$ gives $x=\\frac{\\alpha}{2}$ (the other sign is impossible as $\\alpha\\ne0$).",
+    "$A_1$ = area bounded by $C_1$, $C_2$, $x=0$: for $0\\le x\\le\\frac{\\alpha}{2}$, $C_1$ is above $C_2$, so $A_1=\\int_0^{\\alpha/2}\\left[\\cos x-\\cos(x-\\alpha)\\right]dx$.",
+    "$A_2$ = area bounded by $C_2$, $y=1$ and $x=\\pi$: $C_2$ crosses $y=1$ at $x=\\frac{\\pi}{2}+\\alpha$ and lies below $y=1$ up to $x=\\pi$, so $A_2=\\int_{\\pi/2+\\alpha}^{\\pi}\\left[-\\cos(x-\\alpha)\\right]dx$.",
+    "$A_1=\\left[\\sin x-\\sin(x-\\alpha)\\right]_0^{\\alpha/2}=\\sin\\frac{\\alpha}{2}+\\sin\\frac{\\alpha}{2}-\\sin\\alpha=2\\sin\\frac{\\alpha}{2}-\\sin\\alpha$.",
+    "$A_2=-\\left[\\sin(x-\\alpha)\\right]_{\\pi/2+\\alpha}^{\\pi}=-\\left[\\sin(\\pi-\\alpha)-1\\right]=1-\\sin\\alpha$.",
+    "$A_1=A_2\\Rightarrow2\\sin\\frac{\\alpha}{2}=1\\Rightarrow\\frac{\\alpha}{2}=\\frac{\\pi}{6}\\Rightarrow\\alpha=\\frac{\\pi}{3}$.",
+    "Second part, $\\alpha=\\frac{\\pi}{3}$: the figure bounded by $C_1,C_2,x=\\pi$ lies over $\\left[\\frac{\\pi}{6},\\pi\\right]$ with $C_2$ above $C_1$. $C_1$ crosses $y=1$ at $x=\\frac{\\pi}{2}$, $C_2$ at $x=\\frac{5\\pi}{6}$.",
+    "Part above $y=1$: $U=\\int_{\\pi/6}^{5\\pi/6}\\cos\\left(x-\\frac{\\pi}{3}\\right)dx-\\int_{\\pi/6}^{\\pi/2}\\cos x\\,dx=\\left[\\sin\\left(x-\\frac{\\pi}{3}\\right)\\right]_{\\pi/6}^{5\\pi/6}-\\left[\\sin x\\right]_{\\pi/6}^{\\pi/2}=\\left(1+\\frac{1}{2}\\right)-\\left(1-\\frac{1}{2}\\right)=1$.",
+    "Part below $y=1$: $L=\\int_{\\pi/2}^{5\\pi/6}(-\\cos x)dx+\\int_{5\\pi/6}^{\\pi}\\left[\\cos\\left(x-\\frac{\\pi}{3}\\right)-\\cos x\\right]dx=\\frac{1}{2}+\\left(\\frac{\\sqrt3}{2}-\\frac{1}{2}\\right)=\\frac{\\sqrt{3}}{2}$.",
+    "Ratio $U:L=1:\\frac{\\sqrt{3}}{2}=2:\\sqrt{3}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF stops after alpha = pi/3 and never works out the second part of the question (the ratio 2:sqrt3 appears only in the answer key). The part above y=1 and the part below y=1 were computed and checked numerically (U=1.0000, L=0.8660).",
+   "useful_results": [
+    "$\\cos x=\\cos(x-\\alpha)$ has the single solution $x=\\frac{\\alpha}{2}$ (mod $2\\pi$): two shifted cosines cross midway between their maxima in phase.",
+    "Areas between cosines integrate to sines: $\\int\\left[\\cos x-\\cos(x-\\alpha)\\right]dx=\\sin x-\\sin(x-\\alpha)$; keep track of which curve is above on each sub-interval.",
+    "Total area of the figure here is $U+L=1+\\frac{\\sqrt3}{2}$ (checked numerically $=1.866$)."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area between $y=\\sqrt{1-x^2}$ and the horizontal line $y=f(a)$",
+    "Maxima and minima of an area function"
+   ],
+   "level": 4,
+   "question": "For what values of $a\\in[0,1]$ does the area of the figure bounded by the graph of the function $y=f(x)$ and the straight lines $x=0$, $x=1$ and $y=f(a)$ is at a minimum and for what values it is at a maximum if $f(x)=\\sqrt{1-x^2}$. Find also the maximum and the minimum areas.",
+   "answer": "Minimum at $a=\\frac{1}{2}$: $A=\\frac{3\\sqrt{3}-\\pi}{12}$; local maximum at $a=0$: $A=1-\\frac{\\pi}{4}$; maximum value at $a=1$: $A=\\frac{\\pi}{4}$",
+   "key_idea": "$f$ is decreasing, so $f(x)\\ge f(a)$ for $x\\le a$ and $f(x)\\le f(a)$ for $x\\ge a$: split the area at $x=a$.",
+   "solution": [
+    "$f(x)=\\sqrt{1-x^2}$ is decreasing on $[0,1]$, so $f(x)\\ge f(a)$ for $x\\le a$ and $f(x)\\le f(a)$ for $x\\ge a$. Hence $A(a)=\\int_0^a\\left[f(x)-f(a)\\right]dx+\\int_a^1\\left[f(a)-f(x)\\right]dx$.",
+    "$A(a)=\\int_0^af\\,dx-\\int_a^1f\\,dx-af(a)+(1-a)f(a)=2\\int_0^af\\,dx-\\frac{\\pi}{4}+(1-2a)f(a)$, since $\\int_0^1f\\,dx=\\frac{\\pi}{4}$.",
+    "$\\int_0^a\\sqrt{1-x^2}\\,dx=\\frac{1}{2}\\left[a\\sqrt{1-a^2}+\\sin^{-1}a\\right]$, so $A(a)=a\\sqrt{1-a^2}+\\sin^{-1}a-\\frac{\\pi}{4}+(1-2a)\\sqrt{1-a^2}=(1-a)\\sqrt{1-a^2}+\\sin^{-1}a-\\frac{\\pi}{4}$.",
+    "$\\frac{dA}{da}=-\\sqrt{1-a^2}-\\frac{a(1-a)}{\\sqrt{1-a^2}}+\\frac{1}{\\sqrt{1-a^2}}=\\frac{-(1-a^2)-a+a^2+1}{\\sqrt{1-a^2}}=\\frac{a(2a-1)}{\\sqrt{1-a^2}}$.",
+    "$\\frac{dA}{da}=0$ at $a=0$ and $a=\\frac{1}{2}$. For $0<a<\\frac{1}{2}$, $a(2a-1)<0$ so $A'<0$; for $\\frac{1}{2}<a<1$, $A'>0$. So $A$ decreases on $\\left(0,\\frac{1}{2}\\right)$ and increases on $\\left(\\frac{1}{2},1\\right)$.",
+    "Minimum at $a=\\frac{1}{2}$: $A\\left(\\frac{1}{2}\\right)=\\frac{1}{2}\\cdot\\frac{\\sqrt{3}}{2}+\\frac{\\pi}{6}-\\frac{\\pi}{4}=\\frac{\\sqrt{3}}{4}-\\frac{\\pi}{12}=\\frac{3\\sqrt{3}-\\pi}{12}$.",
+    "At the end points: $A(0)=1-\\frac{\\pi}{4}\\approx0.215$ (a local maximum at the boundary) and $A(1)=\\frac{\\pi}{4}\\approx0.785$, which is the greatest value on $[0,1]$.",
+    "So the minimum area $\\frac{3\\sqrt{3}-\\pi}{12}$ is at $a=\\frac{1}{2}$, the maximum area $\\frac{\\pi}{4}$ at $a=1$ (with the local maximum $1-\\frac{\\pi}{4}$ at $a=0$)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working is wrong: its expression 'A = sqrt(1-a^2) - arcsin a + pi/4' gives A(0)=1+pi/4 (should be 1-pi/4) and its derivative gives a=-1/2, outside [0,1], whereas its own answer key says a=1/2. Correct area function: A(a)=(1-a)sqrt(1-a^2)+arcsin a-pi/4 (checked numerically at a=0,.25,.5,.75,1); A'(a)=a(2a-1)/sqrt(1-a^2). The key (a=1/2 min; a=0 local max 1-pi/4; a=1 max pi/4) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate under the integral sign: $A'(a)=f'(a)\\,(1-2a)$ without evaluating $A$.",
+     "solution": [
+      "$A(a)=\\int_0^a\\left[f(x)-f(a)\\right]dx+\\int_a^1\\left[f(a)-f(x)\\right]dx$. The limits depend on $a$ and so does the integrand through $f(a)$.",
+      "Leibniz: $A'(a)=\\left[f(a)-f(a)\\right]-\\left[f(a)-f(a)\\right]+\\int_0^a\\left(-f'(a)\\right)dx+\\int_a^1f'(a)\\,dx=f'(a)\\left[-a+(1-a)\\right]=f'(a)(1-2a)$.",
+      "Here $f'(a)=\\frac{-a}{\\sqrt{1-a^2}}$, so $A'(a)=\\frac{-a(1-2a)}{\\sqrt{1-a^2}}=\\frac{a(2a-1)}{\\sqrt{1-a^2}}$.",
+      "This vanishes at $a=0$ and $a=\\frac{1}{2}$ with the same sign pattern as before: minimum at $a=\\frac{1}{2}$, and comparing $A(0)=1-\\frac{\\pi}{4}$ with $A(1)=\\frac{\\pi}{4}$ gives the maximum at $a=1$.",
+      "Minimum value $A\\left(\\frac{1}{2}\\right)=\\frac{3\\sqrt{3}-\\pi}{12}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a monotone decreasing $f$, the area between $y=f(x)$ and the horizontal line $y=f(a)$ over $[0,1]$ has $A'(a)=f'(a)(1-2a)$; the interior critical point is $a=\\frac{1}{2}$ (the 'mean-value' point when the line splits the interval into equal halves).",
+    "The closed form $A(a)=2\\int_0^af-\\int_0^1f+(1-2a)f(a)$ works for every decreasing $f$.",
+    "On a closed interval always compare end-point values with the interior critical value; the absolute maximum here is at an end point."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Area bisecting curve (equal-area condition for every point of $C$)",
+    "Differentiation of an area function and inverse functions"
+   ],
+   "level": 4,
+   "question": "Let $C_1$ and $C_2$ be two curves passing through the origin as shown in the figure. A curve $C$ is said to 'bisect the area' of the region between $C_1$ and $C_2$, if for each point $P$ of $C$, the two shaded regions $A$ and $B$ shown in the figure have equal areas. Determine the upper curve $C_2$, given that the bisecting curve $C$ has the equation $y=x^2$ and that the lower curve $C_1$ has the equation $y=\\frac{x^2}{2}$.",
+   "answer": "$C_2:\\ y=\\frac{16}{9}x^2$",
+   "key_idea": "For $P(\\alpha,\\alpha^2)$, region $B$ lies between $C$ and $C_1$ (vertical strips, $0$ to $\\alpha$) and $A$ between $C_2$ and $C$ (horizontal strips, $y=0$ to $\\alpha^2$); equating the areas for every $\\alpha$ and differentiating gives $C_2$.",
+   "solution": [
+    "Let $C_2:y=f(x)$ and let $P$ be the point $(\\alpha,\\alpha^2)$ of $C:y=x^2$. Region $B$ is between $C$ and $C_1$ for $0\\le x\\le\\alpha$; region $A$ is between $C_2$ and $C$ for $0\\le y\\le\\alpha^2$ (read along horizontal strips).",
+    "$A=B$ for every $\\alpha$: $\\int_0^{\\alpha^2}\\left(C-C_2\\right)dy=\\int_0^{\\alpha}\\left(C-C_1\\right)dx$, i.e. $\\int_0^{\\alpha^2}\\left(\\sqrt{y}-f^{-1}(y)\\right)dy=\\int_0^{\\alpha}\\left(x^2-\\frac{x^2}{2}\\right)dx=\\frac{\\alpha^3}{6}$.",
+    "Differentiate both sides with respect to $\\alpha$ (Leibniz rule; the upper limit $\\alpha^2$ has derivative $2\\alpha$): $\\left(\\alpha-f^{-1}(\\alpha^2)\\right)\\cdot2\\alpha=\\frac{\\alpha^2}{2}$.",
+    "So $\\alpha-f^{-1}(\\alpha^2)=\\frac{\\alpha}{4}$, i.e. $f^{-1}(\\alpha^2)=\\frac{3}{4}\\alpha$, which means $f\\left(\\frac{3\\alpha}{4}\\right)=\\alpha^2$.",
+    "Put $x=\\frac{3}{4}\\alpha$, so $\\alpha=\\frac{4x}{3}$: $f(x)=\\alpha^2=\\frac{16}{9}x^2$.",
+    "Hence the upper curve is $C_2:y=\\frac{16}{9}x^2$ (it lies above $C:y=x^2$, as required)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes '(alpha - f^-1(alpha^2)) 2alpha = alpha^2/2' straight after the integral equation. That line is the derivative with respect to alpha of the integral equation, not the equation itself; the differentiation step was missing and is now stated. Answer (16/9)x^2 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use scaling symmetry: $y=x^2$ is mapped to itself by $(x,y)\\to(\\lambda x,\\lambda^2y)$, so try $C_2:y=kx^2$ and compute both areas.",
+     "solution": [
+      "Both given curves are of the form $y=px^2$. Try $C_2:y=kx^2$ with $k>1$ (a power law is consistent with the scaling $x\\to\\lambda x$, $y\\to\\lambda^2y$, under which both areas scale by $\\lambda^3$).",
+      "$B=\\int_0^\\alpha\\left(x^2-\\frac{x^2}{2}\\right)dx=\\frac{\\alpha^3}{6}$.",
+      "$A=\\int_0^{\\alpha^2}\\left(\\sqrt{y}-\\sqrt{y/k}\\right)dy=\\left(1-\\frac{1}{\\sqrt k}\\right)\\frac{2}{3}\\left(\\alpha^2\\right)^{3/2}=\\frac{2}{3}\\left(1-\\frac{1}{\\sqrt{k}}\\right)\\alpha^3$.",
+      "$A=B$ for every $\\alpha$: $\\frac{2}{3}\\left(1-\\frac{1}{\\sqrt{k}}\\right)=\\frac{1}{6}\\Rightarrow1-\\frac{1}{\\sqrt{k}}=\\frac{1}{4}\\Rightarrow\\sqrt{k}=\\frac{4}{3}\\Rightarrow k=\\frac{16}{9}$.",
+      "The main method shows the solution is unique, so $C_2:y=\\frac{16}{9}x^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Equal for every $\\alpha$' conditions on areas are solved by differentiating with respect to the moving parameter: $\\frac{d}{d\\alpha}\\int_0^{g(\\alpha)}h=h(g(\\alpha))\\,g'(\\alpha)$.",
+    "Regions bounded by a curve on one side and horizontal lines are best integrated in $y$ (the inverse function); regions between graphs over $x$ in $x$.",
+    "Homogeneous (scaling-invariant) configurations like $y=px^2$ force power-law answers; trying $y=kx^2$ turns a functional equation into one equation for $k$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Integration of $e^x\\left[g(x)+g'(x)\\right]$",
+    "Area between two curves"
+   ],
+   "level": 3,
+   "question": "Given $f(x)=\\int_0^xe^t\\left(\\ln\\sec t-\\sec^2t\\right)dt$; $g(x)=-2e^x\\tan x$. Find the area bounded by the curves $y=f(x)$ and $y=g(x)$ between the ordinates $x=0$ and $x=\\frac{\\pi}{3}$.",
+   "answer": "$e^{\\pi/3}\\ln2$ sq. units",
+   "key_idea": "Write $\\ln\\sec t-\\sec^2t=(\\ln\\sec t+\\tan t)-(\\tan t+\\sec^2t)$; each bracket is $h+h'$ for $h=\\ln\\sec t$, resp. $h=\\tan t$, so $\\int e^t(h+h')dt=e^th$.",
+   "solution": [
+    "$f(x)=\\int_0^xe^t\\left(\\ln\\sec t-\\sec^2t\\right)dt=\\int_0^x\\left[e^t\\left(\\ln\\sec t+\\tan t\\right)-e^t\\left(\\tan t+\\sec^2t\\right)\\right]dt$ (the $\\tan t$ terms cancel).",
+    "Since $\\frac{d}{dt}\\ln\\sec t=\\tan t$ and $\\frac{d}{dt}\\tan t=\\sec^2t$, each bracket has the form $h+h'$, and $\\int e^t(h+h')dt=e^th$.",
+    "$f(x)=\\left[e^t\\ln\\sec t-e^t\\tan t\\right]_0^x=e^x\\left(\\ln\\sec x-\\tan x\\right)$ (the value at $t=0$ is $0$).",
+    "Between the two curves: $f(x)-g(x)=e^x(\\ln\\sec x-\\tan x)+2e^x\\tan x=e^x(\\ln\\sec x+\\tan x)>0$ on $\\left[0,\\frac{\\pi}{3}\\right]$, so $A=\\int_0^{\\pi/3}\\left(f-g\\right)dx$.",
+    "$\\int e^x\\left(\\ln\\sec x+\\tan x\\right)dx=e^x\\ln\\sec x$ (again $e^x(h+h')$ with $h=\\ln\\sec x$).",
+    "$A=\\left[e^x\\ln\\sec x\\right]_0^{\\pi/3}=e^{\\pi/3}\\ln\\sec\\frac{\\pi}{3}-0=e^{\\pi/3}\\ln2$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\int e^x\\left[h(x)+h'(x)\\right]dx=e^xh(x)+C$: split the integrand into groups of the form $h+h'$.",
+    "Useful pairs: $(\\ln\\sec x,\\tan x)$, $(\\tan x,\\sec^2x)$, $(\\frac{1}{x},-\\frac{1}{x^2})$, $(\\sin x,\\cos x)$.",
+    "Subtracting a negative function ($g<0$) adds its modulus: $f-g=f+2e^x\\tan x$."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiation of an integral equation (Leibniz rule)",
+    "Area under a parabola"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,\\infty)\\to\\mathbb{R}$ be a continuous and strictly increasing function such that $f^3(x)=\\int_0^xtf^2(t)\\,dt$, $\\forall x>0$. Find the area enclosed by $y=f(x)$, the $x$-axis and the ordinate at $x=3$.",
+   "answer": "$\\frac{3}{2}$ sq. units",
+   "key_idea": "Differentiate $f^3(x)=\\int_0^xtf^2(t)dt$ and cancel $f^2(x)\\ne0$: $3f'(x)=x$.",
+   "solution": [
+    "Put $x=0$: $f^3(0)=0$, so $f(0)=0$. As $f$ is strictly increasing, $f(x)>0$ for $x>0$.",
+    "Differentiate both sides with respect to $x$ (Leibniz rule): $3f^2(x)f'(x)=xf^2(x)$.",
+    "Since $f^2(x)\\ne0$ for $x>0$, $f'(x)=\\frac{x}{3}$.",
+    "Integrate: $f(x)=\\frac{x^2}{6}+C$; $f(0)=0$ gives $C=0$, so $f(x)=\\frac{x^2}{6}$ (check: $f^3=\\frac{x^6}{216}$ and $\\int_0^xt\\cdot\\frac{t^4}{36}dt=\\frac{x^6}{216}$).",
+    "Area $=\\int_0^3\\frac{x^2}{6}\\,dx=\\left[\\frac{x^3}{18}\\right]_0^3=\\frac{27}{18}=\\frac{3}{2}$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Power-law ansatz $f=kx^p$: balance the powers and coefficients on the two sides (uniqueness comes from the differentiation argument).",
+     "solution": [
+      "Try $f(x)=kx^p$ with $k>0$ (increasing, $f(0)=0$). Then $f^3=k^3x^{3p}$ and $\\int_0^xt\\cdot k^2t^{2p}dt=\\frac{k^2x^{2p+2}}{2p+2}$.",
+      "Equal powers: $3p=2p+2\\Rightarrow p=2$. Equal coefficients: $k^3=\\frac{k^2}{6}\\Rightarrow k=\\frac{1}{6}$.",
+      "So $f(x)=\\frac{x^2}{6}$ satisfies the equation; the differentiation argument ($3f'=x$ with $f(0)=0$) shows it is the only solution.",
+      "Area $=\\int_0^3\\frac{x^2}{6}dx=\\frac{3}{2}$ sq. units."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f^n(x)=\\int_0^xh(t,f(t))dt$: differentiate to get a first-order ODE and use $x=0$ for the initial value.",
+    "The condition 'strictly increasing' ensures $f(x)>0$ for $x>0$, so cancelling $f^2$ is legitimate (otherwise $f\\equiv0$ would be another solution).",
+    "Area under $y=cx^2$ from $0$ to $b$ is $\\frac{cb^3}{3}$: here $\\frac{1}{6}\\cdot\\frac{27}{3}=\\frac{3}{2}$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Length of a curve (arc length formula)"
+   ],
+   "level": 1,
+   "paragraph": "If $f$ is smooth on $[a,b]$, the length of the curve $y=f(x)$ from $a$ to $b$ is $L=\\int_a^b\\sqrt{1+\\left(\\frac{dy}{dx}\\right)^2}\\,dx=\\int_a^b\\sqrt{1+\\left(f'(x)\\right)^2}\\,dx$ ... (i). At a point on a curve where $\\frac{dy}{dx}$ fails to exist, $\\frac{dx}{dy}$ may exist and we may be able to find the curve's length by expressing $x$ as a function of $y$ and applying the following analogue of Eq. (i): the length of a smooth curve $x=g(y)$, $c\\le y\\le d$, is $L=\\int_c^d\\sqrt{1+\\left(\\frac{dx}{dy}\\right)^2}\\,dy=\\int_c^d\\sqrt{1+\\left(g'(y)\\right)^2}\\,dy$ ... (ii).",
+   "question": "The length of the curve $y=\\frac{4\\sqrt{2}}{3}x^{3/2}-1$, $0\\le x\\le1$ is:",
+   "options": [
+    "$\\frac{13}{6}$",
+    "$2$",
+    "$\\frac{1}{12}$",
+    "none of these"
+   ],
+   "answer": "(A) $\\frac{13}{6}$",
+   "key_idea": "$\\frac{dy}{dx}=2\\sqrt{2}\\,x^{1/2}$, so $1+\\left(\\frac{dy}{dx}\\right)^2=1+8x$, which integrates directly.",
+   "solution": [
+    "$y=\\frac{4\\sqrt{2}}{3}x^{3/2}-1\\Rightarrow\\frac{dy}{dx}=\\frac{4\\sqrt{2}}{3}\\cdot\\frac{3}{2}x^{1/2}=2\\sqrt{2}\\,x^{1/2}$.",
+    "$1+\\left(\\frac{dy}{dx}\\right)^2=1+8x$, so $L=\\int_0^1\\sqrt{1+8x}\\,dx$.",
+    "$L=\\frac{2}{3}\\cdot\\frac{(1+8x)^{3/2}}{8}\\Big|_0^1=\\frac{2}{3}\\cdot\\frac{27}{8}-\\frac{1}{12}$.",
+    "$L=\\frac{27}{12}-\\frac{1}{12}=\\frac{26}{12}=\\frac{13}{6}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $y=kx^{3/2}$ (semicubical parabola) $1+y'^2=1+\\frac{9k^2}{4}x$ is linear in $x$, so the arc length is always $\\frac{8}{27k^2}\\left[\\left(1+\\frac{9k^2}{4}x\\right)^{3/2}-1\\right]$.",
+    "Check with $k^2=\\frac{32}{9}$, $x=1$: $\\frac{8}{27\\cdot\\frac{32}{9}}\\left[27-1\\right]=\\frac{8}{96}\\cdot26=\\frac{13}{6}$ (the constant $-1$ in $y$ does not change the length).",
+    "Arc length is invariant under vertical shifts: only $y'$ matters."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Length of a curve (arc length formula, $x$ as a function of $y$)"
+   ],
+   "level": 2,
+   "paragraph": "If $f$ is smooth on $[a,b]$, the length of the curve $y=f(x)$ from $a$ to $b$ is $L=\\int_a^b\\sqrt{1+\\left(\\frac{dy}{dx}\\right)^2}\\,dx=\\int_a^b\\sqrt{1+\\left(f'(x)\\right)^2}\\,dx$ ... (i). At a point on a curve where $\\frac{dy}{dx}$ fails to exist, $\\frac{dx}{dy}$ may exist and we may be able to find the curve's length by expressing $x$ as a function of $y$ and applying the following analogue of Eq. (i): the length of a smooth curve $x=g(y)$, $c\\le y\\le d$, is $L=\\int_c^d\\sqrt{1+\\left(\\frac{dx}{dy}\\right)^2}\\,dy=\\int_c^d\\sqrt{1+\\left(g'(y)\\right)^2}\\,dy$ ... (ii).",
+   "question": "The length of the curve $y=\\left(\\frac{x}{2}\\right)^{2/3}$ from $x=0$ to $x=2$ is:",
+   "options": [
+    "$3.37$",
+    "$2.27$",
+    "$2.0$",
+    "none of these"
+   ],
+   "answer": "(B) $2.27$",
+   "key_idea": "$\\frac{dy}{dx}\\to\\infty$ at $x=0$, so write $x=2y^{3/2}$ and use formula (ii) with $y$ from $0$ to $1$.",
+   "solution": [
+    "$y=\\left(\\frac{x}{2}\\right)^{2/3}$ gives $\\frac{dy}{dx}=\\frac{1}{3\\left(\\frac{x}{2}\\right)^{1/3}}$, which is not defined at $x=0$, so use $x$ as a function of $y$.",
+    "$x=2y^{3/2}$; $x=0\\to y=0$ and $x=2\\to y=1$. Then $\\frac{dx}{dy}=3y^{1/2}$.",
+    "$L=\\int_0^1\\sqrt{1+9y}\\,dy=\\frac{2}{3}\\cdot\\frac{(1+9y)^{3/2}}{9}\\Big|_0^1$.",
+    "$L=\\frac{2}{27}\\left(10^{3/2}-1\\right)=\\frac{2\\times31.62-2}{27}\\approx2.268$, which matches option (B) $2.27$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes dy/dx = 2/(3(x/2)^(1/3)) (a factor 2 too large; the correct derivative is 1/(3(x/2)^(1/3)), but it is not used) and its final decimal as 2.266; (2*31.62-2)/27 = 2.268. Option (B) 2.27 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise the curve by $y=t^2$, $x=2t^3$ ($0\\le t\\le1$), so no derivative ever blows up.",
+     "solution": [
+      "Put $x=2t^3$, $y=t^2$. Then $\\left(\\frac{x}{2}\\right)^{2/3}=\\left(t^3\\right)^{2/3}=t^2=y$, and $0\\le t\\le1$ covers $0\\le x\\le2$.",
+      "$\\frac{dx}{dt}=6t^2$ and $\\frac{dy}{dt}=2t$, so $ds=\\sqrt{36t^4+4t^2}\\,dt=2t\\sqrt{9t^2+1}\\,dt$.",
+      "$L=\\int_0^12t\\sqrt{9t^2+1}\\,dt=\\frac{1}{9}\\cdot\\frac{2}{3}\\left(9t^2+1\\right)^{3/2}\\Big|_0^1=\\frac{2}{27}\\left(10^{3/2}-1\\right)$.",
+      "$L\\approx\\frac{2(31.623-1)}{27}\\approx2.268$, option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Arc length of a parametric curve: $L=\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}dt$; this avoids singular derivatives at cusps.",
+    "If $\\frac{dy}{dx}$ is infinite at an end point, swap the roles of $x$ and $y$ (formula (ii)).",
+    "The curve $y^3=\\frac{x^2}{4}$ is a semicubical parabola with a cusp at the origin; the parametrisation $x=2t^3$, $y=t^2$ (or $x$ as a function of $y$) is the natural way to handle the cusp."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Length of a curve (arc length formula, perfect square under the root)"
+   ],
+   "level": 2,
+   "paragraph": "If $f$ is smooth on $[a,b]$, the length of the curve $y=f(x)$ from $a$ to $b$ is $L=\\int_a^b\\sqrt{1+\\left(\\frac{dy}{dx}\\right)^2}\\,dx=\\int_a^b\\sqrt{1+\\left(f'(x)\\right)^2}\\,dx$ ... (i). At a point on a curve where $\\frac{dy}{dx}$ fails to exist, $\\frac{dx}{dy}$ may exist and we may be able to find the curve's length by expressing $x$ as a function of $y$ and applying the following analogue of Eq. (i): the length of a smooth curve $x=g(y)$, $c\\le y\\le d$, is $L=\\int_c^d\\sqrt{1+\\left(\\frac{dx}{dy}\\right)^2}\\,dy=\\int_c^d\\sqrt{1+\\left(g'(y)\\right)^2}\\,dy$ ... (ii).",
+   "question": "The length of the curve $y=\\frac{1}{3}\\left(x^2+2\\right)^{3/2}$ from $x=0$ to $x=3$ is:",
+   "options": [
+    "$10$",
+    "$12$",
+    "$\\frac{1}{12}$",
+    "none of these"
+   ],
+   "answer": "(B) $12$",
+   "key_idea": "$1+y'^2=1+x^2(x^2+2)=(x^2+1)^2$ is a perfect square, so the root disappears.",
+   "solution": [
+    "$y=\\frac{1}{3}\\left(x^2+2\\right)^{3/2}\\Rightarrow\\frac{dy}{dx}=\\frac{1}{3}\\cdot\\frac{3}{2}\\left(x^2+2\\right)^{1/2}\\cdot2x=x\\sqrt{x^2+2}$.",
+    "$1+\\left(\\frac{dy}{dx}\\right)^2=1+x^2\\left(x^2+2\\right)=x^4+2x^2+1=\\left(x^2+1\\right)^2$.",
+    "$L=\\int_0^3\\sqrt{\\left(x^2+1\\right)^2}\\,dx=\\int_0^3\\left(x^2+1\\right)dx$ (as $x^2+1>0$).",
+    "$L=\\left[\\frac{x^3}{3}+x\\right]_0^3=9+3=12$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Look for $y'^2+1$ being a perfect square: curves with $y'=\\frac{u^2-1}{2u}$ give $1+y'^2=\\left(\\frac{u^2+1}{2u}\\right)^2$.",
+    "Check numerically: Simpson on $\\sqrt{1+x^2(x^2+2)}$ over $[0,3]$ reproduces $12$ because the integrand is exactly $x^2+1$.",
+    "Arc-length integrals with nice answers usually come from such perfect squares (e.g. $y=\\frac{x^3}{3}+\\frac{1}{4x}$)."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Functional equation $f(x+y)=e^xf(y)+e^yf(x)$ (differentiability)",
+    "Maxima and minima"
+   ],
+   "level": 3,
+   "paragraph": "Let $f(x)$ be a differentiable function such that $f(x+y)=e^xf(y)+e^yf(x)$ for all $x,y$ and $f'(0)=1$.",
+   "question": "$f(x)$ has:",
+   "options": [
+    "maximum",
+    "minimum",
+    "both maximum and minimum",
+    "neither maximum nor minimum"
+   ],
+   "answer": "(B) minimum",
+   "key_idea": "Put $x\\to x,\\ y=h$ in the functional equation and use the definition of $f'$: this gives $f'(x)=e^x+f(x)$, hence $f(x)=xe^x$.",
+   "solution": [
+    "Put $x=y=0$: $f(0)=2f(0)$, so $f(0)=0$.",
+    "From the definition, $f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=\\lim_{h\\to0}\\frac{e^xf(h)+e^hf(x)-f(x)}{h}$.",
+    "Split: $\\frac{e^xf(h)+e^hf(x)-f(x)}{h}=e^x\\cdot\\frac{f(h)-f(0)}{h}+f(x)\\cdot\\frac{e^h-1}{h}\\to e^xf'(0)+f(x)$.",
+    "Hence $f'(x)=e^x+f(x)$, i.e. $\\frac{dy}{dx}-y=e^x$, a linear equation with integrating factor $e^{-x}$.",
+    "$\\frac{d}{dx}\\left(ye^{-x}\\right)=1\\Rightarrow ye^{-x}=x+c$, so $y=(x+c)e^x$. $f(0)=0$ gives $c=0$ and $f(x)=xe^x$.",
+    "$f'(x)=e^x(x+1)=0$ gives $x=-1$; $f'<0$ for $x<-1$ and $f'>0$ for $x>-1$, so $f$ has a minimum at $x=-1$.",
+    "There is no maximum, because $f'$ changes sign only once and $f(x)\\to\\infty$ as $x\\to\\infty$. So $f$ has a minimum only: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF applies L'Hopital in h to (e^x f(h)+e^h f(x)-f(x))/h and gets e^x f'(h)+e^h f(x); that needs the limit of f'(h) as h->0, i.e. continuity of f' at 0, which is not given (only existence of f'(0)). Replaced by splitting into e^x(f(h)-f(0))/h + f(x)(e^h-1)/h, which uses only f'(0). Result f'(x)=e^x+f(x) and f=xe^x unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Divide by $e^{x+y}$: $g(x)=f(x)e^{-x}$ is additive, hence linear (Cauchy), so $f(x)=kxe^x$.",
+     "solution": [
+      "Divide the equation by $e^{x+y}$: $\\frac{f(x+y)}{e^{x+y}}=\\frac{f(y)}{e^y}+\\frac{f(x)}{e^x}$. With $g(x)=f(x)e^{-x}$ this is $g(x+y)=g(x)+g(y)$.",
+      "$g$ is differentiable (product of differentiable functions) and additive, so $g(x)=kx$ (differentiating $g(x+y)=g(x)+g(y)$ in $y$ at $y=0$ gives $g'(x)=g'(0)$, a constant).",
+      "$g'(0)=f'(0)-f(0)=1-0=1$ (with $f(0)=0$ from $x=y=0$), so $k=1$ and $f(x)=xe^x$.",
+      "$f'(x)=e^x(x+1)$ changes sign from $-$ to $+$ at $x=-1$ only: a minimum and no maximum – option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x+y)=e^xf(y)+e^yf(x)\\iff\\frac{f}{e^{x}}$ is additive: functional equations with $e^x$ weights are linearised by dividing by $e^{x+y}$.",
+    "A differentiable additive function is $g(x)=g'(0)x$; so $f(x)=f'(0)\\,xe^x$.",
+    "For $f=xe^x$: $f^{(n)}(x)=(x+n)e^x$, minimum value $-\\frac1e$ at $x=-1$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Range of a function using extrema (continuous function)"
+   ],
+   "level": 2,
+   "paragraph": "Let $f(x)$ be a differentiable function such that $f(x+y)=e^xf(y)+e^yf(x)$ for all $x,y$ and $f'(0)=1$.",
+   "question": "The range of $f(x)$ is:",
+   "options": [
+    "$\\mathbb{R}$",
+    "$[0,\\infty]$",
+    "$\\left(-\\frac{1}{e},1\\right)$",
+    "$\\left[-\\frac{1}{e},\\infty\\right)$"
+   ],
+   "answer": "(D) $\\left[-\\frac{1}{e},\\infty\\right)$",
+   "key_idea": "The only turning point of $f=xe^x$ is its global minimum $f(-1)=-\\frac{1}{e}$, and $f(x)\\to\\infty$ as $x\\to\\infty$.",
+   "solution": [
+    "From the previous part, $f(x)=xe^x$ with $f'(x)=e^x(x+1)$: decreasing on $(-\\infty,-1)$, increasing on $(-1,\\infty)$.",
+    "The minimum value is $f_{\\min}=f(-1)=-\\frac{1}{e}$.",
+    "As $x\\to\\infty$, $f(x)\\to\\infty$, and $f$ is continuous, so it takes every value from $-\\frac{1}{e}$ upwards.",
+    "Therefore the range is $\\left[-\\frac{1}{e},\\infty\\right)$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Prove $xe^x\\ge-\\frac{1}{e}$ from $e^t\\ge1+t$ – no derivative.",
+     "solution": [
+      "For $x\\ge0$, $xe^x\\ge0>-\\frac{1}{e}$.",
+      "For $x<0$ write $u=-x>0$: $xe^x=-ue^{-u}$, and $ue^{-u}\\le\\frac{1}{e}\\iff e^{u-1}\\ge u$, which is true because $e^t\\ge1+t$ with $t=u-1$.",
+      "Hence $xe^x\\ge-\\frac{1}{e}$ for all $x$, with equality iff $u-1=0$, i.e. $x=-1$.",
+      "$f$ is continuous, attains $-\\frac{1}{e}$ and is unbounded above, so by the intermediate value theorem the range is $\\left[-\\frac{1}{e},\\infty\\right)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Range of a continuous function = $[\\min,\\max]$ or half-lines determined by the extrema and the behaviour at $\\pm\\infty$.",
+    "$e^t\\ge1+t$ (tangent-line inequality) gives $x e^{x}\\ge-\\frac1e$ and also $\\ln x\\le x-1$ type bounds.",
+    "$xe^x$ is the inverse structure of the Lambert $W$ function: $xe^x=y$ has two solutions for $-\\frac1e<y<0$, one for $y\\ge0$."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Limits at infinity of $xe^x$ (indeterminate form $\\infty/\\infty$)"
+   ],
+   "level": 1,
+   "paragraph": "Let $f(x)$ be a differentiable function such that $f(x+y)=e^xf(y)+e^yf(x)$ for all $x,y$ and $f'(0)=1$.",
+   "question": "$\\lim_{x\\to-\\infty}f(x)$ is:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "non existent"
+   ],
+   "answer": "(A) $0$",
+   "key_idea": "Write $xe^x=\\frac{x}{e^{-x}}$ and apply L'Hôpital's rule: exponentials beat polynomials.",
+   "solution": [
+    "$\\lim_{x\\to-\\infty}f(x)=\\lim_{x\\to-\\infty}xe^x=\\lim_{x\\to-\\infty}\\frac{x}{e^{-x}}$, which is of the form $\\frac{-\\infty}{\\infty}$.",
+    "By L'Hôpital's rule: $\\lim_{x\\to-\\infty}\\frac{1}{-e^{-x}}$.",
+    "As $x\\to-\\infty$, $e^{-x}\\to\\infty$, so $\\frac{1}{-e^{-x}}\\to0$ and $\\lim_{x\\to-\\infty}f(x)=0$.",
+    "Sanity check: $f(-10)=-10e^{-10}\\approx-4.5\\times10^{-4}$, already very close to $0$ (from below). Hence the answer is (A) $0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=-x$ and squeeze with $e^u>\\frac{u^2}{2}$.",
+     "solution": [
+      "Put $u=-x\\to+\\infty$: $f(x)=xe^x=-ue^{-u}=-\\frac{u}{e^u}$.",
+      "For $u>0$, $e^u=1+u+\\frac{u^2}{2}+\\cdots>\\frac{u^2}{2}$, so $0<\\frac{u}{e^u}<\\frac{2}{u}$.",
+      "As $u\\to\\infty$, $\\frac{2}{u}\\to0$, so by the squeeze theorem $\\frac{u}{e^u}\\to0$ and $f(x)\\to0$. Answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to\\infty}\\frac{x^n}{e^x}=0$ for every $n$; the exponential outgrows every polynomial (from $e^x>\\frac{x^{n+1}}{(n+1)!}$).",
+    "So $xe^x\\to0^-$ as $x\\to-\\infty$: the $x$-axis is a horizontal asymptote on the left (this is why the area in the next part is finite).",
+    "Use the substitution $u=-x$ to turn limits at $-\\infty$ into limits at $+\\infty$."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Area under a curve with an improper integral (to $-\\infty$)"
+   ],
+   "level": 2,
+   "paragraph": "Let $f(x)$ be a differentiable function such that $f(x+y)=e^xf(y)+e^yf(x)$ for all $x,y$ and $f'(0)=1$.",
+   "question": "The area bounded by the curve $y=f(x)$ and the $x$-axis is:",
+   "options": [
+    "$1$",
+    "$\\frac{1}{2}$",
+    "$2$",
+    "$e$"
+   ],
+   "answer": "(A) $1$",
+   "key_idea": "The curve $y=xe^x$ is below the axis for $x<0$ and tends to the axis as $x\\to-\\infty$; for $x>0$ it rises without bound, so the bounded region is $x\\le0$.",
+   "solution": [
+    "$f(x)=xe^x$ is negative for $x<0$, zero at $x=0$ and positive and unbounded for $x>0$; it approaches the $x$-axis as $x\\to-\\infty$ (previous part). The only bounded region lies in $x\\le0$.",
+    "Required area $=\\int_{-\\infty}^0\\left|xe^x\\right|dx=-\\int_{-\\infty}^0xe^x\\,dx$.",
+    "$\\int xe^xdx=e^x(x-1)$, so the area is $-\\left[e^x(x-1)\\right]_{-\\infty}^0=-\\left(e^0(0-1)-0\\right)$ (since $e^x(x-1)\\to0$ as $x\\to-\\infty$).",
+    "Area $=1$ sq. unit, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $u=-x$ and recognise the Gamma integral $\\int_0^\\infty ue^{-u}du=\\Gamma(2)$.",
+     "solution": [
+      "With $u=-x$: $\\int_{-\\infty}^0\\left|xe^x\\right|dx=\\int_0^\\infty ue^{-u}\\,du$.",
+      "$\\int_0^\\infty u^{n}e^{-u}du=\\Gamma(n+1)=n!$; for $n=1$ the integral is $1!=1$.",
+      "Area $=1$, option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^\\infty x^ne^{-x}dx=n!$ – the Gamma function; so $\\int_0^\\infty xe^{-x}dx=1$.",
+    "An unbounded curve can still have a finite bounded region when it has an asymptote on the other side.",
+    "By parts: $\\int xe^xdx=(x-1)e^x$; check by differentiating: $e^x(x-1)+e^x=xe^x$."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Area between parabolas, a cubic and a modulus region (standard cases)"
+   ],
+   "level": 2,
+   "question": "Match the following column:\nColumn I\n(A) The area between the parabolas $y^2=4ax$ and $x^2=8ay$ is\n(B) Area bounded by the curve $y=(x-1)(x-2)(x-3)$ and the $x$-axis lying between the ordinates $x=0$ and $x=3$ is equal to\n(C) The area cut off the parabola $4y=3x^2$ by the straight line $2y=3x+12$ in sq. units is\n(D) The area of the region satisfying $|x|+|y|\\le\\sqrt{\\pi}$ is\nColumn II\n(P) $27$\n(Q) $2\\pi$\n(R) $\\frac{32}{3}a^2$\n(S) $\\frac{11}{4}$",
+   "answer": "(A) – R, (B) – S, (C) – P, (D) – Q",
+   "key_idea": "Each part is a standard area: (A) area between parabolas $=\\frac{16}{3}ab$, (B) split a cubic at its roots, (C) chord of a parabola, (D) a square of diagonal $2\\sqrt{\\pi}$.",
+   "solution": [
+    "(A) The parabolas $y^2=4ax$ and $x^2=4by$ with $4b=8a$ (so $b=2a$) enclose the area $\\frac{16}{3}ab=\\frac{16}{3}\\cdot a\\cdot2a=\\frac{32}{3}a^2$, which matches (R).",
+    "(B) The cubic is $y=(x-1)(x-2)(x-3)=x^3-6x^2+11x-6$; it is negative on $(0,1)$, positive on $(1,2)$, negative on $(2,3)$. So $A=-\\int_0^1y\\,dx+\\int_1^2y\\,dx-\\int_2^3y\\,dx$.",
+    "An antiderivative is $G(x)=\\frac{x^4}{4}-2x^3+\\frac{11}{2}x^2-6x$, with $G(0)=0$, $G(1)=-\\frac{9}{4}$, $G(2)=-2$, $G(3)=-\\frac{9}{4}$.",
+    "$A=\\left|G(1)-G(0)\\right|+\\left|G(2)-G(1)\\right|+\\left|G(3)-G(2)\\right|=\\frac{9}{4}+\\frac{1}{4}+\\frac{1}{4}=\\frac{11}{4}$, matching (S).",
+    "(C) Intersection of $4y=3x^2$ and $2y=3x+12$: $3x^2=6x+24\\Rightarrow x^2-2x-8=0\\Rightarrow x=4$ or $x=-2$ (so $y=12$, $y=3$).",
+    "$A=\\int_{-2}^4\\left(\\frac{3x+12}{2}-\\frac{3x^2}{4}\\right)dx=\\left[\\frac{3x^2}{4}+6x-\\frac{x^3}{4}\\right]_{-2}^4=20-(-7)=27$, matching (P).",
+    "(D) $|x|+|y|\\le\\sqrt{\\pi}$ is a square with vertices $(\\pm\\sqrt{\\pi},0)$, $(0,\\pm\\sqrt{\\pi})$; its side is $\\sqrt{2\\pi}$, so the area is $\\sqrt{2\\pi}\\times\\sqrt{2\\pi}=2\\pi$, matching (Q).",
+    "Hence (A) – R, (B) – S, (C) – P, (D) – Q."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In part (B) the PDF's antiderivative has 11/4 x^2 instead of 11/2 x^2 (the integral of 11x). Its printed values 9/4, 1/4, 1/4 are the correct ones for 11/2 x^2, so the final 11/4 is right; the antiderivative is corrected here and G(0..3) listed explicitly.",
+   "alternate_solutions": [
+    {
+     "idea": "(A) direct integration, (B) shift $t=x-2$ to the odd cubic $t^3-t$, (C) formula $\\frac{|a|}{6}(\\beta-\\alpha)^3$, (D) diagonals of a square.",
+     "solution": [
+      "(A) The parabolas meet at $x=0$ and $x=b$ with $b^3=256a^3$. $A=\\int_0^b\\left(2\\sqrt{a}\\sqrt{x}-\\frac{x^2}{8a}\\right)dx=\\frac{4}{3}\\sqrt{a}\\,b^{3/2}-\\frac{b^3}{24a}=\\frac{64}{3}a^2-\\frac{32}{3}a^2=\\frac{32}{3}a^2$.",
+      "(B) Put $t=x-2$: $(x-1)(x-2)(x-3)=(t+1)t(t-1)=t^3-t$ and $x\\in[0,3]$ becomes $t\\in[-2,1]$.",
+      "$t^3-t$ is odd, so $\\int_{-1}^1\\left|t^3-t\\right|dt=2\\int_0^1(t-t^3)dt=2\\cdot\\frac{1}{4}=\\frac{1}{2}$.",
+      "On $[-2,-1]$, $\\left|t^3-t\\right|=t^3-t$ read at $|t|$ in $[1,2]$: $\\int_1^2(t^3-t)dt=\\left(4-2\\right)-\\left(\\frac{1}{4}-\\frac{1}{2}\\right)=\\frac{9}{4}$. Total $=\\frac{1}{2}+\\frac{9}{4}=\\frac{11}{4}$.",
+      "(C) $4y=3x^2$ and $2y=3x+12$: the difference $\\frac{3x+12}{2}-\\frac{3x^2}{4}$ has $|a|=\\frac{3}{4}$ and roots $-2,4$, so $A=\\frac{3/4}{6}\\cdot6^3=27$.",
+      "(D) $|x|+|y|\\le\\sqrt{\\pi}$ is a square with both diagonals of length $2\\sqrt{\\pi}$, so area $=\\frac{d^2}{2}=\\frac{4\\pi}{2}=2\\pi$.",
+      "The matching is (A) – R, (B) – S, (C) – P, (D) – Q."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between $y^2=4ax$ and $x^2=4by$ is $\\frac{16}{3}ab$; for $y^2=4ax$ and $x^2=4ay$ it is $\\frac{16}{3}a^2$.",
+    "For a cubic with equally spaced roots $2-1,2,2+1$ the shift $t=x-2$ gives the odd function $t^3-t$; each lobe between consecutive roots has area $\\frac{1}{4}$ (check: $\\int_0^1(t-t^3)dt=\\frac14$).",
+    "$|x|+|y|\\le k$ is a square of area $2k^2$; $\\max(|x|,|y|)\\le k$ is a square of area $4k^2$; $|x|+|y|\\le\\sqrt\\pi$ has area $2\\pi$."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Area bounded by parabolas, angle between curves",
+    "Integral of an exact derivative and a differential-equation bound"
+   ],
+   "level": 4,
+   "question": "Match the following column:\nColumn I\n(A) The cosine of the angle between the curves $y=3^{x-1}\\ln x$ and $y=x^x-1$ at their point of intersection on the line $y=0$ is\n(B) The area bounded by the curves $x=-4y^2$ and $(x-1)=-5y^2$ is\n(C) The value of the integral $\\int_0^{\\pi/2}(\\sin x)^{\\cos x}\\left(\\cos x\\cot x-\\ln(\\sin x)^{\\sin x}\\right)dx$ is\n(D) A continuous function $f:[1,6]\\to[0,\\infty)$ is such that $f'(x)=\\frac{2}{x+f(x)}$ and $f(1)=0$; then the maximum value of $f$ cannot exceed\nColumn II\n(P) $0$\n(Q) $1$\n(R) $\\frac{4}{3}$\n(S) $2\\ln6$",
+   "answer": "(A) – Q, (B) – R, (C) – Q, (D) – S",
+   "key_idea": "(C) is the exact derivative of $(\\sin x)^{\\cos x}$; (D) follows from $f'\\le\\frac{2}{x}$ (because $f\\ge0$), or by solving the equation.",
+   "solution": [
+    "(A) Both curves meet $y=0$ at $x=1$ ($3^0\\ln1=0$ and $1^1-1=0$). $y_1'=\\frac{3^{x-1}}{x}+3^{x-1}\\ln3\\ln x\\Rightarrow m_1=1$ at $(1,0)$; $y_2'=x^x(1+\\ln x)\\Rightarrow m_2=1$.",
+    "Equal slopes mean the angle between the curves is $0$, so $\\cos\\theta=1$: (A) – Q.",
+    "(B) Put $x=-4y^2$ in $x-1=-5y^2$: $-4y^2-1=-5y^2\\Rightarrow y^2=1$, $y=\\pm1$ (the curves meet at $(-4,\\pm1)$). The area is $\\int_{-1}^1\\left(x_2-x_1\\right)dy$ with $x_2=1-5y^2$ and $x_1=-4y^2$.",
+    "$A=\\int_{-1}^1\\left[1-5y^2+4y^2\\right]dy=\\int_{-1}^1(1-y^2)dy=2\\left[y-\\frac{y^3}{3}\\right]_0^1=\\frac{4}{3}$: (B) – R.",
+    "(C) $\\frac{d}{dx}(\\sin x)^{\\cos x}=(\\sin x)^{\\cos x}\\left[\\cos x\\cot x-\\sin x\\ln\\sin x\\right]$, and $\\ln(\\sin x)^{\\sin x}=\\sin x\\ln\\sin x$, so the integrand is exactly $\\frac{d}{dx}\\left[(\\sin x)^{\\cos x}\\right]$.",
+    "The integral is $\\left[(\\sin x)^{\\cos x}\\right]_0^{\\pi/2}=1^0-\\lim_{x\\to0^+}(\\sin x)^{\\cos x}=1-0=1$ (as $\\sin x\\to0$ and $\\cos x\\to1$): (C) – Q.",
+    "(D) $f'(x)=\\frac{2}{x+f(x)}>0$, so the maximum of $f$ is at $x=6$. Put $y=f$, $t=x+y$: $\\frac{dt}{dx}=1+\\frac{2}{t}$, so $\\frac{t\\,dt}{t+2}=dx$, i.e. $\\int\\left(1-\\frac{2}{t+2}\\right)dt=\\int dx$.",
+    "$t-2\\ln(t+2)=x+C\\Rightarrow y-2\\ln(x+y+2)=C$. Using $f(1)=0$: $C=-2\\ln3$, so $y=2\\ln\\frac{x+y+2}{3}$.",
+    "At $x=6$: $y=2\\ln\\frac{8+y}{3}$, i.e. $8+y=3e^{y/2}$. Since $y<e^{y/2}$ for all $y$ ($e^{y/2}-y$ has minimum $2-2\\ln2>0$), $3e^{y/2}=8+y<8+e^{y/2}$, so $e^{y/2}<4$ and $f(6)<2\\ln4$.",
+    "As $2\\ln4<2\\ln6$, the maximum of $f$ cannot exceed $2\\ln6$ (numerically $f(6)\\approx2.507<3.584$); none of $0,1,\\frac{4}{3}$ is a valid bound, so (D) – S.",
+    "Hence (A) – Q, (B) – R, (C) – Q, (D) – S."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two omissions in the PDF's working (all key letters and numbers are right): in (C) the lower limit (sin x)^cos x -> 0 as x -> 0+ is not evaluated; in (D) the PDF ends with y <= 2 ln 4 and never states why this answers 'cannot exceed' option S = 2 ln 6 (2 ln 4 < 2 ln 6; the true value is f(6) = 2.5068). Both completed.",
+   "alternate_solutions": [
+    {
+     "idea": "(D): since $f\\ge0$, $f'(x)=\\frac{2}{x+f(x)}\\le\\frac{2}{x}$; integrate from $1$ to $6$ to get $2\\ln6$ at once. Other parts as in the main solution.",
+     "solution": [
+      "(A), (B), (C): as in the main solution – (A) equal slopes at $(1,0)$ give $\\cos\\theta=1$; (B) $\\int_{-1}^1(1-y^2)dy=\\frac{4}{3}$; (C) the integrand is $\\frac{d}{dx}(\\sin x)^{\\cos x}$, giving $1-0=1$.",
+      "(D) Because $f(x)\\ge0$ on $[1,6]$ we have $x+f(x)\\ge x$, so $0<f'(x)=\\frac{2}{x+f(x)}\\le\\frac{2}{x}$.",
+      "Integrate from $1$ to $6$: $f(6)-f(1)\\le\\int_1^6\\frac{2}{x}dx=2\\ln6$, and $f(1)=0$, so $f(6)\\le2\\ln6$; $f$ is increasing, so its maximum on $[1,6]$ is $f(6)$ and cannot exceed $2\\ln6$.",
+      "The smaller options $0,1,\\frac{4}{3}$ are not valid bounds: $f\\le2\\ln x\\le3.6$ gives $f'\\ge\\frac{2}{x+3.6}$, so $f(6)\\ge\\int_1^6\\frac{2}{x+3.6}dx=2\\ln\\frac{9.6}{4.6}\\approx1.47>\\frac{4}{3}$. So (D) – S, and the matching is (A) – Q, (B) – R, (C) – Q, (D) – S."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $F=u^v$ then $F'=u^v\\left[v'\\ln u+\\frac{vu'}{u}\\right]$: an integrand of the form $(\\sin x)^{\\cos x}\\left(\\cos x\\cot x-\\sin x\\ln\\sin x\\right)$ is recognised as $F'$ with $u=\\sin x$, $v=\\cos x$.",
+    "Differential inequalities: from $f'\\le g$ one gets $f(b)-f(a)\\le\\int_a^bg$; bounding $f'=\\frac{2}{x+f}$ by $\\frac{2}{x}$ (since $f\\ge0$) avoids solving the ODE.",
+    "Curves $y=u(x)$ and $y=v(x)$ that meet with equal slopes touch each other: the angle between them is $0$ and $\\cos\\theta=1$.",
+    "Parabolas $x=-4y^2$ and $x=1-5y^2$: area between $x=p-ay^2$ and $x=p'-a'y^2$ is $\\int(\\Delta p-\\Delta a\\,y^2)dy$; here $\\int_{-1}^1(1-y^2)dy=\\frac{4}{3}$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Area of regions with greatest integer function, modulus and circle"
+   ],
+   "level": 3,
+   "question": "Match the following column:\nColumn I\n(A) Area of region formed by points $(x,y)$ satisfying $[x]=[y]$, $0\\le x,y\\le10$, where $[\\cdot]$ denotes the greatest integer function, is\n(B) Area of region formed by points $(x,y)$ satisfying $\\max(|x|,|y|)\\le1$ is\n(C) If the area of region formed by points $(x,y)$ satisfying $|y+x|\\le1$, $|y-x|\\le1$ and $2x^2+2y^2\\ge1$ is $k-\\frac{\\pi}{2}$, then $k=$\n(D) If the area of region formed by points $(x,y)$ satisfying $4\\le x^2+y^2\\le2(|x|+|y|)$ is $2k$, then $k=$\nColumn II\n(P) $2$\n(Q) $4$\n(R) $6$\n(S) $10$\n(T) $12$",
+   "answer": "(A) – S, (B) – Q, (C) – P, (D) – Q",
+   "key_idea": "Draw each region: (A) ten unit squares along the diagonal, (B) a square of side $2$, (C) a square minus an inscribed circle, (D) four semicircular lobes minus circle segments.",
+   "solution": [
+    "(A) $[x]=[y]=k$ means $k\\le x<k+1$ and $k\\le y<k+1$ for $k=0,1,\\dots,9$: ten unit squares on the diagonal. Area $=10\\times1=10$: (A) – S.",
+    "(B) $\\max(|x|,|y|)\\le1$ means $|x|\\le1$ and $|y|\\le1$, a square with sides on $x=\\pm1$, $y=\\pm1$; side $2$, area $4$: (B) – Q.",
+    "(C) $|y+x|\\le1$ and $|y-x|\\le1$ give a square with vertices $(\\pm1,0)$, $(0,\\pm1)$ and area $A_1=2$. The condition $x^2+y^2\\ge\\frac{1}{2}$ removes the disc of radius $\\frac{1}{\\sqrt2}$ (area $A_2=\\frac{\\pi}{2}$), which touches the four sides of the square.",
+    "Required area $=A_1-A_2=2-\\frac{\\pi}{2}=k-\\frac{\\pi}{2}$, so $k=2$: (C) – P.",
+    "(D) The curve $x^2+y^2=2(|x|+|y|)$ consists of four semicircles of radius $\\sqrt2$ on the sides of the square with vertices $(\\pm2,0)$, $(0,\\pm2)$ (the square $|x|+|y|\\le2$ has side $2\\sqrt2$, area $8$).",
+    "Lobes outside the square: $A_3=4\\times\\frac{\\pi}{2}(\\sqrt2)^2=4\\pi$. The circle $x^2+y^2\\le4$ has area $4\\pi$, of which $8$ lies inside the square; the four circular segments outside the square have area $4\\pi-8$.",
+    "Required region $=$ lobes $-$ segments $=4\\pi-(4\\pi-8)=8$, so $2k=8$ and $k=4$: (D) – Q.",
+    "Hence (A) – S, (B) – Q, (C) – P, (D) – Q."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "(D) in polar coordinates: the curve is $r=2(|\\cos\\theta|+|\\sin\\theta|)$ and the circle is $r=2$.",
+     "solution": [
+      "(A), (B), (C): as in the main solution – ten unit squares give $10$; the square $|x|,|y|\\le1$ gives $4$; the square of area $2$ minus the inscribed disc of area $\\frac{\\pi}{2}$ gives $2-\\frac{\\pi}{2}$, so $k=2$.",
+      "(D) In polar form $x^2+y^2=2(|x|+|y|)$ is $r=2(|\\cos\\theta|+|\\sin\\theta|)\\ge2$, so the circle $r=2$ lies inside the curve and the region is the ring between $r=2$ and this curve.",
+      "By symmetry in the four quadrants, $A=4\\int_0^{\\pi/2}\\frac{1}{2}\\left[4(\\cos\\theta+\\sin\\theta)^2-4\\right]d\\theta=4\\int_0^{\\pi/2}2\\sin2\\theta\\,d\\theta$.",
+      "$\\int_0^{\\pi/2}2\\sin2\\theta\\,d\\theta=2$, so $A=8=2k$ and $k=4$.",
+      "Hence (A) – S, (B) – Q, (C) – P, (D) – Q."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x]=[y]$ describes unit squares $[k,k+1)^2$ along the line $y=x$; $[x]=[y]$ on $0\\le x,y\\le n$ has area $n$.",
+    "$|x|+|y|\\le a$ has area $2a^2$; $\\max(|x|,|y|)\\le a$ has area $4a^2$; $|y+x|\\le1,|y-x|\\le1$ is the first square rotated by $45^\\circ$ ($|x|+|y|\\le1$), area $2$.",
+    "$x^2+y^2\\le2(|x|+|y|)$ is four circles of radius $\\sqrt2$ centred at $(\\pm1,\\pm1)$ restricted to their own quadrant; total area $8+4\\pi$.",
+    "In polar form the area between $r_1(\\theta)$ and $r_2(\\theta)$ is $\\frac{1}{2}\\int\\left(r_2^2-r_1^2\\right)d\\theta$."
+   ]
+  }
+ ]
+}
