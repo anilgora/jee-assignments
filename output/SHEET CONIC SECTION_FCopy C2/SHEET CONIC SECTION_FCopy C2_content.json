@@ -7,7 +7,7 @@
   {
    "title": "Subjective / Integer Type",
    "from": 1,
-   "to": 22,
+   "to": 55,
    "marking": [
     "No marking scheme printed in the paper",
     "Assumed +4 each (JEE Advanced default for subjective / integer)"
@@ -960,6 +960,1354 @@
     "A linear (axis-scaling) map sends an ellipse to an ellipse; the image of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ under $x\\to px,\\ y\\to qy$ has semi-axes $pa,\\ qb$.",
     "Eccentricity of an ellipse with semi-axes $A\\ge B$: $E=\\sqrt{1-\\frac{B^2}{A^2}}$.",
     "$\\left(a^2+b^2\\right)^2-4a^2b^2=(a^2-b^2)^2$ is the identity that makes the eccentricity a perfect square."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to an ellipse at an eccentric angle",
+    "Area of the triangle formed by the axes and a normal"
+   ],
+   "level": 2,
+   "question": "A normal inclined at $45^\\circ$ to the axis of the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is drawn. It meets the $x$-axis and the $y$-axis in $P$ and $Q$ respectively. If $C$ is the centre of the ellipse, show that the area of triangle $CPQ$ is $\\frac{(a^2-b^2)^2}{2(a^2+b^2)}$ sq. units.",
+   "answer": "Area of $\\triangle CPQ=\\frac{(a^2-b^2)^2}{2(a^2+b^2)}$",
+   "key_idea": "The normal at $\\theta$ cuts the axes at distances $\\frac{a^2-b^2}{a}|\\cos\\theta|$ and $\\frac{a^2-b^2}{b}|\\sin\\theta|$; slope $\\pm1$ gives $\\sin2\\theta=\\frac{2ab}{a^2+b^2}$.",
+   "solution": [
+    "Normal at the point $R(a\\cos\\theta,b\\sin\\theta)$: $ax\\sec\\theta-by\\operatorname{cosec}\\theta=a^2-b^2$.",
+    "Putting $y=0$: $P\\left(\\frac{a^2-b^2}{a}\\cos\\theta,\\ 0\\right)$. Putting $x=0$: $Q\\left(0,\\ -\\frac{a^2-b^2}{b}\\sin\\theta\\right)$.",
+    "$\\triangle CPQ$ is right-angled at $C$: area $=\\frac12CP\\times CQ=\\frac{(a^2-b^2)^2\\,|\\sin\\theta\\cos\\theta|}{2ab}$ ....(1).",
+    "Slope of the normal is $\\frac ab\\tan\\theta$, and it is inclined at $45^\\circ$: $\\frac ab\\tan\\theta=\\tan45^\\circ=1$ (for slope $-1$ only the sign of $\\tan\\theta$ changes).",
+    "Then $|\\tan\\theta|=\\frac ba$ and $\\sin2\\theta=\\frac{2\\tan\\theta}{1+\\tan^2\\theta}=\\frac{2ab}{a^2+b^2}$.",
+    "So $|\\sin\\theta\\cos\\theta|=\\frac{ab}{a^2+b^2}$. Put in (1): Area $=\\frac{(a^2-b^2)^2\\cdot\\frac{ab}{a^2+b^2}}{2ab}=\\frac{(a^2-b^2)^2}{2(a^2+b^2)}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the slope form of the normal: for slope $m=\\pm1$ the intercepts on both axes have the same magnitude, so $\\triangle CPQ$ is right isosceles.",
+     "solution": [
+      "A normal of slope $m$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $y=mx\\mp\\frac{(a^2-b^2)m}{\\sqrt{a^2+b^2m^2}}$.",
+      "For $m=\\pm1$: $y=\\pm x\\mp\\frac{a^2-b^2}{\\sqrt{a^2+b^2}}$, so both intercepts have magnitude $c=\\frac{a^2-b^2}{\\sqrt{a^2+b^2}}$.",
+      "$CP=CQ=c$ and $\\angle PCQ=90^\\circ$: area $=\\frac{c^2}{2}$.",
+      "Area $=\\frac{(a^2-b^2)^2}{2(a^2+b^2)}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Normal of slope $m$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $y=mx\\mp\\frac{(a^2-b^2)m}{\\sqrt{a^2+b^2m^2}}$; tangent of slope $m$: $y=mx\\pm\\sqrt{a^2m^2+b^2}$.",
+    "Normal at $\\theta$ meets the axes at $\\left(\\frac{a^2-b^2}{a}\\cos\\theta,0\\right)$ and $\\left(0,-\\frac{a^2-b^2}{b}\\sin\\theta\\right)$.",
+    "A line with slope $\\pm1$ cuts equal intercepts, so the triangle with the axes is right isosceles with area $\\frac{c^2}2$.",
+    "Check ($a=2,b=1$): $c=\\frac{3}{\\sqrt5}$, area $=\\frac{9}{10}$; formula gives $\\frac{9}{2\\cdot5}=\\frac{9}{10}$."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Chord of contact and tangents to an ellipse",
+    "Director circle of an ellipse"
+   ],
+   "level": 3,
+   "question": "A tangent to the ellipse $x^2+4y^2=4$ meets the ellipse $x^2+2y^2=6$ at $P$ and $Q$. Prove that the tangents at $P$ and $Q$ of the ellipse $x^2+2y^2=6$ are at right angles.",
+   "answer": "The tangents at $P,Q$ meet on $x^2+y^2=9$, the director circle of $x^2+2y^2=6$, so they are perpendicular",
+   "key_idea": "Let $R(h,k)$ be the point where the tangents at $P,Q$ meet: $PQ$ is its chord of contact, and as it touches $x^2+4y^2=4$, comparing coefficients gives $h^2+k^2=9$.",
+   "solution": [
+    "Let the tangents at $P$ and $Q$ to $x^2+2y^2=6$ meet at $R(h,k)$. Then $PQ$ is the chord of contact of $R$ (equation $T=0$): $hx+2ky-6=0$ ....(1).",
+    "$PQ$ is a tangent to $x^2+4y^2=4$, i.e. $\\frac{x^2}{4}+y^2=1$, at some point $(2\\cos\\theta,\\sin\\theta)$: $2\\cos\\theta\\,x+4\\sin\\theta\\,y-4=0$ ....(2).",
+    "Comparing (1) and (2): $\\frac{h}{2\\cos\\theta}=\\frac{2k}{4\\sin\\theta}=\\frac{-6}{-4}=\\frac32$.",
+    "So $h=3\\cos\\theta$ and $k=3\\sin\\theta$, hence $h^2+k^2=9$.",
+    "The director circle of $\\frac{x^2}{6}+\\frac{y^2}{3}=1$ is $x^2+y^2=6+3=9$.",
+    "So $R(h,k)$ lies on the director circle; the tangents from $R$ (those at $P$ and $Q$) are at right angles."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's proportion 'h/(2cos t) = k/(4 sin t) = -6/-4' drops the factor 2 of the term 2ky in (1): comparing hx+2ky-6=0 with 2cos t x+4 sin t y-4=0 gives h/(2cos t) = 2k/(4 sin t) = 3/2, so h = 3cos t, k = 3 sin t. With the printed proportion k would be 6 sin t and h^2+k^2 would not be 9. The conclusion h^2+k^2=9 (director circle) is right.",
+   "alternate_solutions": [
+    {
+     "idea": "A line $lx+my=1$ touches $\\frac{x^2}{A^2}+\\frac{y^2}{B^2}=1$ iff $A^2l^2+B^2m^2=1$; write $PQ$ as the polar of $R$ and apply this to the inner ellipse.",
+     "solution": [
+      "The chord of contact of $R(h,k)$ for $\\frac{x^2}{6}+\\frac{y^2}{3}=1$ is $\\frac{hx}{6}+\\frac{ky}{3}=1$, i.e. $lx+my=1$ with $l=\\frac h6,\\ m=\\frac k3$.",
+      "For the inner ellipse $\\frac{x^2}{4}+\\frac{y^2}{1}=1$ the line $lx+my=1$ is a tangent iff $4l^2+1\\cdot m^2=1$.",
+      "So $4\\cdot\\frac{h^2}{36}+\\frac{k^2}{9}=1$, i.e. $\\frac{h^2}{9}+\\frac{k^2}{9}=1$ and $h^2+k^2=9$.",
+      "This is the director circle of $x^2+2y^2=6$ ($x^2+y^2=6+3$), so the tangents at $P$ and $Q$ are perpendicular."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The chord of contact (polar) of $R(h,k)$ with respect to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $\\frac{hx}{a^2}+\\frac{ky}{b^2}=1$.",
+    "Line $lx+my=1$ touches $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ iff $a^2l^2+b^2m^2=1$.",
+    "The director circle of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $x^2+y^2=a^2+b^2$: from any point on it the two tangents are perpendicular, and conversely.",
+    "Here the pole locus $\\frac{h^2}{9}+\\frac{k^2}{9}=1$ is a circle because both coefficients ($\\frac{4}{36}$ and $\\frac19$) are equal; for general data it would be a conic."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent to an ellipse at an eccentric angle (intercepts)",
+    "Section formula"
+   ],
+   "level": 2,
+   "question": "A tangent to the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ touches at the point $P$ on it in the first quadrant and meets the coordinate axes in $A$ and $B$ respectively. If $P$ divides $AB$ in the ratio $3:1$ reckoning from the $x$-axis, find the equation of the tangent.",
+   "answer": "$bx+a\\sqrt3\\,y=2ab$",
+   "key_idea": "The tangent at $\\theta$ has intercepts $\\frac a{\\cos\\theta},\\frac b{\\sin\\theta}$; the section formula for $AP:PB=3:1$ gives $\\cos^2\\theta=\\frac14$.",
+   "solution": [
+    "Tangent at $P(a\\cos\\theta,b\\sin\\theta)$: $\\frac{x\\cos\\theta}{a}+\\frac{y\\sin\\theta}{b}=1$.",
+    "It meets the axes at $A\\left(\\frac{a}{\\cos\\theta},0\\right)$ and $B\\left(0,\\frac{b}{\\sin\\theta}\\right)$.",
+    "$P$ divides $AB$ as $AP:PB=3:1$ (from the $x$-axis): $P=\\frac{1\\cdot A+3\\cdot B}{4}=\\left(\\frac{a}{4\\cos\\theta},\\ \\frac{3b}{4\\sin\\theta}\\right)$.",
+    "Equate to $(a\\cos\\theta,b\\sin\\theta)$: $\\frac{a}{4\\cos\\theta}=a\\cos\\theta$ and $\\frac{3b}{4\\sin\\theta}=b\\sin\\theta$.",
+    "So $\\cos^2\\theta=\\frac14$ and $\\sin^2\\theta=\\frac34$ (consistent), with $P$ in the first quadrant: $\\cos\\theta=\\frac12$, $\\sin\\theta=\\frac{\\sqrt3}{2}$.",
+    "Tangent: $\\frac{x}{2a}+\\frac{\\sqrt3\\,y}{2b}=1$.",
+    "So $bx+a\\sqrt3\\,y=2ab$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The point of contact divides the intercept $AB$ in the ratio $AP:PB=\\sin^2\\theta:\\cos^2\\theta$.",
+     "solution": [
+      "On the tangent $\\frac{x\\cos\\theta}{a}+\\frac{y\\sin\\theta}{b}=1$, write $P=A+t(B-A)$ with $A=\\left(\\frac a{\\cos\\theta},0\\right)$.",
+      "The $x$-coordinate gives $a\\cos\\theta=(1-t)\\frac{a}{\\cos\\theta}$, so $1-t=\\cos^2\\theta$ and $t=\\sin^2\\theta$.",
+      "Hence $AP:PB=t:(1-t)=\\sin^2\\theta:\\cos^2\\theta$.",
+      "Given $AP:PB=3:1$: $\\sin^2\\theta=\\frac34,\\ \\cos^2\\theta=\\frac14$, so $\\theta=60^\\circ$ (first quadrant).",
+      "Tangent: $\\frac{x}{2a}+\\frac{\\sqrt3y}{2b}=1$, i.e. $bx+\\sqrt3\\,ay=2ab$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The tangent at eccentric angle $\\theta$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ has intercepts $\\frac{a}{\\cos\\theta}$ and $\\frac{b}{\\sin\\theta}$, and the point of contact divides the intercept in the ratio $AP:PB=\\sin^2\\theta:\\cos^2\\theta$ (measured from the $x$-axis).",
+    "Area of the triangle with the axes: $\\frac{ab}{2\\sin\\theta\\cos\\theta}=\\frac{ab}{\\sin2\\theta}\\ge ab$, least ($=ab$) when $\\theta=45^\\circ$ (the contact point is then the midpoint of $AB$).",
+    "Length of the intercept: $AB^2=a^2\\sec^2\\theta+b^2\\operatorname{cosec}^2\\theta\\ge(a+b)^2$ (Cauchy-Schwarz with $\\sin^2\\theta+\\cos^2\\theta=1$), least when $\\tan^2\\theta=\\frac ba$.",
+    "Section formula: the point dividing $A$ to $B$ in the ratio $m:n$ is $\\frac{nA+mB}{m+n}$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Product of the focal perpendiculars on a tangent of an ellipse",
+    "Eccentricity of an ellipse"
+   ],
+   "level": 2,
+   "question": "Let $P_i$ and $P_i'$ be the feet of the perpendiculars drawn from the foci $S,S'$ on a tangent $T_i$ to an ellipse whose length of semi-major axis is $20$. If $\\sum_{i=1}^{10}(SP_i)(S'P_i')=2560$, then find the value of $100e$. (Where $e$ denotes the eccentricity.)",
+   "answer": "$60$",
+   "key_idea": "The product of the focal perpendiculars on every tangent equals $b^2$, so the sum is $10b^2$.",
+   "solution": [
+    "$\\sum_{i=1}^{10}(SP_i)(S'P_i')=2560$.",
+    "For every tangent of an ellipse, $SP\\cdot S'P'=b^2$.",
+    "So $10b^2=2560$, i.e. $b^2=256$.",
+    "With $a=20$: $e=\\sqrt{1-\\frac{b^2}{a^2}}=\\sqrt{1-\\frac{256}{400}}=\\sqrt{\\frac{144}{400}}=\\frac{12}{20}=\\frac35$.",
+    "Hence $100e=60$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Since the product is the same for every tangent, evaluate it on the vertex tangent $x=a$, where the feet of the perpendiculars are obvious.",
+     "solution": [
+      "The product $SP\\cdot S'P'$ does not depend on the tangent, so compute it on the tangent $x=a$ at the vertex $(a,0)$.",
+      "The perpendicular from each focus $(\\pm ae,0)$ to $x=a$ has its foot at $(a,0)$, so $SP=a-ae$ and $S'P'=a+ae$.",
+      "Product $=a^2(1-e^2)=b^2$.",
+      "So $10a^2(1-e^2)=2560$, i.e. $400(1-e^2)=256$ and $1-e^2=\\frac{16}{25}$.",
+      "$e=\\frac35$ and $100e=60$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ the product of the perpendiculars from the two foci to any tangent is $b^2$. Proof: tangent $y=mx+c$, $c^2=a^2m^2+b^2$: product $=\\frac{(c+mae)(c-mae)}{1+m^2}=\\frac{c^2-m^2a^2e^2}{1+m^2}=\\frac{b^2(1+m^2)}{1+m^2}=b^2$.",
+    "The same holds for the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ (product $b^2$).",
+    "The feet of the focal perpendiculars on all tangents lie on the auxiliary circle $x^2+y^2=a^2$.",
+    "Quick use: a constant property of all tangents can be read off from the simplest tangent (vertex tangent)."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rotation of an ellipse and tangents at corresponding points",
+    "Locus by elimination of the parameter"
+   ],
+   "level": 4,
+   "question": "An ellipse $x^2+4y^2=4$ is rotated anticlockwise through a right angle in its own plane about its centre. If the locus of the point of intersection of a tangent to the ellipse in its original position with the tangent at the same point of the ellipse in its new position is given by the curve $(x^2+y^2)^2=\\lambda(x^2+y^2)+\\mu xy$, where $\\lambda$ and $\\mu$ are positive integers, find the value of $(\\lambda+\\mu)$.",
+   "answer": "$11$",
+   "key_idea": "The corresponding point of the rotated ellipse is $Q(-\\sin\\theta,2\\cos\\theta)$; the two tangents give two linear equations in $\\cos\\theta,\\sin\\theta$, solved by Cramer's rule.",
+   "solution": [
+    "Original ellipse $E_O:\\ \\frac{x^2}{4}+y^2=1$; rotated ellipse $E_N:\\ x^2+\\frac{y^2}{4}=1$.",
+    "Take $P(2\\cos\\theta,\\sin\\theta)$ on $E_O$. Its position vector is $2\\cos\\theta\\,\\hat i+\\sin\\theta\\,\\hat j$.",
+    "The same point after the anticlockwise right-angle rotation is $Q$ with a perpendicular position vector $\\cos\\alpha\\,\\hat i+2\\sin\\alpha\\,\\hat j$: $2\\cos(\\alpha-\\theta)=0$, so $\\alpha=\\frac\\pi2+\\theta$ and $Q=(-\\sin\\theta,\\ 2\\cos\\theta)$.",
+    "Tangent at $P$ to $E_O$: $\\frac{x\\cos\\theta}{2}+y\\sin\\theta=1$, i.e. $x\\cos\\theta+2y\\sin\\theta=2$ ....(1).",
+    "Tangent at $Q$ to $E_N$: $\\frac{xx_1}{1}+\\frac{yy_1}{4}=1$ gives $-x\\sin\\theta+\\frac{y\\cos\\theta}{2}=1$, i.e. $y\\cos\\theta-2x\\sin\\theta=2$ ....(2).",
+    "Solve (1),(2) for $\\cos\\theta,\\sin\\theta$ by Cramer's rule: $D=\\left|\\begin{matrix}x&2y\\\\y&-2x\\end{matrix}\\right|=-2(x^2+y^2)$, $D_1=\\left|\\begin{matrix}2&2y\\\\2&-2x\\end{matrix}\\right|=-4(x+y)$, $D_2=\\left|\\begin{matrix}x&2\\\\y&2\\end{matrix}\\right|=2(x-y)$.",
+    "$\\cos\\theta=\\frac{D_1}{D}=\\frac{2(x+y)}{x^2+y^2}$ and $\\sin\\theta=\\frac{D_2}{D}=-\\frac{x-y}{x^2+y^2}$.",
+    "Use $\\sin^2\\theta+\\cos^2\\theta=1$: $\\frac{(x-y)^2+4(x+y)^2}{(x^2+y^2)^2}=1$.",
+    "The numerator is $5x^2+5y^2+6xy$, so $(x^2+y^2)^2=5(x^2+y^2)+6xy$.",
+    "Hence $\\lambda=5,\\ \\mu=6$ and $\\lambda+\\mu=11$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rotate the second tangent back: it is the $90^\\circ$ image of the first. The intersection of a line with its $90^\\circ$ rotation is $p(u+Ru)$, at distance $\\sqrt2p$ from the centre.",
+     "solution": [
+      "Rotating $E_N$ back by $90^\\circ$ gives $E_O$ and the tangent at $Q$ goes to the tangent $\\ell$ at $P$. So the two tangents are $\\ell$ and $R(\\ell)$, where $R$ is the anticlockwise rotation by $90^\\circ$.",
+      "Write $\\ell:\\ u\\cdot X=p$ with unit normal $u=(\\cos\\varphi,\\sin\\varphi)$; then $p^2=4\\cos^2\\varphi+\\sin^2\\varphi$ (support function of $\\frac{x^2}{4}+y^2=1$).",
+      "$R(\\ell):\\ (Ru)\\cdot X=p$ with $Ru=(-\\sin\\varphi,\\cos\\varphi)$. The intersection $M$ has $u\\cdot M=p$ and $Ru\\cdot M=p$; as $u,Ru$ are orthonormal, $M=p(u+Ru)$.",
+      "So $|M|^2=2p^2$ and the polar angle of $M$ is $\\psi=\\varphi+45^\\circ$.",
+      "With $r=|M|$: $r^2=2(4\\cos^2\\varphi+\\sin^2\\varphi)=2+6\\cos^2(\\psi-45^\\circ)=2+3\\left(1+\\sin2\\psi\\right)=5+3\\sin2\\psi$.",
+      "Multiply by $r^2$: $r^4=5r^2+3r^2\\sin2\\psi=5r^2+6xy$ (since $r^2\\sin2\\psi=2xy$).",
+      "So $(x^2+y^2)^2=5(x^2+y^2)+6xy$, $\\lambda+\\mu=5+6=11$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Support function: the tangent to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with unit normal $(\\cos\\varphi,\\sin\\varphi)$ is at distance $p$ from the centre where $p^2=a^2\\cos^2\\varphi+b^2\\sin^2\\varphi$.",
+    "A line $u\\cdot X=p$ and its rotation through $90^\\circ$ meet at $p(u+Ru)$, at distance $\\sqrt2p$ from the origin and at $45^\\circ$ to the normal direction.",
+    "Cramer's rule for $\\cos\\theta,\\sin\\theta$ from $x\\cos\\theta+2y\\sin\\theta=2$, $y\\cos\\theta-2x\\sin\\theta=2$ then $\\cos^2+\\sin^2=1$ is the standard way to eliminate $\\theta$ from two linear equations.",
+    "General: for the ellipse of semi-axes $a,b$ the locus of the intersection of a tangent and its $90^\\circ$ rotation is $r^2=(a^2+b^2)+(a^2-b^2)\\sin2\\psi$; the instance $a=2,b=1$ gives $r^2=5+3\\sin2\\psi$."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangents of given slope to an ellipse",
+    "Area of a parallelogram formed by four lines"
+   ],
+   "level": 3,
+   "question": "Line $L_1$ is parallel to the line $L_2$. Slope of $L_1$ is $9$. Also $L_3$ is parallel to $L_4$. Slope of $L_4$ is $\\frac{-1}{25}$. All these lines touch the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$. Find the area of the parallelogram formed by these lines.",
+   "answer": "$60$",
+   "key_idea": "Each pair of parallel tangents has $c=\\pm\\sqrt{a^2m^2+b^2}$; the parallelogram area is $\\frac{|c_1-c_2||d_1-d_2|}{|m_1-m_2|}$.",
+   "solution": [
+    "$y=mx+c$ touches $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ iff $c^2=a^2m^2+b^2$ (condition of tangency).",
+    "For $m=9$: $c^2=25\\cdot81+9=9(225+1)=9\\cdot226$, so $c=\\pm3\\sqrt{226}$ and $|c_1-c_2|=6\\sqrt{226}$.",
+    "For $m_2=-\\frac1{25}$: $d^2=25\\cdot\\frac{1}{625}+9=\\frac{226}{25}$, so $d=\\pm\\frac{\\sqrt{226}}{5}$ and $|d_1-d_2|=\\frac{2\\sqrt{226}}{5}$.",
+    "The parallelogram bounded by $y=m_1x+c_{1,2}$ and $y=m_2x+d_{1,2}$ has area $\\frac{|c_1-c_2|\\,|d_1-d_2|}{|m_1-m_2|}$.",
+    "$|m_1-m_2|=9+\\frac{1}{25}=\\frac{226}{25}$.",
+    "Area $=\\frac{6\\sqrt{226}\\cdot\\frac{2\\sqrt{226}}{5}}{\\frac{226}{25}}=\\frac{6\\cdot226\\cdot2\\cdot25}{5\\cdot226}=60$ square units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Stretch the ellipse into the unit circle with $X=\\frac x5,\\ Y=\\frac y3$: the slopes become $15$ and $-\\frac1{15}$ (perpendicular), the parallelogram a square, and areas scale by $15$.",
+     "solution": [
+      "The map $(x,y)\\to\\left(\\frac x5,\\frac y3\\right)$ sends the ellipse to the unit circle $X^2+Y^2=1$, lines to lines, tangents to tangents.",
+      "A line of slope $m$ goes to a line of slope $M=\\frac{dY/1}{dX}=\\frac{5}{3}m$: $M_1=\\frac53\\cdot9=15$ and $M_2=\\frac53\\cdot\\left(-\\frac1{25}\\right)=-\\frac{1}{15}$.",
+      "$M_1M_2=-1$: the two directions are perpendicular.",
+      "So the four tangents to the unit circle form a square circumscribed about it, of side $2$ and area $4$.",
+      "The map multiplies areas by $\\frac1{15}$, so the original parallelogram has area $4\\times15=60$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Line $y=mx+c$ touches $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ iff $c^2=a^2m^2+b^2$.",
+    "Parallelogram formed by $y=m_1x+c_1,\\ y=m_1x+c_2,\\ y=m_2x+d_1,\\ y=m_2x+d_2$ has area $\\frac{|c_1-c_2||d_1-d_2|}{|m_1-m_2|}$.",
+    "Affine map $(x,y)\\to\\left(\\frac xa,\\frac yb\\right)$: an ellipse becomes the unit circle; areas are divided by $ab$ (here $15$).",
+    "Two directions with slopes $m_1,m_2$ become perpendicular after this map iff $m_1m_2=-\\frac{b^2}{a^2}$ (conjugate directions); then the circumscribed parallelogram is the image of a square and has area $4ab$. Here $9\\cdot\\left(-\\frac1{25}\\right)=-\\frac{9}{25}=-\\frac{b^2}{a^2}$, so the area is $4\\cdot5\\cdot3=60$."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Standard form of an ellipse with shifted centre (lowest point, ends of the minor axis)",
+    "Equation of a parabola from its vertex and a point"
+   ],
+   "level": 2,
+   "question": "Given the equation of the ellipse $\\frac{(x-3)^2}{16}+\\frac{(y+4)^2}{49}=1$, a parabola is such that its vertex is the lowest point of the ellipse and it passes through the ends of the minor axis of the ellipse. The equation of the parabola is in the form $16y=a(x-h)^2-k$. Determine the value of $(a+h+k)$.",
+   "answer": "$186$",
+   "key_idea": "Read off the lowest point $(3,-11)$ and the minor-axis ends $(7,-4),(-1,-4)$, then fit $(x-3)^2=4A(y+11)$.",
+   "solution": [
+    "The ellipse has centre $(3,-4)$, horizontal semi-axis $4$ and vertical (major) semi-axis $7$.",
+    "Its lowest point is $(3,-4-7)=(3,-11)$; the ends of the minor axis are $(3\\pm4,-4)$, i.e. $(7,-4)$ and $(-1,-4)$.",
+    "The parabola with vertex $(3,-11)$ and a vertical axis (upward) is $(x-3)^2=4A(y+11)$.",
+    "It passes through $(7,-4)$ (and, by symmetry, $(-1,-4)$): $16=4A\\cdot7$, so $A=\\frac47$.",
+    "$(x-3)^2=\\frac{16}{7}(y+11)$, i.e. $7(x-3)^2=16y+176$.",
+    "So $16y=7(x-3)^2-176$: $a=7,\\ h=3,\\ k=176$.",
+    "$a+h+k=7+3+176=186$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $\\frac{(x-h)^2}{p^2}+\\frac{(y-k)^2}{q^2}=1$ the centre is $(h,k)$ and the extreme points are $(h\\pm p,k)$ and $(h,k\\pm q)$; the major axis is vertical iff $q>p$.",
+    "A parabola with vertex $(h,v)$ and a vertical axis is $(x-h)^2=4A(y-v)$; one more point fixes $A$.",
+    "Write a parabola in the target form directly: vertex $\\left(h,-\\frac{k}{16}\\right)$ for $16y=a(x-h)^2-k$.",
+    "Check: at $(7,-4)$, $16(-4)=7\\cdot16-176=-64$ ✓."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Focal property of an ellipse (sum of focal distances)",
+    "Area of an ellipse and a rectangle"
+   ],
+   "level": 3,
+   "question": "Rectangle $ABCD$ has area $200$. An ellipse with area $200\\pi$ passes through $A$ and $C$ and has foci at $B$ and $D$. Find the perimeter of the rectangle.",
+   "answer": "$80$",
+   "key_idea": "$A$ lies on the ellipse with foci $B,D$: $AB+AD=2a$; together with $BD=2ae$ and $xy=ab=200$ this gives $b^2=\\frac{xy}{2}$.",
+   "solution": [
+    "Let the sides of the rectangle be $x$ and $y$; the semi-axes of the ellipse $a,b$. Area of the rectangle: $xy=200$.",
+    "Area of the ellipse is $\\pi ab=200\\pi$, so $ab=200$.",
+    "$A$ is on the ellipse with foci $B$ and $D$, so $AB+AD=2a$, i.e. $x+y=2a$.",
+    "The distance between the foci is the diagonal $BD=\\sqrt{x^2+y^2}=2ae$; so $a^2-b^2=\\frac{x^2+y^2}{4}$, i.e. $a^2=\\frac{x^2+y^2}{4}+b^2$.",
+    "Replace $a=\\frac{x+y}{2}$: $\\frac{(x+y)^2}{4}=\\frac{x^2+y^2}{4}+b^2$, so $(x+y)^2=x^2+y^2+4b^2$.",
+    "Hence $2xy=4b^2$, i.e. $b^2=\\frac{xy}{2}=100$, $b=10$ and $a=\\frac{200}{10}=20$.",
+    "Perimeter $=2(x+y)=2\\cdot2a=4a=80$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The focal triangle $BAD$ has a right angle at $A$; the area of a focal triangle is $b^2\\tan\\frac{\\gamma}{2}$ with $\\gamma=90^\\circ$.",
+     "solution": [
+      "For a point $A$ on an ellipse with foci $F_1,F_2$ and $\\angle F_1AF_2=\\gamma$, the area of $\\triangle F_1AF_2$ is $b^2\\tan\\frac{\\gamma}{2}$.",
+      "Here $\\angle BAD=90^\\circ$ (angle of the rectangle) and the area of $\\triangle ABD$ is half the rectangle: $100$.",
+      "So $b^2\\tan45^\\circ=100$, i.e. $b^2=100$ and $b=10$.",
+      "From $\\pi ab=200\\pi$: $a=20$.",
+      "$AB+AD=2a=40$, so the perimeter is $2\\cdot40=80$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a point $P$ on an ellipse with foci $F_1,F_2$ and $\\angle F_1PF_2=\\gamma$: area of $\\triangle F_1PF_2=b^2\\tan\\frac\\gamma2$, and the focal distances satisfy $PF_1+PF_2=2a$.",
+    "Derivation: $(PF_1+PF_2)^2=4a^2$ and $F_1F_2^2=PF_1^2+PF_2^2-2PF_1\\cdot PF_2\\cos\\gamma=4a^2e^2$, so $PF_1\\cdot PF_2=\\frac{2b^2}{1+\\cos\\gamma}$; area $=\\frac12PF_1PF_2\\sin\\gamma=b^2\\tan\\frac\\gamma2$.",
+    "Area of the ellipse is $\\pi ab$.",
+    "Both rectangle corners $A,C$ see the foci at $90^\\circ$ (the circle on $BD$ passes through them); the ellipse through them has $b^2=\\frac{\\text{area of rectangle}}{2}$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Orthogonality of a parabola and an ellipse",
+    "Area bounded by a parabola and a chord",
+    "Tangent and normal to an ellipse (area of a triangle)"
+   ],
+   "level": 3,
+   "question": "Consider the parabola $y^2=4x$ and the ellipse $2x^2+y^2=6$, intersecting at $P$ and $Q$.\\n(a) Prove that the two curves are orthogonal.\\n(b) Find the area enclosed by the parabola and the common chord of the ellipse and the parabola.\\n(c) If the tangent and normal at the point $P$ on the ellipse intersect the $x$-axis at $T$ and $G$ respectively, then find the area of the triangle $PTG$.",
+   "answer": "(a) shown (tangents have slopes $1$ and $-1$ at $P$); (b) $\\frac83$; (c) $4$",
+   "key_idea": "The intersection is $P(1,2)$, $Q(1,-2)$; the tangent to the ellipse at $P$ has slope $-1$ and the tangent to the parabola has slope $1$.",
+   "solution": [
+    "Solve $y^2=4x$ and $2x^2+y^2=6$: $2x^2+4x-6=0$, i.e. $x^2+2x-3=0$, so $x=1$ or $x=-3$.",
+    "$x=-3$ gives $y^2<0$, so $x=1$: $P(1,2)$ and $Q(1,-2)$.",
+    "(a) Tangent to the parabola at $P$: $yy_1=2(x+x_1)$, i.e. $2y=2(x+1)$, so $y=x+1$ (slope $1$).",
+    "Tangent to the ellipse at $P$: $2x\\cdot1+y\\cdot2=6$, i.e. $x+y=3$ (slope $-1$).",
+    "The product of the slopes is $-1$, so the tangents are perpendicular: the curves are orthogonal at $P$ (and, by symmetry, at $Q$).",
+    "(b) The common chord is $x=1$. Area $=2\\int_0^1 2\\sqrt x\\,dx=4\\cdot\\frac23\\left[x^{3/2}\\right]_0^1=\\frac83$.",
+    "(c) The tangent $x+y=3$ meets the $x$-axis at $T(3,0)$. The normal at $P$ is perpendicular to it through $(1,2)$: $y=x+1$, meeting the $x$-axis at $G(-1,0)$.",
+    "$TG=4$ and the height of $P$ above the axis is $2$: area of $\\triangle PTG=\\frac12\\cdot4\\cdot2=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the gradients for orthogonality, horizontal strips for the area, and the fact that the ellipse's normal at $P$ is the parabola's tangent at $P$.",
+     "solution": [
+      "(a) Normals of the two curves have directions $\\nabla(y^2-4x)=(-4,2y)$ and $\\nabla(2x^2+y^2-6)=(4x,2y)$. Their dot product is $-16x+4y^2=-16x+16x=0$ at every point of the parabola, so the curves are orthogonal at both common points.",
+      "(b) Use horizontal strips: area $=\\int_{-2}^{2}\\left(1-\\frac{y^2}{4}\\right)dy=\\left[y-\\frac{y^3}{12}\\right]_{-2}^{2}=2\\left(2-\\frac{8}{12}\\right)=\\frac83$.",
+      "(c) By (a) the normal to the ellipse at $P$ is the tangent to the parabola there, $y=x+1$, so $G=(-1,0)$; the tangent to the ellipse is $x+y=3$ so $T=(3,0)$.",
+      "Area of $\\triangle PTG=\\frac12\\cdot TG\\cdot y_P=\\frac12\\cdot4\\cdot2=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two curves meeting at a point are orthogonal iff their gradients (normals) are perpendicular there; check $\\nabla f\\cdot\\nabla g=0$.",
+    "If two curves are orthogonal at $P$, the normal of one at $P$ is the tangent of the other.",
+    "Area between $y^2=4ax$ and the chord $x=x_0$ is $\\frac{8}{3}\\sqrt{a}\\,x_0^{3/2}$ (here $a=1,x_0=1$ gives $\\frac83$).",
+    "Symmetry in the axis of one of the curves carries orthogonality at one common point to the mirror-image common point (here $P$ and $Q$)."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent to an ellipse (intercepts and perpendicular from the centre)",
+    "Maximum and minimum values (AM-GM)",
+    "Area of an inscribed triangle"
+   ],
+   "level": 4,
+   "question": "Consider the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with centre $O$ where $a>b>0$. The tangent at any point $P$ on the ellipse meets the coordinate axes at $X$ and $Y$ and $N$ is the foot of the perpendicular from the origin on the tangent at $P$. Minimum length of $XY$ is $36$ and maximum length of $PN$ is $4$.\\n(a) Find the eccentricity of the ellipse.\\n(b) Find the maximum area of an isosceles triangle inscribed in the ellipse if one of its vertices coincides with one end of the major axis of the ellipse.\\n(c) Find the maximum area of the triangle $OPN$.",
+   "answer": "(a) $\\frac35$; (b) $240\\sqrt3$; (c) $36$",
+   "key_idea": "$XY^2=a^2+b^2+a^2\\tan^2\\theta+b^2\\cot^2\\theta\\ge(a+b)^2$, and $PN=\\frac{a^2-b^2}{XY}$ (since $ONPM$ is a rectangle), so $a+b=36$ and $a-b=4$.",
+   "solution": [
+    "Tangent at $P(a\\cos\\theta,b\\sin\\theta)$: $\\frac xa\\cos\\theta+\\frac yb\\sin\\theta=1$, so $X(a\\sec\\theta,0)$ and $Y(0,b\\operatorname{cosec}\\theta)$.",
+    "$XY^2=a^2\\sec^2\\theta+b^2\\operatorname{cosec}^2\\theta=a^2+b^2+a^2\\tan^2\\theta+b^2\\cot^2\\theta$.",
+    "By AM-GM $a^2\\tan^2\\theta+b^2\\cot^2\\theta\\ge2ab$, so $(XY)_{\\min}=\\sqrt{(a+b)^2}=a+b=36$ ....(1).",
+    "Normal at $P$: $ax\\sec\\theta-by\\operatorname{cosec}\\theta=a^2-b^2$. Let $M$ be the foot of the perpendicular from $O$ on the normal; $ONPM$ is a rectangle (tangent $\\perp$ normal), so $NP=OM$.",
+    "$NP=OM=\\frac{a^2-b^2}{\\sqrt{a^2\\sec^2\\theta+b^2\\operatorname{cosec}^2\\theta}}=\\frac{a^2-b^2}{XY}$, which is largest when $XY$ is least: $(NP)_{\\max}=\\frac{a^2-b^2}{a+b}=a-b=4$ ....(2).",
+    "From (1) and (2): $a=20,\\ b=16$.",
+    "(a) $e=\\sqrt{1-\\frac{16^2}{20^2}}=\\frac35$.",
+    "(b) Take the apex at $(20,0)$; the base joins $(20\\cos\\theta,\\pm16\\sin\\theta)$ with $\\theta\\in(0,\\pi)$: base $=32\\sin\\theta$, height $=20-20\\cos\\theta$. Area $A=\\frac12\\cdot20(1-\\cos\\theta)\\cdot32\\sin\\theta=320(1-\\cos\\theta)\\sin\\theta$ ....(3).",
+    "$\\frac{dA}{d\\theta}=320(1-\\cos\\theta)(1+2\\cos\\theta)=0$ gives $\\cos\\theta=-\\frac12$, i.e. $\\theta=\\frac{2\\pi}{3}$ (the maximum).",
+    "$A_{\\max}=320\\left(1+\\frac12\\right)\\frac{\\sqrt3}{2}=240\\sqrt3$.",
+    "(c) $\\triangle OPN$ is right-angled at $N$: area $=\\frac12ON\\cdot NP$, with $ON=\\frac{ab}{\\sqrt{b^2\\cos^2\\theta+a^2\\sin^2\\theta}}$ and $NP=\\frac{a^2-b^2}{\\sqrt{a^2\\sec^2\\theta+b^2\\operatorname{cosec}^2\\theta}}$.",
+    "Since $(b^2\\cos^2\\theta+a^2\\sin^2\\theta)(a^2\\sec^2\\theta+b^2\\operatorname{cosec}^2\\theta)=(a^2\\tan\\theta+b^2\\cot\\theta)^2$: $\\Delta=\\frac12\\cdot\\frac{ab(a^2-b^2)}{a^2\\tan\\theta+b^2\\cot\\theta}$.",
+    "For $\\theta$ in the first quadrant, $a^2\\tan\\theta+b^2\\cot\\theta\\ge2ab$, so $\\Delta_{\\max}=\\frac12\\cdot\\frac{ab(a^2-b^2)}{2ab}=\\frac{a^2-b^2}{4}=\\frac{400-256}{4}=36$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Part (b): the PDF takes the apex at (20,0) with base end points labelled (20 cos t, +-16 sin t) but writes the height as 20+20cos t; for those points the height is 20-20cos t. (With t -> pi - t the two are the same expression, and the maximum 240*sqrt3 is unaffected.) Part (c): the PDF writes the area as (1/2) OP x PN, but the right angle of triangle OPN is at N, so the area is (1/2) ON x NP; its next line already uses ON x NP. Corrected both; answers (a) 3/5, (b) 240*sqrt3, (c) 36 are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Part (b): stretch the ellipse to its auxiliary circle ($y\\to\\frac ab\\,y$), where the largest inscribed triangle with a given vertex is equilateral. Part (a) by Cauchy-Schwarz.",
+     "solution": [
+      "(a) $XY^2=\\left(\\frac{a^2}{\\cos^2\\theta}+\\frac{b^2}{\\sin^2\\theta}\\right)(\\cos^2\\theta+\\sin^2\\theta)\\ge(a+b)^2$ by Cauchy-Schwarz, so $XY_{\\min}=a+b=36$; $NP=\\frac{a^2-b^2}{XY}$ gives $(NP)_{\\max}=a-b=4$. So $a=20,\\ b=16$ and $e=\\frac35$.",
+      "(b) The map $(x,y)\\to\\left(x,\\frac{20}{16}y\\right)$ sends the ellipse to the auxiliary circle of radius $20$ and multiplies every area by $\\frac{20}{16}=\\frac54$; it keeps the isosceles property (the axis of symmetry is the $x$-axis) and the apex $(20,0)$.",
+      "Among triangles inscribed in a circle with a fixed vertex, the largest area is that of the equilateral triangle: $\\frac{3\\sqrt3}{4}R^2=\\frac{3\\sqrt3}{4}\\cdot400=300\\sqrt3$.",
+      "Back in the ellipse the area is $300\\sqrt3\\cdot\\frac{16}{20}=240\\sqrt3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent at $\\theta$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: intercepts $a\\sec\\theta,\\ b\\operatorname{cosec}\\theta$; intercept length $\\ge a+b$ with equality at $\\tan^2\\theta=\\frac ba$.",
+    "For the tangent at $P$ with foot $N$ from the centre: $PN\\cdot XY=a^2-b^2$, and $ON\\cdot XY=OX\\cdot OY$ (altitude of the right triangle $OXY$).",
+    "Largest triangle inscribed in an ellipse has area $\\frac{3\\sqrt3}{4}ab$; with one vertex fixed at the end of the major axis the maximum is the same, $\\frac{3\\sqrt3}{4}ab$ (here $\\frac{3\\sqrt3}{4}\\cdot320=240\\sqrt3$).",
+    "AM-GM for $a^2\\tan\\theta+b^2\\cot\\theta\\ge2ab$ needs $\\tan\\theta>0$ (first quadrant)."
+   ]
+  },
+  {
+   "q_no": 33,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Common tangent of an ellipse and a circle (tangency conditions)",
+    "Focal chord of an ellipse and the chord it cuts on a circle"
+   ],
+   "level": 3,
+   "question": "A straight line $AB$ touches the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ and the circle $x^2+y^2=r^2$, where $a>r>b$. A focal chord of the ellipse, parallel to $AB$, intersects the circle in $P$ and $Q$. Find the length of the perpendicular drawn from the centre of the ellipse to $PQ$. Hence show that $PQ=2b$.",
+   "answer": "Perpendicular length $=\\sqrt{r^2-b^2}$; hence $PQ=2b$",
+   "key_idea": "Equate the two tangency conditions to get $m^2=\\frac{r^2-b^2}{a^2-r^2}$; then the distance from the centre to the focal line $y=m(x-ae)$ is $\\sqrt{r^2-b^2}$.",
+   "solution": [
+    "(The ellipse equation is not legible in the PDF; it is the standard ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with $a>r>b$.) Let the tangent $AB$ be $y=mx+c$.",
+    "It touches the ellipse: $c^2=a^2m^2+b^2$. It touches the circle: $c^2=r^2(m^2+1)$.",
+    "So $a^2m^2+b^2=r^2m^2+r^2$, giving $m^2=\\frac{r^2-b^2}{a^2-r^2}$ and $1+m^2=\\frac{a^2-b^2}{a^2-r^2}$.",
+    "The focal chord $PQ$ is parallel to $AB$ and passes through the focus $(ae,0)$: $y=m(x-ae)$, i.e. $mx-y-mae=0$.",
+    "Perpendicular from the centre to $PQ$: $L=\\frac{|m|ae}{\\sqrt{1+m^2}}$.",
+    "$L^2=\\frac{m^2}{1+m^2}\\,a^2e^2=\\frac{r^2-b^2}{a^2-b^2}\\,(a^2-b^2)=r^2-b^2$ (using $a^2e^2=a^2-b^2$).",
+    "So $L=\\sqrt{r^2-b^2}$.",
+    "$PQ$ is a chord of the circle of radius $r$ at distance $L$ from the centre: $PQ=2\\sqrt{r^2-L^2}=2\\sqrt{b^2}=2b$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's ellipse equation and several lines of the working (the final distance, Ans.) are grey boxes (missing images). The visible start is kept; the ellipse x^2/a^2 + y^2/b^2 = 1 is the standard form implied by 'a > r > b', and the remaining steps were written from scratch.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the focal-perpendicular product $p_1p_2=b^2$ on the two tangents of the same slope: the centre lies midway between the foci, so its distance to the tangent is the mean of the focal distances.",
+     "solution": [
+      "The tangent $AB$ ($y=mx+c$) and the parallel tangent $y=mx-c$ are at focal distances $p_1,p_2$ from the focus $S$, with $p_1p_2=b^2$.",
+      "The centre $C$ is the midpoint of the foci, so its distance to the tangent $AB$ is the mean of the two focal distances: $r=\\frac{p_1+p_2}{2}$ (foci on the same side of the tangent).",
+      "The focal line $PQ$ is parallel to $AB$ through the focus $S$: it is at distance $p_1$ from $AB$, so its distance from the centre is $L=|r-p_1|=\\frac{|p_2-p_1|}{2}$.",
+      "$L^2=\\frac{(p_1+p_2)^2-4p_1p_2}{4}=\\frac{4r^2-4b^2}{4}=r^2-b^2$.",
+      "Hence $PQ=2\\sqrt{r^2-L^2}=2b$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A line $y=mx+c$ touches $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ iff $c^2=a^2m^2+b^2$, and touches $x^2+y^2=r^2$ iff $c^2=r^2(1+m^2)$.",
+    "The product of the perpendiculars from the foci on any tangent is $b^2$; the distance of the centre from a tangent is the mean of the two focal distances.",
+    "A line at distance $L$ from the centre of a circle of radius $r$ cuts a chord of length $2\\sqrt{r^2-L^2}$.",
+    "The focal chord parallel to a common tangent of the ellipse and a circle $x^2+y^2=r^2$ has length exactly $2b$ for every $r\\in(b,a)$."
+   ]
+  },
+  {
+   "q_no": 34,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Reflection property of an ellipse (rays through the foci)",
+    "Equation of a line through two points"
+   ],
+   "level": 1,
+   "question": "A ray emanating from the point $(-4,0)$ is incident on the ellipse $9x^2+25y^2=225$ at the point $P$ with abscissa $3$. Find the equation of the reflected ray after the first reflection.",
+   "answer": "$12x+5y=48$ (for $P\\left(3,\\frac{12}{5}\\right)$) or $12x-5y=48$ (for $P\\left(3,-\\frac{12}{5}\\right)$)",
+   "key_idea": "$(-4,0)$ is a focus, and a ray from one focus is reflected through the other focus.",
+   "solution": [
+    "For $P$ with abscissa $3$: $9\\cdot9+25y^2=225$, so $25y^2=144$ and $y=\\pm\\frac{12}{5}$; $P=\\left(3,\\pm\\frac{12}{5}\\right)$.",
+    "The ellipse is $\\frac{x^2}{25}+\\frac{y^2}{9}=1$: $a=5,\\ b=3$, $e=\\sqrt{1-\\frac{9}{25}}=\\frac45$ and $ae=4$, so the foci are $(\\pm4,0)$.",
+    "The ray starts from the focus $(-4,0)$; by the reflection property the reflected ray passes through the other focus $S(4,0)$.",
+    "For $P\\left(3,\\frac{12}{5}\\right)$ the reflected ray $PS$ has slope $\\frac{0-\\frac{12}{5}}{4-3}=-\\frac{12}{5}$: $12x+5y=48$.",
+    "For $P\\left(3,-\\frac{12}{5}\\right)$ the slope is $\\frac{12}{5}$: $12x-5y=48$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Reflect the direction of the incident ray in the normal at $P$ (vector reflection) instead of using the focus property.",
+     "solution": [
+      "Take $P=\\left(3,\\frac{12}{5}\\right)$. Incident direction $\\vec d=P-(-4,0)=\\left(7,\\frac{12}{5}\\right)$.",
+      "Normal at $P$: $\\nabla(9x^2+25y^2)=(18x,50y)=(54,120)\\parallel\\vec n=(9,20)$.",
+      "Reflected direction $\\vec d'=\\vec d-\\frac{2(\\vec d\\cdot\\vec n)}{\\vec n\\cdot\\vec n}\\vec n$ with $\\vec d\\cdot\\vec n=63+48=111$ and $\\vec n\\cdot\\vec n=481$: $\\vec d'=\\left(7-\\frac{1998}{481},\\ \\frac{12}{5}-\\frac{4440}{481}\\right)=\\left(\\frac{1369}{481},-\\frac{16428}{2405}\\right)$.",
+      "Slope $=\\frac{-16428/2405}{1369/481}=-\\frac{16428}{5\\cdot1369}=-\\frac{12}{5}$ (as $16428=12\\cdot1369$).",
+      "So the reflected ray is $y-\\frac{12}{5}=-\\frac{12}{5}(x-3)$, i.e. $12x+5y=48$; for the lower point $P\\left(3,-\\frac{12}{5}\\right)$ the mirror image gives $12x-5y=48$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reflection property of an ellipse: a ray from one focus is reflected through the other focus (the normal bisects $\\angle SPS'$).",
+    "For $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ the foci are $(\\pm ae,0)$ with $ae=\\sqrt{a^2-b^2}$.",
+    "Reflection of a direction $\\vec d$ in a surface with normal $\\vec n$: $\\vec d'=\\vec d-\\frac{2\\,\\vec d\\cdot\\vec n}{\\vec n\\cdot\\vec n}\\vec n$.",
+    "Parabola analogue: a ray parallel to the axis passes through the focus after reflection."
+   ]
+  },
+  {
+   "q_no": 35,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Chords of an ellipse at right angles through a point (fixed point)",
+    "Eccentric angle and parametric point of an ellipse"
+   ],
+   "level": 4,
+   "question": "Variable pairs of chords at right angles are drawn through any point $P$ (with eccentric angle $\\frac\\pi4$) on the ellipse $\\frac{x^2}{4}+y^2=1$, to meet the ellipse at two points say $A$ and $B$. If the line joining $A$ and $B$ passes through a fixed point $Q(a,b)$ such that $a^2+b^2$ has the value equal to $\\frac{m}{n}$, where $m,n$ are relatively prime positive integers, find $(m+n)$.",
+   "answer": "$19$",
+   "key_idea": "Shift the origin to $P$ and homogenise: $PA\\perp PB$ means the coefficients of $X^2$ and $Y^2$ add to zero, which makes the line $AB$ pass through a fixed point.",
+   "solution": [
+    "(The ellipse equation is not legible in the PDF; $\\frac{x^2}{4}+y^2=1$ is the one consistent with the PDF's surviving line $x+2y=0$ and the key $19$.)",
+    "$P$ has eccentric angle $\\frac\\pi4$: $P=(x_0,y_0)=\\left(\\sqrt2,\\frac1{\\sqrt2}\\right)$.",
+    "Shift the origin to $P$: $x=X+x_0$, $y=Y+y_0$. The ellipse becomes $\\frac{X^2}{4}+Y^2+\\frac{x_0}{2}X+2y_0Y=0$ (using $\\frac{x_0^2}{4}+y_0^2=1$).",
+    "Let the chord $AB$ be $lX+mY=1$ (it does not pass through the new origin $P$).",
+    "Homogenise the ellipse with it: $\\frac{X^2}{4}+Y^2+\\left(\\frac{x_0}{2}X+2y_0Y\\right)(lX+mY)=0$ - the pair of lines $PA,PB$.",
+    "$PA\\perp PB$: coefficient of $X^2$ + coefficient of $Y^2=0$: $\\left(\\frac14+\\frac{x_0l}{2}\\right)+\\left(1+2y_0m\\right)=0$, i.e. $\\frac{x_0}{2}l+2y_0m=-\\frac54$.",
+    "Multiply by $-\\frac45$: $\\left(-\\frac{2x_0}{5}\\right)l+\\left(-\\frac{8y_0}{5}\\right)m=1$. So the line $lX+mY=1$ passes through the fixed point $(X,Y)=\\left(-\\frac{2x_0}{5},-\\frac{8y_0}{5}\\right)$.",
+    "In the original coordinates $Q=\\left(x_0-\\frac{2x_0}{5},\\ y_0-\\frac{8y_0}{5}\\right)=\\left(\\frac{3x_0}{5},-\\frac{3y_0}{5}\\right)=\\left(\\frac{3\\sqrt2}{5},-\\frac{3}{5\\sqrt2}\\right)$.",
+    "$a^2+b^2=\\frac{18}{25}+\\frac{9}{50}=\\frac{45}{50}=\\frac{9}{10}$, so $m=9,\\ n=10$ and $m+n=19$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's question text and its whole solution are grey boxes (missing images); only the line 'x + 2y = 0 passes through Q(a, b)', the step 'm(PA') = -2' and the key 19 are legible. The ellipse x^2/4 + y^2 = 1 was recovered from these (it reproduces the key 19 and the line x + 2y = 0), and the solution was written from scratch.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the fixed point to locate it as the intersection of $AB$ for two special perpendicular pairs: the axis-parallel pair and the slopes $\\pm1$ pair.",
+     "solution": [
+      "Pair 1: chords through $P\\left(\\sqrt2,\\frac1{\\sqrt2}\\right)$ parallel to the axes meet the ellipse again at $A_1\\left(-\\sqrt2,\\frac1{\\sqrt2}\\right)$ and $B_1\\left(\\sqrt2,-\\frac1{\\sqrt2}\\right)$. The line $A_1B_1$ is $x+2y=0$.",
+      "Pair 2: slope $1$: $y=x-\\frac1{\\sqrt2}$ gives $5x^2-4\\sqrt2x-2=0$, roots $\\sqrt2$ and $-\\frac{\\sqrt2}{5}$, so $A_2=\\left(-\\frac{\\sqrt2}{5},-\\frac{7\\sqrt2}{10}\\right)$.",
+      "Slope $-1$: $y=-x+\\frac{3}{\\sqrt2}$ gives $5x^2-12\\sqrt2x+14=0$, roots $\\sqrt2$ and $\\frac{7\\sqrt2}{5}$, so $B_2=\\left(\\frac{7\\sqrt2}{5},\\frac{\\sqrt2}{10}\\right)$.",
+      "Line $A_2B_2$: slope $\\frac{8\\sqrt2/10}{8\\sqrt2/5}=\\frac12$, i.e. $y=\\frac x2-\\frac{3\\sqrt2}{5}$.",
+      "Intersect with $x+2y=0$: $2x=\\frac{6\\sqrt2}{5}$, $x=\\frac{3\\sqrt2}{5}$, $y=-\\frac{3\\sqrt2}{10}$. This is the fixed point $Q$ (it exists by the problem).",
+      "$a^2+b^2=\\frac{18}{25}+\\frac{18}{100}=\\frac{90}{100}=\\frac{9}{10}$, so $m+n=19$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ and a point $P(a\\cos\\theta,b\\sin\\theta)$, the chord joining the ends of any pair of perpendicular chords through $P$ passes through the fixed point $\\left(\\frac{a^2-b^2}{a^2+b^2}\\,a\\cos\\theta,\\ -\\frac{a^2-b^2}{a^2+b^2}\\,b\\sin\\theta\\right)$ on the normal at $P$.",
+    "Shifting the origin to $P$ and homogenising the curve with the chord $lX+mY=1$ gives the pair $PA,PB$; perpendicular iff coeff of $X^2$ + coeff of $Y^2=0$.",
+    "Same method for a circle (Thales / chord of fixed angle) and for a parabola ($y^2=4ax$): chords of a parabola subtending a right angle at a point $(x_0,y_0)$ of the curve pass through $(x_0+4a,\\,-y_0)$.",
+    "Instance: $a=2,b=1,\\theta=\\frac\\pi4$: $\\frac{4-1}{4+1}=\\frac35$ gives $Q=\\left(\\frac35\\sqrt2,-\\frac35\\cdot\\frac1{\\sqrt2}\\right)$ ✓."
+   ]
+  },
+  {
+   "q_no": 36,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Locus of the centre of a circle touching two given circles (focal definition of an ellipse)"
+   ],
+   "level": 2,
+   "question": "Let $C_1$ and $C_2$ be two circles with $C_2$ lying inside $C_1$. A circle $C$ lying inside $C_1$ touches $C_1$ internally and $C_2$ externally. Identify the locus of the centre of $C$.",
+   "answer": "An ellipse with foci at the centres of $C_1$ and $C_2$",
+   "key_idea": "The distances of the centre of $C$ from $O_1,O_2$ are $r_1-r$ and $r+r_2$: their sum $r_1+r_2$ does not depend on $r$.",
+   "solution": [
+    "Let $C_1,C_2$ have centres $O_1,O_2$ and radii $r_1,r_2$. Let the variable circle $C$ have radius $r$ and centre $O$.",
+    "$C$ touches $C_1$ internally: $OO_1=r_1-r$. $C$ touches $C_2$ externally: $OO_2=r+r_2$.",
+    "Adding: $OO_1+OO_2=r_1+r_2$, a constant independent of $r$.",
+    "This constant is greater than $O_1O_2$ because $C_2$ lies inside $C_1$ ($O_1O_2<r_1-r_2<r_1+r_2$).",
+    "Hence the locus of $O$ is an ellipse with foci $O_1$ and $O_2$ (major axis $r_1+r_2$)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A circle touching $C_1$ internally and $C_2$ externally (with $C_2$ inside $C_1$) has $OO_1+OO_2=r_1+r_2$: ellipse with foci at the two centres.",
+    "Touching both externally, or both internally: $|OO_1-OO_2|=|r_1-r_2|$ - a branch of a hyperbola (foci at the two centres).",
+    "If the circles are concentric the foci coincide and the locus is a circle (the sum condition gives a circle of radius $\\frac{r_1+r_2}{2}$).",
+    "Eccentricity of the locus here: $e=\\frac{O_1O_2}{r_1+r_2}$."
+   ]
+  },
+  {
+   "q_no": 37,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Chord joining two points of an ellipse with given eccentric angles",
+    "Condition for a line to cut an ellipse at points of given eccentric angle difference"
+   ],
+   "level": 2,
+   "question": "Find the condition so that the line $px+qy=r$ intersects the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ in points whose eccentric angles differ by $\\frac\\pi4$.",
+   "answer": "$a^2p^2+b^2q^2=r^2\\sec^2\\frac{\\pi}{8}=(4-2\\sqrt2)\\,r^2$",
+   "key_idea": "The chord joining the points with eccentric angles $\\alpha,\\beta$ is $\\frac xa\\cos\\frac{\\alpha+\\beta}{2}+\\frac yb\\sin\\frac{\\alpha+\\beta}{2}=\\cos\\frac{\\alpha-\\beta}{2}$; compare it with $px+qy=r$.",
+   "solution": [
+    "(In the PDF the ellipse and the angle are not legible; the key $a^2p^2+b^2q^2=r^2\\sec^2\\left(\\cdot\\right)=(4-2\\sqrt2)r^2$ fits $\\frac\\pi4$, since $\\sec^2\\frac\\pi8=4-2\\sqrt2$.)",
+    "Let the eccentric angles be $\\alpha,\\beta$ with $\\alpha-\\beta=\\frac\\pi4$. Put $\\varphi=\\frac{\\alpha+\\beta}{2}$ and $\\delta=\\frac{\\alpha-\\beta}{2}=\\frac\\pi8$.",
+    "The chord joining them is $\\frac xa\\cos\\varphi+\\frac yb\\sin\\varphi=\\cos\\delta$.",
+    "Write $px+qy=r$ as $\\frac{p\\cos\\delta}{r}x+\\frac{q\\cos\\delta}{r}y=\\cos\\delta$ and compare: $\\frac{\\cos\\varphi}{a}=\\frac{p\\cos\\delta}{r}$ ....(1) and $\\frac{\\sin\\varphi}{b}=\\frac{q\\cos\\delta}{r}$ ....(2).",
+    "Square and add (1)$^2$ and (2)$^2$ after clearing $a,b$: $1=\\cos^2\\varphi+\\sin^2\\varphi=\\frac{(a^2p^2+b^2q^2)\\cos^2\\delta}{r^2}$.",
+    "So $a^2p^2+b^2q^2=r^2\\sec^2\\delta=r^2\\sec^2\\frac\\pi8$.",
+    "$\\sec^2\\frac\\pi8=\\frac{2}{1+\\cos\\frac\\pi4}=\\frac{4}{2+\\sqrt2}=4-2\\sqrt2$, so the condition is $a^2p^2+b^2q^2=(4-2\\sqrt2)\\,r^2$."
+   ],
+   "solution_source": "written",
+   "alternate_solutions": [
+    {
+     "idea": "Map the ellipse to its auxiliary circle: points with eccentric angles $\\alpha,\\beta$ become points at angle $\\alpha-\\beta$ at the centre, so the chord is at distance $\\cos\\frac{\\alpha-\\beta}{2}$ from the centre.",
+     "solution": [
+      "The map $(x,y)\\to\\left(\\frac xa,\\frac yb\\right)$ sends the ellipse to the unit circle and the points with eccentric angles $\\alpha,\\beta$ to $(\\cos\\alpha,\\sin\\alpha),(\\cos\\beta,\\sin\\beta)$.",
+      "The line $px+qy=r$ goes to $(ap)X+(bq)Y=r$.",
+      "The two points subtend the angle $\\alpha-\\beta=\\frac\\pi4$ at the centre, so the chord is at distance $\\cos\\frac\\pi8$ from the centre of the unit circle.",
+      "The distance of $(ap)X+(bq)Y=r$ from the origin is $\\frac{|r|}{\\sqrt{a^2p^2+b^2q^2}}$. So $\\frac{|r|}{\\sqrt{a^2p^2+b^2q^2}}=\\cos\\frac\\pi8$.",
+      "Hence $a^2p^2+b^2q^2=r^2\\sec^2\\frac\\pi8=(4-2\\sqrt2)r^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The chord joining $P(\\alpha),Q(\\beta)$ of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $\\frac xa\\cos\\frac{\\alpha+\\beta}{2}+\\frac yb\\sin\\frac{\\alpha+\\beta}{2}=\\cos\\frac{\\alpha-\\beta}{2}$.",
+    "The line $px+qy=r$ cuts the ellipse at points whose eccentric angles differ by $2\\delta$ iff $a^2p^2+b^2q^2=r^2\\sec^2\\delta$; for $2\\delta=\\frac\\pi2$ the condition is $a^2p^2+b^2q^2=2r^2$.",
+    "The line is a tangent iff $\\delta=0$: $a^2p^2+b^2q^2=r^2$ (the usual tangency condition).",
+    "Half-angle values: $\\sec^2\\frac\\pi8=4-2\\sqrt2$, $\\cos^2\\frac\\pi8=\\frac{2+\\sqrt2}{4}$."
+   ]
+  },
+  {
+   "q_no": 38,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Focal perpendicular on a tangent and the directrix of an ellipse",
+    "Intersection of two lines"
+   ],
+   "level": 3,
+   "question": "Prove that, in an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$, the perpendicular from a focus upon any tangent and the line joining the centre of the ellipse to the point of contact meet on the corresponding directrix.",
+   "answer": "The two lines meet at $x=\\frac ae$, a point of the directrix",
+   "key_idea": "The perpendicular from $S(ae,0)$ has direction $\\left(\\frac{x_1}{a^2},\\frac{y_1}{b^2}\\right)$, the normal vector of the tangent; combining it with $y=\\frac{y_1}{x_1}x$ gives $x=\\frac ae$.",
+   "solution": [
+    "(The ellipse equation is not legible in the PDF; it is $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with focus $S(ae,0)$ and directrix $x=\\frac ae$. The PDF's working is partly hidden; its last visible line is $a^2e^2x=a^3e$.)",
+    "Tangent at $P(x_1,y_1)$: $\\frac{xx_1}{a^2}+\\frac{yy_1}{b^2}=1$; its normal vector is $\\left(\\frac{x_1}{a^2},\\frac{y_1}{b^2}\\right)$.",
+    "Perpendicular from $S(ae,0)$ to the tangent: $\\frac{x-ae}{x_1/a^2}=\\frac{y}{y_1/b^2}$, i.e. $\\frac{y_1(x-ae)}{b^2}=\\frac{x_1y}{a^2}$ ....(1).",
+    "The line joining the centre to the point of contact: $y=\\frac{y_1}{x_1}x$ ....(2).",
+    "For the point of intersection substitute (2) in (1): $\\frac{y_1(x-ae)}{b^2}=\\frac{y_1x}{a^2}$, so $\\frac{x-ae}{b^2}=\\frac{x}{a^2}$ (for $y_1\\ne0$).",
+    "$a^2(x-ae)=b^2x$, i.e. $(a^2-b^2)x=a^3e$, so $a^2e^2x=a^3e$.",
+    "Hence $x=\\frac ae$: the point of intersection lies on the directrix $x=\\frac ae$."
+   ],
+   "solution_source": "written",
+   "alternate_solutions": [
+    {
+     "idea": "Pole-polar view: the pole $Z$ of the focal line parallel to the tangent lies on the directrix (polar of $S$), on the diameter $CP$, and on the perpendicular from $S$.",
+     "solution": [
+      "Let $m$ be the line through the focus $S(ae,0)$ parallel to the tangent at $P(x_1,y_1)$. Let $Z=(h,k)$ be the pole of $m$, so $m$ is $\\frac{hx}{a^2}+\\frac{ky}{b^2}=1$.",
+      "Since $m$ passes through $S$: $\\frac{h\\,ae}{a^2}=1$, so $h=\\frac ae$: $Z$ lies on the directrix $x=\\frac ae$.",
+      "$m\\parallel$ tangent at $P$ means $(h/a^2,\\ k/b^2)\\parallel(x_1/a^2,\\ y_1/b^2)$, i.e. $(h,k)\\parallel(x_1,y_1)$: $Z$ lies on the line $CP$.",
+      "$\\vec{SZ}=\\left(\\frac ae-ae,\\ k\\right)=\\left(\\frac{b^2}{ae},k\\right)=b^2\\left(\\frac{h}{a^2},\\frac{k}{b^2}\\right)$ (as $h=\\frac ae$ and $\\frac{h}{a^2}=\\frac{1}{ae}$), parallel to the normal vector of $m$.",
+      "So $SZ\\perp m$, i.e. $SZ$ is the perpendicular from $S$ to the tangent at $P$ (it passes through $S$ and is perpendicular to the tangent's direction).",
+      "Hence the perpendicular from $S$ upon the tangent and the line $CP$ both pass through $Z$, a point of the directrix."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The directrix $x=\\frac ae$ is the polar of the focus $(ae,0)$; the foot of the perpendicular from a focus on a tangent lies on the auxiliary circle.",
+    "The pole of a line through the focus lies on the directrix and the line joining the focus to it is perpendicular to that line (focal property of poles).",
+    "The pole of a line parallel to the tangent at $P$ lies on the diameter $CP$ (conjugate-direction property).",
+    "Instance: for $\\frac{x^2}{4}+y^2=1$ (so $ae=\\sqrt3$, $\\frac ae=\\frac{2}{\\sqrt3}$) and $P(\\sqrt2,\\frac1{\\sqrt2})$ the two lines meet at $x=\\frac{2}{\\sqrt3}$."
+   ]
+  },
+  {
+   "q_no": 39,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal at the end of the latus rectum of a hyperbola",
+    "Area of the triangle formed with the transverse axis"
+   ],
+   "level": 3,
+   "question": "Tangent and normal are drawn at the upper end $(x_1,y_1)$ of the latus rectum $P$ with $x_1>0$ and $y_1>0$, of the hyperbola $\\frac{x^2}{4}-\\frac{y^2}{12}=1$, intersecting the transverse axis at $T$ and $G$ respectively. Find the area of the triangle $PTG$.",
+   "answer": "$45$",
+   "key_idea": "At the end of the latus rectum $P=\\left(ae,\\frac{b^2}{a}\\right)$ the tangent cuts the axis at $\\left(\\frac ae,0\\right)$ and the normal at $(ae^3,0)$.",
+   "solution": [
+    "(The hyperbola equation is not legible in the PDF; the working's $e^2=1+\\cdot=4$ and $b^2=12$ give $\\frac{x^2}{4}-\\frac{y^2}{12}=1$, which reproduces the key $45$.) Here $a=2$, $b^2=12$, $e^2=1+\\frac{b^2}{a^2}=4$, $e=2$.",
+    "$P=(x_1,y_1)=\\left(ae,\\frac{b^2}{a}\\right)=(4,6)$.",
+    "Tangent at $P$: $\\frac{xx_1}{a^2}-\\frac{yy_1}{b^2}=1$. Putting $y=0$: $T=\\left(\\frac{a^2}{x_1},0\\right)=\\left(\\frac ae,0\\right)=(1,0)$.",
+    "Normal at $P$: $\\frac{a^2x}{x_1}+\\frac{b^2y}{y_1}=a^2+b^2$. Putting $y=0$: $G=\\left(\\frac{x_1(a^2+b^2)}{a^2},0\\right)=(ae^3,0)=(16,0)$.",
+    "$TG=ae^3-\\frac ae=\\frac{a(e^4-1)}{e}=\\frac{2\\cdot15}{2}=15$; the height of $P$ above the axis is $y_1=\\frac{b^2}{a}=a(e^2-1)=6$.",
+    "Area of $\\triangle PTG=\\frac12\\cdot TG\\cdot y_1=\\frac12\\cdot15\\cdot6=45$ (in general $\\frac{a^2(e^4-1)(e^2-1)}{2e}$)."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's hyperbola equation and most working lines are grey boxes (missing images); visible are 'G: (ae^3, 0)', 'e^2 = 1 + ... = 4, e = 2, b^2 = 12' and the key 45. The hyperbola x^2/4 - y^2/12 = 1 was recovered from them and the working was written out (it reproduces 45).",
+   "alternate_solutions": [
+    {
+     "idea": "Use the focal distances and the angle-bisector theorem: the tangent bisects $\\angle SPS'$ internally and the normal bisects it externally, with $PS=\\frac{b^2}{a}=6$ and $PS'=PS+2a=10$.",
+     "solution": [
+      "For the hyperbola $\\frac{x^2}{4}-\\frac{y^2}{12}=1$: foci $S(4,0),\\ S'(-4,0)$. At the end of the latus rectum $PS=\\frac{b^2}{a}=6$ and $PS'=PS+2a=10$.",
+      "The tangent at $P$ bisects $\\angle SPS'$ internally: $\\frac{ST}{TS'}=\\frac{PS}{PS'}=\\frac{6}{10}$, so $T$ divides $SS'$ in the ratio $3:5$: $T=4-\\frac38\\cdot8=1$.",
+      "The normal bisects the exterior angle: $\\frac{GS}{GS'}=\\frac{6}{10}$ with $G$ outside $SS'$ beyond $S$: $\\frac{G-4}{G+4}=\\frac35$, so $G=16$.",
+      "$TG=15$ and the height of $P$ is $6$.",
+      "Area $=\\frac12\\cdot15\\cdot6=45$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: the latus rectum end is $\\left(ae,\\frac{b^2}{a}\\right)$; the tangent there meets the transverse axis at $\\left(\\frac ae,0\\right)$ and the normal at $(ae^3,0)$.",
+    "General tangent at $(x_1,y_1)$ meets the axis at $\\left(\\frac{a^2}{x_1},0\\right)$; the normal meets it at $\\left(\\frac{(a^2+b^2)x_1}{a^2},0\\right)=(e^2x_1,0)$.",
+    "For a hyperbola the tangent at $P$ bisects $\\angle SPS'$ (internal) and the normal bisects the external angle; for an ellipse it is the other way round.",
+    "$PT\\perp PG$, so the triangle $PTG$ is right-angled at $P$."
+   ]
+  },
+  {
+   "q_no": 40,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangents from an external point to a hyperbola (chord of contact)",
+    "Area of the triangle formed by the tangents and the chord of contact"
+   ],
+   "level": 2,
+   "question": "Find the equations of the tangents to the hyperbola $x^2-9y^2=9$ that are drawn from $(3,2)$. Find the area of the triangle that these tangents form with their chord of contact.",
+   "answer": "Tangents $5x-12y+9=0$ and $x-3=0$; area $8$ sq. units",
+   "key_idea": "Chord of contact of $(3,2)$ is $x-6y=3$; solving it with the hyperbola gives the two points of contact.",
+   "solution": [
+    "The chord of contact (C.O.C.) with respect to $P(3,2)$ is $T=0$: $3x-9\\cdot2y=9$, i.e. $x-6y=3$ ....(1).",
+    "The hyperbola: $x^2-9y^2=9$ ....(2).",
+    "Solving (1),(2): put $x=3+6y$: $(3+6y)^2-9y^2=9$, i.e. $27y^2+36y=0$.",
+    "$y=0$ or $y=-\\frac43$, giving $x=3$ or $x=-5$. The points of contact are $Q(3,0)$ and $R\\left(-5,-\\frac43\\right)$.",
+    "Tangent at $Q(3,0)$: $3x=9$, i.e. $PQ:\\ x-3=0$.",
+    "Tangent at $R\\left(-5,-\\frac43\\right)$: $-5x-9\\left(-\\frac43\\right)y=9$, i.e. $PR:\\ 5x-12y+9=0$ (it passes through $(3,2)$: $15-24+9=0$).",
+    "The triangle $PQR$ has $P(3,2),Q(3,0),R\\left(-5,-\\frac43\\right)$: base $PQ=2$ along $x=3$ and the horizontal distance of $R$ from $x=3$ is $8$.",
+    "Area $=\\frac12\\cdot2\\cdot8=8$ square units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the tangents with the slope form $y=mx+c$ and the condition $c^2=a^2m^2-b^2$; then get $R$ from the tangent.",
+     "solution": [
+      "The hyperbola is $\\frac{x^2}{9}-\\frac{y^2}{1}=1$: $a^2=9,\\ b^2=1$. A tangent through $(3,2)$: $y=mx+2-3m$, so $c=2-3m$.",
+      "Tangency: $c^2=a^2m^2-b^2$, i.e. $(2-3m)^2=9m^2-1$, so $4-12m+9m^2=9m^2-1$ and $m=\\frac5{12}$.",
+      "The tangent: $y-2=\\frac{5}{12}(x-3)$, i.e. $5x-12y+9=0$. The second tangent is the vertical one, $x=3$ (slope $\\to\\infty$; it is the tangent at the vertex $(3,0)$).",
+      "Contact point on $5x-12y+9=0$: it touches at $R=\\left(-\\frac{a^2m}{c},-\\frac{b^2}{c}\\right)$ with $c=2-\\frac54=\\frac34$: $R=\\left(-\\frac{9\\cdot5/12}{3/4},-\\frac{1}{3/4}\\right)=\\left(-5,-\\frac43\\right)$.",
+      "Triangle $P(3,2),Q(3,0),R\\left(-5,-\\frac43\\right)$: base $PQ=2$ (on $x=3$), height $=3-(-5)=8$, area $=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord of contact of $(h,k)$ w.r.t. $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $\\frac{hx}{a^2}-\\frac{ky}{b^2}=1$.",
+    "Line $y=mx+c$ touches $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ iff $c^2=a^2m^2-b^2$, at the point $\\left(-\\frac{a^2m}{c},-\\frac{b^2}{c}\\right)$.",
+    "A vertical (or horizontal) tangent is missed by the slope form: always test $x=h$ separately."
+   ]
+  },
+  {
+   "q_no": 41,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal at the end of the latus rectum of a hyperbola",
+    "Asymptotes and eccentricity of a hyperbola"
+   ],
+   "level": 2,
+   "question": "The normal to the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ drawn at an extremity of its latus rectum is parallel to an asymptote. Show that the eccentricity is equal to the square root of $\\frac{1+\\sqrt5}{2}$.",
+   "answer": "$e=\\sqrt{\\frac{1+\\sqrt5}{2}}$",
+   "key_idea": "At $\\left(ae,\\frac{b^2}{a}\\right)$ the normal has slope $-\\frac1e$; setting $\\frac1e=\\frac ba$ and $b^2=a^2(e^2-1)$ gives $e^4-e^2-1=0$.",
+   "solution": [
+    "(The hyperbola equation and several lines of the PDF's working are not legible; the surviving lines are $b^2=a^2(e^2-1)$, 'Let $e^2=t$' and $t^2-t-1=0$.) The extremity of the latus rectum is $P\\left(ae,\\frac{b^2}{a}\\right)$.",
+    "Normal at $(x_1,y_1)$: $\\frac{a^2x}{x_1}+\\frac{b^2y}{y_1}=a^2+b^2$, so its slope is $-\\frac{a^2y_1}{b^2x_1}$. At $P$: slope $=-\\frac{a^2\\cdot b^2/a}{b^2\\cdot ae}=-\\frac1e$ ....(1).",
+    "It is parallel to an asymptote $y=\\pm\\frac bax$: $\\frac1e=\\frac ba$ in magnitude ....(2).",
+    "We know $b^2=a^2(e^2-1)$ ....(3).",
+    "From (2),(3): $\\frac{b^2}{a^2}=\\frac{1}{e^2}=e^2-1$, so $e^4-e^2-1=0$.",
+    "Let $e^2=t$: $t^2-t-1=0$, so $t=\\frac{1\\pm\\sqrt5}{2}$.",
+    "As $t=e^2>1>0$, $t=\\frac{1+\\sqrt5}{2}$. Hence $e=\\sqrt{\\frac{1+\\sqrt5}{2}}$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's hyperbola and most working lines are grey boxes (missing images); the visible fragments are b^2 = a^2(e^2-1), 'Let e^2 = t' and t^2 - t - 1 = 0. The solution was written out from the standard derivation (it reaches exactly that quadratic).",
+   "alternate_solutions": [
+    {
+     "idea": "Write the asymptote angle as $\\varphi$ with $e=\\sec\\varphi$; the normal slope $-\\frac1e=-\\cos\\varphi$ must equal $-\\tan\\varphi$ in magnitude.",
+     "solution": [
+      "Let the asymptote $y=\\frac bax$ make an angle $\\varphi$ with the transverse axis: $\\tan\\varphi=\\frac ba$, so $e=\\sqrt{1+\\tan^2\\varphi}=\\sec\\varphi$.",
+      "The normal at the latus-rectum end $P\\left(ae,\\frac{b^2}{a}\\right)$ meets the axis at $G=(ae^3,0)$, so its slope is $\\frac{0-b^2/a}{ae^3-ae}=-\\frac{b^2}{a^2e(e^2-1)}=-\\frac1e=-\\cos\\varphi$ (using $b^2=a^2(e^2-1)$).",
+      "Parallel to the asymptote: $\\cos\\varphi=\\tan\\varphi$, i.e. $\\cos^2\\varphi=\\sin\\varphi$, so $\\sin^2\\varphi+\\sin\\varphi-1=0$.",
+      "$\\sin\\varphi=\\frac{\\sqrt5-1}{2}$ (the root in $(0,1)$).",
+      "$e^2=\\sec^2\\varphi=\\frac{1}{\\cos^2\\varphi}=\\frac1{\\sin\\varphi}=\\frac{2}{\\sqrt5-1}=\\frac{\\sqrt5+1}{2}$, so $e=\\sqrt{\\frac{1+\\sqrt5}{2}}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ the end of the latus rectum is $\\left(ae,\\frac{b^2}{a}\\right)$; the normal there has slope $-\\frac1e$ and the tangent has slope $e$.",
+    "The asymptotes are $y=\\pm\\frac bax$; with $\\varphi$ their inclination, $e=\\sec\\varphi$ and $\\frac ba=\\tan\\varphi$.",
+    "$e^4-e^2-1=0$ gives $e^2=\\frac{1+\\sqrt5}{2}$ (the golden ratio $\\phi$): the hyperbola with $e^2=\\phi$ is the one whose latus-rectum normal is parallel to an asymptote.",
+    "Quick check: $e^2=1.618$, $\\frac{b^2}{a^2}=e^2-1=0.618=\\frac1{e^2}$ ✓."
+   ]
+  },
+  {
+   "q_no": 42,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangents to a circle and a hyperbola at points on a line through the origin",
+    "Locus by elimination of the slope"
+   ],
+   "level": 4,
+   "question": "A line through the origin meets the circle $x^2+y^2=a^2$ at $P$ and the hyperbola $x^2-y^2=a^2$ at $Q$. If the locus of the point of intersection of the tangent at $P$ to the circle and the tangent at $Q$ to the hyperbola is the curve $a^4(x^2-a^2)+\\lambda x^2y^4=0$, then find the value of $\\lambda$.",
+   "answer": "$4$",
+   "key_idea": "With $y=mx$ the two tangents become $x+my=a\\sqrt{1+m^2}$ and $x-my=a\\sqrt{1-m^2}$; squaring and combining eliminates $m$.",
+   "solution": [
+    "(The PDF's working is mostly grey boxes; it is written out here and ends at the legible line $(a^4+4y^4)x^2=a^6$.) Let the line be $y=mx$.",
+    "It meets the circle at $P=\\left(\\frac{a}{\\sqrt{1+m^2}},\\frac{am}{\\sqrt{1+m^2}}\\right)$ and the hyperbola ($x^2(1-m^2)=a^2$) at $Q=\\left(\\frac{a}{\\sqrt{1-m^2}},\\frac{am}{\\sqrt{1-m^2}}\\right)$.",
+    "Tangent at $P$ to the circle: $xx_P+yy_P=a^2$, i.e. $x+my=a\\sqrt{1+m^2}$ ....(1).",
+    "Tangent at $Q$ to the hyperbola: $xx_Q-yy_Q=a^2$, i.e. $x-my=a\\sqrt{1-m^2}$ ....(2).",
+    "(1)$^2-$(2)$^2$: $4mxy=a^2(1+m^2)-a^2(1-m^2)=2a^2m^2$, so $m=\\frac{2xy}{a^2}$ ($m\\ne0$).",
+    "(1)$^2+$(2)$^2$: $2x^2+2m^2y^2=2a^2$, i.e. $x^2+m^2y^2=a^2$.",
+    "Substitute $m=\\frac{2xy}{a^2}$: $x^2+\\frac{4x^2y^4}{a^4}=a^2$, i.e. $(a^4+4y^4)x^2=a^6$.",
+    "So $a^4(x^2-a^2)+4x^2y^4=0$ and $\\lambda=4$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's working is grey boxes (missing images) except the last line (a^4 + 4y^4) x^2 = a^6; the full solution was written from scratch.",
+   "useful_results": [
+    "Tangent to $x^2+y^2=a^2$ at $(x_1,y_1)$: $xx_1+yy_1=a^2$; tangent to $x^2-y^2=a^2$ at $(x_2,y_2)$: $xx_2-yy_2=a^2$.",
+    "A line through the origin $y=mx$ meets $x^2-y^2=a^2$ only if $|m|<1$; the points are $\\frac{a}{\\sqrt{1\\mp m^2}}(1,m)$ for the hyperbola/circle.",
+    "To eliminate a parameter that appears only as $\\sqrt{1\\pm m^2}$: square, then add and subtract the two squares.",
+    "Check ($a=1$, $m=\\frac12$): the tangents meet at $x=\\frac{\\sqrt5+\\sqrt3}{4}\\approx0.992$, $y=\\frac{\\sqrt5-\\sqrt3}{2}\\approx0.252$, and $x^2-1+4x^2y^4\\approx-0.0158+0.0159\\approx0$."
+   ]
+  },
+  {
+   "q_no": 43,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Pencil of conics and the focus-directrix property of a parabola",
+    "Sum of the focal distances of the intersection points"
+   ],
+   "level": 3,
+   "question": "The graphs of $x^2+y^2+6x-24y+72=0$ and $x^2-y^2+6x+16y-46=0$ intersect at four points. Compute the sum of the distances of these four points from the point $(-3,2)$.",
+   "answer": "$40$",
+   "key_idea": "Adding the two equations removes the $y^2$ terms and leaves a parabola with focus $(-3,2)$; the focal distance of each point is its $y$-coordinate.",
+   "solution": [
+    "$x^2+y^2+6x-24y+72=0$ ....(1) and $x^2-y^2+6x+16y-46=0$ ....(2).",
+    "(1)$+$(2): $2x^2+12x-8y+26=0$, i.e. $x^2+6x-4y+13=0$, so $(x+3)^2=4(y-1)$ ....(3): a parabola with vertex $(-3,1)$ and $a=1$, so the focus is $(-3,2)$ and the directrix is $y=0$.",
+    "The four intersection points lie on this parabola, so the distance of each from the focus $(-3,2)$ equals its distance from the directrix: $y$.",
+    "(1)$-$(2): $2y^2-40y+118=0$, i.e. $y^2-20y+59=0$, so $y_1+y_2=20$ (the two values of $y$; real, $y=10\\pm\\sqrt{41}$).",
+    "For each of these $y$ values, (3) gives two values of $x$ ($y>1$), so the four points have $y$-coordinates $y_1,y_1,y_2,y_2$.",
+    "Sum of distances from $(-3,2)$ $=2(y_1+y_2)=2\\times20=40$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise the parabola by $(-3+2t,\\ 1+t^2)$; the focal distance is $1+t^2$ and substituting in the circle gives a quartic in $t$ whose root sum of squares is what we need.",
+     "solution": [
+      "From $(x+3)^2=4(y-1)$ write $x=-3+2t$, $y=1+t^2$. The focus is $(-3,2)$ and the distance of the point from it is $y-0=1+t^2$.",
+      "The circle (1) is $(x+3)^2+(y-12)^2=81$. Substitute: $4t^2+(t^2-11)^2=81$, i.e. $t^4-18t^2+40=0$.",
+      "Its four roots $t_i$ give the four intersection points; $t^2$ takes the two values $u_1,u_2$ with $u_1+u_2=18$, each for two values of $t$ ($\\pm$). So $\\sum t_i^2=2(u_1+u_2)=36$.",
+      "Sum of distances $=\\sum(1+t_i^2)=4+36=40$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Adding or subtracting two conics can remove the $y^2$ term, giving a parabola (a pencil of conics); look for a focus in the data (here the given point $(-3,2)$).",
+    "For a parabola, distance from the focus $=$ distance from the directrix; for $(x-h)^2=4a(y-k)$ the focal distance of a point is $y-k+a$.",
+    "Sum of the $y$-coordinates of the intersection points of a circle and a parabola with a vertical axis can be read from the resultant in $y$ (here $y^2-20y+59=0$, each root giving two points).",
+    "Check numerically: $y=10\\pm\\sqrt{41}$; the two $y$ values give $2(10+\\sqrt{41})+2(10-\\sqrt{41})=40$."
+   ]
+  },
+  {
+   "q_no": 44,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Confocal ellipse and hyperbola (eccentricities and focal semi-axes)",
+    "Standard equations of an ellipse and a hyperbola"
+   ],
+   "level": 2,
+   "question": "An ellipse and a hyperbola have their principal axes along the coordinate axes and have common foci separated by a distance $2\\sqrt{13}$; the difference of their focal semi axes is equal to $4$. If the ratio of their eccentricities is $\\frac37$, find the equations of these curves.",
+   "answer": "$\\frac{x^2}{49}+\\frac{y^2}{36}=1$ and $\\frac{x^2}{9}-\\frac{y^2}{4}=1$",
+   "key_idea": "Common foci mean $ae=AE=\\sqrt{13}$, so the eccentricity ratio $\\frac eE=\\frac Aa=\\frac37$ fixes the semi-axes.",
+   "solution": [
+    "(In the PDF the distance between the foci is hidden by a grey box and the answers likewise; $2\\sqrt{13}$ is the value that makes the problem consistent - see the note.) Let the ellipse have $a,b,e$ and the hyperbola $A,B,E$.",
+    "Common foci separated by $2\\sqrt{13}$: $ae=AE=\\sqrt{13}$.",
+    "The difference of the focal semi-axes is $4$: $a-A=4$ ....(2); the ratio of eccentricities: $\\frac eE=\\frac37$, i.e. $\\frac Aa=\\frac37$ (from $ae=AE$) ....(1).",
+    "From (1): $A=\\frac{3a}{7}$; (2): $a-\\frac{3a}{7}=4$, so $a=7$ and $A=3$.",
+    "Using $b^2=a^2(1-e^2)=a^2-a^2e^2$ and $B^2=A^2(E^2-1)=A^2E^2-A^2$: $b^2=49-13=36$ and $B^2=13-9=4$.",
+    "Ellipse: $\\frac{x^2}{49}+\\frac{y^2}{36}=1$. Hyperbola: $\\frac{x^2}{9}-\\frac{y^2}{4}=1$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Common foci $(\\pm c,0)$: for the ellipse $a^2-b^2=c^2$, for the hyperbola $A^2+B^2=c^2$, and $ae=AE=c$.",
+    "For confocal conics the ratio of eccentricities equals the inverse ratio of the focal semi-axes: $\\frac eE=\\frac Aa$.",
+    "The data '$a-A=4$ and $\\frac Aa=\\frac37$' fix $a,A$ without knowing $c$; $c$ is needed only for $b,B$.",
+    "A confocal ellipse and hyperbola cut each other orthogonally."
+   ]
+  },
+  {
+   "q_no": 45,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangent to a hyperbola and the perpendicular from the centre",
+    "Power of a point with respect to a circle"
+   ],
+   "level": 3,
+   "question": "From the centre $C$ of the hyperbola $x^2-y^2=9$, $CM$ is drawn perpendicular to the tangent at any point of the curve, meeting the tangent at $M$ and the curve at $N$. Find the value of the product $(CM)(CN)$.",
+   "answer": "$9$",
+   "key_idea": "$M$ lies on the circle with diameter $PN$ (right angle at $M$) and $C,M,N$ are collinear, so $CM\\cdot CN$ is the power of $C$ with respect to that circle.",
+   "solution": [
+    "Tangent at $P(a\\sec\\theta,a\\tan\\theta)$, $a=3$: $x\\sec\\theta-y\\tan\\theta=a$, i.e. $x-y\\sin\\theta=a\\cos\\theta$ ....(1).",
+    "Its slope is $\\frac{1}{\\sin\\theta}$, so the perpendicular slope is $-\\sin\\theta$.",
+    "The line through $C$ perpendicular to (1): $y=mx+c$ with $m=-\\sin\\theta$, $c=0$: $x\\sin\\theta+y=0$ ....(2).",
+    "Solve (2) with $x^2-y^2=a^2$: $x^2-x^2\\sin^2\\theta=a^2$, so $x^2=a^2\\sec^2\\theta$ and $x=a\\sec\\theta$. Hence the point of the curve on this line is $N\\equiv(a\\sec\\theta,\\ -a\\tan\\theta)$.",
+    "$CM\\perp$ tangent, so $\\angle PMN=90^\\circ$ and $M$ lies on the circle with diameter $PN$; $C,M,N$ are collinear, so $CN\\cdot CM$ is the power of $C$ with respect to this circle.",
+    "The circle is $(x-a\\sec\\theta)^2+(y-a\\tan\\theta)(y+a\\tan\\theta)=0$.",
+    "Power of $C(0,0)$: $a^2\\sec^2\\theta-a^2\\tan^2\\theta=a^2=9$. So $CN\\cdot CM=9$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF labels the point of the hyperbola 'M = (a sec t, -a tan t)', but in the question M is the foot on the tangent; the point on the curve is N. Relabelled (the argument and the answer 9 are unchanged).",
+   "alternate_solutions": [
+    {
+     "idea": "Polar form about the centre: the tangent at distance $p$ with normal direction $\\varphi$ has $p^2=a^2\\cos2\\varphi$ and the curve in direction $\\varphi$ has $r^2\\cos2\\varphi=a^2$.",
+     "solution": [
+      "For $x^2-y^2=a^2$ the tangent with unit normal $(\\cos\\varphi,\\sin\\varphi)$ is at distance $p$ from the centre with $p^2=a^2\\cos^2\\varphi-a^2\\sin^2\\varphi=a^2\\cos2\\varphi$ (tangency condition of $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ with $b=a$).",
+      "$M$ is the foot of the perpendicular from $C$ on the tangent, so $CM=p$ and $M$ lies in the direction $\\varphi$.",
+      "The curve in the direction $\\varphi$: a point $r(\\cos\\varphi,\\sin\\varphi)$ satisfies $r^2(\\cos^2\\varphi-\\sin^2\\varphi)=a^2$, so $CN^2=\\frac{a^2}{\\cos2\\varphi}$.",
+      "$CM^2\\cdot CN^2=a^2\\cos2\\varphi\\cdot\\frac{a^2}{\\cos2\\varphi}=a^4$.",
+      "So $CM\\cdot CN=a^2=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent at the parametric point $(a\\sec\\theta,a\\tan\\theta)$ of $x^2-y^2=a^2$: $x\\sec\\theta-y\\tan\\theta=a$.",
+    "The point $N=(a\\sec\\theta,-a\\tan\\theta)$ is the reflection of $P$ in the transverse axis (the perpendicular from the centre to the tangent meets the curve there).",
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $p^2=a^2\\cos^2\\varphi-b^2\\sin^2\\varphi$ (tangent at distance $p$) and $r^2\\left(\\frac{\\cos^2\\varphi}{a^2}-\\frac{\\sin^2\\varphi}{b^2}\\right)=1$ along the direction $\\varphi$.",
+    "The product $CM\\cdot CN$ is independent of $\\theta$ here because the hyperbola is rectangular ($a=b$); for general $a\\ne b$ it depends on the direction $\\varphi$."
+   ]
+  },
+  {
+   "q_no": 46,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Hyperbola from the focus-directrix definition",
+    "Asymptotes of a hyperbola (condition for a pair of lines)"
+   ],
+   "level": 2,
+   "question": "A hyperbola has one focus at the origin and its eccentricity $=\\sqrt2$, and one of its directrices is $x+y+1=0$. Find the equation of its asymptotes.",
+   "answer": "$x+1=0$ and $y+1=0$",
+   "key_idea": "The focus-directrix property gives $x^2+y^2=(x+y+1)^2$; the asymptotes have the same second-degree part and the constant that makes the equation a pair of lines.",
+   "solution": [
+    "(The eccentricity is hidden in the PDF; $e=\\sqrt2$ is the value that gives its printed equation $x^2+y^2=(x+y+1)^2$.) For $S=(0,0)$, directrix $x+y+1=0$: $SP^2=e^2\\cdot(\\text{distance to the directrix})^2$, i.e. $x^2+y^2=2\\cdot\\frac{(x+y+1)^2}{2}$.",
+    "So $x^2+y^2=(x+y+1)^2$, which simplifies to $2xy+2x+2y+1=0$.",
+    "The asymptotes differ from the hyperbola only in the constant: $2xy+2x+2y+c=0$ is a pair of lines.",
+    "For a pair of straight lines the condition $abc+2fgh-af^2-bg^2-ch^2=0$ with $a=b=0$, $h=1$, $g=f=1$ gives $2-c=0$, so $c=2$.",
+    "Combined equation of the asymptotes: $2xy+2x+2y+2=0$, i.e. $xy+x+y+1=0$.",
+    "$(x+1)(y+1)=0$, so the asymptotes are $x+1=0$ and $y+1=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A rectangular hyperbola ($e=\\sqrt2$) has perpendicular asymptotes at $45^\\circ$ to the transverse axis; locate the centre from the focus and directrix.",
+     "solution": [
+      "$e=\\sqrt2$: the hyperbola is rectangular, its asymptotes are perpendicular and make $45^\\circ$ with the transverse axis.",
+      "The transverse axis passes through the focus $(0,0)$ and is perpendicular to the directrix $x+y+1=0$: it is $y=x$.",
+      "The distance from the focus to the directrix is $\\frac{1}{\\sqrt2}=ae-\\frac ae=\\frac{a(e^2-1)}{e}=\\frac{a}{\\sqrt2}$, so $a=1$ and the focus-to-centre distance is $ae=\\sqrt2$.",
+      "The centre lies on $y=x$ on the far side of the directrix from the focus: $C=-\\sqrt2\\cdot\\frac{(1,1)}{\\sqrt2}=(-1,-1)$.",
+      "The asymptotes pass through $(-1,-1)$ at $45^\\circ$ to the line $y=x$, i.e. they are $y+1=0$ and $x+1=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Focus-directrix property: $SP^2=e^2\\,(\\text{distance of }P\\text{ from the directrix})^2$; for a focus at the origin and directrix $lx+my+n=0$: $x^2+y^2=\\frac{e^2(lx+my+n)^2}{l^2+m^2}$.",
+    "The asymptotes of a hyperbola $S=0$ are $S+k=0$ for the value of $k$ that makes the equation a pair of lines; the pair is obtained by changing only the constant term.",
+    "For $e=\\sqrt2$ (rectangular hyperbola) the asymptotes are perpendicular.",
+    "Pair of lines: $ax^2+2hxy+by^2+2gx+2fy+c=0$ is a pair iff $abc+2fgh-af^2-bg^2-ch^2=0$."
+   ]
+  },
+  {
+   "q_no": 47,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Chords of a rectangular hyperbola of constant length",
+    "Locus of the midpoint of a chord"
+   ],
+   "level": 3,
+   "question": "If a rectangular hyperbola has the equation $xy=c^2$, then the locus of the middle points of its chords of constant length $6$ is $(x^2+y^2)(xy-c^2)=\\lambda xy$. Find the value of $\\lambda$.",
+   "answer": "$9$",
+   "key_idea": "With end points $\\left(ct_1,\\frac c{t_1}\\right),\\left(ct_2,\\frac{c}{t_2}\\right)$ the midpoint gives $t_1t_2=\\frac hk$, and the length condition becomes a relation in $h,k$.",
+   "solution": [
+    "Let the end points of the chord be $\\left(ct_1,\\frac{c}{t_1}\\right)$ and $\\left(ct_2,\\frac{c}{t_2}\\right)$, with midpoint $(h,k)$.",
+    "$2h=c(t_1+t_2)$ and $2k=c\\left(\\frac1{t_1}+\\frac1{t_2}\\right)=\\frac{c(t_1+t_2)}{t_1t_2}$.",
+    "Dividing: $\\frac hk=t_1t_2$.",
+    "Length of the chord is $6$: $c^2(t_1-t_2)^2+c^2\\left(\\frac1{t_1}-\\frac1{t_2}\\right)^2=36$, i.e. $c^2(t_1-t_2)^2\\left(1+\\frac{1}{t_1^2t_2^2}\\right)=36$.",
+    "$(t_1-t_2)^2=(t_1+t_2)^2-4t_1t_2=\\frac{4h^2}{c^2}-\\frac{4h}{k}$ and $1+\\frac1{t_1^2t_2^2}=1+\\frac{k^2}{h^2}=\\frac{h^2+k^2}{h^2}$.",
+    "So $c^2\\left(\\frac{4h^2}{c^2}-\\frac{4h}{k}\\right)\\frac{h^2+k^2}{h^2}=36$, i.e. $\\frac{4h(hk-c^2)}{k}\\cdot\\frac{h^2+k^2}{h^2}=36$.",
+    "Simplify: $\\frac{4(hk-c^2)(h^2+k^2)}{hk}=36$, so $(hk-c^2)(h^2+k^2)=9hk$.",
+    "The locus is $(xy-c^2)(x^2+y^2)=9xy$, so $\\lambda=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write the end points as $M\\pm3(\\cos\\alpha,\\sin\\alpha)$ and use that both lie on $xy=c^2$; adding and subtracting gives the locus without parameters $t_1,t_2$.",
+     "solution": [
+      "Let the midpoint be $M(h,k)$ and the chord direction $(\\cos\\alpha,\\sin\\alpha)$; the end points are $(h+3\\cos\\alpha,\\ k+3\\sin\\alpha)$ and $(h-3\\cos\\alpha,\\ k-3\\sin\\alpha)$ (half-length $3$).",
+      "Both lie on $xy=c^2$: $(h+3\\cos\\alpha)(k+3\\sin\\alpha)=c^2$ and $(h-3\\cos\\alpha)(k-3\\sin\\alpha)=c^2$.",
+      "Subtract: $6(h\\sin\\alpha+k\\cos\\alpha)=0$, so $\\tan\\alpha=-\\frac kh$ and $\\sin\\alpha\\cos\\alpha=\\frac{\\tan\\alpha}{1+\\tan^2\\alpha}=-\\frac{hk}{h^2+k^2}$.",
+      "Add: $2hk+18\\sin\\alpha\\cos\\alpha=2c^2$, i.e. $hk+9\\sin\\alpha\\cos\\alpha=c^2$.",
+      "So $hk-\\frac{9hk}{h^2+k^2}=c^2$, i.e. $(hk-c^2)(h^2+k^2)=9hk$ and $\\lambda=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $xy=c^2$ the point $\\left(ct,\\frac ct\\right)$; chord through $t_1,t_2$ has midpoint $\\left(\\frac{c(t_1+t_2)}{2},\\frac{c(t_1+t_2)}{2t_1t_2}\\right)$.",
+    "Locus of midpoints of chords of constant length $2L$ of $xy=c^2$: $(x^2+y^2)(xy-c^2)=L^2xy$ (here $L=3$, $\\lambda=L^2=9$).",
+    "Fixed-length chords: write end points as $M\\pm L(\\cos\\alpha,\\sin\\alpha)$ and eliminate $\\alpha$ by adding and subtracting the two conditions.",
+    "For chords of any conic through the midpoint $(h,k)$ the slope is fixed by $T=S_1$; here the slope of the chord is $-\\frac kh$."
+   ]
+  },
+  {
+   "q_no": 48,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Normal to a hyperbola at a parametric point",
+    "Chord joining two points of a hyperbola in terms of $\\theta,\\phi$"
+   ],
+   "level": 3,
+   "question": "If a chord joining the points $P(a\\sec\\theta,a\\tan\\theta)$ and $Q(a\\sec\\phi,a\\tan\\phi)$ on the hyperbola $x^2-y^2=a^2$ is a normal to it at $P$, then show that $\\tan\\phi=\\tan\\theta\\left(4\\sec^2\\theta-1\\right)$.",
+   "answer": "$\\tan\\phi=\\tan\\theta\\,(4\\sec^2\\theta-1)$",
+   "key_idea": "Equate the slope of the chord $PQ$ with the slope $-\\sin\\theta$ of the normal at $P$ to get $\\tan\\phi+\\sin\\theta\\sec\\phi=2\\tan\\theta$, then use $\\sec^2\\phi-\\tan^2\\phi=1$.",
+   "solution": [
+    "(The PDF's working is grey boxes; it is written out here from the method it states: slope of the chord $PQ$ = slope of the normal at $P$.) Tangent at $P$: $x\\sec\\theta-y\\tan\\theta=a$, slope $\\frac{1}{\\sin\\theta}$; so the normal at $P$ has slope $-\\sin\\theta$.",
+    "Slope of the chord $PQ$: $\\frac{a\\tan\\phi-a\\tan\\theta}{a\\sec\\phi-a\\sec\\theta}$. Equating to $-\\sin\\theta$: $\\tan\\phi-\\tan\\theta=-\\sin\\theta(\\sec\\phi-\\sec\\theta)$.",
+    "Since $\\sin\\theta\\sec\\theta=\\tan\\theta$: $\\tan\\phi+\\sin\\theta\\sec\\phi=2\\tan\\theta$ ....(1).",
+    "Also $\\sec^2\\phi-\\tan^2\\phi=1$ ....(2).",
+    "From (1), $\\tan\\phi=2\\tan\\theta-\\sin\\theta\\sec\\phi$. Put it in (2): $\\sec^2\\phi-(2\\tan\\theta-\\sin\\theta\\sec\\phi)^2=1$.",
+    "Expanding with $\\cos^2\\theta=1-\\sin^2\\theta$: $\\cos^2\\theta\\,\\sec^2\\phi+4\\sin\\theta\\tan\\theta\\,\\sec\\phi-(4\\tan^2\\theta+1)=0$, a quadratic in $\\sec\\phi$.",
+    "One root is $\\sec\\phi=\\sec\\theta$ (the point $P$ itself). The product of the roots is $-\\frac{4\\tan^2\\theta+1}{\\cos^2\\theta}$, so the other root is $\\sec\\phi=-\\sec\\theta\\,(4\\tan^2\\theta+1)=-\\sec\\theta\\,(4\\sec^2\\theta-3)$.",
+    "Then $\\tan\\phi=2\\tan\\theta-\\sin\\theta\\sec\\phi=2\\tan\\theta+\\sin\\theta\\sec\\theta\\,(4\\sec^2\\theta-3)=2\\tan\\theta+\\tan\\theta\\,(4\\sec^2\\theta-3)$.",
+    "Hence $\\tan\\phi=\\tan\\theta\\,(4\\sec^2\\theta-1)$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's working is grey boxes (missing images); the solution was written from the method it names (slope of PQ = slope of the normal at P, then (2)^2 - (1)^2).",
+   "alternate_solutions": [
+    {
+     "idea": "Rotate by $45^\\circ$: $X=x+y,\\ Y=x-y$ turns $x^2-y^2=a^2$ into a rectangular hyperbola $XY=a^2$, where the normal-chord relation is $t_1^3t_2=-1$.",
+     "solution": [
+      "Put $X=x+y,\\ Y=x-y$ (a rotation through $45^\\circ$ with scaling), so the curve becomes $XY=a^2$ and normals stay normals. $P$ has $X=a(\\sec\\theta+\\tan\\theta)=at_1$ and $Y=a(\\sec\\theta-\\tan\\theta)=\\frac{a}{t_1}$, with $t_1=\\sec\\theta+\\tan\\theta$. Likewise $Q$ has $t_2=\\sec\\phi+\\tan\\phi$.",
+      "For $xy=c^2$ the tangent at $t$ is $x+t^2y=2ct$ (slope $-\\frac1{t^2}$), so the normal at $t_1$ has slope $t_1^2$; the chord through $t_1,t_2$ has slope $-\\frac{1}{t_1t_2}$.",
+      "The chord is the normal at $P$: $t_1^2=-\\frac1{t_1t_2}$, so $t_2=-\\frac{1}{t_1^3}$.",
+      "Since $t_2=\\sec\\phi+\\tan\\phi$ and $\\frac1{t_2}=\\sec\\phi-\\tan\\phi$: $\\tan\\phi=\\frac12\\left(t_2-\\frac1{t_2}\\right)=\\frac12\\left(t_1^3-\\frac1{t_1^3}\\right)$.",
+      "With $t_1-\\frac1{t_1}=2\\tan\\theta$ and $t_1+\\frac1{t_1}=2\\sec\\theta$: $t_1^3-\\frac1{t_1^3}=\\left(t_1-\\frac1{t_1}\\right)\\left[\\left(t_1+\\frac1{t_1}\\right)^2-1\\right]=2\\tan\\theta\\,(4\\sec^2\\theta-1)$.",
+      "Therefore $\\tan\\phi=\\tan\\theta\\,(4\\sec^2\\theta-1)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hyperbola $x^2-y^2=a^2$: point $(a\\sec\\theta,a\\tan\\theta)$; tangent $x\\sec\\theta-y\\tan\\theta=a$, slope $\\frac{1}{\\sin\\theta}$; normal slope $-\\sin\\theta$.",
+    "For $xy=c^2$, the normal at $t_1$ meets the curve again at $t_2$ with $t_1^3t_2=-1$.",
+    "$x^2-y^2=a^2$ and $XY=a^2$ ($X=x+y,\\ Y=x-y$) are the same curve in a $45^\\circ$ frame; $t=\\sec\\theta+\\tan\\theta$ links the two parametrisations.",
+    "Identities: $\\left(\\sec\\theta+\\tan\\theta\\right)\\left(\\sec\\theta-\\tan\\theta\\right)=1$, $t^3-\\frac1{t^3}=\\left(t-\\frac1t\\right)\\left(\\left(t+\\frac1t\\right)^2-1\\right)$."
+   ]
+  },
+  {
+   "q_no": 49,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Tangent and normal at a point of a hyperbola",
+    "Perpendiculars from the foci on the normal (harmonic mean)"
+   ],
+   "level": 4,
+   "question": "Prove that the part of the tangent at any point of the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ intercepted between the point of contact and the transverse axis is a harmonic mean between the lengths of the perpendiculars drawn from the foci on the normal at the same point.",
+   "answer": "If $PT$ is the intercepted part and $p_1,p_2$ the focal perpendiculars on the normal, then $PT=\\frac{2p_1p_2}{p_1+p_2}$",
+   "key_idea": "With $P(a\\sec\\theta,b\\tan\\theta)$ both $PT$ and $\\frac1{p_1}+\\frac1{p_2}$ reduce to expressions in $W^2=a^2\\sin^2\\theta+b^2$, giving $\\frac{2}{PT}=\\frac1{p_1}+\\frac1{p_2}$.",
+   "solution": [
+    "(The PDF's working is grey boxes; it is written out here.) Let $P(a\\sec\\theta,b\\tan\\theta)$ and $W^2=a^2\\sin^2\\theta+b^2$.",
+    "Tangent at $P$: $\\frac{x\\sec\\theta}{a}-\\frac{y\\tan\\theta}{b}=1$. It meets the transverse axis ($y=0$) at $T(a\\cos\\theta,0)$.",
+    "$PT^2=(a\\sec\\theta-a\\cos\\theta)^2+b^2\\tan^2\\theta$. Since $\\sec\\theta-\\cos\\theta=\\sin\\theta\\tan\\theta$: $PT^2=\\tan^2\\theta\\,(a^2\\sin^2\\theta+b^2)$, so $PT=|\\tan\\theta|\\,W$ ....(1).",
+    "Normal at $P$: $\\frac{a^2x}{x_1}+\\frac{b^2y}{y_1}=a^2+b^2$, i.e. $ax\\cos\\theta+by\\cot\\theta=a^2+b^2=a^2e^2$.",
+    "Its denominator: $D=\\sqrt{a^2\\cos^2\\theta+b^2\\cot^2\\theta}=|\\cot\\theta|\\,W$ (as $a^2\\cos^2\\theta+\\frac{b^2\\cos^2\\theta}{\\sin^2\\theta}=\\cot^2\\theta\\,W^2$).",
+    "Perpendiculars from the foci $S(ae,0)$ and $S'(-ae,0)$ on the normal: $p_1=\\frac{|a^2e\\cos\\theta-a^2e^2|}{D}=\\frac{a^2e(e-\\cos\\theta)}{D}$ and $p_2=\\frac{a^2e(e+\\cos\\theta)}{D}$ (as $e>1$).",
+    "$\\frac1{p_1}+\\frac1{p_2}=\\frac{D}{a^2e}\\left[\\frac{1}{e-\\cos\\theta}+\\frac{1}{e+\\cos\\theta}\\right]=\\frac{D}{a^2e}\\cdot\\frac{2e}{e^2-\\cos^2\\theta}=\\frac{2D}{a^2(e^2-\\cos^2\\theta)}$.",
+    "$a^2(e^2-\\cos^2\\theta)=a^2+b^2-a^2\\cos^2\\theta=a^2\\sin^2\\theta+b^2=W^2$. So $\\frac1{p_1}+\\frac1{p_2}=\\frac{2D}{W^2}=\\frac{2|\\cot\\theta|}{W}=\\frac{2}{|\\tan\\theta|\\,W}=\\frac{2}{PT}$ by (1).",
+    "Hence $PT=\\frac{2p_1p_2}{p_1+p_2}$: the tangent segment $PT$ is the harmonic mean of $p_1$ and $p_2$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's working and its hyperbola equation are grey boxes (missing images); the statement uses the standard hyperbola x^2/a^2 - y^2/b^2 = 1 and the proof was written from scratch.",
+   "alternate_solutions": [
+    {
+     "idea": "The tangent bisects $\\angle SPS'$; the focal perpendiculars on the normal are $SP\\cos\\beta$ and $S'P\\cos\\beta$, and the bisector $PT$ has length $\\frac{2\\,SP\\cdot S'P\\cos\\beta}{SP+S'P}$.",
+     "solution": [
+      "For a hyperbola the tangent at $P$ bisects $\\angle SPS'$ internally. Let $\\angle SPS'=2\\beta$, so the tangent makes the angle $\\beta$ with each of $PS,\\ PS'$.",
+      "The normal is perpendicular to the tangent, so it makes the angle $90^\\circ-\\beta$ with $PS$ and with $PS'$.",
+      "Perpendicular from $S$ on the normal: $p_1=SP\\sin(90^\\circ-\\beta)=SP\\cos\\beta$; from $S'$: $p_2=S'P\\cos\\beta$.",
+      "In $\\triangle SPS'$ the internal bisector $PT$ of the angle $2\\beta$ has length $PT=\\frac{2\\cdot SP\\cdot S'P\\cdot\\cos\\beta}{SP+S'P}$.",
+      "Then $\\frac{1}{PT}=\\frac{SP+S'P}{2\\,SP\\,S'P\\cos\\beta}=\\frac12\\left(\\frac{1}{S'P\\cos\\beta}+\\frac{1}{SP\\cos\\beta}\\right)=\\frac12\\left(\\frac1{p_2}+\\frac1{p_1}\\right)$.",
+      "So $PT$ is the harmonic mean of $p_1$ and $p_2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hyperbola: the tangent at $P$ bisects $\\angle SPS'$ internally and the normal bisects the exterior angle. (Ellipse: the other way round.)",
+    "Length of the internal bisector from the vertex of angle $A$ in a triangle with adjacent sides $b,c$: $\\ell=\\frac{2bc\\cos\\frac A2}{b+c}$ - which says $\\frac1\\ell=\\frac12\\left(\\frac1{b\\cos(A/2)}+\\frac1{c\\cos(A/2)}\\right)$.",
+    "For the tangent at $P(a\\sec\\theta,b\\tan\\theta)$: it meets the axis at $T(a\\cos\\theta,0)$ and $PT=|\\tan\\theta|\\sqrt{a^2\\sin^2\\theta+b^2}$.",
+    "Conversely, $PT=\\frac{2p_1p_2}{p_1+p_2}$ also gives the length of the intercepted tangent from the two focal perpendiculars alone."
+   ]
+  },
+  {
+   "q_no": 50,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangent to a hyperbola and its asymptotes",
+    "Area of the triangle formed by the asymptotes and a tangent"
+   ],
+   "level": 2,
+   "question": "Ascertain the co-ordinates of the two points $Q$ and $R$, where the tangent to the hyperbola $4x^2-9y^2=180$ at the point $P(9,4)$ intersects the two asymptotes. Finally prove that $P$ is the middle point of $QR$. Also compute the area of the triangle $CQR$ where $C$ is the centre of the hyperbola.",
+   "answer": "$Q(3,-2)$, $R(15,10)$; $P$ is the midpoint of $QR$; area $=30$ sq. units",
+   "key_idea": "The tangent at $P$ is $x-y=5$; intersect it with the asymptotes $2x\\mp3y=0$.",
+   "solution": [
+    "(The hyperbola is not legible in the PDF; $4x^2-9y^2=180$, i.e. $\\frac{x^2}{45}-\\frac{y^2}{20}=1$, is the hyperbola through $P(9,4)$ whose tangent there is the printed $x-y=5$.) Tangent at $P(9,4)$: $4\\cdot9x-9\\cdot4y=180$, i.e. $x-y=5$ ....(1).",
+    "The asymptotes of $4x^2-9y^2=180$ are $4x^2-9y^2=0$, i.e. $2x-3y=0$ and $2x+3y=0$.",
+    "With $2x+3y=0$: $y=-\\frac{2x}{3}$ in (1) gives $x+\\frac{2x}{3}=5$, so $x=3,\\ y=-2$: $Q(3,-2)$.",
+    "With $2x-3y=0$: $y=\\frac{2x}{3}$ in (1) gives $\\frac x3=5$, so $x=15,\\ y=10$: $R(15,10)$.",
+    "Midpoint of $QR=\\left(\\frac{3+15}{2},\\frac{-2+10}{2}\\right)=(9,4)=P$. Hence proved.",
+    "Area of $\\triangle CQR$ with $C(0,0)$: $\\frac12\\left|x_Qy_R-x_Ry_Q\\right|=\\frac12\\left|3\\cdot10-15\\cdot(-2)\\right|=\\frac12\\cdot60=30$ square units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A tangent forms a triangle of constant area $ab$ with the asymptotes, and the point of contact bisects the intercepted part: check both with $P=(a\\sec\\theta,b\\tan\\theta)$.",
+     "solution": [
+      "Here $a^2=45,\\ b^2=20$. For $P(a\\sec\\theta,b\\tan\\theta)$ the tangent $\\frac{x\\sec\\theta}{a}-\\frac{y\\tan\\theta}{b}=1$ meets $y=\\frac bax$ at $Q_1=\\left(a(\\sec\\theta+\\tan\\theta),\\ b(\\sec\\theta+\\tan\\theta)\\right)$ and $y=-\\frac bax$ at $Q_2=\\left(a(\\sec\\theta-\\tan\\theta),\\ -b(\\sec\\theta-\\tan\\theta)\\right)$.",
+      "Midpoint $=\\left(a\\sec\\theta,\\ b\\tan\\theta\\right)=P$: $P$ bisects $Q_1Q_2$ for every $\\theta$.",
+      "Area of $\\triangle CQ_1Q_2=\\frac12\\left|x_1y_2-x_2y_1\\right|=\\frac12ab\\left[(\\sec\\theta+\\tan\\theta)(\\sec\\theta-\\tan\\theta)\\cdot2\\right]=ab$.",
+      "Here $ab=\\sqrt{45\\cdot20}=30$. For $P(9,4)$: $\\sec\\theta=\\frac{3}{\\sqrt5}$, $\\tan\\theta=\\frac{2}{\\sqrt5}$, so $\\sec\\theta+\\tan\\theta=\\sqrt5$, giving $R=(15,10)$ and $Q=(3,-2)$.",
+      "So the area is $30$ and $P$ is the midpoint of $QR$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ the part of any tangent between the asymptotes is bisected at the point of contact.",
+    "The triangle formed by a tangent and the two asymptotes has constant area $ab$.",
+    "Asymptotes: replace the constant of the equation by $0$: $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=0$.",
+    "Tangent at $(x_1,y_1)$ to $4x^2-9y^2=180$: $4x_1x-9y_1y=180$."
+   ]
+  },
+  {
+   "q_no": 51,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Tangent to a hyperbola and its asymptotes (locus of a midpoint)",
+    "Locus using parametric coordinates"
+   ],
+   "level": 3,
+   "question": "The tangent at $P$ on the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ meets one of the asymptotes in $Q$. If the locus of the mid-point of $PQ$ is a hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\lambda$, find the value of $4\\lambda$.",
+   "answer": "$3$ (the locus is $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\frac34$)",
+   "key_idea": "In the parametrisation $P(a\\sec\\theta,b\\tan\\theta)$, $Q$ on $y=\\frac bax$ is $\\left(a(\\sec\\theta+\\tan\\theta),b(\\sec\\theta+\\tan\\theta)\\right)$; the midpoint's coordinates give $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\frac34$.",
+   "solution": [
+    "(The PDF's hyperbola equations are grey boxes and no working is shown; the standard hyperbola and the locus form $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\lambda$ are assumed, and the solution is written here.) Let $P=(a\\sec\\theta,b\\tan\\theta)$; tangent $\\frac{x\\sec\\theta}{a}-\\frac{y\\tan\\theta}{b}=1$.",
+    "The asymptote $y=\\frac bax$: substitute: $\\frac{x}{a}(\\sec\\theta-\\tan\\theta)=1$, so $x=a(\\sec\\theta+\\tan\\theta)$ and $Q=\\left(a(\\sec\\theta+\\tan\\theta),\\ b(\\sec\\theta+\\tan\\theta)\\right)$.",
+    "Midpoint of $PQ$ $=(h,k)$ with $h=\\frac a2(2\\sec\\theta+\\tan\\theta)$ and $k=\\frac b2(\\sec\\theta+2\\tan\\theta)$.",
+    "$\\frac{h^2}{a^2}-\\frac{k^2}{b^2}=\\frac14\\left[(2\\sec\\theta+\\tan\\theta)^2-(\\sec\\theta+2\\tan\\theta)^2\\right]=\\frac14\\left[3\\sec^2\\theta-3\\tan^2\\theta\\right]=\\frac34$.",
+    "So the locus is $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\frac34$ (the other asymptote gives the same locus), so $\\lambda=\\frac34$ and $4\\lambda=3$."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's hyperbola equations and the answer are grey boxes (missing images); the standard hyperbola x^2/a^2 - y^2/b^2 = 1 and the locus form x^2/a^2 - y^2/b^2 = lambda were assumed. The result 4*lambda = 3 was derived here and checked against both asymptotes.",
+   "alternate_solutions": [
+    {
+     "idea": "Use asymptote-coordinates $U=\\frac xa+\\frac yb$, $V=\\frac xa-\\frac yb$: the hyperbola is $UV=1$, the asymptotes are $U=0,\\ V=0$, and midpoints are preserved by this linear map.",
+     "solution": [
+      "$\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=UV$, so the hyperbola becomes $UV=1$; the asymptotes become the axes $V=0$ and $U=0$.",
+      "Take $P=(t,\\frac1t)$ in $(U,V)$. The tangent to $UV=1$ at $P$ is $\\frac Ut+Vt=2$. It meets the asymptote $V=0$ at $U=2t$, i.e. $Q=(2t,0)$.",
+      "Midpoint of $PQ$: $\\left(\\frac{3t}{2},\\frac{1}{2t}\\right)$, whose $U\\cdot V=\\frac{3t}{2}\\cdot\\frac1{2t}=\\frac34$.",
+      "Since $UV=\\frac{x^2}{a^2}-\\frac{y^2}{b^2}$, the locus is $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\frac34$, so $4\\lambda=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In asymptote coordinates $U=\\frac xa+\\frac yb,\\ V=\\frac xa-\\frac yb$, the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ is $UV=1$ and every property of the rectangular hyperbola $XY=c^2$ carries over.",
+    "The tangent at a point meets the asymptotes at points which are at $2\\times$ the point's coordinates, and the point is the midpoint of the intercepted part.",
+    "The midpoint of $PQ$ ($Q$ on one asymptote) traces $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\frac34$; the locus of the midpoint of $QR$ ($Q,R$ on different asymptotes) is the hyperbola itself.",
+    "Linear changes of variables preserve midpoints, which makes locus problems on a hyperbola easy in its asymptote coordinates."
+   ]
+  },
+  {
+   "q_no": 52,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Hyperbola from its asymptotes (family $\\text{pair of asymptotes}=\\text{constant}$)",
+    "Tangency of a line to a hyperbola"
+   ],
+   "level": 2,
+   "question": "If the lines $x+y+1=0$ and $2x-y+2=0$ are the asymptotes of a hyperbola, and the line $x-2=0$ touches the hyperbola, then the equation of the hyperbola is $4(x+y+1)(2x-y+2)=\\lambda$. Find the value of $\\lambda$.",
+   "answer": "$81$",
+   "key_idea": "A hyperbola with these asymptotes is $(x+y+1)(2x-y+2)=c$; tangency of $x=2$ means equal roots in $y$.",
+   "solution": [
+    "The hyperbola with the given asymptotes is $(x+y+1)(2x-y+2)=c$.",
+    "Solve with $x=2$: $(y+3)(6-y)=c$, i.e. $y^2-3y+(c-18)=0$.",
+    "The line touches the hyperbola, so $D=0$: $9-4(c-18)=0$, giving $c=\\frac{81}{4}$.",
+    "Hence the hyperbola is $(x+y+1)(2x-y+2)=\\frac{81}{4}$, i.e. $4(x+y+1)(2x-y+2)=81$.",
+    "So $\\lambda=81$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The point of contact bisects the part of a tangent between the asymptotes: find the contact point on $x=2$ as the midpoint and substitute.",
+     "solution": [
+      "The tangent $x=2$ meets the asymptote $x+y+1=0$ at $y=-3$ and the asymptote $2x-y+2=0$ at $y=6$.",
+      "The point of contact is the midpoint of this intercept: $\\left(2,\\frac{-3+6}{2}\\right)=\\left(2,\\frac32\\right)$.",
+      "It lies on $(x+y+1)(2x-y+2)=c$: $c=\\left(2+\\frac32+1\\right)\\left(4-\\frac32+2\\right)=\\frac92\\cdot\\frac92=\\frac{81}{4}$.",
+      "So $4(x+y+1)(2x-y+2)=81$ and $\\lambda=81$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Any hyperbola with asymptotes $L_1=0,\\ L_2=0$ is $L_1L_2=c$ (a one-parameter family); a point on it fixes $c$.",
+    "The part of any tangent intercepted between the asymptotes is bisected at the point of contact.",
+    "A line is tangent to $L_1L_2=c$ iff the quadratic obtained by substituting it has a zero discriminant.",
+    "Check: $c=\\frac{81}{4}$ gives a double root $y=\\frac32$ in $y^2-3y+\\frac94=\\left(y-\\frac32\\right)^2$."
+   ]
+  },
+  {
+   "q_no": 53,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "concepts": [
+    "Line of fixed gradient through a point of a hyperbola meeting its asymptotes",
+    "Product of segments (QP)(PR)"
+   ],
+   "level": 3,
+   "question": "Through any point $P$ of the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ a line $QPR$ is drawn with a fixed gradient $m$, meeting the asymptotes in $Q$ and $R$. Show that the product $(QP)(PR)$ is constant, equal to $\\frac{a^2b^2(1+m^2)}{|b^2-a^2m^2|}$.",
+   "answer": "$(QP)(PR)=\\frac{a^2b^2(1+m^2)}{|b^2-a^2m^2|}$, independent of $P$",
+   "key_idea": "Take the points of the line as $P+r(\\cos\\alpha,\\sin\\alpha)$ with $\\tan\\alpha=m$; substituting into the pair of asymptotes gives a quadratic in $r$ whose constant term is $1$ because $P$ is on the hyperbola.",
+   "solution": [
+    "(The PDF's hyperbola, answer and working are grey boxes; the standard hyperbola is used and the result derived here.) Let $P=(x_0,y_0)$ with $\\frac{x_0^2}{a^2}-\\frac{y_0^2}{b^2}=1$. The line of gradient $m=\\tan\\alpha$: $(x,y)=(x_0+r\\cos\\alpha,\\ y_0+r\\sin\\alpha)$, where $|r|$ is the distance from $P$.",
+    "The asymptotes: $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=0$. Substitute: $\\frac{(x_0+r\\cos\\alpha)^2}{a^2}-\\frac{(y_0+r\\sin\\alpha)^2}{b^2}=0$.",
+    "Expand: $r^2\\left(\\frac{\\cos^2\\alpha}{a^2}-\\frac{\\sin^2\\alpha}{b^2}\\right)+2r\\left(\\frac{x_0\\cos\\alpha}{a^2}-\\frac{y_0\\sin\\alpha}{b^2}\\right)+\\left(\\frac{x_0^2}{a^2}-\\frac{y_0^2}{b^2}\\right)=0$; the constant term is $1$.",
+    "The two roots $r_1,r_2$ are the signed distances $PQ,PR$: $r_1r_2=\\frac{1}{\\frac{\\cos^2\\alpha}{a^2}-\\frac{\\sin^2\\alpha}{b^2}}=\\frac{a^2b^2}{b^2\\cos^2\\alpha-a^2\\sin^2\\alpha}$.",
+    "With $\\cos^2\\alpha=\\frac{1}{1+m^2}$ and $\\sin^2\\alpha=\\frac{m^2}{1+m^2}$: $r_1r_2=\\frac{a^2b^2(1+m^2)}{b^2-a^2m^2}$.",
+    "So $(QP)(PR)=|r_1r_2|=\\frac{a^2b^2(1+m^2)}{|b^2-a^2m^2|}$, which does not depend on $P$ (only on the fixed gradient $m$)."
+   ],
+   "solution_source": "written",
+   "correction_note": "The PDF's hyperbola, the required product and the whole working are grey boxes (missing images). The standard hyperbola x^2/a^2 - y^2/b^2 = 1 was assumed and the product was derived here.",
+   "alternate_solutions": [
+    {
+     "idea": "In asymptote coordinates $U=\\frac xa+\\frac yb$, $V=\\frac xa-\\frac yb$ the hyperbola is $UV=1$ and the asymptotes are the axes; then $QP\\cdot PR$ is read off from $U_0V_0=1$.",
+     "solution": [
+      "In $(U,V)$ the hyperbola is $UV=1$ and the asymptotes are $V=0$ (through $R$, say) and $U=0$ (through $Q$). Let $P=(U_0,V_0)$ with $U_0V_0=1$.",
+      "Moving along the line by $dx=1,\\ dy=m$ changes $(U,V)$ by $(dU,dV)=\\left(\\frac1a+\\frac mb,\\ \\frac1a-\\frac mb\\right)$ and the actual length by $\\sqrt{1+m^2}$.",
+      "The points $P+\\lambda(dU,dV)$: $R$ at $V=0$ has $\\lambda_R=-\\frac{V_0}{dV}$ and $Q$ at $U=0$ has $\\lambda_Q=-\\frac{U_0}{dU}$.",
+      "$\\lambda_Q\\lambda_R=\\frac{U_0V_0}{dU\\,dV}=\\frac{1}{\\frac1{a^2}-\\frac{m^2}{b^2}}$.",
+      "Lengths are $|\\lambda|\\sqrt{1+m^2}$, so $(QP)(PR)=\\frac{(1+m^2)}{\\left|\\frac1{a^2}-\\frac{m^2}{b^2}\\right|}=\\frac{a^2b^2(1+m^2)}{|b^2-a^2m^2|}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a line through $P$ meeting a pair of lines $S_0=0$ at $Q,R$, the product $PQ\\cdot PR=\\frac{S_0(P)}{\\text{(quadratic part of }S_0\\text{ along the direction)}}$ - here $S_0(P)=1$ because $P$ is on the hyperbola.",
+    "For the horizontal direction ($m=0$) the product is $a^2$; for the vertical one it is $-b^2$ (opposite sides).",
+    "For a rectangular hyperbola $xy=c^2$ and a line through $P$ with gradient $m$: $PQ\\cdot PR=c^2\\cdot\\frac{1+m^2}{|m|}$.",
+    "Check with $m=0$: $QP\\cdot PR=a^2$ (the product of the horizontal distances from $P$ to $x=\\pm\\frac ab y_0$: $x_0^2-\\frac{a^2y_0^2}{b^2}=a^2$)."
+   ]
+  },
+  {
+   "q_no": 54,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Focal distance and directrix of a parabola",
+    "Equilateral triangle (area)"
+   ],
+   "level": 2,
+   "question": "A point $P$ on a parabola $y^2=4x$, the foot of the perpendicular from it upon the directrix, and the focus are the vertices of an equilateral triangle. Find the area of the equilateral triangle.",
+   "answer": "$4\\sqrt3$",
+   "key_idea": "For $P(t^2,2t)$, $PM=PS=1+t^2$ (focal distance), and $MS=2\\sqrt{1+t^2}$; equilateral means $MS=PM$.",
+   "solution": [
+    "Let $P=(t^2,2t)$ on $y^2=4x$; the focus is $S(1,0)$ and the directrix $x=-1$, so $M=(-1,2t)$.",
+    "$PM=t^2+1=1+t^2$ and $PS=1+t^2$ (focal distance equals the distance from the directrix).",
+    "$MS=\\sqrt{(1+1)^2+(0-2t)^2}=2\\sqrt{1+t^2}$.",
+    "Equilateral: $MS=PM$, so $2\\sqrt{1+t^2}=1+t^2$, i.e. $\\sqrt{1+t^2}=2$ and $t^2=3$.",
+    "Side $=PM=1+t^2=4$.",
+    "Area $=\\frac{\\sqrt3}{4}\\cdot4^2=4\\sqrt3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The side $MP$ is horizontal, so $MS$ must make $60^\\circ$ with the horizontal: its slope is $\\pm\\sqrt3$.",
+     "solution": [
+      "$P(t^2,2t)$, $M(-1,2t)$, $S(1,0)$: $PM$ is parallel to the $x$-axis.",
+      "In the equilateral triangle $PMS$ the angle at $M$ is $60^\\circ$, so the line $MS$ makes $60^\\circ$ with the $x$-axis: $|{\\rm slope}|=\\sqrt3$.",
+      "Slope of $MS=\\frac{0-2t}{1-(-1)}=-t$, so $|t|=\\sqrt3$ and $t^2=3$.",
+      "Side $=PM=1+t^2=4$, area $=\\frac{\\sqrt3}{4}\\cdot16=4\\sqrt3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Focus-directrix property of $y^2=4ax$: $PS=PM=a+x_P$; for $P(at^2,2at)$, $PS=a(1+t^2)$.",
+    "The triangle $PMS$ (foot of the directrix, point, focus) is isosceles with $PS=PM$ and equilateral iff the angle at $P$ is $60^\\circ$, i.e. $t^2=3$.",
+    "The line $MS$ from the foot on the directrix to the focus has slope $-\\frac{y_P}{2a}=-t$; the angle at $M$ is $\\arctan|t|$.",
+    "Area of an equilateral triangle of side $s$: $\\frac{\\sqrt3}{4}s^2$."
+   ]
+  },
+  {
+   "q_no": 55,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Parabola through two points with a variable tangent to a circle as directrix (locus of the focus)",
+    "Latus rectum and tangents at its ends (area of the quadrilateral)"
+   ],
+   "level": 4,
+   "question": "Consider two concentric circles $S_1:|z|=1$ and $S_2:|z|=2$ on the Argand plane. A variable parabola is drawn through the points where $S_1$ meets the real axis and having an arbitrary tangent drawn to $S_2$ as its directrix. If the locus of the focus of the parabola is a conic $C$, then find the area of the quadrilateral formed by the tangents at the ends of the latus-rectum of conic $C$.",
+   "answer": "$16$",
+   "key_idea": "The distances of $(\\pm1,0)$ from the focus equal their distances from the directrix: $2-\\cos\\theta$ and $2+\\cos\\theta$, whose sum is $4$: the focus lies on an ellipse with foci $(\\pm1,0)$.",
+   "solution": [
+    "The parabola passes through $(1,0)$ and $(-1,0)$. Let its directrix be the tangent $x\\cos\\theta+y\\sin\\theta=2$ to $S_2$, and let $M(h,k)$ be the focus.",
+    "The distance of $(\\pm1,0)$ from $M$ equals its distance from the directrix: $(h-1)^2+k^2=(\\cos\\theta-2)^2$ ....(1) and $(h+1)^2+k^2=(\\cos\\theta+2)^2$ ....(2).",
+    "(2)$-$(1): $4h=8\\cos\\theta$, so $\\cos\\theta=\\frac h2$ ....(3).",
+    "(2)$+$(1): $2(h^2+k^2+1)=2(\\cos^2\\theta+4)$, so $h^2+k^2+1=\\cos^2\\theta+4$ ....(4).",
+    "From (3) and (4): $h^2+k^2+1=4+\\frac{h^2}{4}$, i.e. $\\frac{3h^2}{4}+k^2=3$.",
+    "The locus of the focus is $\\frac{x^2}{4}+\\frac{y^2}{3}=1$ (an ellipse) with $a=2$, $b^2=3$, $e^2=1-\\frac34=\\frac14$, so $e=\\frac12$.",
+    "The tangents at the ends of the latus rectum $\\left(\\pm ae,\\pm\\frac{b^2}{a}\\right)=\\left(\\pm1,\\pm\\frac32\\right)$ are $x\\pm2y=\\pm4$; they meet the major axis at $\\left(\\pm\\frac ae,0\\right)=(\\pm4,0)$ and the minor axis at $(0,\\pm a)=(0,\\pm2)$.",
+    "They form a rhombus with diagonals $\\frac{2a}{e}=8$ and $2a=4$: area $=\\frac12\\cdot8\\cdot4=\\frac{2a^2}{e}=16$ square units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The distances of $A(1,0)$ and $B(-1,0)$ from the tangent line are $2-\\cos\\theta$ and $2+\\cos\\theta$; since $MA$ and $MB$ equal them, $MA+MB=4$ at once.",
+     "solution": [
+      "The directrix $x\\cos\\theta+y\\sin\\theta=2$ is at the signed distances $2-\\cos\\theta$ from $A(1,0)$ and $2+\\cos\\theta$ from $B(-1,0)$ (both on the same side).",
+      "$A,B$ lie on the parabola, so $MA=2-\\cos\\theta$ and $MB=2+\\cos\\theta$ ($M$ is the focus).",
+      "$MA+MB=4$, a constant larger than $AB=2$: $M$ lies on the ellipse with foci $(\\pm1,0)$ and $2a=4$.",
+      "So $a=2$, $c=1$, $b^2=3$: $\\frac{x^2}{4}+\\frac{y^2}{3}=1$, $e=\\frac12$; the area is $\\frac{2a^2}{e}=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $A,B$ lie on a parabola with focus $M$ and directrix $\\ell$, then $MA=d(A,\\ell)$ and $MB=d(B,\\ell)$.",
+    "For a tangent to a circle of radius $R$ about the origin ($x\\cos\\theta+y\\sin\\theta=R$) the distances of $(\\pm c,0)$ are $R\\mp c\\cos\\theta$, with sum $2R$.",
+    "The tangents at the ends of the latera recta of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ form a rhombus with diagonals $\\frac{2a}{e}$ and $2a$: area $\\frac{2a^2}{e}$.",
+    "The tangent at $\\left(ae,\\frac{b^2}{a}\\right)$ is $\\frac{ex}{a}+\\frac{y}{a}=1$, meeting the axes at $\\left(\\frac ae,0\\right)$ and $(0,a)$."
    ]
   }
  ]
