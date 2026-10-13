@@ -1,0 +1,936 @@
+{
+ "title": "JEE Main Question Bank 02 (Integral Calculus 04) — Paper Analysis",
+ "subtitle": "Question bank · detailed solutions · 20 single-correct questions (printed Q61–Q80)",
+ "source": "JEE_Main_Question_Bank_02_Integral_Calculus_04.pdf (solutions as printed in the PDF); no blueprint",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: 4 marks per question assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 1,
+   "concepts": [
+    "Definite integrals of modulus and composite functions (area interpretation)"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=|x-2|$ and $g(x)=f(f(x))$, $x\\in[0,4]$. Then $\\int_0^3\\left(g(x)-f(x)\\right)dx$ is equal to :",
+   "options": [
+    "$0$",
+    "$\\frac12$",
+    "$\\frac32$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "$\\int_0^3(g-f)\\,dx=\\int_0^3g\\,dx-\\int_0^3f\\,dx$, each read as an area of triangles under a piecewise-linear graph.",
+   "solution": [
+    "$f(x)=|x-2|$ and $g(x)=f\\left(|x-2|\\right)=\\big||x-2|-2\\big|$.",
+    "Graph of $f$: a V with vertex $(2,0)$, passing through $(0,2)$ and $(3,1)$.",
+    "$\\int_0^3f(x)dx$ = area under this graph = triangle on $[0,2]$ + triangle on $[2,3]$.",
+    "$\\int_0^3f(x)dx=\\frac12\\times2\\times2+\\frac12\\times1\\times1=\\frac52$.",
+    "Graph of $g$: $0$ at $x=0$, rising linearly to the peak $(2,2)$, then falling through $(3,1)$ to $(4,0)$.",
+    "$\\int_0^3g(x)dx$ = triangle on $[0,2]$ + trapezium on $[2,3]$ with parallel sides $2$ and $1$ and width $1$.",
+    "$\\int_0^3g(x)dx=\\frac12\\times2\\times2+\\frac12(1)(1+2)=2+\\frac32=\\frac72$.",
+    "$\\int_0^3\\left(g(x)-f(x)\\right)dx=\\int_0^3g\\,dx-\\int_0^3f\\,dx=\\frac72-\\frac52=1$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Skip the graphs: write $f$ and $g=f(f)$ as explicit linear pieces on $[0,2]$ and $[2,3]$ and integrate $g-f$ directly.",
+     "solution": [
+      "On $[0,2]$: $f(x)=2-x\\in[0,2]$, so $g(x)=f(2-x)=|2-x-2|=x$ and $g-f=x-(2-x)=2x-2$.",
+      "On $[2,3]$: $f(x)=x-2\\in[0,1]$, so $g(x)=|x-2-2|=4-x$ (as $x-4<0$) and $g-f=(4-x)-(x-2)=6-2x$.",
+      "$\\int_0^2(2x-2)dx=\\left[x^2-2x\\right]_0^2=0$.",
+      "$\\int_2^3(6-2x)dx=\\left[6x-x^2\\right]_2^3=9-8=1$.",
+      "Total $=0+1=1$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A piecewise-linear function integrates to a sum of trapezia: on an interval where $h$ is linear, $\\int_a^bh\\,dx=\\frac{(b-a)\\left(h(a)+h(b)\\right)}{2}$. Here on $[2,3]$, $g$ has ends $2$ and $1$, giving $\\frac32$.",
+    "$\\big||x-c|-d\\big|$ with $d>0$ is a tent with peak $d$ at $x=c$ and zeros at $x=c\\pm d$; for $c=d=2$: peak $2$ at $x=2$, zeros at $0$ and $4$.",
+    "For compositions $f(f(x))$ with $f=|x-2|$, find the range of the inner function on each piece first: $f\\in[0,2]$ on $[0,2]$ and $f\\in[0,1]$ on $[2,3]$ decide which branch of the outer modulus applies."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 2,
+   "concepts": [
+    "Area bounded by two parabolas and bisection of area by a line"
+   ],
+   "level": 3,
+   "question": "For $a>0$, let the curves $C_1:y^2=ax$ and $C_2:x^2=ay$ intersect at the origin $O$ and a point $P$. Let the line $x=b\\ (0<b<a)$ intersect the chord $OP$ and the $x$-axis at points $Q$ and $R$, respectively. If the line $x=b$ bisects the area bounded by the curves $C_1$ and $C_2$, and the area of $\\triangle OQR=\\frac12$, '$a$' satisfies the equation :",
+   "options": [
+    "$x^6+6x^3-4=0$",
+    "$x^6-12x^3-4=0$",
+    "$x^6-6x^3+4=0$",
+    "$x^6-12x^3+4=0$"
+   ],
+   "answer": "(D) $x^6-12x^3+4=0$",
+   "key_idea": "The triangle $OQR$ is right-isosceles with legs $b$, so $b=1$; the bisection condition then gives $a^3+2=4a^{3/2}$.",
+   "solution": [
+    "$C_1\\cap C_2$: $P=(a,a)$; the chord $OP$ is $y=x$, so $Q=(b,b)$ and $R=(b,0)$.",
+    "Total area bounded by $C_1$ and $C_2$ $=\\frac{16\\cdot\\frac a4\\cdot\\frac a4}{3}=\\frac{a^2}{3}$ (area between $y^2=4px$ and $x^2=4qy$ is $\\frac{16pq}{3}$, here $p=q=\\frac a4$).",
+    "The line $x=b$ bisects it: $\\int_0^b\\left(\\sqrt{ax}-\\frac{x^2}{a}\\right)dx=\\frac{a^2}{6}$.",
+    "$\\triangle OQR$ is right-angled with both legs $b$: $\\frac12b^2=\\frac12$, so $b=1$.",
+    "Evaluate the integral: $\\frac23\\sqrt a\\,b^{3/2}-\\frac{b^3}{3a}=\\frac{a^2}{6}$ ...(1)",
+    "Put $b=1$ in (1): $\\frac23\\sqrt a-\\frac1{3a}=\\frac{a^2}{6}$.",
+    "Multiply by $6a$: $4a^{3/2}-2=a^3$, that is $a^3+2=4a^{3/2}$.",
+    "Square both sides: $a^6+4a^3+4=16a^3$, so $a^6-12a^3+4=0$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Scale $x=au$, $y=av$ so the curves become $v^2=u$, $u^2=v$; then $a$ enters only through $\\beta=\\frac ba$ and the triangle condition.",
+     "solution": [
+      "Put $u=\\frac xa$, $v=\\frac ya$: $C_1:v^2=u$ and $C_2:u^2=v$ meet at $(1,1)$; let $\\beta=\\frac ba\\in(0,1)$. Areas scale by $a^2$.",
+      "Total area $=a^2\\int_0^1\\left(\\sqrt u-u^2\\right)du=\\frac{a^2}{3}$, so the bisecting condition is $\\int_0^\\beta\\left(\\sqrt u-u^2\\right)du=\\frac16$.",
+      "$\\frac23\\beta^{3/2}-\\frac{\\beta^3}{3}=\\frac16$. With $s=\\beta^{3/2}$: $4s-2s^2=1$, i.e. $2s^2-4s+1=0$, so $s=1-\\frac1{\\sqrt2}$ (the root $<1$, as $\\beta<1$).",
+      "Triangle: $\\frac{b^2}{2}=\\frac{a^2\\beta^2}{2}=\\frac12$, so $a=\\frac1\\beta$ and $a^3=\\beta^{-3}=\\frac1{s^2}$.",
+      "$s^2=\\left(1-\\frac1{\\sqrt2}\\right)^2=\\frac32-\\sqrt2$, so $a^3=\\frac{1}{\\frac32-\\sqrt2}=\\frac{2}{3-2\\sqrt2}=2(3+2\\sqrt2)=6+4\\sqrt2$.",
+      "$(a^3-6)^2=32$, i.e. $a^6-12a^3+4=0$. Same answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between the parabolas $y^2=4px$ and $x^2=4qy$ is $\\frac{16pq}{3}$ (check: $y^2=4x$, $x^2=4y$ give $\\frac{16}{3}$). For $y^2=ax$, $x^2=ay$: $p=q=\\frac a4$, area $\\frac{a^2}{3}$.",
+    "Scaling: if every length is multiplied by $a$, every area is multiplied by $a^2$. Normalise to $a=1$, solve for the ratio $\\beta=\\frac ba$, then restore $a$.",
+    "Squaring $a^3+2=4a^{3/2}$ to remove $a^{3/2}$ can add roots: here $a^{3/2}=2\\pm\\sqrt2$, but $b<a$ with $b=1$ needs $a>1$, which keeps only $a^{3/2}=2+\\sqrt2$, i.e. $a^3=6+4\\sqrt2$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 3,
+   "concepts": [
+    "Linear differential equation (exact form $x\\,y'+y$)",
+    "Definite integration of power and reciprocal functions"
+   ],
+   "level": 2,
+   "question": "If a curve $y=f(x)$ passes through the point $(1,2)$ and satisfies $x\\frac{dy}{dx}+y=bx^4$, then for what value of $b$, $\\int_1^2f(x)dx=\\frac{62}{5}$ ?",
+   "options": [
+    "$10$",
+    "$5$",
+    "$\\frac{31}{5}$",
+    "$\\frac{62}{5}$"
+   ],
+   "answer": "(A) $10$",
+   "key_idea": "$x\\frac{dy}{dx}+y=\\frac{d}{dx}(xy)$, so the equation integrates at once to $y=\\frac{bx^4}{5}+\\frac cx$.",
+   "solution": [
+    "$x\\frac{dy}{dx}+y=\\frac{d}{dx}(xy)$, so $\\int d(xy)=\\int bx^4dx$.",
+    "$xy=\\frac{bx^5}{5}+c$.",
+    "$y=\\frac{bx^4}{5}+\\frac cx$.",
+    "The curve passes through $(1,2)$: $\\frac b5+c=2$ ...(1)",
+    "$\\int_1^2f(x)dx=\\left[\\frac{bx^5}{25}+c\\ln x\\right]_1^2=\\frac{62}{5}$.",
+    "$\\frac{31b}{25}+c\\ln2=\\frac{62}{5}$ ...(2)",
+    "Solving (1) and (2): substitute $c=2-\\frac b5$ into (2): $\\frac{31b}{25}+\\left(2-\\frac b5\\right)\\ln2=\\frac{62}5$, i.e. $\\left(\\frac b5-2\\right)\\left(\\frac{31}{5}-\\ln2\\right)=0$.",
+    "Since $\\frac{31}{5}\\neq\\ln2$, $b=10$ and then $c=0$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Spot that $\\frac{62}{5}=2\\int_1^2x^4dx$, test $f=2x^4$ (that is $c=0$), then show the linear system has only this solution.",
+     "solution": [
+      "$f(x)=\\frac b5x^4+\\frac cx$ with $\\frac b5+c=2$, and $\\int_1^2x^4dx=\\frac{31}{5}$; so the required value $\\frac{62}{5}=2\\int_1^2x^4dx$.",
+      "Try $c=0$: then $\\frac b5=2$, $f=2x^4$, $b=10$. Check: $f(1)=2$ and $\\int_1^22x^4dx=\\frac{62}{5}$.",
+      "Uniqueness: in the unknowns $\\left(u,c\\right)=\\left(\\frac b5,c\\right)$ the conditions are $u+c=2$ and $\\frac{31}{5}u+c\\ln2=\\frac{62}{5}$, with determinant $\\ln2-\\frac{31}{5}\\neq0$.",
+      "So $u=2$, $c=0$ is the only solution, hence $b=10$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$y'+\\frac nxy=Q(x)$ has integrating factor $x^n$; in particular $xy'+y=(xy)'$. For $xy'+y=bx^n$ ($n\\neq-1$): $y=\\frac{bx^n}{n+1}+\\frac cx$ (check: $x y'+y=bx^n$).",
+    "When the data are linear in the unknown constants, eliminate one constant and look for a common factor (here $\\frac{31}{5}-\\ln2$) instead of expanding: the answer then appears at once.",
+    "The integral of $\\frac{c}{x}$ over $[1,2]$ brings $c\\ln2$; when the target value has no $\\ln2$, the natural candidate is $c=0$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 4,
+   "concepts": [
+    "Area of a region bounded by a parabola, a hyperbola and a line"
+   ],
+   "level": 2,
+   "question": "The area of the region given by $\\left\\{(x,y):xy\\le8,\\ 1\\le y\\le x^2\\right\\}$ is :",
+   "options": [
+    "$8\\log_e2+\\frac76$",
+    "$16\\log_e2-\\frac{14}{3}$",
+    "$8\\log_e2-\\frac{13}{3}$",
+    "$16\\log_e2+\\frac73$"
+   ],
+   "answer": "(B) $16\\log_e2-\\frac{14}{3}$",
+   "key_idea": "Split at $x=2$, where $y=x^2$ and $y=\\frac8x$ cross: the upper boundary is $x^2$ before it and $\\frac8x$ after it.",
+   "solution": [
+    "The region is taken in the first quadrant ($x>0$): it lies above $y=1$, below $y=x^2$ and below $y=\\frac8x$.",
+    "Boundary meetings: $x^2=1\\Rightarrow x=1$; $x^2=\\frac8x\\Rightarrow x=2$; $\\frac8x=1\\Rightarrow x=8$.",
+    "For $1\\le x\\le2$ the upper boundary is $y=x^2$; for $2\\le x\\le8$ it is $y=\\frac8x$; the lower boundary is $y=1$.",
+    "Area $=\\int_1^2\\left(x^2-1\\right)dx+\\int_2^8\\left(\\frac8x-1\\right)dx$.",
+    "$=\\left(\\frac{x^3}{3}\\right)_1^2+8\\left(\\ln x\\right)_2^8-\\left(x\\right)_1^8$ (the two $-1$ terms combine over $[1,8]$).",
+    "$=\\frac73+8\\left(2\\ln2\\right)-7$, since $\\ln8-\\ln2=2\\ln2$.",
+    "$=16\\ln2-\\frac{14}{3}$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use horizontal strips: for each $y$ the strip runs from the parabola to the hyperbola, giving a single integral in $y$.",
+     "solution": [
+      "For $1\\le y\\le4$ and $x>0$: $y\\le x^2$ gives $x\\ge\\sqrt y$, and $xy\\le8$ gives $x\\le\\frac8y$.",
+      "The two boundaries meet where $\\sqrt y=\\frac8y$, i.e. $y^{3/2}=8$, $y=4$; so the strips exist for $1\\le y\\le4$.",
+      "Area $=\\int_1^4\\left(\\frac8y-\\sqrt y\\right)dy=\\left[8\\ln y-\\frac23y^{3/2}\\right]_1^4$.",
+      "$=8\\ln4-\\frac23(8-1)=16\\ln2-\\frac{14}{3}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When the upper boundary changes at a crossing point, either split the $x$-integral there or integrate along the other axis: one strip integral can replace a two-piece sum.",
+    "$\\int\\frac kx\\,dx=k\\ln x$, so an area under $xy=k$ between $x=p$ and $x=q$ is $k\\ln\\frac qp$; here $8\\ln\\frac82=16\\ln2$.",
+    "$y=x^2$ meets $xy=k$ at $x=k^{1/3}$ (here $k=8$ gives $x=2$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 5,
+   "concepts": [
+    "Indefinite integration by substitution (trigonometric functions)"
+   ],
+   "level": 3,
+   "question": "The value of the integral $\\int\\frac{\\sin\\theta\\,\\sin2\\theta\\left(\\sin^6\\theta+\\sin^4\\theta+\\sin^2\\theta\\right)\\sqrt{2\\sin^4\\theta+3\\sin^2\\theta+6}}{1-\\cos2\\theta}d\\theta$ is : (where $c$ is a constant of integration)",
+   "options": [
+    "$\\frac1{18}\\left[11-18\\sin^2\\theta+9\\sin^4\\theta-2\\sin^6\\theta\\right]^{3/2}+c$",
+    "$\\frac1{18}\\left[9-2\\cos^6\\theta-3\\cos^4\\theta-6\\cos^2\\theta\\right]^{3/2}+c$",
+    "$\\frac1{18}\\left[11-18\\cos^2\\theta+9\\cos^4\\theta-2\\cos^6\\theta\\right]^{3/2}+c$",
+    "$\\frac1{18}\\left[9-2\\sin^6\\theta-3\\sin^4\\theta-6\\sin^2\\theta\\right]^{3/2}+c$"
+   ],
+   "answer": "(C)",
+   "key_idea": "After using $\\sin2\\theta=2\\sin\\theta\\cos\\theta$ and $1-\\cos2\\theta=2\\sin^2\\theta$ the integrand is $\\frac1{12}\\sqrt T\\,\\frac{dT}{d\\theta}$ with $T=2\\sin^6\\theta+3\\sin^4\\theta+6\\sin^2\\theta$.",
+   "solution": [
+    "Use $1-\\cos2\\theta=2\\sin^2\\theta$ and $\\sin2\\theta=2\\sin\\theta\\cos\\theta$: $I=\\int\\frac{\\sin\\theta\\left(2\\sin\\theta\\cos\\theta\\right)\\left(\\sin^6\\theta+\\sin^4\\theta+\\sin^2\\theta\\right)\\sqrt{2\\sin^4\\theta+3\\sin^2\\theta+6}}{2\\sin^2\\theta}d\\theta$.",
+    "$I=\\int\\left(\\sin^6\\theta+\\sin^4\\theta+\\sin^2\\theta\\right)\\cos\\theta\\sqrt{2\\sin^4\\theta+3\\sin^2\\theta+6}\\,d\\theta$.",
+    "Write $\\sin^6\\theta+\\sin^4\\theta+\\sin^2\\theta=\\sin\\theta\\left(\\sin^5\\theta+\\sin^3\\theta+\\sin\\theta\\right)$ and take $\\sin\\theta$ inside the root (for $\\sin\\theta>0$): $I=\\int\\left(\\sin^5\\theta+\\sin^3\\theta+\\sin\\theta\\right)\\cos\\theta\\sqrt{2\\sin^6\\theta+3\\sin^4\\theta+6\\sin^2\\theta}\\,d\\theta$.",
+    "Let $t=2\\sin^6\\theta+3\\sin^4\\theta+6\\sin^2\\theta$; then $dt=12\\left(\\sin^5\\theta+\\sin^3\\theta+\\sin\\theta\\right)\\cos\\theta\\,d\\theta$.",
+    "$\\left(\\sin^5\\theta+\\sin^3\\theta+\\sin\\theta\\right)\\cos\\theta\\,d\\theta=\\frac{dt}{12}$.",
+    "$I=\\frac1{12}\\int t^{1/2}dt=\\frac1{18}t^{3/2}+C$.",
+    "$I=\\frac1{18}\\left(2\\sin^6\\theta+3\\sin^4\\theta+6\\sin^2\\theta\\right)^{3/2}+C$.",
+    "Put $\\sin^2\\theta=1-\\cos^2\\theta$: $2\\left(1-\\cos^2\\theta\\right)^3+3\\left(1-\\cos^2\\theta\\right)^2+6\\left(1-\\cos^2\\theta\\right)$.",
+    "Expanding, this equals $11-18\\cos^2\\theta+9\\cos^4\\theta-2\\cos^6\\theta$.",
+    "$I=\\frac1{18}\\left[11-18\\cos^2\\theta+9\\cos^4\\theta-2\\cos^6\\theta\\right]^{3/2}+C$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Do not integrate: differentiate the options near $\\theta=0$, where the integrand behaves like $\\sqrt6\\,\\theta^2$, and see which one matches.",
+     "solution": [
+      "After simplification $I'(\\theta)=\\cos\\theta\\left(\\sin^6\\theta+\\sin^4\\theta+\\sin^2\\theta\\right)\\sqrt{2\\sin^4\\theta+3\\sin^2\\theta+6}\\approx\\theta^2\\sqrt6$ for small $\\theta$.",
+      "(B): at $\\theta=0$ the bracket is $9-2-3-6=-2<0$, so $[\\ ]^{3/2}$ is not even defined near $0$. Reject.",
+      "(A) and (D): the bracket tends to $11$ and $9$ (non-zero) and changes by an amount $\\propto\\theta^2$, so the derivative of $[\\ ]^{3/2}$ is $\\propto\\theta$, not $\\theta^2$. Reject.",
+      "(C): with $\\cos^2\\theta\\approx1-\\theta^2$ the bracket is $11-18c^2+9c^4-2c^6\\approx6\\theta^2$, so the option is $\\approx\\frac1{18}\\left(6\\theta^2\\right)^{3/2}=\\frac{\\sqrt6}{3}\\theta^3$.",
+      "Its derivative is $\\sqrt6\\,\\theta^2$, which matches the integrand. Hence (C). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1-\\cos2\\theta=2\\sin^2\\theta$, $1+\\cos2\\theta=2\\cos^2\\theta$, $\\sin2\\theta=2\\sin\\theta\\cos\\theta$: they usually make a heavy trigonometric fraction collapse to $\\cos\\theta\\times$ (polynomial in $\\sin\\theta$).",
+    "Recognition cue: an integrand of the form $\\sqrt{T}\\,T'$ (up to a constant) integrates to $\\frac23\\cdot\\frac{T^{3/2}}{\\text{const}}$; look for the radicand's derivative among the other factors. Here $T'=12(\\sin^5\\theta+\\sin^3\\theta+\\sin\\theta)\\cos\\theta$.",
+    "Moving a factor into a root, $\\sin\\theta\\sqrt X=\\sqrt{\\sin^2\\theta\\,X}$, needs $\\sin\\theta\\ge0$; state the interval of validity ($\\sin\\theta>0$ here).",
+    "Check conversions between forms by two values: $2s^6+3s^4+6s^2$ with $s^2=1-c^2$ equals $11-18c^2+9c^4-2c^6$ (at $c=0$ both are $11$, at $c=1$ both are $0$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 6,
+   "concepts": [
+    "Leibniz rule and integral equations involving $\\phi'$"
+   ],
+   "level": 2,
+   "question": "If $\\phi(x)=\\frac1{\\sqrt x}\\int_{\\pi/4}^x\\left(4\\sqrt2\\sin t-3\\phi'(t)\\right)dt$, $x>0$, then $\\phi'\\left(\\frac\\pi4\\right)$ is equal to :",
+   "options": [
+    "$\\frac8{6+\\sqrt\\pi}$",
+    "$\\frac4{6+\\sqrt\\pi}$",
+    "$\\frac8{\\sqrt\\pi}$",
+    "$\\frac4{6-\\sqrt\\pi}$"
+   ],
+   "answer": "(A) $\\frac8{6+\\sqrt\\pi}$",
+   "key_idea": "Differentiate once and put $x=\\frac\\pi4$: the integral term vanishes (equal limits) and $\\phi'\\left(\\frac\\pi4\\right)$ appears linearly.",
+   "solution": [
+    "Differentiate (product rule and Leibniz rule): $\\phi'(x)=\\frac1{\\sqrt x}\\left[\\left(4\\sqrt2\\sin x-3\\phi'(x)\\right)\\cdot1-0\\right]-\\frac12x^{-3/2}\\int_{\\pi/4}^x\\left(4\\sqrt2\\sin t-3\\phi'(t)\\right)dt$.",
+    "At $x=\\frac\\pi4$ the integral has equal limits, so it is $0$ and the last term vanishes.",
+    "$\\phi'\\left(\\frac\\pi4\\right)=\\frac{2}{\\sqrt\\pi}\\left[4\\sqrt2\\sin\\frac\\pi4-3\\phi'\\left(\\frac\\pi4\\right)\\right]$, because $\\frac1{\\sqrt{\\pi/4}}=\\frac2{\\sqrt\\pi}$.",
+    "$4\\sqrt2\\sin\\frac\\pi4=4$, so $\\phi'\\left(\\frac\\pi4\\right)=\\frac2{\\sqrt\\pi}\\left[4-3\\phi'\\left(\\frac\\pi4\\right)\\right]$.",
+    "$\\left(1+\\frac6{\\sqrt\\pi}\\right)\\phi'\\left(\\frac\\pi4\\right)=\\frac8{\\sqrt\\pi}$.",
+    "$\\phi'\\left(\\frac\\pi4\\right)=\\frac8{\\sqrt\\pi+6}$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate $\\phi'$ inside the integral to turn the equation into an explicit formula for $\\phi(x)$, then differentiate that.",
+     "solution": [
+      "Multiply by $\\sqrt x$: $\\sqrt x\\,\\phi(x)=\\int_{\\pi/4}^x4\\sqrt2\\sin t\\,dt-3\\int_{\\pi/4}^x\\phi'(t)dt$.",
+      "$\\int_{\\pi/4}^x4\\sqrt2\\sin t\\,dt=4\\sqrt2\\left(\\cos\\frac\\pi4-\\cos x\\right)=4-4\\sqrt2\\cos x$, and $\\int_{\\pi/4}^x\\phi'=\\phi(x)-\\phi\\left(\\frac\\pi4\\right)$.",
+      "$\\left(\\sqrt x+3\\right)\\phi(x)=4-4\\sqrt2\\cos x+3\\phi\\left(\\frac\\pi4\\right)$.",
+      "Put $x=\\frac\\pi4$: $\\left(\\frac{\\sqrt\\pi}{2}+3\\right)\\phi\\left(\\frac\\pi4\\right)=3\\phi\\left(\\frac\\pi4\\right)$, so $\\phi\\left(\\frac\\pi4\\right)=0$.",
+      "$\\phi(x)=\\frac{4-4\\sqrt2\\cos x}{\\sqrt x+3}$; its numerator vanishes at $x=\\frac\\pi4$, so $\\phi'\\left(\\frac\\pi4\\right)=\\frac{4\\sqrt2\\sin\\frac\\pi4}{\\frac{\\sqrt\\pi}2+3}=\\frac8{\\sqrt\\pi+6}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Leibniz: $\\frac{d}{dx}\\int_a^xF(t)dt=F(x)$. In $\\phi(x)=\\frac1{h(x)}\\int_a^x\\left(p(t)-k\\phi'(t)\\right)dt$ the integral vanishes at $x=a$, giving $\\phi'(a)=\\frac{p(a)}{h(a)+k}$. Here $h=\\sqrt{\\pi/4}$, $k=3$, $p=4$: $\\frac{4}{\\frac{\\sqrt\\pi}{2}+3}=\\frac{8}{\\sqrt\\pi+6}$.",
+    "If the integrand contains $\\phi'$ itself, the integral equation is a disguised differential equation: clear the prefactor, integrate $\\phi'$ to get $\\phi$, and solve algebraically.",
+    "Quick check: if the integral's lower limit equals the evaluation point, only the 'outer' factor's derivative of the integrand survives (the term with the integral itself is $0$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 7,
+   "concepts": [
+    "Definite integration by trigonometric substitution"
+   ],
+   "level": 1,
+   "question": "If $\\int_0^{1/2}\\frac{x^2}{\\left(1-x^2\\right)^{3/2}}dx$ is $\\frac k6$, then $k$ is equal to :",
+   "options": [
+    "$2\\sqrt3-\\pi$",
+    "$2\\sqrt3+\\pi$",
+    "$3\\sqrt2+\\pi$",
+    "$3\\sqrt2-\\pi$"
+   ],
+   "answer": "(A) $2\\sqrt3-\\pi$",
+   "key_idea": "$(1-x^2)^{3/2}$ calls for $x=\\sin\\theta$, which turns the integrand into $\\tan^2\\theta$.",
+   "solution": [
+    "Put $x=\\sin\\theta$, $dx=\\cos\\theta\\,d\\theta$; the limits $x=0,\\frac12$ become $\\theta=0,\\frac\\pi6$.",
+    "$\\frac k6=\\int_0^{\\pi/6}\\frac{\\sin^2\\theta}{\\left(1-\\sin^2\\theta\\right)^{3/2}}\\cos\\theta\\,d\\theta$.",
+    "$\\left(1-\\sin^2\\theta\\right)^{3/2}=\\cos^3\\theta$, so $\\frac k6=\\int_0^{\\pi/6}\\frac{\\sin^2\\theta}{\\cos^3\\theta}\\cos\\theta\\,d\\theta=\\int_0^{\\pi/6}\\tan^2\\theta\\,d\\theta$.",
+    "$\\frac k6=\\int_0^{\\pi/6}\\left(\\sec^2\\theta-1\\right)d\\theta$.",
+    "$\\frac k6=\\left(\\tan\\theta-\\theta\\right)_0^{\\pi/6}=\\frac1{\\sqrt3}-\\frac\\pi6=\\frac{2\\sqrt3-\\pi}{6}$.",
+    "$k=2\\sqrt3-\\pi$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate by parts with $\\int\\frac{x}{(1-x^2)^{3/2}}dx=\\frac1{\\sqrt{1-x^2}}$, avoiding any substitution of the variable.",
+     "solution": [
+      "Write $\\frac{x^2}{(1-x^2)^{3/2}}=x\\cdot\\frac{x}{(1-x^2)^{3/2}}$ and note $\\int\\frac{x}{(1-x^2)^{3/2}}dx=\\frac1{\\sqrt{1-x^2}}$.",
+      "By parts: $\\int\\frac{x^2}{(1-x^2)^{3/2}}dx=\\frac{x}{\\sqrt{1-x^2}}-\\int\\frac{dx}{\\sqrt{1-x^2}}=\\frac{x}{\\sqrt{1-x^2}}-\\sin^{-1}x$.",
+      "At $x=\\frac12$: $\\frac{1/2}{\\sqrt3/2}-\\frac\\pi6=\\frac1{\\sqrt3}-\\frac\\pi6$; at $x=0$ the value is $0$.",
+      "So $\\frac k6=\\frac{2\\sqrt3-\\pi}{6}$ and $k=2\\sqrt3-\\pi$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\frac{x^2}{(1-x^2)^{3/2}}dx=\\frac{x}{\\sqrt{1-x^2}}-\\sin^{-1}x+C$ (differentiate to check). Also $\\int\\frac{dx}{(1-x^2)^{3/2}}=\\frac{x}{\\sqrt{1-x^2}}+C$.",
+    "Cue: $(a^2-x^2)^{n/2}$ with $n$ odd: $x=a\\sin\\theta$ (then $\\sqrt{a^2-x^2}=a\\cos\\theta$). For $(x^2+a^2)^{n/2}$ use $x=a\\tan\\theta$ or $a\\sinh u$.",
+    "Analogue: $\\int\\frac{x^2}{(x^2+1)^{3/2}}dx=\\sinh^{-1}x-\\frac{x}{\\sqrt{x^2+1}}+C$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 8,
+   "concepts": [
+    "Bernoulli differential equation reduced to a linear equation"
+   ],
+   "level": 3,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\frac{dy}{dx}=(y+1)\\left((y+1)e^{x^2/2}-x\\right)$, $0<x<2.1$, with $y(2)=0$. Then the value of $\\frac{dy}{dx}$ at $x=1$ is equal to :",
+   "options": [
+    "$\\frac{5e^{1/2}}{\\left(e^2+1\\right)^2}$",
+    "$-\\frac{2e^2}{\\left(1+e^2\\right)^2}$",
+    "$\\frac{-e^{3/2}}{\\left(e^2+1\\right)^2}$",
+    "$\\frac{e^{5/2}}{\\left(1+e^2\\right)^2}$"
+   ],
+   "answer": "(C) $\\frac{-e^{3/2}}{\\left(e^2+1\\right)^2}$",
+   "key_idea": "With $Y=y+1$ the equation is Bernoulli ($Y^2$ term); $P=\\frac1Y$ makes it linear with I.F. $e^{-x^2/2}$.",
+   "solution": [
+    "Put $Y=y+1$: $\\frac{dY}{dx}=Y\\left(Ye^{x^2/2}-x\\right)=Y^2e^{x^2/2}-xY$.",
+    "Divide by $Y^2$: $\\frac1{Y^2}\\frac{dY}{dx}=e^{x^2/2}-\\frac xY$.",
+    "Put $P=\\frac1Y$, so $\\frac{dP}{dx}=-\\frac1{Y^2}\\frac{dY}{dx}$: $-\\frac{dP}{dx}=e^{x^2/2}-Px$.",
+    "$\\frac{dP}{dx}-xP=-e^{x^2/2}$, a linear equation in $P$.",
+    "I.F. $=e^{-\\int x\\,dx}=e^{-x^2/2}$, so $\\frac{d}{dx}\\left(Pe^{-x^2/2}\\right)=-1$ and $Pe^{-x^2/2}=-x+c$.",
+    "$P=(c-x)e^{x^2/2}$, i.e. $y+1=\\frac1P=\\frac{e^{-x^2/2}}{c-x}$.",
+    "$y(2)=0$: $1=\\frac{e^{-2}}{c-2}$, so $c=2+e^{-2}$.",
+    "$y+1=\\frac{e^{-x^2/2}}{2+e^{-2}-x}$.",
+    "At $x=1$: $y+1=\\frac{e^{-1/2}}{1+e^{-2}}=\\frac{e^{3/2}}{e^2+1}$.",
+    "From the equation, $\\frac{dy}{dx}=(y+1)\\left((y+1)e^{1/2}-1\\right)$; $(y+1)e^{1/2}=\\frac{e^2}{e^2+1}$, so the bracket is $-\\frac1{e^2+1}$.",
+    "$\\frac{dy}{dx}\\Big|_{x=1}=\\frac{e^{3/2}}{e^2+1}\\cdot\\frac{-1}{e^2+1}=\\frac{-e^{3/2}}{\\left(e^2+1\\right)^2}$. Answer (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's linear equation has a sign error: after $P=1/Y$ it writes $\\frac{dP}{dx}-Px=e^{x^2/2}$ (correct: $=-e^{x^2/2}$) and uses I.F. $e^{x^2/2}$ (correct: $e^{-x^2/2}$). Its later lines ($-P=(x+c)e^{x^2/2}$, $c=-2-\\frac{1}{e^{x^2/2}}$ with $x$ left in the exponent, and the final expression for $y+1$) are therefore not valid; the closing value $\\frac{-e^{3/2}}{(e^2+1)^2}$ and key (C) are right. Corrected working is given.",
+   "alternate_solutions": [
+    {
+     "idea": "Remove the linear term by $Y=e^{-x^2/2}w$: the Bernoulli equation collapses to the separable $w'=w^2$.",
+     "solution": [
+      "With $Y=y+1$: $Y'+xY=e^{x^2/2}Y^2$.",
+      "Put $Y=e^{-x^2/2}w$. Then $Y'+xY=e^{-x^2/2}w'$ and $e^{x^2/2}Y^2=e^{x^2/2}e^{-x^2}w^2=e^{-x^2/2}w^2$.",
+      "So $w'=w^2$, which gives $-\\frac1w=x+k$, $w=-\\frac1{x+k}$ and $Y=-\\frac{e^{-x^2/2}}{x+k}$.",
+      "$Y(2)=1$: $1=-\\frac{e^{-2}}{2+k}$, so $k=-2-e^{-2}$.",
+      "At $x=1$: $Y=\\frac{-e^{-1/2}}{1-2-e^{-2}}=\\frac{e^{-1/2}}{1+e^{-2}}=\\frac{e^{3/2}}{e^2+1}$.",
+      "$\\frac{dy}{dx}=Y\\left(Ye^{1/2}-1\\right)=\\frac{e^{3/2}}{e^2+1}\\left(\\frac{e^2}{e^2+1}-1\\right)=\\frac{-e^{3/2}}{\\left(e^2+1\\right)^2}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Bernoulli $Y'+p(x)Y=q(x)Y^n$: $P=Y^{1-n}$ gives the linear equation $P'+(1-n)pP=(1-n)q$. For $n=2$: $P'-pP=-q$; here $p=x$, $q=e^{x^2/2}$: $P'-xP=-e^{x^2/2}$.",
+    "Sign check: the I.F. is $e^{\\int(\\text{coefficient of }P)}$; here the coefficient is $-x$, so the I.F. is $e^{-x^2/2}$.",
+    "Substituting $Y=u\\,e^{-\\int p}$ gives $u'=q\\,e^{-(n-1)\\int p}u^n$; when $q=e^{(n-1)\\int p}$ this is simply $u'=u^n$ (separable). Cue: the equation $Y'+xY=e^{x^2/2}Y^2$ has exactly this shape.",
+    "Do not solve for $y(1)$ and differentiate separately: once $y(1)$ is known, $y'(1)$ follows from the differential equation itself."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 9,
+   "concepts": [
+    "Leibniz rule (variable upper limit) and limit as a derivative"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a continuously differentiable function such that $f(2)=6$ and $f'(2)=\\frac1{48}$. If $\\int_6^{f(x)}4t^3dt=(x-2)g(x)$, then $\\lim_{x\\to2}g(x)$ is equal to :",
+   "options": [
+    "$18$",
+    "$36$",
+    "$24$",
+    "$12$"
+   ],
+   "answer": "(A) $18$",
+   "key_idea": "The integral equals $f(x)^4-6^4$, so $g$ is the difference quotient of $f^4$ at $x=2$ and the limit is $\\left(f^4\\right)'(2)$.",
+   "solution": [
+    "Evaluate the integral: $\\int_6^{f(x)}4t^3dt=f(x)^4-6^4$, so for $x\\neq2$: $g(x)=\\frac{f(x)^4-6^4}{x-2}$.",
+    "Since $f(2)=6$: $g(x)=\\frac{f(x)^4-f(2)^4}{x-2}$, the difference quotient of $f^4$ at $x=2$.",
+    "$\\lim_{x\\to2}g(x)=\\frac{d}{dx}\\left(f(x)^4\\right)\\Big|_{x=2}=4f(2)^3f'(2)$.",
+    "$=4\\cdot6^3\\cdot\\frac1{48}=\\frac{864}{48}=18$. Answer (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF differentiates both sides, $4f(x)f'(x)=g'(x)(x-2)+g(x)$ (the factor should be $4f(x)^3f'(x)$), then puts $x=2$ and concludes $\\lim g=g(2)=18$. That needs $g$ to be differentiable (and continuous) at $2$, which is not given. The working is replaced by the limit definition of the derivative of $f^4$, which needs no assumption on $g$; the answer $18$ is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Mean value theorem for integrals: $\\int_6^{f(x)}4t^3dt=4\\xi^3\\left(f(x)-6\\right)$ for some $\\xi$ between $6$ and $f(x)$.",
+     "solution": [
+      "For $x\\neq2$ near $2$: $(x-2)g(x)=4\\xi_x^3\\left(f(x)-f(2)\\right)$ with $\\xi_x$ between $6$ and $f(x)$.",
+      "Hence $g(x)=4\\xi_x^3\\cdot\\frac{f(x)-f(2)}{x-2}$.",
+      "As $x\\to2$: $f(x)\\to f(2)=6$ by continuity, so $\\xi_x\\to6$; and $\\frac{f(x)-f(2)}{x-2}\\to f'(2)=\\frac1{48}$.",
+      "$\\lim_{x\\to2}g(x)=4\\cdot6^3\\cdot\\frac1{48}=18$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\int_a^{f(x)}h(t)dt=h\\left(f(x)\\right)f'(x)$. If $\\int_a^{f(x)}h=(x-x_0)g(x)$ with $f(x_0)=a$, then $\\lim_{x\\to x_0}g(x)=h(a)\\,f'(x_0)$. Here $4\\cdot6^3\\cdot\\frac1{48}=18$.",
+    "Do not differentiate $(x-2)g(x)$ unless $g$ is known to be differentiable; define $g$ as the quotient and use the limit definition of a derivative.",
+    "Chain rule as a limit: $\\frac{F(f(x))-F(f(x_0))}{x-x_0}\\to F'\\left(f(x_0)\\right)f'(x_0)$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 10,
+   "concepts": [
+    "Area of regions bounded by a line and a circle"
+   ],
+   "level": 2,
+   "question": "Let $A=\\left\\{(x,y)\\in\\mathbb R^2:y\\ge0,\\ 2x\\le y\\le\\sqrt{4-(x-1)^2}\\right\\}$ and $B=\\left\\{(x,y)\\in\\mathbb R\\times\\mathbb R:0\\le y\\le\\min\\left\\{2x,\\sqrt{4-(x-1)^2}\\right\\}\\right\\}$. Then the ratio of the area of $A$ to the area of $B$ is :",
+   "options": [
+    "$\\frac{\\pi+1}{\\pi-1}$",
+    "$\\frac{\\pi}{\\pi+1}$",
+    "$\\frac{\\pi}{\\pi-1}$",
+    "$\\frac{\\pi-1}{\\pi+1}$"
+   ],
+   "answer": "(D) $\\frac{\\pi-1}{\\pi+1}$",
+   "key_idea": "The line $y=2x$ passes through the top point $(1,2)$ of the circle $(x-1)^2+y^2=4$, so $A$ and $B$ are a quarter disc with a triangle removed or added.",
+   "solution": [
+    "The circle $(x-1)^2+y^2=4$ has centre $(1,0)$, radius $2$; $y=\\sqrt{4-(x-1)^2}$ is its upper half.",
+    "$y=2x$ meets the circle where $5x^2-2x-3=0$, i.e. $x=1$ or $x=-\\frac35$; with $y\\ge0$ the meeting point is $(1,2)$, the top of the circle.",
+    "$A$ (figure 1): points of the upper half-disc with $x\\le1$ that lie on or above $y=2x$: the quarter disc $-1\\le x\\le1$ minus the triangle with vertices $(0,0),(1,0),(1,2)$.",
+    "Area$(A)=\\frac{\\pi\\cdot2^2}{4}-\\frac12\\cdot1\\cdot2=\\pi-1$.",
+    "$B$ (figure 2): under $y=2x$ for $0\\le x\\le1$ (that triangle) and under the circle for $1\\le x\\le3$ (the other quarter disc).",
+    "Area$(B)=\\frac12\\cdot1\\cdot2+\\frac{\\pi\\cdot2^2}{4}=1+\\pi$.",
+    "$\\frac{\\text{area of }A}{\\text{area of }B}=\\frac{\\pi-1}{\\pi+1}$. Answer (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes area of $A=\\frac{\\pi\\times4}{2}-\\left(\\frac12\\times1\\times2\\right)=\\pi-1$. $\\frac{\\pi\\times4}{2}-1$ equals $2\\pi-1$; the quarter disc is $\\frac{\\pi\\times4}{4}=\\pi$, which gives $\\pi-1$. Fixed to $\\frac{\\pi\\cdot2^2}{4}$. The line-circle intersection step was also added; the answer is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Use symmetry: $A+B$ is the whole upper half-disc and $B-A$ is twice the triangle, so neither area needs separate integration.",
+     "solution": [
+      "For $x\\in[-1,3]$ the sets $A$ and $B$ together fill the column $0\\le y\\le\\sqrt{4-(x-1)^2}$ without overlap (above and below $y=2x$ on $[0,1]$, one whole column each elsewhere). So $A+B$ = upper half-disc $=\\frac{\\pi\\cdot2^2}{2}=2\\pi$.",
+      "The circle is symmetric about $x=1$: the part with $-1\\le x\\le1$ and the part with $1\\le x\\le3$ both have area $\\pi$.",
+      "Let $T$ be the triangle $(0,0),(1,0),(1,2)$, area $1$. Then $A=\\pi-T$ and $B=T+\\pi$, so $B-A=2T=2$.",
+      "$A+B=2\\pi$ and $B-A=2$ give $A=\\pi-1$, $B=\\pi+1$.",
+      "Ratio $\\frac AB=\\frac{\\pi-1}{\\pi+1}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For regions cut from a symmetric figure by a line, sums and differences are easier than the pieces: here $A+B=2\\pi$ (half-disc) and $B-A=2\\times$ triangle $=2$.",
+    "The area under $y=\\sqrt{r^2-(x-h)^2}$ from $x=h-r$ to $x=h$ (or from $h$ to $h+r$) is a quarter disc, $\\frac{\\pi r^2}{4}$.",
+    "Intersect line and circle first; impose the sign conditions (here $y\\ge0$) afterwards to discard the root $x=-\\frac35$ (where $y=2x<0$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 11,
+   "concepts": [
+    "Integration by parts of inverse trigonometric functions"
+   ],
+   "level": 2,
+   "question": "If $\\int\\sin^{-1}\\left(\\sqrt{\\frac x{1+x}}\\right)dx=A(x)\\tan^{-1}\\left(\\sqrt x\\right)+B(x)+C$, where $C$ is a constant of integration, then the ordered pair $(A(x),B(x))$ can be :",
+   "options": [
+    "$\\left(x+1,\\sqrt x\\right)$",
+    "$\\left(x-1,\\sqrt x\\right)$",
+    "$\\left(x-1,-\\sqrt x\\right)$",
+    "$\\left(x+1,-\\sqrt x\\right)$"
+   ],
+   "answer": "(D) $\\left(x+1,-\\sqrt x\\right)$",
+   "key_idea": "$\\sin^{-1}\\sqrt{\\frac{x}{1+x}}=\\tan^{-1}\\sqrt x$ (right triangle with legs $\\sqrt x$, $1$), then integrate by parts.",
+   "solution": [
+    "$I=\\int\\sin^{-1}\\left(\\frac{\\sqrt x}{\\sqrt{1+x}}\\right)dx=\\int\\tan^{-1}\\left(\\sqrt x\\right)dx$ (right triangle with legs $\\sqrt x$ and $1$, hypotenuse $\\sqrt{1+x}$).",
+    "By parts, taking $1$ as the second function: $I=x\\tan^{-1}\\sqrt x-\\int x\\cdot\\frac1{1+x}\\cdot\\frac1{2\\sqrt x}dx+C$.",
+    "Put $x=t^2$, $dx=2t\\,dt$: $\\int\\frac{x}{1+x}\\cdot\\frac{dx}{2\\sqrt x}=\\frac12\\int\\frac{t\\cdot2t\\,dt}{1+t^2}=\\int\\frac{t^2}{1+t^2}dt$.",
+    "$I=x\\tan^{-1}\\sqrt x-\\int\\frac{t^2}{1+t^2}dt+C$.",
+    "$\\int\\frac{t^2}{1+t^2}dt=t-\\tan^{-1}t$, so $I=x\\tan^{-1}\\sqrt x-\\sqrt x+\\tan^{-1}\\sqrt x+C$.",
+    "$I=(x+1)\\tan^{-1}\\sqrt x-\\sqrt x+C$, so $A(x)=x+1$ and $B(x)=-\\sqrt x$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the right-hand side and match coefficients of $\\tan^{-1}\\sqrt x$: this fixes $A$ and then $B$ with no integration.",
+     "solution": [
+      "Differentiating: $A'\\tan^{-1}\\sqrt x+\\frac{A}{2\\sqrt x(1+x)}+B'$ must equal $\\tan^{-1}\\sqrt x$.",
+      "Comparing the coefficient of $\\tan^{-1}\\sqrt x$: $A'=1$, so $A=x+k$ (the options have $x\\pm1$).",
+      "The rest gives $B'=-\\frac{A}{2\\sqrt x(1+x)}$. For $A=x+1$: $B'=-\\frac1{2\\sqrt x}$, so $B=-\\sqrt x$ (option D).",
+      "For $A=x-1$: $B'=-\\frac{x-1}{2\\sqrt x(1+x)}=-\\frac1{2\\sqrt x}+\\frac1{\\sqrt x(1+x)}$, so $B=-\\sqrt x+2\\tan^{-1}\\sqrt x$, which is not $\\pm\\sqrt x$: (B) and (C) fail; (A) has the wrong sign of $B$.",
+      "Hence $\\left(A,B\\right)=\\left(x+1,-\\sqrt x\\right)$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Inverse-trig compositions reduce by a right triangle: $\\sin^{-1}\\sqrt{\\frac{x}{1+x}}=\\tan^{-1}\\sqrt x=\\cos^{-1}\\frac1{\\sqrt{1+x}}$ for $x\\ge0$.",
+    "$\\int\\tan^{-1}\\sqrt x\\,dx=(x+1)\\tan^{-1}\\sqrt x-\\sqrt x+C$ (differentiate to check). For an inverse trigonometric function alone, integrate by parts with $1$ as the second function.",
+    "When the answer has the form $A\\tan^{-1}+B$, matching coefficients after differentiating can eliminate options without integrating."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 12,
+   "concepts": [
+    "Definite integral of a modulus (piecewise exponential)",
+    "Equation reducible to a quadratic in $e^{-\\alpha}$"
+   ],
+   "level": 2,
+   "question": "The value of $\\alpha$ for which $4\\alpha\\int_{-1}^{2}e^{-\\alpha|x|}dx=5$, is",
+   "options": [
+    "$\\log_e\\sqrt2$",
+    "$\\log_e2$",
+    "$\\log_e\\frac43$",
+    "$\\log_e\\frac32$"
+   ],
+   "answer": "(B) $\\log_e2$",
+   "key_idea": "Split at $0$ where $|x|$ changes branch; the factor $4\\alpha$ cancels the $\\frac1\\alpha$, leaving a quadratic in $t=e^{-\\alpha}$.",
+   "solution": [
+    "Split at $0$: $4\\alpha\\left(\\int_{-1}^0e^{-\\alpha|x|}dx+\\int_0^2e^{-\\alpha|x|}dx\\right)=5$.",
+    "$|x|=-x$ on $[-1,0]$ and $|x|=x$ on $[0,2]$: $4\\alpha\\int_{-1}^0e^{\\alpha x}dx+4\\alpha\\int_0^2e^{-\\alpha x}dx=5$.",
+    "$4\\alpha\\left[\\frac{e^{\\alpha x}}{\\alpha}\\right]_{-1}^0+4\\alpha\\left[\\frac{e^{-\\alpha x}}{-\\alpha}\\right]_0^2=5$.",
+    "$4\\left(1-e^{-\\alpha}\\right)-4\\left(e^{-2\\alpha}-1\\right)=5$.",
+    "$4e^{-2\\alpha}+4e^{-\\alpha}-3=0$.",
+    "Put $e^{-\\alpha}=t$: $4t^2+4t-3=0$, i.e. $(2t-1)(2t+3)=0$.",
+    "$t=\\frac12$ or $t=-\\frac32$ (rejected, since $e^{-\\alpha}>0$).",
+    "$e^{-\\alpha}=\\frac12$, so $\\alpha=\\ln2$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $\\alpha>0$: $\\int_{-p}^{q}e^{-\\alpha|x|}dx=\\frac{2-e^{-\\alpha p}-e^{-\\alpha q}}{\\alpha}$ (here $p=1$, $q=2$). The front factor $\\alpha$ then leaves only exponentials.",
+    "An equation with $e^{-2\\alpha}$ and $e^{-\\alpha}$ becomes a quadratic in $t=e^{-\\alpha}$; keep only $t>0$.",
+    "$\\int_0^b\\alpha e^{-\\alpha x}dx=1-e^{-\\alpha b}$ (the exponential distribution function): the factor $\\alpha$ in front is the cue."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 13,
+   "concepts": [
+    "Definite integration: algebraic decomposition and standard $\\tan^{-1}$ forms"
+   ],
+   "level": 3,
+   "question": "The value of the integral $\\int_1^2\\left(\\frac{t^4+1}{t^6+1}\\right)dt$ is",
+   "options": [
+    "$\\tan^{-1}\\frac12-\\frac13\\tan^{-1}8+\\frac\\pi3$",
+    "$\\tan^{-1}\\frac12+\\frac13\\tan^{-1}8-\\frac\\pi3$",
+    "$\\tan^{-1}2-\\frac13\\tan^{-1}8+\\frac\\pi3$",
+    "$\\tan^{-1}2+\\frac13\\tan^{-1}8-\\frac\\pi3$"
+   ],
+   "answer": "(D) $\\tan^{-1}2+\\frac13\\tan^{-1}8-\\frac\\pi3$",
+   "key_idea": "$\\frac{t^4+1}{t^6+1}=\\frac1{t^2+1}+\\frac{t^2}{t^6+1}$, and the second term integrates by $t^3=\\theta$.",
+   "solution": [
+    "Multiply numerator and denominator by $t^2+1$: $\\int_1^2\\frac{\\left(t^4+1\\right)\\left(t^2+1\\right)}{\\left(t^6+1\\right)\\left(t^2+1\\right)}dt$.",
+    "$\\left(t^4+1\\right)\\left(t^2+1\\right)=t^6+t^4+t^2+1$.",
+    "Split the numerator: $\\int_1^2\\frac{t^6+1}{\\left(t^6+1\\right)\\left(t^2+1\\right)}dt+\\int_1^2\\frac{t^4+t^2}{\\left(t^6+1\\right)\\left(t^2+1\\right)}dt$.",
+    "Since $t^4+t^2=t^2\\left(t^2+1\\right)$: $I=\\int_1^2\\frac{dt}{t^2+1}+\\int_1^2\\frac{t^2}{t^6+1}dt$.",
+    "First integral: $\\left[\\tan^{-1}t\\right]_1^2=\\tan^{-1}2-\\frac\\pi4$.",
+    "Let $I_1=\\int_1^2\\frac{t^2}{t^6+1}dt$; put $t^3=\\theta$, $3t^2dt=d\\theta$; $t=1\\Rightarrow\\theta=1$, $t=2\\Rightarrow\\theta=8$.",
+    "$I_1=\\frac13\\int_1^8\\frac{d\\theta}{\\theta^2+1}=\\frac13\\left[\\tan^{-1}\\theta\\right]_1^8=\\frac13\\left(\\tan^{-1}8-\\frac\\pi4\\right)$.",
+    "$I=\\tan^{-1}2-\\frac\\pi4+\\frac13\\tan^{-1}8-\\frac\\pi{12}=\\tan^{-1}2+\\frac13\\tan^{-1}8-\\frac\\pi3$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor $t^6+1=(t^2+1)(t^4-t^2+1)$ and write $t^4+1=(t^4-t^2+1)+t^2$: the same split in one step, with no multiplication trick.",
+     "solution": [
+      "Sum of cubes: $t^6+1=\\left(t^2\\right)^3+1=\\left(t^2+1\\right)\\left(t^4-t^2+1\\right)$.",
+      "$t^4+1=\\left(t^4-t^2+1\\right)+t^2$, so $\\frac{t^4+1}{t^6+1}=\\frac{1}{t^2+1}+\\frac{t^2}{t^6+1}$.",
+      "$\\int_1^2\\frac{dt}{t^2+1}=\\tan^{-1}2-\\frac\\pi4$ and $\\int_1^2\\frac{t^2dt}{t^6+1}=\\frac13\\left[\\tan^{-1}t^3\\right]_1^2=\\frac13\\left(\\tan^{-1}8-\\frac\\pi4\\right)$.",
+      "Sum: $\\tan^{-1}2+\\frac13\\tan^{-1}8-\\frac\\pi3$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$t^6+1=(t^2+1)(t^4-t^2+1)$ and $t^4+1=(t^4-t^2+1)+t^2$, hence $\\frac{t^4+1}{t^6+1}=\\frac{1}{t^2+1}+\\frac{t^2}{t^6+1}$ for all $t$ (check at $t=1$: $\\frac22=\\frac12+\\frac12$).",
+    "$\\int\\frac{t^{n-1}}{t^{2n}+1}dt=\\frac1n\\tan^{-1}\\left(t^n\\right)+C$; here $n=3$.",
+    "Related: $\\frac{t^2+1}{t^4+1}$ and $\\frac{t^2-1}{t^4+1}$ are handled by dividing by $t^2$ and putting $t\\mp\\frac1t=u$; the pattern here is different ($t^6+1$ factors with $t^2+1$)."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 14,
+   "concepts": [
+    "Definite integral of max and greatest-integer functions"
+   ],
+   "level": 2,
+   "question": "Let $[x]$ denote the greatest integer $\\le x$. Consider the function $f(x)=\\max\\left\\{x^2,1+[x]\\right\\}$. Then the value of the integral $\\int_0^2f(x)dx$ is",
+   "options": [
+    "$\\frac{8+4\\sqrt2}{3}$",
+    "$\\frac{5+4\\sqrt2}{3}$",
+    "$\\frac{1+5\\sqrt2}{3}$",
+    "$\\frac{4+5\\sqrt2}{3}$"
+   ],
+   "answer": "(B) $\\frac{5+4\\sqrt2}{3}$",
+   "key_idea": "On $[1,2)$ compare $x^2$ with $2$: they cross at $x=\\sqrt2$, so $f=2$ before it and $x^2$ after it.",
+   "solution": [
+    "On $[0,1)$: $[x]=0$, so $1+[x]=1\\ge x^2$ and $f(x)=1$.",
+    "On $[1,2)$: $1+[x]=2$, and $x^2\\le2$ exactly for $x\\le\\sqrt2$: $f(x)=2$ on $[1,\\sqrt2]$ and $f(x)=x^2$ on $[\\sqrt2,2]$.",
+    "$\\int_0^2f(x)dx=\\int_0^11\\,dx+\\int_1^{\\sqrt2}2\\,dx+\\int_{\\sqrt2}^2x^2dx$.",
+    "$=1+2\\left(\\sqrt2-1\\right)+\\left(\\frac83-\\frac{2\\sqrt2}{3}\\right)$.",
+    "$=1+2\\sqrt2-2+\\frac83-\\frac{2\\sqrt2}{3}$.",
+    "$=\\frac53+\\frac{4\\sqrt2}{3}=\\frac{5+4\\sqrt2}{3}$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Start from $\\int_0^2x^2dx$ and add the extra area where $1+[x]$ exceeds $x^2$: $\\int\\max\\{u,v\\}=\\int v+\\int(u-v)^+$.",
+     "solution": [
+      "$\\int_0^2f=\\int_0^2x^2dx+\\int_0^2\\left(f-x^2\\right)dx$, and $f-x^2=\\max\\left\\{0,\\ 1+[x]-x^2\\right\\}$.",
+      "$\\int_0^2x^2dx=\\frac83$.",
+      "$1+[x]-x^2>0$ only for $x<\\sqrt2$: $\\int_0^1\\left(1-x^2\\right)dx=\\frac23$ and $\\int_1^{\\sqrt2}\\left(2-x^2\\right)dx=2\\left(\\sqrt2-1\\right)-\\frac{2\\sqrt2-1}{3}=\\frac{4\\sqrt2-5}{3}$.",
+      "Total $=\\frac83+\\frac23+\\frac{4\\sqrt2-5}{3}=\\frac{5+4\\sqrt2}{3}$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int\\max\\{u,v\\}=\\int v+\\int(u-v)^+$: integrate the simple function and add only the region where the other one is larger.",
+    "Greatest-integer functions are constant on each $[n,n+1)$: split at integers first, then at the crossing points with the other function ($x^2=1$ at $1$, $x^2=2$ at $\\sqrt2$).",
+    "$\\max\\{a,b\\}=\\frac{a+b+|a-b|}{2}$ is useful for checking continuity, but for integrals splitting at the crossings is faster."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 15,
+   "concepts": [
+    "Estimating a definite integral by monotonicity of the integrand"
+   ],
+   "level": 2,
+   "question": "If $I=\\int_1^2\\frac{dx}{\\sqrt{2x^3-9x^2+12x+4}}$, then :",
+   "options": [
+    "$\\frac1{16}<I^2<\\frac19$",
+    "$\\frac18<I^2<\\frac14$",
+    "$\\frac19<I^2<\\frac18$",
+    "$\\frac16<I^2<\\frac12$"
+   ],
+   "answer": "(C) $\\frac19<I^2<\\frac18$",
+   "key_idea": "The cubic is decreasing on $(1,2)$, so $\\frac1{\\sqrt{f}}$ is increasing and $I$ lies between its end values (interval length $1$).",
+   "solution": [
+    "Let $f(x)=2x^3-9x^2+12x+4$.",
+    "$f'(x)=6x^2-18x+12$.",
+    "$f'(x)=6(x-1)(x-2)$.",
+    "For $x\\in(1,2)$: $x-1>0$ and $x-2<0$, so $f'(x)<0$ and $f$ is decreasing.",
+    "Hence $\\frac1{\\sqrt{f(x)}}$ is increasing on $(1,2)$.",
+    "$(2-1)\\cdot\\frac1{\\sqrt{f(1)}}<I<(2-1)\\cdot\\frac1{\\sqrt{f(2)}}$.",
+    "$f(1)=2-9+12+4=9$ and $f(2)=16-36+24+4=8$.",
+    "$\\frac13<I<\\frac1{2\\sqrt2}$.",
+    "$\\frac19<I^2<\\frac18$. Answer (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF defines $f(x)=2x^3-19x^2+12x+4$ (typo for $9x^2$) and writes $f'(x)=6(x-1)(x+2)$; the correct factorisation of $6x^2-18x+12$ is $6(x-1)(x-2)$ (the PDF's $(x+2)$ is wrong, although its conclusion $f'<0$ on $(1,2)$ is true for the correct factor). Fixed; the answer is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Avoid calculus: factor $f(x)-8$ and $f(x)-9$ to show $8<f(x)<9$ on $(1,2)$.",
+     "solution": [
+      "$f(x)-8=2x^3-9x^2+12x-4=(x-2)^2(2x-1)$ and $f(x)-9=2x^3-9x^2+12x-5=(x-1)^2(2x-5)$.",
+      "For $1<x<2$: $(x-2)^2(2x-1)>0$ and $(x-1)^2(2x-5)<0$, so $8<f(x)<9$.",
+      "Therefore $\\frac13<\\frac1{\\sqrt{f(x)}}<\\frac1{\\sqrt8}=\\frac1{2\\sqrt2}$ for every $x\\in(1,2)$.",
+      "Integrating over an interval of length $1$ keeps the strict inequalities: $\\frac13<I<\\frac1{2\\sqrt2}$, so $\\frac19<I^2<\\frac18$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $h$ is monotone on $[a,b]$ then $(b-a)\\min\\left(h(a),h(b)\\right)<\\int_a^bh<(b-a)\\max\\left(h(a),h(b)\\right)$, strictly when $h$ is not constant.",
+    "$\\frac1{\\sqrt f}$ is increasing where $f$ is decreasing; do not swap the end values.",
+    "A cubic with $f'(x_0)=0$ at an end gives a double root of $f-f(x_0)$: here $f-8=(x-2)^2(2x-1)$, since $f'(2)=0$. Factoring $f-c$ at the end values gives sign information without derivatives."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 16,
+   "concepts": [
+    "Indefinite integration: trigonometric simplification and substitution"
+   ],
+   "level": 2,
+   "question": "Let $\\alpha\\in\\left(0,\\frac\\pi2\\right)$ be fixed. If the integral $\\int\\frac{\\tan x+\\tan\\alpha}{\\tan x-\\tan\\alpha}dx=A(x)\\cos2\\alpha+B(x)\\sin2\\alpha+C$, where $C$ is a constant of integration, then the functions $A(x)$ and $B(x)$ are respectively",
+   "options": [
+    "$x-\\alpha$ and $\\log_e|\\cos(x-\\alpha)|$",
+    "$x+\\alpha$ and $\\log_e|\\sin(x-\\alpha)|$",
+    "$x-\\alpha$ and $\\log_e|\\sin(x-\\alpha)|$",
+    "$x+\\alpha$ and $\\log_e|\\sin(x+\\alpha)|$"
+   ],
+   "answer": "(C) (printed key; (B) is equally valid, see note)",
+   "key_idea": "The ratio of tangents equals $\\frac{\\sin(x+\\alpha)}{\\sin(x-\\alpha)}$, and with $t=x-\\alpha$ it splits into $\\cos2\\alpha+\\sin2\\alpha\\cot t$.",
+   "solution": [
+    "$\\frac{\\tan x+\\tan\\alpha}{\\tan x-\\tan\\alpha}=\\frac{\\sin x\\cos\\alpha+\\cos x\\sin\\alpha}{\\sin x\\cos\\alpha-\\cos x\\sin\\alpha}=\\frac{\\sin(x+\\alpha)}{\\sin(x-\\alpha)}$.",
+    "Let $x-\\alpha=t$, $dx=dt$: $I=\\int\\frac{\\sin(t+2\\alpha)}{\\sin t}dt$.",
+    "$\\sin(t+2\\alpha)=\\sin t\\cos2\\alpha+\\cos t\\sin2\\alpha$, so the integrand is $\\cos2\\alpha+\\sin2\\alpha\\cot t$.",
+    "$I=\\cos2\\alpha\\cdot t+\\sin2\\alpha\\cdot\\ln|\\sin t|+c$.",
+    "$I=(x-\\alpha)\\cos2\\alpha+\\sin2\\alpha\\ln|\\sin(x-\\alpha)|+c$, so $A=x-\\alpha$ and $B=\\ln|\\sin(x-\\alpha)|$: option (C).",
+    "Remark: $(x+\\alpha)\\cos2\\alpha$ differs from $(x-\\alpha)\\cos2\\alpha$ by the constant $2\\alpha\\cos2\\alpha$, which is absorbed in $c$; so option (B) is also a valid antiderivative. The direct result is (C), the printed key."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's second step reads $\\int\\frac{\\sin(x+\\alpha)}{\\tan(x-\\alpha)}dx$ (typo: the denominator is $\\sin(x-\\alpha)$). Also, option (B) $x+\\alpha$, $\\ln|\\sin(x-\\alpha)|$ differs from the key (C) only by the constant $2\\alpha\\cos2\\alpha$, so it is equally correct as an indefinite integral; the PDF does not mention this. The key (C) is kept because it is the direct result.",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\sin(x+\\alpha)=\\sin(x-\\alpha)+2\\cos x\\sin\\alpha$ and expand $\\cos x$ about $x-\\alpha$.",
+     "solution": [
+      "$\\frac{\\sin(x+\\alpha)}{\\sin(x-\\alpha)}=1+\\frac{\\sin(x+\\alpha)-\\sin(x-\\alpha)}{\\sin(x-\\alpha)}=1+\\frac{2\\cos x\\sin\\alpha}{\\sin(x-\\alpha)}$.",
+      "$\\cos x=\\cos\\left((x-\\alpha)+\\alpha\\right)=\\cos(x-\\alpha)\\cos\\alpha-\\sin(x-\\alpha)\\sin\\alpha$.",
+      "So $\\frac{2\\cos x\\sin\\alpha}{\\sin(x-\\alpha)}=\\sin2\\alpha\\cot(x-\\alpha)-2\\sin^2\\alpha$.",
+      "The integrand is $\\left(1-2\\sin^2\\alpha\\right)+\\sin2\\alpha\\cot(x-\\alpha)=\\cos2\\alpha+\\sin2\\alpha\\cot(x-\\alpha)$.",
+      "$I=x\\cos2\\alpha+\\sin2\\alpha\\ln|\\sin(x-\\alpha)|+C=(x-\\alpha)\\cos2\\alpha+\\sin2\\alpha\\ln|\\sin(x-\\alpha)|+C'$ with $C'=C+\\alpha\\cos2\\alpha$.",
+      "So $A=x-\\alpha$, $B=\\ln|\\sin(x-\\alpha)|$ (C); this also shows that $A$ is only determined up to an added constant. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{\\tan x+\\tan\\alpha}{\\tan x-\\tan\\alpha}=\\frac{\\sin(x+\\alpha)}{\\sin(x-\\alpha)}$ and $\\frac{\\tan x-\\tan\\alpha}{\\tan x+\\tan\\alpha}=\\frac{\\sin(x-\\alpha)}{\\sin(x+\\alpha)}$.",
+    "$\\int\\frac{\\sin(x+a)}{\\sin(x+b)}dx=x\\cos(a-b)+\\sin(a-b)\\ln|\\sin(x+b)|+C$ (write $\\sin(x+a)=\\sin\\left((x+b)+(a-b)\\right)$ and expand).",
+    "An indefinite integral is defined only up to a constant: terms such as $(x\\pm\\alpha)\\cos2\\alpha$ differ by a constant, so two options can both be right. Look for the form the working gives directly."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 17,
+   "concepts": [
+    "Linear differential equation with integrating factor"
+   ],
+   "level": 2,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\frac{dy}{dx}+\\frac{5}{x\\left(x^5+1\\right)}y=\\frac{\\left(x^5+1\\right)^2}{x^7}$, $x>0$. If $y(1)=2$, then $y(2)$ is equal to :",
+   "options": [
+    "$\\frac{679}{128}$",
+    "$\\frac{637}{128}$",
+    "$\\frac{697}{128}$",
+    "$\\frac{693}{128}$"
+   ],
+   "answer": "(D) $\\frac{693}{128}$",
+   "key_idea": "$\\frac{5}{x(x^5+1)}=\\frac5x-\\frac{5x^4}{x^5+1}$ gives I.F. $\\frac{x^5}{x^5+1}$, after which the right side collapses to $\\frac{1+x^5}{x^2}$.",
+   "solution": [
+    "I.F. $=e^{\\int\\frac{5\\,dx}{x(x^5+1)}}$. Divide top and bottom by $x^5$: $\\frac{5}{x(x^5+1)}=\\frac{5x^{-6}}{1+x^{-5}}$.",
+    "Put $1+x^{-5}=t$, so $-5x^{-6}dx=dt$: $\\int\\frac{5x^{-6}}{1+x^{-5}}dx=-\\int\\frac{dt}{t}=-\\ln t$.",
+    "I.F. $=e^{-\\ln t}=\\frac1t=\\frac1{1+x^{-5}}=\\frac{x^5}{1+x^5}$.",
+    "$y\\cdot\\frac{x^5}{1+x^5}=\\int\\frac{x^5}{1+x^5}\\cdot\\frac{\\left(1+x^5\\right)^2}{x^7}dx=\\int\\frac{1+x^5}{x^2}dx$.",
+    "$=\\int x^{-2}dx+\\int x^3dx$, so $y\\cdot\\frac{x^5}{1+x^5}=\\frac{x^4}{4}-\\frac1x+c$.",
+    "Given $y(1)=2$: $2\\cdot\\frac12=\\frac14-1+c$, so $c=\\frac74$.",
+    "$y\\cdot\\frac{x^5}{1+x^5}=\\frac{x^4}{4}-\\frac1x+\\frac74$.",
+    "Put $x=2$: $y\\cdot\\frac{32}{33}=4-\\frac12+\\frac74=\\frac{21}{4}$.",
+    "$y(2)=\\frac{21}{4}\\cdot\\frac{33}{32}=\\frac{693}{128}$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{n}{x(x^n+1)}=\\frac nx-\\frac{nx^{n-1}}{x^n+1}$, so for $y'+\\frac{n}{x(x^n+1)}y=Q$ the I.F. is $\\frac{x^n}{x^n+1}$ (here $n=5$).",
+    "After multiplying by the I.F., the right side often simplifies sharply ($\\frac{x^5}{1+x^5}\\cdot\\frac{(1+x^5)^2}{x^7}=\\frac{1+x^5}{x^2}$); simplify before integrating.",
+    "Use the initial condition on the I.F. form directly: $y\\cdot\\frac{x^5}{1+x^5}$ is $1$ at $x=1$, avoiding fractions in $y$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 18,
+   "concepts": [
+    "Bernoulli differential equation reduced to a linear equation"
+   ],
+   "level": 2,
+   "question": "Let $y=y(x)$, $y>0$, be a solution curve of the differential equation $\\left(1+x^2\\right)dy=y(x-y)dx$. If $y(0)=1$ and $y\\left(2\\sqrt2\\right)=\\beta$, then :",
+   "options": [
+    "$e^{\\beta^{-1}}=e^{-2}\\left(3+2\\sqrt2\\right)$",
+    "$e^{3\\beta^{-1}}=e\\left(3+2\\sqrt2\\right)$",
+    "$e^{3\\beta^{-1}}=e\\left(5+\\sqrt2\\right)$",
+    "$e^{\\beta^{-1}}=e^{-2}\\left(5+\\sqrt2\\right)$"
+   ],
+   "answer": "(B) $e^{3\\beta^{-1}}=e\\left(3+2\\sqrt2\\right)$",
+   "key_idea": "The $y^2$ term makes it a Bernoulli equation; $t=\\frac1y$ gives a linear equation with I.F. $\\sqrt{1+x^2}$.",
+   "solution": [
+    "$y(x-y)dx=\\left(1+x^2\\right)dy$, so $\\frac{dy}{dx}=\\frac{x}{1+x^2}y-\\frac{y^2}{1+x^2}$.",
+    "$\\frac{dy}{dx}-\\frac{x}{1+x^2}y=-\\frac{y^2}{1+x^2}$ (Bernoulli form).",
+    "Divide by $-y^2$: $-\\frac1{y^2}\\frac{dy}{dx}+\\frac{x}{1+x^2}\\cdot\\frac1y=\\frac1{1+x^2}$.",
+    "Let $\\frac1y=t$, so $-\\frac1{y^2}\\frac{dy}{dx}=\\frac{dt}{dx}$: $\\frac{dt}{dx}+\\frac{x}{1+x^2}t=\\frac1{1+x^2}$, linear in $t$.",
+    "I.F. $=e^{\\int\\frac{x}{1+x^2}dx}=e^{\\frac12\\ln\\left(1+x^2\\right)}=\\sqrt{1+x^2}$.",
+    "$t\\sqrt{1+x^2}=\\int\\frac{\\sqrt{1+x^2}}{1+x^2}dx+c$, so $\\frac{\\sqrt{1+x^2}}{y}=\\int\\frac{dx}{\\sqrt{1+x^2}}+c$.",
+    "$\\frac{\\sqrt{1+x^2}}{y}=\\ln\\left(x+\\sqrt{x^2+1}\\right)+c$.",
+    "$y(0)=1$: $1=0+c$, so $c=1$.",
+    "At $x=2\\sqrt2$: $\\sqrt{1+8}=3$, so $\\frac3\\beta=\\ln\\left(2\\sqrt2+3\\right)+1$.",
+    "$3\\beta^{-1}=\\ln\\left(e\\left(2\\sqrt2+3\\right)\\right)$, so $e^{3\\beta^{-1}}=e\\left(3+2\\sqrt2\\right)$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=\\tan\\theta$: then $(1+x^2)\\frac{dy}{dx}=\\frac{dy}{d\\theta}$, and the I.F. becomes $\\sec\\theta$ with a trivial right side.",
+     "solution": [
+      "With $x=\\tan\\theta$, $dx=\\sec^2\\theta\\,d\\theta$, so $\\left(1+x^2\\right)\\frac{dy}{dx}=\\frac{dy}{d\\theta}$ and the equation becomes $\\frac{dy}{d\\theta}=y\\left(\\tan\\theta-y\\right)$.",
+      "With $t=\\frac1y$: $\\frac{dt}{d\\theta}+t\\tan\\theta=1$. The I.F. is $\\sec\\theta$: $\\frac{d}{d\\theta}\\left(t\\sec\\theta\\right)=\\sec\\theta$.",
+      "$t\\sec\\theta=\\ln\\left(\\sec\\theta+\\tan\\theta\\right)+c$. At $x=0$: $\\theta=0$, $t=1$, so $c=1$.",
+      "At $x=2\\sqrt2$: $\\tan\\theta=2\\sqrt2$, $\\sec\\theta=3$, so $\\frac3\\beta=\\ln\\left(3+2\\sqrt2\\right)+1$.",
+      "$e^{3/\\beta}=e\\left(3+2\\sqrt2\\right)$. Same answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$y'+P(x)y=Q(x)y^n$: put $z=y^{1-n}$ ($n=2$: $z=\\frac1y$) to get $z'+(1-n)Pz=(1-n)Q$, a linear equation.",
+    "$\\int\\frac{dx}{\\sqrt{1+x^2}}=\\ln\\left(x+\\sqrt{1+x^2}\\right)=\\sinh^{-1}x$; at $x=2\\sqrt2$ it is $\\ln\\left(3+2\\sqrt2\\right)=2\\ln\\left(1+\\sqrt2\\right)$.",
+    "$\\int\\frac{x}{1+x^2}dx=\\frac12\\ln\\left(1+x^2\\right)$, so the I.F. is $\\sqrt{1+x^2}$; with $x=\\tan\\theta$ it is $\\sec\\theta$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 19,
+   "concepts": [
+    "Linear differential equation with a composite-function integrating factor"
+   ],
+   "level": 3,
+   "question": "Let the solution curve $y=y(x)$ of the differential equation $\\frac{dy}{dx}-\\frac{3x^5\\tan^{-1}\\left(x^3\\right)}{\\left(1+x^6\\right)^{3/2}}y=2x\\exp\\left\\{\\frac{x^3-\\tan^{-1}x^3}{\\sqrt{1+x^6}}\\right\\}$ pass through the origin. Then $y(1)$ is equal to :",
+   "options": [
+    "$\\exp\\left(\\frac{\\pi-4}{4\\sqrt2}\\right)$",
+    "$\\exp\\left(\\frac{1-\\pi}{4\\sqrt2}\\right)$",
+    "$\\exp\\left(\\frac{4+\\pi}{4\\sqrt2}\\right)$",
+    "$\\exp\\left(\\frac{4-\\pi}{4\\sqrt2}\\right)$"
+   ],
+   "answer": "(D) $\\exp\\left(\\frac{4-\\pi}{4\\sqrt2}\\right)$",
+   "key_idea": "With $\\tan^{-1}x^3=t$ the I.F. integral becomes $\\int t\\sin t\\,dt$, and the I.F. cancels the exponential on the right, leaving $\\int2x\\,dx$.",
+   "solution": [
+    "I.F. $=e^{-\\int\\frac{3x^5\\tan^{-1}x^3}{\\left(1+x^6\\right)^{3/2}}dx}$; write $3x^5=x^3\\cdot3x^2$.",
+    "Put $\\tan^{-1}x^3=t$: $\\frac{3x^2}{1+x^6}dx=dt$, $x^3=\\tan t$, $\\sqrt{1+x^6}=\\sec t$.",
+    "$\\int\\frac{x^3}{\\sqrt{1+x^6}}\\cdot\\frac{3x^2\\tan^{-1}x^3}{1+x^6}dx=\\int\\frac{\\tan t}{\\sec t}\\cdot t\\,dt=\\int t\\sin t\\,dt$.",
+    "$\\int t\\sin t\\,dt=\\sin t-t\\cos t$ (by parts), so I.F. $=e^{-\\int t\\sin t\\,dt}=e^{t\\cos t-\\sin t}$.",
+    "With $\\cos t=\\frac1{\\sqrt{1+x^6}}$ and $\\sin t=\\frac{x^3}{\\sqrt{1+x^6}}$: I.F. $=\\exp\\left(\\frac{\\tan^{-1}x^3-x^3}{\\sqrt{1+x^6}}\\right)$.",
+    "Solution: $y\\,e^{\\frac{\\tan^{-1}x^3-x^3}{\\sqrt{1+x^6}}}=\\int2x\\,e^{\\frac{x^3-\\tan^{-1}x^3}{\\sqrt{1+x^6}}}\\cdot e^{\\frac{\\tan^{-1}x^3-x^3}{\\sqrt{1+x^6}}}dx+C$.",
+    "The exponentials cancel: the right side is $\\int2x\\,dx+C=x^2+C$.",
+    "The curve passes through $(0,0)$: $0=0+C$, so $C=0$.",
+    "$y(1)=e^{\\frac{1-\\tan^{-1}1}{\\sqrt2}}=\\exp\\left(\\frac1{\\sqrt2}\\left(1-\\frac\\pi4\\right)\\right)=\\exp\\left(\\frac{4-\\pi}{4\\sqrt2}\\right)$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Guess $h=\\frac{x^3-\\tan^{-1}x^3}{\\sqrt{1+x^6}}$ from the right side, check that $h'$ is the coefficient, then put $y=v\\,e^{h}$.",
+     "solution": [
+      "The right side contains $e^{h}$ with $h=\\frac{x^3-\\tan^{-1}x^3}{\\sqrt{1+x^6}}$. Test whether $h'=p=\\frac{3x^5\\tan^{-1}x^3}{\\left(1+x^6\\right)^{3/2}}$.",
+      "With $u=x^3$: $\\frac{dh}{du}=\\frac{u^2}{\\left(1+u^2\\right)^{3/2}}-\\frac{\\left(u-\\tan^{-1}u\\right)u}{\\left(1+u^2\\right)^{3/2}}=\\frac{u\\tan^{-1}u}{\\left(1+u^2\\right)^{3/2}}$.",
+      "Multiplying by $\\frac{du}{dx}=3x^2$: $h'(x)=\\frac{3x^5\\tan^{-1}x^3}{\\left(1+x^6\\right)^{3/2}}=p$. So the equation is $y'-h'y=2xe^{h}$.",
+      "Put $y=v\\,e^{h}$: $y'-h'y=v'e^{h}$, so $v'e^{h}=2xe^{h}$, $v'=2x$ and $v=x^2+C$.",
+      "$y(0)=0$ and $h(0)=0$ give $C=0$, so $y=x^2e^{h(x)}$.",
+      "$y(1)=e^{h(1)}=\\exp\\left(\\frac{1-\\pi/4}{\\sqrt2}\\right)=\\exp\\left(\\frac{4-\\pi}{4\\sqrt2}\\right)$. Same answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y'-h'(x)y=q(x)e^{h(x)}$ put $y=v\\,e^{h}$: it reduces to $v'=q$. Look for $e^{(\\cdot)}$ in the right side to guess $h$.",
+    "$\\frac{d}{du}\\left[\\frac{u-\\tan^{-1}u}{\\sqrt{1+u^2}}\\right]=\\frac{u\\tan^{-1}u}{\\left(1+u^2\\right)^{3/2}}$ (verified by differentiation); with $u=x^3$ and the factor $3x^2$ it gives the coefficient in this equation.",
+    "$u=\\tan t$ turns $\\sqrt{1+u^2}$ into $\\sec t$ and $\\frac{du}{1+u^2}$ into $dt$: the standard route for $\\tan^{-1}u$ with $\\left(1+u^2\\right)^{n/2}$.",
+    "$\\int t\\sin t\\,dt=\\sin t-t\\cos t+C$."
+   ]
+  },
+  {
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "q_no": 20,
+   "concepts": [
+    "Indefinite integration: substitution for $\\sin^mx\\left(1+\\sin^nx\\right)^p$ forms"
+   ],
+   "level": 3,
+   "question": "If $\\int\\frac{\\cos x\\,dx}{\\sin^3x\\left(1+\\sin^6x\\right)^{2/3}}=f(x)\\left(1+\\sin^6x\\right)^{1/\\lambda}+c$ where $c$ is a constant of integration, then $\\lambda f\\left(\\frac\\pi3\\right)$ is equal to :",
+   "options": [
+    "$2$",
+    "$-\\frac98$",
+    "$\\frac98$",
+    "$-2$"
+   ],
+   "answer": "(D) $-2$",
+   "key_idea": "After $\\sin x=t$, divide out $t^6$ inside the bracket: $1+t^{-6}=r^3$ makes $t^{-7}dt$ exactly $-\\frac12r^2dr$.",
+   "solution": [
+    "Put $\\sin x=t$, $\\cos x\\,dx=dt$: $I=\\int\\frac{dt}{t^3\\left(1+t^6\\right)^{2/3}}$.",
+    "Since $\\left(1+t^6\\right)^{2/3}=t^4\\left(1+t^{-6}\\right)^{2/3}$, we get $I=\\int\\frac{t^{-7}}{\\left(1+t^{-6}\\right)^{2/3}}dt$.",
+    "Let $1+t^{-6}=r^3$: $-6t^{-7}dt=3r^2dr$, so $t^{-7}dt=-\\frac12r^2dr$.",
+    "$I=-\\frac12\\int\\frac{r^2}{r^2}dr=-\\frac12\\int dr=-\\frac r2+c$.",
+    "$r=\\left(\\frac{1+\\sin^6x}{\\sin^6x}\\right)^{1/3}=\\frac{\\left(1+\\sin^6x\\right)^{1/3}}{\\sin^2x}$.",
+    "$I=-\\frac1{2\\sin^2x}\\left(1+\\sin^6x\\right)^{1/3}+c$.",
+    "Compare with $f(x)\\left(1+\\sin^6x\\right)^{1/\\lambda}$: $\\frac1\\lambda=\\frac13$, so $\\lambda=3$, and $f(x)=-\\frac1{2\\sin^2x}$.",
+    "$f\\left(\\frac\\pi3\\right)=-\\frac{1}{2\\cdot\\frac34}=-\\frac23$.",
+    "$\\lambda f\\left(\\frac\\pi3\\right)=3\\cdot\\left(-\\frac23\\right)=-2$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Assume the answer has the form $k\\sin^{-2}x\\left(1+\\sin^6x\\right)^{1/3}$ and differentiate to find $k$.",
+     "solution": [
+      "Try $F=k\\,\\sin^{-2}x\\left(1+\\sin^6x\\right)^{1/3}$; the exponent $\\frac13$ drops by $1$ to $-\\frac23$ on differentiation, as in the integrand.",
+      "$F'=k\\cos x\\left[-2\\sin^{-3}x\\left(1+\\sin^6x\\right)^{1/3}+\\sin^{-2}x\\cdot\\frac13\\left(1+\\sin^6x\\right)^{-2/3}\\cdot6\\sin^5x\\right]$.",
+      "Factor out $\\sin^{-3}x\\left(1+\\sin^6x\\right)^{-2/3}$: the bracket becomes $\\left[-2\\left(1+\\sin^6x\\right)+2\\sin^6x\\right]=-2$.",
+      "$F'=\\frac{-2k\\cos x}{\\sin^3x\\left(1+\\sin^6x\\right)^{2/3}}$, equal to the integrand when $k=-\\frac12$.",
+      "So $\\lambda=3$, $f(x)=-\\frac1{2\\sin^2x}$ and $\\lambda f\\left(\\frac\\pi3\\right)=-2$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int t^{-(n+1)}\\left(1+t^{-n}\\right)^q dt=-\\frac{\\left(1+t^{-n}\\right)^{q+1}}{n(q+1)}+C$ ($q\\neq-1$). Here $n=6$, $q=-\\frac23$ gives $-\\frac12\\left(1+t^{-6}\\right)^{1/3}$.",
+    "Recognition cue: $\\int t^{-m}\\left(1+t^n\\right)^p dt$ with $m-np=n+1$ (here $3+4=7$): pull $t^n$ out of the bracket to get $t^{-(n+1)}\\left(1+t^{-n}\\right)^p$.",
+    "To read off $\\lambda$ and $f$ from a form $f(x)\\left(1+\\sin^6x\\right)^{1/\\lambda}$, compare the power of the bracket first, then the remaining factor."
+   ]
+  }
+ ]
+}
