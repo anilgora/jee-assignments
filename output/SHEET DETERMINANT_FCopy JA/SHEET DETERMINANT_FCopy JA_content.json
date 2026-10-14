@@ -1,0 +1,369 @@
+{
+ "title": "Determinants (Exercise J-A) — Paper Analysis",
+ "subtitle": "Sheet JA · detailed solutions",
+ "source": "papers/SHEET DETERMINANT_FCopy JA.pdf (solutions as printed); no blueprint - concepts self-assigned",
+ "paper_name": "Determinant JA",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 1,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 (JEE Advanced default for single correct)"
+   ]
+  },
+  {
+   "title": "Integer Type and One or More Correct Type",
+   "from": 2,
+   "to": 5,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +4 each (JEE Advanced default for integer and one or more correct); Q2 and Q4 are integer type, Q3 and Q5 one or more correct"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 6,
+   "to": 7,
+   "marking": [
+    "No marking scheme printed in the paper",
+    "Assumed +3 each (JEE Advanced default for matching)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Consistency of a system of linear equations (Cramer's rule)"
+   ],
+   "level": 2,
+   "question": "Consider the system of equations $x-2y+3z=-1$, $-x+y-2z=k$, $x-3y+4z=1$.\nSTATEMENT-1: The system of equations has no solution for $k\\neq3$.\nand\nSTATEMENT-2: The determinant $\\begin{vmatrix} 1 & 3 & -1 \\\\ -1 & -2 & k \\\\ 1 & 4 & 1 \\end{vmatrix}\\neq 0$, for $k\\neq3$.   [JEE-2008]",
+   "options": [
+    "Statement-1 is True, Statement-2 is True; Statement-2 is a correct explanation for Statement-1",
+    "Statement-1 is True, Statement-2 is True; Statement-2 is NOT a correct explanation for Statement-1",
+    "Statement-1 is True, Statement-2 is False",
+    "Statement-1 is False, Statement-2 is True"
+   ],
+   "answer": "(A)",
+   "key_idea": "If $\\Delta=0$, the system is inconsistent exactly when one of $\\Delta_x,\\Delta_y,\\Delta_z$ is non-zero.",
+   "solution": [
+    "Take the coefficient determinant of the system: $\\Delta=\\begin{vmatrix} 1 & -2 & 3 \\\\ -1 & 1 & -2 \\\\ 1 & -3 & 4 \\end{vmatrix}$.",
+    "Expanding along the first row: $\\Delta=1(4-6)+2(-4+2)+3(3-1)=-2-4+6=0$.",
+    "Since $\\Delta=0$, the system has either no solution or infinitely many solutions; this is decided by $\\Delta_x,\\Delta_y,\\Delta_z$ (the determinants with the constants column $-1,k,1$ put in place of a column).",
+    "The determinant in Statement-2 has columns (coefficients of $x$), (coefficients of $z$), (constants). Expanding it: $1(-2-4k)-3(-1-k)-1(-4+2)=-2-4k+3+3k+2=3-k$.",
+    "So Statement-2 is true: the determinant equals $3-k$, which is non-zero for $k\\neq3$.",
+    "This determinant is $\\Delta_y$ up to a sign (swapping the last two columns gives $\\Delta_y=k-3$).",
+    "For $k\\neq3$: $\\Delta=0$ but $\\Delta_y\\neq0$, so the system has no solution; Statement-1 is true.",
+    "For $k=3$ all the determinants vanish and the system has infinitely many solutions (e.g. $x=-z-5,\\ y=z-2$).",
+    "Statement-2 ($\\Delta_y\\neq0$ for $k\\neq3$) is exactly the reason for the inconsistency in Statement-1, so it is a correct explanation. Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the linear dependency among the left-hand sides; the right-hand sides must obey the same dependency.",
+     "solution": [
+      "Add the first two equations: $(x-2y+3z)+(-x+y-2z)=-y+z=-1+k$.",
+      "Subtract the first equation from the third: $(x-3y+4z)-(x-2y+3z)=-y+z=1-(-1)=2$.",
+      "Both left sides equal $-y+z$, so the system is consistent only if $k-1=2$, i.e. $k=3$.",
+      "Hence for $k\\neq3$ the system has no solution (Statement-1 true); for $k=3$ it reduces to two independent equations with infinitely many solutions.",
+      "Statement-2: expanding the determinant gives $3-k\\neq0$ for $k\\neq3$, true, and it is the $\\Delta_y$ non-vanishing that signals inconsistency when $\\Delta=0$. Option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a $3\\times3$ system with $\\Delta=0$: if some $\\Delta_x,\\Delta_y,\\Delta_z\\neq0$, there is no solution; if all vanish the system may still be inconsistent (e.g. parallel planes), so check the rows.",
+    "If $\\text{row}_3=\\lambda\\,\\text{row}_1+\\mu\\,\\text{row}_2$ in the coefficients, the system is consistent iff the constants satisfy $c_3=\\lambda c_1+\\mu c_2$. Here $\\text{row}_3=2\\,\\text{row}_1+\\text{row}_2$, so $1=2(-1)+k$ gives $k=3$.",
+    "In Assertion-Reason questions on systems, test the reason by computing it, not by recognising the shape of the determinant."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Solution of a system of linear equations",
+    "Trigonometric equations ($\\tan3\\theta=1$)"
+   ],
+   "level": 3,
+   "question": "The number of all possible values of $\\theta$, where $0<\\theta<\\pi$, for which the system of equations\n$(y+z)\\cos3\\theta=(xyz)\\sin3\\theta$\n$x\\sin3\\theta=\\frac{2\\cos3\\theta}{y}+\\frac{2\\sin3\\theta}{z}$\n$(xyz)\\sin3\\theta=(y+2z)\\cos3\\theta+y\\sin3\\theta$\nhave a solution $(x_0,y_0,z_0)$ with $y_0z_0\\neq0$, is.   [JEE-2010]",
+   "answer": "3",
+   "key_idea": "Eliminate $xyz\\sin3\\theta$ between the equations to get $y+z=0$, $x=0$, then $\\tan3\\theta=1$.",
+   "solution": [
+    "Label the equations: (i) $(y+z)\\cos3\\theta=xyz\\sin3\\theta$, (ii) $x\\sin3\\theta=\\frac{2\\cos3\\theta}{y}+\\frac{2\\sin3\\theta}{z}$, (iii) $xyz\\sin3\\theta=(y+2z)\\cos3\\theta+y\\sin3\\theta$, with $yz\\neq0$ and $0<\\theta<\\pi$.",
+    "From (i) and (iii): $(y+z)\\cos3\\theta=(y+2z)\\cos3\\theta+y\\sin3\\theta$, so $z\\cos3\\theta+y\\sin3\\theta=0$ ... (iv).",
+    "Multiply (ii) by $yz$: $2z\\cos3\\theta+2y\\sin3\\theta=xyz\\sin3\\theta$ ... (v).",
+    "By (iv), the left side of (v) is $2(z\\cos3\\theta+y\\sin3\\theta)=0$, so $xyz\\sin3\\theta=0$.",
+    "Since $yz\\neq0$, this gives $x\\sin3\\theta=0$: either $x=0$ or $\\sin3\\theta=0$.",
+    "Case 1, $x=0$: (i) gives $(y+z)\\cos3\\theta=0$. Taking $y+z=0$, i.e. $y=-z$, equation (iv) becomes $\\cos3\\theta=\\sin3\\theta$, i.e. $\\tan3\\theta=1$.",
+    "For $0<\\theta<\\pi$ we have $0<3\\theta<3\\pi$, so $3\\theta=\\frac{\\pi}{4},\\frac{5\\pi}{4},\\frac{9\\pi}{4}$, i.e. $\\theta=\\frac{\\pi}{12},\\frac{5\\pi}{12},\\frac{9\\pi}{12}$. Check: with $x=0$, $y=-z$ each of (i), (ii), (iii) holds.",
+    "Case 2, $\\sin3\\theta=0$: then $\\theta=\\frac{\\pi}{3},\\frac{2\\pi}{3}$ and $\\cos3\\theta=\\pm1$; (iv) gives $z\\cos3\\theta=0$, so $z=0$, contradicting $yz\\neq0$. These values are rejected.",
+    "Hence the total number of possible values of $\\theta$ is $3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $P=xyz\\sin3\\theta$ and combine (ii)$\\times yz$ with (iii) first: the unknowns cancel to give $\\tan3\\theta=1$ at once, with no case split.",
+     "solution": [
+      "Let $c=\\cos3\\theta$, $s=\\sin3\\theta$, $P=xyz\\,s$. Then (i): $(y+z)c=P$; (iii): $P=(y+2z)c+ys$; (ii)$\\times yz$: $P=2zc+2ys$.",
+      "Equate (iii) and (ii)$\\times yz$: $(y+2z)c+ys=2zc+2ys$, so $yc=ys$.",
+      "Since $y\\neq0$, $c=s$, i.e. $\\cos3\\theta=\\sin3\\theta$. Both cannot vanish together, so $c=s\\neq0$.",
+      "Equate (i) and (ii)$\\times yz$: $(y+z)c=2zc+2yc$ (using $s=c$), so $(y+z)c=2(y+z)c$, hence $(y+z)c=0$ and $y+z=0$ because $c\\neq0$.",
+      "Then $P=(y+z)c=0$; as $yz\\neq0$ and $s=c\\neq0$, $x=0$. So the solution is $(0,y,-y)$, and it exists exactly when $\\tan3\\theta=1$.",
+      "For $0<\\theta<\\pi$: $3\\theta\\in(0,3\\pi)$ and $\\tan\\phi=1$ has three roots there ($\\frac{\\pi}{4},\\frac{5\\pi}{4},\\frac{9\\pi}{4}$). Answer $3$, same as before."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The number of solutions of $\\tan\\phi=c$ in $(0,m\\pi)$ is exactly $m$ (one per period); with $\\phi=3\\theta$ and $0<\\theta<\\pi$, $m=3$.",
+    "When equations contain a common expression such as $xyz\\sin3\\theta$, treat it as one unknown $P$ and eliminate it; the system collapses to a few linear relations.",
+    "A candidate with $\\sin3\\theta=0$ (or $\\cos3\\theta=0$) should be tested separately: here it forces $z=0$ and is rejected."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants (row and column operations)"
+   ],
+   "level": 3,
+   "question": "Which of the following values of $\\alpha$ satisfy the equation $\\begin{vmatrix} (1+\\alpha)^2 & (1+2\\alpha)^2 & (1+3\\alpha)^2 \\\\ (2+\\alpha)^2 & (2+2\\alpha)^2 & (2+3\\alpha)^2 \\\\ (3+\\alpha)^2 & (3+2\\alpha)^2 & (3+3\\alpha)^2 \\end{vmatrix}=-648\\alpha$?   [JEE-Adv.-2015]",
+   "options": [
+    "$-4$",
+    "$9$",
+    "$-9$",
+    "$4$"
+   ],
+   "answer": "(B, C)",
+   "key_idea": "Differences of consecutive squares are linear, so row and column differences reduce the determinant to a triangular shape.",
+   "solution": [
+    "Apply $R_3\\to R_3-R_2$ and $R_2\\to R_2-R_1$. Row 2 becomes $(3+2\\alpha,\\ 3+4\\alpha,\\ 3+6\\alpha)$ and row 3 becomes $(5+2\\alpha,\\ 5+4\\alpha,\\ 5+6\\alpha)$.",
+    "Apply $R_3\\to R_3-R_2$ again: row 3 becomes $(2,\\ 2,\\ 2)$.",
+    "Apply $C_3\\to C_3-C_2$ and $C_2\\to C_2-C_1$. Row 1 becomes $\\left((1+\\alpha)^2,\\ \\alpha(2+3\\alpha),\\ \\alpha(2+5\\alpha)\\right)$, row 2 becomes $(3+2\\alpha,\\ 2\\alpha,\\ 2\\alpha)$, row 3 becomes $(2,\\ 0,\\ 0)$.",
+    "Expand along row 3 (only the entry $2$ in column 1 is non-zero, with sign $+$): $2\\left[\\alpha(2+3\\alpha)\\cdot2\\alpha-\\alpha(2+5\\alpha)\\cdot2\\alpha\\right]=-648\\alpha$.",
+    "Dividing by 2: $2\\alpha^2(2+3\\alpha)-2\\alpha^2(2+5\\alpha)=-324\\alpha$.",
+    "Simplify: $2\\alpha^2(-2\\alpha)=-4\\alpha^3=-324\\alpha$, so $\\alpha(\\alpha^2-81)=0$.",
+    "Therefore $\\alpha=0,\\ 9,\\ -9$. Of the options, $9$ and $-9$ are listed; $-4$ and $4$ are not roots. Options (B) and (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The entry $(i+j\\alpha)^2=i^2\\cdot1+2i\\cdot j\\alpha+1\\cdot j^2\\alpha^2$ makes the matrix a product of two $3\\times3$ Vandermonde-type matrices.",
+     "solution": [
+      "Expand each entry: $(i+j\\alpha)^2=i^2\\cdot1+(2i)(j\\alpha)+1\\cdot(j\\alpha)^2$.",
+      "Hence the matrix is $U\\,W$ with $U$ having rows $(i^2,\\ 2i,\\ 1)$ for $i=1,2,3$, and $W$ having columns $(1,\\ j\\alpha,\\ j^2\\alpha^2)^T$ for $j=1,2,3$.",
+      "$\\det U=2\\left|\\begin{matrix}1&1&1\\\\4&2&1\\\\9&3&1\\end{matrix}\\right|=2(-2)=-4$.",
+      "$\\det W=\\alpha\\cdot\\alpha^2\\left|\\begin{matrix}1&1&1\\\\1&2&3\\\\1&4&9\\end{matrix}\\right|=\\alpha^3\\cdot2=2\\alpha^3$ (scale rows by $1,\\alpha,\\alpha^2$ first).",
+      "So the determinant is $(-4)(2\\alpha^3)=-8\\alpha^3$, and $-8\\alpha^3=-648\\alpha$ gives $\\alpha(\\alpha^2-81)=0$.",
+      "$\\alpha=0,\\pm9$; options (B) $9$ and (C) $-9$. Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any $x_i,y_j$: $\\det\\left[(x_i+y_j)^2\\right]_{3\\times3}=-2\\,(x_1-x_2)(x_2-x_3)(x_3-x_1)\\,(y_1-y_2)(y_2-y_3)(y_3-y_1)$. Here $x=1,2,3$ and $y=\\alpha,2\\alpha,3\\alpha$ give $-8\\alpha^3$.",
+    "Entries that are squares of linear terms form a matrix of rank at most 3 (product of two $3\\times3$ matrices); an $n\\times n$ determinant of $(x_i+y_j)^2$ is $0$ for $n\\ge4$.",
+    "First differences of squares of an arithmetic sequence are linear and second differences are constant: use consecutive row differences to create a constant row."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Properties of determinants (splitting a column, Vandermonde form)"
+   ],
+   "level": 3,
+   "question": "The total number of distinct $x\\in\\mathbb{R}$ for which $\\begin{vmatrix} x & x^2 & 1+x^3 \\\\ 2x & 4x^2 & 1+8x^3 \\\\ 3x & 9x^2 & 1+27x^3 \\end{vmatrix}=10$ is.   [JEE-Adv.-2016]",
+   "answer": "2",
+   "key_idea": "Split the third column as $1+x^3$-terms; both parts are Vandermonde-type and equal $2x^3$ and $12x^6$.",
+   "solution": [
+    "Split the third column: the determinant equals $D_1+D_2$ with $D_1=\\left|\\begin{matrix}x&x^2&1\\\\2x&4x^2&1\\\\3x&9x^2&1\\end{matrix}\\right|$ and $D_2=\\left|\\begin{matrix}x&x^2&x^3\\\\2x&4x^2&8x^3\\\\3x&9x^2&27x^3\\end{matrix}\\right|$.",
+    "Use the identity $\\left|\\begin{matrix}a&a^2&1\\\\b&b^2&1\\\\c&c^2&1\\end{matrix}\\right|=(a-b)(b-c)(c-a)$ with $a=x$, $b=2x$, $c=3x$.",
+    "$D_1=(x-2x)(2x-3x)(3x-x)=(-x)(-x)(2x)=2x^3$.",
+    "In $D_2$ take $x,2x,3x$ out of the three rows: $D_2=(x)(2x)(3x)\\left|\\begin{matrix}1&x&x^2\\\\1&2x&4x^2\\\\1&3x&9x^2\\end{matrix}\\right|=6x^3\\left|\\begin{matrix}1&x&x^2\\\\1&2x&4x^2\\\\1&3x&9x^2\\end{matrix}\\right|$.",
+    "Moving the column of ones to the end is a cyclic change of columns (an even permutation), so this determinant is again $(x-2x)(2x-3x)(3x-x)=2x^3$.",
+    "Hence $D_2=6x^3\\cdot2x^3=12x^6$, and the equation becomes $2x^3+12x^6=10$, i.e. $2x^3(1+6x^3)=10$.",
+    "Put $x^3=t$: $6t^2+t-5=0$, so $(6t-5)(t+1)=0$ and $t=\\frac56$ or $t=-1$.",
+    "Each real $t$ gives exactly one real $x$: $x=\\left(\\frac56\\right)^{1/3}$ and $x=-1$.",
+    "The number of distinct real values of $x$ is $2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Plain row reduction: subtract multiples of $R_1$ from $R_2,R_3$ to clear the first column; no Vandermonde lemma is needed.",
+     "solution": [
+      "Apply $R_2\\to R_2-2R_1$ and $R_3\\to R_3-3R_1$ on the original determinant.",
+      "$R_2$ becomes $(0,\\ 2x^2,\\ 6x^3-1)$ because $1+8x^3-2(1+x^3)=6x^3-1$.",
+      "$R_3$ becomes $(0,\\ 6x^2,\\ 24x^3-2)$ because $1+27x^3-3(1+x^3)=24x^3-2$.",
+      "Expand along column 1: determinant $=x\\left[2x^2(24x^3-2)-6x^2(6x^3-1)\\right]=x\\cdot x^2\\left[48x^3-4-36x^3+6\\right]=x^3(12x^3+2)$.",
+      "So $2x^3(6x^3+1)=10$, the same equation as before; solving gives $x^3=-1$ or $\\frac56$ and 2 real values of $x$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any $a,b,c$: $\\left|\\begin{matrix}a&a^2&1+a^3\\\\b&b^2&1+b^3\\\\c&c^2&1+c^3\\end{matrix}\\right|=(a-b)(b-c)(c-a)\\,(1+abc)$ (verified symbolically).",
+    "A determinant of rows $(a,a^2,1)$ or $(1,a,a^2)$ is the Vandermonde value $(a-b)(b-c)(c-a)$; moving the column of ones around is a cyclic (even) permutation, so no sign change.",
+    "With arithmetic-progression rows ($x,2x,3x$) the Vandermonde factor is $2x^3$; an equation in $x^3$ only is a quadratic in $t=x^3$, and every real $t$ gives exactly one real $x$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Consistency of a system of linear equations (Cramer's rule)"
+   ],
+   "level": 2,
+   "question": "Let $a,\\lambda,\\mu\\in\\mathbb{R}$. Consider the system of linear equations $ax+2y=\\lambda$, $3x-2y=\\mu$. Which of the following statement(s) is(are) correct?   [JEE-Adv.-2016]",
+   "options": [
+    "If $a=-3$, then the system has infinitely many solutions for all values of $\\lambda$ and $\\mu$",
+    "If $a\\neq-3$, then the system has a unique solution for all values of $\\lambda$ and $\\mu$",
+    "If $\\lambda+\\mu=0$, then the system has infinitely many solutions for $a=-3$",
+    "If $\\lambda+\\mu\\neq0$, then the system has no solution for $a=-3$"
+   ],
+   "answer": "(B, C, D)",
+   "key_idea": "Compare the ratios $\\frac a3$, $\\frac{2}{-2}$, $\\frac{\\lambda}{\\mu}$ to decide unique, infinite or no solution.",
+   "solution": [
+    "For the system $a_1x+b_1y=c_1$, $a_2x+b_2y=c_2$: a unique solution exists when $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$, i.e. here $\\frac a3\\neq\\frac{2}{-2}$.",
+    "Infinitely many solutions when $\\frac a3=\\frac{2}{-2}=\\frac{\\lambda}{\\mu}$.",
+    "No solution when $\\frac a3=\\frac{2}{-2}\\neq\\frac{\\lambda}{\\mu}$.",
+    "Here $\\frac{2}{-2}=-1$, so $\\frac a3=-1$ means $a=-3$.",
+    "(A) For $a=-3$ the system has infinitely many solutions only if $\\frac\\lambda\\mu=-1$, i.e. $\\lambda+\\mu=0$; for other $\\lambda,\\mu$ there is no solution. So (A) is false.",
+    "(B) For $a\\neq-3$ the ratios $\\frac a3$ and $-1$ differ, so the solution is unique for all $\\lambda,\\mu$. (B) is true.",
+    "(C) For $a=-3$ and $\\lambda+\\mu=0$: $\\frac\\lambda\\mu=-1=\\frac a3$, so the two equations coincide and there are infinitely many solutions. (C) is true.",
+    "(D) For $a=-3$ and $\\lambda+\\mu\\neq0$: $\\frac\\lambda\\mu\\neq-1$, so the system has no solution. (D) is true. Answer (B, C, D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Add the two equations: $y$ cancels, leaving $(a+3)x=\\lambda+\\mu$.",
+     "solution": [
+      "Adding $ax+2y=\\lambda$ and $3x-2y=\\mu$ gives $(a+3)x=\\lambda+\\mu$.",
+      "If $a\\neq-3$: $x=\\frac{\\lambda+\\mu}{a+3}$, and then $y=\\frac{3x-\\mu}{2}$ is determined. Unique solution for every $\\lambda,\\mu$: (B) true.",
+      "If $a=-3$ the sum equation is $0=\\lambda+\\mu$. If $\\lambda+\\mu\\neq0$ it is impossible, so no solution: (D) true, and (A) is false.",
+      "If $a=-3$ and $\\lambda+\\mu=0$ the first equation $-3x+2y=\\lambda$ is the same as $3x-2y=-\\lambda=\\mu$, the second equation: one line, infinitely many solutions, (C) true.",
+      "Answer (B, C, D), same as before."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $a_1x+b_1y=c_1$, $a_2x+b_2y=c_2$ with $\\Delta=a_1b_2-a_2b_1$: $\\Delta\\neq0$ unique; $\\Delta=0$ gives infinitely many solutions if the constants follow the same ratio, otherwise none.",
+    "Adding or subtracting the equations to cancel one variable shows directly which single condition ($a+3=0$, and then $\\lambda+\\mu=0$) controls the outcome.",
+    "A question with 'for all values of ...' needs a check at the exceptional parameter value, not only the generic case."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Consistency of a system of linear equations",
+    "Harmonic progression and arithmetic progression"
+   ],
+   "level": 4,
+   "question": "Let $p,q,r$ be nonzero real numbers that are, respectively, the $10^{th}$, $100^{th}$ and $1000^{th}$ terms of a harmonic progression. Consider the system of linear equations $x+y+z=1$, $10x+100y+1000z=0$, $qr\\,x+pr\\,y+pq\\,z=0$.\nList-I: (I) If $\\frac qr=10$, then the system has; (II) If $\\frac pr\\neq100$, then the system has; (III) If $\\frac pq\\neq10$, then the system has; (IV) If $\\frac pq=10$, then the system has.\nList-II: (P) $x=0,\\ y=\\frac{10}{9},\\ z=-\\frac19$ as a solution; (Q) $x=\\frac{10}{9},\\ y=-\\frac19,\\ z=0$ as a solution; (R) infinitely many solutions; (S) no solution; (T) at least one solution.\nThe correct option is:   [JEE(Adv.)2022]",
+   "options": [
+    "$(I)\\to(T);\\ (II)\\to(R);\\ (III)\\to(S);\\ (IV)\\to(T)$",
+    "$(I)\\to(Q);\\ (II)\\to(S);\\ (III)\\to(S);\\ (IV)\\to(R)$",
+    "$(I)\\to(Q);\\ (II)\\to(R);\\ (III)\\to(P);\\ (IV)\\to(R)$",
+    "$(I)\\to(T);\\ (II)\\to(S);\\ (III)\\to(P);\\ (IV)\\to(T)$"
+   ],
+   "answer": "(B)",
+   "key_idea": "Reciprocals of an HP are in AP, and the third equation is $(a-d)\\times$(first) $+\\ d\\times$(second) in its left side.",
+   "solution": [
+    "Equation (3) divided by $pqr$ reads $\\frac xp+\\frac yq+\\frac zr=0$ (since $p,q,r\\neq0$).",
+    "$p,q,r$ are in HP, so $\\frac1p,\\frac1q,\\frac1r$ are in AP: let $\\frac1p=a+9d$, $\\frac1q=a+99d$, $\\frac1r=a+999d$.",
+    "Equation (3) becomes $(a+9d)x+(a+99d)y+(a+999d)z=0$.",
+    "The coefficient determinant is $\\Delta=\\left|\\begin{matrix}1&1&1\\\\10&100&1000\\\\a+9d&a+99d&a+999d\\end{matrix}\\right|=0$.",
+    "$\\Delta_x=\\left|\\begin{matrix}1&1&1\\\\0&100&1000\\\\0&a+99d&a+999d\\end{matrix}\\right|=900(d-a)$.",
+    "$\\Delta_y=\\left|\\begin{matrix}1&1&1\\\\10&0&1000\\\\a+9d&0&a+999d\\end{matrix}\\right|=990(a-d)$.",
+    "$\\Delta_z=\\left|\\begin{matrix}1&1&1\\\\10&100&0\\\\a+9d&a+99d&0\\end{matrix}\\right|=90(d-a)$.",
+    "Conditions: $\\frac qr=\\frac{a+999d}{a+99d}=10\\iff a=d$; $\\frac pr=\\frac{a+999d}{a+9d}=100\\iff a=d$; $\\frac pq=\\frac{a+99d}{a+9d}=10\\iff a=d$.",
+    "(I) $\\frac qr=10\\Rightarrow a=d$, so $\\Delta=\\Delta_x=\\Delta_y=\\Delta_z=0$. Equations (1), (2) are non-parallel planes and (3) is a multiple of (2): infinitely many solutions. So (I) $\\to$ P, Q, R, T.",
+    "(II) $\\frac pr\\neq100\\Rightarrow a\\neq d$: $\\Delta=0$ but $\\Delta_x,\\Delta_y,\\Delta_z\\neq0$, so there is no solution: (II) $\\to$ S.",
+    "(III) $\\frac pq\\neq10\\Rightarrow a\\neq d$: no solution: (III) $\\to$ S.",
+    "(IV) $\\frac pq=10\\Rightarrow a=d$: infinitely many solutions, so (IV) $\\to$ P, Q, R, T.",
+    "The option consistent with all four is (B): (I)$\\to$(Q), (II)$\\to$(S), (III)$\\to$(S), (IV)$\\to$(R); (A), (C), (D) each assign (R) or (P) to a no-solution case."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write equation (3) as $(a-d)(x+y+z)+d(10x+100y+1000z)$; the first two equations then fix its left side to the number $a-d$.",
+     "solution": [
+      "With $\\frac1p=a+9d$ etc., the coefficients of (3) are $a+9d=(a-d)\\cdot1+d\\cdot10$, $a+99d=(a-d)\\cdot1+d\\cdot100$, $a+999d=(a-d)\\cdot1+d\\cdot1000$.",
+      "So the left side of (3) is $(a-d)(x+y+z)+d(10x+100y+1000z)$.",
+      "Using (1) and (2) this equals $(a-d)\\cdot1+d\\cdot0=a-d$, but (3) says it is $0$: the system is consistent iff $a=d$.",
+      "If $a\\neq d$ the system has no solution. If $a=d$, equation (3) is $d\\times$(2), so only (1) and (2) remain: infinitely many solutions.",
+      "$\\frac qr=10$, $\\frac pq=10$ each force $a=d$ (infinite solutions); $\\frac pr\\neq100$ and $\\frac pq\\neq10$ force $a\\neq d$ (no solution). (P) and (Q) satisfy (1), (2), hence (3) when $a=d$.",
+      "Matching gives option (B). Same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\text{row}_3=\\lambda\\,\\text{row}_1+\\mu\\,\\text{row}_2$ in the coefficients, then (3) is consistent with (1), (2) iff $c_3=\\lambda c_1+\\mu c_2$; otherwise no solution, and no determinant calculation is needed.",
+    "Reciprocals of terms of an HP form an AP, so $\\frac1{p}$ at positions $10,100,1000$ is linear in the position: $a+9d,\\ a+99d,\\ a+999d$.",
+    "For $a=d$ every term of the AP is a multiple of the position: $\\frac1p=10d$, $\\frac1q=100d$, $\\frac1r=1000d$ (so $q/r=10$, $p/q=10$, $p/r=100$ all hold together)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Consistency of a system of linear equations with parameters"
+   ],
+   "level": 3,
+   "question": "Let $\\alpha,\\beta,\\gamma$ be real numbers. Consider the system of linear equations $x+2y+z=7$, $x+\\alpha z=11$, $2x-3y+\\beta z=\\gamma$. Match each entry in List-I to the correct entries in List-II.\nList-I: (P) If $\\beta=\\frac12(7\\alpha-3)$ and $\\gamma=28$, then the system has; (Q) If $\\beta=\\frac12(7\\alpha-3)$ and $\\gamma\\neq28$, then the system has; (R) If $\\beta\\neq\\frac12(7\\alpha-3)$ where $\\alpha=1$ and $\\gamma\\neq28$, then the system has; (S) If $\\beta\\neq\\frac12(7\\alpha-3)$ where $\\alpha=1$ and $\\gamma=28$, then the system has.\nList-II: (1) a unique solution; (2) no solution; (3) infinitely many solutions; (4) $x=11$, $y=-2$ and $z=0$ as a solution; (5) $x=-15$, $y=4$ and $z=0$ as a solution.\nThe correct option is:   [JEE(Adv.)2023]",
+   "options": [
+    "$(P)\\to(3);\\ (Q)\\to(2);\\ (R)\\to(1);\\ (S)\\to(4)$",
+    "$(P)\\to(3);\\ (Q)\\to(2);\\ (R)\\to(5);\\ (S)\\to(4)$",
+    "$(P)\\to(2);\\ (Q)\\to(1);\\ (R)\\to(4);\\ (S)\\to(5)$",
+    "$(P)\\to(2);\\ (Q)\\to(1);\\ (R)\\to(1);\\ (S)\\to(3)$"
+   ],
+   "answer": "(A)",
+   "key_idea": "$D=7\\alpha-2\\beta-3$; when $D=0$ the sign of $\\Delta_z=56-2\\gamma$ decides, and $\\alpha=1$ gives $y=-2$ at once.",
+   "solution": [
+    "Coefficient determinant: $D=\\left|\\begin{matrix}1&2&1\\\\1&0&\\alpha\\\\2&-3&\\beta\\end{matrix}\\right|=1(3\\alpha)-2(\\beta-2\\alpha)+1(-3)=7\\alpha-2\\beta-3$.",
+    "$D=0\\iff\\beta=\\frac{7\\alpha-3}{2}$.",
+    "With $\\gamma=28$ and $\\beta=\\frac{7\\alpha-3}{2}$: $D_x=\\left|\\begin{matrix}7&2&1\\\\11&0&\\alpha\\\\28&-3&\\frac{7\\alpha-3}{2}\\end{matrix}\\right|=21\\alpha-\\left[11(7\\alpha-3)-56\\alpha\\right]-33=0$.",
+    "Similarly $D_y=\\left|\\begin{matrix}1&7&1\\\\1&11&\\alpha\\\\2&28&\\frac{7\\alpha-3}{2}\\end{matrix}\\right|$; with $R_1\\to R_1-R_2$ this is $4\\left[\\frac{7\\alpha-3}{2}-2\\alpha\\right]+(1-\\alpha)(28-22)=14\\alpha-6-8\\alpha+6-6\\alpha=0$.",
+    "$D_z=\\left|\\begin{matrix}1&2&7\\\\1&0&11\\\\2&-3&\\gamma\\end{matrix}\\right|=33-2(\\gamma-22)-21=56-2\\gamma$, which is $0$ for $\\gamma=28$.",
+    "(P) $\\beta=\\frac{7\\alpha-3}{2}$, $\\gamma=28$: $D=D_x=D_y=D_z=0$, infinitely many solutions: (P) $\\to$ (3).",
+    "(Q) $\\beta=\\frac{7\\alpha-3}{2}$, $\\gamma\\neq28$: $D=0$ but $D_z=56-2\\gamma\\neq0$, so no solution: (Q) $\\to$ (2).",
+    "(R) $\\beta\\neq\\frac{7\\alpha-3}{2}$ means $D\\neq0$, so the solution is unique. With $\\alpha=1$, subtracting equation 2 from equation 1 gives $2y=-4$, so $y=-2$ always; as $\\gamma\\neq28$, $z\\neq0$, so (4) and (5) fail. (R) $\\to$ (1).",
+    "(S) $\\alpha=1$, $\\gamma=28$, $D\\neq0$: unique solution with $y=-2$, $z=0$ (here $z=\\frac{\\gamma-28}{\\beta-2}=0$), and then $x=11$: $x=11,\\ y=-2,\\ z=0$. (S) $\\to$ (4).",
+    "Result: (P)$\\to$(3), (Q)$\\to$(2), (R)$\\to$(1), (S)$\\to$(4); option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $x$ and $y$ by substitution to reduce the system to a single equation $(2\\beta-7\\alpha+3)\\,z=2(\\gamma-28)$.",
+     "solution": [
+      "From equation 2: $x=11-\\alpha z$.",
+      "Equation 1: $11-\\alpha z+2y+z=7$, so $y=\\frac{(\\alpha-1)z}{2}-2$.",
+      "Equation 3: $2(11-\\alpha z)-3\\left[\\frac{(\\alpha-1)z}{2}-2\\right]+\\beta z=\\gamma$, i.e. $28+z\\left(\\beta-2\\alpha-\\frac{3(\\alpha-1)}{2}\\right)=\\gamma$.",
+      "Multiplying by 2: $(2\\beta-7\\alpha+3)\\,z=2(\\gamma-28)$. The coefficient is $-D$.",
+      "If $2\\beta-7\\alpha+3=0$ ($\\beta=\\frac{7\\alpha-3}{2}$): $\\gamma=28$ gives $0\\cdot z=0$, so infinitely many solutions (P)$\\to$(3); $\\gamma\\neq28$ gives $0=2(\\gamma-28)\\neq0$, no solution (Q)$\\to$(2).",
+      "If the coefficient is non-zero, $z=\\frac{2(\\gamma-28)}{2\\beta-7\\alpha+3}$: unique solution. For $\\alpha=1$: $y=-2$ for every $z$, and $z=0\\iff\\gamma=28$. So (R) has $z\\neq0$ and is just (1); (S) has $z=0$, $y=-2$, $x=11$, i.e. (4). Option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Eliminate two unknowns to reduce a parametric $3\\times3$ system to a single equation $c\\,z=\\rho$: unique if $c\\neq0$; infinite if $c=0=\\rho$; none if $c=0\\neq\\rho$. Here $c=-D=2\\beta-7\\alpha+3$.",
+    "If $D=0$, test a single minor ($D_z=56-2\\gamma$) for the condition under which the constants fit.",
+    "For $\\alpha=1$, equations 1 and 2 give $2y=-4$: $y=-2$ is forced for every $\\beta,\\gamma$, which kills option (5)."
+   ]
+  }
+ ]
+}
