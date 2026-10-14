@@ -1,0 +1,1372 @@
+{
+ "title": "SHEET LIMIT (C-2) — Paper Analysis",
+ "subtitle": "Exercise C-2 (Limits) · detailed solutions",
+ "source": "SHEET_LIMIT_FCopy_C2.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "Limit Sheet C-2",
+ "sections": [
+  {
+   "title": "Numerical Type",
+   "from": 1,
+   "to": 8,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "Evaluate the limit; complete solution, alternate and result"
+   ]
+  },
+  {
+   "title": "One or more than one Correct Type",
+   "from": 9,
+   "to": 9,
+   "marking": [
+    "4 marks (no marks printed in the paper: JEE Advanced default assumed)",
+    "Complete solution, alternate and result"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 10,
+   "to": 22,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "Evaluate / prove; complete solution, alternate and result"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 23,
+   "to": 31,
+   "marking": [
+    "3 marks each (no marks printed in the paper: JEE Advanced default for paragraph questions assumed)",
+    "Paragraphs for Q23-25, Q26-28 and Q29-31"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 32,
+   "to": 34,
+   "marking": [
+    "3 marks each (no marks printed in the paper: JEE Advanced default for matching assumed)",
+    "Match each item of Column I with Column II"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limit of a recursively defined sequence"
+   ],
+   "level": 1,
+   "question": "Let $x_1=-\\sqrt3,\\ x_2=-\\sqrt{3+\\sqrt3},\\ x_3=-\\sqrt{3+\\sqrt{3+\\sqrt3}},\\dots$ Evaluate $\\lim_{n\\to\\infty}x_n$.",
+   "answer": "$\\frac{-1-\\sqrt{13}}{2}$",
+   "key_idea": "The terms obey $x_{n+1}=-\\sqrt{3-x_n}$, so the limit is a root of $x^2+x-3=0$ with $x<0$.",
+   "solution": [
+    "$x_1=-\\sqrt3$, $x_2=-\\sqrt{3+\\sqrt3}$, $x_3=-\\sqrt{3+\\sqrt{3+\\sqrt3}}$; since $-x_n$ is the nested root, $x_{n+1}=-\\sqrt{3-x_n}$.",
+    "Let $\\lim_{n\\to\\infty}x_n=x$ (the limit exists; see the alternate solution). Then $x=-\\sqrt{3-x}$.",
+    "Squaring: $x^2=3-x$, i.e. $x^2+x-3=0$.",
+    "So $x=\\frac{-1\\pm\\sqrt{13}}{2}$.",
+    "Also $x_1<0$ and every $x_n<0$, so $x=\\lim x_n\\le0$; the positive root is rejected.",
+    "Hence $x=\\frac{-1-\\sqrt{13}}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Prove convergence and find the limit together: $y_n=-x_n$ is increasing and bounded, and $|y_{n+1}-y^*|$ shrinks geometrically.",
+     "solution": [
+      "Put $y_n=-x_n>0$: $y_1=\\sqrt3$, $y_{n+1}=\\sqrt{3+y_n}$. Let $y^*=\\frac{1+\\sqrt{13}}{2}$, the positive root of $y^2=3+y$.",
+      "Then $y_{n+1}^2-y^{*2}=(3+y_n)-(3+y^*)=y_n-y^*$, so $(y_{n+1}-y^*)(y_{n+1}+y^*)=y_n-y^*$.",
+      "As $y_{n+1}\\ge\\sqrt3>0$, $y_{n+1}+y^*>y^*>2$, hence $|y_{n+1}-y^*|<\\frac12|y_n-y^*|$.",
+      "So $|y_n-y^*|<2^{-(n-1)}|y_1-y^*|\\to0$: the sequence converges, with no assumption, to $y^*$.",
+      "Therefore $\\lim x_n=-y^*=\\frac{-1-\\sqrt{13}}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A nested radical $\\sqrt{a+\\sqrt{a+\\cdots}}$ equals the positive root of $y^2=y+a$, i.e. $\\frac{1+\\sqrt{1+4a}}{2}$ (here $a=3$ gives $\\frac{1+\\sqrt{13}}{2}\\approx2.303$).",
+    "For $y_{n+1}=f(y_n)$ the limit satisfies $L=f(L)$ only if the limit exists: check monotone and bounded, or $|f'|<1$ near the fixed point (contraction).",
+    "Choose the root of the fixed-point equation by the sign or range of the terms (here all $x_n<0$)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Standard limits and series expansions",
+    "Binomial expansion for limits at infinity"
+   ],
+   "level": 2,
+   "question": "Let $L=\\lim_{x\\to0}\\frac{e^{x\\sin(2007)x}-1}{x\\ln(1+x)}$ and $M=\\lim_{x\\to\\infty}x\\left(2x-\\sqrt[3]{x^3+x^2+1}-\\sqrt[3]{x^3-x^2+1}\\right)$. Find the value of $LM$.",
+   "answer": "446",
+   "key_idea": "Write $\\sqrt[3]{x^3\\pm x^2+1}=x(1+u)^{1/3}$ and expand to second order: the first-order terms cancel and the $u^2$ term survives.",
+   "solution": [
+    "$L=\\lim_{x\\to0}\\frac{e^{x\\sin 2007x}-1}{x\\sin2007x}\\cdot\\frac{\\sin2007x}{2007x}\\cdot\\frac{2007x}{\\ln(1+x)}$ (the product telescopes to the original fraction).",
+    "Each standard limit is $1$ ($x\\sin2007x\\to0$), so $L=1\\cdot1\\cdot2007=2007$.",
+    "For $M$ write $x^3+x^2+1=x^3(1+a)$ and $x^3-x^2+1=x^3(1+b)$ with $a=\\frac{1+x^2}{x^3}$, $b=\\frac{1-x^2}{x^3}$; both $\\to0$.",
+    "$M=\\lim x^2\\left[2-(1+a)^{1/3}-(1+b)^{1/3}\\right]$, and $(1+t)^{1/3}=1+\\frac t3-\\frac{t^2}{9}+\\cdots$",
+    "So $M=\\lim x^2\\left[-\\frac{a+b}{3}+\\frac{a^2+b^2}{9}+\\cdots\\right]$.",
+    "$a+b=\\frac2{x^3}$, so $x^2\\cdot\\frac{a+b}{3}=\\frac{2}{3x}\\to0$; and $a^2+b^2=\\frac{2}{x^6}+\\frac{2}{x^2}\\approx\\frac{2}{x^2}$, so $x^2\\cdot\\frac{a^2+b^2}{9}\\to\\frac29$.",
+    "Higher terms ($t^3$ and beyond) give $x^2\\cdot O(x^{-3})\\to0$. Hence $M=\\frac29$.",
+    "$LM=2007\\cdot\\frac29=446$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $t=1/x$ and use derivatives instead of series: $M=-\\tfrac12F''(0)$ where $F(t)=(1+t+t^3)^{1/3}+(1-t+t^3)^{1/3}$.",
+     "solution": [
+      "With $t=\\frac1x\\to0^+$: $x\\left(2x-\\sqrt[3]{x^3+x^2+1}-\\sqrt[3]{x^3-x^2+1}\\right)=\\frac{2-F(t)}{t^2}$, where $F(t)=A+B$, $A=(1+t+t^3)^{1/3}$, $B=(1-t+t^3)^{1/3}$.",
+      "$F(0)=2$, and $A'=\\frac{1+3t^2}{3A^2}$, $B'=\\frac{-1+3t^2}{3B^2}$, so $A'(0)=\\frac13$, $B'(0)=-\\frac13$ and $F'(0)=0$.",
+      "$A''=\\frac{2t}{A^2}-\\frac{2(1+3t^2)A'}{3A^3}$ gives $A''(0)=-\\frac29$; likewise $B''(0)=-\\frac29$, so $F''(0)=-\\frac49$.",
+      "Since $2-F(t)=-\\frac12F''(0)t^2+o(t^2)$, $M=-\\frac12\\left(-\\frac49\\right)=\\frac29$.",
+      "For $L$: $e^u-1\\sim u$ with $u=x\\sin2007x\\sim2007x^2$, and $x\\ln(1+x)\\sim x^2$, so $L=2007$. $LM=446$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Radicals at infinity: $\\sqrt[k]{x^k+\\cdots}=x(1+u)^{1/k}$ and $(1+u)^{1/k}=1+\\frac uk+\\frac{(1-k)u^2}{2k^2}+\\cdots$; if first-order terms cancel, go to second order.",
+    "$\\lim_{t\\to0}\\frac{\\phi(0)-\\phi(t)+\\phi'(0)t}{t^2}=-\\frac12\\phi''(0)$ for a smooth $\\phi$: a quick derivative test for such cancellations.",
+    "$\\frac{e^{u}-1}{u}\\to1$ and $\\frac{\\sin u}{u}\\to1$ whenever $u\\to0$; always match the argument with the variable of the denominator."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Product of cosines (half-angle) and limits",
+    "Trigonometric ratios of standard angles"
+   ],
+   "level": 2,
+   "question": "Let $L=\\lim_{n\\to\\infty}\\dfrac{1}{\\frac1{\\sqrt2}\\cdot\\sqrt{\\frac12+\\frac12\\cdot\\frac1{\\sqrt2}}\\cdot\\sqrt{\\frac12+\\frac12\\sqrt{\\frac12+\\frac12\\cdot\\frac1{\\sqrt2}}}\\cdots\\ (n\\text{ terms})}$. Find the value of $\\left(2\\sqrt3\\cot L\\right)$.",
+   "answer": "0",
+   "key_idea": "The terms are $\\cos\\frac\\theta{2^{k}}$ with $\\theta=\\frac\\pi4$ (half-angle formula), and $\\prod\\cos\\frac\\theta{2^k}$ telescopes with $\\sin2x=2\\sin x\\cos x$.",
+   "solution": [
+    "$T_1=\\frac1{\\sqrt2}=\\cos\\theta$ with $\\theta=\\frac\\pi4$.",
+    "$T_2=\\sqrt{\\frac12+\\frac12\\cdot\\frac1{\\sqrt2}}=\\sqrt{\\frac{1+\\cos\\theta}{2}}=\\cos\\frac\\theta2$.",
+    "$T_3=\\sqrt{\\frac{1+\\cos\\frac\\theta2}{2}}=\\cos\\frac\\theta{2^2}$; in general $T_n=\\cos\\frac{\\theta}{2^{n-1}}$.",
+    "$L=\\lim_{n\\to\\infty}\\frac1{T_1T_2\\cdots T_n}=\\lim\\frac{1}{\\cos\\theta\\cos\\frac\\theta2\\cos\\frac\\theta{2^2}\\cdots\\cos\\frac\\theta{2^{n-1}}}$.",
+    "Multiply and divide by $2^n\\sin\\frac\\theta{2^{n-1}}$; repeated use of $2\\sin A\\cos A=\\sin2A$ gives $\\prod_{k=0}^{n-1}\\cos\\frac\\theta{2^k}=\\frac{\\sin2\\theta}{2^n\\sin\\frac\\theta{2^{n-1}}}$.",
+    "So $L=\\lim\\frac{2^n\\sin\\frac\\theta{2^{n-1}}}{\\sin2\\theta}=\\lim\\frac{2\\theta}{\\sin2\\theta}\\cdot\\frac{\\sin\\frac\\theta{2^{n-1}}}{\\frac\\theta{2^{n-1}}}=\\frac{2\\theta}{\\sin2\\theta}$.",
+    "With $\\theta=\\frac\\pi4$: $L=\\frac{\\pi/2}{1}=\\frac\\pi2$.",
+    "$\\cot L=\\cot\\frac\\pi2=0$, so $2\\sqrt3\\cot L=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Recognise Viete's infinite product $\\prod_{k\\ge1}\\cos\\frac{x}{2^k}=\\frac{\\sin x}{x}$ with $x=\\frac\\pi2$.",
+     "solution": [
+      "The terms are $\\cos\\frac\\pi4,\\cos\\frac\\pi8,\\cos\\frac\\pi{16},\\dots$, i.e. $\\cos\\frac{x}{2^k}$ for $k=1,2,3,\\dots$ with $x=\\frac\\pi2$.",
+      "Viete's product: $\\prod_{k=1}^\\infty\\cos\\frac x{2^k}=\\frac{\\sin x}{x}$, so the product of all terms is $\\frac{\\sin(\\pi/2)}{\\pi/2}=\\frac2\\pi$.",
+      "Hence $L=\\frac1{2/\\pi}=\\frac\\pi2$ and $2\\sqrt3\\cot\\frac\\pi2=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\prod_{k=1}^{n}\\cos\\frac{x}{2^k}=\\frac{\\sin x}{2^n\\sin\\frac{x}{2^n}}\\to\\frac{\\sin x}{x}$ (Viete); the nested radical $\\sqrt{\\frac{1+\\cos t}{2}}=\\cos\\frac t2$ for $0\\le t\\le \\pi$.",
+    "Numerical check: $x=\\frac\\pi2$ gives $\\prod\\cos\\frac\\pi{2^{k+1}}\\to\\frac2\\pi\\approx0.6366$ (Viete's classical formula for $\\frac2\\pi$).",
+    "Whenever a product of cosines of halved angles appears, multiply by $\\sin$ of the smallest angle and telescope with $\\sin2A=2\\sin A\\cos A$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of trigonometric and logarithmic functions at infinity"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to\\infty}x^2\\sin\\left(\\ln\\sqrt{\\cos\\frac\\pi x}\\right)$.",
+   "answer": "$-\\frac{\\pi^2}{4}$",
+   "key_idea": "Put $x=\\frac1y$ and chain the standard limits $\\frac{\\sin u}u\\to1$, $\\frac{\\ln(1-w)}{-w}\\to1$, $\\frac{1-\\cos t}{t^2}\\to\\frac12$.",
+   "solution": [
+    "Let $t$ be the limit. Put $x=\\frac1y$; as $x\\to\\infty$, $y\\to0^+$: $t=\\lim_{y\\to0}\\frac{\\sin\\left(\\frac12\\ln\\cos\\pi y\\right)}{y^2}$.",
+    "Multiply and divide by $\\frac12\\ln\\cos\\pi y$: $t=\\lim\\frac{\\sin\\left\\{\\frac12\\ln\\cos\\pi y\\right\\}}{\\frac12\\ln\\cos\\pi y}\\cdot\\frac12\\cdot\\frac{\\ln\\cos\\pi y}{y^2}$; the first ratio $\\to1$.",
+    "Write $\\cos\\pi y=1-(1-\\cos\\pi y)$: $t=\\lim\\frac12\\cdot\\frac{\\ln\\left[1-(1-\\cos\\pi y)\\right]}{-(1-\\cos\\pi y)}\\cdot\\left(-\\frac{1-\\cos\\pi y}{y^2}\\right)$.",
+    "$\\frac{\\ln(1-w)}{-w}\\to1$ as $w=1-\\cos\\pi y\\to0$, and $\\frac{1-\\cos\\pi y}{(\\pi y)^2}\\to\\frac12$, so $\\frac{1-\\cos\\pi y}{y^2}\\to\\frac{\\pi^2}{2}$.",
+    "$t=\\frac12\\cdot(1)\\cdot\\left(-\\frac{\\pi^2}2\\right)=-\\frac{\\pi^2}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace each factor by its first-order equivalent (no substitution): $\\cos\\frac\\pi x\\approx1-\\frac{\\pi^2}{2x^2}$, $\\ln(1+u)\\approx u$, $\\sin u\\approx u$.",
+     "solution": [
+      "For large $x$: $\\cos\\frac\\pi x=1-\\frac{\\pi^2}{2x^2}+O(x^{-4})$, so $\\ln\\sqrt{\\cos\\frac\\pi x}=\\frac12\\ln\\cos\\frac\\pi x=\\frac12\\left(-\\frac{\\pi^2}{2x^2}+O(x^{-4})\\right)=-\\frac{\\pi^2}{4x^2}+O(x^{-4})$.",
+      "The argument of $\\sin$ tends to $0$, so $\\sin u=u+O(u^3)$ gives $\\sin\\left(\\ln\\sqrt{\\cos\\frac\\pi x}\\right)=-\\frac{\\pi^2}{4x^2}+O(x^{-4})$.",
+      "Multiplying by $x^2$: the limit is $-\\frac{\\pi^2}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Equivalents as $u\\to0$: $\\sin u\\sim u$, $\\ln(1+u)\\sim u$, $1-\\cos u\\sim\\frac{u^2}2$, $e^u-1\\sim u$; they may replace factors in a product or quotient (not inside a sum with cancelling terms).",
+    "$\\ln\\cos u\\sim-\\frac{u^2}{2}$ as $u\\to0$: here $u=\\frac\\pi x$, and $\\ln\\sqrt{\\cos u}\\sim-\\frac{u^2}4$.",
+    "Limits at $\\infty$ of an expression in $\\frac1x$: substitute $y=\\frac1x$ first."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "1-infinity form of limits",
+    "Limits of trigonometric functions at infinity"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to\\infty}\\left[\\cos\\left(2\\pi\\left(\\frac{x}{1+x}\\right)^a\\right)\\right]^{x^2}$, $a\\in\\mathbb Q$.",
+   "answer": "$e^{-2\\pi^2a^2}$",
+   "key_idea": "The base tends to $\\cos2\\pi=1$, so use $e^{\\lim x^2(\\text{base}-1)}$ with $\\frac{x}{1+x}=1-\\frac1{1+x}$.",
+   "solution": [
+    "The form is $1^\\infty$: $L=e^{\\lim x^2\\left[\\cos\\left(2\\pi\\left(\\frac{x}{1+x}\\right)^a\\right)-1\\right]}$.",
+    "Since $\\frac{x}{1+x}=1-\\frac1{1+x}$, $\\left(\\frac x{1+x}\\right)^a=1-\\frac{a}{1+x}+\\cdots$, so $\\cos\\left(2\\pi\\left(\\frac{x}{1+x}\\right)^a\\right)=\\cos\\left(2\\pi\\left(1-\\left(\\frac{x}{1+x}\\right)^a\\right)\\right)$ with $\\epsilon=1-\\left(\\frac{x}{1+x}\\right)^a\\to0$.",
+    "$\\cos(2\\pi-2\\pi\\epsilon)=\\cos2\\pi\\epsilon$, so the exponent is $\\lim x^2\\left(\\cos2\\pi\\epsilon-1\\right)=\\lim\\frac{\\cos2\\pi\\epsilon-1}{(2\\pi\\epsilon)^2}\\cdot4\\pi^2\\epsilon^2x^2=-\\frac12\\cdot4\\pi^2\\lim(\\epsilon x)^2$.",
+    "Put $x=\\frac1y$, $y\\to0^+$: $\\epsilon=1-(1+y)^{-a}=ay-\\frac{a(a+1)}{2}y^2+\\cdots$, so $\\epsilon x\\to a$.",
+    "Exponent $=-2\\pi^2a^2$, hence $L=e^{-2\\pi^2a^2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take logarithms: $\\ln L=\\lim x^2\\ln\\cos\\theta$ and use $\\ln\\cos\\theta\\sim-\\frac{\\theta^2}{2}$ with $\\theta=2\\pi\\epsilon$.",
+     "solution": [
+      "$\\ln L=\\lim x^2\\ln\\cos(2\\pi s)$, where $s=\\left(\\frac x{1+x}\\right)^a=\\left(1+\\frac1x\\right)^{-a}=1-\\frac ax+O(x^{-2})$.",
+      "$\\cos(2\\pi s)=\\cos\\left(2\\pi\\cdot\\frac ax+O(x^{-2})\\right)$ (period $2\\pi$), so with $\\theta=\\frac{2\\pi a}x+O(x^{-2})\\to0$.",
+      "$\\ln\\cos\\theta=-\\frac{\\theta^2}{2}+O(\\theta^4)=-\\frac{2\\pi^2a^2}{x^2}+O(x^{-3})$.",
+      "Multiplying by $x^2$: $\\ln L=-2\\pi^2a^2$, so $L=e^{-2\\pi^2a^2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ rule: if $f\\to1$ and $g\\to\\infty$ then $\\lim f^g=e^{\\lim g(f-1)}$ (equivalently $\\ln\\lim=\\lim g\\ln f$).",
+    "$\\cos(2\\pi-t)=\\cos t$: reduce trig arguments near $2\\pi n$ before expanding; $\\cos t-1\\sim-\\frac{t^2}2$.",
+    "$\\left(1+\\frac1x\\right)^{-a}=1-\\frac ax+O(x^{-2})$ for any real $a$ (rationality of $a$ is irrelevant)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Fractional part function and one-sided limits",
+    "Inverse trigonometric functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\frac{\\sin^{-1}(1-\\{x\\})\\cdot\\cos^{-1}(1-\\{x\\})}{\\sqrt{2\\{x\\}}\\cdot(1-\\{x\\})}$. Find $\\lim_{x\\to0^+}f(x)$ and $\\lim_{x\\to0^-}f(x)$, where $\\{x\\}$ denotes the fractional part function.",
+   "answer": "$\\frac\\pi2,\\ \\frac{\\pi}{2\\sqrt2}$",
+   "key_idea": "Near $0^+$, $\\{x\\}=x$; near $0^-$, $\\{x\\}=1+x$. Convert $\\cos^{-1}(1-x)$ to $\\sin^{-1}\\sqrt{2x-x^2}$ on the right side.",
+   "solution": [
+    "R.H.L. ($x\\to0^+$, $\\{x\\}=x$): $\\lim\\frac{\\sin^{-1}(1-x)\\cos^{-1}(1-x)}{\\sqrt{2x}(1-x)}$.",
+    "Use $\\cos^{-1}(1-x)=\\sin^{-1}\\sqrt{1-(1-x)^2}=\\sin^{-1}\\sqrt{2x-x^2}$.",
+    "R.H.L. $=\\lim\\frac{\\sin^{-1}(1-x)}{1-x}\\cdot\\frac{\\sin^{-1}\\sqrt{2x-x^2}}{\\sqrt{2x-x^2}}\\cdot\\frac{\\sqrt{2x-x^2}}{\\sqrt{2x}}$.",
+    "As $x\\to0^+$: $\\sin^{-1}(1-x)\\to\\frac\\pi2$, the second ratio $\\to1$, and $\\frac{\\sqrt{2x-x^2}}{\\sqrt{2x}}=\\sqrt{1-\\frac x2}\\to1$. So R.H.L. $=\\frac\\pi2\\cdot1\\cdot1=\\frac\\pi2$.",
+    "L.H.L. ($x\\to0^-$, $\\{x\\}=1+x$): $1-\\{x\\}=-x$, so $f=\\frac{\\sin^{-1}(-x)\\cos^{-1}(-x)}{\\sqrt{2(1+x)}\\,(-x)}$.",
+    "Put $-x=h$, $h\\to0^+$: $f=\\frac{\\sin^{-1}h}{h}\\cdot\\frac{\\cos^{-1}h}{\\sqrt2\\sqrt{1-h}}$.",
+    "$\\frac{\\sin^{-1}h}{h}\\to1$ and $\\cos^{-1}h\\to\\frac\\pi2$, so L.H.L. $=\\frac1{\\sqrt2}\\cdot\\frac\\pi2=\\frac\\pi{2\\sqrt2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Trigonometric substitution: set $1-\\{x\\}=\\cos t$ (right) and $-x=\\sin t$ (left), so the inverse functions become $\\frac\\pi2-t$ and $t$.",
+     "solution": [
+      "Right: $x\\to0^+$, $1-x=\\cos t$ with $t\\to0^+$. Then $\\sin^{-1}(\\cos t)=\\frac\\pi2-t$ and $\\cos^{-1}(\\cos t)=t$, while $\\sqrt{2x}=\\sqrt{2(1-\\cos t)}=2\\sin\\frac t2$.",
+      "$f=\\frac{\\left(\\frac\\pi2-t\\right)t}{2\\sin\\frac t2\\cdot\\cos t}=\\left(\\frac\\pi2-t\\right)\\cdot\\frac{t/2}{\\sin(t/2)}\\cdot\\frac1{\\cos t}\\to\\frac\\pi2\\cdot1\\cdot1=\\frac\\pi2$.",
+      "Left: $x\\to0^-$, put $-x=\\sin t$, $t\\to0^+$. $\\sin^{-1}(-x)=t$ and $\\cos^{-1}(\\sin t)=\\frac\\pi2-t$.",
+      "$f=\\frac{t\\left(\\frac\\pi2-t\\right)}{\\sqrt{2(1-\\sin t)}\\,\\sin t}=\\frac{t}{\\sin t}\\cdot\\frac{\\frac\\pi2-t}{\\sqrt{2(1-\\sin t)}}\\to1\\cdot\\frac{\\pi/2}{\\sqrt2}=\\frac\\pi{2\\sqrt2}$ (here $1+x=1-\\sin t\\to1$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\{x\\}=x$ just right of $0$ and $\\{x\\}=1+x$ just left of $0$ (and just left of any integer $n$: $\\{x\\}=x-(n-1)$): always rewrite $\\{x\\}$ for each side.",
+    "$\\cos^{-1}u=\\sin^{-1}\\sqrt{1-u^2}$ for $u\\in[0,1]$; $\\sin^{-1}(\\cos t)=\\frac\\pi2-t$ and $\\cos^{-1}(\\cos t)=t$ for $t\\in[0,\\pi]$.",
+    "$\\frac{\\sin^{-1}h}{h}\\to1$ and $\\frac{\\tan^{-1}h}{h}\\to1$ as $h\\to0$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "1-infinity form of limits",
+    "Limits of sequences involving surds"
+   ],
+   "level": 1,
+   "question": "$\\lim_{n\\to\\infty}\\left(\\frac{\\sqrt{n^2+n-1}}{n}\\right)^{2\\sqrt{n^2+n-1}}$",
+   "answer": "$e$",
+   "key_idea": "The base is $1+\\frac{\\sqrt{n^2+n-1}-n}{n}$, so the answer is $e^{\\lim(\\text{base}-1)\\cdot\\text{exponent}}$ with $\\sqrt{n^2+n-1}-n\\to\\frac12$.",
+   "solution": [
+    "The form is $1^\\infty$: limit $=e^{\\lim\\left[\\frac{\\sqrt{n^2+n-1}}{n}-1\\right]\\cdot2\\sqrt{n^2+n-1}}$.",
+    "Base $-1=\\frac{\\sqrt{n^2+n-1}-n}{n}$; rationalise: $\\sqrt{n^2+n-1}-n=\\frac{n-1}{\\sqrt{n^2+n-1}+n}$.",
+    "Exponent $=\\frac{n-1}{n\\left(\\sqrt{n^2+n-1}+n\\right)}\\cdot2\\sqrt{n^2+n-1}$.",
+    "Divide numerator and denominator by $n$: $\\frac{\\left(1-\\frac1n\\right)\\cdot2\\sqrt{1+\\frac1n-\\frac1{n^2}}}{\\sqrt{1+\\frac1n-\\frac1{n^2}}+1}\\to\\frac{1\\cdot2}{1+1}=1$.",
+    "Hence the limit is $e^1=e$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF writes the base minus 1 as $\\frac{\\sqrt{n^2+n}-(n+1)}{n}$ (it subtracts $n+1$ instead of $n$) and ends with $e^{-1}$. Correct: $\\frac{\\sqrt{n^2+n-1}-n}{n}$, giving exponent limit $+1$ and answer $e$. Checked numerically: $n=10^8$ gives $2.7182818$. The PDF's answer $e^{-1}$ is wrong.",
+   "alternate_solutions": [
+    {
+     "idea": "Square the base: $\\left(\\frac{\\sqrt{n^2+n-1}}{n}\\right)^{2\\sqrt{\\cdot}}=\\left(1+\\frac{n-1}{n^2}\\right)^{\\sqrt{n^2+n-1}}$, which is already in standard $1^\\infty$ form.",
+     "solution": [
+      "$\\left(\\frac{\\sqrt{n^2+n-1}}{n}\\right)^2=\\frac{n^2+n-1}{n^2}=1+\\frac{n-1}{n^2}$, so the expression is $\\left(1+\\frac{n-1}{n^2}\\right)^{\\sqrt{n^2+n-1}}$.",
+      "Limit $=e^{\\lim\\frac{n-1}{n^2}\\sqrt{n^2+n-1}}$ (no rationalising needed).",
+      "$\\frac{n-1}{n^2}\\sqrt{n^2+n-1}=\\left(1-\\frac1n\\right)\\sqrt{1+\\frac1n-\\frac1{n^2}}\\to1$.",
+      "So the limit is $e$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{n^2+an+b}=n+\\frac a2+O\\left(\\frac1n\\right)$: here $\\sqrt{n^2+n-1}\\approx n+\\frac12$, so base $\\approx1+\\frac1{2n}$ and exponent $\\approx2n$.",
+    "$\\lim\\left(1+\\frac pn\\right)^{qn}=e^{pq}$; with $p=\\frac12$, $q=2$ the answer is $e^1$.",
+    "Rationalise $\\sqrt{A}-B=\\frac{A-B^2}{\\sqrt A+B}$ whenever a surd minus a polynomial appears."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "L'Hôpital rule and indeterminate forms",
+    "Trigonometric values at odd multiples of π/2"
+   ],
+   "level": 3,
+   "question": "$\\lim_{x\\to a}\\frac1{(a^2-x^2)^2}\\left(\\frac{a^2+x^2}{ax}-2\\sin\\left(\\frac{a\\pi}2\\right)\\sin\\left(\\frac{\\pi x}{2}\\right)\\right)$, where $a$ is an odd integer.",
+   "answer": "$\\frac{\\pi^2a^2+4}{16a^4}$",
+   "key_idea": "Split $\\frac{1}{(a^2-x^2)^2}=\\frac1{(a+x)^2(a-x)^2}$; the factor $(a+x)^2ax\\to4a^4$ leaves a $\\frac00$ limit needing two differentiations (and $\\sin^2\\frac{a\\pi}2=1$).",
+   "solution": [
+    "$L=\\lim\\frac{1}{(a+x)^2\\,ax}\\cdot\\frac{a^2+x^2-2ax\\sin\\frac{a\\pi}2\\sin\\frac{\\pi x}2}{(a-x)^2}$; the first factor $\\to\\frac1{4a^4}$.",
+    "Let $N(x)=a^2+x^2-2a\\sin\\frac{a\\pi}2\\cdot x\\sin\\frac{\\pi x}2$. $N(a)=2a^2-2a^2\\sin^2\\frac{a\\pi}2=0$ since $a$ is odd ($\\sin^2\\frac{a\\pi}{2}=1$): the form is $\\frac00$.",
+    "$N'(x)=2x-2a\\sin\\frac{a\\pi}2\\left[\\sin\\frac{\\pi x}2+\\frac{\\pi x}2\\cos\\frac{\\pi x}2\\right]$ and $N'(a)=2a-2a=0$ (as $\\cos\\frac{a\\pi}2=0$): L'Hôpital again.",
+    "$\\lim\\frac{N(x)}{(a-x)^2}=\\frac{N''(a)}2$ with $N''(x)=2-2a\\sin\\frac{a\\pi}2\\left[\\pi\\cos\\frac{\\pi x}2-\\frac{\\pi^2x}4\\sin\\frac{\\pi x}2\\right]$.",
+    "At $x=a$: $\\cos\\frac{a\\pi}2=0$ and $\\sin^2\\frac{a\\pi}2=1$, so $N''(a)=2+2a\\cdot\\frac{\\pi^2a}{4}=2+\\frac{\\pi^2a^2}2$.",
+    "So $\\lim\\frac N{(a-x)^2}=1+\\frac{\\pi^2a^2}{4}$.",
+    "$L=\\frac1{4a^4}\\left(1+\\frac{\\pi^2a^2}4\\right)=\\frac{4+\\pi^2a^2}{16a^4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift $x=a+h$: for odd $a$, $\\sin\\frac{\\pi x}2=\\sin\\frac{a\\pi}2\\cos\\frac{\\pi h}2$, so the bracket becomes $\\left(\\frac{x}{a}+\\frac ax\\right)-2\\cos\\frac{\\pi h}2$ and a second-order expansion in $h$ finishes.",
+     "solution": [
+      "Let $s=\\sin\\frac{a\\pi}2=\\pm1$ ($a$ odd), $\\cos\\frac{a\\pi}2=0$. Then $\\sin\\frac{\\pi(a+h)}2=s\\cos\\frac{\\pi h}2$, so $2\\sin\\frac{a\\pi}2\\sin\\frac{\\pi x}2=2s^2\\cos\\frac{\\pi h}2=2\\cos\\frac{\\pi h}2$.",
+      "$\\frac{a^2+x^2}{ax}=\\frac xa+\\frac ax=\\left(1+\\frac ha\\right)+\\left(1+\\frac ha\\right)^{-1}=2+\\frac{h^2}{a^2}+O(h^3)$.",
+      "$2\\cos\\frac{\\pi h}2=2-\\frac{\\pi^2h^2}4+O(h^4)$, so the bracket equals $h^2\\left(\\frac1{a^2}+\\frac{\\pi^2}4\\right)+O(h^3)$.",
+      "$(a^2-x^2)^2=h^2(2a+h)^2\\approx4a^2h^2$.",
+      "Limit $=\\frac{\\frac1{a^2}+\\frac{\\pi^2}4}{4a^2}=\\frac{4+\\pi^2a^2}{16a^4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For odd integer $a$: $\\sin\\frac{a\\pi}2=\\pm1$, $\\cos\\frac{a\\pi}2=0$, so $\\sin\\left(\\frac{a\\pi}2+\\theta\\right)=\\pm\\cos\\theta$. Shifting $x=a+h$ turns such limits into expansions about $0$.",
+    "$x+\\frac1x=2+h^2+O(h^3)$ for $x=1+h$: more generally $t+\\frac1t-2=\\frac{(t-1)^2}{t}$.",
+    "A $\\frac00$ limit with a double zero: $\\lim\\frac{N(x)}{(x-a)^2}=\\frac{N''(a)}2$ when $N(a)=N'(a)=0$. Check: $a=1$ gives $\\frac{\\pi^2+4}{16}\\approx0.8669$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of products (0/0 form)",
+    "Binomial coefficients and expansion of (1+x)ⁿ"
+   ],
+   "level": 2,
+   "question": "If $L=\\lim_{x\\to1}\\frac{(1-x)(1-x^2)(1-x^3)\\cdots(1-x^{2n})}{\\left[(1-x)(1-x^2)(1-x^3)\\cdots(1-x^n)\\right]^2}$, then show that $L$ can be equal to :",
+   "options": [
+    "$\\prod_{r=1}^{n}\\frac{n+r}{r}$",
+    "$\\frac1{n!}\\prod_{r=1}^{n}(4r-2)$",
+    "The sum of the coefficients of the two middle terms in the expansion of $(1+x)^{2n-1}$.",
+    "The coefficient of $x^n$ in the expansion of $(1+x)^{2n}$."
+   ],
+   "answer": "(A, B, C, D) - all four equal $\\binom{2n}{n}$",
+   "key_idea": "Cancel $(1-x)\\cdots(1-x^n)$ to get $\\prod_{r=1}^n\\frac{1-x^{n+r}}{1-x^r}\\to\\prod\\frac{n+r}{r}=\\binom{2n}{n}$, then identify each option with $\\binom{2n}{n}$.",
+   "solution": [
+    "$L=\\lim_{x\\to1}\\frac{(1-x^{n+1})(1-x^{n+2})\\cdots(1-x^{2n})}{(1-x)(1-x^2)\\cdots(1-x^n)}=\\lim\\prod_{r=1}^n\\frac{1-x^{n+r}}{1-x^r}$.",
+    "Each factor $\\frac{1-x^{k}}{1-x^{r}}=\\frac{1-x^k}{1-x}\\cdot\\frac{1-x}{1-x^r}\\to\\frac kr$ as $x\\to1$, so $L=\\frac{n+1}1\\cdot\\frac{n+2}2\\cdots\\frac{2n}{n}=\\prod_{r=1}^n\\frac{n+r}{r}$: option (A).",
+    "$\\prod_{r=1}^n\\frac{n+r}r=\\frac{(n+1)(n+2)\\cdots(2n)}{n!}=\\frac{(2n)!}{n!\\,n!}=\\binom{2n}{n}$ ... (1).",
+    "(C): the middle terms of $(1+x)^{2n-1}$ have coefficients $\\binom{2n-1}{n-1}$ and $\\binom{2n-1}{n}$; their sum is $\\binom{2n}{n}$ by Pascal's rule, which equals (1).",
+    "(D): the coefficient of $x^n$ in $(1+x)^{2n}$ is $\\binom{2n}{n}$, equal to (1).",
+    "(B): $\\binom{2n}n=\\frac{(2n)!}{n!\\,n!}=\\frac{[1\\cdot3\\cdot5\\cdots(2n-1)]\\,(2\\cdot4\\cdots2n)}{n!\\,n!}=\\frac{[1\\cdot3\\cdots(2n-1)]\\,2^n}{n!}$.",
+    "Since $4r-2=2(2r-1)$, $\\prod_{r=1}^n(4r-2)=2^n\\cdot1\\cdot3\\cdots(2n-1)$, so $\\frac1{n!}\\prod(4r-2)=\\binom{2n}{n}$: option (B).",
+    "Hence $L=\\binom{2n}{n}$ equals all of (A), (B), (C), (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF leaves the answer blank, never shows option (D) and does not state the conclusion. Added (D) (coefficient of $x^n$ in $(1+x)^{2n}$ is $\\binom{2n}n$) and the final statement that all four options are correct. The PDF's working for (A), (B), (C) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$\\prod_{r=1}^n\\frac{1-x^{n+r}}{1-x^r}$ is the Gaussian binomial coefficient $\\binom{2n}{n}_x$, a polynomial in $x$ counting lattice paths by area; at $x=1$ it is the ordinary count $\\binom{2n}{n}$.",
+     "solution": [
+      "The $q$-binomial coefficient is $\\binom{2n}{n}_q=\\prod_{r=1}^n\\frac{1-q^{n+r}}{1-q^r}=\\sum_{\\text{paths}}q^{\\text{area}}$, a polynomial in $q$ with non-negative integer coefficients.",
+      "The sum runs over lattice paths from $(0,0)$ to $(n,n)$ using $n$ right and $n$ up steps, and the area under the path is the exponent.",
+      "Since $L$ is the limit $q\\to1$ of this polynomial, $L$ is its value at $q=1$, i.e. the number of paths $=\\binom{2n}{n}$.",
+      "Equivalently $\\binom{2n}{n}$ is the coefficient of $x^n$ in $(1+x)^{2n}$ (D), the central binomial coefficient, and by Pascal's rule the sum of the two middle coefficients of $(1+x)^{2n-1}$ (C); (A) and (B) are its product forms."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\prod_{r=1}^n\\frac{1-x^{n+r}}{1-x^r}\\to\\binom{2n}n$ as $x\\to1$; with $m$ in place of the second $n$: $\\prod_{r=1}^{k}\\frac{1-x^{m+r}}{1-x^r}\\to\\binom{m+k}{k}$.",
+    "$\\binom{2n}n=\\frac{2^n(2n-1)!!}{n!}=\\frac1{n!}\\prod_{r=1}^n(4r-2)$, e.g. $n=3$: $\\frac{2\\cdot6\\cdot10}{6}=20=\\binom63$.",
+    "Central binomial coefficient identity: $\\binom{2n-1}{n-1}+\\binom{2n-1}{n}=\\binom{2n}{n}$ (Pascal), and each equals $\\frac12\\binom{2n}n$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of sequences defined by recurrence",
+    "Half-angle formulas"
+   ],
+   "level": 2,
+   "question": "Let $x_0=2\\cos\\frac\\pi6$ and $x_n=\\sqrt{2+x_{n-1}}$, $n=1,2,3,\\dots$ Find $\\lim_{n\\to\\infty}2^{n+1}\\sqrt{2-x_n}$.",
+   "answer": "$\\frac\\pi3$",
+   "key_idea": "$\\sqrt{2+2\\cos t}=2\\cos\\frac t2$ gives $x_n=2\\cos\\frac{\\pi}{6\\cdot2^n}$, and $2-2\\cos t=4\\sin^2\\frac t2$.",
+   "solution": [
+    "$x_0=2\\cos\\frac\\pi6$.",
+    "$x_1=\\sqrt{2+2\\cos\\frac\\pi6}=2\\cos\\left(\\frac12\\cdot\\frac\\pi6\\right)$.",
+    "$x_2=\\sqrt{2+2\\cos\\left(\\frac\\pi6\\cdot\\frac12\\right)}=2\\cos\\left(\\frac\\pi6\\cdot\\frac1{2^2}\\right)$.",
+    "Similarly $x_n=2\\cos\\left(\\frac\\pi6\\cdot\\frac1{2^n}\\right)=2\\cos\\frac{\\theta}{2^n}$ with $\\theta=\\frac\\pi6$.",
+    "$2-x_n=2-2\\cos\\frac\\theta{2^n}=4\\sin^2\\frac{\\theta}{2^{n+1}}$, so $\\sqrt{2-x_n}=2\\sin\\frac\\theta{2^{n+1}}$.",
+    "$\\lim2^{n+1}\\cdot2\\sin\\frac{\\theta}{2^{n+1}}=\\lim2\\theta\\cdot\\frac{\\sin\\frac\\theta{2^{n+1}}}{\\frac\\theta{2^{n+1}}}=2\\theta$.",
+    "With $\\theta=\\frac\\pi6$ the limit is $\\frac\\pi3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the exact recurrence $2-x_n=\\frac{2-x_{n-1}}{2+x_n}$ (difference of squares): the sequence $c_n=2^{n+1}\\sqrt{2-x_n}$ then satisfies $\\frac{c_n}{c_{n-1}}=\\frac2{x_{n+1}}$ and its limit is a Viete-type product.",
+     "solution": [
+      "$2-x_n=\\frac{4-x_n^2}{2+x_n}=\\frac{4-(2+x_{n-1})}{2+x_n}=\\frac{2-x_{n-1}}{2+x_n}$ (since $x_n^2=2+x_{n-1}$).",
+      "Let $c_n=2^{n+1}\\sqrt{2-x_n}$. Then $\\frac{c_n}{c_{n-1}}=2\\sqrt{\\frac{2-x_n}{2-x_{n-1}}}=\\frac{2}{\\sqrt{2+x_n}}=\\frac2{x_{n+1}}=\\frac1{\\cos(\\theta/2^{n+1})}$.",
+      "So $c_n=c_0\\prod_{k=2}^{n+1}\\frac1{\\cos(\\theta/2^k)}$ with $c_0=2\\sqrt{2-2\\cos\\theta}=4\\sin\\frac\\theta2$.",
+      "By Viete, $\\prod_{k=2}^{\\infty}\\cos\\frac{\\theta}{2^k}=\\frac{\\sin(\\theta/2)}{\\theta/2}$ (it is $\\prod_{k\\ge1}\\cos\\frac{(\\theta/2)}{2^k}$).",
+      "Therefore $\\lim c_n=4\\sin\\frac\\theta2\\cdot\\frac{\\theta/2}{\\sin(\\theta/2)}=2\\theta=\\frac\\pi3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{2+2\\cos t}=2\\cos\\frac t2$ and $\\sqrt{2-2\\cos t}=2\\sin\\frac t2$ for $0\\le t\\le\\pi$: the nested radical $\\sqrt{2+\\sqrt{2+\\cdots}}$ with $n$ roots is $2\\cos\\frac{\\pi}{2^{n+1}}$.",
+    "Archimedes-type limit: $2^{n}\\sqrt{2-x_n}\\to$ angle: with $x_0=0$ (so $\\theta=\\frac\\pi2$) $2^{n+1}\\sqrt{2-x_n}\\to\\pi$, the classical $\\pi$ from regular polygons.",
+    "$2^n\\sin\\frac t{2^n}\\to t$: halving an angle $n$ times and multiplying by $2^n$ recovers the angle."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maclaurin expansion of ln(1+x) and limits"
+   ],
+   "level": 1,
+   "question": "$\\lim_{x\\to0}\\left[\\frac{\\ln(1+x)^{1+x}}{x^2}-\\frac1x\\right]$.",
+   "answer": "$\\frac12$",
+   "key_idea": "Combine into $\\frac{(1+x)\\ln(1+x)-x}{x^2}$ and expand $\\ln(1+x)=x-\\frac{x^2}2+\\cdots$",
+   "solution": [
+    "$\\ln(1+x)^{1+x}=(1+x)\\ln(1+x)$, so the limit is $\\lim\\frac{(1+x)\\ln(1+x)-x}{x^2}$.",
+    "Expand $\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}3-\\cdots$",
+    "$(1+x)\\ln(1+x)=(1+x)\\left(x-\\frac{x^2}2+\\frac{x^3}3-\\cdots\\right)=x+\\frac{x^2}2-\\frac{x^3}{6}+\\cdots$",
+    "Numerator $=\\frac{x^2}2-\\frac{x^3}6+\\cdots$; dividing by $x^2$ and letting $x\\to0$ gives $\\frac12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The numerator is an integral: $(1+x)\\ln(1+x)-x=\\int_0^x\\ln(1+t)\\,dt$, and $\\ln(1+t)\\approx t$.",
+     "solution": [
+      "Let $N(x)=(1+x)\\ln(1+x)-x$. Then $N'(x)=\\ln(1+x)+1-1=\\ln(1+x)$ and $N(0)=0$, so $N(x)=\\int_0^x\\ln(1+t)\\,dt$.",
+      "Since $\\frac{\\ln(1+t)}{t}\\to1$, $\\int_0^x\\ln(1+t)\\,dt\\approx\\int_0^xt\\,dt=\\frac{x^2}2$.",
+      "(Or L'Hôpital twice: $\\frac{N'(x)}{2x}=\\frac{\\ln(1+x)}{2x}\\to\\frac12$.) Hence the limit is $\\frac12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{d}{dx}\\left[(1+x)\\ln(1+x)-x\\right]=\\ln(1+x)$: antiderivative of $\\ln(1+x)$ is $(1+x)\\ln(1+x)-x$.",
+    "$(1+x)\\ln(1+x)=x+\\frac{x^2}2-\\frac{x^3}6+\\frac{x^4}{12}-\\cdots$ near $0$ (check at $x=0.1$: $1.1\\ln1.1=0.104841$ and the series gives $0.1+0.005-0.000167+0.000008=0.104842$).",
+    "If $N(0)=N'(0)=0$ then $\\lim\\frac{N(x)}{x^2}=\\frac{N''(0)}2$ (here $N''(0)=1$)."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Infinite products and telescoping",
+    "Factorisation of n³ ± 1"
+   ],
+   "level": 2,
+   "question": "Let $L=\\prod_{n=3}^{\\infty}\\left(1-\\frac4{n^2}\\right)$, $M=\\prod_{n=2}^{\\infty}\\left(\\frac{n^3-1}{n^3+1}\\right)$ and $N=\\prod_{n=1}^{\\infty}\\frac{(1+n^{-1})^2}{1+2n^{-1}}$, then find the value of $L^{-1}+M^{-1}+N^{-1}$.",
+   "answer": "8",
+   "key_idea": "Factorise each term so the product telescopes: $1-\\frac4{n^2}=\\frac{(n-2)(n+2)}{n^2}$, $\\frac{n^3-1}{n^3+1}=\\frac{(n-1)(n^2+n+1)}{(n+1)(n^2-n+1)}$, $\\frac{(n+1)^2}{n(n+2)}$.",
+   "solution": [
+    "$L=\\lim_{k\\to\\infty}\\prod_{n=3}^k\\frac{n-2}n\\cdot\\frac{n+2}{n}=\\lim\\left(\\frac13\\cdot\\frac24\\cdot\\frac35\\cdots\\frac{k-2}{k}\\right)\\left(\\frac53\\cdot\\frac64\\cdot\\frac75\\cdots\\frac{k+2}k\\right)$.",
+    "The first bracket is $\\frac{1\\cdot2}{(k-1)k}$ and the second is $\\frac{(k+1)(k+2)}{3\\cdot4}$, so $L=\\lim\\frac{2(k+1)(k+2)}{12\\,k(k-1)}=\\frac16$.",
+    "$M=\\lim_{k}\\prod_{n=2}^k\\frac{n-1}{n+1}\\cdot\\frac{n^2+n+1}{n^2-n+1}$, because $n^3-1=(n-1)(n^2+n+1)$ and $n^3+1=(n+1)(n^2-n+1)$.",
+    "$\\prod_{n=2}^k\\frac{n-1}{n+1}=\\frac{1\\cdot2}{k(k+1)}$, and $\\prod_{n=2}^k\\frac{n^2+n+1}{n^2-n+1}=\\frac73\\cdot\\frac{13}{7}\\cdot\\frac{21}{13}\\cdots=\\frac{k^2+k+1}{3}$ (telescopes, since $(n+1)^2-(n+1)+1=n^2+n+1$).",
+    "So $M=\\lim\\frac{2}{k(k+1)}\\cdot\\frac{k^2+k+1}{3}=\\frac23$.",
+    "$N=\\lim_k\\prod_{n=1}^k\\frac{(n+1)^2}{n(n+2)}=\\lim\\left(\\frac{2\\cdot2}{1\\cdot3}\\right)\\left(\\frac{3\\cdot3}{2\\cdot4}\\right)\\cdots\\left(\\frac{(k+1)(k+1)}{k(k+2)}\\right)=\\lim\\frac{2(k+1)}{k+2}=2$.",
+    "$L^{-1}+M^{-1}+N^{-1}=6+\\frac32+\\frac12=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Euler's sine product $\\prod_{n\\ge1}\\left(1-\\frac{z^2}{n^2}\\right)=\\frac{\\sin\\pi z}{\\pi z}$ gives $L$ in one line; $N$ splits into two simple telescoping products.",
+     "solution": [
+      "For $L$: $\\prod_{n\\ge1}\\left(1-\\frac{z^2}{n^2}\\right)=(1-z^2)\\left(1-\\frac{z^2}4\\right)\\prod_{n\\ge3}\\left(1-\\frac{z^2}{n^2}\\right)=\\frac{\\sin\\pi z}{\\pi z}$.",
+      "So $\\prod_{n\\ge3}\\left(1-\\frac{z^2}{n^2}\\right)=\\frac{\\sin\\pi z}{\\pi z(1-z^2)(1-z^2/4)}$; let $z\\to2$: $\\sin\\pi z\\approx\\pi(z-2)$, $1-\\frac{z^2}4\\approx-(z-2)$, $1-z^2\\to-3$, $\\pi z\\to2\\pi$.",
+      "$L=\\frac{\\pi(z-2)}{2\\pi\\cdot(-3)\\cdot(-(z-2))}=\\frac16$.",
+      "For $N$: $\\frac{(n+1)^2}{n(n+2)}=\\frac{n+1}{n}\\cdot\\frac{n+1}{n+2}$; $\\prod_{n=1}^k\\frac{n+1}{n}=k+1$ and $\\prod_{n=1}^k\\frac{n+1}{n+2}=\\frac2{k+2}$, so $N=\\lim\\frac{2(k+1)}{k+2}=2$.",
+      "For $M$: with $g(n)=n^2-n+1$ we have $n^2+n+1=g(n+1)$, so $M=\\prod\\frac{n-1}{n+1}\\cdot\\frac{g(n+1)}{g(n)}=\\frac{2}{k(k+1)}\\cdot\\frac{g(k+1)}{g(2)}\\to\\frac23$. Hence the sum is $6+\\frac32+\\frac12=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\prod_{n=2}^k\\frac{n-1}{n+1}=\\frac{2}{k(k+1)}$ and $\\prod_{n=2}^{k}\\frac{n^3-1}{n^3+1}\\to\\frac23$ (classical).",
+    "$\\prod_{n\\ge2}\\left(1-\\frac{1}{n^2}\\right)=\\frac12$, $\\prod_{n\\ge3}\\left(1-\\frac4{n^2}\\right)=\\frac16$ and in general $\\prod_{n\\ge m+1}\\left(1-\\frac{m^2}{n^2}\\right)=\\frac{1}{\\binom{2m}{m}}$ (check $m=2$: $\\frac16$; $m=1$: $\\frac12$).",
+    "Telescoping needs a factor $\\frac{f(n+1)}{f(n)}$: factorise ($a^2-b^2$, $a^3\\pm b^3$) and look for $n^2+n+1=(n+1)^2-(n+1)+1$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Telescoping series using the sin³θ identity",
+    "1-infinity form of limits"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\lim_{n\\to\\infty}\\sum_{k=1}^{n}3^{k-1}\\sin^3\\frac{x}{3^k}$ and $g(x)=x-4f(x)$. Evaluate $\\lim_{x\\to0}\\left(1+g(x)\\right)^{\\cot x}$.",
+   "answer": "$e$",
+   "key_idea": "$4\\sin^3t=3\\sin t-\\sin3t$ makes the sum telescope, giving $f(x)=\\frac{x-\\sin x}{4}$ and $g(x)=\\sin x$.",
+   "solution": [
+    "$\\sin^3t=\\frac{3\\sin t-\\sin3t}{4}$, so $3^{k-1}\\sin^3\\frac x{3^k}=\\frac{3^k\\sin\\frac{x}{3^k}-3^{k-1}\\sin\\frac x{3^{k-1}}}{4}$.",
+    "Adding for $k=1,\\dots,n$ (telescoping): $\\sum=\\frac14\\left[3^n\\sin\\frac x{3^n}-\\sin x\\right]$.",
+    "As $n\\to\\infty$, $3^n\\sin\\frac{x}{3^n}=x\\cdot\\frac{\\sin(x/3^n)}{x/3^n}\\to x$, so $f(x)=\\frac14(x-\\sin x)$.",
+    "$g(x)=x-4f(x)=x-(x-\\sin x)=\\sin x$.",
+    "The required limit is $\\lim_{x\\to0}(1+\\sin x)^{\\cot x}$, a $1^\\infty$ form: $e^{\\lim\\sin x\\cot x}=e^{\\lim\\cos x}=e^1$.",
+    "Hence the limit is $e$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Avoid the closed form: bound $|\\sin t|\\le|t|$ to get $f(x)=O(x^3)$, so $g(x)=x+O(x^3)$ and $g(x)\\cot x\\to1$.",
+     "solution": [
+      "Each term satisfies $0\\le3^{k-1}\\sin^3\\frac x{3^k}\\le3^{k-1}\\frac{x^3}{27^k}=\\frac{x^3}{27}\\cdot\\frac1{9^{k-1}}$ for $x>0$ small.",
+      "Summing the geometric series: $0\\le f(x)\\le\\frac{x^3}{27}\\cdot\\frac98=\\frac{x^3}{24}$, so $f(x)=O(x^3)$ and $g(x)=x-4f(x)=x+O(x^3)$.",
+      "Hence $g(x)\\to0$ and $\\frac{g(x)}{\\tan x}\\to1$; the $1^\\infty$ rule gives $\\lim(1+g)^{\\cot x}=e^{\\lim g(x)\\cot x}=e^1=e$.",
+      "(Same answer as with the exact $g(x)=\\sin x$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin3t=3\\sin t-4\\sin^3t$ gives $\\sin^3t=\\frac{3\\sin t-\\sin3t}{4}$; similarly $\\cos^3t=\\frac{3\\cos t+\\cos3t}{4}$.",
+    "$\\sum_{k=1}^{\\infty}3^{k-1}\\sin^3\\frac{x}{3^k}=\\frac{x-\\sin x}{4}$ (check $x=1$: the first five terms give $0.03963$ and $\\frac{1-\\sin1}4=0.03963$).",
+    "$\\lim_{x\\to0}(1+\\sin x)^{\\cot x}=\\lim(1+\\tan x)^{\\cot x}=e$: whenever $u\\to0$, $(1+u)^{1/u}\\to e$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Products of tangent terms and limits",
+    "Double-angle identities"
+   ],
+   "level": 2,
+   "question": "If $f(n,\\theta)=\\prod_{r=1}^{n}\\left(1-\\tan^2\\frac\\theta{2^r}\\right)$, then compute $\\lim_{n\\to\\infty}f(n,\\theta)$.",
+   "answer": "$\\frac{\\theta}{\\tan\\theta}$",
+   "key_idea": "$1-\\tan^2x=\\frac{\\cos2x}{\\cos^2x}$ so the product telescopes to $\\frac{\\cos\\theta}{\\prod\\cos\\frac\\theta{2^r}\\cdot\\cos\\frac\\theta{2^n}}$, then use $\\prod\\cos$ and $\\frac{\\sin u}u\\to1$.",
+   "solution": [
+    "$1-\\tan^2x=\\left(1+\\tan^2x\\right)\\cos2x=\\frac{\\cos2x}{\\cos^2x}$.",
+    "$f(n,\\theta)=\\prod_{r=1}^n\\frac{\\cos\\frac{\\theta}{2^{r-1}}}{\\cos^2\\frac\\theta{2^r}}=\\left[\\frac{\\cos\\theta}{\\cos\\frac\\theta2\\cdot\\cos\\frac\\theta2}\\right]\\left[\\frac{\\cos\\frac\\theta2}{\\cos\\frac\\theta{2^2}\\cos\\frac\\theta{2^2}}\\right]\\cdots\\left[\\frac{\\cos\\frac\\theta{2^{n-1}}}{\\cos\\frac\\theta{2^n}\\cos\\frac\\theta{2^n}}\\right]$.",
+    "Each numerator cancels one factor of the previous denominator: $f(n,\\theta)=\\frac{\\cos\\theta}{\\cos\\frac\\theta2\\cos\\frac\\theta{2^2}\\cdots\\cos\\frac\\theta{2^n}\\cdot\\cos\\frac\\theta{2^n}}$.",
+    "Using $\\prod_{r=1}^n\\cos\\frac\\theta{2^r}=\\frac{\\sin\\theta}{2^n\\sin\\frac\\theta{2^n}}$: $f(n,\\theta)=\\frac{\\cos\\theta}{\\sin\\theta}\\cdot\\frac{2^n\\sin\\frac\\theta{2^n}}{\\cos\\frac\\theta{2^n}}=\\frac{\\cos\\theta}{\\sin\\theta}\\cdot\\theta\\cdot\\frac{\\sin(\\theta/2^n)}{\\theta/2^n}\\cdot\\frac1{\\cos(\\theta/2^n)}$.",
+    "As $n\\to\\infty$ the last two factors $\\to1$, so $\\lim f(n,\\theta)=\\theta\\cot\\theta=\\frac{\\theta}{\\tan\\theta}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's telescoped form is $\\frac{\\cos\\theta}{\\cos\\frac\\theta2\\cdots\\cos\\frac\\theta{2^n}}$, which omits the last factor $\\frac1{\\cos(\\theta/2^n)}$ (the numerators cancel all but the first, but the last denominator has a squared $\\cos\\frac\\theta{2^n}$). The factor tends to $1$, so the final answer $\\frac{\\theta}{\\tan\\theta}$ is unchanged. Checked numerically for $\\theta=0.7$, $n=5$: exact product $0.83120$ matches the corrected formula.",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\tan2t=\\frac{2\\tan t}{1-\\tan^2t}$, i.e. $1-\\tan^2t=\\frac{2\\tan t}{\\tan2t}$: the product telescopes exactly to $\\frac{2^n\\tan(\\theta/2^n)}{\\tan\\theta}$.",
+     "solution": [
+      "From $\\tan2t=\\frac{2\\tan t}{1-\\tan^2t}$: $1-\\tan^2\\frac\\theta{2^r}=\\frac{2\\tan\\frac\\theta{2^r}}{\\tan\\frac\\theta{2^{r-1}}}$.",
+      "$f(n,\\theta)=\\prod_{r=1}^n\\frac{2\\tan\\frac\\theta{2^r}}{\\tan\\frac\\theta{2^{r-1}}}=2^n\\cdot\\frac{\\tan\\frac\\theta{2^n}}{\\tan\\theta}$ (every intermediate tangent cancels).",
+      "$=\\frac{\\theta}{\\tan\\theta}\\cdot\\frac{\\tan(\\theta/2^n)}{\\theta/2^n}\\to\\frac{\\theta}{\\tan\\theta}$ as $n\\to\\infty$. This exact form also confirms the corrected formula above."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Exact identity: $\\prod_{r=1}^n\\left(1-\\tan^2\\frac\\theta{2^r}\\right)=\\frac{2^n\\tan(\\theta/2^n)}{\\tan\\theta}$ (check $n=1$: $1-\\tan^2\\frac\\theta2=\\frac{2\\tan(\\theta/2)}{\\tan\\theta}$).",
+    "$1-\\tan^2x=\\frac{\\cos2x}{\\cos^2x}$, $\\ 1+\\tan^2x=\\sec^2x$, $\\ \\frac{2\\tan x}{1-\\tan^2x}=\\tan2x$.",
+    "Limit of such products: $\\lim\\prod_{r=1}^n\\left(1-\\tan^2\\frac\\theta{2^r}\\right)=\\theta\\cot\\theta$, and $\\lim\\prod\\cos\\frac\\theta{2^r}=\\frac{\\sin\\theta}\\theta$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Logarithmic limits"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to0^+}\\ln(x\\ln a)\\cdot\\ln\\left(\\frac{\\ln ax}{\\ln\\frac xa}\\right)=6$, then find the value of $a$.",
+   "answer": "$e^3$",
+   "key_idea": "Put $t=\\ln x\\to-\\infty$, $A=\\ln a$: $\\ln\\frac{t+A}{t-A}=\\ln\\left(1+\\frac At\\right)-\\ln\\left(1-\\frac At\\right)\\approx\\frac{2A}t$, and $t+\\ln A\\sim t$.",
+   "solution": [
+    "Let $t=\\ln x$, so $t\\to-\\infty$ as $x\\to0^+$; let $A=\\ln a$ ($A>0$) and $b=\\ln(\\ln a)=\\ln A$.",
+    "$\\ln(x\\ln a)=\\ln x+\\ln\\ln a=t+\\ln A$; $\\ln ax=A+t$ and $\\ln\\frac xa=t-A$.",
+    "The condition becomes $\\lim_{t\\to-\\infty}(t+\\ln A)\\ln\\frac{A+t}{t-A}=6$.",
+    "$\\ln\\frac{A+t}{t-A}=\\ln\\left(1+\\frac At\\right)-\\ln\\left(1-\\frac At\\right)$, so $\\lim\\frac{t+\\ln A}{t}\\cdot A\\cdot\\frac{\\ln\\left(1+\\frac At\\right)-\\ln\\left(1-\\frac At\\right)}{A/t}=6$.",
+    "$\\frac{t+\\ln A}{t}\\to1$ and $\\frac{\\ln(1+u)-\\ln(1-u)}{u}\\to1-(-1)=2$ as $u=\\frac At\\to0$.",
+    "So $A\\cdot1\\cdot2=6$, $A=3$, i.e. $\\ln a=3$ and $a=e^3$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says $t=\\ln x\\to\\infty$; as $x\\to0^+$, $t\\to-\\infty$ (the algebra and the answer $a=e^3$ are unchanged). The PDF's displayed '$1\\cdot A[1-(-1)]=6$' is $A\\cdot2=6$.",
+   "alternate_solutions": [
+    {
+     "idea": "Mean value theorem: $\\ln|t+A|-\\ln|t-A|=\\frac{2A}{\\xi}$ with $\\xi$ between $t-A$ and $t+A$, and $\\frac\\xi t\\to1$.",
+     "solution": [
+      "With $t=\\ln x\\to-\\infty$ and $A=\\ln a>0$, both $t+A$ and $t-A$ are negative; $\\ln\\frac{t+A}{t-A}=\\ln|t+A|-\\ln|t-A|$.",
+      "By the mean value theorem for $\\ln|u|$ (derivative $\\frac1u$) there is $\\xi\\in(t-A,t+A)$ with $\\ln|t+A|-\\ln|t-A|=\\frac{(t+A)-(t-A)}{\\xi}=\\frac{2A}{\\xi}$.",
+      "Since $\\xi=t+O(1)$, $\\frac{t+\\ln A}{\\xi}\\to1$ as $t\\to-\\infty$.",
+      "The product $(t+\\ln A)\\cdot\\frac{2A}{\\xi}\\to2A$, so $2A=6$, $A=3$, $a=e^3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\ln\\frac{1+u}{1-u}=2\\left(u+\\frac{u^3}3+\\cdots\\right)\\approx2u$ for small $u$ (this is $2\\tanh^{-1}u$).",
+    "For $x\\to0^+$ the natural variable is $t=\\ln x\\to-\\infty$; $\\ln(x^p c)=p\\,t+\\ln c\\sim pt$.",
+    "$\\lim_{t\\to\\pm\\infty}(t+c)\\ln\\frac{t+A}{t-A}=2A$ for any constant $c$: the constant is irrelevant (check $A=3$, $t=-10^4$: $\\approx6.0$)."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form ∞ − ∞ with (1 + 1/x)ˣ",
+    "Expansion of exponential and logarithmic functions"
+   ],
+   "level": 2,
+   "question": "Evaluate $\\lim_{x\\to\\infty}\\left(\\frac xe-x\\left(\\frac x{x+1}\\right)^x\\right)$.",
+   "answer": "$-\\frac1{2e}$",
+   "key_idea": "Put $y=\\frac1x$ and write $(1+y)^{-1/y}=e^{-\\frac1y\\ln(1+y)}=e^{-1+\\frac y2-\\cdots}$, so the $\\frac1y$ terms cancel and $-\\frac{1}{2e}$ remains.",
+   "solution": [
+    "Put $x=\\frac1y$, $y\\to0^+$: the expression is $\\frac1{ey}-\\frac1y\\left(\\frac1{1+y}\\right)^{1/y}=\\frac1{ey}-\\frac1y(1+y)^{-1/y}$.",
+    "$(1+y)^{-1/y}=e^{-\\frac1y\\ln(1+y)}$ (since $a^b=e^{b\\ln a}$).",
+    "$-\\frac1y\\ln(1+y)=-\\frac1y\\left(y-\\frac{y^2}2+\\frac{y^3}3-\\cdots\\right)=-1+\\frac y2-\\frac{y^2}3+\\cdots$",
+    "So $(1+y)^{-1/y}=e^{-1}\\cdot e^{\\frac y2-\\frac{y^2}3+\\cdots}=e^{-1}\\left(1+\\frac y2+O(y^2)\\right)$ (neglect $y^2$ and higher powers inside the exponent).",
+    "Expression $=\\frac1{ey}-\\frac1{ey}\\left(1+\\frac y2+O(y^2)\\right)=-\\frac1{2e}+O(y)$.",
+    "Hence the limit is $-\\frac1{2e}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read the limit as a derivative: with $F(y)=(1+y)^{-1/y}$ and $F(0)=e^{-1}$, the expression is $\\frac{F(0)-F(y)}{y}\\to-F'(0)$.",
+     "solution": [
+      "$\\frac1{ey}-\\frac1y(1+y)^{-1/y}=\\frac{F(0)-F(y)}{y}$ where $F(y)=(1+y)^{-1/y}$ is continuous at $0$ with $F(0)=\\frac1e$.",
+      "The limit is $-F'(0)$. Write $F=e^{-\\phi(y)}$, $\\phi(y)=\\frac{\\ln(1+y)}y=1-\\frac y2+\\frac{y^2}3-\\cdots$, so $\\phi'(0)=-\\frac12$.",
+      "$F'(0)=-\\phi'(0)F(0)=\\frac12\\cdot\\frac1e=\\frac1{2e}$.",
+      "Hence the limit is $-F'(0)=-\\frac{1}{2e}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left(1+\\frac1x\\right)^x=e\\left(1-\\frac1{2x}+\\frac{11}{24x^2}-\\cdots\\right)$ and $\\left(\\frac{x}{x+1}\\right)^x=\\frac1e\\left(1+\\frac{1}{2x}+\\cdots\\right)$.",
+    "$\\lim_{x\\to\\infty}x\\left[\\left(1+\\frac1x\\right)^x-e\\right]=-\\frac e2$: the standard result for the rate at which $\\left(1+\\frac1x\\right)^x$ approaches $e$.",
+    "For $\\infty-\\infty$ forms with exponentials: write as $e^{\\ln(\\cdot)}$ and expand to one order beyond the cancelling term."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits applied to geometry (circle, tangent, chord)",
+    "Trigonometric ratios in a triangle"
+   ],
+   "level": 2,
+   "question": "Through a point $A$ on a circle, a chord $AP$ is drawn and on the tangent at $A$ a point $T$ is taken such that $AT=AP$. If $TP$ produced meets the diameter through $A$ at $Q$, prove that the limiting value of $AQ$ when $P$ moves up to $A$ is double the diameter of the circle.",
+   "answer": "$\\lim AQ=4r=2\\times$ (diameter)",
+   "key_idea": "In the isosceles triangle $ATP$ the base angle at $T$ is $90^\\circ-\\frac\\theta2$, and in the right triangle $ATQ$, $AQ=AT\\cot\\frac\\theta2=4r\\cos^2\\frac\\theta2$.",
+   "solution": [
+    "Let $C$ be the centre, $r$ the radius, $M$ the midpoint of $AP$ and $\\ell=AP=AT$. In triangle $ACM$ (right-angled at $M$), $\\angle ACM=\\theta$ so $\\ell=AP=2r\\sin\\theta$; $\\theta$ is also the angle between the tangent $AT$ and the chord $AP$.",
+    "Triangle $ATP$ is isosceles ($AT=AP$) with apex angle $\\theta$ at $A$, so $\\angle ATP=90^\\circ-\\frac\\theta2$.",
+    "Triangle $ATQ$ is right-angled at $A$ (tangent $\\perp$ diameter $AQ$): $\\tan\\left(90^\\circ-\\frac\\theta2\\right)=\\frac{AQ}{AT}$.",
+    "$AQ=\\ell\\cot\\frac\\theta2=2r\\sin\\theta\\cot\\frac\\theta2$.",
+    "$\\sin\\theta\\cot\\frac\\theta2=2\\sin\\frac\\theta2\\cos\\frac\\theta2\\cdot\\frac{\\cos(\\theta/2)}{\\sin(\\theta/2)}=2\\cos^2\\frac\\theta2$, so $AQ=4r\\cos^2\\frac\\theta2$.",
+    "As $P\\to A$, $\\theta\\to0$ and $\\cos^2\\frac\\theta2\\to1$, so $AQ\\to4r=2(2r)=2\\times$ diameter."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Coordinates: $A$ at the origin, tangent along the $x$-axis, centre $(0,r)$; find the $y$-intercept of line $TP$ directly.",
+     "solution": [
+      "Circle: $x^2+y^2=2ry$. Let $\\ell=AP=AT$ and $P=(\\ell\\cos\\theta,\\ell\\sin\\theta)$; on the circle gives $\\ell=2r\\sin\\theta$. $T=(\\ell,0)$.",
+      "Slope of $TP$ $=\\frac{\\ell\\sin\\theta}{\\ell\\cos\\theta-\\ell}=\\frac{\\sin\\theta}{\\cos\\theta-1}=-\\cot\\frac\\theta2$.",
+      "Line $TP$: $y=-\\cot\\frac\\theta2\\,(x-\\ell)$. The diameter through $A$ is the $y$-axis, so at $x=0$: $y=\\ell\\cot\\frac\\theta2$, i.e. $AQ=2r\\sin\\theta\\cot\\frac\\theta2=4r\\cos^2\\frac\\theta2$.",
+      "As $\\theta\\to0$: $AQ\\to4r=2\\times$ diameter."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangent-chord angle equals the inscribed angle on the chord; chord $AP=2r\\sin\\theta$ when the tangent-chord angle is $\\theta$.",
+    "$\\sin\\theta\\cot\\frac\\theta2=2\\cos^2\\frac\\theta2=1+\\cos\\theta$, so $AQ=2r(1+\\cos\\theta)$: it equals $4r$ exactly at $\\theta=0$ and decreases to $2r$ at $\\theta=\\frac\\pi2$.",
+    "Limiting positions in geometry: first find an exact trigonometric expression in the varying angle, then let the angle tend to $0$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits applied to geometry (triangle)",
+    "Area of a triangle and trigonometric identities"
+   ],
+   "level": 1,
+   "question": "At the end points $A$, $B$ of the fixed segment of length $L$, lines are drawn meeting in $C$ and making angles $\\theta$ and $2\\theta$ respectively with the given segment. Let $D$ be the foot of the altitude $CD$ and let $x$ represent the length of $AD$. Find the value of $x$ as $\\theta$ tends to zero, i.e. $\\lim_{\\theta\\to0}x$.",
+   "answer": "$\\frac{2L}{3}$",
+   "key_idea": "Equate two expressions for the area of $\\triangle ABC$ (or use $x\\tan\\theta=(L-x)\\tan2\\theta$) to express $x$ in $\\theta$, then take $\\theta\\to0$.",
+   "solution": [
+    "Let $h=CD$. Angle $C=180^\\circ-3\\theta$, $AC=x\\sec\\theta$ (right triangle $ADC$), $BC=h\\csc2\\theta$.",
+    "Area of $\\triangle ABC$: $\\frac{hL}{2}=\\frac12\\,AC\\cdot BC\\sin3\\theta$.",
+    "So $hL=x\\sec\\theta\\cdot h\\csc2\\theta\\cdot\\sin3\\theta$.",
+    "Cancel $h$: $x=\\frac{L\\cos\\theta\\,\\sin2\\theta}{\\sin3\\theta}$.",
+    "$\\lim_{\\theta\\to0}x=L\\lim\\cos\\theta\\cdot\\frac{3\\theta}{\\sin3\\theta}\\cdot\\frac{\\sin2\\theta}{2\\theta}\\cdot\\frac23=\\frac{2L}3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the two right triangles on the common altitude: $h=x\\tan\\theta=(L-x)\\tan2\\theta$, so $x=\\frac{L\\tan2\\theta}{\\tan\\theta+\\tan2\\theta}$.",
+     "solution": [
+      "In $\\triangle ADC$: $h=x\\tan\\theta$. In $\\triangle BDC$ ($DB=L-x$, angle $2\\theta$): $h=(L-x)\\tan2\\theta$.",
+      "So $x\\tan\\theta=(L-x)\\tan2\\theta$, i.e. $x=\\frac{L\\tan2\\theta}{\\tan\\theta+\\tan2\\theta}$.",
+      "Divide by $\\tan\\theta$-type terms: as $\\theta\\to0$, $\\tan\\theta\\sim\\theta$, $\\tan2\\theta\\sim2\\theta$, so $x\\to L\\cdot\\frac{2\\theta}{\\theta+2\\theta}=\\frac{2L}3$.",
+      "(Valid while $2\\theta<90^\\circ$, so that $D$ lies between $A$ and $B$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "For small angles, $\\tan\\theta\\approx\\sin\\theta\\approx\\theta$: ratios of such quantities become ratios of the angles (here $\\frac{x}{L-x}=\\frac{\\tan2\\theta}{\\tan\\theta}\\to2$, so $x=\\frac{2L}3$).",
+    "General: base angles $\\alpha,\\beta$ on a base $L$: the foot of the altitude divides $L$ in the ratio $\\cot\\alpha:\\cot\\beta$, so $x=\\frac{L\\cot\\alpha}{\\cot\\alpha+\\cot\\beta}$.",
+    "Area $=\\frac12ab\\sin C$ with $C=180^\\circ-3\\theta$ and $\\sin(180^\\circ-3\\theta)=\\sin3\\theta$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits applied to geometry (tangents to a circle)",
+    "Area of a triangle"
+   ],
+   "level": 3,
+   "question": "At the end-points and the midpoint of a circular arc $AB$ tangent lines are drawn, and the points $A$ and $B$ are joined with a chord. Prove that the ratio of the areas of the two triangles thus formed tends to $4$ as the arc $AB$ decreases indefinitely.",
+   "answer": "Ratio $\\to4$",
+   "key_idea": "The triangles $PAB$ and $PQR$ have the same apex angle and sides $PA=\\ell$, $PQ=m$, so the ratio of areas is $\\left(\\frac\\ell m\\right)^2$; find $\\frac m\\ell=\\frac1{2\\cos^2(\\theta/2)}$ from $r=\\ell\\cot\\theta=(\\ell-m)\\cot\\frac\\theta2$.",
+   "solution": [
+    "Let $O$ be the centre, $r$ the radius, $\\angle AOP=\\angle POB=\\theta$ where $P$ is the meet of the tangents at $A$ and $B$; tangent at the midpoint of the arc meets $PA$, $PB$ at $Q$, $R$. Put $PA=PB=\\ell$, $PQ=PR=m$, so $RB=\\ell-m$.",
+    "$\\triangle PAB=\\frac{\\ell^2}2\\sin2\\theta$ and $\\triangle PQR=\\frac{m^2}2\\sin2\\theta$ (angle $APB=180^\\circ-2\\theta$), so $\\frac{\\triangle PAB}{\\triangle PQR}=\\left(\\frac\\ell m\\right)^2$ ... (1).",
+    "In $\\triangle POB$: $\\frac r\\ell=\\tan\\left(\\frac\\pi2-\\theta\\right)=\\cot\\theta$, so $r=\\ell\\cot\\theta$ ... (2).",
+    "In $\\triangle ROB$ (angle $ROB=\\frac\\theta2$): $\\frac{r}{\\ell-m}=\\cot\\frac\\theta2$, so $r=(\\ell-m)\\cot\\frac\\theta2$ ... (3).",
+    "From (2), (3): $\\ell\\cot\\theta=(\\ell-m)\\cot\\frac\\theta2$, so $\\frac{\\cot\\theta}{\\cot(\\theta/2)}=1-\\frac m\\ell$ and $\\frac m\\ell=\\frac{\\cot\\frac\\theta2-\\cot\\theta}{\\cot\\frac\\theta2}$.",
+    "$\\cot\\frac\\theta2-\\cot\\theta=\\frac1{\\sin\\theta}$, so $\\frac m\\ell=\\frac{1}{\\sin\\theta\\cot\\frac\\theta2}=\\frac1{2\\cos^2\\frac\\theta2}$ ... (4).",
+    "From (1), (4): $\\frac{\\triangle PAB}{\\triangle PQR}=4\\cos^4\\frac\\theta2$.",
+    "As the arc $AB$ shrinks, $\\theta\\to0$ and the ratio $\\to4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$AB\\parallel QR$ (both $\\perp OP$), so the triangles are similar and the area ratio is the square of the ratio of their heights from $P$: $(PD/PC)^2$.",
+     "solution": [
+      "$OP\\perp AB$ at its midpoint $D$ and $OP\\perp QR$ at $C$ (the arc midpoint on $OP$), so $AB\\parallel QR$ and $\\triangle PAB\\sim\\triangle PQR$; areas are in the ratio $\\left(\\frac{PD}{PC}\\right)^2$.",
+      "With $\\angle AOP=\\theta$: $OP=\\frac r{\\cos\\theta}$, $OD=r\\cos\\theta$, $OC=r$.",
+      "$PD=\\frac{r}{\\cos\\theta}-r\\cos\\theta=\\frac{r\\sin^2\\theta}{\\cos\\theta}$ and $PC=\\frac r{\\cos\\theta}-r=\\frac{r(1-\\cos\\theta)}{\\cos\\theta}$.",
+      "$\\frac{PD}{PC}=\\frac{\\sin^2\\theta}{1-\\cos\\theta}=1+\\cos\\theta$, so the ratio of areas is $(1+\\cos\\theta)^2$, which tends to $4$ as $\\theta\\to0$ (and equals $4\\cos^4\\frac\\theta2$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area ratio of similar triangles is the square of the ratio of corresponding lengths (heights, sides).",
+    "For a circle of radius $r$, tangents at the ends of an arc subtending $2\\theta$ meet at distance $r\\sec\\theta$ from the centre; the tangent length is $r\\tan\\theta$.",
+    "As $\\theta\\to0$ the ratio $(1+\\cos\\theta)^2\\to4$ (at $\\theta=0.01$ it is $3.9998$); the tangent triangle at the arc midpoint is twice as high as the chord triangle in the limit, so the areas are $4:1$ (a standard small-arc result)."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Series expansion of logarithmic functions for limits",
+    "Limits of the form ∞ − ∞"
+   ],
+   "level": 3,
+   "question": "If $L=\\lim_{x\\to0}\\left(\\frac1{\\ln(1+x)}-\\frac1{\\ln\\left(x+\\sqrt{1+x^2}\\right)}\\right)$ then find the value of $\\frac{L+153}{L}$.",
+   "answer": "307",
+   "key_idea": "Combine the fractions and compare orders: the numerator is $\\frac{x^2}2+\\cdots$ and the denominator $x^2+\\cdots$, so $L=\\frac12$.",
+   "solution": [
+    "Let $s=\\ln\\left(x+\\sqrt{1+x^2}\\right)$. Then $L=\\lim\\frac{s-\\ln(1+x)}{s\\cdot\\frac{\\ln(1+x)}{x}\\cdot x}$.",
+    "$s=\\ln\\sqrt{1+x^2}+\\ln\\left(1+\\frac x{\\sqrt{1+x^2}}\\right)$, so the numerator is $\\ln\\sqrt{1+x^2}+\\ln\\left(1+\\frac{x}{\\sqrt{1+x^2}}\\right)-\\ln(1+x)$.",
+    "$\\ln\\sqrt{1+x^2}=\\frac12\\left(x^2-\\frac{x^4}2+\\cdots\\right)=\\frac{x^2}2+O(x^4)$.",
+    "$\\ln\\left(1+\\frac x{\\sqrt{1+x^2}}\\right)=\\frac{x}{\\sqrt{1+x^2}}-\\frac{x^2}{2(1+x^2)}+\\cdots=x-\\frac{x^2}2+O(x^3)$ and $\\ln(1+x)=x-\\frac{x^2}2+O(x^3)$.",
+    "Numerator $=\\frac{x^2}2+\\left(x-\\frac{x^2}{2}\\right)-\\left(x-\\frac{x^2}2\\right)+O(x^3)=\\frac{x^2}2+O(x^3)$.",
+    "Denominator: $s\\approx x$ and $\\frac{\\ln(1+x)}x\\to1$, so denominator $=x\\cdot1\\cdot x+O(x^3)=x^2+O(x^3)$.",
+    "$L=\\frac{x^2/2}{x^2}=\\frac12$.",
+    "$\\frac{L+153}{L}=1+\\frac{153}{L}=1+306=307$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's expansion of the numerator is not consistent (it lists '$x^2-x^2-\\frac{x^2}{2(1+x^2)}$' and later divides terms by $\\sqrt{1+x^2}$ incorrectly), though its final $L=\\frac12$ and answer $307$ are right. Rewritten with the order-by-order expansion above; checked numerically: $L(x=10^{-8})=0.49999999$.",
+   "alternate_solutions": [
+    {
+     "idea": "Laurent-type expansion of each reciprocal: $\\frac1{\\ln(1+x)}=\\frac1x+\\frac12-\\frac x{12}+\\cdots$ and $\\frac1{\\sinh^{-1}x}=\\frac1x+\\frac x6+\\cdots$ (note $\\ln(x+\\sqrt{1+x^2})=\\sinh^{-1}x$); the $\\frac1x$ poles cancel.",
+     "solution": [
+      "$\\ln(1+x)=x\\left(1-\\frac x2+\\frac{x^2}3-\\cdots\\right)$, so $\\frac1{\\ln(1+x)}=\\frac1x\\left(1+\\frac x2-\\frac{x^2}3+\\frac{x^2}4+\\cdots\\right)=\\frac1x+\\frac12-\\frac{x}{12}+\\cdots$",
+      "$\\ln\\left(x+\\sqrt{1+x^2}\\right)=\\sinh^{-1}x=x-\\frac{x^3}6+\\cdots$, so $\\frac{1}{\\sinh^{-1}x}=\\frac1x\\left(1+\\frac{x^2}{6}+\\cdots\\right)=\\frac1x+\\frac x6+\\cdots$",
+      "Subtract: the $\\frac1x$ terms cancel, leaving $\\frac12-\\frac{x}{12}-\\frac x6+\\cdots\\to\\frac12$. So $L=\\frac12$ and $\\frac{L+153}L=307$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\ln\\left(x+\\sqrt{1+x^2}\\right)=\\sinh^{-1}x=x-\\frac{x^3}{6}+\\frac{3x^5}{40}-\\cdots$ (odd function).",
+    "$\\frac{1}{\\ln(1+x)}=\\frac1x+\\frac12-\\frac x{12}+\\cdots$ (generating function of Gregory coefficients); hence $\\frac1{\\ln(1+x)}-\\frac1x\\to\\frac12$.",
+    "For $\\frac1{f}-\\frac1g$ with $f\\sim g\\sim x$, expand each reciprocal to $O(1)$; if the $O(1)$ terms differ the limit is their difference."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits involving xⁿ as n → ∞ (piecewise function from a limit)",
+    "One-sided and infinite limits"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\lim_{n\\to\\infty}\\frac{2x^{2n}\\sin\\frac1x+x}{1+x^{2n}}$, then find: (a) $\\lim_{x\\to\\infty}x\\,f(x)$, (b) $\\lim_{x\\to1}f(x)$, (c) $\\lim_{x\\to0}f(x)$, (d) $\\lim_{x\\to-\\infty}f(x)$.",
+   "answer": "(a) $2$, (b) does not exist, (c) $0$, (d) $0$",
+   "key_idea": "Split by size of $|x|$: $x^{2n}\\to0$ for $|x|<1$, $\\to\\infty$ for $|x|>1$, and $=1$ at $x=\\pm1$, which gives a piecewise formula for $f$.",
+   "solution": [
+    "For $|x|<1$, $x^{2n}\\to0$: $f(x)=x$. For $|x|>1$, divide by $x^{2n}$: $f(x)=2\\sin\\frac1x$.",
+    "At $x=1$: $f(1)=\\frac{2\\sin1+1}{2}$; at $x=-1$: $f(-1)=\\frac{-2\\sin1-1}{2}$.",
+    "So $f(x)=x$ on $(-1,1)$; $2\\sin\\frac1x$ on $(-\\infty,-1)\\cup(1,\\infty)$; $\\frac{2\\sin1+1}2$ at $x=1$; $\\frac{-2\\sin1-1}2$ at $x=-1$.",
+    "(a) $\\lim_{x\\to\\infty}x\\,f(x)=\\lim 2x\\sin\\frac1x=2\\cdot\\lim\\frac{\\sin(1/x)}{1/x}=2$.",
+    "(b) Left limit at $1$: $\\lim_{x\\to1^-}f(x)=1$. Right limit: $\\lim_{x\\to1^+}2\\sin\\frac1x=2\\sin1\\approx1.683\\ne1$. So $\\lim_{x\\to1}f(x)$ does not exist.",
+    "(c) Near $0$, $f(x)=x$, so $\\lim_{x\\to0}f(x)=0$.",
+    "(d) $\\lim_{x\\to-\\infty}f(x)=\\lim2\\sin\\frac1x=2\\sin0=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Weighted-average view: $f(x)=(1-w)\\,x+w\\cdot2\\sin\\frac1x$ with weight $w=\\frac{x^{2n}}{1+x^{2n}}\\to0,\\frac12,1$ according as $|x|<1,=1,>1$.",
+     "solution": [
+      "$f(x)=\\frac{x+x^{2n}\\cdot2\\sin\\frac1x}{1+x^{2n}}=\\frac{1}{1+x^{2n}}\\,x+\\frac{x^{2n}}{1+x^{2n}}\\,2\\sin\\frac1x$, a weighted average of $x$ and $2\\sin\\frac1x$.",
+      "The weight $w=\\frac{x^{2n}}{1+x^{2n}}$ tends to $0$ if $|x|<1$, to $\\frac12$ if $|x|=1$ and to $1$ if $|x|>1$; so $f=x$, $\\frac{x+2\\sin(1/x)}{2}$ and $2\\sin\\frac1x$ respectively.",
+      "Parts: (a) $x\\cdot2\\sin\\frac1x\\to2$; (b) the two one-sided pieces are $x\\to1$ and $2\\sin\\frac1x\\to2\\sin1$, which differ; (c) $x\\to0$; (d) $2\\sin\\frac1x\\to0$. Same answers."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{n\\to\\infty}\\frac{a\\,x^{2n}+b}{x^{2n}+1}$ equals $b$ for $|x|<1$, $a$ for $|x|>1$ and $\\frac{a+b}{2}$ at $|x|=1$: always check the boundary points separately.",
+    "$\\lim_{x\\to\\infty}x\\sin\\frac1x=1$ and more generally $\\lim_{x\\to\\infty}x\\sin\\frac cx=c$.",
+    "A limit exists only if both one-sided limits agree: here $1$ vs $2\\sin1$ at $x=1$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "1-infinity form and relation between infinitesimals",
+    "Series expansion of cos x and eˣ"
+   ],
+   "level": 3,
+   "question": "If $\\lim_{x\\to0}\\frac{f(x)}{\\sin^2x}=8$, $\\lim_{x\\to0}\\frac{g(x)}{2\\cos x-xe^x+x^3+x-2}=\\lambda$ and $\\lim_{x\\to0}\\left(1+2f(x)\\right)^{\\frac1{g(x)}}=\\frac1e$, then $\\lambda=$",
+   "answer": "8",
+   "key_idea": "$f\\sim8x^2$, the denominator $D=2\\cos x-xe^x+x^3+x-2\\sim-2x^2$, and the $1^\\infty$ rule turns the third limit into $\\lim\\frac{2f}{g}=-1$.",
+   "solution": [
+    "$\\lim\\frac{f}{\\sin^2x}=8$ forces $\\lim f(x)=0$ (otherwise the quotient blows up), and $\\lim\\frac{f}{x^2}=8$.",
+    "$\\lim\\frac{g}{D}=\\lambda$ with $D=2\\cos x-xe^x+x^3+x-2\\to0$, so $\\lim g(x)=0$ (a finite limit with $D\\to0$).",
+    "Hence $(1+2f)^{1/g}$ is of $1^\\infty$ type: $e^{\\lim\\frac{2f}{g}}=e^{-1}$, so $\\lim\\frac{2f}g=-1$.",
+    "Write $\\frac{2f}{g}=2\\cdot\\frac f{x^2}\\cdot\\frac{x^2}{D}\\cdot\\frac Dg$; its limit is $2\\cdot8\\cdot\\lim\\frac{x^2}{D}\\cdot\\frac1\\lambda=-1$.",
+    "$D=-2(1-\\cos x)-x(e^x-1)+x^3$, so $\\frac D{x^2}=-2\\cdot\\frac{1-\\cos x}{x^2}-\\frac{e^x-1}{x}+x\\to-2\\cdot\\frac12-1+0=-2$.",
+    "So $\\lim\\frac{x^2}{D}=-\\frac12$ and $16\\cdot\\left(-\\frac12\\right)\\cdot\\frac1\\lambda=-1$, i.e. $\\frac8\\lambda=1$.",
+    "Hence $\\lambda=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Infinitesimal equivalents with derivatives at $0$: $D\\sim\\frac{D''(0)}{2}x^2=-2x^2$, so $g\\sim\\lambda D\\sim-2\\lambda x^2$, and $\\frac{2f}g\\to\\frac{16x^2}{-2\\lambda x^2}$.",
+     "solution": [
+      "$D(0)=0$, $D'(x)=-2\\sin x-e^x-xe^x+3x^2+1$ gives $D'(0)=0$, and $D''(x)=-2\\cos x-2e^x-xe^x+6x$ gives $D''(0)=-4$. So $D\\sim-2x^2$.",
+      "Then $g\\sim\\lambda D\\sim-2\\lambda x^2$ and $f\\sim8x^2$, so $\\frac{f}{g}\\to\\frac{8}{-2\\lambda}=-\\frac4\\lambda$.",
+      "$1^\\infty$ rule: $\\lim(1+2f)^{1/g}=e^{\\lim2f/g}=e^{-8/\\lambda}=e^{-1}$, so $\\lambda=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $u\\to0$ then $(1+u)^{1/v}\\to e^{\\lim u/v}$ whenever $v\\to0$: the 'infinitesimal ratio' form of the $1^\\infty$ rule.",
+    "If $N(0)=N'(0)=0$ then $N(x)\\sim\\frac{N''(0)}2x^2$; a quick way to find the order and coefficient of a vanishing expression (here $D\\sim-2x^2$).",
+    "A finite non-zero ratio of two quantities forces both to vanish together: $\\frac fx{}^2\\to8$ and $\\frac gD\\to\\lambda$ imply $f,g\\to0$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Limits involving x^(2n) as n → ∞",
+    "Bounded function times an infinitesimal"
+   ],
+   "level": 2,
+   "paragraph": "Given $g(x)=\\sin\\frac1x$, $h(x)=x^2+2x+(\\lambda+1)$ and $u(x)=\\frac1x+\\cos\\frac1{x^2}$. Let $f(x)=\\lim_{n\\to\\infty}\\frac{x^{2n+1}g(x)+h(x)}{x^{2n}+3x\\,u(x)}$. On the basis of the above information, answer the following questions:",
+   "question": "If $\\lim_{x\\to0}f(x)=2$, then the value of $\\lambda$ is :",
+   "options": [
+    "$10$",
+    "$5$",
+    "$2$",
+    "Does not exist"
+   ],
+   "answer": "(B) $5$",
+   "key_idea": "For $|x|<1$, $x^{2n},x^{2n+1}\\to0$, so $f(x)=\\frac{h(x)}{3x\\,u(x)}$, and $3x\\,u(x)=3+3x\\cos\\frac1{x^2}\\to3$ as $x\\to0$.",
+   "solution": [
+    "For $|x|>1$, divide by $x^{2n}$: $f(x)=x\\sin\\frac1x$. For $|x|<1$, $x^{2n}\\to0$: $f(x)=\\frac{h(x)}{3x\\,u(x)}=\\frac{(x+1)^2+\\lambda}{3+3x\\cos\\frac1{x^2}}$ (using $h=(x+1)^2+\\lambda$ and $x\\,u=1+x\\cos\\frac1{x^2}$).",
+    "At $x=1$: $f(1)=\\frac{\\sin1+4+\\lambda}{4+3\\cos1}$; at $x=-1$: $f(-1)=\\frac{4+\\lambda-\\sin1}{4-3\\cos1}$.",
+    "Near $0$ we use the formula for $|x|<1$: $\\lim_{x\\to0}f(x)=\\lim\\frac{(x+1)^2+\\lambda}{3+3x\\cos\\frac1{x^2}}$.",
+    "$x\\cos\\frac{1}{x^2}\\to0$ (bounded times $x\\to0$), so the limit is $\\frac{1+\\lambda}{3}$.",
+    "$\\frac{1+\\lambda}3=2$ gives $\\lambda=5$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\lim_{n\\to\\infty}\\frac{A\\,x^{2n}+B}{x^{2n}+C}$: for $|x|<1$ it is $\\frac BC$; for $|x|>1$ it is $A$ (divide by $x^{2n}$).",
+    "A bounded function times an infinitesimal tends to $0$: $x\\cos\\frac1{x^2}\\to0$ and $x\\sin\\frac1x\\to0$ as $x\\to0$ (squeeze with $|x|$).",
+    "Limits do not depend on the value at the point: $f$ near $0$ uses only the $|x|<1$ branch."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Limits involving x^(2n) as n → ∞",
+    "Standard limit x sin(1/x) as x → ∞"
+   ],
+   "level": 1,
+   "paragraph": "Given $g(x)=\\sin\\frac1x$, $h(x)=x^2+2x+(\\lambda+1)$ and $u(x)=\\frac1x+\\cos\\frac1{x^2}$. Let $f(x)=\\lim_{n\\to\\infty}\\frac{x^{2n+1}g(x)+h(x)}{x^{2n}+3x\\,u(x)}$. On the basis of the above information, answer the following questions:",
+   "question": "$\\lim_{x\\to\\infty}f(x)=$",
+   "options": [
+    "$0$",
+    "$2$",
+    "$5$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "For large $|x|$ ($|x|>1$) the paragraph's $f$ is $x\\sin\\frac1x$, and $x\\sin\\frac1x\\to1$.",
+   "solution": [
+    "For $x>1$ (indeed $|x|>1$), $x^{2n}\\to\\infty$ as $n\\to\\infty$, so divide numerator and denominator by $x^{2n}$.",
+    "$f(x)=\\lim\\frac{x\\,g(x)+h(x)/x^{2n}}{1+3u(x)/x^{2n-1}}=x\\,g(x)=x\\sin\\frac1x$ for $|x|>1$.",
+    "Put $y=\\frac1x$; as $x\\to\\infty$, $y\\to0^+$ and $f(x)=\\frac{\\sin y}{y}$.",
+    "Hence $\\lim_{x\\to\\infty}f(x)=\\lim_{y\\to0^+}\\frac{\\sin y}y=1$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\lim_{x\\to\\infty}x\\sin\\frac cx=c$ (substitute $y=\\frac1x$).",
+    "$\\sin u\\le u$ for $u\\ge0$, so $x\\sin\\frac1x<1$ for all $x>0$ and the limit $1$ is approached from below."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Limits involving x^(2n) as n → ∞",
+    "Greatest integer function"
+   ],
+   "level": 1,
+   "paragraph": "Given $g(x)=\\sin\\frac1x$, $h(x)=x^2+2x+(\\lambda+1)$ and $u(x)=\\frac1x+\\cos\\frac1{x^2}$. Let $f(x)=\\lim_{n\\to\\infty}\\frac{x^{2n+1}g(x)+h(x)}{x^{2n}+3x\\,u(x)}$. On the basis of the above information, answer the following questions:",
+   "question": "If $\\lim_{x\\to-2}f(x)=L$, then $[L]$ (where $[\\cdot]$ is the greatest integer function) is equal to :",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "$2$"
+   ],
+   "answer": "(A) $0$",
+   "key_idea": "At $x=-2$ ($|x|>1$), $f(x)=x\\sin\\frac1x$ is continuous, so $L=2\\sin\\frac12$ and $0<\\sin\\frac12<\\frac12$ traps $L$ in $(0,1)$.",
+   "solution": [
+    "For $|x|>1$, $f(x)=x\\sin\\frac1x$, continuous at $x=-2$.",
+    "$L=\\lim_{x\\to-2}x\\sin\\frac1x=(-2)\\sin\\left(-\\frac12\\right)=2\\sin\\frac12$.",
+    "Since $0<\\sin\\frac12<\\frac12$, $0<L<2\\cdot\\frac12=1$.",
+    "Hence $[L]=0$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\sin t<t$ for $t>0$ gives quick bounds for greatest-integer questions: $2\\sin\\frac12\\approx0.959<1$.",
+    "A limit at a point of continuity is just the value: check the branch of a piecewise $f$ that contains the point."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Intersection of two circles (common chord)",
+    "Equation of a line in intercept form"
+   ],
+   "level": 2,
+   "paragraph": "The figure shows a fixed circle $C_1$ and shrinking circle $C_2$. The equation of the fixed circle is $(x-1)^2+y^2=1$. The centre of shrinking circle $C_2$ is at the origin and it cuts the positive $y$-axis at $P$. The points of intersection of $C_1$ and $C_2$ is $Q(a,b)$ where $b>0$, $PQ$ cuts the $x$-axis at $R(L,0)$. Let $r$ be the radius of $C_2$ and $L=f(r)$. On the basis of the above information, answer the following questions:",
+   "question": "$\\lim_{r\\to0}f(r)=$",
+   "options": [
+    "$0$",
+    "$2$",
+    "$4$",
+    "$8$"
+   ],
+   "answer": "(C) $4$",
+   "key_idea": "Subtracting the circle equations gives $a=\\frac{r^2}2$; the intercept form of $PR$ through $Q$ gives $L=2+\\sqrt{4-r^2}$.",
+   "solution": [
+    "$C_2:x^2+y^2=r^2$, so $P=(0,r)$. $Q(a,b)$ lies on both circles: $a^2+b^2=r^2$ ... (1) and $(a-1)^2+b^2=1$ ... (2).",
+    "(1) $-$ (2): $2a-1=r^2-1$, so $a=\\frac{r^2}2$.",
+    "$b^2=r^2-a^2=r^2-\\frac{r^4}{4}=\\frac{r^2(4-r^2)}4$, so $b=\\frac{r\\sqrt{4-r^2}}2$ ($b>0$).",
+    "Line $PR$: $\\frac xL+\\frac yr=1$. $Q(a,b)$ lies on it: $\\frac aL+\\frac br=1$.",
+    "$\\frac{r^2}{2L}+\\frac{\\sqrt{4-r^2}}2=1$, so $\\frac{r^2}{2L}=\\frac{2-\\sqrt{4-r^2}}2$ and $\\frac L{r^2}=\\frac1{2-\\sqrt{4-r^2}}=\\frac{2+\\sqrt{4-r^2}}{r^2}$.",
+    "So $L=f(r)=2+\\sqrt{4-r^2}$.",
+    "$\\lim_{r\\to0}f(r)=2+\\sqrt{4-0}=4$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise by an angle: $Q$ on $C_1$ and $C_2$ gives $r=2\\cos\\varphi$, $Q=(1+\\cos2\\varphi,\\sin2\\varphi)$, and the $x$-intercept of $PQ$ comes out as $L=2+2\\sin\\varphi$.",
+     "solution": [
+      "Let $Q=(r\\cos\\varphi,r\\sin\\varphi)$ on $C_2$. On $C_1$: $x^2+y^2=2x$ gives $r^2=2r\\cos\\varphi$, so $r=2\\cos\\varphi$ and $Q=(2\\cos^2\\varphi,2\\sin\\varphi\\cos\\varphi)$; $P=(0,2\\cos\\varphi)$.",
+      "Slope of $PQ$: $\\frac{2\\sin\\varphi\\cos\\varphi-2\\cos\\varphi}{2\\cos^2\\varphi}=\\frac{\\sin\\varphi-1}{\\cos\\varphi}$.",
+      "The line meets $y=0$ at $x=\\frac{-y_P}{\\text{slope}}=\\frac{2\\cos\\varphi\\cdot\\cos\\varphi}{1-\\sin\\varphi}=\\frac{2(1-\\sin^2\\varphi)}{1-\\sin\\varphi}=2(1+\\sin\\varphi)$.",
+      "So $L=2+2\\sin\\varphi=2+\\sqrt{4-r^2}$ (since $2\\sin\\varphi=\\sqrt{4-4\\cos^2\\varphi}$). As $r\\to0$, $\\varphi\\to\\frac\\pi2$ and $L\\to4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Radical axis: subtracting the equations of two intersecting circles gives the line of their common chord (here $x=\\frac{r^2}2$).",
+    "A circle through the origin, $x^2+y^2=2x$, has the polar form $\\rho=2\\cos\\varphi$: useful for chords from the origin.",
+    "Intercept form $\\frac xp+\\frac yq=1$ is the quickest way to impose a point on a line through two axis points."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Limit of a composite function",
+    "Standard trigonometric limits"
+   ],
+   "level": 2,
+   "paragraph": "The figure shows a fixed circle $C_1$ and shrinking circle $C_2$. The equation of the fixed circle is $(x-1)^2+y^2=1$. The centre of shrinking circle $C_2$ is at the origin and it cuts the positive $y$-axis at $P$. The points of intersection of $C_1$ and $C_2$ is $Q(a,b)$ where $b>0$, $PQ$ cuts the $x$-axis at $R(L,0)$. Let $r$ be the radius of $C_2$ and $L=f(r)$.",
+   "question": "If $f(r)\\cdot g(r)=r^2$, then $\\lim_{\\theta\\to0}\\frac{g(2\\sin\\theta)}{\\theta^2}$ is :",
+   "options": [
+    "$0$",
+    "$1$",
+    "$\\frac12$",
+    "$2$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "From $f(r)=2+\\sqrt{4-r^2}$, $g(2\\sin\\theta)=\\frac{4\\sin^2\\theta}{2+2\\cos\\theta}$; then $\\frac{\\sin^2\\theta}{\\theta^2}\\to1$.",
+   "solution": [
+    "$f(r)g(r)=r^2$ gives $g(r)=\\frac{r^2}{f(r)}=\\frac{r^2}{2+\\sqrt{4-r^2}}$.",
+    "With $r=2\\sin\\theta$: $g(2\\sin\\theta)=\\frac{4\\sin^2\\theta}{2+\\sqrt{4-4\\sin^2\\theta}}=\\frac{4\\sin^2\\theta}{2+2\\cos\\theta}$ (for $0<\\theta<\\frac\\pi2$).",
+    "$\\frac{g(2\\sin\\theta)}{\\theta^2}=\\frac{2\\sin^2\\theta}{\\theta^2}\\cdot\\frac1{1+\\cos\\theta}$.",
+    "$\\lim_{\\theta\\to0}=2\\cdot1\\cdot\\frac1{1+1}=1$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Only continuity of $f$ at $0$ is needed: $f(r)\\to4$, so $g(r)\\sim\\frac{r^2}{4}$ and $g(2\\sin\\theta)\\sim\\sin^2\\theta\\sim\\theta^2$.",
+     "solution": [
+      "From the previous question $f(r)\\to4$ as $r\\to0$, so $g(r)=\\frac{r^2}{f(r)}\\sim\\frac{r^2}{4}$.",
+      "With $r=2\\sin\\theta\\to0$: $g(2\\sin\\theta)\\sim\\frac{4\\sin^2\\theta}{4}=\\sin^2\\theta\\sim\\theta^2$.",
+      "So $\\frac{g(2\\sin\\theta)}{\\theta^2}\\to1$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $F\\to c\\ne0$ then $\\frac{r^2}{F(r)}\\sim\\frac{r^2}c$: only the limit value of the other factor matters at leading order.",
+    "$\\sqrt{4-4\\sin^2\\theta}=2\\cos\\theta$ for $|\\theta|<\\frac\\pi2$; the substitution $r=2\\sin\\theta$ rationalises $\\sqrt{4-r^2}$.",
+    "$\\frac{\\sin^2\\theta}{\\theta^2}\\to1$ and $\\frac{1-\\cos\\theta}{\\theta^2}\\to\\frac12$."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Range of a function",
+    "Condition for two circles to intersect"
+   ],
+   "level": 1,
+   "paragraph": "The figure shows a fixed circle $C_1$ and shrinking circle $C_2$. The equation of the fixed circle is $(x-1)^2+y^2=1$. The centre of shrinking circle $C_2$ is at the origin and it cuts the positive $y$-axis at $P$. The points of intersection of $C_1$ and $C_2$ is $Q(a,b)$ where $b>0$, $PQ$ cuts the $x$-axis at $R(L,0)$. Let $r$ be the radius of $C_2$ and $L=f(r)$.",
+   "question": "Range of $f$ is :",
+   "options": [
+    "$[2,4]$",
+    "$(2,4]$",
+    "$[2,4)$",
+    "$(2,4)$"
+   ],
+   "answer": "(D) $(2,4)$",
+   "key_idea": "$Q$ with $b>0$ exists only for $0<r<2$, so $\\sqrt{4-r^2}\\in(0,2)$ and $f=2+\\sqrt{4-r^2}\\in(2,4)$.",
+   "solution": [
+    "$f(r)=2+\\sqrt{4-r^2}$.",
+    "$b=\\frac{r\\sqrt{4-r^2}}2>0$ requires $r>0$ and $4-r^2>0$, so the domain is $0<r<2$ (this is also the condition for the circles of centres at distance $1$ to cut in two points: $|r-1|<1<r+1$).",
+    "For $0<r<2$: $0<r^2<4$, so $0<4-r^2<4$ and $0<\\sqrt{4-r^2}<2$.",
+    "Hence $2<2+\\sqrt{4-r^2}<4$: range $(2,4)$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Two circles with centre distance $d$ and radii $r_1,r_2$ intersect in two points iff $|r_1-r_2|<d<r_1+r_2$.",
+    "End values of an open domain are not attained: $r\\to0$ gives $f\\to4$ and $r\\to2$ gives $f\\to2$, neither included."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "One-sided limits of a monotonic function",
+    "Limit of a composite function"
+   ],
+   "level": 3,
+   "paragraph": "Let $f(x)$ be a function continuous for all $x\\in\\mathbb R$ except at $x=0$, such that $f'(x)<0$ for all $x\\in(-\\infty,0)$ and $f'(x)>0$ for all $x\\in(0,\\infty)$. Let $\\lim_{x\\to0^+}f(x)=2$, $\\lim_{x\\to0^-}f(x)=3$ and $f(0)=4$.",
+   "question": "The value of $\\lambda$ for which $2\\left(\\lim_{x\\to0}f\\left(x^3-x^2\\right)\\right)=\\lambda\\left(\\lim_{x\\to0}f\\left(2x^4-x^5\\right)\\right)$ is :",
+   "options": [
+    "$\\frac43$",
+    "$2$",
+    "$3$",
+    "$5$"
+   ],
+   "answer": "(C) $3$",
+   "key_idea": "The sign of the inner function decides the side: $x^3-x^2<0$ gives $f(0^-)=3$ and $2x^4-x^5>0$ gives $f(0^+)=2$; the value $f(0)=4$ is irrelevant.",
+   "solution": [
+    "As $x\\to0$, $x^3-x^2=-x^2(1-x)<0$ and $\\to0$, so the argument approaches $0$ from the left.",
+    "$f$ is decreasing on $(-\\infty,0)$ with $f(0^-)=3$, hence $f(u)>3$ for $u<0$ and $\\lim_{x\\to0}f(x^3-x^2)=f(0^-)=3$.",
+    "As $x\\to0$, $2x^4-x^5=x^4(2-x)>0$ and $\\to0$, so the argument approaches $0$ from the right.",
+    "$f$ is increasing on $(0,\\infty)$ with $f(0^+)=2$, hence $f(u)>2$ for $u>0$ and $\\lim_{x\\to0}f(2x^4-x^5)=f(0^+)=2$.",
+    "The value $f(0)=4$ plays no role, since neither argument ever equals $0$ for $x\\ne0$ small.",
+    "So $2(3)=\\lambda(2)$, giving $\\lambda=3$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF argues '$f(x^3-x^2)>f(0)$', '$>4$' on the left and '$f(2x^4-x^5)>f(0)$', '$>4$' on the right, comparing with $f(0)=4$. That is wrong: $f(0)=4$ is an isolated value, and by monotonicity the correct bounds are $f>3$ on the left and $f>2$ on the right. The limits $3$ and $2$ and the answer $\\lambda=3$ are unchanged. (The PDF also puts square brackets round the limits although the question has none.)",
+   "useful_results": [
+    "$\\lim_{x\\to a}f(u(x))=f(b^{\\pm})$ when $u(x)\\to b$ from the side $\\pm$: decide the side from the sign of $u(x)-b$ (here $-x^2(1-x)<0$ and $x^4(2-x)>0$).",
+    "The value of $f$ at a point never enters a limit at that point (it only matters for continuity).",
+    "For a function with $f'<0$ before and $f'>0$ after a point, the one-sided limits there are the infimum on each side: $f>3$ for $u<0$, $f>2$ for $u>0$."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Greatest integer and fractional part functions",
+    "One-sided limits of a monotonic function"
+   ],
+   "level": 3,
+   "paragraph": "Let $f(x)$ be a function continuous for all $x\\in\\mathbb R$ except at $x=0$, such that $f'(x)<0$ for all $x\\in(-\\infty,0)$ and $f'(x)>0$ for all $x\\in(0,\\infty)$. Let $\\lim_{x\\to0^+}f(x)=2$, $\\lim_{x\\to0^-}f(x)=3$ and $f(0)=4$.",
+   "question": "The value of $\\lim_{x\\to0^+}\\frac{f(-x)\\,x^2}{\\left\\{\\frac{1-\\cos x}{[f(x)]}\\right\\}}$, where $[\\cdot]$ denotes the greatest integer function and $\\{\\cdot\\}$ the fractional part function, is :",
+   "options": [
+    "$6$",
+    "$12$",
+    "$18$",
+    "$24$"
+   ],
+   "answer": "(B) $12$",
+   "key_idea": "Near $0^+$: $f(x)\\to2^+$ so $[f(x)]=2$; $f(-x)\\to3$; and $\\frac{1-\\cos x}{2}\\in(0,1)$ equals its own fractional part.",
+   "solution": [
+    "As $x\\to0^+$, $-x\\to0^-$, so $\\lim f(-x)=3$.",
+    "$f$ is increasing on $(0,\\infty)$ with $f(0^+)=2$, so for small $x>0$, $2<f(x)<3$ and $[f(x)]=2$.",
+    "The denominator is $\\left\\{\\frac{1-\\cos x}{2}\\right\\}$; for $x\\to0^+$, $0<\\frac{1-\\cos x}2<1$, so $\\left\\{\\frac{1-\\cos x}{2}\\right\\}=\\frac{1-\\cos x}2$.",
+    "The limit is $\\lim\\frac{3\\,x^2}{\\frac{1-\\cos x}{2}}=6\\lim\\frac{x^2}{1-\\cos x}$.",
+    "$\\frac{x^2}{1-\\cos x}\\to2$, so the limit is $6\\cdot2=12$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\{y\\}=y$ for $0\\le y<1$: if the inside is a small positive quantity, drop the braces; $[y]=n$ when $n\\le y<n+1$.",
+    "A one-sided limit $f(0^+)=2$ with $f$ increasing means $f(x)\\in(2,2+\\varepsilon)$ near $0^+$, so $[f(x)]=2$; on the left, $f(0^-)=3$ from above gives $[f]=3$.",
+    "$\\frac{1-\\cos x}{x^2}\\to\\frac12$, hence $\\frac{x^2}{1-\\cos x}\\to2$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Greatest integer function with one-sided limits",
+    "Comparison of x and sin x for negative x"
+   ],
+   "level": 3,
+   "paragraph": "Let $f(x)$ be a function continuous for all $x\\in\\mathbb R$ except at $x=0$, such that $f'(x)<0$ for all $x\\in(-\\infty,0)$ and $f'(x)>0$ for all $x\\in(0,\\infty)$. Let $\\lim_{x\\to0^+}f(x)=2$, $\\lim_{x\\to0^-}f(x)=3$ and $f(0)=4$.",
+   "question": "$\\lim_{x\\to0^-}\\left(\\left[3f\\left(\\frac{x^3-\\sin^3x}{x^4}\\right)\\right]-f\\left(\\left[\\frac{\\sin^3x}{x}\\right]\\right)\\right)$ where $[\\cdot]$ denotes the greatest integer function:",
+   "options": [
+    "$3$",
+    "$5$",
+    "$7$",
+    "$9$"
+   ],
+   "answer": "(B) $5$",
+   "key_idea": "For $x<0$, $\\sin x>x$, so $\\frac{x^3-\\sin^3x}{x^4}\\to0^-$ (giving $f\\to3^+$), while $\\left[\\frac{\\sin^3x}{x}\\right]=0$ so $f(0)=4$ is used.",
+   "solution": [
+    "For $x<0$ (small): $\\sin x>x$, hence $\\sin^3x>x^3$ and $\\frac{x^3-\\sin^3x}{x^4}<0$, tending to $0^-$ (it is $\\approx\\frac x2$).",
+    "So $f\\left(\\frac{x^3-\\sin^3x}{x^4}\\right)\\to f(0^-)=3$ from above ($f$ is decreasing on the left): $f>3$, hence $3f\\to9^+$ and $\\left[3f(\\cdot)\\right]=9$.",
+    "For $x<0$ small, $\\frac{\\sin^3x}{x}=x^2\\left(\\frac{\\sin x}{x}\\right)^3\\in(0,1)$, so $\\left[\\frac{\\sin^3x}{x}\\right]=0$ and $f\\left(\\left[\\frac{\\sin^3x}{x}\\right]\\right)=f(0)=4$ (the actual value at $0$ is used here).",
+    "The limit is $9-4=5$: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes '$\\left[f\\left(\\tfrac{x^3-\\sin^3x}{x^4}\\right)\\right]=3$' and then uses $9$; the expression is $\\left[3f(\\cdot)\\right]$, and the correct statement is $3f\\to9^+$ so the bracket equals $9$. Answer $5$ unchanged.",
+   "useful_results": [
+    "For $x<0$: $\\sin x>x$ (as $\\sin x\\approx x-\\frac{x^3}6$ and $-\\frac{x^3}{6}>0$); for $x>0$: $\\sin x<x$.",
+    "$\\frac{x^3-\\sin^3x}{x^4}=\\frac{x^3-(x-x^3/6)^3}{x^4}\\approx\\frac{x^5/2}{x^4}=\\frac x2$: this is $0^-$ for $x\\to0^-$.",
+    "Greatest integer of a quantity slightly above an integer $n$ is $n$: $3\\cdot3^+=9^+$ gives $[\\cdot]=9$; of a quantity in $(0,1)$ is $0$, which feeds the point value $f(0)=4$."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Limits of sequences and greatest integer function",
+    "1-infinity form and trigonometric limits"
+   ],
+   "level": 2,
+   "question": "Match the following columns (where $[\\cdot]$ denotes the greatest integer function).\nColumn I: (A) $\\lim_{n\\to\\infty}\\left[\\sum_{r=1}^{n}\\frac1{2^r}\\right]$ ; (B) $\\lim_{x\\to\\frac\\pi2}(\\sin x)^{\\frac1{2x-\\pi}}$ ; (C) $\\lim_{n\\to\\infty}\\left[n^2\\sin\\left(\\pi\\cos^2\\left(\\tan\\sin\\frac1n\\right)\\right)\\right]$ ; (D) the absolute value of $\\lim_{x\\to0}\\frac{\\sqrt{1+\\sin^2x}-\\cos x}{1-\\sqrt{1+\\tan^2x}}$ .\nColumn II: (P) $0$ ; (Q) $1$ ; (R) $2$ ; (S) $3$.",
+   "answer": "A $\\to$ P, B $\\to$ Q, C $\\to$ S, D $\\to$ R",
+   "key_idea": "Each part is a standard limit once the right form is spotted: GP sum $<1$; $1^\\infty$ with exponent limit $0$; $\\sin(\\pi-\\pi\\sin^2\\!\\cdots)$ reduction giving $\\pi$; and conjugate/series for (D).",
+   "solution": [
+    "(A) $\\sum_{r=1}^n\\frac1{2^r}=\\frac12\\cdot\\frac{1-(1/2)^n}{1-\\frac12}=1-\\left(\\frac12\\right)^n$, which is in $[0,1)$, so $\\left[1-\\frac1{2^n}\\right]=0$ and the limit is $0$: A $\\to$ P.",
+    "(B) $1^\\infty$ form: $e^{\\lim_{x\\to\\pi/2}\\frac{\\sin x-1}{2x-\\pi}}$. With $x=\\frac\\pi2+h$: $\\frac{\\cos h-1}{2h}\\to0$, so the limit is $e^0=1$: B $\\to$ Q.",
+    "(C) $\\sin\\left(\\pi\\cos^2\\theta\\right)=\\sin\\left(\\pi-\\pi\\sin^2\\theta\\right)=\\sin\\left(\\pi\\sin^2\\theta\\right)$ with $\\theta=\\tan\\sin\\frac1n$.",
+    "With $s=\\sin\\frac1n$ (so $\\theta=\\tan s$): $n^2\\sin\\left(\\pi\\sin^2\\theta\\right)=\\frac{\\sin\\left(\\pi\\sin^2\\theta\\right)}{\\pi\\sin^2\\theta}\\cdot\\pi\\left(\\frac{\\sin\\theta}{\\theta}\\right)^2\\left(\\frac{\\tan s}{s}\\right)^2\\left(n\\sin\\frac1n\\right)^2$.",
+    "All ratios $\\to1$, so the expression tends to $\\pi\\approx3.1416$; since $\\pi$ is not an integer, the greatest integer of terms close to $\\pi$ is $3$ for large $n$. Hence the limit is $[\\pi]=3$: C $\\to$ S.",
+    "(D) Rationalise: numerator $\\sqrt{1+\\sin^2x}-\\cos x=\\frac{2\\sin^2x}{\\sqrt{1+\\sin^2x}+\\cos x}$ and denominator $1-\\sqrt{1+\\tan^2x}=\\frac{-\\tan^2x}{1+\\sqrt{1+\\tan^2x}}$.",
+    "The quotient is $-\\frac{2\\sin^2x}{\\tan^2x}\\cdot\\frac{1+\\sqrt{1+\\tan^2x}}{\\sqrt{1+\\sin^2x}+\\cos x}\\to-2\\cdot\\frac22=-2$; absolute value $2$: D $\\to$ R."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace everything by first non-trivial terms of Taylor series (equivalents) instead of rationalising or reducing: $\\sqrt{1+\\sin^2x}\\approx1+\\frac{x^2}2$, $\\cos x\\approx1-\\frac{x^2}2$, $\\sec x\\approx1+\\frac{x^2}2$.",
+     "solution": [
+      "(D) $\\sqrt{1+\\sin^2x}\\approx1+\\frac{x^2}2$, $\\cos x\\approx1-\\frac{x^2}2$ so the numerator $\\approx x^2$; $\\sqrt{1+\\tan^2x}=\\sec x\\approx1+\\frac{x^2}2$ so the denominator $\\approx-\\frac{x^2}{2}$. The ratio $\\to-2$, absolute value $2$ (R).",
+      "(B) with $x=\\frac\\pi2+h$: $\\ln\\left[(\\cos h)^{1/(2h)}\\right]=\\frac{\\ln\\cos h}{2h}\\approx\\frac{-h^2/2}{2h}\\to0$, so the limit is $e^0=1$ (Q).",
+      "(C) $\\tan\\sin\\frac1n\\approx\\frac1n$, $\\cos^2\\frac1n=1-\\sin^2\\frac1n\\approx1-\\frac1{n^2}$, so $\\sin\\left(\\pi\\cos^2\\right)=\\sin\\left(\\pi-\\frac\\pi{n^2}\\right)\\approx\\frac\\pi{n^2}$ and $n^2\\sin(\\cdot)\\to\\pi$ from below; its greatest integer is $3$ (S).",
+      "(A) $1-2^{-n}<1$ and $\\ge\\frac12$ for $n\\ge1$: the floor is $0$ for every $n$ (P)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin(\\pi-t)=\\sin t$ and $\\cos^2t=1-\\sin^2t$: reduce arguments near $\\pi$ before taking limits; $n^2\\sin\\frac{c\\pi}{n^2}\\to c\\pi$.",
+    "$\\lim\\left[\\text{something}\\to\\text{irrational }c\\right]=[c]$ only if the approach does not cross an integer: $\\pi\\approx3.14$ is safely above $3$ and below $4$, and every term is near $\\pi$.",
+    "$\\sqrt{1+\\sin^2x}-\\cos x\\approx x^2$, $1-\\sec x\\approx-\\frac{x^2}2$ near $0$: quotient of order-$x^2$ terms is a pure number ($-2$)."
+   ]
+  },
+  {
+   "q_no": 33,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Limits of trigonometric functions of sequences (surd expansions)",
+    "1-infinity form of limits"
+   ],
+   "level": 3,
+   "question": "Match the following columns.\nColumn I: (A) $\\lim_{n\\to\\infty}\\cos^2\\left(\\pi\\sqrt[3]{n^3+n^2+2n}\\right)$, where $n$ is an integer, equals ; (B) $\\lim_{n\\to\\infty}n\\sin\\left(2\\pi\\sqrt{1+n^2}\\right)$ $(n\\in\\mathbb N)$ equals ; (C) $\\lim_{n\\to\\infty}(-1)^n\\sin\\left(\\pi\\sqrt{n^2+0.5n+1}\\right)\\sin\\frac{(n+1)\\pi}{4n}$ is $(n\\in\\mathbb N)$ ; (D) If $\\lim_{x\\to\\infty}\\left(\\frac{x+a}{x-a}\\right)^x=e$ where $a$ is some real constant then the value of $a$ is equal to .\nColumn II: (P) $\\frac12$ ; (Q) $\\frac14$ ; (R) $\\pi$ ; (S) non existent.",
+   "answer": "A $\\to$ Q; B $\\to$ R; C $\\to$ P; D $\\to$ P",
+   "key_idea": "Write each surd as $n+c+O(\\frac1n)$, so the sine/cosine of $\\pi\\times$ it reduces to $(\\pm)$ trig of $\\pi c$ plus a small term; for (D) use $1^\\infty$.",
+   "solution": [
+    "(A) $\\pi\\left(n^3+n^2+2n\\right)^{1/3}=n\\pi\\left[1+\\frac{n+2}{n^2}\\right]^{1/3}=n\\pi\\left[1+\\frac13\\cdot\\frac{n+2}{n^2}-\\frac19\\cdot\\frac{(n+2)^2}{n^4}+\\cdots\\right]=n\\pi+\\frac\\pi3\\cdot\\frac{n+2}n-\\frac\\pi9\\cdot\\frac{(n+2)^2}{n^3}+\\cdots$",
+    "$\\cos\\left[n\\pi+\\frac{n+2}{n}\\cdot\\frac\\pi3-\\cdots\\right]=\\pm\\cos\\left[\\frac{n+2}n\\cdot\\frac\\pi3-\\cdots\\right]\\to\\pm\\cos\\frac\\pi3=\\pm\\frac12$; squaring, the limit is $\\frac14$: A $\\to$ Q.",
+    "(B) $2\\pi\\sqrt{1+n^2}=2\\pi n\\left(1+\\frac1{n^2}\\right)^{1/2}=2n\\pi+\\frac\\pi n-\\frac{\\pi}{4n^3}+\\cdots$",
+    "$n\\sin\\left[2n\\pi+\\frac\\pi n-\\frac\\pi{4n^3}+\\cdots\\right]=n\\sin\\left[\\frac\\pi n-\\frac{\\pi}{4n^3}+\\cdots\\right]=\\frac{\\sin(\\cdot)}{(\\cdot)}\\cdot n\\left(\\frac\\pi n-\\frac\\pi{4n^3}\\right)\\to\\pi$: B $\\to$ R.",
+    "(C) $\\sqrt{n^2+\\frac n2+1}=n\\left(1+\\frac{1+n/2}{n^2}\\right)^{1/2}=n+\\frac14+O\\left(\\frac1n\\right)$, so $\\sin\\left(\\pi\\sqrt{\\cdot}\\right)=\\sin\\left(n\\pi+\\frac\\pi4+O\\left(\\tfrac1n\\right)\\right)=(-1)^n\\sin\\left(\\frac\\pi4+O\\left(\\tfrac1n\\right)\\right)$.",
+    "Also $\\sin\\frac{(n+1)\\pi}{4n}=\\sin\\left(\\frac\\pi4+\\frac\\pi{4n}\\right)\\to\\sin\\frac\\pi4$. The factors $(-1)^n(-1)^n=1$, so the limit is $\\sin^2\\frac\\pi4=\\frac12$: C $\\to$ P.",
+    "(D) $1^\\infty$: $\\lim\\left(\\frac{x+a}{x-a}\\right)^x=e^{\\lim x\\left(\\frac{x+a}{x-a}-1\\right)}=e^{\\lim\\frac{2ax}{x-a}}=e^{2a}$.",
+    "$e^{2a}=e$ gives $a=\\frac12$: D $\\to$ P."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Exact conjugate reductions instead of binomial series: $\\sqrt[3]{n^3+n^2+2n}-n=\\frac{n^2+2n}{u^2+un+n^2}$, $\\sqrt{n^2+1}-n=\\frac1{\\sqrt{n^2+1}+n}$, $\\sqrt{n^2+\\frac n2+1}-n=\\frac{n/2+1}{\\sqrt{\\cdot}+n}$; and $x\\ln\\frac{x+a}{x-a}=2x\\,\\frac12\\ln\\frac{1+a/x}{1-a/x}\\to2a$.",
+     "solution": [
+      "(A) With $u=\\sqrt[3]{n^3+n^2+2n}$: $u-n=\\frac{u^3-n^3}{u^2+un+n^2}=\\frac{n^2+2n}{u^2+un+n^2}\\to\\frac13$. So $\\cos^2\\left(\\pi n+\\pi(u-n)\\right)=\\cos^2\\pi(u-n)\\to\\cos^2\\frac\\pi3=\\frac14$ (Q).",
+      "(B) $\\sin\\left(2\\pi\\sqrt{n^2+1}\\right)=\\sin\\left(2\\pi\\left(\\sqrt{n^2+1}-n\\right)\\right)$ and $\\sqrt{n^2+1}-n=\\frac{1}{\\sqrt{n^2+1}+n}$, so the expression is $n\\sin\\frac{2\\pi}{\\sqrt{n^2+1}+n}\\to n\\cdot\\frac{2\\pi}{2n}=\\pi$ (R).",
+      "(C) $\\sqrt{n^2+\\frac n2+1}-n=\\frac{\\frac n2+1}{\\sqrt{n^2+\\frac n2+1}+n}\\to\\frac14$; $\\sin\\left(n\\pi+\\pi\\delta\\right)=(-1)^n\\sin\\pi\\delta$ with $\\delta\\to\\frac14$, so the product is $\\sin\\frac\\pi4\\cdot\\sin\\frac\\pi4=\\frac12$ (P).",
+      "(D) $x\\ln\\frac{x+a}{x-a}=x\\left[\\ln\\left(1+\\frac ax\\right)-\\ln\\left(1-\\frac ax\\right)\\right]\\to a+a=2a$, so the limit is $e^{2a}=e$ and $a=\\frac12$ (P)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For integer $n$: $\\sin(n\\pi+t)=(-1)^n\\sin t$ and $\\cos(n\\pi+t)=(-1)^n\\cos t$; $\\cos^2$ and $\\sin^2$ lose the sign.",
+    "$\\sqrt[k]{n^k+an^{k-1}+\\cdots}=n+\\frac ak+O\\left(\\frac1n\\right)$: for $k=3$, $a=1$ gives $n+\\frac13$; for $k=2$ with $n^2+\\frac n2$ gives $n+\\frac14$; $\\sqrt{n^2+1}=n+\\frac1{2n}+\\cdots$",
+    "$\\lim_{x\\to\\infty}\\left(\\frac{x+a}{x-a}\\right)^x=e^{2a}$ and $\\lim\\left(1+\\frac ax\\right)^x=e^a$ (check $a=\\frac12$: $x=10^5$ gives $2.7183$)."
+   ]
+  },
+  {
+   "q_no": 34,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "1-infinity form and exponential limits",
+    "Inverse trigonometric functions and limits"
+   ],
+   "level": 2,
+   "question": "Match the following columns.\nColumn I: (A) $\\lim_{n\\to\\infty}\\left(\\frac{1+\\sqrt[n]4}{2}\\right)^n=$ ; (B) Let $f(x)=\\lim_{n\\to\\infty}\\frac{2x}\\pi\\tan^{-1}(nx)$, then $\\lim_{x\\to0^+}f(x)=$ ; (C) $\\lim_{x\\to\\frac{\\pi}{2}^+}\\frac{\\cos\\left(\\tan^{-1}(\\tan x)\\right)}{x-\\frac\\pi2}$ ; (D) If $\\lim_{x\\to0^+}(x)^{\\frac1{\\ln\\sin x}}=e^L$, then $L+2=$ .\nColumn II: (P) $2$ ; (Q) $0$ ; (R) $1$ ; (S) $3$ ; (T) Non existent.",
+   "answer": "A $\\to$ P; B $\\to$ Q; C $\\to$ R; D $\\to$ S",
+   "key_idea": "(A) is $1^\\infty$ with $\\frac{4^h-1}{h}\\to\\ln4$; (B) fix $x>0$ first; (C) $\\tan^{-1}(\\tan x)=x-\\pi$ just right of $\\frac\\pi2$; (D) $\\frac{\\ln x}{\\ln\\sin x}\\to1$.",
+   "solution": [
+    "(A) $1^\\infty$ form: $e^{\\lim n\\left(\\frac{1+4^{1/n}}2-1\\right)}=e^{\\lim\\frac{n}{2}\\left(4^{1/n}-1\\right)}$. With $x=\\frac1n$: $\\frac{4^x-1}{2x}\\to\\frac{\\ln4}2$, so the limit is $e^{\\frac12\\ln4}=2$: A $\\to$ P.",
+    "(B) For fixed $x>0$, $\\tan^{-1}(nx)\\to\\frac\\pi2$ as $n\\to\\infty$, so $f(x)=\\frac{2x}\\pi\\cdot\\frac\\pi2=x$.",
+    "Hence $\\lim_{x\\to0^+}f(x)=\\lim x=0$: B $\\to$ Q.",
+    "(C) For $x$ just greater than $\\frac\\pi2$, $\\tan^{-1}(\\tan x)=x-\\pi$ (the principal value, since $x-\\pi\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$).",
+    "$\\cos(x-\\pi)=-\\cos x$, so the limit is $\\lim_{x\\to\\frac\\pi2^+}\\frac{-\\cos x}{x-\\frac\\pi2}$; with $x=\\frac\\pi2+h$, $-\\cos x=\\sin h$, so $\\lim\\frac{\\sin h}{h}=1$: C $\\to$ R.",
+    "(D) $e^L=\\lim_{x\\to0^+}x^{\\frac1{\\ln\\sin x}}$, so $L=\\lim\\frac1{\\ln\\sin x}\\cdot\\ln x=\\lim\\frac{\\ln x}{\\ln\\sin x}$.",
+    "By L'Hôpital: $\\frac{1/x}{\\cos x/\\sin x}=\\frac{\\sin x}{x\\cos x}\\to1$. So $L=1$ and $L+2=3$: D $\\to$ S."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "(A) is a power-mean limit: $\\left(\\frac{1+4^h}{2}\\right)^{1/h}\\to$ geometric mean $\\sqrt{1\\cdot4}$ as $h\\to0$; (D): $\\ln\\sin x=\\ln x+\\ln\\frac{\\sin x}x$ so the ratio tends to $1$ without L'Hôpital.",
+     "solution": [
+      "(A) $M_h=\\left(\\frac{1^h+4^h}{2}\\right)^{1/h}$ is the power mean of $1$ and $4$ of order $h=\\frac1n$. As $h\\to0$, power means tend to the geometric mean $\\sqrt{1\\cdot4}=2$: A $\\to$ P.",
+      "(B) Same as the main solution: for $x>0$ fixed, $\\tan^{-1}(nx)\\to\\frac\\pi2$, $f(x)=x\\to0$: B $\\to$ Q.",
+      "(C) Put $x=\\frac\\pi2+h$, $h\\to0^+$: $\\tan x=-\\cot h$ and $\\tan^{-1}(-\\cot h)=-\\left(\\frac\\pi2-h\\right)=h-\\frac\\pi2$; $\\cos\\left(h-\\frac\\pi2\\right)=\\sin h$, so the quotient is $\\frac{\\sin h}{h}\\to1$: C $\\to$ R.",
+      "(D) $\\frac{\\ln x}{\\ln\\sin x}=\\frac{\\ln x}{\\ln x+\\ln\\frac{\\sin x}{x}}=\\frac1{1+\\frac{\\ln(\\sin x/x)}{\\ln x}}$; as $x\\to0^+$, $\\ln\\frac{\\sin x}x\\to0$ while $|\\ln x|\\to\\infty$, so the ratio $\\to1$, $L=1$ and $L+2=3$: D $\\to$ S."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Power mean: $\\lim_{h\\to0}\\left(\\frac{a^h+b^h}{2}\\right)^{1/h}=\\sqrt{ab}$ (geometric mean), and $\\lim\\left(\\frac{a^{1/n}+b^{1/n}}2\\right)^n=\\sqrt{ab}$; for three numbers, $(abc)^{1/3}$.",
+    "$\\tan^{-1}(\\tan x)=x-k\\pi$ for $x\\in\\left(k\\pi-\\frac\\pi2,k\\pi+\\frac\\pi2\\right)$: a sawtooth, so one-sided limits at $\\frac\\pi2$ differ ($x$ on the left, $x-\\pi$ on the right).",
+    "$\\lim_{x\\to0^+}\\frac{\\ln x}{\\ln\\sin x}=1$ because $\\sin x\\sim x$; hence $x^{1/\\ln\\sin x}\\to e$ (check: $x=10^{-8}$ gives $\\approx2.718$)."
+   ]
+  }
+ ]
+}
