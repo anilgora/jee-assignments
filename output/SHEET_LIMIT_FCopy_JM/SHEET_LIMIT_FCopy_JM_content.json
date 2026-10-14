@@ -1,0 +1,1101 @@
+{
+ "title": "SHEET Limit (JM) — Paper Analysis",
+ "subtitle": "Exercise J-M (Limits, JEE Main PYQs 2023-24) · detailed solutions",
+ "source": "SHEET_LIMIT_FCopy_JM.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "Limit Sheet JM",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 16,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "One correct option; JEE Main Jan 2023, Apr 2023 and Jan 2024 questions"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 17,
+   "to": 18,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "Numerical value answer; JEE Main Jan 2024 questions"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 19,
+   "to": 21,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "One correct option; JEE Main Apr 2024 questions"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 22,
+   "to": 24,
+   "marking": [
+    "4 marks each (no marks printed in the paper: JEE Advanced default assumed)",
+    "Numerical value answer; JEE Main Apr 2024 questions"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a sum of powers raised to a power ($\\infty\\cdot0$ type exponent)"
+   ],
+   "level": 2,
+   "question": "$\\lim_{t\\to0}\\left(1^{\\frac{1}{\\sin^2t}}+2^{\\frac{1}{\\sin^2t}}+\\cdots+n^{\\frac{1}{\\sin^2t}}\\right)^{\\sin^2t}$ is equal to :",
+   "options": [
+    "$\\frac{n+1}{2}$",
+    "$n^2$",
+    "$n^2+n$",
+    "$n$"
+   ],
+   "answer": "(D) $n$",
+   "key_idea": "Factor the largest term $n^{1/\\sin^2t}$ out: every other ratio $\\left(\\frac kn\\right)^{\\csc^2t}$ tends to $0$.",
+   "solution": [
+    "Factor $n^{\\frac{1}{\\sin^2t}}$ out of the bracket: the sum is $n^{\\frac{1}{\\sin^2t}}\\left[1+\\left(\\frac1n\\right)^{\\csc^2t}+\\left(\\frac2n\\right)^{\\csc^2t}+\\cdots+\\left(\\frac{n-1}{n}\\right)^{\\csc^2t}\\right]$.",
+    "Raising to the power $\\sin^2t$, the prefactor becomes $\\left(n^{\\frac{1}{\\sin^2t}}\\right)^{\\sin^2t}=n$.",
+    "So the limit is $n\\cdot\\lim_{t\\to0}\\left[1+\\left(\\frac1n\\right)^{\\csc^2t}+\\cdots+\\left(\\frac{n-1}{n}\\right)^{\\csc^2t}\\right]^{\\sin^2t}$.",
+    "For $k=1,\\dots,n-1$ we have $0<\\frac kn<1$, and $\\csc^2t\\to\\infty$ as $t\\to0$, so $\\left(\\frac kn\\right)^{\\csc^2t}\\to0$.",
+    "Hence the bracket tends to $1+0+\\cdots+0=1$, while its exponent $\\sin^2t\\to0$: the bracket factor tends to $1^0=1$.",
+    "Therefore the limit is $n\\cdot1=n$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Squeeze the sum between its largest term and $n$ times its largest term; no factoring needed.",
+     "solution": [
+      "Let $s=\\sin^2t>0$ and $S=1^{1/s}+2^{1/s}+\\cdots+n^{1/s}$. The largest term is $n^{1/s}$ and there are $n$ terms.",
+      "So $n^{1/s}\\le S\\le n\\cdot n^{1/s}$.",
+      "Raise to the positive power $s$ (order is preserved): $n\\le S^{s}\\le n^{s}\\cdot n$.",
+      "As $t\\to0$, $s\\to0$, so $n^{s}\\to n^0=1$ and the right side tends to $n$.",
+      "By the squeeze theorem $S^{s}\\to n$. Answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{p\\to\\infty}\\left(a_1^p+a_2^p+\\cdots+a_n^p\\right)^{1/p}=\\max(a_1,\\dots,a_n)$ for $a_i>0$ (here $p=\\frac1{\\sin^2t}\\to\\infty$).",
+    "Sandwich a sum of $n$ positive terms between its largest term and $n$ times its largest term: $M^p\\le S\\le nM^p$, and $n^{1/p}\\to1$.",
+    "Check: $n=3$, $p=50$: $(1+2^{50}+3^{50})^{1/50}=3\\left(1+(2/3)^{50}+3^{-50}\\right)^{1/50}\\approx3.000000$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Existence of the limit of a greatest-integer-function expression"
+   ],
+   "level": 2,
+   "question": "The set of all values of $a$ for which $\\lim_{x\\to a}\\left([x-5]-[2x+2]\\right)=0$, where $[\\cdot]$ denotes the greatest integer less than or equal to $\\cdot$, is equal to :",
+   "options": [
+    "$(-7.5,-6.5)$",
+    "$(-7.5,-6.5]$",
+    "$[-7.5,-6.5]$",
+    "$[-7.5,-6.5)$"
+   ],
+   "answer": "(A) $(-7.5,-6.5)$",
+   "key_idea": "Reduce to $[x]-[2x]=7$, a step function; a limit exists only at points where it is locally constant.",
+   "solution": [
+    "$[x-5]=[x]-5$ and $[2x+2]=[2x]+2$, so the condition is $\\lim_{x\\to a}\\left([x]-[2x]\\right)=7$.",
+    "If $x\\in\\left[n,n+\\frac12\\right)$ then $[x]=n$, $[2x]=2n$, so $[x]-[2x]=-n$. This equals $7$ when $n=-7$: $x\\in\\left[-7,-6.5\\right)$.",
+    "If $x\\in\\left[n+\\frac12,n+1\\right)$ then $[x]=n$, $[2x]=2n+1$, so $[x]-[2x]=-n-1$. This equals $7$ when $n=-8$: $x\\in\\left[-7.5,-7\\right)$.",
+    "So $[x]-[2x]=7$ exactly on $\\left[-7.5,-6.5\\right)$, and the function is constant $7$ on both sides of every point strictly inside this interval (including $x=-7$).",
+    "At $a=-7.5$ the left-hand value is $8$ (since $x\\in[-8,-7.5)$ gives $-n=8$), so the limit does not exist.",
+    "At $a=-6.5$ the right-hand value is $6$ (since $x\\in[-6.5,-6)$ gives $-n-1=6$), so the limit does not exist.",
+    "Hence $a\\in(-7.5,-6.5)$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the identity $[2x]=[x]+\\left[x+\\frac12\\right]$, so the whole expression is just $-\\left[x+\\frac12\\right]-7$.",
+     "solution": [
+      "For every real $x$: $[2x]=[x]+\\left[x+\\tfrac12\\right]$ (if $\\{x\\}<\\frac12$ both sides equal $2[x]$, otherwise $2[x]+1$).",
+      "So $[x-5]-[2x+2]=[x]-5-[x]-\\left[x+\\tfrac12\\right]-2=-\\left[x+\\tfrac12\\right]-7$.",
+      "The condition is $-\\left[x+\\frac12\\right]-7=0$, i.e. $\\left[x+\\frac12\\right]=-7$, i.e. $-7\\le x+\\frac12<-6$, i.e. $x\\in[-7.5,-6.5)$.",
+      "$\\left[x+\\frac12\\right]$ is a step function; its limit at $a$ exists only if $a$ is not a jump point, so $a\\neq-7.5$ (jump from $-8$ to $-7$) and $a\\neq-6.5$ (jump from $-7$ to $-6$) are required.",
+      "Hence $a\\in(-7.5,-6.5)$. Answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[2x]=[x]+\\left[x+\\frac12\\right]$; more generally $[nx]=\\sum_{k=0}^{n-1}\\left[x+\\frac kn\\right]$ (Hermite's identity).",
+    "$[x+m]=[x]+m$ for an integer $m$ - integers can be pulled out of a greatest integer function.",
+    "$\\lim_{x\\to a}[g(x)]$ exists only where $[g]$ is locally constant: at a jump point the one-sided limits differ, so the limit does not exist (unless $g$ approaches the integer value from the side that keeps $[g]$ constant)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits at infinity of series sums and surds (rationalisation)"
+   ],
+   "level": 2,
+   "question": "The value of $\\lim_{n\\to\\infty}\\frac{1+2-3+4+5-6+\\cdots+(3n-2)+(3n-1)-3n}{\\sqrt{2n^4+4n+3}-\\sqrt{n^4+5n+4}}$ is :",
+   "options": [
+    "$3(\\sqrt2+1)$",
+    "$\\frac32(\\sqrt2+1)$",
+    "$\\frac{\\sqrt2+1}{2}$",
+    "$\\frac{3}{2\\sqrt2}$"
+   ],
+   "answer": "(B) $\\frac32(\\sqrt2+1)$",
+   "key_idea": "Group the numerator in threes: each group $(3r-2)+(3r-1)-3r=3(r-1)$; rationalise the surd difference.",
+   "solution": [
+    "The $r$-th group of three terms is $(3r-2)+(3r-1)-3r=3r-3=3(r-1)$, for $r=1,\\dots,n$.",
+    "Numerator $=\\sum_{r=1}^{n}3(r-1)=3\\cdot\\frac{n(n-1)}{2}=\\frac{3n(n-1)}{2}$.",
+    "Multiply numerator and denominator by the conjugate $\\sqrt{2n^4+4n+3}+\\sqrt{n^4+5n+4}$.",
+    "The new denominator is $(2n^4+4n+3)-(n^4+5n+4)=n^4-n-1$.",
+    "So the limit is $\\lim_{n\\to\\infty}\\frac{\\frac{3n(n-1)}{2}\\left(\\sqrt{2n^4+4n+3}+\\sqrt{n^4+5n+4}\\right)}{n^4-n-1}$.",
+    "Divide numerator and denominator by $n^4$: $\\sqrt{2n^4+4n+3}/n^2\\to\\sqrt2$, $\\sqrt{n^4+5n+4}/n^2\\to1$, $\\frac{n(n-1)}{n^2}\\to1$, $\\frac{n^4-n-1}{n^4}\\to1$.",
+    "Limit $=\\frac32\\left(\\sqrt2+1\\right)$. Answer (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's second and third lines print the surds as $\\sqrt{2n^4+3n+1}-\\sqrt{n^4+n+3}$ (and $2n^4+3n-1$, $n^4+n+3$), which are not the polynomials of the question ($2n^4+4n+3$ and $n^4+5n+4$). The limit is unaffected (only leading terms matter) but the working was rewritten with the correct polynomials and conjugate difference $n^4-n-1$.",
+   "alternate_solutions": [
+    {
+     "idea": "Do not rationalise: a surd difference of two $n^2$-sized roots behaves like $(\\sqrt2-1)n^2$, so divide everything by $n^2$.",
+     "solution": [
+      "Numerator $=\\frac{3n(n-1)}{2}$, so $\\frac{\\text{numerator}}{n^2}\\to\\frac32$.",
+      "$\\frac{\\sqrt{2n^4+4n+3}}{n^2}=\\sqrt{2+\\frac4{n^3}+\\frac3{n^4}}\\to\\sqrt2$ and $\\frac{\\sqrt{n^4+5n+4}}{n^2}=\\sqrt{1+\\frac5{n^3}+\\frac4{n^4}}\\to1$.",
+      "So $\\frac{\\text{denominator}}{n^2}\\to\\sqrt2-1$, which is non-zero, so no conjugate is needed.",
+      "The limit is $\\frac{3/2}{\\sqrt2-1}=\\frac32(\\sqrt2+1)$ after rationalising the constant. Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If a surd difference $\\sqrt{A}-\\sqrt{B}$ has $\\sqrt A$ and $\\sqrt B$ of different orders of magnitude, or leading coefficients that differ, it is $\\sim(\\sqrt{a}-\\sqrt{b})n^{k}$ - no conjugate required; use the conjugate only when the leading terms cancel.",
+    "A group pattern like $(3r-2)+(3r-1)-3r$ collapses to a linear term; always find the $r$-th group before summing.",
+    "$\\frac{1}{\\sqrt2-1}=\\sqrt2+1$ - the standard conjugate for nested constants in these answers."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Standard limit $\\frac{1-\\cos u}{u^2}$ and one-sided limits",
+    "Greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $x=2$ be a root of the equation $x^2+px+q=0$ and $f(x)=\\begin{cases}\\frac{1-\\cos\\left(x^2-4px+q^2+8q+16\\right)}{(x-2p)^4}, & x\\neq2p\\\\ 0, & x=2p\\end{cases}$. Then $\\lim_{x\\to2p^+}[f(x)]$, where $[\\cdot]$ denotes the greatest integer function, is :",
+   "options": [
+    "$-1$",
+    "$0$",
+    "$2$",
+    "$1$"
+   ],
+   "answer": "(B) $0$",
+   "key_idea": "$q=-4-2p$ turns the cosine's argument into the perfect square $(x-2p)^2$; then $f$ approaches $\\frac12$ from below.",
+   "solution": [
+    "$x=2$ is a root, so $4+2p+q=0$, i.e. $q+4=-2p$.",
+    "Then $q^2+8q+16=(q+4)^2=4p^2$.",
+    "So the argument of the cosine is $x^2-4px+4p^2=(x-2p)^2$. Put $u=(x-2p)^2$.",
+    "For $x\\neq2p$: $f(x)=\\frac{1-\\cos u}{u^2}$, because $(x-2p)^4=u^2$.",
+    "As $x\\to2p^+$, $u\\to0^+$ and $\\frac{1-\\cos u}{u^2}\\to\\frac12$.",
+    "Since $1-\\cos u=2\\sin^2\\frac u2<2\\cdot\\frac{u^2}{4}=\\frac{u^2}{2}$ for $u\\neq0$, we get $f(x)<\\frac12$: the value $\\frac12$ is approached from below.",
+    "Also $1-\\cos u>0$ for small $u\\neq0$, so $f(x)>0$. Hence $0<f(x)<\\frac12$ near $2p$ and $[f(x)]=0$.",
+    "Therefore $\\lim_{x\\to2p^+}[f(x)]=0$. Answer (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working (i) misprints the constant as $q^2+82+16$ (should be $q^2+8q+16$), (ii) never uses $4+2p+q=0$ to show that the cosine's argument is exactly $(x-2p)^2$, and (iii) stops at $f\\to\\frac12$ and writes $[f]=0$ after 'Using L'Hospital's' without showing that $f$ stays below $\\frac12$ (the sign of $f-\\frac12$ is what decides the greatest integer). Steps (ii) and (iii) were added; the answer 0 is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Bound $f$ between $0$ and $\\frac12$ for every $x\\neq2p$ using $\\cos u>1-\\frac{u^2}{2}$; the value of the limit of $f$ is never needed.",
+     "solution": [
+      "With $q=-4-2p$ the argument is $u=(x-2p)^2>0$ for $x\\neq2p$, and $f(x)=\\frac{1-\\cos u}{u^2}$.",
+      "The inequality $\\cos u>1-\\frac{u^2}{2}$ holds for every $u\\neq0$, hence $1-\\cos u<\\frac{u^2}{2}$ and $f(x)<\\frac12$.",
+      "Also $1-\\cos u\\ge0$, and it is $>0$ unless $u$ is a multiple of $2\\pi$; near $x=2p$ we have $0<u<2\\pi$, so $f(x)>0$.",
+      "Thus $0<f(x)<\\frac12<1$ for all $x\\neq2p$ near $2p$, so $[f(x)]=0$ identically there.",
+      "A function that is identically $0$ near the point has limit $0$. Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos u\\ge1-\\frac{u^2}{2}$ for all real $u$, with strict inequality for $u\\neq0$; so $\\frac{1-\\cos u}{u^2}<\\frac12$ and it increases to $\\frac12$ as $u\\to0$.",
+    "Whenever a limit of $[g(x)]$ is asked and $g\\to$ an integer $L$, decide whether $g\\to L$ from above (floor $L$) or from below (floor $L-1$). Here $g\\to\\frac12$, so no worry; for $g\\to1^-$ the floor would be $0$.",
+    "A quadratic expression in $x$ with a parameter condition (root at $2$) often collapses to a perfect square $(x-\\text{const})^2$ - test this before expanding.",
+    "Check: $u=0.01$ gives $\\frac{1-\\cos0.01}{0.0001}=0.49999\\ldots<\\frac12$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a composite function with signum and greatest integer functions"
+   ],
+   "level": 2,
+   "question": "Let $f$, $g$ and $h$ be real functions defined on $\\mathbb R$ as $f(x)=\\begin{cases}\\frac{x}{|x|}, & x\\neq0\\\\ 1, & x=0\\end{cases}$, $g(x)=\\begin{cases}\\frac{\\sin(x+1)}{x+1}, & x\\neq-1\\\\ 1, & x=-1\\end{cases}$ and $h(x)=2[x]-f(x)$, where $[x]$ is the greatest integer $\\le x$. Then the value of $\\lim_{x\\to1}g\\left(h(x-1)\\right)$ is :",
+   "options": [
+    "$\\sin(1)$",
+    "$0$",
+    "$-1$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "Evaluate the inner function on each side of $x=1$ separately; $h(x-1)$ comes out the same, $-1$, and $g(-1)=1$.",
+   "solution": [
+    "Put $t=x-1$, so $x\\to1$ means $t\\to0$ and we need $\\lim_{t\\to0}g\\left(h(t)\\right)$.",
+    "Left-hand limit: $t=-k$ with $k\\to0^+$. Then $[-k]=-1$ and $f(-k)=\\frac{-k}{k}=-1$, so $h(-k)=2(-1)-(-1)=-1$.",
+    "So the left-hand limit is $g(-1)=1$ (since $g(-1)=1$ by definition).",
+    "Right-hand limit: $t=k$ with $k\\to0^+$. Then $[k]=0$ and $f(k)=1$, so $h(k)=0-1=-1$.",
+    "So the right-hand limit is also $g(-1)=1$.",
+    "Both one-sided limits are $1$, so $\\lim_{x\\to1}g\\left(h(x-1)\\right)=1$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$h$ is constant on the whole interval $(-1,1)$, so $g\\circ h$ is a constant function near $0$ and no one-sided limits are needed.",
+     "solution": [
+      "For $t\\in(-1,0)$: $[t]=-1$, $f(t)=-1$, so $h(t)=-2+1=-1$.",
+      "For $t=0$: $[0]=0$, $f(0)=1$, so $h(0)=-1$. For $t\\in(0,1)$: $[t]=0$, $f(t)=1$, so $h(t)=-1$.",
+      "So $h(t)=-1$ for every $t\\in(-1,1)$, and hence $g(h(t))=g(-1)=1$ for every such $t$.",
+      "A function that equals $1$ throughout a neighbourhood of $0$ has limit $1$. Answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a composite $g(h(x))$, first look at what $h$ does near the point: if $h$ is locally constant $=c$, the composite is the constant $g(c)$, whatever $g$ does elsewhere (even if $g$ is only defined specially at $c$).",
+    "Limit of a composite is $\\lim g(h(x))=\\lim_{y\\to L}g(y)$ only when $h(x)\\neq L$ near the point; if $h(x)=L$ exactly, evaluate $g(L)$, not $\\lim_{y\\to L}g(y)$. Here $\\lim_{y\\to-1}g=\\sin(0)/0\\to1=g(-1)$, so both agree.",
+    "$[x]=-1$ for $x\\in[-1,0)$ and $=0$ for $x\\in[0,1)$; $\\frac{x}{|x|}=\\operatorname{sgn}x$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits at infinity of rational-surd expressions",
+    "Binomial expansion (even-power sum)"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to\\infty}\\frac{\\left(\\sqrt{3x+1}+\\sqrt{3x-1}\\right)^6+\\left(\\sqrt{3x+1}-\\sqrt{3x-1}\\right)^6}{\\left(x+\\sqrt{x^2-1}\\right)^6+\\left(x-\\sqrt{x^2-1}\\right)^6}\\,x^3$",
+   "options": [
+    "does not exist",
+    "is equal to $27$",
+    "is equal to $9$",
+    "is equal to $\\frac{27}{2}$"
+   ],
+   "answer": "(B) is equal to $27$",
+   "key_idea": "$(a+b)^6+(a-b)^6$ keeps only the even-power terms, which turn $\\sqrt{3x\\pm1}$ and $\\sqrt{x^2-1}$ into polynomials in $x$.",
+   "solution": [
+    "Use $(a+b)^6+(a-b)^6=2\\left({}^6C_0a^6+{}^6C_2a^4b^2+{}^6C_4a^2b^4+{}^6C_6b^6\\right)=2\\left(a^6+15a^4b^2+15a^2b^4+b^6\\right)$.",
+    "Numerator, with $a^2=3x+1$, $b^2=3x-1$: $2(3x+1)^3+30(3x+1)^2(3x-1)+30(3x+1)(3x-1)^2+2(3x-1)^3$.",
+    "Denominator, with $a=x$, $b^2=x^2-1$: $2x^6+30x^4(x^2-1)+30x^2(x^2-1)^2+2(x^2-1)^3$.",
+    "Factor $x^3$ out of each cube in the numerator, giving $x^3\\left[2\\left(3+\\frac1x\\right)^3+30\\left(3+\\frac1x\\right)^2\\left(3-\\frac1x\\right)+30\\left(3+\\frac1x\\right)\\left(3-\\frac1x\\right)^2+2\\left(3-\\frac1x\\right)^3\\right]$; with the extra $x^3$ the numerator has the factor $x^6$.",
+    "In the denominator factor $x^6$: $x^6\\left[2+30\\left(1-\\frac1{x^2}\\right)+30\\left(1-\\frac1{x^2}\\right)^2+2\\left(1-\\frac1{x^2}\\right)^3\\right]$.",
+    "Cancel $x^6$ and let $x\\to\\infty$: the limit is $\\frac{2(3)^3+30(3)^3+30(3)^3+2(3)^3}{2+30+30+2}=\\frac{64\\cdot27}{64}=27$.",
+    "Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $a=\\sqrt{3x+1}$, $b=\\sqrt{3x-1}$ we have $a-b=\\frac{2}{a+b}\\to0$, and similarly $x-\\sqrt{x^2-1}=\\frac1{x+\\sqrt{x^2-1}}\\to0$: the 'minus' terms vanish and only the 'plus' terms matter.",
+     "solution": [
+      "Since $(\\sqrt{3x+1})^2-(\\sqrt{3x-1})^2=2$, we get $\\sqrt{3x+1}-\\sqrt{3x-1}=\\frac{2}{\\sqrt{3x+1}+\\sqrt{3x-1}}\\to0$, so its sixth power is negligible.",
+      "$\\sqrt{3x+1}+\\sqrt{3x-1}\\sim2\\sqrt{3x}$, so the numerator is $\\sim(2\\sqrt{3x})^6=64\\cdot27x^3$.",
+      "Likewise $x-\\sqrt{x^2-1}=\\frac{1}{x+\\sqrt{x^2-1}}\\to0$ and $x+\\sqrt{x^2-1}\\sim2x$, so the denominator is $\\sim(2x)^6=64x^6$.",
+      "The expression is $\\sim\\frac{64\\cdot27x^3}{64x^6}\\cdot x^3=27$. Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(a+b)^n+(a-b)^n$ contains only the even powers of $b$ (twice the even-indexed terms): a quick way to remove odd surds.",
+    "If $a^2-b^2=\\text{const}$ then $a-b=\\frac{\\text{const}}{a+b}\\to0$ when $a+b\\to\\infty$: the conjugate-pair $x\\pm\\sqrt{x^2-1}$ are reciprocals, so one is large and one tiny.",
+    "Dominant-term check: $x+\\sqrt{x^2-1}\\sim2x$ and $\\sqrt{3x+1}+\\sqrt{3x-1}\\sim2\\sqrt{3x}$ as $x\\to\\infty$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a sum by rationalisation (telescoping)",
+    "Arithmetic progression"
+   ],
+   "level": 2,
+   "question": "Let $a_1,a_2,a_3,\\dots,a_n$ be $n$ positive consecutive terms of an arithmetic progression. If $d>0$ is its common difference, then $\\lim_{n\\to\\infty}\\sqrt{\\frac dn}\\left(\\frac1{\\sqrt{a_1}+\\sqrt{a_2}}+\\frac1{\\sqrt{a_2}+\\sqrt{a_3}}+\\cdots+\\frac1{\\sqrt{a_{n-1}}+\\sqrt{a_n}}\\right)$ is :",
+   "options": [
+    "$1$",
+    "$0$",
+    "$\\sqrt d$",
+    "$\\frac1{\\sqrt d}$"
+   ],
+   "answer": "(A) $1$",
+   "key_idea": "Rationalise each term: $\\frac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\frac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{d}$, so the sum telescopes.",
+   "solution": [
+    "Multiply and divide each term by $\\sqrt{a_{k+1}}-\\sqrt{a_k}$: $\\frac1{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\frac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\frac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{d}$.",
+    "The sum is $\\frac1d\\left[(\\sqrt{a_2}-\\sqrt{a_1})+(\\sqrt{a_3}-\\sqrt{a_2})+\\cdots+(\\sqrt{a_n}-\\sqrt{a_{n-1}})\\right]=\\frac1d\\left(\\sqrt{a_n}-\\sqrt{a_1}\\right)$.",
+    "So the expression equals $\\sqrt{\\frac dn}\\cdot\\frac{\\sqrt{a_n}-\\sqrt{a_1}}{d}=\\frac{\\sqrt{a_n}-\\sqrt{a_1}}{\\sqrt n\\sqrt d}$.",
+    "Use $a_n=a_1+(n-1)d$: this is $\\sqrt{\\frac{a_1+(n-1)d}{nd}}-\\sqrt{\\frac{a_1}{nd}}=\\sqrt{\\frac{a_1}{nd}+1-\\frac1n}-\\sqrt{\\frac{a_1}{nd}}$.",
+    "As $n\\to\\infty$ each of $\\frac{a_1}{nd}$ and $\\frac1n$ tends to $0$, so the limit is $\\sqrt{0+1-0}-0=1$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read the expression as a Riemann sum: $\\frac1n\\sum f\\left(\\frac kn\\right)$ with $f(x)=\\frac{1}{2\\sqrt x}$.",
+     "solution": [
+      "Here $a_k=a_1+(k-1)d$, so $\\frac{a_k}{n}=\\frac{a_1-d}{n}+d\\cdot\\frac kn$.",
+      "Write each term as $\\sqrt{\\frac dn}\\cdot\\frac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\frac1n\\cdot\\frac{\\sqrt d}{\\sqrt{a_k/n}+\\sqrt{a_{k+1}/n}}$.",
+      "With $x=\\frac kn$ fixed and $n\\to\\infty$, $\\frac{a_k}{n}\\to dx$ and $\\frac{a_{k+1}}{n}\\to dx$, so each term is $\\frac1n\\cdot\\frac{\\sqrt d}{2\\sqrt{dx}}=\\frac1n\\cdot\\frac1{2\\sqrt x}$.",
+      "The sum becomes the Riemann sum for $\\int_0^1\\frac{dx}{2\\sqrt x}=\\left[\\sqrt x\\right]_0^1=1$ (convergent improper integral). Answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac1{\\sqrt a+\\sqrt b}=\\frac{\\sqrt b-\\sqrt a}{b-a}$; when $b-a=d$ is constant (AP) the sum of such terms telescopes to $\\frac{\\sqrt{a_n}-\\sqrt{a_1}}{d}$.",
+    "Same idea: $\\sum_{k=1}^{n}\\frac1{\\sqrt{k}+\\sqrt{k+1}}=\\sqrt{n+1}-1$.",
+    "A sum of the form $\\sqrt{\\frac dn}\\sum\\ldots$ with terms behaving like $\\frac1{\\sqrt{k}}$ is of order $\\sqrt n$ times $\\frac1{\\sqrt n}$ - expect a finite non-zero limit."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Sandwich (squeeze) theorem for a product of $n$ factors"
+   ],
+   "level": 2,
+   "question": "$\\lim_{n\\to\\infty}\\left\\{\\left(2^{\\frac12}-2^{\\frac13}\\right)\\left(2^{\\frac12}-2^{\\frac15}\\right)\\cdots\\left(2^{\\frac12}-2^{\\frac1{2n+1}}\\right)\\right\\}$ is equal to :",
+   "options": [
+    "$1$",
+    "$\\sqrt2$",
+    "$0$",
+    "$\\frac1{\\sqrt2}$"
+   ],
+   "answer": "(C) $0$",
+   "key_idea": "Every factor lies strictly between $0$ and $1$ and the smallest and largest factors are fixed, so the product is trapped between two $n$-th powers tending to $0$.",
+   "solution": [
+    "Let $P$ be the product of the $n$ factors $2^{\\frac12}-2^{\\frac1{2k+1}}$, $k=1,\\dots,n$.",
+    "The exponent $\\frac1{2k+1}$ decreases as $k$ increases, so $2^{\\frac1{2k+1}}$ decreases and each factor increases with $k$.",
+    "The smallest factor is $2^{\\frac12}-2^{\\frac13}$ (at $k=1$) and the largest is $2^{\\frac12}-2^{\\frac1{2n+1}}$ (at $k=n$).",
+    "By the sandwich argument: $\\left(2^{\\frac12}-2^{\\frac13}\\right)^n\\le P\\le\\left(2^{\\frac12}-2^{\\frac1{2n+1}}\\right)^n$.",
+    "All factors are in $(0,1)$: $0<2^{\\frac12}-2^{\\frac13}\\approx0.154$ and $2^{\\frac12}-2^{\\frac1{2n+1}}<2^{\\frac12}-1\\approx0.414<1$.",
+    "So $\\lim\\left(2^{\\frac12}-2^{\\frac13}\\right)^n=0$ and $\\lim\\left(2^{\\frac12}-2^{\\frac1{2n+1}}\\right)^n=0$ (the latter is below $(0.42)^n$).",
+    "By the squeeze theorem $P\\to0$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A product of $n$ positive factors, each at most $r<1$, is at most $r^n\\to0$; if every factor is $\\ge r'>1$ the product $\\to\\infty$.",
+    "Be careful when the factors tend to $1$ (like $1-\\frac1{k^2}$): then the bound $r^n$ fails and the product can converge to a non-zero limit.",
+    "Compare: $\\prod_{k=2}^{n}\\left(1-\\frac1{k^2}\\right)\\to\\frac12$, but $\\prod\\left(\\frac12\\right)=2^{-n}\\to0$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Standard limits of trigonometric and logarithmic functions"
+   ],
+   "level": 1,
+   "question": "$\\lim_{x\\to0}\\left(\\frac{1-\\cos^2(3x)}{\\cos^3(4x)}\\cdot\\frac{\\sin^3(4x)}{\\left(\\log_e(2x+1)\\right)^5}\\right)$ is equal to :",
+   "options": [
+    "$15$",
+    "$24$",
+    "$9$",
+    "$18$"
+   ],
+   "answer": "(D) $18$",
+   "key_idea": "Convert each factor to a standard limit by multiplying and dividing by the matching power of $x$.",
+   "solution": [
+    "Write $1-\\cos^2(3x)=\\sin^2(3x)$.",
+    "Multiply and divide to build standard limits: $\\frac{\\sin^2 3x}{9x^2}\\cdot\\frac{9x^2}{\\cos^34x}\\cdot\\frac{\\left(\\frac{\\sin4x}{4x}\\right)^3\\cdot64x^3}{\\left(\\frac{\\ln(1+2x)}{2x}\\right)^5\\cdot32x^5}$.",
+    "As $x\\to0$: $\\frac{\\sin3x}{3x}\\to1$, $\\frac{\\sin4x}{4x}\\to1$, $\\frac{\\ln(1+2x)}{2x}\\to1$ and $\\cos4x\\to1$.",
+    "The leftover powers of $x$ are $\\frac{x^2\\cdot x^3}{x^5}=1$, and the constants are $\\frac{9\\cdot64}{32}$.",
+    "So the limit is $\\frac{9}{1}\\cdot\\frac{1\\cdot64}{1\\cdot32}=18$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Equivalent infinitesimals at $0$: $\\sin kx\\sim kx$, $\\tan kx\\sim kx$, $1-\\cos kx\\sim\\frac{k^2x^2}{2}$, $\\ln(1+kx)\\sim kx$, $e^{kx}-1\\sim kx$.",
+    "Only use these inside products and quotients (not inside sums where leading terms may cancel).",
+    "Count total powers: here $x^2\\cdot x^3$ in the numerator and $x^5$ in the denominator, so the limit is the ratio of the leading coefficients $\\frac{9\\cdot64}{32}=18$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Standard limit of $1-\\cos$ type",
+    "Relations between the roots and coefficients of a quadratic"
+   ],
+   "level": 3,
+   "question": "If $\\alpha>\\beta>0$ are the roots of the equation $ax^2+bx+1=0$, and $\\lim_{x\\to\\frac1\\alpha}\\left(\\frac{1-\\cos\\left(x^2+bx+a\\right)}{2(1-\\alpha x)^2}\\right)^{\\frac12}=\\frac1k\\left(\\frac1\\beta-\\frac1\\alpha\\right)$, then $k$ is equal to :",
+   "options": [
+    "$\\alpha$",
+    "$2\\alpha$",
+    "$\\beta$",
+    "$2\\beta$"
+   ],
+   "answer": "(B) $2\\alpha$",
+   "key_idea": "$x^2+bx+a=a(1-\\alpha x)(1-\\beta x)$ makes the cosine's argument vanish exactly at $x=\\frac1\\alpha$ and gives the form $\\frac{1-\\cos u}{u^2}$.",
+   "solution": [
+    "Since $\\alpha,\\beta$ are the roots of $ax^2+bx+1=0$: $ax^2+bx+1=a(x-\\alpha)(x-\\beta)$, so $\\alpha\\beta=\\frac1a$.",
+    "Therefore $x^2+bx+a=a(1-\\alpha x)(1-\\beta x)$ (the coefficient of $x^2$ is $a\\alpha\\beta=1$ and the constant term is $a$).",
+    "Let $u=a(1-\\alpha x)(1-\\beta x)$, which tends to $0$ as $x\\to\\frac1\\alpha$. Then $\\frac{1-\\cos u}{2(1-\\alpha x)^2}=\\frac{1-\\cos u}{2u^2}\\cdot a^2(1-\\beta x)^2$.",
+    "As $x\\to\\frac1\\alpha$: $\\frac{1-\\cos u}{u^2}\\to\\frac12$ and $(1-\\beta x)\\to1-\\frac\\beta\\alpha$, so the expression tends to $\\frac12\\cdot\\frac12a^2\\left(1-\\frac\\beta\\alpha\\right)^2$.",
+    "Taking the square root (all quantities are positive since $\\alpha>\\beta>0$, $a>0$): the limit is $\\frac12 a\\left(1-\\frac\\beta\\alpha\\right)=\\frac12\\cdot\\frac1{\\alpha\\beta}\\left(1-\\frac\\beta\\alpha\\right)$.",
+    "$=\\frac12\\left(\\frac1{\\alpha\\beta}-\\frac1{\\alpha^2}\\right)=\\frac1{2\\alpha}\\left(\\frac1\\beta-\\frac1\\alpha\\right)$.",
+    "Comparing with $\\frac1k\\left(\\frac1\\beta-\\frac1\\alpha\\right)$ gives $k=2\\alpha$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$x^2+bx+a=x^2\\,P\\!\\left(\\frac1x\\right)$ for $P(y)=ay^2+by+1$, so its roots are the reciprocals $\\frac1\\alpha,\\frac1\\beta$ and it equals $\\left(x-\\frac1\\alpha\\right)\\left(x-\\frac1\\beta\\right)$ with leading coefficient $1$.",
+     "solution": [
+      "$x^2P\\left(\\frac1x\\right)=x^2\\left(\\frac a{x^2}+\\frac bx+1\\right)=a+bx+x^2$, so $x^2+bx+a$ has roots $\\frac1\\alpha$ and $\\frac1\\beta$.",
+      "Hence $x^2+bx+a=\\left(x-\\frac1\\alpha\\right)\\left(x-\\frac1\\beta\\right)=\\left(-\\frac{1-\\alpha x}{\\alpha}\\right)\\left(x-\\frac1\\beta\\right)$, so $u=x^2+bx+a$ has the factor $(1-\\alpha x)$.",
+      "$\\frac{1-\\cos u}{2(1-\\alpha x)^2}\\sim\\frac{u^2}{4(1-\\alpha x)^2}=\\frac14\\cdot\\frac{\\left(x-\\frac1\\beta\\right)^2}{\\alpha^2}$.",
+      "At $x=\\frac1\\alpha$ the root of this is $\\frac{\\left|\\frac1\\alpha-\\frac1\\beta\\right|}{2\\alpha}=\\frac{1}{2\\alpha}\\left(\\frac1\\beta-\\frac1\\alpha\\right)$ because $\\frac1\\beta>\\frac1\\alpha$.",
+      "Hence $k=2\\alpha$. Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\alpha,\\beta$ are the roots of $ax^2+bx+c=0$ then the quadratic with reciprocal roots is $cx^2+bx+a=0$ (reverse the coefficients).",
+    "$\\frac{1-\\cos u}{u^2}\\to\\frac12$ as $u\\to0$ - and the argument $u$ need not be linear in $x$; check what makes it vanish and factorise it.",
+    "$1-\\cos u=2\\sin^2\\frac u2$; so $\\left(\\frac{1-\\cos u}{2u^2}\\right)^{1/2}\\to\\frac12$, which explains the factor $\\frac12$ left after taking the square root."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits by series expansion (exponential and cosine)"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to0}\\frac{e^{ax}-\\cos(bx)-\\frac{cxe^{-cx}}{2}}{1-\\cos(2x)}=17$, then $5a^2+b^2$ is equal to :",
+   "options": [
+    "$72$",
+    "$76$",
+    "$64$",
+    "$68$"
+   ],
+   "answer": "(D) $68$",
+   "key_idea": "The denominator is of order $x^2$, so the numerator's $x^0$ and $x^1$ coefficients must vanish and its $x^2$ coefficient is fixed by the value $17$.",
+   "solution": [
+    "$1-\\cos2x\\sim2x^2$ as $x\\to0$ (write it as $\\frac{1-\\cos2x}{4x^2}\\times4x^2$ with $\\frac{1-\\cos2x}{4x^2}\\to\\frac12$).",
+    "Expand: $e^{ax}=1+ax+\\frac{a^2x^2}{2}+\\cdots$, $\\cos bx=1-\\frac{b^2x^2}{2}+\\cdots$, $\\frac{cx}{2}e^{-cx}=\\frac{cx}{2}(1-cx+\\cdots)=\\frac{cx}{2}-\\frac{c^2x^2}{2}+\\cdots$.",
+    "Numerator $=\\left(1+ax+\\frac{a^2x^2}{2}\\right)-\\left(1-\\frac{b^2x^2}{2}\\right)-\\left(\\frac{cx}{2}-\\frac{c^2x^2}{2}\\right)+\\cdots=\\left(a-\\frac c2\\right)x+\\left(\\frac{a^2}{2}+\\frac{b^2}{2}+\\frac{c^2}{2}\\right)x^2+\\cdots$.",
+    "The ratio $\\frac{\\left(a-\\frac c2\\right)x+\\frac{a^2+b^2+c^2}{2}x^2+\\cdots}{2x^2}$ has a finite limit only if $a-\\frac c2=0$, so $a=\\frac c2$, i.e. $c=2a$.",
+    "Then the limit is $\\frac{a^2+b^2+c^2}{2\\cdot2}=\\frac{a^2+b^2+c^2}{4}=17$, so $a^2+b^2+c^2=68$.",
+    "Substituting $c^2=4a^2$: $a^2+b^2+4a^2=68$, i.e. $5a^2+b^2=68$. Answer (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate: for a numerator $N$ with $N(0)=0$ and a denominator $D\\sim\\frac{D''(0)}{2}x^2$, the limit is $\\frac{N''(0)}{D''(0)}$ once $N'(0)=0$ (L'Hospital twice).",
+     "solution": [
+      "Let $N(x)=e^{ax}-\\cos bx-\\frac c2xe^{-cx}$ and $D(x)=1-\\cos2x$. Then $N(0)=0$, $D(0)=D'(0)=0$ and $D''(0)=4$.",
+      "$N'(x)=ae^{ax}+b\\sin bx-\\frac c2(1-cx)e^{-cx}$, so $N'(0)=a-\\frac c2$. For the limit to be finite we need $N'(0)=0$, so $c=2a$.",
+      "$N''(x)=a^2e^{ax}+b^2\\cos bx-\\frac c2\\left(-c-c+c^2x\\right)e^{-cx}$, so $N''(0)=a^2+b^2+c^2$.",
+      "By L'Hospital applied twice the limit is $\\frac{N''(0)}{D''(0)}=\\frac{a^2+b^2+c^2}{4}=17$.",
+      "So $a^2+b^2+c^2=68$ with $c=2a$, giving $5a^2+b^2=68$. Answer (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\lim\\frac{N(x)}{x^k}$ to be finite and non-zero, all Maclaurin coefficients of $N$ below $x^k$ must vanish; the limit is the coefficient of $x^k$.",
+    "$\\frac{d}{dx}\\left[xe^{-cx}\\right]=(1-cx)e^{-cx}$ and the Maclaurin series: $xe^{-cx}=x-cx^2+\\frac{c^2x^3}{2}-\\cdots$.",
+    "$1-\\cos kx=\\frac{k^2x^2}{2}-\\frac{k^4x^4}{24}+\\cdots$; for $k=2$ the leading term is $2x^2$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits by rationalisation of nested surds"
+   ],
+   "level": 2,
+   "question": "If $a=\\lim_{x\\to0}\\frac{\\sqrt{1+\\sqrt{1+x^4}}-\\sqrt2}{x^4}$ and $b=\\lim_{x\\to0}\\frac{\\sin^2x}{\\sqrt2-\\sqrt{1+\\cos x}}$, then the value of $ab^3$ is :",
+   "options": [
+    "$36$",
+    "$25$",
+    "$32$",
+    "$30$"
+   ],
+   "answer": "(C) $32$",
+   "key_idea": "Rationalise twice for $a$ (outer surd, then inner surd) and once for $b$; each step cancels exactly the vanishing factor.",
+   "solution": [
+    "For $a$, multiply by the conjugate $\\sqrt{1+\\sqrt{1+x^4}}+\\sqrt2$: numerator becomes $\\left(1+\\sqrt{1+x^4}\\right)-2=\\sqrt{1+x^4}-1$, so $a=\\lim\\frac{\\sqrt{1+x^4}-1}{x^4\\left(\\sqrt{1+\\sqrt{1+x^4}}+\\sqrt2\\right)}$.",
+    "Multiply by $\\sqrt{1+x^4}+1$: $\\left(\\sqrt{1+x^4}-1\\right)\\left(\\sqrt{1+x^4}+1\\right)=x^4$, so $a=\\lim\\frac{x^4}{x^4\\left(\\sqrt{1+\\sqrt{1+x^4}}+\\sqrt2\\right)\\left(\\sqrt{1+x^4}+1\\right)}$.",
+    "Cancel $x^4$ and put $x=0$: $a=\\frac1{(\\sqrt2+\\sqrt2)(1+1)}=\\frac1{4\\sqrt2}$.",
+    "For $b$, write $\\sin^2x=(1-\\cos x)(1+\\cos x)$ and multiply by $\\sqrt2+\\sqrt{1+\\cos x}$: the denominator becomes $2-(1+\\cos x)=1-\\cos x$.",
+    "So $b=\\lim(1+\\cos x)\\left(\\sqrt2+\\sqrt{1+\\cos x}\\right)=2\\left(\\sqrt2+\\sqrt2\\right)=4\\sqrt2$.",
+    "Now $ab^3=\\frac1{4\\sqrt2}\\cdot\\left(4\\sqrt2\\right)^3=\\left(4\\sqrt2\\right)^2=32$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Binomial approximation $\\sqrt{1+t}\\approx1+\\frac t2$ applied from the inside out.",
+     "solution": [
+      "For small $x$: $\\sqrt{1+x^4}\\approx1+\\frac{x^4}{2}$, so $1+\\sqrt{1+x^4}\\approx2+\\frac{x^4}{2}=2\\left(1+\\frac{x^4}{4}\\right)$.",
+      "Then $\\sqrt{1+\\sqrt{1+x^4}}\\approx\\sqrt2\\left(1+\\frac{x^4}{8}\\right)$, so the numerator of $a$ is $\\approx\\frac{\\sqrt2x^4}{8}$ and $a=\\frac{\\sqrt2}{8}=\\frac1{4\\sqrt2}$.",
+      "For $b$: $1+\\cos x\\approx2-\\frac{x^2}{2}=2\\left(1-\\frac{x^2}{4}\\right)$, so $\\sqrt{1+\\cos x}\\approx\\sqrt2\\left(1-\\frac{x^2}{8}\\right)$.",
+      "The denominator of $b$ is $\\approx\\frac{\\sqrt2x^2}{8}$ and $\\sin^2x\\approx x^2$, so $b=\\frac{8}{\\sqrt2}=4\\sqrt2$.",
+      "$ab^3=\\frac{\\sqrt2}{8}\\cdot(4\\sqrt2)^3=\\frac{\\sqrt2}{8}\\cdot128\\sqrt2=32$. Answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{A}-\\sqrt{B}=\\frac{A-B}{\\sqrt A+\\sqrt B}$: use it repeatedly for nested surds - each application strips one layer.",
+    "$\\sqrt{k+t}\\approx\\sqrt k\\left(1+\\frac{t}{2k}\\right)$ for small $t$ (first-order binomial).",
+    "Quick check by calculator: $x=0.001$ gives $ab^3\\approx31.99997$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits using the series of $\\sin x$, $\\cos x$ and $\\ln(1-x)$"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to0}\\frac{3+\\alpha\\sin x+\\beta\\cos x+\\log_e(1-x)}{3\\tan^2x}=\\frac13$, then $2\\alpha-\\beta$ is equal to :",
+   "options": [
+    "$7$",
+    "$1$",
+    "$5$",
+    "$2$"
+   ],
+   "answer": "(C) $5$",
+   "key_idea": "The denominator is $\\sim3x^2$, so the constant and $x$ coefficients of the numerator must vanish and the $x^2$ coefficient is fixed.",
+   "solution": [
+    "Expand: $\\alpha\\sin x=\\alpha\\left(x-\\frac{x^3}{6}+\\cdots\\right)$, $\\beta\\cos x=\\beta\\left(1-\\frac{x^2}{2}+\\cdots\\right)$, $\\log_e(1-x)=-x-\\frac{x^2}{2}-\\frac{x^3}{3}-\\cdots$.",
+    "Numerator $=(3+\\beta)+(\\alpha-1)x+\\left(-\\frac12-\\frac\\beta2\\right)x^2+\\cdots$.",
+    "Write the expression as $\\frac{(3+\\beta)+(\\alpha-1)x+\\left(-\\frac12-\\frac\\beta2\\right)x^2+\\cdots}{3x^2}\\cdot\\frac{x^2}{\\tan^2x}$, with $\\frac{x^2}{\\tan^2x}\\to1$.",
+    "For the limit to be finite: $3+\\beta=0$ and $\\alpha-1=0$, so $\\beta=-3$ and $\\alpha=1$.",
+    "Then the limit is $\\frac{-\\frac12-\\frac\\beta2}{3}=\\frac{-\\frac12+\\frac32}{3}=\\frac13$, which agrees with the given value (consistency check).",
+    "Hence $2\\alpha-\\beta=2+3=5$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat the numerator $N$ as a function: it must vanish with its first derivative at $0$, and $\\frac{N''(0)}{2}\\Big/3=\\frac13$.",
+     "solution": [
+      "$N(x)=3+\\alpha\\sin x+\\beta\\cos x+\\ln(1-x)$, so $N(0)=3+\\beta$. Finiteness needs $N(0)=0$, i.e. $\\beta=-3$.",
+      "$N'(x)=\\alpha\\cos x-\\beta\\sin x-\\frac1{1-x}$, so $N'(0)=\\alpha-1=0$ gives $\\alpha=1$.",
+      "$N''(x)=-\\alpha\\sin x-\\beta\\cos x-\\frac1{(1-x)^2}$, so $N''(0)=-\\beta-1=2$.",
+      "The limit is $\\frac{N''(0)/2}{3}=\\frac{1}{3}$ - consistent with the given value, so $\\alpha=1$, $\\beta=-3$.",
+      "$2\\alpha-\\beta=5$. Answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^2x\\sim x^2$ near $0$, so $3\\tan^2x$ plays the role of $3x^2$: the numerator needs an $x^2$ leading term.",
+    "$\\ln(1-x)=-x-\\frac{x^2}{2}-\\frac{x^3}{3}-\\cdots$ for $|x|<1$; $\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\cdots$.",
+    "In 'find constants' problems with a given finite limit, the number of equations equals the order of vanishing; extra data (the given value) either fixes a constant or serves as a consistency check."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of an even function involving modulus and exponentials"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to0}\\frac{e^{2|\\sin x|}-2|\\sin x|-1}{x^2}$ :",
+   "options": [
+    "does not exist",
+    "is equal to $1$",
+    "is equal to $2$",
+    "is equal to $-1$"
+   ],
+   "answer": "(C) is equal to $2$",
+   "key_idea": "The expression is even, so the left-hand and right-hand limits agree; on the right $|\\sin x|=\\sin x$.",
+   "solution": [
+    "The function $\\frac{e^{2|\\sin x|}-2|\\sin x|-1}{x^2}$ is even (replacing $x$ by $-x$ changes nothing), so LHL = RHL.",
+    "RHL: for $x\\to0^+$, $|\\sin x|=\\sin x$, so the limit is $\\lim_{x\\to0^+}\\frac{e^{2\\sin x}-2\\sin x-1}{x^2}$, of the form $\\frac00$.",
+    "Apply L'Hospital's rule: $\\lim\\frac{e^{2\\sin x}\\cdot2\\cos x-2\\cos x}{2x}$.",
+    "Rewrite as $\\lim\\frac{e^{2\\sin x}-1}{2\\sin x}\\cdot\\frac{2\\sin x}{x}\\cdot\\cos x$.",
+    "Each factor has a standard limit: $\\frac{e^{y}-1}{y}\\to1$ (with $y=2\\sin x\\to0$), $\\frac{2\\sin x}{x}\\to2$, $\\cos x\\to1$.",
+    "So the limit is $1\\times2\\times1=2$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $s=|\\sin x|\\to0$: the numerator is $e^{2s}-2s-1\\sim\\frac{(2s)^2}{2}=2s^2$, and $s^2=\\sin^2x\\sim x^2$.",
+     "solution": [
+      "Let $y=2|\\sin x|$, so $y\\to0$ as $x\\to0$. The numerator is $e^{y}-y-1=\\frac{y^2}{2}+\\frac{y^3}{6}+\\cdots\\sim\\frac{y^2}{2}$.",
+      "So the numerator is $\\sim\\frac{4\\sin^2x}{2}=2\\sin^2x$ (the modulus disappears because it only appears squared).",
+      "Hence the expression $\\sim\\frac{2\\sin^2x}{x^2}\\to2$ from both sides. Answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{e^y-y-1}{y^2}\\to\\frac12$ as $y\\to0$ (second-order Maclaurin remainder of $e^y$).",
+    "A modulus inside an even expression is harmless: $|\\sin x|^2=\\sin^2x$, so the limit agrees from both sides.",
+    "In general $\\lim_{x\\to0}\\frac{e^{kx}-1-kx}{x^2}=\\frac{k^2}{2}$; here $k=2$ gives $2$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a ratio for a strictly increasing function (squeeze theorem)",
+    "Greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb R\\to(0,\\infty)$ be a strictly increasing function such that $\\lim_{x\\to\\infty}\\frac{f(7x)}{f(x)}=1$. Then the value of $\\lim_{x\\to\\infty}\\left[\\frac{f(5x)}{f(x)}-1\\right]$ is equal to :",
+   "options": [
+    "$\\frac75$",
+    "$0$",
+    "$1$",
+    "$4$"
+   ],
+   "answer": "(B) $0$",
+   "key_idea": "Monotonicity traps $\\frac{f(5x)}{f(x)}$ between $1$ and $\\frac{f(7x)}{f(x)}\\to1$, so $\\frac{f(5x)}{f(x)}-1$ is a tiny positive number.",
+   "solution": [
+    "For $x>0$: $x<5x<7x$ and $f$ is strictly increasing, so $f(x)<f(5x)<f(7x)$.",
+    "Divide by $f(x)>0$: $1<\\frac{f(5x)}{f(x)}<\\frac{f(7x)}{f(x)}$.",
+    "As $x\\to\\infty$, $\\frac{f(7x)}{f(x)}\\to1$, so by the squeeze theorem $\\frac{f(5x)}{f(x)}\\to1$, and it stays above $1$, i.e. it tends to $1^+$.",
+    "Subtracting $1$: $0<\\frac{f(5x)}{f(x)}-1<\\frac{f(7x)}{f(x)}-1\\to0$, so for large $x$ the quantity is in $(0,1)$.",
+    "Hence $\\left[\\frac{f(5x)}{f(x)}-1\\right]=0$ for all large $x$, and the limit is $0$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The answer must be the same for every admissible $f$, so test one concrete function, e.g. $f(x)=2+\\tan^{-1}x$.",
+     "solution": [
+      "$f(x)=2+\\tan^{-1}x$ maps $\\mathbb R$ into $\\left(2-\\frac\\pi2,\\,2+\\frac\\pi2\\right)\\subset(0,\\infty)$ and is strictly increasing.",
+      "$\\frac{f(7x)}{f(x)}\\to\\frac{2+\\frac\\pi2}{2+\\frac\\pi2}=1$, so $f$ satisfies the hypothesis.",
+      "$\\frac{f(5x)}{f(x)}-1=\\frac{\\tan^{-1}5x-\\tan^{-1}x}{2+\\tan^{-1}x}$, which is positive and tends to $0$ (numerator $\\to\\frac\\pi2-\\frac\\pi2=0$).",
+      "So the bracket is $0$ for large $x$. Since the question has one answer for every such $f$, the answer is $0$: option (B).",
+      "(This is a legitimate shortcut for a single-correct question; the proof in the main solution shows the result holds for all such $f$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is increasing and $\\frac{f(ax)}{f(x)}\\to1$ for one $a>1$, then it tends to $1$ for every $a>1$ (squeeze between $1$ and $\\frac{f(ax)}{f(x)}$ using monotonicity).",
+    "When asked for $\\lim[g(x)]$ with $g\\to L$, find from which side $g$ approaches $L$: here $g\\to0^+$, so $[g]=0$; had it approached from below, $[g]=-1$.",
+    "Testing a model function (e.g. slowly varying $f$ like $\\ln x$ or $2+\\tan^{-1}x$) is a quick consistency check for single-answer questions."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Composition of a piecewise-defined function on $\\mathbb N$",
+    "Limit with the greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\begin{cases}x-1, & x\\text{ is even}\\\\ 2x, & x\\text{ is odd}\\end{cases}$, $x\\in\\mathbb N$. If for some $a\\in\\mathbb N$, $f(f(f(a)))=21$, then $\\lim_{x\\to a^-}\\left\\{\\frac{|x|^3}{a}-\\left[\\frac xa\\right]\\right\\}$, where $[t]$ denotes the greatest integer less than or equal to $t$, is equal to :",
+   "options": [
+    "$225$",
+    "$144$",
+    "$121$",
+    "$169$"
+   ],
+   "answer": "(B) $144$",
+   "key_idea": "Undo $f$ three times from $21$, checking the parity each time to pick the right branch.",
+   "solution": [
+    "Let $z=f(f(a))$. Then $f(z)=21$. If $z$ were odd, $f(z)=2z=21$ is impossible; so $z$ is even and $z-1=21$, i.e. $f(f(a))=22$.",
+    "Let $w=f(a)$. Then $f(w)=22$. If $w$ were even, $w-1=22$ gives $w=23$ (odd), a contradiction; so $w$ is odd and $2w=22$, i.e. $f(a)=11$.",
+    "If $a$ were odd, $2a=11$ is impossible; so $a$ is even and $a-1=11$, i.e. $a=12$.",
+    "Check: $f(12)=11$, $f(11)=22$, $f(22)=21$. So $a=12$.",
+    "Now evaluate $\\lim_{x\\to12^-}\\left\\{\\frac{|x|^3}{12}-\\left[\\frac x{12}\\right]\\right\\}$. As $x\\to12^-$, $\\frac{|x|^3}{12}\\to\\frac{1728}{12}=144$.",
+    "For $x$ slightly less than $12$, $\\frac x{12}$ is slightly less than $1$, so $\\left[\\frac x{12}\\right]=0$.",
+    "The limit is $144-0=144$. Answer (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parity alternates under $f$: $f(\\text{odd})=2x$ is even and $f(\\text{even})=x-1$ is odd, so the parity pattern of the chain is forced.",
+     "solution": [
+      "$f(f(f(a)))=21$ is odd. Only an even input gives an odd output (since $f(\\text{odd})=2x$ is even), so $f(f(a))$ is even.",
+      "Then $f(f(a))$ even requires $f(a)$ odd; and $f(a)$ odd requires $a$ even.",
+      "For even $a$: $f(a)=a-1$ (odd), $f(a-1)=2(a-1)$ (even), $f(2a-2)=2a-3$.",
+      "$2a-3=21$ gives $a=12$ (even, consistent).",
+      "Then the limit is $\\frac{12^3}{12}-0=144$. Answer (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a piecewise rule on parity, track the parity of each iterate: here $\\text{even}\\to\\text{odd}\\to\\text{even}\\to\\text{odd}$, which pins $a$'s parity immediately.",
+    "A pre-image chain must be checked at every step for consistency with the branch used (e.g. $w=23$ is odd, so it cannot come from the even branch).",
+    "For $x\\to a^-$ with $a$ a positive integer, $\\left[\\frac xa\\right]=0$ (since $\\frac xa\\to1^-$), whereas for $x\\to a^+$ it is $1$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits by series expansion: finding constants"
+   ],
+   "level": 3,
+   "question": "If $\\lim_{x\\to0}\\frac{ax^2e^x-b\\log_e(1+x)+cxe^{-x}}{x^2\\sin x}=1$, then $16\\left(a^2+b^2+c^2\\right)$ is equal to ________.",
+   "answer": "81",
+   "key_idea": "The denominator is $\\sim x^3$, so the numerator's $x$ and $x^2$ coefficients must vanish and its $x^3$ coefficient equals $1$.",
+   "solution": [
+    "Expand $ax^2e^x=a\\left(x^2+x^3+\\cdots\\right)$, $-b\\log_e(1+x)=-b\\left(x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\cdots\\right)$, $cxe^{-x}=c\\left(x-x^2+\\frac{x^3}{2}-\\cdots\\right)$.",
+    "Numerator $=(-b+c)x+\\left(a+\\frac b2-c\\right)x^2+\\left(a-\\frac b3+\\frac c2\\right)x^3+\\cdots$.",
+    "Denominator: $x^2\\sin x=x^3\\left(1-\\frac{x^2}{6}+\\cdots\\right)$.",
+    "For a finite limit the coefficients of $x$ and $x^2$ in the numerator must vanish: $-b+c=0$ gives $c=b$; $a+\\frac b2-c=0$ gives $a=\\frac b2$.",
+    "The limit equals the coefficient of $x^3$: $a-\\frac b3+\\frac c2=1$.",
+    "Substitute $a=\\frac b2$, $c=b$: $\\frac b2-\\frac b3+\\frac b2=\\frac{3b-2b+3b}{6}=\\frac{4b}{6}=1$, so $b=\\frac32$.",
+    "Hence $c=\\frac32$ and $a=\\frac34$.",
+    "$16\\left(a^2+b^2+c^2\\right)=16\\left(\\frac9{16}+\\frac94+\\frac94\\right)=9+36+36=81$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Derivative form: $N(0)=N'(0)=N''(0)=0$ and $\\frac{N'''(0)}{6}=1$ (L'Hospital three times), computed term by term.",
+     "solution": [
+      "Let $N(x)=ax^2e^x-b\\ln(1+x)+cxe^{-x}$; the denominator $x^2\\sin x\\sim x^3$, so we need $N'(0)=N''(0)=0$ and $\\frac{N'''(0)}{6}=1$.",
+      "$N'(0)=-b+c=0$ (the derivative of $ax^2e^x$ is $0$ at $x=0$; that of $cxe^{-x}$ is $c$).",
+      "$N''(0)=2a+b-2c=0$, using $\\left(x^2e^x\\right)''=\\left(x^2+4x+2\\right)e^x$, $\\left(-\\ln(1+x)\\right)''=\\frac1{(1+x)^2}$ and $\\left(xe^{-x}\\right)''=(x-2)e^{-x}$.",
+      "$N'''(0)=6a-2b+3c=6$, using $\\left(x^2e^x\\right)'''=\\left(x^2+6x+6\\right)e^x$, $\\left(-\\ln(1+x)\\right)'''=-\\frac2{(1+x)^3}$ and $\\left(xe^{-x}\\right)'''=(3-x)e^{-x}$.",
+      "From $c=b$ and $2a+b-2c=0$ we get $a=\\frac b2$; then $3b-2b+3b=4b=6$, so $b=c=\\frac32$, $a=\\frac34$.",
+      "$16\\left(a^2+b^2+c^2\\right)=81$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Maclaurin series to remember: $e^{\\pm x}=1\\pm x+\\frac{x^2}{2}\\pm\\frac{x^3}{6}$, $\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}$, $\\sin x=x-\\frac{x^3}{6}$, $\\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24}$.",
+    "Order of vanishing: $\\frac{N(x)}{x^k}$ has a finite limit iff coefficients of $x^0,\\dots,x^{k-1}$ in $N$ are $0$; the limit is the coefficient of $x^k$.",
+    "Check: with $a=\\frac34$, $b=c=\\frac32$ and $x=10^{-6}$ the expression evaluates to $1.0000005$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "One-sided limits with fractional part and inverse trigonometric functions"
+   ],
+   "level": 3,
+   "question": "Let $\\{x\\}$ denote the fractional part of $x$ and $f(x)=\\frac{\\cos^{-1}\\left(1-\\{x\\}^2\\right)\\sin^{-1}\\left(1-\\{x\\}\\right)}{\\{x\\}-\\{x\\}^3}$, $x\\neq0$. If $L$ and $R$ respectively denote the left-hand limit and the right-hand limit of $f(x)$ at $x=0$, then $\\frac{32}{\\pi^2}\\left(L^2+R^2\\right)$ is equal to ________.",
+   "answer": "18",
+   "key_idea": "Just left of $0$ the fractional part is $x+1\\to1^-$; just right of $0$ it is $x\\to0^+$ - handle the two sides with different local forms.",
+   "solution": [
+    "Left limit: for $x\\to0^-$ we have $\\{x\\}=x+1$. Then $1-\\{x\\}^2=-x^2-2x$, $1-\\{x\\}=-x$ and $\\{x\\}-\\{x\\}^3=(x+1)\\left(1-(x+1)^2\\right)=(x+1)\\left(-x^2-2x\\right)$.",
+    "So $L=\\lim_{x\\to0^-}\\frac{\\cos^{-1}\\left(-x^2-2x\\right)\\sin^{-1}(-x)}{(x+1)\\left(-x^2-2x\\right)}$.",
+    "As $x\\to0^-$: $\\cos^{-1}\\left(-x^2-2x\\right)\\to\\cos^{-1}0=\\frac\\pi2$ and $x+1\\to1$.",
+    "$\\frac{\\sin^{-1}(-x)}{-x^2-2x}=\\frac{\\sin^{-1}(-x)}{-x}\\cdot\\frac{-x}{-x(x+2)}\\to1\\cdot\\frac12$. So $L=\\frac\\pi2\\cdot\\frac12=\\frac\\pi4$.",
+    "Right limit: for $x\\to0^+$, $\\{x\\}=x$, so $R=\\lim_{x\\to0^+}\\frac{\\cos^{-1}\\left(1-x^2\\right)\\sin^{-1}(1-x)}{x\\left(1-x^2\\right)}$.",
+    "$\\sin^{-1}(1-x)\\to\\frac\\pi2$ and $1-x^2\\to1$, so $R=\\frac\\pi2\\lim_{x\\to0^+}\\frac{\\cos^{-1}\\left(1-x^2\\right)}{x}$, a $\\frac00$ form.",
+    "By L'Hospital: $\\frac{d}{dx}\\cos^{-1}\\left(1-x^2\\right)=\\frac{2x}{\\sqrt{1-\\left(1-x^2\\right)^2}}=\\frac{2x}{x\\sqrt{2-x^2}}=\\frac2{\\sqrt{2-x^2}}\\to\\sqrt2$.",
+    "So $R=\\frac\\pi2\\cdot\\sqrt2=\\frac\\pi{\\sqrt2}$.",
+    "$\\frac{32}{\\pi^2}\\left(L^2+R^2\\right)=\\frac{32}{\\pi^2}\\left(\\frac{\\pi^2}{16}+\\frac{\\pi^2}{2}\\right)=2+16=18$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's right-limit step (L'Hospital) is printed as $\\frac{-1(-2x)\\frac\\pi2}{2\\sqrt{1-(1-x^2)^2}}$ and then $\\frac{\\sqrt{2-x^2}}{1}\\cdot\\frac\\pi2$: the factor 2 in the denominator and the inverted radical are wrong. The correct derivative of $\\cos^{-1}(1-x^2)$ is $\\frac{2}{\\sqrt{2-x^2}}$ (for $x>0$), which tends to $\\sqrt2$ - the same value that the PDF reaches, so $R=\\frac{\\pi}{\\sqrt2}$ and the answer $18$ are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Half-angle identity: $\\cos^{-1}\\left(1-2u^2\\right)=2\\sin^{-1}u$ for $u\\in[0,1]$, so $\\cos^{-1}\\left(1-t^2\\right)=2\\sin^{-1}\\frac{t}{\\sqrt2}$ - no derivative needed.",
+     "solution": [
+      "Right limit ($t=\\{x\\}=x\\to0^+$): $\\cos^{-1}\\left(1-t^2\\right)=2\\sin^{-1}\\frac t{\\sqrt2}$, because $\\cos\\left(2\\theta\\right)=1-2\\sin^2\\theta$ with $\\sin\\theta=\\frac t{\\sqrt2}$.",
+      "So $R=\\lim\\frac{2\\sin^{-1}\\frac t{\\sqrt2}\\cdot\\sin^{-1}(1-t)}{t(1-t^2)}=2\\cdot\\frac1{\\sqrt2}\\cdot\\frac\\pi2=\\frac\\pi{\\sqrt2}$, using $\\frac{\\sin^{-1}u}{u}\\to1$ with $u=\\frac t{\\sqrt2}$.",
+      "Left limit: put $t=\\{x\\}=1-s$ with $s=-x\\to0^+$. Then $1-t^2=2s-s^2\\to0$, $1-t=s$ and $t-t^3=(1-s)\\,s\\,(2-s)$.",
+      "$L=\\lim\\cos^{-1}\\left(2s-s^2\\right)\\cdot\\frac{\\sin^{-1}s}{s}\\cdot\\frac1{(1-s)(2-s)}=\\frac\\pi2\\cdot1\\cdot\\frac12=\\frac\\pi4$.",
+      "$\\frac{32}{\\pi^2}\\left(\\frac{\\pi^2}{16}+\\frac{\\pi^2}2\\right)=2+16=18$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\{x\\}=x-\\lfloor x\\rfloor$: just left of an integer $n$, $\\{x\\}\\to1^-$ (it equals $x-n+1$); just right, $\\{x\\}\\to0^+$ (it equals $x-n$).",
+    "$\\cos^{-1}(1-2u^2)=2\\sin^{-1}u$ for $0\\le u\\le1$; equivalently $\\cos^{-1}(1-t^2)\\sim\\sqrt2\\,t$ as $t\\to0^+$.",
+    "$\\sin^{-1}(1-t)\\to\\frac\\pi2$ as $t\\to0$, and $\\sin^{-1}s\\sim s$ as $s\\to0$: inverse-trig functions near their endpoints need a local form, not a direct substitution."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a ratio of sums (summation of series)"
+   ],
+   "level": 3,
+   "question": "$\\lim_{n\\to\\infty}\\frac{\\left(1^2-1\\right)(n-1)+\\left(2^2-2\\right)(n-2)+\\cdots+\\left((n-1)^2-(n-1)\\right)\\cdot1}{\\left(1^3+2^3+\\cdots+n^3\\right)-\\left(1^2+2^2+\\cdots+n^2\\right)}$ is equal to :",
+   "options": [
+    "$\\frac23$",
+    "$\\frac34$",
+    "$\\frac12$",
+    "$\\frac13$"
+   ],
+   "answer": "(D) $\\frac13$",
+   "key_idea": "The $k$-th numerator term is $(k^2-k)(n-k)$; only the leading power $n^4$ of each sum matters.",
+   "solution": [
+    "The numerator terms are $(k^2-k)(n-k)$ for $k=1,2,\\dots,n-1$, so $N=\\sum_{k=1}^{n-1}(k^2-k)(n-k)$.",
+    "Expand: $(k^2-k)(n-k)=-k^3+(n+1)k^2-nk$.",
+    "So $N=-\\sum_{k=1}^{n-1}k^3+(n+1)\\sum_{k=1}^{n-1}k^2-n\\sum_{k=1}^{n-1}k$.",
+    "Leading behaviours: $\\sum_{k=1}^{n-1}k^3\\sim\\frac{n^4}{4}$, $\\sum_{k=1}^{n-1}k^2\\sim\\frac{n^3}{3}$ and $n\\sum_{k=1}^{n-1}k\\sim\\frac{n^3}{2}$ (lower order).",
+    "Hence $N\\sim-\\frac{n^4}{4}+\\frac{n\\cdot n^3}{3}=n^4\\left(\\frac13-\\frac14\\right)=\\frac{n^4}{12}$.",
+    "Denominator: $D=\\sum_{r=1}^nr^3-\\sum_{r=1}^nr^2=\\frac{n^2(n+1)^2}{4}-\\frac{n(n+1)(2n+1)}{6}$, whose leading term is $\\frac{n^4}{4}$.",
+    "Therefore the limit is $\\frac{n^4/12}{n^4/4}=\\frac13$. Answer (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the numerator as $\\sum_{r=1}^{n-1}\\left((r-1)^2-(r-1)\\right)(n-r)$, which shifts the index in the first factor only: the actual terms are $(k^2-k)(n-k)$ (e.g. the second term is $(2^2-2)(n-2)$, but the PDF's $r=2$ term is $0\\cdot(n-2)$). The polynomial it then lists, $-r^3+(n+3)r^2-(2+3n)r+2n$, does not come from the question's terms. Its leading coefficient $\\frac{1}{12}n^4$ happens to coincide, so the answer $\\frac13$ is right; the working was rewritten with the correct general term.",
+   "alternate_solutions": [
+    {
+     "idea": "Leading-order Riemann sum: with $k=nx$, $N\\approx n^4\\int_0^1x^2(1-x)\\,dx$ and $D\\approx n^4\\int_0^1x^3\\,dx$.",
+     "solution": [
+      "For large $n$ and $k=nx$: $(k^2-k)(n-k)\\approx k^2(n-k)=n^3x^2(1-x)$.",
+      "$N=\\sum_{k}(\\cdots)\\approx n\\cdot n^3\\int_0^1x^2(1-x)\\,dx=n^4\\left(\\frac13-\\frac14\\right)=\\frac{n^4}{12}$.",
+      "$D=\\sum_{r=1}^n\\left(r^3-r^2\\right)\\approx n^4\\int_0^1x^3\\,dx=\\frac{n^4}{4}$.",
+      "The ratio tends to $\\frac{1/12}{1/4}=\\frac13$. Answer (D).",
+      "(Exact check: $N=2\\binom{n+1}{4}=\\frac{(n+1)n(n-1)(n-2)}{12}$ and $D=\\frac{n(n+1)(n-1)(3n+2)}{12}$, so $\\frac ND=\\frac{n-2}{3n+2}\\to\\frac13$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{k=1}^{n-1}\\binom k2(n-k)=\\binom{n+1}{4}$ (choose 4 elements from $n+1$ and let the 3rd smallest be $k+1$), hence $\\sum_{k=1}^{n-1}k(k-1)(n-k)=2\\binom{n+1}4$.",
+    "$\\sum_{r=1}^nr^2(r-1)=\\frac{n(n+1)(n-1)(3n+2)}{12}$; check $n=2$: $4(1)=4$ and $\\frac{2\\cdot3\\cdot1\\cdot8}{12}=4$.",
+    "For $\\lim\\frac{\\sum f(k)}{\\sum g(k)}$ with polynomial terms, only the highest-degree parts matter: use $\\sum_{k\\le n}k^p\\sim\\frac{n^{p+1}}{p+1}$ (a Riemann integral).",
+    "A numerator of the form $\\sum(\\ldots)(n-k)$ is a convolution; the exact value often follows from a binomial identity."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of the intersection point of two varying lines",
+    "Equation of a circle with given centre and a point on it"
+   ],
+   "level": 2,
+   "question": "Let a circle passing through $(2,0)$ have its centre at the point $(h,k)$. Let $(x_c,y_c)$ be the point of intersection of the lines $3x+5y=1$ and $(2+c)x+5c^2y=1$. If $h=\\lim_{c\\to1}x_c$ and $k=\\lim_{c\\to1}y_c$, then the equation of the circle is :",
+   "options": [
+    "$25x^2+25y^2-2x+2y-60=0$",
+    "$5x^2+5y^2-4x+2y-12=0$",
+    "$25x^2+25y^2-20x+2y-60=0$",
+    "$5x^2+5y^2-4x-2y-12=0$"
+   ],
+   "answer": "(C) $25x^2+25y^2-20x+2y-60=0$",
+   "key_idea": "Eliminate $y$ to get $x_c$ and $y_c$ as functions of $c$; the common factor $(c-1)$ cancels and the limits are finite.",
+   "solution": [
+    "From $3x+5y=1$: $5y=1-3x$, so $5c^2y=c^2(1-3x)$.",
+    "Substituting into $(2+c)x+5c^2y=1$: $(2+c)x+c^2-3c^2x=1$, i.e. $\\left(3c^2-c-2\\right)x=c^2-1$.",
+    "$x_c=\\frac{c^2-1}{3c^2-c-2}$ and $y_c=\\frac15\\left(1-\\frac{3(c^2-1)}{3c^2-c-2}\\right)=\\frac{1-c}{5\\left(3c^2-c-2\\right)}$.",
+    "Since $3c^2-c-2=(c-1)(3c+2)$: $h=\\lim_{c\\to1}\\frac{(c-1)(c+1)}{(c-1)(3c+2)}=\\frac{2}{5}$.",
+    "$k=\\lim_{c\\to1}\\frac{1-c}{5(c-1)(3c+2)}=\\lim\\frac{-1}{5(3c+2)}=-\\frac1{25}$.",
+    "The centre is $\\left(\\frac25,-\\frac1{25}\\right)$ and the circle passes through $(2,0)$, so $r^2=\\left(2-\\frac25\\right)^2+\\left(\\frac1{25}\\right)^2=\\frac{64}{25}+\\frac1{625}$.",
+    "Equation: $\\left(x-\\frac25\\right)^2+\\left(y+\\frac1{25}\\right)^2=\\frac{64}{25}+\\frac1{625}$, i.e. $x^2+y^2-\\frac45x+\\frac2{25}y+\\frac4{25}+\\frac1{625}=\\frac{64}{25}+\\frac1{625}$.",
+    "Multiply by $25$: $25x^2+25y^2-20x+2y+4=64$, i.e. $25x^2+25y^2-20x+2y-60=0$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "At $c=1$ the second line coincides with the first, so the limiting intersection is where the line meets the 'velocity' line $\\frac{\\partial}{\\partial c}=0$ of the family.",
+     "solution": [
+      "Let $F(x,y,c)=(2+c)x+5c^2y-1$. At $c=1$, $F=3x+5y-1$, the first line itself.",
+      "The intersection of $F(\\cdot,c)=0$ with $F(\\cdot,1)=0$ tends, as $c\\to1$, to the point where $F(\\cdot,1)=0$ and $\\frac{\\partial F}{\\partial c}\\Big|_{c=1}=0$ (subtract: $\\frac{F(c)-F(1)}{c-1}\\to F_c(1)$).",
+      "$F_c=x+10cy$, so at $c=1$: $x+10y=0$.",
+      "Solve with $3x+5y=1$: $x=-10y$, $-30y+5y=1$, so $y=-\\frac1{25}$ and $x=\\frac25$. Thus $(h,k)=\\left(\\frac25,-\\frac1{25}\\right)$.",
+      "The circle through $(2,0)$ with this centre is $25x^2+25y^2-20x+2y-60=0$. Answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Lines $L_1+c\\,L_2$-type families: if $F(x,y,c)=0$ becomes a fixed line at $c=c_0$, the intersection of nearby members with it tends to the point where $F=0$ and $\\frac{\\partial F}{\\partial c}=0$ (envelope idea).",
+    "Circle with centre $(h,k)$ through $(p,q)$: $(x-h)^2+(y-k)^2=(p-h)^2+(q-k)^2$; the form $x^2+y^2+2gx+2fy+c=0$ then follows by expansion.",
+    "When a limit of $\\frac{0}{0}$ type arises from a rational function, factorise and cancel the common factor, e.g. $3c^2-c-2=(c-1)(3c+2)$."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a $1^\\infty$-type difference expression"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to0}\\frac{e-(1+2x)^{\\frac1{2x}}}{x}$ is equal to :",
+   "options": [
+    "$e$",
+    "$-\\frac2e$",
+    "$0$",
+    "$e-e^2$"
+   ],
+   "answer": "(A) $e$",
+   "key_idea": "Write $(1+2x)^{\\frac1{2x}}=e^{\\frac{\\ln(1+2x)}{2x}}$ and factor $e$ out, leaving $\\frac{e^u-1}{x}$ with $u\\to0$.",
+   "solution": [
+    "$(1+2x)^{\\frac1{2x}}=e^{\\frac{\\ln(1+2x)}{2x}}$, so the expression is $\\frac{e-e^{\\frac{\\ln(1+2x)}{2x}}}{x}$.",
+    "Factor out $e$: $\\frac{e-e^{\\frac{\\ln(1+2x)}{2x}}}{x}=(-e)\\cdot\\frac{e^{\\frac{\\ln(1+2x)}{2x}-1}-1}{x}$.",
+    "Let $u=\\frac{\\ln(1+2x)}{2x}-1=\\frac{\\ln(1+2x)-2x}{2x}\\to0$; then $\\frac{e^u-1}{x}=\\frac{e^u-1}{u}\\cdot\\frac ux$ with $\\frac{e^u-1}{u}\\to1$.",
+    "$\\frac ux=\\frac{\\ln(1+2x)-2x}{2x^2}$. Using $\\ln(1+2x)=2x-2x^2+\\cdots$ the numerator is $\\sim-2x^2$, so $\\frac ux\\to\\frac{-2x^2}{2x^2}=-1$.",
+    "The limit is $(-e)\\times(-1)=e$. Answer (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Derivative definition: with $g(x)=(1+2x)^{1/2x}$ and $g(0)=e$ (continuous extension), the limit is $-g'(0)$.",
+     "solution": [
+      "$g(x)=(1+2x)^{\\frac1{2x}}\\to e$ as $x\\to0$, so the limit is $\\lim\\frac{e-g(x)}{x}=-\\lim\\frac{g(x)-g(0)}{x}=-g'(0)$.",
+      "$\\ln g=\\frac{\\ln(1+2x)}{2x}=1-x+\\frac{4x^2}{3}-\\cdots$ (series of $\\ln(1+u)=u-\\frac{u^2}{2}+\\frac{u^3}{3}$ with $u=2x$).",
+      "Hence $\\frac{g'}{g}=(\\ln g)'=-1+\\cdots$, so $g'(0)=g(0)\\cdot(-1)=-e$.",
+      "The limit is $-g'(0)=e$. Answer (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(1+t)^{1/t}=e\\left(1-\\frac t2+\\frac{11t^2}{24}-\\cdots\\right)$, so $\\lim_{t\\to0}\\frac{e-(1+t)^{1/t}}{t}=\\frac e2$ (check: $t=10^{-6}$ gives $1.35914$).",
+    "Here $t=2x$: $\\frac{e-(1+2x)^{1/2x}}{x}=2\\cdot\\frac{e-(1+t)^{1/t}}{t}\\to2\\cdot\\frac e2=e$.",
+    "General: $\\ln\\left[(1+t)^{1/t}\\right]=\\frac{\\ln(1+t)}{t}=1-\\frac t2+\\frac{t^2}{3}-\\cdots$ is the quantity to expand for any $1^\\infty$ correction term."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits by L'Hospital's rule with fractional powers"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to1}\\frac{(5x+1)^{\\frac13}-(x+5)^{\\frac13}}{(2x+3)^{\\frac12}-(x+4)^{\\frac12}}=\\frac{m\\sqrt5}{n(2n)^{\\frac23}}$, where $\\gcd(m,n)=1$, then $8m+12n$ is equal to ________.",
+   "answer": "100",
+   "key_idea": "At $x=1$ both numerator and denominator vanish ($6^{1/3}-6^{1/3}$, $\\sqrt5-\\sqrt5$): differentiate top and bottom.",
+   "solution": [
+    "At $x=1$: numerator $=6^{\\frac13}-6^{\\frac13}=0$ and denominator $=\\sqrt5-\\sqrt5=0$, a $\\frac00$ form.",
+    "Apply L'Hospital's rule: $\\lim\\frac{\\frac13\\cdot5(5x+1)^{-\\frac23}-\\frac13(x+5)^{-\\frac23}}{\\frac12\\cdot2(2x+3)^{-\\frac12}-\\frac12(x+4)^{-\\frac12}}$.",
+    "Put $x=1$: numerator $=\\left(\\frac53-\\frac13\\right)6^{-\\frac23}=\\frac43\\,6^{-\\frac23}$.",
+    "Denominator $=5^{-\\frac12}-\\frac12\\,5^{-\\frac12}=\\frac12\\,5^{-\\frac12}$.",
+    "The limit is $\\frac{\\frac43\\,6^{-\\frac23}}{\\frac12\\,5^{-\\frac12}}=\\frac83\\cdot\\frac{\\sqrt5}{6^{\\frac23}}$.",
+    "Match with $\\frac{m\\sqrt5}{n(2n)^{\\frac23}}$: take $n=3$, then $n(2n)^{\\frac23}=3\\cdot6^{\\frac23}$, so $m=8$ and $\\gcd(8,3)=1$.",
+    "$8m+12n=64+36=100$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Algebraic identities instead of derivatives: $a^3-b^3=(a-b)\\left(a^2+ab+b^2\\right)$ and $p^2-q^2=(p-q)(p+q)$.",
+     "solution": [
+      "Let $a=(5x+1)^{\\frac13}$, $b=(x+5)^{\\frac13}$. Then $a^3-b^3=4(x-1)$, so $a-b=\\frac{4(x-1)}{a^2+ab+b^2}$.",
+      "Let $p=(2x+3)^{\\frac12}$, $q=(x+4)^{\\frac12}$. Then $p^2-q^2=x-1$, so $p-q=\\frac{x-1}{p+q}$.",
+      "The ratio is $\\frac{a-b}{p-q}=\\frac{4(p+q)}{a^2+ab+b^2}$ (the factor $x-1$ cancels).",
+      "At $x=1$: $a=b=6^{\\frac13}$, $p=q=\\sqrt5$, so the ratio is $\\frac{4\\cdot2\\sqrt5}{3\\cdot6^{\\frac23}}=\\frac{8\\sqrt5}{3\\cdot6^{\\frac23}}$.",
+      "With $n=3$: $n(2n)^{\\frac23}=3\\cdot6^{\\frac23}$, so $m=8$, and $8m+12n=100$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a^n-b^n=(a-b)\\left(a^{n-1}+a^{n-2}b+\\cdots+b^{n-1}\\right)$: rationalises $\\sqrt[n]{\\ }$ differences, a derivative-free route to such limits.",
+    "$\\lim_{x\\to c}\\frac{\\sqrt[m]{u(x)}-\\sqrt[m]{v(x)}}{\\sqrt[k]{p(x)}-\\sqrt[k]{q(x)}}$ with $u(c)=v(c)$, $p(c)=q(c)$ reduces to a ratio of derivatives $\\frac{\\frac1m u_0^{\\frac1m-1}(u'-v')}{\\frac1kp_0^{\\frac1k-1}(p'-q')}$.",
+    "When matching an answer of the form $\\frac{m\\sqrt5}{n(2n)^{2/3}}$, identify the cube-root factor first: $(2n)^{2/3}=6^{2/3}$ forces $n=3$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits using the standard form $\\frac{1-\\cos u}{u^2}$ with roots of a quadratic",
+    "Quadratic equation with surd roots"
+   ],
+   "level": 3,
+   "question": "Let $a>0$ be a root of the equation $2x^2+x-2=0$. If $\\lim_{x\\to\\frac1a}\\frac{16\\left(1-\\cos\\left(2+x-2x^2\\right)\\right)}{(1-ax)^2}=\\alpha+\\beta\\sqrt{17}$, where $\\alpha,\\beta\\in\\mathbb Z$, then $\\alpha+\\beta$ is equal to ________.",
+   "answer": "170",
+   "key_idea": "$\\frac1a$ is a root of $2+x-2x^2$, so the cosine's argument is $-2\\left(x-\\frac1a\\right)(x+a)$, giving the form $\\frac{1-\\cos u}{u^2}$.",
+   "solution": [
+    "The roots of $2x^2+x-2=0$ are $\\frac{-1\\pm\\sqrt{17}}{4}$, so $a=\\frac{\\sqrt{17}-1}{4}>0$.",
+    "Divide $2a^2+a-2=0$ by $a^2$: $2+\\frac1a-\\frac2{a^2}=0$, so $\\frac1a$ is a root of $2+x-2x^2=0$; here $\\frac1a=\\frac{\\sqrt{17}+1}{4}$.",
+    "The roots of $2+x-2x^2=0$ are $\\frac1a$ and $-a$, so $2+x-2x^2=-2\\left(x-\\frac1a\\right)(x+a)$.",
+    "Let $u=2+x-2x^2\\to0$ as $x\\to\\frac1a$. Then $1-\\cos u=2\\sin^2\\frac u2$, and $\\frac{16\\cdot2\\sin^2\\frac u2}{a^2\\left(\\frac1a-x\\right)^2}$ is the expression.",
+    "Use $\\frac{\\sin\\frac u2}{\\frac u2}\\to1$: $\\sin\\frac u2\\sim\\frac u2=-\\left(x-\\frac1a\\right)(x+a)$, so the expression $\\to\\frac{32\\left(x+a\\right)^2}{a^2}$ at $x=\\frac1a$, i.e. $\\frac{32\\left(\\frac1a+a\\right)^2}{a^2}$.",
+    "$\\frac1a+a=\\frac{\\sqrt{17}+1}{4}+\\frac{\\sqrt{17}-1}{4}=\\frac{\\sqrt{17}}{2}$, so $\\left(\\frac1a+a\\right)^2=\\frac{17}{4}$.",
+    "$\\frac1{a^2}=\\left(\\frac{\\sqrt{17}+1}{4}\\right)^2=\\frac{18+2\\sqrt{17}}{16}=\\frac{9+\\sqrt{17}}{8}$.",
+    "The limit is $32\\cdot\\frac{17}{4}\\cdot\\frac{9+\\sqrt{17}}{8}=17\\left(9+\\sqrt{17}\\right)=153+17\\sqrt{17}$.",
+    "So $\\alpha=153$, $\\beta=17$ and $\\alpha+\\beta=170$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working has the right setup but its constants go wrong: it writes the limit as $2\\left(\\frac1a+\\frac4{\\sqrt{17}+1}\\right)^2\\left(\\frac4{\\sqrt{17}-1}\\right)^2$ (the factor should be $32$, not $2$: $16\\cdot2\\sin^2\\frac u2$ gives $32$), then evaluates it as $\\frac{68}{9-\\sqrt{17}}$, which actually equals $\\frac{17(9+\\sqrt{17})}{16}$, and finally states $17\\left(9+\\sqrt{17}\\right)$. The final value $17(9+\\sqrt{17})$ and the answer $170$ are right (confirmed numerically: $223.0928$).",
+   "alternate_solutions": [
+    {
+     "idea": "$1-\\cos u\\sim\\frac{u^2}{2}$ and $u\\approx u'\\left(\\frac1a\\right)\\left(x-\\frac1a\\right)$ near the simple root: the limit is $8\\,u'(x_0)^2x_0^2$ with $x_0=\\frac1a$.",
+     "solution": [
+      "Let $u(x)=2+x-2x^2$ and $x_0=\\frac1a$. Since $u(x_0)=0$, $u(x)\\approx u'(x_0)\\left(x-x_0\\right)$ and $1-\\cos u\\approx\\frac{u^2}{2}\\approx\\frac{u'(x_0)^2\\left(x-x_0\\right)^2}{2}$.",
+      "$(1-ax)^2=a^2\\left(x_0-x\\right)^2$, so the limit is $\\frac{16\\cdot\\frac12u'(x_0)^2}{a^2}=8\\,u'(x_0)^2\\,x_0^2$.",
+      "$u'(x)=1-4x$; $x_0$ solves $2x^2-x-2=0$, so $x_0=\\frac{1+\\sqrt{17}}{4}$ and $u'(x_0)=1-\\left(1+\\sqrt{17}\\right)=-\\sqrt{17}$, so $u'(x_0)^2=17$.",
+      "$x_0^2=\\frac{18+2\\sqrt{17}}{16}=\\frac{9+\\sqrt{17}}{8}$.",
+      "Limit $=8\\cdot17\\cdot\\frac{9+\\sqrt{17}}{8}=17\\left(9+\\sqrt{17}\\right)$, so $\\alpha+\\beta=153+17=170$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $u(x_0)=0$ and $u'(x_0)\\neq0$ then $\\lim_{x\\to x_0}\\frac{1-\\cos u(x)}{(x-x_0)^2}=\\frac{u'(x_0)^2}{2}$.",
+    "For $px^2+qx+r$ with root $x_0$: $u'(x_0)=2px_0+q=\\pm\\sqrt{q^2-4pr}$ (the sign depends on the root) - the discriminant appears directly; here $\\sqrt{1+16}=\\sqrt{17}$.",
+    "Reciprocal of a root of $2x^2+x-2=0$ is a root of $2x^2-x-2=0$ (reverse coefficients).",
+    "Check: $a=0.78078$, $x=\\frac1a+10^{-12}$: the expression equals $223.0928=17(9+\\sqrt{17})$."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Standard limits $\\frac{e^u-1}{u}$ and $1^\\infty$-type form",
+    "Relations between the roots and coefficients of a quadratic"
+   ],
+   "level": 3,
+   "question": "If $\\alpha=\\lim_{x\\to0^+}\\left(\\frac{e^{\\sqrt{\\tan x}}-e^{\\sqrt x}}{\\sqrt{\\tan x}-\\sqrt x}\\right)$ and $\\beta=\\lim_{x\\to0}(1+\\sin x)^{\\frac12\\cot x}$ are the roots of the quadratic equation $ax^2+bx-\\sqrt e=0$, then $12\\log_e(a+b)$ is equal to ________.",
+   "answer": "6",
+   "key_idea": "Evaluate the two limits ($\\alpha=1$, $\\beta=\\sqrt e$), then use sum and product of roots of $ax^2+bx-\\sqrt e=0$.",
+   "solution": [
+    "$\\alpha=\\lim_{x\\to0^+}\\frac{e^{\\sqrt{\\tan x}}-e^{\\sqrt x}}{\\sqrt{\\tan x}-\\sqrt x}=\\lim e^{\\sqrt x}\\cdot\\frac{e^{\\sqrt{\\tan x}-\\sqrt x}-1}{\\sqrt{\\tan x}-\\sqrt x}$.",
+    "As $x\\to0^+$, $e^{\\sqrt x}\\to1$ and with $v=\\sqrt{\\tan x}-\\sqrt x\\to0$ the factor $\\frac{e^v-1}{v}\\to1$. So $\\alpha=1$.",
+    "$\\beta=\\lim(1+\\sin x)^{\\frac12\\cot x}=\\lim e^{\\frac12\\cot x\\cdot\\ln(1+\\sin x)}=\\lim e^{\\frac12\\cos x\\cdot\\frac{\\ln(1+\\sin x)}{\\sin x}}$.",
+    "As $x\\to0$: $\\cos x\\to1$ and $\\frac{\\ln(1+\\sin x)}{\\sin x}\\to1$, so $\\beta=e^{\\frac12}=\\sqrt e$.",
+    "Product of roots of $ax^2+bx-\\sqrt e=0$: $\\alpha\\beta=-\\frac{\\sqrt e}{a}$, i.e. $\\sqrt e=-\\frac{\\sqrt e}{a}$, so $a=-1$.",
+    "Sum of roots: $\\alpha+\\beta=-\\frac ba$, i.e. $1+\\sqrt e=b$ (since $a=-1$).",
+    "$a+b=-1+1+\\sqrt e=\\sqrt e=e^{\\frac12}$.",
+    "$12\\log_e(a+b)=12\\cdot\\frac12=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Mean value theorem for $\\alpha$, a logarithm for $\\beta$, and direct substitution of the two roots (no Vieta).",
+     "solution": [
+      "By the mean value theorem for $e^t$ on $\\left[\\sqrt x,\\sqrt{\\tan x}\\right]$: $\\frac{e^{\\sqrt{\\tan x}}-e^{\\sqrt x}}{\\sqrt{\\tan x}-\\sqrt x}=e^{\\xi}$ with $\\xi$ between them; $\\xi\\to0$, so $\\alpha=e^0=1$.",
+      "$\\ln\\beta=\\lim\\frac{\\cot x}{2}\\ln(1+\\sin x)=\\frac12\\lim\\cos x\\cdot\\frac{\\ln(1+\\sin x)}{\\sin x}=\\frac12$, so $\\beta=\\sqrt e$.",
+      "$x=1$ satisfies the equation: $a+b-\\sqrt e=0$, so $b=\\sqrt e-a$.",
+      "$x=\\sqrt e$ satisfies it: $ae+b\\sqrt e-\\sqrt e=0$; substitute $b$: $ae+e-a\\sqrt e-\\sqrt e=0$, i.e. $a\\sqrt e(\\sqrt e-1)=-\\sqrt e(\\sqrt e-1)$, so $a=-1$.",
+      "Then $b=\\sqrt e+1$ and $a+b=\\sqrt e$, so $12\\ln(a+b)=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim\\frac{e^{f}-e^{g}}{f-g}=e^{c}$ when $f,g\\to c$ (mean value theorem / derivative of $e^t$).",
+    "For $1^\\infty$ forms $(1+u)^{v}$ with $u\\to0$, $v\\to\\infty$: the limit is $e^{\\lim uv}$; here $u=\\sin x$, $v=\\frac12\\cot x$, $uv=\\frac12\\cos x\\to\\frac12$.",
+    "Vieta for $ax^2+bx+c=0$: sum $=-\\frac ba$, product $=\\frac ca$; with $c=-\\sqrt e$ and roots $1,\\sqrt e$ the product is $\\sqrt e$, which fixes $a=-1$ at once."
+   ]
+  }
+ ]
+}
