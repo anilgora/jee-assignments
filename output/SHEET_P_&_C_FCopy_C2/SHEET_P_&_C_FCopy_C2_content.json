@@ -1,0 +1,1093 @@
+{
+ "title": "P & C Sheet (Exercise C-II) — Paper Analysis",
+ "subtitle": "SHEET P & C · FCopy C2 · detailed solutions",
+ "source": "SHEET_P_&_C_FCopy_C2.pdf (solutions as printed in the PDF); no blueprint - concepts self-assigned",
+ "paper_name": "P & C Sheet FCopy C2",
+ "sections": [
+  {
+   "title": "Numerical / Subjective Type",
+   "from": 1,
+   "to": 18,
+   "marking": [
+    "Marks not printed in the paper: 4 marks each assumed (JEE Advanced default)",
+    "Find / fill-in-the-blank questions with a numerical or expression answer"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 19,
+   "to": 27,
+   "marking": [
+    "Marks not printed in the paper: 3 marks each assumed (JEE Advanced default)",
+    "Three paragraphs: Q19-21, Q22-24, Q25-27"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 28,
+   "to": 28,
+   "marking": [
+    "Marks not printed in the paper: 3 marks assumed (JEE Advanced default)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number formation with divisibility condition (digits at most once)"
+   ],
+   "level": 3,
+   "question": "How many five digit numbers divisible by $3$ can be formed using the digits $0,1,2,3,4,7$ and $8$ if each digit is to be used at most once?",
+   "answer": "744",
+   "key_idea": "A number is divisible by $3$ iff its digit sum is; choose which two digits are left out, so the digit sum of the rest is a multiple of $3$.",
+   "solution": [
+    "The digits are $0,1,2,3,4,7,8$ with total $0+1+2+3+4+7+8=25$. A five digit number uses five of them, so two digits are left out.",
+    "The five digits used must have sum divisible by $3$, so the left-out pair must have sum $\\equiv 1 \\pmod 3$ (sum $1,4,7$ or $10$).",
+    "Case 1: digit sum $24$ (left out $0$ and $1$). Digits $2,3,4,7,8$ contain no zero, so $5!=120$ numbers.",
+    "Case 2: digit sum $21$ (left-out sum $4$): left out $\\{0,4\\}$ or $\\{1,3\\}$.",
+    "Subcase (i), left out $\\{0,4\\}$: digits $1,2,3,7,8$ give $5!=120$ numbers.",
+    "Subcase (ii), left out $\\{1,3\\}$: digits $0,2,4,7,8$; zero cannot be first, so $4\\times4\\times3\\times2\\times1=96$ numbers. Case 2 total $=120+96=216$.",
+    "Case 3: digit sum $18$ (left-out sum $7$): left out $\\{0,7\\}$ or $\\{3,4\\}$. Again $120+96=216$.",
+    "Case 4: digit sum $15$ (left-out sum $10$): left out $\\{2,8\\}$ or $\\{3,7\\}$. Both leave $0$ among the digits, so $96+96=192$.",
+    "Total $=120+216+216+192=744$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Allow a leading zero first, then subtract: every valid digit set gives $5!$ strings, and strings starting with $0$ are removed afterwards.",
+     "solution": [
+      "The left-out pair must have sum $\\equiv1\\pmod3$. Residues: $\\{0,3\\}\\to0$, $\\{1,4,7\\}\\to1$, $\\{2,8\\}\\to2$.",
+      "Pairs with residues $(0,1)$: $2\\times3=6$ pairs; pairs with residues $(2,2)$: only $\\{2,8\\}$. So there are $7$ valid digit sets.",
+      "Treating a leading zero as allowed, each set gives $5!=120$ strings: $7\\times120=840$.",
+      "Sets containing $0$ are those where $0$ is not left out: $4$ of the $7$ sets (left out $\\{3,1\\},\\{3,4\\},\\{3,7\\},\\{2,8\\}$).",
+      "In such a set, strings that start with $0$ number $4!=24$. Remove them: $4\\times24=96$.",
+      "Number of five digit numbers $=840-96=744$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A number is divisible by $3$ exactly when its digit sum is; so choose the *left-out* digits by residue mod $3$ instead of listing digit sets.",
+    "Leading-zero rule: count all strings, then subtract the $(k-1)!$-type strings starting with $0$ - often shorter than treating the zero as a special case.",
+    "Check: sets with a zero give $4\\cdot4!=96$ numbers, sets without a zero give $5!=120$ numbers (here $3\\times120+4\\times96=744$)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting strings and surjective digit patterns (inclusion-exclusion)"
+   ],
+   "level": 2,
+   "question": "How many positive integers of $n$ digits exist such that each digit is $1$, $2$ or $3$? How many of these contain all three of the digits $1,2$ and $3$ at least once?",
+   "answer": "$3^n$ ;  $3^n-3\\cdot2^n+3$",
+   "key_idea": "Subtract the numbers that miss at least one digit, and count each such number only once (inclusion-exclusion).",
+   "solution": [
+    "(a) Each of the $n$ places can be filled in $3$ ways, so there are $3^n$ such numbers.",
+    "(b) Required count $=$ total $-$ (numbers in which at least one of the digits $1,2,3$ is missing).",
+    "Numbers using only a chosen pair of digits: $2^n$ for each of the $\\binom{3}{2}=3$ pairs, so $3\\cdot2^n$ in all.",
+    "A number using only one digit (there are $3$ of them) is contained in two of the three pair-counts, so it was counted twice; subtract one copy each.",
+    "Numbers missing at least one digit $=3\\cdot2^n-3$.",
+    "Numbers containing $1,2,3$ at least once $=3^n-(3\\cdot2^n-3)=3^n-3\\cdot2^n+3$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF subtracts $\\{\\binom32 2^n+3\\}$ and ends with $3^n-3\\cdot2^n-3$. Single-digit numbers are already inside the pair counts, so they must be subtracted once, not added: the correct count of numbers missing a digit is $3\\cdot2^n-3$, giving $3^n-3\\cdot2^n+3$. The PDF's printed answer $3^n-3\\cdot2^n+3$ is right; only its working and last line had the wrong sign.",
+   "alternate_solutions": [
+    {
+     "idea": "Split by the position $k$ at which the third distinct digit first appears.",
+     "solution": [
+      "Let the third new digit first appear at position $k$ $(3\\le k\\le n)$. The first $k-1$ places use exactly two digits, both present: $2^{k-1}-2$ ways for a chosen pair, and $3$ choices of the pair (the third digit is then fixed).",
+      "Position $k$ is that third digit; the remaining $n-k$ places are free: $3^{n-k}$ ways.",
+      "Count $=\\sum_{k=3}^{n}3\\,(2^{k-1}-2)\\,3^{n-k}$.",
+      "Check $n=3$: $3(4-2)=6=3!$. Check $n=4$: $k=3$ gives $3\\cdot2\\cdot3=18$, $k=4$ gives $3\\cdot6=18$; total $36=81-48+3$.",
+      "Summing the two geometric series gives $3^n-3\\cdot2^n+3$ for every $n\\ge3$ (verified for $n=3,\\dots,10$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of onto maps from an $n$-set to a $3$-set: $3^n-3\\cdot2^n+3$ (inclusion-exclusion); in general $\\sum_{j}(-1)^j\\binom{k}{j}(k-j)^n$ for $k$ boxes.",
+    "$k!\\,S(n,k)$ equals the number of surjections; here $3!\\,S(n,3)=3^n-3\\cdot2^n+3$.",
+    "Cue: 'all digits/colours appear at least once' $\\Rightarrow$ complement + inclusion-exclusion; never add the overlap back as a new term.",
+    "Check: $n=3\\Rightarrow 6$, $n=4\\Rightarrow36$, $n=5\\Rightarrow150$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of ways to factorise into unordered factors"
+   ],
+   "level": 3,
+   "question": "Find the number of three element sets of positive integers $\\{a,b,c\\}$ such that $a\\times b\\times c=2310$.",
+   "answer": "40",
+   "key_idea": "$2310=2\\cdot3\\cdot5\\cdot7\\cdot11$ has five distinct primes, so a factorisation is a distribution of the primes into three groups, one possibly empty (factor $1$).",
+   "solution": [
+    "$2310=2^1\\cdot3^1\\cdot5^1\\cdot7^1\\cdot11^1$: five distinct primes to be shared among $a,b,c$.",
+    "Case 1: prime-counts $(1,1,3)$: $\\dfrac{{}^5C_1\\,{}^4C_1\\,{}^3C_3}{2!}=\\dfrac{5\\times4}{2}=10$.",
+    "Case 2: prime-counts $(2,2,1)$: $\\dfrac{{}^5C_2\\,{}^3C_2\\,{}^1C_1}{2!}=\\dfrac{10\\times3}{2}=15$.",
+    "Case 3: prime-counts $(3,2,0)$, i.e. one factor is $1$: ${}^5C_3\\times{}^2C_2=10$.",
+    "Case 4: prime-counts $(4,1,0)$, one factor is $1$: ${}^5C_4\\times{}^1C_1=5$.",
+    "Case 5: $(5,0,0)$ gives $\\{2310,1,1\\}$, which is not a three-element set, so it is rejected.",
+    "Total $=10+15+10+5=40$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count ordered triples first (each prime has $3$ choices of owner), then remove repeats and divide by $3!$.",
+     "solution": [
+      "Each of the $5$ primes goes to one of $a,b,c$ independently, so the number of ordered triples is $3^5=243$.",
+      "Two factors can be equal only if the square of that factor divides $2310$; $2310$ is square-free, so only the factor $1$ can repeat: $(1,1,2310)$ and its $3$ arrangements.",
+      "Ordered triples with all three distinct: $243-3=240$.",
+      "Each set $\\{a,b,c\\}$ corresponds to $3!=6$ ordered triples, so the number of sets is $\\dfrac{240}{6}=40$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $N=p_1p_2\\cdots p_k$ is square-free, the number of ordered factorisations into $r$ factors is $r^k$.",
+    "Unordered factorisations into $r$ factors correspond to set partitions of the primes into at most $r$ blocks (Stirling numbers): here $S(5,1)+S(5,2)+S(5,3)=1+15+25=41$, and removing $\\{2310,1,1\\}$ leaves $40$.",
+    "Equal factors are possible only when their square divides $N$ - check this before dividing by $r!$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Highest power of a prime in a factorial (Legendre's formula)"
+   ],
+   "level": 1,
+   "question": "Find the largest integer $n$ for which $35!$ is divisible by $3^n$.",
+   "answer": "15",
+   "key_idea": "The exponent of $3$ in $35!$ is $\\left\\lfloor\\frac{35}{3}\\right\\rfloor+\\left\\lfloor\\frac{35}{9}\\right\\rfloor+\\left\\lfloor\\frac{35}{27}\\right\\rfloor$.",
+   "solution": [
+    "The largest $n$ equals the exponent of the prime $3$ in $35!$.",
+    "Multiples of $3$ up to $35$: $\\left\\lfloor\\dfrac{35}{3}\\right\\rfloor=11$; multiples of $9$: $\\left\\lfloor\\dfrac{35}{9}\\right\\rfloor=3$; multiples of $27$: $\\left\\lfloor\\dfrac{35}{27}\\right\\rfloor=1$.",
+    "$n=11+3+1=15$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the digit-sum form of Legendre's formula: $v_p(N!)=\\dfrac{N-s_p(N)}{p-1}$, where $s_p(N)$ is the digit sum of $N$ in base $p$.",
+     "solution": [
+      "Write $35$ in base $3$: $35=1\\cdot27+0\\cdot9+2\\cdot3+2$, i.e. $1022_3$.",
+      "Digit sum $s_3(35)=1+0+2+2=5$.",
+      "$v_3(35!)=\\dfrac{35-5}{3-1}=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Legendre: $v_p(N!)=\\sum_{k\\ge1}\\left\\lfloor N/p^k\\right\\rfloor=\\dfrac{N-s_p(N)}{p-1}$.",
+    "Trailing zeros of $N!$ are $v_5(N!)$ (since $v_2\\ge v_5$); e.g. $100!$ has $20+4=24$ zeros.",
+    "Check: $v_2(10!)=5+2+1=8=\\dfrac{10-2}{1}$ with $10=1010_2$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integral solutions of $x^2-y^2=k$ (parity) and product equations (distribution of prime powers)"
+   ],
+   "level": 2,
+   "question": "Find the number of positive integral solutions of (i) $x^2-y^2=352706$ (ii) $xyz=21600$.",
+   "answer": "(i) Zero (ii) 1260",
+   "key_idea": "(i) $x^2-y^2$ is never $\\equiv2\\pmod 4$. (ii) Distribute each prime power among $x,y,z$ with stars and bars.",
+   "solution": [
+    "(i) $352706=2\\times176353$, i.e. an even number that is not divisible by $4$ ($176353$ is odd).",
+    "$x^2-y^2$ is even only if $x,y$ have the same parity, so $x,y$ are both even or both odd.",
+    "Both even, $x=2m$, $y=2n$: $x^2-y^2=4m^2-4n^2=4(m^2-n^2)$ is divisible by $4$, so it cannot equal $352706$.",
+    "Both odd, $x=2m+1$, $y=2n+1$: $x^2-y^2=4m^2+4m-4n^2-4n=4[m^2-n^2+m-n]$, again divisible by $4$. Not possible.",
+    "Hence there is no solution: the number of solutions is $0$.",
+    "(ii) $21600=2^5\\cdot3^3\\cdot5^2$. The exponent of each prime is shared among $x,y,z$ (non-negative parts).",
+    "Ways: for $2^5$: ${}^{7}C_2=21$; for $3^3$: ${}^{5}C_2=10$; for $5^2$: ${}^{4}C_2=6$.",
+    "Number of solutions $=21\\times10\\times6=1260$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF solves only part (i); part (ii) (answer $1260$ in the key) has no working. Part (ii) was added by distributing the prime exponents. Part (i) is reproduced as printed.",
+   "alternate_solutions": [
+    {
+     "idea": "For part (i), look at squares modulo $4$ instead of splitting by parity.",
+     "solution": [
+      "Every square is $\\equiv0$ or $1\\pmod 4$.",
+      "So $x^2-y^2\\equiv0-0,\\ 1-1,\\ 1-0,\\ 0-1\\equiv0,0,1,3\\pmod4$; it is never $\\equiv2\\pmod4$.",
+      "$352706=4\\times88176+2\\equiv2\\pmod4$, so no positive integers $x,y$ satisfy the equation: $0$ solutions."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A number $N\\equiv2\\pmod4$ is never a difference of two squares; $N$ is a difference of two squares iff $N\\not\\equiv2\\pmod 4$ ($N$ odd, or divisible by $4$).",
+    "Number of solutions of $x_1x_2\\cdots x_r=p_1^{a_1}\\cdots p_k^{a_k}$ in positive integers: $\\prod_i\\binom{a_i+r-1}{r-1}$.",
+    "Check: $xyz=12=2^2\\cdot3$ gives $\\binom42\\binom31=18$ ordered triples."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections from a group of alike and distinct letters"
+   ],
+   "level": 3,
+   "question": "Find the total number of ways of selecting five letters from the letters of the word INDEPENDENT.",
+   "answer": "72",
+   "key_idea": "Classify selections by the pattern of repeats (e.g. $3+2$, $3+1+1$, $2+2+1$, $2+1+1+1$, all distinct) and count each pattern separately.",
+   "solution": [
+    "Letters of INDEPENDENT: $I\\times1,\\ N\\times3,\\ D\\times2,\\ E\\times3,\\ P\\times1,\\ T\\times1$ - six distinct letters.",
+    "Case 1 (pattern $3+2$): NNN with EE or EEE with NN: ${}^2C_1\\times{}^2C_1=4$ (choose the triple among $N,E$, then the pair from the other two letters that occur at least twice).",
+    "Case 2 (pattern $2+2+1$): choose two of $N,D,E$ for the pairs and one of the other $4$ letters: ${}^3C_2\\times{}^4C_1=12$.",
+    "Case 3 (pattern $3+1+1$): the triple from $N,E$ and two singles from the other $5$ distinct letters: ${}^2C_1\\times{}^5C_2=20$.",
+    "Case 4 (pattern $2+1+1+1$): the pair from $N,D,E$ and three singles from the other $5$: ${}^3C_1\\times{}^5C_3=30$.",
+    "Case 5 (all five different): ${}^6C_5=6$.",
+    "Total $=4+12+20+30+6=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating function: each letter contributes a factor $1+x+\\dots+x^{m}$ for its multiplicity $m$; read off the coefficient of $x^5$.",
+     "solution": [
+      "I, P, T (once each): $(1+x)^3$; D (twice): $1+x+x^2$; N and E (three times each): $(1+x+x^2+x^3)^2$.",
+      "The number of selections of $5$ letters is the coefficient of $x^5$ in $(1+x)^3(1+x+x^2)(1+x+x^2+x^3)^2$.",
+      "$(1+x)^3(1+x+x^2)=1+4x+7x^2+7x^3+4x^4+x^5$ and $(1+x+x^2+x^3)^2=1+2x+3x^2+4x^3+3x^4+2x^5+x^6$.",
+      "Coefficient of $x^5$: $1\\cdot2+4\\cdot3+7\\cdot4+7\\cdot3+4\\cdot2+1\\cdot1=2+12+28+21+8+1=72$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Selections from alike objects: coefficient of $x^r$ in $\\prod_i(1+x+\\dots+x^{m_i})$, where $m_i$ is the number of copies of the $i$-th kind.",
+    "For $n$ alike objects of each of $k$ kinds with no upper limit, the coefficient of $x^r$ in $(1-x)^{-k}$ is $\\binom{r+k-1}{k-1}$.",
+    "Cue: 'selecting' (not arranging) from a word with repeated letters $\\Rightarrow$ pattern casework or generating function; the number of $5$-letter arrangements would need extra $5!/(\\dots)$ factors."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection with conditions (at least / majority)"
+   ],
+   "level": 2,
+   "question": "A committee of $12$ is to be formed from $9$ women and $8$ men. In how many ways can this be done if at least five women have to be included in a committee? In how many of these committees (a) the women are in majority? (b) the men are in majority?",
+   "answer": "Total $=\\binom{17}{12}-\\binom88\\binom94=6062$ ; (a) $2702$ ; (b) $1008$",
+   "key_idea": "At least $5$ women is the complement of '$4$ women and $8$ men' (the only way to have $\\le4$ women); majority means $\\ge7$ women or $\\le5$ women.",
+   "solution": [
+    "There are $9$ women and $8$ men; a committee of $12$ must have at least $5$ women.",
+    "Direct cases: $(5W,7M),(6W,6M),(7W,5M),(8W,4M),(9W,3M)$; add them. Or use the complement: total $-\\{4W,8M\\}$.",
+    "Total $=\\binom{17}{12}-\\binom88\\binom94=6188-126=6062$.",
+    "(a) Women in majority means $7W5M$, $8W4M$ or $9W3M$: $\\binom97\\binom85+\\binom98\\binom84+\\binom99\\binom83=36\\cdot56+9\\cdot70+56=2702$.",
+    "(b) Men in majority: only $5W,7M$ (since $6W6M$ is a tie): $\\binom95\\binom87=126\\times8=1008$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the $5$ people left out instead of the $12$ chosen.",
+     "solution": [
+      "Choosing $12$ of the $17$ is the same as choosing the $5$ people to leave out: $\\binom{17}{5}=6188$ ways.",
+      "A committee with at least $5$ women has at most $7$ men, i.e. at least $1$ of the $8$ men is left out. The only bad case is no man left out: all $5$ left-out people are women, $\\binom95=126$ ways.",
+      "Total $=6188-126=6062$.",
+      "(a) Women in majority $\\iff$ committee has at most $5$ men $\\iff$ at least $3$ men are left out: $\\binom83\\binom92+\\binom84\\binom91+\\binom85\\binom90=56\\cdot36+70\\cdot9+56=2702$.",
+      "(b) Men in majority $\\iff$ committee has $7$ men and $5$ women $\\iff$ exactly $1$ man and $4$ women are left out: $\\binom81\\binom94=8\\times126=1008$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Choosing $r$ from $n$ is the same as choosing the $n-r$ to leave out; use whichever side makes the condition simpler.",
+    "For a committee of size $k$: women $\\ge a\\iff$ men $\\le k-a$.",
+    "Check: $1008+2352+2702=6062$ (the tie $6W6M$ contributes $\\binom96\\binom86=84\\cdot28=2352$)."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements with repeated digits (pattern counting)"
+   ],
+   "level": 2,
+   "question": "Find the number of five digit numbers that can be formed using the digits $1,2,3,4,5,6,7,8,9$ in which one digit appears once and two digits appear twice (e.g. $41174$ is one such number but $75355$ is not).",
+   "answer": "7560",
+   "key_idea": "Choose the digits first (two to repeat, one single), then arrange the multiset $\\{a,a,b,b,c\\}$ in $\\frac{5!}{2!2!}$ ways.",
+   "solution": [
+    "Choose the two digits that appear twice: ${}^9C_2=36$ ways.",
+    "Choose the digit that appears once from the remaining $7$ digits: ${}^7C_1=7$ ways.",
+    "Arrange the five selected digits (two repeated twice): $\\dfrac{5!}{2!\\,2!}=30$.",
+    "Total $={}^9C_2\\times{}^7C_1\\times\\dfrac{5!}{2!2!}=36\\times7\\times30=7560$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix the positions first, then assign digits to the position-groups.",
+     "solution": [
+      "Choose the position of the single digit: $5$ ways.",
+      "Split the remaining $4$ positions into two pairs of positions: $\\dfrac{\\binom42}{2}=3$ ways.",
+      "The two position-pairs and the single position are now distinguishable by where they are, so assign them three different digits in order: $9\\times8\\times7=504$ ways.",
+      "Total $=5\\times3\\times504=7560$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of $n$-digit strings with a given repetition pattern: choose which digits occupy each multiplicity, then multiply by $\\dfrac{n!}{\\prod m_i!}$.",
+    "If two digit-groups have equal multiplicity, choose them as a set ($\\binom92$) or divide the ordered choice by $2!$ - never both.",
+    "Check on a small case: strings of length $3$ from $\\{1,2,3\\}$ with pattern $(2,1)$: $3\\cdot2\\cdot\\frac{3!}{2!}=18=27-3-6$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selecting terms of a geometric progression from a set of powers (reduction to A.P. of exponents)"
+   ],
+   "level": 2,
+   "question": "Find the number of ways in which $3$ distinct numbers can be selected from the set $\\{3^1,3^2,3^3,\\dots,3^{100},3^{101}\\}$ so that they form a G.P.",
+   "answer": "2500",
+   "key_idea": "$3^a,3^b,3^c$ are in G.P. iff $a,b,c$ are in A.P., and an A.P. of integers $a<b<c$ has $a,c$ of the same parity.",
+   "solution": [
+    "Let the chosen numbers be $3^a,3^b,3^c$ with $a<b<c$ in $\\{1,2,\\dots,101\\}$.",
+    "They are in G.P. iff $(3^b)^2=3^a\\cdot3^c$, i.e. $3^{2b}=3^{a+c}$, i.e. $2b=a+c$.",
+    "So we need $3$ numbers from $\\{1,2,\\dots,101\\}$ forming an A.P. Equivalently $a+c$ is even, so $a,c$ are both even or both odd; then $b=\\frac{a+c}{2}$ is determined.",
+    "The set has $51$ odd and $50$ even numbers.",
+    "Number of ways $={}^{51}C_2+{}^{50}C_2=1275+1225=2500$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix the common ratio $3^d$ and count the possible first terms.",
+     "solution": [
+      "A G.P. $3^a,3^{a+d},3^{a+2d}$ has common ratio $3^d$ with $d\\ge1$ (the numbers are increasing and distinct).",
+      "The exponents must fit in $\\{1,\\dots,101\\}$: $1\\le a$ and $a+2d\\le101$, so $a$ has $101-2d$ choices, for $d=1,2,\\dots,50$.",
+      "Total $=\\sum_{d=1}^{50}(101-2d)=50\\cdot101-2\\cdot\\dfrac{50\\cdot51}{2}=5050-2550=2500$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Powers $p^{a},p^{b},p^{c}$ are in G.P. iff $a,b,c$ are in A.P.: logarithms turn a G.P. into an A.P.",
+    "Number of A.P. triples in $\\{1,\\dots,N\\}$: $\\binom{\\lceil N/2\\rceil}{2}+\\binom{\\lfloor N/2\\rfloor}{2}$; for $N=101$ this is $2500$, and in general $\\left\\lfloor\\frac{(N-1)^2}{4}\\right\\rfloor$.",
+    "Check $N=5$: triples $(1,2,3),(2,3,4),(3,4,5),(1,3,5)$ give $4=\\lfloor16/4\\rfloor$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting divisors and arithmetic progression terms"
+   ],
+   "level": 2,
+   "question": "For each positive integer $k$, let $S_k$ denote the increasing arithmetic sequence of integers whose first term is $1$ and whose common difference is $k$ (for example $S_3$ is $1,4,7,10,\\dots$). Find the number of values of $k$ for which $S_k$ contains the term $361$.",
+   "answer": "24",
+   "key_idea": "$361$ is a term iff $k$ divides $360$, so count the positive divisors of $360$.",
+   "solution": [
+    "The $n$-th term is $a+(n-1)d$; $361=1+(n-1)k$, so $360=(n-1)k$ with $n-1\\ge1$.",
+    "So $k$ must be a positive divisor of $360=2^3\\cdot3^2\\cdot5$.",
+    "Distribute the three $2$'s between $(n-1)$ and $k$: ${}^{3+2-1}C_{2-1}={}^4C_1=4$ ways.",
+    "Similarly for the two $3$'s: ${}^{2+2-1}C_{2-1}={}^3C_1=3$ ways; for the single $5$: ${}^{1+2-1}C_{2-1}={}^2C_1=2$ ways.",
+    "Total ways $=4\\times3\\times2=24$, so there are $24$ values of $k$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Number of divisors of $N=\\prod p_i^{a_i}$ is $\\prod(a_i+1)$: $\\tau(360)=4\\cdot3\\cdot2=24$.",
+    "$m$ is a term of the A.P. $1,\\,1+k,\\,1+2k,\\dots$ iff $k\\mid(m-1)$ (for $m>1$); the number of such $k$ is $\\tau(m-1)$.",
+    "Sum of divisors: $\\sigma(N)=\\prod\\frac{p_i^{a_i+1}-1}{p_i-1}$; e.g. $\\sigma(360)=15\\cdot13\\cdot6=1170$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection with repetition (identical items, distinct flavours)"
+   ],
+   "level": 2,
+   "question": "A shop sells $6$ different flavours of ice-cream. In how many ways can a customer choose $4$ ice-cream cones if (i) they are all of different flavours (ii) they are not necessarily of different flavours (iii) they contain only $3$ different flavours (iv) they contain only $2$ or $3$ different flavours?",
+   "answer": "(i) $15$ (ii) $126$ (iii) $60$ (iv) $105$",
+   "key_idea": "Cones of the same flavour are identical, so a choice is a multiset; classify by the number of distinct flavours used.",
+   "solution": [
+    "(i) All different flavours: choose $4$ of the $6$ flavours: ${}^6C_4=15$.",
+    "(ii) Case by number of different flavours: all four different: ${}^6C_4=15$.",
+    "Exactly $2$ different flavours: $AABB$ gives ${}^6C_2=15$ and $AAAB$ gives $6\\times5=30$, total $45$.",
+    "Exactly $3$ different flavours: $60$ (see (iii)); exactly one flavour: $6$. Total $=15+45+60+6=126$.",
+    "(iii) Choose the $3$ flavours: ${}^6C_3=20$, then choose which of them is repeated: ${}^3C_1=3$. Total $20\\times3=60$ (no arrangement needed, cones of a flavour are alike).",
+    "(iv) Exactly $2$ flavours: $AABB$: ${}^6C_2=15$, and $ABBB$ (and $AAAB$): ${}^6C_2\\times{}^2C_1=30$, so $45$.",
+    "Exactly $3$ flavours: $60$ (from part (iii)).",
+    "Total for (iv) $=60+30+15=105$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Stars and bars for (ii), and complement from (ii) for (iv).",
+     "solution": [
+      "(ii) A choice is a solution of $x_1+x_2+\\dots+x_6=4$ in non-negative integers ($x_i$ = cones of flavour $i$): $\\binom{4+6-1}{6-1}=\\binom94=126$.",
+      "(iv) Choices with $2$ or $3$ flavours $=$ all choices $-$ (exactly $1$ flavour) $-$ (exactly $4$ flavours).",
+      "Exactly $1$ flavour: $6$. Exactly $4$ flavours (all different): $\\binom64=15$.",
+      "So (iv) $=126-6-15=105$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of multisets of size $r$ from $n$ kinds: $\\binom{n+r-1}{r}$ (non-negative solutions of $x_1+\\dots+x_n=r$).",
+    "Exactly $k$ kinds used: $\\binom nk\\binom{r-1}{k-1}$ (positive solutions of $y_1+\\dots+y_k=r$); here $k=3,r=4$: $20\\cdot3=60$ ✓.",
+    "Check: $\\sum_k\\binom6k\\binom3{k-1}=6+45+60+15=126$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting numbers under digit inequalities (casework on the middle digit)"
+   ],
+   "level": 2,
+   "question": "The number of three digit numbers of the form $xyz$ such that $x<y$ and $z\\le y$ is ____.",
+   "answer": "276",
+   "key_idea": "Fix the middle digit $y$: then $x$ has $y-1$ choices ($1\\le x<y$) and $z$ has $y+1$ choices ($0\\le z\\le y$).",
+   "solution": [
+    "The first digit $x\\ge1$, with $x<y$; the last digit satisfies $z\\le y$, $z\\ge0$.",
+    "$y=2$: $x\\in\\{1\\}$ and $z\\in\\{0,1,2\\}$, so $1\\times3=3$ numbers.",
+    "$y=3$: $2\\times4=8$; $y=4$: $3\\times5=15$; $y=5$: $4\\times6=24$.",
+    "$y=6$: $5\\times7=35$; $y=7$: $6\\times8=48$; $y=8$: $7\\times9=63$; $y=9$: $8\\times10=80$.",
+    "Total $=3+8+15+24+35+48+63+80=276$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For a middle digit $y$: choices of $x$ are $y-1$ and of $z$ are $y+1$, so the count for each $y$ is $y^2-1$ and the total is $\\sum_{y=1}^{9}(y^2-1)=285-9=276$.",
+    "$\\sum_{y=1}^{n}y^2=\\frac{n(n+1)(2n+1)}{6}$, so such sums need no term-by-term addition.",
+    "Cue: inequality conditions through a *common* digit $\\Rightarrow$ fix that digit and multiply the independent choices on either side."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting configurations (multiplication principle)"
+   ],
+   "level": 1,
+   "question": "A telegraph has $x$ arms and each arm is capable of $(x-1)$ distinct positions, including the position of rest. The total number of signals that can be made is ______ .",
+   "answer": "$(x-1)^x-1$",
+   "key_idea": "Each arm independently takes one of $x-1$ positions; the single configuration with all arms at rest gives no signal.",
+   "solution": [
+    "Each of the $x$ arms can be in any of $(x-1)$ positions (one of which is rest).",
+    "Total configurations of the arms: $(x-1)\\times(x-1)\\times\\dots\\times(x-1)$ ($x$ times) $=(x-1)^x$.",
+    "The configuration in which all arms are at rest is not a signal; remove it.",
+    "Number of signals $=(x-1)^x-1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working writes $(x-1)^n-1$ against 'all arms at rest' and concludes 'signals $(x-1)^x$', which drops the $-1$ and disagrees with its own printed answer $(x-1)^x-1$. The correct working subtracts the one all-rest configuration from $(x-1)^x$; the printed answer is right.",
+   "useful_results": [
+    "Each of $n$ independent parts having $m$ states gives $m^n$ states; subtract forbidden states (here the single all-rest state) at the end.",
+    "Cue: 'including the position of rest' - the zero state is counted in $m$ and then removed from the final total.",
+    "Check: $x=3$ arms with $2$ positions each: $2^3-1=7$ signals."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection from a grid (no two in the same row or column)"
+   ],
+   "level": 1,
+   "question": "Find the number of ways in which two squares can be selected from an $8\\times8$ chess board of size $1\\times1$ so that they are not in the same row and not in the same column.",
+   "answer": "1568",
+   "key_idea": "Pick the first square freely ($64$) and the second outside its row and column ($49$); the pair is unordered, so divide by $2$.",
+   "solution": [
+    "The first square can be chosen in ${}^{64}C_1=64$ ways.",
+    "It removes its row and its column ($15$ squares including itself), leaving $64-15=49$ squares for the second: ${}^{49}C_1=49$ ways.",
+    "The two squares are chosen as an unordered pair, so each pair is counted twice.",
+    "Number of ways $=\\dfrac{64\\times49}{2}=1568$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose two rows and two columns first; each choice of rows and columns gives exactly $2$ placements.",
+     "solution": [
+      "Choose $2$ different rows: $\\binom82=28$ ways; choose $2$ different columns: $\\binom82=28$ ways.",
+      "The four crossing squares form a rectangle; the two selected squares must be opposite corners: $2$ diagonals.",
+      "Total $=28\\times28\\times2=1568$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of pairs of non-attacking rooks on an $n\\times n$ board: $\\dfrac{n^2(n-1)^2}{2}=\\dfrac{64\\cdot49}{2}$ for $n=8$; for $k$ rooks it is $\\binom nk^2k!$.",
+    "Complement check: all pairs $\\binom{64}{2}=2016$, same row $8\\binom82=224$, same column $224$; $2016-448=1568$.",
+    "Cue: 'not in the same row/column' $\\Rightarrow$ choose rows and columns, then match them (a permutation count)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting outcomes with a given number of errors (binomial counting)"
+   ],
+   "level": 1,
+   "question": "A forecast is to be made of the results of five cricket matches, each of which can be a win, a draw or a loss for the Indian team. Find (i) the number of different possible forecasts (ii) the number of forecasts containing $0,1,2,3,4$ and $5$ errors respectively.",
+   "answer": "(i) $243$ ; (ii) $1,\\ 10,\\ 40,\\ 80,\\ 80,\\ 32$",
+   "key_idea": "For each match, exactly one of three forecasts is right and two are wrong; choose which matches are wrong.",
+   "solution": [
+    "(i) Each of the $5$ matches has $3$ possible forecasts, so the number of forecasts is $3^5=243$.",
+    "(ii) For each match: $1$ forecast is true and $2$ are wrong.",
+    "$0$ errors: all true, $1\\times1\\times1\\times1\\times1=1$.",
+    "$1$ error: ${}^5C_1\\times2=10$.",
+    "$2$ errors: ${}^5C_2\\times2\\times2=40$.",
+    "$3$ errors: ${}^5C_3\\times2^3=80$.",
+    "$4$ errors: ${}^5C_4\\times2^4=80$.",
+    "$5$ errors: ${}^5C_5\\times2^5=32$.",
+    "Check: $1+10+40+80+80+32=243=3^5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating function: each match contributes $(1+2x)$, with $x$ marking an error.",
+     "solution": [
+      "A correct forecast for a match contributes the factor $1$; a wrong one has $2$ possibilities, contributing $2x$. So one match gives $1+2x$.",
+      "All five matches give $(1+2x)^5=\\sum_k\\binom5k2^kx^k$; the coefficient of $x^k$ is the number of forecasts with $k$ errors.",
+      "Coefficients: $1,\\ 10,\\ 40,\\ 80,\\ 80,\\ 32$.",
+      "Putting $x=1$: $(1+2)^5=243$, the total number of forecasts."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If each trial has $1$ 'good' and $m$ 'bad' outcomes, the number of outcomes with exactly $k$ bad ones in $n$ trials is $\\binom nk m^k$, and $\\sum_k\\binom nkm^k=(1+m)^n$.",
+    "Putting $x=1$ in a generating function gives the total count - a one-line check on a table of counts.",
+    "Probability link: $P(k\\text{ errors})=\\binom nk(\\tfrac13)^{n-k}(\\tfrac23)^k$ for a random forecast against a random result."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution of distinct objects into groups with order fixed inside each group (multinomial)"
+   ],
+   "level": 3,
+   "question": "In a certain college at the B.Sc. examination, $3$ candidates obtained first class honours in each of the following subjects: Physics, Chemistry and Maths, no candidate obtaining honours in more than one subject. The number of ways in which $9$ scholarships of different value can be awarded to the $9$ candidates, if due regard is to be paid only to the places obtained by candidates in any one subject, is ______ .",
+   "answer": "1680",
+   "key_idea": "Within a subject the places fix who gets which scholarship, so only the *set* of $3$ scholarships for each subject matters.",
+   "solution": [
+    "There are $3$ candidates in each of Physics (P), Chemistry (C) and Maths (M), and $9$ scholarships of different values.",
+    "Within one subject, the candidate in first place gets the highest of that subject's three scholarships, and so on; the places fix the order, so only the three scholarships assigned to the subject matter.",
+    "So we must split the $9$ different scholarships into three labelled groups of $3$ (for M, P, C).",
+    "Number of ways $=\\dfrac{9!}{3!\\,3!\\,3!}=\\dfrac{362880}{216}=1680$.",
+    "It is the same as the number of arrangements of the word MMMPPPCCC."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says '$3!$ ways for Maths, $3!$ for Physics, $3!$ for Chemistry' and then writes $9!/(3!3!3!)$. The $3!$ factors are not multiplied here (that would give a different number); they are divided out because the order within each subject is already fixed by the places. The answer $1680$ is right; the reasoning was reworded.",
+   "alternate_solutions": [
+    {
+     "idea": "Choose the scholarships for each subject one subject at a time.",
+     "solution": [
+      "Choose the $3$ scholarship values for Maths: $\\binom93=84$.",
+      "From the remaining $6$, choose $3$ for Physics: $\\binom63=20$.",
+      "The last $3$ go to Chemistry: $\\binom33=1$.",
+      "Total $=84\\times20\\times1=1680$; each subject's three values are then given to its candidates in order of their places."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Dividing $n$ distinct objects into labelled groups of sizes $n_1,\\dots,n_k$: $\\dfrac{n!}{n_1!\\cdots n_k!}$.",
+    "When the order *inside* a group is already determined (by rank, height, value), the number of ways is the multinomial without any extra factorials.",
+    "Check: $9!/(3!)^3=1680=\\binom93\\binom63\\binom33$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Symmetric 0-1 determinants (counting matrices with symmetry)"
+   ],
+   "level": 2,
+   "question": "Consider a determinant of order $3$ all of whose entries are either $0$ or $1$. Five of these entries are $1$ and four of them are $0$. Also $a_{ij}=a_{ji}$ for all $1\\le i,j\\le3$. Find the number of such determinants.",
+   "answer": "12",
+   "key_idea": "A symmetric matrix has $3$ diagonal and $3$ off-diagonal pairs; each off-diagonal $1$ uses two entries, so the number of diagonal ones must be odd.",
+   "solution": [
+    "A symmetric $3\\times3$ matrix is fixed by its $3$ diagonal entries and $3$ independent off-diagonal pairs $(a_{12},a_{13},a_{23})$.",
+    "A diagonal $1$ uses one entry; an off-diagonal $1$ uses two entries (its mirror image). Total ones $=5$.",
+    "Hence the number of diagonal ones is odd: $1$ or $3$ (it cannot be $5$).",
+    "Case 1: all three diagonal entries are $1$. Two more ones are needed: one off-diagonal pair, which can be placed in $3$ ways. So $3$ determinants.",
+    "Case 2: exactly one diagonal entry is $1$ ($3$ choices) and two off-diagonal pairs are $1$ (so $4$ ones; choose $2$ of the $3$ pairs in $3$ ways). So $3\\times3=9$ determinants.",
+    "Total $=3+9=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating function in the number of ones: diagonal entries weigh $x$, off-diagonal pairs weigh $x^2$.",
+     "solution": [
+      "Each of the $3$ diagonal entries contributes $(1+x)$ and each of the $3$ off-diagonal pairs contributes $(1+x^2)$.",
+      "The number of symmetric $0$-$1$ matrices with exactly $5$ ones is the coefficient of $x^5$ in $(1+x)^3(1+x^2)^3$.",
+      "$(1+x)^3=1+3x+3x^2+x^3$ and $(1+x^2)^3=1+3x^2+3x^4+x^6$.",
+      "$x^5$: $3x\\cdot3x^4+x^3\\cdot3x^2=9x^5+3x^5=12x^5$. So the answer is $12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of symmetric $n\\times n$ matrices with entries from a $q$-element set: $q^{n(n+1)/2}$; with $0$-$1$ entries and a prescribed number $k$ of ones, use $\\prod(1+x)^n(1+x^2)^{n(n-1)/2}$.",
+    "The number of ones in a symmetric matrix $=$ (diagonal ones) $+\\,2\\,$(off-diagonal pair ones), so its parity equals the parity of the diagonal ones.",
+    "Check: all $64$ symmetric matrices: $(1+1)^3(1+1)^3=64$ ✓."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution of distinct objects into identical boxes (no box empty)"
+   ],
+   "level": 1,
+   "question": "The number of ways in which $n$ distinct objects can be kept into two identical boxes so that no box remains empty is ______ .",
+   "answer": "$2^{n-1}-1$",
+   "key_idea": "Count with labelled boxes, remove the two empty-box cases, then divide by $2$ because the boxes are identical.",
+   "solution": [
+    "Suppose for a moment that the boxes are different, $B_1$ and $B_2$. Each object can go into either box in $2$ ways.",
+    "Total ways $=2^n$.",
+    "This includes the two cases in which all objects are in $B_1$ or all in $B_2$ (a box empty): so the number of ways with neither box empty is $2^n-2$.",
+    "Since the boxes are identical, each arrangement is counted twice: $\\dfrac{2^n-2}{2}=2^{n-1}-1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix one object and decide which others share its box.",
+     "solution": [
+      "Let the object $T_1$ define the first box (identical boxes, so we need only say which other objects are with $T_1$).",
+      "Each of the other $n-1$ objects either joins $T_1$ or not: $2^{n-1}$ ways.",
+      "Exclude the case in which all other objects join $T_1$, because then the second box is empty: $2^{n-1}-1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Ways to split $n$ distinct objects into $2$ non-empty unlabelled groups $=S(n,2)=2^{n-1}-1$ (Stirling number of the second kind).",
+    "Into $2$ labelled non-empty boxes: $2^n-2$; into $2$ unlabelled boxes where empty is allowed: $2^{n-1}$ (for $n\\ge1$).",
+    "Check: $n=3$: $\\{12|3\\},\\{13|2\\},\\{23|1\\}$ gives $3=2^2-1$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Division of distinct objects into equal unlabelled groups"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: $16$ players $P_1,P_2,P_3,\\dots,P_{16}$ take part in a tennis tournament. A lower suffix player is better than any higher suffix player ($P_i$ is better than $P_j$ if $i<j$). The players are to be divided into $4$ groups, each comprising $4$ players, and the best from each group is selected for the semifinals.",
+   "question": "The number of ways in which $16$ players can be divided into four equal groups is:",
+   "options": [
+    "$\\dfrac{35}{27}\\prod_{r=1}^{8}(2r-1)$",
+    "$\\dfrac{35}{24}\\prod_{r=1}^{8}(2r-1)$",
+    "$\\dfrac{35}{52}\\prod_{r=1}^{8}(2r-1)$",
+    "$\\dfrac{35}{6}\\prod_{r=1}^{8}(2r-1)$"
+   ],
+   "answer": "(A) $\\dfrac{35}{27}\\prod_{r=1}^{8}(2r-1)$",
+   "key_idea": "Equal-sized groups that are unlabelled: divide $\\frac{16!}{(4!)^4}$ by $4!$.",
+   "solution": [
+    "Four groups of $4$ players each; the groups have no names, so they are identical.",
+    "If the four groups were labelled, the number would be $\\dfrac{16!}{(4!)^4}$; for unlabelled groups divide by $4!$.",
+    "Number of ways $=\\dfrac{16!}{4!\\,4!\\,4!\\,4!\\,4!}=2{,}627{,}625$.",
+    "Option (A): $\\dfrac{35}{27}\\times(1\\cdot3\\cdot5\\cdot7\\cdot9\\cdot11\\cdot13\\cdot15)=\\dfrac{35}{27}\\times2{,}027{,}025=2{,}627{,}625$. It matches."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes 'Total ways to divide $16$ different players in $4$ different groups' but the value $2{,}627{,}625=\\frac{16!}{(4!)^5}$ is for identical (unlabelled) groups, as the question needs. Wording fixed; the number and answer (A) are right.",
+   "alternate_solutions": [
+    {
+     "idea": "Build the groups one at a time from the best remaining player (the 'anchor' method), which avoids dividing by $4!$.",
+     "solution": [
+      "The group of the best player $P_1$: choose $3$ partners from the other $15$: $\\binom{15}{3}=455$.",
+      "Among the $12$ players left, the best one's group: $\\binom{11}{3}=165$.",
+      "Among the $8$ left: $\\binom73=35$. The last $4$ form the fourth group: $\\binom33=1$.",
+      "Total $=455\\times165\\times35=2{,}627{,}625$, as with $\\frac{16!}{(4!)^5}$ (an anchor in each group removes the labelling).",
+      "Compare with (A): $1\\cdot3\\cdot5\\cdots15=2{,}027{,}025$ and $\\frac{35}{27}\\times2{,}027{,}025=2{,}627{,}625$ ✓."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Dividing $mn$ distinct objects into $m$ unlabelled groups of $n$: $\\dfrac{(mn)!}{(n!)^m\\,m!}$.",
+    "For groups of size $2$: $\\dfrac{(2m)!}{2^m\\,m!}=(2m-1)(2m-3)\\cdots3\\cdot1=(2m-1)!!$ - the origin of the product of odd numbers in the options.",
+    "Check: $4$ people into $2$ pairs: $\\frac{4!}{2^2\\,2!}=3$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Division of distinct objects into equal groups with separating conditions"
+   ],
+   "level": 3,
+   "paragraph": "Paragraph: $16$ players $P_1,P_2,P_3,\\dots,P_{16}$ take part in a tennis tournament. A lower suffix player is better than any higher suffix player ($P_i$ is better than $P_j$ if $i<j$). The players are to be divided into $4$ groups, each comprising $4$ players, and the best from each group is selected for the semifinals.",
+   "question": "The number of ways in which the $16$ players can be divided into $4$ equal groups if the players $P_1,P_2,P_3$ and $P_4$ are in different groups is:",
+   "options": [
+    "$\\dfrac{11!}{36}$",
+    "$\\dfrac{11!}{72}$",
+    "$\\dfrac{11!}{108}$",
+    "$\\dfrac{11!}{216}$"
+   ],
+   "answer": "(C) $\\dfrac{11!}{108}$",
+   "key_idea": "Seat $P_1,\\dots,P_4$ as the four group 'leaders'; the other $12$ players are then split $3+3+3+3$ among these named groups.",
+   "solution": [
+    "Since $P_1,P_2,P_3,P_4$ are in different groups, each group has exactly one of them.",
+    "The remaining $12$ players are divided into $4$ groups of $3$: $\\dfrac{12!}{(3!)^4\\,4!}$ ways (unlabelled groups of $3$).",
+    "These $4$ groups are then attached to $P_1,P_2,P_3,P_4$ (distinct people), which can be done in $4!$ ways.",
+    "Number of ways $=\\dfrac{12!}{(3!)^4\\,4!}\\times4!=\\dfrac{12!}{1296}=\\dfrac{12\\cdot11!}{1296}=\\dfrac{11!}{108}$.",
+    "Hence option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fill the group of each of $P_1,\\dots,P_4$ directly (they act as labels).",
+     "solution": [
+      "The four groups are already distinguished by $P_1,P_2,P_3,P_4$, so no division by $4!$ is needed.",
+      "Choose $3$ of the $12$ other players for $P_1$'s group: $\\binom{12}{3}=220$.",
+      "$3$ of the remaining $9$ for $P_2$: $\\binom93=84$; $3$ of the remaining $6$ for $P_3$: $\\binom63=20$; the last $3$ go with $P_4$: $1$.",
+      "Total $=220\\times84\\times20=369{,}600$.",
+      "$\\dfrac{11!}{108}=\\dfrac{39{,}916{,}800}{108}=369{,}600$ ✓ (option C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If some players must be in different groups and they equal the number of groups, they label the groups: remaining players are distributed as $\\dfrac{(\\text{rest})!}{(\\text{size}-1)!^{\\,k}}$.",
+    "General form: $\\dfrac{(mn-m)!}{((n-1)!)^m}$ for $m$ groups of $n$; here $\\dfrac{12!}{(3!)^4}=369{,}600$.",
+    "Check on a small case: $4$ players into $2$ pairs with $A,B$ separated: $\\dfrac{2!}{(1!)^2}=2$ ✓ ($\\{A,C\\},\\{B,D\\}$ and $\\{A,D\\},\\{B,C\\}$)."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Division into equal groups with a condition on the best player of a group"
+   ],
+   "level": 3,
+   "paragraph": "Paragraph: $16$ players $P_1,P_2,P_3,\\dots,P_{16}$ take part in a tennis tournament. A lower suffix player is better than any higher suffix player ($P_i$ is better than $P_j$ if $i<j$). The players are to be divided into $4$ groups, each comprising $4$ players, and the best from each group is selected for the semifinals.",
+   "question": "The number of ways in which these $16$ players can be divided into four equal groups, such that when the best player is selected from each group, $P_6$ is one among them, is $k\\,\\dfrac{12!}{(4!)^3}$. The value of $k$ is:",
+   "options": [
+    "$36$",
+    "$24$",
+    "$18$",
+    "$20$"
+   ],
+   "answer": "(D) $20$",
+   "key_idea": "$P_6$ is the best of its group iff none of $P_1,\\dots,P_5$ is in that group, so its three partners come from $P_7,\\dots,P_{16}$.",
+   "solution": [
+    "$P_6$ is the best of its group exactly when its three group-mates are chosen from the worse players $P_7,\\dots,P_{16}$ ($10$ players).",
+    "Choose the three partners of $P_6$: $\\binom{10}{3}=120$ ways.",
+    "The remaining $12$ players (including $P_1,\\dots,P_5$) form three equal groups: $\\dfrac{12!}{(4!)^3\\,3!}$ ways.",
+    "Total $=120\\times\\dfrac{12!}{(4!)^3\\,3!}=\\dfrac{120}{6}\\cdot\\dfrac{12!}{(4!)^3}=20\\cdot\\dfrac{12!}{(4!)^3}$.",
+    "So $k=20$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use probability on the total: for a random division, find the chance that $P_6$'s three partners all come from $P_7,\\dots,P_{16}$.",
+     "solution": [
+      "Total divisions into $4$ equal groups: $N=\\dfrac{16!}{(4!)^5}=2{,}627{,}625$ (Q19).",
+      "By symmetry the three group-mates of $P_6$ form a uniformly random $3$-subset of the other $15$ players.",
+      "Probability that all three are among $P_7,\\dots,P_{16}$: $\\dfrac{\\binom{10}{3}}{\\binom{15}{3}}=\\dfrac{120}{455}=\\dfrac{24}{91}$.",
+      "Favourable divisions $=2{,}627{,}625\\times\\dfrac{24}{91}=28{,}875\\times24=693{,}000$.",
+      "And $\\dfrac{12!}{(4!)^3}=\\dfrac{479{,}001{,}600}{13{,}824}=34{,}650$, so $k=\\dfrac{693{,}000}{34{,}650}=20$ ✓."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Best player of the group is $P_j$' $\\iff$ all other members are worse, i.e. chosen from players below $P_j$; rank conditions turn into restricted choices.",
+    "By symmetry, the number of divisions in which a given player's group-mates form a particular type of $3$-set is proportional to the number of such $3$-sets: $\\binom{10}{3}/\\binom{15}{3}$.",
+    "The same idea gives the chance that $P_1$ and $P_2$ are in different groups: $\\frac{12}{15}=\\frac45$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Rectangles and squares in a grid of lines"
+   ],
+   "level": 1,
+   "paragraph": "Paragraph: When $m$ equally spaced parallel lines are intersected by $n$ equally spaced parallel lines, a network of rectangles or squares is formed. The number of rectangles is ${}^mC_2\\cdot{}^nC_2$. The squares have several dimensions. The smallest square is of dimension $1\\times1$, and the number of such squares is $(m-1)\\times(n-1)$.",
+   "question": "If $m<n$, the dimension of the largest possible square must be:",
+   "options": [
+    "$m$",
+    "$n$",
+    "$m-1$",
+    "$n-1$"
+   ],
+   "answer": "(C) $m-1$",
+   "key_idea": "$m$ parallel lines leave $m-1$ gaps, so a square cannot be longer than the smaller number of gaps.",
+   "solution": [
+    "$m$ lines in one direction form $m-1$ equal gaps; $n$ lines in the other direction form $n-1$ gaps.",
+    "Example $m=3$, $n=5$: there are $2\\times4=8$ squares of dimension $1\\times1$.",
+    "There are $1\\times3=3$ squares of dimension $2\\times2$; no $3\\times3$ square fits.",
+    "The largest square is $2\\times2=(m-1)\\times(m-1)$, because $m<n$.",
+    "So the dimension of the largest square is $m-1$ (option C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "General argument: a square needs the same number of gaps in both directions.",
+     "solution": [
+      "A square of side $s$ spans $s$ consecutive gaps in each direction.",
+      "This needs $s\\le m-1$ (gaps between the $m$ lines) and $s\\le n-1$.",
+      "So the largest $s$ is $\\min(m-1,n-1)=m-1$ since $m<n$.",
+      "Option (A) $m$ and (B) $n$ exceed the number of gaps, and (D) $n-1>m-1$ is impossible."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A network of $m$ horizontal and $n$ vertical lines has $(m-1)(n-1)$ unit cells; the largest square has side $\\min(m,n)-1$.",
+    "The number of squares of side $s$ is $(m-s)(n-s)$ for $1\\le s\\le\\min(m,n)-1$.",
+    "Number of rectangles: $\\binom m2\\binom n2$; of these, the squares form a smaller subset."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Counting squares on a chess board"
+   ],
+   "level": 1,
+   "paragraph": "Paragraph: When $m$ equally spaced parallel lines are intersected by $n$ equally spaced parallel lines, a network of rectangles or squares is formed. The number of rectangles is ${}^mC_2\\cdot{}^nC_2$. The squares have several dimensions. The smallest square is of dimension $1\\times1$, and the number of such squares is $(m-1)\\times(n-1)$.",
+   "question": "The number of squares on an $8\\times8$ chess board must be:",
+   "options": [
+    "$64$",
+    "$204$",
+    "$285$",
+    "$249$"
+   ],
+   "answer": "(B) $204$",
+   "key_idea": "Squares of side $k$ can be placed in $(9-k)^2$ positions, so the total is $1^2+2^2+\\dots+8^2$.",
+   "solution": [
+    "Squares of side $k$ can be placed in $(9-k)\\times(9-k)$ positions on the $8\\times8$ board. Side $1$: $8\\times8=64$ squares.",
+    "Squares of side $2$: $7\\times7=49$; side $3$: $6\\times6=36$; side $4$: $5\\times5=25$.",
+    "Side $5$: $4\\times4=16$; side $6$: $3\\times3=9$; side $7$: $2\\times2=4$; side $8$: $1\\times1=1$.",
+    "Total $=64+49+36+25+16+9+4+1=204$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the closed formula of the next question with $m=n=9$ lines (an $8\\times8$ board has $9$ lines each way).",
+     "solution": [
+      "An $8\\times8$ chess board is a network of $m=9$ horizontal and $n=9$ vertical lines.",
+      "Formula (Q24 with $m=n=9$): $\\dfrac{m(m-1)(3n-m-1)}{6}=\\dfrac{9\\cdot8\\cdot(27-9-1)}{6}$.",
+      "$=\\dfrac{72\\times17}{6}=204$.",
+      "Or equivalently $\\sum_{k=1}^{8}k^2=\\dfrac{8\\cdot9\\cdot17}{6}=204$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Squares in an $n\\times n$ board: $\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$; rectangles: $\\left(\\dfrac{n(n+1)}2\\right)^2=\\sum k^3$ (here $36^2=1296$).",
+    "Squares in an $m\\times n$ board ($m\\le n$): $\\sum_{k=1}^{m}(m-k+1)(n-k+1)$.",
+    "Distractor warning: $285=\\sum_{k=1}^{9}k^2$ is the $9\\times9$ board; $64$ counts unit squares only."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Counting squares in an $m\\times n$ network (summation of a series)"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: When $m$ equally spaced parallel lines are intersected by $n$ equally spaced parallel lines, a network of rectangles or squares is formed. The number of rectangles is ${}^mC_2\\cdot{}^nC_2$. The squares have several dimensions. The smallest square is of dimension $1\\times1$, and the number of such squares is $(m-1)\\times(n-1)$.",
+   "question": "The total number of squares, when $m$ such lines (as described in the passage) are intersected by $n$ such lines, must be ($m<n$):",
+   "options": [
+    "$mn$",
+    "$\\dfrac{m(m-1)n(n-1)}{4}$",
+    "$\\dfrac{n(n-1)(3m-n-1)}{6}$",
+    "$\\dfrac{m(m-1)(3n-m-1)}{6}$"
+   ],
+   "answer": "(D) $\\dfrac{m(m-1)(3n-m-1)}{6}$",
+   "key_idea": "Squares of side $r$ number $(m-r)(n-r)$; sum over $r=1,\\dots,m-1$ using $\\sum r$ and $\\sum r^2$.",
+   "solution": [
+    "Squares of side $1,2,\\dots,m-1$: $(m-1)(n-1)+(m-2)(n-2)+\\dots+1\\cdot\\big(n-(m-1)\\big)$.",
+    "Write it as $\\sum_{r=1}^{m-1}(m-r)(n-r)$.",
+    "Expand: $\\sum_{r=1}^{m-1}\\{mn-r(m+n)+r^2\\}$.",
+    "$=mn(m-1)-(m+n)\\dfrac{(m-1)m}{2}+\\dfrac{(m-1)m(2m-1)}{6}$.",
+    "$=m(m-1)\\left\\{n-\\dfrac{m+n}{2}+\\dfrac{2m-1}{6}\\right\\}=m(m-1)\\dfrac{6n-3m-3n+2m-1}{6}$.",
+    "$=\\dfrac{m(m-1)(3n-m-1)}{6}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test a small case instead of summing: plug $m=3$, $n=5$ into the four options.",
+     "solution": [
+      "For $m=3$, $n=5$ the grid has $2\\times4$ cells: $8$ squares of side $1$ and $3$ of side $2$, total $11$.",
+      "(A) $mn=15$ - no.",
+      "(B) $\\dfrac{3\\cdot2\\cdot5\\cdot4}{4}=30$ - no. (C) $\\dfrac{5\\cdot4\\cdot(9-5-1)}{6}=10$ - no.",
+      "(D) $\\dfrac{3\\cdot2\\cdot(15-3-1)}{6}=11$ - yes.",
+      "So (D); a second check $m=n=9$ gives $\\frac{9\\cdot8\\cdot17}{6}=204$ (the chess board)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r=1}^{k}r=\\frac{k(k+1)}2$ and $\\sum_{r=1}^{k}r^2=\\frac{k(k+1)(2k+1)}6$ turn a sum over side length into a closed form.",
+    "Alternative form: $\\sum_{k=1}^{m-1}k\\,(k+n-m)=\\frac{(m-1)m(2m-1)}6+(n-m)\\frac{(m-1)m}2$, the same expression.",
+    "For a quick check pick two or three small values of $(m,n)$ and eliminate options."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Derangements and permutations with fixed points"
+   ],
+   "level": 1,
+   "paragraph": "Paragraph: Consider the arrangements of the integers $1$ to $10$ in which some of the integers are in their natural positions (integer $k$ at place $k$) and the others are deranged. Let $D_n$ be the number of derangements of $n$ objects. The number of arrangements such that:",
+   "question": "Exactly $4$ integers are in their natural positions, that is, exactly $6$ of the integers are deranged:",
+   "options": [
+    "${}^{10}C_4\\cdot D_6$",
+    "$D_6$",
+    "$D_6+D_7+D_8+D_9+D_{10}$",
+    "$D_{10}$"
+   ],
+   "answer": "(A) ${}^{10}C_4\\cdot D_6$",
+   "key_idea": "Choose which $4$ integers stay fixed, then derange the other $6$.",
+   "solution": [
+    "Select the $4$ integers (out of $10$) that stay in their natural positions: ${}^{10}C_4$ ways; they are placed in their correct positions in $1$ way.",
+    "The remaining $6$ integers must all be deranged: $D_6$ ways.",
+    "Number of arrangements $={}^{10}C_4\\cdot D_6$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Number of permutations of $n$ objects with exactly $r$ fixed points: $\\binom nr D_{n-r}$.",
+    "$D_n=n!\\sum_{k=0}^{n}\\dfrac{(-1)^k}{k!}$; $D_1=0,D_2=1,D_3=2,D_4=9,D_5=44,D_6=265$; recursion $D_n=(n-1)(D_{n-1}+D_{n-2})$.",
+    "Check: $\\sum_{r}\\binom nrD_{n-r}=n!$; for $n=4$: $9+4\\cdot2+6\\cdot1+4\\cdot0+1=24$ ✓. Here ${}^{10}C_4D_6=210\\times265=55{,}650$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Derangements within blocks of places"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: Consider the arrangements of the integers $1$ to $10$ in which some of the integers are in their natural positions (integer $k$ at place $k$) and the others are deranged. Let $D_n$ be the number of derangements of $n$ objects. The number of arrangements such that:",
+   "question": "$1,2,3,4,5$ are in some order in the first $5$ places so that none takes its original position:",
+   "options": [
+    "$D_5\\cdot5!$",
+    "$(D_5)^2$",
+    "$5!\\,(D_5)^2$",
+    "${}^{10}C_5\\cdot D_5$"
+   ],
+   "answer": "(B) $(D_5)^2$",
+   "key_idea": "Since $1,\\dots,5$ stay in the first five places, $6,\\dots,10$ must fill the last five; both blocks must be deranged.",
+   "solution": [
+    "The integers $1,2,3,4,5$ occupy places $1$ to $5$ and none is in its natural place: $D_5$ ways.",
+    "Then $6,7,8,9,10$ occupy places $6$ to $10$ and (by the paragraph) must also be deranged: $D_5$ ways.",
+    "Total $=D_5\\cdot D_5=(D_5)^2$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If the places split into blocks that are filled independently by the matching integers, derangements multiply: $D_a\\cdot D_b$.",
+    "$D_5=44$, so the count here is $44^2=1936$.",
+    "Do not multiply by extra $5!$: a derangement already fixes the order within the block."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Derangements and forced non-natural positions"
+   ],
+   "level": 2,
+   "paragraph": "Paragraph: Consider the arrangements of the integers $1$ to $10$ in which some of the integers are in their natural positions (integer $k$ at place $k$) and the others are deranged. Let $D_n$ be the number of derangements of $n$ objects. The number of arrangements such that:",
+   "question": "$6,7,8,9,10$ are in some order in the first $5$ places:",
+   "options": [
+    "$5!\\,5!$",
+    "$D_5\\cdot D_5$",
+    "$D_5\\cdot5!$",
+    "${}^{10}C_5\\cdot D_5$"
+   ],
+   "answer": "(A) $5!\\,5!$",
+   "key_idea": "Integers $6$-$10$ in places $1$-$5$ are automatically away from their natural places, so there is no restriction at all.",
+   "solution": [
+    "$6,7,8,9,10$ are placed in places $1,2,3,4,5$ in any order: $5!$ ways. None can be in its natural position, since their natural places are $6$ to $10$, so it is automatically deranged.",
+    "Then $1,2,3,4,5$ must go to places $6,\\dots,10$, again in any order and automatically deranged: $5!$ ways.",
+    "Total $=5!\\times5!$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If the integers are forced into places outside their natural ones, the derangement condition is automatic and only a plain $5!$ remains.",
+    "Fixed-point constraints matter only when an object can land on its own place.",
+    "Check: $5!\\times5!=14{,}400$ arrangements, all of them valid."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Combinatorial counting: distributions, geometry of points, derangements, digit-product and pairing problems"
+   ],
+   "level": 3,
+   "question": "Match the items of Column-I with those of Column-II.\n(A) Four different movies are running in a town. Ten students go to watch these four movies. The number of ways in which every movie is watched by at least one student is (assume each way differs only by the number of students watching a movie).\n(B) Consider the $8$ vertices of a regular octagon and its centre. If $T$ denotes the number of triangles and $S$ the number of straight lines that can be formed with these $9$ points, then the value of $(T-S)$ equals.\n(C) In an examination, $5$ children were found to have their mobiles in their pockets. The invigilator took their mobiles and, at the end of the test, randomly returned them. The number of ways in which at most two children did not get their own mobiles is.\n(D) The product of the digits of $3214$ is $24$. The number of $4$-digit natural numbers such that the product of their digits is $12$ is.\n(E) The number of ways in which a mixed double tennis game can be arranged from amongst $5$ married couples if no husband and wife play in the same game is.\nColumn-II: (P) $11$   (Q) $36$   (R) $52$   (S) $60$   (T) $84$",
+   "answer": "(A)-(T), (B)-(R), (C)-(P), (D)-(Q), (E)-(S)",
+   "key_idea": "Solve each part separately: stars and bars for (A), collinear triples for (B), derangements for (C), digit patterns for (D), pairing of couples for (E).",
+   "solution": [
+    "(A) Let $x,y,z,t\\ge1$ be the numbers of students at the four movies, $x+y+z+t=10$. Put $x'=x-1$ etc.: $x'+y'+z'+t'=6$ in non-negative integers.",
+    "Number of solutions $={}^{6+4-1}C_{4-1}={}^9C_3=\\dfrac{9\\cdot8\\cdot7}{3\\cdot2\\cdot1}=84$. So (A) $\\to$ (T).",
+    "(B) Triangles: choose any $3$ of $9$ points, ${}^9C_3=84$, minus $4$ collinear triples (the centre with each of the $4$ diameters): $T=80$.",
+    "Lines: ${}^8C_2=28$ from the octagon's vertices; the centre adds no new line (each line through it already joins two opposite vertices). $S=28$.",
+    "$T-S=80-28=52$. So (B) $\\to$ (R).",
+    "(C) At most two children get a wrong mobile: $0$ wrong gives $1$ way; exactly $2$ wrong gives ${}^5C_2\\times1=10$ ($1$ wrong is impossible).",
+    "Total $=10+1=11$. So (C) $\\to$ (P).",
+    "(D) $12=2\\cdot2\\cdot3\\cdot1=4\\cdot3\\cdot1\\cdot1=6\\cdot2\\cdot1\\cdot1$ as products of four digits.",
+    "Digits $\\{2,2,3,1\\}$: $\\dfrac{4!}{2!}=12$ numbers; $\\{4,3,1,1\\}$: $12$ numbers; $\\{6,2,1,1\\}$: $12$ numbers. Total $36$. So (D) $\\to$ (Q).",
+    "(E) Choose $2$ husbands from $5$: ${}^5C_2$; remove their wives and choose $2$ wives from the other $3$: ${}^3C_2$; these four players can form $2$ different pairs of teams: $2!$.",
+    "Number of ways $=10\\times3\\times2=60$. So (E) $\\to$ (S)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Check (A) by inclusion-exclusion on non-negative solutions, and (E) by choosing $4$ different couples first.",
+     "solution": [
+      "(A) Non-negative solutions of $x+y+z+t=10$: ${}^{13}C_3=286$. Remove those with a specified variable $0$: $4\\times{}^{12}C_2=4\\times66=264$.",
+      "Add back two variables $0$: $6\\times{}^{11}C_1=66$; subtract three variables $0$: $4\\times1=4$. Number with all four $\\ge1$: $286-264+66-4=84$ ✓.",
+      "(E) The four players must come from $4$ different couples: choose the $4$ couples in ${}^5C_4=5$ ways.",
+      "From these $4$ couples take the husband of $2$ of them and the wife of the other $2$: ${}^4C_2=6$ ways. This gives $4$ players.",
+      "The $2$ men and $2$ women form two mixed teams in $2$ ways. Total $5\\times6\\times2=60$ ✓."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Positive solutions of $x_1+\\dots+x_k=n$: $\\binom{n-1}{k-1}$; non-negative solutions: $\\binom{n+k-1}{k-1}$.",
+    "Triangles from $n$ points with collinear sets: $\\binom n3-\\sum\\binom{c_i}{3}$; lines: $\\binom n2-\\sum\\big(\\binom{c_i}{2}-1\\big)$ for each collinear set of size $c_i$ (here the centre set has $c=3$ for each of $4$ diameters).",
+    "Permutations of $n$ with exactly $k$ non-fixed points (all others fixed): $\\binom nkD_k$; with at most two wrong: $1+\\binom n2$.",
+    "Digit-product counts: factor the product, list digit multisets, then permute each ($\\frac{4!}{\\text{repeats}}$)."
+   ]
+  }
+ ]
+}
