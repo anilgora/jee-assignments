@@ -1,0 +1,2341 @@
+{
+ "title": "Permutations & Combinations (Exercise J-M) — Paper Analysis",
+ "subtitle": "JEE Main previous-year questions · detailed solutions",
+ "source": "SHEET_P_&_C_FCopy_JM.pdf (no blueprint; concepts self-assigned)",
+ "paper_name": "P&C Exercise J-M",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 3,
+   "marking": [
+    "+4 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 4,
+   "to": 16,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 17,
+   "to": 27,
+   "marking": [
+    "+4 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 28,
+   "to": 38,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 39,
+   "to": 43,
+   "marking": [
+    "+4 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 44,
+   "to": 48,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 49,
+   "to": 54,
+   "marking": [
+    "+4 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 55,
+   "to": 58,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of digits without repetition (numbers above a given value)"
+   ],
+   "level": 1,
+   "question": "The number of integers, greater than $7000$ that can be formed, using the digits $3,5,6,7,8$ without repetition, is: [JEE(Main) Jan 2023]",
+   "options": [
+    "$220$",
+    "$168$",
+    "$48$",
+    "$120$"
+   ],
+   "answer": "(B) 168",
+   "key_idea": "A number above $7000$ is either a $4$-digit one with leading digit $7$ or $8$, or any $5$-digit one.",
+   "solution": [
+    "Four-digit numbers greater than $7000$ must start with $7$ or $8$: $2$ choices for the first digit.",
+    "The remaining three places are filled from the other $4$ digits without repetition: $4\\times3\\times2$ ways.",
+    "Four-digit numbers greater than $7000$: $2\\times4\\times3\\times2=48$.",
+    "Five-digit numbers (all exceed $7000$): $5!=120$.",
+    "Total number greater than $7000$ is $120+48=168$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count all numbers with 4 or 5 distinct digits and subtract the 4-digit ones that are at most $7000$.",
+     "solution": [
+      "All $4$-digit numbers with distinct digits from the five digits: ${}^5P_4=120$; all $5$-digit ones: $5!=120$; total $240$.",
+      "A $4$-digit number is below $7000$ when its first digit is $3,5$ or $6$: $3\\times4\\times3\\times2=72$ (no number equals $7000$ since $0$ is not available).",
+      "Required count $=240-72=168$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Greater than $N$' counts: sum over leading-digit choices, or complement from the total; check whether longer numbers also qualify.",
+    "Digits chosen without repetition: $r$ places from $n$ digits give ${}^nP_r$; a leading-digit restriction multiplies the remaining ${}^{n-1}P_{r-1}$ by the allowed first digits.",
+    "Here the lengths $4$ and $5$ give ${}^5P_4+{}^5P_5=240$ digit strings; $168/240=7/10$ of them exceed $7000$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of digits without repetition (numbers in a given range)"
+   ],
+   "level": 1,
+   "question": "The number of numbers, strictly between $5000$ and $10000$ that can be formed using the digits $1,3,5,7,9$ without repetition, is: [JEE(Main) Jan 2023]",
+   "options": [
+    "$72$",
+    "$12$",
+    "$6$",
+    "$120$"
+   ],
+   "answer": "(A) 72",
+   "key_idea": "Numbers between $5000$ and $10000$ are $4$-digit with thousands digit $\\ge5$, so only $5,7,9$ may lead.",
+   "solution": [
+    "A number strictly between $5000$ and $10000$ has $4$ digits, so the thousands digit must be $5$, $7$ or $9$: $3$ ways.",
+    "The remaining three places are filled from the other four digits without repetition: $4\\times3\\times2$ ways.",
+    "Total numbers $=3\\times4\\times3\\times2=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "By symmetry, each of the five digits is equally often the leading digit among all $4$-digit arrangements.",
+     "solution": [
+      "Number of $4$-digit numbers with distinct digits from $\\{1,3,5,7,9\\}$: ${}^5P_4=120$.",
+      "By symmetry each of the five digits leads exactly $120/5=24$ of them.",
+      "Leading digits $5,7,9$ give numbers above $5000$: $3\\times24=72$ (and $5000$ itself cannot be formed)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Equal-footing symmetry: in all arrangements of $r$ out of $n$ distinct digits, each digit leads exactly $\\frac{1}{n}$ of the cases.",
+    "For a range such as $(a,b)$, count by the leading digit in the allowed block of digits and multiply by ${}^{n-1}P_{r-1}$.",
+    "Check the endpoints: $5000$ and $10000$ cannot be formed here, so 'strictly between' changes nothing."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rank of a word in dictionary order"
+   ],
+   "level": 1,
+   "question": "The letters of the word OUGHT are written in all possible ways and these words are arranged in a dictionary, in a series. Then the serial number of the word TOUGH is: [JEE(Main) Jan 2023]",
+   "options": [
+    "$89$",
+    "$79$",
+    "$86$",
+    "$84$"
+   ],
+   "answer": "(A) 89",
+   "key_idea": "Rank $=1+$ the number of words before it: for each position count the unused smaller letters times the factorial of the places left.",
+   "solution": [
+    "Alphabetical order of the letters: $G,H,O,T,U$.",
+    "Words starting with $G$: $4!=24$; starting with $H$: $4!=24$; starting with $O$: $4!=24$.",
+    "Words starting with $TG$: $3!=6$; starting with $TH$: $3!=6$.",
+    "Words starting with $TOG$: $2!=2$; starting with $TOH$: $2!=2$.",
+    "Next word is $TOUGH$ itself: $1$.",
+    "Rank of TOUGH $=24+24+24+6+6+2+2+1=89$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the factorial number system: Rank $-1=\\sum(\\text{smaller unused letters})\\cdot(\\text{places left})!$.",
+     "solution": [
+      "Positions of TOUGH: $T,O,U,G,H$. Sorted letters: $G<H<O<T<U$.",
+      "First letter $T$: $3$ smaller letters $(G,H,O)$, $4$ places left: $3\\times4!=72$.",
+      "Second letter $O$: unused letters $G,H,O,U$; smaller than $O$: $G,H$: $2\\times3!=12$.",
+      "Third letter $U$: unused $G,H,U$; smaller: $G,H$: $2\\times2!=4$.",
+      "Fourth letter $G$: unused $G,H$; smaller: none: $0$. Fifth letter $H$: $0$.",
+      "Words before it $=72+12+4=88$, so the rank is $89$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rank of a word of distinct letters $=1+\\sum_i c_i\\,(n-i)!$, where $c_i$ is the number of unused letters smaller than the $i$-th letter.",
+    "With repeated letters, divide each block count by the factorials of the repeated letters left over.",
+    "Inverse problem (find the $k$-th word): divide $k-1$ successively by $(n-1)!,(n-2)!,\\dots$ to read off the letter indices."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Permutations ${}^nP_r$: formula and equations"
+   ],
+   "level": 1,
+   "question": "If ${}^{2n+1}P_{n-1}:{}^{2n-1}P_{n}=11:21$, then $n^2+n+15$ is equal to ______. [JEE(Main) Jan 2023]",
+   "answer": "45",
+   "key_idea": "Write ${}^nP_r=\\frac{n!}{(n-r)!}$ for both terms; most factorials cancel and leave $\\frac{2(2n+1)}{(n+1)(n+2)}$.",
+   "solution": [
+    "${}^{2n+1}P_{n-1}=\\frac{(2n+1)!}{(n+2)!}$ and ${}^{2n-1}P_{n}=\\frac{(2n-1)!}{(n-1)!}$.",
+    "Ratio: $\\frac{(2n+1)!\\,(n-1)!}{(n+2)!\\,(2n-1)!}=\\frac{11}{21}$.",
+    "Cancel: $\\frac{(2n+1)(2n)}{(n+2)(n+1)n}=\\frac{11}{21}$, i.e. $\\frac{2(2n+1)}{(n+1)(n+2)}=\\frac{11}{21}$.",
+    "Equivalently $\\frac{2n+1}{(n+1)(n+2)}=\\frac{11}{42}$; cross-multiplying gives $11n^2-51n-20=0$, so $n=5$ (the other root is negative).",
+    "$n^2+n+15=25+5+15=45$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Scale $\\frac{11}{21}$ to $\\frac{22}{42}$ and match numerator and denominator, then prove uniqueness by monotonicity.",
+     "solution": [
+      "From the reduced ratio, $\\frac{2(2n+1)}{(n+1)(n+2)}=\\frac{11}{21}=\\frac{22}{42}$.",
+      "Try matching: $2(2n+1)=22\\Rightarrow n=5$ and $(n+1)(n+2)=6\\cdot7=42$ also holds, so $n=5$ works.",
+      "Uniqueness: $R(n)=\\frac{2(2n+1)}{(n+1)(n+2)}$ is strictly decreasing for $n\\ge1$ ($R(1)=1,R(2)=\\frac56,R(3)=\\frac{7}{10},\\dots$), so no other positive $n$ gives $\\frac{11}{21}$.",
+      "Hence $n=5$ and $n^2+n+15=45$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "${}^nP_r=\\frac{n!}{(n-r)!}$ requires $0\\le r\\le n$ ($n,r$ integers); here $n-1\\ge0$ and $2n-1\\ge n$ force $n\\ge1$.",
+    "When a ratio of permutations or combinations equals a simple fraction, reduce to a rational function of $n$ and test the integer that matches both numerator and denominator.",
+    "Useful: ${}^{n}P_r={}^{n-1}P_r+r\\,{}^{n-1}P_{r-1}$ and ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of identical objects with position restrictions"
+   ],
+   "level": 1,
+   "question": "The number of $9$ digit numbers, that can be formed using all the digits of the number $123412341$ so that the even digits occupy only even places, is ______. [JEE(Main) Jan 2023]",
+   "answer": "60",
+   "key_idea": "The $4$ even digits must take exactly the $4$ even places, so even and odd digits are arranged independently.",
+   "solution": [
+    "The digits are $1,1,1,2,2,3,3,4,4$: even digits $2,2,4,4$ and odd digits $1,1,1,3,3$.",
+    "A $9$-digit number has $4$ even places (2nd, 4th, 6th, 8th) and $5$ odd places; the four even digits must occupy the four even places.",
+    "Even digits in the four even places: $\\frac{4!}{2!\\,2!}=6$ ways.",
+    "Odd digits in the five odd places: $\\frac{5!}{3!\\,2!}=10$ ways.",
+    "Required numbers $=6\\times10=60$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "When a group of objects is confined to a set of positions of equal size, arrange the groups separately and multiply.",
+    "Arrangements of a multiset with repeats $n_1,n_2,\\dots$ of total $n$: $\\frac{n!}{n_1!\\,n_2!\\cdots}$.",
+    "Total unrestricted arrangements here would be $\\frac{9!}{3!\\,2!\\,2!\\,2!}=7560=\\binom94\\cdot6\\cdot10$; the restricted ones use just one of the $\\binom94=126$ choices of places for the even digits."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections with a restriction on a type (at most / at least)"
+   ],
+   "level": 1,
+   "question": "A boy needs to select five courses from $12$ available courses, out of which $5$ courses are language courses. If he can choose at most two language courses, then the number of ways he can choose five courses is ______. [JEE(Main) Jan 2023]",
+   "answer": "546",
+   "key_idea": "'At most two' means $2,1$ or $0$ language courses; pick those from $5$ and the rest from the other $7$.",
+   "solution": [
+    "There are $5$ language and $7$ non-language courses; exactly five courses are chosen.",
+    "Two language courses: ${}^5C_2\\times{}^7C_3=10\\times35=350$.",
+    "One language course: ${}^5C_1\\times{}^7C_4=5\\times35=175$.",
+    "No language course: ${}^7C_5=21$.",
+    "Total $=350+175+21=546$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complement: subtract the selections with at least three language courses from the total.",
+     "solution": [
+      "Total selections of five from twelve: ${}^{12}C_5=792$.",
+      "Selections with at least three language courses: $3$ language: ${}^5C_3\\,{}^7C_2=10\\times21=210$; $4$: ${}^5C_4\\,{}^7C_1=35$; $5$: ${}^5C_5=1$; total $246$.",
+      "Required number $=792-246=546$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'At most $k$' with a small complement ('at least $k+1$') can be done as total minus complement; choose whichever has fewer cases.",
+    "Vandermonde: $\\sum_k\\binom{a}{k}\\binom{b}{r-k}=\\binom{a+b}{r}$; here the cases for $0$ to $5$ language courses sum to $792$.",
+    "Selection from two groups: multiply the binomials for each group, then add over the cases."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection by residue classes (divisibility)"
+   ],
+   "level": 2,
+   "question": "Let $x$ and $y$ be distinct integers where $1\\le x\\le25$ and $1\\le y\\le25$. Then, the number of ways of choosing $x$ and $y$, such that $x+y$ is divisible by $5$, is ______. [JEE(Main) Jan 2023]",
+   "answer": "120",
+   "key_idea": "Group the numbers by remainder mod $5$: $x+y\\equiv0$ pairs remainder $r$ with $5-r$, and $0$ with $0$.",
+   "solution": [
+    "Split $1,\\dots,25$ into five groups by remainder on division by $5$; each group has $5$ numbers (remainders $1,2,3,4,0$).",
+    "$x+y$ is divisible by $5$ when $x\\in$ remainder-$1$ group and $y\\in$ remainder-$4$ group: ${}^5C_1\\times{}^5C_1=25$.",
+    "$x\\in$ remainder-$2$ group and $y\\in$ remainder-$3$ group: $25$.",
+    "$x\\in$ remainder-$3$ group and $y\\in$ remainder-$2$ group: $25$; $x\\in$ remainder-$4$ and $y\\in$ remainder-$1$: $25$.",
+    "Both from the remainder-$0$ group (distinct): ${}^5C_2\\times2=20$.",
+    "Total (ordered choices of $x,y$) $=25\\times4+20=120$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fix $x$ first and count the admissible $y$ for it.",
+     "solution": [
+      "For a given $x$, $y$ must have remainder $-x\\pmod5$; each remainder class has $5$ members.",
+      "If $x$ is a multiple of $5$ ($5$ such $x$): $y$ is a multiple of $5$ other than $x$: $4$ choices, giving $5\\times4=20$.",
+      "If $x$ is not a multiple of $5$ ($20$ such $x$): $y$ comes from the complementary class, which never contains $x$: $5$ choices, giving $20\\times5=100$.",
+      "Total ordered pairs $=20+100=120$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For divisibility of a sum (or product) by $m$, work with residues mod $m$: pairs with $r_1+r_2\\equiv0\\pmod m$.",
+    "Ordered versus unordered: this answer $120$ counts $(x,y)$ as ordered; the unordered pairs number $60$.",
+    "Equal-class pair (here remainder $0$): choose two distinct members, ${}^nC_2$, and double if order matters."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections with minimum-count conditions on several types"
+   ],
+   "level": 2,
+   "question": "Suppose Anil's mother wants to give $5$ whole fruits to Anil from a basket of $7$ red apples, $5$ white apples and $8$ oranges. If in the selected $5$ fruits, at least $2$ oranges, at least one red apple and at least one white apple must be given, then the number of ways Anil's mother can offer $5$ fruits to Anil is ______. [JEE(Main) Jan 2023]",
+   "answer": "6860",
+   "key_idea": "With minimums $(1,1,2)$ already using $4$ fruits, the fifth fruit decides the three possible patterns.",
+   "solution": [
+    "Let the numbers of red, white and orange fruits be $x,y,z$ with $x+y+z=5$, $x\\ge1,\\ y\\ge1,\\ z\\ge2$.",
+    "The only possibilities are $(x,y,z)=(2,1,2),\\ (1,2,2),\\ (1,1,3)$.",
+    "Case $(2,1,2)$: ${}^7C_2\\cdot{}^5C_1\\cdot{}^8C_2=21\\times5\\times28=2940$.",
+    "Case $(1,2,2)$: ${}^7C_1\\cdot{}^5C_2\\cdot{}^8C_2=7\\times10\\times28=1960$.",
+    "Case $(1,1,3)$: ${}^7C_1\\cdot{}^5C_1\\cdot{}^8C_3=7\\times5\\times56=1960$.",
+    "Total $=2940+1960+1960=6860$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Inclusion-exclusion on the three violated conditions (fewer than two oranges, no red, no white).",
+     "solution": [
+      "Total ways to pick $5$ of the $20$ fruits: ${}^{20}C_5=15504$.",
+      "$A$: at most one orange: ${}^{12}C_5+8\\cdot{}^{12}C_4=792+3960=4752$. $B$: no red: ${}^{13}C_5=1287$. $C$: no white: ${}^{15}C_5=3003$.",
+      "$A\\cap B$ (no red, at most one orange): ${}^5C_5+8\\cdot{}^5C_4=41$. $A\\cap C$ (no white): ${}^7C_5+8\\cdot{}^7C_4=301$. $B\\cap C$ (only oranges): ${}^8C_5=56$. $A\\cap B\\cap C=0$.",
+      "$|A\\cup B\\cup C|=4752+1287+3003-41-301-56=8644$.",
+      "Required $=15504-8644=6860$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For '$\\ge$' conditions on several types, list the compositions of $r$ that satisfy all minimums (a bounded integer-solution problem), then multiply binomials.",
+    "Inclusion-exclusion is the check: total minus the union of the violated conditions; useful when there are many types.",
+    "Distinct fruits (even of the same kind) mean each case is a product of ${}^nC_k$ terms, not a count of compositions alone."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rank of a number in order (digits with repetition)"
+   ],
+   "level": 2,
+   "question": "Five digit numbers are formed using the digits $1,2,3,5,7$ with repetitions and are written in descending order with serial numbers. For example, the number $77777$ has serial number $1$. Then the serial number of $35337$ is ______. [JEE(Main) Jan 2023]",
+   "answer": "1436",
+   "key_idea": "Rank $=1+\\sum(\\text{larger digits at each place})\\times5^{\\text{places left}}$ because order is descending.",
+   "solution": [
+    "Descending order: a number comes before $35337$ if it is larger, so count numbers larger than $35337$ place by place.",
+    "First digit $7$ or $5$ (larger than $3$): $5^4=625$ each, i.e. $625+625=1250$.",
+    "First digit $3$, second digit $7$ (larger than $5$): $5^3=125$.",
+    "First two digits $35$, third digit $5$ or $7$ (larger than $3$): $5^2=25$ each, i.e. $25+25=50$.",
+    "First three digits $353$, fourth digit $5$ or $7$ (larger than $3$): $5$ each, i.e. $5+5=10$.",
+    "First four digits $3533$, fifth digit larger than $7$: none. Numbers larger than $35337$: $1250+125+50+10=1435$.",
+    "Serial number of $35337=1435+1=1436$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's list of prefixes omits the prefix 355 (25 numbers): it lists 7, 5, 37, 357, 3537, 3535 which sum to only 1411 with the number itself, yet prints 1436. Added the prefix 355 (25 numbers), giving 1435 numbers above it and rank 1436, which matches the key.",
+   "alternate_solutions": [
+    {
+     "idea": "Read the number as a base-5 numeral with digit weights from the descending order of the digit set.",
+     "solution": [
+      "In descending order, digit $7\\to0$, $5\\to1$, $3\\to2$, $2\\to3$, $1\\to4$ (the number of larger digits).",
+      "$35337$ has digits $3,5,3,3,7\\to2,1,2,2,0$.",
+      "Count of numbers before it $=(21220)_5=2\\cdot625+1\\cdot125+2\\cdot25+2\\cdot5+0=1250+125+50+10=1435$.",
+      "Serial number $=1435+1=1436$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For numbers with repetition over $m$ ordered digits, the rank is the base-$m$ numeral of the digit ranks plus $1$ (ascending or descending, depending on the mapping).",
+    "Descending order: count larger digits at each place; ascending: count smaller digits.",
+    "Cross-check: the last number ($11111$) has digit ranks $44444$, i.e. $5^5-1=3124$ numbers before it, rank $3125=5^5$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Combinations from digits (strictly increasing digit strings) and ranking"
+   ],
+   "level": 2,
+   "question": "If all the six digit numbers $x_1x_2x_3x_4x_5x_6$ with $0<x_1<x_2<x_3<x_4<x_5<x_6$ are arranged in the increasing order, then the sum of the digits in the $72^{\\text{th}}$ number is ______. [JEE(Main) Jan 2023]",
+   "answer": "32",
+   "key_idea": "A strictly increasing $6$-digit string from $1$-$9$ is just a $6$-element subset, so blocks by prefix have binomial sizes.",
+   "solution": [
+    "Since $0<x_1<\\dots<x_6$, the digits are chosen from $1,\\dots,9$ and a number is determined by a $6$-subset: ${}^9C_6=84$ numbers in all.",
+    "Numbers starting with $1$: choose the other $5$ digits from $2,\\dots,9$: ${}^8C_5=56$.",
+    "Numbers starting with $2$ begin with $23$ first: choose $4$ digits from $4,\\dots,9$: ${}^6C_4=15$, so $56+15=71$ numbers come before any number starting with $24$.",
+    "Hence the $72^{\\text{nd}}$ number is the smallest number starting with $24$: $245678$.",
+    "Sum of digits $=2+4+5+6+7+8=32$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count from the largest end: the $72^{\\text{nd}}$ smallest is the $13^{\\text{th}}$ largest, which needs far fewer blocks.",
+     "solution": [
+      "There are $84$ numbers, so the $72^{\\text{nd}}$ from the smallest is the $84-72+1=13^{\\text{th}}$ from the largest.",
+      "Largest first: first digit $4$ gives only $456789$ ($1$ number); first digit $3$: five digits from $4,\\dots,9$: ${}^6C_5=6$ numbers; running total $7$.",
+      "First digit $2$: second digit $5$ gives $256789$ ($1$ number, total $8$); second digit $4$ gives ${}^5C_4=5$ numbers (total $13$).",
+      "So the $13^{\\text{th}}$ largest is the smallest number beginning $24$, namely $245678$; its digit sum is $2+4+5+6+7+8=32$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Strictly increasing digit strings of length $r$ from $n$ digits correspond one-to-one with $r$-subsets: $\\binom nr$ strings.",
+    "Rank by prefix: numbers with first digit $d$ are $\\binom{n-d}{r-1}$; keep subtracting until the block contains the target.",
+    "Non-decreasing strings correspond to multisets: $\\binom{n+r-1}{r}$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Divisibility by 3 and 5 in digit counting"
+   ],
+   "level": 2,
+   "question": "Number of $4$-digit numbers (the repetition of digits is allowed) which are made using the digits $1,2,3$ and $5$, and are divisible by $15$, is equal to ______. [JEE(Main) Jan 2023]",
+   "answer": "21",
+   "key_idea": "Divisible by $15$ means last digit $5$ and digit sum a multiple of $3$, so the first three digits must have sum $\\equiv1\\pmod 3$.",
+   "solution": [
+    "Divisible by $15$: the last digit must be $5$ (it cannot be $0$) and the sum of the digits must be divisible by $3$.",
+    "First three digits (any of $1,2,3,5$) must have a sum that, added to $5$, is a multiple of $3$. Cases by the digit multiset:",
+    "$\\{1,2,1\\}$ (sum with $5$ is $9$): $\\frac{3!}{2!}=3$ numbers. $\\{2,2,3\\}$ (sum $12$): $3$. $\\{3,3,1\\}$ (sum $12$): $3$. $\\{1,1,5\\}$ (sum $12$): $3$.",
+    "$\\{2,3,5\\}$ (sum $15$): all digits different, $3!=6$ numbers. $\\{3,5,5\\}$ (sum $18$): $\\frac{3!}{2!}=3$ numbers.",
+    "Total $=3+3+3+3+6+3=21$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work with residues mod $3$: the digits $1,2,3,5$ have residues $1,2,0,2$, and the first three must have residue-sum $1$.",
+     "solution": [
+      "Residue $0$: digit $3$ (weight $1$); residue $1$: digit $1$ (weight $1$); residue $2$: digits $2,5$ (weight $2$).",
+      "The last digit $5$ has residue $2$, so the first three digits need residue-sum $\\equiv1\\pmod3$.",
+      "Residue multisets with sum $\\equiv1$: $\\{0,0,1\\}$, $\\{1,1,2\\}$, $\\{0,2,2\\}$.",
+      "$\\{0,0,1\\}$: $3$ orders $\\times$ weight $1\\cdot1\\cdot1$ $=3$. $\\{1,1,2\\}$: $3$ orders $\\times$ weight $1\\cdot1\\cdot2$ $=6$. $\\{0,2,2\\}$: $3$ orders $\\times$ weight $1\\cdot2\\cdot2$ $=12$.",
+      "Total $=3+6+12=21$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Divisible by $3$: digit sum $\\equiv0\\pmod3$; by $5$: last digit $0$ or $5$; by $15$: both.",
+    "Residue-class counting replaces long digit lists: classify digits by remainder and weight each class by its size.",
+    "If residues were equally weighted ($3^k$ digit strings), exactly one third would have any given residue sum; here the weights are unequal ($1,1,2$), giving $21$ out of $64$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of identical objects with a last-place condition"
+   ],
+   "level": 1,
+   "question": "The number of seven digits odd numbers, that can be formed using all the seven digits $1,2,2,2,3,3,5$ is ______. [JEE(Main) Jan 2023]",
+   "answer": "240",
+   "key_idea": "An odd number must end in $1,3$ or $5$; fix that digit and arrange the other six with repetition.",
+   "solution": [
+    "The number is odd when the last digit is $1$, $3$ or $5$.",
+    "Last digit $1$: arrange $2,2,2,3,3,5$ in the other places: $\\frac{6!}{3!\\,2!}=60$.",
+    "Last digit $3$: arrange $1,2,2,2,3,5$: $\\frac{6!}{3!}=120$.",
+    "Last digit $5$: arrange $1,2,2,2,3,3$: $\\frac{6!}{3!\\,2!}=60$.",
+    "Total $=60+120+60=240$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry: in all arrangements, each of the seven digit-copies is equally likely to be last.",
+     "solution": [
+      "All arrangements of $1,2,2,2,3,3,5$: $\\frac{7!}{3!\\,2!}=420$.",
+      "Treat the copies as distinguishable: each copy is last in the same fraction of arrangements, namely $\\frac17$.",
+      "Odd digits present: $1,3,3,5$, i.e. $4$ copies out of $7$.",
+      "Odd numbers $=420\\times\\frac47=240$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In arrangements of a multiset, the chance that a particular kind of object sits in a given place is (copies of that kind)$/n$.",
+    "Parity/divisibility conditions on the last place can be fixed first (last digit), then the rest arranged freely.",
+    "Check: odd $240$ plus even ($2$ ends the number: $\\frac{6!}{2!\\,2!}=180$) equals $420$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rank of a number in order (digits with repetition)"
+   ],
+   "level": 2,
+   "question": "Let $5$ digit numbers be constructed using the digits $0,2,3,4,7,9$ with repetition allowed, and are arranged in ascending order with serial numbers. Then the serial number of the number $42923$ is ______. [JEE(Main) Jan 2023]",
+   "answer": "2997",
+   "key_idea": "The first digit cannot be $0$, so the blocks below $42923$ are counted prefix by prefix with $6$ choices per remaining place.",
+   "solution": [
+    "A $5$-digit number cannot start with $0$; count numbers smaller than $42923$ place by place.",
+    "First digit $2$: $6^4=1296$ numbers. First digit $3$: $6^4=1296$.",
+    "First digit $4$, second digit $0$: $6^3=216$ numbers.",
+    "First digits $42$, third digit $0,2,3,4$ or $7$ (smaller than $9$): $6^2=36$ each, i.e. $5\\times36=180$.",
+    "First digits $429$, fourth digit $0$: $6$ numbers.",
+    "First digits $429$, fourth digit $2$: fifth digit $0,2$ or $3$ gives $42920,42922,42923$ ($3$ numbers, the last being the number itself).",
+    "Serial number $=1296+1296+216+180+6+3=2997$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read the number as a base-$6$ numeral over the ordered digits, then remove the strings that start with $0$.",
+     "solution": [
+      "Digit ranks in ascending order: $0\\to0,\\ 2\\to1,\\ 3\\to2,\\ 4\\to3,\\ 7\\to4,\\ 9\\to5$.",
+      "$42923$ has ranks $3,1,5,1,2$, i.e. $(31512)_6=3\\cdot1296+1\\cdot216+5\\cdot36+1\\cdot6+2=4292$.",
+      "So $4292$ strings (including those starting with $0$) are smaller than it.",
+      "Strings starting with $0$: $6^4=1296$ (they are not $5$-digit numbers). Valid numbers smaller than $42923$: $4292-1296=2996$.",
+      "Serial number $=2996+1=2997$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With $m$ allowed digits, an ascending list of $k$-digit strings is a base-$m$ counting system: rank $=1+$ value of the digit-rank string.",
+    "A restriction on the first digit (no leading $0$) is handled by subtracting the strings that start with the forbidden digit.",
+    "Check: the smallest valid number $20000$ has digit ranks $10000$, value $1296$, so $1296-1296+1=1$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements with repeated letters and letters kept together"
+   ],
+   "level": 2,
+   "question": "The number of words, with or without meaning, that can be formed using all the letters of the word ASSASSINATION so that the vowels occur together, is ______. [JEE(Main) Jan 2023]",
+   "answer": "50400",
+   "key_idea": "Treat the six vowels as one block; the block and the seven consonants make $8$ objects.",
+   "solution": [
+    "Vowels: $A,A,A,I,I,O$ ($6$ letters). Consonants: $S,S,S,S,N,N,T$ ($7$ letters). Total $13$ letters.",
+    "Treat the vowels as one block: block $+$ $7$ consonants $=8$ objects with $S$ repeated $4$ times and $N$ twice.",
+    "Arrangements of these $8$ objects: $\\frac{8!}{4!\\,2!}=840$.",
+    "Arrangements of the vowels inside the block: $\\frac{6!}{3!\\,2!}=60$.",
+    "Words with the vowels together $=840\\times60=50400$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working correctly gives 50400 (840 x 60), but its answer line prints 504000, an extra zero. The correct answer is 50400 (confirmed by brute force); the key looks like a typo.",
+   "alternate_solutions": [
+    {
+     "idea": "Arrange the consonants first and drop the vowel block into one of the gaps.",
+     "solution": [
+      "Arrange the $7$ consonants $S,S,S,S,N,N,T$: $\\frac{7!}{4!\\,2!}=105$ ways.",
+      "They leave $8$ gaps (including both ends); the vowel block goes into exactly one gap: $8$ choices.",
+      "Arrange the vowels within the block: $\\frac{6!}{3!\\,2!}=60$.",
+      "Total $=105\\times8\\times60=50400$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Letters together' means glue them into a block: (number of objects after gluing)!, divided by repeats, times arrangements inside the block.",
+    "If the group is to be kept together, its internal repeats are divided separately from the outside repeats.",
+    "Gap method: arrange the other letters first; a block can enter any of the (number of letters $+1$) gaps."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integral solutions of a linear equation with lower bounds"
+   ],
+   "level": 1,
+   "question": "Number of integral solutions to the equation $x+y+z=21$, where $x\\ge1$, $y\\ge3$, $z\\ge4$ is equal to ______. [JEE(Main) Jan 2023]",
+   "answer": "105",
+   "key_idea": "Put $x=1+a,\\ y=3+b,\\ z=4+c$ with $a,b,c\\ge0$; the equation becomes $a+b+c=13$.",
+   "solution": [
+    "Let $x=1+a$, $y=3+b$, $z=4+c$ with $a,b,c\\ge0$.",
+    "Then $a+b+c=21-8=13$.",
+    "Number of non-negative integer solutions $={}^{13+3-1}C_{3-1}={}^{15}C_2$.",
+    "${}^{15}C_2=\\frac{15\\times14}{2}=105$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating functions: each variable contributes a geometric series starting at its minimum.",
+     "solution": [
+      "The number of solutions is the coefficient of $t^{21}$ in $(t+t^2+\\cdots)(t^3+t^4+\\cdots)(t^4+t^5+\\cdots)=\\frac{t^8}{(1-t)^3}$.",
+      "So it equals the coefficient of $t^{13}$ in $(1-t)^{-3}=\\sum\\binom{r+2}{2}t^r$.",
+      "Coefficient $=\\binom{15}{2}=105$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Non-negative solutions of $x_1+\\dots+x_k=n$: $\\binom{n+k-1}{k-1}$; with lower bounds $m_i$, replace $n$ by $n-\\sum m_i$.",
+    "Upper bounds need inclusion-exclusion: subtract solutions with some $x_i\\ge u_i+1$.",
+    "Coefficient of $t^r$ in $(1-t)^{-k}$ is $\\binom{r+k-1}{k-1}$ - the generating-function form of the same result."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Divisibility by 6 in digit counting (parity and digit sum)"
+   ],
+   "level": 1,
+   "question": "The total number of six digit numbers, formed using the digits $4,5,9$ only and divisible by $6$, is ______. [JEE(Main) Jan 2023]",
+   "answer": "81",
+   "key_idea": "Only $4$ is even, so the last digit is $4$; the digit sum then forces one more place once the others are free.",
+   "solution": [
+    "Divisible by $6$ means even and divisible by $3$. The only even digit available is $4$, so the unit digit is $4$.",
+    "The digit sum must be divisible by $3$. Digits $4,5,9$ leave remainders $1,2,0$ on division by $3$.",
+    "Choose any $4$ of the first $5$ places freely: $3$ options each, i.e. $3^4$ ways; the remaining one place then has exactly one admissible digit.",
+    "Total six-digit numbers $=3\\cdot3\\cdot3\\cdot3\\cdot1=81$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Equidistribution of residues: the first five digits give each residue sum mod $3$ equally often.",
+     "solution": [
+      "The unit digit is $4$ (remainder $1$); the first five digits must have remainder-sum $\\equiv2\\pmod3$.",
+      "The $3^5=243$ strings of first five digits: the last of them can be $4,5,9$ with remainders $1,2,0$, all different, so for any first four digits exactly one choice makes the sum $\\equiv2$.",
+      "Hence exactly $\\frac13$ of the $243$ strings qualify: $\\frac{243}{3}=81$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When the digit set contains one digit from each residue class mod $3$, exactly $\\frac13$ of all strings have digit sum divisible by $3$.",
+    "Divisible by $6$: even last digit plus digit sum divisible by $3$; fix the last digit first, then use the mod-$3$ closure on the free place.",
+    "Without the evenness condition the count would be $\\frac{3^6}{3}=243$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Combinations ${}^nC_r$: formula and equations"
+   ],
+   "level": 1,
+   "question": "If ${}^{2n}C_3:{}^nC_3=10:1$, then the ratio $(n^2+3n):(n^2-3n+4)$ is: [JEE(Main) April 2023]",
+   "options": [
+    "$35:16$",
+    "$27:11$",
+    "$2:1$",
+    "$65:37$"
+   ],
+   "answer": "(C) 2:1",
+   "key_idea": "${}^{2n}C_3/{}^nC_3$ simplifies to $\\frac{4(2n-1)}{n-2}$, a linear equation after clearing.",
+   "solution": [
+    "${}^{2n}C_3:{}^nC_3=10:1$ gives $\\frac{(2n)!}{3!\\,(2n-3)!}\\times\\frac{3!\\,(n-3)!}{n!}=10$.",
+    "Cancelling, $\\frac{2n(2n-1)(2n-2)}{n(n-1)(n-2)}=\\frac{4(2n-1)}{n-2}=10$, so $4(2n-1)=10n-20$.",
+    "Hence $8n-4=10n-20$ and $n=8$.",
+    "Then $n^2+3n=64+24=88$ and $n^2-3n+4=64-24+4=44$.",
+    "$\\frac{88}{44}=2$, so the ratio is $2:1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Divide first: write the ratio as $8+\\frac{12}{n-2}$ and read off $n$ immediately.",
+     "solution": [
+      "$\\frac{4(2n-1)}{n-2}=\\frac{8(n-2)+12}{n-2}=8+\\frac{12}{n-2}$.",
+      "Setting this equal to $10$: $\\frac{12}{n-2}=2$, so $n-2=6$ and $n=8$.",
+      "Check: ${}^{16}C_3=560$ and ${}^8C_3=56$, ratio $10:1$.",
+      "With $n=8$: $88:44=2:1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\dfrac{{}^{2n}C_r}{{}^nC_r}$ is a rational function of $n$; cancel the factors of $n$ in numerator and denominator before solving.",
+    "Reduce $\\frac{ax+b}{x-c}$ to $a+\\frac{b+ac}{x-c}$: a fast way to solve equations of this form.",
+    "Always verify with the actual binomial values (here ${}^{16}C_3:{}^8C_3=560:56$)."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rank of a word in dictionary order"
+   ],
+   "level": 1,
+   "question": "All the letters of the word PUBLIC are written in all possible orders and these words are written as in a dictionary with serial numbers. Then the serial number of the word PUBLIC is: [JEE(Main) April 2023]",
+   "options": [
+    "$576$",
+    "$582$",
+    "$578$",
+    "$580$"
+   ],
+   "answer": "(B) 582",
+   "key_idea": "Rank $=1+\\sum(\\text{unused smaller letters})\\times(\\text{places left})!$.",
+   "solution": [
+    "Alphabetical order: $B,C,I,L,P,U$. The word is $P\\,U\\,B\\,L\\,I\\,C$.",
+    "Number of smaller unused letters at each place: $P:4,\\ U:4,\\ B:0,\\ L:2,\\ I:1,\\ C:0$; places left $5,4,3,2,1,0$.",
+    "Words before PUBLIC $=4\\times5!+4\\times4!+0\\times3!+2\\times2!+1\\times1!+0\\times0!$.",
+    "$=480+96+0+4+1+0=581$.",
+    "Rank $=581+1=582$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the words that come after PUBLIC and subtract from $6!$.",
+     "solution": [
+      "Total words: $6!=720$.",
+      "Words after PUBLIC: first letter larger than $P$: only $U$, giving $5!=120$.",
+      "First two letters $PU$ then larger than $B$ among $B,C,I,L$: $C,I,L$ give $3\\times3!=18$ words.",
+      "After $PUB$ the fourth letter is $L$ and no remaining letter among $C,I,L$ is larger; after $PUBL$ the order $I,C$ is the larger of the two arrangements of $C,I$, so no further words follow.",
+      "Words after $=120+18=138$, so rank $=720-138=582$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rank $+$ (rank from the end) $=n!+1$ for words of distinct letters, so counting the smaller side is enough.",
+    "Lehmer code of a word: the list of 'smaller unused letters' $(4,4,0,2,1,0)$ is the factorial-base representation of rank $-1$.",
+    "Here rank $-1=581=4\\cdot120+4\\cdot24+0\\cdot6+2\\cdot2+1\\cdot1$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Circular arrangements with non-adjacency condition (gap method)"
+   ],
+   "level": 2,
+   "question": "The number of ways, in which $5$ girls and $7$ boys can be seated at a round table so that no two girls sit together, is: [JEE(Main) April 2023]",
+   "options": [
+    "$7(360)^2$",
+    "$7(720)^2$",
+    "$720$",
+    "$126\\,(5!)^2$"
+   ],
+   "answer": "(D) $126\\,(5!)^2$",
+   "key_idea": "Seat the $7$ boys in a circle first; the $7$ gaps between them take the $5$ girls, one per gap.",
+   "solution": [
+    "Seat the $7$ boys round the table: $(7-1)!=6!$ ways.",
+    "They create $7$ gaps, one between each pair of neighbouring boys. No two girls are together if each girl is in a different gap.",
+    "Choose $5$ of the $7$ gaps: ${}^7C_5$ ways, and place the $5$ girls in them: $5!$ ways.",
+    "Total $=6!\\times{}^7C_5\\times5!=720\\times21\\times5!$.",
+    "Since $720\\times21=126\\times120=126\\cdot5!$, the number is $126\\,(5!)^2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Seat the girls first, so every gap between two girls must receive at least one boy.",
+     "solution": [
+      "Seat the $5$ girls round the table: $(5-1)!=24$ ways. They leave $5$ gaps between neighbours.",
+      "Each gap needs at least one boy: the numbers of boys in the gaps are a composition of $7$ into $5$ positive parts: $\\binom{6}{4}=15$.",
+      "The $7$ boys can be assigned to the filled places in order in $7!=5040$ ways.",
+      "Total $=24\\times15\\times5040=1814400=126\\,(5!)^2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Circular arrangements of $n$ distinct objects: $(n-1)!$. Fix one object to remove rotations.",
+    "No two of group $G$ adjacent: arrange the others first, then choose gaps for $G$. For $m$ others in a circle there are $m$ gaps.",
+    "Linear version: $m$ others have $m+1$ gaps (including the ends)."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Arrangements with repeated letters and letters kept together"
+   ],
+   "level": 2,
+   "question": "The number of arrangements of the letters of the word “INDEPENDENCE” in which all the vowels always occur together is: [JEE(Main) April 2023]",
+   "options": [
+    "$33600$",
+    "$16800$",
+    "$18000$",
+    "$14800$"
+   ],
+   "answer": "(B) 16800",
+   "key_idea": "Vowels $I,E,E,E,E$ form one block; block and the seven consonants make $8$ objects.",
+   "solution": [
+    "Vowels: $I,E,E,E,E$ ($5$ letters). Consonants: $N,D,P,N,D,N,C$ ($7$ letters, with $N$ thrice and $D$ twice).",
+    "Treat the vowels as one block: $8$ objects, with $N$ repeated $3$ times and $D$ twice: $\\frac{8!}{3!\\,2!}=3360$ arrangements.",
+    "Arrangements of the vowels inside the block: $\\frac{5!}{4!}=5$.",
+    "Number of arrangements $=3360\\times5=16800$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the fraction of position-sets: the vowels' $5$ places are one of $\\binom{12}{5}$ equally likely sets.",
+     "solution": [
+      "All arrangements of INDEPENDENCE: $\\frac{12!}{4!\\,3!\\,2!}=1663200$ ($E$ four times, $N$ three times, $D$ twice).",
+      "Every arrangement has some set of $5$ places occupied by vowels, and all $\\binom{12}{5}=792$ such sets are equally likely.",
+      "The vowels are together exactly when the set is $5$ consecutive places: $12-5+1=8$ sets.",
+      "Number of arrangements $=1663200\\times\\frac{8}{792}=16800$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Gluing: count objects after gluing, divide by repeats outside, multiply by arrangements inside the block.",
+    "Fraction method: if the positions occupied by a group are equally likely, the group is together in $\\frac{n-k+1}{\\binom nk}$ of all arrangements.",
+    "Here $\\frac{8}{792}=\\frac1{99}$ and $1663200/99=16800$."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Arrangements with repeated letters and two letters kept apart"
+   ],
+   "level": 2,
+   "question": "If the number of words, with or without meaning, which can be made using all the letters of the word MATHEMATICS in which C and S do not come together, is $(6!)k$, then $k$ is equal to: [JEE(Main) April 2023]",
+   "options": [
+    "$5670$",
+    "$1890$",
+    "$945$",
+    "$2835$"
+   ],
+   "answer": "(A) 5670",
+   "key_idea": "'C and S not together' $=$ all arrangements $-$ arrangements with $C,S$ glued (two internal orders).",
+   "solution": [
+    "MATHEMATICS has $11$ letters with $M,A,T$ each twice and $H,E,I,C,S$ once.",
+    "All arrangements: $\\frac{11!}{2!\\,2!\\,2!}$.",
+    "Arrangements with $C,S$ together: treat $CS$ as one object, $10$ objects: $\\frac{10!}{2!\\,2!\\,2!}\\times2!$ (the $2!$ for the order $CS$ or $SC$).",
+    "Required number $=\\frac{11!}{2!2!2!}-\\frac{10!}{2!2!2!}\\times2!=\\frac{10!\\,(11-2)}{8}=\\frac{9\\times10!}{8}$.",
+    "Set $\\frac{9\\times10!}{8}=k\\times6!$: $k=\\frac{9\\times10\\times9\\times8\\times7}{8}=9\\times9\\times10\\times7$.",
+    "$k=5670$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Gap method: arrange the other nine letters, then put $C$ and $S$ into two different gaps.",
+     "solution": [
+      "Arrange the nine letters other than $C,S$ ($M,A,T$ twice each, $H,E,I$ once): $\\frac{9!}{2!\\,2!\\,2!}=45360$ ways.",
+      "They leave $10$ gaps; $C$ and $S$ must go in different gaps, so $10\\times9=90$ ways.",
+      "Number of words $=45360\\times90=4082400$.",
+      "$k=\\frac{4082400}{6!}=\\frac{4082400}{720}=5670$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two particular objects not together: all arrangements minus (glued arrangements $\\times\\,2!$), or gap method with $\\binom{n-1}{2}\\cdot 2!$ choices of gaps.",
+    "For $n$ objects with the other $n-2$ arranged first, the pair goes into $(n-1)(n-2)$ ordered gap choices.",
+    "The number of words with $C,S$ together here is $2\\cdot\\frac{10!}{8}=907200$, exactly $\\frac{2}{11}$ of the total."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Distribution of distinct objects into distinct groups with capacity limits"
+   ],
+   "level": 2,
+   "question": "Eight persons are to be transported from city $A$ to city $B$ in three cars of different makes. If each car can accommodate at most three persons, then the number of ways, in which they can be transported, is: [JEE(Main) April 2023]",
+   "options": [
+    "$1120$",
+    "$1680$",
+    "$3360$",
+    "$560$"
+   ],
+   "answer": "(B) 1680",
+   "key_idea": "With capacity $3$ and $8$ persons the car loads must be $3,3,2$ in some order.",
+   "solution": [
+    "Let the loads be $a+b+c=8$ with each $\\le3$. The only possibility is $3,3,2$ in some order.",
+    "Split the $8$ persons into groups of sizes $3,3,2$: $\\frac{8!}{3!\\,3!\\,2!}\\cdot\\frac1{2!}$ for the two equal groups of $3$.",
+    "Assign the three groups to the three different cars: $3!$ ways.",
+    "Number of ways $=\\frac{8!}{3!\\,3!\\,2!}\\times\\frac{3!}{2!}=560\\times3=1680$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Exponential generating function: each car holds $0$ to $3$ persons.",
+     "solution": [
+      "The number of ways to put $8$ distinct persons into $3$ distinct cars with loads limited to $3$ is $8!\\,[x^8]\\left(1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}\\right)^3$.",
+      "Only the loads $(3,3,2)$ reach degree $8$; its three orders each contribute $\\frac1{3!}\\cdot\\frac1{3!}\\cdot\\frac1{2!}=\\frac1{72}$.",
+      "Coefficient of $x^8$ $=\\frac{3}{72}=\\frac1{24}$.",
+      "Number of ways $=8!\\times\\frac1{24}=\\frac{40320}{24}=1680$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distinct persons into distinct cars with limits: first find the allowed load patterns, then (choose which car gets which load) $\\times$ multinomial.",
+    "Distribution of $n$ distinct objects into boxes with sizes $n_1,\\dots,n_k$: $\\frac{n!}{n_1!\\cdots n_k!}$ for labelled boxes.",
+    "Exponential generating functions $\\prod\\left(\\sum_{j\\le c_i}\\frac{x^j}{j!}\\right)$ handle capacity limits automatically: answer $=n![x^n]$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Integral solutions of a linear equation with distinctness condition"
+   ],
+   "level": 2,
+   "question": "The number of triplets $(x,y,z)$ where $x,y,z$ are distinct non negative integers satisfying $x+y+z=15$, is: [JEE(Main) April 2023]",
+   "options": [
+    "$136$",
+    "$80$",
+    "$114$",
+    "$92$"
+   ],
+   "answer": "(C) 114",
+   "key_idea": "Distinct $=$ total $-$ (exactly two equal) $-$ (all equal); count 'two equal' as $3\\times$ the case $x=y\\ne z$.",
+   "solution": [
+    "All non-negative solutions of $x+y+z=15$: $^{15+3-1}C_{3-1}={}^{17}C_2=136$.",
+    "Solutions with $x=y$: $2x+z=15$, so $z=15-2x$ with $x=0,1,\\dots,7$ ($8$ solutions).",
+    "Remove $x=5$ (then $z=5$ and all three are equal): $7$ solutions have exactly $x=y\\ne z$.",
+    "By symmetry, solutions with exactly two equal values: $3\\times7=21$.",
+    "Exactly one solution has all three equal: $x=y=z=5$.",
+    "Required number $=136-21-1=114$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count unordered distinct triples $x<y<z$ and multiply by $3!$.",
+     "solution": [
+      "Write $x=a$, $y=a+b+1$, $z=a+b+c+2$ with $a,b,c\\ge0$; then $x<y<z$.",
+      "The sum becomes $3a+2b+c+3=15$, i.e. $3a+2b+c=12$.",
+      "Count by $a$: $a=0$: $2b+c=12$ gives $7$; $a=1$: $2b+c=9$ gives $5$; $a=2$: $2b+c=6$ gives $4$; $a=3$: $2b+c=3$ gives $2$; $a=4$: $1$. Total $7+5+4+2+1=19$.",
+      "Ordered triples $=19\\times3!=114$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distinct ordered solutions $=$ (all) $-3\\times$(a chosen pair equal, third different) $-$ (all equal), or $6\\times$(strictly increasing solutions).",
+    "Strictly increasing substitution: $x<y<z\\iff y=x+1+b,\\ z=y+1+c$ with $b,c\\ge0$.",
+    "Check: partitions of $15$ into $3$ distinct non-negative parts number $19$; $19\\times6=114$."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rank of a word in dictionary order"
+   ],
+   "level": 1,
+   "question": "If the letters of the word MATHS are permuted and all possible words so formed are arranged as in a dictionary with serial numbers, then the serial number of the word THAMS is: [JEE(Main) April 2023]",
+   "options": [
+    "$101$",
+    "$104$",
+    "$102$",
+    "$103$"
+   ],
+   "answer": "(D) 103",
+   "key_idea": "Rank $=1+\\sum(\\text{smaller unused letters})\\times(\\text{places left})!$.",
+   "solution": [
+    "Alphabetical order: $A,H,M,S,T$. The word is $T\\,H\\,A\\,M\\,S$.",
+    "Number of smaller unused letters at each place: $T:4,\\ H:1,\\ A:0,\\ M:0,\\ S:0$; places left $4,3,2,1,0$.",
+    "Words before THAMS $=4\\times4!+1\\times3!+0+0+0=96+6=102$.",
+    "Rank $=102+1=103$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the words after THAMS and subtract from $5!$.",
+     "solution": [
+      "Total words $5!=120$.",
+      "First letter larger than $T$: none. Second letter larger than $H$ among $A,H,M,S$: $M,S$ give $2\\times3!=12$ words.",
+      "Third letter larger than $A$ among $A,M,S$: $M,S$ give $2\\times2!=4$ words. Fourth letter larger than $M$ among $M,S$: $S$ gives $1$ word.",
+      "Words after $=12+4+1=17$, so the rank is $120-17=103$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Rank from the start $+$ rank from the end $=n!+1$ for distinct letters; choose the cheaper side.",
+    "The word that starts with the largest letter lies in the last block of $(n-1)!$ words.",
+    "A word's rank is its factorial-base code plus one, so two words always differ in rank by the difference of their codes."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of digits without repetition with leading-digit and divisibility conditions"
+   ],
+   "level": 2,
+   "question": "The number of five digit numbers, greater than $40000$ and divisible by $5$, which can be formed using the digits $0,1,3,5,7,9$ without repetition, is equal to: [JEE(Main) April 2023]",
+   "options": [
+    "$72$",
+    "$120$",
+    "$132$",
+    "$96$"
+   ],
+   "answer": "(B) 120",
+   "key_idea": "Last digit is $0$ or $5$; leading digit must exceed $4$, i.e. be $5,7$ or $9$, and $5$ cannot be used twice.",
+   "solution": [
+    "Divisible by $5$: the last digit is $0$ or $5$. Greater than $40000$: the first digit is $5,7$ or $9$ (digits above $4$ available).",
+    "Case $1$: last digit $0$. First digit: $3$ ways ($5,7,9$); the middle three places from the remaining $4$ digits: $4\\times3\\times2$.",
+    "Case $1$ count $=3\\times4\\times3\\times2=72$.",
+    "Case $2$: last digit $5$. First digit: $2$ ways ($7$ or $9$); middle three places from the remaining $4$ digits: $4\\times3\\times2$.",
+    "Case $2$ count $=2\\times4\\times3\\times2=48$.",
+    "Total $=72+48=120$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Slice by the first digit instead, deciding the last digit afterwards.",
+     "solution": [
+      "First digit $5$: the last digit must be $0$ (since $5$ is used); the middle three come from $1,3,7,9$: $4\\times3\\times2=24$.",
+      "First digit $7$: the last digit is $0$ or $5$ ($2$ choices); the middle three from the remaining $4$ digits: $2\\times24=48$.",
+      "First digit $9$: likewise $2\\times24=48$.",
+      "Total $=24+48+48=120$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Order of choosing: fill the most restricted places first (last digit for divisibility by $5$, first digit for size), then the rest.",
+    "Digits that serve both restrictions (here $5$) force a case split; slicing by either restricted place gives the same total.",
+    "Check by complement: numbers with last digit $0$ or $5$ and no leading $0$ number $120+96=216$; those not above $40000$ begin with $1$ or $3$ and number $48+48=96$; $216-96=120$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Rank of a word in dictionary order"
+   ],
+   "level": 1,
+   "question": "All words, with or without meaning, are made using all the letters of the word MONDAY. These words are written as in a dictionary with serial numbers. The serial number of the word MONDAY is: [JEE(Main) April 2023]",
+   "options": [
+    "$326$",
+    "$327$",
+    "$324$",
+    "$328$"
+   ],
+   "answer": "(B) 327",
+   "key_idea": "Rank $=1+\\sum(\\text{smaller unused letters})\\times(\\text{places left})!$.",
+   "solution": [
+    "Alphabetical order: $A,D,M,N,O,Y$.",
+    "Words starting with $A$: $5!=120$; starting with $D$: $5!=120$.",
+    "Words starting with $MA$, $MD$, $MN$: $4!=24$ each, i.e. $72$.",
+    "Words starting with $MOA$, $MOD$: $3!=6$ each, i.e. $12$. Words starting with $MONA$: $2!=2$.",
+    "The next word is $MONDAY$ itself: $1$.",
+    "Rank $=120+120+72+12+2+1=327$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the words after MONDAY and subtract from $6!$.",
+     "solution": [
+      "First letter larger than $M$: $N,O,Y$ give $3\\times5!=360$ words.",
+      "First letter $M$, second larger than $O$: $Y$ gives $4!=24$. Then $MO$, third larger than $N$: $Y$ gives $3!=6$.",
+      "Then $MON$, fourth larger than $D$: $Y$ gives $2!=2$. Then $MOND$, fifth larger than $A$: $Y$ gives $1$ word ($MONDYA$).",
+      "Words after $=360+24+6+2+1=393$, so the rank is $720-393=327$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The rank formula gives the same value from either side: $\\text{rank}+\\text{rank from the end}=n!+1$.",
+    "A word whose letters are already in alphabetical order has rank $1$; its reverse has rank $n!$.",
+    "Here rank $-1=326=2\\cdot120+0\\cdot24+\\dots$ is read letter by letter as $(2,3,2,1,0,0)$ in the factorial base."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Digit counting with repetition under a divisibility condition"
+   ],
+   "level": 2,
+   "question": "The total number of three-digit numbers, divisible by $3$, which can be formed using the digits $1,3,5,8$, if repetition of digits is allowed, is: [JEE(Main) April 2023]",
+   "options": [
+    "$22$",
+    "$21$",
+    "$20$",
+    "$18$"
+   ],
+   "answer": "(A) 22",
+   "key_idea": "Digit sum a multiple of $3$: list the multisets $\\{a,b,c\\}$ from $1,3,5,8$ with such a sum and count their orderings.",
+   "solution": [
+    "A number is divisible by $3$ when its digit sum is a multiple of $3$. The possible multisets are listed by sum.",
+    "Sum $3$: $\\{1,1,1\\}$. Sum $9$: $\\{1,3,5\\}$ or $\\{3,3,3\\}$. Sum $12$: $\\{1,3,8\\}$. Sum $15$: $\\{5,5,5\\}$. Sum $18$: $\\{5,5,8\\}$. Sum $21$: $\\{5,8,8\\}$. Sum $24$: $\\{8,8,8\\}$.",
+    "Arrangements: $\\{1,1,1\\}$: $1$; $\\{1,3,5\\}$: $3!=6$; $\\{3,3,3\\}$: $1$; $\\{1,3,8\\}$: $6$.",
+    "$\\{5,5,5\\}$: $1$; $\\{5,5,8\\}$: $\\frac{3!}{2!}=3$; $\\{5,8,8\\}$: $3$; $\\{8,8,8\\}$: $1$.",
+    "Total $=1+6+1+6+1+3+3+1=22$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Classify digits by remainder mod $3$ and count residue patterns with weights.",
+     "solution": [
+      "Residues: $3\\to0$ (one digit), $1\\to1$ (one digit), $5,8\\to2$ (two digits).",
+      "Residue triples with sum $\\equiv0\\pmod3$: $\\{0,0,0\\}$, $\\{1,1,1\\}$, $\\{2,2,2\\}$, $\\{0,1,2\\}$.",
+      "$\\{0,0,0\\}$: $1^3=1$. $\\{1,1,1\\}$: $1$. $\\{2,2,2\\}$: $2^3=8$. $\\{0,1,2\\}$: $3!$ orders $\\times1\\cdot1\\cdot2=12$.",
+      "Total $=1+1+8+12=22$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For digit-divisibility by $3$, replace digits by residues and count weighted residue patterns instead of listing every multiset.",
+    "Weights: the number of available digits in each residue class; here $(1,1,2)$ for residues $(0,1,2)$.",
+    "Check: $4^3=64$ numbers in all; $22$ are multiples of $3$ because the class sizes are unequal."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution of identical objects with each recipient getting at least one"
+   ],
+   "level": 1,
+   "question": "The number of ways of giving $20$ alike oranges to $3$ children such that each child gets at least one orange is ______. [JEE(Main) April 2023]",
+   "answer": "171",
+   "key_idea": "Give each child one orange; the remaining $17$ are distributed freely, a stars-and-bars count.",
+   "solution": [
+    "Let the children get $x_1,x_2,x_3\\ge1$ oranges with $x_1+x_2+x_3=20$.",
+    "Put $x_i=1+t_i$ with $t_i\\ge0$: $t_1+t_2+t_3=17$.",
+    "The number of such distributions equals the number of non-negative integer solutions of $t_1+t_2+t_3=17$.",
+    "Number of solutions $={}^{17+3-1}C_{3-1}={}^{19}C_2=\\frac{19\\times18}{2}=171$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Inclusion-exclusion on the children who get nothing.",
+     "solution": [
+      "All non-negative solutions of $x_1+x_2+x_3=20$: ${}^{22}C_2=231$.",
+      "Solutions with a given child getting none: $x_2+x_3=20$ has $21$ solutions; for $3$ children: $3\\times21=63$.",
+      "Solutions with two given children getting none: $1$ each; for $3$ pairs: $3$. (All three cannot be zero.)",
+      "Number with every child getting at least one $=231-63+3=171$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Identical objects to $k$ distinct people with each getting at least one: $\\binom{n-1}{k-1}$.",
+    "Without the minimum: $\\binom{n+k-1}{k-1}$; with minimum $m$ each: $\\binom{n-km+k-1}{k-1}$.",
+    "Picture: $20$ oranges in a row have $19$ gaps; choosing $2$ cut-gaps gives $\\binom{19}{2}$."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection followed by arrangement of distinct letters"
+   ],
+   "level": 1,
+   "question": "The number of $4$-letter words, with or without meaning, each consisting of $2$ vowels and $2$ consonants, which can be formed from the letters of the word UNIVERSE without repetition is ______. [JEE(Main) April 2023]",
+   "answer": "432",
+   "key_idea": "No letter is repeated, so choose $2$ different vowels and $2$ different consonants, then arrange the four letters.",
+   "solution": [
+    "UNIVERSE has vowels $E,E,I,U$ and consonants $N,R,S,V$.",
+    "'Without repetition' means no letter is used twice, so the two vowels are different: choose $2$ of the distinct vowels $E,I,U$: ${}^3C_2=3$.",
+    "Choose $2$ of the $4$ consonants: ${}^4C_2=6$.",
+    "Arrange the four chosen letters: $4!=24$.",
+    "Number of words $=3\\times6\\times24=432$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose positions first: which two places hold vowels, then fill them in order.",
+     "solution": [
+      "Choose the $2$ places (out of $4$) for the vowels: ${}^4C_2=6$.",
+      "Fill the vowel places with an ordered pair of different vowels from $E,I,U$: ${}^3P_2=6$.",
+      "Fill the consonant places with an ordered pair from $N,R,S,V$: ${}^4P_2=12$.",
+      "Number of words $=6\\times6\\times12=432$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Select then arrange' equals 'choose positions for each type, then fill with ordered selections': $\\binom42\\,{}^3P_2\\,{}^4P_2=\\binom32\\binom42\\,4!$.",
+    "With a repeated letter in the source word, state clearly whether the repeated letter may appear twice in a word. If $EE$ were allowed the count would be $6\\times(3\\times24+12)=504$.",
+    "Without repetition (all letters different) the repeated $E$ behaves as a single letter."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Highest power of a prime dividing a factorial"
+   ],
+   "level": 1,
+   "question": "The largest natural number $n$ such that $3^n$ divides $66!$ is ______. [JEE(Main) April 2023]",
+   "answer": "31",
+   "key_idea": "The exponent of $3$ in $66!$ is $\\left\\lfloor\\frac{66}{3}\\right\\rfloor+\\left\\lfloor\\frac{66}{9}\\right\\rfloor+\\left\\lfloor\\frac{66}{27}\\right\\rfloor$.",
+   "solution": [
+    "Exponent of the prime $3$ in $66!$ is $\\left\\lfloor\\frac{66}{3}\\right\\rfloor+\\left\\lfloor\\frac{66}{9}\\right\\rfloor+\\left\\lfloor\\frac{66}{27}\\right\\rfloor+\\left\\lfloor\\frac{66}{81}\\right\\rfloor+\\cdots$.",
+    "$\\left\\lfloor\\frac{66}{3}\\right\\rfloor=22$, $\\left\\lfloor\\frac{66}{9}\\right\\rfloor=7$, $\\left\\lfloor\\frac{66}{27}\\right\\rfloor=2$, and $\\left\\lfloor\\frac{66}{81}\\right\\rfloor=0$.",
+    "Largest $n=22+7+2=31$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the digit-sum form of Legendre's formula: $v_p(m!)=\\frac{m-s_p(m)}{p-1}$.",
+     "solution": [
+      "Write $66$ in base $3$: $66=2\\cdot27+1\\cdot9+1\\cdot3+0$, i.e. $(2110)_3$.",
+      "Digit sum $s_3(66)=2+1+1+0=4$.",
+      "$v_3(66!)=\\frac{66-4}{3-1}=\\frac{62}{2}=31$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Legendre: $v_p(m!)=\\sum_{k\\ge1}\\left\\lfloor\\frac{m}{p^k}\\right\\rfloor=\\frac{m-s_p(m)}{p-1}$, where $s_p(m)$ is the digit sum of $m$ in base $p$.",
+    "Number of trailing zeros of $m!$ is $v_5(m!)$ (as $v_2\\ge v_5$).",
+    "For a composite base, take the minimum over its prime powers: $12^n\\mid m!$ needs $2^{2n}$ and $3^n$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections of teams from couples (mixed doubles matches)"
+   ],
+   "level": 2,
+   "question": "Some couples participated in a mixed doubles badminton tournament. If the number of matches played, so that no couple played in a match, is $840$, then the total number of persons, who participated in the tournament, is ______. [JEE(Main) April 2023]",
+   "answer": "16",
+   "key_idea": "A match is $2$ men, $2$ women (not their wives) and $2$ ways to pair them, giving $\\binom n2\\binom{n-2}2\\cdot2$.",
+   "solution": [
+    "Let there be $n$ couples, so $2n$ persons. A mixed doubles match has $2$ men and $2$ women, and no couple may both play.",
+    "Choose the $2$ men: ${}^nC_2$. Choose the $2$ women from the women who are not the wives of these men: ${}^{n-2}C_2$.",
+    "Pair each man with one of the two women to form the two teams: $2$ ways.",
+    "Matches $={}^nC_2\\cdot{}^{n-2}C_2\\cdot2=\\frac{n(n-1)(n-2)(n-3)}{2}=840$.",
+    "Hence $n(n-1)(n-2)(n-3)=1680=5\\cdot6\\cdot7\\cdot8$, so $n=8$.",
+    "Total number of persons $=2n=16$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose four different couples first; two supply the men and the other two the women.",
+     "solution": [
+      "The four players come from four different couples (no couple together): choose these $4$ couples in ${}^nC_4$ ways.",
+      "Decide which $2$ of the $4$ couples supply the men (the other two supply the women): ${}^4C_2=6$.",
+      "Pair the two men with the two women: $2$ ways.",
+      "Matches $=12\\,{}^nC_4=840$, so ${}^nC_4=70={}^8C_4$ and $n=8$; persons $=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A restriction 'no couple together' is cleanest when you choose couples first and then assign roles.",
+    "Equations such as $n(n-1)(n-2)(n-3)=k$: factor $k$ into four consecutive integers ($1680=5\\cdot6\\cdot7\\cdot8$).",
+    "Number of mixed-doubles matches among $n$ couples with no couple in a match: $12\\binom n4$."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Inclusion-exclusion principle in permutations with forbidden strings"
+   ],
+   "level": 2,
+   "question": "The number of permutations, of the digits $1,2,3,\\dots,7$ without repetition, which neither contain the string $153$ nor the string $2467$, is ______. [JEE(Main) April 2023]",
+   "answer": "4898",
+   "key_idea": "Glue each string into a block; the two strings use different digits, so $A\\cap B$ is $2$ blocks arranged in $2!$ ways.",
+   "solution": [
+    "Total permutations of $1,\\dots,7$: $7!=5040$.",
+    "Let $A$: strings containing $153$. Treat $153$ as one block with the other $4$ digits $2,4,6,7$: $5!=120$ permutations.",
+    "Let $B$: strings containing $2467$. Treat $2467$ as a block with $1,3,5$: $4!=24$ permutations.",
+    "Both strings: blocks $153$ and $2467$ are two objects: $2!=2$ permutations.",
+    "$n(A\\cup B)=120+24-2=142$.",
+    "Required number $=7!-n(A\\cup B)=5040-142=4898$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "'Contains a given string' means glue it into a block: $(n-k+1)!$ arrangements for a string of length $k$ (digits distinct).",
+    "Inclusion-exclusion $|A\\cup B|=|A|+|B|-|A\\cap B|$; check whether the forbidden strings can overlap or coexist before using it.",
+    "If the strings shared a digit they could only coexist by overlapping on that digit, which changes the intersection count."
+   ]
+  },
+  {
+   "q_no": 33,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Sum of numbers formed from given digits"
+   ],
+   "level": 2,
+   "question": "The sum of all the four-digit numbers that can be formed using all the digits $2,1,2,3$ is equal to ______. [JEE(Main) April 2023]",
+   "answer": "26664",
+   "key_idea": "Every place has the same column sum, so the total is (column sum)$\\times1111$.",
+   "solution": [
+    "Digits $2,1,2,3$ give $\\frac{4!}{2!}=12$ four-digit numbers.",
+    "Fix a digit in a given place: digit $1$ occupies it in $\\frac{3!}{2!}=3$ numbers; digit $3$ also in $3$ numbers; digit $2$ in $3!=6$ numbers.",
+    "Sum of the digits in one place over all numbers $=1\\cdot3+3\\cdot3+2\\cdot6=24$.",
+    "Total $=24\\times10^0+24\\times10^1+24\\times10^2+24\\times10^3=24\\times1111$.",
+    "Sum of all numbers $=26664$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Average value: by symmetry the average digit in every place equals the mean of the four digits.",
+     "solution": [
+      "Each place is equally likely to hold each of the four digit-copies, so the average digit in each place is $\\frac{2+1+2+3}{4}=2$.",
+      "Average number $=2222$.",
+      "There are $12$ numbers, so the sum $=12\\times2222=26664$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Sum of all numbers formed using all $n$ distinct digits: $(n-1)!\\,(\\text{sum of digits})\\times\\underbrace{11\\cdots1}_{n}$.",
+    "With repeated digits use the average: (number of arrangements)$\\times$(mean of the digits)$\\times\\underbrace{11\\cdots1}_{n}$.",
+    "Here $12\\times2\\times1111=26664$; valid because every digit-copy is equally likely in each place (zero not among the digits)."
+   ]
+  },
+  {
+   "q_no": 34,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Derangements"
+   ],
+   "level": 1,
+   "question": "In an examination, $5$ students have been allotted their seats as per their roll numbers. The number of ways, in which none of the students sits on the allotted seat, is ______. [JEE(Main) April 2023]",
+   "answer": "44",
+   "key_idea": "No student on the allotted seat is a derangement of $5$ objects: $D_5=5!\\left(1-\\frac1{1!}+\\frac1{2!}-\\frac1{3!}+\\frac1{4!}-\\frac1{5!}\\right)$.",
+   "solution": [
+    "We need the number of derangements of $5$ objects.",
+    "$D_5=5!\\left(1-\\frac1{1!}+\\frac1{2!}-\\frac1{3!}+\\frac1{4!}-\\frac1{5!}\\right)=5!\\left(\\frac1{2!}-\\frac1{3!}+\\frac1{4!}-\\frac1{5!}\\right)$.",
+    "$=\\frac{120}{2}-\\frac{120}{6}+\\frac{120}{24}-\\frac{120}{120}=60-20+5-1$.",
+    "$D_5=44$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the recurrence $D_n=(n-1)(D_{n-1}+D_{n-2})$ built from the first student's choice.",
+     "solution": [
+      "Start: $D_1=0$, $D_2=1$.",
+      "$D_3=2(D_2+D_1)=2(1+0)=2$.",
+      "$D_4=3(D_3+D_2)=3(2+1)=9$.",
+      "$D_5=4(D_4+D_3)=4(9+2)=44$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$D_n=n!\\sum_{k=0}^n\\frac{(-1)^k}{k!}$, the integer nearest to $\\frac{n!}{e}$; recurrences: $D_n=(n-1)(D_{n-1}+D_{n-2})=nD_{n-1}+(-1)^n$.",
+    "First values: $D_1,\\dots,D_6=0,1,2,9,44,265$. Check: $5D_4+(-1)^5=44$.",
+    "Permutations of $n$ objects with exactly $r$ fixed points: $\\binom nr D_{n-r}$."
+   ]
+  },
+  {
+   "q_no": 35,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting strings with a pattern at least once (inclusion-exclusion)"
+   ],
+   "level": 4,
+   "question": "Let the digits $a,b,c$ be in A.P. Nine-digit numbers are to be formed using each of these three digits thrice such that three consecutive digits are in A.P. at least once. How many such numbers can be formed? [JEE(Main) April 2023]",
+   "answer": "944",
+   "key_idea": "Gluing one block counts a number once per A.P. triple it contains; 'at least once' needs inclusion-exclusion over occurrences.",
+   "solution": [
+    "Since $a,b,c$ are in A.P. ($b$ is the middle term, $a+c=2b$), the only consecutive triples in A.P. are $abc$ and $cba$.",
+    "Total nine-digit strings with each digit used thrice: $\\frac{9!}{3!\\,3!\\,3!}=1680$.",
+    "Let $S_1$ count (string, occurrence) pairs: glue $abc$ as one block with $a,a,b,b,c,c$: $\\frac{7!}{2!2!2!}=630$; the same for $cba$: $S_1=1260$.",
+    "This is the PDF's figure $\\binom71\\cdot2\\cdot\\frac{6!}{2!2!2!}=1260$, but it counts a number once for every A.P. triple it contains. For example $abcabcabc$ contains $abc$ three times.",
+    "Pairs of occurrences: disjoint blocks $abc,abc$: $\\frac{5!}{2!}=60$; $cba,cba$: $60$; $abc,cba$: $5!=120$; overlapping pairs $abcba$ and $cbabc$ (sharing one digit): $\\frac{5!}{2!}=60$ each. $S_2=240+120=360$.",
+    "Triples of occurrences: no number has more than three A.P. triples, and the strings having exactly three number $S_3=44$ (found by systematic enumeration).",
+    "Inclusion-exclusion: strings with at least one A.P. triple $=S_1-S_2+S_3=1260-360+44=944$.",
+    "Check by exact multiplicities: exactly one triple $672$, exactly two $228$, exactly three $44$; $672+228+44=944$ and $672+2\\cdot228+3\\cdot44=1260=S_1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF answers 1260 by gluing one block abc or cba (7C1 x 2 x 6!/(2!2!2!)). That counts every number once per A.P. triple it contains, so numbers with two or three triples are counted several times, and the answer 1260 is wrong. The correct count of numbers having at least one A.P. triple is 944 (inclusion-exclusion; confirmed by brute force over all 1680 strings). If constant triples such as aaa were also admitted as 'A.P.' the count would be 1208; the question intends distinct a, b, c with common difference not zero.",
+   "useful_results": [
+    "'At least once' counts are never obtained by gluing a single block: use inclusion-exclusion over the sets of occurrences, or count the complement.",
+    "Blocks can overlap when the pattern's end can start another occurrence (here $abc$ then $cba$ share the digit $c$); non-overlapping occurrences of one pattern are simple $\\frac{(n-2j)!}{j!\\cdots}$ counts.",
+    "Sanity check: $(\\text{pairs counted by gluing})=\\sum_m m\\cdot n_m$; if this exceeds the number of strings with at least one occurrence, multiple occurrences exist."
+   ]
+  },
+  {
+   "q_no": 36,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integral solutions with upper and lower bounds (generating function)"
+   ],
+   "level": 2,
+   "question": "The number of seven digit positive integers formed using the digits $1,2,3$ and $4$ only and sum of the digits equal to $12$ is ______. [JEE(Main) April 2023]",
+   "answer": "413",
+   "key_idea": "Digits $x_i\\in\\{1,2,3,4\\}$ with $\\sum x_i=12$: after $y_i=x_i-1$ the bound $y_i\\le3$ matters only through $y_i\\ge4$, which can happen in one place.",
+   "solution": [
+    "Let the digits be $x_1,\\dots,x_7\\in\\{1,2,3,4\\}$ with $x_1+\\dots+x_7=12$.",
+    "Number of solutions $=$ coefficient of $x^{12}$ in $(x+x^2+x^3+x^4)^7$.",
+    "$=$ coefficient of $x^{5}$ in $(1+x+x^2+x^3)^7=(1-x^4)^7(1-x)^{-7}$.",
+    "$=$ coefficient of $x^5$ in $(1-7x^4)\\,(1-x)^{-7}$ (higher powers of $x^4$ do not matter), where $(1-x)^{-7}=\\sum_{r\\ge0}{}^{7+r-1}C_r\\,x^r$.",
+    "$={}^{11}C_5-7\\times{}^{7}C_1=462-49$.",
+    "Number of integers $=413$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift the digits by $1$ and enumerate how the extra $5$ units are spread over the $7$ places by part sizes.",
+     "solution": [
+      "Put $y_i=x_i-1\\in\\{0,1,2,3\\}$; then $y_1+\\dots+y_7=5$.",
+      "Partitions of $5$ into parts at most $3$ and the number of ways to place them in the $7$ positions: $\\{3,2\\}$: $7\\cdot6=42$; $\\{3,1,1\\}$: $7\\cdot\\binom62=105$; $\\{2,2,1\\}$: $\\binom72\\cdot5=105$.",
+      "$\\{2,1,1,1\\}$: $7\\cdot\\binom63=140$; $\\{1,1,1,1,1\\}$: $\\binom75=21$.",
+      "Total $=42+105+105+140+21=413$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Bounded stars and bars: coefficient of $x^n$ in $\\left(\\frac{1-x^{m+1}}{1-x}\\right)^k$; expand $(1-x^{m+1})^k$ only as far as needed.",
+    "Equivalent inclusion-exclusion: $\\binom{n+k-1}{k-1}-k\\binom{n-(m+1)+k-1}{k-1}+\\cdots$; here $\\binom{11}{6}-7\\binom{7}{6}=462-49$.",
+    "Digit-sum problems: shift digits by their minimum so the lower bound becomes $0$."
+   ]
+  },
+  {
+   "q_no": 37,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Divisibility by 6 in digit counting (parity and digit sum)"
+   ],
+   "level": 2,
+   "question": "Total numbers of $3$-digit numbers that are divisible by $6$ and can be formed by using the digits $1,2,3,4,5$ with repetition, is ______. [JEE(Main) April 2023]",
+   "answer": "16",
+   "key_idea": "Even unit digit ($2$ or $4$) and digit sum divisible by $3$: the first two digits must have sum $\\equiv1$ (for $2$) or $\\equiv2$ (for $4$) mod $3$.",
+   "solution": [
+    "Divisible by $6$: even and digit sum divisible by $3$. The unit digit is $2$ or $4$.",
+    "Residues mod $3$ of the digits: $3\\to0$; $1,4\\to1$; $2,5\\to2$.",
+    "Case $1$: unit digit $2$. The first two digits must have sum $\\equiv1\\pmod3$: residues $(0,1)$ or $(1,0)$ give $1\\times2$ each $=4$, residues $(2,2)$ give $2\\times2=4$. Total $8$.",
+    "Case $2$: unit digit $4$. The first two digits must have sum $\\equiv2\\pmod3$: residues $(0,2)$ or $(2,0)$ give $1\\times2$ each $=4$, residues $(1,1)$ give $2\\times2=4$. Total $8$.",
+    "Total numbers $=8+8=16$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "List the multiples of $6$ directly, grouped by the hundreds digit.",
+     "solution": [
+      "Multiples of $6$ with all digits in $\\{1,2,3,4,5\\}$, hundreds digit $1$: $114,132,144$.",
+      "Hundreds digit $2$: $222,234,252$. Hundreds digit $3$: $312,324,342,354$.",
+      "Hundreds digit $4$: $414,432,444$. Hundreds digit $5$: $522,534,552$.",
+      "Total $=3+3+4+3+3=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Divisible by $6$: last digit even and digit sum a multiple of $3$.",
+    "Residue classes of the available digits give weights $(1,2,2)$ for residues $(0,1,2)$ here; the first two digits' residue sum is then counted by convolution.",
+    "Consistency check: the pairs of first two digits have residue-sum counts $9,8,8$ for sums $0,1,2$; $8+8=16$."
+   ]
+  },
+  {
+   "q_no": 38,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting codes with distinctness, maximum-digit and equal-sum conditions"
+   ],
+   "level": 3,
+   "question": "A person forgets his $4$-digit ATM pin code. But he remembers that in the code all the digits are different, the greatest digit is $7$ and the sum of the first two digits is equal to the sum of the last two digits. Then the maximum number of trials necessary to obtain the correct code is ______. [JEE(Main) April 2023]",
+   "answer": "72",
+   "key_idea": "Split by the common sum $s$ of the two pairs; the digit $7$ must belong to exactly one pair and no digit may exceed $7$.",
+   "solution": [
+    "Let the code be $(a,b,c,d)$ with distinct digits, maximum $7$, and $a+b=c+d=s$. The digit $7$ must appear, in one of the two pairs.",
+    "$s=7$: pairs from digits $\\le7$: $\\{0,7\\},\\{1,6\\},\\{2,5\\},\\{3,4\\}$. One pair must be $\\{0,7\\}$; the other is one of $3$ pairs. Count $=2\\times2\\times(3\\times2)=24$.",
+    "$s=8$: pairs $\\{1,7\\},\\{2,6\\},\\{3,5\\}$. One pair is $\\{1,7\\}$; the other is one of $2$: $2\\times2\\times(2\\times2)=16$.",
+    "$s=9$: pairs $\\{2,7\\},\\{3,6\\},\\{4,5\\}$: likewise $16$.",
+    "$s=10$: pairs $\\{3,7\\},\\{4,6\\}$: $2\\times2\\times(1\\times2)=8$. $s=11$: pairs $\\{4,7\\},\\{5,6\\}$: $8$.",
+    "$s=12$ or $13$: only one pair ($\\{5,7\\}$, $\\{6,7\\}$) is available, so no code; $s<7$ has no pair containing $7$.",
+    "Number of codes (maximum trials) $=24+16+16+8+8=72$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count codes with all digits $\\le7$ minus those with all digits $\\le6$, so that the greatest digit is exactly $7$.",
+     "solution": [
+      "For digits from $0..k$ let $p(s)$ be the number of unordered pairs of distinct digits with sum $s$; codes $=4\\sum_sp(s)\\,(p(s)-1)$ (choose and order two different pairs).",
+      "For $k=7$: $p(s)$ for $s=1,\\dots,13$ is $1,1,2,2,3,3,4,3,3,2,2,1,1$; $\\sum p(p-1)=0+0+2+2+6+6+12+6+6+2+2+0+0=44$, so $176$ codes.",
+      "For $k=6$: $p(s)$ for $s=1,\\dots,11$ is $1,1,2,2,3,3,3,2,2,1,1$; $\\sum p(p-1)=26$, so $104$ codes.",
+      "Greatest digit exactly $7$: $176-104=72$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Greatest digit is $m$' $=$ (all digits $\\le m$) $-$ (all digits $\\le m-1$).",
+    "Codes with two equal-sum pairs: $4\\sum_s p(s)(p(s)-1)$ where $p(s)$ is the number of unordered pairs of distinct digits with sum $s$.",
+    "For a numeric count with a maximum, always check which sums can actually place the maximum digit."
+   ]
+  },
+  {
+   "q_no": 39,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Number of ways of dividing objects into groups (integrality of factorial quotients)"
+   ],
+   "level": 3,
+   "question": "Let $\\alpha=\\dfrac{(4!)!}{(4!)^{3!}}$ and $\\beta=\\dfrac{(5!)!}{(5!)^{4!}}$. Then: [JEE(Main) Jan 2024]",
+   "options": [
+    "$\\alpha\\notin\\mathbb N$ and $\\beta\\in\\mathbb N$",
+    "$\\alpha\\in\\mathbb N$ and $\\beta\\in\\mathbb N$",
+    "$\\alpha\\notin\\mathbb N$ and $\\beta\\notin\\mathbb N$",
+    "$\\alpha\\in\\mathbb N$ and $\\beta\\notin\\mathbb N$"
+   ],
+   "answer": "(B)",
+   "key_idea": "A factorial quotient is a natural number if it equals (or is a multiple of) the number of ways of grouping distinct objects.",
+   "solution": [
+    "$\\alpha=\\frac{(4!)!}{(4!)^{3!}}=\\frac{24!}{(4!)^6}$ and $\\beta=\\frac{(5!)!}{(5!)^{4!}}=\\frac{120!}{(5!)^{24}}$.",
+    "The number of ways to divide $24$ distinct objects into $6$ unlabelled groups of $4$ each is $\\frac{24!}{(4!)^6\\,6!}\\in\\mathbb N$.",
+    "So $\\alpha=6!\\times\\frac{24!}{(4!)^6\\,6!}$ is a natural number.",
+    "Similarly the number of ways to divide $120$ distinct objects into $24$ unlabelled groups of $5$ each is $\\frac{120!}{(5!)^{24}\\,24!}\\in\\mathbb N$.",
+    "So $\\beta=24!\\times\\frac{120!}{(5!)^{24}\\,24!}$ is a natural number.",
+    "Hence $\\alpha\\in\\mathbb N$ and $\\beta\\in\\mathbb N$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read each quotient as a multinomial coefficient.",
+     "solution": [
+      "$\\alpha=\\frac{24!}{(4!)(4!)(4!)(4!)(4!)(4!)}=\\binom{24}{4,4,4,4,4,4}$, the number of arrangements of $24$ letters with $6$ different letters each used $4$ times.",
+      "$\\beta=\\frac{120!}{(5!)^{24}}=\\binom{120}{5,5,\\dots,5}$ with $24$ groups of $5$; this is the number of ways to put $120$ distinct objects into $24$ labelled boxes of $5$ each.",
+      "Multinomial coefficients are integers, so $\\alpha,\\beta\\in\\mathbb N$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{(mn)!}{(n!)^m}$ is the multinomial coefficient of $m$ equal groups of size $n$, hence an integer; $\\frac{(mn)!}{(n!)^m\\,m!}$ is the (smaller) unlabelled count and is also an integer.",
+    "General test for divisibility of factorial quotients: find a counting interpretation, or compare prime exponents with Legendre's formula.",
+    "Check with small numbers: $\\frac{4!}{(2!)^2}=6$ and $\\frac{4!}{(2!)^2\\,2!}=3$ are both integers."
+   ]
+  },
+  {
+   "q_no": 40,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Partitions of an integer (identical objects into identical boxes)"
+   ],
+   "level": 2,
+   "question": "Number of ways of arranging $8$ identical books into $4$ identical shelves where any number of shelves may remain empty is equal to: [JEE(Main) Jan 2024]",
+   "options": [
+    "$16$",
+    "$15$",
+    "$12$",
+    "$18$"
+   ],
+   "answer": "(B) 15",
+   "key_idea": "Identical objects into identical boxes with empty boxes allowed is the number of partitions of $8$ into at most $4$ parts.",
+   "solution": [
+    "Both books and shelves are identical, so we count partitions of $8$ into at most $4$ parts (written as four numbers with zeros allowed).",
+    "One non-zero part: $(8,0,0,0)$: $1$. Two parts: $(7,1)$, $(6,2)$, $(5,3)$, $(4,4)$: $4$.",
+    "Three parts: $(6,1,1)$, $(5,2,1)$, $(4,3,1)$, $(4,2,2)$, $(3,3,2)$: $5$.",
+    "Four parts: $(5,1,1,1)$, $(4,2,1,1)$, $(3,3,1,1)$, $(3,2,2,1)$, $(2,2,2,2)$: $5$.",
+    "Total $=1+4+5+5=15$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the recurrence for partitions into exactly $k$ parts: $p_k(n)=p_{k-1}(n-1)+p_k(n-k)$.",
+     "solution": [
+      "$p_1(8)=1$ and $p_2(8)=4$ (the pairs $7{+}1,6{+}2,5{+}3,4{+}4$).",
+      "$p_3(8)=p_2(7)+p_3(5)=3+2=5$ (using $p_2(7)=3$ and $p_3(5)=2$).",
+      "$p_4(8)=p_3(7)+p_4(4)=4+1=5$ (using $p_3(7)=4$ and $p_4(4)=1$).",
+      "Partitions into at most $4$ parts $=1+4+5+5=15$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Identical objects into identical boxes (empty allowed) $=$ partitions of $n$ into at most $k$ parts, equal to the number of partitions of $n$ into parts of size at most $k$ (conjugation).",
+    "Recurrence: $p_k(n)=p_{k-1}(n-1)+p_k(n-k)$ (smallest part $=1$ or subtract $1$ from every part).",
+    "Values: $p(8)=22$ partitions in all; at most $4$ parts gives $15$."
+   ]
+  },
+  {
+   "q_no": 41,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Distribution of identical objects with a minimum for each recipient"
+   ],
+   "level": 1,
+   "question": "The number of ways in which $21$ identical apples can be distributed among three children such that each child gets at least $2$ apples is: [JEE(Main) Jan 2024]",
+   "options": [
+    "$142$",
+    "$406$",
+    "$136$",
+    "$130$"
+   ],
+   "answer": "(C) 136",
+   "key_idea": "Give each child $2$ apples; the remaining $15$ are distributed with no restriction.",
+   "solution": [
+    "Give $2$ apples to each of the three children first: $6$ apples used, $15$ left.",
+    "Distribute the remaining $15$ identical apples among $3$ children with no restriction: ${}^{15+3-1}C_{3-1}={}^{17}C_2$.",
+    "${}^{17}C_2=\\frac{17\\times16}{2}=136$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Inclusion-exclusion on the children who get fewer than $2$ apples.",
+     "solution": [
+      "All non-negative distributions of $21$ apples among $3$ children: ${}^{23}C_2=253$.",
+      "A given child gets $0$ or $1$ apple: $22+21=43$ distributions of the others; for $3$ children: $129$.",
+      "Two given children both get $0$ or $1$: $4$ ways each (the third child takes the rest); for $3$ pairs: $12$. Three children cannot all get $\\le1$.",
+      "Bad distributions $=129-12=117$, so the required number $=253-117=136$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "At least $m$ each to $k$ people: $\\binom{n-km+k-1}{k-1}$.",
+    "Check with the 'row of identical objects' picture: $15$ apples and $2$ dividers make $17$ positions, so $\\binom{17}{2}$.",
+    "Upper limits require inclusion-exclusion."
+   ]
+  },
+  {
+   "q_no": 42,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Combinatorial identity ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$ and permutation ratios"
+   ],
+   "level": 1,
+   "question": "If for some $m,n$: ${}^6C_m+2\\left({}^6C_{m+1}\\right)+{}^6C_{m+2}>{}^8C_3$ and ${}^{n-1}P_3:{}^nP_4=1:8$, then ${}^nP_{m+1}+{}^{n+1}C_m$ is equal to: [JEE(Main) Jan 2024]",
+   "options": [
+    "$372$",
+    "$384$",
+    "$380$",
+    "$376$"
+   ],
+   "answer": "(A) 372",
+   "key_idea": "${}^6C_m+2\\,{}^6C_{m+1}+{}^6C_{m+2}={}^8C_{m+2}$ by Pascal's rule twice.",
+   "solution": [
+    "${}^6C_m+2\\,{}^6C_{m+1}+{}^6C_{m+2}=({}^6C_m+{}^6C_{m+1})+({}^6C_{m+1}+{}^6C_{m+2})$.",
+    "Using ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$: $={}^7C_{m+1}+{}^7C_{m+2}={}^8C_{m+2}$.",
+    "So ${}^8C_{m+2}>{}^8C_3=56$. Since ${}^8C_r$ takes the values $1,8,28,56,70,56,28,8,1$ for $r=0,\\dots,8$, it exceeds $56$ only for $r=4$ ($70$); hence $m+2=4$ and $m=2$.",
+    "${}^{n-1}P_3:{}^nP_4=\\frac{(n-1)(n-2)(n-3)}{n(n-1)(n-2)(n-3)}=\\frac1n=\\frac18$, so $n=8$.",
+    "${}^nP_{m+1}+{}^{n+1}C_m={}^8P_3+{}^9C_2=8\\cdot7\\cdot6+\\frac{9\\cdot8}{2}=336+36$.",
+    "The value is $372$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test each admissible $m$ directly, without using Pascal's identity.",
+     "solution": [
+      "$m$ can be $0,\\dots,4$ so that ${}^6C_{m+2}$ is defined. Evaluate $L(m)={}^6C_m+2\\,{}^6C_{m+1}+{}^6C_{m+2}$.",
+      "$L(0)=1+12+15=28$; $L(1)=6+30+20=56$; $L(2)=15+40+15=70$; $L(3)=20+30+6=56$; $L(4)=15+12+1=28$.",
+      "Only $L(2)=70$ exceeds $^8C_3=56$, so $m=2$. With $n=8$ the required value is ${}^8P_3+{}^9C_2=336+36=372$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Pascal: ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$; a sum $\\sum\\binom{k}{j}$ with binomial weights $1,2,1$ is $\\binom{k+2}{j+2}$.",
+    "${}^{n}C_r$ is unimodal and symmetric: ${}^8C_r$ exceeds ${}^8C_3={}^8C_5$ only for $r=4$.",
+    "${}^{n-1}P_r:{}^nP_{r+1}=1:n$ (cancel $(n-1)\\cdots(n-r)$), a quick way to read off $n$."
+   ]
+  },
+  {
+   "q_no": 43,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Distribution of distinct objects into identical boxes (set partitions)"
+   ],
+   "level": 2,
+   "question": "If $n$ is the number of ways five different employees can sit into four indistinguishable offices where any office may have any number of persons including zero, then $n$ is equal to: [JEE(Main) Jan 2024]",
+   "options": [
+    "$53$",
+    "$47$",
+    "$51$",
+    "$43$"
+   ],
+   "answer": "(C) 51",
+   "key_idea": "Indistinguishable offices means unlabelled groups: sum over the size patterns of $5$ into at most $4$ parts.",
+   "solution": [
+    "Offices are identical, so count the ways to partition $5$ different people into at most $4$ unlabelled groups, by size pattern.",
+    "$(5,0,0,0)$: $1$ way. $(4,1,0,0)$: $\\frac{5!}{4!\\,1!}=5$ ways. $(3,2,0,0)$: $\\frac{5!}{3!\\,2!}=10$ ways.",
+    "$(3,1,1,0)$: $\\frac{5!}{3!\\,1!\\,1!\\,2!}=10$ ways (the two single-person groups are interchangeable).",
+    "$(2,2,1,0)$: $\\frac{5!}{2!\\,2!\\,1!\\,2!}=15$ ways (the two pairs are interchangeable).",
+    "$(2,1,1,1)$: $\\frac{5!}{2!\\,1!\\,1!\\,1!\\,3!}=10$ ways.",
+    "Total $=1+5+10+10+15+10=51$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "All set partitions of $5$ people number the Bell number $B_5=52$; exclude the one with $5$ non-empty groups.",
+     "solution": [
+      "The number of ways to partition a $5$-set into non-empty blocks is the Bell number $B_5=\\sum_kS(5,k)=1+15+25+10+1=52$.",
+      "With at most $4$ offices, partitions with $5$ blocks (everyone alone) are impossible: exclude $S(5,5)=1$.",
+      "Number of ways $=52-1=51$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distinct objects into identical boxes (empty allowed, $k$ boxes) $=\\sum_{j\\le k}S(n,j)$ with Stirling numbers of the second kind.",
+    "$S(5,j)=1,15,25,10,1$ for $j=1,\\dots,5$ (recurrence $S(n,j)=jS(n-1,j)+S(n-1,j-1)$); $B_5=52$.",
+    "Unlabelled equal-size groups: divide by the factorial of the number of groups of each size."
+   ]
+  },
+  {
+   "q_no": 44,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Rank of a word in dictionary order (repeated letters)"
+   ],
+   "level": 2,
+   "question": "All the letters of the word “GTWENTY” are written in all possible ways with or without meaning and these words are written as in a dictionary. The serial number of the word \\\"GTWENTY\\\" is ______. [JEE(Main) Jan 2024]",
+   "answer": "553",
+   "key_idea": "Count block sizes with the repeated $T$: a block $E\\ldots$ has $\\frac{6!}{2!}$ words while a block $T\\ldots$ would have $6!$.",
+   "solution": [
+    "Alphabetical order of the letters: $E,G,N,T,T,W,Y$ ($T$ occurs twice). The word is $G\\,T\\,W\\,E\\,N\\,T\\,Y$.",
+    "Words starting with $E$: the other six letters $G,N,T,T,W,Y$ give $\\frac{6!}{2!}=360$.",
+    "Words starting with $G$: second letter smaller than $T$: $GE\\ldots$: $\\frac{5!}{2!}=60$; $GN\\ldots$: $\\frac{5!}{2!}=60$.",
+    "Words starting with $GT$: third letter smaller than $W$: $GTE\\ldots$: $4!=24$; $GTN\\ldots$: $24$; $GTT\\ldots$: $24$.",
+    "Then $GTW$: the fourth letter $E$ is the smallest, and $GTWE$, $GTWEN$ are forced onward to $GTWENTY$ itself: $1$.",
+    "Rank $=360+60+60+24+24+24+1=553$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count from the other end: words after GTWENTY, subtracted from the total $\\frac{7!}{2!}=2520$.",
+     "solution": [
+      "Total words $=\\frac{7!}{2!}=2520$.",
+      "First letter larger than $G$: $N$: $\\frac{6!}{2!}=360$; $T$: $6!=720$; $W$: $360$; $Y$: $360$. Sum $1800$.",
+      "$G$ then second letter larger than $T$: $W$ and $Y$: $\\frac{5!}{2!}\\times2=120$. $GT$ then third letter larger than $W$: $Y$: $4!=24$.",
+      "$GTW$ then fourth letter larger than $E$: $N,T,Y$: $3!\\times3=18$. $GTWE$ then fifth letter larger than $N$: $T,Y$: $2\\times2=4$. $GTWEN$ then sixth letter larger than $T$: $Y$: $1$.",
+      "Words after $=1800+120+24+18+4+1=1967$; rank $=2520-1967=553$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With repeated letters, a block's size is (remaining letters)!/(factorials of the repeats still present); recompute it for each prefix.",
+    "Rank from the start $+$ rank from the end $=$ total words $+1$.",
+    "In dictionary problems list the letters in alphabetical order once, with their multiplicities, and update the list as letters are used."
+   ]
+  },
+  {
+   "q_no": 45,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections from groups with minimum and maximum counts"
+   ],
+   "level": 3,
+   "question": "In an examination of Mathematics paper, there are $20$ questions of equal marks and the question paper is divided into three sections: A, B and C. A student is required to attempt total $15$ questions taking at least $4$ questions from each section. If section A has $8$ questions, section B has $6$ questions and section C has $6$ questions, then the total number of ways a student can select $15$ questions is ______. [JEE(Main) Jan 2024]",
+   "answer": "11376",
+   "key_idea": "After the compulsory $4+4+4$, the extra $3$ questions are distributed as $(1,1,1)$, $(3,0,0)$ or $(2,1,0)$ over the sections, limited by section sizes.",
+   "solution": [
+    "Let $x_A,x_B,x_C$ be the numbers attempted from A, B, C: $x_A+x_B+x_C=15$, each $\\ge4$, with $x_A\\le8$, $x_B\\le6$, $x_C\\le6$. Three questions remain after $4+4+4$.",
+    "The extra $3$ questions are spread over the sections as $(1,1,1)$, $(3,0,0)$-type or $(2,1,0)$-type, so $(x_A,x_B,x_C)=(5,5,5)$, $(7,4,4)$, or an arrangement of $6,5,4$ over the sections; $(4,7,4)$ and $(4,4,7)$ are impossible because B and C have only $6$ questions.",
+    "$(5,5,5)$: ${}^8C_5\\cdot{}^6C_5\\cdot{}^6C_5=56\\cdot6\\cdot6=2016$.",
+    "$(7,4,4)$: ${}^8C_7\\cdot{}^6C_4\\cdot{}^6C_4=8\\cdot15\\cdot15=1800$.",
+    "$(6,5,4)$ and $(6,4,5)$: ${}^8C_6\\cdot{}^6C_5\\cdot{}^6C_4\times2=28\\cdot6\\cdot15\times2=5040$.",
+    "$(5,6,4)$ and $(5,4,6)$: ${}^8C_5\\cdot{}^6C_6\\cdot{}^6C_4\times2=56\\cdot15\times2=1680$. $(4,6,5)$ and $(4,5,6)$: ${}^8C_4\\cdot{}^6C_6\\cdot{}^6C_5\times2=70\\cdot6\times2=840$.",
+    "Total $=2016+1800+5040+1680+840=11376$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the $5$ questions left out instead of the $15$ attempted.",
+     "solution": [
+      "Leaving out $u_A,u_B,u_C$ questions: $u_A+u_B+u_C=5$ with $u_A\\le4$, $u_B\\le2$, $u_C\\le2$ (since each section keeps at least $4$).",
+      "Allowed $(u_B,u_C)$ and then $u_A=5-u_B-u_C$: $(0,1),(1,0)$ give $u_A=4$: $2\\times{}^8C_4\\cdot{}^6C_1=2\\times420=840$.",
+      "$(0,2),(2,0)$ give $u_A=3$: $2\\times{}^8C_3\\cdot{}^6C_2=2\\times840=1680$; $(1,1)$ gives $u_A=3$: $56\\cdot6\\cdot6=2016$.",
+      "$(1,2),(2,1)$ give $u_A=2$: $2\\times28\\cdot6\\cdot15=5040$; $(2,2)$ gives $u_A=1$: $8\\cdot15\\cdot15=1800$.",
+      "Total $=840+1680+2016+5040+1800=11376$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When the 'chosen' side is large, count the unchosen items: bounds become small ($u_A\\le4$, $u_B,u_C\\le2$) and the cases are easier to list.",
+    "Minimum conditions: pre-select the compulsory items and distribute the rest, but remember that section sizes cap each section.",
+    "Selections from sections multiply as $\\binom{n_A}{x_A}\\binom{n_B}{x_B}\\binom{n_C}{x_C}$ and add over the admissible $(x_A,x_B,x_C)$."
+   ]
+  },
+  {
+   "q_no": 46,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Words formed from some of the letters (with repeated letters)"
+   ],
+   "level": 3,
+   "question": "The total number of words (with or without meaning) that can be formed out of the letters of the word “DISTRIBUTION” taken four at a time, is equal to ______. [JEE(Main) Jan 2024]",
+   "answer": "3734",
+   "key_idea": "Letters $I\\times3,\\ T\\times2$ and seven singles; split the $4$-letter selections into patterns $1111$, $211$, $22$, $31$.",
+   "solution": [
+    "DISTRIBUTION has $12$ letters: $I$ thrice, $T$ twice and $D,S,R,B,U,O,N$ once each ($9$ different letters).",
+    "All $4$ letters different: ${}^9C_4\\times4!=126\\times24=3024$.",
+    "Two letters alike and two different: the repeated letter is $I$ or $T$ ($2$ ways), two others from the remaining $8$ letters: ${}^8C_2$; arrangements $\\frac{4!}{2!}$. Count $={}^2C_1\\cdot{}^8C_2\\cdot\\frac{4!}{2!}=2\\cdot28\\cdot12=672$.",
+    "Two pairs: $I,I,T,T$: ${}^2C_2\\times\\frac{4!}{2!\\,2!}=6$.",
+    "Three alike and one different: $I,I,I$ and one of the other $8$ letters: ${}^1C_1\\cdot{}^8C_1\\cdot\\frac{4!}{3!}=32$.",
+    "Total words $=3024+672+6+32=3734$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Exponential generating function: $4!\\,[x^4]$ of the product of one factor per letter.",
+     "solution": [
+      "$I$ (up to $3$ copies): $1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}$; $T$ (up to $2$): $1+x+\\frac{x^2}{2!}$; each of the $7$ single letters: $(1+x)^7$.",
+      "Product of the first two: coefficients $1,\\,2,\\,2,\\,\\frac76,\\,\\frac5{12}$ for $x^0,\\dots,x^4$. Also $(1+x)^7$: $1,7,21,35,35$.",
+      "Coefficient of $x^4$: $\\frac5{12}\\cdot1+\\frac76\\cdot7+2\\cdot21+2\\cdot35+1\\cdot35=\\frac{1867}{12}$.",
+      "Number of words $=4!\\times\\frac{1867}{12}=3734$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Words of length $r$ from a multiset: EGF $\\prod_i\\left(\\sum_{j\\le c_i}\\frac{x^j}{j!}\\right)$ and the answer is $r!\\,[x^r]$.",
+    "Without the EGF: classify by repetition pattern and multiply (choose letters) $\\times$ (arrangements $\\frac{r!}{\\prod m_i!}$).",
+    "Consistency check: all patterns together must reproduce $3024+672+6+32$."
+   ]
+  },
+  {
+   "q_no": 47,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Non-negative integral solutions of a linear equation with unequal coefficients"
+   ],
+   "level": 2,
+   "question": "The number of elements in the set $S=\\{(x,y,z):x,y,z\\in\\mathbb Z,\\ x+2y+3z=42,\\ x,y,z\\ge0\\}$ equals ______. [JEE(Main) Jan 2024]",
+   "answer": "169",
+   "key_idea": "For each $z$ the equation $x+2y=42-3z$ has $\\left\\lfloor\\frac{42-3z}{2}\\right\\rfloor+1$ solutions; sum over $z=0..14$.",
+   "solution": [
+    "For fixed $z$, $x+2y=42-3z$ has $\\left\\lfloor\\frac{42-3z}{2}\\right\\rfloor+1$ non-negative solutions ($y=0,1,\\dots$).",
+    "$z=0$: $x+2y=42$: $22$ solutions. $z=1$: $x+2y=39$: $20$ solutions. $z=2$: $x+2y=36$: $19$ solutions.",
+    "Continuing, the counts for $z=0,1,\\dots,14$ are $22,20,19,17,16,14,13,11,10,8,7,5,4,2,1$ (for $z=14$, $x+2y=0$ has one solution).",
+    "These are exactly the integers $1,2,\\dots,22$ that are not multiples of $3$.",
+    "Number of solutions $=(1+2+3+\\cdots+22)-(3+6+9+\\cdots+21)=253-84=169$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Partitions of $42$ into parts of sizes $1,2,3$: use the closed form $\\operatorname{round}\\frac{(n+3)^2}{12}$.",
+     "solution": [
+      "Each solution $(x,y,z)$ is a partition of $42$ into $x$ ones, $y$ twos and $z$ threes.",
+      "The number of partitions of $n$ into parts at most $3$ is the nearest integer to $\\frac{(n+3)^2}{12}$.",
+      "For $n=42$: $\\frac{45^2}{12}=\\frac{2025}{12}=168.75$, the nearest integer is $169$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of partitions of $n$ into parts $\\le3$ is $\\operatorname{round}\\frac{(n+3)^2}{12}$ (check $n=6$: $\\frac{81}{12}=6.75\\to7$, partitions $6{=}3{+}3,3{+}2{+}1,3{+}1{+}1{+}1,2{+}2{+}2,\\dots$).",
+    "Number of solutions of $x+2y=m$: $\\lfloor m/2\\rfloor+1$.",
+    "Equations with coefficients $1,2,3$: fix the largest coefficient's variable, then the problem reduces to coefficients $1,2$."
+   ]
+  },
+  {
+   "q_no": 48,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selecting pairs of objects (counting intersection points)",
+    "Parallel and concurrent lines (Straight Lines)"
+   ],
+   "level": 2,
+   "question": "The lines $L_1,L_2,\\dots,L_{20}$ are distinct. For $n=1,2,3,\\dots,10$ all the lines $L_{2n-1}$ are parallel to each other and all the lines $L_{2n}$ pass through a given point $P$. The maximum number of points of intersection of pairs of lines from the set $\\{L_1,L_2,\\dots,L_{20}\\}$ is equal to ______. [JEE(Main) Jan 2024]",
+   "answer": "101",
+   "key_idea": "Odd-odd pairs never meet, even-even pairs all meet at $P$, and each odd-even pair gives its own point.",
+   "solution": [
+    "Odd lines $L_1,L_3,\\dots,L_{19}$ ($10$ lines) are parallel; even lines $L_2,L_4,\\dots,L_{20}$ ($10$ lines) are concurrent at $P$.",
+    "Two odd lines are parallel: no intersection, $0$ points from ${}^{10}C_2$ pairs.",
+    "Two even lines meet at $P$: all ${}^{10}C_2$ pairs give the same point, $1$ point in all.",
+    "An odd line and an even line meet in one point; for the maximum these are all different: ${}^{10}C_1\\times{}^{10}C_1=100$ points.",
+    "Maximum number of points $=0+1+100=101$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Start from all pairs and correct for parallel and concurrent pairs.",
+     "solution": [
+      "Total pairs of lines: ${}^{20}C_2=190$.",
+      "Parallel pairs give no point: remove ${}^{10}C_2=45$, leaving $145$ pairs, each giving a point.",
+      "The ${}^{10}C_2=45$ concurrent pairs all give the same point $P$, so replace $45$ points by $1$: $145-45+1$.",
+      "Maximum number of points $=101$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Maximum intersections of $n$ lines: $\\binom n2$; subtract $\\binom p2$ for each family of $p$ parallel lines and replace $\\binom q2$ by $1$ for $q$ concurrent lines.",
+    "Formula: $\\binom n2-\\binom p2-\\binom q2+1$ when one parallel family and one concurrent family do not share lines (here $190-45-45+1=101$).",
+    "Maximum is achieved when no other three lines are concurrent and the parallel family is not parallel to the concurrent lines."
+   ]
+  },
+  {
+   "q_no": 49,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Number of triangles from collinear point sets"
+   ],
+   "level": 1,
+   "question": "There are $5$ points $P_1,P_2,P_3,P_4,P_5$ on the side $AB$, excluding $A$ and $B$, of a triangle $ABC$. Similarly, there are $6$ points $P_6,P_7,\\dots,P_{11}$ on the side $BC$ and $7$ points $P_{12},P_{13},\\dots,P_{18}$ on the side $CA$ of the triangle. The number of triangles, that can be formed using the points $P_1,P_2,\\dots,P_{18}$ as vertices is: [JEE(Main) April 2024]",
+   "options": [
+    "$751$",
+    "$776$",
+    "$771$",
+    "$796$"
+   ],
+   "answer": "(A) 751",
+   "key_idea": "Triangles $=$ all triples of points $-$ triples lying on one side (collinear).",
+   "solution": [
+    "Choose any $3$ of the $18$ points: ${}^{18}C_3=\\frac{18\\times17\\times16}{6}=816$.",
+    "Collinear triples (all three on one side): ${}^5C_3+{}^6C_3+{}^7C_3=10+20+35=65$.",
+    "Number of triangles $=816-65=751$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the triangles directly by how many vertices lie on each side.",
+     "solution": [
+      "One vertex on each side: $5\\times6\\times7=210$.",
+      "Two on $AB$, one on another side: ${}^5C_2\\times(6+7)=10\\times13=130$. Two on $BC$: ${}^6C_2\\times(5+7)=15\\times12=180$. Two on $CA$: ${}^7C_2\\times(5+6)=21\\times11=231$.",
+      "Total $=210+130+180+231=751$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Triangles from $n$ points with $k$ collinear: $\\binom n3-\\binom k3$ (several collinear sets: subtract each).",
+    "Direct count by distribution over the sides (one-one-one, two-one) is a good cross-check.",
+    "The vertices $A,B,C$ are excluded here, so no collinear triple spans two sides."
+   ]
+  },
+  {
+   "q_no": 50,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Finding the word at a given position in dictionary order"
+   ],
+   "level": 2,
+   "question": "$60$ words can be made using all the letters of the word BHBJO, with or without meaning. If these words are written as in a dictionary, then the $50^{\\text{th}}$ word is: [JEE(Main) April 2024]",
+   "options": [
+    "JBBOH",
+    "OBBJH",
+    "OBBHJ",
+    "HBBJO"
+   ],
+   "answer": "(B) OBBJH",
+   "key_idea": "The first three blocks ($B\\ldots$, $H\\ldots$, $J\\ldots$) hold $48$ words, so the $50^{\\text{th}}$ is the second word of the block starting with $O$.",
+   "solution": [
+    "Alphabetical order of the letters: $B,B,H,J,O$; total words $\\frac{5!}{2!}=60$.",
+    "Words starting with $B$: arrange $B,H,J,O$: $4!=24$.",
+    "Words starting with $H$: arrange $B,B,J,O$: $\\frac{4!}{2!}=12$. Words starting with $J$: arrange $B,B,H,O$: $12$.",
+    "These blocks hold $24+12+12=48$ words, so words $49$ to $60$ start with $O$.",
+    "The first $O$-word is $OBBHJ$ (the $49^{\\text{th}}$) and the next is $OBBJH$ (the $50^{\\text{th}}$)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Block sizes in dictionary order: for each smaller letter $x$ put first, count $\\frac{(n-1)!}{\\prod(\\text{repeats left})!}$.",
+    "To find the $k$-th word, subtract block sizes until the remaining index falls inside a block, then repeat on the next place.",
+    "Words of $n$ letters with repeats: total $\\frac{n!}{\\prod m_i!}$; the last block is the one starting with the largest letter."
+   ]
+  },
+  {
+   "q_no": 51,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Partition of a set into labelled subsets of equal size"
+   ],
+   "level": 2,
+   "question": "Let the set $S=\\{2,4,8,16,\\dots,512\\}$ be partitioned into $3$ sets $A,B,C$ with equal number of elements such that $A\\cup B\\cup C=S$ and $A\\cap B=B\\cap C=A\\cap C=\\phi$. The maximum number of such possible partitions of $S$ is equal to: [JEE(Main) April 2024]",
+   "options": [
+    "$1640$",
+    "$1680$",
+    "$1520$",
+    "$1710$"
+   ],
+   "answer": "(B) 1680",
+   "key_idea": "$S=\\{2^1,\\dots,2^9\\}$ has $9$ elements, so the sets have $3$ each; $A,B,C$ are named, so no division by $3!$ for unlabelled sets.",
+   "solution": [
+    "$S=\\{2^1,2^2,\\dots,2^9\\}$ has $9$ elements. Equal sizes and disjoint union mean $|A|=|B|=|C|=3$.",
+    "Choose $A$: ${}^9C_3=84$. Choose $B$ from the remaining $6$: ${}^6C_3=20$. $C$ is the remaining $3$: $1$ way.",
+    "If the three sets were unlabelled the number of divisions would be $\\frac{9!}{(3!)^3\\,3!}=280$.",
+    "Since $A,B,C$ are distinct named sets, multiply by $3!$: $280\\times6=\\frac{9!}{(3!)^3}$.",
+    "Number of partitions $=84\\times20=1680$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Splitting $n=km$ distinct objects into $k$ labelled groups of $m$: $\\frac{n!}{(m!)^k}$; unlabelled: divide further by $k!$.",
+    "Whether groups are labelled is decided by the wording ('sets $A,B,C$' are labelled; 'teams' or 'identical boxes' are not).",
+    "Only the cardinality of $S$ matters; the elements being powers of $2$ is irrelevant."
+   ]
+  },
+  {
+   "q_no": 52,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Selecting non-adjacent vertices of a polygon (geometry counting)"
+   ],
+   "level": 3,
+   "question": "The number of triangles whose vertices are at the vertices of a regular octagon but none of whose sides is a side of the octagon is: [JEE(Main) April 2024]",
+   "options": [
+    "$56$",
+    "$16$",
+    "$48$",
+    "$24$"
+   ],
+   "answer": "(B) 16",
+   "key_idea": "No side of the octagon means no two chosen vertices are adjacent; counting by a first vertex counts each triangle $3$ times.",
+   "solution": [
+    "A side of the triangle is a side of the octagon exactly when two chosen vertices are adjacent, so we need $3$ vertices of the $8$ with no two adjacent.",
+    "Pick a first vertex: $8$ ways. The other two cannot be this vertex or its two neighbours, leaving $5$ consecutive vertices.",
+    "Choose $2$ of these $5$ vertices, which must also be non-adjacent: ${}^4C_2=6$ ways (choosing $2$ non-adjacent from $5$ in a row is ${}^{5-2+1}C_2$).",
+    "This gives $8\\times6=48$, but each triangle has $3$ vertices and was counted once for each as the 'first' vertex.",
+    "Number of triangles $=\\frac{48}{3}=16$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working ends with 8C1 x 4C2 = 48, which contradicts its own key (B) 16 and is wrong: choosing a first vertex counts every triangle three times (once per vertex). The correct count is 48/3 = 16 (confirmed by brute force over all 56 triples).",
+   "alternate_solutions": [
+    {
+     "idea": "Complement: from all $\\binom83$ triangles remove those having one or two octagon sides.",
+     "solution": [
+      "All triangles: ${}^8C_3=56$.",
+      "Triangles with two octagon sides (three consecutive vertices): $8$.",
+      "Triangles with exactly one octagon side: choose the side ($8$ ways), the third vertex must not be adjacent to its ends: $8-2-2=4$ choices: $8\\times4=32$.",
+      "Triangles with no octagon side $=56-8-32=16$."
+     ]
+    },
+    {
+     "idea": "Arc lengths: the three arcs between chosen vertices must each have at least $2$ edges.",
+     "solution": [
+      "Let the arcs (numbers of octagon edges) between consecutive chosen vertices be $g_1,g_2,g_3\\ge2$ with $g_1+g_2+g_3=8$.",
+      "Put $g_i=2+h_i$: $h_1+h_2+h_3=2$ has ${}^4C_2=6$ solutions (as ordered arcs starting from a marked vertex).",
+      "Marking a vertex of the triangle among $8$ positions: $8\\times6=48$ marked triangles; each triangle has $3$ marked choices.",
+      "Triangles $=\\frac{48}{3}=16$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Choosing $k$ non-adjacent vertices of an $n$-gon: $\\frac{n}{n-k}\\binom{n-k}{k}$; here $\\frac{8}{5}\\binom53=16$.",
+    "Triangles from an $n$-gon with no polygon side: $\\frac{n(n-4)(n-5)}{6}$; for $n=8$: $\\frac{8\\cdot4\\cdot3}{6}=16$.",
+    "Whenever a count starts from a chosen 'first' object, divide by the number of objects in the final configuration that could have been first."
+   ]
+  },
+  {
+   "q_no": 53,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Finding the word at a given position in dictionary order"
+   ],
+   "level": 2,
+   "question": "If all the words with or without meaning made using all the letters of the word “NAGPUR” are arranged as in a dictionary, then the word at $315^{\\text{th}}$ position in this arrangement is: [JEE(Main) April 2024]",
+   "options": [
+    "NRAGUP",
+    "NRAPUG",
+    "NRAGPU",
+    "NRAPGU"
+   ],
+   "answer": "(D) NRAPGU",
+   "key_idea": "Subtract block sizes of $5!$, $4!$, $3!,\\dots$ from $315$ to find the letter at each place.",
+   "solution": [
+    "Alphabetical order: $A,G,N,P,R,U$; total $6!=720$ words.",
+    "Words starting with $A$: $5!=120$. Words starting with $G$: $5!=120$. Running total $240$.",
+    "Words starting with $N$: the second letter in order is $A,G,P,R,U$. $NA\\ldots$: $4!=24$; $NG\\ldots$: $24$; $NP\\ldots$: $24$. Running total $240+72=312$.",
+    "The next block is $NR\\ldots$; its words begin $NRAGPU$ ($313^{\\text{th}}$), $NRAGUP$ ($314^{\\text{th}}$), $NRAPGU$ ($315^{\\text{th}}$).",
+    "The $315^{\\text{th}}$ word is $NRAPGU$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factorial number system: write $315-1=314$ in the digits $5!,4!,3!,2!,1!$ and read letters by their index.",
+     "solution": [
+      "$314=2\\cdot120+3\\cdot24+0\\cdot6+1\\cdot2+0\\cdot1$, so the digits are $2,3,0,1,0$ (and $0$ for the last place).",
+      "Sorted letters with indices: $A0,G1,N2,P3,R4,U5$. Digit $2\\to N$.",
+      "Remaining $A,G,P,R,U$: digit $3\\to R$. Remaining $A,G,P,U$: digit $0\\to A$. Remaining $G,P,U$: digit $1\\to P$.",
+      "Remaining $G,U$: digit $0\\to G$; last letter $U$. The word is $NRAPGU$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The $k$-th word of $n$ distinct letters: write $k-1=\\sum d_i\\,(n-i)!$ with $0\\le d_i\\le n-i$ and take the $d_i$-th unused letter (counting from $0$) at place $i$.",
+    "Inverse of rank: rank $-1$ is the same factorial-base number read from the word.",
+    "Check the first and last words: $k=1$ gives all zeros (alphabetical word); $k=n!$ gives the reverse."
+   ]
+  },
+  {
+   "q_no": 54,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Selections from a multiset (letters of a word, not necessarily distinct)"
+   ],
+   "level": 3,
+   "question": "The number of ways five alphabets can be chosen from the alphabets of the word MATHEMATICS, where the chosen alphabets are not necessarily distinct, is equal to: [JEE(Main) April 2024]",
+   "options": [
+    "$181$",
+    "$177$",
+    "$179$",
+    "$175$"
+   ],
+   "answer": "(C) 179",
+   "key_idea": "Choose by repetition pattern: five different, one pair plus three different, or two pairs plus one more.",
+   "solution": [
+    "MATHEMATICS has $8$ different letters: $M,A,T$ (each twice) and $H,E,I,C,S$ (once each).",
+    "All five different: ${}^8C_5=56$.",
+    "One letter taken twice (it must be $M$, $A$ or $T$: $3$ ways) and three other different letters from the remaining $7$: ${}^3C_1\\times{}^7C_3=3\\times35=105$.",
+    "Two letters taken twice ($\\{M,A\\},\\{M,T\\},\\{A,T\\}$: ${}^3C_2=3$ ways) and one more letter from the remaining $6$ different letters: $3\\times6=18$.",
+    "Total $=56+105+18=179$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating function: each letter contributes $(1+x+\\cdots)$ up to its multiplicity; take the coefficient of $x^5$.",
+     "solution": [
+      "$M,A,T$ each give $(1+x+x^2)$ and $H,E,I,C,S$ each give $(1+x)$, so the count is the coefficient of $x^5$ in $(1+x+x^2)^3(1+x)^5$.",
+      "$(1+x+x^2)^3=1+3x+6x^2+7x^3+6x^4+3x^5+x^6$ and $(1+x)^5=1+5x+10x^2+10x^3+5x^4+x^5$.",
+      "Coefficient of $x^5$: $1\\cdot1+3\\cdot5+6\\cdot10+7\\cdot10+6\\cdot5+3\\cdot1$ (pairing $x^0\\!\\cdot\\!x^5,\\ x^1\\!\\cdot\\!x^4,\\dots$) $=1+15+60+70+30+3=179$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Selections (unordered) from a multiset: ordinary generating function $\\prod\\left(1+x+\\cdots+x^{m_i}\\right)$, answer $[x^r]$; arrangements need the exponential version instead.",
+    "'Not necessarily distinct' with limited copies means the available multiplicities cap the repeats.",
+    "Check: the coefficient list $1,8,31,77,136,179$ gives the number of selections of $0,1,\\dots,5$ letters."
+   ]
+  },
+  {
+   "q_no": 55,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selections from two groups with a combined composition condition"
+   ],
+   "level": 2,
+   "question": "There are $4$ men and $5$ women in Group A, and $5$ men and $4$ women in Group B. If $4$ persons are selected from each group, then the number of ways of selecting $4$ men and $4$ women is ______. [JEE(Main) April 2024]",
+   "answer": "5626",
+   "key_idea": "If group A contributes $a$ men then it contributes $4-a$ women, and group B must contribute $4-a$ men and $a$ women.",
+   "solution": [
+    "Select $4$ from each group so that the total is $4$ men and $4$ women. If A gives $a$ men and $4-a$ women, then B gives $4-a$ men and $a$ women.",
+    "$a=4$: A: $4$ men, no woman; B: no man, $4$ women: ${}^4C_4\\cdot{}^4C_4=1$.",
+    "$a=3$: A: $3$ men, $1$ woman; B: $1$ man, $3$ women: $({}^4C_3\\cdot{}^5C_1)({}^5C_1\\cdot{}^4C_3)=20\\times20=400$.",
+    "$a=2$: A: $2$ men, $2$ women; B: $2$ men, $2$ women: $({}^4C_2\\cdot{}^5C_2)({}^5C_2\\cdot{}^4C_2)=60\\times60=3600$.",
+    "$a=1$: A: $1$ man, $3$ women; B: $3$ men, $1$ woman: $({}^4C_1\\cdot{}^5C_3)({}^5C_3\\cdot{}^4C_1)=40\\times40=1600$.",
+    "$a=0$: A: $4$ women; B: $4$ men: ${}^5C_4\\cdot{}^5C_4=25$.",
+    "Total number of ways $=1+400+3600+1600+25=5626$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Group B is the mirror image of group A (men and women swapped), so the two selections have the same count $N_a={}^4C_a\\,{}^5C_{4-a}$ and the answer is $\\sum N_a^2=25+1600+3600+400+1=5626$.",
+    "Vandermonde check: $\\sum N_a={}^9C_4=126$ (all ways of choosing $4$ people from A).",
+    "For a combined composition target, parametrise one group's composition and let the other group's follow."
+   ]
+  },
+  {
+   "q_no": 56,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of outcomes with a given sum (bounded integral solutions)"
+   ],
+   "level": 2,
+   "question": "The number of ways of getting a sum $16$ on throwing a dice four times is ______. [JEE(Main) April 2024]",
+   "answer": "125",
+   "key_idea": "Solutions of $x_1+\\dots+x_4=16$ with $1\\le x_i\\le6$: coefficient of $x^{12}$ in $(1-x^6)^4(1-x)^{-4}$.",
+   "solution": [
+    "Let the outcomes be $x_1,\\dots,x_4\\in\\{1,\\dots,6\\}$ with $x_1+x_2+x_3+x_4=16$.",
+    "Number of ways $=$ coefficient of $x^{16}$ in $(x+x^2+\\cdots+x^6)^4=x^4\\left(\\frac{1-x^6}{1-x}\\right)^4$, i.e. coefficient of $x^{12}$ in $(1-x^6)^4(1-x)^{-4}$.",
+    "$(1-x^6)^4=1-{}^4C_1x^6+{}^4C_2x^{12}-\\cdots$ and $(1-x)^{-4}=\\sum{}^{r+3}C_3\\,x^r$.",
+    "Coefficient of $x^{12}$: ${}^{15}C_3-4\\cdot{}^{9}C_3+6\\cdot{}^3C_3$.",
+    "$=455-336+6=125$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the symmetry $x_i\\to7-x_i$ to turn the sum $16$ into $12$, which needs only one correction term.",
+     "solution": [
+      "The map $x_i\\mapsto7-x_i$ sends outcomes with sum $16$ to outcomes with sum $28-16=12$ and is a bijection.",
+      "Count outcomes with sum $12$: put $y_i=x_i-1\\in\\{0,\\dots,5\\}$ with $y_1+\\dots+y_4=8$.",
+      "Unrestricted solutions: ${}^{11}C_3=165$; solutions with some $y_i\\ge6$: $4\\times{}^{5}C_3=40$ (two of them cannot be $\\ge6$ since $12>8$).",
+      "Number of ways $=165-40=125$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The distribution of the sum of $n$ dice is symmetric about $\\frac{7n}{2}$: the number of ways for sum $s$ equals that for $7n-s$.",
+    "Bounded stars and bars: $\\sum_k(-1)^k\\binom nk\\binom{s-k m-1}{n-1}$ for $x_i\\in[1,m]$ and total $s$ (here $m=6$).",
+    "Use the symmetric partner of $s$ closer to the minimum to cut the inclusion-exclusion terms."
+   ]
+  },
+  {
+   "q_no": 57,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Digit arrangements without repetition and divisibility by 3"
+   ],
+   "level": 2,
+   "question": "The number of $3$-digit numbers, formed using the digits $2,3,4,5$ and $7$, when the repetition of digits is not allowed, and which are not divisible by $3$, is equal to ______. [JEE(Main) April 2024]",
+   "answer": "36",
+   "key_idea": "Not divisible by $3$ $=$ all arrangements $-$ those from triples whose digit sum is a multiple of $3$.",
+   "solution": [
+    "Total $3$-digit numbers from $2,3,4,5,7$ with no repetition: ${}^5P_3={}^5C_3\\times3!=60$.",
+    "A number is divisible by $3$ when its digit sum is. Triples with such a sum: $\\{2,3,4\\}$ (sum $9$), $\\{2,3,7\\}$ (sum $12$), $\\{3,4,5\\}$ (sum $12$), $\\{3,5,7\\}$ (sum $15$).",
+    "Each triple gives $3!=6$ numbers: numbers divisible by $3$ $=6\\times4=24$.",
+    "Numbers not divisible by $3$ $=60-24=36$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Classify digits by remainder mod $3$; a triple has sum divisible by $3$ only if its remainders are all different or all equal.",
+     "solution": [
+      "Remainders: $3\\to0$; $4,7\\to1$; $2,5\\to2$. Class sizes $1,2,2$.",
+      "A sum divisible by $3$ needs residues $\\{0,1,2\\}$ (one from each class: $1\\times2\\times2=4$ triples) or three equal residues (impossible, no class has $3$ digits).",
+      "So $4$ triples $\\times3!=24$ numbers are divisible by $3$ and $60-24=36$ are not."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Digit-sum divisibility by $3$: a triple works iff its residues are all different or all equal.",
+    "Complement counting is shortest when the 'divisible' event involves few triples; classify digits by residue to see how many.",
+    "Check by direct count: number of triples is $\\binom53=10$; $4$ are bad and $6$ are good, giving $6\\times6=36$."
+   ]
+  },
+  {
+   "q_no": 58,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Digit-sum counting (integral solutions with bounds)"
+   ],
+   "level": 3,
+   "question": "The number of integers between $100$ and $1000$ having the sum of their digits equals to $14$, is ______. [JEE(Main) April 2024]",
+   "answer": "70",
+   "key_idea": "Split the three-digit numbers $abc$ with $a+b+c=14$ by digit pattern and remember $a\\ne0$.",
+   "solution": [
+    "Let the number be $abc$ with $a\\ge1$ and $a+b+c=14$, all digits at most $9$.",
+    "All digits different, no zero: $\\{6,5,3\\},\\{7,6,1\\},\\{7,5,2\\},\\{7,4,3\\},\\{8,5,1\\},\\{8,4,2\\},\\{9,4,1\\},\\{9,3,2\\}$: $8$ triples $\\times\\,3!=48$.",
+    "All digits different with a zero: $\\{8,6,0\\}$ and $\\{9,5,0\\}$: the zero cannot lead, so $3!-2!=4$ numbers each: $8$.",
+    "Exactly two digits alike, digits $a,a,c$ with $2a+c=14$: $(a,c)=(3,8),(4,6),(5,4),(6,2),(7,0)$; arrangements $\\frac{3!}{2!}=3$ each, but $(7,0)$ gives only $2$ numbers ($770,707$; the arrangement $077$ is not allowed): $4\\times3+2=14$.",
+    "All three alike: $3a=14$ is impossible: $0$.",
+    "Total $=48+8+14=70$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Stars and bars with the bounds $a'=a-1\\le8$, $b,c\\le9$.",
+     "solution": [
+      "Put $a'=a-1\\ge0$: $a'+b+c=13$ with $a'\\le8$, $b\\le9$, $c\\le9$.",
+      "Unrestricted solutions: ${}^{15}C_2=105$.",
+      "Violations: $a'\\ge9$: set $a'=9+a''$, $a''+b+c=4$: ${}^6C_2=15$; $b\\ge10$: $a'+b'+c=3$: ${}^5C_2=10$; $c\\ge10$: $10$. Two violations at once need $\\ge18>13$: impossible.",
+      "Count $=105-15-10-10=70$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Digit-sum problems for $n$-digit numbers: substitute $a'=a-1$ for the leading digit and count bounded non-negative solutions by inclusion-exclusion.",
+    "Violating a digit bound ($\\ge10$) at most once or twice - check whether two violations can coexist.",
+    "Cross-check: the casework $48+8+14$ and the bounded stars and bars $105-35$ both give $70$."
+   ]
+  }
+ ]
+}
