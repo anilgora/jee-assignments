@@ -1,0 +1,855 @@
+{
+ "title": "Quadratic Equation Sheet (Exercise C-II) — Paper Analysis",
+ "subtitle": "SHEET QUADRATIC EQUATION · FCopy C2 · detailed solutions",
+ "source": "SHEET_QUADRATIC_EQUATION_FCopy_C2.pdf (solutions as printed in the PDF); no blueprint - concepts self-assigned",
+ "paper_name": "Quadratic Equation Sheet FCopy C2",
+ "sections": [
+  {
+   "title": "Numerical / Subjective Type",
+   "from": 1,
+   "to": 13,
+   "marking": [
+    "Marks not printed in the paper: 4 marks each assumed (JEE Advanced default)",
+    "Find / solve / prove questions with a numerical or expression answer"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 14,
+   "to": 16,
+   "marking": [
+    "Marks not printed in the paper: 3 marks each assumed (JEE Advanced default)",
+    "One paragraph: Q14-Q16"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 17,
+   "to": 19,
+   "marking": [
+    "Marks not printed in the paper: 3 marks each assumed (JEE Advanced default)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations between roots and coefficients of a quadratic",
+    "Symmetric functions of roots"
+   ],
+   "level": 2,
+   "question": "Let $p$ and $q$ be the two roots of the equation $mx^2+x(2-m)+3=0$. Let $m_1,m_2$ be the two values of $m$ satisfying $\\dfrac pq+\\dfrac qp=\\dfrac23$. Determine the numerical value of $\\dfrac{m_1}{m_2^2}+\\dfrac{m_2}{m_1^2}$.",
+   "answer": "99",
+   "key_idea": "Turn $\\frac pq+\\frac qp=\\frac23$ into an equation in $m$ using $p+q$ and $pq$, then use Vieta on that equation for $m_1,m_2$.",
+   "solution": [
+    "$p+q=\\dfrac{m-2}{m}$ and $pq=\\dfrac3m$.",
+    "$p^2+q^2=(p+q)^2-2pq=\\dfrac{(m-2)^2}{m^2}-\\dfrac6m=\\dfrac{(m-2)^2-6m}{m^2}=\\dfrac{m^2+4-10m}{m^2}$.",
+    "$\\dfrac pq+\\dfrac qp=\\dfrac23\\Rightarrow\\dfrac{p^2+q^2}{pq}=\\dfrac23\\Rightarrow 3(p^2+q^2)=2pq$.",
+    "$3\\cdot\\dfrac{m^2+4-10m}{m^2}=2\\cdot\\dfrac3m\\Rightarrow m^2+4-10m=2m\\Rightarrow m^2-12m+4=0$.",
+    "Its roots are $m_1,m_2$: $m_1+m_2=12$, $m_1m_2=4$.",
+    "$m_1^3+m_2^3=(m_1+m_2)^3-3m_1m_2(m_1+m_2)=12^3-3\\times4\\times12=12^3-12^2=12^2(12-1)=144\\times11$.",
+    "$\\dfrac{m_1}{m_2^2}+\\dfrac{m_2}{m_1^2}=\\dfrac{m_1^3+m_2^3}{m_1^2m_2^2}=\\dfrac{144\\times11}{4\\times4}=99$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $m_1m_2=4$ to rewrite each term as a cube, then reduce $m^3$ with the equation $m^2=12m-4$.",
+     "solution": [
+      "$m_1m_2=4$ gives $m_2=\\dfrac4{m_1}$, so $\\dfrac{m_1}{m_2^2}=\\dfrac{m_1\\cdot m_1^2}{16}=\\dfrac{m_1^3}{16}$; likewise $\\dfrac{m_2}{m_1^2}=\\dfrac{m_2^3}{16}$.",
+      "Each $m$ satisfies $m^2=12m-4$, hence $m^3=12m^2-4m=12(12m-4)-4m=140m-48$.",
+      "$m_1^3+m_2^3=140(m_1+m_2)-96=140\\times12-96=1584$.",
+      "Required value $=\\dfrac{1584}{16}=99$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $m_1m_2=k$ then $\\dfrac{m_1}{m_2^2}+\\dfrac{m_2}{m_1^2}=\\dfrac{m_1^3+m_2^3}{k^2}$.",
+    "$\\alpha^3+\\beta^3=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)$; for a root of $x^2=sx-t$, reduce higher powers by $x^3=(s^2-t)x-st$.",
+    "$\\dfrac pq+\\dfrac qp=\\dfrac{(p+q)^2}{pq}-2$ - symmetric expressions need only $p+q$ and $pq$.",
+    "Parameter conditions on the roots (like $\\frac pq+\\frac qp=\\frac23$) give a new quadratic in the parameter; Vieta again then handles both parameter values at once."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Logarithmic equations and change of base",
+    "Domain conditions of logarithms"
+   ],
+   "level": 2,
+   "question": "Solve for $x$: $\\log_{(2x+3)}(6x^2+23x+21)=4-\\log_{(3x+7)}(4x^2+12x+9)$.",
+   "answer": "$x=-\\dfrac14$",
+   "key_idea": "Factor $6x^2+23x+21=(2x+3)(3x+7)$ so both logs reduce to $t=\\log_{(2x+3)}(3x+7)$ and $\\frac1t$.",
+   "solution": [
+    "$6x^2+23x+21=(2x+3)(3x+7)$ and $4x^2+12x+9=(2x+3)^2$, so the equation is $\\log_{(2x+3)}\\big[(2x+3)(3x+7)\\big]=4-\\log_{(3x+7)}(2x+3)^2$.",
+    "$1+\\log_{(2x+3)}(3x+7)=4-2\\log_{(3x+7)}(2x+3)$.",
+    "Put $t=\\log_{(2x+3)}(3x+7)$, so $\\log_{(3x+7)}(2x+3)=\\dfrac1t$. Then $1+t=4-\\dfrac2t$, i.e. $t+\\dfrac2t-3=0$.",
+    "$t^2-3t+2=0\\Rightarrow t^2-2t-t+2=0\\Rightarrow t(t-2)-1(t-2)=0\\Rightarrow(t-1)(t-2)=0\\Rightarrow t=1,2$.",
+    "$t=1$: $\\log_{(2x+3)}(3x+7)=1\\Rightarrow 2x+3=3x+7\\Rightarrow x=-4$.",
+    "$t=2$: $(2x+3)^2=3x+7\\Rightarrow4x^2+12x+9-3x-7=0\\Rightarrow4x^2+9x+2=0\\Rightarrow4x^2+8x+x+2=0\\Rightarrow(x+2)(4x+1)=0$, so $x=-2,-\\dfrac14$.",
+    "Check $x=-4$: $2x+3=-5<0$ and $3x+7=-5<0$ - the bases must be positive, rejected.",
+    "Check $x=-2$: $2x+3=-1<0$ (while $3x+7=1>0$) - rejected.",
+    "Check $x=-\\dfrac14$: $2x+3=\\dfrac52>0$ and $3x+7=7-\\dfrac34=\\dfrac{25}4>0$; neither base equals $1$ and both arguments are positive - accepted.",
+    "Hence $x=-\\dfrac14$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's checks contain a typo: for x = -2 it writes '3x + 7 = 1 < 0' (1 is positive; the root is still rejected because 2x+3 = -1 < 0), and it evaluates 3x+7 at x = -1/4 as 11/2 (the correct value is 25/4, still positive). It also never checks that the bases differ from 1; added. Answer x = -1/4 unchanged.",
+   "useful_results": [
+    "For $\\log_a b$ the conditions are $a>0$, $a\\ne1$, $b>0$ - always verify them on every candidate (here they killed $-4$ and $-2$).",
+    "If an equation has $\\log_AB$ and $\\log_BA$, set $t=\\log_AB$; then $\\log_BA=\\frac1t$ and the equation becomes a quadratic in $t$.",
+    "Factor the arguments: $6x^2+23x+21=(2x+3)(3x+7)$ and $4x^2+12x+9=(2x+3)^2$ turn two logs into one pair $A,B$.",
+    "$\\log_AB=k\\Leftrightarrow B=A^k$ (with valid bases), so $t=1\\Rightarrow A=B$ and $t=2\\Rightarrow A^2=B$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Quadratic expressions: sign for all real $x$ (discriminant condition)",
+    "Quadratic inequalities"
+   ],
+   "level": 2,
+   "question": "Find the values of $a$ for which $-3<\\dfrac{x^2+ax-2}{x^2+x+1}<2$ is valid for all real $x$.",
+   "answer": "$-2<a<1$",
+   "key_idea": "$x^2+x+1>0$ for all $x$, so multiply through and require two quadratics to be positive for all $x$ (discriminant $<0$).",
+   "solution": [
+    "$x^2+x+1$ has discriminant $1-4<0$ and positive leading coefficient, so it is positive for all $x$; we may multiply by it.",
+    "Left inequality: $\\dfrac{x^2+ax-2}{x^2+x+1}>-3\\Rightarrow x^2+ax-2>-3x^2-3x-3\\Rightarrow4x^2+(a+3)x+1>0$ for all $x$.",
+    "This needs $D<0$: $(a+3)^2-16<0\\Rightarrow(a+3+4)(a+3-4)<0\\Rightarrow(a+7)(a-1)<0\\Rightarrow a\\in(-7,1)$.",
+    "Right inequality: $\\dfrac{x^2+ax-2}{x^2+x+1}<2\\Rightarrow x^2+ax-2<2x^2+2x+2\\Rightarrow x^2+(2-a)x+4>0$ for all $x$.",
+    "This needs $D<0$: $(a-2)^2-16<0\\Rightarrow(a-2+4)(a-2-4)<0\\Rightarrow(a+2)(a-6)<0\\Rightarrow a\\in(-2,6)$.",
+    "Both must hold: $(-7,1)\\cap(-2,6)=(-2,1)$, i.e. $-2<a<1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find the range of $y=\\frac{x^2+ax-2}{x^2+x+1}$ through the condition that $(y-1)x^2+(y-a)x+(y+2)=0$ has a real root.",
+     "solution": [
+      "Put $y=\\dfrac{x^2+ax-2}{x^2+x+1}$: $(y-1)x^2+(y-a)x+(y+2)=0$ must have a real solution $x$.",
+      "For $y\\ne1$ this means $(y-a)^2-4(y-1)(y+2)\\ge0$, i.e. $g(y)=3y^2+(2a+4)y-(a^2+8)\\le0$; so the range of $y$ is the interval between the roots of $g$ (it contains $y=1$ when $x\\to\\infty$).",
+      "We need this whole interval inside $(-3,2)$, i.e. $g(-3)>0$, $g(2)>0$ and the vertex $y=-\\dfrac{a+2}3\\in(-3,2)$.",
+      "$g(-3)=7-6a-a^2>0\\Rightarrow a^2+6a-7<0\\Rightarrow-7<a<1$.",
+      "$g(2)=12+4a-a^2>0\\Rightarrow a^2-4a-12<0\\Rightarrow-2<a<6$.",
+      "Vertex condition: $-3<-\\dfrac{a+2}3<2\\Rightarrow-8<a<7$, automatically true in $(-2,1)$.",
+      "Intersection: $-2<a<1$ - the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$ax^2+bx+c>0$ for all real $x$ $\\iff a>0$ and $b^2-4ac<0$.",
+    "A rational function $\\frac{N}{D}$ with $D>0$ always can be cleared: $\\lambda<\\frac ND<\\mu\\iff N-\\lambda D>0$ and $\\mu D-N>0$.",
+    "Range of $\\frac{ax^2+bx+c}{px^2+qx+r}$: put $y=$ the fraction and require $D\\ge0$ in $x$ (the 'discriminant method').",
+    "Check: $a=0$ gives $\\frac{x^2-2}{x^2+x+1}$, which lies between $-2.43$ and $1.10$, inside $(-3,2)$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Algebraic identities in $x+\\frac1x$ and $x^3+\\frac1{x^3}$",
+    "AM-GM inequality"
+   ],
+   "level": 3,
+   "question": "Find the minimum value of $\\dfrac{\\left(x+\\frac1x\\right)^6-\\left(x^6+\\frac1{x^6}\\right)-2}{\\left(x+\\frac1x\\right)^3+x^3+\\frac1{x^3}}$ for $x>0$.",
+   "answer": "6",
+   "key_idea": "Write $x^6+\\frac1{x^6}+2=\\left(x^3+\\frac1{x^3}\\right)^2$, so the numerator is a difference of squares that cancels with the denominator.",
+   "solution": [
+    "$x^6+\\dfrac1{x^6}=\\left(x^3\\right)^2+\\left(\\dfrac1{x^3}\\right)^2=\\left(x^3+\\dfrac1{x^3}\\right)^2-2$.",
+    "Numerator $=\\left(x+\\dfrac1x\\right)^6-\\left[\\left(x^3+\\dfrac1{x^3}\\right)^2-2\\right]-2=\\left[\\left(x+\\dfrac1x\\right)^3\\right]^2-\\left(x^3+\\dfrac1{x^3}\\right)^2$.",
+    "Difference of squares: numerator $=\\left[\\left(x+\\dfrac1x\\right)^3+x^3+\\dfrac1{x^3}\\right]\\left[\\left(x+\\dfrac1x\\right)^3-x^3-\\dfrac1{x^3}\\right]$.",
+    "The first bracket is exactly the denominator, so the fraction equals $\\left(x+\\dfrac1x\\right)^3-x^3-\\dfrac1{x^3}$.",
+    "$\\left(x+\\dfrac1x\\right)^3=x^3+\\dfrac1{x^3}+3\\left(x+\\dfrac1x\\right)$, so the fraction $=3\\left(x+\\dfrac1x\\right)$.",
+    "For $x>0$: $x+\\dfrac1x\\ge2$, with equality at $x=1$.",
+    "Minimum value $=3\\times2=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand everything in the single variable $u=x+\\frac1x$ and cancel the polynomial factor.",
+     "solution": [
+      "Let $u=x+\\dfrac1x$. Then $x^2+\\dfrac1{x^2}=u^2-2$, $x^4+\\dfrac1{x^4}=u^4-4u^2+2$, $x^3+\\dfrac1{x^3}=u^3-3u$.",
+      "Binomial expansion: $u^6=\\left(x^6+\\dfrac1{x^6}\\right)+6\\left(x^4+\\dfrac1{x^4}\\right)+15\\left(x^2+\\dfrac1{x^2}\\right)+20$.",
+      "Numerator $=u^6-\\left(x^6+\\dfrac1{x^6}\\right)-2=6(u^4-4u^2+2)+15(u^2-2)+18=6u^4-9u^2=3u^2(2u^2-3)$.",
+      "Denominator $=u^3+(u^3-3u)=2u^3-3u=u(2u^2-3)$.",
+      "Ratio $=3u=3\\left(x+\\dfrac1x\\right)\\ge6$ by AM-GM, with equality at $x=1$. Minimum $=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\left(x+\\frac1x\\right)^3=x^3+\\frac1{x^3}+3\\left(x+\\frac1x\\right)$ and $x^2+\\frac1{x^2}=\\left(x+\\frac1x\\right)^2-2$ - the two workhorse identities.",
+    "$x^n+\\frac1{x^n}$ can always be written as a polynomial in $u=x+\\frac1x$ (Chebyshev-type recursion $s_{n+1}=u\\,s_n-s_{n-1}$).",
+    "For $x>0$: $x+\\frac1x\\ge2$ (equality $x=1$); for $x<0$: $x+\\frac1x\\le-2$.",
+    "Recognise $A^2-B^2$ hidden in expressions like $\\left(x+\\frac1x\\right)^6-\\left(x^6+\\frac1{x^6}\\right)-2$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maximum and minimum value of a quadratic on a closed interval"
+   ],
+   "level": 3,
+   "question": "Find all numbers $p$ for each of which the least value of the quadratic trinomial $4x^2-4px+p^2-2p+2$ on the interval $0\\le x\\le2$ is equal to $3$.",
+   "answer": "$p=1-\\sqrt2$ or $p=5+\\sqrt{10}$",
+   "key_idea": "The least value on $[0,2]$ depends on where the vertex $x=\\frac p2$ lies: left of $0$, inside, or right of $2$ - treat three cases.",
+   "solution": [
+    "Let $f(x)=4x^2-4px+p^2-2p+2$, a parabola opening upwards with vertex at $x=\\dfrac{4p}{8}=\\dfrac p2$.",
+    "Case I (vertex left of the interval): $\\dfrac p2<0\\Rightarrow p<0$. Then $f$ is increasing on $[0,2]$ and the least value is $f(0)=p^2-2p+2$.",
+    "$f(0)=3\\Rightarrow p^2-2p-1=0\\Rightarrow p=1\\pm\\sqrt2$. Only $p<0$ is allowed, so $p=1-\\sqrt2$.",
+    "Case II (vertex inside): $0\\le\\dfrac p2\\le2\\Rightarrow0\\le p\\le4$. The least value is $f\\!\\left(\\dfrac p2\\right)=p^2-2p^2+p^2-2p+2=2-2p$.",
+    "$2-2p=3\\Rightarrow p=-\\dfrac12$, which is not in $[0,4]$. No solution in this case.",
+    "Case III (vertex right of the interval): $\\dfrac p2>2\\Rightarrow p>4$. Then $f$ is decreasing on $[0,2]$ and the least value is $f(2)=16-8p+p^2-2p+2=p^2-10p+18$.",
+    "$f(2)=3\\Rightarrow p^2-10p+15=0\\Rightarrow p=5\\pm\\sqrt{10}$. Only $p>4$ is allowed: $5+\\sqrt{10}\\approx8.16$ is accepted, $5-\\sqrt{10}\\approx1.84$ is rejected.",
+    "Hence $p=1-\\sqrt2$ or $p=5+\\sqrt{10}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF lists Case II (0 < p < 4) with its diagram but never solves it, and in Case III it does not say why 5 - sqrt(10) and (in Case I) 1 + sqrt(2) are rejected. Added: Case II gives 2 - 2p = 3, p = -1/2, outside [0,4], so no solution; rejections stated. The final answer was right.",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square with $s=2x\\in[0,4]$: $f=(s-p)^2-2p+2$, so the minimum is governed by the distance from $p$ to $[0,4]$.",
+     "solution": [
+      "With $s=2x$ ($0\\le s\\le4$): $f=s^2-2ps+p^2-2p+2=(s-p)^2-2p+2$.",
+      "Least value $=d^2-2p+2$ where $d=$ distance from $p$ to the interval $[0,4]$.",
+      "If $p<0$: $d=-p$ (nearest point $s=0$): $p^2-2p+2=3\\Rightarrow p=1-\\sqrt2$ (as $p<0$).",
+      "If $0\\le p\\le4$: $d=0$: $2-2p=3\\Rightarrow p=-\\dfrac12$, impossible.",
+      "If $p>4$: $d=p-4$: $(p-4)^2-2p+2=3\\Rightarrow p^2-10p+15=0\\Rightarrow p=5+\\sqrt{10}$ (since $p>4$).",
+      "Same answer: $p=1-\\sqrt2$ or $5+\\sqrt{10}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Minimum of $a(x-h)^2+k$ on $[m,n]$ ($a>0$): $k$ if $h\\in[m,n]$; $f(m)$ if $h<m$; $f(n)$ if $h>n$. Maximum is at the endpoint farther from $h$.",
+    "Vertex position decides the case: always split into three cases and check each candidate against its case condition.",
+    "Check: for $p=1-\\sqrt2$, $f$ on $[0,2]$ has minimum exactly $3$ (verified numerically); for $p=-\\frac12$ the minimum is $3.25$, not $3$, confirming the Case II value is not attained."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Logarithmic equations with parameter and domain restrictions",
+    "Location of roots of a quadratic in an interval"
+   ],
+   "level": 4,
+   "question": "Find the values of $b$ for which the equation $2\\log_{\\frac1{25}}(bx+28)=-\\log_5(12-4x-x^2)$ has only one solution.",
+   "answer": "$b\\in(-\\infty,-14)\\cup\\{4\\}\\cup\\left[\\dfrac{14}3,\\infty\\right)$",
+   "key_idea": "After simplifying, $bx+28=12-4x-x^2$ with $12-4x-x^2>0$: exactly one root of $x^2+(b+4)x+16=0$ must lie in $(-6,2)$.",
+   "solution": [
+    "$\\log_{1/25}u=-\\tfrac12\\log_5u$, so $2\\log_{1/25}(bx+28)=-\\log_5(bx+28)$. The equation becomes $-\\log_5(bx+28)=-\\log_5(12-4x-x^2)$.",
+    "So $bx+28=12-4x-x^2>0$, i.e. $x^2+(b+4)x+16=0$ with $x\\in(-6,2)$ (from $x^2+4x-12<0\\Rightarrow(x+6)(x-2)<0$); then $bx+28>0$ holds automatically.",
+    "Double root: $D=0\\Rightarrow(b+4)^2=64\\Rightarrow b=4$ or $b=-12$.",
+    "$b=4$: $x^2+8x+16=0\\Rightarrow x=-4$; $bx+28=12>0$ and $12-4x-x^2=12+16-16=12>0$. Accepted.",
+    "$b=-12$: $x^2-8x+16=0\\Rightarrow x=4$; $bx+28=-48+28=-20<0$. Rejected.",
+    "Exactly one root in $(-6,2)$ otherwise: the values at the end-points of $f(x)=x^2+(b+4)x+16$ must have opposite signs: $f(-6)=28-6b$, $f(2)=28+2b$. $f(-6)f(2)<0\\Rightarrow(28-6b)(28+2b)<0\\Rightarrow b\\in(-\\infty,-14)\\cup\\left(\\dfrac{14}3,\\infty\\right)$.",
+    "End-point cases: $b=-14$: roots $x=8$ and $x=2$, neither in $(-6,2)$ - rejected.",
+    "$b=\\dfrac{14}3$: roots $x=-6$ (not in the domain) and $x=-\\dfrac83\\in(-6,2)$ - accepted.",
+    "Hence $b\\in(-\\infty,-14)\\cup\\{4\\}\\cup\\left[\\dfrac{14}3,\\infty\\right)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Separate the parameter: $b=h(x)=-\\left(x+4+\\frac{16}x\\right)$ on $(-6,2)\\setminus\\{0\\}$ and count how often each horizontal line $y=b$ meets the graph of $h$.",
+     "solution": [
+      "From $x^2+(b+4)x+16=0$: $b=-\\dfrac{x^2+4x+16}{x}=-\\left(x+4+\\dfrac{16}x\\right)$, $x\\in(-6,2)$, $x\\ne0$ ($x=0$ gives $16=0$).",
+      "For $x\\in(0,2)$: $h'(x)=-1+\\dfrac{16}{x^2}>0$, so $h$ increases from $-\\infty$ to $h(2)=-14$ (not reached). Values: $(-\\infty,-14)$, each once.",
+      "For $x=-s$, $s\\in(0,6)$: $h=s+\\dfrac{16}s-4$. It decreases from $+\\infty$ to $4$ on $s\\in(0,4]$ and increases from $4$ to $h(6)=\\dfrac{14}3$ on $[4,6)$ ($s=6$ i.e. $x=-6$ excluded).",
+      "So: $b>\\dfrac{14}3$: once (only the branch $s<4$); $b=\\dfrac{14}3$: once (the point $s=6$ is excluded); $\\dfrac{14}3>b>4$: twice; $b=4$: once ($s=4$).",
+      "Collecting the values with exactly one solution: $b<-14$, $b=4$, $b\\ge\\dfrac{14}3$.",
+      "Same answer: $b\\in(-\\infty,-14)\\cup\\{4\\}\\cup\\left[\\dfrac{14}3,\\infty\\right)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\log_{a^k}u=\\frac1k\\log_au$; so $\\log_{1/25}u=-\\frac12\\log_5u$.",
+    "$\\log_5A=\\log_5B\\Leftrightarrow A=B$ with $A>0$ (then $B>0$ automatically): only one positivity condition is needed.",
+    "Exactly one root of $f(x)=0$ in an open interval $(m,n)$: $f(m)f(n)<0$, plus the boundary checks $f(m)=0$ or $f(n)=0$ (is the other root inside?) and the double-root case.",
+    "'Separate the parameter' ($b=h(x)$) turns root-counting into reading a graph - often safer than casework on roots."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "System of logarithmic equations",
+    "Properties of logarithms"
+   ],
+   "level": 2,
+   "question": "Solve the system of equations: $\\log_ax\\cdot\\log_a(xyz)=48$, $\\log_ay\\cdot\\log_a(xyz)=12$, $\\log_az\\cdot\\log_a(xyz)=84$, where $a>0$, $a\\ne1$.",
+   "answer": "$(x,y,z)=(a^4,a,a^7)$ or $\\left(\\dfrac1{a^4},\\dfrac1a,\\dfrac1{a^7}\\right)$",
+   "key_idea": "Divide the equations in pairs to get $x,y$ as powers of $z$, then solve for $\\log_az$.",
+   "solution": [
+    "Label: $\\log_ax\\cdot\\log_a(xyz)=48\\ \\dots(1)$, $\\log_ay\\cdot\\log_a(xyz)=12\\ \\dots(2)$, $\\log_az\\cdot\\log_a(xyz)=84\\ \\dots(3)$.",
+    "$(3)\\div(1)$: $\\dfrac{\\log_az}{\\log_ax}=\\dfrac{84}{48}\\Rightarrow\\log_xz=\\dfrac74\\Rightarrow z=x^{7/4}\\Rightarrow x=z^{4/7}$.",
+    "$(3)\\div(2)$: $\\log_yz=\\dfrac{84}{12}=7\\Rightarrow z=y^7\\Rightarrow y=z^{1/7}$.",
+    "Put in $(1)$: $\\log_a z^{4/7}\\cdot\\log_a\\!\\left(z^{4/7}\\cdot z^{1/7}\\cdot z\\right)=48$.",
+    "$\\dfrac47(\\log_az)\\cdot\\dfrac{12}7(\\log_az)=48\\Rightarrow(\\log_az)^2=7^2$, so $\\log_az=\\pm7$ and $z=a^7$ or $a^{-7}$.",
+    "$x=z^{4/7}=\\left(a^7\\right)^{4/7}=a^4$ or $a^{-4}$; $y=z^{1/7}=a$ or $a^{-1}$.",
+    "Solutions: $(a^4,a,a^7)$ or $(a^{-4},a^{-1},a^{-7})$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Add the three equations: the left side collapses to $\\left[\\log_a(xyz)\\right]^2$.",
+     "solution": [
+      "Let $L=\\log_a(xyz)=\\log_ax+\\log_ay+\\log_az$.",
+      "Adding the three equations: $L\\cdot(\\log_ax+\\log_ay+\\log_az)=48+12+84$, i.e. $L^2=144$, so $L=\\pm12$.",
+      "If $L=12$: $\\log_ax=\\dfrac{48}{12}=4$, $\\log_ay=\\dfrac{12}{12}=1$, $\\log_az=\\dfrac{84}{12}=7$, so $(x,y,z)=(a^4,a,a^7)$ (check: $4+1+7=12=L$).",
+      "If $L=-12$: $\\log_ax=-4$, $\\log_ay=-1$, $\\log_az=-7$, so $(x,y,z)=(a^{-4},a^{-1},a^{-7})$.",
+      "Same two solutions."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When each equation is $u_i\\,S=c_i$ with $S=\\sum u_i$, add: $S^2=\\sum c_i$; then $u_i=c_i/S$ (two signs of $S$).",
+    "The same trick solves $x(x+y+z)=c_1$, $y(x+y+z)=c_2$, $z(x+y+z)=c_3$.",
+    "Check: $a=2$, $(16,2,128)$: $\\log_2x\\cdot\\log_2(xyz)=4\\cdot12=48$ etc. - all three hold.",
+    "A system symmetric under $x\\to\\frac1x$ (all logs change sign) always has solutions in reciprocal pairs."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Properties of logarithms",
+    "Perfect-square identity for a product of four terms in arithmetic progression"
+   ],
+   "level": 2,
+   "question": "Let $y=\\sqrt{\\log_23\\cdot\\log_212\\cdot\\log_248\\cdot\\log_2192+16}-\\log_212\\cdot\\log_248+10$. Find $y\\in\\mathbb N$.",
+   "answer": "6",
+   "key_idea": "With $x=\\log_23$ the four logs are $x,\\,x+2,\\,x+4,\\,x+6$; pairing outer and inner terms gives $t(t+8)+16=(t+4)^2$.",
+   "solution": [
+    "$\\log_212=\\log_2(2^2\\cdot3)=2+\\log_23$, $\\log_248=\\log_2(2^4\\cdot3)=4+\\log_23$, $\\log_2192=\\log_2(2^6\\cdot3)=6+\\log_23$.",
+    "Put $x=\\log_23$. Then $y=\\sqrt{x(x+2)(x+4)(x+6)+16}-(x+2)(x+4)+10$.",
+    "Pair outer and inner factors: $x(x+6)=x^2+6x$ and $(x+2)(x+4)=x^2+6x+8$, so $y=\\sqrt{(x^2+6x)(x^2+6x+8)+16}-(x^2+6x+8)+10$.",
+    "Put $t=x^2+6x$: $y=\\sqrt{t(t+8)+16}-(t+8)+10$.",
+    "$t(t+8)+16=t^2+8t+16=(t+4)^2$, and $t+4>0$ (as $x>0$), so the square root is $t+4$.",
+    "$y=(t+4)-(t+8)+10=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Centre the four terms: $m=x+3$ makes them $m-3,m-1,m+1,m+3$, so the product is $(m^2-9)(m^2-1)$.",
+     "solution": [
+      "With $x=\\log_23$ the four logs are $x,x+2,x+4,x+6$; let $m=x+3$, so they are $m-3,\\ m-1,\\ m+1,\\ m+3$.",
+      "Product $=(m^2-9)(m^2-1)=m^4-10m^2+9$; adding $16$ gives $m^4-10m^2+25=(m^2-5)^2$.",
+      "Since $m=\\log_23+3>3$, $m^2-5>0$, so $\\sqrt{\\ \\cdot\\ }=m^2-5$.",
+      "$\\log_212\\cdot\\log_248=(x+2)(x+4)=(m-1)(m+1)=m^2-1$.",
+      "$y=(m^2-5)-(m^2-1)+10=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a(a+d)(a+2d)(a+3d)+d^4=\\left(a^2+3ad+d^2\\right)^2$ - product of four terms in AP plus $d^4$ is a perfect square (here $d=2$, $d^4=16$).",
+    "Centre trick: terms $m\\pm d,\\,m\\pm3d$ give $(m^2-d^2)(m^2-9d^2)$, symmetric and easy to complete into a square.",
+    "$\\log_2(2^k\\cdot3)=k+\\log_23$ - writing each argument as a power of the base times a common factor turns the logs into $x+$const.",
+    "Check: $\\log_23=1.585$; the product term is $1.585\\cdot3.585\\cdot5.585\\cdot7.585$, and the whole expression evaluates to $6$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Discriminant of a quadratic and condition for distinct real roots",
+    "Quadratic positive for all real values of a parameter"
+   ],
+   "level": 1,
+   "question": "Find $a$ for which the equation $x^2+(a-b)x+(1-a-b)=0$ has two distinct and unequal roots for $\\forall\\,b\\in\\mathbb R$.",
+   "answer": "$a>1$",
+   "key_idea": "Distinct real roots needs $D>0$; this $D$ is itself a quadratic in $b$ that must be positive for every $b$ ($D_b<0$).",
+   "solution": [
+    "Distinct real roots need $D>0$.",
+    "$D=(a-b)^2-4(1-a-b)>0\\Rightarrow a^2+b^2-2ab-4+4a+4b>0$.",
+    "As a quadratic in $b$: $b^2+b(4-2a)+(a^2+4a-4)>0$.",
+    "This must hold for every real $b$, so its discriminant must be negative (leading coefficient $1>0$).",
+    "$(4-2a)^2-4\\cdot1\\cdot(a^2+4a-4)<0\\Rightarrow16+4a^2-16a-4a^2-16a+16<0$.",
+    "$32-32a<0\\Rightarrow a>1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complete the square in $b$ and read off the minimum of the discriminant.",
+     "solution": [
+      "$D(b)=(a-b)^2-4(1-a-b)=b^2+(4-2a)b+a^2+4a-4$.",
+      "Complete the square: $D(b)=(b+2-a)^2+\\left[a^2+4a-4-(2-a)^2\\right]=(b+2-a)^2+8a-8$.",
+      "The minimum value of $D$ over all real $b$ is $8a-8$ (attained at $b=a-2$).",
+      "$D>0$ for every $b$ $\\iff$ $8a-8>0\\iff a>1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "'Condition holds for all $b$' for an expression quadratic in $b$ with positive leading coefficient $\\iff$ its discriminant in $b$ is negative (equivalently, its minimum is positive).",
+    "A quadratic with parameters can be viewed as a quadratic in either variable - choose the one the question quantifies over.",
+    "Minimum of $b^2+pb+q$ is $q-\\frac{p^2}4$ - 'complete the square' gives the answer in one line.",
+    "Check: $a=2$ gives $D=(b)^2+\\ldots=(b)^2+8>0$; $a=1$ gives $D=(b+1)^2\\ge0$, zero at $b=-1$ (repeated root), so $a=1$ is excluded."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Location of roots: sign change of a quadratic (intermediate value property)"
+   ],
+   "level": 3,
+   "question": "Let $a,b,c$ be real numbers, $a\\ne0$. If $\\alpha$ is a root of $a^2x^2+bx+c=0$, $\\beta$ is a root of $a^2x^2-bx-c=0$ and $0<\\alpha<\\beta$, then show that the equation $a^2x^2+2bx+2c=0$ has a root $\\gamma$ that always satisfies $\\alpha<\\gamma<\\beta$.",
+   "answer": "Proved: $f(\\alpha)<0<f(\\beta)$ for $f(x)=a^2x^2+2bx+2c$, so a root $\\gamma$ lies in $(\\alpha,\\beta)$",
+   "key_idea": "Evaluate $f(x)=a^2x^2+2bx+2c$ at $\\alpha$ and $\\beta$ using the two given relations; opposite signs trap a root between them.",
+   "solution": [
+    "$\\alpha$ is a root of $a^2x^2+bx+c=0$: $a^2\\alpha^2+b\\alpha+c=0\\Rightarrow b\\alpha+c=-a^2\\alpha^2\\ \\dots(1)$.",
+    "$\\beta$ is a root of $a^2x^2-bx-c=0$: $a^2\\beta^2-b\\beta-c=0\\Rightarrow a^2\\beta^2=b\\beta+c\\ \\dots(2)$.",
+    "Let $f(x)=a^2x^2+2bx+2c$.",
+    "$f(\\alpha)=a^2\\alpha^2+2(b\\alpha+c)=a^2\\alpha^2-2a^2\\alpha^2=-a^2\\alpha^2<0$ (using (1); $a\\ne0,\\ \\alpha>0$).",
+    "$f(\\beta)=a^2\\beta^2+2(b\\beta+c)=a^2\\beta^2+2a^2\\beta^2=3a^2\\beta^2>0$ (using (2)).",
+    "$f$ is continuous with $f(\\alpha)<0<f(\\beta)$, so $f(\\gamma)=0$ for some $\\gamma\\in(\\alpha,\\beta)$.",
+    "Hence $a^2x^2+2bx+2c=0$ has a root $\\gamma$ with $\\alpha<\\gamma<\\beta$ - always."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "To show a root lies in $(p,q)$: show $f(p)f(q)<0$ (intermediate value theorem for continuous $f$).",
+    "Build $f$ as a combination of the given equations: here $f=2P-a^2x^2$ with $P=a^2x^2+bx+c$, and $f=3a^2x^2-2Q$ with $Q=a^2x^2-bx-c$ - so $f(\\alpha)=-a^2\\alpha^2$ and $f(\\beta)=3a^2\\beta^2$.",
+    "The same pattern: if $\\alpha$ is a root of $P$ and $\\beta$ a root of $Q$, test the combination $\\lambda P+\\mu Q$ at $\\alpha$ and $\\beta$ ('sign trapping').",
+    "Check: $a=1,b=-3,c=2$ gives $\\alpha=1$ ($x^2-3x+2$ has roots $1,2$) and, from $x^2+3x-2$, $\\beta=\\frac{-3+\\sqrt{17}}2$; for this triple $\\beta<\\alpha$, so the hypothesis $\\alpha<\\beta$ fails - the sign relations (1),(2) are what the proof uses, and the hypothesis $0<\\alpha<\\beta$ fixes the order of the two points."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Formation of a quadratic equation with transformed roots",
+    "Trigonometric simplification"
+   ],
+   "level": 2,
+   "question": "If $\\alpha,\\beta$ are the roots of the equation $(\\tan^2135^\\circ)x^2-(\\operatorname{cosec}10^\\circ-\\sqrt3\\sec10^\\circ)x+\\tan^2240^\\circ=0$, then find the quadratic equation whose roots are $(2\\alpha+\\beta)$ and $(\\alpha+2\\beta)$.",
+   "answer": "$x^2-12x+35=0$",
+   "key_idea": "$2\\alpha+\\beta=(\\alpha+\\beta)+\\alpha$: once $\\alpha+\\beta=4$ is known, the new roots are $4+\\alpha$ and $4+\\beta$ - a shift of the original equation.",
+   "solution": [
+    "$\\tan^2135^\\circ=1$ and $\\tan^2240^\\circ=\\tan^260^\\circ=3$.",
+    "$\\operatorname{cosec}10^\\circ-\\sqrt3\\sec10^\\circ=\\dfrac{\\cos10^\\circ-\\sqrt3\\sin10^\\circ}{\\sin10^\\circ\\cos10^\\circ}=\\dfrac{2\\cos70^\\circ}{\\tfrac12\\sin20^\\circ}=\\dfrac{2\\sin20^\\circ}{\\tfrac12\\sin20^\\circ}=4$.",
+    "So the equation is $x^2-4x+3=0$: $\\alpha+\\beta=\\dfrac{\\operatorname{cosec}10^\\circ-\\sqrt3\\sec10^\\circ}{\\tan^2135^\\circ}=4$ (and $\\alpha\\beta=3$).",
+    "New roots: $2\\alpha+\\beta=(\\alpha+\\beta)+\\alpha=4+\\alpha$ and $\\alpha+2\\beta=4+\\beta$.",
+    "If $y=4+x$ with $x$ a root of the original equation, then $x=y-4$.",
+    "Substitute: $(y-4)^2-4(y-4)+3=0$.",
+    "$y^2-8y+16-4y+16+3=0\\Rightarrow y^2-12y+35=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the sum and product of the new roots directly (Vieta) instead of substituting $x=y-4$.",
+     "solution": [
+      "From $x^2-4x+3=0$: $\\alpha+\\beta=4$, $\\alpha\\beta=3$ (so $\\alpha,\\beta=1,3$).",
+      "New roots $4+\\alpha$ and $4+\\beta$: sum $=8+(\\alpha+\\beta)=12$.",
+      "Product $=16+4(\\alpha+\\beta)+\\alpha\\beta=16+16+3=35$.",
+      "Equation: $x^2-(\\text{sum})x+\\text{product}=x^2-12x+35=0$ (roots $5$ and $7$, i.e. $2\\cdot1+3$ and $1+2\\cdot3$ - check)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos\\theta-\\sqrt3\\sin\\theta=2\\cos(\\theta+60^\\circ)$ and $\\sin10^\\circ\\cos10^\\circ=\\tfrac12\\sin20^\\circ$ turn $\\operatorname{cosec}10^\\circ-\\sqrt3\\sec10^\\circ$ into $4$ - a standard value worth remembering.",
+    "$a\\cos\\theta+b\\sin\\theta=\\sqrt{a^2+b^2}\\cos(\\theta-\\phi)$ - convert before simplifying.",
+    "If roots of a quadratic are shifted by $k$ (new roots $\\alpha+k$), replace $x$ by $x-k$; if scaled by $k$, replace $x$ by $\\frac xk$.",
+    "$2\\alpha+\\beta=(\\alpha+\\beta)+\\alpha$: a symmetric sum $\\alpha+\\beta$ plus one root is a shifted root."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Logarithmic equation to a quadratic equation",
+    "Roots of a quadratic with integer coefficients and divisibility conditions"
+   ],
+   "level": 3,
+   "question": "Let $x=\\dfrac13$ or $x=-15$ satisfy the equation $\\log_8(kx^2+wx+f)=2$. If $k,w$ and $f$ are relatively prime positive integers, then find the value of $k+w+f$.",
+   "answer": "96",
+   "key_idea": "$\\log_8(\\cdot)=2$ means $kx^2+wx+f=64$ with roots $\\frac13,-15$; Vieta gives $w=\\frac{44k}3$ and $f=64-5k$, then test the integer cases.",
+   "solution": [
+    "$\\log_8(kx^2+wx+f)=2\\Rightarrow kx^2+wx+f=64$, i.e. $kx^2+wx+(f-64)=0$ has the roots $\\dfrac13$ and $-15$.",
+    "Sum of roots: $\\dfrac13-15=-\\dfrac{44}3=-\\dfrac wk\\Rightarrow3w=44k\\Rightarrow w=\\dfrac{44k}3$.",
+    "Product of roots: $\\dfrac13\\cdot(-15)=-5=\\dfrac{f-64}k\\Rightarrow f=64-5k$.",
+    "$w$ is an integer only if $3\\mid k$; $f>0$ needs $k\\le12$. So $k=3,6,9,12$.",
+    "$k=3$: $w=44$, $f=64-15=49$. $\\gcd(3,44,49)=1$ (pairwise coprime).",
+    "$k=6$: $w=88$, $f=34$ - common factor $2$. Rejected.",
+    "$k=9$: $w=132$, $f=19$ - $\\gcd(9,132)=3$, so $k,w$ are not relatively prime. Rejected.",
+    "$k=12$: $w=176$, $f=4$ - common factor $4$. Rejected.",
+    "Hence $k=3,\\ w=44,\\ f=49$ and $k+w+f=3+44+49=96$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF tests only the pair (k, w) for common factors and never computes f for k = 6, 9, 12; it also silently reads 'relatively prime' as pairwise coprime. Completed: f = 34, 19, 4 for k = 6, 9, 12 and noted that k = 9 fails because gcd(9,132) = 3. If 'relatively prime' meant only gcd(k,w,f) = 1, then k = 9 (9,132,19) would also qualify and give 160; the key's 96 corresponds to the pairwise reading.",
+   "alternate_solutions": [
+    {
+     "idea": "Write $kx^2+wx+f-64$ in factored form $\\frac k3(3x-1)(x+15)$ and read $w,f$ off the expansion.",
+     "solution": [
+      "The roots are $\\dfrac13$ and $-15$, so $kx^2+wx+f-64=\\dfrac k3(3x-1)(x+15)=\\dfrac k3\\left(3x^2+44x-15\\right)$.",
+      "Comparing coefficients: $w=\\dfrac{44k}3$ and $f-64=-5k$.",
+      "Integers: $k=3j$, giving $(k,w,f)=(3j,\\,44j,\\,64-15j)$, $j=1,2,3,4$ (for $f>0$).",
+      "Pairwise coprime needs $j$ odd and $\\gcd(3j,44j)=j=1$ - only $j=1$: $(3,44,49)$.",
+      "Sum $=96$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\log_ab=c\\iff b=a^c$: convert to a polynomial equation at once ($\\log_8(\\cdot)=2\\Rightarrow(\\cdot)=64$).",
+    "Given the roots $r_1,r_2$ of $Ax^2+Bx+C=0$: $B=-A(r_1+r_2)$ and $C=Ar_1r_2$; integrality of coefficients forces $A$ to clear denominators of the roots.",
+    "A quadratic with roots $\\frac pq,\\frac rs$ (lowest terms) is $\\lambda(qx-p)(sx-r)$ with $\\lambda$ any constant.",
+    "State the meaning of 'relatively prime' being used: pairwise (as here) is stronger than $\\gcd(k,w,f)=1$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Relations between roots and coefficients of quadratic equations",
+    "Roots of one equation satisfying another (elimination)"
+   ],
+   "level": 3,
+   "question": "If the roots of the equation $x^2-10cx-11d=0$ are $a,b$ and those of $x^2-10ax-11b=0$ are $c,d$, then find the value of $a+b+c+d$. ($a,b,c,d$ are distinct numbers)",
+   "answer": "1210",
+   "key_idea": "Use that $a$ and $c$ satisfy their own equations; subtracting the two gives $(a-c)(a+c-121)=0$.",
+   "solution": [
+    "From $x^2-10cx-11d=0$ (roots $a,b$): $a+b=10c\\ \\dots(1)$ and $a$ satisfies $a^2-10ca-11d=0\\ \\dots(3)$.",
+    "From $x^2-10ax-11b=0$ (roots $c,d$): $c+d=10a\\ \\dots(2)$ and $c$ satisfies $c^2-10ca-11b=0\\ \\dots(4)$.",
+    "$(1)-(2)$: $a+b-c-d=10c-10a\\Rightarrow b-d=10c-10a+c-a=11(c-a)$.",
+    "$(1)+(2)$: $a+b+c+d=10(a+c)$.",
+    "$(3)-(4)$: $a^2-c^2-11d+11b=0\\Rightarrow(a-c)(a+c)=-11(b-d)$.",
+    "Using $b-d=11(c-a)$: $(a-c)(a+c)=-121(c-a)=121(a-c)$.",
+    "$a\\ne c$ (distinct), so $a+c=121$.",
+    "$a+b+c+d=10\\times121=1210$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If $r$ is a root of $x^2+px+q=0$, then $r^2+pr+q=0$ - use it for each root to create extra equations (not only Vieta).",
+    "Subtracting two such 'root-satisfies-equation' relations produces a factor $(a-c)$ that distinctness lets you cancel.",
+    "The system is solvable: $a=\\frac{121-33\\sqrt{13}}2$, $c=\\frac{121+33\\sqrt{13}}2$, giving $b,d$ distinct real numbers and total $1210$ (verified numerically).",
+    "Sum of all four roots $=10(a+c)$, so only $a+c$ is needed - find the needed combination, not each variable."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Cubic equations: relations between roots and coefficients"
+   ],
+   "level": 1,
+   "paragraph": "Consider the cubic equation $x^3-(1+\\cos\\theta+\\sin\\theta)x^2+(\\cos\\theta\\sin\\theta+\\cos\\theta+\\sin\\theta)x-\\sin\\theta\\cos\\theta=0$ whose roots are $x_1,x_2$ and $x_3$.",
+   "question": "The value of $x_1^2+x_2^2+x_3^2$ equals:",
+   "options": [
+    "$2\\cos\\theta$",
+    "$\\sin\\theta(\\sin\\theta+\\cos\\theta)$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": "(D) $2$",
+   "key_idea": "$\\sum x_i^2=(\\sum x_i)^2-2\\sum x_ix_j$, and both sums are read from the coefficients.",
+   "solution": [
+    "$S_1=x_1+x_2+x_3=1+\\cos\\theta+\\sin\\theta$.",
+    "$S_2=\\sum x_1x_2=\\cos\\theta\\sin\\theta+\\cos\\theta+\\sin\\theta$.",
+    "$S_3=x_1x_2x_3=\\sin\\theta\\cos\\theta$.",
+    "$x_1^2+x_2^2+x_3^2=(x_1+x_2+x_3)^2-2\\sum x_1x_2=(1+\\cos\\theta+\\sin\\theta)^2-2(\\cos\\theta\\sin\\theta+\\cos\\theta+\\sin\\theta)$.",
+    "Expand: $1+\\cos^2\\theta+\\sin^2\\theta+2\\cos\\theta+2\\sin\\theta+2\\cos\\theta\\sin\\theta-2\\cos\\theta\\sin\\theta-2\\cos\\theta-2\\sin\\theta$.",
+    "$=1+1=2$. Option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factorise the cubic first (see Q15): the roots are $1,\\cos\\theta,\\sin\\theta$, so the sum of squares is read off directly.",
+     "solution": [
+      "Group the cubic: $(x-1)(x-\\cos\\theta)(x-\\sin\\theta)$ expands to the given polynomial, so the roots are $1,\\cos\\theta,\\sin\\theta$.",
+      "$x_1^2+x_2^2+x_3^2=1+\\cos^2\\theta+\\sin^2\\theta=2$.",
+      "Same answer, (D) - no expansion of $(1+\\cos\\theta+\\sin\\theta)^2$ needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum x_i^2=S_1^2-2S_2$ for a cubic with roots $x_i$.",
+    "A cubic of the form $(x-1)(x-p)(x-q)$ has $S_1=1+p+q$, $S_2=pq+p+q$, $S_3=pq$ - recognise this pattern in the coefficients.",
+    "Check: $\\theta=0$: roots $1,1,0$, sum of squares $2$ ✓.",
+    "$\\sum x_i^3=S_1^3-3S_1S_2+3S_3$ is the analogous formula for cubes."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Cubic equations: factorisation and equal roots",
+    "Trigonometric equations"
+   ],
+   "level": 2,
+   "paragraph": "Consider the cubic equation $x^3-(1+\\cos\\theta+\\sin\\theta)x^2+(\\cos\\theta\\sin\\theta+\\cos\\theta+\\sin\\theta)x-\\sin\\theta\\cos\\theta=0$ whose roots are $x_1,x_2$ and $x_3$.",
+   "question": "The number of values of $\\theta$ in $[0,2\\pi]$ for which at least two roots are equal is:",
+   "options": [
+    "6",
+    "5",
+    "4",
+    "3"
+   ],
+   "answer": "(B) $5$",
+   "key_idea": "The cubic factorises as $(x-1)(x-\\cos\\theta)(x-\\sin\\theta)$, so equal roots mean $\\sin\\theta=1$, $\\cos\\theta=1$ or $\\sin\\theta=\\cos\\theta$.",
+   "solution": [
+    "Rewrite: $x^3-x^2-x^2(\\cos\\theta+\\sin\\theta)+x(\\cos\\theta+\\sin\\theta)+x\\cos\\theta\\sin\\theta-\\sin\\theta\\cos\\theta=0$.",
+    "Group: $x^2(x-1)-x(\\cos\\theta+\\sin\\theta)(x-1)+(x-1)\\sin\\theta\\cos\\theta=0$.",
+    "$(x-1)\\left[x^2-x(\\cos\\theta+\\sin\\theta)+\\sin\\theta\\cos\\theta\\right]=0\\Rightarrow(x-1)(x-\\cos\\theta)(x-\\sin\\theta)=0$.",
+    "Roots: $x=1,\\ \\cos\\theta,\\ \\sin\\theta$.",
+    "At least two roots equal: $\\sin\\theta=1$ or $\\cos\\theta=1$ or $\\sin\\theta=\\cos\\theta$.",
+    "In $[0,2\\pi]$: $\\sin\\theta=1\\Rightarrow\\theta=\\dfrac\\pi2$; $\\cos\\theta=1\\Rightarrow\\theta=0,2\\pi$; $\\sin\\theta=\\cos\\theta\\Rightarrow\\theta=\\dfrac\\pi4,\\dfrac{5\\pi}4$.",
+    "$\\sin\\theta=\\cos\\theta=1$ together is impossible, so no value is counted twice.",
+    "Total number of values $=1+2+2=5$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Geometric view: the point $(\\cos\\theta,\\sin\\theta)$ on the unit circle must lie on one of the lines $x=1$, $y=1$, $y=x$.",
+     "solution": [
+      "Roots $1,\\cos\\theta,\\sin\\theta$ ($x_1=1$ fixed): equality of two roots means $\\cos\\theta=1$, $\\sin\\theta=1$ or $\\cos\\theta=\\sin\\theta$.",
+      "Count intersections of the unit circle $X^2+Y^2=1$ (with $X=\\cos\\theta,Y=\\sin\\theta$) with each line.",
+      "$X=1$: tangent at $(1,0)$, i.e. $\\theta=0$ and $2\\pi$ (the same point, two parameter values in $[0,2\\pi]$) - $2$ values.",
+      "$Y=1$: tangent at $(0,1)$, $\\theta=\\dfrac\\pi2$ - $1$ value.",
+      "$Y=X$: meets the circle at $\\left(\\pm\\dfrac1{\\sqrt2},\\pm\\dfrac1{\\sqrt2}\\right)$, i.e. $\\theta=\\dfrac\\pi4,\\dfrac{5\\pi}4$ - $2$ values.",
+      "No overlaps (the three lines meet the circle at different points), so the total is $5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A cubic with $S_1=1+p+q$, $S_2=pq+p+q$, $S_3=pq$ factorises as $(x-1)(x-p)(x-q)$.",
+    "Count $\\theta\\in[0,2\\pi]$ (closed): both $0$ and $2\\pi$ are solutions of $\\cos\\theta=1$; in $[0,2\\pi)$ it would be one.",
+    "Always check overlaps between cases (here $\\sin\\theta=\\cos\\theta=1$ has no solution).",
+    "$\\sin\\theta=\\cos\\theta\\iff\\tan\\theta=1$ (when $\\cos\\theta\\ne0$) $\\iff\\theta=\\frac\\pi4+n\\pi$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Cubic equations: factorisation and roots",
+    "Range of trigonometric expressions"
+   ],
+   "level": 2,
+   "paragraph": "Consider the cubic equation $x^3-(1+\\cos\\theta+\\sin\\theta)x^2+(\\cos\\theta\\sin\\theta+\\cos\\theta+\\sin\\theta)x-\\sin\\theta\\cos\\theta=0$ whose roots are $x_1,x_2$ and $x_3$.",
+   "question": "The greatest possible difference between two of the roots, if $\\theta\\in[0,2\\pi]$, is:",
+   "options": [
+    "$2$",
+    "$1$",
+    "$\\sqrt2$",
+    "$2\\sqrt2$"
+   ],
+   "answer": "(A) $2$",
+   "key_idea": "The roots are $1,\\cos\\theta,\\sin\\theta$, all inside $[-1,1]$, so no difference can exceed $2$, and $2$ is attained.",
+   "solution": [
+    "The roots are $1,\\ \\cos\\theta,\\ \\sin\\theta$ (from the factorisation in the previous question).",
+    "Difference of $\\sin\\theta$ and $\\cos\\theta$: $d_1=|\\sin\\theta-\\cos\\theta|=\\left|\\sqrt2\\sin\\left(\\theta-\\tfrac\\pi4\\right)\\right|\\le\\sqrt2$.",
+    "Difference of $1$ and $\\sin\\theta$: $d_2=|1-\\sin\\theta|\\le2$, with equality at $\\sin\\theta=-1$.",
+    "Difference of $1$ and $\\cos\\theta$: $d_3=|1-\\cos\\theta|\\le2$, with equality at $\\cos\\theta=-1$.",
+    "The greatest of these is $\\max d_2=\\max d_3=2$ (greater than $\\sqrt2$). Option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "All three roots lie in $[-1,1]$, so any difference is at most the length of that interval; exhibit a $\\theta$ achieving it.",
+     "solution": [
+      "Roots $1,\\cos\\theta,\\sin\\theta\\in[-1,1]$, so the difference of any two is at most $1-(-1)=2$.",
+      "For $\\theta=\\dfrac{3\\pi}2$: the roots are $1,0,-1$, and the difference between $1$ and $-1$ is exactly $2$.",
+      "Hence the greatest possible difference is $2$ - option (A), with no need to compute the three differences separately."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A bounding argument plus one example (an extremal case) often beats optimising several expressions.",
+    "$a\\sin\\theta+b\\cos\\theta$ ranges over $\\left[-\\sqrt{a^2+b^2},\\sqrt{a^2+b^2}\\right]$; here $\\sin\\theta-\\cos\\theta$ is in $[-\\sqrt2,\\sqrt2]$.",
+    "Check: $\\theta=\\frac\\pi2$: roots $1,0,1$ - difference $1$; $\\theta=\\frac{3\\pi}2$: roots $1,0,-1$ - difference $2$ (the maximum).",
+    "Set of values of the roots $\\{1,\\cos\\theta,\\sin\\theta\\}$ always includes $1$, the top of $[-1,1]$, so the largest spread is $1-\\min(\\cos\\theta,\\sin\\theta)\\le2$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Trigonometric equations and half-angle tangent",
+    "Quadratic inequalities and sign of a quadratic for all $x$",
+    "Logarithms: equations with variable base"
+   ],
+   "level": 3,
+   "question": "Match the following columns.\nColumn-I: (A) If $\\alpha,\\beta\\in(0,\\pi)$, $\\alpha\\ne\\beta$ satisfy $\\dfrac{1-\\cos2\\theta}{\\sin\\theta}=\\dfrac12$, then $\\tan\\dfrac\\alpha2+\\tan\\dfrac\\beta2$ is equal to. (B) If $\\dfrac{x^2+(2m+3)x+(m^2+3)}{\\sqrt{x^2+(2m+1)x+m^2+2}}$ is non-negative $\\forall x\\in\\mathbb R$, then the possible values of $m$ can be equal to. (C) If the parabola $y=5x^2+x-3$ lies above the parabola $y=2x^2+6x-1$, then integral values of $x$ can be equal to. (D) The number of real solutions of $x^{2\\log_x(x+3)}=16$ is equal to.\nColumn-II: (P) $0$  (Q) $8$  (R) $1$  (S) $-1$  (T) $2$",
+   "options": [
+    "A-P,S; B-Q; C-Q,S; D-P",
+    "A-P; B-Q,S; C-Q; D-P,S",
+    "A-Q; B-P,S; C-Q,S; D-P",
+    "A-P; B-Q,S; C-P,S; D-Q"
+   ],
+   "answer": "(C) A-Q; B-P,S; C-Q,S; D-P",
+   "key_idea": "Solve each part separately: $\\sin\\theta=\\frac14$ gives $\\tan\\frac\\alpha2+\\tan\\frac\\beta2=8$ as a root sum; the other parts reduce to quadratic conditions.",
+   "solution": [
+    "(A) $\\dfrac{1-\\cos2\\theta}{\\sin\\theta}=\\dfrac{2\\sin^2\\theta}{\\sin\\theta}=2\\sin\\theta=\\dfrac12\\Rightarrow\\sin\\theta=\\dfrac14$.",
+    "With $t=\\tan\\dfrac\\theta2$: $\\dfrac{2t}{1+t^2}=\\dfrac14\\Rightarrow t^2-8t+1=0$; its two roots are $\\tan\\dfrac\\alpha2$ and $\\tan\\dfrac\\beta2$ (since $\\alpha\\ne\\beta$ in $(0,\\pi)$).",
+    "Sum of roots $=8$: $\\tan\\dfrac\\alpha2+\\tan\\dfrac\\beta2=8$. (A) $\\to$ Q.",
+    "(B) Numerator $x^2+(2m+3)x+(m^2+3)\\ge0$ for all $x$: $D\\le0\\Rightarrow(2m+3)^2-4(m^2+3)\\le0\\Rightarrow12m-3\\le0\\Rightarrow m\\le\\dfrac14$.",
+    "Denominator must be defined and positive: $x^2+(2m+1)x+m^2+2>0$ for all $x$: $D<0\\Rightarrow(2m+1)^2-4(m^2+2)<0\\Rightarrow4m-7<0\\Rightarrow m<\\dfrac74$.",
+    "Combined: $m\\in\\left(-\\infty,\\dfrac14\\right]$. From Column-II the possible values are $0$ and $-1$. (B) $\\to$ P, S.",
+    "(C) $5x^2+x-3>2x^2+6x-1\\Rightarrow3x^2-5x-2>0\\Rightarrow(3x+1)(x-2)>0\\Rightarrow x\\in\\left(-\\infty,-\\dfrac13\\right)\\cup(2,\\infty)$.",
+    "Integer values among Column-II: $x=-1$ and $x=8$ lie in this set; $0,1,2$ do not. (C) $\\to$ Q, S.",
+    "(D) For $x>0,\\ x\\ne1$: $x^{2\\log_x(x+3)}=(x+3)^2=16\\Rightarrow x^2+6x-7=0\\Rightarrow x=1,-7$.",
+    "Both are rejected ($x=1$ is not allowed as a base; $x=-7<0$), so the number of real solutions is $0$. (D) $\\to$ P.",
+    "Hence A-Q; B-P,S; C-Q,S; D-P - option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Different tool in each part: $\\tan x+\\cot x=\\frac2{\\sin2x}$ for (A), completing squares for (B), testing the Column-II values for (C), and monotonicity for (D).",
+     "solution": [
+      "(A) $\\sin\\theta=\\dfrac14$. Since $\\alpha\\ne\\beta$ in $(0,\\pi)$ with the same sine, $\\beta=\\pi-\\alpha$, so $\\tan\\dfrac\\beta2=\\cot\\dfrac\\alpha2$.",
+      "$\\tan\\dfrac\\alpha2+\\cot\\dfrac\\alpha2=\\dfrac2{\\sin\\alpha}=\\dfrac2{1/4}=8$. (A) $\\to$ Q.",
+      "(B) Numerator: $\\left(x+m+\\tfrac32\\right)^2+\\tfrac34-3m\\ge0\\ \\forall x\\iff m\\le\\tfrac14$. Denominator: $\\left(x+m+\\tfrac12\\right)^2+\\tfrac74-m>0\\ \\forall x\\iff m<\\tfrac74$. So $m\\le\\tfrac14$: of $0,8,1,-1,2$ only $0$ and $-1$. (B) $\\to$ P, S.",
+      "(C) Test directly: $x=-1$: $5-1-3=1>-5=2-6-1$ ✓; $x=8$: $325>$ $2\\cdot64+48-1=175$ ✓; $x=0$: $-3>-1$ ✗; $x=1$: $3>7$ ✗; $x=2$: $19>19$ ✗. (C) $\\to$ Q, S.",
+      "(D) For $x>0,x\\ne1$: $(x+3)^2$ is strictly increasing and equals $16$ only at $x=1$, which is excluded; so no solution. (D) $\\to$ P.",
+      "Same matching: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\dfrac{1-\\cos2\\theta}{\\sin\\theta}=2\\sin\\theta$ and $\\sin\\theta=\\dfrac{2t}{1+t^2}$ with $t=\\tan\\dfrac\\theta2$: two angles $\\alpha,\\beta$ with the same $\\sin$ give the two roots of a quadratic in $t$ (sum/product via Vieta).",
+    "$\\tan x+\\cot x=\\dfrac2{\\sin2x}$.",
+    "$\\dfrac{P(x)}{\\sqrt{Q(x)}}\\ge0\\ \\forall x$: need $Q>0$ always ($D<0$) and $P\\ge0$ always ($D\\le0$).",
+    "$a^{\\log_ab}=b$ valid only for $a>0,a\\ne1,b>0$ - $x^{2\\log_x(x+3)}=(x+3)^2$ needs $x>0$, $x\\ne1$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Properties of logarithms",
+    "Logarithmic equations"
+   ],
+   "level": 3,
+   "question": "Match the following columns.\nColumn-I: (A) The expression $x^{\\ln y-\\ln z}\\cdot y^{\\ln z-\\ln x}\\cdot z^{\\ln x-\\ln y}$ when simplified reduces to. (B) Let $p=\\log_5\\log_5(3)$. If $3^{C+5^{-p}}=45$, the value of $C$ equals. (C) The real value of $x$ for which $\\log_69-\\log_927+\\log_8x=\\log_{64}x-\\log_64$ holds true is. (D) $\\dfrac12\\log_{\\sqrt5}\\sin\\dfrac\\pi5\\cdot\\log_{\\sqrt{\\sin\\frac\\pi5}}5$ simplifies to.\nColumn-II: (P) $\\dfrac18$  (Q) $\\dfrac14$  (R) $\\dfrac12$  (S) $1$  (T) $2$",
+   "options": [
+    "A-S; B-T; C-P; D-T",
+    "A-T; B-S; C-P; D-T",
+    "A-P; B-T; C-T; D-S",
+    "A-T; B-P; C-T; D-S"
+   ],
+   "answer": "(A) A-S; B-T; C-P; D-T",
+   "key_idea": "Take logarithms in (A) so the exponents cancel cyclically; in (B) and (D) use $\\log_ab\\cdot\\log_ba=1$ and $a^{\\log_ab}=b$.",
+   "solution": [
+    "(A) Let $P=x^{\\ln y-\\ln z}\\,y^{\\ln z-\\ln x}\\,z^{\\ln x-\\ln y}$. $\\ln P=(\\ln y-\\ln z)\\ln x+(\\ln z-\\ln x)\\ln y+(\\ln x-\\ln y)\\ln z$.",
+    "Expand: $\\ln x\\ln y-\\ln z\\ln x+\\ln y\\ln z-\\ln x\\ln y+\\ln z\\ln x-\\ln y\\ln z=0$, so $\\ln P=0$ and $P=1$. (A) $\\to$ S.",
+    "(B) $p=\\log_5\\log_53$, $3^{C+5^{-p}}=45$. Taking $\\log_3$: $C+5^{-p}=\\log_345$, so $C=\\log_345-5^{-p}$.",
+    "$5^{-p}=5^{-\\log_5\\log_53}=(\\log_53)^{-1}=\\log_35$.",
+    "$C=\\log_345-\\log_35=\\log_3\\dfrac{45}5=\\log_39=2$. (B) $\\to$ T.",
+    "(C) $\\log_69+\\log_64-\\log_927+\\log_8x-\\log_{64}x=0$, i.e. $\\log_636-\\dfrac32+\\log_8x-\\dfrac12\\log_8x=0$.",
+    "$2-\\dfrac32+\\dfrac12\\log_8x=0\\Rightarrow\\dfrac12\\log_8x=-\\dfrac12\\Rightarrow\\log_8x=-1\\Rightarrow x=\\dfrac18$. (C) $\\to$ P.",
+    "(D) $\\log_{\\sqrt5}\\sin\\dfrac\\pi5=2\\log_5\\sin\\dfrac\\pi5$ and $\\log_{\\sqrt{\\sin\\pi/5}}5=2\\log_{\\sin\\pi/5}5$.",
+    "Expression $=\\dfrac12\\cdot2\\log_5\\sin\\dfrac\\pi5\\cdot2\\log_{\\sin\\pi/5}5=2\\times1=2$ (as $\\log_ab\\cdot\\log_ba=1$). (D) $\\to$ T.",
+    "So A-S; B-T; C-P; D-T, which is option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "(B) and (C) by exponent/base tricks: $3^{\\log_35}=5$ in (B) and $\\log_8x=2\\log_{64}x$ in (C).",
+     "solution": [
+      "(B) $5^{p}=\\log_53$, so $5^{-p}=\\dfrac1{\\log_53}=\\log_35$. Then $3^{C+\\log_35}=3^C\\cdot3^{\\log_35}=5\\cdot3^C=45$, so $3^C=9$ and $C=2$.",
+      "(C) $\\log_8x=\\dfrac{\\ln x}{3\\ln2}=2\\cdot\\dfrac{\\ln x}{6\\ln2}=2\\log_{64}x$. The equation becomes $\\log_69+\\log_64-\\log_927+2\\log_{64}x-\\log_{64}x=0$.",
+      "$\\log_636-\\dfrac32+\\log_{64}x=0\\Rightarrow\\log_{64}x=-\\dfrac12\\Rightarrow x=64^{-1/2}=\\dfrac18$.",
+      "Same results as the main solution: (B) $\\to$ T, (C) $\\to$ P (parts (A) and (D) have no shorter route than the one above)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a^{\\ln b-\\ln c}b^{\\ln c-\\ln a}c^{\\ln a-\\ln b}=1$ - cyclic exponent patterns cancel after taking logs; each term is of the form $e^{\\ln a\\,(\\ln b-\\ln c)}$.",
+    "$a^{\\log_ab}=b$ and $\\log_ab\\cdot\\log_ba=1$; $\\log_{a^m}b^n=\\frac nm\\log_ab$.",
+    "$\\log_ab\\cdot\\log_bc\\cdot\\log_ca=1$ (chain of change of base).",
+    "Convert all logs to a common base (here $2$, $3$ or $6$) before summing; $\\log_{64}x=\\frac12\\log_8x$ since $64=8^2$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Common roots of two equations",
+    "Logarithmic equations with parameter-free roots",
+    "Number of real roots of an equation"
+   ],
+   "level": 3,
+   "question": "Match the following columns.\nColumn-I: A. If the equation $x^2+px+q=0$ ($p,q\\in\\mathbb R$) and $x^3+3x^2+5x+3=0$ have two common roots, then $(p+q)$ is. B. If $f(x)=4x^2+3x-7$ and $\\alpha$ is the common root of $x^2-3x+2=0$ and $x^2+2x-3=0$, then $f(\\alpha)$ is. C. The number of real roots of $\\log_3(x^2+9)+\\log_3(x^4+81)=6$ is. D. The number of real roots of $\\log_x(5x-2)=3$ is.\nColumn-II: P. $1$  Q. $2$  R. $0$  S. $5$",
+   "options": [
+    "A-R; B-S; C-Q; D-P",
+    "A-S; B-R; C-P; D-Q",
+    "A-Q; B-P; C-S; D-R",
+    "A-P; B-Q; C-S; D-R"
+   ],
+   "answer": "(B) A-S; B-R; C-P; D-Q",
+   "key_idea": "A real quadratic sharing two roots with the cubic must share its complex-conjugate pair; the other parts are direct (common root, AM-GM style positivity, domain check).",
+   "solution": [
+    "(A) $x^3+3x^2+5x+3=(x+1)(x^2+2x+3)$; $x^2+2x+3$ has $D=4-12<0$, so its roots are a conjugate pair of imaginary numbers.",
+    "If the real quadratic $x^2+px+q$ had the real root $-1$ as a common root, its other common root would be a complex root whose conjugate would also be a root - three roots, impossible. So the common roots are the imaginary pair.",
+    "Hence $x^2+px+q=x^2+2x+3$, $p=2$, $q=3$, $p+q=5$. (A) $\\to$ S.",
+    "(B) $x^2-3x+2=0\\Rightarrow(x-2)(x-1)=0\\Rightarrow x=1,2$; $x^2+2x-3=0\\Rightarrow(x+3)(x-1)=0\\Rightarrow x=-3,1$. Common root $\\alpha=1$.",
+    "$f(\\alpha)=f(1)=4+3-7=0$. (B) $\\to$ R.",
+    "(C) $\\log_3\\left[(x^2+9)(x^4+81)\\right]=6\\Rightarrow(x^2+9)(x^4+81)=3^6=729$.",
+    "$x^6+9x^4+81x^2+729=729\\Rightarrow x^2\\left(x^4+9x^2+81\\right)=0$.",
+    "$x=0$ is real; $x^4+9x^2+81=0$ (with $t=x^2$: $t^2+9t+81=0$, $D<0$) has no real roots. So there is exactly $1$ real root. (C) $\\to$ P.",
+    "(D) $\\log_x(5x-2)=3$ with $x>0$, $x\\ne1$, $5x-2>0$: $x^3=5x-2\\Rightarrow x^3-5x+2=0\\Rightarrow(x-2)(x^2+2x-1)=0$.",
+    "$x=2$ or $x=-1\\pm\\sqrt2$. Valid: $x=2$ and $x=\\sqrt2-1\\approx0.414$ ($>\\frac25$, so $5x-2>0$, and $\\ne1$); $x=-1-\\sqrt2<0$ is rejected.",
+    "Number of real roots $=2$. (D) $\\to$ Q.",
+    "A-S; B-R; C-P; D-Q: option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Part (D): the PDF factors x^3-5x+2 = (x-2)(x^2+2x-1) correctly but then gives the roots of x^2+2x-1 as -1 -/+ sqrt3; they are -1 +/- sqrt2, so the valid roots are x = 2 and x = sqrt2 - 1 (the PDF's 'Final x = 2, sqrt3 - 1' is wrong, though the count 2 and the match D-Q are unchanged). Part (A): the PDF does not justify why the common roots must be the complex pair; added. Answer (B) unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Different tool per part: polynomial division for (A), subtraction of the two equations for (B), and the bound $(x^2+9)(x^4+81)\\ge729$ (equality only at $0$) for (C).",
+     "solution": [
+      "(A) Let $x^3+3x^2+5x+3=(x^2+px+q)(x+r)$. Comparing: $p+r=3$, $q+pr=5$, $qr=3$.",
+      "$r=3-p$, $q=5-p(3-p)=p^2-3p+5$; then $qr=3\\Rightarrow(p^2-3p+5)(3-p)=3\\Rightarrow p^3-6p^2+14p-12=0\\Rightarrow(p-2)(p^2-4p+6)=0$.",
+      "$p=2$ (the other factor has no real root), $q=4-6+5=3$, $p+q=5$. (A) $\\to$ S.",
+      "(B) Subtract the two quadratics: $(x^2-3x+2)-(x^2+2x-3)=-5x+5=0\\Rightarrow x=1$; $f(1)=0$. (B) $\\to$ R.",
+      "(C) For all real $x$: $x^2+9\\ge9$ and $x^4+81\\ge81$, so $(x^2+9)(x^4+81)\\ge729$ with equality iff $x=0$. The equation $=729$ has the single root $x=0$. (C) $\\to$ P.",
+      "(D) has no shorter route than solving $x^3-5x+2=0$ and checking the domain: $2$ roots, (D) $\\to$ Q. Same matching: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If a real polynomial has a non-real root, its conjugate is also a root; so a real quadratic sharing two roots with a cubic that has one real root must share the complex pair.",
+    "Common root of two equations: subtract them to get a linear equation (when the leading coefficients match) and solve it.",
+    "$\\log_a(\\cdot)=n\\Rightarrow(\\cdot)=a^n$; recompute the power carefully ($3^6=729$, not $36$).",
+    "AM-GM / bounds: a product of terms each bounded below ($x^2+9\\ge9$, $x^4+81\\ge81$) equals its minimum only at the common minimiser - here the root count follows without expanding.",
+    "For $\\log_x(f(x))=n$: $f(x)=x^n$ with $x>0$, $x\\ne1$, $f(x)>0$ - check each root."
+   ]
+  }
+ ]
+}
