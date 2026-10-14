@@ -1,0 +1,1006 @@
+{
+ "title": "Permutations & Combinations (Exercise J-A) — Paper Analysis",
+ "subtitle": "JEE Advanced previous-year questions · detailed solutions",
+ "source": "SHEET_P_&_C_FCopy_JA.pdf (no blueprint; concepts self-assigned)",
+ "paper_name": "P&C Exercise J-A",
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Distribution of distinct objects into groups with no group empty"
+   ],
+   "level": 2,
+   "question": "The total number of ways in which $5$ balls of different colours can be distributed among $3$ persons so that each person gets at least one ball is: [JEE 2012]",
+   "options": [
+    "$75$",
+    "$150$",
+    "$210$",
+    "$243$"
+   ],
+   "answer": "(B) 150",
+   "key_idea": "Split $5$ into $1,1,3$ or $1,2,2$, group the balls, then assign the groups to the $3$ persons.",
+   "solution": [
+    "Each person gets at least one ball, so the numbers of balls received are $1,1,3$ or $1,2,2$ (in some order).",
+    "Case $1,1,3$: ways $=\\frac{5!}{1!\\,1!\\,3!}\\cdot\\frac{1}{2!}\\cdot 3! = 60$ (the factor $\\frac{1}{2!}$ because the two groups of size $1$ are identical in size; $3!$ assigns the groups to persons).",
+    "Case $1,2,2$: ways $=\\frac{5!}{1!\\,2!\\,2!}\\cdot\\frac{1}{2!}\\cdot 3! = 90$ (the factor $\\frac{1}{2!}$ because the two groups of size $2$ are identical in size).",
+    "Total number of ways $=60+90=150$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each person gets at least one ball means the map from balls to persons is onto, so use inclusion–exclusion on surjections.",
+     "solution": [
+      "Give each of the $5$ balls to one of $3$ persons: $3^5=243$ ways in all.",
+      "Subtract the ways in which a chosen person gets nothing: $\\binom{3}{1}2^5=96$.",
+      "Add back the ways in which two chosen persons get nothing (all balls go to one person): $\\binom{3}{2}1^5=3$.",
+      "Number of onto maps $=243-96+3=150$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of onto functions from an $n$-set to an $m$-set: $\\sum_{k=0}^{m}(-1)^k\\binom{m}{k}(m-k)^n=m!\\,S(n,m)$; here $3!\\,S(5,3)=6\\cdot25=150$.",
+    "Distinct objects into distinct boxes, none empty: first find the group sizes, then divide by $r!$ for every $r$ groups of equal size, then multiply by $m!$ to name the boxes.",
+    "Quick check: $S(5,3)=25$ equals $\\frac{5!}{1!1!3!\\,2!}+\\frac{5!}{1!2!2!\\,2!}=10+15$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Counting digit strings with a forbidden pattern (Fibonacci recurrence)"
+   ],
+   "level": 2,
+   "paragraph": "Let $a_n$ denote the number of all $n$-digit positive integers formed by the digits $0,1$ or both such that no consecutive digits in them are $0$. Let $b_n=$ the number of such $n$-digit integers ending with digit $1$ and $c_n=$ the number of such $n$-digit integers ending with digit $0$.",
+   "question": "The value of $b_6$ is:",
+   "options": [
+    "$7$",
+    "$8$",
+    "$9$",
+    "$11$"
+   ],
+   "answer": "(B) 8",
+   "key_idea": "Splitting by the last digit gives $a_n=a_{n-1}+a_{n-2}$, a Fibonacci-type recurrence.",
+   "solution": [
+    "The first digit of an $n$-digit number must be $1$ (it cannot be $0$).",
+    "For $b_n$ the last digit is $1$; the remaining $n-1$ places form any valid string, so $b_n=a_{n-1}$.",
+    "For $c_n$ the last digit is $0$, so the second last digit must be $1$; the remaining $n-2$ places are free, so $c_n=a_{n-2}$.",
+    "Every valid number ends in $0$ or $1$: $b_n+c_n=a_n$, so $a_n=a_{n-1}+a_{n-2}$.",
+    "Similarly $b_n=b_{n-1}+b_{n-2}$.",
+    "Initial values: $a_1=1$ (the number $1$) and $a_2=2$ (the numbers $10,11$).",
+    "Hence $a_3=3,\\ a_4=5,\\ a_5=8$.",
+    "Therefore $b_6=a_5=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the strings $1\\_\\_\\_\\_1$ directly by the number of zeros placed in the four middle positions.",
+     "solution": [
+      "$b_6$ counts $6$-digit strings $1\\,x_2x_3x_4x_5\\,1$ with no two adjacent $0$s.",
+      "The end digits are $1$, so only the four middle places matter; zeros there must be non-adjacent.",
+      "The number of ways to place $k$ non-adjacent zeros in $4$ places is $\\binom{5-k}{k}$.",
+      "$k=0$: $1$; $k=1$: $\\binom{4}{1}=4$; $k=2$: $\\binom{3}{2}=3$; $k\\ge3$: $0$.",
+      "Total $=1+4+3=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Binary strings of length $n$ with no two adjacent $0$s number $F_{n+2}$ (Fibonacci, $F_1=F_2=1$); with the first digit forced to $1$ they number $a_n=F_{n+1}$.",
+    "Choosing $k$ pairwise non-adjacent places out of $m$ in a row: $\\binom{m-k+1}{k}$. Summing over $k$ gives Fibonacci numbers.",
+    "Here $b_n=F_n$, $c_n=F_{n-1}$, $a_n=F_{n+1}$; check: $b_6=F_6=8$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Counting digit strings with a forbidden pattern (Fibonacci recurrence)"
+   ],
+   "level": 3,
+   "paragraph": "Let $a_n$ denote the number of all $n$-digit positive integers formed by the digits $0,1$ or both such that no consecutive digits in them are $0$. Let $b_n=$ the number of such $n$-digit integers ending with digit $1$ and $c_n=$ the number of such $n$-digit integers ending with digit $0$.",
+   "question": "Which of the following is correct?",
+   "options": [
+    "$a_{17}=a_{16}+a_{15}$",
+    "$c_{17}\\neq c_{16}+c_{15}$",
+    "$b_{17}\\neq b_{16}+c_{16}$",
+    "$a_{17}=c_{17}+b_{16}$"
+   ],
+   "answer": "(A)",
+   "key_idea": "All of $a_n,b_n,c_n$ obey the same Fibonacci recurrence, and $c_{n}=a_{n-2}$, $b_n=a_{n-1}$.",
+   "solution": [
+    "First digit is $1$. For $b_n$ the last digit is $1$, so $b_n=a_{n-1}$.",
+    "For $c_n$ the last digit is $0$ so the second last must be $1$: $c_n=a_{n-2}$.",
+    "Then $b_n+c_n=a_n$, so $a_n=a_{n-1}+a_{n-2}$; similarly $b_n=b_{n-1}+b_{n-2}$ and $c_n=c_{n-1}+c_{n-2}$.",
+    "Put $n=17$: $a_{17}=a_{16}+a_{15}$, so (A) is correct.",
+    "$c_{17}=c_{16}+c_{15}$ is true, so (B), which claims $c_{17}\\neq c_{16}+c_{15}$, is incorrect.",
+    "$b_{17}=b_{16}+b_{15}$ is true and $b_{15}=a_{14}=c_{16}$, so $b_{17}=b_{16}+c_{16}$; hence (C), which claims $\\neq$, is incorrect.",
+    "$c_{17}=a_{15}$ and $b_{16}=a_{15}$, so (D) says $a_{17}=a_{15}+a_{15}$, but $a_{17}=a_{16}+a_{15}>2a_{15}$; (D) is incorrect."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Identify $a_n=F_{n+1}$, $b_n=F_n$, $c_n=F_{n-1}$ and test each option with actual Fibonacci numbers.",
+     "solution": [
+      "From $a_1=1,a_2=2$ and $a_n=a_{n-1}+a_{n-2}$: $a_n=F_{n+1}$ with $F_1=F_2=1$; also $b_n=a_{n-1}=F_n$ and $c_n=a_{n-2}=F_{n-1}$.",
+      "Needed values: $F_{14}=377,\\ F_{15}=610,\\ F_{16}=987,\\ F_{17}=1597,\\ F_{18}=2584$.",
+      "(A): $a_{17}=F_{18}=2584$ and $a_{16}+a_{15}=F_{17}+F_{16}=1597+987=2584$. True.",
+      "(B): $c_{17}=F_{16}=987$ and $c_{16}+c_{15}=F_{15}+F_{14}=610+377=987$; equal, so $\\neq$ is false.",
+      "(C): $b_{17}=F_{17}=1597$ and $b_{16}+c_{16}=F_{16}+F_{15}=987+610=1597$; equal, so $\\neq$ is false.",
+      "(D): $c_{17}+b_{16}=987+987=1974\\neq2584=a_{17}$. False. Only (A) is correct."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A recurrence $x_n=x_{n-1}+x_{n-2}$ holds for every sequence built from the same 'last digit' argument; once the initial terms match, the sequence is a shifted Fibonacci sequence.",
+    "Shift identities: $a_n=b_n+c_n$, $b_n=a_{n-1}$, $c_n=a_{n-2}$, so $b_n=c_{n+1}$; equalities among these can be tested by indices alone.",
+    "Check small cases: $a_1..a_6=1,2,3,5,8,13$ (verified by brute force)."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Derangements",
+    "Restricted permutations with a fixed assignment"
+   ],
+   "level": 3,
+   "question": "Six cards and six envelopes are numbered $1,2,3,4,5,6$ and cards are to be placed in envelopes so that each envelope contains exactly one card and no card is placed in the envelope bearing the same number and moreover the card numbered $1$ is always placed in envelope numbered $2$. Then the number of ways it can be done is: [JEE (Adv) 2014]",
+   "options": [
+    "$264$",
+    "$265$",
+    "$53$",
+    "$67$"
+   ],
+   "answer": "(C) 53",
+   "key_idea": "Split on where card $2$ goes: into envelope $1$ (then a derangement of $4$) or elsewhere (a derangement of $5$).",
+   "solution": [
+    "Card $1$ goes into envelope $2$. Now cards $2,3,4,5,6$ must go into envelopes $1,3,4,5,6$ with cards $3,4,5,6$ not in their own envelopes.",
+    "Case 1: card $2$ goes into envelope $1$. The other four cards $3,4,5,6$ must be deranged among envelopes $3,4,5,6$: $D_4=4!\\left(\\frac{1}{2!}-\\frac{1}{3!}+\\frac{1}{4!}\\right)=9$ ways.",
+    "Case 2: card $2$ does not go into envelope $1$. Treat envelope $1$ as the 'own envelope' of card $2$: this is a derangement of $5$ things, $D_5=44$ ways.",
+    "Total $=9+44=53$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "After fixing card $1\\to$ envelope $2$, count the arrangements of the other five directly by inclusion–exclusion on the four forbidden positions.",
+     "solution": [
+      "Cards $2,3,4,5,6$ go into envelopes $1,3,4,5,6$ in any of $5!$ ways; the only restrictions are that cards $3,4,5,6$ avoid envelopes $3,4,5,6$ respectively (four forbidden matches).",
+      "Let $A_k$ be the event that card $k$ lies in envelope $k$ ($k=3,4,5,6$). Then $|A_{k_1}\\cap\\dots\\cap A_{k_j}|=(5-j)!$.",
+      "Number of good arrangements $=\\sum_{j=0}^{4}(-1)^j\\binom{4}{j}(5-j)!=120-4(24)+6(6)-4(2)+1(1)$.",
+      "$=120-96+36-8+1=53$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Derangements: $D_n=n!\\sum_{k=0}^{n}\\frac{(-1)^k}{k!}$; $D_1..D_6=0,1,2,9,44,265$.",
+    "If $k$ of $n$ objects are forbidden from their own places and the other $n-k$ are unrestricted, the count is $\\sum_{j=0}^{k}(-1)^j\\binom{k}{j}(n-j)!$.",
+    "Recurrence $D_n=(n-1)(D_{n-1}+D_{n-2})$; here $D_5+D_4=44+9=53$ is the count of derangements with $1\\to2$ forced, equal to $D_6/5=265/5$ by symmetry."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Integer solutions of a linear equation with ordering constraints"
+   ],
+   "level": 3,
+   "question": "Let $n_1<n_2<n_3<n_4<n_5$ be positive integers such that $n_1+n_2+n_3+n_4+n_5=20$. Then the number of such distinct arrangements $(n_1,n_2,n_3,n_4,n_5)$ is ______. [JEE (Adv) 2014]",
+   "answer": "7",
+   "key_idea": "Write each gap as $n_{i+1}=n_i+t_i+1$ with $t_i\\ge0$, turning strict inequalities into non-negative unknowns.",
+   "solution": [
+    "Put $n_2=n_1+t_1+1,\\ n_3=n_2+t_2+1,\\ n_4=n_3+t_3+1,\\ n_5=n_4+t_4+1$ with $t_i\\ge0$.",
+    "Then the sum becomes $5n_1+4t_1+3t_2+2t_3+t_4+10=20$, i.e. $5n_1+4t_1+3t_2+2t_3+t_4=10$ with $n_1\\ge1$.",
+    "Let $n_1=t_0+1$ with $t_0\\ge0$: $5t_0+4t_1+3t_2+2t_3+t_4=5$.",
+    "$t_0=1$ forces all other $t$'s to be $0$: only $1$ solution. So take $t_0=0$: $4t_1+3t_2+2t_3+t_4=5$.",
+    "$t_1=0,\\ t_2=0$: $2t_3+t_4=5$ gives $t_3=0,1,2$: $3$ solutions.",
+    "$t_1=0,\\ t_2=1$: $2t_3+t_4=2$ gives $t_3=0,1$: $2$ solutions.",
+    "$t_1=1$ forces $t_2=0$ and $2t_3+t_4=1$: $1$ solution.",
+    "Total $=1+3+2+1=7$.",
+    "Listing check: $(1,2,3,4,10),(1,2,3,5,9),(1,2,3,6,8),(1,2,4,5,8),(1,2,4,6,7),(1,3,4,5,7),(2,3,4,5,6)$, each with sum $20$: $7$ tuples."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's 'Alternative' table listing the 7 tuples has three wrong rows (1,2,4,5,7 sums to 19; 1,2,4,6,8 sums to 21; 1,3,4,6,7 sums to 21). The correct list is (1,2,3,4,10),(1,2,3,5,9),(1,2,3,6,8),(1,2,4,5,8),(1,2,4,6,7),(1,3,4,5,7),(2,3,4,5,6). The main method and the answer 7 are correct.",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract $(1,2,3,4,5)$ to turn strictly increasing positive integers into a non-decreasing list, i.e. a partition of $5$.",
+     "solution": [
+      "Let $m_i=n_i-i$. Then $n_i<n_{i+1}$ becomes $m_i\\le m_{i+1}$, and $n_1\\ge1$ becomes $m_1\\ge0$.",
+      "$\\sum m_i=20-(1+2+3+4+5)=5$.",
+      "So we count non-decreasing sequences of $5$ non-negative integers with sum $5$, i.e. partitions of $5$ into at most $5$ parts.",
+      "The partitions of $5$ are $5,\\ 4+1,\\ 3+2,\\ 3+1+1,\\ 2+2+1,\\ 2+1+1+1,\\ 1+1+1+1+1$: $7$ of them."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Strictly increasing $k$-tuples of positive integers with sum $S$ correspond bijectively to partitions of $S-\\binom{k+1}{2}$ into at most $k$ parts (subtract $1,2,\\dots,k$).",
+    "Strict inequalities $n_i<n_{i+1}$ become $\\le$ after subtracting $i$; strict gaps $\\ge d$ are handled by subtracting $d,2d,\\dots$.",
+    "$p(n)$ for $n=1..7$: $1,2,3,5,7,11,15$; here $p(5)=7$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Number of diagonals and sides of a polygon (combinations)"
+   ],
+   "level": 1,
+   "question": "Let $n\\ge2$ be an integer. Take $n$ distinct points on a circle and join each pair of points by a line segment. Colour the line segment joining every pair of adjacent points by blue and the rest by red. If the number of red and blue line segments are equal, then the value of $n$ is ______. [JEE (Adv) 2014]",
+   "answer": "5",
+   "key_idea": "Blue segments are the $n$ sides; red ones are the remaining $\\binom{n}{2}-n$ chords.",
+   "solution": [
+    "The number of segments joining adjacent points (blue) is $n$.",
+    "The number of segments joining non-adjacent points (red) is $\\binom{n}{2}-n$.",
+    "Equal numbers: $n=\\binom{n}{2}-n\\Rightarrow 2n=\\frac{n(n-1)}{2}$.",
+    "So $n(n-5)=0$, giving $n=0$ or $n=5$.",
+    "Since $n\\ge2$, $n=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count red segments by degrees: each point has $n-3$ non-adjacent partners (handshake lemma).",
+     "solution": [
+      "From each of the $n$ points, the red segments go to the points other than itself and its $2$ neighbours: $n-3$ of them.",
+      "Each red segment has two ends, so the number of red segments is $\\frac{n(n-3)}{2}$ (for $n\\ge3$).",
+      "Set $\\frac{n(n-3)}{2}=n$, so $n-3=2$ (as $n\\neq0$), i.e. $n=5$.",
+      "Check: the pentagon has $5$ sides and $5$ diagonals, and $n=2$ gives no red segment, so it fails."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A convex $n$-gon has $n$ sides and $\\frac{n(n-3)}{2}$ diagonals; the total $\\binom{n}{2}$ segments split as $n+\\frac{n(n-3)}{2}$.",
+    "Handshake principle: sum of degrees $=2\\times$ number of edges; each vertex of a polygon has degree $n-3$ in the diagonal graph.",
+    "Diagonals equal sides only for the pentagon ($n=5$); diagonals $=2\\times$ sides for $n=7$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements with groups of objects together (gap method)"
+   ],
+   "level": 4,
+   "question": "Let $n$ be the number of ways in which $5$ boys and $5$ girls can stand in a queue in such a way that all the girls stand consecutively in the queue. Let $m$ be the number of ways in which $5$ boys and $5$ girls can stand in a queue in such a way that exactly four girls stand consecutively in the queue. Then the value of $\\frac{m}{n}$ is ______. [JEE (Adv) 2015]",
+   "answer": "5",
+   "key_idea": "Arrange the boys first; the girls' groups go into the $6$ gaps between and around them.",
+   "solution": [
+    "All $5$ girls together: treat them as one block. Block + $5$ boys $=6$ units arranged in $6!$ ways, girls inside the block in $5!$ ways: $n=5!\\times6!$.",
+    "Exactly four girls together: arrange the $5$ boys in $5!$ ways; this creates $6$ gaps.",
+    "Choose $2$ gaps out of $6$ (one for the block of four girls, one for the single girl) and assign them in $2!$ ways: $\\binom{6}{2}\\cdot2!$.",
+    "Choose which $4$ of the $5$ girls form the block: $\\binom{5}{4}$; arrange them in the block: $4!$ (the lone girl is then fixed).",
+    "So $m=5!\\times\\binom{6}{2}\\times\\binom{5}{4}\\times2!\\times4!$.",
+    "$\\frac{m}{n}=\\frac{5!\\cdot15\\cdot2\\cdot5!}{5!\\cdot6!}=\\frac{15\\cdot2\\cdot120}{720}=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Ignore names: count only the boy/girl pattern (a string of $5$ B's and $5$ G's); names multiply both $m$ and $n$ by the same $5!\\,5!$.",
+     "solution": [
+      "Both $m$ and $n$ equal (number of B/G patterns) $\\times\\,5!\\times5!$, so $\\frac{m}{n}=\\frac{\\text{patterns with a run of exactly 4 G's}}{\\text{patterns with a run of 5 G's}}$.",
+      "Patterns with all five G's together: the block can start at positions $1,\\dots,6$: $6$ patterns.",
+      "Patterns with a run of exactly four G's and one separate G: the $5$ B's make $6$ gaps; choose the gap for $GGGG$ and a different gap for the single G: $6\\times5=30$ patterns.",
+      "$\\frac{m}{n}=\\frac{30}{6}=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Gap method: arrange the unrestricted objects first, then place the restricted ones in the gaps ($k$ objects give $k+1$ gaps), at most one group per gap if groups must stay apart.",
+    "When a ratio of two counts is needed, strip common factors (here the $5!\\,5!$ labelling) and compare only patterns.",
+    "Counting runs: the number of patterns of $g$ G's and $b$ B's with $r$ separated G-groups is $\\binom{b+1}{r}\\times$(compositions of $g$ into $r$ parts)."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Selection of a team with a captain",
+    "Combinations with restrictions (at most one)"
+   ],
+   "level": 2,
+   "question": "A debate club consists of $6$ girls and $4$ boys. A team of $4$ members is to be selected from this club including the selection of a captain (from among these $4$ members) for the team. If the team has to include at most one boy, then the number of ways of selecting the team is: [JEE (Adv) 2016]",
+   "options": [
+    "$380$",
+    "$320$",
+    "$260$",
+    "$95$"
+   ],
+   "answer": "(A) 380",
+   "key_idea": "Select the team by cases on the number of boys, then multiply by $4$ for the captain.",
+   "solution": [
+    "At most one boy means either (0 boys, 4 girls) or (1 boy, 3 girls).",
+    "Number of ways $=\\left(\\binom{4}{0}\\binom{6}{4}\\right)\\binom{4}{1}+\\left(\\binom{4}{1}\\binom{6}{3}\\right)\\binom{4}{1}$, the factor $\\binom41=4$ being the choice of captain from the $4$ members.",
+    "$=(1\\cdot15)\\cdot4+(4\\cdot20)\\cdot4=60+320$.",
+    "$=380$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Choose the captain first, then the remaining three members under the restriction.",
+     "solution": [
+      "Captain a boy ($4$ ways): no other boy is allowed, so the other $3$ come from the $6$ girls: $4\\cdot\\binom{6}{3}=80$.",
+      "Captain a girl ($6$ ways): the other $3$ come from the $5$ remaining girls and $4$ boys with at most one boy.",
+      "Zero boys: $\\binom{5}{3}=10$. One boy: $4\\binom{5}{2}=40$. Together $50$ choices, so $6\\times50=300$.",
+      "Total $=80+300=380$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If a role (captain, leader) is to be chosen from the selected team, multiply by the team size afterwards; it does not interact with the 'at most' condition.",
+    "'At most $k$' = sum of cases $0..k$; 'at least $k$' is often easier by complement.",
+    "Choosing the special member first changes how the remaining restrictions apply; both orders must agree, which is a good self-check."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Combinations with parity restriction",
+    "Complementary counting"
+   ],
+   "level": 1,
+   "question": "Let $S=\\{1,2,3,\\dots,9\\}$. For $k=1,2,\\dots,5$, let $N_k$ be the number of subsets of $S$, each containing five elements out of which exactly $k$ are odd. Then $N_1+N_2+N_3+N_4+N_5=$ [JEE (Adv) 2017]",
+   "options": [
+    "$125$",
+    "$210$",
+    "$252$",
+    "$126$"
+   ],
+   "answer": "(D) 126",
+   "key_idea": "$S$ has $5$ odd and $4$ even numbers, so $N_k=\\binom{5}{k}\\binom{4}{5-k}$.",
+   "solution": [
+    "$S$ has $5$ odd numbers ($1,3,5,7,9$) and $4$ even numbers.",
+    "$N_1=\\binom51\\binom44=5$.",
+    "$N_2=\\binom52\\binom43=10\\cdot4=40$.",
+    "$N_3=\\binom53\\binom42=10\\cdot6=60$.",
+    "$N_4=\\binom54\\binom41=5\\cdot4=20$.",
+    "$N_5=\\binom55\\binom40=1$.",
+    "Total $=5+40+60+20+1=126$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Every $5$-subset has at least one odd element (only $4$ evens exist), so the sum is simply the number of all $5$-subsets.",
+     "solution": [
+      "The cases $k=1,\\dots,5$ together cover all $5$-element subsets of $S$ except those with $k=0$ odd elements.",
+      "A subset with $0$ odd elements would need $5$ even numbers, but $S$ has only $4$; so $N_0=0$.",
+      "Hence $N_1+\\dots+N_5=\\binom{9}{5}=126$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vandermonde: $\\sum_k\\binom{p}{k}\\binom{q}{r-k}=\\binom{p+q}{r}$; here $\\binom{5}{k}\\binom{4}{5-k}$ summed over all $k$ is $\\binom95$.",
+    "Always check whether a case is impossible by pigeonhole (here $N_0=0$) before summing.",
+    "$\\binom{9}{5}=\\binom{9}{4}=126$ is also the number of ways to choose $4$ items to leave out."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Arrangements of letters with repetition",
+    "Selection of repeated letters"
+   ],
+   "level": 2,
+   "question": "Words of length $10$ are formed using the letters $A,B,C,D,E,F,G,H,I,J$. Let $x$ be the number of such words where no letter is repeated; and let $y$ be the number of such words where exactly one letter is repeated twice and no other letter is repeated. Then $\\frac{y}{9x}=$ ______. [JEE (Adv) 2017]",
+   "answer": "5",
+   "key_idea": "A word with exactly one letter repeated twice omits exactly one letter, so count (repeated letter, omitted letter) and arrange.",
+   "solution": [
+    "No letter repeated: all $10$ letters used, so $x=10!$.",
+    "Exactly one letter repeated twice, no other repeated: choose the repeated letter in $\\binom{10}{1}$ ways.",
+    "The other $8$ distinct letters come from the remaining $9$ letters: $\\binom{9}{8}$ ways.",
+    "Arrange these $10$ letters (one of them appears twice): $\\frac{10!}{2!}$ ways.",
+    "$y=\\binom{10}{1}\\binom{9}{8}\\frac{10!}{2}=10\\cdot9\\cdot\\frac{10!}{2}=45\\cdot10!$.",
+    "$\\frac{y}{9x}=\\frac{45\\cdot10!}{9\\cdot10!}=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count by multisets: a valid multiset is fixed by the letter doubled and the letter left out; every multiset has the same number of arrangements.",
+     "solution": [
+      "The multiset has $10$ letters: one letter twice, $8$ letters once, so exactly one letter of the alphabet is missing.",
+      "Choose the missing letter ($10$ ways) and the doubled letter among the other $9$ ($9$ ways): $90$ multisets.",
+      "Each multiset has $\\frac{10!}{2!}$ arrangements, so $y=90\\cdot\\frac{10!}{2}=45\\cdot10!$.",
+      "$\\frac{y}{9x}=\\frac{45\\cdot10!}{9\\cdot10!}=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Arrangements of a multiset with repeats: $\\frac{n!}{n_1!n_2!\\cdots}$.",
+    "Ratio questions: cancel the common $n!$; $\\frac{y}{x}=\\frac{\\binom{n}{1}\\binom{n-1}{n-2}}{2}=\\frac{n(n-1)}{2}=\\binom n2$, so here $\\frac{y}{x}=45=9\\cdot5$.",
+    "In general, for words of length $n$ from $n$ letters, $\\frac{y}{x}=\\binom{n}{2}$ (here $\\binom{10}{2}=45$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Divisibility by $4$",
+    "Forming numbers with repetition allowed"
+   ],
+   "level": 2,
+   "question": "The number of $5$ digit numbers which are divisible by $4$, with digits from the set $\\{1,2,3,4,5\\}$ and the repetition of digits is allowed, is ______. [JEE (Adv) 2018]",
+   "answer": "625",
+   "key_idea": "Divisibility by $4$ depends only on the last two digits, so list the valid endings.",
+   "solution": [
+    "A number is divisible by $4$ iff its last two digits form a number divisible by $4$.",
+    "Using digits $1$ to $5$, the valid endings are $12,\\ 24,\\ 32,\\ 44,\\ 52$: $5$ endings.",
+    "The first three digits are free: $5\\times5\\times5=125$ ways.",
+    "Total $=125\\times5=625$ (the PDF writes $5\\times5\\times5\\times5$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For every fixed block of the first four digits there is exactly one last digit that works.",
+     "solution": [
+      "Write the number as $10M+u$ where $M$ is the number formed by the first four digits and $u\\in\\{1,2,3,4,5\\}$ is the last digit.",
+      "Modulo $4$: $10M+u\\equiv 2M+u$. If $M$ is even this is $\\equiv u$, which needs $u\\equiv0\\pmod4$, so $u=4$ only.",
+      "If $M$ is odd it is $\\equiv 2+u$, needing $u\\equiv2\\pmod4$, so $u=2$ only.",
+      "So each of the $5^4=625$ choices of the first four digits has exactly one valid last digit: $625$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A number is divisible by $4$ iff its last two digits are, by $8$ iff its last three are, by $2^k$ iff its last $k$ digits are.",
+    "Reducing $10M+u$ modulo $4$ to $2M+u$ shows the last digit must be even; its choice is then forced by the parity of $M$.",
+    "If the available last digits form a complete residue system for the relevant modulus, exactly one of them works for each prefix."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "concepts": [
+    "Combinations: selection of committees with restrictions"
+   ],
+   "level": 3,
+   "paragraph": "In a high school, a committee has to be formed from a group of $6$ boys $M_1,\\dots,M_6$ and $5$ girls $G_1,\\dots,G_5$. (i) $\\alpha_1$: committees of $5$ members with exactly $3$ boys and $2$ girls. (ii) $\\alpha_2$: committees with at least $2$ members and an equal number of boys and girls. (iii) $\\alpha_3$: committees of $5$ members with at least $2$ girls. (iv) $\\alpha_4$: committees of $4$ members with at least $2$ girls such that $M_1$ and $G_1$ are NOT in the committee together.",
+   "question": "List-I: P. value of $\\alpha_1$; Q. value of $\\alpha_2$; R. value of $\\alpha_3$; S. value of $\\alpha_4$.  List-II: 1. $136$; 2. $189$; 3. $192$; 4. $200$; 5. $381$; 6. $461$. The correct option is: [JEE (Adv) 2018]",
+   "options": [
+    "P$\\to$4; Q$\\to$6; R$\\to$2; S$\\to$1",
+    "P$\\to$1; Q$\\to$4; R$\\to$2; S$\\to$3",
+    "P$\\to$4; Q$\\to$6; R$\\to$5; S$\\to$2",
+    "P$\\to$4; Q$\\to$2; R$\\to$3; S$\\to$1"
+   ],
+   "answer": "(C) P→4; Q→6; R→5; S→2",
+   "key_idea": "$\\sum_{k\\ge1}\\binom6k\\binom5k=\\binom{11}{5}-1$ by Vandermonde; the last part splits on whether $G_1$ or $M_1$ is in.",
+   "solution": [
+    "P: $3$ boys and $2$ girls: $\\alpha_1=\\binom63\\binom52=20\\cdot10=200$.",
+    "Q: equal numbers of boys and girls, at least $2$ members, so $k\\ge1$ of each: $\\alpha_2=\\sum_{k=1}^{5}\\binom6k\\binom5k=\\binom61\\binom51+\\binom62\\binom52+\\binom63\\binom53+\\binom64\\binom54+\\binom65\\binom55$.",
+    "Using $\\binom5k=\\binom5{5-k}$ and Vandermonde, $\\sum_{k=0}^{5}\\binom6k\\binom5{5-k}=\\binom{11}{5}=462$; removing $k=0$ gives $\\alpha_2=462-1=461$.",
+    "R: $5$ members with at least $2$ girls $=\\binom{11}{5}$ minus (0 girls: $\\binom65$) minus (1 girl: $\\binom64\\binom51$) $=462-6-75=381$.",
+    "S: $4$ members, at least $2$ girls, $M_1,G_1$ not together. Case $G_1$ in (so $M_1$ out): $\\binom41\\binom52+\\binom42\\binom51+\\binom43=40+30+4=74$.",
+    "Case $M_1$ in (so $G_1$ out): the other $3$ include at least $2$ girls from $G_2..G_5$: $\\binom42\\binom51+\\binom43=30+4=34$.",
+    "Case both $M_1$ and $G_1$ out: $\\binom44+\\binom43\\binom51+\\binom42\\binom52=1+20+60=81$.",
+    "$\\alpha_4=74+34+81=189$.",
+    "So P$\\to4$, Q$\\to6$, R$\\to5$, S$\\to2$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For S use complementary counting: all $4$-member committees with at least $2$ girls, minus those containing both $M_1$ and $G_1$.",
+     "solution": [
+      "$4$-member committees with at least $2$ girls: $\\binom52\\binom62+\\binom53\\binom61+\\binom54=150+60+5=215$.",
+      "Those containing both $M_1$ and $G_1$: choose $2$ more from the other $9$ people ($5$ boys, $4$ girls) with at least $1$ more girl to reach $2$ girls overall.",
+      "$\\binom92-\\binom52=36-10=26$ (remove the two-boy choices).",
+      "$\\alpha_4=215-26=189$, matching the case count. The other three values are as before: $200,461,381$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vandermonde: $\\sum_k\\binom mk\\binom n{r-k}=\\binom{m+n}r$; with $m=6,n=5,r=5$ and $\\binom5k=\\binom5{5-k}$, $\\sum_{k}\\binom6k\\binom5k=\\binom{11}5$.",
+    "'Two specific people not together' = total $-$ (both present); or split into three cases (only A, only B, neither).",
+    "'At least $2$ girls' in a $5$-committee: complement is $0$ or $1$ girl, $\\binom65+\\binom64\\binom51=81$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Circular arrangements with colouring restrictions"
+   ],
+   "level": 3,
+   "question": "Five persons $A,B,C,D$ and $E$ are seated in a circular arrangement. If each of them is given a hat of one of the three colours red, blue and green then the number of ways of distributing the hats such that the persons seated in adjacent seats get different coloured hats is ______. [JEE (Adv) 2019]",
+   "answer": "30",
+   "key_idea": "On a $5$-cycle with $3$ colours no colour can be used $3$ times, so the colour counts are $2,2,1$.",
+   "solution": [
+    "If a colour were used $3$ times among $5$ seats in a circle, two of those seats would be adjacent. So each colour is used at most $2$ times.",
+    "With $5$ hats and each colour used at most twice, the counts must be $2,2,1$. Choose the colour used once in $3$ ways (RRGGB, RGGBB or RRGBB patterns).",
+    "Take RRGGB: place the single blue hat on any of the $5$ persons: $5$ ways.",
+    "Say blue goes to $A$. The remaining $4$ seats $B,C,D,E$ form a path $B$–$C$–$D$–$E$ with $B,E$ adjacent to $A$ only; adjacent seats need different colours.",
+    "So $B,D$ are one colour and $C,E$ the other: $B,D$ green and $C,E$ red, or the reverse: $2$ ways.",
+    "Total $=3\\times5\\times2=30$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the chromatic polynomial of a cycle: the number of proper $k$-colourings of $C_n$ is $(k-1)^n+(-1)^n(k-1)$.",
+     "solution": [
+      "Seats $1,\\dots,5$ in a circle; colourings with adjacent seats different are proper colourings of the cycle $C_5$ with $k=3$ colours.",
+      "Let $c_n$ be the number for a cycle of $n$ seats. Cut the circle between seat $n$ and seat $1$: the path of $n$ seats has $k(k-1)^{n-1}$ proper colourings.",
+      "Among them, those where the two end seats have the same colour correspond (merge the ends) to proper colourings of $C_{n-1}$: $c_{n-1}$ of them. So $c_n=k(k-1)^{n-1}-c_{n-1}$.",
+      "With $k=3$: $c_3=3\\cdot2\\cdot1=6$, $c_4=3\\cdot2^3-6=18$, $c_5=3\\cdot2^4-18=30$.",
+      "(Closed form $c_n=(k-1)^n+(-1)^n(k-1)$ gives $32-2=30$.)"
+     ]
+    }
+   ],
+   "useful_results": [
+    "Proper colourings of the cycle $C_n$ with $k$ colours: $(k-1)^n+(-1)^n(k-1)$. For $k=3$: $n=3:6$, $n=4:18$, $n=5:30$, $n=6:66$.",
+    "Pigeonhole on adjacency: in a cycle of $n$ seats a colour can appear at most $\\lfloor n/2\\rfloor$ times.",
+    "Path with $m$ seats and $k$ colours: $k(k-1)^{m-1}$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Selection with no two consecutive",
+    "Gap method"
+   ],
+   "level": 2,
+   "question": "An engineer is required to visit a factory for exactly four days during the first $15$ days of every month and it is mandatory that no two visits take place on consecutive days. Then the number of all possible ways in which such visits to the factory can be made by the engineer during $1$–$15$ June $2021$ is ______. [JEE (Adv) 2020]",
+   "answer": "495",
+   "key_idea": "Place the $11$ non-visit days first; the $4$ visit days go into $4$ different gaps among the $12$ gaps.",
+   "solution": [
+    "We choose $4$ days out of $15$ with no two consecutive.",
+    "Remove the $4$ visit days: $15-4=11$ non-visit days $d_1,d_2,\\dots,d_{11}$ remain.",
+    "These $11$ days create $12$ gaps (before, between and after them).",
+    "Put one visit in each of $4$ chosen gaps; no two visits are then adjacent.",
+    "Number of ways $=\\binom{12}{4}=\\frac{12\\cdot11\\cdot10\\cdot9}{4\\cdot3\\cdot2}=495$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift the days: subtract $0,1,2,3$ from the sorted visit days to turn 'no two consecutive' into 'distinct'.",
+     "solution": [
+      "Let the visit days be $c_1<c_2<c_3<c_4$ with $c_{i+1}-c_i\\ge2$.",
+      "Define $e_i=c_i-(i-1)$. Then $e_{i+1}-e_i=c_{i+1}-c_i-1\\ge1$, so $e_1<e_2<e_3<e_4$.",
+      "The range: $1\\le e_1$ and $e_4=c_4-3\\le12$.",
+      "The map is a bijection onto $4$-subsets of $\\{1,\\dots,12\\}$: $\\binom{12}{4}=495$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of ways to choose $k$ pairwise non-consecutive numbers from $\\{1,\\dots,n\\}$ is $\\binom{n-k+1}{k}$; here $\\binom{12}{4}$.",
+    "Generalisation: if consecutive chosen numbers must differ by at least $d$, the count is $\\binom{n-(k-1)(d-1)}{k}$.",
+    "Circular version (no two adjacent on a circle of $n$): $\\frac{n}{n-k}\\binom{n-k}{k}$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution of distinct objects into groups with size restrictions"
+   ],
+   "level": 2,
+   "question": "In a hotel, four rooms are available. Six persons are to be accommodated in these four rooms in such a way that each of these rooms contains at least one person and at most two persons. Then the number of all possible ways in which this can be done is ______. [JEE (Adv) 2020]",
+   "answer": "1080",
+   "key_idea": "With each room holding $1$ or $2$ persons and total $6$, the room sizes must be $1,1,2,2$.",
+   "solution": [
+    "Each of $4$ rooms holds $1$ or $2$ persons and the total is $6$, so the sizes are $(1,1,2,2)$ only.",
+    "Number of ways of grouping the $6$ persons into groups of sizes $1,1,2,2$: $\\frac{6!}{1!\\,1!\\,(2!)\\,2!\\,2!\\,(2!)}=45$ (the two $1$'s and the two $2$'s are interchangeable).",
+    "Arrange these $4$ groups in the $4$ rooms: $4!=24$.",
+    "Total $=45\\times24=1080$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the exponential generating function for persons in a room: $x+\\frac{x^2}{2!}$ per room, coefficient of $\\frac{x^6}{6!}$ in the fourth power.",
+     "solution": [
+      "Persons are distinct, rooms are distinct; each room contributes the factor $x+\\frac{x^2}{2}$ (one person, or two persons).",
+      "The count is $6!\\,[x^6]\\left(x+\\frac{x^2}{2}\\right)^4=6!\\,[x^2]\\left(1+\\frac{x}{2}\\right)^4$.",
+      "$[x^2](1+\\frac x2)^4=\\binom42\\cdot\\frac14=\\frac32$.",
+      "Number of ways $=720\\times\\frac32=1080$."
+     ]
+    },
+    {
+     "idea": "Choose the two rooms that will hold $2$ persons first, then split the persons.",
+     "solution": [
+      "Choose which $2$ of the $4$ rooms hold two persons: $\\binom42=6$.",
+      "Assign the $6$ distinct persons to rooms with sizes $2,2,1,1$: $\\frac{6!}{2!\\,2!\\,1!\\,1!}=180$.",
+      "Total $=6\\times180=1080$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Distinct objects, distinct boxes, box sizes $s_1,\\dots,s_m$: $\\frac{n!}{s_1!\\cdots s_m!}$; sum over allowed size patterns, counting how many boxes take each pattern.",
+    "Exponential generating functions solve 'each box holds between $a$ and $b$': box factor $\\sum_{s=a}^{b}\\frac{x^s}{s!}$, answer $n!\\,[x^n]$ of the product.",
+    "Equal-sized groups of unlabelled sets need division by $r!$ only when the groups are not later assigned to labelled boxes."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Counting ordered tuples, strictly increasing tuples and distinct tuples"
+   ],
+   "level": 2,
+   "question": "Let $S_1=\\{(i,j,k):i,j,k\\in\\{1,2,\\dots,10\\}\\}$, $S_2=\\{(i,j):1\\le i<j+2\\le10,\\ i,j\\in\\{1,\\dots,10\\}\\}$, $S_3=\\{(i,j,k,l):1\\le i<j<k<l,\\ i,j,k,l\\in\\{1,\\dots,10\\}\\}$ and $S_4=\\{(i,j,k,l):i,j,k,l \\text{ are distinct elements in }\\{1,\\dots,10\\}\\}$. If the total number of elements in the set $S_r$ is $n_r$, $r=1,2,3,4$, then which of the following statements is (are) TRUE? [JEE (Adv) 2021]",
+   "options": [
+    "$n_1=1000$",
+    "$n_2=44$",
+    "$n_3=220$",
+    "$\\frac{n_4}{12}=420$"
+   ],
+   "answer": "(A, B, D)",
+   "key_idea": "$n_3=\\binom{10}{4}=210$ and $n_4=4!\\,n_3=5040$; $n_2$ is a staircase sum.",
+   "solution": [
+    "(A) $|S_1|=10\\cdot10\\cdot10=1000$, so $n_1=1000$: true.",
+    "(B) The condition $i<j+2\\le10$ means $1\\le j\\le8$ and $1\\le i\\le j+1$. For $j=1,2,\\dots,8$ the number of $i$ is $2,3,\\dots,9$.",
+    "$n_2=2+3+\\dots+9=44$: true.",
+    "(C) $S_3$ consists of strictly increasing $4$-tuples from $\\{1,\\dots,10\\}$; each is a $4$-element subset, so $n_3=\\binom{10}{4}=\\frac{10\\cdot9\\cdot8\\cdot7}{24}=210\\neq220$: false.",
+    "(D) $S_4$ consists of ordered $4$-tuples of distinct elements: $n_4=10\\cdot9\\cdot8\\cdot7=5040$.",
+    "$\\frac{n_4}{12}=\\frac{5040}{12}=420$: true.",
+    "Hence the true statements are (A), (B), (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working for S3 and S4 is wrong: it writes n3 = 8C4 = 70 and n4 = 10C4 = 210 and marks (D) with a cross, although its own answer key (ABD) says (D) is true. Correct values: n3 = C(10,4) = 210 (so (C) n3 = 220 is false) and n4 = 10*9*8*7 = 5040 = 4! x 210, so n4/12 = 420 (true). The PDF's n1 = 1000 and n2 = 44 are correct, but its table for n2 is garbled; it is rewritten as the sum 2+3+...+9. Answer key ABD is correct.",
+   "alternate_solutions": [
+    {
+     "idea": "Ordered versus unordered: $S_4$ is every ordering of an element of $S_3$, so $n_4=4!\\,n_3$; and count $S_2$ by complement in the $10\\times8$ grid.",
+     "solution": [
+      "Each $4$-subset of $\\{1,\\dots,10\\}$ gives exactly one increasing tuple (an element of $S_3$) and $4!=24$ tuples of distinct entries (elements of $S_4$): $n_4=24\\,n_3$.",
+      "So $\\frac{n_4}{12}=2n_3$, which equals $420$ exactly when $n_3=210$, and $n_3=\\binom{10}{4}=210$; hence (D) is true and (C), with $220$, is false.",
+      "For $S_2$: $j\\in\\{1,\\dots,8\\}$ and $i\\in\\{1,\\dots,10\\}$ give $80$ pairs; remove those with $i\\ge j+2$, which number $9-j$ for each $j$: $8+7+\\dots+1=36$.",
+      "$n_2=80-36=44$. With $n_1=1000$: (A), (B), (D) are true."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Strictly increasing $r$-tuples from $\\{1,..,n\\}$: $\\binom nr$; ordered tuples with distinct entries: $n(n-1)\\cdots(n-r+1)=r!\\binom nr$; unrestricted ordered tuples: $n^r$.",
+    "Reading the condition off before counting: $1\\le i<j+2\\le10$ gives $i\\le j+1$ and $j\\le8$.",
+    "Sanity check when an answer key and a working disagree: recompute the claim in one line ($n_4/12=420\\iff n_4=5040$)."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Numbers in an interval formed from given digits",
+    "Casework with digit restrictions"
+   ],
+   "level": 3,
+   "question": "The number of $4$-digit integers in the closed interval $[2022,4482]$ formed by using the digits $0,2,3,4,6,7$ is ______. [JEE (Adv) 2022]",
+   "answer": "569",
+   "key_idea": "Split by the leading digits so that each range has the other digits completely free.",
+   "solution": [
+    "Split $[2022,4482]$ by the leading digits.",
+    "(1) $2\\,0\\,2\\,\\square$: the last digit must make the number $\\ge2022$, so it is one of $2,3,4,6,7$: $5$ numbers.",
+    "(2) $2\\,0\\,\\{3,4,6,7\\}\\,\\square$: $4$ choices for the third digit and $6$ for the last: $24$.",
+    "(3) $2\\,\\{2,3,4,6,7\\}\\,\\square\\,\\square$: second digit $\\ne0$ (as $20xx$ is done): $5\\times6\\times6=180$.",
+    "(4) $3\\,\\square\\,\\square\\,\\square$: $6\\times6\\times6=216$.",
+    "(5) $4\\,\\{0,2,3,4\\}\\,\\square\\,\\square$: second digit $\\le4$, then $6\\times6$: $4\\times36=144$ (second digit $4$ allows any third digit since $\\le4482$ with digits $\\le7$ gives $44\\,x\\,y\\le4477$).",
+    "Total $=5+24+180+216+144=569$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count all numbers with leading digit $2,3,4$ and subtract those below $2022$ and above $4482$.",
+     "solution": [
+      "Numbers from these digits with leading digit $2,3$ or $4$: $3\\times6^3=648$ (they all lie in $[2000,4777]$).",
+      "Below $2022$: only $200x$ ($x$ any of the $6$ digits) and $2020$ qualify, since $201x$ and $2021$ need the digit $1$: $6+1=7$ numbers.",
+      "Above $4482$: $4483$ to $4599$ cannot be formed (they need an $8$, $9$, $5$ or $1$), so the numbers above $4482$ are $46xx$ and $47xx$: $2\\times6\\times6=72$.",
+      "Count $=648-7-72=569$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For interval counts with a restricted digit set, split by the leading digits so that the remaining places are free: each free place contributes the full digit count.",
+    "Complement/trim method: count all numbers with a convenient leading-digit range, then subtract the strips outside the interval.",
+    "Beware leading zero and any excluded digits: check that boundary cases such as $2021$ and $4483$ are really not formable."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Selection of balls from boxes with constraints",
+    "Casework on distributions"
+   ],
+   "level": 4,
+   "question": "Consider $4$ boxes, where each box contains $3$ red balls and $2$ blue balls. Assume that all $20$ balls are distinct. In how many different ways can $10$ balls be chosen from these $4$ boxes so that from each box at least one red ball and one blue ball are chosen? [JEE (Adv) 2022]",
+   "options": [
+    "$21816$",
+    "$85536$",
+    "$12096$",
+    "$156816$"
+   ],
+   "answer": "(A) 21816",
+   "key_idea": "Per box the pick is $(r,b)$ with $r\\in\\{1,2,3\\},b\\in\\{1,2\\}$; only $4$ patterns of $(\\sum r,\\sum b)$ reach a total of $10$.",
+   "solution": [
+    "From each box we need $r_i\\in\\{1,2,3\\}$ red and $b_i\\in\\{1,2\\}$ blue, with $\\sum(r_i+b_i)=10$. Then $\\sum r_i\\ge4$, $\\sum b_i\\ge4$ and $\\sum b_i\\le8$.",
+    "A box with $r$ red and $b$ blue chosen can be done in $\\binom3r\\binom2b$ ways. Reds contribute weights $\\binom31=3,\\binom32=3,\\binom33=1$ for $r=1,2,3$ and blues contribute $\\binom21=2,\\binom22=1$ for $b=1,2$.",
+    "Pattern 1 ($\\sum r=6,\\sum b=4$): reds $(2,2,1,1)$ in $6$ arrangements, all blues $1$: $6\\cdot3^4\\cdot2^4=7776=6^3\\cdot36$.",
+    "Pattern 2 ($\\sum r=6,\\sum b=4$): reds $(3,1,1,1)$ in $4$ arrangements, all blues $1$: $4\\cdot(1\\cdot3^3)\\cdot2^4=1728=6^3\\cdot8$.",
+    "Pattern 3 ($\\sum r=4,\\sum b=6$): all reds $1$, blues $(2,2,1,1)$ in $6$ arrangements: $6\\cdot3^4\\cdot(1\\cdot1\\cdot2\\cdot2)=1944=6^3\\cdot9$.",
+    "Pattern 4 ($\\sum r=5,\\sum b=5$): one box with $2$ reds ($4$ choices, weight $3^4$) and one box with $2$ blues ($4$ choices, weight $1\\cdot2^3$): $16\\cdot81\\cdot8=10368=6^3\\cdot48$.",
+    "Total $=6^3\\,(36+8+9+48)=216\\times101=21816$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use a generating function per box in a single variable $t$ (total balls) and read off the coefficient of $t^{10}$.",
+     "solution": [
+      "One box: at least one red and one blue: $\\big((1+t)^3-1\\big)\\big((1+t)^2-1\\big)=(3t+3t^2+t^3)(2t+t^2)$.",
+      "$=t^2(3+3t+t^2)(2+t)=t^2(6+9t+5t^2+t^3)$.",
+      "Four boxes: $t^8(6+9t+5t^2+t^3)^4$; we need $[t^{10}]$, i.e. $[t^2]$ of $(6+9t+5t^2+t^3)^4$.",
+      "$[t^2]=4\\cdot6^3\\cdot5+\\binom42\\cdot6^2\\cdot9^2=4320+17496$.",
+      "$=21816$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Box-wise choices with minimum/maximum constraints: use one generating polynomial per box and extract a coefficient, instead of listing patterns.",
+    "At least one of each colour from one box: $\\big((1+t)^a-1\\big)\\big((1+t)^b-1\\big)$ in the variable counting chosen balls.",
+    "Factor out the forced minimum (here $t^2$ per box) to shrink the coefficient you need."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution into groups of given sizes with restrictions",
+    "Inclusion–exclusion"
+   ],
+   "level": 4,
+   "question": "A group of $9$ students $s_1,s_2,\\dots,s_9$ is divided to form three teams $X,Y$ and $Z$ of sizes $2,3$ and $4$ respectively. Suppose that $s_1$ cannot be selected for the team $X$, and $s_2$ cannot be selected for the team $Y$. Then the number of ways to form such teams is ______. [JEE (Adv) 2024]",
+   "answer": "665",
+   "key_idea": "Count all divisions, then subtract those with $s_1\\in X$ or $s_2\\in Y$ by inclusion–exclusion.",
+   "solution": [
+    "Total ways to form teams of sizes $2,3,4$ from $9$ students: $\\frac{9!}{2!\\,3!\\,4!}=1260$.",
+    "Teams with $s_1\\in X$: fix $s_1$ in $X$, so $\\frac{8!}{1!\\,3!\\,4!}=280$.",
+    "Teams with $s_2\\in Y$: fix $s_2$ in $Y$, so $\\frac{8!}{2!\\,2!\\,4!}=420$.",
+    "Teams with $s_1\\in X$ and $s_2\\in Y$: $\\frac{7!}{1!\\,2!\\,4!}=105$.",
+    "Valid ways $=1260-280-420+105=665$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Direct casework: choose $X$ first (avoiding $s_1$), then $Y$ (avoiding $s_2$), $Z$ is the rest.",
+     "solution": [
+      "$X$ is a $2$-subset of $\\{s_2,\\dots,s_9\\}$: $\\binom82=28$.",
+      "Case $s_2\\in X$: $\\binom71=7$ choices of $X$; then $Y$ is any $3$ of the remaining $7$: $\\binom73=35$; $7\\times35=245$.",
+      "Case $s_2\\notin X$: $\\binom72=21$ choices of $X$; $s_2$ is among the remaining $7$ but cannot be in $Y$, so $Y$ comes from $6$: $\\binom63=20$; $21\\times20=420$.",
+      "Total $=245+420=665$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Divisions of $n$ distinct people into labelled teams of sizes $a,b,c$: $\\frac{n!}{a!\\,b!\\,c!}$.",
+    "A restriction 'person $p$ not in team $T$' is handled by $|\\text{all}|-|p\\in T|$; two restrictions give inclusion–exclusion with the intersection term.",
+    "Casework by whether the second restricted person is already used avoids inclusion–exclusion and serves as a cross-check."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Counting numbers with restricted digit frequencies",
+    "Inclusion–exclusion"
+   ],
+   "level": 5,
+   "question": "Let $S$ be the set of all seven-digit numbers that can be formed using the digits $0,1$ and $2$. For example, $2210222$ is in $S$, but $0210222$ is NOT in $S$. Then the number of elements $x$ in $S$ such that at least one of the digits $0$ and $1$ appears exactly twice in $x$, is equal to ______. [JEE (Adv) 2025]",
+   "answer": "762",
+   "key_idea": "Use $|A\\cup B|=|A|+|B|-|A\\cap B|$ with $A$: $0$ appears exactly twice, $B$: $1$ appears exactly twice, minding the leading digit.",
+   "solution": [
+    "Let $A$: $0$ appears exactly twice; $B$: $1$ appears exactly twice. We need $|A|+|B|-|A\\cap B|$ (the first digit is never $0$).",
+    "$|A|$: the two zeros occupy $2$ of the last $6$ places: $\\binom62$; the other $5$ places hold $1$ or $2$: $2^5$. $|A|=15\\times32=480$.",
+    "$|B|$, first digit $1$: exactly one more $1$ among the last $6$ places ($\\binom61$), the other $5$ places from $\\{0,2\\}$: $6\\times32=192$.",
+    "$|B|$, first digit $2$: two $1$'s in the last $6$ places ($\\binom62$), the other $4$ places from $\\{0,2\\}$: $15\\times16=240$.",
+    "$|B|=192+240=432$.",
+    "$|A\\cap B|$, first digit $1$: the last $6$ places hold two $0$s, one $1$ and three $2$s: $\\binom63\\binom31=60$.",
+    "$|A\\cap B|$, first digit $2$: the last $6$ places hold two $0$s, two $1$s and two $2$s: $\\frac{6!}{2!\\,2!\\,2!}=90$.",
+    "$|A\\cap B|=60+90=150$.",
+    "Answer $=480+432-150=762$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Sum over digit-frequency types $(n_0,n_1,n_2)$ using the fact that a fraction $\\frac{7-n_0}{7}$ of all arrangements has a non-zero first digit.",
+     "solution": [
+      "For counts $(n_0,n_1,n_2)$ with sum $7$, arrangements with a non-zero first digit number $\\frac{7!}{n_0!\\,n_1!\\,n_2!}\\cdot\\frac{7-n_0}{7}$ (by symmetry of positions).",
+      "$A$ ($n_0=2$): $\\sum_{n_1}\\frac{7!}{2!\\,n_1!\\,(5-n_1)!}\\cdot\\frac57=\\frac57\\cdot21\\cdot2^5=480$.",
+      "$B$ ($n_1=2$): $\\sum_{n_0=0}^{5}\\frac{7!}{n_0!\\,2!\\,(5-n_0)!}\\cdot\\frac{7-n_0}{7}=432$.",
+      "$A\\cap B$: $(n_0,n_1,n_2)=(2,2,3)$: $\\frac{7!}{2!\\,2!\\,3!}\\cdot\\frac57=210\\cdot\\frac57=150$.",
+      "$480+432-150=762$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Leading-zero rule: among all arrangements of a multiset with $n_0$ zeros in $n$ places, a fraction $\\frac{n-n_0}{n}$ has a non-zero first digit.",
+    "'At least one of two events': $|A|+|B|-|A\\cap B|$; compute the overlap type directly from the frequency triple $(2,2,3)$.",
+    "Exactly $k$ copies of a digit in $n$ places over an alphabet of size $m$: $\\binom nk(m-1)^{n-k}$ (adjust the first place if $0$ is the digit)."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Distribution of identical objects (stars and bars) with upper bounds"
+   ],
+   "level": 3,
+   "question": "The number of ways to distribute $10$ identical red pens and $14$ identical blue pens among four persons such that each person gets $6$ pens, is ______. [JEE (Adv) 2026]",
+   "answer": "206",
+   "key_idea": "Each person's red count $r_i$ determines the blue count $b_i=6-r_i$, so only $r_i\\in[0,6]$ with $\\sum r_i=10$ matters.",
+   "solution": [
+    "Let person $i$ get $r_i$ red and $b_i$ blue pens with $r_i+b_i=6$ and $r_1+r_2+r_3+r_4=10$.",
+    "Then $b_i=6-r_i$, and $b_i\\ge0$ requires $r_i\\le6$; also $r_i\\ge0$.",
+    "(The blue total is then $24-10=14$ automatically.)",
+    "So count solutions of $r_1+r_2+r_3+r_4=10$ with $0\\le r_i\\le6$.",
+    "Without the upper bound: $\\binom{10+4-1}{3}=\\binom{13}{3}=286$.",
+    "Subtract those with some $r_i\\ge7$: put $r_i'=r_i-7$, giving $\\sum=3$: $\\binom{3+3}{3}=\\binom63=20$ for each $i$, so $4\\times20=80$ (two variables $\\ge7$ would need sum $\\ge14>10$).",
+    "Answer $=286-80=206$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "List the partitions of $10$ into at most four parts each $\\le6$ and count the distinct orderings of each.",
+     "solution": [
+      "We need ordered $(r_1,\\dots,r_4)$ with sum $10$, $0\\le r_i\\le6$; classify by sorted type.",
+      "Types containing a $6$: $(6,4,0,0):12$, $(6,3,1,0):24$, $(6,2,2,0):12$, $(6,2,1,1):12$; subtotal $60$.",
+      "Types with maximum $5$: $(5,5,0,0):6$, $(5,4,1,0):24$, $(5,3,2,0):24$, $(5,3,1,1):12$, $(5,2,2,1):12$; subtotal $78$.",
+      "Types with maximum $4$: $(4,4,2,0):12$, $(4,4,1,1):6$, $(4,3,3,0):12$, $(4,3,2,1):24$, $(4,2,2,2):4$; subtotal $58$.",
+      "Types with maximum $3$: $(3,3,3,1):4$, $(3,3,2,2):6$; subtotal $10$.",
+      "Total $=60+78+58+10=206$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Bounded stars and bars: the number of solutions of $x_1+\\dots+x_k=n$ with $0\\le x_i\\le m$ is $\\sum_j(-1)^j\\binom kj\\binom{n-j(m+1)+k-1}{k-1}$.",
+    "When each person's total is fixed, the second colour is determined by the first; reduce a two-colour problem to one variable per person.",
+    "Equivalently the answer is $[x^{10}](1+x+\\dots+x^6)^4=[x^{10}]\\frac{(1-x^7)^4}{(1-x)^4}$."
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 1,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 2,
+   "to": 3,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "0 if unanswered (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 4,
+   "to": 4,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 5,
+   "to": 7,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 8,
+   "to": 9,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 10,
+   "to": 11,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 12,
+   "to": 12,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 13,
+   "to": 15,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "One or more than one Correct Type",
+   "from": 16,
+   "to": 16,
+   "marking": [
+    "+4 for all correct options (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 17,
+   "to": 17,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 18,
+   "to": 18,
+   "marking": [
+    "+3 for the correct option (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 19,
+   "to": 21,
+   "marking": [
+    "+4 for the correct value (assumed)",
+    "Marks assumed: not printed in the paper"
+   ]
+  }
+ ]
+}
