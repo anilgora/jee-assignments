@@ -1,0 +1,480 @@
+[
+ {
+  "q_no": 61,
+  "concepts": [
+   "Definite integral as a limit of a sum"
+  ],
+  "level": 1,
+  "question": "$\\lim_{n\\to\\infty}\\frac{1}{2^n}\\left(\\frac{1}{\\sqrt{1-\\frac{1}{2^n}}}+\\frac{1}{\\sqrt{1-\\frac{2}{2^n}}}+\\frac{1}{\\sqrt{1-\\frac{3}{2^n}}}+\\dots+\\frac{1}{\\sqrt{1-\\frac{2^n-1}{2^n}}}\\right)$ is equal to:",
+  "options": [
+   "$\\frac12$",
+   "$1$",
+   "$2$",
+   "$-2$"
+  ],
+  "answer": "(C) 2",
+  "key_idea": "With $t=2^n$ the sum is a Riemann sum for $\\int_0^1\\frac{dx}{\\sqrt{1-x}}$, which converges.",
+  "solution": [
+   "Let $I=\\lim_{n\\to\\infty}\\frac{1}{2^n}\\left(\\frac{1}{\\sqrt{1-\\frac{1}{2^n}}}+\\frac{1}{\\sqrt{1-\\frac{2}{2^n}}}+\\dots+\\frac{1}{\\sqrt{1-\\frac{2^n-1}{2^n}}}\\right)$.",
+   "Put $2^n=t$. As $n\\to\\infty$, $t\\to\\infty$.",
+   "Then $I=\\lim_{t\\to\\infty}\\frac{1}{t}\\sum_{r=1}^{t-1}\\frac{1}{\\sqrt{1-\\frac{r}{t}}}$.",
+   "Replace $\\frac{r}{t}$ by $x$ and $\\frac1t$ by $dx$: $I=\\int_0^1\\frac{dx}{\\sqrt{1-x}}$ (convergent improper integral).",
+   "Using $\\int_0^a f(x)\\,dx=\\int_0^a f(a-x)\\,dx$: $I=\\int_0^1\\frac{dx}{\\sqrt{x}}$.",
+   "$I=\\left[2x^{1/2}\\right]_0^1=2$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "$(1-x)^{-1/2}$ is increasing, so each term is squeezed between two integrals and the sum is trapped between two quantities tending to $2$.",
+    "solution": [
+     "Let $g(x)=(1-x)^{-1/2}$, increasing on $[0,1)$, and $S_t=\\frac1t\\sum_{r=1}^{t-1}g\\left(\\frac rt\\right)$.",
+     "Since $g$ is increasing, $\\frac1t g\\left(\\frac rt\\right)\\ge\\int_{(r-1)/t}^{r/t}g\\,dx$. Summing over $r=1,\\dots,t-1$ gives $S_t\\ge\\int_0^{1-1/t}g\\,dx$.",
+     "Also $\\frac1t g\\left(\\frac rt\\right)\\le\\int_{r/t}^{(r+1)/t}g\\,dx$ (the last interval ends at $1$ and the integral converges). Summing gives $S_t\\le\\int_{1/t}^{1}g\\,dx$.",
+     "Now $\\int_0^{1-1/t}(1-x)^{-1/2}dx=2-\\frac{2}{\\sqrt t}$ and $\\int_{1/t}^{1}(1-x)^{-1/2}dx=2\\sqrt{1-\\frac1t}$.",
+     "Therefore $2-\\frac{2}{\\sqrt t}\\le S_t\\le 2\\sqrt{1-\\frac1t}$, and both bounds tend to $2$ as $t\\to\\infty$.",
+     "By the squeeze theorem the limit is $2$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For continuous $f$ on $[0,1]$: $\\lim_{n\\to\\infty}\\frac1n\\sum_{r=1}^{n}f\\left(\\frac rn\\right)=\\int_0^1 f(x)\\,dx$; dropping or adding one end term does not change the limit.",
+   "If the integrand blows up at an endpoint (like $(1-x)^{-p}$, $p<1$) the same rule holds when $f$ is monotone near that endpoint and the improper integral converges; if $p\\ge1$ the sum diverges.",
+   "$\\int_0^1(1-x)^{-p}dx=\\frac{1}{1-p}$ for $p<1$: $p=\\frac12$ gives $2$ (this question), $p=\\frac13$ gives $\\frac32$.",
+   "Recognition cue: terms of the form $\\frac1t\\,\\phi\\left(\\frac rt\\right)$; the number of terms ($2^n$) may be any sequence tending to infinity."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 62,
+  "concepts": [
+   "Definite integral of periodic and greatest-integer functions"
+  ],
+  "level": 2,
+  "question": "Let $[t]$ denote the greatest integer less than or equal to $t$. Then the value of the integral $\\int_{-3}^{101}\\left([\\sin(\\pi x)]+e^{[\\cos(2\\pi x)]}\\right)dx$ is equal to:",
+  "options": [
+   "$\\frac{52(1-e)}{e}$",
+   "$\\frac{52}{e}$",
+   "$\\frac{52(2+e)}{e}$",
+   "$\\frac{104}{e}$"
+  ],
+  "answer": "(B) $\\frac{52}{e}$",
+  "key_idea": "Both terms repeat with period $2$ and the length $104$ is $52$ periods; on one period each floor takes only the values $-1,0$.",
+  "solution": [
+   "Let $I=\\int_{-3}^{101}\\left([\\sin(\\pi x)]+e^{[\\cos(2\\pi x)]}\\right)dx$.",
+   "$[\\sin\\pi x]$ is periodic with period $2$ and $e^{[\\cos2\\pi x]}$ is periodic with period $1$, so the integrand has period $2$.",
+   "The length of $[-3,101]$ is $104=52\\times2$, so $I=52\\int_0^2\\left([\\sin\\pi x]+e^{[\\cos2\\pi x]}\\right)dx$.",
+   "On $[0,2]$: $[\\sin\\pi x]=0$ on $[0,1]$ and $-1$ on $(1,2)$.",
+   "$[\\cos2\\pi x]=-1$ on $\\left(\\frac14,\\frac34\\right)\\cup\\left(\\frac54,\\frac74\\right)$ and $0$ on $\\left[0,\\frac14\\right]\\cup\\left[\\frac34,\\frac54\\right]\\cup\\left[\\frac74,2\\right]$ (value $1$ only at isolated points).",
+   "$I=52\\left\\{\\int_1^2(-1)dx+\\int_{1/4}^{3/4}e^{-1}dx+\\int_{5/4}^{7/4}e^{-1}dx+\\int_0^{1/4}e^{0}dx+\\int_{3/4}^{5/4}e^{0}dx+\\int_{7/4}^{2}e^{0}dx\\right\\}$.",
+   "Evaluate: $-1+\\frac1e\\left(\\frac12+\\frac12\\right)+\\left(\\frac14+\\frac12+\\frac14\\right)=-1+\\frac1e+1=\\frac1e$.",
+   "Hence $I=\\frac{52}{e}$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Use $[s]+[-s]=-1$ for non-integer $s$, and treat $e^{[\\cos2\\pi x]}$ as two-valued by the sign of $\\cos2\\pi x$ (half of each period each).",
+    "solution": [
+     "The integrand has period $2$ and $[-3,101]$ has length $104$, so $I=52\\int_0^2(\\cdots)dx$.",
+     "Substituting $x\\to x+1$: $\\int_1^2[\\sin\\pi x]dx=\\int_0^1[-\\sin\\pi x]dx$. So $\\int_0^2[\\sin\\pi x]dx=\\int_0^1\\left([s]+[-s]\\right)dx$ with $s=\\sin\\pi x$.",
+     "For non-integer $s$, $[s]+[-s]=-1$; $s$ is an integer only at $x=0,\\frac12,1$, so $\\int_0^2[\\sin\\pi x]dx=-1$.",
+     "$[\\cos2\\pi x]=-1$ where $\\cos2\\pi x<0$, and $0$ where $0\\le\\cos2\\pi x<1$ (the value $1$ occurs only at isolated points). So $e^{[\\cos2\\pi x]}$ equals $e^{-1}$ when $\\cos2\\pi x<0$ and $1$ otherwise.",
+     "In each period of length $1$, $\\cos2\\pi x<0$ on exactly half of it, so $\\int_0^1e^{[\\cos2\\pi x]}dx=\\frac12\\cdot1+\\frac12\\cdot e^{-1}$, and over $[0,2]$ it is $1+e^{-1}$.",
+     "Per period of length $2$: $-1+1+e^{-1}=e^{-1}$.",
+     "Hence $I=52\\cdot\\frac1e=\\frac{52}{e}$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "If $f$ has period $T$: $\\int_a^{a+nT}f(x)dx=n\\int_0^Tf(x)dx$ for every $a$. A sum of periodic functions has period equal to the lcm of the periods (here $\\mathrm{lcm}(2,1)=2$).",
+   "For non-integer $s$: $[s]+[-s]=-1$. Hence $\\int_0^{2}[\\sin\\pi x]dx=-1$ and $\\int_0^{2\\pi}[\\sin x]dx=-\\pi$.",
+   "$[\\cos\\theta]=-1$ if $\\cos\\theta<0$, $0$ if $0\\le\\cos\\theta<1$, $1$ only at $\\cos\\theta=1$ (a set of measure zero): such floors are two-valued, so only the measure of the set $\\{\\cos<0\\}$ matters (half a period).",
+   "Check: numerical integration of the integrand over $[-3,101]$ gives $19.1297=52/e$."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 63,
+  "concepts": [
+   "Limit of a sum as a definite integral",
+   "Differentiation of trigonometric functions"
+  ],
+  "level": 2,
+  "question": "If $a=\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\frac{2n}{n^2+k^2}$ and $f(x)=\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}$, $x\\in(0,1)$, then:",
+  "options": [
+   "$2\\sqrt2\\,f\\left(\\frac a2\\right)=f'\\left(\\frac a2\\right)$",
+   "$f\\left(\\frac a2\\right)f'\\left(\\frac a2\\right)=\\sqrt2$",
+   "$\\sqrt2\\,f\\left(\\frac a2\\right)=f'\\left(\\frac a2\\right)$",
+   "$f\\left(\\frac a2\\right)=\\sqrt2\\,f'\\left(\\frac a2\\right)$"
+  ],
+  "answer": "(C) $\\sqrt2\\,f\\left(\\frac a2\\right)=f'\\left(\\frac a2\\right)$",
+  "key_idea": "$a=\\int_0^1\\frac{2}{1+x^2}dx=\\frac\\pi2$ and $f(x)=\\tan\\frac x2$, so everything is evaluated at $\\frac\\pi4$ with $\\tan\\frac\\pi8=\\sqrt2-1$.",
+  "solution": [
+   "$a=\\lim_{n\\to\\infty}\\frac1n\\sum_{k=1}^{n}\\frac{2}{1+\\left(\\frac kn\\right)^2}$, a Riemann sum.",
+   "So $a=\\int_0^1\\frac{2}{1+x^2}dx=2\\tan^{-1}x\\Big|_0^1=\\frac\\pi2$.",
+   "For $x\\in(0,1)$: $f(x)=\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}=\\sqrt{\\tan^2\\frac x2}=\\tan\\frac x2$ (positive).",
+   "$\\frac a2=\\frac\\pi4\\in(0,1)$ and $f\\left(\\frac\\pi4\\right)=\\tan\\frac\\pi8=\\sqrt2-1$.",
+   "$f'(x)=\\frac12\\sec^2\\frac x2$, so $f'\\left(\\frac\\pi4\\right)=\\frac12\\sec^2\\frac\\pi8$.",
+   "$\\sec^2\\frac\\pi8=1+\\tan^2\\frac\\pi8=1+(\\sqrt2-1)^2=4-2\\sqrt2$, so $f'\\left(\\frac\\pi4\\right)=2-\\sqrt2=\\frac{\\sqrt2}{\\sqrt2+1}$.",
+   "$\\sqrt2\\,f\\left(\\frac\\pi4\\right)=\\sqrt2(\\sqrt2-1)=2-\\sqrt2$.",
+   "Hence $f'\\left(\\frac a2\\right)=\\sqrt2\\,f\\left(\\frac a2\\right)$, option (C)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Use $f'=\\frac12(1+f^2)$ and the quadratic $t^2+2t-1=0$ satisfied by $t=\\tan\\frac\\pi8$, so no half-angle secant value is needed.",
+    "solution": [
+     "As before $a=\\frac\\pi2$ and $f(x)=\\tan\\frac x2$; let $t=f\\left(\\frac\\pi4\\right)=\\tan\\frac\\pi8$.",
+     "$f'(x)=\\frac12\\sec^2\\frac x2=\\frac12\\left(1+f^2\\right)$, so $f'\\left(\\frac\\pi4\\right)=\\frac12(1+t^2)$.",
+     "$\\tan\\frac\\pi4=1$ gives $\\frac{2t}{1-t^2}=1$, i.e. $t^2+2t-1=0$, so $t^2=1-2t$.",
+     "Then $f'\\left(\\frac\\pi4\\right)=\\frac12(2-2t)=1-t$.",
+     "Option (C) asks $1-t=\\sqrt2\\,t$, i.e. $t=\\frac{1}{1+\\sqrt2}=\\sqrt2-1$, which is the positive root of $t^2+2t-1=0$: true.",
+     "Check the others with $t=0.4142$, $f'=0.5858$: (A) $2\\sqrt2t=1.17\\ne0.586$; (B) $tf'=0.243\\ne\\sqrt2$; (D) $t=0.414\\ne\\sqrt2f'=0.828$. Only (C) holds."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\frac{n}{n^2+k^2}=\\int_0^1\\frac{dx}{1+x^2}=\\frac\\pi4$; the constant $2$ here doubles it. Rewrite as $\\frac1n\\sum\\phi\\left(\\frac kn\\right)$ by dividing numerator and denominator by $n^2$.",
+   "$\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}=\\left|\\tan\\frac x2\\right|$; so for $x\\in(0,\\pi)$ it equals $\\tan\\frac x2$.",
+   "If $f=\\tan u$ then $\\frac{df}{du}=1+f^2$; with $u=\\frac x2$: $f'=\\frac12(1+f^2)$. A relation between $f$ and $f'$ at one point then follows from one value of $f$.",
+   "$t=\\tan\\frac\\theta2$ satisfies $t^2+2t\\cot\\theta-1=0$: $\\theta=\\frac\\pi4$ gives $\\tan\\frac\\pi8=\\sqrt2-1$ and $\\theta=\\frac\\pi6$ gives $\\tan\\frac{\\pi}{12}=2-\\sqrt3$."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 64,
+  "concepts": [
+   "Definite integral of periodic functions (modulus of trigonometric functions)"
+  ],
+  "level": 1,
+  "question": "$\\int_0^{20\\pi}\\left(|\\sin x|+|\\cos x|\\right)^2dx$ is equal to:",
+  "options": [
+   "$10(\\pi+4)$",
+   "$10(\\pi+2)$",
+   "$20(\\pi-2)$",
+   "$20(\\pi+2)$"
+  ],
+  "answer": "(D) $20(\\pi+2)$",
+  "key_idea": "$(|\\sin x|+|\\cos x|)^2$ has period $\\frac\\pi2$, so $[0,20\\pi]$ is $40$ copies of $\\left[0,\\frac\\pi2\\right]$ where the moduli can be dropped.",
+  "solution": [
+   "$I=\\int_0^{20\\pi}\\left(|\\sin x|+|\\cos x|\\right)^2dx$.",
+   "The integrand is periodic with period $\\frac\\pi2$ (since $|\\sin(x+\\frac\\pi2)|=|\\cos x|$ and $|\\cos(x+\\frac\\pi2)|=|\\sin x|$), and $20\\pi=40\\cdot\\frac\\pi2$.",
+   "So $I=40\\int_0^{\\pi/2}\\left(\\sin x+\\cos x\\right)^2dx$, the moduli being unnecessary on $\\left[0,\\frac\\pi2\\right]$.",
+   "$(\\sin x+\\cos x)^2=1+2\\sin x\\cos x=1+\\sin2x$.",
+   "$I=40\\int_0^{\\pi/2}(1+\\sin2x)\\,dx=40\\left[x-\\frac{\\cos2x}{2}\\right]_0^{\\pi/2}$.",
+   "$\\left[x-\\frac{\\cos2x}{2}\\right]_0^{\\pi/2}=\\left(\\frac\\pi2+\\frac12\\right)-\\left(0-\\frac12\\right)=\\frac\\pi2+1$.",
+   "$I=40\\left(\\frac\\pi2+1\\right)=20\\pi+40=20(\\pi+2)$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Expand first: $(|\\sin x|+|\\cos x|)^2=1+|\\sin2x|$, then count humps of $|\\sin2x|$, each of area $1$.",
+    "solution": [
+     "$(|\\sin x|+|\\cos x|)^2=1+2|\\sin x||\\cos x|=1+|\\sin2x|$ (no case analysis needed).",
+     "$\\int_0^{20\\pi}1\\,dx=20\\pi$.",
+     "$|\\sin2x|$ has period $\\frac\\pi2$, so $[0,20\\pi]$ contains $40$ identical humps.",
+     "One hump: $\\int_0^{\\pi/2}|\\sin2x|dx=\\left[-\\frac{\\cos2x}{2}\\right]_0^{\\pi/2}=1$, so $\\int_0^{20\\pi}|\\sin2x|dx=40$.",
+     "$I=20\\pi+40=20(\\pi+2)$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$(|\\sin x|+|\\cos x|)^2=1+|\\sin2x|$ always; hence $1\\le(|\\sin x|+|\\cos x|)\\le\\sqrt2$.",
+   "$\\int_0^{n\\pi/2}|\\sin2x|\\,dx=n$ and $\\int_0^{n\\pi}|\\sin x|\\,dx=\\int_0^{n\\pi}|\\cos x|\\,dx=2n$; the mean value of $|\\sin x|$ is $\\frac2\\pi$.",
+   "For a function of period $T$ the integral over $m$ periods is $m$ times the integral over one; choose the smallest period (here $\\frac\\pi2$, not $\\pi$ or $2\\pi$).",
+   "Sanity check: $I=20\\pi+40\\approx102.8$ lies between $\\int(1)=62.8$ and $\\int 2=125.7$, as $1\\le(\\ldots)^2\\le2$."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 65,
+  "concepts": [
+   "Limits and the greatest-integer function",
+   "Definite integral of the greatest-integer function"
+  ],
+  "level": 2,
+  "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=a\\sin\\left(\\frac{\\pi[x]}{2}\\right)+[2-x]$, $a\\in\\mathbb{R}$, where $[t]$ is the greatest integer less than or equal to $t$. If $\\lim_{x\\to-1}f(x)$ exists, then the value of $\\int_0^4f(x)\\,dx$ is equal to:",
+  "options": [
+   "$-1$",
+   "$-2$",
+   "$1$",
+   "$2$"
+  ],
+  "answer": "(B) $-2$",
+  "key_idea": "Equating the two one-sided limits at $x=-1$ gives $a=-1$; then $f$ is constant on each unit interval of $[0,4]$.",
+  "solution": [
+   "For $x\\to-1^+$: $x\\in(-1,0)$, $[x]=-1$, $\\sin\\left(-\\frac\\pi2\\right)=-1$ and $[2-x]=2$, so $\\lim_{x\\to-1^+}f(x)=-a+2$.",
+   "For $x\\to-1^-$: $x\\in(-2,-1)$, $[x]=-2$, $\\sin(-\\pi)=0$ and $[2-x]=3$, so $\\lim_{x\\to-1^-}f(x)=0+3=3$.",
+   "The limit exists when $-a+2=3$, i.e. $a=-1$.",
+   "Split $\\int_0^4f\\,dx=\\int_0^1f+\\int_1^2f+\\int_2^3f+\\int_3^4f$.",
+   "On $[0,1)$: $[x]=0$, $[2-x]=1$, so $f=0+1=1$.",
+   "On $[1,2)$: $[x]=1$, $a\\sin\\frac\\pi2=-1$, $[2-x]=0$, so $f=-1+0=-1$.",
+   "On $[2,3)$: $[x]=2$, $\\sin\\pi=0$, $[2-x]=-1$, so $f=0-1=-1$.",
+   "On $[3,4)$: $[x]=3$, $a\\sin\\frac{3\\pi}2=(-1)(-1)=1$, $[2-x]=-2$, so $f=1-2=-1$.",
+   "$\\int_0^4f\\,dx=1-1-1-1=-2$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "The $a$-term integrates to $0$ over $[0,4]$ for every $a$, and $x\\to2-x$ turns the rest into $\\int_{-2}^{2}[u]\\,du$.",
+    "solution": [
+     "Write $\\int_0^4f=a\\int_0^4\\sin\\frac{\\pi[x]}{2}dx+\\int_0^4[2-x]dx$.",
+     "On $[k,k+1)$, $k=0,1,2,3$, $\\sin\\frac{\\pi k}{2}=0,1,0,-1$; so $\\int_0^4\\sin\\frac{\\pi[x]}{2}dx=0+1+0-1=0$ and the $a$-term vanishes whatever $a$ is.",
+     "Put $u=2-x$: $\\int_0^4[2-x]dx=\\int_{-2}^{2}[u]\\,du$.",
+     "$[u]=-2,-1,0,1$ on $[-2,-1),[-1,0),[0,1),[1,2)$, so the integral is $-2-1+0+1=-2$.",
+     "So $\\int_0^4f\\,dx=-2$ (the condition $a=-1$ is needed for the limit to exist but does not affect the value)."
+    ]
+   }
+  ],
+  "useful_results": [
+   "At an integer point $n$, $[x]\\to n-1$ as $x\\to n^-$ and $[x]\\to n$ as $x\\to n^+$; a limit of an expression with floors exists iff the one-sided values agree.",
+   "$\\int_0^n[x]\\,dx=\\frac{n(n-1)}{2}$ (e.g. $n=4$: $0+1+2+3=6$) and $\\int_a^b[c-x]dx=\\int_{c-b}^{c-a}[u]du$.",
+   "$\\sin\\frac{\\pi k}{2}$ runs through $0,1,0,-1$ with period $4$, so its sum over any $4$ consecutive integers is $0$: such a term integrates to $0$ over $[m,m+4]$ regardless of its coefficient.",
+   "On a unit interval $[k,k+1)$ every floor of the form $[\\pm x+c]$ ($c$ integer) is constant, so the integral is the sum of the constants."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 66,
+  "concepts": [
+   "Estimation of a definite integral (inequalities)"
+  ],
+  "level": 3,
+  "question": "Let $I=\\int_{\\pi/4}^{\\pi/3}\\left(\\frac{8\\sin x-\\sin2x}{x}\\right)dx$. Then:",
+  "options": [
+   "$\\frac\\pi2<I<\\frac{3\\pi}{4}$",
+   "$\\frac\\pi4<I<\\frac{5\\pi}{12}$",
+   "$\\frac{5\\pi}{12}<I<\\frac{\\sqrt2}{3}\\pi$",
+   "$\\frac{3\\pi}{4}<I<\\pi$"
+  ],
+  "answer": "(C) $\\frac{5\\pi}{12}<I<\\frac{\\sqrt2}{3}\\pi$ as keyed (strictly, $I\\approx1.536$ and no printed option is fully true)",
+  "key_idea": "$g(x)=8\\sin x-\\sin2x$ is concave with $g(0)=0$, so $\\frac{g(x)}{x}$ is decreasing and can be bounded by its end values.",
+  "solution": [
+   "Let $g(x)=8\\sin x-\\sin2x$, so $I=\\int_{\\pi/4}^{\\pi/3}\\frac{g(x)}{x}dx$ and $g(0)=0$.",
+   "$g'(x)=8\\cos x-2\\cos2x$ (the PDF prints $8\\sin x-2\\cos2x$, a slip).",
+   "$g''(x)=-8\\sin x+4\\sin2x=-8\\sin x\\,(1-\\cos x)<0$, so $g'$ is decreasing and $g$ is concave on $(0,\\pi)$.",
+   "$g'\\left(\\frac\\pi3\\right)=4+1=5$ and $g'\\left(\\frac\\pi4\\right)=4\\sqrt2$, hence $5<g'(x)<4\\sqrt2$ for $x\\in\\left(\\frac\\pi4,\\frac\\pi3\\right)$.",
+   "Since $g$ is concave and $g(0)=0$: $g(x)=\\int_0^xg'(t)dt\\ge x\\,g'(x)>5x$, so $\\frac{g(x)}{x}>5$ (the PDF's lower bound is correct).",
+   "The PDF's upper bound $g(x)<4\\sqrt2\\,x$ is not justified: $g'(t)>4\\sqrt2$ for $t<\\frac\\pi4$ (e.g. $g'(0)=6$), and indeed $\\frac{g(\\pi/4)}{\\pi/4}=\\frac{4(4\\sqrt2-1)}{\\pi}\\approx5.93>4\\sqrt2\\approx5.66$.",
+   "Valid upper bound: $\\frac{g(x)}{x}$ is decreasing (as $xg'-g\\le0$), so on $\\left[\\frac\\pi4,\\frac\\pi3\\right]$: $\\frac{21\\sqrt3}{2\\pi}=\\frac{g(\\pi/3)}{\\pi/3}\\le\\frac{g(x)}{x}\\le\\frac{g(\\pi/4)}{\\pi/4}=\\frac{4(4\\sqrt2-1)}{\\pi}$.",
+   "Integrating over an interval of length $\\frac\\pi{12}$: $\\frac{7\\sqrt3}{8}<I<\\frac{4\\sqrt2-1}{3}$, i.e. $1.5155<I<1.5523$ (exact value $I\\approx1.5362$).",
+   "So $I>\\frac{5\\pi}{12}\\approx1.309$ is true, but $\\frac{\\sqrt2\\pi}{3}\\approx1.481<I<\\frac\\pi2\\approx1.571$: the upper bound in (C) and the lower bound $\\frac\\pi2$ in (A) both fail.",
+   "The intended (keyed) answer is (C), obtained from the bound $5<\\frac{g}{x}<4\\sqrt2$; strictly, no printed option is entirely correct."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Step 'f'(x)=8 sinx - 2cos2x' is a print slip (correct: 8cos x - 2cos 2x; the later values f'(pi/3)=5 and f'(pi/4)=4 sqrt2 use the correct one). Real error: the PDF turns bounds on f' over (pi/4,pi/3) into 5x<f(x)<4sqrt2 x, which needs f' on (0,x). The lower bound survives (concavity), the upper bound is false (f(pi/4)/(pi/4)=5.93>4sqrt2=5.66). True I=1.5362, which exceeds sqrt2*pi/3=1.4810, so option (C) as printed is false and no option is fully true; the official key (C) is kept as the intended answer.",
+  "alternate_solutions": [
+   {
+    "idea": "Expand $\\frac{8\\sin x-\\sin2x}{x}$ in a power series (the $x^2$ term cancels) and integrate term by term.",
+    "solution": [
+     "$\\frac{8\\sin x-\\sin2x}{x}=\\sum_{k\\ge0}(-1)^k\\frac{8-2^{2k+1}}{(2k+1)!}x^{2k}$.",
+     "$k=0$: $6$. $k=1$: $8-2^3=0$, so no $x^2$ term. $k=2$: $\\frac{8-32}{120}=-\\frac15$. $k=3$: $-\\frac{8-128}{5040}=\\frac1{42}$. $k=4$: $\\frac{8-512}{362880}=-\\frac1{720}$.",
+     "So the integrand is $6-\\frac{x^4}{5}+\\frac{x^6}{42}-\\frac{x^8}{720}+\\cdots$.",
+     "Integrating: $I=\\left[6x-\\frac{x^5}{25}+\\frac{x^7}{294}-\\frac{x^9}{6480}+\\cdots\\right]_{\\pi/4}^{\\pi/3}$.",
+     "Term values: $6\\left(\\frac\\pi3-\\frac\\pi4\\right)=\\frac\\pi2=1.5708$; next $-0.03842$; next $+0.00407$; next $-0.00022$.",
+     "The terms alternate and decrease, so $I\\approx1.5362$, with $\\frac\\pi2-0.0384<I<\\frac\\pi2$.",
+     "Hence $I<\\frac\\pi2$ (rejecting (A)), $I>\\frac{5\\pi}{12}$, and $I>1.48=\\frac{\\sqrt2\\pi}{3}$ (the upper bound of (C) fails): same conclusion as the corrected primary solution."
+    ]
+   }
+  ],
+  "useful_results": [
+   "If $g(0)=0$ and $g$ is concave on $[0,b]$, then $\\frac{g(x)}{x}$ is decreasing; if $g$ is convex it is increasing. Hence $\\int_a^b\\frac{g}{x}dx$ lies between $(b-a)\\frac{g(b)}{b}$ and $(b-a)\\frac{g(a)}{a}$.",
+   "Bounds on $g'$ over $[a,b]$ bound $g(x)-g(a)$ for $x\\in[a,b]$, not $g(x)$ itself; using them for $g(x)$ needs bounds on $g'$ over all of $[0,x]$.",
+   "For decreasing $h$ on $[a,b]$: $(b-a)h(b)\\le\\int_a^bh\\le(b-a)h(a)$ (check: $h=\\frac gx$ above gives $1.5155<1.5362<1.5523$).",
+   "$\\frac{\\sin x}{x}$ combinations: $\\frac{8\\sin x-\\sin2x}{x}=6-\\frac{x^4}{5}+\\frac{x^6}{42}-\\cdots$; the cancellation of $x^2$ comes from $8=2^3$."
+  ],
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 67,
+  "type_label": "Single Correct Type",
+  "concepts": [
+   "Derivative of modulus functions",
+   "Definite integral of piecewise-linear functions"
+  ],
+  "level": 2,
+  "question": "Let $f(x)=2+|x|-|x-1|+|x+1|$, $x\\in\\mathbb{R}$. Consider\n(S1): $f'\\left(-\\frac32\\right)+f'\\left(-\\frac12\\right)+f'\\left(\\frac12\\right)+f'\\left(\\frac32\\right)=2$\n(S2): $\\int_{-2}^{2}f(x)\\,dx=12$. Then:",
+  "options": [
+   "Both (S1) and (S2) are correct",
+   "Both (S1) and (S2) are wrong",
+   "Only (S1) is correct",
+   "Only (S2) is correct"
+  ],
+  "answer": "(D) Only (S2) is correct",
+  "key_idea": "Remove the moduli interval by interval: $f$ is piecewise linear with slopes $-1,1,3,1$ and kinks at $-1,0,1$.",
+  "solution": [
+   "For $x<-1$: $f=2-x-(1-x)-(x+1)=-x$, slope $-1$.",
+   "For $-1\\le x<0$: $f=2-x-(1-x)+(x+1)=x+2$, slope $1$.",
+   "For $0\\le x<1$: $f=2+x-(1-x)+(x+1)=3x+2$, slope $3$.",
+   "For $x\\ge1$: $f=2+x-(x-1)+(x+1)=x+4$, slope $1$. The graph passes through $(-2,2),(-1,1),(0,2),(1,5),(2,6)$.",
+   "(S1): $f'\\left(-\\frac32\\right)+f'\\left(-\\frac12\\right)+f'\\left(\\frac12\\right)+f'\\left(\\frac32\\right)=-1+1+3+1=4\\ne2$, so (S1) is wrong.",
+   "(S2): the graph is piecewise linear, so each piece is a trapezoid: $\\int_{-2}^{-1}f=\\frac{2+1}{2}=\\frac32$ and $\\int_{-1}^{0}f=\\frac{1+2}{2}=\\frac32$.",
+   "$\\int_0^1f=\\frac{2+5}{2}=\\frac72$ and $\\int_1^2f=\\frac{5+6}{2}=\\frac{11}{2}$.",
+   "$\\int_{-2}^2f\\,dx=\\frac32+\\frac32+\\frac72+\\frac{11}2=12$, so (S2) is correct.",
+   "Only (S2) is correct: option (D)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Differentiate with sign functions and use $\\int_{-2}^{2}|x-c|dx=4+c^2$ instead of drawing the graph.",
+    "solution": [
+     "For $x\\ne0,\\pm1$: $f'(x)=\\operatorname{sgn}x-\\operatorname{sgn}(x-1)+\\operatorname{sgn}(x+1)$.",
+     "$x=-\\frac32$: $-1+1-1=-1$; $x=-\\frac12$: $-1+1+1=1$; $x=\\frac12$: $1+1+1=3$; $x=\\frac32$: $1-1+1=1$. The sum is $4\\ne2$, so (S1) is wrong.",
+     "For $|c|\\le2$: $\\int_{-2}^{2}|x-c|dx=\\frac12\\left[(2-c)^2+(2+c)^2\\right]=4+c^2$ (two right triangles).",
+     "Hence $\\int|x|=4$, $\\int|x-1|=5$, $\\int|x+1|=5$ over $[-2,2]$.",
+     "$\\int_{-2}^2f\\,dx=2\\cdot4+4-5+5=12$, so (S2) is correct. Only (S2): (D)."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For $x\\ne c$: $\\frac{d}{dx}|x-c|=\\operatorname{sgn}(x-c)$. A sum of moduli has slope equal to the signed count of kinks to the left minus right.",
+   "$\\int_{-A}^{A}|x-c|dx=A^2+c^2$ for $|c|\\le A$ (check: $A=2,c=0.3$ gives $4.09$).",
+   "A piecewise-linear function has $\\int_a^bf=\\sum\\frac{f(x_i)+f(x_{i+1})}{2}(x_{i+1}-x_i)$ over its linear pieces (trapezoids).",
+   "Here $f$ has slope jumps $+2$ at $x=-1$ and $x=0$ and $-2$ at $x=1$ (each $|x-c|$ contributes a jump of $\\pm2$)."
+  ],
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 68,
+  "type_label": "Single Correct Type",
+  "concepts": [
+   "Definite integral of modulus and greatest-integer functions"
+  ],
+  "level": 2,
+  "question": "$\\int_0^2\\left(\\left|2x^2-3x\\right|+\\left[x-\\frac12\\right]\\right)dx$, where $[t]$ is the greatest integer function, is equal to:",
+  "options": [
+   "$\\frac76$",
+   "$\\frac{19}{12}$",
+   "$\\frac{31}{12}$",
+   "$\\frac32$"
+  ],
+  "answer": "(B) $\\frac{19}{12}$",
+  "key_idea": "Split at the root $x=\\frac32$ of $2x^2-3x$ for the modulus, and put $t=x-\\frac12$ so the floor is integrated on unit intervals.",
+  "solution": [
+   "Split the integral: $\\int_0^2\\left|2x^2-3x\\right|dx+\\int_0^2\\left[x-\\frac12\\right]dx$.",
+   "$2x^2-3x=x(2x-3)$ is negative on $\\left(0,\\frac32\\right)$ and positive on $\\left(\\frac32,2\\right)$.",
+   "$\\int_0^{3/2}(3x-2x^2)dx=\\left[\\frac{3x^2}{2}-\\frac{2x^3}{3}\\right]_0^{3/2}=\\frac{27}{8}-\\frac94=\\frac98$.",
+   "$\\int_{3/2}^{2}(2x^2-3x)dx=\\left[\\frac{2x^3}{3}-\\frac{3x^2}{2}\\right]_{3/2}^{2}=\\left(\\frac{16}{3}-6\\right)-\\left(\\frac94-\\frac{27}{8}\\right)=-\\frac23+\\frac98=\\frac{11}{24}$.",
+   "So $\\int_0^2|2x^2-3x|dx=\\frac98+\\frac{11}{24}=\\frac{19}{12}$.",
+   "Put $t=x-\\frac12$: $\\int_0^2\\left[x-\\frac12\\right]dx=\\int_{-1/2}^{3/2}[t]\\,dt$.",
+   "$\\int_{-1/2}^{3/2}[t]dt=\\int_{-1/2}^{0}(-1)dt+\\int_0^1 0\\,dt+\\int_1^{3/2}1\\,dt=-\\frac12+0+\\frac12=0$.",
+   "Total $=\\frac{19}{12}+0=\\frac{19}{12}$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Print slips only: the PDF's lower limit of the first piece in the floor integral reads 1/2 (should be -1/2), the pieces are not joined by '+', and the intermediate values 9/8 and 11/24 of the modulus part are not shown. Values and the answer 19/12 are unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "Use the parabola-area formula for the negative part and the symmetry $[1-t]=-[t]$ about $t=\\frac12$ for the floor part.",
+    "solution": [
+     "Let $g(x)=2x^2-3x$ (roots $0,\\frac32$, negative in between). Then $\\int_0^2|g|=\\int_0^2g-2\\int_0^{3/2}g$.",
+     "$\\int_0^2g\\,dx=\\frac{16}{3}-6=-\\frac23$.",
+     "The area between a parabola $ax^2+bx+c$ and the $x$-axis between its roots is $\\frac{|a|(r_2-r_1)^3}{6}=\\frac{2\\left(\\frac32\\right)^3}{6}=\\frac98$, so $\\int_0^{3/2}g=-\\frac98$.",
+     "$\\int_0^2|g|=-\\frac23+\\frac94=\\frac{19}{12}$.",
+     "For the floor part let $J=\\int_{-1/2}^{3/2}[t]dt$. The interval is symmetric about $\\frac12$ and, for non-integer $t$, $[1-t]=-[t]$.",
+     "Substituting $t\\to1-t$: $J=\\int[1-t]dt=-J$, so $J=0$.",
+     "Hence the integral is $\\frac{19}{12}$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "Area between $y=ax^2+bx+c$ and the $x$-axis between its real roots $r_1<r_2$ equals $\\frac{|a|(r_2-r_1)^3}{6}$ (here $\\frac98$).",
+   "If $g\\le0$ on a sub-interval, $\\int|g|=\\int g-2\\int_{\\{g<0\\}}g$; this avoids a second antiderivative evaluation.",
+   "For non-integer $t$: $[1-t]=-[t]$ and $[-t]=-[t]-1$. Therefore $\\int_{1/2-h}^{1/2+h}[t]dt=0$ for every $h$ (checked for $h=\\frac12,\\frac32$), and $\\int_{-m}^{m}[t]dt=-m$ for integer $m$.",
+   "$\\int_a^b[x+c]dx=\\int_{a+c}^{b+c}[t]dt$: shift first, then integrate on unit intervals."
+  ],
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 69,
+  "type_label": "Single Correct Type",
+  "concepts": [
+   "Reduction formula and Leibniz rule for integrals"
+  ],
+  "level": 2,
+  "question": "Let $I_n(x)=\\int_0^x\\frac{1}{(t^2+5)^n}dt$, $n=1,2,3,\\dots$ Then:",
+  "options": [
+   "$50I_6-9I_5=xI_5'$",
+   "$50I_6-11I_5=xI_5'$",
+   "$50I_6-9I_5=I_5'$",
+   "$50I_6-11I_5=I_5'$"
+  ],
+  "answer": "(A) $50I_6-9I_5=xI_5'$",
+  "key_idea": "Integrate by parts and write $t^2=(t^2+5)-5$ to get $10nI_{n+1}+(1-2n)I_n=\\frac{x}{(x^2+5)^n}$; then $I_n'=(x^2+5)^{-n}$.",
+  "solution": [
+   "$I_n(x)=\\int_0^x\\frac{dt}{(t^2+5)^n}$. Integrate by parts with $u=(t^2+5)^{-n}$, $dv=dt$.",
+   "$I_n(x)=\\left[\\frac{t}{(t^2+5)^n}\\right]_0^x-\\int_0^x t\\cdot(-n)(t^2+5)^{-n-1}\\cdot2t\\,dt$ (the PDF omits the sign of $-n$ in this line; the next line is right).",
+   "$I_n(x)=\\frac{x}{(x^2+5)^n}+2n\\int_0^x\\frac{t^2}{(t^2+5)^{n+1}}dt$.",
+   "Write $t^2=(t^2+5)-5$: $I_n(x)=\\frac{x}{(x^2+5)^n}+2n\\int_0^x\\frac{(t^2+5)-5}{(t^2+5)^{n+1}}dt$.",
+   "$I_n(x)=\\frac{x}{(x^2+5)^n}+2nI_n(x)-10nI_{n+1}(x)$.",
+   "Rearranging: $10n\\,I_{n+1}(x)+(1-2n)I_n(x)=\\frac{x}{(x^2+5)^n}$.",
+   "Put $n=5$: $50\\,I_6(x)-9\\,I_5(x)=\\frac{x}{(x^2+5)^5}$.",
+   "By the fundamental theorem, $I_5'(x)=\\frac{1}{(x^2+5)^5}$, so $\\frac{x}{(x^2+5)^5}=x\\,I_5'(x)$.",
+   "Hence $50I_6-9I_5=xI_5'$: option (A)."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "The PDF stops at 'Put n = 5'; the last steps (n=5 relation, I_5'=(x^2+5)^-5, matching option A) were added. Also the sign in the by-parts line is misprinted: the PDF writes '- integral of n(t^2+5)^(-n-1).2t^2' where the term is '- integral of t.(-n)(t^2+5)^(-n-1).2t = +2n integral t^2/(t^2+5)^(n+1)'; the following line (+2n integral) is already correct. Answer (A) unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "Avoid the reduction formula: define $H=50I_6-9I_5-xI_5'$ and show $H(0)=0$ and $H'\\equiv0$.",
+    "solution": [
+     "By the fundamental theorem, $I_n'(x)=(x^2+5)^{-n}$ and $I_n(0)=0$.",
+     "Let $H(x)=50I_6-9I_5-x(x^2+5)^{-5}$. Then $H(0)=0$.",
+     "$\\frac{d}{dx}\\left[x(x^2+5)^{-5}\\right]=(x^2+5)^{-5}-10x^2(x^2+5)^{-6}$.",
+     "$H'(x)=50(x^2+5)^{-6}-9(x^2+5)^{-5}-(x^2+5)^{-5}+10x^2(x^2+5)^{-6}=\\frac{50-10(x^2+5)+10x^2}{(x^2+5)^6}=0$.",
+     "So $H\\equiv0$, i.e. $50I_6-9I_5=xI_5'$: option (A).",
+     "The others fail: (B) would need $2I_5=0$; (C) would need $xI_5'=I_5'$, true only at $x=1$; (D) differs from (C) by $2I_5\\ne0$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "Reduction formula: $2na^2I_{n+1}=\\frac{x}{(x^2+a^2)^n}+(2n-1)I_n$ for $I_n=\\int_0^x\\frac{dt}{(t^2+a^2)^n}$; with $a^2=5$ it is $10nI_{n+1}=\\frac{x}{(x^2+5)^n}+(2n-1)I_n$.",
+   "Start from $I_1=\\frac1{\\sqrt5}\\tan^{-1}\\frac{x}{\\sqrt5}$ and apply the formula repeatedly to get any $I_n$.",
+   "Whenever an identity involves $I_n(x)=\\int_0^xh_n$ and $I_n'$, the derivative is just $h_n(x)$; verifying an identity by differentiating both sides (with equal values at $x=0$) is often quicker than deriving it.",
+   "Numerical check (n=5, x=1.3): $50I_6-9I_5=1.3/(1.3^2+5)^5$ holds to machine precision."
+  ],
+  "short_type": "Single Correct",
+  "marks": 4
+ },
+ {
+  "q_no": 70,
+  "type_label": "Single Correct Type",
+  "concepts": [
+   "Definite integral by the $\\tan\\frac x2$ substitution"
+  ],
+  "level": 1,
+  "question": "The integral $\\int_0^{\\pi/2}\\frac{1}{3+2\\sin x+\\cos x}dx$ is equal to:",
+  "options": [
+   "$\\tan^{-1}(2)$",
+   "$\\tan^{-1}(2)-\\frac\\pi4$",
+   "$\\frac12\\tan^{-1}(2)-\\frac\\pi8$",
+   "$\\frac12$"
+  ],
+  "answer": "(B) $\\tan^{-1}(2)-\\frac\\pi4$",
+  "key_idea": "With $t=\\tan\\frac x2$ the denominator becomes $2(t^2+2t+2)$, a completed square plus one.",
+  "solution": [
+   "Divide numerator and denominator by $\\cos^2\\frac x2$: $3\\sec^2\\frac x2+4\\tan\\frac x2+\\left(1-\\tan^2\\frac x2\\right)=2\\tan^2\\frac x2+4\\tan\\frac x2+4$.",
+   "So $I=\\int_0^{\\pi/2}\\frac{\\sec^2\\frac x2\\,dx}{2\\tan^2\\frac x2+4\\tan\\frac x2+4}$.",
+   "Put $\\tan\\frac x2=t$; then $\\sec^2\\frac x2\\,dx=2\\,dt$, and $x=0\\to t=0$, $x=\\frac\\pi2\\to t=1$.",
+   "$I=\\int_0^1\\frac{2\\,dt}{2t^2+4t+4}=\\int_0^1\\frac{dt}{t^2+2t+2}$.",
+   "Complete the square: $t^2+2t+2=(t+1)^2+1$, so $I=\\int_0^1\\frac{dt}{(t+1)^2+1}$.",
+   "$I=\\Big[\\tan^{-1}(t+1)\\Big]_0^1=\\tan^{-1}2-\\tan^{-1}1$.",
+   "$I=\\tan^{-1}2-\\frac\\pi4$: option (B)."
+  ],
+  "solution_source": "pdf",
+  "short_type": "Single Correct",
+  "marks": 4
+ }
+]

@@ -1,0 +1,458 @@
+[
+ {
+  "q_no": 41,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integral properties (king property, even/odd functions)"
+  ],
+  "level": 1,
+  "question": "The value of the integral $\\int_{-2}^{2}\\frac{|x^3+x|}{e^{x|x|}+1}\\,dx$ is equal to:",
+  "options": [
+   "$5e^{2}$",
+   "$3e^{-2}$",
+   "$4$",
+   "$6$"
+  ],
+  "answer": "(D) 6",
+  "key_idea": "On a symmetric interval the weights $\\frac{1}{e^{x|x|}+1}$ and $\\frac{1}{e^{-x|x|}+1}$ add up to $1$, so the exponential disappears.",
+  "solution": [
+   "Let $I=\\int_{-2}^{2}\\frac{|x^3+x|}{e^{x|x|}+1}dx$ ...(1).",
+   "Apply the king property $x\\to-x$ (limits $-2,2$ are symmetric); note $(-x)|-x|=-x|x|$: $I=\\int_{-2}^{2}\\frac{|-x^3-x|}{e^{-x|x|}+1}dx$.",
+   "Since $|-x^3-x|=|x^3+x|$: $I=\\int_{-2}^{2}\\frac{|x^3+x|}{e^{-x|x|}+1}dx$ ...(2).",
+   "Add (1) and (2): $2I=\\int_{-2}^{2}|x^3+x|\\left(\\frac{1}{e^{x|x|}+1}+\\frac{1}{e^{-x|x|}+1}\\right)dx$.",
+   "Now $\\frac{1}{e^{-x|x|}+1}=\\frac{e^{x|x|}}{e^{x|x|}+1}$, so the bracket is $\\frac{1+e^{x|x|}}{e^{x|x|}+1}=1$.",
+   "Hence $2I=\\int_{-2}^{2}|x^3+x|\\,dx$.",
+   "$|x^3+x|$ is an even function, so $2I=2\\int_{0}^{2}|x^3+x|\\,dx$ and $I=\\int_{0}^{2}|x^3+x|\\,dx$.",
+   "On $[0,2]$, $x^3+x\\ge0$, so $I=\\int_{0}^{2}(x^3+x)\\,dx$.",
+   "$I=\\left[\\frac{x^4}{4}+\\frac{x^2}{2}\\right]_0^2=4+2=6$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Print slip in the PDF's line for (1)+(2): the bracket is typeset as $e^{\\frac{1}{x|x|+1}}+\\frac{1}{e^{-x|x|}+1}$ instead of $\\frac{1}{e^{x|x|}+1}+\\frac{1}{e^{-x|x|}+1}$. Corrected here; the method, the value $6$ and the key (D) are unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "Split $\\frac{1}{e^{u}+1}=\\frac12-\\frac12\\tanh\\frac u2$ with $u=x|x|$ odd: the odd part integrates to $0$ and only half of the even weight survives.",
+    "solution": [
+     "Use $\\frac{1}{e^{u}+1}=\\frac12\\left(1-\\tanh\\frac u2\\right)$ with $u=x|x|$.",
+     "$u=x|x|$ is an odd function of $x$, so $\\tanh\\frac{u}{2}$ is odd.",
+     "$x^3+x$ is odd, so $|x^3+x|$ is even; hence $|x^3+x|\\tanh\\frac{x|x|}{2}$ is odd.",
+     "An odd function integrates to $0$ over $[-2,2]$, so that part contributes nothing.",
+     "$I=\\frac12\\int_{-2}^{2}|x^3+x|\\,dx=\\int_0^2(x^3+x)\\,dx=4+2=6$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "If $h$ is even and $\\varphi$ is odd, then $\\int_{-a}^{a}\\frac{h(x)}{1+e^{\\varphi(x)}}dx=\\int_0^a h(x)\\,dx$, because $\\frac{1}{1+e^{\\varphi(x)}}+\\frac{1}{1+e^{\\varphi(-x)}}=1$.",
+   "Same for any base $b>0$: $\\int_{-a}^{a}\\frac{h(x)}{1+b^{\\varphi(x)}}dx=\\int_0^a h(x)\\,dx$. Check: $\\int_{-1}^{1}\\frac{x^2}{e^x+1}dx=\\frac13=\\int_0^1x^2dx$.",
+   "Recognition cue: a symmetric interval together with a denominator $1+e^{\\text{odd}}$ (or $1+a^{\\text{odd}}$) signals this trick.",
+   "$x|x|$ is odd, $|x^3+x|$ and $x^2$ are even; classify the parity first, then decide whether to use the king property."
+  ]
+ },
+ {
+  "q_no": 42,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Leibniz rule (differentiation of an integral)",
+   "Maxima and minima by sign of $f'$"
+  ],
+  "level": 2,
+  "question": "If $m$ and $n$ respectively are the number of local maximum and local minimum points of the function $f(x)=\\int_{0}^{x^2}\\frac{t^2-5t+4}{2+e^{t}}dt$, then the ordered pair $(m,n)$ is equal to:",
+  "options": [
+   "$(3,2)$",
+   "$(2,3)$",
+   "$(2,2)$",
+   "$(3,4)$"
+  ],
+  "answer": "(B) (2, 3)",
+  "key_idea": "Differentiate with Leibniz, factor the numerator into five simple roots and read the extrema off the sign change of $f'$.",
+  "solution": [
+   "By Leibniz rule: $f'(x)=\\frac{x^4-5x^2+4}{2+e^{x^2}}\\cdot2x$.",
+   "Factor $x^4-5x^2+4=(x^2-1)(x^2-4)$, so $f'(x)=\\frac{2x(x^2-1)(x^2-4)}{e^{x^2}+2}$.",
+   "Hence $f'(x)=\\frac{2(x-1)(x-2)\\,x\\,(x+1)(x+2)}{e^{x^2}+2}$.",
+   "The denominator is always positive, so the sign of $f'$ is the sign of $2(x-1)(x-2)x(x+1)(x+2)$.",
+   "Its zeros $-2,-1,0,1,2$ are all simple, so $f'$ changes sign at each of them; the sign scheme from the left is $-,+,-,+,-,+$.",
+   "$f'$ changes from $-$ to $+$ at $x=-2,\\,0,\\,2$: local minima, so $n=3$.",
+   "$f'$ changes from $+$ to $-$ at $x=-1,\\,1$: local maxima, so $m=2$.",
+   "Therefore $(m,n)=(2,3)$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Write $f(x)=F(x^2)$ with $F(u)=\\int_0^u\\frac{t^2-5t+4}{2+e^t}dt$; study $F$ for $u\\ge0$ and pull the extrema back through the even map $x\\mapsto x^2$.",
+    "solution": [
+     "$F'(u)=\\frac{(u-1)(u-4)}{2+e^{u}}$, so for $u\\ge0$: $F'>0$ on $[0,1)$, $F'<0$ on $(1,4)$, $F'>0$ on $(4,\\infty)$.",
+     "So $F$ has a local maximum at $u=1$ and a local minimum at $u=4$ (interior points of $u>0$).",
+     "At the boundary $u=0$ the function $F$ is increasing, so $F(u)>F(0)$ for small $u>0$.",
+     "Since $x^2$ maps $x\\ne0$ onto $u>0$ and $f(x)=F(x^2)$: $u=1\\Rightarrow x=\\pm1$ are local maxima ($m=2$); $u=4\\Rightarrow x=\\pm2$ are local minima.",
+     "At $x=0$: $f(x)=F(x^2)>F(0)=f(0)$ for small $x\\ne0$, so $x=0$ is also a local minimum. Total minima $=3$ ($x=0,\\pm2$).",
+     "$(m,n)=(2,3)$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$\\frac{d}{dx}\\int_{a(x)}^{b(x)}\\varphi(t)\\,dt=\\varphi(b(x))\\,b'(x)-\\varphi(a(x))\\,a'(x)$; here $\\varphi(x^2)\\cdot2x$.",
+   "If $f(x)=F(x^2)$, then $f$ is even and $f'(x)=2xF'(x^2)$: it always has a stationary point at $x=0$, and extrema of $F$ at $u_0>0$ give a pair $\\pm\\sqrt{u_0}$.",
+   "A zero of $f'$ gives an extremum only if $f'$ changes sign there (odd-order zero); an even-order zero (e.g. $(x-1)^2$) does not.",
+   "Check on this question: $f(\\pm1)\\approx0.542$ (maximum), $f(\\pm2)\\approx0.183$ and $f(0)=0$ (minima)."
+  ]
+ },
+ {
+  "q_no": 43,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Leibniz rule and differentiation of an integral equation"
+  ],
+  "level": 2,
+  "question": "Let $f$ be a differentiable function in $\\left(0,\\frac{\\pi}{2}\\right)$. If $\\int_{\\cos x}^{1}t^2f(t)\\,dt=\\sin^3x+\\cos x$, then $\\frac{1}{\\sqrt3}f'\\left(\\frac{1}{\\sqrt3}\\right)$ is equal to:",
+  "options": [
+   "$6-9\\sqrt2$",
+   "$6-\\frac{9}{\\sqrt2}$",
+   "$\\frac92-6\\sqrt2$",
+   "$\\frac{9}{\\sqrt2}-6$"
+  ],
+  "answer": "(B) $6-\\frac{9}{\\sqrt2}$",
+  "key_idea": "Differentiate the integral equation to get $f(\\cos x)$ explicitly, then differentiate once more to reach $f'(\\cos x)$.",
+  "solution": [
+   "Given $\\int_{\\cos x}^{1}t^2f(t)\\,dt=\\sin^3x+\\cos x$.",
+   "Differentiate both sides w.r.t. $x$: $-\\cos^2x\\,f(\\cos x)\\,(-\\sin x)=3\\sin^2x\\cos x-\\sin x$.",
+   "So $\\cos^2x\\,\\sin x\\,f(\\cos x)=\\sin x\\,(3\\sin x\\cos x-1)$, and as $\\sin x\\ne0$: $f(\\cos x)=\\frac{3\\sin x\\cos x-1}{\\cos^2x}$.",
+   "$f(\\cos x)=3\\tan x-\\sec^2x$.",
+   "Differentiate again w.r.t. $x$: $f'(\\cos x)(-\\sin x)=3\\sec^2x-2\\sec^2x\\tan x$.",
+   "Put $\\cos x=\\frac1{\\sqrt3}$: $\\sin x=\\frac{\\sqrt2}{\\sqrt3}$, $\\tan x=\\sqrt2$, $\\sec^2x=3$.",
+   "$-\\frac{\\sqrt2}{\\sqrt3}f'\\left(\\frac1{\\sqrt3}\\right)=3\\cdot3-2\\cdot3\\cdot\\sqrt2=9-6\\sqrt2$.",
+   "$\\frac1{\\sqrt3}f'\\left(\\frac1{\\sqrt3}\\right)=\\frac{3(3-2\\sqrt2)}{-\\sqrt2}=6-\\frac{9}{\\sqrt2}$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Print slips in the PDF: its first line shows $\\sin^2x+\\cos x$ on the right (the next line differentiates $\\sin^3x$, so $\\sin^3x$ is correct), and in the last two lines it writes $f\\left(\\frac1{\\sqrt3}\\right)$ where $f'\\left(\\frac1{\\sqrt3}\\right)$ is meant. Values and answer (B) unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "Substitute $s=\\cos x$ first, so the equation reads $\\int_s^1t^2f(t)dt=(1-s^2)^{3/2}+s$; then differentiate with respect to $s$ and get $f'(s)$ in one formula.",
+    "solution": [
+     "Put $s=\\cos x\\in(0,1)$, $\\sin x=\\sqrt{1-s^2}$: $\\int_s^1t^2f(t)dt=(1-s^2)^{3/2}+s$.",
+     "Differentiate w.r.t. $s$: $-s^2f(s)=-3s\\sqrt{1-s^2}+1$.",
+     "$f(s)=\\frac{3\\sqrt{1-s^2}}{s}-\\frac1{s^2}$.",
+     "$\\frac{d}{ds}\\frac{\\sqrt{1-s^2}}{s}=-\\frac{1}{s^2\\sqrt{1-s^2}}$, so $f'(s)=-\\frac{3}{s^2\\sqrt{1-s^2}}+\\frac{2}{s^3}$.",
+     "At $s=\\frac1{\\sqrt3}$: $s^2=\\frac13$, $\\sqrt{1-s^2}=\\frac{\\sqrt2}{\\sqrt3}$, $s^3=\\frac1{3\\sqrt3}$, so $f'=-\\frac{9\\sqrt3}{\\sqrt2}+6\\sqrt3$.",
+     "Multiply by $\\frac1{\\sqrt3}$: $\\frac1{\\sqrt3}f'\\left(\\frac1{\\sqrt3}\\right)=6-\\frac{9}{\\sqrt2}$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)}\\varphi(t)dt=\\varphi(b)b'-\\varphi(a)a'$; with lower limit $\\cos x$ the factor is $-\\varphi(\\cos x)\\cdot(-\\sin x)$.",
+   "When the limit is a function $u(x)$ of $x$, an equation $\\int_{u(x)}^{c}\\varphi=R(x)$ determines $\\varphi(u(x))$; to get $f'$, differentiate $f(u(x))$ again and use $f'(u)\\,u'=\\frac{d}{dx}f(u(x))$.",
+   "Simplify through a substitution $s=u(x)$ when $u$ is invertible on the interval; then everything is a plain function of $s$.",
+   "Check: $f(s)=\\frac{3s\\sqrt{1-s^2}-1}{s^2}$ satisfies $\\frac{d}{ds}\\int_s^1t^2f(t)dt=-s^2f(s)$; numerically $\\frac1{\\sqrt3}f'\\left(\\frac1{\\sqrt3}\\right)=-0.3640=6-\\frac9{\\sqrt2}$."
+  ]
+ },
+ {
+  "q_no": 44,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integral of greatest-integer function and logarithmic series"
+  ],
+  "level": 3,
+  "question": "The integral $\\int_{0}^{1}\\frac{1}{7^{\\left[\\frac{1}{x}\\right]}}\\,dx$, where $[\\cdot]$ denotes the greatest integer function, is equal to:",
+  "options": [
+   "$1+6\\log_e\\left(\\frac67\\right)$",
+   "$1-6\\log_e\\left(\\frac67\\right)$",
+   "$\\log_e\\left(\\frac76\\right)$",
+   "$1-7\\log_e\\left(\\frac67\\right)$"
+  ],
+  "answer": "(A) $1+6\\log_e\\left(\\frac67\\right)$",
+  "key_idea": "$\\left[\\frac1x\\right]=n$ on $\\left(\\frac1{n+1},\\frac1n\\right]$, giving $\\sum\\frac{1}{7^n}\\left(\\frac1n-\\frac1{n+1}\\right)$, summed with $\\sum\\frac{r^n}{n}=-\\ln(1-r)$.",
+  "solution": [
+   "$I=\\int_0^1 7^{-[1/x]}dx$. For $\\frac1{n+1}<x\\le\\frac1n$ we have $\\left[\\frac1x\\right]=n$, $n=1,2,3,\\dots$",
+   "$I=\\int_{1/2}^{1}\\frac{dx}{7}+\\int_{1/3}^{1/2}\\frac{dx}{7^2}+\\int_{1/4}^{1/3}\\frac{dx}{7^3}+\\cdots$ (the PDF writes this with reversed limits and an overall minus sign; same value).",
+   "$I=\\frac17\\left(1-\\frac12\\right)+\\frac1{7^2}\\left(\\frac12-\\frac13\\right)+\\frac1{7^3}\\left(\\frac13-\\frac14\\right)+\\cdots=\\sum_{n\\ge1}\\frac1{7^n}\\left(\\frac1n-\\frac1{n+1}\\right)$.",
+   "Split: $I=\\left(\\frac17+\\frac1{2\\cdot7^2}+\\frac1{3\\cdot7^3}+\\cdots\\right)-\\left(\\frac1{7\\cdot2}+\\frac1{7^2\\cdot3}+\\frac1{7^3\\cdot4}+\\cdots\\right)$.",
+   "First series: $\\sum_{n\\ge1}\\frac{(1/7)^n}{n}=-\\ln\\left(1-\\frac17\\right)$.",
+   "Second series: $\\sum_{n\\ge1}\\frac{(1/7)^n}{n+1}=7\\left[\\frac{(1/7)^2}{2}+\\frac{(1/7)^3}{3}+\\cdots\\right]=7\\left[-\\ln\\left(1-\\frac17\\right)-\\frac17\\right]$.",
+   "$I=-\\ln\\left(1-\\frac17\\right)-7\\left[-\\ln\\left(1-\\frac17\\right)-\\frac17\\right]=-\\ln\\frac67+7\\ln\\frac67+1$.",
+   "$I=6\\ln\\frac67+1$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Sign slip in the PDF's last working line: it writes $-\\ln\\left(1-\\frac17\\right)+7\\left(\\ln\\left(1-\\frac17\\right)-\\frac17\\right)$; the second term must be $7\\left(\\ln\\left(1-\\frac17\\right)+\\frac17\\right)$ (since $-(-\\ln(1-\\tfrac17)-\\tfrac17)=\\ln(1-\\tfrac17)+\\tfrac17$). The final value $1+6\\ln\\frac67$ and key (A) are right; numerically $I=0.07510$.",
+  "alternate_solutions": [
+   {
+    "idea": "Write $7^{-m}=1-6\\sum_{k=1}^{m}7^{-k}$ (layer-cake), so the integrand is $1$ minus indicator functions $\\{x\\le 1/k\\}$ with weights $6\\cdot7^{-k}$.",
+    "solution": [
+     "For integer $m\\ge0$: $7^{-m}=1-\\sum_{k=1}^{m}\\left(7^{-(k-1)}-7^{-k}\\right)=1-6\\sum_{k=1}^{m}7^{-k}$.",
+     "With $m=\\left[\\frac1x\\right]$: $7^{-[1/x]}=1-6\\sum_{k\\ge1}7^{-k}\\,\\mathbf 1\\{[1/x]\\ge k\\}$, and $\\left[\\frac1x\\right]\\ge k\\iff x\\le\\frac1k$.",
+     "Integrate over $(0,1]$: $\\int_0^1\\mathbf 1\\{x\\le\\frac1k\\}dx=\\frac1k$.",
+     "$I=1-6\\sum_{k\\ge1}\\frac{(1/7)^k}{k}$ (all terms are non-negative, so term-by-term integration is valid).",
+     "$\\sum_{k\\ge1}\\frac{(1/7)^k}{k}=-\\ln\\left(1-\\frac17\\right)=\\ln\\frac76$.",
+     "$I=1-6\\ln\\frac76=1+6\\ln\\frac67\\approx0.0751$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$\\int_0^1 h\\left(\\left[\\frac1x\\right]\\right)dx=\\sum_{n\\ge1}h(n)\\left(\\frac1n-\\frac1{n+1}\\right)$, since $\\left[\\frac1x\\right]=n$ exactly on $\\left(\\frac1{n+1},\\frac1n\\right]$ (equivalently, put $x=1/y$).",
+   "For $0<r<1$: $\\int_0^1r^{[1/x]}dx=1+\\frac{1-r}{r}\\ln(1-r)$. Check: $r=\\frac12$ gives $1-\\ln2=0.3069$ (numerical $0.30685$); $r=\\frac17$ gives $1+6\\ln\\frac67$.",
+   "Series to recall: $\\sum_{n\\ge1}\\frac{r^n}{n}=-\\ln(1-r)$ for $|r|<1$; shifting the index gives $\\sum_{n\\ge1}\\frac{r^n}{n+1}=\\frac1r\\left(-\\ln(1-r)-r\\right)$.",
+   "$7^{-m}=1-6\\sum_{k\\le m}7^{-k}$ is the geometric identity $r^m=1-(1-r)\\sum_{k=0}^{m-1}r^k$."
+  ]
+ },
+ {
+  "q_no": 45,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integral of greatest-integer function of a quadratic"
+  ],
+  "level": 2,
+  "question": "Let $[t]$ denote the greatest integer less than or equal to $t$. Then the value of the integral $\\int_{0}^{1}\\left[-8x^2+6x-1\\right]dx$ is equal to:",
+  "options": [
+   "$-1$",
+   "$-\\frac54$",
+   "$\\frac{\\sqrt{17}-13}{8}$",
+   "$\\frac{\\sqrt{17}-16}{8}$"
+  ],
+  "answer": "(C) $\\frac{\\sqrt{17}-13}{8}$",
+  "key_idea": "Sketch the parabola on $[0,1]$ and cut the interval where it crosses the integers $0,-1,-2$; on each piece $[y]$ is constant.",
+  "solution": [
+   "Let $y=-8x^2+6x-1$: $y(0)=-1$, vertex $\\left(\\frac38,\\frac18\\right)$, $y(1)=-3$, so $y$ ranges over $[-3,\\frac18]$ on $[0,1]$.",
+   "$y=0$: $8x^2-6x+1=0\\Rightarrow x=\\frac14,\\frac12$. So $[y]=0$ for $\\frac14\\le x\\le\\frac12$ (there $0\\le y\\le\\frac18<1$).",
+   "$y=-1$: $-8x^2+6x=0\\Rightarrow x=0,\\frac34$. So $[y]=-1$ for $x\\in[0,\\frac14)\\cup(\\frac12,\\frac34]$.",
+   "$y=-2$: $8x^2-6x-1=0\\Rightarrow x=\\frac{3+\\sqrt{17}}8$ ($\\approx0.89$). So $[y]=-2$ for $\\frac34<x\\le\\frac{3+\\sqrt{17}}8$.",
+   "For $\\frac{3+\\sqrt{17}}8<x\\le1$: $-3\\le y<-2$, so $[y]=-3$.",
+   "$\\int_0^1[y]dx=\\int_0^{1/4}(-1)dx+\\int_{1/4}^{1/2}0\\,dx+\\int_{1/2}^{3/4}(-1)dx+\\int_{3/4}^{\\frac{3+\\sqrt{17}}8}(-2)dx+\\int_{\\frac{3+\\sqrt{17}}8}^{1}(-3)dx$.",
+   "$=-\\frac14+0-\\left(\\frac34-\\frac12\\right)-2\\left(\\frac{3+\\sqrt{17}}8-\\frac34\\right)-3\\left(1-\\frac{3+\\sqrt{17}}8\\right)$.",
+   "$=-\\frac12-\\frac{\\sqrt{17}-3}{4}-\\frac{3(5-\\sqrt{17})}{8}=\\frac{-4-2\\sqrt{17}+6-15+3\\sqrt{17}}{8}=\\frac{\\sqrt{17}-13}{8}$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Write $[y]=-3+\\sum_{k=-2}^{0}\\mathbf 1\\{y\\ge k\\}$ and add the lengths of the sets $\\{x:y\\ge k\\}$ (layer-cake), instead of integrating piece by piece.",
+    "solution": [
+     "On $[0,1]$, $-3\\le y\\le\\frac18$, so $[y]=-3+\\mathbf 1\\{y\\ge-2\\}+\\mathbf 1\\{y\\ge-1\\}+\\mathbf 1\\{y\\ge0\\}$.",
+     "Hence $\\int_0^1[y]dx=-3+L_{-2}+L_{-1}+L_0$, where $L_k$ is the length of $\\{x\\in[0,1]:y\\ge k\\}$.",
+     "$y\\ge k\\iff-8x^2+6x-1-k\\ge0$ with roots $x=\\frac{3\\pm\\sqrt{1-8k}}8$.",
+     "$k=0$: roots $\\frac14,\\frac12$, so $L_0=\\frac14$. $k=-1$: roots $0,\\frac34$, so $L_{-1}=\\frac34$.",
+     "$k=-2$: roots $\\frac{3\\pm\\sqrt{17}}8$; the lower root is negative, so within $[0,1]$ the set is $\\left[0,\\frac{3+\\sqrt{17}}8\\right]$ and $L_{-2}=\\frac{3+\\sqrt{17}}8$.",
+     "$\\int_0^1[y]dx=-3+\\frac{3+\\sqrt{17}}8+\\frac34+\\frac14=\\frac{\\sqrt{17}-13}{8}$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "Layer-cake for floors: if $m\\le g\\le M$ on $[a,b]$ with integers $m<M$, then $\\int_a^b[g]dx=m(b-a)+\\sum_{k=m+1}^{M}\\left|\\{x:g(x)\\ge k\\}\\right|$ (measure of the level sets).",
+   "For $y=ax^2+bx+c$, the crossing points with the horizontal line $y=k$ are the roots of $ax^2+bx+c-k=0$; only the integers $k$ between the minimum and the maximum of $y$ on the interval matter.",
+   "Always test the ends: $[y]$ takes the value of $y$ rounded down, so at an endpoint where $y$ is exactly an integer the value belongs to the upper step (here $y=0$ at $x=\\frac14,\\frac12$ gives $[y]=0$); single points do not change the integral.",
+   "Check: numerical integration of $[y]$ gives $-1.10961=\\frac{\\sqrt{17}-13}{8}$."
+  ]
+ },
+ {
+  "q_no": 46,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Fundamental theorem of calculus (integral of an exact derivative) and limits"
+  ],
+  "level": 2,
+  "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a differentiable function such that $f\\left(\\frac\\pi4\\right)=\\sqrt2$, $f\\left(\\frac\\pi2\\right)=0$ and $f'\\left(\\frac\\pi2\\right)=1$, and let $g(x)=\\int_{x}^{\\pi/4}\\left(f'(t)\\sec t+\\tan t\\sec t\\,f(t)\\right)dt$ for $x\\in\\left[\\frac\\pi4,\\frac\\pi2\\right)$. Then $\\lim_{x\\to\\left(\\frac\\pi2\\right)^-}g(x)$ is equal to:",
+  "options": [
+   "$2$",
+   "$3$",
+   "$4$",
+   "$-3$"
+  ],
+  "answer": "(B) 3",
+  "key_idea": "The integrand is $\\frac{d}{dt}\\left(\\sec t\\,f(t)\\right)$, so $g(x)=2-\\sec x\\,f(x)$, and the limit is a $\\frac00$ form.",
+  "solution": [
+   "Given $f\\left(\\frac\\pi4\\right)=\\sqrt2$, $f\\left(\\frac\\pi2\\right)=0$, $f'\\left(\\frac\\pi2\\right)=1$, and $g(x)=\\int_x^{\\pi/4}\\left[f'(t)\\sec t+\\tan t\\sec t\\,f(t)\\right]dt$.",
+   "The integrand is the derivative of a product: $\\frac{d}{dt}\\left(\\sec t\\,f(t)\\right)=f'(t)\\sec t+f(t)\\sec t\\tan t$.",
+   "So $g(x)=\\left[\\sec t\\,f(t)\\right]_x^{\\pi/4}$.",
+   "$g(x)=\\sqrt2\\cdot\\sqrt2-\\sec x\\,f(x)=2-\\sec x\\,f(x)$.",
+   "Put $x=\\frac\\pi2-h$, $h\\to0^+$: $\\lim g=2-\\lim_{h\\to0}\\sec\\left(\\frac\\pi2-h\\right)f\\left(\\frac\\pi2-h\\right)$.",
+   "$\\sec\\left(\\frac\\pi2-h\\right)=\\operatorname{cosec}h$, so $\\lim g=2-\\lim_{h\\to0}\\frac{f\\left(\\frac\\pi2-h\\right)}{\\sin h}$, a $\\frac00$ form.",
+   "L'Hopital (differentiate w.r.t. $h$): $\\lim_{h\\to0}\\frac{f\\left(\\frac\\pi2-h\\right)}{\\sin h}=\\lim_{h\\to0}\\frac{-f'\\left(\\frac\\pi2-h\\right)}{\\cos h}=-f'\\left(\\frac\\pi2\\right)=-1$.",
+   "$\\lim_{x\\to\\frac\\pi2^-}g(x)=2-(-1)=3$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "The PDF has $\\cos h$ in the denominator after $\\sec\\left(\\frac\\pi2-h\\right)=\\operatorname{cosec}h$ (it should be $\\sin h$), and its L'Hopital line gives $2+\\lim\\frac{f'\\left(\\frac\\pi2-h\\right)}{\\cos h}$; the correct limit of $\\frac{f(\\pi/2-h)}{\\sin h}$ is $-1$, so $2-(-1)=3$. The final value $3$ and key (B) are unchanged.",
+  "useful_results": [
+   "Spot exact derivatives: $f'\\sec t+f\\sec t\\tan t=(f\\sec t)'$, $f'\\cos t-f\\sin t=(f\\cos t)'$, $f'g+fg'=(fg)'$, $\\frac{f'g-fg'}{g^2}=\\left(\\frac fg\\right)'$.",
+   "If $f(a)=0$, $f$ differentiable and $g(a)=0$ with $g'(a)\\ne0$, then $\\lim_{x\\to a}\\frac{f(x)}{g(x)}=\\frac{f'(a)}{g'(a)}$. Here $g=\\cos x$, $g'\\left(\\frac\\pi2\\right)=-1$.",
+   "If $f\\left(\\frac\\pi2\\right)=0$, then $\\lim_{x\\to\\frac\\pi2}\\sec x\\,f(x)=-f'\\left(\\frac\\pi2\\right)$ (from either side). Check with $f(x)=\\left(\\frac\\pi2-x\\right)+c\\left(\\frac\\pi2-x\\right)^2$, $f(\\frac\\pi4)=\\sqrt2$: numerically $g\\to3$."
+  ]
+ },
+ {
+  "q_no": 47,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Periodic functions and definite integral over a period"
+  ],
+  "level": 2,
+  "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a continuous function satisfying $f(x)+f(x+k)=n$ for all $x\\in\\mathbb R$, where $k>0$ and $n$ is a positive integer. If $I_1=\\int_0^{4nk}f(x)\\,dx$ and $I_2=\\int_{-k}^{3k}f(x)\\,dx$, then:",
+  "options": [
+   "$I_1+2I_2=4nk$",
+   "$I_1+2I_2=2nk$",
+   "$I_1+nI_2=4n^2k$",
+   "$I_1+nI_2=6n^2k$"
+  ],
+  "answer": "(C) $I_1+nI_2=4n^2k$",
+  "key_idea": "Shifting by $k$ twice shows $f$ has period $2k$, and $\\int_0^{2k}f=\\int_0^k\\left[f(x)+f(x+k)\\right]dx=nk$.",
+  "solution": [
+   "Given $f(x)+f(x+k)=n$ for all $x$ ...(1).",
+   "Replace $x$ by $x+k$: $f(x+k)+f(x+2k)=n$ ...(2).",
+   "From (1) and (2): $f(x+2k)=f(x)$, so $f$ has period $2k$.",
+   "$I_1=\\int_0^{4nk}f(x)dx$: the interval has length $4nk=2n\\cdot2k$, i.e. $2n$ periods, so $I_1=2n\\int_0^{2k}f(x)dx$.",
+   "$\\int_0^{2k}f=\\int_0^kf(x)dx+\\int_k^{2k}f(x)dx$; in the second integral put $x=t+k$, $dx=dt$.",
+   "$\\int_0^{2k}f=\\int_0^k\\left[f(x)+f(x+k)\\right]dx=\\int_0^kn\\,dx=nk$, so $I_1=2n\\cdot nk=2n^2k$.",
+   "$I_2=\\int_{-k}^{3k}f$: the length is $4k=2\\cdot2k$, two periods, so $I_2=2\\int_0^{2k}f=2nk$.",
+   "$I_1+nI_2=2n^2k+n\\cdot2nk=4n^2k$."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Subtract the mean: $h=f-\\frac n2$ satisfies $h(x+k)=-h(x)$, so $h$ integrates to $0$ over every window of length $2k$ and $f$ has average $\\frac n2$.",
+    "solution": [
+     "Let $h(x)=f(x)-\\frac n2$. Then $h(x)+h(x+k)=0$, i.e. $h(x+k)=-h(x)$ and $h(x+2k)=h(x)$.",
+     "For any $a$: $\\int_a^{a+2k}h=\\int_a^{a+k}\\left[h(x)+h(x+k)\\right]dx=0$.",
+     "$I_1$: the interval $[0,4nk]$ is made of $2n$ windows of length $2k$, so $\\int h=0$ and $I_1=\\frac n2\\cdot4nk=2n^2k$.",
+     "$I_2$: $[-k,3k]$ is two windows of length $2k$, so $I_2=\\frac n2\\cdot4k=2nk$.",
+     "$I_1+nI_2=2n^2k+2n^2k=4n^2k$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$f(x)+f(x+k)=c$ for all $x$ implies $f$ has period $2k$, and $\\int_a^{a+2k}f=ck$ for every $a$; the mean value of $f$ is $\\frac c2$.",
+   "Equivalently $f-\\frac c2$ is anti-periodic ($h(x+k)=-h(x)$): its integral over any window of length $2k$ (hence any whole number of such windows) is $0$.",
+   "$\\int_a^{a+nT}f=n\\int_0^Tf$ for $T$-periodic $f$ and integer $n$.",
+   "Check with $f(x)=\\frac32+\\cos\\frac{\\pi x}{0.7}$ ($n=3$, $k=0.7$): $I_1=12.6=2n^2k$, $I_2=4.2=2nk$."
+  ]
+ },
+ {
+  "q_no": 48,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Running maximum, greatest-integer function and differentiability",
+   "Definite integral of a piecewise function"
+  ],
+  "level": 3,
+  "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a function defined by $f(x)=\\begin{cases}\\max_{t\\le x}\\{t^3-3t\\}, & x\\le2\\\\ x^2+2x-6, & 2<x<3\\\\ [x-3]+9, & 3\\le x\\le5\\\\ 2x+1, & x>5\\end{cases}$ where $[t]$ is the greatest integer less than or equal to $t$. Let $m$ be the number of points where $f$ is not differentiable and $I=\\int_{-2}^{2}f(x)\\,dx$. Then the ordered pair $(m,I)$ is equal to:",
+  "options": [
+   "$\\left(3,\\frac{27}4\\right)$",
+   "$\\left(3,\\frac{23}4\\right)$",
+   "$\\left(4,\\frac{27}4\\right)$",
+   "$\\left(4,\\frac{23}4\\right)$"
+  ],
+  "answer": "(C) $\\left(4,\\frac{27}4\\right)$",
+  "key_idea": "$\\max_{t\\le x}(t^3-3t)$ follows the cubic until its local maximum $2$ at $t=-1$, then stays $2$; all kinks and jumps then sit at $x=2,3,4,5$.",
+  "solution": [
+   "For $x\\le2$: $f(x)=\\max_{t\\le x}g(t)$, $g(t)=t^3-3t$, $g'(t)=3(t^2-1)$. $g$ increases on $(-\\infty,-1)$, decreases on $(-1,1)$, increases on $(1,\\infty)$; $g(-1)=2$, $g(1)=-2$, $g(2)=2$.",
+   "For $x<-1$, $g$ is increasing, so the maximum over $t\\le x$ is $g(x)=x^3-3x$.",
+   "For $-1\\le x\\le2$ the maximum stays $2$ (the cubic returns to $2$ only at $t=2$), so $f(x)=2$.",
+   "For $3\\le x\\le5$: $[x-3]=0$ on $[3,4)$, $=1$ on $[4,5)$, $=2$ at $5$. So $f=9$ on $[3,4)$, $10$ on $[4,5)$, $11$ at $x=5$.",
+   "So $f(x)=x^3-3x$ ($x<-1$); $2$ ($-1\\le x\\le2$); $x^2+2x-6$ ($2<x<3$); $9$ ($3\\le x<4$); $10$ ($4\\le x<5$); $11$ ($x=5$); $2x+1$ ($x>5$).",
+   "$x=-1$: left derivative $3x^2-3=0$, right derivative $0$, so $f$ is differentiable there.",
+   "$x=2$: left derivative $0$, right derivative $2x+2=6$, so not differentiable ($f$ is continuous, value $2$).",
+   "$x=3$: left limit $9=f(3)$ but left derivative $2x+2=8$, right derivative $0$, so not differentiable.",
+   "$x=4$: jump $9\\to10$; $x=5$: left limit $10$, $f(5)=11$, discontinuous, so not differentiable. Non-differentiable points: $2,3,4,5$, so $m=4$.",
+   "$I=\\int_{-2}^{-1}(x^3-3x)dx+\\int_{-1}^{2}2\\,dx=\\left[\\frac{x^4}4-\\frac{3x^2}2\\right]_{-2}^{-1}+6=\\frac34+6=\\frac{27}4$. So $(m,I)=\\left(4,\\frac{27}4\\right)$."
+  ],
+  "solution_source": "pdf",
+  "useful_results": [
+   "$M(x)=\\max_{t\\le x}g(t)$ is continuous and non-decreasing: it equals $g(x)$ while $g$ sets new records and stays constant (the previous record) while $g$ is below it. Kinks occur where $g$ rejoins its record.",
+   "Differentiability checklist at a joining point: continuity first, then equal left and right derivatives; the greatest integer $[x-c]$ is discontinuous exactly at integers, so every integer breakpoint in the formula is a non-differentiable point unless the surrounding pieces cancel the jump.",
+   "For the cubic $x^3-3x$: local maximum $2$ at $x=-1$, local minimum $-2$ at $x=1$, and $g(2)=g(-1)=2$ (roots of $x^3-3x-2=(x+1)^2(x-2)$).",
+   "Check: with the pieces above, $\\int_{-2}^{2}f=6.75=\\frac{27}4$ numerically."
+  ]
+ },
+ {
+  "q_no": 49,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integral with greatest-integer function inside a trigonometric function"
+  ],
+  "level": 2,
+  "question": "$\\int_0^5\\cos\\left(\\pi\\left(x-\\left[\\frac x2\\right]\\right)\\right)dx$, where $[t]$ denotes the greatest integer less than or equal to $t$, is equal to:",
+  "options": [
+   "$-3$",
+   "$-2$",
+   "$2$",
+   "$0$"
+  ],
+  "answer": "(D) 0",
+  "key_idea": "$\\left[\\frac x2\\right]$ is constant on $[0,2),[2,4),[4,5]$, so the integrand becomes $\\cos\\pi x$, $-\\cos\\pi x$, $\\cos\\pi x$ there and each piece integrates to $0$.",
+  "solution": [
+   "Split at the points where $\\left[\\frac x2\\right]$ changes: $\\int_0^5=\\int_0^2+\\int_2^4+\\int_4^5$.",
+   "$\\left[\\frac x2\\right]=0$ on $[0,2)$, $=1$ on $[2,4)$, $=2$ on $[4,5]$.",
+   "So the integral is $\\int_0^2\\cos\\pi x\\,dx+\\int_2^4\\cos\\pi(x-1)dx+\\int_4^5\\cos\\pi(x-2)dx$.",
+   "Antiderivatives: $=\\left[\\frac{\\sin\\pi x}{\\pi}\\right]_0^2+\\left[\\frac{\\sin\\pi(x-1)}{\\pi}\\right]_2^4+\\left[\\frac{\\sin\\pi(x-2)}{\\pi}\\right]_4^5$.",
+   "First bracket: $\\frac{\\sin2\\pi-\\sin0}\\pi=0$. Second: $\\frac{\\sin3\\pi-\\sin\\pi}\\pi=0$. Third: $\\frac{\\sin3\\pi-\\sin2\\pi}\\pi=0$.",
+   "Hence the integral is $0$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Typesetting slip in the PDF: the third integral is printed as $\\cos\\left(\\pi\\left(-\\left[\\frac x2\\right]\\right)\\right)$ (the $x$ is missing); it should be $\\cos\\left(\\pi\\left(x-\\left[\\frac x2\\right]\\right)\\right)=\\cos\\pi(x-2)$ on $[4,5]$. The values (all three pieces $0$) and answer (D) are unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "The integrand $G(x)$ is anti-periodic with anti-period $2$ ($G(x+2)=-G(x)$), so any window of length $2$ integrates to $0$; only $\\int_4^5$ remains.",
+    "solution": [
+     "$G(x)=\\cos\\left(\\pi\\left(x-\\left[\\frac x2\\right]\\right)\\right)$. Since $\\left[\\frac{x+2}2\\right]=\\left[\\frac x2\\right]+1$: $G(x+2)=\\cos\\left(\\pi\\left(x-\\left[\\frac x2\\right]+1\\right)\\right)=-G(x)$.",
+     "Hence $\\int_2^4G=\\int_0^2G(x+2)dx=-\\int_0^2G$, so $\\int_0^4G=0$.",
+     "Also $G(x+4)=G(x)$, so $\\int_4^5G=\\int_0^1G(x)dx=\\int_0^1\\cos\\pi x\\,dx$ (as $\\left[\\frac x2\\right]=0$ on $[0,1]$).",
+     "$\\int_0^1\\cos\\pi x\\,dx=\\frac{\\sin\\pi}{\\pi}=0$.",
+     "$\\int_0^5G=0+0=0$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "If $f(x+T)=-f(x)$ (anti-periodic), then $f$ has period $2T$ and $\\int_a^{a+2T}f=0$ for every $a$, because $\\int_a^{a+2T}f=\\int_a^{a+T}[f(x)+f(x+T)]dx$.",
+   "$\\cos(\\pi(x-n))=(-1)^n\\cos\\pi x$ for integer $n$: an integer shift inside $\\pi(\\cdot)$ only changes the sign.",
+   "$\\int_a^{a+1}\\cos\\pi x\\,dx=\\frac{\\sin\\pi(a+1)-\\sin\\pi a}{\\pi}=-\\frac{2\\sin\\pi a}{\\pi}$; it vanishes exactly when $a$ is an integer. Check: $a=\\frac12$ gives $-\\frac2\\pi$.",
+   "General move: replace the greatest-integer expression by its constant value on each interval it is constant, then integrate."
+  ]
+ },
+ {
+  "q_no": 50,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Integral equation with a separable kernel"
+  ],
+  "level": 2,
+  "question": "Let $f$ be a real valued continuous function on $[0,1]$ and $f(x)=x+\\int_0^1(x-t)f(t)\\,dt$. Then, which of the following points $(x,y)$ lies on the curve $y=f(x)$?",
+  "options": [
+   "$(2,4)$",
+   "$(1,2)$",
+   "$(4,17)$",
+   "$(6,8)$"
+  ],
+  "answer": "(D) (6, 8)",
+  "key_idea": "The integrals $\\int_0^1f$ and $\\int_0^1tf$ are constants, so $f$ is linear, $f(x)=ax-b$; two moment equations fix $a,b$.",
+  "solution": [
+   "Given $f(x)=x+\\int_0^1(x-t)f(t)dt=x+x\\int_0^1f(t)dt-\\int_0^1tf(t)dt$.",
+   "So $f(x)=x\\left[1+\\int_0^1f(t)dt\\right]-\\int_0^1tf(t)dt$.",
+   "Let $1+\\int_0^1f(t)dt=a$ and $\\int_0^1tf(t)dt=b$ (constants). Then $f(x)=ax-b$.",
+   "$a=1+\\int_0^1(at-b)dt=1+\\frac a2-b\\Rightarrow\\frac a2+b=1$ ...(1).",
+   "$b=\\int_0^1t(at-b)dt=\\frac a3-\\frac b2\\Rightarrow\\frac{3b}2=\\frac a3$ ...(2).",
+   "From (2): $a=\\frac{9b}2$. Into (1): $\\frac{9b}4+b=1$, so $b=\\frac4{13}$ and $a=\\frac{18}{13}$.",
+   "$f(x)=\\frac{18x-4}{13}$.",
+   "Test the options: $f(2)=\\frac{32}{13}\\ne4$, $f(1)=\\frac{14}{13}\\ne2$, $f(4)=\\frac{68}{13}\\ne17$, $f(6)=\\frac{104}{13}=8$. So $(6,8)$ lies on the curve."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "Several print slips in the PDF: the first line is $f(x)=x\\int_0^1(x-t)f(t)dt$ (the $+$ is missing); the next line $x\\left[t f\\int_0^1 f\\right]-\\int tf$ is garbled; the second constant is printed as $\\int_0^1 tf(t)dt=1$ where it should be $b$; the second equation integrates up to $t$ instead of $1$; and the last lines read $f(x)=\\frac{18\\times(-4)}{13}$ and 'lies on $f(10)$'. Correct: $f(x)=\\frac{18x-4}{13}$ and $f(6)=8$. Answer (D) unchanged.",
+  "useful_results": [
+   "A kernel $K(x,t)=\\sum p_i(x)q_i(t)$ (here $x\\cdot1-1\\cdot t$) makes $f=g+\\sum c_ip_i$ with $c_i=\\int q_if$ constants: unknowns reduce to a small linear system (obtained by multiplying the equation by each $q_i$ and integrating).",
+   "Here $\\int_0^1f$ and $\\int_0^1tf$ are the two moments; the system is $\\frac a2+b=1,\\ \\frac a3-\\frac b2=b$.",
+   "If an integral equation has the form $f(x)=g(x)+\\int_a^b K(x,t)f(t)dt$ with polynomial $K$ of degree $d$ in $x$, then $f$ is a polynomial of degree $\\le\\max(\\deg g,d)$.",
+   "Check: $f(x)=\\frac{18x-4}{13}$ satisfies $f(x)-x-\\int_0^1(x-t)f(t)dt=0$ to $10^{-30}$ numerically."
+  ]
+ }
+]

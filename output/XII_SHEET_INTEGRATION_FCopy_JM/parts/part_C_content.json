@@ -1,0 +1,449 @@
+[
+ {
+  "q_no": 21,
+  "type_label": "Numerical Type ",
+  "short_type": "Numerical",
+  "marks": 4,
+  "concepts": [
+   "Indefinite integration by substitution and partial fractions"
+  ],
+  "level": 2,
+  "question": "If $\\int\\frac{\\sin x}{\\sin^3x+\\cos^3x}dx=\\alpha\\log_e|1+\\tan x|+\\beta\\log_e|1-\\tan x+\\tan^2x|+\\gamma\\tan^{-1}\\left(\\frac{2\\tan x-1}{\\sqrt3}\\right)+C$, where $C$ is a constant of integration, then the value of $18(\\alpha+\\beta+\\gamma^2)$ is ______.",
+  "answer": "3",
+  "key_idea": "Divide by $\\cos^3x$ so that $t=\\tan x$ turns the integral into $\\int\\frac{t\\,dt}{t^3+1}$, a partial-fraction integral.",
+  "solution": [
+   "Divide numerator and denominator by $\\cos^3x$: $\\frac{\\sin x}{\\sin^3x+\\cos^3x}dx=\\frac{\\tan x\\sec^2x}{\\tan^3x+1}dx$.",
+   "Put $\\tan x=t$, so $\\sec^2x\\,dx=dt$. The integral becomes $\\int\\frac{t\\,dt}{t^3+1}=\\int\\frac{t\\,dt}{(t+1)(t^2-t+1)}$.",
+   "Partial fractions: $\\frac{t}{(t+1)(t^2-t+1)}=\\frac{A}{t+1}+\\frac{Bt+C}{t^2-t+1}$, so $t=A(t^2-t+1)+(Bt+C)(t+1)$.",
+   "Expanding: $t=(A+B)t^2+(B+C-A)t+(A+C)$. Compare coefficients: $A+B=0$, $B+C-A=1$, $A+C=0$.",
+   "So $B=-A$ and $C=-A$; then $B+C-A=-3A=1$, giving $A=-\\frac13$, $B=\\frac13$, $C=\\frac13$.",
+   "$\\int\\frac{t\\,dt}{t^3+1}=-\\frac13\\int\\frac{dt}{t+1}+\\frac13\\int\\frac{t+1}{t^2-t+1}dt=-\\frac13\\ln|t+1|+\\frac13\\int\\frac{t+1}{t^2-t+1}dt$.",
+   "Write $t+1=\\frac12(2t-1)+\\frac32$: $\\int\\frac{t+1}{t^2-t+1}dt=\\frac12\\ln|t^2-t+1|+\\frac32\\int\\frac{dt}{\\left(t-\\frac12\\right)^2+\\left(\\frac{\\sqrt3}{2}\\right)^2}$.",
+   "The last integral is $\\frac{2}{\\sqrt3}\\tan^{-1}\\frac{t-\\frac12}{\\frac{\\sqrt3}{2}}=\\frac{2}{\\sqrt3}\\tan^{-1}\\frac{2t-1}{\\sqrt3}$, so the term is $\\frac32\\cdot\\frac{2}{\\sqrt3}=\\sqrt3$ times $\\tan^{-1}\\frac{2t-1}{\\sqrt3}$.",
+   "Hence the integral $=-\\frac13\\ln|1+\\tan x|+\\frac16\\ln|\\tan^2x-\\tan x+1|+\\frac{1}{\\sqrt3}\\tan^{-1}\\frac{2\\tan x-1}{\\sqrt3}+C$.",
+   "Comparing: $\\alpha=-\\frac13$, $\\beta=\\frac16$, $\\gamma=\\frac{1}{\\sqrt3}$, so $\\gamma^2=\\frac13$.",
+   "$18(\\alpha+\\beta+\\gamma^2)=18\\left(-\\frac13+\\frac16+\\frac13\\right)=18\\times\\frac16=3$."
+  ],
+  "solution_source": "corrected",
+  "correction_note": "PDF writes $\\int\\frac{t+1}{t^2-t+1}dt=\\frac12\\int\\frac{2t}{t^2-t+1}dt+\\int\\frac{dt}{t^2-t+1}$, which is wrong; it should be $\\frac12\\int\\frac{2t-1}{t^2-t+1}dt+\\frac32\\int\\frac{dt}{t^2-t+1}$ (the PDF's next line does use this correct form). Also the printed arctan argument $\\frac{t-1/\\sqrt2}{\\sqrt3/2}$ should be $\\frac{t-1/2}{\\sqrt3/2}$, and the factor $\\frac13$ is dropped between two lines. Corrected here; the final answer 3 is unchanged.",
+  "alternate_solutions": [
+   {
+    "idea": "Differentiate the assumed form of the answer and match it with $\\frac{t}{t^3+1}$, fixing $\\alpha,\\beta,\\gamma$ by special values of $t$ (no partial-fraction set-up, no integration).",
+    "solution": [
+     "With $t=\\tan x$ the given form is $F=\\alpha\\ln|1+t|+\\beta\\ln(t^2-t+1)+\\gamma\\tan^{-1}\\frac{2t-1}{\\sqrt3}$, and we need $\\frac{dF}{dt}=\\frac{t}{t^3+1}$.",
+     "$\\frac{d}{dt}\\tan^{-1}\\frac{2t-1}{\\sqrt3}=\\frac{2/\\sqrt3}{1+\\frac{(2t-1)^2}{3}}=\\frac{2\\sqrt3}{3+(2t-1)^2}=\\frac{\\sqrt3}{2(t^2-t+1)}$.",
+     "So $\\frac{dF}{dt}=\\frac{\\alpha}{t+1}+\\frac{\\beta(2t-1)}{t^2-t+1}+\\frac{\\sqrt3\\gamma}{2(t^2-t+1)}$.",
+     "Multiply by $t^3+1=(t+1)(t^2-t+1)$: $\\alpha(t^2-t+1)+\\beta(2t-1)(t+1)+\\frac{\\sqrt3\\gamma}{2}(t+1)=t$ for all $t$.",
+     "Put $t=-1$: $3\\alpha=-1$, so $\\alpha=-\\frac13$.",
+     "Coefficient of $t^2$: $\\alpha+2\\beta=0$, so $\\beta=\\frac16$.",
+     "Put $t=0$: $\\alpha-\\beta+\\frac{\\sqrt3\\gamma}{2}=0$, so $\\frac{\\sqrt3\\gamma}{2}=\\beta-\\alpha=\\frac16+\\frac13=\\frac12$, giving $\\gamma=\\frac{1}{\\sqrt3}$.",
+     "Check the $t$ coefficient: $\\beta(2t-1)(t+1)=\\beta(2t^2+t-1)$ contributes $\\beta$, so the total is $-\\alpha+\\beta+\\frac{\\sqrt3\\gamma}{2}=\\frac13+\\frac16+\\frac12=1$, as required.",
+     "$18(\\alpha+\\beta+\\gamma^2)=18\\left(-\\frac13+\\frac16+\\frac13\\right)=3$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For a ratio like $\\frac{\\sin x}{\\sin^3x+\\cos^3x}$, divide top and bottom by $\\cos^3x$: it becomes $\\frac{\\tan x\\sec^2x}{1+\\tan^3x}dx$, ready for $t=\\tan x$.",
+   "$t^3+1=(t+1)(t^2-t+1)$ and $t^3-1=(t-1)(t^2+t+1)$; the quadratic factors are irreducible over $\\mathbb R$, so they produce a $\\ln$ term and a $\\tan^{-1}$ term.",
+   "Split a linear numerator over an irreducible quadratic as $pt+q=\\frac p2(2t-1)+\\left(q+\\frac p2\\right)$ to separate the log part; $\\int\\frac{dt}{(t-a)^2+b^2}=\\frac1b\\tan^{-1}\\frac{t-a}{b}$.",
+   "Check by differentiating: the derivative of $\\tan^{-1}\\frac{2t-1}{\\sqrt3}$ is $\\frac{\\sqrt3}{2(t^2-t+1)}$ (verified numerically); the full antiderivative matches the integrand numerically."
+  ]
+ },
+ {
+  "q_no": 22,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Limit of a sum as a definite integral"
+  ],
+  "level": 1,
+  "question": "The value of $\\lim_{n\\to\\infty}\\frac1n\\sum_{r=0}^{2n-1}\\frac{n^2}{n^2+4r^2}$ is:",
+  "options": [
+   "$\\frac14\\tan^{-1}(4)$",
+   "$\\frac12\\tan^{-1}(2)$",
+   "$\\frac12\\tan^{-1}(4)$",
+   "$\\tan^{-1}(4)$"
+  ],
+  "answer": "(C) $\\frac12\\tan^{-1}(4)$",
+  "key_idea": "Write the summand as $\\frac{1}{1+4(r/n)^2}$ and read $\\frac1n\\sum$ with $r/n\\in[0,2)$ as $\\int_0^2$.",
+  "solution": [
+   "Rewrite the term: $\\frac{n^2}{n^2+4r^2}=\\frac{1}{1+4\\left(\\frac rn\\right)^2}$.",
+   "So the sum is $\\frac1n\\sum_{r=0}^{2n-1}f\\left(\\frac rn\\right)$ with $f(x)=\\frac{1}{1+4x^2}$.",
+   "Here $\\frac rn$ runs from $0$ up to just below $2$, so the limit is $\\int_0^2f(x)\\,dx$.",
+   "$\\lim_{n\\to\\infty}\\frac1n\\sum_{r=0}^{2n-1}\\frac{n^2}{n^2+4r^2}=\\int_0^2\\frac{dx}{1+4x^2}$.",
+   "$\\int\\frac{dx}{1+4x^2}=\\frac12\\tan^{-1}(2x)$, so the value is $\\frac12\\left(\\tan^{-1}(2x)\\right)_0^2$.",
+   "$=\\frac12\\left(\\tan^{-1}4-\\tan^{-1}0\\right)=\\frac{\\tan^{-1}(4)}{2}$. Option (C)."
+  ],
+  "solution_source": "pdf",
+  "useful_results": [
+   "$\\lim_{n\\to\\infty}\\frac1n\\sum_{r=an}^{bn-1}f\\left(\\frac rn\\right)=\\int_a^bf(x)\\,dx$ for continuous $f$; the limits are (first and last value of $r$)$/n$, whatever the number of terms.",
+   "Recognition cue: $r$ and $n$ appear only as $r/n$ after dividing top and bottom by $n^2$ (here $\\frac{n^2}{n^2+4r^2}$).",
+   "$\\int\\frac{dx}{1+k^2x^2}=\\frac1k\\tan^{-1}(kx)$. Instance: $k=2$ over $[0,2]$ gives $\\frac12\\tan^{-1}4\\approx0.6629$ (the sum with $n=4000$ gives $0.66303$).",
+   "Including or omitting one end term ($r=0$ vs $r=2n$) changes the sum by $O(1/n)$ and does not affect the limit."
+  ]
+ },
+ {
+  "q_no": 23,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration: even function and modulus"
+  ],
+  "level": 2,
+  "question": "The value of $\\int_{-1/\\sqrt2}^{1/\\sqrt2}\\left(\\left(\\frac{x+1}{x-1}\\right)^2+\\left(\\frac{x-1}{x+1}\\right)^2-2\\right)^{1/2}dx$ is:",
+  "options": [
+   "$4\\log_e(3+2\\sqrt2)$",
+   "$2\\log_e16$",
+   "$\\log_e4$",
+   "$\\log_e16$"
+  ],
+  "answer": "(D) $\\log_e16$",
+  "key_idea": "$a^2+b^2-2=(a-b)^2$ with $a=\\frac{x+1}{x-1}$, $b=\\frac{x-1}{x+1}$; take the modulus with care for its sign.",
+  "solution": [
+   "Let $f(x)=\\left(\\left(\\frac{x+1}{x-1}\\right)^2+\\left(\\frac{x-1}{x+1}\\right)^2-2\\right)^{1/2}$ and $I=\\int_{-1/\\sqrt2}^{1/\\sqrt2}f(x)\\,dx$.",
+   "The expression under the root is a perfect square: $f(x)=\\sqrt{\\left(\\frac{x+1}{x-1}-\\frac{x-1}{x+1}\\right)^2}=\\left|\\frac{x+1}{x-1}-\\frac{x-1}{x+1}\\right|$.",
+   "$f(-x)=f(x)$ (replacing $x$ by $-x$ just swaps the two fractions), so $f$ is even and $I=2\\int_0^{1/\\sqrt2}f(x)\\,dx$.",
+   "For $0\\le x<1$ the difference is $\\frac{x+1}{x-1}-\\frac{x-1}{x+1}=\\frac{4x}{x^2-1}\\le0$, so $f(x)=\\frac{x-1}{x+1}-\\frac{x+1}{x-1}$.",
+   "Write $\\frac{x-1}{x+1}=1-\\frac{2}{x+1}$ and $\\frac{x+1}{x-1}=1+\\frac{2}{x-1}$. Then $f(x)=\\left(1-\\frac{2}{1+x}\\right)-\\left(1+\\frac{2}{x-1}\\right)$.",
+   "$I=2\\int_0^{1/\\sqrt2}\\left(-\\frac{2}{1+x}-\\frac{2}{x-1}\\right)dx=2\\left[-2\\ln|1+x|-2\\ln|1-x|\\right]_0^{1/\\sqrt2}$.",
+   "$=-4\\left[\\ln\\left(1+\\frac{1}{\\sqrt2}\\right)+\\ln\\left(1-\\frac{1}{\\sqrt2}\\right)\\right]=-4\\ln\\left(1-\\frac12\\right)$.",
+   "$=-4\\ln\\frac12=4\\ln2=\\ln16$. Option (D)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Simplify the root to $\\frac{4|x|}{1-x^2}$ first, then a single substitution $u=1-x^2$ finishes it (no splitting into two fractions).",
+    "solution": [
+     "$\\frac{x+1}{x-1}-\\frac{x-1}{x+1}=\\frac{(x+1)^2-(x-1)^2}{x^2-1}=\\frac{4x}{x^2-1}$.",
+     "So $f(x)=\\left|\\frac{4x}{x^2-1}\\right|=\\frac{4|x|}{1-x^2}$ because $1-x^2>0$ on $\\left[-\\frac1{\\sqrt2},\\frac1{\\sqrt2}\\right]$.",
+     "$f$ is even, so $I=2\\int_0^{1/\\sqrt2}\\frac{4x}{1-x^2}dx$.",
+     "Put $u=1-x^2$, $du=-2x\\,dx$: $x=0\\to u=1$ and $x=\\frac1{\\sqrt2}\\to u=\\frac12$.",
+     "$I=2\\cdot2\\int_{1/2}^{1}\\frac{du}{u}=4\\left[\\ln u\\right]_{1/2}^{1}=4\\ln2=\\ln16$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$a^2+b^2-2=(a-b)^2$ when $ab=1$; here $\\frac{x+1}{x-1}\\cdot\\frac{x-1}{x+1}=1$. Since $\\sqrt{u^2}=|u|$, fix the sign of $u$ on the interval before dropping the modulus.",
+   "$\\frac{x+1}{x-1}-\\frac{x-1}{x+1}=\\frac{4x}{x^2-1}$, and $\\int\\frac{2x}{1-x^2}dx=-\\ln(1-x^2)$.",
+   "If $f(-x)=f(x)$ then $\\int_{-a}^af=2\\int_0^af$; test evenness by direct substitution before computing.",
+   "Instance: $\\int_{-1/\\sqrt2}^{1/\\sqrt2}\\frac{4|x|}{1-x^2}dx=4\\ln2\\approx2.7726$ (numerically verified)."
+  ]
+ },
+ {
+  "q_no": 24,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration with greatest integer function"
+  ],
+  "level": 2,
+  "question": "If the value of the integral $\\int_0^5\\frac{x+[x]}{e^{x-[x]}}dx=\\alpha e^{-1}+\\beta$, where $\\alpha,\\beta\\in\\mathbb R$, $5\\alpha+6\\beta=0$, and $[x]$ denotes the greatest integer less than or equal to $x$, then the value of $(\\alpha+\\beta)^2$ is equal to:",
+  "options": [
+   "$100$",
+   "$16$",
+   "$36$",
+   "$25$"
+  ],
+  "answer": "(D) 25",
+  "key_idea": "On $[k,k+1)$ put $x=k+u$: the integrand becomes $(u+2k)e^{-u}$, the same shape on every unit interval.",
+  "solution": [
+   "Split at the integers: $I=\\int_0^1\\frac{x}{e^{x}}dx+\\int_1^2\\frac{x+1}{e^{x-1}}dx+\\int_2^3\\frac{x+2}{e^{x-2}}dx+\\int_3^4\\frac{x+3}{e^{x-3}}dx+\\int_4^5\\frac{x+4}{e^{x-4}}dx$.",
+   "Shift each piece to $[0,1]$: put $x=a+1,\\ b+2,\\ c+3,\\ v+4$ in the 2nd to 5th integrals respectively.",
+   "$I=\\int_0^1\\frac{x}{e^x}dx+\\int_0^1\\frac{a+2}{e^a}da+\\int_0^1\\frac{b+4}{e^b}db+\\int_0^1\\frac{c+6}{e^c}dc+\\int_0^1\\frac{v+8}{e^v}dv$.",
+   "Add them (one variable $x$): $I=\\int_0^1\\frac{5x+20}{e^x}dx=5\\int_0^1\\frac{x+4}{e^x}dx$.",
+   "$\\int_0^1xe^{-x}dx=1-\\frac2e$ and $\\int_0^1e^{-x}dx=1-\\frac1e$.",
+   "$I=5\\left[\\left(1-\\frac2e\\right)+4\\left(1-\\frac1e\\right)\\right]=5\\left(5-\\frac6e\\right)=-30e^{-1}+25$.",
+   "Therefore $\\alpha=-30$ and $\\beta=25$ (check: $5\\alpha+6\\beta=-150+150=0$).",
+   "$(\\alpha+\\beta)^2=(-30+25)^2=25$. Option (D)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Use the side condition $5\\alpha+6\\beta=0$: it gives $\\alpha+\\beta=\\frac{\\alpha}{6}$, so only the coefficient of $e^{-1}$ is needed.",
+    "solution": [
+     "From $5\\alpha+6\\beta=0$: $\\beta=-\\frac{5\\alpha}{6}$, hence $\\alpha+\\beta=\\frac{\\alpha}{6}$ and $(\\alpha+\\beta)^2=\\frac{\\alpha^2}{36}$.",
+     "Write $x=k+u$ with $u=\\{x\\}\\in[0,1)$: $\\frac{x+[x]}{e^{x-[x]}}=(u+2k)e^{-u}$, and $\\int_0^5=\\sum_{k=0}^{4}\\int_0^1(u+2k)e^{-u}du$.",
+     "Only the $e^{-1}$ parts matter: $\\int_0^1ue^{-u}du$ contributes $-\\frac{2}{e}$ and $\\int_0^1e^{-u}du$ contributes $-\\frac1e$.",
+     "So $\\alpha=\\sum_{k=0}^{4}\\left(-2-2k\\right)=-2\\cdot5-2\\cdot10=-30$.",
+     "$\\alpha+\\beta=\\frac{-30}{6}=-5$, so $(\\alpha+\\beta)^2=25$ (and indeed $\\beta=25$)."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For $x\\in[k,k+1)$: $[x]=k$ and $x-[x]=\\{x\\}=u\\in[0,1)$. An integral over $[0,N]$ of $g([x],\\{x\\})$ is $\\sum_{k=0}^{N-1}\\int_0^1g(k,u)du$.",
+   "Sums needed: $\\sum_{k=0}^{N-1}k=\\frac{N(N-1)}{2}$; for $N=5$ this is $10$, so the $2[x]$ part contributes $20\\int_0^1e^{-u}du$ and the $\\{x\\}$ part contributes $5\\int_0^1ue^{-u}du$.",
+   "$\\int_0^1ue^{-u}du=1-\\frac2e$ and $\\int_0^1e^{-u}du=1-\\frac1e$; since $e$ is irrational, $\\alpha,\\beta$ in $\\alpha e^{-1}+\\beta$ are unique when rational.",
+   "Instance: $\\int_0^5\\frac{x+[x]}{e^{x-[x]}}dx=25-\\frac{30}{e}\\approx13.9636$ (numerically verified)."
+  ]
+ },
+ {
+  "q_no": 25,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration: king property"
+  ],
+  "level": 1,
+  "question": "The value of $\\int_{-\\pi/2}^{\\pi/2}\\left(\\frac{1+\\sin^2x}{1+\\pi^{\\sin x}}\\right)dx$ is:",
+  "options": [
+   "$\\frac{3\\pi}{4}$",
+   "$\\frac{3\\pi}{2}$",
+   "$\\frac{\\pi}{2}$",
+   "$\\frac{5\\pi}{2}$"
+  ],
+  "answer": "(A) $\\frac{3\\pi}{4}$",
+  "key_idea": "Replace $x$ by $-x$ and add: $\\frac{1}{1+\\pi^{\\sin x}}+\\frac{1}{1+\\pi^{-\\sin x}}=1$.",
+  "solution": [
+   "Let $I=\\int_{-\\pi/2}^{\\pi/2}\\frac{1+\\sin^2x}{1+\\pi^{\\sin x}}dx$.",
+   "Apply the king property ($x\\to-x$ on the symmetric interval): $I=\\int_{-\\pi/2}^{\\pi/2}\\frac{1+\\sin^2x}{1+\\pi^{-\\sin x}}dx$.",
+   "Add the two forms: $2I=\\int_{-\\pi/2}^{\\pi/2}(1+\\sin^2x)\\left[\\frac{1}{1+\\pi^{\\sin x}}+\\frac{1}{1+\\pi^{-\\sin x}}\\right]dx$.",
+   "The bracket equals $\\frac{1}{1+\\pi^{\\sin x}}+\\frac{\\pi^{\\sin x}}{\\pi^{\\sin x}+1}=1$, so $2I=\\int_{-\\pi/2}^{\\pi/2}(1+\\sin^2x)\\,dx$.",
+   "$1+\\sin^2x$ is even, so $2I=2\\int_0^{\\pi/2}\\left(1+\\sin^2x\\right)dx=2\\left(\\frac\\pi2+\\frac\\pi4\\right)=\\frac{3\\pi}{2}$.",
+   "Hence $I=\\frac{3\\pi}{4}$. Option (A)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Even-odd split: $\\frac{1}{1+\\pi^{\\sin x}}=\\frac12+\\text{(odd function)}$, and the odd part integrates to $0$ against the even factor.",
+    "solution": [
+     "Let $g(x)=\\frac{1}{1+\\pi^{\\sin x}}$. Then $g(x)+g(-x)=1$, so $g(x)=\\frac12+h(x)$ with $h(x)=g(x)-\\frac12=\\frac{1-\\pi^{\\sin x}}{2(1+\\pi^{\\sin x})}$.",
+     "$h(-x)=\\frac{1-\\pi^{-\\sin x}}{2(1+\\pi^{-\\sin x})}=\\frac{\\pi^{\\sin x}-1}{2(\\pi^{\\sin x}+1)}=-h(x)$, so $h$ is odd.",
+     "$I=\\int_{-\\pi/2}^{\\pi/2}(1+\\sin^2x)\\left(\\frac12+h(x)\\right)dx$; $(1+\\sin^2x)h(x)$ is odd, so its integral is $0$.",
+     "$I=\\frac12\\int_{-\\pi/2}^{\\pi/2}(1+\\sin^2x)dx=\\int_0^{\\pi/2}(1+\\sin^2x)dx=\\frac\\pi2+\\frac\\pi4=\\frac{3\\pi}{4}$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For an even $f$ and any $a>0$: $\\int_{-b}^{b}\\frac{f(x)}{1+a^{x}}dx=\\int_0^bf(x)dx$ (the same with $a^{g(x)}$ for an odd $g$).",
+   "$\\frac{1}{1+a^t}+\\frac{1}{1+a^{-t}}=1$ for every $t$; so $\\frac{1}{1+a^t}$ is $\\frac12$ plus an odd function.",
+   "Condition: the interval must be symmetric $[-b,b]$ and the numerator even; if the numerator is odd the integral is not simply halved.",
+   "Instance: $\\int_{-\\pi/2}^{\\pi/2}\\frac{1+\\sin^2x}{1+\\pi^{\\sin x}}dx=\\frac{3\\pi}{4}\\approx2.3562$ (numerically verified)."
+  ]
+ },
+ {
+  "q_no": 26,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Limit of a product as a definite integral"
+  ],
+  "level": 2,
+  "question": "If $U_n=\\left(1+\\frac1{n^2}\\right)\\left(1+\\frac{2^2}{n^2}\\right)^2\\cdots\\left(1+\\frac{n^2}{n^2}\\right)^n$, then $\\lim_{n\\to\\infty}(U_n)^{-4/n^2}$ is equal to:",
+  "options": [
+   "$\\frac{16}{e^2}$",
+   "$\\frac4e$",
+   "$\\frac4{e^2}$",
+   "$\\frac{e^2}{16}$"
+  ],
+  "answer": "(D) $\\frac{e^2}{16}$",
+  "key_idea": "Take $\\ln$: the exponent $-\\frac{4}{n^2}\\sum r\\ln\\left(1+\\frac{r^2}{n^2}\\right)$ is a Riemann sum for $-4\\int_0^1x\\ln(1+x^2)dx$.",
+  "solution": [
+   "Let $y=\\lim_{n\\to\\infty}(U_n)^{-4/n^2}$, where $U_n=\\prod_{r=1}^{n}\\left(1+\\frac{r^2}{n^2}\\right)^r$.",
+   "Take logarithms: $\\ln y=\\lim_{n\\to\\infty}\\sum_{r=1}^{n}\\frac{-4r}{n^2}\\ln\\left(1+\\frac{r^2}{n^2}\\right)$.",
+   "Write $\\frac{r}{n^2}=\\frac1n\\cdot\\frac rn$; the sum is $\\frac1n\\sum\\left(-4\\frac rn\\right)\\ln\\left(1+\\frac{r^2}{n^2}\\right)$, so $\\ln y=\\int_0^1-4x\\ln(1+x^2)\\,dx$.",
+   "Let $1+x^2=t$, $2x\\,dx=dt$; the limits $x:0\\to1$ give $t:1\\to2$.",
+   "$\\ln y=-2\\int_1^2\\ln t\\,dt=-2\\left[t\\ln t-t\\right]_1^2$.",
+   "$=-2\\left[(2\\ln2-2)-(0-1)\\right]=-2(2\\ln2-1)=2-4\\ln2=2-\\ln16$.",
+   "So $y=e^{2-\\ln16}=\\frac{e^2}{16}$. Option (D)."
+  ],
+  "solution_source": "pdf",
+  "useful_results": [
+   "$\\lim_{n\\to\\infty}\\left[\\prod_{r=1}^{n}F\\left(\\frac rn\\right)\\right]^{1/n}=\\exp\\int_0^1\\ln F(x)\\,dx$ for positive continuous $F$; a weight $r$ in the exponent adds an extra factor $\\frac rn$ inside the sum.",
+   "A power like $(\\cdot)^{-4/n^2}$ with exponent $r$ inside means $\\frac{r}{n^2}=\\frac1n\\cdot\\frac rn$: check that the total power of $\\frac1n$ is exactly one so that the sum is a Riemann sum.",
+   "$\\int\\ln t\\,dt=t\\ln t-t$ and $\\int x\\ln(1+x^2)dx=\\frac12\\left[(1+x^2)\\ln(1+x^2)-(1+x^2)\\right]$; the substitution $1+x^2=t$ handles $x\\ln(1+x^2)$.",
+   "Instance: exact limit $e^2/16\\approx0.46182$ (the product at $n=2000$ gives $0.46150$)."
+  ]
+ },
+ {
+  "q_no": 27,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration: king property"
+  ],
+  "level": 1,
+  "question": "$\\int_6^{16}\\frac{\\log_ex^2}{\\log_ex^2+\\log_e(x^2-44x+484)}dx$ is equal to:",
+  "options": [
+   "$8$",
+   "$6$",
+   "$10$",
+   "$5$"
+  ],
+  "answer": "(D) 5",
+  "key_idea": "$x^2-44x+484=(22-x)^2$, so the integrand is $\\frac{\\phi(x)}{\\phi(x)+\\phi(22-x)}$ with $6+16=22$.",
+  "solution": [
+   "Since $x^2-44x+484=(x-22)^2=(22-x)^2$, $I=\\int_6^{16}\\frac{\\log_ex^2}{\\log_ex^2+\\log_e(22-x)^2}dx$ ... (i).",
+   "King property $\\int_a^bf(x)dx=\\int_a^bf(a+b-x)dx$ with $a+b=22$ (replace $x$ by $22-x$): $I=\\int_6^{16}\\frac{\\log_e(22-x)^2}{\\log_e(22-x)^2+\\log_ex^2}dx$ ... (ii).",
+   "Add (i) and (ii): the numerators add up to the denominator, so $2I=\\int_6^{16}1\\,dx$.",
+   "$2I=16-6=10$, so $I=5$. Option (D)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Graph viewpoint: $h(x)+h(22-x)=1$ makes the graph symmetric about the point $\\left(11,\\frac12\\right)$, so the area is that of a rectangle of height $\\frac12$.",
+    "solution": [
+     "Let $h(x)=\\frac{\\ln x^2}{\\ln x^2+\\ln(22-x)^2}$ on $[6,16]$ (the denominator is positive: both logs are positive since $x$ and $22-x$ lie in $[6,16]$).",
+     "Then $h(x)+h(22-x)=1$, so the points $(x,h(x))$ and $(22-x,h(22-x))$ are symmetric about $\\left(11,\\frac12\\right)$.",
+     "A graph symmetric about the centre $(11,\\frac12)$ of the interval $[6,16]$ has area equal to $\\frac12\\times$ width.",
+     "$I=\\frac12(16-6)=5$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "$\\int_a^b\\frac{f(x)}{f(x)+f(a+b-x)}dx=\\frac{b-a}{2}$ whenever the denominator is nonzero on $[a,b]$.",
+   "Recognition cue: the second term in the denominator is the first with $x\\to a+b-x$; here $x^2-44x+484=(22-x)^2$ hides it, and $a+b=22$.",
+   "Hidden-square check: $x^2-2px+p^2=(x-p)^2$ with $p=22$; also $\\ln x^2=2\\ln x$ does not change the ratio.",
+   "Instance: $\\int_6^{16}\\frac{\\ln x}{\\ln x+\\ln(22-x)}dx=5$ (numerically verified)."
+  ]
+ },
+ {
+  "q_no": 28,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration: substitution and partial fractions"
+  ],
+  "level": 2,
+  "question": "The value of the integral $\\int_0^1\\frac{\\sqrt x\\,dx}{(1+x)(1+3x)(3+x)}$ is:",
+  "options": [
+   "$\\frac\\pi8\\left(1-\\frac{\\sqrt3}{2}\\right)$",
+   "$\\frac\\pi4\\left(1-\\frac{\\sqrt3}{2}\\right)$",
+   "$\\frac\\pi4\\left(1-\\frac{\\sqrt3}{6}\\right)$",
+   "$\\frac\\pi8\\left(1-\\frac{\\sqrt3}{6}\\right)$"
+  ],
+  "answer": "(A) $\\frac\\pi8\\left(1-\\frac{\\sqrt3}{2}\\right)$",
+  "key_idea": "$x=t^2$ removes the root, and $2t^2=(3t^2+1)-(t^2+1)$ splits the fraction into two simpler ones.",
+  "solution": [
+   "Put $x=t^2$, $dx=2t\\,dt$: $I=\\int_0^1\\frac{2t^2\\,dt}{(1+t^2)(1+3t^2)(3+t^2)}$.",
+   "Write $2t^2=(3t^2+1)-(t^2+1)$: $I=\\int_0^1\\frac{(3t^2+1)-(t^2+1)}{(t^2+1)(3t^2+1)(t^2+3)}dt$.",
+   "$I=\\int_0^1\\frac{dt}{(1+t^2)(t^2+3)}-\\int_0^1\\frac{dt}{(3t^2+1)(t^2+3)}$.",
+   "Use $(t^2+3)-(t^2+1)=2$ in the first and $(1+3t^2)-3(3+t^2)=-8$ in the second: $I=\\frac12\\int_0^1\\frac{(t^2+3)-(t^2+1)}{(1+t^2)(t^2+3)}dt+\\frac18\\int_0^1\\frac{(1+3t^2)-3(3+t^2)}{(3t^2+1)(t^2+3)}dt$.",
+   "$I=\\frac12\\int_0^1\\frac{dt}{1+t^2}-\\frac12\\int_0^1\\frac{dt}{t^2+3}+\\frac18\\int_0^1\\frac{dt}{t^2+3}-\\frac38\\int_0^1\\frac{dt}{3t^2+1}$.",
+   "Combine ($-\\frac12+\\frac18=-\\frac38$): $I=\\frac12\\int_0^1\\frac{dt}{1+t^2}-\\frac38\\int_0^1\\frac{dt}{t^2+3}-\\frac38\\int_0^1\\frac{dt}{1+3t^2}$.",
+   "$I=\\frac12\\tan^{-1}t\\Big|_0^1-\\frac{3}{8\\sqrt3}\\tan^{-1}\\frac{t}{\\sqrt3}\\Big|_0^1-\\frac{3}{8\\sqrt3}\\tan^{-1}(\\sqrt3t)\\Big|_0^1$.",
+   "$I=\\frac12\\left(\\frac\\pi4\\right)-\\frac{3}{8\\sqrt3}\\left(\\frac\\pi6\\right)-\\frac{3}{8\\sqrt3}\\left(\\frac\\pi3\\right)$.",
+   "$I=\\frac\\pi8-\\frac{\\sqrt3}{16}\\pi=\\frac\\pi8\\left(1-\\frac{\\sqrt3}{2}\\right)$. Option (A)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Inversion $x\\to\\frac1x$ maps $D(x)=(1+x)(1+3x)(3+x)$ to $D(x)/x^3$, so $\\int_0^1=\\int_1^\\infty$ and $I=\\frac12\\int_0^\\infty$, which needs only $\\int_0^\\infty\\frac{dt}{t^2+a^2}=\\frac{\\pi}{2a}$.",
+    "solution": [
+     "Let $D(x)=(1+x)(1+3x)(3+x)$. Then $D\\left(\\frac1x\\right)=\\frac{(x+1)(x+3)(3x+1)}{x^3}=\\frac{D(x)}{x^3}$.",
+     "Substitute $x=\\frac1u$ in $I=\\int_0^1\\frac{\\sqrt x}{D(x)}dx$: $\\sqrt x\\to u^{-1/2}$, $D\\to\\frac{D(u)}{u^3}$, $dx\\to\\frac{du}{u^2}$, so $I=\\int_1^\\infty\\frac{u^{-1/2}u^3u^{-2}}{D(u)}du=\\int_1^\\infty\\frac{\\sqrt u}{D(u)}du$.",
+     "Hence $2I=\\int_0^\\infty\\frac{\\sqrt x}{D(x)}dx$. Put $x=t^2$: $2I=\\int_0^\\infty\\frac{2t^2\\,dt}{(1+t^2)(1+3t^2)(3+t^2)}$.",
+     "With $u=t^2$: $\\frac{u}{(u+1)(3u+1)(u+3)}=\\frac{1/4}{u+1}-\\frac{3/16}{3u+1}-\\frac{3/16}{u+3}$ (check at $u=0$: $\\frac14-\\frac3{16}-\\frac1{16}=0$).",
+     "Use $\\int_0^\\infty\\frac{dt}{t^2+1}=\\frac\\pi2$, $\\int_0^\\infty\\frac{dt}{3t^2+1}=\\frac{\\pi}{2\\sqrt3}$, $\\int_0^\\infty\\frac{dt}{t^2+3}=\\frac{\\pi}{2\\sqrt3}$.",
+     "$2I=2\\left[\\frac14\\cdot\\frac\\pi2-\\frac{3}{16}\\cdot\\frac{\\pi}{2\\sqrt3}-\\frac{3}{16}\\cdot\\frac{\\pi}{2\\sqrt3}\\right]=\\frac\\pi4-\\frac{3\\pi}{8\\sqrt3}=\\frac\\pi4-\\frac{\\sqrt3\\pi}{8}$.",
+     "$I=\\frac\\pi8-\\frac{\\sqrt3\\pi}{16}=\\frac\\pi8\\left(1-\\frac{\\sqrt3}{2}\\right)$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "If $D(1/x)=D(x)/x^k$ and the integrand carries the matching power of $x$, then $\\int_0^1=\\int_1^\\infty$, so $\\int_0^1=\\frac12\\int_0^\\infty$; here $\\int_0^1\\frac{\\sqrt x}{D}=\\int_1^\\infty\\frac{\\sqrt x}{D}\\approx0.05261$ (numerically verified).",
+   "$\\int_0^\\infty\\frac{dt}{t^2+a^2}=\\frac{\\pi}{2a}$ while $\\int_0^1\\frac{dt}{t^2+a^2}=\\frac1a\\tan^{-1}\\frac1a$; the infinite range gives cleaner values.",
+   "Partial fractions in $u=t^2$: $\\frac{1}{(u+a)(u+b)}=\\frac{1}{b-a}\\left(\\frac1{u+a}-\\frac1{u+b}\\right)$; a $\\sqrt x$ in the numerator is removed by $x=t^2$.",
+   "Instance: $I=\\frac\\pi8\\left(1-\\frac{\\sqrt3}2\\right)\\approx0.05261$."
+  ]
+ },
+ {
+  "q_no": 29,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Definite integration with greatest integer function"
+  ],
+  "level": 2,
+  "question": "If $[x]$ is the greatest integer $\\le x$, then $\\pi^2\\int_0^2\\left(\\sin\\frac{\\pi x}{2}\\right)\\left(x-[x]\\right)^{[x]}dx$ is equal to:",
+  "options": [
+   "$4(\\pi+1)$",
+   "$2(\\pi+1)$",
+   "$4(\\pi-1)$",
+   "$2(\\pi-1)$"
+  ],
+  "answer": "(C) $4(\\pi-1)$",
+  "key_idea": "Split at $x=1$: on $[0,1)$ the exponent is $0$ (factor $1$) and on $[1,2)$ it is $1$ (factor $x-1$).",
+  "solution": [
+   "On $[0,1)$: $[x]=0$ and $(x-0)^0=1$. On $[1,2)$: $[x]=1$ and $(x-1)^1=x-1$.",
+   "So $I=\\pi^2\\left[\\int_0^1\\sin\\frac{\\pi x}{2}dx+\\int_1^2(x-1)\\sin\\frac{\\pi x}{2}dx\\right]$.",
+   "First integral: $\\int_0^1\\sin\\frac{\\pi x}{2}dx=\\left[-\\frac2\\pi\\cos\\frac{\\pi x}{2}\\right]_0^1=-\\frac2\\pi(0-1)=\\frac2\\pi$.",
+   "Second, by parts: $\\int_1^2(x-1)\\sin\\frac{\\pi x}{2}dx=\\left[(x-1)\\left(-\\frac2\\pi\\cos\\frac{\\pi x}{2}\\right)\\right]_1^2+\\frac2\\pi\\int_1^2\\cos\\frac{\\pi x}{2}dx$.",
+   "Boundary term: $\\left[-(x-1)\\frac2\\pi\\cos\\frac{\\pi x}2\\right]_1^2=-\\frac2\\pi(1)(-1)-0=\\frac2\\pi$.",
+   "Remaining integral: $\\frac2\\pi\\cdot\\frac2\\pi\\left[\\sin\\frac{\\pi x}{2}\\right]_1^2=\\frac{4}{\\pi^2}(0-1)=-\\frac{4}{\\pi^2}$.",
+   "Total: $I=\\pi^2\\left[\\frac2\\pi+\\frac2\\pi-\\frac4{\\pi^2}\\right]=\\pi^2\\left[\\frac4\\pi-\\frac4{\\pi^2}\\right]$.",
+   "$I=4\\pi-4=4(\\pi-1)$. Option (C)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Reflect the second piece with $x\\to2-x$ ($\\sin\\left(\\pi-\\frac{\\pi u}{2}\\right)=\\sin\\frac{\\pi u}{2}$) so both pieces live on $[0,1]$ and combine into $(2-u)\\sin\\frac{\\pi u}2$.",
+    "solution": [
+     "On $[1,2)$ put $x=2-u$, $u\\in(0,1]$: $\\sin\\frac{\\pi(2-u)}{2}=\\sin\\left(\\pi-\\frac{\\pi u}{2}\\right)=\\sin\\frac{\\pi u}{2}$ and $x-1=1-u$.",
+     "So $\\int_1^2(x-1)\\sin\\frac{\\pi x}{2}dx=\\int_0^1(1-u)\\sin\\frac{\\pi u}{2}du$.",
+     "Adding the first piece $\\int_0^1\\sin\\frac{\\pi u}{2}du$: total $=\\int_0^1(2-u)\\sin\\frac{\\pi u}{2}du=2\\int_0^1\\sin\\frac{\\pi u}2du-\\int_0^1u\\sin\\frac{\\pi u}2du$.",
+     "$\\int_0^1\\sin\\frac{\\pi u}{2}du=\\frac2\\pi$ and $\\int_0^1u\\sin\\frac{\\pi u}{2}du=\\frac{4}{\\pi^2}$ (one by-parts: $\\left[-\\frac{2u}{\\pi}\\cos\\frac{\\pi u}2\\right]_0^1+\\frac{2}{\\pi}\\cdot\\frac2\\pi=\\frac4{\\pi^2}$).",
+     "Total $=\\frac4\\pi-\\frac{4}{\\pi^2}$, so $I=\\pi^2\\left(\\frac4\\pi-\\frac4{\\pi^2}\\right)=4(\\pi-1)$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "For $x\\in[k,k+1)$ the factor $(x-[x])^{[x]}$ equals $(x-k)^k$; on $[0,1)$ it is $x^0=1$ (the single point $x=0$ does not matter).",
+   "$\\int_0^1u\\sin\\frac{\\pi u}{2}du=\\frac{4}{\\pi^2}$ and $\\int_0^1\\sin\\frac{\\pi u}2du=\\frac2\\pi$; in general $\\int_0^1u\\sin(au)du=\\frac{\\sin a-a\\cos a}{a^2}$ (checked at $a=\\frac\\pi2$).",
+   "Reflection $x\\to n-x$ on $[n-1,n]$ turns $\\sin\\frac{\\pi x}{2}$ into $\\pm\\sin\\frac{\\pi u}{2}$ depending on $n$; for $n=2$ it is $+$, which lets the pieces merge.",
+   "Instance: $\\pi^2\\int_0^2\\ldots=4\\pi-4\\approx8.5664$ (numerically verified)."
+  ]
+ },
+ {
+  "q_no": 30,
+  "type_label": "Single Correct Type",
+  "short_type": "Single Correct",
+  "marks": 4,
+  "concepts": [
+   "Leibniz rule and L'Hopital's rule for integral limits"
+  ],
+  "level": 1,
+  "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a continuous function. Then $\\lim_{x\\to\\pi/4}\\frac{\\frac\\pi4\\int_2^{\\sec^2x}f(x)\\,dx}{x^2-\\frac{\\pi^2}{16}}$ is equal to:",
+  "options": [
+   "$2f(\\sqrt2)$",
+   "$4f(2)$",
+   "$2f(2)$",
+   "$f(2)$"
+  ],
+  "answer": "(C) $2f(2)$",
+  "key_idea": "At $x=\\frac\\pi4$ the upper limit $\\sec^2x$ equals the lower limit $2$ (a $\\frac00$ form); differentiate top and bottom (Leibniz).",
+  "solution": [
+   "At $x=\\frac\\pi4$: $\\sec^2\\frac\\pi4=2$, so the numerator $\\frac\\pi4\\int_2^2f=0$; the denominator is also $0$. The form is $\\frac00$.",
+   "Apply L'Hopital's rule; by Leibniz rule $\\frac{d}{dx}\\int_2^{\\sec^2x}f(t)dt=f(\\sec^2x)\\cdot2\\sec^2x\\tan x$.",
+   "The limit becomes $\\lim_{x\\to\\pi/4}\\frac{\\frac\\pi4f(\\sec^2x)\\cdot2\\sec^2x\\tan x}{2x}$.",
+   "Substitute $x=\\frac\\pi4$: $\\sec^2x=2$, $\\tan x=1$: $\\frac{\\frac\\pi4f(2)\\cdot2\\times2\\times1}{2\\times\\frac\\pi4}$.",
+   "$=\\frac{\\pi f(2)}{\\pi/2}=2f(2)$. Option (C)."
+  ],
+  "solution_source": "pdf",
+  "alternate_solutions": [
+   {
+    "idea": "Mean value theorem for integrals gives $\\int_2^{\\sec^2x}f=f(c)(\\sec^2x-2)$ with $c\\to2$, then only the elementary limit $\\frac{\\tan x-1}{x-\\pi/4}\\to\\sec^2\\frac\\pi4$ is needed (no L'Hopital).",
+    "solution": [
+     "$f$ continuous: $\\int_2^{\\sec^2x}f(t)dt=f(c_x)\\left(\\sec^2x-2\\right)$ with $c_x$ between $2$ and $\\sec^2x$; as $x\\to\\frac\\pi4$, $c_x\\to2$, so $f(c_x)\\to f(2)$.",
+     "$\\sec^2x-2=\\tan^2x-1=(\\tan x-1)(\\tan x+1)$ and $x^2-\\frac{\\pi^2}{16}=\\left(x-\\frac\\pi4\\right)\\left(x+\\frac\\pi4\\right)$.",
+     "$\\lim_{x\\to\\pi/4}\\frac{\\tan x-1}{x-\\frac\\pi4}=\\sec^2\\frac\\pi4=2$ (derivative of $\\tan x$ at $\\frac\\pi4$), and $\\tan x+1\\to2$, $x+\\frac\\pi4\\to\\frac\\pi2$.",
+     "The limit $=\\frac\\pi4\\cdot f(2)\\cdot\\frac{2\\cdot2}{\\pi/2}=\\frac\\pi4f(2)\\cdot\\frac{8}{\\pi}$.",
+     "$=2f(2)$."
+    ]
+   }
+  ],
+  "useful_results": [
+   "Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)}f(t)dt=f(b(x))\\,b'(x)-f(a(x))\\,a'(x)$ for continuous $f$ and differentiable limits.",
+   "A limit $\\frac{\\int_{a}^{g(x)}f}{h(x)}$ with $g(x_0)=a$ and $h(x_0)=0$ equals $\\frac{f(a)\\,g'(x_0)}{h'(x_0)}$ when $h'(x_0)\\ne0$. Here $g'=2\\sec^2x\\tan x=4$ at $\\frac\\pi4$ and $h'=\\frac\\pi2$.",
+   "Since $f$ is only continuous, never differentiate $f$; the L'Hopital step needs only the Leibniz rule, which uses continuity of $f$.",
+   "Check with $f(t)=\\cos t+t^2$: the quotient at $x=\\frac\\pi4+10^{-6}$ is $7.16773$ and $2f(2)=7.16771$."
+  ]
+ }
+]
