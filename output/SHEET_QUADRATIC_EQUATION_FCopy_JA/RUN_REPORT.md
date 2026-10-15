@@ -4,8 +4,7 @@ Files: `_content.json`, `_Analysis.pptx` (64 slides, 9 questions), `_ratings.jso
 
 ## Difficulty
 - Marks-weighted difficulty index: **2.74** (31 marks; adjusted = unadjusted, no equivalence-relation question; the multi-correct floor of 2.5 did not change any level).
-- Level 1: 1 (Q5); Level 2: 3 (Q1, Q6, Q9); Level 3: 3 (Q2, Q3, Q4); Level 4: 3 (Q7, Q8 ... see below); Levels 0 and 5: none.
-  Exact: L1 = Q5; L2 = Q1, Q6, Q9; L3 = Q2, Q3, Q4; L4 = Q7, Q8. (1 + 3 + 3 + 2 = 9 questions.)
+- Level 1: 1 (Q5); Level 2: 3 (Q1, Q6, Q9); Level 3: 3 (Q2, Q3, Q4); Level 4: 2 (Q7, Q8); Levels 0 and 5: none.
 - Q7, Q8, Q9 are JEE Advanced 2024 questions with the user's own ratings in the anchor bank (4, 4, 2); I used those levels. Q2 and Q3 rated Medium confidence (no close anchor).
 
 ## Blueprint / marks
