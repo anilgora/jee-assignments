@@ -1,0 +1,1028 @@
+{
+ "title": "Limits (Exercise J-M) — Paper Analysis",
+ "subtitle": "XII SHEET LIMIT · Exercise J-M · detailed solutions",
+ "source": "XII_SHEET_LIMIT_FCopy_JM.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 1,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is one option"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 2,
+   "to": 3,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is a numerical value"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 4,
+   "to": 14,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is one option"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 15,
+   "to": 16,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is a numerical value"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 17,
+   "to": 21,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is one option"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 22,
+   "to": 22,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)",
+    "Answer is a numerical value"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits using binomial series expansion"
+   ],
+   "level": 2,
+   "question": "The value of $\\lim_{x\\to0}\\left(\\frac{x}{\\sqrt[8]{1-\\sin x}-\\sqrt[8]{1+\\sin x}}\\right)$ is equal to : [JEE(Main) July 2021]",
+   "options": [
+    "$4$",
+    "$-4$",
+    "$-1$",
+    "$0$"
+   ],
+   "answer": "(B) $-4$",
+   "key_idea": "In $(1-\\sin x)^{1/8}-(1+\\sin x)^{1/8}$ the even powers cancel, leaving $-\\frac14\\sin x$ as the leading term.",
+   "solution": [
+    "Write the denominator as $(1-\\sin x)^{1/8}-(1+\\sin x)^{1/8}$ and expand both terms by the binomial series in $\\sin x$.",
+    "$(1\\mp\\sin x)^{1/8}=1\\mp\\frac18\\sin x+\\frac{\\frac18\\left(\\frac18-1\\right)}{2!}\\sin^2x\\mp\\frac{\\frac18\\left(\\frac18-1\\right)\\left(\\frac18-2\\right)}{3!}\\sin^3x+\\cdots$",
+    "Subtract: the even-power terms cancel and the odd-power terms double, so the denominator is $-\\frac28\\sin x-\\frac{2\\cdot\\frac18\\left(\\frac18-1\\right)\\left(\\frac18-2\\right)}{3!}\\sin^3x-\\cdots$",
+    "Take $-\\frac28\\sin x$ common: denominator $=-\\frac28\\sin x\\left[1+\\frac{\\left(\\frac18-1\\right)\\left(\\frac18-2\\right)}{3!}\\sin^2x+\\cdots\\right]$.",
+    "So the expression is $\\frac{x}{-\\frac28\\sin x\\,[1+\\cdots]}$; as $x\\to0$, $\\frac{x}{\\sin x}\\to1$ and the bracket $\\to1$.",
+    "Limit $=\\frac{1}{-\\frac28}\\cdot[1+0]=-4$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $a^8-b^8=(a-b)(a^7+a^6b+\\cdots+b^7)$ with $a=(1-\\sin x)^{1/8}$, $b=(1+\\sin x)^{1/8}$.",
+     "solution": [
+      "Let $a=(1-\\sin x)^{1/8}$ and $b=(1+\\sin x)^{1/8}$; then $a^8-b^8=-2\\sin x$.",
+      "Also $a^8-b^8=(a-b)\\left(a^7+a^6b+\\cdots+b^7\\right)$, so $a-b=\\frac{-2\\sin x}{a^7+a^6b+\\cdots+b^7}$.",
+      "As $x\\to0$, $a\\to1$ and $b\\to1$, so the eight-term sum tends to $8$.",
+      "Hence $a-b\\sim-\\frac{2\\sin x}{8}=-\\frac{\\sin x}{4}$, and $\\frac{x}{a-b}\\to\\frac{x}{-\\frac14\\sin x}=-4$.",
+      "The limit is $-4$, option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $a,b\\to1$: $a-b\\approx\\frac{a^n-b^n}{n}$, because $a^n-b^n=(a-b)(a^{n-1}+\\cdots+b^{n-1})$ and the bracket has $n$ terms each $\\to1$.",
+    "For small $u$: $(1-u)^p-(1+u)^p\\approx-2pu$ (odd terms double, even terms cancel); here $p=\\frac18$ gives $-\\frac u4$.",
+    "Recognition cue: a limit whose denominator is a difference of two $n$-th roots of $1\\pm$(small) is a derivative in disguise."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form 1^∞"
+   ],
+   "level": 2,
+   "question": "If the value of $\\lim_{x\\to0}\\left(2-\\cos x\\sqrt{\\cos2x}\\right)^{\\left(\\frac{x+2}{x^2}\\right)}$ is equal to $e^a$, then $a$ is equal to ________. [JEE(Main) July 2021]",
+   "answer": "3",
+   "key_idea": "$1^\\infty$ form: $\\lim f^g=e^{\\lim g(f-1)}$, then rationalise and use $\\sin^2x\\sim x^2$.",
+   "solution": [
+    "The form is $1^\\infty$: the base $2-\\cos x\\sqrt{\\cos2x}\\to1$ and the exponent $\\frac{x+2}{x^2}\\to\\infty$.",
+    "Using $\\lim f^g=e^{\\lim g(f-1)}$, the limit equals $e^{a}$ with $a=\\lim_{x\\to0}\\frac{x+2}{x^2}\\left(1-\\cos x\\sqrt{\\cos2x}\\right)$.",
+    "Rationalise: $1-\\cos x\\sqrt{\\cos2x}=\\frac{1-\\cos^2x\\cos2x}{1+\\cos x\\sqrt{\\cos2x}}$; the denominator $\\to2$ and $x+2\\to2$.",
+    "So $a=\\lim\\frac{2\\left(1-\\cos^2x\\cos2x\\right)}{x^2\\left(1+\\cos x\\sqrt{\\cos2x}\\right)}=\\lim\\frac{2\\left(1-\\cos^2x\\cos2x\\right)}{2x^2}$.",
+    "Use $\\cos2x=2\\cos^2x-1$: $1-\\cos^2x(2\\cos^2x-1)=1+\\cos^2x-2\\cos^4x$, so $a=\\lim\\frac{1+\\cos^2x-2\\cos^4x}{x^2}$.",
+    "Factorise: $1+\\cos^2x-2\\cos^4x=(1-\\cos^2x)(1+2\\cos^2x)$.",
+    "$a=\\lim\\frac{(1-\\cos^2x)(1+2\\cos^2x)}{x^2}=\\lim\\frac{3\\sin^2x}{x^2}=3$ (the factor $1+2\\cos^2x\\to3$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand $\\cos x\\sqrt{\\cos2x}$ to order $x^2$ directly, so no rationalising is needed.",
+     "solution": [
+      "$\\cos x=1-\\frac{x^2}{2}+\\cdots$ and $\\cos2x=1-2x^2+\\cdots$, so $\\sqrt{\\cos2x}=1-x^2+\\cdots$.",
+      "$\\cos x\\sqrt{\\cos2x}=\\left(1-\\frac{x^2}2\\right)(1-x^2)+\\cdots=1-\\frac32x^2+\\cdots$.",
+      "The base is $2-\\cos x\\sqrt{\\cos2x}=1+\\frac32x^2+\\cdots$, so $f-1\\approx\\frac32x^2$.",
+      "$a=\\lim\\frac{x+2}{x^2}\\cdot\\frac32x^2=\\lim\\frac32(x+2)=3$.",
+      "So $a=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ rule: if $f\\to1$ and $g\\to\\infty$ then $\\lim f^g=e^{\\lim g(f-1)}$.",
+    "Small-$x$ expansions to order $x^2$: $\\cos x\\approx1-\\frac{x^2}2$, $\\sqrt{\\cos kx}\\approx1-\\frac{k^2x^2}{4}$ (here $k=2$ gives $1-x^2$), so $\\cos x\\sqrt{\\cos2x}\\approx1-\\frac32x^2$.",
+    "General: $\\lim_{x\\to0}\\left(2-\\prod_i\\cos k_ix\\right)^{1/x^2}=e^{\\frac12\\sum k_i^2}$; since $\\sqrt{\\cos2x}\\approx\\cos(\\sqrt2x)$, here $k=1,\\sqrt2$ gives $e^{3/2}$, and the exponent $\\frac{2}{x^2}$ doubles it to $e^3$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits using Maclaurin series expansion"
+   ],
+   "level": 3,
+   "question": "If $\\lim_{x\\to0}\\frac{\\alpha xe^x-\\beta\\log_e(1+x)+\\gamma x^2e^{-x}}{x\\sin^2x}=10$, $\\alpha,\\beta,\\gamma\\in\\mathbb R$, then the value of $\\alpha+\\beta+\\gamma$ is ________. [JEE(Main) July 2021]",
+   "answer": "3",
+   "key_idea": "The denominator is $\\sim x^3$, so the numerator's $x$ and $x^2$ coefficients must vanish and its $x^3$ coefficient equals $10$.",
+   "solution": [
+    "The denominator $x\\sin^2x\\sim x^3$, so expand the numerator in powers of $x$ up to $x^3$.",
+    "$\\alpha xe^x=\\alpha\\left(x+x^2+\\frac{x^3}{2}+\\cdots\\right)$, $\\ \\beta\\ln(1+x)=\\beta\\left(x-\\frac{x^2}2+\\frac{x^3}3-\\cdots\\right)$, $\\ \\gamma x^2e^{-x}=\\gamma\\left(x^2-x^3+\\cdots\\right)$.",
+    "Numerator $=(\\alpha-\\beta)x+\\left(\\alpha+\\frac\\beta2+\\gamma\\right)x^2+\\left(\\frac\\alpha2-\\frac\\beta3-\\gamma\\right)x^3+\\cdots$",
+    "For the limit to be finite, the coefficient of $x$ must vanish: $\\alpha-\\beta=0\\Rightarrow\\alpha=\\beta$.",
+    "The coefficient of $x^2$ must vanish: $\\alpha+\\frac\\beta2+\\gamma=0\\Rightarrow\\gamma=-\\frac{3\\beta}{2}$.",
+    "The coefficient of $x^3$ equals the limit: $\\frac\\alpha2-\\frac\\beta3-\\gamma=10$.",
+    "Substitute $\\alpha=\\beta$, $\\gamma=-\\frac{3\\beta}2$: $\\frac\\beta2-\\frac\\beta3+\\frac{3\\beta}2=\\frac{10\\beta}{6}=10$, so $\\beta=6$.",
+    "Hence $\\alpha=6$, $\\gamma=-9$ and $\\alpha+\\beta+\\gamma=3$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF prints the expansions with sign slips: $\\beta\\left(x+\\frac{x^2}{2}+\\frac{x^3}{3}\\right)$ for $\\ln(1+x)$ (should alternate: $x-\\frac{x^2}2+\\frac{x^3}3$) and $-\\gamma x^2(1+x+\\cdots)$ for $+\\gamma x^2e^{-x}=\\gamma x^2(1-x+\\cdots)$. The three coefficient equations it then writes are the correct ones, so only the expansion line is fixed; answer 3 unchanged. It also mistypes 'β - 6' for 'β = 6'.",
+   "alternate_solutions": [
+    {
+     "idea": "Use derivatives: the numerator $N$ vanishes to third order, so $N(0)=N'(0)=N''(0)=0$ and $\\frac{N'''(0)}{3!}=10$.",
+     "solution": [
+      "Let $N(x)=\\alpha xe^x-\\beta\\ln(1+x)+\\gamma x^2e^{-x}$. Since $x\\sin^2x\\sim x^3$, the limit is $\\frac{N'''(0)}{6}$ once $N(0)=N'(0)=N''(0)=0$.",
+      "$N(0)=0$ automatically. $N'(x)=\\alpha e^x(1+x)-\\frac{\\beta}{1+x}+\\gamma(2x-x^2)e^{-x}$, so $N'(0)=\\alpha-\\beta=0$.",
+      "$N''(0)=2\\alpha+\\beta+2\\gamma=0$, which with $\\beta=\\alpha$ gives $\\gamma=-\\frac{3\\alpha}2$.",
+      "$N'''(0)=3\\alpha-2\\beta-6\\gamma$, which becomes $3\\alpha-2\\alpha+9\\alpha=10\\alpha$.",
+      "$\\frac{10\\alpha}{6}=10\\Rightarrow\\alpha=6=\\beta$, $\\gamma=-9$, and $\\alpha+\\beta+\\gamma=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the denominator behaves like $x^k$, a finite limit forces the numerator's coefficients of $x^0,\\dots,x^{k-1}$ to vanish; the limit is then the coefficient of $x^k$.",
+    "Series to keep handy: $e^x=1+x+\\frac{x^2}2+\\cdots$, $\\ \\ln(1+x)=x-\\frac{x^2}2+\\frac{x^3}3-\\cdots$, $\\ e^{-x}=1-x+\\frac{x^2}2-\\cdots$ (alternating signs for $\\ln(1+x)$ and $e^{-x}$).",
+    "Equivalent derivative test: coefficient of $x^k$ is $\\frac{N^{(k)}(0)}{k!}$; $x\\sin^2x\\sim x^3$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a finite sum and telescoping series"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to2}\\left(\\sum_{n=1}^{9}\\frac{x}{n(n+1)x^2+2(2n+1)x+4}\\right)$ is equal to : [JEE(Main) Aug. 2021]",
+   "options": [
+    "$\\frac{9}{44}$",
+    "$\\frac{5}{24}$",
+    "$\\frac15$",
+    "$\\frac{7}{36}$"
+   ],
+   "answer": "(A) $\\frac{9}{44}$",
+   "key_idea": "$n(n+1)x^2+2(2n+1)x+4=(nx+2)\\left((n+1)x+2\\right)$, so each term is a difference and the sum telescopes.",
+   "solution": [
+    "The general term (summation index $n$) is $\\frac{x}{n(n+1)x^2+2(2n+1)x+4}$.",
+    "Factorise the denominator: $n(n+1)x^2+2(2n+1)x+4=(nx+2)\\left((n+1)x+2\\right)$.",
+    "Partial fractions: $\\frac{x}{(nx+2)\\left((n+1)x+2\\right)}=\\frac{1}{nx+2}-\\frac{1}{(n+1)x+2}$, since the difference of the two denominators is $x$.",
+    "Sum from $n=1$ to $9$: the terms telescope to $\\frac{1}{x+2}-\\frac{1}{10x+2}$.",
+    "Take $x\\to2$: $\\frac14-\\frac1{22}=\\frac{11-2}{44}=\\frac{9}{44}$: option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF mixes up the symbols: it uses $x$ for both the variable and the summation index (lines like 'x(x+1)x^2+2(2x+1)x+2', 'hx+2' and 'lim x->2 sum x=1 to 9'), and the factorisation is printed with these slips. Rewritten with $n$ as the index; the factorisation, telescoping and final value $\\frac{9}{44}$ are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "The sum has finitely many continuous terms, so simply substitute $x=2$ in each term.",
+     "solution": [
+      "Each of the nine terms is continuous at $x=2$ (denominators are positive), so the limit equals the sum evaluated at $x=2$.",
+      "Term at $x=2$: $\\frac{2}{4n(n+1)+4(2n+1)+4}=\\frac{2}{4n^2+12n+8}=\\frac{1}{2(n+1)(n+2)}$.",
+      "$\\frac{1}{(n+1)(n+2)}=\\frac1{n+1}-\\frac1{n+2}$, so $\\sum_{n=1}^{9}=\\frac12\\left(\\frac12-\\frac1{11}\\right)$.",
+      "$=\\frac12\\cdot\\frac{9}{22}=\\frac{9}{44}$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{x}{(ax+c)\\left((a+1)x+c\\right)}=\\frac1{ax+c}-\\frac1{(a+1)x+c}$ (the denominators differ by exactly $x$) - the standard telescoping pattern.",
+    "Before doing any limit algebra, check whether the expression is continuous at the point; if so, just substitute.",
+    "Quadratic $n(n+1)x^2+(4n+2)x+4$ has discriminant $(4n+2)^2-16n(n+1)=4$, so it always factors over the rationals as $(nx+2)((n+1)x+2)$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits using exponential series"
+   ],
+   "level": 2,
+   "question": "If $\\alpha,\\beta$ are the distinct roots of $x^2+bx+c=0$, then $\\lim_{x\\to\\beta}\\frac{e^{2(x^2+bx+c)}-1-2(x^2+bx+c)}{(x-\\beta)^2}$ is equal to : [JEE(Main) Aug. 2021]",
+   "options": [
+    "$2(b^2+4c)$",
+    "$b^2-4c$",
+    "$b^2+4c$",
+    "$2(b^2-4c)$"
+   ],
+   "answer": "(D) $2(b^2-4c)$",
+   "key_idea": "With $t=(x-\\alpha)(x-\\beta)$, $e^{2t}-1-2t\\sim2t^2$ and $t^2$ contains the factor $(x-\\beta)^2$.",
+   "solution": [
+    "Let $t=x^2+bx+c=(x-\\alpha)(x-\\beta)$; as $x\\to\\beta$, $t\\to0$.",
+    "Expand $e^{2t}=1+2t+\\frac{(2t)^2}{2!}+\\cdots$, so the numerator $e^{2t}-1-2t=\\frac{(2t)^2}{2!}+\\frac{(2t)^3}{3!}+\\cdots=2t^2+\\cdots$",
+    "The limit is $\\lim\\frac{2t^2}{(x-\\beta)^2}$ (the higher terms are $t\\cdot t^2\\cdots$ and vanish faster).",
+    "$\\frac{2t^2}{(x-\\beta)^2}=\\frac{2(x-\\alpha)^2(x-\\beta)^2}{(x-\\beta)^2}=2(x-\\alpha)^2$.",
+    "As $x\\to\\beta$ this is $2(\\beta-\\alpha)^2$.",
+    "$(\\beta-\\alpha)^2=(\\alpha+\\beta)^2-4\\alpha\\beta=b^2-4c$, so the limit is $2(b^2-4c)$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The numerator $F$ has a double zero at $x=\\beta$, so the limit is $\\frac{F''(\\beta)}2$.",
+     "solution": [
+      "Let $F(x)=e^{2t}-1-2t$ with $t=x^2+bx+c$, $t'=2x+b$ and $t(\\beta)=0$; then $F(\\beta)=0$.",
+      "$F'(x)=2t'\\left(e^{2t}-1\\right)$, so $F'(\\beta)=0$: both $F$ and $(x-\\beta)^2$ have double zeros at $\\beta$.",
+      "$F''(x)=2t''\\left(e^{2t}-1\\right)+4t'^2e^{2t}$, so $F''(\\beta)=4t'(\\beta)^2=4(2\\beta+b)^2$.",
+      "Limit $=\\frac{F''(\\beta)}{2}=2(2\\beta+b)^2$; since $\\alpha+\\beta=-b$, $2\\beta+b=\\beta-\\alpha$.",
+      "$2(\\beta-\\alpha)^2=2(b^2-4c)$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{u\\to0}\\frac{e^{ku}-1-ku}{u^2}=\\frac{k^2}{2}$; with $k=2$ this gives $2$.",
+    "If $F(a)=F'(a)=0$ then $\\lim_{x\\to a}\\frac{F(x)}{(x-a)^2}=\\frac{F''(a)}2$ (second-order Taylor).",
+    "For $t=(x-\\alpha)(x-\\beta)$: $\\frac{t}{x-\\beta}\\to\\beta-\\alpha$ and $(\\beta-\\alpha)^2=b^2-4c$ is the discriminant of $x^2+bx+c$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits at infinity by rationalisation"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to\\infty}\\left(\\sqrt{x^2-x+1}-ax\\right)=b$, then the ordered pair $(a,b)$ is : [JEE(Main) Aug. 2021]",
+   "options": [
+    "$\\left(-1,\\frac12\\right)$",
+    "$\\left(-1,-\\frac12\\right)$",
+    "$\\left(1,\\frac12\\right)$",
+    "$\\left(1,-\\frac12\\right)$"
+   ],
+   "answer": "(D) $\\left(1,-\\frac12\\right)$",
+   "key_idea": "After rationalising, a finite limit at $\\infty$ forces the $x^2$ coefficient $1-a^2$ of the numerator to vanish.",
+   "solution": [
+    "Rationalise: $\\sqrt{x^2-x+1}-ax=\\frac{x^2-x+1-a^2x^2}{\\sqrt{x^2-x+1}+ax}=\\frac{x^2(1-a^2)+1-x}{\\sqrt{x^2-x+1}+ax}$.",
+    "The denominator is of order $x$, so for a finite limit the $x^2$ term of the numerator must vanish: $1-a^2=0$, $a=\\pm1$.",
+    "Then $b=\\lim\\frac{1-x}{\\sqrt{x^2-x+1}+ax}$.",
+    "Divide numerator and denominator by $x$: $b=\\lim\\frac{\\frac1x-1}{\\sqrt{1-\\frac1x+\\frac1{x^2}}+a}=\\frac{-1}{1+a}$.",
+    "For $a=-1$ the denominator $\\sqrt{x^2-x+1}-x\\to-\\frac12$ stays finite while $1-x\\to-\\infty$, so the limit is infinite: reject $a=-1$, hence $a=1$.",
+    "With $a=1$: $b=\\frac{-1}{1+1}=-\\frac12$, so $(a,b)=\\left(1,-\\frac12\\right)$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Substitute $x=\\frac1t$: the limit becomes a derivative at $t=0$.",
+     "solution": [
+      "Put $x=\\frac1t$ with $t\\to0^+$: $\\sqrt{x^2-x+1}-ax=\\frac{\\sqrt{1-t+t^2}-a}{t}$.",
+      "For a finite limit the numerator must vanish at $t=0$: $\\sqrt1-a=0$, so $a=1$.",
+      "With $a=1$: $b=\\lim\\frac{\\sqrt{1-t+t^2}-1}{t}=\\frac{d}{dt}\\sqrt{1-t+t^2}\\Big|_{t=0}$ (definition of the derivative).",
+      "$\\frac{d}{dt}\\sqrt{1-t+t^2}=\\frac{-1+2t}{2\\sqrt{1-t+t^2}}\\to-\\frac12$ at $t=0$.",
+      "$(a,b)=\\left(1,-\\frac12\\right)$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to+\\infty}\\left(\\sqrt{x^2+px+q}-x\\right)=\\frac p2$; here $p=-1$ gives $-\\frac12$.",
+    "A limit at $\\infty$ of a function of $x$ can be turned into a limit at $0$ by $x=\\frac1t$ and often equals a derivative.",
+    "$\\sqrt{x^2+px+q}-ax$ has a finite limit as $x\\to+\\infty$ only for $a=1$ (for $a=-1$ it tends to $+\\infty$)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of trigonometric functions"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to0}\\frac{\\sin^2(\\pi\\cos^4x)}{x^4}$ is equal to : [JEE(Main) Aug. 2021]",
+   "options": [
+    "$2\\pi^2$",
+    "$4\\pi^2$",
+    "$\\pi^2$",
+    "$4\\pi$"
+   ],
+   "answer": "(B) $4\\pi^2$",
+   "key_idea": "$\\sin(\\pi\\cos^4x)=\\sin\\left(\\pi-\\pi\\cos^4x\\right)$ and $1-\\cos^4x=\\sin^2x(1+\\cos^2x)$.",
+   "solution": [
+    "The form is $\\frac00$, since $\\cos^4x\\to1$ and $\\sin\\pi=0$.",
+    "$\\sin(\\pi\\cos^4x)=\\sin(\\pi-\\pi\\cos^4x)$, so the limit is $\\lim\\frac{\\sin^2(\\pi-\\pi\\cos^4x)}{x^4}$.",
+    "Use $\\sin\\theta\\sim\\theta$ as $\\theta\\to0$: the limit is $\\lim\\frac{(\\pi-\\pi\\cos^4x)^2}{x^4}$.",
+    "$\\pi-\\pi\\cos^4x=\\pi(1-\\cos^2x)(1+\\cos^2x)=\\pi\\sin^2x\\left(1+\\cos^2x\\right)$.",
+    "$\\lim\\frac{\\pi^2\\sin^4x(1+\\cos^2x)^2}{x^4}=\\pi^2\\cdot1\\cdot(1+1)^2=4\\pi^2$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare orders of vanishing: $\\pi(1-\\cos^4x)\\approx2\\pi x^2$, then $\\sin y\\approx y$.",
+     "solution": [
+      "$\\sin^2(\\pi\\cos^4x)=\\sin^2\\left(\\pi(1-\\cos^4x)\\right)$, because $\\sin(\\pi-y)=\\sin y$.",
+      "Let $y=\\pi(1-\\cos^4x)$; $y\\to0$ so $\\sin y\\sim y$.",
+      "Near $0$, $\\cos x\\approx1-\\frac{x^2}2$, so $\\cos^4x\\approx1-2x^2$ and $y\\approx2\\pi x^2$.",
+      "$\\frac{\\sin^2y}{x^4}\\approx\\frac{(2\\pi x^2)^2}{x^4}=4\\pi^2$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin(\\pi-y)=\\sin y$ and $\\sin(\\pi+y)=-\\sin y$; squaring removes the sign, so $\\sin^2(\\pi f)\\approx\\pi^2(1-f)^2$ whenever $f\\to1$.",
+    "$\\lim_{x\\to0}\\frac{\\sin^2(\\pi\\cos^kx)}{x^4}=\\frac{k^2\\pi^2}{4}$ (here $k=4$ gives $4\\pi^2$), because $1-\\cos^kx\\approx\\frac{kx^2}2$.",
+    "$1-\\cos^4x=(1-\\cos^2x)(1+\\cos^2x)=\\sin^2x\\,(1+\\cos^2x)$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "L'Hôpital's rule and 1^∞ form",
+    "Relations between roots and coefficients of a quadratic"
+   ],
+   "level": 2,
+   "question": "If $\\alpha=\\lim_{x\\to\\pi/4}\\frac{\\tan^3x-\\tan x}{\\cos\\left(x+\\frac\\pi4\\right)}$ and $\\beta=\\lim_{x\\to0}(\\cos x)^{\\cot x}$ are the roots of the equation $ax^2+bx-4=0$, then the ordered pair $(a,b)$ is : [JEE(Main) Aug. 2021]",
+   "options": [
+    "$(-1,-3)$",
+    "$(1,-3)$",
+    "$(1,3)$",
+    "$(-1,3)$"
+   ],
+   "answer": "(C) $(1,3)$",
+   "key_idea": "Evaluate $\\alpha=-4$ and $\\beta=e^{\\lim\\cot x(\\cos x-1)}=1$, then use sum and product of roots.",
+   "solution": [
+    "$\\alpha=\\lim_{x\\to\\pi/4}\\frac{\\tan^3x-\\tan x}{\\cos\\left(x+\\frac\\pi4\\right)}$ is of $\\frac00$ form; apply L'Hôpital's rule.",
+    "$\\alpha=\\lim\\frac{3\\tan^2x\\sec^2x-\\sec^2x}{-\\sin\\left(x+\\frac\\pi4\\right)}$.",
+    "At $x=\\frac\\pi4$: $\\tan x=1$, $\\sec^2x=2$, $\\sin\\frac\\pi2=1$, so $\\alpha=\\frac{3\\cdot1\\cdot2-2}{-1}=-4$.",
+    "$\\beta=\\lim_{x\\to0}(\\cos x)^{\\cot x}$ is of $1^\\infty$ form: $\\beta=e^{\\lim\\cot x(\\cos x-1)}$.",
+    "$\\cot x(\\cos x-1)=-\\frac{1-\\cos x}{\\tan x}=-x\\cdot\\frac{1-\\cos x}{x^2}\\cdot\\frac{x}{\\tan x}\\to0\\cdot\\frac12\\cdot1=0$, so $\\beta=e^0=1$.",
+    "The roots of $ax^2+bx-4=0$ are $-4$ and $1$. Sum of roots: $-\\frac ba=-4+1=-3$, so $b=3a$.",
+    "Product of roots: $-\\frac4a=-4\\times1$, so $a=1$ and $b=3$: $(a,b)=(1,3)$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift $x=\\frac\\pi4+h$ and use $\\tan^3x-\\tan x=-\\frac{2\\tan^2x}{\\tan2x}$; find $\\beta$ through $\\ln\\beta$.",
+     "solution": [
+      "Put $x=\\frac\\pi4+h$. Since $\\tan2x=\\frac{2\\tan x}{1-\\tan^2x}$, $\\tan^3x-\\tan x=\\tan x(\\tan^2x-1)=-\\frac{2\\tan^2x}{\\tan2x}$.",
+      "$\\tan2x=\\tan\\left(\\frac\\pi2+2h\\right)=-\\cot2h$, so $\\tan^3x-\\tan x=2\\tan^2x\\tan2h$; the denominator is $\\cos\\left(\\frac\\pi2+h\\right)=-\\sin h$.",
+      "$\\alpha=\\lim\\frac{2\\tan^2x\\tan2h}{-\\sin h}=-2\\cdot1\\cdot\\lim\\frac{\\tan2h}{\\sin h}=-2\\cdot2=-4$ (as $\\tan^2x\\to1$).",
+      "$\\ln\\beta=\\lim\\cot x\\ln\\cos x=\\lim\\frac{\\ln\\left(1-\\frac{x^2}2+\\cdots\\right)}{\\tan x}=\\lim\\frac{-x^2/2}{x}=0$, so $\\beta=1$.",
+      "Vieta: $\\alpha+\\beta=-3=-\\frac ba$ and $\\alpha\\beta=-4=-\\frac4a$, giving $a=1$, $b=3$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^3x-\\tan x=-\\frac{2\\tan^2x}{\\tan2x}$ (from $\\tan2x=\\frac{2\\tan x}{1-\\tan^2x}$): handy near $x=\\frac\\pi4$ where $\\tan2x\\to\\infty$.",
+    "$\\lim_{x\\to0}(\\cos x)^{\\cot x}=1$ because $\\cot x\\,(\\cos x-1)\\sim\\frac1x\\cdot\\left(-\\frac{x^2}2\\right)\\to0$; compare $(\\cos x)^{1/x^2}\\to e^{-1/2}$.",
+    "For $ax^2+bx+c=0$ with roots $p,q$: $p+q=-\\frac ba$ and $pq=\\frac ca$ - two equations fix two unknown coefficients."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits by rationalisation"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to\\frac\\pi2}\\left(\\tan^2x\\left(\\left(2\\sin^2x+3\\sin x+4\\right)^{\\frac12}-\\left(\\sin^2x+6\\sin x+2\\right)^{\\frac12}\\right)\\right)$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$\\frac1{12}$",
+    "$-\\frac1{18}$",
+    "$-\\frac1{12}$",
+    "$\\frac16$"
+   ],
+   "answer": "(A) $\\frac1{12}$",
+   "key_idea": "Rationalising makes the numerator $(\\sin x-1)(\\sin x-2)$, the zero that $\\tan^2x\\to\\infty$ must be balanced against.",
+   "solution": [
+    "Rationalise: the expression is $\\tan^2x\\cdot\\frac{\\left(2\\sin^2x+3\\sin x+4\\right)-\\left(\\sin^2x+6\\sin x+2\\right)}{\\sqrt{2\\sin^2x+3\\sin x+4}+\\sqrt{\\sin^2x+6\\sin x+2}}$.",
+    "Numerator: $\\sin^2x-3\\sin x+2=(\\sin x-1)(\\sin x-2)$.",
+    "As $x\\to\\frac\\pi2$, $\\sin x\\to1$: both square roots $\\to\\sqrt9=3$, so the denominator $\\to3+3=6$.",
+    "The expression becomes $\\frac{\\tan^2x(\\sin x-1)(\\sin x-2)}{6}$; as $\\sin x-2\\to-1$ this is $-\\frac16\\tan^2x(\\sin x-1)$.",
+    "Put $x=\\frac\\pi2-h$, $h\\to0$: $\\tan^2x=\\cot^2h$ and $\\sin x=\\cos h$, giving $\\frac16\\cot^2h(1-\\cos h)=\\frac16\\cdot\\frac{1-\\cos h}{\\tan^2h}$.",
+    "$\\frac{1-\\cos h}{\\tan^2h}=\\frac{1-\\cos h}{h^2}\\cdot\\frac{h^2}{\\tan^2h}\\to\\frac12$, so the limit is $\\frac16\\cdot\\frac12=\\frac1{12}$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $s=\\sin x\\to1$ and $F(s)=\\sqrt{2s^2+3s+4}-\\sqrt{s^2+6s+2}$, use $F(1)=0$ so $F\\approx F'(1)(s-1)$.",
+     "solution": [
+      "Let $s=\\sin x$; then $\\tan^2x=\\frac{s^2}{1-s^2}$ and the expression is $\\frac{s^2}{1-s^2}F(s)$.",
+      "$F(1)=3-3=0$ and $F'(s)=\\frac{4s+3}{2\\sqrt{2s^2+3s+4}}-\\frac{2s+6}{2\\sqrt{s^2+6s+2}}$, so $F'(1)=\\frac76-\\frac86=-\\frac16$.",
+      "Hence $F(s)\\approx-\\frac16(s-1)=\\frac{1-s}{6}$ as $s\\to1$.",
+      "The expression $\\approx\\frac{s^2}{(1-s)(1+s)}\\cdot\\frac{1-s}6=\\frac{s^2}{6(1+s)}\\to\\frac1{12}$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt A-\\sqrt B=\\frac{A-B}{\\sqrt A+\\sqrt B}$: use whenever two roots take the same value at the limit point.",
+    "Near $x=\\frac\\pi2$ substitute $x=\\frac\\pi2-h$: $\\tan x=\\cot h$, $\\sin x=\\cos h$, and $\\frac{1-\\cos h}{h^2}\\to\\frac12$.",
+    "If $F(a)=0$ then $F(s)\\approx F'(a)(s-a)$ near $a$ - a quick substitute for rationalising."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits by algebraic simplification",
+    "Composition of trigonometric and inverse trigonometric functions"
+   ],
+   "level": 1,
+   "question": "$\\lim_{x\\to\\frac1{\\sqrt2}}\\frac{\\sin\\left(\\cos^{-1}x\\right)-x}{1-\\tan\\left(\\cos^{-1}x\\right)}$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$\\sqrt2$",
+    "$-\\sqrt2$",
+    "$\\frac1{\\sqrt2}$",
+    "$-\\frac1{\\sqrt2}$"
+   ],
+   "answer": "(D) $-\\frac1{\\sqrt2}$",
+   "key_idea": "$\\sin(\\cos^{-1}x)=\\sqrt{1-x^2}$ and $\\tan(\\cos^{-1}x)=\\frac{\\sqrt{1-x^2}}{x}$ make the fraction collapse to $-x$.",
+   "solution": [
+    "For $0<x<1$: $\\cos^{-1}x=\\sin^{-1}\\sqrt{1-x^2}=\\tan^{-1}\\frac{\\sqrt{1-x^2}}{x}$.",
+    "Hence $\\sin(\\cos^{-1}x)=\\sqrt{1-x^2}$ and $\\tan(\\cos^{-1}x)=\\frac{\\sqrt{1-x^2}}{x}$.",
+    "The expression is $\\frac{\\sqrt{1-x^2}-x}{1-\\frac{\\sqrt{1-x^2}}{x}}$.",
+    "Multiply numerator and denominator by $x$: $\\frac{x\\left(\\sqrt{1-x^2}-x\\right)}{x-\\sqrt{1-x^2}}=-x$ (cancelling $\\sqrt{1-x^2}-x\\ne0$ for $x\\ne\\frac1{\\sqrt2}$).",
+    "$\\lim_{x\\to1/\\sqrt2}(-x)=-\\frac1{\\sqrt2}$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $\\theta=\\cos^{-1}x$ so that the fraction becomes $-\\cos\\theta$ in the angle itself.",
+     "solution": [
+      "Let $\\theta=\\cos^{-1}x$; then $x=\\cos\\theta$ and $\\theta\\to\\frac\\pi4$ as $x\\to\\frac1{\\sqrt2}$.",
+      "The expression is $\\frac{\\sin\\theta-\\cos\\theta}{1-\\tan\\theta}=\\frac{\\sin\\theta-\\cos\\theta}{\\frac{\\cos\\theta-\\sin\\theta}{\\cos\\theta}}$.",
+      "This equals $-\\cos\\theta$ (cancelling $\\sin\\theta-\\cos\\theta\\ne0$ for $\\theta\\ne\\frac\\pi4$).",
+      "The limit is $-\\cos\\frac\\pi4=-\\frac1{\\sqrt2}$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $0<x\\le1$: $\\sin(\\cos^{-1}x)=\\sqrt{1-x^2}$, $\\ \\tan(\\cos^{-1}x)=\\frac{\\sqrt{1-x^2}}{x}$, $\\ \\cos(\\sin^{-1}x)=\\sqrt{1-x^2}$.",
+    "$\\frac{\\sin\\theta-\\cos\\theta}{1-\\tan\\theta}=-\\cos\\theta$ for $\\cos\\theta\\ne0$ - spot the factor $\\cos\\theta-\\sin\\theta$.",
+    "In a limit with inverse trigonometric functions, substituting $\\theta=\\cos^{-1}x$ (or $\\sin^{-1}x$) usually removes the inverse function entirely."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of trigonometric functions using L'Hôpital's rule"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to0}\\frac{\\cos(\\sin x)-\\cos x}{x^4}$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$\\frac13$",
+    "$\\frac14$",
+    "$\\frac16$",
+    "$\\frac1{12}$"
+   ],
+   "answer": "(C) $\\frac16$",
+   "key_idea": "Sum-to-product turns the numerator into $-2\\sin\\frac{\\sin x+x}2\\sin\\frac{\\sin x-x}2\\approx-\\frac{\\sin^2x-x^2}2$.",
+   "solution": [
+    "$\\cos(\\sin x)-\\cos x=-2\\sin\\left(\\frac{x+\\sin x}{2}\\right)\\sin\\left(\\frac{\\sin x-x}{2}\\right)$.",
+    "Multiply and divide by $\\frac{\\sin x+x}{2}$ and $\\frac{\\sin x-x}{2}$; the two sine ratios $\\to1$ because both arguments $\\to0$.",
+    "The limit becomes $-2\\lim\\frac{\\sin x+x}{2}\\cdot\\frac{\\sin x-x}{2}\\cdot\\frac1{x^4}=-\\frac12\\lim\\frac{\\sin^2x-x^2}{x^4}$.",
+    "This is $\\frac00$: L'Hôpital gives $-\\frac12\\lim\\frac{\\sin2x-2x}{4x^3}$.",
+    "Again $\\frac00$: L'Hôpital gives $-\\frac12\\lim\\frac{2\\cos2x-2}{12x^2}$.",
+    "$2\\cos2x-2=-4\\sin^2x$, so the limit is $-\\frac12\\lim\\frac{-4\\sin^2x}{12x^2}=\\frac16\\lim\\frac{\\sin^2x}{x^2}=\\frac16$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Apply the mean value theorem to $\\cos$ between $\\sin x$ and $x$.",
+     "solution": [
+      "By the mean value theorem, $\\cos(\\sin x)-\\cos x=-\\sin\\xi\\,(\\sin x-x)=\\sin\\xi\\,(x-\\sin x)$ for some $\\xi$ between $\\sin x$ and $x$.",
+      "For $x>0$, $\\sin x\\le\\xi\\le x$, so by squeezing $\\frac\\xi x\\to1$ and $\\frac{\\sin\\xi}{x}\\to1$.",
+      "So $\\frac{\\cos(\\sin x)-\\cos x}{x^4}=\\frac{\\sin\\xi}{x}\\cdot\\frac{x-\\sin x}{x^3}$.",
+      "The standard limit $\\frac{x-\\sin x}{x^3}\\to\\frac16$.",
+      "The limit is $1\\cdot\\frac16=\\frac16$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos A-\\cos B=-2\\sin\\frac{A+B}2\\sin\\frac{A-B}2$ turns a difference of cosines into a product of small sines.",
+    "$x-\\sin x\\sim\\frac{x^3}{6}$, hence $\\cos(\\sin x)-\\cos x\\sim\\frac{x^4}{6}$ (series check: $\\cos(\\sin x)=1-\\frac{x^2}{2}+\\frac{5x^4}{24}-\\cdots$, $\\cos x=1-\\frac{x^2}2+\\frac{x^4}{24}-\\cdots$).",
+    "Mean value theorem: $f(u)-f(v)=f'(\\xi)(u-v)$ is a clean way to handle $f(g(x))-f(x)$ when $g(x)-x$ is small."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits involving the greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $a$ be an integer such that $\\lim_{x\\to7}\\frac{18-[1-x]}{[x-3a]}$ exists, where $[t]$ is the greatest integer $\\le t$. Then $a$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$-6$",
+    "$-2$",
+    "$2$",
+    "$6$"
+   ],
+   "answer": "(A) $-6$",
+   "key_idea": "For integer $a$, $[x-3a]=[x]-3a$; the left and right limits at $7$ must agree.",
+   "solution": [
+    "For integer $a$: $[x-3a]=[x]-3a$ and $[1-x]=1+[-x]$, so the expression is $\\frac{17-[-x]}{[x]-3a}$.",
+    "Left limit ($x\\to7^-$): $[x]=6$ and $-x$ lies just above $-7$, so $[-x]=-7$: LHL $=\\frac{17+7}{6-3a}=\\frac{24}{6-3a}$.",
+    "Right limit ($x\\to7^+$): $[x]=7$ and $[-x]=-8$: RHL $=\\frac{17+8}{7-3a}=\\frac{25}{7-3a}$.",
+    "The limit exists iff LHL $=$ RHL: $\\frac{24}{6-3a}=\\frac{25}{7-3a}$.",
+    "Cross-multiply: $24(7-3a)=25(6-3a)\\Rightarrow168-72a=150-75a\\Rightarrow3a=-18$.",
+    "So $a=-6$ (both limits then equal $1$): option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF labels the $[x]=6$ side (x tends to 7 from the left) as R.H.L. and the $[x]=7$ side as L.H.L.; the labels are swapped. The equation $\\frac{24}{6-3a}=\\frac{25}{7-3a}$ and the answer $a=-6$ are unaffected. The cross-multiplication step, skipped in the PDF, is written out.",
+   "alternate_solutions": [
+    {
+     "idea": "For non-integer $x$, $[-x]=-[x]-1$, so the expression depends only on $n=[x]$ and equals $1+\\frac{18+3a}{n-3a}$.",
+     "solution": [
+      "For non-integer $x$ near $7$: $18-[1-x]=17-[-x]=17+[x]+1=18+[x]$, and $[x-3a]=[x]-3a$.",
+      "With $n=[x]$ the expression is $\\frac{n+18}{n-3a}=1+\\frac{18+3a}{n-3a}$; $n=6$ for $x\\to7^-$ and $n=7$ for $x\\to7^+$.",
+      "The limit exists iff the values at $n=6$ and $n=7$ agree: $\\frac{18+3a}{6-3a}=\\frac{18+3a}{7-3a}$.",
+      "Since $\\frac1{6-3a}\\ne\\frac1{7-3a}$ for every $a$, this forces $18+3a=0$.",
+      "$a=-6$ (the expression is then identically $1$): option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[n+t]=n+[t]$ for integer $n$; $[-t]=-[t]-1$ for non-integer $t$ (and $-[t]$ for integer $t$).",
+    "At an integer $k$: $[x]=k-1$ just left of $k$ and $[x]=k$ at and just right of $k$; compare the two one-sided values of the expression.",
+    "A step function of $[x]$ has a limit at an integer iff its values at $n=k-1$ and $n=k$ coincide - rewrite as $1+\\frac{p}{n-q}$ form to see this at once."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of an infinite series by telescoping",
+    "Sum of inverse tangent terms"
+   ],
+   "level": 2,
+   "question": "The value of $\\lim_{n\\to\\infty}6\\tan\\left\\{\\sum_{r=1}^{n}\\tan^{-1}\\left(\\frac{1}{r^2+3r+3}\\right)\\right\\}$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$1$",
+    "$2$",
+    "$3$",
+    "$6$"
+   ],
+   "answer": "(C) $3$",
+   "key_idea": "$r^2+3r+3=1+(r+1)(r+2)$, so each term is $\\tan^{-1}(r+2)-\\tan^{-1}(r+1)$.",
+   "solution": [
+    "Write $r^2+3r+3=1+(r+1)(r+2)$, since $(r+1)(r+2)=r^2+3r+2$.",
+    "So $\\tan^{-1}\\frac{1}{1+(r+1)(r+2)}=\\tan^{-1}\\frac{(r+2)-(r+1)}{1+(r+2)(r+1)}$.",
+    "Using $\\tan^{-1}A-\\tan^{-1}B=\\tan^{-1}\\frac{A-B}{1+AB}$, the term is $\\tan^{-1}(r+2)-\\tan^{-1}(r+1)$.",
+    "The sum telescopes: $\\sum_{r=1}^{n}=\\tan^{-1}(n+2)-\\tan^{-1}2$.",
+    "As $n\\to\\infty$, $\\tan^{-1}(n+2)\\to\\frac\\pi2$, so the sum $\\to\\frac\\pi2-\\tan^{-1}2=\\cot^{-1}2=\\tan^{-1}\\frac12$.",
+    "$6\\tan\\left(\\tan^{-1}\\frac12\\right)=6\\cdot\\frac12=3$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last lines are mis-typed: 'tan(cot^{-2} 2)' appears where $\\tan(\\cot^{-1}2)$ is meant, and the factor 6 is dropped/restored inconsistently between lines. Rewritten cleanly as $6\\tan\\left(\\frac\\pi2-\\tan^{-1}2\\right)=6\\tan(\\cot^{-1}2)=6\\cdot\\frac12$; answer 3 unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Find $\\tan S_n$ in closed form by the addition formula, guess the pattern $\\frac{n}{2n+5}$ and prove it by induction.",
+     "solution": [
+      "Let $S_n=\\sum_{r=1}^{n}\\tan^{-1}\\frac1{r^2+3r+3}$. Then $\\tan S_1=\\frac17$ and $\\tan S_2=\\frac{\\frac17+\\frac1{13}}{1-\\frac1{91}}=\\frac29$.",
+      "The pattern $\\tan S_n=\\frac{n}{2n+5}$ fits both ($\\frac17$, $\\frac29$).",
+      "Induction: $\\tan S_{n+1}=\\frac{\\frac{n}{2n+5}+\\frac1{n^2+5n+7}}{1-\\frac{n}{(2n+5)(n^2+5n+7)}}=\\frac{n^3+5n^2+9n+5}{2n^3+15n^2+38n+35}$.",
+      "Factorise: numerator $=(n+1)(n^2+4n+5)$ and denominator $=(2n+7)(n^2+4n+5)$, so $\\tan S_{n+1}=\\frac{n+1}{2(n+1)+5}$ and the pattern is proved.",
+      "$\\tan S_n=\\frac{n}{2n+5}\\to\\frac12$, so the limit is $6\\cdot\\frac12=3$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}\\frac{d}{1+r(r+d)}=\\tan^{-1}(r+d)-\\tan^{-1}r$: spot $1+(\\text{product of two factors})$ in the denominator.",
+    "An infinite sum of such differences telescopes to $\\frac\\pi2-\\tan^{-1}a$ (for first term starting at $\\tan^{-1}a$), and $\\frac\\pi2-\\tan^{-1}a=\\tan^{-1}\\frac1a$ for $a>0$.",
+    "Because $\\tan$ is continuous at $\\tan^{-1}\\frac12$, the limit can be taken inside: $\\lim\\tan S_n=\\tan\\lim S_n$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of trigonometric functions"
+   ],
+   "level": 1,
+   "question": "The value of $\\lim_{x\\to1}\\frac{\\left(x^2-1\\right)\\sin^2(\\pi x)}{x^4-2x^3+2x-1}$ is equal to : [JEE(Main) June 2022]",
+   "options": [
+    "$\\frac{\\pi^2}{6}$",
+    "$\\frac{\\pi^2}{3}$",
+    "$\\frac{\\pi^2}{2}$",
+    "$\\pi^2$"
+   ],
+   "answer": "(D) $\\pi^2$",
+   "key_idea": "$x^4-2x^3+2x-1=(x-1)^3(x+1)$ cancels everything except $\\frac{\\sin^2\\pi x}{(x-1)^2}$.",
+   "solution": [
+    "Factorise: $x^2-1=(x-1)(x+1)$ and $x^4-2x^3+2x-1=(x^2-1)(x-1)^2=(x-1)^3(x+1)$.",
+    "The expression becomes $\\frac{(x-1)(x+1)\\sin^2\\pi x}{(x-1)^3(x+1)}=\\frac{\\sin^2\\pi x}{(x-1)^2}$.",
+    "Put $x-1=t$, $t\\to0$: $\\sin^2\\pi x=\\sin^2(\\pi+\\pi t)=\\sin^2\\pi t$.",
+    "$\\lim\\frac{\\sin^2\\pi t}{t^2}=\\pi^2\\lim\\left(\\frac{\\sin\\pi t}{\\pi t}\\right)^2=\\pi^2$: option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare orders of vanishing at $x=1$ using derivatives of the denominator: both parts behave like $c\\,(x-1)^3$.",
+     "solution": [
+      "Put $t=x-1$. Numerator: $x^2-1=t(t+2)\\sim2t$ and $\\sin^2\\pi x=\\sin^2\\pi t\\sim\\pi^2t^2$, so the numerator $\\sim2\\pi^2t^3$.",
+      "Denominator $D=x^4-2x^3+2x-1$: $D(1)=0$, $D'=4x^3-6x^2+2\\to0$, $D''=12x^2-12x\\to0$, $D'''=24x-12\\to12$ at $x=1$.",
+      "So $D\\sim\\frac{12}{3!}t^3=2t^3$.",
+      "The ratio $\\to\\frac{2\\pi^2t^3}{2t^3}=\\pi^2$: option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^4-2x^3+2x-1=(x-1)^3(x+1)$ and $x^2-1=(x-1)(x+1)$: spot repeated roots at $x=1$ by checking $D(1)=D'(1)=D''(1)=0$.",
+    "$\\sin^2(\\pi x)=\\sin^2\\left(\\pi(x-k)\\right)$ for any integer $k$, so $\\lim_{x\\to k}\\frac{\\sin^2\\pi x}{(x-k)^2}=\\pi^2$.",
+    "A limit at a point where the polynomial parts have a common root: factor first, then use the standard sine limit."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits involving greatest integer and fractional part functions",
+    "Left-hand limit"
+   ],
+   "level": 3,
+   "question": "Let $[t]$ denote the greatest integer $\\le t$ and $\\{t\\}$ denote the fractional part of $t$. The integral value of $\\alpha$ for which the left hand limit of the function $f(x)=[1+x]+\\frac{\\alpha^{2[x]+\\{x\\}}+[x]-1}{2[x]+\\{x\\}}$ at $x=0$ is equal to $\\alpha-\\frac43$, is ________. [JEE(Main) June 2022]",
+   "answer": "3",
+   "key_idea": "For $x\\to0^-$: $[x]=-1$, $\\{x\\}\\to1$ and $[1+x]=0$, so the exponent $2[x]+\\{x\\}\\to-1$.",
+   "solution": [
+    "As $x\\to0^-$: $[x]=-1$, $\\{x\\}=x+1\\to1$, and $[1+x]=0$ (since $0<1+x<1$).",
+    "The exponent and the denominator are $2[x]+\\{x\\}\\to-2+1=-1$.",
+    "LHL $=0+\\frac{\\alpha^{-1}+(-1)-1}{-1}=\\frac{\\alpha^{-1}-2}{-1}=2-\\frac1\\alpha$.",
+    "Given LHL $=\\alpha-\\frac43$: $2-\\frac1\\alpha=\\alpha-\\frac43\\Rightarrow\\alpha+\\frac1\\alpha=\\frac{10}3$.",
+    "$3\\alpha^2-10\\alpha+3=0\\Rightarrow(3\\alpha-1)(\\alpha-3)=0$, so $\\alpha=3$ or $\\frac13$.",
+    "The integral value is $\\alpha=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Skip the quadratic: for a positive integer $\\alpha$, $0<\\frac1\\alpha\\le1$ squeezes $\\alpha$ into a tiny interval.",
+     "solution": [
+      "As before, the LHL condition reduces to $\\frac1\\alpha=\\frac{10}3-\\alpha$.",
+      "A real power $\\alpha^{(\\cdot)}$ needs $\\alpha>0$, and $\\alpha$ is an integer, so $0<\\frac1\\alpha\\le1$.",
+      "Hence $0<\\frac{10}3-\\alpha\\le1$, i.e. $\\frac73\\le\\alpha<\\frac{10}3$, which contains only the integer $\\alpha=3$.",
+      "Check: $\\frac13=\\frac{10}3-3$ holds. The answer is $3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "At $x=0$: from the left $[x]=-1$, $\\{x\\}\\to1^-$; from the right $[x]=0$, $\\{x\\}\\to0^+$ - the two sides of a function of $[x],\\{x\\}$ usually differ.",
+    "$[1+x]=0$ for $-1<x<0$ and $=1$ for $0\\le x<1$.",
+    "$\\alpha+\\frac1\\alpha=s$ has roots $\\alpha$ and $\\frac1\\alpha$ (reciprocals); a real power $\\alpha^{\\{x\\}}$ requires $\\alpha>0$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Determination of unknown constants using limits (0/0 form)"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to1}\\frac{\\sin\\left(3x^2-4x+1\\right)-x^2+1}{2x^3-7x^2+ax+b}=-2$, then the value of $(a-b)$ is equal to ________. [JEE(Main) June 2022]",
+   "answer": "11",
+   "key_idea": "A finite non-zero limit of a $\\frac00$ form forces the denominator, and then its derivative, to vanish at $x=1$.",
+   "solution": [
+    "At $x=1$ the numerator is $\\sin0-1+1=0$, so the form is $\\frac00$; the limit is finite only if the denominator also vanishes at $x=1$: $2-7+a+b=0$, i.e. $a+b=5\\quad(1)$.",
+    "Apply L'Hôpital's rule: $\\lim_{x\\to1}\\frac{\\cos\\left(3x^2-4x+1\\right)(6x-4)-2x}{6x^2-14x+a}$.",
+    "At $x=1$ the numerator is $\\cos0\\cdot2-2=0$, so the denominator must vanish again: $6-14+a=0\\Rightarrow a=8$.",
+    "From (1): $b=5-8=-3$.",
+    "Check with a second L'Hôpital: numerator$'\\to-\\sin0\\cdot4+6\\cos0-2=4$ and denominator$'=12x-14\\to-2$, so the limit is $-2$ as given.",
+    "$a-b=8-(-3)=11$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Both numerator and denominator must have a double zero at $x=1$, so $D(x)=(x-1)^2(2x+c)$.",
+     "solution": [
+      "Numerator $N=\\sin(3x^2-4x+1)-x^2+1$: $N(1)=0$, $N'(1)=\\cos0\\cdot2-2=0$ and $N''(1)=6-2=4\\ne0$, so $N\\approx2(x-1)^2$.",
+      "For a finite non-zero limit the cubic $D=2x^3-7x^2+ax+b$ must also have a double root at $1$: $D=(x-1)^2(2x+c)=2x^3+(c-4)x^2+(2-2c)x+c$.",
+      "Match the $x^2$ coefficient: $c-4=-7\\Rightarrow c=-3$. Then $a=2-2c=8$ and $b=c=-3$.",
+      "Check: $\\frac{2(x-1)^2}{(x-1)^2(2x-3)}\\to\\frac{2}{-1}=-2$ as required.",
+      "$a-b=8+3=11$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\lim\\frac{N}{D}$ is finite and non-zero with $N(x_0)=0$, then $D(x_0)=0$; if also $N'(x_0)=0$ then $D'(x_0)=0$, and the limit is $\\frac{N''(x_0)}{D''(x_0)}$.",
+    "Order-of-zero principle: the numerator and denominator must vanish to the same order; here both are order $2$, so $D\\propto(x-1)^2$.",
+    "Matching a polynomial with a prescribed double root: $(x-1)^2(2x+c)$ is a quick way to find the unknown constants."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits at infinity - determination of constants"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{n\\to\\infty}\\left(\\sqrt{n^2-n-1}+n\\alpha+\\beta\\right)=0$, then $8(\\alpha+\\beta)$ is equal to : [JEE(Main) July 2022]",
+   "options": [
+    "$4$",
+    "$-8$",
+    "$-4$",
+    "$8$"
+   ],
+   "answer": "(C) $-4$",
+   "key_idea": "Finite limit forces $1+\\alpha=0$; then the $\\frac1n$ term of the binomial expansion forces $\\beta=\\frac12$.",
+   "solution": [
+    "Write the expression as $n\\left(\\sqrt{1-\\frac1n-\\frac1{n^2}}+\\alpha+\\frac\\beta n\\right)$.",
+    "For the limit to be finite, the bracket must tend to $0$: $1+\\alpha=0$, so $\\alpha=-1$.",
+    "Now $\\lim n\\left[\\left(1-\\left(\\frac1n+\\frac1{n^2}\\right)\\right)^{1/2}+\\frac\\beta n-1\\right]=0$.",
+    "Binomial expansion: $\\left(1-\\left(\\frac1n+\\frac1{n^2}\\right)\\right)^{1/2}=1-\\frac12\\left(\\frac1n+\\frac1{n^2}\\right)+\\cdots$",
+    "The bracket is $-\\frac1{2n}+\\frac\\beta n+O\\left(\\frac1{n^2}\\right)$; multiplying by $n$, the limit is $\\beta-\\frac12=0$, so $\\beta=\\frac12$.",
+    "$8(\\alpha+\\beta)=8\\left(-1+\\frac12\\right)=-4$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $\\alpha=-1$ and rationalise $\\sqrt{n^2-n-1}-(n-\\beta)$ with its conjugate.",
+     "solution": [
+      "The $n$-terms must cancel: $\\sqrt{n^2-n-1}\\sim n$, so $\\alpha=-1$.",
+      "The expression is $\\sqrt{n^2-n-1}-(n-\\beta)=\\frac{(n^2-n-1)-(n-\\beta)^2}{\\sqrt{n^2-n-1}+(n-\\beta)}$.",
+      "Numerator $=(2\\beta-1)n-1-\\beta^2$; the denominator $\\sim2n$.",
+      "The limit is $\\frac{2\\beta-1}{2}$, which is $0$ iff $\\beta=\\frac12$.",
+      "$8(\\alpha+\\beta)=8\\left(-\\frac12\\right)=-4$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sqrt{n^2+pn+q}-n\\to\\frac p2$ as $n\\to\\infty$; here $p=-1$ gives $-\\frac12$, so $\\beta=+\\frac12$.",
+    "For $\\sqrt{n^2+pn+q}+\\alpha n+\\beta\\to0$: first $\\alpha=-1$ (leading terms), then $\\beta=-\\frac p2$.",
+    "Two-stage determination of constants: kill the highest order term first, then the next."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of trigonometric functions"
+   ],
+   "level": 2,
+   "question": "$\\lim_{x\\to\\frac\\pi4}\\frac{8\\sqrt2-(\\cos x+\\sin x)^7}{\\sqrt2-\\sqrt2\\sin2x}$ is equal to : [JEE(Main) July 2022]",
+   "options": [
+    "$14$",
+    "$7$",
+    "$14\\sqrt2$",
+    "$7\\sqrt2$"
+   ],
+   "answer": "(A) $14$",
+   "key_idea": "$\\cos x+\\sin x=\\sqrt2\\cos\\left(x-\\frac\\pi4\\right)$ and $8\\sqrt2=(\\sqrt2)^7$ reduce the problem to $\\frac{1-\\cos^7h}{1-\\cos2h}$.",
+   "solution": [
+    "$\\cos x+\\sin x=\\sqrt2\\cos\\left(x-\\frac\\pi4\\right)$, so $(\\cos x+\\sin x)^7=(\\sqrt2)^7\\cos^7\\left(x-\\frac\\pi4\\right)$ and $8\\sqrt2=(\\sqrt2)^7$.",
+    "Put $x=\\frac\\pi4+h$: $\\sin2x=\\sin\\left(\\frac\\pi2+2h\\right)=\\cos2h$.",
+    "The limit is $\\lim_{h\\to0}\\frac{8\\sqrt2\\left(1-\\cos^7h\\right)}{\\sqrt2(1-\\cos2h)}=\\lim\\frac{8\\left(1-\\cos^7h\\right)}{1-\\cos2h}$.",
+    "This is $\\frac00$: L'Hôpital gives $\\lim\\frac{8\\cdot7\\cos^6h\\sin h}{2\\sin2h}$.",
+    "$\\sin2h=2\\sin h\\cos h$: the expression is $\\frac{8\\cdot7\\sin h\\cos^6h}{4\\sin h\\cos h}=14\\cos^5h$.",
+    "As $h\\to0$ this is $14$: option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $u=\\cos x+\\sin x$ the denominator is $\\sqrt2(2-u^2)$, so the quotient is $\\frac{a^7-u^7}{a^2-u^2}$ with $a=\\sqrt2$.",
+     "solution": [
+      "Let $u=\\cos x+\\sin x$; then $u^2=1+\\sin2x$, so $\\sqrt2-\\sqrt2\\sin2x=\\sqrt2(2-u^2)$.",
+      "$8\\sqrt2=(\\sqrt2)^7=a^7$ with $a=\\sqrt2$, and $u\\to\\sqrt2=a$ as $x\\to\\frac\\pi4$.",
+      "The expression is $\\frac1{\\sqrt2}\\cdot\\frac{a^7-u^7}{a^2-u^2}=\\frac1{\\sqrt2}\\cdot\\frac{a^7-u^7}{a-u}\\cdot\\frac1{a+u}$.",
+      "$\\frac{a^7-u^7}{a-u}\\to7a^6$ and $\\frac1{a+u}\\to\\frac1{2a}$, so the limit is $\\frac1{\\sqrt2}\\cdot\\frac{7a^5}{2}$.",
+      "$a^5=4\\sqrt2$, so the limit is $\\frac1{\\sqrt2}\\cdot\\frac{7\\cdot4\\sqrt2}{2}=14$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin x+\\cos x=\\sqrt2\\sin\\left(x+\\frac\\pi4\\right)=\\sqrt2\\cos\\left(x-\\frac\\pi4\\right)$ and $1+\\sin2x=(\\sin x+\\cos x)^2$.",
+    "$\\lim_{u\\to a}\\frac{a^n-u^n}{a^m-u^m}=\\frac nm\\,a^{n-m}$ (here $n=7$, $m=2$).",
+    "$\\lim_{h\\to0}\\frac{1-\\cos^nh}{1-\\cos mh}=\\frac{n}{m^2}$; here $8\\cdot\\frac74=14$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and functional equations",
+    "Sum of an infinite geometric series"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a continuous function such that $f(3x)-f(x)=x$. If $f(8)=7$, then $f(14)$ is equal to : [JEE(Main) July 2022]",
+   "options": [
+    "$4$",
+    "$10$",
+    "$11$",
+    "$16$"
+   ],
+   "answer": "(B) $10$",
+   "key_idea": "Telescope $f(x)-f\\left(\\frac x3\\right)=\\frac x3$ repeatedly and use continuity at $0$ to send $f\\left(\\frac{x}{3^n}\\right)\\to f(0)$.",
+   "solution": [
+    "Replace $x$ by $\\frac x3$ in $f(3x)-f(x)=x$: $f(x)-f\\left(\\frac x3\\right)=\\frac x3$.",
+    "Repeat: $f\\left(\\frac x3\\right)-f\\left(\\frac x{3^2}\\right)=\\frac x{3^2}$, $\\dots$, $f\\left(\\frac x{3^{n-1}}\\right)-f\\left(\\frac x{3^n}\\right)=\\frac x{3^n}$.",
+    "Add all: $f(x)-f\\left(\\frac x{3^n}\\right)=x\\left(\\frac13+\\frac1{3^2}+\\cdots+\\frac1{3^n}\\right)$.",
+    "Let $n\\to\\infty$: by continuity $f\\left(\\frac x{3^n}\\right)\\to f(0)$, and the series sums to $\\frac{1/3}{1-1/3}=\\frac12$, so $f(x)-f(0)=\\frac x2$.",
+    "$f(8)=7$ gives $7=4+f(0)$, so $f(0)=3$ and $f(x)=\\frac x2+3$.",
+    "$f(14)=7+3=10$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find a particular solution $\\frac x2$; the difference $g=f-\\frac x2$ satisfies $g(3x)=g(x)$ and continuity makes it constant.",
+     "solution": [
+      "Try $f_p(x)=kx$: $3kx-kx=x$ gives $k=\\frac12$.",
+      "Let $g=f-\\frac x2$. Subtracting the equations for $f$ and $f_p$ gives $g(3x)=g(x)$ for all $x$.",
+      "Then $g(x)=g\\left(\\frac x{3^n}\\right)\\to g(0)$ by continuity, so $g$ is a constant $c$.",
+      "$f(x)=\\frac x2+c$, and $f(8)=7$ gives $c=3$.",
+      "$f(14)=7+3=10$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is continuous at $0$ and $f(kx)-f(x)=x$ with $k>1$, then $f(x)=\\frac{x}{k-1}+c$ (here $k=3$ gives $\\frac x2+c$).",
+    "Functional equations: find one particular solution, then show the homogeneous part $g(kx)=g(x)$ is constant by continuity at $0$.",
+    "Iterating $x\\to\\frac x{k}$ gives a geometric series; continuity at $0$ is exactly what lets us drop the remainder $f\\left(\\frac x{k^n}\\right)\\to f(0)$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits using exponential series"
+   ],
+   "level": 2,
+   "question": "Let $\\beta=\\lim_{x\\to0}\\frac{\\alpha x-\\left(e^{3x}-1\\right)}{\\alpha x\\left(e^{3x}-1\\right)}$ for some $\\alpha\\in\\mathbb R$. Then the value of $\\alpha+\\beta$ is : [JEE(Main) July 2022]",
+   "options": [
+    "$\\frac{14}5$",
+    "$\\frac32$",
+    "$\\frac52$",
+    "$\\frac72$"
+   ],
+   "answer": "(C) $\\frac52$",
+   "key_idea": "The denominator is $\\sim3\\alpha x^2$, so the $x$-term $(\\alpha-3)x$ of the numerator must vanish.",
+   "solution": [
+    "Expand $e^{3x}-1=3x+\\frac{9x^2}{2!}+\\cdots$ in $\\beta=\\lim\\frac{\\alpha x-\\left(e^{3x}-1\\right)}{\\alpha x\\left(e^{3x}-1\\right)}$.",
+    "Numerator $=\\alpha x-3x-\\frac{9x^2}2-\\cdots=(\\alpha-3)x-\\frac{9x^2}{2}-\\cdots$",
+    "Denominator $=\\alpha x\\left(3x+\\cdots\\right)\\sim3\\alpha x^2$.",
+    "For the limit to exist, the term in $x$ must vanish: $\\alpha-3=0$, so $\\alpha=3$.",
+    "Then $\\beta=\\lim\\frac{-\\frac92x^2}{3\\alpha x^2}=\\frac{-3}{2\\alpha}=-\\frac12$.",
+    "$\\alpha+\\beta=3-\\frac12=\\frac52$: option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split the fraction as $\\frac1E-\\frac1{\\alpha x}$ with $E=e^{3x}-1$ and use $\\frac1{e^t-1}=\\frac1t-\\frac12+\\cdots$.",
+     "solution": [
+      "With $E=e^{3x}-1$: $\\frac{\\alpha x-E}{\\alpha xE}=\\frac1E-\\frac1{\\alpha x}$.",
+      "Use $\\frac1{e^t-1}=\\frac1t-\\frac12+\\frac t{12}-\\cdots$ with $t=3x$: $\\frac1E=\\frac1{3x}-\\frac12+\\frac x4+\\cdots$.",
+      "So $\\frac1E-\\frac1{\\alpha x}=\\left(\\frac13-\\frac1\\alpha\\right)\\frac1x-\\frac12+\\cdots$.",
+      "A finite limit needs $\\frac13=\\frac1\\alpha$, so $\\alpha=3$, and then $\\beta=-\\frac12$.",
+      "$\\alpha+\\beta=\\frac52$: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{A-B}{AB}=\\frac1B-\\frac1A$: turning a quotient into a difference of reciprocals often exposes the $\\frac1x$ singularity to cancel.",
+    "$\\frac1{e^t-1}=\\frac1t-\\frac12+\\frac t{12}-\\cdots$ (Bernoulli numbers): so $\\frac1{e^t-1}-\\frac1t\\to-\\frac12$.",
+    "A difference of two $\\frac cx$ terms has a finite limit iff the coefficients of $\\frac1x$ are equal."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Determination of constants using series expansion"
+   ],
+   "level": 2,
+   "question": "If $\\lim_{x\\to0}\\frac{\\alpha e^x+\\beta e^{-x}+\\gamma\\sin x}{x\\sin^2x}=\\frac23$, where $\\alpha,\\beta,\\gamma\\in\\mathbb R$, then which of the following is NOT correct? [JEE(Main) July 2022]",
+   "options": [
+    "$\\alpha^2+\\beta^2+\\gamma^2=6$",
+    "$\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha+1=0$",
+    "$\\alpha\\beta^2+\\beta\\gamma^2+\\gamma\\alpha^2+3=6$",
+    "$\\alpha^2-\\beta^2+\\gamma^2=4$"
+   ],
+   "answer": "(C)",
+   "key_idea": "The denominator $\\sim x^3$, so the numerator's coefficients of $x^0,x^1,x^2$ vanish and its $x^3$ coefficient is $\\frac23$.",
+   "solution": [
+    "Expand the numerator: $(\\alpha+\\beta)+(\\alpha-\\beta+\\gamma)x+\\frac{\\alpha+\\beta}{2!}x^2+\\frac{\\alpha-\\beta-\\gamma}{3!}x^3+\\cdots$",
+    "The denominator $x\\sin^2x\\sim x^3$, so the coefficients of $x^0$, $x^1$ and $x^2$ must vanish: $\\alpha+\\beta=0$ and $\\alpha-\\beta+\\gamma=0$ (the $x^2$ condition repeats the first).",
+    "The $x^3$ coefficient equals the limit: $\\frac{\\alpha-\\beta-\\gamma}{6}=\\frac23$.",
+    "From $\\beta=-\\alpha$: $\\gamma=-2\\alpha$, so $\\alpha-\\beta-\\gamma=\\alpha+\\alpha+2\\alpha=4\\alpha$ and $\\frac{4\\alpha}{6}=\\frac23$ gives $\\alpha=1$.",
+    "Hence $\\alpha=1,\\ \\beta=-1,\\ \\gamma=-2$.",
+    "(A) $1+1+4=6$ true. (B) $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha+1=-1+2-2+1=0$ true. (D) $\\alpha^2-\\beta^2+\\gamma^2=1-1+4=4$ true.",
+    "(C) $\\alpha\\beta^2+\\beta\\gamma^2+\\gamma\\alpha^2+3=1-4-2+3=-2\\ne6$, so (C) is the one that is NOT correct."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The denominator is odd, so the numerator must be odd: write $\\alpha e^x+\\beta e^{-x}$ with $\\cosh x$ and $\\sinh x$.",
+     "solution": [
+      "$\\alpha e^x+\\beta e^{-x}=(\\alpha+\\beta)\\cosh x+(\\alpha-\\beta)\\sinh x$.",
+      "$\\cosh x\\to1$ while the denominator $\\to0$, so a finite limit needs $\\alpha+\\beta=0$, i.e. $\\beta=-\\alpha$.",
+      "The numerator is then $2\\alpha\\sinh x+\\gamma\\sin x=(2\\alpha+\\gamma)x+\\frac{2\\alpha-\\gamma}{6}x^3+\\cdots$.",
+      "The $x$ term must vanish: $\\gamma=-2\\alpha$.",
+      "Then the numerator $\\sim\\frac{4\\alpha}{6}x^3$, so the limit is $\\frac{2\\alpha}{3}=\\frac23$ and $\\alpha=1$.",
+      "$(\\alpha,\\beta,\\gamma)=(1,-1,-2)$; option (C) gives $-2\\ne6$, so (C) is not correct."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the denominator is odd of order $k$ and the limit is finite and non-zero, the numerator must be odd too (its even part must vanish).",
+    "$\\alpha e^x+\\beta e^{-x}=(\\alpha+\\beta)\\cosh x+(\\alpha-\\beta)\\sinh x$; and $\\sinh x-\\sin x\\sim\\frac{x^3}{3}$.",
+    "After finding unknown constants, verify each option by substitution - NOT-correct questions need all four checked."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form 1^∞"
+   ],
+   "level": 3,
+   "question": "$\\lim_{x\\to0}\\left(\\frac{(x+2\\cos x)^3+2(x+2\\cos x)^2+3\\sin(x+2\\cos x)}{(x+2)^3+2(x+2)^2+3\\sin(x+2)}\\right)^{\\frac{100}{x}}$ is equal to ________. [JEE(Main) July 2022]",
+   "answer": "1",
+   "key_idea": "Both arguments $x+2\\cos x$ and $x+2$ have the same value $2$ and slope $1$ at $x=0$, so the exponent's limit is $0$.",
+   "solution": [
+    "Let $g(y)=y^3+2y^2+3\\sin y$. The base is $\\frac{g(x+2\\cos x)}{g(x+2)}\\to\\frac{g(2)}{g(2)}=1$ as $x\\to0$, while $\\frac{100}{x}\\to\\infty$: the form is $1^\\infty$.",
+    "The limit is $e^L$ with $L=\\lim\\frac{100}{x}\\left[\\frac{g(x+2\\cos x)}{g(x+2)}-1\\right]=100\\lim\\frac{g(x+2\\cos x)-g(x+2)}{x\\,g(x+2)}$.",
+    "At $x=0$ the numerator and the factor $x$ are both $0$ (form $\\frac00$): apply L'Hôpital's rule.",
+    "Derivative of the numerator: $g'(x+2\\cos x)(1-2\\sin x)-g'(x+2)$. Derivative of the denominator: $g(x+2)+x\\,g'(x+2)$.",
+    "At $x=0$: numerator$'$ $=g'(2)\\cdot1-g'(2)=0$ and denominator$'$ $=g(2)=16+3\\sin2\\ne0$.",
+    "So $L=100\\cdot\\frac{0}{16+3\\sin2}=0$ and the limit is $e^0=1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working is a long, hard-to-follow simplification of the combined fraction (with a stray line such as '12 - 3(4) + 8x1 - 8 + 3cos2 - 3cos2' that does not follow from the previous line) and ends with 'Using L'H rule = e^0 = 1'. The answer 1 is right, but the intermediate algebra is not verifiable, so the working is rewritten with the substitution $g(y)=y^3+2y^2+3\\sin y$ (same 1^infinity + L'Hopital route).",
+   "alternate_solutions": [
+    {
+     "idea": "Let $H=\\ln(\\text{base})$; since $H(0)=0$, $\\frac{100H(x)}{x}\\to100H'(0)$, and $H'(0)=0$ because both arguments have slope $1$ at $0$.",
+     "solution": [
+      "Let $g(y)=y^3+2y^2+3\\sin y$, $a(x)=x+2\\cos x$, $b(x)=x+2$; the base is $\\frac{g(a)}{g(b)}$ and $H(x)=\\ln g(a(x))-\\ln g(b(x))$, with $H(0)=0$.",
+      "The limit is $\\exp\\left(\\lim\\frac{100H(x)}{x}\\right)=e^{100H'(0)}$ by the definition of the derivative.",
+      "$H'(x)=\\frac{g'(a)a'}{g(a)}-\\frac{g'(b)b'}{g(b)}$.",
+      "At $x=0$: $a=b=2$, $a'(0)=1-2\\sin0=1$ and $b'=1$, so $H'(0)=\\frac{g'(2)}{g(2)}(1-1)=0$ (here $g(2)=16+3\\sin2\\ne0$).",
+      "The limit is $e^0=1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ form: $\\lim\\left(\\frac{F}{G}\\right)^{c/x}=\\exp\\left(c\\lim\\frac{F-G}{x\\,G}\\right)$ whenever $\\frac FG\\to1$.",
+    "Recognise one function $g$ evaluated at two nearby arguments $a(x),b(x)$: if $a(0)=b(0)$ and $a'(0)=b'(0)$, then $\\frac{g(a)}{g(b)}=1+O(x^2)$ and $\\left(1+O(x^2)\\right)^{c/x}\\to1$.",
+    "Equivalent: $\\lim_{x\\to0}\\frac{\\ln u(x)}{x}=u'(0)/u(0)$ for $u(0)>0$ - a derivative in disguise."
+   ]
+  }
+ ]
+}
