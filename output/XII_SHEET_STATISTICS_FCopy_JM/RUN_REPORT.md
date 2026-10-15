@@ -1,7 +1,7 @@
 # Run report - XII_SHEET_STATISTICS_FCopy_JM (Exercise III, JEE Main, 72 questions)
 
 **Blueprint:** none was used. **Concepts self-assigned (no blueprint) - please review.**
-**Marks assumed:** the sheet prints no marks, so JEE Advanced defaults were used: 4 marks for every question (44 single-correct: Q1-Q24, Q27, Q29-Q31, Q33-Q35, Q39, Q43-Q48, Q51, Q52, Q58-Q62, Q66, Q67 - exact list is in the section dividers; the rest numerical: Q25, Q26, Q28, Q32, Q36-Q38, Q40-Q42, Q49, Q50, Q53-Q57, Q63-Q65, Q68-Q72). Stated in the section dividers. Total 288 marks. (The questions are JEE Main questions, which actually carry +4/-1 and +4/0.)
+**Marks assumed:** the sheet prints no marks, so JEE Advanced defaults were used: 4 marks for every question (47 single-correct, 25 numerical; the exact ranges are in the section dividers). Stated in the section dividers. Total 288 marks. (The questions are JEE Main questions, which actually carry +4/-1 and +4/0.)
 
 ## Difficulty
 - Marks-weighted difficulty index (adjusted): **1.88** (no equivalence-relation or multi-correct adjustments apply).
