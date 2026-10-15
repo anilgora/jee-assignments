@@ -1,0 +1,1856 @@
+{
+ "title": "Probability (Exercise J-M) — Paper Analysis",
+ "subtitle": "XII SHEET PROBABILITY · Exercise J-M (JEE Main) · detailed solutions",
+ "source": "XII_SHEET_PROBABILITY_FCopy_JM.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 8,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 9,
+   "to": 9,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 10,
+   "to": 15,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 16,
+   "to": 17,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 18,
+   "to": 29,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 30,
+   "to": 32,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 33,
+   "to": 44,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 45,
+   "to": 45,
+   "marking": [
+    "4 marks each (no marks printed in the sheet - JEE Advanced default of 4 assumed)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: arrangements of letters with repetition"
+   ],
+   "level": 1,
+   "question": "Words, with or without meaning, are to be formed using all the letters of the word EXAMINATION. The probability that the letter M appears at the fourth position in any such word is :",
+   "options": [
+    "$\\frac{2}{11}$",
+    "$\\frac{1}{66}$",
+    "$\\frac{1}{9}$",
+    "$\\frac{1}{11}$"
+   ],
+   "answer": "(D) $\\frac{1}{11}$",
+   "key_idea": "M occurs once, so fixing it leaves the same repeated letters in the numerator and the ratio collapses to $\\frac{10!}{11!}$.",
+   "solution": [
+    "The letters of EXAMINATION are $A,A,I,I,N,N,E,O,X,M,T$: 11 letters with $A$, $I$, $N$ each repeated twice.",
+    "Total words: $n(S)=\\frac{11!}{2!\\,2!\\,2!}$.",
+    "Event $E$: the letter M is at the 4th place. M occurs only once, so fix it and arrange the other 10 letters $A,A,I,I,N,N,E,O,X,T$.",
+    "$n(E)=\\frac{10!}{2!\\,2!\\,2!}$.",
+    "$P(E)=\\frac{n(E)}{n(S)}=\\frac{10!}{11!}=\\frac{1}{11}$.",
+    "Hence the probability is $\\frac{1}{11}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry: in a random arrangement the single letter M is equally likely to sit in any of the 11 places.",
+     "solution": [
+      "Every arrangement of the 11 letters is equally likely, and the position occupied by M does not depend on how the other letters are arranged.",
+      "By symmetry M is equally likely to be at any of the 11 positions.",
+      "So $P(\\text{M at the 4th position})=\\frac{1}{11}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A letter that occurs exactly once is equally likely to be at any of the $n$ positions, so $P=\\frac{1}{n}$ whatever the other letters are.",
+    "If a letter occurs $r$ times in a word of $n$ letters, the chance that a fixed position carries it is $\\frac{r}{n}$. For example, $A$ at the 4th place here: $\\frac{2}{11}$.",
+    "In a ratio of two arrangement counts, the repeated-letter factorials cancel when the same letters are repeated in both - cancel them first."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting favourable integers",
+    "Quadratic inequality: positive definite quadratic (discriminant)"
+   ],
+   "level": 2,
+   "question": "The probability of selecting integers $a\\in[-5,30]$ such that $x^2+2(a+4)x-5a+64>0$ for all $x\\in\\mathbb{R}$, is :",
+   "options": [
+    "$\\frac{7}{36}$",
+    "$\\frac{1}{6}$",
+    "$\\frac{1}{4}$",
+    "$\\frac{2}{9}$"
+   ],
+   "answer": "(D) $\\frac{2}{9}$",
+   "key_idea": "A quadratic with positive leading coefficient is positive for all real $x$ exactly when its discriminant is negative.",
+   "solution": [
+    "The integers in $[-5,30]$ are $-5,-4,\\ldots,30$: $n(S)=36$.",
+    "$x^2+2(a+4)x-5a+64>0$ for all $x\\in\\mathbb{R}$ needs $D<0$.",
+    "$4(a+4)^2-4(64-5a)<0$.",
+    "$a^2+8a+16-64+5a<0\\Rightarrow a^2+13a-48<0$.",
+    "$(a+16)(a-3)<0\\Rightarrow a\\in(-16,3)$.",
+    "Integers of $[-5,30]$ in this interval: $a\\in\\{-5,-4,-3,-2,-1,0,1,2\\}$, so $n(E)=8$.",
+    "$P=\\frac{n(E)}{n(S)}=\\frac{8}{36}=\\frac{2}{9}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Vertex view: the quadratic is positive everywhere iff its minimum value (at the vertex) is positive.",
+     "solution": [
+      "Write $x^2+2(a+4)x-5a+64=\\left(x+a+4\\right)^2+\\left[64-5a-(a+4)^2\\right]$.",
+      "The square is $\\ge0$ and equals $0$ at $x=-(a+4)$, so the expression is $>0$ for all $x$ iff $64-5a-(a+4)^2>0$.",
+      "$64-5a-a^2-8a-16>0\\Rightarrow a^2+13a-48<0\\Rightarrow(a+16)(a-3)<0$.",
+      "So $-16<a<3$; the integers of $[-5,30]$ are $-5,\\ldots,2$, which is 8 values, and $P=\\frac{8}{36}=\\frac{2}{9}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^2+bx+c>0$ for all real $x$ $\\iff$ $b^2<4c$ (equivalently the vertex value $c-\\frac{b^2}{4}>0$).",
+    "The number of integers in an open interval $(p,q)$ with integer end points is $q-p-1$; check the end points carefully for a closed interval such as $[-5,30]$.",
+    "For $x^2+bx+c\\ge0$ for all $x$ the condition is $b^2\\le4c$ - the equality case matters when counting integers."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Events: probability of exactly one, union of three events (inclusion-exclusion)"
+   ],
+   "level": 2,
+   "question": "Let $A$, $B$ and $C$ be three events such that the probability that exactly one of $A$ and $B$ occurs is $(1-k)$, the probability that exactly one of $B$ and $C$ occurs is $(1-2k)$, the probability that exactly one of $C$ and $A$ occurs is $(1-k)$ and the probability that all of $A$, $B$, $C$ occur simultaneously is $k^2$, where $0<k<1$. Then the probability that at least one of $A$, $B$, $C$ occurs is :",
+   "options": [
+    "greater than $\\frac{1}{2}$",
+    "greater than $\\frac{1}{8}$ but less than $\\frac{1}{4}$",
+    "exactly equal to $\\frac{1}{2}$",
+    "greater than $\\frac{1}{4}$ but less than $\\frac{1}{2}$"
+   ],
+   "answer": "(A) greater than $\\frac{1}{2}$",
+   "key_idea": "Add the three 'exactly one' conditions: the pair-intersections and the single probabilities combine into the inclusion-exclusion sum.",
+   "solution": [
+    "$P(\\text{exactly one of }A,B)=P(A)+P(B)-2P(A\\cap B)=1-k$.",
+    "$P(B)+P(C)-2P(B\\cap C)=1-2k$.",
+    "$P(C)+P(A)-2P(A\\cap C)=1-k$.",
+    "Adding: $2\\left[P(A)+P(B)+P(C)-P(A\\cap B)-P(B\\cap C)-P(A\\cap C)\\right]=3-4k$ and $P(A\\cap B\\cap C)=k^2$. ...(1)",
+    "$P(A\\cup B\\cup C)=P(A)+P(B)+P(C)-P(A\\cap B)-P(B\\cap C)-P(A\\cap C)+P(A\\cap B\\cap C)$.",
+    "Using (1): $P(A\\cup B\\cup C)=\\frac{3-4k}{2}+k^2=k^2-2k+\\frac{3}{2}$.",
+    "$=(k-1)^2+\\frac{1}{2}$.",
+    "For $0<k<1$ we have $(k-1)^2>0$, so $P(A\\cup B\\cup C)>\\frac{1}{2}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count how many of the three 'pair' conditions each outcome contributes to: exactly-one-or-two events give 2, three events or none give 0.",
+     "solution": [
+      "Let $a$ = $P(\\text{exactly one of }A,B,C\\text{ occurs})$, $b$ = $P(\\text{exactly two occur})$, $c=P(\\text{all three})=k^2$.",
+      "An outcome in which exactly one event occurs makes exactly 2 of the 3 pair-conditions 'exactly one of the pair' true; an outcome with exactly two events occurring also makes exactly 2 pairs true; with none or all three, 0 pairs.",
+      "So the sum of the three given probabilities is $2a+2b=(1-k)+(1-2k)+(1-k)=3-4k$, i.e. $a+b=\\frac{3-4k}{2}$.",
+      "$P(\\text{at least one})=a+b+c=\\frac{3-4k}{2}+k^2=(k-1)^2+\\frac{1}{2}>\\frac{1}{2}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$P(\\text{exactly one of }A,B)=P(A)+P(B)-2P(A\\cap B)$.",
+    "For three events: $P(A\\cup B\\cup C)=\\frac{1}{2}\\sum_{\\text{pairs}}P(\\text{exactly one of the pair})+P(A\\cap B\\cap C)$. Check: three independent events with $p=\\frac{1}{2}$ give $\\frac{1}{2}\\cdot\\frac{3}{2}+\\frac{1}{8}=\\frac{7}{8}$, which is $1-\\frac{1}{8}$.",
+    "Complete the square to bound a quadratic in the parameter: $k^2-2k+\\frac{3}{2}=(k-1)^2+\\frac{1}{2}\\ge\\frac{1}{2}$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting arrangements with distinct entries",
+    "Determinants: singular 2×2 matrix"
+   ],
+   "level": 3,
+   "question": "Four dice are thrown simultaneously and the numbers shown on these dice are recorded in $2\\times2$ matrices. The probability that such formed matrices have all different entries and are non-singular, is :",
+   "options": [
+    "$\\frac{23}{81}$",
+    "$\\frac{45}{162}$",
+    "$\\frac{22}{81}$",
+    "$\\frac{43}{162}$"
+   ],
+   "answer": "(D) $\\frac{43}{162}$",
+   "key_idea": "Singular means $ad=bc$; with four distinct entries from $1$ to $6$ only the pairs $(1,6),(2,3)$ and $(2,6),(3,4)$ give equal products, 16 matrices in all.",
+   "solution": [
+    "Number of matrices with all four entries different: choose the 4 distinct numbers and arrange them: $^6C_4\\times4!=360$.",
+    "Let $X=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$; $X$ is singular when $|X|=ad-bc=0$, i.e. $ad=bc$.",
+    "Equal products from four distinct numbers of $1$ to $6$: $1\\cdot6=2\\cdot3$ (so $\\{1,6\\}$ and $\\{3,2\\}$), and $2\\cdot6=3\\cdot4$ (so $\\{3,4\\}$ and $\\{6,2\\}$).",
+    "For each of the two choices, either pair may be the diagonal $(a,d)$ (2 ways), and each pair can be written in 2 orders on its diagonal: $2\\times2\\times2=8$ matrices.",
+    "Total singular matrices with different entries $=8+8=16$.",
+    "Non-singular matrices with different entries $=360-16=344$.",
+    "The total number of outcomes of four dice is $6^4=1296$, so $P=\\frac{344}{6^4}=\\frac{43}{162}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Singular means the rows are proportional: count ordered row pairs $(a,b),(c,d)=r(a,b)$ by the ratio $r$.",
+     "solution": [
+      "$|X|=0\\iff$ the second row is a multiple of the first: $(c,d)=r(a,b)$. Entries are distinct, so $r\\neq1$; take first $r>1$ and then double by swapping the rows ($r<1$).",
+      "$r=2$: $(a,b)$ from $\\{1,2,3\\}$, $a\\neq b$ with all four entries different: $(1,3)\\to(2,6)$, $(3,1)\\to(6,2)$, $(2,3)\\to(4,6)$, $(3,2)\\to(6,4)$ ($(1,2)\\to(2,4)$ and $(2,1)\\to(4,2)$ repeat a 2): 4 matrices.",
+      "$r=3$: $(a,b)\\in\\{(1,2),(2,1)\\}\\to(3,6),(6,3)$: 2 matrices.",
+      "$r=\\frac{3}{2}$: $(a,b)\\in\\{(2,4),(4,2)\\}\\to(3,6),(6,3)$: 2 matrices. No ratio $r\\ge4$ works.",
+      "With $r>1$ there are $4+2+2=8$ matrices; swapping the two rows gives the 8 with $r<1$: 16 singular matrices.",
+      "$P=\\frac{360-16}{1296}=\\frac{43}{162}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A $2\\times2$ matrix is singular iff $ad=bc$ iff its rows (equivalently columns) are proportional.",
+    "Number of $2\\times2$ matrices with four different entries from $n$ values: $^nP_4$ (here $^6P_4=360$).",
+    "Among distinct numbers of $\\{1,\\dots,6\\}$ the only 'equal-product' quadruples are $\\{1,2,3,6\\}$ and $\\{2,3,4,6\\}$ - useful to remember for dice problems about $ad=bc$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability: occupancy of distinct balls in boxes"
+   ],
+   "level": 1,
+   "question": "Let 9 distinct balls be distributed among 4 boxes $B_1,B_2,B_3$ and $B_4$. If the probability that $B_3$ contains exactly 3 balls is $k\\left(\\frac{3}{4}\\right)^9$, then $k$ lies in the set :",
+   "options": [
+    "$\\{x\\in\\mathbb{R}:|x-3|<1\\}$",
+    "$\\{x\\in\\mathbb{R}:|x-2|\\le1\\}$",
+    "$\\{x\\in\\mathbb{R}:|x-1|\\le1\\}$",
+    "$\\{x\\in\\mathbb{R}:|x-5|\\le1\\}$"
+   ],
+   "answer": "(A) $\\{x\\in\\mathbb{R}:|x-3|<1\\}$",
+   "key_idea": "Choose which 3 balls go into $B_3$ and send each of the other 6 balls to any of the other 3 boxes.",
+   "solution": [
+    "Each of the 9 distinct balls can go into any of the 4 boxes: $4^9$ equally likely distributions.",
+    "Favourable: choose the 3 balls that go to $B_3$ in $^9C_3$ ways; each of the remaining 6 balls goes to one of $B_1,B_2,B_4$: $3^6$ ways.",
+    "$P=\\frac{^9C_3\\cdot3^6}{4^9}=\\frac{84\\cdot3^6}{4^9}$.",
+    "Write $3^6=\\frac{3^9}{27}$: $P=\\frac{84}{27}\\cdot\\frac{3^9}{4^9}=\\frac{28}{9}\\left(\\frac{3}{4}\\right)^9$, so $k=\\frac{28}{9}$.",
+    "$\\frac{28}{9}\\approx3.11$ and $|k-3|=\\frac{1}{9}<1$, so $k\\in\\{x:|x-3|<1\\}$, option (A).",
+    "Check the others: (B) is $[1,3]$, (C) is $[0,2]$, (D) is $[4,6]$ - none contains $3.11$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Each ball independently falls in $B_3$ with probability $\\frac{1}{4}$, so the number of balls in $B_3$ is binomial.",
+     "solution": [
+      "Let $X$ be the number of balls in $B_3$. The 9 balls are placed independently and each lands in $B_3$ with probability $\\frac{1}{4}$: $X\\sim B\\left(9,\\frac{1}{4}\\right)$.",
+      "$P(X=3)=\\,^9C_3\\left(\\frac{1}{4}\\right)^3\\left(\\frac{3}{4}\\right)^6=84\\cdot\\frac{1}{27}\\left(\\frac{3}{4}\\right)^3\\left(\\frac{3}{4}\\right)^6$, because $\\left(\\frac{1}{4}\\right)^3=\\frac{1}{27}\\left(\\frac{3}{4}\\right)^3$.",
+      "$=\\frac{84}{27}\\left(\\frac{3}{4}\\right)^9=\\frac{28}{9}\\left(\\frac{3}{4}\\right)^9$, so $k=\\frac{28}{9}\\approx3.11\\in(2,4)$ and $|k-3|<1$: option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $n$ distinct objects are placed independently and uniformly into $m$ boxes, the number in a given box is $B\\left(n,\\frac{1}{m}\\right)$: $P(\\text{exactly }r)=\\,^nC_r\\frac{(m-1)^{n-r}}{m^n}$.",
+    "Rewriting $\\left(\\frac{1}{4}\\right)^3$ as $\\frac{1}{27}\\left(\\frac{3}{4}\\right)^3$ is the trick to match the target form $k\\left(\\frac{3}{4}\\right)^9$.",
+    "The expected number of balls in a box is $\\frac{n}{m}$ (here $\\frac{9}{4}$), so 3 balls is near the middle of the distribution."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Random variable: mean of a discrete distribution",
+    "Sequences and series: infinite geometric / arithmetico-geometric series"
+   ],
+   "level": 2,
+   "question": "Let $X$ be a random variable such that the probability function of a distribution is given by $P(X=0)=\\frac{1}{2}$, $P(X=j)=\\frac{1}{3^j}$ $(j=1,2,3,\\ldots,\\infty)$. Then the mean of the distribution and $P(X\\text{ is positive and even})$ respectively are :",
+   "options": [
+    "$\\frac{3}{8}$ and $\\frac{1}{8}$",
+    "$\\frac{3}{4}$ and $\\frac{1}{9}$",
+    "$\\frac{3}{4}$ and $\\frac{3}{16}$",
+    "$\\frac{3}{4}$ and $\\frac{1}{8}$"
+   ],
+   "answer": "(D) $\\frac{3}{4}$ and $\\frac{1}{8}$",
+   "key_idea": "The mean is an arithmetico-geometric series $\\sum r\\,3^{-r}$; the even-valued probability is a geometric series with first term $\\frac{1}{9}$ and ratio $\\frac{1}{9}$.",
+   "solution": [
+    "Mean $=\\sum_{r\\ge0}r\\,p_r=\\sum_{r=1}^{\\infty}\\frac{r}{3^r}=\\frac{1}{3}+\\frac{2}{3^2}+\\frac{3}{3^3}+\\cdots$.",
+    "Let $S=\\frac{1}{3}+\\frac{2}{9}+\\frac{3}{27}+\\cdots$. Then $\\frac{S}{3}=\\frac{1}{9}+\\frac{2}{27}+\\cdots$.",
+    "Subtract: $\\frac{2S}{3}=\\frac{1}{3}+\\frac{1}{9}+\\frac{1}{27}+\\cdots=\\frac{1/3}{1-1/3}=\\frac{1}{2}$, so $S=\\frac{3}{4}$.",
+    "$P(X\\text{ is positive and even})=P(X=2)+P(X=4)+\\cdots=\\frac{1}{3^2}+\\frac{1}{3^4}+\\cdots$.",
+    "This is a GP with first term $\\frac{1}{9}$ and ratio $\\frac{1}{9}$: sum $=\\frac{1/9}{1-1/9}=\\frac{1}{8}$.",
+    "Mean $=\\frac{3}{4}$ and $P=\\frac{1}{8}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $E(X)=\\sum_{k\\ge1}P(X\\ge k)$ for a non-negative integer-valued variable, which turns the mean into a plain GP.",
+     "solution": [
+      "For $k\\ge1$: $P(X\\ge k)=\\sum_{j\\ge k}\\frac{1}{3^j}=\\frac{3^{-k}}{1-\\frac{1}{3}}=\\frac{3}{2}\\cdot3^{-k}$.",
+      "$E(X)=\\sum_{k=1}^{\\infty}P(X\\ge k)=\\frac{3}{2}\\sum_{k=1}^{\\infty}3^{-k}=\\frac{3}{2}\\cdot\\frac{1}{2}=\\frac{3}{4}$.",
+      "The even-valued probability is the GP $\\frac{1}{9}+\\frac{1}{81}+\\cdots=\\frac{1}{8}$, so the pair is $\\frac{3}{4}$ and $\\frac{1}{8}$, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sum_{r\\ge1}r\\,x^r=\\frac{x}{(1-x)^2}$ for $|x|<1$; with $x=\\frac{1}{3}$ this gives $\\frac{1/3}{4/9}=\\frac{3}{4}$.",
+    "For a random variable taking values $0,1,2,\\ldots$: $E(X)=\\sum_{k\\ge1}P(X\\ge k)$ (tail-sum formula).",
+    "Probabilities of even values of a geometric-type distribution form a GP with ratio $x^2$; here $\\frac{x^2}{1-x^2}=\\frac{1/9}{8/9}=\\frac{1}{8}$. Always check $\\sum p=1$ first: $\\frac{1}{2}+\\frac{1/3}{1-1/3}=1$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting favourable numbers",
+    "Number theory: divisibility of $2^n-2$ by 3"
+   ],
+   "level": 2,
+   "question": "The probability that a randomly selected 2-digit number belongs to the set $\\{n\\in\\mathbb{N}:(2^n-2)\\text{ is a multiple of }3\\}$ is equal to :",
+   "options": [
+    "$\\frac{2}{3}$",
+    "$\\frac{1}{2}$",
+    "$\\frac{1}{3}$",
+    "$\\frac{1}{6}$"
+   ],
+   "answer": "(B) $\\frac{1}{2}$",
+   "key_idea": "Expand $2^n=(3-1)^n$: modulo 3 only $(-1)^n$ survives, so $2^n-2$ is a multiple of 3 exactly when $n$ is odd.",
+   "solution": [
+    "Total 2-digit numbers $=90$.",
+    "$2^n-2=(3-1)^n-2=\\,^nC_03^n-\\,^nC_13^{n-1}+\\,^nC_23^{n-2}-\\cdots+\\,^nC_n(-1)^n-2$.",
+    "$=3\\left(^nC_03^{n-1}-\\,^nC_13^{n-2}+\\cdots\\right)+(-1)^n-2$.",
+    "So $2^n-2$ is a multiple of 3 iff $(-1)^n-2$ is a multiple of 3, i.e. iff $(-1)^n=-1$: $n$ is odd.",
+    "Favourable 2-digit numbers: the odd ones, $11,13,\\ldots,99$: $45$.",
+    "$P=\\frac{45}{90}=\\frac{1}{2}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work modulo 3: $2\\equiv-1\\pmod 3$, so $2^n\\equiv(-1)^n$ and the residue of $2^n-2$ is read off from the parity of $n$.",
+     "solution": [
+      "Since $2\\equiv-1\\pmod 3$, we get $2^n\\equiv(-1)^n\\pmod 3$.",
+      "Hence $2^n-2\\equiv(-1)^n-2\\pmod 3$: this is $-3\\equiv0$ for odd $n$ and $-1\\not\\equiv0$ for even $n$.",
+      "(Quick check: $n=1,3,5$ give $0,6,30$ - multiples of 3; $n=2,4$ give $2,14$ - not.)",
+      "So the set is the set of odd $n$; there are 45 odd numbers among the 90 two-digit numbers, so $P=\\frac{1}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a-b$ divides $a^n-b^n$; modulo $m$ replace $a$ by a small congruent residue (here $2\\equiv-1\\pmod3$).",
+    "$2^n\\bmod3$ cycles $2,1,2,1,\\ldots$ (period 2) and $2^n\\bmod7$ cycles $2,4,1$ (period 3): powers of $2$ are periodic modulo any odd number.",
+    "Among the 90 two-digit numbers exactly 45 are odd and 45 are even; a condition on parity gives probability $\\frac{1}{2}$ immediately."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: probability of at least $n$ successes",
+    "Binomial theorem: sum of binomial coefficients and symmetry"
+   ],
+   "level": 2,
+   "question": "A student appeared in an examination consisting of 8 true-false type questions. The student guesses the answers with equal probability. The smallest value of $n$, so that the probability of guessing at least $n$ correct answers is less than $\\frac{1}{2}$, is :",
+   "options": [
+    "$6$",
+    "$3$",
+    "$5$",
+    "$4$"
+   ],
+   "answer": "(C) $5$",
+   "key_idea": "For $B\\left(8,\\frac{1}{2}\\right)$ the condition $P(X\\ge n)<\\frac{1}{2}$ means $\\sum_{r\\ge n}\\,^8C_r<2^7$; test $n=4$ and $n=5$.",
+   "solution": [
+    "Take a correct guess as a success: $p=\\frac{1}{2}$, $q=\\frac{1}{2}$, $X\\sim B\\left(8,\\frac{1}{2}\\right)$.",
+    "$P(X\\ge n)=\\sum_{r=n}^{8}\\,^8C_r\\left(\\frac{1}{2}\\right)^r\\left(\\frac{1}{2}\\right)^{8-r}=\\frac{1}{2^8}\\sum_{r=n}^{8}\\,^8C_r$.",
+    "We need $\\frac{1}{2^8}\\sum_{r=n}^{8}\\,^8C_r<\\frac{1}{2}$, i.e. $\\sum_{r=n}^{8}\\,^8C_r<2^7=128$.",
+    "For $n=5$: $^8C_5+\\,^8C_6+\\,^8C_7+\\,^8C_8=56+28+8+1=93<128$. True.",
+    "For $n=4$: $70+93=163>128$. False (so $n=4$ and smaller fail).",
+    "The smallest value is $n=5$, option (C). (The PDF's answer key shows '(3)', meaning the third option, which is $5$.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry of $B\\left(8,\\frac{1}{2}\\right)$: $P(X\\ge5)=P(X\\le3)$, so the middle term $P(X=4)$ splits the rest evenly.",
+     "solution": [
+      "$^8C_r=\\,^8C_{8-r}$ gives $P(X=r)=P(X=8-r)$, so $P(X\\ge5)=P(X\\le3)$.",
+      "$P(X\\ge5)+P(X=4)+P(X\\le3)=1\\Rightarrow P(X\\ge5)=\\frac{1-P(X=4)}{2}=\\frac{1}{2}\\left(1-\\frac{70}{256}\\right)=\\frac{93}{256}<\\frac{1}{2}$.",
+      "$P(X\\ge4)=P(X\\ge5)+P(X=4)=\\frac{93+70}{256}=\\frac{163}{256}>\\frac{1}{2}$.",
+      "So the probability drops below $\\frac{1}{2}$ first at $n=5$, same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $B\\left(2m,\\frac{1}{2}\\right)$: $P(X>m)=\\frac{1}{2}\\left(1-\\frac{^{2m}C_m}{2^{2m}}\\right)<\\frac{1}{2}$ and $P(X\\ge m)=\\frac{1}{2}\\left(1+\\frac{^{2m}C_m}{2^{2m}}\\right)>\\frac{1}{2}$ - so the smallest $n$ with $P(X\\ge n)<\\frac{1}{2}$ is always $m+1$ (here $m=4$, $n=5$).",
+    "$\\sum_{r=0}^{n}\\,^nC_r=2^n$ and $^nC_r=\\,^nC_{n-r}$ turn half-sums into powers of 2.",
+    "Read answer keys such as '(3)' carefully: it may be the option number, not the value."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Probability of at least one success: complementary probability",
+    "Inequalities with powers of 2"
+   ],
+   "level": 1,
+   "question": "A fair coin is tossed $n$ times such that the probability of getting at least one head is at least $0.9$. Then the minimum value of $n$ is ________.",
+   "answer": "$4$",
+   "key_idea": "'At least one head' is the complement of 'all tails', so the condition is $1-\\frac{1}{2^n}\\ge0.9$.",
+   "solution": [
+    "$P(\\text{head})=\\frac{1}{2}$.",
+    "$P(\\text{at least one head})=1-P(\\text{all tails})$.",
+    "$1-\\frac{1}{2^n}\\ge0.9$.",
+    "$\\frac{1}{2^n}\\le\\frac{1}{10}\\Rightarrow2^n\\ge10$.",
+    "$2^3=8<10$ and $2^4=16\\ge10$, so $n=4$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$P(\\text{at least one success in }n\\text{ trials})=1-q^n\\ge\\alpha\\iff n\\ge\\frac{\\ln(1-\\alpha)}{\\ln q}$; for a fair coin $n\\ge\\log_2\\frac{1}{1-\\alpha}$.",
+    "Check: $n=3$ gives $0.875<0.9$ and $n=4$ gives $0.9375\\ge0.9$.",
+    "Quick estimate: $2^{10}\\approx10^3$, so $\\log_210\\approx3.32$ and the answer is the next integer, 4."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Independent events: probability that exactly one occurs",
+    "Quadratic equations"
+   ],
+   "level": 1,
+   "question": "Let $A$ and $B$ be independent events such that $P(A)=p$, $P(B)=2p$. The largest value of $p$, for which $P(\\text{exactly one of }A,B\\text{ occurs})=\\frac{5}{9}$, is :",
+   "options": [
+    "$\\frac{2}{9}$",
+    "$\\frac{1}{3}$",
+    "$\\frac{5}{12}$",
+    "$\\frac{4}{9}$"
+   ],
+   "answer": "(C) $\\frac{5}{12}$",
+   "key_idea": "For independent events 'exactly one occurs' has probability $p(1-2p)+2p(1-p)$, a quadratic in $p$.",
+   "solution": [
+    "$P(\\text{exactly one of }A,B)=P(A\\cap\\bar B)+P(\\bar A\\cap B)=\\frac{5}{9}$.",
+    "By independence: $p(1-2p)+2p(1-p)=\\frac{5}{9}$.",
+    "$3p-4p^2=\\frac{5}{9}$.",
+    "$36p^2-27p+5=0$.",
+    "$(12p-5)(3p-1)=0$.",
+    "$p=\\frac{5}{12}$ or $p=\\frac{1}{3}$.",
+    "Both values are admissible because $P(B)=2p\\le1$ needs $p\\le\\frac{1}{2}$ ($2p=\\frac{5}{6}$ and $\\frac{2}{3}$). The largest is $\\frac{5}{12}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For independent events $P(\\text{exactly one})=\\frac{1-(1-2a)(1-2b)}{2}$ - a product form with no expanding of complements.",
+     "solution": [
+      "Independent $A,B$ with $P(A)=a$, $P(B)=b$: $P(\\text{exactly one})=a+b-2ab=\\frac{1-(1-2a)(1-2b)}{2}$.",
+      "With $a=p$, $b=2p$: $\\frac{1-(1-2p)(1-4p)}{2}=\\frac{5}{9}\\Rightarrow(1-2p)(1-4p)=-\\frac{1}{9}$.",
+      "$8p^2-6p+1=-\\frac{1}{9}\\Rightarrow72p^2-54p+10=0\\Rightarrow36p^2-27p+5=0$.",
+      "The roots are $\\frac{5}{12},\\frac{1}{3}$; the largest is $\\frac{5}{12}$ (and $2p\\le1$ holds), same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For independent events: $P(A\\ \\text{xor}\\ B)=P(A)+P(B)-2P(A)P(B)=\\frac{1-(1-2a)(1-2b)}{2}$.",
+    "More generally $P(\\text{odd number of } n \\text{ independent events occur})=\\frac{1-\\prod(1-2p_i)}{2}$. Check: two fair events: $\\frac{1-0}{2}=\\frac{1}{2}$.",
+    "After solving a quadratic for a probability parameter, always test each root against the domain ($0\\le p\\le1$ and every probability $\\le1$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability for a geometric (waiting-time) distribution"
+   ],
+   "level": 1,
+   "question": "A fair die is tossed until six is obtained on it. Let $X$ be the number of required tosses, then the conditional probability $P(X\\ge5\\mid X>2)$ is :",
+   "options": [
+    "$\\frac{11}{36}$",
+    "$\\frac{125}{216}$",
+    "$\\frac{25}{36}$",
+    "$\\frac{5}{6}$"
+   ],
+   "answer": "(C) $\\frac{25}{36}$",
+   "key_idea": "$P(X=r)=\\left(\\frac{5}{6}\\right)^{r-1}\\frac{1}{6}$ and $X\\ge5\\Rightarrow X>2$, so the conditional probability is the ratio of two geometric tails.",
+   "solution": [
+    "$P(\\text{six})=\\frac{1}{6}$, $P(\\text{not six})=\\frac{5}{6}$, and $P(X=r)=\\left(\\frac{5}{6}\\right)^{r-1}\\frac{1}{6}$.",
+    "Since $X\\ge5$ implies $X>2$: $P(X\\ge5\\mid X>2)=\\frac{P(X\\ge5)}{P(X>2)}$.",
+    "$P(X\\ge5)=\\left(\\frac{5}{6}\\right)^4\\frac{1}{6}+\\left(\\frac{5}{6}\\right)^5\\frac{1}{6}+\\cdots$.",
+    "$P(X>2)=\\left(\\frac{5}{6}\\right)^2\\frac{1}{6}+\\left(\\frac{5}{6}\\right)^3\\frac{1}{6}+\\cdots$.",
+    "Both are infinite GPs with ratio $\\frac{5}{6}$: $P(X\\ge5)=\\left(\\frac{5}{6}\\right)^4$ and $P(X>2)=\\left(\\frac{5}{6}\\right)^2$.",
+    "Required probability $=\\frac{(5/6)^4}{(5/6)^2}=\\left(\\frac{5}{6}\\right)^2=\\frac{25}{36}$, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's numerator series is printed as $\\left(\\frac{5}{6}\\right)^5+\\left(\\frac{5}{6}\\right)^5\\frac{1}{6}+\\cdots$; the term for $X=5$ is $\\left(\\frac{5}{6}\\right)^4\\frac{1}{6}$ (four failures, then a six). Rewritten correctly; the answer $\\frac{25}{36}$ is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Memorylessness: after two failures the waiting time starts afresh, so $X-2$ is again geometric.",
+     "solution": [
+      "Given $X>2$, the first two tosses were not sixes; the die has no memory, so $X-2$ has the same distribution as $X$.",
+      "$P(X\\ge5\\mid X>2)=P(X-2\\ge3)=P(X\\ge3)$.",
+      "$X\\ge3$ means the first two tosses are not sixes: $\\left(\\frac{5}{6}\\right)^2=\\frac{25}{36}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a geometric variable with failure probability $q$: $P(X>m)=q^m$ and $P(X\\ge m)=q^{m-1}$.",
+    "Memoryless property: $P(X>m+n\\mid X>m)=q^n$; equivalently $P(X\\ge m+n\\mid X>m)=P(X\\ge n)=q^{n-1}$. Here $m=2,n=3$: $q^2=\\frac{25}{36}$.",
+    "Whenever one event contains the other, $P(A\\mid B)=\\frac{P(A)}{P(B)}$ directly."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Biased die: probability of a sum of 7 in two throws",
+    "Quadratic equation"
+   ],
+   "level": 2,
+   "question": "When a certain biased die is rolled, a particular face occurs with probability $\\frac{1}{6}-x$ and its opposite face occurs with probability $\\frac{1}{6}+x$. All other faces occur with probability $\\frac{1}{6}$. Note that opposite faces sum to 7 in any die. If $0<x<\\frac{1}{6}$, and the probability of obtaining total sum $=7$, when such a die is rolled twice, is $\\frac{13}{96}$, then the value of $x$ is :",
+   "options": [
+    "$\\frac{1}{9}$",
+    "$\\frac{1}{16}$",
+    "$\\frac{1}{12}$",
+    "$\\frac{1}{8}$"
+   ],
+   "answer": "(D) $\\frac{1}{8}$",
+   "key_idea": "Only the pairs $(1,6)$ and $(6,1)$ involve the biased faces, and $\\left(\\frac{1}{6}-x\\right)\\left(\\frac{1}{6}+x\\right)=\\frac{1}{36}-x^2$.",
+   "solution": [
+    "Let $P(1)=\\frac{1}{6}-x$; then $P(6)=\\frac{1}{6}+x$ and $P(2)=P(3)=P(4)=P(5)=\\frac{1}{6}$.",
+    "A sum of 7 in two throws: $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$.",
+    "$P(\\text{sum}=7)=\\left(\\frac{1}{6}-x\\right)\\left(\\frac{1}{6}+x\\right)+4\\cdot\\frac{1}{6}\\cdot\\frac{1}{6}+\\left(\\frac{1}{6}+x\\right)\\left(\\frac{1}{6}-x\\right)=\\frac{13}{96}$.",
+    "$2\\left(\\frac{1}{36}-x^2\\right)+\\frac{4}{36}=\\frac{13}{96}\\Rightarrow\\frac{1}{6}-2x^2=\\frac{13}{96}$.",
+    "$2x^2=\\frac{16}{96}-\\frac{13}{96}=\\frac{3}{96}\\Rightarrow x^2=\\frac{1}{64}$.",
+    "$x=\\frac{1}{8}$ (the root $-\\frac{1}{8}$ is rejected as $x>0$; also $\\frac{1}{8}<\\frac{1}{6}$), option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For a die whose faces $f$ and $7-f$ have probabilities $p_f$ and $p_{7-f}$: $P(\\text{sum }7\\text{ in two throws})=\\sum_{f=1}^{6}p_fp_{7-f}$.",
+    "With the $\\frac{1}{6}\\mp x$ bias on one opposite pair this equals $\\frac{1}{6}-2x^2$: bias always lowers the chance of a sum of 7 below the fair value $\\frac{1}{6}$ (check: $x=0$ gives $\\frac{1}{6}$).",
+    "Always check that all given probabilities stay in $[0,1]$ and add up to 1: here $4\\cdot\\frac{1}{6}+\\left(\\frac{1}{6}-x\\right)+\\left(\\frac{1}{6}+x\\right)=1$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: equal number of heads for two persons"
+   ],
+   "level": 1,
+   "question": "Each of the persons $A$ and $B$ independently tosses three fair coins. The probability that both of them get the same number of heads is :",
+   "options": [
+    "$\\frac{5}{16}$",
+    "$\\frac{1}{8}$",
+    "$\\frac{5}{8}$",
+    "$1$"
+   ],
+   "answer": "(A) $\\frac{5}{16}$",
+   "key_idea": "Add the four cases 0, 1, 2, 3 heads; each case has probability $\\left[\\frac{^3C_k}{8}\\right]^2$.",
+   "solution": [
+    "Each person's number of heads is $0,1,2,3$ with probabilities $\\frac{1}{8},\\frac{3}{8},\\frac{3}{8},\\frac{1}{8}$.",
+    "Case I: 0 heads each: $\\frac{1}{8}\\cdot\\frac{1}{8}=\\frac{1}{64}$.",
+    "Case II: 1 head each: $\\frac{3}{8}\\cdot\\frac{3}{8}=\\frac{9}{64}$.",
+    "Case III: 2 heads each: $\\frac{3}{8}\\cdot\\frac{3}{8}=\\frac{9}{64}$.",
+    "Case IV: 3 heads each: $\\frac{1}{8}\\cdot\\frac{1}{8}=\\frac{1}{64}$.",
+    "Total $=\\frac{1+9+9+1}{64}=\\frac{20}{64}=\\frac{5}{16}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace $B$'s heads by $B$'s tails: equal heads $\\iff$ (heads of $A$) + (tails of $B$) $=3$, a single binomial $B\\left(6,\\frac{1}{2}\\right)$.",
+     "solution": [
+      "Let $X$ = heads of $A$ and $Y$ = heads of $B$; then $3-Y$ is the number of tails of $B$, also $B\\left(3,\\frac{1}{2}\\right)$ and independent of $X$.",
+      "$X=Y\\iff X+(3-Y)=3$.",
+      "$X+(3-Y)$ is the number of 'successes' in 6 independent fair trials: $B\\left(6,\\frac{1}{2}\\right)$.",
+      "$P=\\frac{^6C_3}{2^6}=\\frac{20}{64}=\\frac{5}{16}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Vandermonde: $\\sum_k\\left(^nC_k\\right)^2=\\,^{2n}C_n$, so two persons tossing $n$ fair coins each get equal heads with probability $\\frac{^{2n}C_n}{4^n}$. Check $n=3$: $\\frac{20}{64}$; $n=1$: $\\frac{2}{4}=\\frac{1}{2}$ (correct).",
+    "For fair coins, heads and tails are interchangeable: 'heads of $A$ = heads of $B$' is the same as 'total heads in all $2n$ coins $=n$' after flipping $B$'s faces."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Onto functions (permutations) and classical probability"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{1,2,3,4,5,6\\}$. Then the probability that a randomly chosen onto function $g$ from $S$ to $S$ satisfies $g(3)=2g(1)$ is :",
+   "options": [
+    "$\\frac{1}{15}$",
+    "$\\frac{1}{5}$",
+    "$\\frac{1}{30}$",
+    "$\\frac{1}{10}$"
+   ],
+   "answer": "(D) $\\frac{1}{10}$",
+   "key_idea": "An onto map of a finite set to itself is a permutation; $g(3)=2g(1)$ leaves only three choices for $(g(1),g(3))$.",
+   "solution": [
+    "An onto function from $S$ to $S$ is a bijection, so the total number is $6!=720$.",
+    "$g(3)=2g(1)$ with values in $\\{1,\\ldots,6\\}$ needs $2g(1)\\le6$, so $g(1)\\in\\{1,2,3\\}$: $(g(1),g(3))=(1,2),(2,4),(3,6)$ - 3 ways.",
+    "The other 4 elements can be mapped onto the remaining 4 values in $4!$ ways.",
+    "Favourable onto functions $=3\\times4!=72$.",
+    "$P=\\frac{3\\times4!}{6!}=\\frac{3}{6\\cdot5}=\\frac{1}{10}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "In a random permutation the pair $(g(1),g(3))$ is a uniformly random ordered pair of distinct values; just count good pairs.",
+     "solution": [
+      "For a random bijection, $(g(1),g(3))$ is equally likely to be any of the $6\\times5=30$ ordered pairs of distinct values.",
+      "Pairs with second $=2\\times$ first: $(1,2),(2,4),(3,6)$ - three of them.",
+      "$P=\\frac{3}{30}=\\frac{1}{10}$, the same answer, without counting the other four images."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A random permutation of $n$ symbols sends $k$ chosen positions to a uniformly random ordered $k$-tuple of distinct values: probability of a condition $=\\frac{\\#\\text{good tuples}}{^nP_k}$.",
+    "Onto functions from a finite set to itself are exactly the one-one functions, i.e. permutations; if the sets differ in size, use $S(n,m)\\,m!$ (Stirling) instead.",
+    "Counting by 'fix the constrained positions, permute the rest' gives $\\frac{3\\cdot4!}{6!}=\\frac{3}{^6P_2}$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting adjacent squares of a chessboard"
+   ],
+   "level": 1,
+   "question": "Two squares are chosen at random on a chessboard ($8\\times8$, 64 squares). The probability that they have a side in common is :",
+   "options": [
+    "$\\frac{1}{9}$",
+    "$\\frac{1}{18}$",
+    "$\\frac{1}{7}$",
+    "$\\frac{2}{7}$"
+   ],
+   "answer": "(B) $\\frac{1}{18}$",
+   "key_idea": "Count unordered pairs of squares sharing a side: $8\\times7$ horizontally plus $8\\times7$ vertically.",
+   "solution": [
+    "Total ways of choosing two squares: $^{64}C_2=\\frac{64\\cdot63}{2}=32\\times63=2016$.",
+    "Pairs sharing a side: horizontal neighbours - each of the 8 rows has 7 adjacent pairs: $8\\times7=56$.",
+    "Vertical neighbours - each of the 8 columns has 7 adjacent pairs: $56$. Total $2\\times(7\\times8)=112$.",
+    "$P=\\frac{112}{32\\times63}=\\frac{112}{2016}=\\frac{1}{18}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Handshake count: add the number of side-neighbours of every square and halve it.",
+     "solution": [
+      "A corner square has 2 neighbours (4 corners), a non-corner edge square has 3 ($4\\times6=24$ squares), an interior square has 4 ($6\\times6=36$ squares).",
+      "Sum of neighbour counts $=4\\cdot2+24\\cdot3+36\\cdot4=8+72+144=224$.",
+      "Each adjacent pair is counted twice, so the number of pairs is $\\frac{224}{2}=112$; $P=\\frac{112}{2016}=\\frac{1}{18}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of side-adjacent pairs in an $m\\times n$ grid: $m(n-1)+n(m-1)$. Check: $2\\times2$ grid gives $4$; $8\\times8$ gives $112$.",
+    "Handshake lemma: (sum of degrees) $=2\\times$ (number of pairs) - a quick cross-check for adjacency counts.",
+    "For a probability of adjacency in an $n\\times n$ board the answer is $\\frac{4n(n-1)}{n^2(n^2-1)}=\\frac{4}{n(n+1)}$; $n=8$ gives $\\frac{4}{72}=\\frac{1}{18}$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Probability distribution: conditional probability and normalisation"
+   ],
+   "level": 2,
+   "question": "The probability distribution of a random variable $X$ is given by $P(X=1)=K$, $P(X=2)=2K$, $P(X=3)=2K$, $P(X=4)=3K$, $P(X=5)=K$. Let $p=P(1<X<4\\mid X<3)$. If $5p=\\lambda K$, then $\\lambda$ is equal to ________.",
+   "answer": "$30$",
+   "key_idea": "$1<X<4$ and $X<3$ overlap only at $X=2$, so $p=\\frac{P(X=2)}{P(X=1)+P(X=2)}$ and $K$ comes from $\\sum P=1$.",
+   "solution": [
+    "$1<X<4$ means $X\\in\\{2,3\\}$ and $X<3$ means $X\\in\\{1,2\\}$; the intersection is $X=2$.",
+    "$p=\\frac{P(1<X<4\\text{ and }X<3)}{P(X<3)}=\\frac{P(X=2)}{P(X=1)+P(X=2)}=\\frac{2K}{K+2K}=\\frac{2}{3}$.",
+    "Sum of probabilities $=1$: $K+2K+2K+3K+K=1\\Rightarrow9K=1\\Rightarrow K=\\frac{1}{9}$.",
+    "$5p=\\lambda K\\Rightarrow5\\cdot\\frac{2}{3}=\\lambda\\cdot\\frac{1}{9}$.",
+    "$\\lambda=\\frac{10}{3}\\times9=30$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Conditioning on an event just restricts the outcomes to that event and renormalises; the constant $K$ cancels in $p$, which is why $p=\\frac{2}{3}$ is free of $K$.",
+    "Strict inequalities on a discrete variable: $1<X<4$ means $X=2,3$ (not $1$ or $4$).",
+    "Always find the normalising constant from $\\sum P(x_i)=1$ before using a relation like $5p=\\lambda K$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability (Bayes' theorem) for independent units in series"
+   ],
+   "level": 2,
+   "question": "An electric instrument consists of two units. Each unit must function independently for the instrument to operate. The probability that the first unit functions is $0.9$ and that of the second unit is $0.8$. The instrument is switched on and it fails to operate. If the probability that only the first unit failed and the second unit is functioning is $p$, then $98p$ is equal to ______.",
+   "answer": "$28$",
+   "key_idea": "The instrument fails exactly when at least one unit fails, so condition on that event: $P(\\text{only first fails}\\mid\\text{fails})$.",
+   "solution": [
+    "Let $A$ = first unit functions, $B$ = second unit functions: $P(A)=0.9$, $P(B)=0.8$, independent.",
+    "The instrument does not work in three exclusive cases: $\\bar A\\cap B$, $\\bar A\\cap\\bar B$, $A\\cap\\bar B$.",
+    "$p=P\\left(\\bar A\\cap B\\mid\\text{not working}\\right)=\\frac{P(\\bar A\\cap B)}{P(\\bar A\\cap B)+P(\\bar A\\cap\\bar B)+P(A\\cap\\bar B)}$.",
+    "$P(\\bar A\\cap B)=0.1\\times0.8=0.08$; $P(\\bar A\\cap\\bar B)=0.1\\times0.2=0.02$; $P(A\\cap\\bar B)=0.9\\times0.2=0.18$.",
+    "$p=\\frac{0.08}{0.08+0.02+0.18}=\\frac{0.08}{0.28}=\\frac{2}{7}$.",
+    "$98p=98\\times\\frac{2}{7}=28$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The denominator is just $P(\\text{instrument fails})=1-P(\\text{both work})$, so the three-case sum is not needed.",
+     "solution": [
+      "The instrument works only if both units work: $P(\\text{works})=0.9\\times0.8=0.72$, so $P(\\text{fails})=1-0.72=0.28$.",
+      "The event 'only first failed and second works' $=\\bar A\\cap B$ has probability $0.1\\times0.8=0.08$ and lies inside 'fails'.",
+      "$p=\\frac{0.08}{0.28}=\\frac{2}{7}$ and $98p=28$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A series system fails with probability $1-\\prod p_i$; condition on failure by dividing by this complement, not by adding all failure patterns.",
+    "Check: the three failure patterns add to $0.08+0.02+0.18=0.28=1-0.72$.",
+    "Given failure, the pattern probabilities are proportional to $8:2:18$; the chance that exactly unit 1 failed is $\\frac{8}{28}=\\frac{2}{7}$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Bayes' theorem",
+    "Combinations: drawing balls from a bag"
+   ],
+   "level": 2,
+   "question": "Bag $A$ contains 2 white, 1 black and 3 red balls and bag $B$ contains 3 black, 2 red and $n$ white balls. One bag is chosen at random and 2 balls drawn from it at random, are found to be 1 red and 1 black. If the probability that both balls come from Bag $A$ is $\\frac{6}{11}$, then $n$ is equal to :",
+   "options": [
+    "$13$",
+    "$6$",
+    "$4$",
+    "$3$"
+   ],
+   "answer": "(C) $4$",
+   "key_idea": "Write Bayes' theorem for $P(A\\mid E)$ with $P(E\\mid A)=\\frac{3}{15}$ and $P(E\\mid B)=\\frac{12}{(n+5)(n+4)}$ and solve for $n$.",
+   "solution": [
+    "Let $A$ = bag $A$ chosen, $B$ = bag $B$ chosen (each with probability $\\frac{1}{2}$), $E$ = 1 red and 1 black ball drawn. Given $P(A\\mid E)=\\frac{6}{11}$.",
+    "$P(E\\mid A)=\\frac{^3C_1\\,^1C_1}{^6C_2}=\\frac{3}{15}$.",
+    "Bag $B$ has $n+5$ balls: $P(E\\mid B)=\\frac{^2C_1\\,^3C_1}{^{n+5}C_2}=\\frac{6\\times2}{(n+5)(n+4)}$.",
+    "$P(A\\mid E)=\\frac{P(A)P(E\\mid A)}{P(A)P(E\\mid A)+P(B)P(E\\mid B)}=\\frac{\\frac{1}{2}\\cdot\\frac{3}{15}}{\\frac{1}{2}\\cdot\\frac{3}{15}+\\frac{1}{2}\\cdot\\frac{6\\times2}{(n+5)(n+4)}}=\\frac{6}{11}$.",
+    "Cross-multiplying: $11\\cdot\\frac{1}{5}=6\\left[\\frac{1}{5}+\\frac{12}{(n+5)(n+4)}\\right]\\Rightarrow1=\\frac{72}{(n+5)(n+4)}$.",
+    "$(n+5)(n+4)=72\\Rightarrow n=4$ or $n=-13$ (rejected, as $n\\ge0$).",
+    "So $n=4$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the odds form of Bayes: with equal priors, $\\frac{P(A\\mid E)}{P(B\\mid E)}=\\frac{P(E\\mid A)}{P(E\\mid B)}$.",
+     "solution": [
+      "$P(A\\mid E)=\\frac{6}{11}\\Rightarrow P(B\\mid E)=\\frac{5}{11}$; the posterior odds are $6:5$.",
+      "The bags are chosen with equal probability, so the likelihood ratio equals the odds: $\\frac{P(E\\mid A)}{P(E\\mid B)}=\\frac{6}{5}$.",
+      "$\\frac{3/15}{12/[(n+5)(n+4)]}=\\frac{(n+5)(n+4)}{60}=\\frac{6}{5}\\Rightarrow(n+5)(n+4)=72$.",
+      "$n=4$ (the root $-13$ is rejected), the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Odds form of Bayes: $\\frac{P(A\\mid E)}{P(B\\mid E)}=\\frac{P(A)}{P(B)}\\cdot\\frac{P(E\\mid A)}{P(E\\mid B)}$; with equal priors only the likelihoods matter, and the prior $\\frac{1}{2}$ cancels.",
+    "Check with $n=4$: $P(E\\mid B)=\\frac{12}{72}=\\frac{1}{6}$ and $\\frac{1/5}{1/5+1/6}=\\frac{6}{11}$.",
+    "After solving a quadratic for a count such as $n$, reject negative or non-integer roots."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: ratios of probabilities"
+   ],
+   "level": 2,
+   "question": "If a random variable $X$ follows the Binomial distribution $B(33,p)$ such that $3P(X=0)=P(X=1)$, then the value of $\\frac{P(X=15)}{P(X=18)}-\\frac{P(X=16)}{P(X=17)}$ is equal to :",
+   "options": [
+    "$1320$",
+    "$1088$",
+    "$\\frac{120}{1331}$",
+    "$\\frac{1088}{1089}$"
+   ],
+   "answer": "(A) $1320$",
+   "key_idea": "The condition fixes $\\frac{1-p}{p}=11$, and for indices adding up to 33 the binomial coefficients cancel, leaving powers of $\\frac{1-p}{p}$.",
+   "solution": [
+    "$3P(X=0)=P(X=1)$: $3\\,^{33}C_0(1-p)^{33}=\\,^{33}C_1\\,p(1-p)^{32}$.",
+    "$3(1-p)=33p\\Rightarrow p=\\frac{1}{12}$, so $\\frac{1-p}{p}=\\frac{1}{p}-1=11$.",
+    "$\\frac{P(X=15)}{P(X=18)}=\\frac{^{33}C_{15}\\,p^{15}(1-p)^{18}}{^{33}C_{18}\\,p^{18}(1-p)^{15}}=\\left(\\frac{1-p}{p}\\right)^3$, since $^{33}C_{15}=\\,^{33}C_{18}$.",
+    "$\\frac{P(X=16)}{P(X=17)}=\\frac{^{33}C_{16}\\,p^{16}(1-p)^{17}}{^{33}C_{17}\\,p^{17}(1-p)^{16}}=\\frac{1-p}{p}$, since $^{33}C_{16}=\\,^{33}C_{17}$.",
+    "Value $=\\left(\\frac{1-p}{p}\\right)^3-\\frac{1-p}{p}=11^3-11=1331-11=1320$, option (A)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes $^{33}C_{16}$ in the denominator of the second ratio, where $P(X=17)$ has $^{33}C_{17}$. The two are equal ($16+17=33$), so the value $1320$ is unchanged; written correctly here.",
+   "alternate_solutions": [
+    {
+     "idea": "Use the recurrence $\\frac{P(r+1)}{P(r)}=\\frac{n-r}{r+1}\\cdot\\frac{p}{q}$ and multiply the successive ratios.",
+     "solution": [
+      "With $q=1-p$: $\\frac{P(r)}{P(r+1)}=\\frac{r+1}{33-r}\\cdot\\frac{q}{p}$, and $\\frac{q}{p}=11$ from the given condition.",
+      "$\\frac{P(15)}{P(18)}=\\frac{P(15)}{P(16)}\\cdot\\frac{P(16)}{P(17)}\\cdot\\frac{P(17)}{P(18)}=\\frac{16}{18}\\cdot\\frac{17}{17}\\cdot\\frac{18}{16}\\left(\\frac{q}{p}\\right)^3=11^3=1331$.",
+      "$\\frac{P(16)}{P(17)}=\\frac{17}{17}\\cdot\\frac{q}{p}=11$.",
+      "Difference $=1331-11=1320$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $B(n,p)$ with $r+s=n$: $\\frac{P(X=r)}{P(X=s)}=\\left(\\frac{q}{p}\\right)^{s-r}$ because $^nC_r=\\,^nC_s$. Check: $n=2$, $p=\\frac{1}{3}$: $\\frac{P(0)}{P(2)}=\\frac{q^2}{p^2}=4$.",
+    "The condition $kP(X=0)=P(X=1)$ gives $\\frac{np}{q}=k$, i.e. $\\frac{q}{p}=\\frac{n}{k}=\\frac{33}{3}=11$.",
+    "Ratio recurrence: $\\frac{P(r+1)}{P(r)}=\\frac{n-r}{r+1}\\cdot\\frac{p}{q}$ - useful for the mode and for comparing neighbouring terms."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability for a discrete distribution"
+   ],
+   "level": 1,
+   "question": "A random variable $X$ has the following probability distribution: $P(X=0)=k$, $P(X=1)=2k$, $P(X=2)=4k$, $P(X=3)=6k$, $P(X=4)=8k$. The value of $P(1<X<4\\mid X\\le2)$ is equal to :",
+   "options": [
+    "$\\frac{4}{7}$",
+    "$\\frac{2}{3}$",
+    "$\\frac{3}{7}$",
+    "$\\frac{4}{5}$"
+   ],
+   "answer": "(A) $\\frac{4}{7}$",
+   "key_idea": "Within $X\\le2$ the only value also satisfying $1<X<4$ is $X=2$, and $k$ cancels.",
+   "solution": [
+    "Let $A$: $1<X<4$, i.e. $X\\in\\{2,3\\}$, and $B$: $X\\le2$, i.e. $X\\in\\{0,1,2\\}$.",
+    "$A\\cap B$: $X=2$ with probability $4k$.",
+    "$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}=\\frac{4k}{k+2k+4k}$.",
+    "$=\\frac{4k}{7k}=\\frac{4}{7}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Conditioning on $B$ = restrict to the outcomes of $B$ and renormalise: inside $\\{0,1,2\\}$ the weights are $1:2:4$ and $X=2$ has $\\frac{4}{7}$.",
+    "The constant $k$ never needs to be found when the condition is on ratios of weights (here $21k=1$, $k=\\frac{1}{21}$, irrelevant).",
+    "Read $\\le$ and $<$ carefully on discrete variables: $X<2$ would give $\\frac{0}{3}=0$ for this question."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability and independence of events"
+   ],
+   "level": 2,
+   "question": "Let $E_1$ and $E_2$ be two events such that the conditional probabilities $P(E_1\\mid E_2)=\\frac{1}{2}$, $P(E_2\\mid E_1)=\\frac{3}{4}$ and $P(E_1\\cap E_2)=\\frac{1}{8}$. Then :",
+   "options": [
+    "$P(E_1\\cap E_2)=P(E_1)\\cdot P(E_2)$",
+    "$P(E_1'\\cap E_2')=P(E_1')\\cdot P(E_2)$",
+    "$P(E_1\\cap E_2')=P(E_1)\\cdot P(E_2)$",
+    "$P(E_1'\\cap E_2)=P(E_1)\\cdot P(E_2)$"
+   ],
+   "answer": "(C) $P(E_1\\cap E_2')=P(E_1)\\cdot P(E_2)$",
+   "key_idea": "Recover $P(E_1)=\\frac{1}{6}$ and $P(E_2)=\\frac{1}{4}$ from the multiplication rule and test each option; $P(E_1\\cap E_2')=P(E_1)-P(E_1\\cap E_2)$.",
+   "solution": [
+    "$P(E_1\\cap E_2)=\\frac{1}{8}=P(E_1)\\,P(E_2\\mid E_1)=P(E_1)\\cdot\\frac{3}{4}\\Rightarrow P(E_1)=\\frac{1}{6}$.",
+    "$P(E_1\\cap E_2)=\\frac{1}{8}=P(E_2)\\,P(E_1\\mid E_2)=P(E_2)\\cdot\\frac{1}{2}\\Rightarrow P(E_2)=\\frac{1}{4}$.",
+    "(A) $P(E_1)P(E_2)=\\frac{1}{6}\\cdot\\frac{1}{4}=\\frac{1}{24}\\ne\\frac{1}{8}=P(E_1\\cap E_2)$. False.",
+    "(B) $P(E_1'\\cap E_2')=1-P(E_1\\cup E_2)=1-\\left(\\frac{1}{6}+\\frac{1}{4}-\\frac{1}{8}\\right)=1-\\frac{7}{24}=\\frac{17}{24}$, while $P(E_1')P(E_2)=\\frac{5}{6}\\cdot\\frac{1}{4}=\\frac{5}{24}$. False (using $P(E_2')=\\frac{3}{4}$ would give $\\frac{15}{24}$, still not $\\frac{17}{24}$).",
+    "(D) $P(E_1'\\cap E_2)=P(E_2)-P(E_1\\cap E_2)=\\frac{1}{4}-\\frac{1}{8}=\\frac{1}{8}\\ne\\frac{1}{24}=P(E_1)P(E_2)$. False.",
+    "(C) $P(E_1\\cap E_2')=P(E_1)-P(E_1\\cap E_2)=\\frac{1}{6}-\\frac{1}{8}=\\frac{1}{24}=P(E_1)P(E_2)$. True, option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Option (B) is printed as $P(E_1'\\cap E_2')=P(E_1')\\cdot P(E_2)$, but the PDF evaluates the right side as $\\frac{5}{6}\\cdot\\frac{3}{4}=\\frac{15}{24}$ (using $P(E_2')$). With the printed $P(E_2)=\\frac{1}{4}$ it is $\\frac{5}{24}$. Either value differs from $\\frac{17}{24}$, so the verdict and the answer (C) are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Rewrite (C) with a conditional probability: $P(E_1\\cap E_2')=P(E_1)P(E_2'\\mid E_1)$, so (C) says $P(E_2'\\mid E_1)=P(E_2)$.",
+     "solution": [
+      "$P(E_2'\\mid E_1)=1-P(E_2\\mid E_1)=1-\\frac{3}{4}=\\frac{1}{4}$ (no need to find $P(E_1)$).",
+      "$P(E_2)=\\frac{P(E_1\\cap E_2)}{P(E_1\\mid E_2)}=\\frac{1/8}{1/2}=\\frac{1}{4}$.",
+      "So $P(E_2'\\mid E_1)=P(E_2)=\\frac{1}{4}$, i.e. $P(E_1\\cap E_2')=P(E_1)\\,P(E_2)$: (C) holds.",
+      "This single equality being true does not make $E_1,E_2$ independent: $P(E_1\\cap E_2)=\\frac{1}{8}\\ne\\frac{1}{24}$, so (A) is false, and (B), (D) fail as in the main solution."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$P(A\\cap B')=P(A)-P(A\\cap B)$ and $P(A'\\cap B')=1-P(A\\cup B)$.",
+    "$A,B$ are independent iff $P(A\\cap B)=P(A)P(B)$; then also $P(A\\cap B')=P(A)P(B')$. Here $P(E_1\\cap E_2')=P(E_1)P(E_2)$ is a coincidence of the numbers, not independence.",
+    "From $P(A\\mid B)$, $P(B\\mid A)$ and $P(A\\cap B)$ you can always recover $P(A)=\\frac{P(A\\cap B)}{P(A\\mid B)}$-type quantities: $P(E_1)=\\frac{1}{6}$, $P(E_2)=\\frac{1}{4}$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability distribution of a biased die: sum of three throws"
+   ],
+   "level": 2,
+   "question": "A biased die is marked with numbers $2,4,8,16,32,32$ on its faces and the probability of getting a face with mark $n$ is $\\frac{1}{n}$. If the die is thrown thrice, then the probability that the sum of the numbers obtained is $48$ is :",
+   "options": [
+    "$\\frac{7}{2^{11}}$",
+    "$\\frac{7}{2^{12}}$",
+    "$\\frac{3}{2^{10}}$",
+    "$\\frac{13}{2^{12}}$"
+   ],
+   "answer": "(D) $\\frac{13}{2^{12}}$",
+   "key_idea": "Only $16+16+16$ and $32+8+8$ (in 3 orders) reach 48; remember that the mark 32 appears on two faces, so $P(32)=\\frac{2}{32}$.",
+   "solution": [
+    "Probabilities of a throw: $P(2)=\\frac{1}{2}$, $P(4)=\\frac{1}{4}$, $P(8)=\\frac{1}{8}$, $P(16)=\\frac{1}{16}$, and $P(32)=\\frac{1}{32}+\\frac{1}{32}=\\frac{1}{16}$ (they add to 1).",
+    "Sum $S=48$ with three throws: $16,16,16$ or $32,8,8$ (no other triple of marks gives 48).",
+    "$16,16,16$: probability $\\left(\\frac{1}{16}\\right)^3$.",
+    "$32,8,8$ in any order: $\\frac{3!}{2!}\\cdot\\frac{2}{32}\\left(\\frac{1}{8}\\right)^2=3\\cdot\\frac{1}{16}\\cdot\\frac{1}{64}$.",
+    "$P=\\frac{1}{16^3}+\\frac{3}{16\\cdot64}=\\frac{1}{4096}+\\frac{12}{4096}=\\frac{13}{4096}=\\frac{13}{2^{12}}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Binary representation: $48=110000_2$ has two 1-bits, so three powers of 2 can add to it only by splitting one of them in half.",
+     "solution": [
+      "Three powers of 2 (with repeats allowed) add to 48 $=32+16$. A sum of three powers of 2 with only two binary 1-bits must contain two equal terms that merge into one power.",
+      "Start from $32+16$ and split one term into two equal halves: $32\\to16+16$ gives $16,16,16$; $16\\to8+8$ gives $32,8,8$.",
+      "No other split is possible (splitting a 2 or 4 would not use all of 48), so the multisets are $\\{16,16,16\\}$ and $\\{32,8,8\\}$ - the same two cases.",
+      "$P=\\left(\\frac{1}{16}\\right)^3+3\\cdot\\frac{1}{16}\\cdot\\left(\\frac{1}{8}\\right)^2=\\frac{13}{4096}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If several faces carry the same mark, add their probabilities: here $P(32)=\\frac{2}{32}$. Verify that the probabilities sum to 1.",
+    "Number of orderings of a multiset: $\\frac{3!}{2!}=3$ for $\\{32,8,8\\}$ and $1$ for $\\{16,16,16\\}$.",
+    "For sums built from powers of 2, think in binary: the number of terms is at least the number of 1-bits, and extra terms come from splitting a power into two halves."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: biased coin, at most two heads"
+   ],
+   "level": 2,
+   "question": "Let a biased coin be tossed 5 times. If the probability of getting 4 heads is equal to the probability of getting 5 heads, then the probability of getting at most two heads is :",
+   "options": [
+    "$\\frac{275}{6^5}$",
+    "$\\frac{36}{5^4}$",
+    "$\\frac{181}{5^5}$",
+    "$\\frac{46}{6^4}$"
+   ],
+   "answer": "(D) $\\frac{46}{6^4}$",
+   "key_idea": "$P(4H)=P(5H)$ gives $5(1-x)=x$, so $P(H)=\\frac{5}{6}$; then add the cases 0, 1, 2 heads.",
+   "solution": [
+    "Let $P(H)=x$ and $P(T)=1-x$.",
+    "$P(4H,1T)=P(5H)$: $^5C_1x^4(1-x)=\\,^5C_5x^5$.",
+    "$5(1-x)=x\\Rightarrow6x=5\\Rightarrow x=\\frac{5}{6}$ (the root $x=0$ of $x^4=0$ is rejected: it would make both probabilities 0).",
+    "$P(\\text{at most 2 heads})=P(0H,5T)+P(1H,4T)+P(2H,3T)$.",
+    "$=\\,^5C_0\\left(\\frac{1}{6}\\right)^5+\\,^5C_1\\cdot\\frac{5}{6}\\left(\\frac{1}{6}\\right)^4+\\,^5C_2\\left(\\frac{5}{6}\\right)^2\\left(\\frac{1}{6}\\right)^3$.",
+    "$=\\frac{1}{6^5}\\left(1+25+250\\right)=\\frac{276}{6^5}$.",
+    "$=\\frac{46}{6^4}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $B(n,p)$: $P(X=r)=P(X=r+1)\\iff(r+1)(1-p)=(n-r)p$. For $r=n-1$ this is $n(1-p)=p$, i.e. $p=\\frac{n}{n+1}$; here $n=5$, $p=\\frac{5}{6}$.",
+    "'At most $k$ heads' = 'at least $n-k$ tails' - the same sum with $p$ and $q$ swapped; use whichever side has the smaller probabilities.",
+    "Check the answer is a valid probability: $\\frac{46}{6^4}=\\frac{46}{1296}\\approx0.0355$, small, as expected for a coin that mostly shows heads."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability: selecting numbers and ordering (positional counting)",
+    "Combinations: choosing from ranges"
+   ],
+   "level": 2,
+   "question": "Five numbers $x_1,x_2,x_3,x_4,x_5$ are randomly selected from the numbers $1,2,3,\\ldots,18$ and are arranged in increasing order $x_1<x_2<x_3<x_4<x_5$. The probability that $x_2=7$ and $x_4=11$ is :",
+   "options": [
+    "$\\frac{1}{136}$",
+    "$\\frac{1}{72}$",
+    "$\\frac{1}{68}$",
+    "$\\frac{1}{34}$"
+   ],
+   "answer": "(C) $\\frac{1}{68}$",
+   "key_idea": "Fixing $x_2=7$ and $x_4=11$ forces $x_1<7<x_3<11<x_5$: choose one number from each of three ranges.",
+   "solution": [
+    "Total ways to select 5 numbers from 18 (the order is then fixed): $^{18}C_5=8568$.",
+    "Favourable: $x_2=7$ and $x_4=11$ with $x_1<7<x_3<11<x_5$.",
+    "$x_1\\in\\{1,\\ldots,6\\}$: 6 ways.",
+    "$x_3\\in\\{8,9,10\\}$: 3 ways.",
+    "$x_5\\in\\{12,\\ldots,18\\}$: 7 ways.",
+    "$P(E)=\\frac{6\\times3\\times7}{^{18}C_5}=\\frac{126}{8568}=\\frac{1}{68}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Number of $k$-subsets of $\\{1,\\ldots,N\\}$ whose $j$-th smallest element is $m$: $^{m-1}C_{j-1}\\cdot\\,^{N-m}C_{k-j}$. Check $N=4$, $k=2$, $j=1$: $m=1,2,3$ give $3+2+1=6=\\,^4C_2$.",
+    "When several order statistics are fixed, choose the free numbers separately from each gap between them (product rule).",
+    "Selecting a set and then listing it in increasing order loses no probability: every 5-subset corresponds to exactly one increasing arrangement."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: mean and variance"
+   ],
+   "level": 1,
+   "question": "Let $X$ be a random variable having binomial distribution $B(7,p)$. If $P(X=3)=5P(X=4)$, then the sum of the mean and the variance of $X$ is :",
+   "options": [
+    "$\\frac{105}{16}$",
+    "$\\frac{7}{16}$",
+    "$\\frac{77}{36}$",
+    "$\\frac{49}{16}$"
+   ],
+   "answer": "(C) $\\frac{77}{36}$",
+   "key_idea": "$P(X=3)=5P(X=4)$ reduces to $1-p=5p$; then use mean $=np$ and variance $=npq$.",
+   "solution": [
+    "$n=7$ and $P(X=3)=5P(X=4)$: $^7C_3p^3(1-p)^4=5\\,^7C_4p^4(1-p)^3$.",
+    "Since $^7C_3=\\,^7C_4$, cancel $p^3(1-p)^3$: $1-p=5p$.",
+    "$6p=1\\Rightarrow p=\\frac{1}{6}$, $q=\\frac{5}{6}$.",
+    "Mean $=np=7\\cdot\\frac{1}{6}=\\frac{7}{6}$.",
+    "Variance $=npq=7\\cdot\\frac{1}{6}\\cdot\\frac{5}{6}=\\frac{35}{36}$.",
+    "Sum $=\\frac{7}{6}+\\frac{35}{36}=\\frac{42+35}{36}=\\frac{77}{36}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the ratio recurrence $\\frac{P(r+1)}{P(r)}=\\frac{n-r}{r+1}\\cdot\\frac{p}{q}$ instead of writing both binomial terms.",
+     "solution": [
+      "$\\frac{P(X=4)}{P(X=3)}=\\frac{7-3}{3+1}\\cdot\\frac{p}{q}=\\frac{p}{q}$.",
+      "The condition $P(X=3)=5P(X=4)$ says this ratio is $\\frac{1}{5}$, so $\\frac{p}{q}=\\frac{1}{5}$ and $p=\\frac{1}{6}$.",
+      "Mean $+$ variance $=np(1+q)=\\frac{7}{6}\\left(1+\\frac{5}{6}\\right)=\\frac{7}{6}\\cdot\\frac{11}{6}=\\frac{77}{36}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{P(X=r+1)}{P(X=r)}=\\frac{n-r}{r+1}\\cdot\\frac{p}{q}$ - for $r=3$, $n=7$ the factor $\\frac{n-r}{r+1}$ equals 1 (a quick check on symmetric positions).",
+    "Mean $+$ variance $=np+npq=np(1+q)$. Check: $n=7$, $p=\\frac{1}{6}$ gives $\\frac{77}{36}$.",
+    "Mean $\\times$ variance $=n^2p^2q$ and mean $-$ variance $=np(1-q)=np^2$: from the sum and product of mean and variance one recovers $q$, $p$, $n$ (see Q33, Q39)."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: digits of a random number (parity)"
+   ],
+   "level": 2,
+   "question": "The probability that in a randomly selected 3-digit number at least two digits are odd, is :",
+   "options": [
+    "$\\frac{19}{36}$",
+    "$\\frac{15}{36}$",
+    "$\\frac{13}{36}$",
+    "$\\frac{23}{36}$"
+   ],
+   "answer": "(A) $\\frac{19}{36}$",
+   "key_idea": "The first digit has 5 odd and 4 even choices (0 excluded); the other two digits have 5 odd and 5 even choices. Add the patterns OOO, EOO, OEO, OOE.",
+   "solution": [
+    "Total 3-digit numbers: $9\\times10\\times10=900$.",
+    "Let $O$ = odd digit (5 choices: 1,3,5,7,9), $E$ = even digit (5 choices: 0,2,4,6,8; but only 4 choices 2,4,6,8 for the first place).",
+    "'At least two odd digits' means the pattern is $OOO$, $EOO$, $OEO$ or $OOE$.",
+    "$OOO$: $5\\times5\\times5=125$; $EOO$: $4\\times5\\times5=100$; $OEO$: $5\\times5\\times5=125$; $OOE$: $5\\times5\\times5=125$.",
+    "Favourable $=125+100+125+125=475$.",
+    "$P=\\frac{475}{900}=\\frac{19}{36}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Digits are independent: the first digit is odd with probability $\\frac{5}{9}$ and each other digit with probability $\\frac{1}{2}$; condition on the first digit.",
+     "solution": [
+      "$P(\\text{first digit odd})=\\frac{5}{9}$, $P(\\text{first even})=\\frac{4}{9}$; each of the last two digits is odd with probability $\\frac{1}{2}$, independently.",
+      "If the first digit is odd, we need at least one more odd digit: $1-\\left(\\frac{1}{2}\\right)^2=\\frac{3}{4}$.",
+      "If the first digit is even, both others must be odd: $\\left(\\frac{1}{2}\\right)^2=\\frac{1}{4}$.",
+      "$P=\\frac{5}{9}\\cdot\\frac{3}{4}+\\frac{4}{9}\\cdot\\frac{1}{4}=\\frac{15}{36}+\\frac{4}{36}=\\frac{19}{36}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In a random $n$-digit number the leading digit is odd with probability $\\frac{5}{9}$ (1-9 range) and every other digit with probability $\\frac{1}{2}$, independently.",
+    "Condition on the asymmetric digit (the leading one) and treat the rest as fair coin flips.",
+    "Check: the count $475$ equals $900\\cdot\\frac{19}{36}$; the complementary count (at most one odd) is $425$."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: one-one functions",
+    "Permutations: counting solutions of a linear condition"
+   ],
+   "level": 3,
+   "question": "The probability that a randomly chosen one-one function from the set $\\{a,b,c,d\\}$ to the set $\\{1,2,3,4,5\\}$ satisfies $f(a)+2f(b)-f(c)=f(d)$ is :",
+   "options": [
+    "$\\frac{1}{24}$",
+    "$\\frac{1}{40}$",
+    "$\\frac{1}{30}$",
+    "$\\frac{1}{20}$"
+   ],
+   "answer": "(D) $\\frac{1}{20}$",
+   "key_idea": "Total one-one functions: $^5P_4=120$; the condition forces exactly six of them (found by listing the values).",
+   "solution": [
+    "$f:A\\to B$ is one-one with $A=\\{a,b,c,d\\}$, $B=\\{1,2,3,4,5\\}$: total $^5P_4=5!=120$.",
+    "The condition is $f(a)+2f(b)=f(c)+f(d)$ with four different values from $1$ to $5$.",
+    "Case $f(b)=1$: need $f(c)+f(d)-f(a)=2$ from $\\{2,3,4,5\\}$: only $f(a)=5$, $\\{f(c),f(d)\\}=\\{3,4\\}$.",
+    "Case $f(b)=2$: $f(c)+f(d)=f(a)+4$ from $\\{1,3,4,5\\}$: only $f(a)=4$, $\\{3,5\\}$. Case $f(b)=3$: $f(c)+f(d)=f(a)+6$ from $\\{1,2,4,5\\}$: only $f(a)=1$, $\\{2,5\\}$.",
+    "Case $f(b)=4$: $f(c)+f(d)=f(a)+8\\ge9$ forces $\\{f(c),f(d)\\}=\\{4,5\\}$, but $4=f(b)$ is already used. Case $f(b)=5$: $f(c)+f(d)\\ge11>9$. Both impossible.",
+    "The solutions $(f(a),f(b),f(c),f(d))$ are $(5,1,3,4),(5,1,4,3),(4,2,3,5),(4,2,5,3),(1,3,2,5),(1,3,5,2)$: 6 functions.",
+    "$P=\\frac{6}{120}=\\frac{1}{20}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The four values are $1$ to $5$ with one value $m$ missing, so their sum is $15-m$; combine this with the equation to get $2f(a)+3f(b)=15-m$.",
+     "solution": [
+      "Let $m$ be the value of $\\{1,\\ldots,5\\}$ not used. Then $f(a)+f(b)+f(c)+f(d)=15-m$.",
+      "The condition gives $f(c)+f(d)=f(a)+2f(b)$, so $2f(a)+3f(b)=15-m$ with $m\\notin\\{f(a),f(b)\\}$.",
+      "$f(b)=1$: $m=12-2f(a)$ - only $f(a)=5$ gives $m=2$ (others make $m=f(a)$ or $m>5$). $f(b)=2$: $m=9-2f(a)$ - only $f(a)=4$, $m=1$. $f(b)=3$: $m=6-2f(a)$ - only $f(a)=1$, $m=4$. $f(b)=4,5$: $m\\le0$ or $m=f(a)$, impossible.",
+      "The remaining two values go to $c,d$ in either order (the equation is symmetric in $f(c),f(d)$): $\\{3,4\\}$, $\\{3,5\\}$, $\\{2,5\\}$ respectively - each pair really sums to $f(a)+2f(b)=7,\\,8,\\,7$.",
+      "Total $3\\times2=6$ functions, so $P=\\frac{6}{120}=\\frac{1}{20}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For one-one functions into $\\{1,\\ldots,n\\}$ the used values sum to $\\frac{n(n+1)}{2}$ minus the missing value - combine with the given linear relation to cut down casework.",
+    "If the condition is symmetric in two variables ($f(c)$ and $f(d)$ here), count unordered pairs and multiply by 2.",
+    "Exhaustive listing is safest when the count is small: always fix the variable with the largest coefficient first (here $f(b)$) and test the range."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: singular $2\\times2$ matrices",
+    "Number theory: unique prime factorisation"
+   ],
+   "level": 3,
+   "question": "The probability that a randomly chosen $2\\times2$ matrix with all the entries from the set of first 10 primes, is singular, is equal to :",
+   "options": [
+    "$\\frac{133}{10^4}$",
+    "$\\frac{18}{10^3}$",
+    "$\\frac{19}{10^3}$",
+    "$\\frac{271}{10^4}$"
+   ],
+   "answer": "(C) $\\frac{19}{10^3}$",
+   "key_idea": "For primes, $ad=bc$ forces $\\{a,d\\}=\\{b,c\\}$ by unique factorisation, so $a=b,\\,d=c$ or $a=c,\\,d=b$.",
+   "solution": [
+    "Entries $a,b,c,d\\in\\{2,3,5,7,11,13,17,19,23,29\\}$: total matrices $n=10^4$.",
+    "The matrix $A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ is singular iff $|A|=ad-bc=0$, i.e. $ad=bc$.",
+    "The primes $a,d$ and $b,c$ have the same product only if $\\{a,d\\}=\\{b,c\\}$ (unique factorisation): either ($a=b$ and $d=c$) or ($a=c$ and $d=b$).",
+    "Case 1: two different primes used, $a=b\\ne c=d$ or $a=c\\ne b=d$: $10\\times9\\times2=180$ matrices.",
+    "Case 2: all entries equal, $a=b=c=d$: $10$ matrices.",
+    "Favourable $m=180+10=190=10\\times19$.",
+    "$P=\\frac{190}{10^4}=\\frac{19}{10^3}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "For each choice of $(a,d)$ count the choices of $(b,c)$ that are a rearrangement of $(a,d)$.",
+     "solution": [
+      "Singular $\\iff ad=bc\\iff\\{b,c\\}=\\{a,d\\}$ as multisets (primes).",
+      "If $a\\ne d$ (there are $10\\times9=90$ such pairs), $(b,c)$ can be $(a,d)$ or $(d,a)$: 2 ways, giving $90\\times2=180$ matrices.",
+      "If $a=d$ (10 pairs), $(b,c)=(a,a)$ only: 1 way, giving 10 matrices.",
+      "Total $190$, so $P=\\frac{190}{10^4}=\\frac{19}{10^3}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For entries that are distinct primes (or any numbers with unique factorisation into coprime pieces), $ad=bc\\iff\\{a,d\\}=\\{b,c\\}$. Number of singular matrices from $n$ distinct primes $=2n^2-n$.",
+    "Check $n=2$ (primes 2, 3): $2\\cdot4-2=6$ singular matrices; listing all 16 matrices finds exactly $2222,3333,2233,3322,2323,3232$ (entries $a,b,c,d$).",
+    "A singular $2\\times2$ matrix has proportional rows; with primes the ratio is 1 or its entries repeat, so the only singular matrices have repeated primes."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Relations: symmetric and transitive relations",
+    "Classical probability"
+   ],
+   "level": 3,
+   "question": "The probability that a relation $R$ from $\\{x,y\\}$ to $\\{x,y\\}$ is both symmetric and transitive, is equal to :",
+   "options": [
+    "$\\frac{5}{16}$",
+    "$\\frac{9}{16}$",
+    "$\\frac{11}{16}$",
+    "$\\frac{13}{16}$"
+   ],
+   "answer": "(A) $\\frac{5}{16}$",
+   "key_idea": "If $(x,y)\\in R$ then symmetry and transitivity force all four ordered pairs; otherwise $R$ is any subset of $\\{(x,x),(y,y)\\}$.",
+   "solution": [
+    "The number of relations on $\\{x,y\\}$ is $2^{2\\times2}=2^4=16$ (every subset of $\\{x,y\\}\\times\\{x,y\\}$).",
+    "Suppose $(x,y)\\in R$ (or $(y,x)\\in R$). Symmetry gives both; transitivity gives $(x,y),(y,x)\\Rightarrow(x,x)$ and $(y,x),(x,y)\\Rightarrow(y,y)$: $R$ must be the full set of four pairs.",
+    "Otherwise $R\\subseteq\\{(x,x),(y,y)\\}$, and each of these four subsets $\\{\\}$, $\\{(x,x)\\}$, $\\{(y,y)\\}$, $\\{(x,x),(y,y)\\}$ is symmetric and transitive.",
+    "Favourable relations: $4+1=5$.",
+    "$P=\\frac{5}{16}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A symmetric and transitive relation is an equivalence relation on the set $D$ of elements that are related to themselves; count by $D$.",
+     "solution": [
+      "If $(a,b)\\in R$ then $(a,a)$ and $(b,b)\\in R$ (symmetry then transitivity), so $R$ is an equivalence relation on $D=\\{a:(a,a)\\in R\\}$ and relates nothing outside $D$.",
+      "$D=\\{\\}$: 1 relation. $D=\\{x\\}$: 1. $D=\\{y\\}$: 1. $D=\\{x,y\\}$: equivalence relations on a 2-element set - 2 (two singleton classes, or one class).",
+      "Total $1+1+1+2=5$, so $P=\\frac{5}{16}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Symmetric $+$ transitive $\\Rightarrow$ every related element is related to itself, so $R$ is an equivalence relation on a subset $D$ of the set. Count $=\\sum_{k}\\,^nC_k\\,B_k$ (Bell numbers) $=B_{n+1}$.",
+    "Check: $n=2$: $1+2\\cdot1+2=5=B_3$; $n=3$: $1+3+3\\cdot2+5=15=B_4$.",
+    "Reflexivity is the only property missing: symmetric $+$ transitive $+$ reflexive gives an equivalence relation, with $B_n$ choices ($B_2=2$ for this question)."
+   ]
+  },
+  {
+   "q_no": 30,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Binomial-type distribution with unequal probabilities (casework)"
+   ],
+   "level": 3,
+   "question": "In an examination, there are 10 true-false type questions. Out of 10, a student can guess the answer of 4 questions correctly with probability $\\frac{3}{4}$ and the remaining 6 questions correctly with probability $\\frac{1}{4}$. If the probability that the student guesses the answers of exactly 8 questions correctly out of 10 is $\\frac{27k}{4^{10}}$, then $k$ is equal to ________.",
+   "answer": "$479$",
+   "key_idea": "Exactly 8 correct means exactly 2 wrong; split the two wrong answers over the two groups: $(2,0)$, $(0,2)$ or $(1,1)$.",
+   "solution": [
+    "Exactly 8 correct means exactly 2 wrong. Group 1 (4 questions): correct w.p. $\\frac{3}{4}$, wrong w.p. $\\frac{1}{4}$. Group 2 (6 questions): correct w.p. $\\frac{1}{4}$, wrong w.p. $\\frac{3}{4}$.",
+    "(i) Both wrong from group 1: $^4C_2\\left(\\frac{1}{4}\\right)^2\\left(\\frac{3}{4}\\right)^2\\cdot\\left(\\frac{1}{4}\\right)^6=\\frac{54}{4^{10}}$.",
+    "(ii) Both wrong from group 2: $\\left(\\frac{3}{4}\\right)^4\\cdot\\,^6C_2\\left(\\frac{3}{4}\\right)^2\\left(\\frac{1}{4}\\right)^4=\\frac{81\\cdot135}{4^{10}}=\\frac{10935}{4^{10}}$.",
+    "(iii) One wrong from each group: $^4C_1\\cdot\\frac{1}{4}\\left(\\frac{3}{4}\\right)^3\\cdot\\,^6C_1\\cdot\\frac{3}{4}\\left(\\frac{1}{4}\\right)^5=\\frac{108\\cdot18}{4^{10}}=\\frac{1944}{4^{10}}$.",
+    "Total $=\\frac{54+10935+1944}{4^{10}}=\\frac{12933}{4^{10}}=\\frac{27\\times479}{4^{10}}$.",
+    "Comparing with $\\frac{27k}{4^{10}}$: $k=479$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Generating polynomial: $P(\\text{exactly }j\\text{ correct})$ is the coefficient of $x^j$ in $\\left(\\frac{1+3x}{4}\\right)^4\\left(\\frac{3+x}{4}\\right)^6$.",
+     "solution": [
+      "Group 1: each question contributes $\\frac{1}{4}+\\frac{3}{4}x$; group 2: each contributes $\\frac{3}{4}+\\frac{1}{4}x$. Product $=\\frac{(1+3x)^4(3+x)^6}{4^{10}}$.",
+      "Coefficient of $x^8$: terms $x^i$ from $(1+3x)^4$ with $x^{8-i}$ from $(3+x)^6$, $i=2,3,4$ (since $8-i\\le6$).",
+      "$i=2$: $^4C_2\\,3^2\\cdot\\,^6C_6\\,3^0=54$; $i=3$: $^4C_3\\,3^3\\cdot\\,^6C_5\\,3^1=108\\cdot18=1944$; $i=4$: $3^4\\cdot\\,^6C_4\\,3^2=81\\cdot135=10935$.",
+      "Sum $=12933=27\\times479$, so $k=479$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "When trials have different success probabilities, the number of successes has generating polynomial $\\prod_i(q_i+p_ix)$; the coefficient of $x^j$ is $P(\\text{exactly }j)$. Check: at $x=1$ the product is 1.",
+    "It is often easier to count the failures when the target is 'almost all correct' (exactly 2 wrong instead of exactly 8 right).",
+    "Group the questions by probability and enumerate how the failures are split among the groups: $(2,0),(1,1),(0,2)$."
+   ]
+  },
+  {
+   "q_no": 31,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting numbers from digits 1 and 8",
+    "Number theory: divisibility by 3 and 7"
+   ],
+   "level": 3,
+   "question": "If the probability that a randomly chosen 6-digit number formed by using digits $1$ and $8$ only is a multiple of $21$ is $p$, then $96p$ is equal to __________.",
+   "answer": "$33$",
+   "key_idea": "Since $8=1+7$, every such number is $111111+7M$, so it is always divisible by 7; divisibility by 3 then depends only on the number of 8s being a multiple of 3.",
+   "solution": [
+    "Each of the 6 places is 1 or 8: total cases $2^6=64$.",
+    "A multiple of $21$ must be divisible by both $3$ and $7$.",
+    "Divisibility by 7: write each 8 as $1+7$. Then $N=111111+7M$ with $M$ a sum of powers of 10, and $111111=3\\cdot7\\cdot11\\cdot13\\cdot37$ is divisible by 7, so every such $N$ is a multiple of 7.",
+    "Divisibility by 3: if $k$ of the digits are 8, the digit sum is $(6-k)+8k=6+7k$, a multiple of 3 iff $k$ is a multiple of 3: $k=0,3,6$.",
+    "$k=0$ (all 1s): 1 number. $k=6$ (all 8s): 1 number. $k=3$ (three 1s, three 8s): $\\frac{6!}{3!\\,3!}=20$ numbers.",
+    "Favourable $=1+1+20=22$, so $p=\\frac{22}{64}$.",
+    "$96p=96\\times\\frac{22}{64}=33$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF says the number is 'divisible by 21 when divided by 3' and lists three cases (all 1s, all 8s, three of each) without showing why divisibility by 7 is automatic or why these are the only possibilities. Added the argument $N=111111+7M$ (always a multiple of 7) and the digit-sum test for 3 ($k=0,3,6$). Count 22 and answer 33 are unchanged.",
+   "useful_results": [
+    "If every digit of $N$ lies in $\\{a,a+7\\}$ then $N=a\\cdot R+7M$ where $R=111\\ldots1$ is the repunit; $111111=3\\cdot7\\cdot11\\cdot13\\cdot37$ is divisible by $3,7,11,13,37$, so such 6-digit numbers are always divisible by $7,11,13$ too.",
+    "Digit-sum test: with digits $1$ and $8$ the digit sum is $6+7k\\equiv k\\pmod3$, so divisibility by 3 means the count of 8s is a multiple of 3.",
+    "Check by brute force over the 64 numbers: exactly 22 are multiples of 21."
+   ]
+  },
+  {
+   "q_no": 32,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Probability: sample space and events (subsets)",
+    "Counting subsets by sum"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{E_1,E_2,\\ldots,E_8\\}$ be the sample space of a random experiment such that $P(E_n)=\\frac{n}{36}$ for every $n=1,2,\\ldots,8$. Then the number of elements in the set $\\left\\{A\\subseteq S:P(A)\\ge\\frac{4}{5}\\right\\}$ is ________.",
+   "answer": "$19$",
+   "key_idea": "$P(A)\\ge\\frac{4}{5}$ means the indices in $A$ add to at least $28.8$, i.e. at least $29$; count the subsets by their size.",
+   "solution": [
+    "For $A\\subseteq S$, $P(A)=\\frac{\\text{sum of the indices in }A}{36}$; $P(A)\\ge\\frac{4}{5}$ iff the index sum is $\\ge28.8$, i.e. $\\ge29$.",
+    "The four largest indices give $5+6+7+8=26<28.8$, so $n(A)\\ge5$.",
+    "$n(A)=5$: the 3 missing indices must add to at most $36-29=7$: $\\{1,2,3\\},\\{1,2,4\\}$ - 2 ways.",
+    "$n(A)=6$: the 2 missing indices add to at most 7: $\\{1,2\\},\\ldots,\\{1,6\\}$ (5), $\\{2,3\\},\\{2,4\\},\\{2,5\\}$ (3), $\\{3,4\\}$ (1) - 9 ways.",
+    "$n(A)=7$: the one missing index is at most 7: $E_1,\\ldots,E_7$ - 7 ways ($E_8$ missing gives $28<28.8$).",
+    "$n(A)=8$: the whole set - 1 way.",
+    "Total $=2+9+7+1=19$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's count by size is $n(A)=5:2$, $n(A)=6:9$, $n(A)=7:4$, $n(A)=8:1$, which adds up to 16, not 19. For $n(A)=7$ the missing index can be any of $E_1,\\ldots,E_7$: 7 ways, not 4. With 7 the total is $2+9+7+1=19$, which matches the key; the PDF's final answer 19 is right, one of its intermediate numbers was wrong.",
+   "alternate_solutions": [
+    {
+     "idea": "Complement: $P(A)\\ge\\frac{4}{5}$ iff the missing events have index sum $\\le7$, so count subsets of $\\{1,\\dots,8\\}$ with sum $\\le7$ as partitions into distinct parts.",
+     "solution": [
+      "$P(A)\\ge\\frac{4}{5}\\iff P(A^c)\\le\\frac{1}{5}\\iff\\text{sum of indices in }A^c\\le7.2$, i.e. $\\le7$. Subsets $A$ and $A^c$ correspond one to one.",
+      "Count subsets of $\\{1,\\ldots,8\\}$ with index sum $s$ (partitions of $s$ into distinct parts, all parts $\\le7<8$): $s=0$: 1; $s=1$: 1; $s=2$: 1; $s=3$: 2 ($3$; $1+2$); $s=4$: 2 ($4$; $1+3$); $s=5$: 3 ($5$; $1+4$; $2+3$); $s=6$: 4 ($6$; $1+5$; $2+4$; $1+2+3$); $s=7$: 5 ($7$; $1+6$; $2+5$; $3+4$; $1+2+4$).",
+      "Total $1+1+1+2+2+3+4+5=19$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of subsets of $\\{1,2,\\ldots,N\\}$ with sum $s\\le N$ equals the number of partitions of $s$ into distinct parts: $1,1,1,2,2,3,4,5$ for $s=0,\\ldots,7$.",
+    "When the condition is 'large probability', switch to the complement: the small set of missing events is easier to enumerate.",
+    "Check the sizes: $2+9+7+1=19$ and also $1+1+1+2+2+3+4+5=19$ - the two methods must agree."
+   ]
+  },
+  {
+   "q_no": 33,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: mean and variance"
+   ],
+   "level": 2,
+   "question": "If the sum and the product of mean and variance of a binomial distribution are $24$ and $128$ respectively, then the probability of one or two successes is :",
+   "options": [
+    "$\\frac{33}{2^{32}}$",
+    "$\\frac{33}{2^{29}}$",
+    "$\\frac{33}{2^{28}}$",
+    "$\\frac{33}{2^{27}}$"
+   ],
+   "answer": "(C) $\\frac{33}{2^{28}}$",
+   "key_idea": "Mean $np$ and variance $npq$ are the roots of $t^2-24t+128=0$, giving $np=16$, $npq=8$, so $q=\\frac{1}{2}$ and $n=32$.",
+   "solution": [
+    "Mean $=np$, variance $=npq$: $np+npq=24$ ...(1) and $np\\cdot npq=128$ ...(2).",
+    "$np$ and $npq$ are the roots of $t^2-24t+128=0$, i.e. $(t-16)(t-8)=0$; since $q<1$, mean $>$ variance: $np=16$, $npq=8$.",
+    "$q=\\frac{npq}{np}=\\frac{1}{2}$, $p=\\frac{1}{2}$ and $n=\\frac{16}{p}=32$.",
+    "$P(X=1)+P(X=2)=\\,^{32}C_1\\,p\\,q^{31}+\\,^{32}C_2\\,p^2q^{30}=\\frac{32+496}{2^{32}}$.",
+    "$=\\frac{528}{2^{32}}=\\frac{33}{2^{28}}$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Given the sum $s$ and product $m$ of mean and variance, they are the roots of $t^2-st+m=0$; the larger root is the mean (variance $=\\text{mean}\\cdot q<$ mean). Then $q=\\frac{\\text{var}}{\\text{mean}}$, $p=1-q$, $n=\\frac{\\text{mean}}{p}$.",
+    "For $p=\\frac{1}{2}$: $P(X=k)=\\frac{^nC_k}{2^n}$. Check: $n=32$: $32+496=528=16\\times33$.",
+    "Integer-valued $n$ is a consistency check on the choice of the larger root as the mean (the other assignment gives $q=2>1$, impossible)."
+   ]
+  },
+  {
+   "q_no": 34,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: two throws of a die",
+    "Quadratic: condition for $x^2+\\alpha x+\\beta>0$ for all $x$"
+   ],
+   "level": 2,
+   "question": "If the numbers appeared on two throws of a fair six faced die are $\\alpha$ and $\\beta$, then the probability that $x^2+\\alpha x+\\beta>0$, for all $x\\in\\mathbb{R}$, is :",
+   "options": [
+    "$\\frac{17}{36}$",
+    "$\\frac{9}{4}$",
+    "$\\frac{1}{2}$",
+    "$\\frac{19}{36}$"
+   ],
+   "answer": "(A) $\\frac{17}{36}$",
+   "key_idea": "The quadratic is positive for all $x$ iff $\\alpha^2<4\\beta$; count the pairs $(\\alpha,\\beta)$ among the 36 outcomes by fixing $\\alpha$.",
+   "solution": [
+    "$x^2+\\alpha x+\\beta>0$ for all $x\\in\\mathbb{R}$ needs $\\alpha^2-4\\beta<0$, i.e. $\\beta>\\frac{\\alpha^2}{4}$.",
+    "$\\alpha=1$: $\\beta>\\frac{1}{4}$, so $\\beta=1,2,3,4,5,6$: 6 choices.",
+    "$\\alpha=2$: $\\beta>1$, so $\\beta=2,\\ldots,6$: 5 choices. $\\alpha=3$: $\\beta>\\frac{9}{4}$, so $\\beta=3,4,5,6$: 4 choices.",
+    "$\\alpha=4$: $\\beta>4$, so $\\beta=5,6$: 2 choices. $\\alpha=5$: $\\beta>\\frac{25}{4}=6.25$: 0 choices. $\\alpha=6$: $\\beta>9$: 0 choices.",
+    "Favourable outcomes $=6+5+4+2+0+0=17$; total $=6\\times6=36$.",
+    "$P=\\frac{17}{36}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $\\alpha,\\beta$ from a fair die: $P(\\alpha^2<4\\beta)=\\frac{17}{36}$; $P(\\alpha^2=4\\beta)=\\frac{2}{36}$ (the pairs $(2,1),(4,4)$); $P(\\alpha^2>4\\beta)=\\frac{17}{36}$ - so real roots occur with probability $\\frac{19}{36}$.",
+    "Cross-check by counting along $\\beta$: $\\beta=1,\\ldots,6$ allow $\\alpha<2\\sqrt\\beta$, i.e. $1,2,3,3,4,4$ values: $1+2+3+3+4+4=17$.",
+    "The strict inequality matters: $\\alpha^2=4\\beta$ gives a double root, so the quadratic touches the axis and the inequality fails there."
+   ]
+  },
+  {
+   "q_no": 35,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability with complements"
+   ],
+   "level": 2,
+   "question": "If $A$ and $B$ are two events such that $P(A)=\\frac{1}{3}$, $P(B)=\\frac{1}{5}$ and $P(A\\cup B)=\\frac{1}{2}$, then $P(A\\mid B')+P(B\\mid A')$ is equal to :",
+   "options": [
+    "$\\frac{3}{4}$",
+    "$\\frac{5}{8}$",
+    "$\\frac{5}{4}$",
+    "$\\frac{7}{8}$"
+   ],
+   "answer": "(B) $\\frac{5}{8}$",
+   "key_idea": "$P(A\\cap B)=P(A)+P(B)-P(A\\cup B)=\\frac{1}{30}$, then $P(A\\cap B')=P(A)-P(A\\cap B)$ and $P(B\\cap A')=P(B)-P(A\\cap B)$.",
+   "solution": [
+    "$P(A\\cap B)=P(A)+P(B)-P(A\\cup B)=\\frac{1}{3}+\\frac{1}{5}-\\frac{1}{2}=\\frac{1}{30}$.",
+    "Regions of the Venn diagram (in thirtieths): only $A$ $=\\frac{1}{3}-\\frac{1}{30}=\\frac{9}{30}$; only $B$ $=\\frac{1}{5}-\\frac{1}{30}=\\frac{5}{30}$; both $=\\frac{1}{30}$.",
+    "$P(A\\mid B')=\\frac{P(A\\cap B')}{P(B')}=\\frac{9/30}{4/5}=\\frac{3}{8}$.",
+    "$P(B\\mid A')=\\frac{P(B\\cap A')}{P(A')}=\\frac{5/30}{2/3}=\\frac{1}{4}$.",
+    "Sum $=\\frac{3}{8}+\\frac{1}{4}=\\frac{5}{8}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$P(A\\mid B')=\\frac{P(A)-P(A\\cap B)}{1-P(B)}$ and $P(B\\mid A')=\\frac{P(B)-P(A\\cap B)}{1-P(A)}$.",
+    "Quick check of regions: only $A$ + only $B$ + both + neither $=\\frac{9+5+1+15}{30}=1$ (neither $=1-\\frac{1}{2}=\\frac{15}{30}$).",
+    "Using a common denominator (here 30) for all Venn regions turns conditional probabilities into ratios of whole numbers: $\\frac{9}{9+15}+\\frac{5}{5+15}=\\frac{3}{8}+\\frac{1}{4}$."
+   ]
+  },
+  {
+   "q_no": 36,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Mutually exclusive events: range of a parameter",
+    "Inequalities"
+   ],
+   "level": 2,
+   "question": "Let $E_1,E_2,E_3$ be three mutually exclusive events such that $P(E_1)=\\frac{2+3p}{6}$, $P(E_2)=\\frac{2-p}{8}$ and $P(E_3)=\\frac{1-p}{2}$. If the maximum and minimum values of $p$ are $p_1$ and $p_2$, then $(p_1+p_2)$ is equal to :",
+   "options": [
+    "$\\frac{2}{3}$",
+    "$\\frac{5}{3}$",
+    "$\\frac{5}{4}$",
+    "$1$"
+   ],
+   "answer": "(B) $\\frac{5}{3}$",
+   "key_idea": "Each probability must lie in $[0,1]$ and, the events being mutually exclusive, the three probabilities must add up to at most 1.",
+   "solution": [
+    "$0\\le\\frac{2+3p}{6}\\le1\\Rightarrow p\\in\\left[-\\frac{2}{3},\\frac{4}{3}\\right]$.",
+    "$0\\le\\frac{2-p}{8}\\le1\\Rightarrow p\\in[-6,2]$.",
+    "$0\\le\\frac{1-p}{2}\\le1\\Rightarrow p\\in[-1,1]$.",
+    "Mutually exclusive: $0\\le P(E_1)+P(E_2)+P(E_3)\\le1$. The sum is $\\frac{4(2+3p)+3(2-p)+12(1-p)}{24}=\\frac{26-3p}{24}$.",
+    "$0\\le\\frac{26-3p}{24}\\le1\\Rightarrow\\frac{2}{3}\\le p\\le\\frac{26}{3}$.",
+    "Intersection of all the conditions: $p\\in\\left[\\frac{2}{3},1\\right]$.",
+    "$p_1=1$, $p_2=\\frac{2}{3}$, so $p_1+p_2=\\frac{5}{3}$, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's second line reads $0\\le\\frac{2-3P}{8}\\le1$ although $P(E_2)=\\frac{2-p}{8}$; the interval it quotes, $[-6,2]$, is the one for $\\frac{2-p}{8}$. Typographical slip corrected; the sum condition $\\frac{26-3p}{24}$ and the answer $\\frac{5}{3}$ are unchanged.",
+   "useful_results": [
+    "For mutually exclusive events: every probability lies in $[0,1]$ and the sum is $\\le1$ (equal to 1 only if they are exhaustive).",
+    "Only the tightest constraints matter: the upper bound comes from $P(E_3)\\ge0$ ($p\\le1$) and the lower bound from the total $\\le1$ ($p\\ge\\frac{2}{3}$).",
+    "Check the end points: $p=1$ gives $\\frac{5}{6},\\frac{1}{8},0$ (sum $\\frac{23}{24}$); $p=\\frac{2}{3}$ gives $\\frac{2}{3},\\frac{1}{6},\\frac{1}{6}$ (sum exactly 1)."
+   ]
+  },
+  {
+   "q_no": 37,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: mean, variance and $P(X\\le2)$"
+   ],
+   "level": 2,
+   "question": "Let $X$ be a binomially distributed random variable with mean $4$ and variance $\\frac{4}{3}$. Then, $54\\,P(X\\le2)$ is equal to :",
+   "options": [
+    "$\\frac{73}{27}$",
+    "$\\frac{146}{27}$",
+    "$\\frac{146}{81}$",
+    "$\\frac{126}{81}$"
+   ],
+   "answer": "(B) $\\frac{146}{27}$",
+   "key_idea": "$np=4$ and $npq=\\frac{4}{3}$ give $q=\\frac{1}{3}$, $p=\\frac{2}{3}$, $n=6$; then add $P(X=0)+P(X=1)+P(X=2)$.",
+   "solution": [
+    "$np=4$ and $npq=\\frac{4}{3}$, so $q=\\frac{1}{3}$, $p=\\frac{2}{3}$ and $n=6$.",
+    "$P(X\\le2)=P(X=0)+P(X=1)+P(X=2)$.",
+    "$P(X=0)=\\,^6C_0\\left(\\frac{1}{3}\\right)^6=\\frac{1}{729}$.",
+    "$P(X=1)=\\,^6C_1\\cdot\\frac{2}{3}\\left(\\frac{1}{3}\\right)^5=\\frac{12}{729}$.",
+    "$P(X=2)=\\,^6C_2\\left(\\frac{2}{3}\\right)^2\\left(\\frac{1}{3}\\right)^4=\\frac{60}{729}$.",
+    "$54\\,P(X\\le2)=54\\cdot\\frac{1+12+60}{729}=\\frac{54\\times73}{729}=\\frac{146}{27}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$q=\\frac{\\text{variance}}{\\text{mean}}$, $p=1-q$, $n=\\frac{\\text{mean}}{p}$ whenever mean and variance of a binomial are given.",
+    "With $p=\\frac{2}{3}$ the small-count probabilities are powers of $q=\\frac{1}{3}$ over a common denominator $3^6=729$, which keeps the arithmetic simple.",
+    "Check: all seven probabilities add to 1; $P(X\\ge3)=1-\\frac{73}{729}=\\frac{656}{729}$."
+   ]
+  },
+  {
+   "q_no": 38,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Classical probability: counting multiples in a range",
+    "Inclusion-exclusion"
+   ],
+   "level": 2,
+   "question": "Let $S$ be the sample space of all five digit numbers. If $p$ is the probability that a randomly selected number from $S$, is a multiple of $7$ but not divisible by $5$, then $9p$ is equal to :",
+   "options": [
+    "$1.0146$",
+    "$1.2085$",
+    "$1.0285$",
+    "$1.1521$"
+   ],
+   "answer": "(C) $1.0285$",
+   "key_idea": "Count multiples of 7 minus multiples of 35 with the arithmetic-progression formula (or floors).",
+   "solution": [
+    "$n(S)=9\\times10^4=90000$ five-digit numbers.",
+    "Multiples of 7: smallest $10003$, largest $99995$: $99995=10003+(n-1)7\\Rightarrow n=12857$.",
+    "Multiples of 35 (multiples of 7 and 5): smallest $10010$, largest $99995$: $99995=10010+(P-1)35\\Rightarrow P=2572$.",
+    "Multiples of 7 but not divisible by 5: $12857-2572=10285$.",
+    "$p=\\frac{10285}{90000}$, so $9p=\\frac{10285}{10000}=1.0285$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Periodicity: every 35 consecutive integers contain exactly $5$ multiples of 7, of which exactly $1$ is a multiple of 35, i.e. $4$ qualifying numbers; handle the leftover tail separately.",
+     "solution": [
+      "$90000=2571\\times35+15$. The first $2571\\times35=89985$ numbers ($10000$ to $99984$) form 2571 complete blocks of 35, each with exactly 4 multiples of 7 that are not multiples of 5: $2571\\times4=10284$.",
+      "The last 15 numbers are $99985,\\ldots,99999$. Multiples of 7 in them: $99988$ and $99995$; $99995$ is divisible by 5, so only $99988$ counts: 1.",
+      "Total $=10284+1=10285$, the same count, so $9p=1.0285$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of multiples of $m$ in $[L,U]$: $\\left\\lfloor\\frac{U}{m}\\right\\rfloor-\\left\\lfloor\\frac{L-1}{m}\\right\\rfloor$. Check: $14285-1428=12857$ for $m=7$; $2857-285=2572$ for $m=35$.",
+    "'Multiple of 7 but not of 5' $=$ multiples of 7 minus multiples of 35 (since $\\gcd(7,5)=1$).",
+    "Density: $\\frac{1}{7}\\cdot\\frac{4}{5}=\\frac{4}{35}\\approx0.1143$, so $p\\approx\\frac{4}{35}$ and $9p\\approx1.0286$; the options differ in the 2nd decimal, so the exact count is needed."
+   ]
+  },
+  {
+   "q_no": 39,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Binomial distribution: mean, variance and tail probability"
+   ],
+   "level": 2,
+   "question": "Let $X$ have a binomial distribution $B(n,p)$ such that the sum and the product of the mean and variance of $X$ are $24$ and $128$ respectively. If $P(X>n-3)=\\frac{k}{2^n}$, then $k$ is equal to :",
+   "options": [
+    "$528$",
+    "$529$",
+    "$629$",
+    "$630$"
+   ],
+   "answer": "(B) $529$",
+   "key_idea": "Find $n=32$, $p=\\frac{1}{2}$ as in Q33; $P(X>n-3)$ means $X\\in\\{n-2,n-1,n\\}$.",
+   "solution": [
+    "Let $\\alpha=$ mean and $\\beta=$ variance with $\\alpha>\\beta$: $\\alpha+\\beta=24$ and $\\alpha\\beta=128$, so $\\alpha=16$, $\\beta=8$.",
+    "$np=16$ and $npq=8\\Rightarrow q=\\frac{1}{2}$, $p=\\frac{1}{2}$, $n=32$.",
+    "$P(X>n-3)=P(X\\ge n-2)=\\,^nC_{n-2}\\left(\\frac{1}{2}\\right)^n+\\,^nC_{n-1}\\left(\\frac{1}{2}\\right)^n+\\,^nC_n\\left(\\frac{1}{2}\\right)^n$.",
+    "$=\\frac{1}{2^{32}}\\left(\\,^{32}C_{30}+\\,^{32}C_{31}+\\,^{32}C_{32}\\right)=\\frac{1}{2^{32}}\\left(\\frac{32\\cdot31}{2}+32+1\\right)$.",
+    "$=\\frac{496+33}{2^{32}}=\\frac{529}{2^{32}}$, so $k=529$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$P(X>n-3)$ is the upper tail $X\\in\\{n-2,n-1,n\\}$ - careful with the strict inequality: $X=n-3$ is not included.",
+    "For $B\\left(n,\\frac{1}{2}\\right)$: $P(X\\ge n-r)=\\frac{1}{2^n}\\sum_{j=0}^{r}\\,^nC_j$; with $r=2$: $\\frac{1+n+\\frac{n(n-1)}{2}}{2^n}$. Check $n=32$: $1+32+496=529$.",
+    "Read '$X>n-3$' as $X\\ge n-2$: the same tail $1+n+\\frac{n(n-1)}{2}$ as for '$X\\ge30$' when $n=32$."
+   ]
+  },
+  {
+   "q_no": 40,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Biased die: probabilities from proportional conditions",
+    "Binomial distribution: mean of a count"
+   ],
+   "level": 2,
+   "question": "A six faced die is biased such that $3\\times P(\\text{a prime number})=6\\times P(\\text{a composite number})=2\\times P(1)$. Let $X$ be a random variable that counts the number of times one gets a perfect square on some throws of this die. If the die is thrown twice, then the mean of $X$ is :",
+   "options": [
+    "$\\frac{3}{11}$",
+    "$\\frac{5}{11}$",
+    "$\\frac{7}{11}$",
+    "$\\frac{8}{11}$"
+   ],
+   "answer": "(D) $\\frac{8}{11}$",
+   "key_idea": "Read $P(\\text{prime})$, $P(\\text{composite})$ as the probability of each such face; then $P(\\text{perfect square})=P(1)+P(4)$ and the mean is $2\\times$ that.",
+   "solution": [
+    "Let $\\frac{P(\\text{a prime})}{2}=\\frac{P(\\text{a composite})}{1}=\\frac{P(1)}{3}=k$.",
+    "So each prime face (2, 3, 5) has probability $2k$, each composite face (4, 6) has probability $k$, and $P(1)=3k$.",
+    "Total $=3\\times2k+2\\times k+3k=11k=1\\Rightarrow k=\\frac{1}{11}$.",
+    "Perfect squares on a die are $1$ and $4$: $P(\\text{success})=3k+k=\\frac{4}{11}$.",
+    "$X$ counts successes in $n=2$ throws: $X\\sim B\\left(2,\\frac{4}{11}\\right)$.",
+    "Mean $=np=2\\times\\frac{4}{11}=\\frac{8}{11}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Expected number of successes in $n$ trials $=n\\cdot P(\\text{success})$ (linearity of expectation) - no distribution table is needed.",
+    "A condition like $a\\,P(\\text{type }1)=b\\,P(\\text{type }2)=c\\,P(\\text{type }3)$ means the probabilities are proportional to $\\frac{1}{a},\\frac{1}{b},\\frac{1}{c}$: here $\\frac{1}{3}:\\frac{1}{6}:\\frac{1}{2}=2:1:3$.",
+    "Check the total: $\\frac{6+2+3}{11}=1$."
+   ]
+  },
+  {
+   "q_no": 41,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability with percentages (Bayes' theorem)"
+   ],
+   "level": 1,
+   "question": "Out of $60\\%$ female and $40\\%$ male candidates appearing in an exam, $60\\%$ candidates qualify it. The number of females qualifying the exam is twice the number of males qualifying it. A candidate is randomly chosen from the qualified candidates. The probability that the chosen candidate is a female, is :",
+   "options": [
+    "$\\frac{2}{3}$",
+    "$\\frac{11}{16}$",
+    "$\\frac{23}{32}$",
+    "$\\frac{13}{16}$"
+   ],
+   "answer": "(A) $\\frac{2}{3}$",
+   "key_idea": "Take 100 candidates: 60 qualify, and females qualifying are twice males qualifying.",
+   "solution": [
+    "Take 100 candidates: 60 female and 40 male.",
+    "$60\\%$ qualify: 60 candidates qualify.",
+    "Let $M$ males qualify; females qualifying $=2M$, so $M+2M=60\\Rightarrow M=20$ and females qualified $=40$.",
+    "(Consistent: 40 of the 60 females and 20 of the 40 males qualify.)",
+    "Probability that the chosen qualified candidate is female $=\\frac{40}{60}=\\frac{2}{3}$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The statement 'females qualifying are twice males qualifying' already gives the ratio $2:1$ in the qualified pool, so the percentages are not needed.",
+     "solution": [
+      "Among the qualified candidates, females : males $=2:1$ by the given statement.",
+      "A candidate chosen at random from the qualified pool is female with probability $\\frac{2}{2+1}=\\frac{2}{3}$.",
+      "The 60%/40%/60% data only show the situation is consistent (pass rates $\\frac{2}{3}$ for females and $\\frac{1}{2}$ for males, both $\\le1$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A conditional probability over a pool equals the share of that group in the pool; if the ratio in the pool is given, the answer follows immediately.",
+    "Beware of redundant data in a word problem: check that it is consistent (here pass rates $\\frac{40}{60}$ and $\\frac{20}{40}$ are valid) and then ignore it.",
+    "With overall data, the formula is $P(F\\mid Q)=\\frac{P(F)P(Q\\mid F)}{P(Q)}=\\frac{0.6\\times\\frac{2}{3}}{0.6}=\\frac{2}{3}$."
+   ]
+  },
+  {
+   "q_no": 42,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability and De Morgan's laws for events"
+   ],
+   "level": 2,
+   "question": "Let $A$ and $B$ be two events such that $P(B\\mid A)=\\frac{2}{5}$, $P(A\\mid B)=\\frac{1}{7}$ and $P(A\\cap B)=\\frac{1}{9}$. Consider (S1) $P(A'\\cup B)=\\frac{5}{6}$, (S2) $P(A'\\cap B')=\\frac{1}{18}$. Then :",
+   "options": [
+    "Both (S1) and (S2) are true",
+    "Both (S1) and (S2) are false",
+    "Only (S1) is true",
+    "Only (S2) is true"
+   ],
+   "answer": "(A) Both (S1) and (S2) are true",
+   "key_idea": "Recover $P(B)=\\frac{7}{9}$ and $P(A)=\\frac{5}{18}$ from the conditional probabilities, then use $P(A'\\cup B)=1-P(A)+P(A\\cap B)$ and $P(A'\\cap B')=1-P(A\\cup B)$.",
+   "solution": [
+    "$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}=\\frac{1}{7}\\Rightarrow P(B)=\\frac{7}{9}$.",
+    "$P(B\\mid A)=\\frac{P(A\\cap B)}{P(A)}=\\frac{2}{5}\\Rightarrow P(A)=\\frac{5}{18}$.",
+    "(S1) $P(A'\\cup B)=1-P(A\\cap B')=1-P(A)+P(A\\cap B)=1-\\frac{5}{18}+\\frac{1}{9}=\\frac{15}{18}=\\frac{5}{6}$. True.",
+    "(S2) $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\frac{5}{18}+\\frac{14}{18}-\\frac{2}{18}=\\frac{17}{18}$, so $P(A'\\cap B')=1-\\frac{17}{18}=\\frac{1}{18}$. True.",
+    "Both statements are true, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fill the four cells of the two-way table (in eighteenths): they give every combination of $A,B$ and their complements at once.",
+     "solution": [
+      "$P(A\\cap B)=\\frac{2}{18}$, $P(A)=\\frac{5}{18}$ so $P(A\\cap B')=\\frac{3}{18}$; $P(B)=\\frac{14}{18}$ so $P(A'\\cap B)=\\frac{12}{18}$.",
+      "$P(A'\\cap B')=1-\\frac{2+3+12}{18}=\\frac{1}{18}$ - (S2) true.",
+      "$P(A'\\cup B)=1-P(A\\cap B')=1-\\frac{3}{18}=\\frac{15}{18}=\\frac{5}{6}$ - (S1) true; option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$P(A\\cap B)=P(A\\mid B)P(B)=P(B\\mid A)P(A)$: two conditional probabilities plus the intersection give both $P(A)$ and $P(B)$.",
+    "$P(A'\\cup B)=1-P(A\\cap B')$ and $P(A'\\cap B')=1-P(A\\cup B)$ (De Morgan).",
+    "A $2\\times2$ table of the four cells ($A\\cap B$, $A\\cap B'$, $A'\\cap B$, $A'\\cap B'$) with a common denominator settles every statement of this kind; the cells must add to 1 (check: $2+3+12+1=18$)."
+   ]
+  },
+  {
+   "q_no": 43,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Probability: integers coprime to a given number",
+    "Inclusion-exclusion"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{1,2,3,\\ldots,2022\\}$. Then the probability that a randomly chosen number $n$ from the set $S$ such that $\\mathrm{HCF}(n,2022)=1$, is :",
+   "options": [
+    "$\\frac{128}{1011}$",
+    "$\\frac{166}{1011}$",
+    "$\\frac{127}{337}$",
+    "$\\frac{112}{337}$"
+   ],
+   "answer": "(D) $\\frac{112}{337}$",
+   "key_idea": "$2022=2\\times3\\times337$; $\\mathrm{HCF}(n,2022)=1$ iff $n$ is divisible by none of $2,3,337$, which inclusion-exclusion counts.",
+   "solution": [
+    "$n(S)=2022$ and $2022=2\\times3\\times337$, so $\\mathrm{HCF}(n,2022)=1$ iff $n$ is not divisible by $2$, $3$ or $337$.",
+    "$A$: multiples of 2: $n(A)=1011$. $B$: multiples of 3: $n(B)=674$. $A\\cap B$: multiples of 6 ($6,12,\\ldots,2022$): $337$.",
+    "$n(A\\cup B)=1011+674-337=1348$.",
+    "Multiples of 337 up to 2022 are $337k$, $k=1,\\ldots,6$; those not already divisible by 2 or 3 are $337$ and $1685$ ($k=1,5$): 2 more numbers.",
+    "Divisible by 2, 3 or 337: $1348+2=1350$.",
+    "Favourable $=2022-1350=672$; $P=\\frac{672}{2022}=\\frac{112}{337}$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Euler's totient: the count of $n\\le N$ coprime to $N$ is $\\varphi(N)=N\\prod\\left(1-\\frac{1}{p}\\right)$ over the primes $p\\mid N$.",
+     "solution": [
+      "$2022=2\\cdot3\\cdot337$, so $\\varphi(2022)=2022\\left(1-\\frac{1}{2}\\right)\\left(1-\\frac{1}{3}\\right)\\left(1-\\frac{1}{337}\\right)$.",
+      "$=1\\cdot2\\cdot336=672$ (since $2022\\cdot\\frac{1}{2}\\cdot\\frac{2}{3}=674$ and $674\\cdot\\frac{336}{337}=672$).",
+      "$P=\\frac{\\varphi(2022)}{2022}=\\frac{1}{2}\\cdot\\frac{2}{3}\\cdot\\frac{336}{337}=\\frac{112}{337}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The number of integers in $\\{1,\\ldots,N\\}$ coprime to $N$ is $\\varphi(N)=N\\prod_{p\\mid N}\\left(1-\\frac{1}{p}\\right)$, so $P(\\gcd(n,N)=1)=\\prod_{p\\mid N}\\left(1-\\frac{1}{p}\\right)$ depends only on the prime factors of $N$.",
+    "Check: $N=12$: $\\varphi(12)=12\\cdot\\frac{1}{2}\\cdot\\frac{2}{3}=4$ (the numbers $1,5,7,11$).",
+    "Inclusion-exclusion with three primes: $N-\\sum\\frac{N}{p}+\\sum\\frac{N}{pq}-\\frac{N}{pqr}=2022-(1011+674+6)+(337+3+2)-1=672$."
+   ]
+  },
+  {
+   "q_no": 44,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Bayes' theorem with transfer of a ball between bags"
+   ],
+   "level": 2,
+   "question": "Bag I contains 3 red, 4 black and 3 white balls and Bag II contains 2 red, 5 black and 2 white balls. One ball is transferred from Bag I to Bag II and then a ball is drawn from Bag II. The ball so drawn is found to be black in colour. Then the probability, that the transferred ball is red, is :",
+   "options": [
+    "$\\frac{4}{9}$",
+    "$\\frac{5}{18}$",
+    "$\\frac{1}{6}$",
+    "$\\frac{3}{10}$"
+   ],
+   "answer": "(B) $\\frac{5}{18}$",
+   "key_idea": "Condition on the colour of the transferred ball: it changes Bag II to 10 balls, with 5 black unless a black ball was moved.",
+   "solution": [
+    "Let $A$: the ball drawn from Bag II is black; $B$: the transferred ball is red.",
+    "Transferred red (prob $\\frac{3}{10}$): Bag II has $3R,5B,2W$; $P(\\text{black})=\\frac{5}{10}$.",
+    "Transferred black (prob $\\frac{4}{10}$): Bag II has $2R,6B,2W$; $P(\\text{black})=\\frac{6}{10}$.",
+    "Transferred white (prob $\\frac{3}{10}$): Bag II has $2R,5B,3W$; $P(\\text{black})=\\frac{5}{10}$.",
+    "$P(A)=\\frac{3}{10}\\cdot\\frac{5}{10}+\\frac{4}{10}\\cdot\\frac{6}{10}+\\frac{3}{10}\\cdot\\frac{5}{10}=\\frac{15+24+15}{100}=\\frac{54}{100}$.",
+    "$P(B\\mid A)=\\frac{P(A\\cap B)}{P(A)}=\\frac{\\frac{3}{10}\\cdot\\frac{5}{10}}{\\frac{54}{100}}=\\frac{15}{54}=\\frac{5}{18}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Transfer problems: condition on what was transferred, then the second bag's composition is known.",
+    "In Bayes' theorem with equal denominators, only the integer weights (prior $\\times$ likelihood) matter: $15:24:15$, so $P(\\text{red moved}\\mid\\text{black drawn})=\\frac{15}{54}$.",
+    "Check: the three posteriors $\\frac{15}{54},\\frac{24}{54},\\frac{15}{54}$ add to 1."
+   ]
+  },
+  {
+   "q_no": 45,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Hypergeometric-type distribution: drawing without replacement",
+    "Variance of a random variable"
+   ],
+   "level": 2,
+   "question": "A bag contains 4 white and 6 black balls. Three balls are drawn at random from the bag. Let $X$ be the number of white balls among the drawn balls. If $\\sigma^2$ is the variance of $X$, then $100\\sigma^2$ is equal to __________.",
+   "answer": "$56$",
+   "key_idea": "$X$ takes values $0,1,2,3$ with $P(X=k)=\\frac{^4C_k\\,^6C_{3-k}}{^{10}C_3}$; compute $E(X)$, $E(X^2)$ and $\\sigma^2=E(X^2)-[E(X)]^2$.",
+   "solution": [
+    "$^{10}C_3=120$ and $P(X=k)=\\frac{^4C_k\\,^6C_{3-k}}{120}$.",
+    "$P(X=0)=\\frac{20}{120}=\\frac{1}{6}$, $P(X=1)=\\frac{4\\cdot15}{120}=\\frac{1}{2}$, $P(X=2)=\\frac{6\\cdot6}{120}=\\frac{3}{10}$, $P(X=3)=\\frac{4}{120}=\\frac{1}{30}$.",
+    "$E(X)=0+\\frac{1}{2}+2\\cdot\\frac{3}{10}+3\\cdot\\frac{1}{30}=\\frac{1}{2}+\\frac{3}{5}+\\frac{1}{10}=\\frac{6}{5}$.",
+    "$E(X^2)=0+\\frac{1}{2}+4\\cdot\\frac{3}{10}+9\\cdot\\frac{1}{30}=\\frac{1}{2}+\\frac{6}{5}+\\frac{3}{10}=2$.",
+    "$\\sigma^2=E(X^2)-[E(X)]^2=2-\\frac{36}{25}=\\frac{14}{25}=0.56$.",
+    "$100\\sigma^2=56$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the hypergeometric variance formula $n\\cdot\\frac{K}{N}\\cdot\\frac{N-K}{N}\\cdot\\frac{N-n}{N-1}$ with $N=10$, $K=4$, $n=3$.",
+     "solution": [
+      "For $n$ draws without replacement from $N$ balls with $K$ white: $\\text{Var}(X)=n\\cdot\\frac{K}{N}\\left(1-\\frac{K}{N}\\right)\\frac{N-n}{N-1}$.",
+      "$\\sigma^2=3\\cdot\\frac{4}{10}\\cdot\\frac{6}{10}\\cdot\\frac{10-3}{10-1}=3\\cdot\\frac{6}{25}\\cdot\\frac{7}{9}=\\frac{14}{25}$.",
+      "$100\\sigma^2=56$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Hypergeometric: mean $=\\frac{nK}{N}$ (here $\\frac{6}{5}$) and variance $=n\\frac{K}{N}\\frac{N-K}{N}\\cdot\\frac{N-n}{N-1}$; the last factor is the finite-population correction ($<1$), absent for draws with replacement.",
+    "Check: $n=1$ gives $\\frac{K}{N}\\left(1-\\frac{K}{N}\\right)$, the Bernoulli variance.",
+    "Use $\\sigma^2=E(X^2)-[E(X)]^2$ with exact fractions; here $2-1.44=0.56$."
+   ]
+  }
+ ]
+}
