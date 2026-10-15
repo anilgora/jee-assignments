@@ -1,0 +1,1130 @@
+{
+ "title": "SHEET STRAIGHT LINE FCopy C2 — Paper Analysis",
+ "subtitle": "Exercise C-II · detailed solutions",
+ "source": "papers/SHEET_STRAIGHT_LINE_FCopy_C2.pdf (solutions as printed in the PDF, verified); no blueprint",
+ "paper_name": "SHEET STRAIGHT LINE FCopy C2",
+ "sections": [
+  {
+   "title": "Subjective / Integer Type",
+   "from": 1,
+   "to": 17,
+   "marking": [
+    "No marks printed in the paper",
+    "JEE Advanced default assumed: 4 marks each"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 18,
+   "to": 23,
+   "marking": [
+    "Q18–20 and Q21–23 share a paragraph each",
+    "No marks printed; JEE Advanced default assumed: 3 marks each"
+   ]
+  },
+  {
+   "title": "Matching List Type",
+   "from": 24,
+   "to": 26,
+   "marking": [
+    "No marks printed; JEE Advanced default assumed: 3 marks each"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Centroid, orthocentre and circumcentre (Euler line)",
+    "Infinite geometric series"
+   ],
+   "question": "Points $O, A, B, C, \\ldots$ are shown in the figure where $OA = 2AB = 4BC = \\ldots$ and so on. Let $A$ be the centroid of a triangle whose orthocentre and circumcentre are $(2,4)$ and $\\left(\\frac{7}{2},\\frac{5}{2}\\right)$ respectively. An insect starts from $O(0,0)$ and moves along straight segments in zig-zag fashion (every segment makes $45^\\circ$ with the $x$-axis: $O\\to A$ upward, $A\\to B$ downward, $B\\to C$ upward, and so on) and finally terminates at the point $P(\\alpha,\\beta)$. Find the value of $(\\alpha+\\beta)$.",
+   "answer": "8",
+   "key_idea": "The centroid divides the orthocentre–circumcentre segment $2:1$, and each $45^\\circ$ segment adds a geometric-series step to $\\alpha$ and $\\beta$.",
+   "solution": [
+    "The centroid $G$ divides the line joining the orthocentre $H(2,4)$ and circumcentre $O\\left(\\frac72,\\frac52\\right)$ in the ratio $HG:GO = 2:1$.",
+    "So $G=\\frac{H+2S}{3}\\equiv\\left(\\frac{7+2}{3},\\frac{5+4}{3}\\right)=(3,3)$, where $S\\left(\\frac72,\\frac52\\right)$ is the circumcentre.",
+    "Since $A$ is the centroid, $A=(3,3)$ and $OA=3\\sqrt2$ (the segment $OA$ makes $45^\\circ$ with the $x$-axis).",
+    "The segments are $OA=3\\sqrt2,\\ AB=\\frac{3\\sqrt2}{2},\\ BC=\\frac{3\\sqrt2}{4},\\dots$ and each makes $45^\\circ$, so each contributes (length)$\\cdot\\frac{1}{\\sqrt2}$ to the horizontal motion.",
+    "All horizontal moves are to the right: $\\alpha=\\frac{3\\sqrt2}{\\sqrt2}+\\frac{3\\sqrt2}{2\\sqrt2}+\\frac{3\\sqrt2}{4\\sqrt2}+\\cdots\\infty=\\dfrac{3}{1-\\frac12}=6$.",
+    "The vertical moves alternate up and down: $\\beta=\\frac{3\\sqrt2}{\\sqrt2}-\\frac{3\\sqrt2}{2\\sqrt2}+\\frac{3\\sqrt2}{4\\sqrt2}-\\cdots\\infty=\\dfrac{3}{1+\\frac12}=2$.",
+    "Hence $\\alpha+\\beta=6+2=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Self-similarity: the path after $A$ is the whole path scaled by $\\frac12$ and reflected in the $x$-axis, so $P$ satisfies a fixed-point equation.",
+     "solution": [
+      "As before $G=A=(3,3)$ (Euler line: $G=\\frac{H+2S}{3}$ with circumcentre $S$).",
+      "After reaching $A$, the insect repeats the same zig-zag, but every length is halved and it first goes down instead of up (a reflection in a horizontal line).",
+      "So the displacement $P-A$ equals the displacement $P-O$ with the $x$-part halved and the $y$-part halved and reversed: $P-A=\\left(\\frac{\\alpha}{2},-\\frac{\\beta}{2}\\right)$.",
+      "$x$-part: $\\alpha-3=\\frac{\\alpha}{2}\\Rightarrow \\alpha=6$.",
+      "$y$-part: $\\beta-3=-\\frac{\\beta}{2}\\Rightarrow \\frac{3\\beta}{2}=3\\Rightarrow\\beta=2$.",
+      "Hence $\\alpha+\\beta=8$ (no series needed)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Euler line: $H$, $G$, $S$ (circumcentre) are collinear with $HG:GS=2:1$, so $G=\\frac{H+2S}{3}$ and $H=3G-2S$.",
+    "A self-similar infinite path with ratio $r$ ($|r|<1$) has limit point $P$ satisfying $P=A+r\\,\\mathcal R(P)$; solve the fixed-point equation instead of summing a series.",
+    "A $45^\\circ$ zig-zag with segment lengths in G.P. ratio $r$ gives $\\alpha=\\dfrac{a}{1-r}$ and $\\beta=\\dfrac{a}{1+r}$ when the vertical moves alternate in sign (here $a=3$, $r=\\frac12$)."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Orthocentre and circumcentre of a triangle; reflection of a point in a line; medians"
+   ],
+   "question": "The equations of the perpendiculars from $C$ to $AB$ and from $B$ to $AC$ of triangle $ABC$ (i.e. the lines perpendicular to the sides $AB$ and $AC$) are $x-y-4=0$ and $2x-y-5=0$ respectively. If the vertex $A$ is $(-2,3)$ and the point of intersection of the perpendicular bisectors is $\\left(\\frac32,\\frac52\\right)$, find the equations of the medians to the sides $AB$ and $AC$ respectively.",
+   "answer": "Median to $AB$: $x+4y=4$; median to $AC$: $5x+2y=8$",
+   "key_idea": "The perpendicular bisector of a side is parallel to the altitude to the other side's normal, so $B$ and $C$ are mirror images of $A$ in the two perpendicular bisectors.",
+   "solution": [
+    "The two given perpendiculars are altitudes; they meet at the orthocentre: solving $x-y-4=0$, $2x-y-5=0$ gives $x=1,\\ y=-3$, so $H=(1,-3)$.",
+    "The perpendicular bisector of $AB$ is perpendicular to $AB$, hence parallel to the line $x-y-4=0$ (which is also perpendicular to $AB$); it passes through the circumcentre $\\left(\\frac32,\\frac52\\right)$, so it is $x-y+1=0$.",
+    "Similarly the perpendicular bisector of $AC$ is parallel to $2x-y-5=0$ and passes through the circumcentre: $2x-y-\\frac12=0$, i.e. $4x-2y-1=0$.",
+    "$B$ is the image of $A(-2,3)$ in the perpendicular bisector of $AB$, $x-y+1=0$: $\\frac{x+2}{1}=\\frac{y-3}{-1}=-2\\cdot\\frac{-2-3+1}{2}=4$, so $B=(2,-1)$.",
+    "$C$ is the image of $A(-2,3)$ in the perpendicular bisector of $AC$, $4x-2y-1=0$: $\\frac{x+2}{4}=\\frac{y-3}{-2}=-2\\cdot\\frac{-8-6-1}{20}=\\frac32$, so $C=(4,0)$.",
+    "(Check: $C$ lies on $x-y-4=0$ and $B$ lies on $2x-y-5=0$, as they must.)",
+    "Midpoint of $AB$ is $F=(0,1)$ and midpoint of $AC$ is $E=\\left(1,\\frac32\\right)$.",
+    "Median to $AB$ is $CF$ with $C(4,0)$, $F(0,1)$: $y-0=\\frac{1-0}{0-4}(x-4)\\Rightarrow x+4y=4$.",
+    "Median to $AC$ is $BE$ with $B(2,-1)$, $E\\left(1,\\frac32\\right)$: $y+1=\\frac{\\frac32+1}{1-2}(x-2)\\Rightarrow 2y+2=-5x+10\\Rightarrow 5x+2y=8$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF applies each perpendicular bisector to the wrong vertex: it finds $B=(4,0)$ from the bisector of $AC$ and $C=(2,-1)$ from the bisector of $AB$, i.e. $B$ and $C$ are interchanged. Correct: $B=(2,-1)$, $C=(4,0)$. Consequently the median to $AB$ is $CF$: $x+4y=4$ and the median to $AC$ is $BE$: $5x+2y=8$ (the PDF's labels CF and BE give the two equations in the opposite order, although the key lists them in the correct order).",
+   "alternate_solutions": [
+    {
+     "idea": "Euler's relation $H=A+B+C-2S$ gives $B+C$ at once; with $B,C$ on their altitudes the vertices follow from two linear equations.",
+     "solution": [
+      "Let $S=\\left(\\frac32,\\frac52\\right)$ be the circumcentre and $H=(1,-3)$ the orthocentre (intersection of the two given altitudes).",
+      "Euler relation (vectors): $\\vec H=\\vec A+\\vec B+\\vec C-2\\vec S$, so $\\vec B+\\vec C=\\vec H+2\\vec S-\\vec A=(1,-3)+(3,5)-(-2,3)=(6,-1)$.",
+      "$C$ lies on the altitude from $C$: $x-y-4=0$, so $C=(q,q-4)$; $B$ lies on the altitude from $B$: $2x-y-5=0$, so $B=(p,2p-5)$.",
+      "$p+q=6$ and $(2p-5)+(q-4)=-1\\Rightarrow 2p+q=8$, so $p=2$, $q=4$: $B=(2,-1)$, $C=(4,0)$.",
+      "Midpoints $F(0,1)$ of $AB$, $E\\left(1,\\frac32\\right)$ of $AC$; medians $CF:\\ x+4y=4$ and $BE:\\ 5x+2y=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Euler relation: $H=A+B+C-2S$ (and $H=A+B+C$ if the circumcentre is the origin) — gives the sum of two unknown vertices from $A$, $H$, $S$.",
+    "The perpendicular bisector of $AB$ is parallel to the altitude through $C$ (both are $\\perp AB$); the circumcentre then fixes its constant term.",
+    "Image of $(x_1,y_1)$ in $ax+by+c=0$: $\\frac{x-x_1}{a}=\\frac{y-y_1}{b}=-\\frac{2(ax_1+by_1+c)}{a^2+b^2}$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Incentre and internal angle bisector of a triangle"
+   ],
+   "question": "The interior angle bisector of angle $A$ for the triangle $ABC$ whose vertices are $A(-8,5)$, $B(-15,-19)$ and $C(1,-7)$ has the equation $ax+2y+c=0$. Find $a$ and $c$.",
+   "answer": "$a=11,\\ c=78$",
+   "key_idea": "The incentre $\\left(\\frac{ax_1+bx_2+cx_3}{a+b+c},\\dots\\right)$ lies on the bisector from $A$, so two points determine it.",
+   "solution": [
+    "The incentre $I$ lies on the internal bisector of $A$. The side lengths are $a=BC=\\sqrt{16^2+12^2}=20$.",
+    "$b=AC=\\sqrt{9^2+12^2}=15$.",
+    "$c=AB=\\sqrt{7^2+24^2}=25$.",
+    "Incentre: $I=\\left(\\frac{ax_1+bx_2+cx_3}{a+b+c},\\frac{ay_1+by_2+cy_3}{a+b+c}\\right)=\\left(\\frac{-160-225+25}{60},\\frac{100-285-175}{60}\\right)$.",
+    "So $I=(-6,-6)$.",
+    "Equation of $AI$: $y+6=\\frac{11}{-2}(x+6)$, i.e. $-2y-12=11x+66$.",
+    "$11x+2y+78=0$; comparing with $ax+2y+c=0$ gives $a=11$ and $c=78$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The internal bisector direction at $A$ is the sum of the unit vectors along $AB$ and $AC$.",
+     "solution": [
+      "$\\overrightarrow{AB}=(-7,-24)$ with $|AB|=25$, so the unit vector is $\\left(-\\frac{7}{25},-\\frac{24}{25}\\right)$.",
+      "$\\overrightarrow{AC}=(9,-12)$ with $|AC|=15$, so the unit vector is $\\left(\\frac35,-\\frac45\\right)=\\left(\\frac{15}{25},-\\frac{20}{25}\\right)$.",
+      "The sum is $\\left(\\frac{8}{25},-\\frac{44}{25}\\right)\\parallel(2,-11)$, so the bisector has slope $-\\frac{11}{2}$.",
+      "Through $A(-8,5)$: $y-5=-\\frac{11}{2}(x+8)\\Rightarrow 2y-10=-11x-88\\Rightarrow 11x+2y+78=0$.",
+      "So $a=11$, $c=78$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Internal bisector at $A$ has direction $\\hat u_{AB}+\\hat u_{AC}$ (sum of unit vectors); the external bisector has direction $\\hat u_{AB}-\\hat u_{AC}$.",
+    "Angle-bisector theorem: the bisector from $A$ meets $BC$ at $D$ with $BD:DC=AB:AC$ (here $25:15=5:3$, $D=(-5,-11.5)$ lies on $11x+2y+78=0$).",
+    "Recognise Pythagorean triples: $20^2+15^2=25^2$, so the triangle is right-angled at $C$ and $r=\\frac{a+b-c}{2}=5$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Rhombus and its diagonals; angle bisectors of two lines"
+   ],
+   "question": "Two sides of a rhombus $ABCD$ are parallel to the lines $y=x+2$ and $y=7x+3$. If the diagonals of the rhombus intersect at the point $(1,2)$ and the vertex $A$ is on the $y$-axis, find the possible coordinates of $A$.",
+   "answer": "$(0,0)$ or $\\left(0,\\frac52\\right)$",
+   "key_idea": "The diagonals of a rhombus bisect the angles between its sides, so they are parallel to the angle bisectors of the two given directions.",
+   "solution": [
+    "Let $A=(0,\\alpha)$ and let $E=(1,2)$ be the intersection of the diagonals. Diagonals of a rhombus are parallel to the angle bisectors of the lines $y=x+2$ and $y=7x+3$.",
+    "Angle bisectors: $\\frac{x-y+2}{\\sqrt2}=\\pm\\frac{7x-y+3}{5\\sqrt2}$.",
+    "With $(+)$: $5x-5y+10=7x-y+3\\Rightarrow 2x+4y-7=0$, i.e. $x+2y-\\frac72=0$ (slope $-\\frac12$).",
+    "With $(-)$: $5x-5y+10=-7x+y-3\\Rightarrow 12x-6y+13=0$, i.e. $2x-y+\\frac{13}{6}=0$ (slope $2$).",
+    "The diagonal $AE$ has slope equal to one of these: $m_{AE}=\\frac{2-\\alpha}{1-0}$.",
+    "If $m_{AE}=-\\frac12$: $2-\\alpha=-\\frac12\\Rightarrow\\alpha=\\frac52$.",
+    "If $m_{AE}=2$: $2-\\alpha=2\\Rightarrow\\alpha=0$.",
+    "Hence $A=\\left(0,\\frac52\\right)$ or $(0,0)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The centre of a rhombus is equidistant from all four sides, so $E$ is equidistant from the two sides through $A$.",
+     "solution": [
+      "The sides through $A=(0,\\alpha)$ are parallel to the given lines: $y=x+\\alpha$ and $y=7x+\\alpha$.",
+      "Distance of $E(1,2)$ from $x-y+\\alpha=0$ is $\\frac{|1-2+\\alpha|}{\\sqrt2}=\\frac{|\\alpha-1|}{\\sqrt2}$.",
+      "Distance of $E(1,2)$ from $7x-y+\\alpha=0$ is $\\frac{|7-2+\\alpha|}{5\\sqrt2}=\\frac{|\\alpha+5|}{5\\sqrt2}$.",
+      "Equal distances: $5|\\alpha-1|=|\\alpha+5|$.",
+      "Case $5(\\alpha-1)=\\alpha+5$ gives $\\alpha=\\frac52$; case $5(\\alpha-1)=-(\\alpha+5)$ gives $\\alpha=0$.",
+      "So $A=(0,0)$ or $\\left(0,\\frac52\\right)$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A parallelogram is a rhombus iff its diagonals bisect the angles at the vertices; its centre is equidistant from all four sides (incircle).",
+    "Bisectors of $a_1x+b_1y+c_1=0$ and $a_2x+b_2y+c_2=0$: $\\frac{a_1x+b_1y+c_1}{\\sqrt{a_1^2+b_1^2}}=\\pm\\frac{a_2x+b_2y+c_2}{\\sqrt{a_2^2+b_2^2}}$; the two bisector slopes here ($-\\frac12$ and $2$) multiply to $-1$, as bisectors must.",
+    "Given only directions of the sides and the centre, the rhombus has one free parameter (its size); a condition such as 'A on the y-axis' fixes it (two solutions, one per diagonal)."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Incentre and inradius; region of points nearer to one side of a triangle"
+   ],
+   "question": "Let $O(0,0)$, $A(6,0)$ and $B(3,\\sqrt3)$ be the vertices of $\\triangle OAB$. Let $R$ be the region consisting of all those points $P$ inside $\\triangle OAB$ which satisfy $d(P,OA)\\le\\min\\{d(P,OB),\\,d(P,AB)\\}$, where $d(P,OA)$, $d(P,OB)$ and $d(P,AB)$ represent the distance of $P$ from the sides $OA$, $OB$ and $AB$ respectively. If the area of region $R$ is $9\\left(a-\\sqrt b\\right)$ where $a$ and $b$ are coprime, then find the value of $(a+b)$.",
+   "answer": "5",
+   "key_idea": "Equal-distance conditions are angle bisectors, so $R$ is the triangle formed by $OA$ and the bisectors from $O$ and $A$ meeting at the incentre.",
+   "solution": [
+    "$OB=2\\sqrt3$, $AB=2\\sqrt3$, $OA=6$; lines $OB:\\ \\sqrt3y=x$ and $AB:\\ \\sqrt3y=-x+6$; angles at $O$ and $A$ are $30^\\circ$.",
+    "$d(P,OA)\\le d(P,OB)$ means $P$ lies on the $OA$-side of the bisector of angle $O$; $d(P,OA)\\le d(P,AB)$ means $P$ lies on the $OA$-side of the bisector of angle $A$.",
+    "These two bisectors meet at the incentre $I$, so $R$ is the triangle $OAI$.",
+    "Incentre: $I=\\left(\\frac{18+0+12\\sqrt3}{6+4\\sqrt3},\\frac{6\\sqrt3+0+0}{6+4\\sqrt3}\\right)$ (weights $2\\sqrt3,2\\sqrt3,6$ at $O,A,B$).",
+    "Height of $I$ above $OA$ is the inradius $r=\\frac{6\\sqrt3}{6+4\\sqrt3}$.",
+    "Area of $R=\\frac12\\times6\\times\\frac{6\\sqrt3}{6+4\\sqrt3}=\\frac{9\\sqrt3}{3+2\\sqrt3}$.",
+    "Rationalise: $\\frac{9\\sqrt3}{3+2\\sqrt3}=9\\cdot\\frac{\\sqrt3\\,(2\\sqrt3-3)}{3}=9\\left(2-\\sqrt3\\right)$.",
+    "So $a=2$, $b=3$ (coprime) and $a+b=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The incentre splits the triangle into three triangles whose areas are proportional to the sides they stand on, so $[OAI]=[OAB]\\cdot\\frac{OA}{\\text{perimeter}}$.",
+     "solution": [
+      "Inradius $r$: $[OAI]=\\frac12\\,OA\\cdot r$, $[OBI]=\\frac12\\,OB\\cdot r$, $[ABI]=\\frac12\\,AB\\cdot r$.",
+      "Adding, $[OAB]=\\frac r2\\,(OA+OB+AB)$, hence $\\dfrac{[OAI]}{[OAB]}=\\dfrac{OA}{OA+OB+AB}=\\dfrac{6}{6+4\\sqrt3}$.",
+      "$[OAB]=\\frac12\\cdot6\\cdot\\sqrt3=3\\sqrt3$.",
+      "$[R]=3\\sqrt3\\cdot\\frac{6}{6+4\\sqrt3}=\\frac{9\\sqrt3}{3+2\\sqrt3}=9(2-\\sqrt3)$.",
+      "So $a+b=2+3=5$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The set of points of a triangle nearer to side $a$ than to the other two sides is the triangle formed by side $a$ and the two angle bisectors on it, meeting at the incentre.",
+    "The three such regions partition the triangle; their areas are in the ratio of the sides: $[R_a]:[R_b]:[R_c]=a:b:c$.",
+    "$r=\\frac{\\Delta}{s}$; here $\\Delta=3\\sqrt3$, $s=3+2\\sqrt3$, $r=6-3\\sqrt3\\approx0.80$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Angle bisectors and reflection of a point in a line; equations of the sides of a triangle"
+   ],
+   "question": "Find the equations of the sides of a triangle having $(4,-1)$ as a vertex, if the lines $x-1=0$ and $x-y-1=0$ are the equations of two internal bisectors of its angles.",
+   "answer": "$2x-y+3=0,\\ \\ 2x+y-7=0,\\ \\ x-2y-6=0$",
+   "key_idea": "The mirror image of a vertex in the bisector of another vertex lies on the side opposite to the first vertex.",
+   "solution": [
+    "Let $P(4,-1)$ be the vertex and let $Q,R$ be the other vertices, lying on $x=1$ and $x-y=1$ respectively.",
+    "The reflection of a vertex in the angle bisector of another vertex lies on the side opposite to the first vertex, so the reflections $B$ and $C$ of $P$ in $x=1$ and in $x-y=1$ lie on the side $QR$.",
+    "Reflection of $(4,-1)$ about $x=1$: $\\frac{x_1+4}{2}=1\\Rightarrow x_1=-2$ and $y_1=-1$, so $B=(-2,-1)$.",
+    "Reflection about $x-y-1=0$, $C=(x_2,y_2)$: the midpoint $\\left(\\frac{x_2+4}{2},\\frac{y_2-1}{2}\\right)$ lies on the line, giving $x_2-y_2+3=0$ (i).",
+    "The slope of $PC$ is $\\frac{y_2+1}{x_2-4}$ and it is perpendicular to the line (slope $1$): $x_2+y_2-3=0$ (ii).",
+    "Solving (i) and (ii): $C=(0,3)$.",
+    "Equation of $BC$ (the side $QR$): $y+1=\\frac42(x+2)\\Rightarrow 2x-y+3=0$.",
+    "$Q$ lies on $x=1$ and on $BC$: $Q=(1,5)$; the side $PQ$ is $2x+y-7=0$.",
+    "$R$ lies on $x-y=1$ and on $BC$: $R=(-4,-5)$; the side $PR$ is $x-2y-6=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry of side slopes about a bisector: about the vertical line the slopes are $m,-m$; about a slope-$1$ line they are $m,\\frac1m$.",
+     "solution": [
+      "Let $Q=(1,q)$ (on $x=1$) and $R=(s,s-1)$ (on $x-y=1$); let the side $QR$ have slope $\\mu$.",
+      "At $Q$ the bisector is vertical, so the sides $QP$ and $QR$ have slopes $m$ and $-m$: slope of $QP=-\\mu$, i.e. $\\frac{-1-q}{3}=-\\mu$, so $q=3\\mu-1$.",
+      "At $R$ the bisector has slope $1$; reflection in a slope-$1$ line sends slope $m$ to $\\frac1m$, so slope of $RP=\\frac1\\mu$: $\\frac{-1-(s-1)}{4-s}=\\frac1\\mu\\Rightarrow\\mu=\\frac{s-4}{s}$.",
+      "Slope of $QR$: $\\frac{s-1-q}{s-1}=\\mu\\Rightarrow s-1-(3\\mu-1)=\\mu(s-1)\\Rightarrow\\mu(s+2)=s$.",
+      "Substitute $\\mu=\\frac{s-4}{s}$: $(s-4)(s+2)=s^2\\Rightarrow-2s-8=0\\Rightarrow s=-4$, so $\\mu=2$, $q=5$.",
+      "$Q=(1,5)$, $R=(-4,-5)$, $P=(4,-1)$; the sides are $QR:\\ 2x-y+3=0$, $PQ:\\ 2x+y-7=0$, $PR:\\ x-2y-6=0$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reflecting one side in the bisector at a vertex gives the other side at that vertex; hence the mirror image of a vertex in another vertex's bisector lies on the opposite side.",
+    "Reflection in a line parallel to an axis: about $x=k$ slopes $m\\to-m$; about $y=x+c$ slopes $m\\to\\frac1m$.",
+    "The two given bisectors meet at the incentre $I=(1,0)$; the third bisector is $PI$ with slope $-\\frac13$ (it bisects the angle between $PQ$ and $PR$ of slopes $-2$ and $\\frac12$)."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Locus of a point on a variable line through a fixed point",
+    "Harmonic progression"
+   ],
+   "question": "$P$ is the point $(-1,2)$. A variable line through $P$ cuts the $x$ and $y$ axes at $A$ and $B$ respectively. $Q$ is the point on $AB$ such that $PA,\\ PQ,\\ PB$ are in H.P. Find the locus of $Q$.",
+   "answer": "$y=2x$",
+   "key_idea": "Use signed distances from $P$ along the line: H.P. means $\\frac{2}{PQ}=\\frac1{PA}+\\frac1{PB}$, and $x=h+\\ldots,\\ y=k+\\ldots$ turns it into a linear relation in $h,k$.",
+   "solution": [
+    "Let the line through $P(-1,2)$ make angle $\\theta$ with the $x$-axis and let $PA=r_1$, $PQ=r_2$, $PB=r_3$ be distances along it.",
+    "$Q(h,k)=(-1+r_2\\cos\\theta,\\ 2+r_2\\sin\\theta)$.",
+    "$A(-1+r_1\\cos\\theta,\\ 2+r_1\\sin\\theta)$ is on the $x$-axis: $2+r_1\\sin\\theta=0\\Rightarrow r_1=\\frac{-2}{\\sin\\theta}$.",
+    "$B(-1+r_3\\cos\\theta,\\ 2+r_3\\sin\\theta)$ is on the $y$-axis: $-1+r_3\\cos\\theta=0\\Rightarrow r_3=\\frac{1}{\\cos\\theta}$.",
+    "$PA,PQ,PB$ in H.P.: $\\frac{2}{r_2}=\\frac1{r_1}+\\frac1{r_3}=\\frac{-\\sin\\theta}{2}+\\frac{\\cos\\theta}{1}$.",
+    "Multiply by $r_2$: $2=\\frac{-r_2\\sin\\theta}{2}+r_2\\cos\\theta$, and use $r_2\\sin\\theta=k-2$, $r_2\\cos\\theta=h+1$.",
+    "$4=-(k-2)+2(h+1)\\Rightarrow 2h-k=0$.",
+    "Hence the locus of $Q$ is $y=2x$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "H.P. means $Q$ is the harmonic conjugate of $P$ with respect to $A,B$, so $Q$ lies on the polar of $P$ with respect to the axes $xy=0$.",
+     "solution": [
+      "$\\frac{2}{PQ}=\\frac1{PA}+\\frac1{PB}$ (signed distances) says exactly that $A,B$ divide $PQ$ harmonically: $Q$ is the harmonic conjugate of $P$ with respect to $A$ and $B$.",
+      "$A$ and $B$ are the points where the line meets the pair of axes $xy=0$, so the locus of harmonic conjugates of $P(x_1,y_1)$ is the polar of $P$ with respect to this pair of lines.",
+      "The polar of $(x_1,y_1)$ with respect to $xy=0$ is $xy_1+yx_1=0$.",
+      "For $P(-1,2)$: $2x-y=0$, i.e. $y=2x$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For points on a line through $P$ (signed distances): $PA,PQ,PB$ in H.P. $\\iff\\frac2{PQ}=\\frac1{PA}+\\frac1{PB}\\iff Q$ is the harmonic conjugate of $P$ w.r.t. $A,B$.",
+    "The locus of harmonic conjugates of $P$ w.r.t. the intersections of a variable line with a conic (or line pair $ax^2+2hxy+by^2=0$) is the polar of $P$: $axx_1+h(xy_1+yx_1)+byy_1=0$.",
+    "Numerical check: the line $y=x+3$ gives $A(-3,0)$, $B(0,3)$ and $Q=(3,6)$, which satisfies $y=2x$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Orthocentre, altitudes and centroid of a triangle; locus"
+   ],
+   "question": "The equations of the altitudes $AD$, $BE$, $CF$ of a triangle $ABC$ are $x+y=0$, $x-4y=0$ and $2x-y=0$ respectively. The coordinates of $A$ are $(t,-t)$. Find the coordinates of $B$ and $C$. Prove that if $t$ varies, the locus of the centroid of the triangle $ABC$ is $x+5y=0$.",
+   "answer": "$B\\left(-\\frac{2t}{3},-\\frac t6\\right)$, $C\\left(\\frac t2,t\\right)$; locus of centroid: $x+5y=0$",
+   "key_idea": "$B$ lies on $x-4y=0$, $C$ on $2x-y=0$, and each of $AB,AC$ is perpendicular to the altitude through the third vertex.",
+   "solution": [
+    "$B$ lies on $x-4y=0$: take $B=(4\\alpha,\\alpha)$; $C$ lies on $2x-y=0$: take $C=(b,2b)$.",
+    "$AB\\perp CF$ (slope of $CF$ is $2$), so slope of $AB=-\\frac12$: $\\frac{-t-\\alpha}{t-4\\alpha}=\\frac{-1}{2}$.",
+    "Cross-multiplying: $2t+2\\alpha=t-4\\alpha$, so $t=-6\\alpha$ and $\\alpha=-\\frac t6$.",
+    "$AC\\perp BE$ (slope of $BE$ is $\\frac14$), so slope of $AC=-4$: $\\frac{2b+t}{b-t}=-4$.",
+    "$2b+t=4t-4b\\Rightarrow 6b=3t\\Rightarrow b=\\frac t2$.",
+    "Hence $B\\left(-\\frac{2t}{3},-\\frac t6\\right)$ and $C\\left(\\frac t2,t\\right)$.",
+    "Centroid $G(h,k)=\\left(\\frac{t-\\frac{2t}{3}+\\frac t2}{3},\\frac{-t-\\frac t6+t}{3}\\right)=\\left(\\frac{5t}{18},-\\frac{t}{18}\\right)$.",
+    "From $h=\\frac{5t}{18}$ and $k=-\\frac{t}{18}$: $t=\\frac{18h}{5}$ and $t=-18k$, so $h+5k=0$.",
+    "Hence the locus of $G$ is the straight line $x+5y=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The altitudes meet at the origin $H$; with $H$ as origin the orthocentre property gives $\\vec A\\cdot\\vec B=\\vec B\\cdot\\vec C=\\vec C\\cdot\\vec A$.",
+     "solution": [
+      "The three altitudes $x+y=0$, $x-4y=0$, $2x-y=0$ all pass through $(0,0)$, so $H=O$.",
+      "With $H$ at the origin, $HA\\perp BC$ etc. give $\\vec A\\cdot(\\vec B-\\vec C)=0$, $\\vec B\\cdot(\\vec C-\\vec A)=0$, i.e. $\\vec A\\cdot\\vec B=\\vec A\\cdot\\vec C=\\vec B\\cdot\\vec C$.",
+      "Take $A=(t,-t)$, $B=(4\\beta,\\beta)$, $C=(c,2c)$: $\\vec A\\cdot\\vec B=3t\\beta$, $\\vec A\\cdot\\vec C=-tc$, $\\vec B\\cdot\\vec C=6\\beta c$.",
+      "$3t\\beta=-tc\\Rightarrow c=-3\\beta$; $6\\beta c=-tc\\Rightarrow\\beta=-\\frac t6$ (for $c\\ne0$). So $B=\\left(-\\frac{2t}3,-\\frac t6\\right)$, $C=\\left(\\frac t2,t\\right)$.",
+      "Centroid $\\frac{A+B+C}{3}=\\left(\\frac{5t}{18},-\\frac{t}{18}\\right)$, which lies on $x+5y=0$ for every $t$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "With the orthocentre at the origin, $\\vec A\\cdot\\vec B=\\vec B\\cdot\\vec C=\\vec C\\cdot\\vec A$.",
+    "If the three altitude lines are fixed, every admissible triangle is a scaled copy about $H$ (the parameter $t$ is the scale), so the centroid, circumcentre etc. all move on lines through $H$.",
+    "Each vertex of a triangle lies on one altitude and its opposite side is $\\perp$ to that altitude: use slopes $m_1m_2=-1$ to write two linear equations for two unknown vertices."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Pair of straight lines: lines through the origin at a given distance from a point"
+   ],
+   "question": "The distance of a point $(x_1,y_1)$ from each of two straight lines which pass through the origin of coordinates is $\\delta$. Find the combined equation of these straight lines.",
+   "answer": "$\\left(y_1^2-\\delta^2\\right)x^2-2x_1y_1\\,xy+\\left(x_1^2-\\delta^2\\right)y^2=0$",
+   "key_idea": "Both lines $y=mx$ satisfy $\\frac{|mx_1-y_1|}{\\sqrt{1+m^2}}=\\delta$, which is a quadratic in $m$; replacing $m$ by $\\frac yx$ gives the pair.",
+   "solution": [
+    "(Product of the distances of $P(x_1,y_1)$ from a pair $ax^2+2hxy+by^2=0$ is $\\frac{|ax_1^2+2hx_1y_1+by_1^2|}{\\sqrt{(a-b)^2+4h^2}}$; setting it equal to $\\delta^2$ alone does not fix $a,h,b$, so we use slopes instead.)",
+    "Let the lines be $y=m_1x$ and $y=m_2x$. The distance of $(x_1,y_1)$ from $y=mx$ is $\\delta=\\frac{|mx_1-y_1|}{\\sqrt{1+m^2}}$ for both $m_1$ and $m_2$.",
+    "Squaring: $\\delta^2=\\frac{(mx_1-y_1)^2}{1+m^2}=\\frac{m^2x_1^2-2x_1y_1m+y_1^2}{1+m^2}$.",
+    "Hence $m$ satisfies $\\left(x_1^2-\\delta^2\\right)m^2-2x_1y_1\\,m+\\left(y_1^2-\\delta^2\\right)=0$, and $m_1,m_2$ are its two roots.",
+    "Put $m=\\frac yx$: $\\left(x_1^2-\\delta^2\\right)\\frac{y^2}{x^2}-2x_1y_1\\frac yx+\\left(y_1^2-\\delta^2\\right)=0$.",
+    "Multiply by $x^2$: $\\left(y_1^2-\\delta^2\\right)x^2-2x_1y_1\\,xy+\\left(x_1^2-\\delta^2\\right)y^2=0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last line has a misprint: it ends with $\\left(x_1^2-\\delta^2\\right)xy^2$ whereas the correct term is $\\left(x_1^2-\\delta^2\\right)y^2$ (the key is right). Its first two lines (the product-of-distances formula) are not used further, so they are mentioned only as a remark.",
+   "alternate_solutions": [
+    {
+     "idea": "The two lines through $O$ at distance $\\delta$ from $P$ are the tangents from $O$ to the circle with centre $P$ and radius $\\delta$; use $SS_1=T^2$.",
+     "solution": [
+      "Circle with centre $P(x_1,y_1)$, radius $\\delta$: $S\\equiv x^2+y^2-2x_1x-2y_1y+k=0$ with $k=x_1^2+y_1^2-\\delta^2$.",
+      "A line through $O$ is at distance $\\delta$ from $P$ iff it touches this circle, so the pair is the pair of tangents from $O(0,0)$.",
+      "For the origin, $S_1=k$ and $T=-x_1x-y_1y+k$; the pair of tangents is $SS_1=T^2$.",
+      "$k\\left(x^2+y^2-2x_1x-2y_1y+k\\right)=\\left(k-x_1x-y_1y\\right)^2$.",
+      "Cancel $k^2$ and the linear terms: $(k-x_1^2)x^2+(k-y_1^2)y^2-2x_1y_1xy=0$.",
+      "With $k-x_1^2=y_1^2-\\delta^2$ and $k-y_1^2=x_1^2-\\delta^2$ this is $(y_1^2-\\delta^2)x^2-2x_1y_1xy+(x_1^2-\\delta^2)y^2=0$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Lines at a fixed distance $\\delta$ from a fixed point $P$ are tangents to the circle (centre $P$, radius $\\delta$): pair of tangents from a point is $SS_1=T^2$.",
+    "The pair is real iff $x_1^2+y_1^2>\\delta^2$ (discriminant $4\\delta^2(x_1^2+y_1^2-\\delta^2)\\ge0$).",
+    "Check: $P(2,0)$, $\\delta=1$ gives $-x^2+3y^2=0$, i.e. $y=\\pm\\frac{x}{\\sqrt3}$, and the distance from $(2,0)$ to $y=\\frac{x}{\\sqrt3}$ is $\\frac{2/\\sqrt3}{\\sqrt{4/3}}=1$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 4,
+   "concepts": [
+    "Pair of straight lines (factorisation); position of the origin inside a triangle and slope range of a variable line"
+   ],
+   "question": "The sides of a triangle have the combined equation $x^2-3y^2-2xy+8y-4=0$. The third side, which is variable, always passes through the point $(-5,-1)$. If the range of values of the slope of the third line so that the origin is an interior point of the triangle lies in the interval $(a,b)$, then find $\\left(a+\\frac1{b^2}\\right)$.",
+   "answer": "24",
+   "key_idea": "Factorise the pair, then notice $(-5,-1)$ lies on one of the two lines, so the triangle exists only for slopes in a range, and the origin must be on the vertex side of the third line.",
+   "solution": [
+    "$x^2-2xy-3y^2=x^2-3xy+xy-3y^2=(x+y)(x-3y)$, so write the pair as $(x+y+c_1)(x-3y+c_2)=0$.",
+    "Compare the coefficients of $x$ and $y$: $c_1+c_2=0$ and $-3c_1+c_2=8$; subtracting, $4c_1=-8$.",
+    "So $c_1=-2$, $c_2=2$, and $c_1c_2=-4$ agrees with the constant term.",
+    "The two lines are $L_1:\\ x+y-2=0$ and $L_2:\\ x-3y+2=0$; they meet at the vertex $(1,1)$.",
+    "The point $(-5,-1)$ lies on $L_2$ ($-5+3+2=0$), so the variable line $y+1=m(x+5)$ cuts $L_1$ to complete the triangle.",
+    "The variable line is $y=mx+(5m-1)$. For $m<\\frac13$ the vertex $(1,1)$ lies above it, so the triangle lies above the third side; the origin is inside only if it is also above the line, i.e. the $y$-intercept is negative: $5m-1<0\\Rightarrow m<\\frac15$.",
+    "A triangle is formed only if the variable line is not parallel to $L_1$ (slope $-1$) and cuts $L_1$ on the correct ray, i.e. $m>-1$ (and $m\\neq\\frac13$ since that is $L_2$ itself).",
+    "So $m\\in\\left(-1,\\frac15\\right)$: $a=-1$, $b=\\frac15$.",
+    "$a+\\frac1{b^2}=-1+25=24$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's last line reads 'a+b = 4', but the question asks for $a+\\frac1{b^2}=-1+25=24$ (the key 24 is right). Also '$5m-1=0\\Rightarrow m<\\frac15$' should read $5m-1<0\\Rightarrow m<\\frac15$, and the reason for $m>-1$ (slope $-1$ is parallel to $L_1$, so no triangle) has been written out.",
+   "alternate_solutions": [
+    {
+     "idea": "Barycentric coordinates: write the origin as a positive combination of the three vertices and read off the range of the vertex on $L_1$.",
+     "solution": [
+      "Vertices: $V=(1,1)$, $W=(-5,-1)$ and $D=(d,2-d)$ on $L_1$; $D$ must lie on the ray of $L_1$ with $d>1$ (the ray bounding the wedge that contains the origin).",
+      "Solve $O=\\lambda V+\\mu W+\\nu D$, $\\lambda+\\mu+\\nu=1$. From the $x$ and $y$ equations: $\\lambda-5\\mu+d\\nu=0$ and $\\lambda-\\mu+(2-d)\\nu=0$.",
+      "Subtract: $-4\\mu+(2d-2)\\nu=0$, so $\\mu=\\frac{d-1}{2}\\nu$; the sum equation then gives $\\nu=\\frac1{2(d-1)}$, $\\mu=\\frac14$, $\\lambda=\\frac{3d-5}{4(d-1)}$.",
+      "The origin is inside iff $\\lambda,\\mu,\\nu>0$: $d>1$ and $3d-5>0$, i.e. $d>\\frac53$.",
+      "Slope of the line through $W$ and $D$: $m=\\frac{(2-d)+1}{d+5}=\\frac{3-d}{d+5}$, which decreases from $\\frac15$ (at $d=\\frac53$) towards $-1$ (as $d\\to\\infty$).",
+      "So $m\\in\\left(-1,\\frac15\\right)$ and $a+\\frac1{b^2}=-1+25=24$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Factorise a pair $ax^2+2hxy+by^2+2gx+2fy+c=0$ as $(l_1x+m_1y+c_1)(l_2x+m_2y+c_2)$: the quadratic part fixes the directions, then solve two linear equations for $c_1,c_2$ and check $c_1c_2$ against $c$.",
+    "A point is inside a triangle iff it is on the same side as the opposite vertex for every side; the extremes of the slope range correspond to the variable line becoming parallel to a side, passing through a vertex, or through the point itself ($m=\\frac15$ passes through the origin).",
+    "Barycentric coordinates $(\\lambda,\\mu,\\nu)$ all positive $\\iff$ point strictly inside; here $\\mu=\\frac14$ stays constant because the origin lies on a fixed cevian direction."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Pair of straight lines forming a triangle: angles, area and inradius"
+   ],
+   "question": "Consider a line pair $2x^2+3xy-2y^2-10x+15y-28=0$ and another line $L$ passing through the origin with gradient $3$. The line pair and the line $L$ form a triangle whose vertices are $A$, $B$ and $C$.\\n(a) Find the sum of the cotangents of the interior angles of the triangle $ABC$.\\n(b) Find the area of the triangle $ABC$.\\n(c) Find the radius of the circle touching all the three sides of the triangle.",
+   "answer": "(a) $\\frac{50}{7}$; (b) $\\frac{63}{10}$; (c) $\\frac{3}{10}\\left(8\\sqrt5-5\\sqrt{10}\\right)$",
+   "key_idea": "The slopes of the pair come from $2m^2-3m-2=0$; the two lines of the pair are perpendicular, so the triangle is right-angled.",
+   "solution": [
+    "The pair is $2x^2+3xy-2y^2-10x+15y-28=0$ and $L:\\ y=3x$. The homogeneous part $2x^2+3xy-2y^2=0$ gives the slopes of the pair: with $m=\\frac yx$, $2+3m-2m^2=0$.",
+    "$2m^2-3m-2=0\\Rightarrow 2m^2-4m+m-2=0\\Rightarrow(2m+1)(m-2)=0$, so $m=-\\frac12$ or $m=2$.",
+    "Slopes of the three sides: $m_1=3$ (line $L$), $m_2=2$, $m_3=-\\frac12$.",
+    "(a) $\\tan I=\\frac{m_1-m_2}{1+m_1m_2}=\\frac{3-2}{1+6}=\\frac17$.",
+    "$\\tan II=\\frac{m_2-m_3}{1+m_2m_3}=\\frac{2+\\frac12}{1-1}=\\infty$, so this angle is $90^\\circ$ (the two lines of the pair are perpendicular).",
+    "$\\tan III=\\left|\\frac{m_3-m_1}{1+m_1m_3}\\right|=\\left|\\frac{-\\frac12-3}{1-\\frac32}\\right|=7$.",
+    "$\\sum\\cot=7+0+\\frac17=\\frac{50}{7}$.",
+    "For the vertices, factorise the pair: $2x^2+3xy-2y^2=(x+2y)(2x-y)$, so write it as $(x+2y+C_1)(2x-y+C_2)=0$.",
+    "Comparing: $2C_1+C_2=-10$, $-C_1+2C_2=15$ and $C_1C_2=-28$, giving $C_1=-7$, $C_2=4$: the lines are $x+2y-7=0$, $2x-y+4=0$ (and $y=3x$).",
+    "Points of intersection: $A\\left(-\\frac15,\\frac{18}5\\right)$ (of the pair), $B(4,12)$ ($y=3x$ with $2x-y+4=0$), $C(1,3)$ ($y=3x$ with $x+2y-7=0$).",
+    "(b) $\\Delta ABC=\\frac12\\left|\\begin{matrix}-\\frac15&\\frac{18}5&1\\\\4&12&1\\\\1&3&1\\end{matrix}\\right|=\\frac1{10}\\left|\\begin{matrix}-6&3&5\\\\3&9&1\\\\0&0&1\\end{matrix}\\right|=\\frac1{10}\\,|-54-9|=\\frac{63}{10}$.",
+    "(c) Sides: $AB=\\frac{21}{\\sqrt5}$, $AC=\\frac{3}{\\sqrt5}$, $BC=3\\sqrt{10}$; the triangle is right-angled at $A$, so $r=\\frac{AB+AC-BC}{2}$.",
+    "$r=\\frac12\\left(\\frac{24}{\\sqrt5}-3\\sqrt{10}\\right)=\\frac{12\\sqrt5}{5}-\\frac{3\\sqrt{10}}{2}=\\frac{3}{10}\\left(8\\sqrt5-5\\sqrt{10}\\right)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's $\\tan III$ line is garbled ($\\frac{-17}{1+1}$); the correct value is $\\tan III=7$ (consistent with the $\\frac17$ it later uses for $\\cot III$). The factorisation part is labelled '(d)' instead of continuing the working for (b). Part (c) (inradius) has no working in the PDF: it was written here using the right angle at $A$, giving $\\frac{3}{10}(8\\sqrt5-5\\sqrt{10})$, the printed key.",
+   "alternate_solutions": [
+    {
+     "idea": "Spot the right angle at $A$ (slopes $-\\frac12$ and $2$); the legs are then perpendicular distances, and $\\cot B+\\cot C=\\frac{AB}{AC}+\\frac{AC}{AB}$.",
+     "solution": [
+      "The lines $x+2y-7=0$ and $2x-y+4=0$ are perpendicular (coefficient sum $2-2=0$ in the pair), so $\\angle A=90^\\circ$ and $\\cot A=0$.",
+      "At $B$ the angle between $y=3x$ and slope $2$ has $\\tan B=\\frac{1}{7}=\\frac{AC}{AB}$, so $\\cot B+\\cot C=\\frac{AB}{AC}+\\frac{AC}{AB}=7+\\frac17=\\frac{50}{7}$.",
+      "Leg $AC$ = distance of $C(1,3)$ from $2x-y+4=0$: $\\frac{|2-3+4|}{\\sqrt5}=\\frac3{\\sqrt5}$. Leg $AB$ = distance of $B(4,12)$ from $x+2y-7=0$: $\\frac{|4+24-7|}{\\sqrt5}=\\frac{21}{\\sqrt5}$.",
+      "Area $=\\frac12\\cdot\\frac{3}{\\sqrt5}\\cdot\\frac{21}{\\sqrt5}=\\frac{63}{10}$.",
+      "Hypotenuse $BC=\\sqrt{(4-1)^2+(12-3)^2}=3\\sqrt{10}$, and $r=\\frac{AB+AC-BC}{2}=\\frac{3}{10}(8\\sqrt5-5\\sqrt{10})\\approx0.62$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A pair $ax^2+2hxy+by^2+\\dots=0$ is a pair of perpendicular lines iff $a+b=0$ (here $2-2=0$): the triangle is right-angled and areas/inradius become leg computations.",
+    "In any triangle $\\cot A+\\cot B+\\cot C=\\dfrac{a^2+b^2+c^2}{4\\Delta}$; check: $\\frac{90+88.2+1.8}{4(6.3)}=\\frac{180}{25.2}=\\frac{50}7$.",
+    "Right triangle: $r=\\frac{\\text{leg}_1+\\text{leg}_2-\\text{hyp}}{2}$; angle between lines $\\tan\\phi=\\left|\\frac{m_1-m_2}{1+m_1m_2}\\right|$ ($\\infty$ when $m_1m_2=-1$)."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Pair of straight lines: parallelogram formed by two line pairs (area and diagonals)"
+   ],
+   "question": "The two line pairs $y^2-4y+3=0$ and $x^2+4xy+4y^2-5x-10y+4=0$ enclose a four-sided convex polygon. Find (i) the area of the polygon and (ii) the lengths of its diagonals.",
+   "answer": "(i) Area $=6$ sq. units; (ii) diagonals $\\sqrt5$ and $\\sqrt{53}$",
+   "key_idea": "Both pairs factorise into parallel lines, so the polygon is a parallelogram whose vertices are found by intersecting the lines.",
+   "solution": [
+    "$y^2-4y+3=0\\Rightarrow y=3,\\ y=1$.",
+    "$x^2+4xy+4y^2-5x-10y+4=(x+2y)^2-5(x+2y)+4=(x+2y-4)(x+2y-1)=0$.",
+    "The lines are $y=1$, $y=3$, $x+2y=1$ and $x+2y=4$.",
+    "Vertices: $A(-1,1)$ ($y=1$, $x+2y=1$), $B(-5,3)$ ($y=3$, $x+2y=1$), $C(-2,3)$ ($y=3$, $x+2y=4$), $D(2,1)$ ($y=1$, $x+2y=4$).",
+    "(i) Area by the determinant (vertices in order $A,D,C,B$): $\\frac12\\left|\\begin{matrix}-1&2&-2&-5&-1\\\\1&1&3&3&1\\end{matrix}\\right|=\\frac12\\left[-1-2+6+2-6+15-5+3\\right]=6$.",
+    "(ii) Diagonal $AC=\\sqrt{(-1+2)^2+(1-3)^2}=\\sqrt{1+4}=\\sqrt5$.",
+    "Diagonal $BD=\\sqrt{(-5-2)^2+(3-1)^2}=\\sqrt{49+4}=\\sqrt{53}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Two pairs of parallel lines form a parallelogram: with side vectors $\\vec u,\\vec v$, area $=|\\vec u\\times\\vec v|$ and the diagonals are $|\\vec u\\pm\\vec v|$.",
+     "solution": [
+      "From $A(-1,1)$ the sides are $\\vec u=\\overrightarrow{AD}=(3,0)$ (along $y=1$, between $x+2y=1$ and $x+2y=4$) and $\\vec v=\\overrightarrow{AB}=(-4,2)$ (along $x+2y=1$, between $y=1$ and $y=3$).",
+      "Area $=|\\vec u\\times\\vec v|=|3\\cdot2-0\\cdot(-4)|=6$.",
+      "Diagonals: $\\overrightarrow{AC}=\\vec u+\\vec v=(-1,2)$, length $\\sqrt5$; $\\overrightarrow{DB}=\\vec v-\\vec u=(-7,2)$, length $\\sqrt{53}$.",
+      "Check: $d_1^2+d_2^2=5+53=58=2\\left(|\\vec u|^2+|\\vec v|^2\\right)=2(9+20)$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area enclosed by $a_1x+b_1y=p,\\ p'$ and $a_2x+b_2y=q,\\ q'$ is $\\dfrac{|p-p'|\\,|q-q'|}{|a_1b_2-a_2b_1|}$; here $\\frac{3\\cdot2}{|1\\cdot1-0\\cdot2|}=6$.",
+    "Parallelogram law: $d_1^2+d_2^2=2(a^2+b^2)$; diagonals are $|\\vec u+\\vec v|$ and $|\\vec u-\\vec v|$.",
+    "A quadratic equation that is a perfect square plus linear terms in $(x+2y)$ factorises as a quadratic in that single combination."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Pair of straight lines: parallelogram with diagonals meeting at the origin"
+   ],
+   "question": "Find the equation of the two straight lines which, together with those given by the equation $6x^2-xy-y^2+x+12y-35=0$, will make a parallelogram whose diagonals intersect at the origin.",
+   "answer": "$6x^2-xy-y^2-x-12y-35=0$",
+   "key_idea": "The opposite vertex of the pair's intersection point is its reflection in the origin, and the new lines are parallel to the given ones through that vertex.",
+   "solution": [
+    "Factorise: $6x^2-xy-y^2+x+12y-35=(2x-y+5)(3x+y-7)=0$.",
+    "The vertex $A$ is the intersection of $2x-y+5=0$ and $3x+y-7=0$: adding gives $5x=2$, so $A\\left(\\frac25,\\frac{29}5\\right)$.",
+    "The diagonals meet at the origin (their common midpoint), so the opposite vertex is $C\\left(-\\frac25,-\\frac{29}5\\right)$.",
+    "The other two sides pass through $C$ and are parallel to the given ones: $2x-y+K_1=0$ and $3x+y+K_2=0$.",
+    "Through $C$: $-\\frac45+\\frac{29}{5}+K_1=0\\Rightarrow K_1=-5$; and $-\\frac65-\\frac{29}5+K_2=0\\Rightarrow K_2=7$.",
+    "Combined equation: $(2x-y-5)(3x+y+7)=0$, i.e. $6x^2-xy-y^2-x-12y-35=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A parallelogram is symmetric about its centre, so the missing pair is the half-turn image of the given pair: replace $(x,y)$ by $(-x,-y)$.",
+     "solution": [
+      "The half-turn about the centre $O$ maps each side of the parallelogram to the opposite side.",
+      "So the required pair is the image of the given pair under $(x,y)\\mapsto(-x,-y)$.",
+      "In $6x^2-xy-y^2+x+12y-35=0$ the terms of degree $2$ and the constant are unchanged, the linear terms change sign.",
+      "Hence the required pair is $6x^2-xy-y^2-x-12y-35=0$ (matches), which factorises as $(2x-y-5)(3x+y+7)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Point reflection in $(p,q)$: $(x,y)\\to(2p-x,2q-y)$; in the origin it only flips the sign of the linear terms of a conic or pair of lines.",
+    "Opposite sides of a parallelogram are images under the half-turn about its centre; parallel sides share the same homogeneous part, so the new pair has the same $ax^2+2hxy+by^2$.",
+    "Check: the vertex $C$ of the new pair is $(-\\frac25,-\\frac{29}5)=-A$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Straight line through the origin meeting given lines (distances along a line)",
+    "Bounds on trigonometric expressions (maximum value)"
+   ],
+   "question": "A straight line passing through $O(0,0)$ cuts the lines $x=a$, $y=b$ and $x+y=8$ at $A$, $B$ and $C$ respectively such that $OA\\cdot OB\\cdot OC=48\\sqrt2$ and $f(a,b)\\le0$, where $f(x,y)=\\left|\\frac yx-\\frac32\\right|+(3x-2y)^6+\\sqrt{ex+2y-2e-6}$.\\n(i) Find the point of intersection of the lines $x=a$ and $y=b$.\\n(ii) Find the value of $(OA+OB+OC)$.\\n(iii) Find the equation of the line $OA$.",
+   "answer": "(i) $(2,3)$; (ii) $9\\sqrt2$; (iii) $x-y=0$",
+   "key_idea": "A sum of non-negative terms that is $\\le0$ forces every term to be $0$; later $\\sin2\\theta(\\sin\\theta+\\cos\\theta)=\\sqrt2$ is attained only at its maximum.",
+   "solution": [
+    "(i) Each term of $f$ is non-negative, so $f(a,b)\\le0$ forces $f(a,b)=0$ and every term zero.",
+    "$\\left|\\frac ba-\\frac32\\right|=0\\Rightarrow 2b=3a$ (the term $(3a-2b)^6=0$ gives the same relation).",
+    "$\\sqrt{ea+2b-2e-6}=0\\Rightarrow ea+2b-2e-6=0$; with $b=\\frac{3a}{2}$ this is $(e+3)(a-2)=0$, so $a=2$ and $b=3$.",
+    "The lines $x=2$ and $y=3$ meet at $(2,3)$.",
+    "(ii) Let the line $OA$ make angle $\\theta$ with the $x$-axis: $A=(r_1\\cos\\theta,r_1\\sin\\theta)$ on $x=2$ gives $r_1\\cos\\theta=2$.",
+    "$B=(r_2\\cos\\theta,r_2\\sin\\theta)$ on $y=3$ gives $r_2\\sin\\theta=3$.",
+    "$C=(r_3\\cos\\theta,r_3\\sin\\theta)$ on $x+y=8$ gives $r_3=\\frac{8}{\\cos\\theta+\\sin\\theta}$.",
+    "$r_1r_2r_3=48\\sqrt2\\Rightarrow\\frac{2\\cdot3\\cdot8}{\\cos\\theta\\sin\\theta(\\cos\\theta+\\sin\\theta)}=48\\sqrt2\\Rightarrow\\sin\\theta\\cos\\theta(\\sin\\theta+\\cos\\theta)=\\frac1{\\sqrt2}$.",
+    "So $\\sin2\\theta\\,(\\sin\\theta+\\cos\\theta)=\\sqrt2$. Since $\\sin2\\theta\\le1$ and $\\sin\\theta+\\cos\\theta\\le\\sqrt2$, equality needs $\\sin2\\theta=1$ and $\\sin\\theta+\\cos\\theta=\\sqrt2$, i.e. $\\theta=45^\\circ$.",
+    "$r_1=2\\sqrt2$, $r_2=3\\sqrt2$, $r_3=\\frac{8}{\\sqrt2}=4\\sqrt2$, so $OA+OB+OC=9\\sqrt2$.",
+    "(iii) $m=\\tan45^\\circ=1$ and the line passes through $O(0,0)$: $y=x$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the radicand condition as 'ea+2b-ea-6=0', a misprint for $ea+2b-2e-6=0$ (the printed radicand is $ex+2y-2e-6$). The solution $(a,b)=(2,3)$ is correct. The PDF also asserts '$\\theta=45^\\circ$' without the reason (maximum values), which has been added.",
+   "alternate_solutions": [
+    {
+     "idea": "Work with the slope $m$ of $OA$ instead of an angle: the condition becomes a polynomial equation with a double root at $m=1$.",
+     "solution": [
+      "Let $OA$ be $y=mx$. Then $A=(2,2m)$, $B=\\left(\\frac3m,3\\right)$, $C=\\left(\\frac8{1+m},\\frac{8m}{1+m}\\right)$ with the common factor $\\sqrt{1+m^2}$: $OA=2\\sqrt{1+m^2}$, $OB=\\frac{3\\sqrt{1+m^2}}{|m|}$, $OC=\\frac{8\\sqrt{1+m^2}}{|1+m|}$.",
+      "$OA\\cdot OB\\cdot OC=\\frac{48(1+m^2)^{3/2}}{|m||1+m|}=48\\sqrt2\\Rightarrow(1+m^2)^3=2m^2(1+m)^2$.",
+      "Expand: $m^6+m^4-4m^3+m^2+1=0$, which factorises as $(m-1)^2\\left(m^4+2m^3+4m^2+2m+1\\right)=0$.",
+      "The quartic factor equals $(m^2+m)^2+3m^2+2m+1>0$ (since $3m^2+2m+1$ has negative discriminant), so $m=1$ only.",
+      "Hence $y=x$, $OA=2\\sqrt2$, $OB=3\\sqrt2$, $OC=4\\sqrt2$ and the sum is $9\\sqrt2$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If every term of a sum is $\\ge0$ (even powers, modulus, square root) and the sum is $\\le0$, each term vanishes: this solves 'f(a,b)\\le0' type conditions in one line.",
+    "For a line through the origin at angle $\\theta$, its distances to $x=p$, $y=q$, $x+y=s$ are $\\frac{p}{\\cos\\theta}$, $\\frac q{\\sin\\theta}$, $\\frac{s}{\\cos\\theta+\\sin\\theta}$ (signed along the line).",
+    "$\\sin2\\theta\\,(\\sin\\theta+\\cos\\theta)\\le\\sqrt2$ with equality only at $\\theta=\\frac\\pi4$: an equation hitting the maximum of a product of bounded factors has a unique solution."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 3,
+   "concepts": [
+    "Angle between two lines and medians of a right-angled triangle"
+   ],
+   "question": "The triangle $ABC$, right-angled at $C$, has medians $AD$, $BE$ and $CF$. $AD$ lies along the line $y=x+3$ and $BE$ lies along the line $y=2x+4$. If the length of the hypotenuse is $60$, find the area of the triangle $ABC$.",
+   "answer": "$400$ sq. units",
+   "key_idea": "The acute angle between the two leg-medians is given by the slopes ($\\tan\\theta=\\frac13$) and also by the legs, giving $ab$.",
+   "solution": [
+    "Let $CA=b$, $CB=a$. Since the angle at $C$ is $90^\\circ$ and the hypotenuse is $60$: $a^2+b^2=60^2$.",
+    "The angle $\\theta$ between the medians (lines of slopes $1$ and $2$): $\\tan\\theta=\\left|\\frac{m_1-m_2}{1+m_1m_2}\\right|=\\left|\\frac{1-2}{1+2}\\right|=\\frac13$.",
+    "In $\\triangle CBE$ (right-angled at $C$, $CE=\\frac b2$), let $\\alpha=\\angle CBE$: $\\tan\\alpha=\\frac{CE}{BC}=\\frac{b/2}{a}=\\frac{b}{2a}$.",
+    "In $\\triangle ADC$ (right-angled at $C$, $CD=\\frac a2$): $\\tan\\angle ADC=\\frac{AC}{CD}=\\frac{b}{a/2}=\\frac{2b}{a}$.",
+    "$\\angle ADC$ is the exterior angle of $\\triangle GDB$ ($G$ the centroid) so $\\angle ADC=\\theta+\\alpha$ and $\\tan(\\theta+\\alpha)=\\frac{2b}{a}$.",
+    "$\\frac{\\tan\\theta+\\tan\\alpha}{1-\\tan\\theta\\tan\\alpha}=\\frac{2b}{a}\\Rightarrow\\frac{\\frac13+\\frac{b}{2a}}{1-\\frac13\\cdot\\frac b{2a}}=\\frac{2b}{a}$.",
+    "Simplify: $\\frac{2a+3b}{6a-b}=\\frac{2b}{a}\\Rightarrow 2a^2+3ab=12ab-2b^2\\Rightarrow 2(a^2+b^2)=9ab$.",
+    "With $a^2+b^2=3600$: $ab=800$.",
+    "Area of $\\triangle ABC=\\frac12ab=400$ sq. units."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In the PDF the step 'In $\\triangle CBE$: $\\tan\\theta=\\frac{CE}{BC}=\\frac b{2a}$' is mislabelled: that ratio is $\\tan\\alpha$ ($\\alpha=\\angle CBE$), while $\\tan\\theta=\\frac13$ comes from the slopes; the next line 'tan(θ+α)=tanθ+tab α...' is a typing slip. The corrected labels give the same $ab=800$ and area $400$.",
+   "alternate_solutions": [
+    {
+     "idea": "Triangle $ABG$ ($G$ the centroid): its area is $\\frac{\\Delta}3$ and the law of cosines on $AB$ gives $\\tan\\theta=\\frac{3\\Delta}{c^2}$ directly, so $\\Delta=\\frac{c^2\\tan\\theta}{3}$.",
+     "solution": [
+      "Let $GA$, $GB$ be the centroid-to-vertex distances and $\\theta$ the acute angle between the medians; $\\angle AGB=180^\\circ-\\theta$ and $[ABG]=\\frac\\Delta3$.",
+      "Medians to the legs ($C=90^\\circ$): $m_a^2=b^2+\\frac{a^2}4$, $m_b^2=a^2+\\frac{b^2}4$, so $GA^2+GB^2=\\frac49(m_a^2+m_b^2)=\\frac49\\cdot\\frac54(a^2+b^2)=\\frac59c^2$.",
+      "Law of cosines in $\\triangle AGB$: $c^2=GA^2+GB^2+2\\,GA\\cdot GB\\cos\\theta\\Rightarrow GA\\cdot GB\\cos\\theta=\\frac{2c^2}{9}$.",
+      "Area: $\\frac12GA\\cdot GB\\sin\\theta=\\frac\\Delta3\\Rightarrow GA\\cdot GB\\sin\\theta=\\frac{2\\Delta}{3}$.",
+      "Divide: $\\tan\\theta=\\frac{2\\Delta/3}{2c^2/9}=\\frac{3\\Delta}{c^2}$. With $\\tan\\theta=\\frac13$ and $c=60$: $\\Delta=\\frac{c^2}{9}=400$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In a right triangle (right angle at $C$, hypotenuse $c$), the acute angle $\\theta$ between the medians to the legs satisfies $\\tan\\theta=\\dfrac{3ab}{2(a^2+b^2)}=\\dfrac{3\\Delta}{c^2}$.",
+    "Hence $\\tan\\theta\\le\\frac34$ (equality for the isosceles right triangle), and $\\Delta=\\dfrac{c^2\\tan\\theta}{3}$: here $\\tan\\theta=\\frac13$ gives $\\frac{3600}{9}=400$.",
+    "$m_a^2+m_b^2=\\frac54c^2$ for the medians to the legs of a right triangle; the centroid divides each median $2:1$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Subjective Type",
+   "short_type": "Subjective",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Locus of the intersection of two variable lines (elimination of a parameter)"
+   ],
+   "question": "A straight line $L$ through the origin meets the lines $x+y=1$ and $x+y=3$ at $P$ and $Q$ respectively. Through $P$ and $Q$ two straight lines $L_1$ and $L_2$ are drawn, parallel to $2x-y=5$ and $3x+y=5$ respectively. Lines $L_1$ and $L_2$ intersect at $R$. Show that the locus of $R$, as $L$ varies, is a straight line.",
+   "answer": "$x-3y+5=0$",
+   "key_idea": "Writing $L_1$ and $L_2$ with the same parameter $\\frac1{m+1}$ on the right means a suitable ratio of the two equations eliminates $m$ linearly.",
+   "solution": [
+    "Let $L$ be $y=mx$. It meets $x+y=1$ at $P\\left(\\frac1{m+1},\\frac m{m+1}\\right)$ and $x+y=3$ at $Q\\left(\\frac3{m+1},\\frac{3m}{m+1}\\right)$.",
+    "$L_1$ through $P$ with slope $2$: $y-\\frac{m}{m+1}=2\\left(x-\\frac1{m+1}\\right)\\Rightarrow y-2x-1=-\\frac{3}{m+1}$ (1).",
+    "$L_2$ through $Q$ with slope $-3$: $y-\\frac{3m}{m+1}=-3\\left(x-\\frac{3}{m+1}\\right)\\Rightarrow y+3x-3=\\frac{6}{m+1}$ (2).",
+    "Dividing (1) by (2): $\\frac{y-2x-1}{y+3x-3}=-\\frac12$.",
+    "$2y-4x-2=-y-3x+3\\Rightarrow x-3y+5=0$, which is a straight line."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Because $x+y=1$ and $x+y=3$ are parallel, the homothety about $O$ gives $Q=3P$; then $R$ is found with vectors and two parameters.",
+     "solution": [
+      "$P$ and $Q$ lie on one line through $O$ and on parallel lines $x+y=1$, $x+y=3$, so $\\vec Q=3\\vec P$ with $P=(p,1-p)$.",
+      "$L_1$ has direction $(1,2)$, $L_2$ has direction $(1,-3)$; $R=P+s(1,2)=3P+t(1,-3)$.",
+      "So $s(1,2)-t(1,-3)=2P=(2p,2-2p)$; adding the components: $3s+2t=2$ (using $p+(1-p)=1$).",
+      "$R=P+s(1,2)=\\left(\\frac{3s-t}{2},\\frac{6s+3t}{2}\\right)$ (substituting $p=\\frac{s-t}{2}$).",
+      "$x-3y+5=\\frac{3s-t-18s-9t}{2}+5=-\\frac{5(3s+2t)}2+5=0$: $R$ lies on $x-3y+5=0$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If two moving lines can be written $\\ell_1(x,y)=\\alpha\\,g(m)$ and $\\ell_2(x,y)=\\beta\\,g(m)$ with the same function $g(m)$ (here $g=\\frac1{m+1}$), then $\\ell_1:\\ell_2=\\alpha:\\beta$ is free of $m$ and the locus is a straight line.",
+    "Points of a line through $O$ on parallel lines $x+y=c_1$, $x+y=c_2$ are in the ratio $c_1:c_2$ from $O$ (here $Q=3P$).",
+    "Check with $m=0$: $P(1,0)$, $Q(3,0)$; $L_1:y=2x-2$, $L_2:y=-3x+9$ meet at $R(\\frac{11}{5},\\frac{12}{5})$ and $\\frac{11}5-\\frac{36}5+5=0$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "level": 2,
+   "concepts": [
+    "Intercepts of a line through a fixed point",
+    "AM–GM inequality (minimum value)"
+   ],
+   "question": "A straight line $L$ with negative slope passes through the point $(8,2)$ and cuts the positive coordinate axes at the points $P$ and $Q$. Find the absolute minimum value of $OP+OQ$, as $L$ varies, where $O$ is the origin.",
+   "answer": "18",
+   "key_idea": "$OP+OQ=10+\\frac{2}{|m|}+8|m|$ is a sum of two reciprocal-type terms, so AM–GM gives the minimum.",
+   "solution": [
+    "The line is $y-2=m(x-8)$ with $m<0$.",
+    "Its intercepts: $P\\left(8-\\frac2m,\\,0\\right)$ and $Q(0,\\,2-8m)$, both positive since $m<0$.",
+    "$OP+OQ=\\left|8-\\frac2m\\right|+|2-8m|=10+\\frac{2}{(-m)}+8(-m)$.",
+    "By AM–GM: $10+\\frac{2}{(-m)}+8(-m)\\ge10+2\\sqrt{\\frac{2}{(-m)}\\cdot8(-m)}=10+2\\cdot4=18$.",
+    "Equality holds when $\\frac2{(-m)}=8(-m)$, i.e. $m=-\\frac12$ (then $P=(12,0)$, $Q=(0,6)$), so the minimum is attained and equals $18$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working ends with a leftover line 'Area of $\\triangle OPQ$ is minimum when $(8,2)$ is the midpoint... $=32$', which answers a different question (minimum area). It is not part of this question and has been dropped; the AM–GM working and the answer $18$ are correct. The attainment of equality ($m=-\\frac12$) has been added.",
+   "alternate_solutions": [
+    {
+     "idea": "Intercept form $\\frac xp+\\frac yq=1$ with $\\frac8p+\\frac2q=1$, and Cauchy–Schwarz on $(p+q)\\left(\\frac8p+\\frac2q\\right)$.",
+     "solution": [
+      "Let $P=(p,0)$, $Q=(0,q)$ with $p,q>0$; the line $\\frac xp+\\frac yq=1$ passes through $(8,2)$, so $\\frac8p+\\frac2q=1$.",
+      "$p+q=(p+q)\\left(\\frac8p+\\frac2q\\right)$.",
+      "By Cauchy–Schwarz, $(p+q)\\left(\\frac8p+\\frac2q\\right)\\ge\\left(\\sqrt8+\\sqrt2\\right)^2=\\left(3\\sqrt2\\right)^2=18$.",
+      "Equality when $\\frac pq=\\frac{\\sqrt8}{\\sqrt2}=2$: with $\\frac8p+\\frac2q=1$ this gives $p=12$, $q=6$ (slope $-\\frac12<0$).",
+      "So the minimum of $OP+OQ$ is $18$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a line through $(a,b)$ with positive intercepts $p,q$: $\\min(p+q)=(\\sqrt a+\\sqrt b)^2$, attained at $p=a+\\sqrt{ab}$, $q=b+\\sqrt{ab}$ (here $18$ at $p=12,q=6$).",
+    "For the same family: minimum area of $\\triangle OPQ=2ab$ (when $(a,b)$ is the midpoint of $PQ$): $32$ for $(8,2)$; minimum length of $PQ$ is $\\left(a^{2/3}+b^{2/3}\\right)^{3/2}\\approx13.2$.",
+    "AM–GM on terms of the form $\\frac{c}{t}+dt$ ($c,d,t>0$) gives $\\ge2\\sqrt{cd}$, equality at $t=\\sqrt{c/d}$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 2,
+   "concepts": [
+    "Area of a quadrilateral in coordinates; maximum of a quadratic function"
+   ],
+   "paragraph": "Let $ABCD$ be a square with sides of unit length. Points $E$ and $F$ are taken on sides $AB$ and $AD$ respectively so that $AE=AF$. Let $P$ be a point inside the square $ABCD$.",
+   "question": "The maximum possible area of quadrilateral $CDFE$ is:",
+   "options": [
+    "$\\frac18$",
+    "$\\frac14$",
+    "$\\frac58$",
+    "$\\frac38$"
+   ],
+   "answer": "(C) $\\frac58$",
+   "key_idea": "Put $AE=AF=x$; the area is a quadratic in $x$ whose vertex lies inside $(0,1)$.",
+   "solution": [
+    "Take $A(0,0)$, $B(1,0)$, $C(1,1)$, $D(0,1)$, $E(x,0)$, $F(0,x)$ with $0<x<1$.",
+    "Area of $CDFE$ by the determinant (vertices $E,F,D,C$): $\\frac12\\left|\\begin{matrix}x&0&0&1&x\\\\0&x&1&1&0\\end{matrix}\\right|=\\frac12\\left|x^2-1-x\\right|$.",
+    "$A=\\frac12\\left|x^2-x-1\\right|=\\frac12\\left(1+x-x^2\\right)$ for $x\\in(0,1)$ (since $x^2-x-1<0$ there).",
+    "The quadratic $x^2-x-1$ has its vertex at $x=-\\frac{b}{2a}=\\frac12\\in(0,1)$.",
+    "Vertex value: $-\\frac{D}{4a}=-\\frac{1+4}{4}=-\\frac54$, so $A_{\\max}=\\frac12\\cdot\\frac54=\\frac58$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract the two cut-off right triangles from the unit square and complete the square.",
+     "solution": [
+      "With $AE=AF=x$: $[AEF]=\\frac{x^2}2$ and $[EBC]=\\frac12(1-x)\\cdot1$.",
+      "$[CDFE]=1-\\frac{x^2}{2}-\\frac{1-x}{2}=\\frac{1+x-x^2}{2}$.",
+      "Complete the square: $\\frac{1+x-x^2}{2}=\\frac58-\\frac12\\left(x-\\frac12\\right)^2\\le\\frac58$.",
+      "Equality at $x=\\frac12$, so the maximum area is $\\frac58$ (option C) (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area of a polygon from vertices in order: $\\frac12\\left|\\sum(x_iy_{i+1}-x_{i+1}y_i)\\right|$ (shoelace); for shapes inside a square it is often quicker to subtract corner triangles from the square.",
+    "$ax^2+bx+c$ with $a<0$ has maximum $c-\\frac{b^2}{4a}$ at $x=-\\frac b{2a}$; check that the vertex lies in the allowed interval.",
+    "Here $x=0$ gives area $\\frac12$ and $x=1$ gives $\\frac12$, so the maximum $\\frac58$ lies strictly between."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 1,
+   "concepts": [
+    "Distance formula; coordinates of a square"
+   ],
+   "paragraph": "Let $ABCD$ be a square with sides of unit length. Points $E$ and $F$ are taken on sides $AB$ and $AD$ respectively so that $AE=AF$. Let $P$ be a point inside the square $ABCD$.",
+   "question": "The value of $(PA)^2-(PB)^2+(PC)^2-(PD)^2$ is equal to:",
+   "options": [
+    "$3$",
+    "$2$",
+    "$1$",
+    "$0$"
+   ],
+   "answer": "(D) $0$",
+   "key_idea": "Take $P=(\\alpha,\\beta)$ and expand: all terms cancel in pairs.",
+   "solution": [
+    "Take $A(0,0)$, $B(1,0)$, $C(1,1)$, $D(0,1)$ and $P(\\alpha,\\beta)$.",
+    "$PA^2=\\alpha^2+\\beta^2$, $PB^2=(\\alpha-1)^2+\\beta^2$, $PC^2=(\\alpha-1)^2+(\\beta-1)^2$, $PD^2=\\alpha^2+(\\beta-1)^2$.",
+    "$Z=\\alpha^2+\\beta^2-(\\alpha-1)^2-\\beta^2+(\\alpha-1)^2+(\\beta-1)^2-\\alpha^2-(\\beta-1)^2$.",
+    "Terms cancel in pairs: $\\alpha^2$ with $-\\alpha^2$, $\\beta^2$ with $-\\beta^2$, $(\\alpha-1)^2$ with $-(\\alpha-1)^2$ and $(\\beta-1)^2$ with $-(\\beta-1)^2$, so $Z=0$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's expression for $Z$ contains misprints: it prints $(\\beta+2)^2$ and $(\\beta\\alpha)^2$ where $(\\beta-1)^2$ and $\\alpha^2+(\\beta-1)^2$ are meant, i.e. $PC^2$ and $PD^2$ are mis-typed. With the correct distances the sum is $0$, as the key says.",
+   "alternate_solutions": [
+    {
+     "idea": "British Flag Theorem: for a rectangle $ABCD$ and any point $P$, $PA^2+PC^2=PB^2+PD^2$.",
+     "solution": [
+      "Let $O$ be the centre of the rectangle, with $\\vec{OA}=-\\vec{OC}=\\vec u$ and $\\vec{OB}=-\\vec{OD}=\\vec v$, $|\\vec u|=|\\vec v|$ (diagonals of a rectangle are equal).",
+      "For any $P$: $PA^2+PC^2=|\\vec p-\\vec u|^2+|\\vec p+\\vec u|^2=2|\\vec p|^2+2|\\vec u|^2$.",
+      "Likewise $PB^2+PD^2=2|\\vec p|^2+2|\\vec v|^2$.",
+      "Since $|\\vec u|=|\\vec v|$, $PA^2+PC^2=PB^2+PD^2$, so $PA^2-PB^2+PC^2-PD^2=0$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "British Flag Theorem: for any point $P$ in the plane of a rectangle $ABCD$, $PA^2+PC^2=PB^2+PD^2$ (even if $P$ is outside).",
+    "For a general parallelogram $PA^2+PC^2-PB^2-PD^2=\\frac{AC^2-BD^2}{2}$, a constant that is $0$ exactly when the diagonals are equal, i.e. for a rectangle.",
+    "Check with $P=A$: $0-1+2-1=0$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 1,
+   "concepts": [
+    "Area of a triangle and distance formula (line dividing a square in a given ratio)"
+   ],
+   "paragraph": "Let $ABCD$ be a square with sides of unit length. Points $E$ and $F$ are taken on sides $AB$ and $AD$ respectively so that $AE=AF$. Let $P$ be a point inside the square $ABCD$.",
+   "question": "Let a line passing through point $A$ divide the square $ABCD$ into two parts so that the area of one portion is double the other. Then the length of the portion of the line inside the square is:",
+   "options": [
+    "$\\frac{\\sqrt{10}}{3}$",
+    "$\\frac{\\sqrt{13}}{3}$",
+    "$\\frac{\\sqrt{11}}{3}$",
+    "$\\frac{2}{\\sqrt3}$"
+   ],
+   "answer": "(B) $\\frac{\\sqrt{13}}3$",
+   "key_idea": "The smaller part has area $\\frac13$ and is a right triangle with legs $1$ and $x$, so $x=\\frac23$.",
+   "solution": [
+    "Take $A(0,0)$, $B(1,0)$, $C(1,1)$, $D(0,1)$; let the line through $A$ meet $BC$ at $(1,x)$.",
+    "One part is double the other, so the smaller part has area $\\frac13$ of the square: $3\\mathcal A=1$, $\\mathcal A=\\frac13$.",
+    "The smaller part is the triangle with legs $1$ and $x$: $\\frac12\\cdot1\\cdot x=\\frac13$.",
+    "So $x=\\frac23$.",
+    "Length of the line inside the square $=\\sqrt{1+x^2}=\\sqrt{1+\\frac49}=\\frac{\\sqrt{13}}{3}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "A line from a vertex of a unit square cutting off area fraction $f\\le\\frac12$ meets the far side at height $2f$, so its length is $\\sqrt{1+4f^2}$; here $f=\\frac13$ gives $\\frac{\\sqrt{13}}3$.",
+    "The other possibility (the line meeting $CD$) is the mirror image in the diagonal $AC$ and has the same length.",
+    "Limits: $f\\to0$ gives length $1$ (the side $AB$) and $f=\\frac12$ gives $\\sqrt2$ (the diagonal $AC$); the length $\\sqrt{1+4f^2}$ increases with $f$, and $\\frac{\\sqrt{13}}{3}\\approx1.20$ lies between them."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 3,
+   "concepts": [
+    "Equation of a line through a midpoint, intersection point and area of a triangle in coordinates",
+    "Range of a rational function of $\\tan\\theta$"
+   ],
+   "paragraph": "The base of an isosceles triangle is equal to $4$, the base angle is equal to $45^\\circ$. A straight line cuts the extension of the base at a point $M$ at the angle $\\theta$ and bisects the lateral side of the triangle which is nearest to $M$.",
+   "question": "The area $A$ of the quadrilateral which the straight line cuts off from the given triangle is:",
+   "options": [
+    "$\\frac{3+\\tan\\theta}{1+\\tan\\theta}$",
+    "$\\frac{3+2\\tan\\theta}{1+\\tan\\theta}$",
+    "$\\frac{3+\\tan\\theta}{1-\\tan\\theta}$",
+    "$\\frac{3+5\\tan\\theta}{1+\\tan\\theta}$"
+   ],
+   "answer": "(D) $\\frac{3+5\\tan\\theta}{1+\\tan\\theta}$",
+   "key_idea": "The quadrilateral is the triangle minus the small triangle $APQ$, whose area comes from the intersection point $Q$ of the line with $AC$.",
+   "solution": [
+    "Take $B(0,0)$, $C(4,0)$, $A(2,2)$ (base $4$, base angles $45^\\circ$, so the apex angle is $90^\\circ$); $M$ lies on the extension of the base beyond $B$, so the line bisects $AB$ at $P(1,1)$.",
+    "Equation of the line $PM$: $y-1=\\tan\\theta\\,(x-1)$.",
+    "$AC$ is $y=4-x$. Its intersection $Q$ with $PM$: $4-x-1=\\tan\\theta\\,(x-1)\\Rightarrow x=\\frac{3+\\tan\\theta}{1+\\tan\\theta}$.",
+    "So $Q\\equiv\\left(\\frac{3+\\tan\\theta}{1+\\tan\\theta},\\frac{1+3\\tan\\theta}{1+\\tan\\theta}\\right)$.",
+    "Area of $\\triangle APQ=\\frac12\\left|\\begin{matrix}1&1&1\\\\2&2&1\\\\\\frac{3+\\tan\\theta}{1+\\tan\\theta}&\\frac{1+3\\tan\\theta}{1+\\tan\\theta}&1\\end{matrix}\\right|=\\frac{1-\\tan\\theta}{1+\\tan\\theta}$.",
+    "Area of $\\triangle ABC=\\frac12\\cdot4\\cdot2=4$.",
+    "The quadrilateral $PBCQ$ cut off has area $A=4-\\frac{1-\\tan\\theta}{1+\\tan\\theta}=\\frac{4+4\\tan\\theta-1+\\tan\\theta}{1+\\tan\\theta}=\\frac{3+5\\tan\\theta}{1+\\tan\\theta}$ (option D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's shared solution for Q21–Q23 stops after the area of $\\triangle APQ$; the subtraction from the area $4$ of $\\triangle ABC$ that gives the printed key (D) was added here.",
+   "alternate_solutions": [
+    {
+     "idea": "The apex angle is $90^\\circ$, so $\\triangle APQ$ is right-angled at $A$ and $AQ=AP\\tan(45^\\circ-\\theta)$: no coordinates for $Q$ are needed.",
+     "solution": [
+      "$\\triangle ABC$ has base angles $45^\\circ$, so $\\angle A=90^\\circ$; $AP=\\frac12AB=\\sqrt2$.",
+      "The line $PM$ makes angle $\\theta$ with the base while $PA$ makes $45^\\circ$, so $\\angle APQ=45^\\circ-\\theta$.",
+      "In the right triangle $APQ$: $AQ=AP\\tan(45^\\circ-\\theta)=\\sqrt2\\,\\frac{1-\\tan\\theta}{1+\\tan\\theta}$.",
+      "$[APQ]=\\frac12\\cdot\\sqrt2\\cdot\\sqrt2\\,\\frac{1-\\tan\\theta}{1+\\tan\\theta}=\\frac{1-\\tan\\theta}{1+\\tan\\theta}$.",
+      "$A=[ABC]-[APQ]=4-\\frac{1-\\tan\\theta}{1+\\tan\\theta}=\\frac{3+5\\tan\\theta}{1+\\tan\\theta}$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "An isosceles triangle with base angles $45^\\circ$ is right-angled at the apex; a median-type cut from a midpoint of a leg gives areas via $\\tan(45^\\circ-\\theta)=\\frac{1-\\tan\\theta}{1+\\tan\\theta}$.",
+    "A cut-off area expressed as $\\frac{\\alpha+\\beta t}{1+t}=\\beta+\\frac{\\alpha-\\beta}{1+t}$ is monotonic in $t=\\tan\\theta$: rewrite as a constant plus a Möbius term before ranging it.",
+    "Check at $\\theta\\to0$: the line is $y=1$, cutting off the trapezium of area $4-1=3$, and the formula gives $3$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 3,
+   "concepts": [
+    "Range of a rational function of $\\tan\\theta$; limiting positions of a line"
+   ],
+   "paragraph": "The base of an isosceles triangle is equal to $4$, the base angle is equal to $45^\\circ$. A straight line cuts the extension of the base at a point $M$ at the angle $\\theta$ and bisects the lateral side of the triangle which is nearest to $M$.",
+   "question": "The range of values of $A$, for different values of $\\theta$, lies in the interval:",
+   "options": [
+    "$\\left(\\frac52,\\frac72\\right)$",
+    "$(4,5)$",
+    "$\\left(4,\\frac92\\right)$",
+    "$(3,4)$"
+   ],
+   "answer": "(D) $(3,4)$",
+   "key_idea": "$\\tan\\theta$ is restricted to $(0,1)$, and $A=5-\\frac2{1+\\tan\\theta}$ is increasing, so its range is between its end values.",
+   "solution": [
+    "Take $B(0,0)$, $C(4,0)$, $A(2,2)$ (base $4$, base angles $45^\\circ$, so the apex angle is $90^\\circ$); $M$ lies on the extension of the base beyond $B$, so the line bisects $AB$ at $P(1,1)$.",
+    "The line through $P(1,1)$ with slope $t=\\tan\\theta$ meets the base line $y=0$ at $x=1-\\frac1t$; this is to the left of $B$ (so $M$ is on the extension of the base) only if $0<t<1$.",
+    "For $0<t<1$ the point $Q$ lies on $AC$ itself (its $x$-coordinate $\\frac{3+t}{1+t}$ decreases from $3$ to $2$), so $0<\\theta<45^\\circ$.",
+    "From Q21: $A=\\frac{3+5t}{1+t}=5-\\frac{2}{1+t}$.",
+    "$A$ is an increasing function of $t$ on $(0,1)$.",
+    "As $t\\to0^+$, $A\\to5-2=3$; as $t\\to1^-$, $A\\to5-1=4$ (neither end is attained).",
+    "Hence $A\\in(3,4)$ (option D)."
+   ],
+   "solution_source": "written",
+   "alternate_solutions": [
+    {
+     "idea": "Use the two limiting positions of the line: parallel to the base ($\\theta\\to0$) and through the apex ($\\theta\\to45^\\circ$).",
+     "solution": [
+      "$A=[ABC]-[APQ]=4-[APQ]$ and $[APQ]\\in(0,1)$ as $\\theta$ runs over $(0,45^\\circ)$.",
+      "$\\theta\\to0$: the line becomes $y=1$ and $\\triangle APQ$ is the top triangle of height $1$ out of $2$, similar to $ABC$ with ratio $\\frac12$: area $\\frac14\\cdot4=1$, so $A\\to3$.",
+      "$\\theta\\to45^\\circ$: the line passes through $A$, $Q\\to A$ and $[APQ]\\to0$, so $A\\to4$.",
+      "$[APQ]=\\frac{1-t}{1+t}$ is strictly decreasing from $1$ to $0$, so $A$ takes every value in $(3,4)$ (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "To find the range of a monotonic expression, evaluate it at the two limiting positions of the geometric parameter; check monotonicity from the form const$\\,\\pm\\,\\frac{k}{1+t}$.",
+    "Limiting positions are often easier than calculus: here the parallel line cuts a similar triangle of ratio $\\frac12$ (area $\\frac14$ of the whole).",
+    "Open interval because $\\theta=0$ (no point $M$) and $\\theta=45^\\circ$ (line through the apex, no quadrilateral) are excluded."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "level": 3,
+   "concepts": [
+    "Distance between two points of intersection; range of a trigonometric expression"
+   ],
+   "paragraph": "The base of an isosceles triangle is equal to $4$, the base angle is equal to $45^\\circ$. A straight line cuts the extension of the base at a point $M$ at the angle $\\theta$ and bisects the lateral side of the triangle which is nearest to $M$.",
+   "question": "The length of the portion of the straight line inside the triangle may lie in the range:",
+   "options": [
+    "$(2,4)$",
+    "$\\left(\\frac32,\\sqrt3\\right)$",
+    "$(\\sqrt2,2)$",
+    "$(\\sqrt2,\\sqrt3)$"
+   ],
+   "answer": "(C) $(\\sqrt2,2)$",
+   "key_idea": "The portion inside the triangle is $PQ$; its length $\\frac{2\\sqrt{1+t^2}}{1+t}$ is monotonic on $t\\in(0,1)$.",
+   "solution": [
+    "Equation of line $PM$: $y-1=\\tan\\theta\\,(x-1)$, with $P(1,1)$ on $AB$.",
+    "Its intersection $Q$ with $AC$ ($y=4-x$): $4-x-1=\\tan\\theta\\,(x-1)$, so $Q\\equiv\\left(\\frac{3+\\tan\\theta}{1+\\tan\\theta},\\frac{1+3\\tan\\theta}{1+\\tan\\theta}\\right)$.",
+    "The portion inside the triangle is $PQ$, with $\\overrightarrow{PQ}=\\left(\\frac{2}{1+t},\\frac{2t}{1+t}\\right)$ where $t=\\tan\\theta\\in(0,1)$.",
+    "$PQ^2=\\frac{4(1+t^2)}{(1+t)^2}=4\\left(1-\\frac{2t}{(1+t)^2}\\right)$.",
+    "$\\frac{2t}{(1+t)^2}$ is increasing on $(0,1)$ (its derivative is $\\frac{2(1-t)}{(1+t)^3}>0$), so $PQ$ decreases.",
+    "As $t\\to0^+$, $PQ\\to2$; as $t\\to1^-$, $PQ\\to\\frac{2\\sqrt2}{2}=\\sqrt2$.",
+    "So $PQ\\in(\\sqrt2,2)$ (option C)."
+   ],
+   "solution_source": "written",
+   "alternate_solutions": [
+    {
+     "idea": "In the right triangle $APQ$ (right angle at $A$) the hypotenuse is $PQ=\\frac{AP}{\\cos\\angle APQ}=\\frac{\\sqrt2}{\\cos(45^\\circ-\\theta)}$.",
+     "solution": [
+      "$\\angle A=90^\\circ$, $AP=\\sqrt2$ and $\\angle APQ=45^\\circ-\\theta$ (from Q21).",
+      "$PQ=\\frac{AP}{\\cos(45^\\circ-\\theta)}=\\frac{\\sqrt2}{\\cos(45^\\circ-\\theta)}$.",
+      "For $\\theta\\in(0,45^\\circ)$ the angle $45^\\circ-\\theta$ runs through $(0,45^\\circ)$ and its cosine through $\\left(\\frac{\\sqrt2}{2},1\\right)$.",
+      "So $PQ$ lies in $\\left(\\sqrt2,\\frac{\\sqrt2}{\\sqrt2/2}\\right)=(\\sqrt2,2)$ (matches); equivalently $PQ=\\frac{2}{\\sin\\theta+\\cos\\theta}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{2}{\\cos\\theta+\\sin\\theta}=\\frac{\\sqrt2}{\\cos(\\theta-45^\\circ)}$: a chord length through a fixed point often reduces to $\\frac{\\text{const}}{\\cos(\\theta-\\varphi)}$, monotonic away from $\\varphi$.",
+    "Ends of the range correspond to degenerate lines: $\\theta\\to0$ gives the parallel line $y=1$ (chord $2$), $\\theta\\to45^\\circ$ gives the line $PA$ (chord $\\sqrt2$).",
+    "The range is open at both ends because those two positions are excluded by the question."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "level": 2,
+   "concepts": [
+    "Parallelogram, rhombus and square formed by lines",
+    "Pair of straight lines"
+   ],
+   "question": "Match the following columns.\\nColumn–I\\n(A) The four lines $3x-4y+11=0$; $3x-4y-9=0$; $4x+3y+3=0$ and $4x+3y-17=0$ enclose a figure which is\\n(B) The lines $2x+y=1$, $x+2y=1$, $2x+y=3$ and $x+2y=3$ form a figure which is\\n(C) If $O$ is the origin, $P$ is the intersection of the lines $2x^2-7xy+3y^2+5x+10y-25=0$, and $A$, $B$ are the points in which these lines are cut by the line $x+2y-5=0$, then the points $O,A,P,B$ (in some order) are the vertices of\\nColumn–II\\n(P) A quadrilateral which is neither a parallelogram nor a trapezium nor a kite\\n(Q) A parallelogram which is neither a rectangle nor a rhombus\\n(R) A rhombus which is not a square\\n(S) A square",
+   "answer": "(A) $\\to$ S; (B) $\\to$ R; (C) $\\to$ Q",
+   "key_idea": "Equal distances between the two parallel pairs give a rhombus; perpendicular families make it a square; a pair of lines is first factorised.",
+   "solution": [
+    "(A) $3x-4y+11=0$ and $3x-4y-9=0$ are parallel, with distance $d_1=\\frac{|11+9|}{5}=4$; $4x+3y+3=0$ and $4x+3y-17=0$ are parallel, with distance $d_2=\\frac{|3+17|}{5}=4$.",
+    "The normals $(3,-4)$ and $(4,3)$ satisfy $3\\cdot4-4\\cdot3=0$, so the two families are perpendicular and $d_1=d_2$: a square, (S).",
+    "(B) $2x+y=1$, $2x+y=3$ are parallel at distance $d_1=\\frac{2}{\\sqrt5}$; $x+2y=1$, $x+2y=3$ are parallel at distance $d_2=\\frac2{\\sqrt5}$.",
+    "$d_1=d_2$ but the normals $(2,1)$ and $(1,2)$ have dot product $4\\neq0$, so the interior angle is not $90^\\circ$: a rhombus that is not a square, (R).",
+    "(C) $2x^2-7xy+3y^2+5x+10y-25=(x-3y+5)(2x-y-5)$; the point of intersection of the two lines is $P(4,3)$.",
+    "The line $x+2y-5=0$ cuts $2x-y-5=0$ at $A(3,1)$ and $x-3y+5=0$ at $B(1,2)$; with $O(0,0)$: $m_{OA}=\\frac13$, $m_{BP}=\\frac13$, $m_{AP}=\\frac21$, $m_{OB}=\\frac21$.",
+    "So $OA\\parallel BP$ and $AP\\parallel OB$: a parallelogram. $m_{OA}\\,m_{AP}=\\frac23\\neq-1$, so not a rectangle; $OA=\\sqrt{10}\\neq AP=\\sqrt5$, so not a rhombus.",
+    "Hence (C) is a parallelogram which is neither a rectangle nor a rhombus, (Q). Answer: (A) S; (B) R; (C) Q."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compute the vertices and test the diagonals: equal diagonals mean a rectangle, perpendicular diagonals mean a rhombus, both mean a square.",
+     "solution": [
+      "(A) Vertices (intersections of consecutive lines): $\\left(-\\frac95,\\frac75\\right)$, $\\left(\\frac75,\\frac{19}{5}\\right)$, $\\left(\\frac{19}5,\\frac35\\right)$, $\\left(\\frac35,-\\frac95\\right)$; the diagonals join opposite ones: $\\left(\\frac{28}{5},-\\frac45\\right)$ and $\\left(-\\frac45,-\\frac{28}{5}\\right)$.",
+      "Both diagonals have length $\\frac{\\sqrt{800}}{5}=4\\sqrt2$ and their dot product is $\\frac{28(-4)+(-4)(-28)}{25}=0$: equal and perpendicular, a square (S).",
+      "(B) Vertices $\\left(\\frac13,\\frac13\\right)$, $\\left(-\\frac13,\\frac53\\right)$, $(1,1)$, $\\left(\\frac53,-\\frac13\\right)$; diagonals $\\left(\\frac23,\\frac23\\right)$ and $(2,-2)$ are perpendicular (dot product $0$) but of lengths $\\frac{2\\sqrt2}{3}\\neq2\\sqrt2$: a rhombus, not a square (R).",
+      "(C) Parallelogram $OAPB$ with diagonals $\\overrightarrow{OP}=(4,3)$ and $\\overrightarrow{AB}=(-2,1)$: dot product $-5\\neq0$ (not a rhombus) and lengths $5\\neq\\sqrt5$ (not a rectangle): (Q).",
+      "Same matching: (A) S; (B) R; (C) Q."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two pairs of parallel lines make a parallelogram; it is a rhombus iff the two strip-widths are equal, a rectangle iff the families are perpendicular, a square iff both.",
+    "Equal diagonals $\\iff$ rectangle; perpendicular diagonals $\\iff$ rhombus (for a parallelogram); both $\\iff$ square.",
+    "Pair of lines $ax^2+2hxy+by^2+\\dots=0$ factorises as $(l_1x+m_1y+c_1)(l_2x+m_2y+c_2)$; the lines are perpendicular iff $a+b=0$."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "level": 2,
+   "concepts": [
+    "Concurrency of three lines and the determinant of a cyclic system",
+    "Identity for $a^3+b^3+c^3-3abc$"
+   ],
+   "question": "Consider the three linear equations $ax+by+c=0$, $bx+cy+a=0$, $cx+ay+b=0$ where $a,b,c\\in\\mathbb R$. Match the following columns.\\nColumn–I\\n(A) If $a+b+c=0$ and $a^2+b^2+c^2\\neq ab+bc+ca$, then\\n(B) If $a+b+c=0$ and $a^2+b^2+c^2=ab+bc+ca$, then\\n(C) If $a+b+c\\neq0$ and $a^2+b^2+c^2\\neq ab+bc+ca$, then\\n(D) If $a+b+c\\neq0$ and $a^2+b^2+c^2=ab+bc+ca$, then\\nColumn–II\\n(P) Entire $xy$ plane\\n(Q) The lines are concurrent\\n(R) Lines are coincident\\n(S) Lines are neither coincident nor concurrent",
+   "answer": "(A) $\\to$ Q; (B) $\\to$ P; (C) $\\to$ S; (D) $\\to$ R",
+   "key_idea": "Concurrency means $\\Delta=0$ and $\\Delta=-(a+b+c)\\left(a^2+b^2+c^2-ab-bc-ca\\right)$, where the second factor vanishes only when $a=b=c$.",
+   "solution": [
+    "$\\Delta=\\left|\\begin{matrix}a&b&c\\\\b&c&a\\\\c&a&b\\end{matrix}\\right|$ and $\\Delta=0$ is the condition of concurrency.",
+    "$\\Delta=-(a^3+b^3+c^3-3abc)=-(a+b+c)\\left(a^2+b^2+c^2-ab-bc-ca\\right)$.",
+    "(A) $a+b+c=0$ but $\\sum a^2\\neq\\sum ab$ (so $a,b,c$ are not all equal): $\\Delta=0$, hence the lines are concurrent, (Q).",
+    "(B) $a+b+c=0$ and $\\sum a^2=\\sum ab\\Rightarrow a=b=c\\Rightarrow a=b=c=0$: every equation is $0x+0y+0=0$, satisfied by every $(x,y)$: the entire $xy$ plane, (P).",
+    "(C) $a+b+c\\neq0$ and $\\sum a^2\\neq\\sum ab$ (not all equal) $\\Rightarrow\\Delta\\neq0$: the equations represent lines that are neither coincident nor concurrent, (S).",
+    "(D) $a+b+c\\neq0$ and $\\sum a^2=\\sum ab\\Rightarrow a=b=c\\neq0$: the three equations all reduce to $x+y+1=0$, so the lines are identical (coincident), (R)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Add the three equations to get $(a+b+c)(x+y+1)=0$, then settle each case directly; for (C) show that a common point would force $x^3=1$ and $a=b=c$.",
+     "solution": [
+      "Adding the equations: $(a+b+c)(x+y+1)=0$. If $a+b+c=0$ the point $(1,1)$ satisfies all three, so the lines are concurrent: (A) $\\to$ Q (they are distinct since coincidence needs $a=b=c$, which with $a+b+c=0$ is case B).",
+      "$a^2+b^2+c^2-ab-bc-ca=\\frac12\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]=0$ iff $a=b=c$; with $a+b+c=0$ this is $a=b=c=0$: all equations read $0=0$, giving the whole plane: (B) $\\to$ P.",
+      "(D) $a=b=c\\neq0$: each equation is $x+y+1=0$ after dividing by $a$: coincident, (R).",
+      "(C) Suppose a common point existed. Adding gives $x+y+1=0$ (as $a+b+c\\neq0$), so $y=-1-x$. With $u=a-b$, $v=b-c$, $w=c-a$ the equations become $ux=v$, $vx=w$, $wx=u$.",
+      "Then $ux^3=u$. If $u\\neq0$: $x=1$, so $u=v=w$, and $u+v+w=0$ gives $u=0$, a contradiction. If $u=0$ then $v=w=0$, i.e. $a=b=c$, excluded. So no common point: (C) $\\to$ S (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Three lines $a_ix+b_iy+c_i=0$ are concurrent iff $\\det(a_i,b_i,c_i)=0$ (or they are parallel in the degenerate case).",
+    "$a^3+b^3+c^3-3abc=(a+b+c)\\cdot\\frac12\\left[(a-b)^2+(b-c)^2+(c-a)^2\\right]$; the bracket is $0$ iff $a=b=c$.",
+    "For cyclic systems $ax+by+c,\\ bx+cy+a,\\ cx+ay+b$, summing the equations gives $(a+b+c)(x+y+1)=0$, so when $a+b+c=0$ the common point is $(1,1)$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Matching List Type",
+   "short_type": "Matching",
+   "marks": 3,
+   "level": 3,
+   "concepts": [
+    "Cyclic quadrilateral and special quadrilaterals formed by lines (trapezium, rhombus, square)"
+   ],
+   "question": "Match the following columns.\\nColumn–I\\n(A) The lines $y=0$; $y=1$; $x-6y+4=0$ and $x+6y-9=0$ constitute a figure which is\\n(B) The points $A(a,0)$, $B(0,b)$, $C(c,0)$ and $D(0,d)$ are such that $ac=bd$ and $a,b,c,d$ are all non-zero. The points $A,B,C,D$ always constitute\\n(C) The figure formed by the four lines $ax\\pm by\\pm c=0$ ($a\\neq b$) is\\n(D) The line pairs $x^2-8x+12=0$ and $y^2-14y+45=0$ constitute a figure which is\\nColumn–II\\n(P) a cyclic quadrilateral\\n(Q) a rhombus\\n(R) a square\\n(S) a trapezium",
+   "answer": "(A) $\\to$ P, S; (B) $\\to$ P; (C) $\\to$ Q; (D) $\\to$ P, Q, R",
+   "key_idea": "A trapezium with equal legs is cyclic; $ac=bd$ is the intercept (power-of-a-point) condition for four points on the axes to be concyclic.",
+   "solution": [
+    "(A) $y=0$ and $y=1$ are parallel, so the figure is a trapezium. $x-6y+4=0$ meets them at $(-4,0)$ and $(2,1)$; $x+6y-9=0$ meets them at $(9,0)$ and $(3,1)$.",
+    "The legs are $\\sqrt{6^2+1^2}=\\sqrt{37}$ and $\\sqrt{6^2+1^2}=\\sqrt{37}$, equal, so it is an isosceles trapezium; hence it is also a cyclic quadrilateral: P, S.",
+    "(B) $ac=bd\\Rightarrow\\frac bc=\\frac ad$. Taking the configuration of the figure, $\\tan\\theta=\\frac bc$ with $\\theta=\\angle OCB$ and $\\tan\\phi=\\frac ad$ with $\\phi=\\angle ODA$.",
+    "So $\\theta=\\phi$: the segment $AB$ subtends equal angles at $C$ and $D$, so $A,B,C,D$ are concyclic: a cyclic quadrilateral, P.",
+    "(C) For $ax\\pm by\\pm c=0$: if $y=0$ then $x=\\pm\\frac ca$; if $x=0$ then $y=\\pm\\frac cb$. The vertices $\\left(\\pm\\frac ca,0\\right)$, $\\left(0,\\pm\\frac cb\\right)$ form a figure whose diagonals (the axes) are perpendicular and bisect each other: a rhombus, Q.",
+    "(D) $(x-6)(x-2)=0$ gives $x=6,\\ x=2$; $y^2-14y+45=(y-9)(y-5)=0$ gives $y=9,\\ y=5$.",
+    "The four lines form a square of side $4$ (width $6-2=4$, height $9-5=4$): a square, hence also a rhombus and a cyclic quadrilateral: P, Q, R."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Symmetry for (A), and a circle-through-intercepts equation for (B): $ac=bd$ is exactly the condition that the circle through $A,C$ also meets the $y$-axis at $B,D$.",
+     "solution": [
+      "(A) The reflection $x\\to5-x$ keeps $y=0$, $y=1$ fixed and swaps $x-6y+4=0\\leftrightarrow x+6y-9=0$ (since $5-x-6y+4=-(x+6y-9)$), so the figure is symmetric about $x=\\frac52$: an isosceles trapezium, cyclic: P, S.",
+      "(B) A circle through $A(a,0)$ and $C(c,0)$ has the form $x^2+y^2-(a+c)x+ey+ac=0$ (at $y=0$ the roots are $a,c$).",
+      "Putting $x=0$: $y^2+ey+ac=0$, whose roots are $b,d$ exactly when $bd=ac$ (and $e=-(b+d)$). So $ac=bd$ puts $B$ and $D$ on that circle: P.",
+      "(C) The four vertices are symmetric about both axes, so the figure is a rhombus; it would be a square only if $|a|=|b|$, which is excluded, and it is not cyclic: Q only.",
+      "(D) Strip widths $4$ and $4$ with perpendicular lines give a square: P, Q, R (matches)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A trapezium is cyclic iff it is isosceles (equal legs); a parallelogram is cyclic iff it is a rectangle; every square is a rhombus and cyclic.",
+    "Four points on two intersecting lines through $O$ (at signed positions $a,c$ on one and $b,d$ on the other) are concyclic iff $OA\\cdot OC=OB\\cdot OD$ (signed): power of the point $O$.",
+    "The lines $ax\\pm by\\pm c=0$ bound the rhombus with vertices $\\left(\\pm\\frac ca,0\\right),\\left(0,\\pm\\frac cb\\right)$; it is a square iff $a^2=b^2$ (the condition 'a\\neq b' is read as $|a|\\neq|b|$)."
+   ]
+  }
+ ]
+}
