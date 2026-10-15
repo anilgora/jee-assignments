@@ -1,0 +1,218 @@
+{
+ "title": "SHEET SOLUTION OF TRIANGLE FCopy JM — Paper Analysis",
+ "subtitle": "JEE Main exercise · detailed solutions",
+ "source": "SHEET_SOLUTION_OF_TRIANGLE_FCopy_JM.pdf (no blueprint)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 3,
+   "marking": [
+    "Marks not printed: +4 assumed per question",
+    "No negative marking assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 4,
+   "to": 4,
+   "marking": [
+    "Marks not printed: +4 assumed",
+    "No negative marking assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Section formula and area using cross product"
+   ],
+   "level": 2,
+   "question": "Let $PQR$ be a triangle. The points $A$, $B$ and $C$ are on the sides $QR$, $RP$ and $PQ$ respectively such that $\\frac{QA}{AR}=\\frac{RB}{BP}=\\frac{PC}{CQ}=\\frac{1}{2}$. Then $\\frac{\\text{Area}(\\triangle PQR)}{\\text{Area}(\\triangle ABC)}$ is equal to:",
+   "options": [
+    "$2$",
+    "$3$",
+    "$4$",
+    "$\\frac{5}{2}$"
+   ],
+   "answer": "(B) 3",
+   "key_idea": "Take $P$ as origin, write $A,B,C$ by the section formula, and compare the two cross products.",
+   "solution": [
+    "Take the position vectors of $P$, $Q$, $R$ as $\\vec 0$, $\\vec a$ and $\\vec b$ respectively.",
+    "$C$ divides $PQ$ with $PC:CQ=1:2$, so the position vector of $C$ is $\\frac{\\vec a}{3}$.",
+    "$A$ divides $QR$ with $QA:AR=1:2$, so the position vector of $A$ is $\\frac{2\\vec a+\\vec b}{3}$.",
+    "$B$ divides $RP$ with $RB:BP=1:2$, so the position vector of $B$ is $\\frac{2\\vec b}{3}$.",
+    "Therefore $\\vec{CA}=\\frac{\\vec a+\\vec b}{3}$ and $\\vec{AB}=\\frac{\\vec b-2\\vec a}{3}$.",
+    "$\\triangle PQR=\\frac{1}{2}|\\vec{PQ}\\times\\vec{PR}|=\\frac{1}{2}|\\vec a\\times\\vec b|$.",
+    "$\\triangle ABC=\\frac{1}{2}|\\vec{CA}\\times\\vec{AB}|=\\frac{1}{2}\\left|\\frac{(\\vec a+\\vec b)}{3}\\times\\frac{(\\vec b-2\\vec a)}{3}\\right|=\\frac{1}{2}\\left|\\frac{\\vec a\\times\\vec b}{3}\\right|$.",
+    "(Since $(\\vec a+\\vec b)\\times(\\vec b-2\\vec a)=\\vec a\\times\\vec b-2\\vec b\\times\\vec a=3\\,\\vec a\\times\\vec b$.)",
+    "Hence $\\frac{\\triangle PQR}{\\triangle ABC}=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract the three corner triangles from $\\triangle PQR$; each corner is a fixed fraction of it.",
+     "solution": [
+      "Let $\\Delta=\\text{Area}(\\triangle PQR)$. From the ratios: $QA=\\frac13QR$, $RB=\\frac13RP$, $PC=\\frac13PQ$, and so $AR=\\frac23QR$, $BP=\\frac23RP$, $CQ=\\frac23PQ$.",
+      "Corner at $Q$: $\\triangle CQA$ has $QC=\\frac23PQ$ and $QA=\\frac13QR$ along the two sides at $Q$, so its area is $\\frac23\\cdot\\frac13\\Delta=\\frac29\\Delta$.",
+      "Corner at $R$: $RA=\\frac23QR$ and $RB=\\frac13RP$, so $\\triangle ARB=\\frac29\\Delta$.",
+      "Corner at $P$: $PB=\\frac23RP$ and $PC=\\frac13PQ$, so $\\triangle BPC=\\frac29\\Delta$.",
+      "$\\triangle ABC=\\Delta-3\\cdot\\frac29\\Delta=\\frac13\\Delta$, hence $\\frac{\\triangle PQR}{\\triangle ABC}=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If the points divide the three sides cyclically at the same fraction $t$ of each side (measured from the same direction), then $\\frac{\\text{Area}(ABC)}{\\text{Area}(PQR)}=1-3t+3t^2$. Here $t=\\frac13$ gives $\\frac13$; $t=\\frac12$ gives $\\frac14$ (the medial triangle).",
+    "Area of a triangle with a vertex at the origin is $\\frac12|\\vec a\\times\\vec b|$; any cross product of two vectors that are combinations of $\\vec a,\\vec b$ is a scalar multiple of $\\vec a\\times\\vec b$, so area ratios reduce to a $2\\times2$ determinant of coefficients.",
+    "Triangles sharing an angle: $\\frac{\\text{Area}(\\triangle APQ')}{\\text{Area}(\\triangle ABC)}=\\frac{AP\\cdot AQ'}{AB\\cdot AC}$ - the fastest way to cut off corner areas."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric identities in a triangle",
+    "Inradius, circumradius and area of a triangle"
+   ],
+   "level": 3,
+   "question": "For a triangle $ABC$, the value of $\\cos2A+\\cos2B+\\cos2C$ is least. If its inradius is $3$ and incentre is $M$, then which of the following is NOT correct?",
+   "options": [
+    "$\\vec{MA}\\cdot\\vec{MB}=-18$",
+    "perimeter of $\\triangle ABC$ is $18\\sqrt3$",
+    "$\\sin2A+\\sin2B+\\sin2C=\\sin A+\\sin B+\\sin C$",
+    "area of $\\triangle ABC$ is $\\frac{27\\sqrt3}{2}$"
+   ],
+   "answer": "(D) area of $\\triangle ABC$ is $\\frac{27\\sqrt3}{2}$",
+   "key_idea": "$\\cos2A+\\cos2B+\\cos2C=-1-4\\cos A\\cos B\\cos C$ is least for the equilateral triangle, so every statement can be tested on it.",
+   "solution": [
+    "If $\\cos2A+\\cos2B+\\cos2C$ is minimum, then $A=B=C=60^\\circ$.",
+    "So $\\triangle ABC$ is equilateral.",
+    "The inradius is $r=3$. Let $D$ be the foot of the perpendicular from $M$ to $BC$; in right triangle $MBD$ we have $MD=r$ and $BD=\\frac a2$.",
+    "$\\tan30^\\circ=\\frac{MD}{BD}=\\frac{r}{a/2}=\\frac6a$.",
+    "$\\frac1{\\sqrt3}=\\frac6a\\Rightarrow a=6\\sqrt3$.",
+    "Perimeter of $\\triangle ABC=3a=18\\sqrt3$, so (B) is correct.",
+    "Area of $\\triangle ABC=\\frac{\\sqrt3}{4}a^2=\\frac{\\sqrt3}{4}\\cdot108=27\\sqrt3$, which is not $\\frac{27\\sqrt3}{2}$, so (D) is NOT correct.",
+    "Check of (A): $M$ is also the circumcentre, $MA=MB=R=2r=6$ and $\\angle AMB=120^\\circ$, so $\\vec{MA}\\cdot\\vec{MB}=36\\cos120^\\circ=-18$; (A) is correct.",
+    "Check of (C): both sides equal $\\frac{3\\sqrt3}{2}$ (as $\\sin120^\\circ=\\sin60^\\circ=\\frac{\\sqrt3}{2}$); (C) is correct."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the equilateral relations $R=2r$, $s=3\\sqrt3\\,r$ and $\\Delta=rs$, with no side length needed.",
+     "solution": [
+      "For an equilateral triangle the incentre coincides with the circumcentre and $R=2r=6$.",
+      "Semi-perimeter $s=\\frac{3a}{2}$ and $a=2\\sqrt3\\,r$ (since $r=\\frac{a}{2\\sqrt3}$), so $s=3\\sqrt3\\,r=9\\sqrt3$.",
+      "Perimeter $=2s=18\\sqrt3$, so (B) is correct.",
+      "Area $\\Delta=rs=3\\cdot9\\sqrt3=27\\sqrt3\\ne\\frac{27\\sqrt3}{2}$, so (D) is NOT correct.",
+      "$\\vec{MA}\\cdot\\vec{MB}=R^2\\cos120^\\circ=-18$, so (A) is correct, and (C) holds as both sides equal $\\frac{3\\sqrt3}2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "In any triangle $\\cos2A+\\cos2B+\\cos2C=-1-4\\cos A\\cos B\\cos C$, and $\\cos A\\cos B\\cos C\\le\\frac18$ with equality only for the equilateral triangle, so the sum has minimum $-\\frac32$ there. Also $\\sin2A+\\sin2B+\\sin2C=4\\sin A\\sin B\\sin C$.",
+    "Equilateral triangle of inradius $r$: $R=2r$, $a=2\\sqrt3\\,r$, $s=3\\sqrt3\\,r$, area $=3\\sqrt3\\,r^2$. With $r=3$ these give $18\\sqrt3$ and $27\\sqrt3$.",
+    "For an equilateral triangle the centre $M$ sees each pair of vertices at $120^\\circ$, so $\\vec{MA}\\cdot\\vec{MB}=-\\frac{R^2}{2}$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Trigonometric identities in a triangle",
+    "Cosine rule"
+   ],
+   "level": 3,
+   "question": "In a triangle $ABC$, if $\\cos A+2\\cos B+\\cos C=2$ and the lengths of the sides opposite to the angles $A$ and $C$ are $3$ and $7$ respectively, then $\\cos A-\\cos C$ is equal to:",
+   "options": [
+    "$\\frac97$",
+    "$\\frac57$",
+    "$\\frac37$",
+    "$\\frac{10}7$"
+   ],
+   "answer": "(D) $\\frac{10}{7}$",
+   "key_idea": "Reduce the condition by sum-to-product to $\\sin A+\\sin C=2\\sin B$, i.e. $a+c=2b$.",
+   "solution": [
+    "From the condition, $\\cos A+\\cos C=2(1-\\cos B)$.",
+    "Using $1-\\cos B=2\\sin^2\\frac B2$: $2\\cos\\frac{A+C}{2}\\cos\\frac{A-C}{2}=4\\sin^2\\frac B2$.",
+    "Since $\\cos\\frac{A+C}{2}=\\sin\\frac B2$, dividing by $2\\sin\\frac B2$ gives $\\cos\\frac{A-C}{2}=2\\sin\\frac B2$.",
+    "Multiply both sides by $2\\cos\\frac B2$: $2\\cos\\frac B2\\cos\\frac{A-C}{2}=4\\sin\\frac B2\\cos\\frac B2$.",
+    "Replace $\\cos\\frac B2=\\sin\\frac{A+C}{2}$ on the left: $2\\sin\\frac{A+C}{2}\\cos\\frac{A-C}{2}=4\\sin\\frac B2\\cos\\frac B2$.",
+    "That is, $\\sin A+\\sin C=2\\sin B$.",
+    "So $a+c=2b$; with $a=3$, $c=7$ we get $b=5$.",
+    "$\\cos A-\\cos C=\\frac{b^2+c^2-a^2}{2bc}-\\frac{a^2+b^2-c^2}{2ab}=\\frac{25+49-9}{70}-\\frac{9+25-49}{30}$.",
+    "$=\\frac{65}{70}+\\frac12=\\frac{20}{14}=\\frac{10}{7}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put the cosine rule straight into the given condition and solve a cubic in $b$, rejecting the degenerate root.",
+     "solution": [
+      "Let the unknown side be $b$. Cosine rule: $\\cos A=\\frac{b^2+40}{14b}$, $\\cos B=\\frac{58-b^2}{42}$, $\\cos C=\\frac{b^2-40}{6b}$.",
+      "The condition $\\cos A+2\\cos B+\\cos C=2$ multiplied by $42b$ gives $3(b^2+40)+2b(58-b^2)+7(b^2-40)=84b$.",
+      "This simplifies to $b^3-5b^2-16b+80=0$, i.e. $(b-5)(b-4)(b+4)=0$.",
+      "$b=-4$ is impossible and $b=4$ gives $3+4=7$, a degenerate triangle, so $b=5$.",
+      "Then $\\cos A=\\frac{65}{70}=\\frac{13}{14}$ and $\\cos C=\\frac{-15}{30}=-\\frac12$, so $\\cos A-\\cos C=\\frac{13}{14}+\\frac12=\\frac{10}{7}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos A+\\cos C=2(1-\\cos B)\\iff \\cos\\frac{A-C}{2}=2\\sin\\frac B2\\iff \\sin A+\\sin C=2\\sin B\\iff a+c=2b$ (sides in AP). The hypothesis $\\cos A+2\\cos B+\\cos C=2$ is just a disguised 'sides in AP'.",
+    "If $a,b,c$ are in AP then $\\tan\\frac A2\\tan\\frac C2=\\frac{s-b}{s}=\\frac13$. (Check on $3,5,7$: $s=7.5$, $\\frac{2.5}{7.5}=\\frac13$.)",
+    "The $3,5,7$ triangle has a $120^\\circ$ angle (opposite the side $7$): $\\cos C=\\frac{9+25-49}{30}=-\\frac12$ - a standard triple to recognise.",
+    "After solving for a side, always test the triangle inequality: the cubic above has the degenerate root $b=4$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Cosine rule",
+    "Multiple angle formula for $\\cos3C$"
+   ],
+   "level": 2,
+   "question": "In a triangle $ABC$, $BC=7$, $AC=8$, $AB=\\alpha\\in\\mathbb N$ and $\\cos A=\\frac23$. If $49\\cos(3C)+42=\\frac mn$, where $\\gcd(m,n)=1$, then $m+n$ is equal to ______.",
+   "answer": "39",
+   "key_idea": "The cosine rule on angle $A$ gives a quadratic in $\\alpha$; $\\alpha\\in\\mathbb N$ selects $9$, after which $\\cos C$ is immediate.",
+   "solution": [
+    "Apply the cosine rule at $A$: $\\cos A=\\frac23=\\frac{\\alpha^2+8^2-7^2}{2\\cdot\\alpha\\cdot8}$.",
+    "$\\Rightarrow(\\alpha^2+15)\\cdot3=32\\alpha$.",
+    "$3\\alpha^2-32\\alpha+45=0$.",
+    "$\\Rightarrow\\alpha=\\frac53$ or $9$.",
+    "Since $\\alpha\\in\\mathbb N$, $\\alpha=9$.",
+    "$\\cos C=\\frac{7^2+8^2-9^2}{2\\cdot7\\cdot8}=\\frac{32}{112}=\\frac27$.",
+    "$\\cos3C=4\\cos^3C-3\\cos C=\\frac{4\\times8}{7^3}-\\frac67$.",
+    "$49\\cos3C=\\frac{32}{7}-42$.",
+    "$\\Rightarrow49\\cos3C+42=\\frac{32}{7}$, so $m=32$, $n=7$ and $m+n=39$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Drop the altitude from $C$ to $AB$ and use Pythagoras instead of the cosine rule to find $\\alpha$.",
+     "solution": [
+      "$\\cos A=\\frac23$ gives $\\sin A=\\frac{\\sqrt5}{3}$. Let $D$ be the foot of the perpendicular from $C$ on line $AB$: $AD=8\\cos A=\\frac{16}{3}$ and $CD=8\\sin A=\\frac{8\\sqrt5}{3}$.",
+      "In right triangle $CDB$: $BC^2=CD^2+BD^2$, so $49=\\frac{320}{9}+BD^2$ and $BD^2=\\frac{121}{9}$, $BD=\\frac{11}{3}$.",
+      "$\\alpha=AD\\pm BD=\\frac{16}{3}\\pm\\frac{11}{3}=9$ or $\\frac53$; being a natural number, $\\alpha=9$.",
+      "The sides are now $7,8,9$ and $\\cos C=\\frac{49+64-81}{112}=\\frac27$.",
+      "$49\\cos3C+42=49\\left(\\frac{32}{343}-\\frac{6}{7}\\right)+42=\\frac{32}{7}$, so $m+n=39$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Cosine rule at a known angle with one unknown side gives a quadratic; an integrality or natural-number condition on the side picks the root. Always check the triangle inequality for the chosen side ($7,8,9$ is valid).",
+    "The triple $7,8,9$ has $\\cos A=\\frac23$ (angle opposite $7$), $\\cos B=\\frac{11}{21}$ (opposite $8$) and $\\cos C=\\frac27$ (opposite $9$) - nice cosines worth remembering.",
+    "$\\cos3\\theta=4\\cos^3\\theta-3\\cos\\theta$ avoids finding the angle itself: for $\\cos\\theta=\\frac27$, $\\cos3\\theta=-\\frac{262}{343}$.",
+    "Altitude method: from the vertex with known $\\cos$, the feet decompose a side as $b\\cos A\\pm\\sqrt{a^2-b^2\\sin^2A}$ (the two roots of the cosine-rule quadratic)."
+   ]
+  }
+ ]
+}
