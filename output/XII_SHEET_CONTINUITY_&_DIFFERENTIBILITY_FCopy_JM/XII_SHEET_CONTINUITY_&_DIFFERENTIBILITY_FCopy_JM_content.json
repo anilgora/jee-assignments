@@ -1,0 +1,1284 @@
+{
+ "title": "Continuity & Differentiability (XII Sheet, J-M) — Paper Analysis",
+ "subtitle": "Exercise J-M · detailed solutions",
+ "source": "XII_SHEET_CONTINUITY_&_DIFFERENTIBILITY_FCopy_JM.pdf (solutions as printed, verified); concepts self-assigned (no blueprint)",
+ "paper_name": "Continuity & Differentiability Sheet (J-M)",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 5,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 6,
+   "to": 9,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 10,
+   "to": 12,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 13,
+   "to": 14,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 15,
+   "to": 19,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 20,
+   "to": 21,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Single Correct Type",
+   "from": 22,
+   "to": 27,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 28,
+   "to": 29,
+   "marking": [
+    "4 marks each (assumed: no marks are printed in the paper; JEE Advanced default)"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity of piecewise functions involving the greatest integer function"
+   ],
+   "level": 1,
+   "question": "Let a function $f:\\mathbb{R}\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}\\sin x-e^{x}, & \\text{if } x\\le0\\\\ a+[-x], & \\text{if } 0<x<1\\\\ 2x-b, & \\text{if } x\\ge1\\end{cases}$ where $[x]$ is the greatest integer less than or equal to $x$. If $f$ is continuous on $\\mathbb{R}$, then $(a+b)$ is equal to:",
+   "options": [
+    "$2$",
+    "$5$",
+    "$4$",
+    "$3$"
+   ],
+   "answer": "(D) 3",
+   "key_idea": "On $(0,1)$ the integer part $[-x]$ is the constant $-1$, so only the two joints $x=0$ and $x=1$ need checking.",
+   "solution": [
+    "Continuity at $x=0$: $\\text{LHL}=\\sin0-e^0=-1$ and $f(0)=\\sin0-e^0=-1$.",
+    "For $0<x<1$ we have $-1<-x<0$, so $[-x]=-1$ and $f(x)=a-1$. Hence $\\text{RHL}=a-1$.",
+    "Equating: $a-1=-1$, so $a=0$.",
+    "Continuity at $x=1$: $\\text{LHL}=a-1$ (the middle piece is the constant $a-1$) and $f(1)=2-b=\\text{RHL}$.",
+    "Equating: $a-1=2-b$. With $a=0$ this gives $-1=2-b$, so $b=3$.",
+    "Therefore $a+b=0+3=3$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $x\\in(0,1)$: $[x]=0$, $[-x]=-1$, $[2x]=0$ or $1$ according as $x<\\frac12$ or $x\\ge\\frac12$; recognise these constants at once.",
+    "A piecewise function is continuous on $\\mathbb{R}$ iff it is continuous at each joint (each piece here is continuous on its own interval): one equation per joint, so two joints fix two unknowns.",
+    "$[-x]=-[x]-1$ when $x\\notin\\mathbb{Z}$ and $[-x]=-[x]$ when $x\\in\\mathbb{Z}$."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: logarithmic and trigonometric expansions"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}\\dfrac{x^{3}}{(1-\\cos2x)^{2}}\\,\\log_e\\left(\\dfrac{1+2xe^{-2x}}{(1-xe^{-x})^{2}}\\right), & x\\ne0\\\\ \\alpha, & x=0\\end{cases}$. If $f$ is continuous at $x=0$, then $\\alpha$ is equal to:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$3$"
+   ],
+   "answer": "(B) 1",
+   "key_idea": "Split the logarithm and use $\\frac{\\ln(1+t)}{t}\\to1$ so that each part contributes $2xe^{-2x}$ or $2xe^{-x}$.",
+   "solution": [
+    "Continuity at $x=0$ requires $\\alpha=\\lim_{h\\to0^+}\\frac{h^3}{(1-\\cos2h)^2}\\ln\\left(\\frac{1+2he^{-2h}}{(1-he^{-h})^2}\\right)$.",
+    "Use $(1-\\cos2h)^2=4\\sin^4h$ and split the logarithm: $\\alpha=\\lim_{h\\to0}\\frac{h^3}{4\\sin^4h}\\left[\\ln(1+2he^{-2h})-2\\ln(1-he^{-h})\\right]$.",
+    "Write $\\ln(1+2he^{-2h})=\\frac{\\ln(1+2he^{-2h})}{2he^{-2h}}\\cdot2he^{-2h}$ and $-2\\ln(1-he^{-h})=-2\\cdot\\frac{\\ln(1-he^{-h})}{-he^{-h}}\\cdot(-he^{-h})$.",
+    "Using $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ the bracket equals $2he^{-2h}+2he^{-h}$ up to factors tending to $1$ (both $2he^{-2h}\\to0$ and $-he^{-h}\\to0$).",
+    "Also $\\frac{h^3}{4\\sin^4h}=\\frac{1}{4h}\\left(\\frac{h}{\\sin h}\\right)^4$ and $\\left(\\frac{h}{\\sin h}\\right)^4\\to1$.",
+    "So $\\alpha=\\lim_{h\\to0}\\frac{1}{4h}\\left[2he^{-2h}+2he^{-h}\\right]=\\lim_{h\\to0}\\frac{2}{4}\\left(e^{-2h}+e^{-h}\\right)$.",
+    "$\\alpha=\\frac24(1+1)=1$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace every factor by its leading-order (Taylor) form: only the first-order term of $\\ln(\\cdot)$ and $\\sin h\\sim h$ matter.",
+     "solution": [
+      "Near $0$: $1+2xe^{-2x}=1+2x+O(x^2)$ and $(1-xe^{-x})^2=1-2x+O(x^2)$, so the quotient is $1+4x+O(x^2)$.",
+      "Hence $\\log_e\\left(\\frac{1+2xe^{-2x}}{(1-xe^{-x})^2}\\right)=4x+O(x^2)$.",
+      "$1-\\cos2x=2x^2+O(x^4)$, so $(1-\\cos2x)^2=4x^4+O(x^6)$.",
+      "Therefore $f(x)=\\frac{x^3\\,(4x+O(x^2))}{4x^4+O(x^6)}\\to\\frac{4x^4}{4x^4}=1$.",
+      "So $\\alpha=1$ (the same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Leading-order rule: if $u\\to0$ then $\\ln(1+u)\\sim u$, $\\sin u\\sim u$, $1-\\cos u\\sim\\frac{u^2}{2}$, $\\tan u\\sim u$, $e^u-1\\sim u$ - only the product/quotient of the leading terms matters, provided no cancellation occurs.",
+    "$1-\\cos2x=2\\sin^2x\\Rightarrow(1-\\cos2x)^2=4\\sin^4x\\sim4x^4$.",
+    "For a function defined by a limit at one point, continuity just means the defined value equals that limit."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Greatest integer function and one-sided limits"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}\\dfrac{\\lambda|x^2-5x+6|}{\\mu(5x-x^2-6)}, & x<2\\\\ e^{\\frac{\\tan(x-2)}{x-[x]}}, & x>2\\\\ \\mu, & x=2\\end{cases}$ where $[x]$ is the greatest integer less than or equal to $x$. If $f$ is continuous at $x=2$, then $\\lambda+\\mu$ is:",
+   "options": [
+    "$1$",
+    "$2e-1$",
+    "$e(e-1)$",
+    "$e(-e+1)$"
+   ],
+   "answer": "(D) e(-e+1)",
+   "key_idea": "Left of $2$ the quotient is the constant $-\\lambda/\\mu$, and right of $2$ we have $[x]=2$, so the exponent is $\\frac{\\tan h}{h}\\to1$.",
+   "solution": [
+    "Continuity at $x=2$ means $f(2^-)=f(2)=f(2^+)$.",
+    "For $x<2$: $x^2-5x+6=(x-2)(x-3)>0$, so $|x^2-5x+6|=x^2-5x+6=-(5x-x^2-6)$. Hence $\\lim_{x\\to2^-}\\frac{\\lambda|x^2-5x+6|}{\\mu(5x-x^2-6)}=-\\frac{\\lambda}{\\mu}$.",
+    "For $x\\to2^+$: $[x]=2$, so $x-[x]=x-2=h\\to0^+$ and the exponent is $\\frac{\\tan h}{h}\\to1$. Hence $f(2^+)=e^1=e$.",
+    "Continuity gives $-\\frac{\\lambda}{\\mu}=\\mu=e$.",
+    "So $\\mu=e$ and $\\lambda=-\\mu^2=-e^2$.",
+    "$\\lambda+\\mu=-e^2+e=e(-e+1)$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "If $(x-a)(x-b)>0$ on one side of a root, then $\\frac{|P(x)|}{P(x)}=\\pm1$ there: the absolute value just fixes a constant sign.",
+    "Right of an integer $n$: $[x]=n$, so $x-[x]=x-n\\to0^+$; left of $n$: $x-[x]\\to1^-$.",
+    "$\\lim_{h\\to0}\\frac{\\tan h}{h}=1$ and $\\lim_{u\\to c}e^{u}=e^{c}$, so an exponent with a finite limit passes through $e^{(\\cdot)}$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: $1^\\infty$ form and trigonometric ratios"
+   ],
+   "level": 1,
+   "question": "Let $f:\\left(-\\frac{\\pi}{4},\\frac{\\pi}{4}\\right)\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}(1+|\\sin x|)^{\\frac{3a}{|\\sin x|}}, & -\\frac{\\pi}{4}<x<0\\\\ b, & x=0\\\\ e^{\\cot4x/\\cot2x}, & 0<x<\\frac{\\pi}{4}\\end{cases}$. If $f$ is continuous at $x=0$, then the value of $6a+b^2$ is equal to:",
+   "options": [
+    "$e-1$",
+    "$1-e$",
+    "$e$",
+    "$1+e$"
+   ],
+   "answer": "(D) 1+e",
+   "key_idea": "Both sides are exponentials: the left one is a $1^\\infty$ form giving $e^{3a}$, the right one has exponent $\\frac{\\tan2x}{\\tan4x}\\to\\frac12$.",
+   "solution": [
+    "Continuity at $0$ requires $f(0^-)=f(0)=f(0^+)$, i.e. $b=\\lim_{x\\to0^-}(1+|\\sin x|)^{\\frac{3a}{|\\sin x|}}=\\lim_{x\\to0^+}e^{\\cot4x/\\cot2x}$.",
+    "Left side: $\\lim(1+|\\sin x|)^{3a/|\\sin x|}=e^{\\lim 3a\\cdot\\frac{|\\sin x|}{|\\sin x|}}=e^{3a}$, since $(1+t)^{1/t}\\to e$ with $t=|\\sin x|\\to0$.",
+    "Right side: $\\frac{\\cot4x}{\\cot2x}=\\frac{\\tan2x}{\\tan4x}\\to\\frac{2x}{4x}=\\frac12$, so the limit is $e^{1/2}$.",
+    "Therefore $b=e^{3a}=e^{1/2}$, which gives $3a=\\frac12$, i.e. $a=\\frac16$, and $b=\\sqrt e$.",
+    "$6a+b^2=6\\cdot\\frac16+e=1+e$, option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF names the sides the wrong way round: it takes the $(1+|\\sin x|)^{3a/|\\sin x|}$ branch as $x\\to0^+$ and the $e^{\\cot4x/\\cot2x}$ branch as $x\\to0^-$, whereas the first piece is defined for $x<0$ and the second for $x>0$. It also jumps to $\\frac{\\tan2x}{\\tan4x}$ without stating its limit $\\frac12$. Both fixed; $a=\\frac16$, $b=\\sqrt e$ and the answer are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Evaluate $\\frac{\\tan2x}{\\tan4x}$ with the double-angle identity instead of the standard limit.",
+     "solution": [
+      "$\\tan4x=\\frac{2\\tan2x}{1-\\tan^22x}$, so $\\frac{\\tan2x}{\\tan4x}=\\frac{1-\\tan^22x}{2}$.",
+      "As $x\\to0^+$, $\\tan2x\\to0$, so the ratio tends to $\\frac12$ and $f(0^+)=e^{1/2}$.",
+      "Take natural logs on the left piece: $\\ln f=\\frac{3a\\ln(1+|\\sin x|)}{|\\sin x|}\\to3a$ because $\\frac{\\ln(1+t)}{t}\\to1$.",
+      "Continuity: $\\ln b=3a=\\frac12$, so $a=\\frac16$ and $b=e^{1/2}$.",
+      "$6a+b^2=1+e$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ rule: $\\lim(1+u)^{v}=e^{\\lim uv}$ when $u\\to0$, $v\\to\\infty$.",
+    "$\\cot A/\\cot B=\\tan B/\\tan A$, and $\\frac{\\tan kx}{\\tan mx}\\to\\frac km$ as $x\\to0$.",
+    "$\\lim_{t\\to0}(1+t)^{c/t}=e^{c}$: here $t=|\\sin x|$ and $c=3a$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a function defined through a maximum (running maximum)"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,\\infty)\\to[0,3]$ be a function defined by $f(x)=\\begin{cases}\\max\\{\\sin t:0\\le t\\le x\\}, & 0\\le x\\le\\pi\\\\ 2+\\cos x, & x>\\pi\\end{cases}$. Then which of the following is true:",
+   "options": [
+    "$f$ is not continuous exactly at two points in $(0,\\infty)$",
+    "$f$ is differentiable everywhere in $(0,\\infty)$",
+    "$f$ is continuous everywhere but not differentiable exactly at one point in $(0,\\infty)$",
+    "$f$ is continuous everywhere but not differentiable exactly at two points in $(0,\\infty)$"
+   ],
+   "answer": "(B)",
+   "key_idea": "The running maximum of $\\sin t$ equals $\\sin x$ up to $\\frac\\pi2$, then stays $1$; the joints $\\frac\\pi2$ and $\\pi$ have matching values and slopes.",
+   "solution": [
+    "For $0\\le x\\le\\frac\\pi2$ the maximum of $\\sin t$ on $[0,x]$ is $\\sin x$ (increasing). For $\\frac\\pi2\\le x\\le\\pi$ it is $1$.",
+    "So $f(x)=\\sin x$ for $0\\le x<\\frac\\pi2$; $f(x)=1$ for $\\frac\\pi2\\le x\\le\\pi$; $f(x)=2+\\cos x$ for $x>\\pi$.",
+    "Doubtful points: $x=\\frac\\pi2$ and $x=\\pi$.",
+    "At $x=\\frac\\pi2$: $\\text{LHL}=\\sin\\frac\\pi2=1$, $\\text{RHL}=1=f\\left(\\frac\\pi2\\right)$, so $f$ is continuous.",
+    "At $x=\\pi$: $\\text{LHL}=1$, $\\text{RHL}=2+\\cos\\pi=1=f(\\pi)$, so $f$ is continuous.",
+    "$f'(x)=\\cos x$ for $0<x<\\frac\\pi2$; $0$ for $\\frac\\pi2<x<\\pi$; $-\\sin x$ for $x>\\pi$.",
+    "At $x=\\frac\\pi2$: $f'\\left(\\frac\\pi2^-\\right)=\\cos\\frac\\pi2=0=f'\\left(\\frac\\pi2^+\\right)$, so $f$ is differentiable.",
+    "At $x=\\pi$: $f'(\\pi^-)=0$ and $f'(\\pi^+)=-\\sin\\pi=0$, so $f$ is differentiable.",
+    "Hence $f$ is differentiable everywhere in $(0,\\infty)$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write the first branch as the composite $f(x)=\\sin\\left(\\min\\left(x,\\frac\\pi2\\right)\\right)$; the kink of $\\min$ is killed by $\\cos\\frac\\pi2=0$.",
+     "solution": [
+      "For $0\\le x\\le\\pi$, $\\max_{0\\le t\\le x}\\sin t=\\sin(\\min(x,\\frac\\pi2))$ because $\\sin$ increases on $[0,\\frac\\pi2]$ and its maximum value is $1$ at $\\frac\\pi2$.",
+      "The only non-smooth point of $\\min(x,\\frac\\pi2)$ is $x=\\frac\\pi2$, where the slope drops from $1$ to $0$.",
+      "By the chain rule the one-sided derivatives of $f$ at $\\frac\\pi2$ are $\\cos\\frac\\pi2\\cdot1=0$ and $\\cos\\frac\\pi2\\cdot0=0$: equal, so $f$ is differentiable there.",
+      "At $x=\\pi$: $f(\\pi)=1$ and both $2+\\cos x$ and the constant $1$ equal $1$; slopes $-\\sin\\pi=0$ and $0$ agree.",
+      "So $f$ is differentiable on all of $(0,\\infty)$ - option (B), same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The running maximum $M(x)=\\max_{t\\le x}\\varphi(t)$ is non-decreasing and continuous when $\\varphi$ is continuous; it follows $\\varphi$ until $\\varphi$ first stops rising, then it is constant. At a local maximum of $\\varphi$ ($\\varphi'=0$) the two parts join smoothly.",
+    "A joint is differentiable iff the one-sided limits of the derivatives agree and the function is continuous there (for differentiable pieces).",
+    "$\\max(f,g)=\\frac{f+g+|f-g|}{2}$, $\\min(f,g)=\\frac{f+g-|f-g|}{2}$: corners occur only where $f=g$ and $f'\\ne g'$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of a function defined through a maximum (running maximum)"
+   ],
+   "level": 2,
+   "question": "Let a function $g:[0,4]\\to\\mathbb{R}$ be defined as $g(x)=\\begin{cases}\\max\\{t^3-6t^2+9t-3\\},\\ 0\\le t\\le x, & 0\\le x\\le3\\\\ 4-x, & 3<x\\le4\\end{cases}$, then the number of points in the interval $(0,4)$ where $g(x)$ is NOT differentiable, is ______.",
+   "answer": "1",
+   "key_idea": "The running maximum of the cubic follows it up to its local maximum at $t=1$, then stays flat at $1$; only the joint with $4-x$ at $x=3$ has unequal slopes.",
+   "solution": [
+    "Let $y=t^3-6t^2+9t-3$. Then $\\frac{dy}{dt}=3t^2-12t+9=0$ gives $t=1$ or $t=3$.",
+    "$y(1)=1$ is a local maximum and $y(3)=-3$ a local minimum; also $y(0)=-3$, so $y$ rises on $[0,1]$ and the maximum over $[0,x]$ stays $1$ for $1\\le x\\le3$.",
+    "So $g(x)=x^3-6x^2+9x-3$ for $0\\le x\\le1$; $g(x)=1$ for $1<x\\le3$; $g(x)=4-x$ for $3<x\\le4$.",
+    "Then $g'(x)=3x^2-12x+9$ for $0\\le x\\le1$; $g'(x)=0$ for $1<x\\le3$; $g'(x)=-1$ for $3<x\\le4$.",
+    "At $x=1$: $g'(1^-)=3-12+9=0=g'(1^+)$, so $g$ is differentiable at $1$.",
+    "At $x=3$: $g(3)=1=4-3$ so $g$ is continuous, but $g'(3^-)=0\\ne-1=g'(3^+)$.",
+    "Hence $g$ is not differentiable at exactly one point ($x=3$). Answer: $1$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF lists $g'(x)=4$ for $3<x\\le4$; the derivative of $4-x$ is $-1$. Its conclusion ($g'(3^-)\\ne g'(3^+)$, one point) is unchanged. Also the PDF's range label '$0\\le n\\le1$' is a typo for $0\\le x\\le1$.",
+   "alternate_solutions": [
+    {
+     "idea": "Running-maximum geometry: $g$ leaves the cubic exactly at its peak, where the tangent is horizontal, so no kink; the kink can only appear where the flat part meets $4-x$.",
+     "solution": [
+      "The maximum over $[0,x]$ of a continuous function changes from 'tracking the function' to 'constant' at a point where the function reaches a local maximum, i.e. at $t=1$ where the slope is $0$ - the same as the slope $0$ of the constant, so there is no corner at $x=1$.",
+      "The constant stage $g=1$ runs while $y(t)\\le1$ for $t\\le3$ (since $y(3)=-3$ and the cubic never exceeds $1$ on $[1,3]$): it ends at $x=3$ because the definition switches to $4-x$.",
+      "Value check: $4-3=1$, so $g$ is continuous at $3$; the slopes $0$ and $-1$ differ, so $x=3$ is a corner.",
+      "Exactly one corner in $(0,4)$: answer $1$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $M(x)=\\max_{0\\le t\\le x}\\varphi(t)$, then $M$ is non-decreasing, and $M'(x)=\\varphi'(x)$ where $M=\\varphi$, $0$ where it is constant: joins at a local maximum of $\\varphi$ are always smooth.",
+    "Critical points of $t^3-6t^2+9t-3$: $t=1,3$ (cubic $t^3-6t^2+9t=t(t-3)^2$ shifted); the local maximum value is $1$.",
+    "At a joint where the function is continuous, compare the derivatives of the two pieces; differing one-sided derivatives mean a corner."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a function and its shifts (corners of a combination)"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined as $f(x)=\\begin{cases}3\\left(1-\\dfrac{|x|}{2}\\right), & \\text{if } |x|\\le2\\\\ 0, & \\text{if } |x|>2\\end{cases}$. Let $g:\\mathbb{R}\\to\\mathbb{R}$ be given by $g(x)=f(x+2)-f(x-2)$. If $n$ and $m$ denote the number of points in $\\mathbb{R}$ where $g$ is not continuous and not differentiable, respectively, then $n+m$ is equal to ______.",
+   "answer": "4",
+   "key_idea": "$f$ is a continuous 'tent', so $g$ is continuous everywhere; the corners of the two shifted tents are $-4,-2,0$ and $0,2,4$, and the corner at $0$ cancels.",
+   "solution": [
+    "$f(x+2)=\\frac{3x}{2}+6$ for $-4\\le x\\le-2$; $-\\frac{3x}{2}$ for $-2<x\\le0$; $0$ for $x\\in(-\\infty,-4)\\cup(0,\\infty)$.",
+    "$f(x-2)=\\frac{3x}{2}$ for $0\\le x\\le2$; $-\\frac{3x}{2}+6$ for $2\\le x\\le4$; $0$ for $x\\in(-\\infty,0)\\cup(4,\\infty)$.",
+    "Subtracting: $g(x)=\\frac{3x}{2}+6$ on $[-4,-2]$; $-\\frac{3x}{2}$ on $(-2,2)$; $\\frac{3x}{2}-6$ on $[2,4]$; $0$ for $x\\in(-\\infty,-4)\\cup(4,\\infty)$.",
+    "All pieces agree at the joints: $g(-4)=0$, $g(-2)=3$, $g(2)=-3$, $g(4)=0$. So $g$ is continuous on $\\mathbb{R}$ and $n=0$.",
+    "The graph is a zig-zag with corners at $(-4,0)$, $(-2,3)$, $(2,-3)$, $(4,0)$. At $x=0$ both sides have slope $-\\frac32$, so $g$ is smooth there.",
+    "Hence $m=4$ and $n+m=0+4=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count corners by slope jumps: a tent contributes a slope change at each of its three corners; the slope jumps of $f(x+2)$ and $-f(x-2)$ add up, and any total jump of $0$ means no corner.",
+     "solution": [
+      "The slope of $f$ is $0$ for $x<-2$, $+\\frac32$ on $(-2,0)$, $-\\frac32$ on $(0,2)$, $0$ for $x>2$. So its slope jumps are $+\\frac32$ at $-2$, $-3$ at $0$, $+\\frac32$ at $2$.",
+      "$f(x+2)$ has these jumps at $-4,-2,0$; $-f(x-2)$ has the negatives $-\\frac32,+3,-\\frac32$ at $0,2,4$.",
+      "Total slope jump of $g$: $x=-4:+\\frac32$; $x=-2:-3$; $x=0:+\\frac32-\\frac32=0$; $x=2:+3$; $x=4:-\\frac32$.",
+      "The jump at $0$ cancels, leaving corners at $-4,-2,2,4$: $m=4$; $g$ is a sum of continuous functions, so $n=0$.",
+      "$n+m=4$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A sum of continuous functions is continuous; for corners, add the slope jumps - a corner survives only when the total jump is non-zero.",
+    "The tent $3\\left(1-\\frac{|x|}{2}\\right)^{+}$ has corners at $-2,0,2$; shifts move the corner points by $\\mp2$.",
+    "$f(x+a)$ shifts the graph left by $a$; $f(x-a)$ shifts it right by $a$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point and limit of a ratio",
+    "Polynomial with given conditions"
+   ],
+   "level": 1,
+   "question": "Consider the function $f(x)=\\begin{cases}\\dfrac{P(x)}{\\sin(x-2)}, & x\\ne2\\\\ 7, & x=2\\end{cases}$ where $P(x)$ is a polynomial such that $P''(x)$ is always a constant and $P(3)=9$. If $f(x)$ is continuous at $x=2$, then $P(5)$ is equal to ______.",
+   "answer": "39",
+   "key_idea": "Since $\\sin(x-2)\\to0$, continuity forces $P(2)=0$, and then $\\frac{P(x)}{x-2}\\to7$ pins down the linear factor.",
+   "solution": [
+    "$P''(x)$ is a constant, so $P$ is a polynomial of degree at most $2$.",
+    "Continuity at $x=2$: $\\lim_{x\\to2}\\frac{P(x)}{\\sin(x-2)}=f(2)=7$.",
+    "The denominator $\\to0$, so the numerator must also tend to $0$: $P(2)=0$ and $P(x)=(x-2)(ax+b)$. (The linear case is covered by $a=0$.)",
+    "Then $\\lim_{x\\to2}\\frac{(x-2)(ax+b)}{\\sin(x-2)}=2a+b$, because $\\frac{x-2}{\\sin(x-2)}\\to1$.",
+    "So $2a+b=7$.",
+    "$P(3)=(3-2)(3a+b)=3a+b=9$.",
+    "Subtracting: $a=2$, then $4+b=7$ gives $b=3$.",
+    "$P(x)=(x-2)(2x+3)$ and $P(5)=3\\times13=39$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Taylor-expand $P$ about the point $x=2$: continuity gives $P(2)=0$ and $P'(2)=7$, and the constant second derivative leaves only one unknown.",
+     "solution": [
+      "Because $P''$ is constant, $P(x)=P(2)+P'(2)(x-2)+c(x-2)^2$ exactly, with $c=\\frac{P''}{2}$.",
+      "$\\frac{P(x)}{\\sin(x-2)}\\to7$ with $\\sin(x-2)\\sim(x-2)$ forces $P(2)=0$ and $P'(2)=7$ (the derivative of $P$ at $2$ is the limit of the ratio).",
+      "So $P(x)=7(x-2)+c(x-2)^2$.",
+      "$P(3)=7+c=9$, so $c=2$.",
+      "$P(5)=7\\cdot3+2\\cdot9=21+18=39$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $\\frac{N(x)}{D(x)}\\to L$ finite with $D(a)=0$, then $N(a)=0$; and if $D'(a)\\ne0$ then $N'(a)=L\\,D'(a)$. Here $D=\\sin(x-2)$ and $D'(2)=1$.",
+    "A polynomial with $P''$ constant has degree $\\le2$: $P(x)=P(a)+P'(a)(x-a)+\\frac{P''}{2}(x-a)^2$.",
+    "Continuity of a quotient at a root of the denominator is a statement about $P(a)=0$ and $P'(a)$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of functions with the greatest integer function",
+    "Fractional part of $x$"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,3]\\to\\mathbb{R}$ be defined by $f(x)=\\min\\{x-[x],\\,1+[x]-x\\}$ where $[x]$ is the greatest integer less than or equal to $x$. Let $P$ denote the set containing all $x\\in[0,3]$ where $f$ is discontinuous, and $Q$ denote the set containing all $x\\in(0,3)$ where $f$ is not differentiable. Then the sum of the number of elements in $P$ and $Q$ is equal to ______.",
+   "answer": "5",
+   "key_idea": "$x-[x]=\\{x\\}$ and $1+[x]-x=1-\\{x\\}$, so $f$ is a continuous zig-zag with corners at the integers and at the half-integers.",
+   "solution": [
+    "$f(x)=\\min(\\{x\\},1-\\{x\\})$.",
+    "Graph: on each $[n,n+1)$ it rises with slope $1$ from $0$ to $\\frac12$ at $n+\\frac12$ and then falls with slope $-1$ towards $0$ at $n+1$; at each integer the value is $0$, matching both sides.",
+    "So $f$ is continuous on $[0,3]$ and $n(P)=0$.",
+    "Non-differentiable points in $(0,3)$: the valleys at $x=1,2$ and the peaks at $x=\\frac12,\\frac32,\\frac52$ (slope changes between $\\pm1$).",
+    "$n(Q)=5$.",
+    "$n(P)+n(Q)=0+5=5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Recognise $f(x)$ as the distance from $x$ to the nearest integer, $d(x)=\\operatorname{dist}(x,\\mathbb{Z})$.",
+     "solution": [
+      "For $x\\in[n,n+1)$ the distance to the nearest integer is $\\min(x-n,\\,n+1-x)=\\min(\\{x\\},1-\\{x\\})$, so $f(x)=\\operatorname{dist}(x,\\mathbb{Z})$.",
+      "A distance function is continuous (it is $1$-Lipschitz), so $f$ has no discontinuity and $n(P)=0$.",
+      "$\\operatorname{dist}(x,\\mathbb{Z})=|x-n|$ near an integer $n$ (corner at $n$), and the nearest integer switches at the midpoint $n+\\frac12$ where the graph has a peak (another corner).",
+      "In $(0,3)$ the corners are at $1,2$ and $\\frac12,\\frac32,\\frac52$: five points.",
+      "$n(P)+n(Q)=5$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\min(\\{x\\},1-\\{x\\})=\\operatorname{dist}(x,\\mathbb{Z})$ is continuous, periodic with period $1$, with corners at all multiples of $\\frac12$ (peaks at the half-integers, zeros at the integers).",
+    "$\\max(\\{x\\},1-\\{x\\})=1-\\operatorname{dist}(x,\\mathbb{Z})$ is the same zig-zag flipped.",
+    "A zig-zag between the endpoints $0$ and $3$ has corners at every integer and half-integer strictly inside, here $2+3=5$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of functions with the greatest integer function",
+    "Minimum of two functions"
+   ],
+   "level": 2,
+   "question": "Let $[t]$ denote the greatest integer less than or equal to $t$. Let $f(x)=x-[x]$, $g(x)=1-x+[x]$, and $h(x)=\\min\\{f(x),g(x)\\}$, $x\\in[-2,2]$. Then $h$ is:",
+   "options": [
+    "Continuous in $[-2,2]$ but not differentiable at exactly three points in $(-2,2)$",
+    "Not continuous at exactly four points in $[-1,2]$",
+    "Not continuous at exactly three points in $[-1,2]$",
+    "Continuous in $[-2,2]$ but not differentiable at more than four points in $(-2,2)$"
+   ],
+   "answer": "(D)",
+   "key_idea": "$h(x)=\\min(\\{x\\},1-\\{x\\})$ is a continuous zig-zag with a corner at every integer and every half-integer.",
+   "solution": [
+    "$f(x)=\\{x\\}$ and $g(x)=1-\\{x\\}$, so $h(x)=\\min(\\{x\\},1-\\{x\\})$.",
+    "$f$ is a rising saw-tooth (slope $1$, jump down at each integer); $g$ is a falling saw-tooth (slope $-1$), with value $1$ at each integer.",
+    "Their minimum is the zig-zag with value $0$ at every integer and peaks of height $\\frac12$ at every half-integer; the jumps of $f$ and $g$ are never the smaller value, so $h$ has no jump: it is continuous on $[-2,2]$.",
+    "Corners of $h$ in $(-2,2)$: at the integers $-1,0,1$ (valleys) and at the half-integers $-\\frac32,-\\frac12,\\frac12,\\frac32$ (peaks).",
+    "That makes $3+4=7$ points of non-differentiability, which is more than four.",
+    "Options (A), (B), (C) fail ((A) says three, (B) and (C) claim discontinuities). Hence (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$h(x)=\\operatorname{dist}(x,\\mathbb{Z})$: a distance function is continuous, and its corners are exactly the points where $\\operatorname{dist}$ is $0$ or $\\frac12$.",
+     "solution": [
+      "$\\min\\{\\{x\\},1-\\{x\\}\\}$ is the distance from $x$ to the nearest integer.",
+      "A distance to a closed set is $1$-Lipschitz, hence continuous on $[-2,2]$.",
+      "The graph consists of line segments of slope $\\pm1$ with direction changes at multiples of $\\frac12$, i.e. at $x\\in\\{-\\frac32,-1,-\\frac12,0,\\frac12,1,\\frac32\\}$ inside $(-2,2)$.",
+      "That is $7$ corners, more than four: option (D) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "On any interval of length $1$ the zig-zag $\\operatorname{dist}(x,\\mathbb{Z})$ has two corners (one valley at an integer, one peak at a half-integer).",
+    "$x-[x]\\in[0,1)$ and $1-x+[x]\\in(0,1]$: both lie in $[0,1]$ and add to $1$, so their minimum never exceeds $\\frac12$.",
+    "Number of corners of the zig-zag in an open interval $(a,b)$ with $a,b$ integers: $2(b-a)-1$ (here $2\\cdot4-1=7$)."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of the product of a modulus function and a smooth function"
+   ],
+   "level": 1,
+   "question": "The function $f(x)=|x^2-2x-3|\\cdot e^{|9x^2-12x+4|}$ is not differentiable at exactly:",
+   "options": [
+    "one point",
+    "three points",
+    "two points",
+    "four points"
+   ],
+   "answer": "(C) two points",
+   "key_idea": "$9x^2-12x+4=(3x-2)^2\\ge0$, so the exponential factor is smooth and positive; only the zeros of $x^2-2x-3$ can be corners.",
+   "solution": [
+    "$9x^2-12x+4=(3x-2)^2\\ge0$, hence $|9x^2-12x+4|=(3x-2)^2$ and $f(x)=|x^2-2x-3|\\,e^{(3x-2)^2}$.",
+    "Factorise: $f(x)=|(x-3)(x+1)|\\,e^{(3x-2)^2}$.",
+    "$e^{(3x-2)^2}$ is differentiable and strictly positive for every real $x$.",
+    "$|(x-3)(x+1)|$ is non-differentiable only where $(x-3)(x+1)$ changes sign, i.e. at $x=-1$ and $x=3$.",
+    "At these points the smooth factor is non-zero: near a simple zero $x_0$ the left and right derivatives of $f$ are $\\mp u'(x_0)\\,v(x_0)$, which differ since $u'(x_0)\\ne0$ and $v(x_0)>0$.",
+    "So $f$ is not differentiable at exactly two points, $x=-1$ and $x=3$: option (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's working for this question is cut off and garbled: it ends with 'Not differentiable at x = -183' (the points should read $x=-1,\\,3$) and never shows why $|9x^2-12x+4|$ can be dropped or why the exponential factor does not matter. Both added; the key (C, two points) is correct. The English option list also labels two options '(C)'; the Hindi list shows (A) one, (B) three, (C) two, (D) four.",
+   "useful_results": [
+    "If $f=|u|\\cdot v$ with $v$ differentiable and $v\\ne0$, then $f$ is non-differentiable exactly at the zeros of $u$ at which $u'\\ne0$ (simple zeros of odd multiplicity).",
+    "If $v(x_0)=0$ too, the corner can disappear, e.g. $|x|\\cdot x$ is differentiable at $0$; always check the other factor at the zero.",
+    "$ax^2+bx+c$ with $b^2=4ac$ is a perfect square, so $|ax^2+bx+c|=ax^2+bx+c$ when $a>0$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: logarithmic and trigonometric ratios"
+   ],
+   "level": 1,
+   "question": "If the function $f(x)=\\begin{cases}\\dfrac1x\\log_e\\left(\\dfrac{1+\\frac xa}{1-\\frac xb}\\right), & x<0\\\\ k, & x=0\\\\ \\dfrac{\\cos^2x-\\sin^2x-1}{\\sqrt{x^2+1}-1}, & x>0\\end{cases}$ is continuous at $x=0$, then $\\dfrac1a+\\dfrac1b+\\dfrac4k$ is equal to:",
+   "options": [
+    "$5$",
+    "$-5$",
+    "$-4$",
+    "$4$"
+   ],
+   "answer": "(B) -5",
+   "key_idea": "Rationalise the right-hand piece to get $-4$; the left-hand piece splits into two standard limits $\\frac1a+\\frac1b$.",
+   "solution": [
+    "$f(0)=k$.",
+    "Right limit: multiply by $\\frac{\\sqrt{x^2+1}+1}{\\sqrt{x^2+1}+1}$. Since $\\cos^2x-\\sin^2x-1=\\cos2x-1=-2\\sin^2x$, we get $f(0^+)=\\lim_{x\\to0^+}\\frac{-2\\sin^2x}{x^2}\\left(\\sqrt{x^2+1}+1\\right)$.",
+    "$f(0^+)=-2\\cdot1\\cdot(1+1)=-4$.",
+    "Left limit: $f(0^-)=\\lim_{x\\to0^-}\\frac1x\\left[\\ln\\left(1+\\frac xa\\right)-\\ln\\left(1-\\frac xb\\right)\\right]$.",
+    "Using $\\frac{\\ln(1+t)}{t}\\to1$ with $t=\\frac xa$ and $t=-\\frac xb$: $f(0^-)=\\frac1a+\\frac1b$.",
+    "Continuity: $f(0)=f(0^+)=f(0^-)$, so $k=-4=\\frac1a+\\frac1b$.",
+    "$\\frac1a+\\frac1b+\\frac4k=-4+\\frac{4}{-4}=-4-1=-5$, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF labels the left-hand limit as '$f(0^+)=\\frac1a+\\frac1b$' (it should be $f(0^-)$, the branch for $x<0$) and has a stray text fragment '$(9\\sqrt2,2)$' in the middle of the working; both removed. The value $\\frac1a+\\frac1b=-4$ and the answer $-5$ are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Replace each factor by its leading Taylor term: $\\sqrt{1+x^2}-1\\approx\\frac{x^2}{2}$, $\\cos2x-1\\approx-2x^2$, $\\ln(1+u)\\approx u$.",
+     "solution": [
+      "$\\cos^2x-\\sin^2x-1=\\cos2x-1\\approx-\\frac{(2x)^2}{2}=-2x^2$ and $\\sqrt{x^2+1}-1\\approx\\frac{x^2}{2}$ as $x\\to0$.",
+      "So $f(0^+)=\\frac{-2x^2}{x^2/2}=-4$.",
+      "$\\ln\\left(1+\\frac xa\\right)\\approx\\frac xa$ and $\\ln\\left(1-\\frac xb\\right)\\approx-\\frac xb$, so $\\frac1x\\ln\\frac{1+x/a}{1-x/b}\\approx\\frac1a+\\frac1b$.",
+      "Continuity: $k=-4=\\frac1a+\\frac1b$.",
+      "$\\frac1a+\\frac1b+\\frac4k=-4-1=-5$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos^2x-\\sin^2x=\\cos2x$, and $1-\\cos2x=2\\sin^2x$: this converts such quotients to $\\frac{\\sin^2x}{x^2}$.",
+    "$\\sqrt{1+u}-1\\approx\\frac u2$ for small $u$; or rationalise: $\\sqrt{1+u}-1=\\frac{u}{\\sqrt{1+u}+1}$.",
+    "$\\lim_{x\\to0}\\frac1x\\ln\\frac{1+px}{1+qx}=p-q$."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: trigonometric ratios"
+   ],
+   "level": 1,
+   "question": "Let $a,b\\in\\mathbb{R}$, $b\\ne0$. Define a function $f(x)=\\begin{cases}a\\sin\\dfrac\\pi2(x-1), & \\text{for } x\\le0\\\\ \\dfrac{\\tan2x-\\sin2x}{bx^3}, & \\text{for } x>0\\end{cases}$. If $f$ is continuous at $x=0$, then $10-ab$ is equal to ______.",
+   "answer": "14",
+   "key_idea": "$\\tan2x-\\sin2x=\\tan2x(1-\\cos2x)\\sim2x\\cdot2x^2=4x^3$, so the right-hand limit is $\\frac4b$.",
+   "solution": [
+    "$f(0)=a\\sin\\left(-\\frac\\pi2\\right)=-a$, which equals the left-hand limit (sine is continuous).",
+    "$\\tan2x-\\sin2x=\\frac{\\sin2x}{\\cos2x}(1-\\cos2x)=\\frac{\\sin2x\\cdot2\\sin^2x}{\\cos2x}$.",
+    "$\\text{RHL}=\\lim_{x\\to0^+}\\frac{1}{b}\\cdot\\frac{\\sin2x}{x}\\cdot2\\left(\\frac{\\sin x}{x}\\right)^2\\cdot\\frac{1}{\\cos2x}=\\frac1b\\cdot2\\cdot2\\cdot1\\cdot1=\\frac4b$.",
+    "Continuity: $-a=\\frac4b$, so $ab=-4$.",
+    "$10-ab=10+4=14$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the Taylor expansion $\\tan t-\\sin t=\\frac{t^3}{2}+O(t^5)$ with $t=2x$.",
+     "solution": [
+      "$\\tan t=t+\\frac{t^3}{3}+\\dots$ and $\\sin t=t-\\frac{t^3}{6}+\\dots$, so $\\tan t-\\sin t=\\frac{t^3}{3}+\\frac{t^3}{6}=\\frac{t^3}{2}+\\dots$",
+      "With $t=2x$: $\\tan2x-\\sin2x\\approx\\frac{8x^3}{2}=4x^3$.",
+      "So $\\text{RHL}=\\frac{4x^3}{bx^3}=\\frac4b$.",
+      "$-a=\\frac4b\\Rightarrow ab=-4$ and $10-ab=14$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan t-\\sin t\\sim\\frac{t^3}{2}$ as $t\\to0$ (so $\\frac{\\tan t-\\sin t}{t^3}\\to\\frac12$), and $\\tan t-\\sin t=\\tan t(1-\\cos t)$.",
+    "General: $\\tan kx-\\sin kx\\sim\\frac{k^3x^3}{2}$; here $k=2$ gives $4x^3$.",
+    "Continuity at a boundary point of a piecewise function with a sine on the left: just evaluate the sine at $x=0$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Discontinuity of functions with the greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $[t]$ denote the greatest integer $\\le t$. The number of points where the function $f(x)=[x]\\,|x^2-1|+\\sin\\left(\\dfrac{\\pi}{[x]+3}\\right)-[x+1]$, $x\\in(-2,2)$ is not continuous is ______.",
+   "answer": "2",
+   "key_idea": "Only the integers $-1,0,1$ can be points of discontinuity (where $[x]$ jumps); on each interval $[n,n+1)$ the function is a fixed smooth expression.",
+   "solution": [
+    "$[x+1]=[x]+1$, so $f(x)=[x]\\left(|x^2-1|-1\\right)+\\sin\\left(\\frac{\\pi}{[x]+3}\\right)-1$.",
+    "For $x\\in(-2,-1)$: $[x]=-2$ and $|x^2-1|=x^2-1$, so $f(x)=-2(x^2-2)+\\sin\\pi-1=-2(x^2-2)-1=-2x^2+3$.",
+    "For $x\\in[-1,0)$: $[x]=-1$ and $|x^2-1|=1-x^2$, so $f(x)=-(-x^2)+\\sin\\frac\\pi2-1=x^2$.",
+    "For $x\\in[0,1)$: $[x]=0$, so $f(x)=\\sin\\frac\\pi3-1$ (constant).",
+    "For $x\\in[1,2)$: $[x]=1$ and $|x^2-1|=x^2-1$, so $f(x)=(x^2-2)+\\sin\\frac\\pi4-1=x^2-3+\\sin\\frac\\pi4$.",
+    "At $x=-1$: left limit $-2+3=1$, right limit $1$, $f(-1)=1$: continuous.",
+    "At $x=0$: left limit $0$, but $f(0)=\\sin\\frac\\pi3-1=\\frac{\\sqrt3}{2}-1\\ne0$: discontinuous.",
+    "At $x=1$: left limit $\\frac{\\sqrt3}{2}-1$, but $f(1)=1-3+\\frac{\\sqrt2}{2}=\\frac{\\sqrt2}{2}-2$: discontinuous.",
+    "The function is not continuous at exactly $2$ points ($x=0$ and $x=1$)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's piece list is labelled $(-2,-1]$ for the first piece and $(-1,0)$ for the second, which puts $x=-1$ in the wrong piece ($[-1]=-1$, so $x=-1$ belongs to $[-1,0)$); the value at $-1$ happens to be the same ($1$), so the answer is unaffected. The PDF also lists the pieces without verifying continuity at $x=-1$; that check is added. Final answer $2$ unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Only $[x]$ can jump: compute the jump of $f$ at an integer $n$ in one formula and test it for $n=-1,0,1$.",
+     "solution": [
+      "Write $f=[x]\\,c(x)+\\sin\\frac{\\pi}{[x]+3}-1$ with $c(x)=|x^2-1|-1$ continuous. Everything except $[x]$ is continuous, so a discontinuity can occur only at integers $n\\in\\{-1,0,1\\}$.",
+      "At an integer $n$, $[x]$ goes from $n-1$ (left) to $n$ (value), so $f(n)-f(n^-)=c(n)+\\sin\\frac{\\pi}{n+3}-\\sin\\frac{\\pi}{n+2}$.",
+      "$n=-1$: $c(-1)=-1$ and $\\sin\\frac\\pi2-\\sin\\pi=1$, total $-1+1=0$: continuous.",
+      "$n=0$: $c(0)=0$ and $\\sin\\frac\\pi3-\\sin\\frac\\pi2=\\frac{\\sqrt3}{2}-1\\ne0$: jump.",
+      "$n=1$: $c(1)=-1$ and $\\sin\\frac\\pi4-\\sin\\frac\\pi3\\approx-0.159$, total $\\approx-1.159\\ne0$: jump.",
+      "So there are $2$ discontinuities (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is built from $[x]$ and continuous functions, it can be discontinuous only at integers; the jump there can cancel (as at $x=-1$ here), so test each integer.",
+    "$[x+k]=[x]+k$ for any integer $k$.",
+    "Identity $[x](|x^2-1|-1)$ at $|x|>1$: $|x^2-1|-1=x^2-2$; for $|x|<1$ it is $-x^2$."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of piecewise functions with the greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=\\begin{cases}\\dfrac{\\sin(x-[x])}{x-[x]}, & x\\in(-2,-1)\\\\ \\max\\{2x,\\,3[|x|]\\}, & |x|<1\\\\ 1, & \\text{otherwise}\\end{cases}$ where $[t]$ denotes the greatest integer $\\le t$. If $m$ is the number of points where $f$ is not continuous and $n$ is the number of points where $f$ is not differentiable, then the ordered pair $(m,n)$ is:",
+   "options": [
+    "$(3,3)$",
+    "$(2,4)$",
+    "$(2,3)$",
+    "$(3,4)$"
+   ],
+   "answer": "(C) (2, 3)",
+   "key_idea": "Reduce $f$ to explicit pieces: on $(-1,1)$ it is $\\max(2x,0)$; then only $x=-1,0,1$ need checking.",
+   "solution": [
+    "For $x\\in(-2,-1)$: $x-[x]=\\{x\\}$, so $f(x)=\\frac{\\sin\\{x\\}}{\\{x\\}}$.",
+    "For $|x|<1$: $[|x|]=0$, so $f(x)=\\max(2x,0)$, i.e. $0$ for $-1<x<0$ and $2x$ for $0\\le x<1$.",
+    "Otherwise ($x\\le-2$, $x=-1$ or $x\\ge1$): $f(x)=1$.",
+    "Doubtful points: $x=-1,\\,0,\\,1$ (at $x=-2$ the left value is $1$ and $\\frac{\\sin\\{x\\}}{\\{x\\}}\\to1$ as $x\\to-2^+$, with zero slope on both sides, so it is fine).",
+    "At $x=0$: $\\text{LHL}=0$, $f(0)=0$, $\\text{RHL}=0$: continuous. Slopes: $\\text{LHD}=0$, $\\text{RHD}=2$: not differentiable at $0$.",
+    "At $x=1$: $\\text{LHL}=2\\cdot1=2$, $f(1)=1$, $\\text{RHL}=1$: not continuous (hence not differentiable).",
+    "At $x=-1$: $\\text{LHL}=\\lim\\frac{\\sin\\{x\\}}{\\{x\\}}$ with $\\{x\\}\\to1^-$, i.e. $\\sin1$; $f(-1)=1$; $\\text{RHL}=0$. The three values differ: not continuous.",
+    "Not continuous at $x=-1$ and $x=1$: $m=2$. Not differentiable at $x=-1,0,1$: $n=3$.",
+    "So $(m,n)=(2,3)$, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the identity $\\max(2x,0)=x+|x|$ on $(-1,1)$, so the only corner inside is $x=0$, and test the two end-joints by comparing three values.",
+     "solution": [
+      "On $(-1,1)$: $f(x)=\\max(2x,0)=x+|x|$, which is continuous with a single corner at $x=0$ (slope $0$ to slope $2$).",
+      "On $(-2,-1)$ the piece $\\frac{\\sin u}{u}$, $u=\\{x\\}\\in(0,1)$, is smooth; on $x\\ge1$ and $x\\le-2$ and at $x=-1$ we have the constant value $1$.",
+      "Joint $x=1$: left limit $x+|x|\\to2$ but $f(1)=1$ and right limit $1$ - a jump.",
+      "Joint $x=-1$: left limit $\\frac{\\sin u}{u}\\to\\sin1\\approx0.84$, right limit $0$, value $1$ - a jump.",
+      "Hence $m=2$ (jumps at $\\pm1$) and $n=3$ (corner at $0$ plus the two jumps): $(2,3)$ - same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\max(f,0)=\\frac{f+|f|}{2}$: for $f=2x$ this is $x+|x|$.",
+    "$[|x|]=0$ for $|x|<1$, $=1$ for $1\\le|x|<2$, etc.",
+    "A discontinuity is never differentiable: count jump points among the non-differentiable points and add the corners separately.",
+    "$\\frac{\\sin u}{u}$ is smooth and tends to $1$ as $u\\to0$; as $u\\to1^-$ it tends to $\\sin1$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of a composite function",
+    "Continuity of piecewise functions"
+   ],
+   "level": 3,
+   "question": "Let $f,g:\\mathbb{R}\\to\\mathbb{R}$ be two real valued functions defined as $f(x)=\\begin{cases}-|x+3|, & x<0\\\\ e^{x}, & x\\ge0\\end{cases}$ and $g(x)=\\begin{cases}x^2+k_1x, & x<0\\\\ 4x+k_2, & x\\ge0\\end{cases}$, where $k_1$ and $k_2$ are real constants. If $(g\\circ f)$ is differentiable at $x=0$, then $(g\\circ f)(-4)+(g\\circ f)(4)$ is equal to:",
+   "options": [
+    "$4(e^4+1)$",
+    "$2(2e^4+1)$",
+    "$4e^4$",
+    "$2(2e^4-1)$"
+   ],
+   "answer": "(D) 2(2e^4 - 1)",
+   "key_idea": "$g\\circ f$ is differentiable at $0$ only if it is continuous there; match values and one-sided slopes at $x=0$ to get $k_1,k_2$.",
+   "solution": [
+    "$f(x)=x+3$ for $x<-3$; $f(x)=-(x+3)$ for $-3\\le x<0$; $f(x)=e^x$ for $x\\ge0$. Also $f(x)<0$ for $x<0$, $x\\ne-3$, while $f(-3)=0$ and $f(x)\\ge1$ for $x\\ge0$.",
+    "Since $g(u)=u^2+k_1u$ for $u<0$ and $4u+k_2$ for $u\\ge0$: for $x<-3$, $(g\\circ f)(x)=(x+3)^2+k_1(x+3)$; for $-3<x<0$, $(g\\circ f)(x)=(x+3)^2-k_1(x+3)$; for $x\\ge0$, $(g\\circ f)(x)=4e^x+k_2$.",
+    "Continuity at $x=0$ (needed for differentiability): $(g\\circ f)(0^-)=9-3k_1$ and $(g\\circ f)(0)=4+k_2$, so $9-3k_1=4+k_2$, i.e. $3k_1+k_2=5$.",
+    "Differentiate the pieces: $2(x+3)-k_1$ for $-3<x<0$ and $4e^x$ for $x>0$.",
+    "Equal one-sided derivatives at $0$: $6-k_1=4$, so $k_1=2$.",
+    "Then $k_2=5-3k_1=-1$.",
+    "$(g\\circ f)(-4)$: $-4<-3$, so $(g\\circ f)(-4)=(-1)^2+2(-1)=-1$.",
+    "$(g\\circ f)(4)=4e^4+k_2=4e^4-1$.",
+    "Sum $=-1+4e^4-1=4e^4-2=2(2e^4-1)$, option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF puts $x=-3$ in the middle piece $-3\\le x<0$ and writes $(x+3)^2-k_1(x+3)$ there, but $f(-3)=0$ so $g(f(-3))=g(0)=k_2$ (a single isolated point). It does not affect differentiability at $0$ or the values at $\\pm4$, so $k_1=2$, $k_2=-1$ and the answer are unchanged. I used $-3<x<0$ for that piece.",
+   "alternate_solutions": [
+    {
+     "idea": "Chain rule at the corner: $f$ is discontinuous at $0$ ($f(0^-)=-3$, $f(0)=1$), so use the left piece of $g$ at the argument $-3$ and the right piece at $1$.",
+     "solution": [
+      "Near $0^-$: $f(x)\\to-3$ with $f'(0^-)=-1$ (since $f=-(x+3)$), and $g$ acts through its $x<0$ piece $g_1(u)=u^2+k_1u$.",
+      "Near $0^+$: $f(x)=e^x\\to1$ with $f'(0^+)=1$, and $g$ acts through $g_2(u)=4u+k_2$.",
+      "Value match: $g_1(-3)=9-3k_1$ and $g_2(1)=4+k_2$, giving $3k_1+k_2=5$.",
+      "Slope match: $(g\\circ f)'(0^-)=g_1'(-3)\\cdot(-1)=(-6+k_1)(-1)=6-k_1$ and $(g\\circ f)'(0^+)=g_2'(1)\\cdot1=4$, so $k_1=2$, $k_2=-1$.",
+      "$(g\\circ f)(-4)=g_1(f(-4))=g_1(-1)=-1$ and $(g\\circ f)(4)=g_2(e^4)=4e^4-1$, so the sum is $4e^4-2=2(2e^4-1)$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Differentiability of $g\\circ f$ at a point where $f$ is discontinuous is possible only if the two one-sided compositions agree in value and slope.",
+    "For composites of piecewise functions, first find which piece of the outer function is active, then substitute.",
+    "Chain rule one-sidedly: $(g\\circ f)'(a^\\pm)=g'(f(a^\\pm))\\cdot f'(a^\\pm)$, with the outer piece chosen by the sign of $f(a^\\pm)$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a minimum of functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\min\\{1,\\,1+x\\sin x\\}$, $0\\le x\\le2\\pi$. If $m$ is the number of points where $f$ is not differentiable and $n$ is the number of points where $f$ is not continuous, then the ordered pair $(m,n)$ is equal to:",
+   "options": [
+    "$(2,0)$",
+    "$(1,0)$",
+    "$(1,1)$",
+    "$(2,1)$"
+   ],
+   "answer": "(B) (1, 0)",
+   "key_idea": "$x\\sin x\\ge0$ on $[0,\\pi]$ and $\\le0$ on $[\\pi,2\\pi]$, so $f=1$ on $[0,\\pi]$ and $f=1+x\\sin x$ on $[\\pi,2\\pi]$.",
+   "solution": [
+    "On $[0,\\pi]$, $\\sin x\\ge0$, so $1+x\\sin x\\ge1$ and $f(x)=1$. On $[\\pi,2\\pi]$, $\\sin x\\le0$, so $1+x\\sin x\\le1$ and $f(x)=1+x\\sin x$.",
+    "So $f(x)=1$ for $0\\le x<\\pi$ and $f(x)=1+x\\sin x$ for $\\pi\\le x\\le2\\pi$.",
+    "Continuity: $f(0^+)=1=f(0)$; $f(\\pi^-)=1$, $f(\\pi)=1+\\pi\\sin\\pi=1$, $f(\\pi^+)=1$; $f(2\\pi^-)=1$, $f(2\\pi)=1$. So $f$ is continuous everywhere and $n=0$.",
+    "$f'(x)=0$ for $0<x<\\pi$ and $f'(x)=\\sin x+x\\cos x$ for $\\pi<x<2\\pi$.",
+    "At $x=\\pi$: $f'(\\pi^-)=0$ and $f'(\\pi^+)=\\sin\\pi+\\pi\\cos\\pi=-\\pi$, so $f$ is not differentiable at $\\pi$.",
+    "No other interior point is a problem, so $m=1$ and $(m,n)=(1,0)$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $\\min\\{1,1+u\\}=1+\\min\\{0,u\\}=1+\\frac{u-|u|}{2}$ with $u=x\\sin x$; corners come only from the zeros of $u$ at which $u'\\ne0$.",
+     "solution": [
+      "$f(x)=1+\\frac{u-|u|}{2}$ with $u=x\\sin x$. Since $u$ and $|u|$ are continuous, $f$ is continuous on $[0,2\\pi]$: $n=0$.",
+      "$|u|$ is non-differentiable exactly at zeros of $u$ where $u'\\ne0$. Zeros of $u$ in $[0,2\\pi]$: $x=0,\\pi,2\\pi$ ($x\\sin x=0$).",
+      "$u'(x)=\\sin x+x\\cos x$: $u'(\\pi)=-\\pi\\ne0$, so $\\pi$ is a corner. The points $0$ and $2\\pi$ are end-points of the domain, so they are not counted.",
+      "Hence $m=1$, $n=0$ - option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\min(a,b)=\\frac{a+b-|a-b|}{2}$ and $\\max(a,b)=\\frac{a+b+|a-b|}{2}$: a min/max of two differentiable functions has corners only where they cross with unequal slopes.",
+    "$f=\\min(1,1+u)$ is $1$ when $u\\ge0$ and $1+u$ when $u\\le0$: the sign pattern of $x\\sin x$ on $[0,2\\pi]$ is $+$ on $(0,\\pi)$ and $-$ on $(\\pi,2\\pi)$.",
+    "Corner test at a crossing $u=0$: slopes are $0$ and $u'$; a corner appears iff $u'\\ne0$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity of piecewise functions with the greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined as $f(x)=\\begin{cases}[e^{x}], & x<0\\\\ ae^{x}+[x-1], & 0\\le x<1\\\\ b+[\\sin(\\pi x)], & 1\\le x<2\\\\ [e^{-x}]-c, & x\\ge2\\end{cases}$ where $a,b,c\\in\\mathbb{R}$ and $[t]$ denotes the greatest integer less than or equal to $t$. Then, which of the following statements is true?",
+   "options": [
+    "There exist $a,b,c\\in\\mathbb{R}$ such that $f$ is continuous on $\\mathbb{R}$",
+    "If $f$ is discontinuous at exactly one point, then $a+b+c=1$",
+    "If $f$ is discontinuous at exactly one point, then $a+b+c\\ne1$",
+    "$f$ is discontinuous at at least two points, for any values of $a$, $b$ and $c$"
+   ],
+   "answer": "(C)",
+   "key_idea": "The constants $a$ and $b+c$ are fixed by the joints $x=0$ and $x=2$; the joint $x=1$ is discontinuous for every $a,b$.",
+   "solution": [
+    "For $x<0$: $0<e^x<1$, so $[e^x]=0$. For $0\\le x<1$: $x-1\\in[-1,0)$, so $[x-1]=-1$ and $f(x)=ae^x-1$.",
+    "For $1<x<2$: $\\sin(\\pi x)\\in(-1,0)$, so $[\\sin\\pi x]=-1$ and $f(x)=b-1$; at $x=1$, $f(1)=b+[\\sin\\pi]=b$. For $x\\ge2$: $0<e^{-x}<1$, so $f(x)=-c$.",
+    "Continuity at $x=0$: $\\text{LHL}=0$ and $f(0)=a-1$, so $a=1$.",
+    "At $x=1$: $f(1)=b$ but $\\text{RHL}=b-1$ for every $b$ (and $\\text{LHL}=ae-1$). Since $f(1)\\ne\\text{RHL}$, $f$ is discontinuous at $x=1$ for all values of $a,b,c$.",
+    "Continuity at $x=2$: $\\text{LHL}=b-1$ and $f(2)=\\text{RHL}=-c$, so $b-1=-c$, i.e. $b+c=1$.",
+    "Hence (A) is false: $f$ is always discontinuous at $x=1$.",
+    "If $f$ is discontinuous at exactly one point, that point is $x=1$, so $a=1$ and $b+c=1$, giving $a+b+c=2\\ne1$. So (C) is true and (B) is false.",
+    "(D) is false: with $a=1$, $b+c=1$, $f$ is discontinuous only at $x=1$. Answer (C)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$[\\sin\\pi x]$ is $-1$ for $x\\in(1,2)$, $0$ at integers, $0$ for $x\\in(0,1)$ (not $-1$): the sign of the sine decides the floor.",
+    "$[x-1]=-1$ on $[0,1)$; $[e^{x}]=0$ for $x<0$; $[e^{-x}]=0$ for $x>0$.",
+    "When a statement asks about 'exactly one point of discontinuity', first find the points that are discontinuous for every parameter value, then see which parameters remove the rest."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity of a composite function",
+    "Greatest integer function"
+   ],
+   "level": 3,
+   "question": "Let $f,g:\\mathbb{R}\\to\\mathbb{R}$ be functions defined by $f(x)=\\begin{cases}[x], & x<0\\\\ |1-x|, & x\\ge0\\end{cases}$ and $g(x)=\\begin{cases}e^x-x, & x<0\\\\ (x-1)^2-1, & x\\ge0\\end{cases}$ where $[x]$ denotes the greatest integer less than or equal to $x$. Then, the function $f\\circ g$ is discontinuous at exactly:",
+   "options": [
+    "one point",
+    "two points",
+    "three points",
+    "four points"
+   ],
+   "answer": "(B) two points",
+   "key_idea": "Find which piece of $f$ is active: $g<0$ only for $0<x<2$, where $f(g)=[g]=-1$, while $f(0)=1$ and $f(2)=1$ force jumps at $0$ and $2$.",
+   "solution": [
+    "For $x<0$: $g(x)=e^x-x>1>0$, so $f(g(x))=|1-g(x)|=|1+x-e^x|$.",
+    "For $x=0$: $g(0)=0$, so $f(g(0))=|1-0|=1$.",
+    "For $0<x<2$: $g(x)=(x-1)^2-1\\in[-1,0)$, so $f(g(x))=[g(x)]=-1$ (a constant), written in the PDF as $[(x-1)^2-1]$.",
+    "For $x\\ge2$: $g(x)\\ge0$, so $f(g(x))=|1-g(x)|=|2-(x-1)^2|$.",
+    "At $x=0$: $\\text{LHL}=|1+0-1|=0$, $f(g(0))=1$, $\\text{RHL}=-1$: discontinuous.",
+    "At $x=2$: $\\text{LHL}=-1$, $f(g(2))=|2-1|=1=\\text{RHL}$: discontinuous (jump from $-1$ to $1$).",
+    "All other points are continuous (each piece is continuous on its open interval).",
+    "So $f\\circ g$ is discontinuous at exactly two points ($x=0$ and $x=2$): option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the middle piece as '$\\left[(x-1)^2-1\\right]$' without simplifying it to $-1$ (the value of $[g]$ on $0<x<2$ since $g\\in[-1,0)$), and its graph is drawn without a check at $x=2$ against $f(g(2))=1$; the conclusion is right but incomplete. Both added; the answer (two points) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$f$ itself is discontinuous only at $0$ (jump from $-1$ to $1$), so $f\\circ g$ can be discontinuous only where $g$ passes through $0$.",
+     "solution": [
+      "$g(x)\\ge-1$ for all $x$, and on $[-1,\\infty)$ the function $f$ is continuous except at $u=0$: $f(u)=[u]=-1$ on $[-1,0)$, $f(u)=|1-u|$ on $[0,\\infty)$, with $f(0^-)=-1$ but $f(0)=1$.",
+      "So $f\\circ g$ can fail to be continuous only where $g(x)=0$, and only if $g$ takes values below $0$ near there (since $g$ is continuous).",
+      "$g(x)=0$: for $x<0$, $e^x-x>1$ never; for $x\\ge0$, $(x-1)^2=1$ gives $x=0$ or $x=2$.",
+      "At $x=0$: $g$ is positive for $x<0$ but negative just to the right; so the limit values are $f(g\\to0^+)=1$ (left) and $f(g\\to0^-)=-1$ (right): a jump. At $x=2$: $g<0$ on the left and $>0$ on the right: a jump.",
+      "Hence exactly two points - option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f\\circ g$, find the points of discontinuity of $f$ (outer) and the values of $x$ where $g$ takes them; then check the approach direction.",
+    "If the outer function is discontinuous at $u_0$ and the inner function crosses $u_0$ (or touches it from the discontinuous side), the composite is discontinuous there.",
+    "$[u]=-1$ for all $u\\in[-1,0)$; $(x-1)^2-1<0\\iff0<x<2$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Discontinuity of functions with the greatest integer function and quadratics"
+   ],
+   "level": 3,
+   "question": "The number of points where the function $f(x)=\\begin{cases}|2x^2-3x-7|, & \\text{if } x\\le-1\\\\ [4x^2-1], & \\text{if } -1<x<1\\\\ |x+1|+|x-2|, & \\text{if } x\\ge1\\end{cases}$, $[t]$ denotes the greatest integer $\\le t$, is discontinuous is ______.",
+   "answer": "7",
+   "key_idea": "On $(-1,1)$ the floor of $4x^2-1$ jumps each time $4x^2-1$ crosses the integers $0,1,2$; add the joints $x=\\pm1$.",
+   "solution": [
+    "The outer pieces $|2x^2-3x-7|$ and $|x+1|+|x-2|$ are continuous on their own intervals; $f(-1)=|2+3-7|=2$ and $f(1)=|2|+|-1|=3$.",
+    "At $x=-1$: $\\text{LHL}=2$. For $x\\to-1^+$, $4x^2-1\\to3^-$ so $[4x^2-1]\\to2$: $\\text{RHL}=2=f(-1)$: continuous.",
+    "At $x=1$: $\\text{RHL}=f(1)=3$ but $\\text{LHL}=[3^-]=2$: discontinuous.",
+    "For $x\\in(-1,1)$: $4x^2-1\\in[-1,3)$. Its floor jumps at every $x$ where $4x^2-1$ passes through an integer value $0$, $1$ or $2$ (it is strictly monotone on each side of $x=0$).",
+    "$4x^2=1,2,3$ gives $x=\\pm\\frac12,\\ \\pm\\frac1{\\sqrt2},\\ \\pm\\frac{\\sqrt3}{2}$: six points.",
+    "At $x=0$ the quadratic has its minimum $-1$ and $[4x^2-1]=-1$ on both sides, so there is no jump there.",
+    "Total number of discontinuities $=6+1=7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "On $(-1,1)$ the function is even and $4x^2-1$ is strictly increasing on $(0,1)$ from $-1$ to $3$: count integer crossings on $(0,1)$ once and double.",
+     "solution": [
+      "For $x\\in(-1,1)$, $f(-x)=[4x^2-1]=f(x)$: $f$ is even there, so count jumps on $(0,1)$ and mirror them.",
+      "On $(0,1)$, $4x^2-1$ increases continuously and strictly from $-1$ to $3$; $[4x^2-1]$ jumps exactly when it passes the integers $0,1,2$ - three jumps (at $x=\\frac12,\\frac1{\\sqrt2},\\frac{\\sqrt3}{2}$).",
+      "Mirror image on $(-1,0)$: three more. At $x=0$ there is no jump (minimum value $-1$ approached from above: floor stays $-1$).",
+      "Joint $x=-1$: continuous (both limits $2$); joint $x=1$: jump $2\\to3$.",
+      "Total $=3+3+1=7$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The floor of a continuous strictly monotone function jumps once at each integer value it crosses. At a local minimum whose value is an integer $m$ the floor stays $m$ on both sides (no jump); at a local maximum with integer value $m$ the floor is $m-1$ on both sides but $m$ at the point (a removable jump).",
+    "Joint check: compare left limit, value and right limit; a discontinuity at the joint can hide behind a floor limit like $[3^-]=2$.",
+    "Even function $\\Rightarrow$ discontinuities come in symmetric pairs; check $x=0$ separately."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Discontinuity of a composite function with the greatest integer function"
+   ],
+   "level": 4,
+   "question": "Let $f(x)=[2x^2+1]$ and $g(x)=\\begin{cases}2x-3, & x<0\\\\ 2x+3, & x\\ge0\\end{cases}$, where $[t]$ is the greatest integer $\\le t$. Then, in the open interval $(-1,1)$, the number of points where $f\\circ g$ is discontinuous is equal to ______.",
+   "answer": "62",
+   "key_idea": "$(f\\circ g)(x)=[2g(x)^2]+1$ jumps once for every integer value that $2g^2$ passes through, on each side of $0$.",
+   "solution": [
+    "$(f\\circ g)(x)=[2g^2(x)]+1$.",
+    "For $x\\in(-1,0)$: $g=2x-3\\in(-5,-3)$, so $(2x-3)^2\\in(9,25)$ and $2(2x-3)^2\\in(18,50)$. This is continuous and strictly monotone (decreasing from $50$ to $18$ as $x$ goes from $-1$ to $0$).",
+    "Its floor is discontinuous exactly when $2(2x-3)^2\\in\\{19,20,\\dots,49\\}$: that is $31$ points.",
+    "For $x\\in[0,1)$: $g=2x+3\\in[3,5)$, so $(2x+3)^2\\in[9,25)$ and $2(2x+3)^2\\in[18,50)$, strictly increasing from $18$.",
+    "Its floor is discontinuous exactly when $2(2x+3)^2\\in\\{19,20,\\dots,49\\}$: again $31$ points.",
+    "At $x=0$: $2g^2\\to18^+$ from both sides (from the left $2(2x-3)^2\\to18^+$ and from the right $2(2x+3)^2\\to18^+$) and $2g(0)^2=18$, so $f\\circ g$ is continuous at $0$ even though $g$ jumps there.",
+    "Total number of points of discontinuity $=31+31=62$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "In part (ii) the PDF writes the expression as $2(2x-3)^2$; it should be $2(2x+3)^2$ (the branch $g=2x+3$ for $x\\ge0$). It also does not check the point $x=0$ where $g$ jumps; that check is added. The count $31+31=62$ is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "$g(x)^2=(2|x|+3)^2$ for every $x$, so $f\\circ g$ is an even function of a single increasing quantity in $|x|$: count the jumps for $x\\in(0,1)$ and double.",
+     "solution": [
+      "For $x<0$: $(2x-3)^2=(2|x|+3)^2$; for $x\\ge0$: $(2x+3)^2=(2|x|+3)^2$. So $(f\\circ g)(x)=\\left[2(2|x|+3)^2\\right]+1$ for all $x$.",
+      "This is an even function of $x$, so discontinuities occur symmetrically about $0$.",
+      "For $s=|x|\\in(0,1)$, $2(2s+3)^2$ increases strictly and continuously from $18$ to $50$; the floor jumps at each of the $31$ integers $19,\\dots,49$.",
+      "The point $x=0$: $2(2|x|+3)^2$ has a minimum value $18$ (an integer) at $0$, so the floor is constant $18$ near $0$: no jump.",
+      "Total $=2\\times31=62$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$g(x)^2$ for a two-branch linear $g$ with opposite signs of the constant ($2x-3$ for $x<0$, $2x+3$ for $x\\ge0$) equals $(2|x|+3)^2$: spotting this symmetry halves the work.",
+    "The floor of a continuous strictly monotone function on an interval is discontinuous at one point for each integer strictly between its end values (here the integers $19,\\dots,49$: $31$ of them).",
+    "At an end value that is an integer ($18$ here), check whether $\\phi$ approaches it from the correct side; if it does, there is no jump."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: logarithmic and trigonometric ratios"
+   ],
+   "level": 1,
+   "question": "If the function $f(x)=\\begin{cases}\\dfrac{\\log_e(1-x+x^2)+\\log_e(1+x+x^2)}{\\sec x-\\cos x}, & x\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)-\\{0\\}\\\\ k, & x=0\\end{cases}$ is continuous at $x=0$, then $k$ is equal to:",
+   "options": [
+    "$1$",
+    "$-1$",
+    "$e$",
+    "$0$"
+   ],
+   "answer": "(A) 1",
+   "key_idea": "The two logarithms combine to $\\ln(1+x^2+x^4)$ and $\\sec x-\\cos x=\\frac{\\sin^2x}{\\cos x}$, so the quotient behaves like $\\frac{x^2}{x^2}$.",
+   "solution": [
+    "$k=\\lim_{x\\to0}\\frac{\\ln(1-x+x^2)+\\ln(1+x+x^2)}{\\sec x-\\cos x}$.",
+    "$(1-x+x^2)(1+x+x^2)=(1+x^2)^2-x^2=1+x^2+x^4$, so the numerator is $\\ln(1+x^2+x^4)$.",
+    "$\\sec x-\\cos x=\\frac{1-\\cos^2x}{\\cos x}=\\frac{\\sin^2x}{\\cos x}$.",
+    "So $k=\\lim_{x\\to0}\\frac{\\ln(1+x^2+x^4)\\cos x}{\\sin^2x}$.",
+    "Write it as $\\frac{\\ln(1+x^2+x^4)}{x^2+x^4}\\cdot x^2(1+x^2)\\cdot\\cos x\\cdot\\frac{1}{\\left(\\frac{\\sin x}{x}\\right)^2x^2}$.",
+    "Each factor tends to: $1$, then $(1+x^2)\\to1$, $\\cos x\\to1$, $\\left(\\frac{\\sin x}{x}\\right)^2\\to1$ with $x^2$ cancelling. Hence $k=1$, option (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare leading terms: $\\ln(1+x^2+x^4)\\sim x^2$ and $\\sec x-\\cos x\\sim\\left(1+\\frac{x^2}{2}\\right)-\\left(1-\\frac{x^2}{2}\\right)=x^2$.",
+     "solution": [
+      "$\\sec x=1+\\frac{x^2}{2}+O(x^4)$ and $\\cos x=1-\\frac{x^2}{2}+O(x^4)$, so $\\sec x-\\cos x=x^2+O(x^4)$.",
+      "$\\ln(1-x+x^2)+\\ln(1+x+x^2)=\\ln(1+x^2+x^4)=x^2+O(x^4)$.",
+      "Hence $f(x)\\to\\frac{x^2}{x^2}=1$ and $k=1$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$(1-x+x^2)(1+x+x^2)=1+x^2+x^4$ (from $(a-b)(a+b)=a^2-b^2$ with $a=1+x^2$, $b=x$); also $(1-x+x^2)(1+x)=1+x^3$.",
+    "$\\sec x-\\cos x=\\frac{\\sin^2x}{\\cos x}=\\sin x\\tan x\\sim x^2$.",
+    "$\\ln(1+u)\\sim u$ as $u\\to0$, so the numerator is $\\sim x^2$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity of piecewise functions",
+    "Composite functions"
+   ],
+   "level": 1,
+   "question": "If $f(x)=\\begin{cases}x+a, & x\\le0\\\\ |x-4|, & x>0\\end{cases}$ and $g(x)=\\begin{cases}x+1, & x<0\\\\ (x-4)^2+b, & x\\ge0\\end{cases}$ are continuous on $\\mathbb{R}$, then $(g\\circ f)(2)+(f\\circ g)(-2)$ is equal to:",
+   "options": [
+    "$-10$",
+    "$10$",
+    "$8$",
+    "$-8$"
+   ],
+   "answer": "(D) -8",
+   "key_idea": "Continuity at $x=0$ fixes $a=4$ and $b=-15$; then evaluate each composite by pieces.",
+   "solution": [
+    "$f$ is continuous at $0$: $\\lim_{x\\to0^-}(x+a)=a=f(0)$ and $\\lim_{x\\to0^+}|x-4|=4$, so $a=4$.",
+    "$g$ is continuous at $0$: $\\lim_{x\\to0^-}(x+1)=1$ and $g(0)=(0-4)^2+b=16+b$, so $b=1-16=-15$.",
+    "$(g\\circ f)(2)=g(f(2))=g(|2-4|)=g(2)$.",
+    "$g(2)=(2-4)^2+b=4-15=-11$.",
+    "$(f\\circ g)(-2)=f(g(-2))=f(-2+1)=f(-1)$.",
+    "$f(-1)=-1+a=-1+4=3$.",
+    "Sum $=-11+3=-8$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For piecewise functions continuous on $\\mathbb{R}$, equate the one-sided limits at each joint; only the joint $x=0$ matters here.",
+    "Evaluate composites from the inside out, choosing the piece by the sign condition of the inner value.",
+    "$g\\circ f$ and $f\\circ g$ are in general different functions: do not swap the order."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: binomial expansion for fractional powers"
+   ],
+   "level": 2,
+   "question": "If for $p\\ne q\\ne0$, the function $f(x)=\\dfrac{\\sqrt[7]{p(729+x)}-3}{\\sqrt[3]{729+qx}-9}$ is continuous at $x=0$, then:",
+   "options": [
+    "$7pq\\,f(0)-1=0$",
+    "$63q\\,f(0)-p^2=0$",
+    "$21q\\,f(0)-p^2=0$",
+    "$7pq\\,f(0)-9=0$"
+   ],
+   "answer": "(B) 63q f(0) - p^2 = 0",
+   "key_idea": "The denominator $\\to0$, so the numerator must vanish: $p\\cdot3^6=3^7$ gives $p=3$; then factor out $(1+\\frac{x}{729})^{1/7}-1$ and $(1+\\frac{qx}{729})^{1/3}-1$.",
+   "solution": [
+    "$f(0)=\\lim_{x\\to0}f(x)$, and this limit must be of the $\\frac00$ form (the denominator tends to $\\sqrt[3]{729}-9=0$).",
+    "So the numerator must tend to $0$: $\\sqrt[7]{p\\cdot729}-3=0\\Rightarrow p\\cdot3^6=3^7\\Rightarrow p=3$.",
+    "$f(0)=\\lim_{x\\to0}\\frac{\\sqrt[7]{3(3^6+x)}-3}{\\sqrt[3]{3^6+qx}-9}$.",
+    "Factor: $\\sqrt[7]{3^7\\left(1+\\frac{x}{3^6}\\right)}=3\\left(1+\\frac{x}{3^6}\\right)^{1/7}$ and $\\sqrt[3]{3^6\\left(1+\\frac{qx}{3^6}\\right)}=9\\left(1+\\frac{qx}{3^6}\\right)^{1/3}$.",
+    "$f(0)=\\lim\\frac{3\\left[\\left(1+\\frac{x}{3^6}\\right)^{1/7}-1\\right]}{9\\left[\\left(1+\\frac{qx}{3^6}\\right)^{1/3}-1\\right]}$.",
+    "Use $(1+u)^{m}-1\\sim mu$: the numerator $\\sim3\\cdot\\frac17\\cdot\\frac{x}{3^6}$ and the denominator $\\sim9\\cdot\\frac13\\cdot\\frac{qx}{3^6}$.",
+    "$f(0)=\\frac{3}{9}\\cdot\\frac{1/(7\\cdot3^6)}{q/(3\\cdot3^6)}=\\frac13\\cdot\\frac{3}{7q}=\\frac{1}{7q}$.",
+    "So $7qf(0)=1$. Multiply by $p^2=9$: $63q\\,f(0)=9=p^2$, i.e. $63q\\,f(0)-p^2=0$, option (B). (Option (A): $7pq\\,f(0)=3\\ne1$.)"
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate: with $N(x)=\\sqrt[7]{p(729+x)}-3$ and $D(x)=\\sqrt[3]{729+qx}-9$ both $\\to0$, $f(0)=\\frac{N'(0)}{D'(0)}$ (L'Hopital).",
+     "solution": [
+      "$N(0)=0$ forces $p=3$ (as before), and $D(0)=0$ already.",
+      "$N'(x)=\\frac17\\left(3(729+x)\\right)^{-6/7}\\cdot3$; at $0$: $\\left(3\\cdot3^6\\right)^{-6/7}=3^{-6}$, so $N'(0)=\\frac{3}{7\\cdot3^6}$.",
+      "$D'(x)=\\frac13(729+qx)^{-2/3}\\cdot q$; at $0$: $729^{-2/3}=3^{-4}$, so $D'(0)=\\frac{q}{3\\cdot3^4}=\\frac{q}{243}$.",
+      "$f(0)=\\frac{3/(7\\cdot729)}{q/243}=\\frac{3\\cdot243}{7\\cdot729\\,q}=\\frac{1}{7q}$.",
+      "Hence $63q\\,f(0)=9=p^2$: option (B) (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Binomial linearisation: $(1+u)^m-1\\sim mu$ as $u\\to0$, for any real $m$.",
+    "$0/0$ forms: when $N(a)=D(a)=0$ and both are differentiable with $D'(a)\\ne0$, $\\lim\\frac{N}{D}=\\frac{N'(a)}{D'(a)}$.",
+    "To keep a limit finite at a root of the denominator, the numerator's parameter is forced (here $p=3$)."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a sequence-defined function (powers of $x$)",
+    "Continuity of a function defined by a limit"
+   ],
+   "level": 3,
+   "question": "The function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\lim_{n\\to\\infty}\\dfrac{\\cos(2\\pi x)-x^{2n}\\sin(x-1)}{1+x^{2n+1}-x^{2n}}$ is continuous for all $x$ in:",
+   "options": [
+    "$\\mathbb{R}-\\{-1\\}$",
+    "$\\mathbb{R}-\\{-1,1\\}$",
+    "$\\mathbb{R}-\\{1\\}$",
+    "$\\mathbb{R}-\\{0\\}$"
+   ],
+   "answer": "(B) R - {-1, 1}",
+   "key_idea": "Treat $|x|<1$, $|x|>1$ and $x=\\pm1$ separately (the limit of $x^{2n}$ is $0,\\infty,1$); then compare left limit, value and right limit at $\\pm1$.",
+   "solution": [
+    "For $|x|<1$: $x^{2n}\\to0$ and $x^{2n+1}\\to0$, so $f(x)=\\cos2\\pi x$.",
+    "For $|x|>1$: divide numerator and denominator by $x^{2n}$: $f(x)=\\lim\\frac{\\frac{\\cos2\\pi x}{x^{2n}}-\\sin(x-1)}{\\frac{1}{x^{2n}}+x-1}=-\\frac{\\sin(x-1)}{x-1}$.",
+    "At $x=1$: $f(1)=\\frac{\\cos2\\pi-\\sin0}{1+1-1}=1$.",
+    "At $x=-1$: $x^{2n}=1$, $x^{2n+1}=-1$, so $f(-1)=\\frac{\\cos(-2\\pi)-\\sin(-2)}{1-1-1}=-(1+\\sin2)$.",
+    "At $x=1$: $\\text{LHL}=\\cos2\\pi=1$ but $\\text{RHL}=-\\frac{\\sin(x-1)}{x-1}\\to-1$: not continuous.",
+    "At $x=-1$: $\\text{RHL}=\\cos(-2\\pi)=1$, $\\text{LHL}=-\\frac{\\sin(-2)}{-2}=-\\frac{\\sin2}{2}$ and $f(-1)=-(1+\\sin2)$: all three differ, not continuous.",
+    "For other $x$ the expression is a continuous function on each of $|x|<1$ and $|x|>1$. So $f$ is continuous on $\\mathbb{R}-\\{-1,1\\}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\lim_{n\\to\\infty}x^{2n}=0$ for $|x|<1$, $=1$ for $|x|=1$, $=\\infty$ for $|x|>1$; $x^{2n+1}$ behaves like $x\\cdot x^{2n}$ (and equals $-1$ at $x=-1$).",
+    "For ratios of expressions in $x^{2n}$: divide by the largest power for $|x|>1$, and substitute directly for $|x|<1$ and $x=\\pm1$.",
+    "The function defined by such a limit is continuous on each region and its only possible discontinuities are the boundary points $|x|=1$."
+   ]
+  },
+  {
+   "q_no": 26,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of functions involving modulus"
+   ],
+   "level": 2,
+   "question": "The number of points, where the function $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=|x-1|\\cos|x-2|\\sin|x-1|+(x-3)|x^2-5x+4|$ is NOT differentiable, is:",
+   "options": [
+    "$1$",
+    "$2$",
+    "$3$",
+    "$4$"
+   ],
+   "answer": "(B) 2",
+   "key_idea": "$|t|\\sin|t|=t\\sin t$ and $\\cos|t|=\\cos t$ are smooth; only $(x-3)|(x-1)(x-4)|$ has corners, at $x=1$ and $x=4$.",
+   "solution": [
+    "$x^2-5x+4=(x-1)(x-4)$, so $f(x)=|x-1|\\cos|x-2|\\sin|x-1|+(x-3)|x-1||x-4|$.",
+    "PDF's form: $f(x)=|x-1|\\left[\\cos|x-2|\\sin|x-1|+(x-3)|x-4|\\right]$ - the candidates for non-differentiability are $x=1,2,4$ (zeros of the modulus arguments).",
+    "First term: $|x-1|\\sin|x-1|=(x-1)\\sin(x-1)$ (the function $t\\sin t$ is even, so $|t|\\sin|t|=t\\sin t$) and $\\cos|x-2|=\\cos(x-2)$ (cosine is even). So $T_1=(x-1)\\sin(x-1)\\cos(x-2)$ is differentiable everywhere; in particular $x=2$ is not a problem.",
+    "Second term: $T_2=(x-3)\\,|(x-1)(x-4)|$. The modulus is non-differentiable exactly at its simple zeros $x=1$ and $x=4$.",
+    "At these points the smooth factor $(x-3)$ is non-zero: $-2$ at $x=1$ and $1$ at $x=4$. So $T_2$ has a corner at each of $x=1$ and $x=4$.",
+    "A differentiable function plus a function with a corner has a corner: $f$ is not differentiable at $x=1$ and $x=4$.",
+    "Hence the number of points is $2$, option (B)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF factors out $|x-1|$ and concludes 'non-differentiable at $x=1$ and $x=4$' without justification; the bracket still contains $\\sin|x-1|$ and $|x-4|$, which are themselves non-differentiable, so the factorisation alone proves nothing (and it never explains why $x=2$, where $\\cos|x-2|$ has a modulus, is not a point). The justification above (even-function identities for the first term, simple-zero rule for the second) replaces it; the conclusion (2 points) is unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Near each candidate point write $f$ as a smooth function plus $c\\,|x-a|$ and compute the corner coefficient $c$ (products of two vanishing moduli are second-order small and never give a corner).",
+     "solution": [
+      "Candidates: $x=1,2,4$. At $x=2$: $\\cos|x-2|=\\cos(x-2)$ is smooth, so no corner.",
+      "Near $x=1$: $|x-1|\\cos|x-2|\\sin|x-1|\\approx|x-1|\\cdot\\cos1\\cdot|x-1|=\\cos1\\,(x-1)^2$, which has zero slope on both sides - no corner from $T_1$.",
+      "Near $x=1$: $(x-3)\\,|(x-1)(x-4)|\\approx(-2)\\cdot3|x-1|=-6|x-1|$ - a corner with slope jump $-12\\ne0$.",
+      "Near $x=4$: $T_1$ is smooth, and $(x-3)|(x-1)(x-4)|\\approx1\\cdot3|x-4|$ - a corner (slope jump $6\\ne0$).",
+      "Corners at exactly $x=1$ and $x=4$: $2$ points (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$|t|\\sin|t|=t\\sin t$ and $\\cos|t|=\\cos t$: odd/even functions of $|t|$ lose their modulus. In general $\\phi(|t|)$ is smooth at $0$ iff $\\phi'(0)=0$ (for $\\phi$ differentiable).",
+    "$g(x)\\,|(x-a)|$ is non-differentiable at $a$ iff $g(a)\\ne0$ (a simple zero of the modulus argument); $|x-a|^k$ with $k\\ge2$ is differentiable at $a$.",
+    "A sum $S+C$ with $S$ differentiable and $C$ having a corner at $a$ has a corner at $a$."
+   ]
+  },
+  {
+   "q_no": 27,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity at a point",
+    "Standard limits: logarithmic"
+   ],
+   "level": 1,
+   "question": "Let the function $f(x)=\\begin{cases}\\dfrac{\\log_e(1+5x)-\\log_e(1+\\alpha x)}{x}, & \\text{if } x\\ne0\\\\ 10, & \\text{if } x=0\\end{cases}$ be continuous at $x=0$. Then $\\alpha$ is equal to:",
+   "options": [
+    "$10$",
+    "$-10$",
+    "$5$",
+    "$-5$"
+   ],
+   "answer": "(D) -5",
+   "key_idea": "Each logarithm gives a limit $\\frac{\\ln(1+kx)}{x}\\to k$, so the limit is $5-\\alpha$.",
+   "solution": [
+    "Continuity at $0$: $\\lim_{x\\to0}\\frac{\\ln(1+5x)-\\ln(1+\\alpha x)}{x}=f(0)=10$.",
+    "Use the expansion $\\ln(1+u)=u-\\frac{u^2}{2}+\\dots$ for $u=5x$ and $u=\\alpha x$: the numerator is $(5x-\\dots)-(\\alpha x-\\dots)$.",
+    "Divide by $x$: the quotient is $(5-\\alpha)+(\\text{terms in }x)\\to5-\\alpha$ as $x\\to0$.",
+    "So the limit is $5-\\alpha$, and continuity requires $5-\\alpha=10$.",
+    "Hence $\\alpha=-5$, option (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The limit is the derivative at $0$ of $h(x)=\\ln(1+5x)-\\ln(1+\\alpha x)$, because $h(0)=0$.",
+     "solution": [
+      "$h(0)=0$, so $\\lim_{x\\to0}\\frac{h(x)}{x}=h'(0)$.",
+      "$h'(x)=\\frac{5}{1+5x}-\\frac{\\alpha}{1+\\alpha x}$, so $h'(0)=5-\\alpha$.",
+      "Continuity requires $5-\\alpha=10$, so $\\alpha=-5$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to0}\\frac{\\ln(1+px)-\\ln(1+qx)}{x}=p-q$ (the derivative of $\\ln\\frac{1+px}{1+qx}$ at $0$).",
+    "$\\lim_{x\\to0}\\frac{\\ln(1+kx)}{x}=k$, $\\lim_{x\\to0}\\frac{e^{kx}-1}{x}=k$.",
+    "A limit of the form $\\frac{h(x)-h(0)}{x}$ is simply $h'(0)$."
+   ]
+  },
+  {
+   "q_no": 28,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of piecewise functions with the greatest integer function",
+    "Quadratic inequalities"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=\\begin{cases}|4x^2-8x+5|, & \\text{if } 8x^2-6x+1\\ge0\\\\ [4x^2-8x+5], & \\text{if } 8x^2-6x+1<0\\end{cases}$ where $[\\alpha]$ denotes the greatest integer less than or equal to $\\alpha$. Then the number of points in $\\mathbb{R}$ where $f$ is not differentiable is ______.",
+   "answer": "3",
+   "key_idea": "On $(\\frac14,\\frac12)$ the function is the floor of a strictly decreasing quadratic (a staircase), outside it equals the quadratic itself; check the two ends and the step.",
+   "solution": [
+    "$8x^2-6x+1=(4x-1)(2x-1)\\ge0$ iff $x\\le\\frac14$ or $x\\ge\\frac12$.",
+    "$h(x)=4x^2-8x+5=4(x-1)^2+1>0$, so $|h(x)|=h(x)$ and $f(x)=h(x)$ for $x\\in(-\\infty,\\frac14]\\cup[\\frac12,\\infty)$; $f(x)=[h(x)]$ for $x\\in(\\frac14,\\frac12)$.",
+    "On $(-\\infty,1)$, $h$ is strictly decreasing: $h\\left(\\frac14\\right)=\\frac{13}{4}$ and $h\\left(\\frac12\\right)=2$. So for $x\\in(\\frac14,\\frac12)$, $h(x)\\in(2,\\frac{13}{4})$.",
+    "$h(x)=3\\iff4x^2-8x+2=0\\iff x=\\frac{2-\\sqrt2}{2}\\approx0.293$ (the other root exceeds $1$), which lies in $(\\frac14,\\frac12)$.",
+    "So $f(x)=3$ for $\\frac14<x\\le\\frac{2-\\sqrt2}{2}$ (where $3\\le h<\\frac{13}{4}$) and $f(x)=2$ for $\\frac{2-\\sqrt2}{2}<x<\\frac12$ (where $2<h<3$).",
+    "At $x=\\frac14$: $f\\left(\\frac14\\right)=h\\left(\\frac14\\right)=\\frac{13}{4}$ while $f\\left(\\frac14^+\\right)=3$: discontinuous, hence not differentiable.",
+    "At $x=\\frac{2-\\sqrt2}{2}$: $f$ drops from $3$ to $2$: discontinuous, hence not differentiable.",
+    "At $x=\\frac12$: $f\\left(\\frac12\\right)=h\\left(\\frac12\\right)=2$ equals the left limit $2$, so $f$ is continuous, but $f'\\left(\\frac12^-\\right)=0$ and $f'\\left(\\frac12^+\\right)=h'\\left(\\frac12\\right)=8\\cdot\\frac12-8=-4$: not differentiable.",
+    "Elsewhere $f$ is a polynomial or a constant. Hence $f$ is not differentiable at exactly $3$ points ($x=\\frac14,\\frac{2-\\sqrt2}{2},\\frac12$)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF's piecewise list gives '$3$ on $\\left(\\frac14,\\frac{2-\\sqrt2}{2}\\right)$ and $2$ on $\\left[\\frac{2-\\sqrt2}{2},\\frac12\\right)$'. At $x_0=\\frac{2-\\sqrt2}{2}$ we have $h(x_0)=3$ exactly, so $f(x_0)=[3]=3$: the point belongs to the first piece ($3$ on $\\left(\\frac14,x_0\\right]$, $2$ on $\\left(x_0,\\frac12\\right)$). The set of three bad points and the answer are unchanged. I also added the explicit value $h\\left(\\frac14\\right)=\\frac{13}{4}$ which explains the jump at $x=\\frac14$ (the PDF only shows the graph).",
+   "useful_results": [
+    "$f=\\begin{cases}A & \\text{if } P\\ge0\\\\ B & \\text{if } P<0\\end{cases}$: the joints are the roots of $P$; at each joint compare $A$'s and $B$'s values and slopes.",
+    "The floor of a strictly monotone function is a staircase: its jump points are where the function equals an integer; a jump point whose value sits exactly on the integer belongs to the upper step.",
+    "Quadratic $4(x-1)^2+1$: strictly decreasing for $x<1$, minimum value $1$ at $x=1$."
+   ]
+  },
+  {
+   "q_no": 29,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of functions with the greatest integer function and modulus"
+   ],
+   "level": 3,
+   "question": "If $[t]$ denotes the greatest integer $\\le t$, then the number of points at which the function $f(x)=4|2x+3|+9\\left[x+\\frac12\\right]-12[x+20]$ is not differentiable in the open interval $(-20,20)$, is ______.",
+   "answer": "79",
+   "key_idea": "$[x]$ jumps at integers and $[x+\\frac12]$ jumps at half-integers: every such point is a non-differentiability point; the corner of $|2x+3|$ at $-\\frac32$ lies on one of them.",
+   "solution": [
+    "$[x+20]=[x]+20$, so $f(x)=4|2x+3|+9\\left[x+\\frac12\\right]-12[x]-240$.",
+    "The three sources of non-differentiability are: $|2x+3|$ (corner at $x=-\\frac32$), $[x]$ (jumps at integers) and $\\left[x+\\frac12\\right]$ (jumps at half-integers $k+\\frac12$).",
+    "At every integer $n\\in(-20,20)$, $[x]$ jumps by $1$ and the other terms are continuous, so $f$ jumps by $-12$: not differentiable. Integers $-19,\\dots,19$: $39$ points.",
+    "At every half-integer $k+\\frac12\\in(-20,20)$, $\\left[x+\\frac12\\right]$ jumps by $1$ while the other terms are continuous, so $f$ jumps by $9$: not differentiable. These are $-19.5,-18.5,\\dots,19.5$: $40$ points.",
+    "The corner of $|2x+3|$ at $x=-\\frac32$ is itself a half-integer (already counted: $f$ is discontinuous there), so it adds nothing new.",
+    "Total $=39+40=79$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF counts $39$ points $x=I+\\frac12$ with $I\\in\\{-19,\\dots,19\\}$ (that list misses $x=-19.5$; there are $40$ half-integers in $(-20,20)$) and then adds $x=-\\frac32$ as a separate extra point ($39+39+1$), although $-\\frac32$ is already one of the half-integers. The two slips cancel, so the printed total $79$ is correct; the corrected count is $39+40=79$.",
+   "alternate_solutions": [
+    {
+     "idea": "All jumps occur where $2x$ is an integer: even values of $2x$ give the jumps of $[x]$, odd values give those of $[x+\\frac12]$, so count the integers $2x\\in(-40,40)$.",
+     "solution": [
+      "$[x]$ jumps when $x\\in\\mathbb{Z}$, i.e. $2x$ is even; $\\left[x+\\frac12\\right]$ jumps when $x\\in\\mathbb{Z}+\\frac12$, i.e. $2x$ is odd.",
+      "So $f$ has a jump (hence is not differentiable) at $x$ exactly when $2x$ is an integer, i.e. $x\\in\\frac12\\mathbb{Z}$.",
+      "For $x\\in(-20,20)$: $2x\\in(-40,40)$, i.e. the integers $-39,-38,\\dots,39$: $79$ values.",
+      "The corner of $|2x+3|$ at $x=-\\frac32$ ($2x=-3$) is among them, so nothing is added.",
+      "Number of points $=79$ (same answer)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x+\\tfrac12]$ is 'round half up'; $[x]$ and $[x+\\tfrac12]$ together change at every multiple of $\\frac12$, i.e. whenever $[2x]$ changes.",
+    "$[x+k]=[x]+k$ for integer $k$ (so the $20$ in $[x+20]$ is just a constant).",
+    "In $(-N,N)$ the multiples of $\\frac12$ correspond to the integers $2x\\in(-2N,2N)$: $4N-1$ of them (here $79$ for $N=20$); always check for double-counting between different sources."
+   ]
+  }
+ ]
+}
