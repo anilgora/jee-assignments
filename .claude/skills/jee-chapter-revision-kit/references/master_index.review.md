@@ -1,0 +1,2731 @@
+# Master Quick Review: split check
+
+## Algebra / Quadratic Equation  (pages 1-3, 64 prompts, 17 headings)
+- **Standard Form of Quadratic Equation**
+  - 1. Can you write down formulae for roots of a quadratic Equation ?
+  - 2. Explain condition(s) about nature of roots.
+- **Relation between roots and coefficient**
+  - 3. Write result for sum, product and difference of roots.
+  - 4. When do imaginary roots occur in conjugate pairs?
+  - 5. Explain condition(s) for rational roots ofa quadratic equation.
+- **Symmetric Function of roots**
+  - 6. Can you identify whether a given expression is symmetric in two or more variables.
+  - 7. Are you able to write a symmetric expression in terms of sum and product
+  - 8. Are you able to solve questions on quadratic equation when relation between roots is given
+- **Formation of quadratic equation**
+  - 9. When roots are given then can you form quadratic/cubic equation.
+  - 10. | Whena quadratic equation is given then another quadratic equation is to be formed whose roots are symmetric in terms of roots of given equation ae 1
+  - 11. Expressing ¥ + Po intermsof x+ x n=2,3,4
+  - 12. Factorization of a quadratic/cubic polynomial when all roots are given.
+  - 13. Condition for a quadratic polynomial to be a perfect square.
+  - 14. What to do when coefficients of a quadratic equation are in cyclic order?
+  - 15. What to do when sum of coefficients of an equation is zero?
+  - 16. Do you know how to simplify expression if a complex expression is given
+  - 17. Solving questions involving S,, = pa” + qb" (Newton's Formula)
+  - 18. How to solve Long division based questions
+- **Transformation of roots**
+  - 19. When to apply concept of transformation of roots
+  - 20. How to apply concept of transformation of roots.
+- **Special Cases on roots & Identity**
+  - 21. Whatis the condition when exactly one root is zero?
+  - 22. What is the condition when both roots are zero?
+  - 23. | Whatis the condition when exactly one root is infinity and its application in straight line and generalization forn degree equation?
+  - 24. | Whatisthe condition when both roots are infinity and its application in straight line and generalization for n degree equation?
+  - 25. What is the condition for an equation to be an identity and its application ?
+- **Writing general equation**
+  - 26. Identify when to apply and then how to write general equation representing all equations.
+- **Rational Inequality and intersection of intervals**
+  - 27. Areyouableto solve rational inequalities
+  - 28. Areyouable to solve double inequalities
+- **Condition of common root(s)**
+  - 29. Condition if both roots are common and its interpretation
+  - 30. Condition If one root is common and its interpretation
+  - 31. Use of elimination method in questions if one root is common
+- **Polynomial Function**
+  - 32. Identify whether a given expression is a polynomial
+  - 33. Identify degree, leading coefficient and absolute term of'a polynomial
+  - 34. Find zeroes for a polynomial and what do they represent on its graph
+  - 35. Are you able to construct graph of any quadratic polynomial
+  - 36. Are you able to read a graph of quadratic polynomial? value of y, vertex, sign of D, a, b andc etc
+  - 37. Symmetricity of parabola about its vertex
+  - 38. Condition for a quadratic polynomial to be always positive/always negative and its application in question
+- **Remainder Theorem**
+  - 39. How to use remainder theorem concept in questions?
+- **Range of a Quadratic Polynomial**
+  - 40. Write formula for range of'a quadratic polynomial
+  - 41. How to find range of a quadratic polynomial by completing the square?
+  - 42. How to find range of a quadratic polynomial by forming quadratic in x and then applying D > 0
+  - 43. How to find range of a quadratic polynomial if condition on x is given?
+- **Range of a Rational Function**
+  - 44. How to find range ofa Linear/Linear
+  - 45. Howto find range ofa Linear/Linear if condition on x is given
+  - 46. How to find range of a rational function if there is a common factor.
+  - 47. How to find range of Q/Q, Q/L, L/Q, 1/Q if there is no common factor
+- **General Equation of 2nd degree in two variable**
+  - 48. | Memorize general form of quadratic expression in two variables
+  - 49. What is the condition for general form of quadratic expression in two variables to be expressed as product of 2 linear factors
+  - 50. Both methods to factorize general form of quadratic expression in two variables as product of 2 linear factors.
+  - 51. How to find range of x and y if general equation of 2nd degree in x and y is given
+  - 52. | Whatdo youmean by "for every real value of x there is areal value of y and for every real value of y there is a real value of x"
+- **Theory of Equation involving higher degree**
+  - 53. What does S,, S,,..... S, mean and their relation with sum and product?
+  - 54. How to find S, for any n-degree equation?
+  - 55. How to find sum of squares of roots?
+- **Location of Roots**
+  - 56. Are you able to write conditions when conditions on roots are specified?
+  - 57. When will we not apply conditions on D and -b/2a?
+  - 58. What to do in case of LOR type-5?
+  - 59. | Use ofIMVT in questions of quadratic equations
+- **Miscellaneous**
+  - 60. | Howto solve infinite series pattern based question?
+  - 61. Write factors of a° + b> +c? — 3abe and use of a + b® + c? = 3abe
+  - 62. What to keep in mind if we have done squaring in solving an equation?
+  - 63. How to solve equation ax*+ bx? + cx? + bx +a=0
+  - 64. Do you know how to apply descrates' rule of sign?
+
+## Algebra / Logarithm  (pages 4-5, 44 prompts, 20 headings)
+- **Exponential Form**
+  - 1. What is exponential form and explain all its components with conditions?
+  - 2. How to solve equation by converting to same base and then comparing powers ?
+- **Logarithmic Form**
+  - 3. What is Logarithmic form and what are the conditions on its components?
+  - 4. How to convert logartihmic form to exponential form?
+- **Properties of Logarithm**
+  - 5. What is the value of log when number and base are same?
+  - 6. What is the value of log when number and base are reciprocal of each other?
+  - 7. What is the value of log when number is 1 ?
+  - 8. What is fundamental log identity and what is its use?
+  - 9. How to club two log terms when they are in sum/difference power?
+  - 10. What happens to power of number ofa logarithm?
+  - 11. What happens to power of base ofa logarithm?
+  - 12. | Howtoclub several terms of logarithm given in sum/difference form?
+- **Base Changing Theorem**
+  - 13. Write all four forms of base changing theorem and explain their applications?
+  - 14. What happens to a logarithm term when we take its reciprocal?
+  - 15. How to change base of a log term to another base?
+  - 16. What is the condition on number and base of a log for the value of that log to be positive?
+  - 17. What is the condition on number and base of a log for the value of that log to be negative?
+- **Antilogarithm**
+  - 18. How to convert antilog term to exponential form and then compute its value
+- **Characteristic and Mantissa**
+  - 19. How to find Characteristic and Mantissa ofa number with respect to a given base?
+- **Number of Digits and Number of Zeroes**
+  - 20. How to convert a number into scientific notation form?
+  - 21. | Howto compute number of digits ina number with the help of logarithm?
+  - 22. | Howto compute number of zeroes after decimal in a number with the help of logarithm?
+- **Log Equation Type 1**
+  - 23. How to solve basic log equations by removing log?
+- **Log Equation Type 2**
+  - 24. How to use substitution in Log equations?
+- **Log Equation Type 3**
+  - 25. | Howto solve equations of the form (variable)
+  - 26. Whatis the special case of (variable)*"*>"
+- **Logarithmic Inequalities**
+  - 27. | Howtoremove log in inequalities?
+  - 28. How to solve questions of log inequalities when base is variable?
+- **Modulus Function**
+  - 29. What is |x| and what is its value for different values of x?
+  - 30. How to define |x| ?
+  - 31. What happens when we square |x| ?
+  - 32. Write down other properties of modulus function.
+- **Modulus Equation Type 1**
+  - 33. How to solve equations of the form |x|= constant ?
+  - 34. | What to do in case of equations of the form |x| = constant if constant is negative ?
+- **Modulus Equation Type 2**
+  - 35. | What to keep in mind when we do squaring in equations?
+  - 36. | Howand when to use squaring in case of equations involving modulus?
+- **Modulus Equation Type 3**
+  - 37. How to solve modulus equations by defining modulus?
+- **Modulus Inequalities Type 1**
+  - 38. How to solve inequations of the form |x| > or < constant
+  - 39. What to do in case of inequations of the form |x| > or <constant when constant is begative
+- **Modulus Inequalities Type 2**
+  - 40. When can we do squaring in inequalities and what to keep in mind while doing squaring?
+  - 41. How and when to use squaring in case of inequations involving modulus?
+- **Modulus Inequalities Type 3**
+  - 42. | Howtosolve modulus inequations by defining modulus?
+- **Exponential Inequalities**
+  - 43. | Howtocompare powers on both sides of inequality?
+- **Irrational Inequalities**
+  - 44. How to solve different types of irrational inequalities?
+
+## Algebra / Sequence & Progression  (pages 6-8, 58 prompts, 19 headings)
+- **Introduction of Sequence**
+  - 1. Writing T, when S, is given AP
+  - 2. Can you write Standard form, n® term of AP
+  - 3. How to find any term of an AP when any two other terms of an AP is given?
+  - 4. How to find number of terms of an AP when all terms are given?
+- **Sum of first n terms of AP**
+  - 5. Memorize both formulae for S, for AP and derivation of S_
+- **Highlights of AP**
+  - 6. What is the condition when a,b,c are in AP?
+  - 7. How to assume 3/4/5 terms given in AP?
+  - 8. How to identify whether a sequence is AP when T, or S, of sequence is given
+  - 9. When an algebraic operation is done on all terms of AP then are you able to determine whether new sequence is an AP and its application in questions
+  - 10. | Howto find sequence of common terms of two or more APs
+  - 11. How to find smallest positive/largest negative term of AP
+- **Arithmetic Mean(AM)**
+  - 12. How to find AM ofn numbers?
+  - 13. How to find n AMs between two numbers?
+  - 14. What is sum of n AMs between two numbers?
+- **Geometric Progression(GP)**
+  - 15. Can you write standard form, n" term of GP
+  - 16. What is the condition on r for a GP
+- **Sum of n terms of GP**
+  - 17. Memorize formulae for S, of AP and its derivation
+  - 18. Find Sum ofinfinite GP and condition when it exists
+- **Highlights of GP**
+  - 19. Howto assume 3/4/5 terms given in GP
+  - 20. What is the relation between AP and GP
+  - 21. What is condition when a,b,c are in GP
+  - 22. How to convert a GP to AP
+- **Sequences convertible to GP**
+  - 23. Are you able solve questions based on sequences convertible to GP
+- **Geometric Mean(GM)**
+  - 24. How to find GM of n numbers
+  - 25. How to find n GMs between two numbers
+  - 26. What is product of n GMs between two numbers
+- **Concept of AM-GM**
+  - 27. | AM > GM forany n positive numbers
+  - 28. When will be AM = GM holds ?
+  - 29. When will we think of applying AM-GM concept in questions?
+  - 30. Whatto keep in mind while minimizing sum using AM-GM
+  - 31. | Whatto keep in mind while maximizing product using AM-GM
+- **Harmonic Progression(HP)**
+  - 32. Basic definition of HP
+  - 33. How to solve questions based on HP by converting them in to corresponding AP
+- **Harmonic Mean(HM)**
+  - 34. How to find HM of n numbers
+  - 35. How to find n HMs between two numbers
+  - 36. What is sum of reciprocal of n HMs between two numbers
+- **Relation between AM, GM and HM**
+  - 37. Relation between RMS, AM, GM and HM for n positive numbers
+  - 38. relation G?=AH for two numbers and condition when it is applicable for n positive numbers
+- **Arithmetico-Geometric Progression(AGP)**
+  - 39. Howto identify a sequence whether it is an AGP or extended AGP by seeing general term or sequence?
+  - 40. Are you able to write general term ofan AGP
+  - 41. How to find sum ofn terms of AGP or extended AGP
+  - 42. How to find sum of infinite terms of AGP or extended AGP
+- **Miscellaneous Sequence Type 1**
+  - 43. Memorize results for sum of first n natural numbers, sum of their squares, sum of their cubes. their application in finding sum ofn terms ifnth term is given
+  - 44. Breaking of general term while finding S, by taking similar sequences together
+  - 45. Writing general term by identifying pattern of AP/GP/AGP
+- **Miscellaneous Sequence Type 2**
+  - 46. | Howto identify sequence whether it is of type-2
+  - 47. Howto find nth term ofa sequence of type-2 and then finding S, with the help of Type 1
+- **Miscellaneous Sequence Type 3**
+  - 48. Explain Basic concept of method of difference
+  - 49. What to do after splitting general term as difference of two terms while using method of difference
+  - 50. How to identify sequence whether it is of type-3
+  - 51. What to keep in mind while splitting general term as difference of two terms for Type-3
+  - 52. What to do if any factor in denominator is missing for type-3
+- **Miscellaneous Sequence Type 4**
+  - 53. How to identify sequence whether it is of type-4
+  - 54. What to keep in mind while splitting general term as difference of two terms for Type-4
+- **Miscellaneous**
+  - 55. | Howto solve questions similar to method of difference expressed as continued product form
+  - 56. | Howto solve sum of infinite sequence when recurrence relation between terms is given
+  - 57. How to solve cubic when roots are in AP/GP/HP
+  - 58. Practising miscellaneous questions based on method of difference
+
+## Algebra / Determinant  (pages 9-10, 42 prompts, 12 headings)
+- **Introduction of Determinant**
+  - 1. Are you able to define order of a determinant and how elements are represented
+- **Value of a Determinant by Expansion**
+  - 2. How to find value of determinant of order 2 by expansion?
+  - 3. How to find value of determinant of order 3 by expansion?
+  - 4. Along which row/column we should expand a Determinant?
+- **Minor and Cofactor of element**
+  - 5. How to find Minor and cofactor of any element of'a determinant
+  - 6. Can you write relation between minor and cofactor
+  - 7. What happens when we multiply all elements of any row/column with corresponding cofactors and then add?
+  - 8. What happens when we multiply all elements of any row/column with corresponding cofactor of any other row/ column and then add?
+- **Sarrus Rule**
+  - 9. How to use sarrus rule in expansion of determinant of order 3
+- **Properties of Determinant**
+  - 10. | Can you write down all 6 properties?
+  - 11. How and when can we add two or more determinants without expanding
+  - 12. When can we take sigma inside the determinant?
+  - 13. What happens when all elements ofa determinant are multiplied by k?
+  - 14. How to identify any factor of a determinant without expanding?
+- **Row and Column Transformation**
+  - 15. How to apply any given row/column transformation
+  - 16. What happens to the value of a determinant when we apply any row/column transformation
+  - 17. What to keep in mind while applying more than one operations at a time
+- **Four standard determinants**
+  - 18. Write down all four standard determinants. There are two other common determinants also. Write down.
+  - 19. Are you able to observe four standard determinants and their results while solving questions
+- **Two Important Operations**
+  - 20. What are the two important operations and when to apply them
+  - 21. Which operation we will use when elements of row/column are in AP
+- **Multiplication of Determinants**
+  - 22. Can you multiply any 2 determinants of same order by all 4 ways
+  - 23. | Memorize result given in Question | in Multiplication of Determinants
+  - 24. | Howto express given expression as product of two determinants
+  - 25. | Howto identify whether a question is of multiplication of determinants concept
+- **System of Equations**
+  - 26. What do consistent system and inconsistent system mean?
+  - 27. What do trivial solution and non trivial solution mean?
+  - 28. Write condition for unique solution for two equation involving two variables and what do this situation means in coordinate geometry?
+  - 29. Write condition for infinite solution for two equation involving two variables and what do this situation means in coordinate geometry?
+  - 30. Write condition for inconsistent system for two equation involving two variables and what do this situation means in coordinate geometry?
+  - 31. Write condition for unique solution for three equation involving two variables and what do this situation means in coordinate geometry?
+  - 32. Write condition for infinite solution for three equation invloving two variables and what do this situation means in coordinate geometry?
+  - 33. Write condition for inconsistent system for three equation invloving two variables and what do this situation means in coordinate geometry?
+  - 34. | Whatis the condition that three planes form a prism?
+- **Cramer's Rule**
+  - 35. Are you able to write all determinants involved in cramer's rule
+  - 36. Are you able to write cramer's rule for two equation and two variables
+  - 37. Are you able to write cramer's rule for three equation and three variables
+  - 38. Are you able to draw chart representing all the situations in three equations and three variables
+  - 39. What do unique solution/Infinite solution/No Solution in three equations involving three variables represent in three dimensional geometry?
+  - 40. How to represent/determine infinite solutions in three equations involving three variables?
+  - 41. When should we check exception case while solving system of three equations invloving three variables?
+- **System of Homogeneous Linear Equations**
+  - 42. What do nontrivial solutions in a homogeneous system means and write its condition
+
+## Algebra / Matrices  (pages 11-13, 75 prompts, 18 headings)
+- **Definition of Matrix**
+  - 1. Are you able to define order ofa matrix and how elements are represented
+  - 2. Can you find possible number of orders for a matrix ifits number of elements is known
+- **Important Definitions**
+  - 3. Can you identify row matrix and a column matrix
+  - 4. Are you able to define Null, horizontal, vertical, square matrix?
+  - 5. What do principal diagonal, conjugate elements, trace for a square matrix mean?
+  - 6. How to check whether a matrix is Singular/non-invertible or non singular/invertible?
+- **Special Types of Square Matrices**
+  - 7. How to check whether a square matrix is diagonal, scalar, Indentity, Upper Triangular, Lower triangular matrix
+  - 8. Do you know alternate way to denote a diagonal matrix
+- **Equality of two Matrices**
+  - 9. What is the condition(s) for two matrices to be equal?
+- **Addition/Subtraction of Matrices**
+  - 10. | Whencan we add or subtract two matrices and how to add or subtract them?
+  - 11. What happens to the determinant value when we add two matrices?
+  - 12. What do you mean by additive inverse in case of Matrix Algebra
+  - 13. What happens to the trace when we add two matrices?
+- **Multiplication of a Matrix by a scalar**
+  - 14. What happens when we multiply a matrix by a real number k?
+  - 15. What happens to the determinant value when we multiply a matrix by a real number k?
+- **Multiplication of Matrices**
+  - 16. What do pre factor and post factor mean in Matrix multiplication?
+  - 17. What is the condition for product AB to be defined?
+  - 18. | What will be the order of resultant matrix when we multiply two matrices?
+  - 19. | Howto multiply two matrices?
+  - 20. Does order of appearance of matrix in matrix multiplication matter?
+  - 21. | What happens when we multiply any matrix by I or O ?
+  - 22. What happens to the determinant value when we multiply two matrices?
+  - 23. What do commutation of two matrices mean?
+  - 24. What do anti-commutation of two matrices mean?
+  - 25. When can we use standard identities of square/cube of algebra of real numbers in case of matrix multiplication
+  - 26. | Whencan we define higher integral power of'a matrix?
+- **Characteristic Equation**
+  - 27. Can you find characteristic equation for a square matrix of order 2 and 3?
+  - 28. | Doyouknowa square matrix always satisfies its characteristic equation?
+  - 29. Can you write characteristic equation directly for a square matrix of order 2?
+  - 30. Are you able to use characteristic equation in computing higher powers and long division questions
+- **Important Definition**
+  - 31. What do u mean by idempotent matrix and its application in expansion of (I+ A)"?
+  - 32. What do umean by periodic matrix and its application in in expansion of (I+ A)"?
+  - 33. What do umean by involutary matrix and its application in in expansion of (I+ A)" ?
+  - 34. What do u mean by NIlpotent matrix and its application in in expansion of (I+ A)" ?
+- **Transpose of a Matrix**
+  - 35. How to take transpose of a matrix?
+  - 36. | Howto denote transpose ofa matrix?
+  - 37. | Do youknow the pattern when we take transpose of two or more matrices in multiplication
+- **Symmetric and Skew Symmetric Matrix**
+  - 38. | Howto determine whether a square matrix is symmetric
+  - 39. How to determine whether a square matrix is skew symmetric
+  - 40. Do you determinant value of a skew symmetric matrix of odd order
+  - 41. Do you know condition of the elements for a symmetric matrix
+  - 42. Do youknow condition of the elements for a skew symmetric matrix
+  - 43. How to express any square matrix as a sum of symmetric and skew symmetric matrix
+  - 44. What to do in a question ifa matrix is given as symmetric/skew symmetric
+- **Orthogonal Matrix**
+  - 45. Are you able to define an orthogonal matrix?
+  - 46. | What do elements of rows/column of an orthogonal matrix represents
+  - 47. | Do youknow relation of trace of AA' with elements of A
+- **Adjoint of a square Matrix**
+  - 48. How to find adjoint ofa square matrix?
+  - 49. Do you know fast method to determine adjoint of a square matrix of order 2?
+  - 50. Basic theorem A.adj(A) =|A|I=adj(A).A and its application in proving properties of adjoint
+  - 51. Are you able to write all 6 properties of adjoint and prove them
+- **Inverse of a Square Matrix**
+  - 52. What do umean by inverse ofa square matrix?
+  - 53. How to denote inverse of a square matrix A ?
+  - 54. What is the condition for a square matrix to be invertible?
+  - 55. | Howto find inverse ofa square matrix with the help of adjoint matix
+  - 56. What do inverse of inverse of A mean?
+  - 57. What is the determinant value of inverse of A?
+  - 58. | What do youmean by negative integral powers of A
+  - 59. | Howto take inverse of A'?
+  - 60. Do you know the pattern when we take inverse of two or more matrices in multiplication?
+  - 61. When can we cancel any matrix on both sides in a given equation and what do this actually means in terms of matrix multiplication?
+  - 62. Can you write both points of property AB = O and able to prove them? and its application in questions
+  - 63. Use of characteristic equation in finding inverse ofa square matrix?
+- **Finding inverse by elementary operations**
+  - 64. How to find inverse by elementary row operations?
+  - 65. How to find inverse by elementary column operations?
+  - 66. What to keep in mind while using row operations on both sides on matrices in a matrix equation
+  - 67. What to keep in mind while using column operations on both sides on matrices in a matrix equation
+- **System of Equations**
+  - 68. Can you write given system of equation as AX = B and vice versa
+  - 69. Are you able to relate AX = B with cramer's rule ?
+- **Rank of Matrix**
+  - 70. What do rank of a matrix means?
+  - 71. How to find rank ofa matrix?
+- **Extra Reading Material**
+  - 1. What is a Permutation Matrix? Write down its properties.
+  - 2. What is the effect on a matrix if we pre-multiply/post-multiply it by a Permutation matrix?
+  - 3. Which power ofa permutation matrix is I?
+  - 4. Are you able to directly write X'AX, where X is a column matrix and A is a square matrix?
+
+## Algebra / Permutations & Combinations  (pages 14-17, 96 prompts, 26 headings)
+- **Fundamental Principle of Counting**
+  - 1. When to add and when to multiply number of ways
+  - 2. When to use complementary method?
+  - 3. How to deal "atleast" and "atmost" in questions?
+- **Formation of numbers**
+  - 4. When should we consider repetition is allowed or not allowed in formation of numbers?
+  - 5. How to find number of numbers divisible by 3?
+  - 6. How to find number of numbers divisible by 4?
+- **m" or n™**
+  - 7. How to solve m" or n™ type questions?
+- **Rank of word**
+  - 8. How to find rank of word when letters are different?
+  - 9. How to find a word at a particular position when formed words are arranged in alphabetical order
+- **Factorial**
+  - 10. | Have you remembered factorial values upto 7!
+  - 11. How to find power of any prime number in n!
+  - 12. How to find power of any composite number in n!
+  - 13. How to find number of zeroes at the end of n!
+- **Properties on "C,**
+  - 14. Write down all 6 properties of "C_
+- **Questions based on Selection and Arrangements**
+  - 15. When to apply "P_and when to apply "C, ?
+  - 16. | Doyouknowall basic terms associated with playing cards ?
+  - 17. | Howto find total number of lines, triangles formed by many points, some of them are collinear
+  - 18. | Howto find total number of quadrilaterals formed by many points, some of them are collinear
+  - 19. | What is number of diagonals for an sided polygon?
+  - 20. How to select three numbers in AP ?
+  - 21. How to find number of rectangles, squares from a chess board?
+- **Gap and string method**
+  - 22. How and when to use string method ?
+  - 23. How and when to use Gap method ?
+  - 24. Can we use string method when two types of groups are to be kept together
+  - 25. | Howtoarrange when two types of things are to be kept alternate
+- **Station Method**
+  - 26. | When to use station Method
+  - 27. How to use station method
+- **Formation of Groups**
+  - 28. How to find number of ways of forming groups of distinct things into given group sizes
+  - 29. When to use formation of groups in questions?
+  - 30. How to distribute n things among 2/3 persons when each person gets atleast one thing
+- **Permutation of alike objects taken all at a time**
+  - 31. How to arrange things when few of them are alike
+  - 32. How to use string method in permutation of alike objects taken all at time
+  - 33. How to use gap method in permutation of alike objects taken all at time
+  - 34. What do you mean by "without changing order of vowels/consonants" in questions
+  - 35. How to arrange things when two/three types of things are to separated
+  - 36. | Howto find rank of word in case of permutation of alike objects
+- **Permutation of alike objects taken some at a time**
+  - 37. | Howto find number of selections in case of alike things taken some at a time
+  - 38. | Howto find number of arrangements in case of alike things taken some at a time
+- **Circular Permutations**
+  - 39. Whatis circular permutation and how is it different from linear permutation?
+  - 40. | Howto arrange things in circular permutation ?
+  - 41. How to use string method in circular permutation?
+  - 42. How to use gap method in circular permutation?
+  - 43. When will we consider clockwise and anti-clockwise arrangements as same and what to do in that case?
+  - 44. When will we consider clockwise and anti-clockwise arrangements as same in case of arrangement of persons?
+  - 45. How to use permutation of alike objects taken all at a time in circular permutations?
+- **Station Method in circular permutation**
+  - 46. When to use station method in circular permutations?
+  - 47. How to solve formation of polygon type of questions in circular permutations
+  - 48. How to use station method in circular permutations? Both methods
+- **Total Number of combinations**
+  - 49. How to find total number of combinations when many things are given out of some were alike of one type, some were alike of another etc
+  - 50. | When to subtract 1 from the answer in total number of combinations questions?
+- **Divisors based Problems**
+  - 51. Howto find total number of divisors
+  - 52. How to find total number of odd, even divisors
+  - 53. | What do you mean by proper divisors?
+  - 54. Howto find total number of divisors divisible by any given number?
+  - 55. | Howto find sum ofall divisors?
+  - 56. How to find sum ofall odd, even divisors?
+  - 57. Howto find sum ofall divisors divisible by any given number?
+  - 58. | Howto find number of ways in which any given number can be expressed as product of two divisors?
+  - 59. How to find number of ways in which any given number can be expressed as product of two divisors which are relatively prime?
+  - 60. How to find product of all divisors?
+- **Maximum value of "C_**
+  - 61. | Howto find maximum value of °C,
+- **Grid Problem**
+  - 62. | Howto find number of ways ina grid structure?
+  - 63. | Howto find number of ways ina grid structure if we have to pass through a given point every time?
+  - 64. | Howto find number of ways ina grid structure if there are exactly r diagonal steps to be taken?
+- **De-arrangement**
+  - 65. What is the subjective approach to find D,?
+  - 66. What is formula for D,?
+- **Summation of numbers**
+  - 67. How to use Place value method in finding sum of numbers formed by given digits
+  - 68. How to use carry method in finding sum of numbers formed by given digits
+- **Distribution of Alike Objects**
+  - 69. When to use beggars' method?
+  - 70. How to use beggars' method?
+  - 71. | Howto use beggars’ method when there is minimum condition from the beggars' side
+- **Algebra based problems in distribution of alike objects**
+  - 72. How to find number of non negative integral solutions of any x + y + z= 100 type equation
+  - 73. How to find number of non negative integral solutions of any x + y + z= 100 type equation when condition on Xy,Z is given
+  - 74. How to find number of non negative integral solutions ofany inequality type
+  - 75. | Howto find number of non negative integral solutions of any inequality type when condition on x,y,z is given
+  - 76. | Howto find number of positive integral solution of equation xyz = 30 type questions
+- **Coefficient Method**
+  - 77. When to use coefficient method
+  - 78. Howto write factors while using coefficient method and which power of x" is to be computed
+  - 79. How to use coefficient method in finding number of selections in permutation of alike objects taken some at a time
+- **Miscellaneous**
+  - 80. How to express general term of series questions involving factorial as difference of two terms
+- **Extra Reading Material**
+  - 1. Write down formula for dsitribution of n distinct objects among k persons if each person receive atleast one object.
+  - 2. Write down recurrence relation of Fibonacci Sequence and write down Fibonacci sequence also
+  - 3. What do partition of a natural number means?
+  - 4. How to write recurrence relation of P(n) and how to find P(n) with the help of recurrence relation?
+  - 5. What do partition ofa natural number in atmost k parts(i.e. P(n,k) means?
+  - 6. How to find P(n,1), P(n,2) and P(n,3)?
+  - 7. How to find P(n,k) ifk >3?
+  - 8. What do Euler's totient function represents and how to find it?
+  - 9. What do Bell Number B, represents?
+  - 10. Howto find B, with the help of triangle scheme? n n
+  - 11. What do stirling subset number { ° represents? and how to find { j ? k n
+  - 12. What is the relation between B, and ‘ ?
+  - 13. How to find number of ways to distribute n distinct/alike objects in k distinct/alike boxes ?
+  - 14. How to find number of ways to distribute n distinct/alike objects in k distinct/alike boxes if each box receives atleast one object?
+  - 15. How to find number of non-negative integral solutions of equation x,+ x, ........ +x,=n
+- **@ O<x, Sx, Sx, Su... <x, @ sx, Sx, Sx, So... <x,**
+  - 16. How to find number of non-negative integral solutions of equation x,+ 2x, + 3x,........ +kx, =n?
+
+## Algebra / Binomial Theorem  (pages 18-20, 63 prompts, 16 headings)
+- **Introduction**
+  - 1. What do Monomial, Binomial, Trinomial and multinomial expression mean?
+  - 2. Are you able to draw Pascal triangle and what is its use?
+- **Newton's Binomial Theorem**
+  - 3. Can you write down binomial theorem
+  - 4. What is the number of terms in expansion of (x + y)"
+  - 5. What is the difference between coefficients and Binomial Coefficients?
+  - 6. Can you find coefficient and binomial coefficient of any term
+  - 7. How to find sum of coefficients and sum of binomial coefficients?
+  - 8. Write expansion of (1+x)" and (1 - x)"
+  - 9. What is the coefficient of x" in expansion of (1 + x)" ?
+  - 10. Write (x + y)" as sigma of terms.
+- **General Term**
+  - 11. Do you know formula of general term in expansion of (x + y)"
+  - 12. Howto find any term from the last in any binomial expansion
+  - 13. | Howto find coefficient of any power of x in any binomial expansion
+  - 14. | Howto find number of rational terms in any binomial expansion
+- **Middle term**
+  - 15. How to find position of middle term in any binomial expansion?
+  - 16. Do you know binomial coefficient of middle term is greatest binomial coefficient?
+  - 17. How to find coefficient of any power of x in a product of two or more binomial expansion
+- **Numerically Greatest Term(NGT)**
+  - 18. How to find NGT in any binomial expansion?
+  - 19. If position of NGT is given then can you write down condition on p
+- **Remainder Based Problem**
+  - 20. How to convert base to nearest multiple of Divisor to find remainder?
+  - 21. | What to do when base is very small as compared to divisor?
+  - 22. | Howmany terms we have to consider when finding remainder?
+  - 23. Whatto keep in mind while finding unit digit/last two digits/Last three digits?
+  - 24. What is the condition a"+ b" is divisible bya +b?
+  - 25. What is the condition a" - b"is divisible bya+b?
+  - 26. What is the condition a" - b"is divisible by a- b ?
+- **Integral Part and Fractional Part Based concept**
+  - 27. | Howto prove integral part ofa binomial expansion is Odd/Even?
+  - 28. | Howto find integral part ofa binomial expansion is Odd/Even?
+- **Multinomial Theorem**
+  - 29. Write general term in a multinomial expansion.
+  - 30. How to find number of dissimilar terms in any multinomial expansion
+  - 31. Use of general term in finding coefficient of any power of x ina multinomial expansion
+  - 32. Try to factorize base before applying multinomial theorem
+- **Summation of Series Type 1**
+  - 33. Write (x + y)" as sigma of terms
+  - 34. Identify value of x,y and n if series is expressed as type 1 question
+  - 35. | What to keep in mind while solving type 1 questions
+- **Summation of Series Type 2**
+  - 36. | When to apply Type 2 and which formula to use?
+  - 37. | Howto start combining 2 terms in case of type 2 questions
+  - 38. | Howto rewrite 1(one) as another binomial coefficient in case of type 2 questions
+- **Summation of Series Type 3**
+  - 39. What to keep in mind if sign changes alternately in a series involving binomial coefficients?
+  - 40. How to find sum of coefficients of even powers of x in any expansion?
+  - 41. How to find sum of coefficients of odd powers of x in any expansion?
+  - 42. When to apply freidrick karl gauss technique and how to apply ?
+  - 43. When general term is expressed as r(type 1) then how to remove r?
+  - 44. When general term is expressed as r?(type 1) then how to remove r?
+- **Summation of Series Type 4**
+  - 45. | Howand when to use differentiation in finding sum of series involving binomial coefficients
+  - 46. | Howand when to use integration in finding sum of series involving binomial coefficients
+  - 47. | Howtoconvert questions to type 1 when integration based questions is given
+- **Summation of Series Type 5**
+  - 48. | Howto identify whether a question is of type 5 ?
+  - 49. How to use trick in case of “sum = constant” pattern questions of type 5
+  - 50. How to use trick in case of “Difference = constant” pattern questions of type 5
+  - 51. How to do questions of “sum = constant” pattern questions of type 5 subjectively
+  - 52. How to do questions of “Difference = constant” pattern questions of type 5 subjectively
+- **Miscellaneous Questions on Summation of series**
+  - 53. Observation of GP in series questions
+  - 54. Use of properties on "C, in series questions
+  - 55. How to write any expansion as coefficient in reverse order of powers of x
+- **Binomial Theorem for any index**
+  - 56. What are the conditions on n and x for expansion of (1 + x)"ifn is not a natural number ?
+  - 57. Write all 4 expansion results.
+  - 58. What is coefficient of x" in( 1 -x)"
+  - 59. Howto find coefficient of any power of x in a product of two or more binomial expansion if one of them is (1 - x)”
+  - 60. When can we cancel any term for simplification while fiinding coefficient of any power of x in a product of 2 or more binomial expansions
+  - 61. Finding coefficients of any power of x in expansions expressed in case of coefficient method
+- **Miscellaneous**
+  - 62. Write expansion of e* and In(1 +x).
+  - 63. How to find sum of series based on expansion of e*, In(1 +x)?
+
+## Algebra / Complex Number  (pages 21-24, 100 prompts, 19 headings)
+- **Introduction to Complex Number**
+  - 1. What is real part and imaginary part of a complex number and how are they represented?
+  - 2. What is a purely real/Purely imaginary/Imaginary number?
+- **Integral Powers of Iota**
+  - 3. How to simplify higher integral power of iota?
+- **Argand Plane**
+  - 4. Can you plot any given complex number on complex plane
+  - 5. Where is the position of purely real/purely imaginary number on complex plane
+- **Algebra of complex number**
+  - 6. How to add/subtract/multiply and divide two or more complex numbers
+  - 7. What to do when a complex number is given in denominator
+  - 8. Inequality in which type of numbers is defined and not defined
+- **Square root of a complex number**
+  - 9. How to find square root of a complex number
+  - 10. | Howto solve a quadratic equation if coefficients are complex numbers?
+- **Conjugate and its properties**
+  - 11. How to find conjugate of a complex number expressed as a + ib
+  - 12. What does conjugate ofa complex number represents on complex plane
+  - 13. How to prove/what to do when a given complex number to be purely real
+  - 14. Howto prove/what to do when a given complex number to be purely imaginary
+  - 15. How to take conjugate of a complex number expressed as sum/product of several numbers
+- **Modulus and its properties**
+  - 16. How to find modulus of a complex number expressed as a+ ib
+  - 17. What does modulus ofa complex number represents on complex plane
+  - 18. What is the relation between z, its conjugate and |z|
+  - 19. | Howto take Modulus ofa complex number expressed as product of several numbers
+  - 20. What is difference between square of z and square of |z|
+  - 21. What is the difference in finding conjugate and modulus of a complex number expressed as sum of several numbers
+  - 22. If two complex numbers are equal then what is the relation between their modulus?
+- **Argument and its properties**
+  - 23. How to find Argument ofa complex number expressed as a + ib
+  - 24. What is difference between argument and amplitude(principal value of argument)
+  - 25. Howto find general value of argument
+  - 26. | What does argument of a complex number represents on complex plane
+  - 27. Iftwocomplex numbers are equal then what is the relation between their arguments?
+  - 28. What is the argument of complex numbers lying on real and imaginary axis
+- **Polar Form and Exponential Form**
+  - 29. What is polar form and explain all its components
+  - 30. | Howto express complex number in polar form if it is given in a+ ib form
+  - 31. What do CiS(@) means?
+  - 32. What is exponential form and explain all its components
+  - 33. How to express complex number in exponential form ifit is given in a+ ib form
+  - 34. | When to use polar form in questions
+  - 35. | When to use exponential form in questions
+  - 36. | When will we prefer polar form and when will we prefer expponential form over other form
+  - 37. Howto find argument of a complex number expressed as product/quotient of several numbers
+  - 38. | Howto find argument of conjugate ofa complex number
+  - 39. What is the pattern of properties of argument
+  - 40. | Howtoconvert look-alike forms of polar form to correct polar form
+  - 41. When |z| = 1, what to do when (1 + z) or (1 - z) is being used in questions
+- **Geometrical Interpretation**
+  - 42. What is the distance formula for complex plane?
+  - 43. What does z, - z, represent on complex plane in similar to vector?
+  - 44. What does |z, - z,| represent on complex plane ?
+  - 45. | What is the expression of locus which represents circle ?
+  - 46. Relate all the locus results of straight line based on distance formula to their application in complex numbers
+  - 47. Whatis section formulae for internal and external division in complex plane and its similarity with vectors and straight line
+  - 48. What are the results for centroid/incenter/excenters/orthocenter/circumcenter of a triangle
+  - 49. What do 0, z,, z, and z, + z, represents on a complex plane ? and what is the importance of z, - z, with respect to this situation?
+  - 50. How to find equation of locus ofa point satisfying given conditions in a complex plane? by putting z= x + iy
+  - 51. How to find solve questions of locus ofa point satisfying given conditions in a complex plane? by relating with coordinate geometry
+  - 52. Explain triangle inequality for complex numbers
+  - 53. Whatis the situation if we use equality in triangle inequality
+  - 54. Useof zz =| z|’ in questions
+- **Angles**
+  - 55. Relate arg(z) with vector
+  - 56. How to write any angle ofa line on complex plane as arg(z,-z,)
+  - 57. How to write any angle between two line on complex plane as arg((z,- Z,)/(Z,-Z,))
+  - 58. What is the use of initial and final vector in writing angle?
+  - 59. If angle is measured in clockwise direction then what to do?
+  - 60. What to keep in mind while marking angle between two line segments
+  - 61. | Whatis the condition for two lines to be parallel
+  - 62. | Whatis the condition for two lines to be perpendicular
+  - 63. Application of locus of P when angle between PA and PB is fixed in complex numbers
+- **Rotation**
+  - 64. | Howto use result of rotation in case when two line segments are given
+  - 65. | What happens toa vector in complex plane if we multiply it by e"2")
+  - 66. | What happens to a vector in complex plane if we multiply it byi
+  - 67. What is the relation between z,, z, and z, if these are vertices of an equilateral triangle
+  - 68. How to find remaining vertices ofa regular polygon of n sides if one vertex and its circeumcenter is known
+- **De-Moivre's Theorem(DMT)**
+  - 69. Whatare the steps to find n" root ofa complex number using DMT
+  - 70. Why do we use general value of argument in place of argument while using DMT for n" root
+  - 71. | Howto solve questions if it is given that a given equation has purely real/purely imaginary solution
+- **Cube root of unity**
+  - 72. | What are three cube roots of unity and how are they represented
+  - 73. Whatisthe sum ofall three cube roots of unity
+  - 74. howto find higher integral powers of @
+  - 75. | Howto find sum of any r" power of all cube roots of unity
+  - 76. What do all three cube roots of unity represent on complex plane and can you find dimesions of that triangle
+  - 77. What happens to a vector in complex plane if we multiply it by w
+  - 78. . Write all factors which are to be remembered
+  - 79. Write-@ and -(j@’ ) in exponential form
+  - 80. What are the roots of equation x? + x + 1 =0 and x?-x+1=0
+- **n" root of unity**
+  - 81. | What are the nn" roots of unity and how are they represented
+  - 82. Whatisthe sum ofall n™ roots of unity
+  - 83. | Whatis the product ofall three n" roots of unity
+  - 84. | Whatis the common ratio of GP formed by all n" roots of unity
+  - 85. | Howto find sum of any r" power ofall n™ roots of unity
+  - 86. What do all n" roots of unity represent on complex plane and can you find dimesions of that polygon
+  - 87. What are the factors of (x"- 1) involving n" roots of unity?
+  - 88. What are the factors of (x" - 1) without involving n" roots of unity?
+  - 89. What is the modulus of any n" root of unity?
+  - 90. Which two n" roots of unity are conjugate of each other?
+  - 91. Product of which two n"roots of unity is 1?
+- **Summation of series using complex numbers**
+  - 92. Prove result of summation of series type | (trig ratio) using complex numbers
+- **Complex Numbers and Binomial Coefficients**
+  - 93. Howto solve questions of series based on binomial coefficient and when to put i, when to put @
+  - 94. Howto find sum of coefficients of all powers of form x7”, x°”*! & x°” inany expansion?
+  - 95. Howto find sum of coefficients of all powers of form x”, x"! x”? ox") in any expansion?
+- **Straight Line in Complex Numbers**
+  - 96. How to assume any complex number on a line joining two given points
+  - 97. What is the general form of equation of line in complex plane ? and how to convert it into form ax + by +c =0
+  - 98. Howto find image ofa point when equation of line is given in general form ?
+- **Circle in Complex Numbers**
+  - 99. What is the general form of equation of circle in complex plane ? and how to convert it into general form studied in chapter circle
+  - 100. | Howtocheck whether 4 given points on complex plane are concyclic
+
+## Algebra / Probability  (pages 25-26, 50 prompts, 17 headings)
+- **Important Definitions**
+  - 1. What do you mean by Sample space ?
+  - 2. What do you mean by impossible and sure event?
+  - 3. What do you mean by equally likely events, Mutually exclusive events and Exhaustive events? What is the condi- tion for two or more events to be mutually exhaustive?
+- **Definition of Probability**
+  - 4. What is the formula for calculation of probability of an event by classical definition of probability?
+  - 5. What is the relation between probablities of an event and its complement?
+  - 6. When to use complementary method in probability?
+  - 7. How to deal "atleast" and "atmost" in questions of probability?
+  - 8. Whether to consider things given are to be considered as alike or distinct?
+- **Odds**
+  - 9. How to calculate odds in favor of an event and odds against an event from the probability of the event?
+  - 10. | Howtocalculate probability of the event from the odds in favor of an event and odds against an event?
+- **Creation of Sample space**
+  - 11. Can you create sample space when a dice is thrown one/two times?
+  - 12. Can you create sample space when a coin is tossed one/two/three/four times?
+  - 13. When two dice are thrown do you know the pattern in probabilities when sum of the numbers on them is 2 to 12?
+- **Venn Diagram**
+  - 14. Can you draw venn diagram of 2 events and how to use it in questions?
+  - 15. Can you draw venn diagram of 3 events and how to use it in questions?
+  - 16. Write formulae of probabilities of union of two/three/four or more events?
+  - 17. Do youknow the pattern in formula of probability of union of events?
+  - 18. Do you know other ways of expressing union/intersection/difference of two events?
+- **Conditional Probability**
+  - 19. What is conditional probability ?
+  - 20. | Howaconditional probability can be expressed in various ways?
+  - 21. | Howtoread when a conditional probability expression is given?
+  - 22. What happens to the sample space in case of conditional probability questions?
+  - 23. What to keep in mind while solving conditional probability questions?
+  - 24. What is conditional probability when A is subset of B ?
+  - 25. What is conditional probability when A and B are disjoint ?
+- **Multiplication Theorem**
+  - 26. | Howtouse multiplication theorem and what to keep in mind?
+  - 27. When to use "C_ method?
+- **Independent Events**
+  - 28. What do you mean when 2 or more events are independent?
+  - 29. How to check whether 2 events are independent?
+  - 30. How to check whether 3 events are independent?
+  - 31. How to use venn diagram in case 2 events are independent?
+  - 32. How to use venn diagram in case 3 events are independent?
+  - 33. How to solve infinite GP pattern based questions in Independent events?
+- **Law of Total Probability**
+  - 34. | Howto solve questions of law of total probability?
+  - 35. Canyousolve Law of total probability questions by drawing tree diagram?
+  - 36. | Howtoexpress solution of questions of law of total probability in Board method?
+- **Baye's Theorem**
+  - 37. How to identify whether a question is of Baye's theorem?
+  - 38. How to write denominator in baye's theorem questions?
+  - 39. How to use extended baye's theorem and when to use?
+- **Binomial Probability Distribution(BPD)**
+  - 40. Whatare the conditions for a trial to be bernoulli trials?
+  - 41. What is X and q in BPD?
+  - 42. What is the formula for P(X=r)
+  - 43. How is BPD denoted (B(n,p))
+- **Probability through Tree Diagram**
+  - 44. Howto solve questions of probability through tree diagram?
+  - 45. | Howtocompute probability of any branch ofa tree?
+- **Geometrical Probability**
+  - 46. Howto solve geometrical probability questions?
+- **Probability Distribution of Random Variable**
+  - 47. How to write probability distribution ofa random variable for an experiment?
+- **Mean and variance of Probability Distribution**
+  - 48. | Howtocalculate mean and variance of probability distribution?
+- **Mean and variance of Binomial Probability Distribution**
+  - 49. Howto calculate mean and variance of binomial probability distribution?
+- **Miscellaneous**
+  - 50. | Howto solve probability questions of units digit in product of n numbers?
+
+## Coordinate Geometry / Straight Line  (pages 27-32, 184 prompts, 30 headings)
+- **Basics of Geometry**
+  - 1. What is the formula for area of quadrilateral
+  - 2. What is the relation between opposite sides for a parallelogram?
+  - 3. What is the relation between opposite angles for a parallelogram?
+  - 4. What is the relation between adjacent angles for a parallelogram?
+  - 5. Ifall four vertices ofa quadrilateral are given then how would you check whether it is a parallelogram?
+  - 6. What is the formula for area of parallelogram?
+  - 7. What are the properties related to diagonals ofa parallelogram?
+  - 8. What are the special conditions for a parallelogram to be arhombus?
+  - 9. If equation of all four sides ofa quadrilateral are given then how would you check whether it is arhombus?
+  - 10. | What are the special conditions for a parallelogram to be a rectangle?
+  - 11. What are the special conditions for a parallelogram to be a square?
+  - 12. What is a trapezium?
+  - 13. What is the formula for area of a trapezium?
+  - 14. What is median for a trapezium?
+  - 15. | What isa base angle for a trapezium?
+  - 16. | When woulda trapezium is called isosceles trapezium?
+  - 17. | When woulda quadrilateral be a cyclic quadrilateral?
+  - 18. What is Ptolmey’s theorem for a cyclic quadrilateral?
+  - 19. What is intersecting chord theorem for a circle?
+- **Cartesian Coordinate system**
+  - 20. How to define x and y coordinates of a point?
+  - 21. | What is abscissa, ordinate,radius vector and polar radius of a point?
+  - 22. What is condition on coordinates of any point lying on x-axis/y-axis?
+  - 23. How to assume coordinates of any point lying on x-axis/y-axis?
+  - 24. What is condition on coordinates of any point lying on horizontal line/vertical line?
+- **Polar Coordinates**
+  - 25. | Howto define polar coordinates of a point?
+  - 26. Can youdefine @ corresponding to point lying in all four quadrants?
+  - 27. How to convert cartesian coordinates to polar coordinates and vice versa?
+  - 28. How to find coordinates ofa point obtained by rotating a point about origin by a given angle?
+- **Distance Formula**
+  - 29. What is distance formula?
+  - 30. How to check nature of triangle if coordinates of all three vertices are given?
+  - 31. How to find internal angles of triangle if coordinates of all three vertices are given?
+- **Section Formulae**
+  - 32. What do you mean by division of points and when it is called internal/external division?
+  - 33. What is formula for internal division?
+  - 34. What is formula for external division?
+  - 35. | What do youmean by trisection?
+- **Harmonic Conjugate**
+  - 36. What is the definition of Harmonic Conjuagte?
+  - 37. How to find harmonic conjugate of a point wrt two points?
+  - 38. | Whyare these called Harmonic conjugate?
+- **Four Important Points in a Triangle**
+  - 39. | Howto find centroid ofa triangle when all three vertices are given?
+  - 40. | Howto find Incenter/Excenters ofa triangle when all three vertices are given?
+  - 41. | What isthe formula for circumcenter ofa triangle?
+  - 42. How to find circumcenters of a triangle when all three vertices are given?
+  - 43. What is the formula for orthocenter of a triangle?
+  - 44. | Howto find orthocenter ofa triangle when all three vertices are given?
+  - 45. Whatis the condition on a triangle ifall these 4 important points coincide?
+  - 46. What is the condition on a triangle ifall these 4 important points are collinear?
+  - 47. How to observe whether circumcenter is origin and in that case how to find orthocenter?
+  - 48. | Howto find 4th vertex ofa parallelogram when remaining three vertices are given?
+  - 49. | Howtoassume coordinates ofall vertices ofa right angled triangle for solving question by coordinate geometry?
+  - 50. How to assume coordinates of all vertices of a parallelogram for solving question by coordinate geometry?
+  - 51. How to assume coordinates ofall vertices ofa triangle for solving question by coordinate geometry?
+  - 52. Fortriangle ABC, H is orthocenter What is the orthocenter of triangle BCH?
+- **Area of Triangle**
+  - 53. What is formula for area of triangle if all three vertices are given?
+  - 54. How to check whether three given points are collinear?
+  - 55. How to find area of a polygon if all vertices are given?
+- **Locus**
+  - 56. What is the definition of locus ofa point?
+  - 57. What do you mean by equation of a curve?
+  - 58. How to find equation of locus of a point?
+  - 59. Howto find locus ofa point P if coordinates ofa P are given/obtained in parametric form?
+- **Important Definitions**
+  - 60. Whatis the definition ofa circle?
+  - 61. What is the definition ofa parabola?
+  - 62. | What is focus and directrix ofa parabola?
+  - 63. What is the definition of an ellipse and what are the two fixed points called?
+  - 64. What is the definition of an hyperbola and what are the two fixed points called?
+  - 65. What is the locus of P ifA and B are two fixed points and PA/PB = constant?
+  - 66. What is the locus of PifA and B are two fixed points and / APB = right angle?
+  - 67. Whatis the locus of PifA and B are two fixed points and PA + PB = constant?
+  - 68. What is the locus of P if A and B are two fixed points and |PA — PB|= constant?
+  - 69. What is the locus of P if A and B are two fixed points and 7 APB =constant? and how to find center and radius of that locus?
+  - 70. What do you mean by inclination ofa line?
+  - 71. What is the inclination of a horizontal/vertical line?
+  - 72. What is the condition on inclinations of parallel lines?
+  - 73. What is the definition of slope ofa line?
+  - 74. Whatis slope ofa horizontal/vertical line?
+  - 75. What is the condition on slopes of parallel lines?
+  - 76. How to calculate slope ofa line joining two given points?
+  - 77. What is the definition of x-intercept/y-intercept ofa line? What do you mean by initial ordiante ofa line?
+  - 78. Howto find x-intercept/y-intercept ofa line if equation of line is given?
+  - 79. What is the slope ofa line ifa line cuts off equal non-zero intercepts on coordinate axes
+  - 80. | Whatisthe slope ofa line ifa line cuts off non-zero intercepts equal in magnitude on coordinate axes
+  - 81. What is the slope ofa line ifa line is equally inclined on coordinate axes
+- **Equation ofa line**
+  - 82. Whatis the general form of equation ofa line?
+  - 83. | Howto identify whether equation ofa given curve represents a line?
+  - 84. What is the equation of x-axis/y-axis?
+  - 85. | Howto assume coordinates ofa point on a line if its equation is given?
+  - 86. Whatis slope -point form of equation of line?
+  - 87. | Howto use slope-point form if slope of line is infinite?
+  - 88. What is slope-intercept form and what does m and c represents?
+  - 89. | When to use slope-intercept form?
+  - 90. What is double-intercept form and when to use double intercept form?
+  - 91. What is normal form of equation of line and what do p and @ represents?
+  - 92. Howto find locus of mid point of portion of line, satisfying given condition, intercepted between coordinate axes?
+  - 93. How to find locus of foot of perpendicular from origin on line,satisfying given condition?
+  - 94. How to assume equation ofa line passing through a given point?
+  - 95. | Howto assume equation ofa line whose slope is given?
+- **Determinant form of Line**
+  - 96. What is determinant form of equation of line?
+- **Parametric Form ofa line**
+  - 97. How to assume coordinates of a point lying at a distance of r units from a fixed point on the line whose slope is known?
+  - 98. Howto find third vertex ofan equilateral triangle if remaining two vertices are known
+  - 99. When to use parametric form of equation of line?
+- **Angle between lines**
+  - 100. What isthe formula for angle between two lines?
+  - 101. | What is the formula for angle between two lines if one slope is infinite?
+  - 102. What is relation between slopes of two parallel lines?
+  - 103. What is relation between slopes of two perpendicular lines?
+  - 104. Howto assume equation ofa line parallel to a given line?
+  - 105. Howto assume equation ofa line perpendicular to a given line?
+  - 106. What is relation between slopes of two lines equally inclined with x-axis?
+  - 107. What is the slope of angle bisectors of two lines whose sum of slopes is zero?
+  - 108. What is the slope of angle bisectors of two lines whose product of slopes is one?
+  - 109. | Whats the inclination of angle bisector of two lines whose inclinations are known?
+  - 110. Howto find slope ofa line making given angle with another line whose slope is known?
+  - 111. Howto find foot of perpendicular ofa point on a given line?
+  - 112. Howto find image ofa point wrt a given line?
+  - 113. Howto find orthocenter ofa triangle by finding altitudes?
+  - 114. Howtocheck whether slope ofa line is infinite by observing calculations?
+- **To Find interior angles of a triangle**
+  - 115. Howto find internal angles ofa triangle when equation ofall three sides are given?
+- **Distance of a point from a line**
+  - 116. What is the formula for distance ofa point from line?
+- **Distance between two parallel line**
+  - 117. What is formula for distance between two parallel lines and what to keep in mind while applying it?
+  - 118. What is area of equilateral triangle in terms of its height?
+  - 119. | What is the formula for area of parallelogram when equation ofall sides is known and what to keep in mind while applying it?
+- **Position of two points wrt a line**
+  - 120. Howto find relative positions of two given points wrt a given line?
+  - 121. Howto find region satisying ax + by + c ><0 in coordinate planes?
+  - 122. Howto define |ax + by+c] in cartesian plane?
+  - 123. Howtoapply conditions for a point to lie inside the triangle with the help of concept of position of two points wrt aline?
+- **Condition for concurrency**
+  - 124. What is the condition for concurrency of three lines?
+  - 125. Howtocheck whether three given lines are forming a triangle?
+- **Concept of Image**
+  - 126. Whatis formula of image ofa point wrt x-axis/y-axis/origin/line y=x/line y=—x?
+  - 127. Howto find image ofa curve wrt x-axis/y-axis/origin/line y=x/line y=—x?
+  - 128. Whatis the locus of image of a fixed point P wrt a variable line passing through another fixed point Q?
+  - 129. What is the image of vertex A wrt perpendicular bisector of side AB of triangle ABC?
+  - 130. Where does image of orthocenter wrt any side of triangle lie?
+- **Image of a line wrt a line**
+  - 131. Howto find image ofa line wrt a given line?
+  - 132. Where does Image ofa vertex ofa triangle wrt angle bisector of any other vertex lie?
+- **Family of Straight Line type 1**
+  - 133. What will be the equation ofa line passing through point of intersection of two lines?
+  - 134. Howto check whether value of 4 is infinite by observing calculations and how to find equation of required line in that case?
+  - 135. Howto find equation ofa line situated at maximum/least distance from a given point?
+- **Family of Straight Line type 2**
+  - 136. |Whenand howto apply Family of lines type 2?
+  - 137. What does L, + AL, = 0 represents?
+  - 138. Howto find equation of diagonal of parallelogram when equation ofall sides are given and what to keep in mind to minimize calculations while doing it?
+- **Shifting of Origin**
+  - 139. What is the formula in case of shifting of origin?
+  - 140. Howto find new coordinates when old coordinates are given and vice versa?
+  - 141. Howto find new equation ofa curve when old equation is given and vice versa?
+- **Rotation of Axes**
+  - 142. Whatis the table of result of rotation of axes and how is this table used?
+  - 143. What to keep in mind if angle of rotation is clockwise?
+- **Angle Bisector**
+  - 144. Whats the definition of angle bisector of lines?
+  - 145. What is formula for angle bisector of two lines?
+  - 146. Howto differentiate acute and obtuse angle bisector from the equations of angle bisectors? (Both method)
+  - 147. | What do you mean by angle bisector containing a fixed point?
+  - 148. Howto find equation of angle bisector containing a fixed point?
+  - 149. Howtocheck whether angle bisector containing origin is acute angle bisector?
+  - 150. What is the formula for equation of angle bisector if equation of lines is given in parametric form
+  - 151. Howto find internal /external angle bisector of a triangle ifall three vertices are given?
+  - 152. Howto find internal /external angle bisector of a triangle ifall three sides are given?(all 4 methods)
+  - 153. | Which of the 4 method is to be applied while find internal/external angle bisector of triangle?
+- **Important Concept on Maximising and Minimising**
+  - 154. Howto minimize PA+ PB whenA & Bare two fixed points & P is a variable point lying on fixed line L
+  - 155. Howto minimize [PA — PB| when A & B are two fixed points & P is a variable point lying on fixed line L
+  - 156. Howto maximize |PA — PB| whenA & B are two fixed points & P is a variable point lying on fixed line L
+- **Pair of Straight Lines**
+  - 157. Howto write combined equation of pair of lines?
+  - 158. What is the combined equation of coordinate axes?
+  - 159. What is the standard form of equation of pair of straight lines passing through origin?
+  - 160. Howto factorise standard form by splitting middle term?
+  - 161. Howto factorise standard form by forming a quadratic in m?
+  - 162. Howto forma quadratic inm from standard form of pair of lines through origin ?
+  - 163. | Whatis the condition for Real and distinct lines/real and coincident lines/imaginary lines in case of standard form?
+  - 164. Howto find sum of slopes and product of slopes of pair of lines?
+  - 165. What is the formula for angle between lines in case of standard form of pair of lines through origin?
+  - 166. What is the condition for lines to be parallel/perpendicular in case of standard form of pair of lines through origin?
+  - 167. Whatis the condition for sum of slopes to be zero in case of standard form of pair of lines through origin?
+  - 168. What is the condition for product of slopes to be one in case of standard form of pair of lines through origin?
+  - 169. Howto check whether a given equation of n" degree in x and y is a homogeneous equation?
+  - 170. Howto convert a homogeneous equation in x and y into an degree equation in terms of slope?
+  - 171. What is the formula for combined equation of pair of angle bisectors of pair of lines through origin represented by standard form?
+- **General Equation of pair of lines**
+  - 172. What is the condition for a general equation of 2nd degree in x and y to represent pair of lines?
+  - 173. Both methods to factorize general equation of 2nd degree as pair of lines
+  - 174. Howto forma quadratic in m from general equation of pair of lines?
+  - 175. What is the formula for angle between lines in case of general equation of pair of lines?
+  - 176. What is the condition for lines to be parallel/perpendicular in case of general equation of pair of lines?
+  - 177. What is the condition for sum of slopes to be zero in case of general equation of pair of lines?
+  - 178. What is the condition for product of slopes to be one in case of general equation of pair of lines?
+  - 179. What is the center of conic in different cases?
+  - 180. Howto find center of'a conic if equation of conic is given?
+  - 181. Howto find combined equation of angle bisectors in case of general Equation of pair of lines?
+- **Homogenisation**
+  - 182. When would we apply concept of homogenisation?
+  - 183. Howto homegenise equation of 2nd degree curve with the help of equation ofa line?
+  - 184. What does the equation, obtained by homegenisation, represent?
+
+## Coordinate Geometry / Circle  (pages 33-37, 122 prompts, 27 headings)
+- **Basic Geometry about Circles**
+  - 1. What is the relation between length of chord and angle subtended by chord at the center?
+  - 2. Revise all properties mentioned in this heading.
+- **Circle: Definition and Equation**
+  - 3. Define circle, its center and radius?
+  - 4. How to find equation of circle if center and radius are known?
+  - 5. What is general form of equation of circle?
+  - 6. How to find center and radius from general equation of circle?
+  - 7. What is standard form of equation of circle?
+  - 8. What is necessary and sufficient condition for general equation of 2nd degree to represent a circle?
+  - 9. What do you mean by point circle and imaginary circle?
+  - 10. How to find equation of circle passing through 3 given points?
+  - 11. How to prove given 4 points are concyclic?
+- **Diametrical Form of a circle**
+  - 12. Write expression for diametrical form of circle?
+  - 13. What is the smallest circle passing through 2 given points A and B?
+  - 14. How to find equation of circle drawn with chord, cut by a given line ona given 2nd degree curve. as diameter?
+- **Interce pts**
+  - 15. What is the formula for length of chord for a circle and how to derive this formula?
+  - 16. What is the formula for x-intercept and y-intercept for a circle?
+  - 17. What is general method to find length of chord for any 2nd degree curve?
+  - 18. What is general method to find x-intercept and y-intercept for any 2nd degree curve?
+  - 19. What is the condition for a circle intersecting x-axis/y-axis at 2 distinct points?
+  - 20. What is the condition for a circle touching x-axis/y-axis?
+  - 21. What is the condition for a circle neither touching nor intersecting x-axis/y-axis?
+  - 22. What is the condition on coordinates of center if circle touches x-axis/y-axis?
+  - 23. Draw diagram denoting chord drawn to a circle and find all length/area/angle.
+- **Parametric Form of a circle**
+  - 24. How to assume coordinates of a point ona given circle?
+  - 25. What are the parametric coordinates of a point on standard circle?
+- **Position of a point wrt a circle**
+  - 26. How to define S,S, and T for a point wrt any 2nd degree curve?
+  - 27. How to find relative position of a point wrt a circle?
+  - 28. How to find greatest and least distance ofa given point A from a circle?
+  - 29. How to find point on circle lying at greatest/least distance from a given point A?
+  - 30. How to find least distance between line and circle?
+- **Line and Circle**
+  - 31. | Whatis condition of tangency for circle? and how is it used?
+  - 32. How to determine relative position ofa line wrt a circle?
+  - 33. What is the general method to find relative position ofa line wrt a 2nd degree curve?
+  - 34. What is the general method to find condition of tangency ofa line wrt a 2nd degree curve?
+- **Tangent & Normal**
+  - 35. Define tangent
+  - 36. How to find equation of tangent for a 2nd degree curve if point of tangency is given?
+  - 37. Howto find equation of tangent for a 2nd degree curve if any other condition other than point of tangency is given?
+  - 38. What is the equation of tangent at a point, whose coordinates are given in parametric form, on standard circle?
+  - 39. Howto find equation of tangent to a circle passing through an external point?
+  - 40. Define normal.
+  - 41. | Howto find equation of normal for circle?
+  - 42. What is the equation of chord joining two points P( a ), Q( 2 ) lying on standard circle?
+- **To find point of tangency**
+  - 43. | Howto find point of tangency on circle if equation of tangent is given?
+  - 44. Howto find point of tangency on a 2nd degree curve if equation of tangent is given?
+- **Length of Tangent**
+  - 45. Write expression of length of tangent wrt an external point?
+  - 46. Define chord of contact for an external point.
+  - 47. How to find angle between tangents to circle drawn from an external point?
+  - 48. What is the angle subtended by circle at an external point?
+  - 49. How to find equation of circumcircle of triangle formed by tangents drawn to circle from an external point and its chord of contact?
+  - 50. Draw diagram denoting tangents drawn from external point to a circle and find all length/area/angle.
+- **Power of Point**
+  - 51. Define power ofa point wrt a circle and how to find it?
+  - 52. Whatis the power ofa point with its position relative to circle?
+- **Director Circle**
+  - 53. Define director circle for a curve.
+  - 54. What is the director circle for a circle?
+  - 55. What is the general method to find director circle for a 2nd degree curve?
+  - 56. How to find locus ofan external point P for which angle between tangents from P to circle is constant?
+- **Chord whose mid point is given**
+  - 57. Write expression for equation of a chord for a 2nd degree curve whose mid point is given
+  - 58. Whatis the formula for length of chord ofa circle whose mid point is given?
+  - 59. | Howto find mid point ofa chord of a circle whose equation is given?
+  - 60. | Whatis the general method to find mid point of a chord, whose equation is given, of a 2nd degree curve
+  - 61. | Whichis the shortest chord ofa circle passing through an internal point?
+  - 62. What is the locus of mid point ofa variable chord ofa circle passing through a fixed point P?
+- **Chord of Contact**
+  - 63. Write expression for equation of chord of contact, wrt a 2nd degree curve, for an external point.
+  - 64. How to find external point for a chord of contact if equation of chord of contact is given?
+  - 65. What is point of intersection of tangents drawn at P( a), Q( #2) on standard circle?
+- **Pair of Tangents**
+  - 66. Write expression of combined equation of pair of tangents from an external point to a 2nd degree curve.
+- **Family of Circle Type 1**
+  - 67. How to find equation of circle passing through points of intersection of two circles S| and S,?
+  - 68. | Howtocheck whether value of 1 is infinite by observing calculations and how to find equation of required circle in that case?
+- **Family of Circle Type 2**
+  - 69. How to find equation of circle passing through points of intersection ofa circle S and a line L?
+  - 70. What does equation of variable circle S + 7, L=0 represents?
+- **Family of Circle Type 3**
+  - 71. | Howto find equation of family of circles passing through two given points A and B?
+- **Family of Circle Type 4**
+  - 72. Howto find equation of circle touching a given line L at its given point P?
+  - 73. Howto find equation of circle touching a given 2nd curve at its given point P?
+  - 74. | Howto find equation of circumcircle of triangle formed by three lines whose equations are given?
+  - 75. | Howto find equation of circumcircle of cyclic quadrilateral formed by 4 lines whose equations are given?
+- **Common Tangents**
+  - 76. Define common tangents and their types DCT and TCT?
+  - 77. Which common tangent is called external and which one is called internal?
+  - 78. How to check whether a common tangent is DCT or TCT?
+  - 79. What is the relative position of centers of two circles wrt DCT/TCT?
+  - 80. In what ratio Point of intersection of DCT/TCT divides the line joining centers?
+  - 81. What will be condition on DCT if radius of two circles are equal?
+  - 82. Whatis formula for length of DCT/TCT?
+  - 83. | Howto find equation of DCT/TCT for two circles?
+  - 84. | Howto find equation of DCT/TCT if two circles touch each other?
+  - 85. | Howto find angle between DCTs/TCTs?
+- **Position of two circles relative to each other**
+  - 86. What is the condition when two circles separated from each other and what is the number of common tangents in this case?
+  - 87. Whatisthe condition when two circles touch each other externally and what is the number of common tangents in this case?
+  - 88. | Whatisthe condition when two circles intersect each other at 2 distinct points and what is the number of common tangents in this case?
+  - 89. What is the condition when two circles touch each other internally and what is the number of common tangents in this case?
+  - 90. What is the condition when one circle is contained in another circle and what is the number of common tangents in this case?
+  - 91. What is the minimum distance between two circles wrt every relative position?
+- **Radical Axis**
+  - 92. Define radical axis for two circles.
+  - 93. Write expression to find equation of radical axis of two circles S, =0 and S,=0.
+  - 94. Which line is radical axis of two circles if they intersect each other at 2 distinct points?
+  - 95. Which line is radical axis of two circles if they touch each other?
+  - 96. What isthe condition on radical axis wrt line joining centers?
+  - 97. What is the condition on radical axis wrt common tangent of two circles?
+  - 98. Which type of two circles will not have radical axis?
+  - 99. Howto find equation of common chord of two circles?
+  - 100. What is the condition ifone circle bisect the circumference of other circle?
+  - 101. Howto check relative position of two circles with the help of radical axis?
+- **Radical Center**
+  - 102. Define radical center for three circles.
+  - 103. Howto find radical center for three circles if their equations are given?
+  - 104. Which is the point from which tangents drawn to the three circles are equal?
+  - 105. | Which point is the radical center of three circles drawn on three sides of a triangle as diameter?
+- **Coaxial System of circles**
+  - 106. Define coaxial system of circles.
+  - 107. Howto find equation of circle belonging to a given coaxial system?
+- **Angle between line and a circle**
+  - 108. Define angle of intersection of two curves.
+  - 109. What is the angle of intersection of two curves if there is not any common point between them?
+  - 110. Howto find angle between line and circle?
+  - 111. | What do you mean when a line cuts a circle orthogonally?
+- **Angle between two circles and orthogonality of two circles**
+  - 112. Howto find angle between two circles?
+  - 113. What is the condition of orthogonality of two circles in terms of their radius and distance between centers?
+  - 114. | What is the condition of orthogonality of two circles in terms of their equations?
+  - 115. | Howto find equation ofa circle cutting three given circles orthogonally?
+  - 116. | Whatis the locus of center ofa variable circle cutting two given circles orthogonally?
+- **Pole and Polar**
+  - 117. Define Pole and Polar for a 2nd degree curve
+  - 118. Write expression for equation of polar ofa given point.
+  - 119. What does T= 0 represents for a point, position relative to circle?
+  - 120. Howto find coordinates of pole ofa given line?
+  - 121. From any variable point on a fixed line, tangents are drawn to the 2nd degree curve then chord of contact will pass through which point?
+  - 122. Whatis the locus of harmonic conjugate of a point P wrt 2 given points in which any variable line through P cuts a 2nd degree curve?
+
+## Coordinate Geometry / Parabola  (pages 38-41, 99 prompts, 18 headings)
+- **Conic Section : Definition**
+  - 1. What is the definition of conic section?
+  - 2. Define focus, directrix and eccentricity for a conic.
+  - 3. Define axis, vertex and foot of directrix for a conic.
+- **General Equation of Conic**
+  - 4. What is the general form of equation of conic
+  - 5. How to determine nature of conic if equation of conic is given?
+  - 6. How to determine nature of conic if focus, eccentricity and directrix is given?
+  - 7. How to observe focus, e and directrix if equation is given in PS =e PM form?
+- **Parabola : Introduction**
+  - 8. What is the condition for general equation of 2nd degree curve to represent a parabola?
+  - 9. What is the definition of parabola?
+  - 10. Define focal distance/focal radius, focal chord, double ordinate, latus rectum for a parabola
+  - 11. Everything means focus, directrix,vertex,axis, ends of latus rectum, length of latus rectum(LR)
+  - 12. Find everything for standard parabola y’ = 4ax
+  - 13. Whatis the relation between length of LR and distance between focus and corresponding directrix for a parabola
+  - 14. Find everything for parabola if equation is given in PS =e PM form.
+  - 15. What is the locus of center ofa variable circle which touches a fixed circle and a fixed line?
+  - 16. How to find focal distance of a point on a parabola/conic?
+- **Other standard parabolas**
+  - 17. What are three other standard parabolas?
+  - 18. Plotall 4 standard parabolas and mark everything for them
+- **Shifted Parabola**
+  - 19. How is the equation ofa shifted parabola represented?
+  - 20. How to observe whether equation of a 2nd degree curve represents shifted parabola?
+  - 21. Find everything for shifted parabola.
+  - 22. Howto find equation of shifted parabola if some details about it are given?
+- **Alternate definition of Parabola**
+  - 23. Derive alternate definition of parabola.
+  - 24. Find everything for parabola if equation is given in alternate definition form.
+- **Parametric Coordinates**
+  - 25. Write parametric coordinates of a point on standard parabolas.
+  - 26. What is the slope of radius vector of a point P in terms of t?
+  - 27. How to assume parameters for ends of double ordinate?
+  - 28. What is the parameter for ends of LR?
+  - 29. Whatis the slope of line joining two points t, and t,?
+  - 30. Whatis the relation between parameters of ends of a chord subtending right angle at vertex?
+  - 31. What is length of focal chord in terms of parameter?
+  - 32. What is the relation between parameters of ends ofa focal chord?
+  - 33. What is length of focal chord whose inclination is alpha?
+  - 34. Write S, S| and T for parabola y’ = 4ax.
+- **Position of a point wrt Parabola**
+  - 35. Which region is called inside/outside wrt a parabola?
+  - 36. How to find relative position of a point wrt a parabola?
+- **Chord joining two points**
+  - 37. Write expression of equation of chord joining two points t, and t,
+  - 38. | Whatis the relation between parameters of end points of a chord if chord passes through (c,0)?
+  - 39. What is the relation between parameters of end points ofa chord if chord subtends right angle at vertex?
+  - 40. The chord subtending right angle at vertex always passed through which fixed point?
+  - 41. What is the formula for length of chord intercepted by y= mx + c on y’ = 4ax?
+- **Line and Parabola**
+  - 42. How to find angle subtended by a line at the vertex of parabola? and how to check whether it is acute or obtuse?
+  - 43. What is condition of tangency for parabola y” = 4ax? and how is it used?
+- **Director Circle**
+  - 44. What is director circle for a parabola?
+  - 45. Derive equation of director circle of parabola y? = 4ax.
+  - 46. How to find locus of a variable external point P for which condition on slope of tangents drawan from P to parabola/2nd degree curve is given?
+- **Tangent & Normal**
+  - 47. Howto find equation of tangent for a parabola if point of tangency is given?
+  - 48. | Howto find equation of tangent for a parabola ifany other condition other than point of tangency is given?
+  - 49. What is the equation of tangent at a point, whose coordinates are given in parametric form, on y? = 4ax??
+  - 50. How to find equation of tangent to a parabola y’ = 4ax passing through an external point?
+  - 51. What is the relation between slope of tangent and parameter of point of tangency?
+  - 52. How to find point of tangency if equation of tangent is given?
+  - 53. How to find equation of normal for a parabola if foot of normal is given?
+  - 54. Write expression for equation of normal to parabola y” = 4ax in terms of parameter t.
+  - 55. Write expression for equation of normal to parabola y” = 4ax in terms of slope m.
+  - 56. Whatis the condition for a line to be anormal to parabola y’ = 4ax?
+  - 57. What is the relation between slope of normal and parameter of foot of normal?
+  - 58. | Howto find foot of normal if equation of normal is given?
+  - 59. What is point of intersection of tangents drawn at P(t,) and Q(t,) on Parabola?
+  - 60. What is point of intersection of normal drawn at P(t,) and Q(t,) on Parabola?
+  - 61. Ifnormal to the parabola y* = 4ax at P(t,) intersects parabola again at Q(t,) then what is the relation between t, and t,? 2
+  - 62. Ifnormal to the parabola y* = 4ax at P(t,) and Q(t,) intersects parabola again at R(t,) then what is the relation between t,, t, and t,?
+  - 63. What is the angle between tangents drawn at ends of focal chord?
+  - 64. Where do tangents drawn at ends of focal chord meet?
+  - 65. How to find minimum distance between a point and standard parabola
+  - 66. How to find minimum distance between a line and standard parabola
+  - 67. What is the position ofa line wrt parabola corresponding to number of common points between them?
+- **Normal to Parabola from a point**
+  - 68. How many normals can be drawn from a point to a parabola?
+  - 69. Define co-normal points for a parabola.
+  - 70. | Where does the centroid of triangle, formed by three co-normal points on parabola, lies?
+  - 71. Howto find locus of a variable external point P for which condition on slope of tangents drawan from P to parabola/2nd degree curve is given?
+  - 72. | Howto find equation of circumcircle of triangle formed by three c-normal points wrt a point(h,k) for parabola y? = 4ax?
+- **Rules for Transformation**
+  - 73. What are the rules for transformation to find results for other three standard parabolas and shifted parabolas?
+  - 74. . How to find condition of tangency for other three standard parabolas and shifted parabolas?
+  - 75. How to find condition for a line to be normal for other three standard parabolas and shifted parabolas?
+- **Common Tangents**
+  - 76. How to find condition ifa line is tangent/normal to one second degree curve and tangent/normal to another second degree curve?
+  - 77. What to do to minimize calculations in questions where a line is tangent/normal to one second degree curve and tangent/normal to another second degree curve?
+- **Common Concepts**
+  - 78. Write expression for equation of chord whose mid point is given for y” = 4ax.
+  - 79. Write expression for equation of chord of contact for y? = 4ax.
+  - 80. | Howto find mid point ofa chord ofa standard parabola whose equation is given?
+  - 81. | Howto find external point for a chord of contact if equation of chord of contact is given?
+  - 82. What is formula for length of chord of contact , wrt (x,, y,), of standard parabola?
+  - 83. What is formula for area formed by tangents drawn from (x,, y,) to standard parabola and corresponding chord of contact?
+  - 84. Write expression for combined equation of pair of tangents for y” = 4ax.
+  - 85. Write expression for equation of polar for y* = 4ax.
+  - 86. What does T = 0 represents for a point, position relative to parabola?
+  - 87. | Howto find coordinates of pole ofa given line?
+  - 88. From any variable point on a fixed line, tangents are drawn to the parabola then chord of contact will pass through which point?
+- **Diameter**
+  - 89. Define diameter for a second degree curve.
+  - 90. Derive equation of diameter for standard parabola.
+- **Highlights**
+  - 91. What angle does portion of tangent intercepted between directrix and point of tangency subtend at focus?
+  - 92. Where does foot of perpendicular from focus on any tangent to parabola lies?
+  - 93. What is harmonic mean of segments of any focal chord of parabola?
+  - 94. What is the relation between directrix and circle drawn on any focal chord as diameter?
+  - 95. What is the relation between tangent at vertex and circle drawn on any focal distance as diameter?
+  - 96. — Iftangent and normal drawn at P on parabola intersects at T and G respectively then what is he circumcenter of triangle TPG?
+  - 97. Explain reflection property of parabola
+  - 98. What is the ratio of area of triangle formed by any 3 points on parabola to area of triangle formed by tangents at these 3 points?
+  - 99. Where does image of focus wrt any tangent to the parabola lies?
+
+## Coordinate Geometry / Ellipse  (pages 42-44, 67 prompts, 11 headings)
+- **Ellipse: Introduction**
+  - 1. What is the condition for general equation of 2nd degree curve to represent an ellipse?
+  - 2. What is the definition of ellipse?
+  - 3. What is the equation of standard ellipse? and what is the relation between a and b?
+  - 4. Define major axis/minor axis, foci, vertices,center, principal axes,center for an ellipse.
+  - 5. Define focal distance/focal radius, focal chord, double ordinate, latus rectum for an ellipse.
+  - 6. What is the formula of eccentricity?
+  - 7. Write expression for b in terms ofa and e.
+  - 8. What are the coordinates of ends of latus rectum and length of latus rectum for standard ellipse?
+  - 9. What is the relation between length of LR, e and distance between focus and corresponding directrix for an ellipse
+  - 10. How to find focal distance ofa point on an ellipse?
+  - 11. How to check whether two ellipse are similar?
+  - 12. What is the effect on shape of ellipse if we increase eccentricity?
+- **Auxuliary Circle and Eccentric Angle**
+  - 13. Define auxiliary circle for an ellipse.
+  - 14. Whatis the equation of auxiliary circle for standard ellipse?
+  - 15. | What are parametric coordinates of a point on standard ellipse?
+  - 16. What is eccentric angle ofa point on ellipse?
+  - 17. Define corresponding points
+- **Standard Ellipses**
+  - 18. Everything means center, vertices, ends of minor axis, e, foci, feet of directrix, directrices, ends of latus rectum, length of latus rectum and auxiliary circle
+  - 19. Find everything for standard ellipse.
+  - 20. Find everything for standard ellipse(vertical).
+  - 21. Plot both types of standard ellipse and mark everything for them
+  - 22. Find everything for ellipse if equation is given in PS =e PM form.
+  - 23. | Howisthe equation ofa shifted ellipse represented?
+  - 24. | Howto observe whether equation of a 2nd degree curve represents shifted ellipse?
+  - 25. Findeverything for shifted ellipse.
+  - 26. | Howto find equation of shifted ellipse if some details about it are given?
+  - 27. Two fixed circles C, and C, are such that C, is contained in C,. What is the locus of center of a variable circle which touches C, internally and C, externally?
+  - 28. Find everything for ellipse if equation is given in PS, + PS, = 2a form.
+- **Alternate definition of Ellipse**
+  - 29. Derive alternate definition of ellipse.
+  - 30. Find everything for ellipse if equation is given in alternate definition form.
+- **Position of a point wrt Ellipse**
+  - 31. | Which region is called inside/outside wrt an ellipse?
+  - 32. Write S, S| and T for standard ellipse
+  - 33. How to find relative position of a point wrt an ellipse?
+- **Chord joining two points**
+  - 34. Write expression of equation of chord joining two points P( ~ ) and Q( 8)
+- **Line and Ellipse**
+  - 35. What is condition of tangency for standard ellipse? and how is it used?
+  - 36. How to apply condition of tangency for different type of standard ellipses?
+- **Director Circle**
+  - 37. What is equation of director circle for an standard ellipse?
+  - 38. Derive equation of director circle of standard ellipse.
+  - 39. How to find locus ofa variable external point P for which condition on slope of tangents drawan from P to ellipse is given?
+- **Tangent & Normal**
+  - 40. Howto find equation of tangent for an ellipse if point of tangency is given?
+  - 41. | Howto find equation of tangent for an ellipse ifany other condition other than point of tangency is given?
+  - 42. What is the equation of tangent at a point, whose coordinates are given in parametric form, on standard ellipse?
+  - 43. How to find equation of tangent to standard ellipse passing through an external point?
+  - 44. How to find point of tangency if equation of tangent is given?
+  - 45. How to find equation of normal for an standard ellipse if foot of normal is given?
+  - 46. Write expression for equation of normal to standard ellipse in terms of eccentric angle theta.
+  - 47. How to find the condition for a line to be a normal to standard ellipse?
+  - 48. | Howto find point of intersection of tangents drawn at P(a@ ) and Q( 2) on standard ellipse?
+  - 49. How to find minimum distance between a point and standard ellipse?
+  - 50. How to find minimum distance between a line and standard ellipse?
+  - 51. What is the position ofa line wrt ellipse corresponding to number of common points between them?
+- **Common Concepts**
+  - 52. Write expression for equation of chord whose mid point is given for standard ellipse.
+  - 53. Write expression for equation of chord of contact for standard ellipse.
+  - 54. Howto find mid point ofa chord of standard ellipse whose equation is given?
+  - 55. | Howto find external point for a chord of contact for standard ellipse if equation of chord of contact is given?
+  - 56. Write expression for combined equation of pair of tangents for standard ellipse.
+  - 57. Write expression for equation of polar for standard ellipse.
+  - 58. What does T= 0 represents for a point, position relative to standard ellipse?
+  - 59. How to find coordinates of pole ofa given line?
+  - 60. From any variable point on a fixed line, tangents are drawn to the ellipse then chord of contact will pass through which point?
+  - 61. Derive equation of diameter for standard ellipse.
+- **Highlights**
+  - 62. What is the sum of focal distances of any point on ellipse?
+  - 63. What is the product of length of perpendiculars drawn from foci on any variable tangent to the ellipse?
+  - 64. What angle does portion of tangent intercepted between directrix and point of tangency subtend at focus?
+  - 65. What is the relation between auxiliary circle and circle drawn on any focal distance as diameter?
+  - 66. Where does foot of perpendicular from focus on any tangent to ellipse lies?
+  - 67. Explain reflection property of Ellipse.
+
+## Coordinate Geometry / Hyperbola  (pages 45-47, 80 prompts, 16 headings)
+- **Ellipse: Introduction**
+  - 1. What is the condition for general equation of 2nd degree curve to represent an Hyperbola?
+- **Hyperbola: Introduction**
+  - 2. What is the definition of Hyperbola?
+  - 3. What is the equation of standard Hyperbola? and what is the relation between a and b?
+  - 4. Define transverse axis/conjugate axis, foci, vertices,center, principal axes,center for an Hyperbola.
+  - 5. Define focal distance/focal radius, focal chord, double ordinate, latus rectum for an Hyperbola.
+  - 6. What is the formula of eccentricity?
+  - 7. Write expression for b in terms ofa and e.
+  - 8. What are the coordinates of ends of latus rectum and length of latus rectum for standard Hyperbola?
+  - 9. What is the relation between length of LR, e and distance between focus and corresponding directrix for an Hyperbola
+  - 10. How to find focal distance ofa point on an Hyperbola?
+  - 11. How to check whether two Hyperbola are similar?
+- **Auxuliary Circle and Eccentric Angle**
+  - 12. Define auxiliary circle for an Hyperbola.
+  - 13. | Whatis the equation of auxiliary circle for standard Hyperbola?
+  - 14. What are parametric coordinates of a point on standard Hyperbola?
+  - 15. What is eccentric angle of a point on Hyperbola?
+  - 16. Define corresponding points
+- **Standard Hyperbolas**
+  - 17. Everything means center, vertices, ends of conjugate axis, e, foci, feet of directrix, directrices, ends of latus rectum, length of latus rectum and auxiliary circle
+  - 18. Find everything for standard Hyperbola.
+  - 19. Find everything for standard Hyperbola(vertical).
+  - 20. Plot both types of standard Hyperbola and mark everything for them
+  - 21. Find everything for Hyperbola if equation is given in PS =e PM form.
+  - 22. | Howisthe equation ofa shifted Hyperbola represented?
+  - 23. | Howto observe whether equation ofa 2nd degree curve represents shifted Hyperbola?
+  - 24. Find everything for shifted Hyperbola.
+  - 25. Howto find equation of shifted Hyperbola if some details about it are given?
+  - 26. What is the locus of center ofa variable circle which touches two fixed circles externally?
+  - 27. Find everything for hyperbola if equation is given in |PS, - PS,|=2a form.
+- **Alternate definition of Hyperbola**
+  - 28. Derive alternate definition of Hyperbola.
+  - 29. Find everything for hyperbola if equation is given in alternate definition form.
+- **Conjugate Hyperbola**
+  - 30. Define conjugate hyperbola.
+  - 31. How to find equation of conjugate hyperbola for a standard hyperbola?
+  - 32. What is the relation between eccentricities of a hyperbola and its conjugate hyperbola?
+- **Rectangular Hyperbola**
+  - 33. What is the condition for a hyperbola to be rectangular?
+  - 34. What is the relation between lengths of latus rectum, TA and CA for a rectangular hyperbola?
+- **Position of a point wrt Hyperbola**
+  - 35. Which region is called inside/outside wrt an Hyperbola?
+  - 36. Write S,S, and T for standard Hyperbola
+  - 37. Howto find relative position ofa point wrt an Hyperbola?
+- **Chord joining two points**
+  - 38. Write expression of equation of chord joining two points P(@ ) and Q( 2)
+- **Line and Hyperbola**
+  - 39. What is condition of tangency for standard Hyperbola? and how is it used?
+  - 40. | Howto apply condition of tangency for different type of standard hyperbolas?
+- **Director Circle**
+  - 41. What is equation of director circle for an standard Hyperbola?
+  - 42. Derive equation of director circle of standard Hyperbola.
+  - 43. How to find locus of a variable external point P for which condition on slope of tangents drawan from P to Hyperbola is given?
+- **Tangent & Normal**
+  - 44. | Howto find equation of tangent for an Hyperbola if point of tangency is given?
+  - 45. | Howto find equation of tangent for an Hyperbola ifany other condition other than point of tangency is given?
+  - 46. What is the equation of tangent at a point, whose coordinates are given in parametric form, on standard Hyperbola?
+  - 47. How to find equation of tangent to standard Hyperbola passing through an external point?
+  - 48. How to find point of tangency if equation of tangent is given?
+  - 49. Howto find equation of normal for an standard Hyperbola if foot of normal is given?
+  - 50. Write expression for equation of normal to standard Hyperbola in terms of eccentric angle theta.
+  - 51. How to find the condition for a line to be a normal to standard Hyperbola?
+  - 52. How to find point of intersection of tangents drawn at P(a@ ) and Q( 2) on standard Hyperbola?
+  - 53. How to find minimum distance between a point and standard Hyperbola?
+  - 54. How to find minimum distance between a line and standard Hyperbola?
+- **Common Concepts**
+  - 55. Write expression for equation of chord whose mid point is given for standard Hyperbola.
+  - 56. Write expression for equation of chord of contact for standard Hyperbola.
+  - 57. Howto find mid point ofa chord ofa standard Hyperbola whose equation is given?
+  - 58. | Howto find external point for a chord of contact for standard Hyperbola if equation of chord of contact is given?
+  - 59. Write expression for combined equation of pair of tangents for standard Hyperbola.
+  - 60. Write expression for equation of polar for standard Hyperbola.
+  - 61. What does T = 0 represents for a point, position relative to standard Hyperbola?
+  - 62. How to find coordinates of pole ofa given line?
+  - 63. From any variable point on a fixed line, tangents are drawn to the Hyperbola then chord of contact will pass through which point?
+  - 64. Derive equation of diameter for standard Hyperbola.
+- **Highlights**
+  - 65. What is the difference of focal distances of any point on Hyperbola?
+  - 66. Whatis the product of length of perpendiculars drawn from foci on any variable tangent to the Hyperbola?
+  - 67. What angle does portion of tangent intercepted between directrix and point of tangency subtend at focus?
+  - 68. | Whatis the relation between auxiliary circle and circle drawn on any focal distance as diameter?
+  - 69. Where does foot of perpendicular from focus on any tangent to Hyperbola lies?
+  - 70. Explain reflection property of Hyperbola.
+  - 71. What is the angle of intersection of an ellipse and a hyperbola if they are confocal?
+- **Asymptote**
+  - 72. Define asymptote for a curve.
+  - 73. Write equation of pair of asymptotes for standard hyperbola.
+  - 74. . What is relation between equations of hyperbola, pair of asymptotes and conjugate hyperbola?
+  - 75. How to find equation of pair of asymptotes for a general hyperbola?
+  - 76. What is the position of a line wrt hyperbola corresponding to number of common points between them?
+  - 77. Howto find angle between asymptotes for a standard hyperbola?
+  - 78. Whatis the relation between angle between asymptotes and e ?
+  - 79. Find number of tangents and position of corresponding point(s) of tangency from a point lying in outside region of hyperbola?
+- **Rectangular Hyperbola xy = c”**
+  - 80. Derive everything for xy = c?
+
+## Trigonometry / Trigonometric Ratio  (pages 48-51, 89 prompts, 21 headings)
+- **Introduction to Trig Ratios**
+  - 1. What are six trigonometric ratios and their value in terms of P,B and H?
+  - 2. What are three fundamental trigonometric identities?
+  - 3. What is the relation between sec 0+ tan 6 and sec 6 - tan 8?
+  - 4. What is result of sin* 6 + cos* 0 ?
+  - 5. What is result of sin® 0 + cos® 0 ? tanA+secA—1_ 1+sinA
+  - 6. Prove tanA-—secA+1 cosA
+  - 7. What to keep in mind while proving trigonometric identities?
+- **Measurement of Angle**
+  - 8. How to convert angle from degree to radian and vice versa?
+  - 9. Ifno symbol is mentioned on angle then in which system we have to assume the angle?
+  - 10. How to express angle given in degrees to angle in terms of 7 ?
+  - 11. Which angles are called important angles(quadrantal angles)?
+  - 12. How to mark quadrantal angles on the branches?
+  - 13. | Howto mark angles other than quadrantal angles in quadrants?
+  - 14. Whatis the sign of all trigonometric ratios corresponding to each quadrant?
+- **Reduction Formulae**
+  - 15. | Howtoapply reduction formulae?
+  - 16. Write reduction formulae corresponding to ( a 0) 2
+  - 17. Write reduction formulae corresponding to 7-8
+  - 18. Write reduction formulae corresponding to —0
+  - 19. What is the value of sine and cosine for each quadrantal angle?
+  - 20. What to do when two complementary angles are observed?
+  - 21. What to do when two supplementary angles are observed?
+  - 22. How to check sign of sin A+ cos A corresponding to value of A?
+  - 23. How to check sign of sin A—cos A corresponding to value of A?
+  - 24. | Howtocompute value of all remaining trig ratio at angle A when value of one trig ratio at Ais given
+  - 25. Howtocovert trigonometric ratio of higher angle into trigonometric ratio of acute angle?
+- **Compound Angles**
+  - 26. — Write all 20 formulae given in compound angle heading?
+  - 27. When to use sin (A + B).sin (A—B), cos (A + B).cos (A—B)? T _lttanA |
+  - 28. What is the use of remembering tan ( + A) & tan (4 a|-iima ~TotanA 4) 1+tanA
+  - 29. Whatto keep in mind in proving identities involving several terms in numerator and denominator?
+- **2A Formulae**
+  - 30. Whatis the formula for sin 2A in sin and cos and what is its application?
+  - 31. | Whatis the formula for sin 2A in tan and what is its application?
+  - 32. What is the formula for cos 2A in sin and cos and what is its application?
+  - 33. What is the formula for cos 2A in tan and what is its application?
+  - 34. What to keep in mind when 1 + sin or 1 — sin is observed
+  - 35. What to keep in mind when 1 + cos or 1 — cos is observed
+  - 36. | What is the formula for tan 2A in tan and what is its application?
+  - 37. How to calculate value at angle A when values at 2A are known?
+  - 38. What is formula of tan A/tan’ A in terms of sin 2A and cos 2A?
+  - 39. What is value of all trigonometric ratio at 15,30,45,60,75 and 90 degrees?
+  - 40. | What is the value of tan and cot at 22.5, 67.5 degrees?
+  - 41. | Howto prove identities given in tangent and cot given in three angles?
+  - 42. Howto define modulus of |sin A+ cos A| and |sin A— cos A| ?
+- **3A forumale**
+  - 43. What is the formula for sin 3A in sin A and what is its application?
+  - 44. What is the formula for cos 3A in cos A and what is its application?
+  - 45. What is the formula for tan 3A in tan A and what is its application?
+- **6 Important results**
+  - 46. What are 6 important results?
+  - 47. When would we apply 8, 60 — 8, 60 + 6 formulae?
+  - 48. What to do when one term related to 0, 60 — 9, 60 + 9 formula is missing?
+- **Value at 18 and 36**
+  - 49. What is the value of sin 18°?
+  - 50. What is the value of cos 36°?
+- **Componendo and Dividendo**
+  - 51. What is the result of componendo and dividendo?
+  - 52. When would we apply componendo and dividendo in trigometry questions?
+- **General Formula for tan**
+  - 53. Write general formula for tan and what is the pattern which is being followed in it?
+- **Continued Product**
+  - 54. Whatis the result of continued product of series of cos and when would we apply this result?
+- **Trigonometric Identities for a triangle**
+  - 55. Whatis the basic process of proving trigonometric identities in sin and cosine for a triangle
+  - 56. Whatis the basic process of proving trigonometric identities in tan and cot fora triangle
+  - 57. Write trigonometric identities for a triangle > sin2A, > cos2A, > sin’A, y cos’A
+  - 58. Write all 4 trigonometric identities for a triangle in tan and cot
+  - 59. what is the condition ona triangle ABC if > sin’A =2
+  - 60. — whatis the condition ona triangle ABC if > cos’ A=1
+- **Graphs**
+  - 61. Plot graph ofall six trig functions and mark the values of x when graph meets x-acis
+- **Range of Trigonometric Functions type 1**
+  - 62. What is the range of sin x, cos x, tanx, cot x, sec x and cosec x?
+  - 63. How to find range of sin x, cos x, tanx, cot x, sec x and cosec x when condition on x is given?
+  - 64. What is the range of square of sin x, cos x, tanx, cot x, sec x and cosec x?
+  - 65. How to find range of af(x) + b when range of f(x) is known?
+  - 66. How to find range of (f(x))’ when range of f(x) is known?
+  - 67. How to find range of ,/ f(x) when range of f(x) is known? 1
+  - 68. Howto find range of when range of f(x) is known? F(x)
+- **Range of Trigonometric Functions type 2**
+  - 69. When to apply concept of type 2?
+  - 70. How to solve type 2 questions with the help of quadratic equations also?
+- **Range of Trigonometric Functions type 3**
+  - 71. What is range of y=asin x + bcos x and derive this result also
+  - 72. | Whencan we add ranges of two functions directly?
+  - 73. Howto find range of y=asin’? x + bcos?x +c sinxcosx+d
+  - 74. Howto find range of y=a sin x + bcos x when condition on x is given?
+  - 75. What is the range of y = |sin x| + |cos x| ?
+- **Range of Trigonometric Functions type 4**
+  - 76. | Whatisrange of y =a’ tan? x +b’ cot? x
+  - 77. Whatis range of y = a’ sec” x +b’ cosec’x
+  - 78. Howto find range of y =a’ sin? x +b’ cosec?x
+  - 79. Howto find range of y =a’ cos’ x +b’ sec” x
+- **Summation of series type 1**
+  - 80. | Whatis the result of summation of series type 1 and how to derive it? What is condition on common difference of angles also?
+  - 81. When would we apply summation of series type 1 ?
+  - 82. What to do when terms of type | are present in square or cube form?
+- **Summation of series type 2**
+  - 83. On which theme, questions of type 2 are based?
+  - 84. Which formulae are basically used to separate general term as difference of two terms?
+  - 85. How to observe which term should be present in numerator in type 2 questions for purpose of splitting?
+- **Inequalities in a triangle**
+  - 86. How to find minimum/maximum value ofa trig expression for a triangle (objective approach) ?
+  - 87. | Howto check whether the value obtained will represent a scenario of maximum or minimum?
+- **Trigonometric Substitution**
+  - 88. What to substitute when x? + y? =1°?
+  - 89. | Whatto keep in mind when we use trigonometric substitution?
+
+## Trigonometry / Trigonometric Equation  (pages 52-53, 29 prompts, 11 headings)
+- **Introduction**
+  - 1. What do you mean by prinicipal solution ofa trigonometric equation?
+  - 2. What do you mean by general solution ofa trigonometric equation?
+- **Important Results for standard trig equations**
+  - 3. What is the formula for general solutions of sin x =0?
+  - 4. What is the formula for general solutions of sin x = 1 ?
+  - 5. What is the formula for general solutions of sin x = —1?
+  - 6. What is the formula for general solutions of cos x =0?
+  - 7. What is the formula for general solutions of cos x = 1?
+  - 8. What is the formula for general solutions of cos x = — 1?
+- **General Solutions for trig equations**
+  - 9. What is the formula for general solutions of sinx = sin @ ,cosx=cos a, tanx=tan a@?
+  - 10. Inwhich interval value of alpha should be taken while applying formula for general solutions?
+  - 11. What is the formula for general solutions of cosec x = cosec a , sec X= sec @, cotx=cot a?
+  - 12. Whatis the formula for general solutions of sin’ x = sin’ @ , cos? x = cos* a, tan? x = tan? a ?
+  - 13. How to find solutions in any particular interval with the help of general solutions?
+  - 14. How to check whether two general solutions expressed differently are equal?
+- **Types of Trigonometric Equations Type 1**
+  - 15. What is the basic idea of solving type 1 questions?
+- **Types of Trigonometric Equations Type 2**
+  - 16. How to solve equation of the type asinx +bcosx=c?
+  - 17. How to assume theta when values other than standard values are obtained?
+  - 18. How to solve equation of the type a sin? x + b cos? x +c sinx cosx=d?
+- **Types of Trigonometric Equations Type 3**
+  - 19. | Howto solve equations of the type sin x = sin @ ,cosx =cos a , tanx=tan @, when q isalso variable?
+  - 20. Whatis the basic idea of solving type 3 questions?
+- **Types of Trigonometric Equations Type 4**
+  - 21. | Howtouse substitution in trigonometric equations?
+  - 22. Which expression to put t when both (sin x + cos x) & sin 2x or (sin x — cos x) & sin 2x are present in equation?
+- **Types of Trigonometric Equations Type 5**
+  - 23. How would you know whether an equation is of type 5?
+  - 24. Ifa question is of type 5 then how to solve that equation?
+- **Types of Trigonometric Equations Type 6**
+  - 25. What to keep in mind if we do squaring in trigonometric equations?
+  - 26. How to write general solution if we have done squaring in a trigonometric equations
+- **Trigonometric Inequalities**
+  - 27. | Howto find general solutions of basic trigonometric inequalities?
+  - 28. How to solve trigonometric inequalities with the help of graph?
+- **System of trigonometric equations**
+  - 29. How to solve system of 2 or more trigonometric equations ?
+
+## Trigonometry / Solution of Triangle  (pages 54-56, 84 prompts, 18 headings)
+- **Introduction about Triangle**
+  - 1. What is the relation between sides of a triangle?
+  - 2. What do you mean by solving a triangle?
+- **Basic Laws : Sine Law**
+  - 3. What is sine law?
+  - 4. How to express ain terms of sin A?
+  - 5. How to use sine law in proving identities?
+  - 6. How to use sine law in triangle questions by dividing in two triangles?
+  - 7. How to find ratio of sides when all angles are known?
+- **Basic Laws : Cosine rule**
+  - 8. Write expression of cosine rule
+  - 9. When should you use cosine rule?
+  - 10. | Howto solve triangle if all three sides are known?
+  - 11. How to find angles of triangle if ratio of all sides is known?
+  - 12. | Howto solve triangle if two sides and angle between them is known?
+  - 13. | Howto determine nature of triangle if all three sides are known?
+  - 14. What is the formula for cot A in terms of sides?
+- **Basic Laws : Projection Formulae**
+  - 15. Write expression of projection formulae
+  - 16. How to use projection formulae in questions?
+- **Basic Laws : Tangent Rule**
+  - 17. Write expression of tangent rule.
+  - 18. When should you use tangent rule?
+- **Area of Triangle**
+  - 19. Write expression for area of triangle.
+  - 20. How to find length of altitude ifall sides are known?
+- **Half Angle formulae**
+  - 21. What is the formulae of sin (A/2), cos (A/2), tan (A/2) and area of triangle in terms of sides?
+  - 22. How to derive formulae of sin (A/2), cos (A/2), tan (A/2) and area of triangle in terms of sides?
+- **Ambiguous Case of SOT**
+  - 23. Which case is known as ambiguous case?
+  - 24. Derive third side in terms of two sides and the angle.
+  - 25. Write all 4 conditions and no of triangles corresponding to each condition.
+  - 26. Derive all 4 conditions with the help of triangle construction
+- **m-n theorem**
+  - 27. Write expression of m-n theorem
+  - 28. Derive expressions of m-n theorem
+  - 29. When would you use m-n theorem
+- **Circumcircle and Circumradius**
+  - 30. Define circumcircle, circumcenter, circumradius for a triangle?
+  - 31. Write expression to find circumradius in terms of side and sine of angle opposite to side
+  - 32. Write expression to find circumradius in terms of sides and area of triangle
+  - 33. What is the distance of circumcenter from all three vertices?
+  - 34. What is the distance of circumcenter from all three sides?
+  - 35. | Which point is at equal distance from all three vertices?
+  - 36. Whatisthe position of circumcenter relative to a triangle?
+  - 37. Howto find position of circumcenter for a triangle geometrically?
+  - 38. | Whatis the angle subtended by a side at circumcenter?
+- **Incircle and Inradius**
+  - 39. Define incircle, incenter, inradius for a triangle?
+  - 40. Write all three expression to find inradius.
+  - 41. What is the distance of incenter from all three vertices?
+  - 42. What is the distance of incenter from all three sides?
+  - 43. Which point is at equal distance from all three sides?
+  - 44. What is the position of incenter relative to a triangle?
+  - 45. How to find position of incenter for a triangle geometrically?
+  - 46. | What is the angle subtended by a side at incenter?
+  - 47. Inwhatratio, angle bisector ofa vertex of triangle divides opposite side?
+  - 48. In whatratio, incenter divides internal angle bisector?
+  - 49. _ Derive formula for inradius in terms of side and area of triangle.
+  - 50. What is the position of incenter relative to a triangle?
+  - 51. How to find length of tangent from any vertex to incircle?
+  - 52. How to find position of incenter for a triangle geometrically?
+- **Excircle and exradii**
+  - 53. Define excircle, excenter, exradius for a triangle?
+  - 54. What is the position of excenter relative to a triangle?
+  - 55. How to find position of excenter for a triangle geometrically?
+  - 56. Write all three expression to find exradius.
+  - 57. What is the distance of excenter from all three vertices?
+  - 58. What is the distance of excenter from all three sides?
+  - 59. In whatratio, excenter divides internal angle bisector?
+  - 60. What is the angle subtended by a side at excenter?
+  - 61. What is the value of Snr ?
+  - 62. When to use relation ofr, r,, r,, r, in terms of R?
+  - 63. Howto find length of tangent from any vertex to excircle?
+- **Centroid and Median**
+  - 64. Define centroid and median for a triangle?
+  - 65. In what ratio, a median divides the triangle in two parts?
+  - 66. What is the position of centroid relative to a triangle?
+  - 67. In what ratio, centroid divides a median?
+  - 68. Write expression for length of median.
+- **Length of Angle bisector**
+  - 69. Write expression for length of angle bisector.
+- **Orthocenter and Pedal Triangle**
+  - 70. Define altitude, orthocenter and pedal triangle for a triangle
+  - 71. | What is the distance of orthocenter from all three vertices?
+  - 72. | Whatis the distance of orthocenter from all three sides?
+  - 73. What is the angle subtended by a side at orthocenter?
+  - 74. . Write expression for sides and angles of pedal triangle.
+  - 75. What is circumradius ofa pedal triangle?
+- **Excentral Triangle**
+  - 76. Define excentral triangle for a triangle
+  - 77. Relate excentral triangle with pedal triangle and how to find sides and angles of excentral triangle with its help
+- **Regular Polygon**
+  - 78. How to find side and area ofa regular polygon in terms of its circumradius
+  - 79. How to find side and area ofa regular polygon in terms of its inradius
+  - 80. Howto find length of diagonal ofa regular polygoin in terms of its circumradius/inradius?
+  - 81. | Whatis internal angle ofa regular polygon?
+- **Important Points**
+  - 82. Whatis the relation between R and r for equilateral triangle?
+  - 83. Find all details of equilateral triangle in terms of its side.
+  - 84. Write expression for area of a cyclic quadrilateral
+
+## Trigonometry / Vector 3D  (pages 57-65, 52 prompts, 9 headings)
+- **Introduction**
+  - 1. Define vector, initial point, terminal point, head and tail ofa vector
+  - 2. What is the direction ofa vector?
+  - 3. What is the magnitude ofa vector?
+  - 4. What is line of support ofa vector?
+- **Important Definitions**
+  - 5. Define null vector and how is it represented?
+  - 6. Define unit vector and how is it represented?
+  - 7. How to find magnitude of a vector expressed in i,j and k form?
+  - 8. What is the role of unit vector?
+  - 9. When are two vectors equal?
+  - 10. | Howto equate two vectors expressed in i,j and k form?
+  - 11. How is the angle between two vectors defined and how is angle denoted?
+  - 12. What is the range of angle between two vectors?
+  - 13. | Howto calculate angle if head and tail are placed together?
+  - 14. | What do youmean by collinear vectors?
+  - 15. | Howto check whether two collinear vectors are like or unlike vectors?
+  - 16. What is the condition of two vectors, expressed in i,j and k form, to be collinear?
+  - 17. | Howto assume a vector parallel to a given vector p ?
+  - 18. | What do youmean by coplanar vectors?
+  - 19. | Howtocheck coplanarity of two vectors?
+  - 20. Whatto keep in mind while shifting vectors in Mathematics?
+- **Addition of vectors**
+  - 21. | Howto write relation between vectors forming a closed figure?
+  - 22. | Howto write diagonal vectors of a parallelogram whose adjacent side vectors are a and b
+  - 23. | Howtoadd two vectors expressed in i, j and k form?
+  - 24. | What do youmean by additive inverse?
+  - 25. Write expression of triangle inequality.
+  - 26. Whatis the condition on two vectors in case of equality in triangle inequality?
+- **Multiplication of a vector by scalar**
+  - 27. Whatis the effect on magnitude ofa vector ifa vector gets multiplied by 4?
+  - 28. What is the effect on direction ofa vector ifa vector gets multiplied by 4?
+- **Coordinate System in 3D**
+  - 29. How to define x, y and z coordinates ofa point?
+  - 30. What is the condition on coordinates if'a P(a,b,c) lies on x-axis/y-axis/z-axis?
+  - 31. Define superset.
+  - 32. | What is Power set ofa set?
+- **Cartesian Product of two sets**
+  - 33. How is cartesian product of sets A and B represented?
+  - 34. Define cartesian product of sets A and B
+  - 35. Find number of elements inA x B
+- **Relation**
+  - 36. Definerelation
+  - 37. How do arelation from A to B be represented?
+  - 38. What do you mean by pre image and image of an element in a relation
+  - 39. What is domain ofa relation?
+  - 40. What is co-domain of a relation?
+  - 41. | Whatis range ofarelation?
+- **Types of a relation**
+  - 42. Define reflexive relation.
+  - 43. How to check whether a given relation is reflexive?
+  - 44. Define identity relation
+  - 45. Define symmetric relation
+  - 46. How to check whether a given relation is symmetric?
+  - 47. Define transitive relation
+  - 48. How to check whether a given relation is transitive?
+  - 49. What do you mean by equivalence relation?
+  - 50. Define anti-symmetric relation
+  - 51. | Whatis equivalence class ofan element ina relation?
+- **Inverse of a relation**
+  - 52. What is inverse of a relation?
+
+## Trigonometry / Function  (pages 66-70, 135 prompts, 20 headings)
+- **Definition of Function**
+  - 1. Define function.
+  - 2. How do a function from A to B be represented symbolically?
+  - 3. What do you mean by pre image and image of an element in a function?
+- **Domain, Codomain and range of a function**
+  - 4. What is domain ofa function?
+  - 5. What is range ofa function?
+  - 6. What is co-domain ofa function?
+  - 7. What is relation between range and co-domain of a function?
+- **Types of a function**
+  - 8. What do you mean by uniform and non-uniform function?
+- **Graphical representation of a function**
+  - 9. How to check whether a graph represents a function?
+- **Algebra of a function**
+  - 10. Howto represent addition, subtraction, product and quotient of two functions?
+  - 11. How to compute domain ofa function?
+- **Types of standard function**
+  - 12. Plot graph ofall six trigonometric functions.
+  - 13. Write domain and range ofall six trigonometric function.
+  - 14. Plot graph of exponential function.
+  - 15. What is domain and range of exponential function?
+  - 16. How to solve exponential equation?
+  - 17. Plot graph of logarithmic function.
+  - 18. What is domain and range of logarithmic function?
+  - 19. How to solve logarithmic equation?
+  - 20. | Whatisapolynomial function?
+  - 21. Whatis degree, leading coefficient ofa polynomial function?
+  - 22. Whatis an odd linear polynomial?
+  - 23. Whatis domain ofa polynomial function?
+  - 24. What is range of an odd degree polynomial?
+  - 25. What can you say about number of zero(es) of an odd degree polynomial?
+  - 26. What is the limit of y ina polynomial when x approaches to 0 / —co ?
+  - 27. What is a rational function?
+  - 28. What is an algebraic function?
+  - 29. What isa transcedental function?
+  - 30. Plot graph of modulus function.
+  - 31. | Whatis domain and range of modulus function?
+  - 32. | Howto plot the graph of y = |f(x)| from the graph of y= f(x) ?
+  - 33. Plot graph of signum function.
+  - 34. What is domain and range ofa signum function?
+  - 35. Write properties of signum function.
+  - 36. Define y= [x]
+  - 37. What is domain and range of y = [x] ?
+  - 38. How to define y = [ f(x) ]
+  - 39. How to solve equation [ f(x) ] = constant ?
+  - 40. How to solve inequality [ f(x) | greater than/less than constant?
+  - 41. Define y= {x}
+  - 42. What is domain and range of y= {x} ?
+  - 43. Howto define y= { f(x) }
+  - 44. Write properties of y = {x}
+  - 45. What is the condition on n while expressing nth root ofa?
+  - 46. What is the condition on base in case of a* ?
+  - 47. What is the condition to define "P and "C?
+  - 48. How to find domain of y = max( f(x), g(x)) or y = min( f(x), g(x)) ?
+  - 49. Howto find define y = max( f(x), g(x)) or y= min( f(x), g(x)) ?
+  - 50. How to plot graph of y = f(ax) from the graph of y = f(x)
+  - 51. | Howto plot graph of y = f(x + a) from the graph of y = f(x)
+  - 52. Plot graph ofy=x°
+  - 53. Plot graphofy=x+ I/x
+  - 54. Plot graphofy=x — 1/x
+- **Range Based Questions**
+  - 55. | Howto find range when x can be expressed in terms of y?
+  - 56. How to find range if function has been expressed in implicit form?
+  - 57. How to find range in case of f(g(x)) if g(x) is monotonic function?
+  - 58. How to find range in case of f(g(x)) if g(x) is non-monotonic function?
+  - 59. How to find range ofa non-uniform function?
+- **Equal/Identical Functions**
+  - 60. | Howtocheck whether two functions are identical?
+  - 61. What is the relation between graphs of two identical functions?
+- **Transformation of Graphs**
+  - 62. | Howto plot the graph of y = f(x) + b from the graph of y = f(x) ?
+  - 63. | Howto plot the graph of y =— f(x) from the graph of y = f(x) ?
+  - 64. | Howto plot the graph of y = f(-x) from the graph of y = f(x) ?
+  - 65. | Howto plot the graph of y = f(|x|) from the graph of y = f(x) ?
+  - 66. | Howto plot the graph of y = f(-{x|) from the graph of y = f(x) ?
+  - 67. | Howto plot the graph of |y| = f(x) from the graph of y= f(x) ?
+  - 68. | Howto plot the graph of y= linear/linear ?
+- **Important Definitions**
+  - 69. Define identity function
+  - 70. Define constant function
+  - 71. How to check whether a function is bounded function?
+  - 72. How to check whether a function is homogeneous function and find its degree?
+  - 73. How to convert implicit form ofa function to its explicit form?
+- **One-One and Many-one Function**
+  - 74. . What do you mean by one-one and many-one function?
+  - 75. How to determine whether a function will be one-one or many-one from its graph?
+  - 76. How to determine whether a function will be one-one or many-one with the help of derivative approach?
+  - 77. How to determine whether a cubic polynomial will be one-one or many-one?
+  - 78. What are the standard examples of one-one function?
+  - 79. What are the standard examples of many-one function?
+- **Onto and into function**
+  - 80. What do you mean by onto and into function?
+  - 81. How to check whether a polynomial function will be onto or into function?
+  - 82. | What do youmean by invertible functions?
+  - 83. | What do youmean by injective mapping?
+  - 84. | What do you mean by surjective mapping?
+  - 85. What do you mean by bijective mapping?
+  - 86. Howto check whether a function defined separately for rational and irrational numbers will be one-one/many-one?
+- **Permutation based problems**
+  - 87. How to find number of function that can be defined from A to B ifn(A) = n(B)
+  - 88. How to find number of one-one/many-one function that can be defined from A to B ifn(A) = n(B)
+  - 89. How to find number of onto/into function that can be defined from A to B ifn(A) = n(B)
+  - 90. | Howto find number of function that can be defined from to A B ifn(A) > n(B)
+  - 91. | Howto find number of one-one/many-one function that can be defined from to A B ifn(A) > n(B)
+  - 92. Howto find number of onto/into function that can be defined from A to B ifn(A) > n(B)
+  - 93. Howto find number of function that can be defined from to A B ifn(A) <n(B)
+  - 94. | Howto find number of one-one/many-one function that can be defined from to A B ifn(A) <n(B)
+  - 95. Howto find number of onto/into function that can be defined from A to B ifn(A) <n(B)
+- **Functional Equation**
+  - 96. | Howto solve functional equation of type 1?
+  - 97. How to solve functional equation of type 2 and when to apply?
+  - 98. How to solve functional equation of type 3 and when to apply?
+- **Composite of two functions**
+  - 99. How to define composite of two functions if their functional rule is given?
+  - 100. Howto define composite of two functions if functions are given in arrow diagram form?
+  - 101. What isthe condition on fand g if f(g(x)) is one-one ?
+  - 102. What isthe condition on fand g if f(g(x)) is onto ?
+  - 103. Howtosolve questions of composite function if higher number of times composite has to be taken
+- **Composite of non-uniform functions**
+  - 104. Howto find composite of two non-uniform functions?
+- **Odd and Even functions**
+  - 105. Define odd and even functions.
+  - 106. What is the condition on domain for odd/even function?
+  - 107. What can you say about graphs of odd/even function?
+  - 108. What is the nature of derivative of odd functions?
+  - 109. What is the nature of derivative of even functions?
+  - 110. Howto express a function as a sum of even and odd functions?
+  - 111. What is nature of f+ g, f — g, f.g, f/g if fand g are both even/ both odd/ one is even and other is odd?
+  - 112. What is the nature of f(g(x)), g(f(x)) if fand g are both even/ both odd/ one is even and other is odd?
+- **Inverse of a function**
+  - 113. | Whatis the condition for a function to be invertible?
+  - 114. Define inverse ofa function.
+  - 115. Howto find inverse ofa function if functional rule is given?
+  - 116. Howto find inverse ofa function if function is given as a set/arrow diagram form?
+  - 117. | What is inverse of inverse of'a function?
+  - 118. What is composite of fand g if fand g are inverse of each other?
+  - 119. | What is the relation between graphs of f(x) and its inverse?
+  - 120. Howto find inverse of composite function?
+  - 121. Whatis the condition iflinear/linear is inverse of itself?
+- **Periodic function**
+  - 122. Define periodic function
+  - 123. What is the condition on domain ofa periodic function?
+  - 124. What is the condition on points of discontinuity or points where function is not defined for a periodic function
+  - 125. Whatare the periods ofall trigonometric functions?
+  - 126. What are the periods of other standard functions?
+  - 127. What will be period of af(x), f(x) + a, 1/f(x) if period of f(x) is T?
+  - 128. What will be period of f(ax + b) if period of f(x) is T?
+  - 129. What will be period of f+ g, f — g, fg, f/g if periods of fand g are T, and T, ?
+  - 130. What to keep in mind after taking LCM of periods while computing period ?
+  - 131. Howto find LCM of two or more numbers?
+  - 132. Howto find period of a composite function ?
+  - 133. Howto find period if functional equation is given?
+- **Miscellaneous**
+  - 134. Howto solve equation if f(x) =k has a solution
+  - 135. Howto solve equation if f(x) =k has exactly n solution
+
+## Trigonometry / Inverse Trigonometric Function  (pages 71-72, 43 prompts, 12 headings)
+- **Introduction of ITF**
+  - 1. Define inverse ofa trigonometric function
+  - 2. What do you mean by arc(sin(x)) ?
+- **Domain and Range of 6 ITFs**
+  - 3. What is domain and range of all 6 ITF s ?
+  - 4. What are functions of first family?
+  - 5. What are the functions of second family?
+- **Graph of 6 ITFs**
+  - 6. Plot graph ofall six ITFs
+  - 7. Find derivative ofall six ITFs
+  - 8. Comment on monotonic nature of first four ITFs
+  - 9. Comment on odd/even nature of first four ITFs
+  - 10. | Comment on concavity of graphs of first four ITFs
+  - 11. Comment on maximum/minimum value of y for first four ITFs
+  - 12. | Howto convert negative argument of an ITF expression to positive?
+  - 13. | Howto solve ITF inequality ifsin or tan is involved?
+  - 14. | Howto solve ITF inequality if cos or cot is involved?
+  - 15. How to solve inequality of type ITF expression >/< constant ?
+  - 16. How to solve inequality of type ITF expression >/< constant if constant is not in principal domain of ITF
+- **Evaluation of inverse trigonometric expression**
+  - 17. How to convert one inverse to another inverse?
+- **Property 1 of ITF**
+  - 18. Write property 1
+- **Property 2 of ITF**
+  - 19. | Howto define sin '(sin(x)), cos"'(cos(x)), tan”|(tan(x)), cot '(cot(x)) conceptually ?
+  - 20. | Howtoapply trick to define sin"'(sin(x)) ?
+  - 21. — Plot graph of y =sin '(sin(x)) ?
+  - 22. Howto apply trick to define cos '(cos(x)) ?
+  - 23. Plot graph of y=cos '(cos(x)) ?
+  - 24. How to apply trick to define tan“'(tan(x)) ?
+  - 25. Plot graph of y= tan'(tan(x)) ?
+  - 26. Howto apply trick to define cot “cot(x)) ?
+  - 27. Plot graph of y = cot '(cot(x)) ?
+  - 28. Plot graph of y = sec"|(sec(x))
+  - 29. Plot graph of y = cosec'(cosec(x))
+  - 30. How to define sin“(sin(x)), cos“!(cos(x)), tan"'(tan(x)), cot '(cot(x)) for any inetrval of x ?
+- **Simplification by trigonometric substitutions**
+  - 31. | Howto solve questions of simplification by trigonometric substitutions?
+- **Property 4 of ITF**
+  - 32. How to convert sin" to cos” and vice versa?
+  - 33. How to convert tan"! to cot! and vice versa?
+  - 34. How to convert sec"! to cosec”! and vice versa?
+- **Property 5 of ITF**
+  - 35. | Howto convert cosec" to sin! ?
+  - 36. | Howtoconvert sec'to cos! ?
+  - 37. | Howto convert cot! to tan! ?
+- **Addition or Subtraction of angles**
+  - 38. | Howtoadd two angles
+  - 39. How to subtract two angles
+  - 40. | Howto deal factor of 1/2 in addition/subtraction of angles?
+- **ITF Equations**
+  - 41. How to solve ITF equations?
+  - 42. What to keep in mind while solving ITF equations?
+- **Summation of Series**
+  - 43. How to solve questions on summation of ITF series
+
+## Trigonometry / Limit  (pages 73-75, 61 prompts, 25 headings)
+- **Notion of limit**
+  - 1. Define limit
+- **LHL, RHL and existence of limit**
+  - 2. What is LHL and RHL?
+  - 3. Write all different ways in LHL and RHL can be written.
+  - 4. What is the condition for a limit to exist?
+  - 5. What to keep in mind while computing limit if one side of point is not in domain?
+- **Indeterminate forms**
+  - 6. What do you mean by indeterminate form ? State all 7 forms.
+  - 7. How to check whether a form is an indeterminate form?
+  - 8. What is the condition on numbers in indeterminate forms?
+  - 9. What is the value of expression if number gets exact value in place of approaching value?
+- **Reading from graph**
+  - 10. How to find limit ofa function ifits graph is given?
+- **Five fundamental theorem**
+  - 11. What will be limit of fg, f—g, fig, f/g if limits of both fand g exists?
+  - 12. What will be limit of f+g, f—g, f.g, f/g iflimits of both fand g does not exists?
+  - 13. What will be limit of f+g, f—g, f.g, f/g if limits of fexists and g does not exists?
+- **Strategies to Calculate Limits**
+  - 14. What are the basic steps to calculate limits?
+  - 15. What to keep in mind if we separate expression while calculating limit?
+- **Evaluating Limit by Factorization**
+  - 16. How to remove indeterminate forms by factorisation?
+  - 17. What to keep in minds while factorizing expression while calculating limit?
+  - 18. What to do in case of co —co form?
+- **Evaluating Limit by Rationalization**
+  - 19. | Howtoremove indeterminate form by rationalisation?
+  - 20. | Whenand howto do square rationalisation?
+  - 21. | Whenand howto do cubic rationalisation?
+  - 22. | Whencan we put value ofa factor while calculating limit?
+- **Evaluating Limit by Substitution**
+  - 23. What to substitute ifx approaches —c ?
+  - 24. Whatto substitute ifx approaches o ?
+  - 25. Whatto substitute ifx approaches "a" (non-zero finite) ?
+- **Infinity/infinity form**
+  - 26. | Howto solve questions of limit in case of c/o. form?
+  - 27. Whatis the value of limit in questions of infinity/infinity form ifhighest power in numerator and denominator can be observed?
+- **Standard Expansions**
+  - 28. Write expansion of sin x, cos x, tan x, e*, In(1 +x), (1 +x)", tan! (x)
+- **Application of Standard Limits Type 1**
+  - 29. Write result of standard limit type 1
+  - 30. What to replace if (s" - 1) appears in limit and what to keep in mind? x"-a
+  - 31. Whatis the value of limit lim ? x-a
+- **Trigonometric Limits**
+  - 32. Write result of trigonometric limits.
+  - 33. What to replace if (sin(s)), (tan(s)), (sin"'(s)), (tan-!(s)) appears in limit and what to keep in mind? 1—cosx
+  - 34. Whatis the value of limit lim
+  - 35. What is the value of limit x? sin(1/x), x? cos(1/x) ?
+  - 36. What to do if inverse trigonometrix expression appears in limit question?
+- **Exponential and logarithmic Limit**
+  - 37. Write result of exponential limit?
+  - 38. What to replace if (e’ - 1), (a°- 1) appears in limit and what to keep in mind?
+  - 39. Write result of logarithmic limit.
+  - 40. What to replace if (In(1 + x)) appears in limit and what to keep in mind?
+- **One raise to infinity form**
+  - 41. | Howtocheck whether indeterminate form is 1” form?
+  - 42. What to replace in case of 1 form?
+- **Questions based on derivatives**
+  - 43. Write result of f' (x), f"(x), f"(x), f'"(x)
+- **Special type of functions**
+  - 44. How to compute limit of a function defined separately for rational and irrational numbers?
+- **Problems based on special signs**
+  - 45. What to do if modulus appears in limit ?
+  - 46. What to do if [.] appears in limit question?
+  - 47. What to do if {.} appears in limit question?
+  - 48. What to replace {x} when x approaches any integer ?
+- **GIF on standard limits**
+  - 49. _ Instandard limit questions, value of y approaches answer from which side?
+- **Sandwich Theorem**
+  - 50. Write statement of Sandwich theorem
+  - 51. Howto solve sandwich theorem questions involving [.] ?
+  - 52. How to solve sandwich theorem questions involving series sum ?
+- **Limits of Composite Function**
+  - 53. How to find limit of a composite of two function without finding composite
+  - 54. | Howto find limit when numerator and denominator are expressed as expansion of x
+- **Limits based on expansion**
+  - 55. Whatis the condition for existence of limit when numerator and denominator are expressed as expansion of x
+  - 56. Whatis the general instruction on variable for questions of limits based on expansion?
+  - 57. Whatare the four standard questions on limits based on expansion and what is their answer?
+- **Finding unknown constants**
+  - 58. How to find unknown constants in limit questions with the help of expansion?
+- **Functions with built in limit**
+  - 59. How to define functions with built in limit?
+- **Miscellaneous**
+  - 60. When can we bring limit in the argument ofa function in case of a composite function?
+  - 61. | Whatis the relation between logarithmic, polynomial and exponential function ifx is approaching to infinity?
+
+## Trigonometry / Continuity & Differentiability  (pages 76-77, 53 prompts, 10 headings)
+- **Definition of Continuity**
+  - 1. What is the graphical definition of continuity?
+  - 2. What is mathematical definition of continuity?
+  - 3. What to keep in mind while checking continuity ifone side of point is not in domain?
+- **Important Points related to Continuity**
+  - 4. What is the relation between existence of limit and continuity at a point?
+  - 5. What is the condition for a function to be left continuous at x = a?
+  - 6. What is the condition for a function to be right continuous at x = a?
+  - 7. Comment on continuity of f+g, f—g, f.g, f/g if both fand g are continuous at a point?
+  - 8. Comment on continuity of ftg, f—g, f.g, f/g if both fand g are discontinuous at a point?
+  - 9. Comment on continuity of fg, f—g, fig, f/g if fis continuous and g is discontinuous at a point?
+- **Continuity in an Interval**
+  - 10. What is the condition for a function to be continuous in (a, b)?
+  - 11. What is the condition for a function to be continuous in [a, b]?
+  - 12. Whatare the checkpoints for continuity in an interval?
+  - 13. | Howto check continuity ofa function defined separately for rational and irrational numbers?
+  - 14. How to check continuity of [f(x)] if graph of fcan be drawn?
+  - 15. How to find continuity of functions with built-in limit?
+- **Types of Discontinuity**
+  - 16. What is the condition for removable type of discontinuity?
+  - 17. What is the condition for non-removable type of discontinuity?
+  - 18. What are the different types of removable type of discontinuity and what are the conditions for each type?
+  - 19. What are the different types of non-removable type of discontinuity and what are the conditions for each type?
+  - 20. What is the jump of discontinuity in finite type discontinuity?
+  - 21. What are the checkpoints for continuity of f(g(x)) if check points for fand g are known?
+  - 22. State extreme value theorem
+- **Intermediate Value Theorem(IMVT)**
+  - 23. Write statement of IMVT.
+  - 24. Write alternate statement of IMVT.
+  - 25. How to determine whether question is of IMVT?
+  - 26. | Howto apply IMVT in questions?
+- **Definition of Differentiability**
+  - 27. What is the relation between tangent at a point and derivability of function at that point?
+  - 28. Write expression of LHD and RHD.
+  - 29. Write all different ways in LHD and RHD can be written.
+  - 30. What is the condition for a function to be derivable at x = a?
+  - 31. | Whatto keep in mind while checking derivability if one side of point is not in domain?
+  - 32. What is the relation between continuity and derivability at a point?
+  - 33. What is the condition for a function to be left derivable at x = a?
+  - 34. What is the condition for a function to be right derivable at x = a?
+  - 35. Comment on derivability of fg, f—g, fig, f/g if both fand g are derivable at a point?
+  - 36. Comment on derivability of f+g, f—g, f.g, f/g if both fand g are non-derivable at a point?
+  - 37. Comment on derivability of f+g, f—g, f.g, f/g if fis dervable and g is non-derivable at a point?
+  - 38. What is the condition for a function to be derivable in (a, b)?
+  - 39. What is the condition for a function to be derivable in [a, b]?
+  - 40. Whatare the checkpoints for derivability in an interval?
+  - 41. | Howto check derivability ofa function defined separately for rational and irrational numbers?
+  - 42. | Comment on continuity and differentiability of xPsin(1/x), xPcos(1/x) atx =0.
+- **Concept of LHD and RHD**
+  - 43. What can you say about continuity from the values of LHD and RHD ?
+  - 44. What is the condition for a sharp corner to exist in the graph ofa function?
+- **Quick Concept**
+  - 45. How to apply quick concept to check differentiability?
+  - 46. What is the condition to apply quick concepts?
+  - 47. When will be derivablity check by quick concept preferred over derivability check by basic definition?
+  - 48. | Howto find f' (x) when f(x) is anon-uniform function?
+  - 49. How to check differentiability of composite of two functions by defining composite?
+  - 50. Comment on differentiability of g(x)|f(x)| at x =a if f(a) =0
+- **Defining of Special types of Functions**
+  - 51. How to define y = max (f(t), a<t <b) or y = min (f(t), a<t<b)
+- **Determination of Function**
+  - 52. What are the steps to determine function if functional rule ofa differentiable function is given?
+  - 53. How to determine function if functional rule ofa differentiable function is given, by partial derivative approach?
+
+## Trigonometry / Method of Differentiation  (pages 78-79, 31 prompts, 14 headings)
+- **Differentiation by first principle**
+  - 1. How to differentiate a function by first principle?
+  - 2. What do dot at the top ofa function represent?
+- **Derivative of standard function**
+  - 3. Write derivatives ofall 19 standard functions.
+- **Important Theorems**
+  - 4. Write product rule of differentiation.
+  - 5. Write quotient rule of differentiation.
+  - 6. What to keep in mind before applying quotient rule?
+  - 7. Write chain rule.
+  - 8. What is the relation between dy/dx and dx/dy?
+  - 9. How to differentiate composite function with the help of chain rule?
+- **Logarithmic Differentiation**
+  - 10. | Whento apply logarithmic differentiation?
+  - 11. Howto apply logarithmic differentiation?
+  - 12. What is another method of differentiate (f(x))® ?
+- **Parametric Differentiation**
+  - 13. How to find derivative for a curve which is given parametrically?
+- **Derivative of one function wrt another function**
+  - 14. How to find derivative of one function wrt another function?
+- **Derivative of implicit functions**
+  - 15. How to find derivative of function which is given in implicit form? ly 2
+  - 16. What is the value of hk and in case of homogeneous equation in x and y ? a x
+- **Derivative of inverse of a function**
+  - 17. | Howto find derivative of inverse ofa given function?
+- **Higher order derivatives**
+  - 18. What are the different ways to represent dy/dx, d²y/dx² and d³y/dx³ ..?
+  - 19. What do you mean by d²y/dx²?
+  - 20. How to find d²y/dx² when x and y are given parametrically
+- **Analysis of ITF**
+  - 21. | Howto plot graph of several ITFs by defining and then finding limit, intervals of monotonocity and nature of concavity?
+- **Miscellaneous**
+  - 22. What is the condition to differentiate a relation both sides?
+  - 23. How to find coefficient of x, x’ in any expansion?
+  - 24. What is the condition for f(x) to be divisible by (x —a)*?
+- **Differentiation of Determinants**
+  - 25. How to differentiate a determinant without expansion?
+- **L'Hospital Rule**
+  - 26. | Whatis L'Hospital rule?
+  - 27. | Whatare the things to keep in mind while applying L'Hospital rule?
+  - 28. | Howmany times can we apply L'Hospital rule?
+  - 29. How to find limit in case of 0°, «99 forms?
+- **Differentiation of Integration**
+  - 30. How to differentiate an indefinite integration without integrating it first?
+  - 31. How to differentiate a definite integration without integrating it first with the help of Leibnitz rule?
+
+## Trigonometry / Tangent & Normal  (pages 80-81, 30 prompts, 11 headings)
+- **Introduction about tangent and normal**
+  - 1. Define tangent and normal
+  - 2. How to find equation of tangent and normal at a point for a curve?
+  - 3. How to find equation of tangent and normal at a point for a curve whose equation is given in parametric form?
+  - 4. How to find equation of tangent and normal at a point for a curve which is a non-uniform function?
+- **Objective Concepts**
+  - 5. What will be slope of tangent at x = 0 for an even function?
+  - 6. How to write equation of tangent at origin for a polynomial curve passing through origin?
+- **Vertical Tangent**
+  - 7. How to check whether vertical tangent exists at a point for a function?
+- **Some important parametric coordinates**
+  - 8. Write parametric coordinate for standard second degree curves. x" oy"
+  - 9. Write parametric coordinate for — + re 1, a
+  - 10. | Howto assume point on a curve whose equation is known?
+- **Ultimate Concept**
+  - 11. What is ultimate concept?
+  - 12. How to find equation ofa tangent/normal passing through a point?
+  - 13. How to find equation of common tangent/normal to two curves?
+- **Minimum Distance between two curves**
+  - 14. How to find minimum/maximum distance ofa point from a curve?
+  - 15. What does minimum distance between two curves represent?
+  - 16. Howto find minimum/maximum distance between two curves?
+- **Angle of Intersection between two curves**
+  - 17. What is angle of intersection between two curves?
+  - 18. What will be angle of intersection between two curves if they do not have any common point?
+  - 19. How to find angle of intersection between two curves?
+  - 20. What will be angle of intersection if two curves have more than one common point?
+- **Orthogonal curves**
+  - 21. What is the condition for two curves to be orthogonal?
+  - 22. How to check orthogonality of two curves without finding common point?
+- **Case when two curves touch each other**
+  - 23. How to check whether two curves touch each other?
+  - 24. How to analyse equation e*= kx, In(x) = kx and In(x)=kx’ for number of solutions
+- **Some Important Lengths**
+  - 25. Define length of tangent, normal, subtangent and subnormal for a point on a curve
+  - 26. Write results for length of tangent, normal, subtangent and subnormal
+  - 27. Prove results for length of tangent, normal, subtangent and subnormal by both methods
+- **Approximation**
+  - 28. How to approximate any square root, cube root etc of a number with the help of differentials
+  - 29. What is the geometrical meaning of approximation with the help of differentials?
+  - 30. How to check whether approximate value is greater/less than actual value?
+
+## Trigonometry / Monotonicity  (pages 82-83, 53 prompts, 12 headings)
+- **Monotonic function**
+  - 1. Define monotonic function
+  - 2. Define monotonic increasing, monotonic decreasing function
+- **Monotonicity at a point**
+  - 3. What is the condition for a function to be increasing at x =a?
+  - 4. What is the condition for a function to be decreasing at x = a?
+  - 5. What to keep in mind while checking increasing/decreasing if one side of x = ais not in domain?
+  - 6. What is the condition on continuity ofa function to define monotonicity?
+- **Monotonicity in an interval**
+  - 7. What is the condition for a function to be increasing in an interval?
+  - 8. What is the condition for a function to be decreasing in an interval?
+  - 9. What is the condition for a function to be non-decreasing in an interval?
+  - 10. What is the condition for a function to be non-increasing in an interval?
+- **Derivative approach for monotonicity**
+  - 11. What is the condition on derivative if f(x) is increasing in an interval ?
+  - 12. Whatis the condition on derivative if f(x) is decreasing in an interval ?
+  - 13. Howto find intervals of monotonicity?
+  - 14. How to check whether a boundary point will be included in interval of increasing/decreasing?
+  - 15. How to find intervals of monotonicity for non-uniform function?
+  - 16. What will be monotonic nature of f(g(x)) ifmonotonic nature of fand gis known?
+- **Critical Points and stationary points**
+  - 17. Define critical points
+  - 18. Define stationary points
+- **Always increasing/decreasing based**
+  - 19. How to find unknown ina function if it is always increasing/decreasing? Both methods
+  - 20. | Howtocheck whether a cubic polynomial is monotonic?
+- **Greatest and Least value**
+  - 21. Howto find greatest and least value ofa function in an interval with the help of intervals of monotonicity?
+  - 22. Where will greatest/least value of a continuous function exists in an interval?
+  - 23. How to check whether a’ is greater/less than b*?
+  - 24. How to find range ofa cubic polynomial for an interval of x?
+- **Proving Inequality**
+  - 25. How to solve questions on proving inequality with the help of monotonicity?
+- **Rolle's Theorem**
+  - 26. Write statement of rolle's theorem
+  - 27. How to verify rolle's theorem?
+  - 28. Howto find c of rolle's theorem?
+  - 29. | Whatcan you say about location and count ofc of rolle's theorem?
+  - 30. How to check whether Rolle's theorem is applicable for any given function?
+  - 31. What is geometrical definition of Rolle's theorem?
+  - 32. What is alternate definition of rolle's theorem?
+  - 33. What can you say about number of solutions of f(x) = 0 if f(x) = 0 has n solutions?
+  - 34. What can you say about number of solutions of f(x) = 0 if f(x) = 0 has m solutions?
+  - 35. How to check whether a question is of Rolle's theorem?
+  - 36. How to assume function(on which Rolle's theorem is to be applied) in question of Rolle's theorem?
+- **Lagrange's Mean Value Theorem(LMVT)**
+  - 37. Write statement of LMVT.
+  - 38. Prove LMVT with the help of Rolle's Theorem?
+  - 39. Howto verify LMVT?
+  - 40. Howto finde of LMVT?
+  - 41. What can you say about location and count of c of LMVT?
+  - 42. How to check whether LMVT is applicable for any given function?
+  - 43. What is geometrical definition of LMVT?
+  - 44. How to solve questions of inequality with the help of LMVT by observing pattern 1 <(f(b)-f(a))/(b-a) <m?
+- **Plotting the graph**
+  - 45. How to plot graph ofa function by finding limit, intervals of monotonicity?
+  - 46. How to plot graph of a cubic polynomial?
+  - 47. How to plot graph of quadratic/quadratic ?
+- **Asymptote**
+  - 48. | What isthe condition if x =a isa vertical asymptote for y = f(x) ?
+  - 49. What isthe condition ify =a isa horizontal asymptote for y = f(x) ?
+  - 50. What is the condition if y=mx + b is an asymptote for y = f(x) ?
+  - 51. How to find vertical asumptote for a rational function?
+  - 52. What is the condition if horizontal asymptote exists for a rational function and how to find it?
+  - 53. What is the condition if inclined asymptote exists for a rational function and how to find it?
+
+## Trigonometry / Maxima and Minima  (pages 84-85, 32 prompts, 10 headings)
+- **Maxima and Minima ata point**
+  - 1. What is the condition for a function to have maxima at x = a?
+  - 2. What is the condition for a function to have minima at x =a?
+  - 3. What to keep in mind while checking maxima/minima if one side of x =a is not in domain?
+- **Maxima and Minima ata point**
+  - 4. What is the condition on continuity ofa function to define maxima/minima?
+- **Important Points**
+  - 5. What are the synonyms of maxima?
+  - 6. What are the synonyms of minima?
+  - 7. What are the synonyms of greatest value?
+  - 8. What are the synonyms of least value?
+  - 9. Define extremum points and what are its synonyms?
+- **First Derivative Approach**
+  - 10. Whatis the condition on f'(x) in neighbourhood of point of local maxima?
+  - 11. What is the condition on f'(x) in neighbourhood of point of local minima?
+  - 12. | Whatiff'(x) does not change its sign in neighbourhood of x = a?
+  - 13. | Howto determine points of local maxima/minima by first derivative approach?
+- **Second Derivative Approach**
+  - 14. What can you say about x = aif f'(a) = 0 and f'"(a) is positive ?
+  - 15. What can you say about x = aif f'(a) = 0 and f'"(a) is negative ?
+  - 16. What can you say about x = aif f'(a)=0 and f"(a) =0?
+- **n" derivative test**
+  - 17. How to find points of maxima/minima with the help of nth derivative test?
+- **Significance on sign of second order derivative**
+  - 18. What is the condition on f"(x) ifits graph is concave up?
+  - 19. What is the condition on f"(x) ifits graph is concave down?
+  - 20. What is the location of tangent if graph of function is concave up/down?
+  - 21. What is the nature of f'(x) if graph of f(x) is concave up?
+  - 22. What is the nature of f'(x) if graph of f(x) is concave down?
+- **Point of Inflection**
+  - 23. Define point of inflection.
+  - 24. What is the value of f"(x) at point of inflection?
+  - 25. What is the relation of inflection points of y = f(x) with f'(x) ?
+- **Geometrical Problems**
+  - 26. Whatare the steps to solve maximizing/minimizing questions on geometrical problems?
+  - 27. What is the process to find number of real/imaginary roots ofa cubic equation?
+- **Analysis of Cubic Equation**
+  - 28. What is the condition for positive point of maxima for a cubic polynomial?
+  - 29. What is the condition for negative point of maxima fora cubic polynomial?
+  - 30. Whatis the condition for positive point of minima for a cubic polynomial?
+  - 31. | Whatis the condition for negative point of minima for a cubic polynomial?
+  - 32. | Howto find point of inflection for a cubic polynomial?
+
+## Integral Calculus / Indefinite Integration  (pages 86-87, 46 prompts, 12 headings)
+- **Introduction**
+  - 1. Define terms: Integral, primitive, integrand, anti-derivative
+- **Standard Integrals**
+  - 2. Write all five sets of standard integral results.
+  - 3. How to integrate linear/linear?
+  - 4. How to integrate sin" x, cos" x ? 1
+  - 5. Integrate T+sin(x) ° (Gy)
+  - 6. How to integrate 1/Quadratic ?
+- **Integration by Substitution**
+  - 7. Write result of integration of tan x, cot x, sec x and cosec x.
+  - 8. Integrate 1/(a sin x + b cos x)
+  - 9. What kind of substitution be used to deal inverse trigonometric function?
+  - 10. | What kind of substitution be used to deal logarithmic function?
+- **Integration by trigonometric Substitution**
+  - 11. What trigonometric substitution should be used? dx dx dx
+  - 12. Write result of J j and [ Ja? —x?’ Vx ta’ x? -a? dx
+  - 13. How to integrate i) JQuad. ?
+- **Integration by Parts**
+  - 14. Write formula for Integration by parts.
+  - 15. How would we choose first and second function?
+  - 16. What is the trick of integration by parts and in which type of functions it will be used?
+  - 17. Write result of ) a’ —x? dx, [yx?-a? dx and J x’? +a? dx
+  - 18. Write result of integration of e*. sin bx and e* cos(bx) and prove also
+- **Integration of Rational Function**
+  - 19. | Howto integrate 1/linear ?
+  - 20. How to integrate polynomial/linear?
+  - 21. Howto integrate ,/Quadratic ?
+  - 22. How to integrate linear/quadratic, linear/,/Quadratic and linear. /Quadratic ?
+- **Two classic integrals**
+  - 23. Write both results of two classic integrals and prove also.
+  - 24. | When would we apply classic integral results?
+  - 25. What to do in questions of classic integral if expression other than x is in power of e?
+  - 26. — Writeresultof fe®? (f(x)g'(x) + f"(x))dx
+- **Integration of trigonometric function**
+  - 27. | Howto integrate sin" x. cos™ x ifatleast m or nis odd?
+  - 28. Howto integrate sin"x. cos" x ifboth m and n are even?
+  - 29. How to integrate sin" x. cos" x ifm +n is negative even integer?
+  - 30. How to integrate 1/(a sin? (x) + b cos? (x) + ¢ sin x cos x + d)
+  - 31. How to integrate 1/(a sin (x) + b cos (x) +c)
+  - 32. How to integrate (/ sin (x) + m cos (x) + n)/(a sin (x) +b cos (x) +c)
+  - 33. How to integrate profile where (sin x + cos x) or (sin x - cos x) in numerator and sin 2x in denominator?
+  - 34. How to integrate profile where (sin x + cos x) or (sin x - cos x) in denominator and sin 2x in numerator?
+- **Integration by Partial Fraction**
+  - 35. When would we use partial fraction method?
+  - 36. How to break if denominator has been expressed as product of non-repeating linear factors?
+  - 37. How to break if denominator has been expressed as product of linear factors such that some of them are repeating?
+  - 38. How to break if denominator has been expressed as product of linear factors and quadratic factors?
+- **Miscellaneous**
+  - 39. How to apply kutur putur profile?
+  - 40. What to keep in mind while taking out power of x as common?
+- **Miscellaneous type**
+  - 41. Howto integrate (ax? + bx + c)/(x* + px? + q) ifq>0?
+- **Integration of irrational algebraic function**
+  - 42. What to substitute while integrating expression containing (x — a )( 8 — x) and what will be result of dx, x-— a and B -x?
+  - 43. What to substitute while integrating expression containing (x — @ )(x — £) and what will be result ofdx,x-— @ andx — B ? ee ee ee
+  - 44. Howto integrate L, Vb ; ONL and LJo ? dx
+  - 45. How to integrate J (+b) peta ? 1
+  - 46. How to integrate . 2 ( vi ) Prd
+
+## Integral Calculus / Definite Integration  (pages 88-89, 39 prompts, 13 headings)
+- **Introduction**
+  - 1. What do freoax represents for graph of y = f(x) ? a
+  - 2. What to keep in mind while substituting in questions of definite integration?
+  - 3. What is the relation of limits with dx in definite integration? b
+  - 4. What is the condition for result fe ' (x)-dx =(f(x)), . b 9
+  - 5. What is the condition for result fre “dx =0 9
+  - 6. What is the condition to bring limit inside the integration sign? b d
+  - 7. What is the value of expression in fre “dx + feo “dy if If f(x) and g(x) are inverse of each other and f(a) =c, f(b) = 4.2 1 1 2
+  - 8. What is the value of foin” x-dx, Joos" x-dx ifn=1,2,3,4? 0 0
+  - 9. What to substitute if limits are reciprocal of each other?
+- **Property 2 of Definite integral**
+  - 10. What will be the effect on value ofa definite integral if limits are interchanged?
+- **Property 3 of Definite Integral**
+  - 11. Write property 3
+  - 12. In which type of definite integrals, P3 can be used? 5 5
+  - 13. If f(y) is a non negative continuous function such that ronet[y+3)=7 ve. >), then find the value of fro) dy. 0
+- **Property 4 of Definite Integral**
+  - 14. Write Property of definite integrals related to odd and even function
+  - 15. What is the pattern of limits when odd and even property of definite integrals would be used?
+- **Property 5 of Definite Integral**
+  - 16. Write King property.
+  - 17. What to do while applying King property on definite integrals?
+  - 18. In which type of definite integrals, King property can be used? b
+  - 19. What is the condition on f(x) when we apply king on fxteodx ? a
+- **Property 6 of Definite Integral**
+  - 20. Write Queen Property.
+  - 21. Whatis the limitation while applying Queen property on definite integrals?
+  - 22. In which type of definite integrals, Queen property can be used?
+  - 23. How will we identify to apply queen property in definite integrals? n/2
+  - 24. Write result of J In(sin x)dx 0
+- **Property 7 of Definite Integral**
+  - 25. How to apply property of periodic functions in definite integrals.
+- **Differentiation of Integration**
+  - 26. How to differentiate indefinite integral
+  - 27. Howto differentiate definite integral and prove also
+  - 28. | Whatto keep in mind while applying Leibnitz rule
+- **Determination of function**
+  - 29. Howto solve questions on determination of function if an identity involving definite integral is given?
+- **Definite Integral as a Limit of Sum**
+  - 30. | Howto convert expression expressed in sigma from to integral form?
+  - 31. | Howto compute upper and lower limit while converting?
+  - 32. What to do if expression is given as a form of continued product? 1 n-l r 1 n-l r 1 n r
+  - 33. 3 How to check increasing i i order among lim—) pa f}—|.-—)> (=) > f|/—-|. (=) —) pa f}/— (5) A a a
+- **Definite Integration by Estimation**
+  - 34. How to estimate definite integral with the help of monotonicity?
+  - 35. How to estimate definite integral with the help of concavity?
+  - 36. How to estimate definite integral by splitting the interval in two or more parts?
+  - 37. How to estimate definite integral by assumptions of functions
+- **Wall's Theorem**
+  - 38. Write Walli's Theorem and use it in some basic examples
+- **Integration by Reduction**
+  - 39. What is the basic theme to solve integration by reduction questions?
+
+## Integral Calculus / Differential Equation  (pages 90-91, 35 prompts, 11 headings)
+- **Introduction**
+  - 1. What do you mean by ordinary differential equation and partial differential equation?
+  - 2. What do you mean by general solution, complete integral, complete primitive
+  - 3. Define particular solution of a differential equation
+- **Order and Degree of a Differential Equation**
+  - 4. Define order ofa differential equation and how to find it?
+  - 5. Define degree of a differential equation and how to find it?
+  - 6. Does every differential equation has a degree and order?
+- **Formation of Differential Equation**
+  - 7. How to check whether arbitrary constant in equation of family of curves is independent?
+  - 8. How to form differential equation if equation of family of curves is given?
+  - 9. How to form differential equation ifinformation about family of curves is provided instead of its equation?
+- **Elementary Types**
+  - 10. Whatare the variious types of differential equations?
+- **Variable Separable**
+  - 11. How to solve variable separable differential equations?
+  - 12. Howto solve differential equation questions by forming differential equation with the help of given information about curve by assuming a point (x,y) on the curve?
+  - 13. How to solve differential equation questions by forming differential equation ifidentity in definite integral is given?
+  - 14. When to assume integration constant as In(c) ?
+  - 15. What do you mean by initial ordinate ofa line?
+  - 16. What do you mean by polar radius of a point? d
+  - 17. How to solve x =f(ax+by+c)? dy ax+by+c,
+  - 18. | Howto solve dx a,x+b,y+e, Ifa, +b, =0
+  - 19. What are two polar substitutions and derive their corresponding results involving differentials?
+  - 20. When to use polar substitutions in differential equation questions?
+- **Homogeneous Differential Equation**
+  - 21. | Howtocheck whether a given differential equation is homogeneous differential equation?
+  - 22. What substitution is to be done in Homogeneous Differential Equations?
+- **Equations reducible to Homogeneous Differential Equation**
+  - 23. How to solve equation dy/dx = L,/L, if L, and L, are intersecting lines?
+- **Linear Differential Equation**
+  - 24. | Howtocheck whether a given differential equation is linear differential equation?
+  - 25. Whatisthe general form of Linear Differential Equation?
+  - 26. — Areall differential equation of degree one linear?
+  - 27. What is the standard form of first order linear differential equation?
+  - 28. How to solve first order linear differential equation?
+- **Equations reducible to Linear Differential Equation**
+  - 29. Write standard form of Bernoulli's equation?
+  - 30. | What substitution is to be done in Bernoulli's Equation?
+  - 31. | When to check for change of variable to convert into linear differential equation?
+- **Orthogonal Trajectory**
+  - 32. Define orthogonal trajectory ofa family of curves.
+  - 33. | Howto find orthogonal trajectory ofa family of curves?
+- **Exact Differential**
+  - 34. Write three results of exact differential.
+  - 35. | Howtosolve exact differential based questions?
+
+## Integral Calculus / Area Under Curve  (pages 92-92, 25 prompts, 10 headings)
+- **Area Bounded by a Curve**
+  - 1. How to find area bounded by a curve and x-axis?
+- **Area Bounded between two curves**
+  - 2. How to find area bounded between two curves?
+  - 3. Can you plot graph ofa polynomial function(linear, Quadratic, cubic or higher degree)?
+  - 4. Can you plot graph of a standard second degree curve(Circle, Parabola, Ellipse or Hyperbola)
+  - 5. Can you plot graph of a shifted second degree curve(Parabola, Ellipse or Hyperbola)
+  - 6. Can you plot graph of six trigonometric functions?
+  - 7. Can you plot graph of six ITFs?
+  - 8. Can you plot graph of e*, In(x), {x}, [x]. [x] ?
+  - 9. Revise transformation of graphs taught in function.
+  - 10. Revise plotting of graph taught in Monotonicity.
+  - 11. How to write expression of integral to find area when integrating wrt x-axis?
+- **Integrating wrt y-axis**
+  - 12. | Howto write expression of integral to find area when integrating wrt y-axis?
+- **Important Results**
+  - 13. Write result for area bounded between two standard parabolas
+  - 14. Write result for area bounded between standard parabola and line y = mx?
+  - 15. How to find area between a parabola(whose axis is horizontal/vertical) and a line?
+- **Area represented by Inequalities**
+  - 16. How to find area of a region represented by inequalities?
+- **Shifting of Origin**
+  - 17. Whatis the effect on area on shifting of origin?
+  - 18. Whatare the things to keep in mind while using shifting of origin in finding area?
+- **Area bounded by inverse of a function**
+  - 19. What is the effect on area if we take image of whole region wrt a line?
+  - 20. | Howto find area ofa region by taking its image wrt a line?
+  - 21. | What are the equations of common lines about which image of region can be taken?
+- **Variable Area**
+  - 22. What is the condition on c for area bounded by y = f(x), x =a, x = band y = f(c) to be minimum if fis monotonic?
+- **Average Value of a Function**
+  - 23. How to find average value ofa function over an interval?
+  - 24. How to find RMS value ofa function over an interval?
+- **Area when curve is given in parametric form**
+  - 25. How to find area of'a curve which is given parametrically?
+
+## Warnings
+- Quadratic Equation #10: low OCR confidence (56) - check by eye
+- Quadratic Equation #11: low OCR confidence (74) - check by eye
+- Quadratic Equation #28: low OCR confidence (73) - check by eye
+- Quadratic Equation #29: low OCR confidence (68) - check by eye
+- Quadratic Equation #31: low OCR confidence (72) - check by eye
+- Quadratic Equation #59: low OCR confidence (76) - check by eye
+- Quadratic Equation #60: low OCR confidence (69) - check by eye
+- Quadratic Equation #61: low OCR confidence (72) - check by eye
+- Quadratic Equation #63: low OCR confidence (76) - check by eye
+- Logarithm #25: low OCR confidence (61) - check by eye
+- Logarithm #26: low OCR confidence (64) - check by eye
+- Logarithm #35: low OCR confidence (76) - check by eye
+- Sequence & Progression #27: low OCR confidence (53) - check by eye
+- Sequence & Progression #28: low OCR confidence (76) - check by eye
+- Sequence & Progression #34: low OCR confidence (79) - check by eye
+- Sequence & Progression #40: low OCR confidence (74) - check by eye
+- Determinant #10: low OCR confidence (79) - check by eye
+- Determinant #20: low OCR confidence (74) - check by eye
+- Matrices #19: low OCR confidence (63) - check by eye
+- Matrices #52: low OCR confidence (76) - check by eye
+- Permutations & Combinations #10: low OCR confidence (76) - check by eye
+- Permutations & Combinations #15: low OCR confidence (62) - check by eye
+- Permutations & Combinations #19: low OCR confidence (79) - check by eye
+- Permutations & Combinations #26: low OCR confidence (73) - check by eye
+- Permutations & Combinations #40: low OCR confidence (68) - check by eye
+- Permutations & Combinations #53: low OCR confidence (68) - check by eye
+- Permutations & Combinations #55: low OCR confidence (78) - check by eye
+- Permutations & Combinations #61: low OCR confidence (71) - check by eye
+- Permutations & Combinations #72: low OCR confidence (69) - check by eye
+- Permutations & Combinations #16: low OCR confidence (79) - check by eye
+- Binomial Theorem #13: low OCR confidence (78) - check by eye
+- Binomial Theorem #21: low OCR confidence (78) - check by eye
+- Binomial Theorem #24: low OCR confidence (73) - check by eye
+- Binomial Theorem #25: low OCR confidence (76) - check by eye
+- Binomial Theorem #26: low OCR confidence (66) - check by eye
+- Binomial Theorem #35: low OCR confidence (74) - check by eye
+- Binomial Theorem #57: low OCR confidence (59) - check by eye
+- Binomial Theorem #58: low OCR confidence (78) - check by eye
+- Complex Number #10: low OCR confidence (78) - check by eye
+- Complex Number #30: low OCR confidence (73) - check by eye
+- Complex Number #34: low OCR confidence (70) - check by eye
+- Complex Number #39: low OCR confidence (73) - check by eye
+- Complex Number #45: low OCR confidence (70) - check by eye
+- Complex Number #54: low OCR confidence (48) - check by eye
+- Complex Number #65: low OCR confidence (74) - check by eye
+- Complex Number #75: low OCR confidence (72) - check by eye
+- Complex Number #79: low OCR confidence (55) - check by eye
+- Complex Number #81: low OCR confidence (77) - check by eye
+- Complex Number #83: low OCR confidence (72) - check by eye
+- Complex Number #95: low OCR confidence (70) - check by eye
+- Probability #19: low OCR confidence (64) - check by eye
+- Probability #21: low OCR confidence (74) - check by eye
+- Probability #42: low OCR confidence (56) - check by eye
+- Probability #49: low OCR confidence (75) - check by eye
+- Straight Line #15: low OCR confidence (61) - check by eye
+- Straight Line #16: low OCR confidence (78) - check by eye
+- Straight Line #21: low OCR confidence (75) - check by eye
+- Straight Line #22: low OCR confidence (75) - check by eye
+- Straight Line #25: low OCR confidence (65) - check by eye
+- Straight Line #29: low OCR confidence (73) - check by eye
+- Straight Line #35: low OCR confidence (78) - check by eye
+- Straight Line #41: low OCR confidence (66) - check by eye
+- Straight Line #60: low OCR confidence (79) - check by eye
+- Straight Line #62: low OCR confidence (67) - check by eye
+- Straight Line #66: low OCR confidence (71) - check by eye
+- Straight Line #74: low OCR confidence (73) - check by eye
+- Straight Line #85: low OCR confidence (65) - check by eye
+- Straight Line #86: low OCR confidence (74) - check by eye
+- Straight Line #87: low OCR confidence (76) - check by eye
+- Straight Line #89: low OCR confidence (63) - check by eye
+- Straight Line #90: low OCR confidence (79) - check by eye
+- Straight Line #102: low OCR confidence (78) - check by eye
+- Straight Line #104: low OCR confidence (78) - check by eye
+- Straight Line #105: low OCR confidence (79) - check by eye
+- Straight Line #136: low OCR confidence (79) - check by eye
+- Straight Line #143: low OCR confidence (72) - check by eye
+- Circle #31: low OCR confidence (77) - check by eye
+- Circle #35: low OCR confidence (69) - check by eye
+- Circle #40: low OCR confidence (57) - check by eye
+- Circle #65: low OCR confidence (68) - check by eye
+- Parabola #21: low OCR confidence (76) - check by eye
+- Parabola #61: low OCR confidence (61) - check by eye
+- Ellipse #25: low OCR confidence (79) - check by eye
+- Ellipse #31: low OCR confidence (76) - check by eye
+- Hyperbola #14: low OCR confidence (79) - check by eye
+- Hyperbola #24: low OCR confidence (72) - check by eye
+- Hyperbola #30: low OCR confidence (78) - check by eye
+- Hyperbola #36: low OCR confidence (74) - check by eye
+- Hyperbola #78: low OCR confidence (77) - check by eye
+- Trigonometric Ratio #5: low OCR confidence (26) - check by eye
+- Trigonometric Ratio #6: low OCR confidence (56) - check by eye
+- Trigonometric Ratio #26: low OCR confidence (78) - check by eye
+- Trigonometric Ratio #27: low OCR confidence (40) - check by eye
+- Trigonometric Ratio #28: low OCR confidence (27) - check by eye
+- Trigonometric Ratio #57: low OCR confidence (69) - check by eye
+- Trigonometric Ratio #59: low OCR confidence (75) - check by eye
+- Trigonometric Ratio #60: low OCR confidence (74) - check by eye
+- Trigonometric Ratio #68: low OCR confidence (68) - check by eye
+- Trigonometric Ratio #73: low OCR confidence (78) - check by eye
+- Trigonometric Ratio #77: low OCR confidence (66) - check by eye
+- Trigonometric Ratio #78: low OCR confidence (62) - check by eye
+- Trigonometric Equation #19: low OCR confidence (70) - check by eye
+- Solution of Triangle #4: low OCR confidence (71) - check by eye
+- Solution of Triangle #13: low OCR confidence (78) - check by eye
+- Solution of Triangle #27: low OCR confidence (78) - check by eye
+- Solution of Triangle #38: low OCR confidence (77) - check by eye
+- Solution of Triangle #48: low OCR confidence (71) - check by eye
+- Solution of Triangle #59: low OCR confidence (74) - check by eye
+- Solution of Triangle #61: low OCR confidence (66) - check by eye
+- Solution of Triangle #71: low OCR confidence (74) - check by eye
+- Solution of Triangle #81: low OCR confidence (73) - check by eye
+- Vector 3D #17: low OCR confidence (71) - check by eye
+- Vector 3D #31: low OCR confidence (79) - check by eye
+- Vector 3D #32: low OCR confidence (76) - check by eye
+- Vector 3D #36: low OCR confidence (28) - check by eye
+- Vector 3D #41: low OCR confidence (67) - check by eye
+- Vector 3D #50: low OCR confidence (71) - check by eye
+- Vector 3D #51: low OCR confidence (75) - check by eye
+- Function #20: low OCR confidence (71) - check by eye
+- Function #22: low OCR confidence (72) - check by eye
+- Function #29: low OCR confidence (58) - check by eye
+- Function #39: low OCR confidence (73) - check by eye
+- Function #43: low OCR confidence (71) - check by eye
+- Function #52: low OCR confidence (39) - check by eye
+- Function #53: low OCR confidence (55) - check by eye
+- Function #54: low OCR confidence (71) - check by eye
+- Function #63: low OCR confidence (79) - check by eye
+- Function #65: low OCR confidence (79) - check by eye
+- Function #66: low OCR confidence (76) - check by eye
+- Function #68: low OCR confidence (70) - check by eye
+- Function #69: low OCR confidence (51) - check by eye
+- Function #82: low OCR confidence (73) - check by eye
+- Function #83: low OCR confidence (62) - check by eye
+- Function #84: low OCR confidence (66) - check by eye
+- Function #96: low OCR confidence (79) - check by eye
+- Function #101: low OCR confidence (78) - check by eye
+- Function #102: low OCR confidence (76) - check by eye
+- Function #117: low OCR confidence (79) - check by eye
+- Function #126: low OCR confidence (79) - check by eye
+- Function #131: low OCR confidence (78) - check by eye
+- Function #132: low OCR confidence (79) - check by eye
+- Inverse Trigonometric Function #10: low OCR confidence (76) - check by eye
+- Inverse Trigonometric Function #12: low OCR confidence (73) - check by eye
+- Inverse Trigonometric Function #13: low OCR confidence (74) - check by eye
+- Inverse Trigonometric Function #19: low OCR confidence (54) - check by eye
+- Inverse Trigonometric Function #20: low OCR confidence (67) - check by eye
+- Inverse Trigonometric Function #21: low OCR confidence (73) - check by eye
+- Inverse Trigonometric Function #22: low OCR confidence (77) - check by eye
+- Inverse Trigonometric Function #23: low OCR confidence (65) - check by eye
+- Inverse Trigonometric Function #25: low OCR confidence (65) - check by eye
+- Inverse Trigonometric Function #30: low OCR confidence (71) - check by eye
+- Inverse Trigonometric Function #34: low OCR confidence (79) - check by eye
+- Inverse Trigonometric Function #35: low OCR confidence (56) - check by eye
+- Inverse Trigonometric Function #36: low OCR confidence (78) - check by eye
+- Inverse Trigonometric Function #37: low OCR confidence (54) - check by eye
+- Inverse Trigonometric Function #38: low OCR confidence (78) - check by eye
+- Limit #23: low OCR confidence (64) - check by eye
+- Limit #24: low OCR confidence (77) - check by eye
+- Limit #26: low OCR confidence (77) - check by eye
+- Limit #30: low OCR confidence (15) - check by eye
+- Limit #31: low OCR confidence (71) - check by eye
+- Limit #33: low OCR confidence (33) - check by eye
+- Limit #34: low OCR confidence (66) - check by eye
+- Continuity & Differentiability #13: low OCR confidence (78) - check by eye
+- Continuity & Differentiability #26: low OCR confidence (70) - check by eye
+- Continuity & Differentiability #42: low OCR confidence (69) - check by eye
+- Method of Differentiation #10: low OCR confidence (69) - check by eye
+- Method of Differentiation #16: low OCR confidence (52) - check by eye
+- Method of Differentiation #18: low OCR confidence (79) - check by eye
+- Method of Differentiation #19: low OCR confidence (50) - check by eye
+- Method of Differentiation #26: low OCR confidence (63) - check by eye
+- Tangent & Normal #8: low OCR confidence (59) - check by eye
+- Monotonicity #10: low OCR confidence (79) - check by eye
+- Monotonicity #28: low OCR confidence (75) - check by eye
+- Monotonicity #44: low OCR confidence (67) - check by eye
+- Monotonicity #48: low OCR confidence (73) - check by eye
+- Maxima and Minima #13: low OCR confidence (78) - check by eye
+- Maxima and Minima #16: low OCR confidence (75) - check by eye
+- Maxima and Minima #23: low OCR confidence (63) - check by eye
+- Indefinite Integration #5: low OCR confidence (23) - check by eye
+- Indefinite Integration #12: low OCR confidence (2) - check by eye
+- Indefinite Integration #17: low OCR confidence (64) - check by eye
+- Indefinite Integration #19: low OCR confidence (70) - check by eye
+- Indefinite Integration #22: low OCR confidence (78) - check by eye
+- Indefinite Integration #26: low OCR confidence (65) - check by eye
+- Indefinite Integration #28: low OCR confidence (70) - check by eye
+- Indefinite Integration #41: low OCR confidence (69) - check by eye
+- Indefinite Integration #42: low OCR confidence (79) - check by eye
+- Indefinite Integration #43: low OCR confidence (28) - check by eye
+- Indefinite Integration #43: low OCR confidence (68) - check by eye
+- Indefinite Integration #44: low OCR confidence (70) - check by eye
+- Indefinite Integration #45: low OCR confidence (66) - check by eye
+- Definite Integration #4: low OCR confidence (79) - check by eye
+- Definite Integration #5: low OCR confidence (75) - check by eye
+- Definite Integration #7: low OCR confidence (41) - check by eye
+- Definite Integration #13: low OCR confidence (75) - check by eye
+- Definite Integration #20: low OCR confidence (72) - check by eye
+- Definite Integration #23: low OCR confidence (32) - check by eye
+- Definite Integration #31: low OCR confidence (77) - check by eye
+- Definite Integration #33: low OCR confidence (34) - check by eye
+- Differential Equation #17: low OCR confidence (56) - check by eye
+- Differential Equation #18: low OCR confidence (53) - check by eye
