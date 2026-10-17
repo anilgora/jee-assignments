@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Straight Line)
+READY: all tools present (2026-10-17, re-checked this run for Circle)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -17,7 +17,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Complex Number | chapters/Complex_Number/Theory.pdf | chapters/Complex_Number/XII.pdf | chapters/Complex_Number/XIII.pdf | chapters/Complex_Number/DPP.pdf | chapters/Complex_Number/QB.pdf | — | — | DONE |
 | Probability | chapters/Probability/Theory.pdf | chapters/Probability/XII.pdf | chapters/Probability/XIII.pdf | chapters/Probability/DPP.pdf | chapters/Probability/QB.pdf | — | — | DONE |
 | Straight Line | chapters/Straight_Line/Theory.pdf | chapters/Straight_Line/XII.pdf | chapters/Straight_Line/XIII.pdf | chapters/Straight_Line/DPP.pdf | chapters/Straight_Line/QB.pdf | — | — | DONE |
-| Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | READY |
+| Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | DONE |
 | Parabola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Parabola/QB.pdf | — | — | READY |
 | Ellipse | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Ellipse/QB.pdf | — | — | READY |
 | Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | READY |

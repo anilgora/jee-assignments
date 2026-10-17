@@ -10,3 +10,4 @@ Binomial_Theorem: DONE 2026-10-17
 Complex_Number: DONE 2026-10-17
 Probability: DONE 2026-10-17
 Straight_Line: DONE 2026-10-17
+Circle: DONE 2026-10-17
