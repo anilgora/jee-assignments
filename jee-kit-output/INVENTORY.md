@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Function)
+READY: all tools present (2026-10-17, re-checked this run for Inverse Trigonometric Function)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -26,7 +26,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Solution of Triangle | chapters/Solution_of_Triangle/Theory.pdf | chapters/Solution_of_Triangle/XII.pdf | chapters/Solution_of_Triangle/XIII.pdf | chapters/Solution_of_Triangle/DPP.pdf | — | — | QB | DONE |
 | Vector 3D | chapters/Vector_3D/Theory.pdf | chapters/Vector_3D/XII.pdf | chapters/Vector_3D/XIII.pdf | chapters/Vector_3D/DPP.pdf | chapters/Vector_3D/QB.pdf | — | — | DONE |
 | Function | chapters/Function/Theory.pdf | chapters/Function/XII.pdf | chapters/Function/XIII.pdf | chapters/Function/DPP.pdf | chapters/Function/QB.pdf | — | — | DONE |
-| Inverse Trigonometric Function | chapters/Inverse_Trigonometric_Function/Theory.pdf | chapters/Inverse_Trigonometric_Function/XII.pdf | chapters/Inverse_Trigonometric_Function/XIII.pdf | chapters/Inverse_Trigonometric_Function/DPP.pdf | chapters/Inverse_Trigonometric_Function/QB.pdf | — | — | READY |
+| Inverse Trigonometric Function | chapters/Inverse_Trigonometric_Function/Theory.pdf | chapters/Inverse_Trigonometric_Function/XII.pdf | chapters/Inverse_Trigonometric_Function/XIII.pdf | chapters/Inverse_Trigonometric_Function/DPP.pdf | chapters/Inverse_Trigonometric_Function/QB.pdf | — | — | DONE |
 | Limit | chapters/Limit/Theory.pdf | chapters/Limit/XII.pdf | chapters/Limit/XIII.pdf | chapters/Limit/DPP.pdf | chapters/Limit/QB.pdf | — | — | READY |
 | Continuity & Differentiability | chapters/Continuity_Differentiability/Theory.pdf | chapters/Continuity_Differentiability/XII.pdf | chapters/Continuity_Differentiability/XIII.pdf | chapters/Continuity_Differentiability/DPP.pdf | chapters/Continuity_Differentiability/QB.pdf | — | — | READY |
 | Method of Differentiation | chapters/Method_of_Differentiation/Theory.pdf | chapters/Method_of_Differentiation/XII.pdf | chapters/Method_of_Differentiation/XIII.pdf | — | chapters/Method_of_Differentiation/QB.pdf | — | DPP | READY |
