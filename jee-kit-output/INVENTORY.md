@@ -1,19 +1,13 @@
 # Inventory
 
-## Tool check (check_tools.py)
-```
-NOT READY. Missing:
- - python module lxml
- - python module openpyxl
- - python module sympy
- - python module PIL
-```
+## Tool check
+READY: all tools present (2026-10-17)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
 | Chapter | Theory | XII | XIII | DPP | QB | Missing (required) | Optional absent | Status |
 |---|---|---|---|---|---|---|---|---|
-| Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | READY |
+| Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | DONE |
 | Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | READY |
 | Sequence & Progression | chapters/Sequence_Progression/Theory.pdf | chapters/Sequence_Progression/XII.pdf | chapters/Sequence_Progression/XIII.pdf | chapters/Sequence_Progression/DPP.pdf | chapters/Sequence_Progression/QB.pdf | — | — | READY |
 | Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | READY |

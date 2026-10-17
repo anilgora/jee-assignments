@@ -64,12 +64,9 @@ def main():
             for b, ctx in ctxs.items():
                 title = (f"JEE Mathematics: Quick Review with Grading and Practice Map - {ce} (Batch {b})" if lang == 'en'
                          else f"JEE गणित: त्वरित पुनरावृत्ति (श्रेणी तथा अभ्यास मानचित्र सहित) - {chn} (बैच {b})")
-<<<<<<< HEAD
-=======
                 if ctx.get('dpp_only'):    # DPP-only chapter: no batch in the title
                     title = (f"JEE Mathematics: Quick Review with Grading and Practice Map - {ce}" if lang == 'en'
                              else f"JEE गणित: त्वरित पुनरावृत्ति (श्रेणी तथा अभ्यास मानचित्र सहित) - {chn}")
->>>>>>> origin/main
                 base = os.path.join(a.out, f'{slug}_Quick_Review_{b}_{L}')
                 D.build_quick_review(spec, ctx, lang, M, base + '.docx', {'en': title, 'hi': title})
                 PDF.build_quick_review(spec, ctx, lang, base + '.pdf', title, work, b)
