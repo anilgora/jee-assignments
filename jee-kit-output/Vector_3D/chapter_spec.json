@@ -1,0 +1,3894 @@
+{
+ "chapter": {
+  "en": "Vector 3D",
+  "hi": "सदिश एवं त्रिविमीय ज्यामिति",
+  "slug": "Vector_3D"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XIII": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69
+  ]
+ },
+ "graded_sources": [
+  "<jm>",
+  "J-A",
+  "QB"
+ ],
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction",
+    "hi": "परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define vector, initial point, terminal point, head and tail of a vector",
+       "सदिश, प्रारम्भिक बिन्दु, अन्तिम बिन्दु, सदिश की पूँछ और शीर्ष को परिभाषित कीजिए"
+      ],
+      "a": [
+       [
+        "A vector is a directed line segment (magnitude + direction, obeys vector addition). In $\\overrightarrow{AB}$, $A$ = initial point (tail), $B$ = terminal point (head).",
+        "सदिश एक दिष्ट रेखाखण्ड है (परिमाण + दिशा, सदिश योग का पालन)। $\\overrightarrow{AB}$ में $A$ = प्रारम्भिक बिन्दु (पूँछ), $B$ = अन्तिम बिन्दु (शीर्ष)।"
+       ],
+       [
+        "$\\overrightarrow{AB}\\ne\\overrightarrow{BA}$: the end points cannot be interchanged; $\\overrightarrow{BA}=-\\overrightarrow{AB}$.",
+        "$\\overrightarrow{AB}\\ne\\overrightarrow{BA}$: अन्त बिन्दु आपस में नहीं बदले जा सकते; $\\overrightarrow{BA}=-\\overrightarrow{AB}$।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the direction of a vector?",
+       "सदिश की दिशा क्या है?"
+      ],
+      "a": [
+       [
+        "The direction from the tail to the head along its line of support; it is given by the unit vector $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$.",
+        "रेखा-आधार के अनुदिश पूँछ से शीर्ष की ओर की दिशा; यह इकाई सदिश $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$ से दी जाती है।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the magnitude of a vector?",
+       "सदिश का परिमाण क्या है?"
+      ],
+      "a": [
+       [
+        "The length of the directed segment: $|\\overrightarrow{AB}|=AB\\ge 0$, and $|\\overrightarrow{AB}|=|\\overrightarrow{BA}|$.",
+        "दिष्ट रेखाखण्ड की लम्बाई: $|\\overrightarrow{AB}|=AB\\ge 0$, तथा $|\\overrightarrow{AB}|=|\\overrightarrow{BA}|$।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is line of support of a vector?",
+       "सदिश की आधार रेखा क्या है?"
+      ],
+      "a": [
+       [
+        "The line of unlimited length of which the directed segment is a part (also called the support).",
+        "वह असीमित लम्बाई की रेखा जिसका दिष्ट रेखाखण्ड एक भाग है (इसे आधार भी कहते हैं)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Important Definitions",
+    "hi": "महत्वपूर्ण परिभाषाएँ",
+    "items": [
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define null vector and how is it represented?",
+       "शून्य सदिश को परिभाषित कीजिए, इसे कैसे दर्शाते हैं?"
+      ],
+      "a": [
+       [
+        "A vector of magnitude zero, written $\\vec 0$; initial and terminal points coincide, its direction is arbitrary.",
+        "शून्य परिमाण वाला सदिश, $\\vec 0$ से लिखते हैं; प्रारम्भिक व अन्तिम बिन्दु सम्पाती, दिशा स्वेच्छ।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define unit vector and how is it represented?",
+       "इकाई सदिश को परिभाषित कीजिए, इसे कैसे दर्शाते हैं?"
+      ],
+      "a": [
+       [
+        "A vector of magnitude 1. Unit vector along $\\vec a$: $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$; $\\hat i,\\hat j,\\hat k$ are along the axes.",
+        "परिमाण 1 वाला सदिश। $\\vec a$ के अनुदिश इकाई सदिश: $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$; $\\hat i,\\hat j,\\hat k$ अक्षों के अनुदिश हैं।"
+       ],
+       [
+        "Ex: $\\vec a=2\\hat i-\\hat j+2\\hat k\\Rightarrow\\hat a=\\frac13(2\\hat i-\\hat j+2\\hat k)$.",
+        "उदा: $\\vec a=2\\hat i-\\hat j+2\\hat k\\Rightarrow\\hat a=\\frac13(2\\hat i-\\hat j+2\\hat k)$।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find magnitude of a vector expressed in $\\hat i,\\hat j,\\hat k$ form?",
+       "$\\hat i,\\hat j,\\hat k$ रूप में दिए सदिश का परिमाण कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$|x\\hat i+y\\hat j+z\\hat k|=\\sqrt{x^2+y^2+z^2}$",
+       [
+        "Ex: $|3\\hat i-4\\hat j+12\\hat k|=13$. For points: $AB=|\\vec b-\\vec a|$.",
+        "उदा: $|3\\hat i-4\\hat j+12\\hat k|=13$। बिन्दुओं हेतु: $AB=|\\vec b-\\vec a|$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the role of unit vector?",
+       "इकाई सदिश की क्या भूमिका है?"
+      ],
+      "a": [
+       [
+        "It gives only the direction. A vector of magnitude $k$ along $\\vec a$ is $k\\hat a$ (opposite: $-k\\hat a$).",
+        "यह केवल दिशा देता है। $\\vec a$ के अनुदिश $k$ परिमाण का सदिश $k\\hat a$ है (विपरीत: $-k\\hat a$)।"
+       ],
+       [
+        "Ex: magnitude 6 along $2\\hat i-\\hat j+2\\hat k$: $4\\hat i-2\\hat j+4\\hat k$.",
+        "उदा: $2\\hat i-\\hat j+2\\hat k$ के अनुदिश परिमाण 6: $4\\hat i-2\\hat j+4\\hat k$।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When are two vectors equal?",
+       "दो सदिश कब समान होते हैं?"
+      ],
+      "a": [
+       [
+        "When they have the same magnitude and the same direction (their position in space does not matter).",
+        "जब उनका परिमाण और दिशा दोनों समान हों (अन्तरिक्ष में स्थिति का महत्व नहीं)।"
+       ]
+      ]
+     },
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to equate two vectors expressed in $\\hat i,\\hat j,\\hat k$ form?",
+       "$\\hat i,\\hat j,\\hat k$ रूप में दिए दो सदिशों को बराबर कैसे करें?"
+      ],
+      "a": [
+       [
+        "Compare the coefficients: $a_1=b_1,\\ a_2=b_2,\\ a_3=b_3$.",
+        "गुणांकों की तुलना कीजिए: $a_1=b_1,\\ a_2=b_2,\\ a_3=b_3$।"
+       ],
+       [
+        "Ex: $(x+y)\\hat i+(x-y)\\hat j+z\\hat k=5\\hat i+\\hat j-2\\hat k\\Rightarrow x=3,\\ y=2,\\ z=-2$.",
+        "उदा: $(x+y)\\hat i+(x-y)\\hat j+z\\hat k=5\\hat i+\\hat j-2\\hat k\\Rightarrow x=3,\\ y=2,\\ z=-2$।"
+       ]
+      ]
+     },
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How is the angle between two vectors defined and how is angle denoted?",
+       "दो सदिशों के बीच कोण कैसे परिभाषित होता है और इसे कैसे दर्शाते हैं?"
+      ],
+      "a": [
+       [
+        "The smaller angle $\\theta$ formed when the tails (or the heads) of the two vectors are brought together; written $\\theta=(\\widehat{\\vec a,\\vec b})$.",
+        "दोनों सदिशों की पूँछों (या शीर्षों) को एक साथ लाने पर बना छोटा कोण $\\theta$; इसे $\\theta=(\\widehat{\\vec a,\\vec b})$ लिखते हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the range of angle between two vectors?",
+       "दो सदिशों के बीच कोण का परिसर क्या है?"
+      ],
+      "a": [
+       "$0\\le\\theta\\le\\pi$",
+       [
+        "$\\theta=0$: like parallel; $\\theta=\\pi$: unlike parallel; $\\theta=\\frac{\\pi}{2}$: perpendicular.",
+        "$\\theta=0$: समान दिशा समान्तर; $\\theta=\\pi$: विपरीत दिशा समान्तर; $\\theta=\\frac{\\pi}{2}$: लम्बवत्।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to calculate angle if head and tail are placed together?",
+       "यदि शीर्ष और पूँछ साथ रखे हों तो कोण कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Shift one vector so that both start from the same point; if the figure angle is $\\alpha$ between head-to-tail vectors, the required angle is $\\pi-\\alpha$.",
+        "एक सदिश को खिसकाकर दोनों को एक ही बिन्दु से प्रारम्भ कीजिए; यदि शीर्ष-पूँछ सदिशों के बीच आकृति का कोण $\\alpha$ है, तो अभीष्ट कोण $\\pi-\\alpha$ है।"
+       ],
+       [
+        "Ex: equilateral $\\triangle ABC$: angle between $\\overrightarrow{AB}$ and $\\overrightarrow{BC}$ is $120^\\circ$.",
+        "उदा: समबाहु $\\triangle ABC$: $\\overrightarrow{AB}$ व $\\overrightarrow{BC}$ के बीच कोण $120^\\circ$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by collinear vectors?",
+       "संरेख सदिशों से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Vectors whose lines of support are parallel or the same (also called parallel vectors), whatever their directions.",
+        "वे सदिश जिनकी आधार रेखाएँ समान्तर या एक ही हों (समान्तर सदिश भी कहते हैं), दिशा कुछ भी हो।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether two collinear vectors are like or unlike vectors?",
+       "दो संरेख सदिश समान या विपरीत दिशा वाले हैं, यह कैसे जाँचें?"
+      ],
+      "a": [
+       [
+        "Write $\\vec a=\\lambda\\vec b$: $\\lambda>0$ like (same direction), $\\lambda<0$ unlike (opposite).",
+        "$\\vec a=\\lambda\\vec b$ लिखिए: $\\lambda>0$ समान दिशा, $\\lambda<0$ विपरीत दिशा।"
+       ],
+       [
+        "Ex: $2\\hat i-4\\hat j+6\\hat k=-2(-\\hat i+2\\hat j-3\\hat k)$: unlike.",
+        "उदा: $2\\hat i-4\\hat j+6\\hat k=-2(-\\hat i+2\\hat j-3\\hat k)$: विपरीत दिशा।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition of two vectors, expressed in $\\hat i,\\hat j,\\hat k$ form, to be collinear?",
+       "$\\hat i,\\hat j,\\hat k$ रूप में दिए दो सदिशों के संरेख होने का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       "$\\dfrac{a_1}{b_1}=\\dfrac{a_2}{b_2}=\\dfrac{a_3}{b_3}\\ (=\\lambda)$",
+       [
+        "Points $A,B,C$ are collinear $\\Leftrightarrow\\overrightarrow{AB}=\\lambda\\overrightarrow{AC}$.",
+        "बिन्दु $A,B,C$ संरेख $\\Leftrightarrow\\overrightarrow{AB}=\\lambda\\overrightarrow{AC}$।"
+       ],
+       [
+        "Ex: $(x+2)\\hat i-(x-y)\\hat j+\\hat k\\parallel(x-1)\\hat i+(2x+y)\\hat j+2\\hat k\\Rightarrow x=-5,\\ y=-20$.",
+        "उदा: $(x+2)\\hat i-(x-y)\\hat j+\\hat k\\parallel(x-1)\\hat i+(2x+y)\\hat j+2\\hat k\\Rightarrow x=-5,\\ y=-20$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to assume a vector parallel to a given vector $\\vec p$?",
+       "दिए सदिश $\\vec p$ के समान्तर सदिश कैसे मानें?"
+      ],
+      "a": [
+       [
+        "Take it as $\\lambda\\vec p$, $\\lambda\\in\\mathbb R$; then use the extra condition (magnitude, dot product...) to find $\\lambda$.",
+        "इसे $\\lambda\\vec p$, $\\lambda\\in\\mathbb R$ मानिए; फिर अतिरिक्त प्रतिबन्ध (परिमाण, बिन्दु गुणनफल...) से $\\lambda$ ज्ञात कीजिए।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by coplanar vectors?",
+       "समतलीय सदिशों से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Vectors whose directed segments lie in (or are parallel to) one plane.",
+        "वे सदिश जिनके दिष्ट रेखाखण्ड एक ही समतल में (या उसके समान्तर) हों।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check coplanarity of two vectors?",
+       "दो सदिशों की समतलीयता कैसे जाँचें?"
+      ],
+      "a": [
+       [
+        "No check is needed: any two vectors are always coplanar (bring their tails together). Three vectors need $[\\vec a\\ \\vec b\\ \\vec c]=0$.",
+        "जाँच की आवश्यकता नहीं: कोई भी दो सदिश सदैव समतलीय होते हैं (पूँछें मिलाइए)। तीन सदिशों हेतु $[\\vec a\\ \\vec b\\ \\vec c]=0$ चाहिए।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while shifting vectors in Mathematics?",
+       "गणित में सदिशों को खिसकाते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Vectors are free: they may be shifted anywhere keeping magnitude and direction unchanged. Localised vectors (e.g. force at a point) are not shifted.",
+        "सदिश मुक्त होते हैं: परिमाण व दिशा अपरिवर्तित रखते हुए कहीं भी खिसकाए जा सकते हैं। स्थानीकृत सदिश (जैसे किसी बिन्दु पर बल) नहीं खिसकाए जाते।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Addition of vectors",
+    "hi": "सदिशों का योग",
+    "items": [
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write relation between vectors forming a closed figure?",
+       "बन्द आकृति बनाने वाले सदिशों में सम्बन्ध कैसे लिखें?"
+      ],
+      "a": [
+       [
+        "Taken head to tail around a closed figure, the sum is $\\vec 0$: $\\overrightarrow{AB}+\\overrightarrow{BC}+\\overrightarrow{CA}=\\vec 0$ (triangle law $\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AC}$).",
+        "बन्द आकृति में शीर्ष-से-पूँछ क्रम में योग $\\vec 0$: $\\overrightarrow{AB}+\\overrightarrow{BC}+\\overrightarrow{CA}=\\vec 0$ (त्रिभुज नियम $\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AC}$)।"
+       ],
+       [
+        "Ex: if $C$ is the mid-point of $AB$, then $\\overrightarrow{PA}+\\overrightarrow{PB}=2\\overrightarrow{PC}$ for any $P$.",
+        "उदा: यदि $C$, $AB$ का मध्य बिन्दु है, तो किसी भी $P$ हेतु $\\overrightarrow{PA}+\\overrightarrow{PB}=2\\overrightarrow{PC}$।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write diagonal vectors of a parallelogram whose adjacent side vectors are $\\vec a$ and $\\vec b$?",
+       "आसन्न भुजा सदिश $\\vec a$ व $\\vec b$ वाले समान्तर चतुर्भुज के विकर्ण सदिश कैसे लिखें?"
+      ],
+      "a": [
+       "$\\vec d_1=\\vec a+\\vec b,\\quad \\vec d_2=\\vec b-\\vec a$",
+       [
+        "Also $|\\vec a+\\vec b|^2+|\\vec a-\\vec b|^2=2(|\\vec a|^2+|\\vec b|^2)$.",
+        "साथ ही $|\\vec a+\\vec b|^2+|\\vec a-\\vec b|^2=2(|\\vec a|^2+|\\vec b|^2)$।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to add two vectors expressed in $\\hat i,\\hat j,\\hat k$ form?",
+       "$\\hat i,\\hat j,\\hat k$ रूप के दो सदिशों को कैसे जोड़ें?"
+      ],
+      "a": [
+       [
+        "Add the corresponding components: $\\vec a+\\vec b=(a_1+b_1)\\hat i+(a_2+b_2)\\hat j+(a_3+b_3)\\hat k$.",
+        "संगत घटकों को जोड़िए: $\\vec a+\\vec b=(a_1+b_1)\\hat i+(a_2+b_2)\\hat j+(a_3+b_3)\\hat k$।"
+       ],
+       [
+        "Ex: $(\\hat i+2\\hat j-\\hat k)+(2\\hat i-\\hat j+3\\hat k)=3\\hat i+\\hat j+2\\hat k$.",
+        "उदा: $(\\hat i+2\\hat j-\\hat k)+(2\\hat i-\\hat j+3\\hat k)=3\\hat i+\\hat j+2\\hat k$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by additive inverse?",
+       "योज्य प्रतिलोम से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "$-\\vec a$: same magnitude, opposite direction, with $\\vec a+(-\\vec a)=\\vec 0$.",
+        "$-\\vec a$: समान परिमाण, विपरीत दिशा, तथा $\\vec a+(-\\vec a)=\\vec 0$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write expression of triangle inequality.",
+       "त्रिभुज असमिका का व्यंजक लिखिए।"
+      ],
+      "a": [
+       "$\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$",
+       [
+        "Ex: $|\\vec a|=3,\\ |\\vec b|=4\\Rightarrow 1\\le|\\vec a+\\vec b|\\le 7$.",
+        "उदा: $|\\vec a|=3,\\ |\\vec b|=4\\Rightarrow 1\\le|\\vec a+\\vec b|\\le 7$।"
+       ]
+      ]
+     },
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition on two vectors in case of equality in triangle inequality?",
+       "त्रिभुज असमिका में समता की स्थिति में दो सदिशों पर क्या प्रतिबन्ध है?"
+      ],
+      "a": [
+       [
+        "$|\\vec a+\\vec b|=|\\vec a|+|\\vec b|$ iff $\\vec a,\\vec b$ are like parallel; $|\\vec a+\\vec b|=\\big||\\vec a|-|\\vec b|\\big|$ iff unlike parallel (or one is $\\vec 0$).",
+        "$|\\vec a+\\vec b|=|\\vec a|+|\\vec b|$ तभी जब $\\vec a,\\vec b$ समान दिशा में समान्तर; $|\\vec a+\\vec b|=\\big||\\vec a|-|\\vec b|\\big|$ तभी जब विपरीत दिशा में समान्तर (या एक $\\vec 0$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multiplication of a vector by scalar",
+    "hi": "सदिश का अदिश से गुणन",
+    "items": [
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the effect on magnitude of a vector if a vector gets multiplied by $\\lambda$?",
+       "सदिश को $\\lambda$ से गुणा करने पर परिमाण पर क्या प्रभाव पड़ता है?"
+      ],
+      "a": [
+       "$|\\lambda\\vec a|=|\\lambda|\\,|\\vec a|$"
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the effect on direction of a vector if a vector gets multiplied by $\\lambda$?",
+       "सदिश को $\\lambda$ से गुणा करने पर दिशा पर क्या प्रभाव पड़ता है?"
+      ],
+      "a": [
+       [
+        "$\\lambda>0$: same direction; $\\lambda<0$: opposite direction; $\\lambda=0$: null vector.",
+        "$\\lambda>0$: वही दिशा; $\\lambda<0$: विपरीत दिशा; $\\lambda=0$: शून्य सदिश।"
+       ],
+       [
+        "Ex: $-2\\vec a$ has twice the length of $\\vec a$ and the opposite direction.",
+        "उदा: $-2\\vec a$ की लम्बाई $\\vec a$ की दुगुनी व दिशा विपरीत है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Coordinate System in 3D",
+    "hi": "त्रिविमीय निर्देशांक पद्धति",
+    "items": [
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to define $x$, $y$ and $z$ coordinates of a point?",
+       "किसी बिन्दु के $x$, $y$ और $z$ निर्देशांक कैसे परिभाषित करें?"
+      ],
+      "a": [
+       [
+        "$x,y,z$ = signed distances of $P$ from the $yz$-, $zx$- and $xy$-planes; position vector $\\overrightarrow{OP}=x\\hat i+y\\hat j+z\\hat k$. The three coordinate planes divide space into 8 octants.",
+        "$x,y,z$ = $P$ की $yz$-, $zx$- व $xy$-समतलों से चिह्नित दूरियाँ; स्थिति सदिश $\\overrightarrow{OP}=x\\hat i+y\\hat j+z\\hat k$। तीन निर्देशांक समतल आकाश को 8 अष्टांशकों में बाँटते हैं।"
+       ],
+       [
+        "Ex: origin shifted to $(1,2,-3)$ (axes parallel): $(0,4,5)$ becomes $(-1,2,8)$.",
+        "उदा: मूलबिन्दु $(1,2,-3)$ पर खिसकाने पर (अक्ष समान्तर): $(0,4,5)$ बनता है $(-1,2,8)$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition on coordinates if a point $P(a,b,c)$ lies on $x$-axis / $y$-axis / $z$-axis?",
+       "यदि बिन्दु $P(a,b,c)$, $x$-अक्ष / $y$-अक्ष / $z$-अक्ष पर हो तो निर्देशांकों पर क्या प्रतिबन्ध है?"
+      ],
+      "a": [
+       [
+        "$x$-axis: $b=c=0$; $y$-axis: $a=c=0$; $z$-axis: $a=b=0$. Planes: $xy$: $c=0$, $yz$: $a=0$, $zx$: $b=0$.",
+        "$x$-अक्ष: $b=c=0$; $y$-अक्ष: $a=c=0$; $z$-अक्ष: $a=b=0$। समतल: $xy$: $c=0$, $yz$: $a=0$, $zx$: $b=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XIII):168, QB:36",
+      "q": [
+       "How to find the distance of a point from the coordinate axes and planes, and its foot of perpendicular on them?",
+       "किसी बिन्दु की निर्देशांक अक्षों व समतलों से दूरी, तथा उन पर लम्बपाद कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "For $P(a,b,c)$: distance from $x$-axis $\\sqrt{b^2+c^2}$ (foot $(a,0,0)$), from $y$-axis $\\sqrt{a^2+c^2}$, from $z$-axis $\\sqrt{a^2+b^2}$.",
+        "$P(a,b,c)$ हेतु: $x$-अक्ष से दूरी $\\sqrt{b^2+c^2}$ (लम्बपाद $(a,0,0)$), $y$-अक्ष से $\\sqrt{a^2+c^2}$, $z$-अक्ष से $\\sqrt{a^2+b^2}$।"
+       ],
+       [
+        "From $xy$-plane $|c|$ (foot $(a,b,0)$), from $yz$-plane $|a|$, from $zx$-plane $|b|$.",
+        "$xy$-समतल से $|c|$ (लम्बपाद $(a,b,0)$), $yz$-समतल से $|a|$, $zx$-समतल से $|b|$।"
+       ],
+       [
+        "Ex: $P(3,4,12)$: from $x$-axis $4\\sqrt{10}$, from $z$-axis $5$, from $xy$-plane $12$.",
+        "उदा: $P(3,4,12)$: $x$-अक्ष से $4\\sqrt{10}$, $z$-अक्ष से $5$, $xy$-समतल से $12$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Linear Dependence and Linear Combination in a Plane",
+    "hi": "रैखिक आश्रितता एवं समतल में रैखिक संयोजन",
+    "items": [
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:4, J-II:1, J-II:63, J-M(XIII):124, DPP-4:3, DPP-4:8",
+      "q": [
+       "What are linearly dependent / independent vectors, and when can coefficients be compared?",
+       "रैखिकतः आश्रित / स्वतन्त्र सदिश क्या हैं, और गुणांकों की तुलना कब कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "$\\vec x_1,\\dots,\\vec x_n$ are independent if $k_1\\vec x_1+\\dots+k_n\\vec x_n=\\vec 0\\Rightarrow$ all $k_i=0$; otherwise dependent (one is a combination of the others).",
+        "$\\vec x_1,\\dots,\\vec x_n$ स्वतन्त्र हैं यदि $k_1\\vec x_1+\\dots+k_n\\vec x_n=\\vec 0\\Rightarrow$ सभी $k_i=0$; अन्यथा आश्रित (एक सदिश शेष का संयोजन)।"
+       ],
+       [
+        "Coefficients may be compared only along independent vectors. Two collinear or three coplanar vectors are dependent; four vectors in space are always dependent.",
+        "गुणांकों की तुलना केवल स्वतन्त्र सदिशों के अनुदिश की जा सकती है। दो संरेख या तीन समतलीय सदिश आश्रित होते हैं; आकाश में चार सदिश सदैव आश्रित।"
+       ],
+       [
+        "Points with p.v. $\\vec a,\\vec b,\\vec c$ are collinear iff $x\\vec a+y\\vec b+z\\vec c=\\vec 0$ with $x+y+z=0$ (not all zero).",
+        "स्थिति सदिश $\\vec a,\\vec b,\\vec c$ वाले बिन्दु संरेख तभी जब $x\\vec a+y\\vec b+z\\vec c=\\vec 0$, $x+y+z=0$ (सभी शून्य नहीं)।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII):3, J-M(XII):33, J-M(XII):54, J-M(XIII):68, DPP-4:2, QB:19",
+      "q": [
+       "What is the linear combination theorem in a plane?",
+       "समतल में रैखिक संयोजन प्रमेय क्या है?"
+      ],
+      "a": [
+       [
+        "If $\\vec a,\\vec b$ are non-collinear, every vector $\\vec r$ coplanar with them is uniquely $\\vec r=x\\vec a+y\\vec b$; a vector in the plane of $\\vec a,\\vec b$ is taken as $x\\vec a+y\\vec b$.",
+        "यदि $\\vec a,\\vec b$ असंरेख हों, तो उनके साथ समतलीय प्रत्येक सदिश अद्वितीय रूप से $\\vec r=x\\vec a+y\\vec b$; $\\vec a,\\vec b$ के समतल में सदिश $x\\vec a+y\\vec b$ माना जाता है।"
+       ],
+       [
+        "Ex: $\\hat i+3\\hat j+2\\hat k=(\\hat i+\\hat j)+2(\\hat j+\\hat k)$.",
+        "उदा: $\\hat i+3\\hat j+2\\hat k=(\\hat i+\\hat j)+2(\\hat j+\\hat k)$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Vector Equation of a Line",
+    "hi": "रेखा का सदिश समीकरण",
+    "items": [
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:49",
+      "q": [
+       "What is the vector equation of a line?",
+       "रेखा का सदिश समीकरण क्या है?"
+      ],
+      "a": [
+       "$\\vec r=\\vec a+t\\vec b\\qquad \\vec r=\\vec a+t(\\vec b-\\vec a)$",
+       [
+        "Through point $\\vec a$ parallel to $\\vec b$; second form: through points $\\vec a,\\vec b$ ($t$ = parameter).",
+        "बिन्दु $\\vec a$ से $\\vec b$ के समान्तर; दूसरा रूप: बिन्दुओं $\\vec a,\\vec b$ से होकर ($t$ = प्राचल)।"
+       ],
+       [
+        "Ex: through $(1,2,3)$ and $(2,0,1)$: $\\vec r=\\hat i+2\\hat j+3\\hat k+t(\\hat i-2\\hat j-2\\hat k)$.",
+        "उदा: $(1,2,3)$ व $(2,0,1)$ से: $\\vec r=\\hat i+2\\hat j+3\\hat k+t(\\hat i-2\\hat j-2\\hat k)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N5",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:24, J-II:67, J-A:9, J-M(XII):23, J-M(XII):63, J-M(XIII):30, J-M(XIII):33, J-M(XIII):145, J-M(XIII):152, J-M(XIII):184, DPP-1:8, DPP-2:6 ...",
+      "q": [
+       "How to decide whether two lines are parallel, intersecting or skew, and find their point of intersection?",
+       "दो रेखाएँ समान्तर, प्रतिच्छेदी या विषमतलीय हैं, यह कैसे तय करें और प्रतिच्छेद बिन्दु कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Directions parallel: parallel (coincident if a common point exists). Otherwise equate general points, solve two component equations for $t,s$ and test the third: satisfied = intersecting, not = skew.",
+        "दिशाएँ समान्तर: समान्तर (कोई उभयनिष्ठ बिन्दु हो तो सम्पाती)। अन्यथा व्यापक बिन्दु बराबर कर दो घटक समीकरणों से $t,s$ निकालें व तीसरे में जाँचें: सन्तुष्ट = प्रतिच्छेदी, नहीं = विषमतलीय।"
+       ],
+       [
+        "Ex: $(1,2,3)+t(1,1,1)$ and $(2,0,1)+s(0,2,2)$: $t=1,\\ s=\\frac32$, meet at $(2,3,4)$.",
+        "उदा: $(1,2,3)+t(1,1,1)$ व $(2,0,1)+s(0,2,2)$: $t=1,\\ s=\\frac32$, प्रतिच्छेद $(2,3,4)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N6",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:1, J-I:22, J-II:11, J-II:48, J-A:39, DPP-1:1, DPP-9:3, QB:23",
+      "q": [
+       "What is the vector along the internal / external angle bisector of two vectors?",
+       "दो सदिशों के आन्तरिक / बाह्य कोण समद्विभाजक के अनुदिश सदिश क्या है?"
+      ],
+      "a": [
+       "$\\text{internal: }\\lambda(\\hat a+\\hat b),\\qquad \\text{external: }\\lambda(\\hat a-\\hat b)$",
+       [
+        "Ex: $\\vec a=3\\hat i+4\\hat k$, $\\vec b=\\hat i+2\\hat j+2\\hat k$: $\\hat a+\\hat b=\\frac1{15}(14\\hat i+10\\hat j+22\\hat k)$, i.e. along $7\\hat i+5\\hat j+11\\hat k$.",
+        "उदा: $\\vec a=3\\hat i+4\\hat k$, $\\vec b=\\hat i+2\\hat j+2\\hat k$: $\\hat a+\\hat b=\\frac1{15}(14\\hat i+10\\hat j+22\\hat k)$, अर्थात् $7\\hat i+5\\hat j+11\\hat k$ के अनुदिश।"
+       ]
+      ]
+     },
+     {
+      "id": "N7",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:12",
+      "q": [
+       "What is the equation of a line in cross product form?",
+       "क्रॉस गुणनफल रूप में रेखा का समीकरण क्या है?"
+      ],
+      "a": [
+       "$(\\vec r-\\vec a)\\times\\vec b=\\vec 0\\iff \\vec r\\times\\vec b=\\vec a\\times\\vec b$",
+       [
+        "It is the line through $\\vec a$ parallel to $\\vec b$, i.e. $\\vec r=\\vec a+t\\vec b$.",
+        "यह $\\vec a$ से होकर $\\vec b$ के समान्तर रेखा है, अर्थात् $\\vec r=\\vec a+t\\vec b$।"
+       ]
+      ]
+     },
+     {
+      "id": "N46",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII):85, J-M(XIII):96, J-M(XIII):142, J-M(XIII):153, J-M(XIII):156, J-M(XIII):189, J-M(XIII):191, QB:42, QB:67",
+      "q": [
+       "How to find a line through a given point (or with a given direction) that intersects two given lines?",
+       "दिए बिन्दु से (या दी दिशा में) दो दी गई रेखाओं को प्रतिच्छेद करने वाली रेखा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Take general points $P(t)$ on $L_1$ and $Q(s)$ on $L_2$. Through a point $A$: $A,P,Q$ collinear ($\\overrightarrow{AP}\\parallel\\overrightarrow{AQ}$). Given direction $\\vec d$: $\\overrightarrow{PQ}\\parallel\\vec d$. Solve for $t,s$.",
+        "$L_1$ पर व्यापक बिन्दु $P(t)$ व $L_2$ पर $Q(s)$ लीजिए। बिन्दु $A$ से: $A,P,Q$ संरेख ($\\overrightarrow{AP}\\parallel\\overrightarrow{AQ}$)। दी दिशा $\\vec d$: $\\overrightarrow{PQ}\\parallel\\vec d$। $t,s$ हल कीजिए।"
+       ],
+       [
+        "Same idea: distance of a point from a line measured parallel to another line = distance to the meeting point.",
+        "यही विधि: किसी रेखा से बिन्दु की दूरी, दूसरी रेखा के समान्तर मापी गई = मिलन बिन्दु तक दूरी।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Dot Product",
+    "hi": "अदिश (बिन्दु) गुणनफल",
+    "items": [
+     {
+      "id": "N8",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:5, J-II:6, J-II:7, J-II:10, J-A:18, J-M(XII):29, J-M(XII):49, J-M(XII):50, J-M(XII):98, J-M(XIII):14, J-M(XIII):131, DPP-3:1 ...",
+      "q": [
+       "What is the dot product and what are its properties?",
+       "अदिश गुणनफल क्या है और इसके गुणधर्म क्या हैं?"
+      ],
+      "a": [
+       "$\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=a_1b_1+a_2b_2+a_3b_3$",
+       [
+        "$\\hat i\\cdot\\hat i=1$, $\\hat i\\cdot\\hat j=0$; commutative, distributive; $\\vec a\\cdot\\vec a=|\\vec a|^2$; $|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$.",
+        "$\\hat i\\cdot\\hat i=1$, $\\hat i\\cdot\\hat j=0$; क्रमविनिमेय, वितरणीय; $\\vec a\\cdot\\vec a=|\\vec a|^2$; $|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$।"
+       ],
+       [
+        "Ex: $\\vec a+\\vec b+\\vec c=\\vec 0$, $|\\vec a|=3,|\\vec b|=5,|\\vec c|=7$: $\\vec a\\cdot\\vec b=\\frac{49-9-25}{2}=\\frac{15}2$, angle $\\frac{\\pi}3$.",
+        "उदा: $\\vec a+\\vec b+\\vec c=\\vec 0$, $|\\vec a|=3,|\\vec b|=5,|\\vec c|=7$: $\\vec a\\cdot\\vec b=\\frac{49-9-25}{2}=\\frac{15}2$, कोण $\\frac{\\pi}3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N9",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:6, J-I:7, J-I:9, J-I:16, J-II:5, J-II:8, J-II:9, J-A:28, J-M(XII):11, J-M(XII):12, J-M(XII):14, J-M(XII):99 ...",
+      "q": [
+       "How to find the angle between two vectors using dot product?",
+       "अदिश गुणनफल से दो सदिशों के बीच कोण कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\cos\\theta=\\dfrac{\\vec a\\cdot\\vec b}{|\\vec a||\\vec b|}$",
+       [
+        "$\\vec a\\perp\\vec b\\iff\\vec a\\cdot\\vec b=0$; acute $\\iff\\vec a\\cdot\\vec b>0$; obtuse $\\iff\\vec a\\cdot\\vec b<0$ (non-parallel).",
+        "$\\vec a\\perp\\vec b\\iff\\vec a\\cdot\\vec b=0$; न्यून $\\iff\\vec a\\cdot\\vec b>0$; अधिक $\\iff\\vec a\\cdot\\vec b<0$ (असमान्तर)।"
+       ],
+       [
+        "Ex: $\\hat i+\\hat j$ and $\\hat j+\\hat k$: $\\cos\\theta=\\frac12$, $\\theta=60^\\circ$.",
+        "उदा: $\\hat i+\\hat j$ व $\\hat j+\\hat k$: $\\cos\\theta=\\frac12$, $\\theta=60^\\circ$।"
+       ]
+      ]
+     },
+     {
+      "id": "N10",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:10, J-A:34, J-A:38, J-A:41, J-M(XII):2, J-M(XII):15, J-M(XII):31, J-M(XII):60, J-M(XII):93, J-M(XIII):2, J-M(XIII):9, J-M(XIII):16 ...",
+      "q": [
+       "How to find the projection of a vector on another, and its components along and perpendicular to it?",
+       "एक सदिश का दूसरे पर प्रक्षेप, तथा उसके अनुदिश व लम्बवत् घटक कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\text{proj}=\\vec a\\cdot\\hat b,\\quad \\vec a_{\\parallel}=\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b,\\quad \\vec a_{\\perp}=\\vec a-\\vec a_{\\parallel}$",
+       [
+        "Ex: $\\vec a=2\\hat i+3\\hat j+2\\hat k$ on $\\vec b=\\hat i+2\\hat j+\\hat k$: projection $\\frac{10}{\\sqrt6}$, $\\vec a_{\\parallel}=\\frac53(\\hat i+2\\hat j+\\hat k)$.",
+        "उदा: $\\vec a=2\\hat i+3\\hat j+2\\hat k$ का $\\vec b=\\hat i+2\\hat j+\\hat k$ पर: प्रक्षेप $\\frac{10}{\\sqrt6}$, $\\vec a_{\\parallel}=\\frac53(\\hat i+2\\hat j+\\hat k)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N11",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:28, J-II:37, J-A:16, J-M(XII):18, J-M(XII):19, J-M(XII):21, J-M(XII):76, J-M(XII):89, J-M(XII):112, J-M(XIII):27, J-M(XIII):31, J-M(XIII):57 ...",
+      "q": [
+       "How to find the foot of perpendicular and image of a point in a line in space?",
+       "आकाश में किसी रेखा पर बिन्दु का लम्बपाद व प्रतिबिम्ब कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Take the general point $Q$ of the line, put $\\overrightarrow{PQ}\\cdot\\vec b=0$ to get $t$; foot $=Q$, image $=2Q-P$.",
+        "रेखा का व्यापक बिन्दु $Q$ लेकर $\\overrightarrow{PQ}\\cdot\\vec b=0$ से $t$ ज्ञात कीजिए; लम्बपाद $=Q$, प्रतिबिम्ब $=2Q-P$।"
+       ],
+       [
+        "Ex: $P(1,6,3)$, line $\\frac x1=\\frac{y-1}2=\\frac{z-2}3$: $t=1$, foot $(1,3,5)$, image $(1,0,7)$.",
+        "उदा: $P(1,6,3)$, रेखा $\\frac x1=\\frac{y-1}2=\\frac{z-2}3$: $t=1$, लम्बपाद $(1,3,5)$, प्रतिबिम्ब $(1,0,7)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N12",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:36, J-II:68, J-M(XII):41, J-M(XII):42, J-M(XII):78, J-M(XII):110, J-M(XIII):29, J-M(XIII):52, J-M(XIII):54, J-M(XIII):112, J-M(XIII):133, J-M(XIII):182 ...",
+      "q": [
+       "How to find the perpendicular distance of a point from a line in space?",
+       "आकाश में किसी रेखा से बिन्दु की लम्बवत् दूरी कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$d=\\dfrac{|(\\vec p-\\vec a)\\times\\vec b|}{|\\vec b|}$",
+       [
+        "Or $d=PQ$ with $Q$ the foot. Ex: above, $d=\\sqrt{13}$.",
+        "या $d=PQ$, $Q$ = लम्बपाद। उदा: ऊपर वाले में $d=\\sqrt{13}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Cross Product",
+    "hi": "सदिश (क्रॉस) गुणनफल",
+    "items": [
+     {
+      "id": "N13",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:15, J-I:28, J-I:29, J-II:15, J-II:17, J-II:18, J-II:53, J-II:59, J-II:60, J-II:62, J-A:2, J-A:15 ...",
+      "q": [
+       "What is the cross product and what are its properties?",
+       "सदिश गुणनफल क्या है और इसके गुणधर्म क्या हैं?"
+      ],
+      "a": [
+       "$\\vec a\\times\\vec b=|\\vec a||\\vec b|\\sin\\theta\\,\\hat n=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$",
+       [
+        "$\\hat i\\times\\hat j=\\hat k$ (cyclic), $\\vec b\\times\\vec a=-\\vec a\\times\\vec b$, $\\vec a\\times\\vec b=\\vec 0\\iff\\vec a\\parallel\\vec b$; unit vectors $\\perp$ both: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$.",
+        "$\\hat i\\times\\hat j=\\hat k$ (चक्रीय), $\\vec b\\times\\vec a=-\\vec a\\times\\vec b$, $\\vec a\\times\\vec b=\\vec 0\\iff\\vec a\\parallel\\vec b$; दोनों के लम्बवत् इकाई सदिश: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$।"
+       ],
+       [
+        "Ex: $(\\hat i+\\hat j)\\times(\\hat j+\\hat k)=\\hat i-\\hat j+\\hat k$.",
+        "उदा: $(\\hat i+\\hat j)\\times(\\hat j+\\hat k)=\\hat i-\\hat j+\\hat k$।"
+       ]
+      ]
+     },
+     {
+      "id": "N14",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:14, J-I:34, J-A:25, J-A:36, J-M(XII):7, J-M(XII):32, J-M(XII):62, J-M(XII):106, J-M(XIII):22, J-M(XIII):60, J-M(XIII):84, J-M(XIII):85 ...",
+      "q": [
+       "What is Lagrange's identity?",
+       "लैग्रांज सर्वसमिका क्या है?"
+      ],
+      "a": [
+       "$|\\vec a\\times\\vec b|^2+(\\vec a\\cdot\\vec b)^2=|\\vec a|^2|\\vec b|^2$",
+       [
+        "Ex: $|\\vec a|=2,\\ |\\vec b|=3,\\ \\vec a\\cdot\\vec b=4\\Rightarrow|\\vec a\\times\\vec b|=2\\sqrt5$.",
+        "उदा: $|\\vec a|=2,\\ |\\vec b|=3,\\ \\vec a\\cdot\\vec b=4\\Rightarrow|\\vec a\\times\\vec b|=2\\sqrt5$।"
+       ]
+      ]
+     },
+     {
+      "id": "N15",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:13, J-II:12, J-II:13, J-II:14, J-II:16, J-II:50, J-II:69, J-A:35, J-M(XII):56, J-M(XII):58, J-M(XIII):56, J-M(XIII):78 ...",
+      "q": [
+       "How to find area of triangle, parallelogram and quadrilateral using cross product?",
+       "सदिश गुणनफल से त्रिभुज, समान्तर चतुर्भुज व चतुर्भुज का क्षेत्रफल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\Delta=\\tfrac12|\\overrightarrow{AB}\\times\\overrightarrow{AC}|=\\tfrac12|\\vec a\\times\\vec b+\\vec b\\times\\vec c+\\vec c\\times\\vec a|$",
+       [
+        "Parallelogram: $|\\vec a\\times\\vec b|$ (sides) $=\\frac12|\\vec d_1\\times\\vec d_2|$ (diagonals); quadrilateral: $\\frac12|\\vec d_1\\times\\vec d_2|$.",
+        "समान्तर चतुर्भुज: $|\\vec a\\times\\vec b|$ (भुजाएँ) $=\\frac12|\\vec d_1\\times\\vec d_2|$ (विकर्ण); चतुर्भुज: $\\frac12|\\vec d_1\\times\\vec d_2|$।"
+       ],
+       [
+        "Ex: $A(1,1,1),B(1,2,3),C(2,3,1)$: $\\overrightarrow{AB}\\times\\overrightarrow{AC}=(-4,2,-1)$, area $\\frac{\\sqrt{21}}2$.",
+        "उदा: $A(1,1,1),B(1,2,3),C(2,3,1)$: $\\overrightarrow{AB}\\times\\overrightarrow{AC}=(-4,2,-1)$, क्षेत्रफल $\\frac{\\sqrt{21}}2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Direction Cosines and Direction Ratios",
+    "hi": "दिक्-कोसाइन एवं दिक्-अनुपात",
+    "items": [
+     {
+      "id": "N16",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:36, J-M(XII):51, J-M(XII):75, J-M(XIII):12, J-M(XIII):36, DPP-6:14, QB:12",
+      "q": [
+       "What are direction cosines and direction ratios and how are they related?",
+       "दिक्-कोसाइन व दिक्-अनुपात क्या हैं और इनमें क्या सम्बन्ध है?"
+      ],
+      "a": [
+       "$l=\\cos\\alpha,\\ m=\\cos\\beta,\\ n=\\cos\\gamma,\\quad l^2+m^2+n^2=1$",
+       [
+        "DRs $a,b,c$ ($\\propto l,m,n$) $\\Rightarrow l=\\pm\\dfrac{a}{\\sqrt{a^2+b^2+c^2}}$ etc.; DRs of $AB$: $x_2-x_1,y_2-y_1,z_2-z_1$; $\\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$.",
+        "दिक्-अनुपात $a,b,c$ ($\\propto l,m,n$) $\\Rightarrow l=\\pm\\dfrac{a}{\\sqrt{a^2+b^2+c^2}}$ आदि; $AB$ के दिक्-अनुपात: $x_2-x_1,y_2-y_1,z_2-z_1$; $\\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$।"
+       ],
+       [
+        "Ex: DRs $2,-1,-2\\Rightarrow$ DCs $\\frac23,-\\frac13,-\\frac23$.",
+        "उदा: दिक्-अनुपात $2,-1,-2\\Rightarrow$ दिक्-कोसाइन $\\frac23,-\\frac13,-\\frac23$।"
+       ]
+      ]
+     },
+     {
+      "id": "N17",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:37, J-I:38, J-II:23, J-II:26, J-II:57, J-M(XII):39, J-M(XII):72, J-M(XII):123, J-M(XII):124, J-M(XIII):183, DPP-3:11, DPP-7:5 ...",
+      "q": [
+       "How to find the angle between two lines from their direction cosines / ratios?",
+       "दिक्-कोसाइन / दिक्-अनुपात से दो रेखाओं के बीच कोण कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\cos\\theta=\\dfrac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{a_1^2+b_1^2+c_1^2}\\sqrt{a_2^2+b_2^2+c_2^2}}$",
+       [
+        "Perpendicular: $a_1a_2+b_1b_2+c_1c_2=0$; parallel: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$. Ex: two diagonals of a cube: $\\cos\\theta=\\frac13$.",
+        "लम्बवत्: $a_1a_2+b_1b_2+c_1c_2=0$; समान्तर: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$। उदा: घन के दो विकर्ण: $\\cos\\theta=\\frac13$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Straight Line in 3D",
+    "hi": "त्रिविमीय सरल रेखा",
+    "items": [
+     {
+      "id": "N18",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:35, J-II:25, J-II:29, J-II:58, J-M(XII):120, J-M(XIII):87, J-M(XIII):151, J-M(XIII):158, J-M(XIII):181, DPP-6:8, DPP-7:2, QB:11 ...",
+      "q": [
+       "What is the symmetric (cartesian) form of a line and its general point?",
+       "रेखा का सममित (कार्तीय) रूप और उसका व्यापक बिन्दु क्या है?"
+      ],
+      "a": [
+       "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=t$",
+       [
+        "General point $(x_1+at,\\ y_1+bt,\\ z_1+ct)$; two-point form uses DRs $x_2-x_1,\\dots$; a line $\\perp$ to two lines has DRs along $\\vec b_1\\times\\vec b_2$.",
+        "व्यापक बिन्दु $(x_1+at,\\ y_1+bt,\\ z_1+ct)$; दो-बिन्दु रूप में दिक्-अनुपात $x_2-x_1,\\dots$; दो रेखाओं के लम्बवत् रेखा के दिक्-अनुपात $\\vec b_1\\times\\vec b_2$ के अनुदिश।"
+       ],
+       [
+        "Ex: through $(1,2,3)$, DRs $2,-1,4$: $\\frac{x-1}2=\\frac{y-2}{-1}=\\frac{z-3}4$, point $(1+2t,2-t,3+4t)$.",
+        "उदा: $(1,2,3)$ से, दिक्-अनुपात $2,-1,4$: $\\frac{x-1}2=\\frac{y-2}{-1}=\\frac{z-3}4$, बिन्दु $(1+2t,2-t,3+4t)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N19",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:39, J-II:30, J-II:54, J-II:64, J-A:5, J-A:10, J-A:32, J-A:53, J-M(XII):10, J-M(XII):17, J-M(XII):20, J-M(XII):25 ...",
+      "q": [
+       "How to find the shortest distance between two lines and the condition for them to intersect?",
+       "दो रेखाओं के बीच न्यूनतम दूरी तथा उनके प्रतिच्छेद का प्रतिबन्ध कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$SD=\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|},\\qquad \\text{parallel: } \\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$",
+       [
+        "Lines intersect (coplanar) $\\iff(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)=0$, i.e. $\\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\\\a_1&b_1&c_1\\\\a_2&b_2&c_2\\end{vmatrix}=0$.",
+        "रेखाएँ प्रतिच्छेदी (समतलीय) $\\iff(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)=0$, अर्थात् $\\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\\\a_1&b_1&c_1\\\\a_2&b_2&c_2\\end{vmatrix}=0$।"
+       ],
+       [
+        "Ex: $(1,2,3)+t(1,-3,2)$, $(4,5,6)+s(2,3,1)$: $\\vec b_1\\times\\vec b_2=(-9,3,9)$, $SD=\\frac{3}{\\sqrt{19}}$.",
+        "उदा: $(1,2,3)+t(1,-3,2)$, $(4,5,6)+s(2,3,1)$: $\\vec b_1\\times\\vec b_2=(-9,3,9)$, $SD=\\frac{3}{\\sqrt{19}}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Plane",
+    "hi": "समतल",
+    "items": [
+     {
+      "id": "N20",
+      "o": null,
+      "tag": "added",
+      "src": "J-A:11, J-A:27, J-A:49, J-M(XII):22, J-M(XII):80, J-M(XII):108, J-M(XIII):40, J-M(XIII):43, J-M(XIII):58, DPP-8:14",
+      "q": [
+       "What are the normal and general forms of the equation of a plane?",
+       "समतल के समीकरण का अभिलम्ब रूप व व्यापक रूप क्या है?"
+      ],
+      "a": [
+       "$(\\vec r-\\vec a)\\cdot\\vec n=0,\\quad \\vec r\\cdot\\hat n=d,\\quad ax+by+cz+d=0$",
+       [
+        "$(a,b,c)$ = normal; through $(x_1,y_1,z_1)$: $a(x-x_1)+b(y-y_1)+c(z-z_1)=0$; $z=k$ is parallel to the $xy$-plane.",
+        "$(a,b,c)$ = अभिलम्ब; $(x_1,y_1,z_1)$ से: $a(x-x_1)+b(y-y_1)+c(z-z_1)=0$; $z=k$, $xy$-समतल के समान्तर।"
+       ],
+       [
+        "Ex: through $(1,2,3)$, normal $(2,-1,1)$: $2x-y+z=3$.",
+        "उदा: $(1,2,3)$ से, अभिलम्ब $(2,-1,1)$: $2x-y+z=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N21",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:31, J-II:35, J-II:41, J-A:22, J-M(XII):24, J-M(XII):116, J-M(XIII):25, J-M(XIII):38, J-M(XIII):105, DPP-6:1, DPP-6:4, DPP-6:5 ...",
+      "q": [
+       "How to find a plane through three points, or through a point parallel to two vectors?",
+       "तीन बिन्दुओं से, या एक बिन्दु से दो सदिशों के समान्तर समतल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Normal $\\vec n=\\overrightarrow{AB}\\times\\overrightarrow{AC}$ (or $\\vec b\\times\\vec c$); parametric form $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$; determinant form $[\\vec r-\\vec a\\ \\ \\vec b\\ \\ \\vec c]=0$.",
+        "अभिलम्ब $\\vec n=\\overrightarrow{AB}\\times\\overrightarrow{AC}$ (या $\\vec b\\times\\vec c$); प्राचलिक रूप $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$; सारणिक रूप $[\\vec r-\\vec a\\ \\ \\vec b\\ \\ \\vec c]=0$।"
+       ],
+       [
+        "Ex: through $(1,1,0),(1,2,1),(-2,2,-1)$: $2x+3y-3z=5$.",
+        "उदा: $(1,1,0),(1,2,1),(-2,2,-1)$ से: $2x+3y-3z=5$।"
+       ]
+      ]
+     },
+     {
+      "id": "N22",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:42, J-II:33, J-M(XIII):41, J-M(XIII):116, DPP-6:2",
+      "q": [
+       "What is the intercept form of a plane?",
+       "समतल का अन्तःखण्ड रूप क्या है?"
+      ],
+      "a": [
+       "$\\dfrac xa+\\dfrac yb+\\dfrac zc=1$",
+       [
+        "Meets the axes at $(a,0,0),(0,b,0),(0,0,c)$. Ex: intercepts $2,3,4$: $6x+4y+3z=12$.",
+        "अक्षों को $(a,0,0),(0,b,0),(0,0,c)$ पर काटता है। उदा: अन्तःखण्ड $2,3,4$: $6x+4y+3z=12$।"
+       ]
+      ]
+     },
+     {
+      "id": "N23",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII):69, J-M(XIII):19, J-M(XIII):23, J-M(XIII):99, DPP-6:9, DPP-9:4, DPP-10:2",
+      "q": [
+       "How to find the angle between two planes?",
+       "दो समतलों के बीच कोण कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}$",
+       [
+        "Parallel: $\\vec n_1\\parallel\\vec n_2$; perpendicular: $\\vec n_1\\cdot\\vec n_2=0$. Ex: $x+y+2z=9$, $2x-y+z=15$: $\\cos\\theta=\\frac12$, $60^\\circ$.",
+        "समान्तर: $\\vec n_1\\parallel\\vec n_2$; लम्बवत्: $\\vec n_1\\cdot\\vec n_2=0$। उदा: $x+y+2z=9$, $2x-y+z=15$: $\\cos\\theta=\\frac12$, $60^\\circ$।"
+       ]
+      ]
+     },
+     {
+      "id": "N24",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:43, J-I:51, J-II:51, J-M(XII):44, J-M(XII):82, J-M(XII):119, J-M(XIII):42, J-M(XIII):92, J-M(XIII):115, DPP-6:6, DPP-6:13, DPP-6:15 ...",
+      "q": [
+       "How to find the angle between a line and a plane, and when is the line parallel to or in the plane?",
+       "रेखा व समतल के बीच कोण कैसे ज्ञात करें, और रेखा समतल के समान्तर या उसमें कब होती है?"
+      ],
+      "a": [
+       "$\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$",
+       [
+        "Line $\\parallel$ plane: $\\vec b\\cdot\\vec n=0$; line in plane: also one point of the line satisfies the plane; line $\\perp$ plane: $\\vec b\\parallel\\vec n$.",
+        "रेखा $\\parallel$ समतल: $\\vec b\\cdot\\vec n=0$; रेखा समतल में: साथ ही रेखा का एक बिन्दु समतल को सन्तुष्ट करे; रेखा $\\perp$ समतल: $\\vec b\\parallel\\vec n$।"
+       ],
+       [
+        "Ex: DRs $(2,3,6)$, plane $10x+2y-11z=3$: $\\sin\\theta=\\frac{8}{21}$.",
+        "उदा: दिक्-अनुपात $(2,3,6)$, समतल $10x+2y-11z=3$: $\\sin\\theta=\\frac{8}{21}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N25",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:47, J-II:55, J-A:43, J-M(XII):118, J-M(XIII):101, DPP-6:3, DPP-7:15",
+      "q": [
+       "How to find the distance of a point from a plane and between parallel planes?",
+       "समतल से बिन्दु की दूरी तथा समान्तर समतलों के बीच दूरी कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$d=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}},\\qquad d=\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$",
+       [
+        "Make the coefficients of $x,y,z$ equal before using the second formula. Ex: $x+2y-2z+1=0$, $2x+4y-4z+5=0$: $d=\\frac12$.",
+        "दूसरे सूत्र से पहले $x,y,z$ के गुणांक समान कीजिए। उदा: $x+2y-2z+1=0$, $2x+4y-4z+5=0$: $d=\\frac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "N26",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:44, J-I:49, J-II:40, J-A:31, J-A:37, J-A:46, J-M(XII):46, J-M(XII):70, J-M(XII):81, J-M(XII):84, J-M(XII):88, J-M(XII):90 ...",
+      "q": [
+       "How to find the foot of perpendicular and image of a point in a plane?",
+       "समतल में बिन्दु का लम्बपाद व प्रतिबिम्ब कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-\\dfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2}\\ \\ (\\text{image: }-2\\times)$",
+       [
+        "Ex: $(1,3,4)$ in $2x-y+z+3=0$: foot $(-1,4,3)$, image $(-3,5,2)$.",
+        "उदा: $(1,3,4)$ का $2x-y+z+3=0$ में: लम्बपाद $(-1,4,3)$, प्रतिबिम्ब $(-3,5,2)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N27",
+      "o": null,
+      "tag": "added",
+      "src": "",
+      "q": [
+       "How to check whether two points are on the same or opposite sides of a plane?",
+       "दो बिन्दु समतल के एक ही ओर हैं या विपरीत ओर, यह कैसे जाँचें?"
+      ],
+      "a": [
+       [
+        "Put both points in $P=ax+by+cz+d$: same sign $\\Rightarrow$ same side, opposite signs $\\Rightarrow$ opposite sides.",
+        "दोनों बिन्दु $P=ax+by+cz+d$ में रखिए: समान चिह्न $\\Rightarrow$ एक ही ओर, विपरीत चिह्न $\\Rightarrow$ विपरीत ओर।"
+       ],
+       [
+        "Ex: $(1,1,1)$, $(-1,0,0)$ for $x+y+z-1$: $2$ and $-2$, opposite sides.",
+        "उदा: $x+y+z-1$ हेतु $(1,1,1)$, $(-1,0,0)$: $2$ व $-2$, विपरीत ओर।"
+       ]
+      ]
+     },
+     {
+      "id": "N28",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII):43",
+      "q": [
+       "How to find the angle bisector planes of two planes?",
+       "दो समतलों के कोण समद्विभाजक समतल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{a_1^2+b_1^2+c_1^2}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{a_2^2+b_2^2+c_2^2}}$",
+       [
+        "With $d_1,d_2>0$: '+' gives the bisector of the angle containing the origin; it is the acute one if $a_1a_2+b_1b_2+c_1c_2<0$.",
+        "$d_1,d_2>0$ लेकर: '+' मूलबिन्दु वाले कोण का समद्विभाजक; यह न्यून कोण वाला है यदि $a_1a_2+b_1b_2+c_1c_2<0$।"
+       ],
+       [
+        "Ex: $2x-y+2z+3=0$, $3x-2y+6z+8=0$: origin bisector $5x-y-4z-3=0$.",
+        "उदा: $2x-y+2z+3=0$, $3x-2y+6z+8=0$: मूलबिन्दु वाला समद्विभाजक $5x-y-4z-3=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "N29",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:41, J-I:45, J-I:50, J-II:32, J-A:3, J-A:50, J-M(XII):27, J-M(XII):37, J-M(XII):45, J-M(XII):117, J-M(XIII):26, J-M(XIII):55 ...",
+      "q": [
+       "How to find where a line meets a plane, and the distance of a point from a plane along a given line?",
+       "रेखा समतल से कहाँ मिलती है, तथा दी रेखा के अनुदिश समतल से बिन्दु की दूरी कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Put the general point of the line in the plane, solve for $t$. For distance along $\\vec d$: line through $P$ parallel to $\\vec d$, meet the plane at $Q$, distance $PQ$.",
+        "रेखा का व्यापक बिन्दु समतल में रखकर $t$ ज्ञात कीजिए। $\\vec d$ के अनुदिश दूरी हेतु: $P$ से $\\vec d$ के समान्तर रेखा, समतल से $Q$ पर मिलन, दूरी $PQ$।"
+       ],
+       [
+        "Ex: $\\frac{x-2}3=\\frac{y+1}4=\\frac{z-2}{12}$ meets $x-y+z=5$ at $(2,-1,2)$; its distance from $(-1,-5,-10)$ is 13.",
+        "उदा: $\\frac{x-2}3=\\frac{y+1}4=\\frac{z-2}{12}$, $x-y+z=5$ से $(2,-1,2)$ पर मिलती है; $(-1,-5,-10)$ से दूरी 13।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Family of Planes, Line of Intersection, Images",
+    "hi": "समतल कुल, प्रतिच्छेद रेखा, प्रतिबिम्ब",
+    "items": [
+     {
+      "id": "N30",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:46, J-II:38, J-II:44, J-II:45, J-A:4, J-A:19, J-M(XII):34, J-M(XII):35, J-M(XII):36, J-M(XII):38, J-M(XII):40, J-M(XII):57 ...",
+      "q": [
+       "How to write the family of planes through the line of intersection of two planes?",
+       "दो समतलों की प्रतिच्छेद रेखा से जाने वाले समतल कुल को कैसे लिखें?"
+      ],
+      "a": [
+       "$P_1+\\lambda P_2=0$",
+       [
+        "Find $\\lambda$ from the extra condition (point, parallel / perpendicular, distance). Ex: through $(1,1,1)$ for $x+y+z=1$, $2x+3y+4z=5$: $\\lambda=-\\frac12$, plane $y+2z=3$.",
+        "अतिरिक्त प्रतिबन्ध (बिन्दु, समान्तर / लम्बवत्, दूरी) से $\\lambda$ ज्ञात कीजिए। उदा: $x+y+z=1$, $2x+3y+4z=5$ हेतु $(1,1,1)$ से: $\\lambda=-\\frac12$, समतल $y+2z=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N31",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:27, J-II:42, J-II:65, J-II:70, J-A:30, J-A:45, J-A:54, J-M(XII):66, J-M(XII):94, J-M(XII):113, J-M(XIII):53, J-M(XIII):72 ...",
+      "q": [
+       "How to convert the line of intersection of two planes into symmetric form?",
+       "दो समतलों की प्रतिच्छेद रेखा को सममित रूप में कैसे बदलें?"
+      ],
+      "a": [
+       [
+        "Direction $\\vec n_1\\times\\vec n_2$; a point: put $z=0$ (or a convenient value) and solve the two equations.",
+        "दिशा $\\vec n_1\\times\\vec n_2$; एक बिन्दु: $z=0$ (या सुविधाजनक मान) रखकर दोनों समीकरण हल कीजिए।"
+       ],
+       [
+        "Ex: $x+y+z=1$, $2x+3y+4z=5$: direction $(1,-2,1)$, point $(-2,3,0)$: $\\frac{x+2}1=\\frac{y-3}{-2}=\\frac z1$.",
+        "उदा: $x+y+z=1$, $2x+3y+4z=5$: दिशा $(1,-2,1)$, बिन्दु $(-2,3,0)$: $\\frac{x+2}1=\\frac{y-3}{-2}=\\frac z1$।"
+       ]
+      ]
+     },
+     {
+      "id": "N32",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:40, J-I:48, J-II:34, J-II:39, J-II:43, J-II:52, J-A:23, J-A:47, J-M(XII):26, J-M(XII):48, J-M(XII):53, J-M(XII):104 ...",
+      "q": [
+       "How to find a plane containing a given line and a point, two given lines, or a line and parallel to another line?",
+       "दी रेखा व एक बिन्दु, दो दी रेखाएँ, या एक रेखा को समाहित कर दूसरी रेखा के समान्तर समतल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Normal $=\\vec b\\times\\overrightarrow{AP}$ (line + point $P$); $\\vec b_1\\times\\vec b_2$ (two intersecting lines, or line $\\parallel$ another line); $\\vec b\\times\\overrightarrow{A_1A_2}$ (two parallel lines). Plane passes through a point $A$ of the line.",
+        "अभिलम्ब $=\\vec b\\times\\overrightarrow{AP}$ (रेखा + बिन्दु $P$); $\\vec b_1\\times\\vec b_2$ (दो प्रतिच्छेदी रेखाएँ, या दूसरी रेखा के समान्तर); $\\vec b\\times\\overrightarrow{A_1A_2}$ (दो समान्तर रेखाएँ)। समतल रेखा के बिन्दु $A$ से जाता है।"
+       ],
+       [
+        "Ex: containing $\\frac{x-1}2=\\frac{y+1}3=\\frac z4$ and the origin: normal $(4,4,-5)$, plane $4x+4y-5z=0$.",
+        "उदा: $\\frac{x-1}2=\\frac{y+1}3=\\frac z4$ व मूलबिन्दु वाला: अभिलम्ब $(4,4,-5)$, समतल $4x+4y-5z=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "N33",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:46, J-A:8, J-A:20, J-M(XII):47, DPP-7:16",
+      "q": [
+       "How to find the image (or projection) of a line in a plane, of a line in a line, and of a plane in a plane?",
+       "किसी समतल में रेखा का प्रतिबिम्ब (या प्रक्षेप), रेखा में रेखा का, तथा समतल में समतल का प्रतिबिम्ब कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Take two points of the object (for a line meeting the plane: the meeting point + one more point), find their images (or feet) and join them; image of a plane: images of three points, or use $\\vec n$ reflected.",
+        "वस्तु के दो बिन्दु लीजिए (समतल से मिलने वाली रेखा हेतु: मिलन बिन्दु + एक अन्य बिन्दु), उनके प्रतिबिम्ब (या लम्बपाद) ज्ञात कर मिलाइए; समतल का प्रतिबिम्ब: तीन बिन्दुओं के प्रतिबिम्ब, या परावर्तित $\\vec n$।"
+       ],
+       [
+        "Line $\\parallel$ plane: the image is parallel to it, through the image of one point.",
+        "रेखा $\\parallel$ समतल: प्रतिबिम्ब उसके समान्तर, एक बिन्दु के प्रतिबिम्ब से होकर।"
+       ]
+      ]
+     },
+     {
+      "id": "N34",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:47",
+      "q": [
+       "What is the line of greatest slope and how is its direction found?",
+       "महत्तम ढाल रेखा क्या है और इसकी दिशा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\vec d=(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$",
+       [
+        "A line in the given plane $G$ perpendicular to its line of intersection with the horizontal plane $H$. Ex: $H:4x-3y+7z=0$, $G:2x+y-5z=0$, through $(2,1,1)$: DRs $3,-1,1$.",
+        "दिए समतल $G$ में वह रेखा जो क्षैतिज समतल $H$ के साथ प्रतिच्छेद रेखा के लम्बवत् हो। उदा: $H:4x-3y+7z=0$, $G:2x+y-5z=0$, $(2,1,1)$ से: दिक्-अनुपात $3,-1,1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Tetrahedron and Parallelepiped",
+    "hi": "चतुष्फलक एवं समान्तर षट्फलक",
+    "items": [
+     {
+      "id": "N35",
+      "o": null,
+      "tag": "added",
+      "src": "QB:18",
+      "q": [
+       "What are the important properties of a tetrahedron and a parallelepiped?",
+       "चतुष्फलक व समान्तर षट्फलक के महत्वपूर्ण गुणधर्म क्या हैं?"
+      ],
+      "a": [
+       [
+        "Tetrahedron: 4 vertices, 6 edges (3 pairs of opposite edges), 4 faces; centroid $\\dfrac{\\vec a+\\vec b+\\vec c+\\vec d}{4}$ = meet of lines joining mid-points of opposite edges; height = projection of a lateral edge on the normal of the base.",
+        "चतुष्फलक: 4 शीर्ष, 6 किनारे (सम्मुख किनारों के 3 युग्म), 4 फलक; केन्द्रक $\\dfrac{\\vec a+\\vec b+\\vec c+\\vec d}{4}$ = सम्मुख किनारों के मध्य बिन्दुओं को मिलाने वाली रेखाओं का मिलन; ऊँचाई = पार्श्व किनारे का आधार के अभिलम्ब पर प्रक्षेप।"
+       ],
+       [
+        "Regular tetrahedron: all faces equilateral, opposite edges perpendicular, angle between faces $\\cos^{-1}\\frac13$. Parallelepiped: 6 parallelogram faces, centre = mid-point of any diagonal.",
+        "सम चतुष्फलक: सभी फलक समबाहु, सम्मुख किनारे लम्बवत्, फलकों के बीच कोण $\\cos^{-1}\\frac13$। समान्तर षट्फलक: 6 समान्तर चतुर्भुज फलक, केन्द्र = किसी विकर्ण का मध्य बिन्दु।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Scalar Triple Product",
+    "hi": "अदिश त्रिक गुणनफल",
+    "items": [
+     {
+      "id": "N36",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:18, J-I:23, J-I:27, J-A:12, J-A:51, J-M(XII):16, J-M(XII):67, J-M(XIII):24, J-M(XIII):63, J-M(XIII):70, J-M(XIII):120, DPP-8:1 ...",
+      "q": [
+       "What is the scalar triple product and what are its properties?",
+       "अदिश त्रिक गुणनफल क्या है और इसके गुणधर्म क्या हैं?"
+      ],
+      "a": [
+       "$[\\vec a\\ \\vec b\\ \\vec c]=\\vec a\\cdot(\\vec b\\times\\vec c)=\\begin{vmatrix}a_1&a_2&a_3\\\\b_1&b_2&b_3\\\\c_1&c_2&c_3\\end{vmatrix}$",
+       [
+        "Cyclic: $[\\vec a\\vec b\\vec c]=[\\vec b\\vec c\\vec a]$, swap $\\Rightarrow$ sign changes; dot and cross can be interchanged; two equal (parallel) vectors $\\Rightarrow0$; $[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\vec b\\vec c]$; $[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\vec b\\vec c]^2$.",
+        "चक्रीय: $[\\vec a\\vec b\\vec c]=[\\vec b\\vec c\\vec a]$, अदला-बदली $\\Rightarrow$ चिह्न बदलता है; बिन्दु व क्रॉस आपस में बदल सकते हैं; दो समान (समान्तर) सदिश $\\Rightarrow0$; $[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\vec b\\vec c]$; $[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\vec b\\vec c]^2$।"
+       ],
+       [
+        "Ex: $[(1,2,3),(0,1,2),(1,0,1)]=2$.",
+        "उदा: $[(1,2,3),(0,1,2),(1,0,1)]=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "N37",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:19, J-A:40",
+      "q": [
+       "How to evaluate the product of two scalar triple products, and $[\\vec a\\ \\vec b\\ \\vec c]^2$?",
+       "दो अदिश त्रिक गुणनफलों का गुणनफल, तथा $[\\vec a\\ \\vec b\\ \\vec c]^2$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$[\\vec a\\vec b\\vec c][\\vec p\\vec q\\vec r]=\\begin{vmatrix}\\vec a\\cdot\\vec p&\\vec a\\cdot\\vec q&\\vec a\\cdot\\vec r\\\\\\vec b\\cdot\\vec p&\\vec b\\cdot\\vec q&\\vec b\\cdot\\vec r\\\\\\vec c\\cdot\\vec p&\\vec c\\cdot\\vec q&\\vec c\\cdot\\vec r\\end{vmatrix}$",
+       [
+        "Put $\\vec p,\\vec q,\\vec r=\\vec a,\\vec b,\\vec c$ for $[\\vec a\\vec b\\vec c]^2$. Ex: unit vectors with mutual angles $60^\\circ$: $[\\vec a\\vec b\\vec c]^2=\\frac12$.",
+        "$[\\vec a\\vec b\\vec c]^2$ हेतु $\\vec p,\\vec q,\\vec r=\\vec a,\\vec b,\\vec c$ रखिए। उदा: परस्पर $60^\\circ$ वाले इकाई सदिश: $[\\vec a\\vec b\\vec c]^2=\\frac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "N38",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:21, J-II:20, J-II:21, J-A:6, DPP-8:3, DPP-8:12, DPP-9:1, DPP-10:3, DPP-10:10",
+      "q": [
+       "How to find the volume of a parallelepiped and of a tetrahedron?",
+       "समान्तर षट्फलक व चतुष्फलक का आयतन कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$V_{\\text{par}}=|[\\vec a\\ \\vec b\\ \\vec c]|,\\qquad V_{\\text{tet}}=\\tfrac16|[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}]|$",
+       [
+        "Also $V_{\\text{tet}}=\\frac13(\\text{base area})(\\text{height})$. Ex: vertices $O,(1,0,0),(0,2,0),(0,0,3)$: $V=1$.",
+        "साथ ही $V_{\\text{tet}}=\\frac13 Bh$ ($B$ = आधार का क्षेत्रफल, $h$ = ऊँचाई)। उदा: शीर्ष $O,(1,0,0),(0,2,0),(0,0,3)$: $V=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "N39",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:20, J-I:24, J-I:54, J-II:66, J-A:7, J-A:48, J-A:56, J-M(XII):5, J-M(XII):6, J-M(XII):65, J-M(XII):102, J-M(XIII):5 ...",
+      "q": [
+       "How to test coplanarity of three vectors, four points or two lines?",
+       "तीन सदिशों, चार बिन्दुओं या दो रेखाओं की समतलीयता कैसे जाँचें?"
+      ],
+      "a": [
+       [
+        "Three vectors coplanar (dependent) $\\iff[\\vec a\\vec b\\vec c]=0$; points $A,B,C,D$ $\\iff[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}]=0$; lines $\\iff[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$.",
+        "तीन सदिश समतलीय (आश्रित) $\\iff[\\vec a\\vec b\\vec c]=0$; बिन्दु $A,B,C,D$ $\\iff[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}]=0$; रेखाएँ $\\iff[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$।"
+       ],
+       [
+        "Ex: $\\hat i+\\hat j+\\hat k$, $\\hat i+2\\hat j+3\\hat k$, $2\\hat i+3\\hat j+4\\hat k$: determinant $0$, coplanar.",
+        "उदा: $\\hat i+\\hat j+\\hat k$, $\\hat i+2\\hat j+3\\hat k$, $2\\hat i+3\\hat j+4\\hat k$: सारणिक $0$, समतलीय।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Vector Triple Product",
+    "hi": "सदिश त्रिक गुणनफल",
+    "items": [
+     {
+      "id": "N40",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:11, J-I:26, J-I:30, J-I:31, J-I:32, J-I:33, J-II:22, J-A:13, J-M(XII):8, J-M(XII):9, J-M(XII):30, J-M(XII):52 ...",
+      "q": [
+       "What is the vector triple product formula and how is it used?",
+       "सदिश त्रिक गुणनफल का सूत्र क्या है और इसका उपयोग कैसे होता है?"
+      ],
+      "a": [
+       "$\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$",
+       [
+        "It lies in the plane of $\\vec b,\\vec c$ and is $\\perp\\vec a$; $(\\vec a\\times\\vec b)\\times\\vec c\\ne\\vec a\\times(\\vec b\\times\\vec c)$ in general. A vector coplanar with $\\vec p,\\vec q$ and $\\perp\\vec r$: $\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$.",
+        "यह $\\vec b,\\vec c$ के समतल में व $\\vec a$ के लम्बवत् है; सामान्यतः $(\\vec a\\times\\vec b)\\times\\vec c\\ne\\vec a\\times(\\vec b\\times\\vec c)$। $\\vec p,\\vec q$ के साथ समतलीय व $\\vec r$ के लम्बवत् सदिश: $\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$।"
+       ],
+       [
+        "Ex: $\\hat i\\times(\\hat i\\times\\hat j)=-\\hat j$.",
+        "उदा: $\\hat i\\times(\\hat i\\times\\hat j)=-\\hat j$।"
+       ]
+      ]
+     },
+     {
+      "id": "N41",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:25, J-II:61, J-A:29, J-M(XII):103, J-M(XIII):3",
+      "q": [
+       "How to simplify products of four vectors?",
+       "चार सदिशों के गुणनफल को कैसे सरल करें?"
+      ],
+      "a": [
+       "$(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$",
+       "$(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)=[\\vec a\\vec b\\vec d]\\vec c-[\\vec a\\vec b\\vec c]\\vec d=[\\vec a\\vec c\\vec d]\\vec b-[\\vec b\\vec c\\vec d]\\vec a$"
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Linear Combination in Space and Vector Equations",
+    "hi": "आकाश में रैखिक संयोजन एवं सदिश समीकरण",
+    "items": [
+     {
+      "id": "N42",
+      "o": null,
+      "tag": "added",
+      "src": "J-A:14, J-A:17, J-A:52, DPP-10:1, DPP-10:9",
+      "q": [
+       "How to express a vector as a linear combination of three non-coplanar vectors?",
+       "किसी सदिश को तीन असमतलीय सदिशों के रैखिक संयोजन के रूप में कैसे व्यक्त करें?"
+      ],
+      "a": [
+       "$\\vec r=x\\vec a+y\\vec b+z\\vec c,\\quad x=\\dfrac{[\\vec r\\,\\vec b\\,\\vec c]}{[\\vec a\\,\\vec b\\,\\vec c]},\\ y=\\dfrac{[\\vec a\\,\\vec r\\,\\vec c]}{[\\vec a\\,\\vec b\\,\\vec c]},\\ z=\\dfrac{[\\vec a\\,\\vec b\\,\\vec r]}{[\\vec a\\,\\vec b\\,\\vec c]}$",
+       [
+        "(Dot with $\\vec b\\times\\vec c$ etc.; or compare components.) Reciprocal system: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\vec b\\vec c]}$, $\\vec a\\cdot\\vec a'=1$.",
+        "($\\vec b\\times\\vec c$ आदि से बिन्दु गुणन; या घटकों की तुलना।) व्युत्क्रम निकाय: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\vec b\\vec c]}$, $\\vec a\\cdot\\vec a'=1$।"
+       ],
+       [
+        "Ex: $2\\hat i+3\\hat j+4\\hat k$ with $\\hat i$, $\\hat i+\\hat j$, $\\hat i+\\hat j+\\hat k$: $x=-1,\\ y=-1,\\ z=4$.",
+        "उदा: $\\hat i$, $\\hat i+\\hat j$, $\\hat i+\\hat j+\\hat k$ से $2\\hat i+3\\hat j+4\\hat k$: $x=-1,\\ y=-1,\\ z=4$।"
+       ]
+      ]
+     },
+     {
+      "id": "N43",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:17, J-I:52, J-I:53, J-II:19, J-A:57, J-M(XII):28, J-M(XII):59, J-M(XII):92, J-M(XIII):1, J-M(XIII):6, J-M(XIII):8, J-M(XIII):15 ...",
+      "q": [
+       "How to solve a vector equation?",
+       "सदिश समीकरण कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Do not introduce new vectors; isolate the unknown; take dot or cross product of both sides with a known vector, then use VTP.",
+        "नए सदिश न लाएँ; अज्ञात को अलग करें; दोनों पक्षों का किसी ज्ञात सदिश से बिन्दु या क्रॉस गुणन कर सदिश त्रिक गुणनफल का सूत्र लगाएँ।"
+       ],
+       [
+        "Ex: $\\vec r\\times\\vec b=\\vec a\\times\\vec b$, $\\vec r\\cdot\\vec c=0$ $\\Rightarrow\\vec r=\\vec a+t\\vec b$, $t=-\\dfrac{\\vec a\\cdot\\vec c}{\\vec b\\cdot\\vec c}$.",
+        "उदा: $\\vec r\\times\\vec b=\\vec a\\times\\vec b$, $\\vec r\\cdot\\vec c=0$ $\\Rightarrow\\vec r=\\vec a+t\\vec b$, $t=-\\dfrac{\\vec a\\cdot\\vec c}{\\vec b\\cdot\\vec c}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "N44",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:8, J-A:1, J-A:24, J-A:55, J-M(XIII):69, J-M(XIII):163, DPP-5:11",
+      "q": [
+       "How to use vectors for geometric proofs and maximum / minimum problems?",
+       "ज्यामितीय उपपत्तियों व अधिकतम / न्यूनतम प्रश्नों में सदिशों का उपयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Expand squares of magnitudes with dot products and use $|\\vec v|^2\\ge0$, $|\\cos\\theta|\\le1$, $|\\sin\\theta|\\le1$ or AM-GM.",
+        "परिमाणों के वर्ग बिन्दु गुणनफल से फैलाइए और $|\\vec v|^2\\ge0$, $|\\cos\\theta|\\le1$, $|\\sin\\theta|\\le1$ या AM-GM लगाइए।"
+       ],
+       [
+        "Ex: unit $\\vec a,\\vec b,\\vec c$: $|\\vec a-\\vec b|^2+|\\vec b-\\vec c|^2+|\\vec c-\\vec a|^2=9-|\\vec a+\\vec b+\\vec c|^2\\le 9$.",
+        "उदा: इकाई $\\vec a,\\vec b,\\vec c$: $|\\vec a-\\vec b|^2+|\\vec b-\\vec c|^2+|\\vec c-\\vec a|^2=9-|\\vec a+\\vec b+\\vec c|^2\\le 9$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Vector basics",
+    "hi": "1. सदिश की मूल बातें",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\hat a=\\dfrac{\\vec a}{|\\vec a|},\\qquad |x\\hat i+y\\hat j+z\\hat k|=\\sqrt{x^2+y^2+z^2}$",
+        "$\\hat a=\\dfrac{\\vec a}{|\\vec a|},\\qquad |x\\hat i+y\\hat j+z\\hat k|=\\sqrt{x^2+y^2+z^2}$"
+       ],
+       [
+        "Vector of length $k$ along $\\vec a$: $k\\hat a$",
+        "$\\vec a$ की दिशा में $k$ लम्बाई का सदिश: $k\\hat a$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Vector = magnitude + direction; $\\vec{AB}$: tail $A$, head $B$; line of support = line $AB$",
+        "सदिश = परिमाण + दिशा; $\\vec{AB}$: पुच्छ $A$, शीर्ष $B$; आधार रेखा = रेखा $AB$"
+       ],
+       [
+        "Null vector $\\vec 0$: zero length, any direction; unit vector: $|\\hat a|=1$",
+        "शून्य सदिश $\\vec 0$: लम्बाई शून्य, दिशा कोई भी; मात्रक सदिश: $|\\hat a|=1$"
+       ],
+       [
+        "Equal vectors: same length and direction; in $\\hat i,\\hat j,\\hat k$ form compare components",
+        "समान सदिश: लम्बाई व दिशा समान; $\\hat i,\\hat j,\\hat k$ रूप में घटकों की तुलना कीजिए"
+       ],
+       [
+        "Angle between vectors: bring tails together; $0\\le\\theta\\le\\pi$",
+        "सदिशों के बीच कोण: दोनों के पुच्छ एक बिन्दु पर लाइए; $0\\le\\theta\\le\\pi$"
+       ],
+       [
+        "Collinear: $\\vec a=\\lambda\\vec b$, i.e. $\\dfrac{a_1}{b_1}=\\dfrac{a_2}{b_2}=\\dfrac{a_3}{b_3}$; like if $\\lambda>0$, unlike if $\\lambda<0$",
+        "संरेख: $\\vec a=\\lambda\\vec b$, अर्थात् $\\dfrac{a_1}{b_1}=\\dfrac{a_2}{b_2}=\\dfrac{a_3}{b_3}$; $\\lambda>0$ सजातीय, $\\lambda<0$ विजातीय"
+       ],
+       [
+        "Vector parallel to $\\vec p$: take $\\lambda\\vec p$",
+        "$\\vec p$ के समान्तर सदिश: $\\lambda\\vec p$ लीजिए"
+       ],
+       [
+        "Coplanar: lie in one plane; any two vectors are coplanar; free vectors may be shifted parallel",
+        "समतलीय: एक ही समतल में; कोई भी दो सदिश समतलीय होते हैं; मुक्त सदिश समान्तर खिसकाए जा सकते हैं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Addition and scalar multiple",
+    "hi": "2. योग व अदिश से गुणा",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$",
+        "$\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$"
+       ],
+       [
+        "Closed polygon: $\\vec{AB}+\\vec{BC}+\\vec{CA}=\\vec 0$",
+        "बन्द बहुभुज: $\\vec{AB}+\\vec{BC}+\\vec{CA}=\\vec 0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Parallelogram on $\\vec a,\\vec b$: diagonals $\\vec a+\\vec b$ and $\\vec b-\\vec a$",
+        "$\\vec a,\\vec b$ पर समान्तर चतुर्भुज: विकर्ण $\\vec a+\\vec b$ और $\\vec b-\\vec a$"
+       ],
+       [
+        "Add component-wise; additive inverse of $\\vec a$ is $-\\vec a$",
+        "घटकवार जोड़िए; $\\vec a$ का योज्य प्रतिलोम $-\\vec a$"
+       ],
+       [
+        "Right equality: $\\vec a,\\vec b$ like parallel; left equality: unlike parallel",
+        "दाईं समता: $\\vec a,\\vec b$ सजातीय समान्तर; बाईं समता: विजातीय समान्तर"
+       ],
+       [
+        "$|\\lambda\\vec a|=|\\lambda||\\vec a|$; direction kept if $\\lambda>0$, reversed if $\\lambda<0$",
+        "$|\\lambda\\vec a|=|\\lambda||\\vec a|$; $\\lambda>0$ पर दिशा वही, $\\lambda<0$ पर उलटी"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Coordinates in 3D",
+    "hi": "3. त्रिविमीय निर्देशांक",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Section: $\\vec r=\\dfrac{m\\vec b+n\\vec a}{m+n}$; centroid $\\dfrac{\\vec a+\\vec b+\\vec c}{3}$",
+        "विभाजन: $\\vec r=\\dfrac{m\\vec b+n\\vec a}{m+n}$; केन्द्रक $\\dfrac{\\vec a+\\vec b+\\vec c}{3}$"
+       ],
+       [
+        "$|AB|=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$",
+        "$|AB|=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$P(x,y,z)$ has position vector $x\\hat i+y\\hat j+z\\hat k$; $\\vec{AB}=\\vec b-\\vec a$; 8 octants by signs",
+        "$P(x,y,z)$ का स्थिति सदिश $x\\hat i+y\\hat j+z\\hat k$; $\\vec{AB}=\\vec b-\\vec a$; चिह्नों से 8 अष्टांश"
+       ],
+       [
+        "On $x$-axis: $y=z=0$; in $xy$-plane: $z=0$ (similarly others)",
+        "$x$-अक्ष पर: $y=z=0$; $xy$-समतल में: $z=0$ (अन्य इसी प्रकार)"
+       ],
+       [
+        "Distance of $P$ from $x$-axis $\\sqrt{y^2+z^2}$; from $xy$-plane $|z|$",
+        "$P$ की $x$-अक्ष से दूरी $\\sqrt{y^2+z^2}$; $xy$-समतल से $|z|$"
+       ],
+       [
+        "Foot on $xy$-plane $(x,y,0)$; foot on $x$-axis $(x,0,0)$",
+        "$xy$-समतल पर लम्बपाद $(x,y,0)$; $x$-अक्ष पर लम्बपाद $(x,0,0)$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Linear dependence in a plane",
+    "hi": "4. समतल में रैखिक आश्रितता",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec r=x\\vec a+y\\vec b$ (unique) for $\\vec a,\\vec b$ non-collinear",
+        "$\\vec a,\\vec b$ असंरेख हों तो $\\vec r=x\\vec a+y\\vec b$ (अद्वितीय)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Dependent: $x_1\\vec a_1+\\dots+x_n\\vec a_n=\\vec 0$ with some $x_i\\ne0$; else independent",
+        "आश्रित: $x_1\\vec a_1+\\dots+x_n\\vec a_n=\\vec 0$ जहाँ कोई $x_i\\ne0$; अन्यथा स्वतन्त्र"
+       ],
+       [
+        "Two vectors dependent $\\Leftrightarrow$ collinear; three $\\Leftrightarrow$ coplanar; any four in space are dependent",
+        "दो सदिश आश्रित $\\Leftrightarrow$ संरेख; तीन $\\Leftrightarrow$ समतलीय; अन्तरिक्ष में कोई भी चार आश्रित"
+       ],
+       [
+        "$x\\vec a+y\\vec b=x'\\vec a+y'\\vec b$ with $\\vec a,\\vec b$ independent $\\Rightarrow x=x',\\ y=y'$",
+        "$\\vec a,\\vec b$ स्वतन्त्र हों और $x\\vec a+y\\vec b=x'\\vec a+y'\\vec b$ तो $x=x',\\ y=y'$"
+       ],
+       [
+        "Points $\\vec a,\\vec b,\\vec c$ collinear $\\Leftrightarrow x\\vec a+y\\vec b+z\\vec c=\\vec 0$, $x+y+z=0$, not all zero",
+        "बिन्दु $\\vec a,\\vec b,\\vec c$ संरेख $\\Leftrightarrow x\\vec a+y\\vec b+z\\vec c=\\vec 0$, $x+y+z=0$, सभी शून्य नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Vector equation of a line",
+    "hi": "5. रेखा का सदिश समीकरण",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec r=\\vec a+t\\vec b,\\qquad \\vec r=\\vec a+t(\\vec b-\\vec a),\\qquad \\vec r\\times\\vec b=\\vec a\\times\\vec b$",
+        "$\\vec r=\\vec a+t\\vec b,\\qquad \\vec r=\\vec a+t(\\vec b-\\vec a),\\qquad \\vec r\\times\\vec b=\\vec a\\times\\vec b$"
+       ],
+       [
+        "Bisectors of $\\angle(\\vec a,\\vec b)$: internal $\\lambda(\\hat a+\\hat b)$, external $\\lambda(\\hat a-\\hat b)$",
+        "$\\angle(\\vec a,\\vec b)$ के समद्विभाजक: आन्तरिक $\\lambda(\\hat a+\\hat b)$, बाह्य $\\lambda(\\hat a-\\hat b)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\vec a$ = a point on the line, $\\vec b$ = direction; general point $\\vec a+t\\vec b$",
+        "$\\vec a$ = रेखा पर बिन्दु, $\\vec b$ = दिशा; व्यापक बिन्दु $\\vec a+t\\vec b$"
+       ],
+       [
+        "Two lines: equate general points; consistent $t,s$ $\\Rightarrow$ intersecting, else skew (if not parallel)",
+        "दो रेखाएँ: व्यापक बिन्दु बराबर कीजिए; $t,s$ संगत $\\Rightarrow$ प्रतिच्छेदी, अन्यथा विषमतलीय (यदि समान्तर नहीं)"
+       ],
+       [
+        "$\\vec b_1\\parallel\\vec b_2$: parallel or coincident (check a common point)",
+        "$\\vec b_1\\parallel\\vec b_2$: समान्तर या संपाती (एक उभयनिष्ठ बिन्दु जाँचिए)"
+       ],
+       [
+        "Bisector of angle $A$ in $\\triangle ABC$: $\\vec r=\\vec a+\\lambda\\left(\\dfrac{\\vec{AB}}{|\\vec{AB}|}+\\dfrac{\\vec{AC}}{|\\vec{AC}|}\\right)$",
+        "$\\triangle ABC$ में कोण $A$ का समद्विभाजक: $\\vec r=\\vec a+\\lambda\\left(\\dfrac{\\vec{AB}}{|\\vec{AB}|}+\\dfrac{\\vec{AC}}{|\\vec{AC}|}\\right)$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$\\hat a+\\hat b$ (unit vectors), not $\\vec a+\\vec b$, gives the bisector",
+        "समद्विभाजक $\\hat a+\\hat b$ (मात्रक सदिश) से, $\\vec a+\\vec b$ से नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Dot product and projection",
+    "hi": "6. अदिश गुणनफल व प्रक्षेप",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=a_1b_1+a_2b_2+a_3b_3$",
+        "$\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=a_1b_1+a_2b_2+a_3b_3$"
+       ],
+       [
+        "Projection of $\\vec a$ on $\\vec b$: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}$; vector component $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$",
+        "$\\vec a$ का $\\vec b$ पर प्रक्षेप: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}$; सदिश घटक $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\hat i\\cdot\\hat i=1$, $\\hat i\\cdot\\hat j=0$; commutative, distributive; $\\vec a\\cdot\\vec a=|\\vec a|^2$",
+        "$\\hat i\\cdot\\hat i=1$, $\\hat i\\cdot\\hat j=0$; क्रमविनिमेय, वितरणशील; $\\vec a\\cdot\\vec a=|\\vec a|^2$"
+       ],
+       [
+        "$\\vec a\\perp\\vec b\\Leftrightarrow\\vec a\\cdot\\vec b=0$; acute $\\Leftrightarrow>0$; obtuse $\\Leftrightarrow<0$ (not parallel)",
+        "$\\vec a\\perp\\vec b\\Leftrightarrow\\vec a\\cdot\\vec b=0$; न्यूनकोण $\\Leftrightarrow>0$; अधिककोण $\\Leftrightarrow<0$ (समान्तर न हों)"
+       ],
+       [
+        "$|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$",
+        "$|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$"
+       ],
+       [
+        "$\\vec a+\\vec b+\\vec c=\\vec 0\\Rightarrow\\vec a\\cdot\\vec b+\\vec b\\cdot\\vec c+\\vec c\\cdot\\vec a=-\\tfrac12\\left(|\\vec a|^2+|\\vec b|^2+|\\vec c|^2\\right)$",
+        "$\\vec a+\\vec b+\\vec c=\\vec 0\\Rightarrow\\vec a\\cdot\\vec b+\\vec b\\cdot\\vec c+\\vec c\\cdot\\vec a=-\\tfrac12\\left(|\\vec a|^2+|\\vec b|^2+|\\vec c|^2\\right)$"
+       ],
+       [
+        "Component of $\\vec a$ perpendicular to $\\vec b$: $\\vec a-\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$",
+        "$\\vec a$ का $\\vec b$ के लम्बवत् घटक: $\\vec a-\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$"
+       ],
+       [
+        "Projection of segment $AB$ on a line with DCs $l,m,n$: $|l(x_2-x_1)+m(y_2-y_1)+n(z_2-z_1)|$",
+        "दिक्-कोसाइन $l,m,n$ वाली रेखा पर $AB$ का प्रक्षेप: $|l(x_2-x_1)+m(y_2-y_1)+n(z_2-z_1)|$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Cross product and area",
+    "hi": "7. सदिश गुणनफल व क्षेत्रफल",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec a\\times\\vec b=|\\vec a||\\vec b|\\sin\\theta\\,\\hat n=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$",
+        "$\\vec a\\times\\vec b=|\\vec a||\\vec b|\\sin\\theta\\,\\hat n=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$"
+       ],
+       [
+        "$|\\vec a\\times\\vec b|^2+(\\vec a\\cdot\\vec b)^2=|\\vec a|^2|\\vec b|^2$",
+        "$|\\vec a\\times\\vec b|^2+(\\vec a\\cdot\\vec b)^2=|\\vec a|^2|\\vec b|^2$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\hat i\\times\\hat j=\\hat k$, $\\hat j\\times\\hat k=\\hat i$, $\\hat k\\times\\hat i=\\hat j$; $\\vec b\\times\\vec a=-\\vec a\\times\\vec b$",
+        "$\\hat i\\times\\hat j=\\hat k$, $\\hat j\\times\\hat k=\\hat i$, $\\hat k\\times\\hat i=\\hat j$; $\\vec b\\times\\vec a=-\\vec a\\times\\vec b$"
+       ],
+       [
+        "$\\vec a\\times\\vec b=\\vec 0\\Leftrightarrow\\vec a\\parallel\\vec b$ (or one is $\\vec 0$)",
+        "$\\vec a\\times\\vec b=\\vec 0\\Leftrightarrow\\vec a\\parallel\\vec b$ (या कोई एक $\\vec 0$)"
+       ],
+       [
+        "Unit vectors perpendicular to both: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$",
+        "दोनों के लम्बवत् मात्रक सदिश: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$"
+       ],
+       [
+        "Area: parallelogram $|\\vec a\\times\\vec b|$; triangle $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$; quadrilateral $\\tfrac12|\\vec d_1\\times\\vec d_2|$",
+        "क्षेत्रफल: समान्तर चतुर्भुज $|\\vec a\\times\\vec b|$; त्रिभुज $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$; चतुर्भुज $\\tfrac12|\\vec d_1\\times\\vec d_2|$"
+       ],
+       [
+        "$\\vec a+\\vec b+\\vec c=\\vec 0\\Rightarrow\\vec a\\times\\vec b=\\vec b\\times\\vec c=\\vec c\\times\\vec a$",
+        "$\\vec a+\\vec b+\\vec c=\\vec 0\\Rightarrow\\vec a\\times\\vec b=\\vec b\\times\\vec c=\\vec c\\times\\vec a$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Cross product is not associative; $\\vec a\\times\\vec b=\\vec a\\times\\vec c$ does not give $\\vec b=\\vec c$",
+        "सदिश गुणनफल साहचर्य नहीं; $\\vec a\\times\\vec b=\\vec a\\times\\vec c$ से $\\vec b=\\vec c$ नहीं मिलता"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Direction cosines and ratios",
+    "hi": "8. दिक्-कोसाइन व दिक्-अनुपात",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$l^2+m^2+n^2=1,\\qquad \\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1,\\qquad \\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$",
+        "$l^2+m^2+n^2=1,\\qquad \\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1,\\qquad \\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$"
+       ],
+       [
+        "$\\cos\\theta=\\dfrac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{a_1^2+b_1^2+c_1^2}\\sqrt{a_2^2+b_2^2+c_2^2}}$",
+        "$\\cos\\theta=\\dfrac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{a_1^2+b_1^2+c_1^2}\\sqrt{a_2^2+b_2^2+c_2^2}}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "DCs from DRs $a,b,c$: $\\pm\\dfrac{(a,b,c)}{\\sqrt{a^2+b^2+c^2}}$; DRs through $A,B$: $(x_2-x_1,y_2-y_1,z_2-z_1)$",
+        "दिक्-अनुपात $a,b,c$ से दिक्-कोसाइन: $\\pm\\dfrac{(a,b,c)}{\\sqrt{a^2+b^2+c^2}}$; $A,B$ से होकर दिक्-अनुपात: $(x_2-x_1,y_2-y_1,z_2-z_1)$"
+       ],
+       [
+        "Parallel: $\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$; perpendicular: $a_1a_2+b_1b_2+c_1c_2=0$",
+        "समान्तर: $\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$; लम्बवत्: $a_1a_2+b_1b_2+c_1c_2=0$"
+       ],
+       [
+        "Equal angles with the axes: DCs $\\pm\\tfrac1{\\sqrt3}(1,1,1)$",
+        "अक्षों से समान कोण: दिक्-कोसाइन $\\pm\\tfrac1{\\sqrt3}(1,1,1)$"
+       ],
+       [
+        "Two linear and quadratic relations in $l,m,n$: eliminate one, solve the ratio",
+        "$l,m,n$ में एक रैखिक व एक द्विघात सम्बन्ध: एक का विलोपन कर अनुपात हल कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Line in Cartesian form",
+    "hi": "9. रेखा का कार्तीय रूप",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=t,\\qquad \\dfrac{x-x_1}{x_2-x_1}=\\dfrac{y-y_1}{y_2-y_1}=\\dfrac{z-z_1}{z_2-z_1}$",
+        "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=t,\\qquad \\dfrac{x-x_1}{x_2-x_1}=\\dfrac{y-y_1}{y_2-y_1}=\\dfrac{z-z_1}{z_2-z_1}$"
+       ],
+       [
+        "Distance of $P$ from $\\vec r=\\vec a+t\\vec b$: $\\dfrac{|(\\vec p-\\vec a)\\times\\vec b|}{|\\vec b|}$",
+        "$\\vec r=\\vec a+t\\vec b$ से $P$ की दूरी: $\\dfrac{|(\\vec p-\\vec a)\\times\\vec b|}{|\\vec b|}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Line through a point perpendicular to $\\vec b_1,\\vec b_2$: direction $\\vec b_1\\times\\vec b_2$",
+        "$\\vec b_1,\\vec b_2$ दोनों के लम्बवत् रेखा: दिशा $\\vec b_1\\times\\vec b_2$"
+       ],
+       [
+        "Points at distance $r$ on the line: $(x_1+lr,\\,y_1+mr,\\,z_1+nr)$ with DCs $l,m,n$",
+        "रेखा पर $r$ दूरी के बिन्दु: $(x_1+lr,\\,y_1+mr,\\,z_1+nr)$, दिक्-कोसाइन $l,m,n$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Foot of perpendicular: take $Q(x_1+at,\\,y_1+bt,\\,z_1+ct)$",
+        "लम्बपाद: $Q(x_1+at,\\,y_1+bt,\\,z_1+ct)$ लीजिए"
+       ],
+       [
+        "Put $\\vec{PQ}\\cdot(a,b,c)=0$, find $t$",
+        "$\\vec{PQ}\\cdot(a,b,c)=0$ रखकर $t$ ज्ञात कीजिए"
+       ],
+       [
+        "Image $P'=2Q-P$; distance $=PQ$",
+        "प्रतिबिम्ब $P'=2Q-P$; दूरी $=PQ$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "A zero denominator means that coordinate is constant, not division by zero",
+        "शून्य हर का अर्थ: वह निर्देशांक अचर है, शून्य से भाग नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Two lines: intersect, skew, shortest distance",
+    "hi": "10. दो रेखाएँ: प्रतिच्छेदी, विषमतलीय, न्यूनतम दूरी",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$d=\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$",
+        "$d=\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$"
+       ],
+       [
+        "Parallel lines: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$",
+        "समान्तर रेखाएँ: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Intersect (coplanar) $\\Leftrightarrow\\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\\\a_1&b_1&c_1\\\\a_2&b_2&c_2\\end{vmatrix}=0$, lines not parallel",
+        "प्रतिच्छेदी (समतलीय) $\\Leftrightarrow\\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\\\a_1&b_1&c_1\\\\a_2&b_2&c_2\\end{vmatrix}=0$, रेखाएँ समान्तर न हों"
+       ],
+       [
+        "Skew: neither parallel nor intersecting $\\Leftrightarrow d>0$ and $\\vec b_1\\times\\vec b_2\\ne\\vec 0$",
+        "विषमतलीय: न समान्तर, न प्रतिच्छेदी $\\Leftrightarrow d>0$ और $\\vec b_1\\times\\vec b_2\\ne\\vec 0$"
+       ],
+       [
+        "SD line is along $\\vec b_1\\times\\vec b_2$; its feet: $\\vec{PQ}\\cdot\\vec b_1=\\vec{PQ}\\cdot\\vec b_2=0$ with general points",
+        "न्यूनतम दूरी रेखा $\\vec b_1\\times\\vec b_2$ की दिशा में; पाद: व्यापक बिन्दुओं से $\\vec{PQ}\\cdot\\vec b_1=\\vec{PQ}\\cdot\\vec b_2=0$"
+       ],
+       [
+        "Point of intersection: equate general points, solve two equations, check the third",
+        "प्रतिच्छेद बिन्दु: व्यापक बिन्दु बराबर कर दो समीकरण हल कीजिए, तीसरा जाँचिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Equation of a plane",
+    "hi": "11. समतल का समीकरण",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec r\\cdot\\hat n=d,\\qquad (\\vec r-\\vec a)\\cdot\\vec n=0,\\qquad ax+by+cz+d=0,\\qquad \\dfrac xa+\\dfrac yb+\\dfrac zc=1$",
+        "$\\vec r\\cdot\\hat n=d,\\qquad (\\vec r-\\vec a)\\cdot\\vec n=0,\\qquad ax+by+cz+d=0,\\qquad \\dfrac xa+\\dfrac yb+\\dfrac zc=1$"
+       ],
+       [
+        "Through three points: $\\begin{vmatrix}x-x_1&y-y_1&z-z_1\\\\x_2-x_1&y_2-y_1&z_2-z_1\\\\x_3-x_1&y_3-y_1&z_3-z_1\\end{vmatrix}=0$",
+        "तीन बिन्दुओं से: $\\begin{vmatrix}x-x_1&y-y_1&z-z_1\\\\x_2-x_1&y_2-y_1&z_2-z_1\\\\x_3-x_1&y_3-y_1&z_3-z_1\\end{vmatrix}=0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$(a,b,c)$ = DRs of the normal; in $\\vec r\\cdot\\hat n=d$, $d\\ge0$ is the distance from $O$",
+        "$(a,b,c)$ = अभिलम्ब के दिक्-अनुपात; $\\vec r\\cdot\\hat n=d$ में $d\\ge0$ मूल बिन्दु से दूरी"
+       ],
+       [
+        "Through $\\vec a$ parallel to $\\vec b,\\vec c$: $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$, i.e. $[\\vec r-\\vec a\\ \\ \\vec b\\ \\ \\vec c]=0$",
+        "$\\vec a$ से $\\vec b,\\vec c$ के समान्तर: $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$, अर्थात् $[\\vec r-\\vec a\\ \\ \\vec b\\ \\ \\vec c]=0$"
+       ],
+       [
+        "Through $A,B$ perpendicular to a plane with normal $\\vec n$: normal $\\vec{AB}\\times\\vec n$",
+        "$A,B$ से होकर, अभिलम्ब $\\vec n$ वाले समतल के लम्बवत्: अभिलम्ब $\\vec{AB}\\times\\vec n$"
+       ],
+       [
+        "Parallel to $yz$-plane: $x=k$; containing $x$-axis: $by+cz=0$; parallel to $x$-axis: $by+cz+d=0$",
+        "$yz$-समतल के समान्तर: $x=k$; $x$-अक्ष युक्त: $by+cz=0$; $x$-अक्ष के समान्तर: $by+cz+d=0$"
+       ],
+       [
+        "Intercepts $a,b,c$: area of the triangle cut $\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$",
+        "अन्तःखण्ड $a,b,c$: कटे त्रिभुज का क्षेत्रफल $\\tfrac12\\sqrt{a^2b^2+b^2c^2+c^2a^2}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Angles with planes",
+    "hi": "12. समतलों से सम्बन्धित कोण",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Two planes: $\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}$",
+        "दो समतल: $\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}$"
+       ],
+       [
+        "Line and plane: $\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$",
+        "रेखा व समतल: $\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Planes parallel: $\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$; perpendicular: $a_1a_2+b_1b_2+c_1c_2=0$",
+        "समतल समान्तर: $\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$; लम्बवत्: $a_1a_2+b_1b_2+c_1c_2=0$"
+       ],
+       [
+        "Line parallel to plane: $\\vec b\\cdot\\vec n=0$; line perpendicular to plane: $\\vec b\\parallel\\vec n$",
+        "रेखा समतल के समान्तर: $\\vec b\\cdot\\vec n=0$; रेखा समतल के लम्बवत्: $\\vec b\\parallel\\vec n$"
+       ],
+       [
+        "Line lies in plane: $\\vec b\\cdot\\vec n=0$ and one point of the line satisfies the plane",
+        "रेखा समतल में: $\\vec b\\cdot\\vec n=0$ और रेखा का एक बिन्दु समतल को सन्तुष्ट करे"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Line-plane angle uses $\\sin$ (normal makes $90^\\circ-\\theta$)",
+        "रेखा-समतल कोण में $\\sin$ (अभिलम्ब $90^\\circ-\\theta$ बनाता है)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Distance, foot, image, bisector planes",
+    "hi": "13. दूरी, लम्बपाद, प्रतिबिम्ब, कोण समद्विभाजक समतल",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$p=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}},\\qquad d_{\\parallel}=\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$",
+        "$p=\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}},\\qquad d_{\\parallel}=\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$"
+       ],
+       [
+        "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-k\\,\\dfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2}$",
+        "$\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-k\\,\\dfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2}$"
+       ],
+       [
+        "$k=1$: foot; $k=2$: image",
+        "$k=1$: लम्बपाद; $k=2$: प्रतिबिम्ब"
+       ],
+       [
+        "$\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{a_1^2+b_1^2+c_1^2}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{a_2^2+b_2^2+c_2^2}}$",
+        "$\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{a_1^2+b_1^2+c_1^2}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{a_2^2+b_2^2+c_2^2}}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Parallel-plane distance: make $a,b,c$ identical first",
+        "समान्तर समतलों की दूरी: पहले $a,b,c$ समान कीजिए"
+       ],
+       [
+        "$P,Q$ same side $\\Leftrightarrow ax+by+cz+d$ has the same sign at both",
+        "$P,Q$ एक ही ओर $\\Leftrightarrow ax+by+cz+d$ का चिह्न दोनों पर समान"
+       ],
+       [
+        "With $d_1,d_2>0$: the $+$ sign gives the bisector containing the origin",
+        "$d_1,d_2>0$ लेकर: $+$ चिह्न मूल बिन्दु वाला समद्विभाजक देता है"
+       ],
+       [
+        "Then $a_1a_2+b_1b_2+c_1c_2>0$: origin bisector is obtuse; $<0$: acute",
+        "तब $a_1a_2+b_1b_2+c_1c_2>0$: मूल बिन्दु वाला अधिककोण समद्विभाजक; $<0$: न्यूनकोण"
+       ],
+       [
+        "Line meets plane: put the general point of the line in the plane, solve for $t$",
+        "रेखा और समतल का प्रतिच्छेद: रेखा का व्यापक बिन्दु समतल में रखकर $t$ हल कीजिए"
+       ],
+       [
+        "Distance from plane measured along a line: go along that line to the plane, then measure",
+        "किसी रेखा के अनुदिश समतल से दूरी: उसी रेखा के अनुदिश समतल तक जाकर दूरी मापिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Family of planes, line of intersection, images",
+    "hi": "14. समतल कुल, प्रतिच्छेद रेखा, प्रतिबिम्ब",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Through $P_1=0,\\ P_2=0$: $P_1+\\lambda P_2=0$; line direction $\\vec n_1\\times\\vec n_2$",
+        "$P_1=0,\\ P_2=0$ से होकर: $P_1+\\lambda P_2=0$; रेखा की दिशा $\\vec n_1\\times\\vec n_2$"
+       ],
+       [
+        "Line of greatest slope: direction $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$",
+        "महत्तम ढाल रेखा: दिशा $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Unsymmetrical to symmetric form: direction $\\vec n_1\\times\\vec n_2$, a point by putting $z=0$ (or $x=0$)",
+        "असममित से सममित रूप: दिशा $\\vec n_1\\times\\vec n_2$, $z=0$ (या $x=0$) रखकर एक बिन्दु"
+       ],
+       [
+        "Plane containing line ($\\vec a,\\vec b$) and point $\\vec p$: normal $(\\vec p-\\vec a)\\times\\vec b$",
+        "रेखा ($\\vec a,\\vec b$) व बिन्दु $\\vec p$ युक्त समतल: अभिलम्ब $(\\vec p-\\vec a)\\times\\vec b$"
+       ],
+       [
+        "Two intersecting lines, or a line parallel to another: normal $\\vec b_1\\times\\vec b_2$; two parallel lines: $(\\vec a_2-\\vec a_1)\\times\\vec b$",
+        "दो प्रतिच्छेदी रेखाएँ, या एक रेखा दूसरी के समान्तर: अभिलम्ब $\\vec b_1\\times\\vec b_2$; दो समान्तर रेखाएँ: $(\\vec a_2-\\vec a_1)\\times\\vec b$"
+       ],
+       [
+        "Image of a line in a plane: meeting point and image of one more point (parallel line: image of one point, same direction)",
+        "समतल में रेखा का प्रतिबिम्ब: प्रतिच्छेद बिन्दु व एक अन्य बिन्दु का प्रतिबिम्ब (समान्तर रेखा: एक बिन्दु का प्रतिबिम्ब, वही दिशा)"
+       ],
+       [
+        "Projection of a line on a plane: use feet instead of images; image of a line in a line: images of two points",
+        "समतल पर रेखा का प्रक्षेप: प्रतिबिम्ब के स्थान पर लम्बपाद; रेखा में रेखा का प्रतिबिम्ब: दो बिन्दुओं के प्रतिबिम्ब"
+       ],
+       [
+        "Image of plane $P_1$ in $P_2$: $P_1+\\lambda P_2=0$ through the image of a point of $P_1$ (parallel: equal distance on the other side)",
+        "$P_2$ में समतल $P_1$ का प्रतिबिम्ब: $P_1$ के एक बिन्दु के प्रतिबिम्ब से होकर $P_1+\\lambda P_2=0$ (समान्तर: दूसरी ओर समान दूरी पर)"
+       ],
+       [
+        "Greatest slope line lies in the given plane $G$ and is perpendicular to its meet with the horizontal plane $H$",
+        "महत्तम ढाल रेखा दिए समतल $G$ में है और क्षैतिज समतल $H$ के साथ उसकी प्रतिच्छेद रेखा के लम्बवत् है"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$P_1+\\lambda P_2=0$ misses $P_2$ itself; check it separately",
+        "$P_1+\\lambda P_2=0$ में $P_2$ स्वयं नहीं आता; उसे अलग से जाँचिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Scalar triple product, volume, tetrahedron",
+    "hi": "15. अदिश त्रिक गुणनफल, आयतन, चतुष्फलक",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$[\\vec a\\ \\vec b\\ \\vec c]=\\vec a\\cdot(\\vec b\\times\\vec c)=\\begin{vmatrix}a_1&a_2&a_3\\\\b_1&b_2&b_3\\\\c_1&c_2&c_3\\end{vmatrix}$",
+        "$[\\vec a\\ \\vec b\\ \\vec c]=\\vec a\\cdot(\\vec b\\times\\vec c)=\\begin{vmatrix}a_1&a_2&a_3\\\\b_1&b_2&b_3\\\\c_1&c_2&c_3\\end{vmatrix}$"
+       ],
+       [
+        "Volume: parallelepiped $|[\\vec a\\ \\vec b\\ \\vec c]|$; tetrahedron $\\tfrac16|[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]|$",
+        "आयतन: समान्तर षट्फलक $|[\\vec a\\ \\vec b\\ \\vec c]|$; चतुष्फलक $\\tfrac16|[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]|$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Cyclic: $[\\vec a\\ \\vec b\\ \\vec c]=[\\vec b\\ \\vec c\\ \\vec a]$; swapping two changes sign; dot and cross interchange",
+        "चक्रीय: $[\\vec a\\ \\vec b\\ \\vec c]=[\\vec b\\ \\vec c\\ \\vec a]$; दो बदलने पर चिह्न बदलता है; बिन्दु व क्रॉस परस्पर बदल सकते हैं"
+       ],
+       [
+        "Two equal (or parallel) vectors $\\Rightarrow$ STP $=0$; $[\\lambda\\vec a\\ \\vec b\\ \\vec c]=\\lambda[\\vec a\\ \\vec b\\ \\vec c]$",
+        "दो समान (या समान्तर) सदिश $\\Rightarrow$ अदिश त्रिक गुणनफल $=0$; $[\\lambda\\vec a\\ \\vec b\\ \\vec c]=\\lambda[\\vec a\\ \\vec b\\ \\vec c]$"
+       ],
+       [
+        "$[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\ \\vec b\\ \\vec c]$; $[\\vec a-\\vec b\\ \\ \\vec b-\\vec c\\ \\ \\vec c-\\vec a]=0$",
+        "$[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\ \\vec b\\ \\vec c]$; $[\\vec a-\\vec b\\ \\ \\vec b-\\vec c\\ \\ \\vec c-\\vec a]=0$"
+       ],
+       [
+        "$[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\ \\vec b\\ \\vec c]^2$; $[\\vec a\\ \\vec b\\ \\vec c]^2$ = Gram determinant of dot products",
+        "$[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\ \\vec b\\ \\vec c]^2$; $[\\vec a\\ \\vec b\\ \\vec c]^2$ = बिन्दु गुणनफलों का ग्राम सारणिक"
+       ],
+       [
+        "$[\\vec a\\ \\vec b\\ \\vec c][\\vec p\\ \\vec q\\ \\vec r]=\\det(\\text{dot products } \\vec a\\cdot\\vec p,\\dots)$",
+        "$[\\vec a\\ \\vec b\\ \\vec c][\\vec p\\ \\vec q\\ \\vec r]$ = बिन्दु गुणनफलों $\\vec a\\cdot\\vec p,\\dots$ का सारणिक"
+       ],
+       [
+        "Coplanar $\\vec a,\\vec b,\\vec c$ (dependent) $\\Leftrightarrow[\\vec a\\ \\vec b\\ \\vec c]=0$; four points: $[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]=0$",
+        "$\\vec a,\\vec b,\\vec c$ समतलीय (आश्रित) $\\Leftrightarrow[\\vec a\\ \\vec b\\ \\vec c]=0$; चार बिन्दु: $[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]=0$"
+       ],
+       [
+        "Tetrahedron: centroid $\\dfrac{\\vec a+\\vec b+\\vec c+\\vec d}{4}$; height = projection of an edge on the face normal",
+        "चतुष्फलक: केन्द्रक $\\dfrac{\\vec a+\\vec b+\\vec c+\\vec d}{4}$; ऊँचाई = फलक के अभिलम्ब पर कोर का प्रक्षेप"
+       ],
+       [
+        "Regular tetrahedron, edge $a$: $V=\\dfrac{a^3}{6\\sqrt2}$, height $a\\sqrt{\\tfrac23}$, angle between faces $\\cos^{-1}\\tfrac13$, opposite edges perpendicular",
+        "नियमित चतुष्फलक, कोर $a$: $V=\\dfrac{a^3}{6\\sqrt2}$, ऊँचाई $a\\sqrt{\\tfrac23}$, फलकों के बीच कोण $\\cos^{-1}\\tfrac13$, सम्मुख कोर लम्बवत्"
+       ],
+       [
+        "$\\vec{AB}\\cdot\\vec{CD}+\\vec{AC}\\cdot\\vec{DB}+\\vec{AD}\\cdot\\vec{BC}=0$: two pairs of opposite edges perpendicular $\\Rightarrow$ third pair too",
+        "$\\vec{AB}\\cdot\\vec{CD}+\\vec{AC}\\cdot\\vec{DB}+\\vec{AD}\\cdot\\vec{BC}=0$: सम्मुख कोरों के दो युग्म लम्बवत् $\\Rightarrow$ तीसरा भी"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Vector triple product and four vectors",
+    "hi": "16. सदिश त्रिक गुणनफल व चार सदिश",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c,\\qquad (\\vec a\\times\\vec b)\\times\\vec c=(\\vec a\\cdot\\vec c)\\vec b-(\\vec b\\cdot\\vec c)\\vec a$",
+        "$\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c,\\qquad (\\vec a\\times\\vec b)\\times\\vec c=(\\vec a\\cdot\\vec c)\\vec b-(\\vec b\\cdot\\vec c)\\vec a$"
+       ],
+       [
+        "$(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$",
+        "$(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$"
+       ],
+       [
+        "$(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)=[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d=[\\vec a\\ \\vec c\\ \\vec d]\\vec b-[\\vec b\\ \\vec c\\ \\vec d]\\vec a$",
+        "$(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)=[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d=[\\vec a\\ \\vec c\\ \\vec d]\\vec b-[\\vec b\\ \\vec c\\ \\vec d]\\vec a$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\vec a\\times(\\vec b\\times\\vec c)$ lies in the plane of $\\vec b,\\vec c$ and is $\\perp\\vec a$",
+        "$\\vec a\\times(\\vec b\\times\\vec c)$, $\\vec b,\\vec c$ के समतल में और $\\vec a$ के लम्बवत्"
+       ],
+       [
+        "VTP is not associative: equal only if $\\vec a,\\vec c$ parallel or $\\vec b\\perp\\vec a,\\vec c$",
+        "सदिश त्रिक गुणनफल साहचर्य नहीं: समान केवल जब $\\vec a,\\vec c$ समान्तर या $\\vec b\\perp\\vec a,\\vec c$"
+       ],
+       [
+        "Vector in plane of $\\vec p,\\vec q$ and $\\perp\\vec r$: $\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$",
+        "$\\vec p,\\vec q$ के समतल में और $\\vec r$ के लम्बवत् सदिश: $\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$"
+       ],
+       [
+        "$\\hat i\\times(\\vec a\\times\\hat i)+\\hat j\\times(\\vec a\\times\\hat j)+\\hat k\\times(\\vec a\\times\\hat k)=2\\vec a$",
+        "$\\hat i\\times(\\vec a\\times\\hat i)+\\hat j\\times(\\vec a\\times\\hat j)+\\hat k\\times(\\vec a\\times\\hat k)=2\\vec a$"
+       ],
+       [
+        "$(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)$ lies along the meet of the planes of $\\vec a,\\vec b$ and $\\vec c,\\vec d$",
+        "$(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)$, $\\vec a,\\vec b$ तथा $\\vec c,\\vec d$ के समतलों की प्रतिच्छेद रेखा के अनुदिश"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "17. Linear combination in space and vector equations",
+    "hi": "17. अन्तरिक्ष में रैखिक संयोजन व सदिश समीकरण",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\vec r=x\\vec a+y\\vec b+z\\vec c,\\quad x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]},\\ y=\\dfrac{[\\vec a\\ \\vec r\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]},\\ z=\\dfrac{[\\vec a\\ \\vec b\\ \\vec r]}{[\\vec a\\ \\vec b\\ \\vec c]}$",
+        "$\\vec r=x\\vec a+y\\vec b+z\\vec c,\\quad x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]},\\ y=\\dfrac{[\\vec a\\ \\vec r\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]},\\ z=\\dfrac{[\\vec a\\ \\vec b\\ \\vec r]}{[\\vec a\\ \\vec b\\ \\vec c]}$"
+       ],
+       [
+        "Reciprocal: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\ \\vec b\\ \\vec c]}$ (cyclic); $\\vec r=(\\vec r\\cdot\\vec a')\\vec a+(\\vec r\\cdot\\vec b')\\vec b+(\\vec r\\cdot\\vec c')\\vec c$",
+        "व्युत्क्रम निकाय: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\ \\vec b\\ \\vec c]}$ (चक्रीय); $\\vec r=(\\vec r\\cdot\\vec a')\\vec a+(\\vec r\\cdot\\vec b')\\vec b+(\\vec r\\cdot\\vec c')\\vec c$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Needs $\\vec a,\\vec b,\\vec c$ non-coplanar; coefficients are unique",
+        "$\\vec a,\\vec b,\\vec c$ असमतलीय चाहिए; गुणांक अद्वितीय"
+       ],
+       [
+        "$\\vec a\\cdot\\vec a'=1$, $\\vec a\\cdot\\vec b'=0$; $[\\vec a'\\ \\vec b'\\ \\vec c']=\\dfrac1{[\\vec a\\ \\vec b\\ \\vec c]}$",
+        "$\\vec a\\cdot\\vec a'=1$, $\\vec a\\cdot\\vec b'=0$; $[\\vec a'\\ \\vec b'\\ \\vec c']=\\dfrac1{[\\vec a\\ \\vec b\\ \\vec c]}$"
+       ],
+       [
+        "Extremum: $|\\vec a-\\vec b|^2+|\\vec b-\\vec c|^2+|\\vec c-\\vec a|^2=3\\sum|\\vec a|^2-|\\vec a+\\vec b+\\vec c|^2$ ($\\le9$ for unit vectors)",
+        "अधिकतम-न्यूनतम: $|\\vec a-\\vec b|^2+|\\vec b-\\vec c|^2+|\\vec c-\\vec a|^2=3\\sum|\\vec a|^2-|\\vec a+\\vec b+\\vec c|^2$ (मात्रक सदिशों हेतु $\\le9$)"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Isolate the unknown; dot with a vector to kill a cross term, cross to bring in a VTP",
+        "अज्ञात को अलग कीजिए; क्रॉस पद हटाने हेतु बिन्दु गुणन, सदिश त्रिक गुणनफल लाने हेतु क्रॉस गुणन"
+       ],
+       [
+        "$\\vec r\\times\\vec a=\\vec b$ ($\\vec a\\cdot\\vec b=0$): $\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$",
+        "$\\vec r\\times\\vec a=\\vec b$ ($\\vec a\\cdot\\vec b=0$): $\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$"
+       ],
+       [
+        "$\\vec r\\cdot\\vec a=p,\\ \\vec r\\times\\vec b=\\vec c$: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\,\\vec b}{\\vec a\\cdot\\vec b}$",
+        "$\\vec r\\cdot\\vec a=p,\\ \\vec r\\times\\vec b=\\vec c$: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\,\\vec b}{\\vec a\\cdot\\vec b}$"
+       ],
+       [
+        "$\\vec x+\\vec a\\times\\vec x=\\vec b$: $\\vec x=\\dfrac{\\vec b+(\\vec a\\cdot\\vec b)\\vec a-\\vec a\\times\\vec b}{1+|\\vec a|^2}$",
+        "$\\vec x+\\vec a\\times\\vec x=\\vec b$: $\\vec x=\\dfrac{\\vec b+(\\vec a\\cdot\\vec b)\\vec a-\\vec a\\times\\vec b}{1+|\\vec a|^2}$"
+       ],
+       [
+        "Else write $\\vec r=x\\vec a+y\\vec b+z(\\vec a\\times\\vec b)$ and compare",
+        "अन्यथा $\\vec r=x\\vec a+y\\vec b+z(\\vec a\\times\\vec b)$ लिखकर तुलना कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "18. Common mistakes",
+    "hi": "18. सामान्य गलतियाँ",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Using DRs as DCs without dividing by $\\sqrt{a^2+b^2+c^2}$",
+        "$\\sqrt{a^2+b^2+c^2}$ से भाग दिए बिना दिक्-अनुपात को दिक्-कोसाइन मानना"
+       ],
+       [
+        "Taking $\\cos$ for the line-plane angle (it is $\\sin$)",
+        "रेखा-समतल कोण में $\\cos$ लेना (यह $\\sin$ है)"
+       ],
+       [
+        "Distance between parallel planes without equalising $a,b,c$",
+        "$a,b,c$ समान किए बिना समान्तर समतलों की दूरी"
+       ],
+       [
+        "Skew-line SD formula used for parallel lines ($\\vec b_1\\times\\vec b_2=\\vec 0$)",
+        "समान्तर रेखाओं ($\\vec b_1\\times\\vec b_2=\\vec 0$) पर विषमतलीय न्यूनतम दूरी सूत्र लगाना"
+       ],
+       [
+        "Sign slip in $\\vec a\\times(\\vec b\\times\\vec c)$ vs $(\\vec a\\times\\vec b)\\times\\vec c$",
+        "$\\vec a\\times(\\vec b\\times\\vec c)$ बनाम $(\\vec a\\times\\vec b)\\times\\vec c$ में चिह्न की भूल"
+       ],
+       [
+        "Forgetting $\\tfrac16$ for a tetrahedron, $\\tfrac12$ for a triangle, and the modulus for volume",
+        "चतुष्फलक में $\\tfrac16$, त्रिभुज में $\\tfrac12$ और आयतन में मापांक भूलना"
+       ],
+       [
+        "Bisector-plane rule applied before making both constants $d_1,d_2$ positive",
+        "दोनों अचर $d_1,d_2$ धनात्मक किए बिना समद्विभाजक समतल नियम लगाना"
+       ],
+       [
+        "Equating ratios with a zero denominator, or dropping $\\pm$ in unit vectors",
+        "शून्य हर वाले अनुपातों को बराबर करना, या मात्रक सदिश में $\\pm$ छोड़ना"
+       ],
+       [
+        "Two lines with non-parallel directions assumed to intersect (check STP)",
+        "असमान्तर दिशाओं वाली रेखाओं को प्रतिच्छेदी मान लेना (अदिश त्रिक गुणनफल जाँचिए)"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "Vector basics",
+    "hi": "सदिश की मूल बातें",
+    "lines": [
+     [
+      "Unit vector: $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$",
+      "मात्रक सदिश: $\\hat a=\\dfrac{\\vec a}{|\\vec a|}$"
+     ],
+     [
+      "Magnitude: $|x\\hat i+y\\hat j+z\\hat k|=\\sqrt{x^2+y^2+z^2}$",
+      "परिमाण: $|x\\hat i+y\\hat j+z\\hat k|=\\sqrt{x^2+y^2+z^2}$"
+     ],
+     [
+      "Given length $k$: $k\\hat a$",
+      "दी गई लम्बाई $k$: $k\\hat a$"
+     ],
+     [
+      "Collinear: $\\vec a=\\lambda\\vec b\\Leftrightarrow\\dfrac{a_1}{b_1}=\\dfrac{a_2}{b_2}=\\dfrac{a_3}{b_3}$",
+      "संरेख: $\\vec a=\\lambda\\vec b\\Leftrightarrow\\dfrac{a_1}{b_1}=\\dfrac{a_2}{b_2}=\\dfrac{a_3}{b_3}$"
+     ],
+     [
+      "Triangle inequality: $\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$",
+      "त्रिभुज असमिका: $\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$"
+     ],
+     [
+      "Section: $\\vec r=\\dfrac{m\\vec b+n\\vec a}{m+n}$",
+      "विभाजन: $\\vec r=\\dfrac{m\\vec b+n\\vec a}{m+n}$"
+     ],
+     [
+      "Centroid: $\\dfrac{\\vec a+\\vec b+\\vec c}{3}$",
+      "केन्द्रक: $\\dfrac{\\vec a+\\vec b+\\vec c}{3}$"
+     ],
+     [
+      "From $x$-axis: $\\sqrt{y^2+z^2}$",
+      "$x$-अक्ष से: $\\sqrt{y^2+z^2}$"
+     ],
+     [
+      "Collinear points: $x\\vec a+y\\vec b+z\\vec c=\\vec 0,\\ x+y+z=0$",
+      "संरेख बिन्दु: $x\\vec a+y\\vec b+z\\vec c=\\vec 0,\\ x+y+z=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Dot and cross product",
+    "hi": "अदिश व सदिश गुणनफल",
+    "lines": [
+     [
+      "Dot: $\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=a_1b_1+a_2b_2+a_3b_3$",
+      "बिन्दु गुणनफल: $\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=a_1b_1+a_2b_2+a_3b_3$"
+     ],
+     [
+      "Projection: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}$",
+      "प्रक्षेप: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|}$"
+     ],
+     [
+      "Component along $\\vec b$: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$",
+      "$\\vec b$ के अनुदिश घटक: $\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$"
+     ],
+     [
+      "Expansion: $|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$",
+      "प्रसार: $|\\vec a\\pm\\vec b|^2=|\\vec a|^2+|\\vec b|^2\\pm2\\vec a\\cdot\\vec b$"
+     ],
+     [
+      "Cross: $\\vec a\\times\\vec b=|\\vec a||\\vec b|\\sin\\theta\\,\\hat n$",
+      "क्रॉस गुणनफल: $\\vec a\\times\\vec b=|\\vec a||\\vec b|\\sin\\theta\\,\\hat n$"
+     ],
+     [
+      "Determinant: $\\vec a\\times\\vec b=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$",
+      "सारणिक: $\\vec a\\times\\vec b=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$"
+     ],
+     [
+      "Lagrange: $|\\vec a\\times\\vec b|^2+(\\vec a\\cdot\\vec b)^2=|\\vec a|^2|\\vec b|^2$",
+      "लग्रांज: $|\\vec a\\times\\vec b|^2+(\\vec a\\cdot\\vec b)^2=|\\vec a|^2|\\vec b|^2$"
+     ],
+     [
+      "Unit normal: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$",
+      "मात्रक लम्ब: $\\pm\\dfrac{\\vec a\\times\\vec b}{|\\vec a\\times\\vec b|}$"
+     ],
+     [
+      "Triangle area: $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$",
+      "त्रिभुज क्षेत्रफल: $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$"
+     ],
+     [
+      "Quadrilateral area: $\\tfrac12|\\vec d_1\\times\\vec d_2|$",
+      "चतुर्भुज क्षेत्रफल: $\\tfrac12|\\vec d_1\\times\\vec d_2|$"
+     ],
+     [
+      "Angle bisectors: $\\lambda(\\hat a+\\hat b),\\ \\lambda(\\hat a-\\hat b)$",
+      "कोण समद्विभाजक: $\\lambda(\\hat a+\\hat b),\\ \\lambda(\\hat a-\\hat b)$"
+     ]
+    ]
+   },
+   {
+    "en": "Direction cosines and lines",
+    "hi": "दिक्-कोसाइन व रेखाएँ",
+    "lines": [
+     [
+      "DC identity: $l^2+m^2+n^2=1$",
+      "दिक्-कोसाइन सर्वसमिका: $l^2+m^2+n^2=1$"
+     ],
+     [
+      "Sines: $\\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$",
+      "ज्या: $\\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma=2$"
+     ],
+     [
+      "DC from DR: $\\dfrac{\\pm(a,b,c)}{\\sqrt{a^2+b^2+c^2}}$",
+      "दिक्-अनुपात से दिक्-कोसाइन: $\\dfrac{\\pm(a,b,c)}{\\sqrt{a^2+b^2+c^2}}$"
+     ],
+     [
+      "Angle: $\\cos\\theta=\\dfrac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{\\sum a_1^2}\\sqrt{\\sum a_2^2}}$",
+      "कोण: $\\cos\\theta=\\dfrac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{\\sum a_1^2}\\sqrt{\\sum a_2^2}}$"
+     ],
+     [
+      "Vector line: $\\vec r=\\vec a+t\\vec b$, $\\ \\vec r\\times\\vec b=\\vec a\\times\\vec b$",
+      "सदिश रेखा: $\\vec r=\\vec a+t\\vec b$, $\\ \\vec r\\times\\vec b=\\vec a\\times\\vec b$"
+     ],
+     [
+      "Symmetric: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}$",
+      "सममित: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}$"
+     ],
+     [
+      "Two-point: $\\dfrac{x-x_1}{x_2-x_1}=\\dfrac{y-y_1}{y_2-y_1}=\\dfrac{z-z_1}{z_2-z_1}$",
+      "दो-बिन्दु: $\\dfrac{x-x_1}{x_2-x_1}=\\dfrac{y-y_1}{y_2-y_1}=\\dfrac{z-z_1}{z_2-z_1}$"
+     ],
+     [
+      "Point-line distance: $\\dfrac{|(\\vec p-\\vec a)\\times\\vec b|}{|\\vec b|}$",
+      "बिन्दु-रेखा दूरी: $\\dfrac{|(\\vec p-\\vec a)\\times\\vec b|}{|\\vec b|}$"
+     ],
+     [
+      "SD skew: $\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$",
+      "विषमतलीय न्यूनतम दूरी: $\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$"
+     ],
+     [
+      "SD parallel: $\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$",
+      "समान्तर न्यूनतम दूरी: $\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$"
+     ],
+     [
+      "Intersect: $[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$",
+      "प्रतिच्छेदी: $[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Plane",
+    "hi": "समतल",
+    "lines": [
+     [
+      "Normal form: $\\vec r\\cdot\\hat n=d$",
+      "अभिलम्ब रूप: $\\vec r\\cdot\\hat n=d$"
+     ],
+     [
+      "Point-normal: $a(x-x_1)+b(y-y_1)+c(z-z_1)=0$",
+      "बिन्दु-अभिलम्ब: $a(x-x_1)+b(y-y_1)+c(z-z_1)=0$"
+     ],
+     [
+      "Intercept: $\\dfrac xa+\\dfrac yb+\\dfrac zc=1$",
+      "अन्तःखण्ड: $\\dfrac xa+\\dfrac yb+\\dfrac zc=1$"
+     ],
+     [
+      "Parametric: $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$",
+      "प्राचलिक: $\\vec r=\\vec a+\\lambda\\vec b+\\mu\\vec c$"
+     ],
+     [
+      "Three points: $[\\vec r-\\vec a\\ \\ \\vec b-\\vec a\\ \\ \\vec c-\\vec a]=0$",
+      "तीन बिन्दु: $[\\vec r-\\vec a\\ \\ \\vec b-\\vec a\\ \\ \\vec c-\\vec a]=0$"
+     ],
+     [
+      "Planes angle: $\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}$",
+      "समतलों का कोण: $\\cos\\theta=\\dfrac{|\\vec n_1\\cdot\\vec n_2|}{|\\vec n_1||\\vec n_2|}$"
+     ],
+     [
+      "Line-plane angle: $\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$",
+      "रेखा-समतल कोण: $\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$"
+     ],
+     [
+      "Line in plane: $\\vec b\\cdot\\vec n=0,\\ \\vec a\\cdot\\vec n=d$",
+      "रेखा समतल में: $\\vec b\\cdot\\vec n=0,\\ \\vec a\\cdot\\vec n=d$"
+     ]
+    ]
+   },
+   {
+    "en": "Distance, foot, image",
+    "hi": "दूरी, लम्बपाद, प्रतिबिम्ब",
+    "lines": [
+     [
+      "Point-plane: $\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$",
+      "बिन्दु-समतल: $\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$"
+     ],
+     [
+      "Parallel planes: $\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$",
+      "समान्तर समतल: $\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$"
+     ],
+     [
+      "Foot: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-\\dfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2}$",
+      "लम्बपाद: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-\\dfrac{ax_1+by_1+cz_1+d}{a^2+b^2+c^2}$"
+     ],
+     [
+      "Image: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-\\dfrac{2(ax_1+by_1+cz_1+d)}{a^2+b^2+c^2}$",
+      "प्रतिबिम्ब: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=-\\dfrac{2(ax_1+by_1+cz_1+d)}{a^2+b^2+c^2}$"
+     ],
+     [
+      "Same side: $P_1(x_1)\\,P_1(x_2)>0$",
+      "एक ही ओर: $P_1(x_1)\\,P_1(x_2)>0$"
+     ],
+     [
+      "Bisector planes: $\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{\\sum a_1^2}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{\\sum a_2^2}}$",
+      "समद्विभाजक समतल: $\\dfrac{a_1x+b_1y+c_1z+d_1}{\\sqrt{\\sum a_1^2}}=\\pm\\dfrac{a_2x+b_2y+c_2z+d_2}{\\sqrt{\\sum a_2^2}}$"
+     ],
+     [
+      "Origin bisector obtuse: $d_1,d_2>0,\\ a_1a_2+b_1b_2+c_1c_2>0$",
+      "मूल बिन्दु समद्विभाजक अधिककोण: $d_1,d_2>0,\\ a_1a_2+b_1b_2+c_1c_2>0$"
+     ]
+    ]
+   },
+   {
+    "en": "Family, intersection, images",
+    "hi": "कुल, प्रतिच्छेद, प्रतिबिम्ब",
+    "lines": [
+     [
+      "Family: $P_1+\\lambda P_2=0$",
+      "समतल कुल: $P_1+\\lambda P_2=0$"
+     ],
+     [
+      "Line of intersection: $\\vec b=\\vec n_1\\times\\vec n_2$",
+      "प्रतिच्छेद रेखा: $\\vec b=\\vec n_1\\times\\vec n_2$"
+     ],
+     [
+      "Line and point: $\\vec n=(\\vec p-\\vec a)\\times\\vec b$",
+      "रेखा व बिन्दु: $\\vec n=(\\vec p-\\vec a)\\times\\vec b$"
+     ],
+     [
+      "Two lines: $[\\vec r-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$",
+      "दो रेखाएँ: $[\\vec r-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$"
+     ],
+     [
+      "Parallel lines: $\\vec n=(\\vec a_2-\\vec a_1)\\times\\vec b$",
+      "समान्तर रेखाएँ: $\\vec n=(\\vec a_2-\\vec a_1)\\times\\vec b$"
+     ],
+     [
+      "Greatest slope: $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$",
+      "महत्तम ढाल: $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$"
+     ]
+    ]
+   },
+   {
+    "en": "Triple products",
+    "hi": "त्रिक गुणनफल",
+    "lines": [
+     [
+      "STP: $[\\vec a\\ \\vec b\\ \\vec c]=\\vec a\\cdot(\\vec b\\times\\vec c)$",
+      "अदिश त्रिक गुणनफल: $[\\vec a\\ \\vec b\\ \\vec c]=\\vec a\\cdot(\\vec b\\times\\vec c)$"
+     ],
+     [
+      "Sum identity: $[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\ \\vec b\\ \\vec c]$",
+      "योग सर्वसमिका: $[\\vec a+\\vec b\\ \\ \\vec b+\\vec c\\ \\ \\vec c+\\vec a]=2[\\vec a\\ \\vec b\\ \\vec c]$"
+     ],
+     [
+      "Cross identity: $[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\ \\vec b\\ \\vec c]^2$",
+      "क्रॉस सर्वसमिका: $[\\vec a\\times\\vec b\\ \\ \\vec b\\times\\vec c\\ \\ \\vec c\\times\\vec a]=[\\vec a\\ \\vec b\\ \\vec c]^2$"
+     ],
+     [
+      "Gram: $[\\vec a\\ \\vec b\\ \\vec c]^2=\\begin{vmatrix}\\vec a\\cdot\\vec a&\\vec a\\cdot\\vec b&\\vec a\\cdot\\vec c\\\\\\vec b\\cdot\\vec a&\\vec b\\cdot\\vec b&\\vec b\\cdot\\vec c\\\\\\vec c\\cdot\\vec a&\\vec c\\cdot\\vec b&\\vec c\\cdot\\vec c\\end{vmatrix}$",
+      "ग्राम: $[\\vec a\\ \\vec b\\ \\vec c]^2=\\begin{vmatrix}\\vec a\\cdot\\vec a&\\vec a\\cdot\\vec b&\\vec a\\cdot\\vec c\\\\\\vec b\\cdot\\vec a&\\vec b\\cdot\\vec b&\\vec b\\cdot\\vec c\\\\\\vec c\\cdot\\vec a&\\vec c\\cdot\\vec b&\\vec c\\cdot\\vec c\\end{vmatrix}$"
+     ],
+     [
+      "Parallelepiped: $V=|[\\vec a\\ \\vec b\\ \\vec c]|$",
+      "समान्तर षट्फलक: $V=|[\\vec a\\ \\vec b\\ \\vec c]|$"
+     ],
+     [
+      "Tetrahedron: $V=\\tfrac16|[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]|$",
+      "चतुष्फलक: $V=\\tfrac16|[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]|$"
+     ],
+     [
+      "Regular tetrahedron: $V=\\dfrac{a^3}{6\\sqrt2},\\ h=a\\sqrt{\\tfrac23}$",
+      "नियमित चतुष्फलक: $V=\\dfrac{a^3}{6\\sqrt2},\\ h=a\\sqrt{\\tfrac23}$"
+     ],
+     [
+      "Coplanar: $[\\vec a\\ \\vec b\\ \\vec c]=0$",
+      "समतलीय: $[\\vec a\\ \\vec b\\ \\vec c]=0$"
+     ],
+     [
+      "VTP: $\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$",
+      "सदिश त्रिक गुणनफल: $\\vec a\\times(\\vec b\\times\\vec c)=(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$"
+     ],
+     [
+      "Dot of crosses: $(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$",
+      "क्रॉस का बिन्दु गुणनफल: $(\\vec a\\times\\vec b)\\cdot(\\vec c\\times\\vec d)=(\\vec a\\cdot\\vec c)(\\vec b\\cdot\\vec d)-(\\vec a\\cdot\\vec d)(\\vec b\\cdot\\vec c)$"
+     ],
+     [
+      "Cross of crosses: $(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)=[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d$",
+      "क्रॉस का क्रॉस गुणनफल: $(\\vec a\\times\\vec b)\\times(\\vec c\\times\\vec d)=[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d$"
+     ]
+    ]
+   },
+   {
+    "en": "Linear combination and equations",
+    "hi": "रैखिक संयोजन व समीकरण",
+    "lines": [
+     [
+      "Coefficient: $x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]}$",
+      "गुणांक: $x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]}$"
+     ],
+     [
+      "Reciprocal: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\ \\vec b\\ \\vec c]},\\ [\\vec a'\\ \\vec b'\\ \\vec c'][\\vec a\\ \\vec b\\ \\vec c]=1$",
+      "व्युत्क्रम: $\\vec a'=\\dfrac{\\vec b\\times\\vec c}{[\\vec a\\ \\vec b\\ \\vec c]},\\ [\\vec a'\\ \\vec b'\\ \\vec c'][\\vec a\\ \\vec b\\ \\vec c]=1$"
+     ],
+     [
+      "$\\vec r\\times\\vec a=\\vec b$: $\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$",
+      "$\\vec r\\times\\vec a=\\vec b$: $\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$"
+     ],
+     [
+      "$\\vec r\\cdot\\vec a=p,\\ \\vec r\\times\\vec b=\\vec c$: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\vec b}{\\vec a\\cdot\\vec b}$",
+      "$\\vec r\\cdot\\vec a=p,\\ \\vec r\\times\\vec b=\\vec c$: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\vec b}{\\vec a\\cdot\\vec b}$"
+     ],
+     [
+      "$\\vec x+\\vec a\\times\\vec x=\\vec b$: $\\vec x=\\dfrac{\\vec b+(\\vec a\\cdot\\vec b)\\vec a-\\vec a\\times\\vec b}{1+|\\vec a|^2}$",
+      "$\\vec x+\\vec a\\times\\vec x=\\vec b$: $\\vec x=\\dfrac{\\vec b+(\\vec a\\cdot\\vec b)\\vec a-\\vec a\\times\\vec b}{1+|\\vec a|^2}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Vector basics",
+    "hi": "सदिश की मूल बातें",
+    "leaves": [
+     [
+      "$\\hat a=\\vec a/|\\vec a|$",
+      "$\\hat a=\\vec a/|\\vec a|$"
+     ],
+     [
+      "Collinear: $\\vec a=\\lambda\\vec b$",
+      "संरेख: $\\vec a=\\lambda\\vec b$"
+     ],
+     [
+      "Angle $0\\le\\theta\\le\\pi$, tails together",
+      "कोण $0\\le\\theta\\le\\pi$, पुच्छ एक साथ"
+     ]
+    ]
+   },
+   {
+    "en": "Addition",
+    "hi": "योग",
+    "leaves": [
+     [
+      "Closed figure sum $=\\vec 0$",
+      "बन्द आकृति का योग $=\\vec 0$"
+     ],
+     [
+      "Diagonals $\\vec a+\\vec b,\\ \\vec b-\\vec a$",
+      "विकर्ण $\\vec a+\\vec b,\\ \\vec b-\\vec a$"
+     ],
+     [
+      "$|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$",
+      "$|\\vec a+\\vec b|\\le|\\vec a|+|\\vec b|$"
+     ]
+    ]
+   },
+   {
+    "en": "3D coordinates",
+    "hi": "त्रिविमीय निर्देशांक",
+    "leaves": [
+     [
+      "Section $\\dfrac{m\\vec b+n\\vec a}{m+n}$",
+      "विभाजन $\\dfrac{m\\vec b+n\\vec a}{m+n}$"
+     ],
+     [
+      "From $x$-axis $\\sqrt{y^2+z^2}$",
+      "$x$-अक्ष से $\\sqrt{y^2+z^2}$"
+     ]
+    ]
+   },
+   {
+    "en": "Linear dependence",
+    "hi": "रैखिक आश्रितता",
+    "leaves": [
+     [
+      "Plane: $\\vec r=x\\vec a+y\\vec b$",
+      "समतल: $\\vec r=x\\vec a+y\\vec b$"
+     ],
+     [
+      "Independent: compare coefficients",
+      "स्वतन्त्र: गुणांकों की तुलना"
+     ],
+     [
+      "Collinear points: $\\sum x=0$",
+      "संरेख बिन्दु: $\\sum x=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Dot product",
+    "hi": "अदिश गुणनफल",
+    "leaves": [
+     [
+      "$|\\vec a||\\vec b|\\cos\\theta$; $\\perp\\Leftrightarrow0$",
+      "$|\\vec a||\\vec b|\\cos\\theta$; $\\perp\\Leftrightarrow0$"
+     ],
+     [
+      "Projection $\\vec a\\cdot\\hat b$",
+      "प्रक्षेप $\\vec a\\cdot\\hat b$"
+     ],
+     [
+      "$|\\vec a\\pm\\vec b|^2$ expansion",
+      "$|\\vec a\\pm\\vec b|^2$ का प्रसार"
+     ]
+    ]
+   },
+   {
+    "en": "Cross product",
+    "hi": "सदिश गुणनफल",
+    "leaves": [
+     [
+      "Determinant; $\\parallel\\Leftrightarrow\\vec 0$",
+      "सारणिक; $\\parallel\\Leftrightarrow\\vec 0$"
+     ],
+     [
+      "Area $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$",
+      "क्षेत्रफल $\\tfrac12|\\vec{AB}\\times\\vec{AC}|$"
+     ],
+     [
+      "Lagrange identity",
+      "लग्रांज सर्वसमिका"
+     ]
+    ]
+   },
+   {
+    "en": "DC and DR",
+    "hi": "दिक्-कोसाइन व दिक्-अनुपात",
+    "leaves": [
+     [
+      "$l^2+m^2+n^2=1$",
+      "$l^2+m^2+n^2=1$"
+     ],
+     [
+      "Divide DR by $\\sqrt{a^2+b^2+c^2}$",
+      "दिक्-अनुपात को $\\sqrt{a^2+b^2+c^2}$ से भाग"
+     ],
+     [
+      "$\\cos\\theta=|\\vec b_1\\cdot\\vec b_2|/(|\\vec b_1||\\vec b_2|)$",
+      "$\\cos\\theta=|\\vec b_1\\cdot\\vec b_2|/(|\\vec b_1||\\vec b_2|)$"
+     ]
+    ]
+   },
+   {
+    "en": "Line",
+    "hi": "रेखा",
+    "leaves": [
+     [
+      "$\\vec r=\\vec a+t\\vec b$; general point",
+      "$\\vec r=\\vec a+t\\vec b$; व्यापक बिन्दु"
+     ],
+     [
+      "Foot: $\\vec{PQ}\\cdot\\vec b=0$",
+      "लम्बपाद: $\\vec{PQ}\\cdot\\vec b=0$"
+     ],
+     [
+      "Bisector $\\hat a+\\hat b$",
+      "समद्विभाजक $\\hat a+\\hat b$"
+     ]
+    ]
+   },
+   {
+    "en": "Two lines",
+    "hi": "दो रेखाएँ",
+    "leaves": [
+     [
+      "Intersect: STP $=0$",
+      "प्रतिच्छेदी: अदिश त्रिक गुणनफल $=0$"
+     ],
+     [
+      "SD $\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$",
+      "न्यूनतम दूरी $\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$"
+     ],
+     [
+      "Parallel: $\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$",
+      "समान्तर: $\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$"
+     ]
+    ]
+   },
+   {
+    "en": "Plane forms",
+    "hi": "समतल के रूप",
+    "leaves": [
+     [
+      "$\\vec r\\cdot\\hat n=d$; $ax+by+cz+d=0$",
+      "$\\vec r\\cdot\\hat n=d$; $ax+by+cz+d=0$"
+     ],
+     [
+      "Three points: determinant",
+      "तीन बिन्दु: सारणिक"
+     ],
+     [
+      "Intercept $\\tfrac xa+\\tfrac yb+\\tfrac zc=1$",
+      "अन्तःखण्ड $\\tfrac xa+\\tfrac yb+\\tfrac zc=1$"
+     ]
+    ]
+   },
+   {
+    "en": "Angles",
+    "hi": "कोण",
+    "leaves": [
+     [
+      "Plane-plane: $\\cos$ of normals",
+      "समतल-समतल: अभिलम्बों का $\\cos$"
+     ],
+     [
+      "Line-plane: $\\sin\\theta$",
+      "रेखा-समतल: $\\sin\\theta$"
+     ],
+     [
+      "Line in plane: $\\vec b\\cdot\\vec n=0$ + point",
+      "रेखा समतल में: $\\vec b\\cdot\\vec n=0$ + बिन्दु"
+     ]
+    ]
+   },
+   {
+    "en": "Distance and image",
+    "hi": "दूरी व प्रतिबिम्ब",
+    "leaves": [
+     [
+      "$\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$",
+      "$\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$"
+     ],
+     [
+      "Foot $k=1$, image $k=2$",
+      "लम्बपाद $k=1$, प्रतिबिम्ब $k=2$"
+     ],
+     [
+      "Bisector planes: $d_1,d_2>0$",
+      "समद्विभाजक समतल: $d_1,d_2>0$"
+     ]
+    ]
+   },
+   {
+    "en": "Family and intersection",
+    "hi": "कुल व प्रतिच्छेद",
+    "leaves": [
+     [
+      "$P_1+\\lambda P_2=0$",
+      "$P_1+\\lambda P_2=0$"
+     ],
+     [
+      "Direction $\\vec n_1\\times\\vec n_2$",
+      "दिशा $\\vec n_1\\times\\vec n_2$"
+     ],
+     [
+      "Image of line: two points",
+      "रेखा का प्रतिबिम्ब: दो बिन्दु"
+     ],
+     [
+      "Greatest slope $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$",
+      "महत्तम ढाल $(\\vec n_H\\times\\vec n_G)\\times\\vec n_G$"
+     ]
+    ]
+   },
+   {
+    "en": "Scalar triple product",
+    "hi": "अदिश त्रिक गुणनफल",
+    "leaves": [
+     [
+      "Determinant, cyclic",
+      "सारणिक, चक्रीय"
+     ],
+     [
+      "Volume $|[\\vec a\\ \\vec b\\ \\vec c]|$, $\\tfrac16$ tetrahedron",
+      "आयतन $|[\\vec a\\ \\vec b\\ \\vec c]|$, चतुष्फलक $\\tfrac16$"
+     ],
+     [
+      "$=0\\Leftrightarrow$ coplanar",
+      "$=0\\Leftrightarrow$ समतलीय"
+     ]
+    ]
+   },
+   {
+    "en": "Vector triple product",
+    "hi": "सदिश त्रिक गुणनफल",
+    "leaves": [
+     [
+      "$(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$",
+      "$(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$"
+     ],
+     [
+      "Four vectors: dot / cross of crosses",
+      "चार सदिश: क्रॉस का बिन्दु / क्रॉस"
+     ],
+     [
+      "In plane of $\\vec p,\\vec q$, $\\perp\\vec r$: $\\vec r\\times(\\vec p\\times\\vec q)$",
+      "$\\vec p,\\vec q$ के समतल में, $\\perp\\vec r$: $\\vec r\\times(\\vec p\\times\\vec q)$"
+     ]
+    ]
+   },
+   {
+    "en": "Space combination, equations",
+    "hi": "अन्तरिक्ष संयोजन, समीकरण",
+    "leaves": [
+     [
+      "$x=[\\vec r\\ \\vec b\\ \\vec c]/[\\vec a\\ \\vec b\\ \\vec c]$",
+      "$x=[\\vec r\\ \\vec b\\ \\vec c]/[\\vec a\\ \\vec b\\ \\vec c]$"
+     ],
+     [
+      "Reciprocal $\\vec a'=\\vec b\\times\\vec c/[\\vec a\\ \\vec b\\ \\vec c]$",
+      "व्युत्क्रम $\\vec a'=\\vec b\\times\\vec c/[\\vec a\\ \\vec b\\ \\vec c]$"
+     ],
+     [
+      "Dot or cross with a known vector",
+      "ज्ञात सदिश से बिन्दु या क्रॉस गुणन"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Finding a vector with given conditions",
+    "प्रवाह-चित्र 1: दी गई शर्तों वाला सदिश ज्ञात करना"
+   ],
+   "start": [
+    "A vector with some conditions is asked",
+    "कुछ शर्तों वाला सदिश पूछा है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Given length along a direction?",
+      "किसी दिशा में दी गई लम्बाई?"
+     ],
+     "a": [
+      [
+       "$k\\hat a$ (both signs if direction is a line)."
+      ],
+      [
+       "$k\\hat a$ (दिशा रेखा हो तो दोनों चिह्न)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Perpendicular to two vectors?",
+      "दो सदिशों के लम्बवत्?"
+     ],
+     "a": [
+      [
+       "$\\lambda(\\vec a\\times\\vec b)$."
+      ],
+      [
+       "$\\lambda(\\vec a\\times\\vec b)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Along an angle bisector?",
+      "कोण समद्विभाजक के अनुदिश?"
+     ],
+     "a": [
+      [
+       "$\\lambda(\\hat a+\\hat b)$ internal, $\\lambda(\\hat a-\\hat b)$ external."
+      ],
+      [
+       "आन्तरिक $\\lambda(\\hat a+\\hat b)$, बाह्य $\\lambda(\\hat a-\\hat b)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "In plane of $\\vec p,\\vec q$ and $\\perp\\vec r$?",
+      "$\\vec p,\\vec q$ के समतल में व $\\perp\\vec r$?"
+     ],
+     "a": [
+      [
+       "$\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$."
+      ],
+      [
+       "$\\lambda\\,\\vec r\\times(\\vec p\\times\\vec q)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "In plane of $\\vec a,\\vec b$ with dot conditions?",
+      "$\\vec a,\\vec b$ के समतल में, बिन्दु गुणनफल शर्तें?"
+     ],
+     "a": [
+      [
+       "$x\\vec a+y\\vec b$; use the conditions."
+      ],
+      [
+       "$x\\vec a+y\\vec b$; शर्तें लगाइए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Component along / perpendicular to $\\vec b$?",
+      "$\\vec b$ के अनुदिश / लम्बवत् घटक?"
+     ],
+     "a": [
+      [
+       "$\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$ and the remainder."
+      ],
+      [
+       "$\\dfrac{\\vec a\\cdot\\vec b}{|\\vec b|^2}\\vec b$ और शेष भाग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three dot products with $\\vec a,\\vec b,\\vec c$ known?",
+      "$\\vec a,\\vec b,\\vec c$ से तीन बिन्दु गुणनफल ज्ञात?"
+     ],
+     "a": [
+      [
+       "Reciprocal system: $\\vec r=\\sum(\\vec r\\cdot\\vec a)\\vec a'$."
+      ],
+      [
+       "व्युत्क्रम निकाय: $\\vec r=\\sum(\\vec r\\cdot\\vec a)\\vec a'$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Take $x\\hat i+y\\hat j+z\\hat k$ and form three equations."
+    ],
+    [
+     "$x\\hat i+y\\hat j+z\\hat k$ लेकर तीन समीकरण बनाइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Two lines - relation and shortest distance",
+    "प्रवाह-चित्र 2: दो रेखाएँ - सम्बन्ध व न्यूनतम दूरी"
+   ],
+   "start": [
+    "Two lines are given",
+    "दो रेखाएँ दी हैं"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Unsymmetrical (two planes) form?",
+      "असममित (दो समतल) रूप?"
+     ],
+     "a": [
+      [
+       "Convert: direction $\\vec n_1\\times\\vec n_2$, put $z=0$."
+      ],
+      [
+       "बदलिए: दिशा $\\vec n_1\\times\\vec n_2$, $z=0$ रखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\vec b_1\\parallel\\vec b_2$ and common point?",
+      "$\\vec b_1\\parallel\\vec b_2$ व उभयनिष्ठ बिन्दु?"
+     ],
+     "a": [
+      [
+       "Coincident."
+      ],
+      [
+       "संपाती।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\vec b_1\\parallel\\vec b_2$ only?",
+      "केवल $\\vec b_1\\parallel\\vec b_2$?"
+     ],
+     "a": [
+      [
+       "Parallel: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$."
+      ],
+      [
+       "समान्तर: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\times\\vec b|}{|\\vec b|}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$?",
+      "$[\\vec a_2-\\vec a_1\\ \\ \\vec b_1\\ \\ \\vec b_2]=0$?"
+     ],
+     "a": [
+      [
+       "Intersecting; equate general points for the point."
+      ],
+      [
+       "प्रतिच्छेदी; बिन्दु हेतु व्यापक बिन्दु बराबर कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Feet / line of SD asked?",
+      "न्यूनतम दूरी के पाद / रेखा पूछी?"
+     ],
+     "a": [
+      [
+       "General points $P,Q$; $\\vec{PQ}\\cdot\\vec b_1=\\vec{PQ}\\cdot\\vec b_2=0$."
+      ],
+      [
+       "व्यापक बिन्दु $P,Q$; $\\vec{PQ}\\cdot\\vec b_1=\\vec{PQ}\\cdot\\vec b_2=0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Parameter for which lines meet?",
+      "रेखाएँ मिलें, ऐसा प्राचल?"
+     ],
+     "a": [
+      [
+       "Put the determinant $=0$; reject parallel case."
+      ],
+      [
+       "सारणिक $=0$ रखिए; समान्तर स्थिति हटाइए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Skew: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$."
+    ],
+    [
+     "विषमतलीय: $d=\\dfrac{|(\\vec a_2-\\vec a_1)\\cdot(\\vec b_1\\times\\vec b_2)|}{|\\vec b_1\\times\\vec b_2|}$।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Equation of a plane",
+    "प्रवाह-चित्र 3: समतल का समीकरण"
+   ],
+   "start": [
+    "Equation of a plane is asked",
+    "समतल का समीकरण पूछा है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Point and normal known?",
+      "बिन्दु व अभिलम्ब ज्ञात?"
+     ],
+     "a": [
+      [
+       "$(\\vec r-\\vec a)\\cdot\\vec n=0$."
+      ],
+      [
+       "$(\\vec r-\\vec a)\\cdot\\vec n=0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three points known?",
+      "तीन बिन्दु ज्ञात?"
+     ],
+     "a": [
+      [
+       "Determinant form, or normal $\\vec{AB}\\times\\vec{AC}$."
+      ],
+      [
+       "सारणिक रूप, या अभिलम्ब $\\vec{AB}\\times\\vec{AC}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Point and two parallel directions?",
+      "बिन्दु व दो समान्तर दिशाएँ?"
+     ],
+     "a": [
+      [
+       "Normal $\\vec b\\times\\vec c$."
+      ],
+      [
+       "अभिलम्ब $\\vec b\\times\\vec c$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Intercepts or distance from origin?",
+      "अन्तःखण्ड या मूल बिन्दु से दूरी?"
+     ],
+     "a": [
+      [
+       "$\\dfrac xa+\\dfrac yb+\\dfrac zc=1$ or $\\vec r\\cdot\\hat n=d$."
+      ],
+      [
+       "$\\dfrac xa+\\dfrac yb+\\dfrac zc=1$ या $\\vec r\\cdot\\hat n=d$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Through the meet of two planes?",
+      "दो समतलों के प्रतिच्छेद से?"
+     ],
+     "a": [
+      [
+       "$P_1+\\lambda P_2=0$; one more condition gives $\\lambda$."
+      ],
+      [
+       "$P_1+\\lambda P_2=0$; एक और शर्त से $\\lambda$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Contains a line and a point / a second line?",
+      "एक रेखा व बिन्दु / दूसरी रेखा युक्त?"
+     ],
+     "a": [
+      [
+       "Normal $(\\vec p-\\vec a)\\times\\vec b$ or $\\vec b_1\\times\\vec b_2$."
+      ],
+      [
+       "अभिलम्ब $(\\vec p-\\vec a)\\times\\vec b$ या $\\vec b_1\\times\\vec b_2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two points, perpendicular to a plane?",
+      "दो बिन्दु, किसी समतल के लम्बवत्?"
+     ],
+     "a": [
+      [
+       "Normal $\\vec{AB}\\times\\vec n$."
+      ],
+      [
+       "अभिलम्ब $\\vec{AB}\\times\\vec n$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Bisector / image of a plane?",
+      "समद्विभाजक / समतल का प्रतिबिम्ब?"
+     ],
+     "a": [
+      [
+       "Equal distances formula; image: $P_1+\\lambda P_2=0$."
+      ],
+      [
+       "समान दूरी सूत्र; प्रतिबिम्ब: $P_1+\\lambda P_2=0$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Take $ax+by+cz+d=0$ and apply the conditions."
+    ],
+    [
+     "$ax+by+cz+d=0$ लेकर शर्तें लगाइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Distance, foot and image",
+    "प्रवाह-चित्र 4: दूरी, लम्बपाद व प्रतिबिम्ब"
+   ],
+   "start": [
+    "A distance, foot or image is asked",
+    "दूरी, लम्बपाद या प्रतिबिम्ब पूछा है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Point and plane?",
+      "बिन्दु व समतल?"
+     ],
+     "a": [
+      [
+       "$\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$; foot $k=1$, image $k=2$."
+      ],
+      [
+       "$\\dfrac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$; लम्बपाद $k=1$, प्रतिबिम्ब $k=2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two parallel planes?",
+      "दो समान्तर समतल?"
+     ],
+     "a": [
+      [
+       "Equalise $a,b,c$; $\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$."
+      ],
+      [
+       "$a,b,c$ समान कीजिए; $\\dfrac{|d_1-d_2|}{\\sqrt{a^2+b^2+c^2}}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Point and line?",
+      "बिन्दु व रेखा?"
+     ],
+     "a": [
+      [
+       "General point $Q$, $\\vec{PQ}\\cdot\\vec b=0$; image $2Q-P$."
+      ],
+      [
+       "व्यापक बिन्दु $Q$, $\\vec{PQ}\\cdot\\vec b=0$; प्रतिबिम्ब $2Q-P$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Distance along a given line?",
+      "दी गई रेखा के अनुदिश दूरी?"
+     ],
+     "a": [
+      [
+       "Line through $P$ in that direction meets the plane; measure."
+      ],
+      [
+       "$P$ से उस दिशा की रेखा का समतल से प्रतिच्छेद; दूरी मापिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two lines?",
+      "दो रेखाएँ?"
+     ],
+     "a": [
+      [
+       "Use Flowchart 2."
+      ],
+      [
+       "प्रवाह-चित्र 2 देखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Image / projection of a line?",
+      "रेखा का प्रतिबिम्ब / प्रक्षेप?"
+     ],
+     "a": [
+      [
+       "Images (feet) of two points of the line."
+      ],
+      [
+       "रेखा के दो बिन्दुओं के प्रतिबिम्ब (लम्बपाद)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Line parallel to plane: distance?",
+      "समतल के समान्तर रेखा: दूरी?"
+     ],
+     "a": [
+      [
+       "Distance of any point of the line."
+      ],
+      [
+       "रेखा के किसी भी बिन्दु की दूरी।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Distance from axes / coordinate planes: $\\sqrt{y^2+z^2}$, $|z|$."
+    ],
+    [
+     "अक्षों / निर्देशांक समतलों से दूरी: $\\sqrt{y^2+z^2}$, $|z|$।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Angle problems",
+    "प्रवाह-चित्र 5: कोण के प्रश्न"
+   ],
+   "start": [
+    "An angle is asked",
+    "कोण पूछा है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Between two vectors?",
+      "दो सदिशों के बीच?"
+     ],
+     "a": [
+      [
+       "$\\cos\\theta=\\dfrac{\\vec a\\cdot\\vec b}{|\\vec a||\\vec b|}$, $0\\le\\theta\\le\\pi$."
+      ],
+      [
+       "$\\cos\\theta=\\dfrac{\\vec a\\cdot\\vec b}{|\\vec a||\\vec b|}$, $0\\le\\theta\\le\\pi$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only $|\\vec a\\times\\vec b|$ known?",
+      "केवल $|\\vec a\\times\\vec b|$ ज्ञात?"
+     ],
+     "a": [
+      [
+       "$\\sin\\theta=\\dfrac{|\\vec a\\times\\vec b|}{|\\vec a||\\vec b|}$; both $\\theta,\\pi-\\theta$."
+      ],
+      [
+       "$\\sin\\theta=\\dfrac{|\\vec a\\times\\vec b|}{|\\vec a||\\vec b|}$; $\\theta,\\pi-\\theta$ दोनों।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Between two lines?",
+      "दो रेखाओं के बीच?"
+     ],
+     "a": [
+      [
+       "Cosine of directions with modulus (acute)."
+      ],
+      [
+       "दिशाओं का कोसाइन, मापांक सहित (न्यूनकोण)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Between two planes?",
+      "दो समतलों के बीच?"
+     ],
+     "a": [
+      [
+       "Angle between normals."
+      ],
+      [
+       "अभिलम्बों के बीच कोण।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Line and plane?",
+      "रेखा व समतल?"
+     ],
+     "a": [
+      [
+       "$\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$."
+      ],
+      [
+       "$\\sin\\theta=\\dfrac{|\\vec b\\cdot\\vec n|}{|\\vec b||\\vec n|}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Angles with the axes?",
+      "अक्षों से कोण?"
+     ],
+     "a": [
+      [
+       "DCs: $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$."
+      ],
+      [
+       "दिक्-कोसाइन: $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Acute / obtuse condition?",
+      "न्यूनकोण / अधिककोण शर्त?"
+     ],
+     "a": [
+      [
+       "Sign of $\\vec a\\cdot\\vec b$ (exclude parallel)."
+      ],
+      [
+       "$\\vec a\\cdot\\vec b$ का चिह्न (समान्तर छोड़िए)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use $|\\vec a\\pm\\vec b|^2$ expansion to get $\\vec a\\cdot\\vec b$."
+    ],
+    [
+     "$|\\vec a\\pm\\vec b|^2$ के प्रसार से $\\vec a\\cdot\\vec b$ निकालिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Triple products and coplanarity",
+    "प्रवाह-चित्र 6: त्रिक गुणनफल व समतलीयता"
+   ],
+   "start": [
+    "Three or four vectors / points appear",
+    "तीन या चार सदिश / बिन्दु हैं"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Coplanar / dependent check?",
+      "समतलीय / आश्रित जाँच?"
+     ],
+     "a": [
+      [
+       "$[\\vec a\\ \\vec b\\ \\vec c]=0$; four points: $[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]=0$."
+      ],
+      [
+       "$[\\vec a\\ \\vec b\\ \\vec c]=0$; चार बिन्दु: $[\\vec{AB}\\ \\vec{AC}\\ \\vec{AD}]=0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Volume asked?",
+      "आयतन पूछा?"
+     ],
+     "a": [
+      [
+       "$|[\\vec a\\ \\vec b\\ \\vec c]|$; tetrahedron $\\tfrac16$ of it."
+      ],
+      [
+       "$|[\\vec a\\ \\vec b\\ \\vec c]|$; चतुष्फलक उसका $\\tfrac16$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Combinations of $\\vec a,\\vec b,\\vec c$ inside the bracket?",
+      "कोष्ठक में $\\vec a,\\vec b,\\vec c$ के संयोजन?"
+     ],
+     "a": [
+      [
+       "Expand linearly; repeated vector terms vanish."
+      ],
+      [
+       "रैखिक प्रसार; दोहराए सदिश वाले पद शून्य।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only magnitudes and dot products known?",
+      "केवल परिमाण व बिन्दु गुणनफल ज्ञात?"
+     ],
+     "a": [
+      [
+       "Gram determinant gives $[\\vec a\\ \\vec b\\ \\vec c]^2$."
+      ],
+      [
+       "ग्राम सारणिक से $[\\vec a\\ \\vec b\\ \\vec c]^2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Cross of a cross?",
+      "क्रॉस का क्रॉस?"
+     ],
+     "a": [
+      [
+       "VTP: $(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$."
+      ],
+      [
+       "सदिश त्रिक गुणनफल: $(\\vec a\\cdot\\vec c)\\vec b-(\\vec a\\cdot\\vec b)\\vec c$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Product of two crosses?",
+      "दो क्रॉस का गुणनफल?"
+     ],
+     "a": [
+      [
+       "Dot: Lagrange form; cross: $[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d$."
+      ],
+      [
+       "बिन्दु: लग्रांज रूप; क्रॉस: $[\\vec a\\ \\vec b\\ \\vec d]\\vec c-[\\vec a\\ \\vec b\\ \\vec c]\\vec d$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Write in components and use the determinant."
+    ],
+    [
+     "घटकों में लिखकर सारणिक लगाइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 7: Vector equations and linear combination",
+    "प्रवाह-चित्र 7: सदिश समीकरण व रैखिक संयोजन"
+   ],
+   "start": [
+    "Find an unknown vector from an equation",
+    "समीकरण से अज्ञात सदिश ज्ञात करना"
+   ],
+   "color": "brown",
+   "steps": [
+    {
+     "q": [
+      "$\\vec r\\times\\vec a=\\vec b$?",
+      "$\\vec r\\times\\vec a=\\vec b$?"
+     ],
+     "a": [
+      [
+       "$\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$; extra condition fixes $\\lambda$."
+      ],
+      [
+       "$\\vec r=\\dfrac{\\vec a\\times\\vec b}{|\\vec a|^2}+\\lambda\\vec a$; अतिरिक्त शर्त से $\\lambda$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\vec r\\cdot\\vec a=p$ and $\\vec r\\times\\vec b=\\vec c$?",
+      "$\\vec r\\cdot\\vec a=p$ और $\\vec r\\times\\vec b=\\vec c$?"
+     ],
+     "a": [
+      [
+       "Cross with $\\vec a$: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\vec b}{\\vec a\\cdot\\vec b}$."
+      ],
+      [
+       "$\\vec a$ से क्रॉस: $\\vec r=\\dfrac{\\vec a\\times\\vec c+p\\vec b}{\\vec a\\cdot\\vec b}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\vec x+\\vec a\\times\\vec x=\\vec b$ type?",
+      "$\\vec x+\\vec a\\times\\vec x=\\vec b$ प्रकार?"
+     ],
+     "a": [
+      [
+       "Dot with $\\vec a$, then cross with $\\vec a$; eliminate."
+      ],
+      [
+       "$\\vec a$ से बिन्दु, फिर $\\vec a$ से क्रॉस; विलोपन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Express in terms of non-coplanar $\\vec a,\\vec b,\\vec c$?",
+      "असमतलीय $\\vec a,\\vec b,\\vec c$ के पदों में?"
+     ],
+     "a": [
+      [
+       "$x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]}$ etc."
+      ],
+      [
+       "$x=\\dfrac{[\\vec r\\ \\vec b\\ \\vec c]}{[\\vec a\\ \\vec b\\ \\vec c]}$ आदि।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Equation in independent vectors?",
+      "स्वतन्त्र सदिशों में समीकरण?"
+     ],
+     "a": [
+      [
+       "Compare coefficients on both sides."
+      ],
+      [
+       "दोनों ओर गुणांकों की तुलना।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Contains $\\vec a\\times(\\vec b\\times\\vec c)$?",
+      "$\\vec a\\times(\\vec b\\times\\vec c)$ है?"
+     ],
+     "a": [
+      [
+       "Expand VTP, then compare coefficients."
+      ],
+      [
+       "सदिश त्रिक गुणनफल का प्रसार, फिर गुणांक तुलना।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Take $\\vec r=x\\vec a+y\\vec b+z(\\vec a\\times\\vec b)$; dot with known vectors."
+    ],
+    [
+     "$\\vec r=x\\vec a+y\\vec b+z(\\vec a\\times\\vec b)$ लेकर ज्ञात सदिशों से बिन्दु गुणन।"
+    ]
+   ]
+  }
+ ]
+}

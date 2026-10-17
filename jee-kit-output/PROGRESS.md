@@ -17,3 +17,4 @@ Hyperbola: DONE 2026-10-17
 Trigonometric_Ratio: DONE 2026-10-17
 Trigonometric_Equation: DONE 2026-10-17
 Solution_of_Triangle: DONE 2026-10-17
+Vector_3D: DONE 2026-10-17
