@@ -1,0 +1,2961 @@
+{
+ "chapter": {
+  "en": "Limit",
+  "hi": "सीमा",
+  "slug": "Limit"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   98,
+   99,
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   110,
+   111,
+   112
+  ]
+ },
+ "graded_sources": [
+  "<jm>",
+  "J-A",
+  "QB"
+ ],
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Notion of limit",
+    "hi": "सीमा की अवधारणा",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define limit.",
+       "सीमा को परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "If $f(x)$ comes as close as we like to a finite number $l$ when $x$ comes close to $a$ (from both sides, $x\\ne a$), then $\\lim_{x\\to a}f(x)=l$. The value $f(a)$ itself plays no part.",
+        "यदि $x$ के $a$ की ओर (दोनों ओर से, $x\\ne a$) अग्रसर होने पर $f(x)$ किसी परिमित संख्या $l$ के इच्छानुसार निकट पहुँचे, तो $\\lim_{x\\to a}f(x)=l$। स्वयं $f(a)$ का मान इसमें कोई भूमिका नहीं निभाता।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to2}\\dfrac{x^2-4}{x-2}=4$ although the function is not defined at $x=2$.",
+        "उदा: $\\lim_{x\\to2}\\dfrac{x^2-4}{x-2}=4$, यद्यपि $x=2$ पर फलन परिभाषित नहीं है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "LHL, RHL and existence of limit",
+    "hi": "बायीं सीमा, दायीं सीमा और सीमा का अस्तित्व",
+    "items": [
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is LHL and RHL?",
+       "$\\text{LHL}$ और $\\text{RHL}$ क्या हैं?"
+      ],
+      "a": [
+       [
+        "LHL = value approached by $f(x)$ as $x\\to a^-$ ($x<a$); RHL = value approached as $x\\to a^+$ ($x>a$).",
+        "$\\text{LHL}$ = $x\\to a^-$ ($x<a$) होने पर $f(x)$ जिस मान की ओर अग्रसर हो; $\\text{RHL}$ = $x\\to a^+$ ($x>a$) होने पर वह मान।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to2}[x]$: LHL $=1$, RHL $=2$.",
+        "उदा: $\\lim_{x\\to2}[x]$: $\\text{LHL}=1$, $\\text{RHL}=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write all different ways in which LHL and RHL can be written.",
+       "$\\text{LHL}$ और $\\text{RHL}$ को लिखने के सभी तरीके लिखिए।"
+      ],
+      "a": [
+       "$\\text{LHL}=\\lim_{x\\to a^-}f(x)=\\lim_{h\\to0}f(a-h)=f(a^-)=f(a-0)$",
+       "$\\text{RHL}=\\lim_{x\\to a^+}f(x)=\\lim_{h\\to0}f(a+h)=f(a^+)=f(a+0)$",
+       [
+        "Here $h\\to0^+$ (small positive).",
+        "यहाँ $h\\to0^+$ (छोटा धनात्मक)।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for a limit to exist?",
+       "सीमा के अस्तित्व का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "$\\lim_{x\\to a}f(x)$ exists $\\iff$ LHL $=$ RHL $=$ a finite number. If either side is $\\pm\\infty$ or they differ, the limit does not exist (DNE).",
+        "$\\lim_{x\\to a}f(x)$ विद्यमान $\\iff$ $\\text{LHL}=\\text{RHL}=$ परिमित संख्या। यदि कोई पक्ष $\\pm\\infty$ हो या दोनों भिन्न हों, तो सीमा विद्यमान नहीं है।"
+       ],
+       [
+        "Ex: $\\operatorname{sgn}x$ at $0$: LHL $=-1$, RHL $=1$, so the limit does not exist.",
+        "उदा: $0$ पर $\\operatorname{sgn}x$: $\\text{LHL}=-1$, $\\text{RHL}=1$, अतः सीमा विद्यमान नहीं है।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while computing limit if one side of the point is not in the domain?",
+       "यदि बिन्दु का एक पक्ष प्रांत में न हो, तो सीमा निकालते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Only the side lying in the domain is considered; the limit equals that one-sided limit (as used in JEE).",
+        "केवल वही पक्ष लिया जाता है जो प्रांत में है; सीमा उसी एक-पक्षीय सीमा के बराबर होती है (जैसा JEE में लिया जाता है)।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\sin^{-1}x=\\lim_{x\\to1^-}\\sin^{-1}x=\\frac{\\pi}{2}$ ($x>1$ is not in the domain).",
+        "उदा: $\\lim_{x\\to1}\\sin^{-1}x=\\lim_{x\\to1^-}\\sin^{-1}x=\\frac{\\pi}{2}$ ($x>1$ प्रांत में नहीं है)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Indeterminate forms",
+    "hi": "अनिर्धार्य रूप",
+    "items": [
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by indeterminate form? State all 7 forms.",
+       "अनिर्धार्य रूप से क्या तात्पर्य है? सभी 7 रूप लिखिए।"
+      ],
+      "a": [
+       [
+        "A form whose value cannot be decided by direct substitution; the expression must be simplified first.",
+        "ऐसा रूप जिसका मान सीधे मान रखकर तय नहीं हो सकता; पहले व्यंजक को सरल करना पड़ता है।"
+       ],
+       "$\\dfrac00,\\ \\dfrac{\\infty}{\\infty},\\ \\infty-\\infty,\\ 0\\times\\infty,\\ 1^{\\infty},\\ 0^0,\\ \\infty^0$"
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a form is an indeterminate form?",
+       "कैसे जाँचें कि रूप अनिर्धार्य है या नहीं?"
+      ],
+      "a": [
+       [
+        "Put $x=a$ (or the limiting behaviour) in each part and see what each part tends to; it is indeterminate only if it matches one of the 7 forms with every 0, 1, $\\infty$ only approached.",
+        "प्रत्येक भाग में $x=a$ (या सीमान्त व्यवहार) रखकर देखें कि वह किस ओर अग्रसर है; रूप तभी अनिर्धार्य है जब वह 7 में से किसी रूप जैसा हो और प्रत्येक 0, 1, $\\infty$ केवल अग्रसर हो।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\frac{\\pi}{2}}\\dfrac{\\tan x}{\\tan3x}$ is $\\frac{\\infty}{\\infty}$ (indeterminate); $\\lim_{x\\to0^+}\\dfrac{\\sin x}{[x]}$ is not (the denominator is exactly 0).",
+        "उदा: $\\lim_{x\\to\\frac{\\pi}{2}}\\dfrac{\\tan x}{\\tan3x}$ रूप $\\frac{\\infty}{\\infty}$ है (अनिर्धार्य); $\\lim_{x\\to0^+}\\dfrac{\\sin x}{[x]}$ नहीं (हर ठीक 0 है)।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition on numbers in indeterminate forms?",
+       "अनिर्धार्य रूपों में संख्याओं पर क्या प्रतिबन्ध है?"
+      ],
+      "a": [
+       [
+        "The 0 and 1 in the forms are not exact: they are values being approached ($0$ means $\\to0$, $1$ means $\\to1$).",
+        "रूपों में 0 और 1 ठीक-ठीक नहीं हैं: ये अग्रसर होने वाले मान हैं ($0$ का अर्थ $\\to0$, $1$ का अर्थ $\\to1$)।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the value of the expression if a number gets its exact value in place of approaching value?",
+       "यदि संख्या अग्रसर मान के स्थान पर ठीक मान ले ले, तो व्यंजक का मान क्या होगा?"
+      ],
+      "a": [
+       [
+        "Then it is not indeterminate: exact $0\\times$ anything $=0$; $\\frac{\\text{exact }0}{\\text{anything}\\ne0}=0$; $\\frac{1}{\\text{exact }0}$ undefined; $(\\text{exact }1)^{\\text{anything}}=1$; $(\\text{anything}\\ne0)^{\\text{exact }0}=1$; $(\\text{exact }0)^{+ve}=0$; $(\\text{exact }0)^0$ undefined.",
+        "तब रूप अनिर्धार्य नहीं है: ठीक $0\\times$ कुछ भी $=0$; $\\frac{\\text{exact }0}{\\ne0}=0$; $\\frac{1}{\\text{exact }0}$ अपरिभाषित; $(\\text{exact }1)^{\\text{any}}=1$; $(\\ne0)^{\\text{exact }0}=1$; $(\\text{exact }0)^{+}=0$; $(\\text{exact }0)^0$ अपरिभाषित।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0^+}[x]\\cot x=0$, since $[x]=0$ exactly for $0<x<1$.",
+        "उदा: $\\lim_{x\\to0^+}[x]\\cot x=0$, क्योंकि $0<x<1$ के लिए $[x]$ ठीक $0$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Reading from graph",
+    "hi": "ग्राफ से सीमा पढ़ना",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find limit of a function if its graph is given?",
+       "यदि फलन का ग्राफ दिया हो, तो सीमा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Follow the curve towards $x=a$ from the left (LHL) and from the right (RHL) and read the heights; open/closed dots (the value $f(a)$) do not matter. If the curve goes up/down without bound, that side is $\\pm\\infty$ and the limit does not exist.",
+        "वक्र को $x=a$ की ओर बायें से ($\\text{LHL}$) और दायें से ($\\text{RHL}$) देखें और ऊँचाई पढ़ें; खुले/बन्द बिन्दु (मान $f(a)$) का कोई महत्त्व नहीं। यदि वक्र असीमित ऊपर/नीचे जाए तो वह पक्ष $\\pm\\infty$ है और सीमा विद्यमान नहीं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Five fundamental theorem",
+    "hi": "पाँच मूलभूत प्रमेय",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What will be limit of $f+g$, $f-g$, $f\\cdot g$, $f/g$ if limits of both $f$ and $g$ exist?",
+       "यदि $f$ और $g$ दोनों की सीमाएँ विद्यमान हों, तो $f+g$, $f-g$, $f\\cdot g$, $f/g$ की सीमा क्या होगी?"
+      ],
+      "a": [
+       [
+        "If $\\lim f=l$, $\\lim g=m$ (finite): $\\lim(f\\pm g)=l\\pm m$, $\\lim fg=lm$, $\\lim\\frac fg=\\frac lm$ ($m\\ne0$), $\\lim kf=kl$.",
+        "यदि $\\lim f=l$, $\\lim g=m$ (परिमित): $\\lim(f\\pm g)=l\\pm m$, $\\lim fg=lm$, $\\lim\\frac fg=\\frac lm$ ($m\\ne0$), $\\lim kf=kl$।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\left(\\dfrac{\\sin x}{x}+e^x\\right)=1+1=2$.",
+        "उदा: $\\lim_{x\\to0}\\left(\\dfrac{\\sin x}{x}+e^x\\right)=1+1=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What will be limit of $f+g$, $f-g$, $f\\cdot g$, $f/g$ if limits of both $f$ and $g$ do not exist?",
+       "यदि $f$ और $g$ दोनों की सीमाएँ विद्यमान न हों, तो $f+g$, $f-g$, $f\\cdot g$, $f/g$ की सीमा क्या होगी?"
+      ],
+      "a": [
+       [
+        "Nothing can be said in general: the combination may or may not have a limit; compute it directly.",
+        "सामान्यतः कुछ नहीं कहा जा सकता: संयोजन की सीमा हो भी सकती है और नहीं भी; सीधे गणना करें।"
+       ],
+       [
+        "Ex: at $x=1$ neither $[x]$ nor $\\{x\\}$ has a limit, but $[x]+\\{x\\}=x\\to1$.",
+        "उदा: $x=1$ पर न $[x]$ की और न $\\{x\\}$ की सीमा है, पर $[x]+\\{x\\}=x\\to1$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What will be limit of $f+g$, $f-g$, $f\\cdot g$, $f/g$ if limit of $f$ exists and of $g$ does not exist?",
+       "यदि $f$ की सीमा विद्यमान हो और $g$ की नहीं, तो $f+g$, $f-g$, $f\\cdot g$, $f/g$ की सीमा क्या होगी?"
+      ],
+      "a": [
+       [
+        "$f\\pm g$: never exists. $f\\cdot g$, $f/g$: may exist (possible only when $\\lim f=0$ or $g$ is bounded-type); check directly.",
+        "$f\\pm g$: कभी विद्यमान नहीं। $f\\cdot g$, $f/g$: विद्यमान हो सकती है (मुख्यतः जब $\\lim f=0$ हो); सीधे जाँचें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}x\\operatorname{sgn}x=0$ though $\\operatorname{sgn}x$ has no limit at $0$.",
+        "उदा: $\\lim_{x\\to0}x\\operatorname{sgn}x=0$, यद्यपि $0$ पर $\\operatorname{sgn}x$ की सीमा नहीं है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Strategies to calculate limits",
+    "hi": "सीमा ज्ञात करने की रणनीति",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the basic steps to calculate limits?",
+       "सीमा ज्ञात करने के मूल चरण क्या हैं?"
+      ],
+      "a": [
+       [
+        "Step 1: put $x=a$ and check the form. Determinate (e.g. $\\frac{k}{\\text{non-zero}}$, $\\frac{k}{\\infty}=0$) $\\Rightarrow$ that is the answer. Step 2: if indeterminate, simplify (factorise, rationalise, substitute, standard limits, expansion) until the form is removed. For $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, ITF find LHL and RHL separately.",
+        "चरण 1: $x=a$ रखकर रूप जाँचें। निर्धार्य (जैसे $\\frac{k}{\\ne0}$, $\\frac{k}{\\infty}=0$) $\\Rightarrow$ वही उत्तर। चरण 2: अनिर्धार्य हो तो सरल करें (गुणनखण्डन, परिमेयकरण, प्रतिस्थापन, मानक सीमाएँ, प्रसार) जब तक रूप हट न जाए। $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, प्रतिलोम फलन में $\\text{LHL}$ व $\\text{RHL}$ अलग-अलग निकालें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\dfrac{x^2+1}{x+2}=\\dfrac23$ directly.",
+        "उदा: $\\lim_{x\\to1}\\dfrac{x^2+1}{x+2}=\\dfrac23$ सीधे।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind if we separate an expression while calculating limit?",
+       "सीमा निकालते समय व्यंजक को अलग-अलग भागों में तोड़ते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Split $\\lim(f\\pm g)$ or $\\lim fg$ into separate limits only if each part has a finite limit; otherwise you may create a false $\\infty-\\infty$ and a wrong answer.",
+        "$\\lim(f\\pm g)$ या $\\lim fg$ को अलग सीमाओं में तभी तोड़ें जब प्रत्येक भाग की परिमित सीमा हो; अन्यथा झूठा $\\infty-\\infty$ बनकर उत्तर गलत हो सकता है।"
+       ],
+       [
+        "Ex: in $\\lim_{x\\to0}\\dfrac{x-\\sin x}{x^3}$ do not write $\\lim\\frac{x}{x^3}-\\lim\\frac{\\sin x}{x^3}$; the answer is $\\frac16$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{x-\\sin x}{x^3}$ में $\\lim\\frac{x}{x^3}-\\lim\\frac{\\sin x}{x^3}$ न लिखें; उत्तर $\\frac16$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Evaluating limit by factorization",
+    "hi": "गुणनखण्डन द्वारा सीमा",
+    "items": [
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to remove indeterminate forms by factorisation?",
+       "गुणनखण्डन द्वारा अनिर्धार्य रूप कैसे हटाएँ?"
+      ],
+      "a": [
+       [
+        "In $\\frac00$ of polynomials at $x=a$, $(x-a)$ is a factor of both; factorise, cancel the factor causing the $0/0$, then substitute.",
+        "बहुपदों के $\\frac00$ रूप में $x=a$ पर $(x-a)$ दोनों का गुणनखण्ड है; गुणनखण्डन करके $0/0$ देने वाला गुणनखण्ड काटें, फिर मान रखें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to3}\\dfrac{x^2-2x-3}{x^2-4x+3}=\\lim_{x\\to3}\\dfrac{x+1}{x-1}=2$.",
+        "उदा: $\\lim_{x\\to3}\\dfrac{x^2-2x-3}{x^2-4x+3}=\\lim_{x\\to3}\\dfrac{x+1}{x-1}=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while factorizing expression while calculating limit?",
+       "सीमा निकालते समय व्यंजक का गुणनखण्डन करते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Cancelling $(x-a)$ is allowed because $x\\ne a$. Divide out $(x-a)$ fully (repeat if the form is still $\\frac00$); watch signs like $(a-x)=-(x-a)$ and $|x-a|$.",
+        "$(x-a)$ काटना मान्य है क्योंकि $x\\ne a$। $(x-a)$ को पूरा भाग दें (रूप फिर भी $\\frac00$ हो तो दोहराएँ); $(a-x)=-(x-a)$ और $|x-a|$ जैसे चिह्नों पर ध्यान दें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\dfrac{x^4-3x+2}{x^5-4x+3}=\\lim_{x\\to1}\\dfrac{x^3+x^2+x-2}{x^4+x^3+x^2+x-3}=1$.",
+        "उदा: $\\lim_{x\\to1}\\dfrac{x^4-3x+2}{x^5-4x+3}=\\lim_{x\\to1}\\dfrac{x^3+x^2+x-2}{x^4+x^3+x^2+x-3}=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do in case of $\\infty-\\infty$ form?",
+       "$\\infty-\\infty$ रूप में क्या करें?"
+      ],
+      "a": [
+       [
+        "Convert it to $\\frac00$ or $\\frac{\\infty}{\\infty}$: take LCM of fractions, or rationalise roots, then proceed.",
+        "इसे $\\frac00$ या $\\frac{\\infty}{\\infty}$ में बदलें: भिन्नों का ल.स.प. लें या मूलों का परिमेयकरण करें, फिर आगे बढ़ें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\left(\\dfrac1{x-1}-\\dfrac3{x^3-1}\\right)=\\lim_{x\\to1}\\dfrac{x+2}{x^2+x+1}=1$.",
+        "उदा: $\\lim_{x\\to1}\\left(\\dfrac1{x-1}-\\dfrac3{x^3-1}\\right)=\\lim_{x\\to1}\\dfrac{x+2}{x^2+x+1}=1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Evaluating limit by rationalization",
+    "hi": "परिमेयकरण द्वारा सीमा",
+    "items": [
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to remove indeterminate form by rationalisation?",
+       "परिमेयकरण द्वारा अनिर्धार्य रूप कैसे हटाएँ?"
+      ],
+      "a": [
+       [
+        "Multiply numerator and denominator by the conjugate of the irrational part; the factor causing $\\frac00$ appears and cancels.",
+        "अपरिमेय भाग के संयुग्मी से अंश व हर को गुणा करें; $\\frac00$ देने वाला गुणनखण्ड प्रकट होकर कट जाता है।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{\\sqrt{1+x}-\\sqrt{1-x}}{x}=\\lim_{x\\to0}\\dfrac{2}{\\sqrt{1+x}+\\sqrt{1-x}}=1$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{\\sqrt{1+x}-\\sqrt{1-x}}{x}=\\lim_{x\\to0}\\dfrac{2}{\\sqrt{1+x}+\\sqrt{1-x}}=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When and how to do square rationalisation?",
+       "वर्ग परिमेयकरण कब और कैसे करें?"
+      ],
+      "a": [
+       [
+        "When square roots give $\\frac00$ or $\\infty-\\infty$: use $a-b=\\dfrac{a^2-b^2}{a+b}$.",
+        "जब वर्गमूल $\\frac00$ या $\\infty-\\infty$ दें: $a-b=\\dfrac{a^2-b^2}{a+b}$ लें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+x}-x\\right)=\\lim_{x\\to\\infty}\\dfrac{x}{\\sqrt{x^2+x}+x}=\\dfrac12$.",
+        "उदा: $\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+x}-x\\right)=\\lim_{x\\to\\infty}\\dfrac{x}{\\sqrt{x^2+x}+x}=\\dfrac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When and how to do cubic rationalisation?",
+       "घन परिमेयकरण कब और कैसे करें?"
+      ],
+      "a": [
+       [
+        "When cube roots appear: use $a-b=\\dfrac{a^3-b^3}{a^2+ab+b^2}$.",
+        "जब घनमूल हों: $a-b=\\dfrac{a^3-b^3}{a^2+ab+b^2}$ लें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{(1+x)^{1/3}-1}{x}=\\lim_{x\\to0}\\dfrac{1}{(1+x)^{2/3}+(1+x)^{1/3}+1}=\\dfrac13$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{(1+x)^{1/3}-1}{x}=\\lim_{x\\to0}\\dfrac{1}{(1+x)^{2/3}+(1+x)^{1/3}+1}=\\dfrac13$।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we put value of a factor while calculating limit?",
+       "सीमा निकालते समय किसी गुणनखण्ड का मान कब रख सकते हैं?"
+      ],
+      "a": [
+       [
+        "Only when the factor is multiplied/divided with the rest and its own limit is finite and non-zero; never inside a sum or difference.",
+        "केवल तब जब वह गुणनखण्ड शेष व्यंजक से गुणा/भाग में हो और उसकी अपनी सीमा परिमित व शून्येतर हो; योग या अन्तर के अन्दर कभी नहीं।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{e^x(\\sqrt{1+x}-1)}{x}=e^0\\cdot\\dfrac12=\\dfrac12$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{e^x(\\sqrt{1+x}-1)}{x}=e^0\\cdot\\dfrac12=\\dfrac12$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Evaluating limit by substitution",
+    "hi": "प्रतिस्थापन द्वारा सीमा",
+    "items": [
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute if $x$ approaches $-\\infty$?",
+       "यदि $x\\to-\\infty$ हो, तो क्या प्रतिस्थापन करें?"
+      ],
+      "a": [
+       [
+        "Put $x=-t$, $t\\to+\\infty$ (or $x=-\\frac1t$, $t\\to0^+$). Remember $\\sqrt{x^2}=|x|=-x$ for $x<0$.",
+        "$x=-t$, $t\\to+\\infty$ रखें (या $x=-\\frac1t$, $t\\to0^+$)। याद रखें $x<0$ के लिए $\\sqrt{x^2}=|x|=-x$।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to-\\infty}\\dfrac{\\sqrt{x^2+1}}{x}=\\lim_{t\\to\\infty}\\dfrac{\\sqrt{t^2+1}}{-t}=-1$.",
+        "उदा: $\\lim_{x\\to-\\infty}\\dfrac{\\sqrt{x^2+1}}{x}=\\lim_{t\\to\\infty}\\dfrac{\\sqrt{t^2+1}}{-t}=-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute if $x$ approaches $\\infty$?",
+       "यदि $x\\to\\infty$ हो, तो क्या प्रतिस्थापन करें?"
+      ],
+      "a": [
+       [
+        "Put $x=\\frac1t$, $t\\to0^+$; then standard limits / expansions at 0 can be used.",
+        "$x=\\frac1t$, $t\\to0^+$ रखें; तब 0 पर मानक सीमाएँ / प्रसार प्रयोग हो सकते हैं।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\infty}x\\sin\\frac1x=\\lim_{t\\to0^+}\\dfrac{\\sin t}{t}=1$.",
+        "उदा: $\\lim_{x\\to\\infty}x\\sin\\frac1x=\\lim_{t\\to0^+}\\dfrac{\\sin t}{t}=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute if $x$ approaches $a$ (non-zero finite)?",
+       "यदि $x\\to a$ (शून्येतर परिमित) हो, तो क्या प्रतिस्थापन करें?"
+      ],
+      "a": [
+       [
+        "Put $x=a+h$, $h\\to0$ (or $x=a-h$ for one side), so the standard limits at 0 apply.",
+        "$x=a+h$, $h\\to0$ रखें (एक पक्ष के लिए $x=a-h$), ताकि 0 पर मानक सीमाएँ लगें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\frac{\\pi}{2}}\\left(\\frac{\\pi}{2}-x\\right)\\tan x$: put $x=\\frac{\\pi}{2}-h$: $\\lim_{h\\to0}h\\cot h=1$.",
+        "उदा: $\\lim_{x\\to\\frac{\\pi}{2}}\\left(\\frac{\\pi}{2}-x\\right)\\tan x$: $x=\\frac{\\pi}{2}-h$ रखें: $\\lim_{h\\to0}h\\cot h=1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Infinity/infinity form",
+    "hi": "अनन्त/अनन्त रूप",
+    "items": [
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve questions of limit in case of $\\infty/\\infty$ form?",
+       "$\\infty/\\infty$ रूप में सीमा के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Divide numerator and denominator by the highest power of $x$ (or the largest exponential $a^n$) present; every other term then tends to 0.",
+        "अंश व हर को उपस्थित उच्चतम घात $x$ (या सबसे बड़े घातांकी $a^n$) से भाग दें; शेष प्रत्येक पद 0 की ओर जाता है।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\infty}\\dfrac{2x^2+3x}{5x^2-1}=\\lim_{x\\to\\infty}\\dfrac{2+\\frac3x}{5-\\frac1{x^2}}=\\dfrac25$.",
+        "उदा: $\\lim_{x\\to\\infty}\\dfrac{2x^2+3x}{5x^2-1}=\\lim_{x\\to\\infty}\\dfrac{2+\\frac3x}{5-\\frac1{x^2}}=\\dfrac25$।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the value of limit in questions of infinity/infinity form if highest power in numerator and denominator can be observed?",
+       "$\\infty/\\infty$ रूप में यदि अंश और हर की उच्चतम घात देखी जा सके, तो सीमा का मान क्या होगा?"
+      ],
+      "a": [
+       "$\\lim_{x\\to\\infty}\\dfrac{a_0x^m+a_1x^{m-1}+\\dots}{b_0x^n+b_1x^{n-1}+\\dots}=\\begin{cases}\\dfrac{a_0}{b_0},&m=n\\\\0,&m<n\\\\\\pm\\infty,&m>n\\end{cases}$",
+       [
+        "For $m>n$ the sign is that of $\\frac{a_0}{b_0}$ (limit does not exist as a finite number).",
+        "$m>n$ पर चिह्न $\\frac{a_0}{b_0}$ का होता है (परिमित सीमा विद्यमान नहीं)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Standard expansions",
+    "hi": "मानक प्रसार",
+    "items": [
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write expansion of $\\sin x$, $\\cos x$, $\\tan x$, $e^x$, $\\ln(1+x)$, $(1+x)^n$, $\\tan^{-1}x$.",
+       "$\\sin x$, $\\cos x$, $\\tan x$, $e^x$, $\\ln(1+x)$, $(1+x)^n$, $\\tan^{-1}x$ के प्रसार लिखिए।"
+      ],
+      "a": [
+       "$\\sin x=x-\\dfrac{x^3}{3!}+\\dfrac{x^5}{5!}-\\dots,\\quad \\cos x=1-\\dfrac{x^2}{2!}+\\dfrac{x^4}{4!}-\\dots$",
+       "$\\tan x=x+\\dfrac{x^3}{3}+\\dfrac{2x^5}{15}+\\dots,\\quad \\tan^{-1}x=x-\\dfrac{x^3}{3}+\\dfrac{x^5}{5}-\\dots$",
+       "$e^x=1+x+\\dfrac{x^2}{2!}+\\dfrac{x^3}{3!}+\\dots,\\quad \\ln(1+x)=x-\\dfrac{x^2}{2}+\\dfrac{x^3}{3}-\\dots$",
+       "$(1+x)^n=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots,\\quad \\sin^{-1}x=x+\\dfrac{x^3}{3!}+\\dfrac{9x^5}{5!}+\\dots$",
+       [
+        "$\\ln(1+x)$, $\\tan^{-1}x$, $(1+x)^n$ ($n\\in Q$) need $|x|<1$; near $x\\to0$ this always holds.",
+        "$\\ln(1+x)$, $\\tan^{-1}x$, $(1+x)^n$ ($n\\in Q$) के लिए $|x|<1$ चाहिए; $x\\to0$ के पास यह सदा सत्य है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Application of standard limits type 1",
+    "hi": "मानक सीमाओं का प्रयोग: प्रकार 1",
+    "items": [
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write result of standard limit type 1.",
+       "मानक सीमा प्रकार 1 का परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{(1+x)^n-1}{x}=n,\\qquad \\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1}$",
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{(1+x)^{1/7}-1}{x^4+4x}=\\dfrac{1}{7}\\cdot\\dfrac14=\\dfrac1{28}$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{(1+x)^{1/7}-1}{x^4+4x}=\\dfrac{1}{7}\\cdot\\dfrac14=\\dfrac1{28}$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace if $(s^n-1)$ appears in limit and what to keep in mind?",
+       "यदि सीमा में $(s^n-1)$ आए तो क्या प्रतिस्थापित करें और क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "If $s\\to1$: replace $s^n-1$ by $n(s-1)$ (equivalently $(1+t)^n-1$ by $nt$ when $t\\to0$). Allowed only when it is a factor of the numerator/denominator, not inside a sum.",
+        "यदि $s\\to1$: $s^n-1$ के स्थान पर $n(s-1)$ रखें (अर्थात् $t\\to0$ पर $(1+t)^n-1$ के स्थान पर $nt$)। केवल तभी जब यह अंश/हर का गुणनखण्ड हो, योग के अन्दर नहीं।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\dfrac{x^{1/9}-1}{x^2-3x+2}=\\lim_{x\\to1}\\dfrac{\\frac19(x-1)}{(x-1)(x-2)}=-\\dfrac19$.",
+        "उदा: $\\lim_{x\\to1}\\dfrac{x^{1/9}-1}{x^2-3x+2}=\\lim_{x\\to1}\\dfrac{\\frac19(x-1)}{(x-1)(x-2)}=-\\dfrac19$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the value of limit $\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}$?",
+       "सीमा $\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}$ का मान क्या है?"
+      ],
+      "a": [
+       "$\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1}\\quad(n\\in Q,\\ a>0)$",
+       [
+        "Ex: $\\lim_{x\\to2}\\dfrac{x^5-32}{x-2}=5\\cdot2^4=80$.",
+        "उदा: $\\lim_{x\\to2}\\dfrac{x^5-32}{x-2}=5\\cdot2^4=80$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Trigonometric limits",
+    "hi": "त्रिकोणमितीय सीमाएँ",
+    "items": [
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write result of trigonometric limits.",
+       "त्रिकोणमितीय सीमाओं के परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{\\sin x}{x}=\\lim_{x\\to0}\\dfrac{\\tan x}{x}=\\lim_{x\\to0}\\dfrac{\\sin^{-1}x}{x}=\\lim_{x\\to0}\\dfrac{\\tan^{-1}x}{x}=1$",
+       [
+        "$x$ in radians. Ex: $\\lim_{x\\to0}\\dfrac{\\sin2x}{\\sin3x}=\\dfrac23$.",
+        "$x$ रेडियन में। उदा: $\\lim_{x\\to0}\\dfrac{\\sin2x}{\\sin3x}=\\dfrac23$।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace if $\\sin(s)$, $\\tan(s)$, $\\sin^{-1}(s)$, $\\tan^{-1}(s)$ appears in limit and what to keep in mind?",
+       "यदि सीमा में $\\sin(s)$, $\\tan(s)$, $\\sin^{-1}(s)$, $\\tan^{-1}(s)$ आए तो क्या प्रतिस्थापित करें और क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "If $s\\to0$, replace each of them by $s$ — only when it is a factor (product/quotient), never inside a sum or difference (there use expansions).",
+        "यदि $s\\to0$, तो प्रत्येक के स्थान पर $s$ रखें — केवल जब वह गुणनखण्ड (गुणा/भाग) हो, योग या अन्तर के अन्दर कभी नहीं (वहाँ प्रसार लें)।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{\\sin x^2}{x\\tan2x}=\\lim_{x\\to0}\\dfrac{x^2}{x\\cdot2x}=\\dfrac12$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{\\sin x^2}{x\\tan2x}=\\lim_{x\\to0}\\dfrac{x^2}{x\\cdot2x}=\\dfrac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the value of limit $\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}$?",
+       "सीमा $\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}$ का मान क्या है?"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}=\\dfrac12\\quad(1-\\cos s\\approx\\tfrac{s^2}{2}\\text{ as } s\\to0)$",
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{1-\\cos4x}{x^2}=\\dfrac{16}{2}=8$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{1-\\cos4x}{x^2}=\\dfrac{16}{2}=8$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the value of limit of $x^p\\sin\\frac1x$, $x^p\\cos\\frac1x$ as $x\\to0$?",
+       "$x\\to0$ पर $x^p\\sin\\frac1x$, $x^p\\cos\\frac1x$ की सीमा क्या है?"
+      ],
+      "a": [
+       [
+        "$\\sin\\frac1x$, $\\cos\\frac1x$ oscillate between $-1$ and $1$ (no limit). So $\\lim_{x\\to0}x^p\\sin\\frac1x=\\lim_{x\\to0}x^p\\cos\\frac1x=0$ if $p>0$, and does not exist if $p\\le0$.",
+        "$\\sin\\frac1x$, $\\cos\\frac1x$, $-1$ और $1$ के बीच दोलन करते हैं (सीमा नहीं)। अतः $p>0$ पर $\\lim_{x\\to0}x^p\\sin\\frac1x=\\lim_{x\\to0}x^p\\cos\\frac1x=0$, और $p\\le0$ पर विद्यमान नहीं।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}x^2\\sin\\frac1x=0$ (bounded $\\times\\to0$).",
+        "उदा: $\\lim_{x\\to0}x^2\\sin\\frac1x=0$ (परिबद्ध $\\times\\to0$)।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do if inverse trigonometric expression appears in limit question?",
+       "यदि सीमा के प्रश्न में प्रतिलोम त्रिकोणमितीय व्यंजक आए तो क्या करें?"
+      ],
+      "a": [
+       [
+        "If its argument $\\to0$, use $\\sin^{-1}s\\approx s$, $\\tan^{-1}s\\approx s$. Otherwise put the ITF $=\\theta$ (e.g. $\\cos^{-1}(1-x)=\\theta$), and keep the principal range and the side of approach in mind.",
+        "यदि उसका कोणांक $\\to0$ हो तो $\\sin^{-1}s\\approx s$, $\\tan^{-1}s\\approx s$ लें। अन्यथा प्रतिलोम फलन $=\\theta$ रखें (जैसे $\\cos^{-1}(1-x)=\\theta$), और मुख्य परिसर तथा अग्रसर होने का पक्ष ध्यान में रखें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0^+}\\dfrac{\\cos^{-1}(1-x)}{\\sqrt x}$: $1-x=\\cos\\theta\\Rightarrow x=2\\sin^2\\frac{\\theta}{2}$, limit $=\\sqrt2$.",
+        "उदा: $\\lim_{x\\to0^+}\\dfrac{\\cos^{-1}(1-x)}{\\sqrt x}$: $1-x=\\cos\\theta\\Rightarrow x=2\\sin^2\\frac{\\theta}{2}$, सीमा $=\\sqrt2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Exponential and logarithmic limit",
+    "hi": "चरघातांकी और लघुगणकीय सीमा",
+    "items": [
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write result of exponential limit.",
+       "चरघातांकी सीमा का परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1,\\qquad \\lim_{x\\to0}\\dfrac{a^x-1}{x}=\\ln a\\ (a>0)$",
+       [
+        "Ex: $\\lim_{x\\to3}\\dfrac{e^x-e^3}{x-3}=e^3\\lim_{h\\to0}\\dfrac{e^h-1}{h}=e^3$.",
+        "उदा: $\\lim_{x\\to3}\\dfrac{e^x-e^3}{x-3}=e^3\\lim_{h\\to0}\\dfrac{e^h-1}{h}=e^3$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace if $(e^s-1)$, $(a^s-1)$ appears in limit and what to keep in mind?",
+       "यदि सीमा में $(e^s-1)$, $(a^s-1)$ आए तो क्या प्रतिस्थापित करें और क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "If $s\\to0$: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, only as a factor (product/quotient). Write $a^x-b^x=(a^x-1)-(b^x-1)$ first.",
+        "यदि $s\\to0$: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, केवल गुणनखण्ड के रूप में (गुणा/भाग)। पहले $a^x-b^x=(a^x-1)-(b^x-1)$ लिखें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{5^x-3^x}{x}=\\ln5-\\ln3=\\ln\\dfrac53$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{5^x-3^x}{x}=\\ln5-\\ln3=\\ln\\dfrac53$।"
+       ]
+      ]
+     },
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write result of logarithmic limit.",
+       "लघुगणकीय सीमा का परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1,\\qquad \\lim_{x\\to0}\\dfrac{\\log_a(1+x)}{x}=\\dfrac{1}{\\ln a}$",
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{\\ln(1+3x)}{x}=3$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{\\ln(1+3x)}{x}=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace if $\\ln(1+s)$ appears in limit and what to keep in mind?",
+       "यदि सीमा में $\\ln(1+s)$ आए तो क्या प्रतिस्थापित करें और क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "If $s\\to0$: $\\ln(1+s)\\to s$; equivalently if $S\\to1$: $\\ln S\\to S-1$. Only as a factor; inside sums use the expansion.",
+        "यदि $s\\to0$: $\\ln(1+s)\\to s$; अर्थात् $S\\to1$ पर $\\ln S\\to S-1$। केवल गुणनखण्ड के रूप में; योग के अन्दर प्रसार लें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to1}\\dfrac{\\ln x}{x-1}=1$.",
+        "उदा: $\\lim_{x\\to1}\\dfrac{\\ln x}{x-1}=1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "One raise to infinity form",
+    "hi": "एक की घात अनन्त रूप",
+    "items": [
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether indeterminate form is $1^{\\infty}$ form?",
+       "कैसे जाँचें कि अनिर्धार्य रूप $1^{\\infty}$ है?"
+      ],
+      "a": [
+       [
+        "In $f(x)^{g(x)}$ the base $f\\to1$ (not exactly 1) and the exponent $g\\to\\pm\\infty$.",
+        "$f(x)^{g(x)}$ में आधार $f\\to1$ (ठीक 1 नहीं) और घातांक $g\\to\\pm\\infty$।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}(\\cos x)^{1/x^2}$ is $1^{\\infty}$; $\\lim_{x\\to0}(\\operatorname{cosec}x)^{1/x}$ is not (base $\\to\\infty$).",
+        "उदा: $\\lim_{x\\to0}(\\cos x)^{1/x^2}$ रूप $1^{\\infty}$ है; $\\lim_{x\\to0}(\\operatorname{cosec}x)^{1/x}$ नहीं (आधार $\\to\\infty$)।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace in case of $1^{\\infty}$ form?",
+       "$1^{\\infty}$ रूप में क्या प्रतिस्थापित करें?"
+      ],
+      "a": [
+       "$\\lim f(x)^{g(x)}=e^{\\lim g(x)\\,(f(x)-1)}\\qquad(f\\to1,\\ g\\to\\infty)$",
+       [
+        "Ex: $\\lim_{x\\to0}(\\cos x)^{1/x^2}=e^{\\lim\\frac{\\cos x-1}{x^2}}=e^{-1/2}$.",
+        "उदा: $\\lim_{x\\to0}(\\cos x)^{1/x^2}=e^{\\lim\\frac{\\cos x-1}{x^2}}=e^{-1/2}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Questions based on derivatives",
+    "hi": "अवकलज पर आधारित प्रश्न",
+    "items": [
+     {
+      "id": "43",
+      "o": 43,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "Write result of $f'(x)$, $f''(x)$, $f'''(x)$, $f''''(x)$ as limits.",
+       "$f'(x)$, $f''(x)$, $f'''(x)$, $f''''(x)$ को सीमा के रूप में लिखिए।"
+      ],
+      "a": [
+       "$f'(x)=\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h},\\quad f''(x)=\\lim_{h\\to0}\\dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}$",
+       "$f'''(x)=\\lim_{h\\to0}\\dfrac{f(x+3h)-3f(x+2h)+3f(x+h)-f(x)}{h^3}$",
+       "$f''''(x)=\\lim_{h\\to0}\\dfrac{f(x+4h)-4f(x+3h)+6f(x+2h)-4f(x+h)+f(x)}{h^4}$",
+       [
+        "Coefficients follow $(h-1)^n$. Ex: $\\lim_{h\\to0}\\dfrac{\\tan(x+h)-\\tan x}{h}=\\sec^2x$.",
+        "गुणांक $(h-1)^n$ के अनुसार। उदा: $\\lim_{h\\to0}\\dfrac{\\tan(x+h)-\\tan x}{h}=\\sec^2x$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Special type of functions",
+    "hi": "विशेष प्रकार के फलन",
+    "items": [
+     {
+      "id": "44",
+      "o": 44,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to compute limit of a function defined separately for rational and irrational numbers?",
+       "परिमेय और अपरिमेय संख्याओं के लिए अलग-अलग परिभाषित फलन की सीमा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Near any point there are both rationals and irrationals, so the limit exists only at points where both definitions tend to the same value: solve $f_1(a)=f_2(a)$.",
+        "किसी भी बिन्दु के पास परिमेय और अपरिमेय दोनों होते हैं, अतः सीमा केवल उन बिन्दुओं पर विद्यमान है जहाँ दोनों परिभाषाएँ एक ही मान की ओर जाएँ: $f_1(a)=f_2(a)$ हल करें।"
+       ],
+       [
+        "Ex: $f(x)=x^2$ ($x\\in Q$), $0$ ($x\\notin Q$): limit exists only at $x=0$ (value 0); at $x=1$ it does not exist.",
+        "उदा: $f(x)=x^2$ ($x\\in Q$), $0$ ($x\\notin Q$): सीमा केवल $x=0$ पर (मान 0); $x=1$ पर विद्यमान नहीं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Problems based on special signs",
+    "hi": "विशेष चिह्नों पर आधारित प्रश्न",
+    "items": [
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do if modulus appears in limit?",
+       "यदि सीमा में मापांक आए तो क्या करें?"
+      ],
+      "a": [
+       [
+        "Find LHL and RHL separately: open $|g(x)|$ as $g$ or $-g$ according to the sign of $g$ on each side.",
+        "$\\text{LHL}$ व $\\text{RHL}$ अलग निकालें: प्रत्येक पक्ष पर $g$ के चिह्न के अनुसार $|g(x)|$ को $g$ या $-g$ लिखें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{\\sin x}{|x|}$: LHL $=-1$, RHL $=1$, does not exist.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{\\sin x}{|x|}$: $\\text{LHL}=-1$, $\\text{RHL}=1$, विद्यमान नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do if $[\\cdot]$ appears in limit question?",
+       "यदि सीमा के प्रश्न में $[\\cdot]$ आए तो क्या करें?"
+      ],
+      "a": [
+       [
+        "Find LHL and RHL. If the inside tends to an integer $k$, see whether it approaches from below ($[\\ ]=k-1$) or above ($[\\ ]=k$); if the inside tends to a non-integer, put its value.",
+        "$\\text{LHL}$ व $\\text{RHL}$ निकालें। यदि अन्दर का व्यंजक पूर्णांक $k$ की ओर जाए, तो देखें नीचे से ($[\\ ]=k-1$) या ऊपर से ($[\\ ]=k$); यदि अपूर्णांक की ओर जाए तो उसका मान रखें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to2}[x^2]$: LHL $=3$, RHL $=4$; $\\lim_{x\\to2}[x]^2$: LHL $=1$, RHL $=4$.",
+        "उदा: $\\lim_{x\\to2}[x^2]$: $\\text{LHL}=3$, $\\text{RHL}=4$; $\\lim_{x\\to2}[x]^2$: $\\text{LHL}=1$, $\\text{RHL}=4$।"
+       ]
+      ]
+     },
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do if $\\{\\cdot\\}$ appears in limit question?",
+       "यदि सीमा के प्रश्न में $\\{\\cdot\\}$ आए तो क्या करें?"
+      ],
+      "a": [
+       [
+        "Write $\\{x\\}=x-[x]$ and find LHL and RHL; $\\{\\ \\}$ is periodic with period 1 and $0\\le\\{x\\}<1$.",
+        "$\\{x\\}=x-[x]$ लिखकर $\\text{LHL}$ व $\\text{RHL}$ निकालें; $\\{\\ \\}$ आवर्ती (आवर्तकाल 1) है और $0\\le\\{x\\}<1$।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\{x\\}$: LHL $=1$, RHL $=0$, does not exist.",
+        "उदा: $\\lim_{x\\to0}\\{x\\}$: $\\text{LHL}=1$, $\\text{RHL}=0$, विद्यमान नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to replace $\\{x\\}$ when $x$ approaches any integer?",
+       "जब $x$ किसी पूर्णांक की ओर जाए तो $\\{x\\}$ के स्थान पर क्या रखें?"
+      ],
+      "a": [
+       "$x\\to n^-:\\ \\{x\\}=1-h\\to1;\\qquad x\\to n^+:\\ \\{x\\}=h\\to0\\quad(n\\in I)$",
+       [
+        "Ex: $\\lim_{x\\to2^-}\\{x\\}=1$, $\\lim_{x\\to2^+}\\{x\\}=0$.",
+        "उदा: $\\lim_{x\\to2^-}\\{x\\}=1$, $\\lim_{x\\to2^+}\\{x\\}=0$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "GIF on standard limits",
+    "hi": "मानक सीमाओं पर महत्तम पूर्णांक फलन",
+    "items": [
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "In standard limit questions, value of $y$ approaches answer from which side?",
+       "मानक सीमा के प्रश्नों में $y$ उत्तर की ओर किस पक्ष से अग्रसर होता है?"
+      ],
+      "a": [
+       [
+        "From $\\sin x<x<\\tan x$ ($0<|x|<\\frac{\\pi}{2}$): $\\dfrac{\\sin x}{x}\\to1^-$, $\\dfrac{\\tan x}{x}\\to1^+$, $\\dfrac{\\sin^{-1}x}{x}\\to1^+$, $\\dfrac{\\tan^{-1}x}{x}\\to1^-$ (reciprocals reverse the side); $\\cos x\\to1^-$.",
+        "$\\sin x<x<\\tan x$ ($0<|x|<\\frac{\\pi}{2}$) से: $\\dfrac{\\sin x}{x}\\to1^-$, $\\dfrac{\\tan x}{x}\\to1^+$, $\\dfrac{\\sin^{-1}x}{x}\\to1^+$, $\\dfrac{\\tan^{-1}x}{x}\\to1^-$ (व्युत्क्रम पर पक्ष उलटता है); $\\cos x\\to1^-$।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\left[\\dfrac{\\sin x}{x}\\right]=0$, $\\lim_{x\\to0}\\left[\\dfrac{\\tan x}{x}\\right]=1$.",
+        "उदा: $\\lim_{x\\to0}\\left[\\dfrac{\\sin x}{x}\\right]=0$, $\\lim_{x\\to0}\\left[\\dfrac{\\tan x}{x}\\right]=1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Sandwich theorem",
+    "hi": "सैंडविच प्रमेय",
+    "items": [
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write statement of Sandwich theorem.",
+       "सैंडविच प्रमेय का कथन लिखिए।"
+      ],
+      "a": [
+       [
+        "If $g(x)\\le f(x)\\le h(x)$ near $a$ and $\\lim_{x\\to a}g(x)=\\lim_{x\\to a}h(x)=l$, then $\\lim_{x\\to a}f(x)=l$ ($a$, $l$ may be $\\pm\\infty$). If the two bounds have different limits, the theorem gives nothing.",
+        "यदि $a$ के पास $g(x)\\le f(x)\\le h(x)$ और $\\lim_{x\\to a}g(x)=\\lim_{x\\to a}h(x)=l$, तो $\\lim_{x\\to a}f(x)=l$ ($a$, $l$ अनन्त भी हो सकते हैं)। यदि दोनों सीमाएँ भिन्न हों तो प्रमेय से कुछ नहीं मिलता।"
+       ],
+       [
+        "Ex: $5-2x^2\\le f(x)\\le5-x^2$ $\\Rightarrow$ $\\lim_{x\\to0}f(x)=5$.",
+        "उदा: $5-2x^2\\le f(x)\\le5-x^2$ $\\Rightarrow$ $\\lim_{x\\to0}f(x)=5$।"
+       ]
+      ]
+     },
+     {
+      "id": "51",
+      "o": 51,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve sandwich theorem questions involving $[\\cdot]$?",
+       "$[\\cdot]$ वाले सैंडविच प्रमेय के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Use $x-1<[x]\\le x$ for each term, multiply/add, then take limits of both bounds.",
+        "प्रत्येक पद के लिए $x-1<[x]\\le x$ लें, गुणा/योग करें, फिर दोनों सीमाओं की सीमा लें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0^+}x\\left[\\frac1x\\right]=1$ (from $1-x<x[\\frac1x]\\le1$); $\\lim_{n\\to\\infty}\\dfrac{[x]+[2x]+\\dots+[nx]}{n^2}=\\dfrac x2$.",
+        "उदा: $\\lim_{x\\to0^+}x\\left[\\frac1x\\right]=1$ ($1-x<x[\\frac1x]\\le1$ से); $\\lim_{n\\to\\infty}\\dfrac{[x]+[2x]+\\dots+[nx]}{n^2}=\\dfrac x2$।"
+       ]
+      ]
+     },
+     {
+      "id": "52",
+      "o": 52,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve sandwich theorem questions involving series sum?",
+       "श्रेणी-योग वाले सैंडविच प्रमेय के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "For $n$ terms: $n\\times(\\text{smallest term})\\le S_n\\le n\\times(\\text{largest term})$; if both bounds tend to the same value, that is the limit.",
+        "$n$ पदों के लिए: $n\\times$(न्यूनतम पद) $\\le S_n\\le n\\times$(अधिकतम पद); यदि दोनों सीमाएँ एक ही मान की ओर जाएँ, तो वही सीमा है।"
+       ],
+       [
+        "Ex: $\\dfrac{n}{\\sqrt{n^2+n}}\\le\\sum_{r=1}^{n}\\dfrac1{\\sqrt{n^2+r}}\\le\\dfrac{n}{\\sqrt{n^2+1}}$, so the limit is 1.",
+        "उदा: $\\dfrac{n}{\\sqrt{n^2+n}}\\le\\sum_{r=1}^{n}\\dfrac1{\\sqrt{n^2+r}}\\le\\dfrac{n}{\\sqrt{n^2+1}}$, अतः सीमा 1 है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Limits of composite function",
+    "hi": "संयुक्त फलन की सीमा",
+    "items": [
+     {
+      "id": "53",
+      "o": 53,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find limit of a composite of two functions without finding the composite?",
+       "संयुक्त फलन बनाए बिना दो फलनों के संयोजन की सीमा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "For $\\lim_{x\\to a}f(g(x))$: find what $g(x)$ tends to and from which side ($g(a^-)$, $g(a^+)$), then take $f$ at that value from that side.",
+        "$\\lim_{x\\to a}f(g(x))$ के लिए: $g(x)$ किस मान की ओर और किस पक्ष से जाता है ($g(a^-)$, $g(a^+)$) ज्ञात करें, फिर उसी पक्ष से उस मान पर $f$ लें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}[\\cos x]=0$ since $\\cos x\\to1^-$.",
+        "उदा: $\\lim_{x\\to0}[\\cos x]=0$ क्योंकि $\\cos x\\to1^-$।"
+       ]
+      ]
+     },
+     {
+      "id": "54",
+      "o": 54,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find limit when numerator and denominator are expressed as expansion of $x$?",
+       "जब अंश और हर $x$ के प्रसार के रूप में हों, तो सीमा कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{a_0x^n+a_1x^{n+1}+\\dots}{b_0x^m+b_1x^{m+1}+\\dots}=\\begin{cases}\\dfrac{a_0}{b_0},&n=m\\\\0,&n>m\\\\\\text{DNE},&n<m\\end{cases}$",
+       [
+        "Compare the lowest powers. Ex: $\\lim_{x\\to0}\\dfrac{x^7+3x^3}{x^5-2x^3}=-\\dfrac32$.",
+        "न्यूनतम घातों की तुलना करें। उदा: $\\lim_{x\\to0}\\dfrac{x^7+3x^3}{x^5-2x^3}=-\\dfrac32$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Limits based on expansion",
+    "hi": "प्रसार पर आधारित सीमाएँ",
+    "items": [
+     {
+      "id": "55",
+      "o": 55,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for existence of limit when numerator and denominator are expressed as expansion of $x$?",
+       "जब अंश और हर $x$ के प्रसार के रूप में हों, तो सीमा के अस्तित्व का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "Finite limit $\\iff$ lowest power of numerator $\\ge$ lowest power of denominator; finite non-zero $\\iff$ they are equal (limit = ratio of their coefficients).",
+        "परिमित सीमा $\\iff$ अंश की न्यूनतम घात $\\ge$ हर की न्यूनतम घात; परिमित शून्येतर $\\iff$ दोनों बराबर (सीमा = उनके गुणांकों का अनुपात)।"
+       ],
+       [
+        "Ex: $\\dfrac{(\\cos x-1)(\\cos x-e^x)}{x^n}$: numerator $\\approx\\left(-\\frac{x^2}{2}\\right)(-x)=\\frac{x^3}{2}$, so finite non-zero only for $n=3$.",
+        "उदा: $\\dfrac{(\\cos x-1)(\\cos x-e^x)}{x^n}$: अंश $\\approx\\left(-\\frac{x^2}{2}\\right)(-x)=\\frac{x^3}{2}$, अतः परिमित शून्येतर केवल $n=3$ पर।"
+       ]
+      ]
+     },
+     {
+      "id": "56",
+      "o": 56,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the general instruction on variable for questions of limits based on expansion?",
+       "प्रसार पर आधारित सीमा के प्रश्नों में चर के लिए सामान्य निर्देश क्या है?"
+      ],
+      "a": [
+       [
+        "The expansions hold near 0: first make the variable tend to 0 ($x\\to a$: $x=a+h$; $x\\to\\infty$: $x=\\frac1t$), then expand each function up to the power of the denominator.",
+        "प्रसार 0 के पास मान्य हैं: पहले चर को 0 की ओर ले जाएँ ($x\\to a$: $x=a+h$; $x\\to\\infty$: $x=\\frac1t$), फिर प्रत्येक फलन को हर की घात तक प्रसारित करें।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\infty}\\left(x-x^2\\ln\\left(1+\\frac1x\\right)\\right)=\\lim_{t\\to0}\\dfrac{t-\\ln(1+t)}{t^2}=\\dfrac12$.",
+        "उदा: $\\lim_{x\\to\\infty}\\left(x-x^2\\ln\\left(1+\\frac1x\\right)\\right)=\\lim_{t\\to0}\\dfrac{t-\\ln(1+t)}{t^2}=\\dfrac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "57",
+      "o": 57,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the four standard questions on limits based on expansion and what is their answer?",
+       "प्रसार पर आधारित सीमाओं के चार मानक प्रश्न कौन से हैं और उनके उत्तर क्या हैं?"
+      ],
+      "a": [
+       "$\\lim_{x\\to0}\\dfrac{x-\\sin x}{x^3}=\\dfrac16,\\qquad \\lim_{x\\to0}\\dfrac{\\tan x-x}{x^3}=\\dfrac13$",
+       "$\\lim_{x\\to0}\\dfrac{e^x-1-x}{x^2}=\\dfrac12,\\qquad \\lim_{x\\to0}\\dfrac{\\ln(1+x)-x}{x^2}=-\\dfrac12$"
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Finding unknown constants",
+    "hi": "अज्ञात अचर ज्ञात करना",
+    "items": [
+     {
+      "id": "58",
+      "o": 58,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find unknown constants in limit questions with the help of expansion?",
+       "प्रसार की सहायता से सीमा के प्रश्नों में अज्ञात अचर कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Expand the numerator up to the power in the denominator; for a finite limit put the coefficients of all lower powers $=0$, then the coefficient of the matching power gives the value.",
+        "अंश को हर की घात तक प्रसारित करें; परिमित सीमा के लिए सभी निम्न घातों के गुणांक $=0$ रखें, फिर समान घात का गुणांक मान देता है।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\dfrac{ae^x-b\\cos x+ce^{-x}}{x\\sin x}=2$: $a-b+c=0$, $a-c=0$, $\\frac{a+b+c}{2}=2\\Rightarrow a+b+c=4$.",
+        "उदा: $\\lim_{x\\to0}\\dfrac{ae^x-b\\cos x+ce^{-x}}{x\\sin x}=2$: $a-b+c=0$, $a-c=0$, $\\frac{a+b+c}{2}=2\\Rightarrow a+b+c=4$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Functions with built in limit",
+    "hi": "अन्तर्निहित सीमा वाले फलन",
+    "items": [
+     {
+      "id": "59",
+      "o": 59,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to define functions with built in limit?",
+       "अन्तर्निहित सीमा वाले फलनों को कैसे परिभाषित करें?"
+      ],
+      "a": [
+       [
+        "Use $\\lim_{n\\to\\infty}x^n=0$ ($|x|<1$), $1$ ($x=1$), $\\infty$ ($x>1$), DNE ($x\\le-1$); split $x$ into these cases and divide by the dominating term.",
+        "$\\lim_{n\\to\\infty}x^n=0$ ($|x|<1$), $1$ ($x=1$), $\\infty$ ($x>1$), विद्यमान नहीं ($x\\le-1$) लें; $x$ को इन प्रकरणों में बाँटकर प्रभावी पद से भाग दें।"
+       ],
+       [
+        "Ex: $f(x)=\\lim_{n\\to\\infty}\\dfrac{x^n}{x^n+1}$ ($x>0$) $=0$ ($0<x<1$), $\\frac12$ ($x=1$), $1$ ($x>1$).",
+        "उदा: $f(x)=\\lim_{n\\to\\infty}\\dfrac{x^n}{x^n+1}$ ($x>0$) $=0$ ($0<x<1$), $\\frac12$ ($x=1$), $1$ ($x>1$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "60",
+      "o": 60,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we bring limit in the argument of a function in case of a composite function?",
+       "संयुक्त फलन में सीमा को फलन के कोणांक के अन्दर कब ले जा सकते हैं?"
+      ],
+      "a": [
+       [
+        "When the outer function $f$ is continuous at $L=\\lim g(x)$: $\\lim f(g(x))=f(\\lim g(x))$. Works for $\\ln$, $e^{(\\ )}$, $\\sqrt{\\ }$, polynomials, $\\sin$, ITF inside their domains; not for $[\\ ]$, $\\{\\ \\}$, $\\operatorname{sgn}$ at a jump.",
+        "जब बाहरी फलन $f$, $L=\\lim g(x)$ पर संतत हो: $\\lim f(g(x))=f(\\lim g(x))$। यह $\\ln$, $e^{(\\ )}$, $\\sqrt{\\ }$, बहुपद, $\\sin$, प्रतिलोम फलनों पर (प्रांत में) लागू है; कूद वाले बिन्दु पर $[\\ ]$, $\\{\\ \\}$, $\\operatorname{sgn}$ पर नहीं।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to0}\\ln\\dfrac{\\sin x}{x}=\\ln1=0$.",
+        "उदा: $\\lim_{x\\to0}\\ln\\dfrac{\\sin x}{x}=\\ln1=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "61",
+      "o": 61,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the relation between logarithmic, polynomial and exponential function if $x$ is approaching to infinity?",
+       "$x\\to\\infty$ पर लघुगणकीय, बहुपद और चरघातांकी फलनों में क्या सम्बन्ध है?"
+      ],
+      "a": [
+       [
+        "$\\ln x\\ll x^n\\ll e^x$ ($n>0$): $\\lim_{x\\to\\infty}\\dfrac{\\ln x}{x^n}=0$, $\\lim_{x\\to\\infty}\\dfrac{x^n}{e^x}=0$; hence also $\\lim_{x\\to0^+}x\\ln x=0$.",
+        "$\\ln x\\ll x^n\\ll e^x$ ($n>0$): $\\lim_{x\\to\\infty}\\dfrac{\\ln x}{x^n}=0$, $\\lim_{x\\to\\infty}\\dfrac{x^n}{e^x}=0$; अतः $\\lim_{x\\to0^+}x\\ln x=0$ भी।"
+       ],
+       [
+        "Ex: $\\lim_{x\\to\\infty}x^{10}e^{-x}=0$.",
+        "उदा: $\\lim_{x\\to\\infty}x^{10}e^{-x}=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:37 (theory sheet 10.2)",
+      "q": [
+       "How to find a geometrical limit (length or area of a figure as an angle $\\to0$ or $n\\to\\infty$)?",
+       "ज्यामितीय सीमा (कोण $\\to0$ या $n\\to\\infty$ पर आकृति की लम्बाई या क्षेत्रफल) कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Express each length/area in the parameter (sector $\\frac12r^2\\theta$, triangle $\\frac12ab\\sin C$, tangent length $r\\tan\\frac{\\theta}{2}$), then use standard limits or expansions.",
+        "प्रत्येक लम्बाई/क्षेत्रफल को प्राचल में लिखें (त्रिज्यखण्ड $\\frac12r^2\\theta$, त्रिभुज $\\frac12ab\\sin C$, स्पर्शरेखा की लम्बाई $r\\tan\\frac{\\theta}{2}$), फिर मानक सीमाएँ या प्रसार लें।"
+       ],
+       [
+        "Ex: chord-arc area $A=\\frac{r^2}{2}(\\theta-\\sin\\theta)$, tangent-arc area $B=r^2\\tan\\frac{\\theta}{2}-\\frac{r^2\\theta}{2}$: $\\lim_{\\theta\\to0}\\dfrac AB=2$.",
+        "उदा: जीवा-चाप क्षेत्रफल $A=\\frac{r^2}{2}(\\theta-\\sin\\theta)$, स्पर्शरेखा-चाप क्षेत्रफल $B=r^2\\tan\\frac{\\theta}{2}-\\frac{r^2\\theta}{2}$: $\\lim_{\\theta\\to0}\\dfrac AB=2$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Meaning of limit, LHL and RHL",
+    "hi": "1. सीमा, बायीं व दायीं सीमा का अर्थ",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{LHL}=\\lim_{h\\to0}f(a-h),\\qquad \\text{RHL}=\\lim_{h\\to0}f(a+h)$",
+        "$\\text{LHL}=\\lim_{h\\to0}f(a-h),\\qquad \\text{RHL}=\\lim_{h\\to0}f(a+h)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Limit exists $\\iff$ LHL $=$ RHL $=$ finite number",
+        "सीमा विद्यमान $\\iff$ $\\text{LHL}=\\text{RHL}=$ परिमित संख्या"
+       ],
+       [
+        "$f(a)$ (value, open/closed dot) has no role in the limit",
+        "सीमा में $f(a)$ (मान, खुला/बन्द बिन्दु) की कोई भूमिका नहीं"
+       ],
+       [
+        "One side outside the domain: limit = the other one-sided limit",
+        "एक पक्ष प्रांत से बाहर: सीमा = दूसरी एक-पक्षीय सीमा"
+       ],
+       [
+        "From a graph: follow the curve from each side and read the height",
+        "ग्राफ से: प्रत्येक पक्ष से वक्र के साथ चलकर ऊँचाई पढ़ें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Indeterminate forms",
+    "hi": "2. अनिर्धार्य रूप",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac00,\\ \\dfrac{\\infty}{\\infty},\\ \\infty-\\infty,\\ 0\\times\\infty,\\ 1^{\\infty},\\ 0^0,\\ \\infty^0$",
+        "$\\dfrac00,\\ \\dfrac{\\infty}{\\infty},\\ \\infty-\\infty,\\ 0\\times\\infty,\\ 1^{\\infty},\\ 0^0,\\ \\infty^0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "0 and 1 in the forms are approached, not exact",
+        "रूपों में 0 और 1 अग्रसर मान हैं, ठीक नहीं"
+       ],
+       [
+        "Exact $0\\times$ anything $=0$; $(\\text{exact }1)^{\\text{any}}=1$; $(\\ne0)^{\\text{exact }0}=1$",
+        "ठीक $0\\times$ कुछ भी $=0$; $(\\text{exact }1)^{\\text{any}}=1$; $(\\ne0)^{\\text{exact }0}=1$"
+       ],
+       [
+        "$\\frac{k}{\\to0}$ ($k\\ne0$) is not indeterminate: it is $\\pm\\infty$ (check sides)",
+        "$\\frac{k}{\\to0}$ ($k\\ne0$) अनिर्धार्य नहीं: यह $\\pm\\infty$ है (पक्ष जाँचें)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Algebra of limits",
+    "hi": "3. सीमाओं का बीजगणित",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim(f\\pm g)=l\\pm m,\\quad \\lim fg=lm,\\quad \\lim\\dfrac fg=\\dfrac lm\\ (m\\ne0)$",
+        "$\\lim(f\\pm g)=l\\pm m,\\quad \\lim fg=lm,\\quad \\lim\\dfrac fg=\\dfrac lm\\ (m\\ne0)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Valid only when both $l$, $m$ are finite",
+        "केवल जब $l$, $m$ दोनों परिमित हों"
+       ],
+       [
+        "Both limits absent: the combination may still have a limit ($[x]+\\{x\\}=x$)",
+        "दोनों सीमाएँ अनुपस्थित: संयोजन की सीमा फिर भी हो सकती है ($[x]+\\{x\\}=x$)"
+       ],
+       [
+        "One exists, other not: $f\\pm g$ never exists; $fg$, $f/g$ may",
+        "एक है, दूसरी नहीं: $f\\pm g$ कभी नहीं; $fg$, $f/g$ हो सकती है"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Split a limit into parts only if every part is finite",
+        "सीमा को भागों में तभी तोड़ें जब प्रत्येक भाग परिमित हो"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Factorisation, rationalisation, substitution",
+    "hi": "4. गुणनखण्डन, परिमेयकरण, प्रतिस्थापन",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$a-b=\\dfrac{a^2-b^2}{a+b}=\\dfrac{a^3-b^3}{a^2+ab+b^2}$",
+        "$a-b=\\dfrac{a^2-b^2}{a+b}=\\dfrac{a^3-b^3}{a^2+ab+b^2}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Put $x=a$; if determinate, stop",
+        "$x=a$ रखें; निर्धार्य हो तो रुकें"
+       ],
+       [
+        "Polynomials $\\frac00$: cancel $(x-a)$ (repeat if needed)",
+        "बहुपद $\\frac00$: $(x-a)$ काटें (आवश्यक हो तो दोहराएँ)"
+       ],
+       [
+        "Roots: multiply by the conjugate (square or cube)",
+        "मूल: संयुग्मी (वर्ग या घन) से गुणा करें"
+       ],
+       [
+        "$\\infty-\\infty$: LCM or rationalise to get $\\frac00$ or $\\frac{\\infty}{\\infty}$",
+        "$\\infty-\\infty$: ल.स.प. या परिमेयकरण से $\\frac00$ या $\\frac{\\infty}{\\infty}$ बनाएँ"
+       ],
+       [
+        "$x\\to a$: $x=a+h$; $x\\to\\infty$: $x=\\frac1t$; $x\\to-\\infty$: $x=-t$",
+        "$x\\to a$: $x=a+h$; $x\\to\\infty$: $x=\\frac1t$; $x\\to-\\infty$: $x=-t$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$\\sqrt{x^2}=|x|=-x$ when $x\\to-\\infty$",
+        "$x\\to-\\infty$ पर $\\sqrt{x^2}=|x|=-x$"
+       ],
+       [
+        "Put the value of a factor only in a product, and only if its limit is finite non-zero",
+        "गुणनखण्ड का मान केवल गुणनफल में, और तभी रखें जब उसकी सीमा परिमित शून्येतर हो"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Infinity/infinity form",
+    "hi": "5. अनन्त/अनन्त रूप",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim_{x\\to\\infty}\\dfrac{a_0x^m+\\dots}{b_0x^n+\\dots}=\\dfrac{a_0}{b_0}\\ (m=n),\\ 0\\ (m<n),\\ \\pm\\infty\\ (m>n)$",
+        "$\\lim_{x\\to\\infty}\\dfrac{a_0x^m+\\dots}{b_0x^n+\\dots}=\\dfrac{a_0}{b_0}\\ (m=n),\\ 0\\ (m<n),\\ \\pm\\infty\\ (m>n)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Divide by the highest power of $x$ (or the largest base $a^n$)",
+        "$x$ की उच्चतम घात (या सबसे बड़े आधार $a^n$) से भाग दें"
+       ],
+       [
+        "$\\ln x\\ll x^n\\ll e^x$ as $x\\to\\infty$; $x\\ln x\\to0$ as $x\\to0^+$",
+        "$x\\to\\infty$ पर $\\ln x\\ll x^n\\ll e^x$; $x\\to0^+$ पर $x\\ln x\\to0$"
+       ],
+       [
+        "Bounded $\\div\\infty\\to0$ (e.g. $\\frac{\\sin x}{x}\\to0$ as $x\\to\\infty$)",
+        "परिबद्ध $\\div\\infty\\to0$ (जैसे $x\\to\\infty$ पर $\\frac{\\sin x}{x}\\to0$)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Standard limits (algebraic, trigonometric)",
+    "hi": "6. मानक सीमाएँ (बीजीय, त्रिकोणमितीय)",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1},\\qquad \\lim_{x\\to0}\\dfrac{(1+x)^n-1}{x}=n$",
+        "$\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1},\\qquad \\lim_{x\\to0}\\dfrac{(1+x)^n-1}{x}=n$"
+       ],
+       [
+        "$\\lim_{x\\to0}\\dfrac{\\sin x}{x}=\\dfrac{\\tan x}{x}=\\dfrac{\\sin^{-1}x}{x}=\\dfrac{\\tan^{-1}x}{x}=1,\\qquad \\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}=\\dfrac12$",
+        "$\\lim_{x\\to0}\\dfrac{\\sin x}{x}=\\dfrac{\\tan x}{x}=\\dfrac{\\sin^{-1}x}{x}=\\dfrac{\\tan^{-1}x}{x}=1,\\qquad \\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}=\\dfrac12$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$s\\to0$: $\\sin s,\\tan s,\\sin^{-1}s,\\tan^{-1}s\\to s$; $1-\\cos s\\to\\frac{s^2}{2}$; $(1+s)^n-1\\to ns$",
+        "$s\\to0$: $\\sin s,\\tan s,\\sin^{-1}s,\\tan^{-1}s\\to s$; $1-\\cos s\\to\\frac{s^2}{2}$; $(1+s)^n-1\\to ns$"
+       ],
+       [
+        "$x^p\\sin\\frac1x\\to0$ ($p>0$), does not exist ($p\\le0$)",
+        "$x^p\\sin\\frac1x\\to0$ ($p>0$), विद्यमान नहीं ($p\\le0$)"
+       ],
+       [
+        "Angles in radians; ITF away from 0: put ITF $=\\theta$",
+        "कोण रेडियन में; 0 से दूर प्रतिलोम फलन: उसे $\\theta$ रखें"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Replace only factors, never terms of a sum or difference",
+        "केवल गुणनखण्डों को बदलें, योग या अन्तर के पदों को कभी नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Exponential and logarithmic limits",
+    "hi": "7. चरघातांकी और लघुगणकीय सीमाएँ",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1,\\quad \\lim_{x\\to0}\\dfrac{a^x-1}{x}=\\ln a,\\quad \\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1$",
+        "$\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1,\\quad \\lim_{x\\to0}\\dfrac{a^x-1}{x}=\\ln a,\\quad \\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$s\\to0$: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, $\\ln(1+s)\\to s$",
+        "$s\\to0$: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, $\\ln(1+s)\\to s$"
+       ],
+       [
+        "$S\\to1$: $\\ln S\\to S-1$, $S^n-1\\to n(S-1)$",
+        "$S\\to1$: $\\ln S\\to S-1$, $S^n-1\\to n(S-1)$"
+       ],
+       [
+        "$a^x-b^x=(a^x-1)-(b^x-1)$ before replacing",
+        "बदलने से पहले $a^x-b^x=(a^x-1)-(b^x-1)$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. One raise to infinity",
+    "hi": "8. एक की घात अनन्त",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim f^g=e^{\\lim g\\,(f-1)}\\quad(f\\to1,\\ g\\to\\infty)$",
+        "$\\lim f^g=e^{\\lim g\\,(f-1)}\\quad(f\\to1,\\ g\\to\\infty)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Check: base $\\to1$ (not exact 1), exponent $\\to\\infty$",
+        "जाँच: आधार $\\to1$ (ठीक 1 नहीं), घातांक $\\to\\infty$"
+       ],
+       [
+        "$0^0$, $\\infty^0$ and general $f^g$: $e^{\\lim g\\ln f}$",
+        "$0^0$, $\\infty^0$ और सामान्य $f^g$: $e^{\\lim g\\ln f}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Expansions",
+    "hi": "9. प्रसार",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\sin x=x-\\frac{x^3}{6}+\\frac{x^5}{120},\\ \\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24},\\ \\tan x=x+\\frac{x^3}{3}+\\frac{2x^5}{15}$",
+        "$\\sin x=x-\\frac{x^3}{6}+\\frac{x^5}{120},\\ \\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24},\\ \\tan x=x+\\frac{x^3}{3}+\\frac{2x^5}{15}$"
+       ],
+       [
+        "$e^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6},\\ \\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3},\\ \\tan^{-1}x=x-\\frac{x^3}{3}+\\frac{x^5}{5}$",
+        "$e^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6},\\ \\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3},\\ \\tan^{-1}x=x-\\frac{x^3}{3}+\\frac{x^5}{5}$"
+       ],
+       [
+        "$(1+x)^n=1+nx+\\frac{n(n-1)}{2}x^2,\\quad \\sin^{-1}x=x+\\frac{x^3}{6}+\\frac{3x^5}{40}$",
+        "$(1+x)^n=1+nx+\\frac{n(n-1)}{2}x^2,\\quad \\sin^{-1}x=x+\\frac{x^3}{6}+\\frac{3x^5}{40}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Four standard: $\\frac{x-\\sin x}{x^3}\\to\\frac16$, $\\frac{\\tan x-x}{x^3}\\to\\frac13$, $\\frac{e^x-1-x}{x^2}\\to\\frac12$, $\\frac{\\ln(1+x)-x}{x^2}\\to-\\frac12$",
+        "चार मानक: $\\frac{x-\\sin x}{x^3}\\to\\frac16$, $\\frac{\\tan x-x}{x^3}\\to\\frac13$, $\\frac{e^x-1-x}{x^2}\\to\\frac12$, $\\frac{\\ln(1+x)-x}{x^2}\\to-\\frac12$"
+       ],
+       [
+        "Lowest powers: equal $\\Rightarrow$ ratio of coefficients; numerator higher $\\Rightarrow0$; denominator higher $\\Rightarrow$ does not exist",
+        "न्यूनतम घातें: बराबर $\\Rightarrow$ गुणांकों का अनुपात; अंश की अधिक $\\Rightarrow0$; हर की अधिक $\\Rightarrow$ विद्यमान नहीं"
+       ],
+       [
+        "Make the variable $\\to0$ before expanding",
+        "प्रसार से पहले चर को $0$ की ओर ले जाएँ"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Finding unknown constants",
+    "hi": "10. अज्ञात अचर",
+    "color": "orange",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Expand numerator (and denominator) up to the needed power",
+        "अंश (और हर) को आवश्यक घात तक प्रसारित करें"
+       ],
+       [
+        "Finite limit: coefficients of powers below the denominator's lowest power $=0$",
+        "परिमित सीमा: हर की न्यूनतम घात से छोटी घातों के गुणांक $=0$"
+       ],
+       [
+        "Matching power: coefficient ratio $=$ given value",
+        "समान घात: गुणांकों का अनुपात $=$ दिया गया मान"
+       ],
+       [
+        "Without expansion: limit finite and denominator $\\to0$ $\\Rightarrow$ numerator $\\to0$",
+        "प्रसार बिना: सीमा परिमित और हर $\\to0$ $\\Rightarrow$ अंश $\\to0$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Limits that are derivatives",
+    "hi": "11. अवकलज के रूप में सीमाएँ",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h},\\quad f''(x)=\\lim_{h\\to0}\\dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}$",
+        "$f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h},\\quad f''(x)=\\lim_{h\\to0}\\dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Higher orders: coefficients of $(h-1)^n$",
+        "उच्च कोटि: $(h-1)^n$ के गुणांक"
+       ],
+       [
+        "Given $f(a)$, $f'(a)$: add and subtract $f(a)$ to create $\\frac{f(x)-f(a)}{x-a}$",
+        "$f(a)$, $f'(a)$ दिए हों: $f(a)$ जोड़-घटाकर $\\frac{f(x)-f(a)}{x-a}$ बनाएँ"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Modulus, [ ], { }, sgn",
+    "hi": "12. मापांक, [ ], { }, चिह्न फलन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$x\\to n^-:\\ [x]=n-1,\\ \\{x\\}\\to1;\\qquad x\\to n^+:\\ [x]=n,\\ \\{x\\}\\to0$",
+        "$x\\to n^-:\\ [x]=n-1,\\ \\{x\\}\\to1;\\qquad x\\to n^+:\\ [x]=n,\\ \\{x\\}\\to0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Always find LHL and RHL separately",
+        "सदा $\\text{LHL}$ व $\\text{RHL}$ अलग निकालें"
+       ],
+       [
+        "Inside $\\to$ non-integer: just substitute",
+        "अन्दर का व्यंजक $\\to$ अपूर्णांक: सीधे मान रखें"
+       ],
+       [
+        "Inside $\\to$ integer: decide whether it comes from below or above",
+        "अन्दर का व्यंजक $\\to$ पूर्णांक: नीचे से आता है या ऊपर से, तय करें"
+       ],
+       [
+        "$\\frac{\\sin x}{x},\\frac{\\tan^{-1}x}{x},\\cos x\\to1^-$; $\\frac{\\tan x}{x},\\frac{\\sin^{-1}x}{x}\\to1^+$",
+        "$\\frac{\\sin x}{x},\\frac{\\tan^{-1}x}{x},\\cos x\\to1^-$; $\\frac{\\tan x}{x},\\frac{\\sin^{-1}x}{x}\\to1^+$"
+       ],
+       [
+        "Rational/irrational definitions: limit only where both definitions agree",
+        "परिमेय/अपरिमेय परिभाषाएँ: सीमा केवल वहाँ जहाँ दोनों परिभाषाएँ समान हों"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Sandwich theorem",
+    "hi": "13. सैंडविच प्रमेय",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$g\\le f\\le h,\\ \\lim g=\\lim h=l\\ \\Rightarrow\\ \\lim f=l$",
+        "$g\\le f\\le h,\\ \\lim g=\\lim h=l\\ \\Rightarrow\\ \\lim f=l$"
+       ],
+       [
+        "$x-1<[x]\\le x$",
+        "$x-1<[x]\\le x$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Series of $n$ terms: $n\\cdot$(smallest) $\\le S_n\\le n\\cdot$(largest)",
+        "$n$ पदों की श्रेणी: $n\\cdot$(न्यूनतम) $\\le S_n\\le n\\cdot$(अधिकतम)"
+       ],
+       [
+        "$\\sum_{k=1}^n[kx]$: use $\\sum k=\\frac{n(n+1)}{2}$ on both bounds",
+        "$\\sum_{k=1}^n[kx]$: दोनों सीमाओं पर $\\sum k=\\frac{n(n+1)}{2}$ लें"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Different limits of the two bounds: theorem gives nothing",
+        "दोनों सीमाओं की सीमाएँ भिन्न: प्रमेय से कुछ नहीं मिलता"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Composite functions and built-in limits",
+    "hi": "14. संयुक्त फलन और अन्तर्निहित सीमाएँ",
+    "color": "teal",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$\\lim f(g(x))$: find $g$'s limit and side, then $f$ at that value from that side",
+        "$\\lim f(g(x))$: $g$ की सीमा व पक्ष ज्ञात करें, फिर उसी पक्ष से उस मान पर $f$"
+       ],
+       [
+        "$f$ continuous at $\\lim g$: $\\lim f(g)=f(\\lim g)$ ($\\ln$, $e$, $\\sqrt{\\ }$, $\\sin$, ITF)",
+        "$\\lim g$ पर $f$ संतत: $\\lim f(g)=f(\\lim g)$ ($\\ln$, $e$, $\\sqrt{\\ }$, $\\sin$, प्रतिलोम फलन)"
+       ],
+       [
+        "$\\lim_{n\\to\\infty}x^n=0\\ (|x|<1),\\ 1\\ (x=1),\\ \\infty\\ (x>1)$, does not exist ($x\\le-1$)",
+        "$\\lim_{n\\to\\infty}x^n=0\\ (|x|<1),\\ 1\\ (x=1),\\ \\infty\\ (x>1)$, विद्यमान नहीं ($x\\le-1$)"
+       ],
+       [
+        "Built-in limit: split into $|x|<1$, $|x|=1$, $|x|>1$ and divide by the dominating term",
+        "अन्तर्निहित सीमा: $|x|<1$, $|x|=1$, $|x|>1$ में बाँटें और प्रभावी पद से भाग दें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Geometrical limits",
+    "hi": "15. ज्यामितीय सीमाएँ",
+    "color": "green",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Write lengths/areas in the angle: sector $\\frac12r^2\\theta$, triangle $\\frac12ab\\sin C$, tangent length $r\\tan\\frac{\\theta}{2}$",
+        "लम्बाई/क्षेत्रफल को कोण में लिखें: त्रिज्यखण्ड $\\frac12r^2\\theta$, त्रिभुज $\\frac12ab\\sin C$, स्पर्शरेखा की लम्बाई $r\\tan\\frac{\\theta}{2}$"
+       ],
+       [
+        "Then use standard limits or expansions ($\\theta-\\sin\\theta\\approx\\frac{\\theta^3}{6}$)",
+        "फिर मानक सीमाएँ या प्रसार लें ($\\theta-\\sin\\theta\\approx\\frac{\\theta^3}{6}$)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Common mistakes checklist",
+    "hi": "16. सामान्य भूलों की जाँच-सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Did I check the form before simplifying?",
+        "क्या सरल करने से पहले रूप जाँचा?"
+       ],
+       [
+        "Did I replace $\\sin s\\to s$ etc. only for factors, not inside sums?",
+        "क्या $\\sin s\\to s$ आदि केवल गुणनखण्डों में बदला, योग के अन्दर नहीं?"
+       ],
+       [
+        "Did I find LHL and RHL for $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, ITF, $e^{1/x}$?",
+        "क्या $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, प्रतिलोम फलन, $e^{1/x}$ में $\\text{LHL}$ व $\\text{RHL}$ निकाले?"
+       ],
+       [
+        "Did I use $\\sqrt{x^2}=-x$ for $x\\to-\\infty$?",
+        "क्या $x\\to-\\infty$ पर $\\sqrt{x^2}=-x$ लिया?"
+       ],
+       [
+        "Did I expand far enough (up to the denominator's power)?",
+        "क्या हर की घात तक पर्याप्त प्रसार किया?"
+       ],
+       [
+        "Is the base of $1^{\\infty}$ really approaching 1 (not exactly 1)?",
+        "क्या $1^{\\infty}$ का आधार वास्तव में 1 की ओर अग्रसर है (ठीक 1 नहीं)?"
+       ],
+       [
+        "Is my answer finite? An infinite value means the limit does not exist",
+        "क्या उत्तर परिमित है? अनन्त मान का अर्थ है सीमा विद्यमान नहीं"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "Existence",
+    "hi": "अस्तित्व",
+    "lines": [
+     [
+      "LHL: $\\lim_{h\\to0}f(a-h)$",
+      "$\\text{LHL}$: $\\lim_{h\\to0}f(a-h)$"
+     ],
+     [
+      "RHL: $\\lim_{h\\to0}f(a+h)$",
+      "$\\text{RHL}$: $\\lim_{h\\to0}f(a+h)$"
+     ],
+     [
+      "Exists: $\\text{LHL}=\\text{RHL}=$ finite",
+      "विद्यमान: $\\text{LHL}=\\text{RHL}=$ परिमित"
+     ],
+     [
+      "Indeterminate: $\\frac00,\\frac{\\infty}{\\infty},\\infty-\\infty,0\\cdot\\infty,1^{\\infty},0^0,\\infty^0$",
+      "अनिर्धार्य: $\\frac00,\\frac{\\infty}{\\infty},\\infty-\\infty,0\\cdot\\infty,1^{\\infty},0^0,\\infty^0$"
+     ]
+    ]
+   },
+   {
+    "en": "Algebra and rationalisation",
+    "hi": "बीजगणित और परिमेयकरण",
+    "lines": [
+     [
+      "Sum/product: $\\lim(f\\pm g)=l\\pm m$, $\\lim fg=lm$",
+      "योग/गुणनफल: $\\lim(f\\pm g)=l\\pm m$, $\\lim fg=lm$"
+     ],
+     [
+      "Quotient: $\\lim\\frac fg=\\frac lm$ ($m\\ne0$)",
+      "भागफल: $\\lim\\frac fg=\\frac lm$ ($m\\ne0$)"
+     ],
+     [
+      "Square: $a-b=\\dfrac{a^2-b^2}{a+b}$",
+      "वर्ग: $a-b=\\dfrac{a^2-b^2}{a+b}$"
+     ],
+     [
+      "Cube: $a-b=\\dfrac{a^3-b^3}{a^2+ab+b^2}$",
+      "घन: $a-b=\\dfrac{a^3-b^3}{a^2+ab+b^2}$"
+     ]
+    ]
+   },
+   {
+    "en": "Substitutions",
+    "hi": "प्रतिस्थापन",
+    "lines": [
+     [
+      "$x\\to a$: $x=a+h$",
+      "$x\\to a$: $x=a+h$"
+     ],
+     [
+      "$x\\to\\infty$: $x=\\frac1t$, $t\\to0^+$",
+      "$x\\to\\infty$: $x=\\frac1t$, $t\\to0^+$"
+     ],
+     [
+      "$x\\to-\\infty$: $x=-t$, $\\sqrt{x^2}=-x$",
+      "$x\\to-\\infty$: $x=-t$, $\\sqrt{x^2}=-x$"
+     ]
+    ]
+   },
+   {
+    "en": "Infinity/infinity",
+    "hi": "अनन्त/अनन्त",
+    "lines": [
+     [
+      "Degrees: $\\frac{a_0}{b_0}$ ($m=n$), $0$ ($m<n$), $\\pm\\infty$ ($m>n$)",
+      "घातें: $\\frac{a_0}{b_0}$ ($m=n$), $0$ ($m<n$), $\\pm\\infty$ ($m>n$)"
+     ],
+     [
+      "Growth: $\\ln x\\ll x^n\\ll e^x$",
+      "वृद्धि: $\\ln x\\ll x^n\\ll e^x$"
+     ],
+     [
+      "Near $0^+$: $x\\ln x\\to0$",
+      "$0^+$ के पास: $x\\ln x\\to0$"
+     ]
+    ]
+   },
+   {
+    "en": "Standard limits",
+    "hi": "मानक सीमाएँ",
+    "lines": [
+     [
+      "Power: $\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1}$",
+      "घात: $\\lim_{x\\to a}\\dfrac{x^n-a^n}{x-a}=na^{n-1}$"
+     ],
+     [
+      "Binomial: $\\lim_{x\\to0}\\dfrac{(1+x)^n-1}{x}=n$",
+      "द्विपद: $\\lim_{x\\to0}\\dfrac{(1+x)^n-1}{x}=n$"
+     ],
+     [
+      "Trig: $\\dfrac{\\sin x}{x},\\dfrac{\\tan x}{x},\\dfrac{\\sin^{-1}x}{x},\\dfrac{\\tan^{-1}x}{x}\\to1$",
+      "त्रिकोणमितीय: $\\dfrac{\\sin x}{x},\\dfrac{\\tan x}{x},\\dfrac{\\sin^{-1}x}{x},\\dfrac{\\tan^{-1}x}{x}\\to1$"
+     ],
+     [
+      "Cosine: $\\dfrac{1-\\cos x}{x^2}\\to\\dfrac12$",
+      "कोज्या: $\\dfrac{1-\\cos x}{x^2}\\to\\dfrac12$"
+     ],
+     [
+      "Exponential: $\\dfrac{e^x-1}{x}\\to1$, $\\dfrac{a^x-1}{x}\\to\\ln a$",
+      "चरघातांकी: $\\dfrac{e^x-1}{x}\\to1$, $\\dfrac{a^x-1}{x}\\to\\ln a$"
+     ],
+     [
+      "Logarithm: $\\dfrac{\\ln(1+x)}{x}\\to1$",
+      "लघुगणक: $\\dfrac{\\ln(1+x)}{x}\\to1$"
+     ],
+     [
+      "Oscillating: $x^p\\sin\\frac1x\\to0$ ($p>0$)",
+      "दोलनशील: $x^p\\sin\\frac1x\\to0$ ($p>0$)"
+     ]
+    ]
+   },
+   {
+    "en": "Replacements ($s\\to0$)",
+    "hi": "प्रतिस्थापन ($s\\to0$)",
+    "lines": [
+     [
+      "Trig: $\\sin s,\\tan s,\\sin^{-1}s,\\tan^{-1}s\\to s$",
+      "त्रिकोणमितीय: $\\sin s,\\tan s,\\sin^{-1}s,\\tan^{-1}s\\to s$"
+     ],
+     [
+      "Cosine: $1-\\cos s\\to\\frac{s^2}{2}$",
+      "कोज्या: $1-\\cos s\\to\\frac{s^2}{2}$"
+     ],
+     [
+      "Exp/log: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, $\\ln(1+s)\\to s$",
+      "चरघातांकी/लघुगणक: $e^s-1\\to s$, $a^s-1\\to s\\ln a$, $\\ln(1+s)\\to s$"
+     ],
+     [
+      "Power: $(1+s)^n-1\\to ns$; $S\\to1$: $S^n-1\\to n(S-1)$, $\\ln S\\to S-1$",
+      "घात: $(1+s)^n-1\\to ns$; $S\\to1$: $S^n-1\\to n(S-1)$, $\\ln S\\to S-1$"
+     ]
+    ]
+   },
+   {
+    "en": "Exponential forms",
+    "hi": "घातीय रूप",
+    "lines": [
+     [
+      "$1^{\\infty}$: $\\lim f^g=e^{\\lim g(f-1)}$",
+      "$1^{\\infty}$: $\\lim f^g=e^{\\lim g(f-1)}$"
+     ],
+     [
+      "General: $\\lim f^g=e^{\\lim g\\ln f}$",
+      "सामान्य: $\\lim f^g=e^{\\lim g\\ln f}$"
+     ],
+     [
+      "Built-in: $\\lim_{n\\to\\infty}x^n=0\\ (|x|<1),\\ 1\\ (x=1),\\ \\infty\\ (x>1)$",
+      "अन्तर्निहित: $\\lim_{n\\to\\infty}x^n=0\\ (|x|<1),\\ 1\\ (x=1),\\ \\infty\\ (x>1)$"
+     ]
+    ]
+   },
+   {
+    "en": "Expansions",
+    "hi": "प्रसार",
+    "lines": [
+     [
+      "$\\sin x=x-\\frac{x^3}{6}+\\frac{x^5}{120}$",
+      "$\\sin x=x-\\frac{x^3}{6}+\\frac{x^5}{120}$"
+     ],
+     [
+      "$\\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24}$",
+      "$\\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24}$"
+     ],
+     [
+      "$\\tan x=x+\\frac{x^3}{3}+\\frac{2x^5}{15}$",
+      "$\\tan x=x+\\frac{x^3}{3}+\\frac{2x^5}{15}$"
+     ],
+     [
+      "$e^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$",
+      "$e^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$"
+     ],
+     [
+      "$\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}$",
+      "$\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}$"
+     ],
+     [
+      "$\\tan^{-1}x=x-\\frac{x^3}{3}+\\frac{x^5}{5}$",
+      "$\\tan^{-1}x=x-\\frac{x^3}{3}+\\frac{x^5}{5}$"
+     ],
+     [
+      "$\\sin^{-1}x=x+\\frac{x^3}{6}+\\frac{3x^5}{40}$",
+      "$\\sin^{-1}x=x+\\frac{x^3}{6}+\\frac{3x^5}{40}$"
+     ],
+     [
+      "$(1+x)^n=1+nx+\\frac{n(n-1)}{2}x^2$",
+      "$(1+x)^n=1+nx+\\frac{n(n-1)}{2}x^2$"
+     ],
+     [
+      "Four standard: $\\frac{x-\\sin x}{x^3}\\to\\frac16$, $\\frac{\\tan x-x}{x^3}\\to\\frac13$",
+      "चार मानक: $\\frac{x-\\sin x}{x^3}\\to\\frac16$, $\\frac{\\tan x-x}{x^3}\\to\\frac13$"
+     ],
+     [
+      "$\\frac{e^x-1-x}{x^2}\\to\\frac12$, $\\frac{\\ln(1+x)-x}{x^2}\\to-\\frac12$",
+      "$\\frac{e^x-1-x}{x^2}\\to\\frac12$, $\\frac{\\ln(1+x)-x}{x^2}\\to-\\frac12$"
+     ]
+    ]
+   },
+   {
+    "en": "Special signs, sandwich, derivative",
+    "hi": "विशेष चिह्न, सैंडविच, अवकलज",
+    "lines": [
+     [
+      "Near integer $n$: $[x]=n-1$ / $n$, $\\{x\\}\\to1$ / $0$",
+      "पूर्णांक $n$ के पास: $[x]=n-1$ / $n$, $\\{x\\}\\to1$ / $0$"
+     ],
+     [
+      "Side: $\\frac{\\sin x}{x}\\to1^-$, $\\frac{\\tan x}{x}\\to1^+$, $\\frac{\\sin^{-1}x}{x}\\to1^+$, $\\frac{\\tan^{-1}x}{x}\\to1^-$",
+      "पक्ष: $\\frac{\\sin x}{x}\\to1^-$, $\\frac{\\tan x}{x}\\to1^+$, $\\frac{\\sin^{-1}x}{x}\\to1^+$, $\\frac{\\tan^{-1}x}{x}\\to1^-$"
+     ],
+     [
+      "Sandwich: $g\\le f\\le h$, $\\lim g=\\lim h=l\\Rightarrow\\lim f=l$",
+      "सैंडविच: $g\\le f\\le h$, $\\lim g=\\lim h=l\\Rightarrow\\lim f=l$"
+     ],
+     [
+      "GIF bound: $x-1<[x]\\le x$",
+      "महत्तम पूर्णांक सीमा: $x-1<[x]\\le x$"
+     ],
+     [
+      "Derivative: $f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$",
+      "अवकलज: $f'(a)=\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$"
+     ],
+     [
+      "Second: $f''(x)=\\lim_{h\\to0}\\dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}$",
+      "द्वितीय: $f''(x)=\\lim_{h\\to0}\\dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Existence",
+    "hi": "अस्तित्व",
+    "leaves": [
+     [
+      "$\\text{LHL}=\\text{RHL}=$ finite",
+      "$\\text{LHL}=\\text{RHL}=$ परिमित"
+     ],
+     [
+      "$f(a-h)$, $f(a+h)$",
+      "$f(a-h)$, $f(a+h)$"
+     ],
+     [
+      "One side out of domain: other side",
+      "एक पक्ष प्रांत से बाहर: दूसरा पक्ष"
+     ]
+    ]
+   },
+   {
+    "en": "Indeterminate forms",
+    "hi": "अनिर्धार्य रूप",
+    "leaves": [
+     [
+      "7 forms; 0, 1 only approached",
+      "7 रूप; 0, 1 केवल अग्रसर"
+     ],
+     [
+      "Exact 0 or 1: determinate",
+      "ठीक 0 या 1: निर्धार्य"
+     ]
+    ]
+   },
+   {
+    "en": "Algebra of limits",
+    "hi": "सीमाओं का बीजगणित",
+    "leaves": [
+     [
+      "Both finite: combine",
+      "दोनों परिमित: मिलाएँ"
+     ],
+     [
+      "Split only finite parts",
+      "केवल परिमित भाग तोड़ें"
+     ]
+    ]
+   },
+   {
+    "en": "Factorise / rationalise",
+    "hi": "गुणनखण्डन / परिमेयकरण",
+    "leaves": [
+     [
+      "Cancel $(x-a)$",
+      "$(x-a)$ काटें"
+     ],
+     [
+      "Conjugate: square or cube",
+      "संयुग्मी: वर्ग या घन"
+     ],
+     [
+      "$\\infty-\\infty$: LCM",
+      "$\\infty-\\infty$: ल.स.प."
+     ]
+    ]
+   },
+   {
+    "en": "Substitution",
+    "hi": "प्रतिस्थापन",
+    "leaves": [
+     [
+      "$x=a+h$",
+      "$x=a+h$"
+     ],
+     [
+      "$x=\\frac1t$ for $\\infty$",
+      "$\\infty$ के लिए $x=\\frac1t$"
+     ],
+     [
+      "$x=-t$, $\\sqrt{x^2}=-x$",
+      "$x=-t$, $\\sqrt{x^2}=-x$"
+     ]
+    ]
+   },
+   {
+    "en": "Infinity/infinity",
+    "hi": "अनन्त/अनन्त",
+    "leaves": [
+     [
+      "Divide by highest power",
+      "उच्चतम घात से भाग"
+     ],
+     [
+      "$\\ln x\\ll x^n\\ll e^x$",
+      "$\\ln x\\ll x^n\\ll e^x$"
+     ]
+    ]
+   },
+   {
+    "en": "Algebraic & trig limits",
+    "hi": "बीजीय व त्रिकोणमितीय सीमाएँ",
+    "leaves": [
+     [
+      "$\\frac{x^n-a^n}{x-a}\\to na^{n-1}$",
+      "$\\frac{x^n-a^n}{x-a}\\to na^{n-1}$"
+     ],
+     [
+      "$\\frac{\\sin x}{x}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$",
+      "$\\frac{\\sin x}{x}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$"
+     ],
+     [
+      "Replace factors only",
+      "केवल गुणनखण्ड बदलें"
+     ]
+    ]
+   },
+   {
+    "en": "Exp & log limits",
+    "hi": "चरघातांकी व लघुगणकीय",
+    "leaves": [
+     [
+      "$\\frac{a^x-1}{x}\\to\\ln a$",
+      "$\\frac{a^x-1}{x}\\to\\ln a$"
+     ],
+     [
+      "$\\frac{\\ln(1+x)}{x}\\to1$",
+      "$\\frac{\\ln(1+x)}{x}\\to1$"
+     ]
+    ]
+   },
+   {
+    "en": "1 to the power infinity",
+    "hi": "1 की घात अनन्त",
+    "leaves": [
+     [
+      "$e^{\\lim g(f-1)}$",
+      "$e^{\\lim g(f-1)}$"
+     ],
+     [
+      "Base $\\to1$, not exact",
+      "आधार $\\to1$, ठीक नहीं"
+     ]
+    ]
+   },
+   {
+    "en": "Expansions",
+    "hi": "प्रसार",
+    "leaves": [
+     [
+      "Compare lowest powers",
+      "न्यूनतम घातों की तुलना"
+     ],
+     [
+      "Four standard results",
+      "चार मानक परिणाम"
+     ],
+     [
+      "Constants: lower coefficients $=0$",
+      "अचर: निम्न गुणांक $=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Derivative limits",
+    "hi": "अवकलज सीमाएँ",
+    "leaves": [
+     [
+      "$f'(a)$ as a limit",
+      "सीमा के रूप में $f'(a)$"
+     ],
+     [
+      "$f''$: $(h-1)^2$ pattern",
+      "$f''$: $(h-1)^2$ प्रतिरूप"
+     ]
+    ]
+   },
+   {
+    "en": "Special signs",
+    "hi": "विशेष चिह्न",
+    "leaves": [
+     [
+      "LHL, RHL separately",
+      "$\\text{LHL}$, $\\text{RHL}$ अलग"
+     ],
+     [
+      "$\\{x\\}\\to1$ from left of integer",
+      "पूर्णांक के बायें $\\{x\\}\\to1$"
+     ],
+     [
+      "$\\frac{\\sin x}{x}\\to1^-$, $\\frac{\\tan x}{x}\\to1^+$",
+      "$\\frac{\\sin x}{x}\\to1^-$, $\\frac{\\tan x}{x}\\to1^+$"
+     ]
+    ]
+   },
+   {
+    "en": "Sandwich theorem",
+    "hi": "सैंडविच प्रमेय",
+    "leaves": [
+     [
+      "$x-1<[x]\\le x$",
+      "$x-1<[x]\\le x$"
+     ],
+     [
+      "Series: $n\\cdot$min, $n\\cdot$max",
+      "श्रेणी: $n\\cdot$न्यूनतम, $n\\cdot$अधिकतम"
+     ]
+    ]
+   },
+   {
+    "en": "Composite & built-in",
+    "hi": "संयुक्त व अन्तर्निहित",
+    "leaves": [
+     [
+      "Inner limit and its side",
+      "अन्तः सीमा और उसका पक्ष"
+     ],
+     [
+      "$\\lim x^n$: $|x|<1,=1,>1$",
+      "$\\lim x^n$: $|x|<1,=1,>1$"
+     ],
+     [
+      "Continuous outer: limit inside",
+      "संतत बाहरी फलन: सीमा अन्दर"
+     ]
+    ]
+   },
+   {
+    "en": "Special functions & geometry",
+    "hi": "विशेष फलन व ज्यामिति",
+    "leaves": [
+     [
+      "Rational/irrational: where definitions agree",
+      "परिमेय/अपरिमेय: जहाँ परिभाषाएँ समान"
+     ],
+     [
+      "Areas in $\\theta$, then expand",
+      "क्षेत्रफल $\\theta$ में, फिर प्रसार"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which method for a limit?",
+    "प्रवाह-चित्र 1: सीमा के लिए कौन सी विधि?"
+   ],
+   "start": [
+    "Put $x=a$ and find the form",
+    "$x=a$ रखकर रूप ज्ञात करें"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Form determinate?",
+      "रूप निर्धार्य?"
+     ],
+     "a": [
+      [
+       "That value is the answer."
+      ],
+      [
+       "वही मान उत्तर है।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Contains $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, $e^{1/x}$?",
+      "$[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$, $e^{1/x}$ है?"
+     ],
+     "a": [
+      [
+       "Find LHL and RHL separately (Flowchart 4)."
+      ],
+      [
+       "$\\text{LHL}$ व $\\text{RHL}$ अलग निकालें (प्रवाह-चित्र 4)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Polynomials in $\\frac00$?",
+      "बहुपदों में $\\frac00$?"
+     ],
+     "a": [
+      [
+       "Factorise and cancel $(x-a)$."
+      ],
+      [
+       "गुणनखण्डन कर $(x-a)$ काटें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Square or cube roots?",
+      "वर्ग या घन मूल?"
+     ],
+     "a": [
+      [
+       "Rationalise with the conjugate."
+      ],
+      [
+       "संयुग्मी से परिमेयकरण करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$x\\to\\infty$ and $\\frac{\\infty}{\\infty}$?",
+      "$x\\to\\infty$ और $\\frac{\\infty}{\\infty}$?"
+     ],
+     "a": [
+      [
+       "Divide by the highest power."
+      ],
+      [
+       "उच्चतम घात से भाग दें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\sin,\\tan,e^{(\\ )},\\ln$ of something $\\to0$ (as factors)?",
+      "$\\to0$ वाले व्यंजक के $\\sin,\\tan,e^{(\\ )},\\ln$ (गुणनखण्ड)?"
+     ],
+     "a": [
+      [
+       "Use standard limits / replacements."
+      ],
+      [
+       "मानक सीमाएँ / प्रतिस्थापन लें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Variable in the exponent?",
+      "घातांक में चर?"
+     ],
+     "a": [
+      [
+       "$1^{\\infty}$: $e^{\\lim g(f-1)}$ (Flowchart 3)."
+      ],
+      [
+       "$1^{\\infty}$: $e^{\\lim g(f-1)}$ (प्रवाह-चित्र 3)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Difference of functions: use expansions (Flowchart 2)."
+    ],
+    [
+     "फलनों का अन्तर: प्रसार लें (प्रवाह-चित्र 2)।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Expansion questions",
+    "प्रवाह-चित्र 2: प्रसार के प्रश्न"
+   ],
+   "start": [
+    "Terms cancel in a difference ($x-\\sin x$, $e^x-1-x$ ...)",
+    "अन्तर में पद कटते हैं ($x-\\sin x$, $e^x-1-x$ ...)"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Variable not $\\to0$?",
+      "चर $\\to0$ नहीं?"
+     ],
+     "a": [
+      [
+       "Shift: $x=a+h$ or $x=\\frac1t$."
+      ],
+      [
+       "खिसकाएँ: $x=a+h$ या $x=\\frac1t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Denominator has a power $x^k$?",
+      "हर में घात $x^k$?"
+     ],
+     "a": [
+      [
+       "Expand numerator up to $x^k$."
+      ],
+      [
+       "अंश को $x^k$ तक प्रसारित करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Unknown constants?",
+      "अज्ञात अचर?"
+     ],
+     "a": [
+      [
+       "Lower coefficients $=0$, then match $x^k$."
+      ],
+      [
+       "निम्न गुणांक $=0$, फिर $x^k$ मिलाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Asked $n$ for finite non-zero limit?",
+      "परिमित शून्येतर सीमा के लिए $n$?"
+     ],
+     "a": [
+      [
+       "$n$ = lowest power of the numerator."
+      ],
+      [
+       "$n$ = अंश की न्यूनतम घात।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Read the answer as the ratio of lowest-power coefficients."
+    ],
+    [
+     "न्यूनतम घात के गुणांकों का अनुपात उत्तर है।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Variable in the exponent",
+    "प्रवाह-चित्र 3: घातांक में चर"
+   ],
+   "start": [
+    "Limit of $f(x)^{g(x)}$",
+    "$f(x)^{g(x)}$ की सीमा"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Base exactly 1?",
+      "आधार ठीक 1?"
+     ],
+     "a": [
+      [
+       "Answer 1."
+      ],
+      [
+       "उत्तर 1।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Base $\\to1$, exponent $\\to\\infty$?",
+      "आधार $\\to1$, घातांक $\\to\\infty$?"
+     ],
+     "a": [
+      [
+       "$e^{\\lim g(f-1)}$."
+      ],
+      [
+       "$e^{\\lim g(f-1)}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$0^0$ or $\\infty^0$?",
+      "$0^0$ या $\\infty^0$?"
+     ],
+     "a": [
+      [
+       "$e^{\\lim g\\ln f}$."
+      ],
+      [
+       "$e^{\\lim g\\ln f}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Exponent like $\\frac1x$ near 0?",
+      "घातांक $\\frac1x$ जैसा, 0 के पास?"
+     ],
+     "a": [
+      [
+       "LHL and RHL differ ($e^{1/x}$: $0$ and $\\infty$)."
+      ],
+      [
+       "$\\text{LHL}$ व $\\text{RHL}$ भिन्न ($e^{1/x}$: $0$ और $\\infty$)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Determinate: substitute."
+    ],
+    [
+     "निर्धार्य: मान रखें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Special signs",
+    "प्रवाह-चित्र 4: विशेष चिह्न"
+   ],
+   "start": [
+    "$[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$ in the limit",
+    "सीमा में $[\\ ]$, $\\{\\ \\}$, $|\\ |$, $\\operatorname{sgn}$"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Inside tends to a non-integer?",
+      "अन्दर का व्यंजक अपूर्णांक की ओर?"
+     ],
+     "a": [
+      [
+       "Substitute directly."
+      ],
+      [
+       "सीधे मान रखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Inside is $x$ near integer $n$?",
+      "अन्दर $x$, पूर्णांक $n$ के पास?"
+     ],
+     "a": [
+      [
+       "$x=n\\mp h$: $[x]=n-1$ / $n$, $\\{x\\}=1-h$ / $h$."
+      ],
+      [
+       "$x=n\\mp h$: $[x]=n-1$ / $n$, $\\{x\\}=1-h$ / $h$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Inside is a standard limit ($\\frac{\\sin x}{x}$ ...)?",
+      "अन्दर मानक सीमा ($\\frac{\\sin x}{x}$ ...)?"
+     ],
+     "a": [
+      [
+       "Use the side: $1^-$ or $1^+$."
+      ],
+      [
+       "पक्ष लें: $1^-$ या $1^+$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Inside is a function like $\\cos x$, $x^2$?",
+      "अन्दर $\\cos x$, $x^2$ जैसा फलन?"
+     ],
+     "a": [
+      [
+       "Find its side of approach (max/min, monotonic)."
+      ],
+      [
+       "इसके अग्रसर होने का पक्ष ज्ञात करें (उच्चिष्ठ/निम्निष्ठ, एकदिष्ट)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Modulus?",
+      "मापांक?"
+     ],
+     "a": [
+      [
+       "Open by the sign on each side."
+      ],
+      [
+       "प्रत्येक पक्ष पर चिह्न के अनुसार खोलें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "$[\\ ]$ multiplied by small/large factors: sandwich."
+    ],
+    [
+     "$[\\ ]$ छोटे/बड़े गुणनखण्डों के साथ: सैंडविच।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Limits as $n\\to\\infty$",
+    "प्रवाह-चित्र 5: $n\\to\\infty$ पर सीमाएँ"
+   ],
+   "start": [
+    "A sequence, sum or $f(x)=\\lim_{n\\to\\infty}$",
+    "अनुक्रम, योग या $f(x)=\\lim_{n\\to\\infty}$"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Powers $x^n$, $a^n$ in it?",
+      "इसमें घातें $x^n$, $a^n$?"
+     ],
+     "a": [
+      [
+       "Cases $|x|<1$, $=1$, $>1$; divide by the dominating term."
+      ],
+      [
+       "प्रकरण $|x|<1$, $=1$, $>1$; प्रभावी पद से भाग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Sum of $n$ terms with no closed form?",
+      "$n$ पदों का योग, बन्द रूप नहीं?"
+     ],
+     "a": [
+      [
+       "Sandwich: $n\\cdot$min $\\le S\\le n\\cdot$max."
+      ],
+      [
+       "सैंडविच: $n\\cdot$न्यूनतम $\\le S\\le n\\cdot$अधिकतम।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$[kx]$ terms?",
+      "$[kx]$ पद?"
+     ],
+     "a": [
+      [
+       "$kx-1<[kx]\\le kx$, then sum."
+      ],
+      [
+       "$kx-1<[kx]\\le kx$, फिर योग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Sum or product that telescopes?",
+      "योग या गुणनफल जो कटता जाए?"
+     ],
+     "a": [
+      [
+       "Method of difference, then the limit."
+      ],
+      [
+       "अन्तर विधि, फिर सीमा।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Polynomial in $n$: degree rule."
+    ],
+    [
+     "$n$ में बहुपद: घात नियम।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Composite and derivative limits",
+    "प्रवाह-चित्र 6: संयुक्त और अवकलज सीमाएँ"
+   ],
+   "start": [
+    "Limit of $f(g(x))$ or with unknown $f$",
+    "$f(g(x))$ की या अज्ञात $f$ वाली सीमा"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Outer $f$ continuous at $\\lim g$?",
+      "$\\lim g$ पर बाहरी $f$ संतत?"
+     ],
+     "a": [
+      [
+       "$f(\\lim g)$."
+      ],
+      [
+       "$f(\\lim g)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Outer $f$ has a jump there?",
+      "वहाँ बाहरी $f$ में कूद?"
+     ],
+     "a": [
+      [
+       "Find the side from which $g$ approaches."
+      ],
+      [
+       "$g$ किस पक्ष से आता है, ज्ञात करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$f(a)$, $f'(a)$ given?",
+      "$f(a)$, $f'(a)$ दिए?"
+     ],
+     "a": [
+      [
+       "Create $\\frac{f(x)-f(a)}{x-a}\\to f'(a)$."
+      ],
+      [
+       "$\\frac{f(x)-f(a)}{x-a}\\to f'(a)$ बनाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Pattern $f(x+2h)-2f(x+h)+f(x)$?",
+      "प्रतिरूप $f(x+2h)-2f(x+h)+f(x)$?"
+     ],
+     "a": [
+      [
+       "$h^2f''(x)$."
+      ],
+      [
+       "$h^2f''(x)$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Build the composite piecewise and find LHL, RHL."
+    ],
+    [
+     "संयुक्त फलन खण्डशः बनाकर $\\text{LHL}$, $\\text{RHL}$ निकालें।"
+    ]
+   ]
+  }
+ ]
+}
