@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17)
+READY: all tools present (2026-10-17, re-checked this run)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -14,7 +14,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Matrices | chapters/Matrices/Theory.pdf | chapters/Matrices/XII.pdf | chapters/Matrices/XIII.pdf | chapters/Matrices/DPP.pdf | chapters/Matrices/QB.pdf | — | — | DONE |
 | Permutations & Combinations | chapters/Permutations_Combinations/Theory.pdf | chapters/Permutations_Combinations/XII.pdf | chapters/Permutations_Combinations/XIII.pdf | chapters/Permutations_Combinations/DPP.pdf | chapters/Permutations_Combinations/QB.pdf | — | — | DONE |
 | Binomial Theorem | chapters/Binomial_Theorem/Theory.pdf | chapters/Binomial_Theorem/XII.pdf | chapters/Binomial_Theorem/XIII.pdf | chapters/Binomial_Theorem/DPP.pdf | chapters/Binomial_Theorem/QB.pdf | — | — | DONE |
-| Complex Number | chapters/Complex_Number/Theory.pdf | chapters/Complex_Number/XII.pdf | chapters/Complex_Number/XIII.pdf | chapters/Complex_Number/DPP.pdf | chapters/Complex_Number/QB.pdf | — | — | READY |
+| Complex Number | chapters/Complex_Number/Theory.pdf | chapters/Complex_Number/XII.pdf | chapters/Complex_Number/XIII.pdf | chapters/Complex_Number/DPP.pdf | chapters/Complex_Number/QB.pdf | — | — | DONE |
 | Probability | chapters/Probability/Theory.pdf | chapters/Probability/XII.pdf | chapters/Probability/XIII.pdf | chapters/Probability/DPP.pdf | chapters/Probability/QB.pdf | — | — | READY |
 | Straight Line | chapters/Straight_Line/Theory.pdf | chapters/Straight_Line/XII.pdf | chapters/Straight_Line/XIII.pdf | chapters/Straight_Line/DPP.pdf | chapters/Straight_Line/QB.pdf | — | — | READY |
 | Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | READY |

@@ -7,3 +7,4 @@ Determinant: DONE 2026-10-17
 Matrices: DONE 2026-10-17
 Permutations_Combinations: DONE 2026-10-17
 Binomial_Theorem: DONE 2026-10-17
+Complex_Number: DONE 2026-10-17
