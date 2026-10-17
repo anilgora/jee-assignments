@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Trigonometric Ratio)
+READY: all tools present (2026-10-17, re-checked this run for Trigonometric Equation)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -22,7 +22,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Ellipse | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Ellipse/QB.pdf | — | — | DONE |
 | Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | DONE |
 | Trigonometric Ratio | chapters/Trigonometric_Ratio/Theory.pdf | chapters/Trigonometric_Ratio/XII.pdf | chapters/Trigonometric_Ratio/XIII.pdf | chapters/Trigonometric_Ratio/DPP.pdf | chapters/Trigonometric_Ratio/QB.pdf | — | — | DONE |
-| Trigonometric Equation | chapters/Trigonometric_Equation/Theory.pdf | chapters/Trigonometric_Equation/XII.pdf | chapters/Trigonometric_Equation/XIII.pdf | chapters/Trigonometric_Equation/DPP.pdf | chapters/Trigonometric_Equation/QB.pdf | — | — | READY |
+| Trigonometric Equation | chapters/Trigonometric_Equation/Theory.pdf | chapters/Trigonometric_Equation/XII.pdf | chapters/Trigonometric_Equation/XIII.pdf | chapters/Trigonometric_Equation/DPP.pdf | chapters/Trigonometric_Equation/QB.pdf | — | — | DONE |
 | Solution of Triangle | chapters/Solution_of_Triangle/Theory.pdf | chapters/Solution_of_Triangle/XII.pdf | chapters/Solution_of_Triangle/XIII.pdf | chapters/Solution_of_Triangle/DPP.pdf | — | — | QB | READY |
 | Vector 3D | chapters/Vector_3D/Theory.pdf | chapters/Vector_3D/XII.pdf | chapters/Vector_3D/XIII.pdf | chapters/Vector_3D/DPP.pdf | chapters/Vector_3D/QB.pdf | — | — | READY |
 | Function | chapters/Function/Theory.pdf | chapters/Function/XII.pdf | chapters/Function/XIII.pdf | chapters/Function/DPP.pdf | chapters/Function/QB.pdf | — | — | READY |
