@@ -1,0 +1,3554 @@
+{
+ "chapter": {
+  "en": "Matrices",
+  "hi": "आव्यूह",
+  "slug": "Matrices"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XIII": [
+   134,
+   135,
+   136,
+   137,
+   138,
+   139,
+   140,
+   141,
+   142,
+   143,
+   144,
+   145,
+   146,
+   147,
+   148,
+   149,
+   150,
+   151,
+   152,
+   153,
+   161,
+   162,
+   163,
+   164
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Definition of Matrix",
+    "hi": "आव्यूह की परिभाषा",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to define the order of a matrix and how its elements are represented?",
+       "क्या आप आव्यूह की कोटि परिभाषित कर सकते हैं तथा उसके अवयव कैसे निरूपित किये जाते हैं?"
+      ],
+      "a": [
+       [
+        "A matrix is a rectangular array of numbers in $m$ rows and $n$ columns; its order is $m\\times n$ and it has $mn$ elements. $a_{ij}$ is the element in row $i$, column $j$, and $A=[a_{ij}]_{m\\times n}$.",
+        "आव्यूह $m$ पंक्तियों व $n$ स्तम्भों में संख्याओं की आयताकार सारणी है; इसकी कोटि $m\\times n$ है और इसमें $mn$ अवयव होते हैं। $a_{ij}$ पंक्ति $i$ व स्तम्भ $j$ का अवयव है तथा $A=[a_{ij}]_{m\\times n}$।"
+       ],
+       [
+        "Ex: $3\\times2$ matrix with $a_{ij}=\\frac12|i-3j|$ is $\\begin{pmatrix}1&\\frac52\\\\\\frac12&2\\\\0&\\frac32\\end{pmatrix}$.",
+        "उदा.: $a_{ij}=\\frac12|i-3j|$ वाला $3\\times2$ आव्यूह $\\begin{pmatrix}1&\\frac52\\\\\\frac12&2\\\\0&\\frac32\\end{pmatrix}$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you find the possible number of orders of a matrix if its number of elements is known?",
+       "यदि आव्यूह में अवयवों की संख्या ज्ञात हो तो क्या आप सम्भव कोटियों की संख्या ज्ञात कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "If there are $N$ elements, every ordered factor pair $N=m\\times n$ is a possible order, so the number of orders $=$ the number of positive divisors of $N$ (a prime $N$ gives only $1\\times N$ and $N\\times1$).",
+        "यदि $N$ अवयव हों तो प्रत्येक क्रमित गुणनखण्ड-युग्म $N=m\\times n$ एक सम्भव कोटि है, अतः कोटियों की संख्या $N$ के धनात्मक भाजकों की संख्या के बराबर है (अभाज्य $N$ के लिए केवल $1\\times N$ व $N\\times1$)।"
+       ],
+       [
+        "Ex: $12$ elements $\\Rightarrow$ $6$ orders: $1\\times12,2\\times6,3\\times4,4\\times3,6\\times2,12\\times1$.",
+        "उदा.: $12$ अवयव $\\Rightarrow$ $6$ कोटियाँ: $1\\times12,2\\times6,3\\times4,4\\times3,6\\times2,12\\times1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Important Definitions",
+    "hi": "महत्वपूर्ण परिभाषाएँ",
+    "items": [
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you identify a row matrix and a column matrix?",
+       "क्या आप पंक्ति आव्यूह तथा स्तम्भ आव्यूह पहचान सकते हैं?"
+      ],
+      "a": [
+       [
+        "A row matrix has one row (order $1\\times n$); a column matrix has one column (order $m\\times1$).",
+        "पंक्ति आव्यूह में एक ही पंक्ति होती है (कोटि $1\\times n$); स्तम्भ आव्यूह में एक ही स्तम्भ होता है (कोटि $m\\times1$)।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2&3\\end{pmatrix}$ is $1\\times3$; $\\begin{pmatrix}4\\\\5\\end{pmatrix}$ is $2\\times1$. A column matrix $X$ gives $X^TX$ (a number) and $XX^T$ (a square matrix).",
+        "उदा.: $\\begin{pmatrix}1&2&3\\end{pmatrix}$ की कोटि $1\\times3$ है; $\\begin{pmatrix}4\\\\5\\end{pmatrix}$ की $2\\times1$। स्तम्भ आव्यूह $X$ के लिए $X^TX$ एक संख्या तथा $XX^T$ एक वर्ग आव्यूह है।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to define null, horizontal, vertical and square matrices?",
+       "क्या आप शून्य, क्षैतिज, ऊर्ध्वाधर तथा वर्ग आव्यूह परिभाषित कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Null (zero) matrix $O$: every element is $0$. Horizontal: $m<n$ (more columns). Vertical: $m>n$ (more rows). Square: $m=n$.",
+        "शून्य आव्यूह $O$: सभी अवयव $0$। क्षैतिज: $m<n$ (स्तम्भ अधिक)। ऊर्ध्वाधर: $m>n$ (पंक्तियाँ अधिक)। वर्ग: $m=n$।"
+       ],
+       [
+        "Ex: $2\\times3$ is horizontal, $3\\times2$ is vertical, $3\\times3$ is square.",
+        "उदा.: $2\\times3$ क्षैतिज, $3\\times2$ ऊर्ध्वाधर, $3\\times3$ वर्ग आव्यूह है।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do principal diagonal, conjugate elements and trace of a square matrix mean?",
+       "वर्ग आव्यूह के मुख्य विकर्ण, संयुग्मी अवयव तथा अनुरेख से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "Principal diagonal: $a_{11},a_{22},\\dots,a_{nn}$. Conjugate elements: the pair $a_{ij},a_{ji}$. Trace: $\\operatorname{tr}A=\\sum a_{ii}$ (sum of the diagonal elements).",
+        "मुख्य विकर्ण: $a_{11},a_{22},\\dots,a_{nn}$। संयुग्मी अवयव: युग्म $a_{ij},a_{ji}$। अनुरेख: $\\operatorname{tr}A=\\sum a_{ii}$ (विकर्ण अवयवों का योग)।"
+       ],
+       [
+        "Ex: $\\operatorname{tr}\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}=5$; $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$; $\\operatorname{tr}(AA^T)=\\sum a_{ij}^2$.",
+        "उदा.: $\\operatorname{tr}\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}=5$; $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$; $\\operatorname{tr}(AA^T)=\\sum a_{ij}^2$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you check whether a matrix is singular (non-invertible) or non-singular (invertible)?",
+       "आप कैसे जाँचते हैं कि आव्यूह अव्युत्क्रमणीय (singular) है या व्युत्क्रमणीय (non-singular)?"
+      ],
+      "a": [
+       [
+        "Only a square matrix can be tested: $|A|=0\\Leftrightarrow$ singular (no inverse); $|A|\\neq0\\Leftrightarrow$ non-singular (inverse exists).",
+        "केवल वर्ग आव्यूह की जाँच होती है: $|A|=0\\Leftrightarrow$ अव्युत्क्रमणीय (व्युत्क्रम नहीं); $|A|\\neq0\\Leftrightarrow$ व्युत्क्रमणीय (व्युत्क्रम विद्यमान)।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&2\\\\2&4\\end{vmatrix}=0$, so $\\begin{pmatrix}1&2\\\\2&4\\end{pmatrix}$ is singular.",
+        "उदा.: $\\begin{vmatrix}1&2\\\\2&4\\end{vmatrix}=0$, अतः $\\begin{pmatrix}1&2\\\\2&4\\end{pmatrix}$ अव्युत्क्रमणीय है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Special Types of Square Matrices",
+    "hi": "वर्ग आव्यूहों के विशेष प्रकार",
+    "items": [
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you check whether a square matrix is diagonal, scalar, identity, upper triangular or lower triangular?",
+       "आप कैसे जाँचते हैं कि वर्ग आव्यूह विकर्ण, अदिश, तत्समक, ऊपरी त्रिभुजाकार या निचला त्रिभुजाकार है?"
+      ],
+      "a": [
+       [
+        "Diagonal: $a_{ij}=0$ for $i\\neq j$. Scalar: diagonal with all diagonal elements equal ($kI$). Identity $I$: scalar with $k=1$. Upper triangular: $a_{ij}=0$ for $i>j$. Lower triangular: $a_{ij}=0$ for $i<j$.",
+        "विकर्ण: $i\\neq j$ के लिए $a_{ij}=0$। अदिश: विकर्ण आव्यूह जिसके सभी विकर्ण अवयव समान हों ($kI$)। तत्समक $I$: $k=1$ वाला अदिश। ऊपरी त्रिभुजाकार: $i>j$ के लिए $a_{ij}=0$। निचला त्रिभुजाकार: $i<j$ के लिए $a_{ij}=0$।"
+       ],
+       [
+        "Ex: for a triangular matrix of order $n$ the maximum number of distinct entries is $\\frac{n(n+1)}2$; for a scalar matrix $|kI_n|=k^n$.",
+        "उदा.: कोटि $n$ के त्रिभुजाकार आव्यूह में भिन्न अवयवों की अधिकतम संख्या $\\frac{n(n+1)}2$ है; अदिश आव्यूह के लिए $|kI_n|=k^n$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know an alternate way to denote a diagonal matrix?",
+       "क्या आप विकर्ण आव्यूह को दर्शाने की वैकल्पिक विधि जानते हैं?"
+      ],
+      "a": [
+       [
+        "$\\operatorname{diag}(d_1,d_2,\\dots,d_n)$ lists the diagonal entries. Then $D^m=\\operatorname{diag}(d_1^m,\\dots,d_n^m)$, $D^{-1}=\\operatorname{diag}(1/d_1,\\dots,1/d_n)$ and $|D|=d_1d_2\\cdots d_n$.",
+        "$\\operatorname{diag}(d_1,d_2,\\dots,d_n)$ विकर्ण अवयव दर्शाता है। तब $D^m=\\operatorname{diag}(d_1^m,\\dots,d_n^m)$, $D^{-1}=\\operatorname{diag}(1/d_1,\\dots,1/d_n)$ तथा $|D|=d_1d_2\\cdots d_n$।"
+       ],
+       [
+        "Ex: $\\operatorname{diag}(2,3)^3=\\operatorname{diag}(8,27)$.",
+        "उदा.: $\\operatorname{diag}(2,3)^3=\\operatorname{diag}(8,27)$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Equality of two Matrices",
+    "hi": "दो आव्यूहों की समानता",
+    "items": [
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for two matrices to be equal?",
+       "दो आव्यूहों के समान होने की शर्त क्या है?"
+      ],
+      "a": [
+       [
+        "$A=B$ iff they have the same order and $a_{ij}=b_{ij}$ for every $i,j$; equate corresponding elements to get equations.",
+        "$A=B$ तभी जब दोनों की कोटि समान हो तथा प्रत्येक $i,j$ के लिए $a_{ij}=b_{ij}$ हो; संगत अवयव बराबर रखकर समीकरण बनाइए।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}x+y&2\\\\3&x-y\\end{pmatrix}=\\begin{pmatrix}5&2\\\\3&1\\end{pmatrix}\\Rightarrow x=3,\\ y=2$.",
+        "उदा.: $\\begin{pmatrix}x+y&2\\\\3&x-y\\end{pmatrix}=\\begin{pmatrix}5&2\\\\3&1\\end{pmatrix}\\Rightarrow x=3,\\ y=2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Addition/Subtraction of Matrices",
+    "hi": "आव्यूहों का योग/अन्तर",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we add or subtract two matrices and how?",
+       "दो आव्यूहों को कब जोड़ा या घटाया जा सकता है और कैसे?"
+      ],
+      "a": [
+       [
+        "Only when they have the same order: $A\\pm B=[a_{ij}\\pm b_{ij}]$. Addition is commutative and associative: $A+B=B+A$, $(A+B)+C=A+(B+C)$.",
+        "केवल तब जब दोनों की कोटि समान हो: $A\\pm B=[a_{ij}\\pm b_{ij}]$। योग क्रमविनिमेय व साहचर्य है: $A+B=B+A$, $(A+B)+C=A+(B+C)$।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}1&3\\\\4&4\\end{pmatrix}$; a $2\\times2$ and a $2\\times3$ matrix cannot be added.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}1&3\\\\4&4\\end{pmatrix}$; $2\\times2$ व $2\\times3$ आव्यूह जोड़े नहीं जा सकते।"
+       ]
+      ]
+     },
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the determinant value when we add two matrices?",
+       "दो आव्यूहों को जोड़ने पर सारणिक के मान का क्या होता है?"
+      ],
+      "a": [
+       [
+        "Nothing simple: in general $|A+B|\\neq|A|+|B|$; always add the matrices first, then take the determinant.",
+        "कोई सरल नियम नहीं: सामान्यतः $|A+B|\\neq|A|+|B|$; पहले आव्यूह जोड़िए, फिर सारणिक निकालिए।"
+       ],
+       [
+        "Ex: $A=B=I_2$: $|A+B|=|2I|=4$ but $|A|+|B|=2$.",
+        "उदा.: $A=B=I_2$: $|A+B|=|2I|=4$ जबकि $|A|+|B|=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by the additive inverse in matrix algebra?",
+       "आव्यूह बीजगणित में योज्य प्रतिलोम से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "The additive inverse of $A$ is $-A=[-a_{ij}]$, with $A+(-A)=O$; the zero matrix $O$ is the additive identity, $A+O=A$.",
+        "$A$ का योज्य प्रतिलोम $-A=[-a_{ij}]$ है, जहाँ $A+(-A)=O$; शून्य आव्यूह $O$ योज्य तत्समक है, $A+O=A$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the trace when we add two matrices?",
+       "दो आव्यूहों को जोड़ने पर अनुरेख का क्या होता है?"
+      ],
+      "a": [
+       "$\\operatorname{tr}(A\\pm B)=\\operatorname{tr}A\\pm\\operatorname{tr}B,\\qquad \\operatorname{tr}(kA)=k\\operatorname{tr}A$",
+       [
+        "Ex: if $A+2B$ and $2A-B$ have traces $-1$ and $3$, then $\\operatorname{tr}A=1,\\ \\operatorname{tr}B=-1$ and $\\operatorname{tr}A-\\operatorname{tr}B=2$.",
+        "उदा.: यदि $A+2B$ व $2A-B$ के अनुरेख $-1$ व $3$ हों तो $\\operatorname{tr}A=1,\\ \\operatorname{tr}B=-1$ तथा $\\operatorname{tr}A-\\operatorname{tr}B=2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multiplication of a Matrix by a scalar",
+    "hi": "आव्यूह का अदिश से गुणन",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens when we multiply a matrix by a real number $k$?",
+       "आव्यूह को वास्तविक संख्या $k$ से गुणा करने पर क्या होता है?"
+      ],
+      "a": [
+       [
+        "Every element is multiplied by $k$: $kA=[ka_{ij}]$; $k(A\\pm B)=kA\\pm kB$ and $(k_1+k_2)A=k_1A+k_2A$.",
+        "प्रत्येक अवयव $k$ से गुणित होता है: $kA=[ka_{ij}]$; $k(A\\pm B)=kA\\pm kB$ तथा $(k_1+k_2)A=k_1A+k_2A$।"
+       ],
+       [
+        "Ex: $3\\begin{pmatrix}1&0\\\\2&-1\\end{pmatrix}=\\begin{pmatrix}3&0\\\\6&-3\\end{pmatrix}$.",
+        "उदा.: $3\\begin{pmatrix}1&0\\\\2&-1\\end{pmatrix}=\\begin{pmatrix}3&0\\\\6&-3\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the determinant value when we multiply a matrix by a real number $k$?",
+       "आव्यूह को वास्तविक संख्या $k$ से गुणा करने पर सारणिक का मान क्या होता है?"
+      ],
+      "a": [
+       "$|kA|=k^{n}|A|\\quad(A\\text{ of order }n\\times n)$",
+       [
+        "Ex: for $3\\times3$ $A$ with $|A|=2$: $|2A|=2^3\\cdot2=16$, $|-A|=-2$.",
+        "उदा.: $|A|=2$ वाले $3\\times3$ आव्यूह के लिए $|2A|=2^3\\cdot2=16$, $|-A|=-2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multiplication of Matrices",
+    "hi": "आव्यूहों का गुणन",
+    "items": [
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do pre-factor and post-factor mean in matrix multiplication?",
+       "आव्यूह गुणन में पूर्व-गुणक तथा पश्च-गुणक से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "In $AB$, $A$ is the pre-factor (multiplies from the left) and $B$ the post-factor (multiplies from the right). Pre-multiplying $B$ by $A$ gives $AB$; post-multiplying gives $BA$.",
+        "$AB$ में $A$ पूर्व-गुणक (बाएँ से गुणा) तथा $B$ पश्च-गुणक (दाएँ से गुणा) है। $B$ को $A$ से बाएँ गुणा करने पर $AB$ तथा दाएँ गुणा करने पर $BA$ मिलता है।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for the product $AB$ to be defined?",
+       "गुणनफल $AB$ परिभाषित होने की शर्त क्या है?"
+      ],
+      "a": [
+       [
+        "The number of columns of $A$ must equal the number of rows of $B$ (conformable for multiplication).",
+        "$A$ के स्तम्भों की संख्या $B$ की पंक्तियों की संख्या के बराबर होनी चाहिए।"
+       ],
+       [
+        "Ex: $A_{3\\times4}$, $B_{4\\times2}$: $AB$ exists but $BA$ does not.",
+        "उदा.: $A_{3\\times4}$, $B_{4\\times2}$: $AB$ परिभाषित है पर $BA$ नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the order of the resultant matrix when we multiply two matrices?",
+       "दो आव्यूहों को गुणा करने पर परिणामी आव्यूह की कोटि क्या होती है?"
+      ],
+      "a": [
+       "$A_{m\\times n}\\,B_{n\\times p}=(AB)_{m\\times p}$",
+       [
+        "Ex: orders $1\\times3,\\ 3\\times3,\\ 3\\times1$ give $ABC$ of order $1\\times1$.",
+        "उदा.: कोटि $1\\times3,\\ 3\\times3,\\ 3\\times1$ से $ABC$ की कोटि $1\\times1$ होती है।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you multiply two matrices?",
+       "दो आव्यूहों को कैसे गुणा करते हैं?"
+      ],
+      "a": [
+       [
+        "$(AB)_{ij}=\\sum_{k}a_{ik}b_{kj}$: multiply row $i$ of $A$ with column $j$ of $B$ element-wise and add. Multiplication is associative, $A(BC)=(AB)C$, and distributive, $A(B+C)=AB+AC$.",
+        "$(AB)_{ij}=\\sum_{k}a_{ik}b_{kj}$: $A$ की पंक्ति $i$ को $B$ के स्तम्भ $j$ से अवयवशः गुणा करके जोड़िए। गुणन साहचर्य $A(BC)=(AB)C$ तथा वितरण $A(B+C)=AB+AC$ नियम मानता है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\4&3\\end{pmatrix}$.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\4&3\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Does the order of appearance of matrices in a product matter?",
+       "क्या गुणनफल में आव्यूहों का क्रम महत्वपूर्ण है?"
+      ],
+      "a": [
+       [
+        "Yes. In general $AB\\neq BA$ (and $BA$ may not even be defined). Never swap factors; also $AB=O$ does not imply $A=O$ or $B=O$.",
+        "हाँ। सामान्यतः $AB\\neq BA$ (और $BA$ परिभाषित भी न हो)। गुणक कभी आपस में न बदलिए; साथ ही $AB=O$ से $A=O$ या $B=O$ नहीं निकलता।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\4&3\\end{pmatrix}$ but the reverse product is $\\begin{pmatrix}3&4\\\\1&2\\end{pmatrix}$.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}=\\begin{pmatrix}2&1\\\\4&3\\end{pmatrix}$ पर विपरीत क्रम में गुणनफल $\\begin{pmatrix}3&4\\\\1&2\\end{pmatrix}$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens when we multiply any matrix by $I$ or $O$?",
+       "किसी आव्यूह को $I$ या $O$ से गुणा करने पर क्या होता है?"
+      ],
+      "a": [
+       "$AI=IA=A,\\qquad AO=OA=O\\quad(\\text{orders conformable})$",
+       [
+        "Ex: $I$ is the multiplicative identity, $O$ the multiplicative zero; $A^0=I$ for a square $A$.",
+        "उदा.: $I$ गुणनात्मक तत्समक तथा $O$ गुणनात्मक शून्य है; वर्ग $A$ के लिए $A^0=I$।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the determinant value when we multiply two matrices?",
+       "दो आव्यूहों को गुणा करने पर सारणिक का मान क्या होता है?"
+      ],
+      "a": [
+       "$|AB|=|A|\\,|B|,\\qquad |A^n|=|A|^n\\quad(\\text{square matrices of the same order})$",
+       [
+        "Ex: $|P^{-1}AP|=|A|$; $|A^2|=25\\Rightarrow|A|=\\pm5$; a square of a real matrix always has $|A^2|\\ge0$.",
+        "उदा.: $|P^{-1}AP|=|A|$; $|A^2|=25\\Rightarrow|A|=\\pm5$; वास्तविक आव्यूह के वर्ग का सारणिक सदैव $\\ge0$ होता है।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by commutation of two matrices?",
+       "दो आव्यूहों के क्रमविनिमेय होने से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "$A$ and $B$ commute if $AB=BA$ (both square of the same order). $A$ commutes with $A^n$, $A^{-1}$, $kI$, $I$ and any polynomial in $A$.",
+        "$A$ व $B$ क्रमविनिमेय हैं यदि $AB=BA$ (दोनों समान कोटि के वर्ग आव्यूह)। $A$, $A^n$, $A^{-1}$, $kI$, $I$ तथा $A$ के किसी भी बहुपद के साथ क्रमविनिमेय होता है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$ commutes with $\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ iff $b=\\frac23c$ and $d=a+c$ (from $AB=BA$ element by element).",
+        "उदा.: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$, $\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ के साथ तभी क्रमविनिमेय है जब $b=\\frac23c$ व $d=a+c$ (अवयवशः $AB=BA$ से)।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by anti-commutation of two matrices?",
+       "दो आव्यूहों के विपरीत-क्रमविनिमेय होने से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "$A$ and $B$ anti-commute if $AB=-BA$. Then $(A+B)^2=A^2+B^2$.",
+        "$A$ व $B$ विपरीत-क्रमविनिमेय हैं यदि $AB=-BA$। तब $(A+B)^2=A^2+B^2$।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}$: $AB=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}=-BA$.",
+        "उदा.: $A=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}$: $AB=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}=-BA$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we use the standard algebraic identities of squares and cubes for matrices?",
+       "आव्यूहों के लिए वर्ग व घन की मानक बीजीय सर्वसमिकाओं का प्रयोग कब कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Only when the matrices commute, $AB=BA$: then $(A\\pm B)^2=A^2\\pm2AB+B^2$, $A^2-B^2=(A-B)(A+B)$, $(A+B)^n$ by the binomial theorem. Always valid: $(A+I)^n$ and $(A+kI)^n$.",
+        "केवल तब जब आव्यूह क्रमविनिमेय हों, $AB=BA$: तब $(A\\pm B)^2=A^2\\pm2AB+B^2$, $A^2-B^2=(A-B)(A+B)$, $(A+B)^n$ द्विपद प्रमेय से। सदैव मान्य: $(A+I)^n$ तथा $(A+kI)^n$।"
+       ],
+       [
+        "Ex: $A^2-B^2=(A-B)(A+B)\\iff AB=BA$; in general $(A+B)^2=A^2+AB+BA+B^2$.",
+        "उदा.: $A^2-B^2=(A-B)(A+B)\\iff AB=BA$; सामान्यतः $(A+B)^2=A^2+AB+BA+B^2$।"
+       ]
+      ]
+     },
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we define a higher integral power of a matrix?",
+       "आव्यूह की उच्च पूर्णांक घात कब परिभाषित की जा सकती है?"
+      ],
+      "a": [
+       [
+        "Only for a square matrix: $A^2=AA$, $A^{m}A^{n}=A^{m+n}$, $(A^m)^n=A^{mn}$, $A^0=I$. A polynomial $f(A)=a_0A^n+\\dots+a_nI$ uses $I$ for the constant term.",
+        "केवल वर्ग आव्यूह के लिए: $A^2=AA$, $A^{m}A^{n}=A^{m+n}$, $(A^m)^n=A^{mn}$, $A^0=I$। बहुपद $f(A)=a_0A^n+\\dots+a_nI$ में अचर पद के साथ $I$ लगता है।"
+       ],
+       [
+        "Ex: $f(x)=x^2-5x+6$, $A=\\begin{pmatrix}1&2\\\\0&3\\end{pmatrix}$: $f(A)=A^2-5A+6I=\\begin{pmatrix}2&-2\\\\0&0\\end{pmatrix}$.",
+        "उदा.: $f(x)=x^2-5x+6$, $A=\\begin{pmatrix}1&2\\\\0&3\\end{pmatrix}$: $f(A)=A^2-5A+6I=\\begin{pmatrix}2&-2\\\\0&0\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 12,13,27; J-II: 21; C-I: 14; J-M(XIII): 32; DPP-2: 6,9; DPP-5: 2,5,16; QB: 117,118,126,130",
+      "q": [
+       "How do you handle trigonometric (rotation-type) matrices: product, powers, inverse?",
+       "त्रिकोणमितीय (घूर्णन-प्रकार के) आव्यूहों का गुणनफल, घात तथा व्युत्क्रम कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "For $R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$: $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, $R(\\theta)^n=R(n\\theta)$, $R(\\theta)^{-1}=R(-\\theta)=R(\\theta)^T$, $|R|=1$. The $3\\times3$ form $F(x)=\\begin{pmatrix}\\cos x&-\\sin x&0\\\\\\sin x&\\cos x&0\\\\0&0&1\\end{pmatrix}$ obeys the same rules: $F(x)F(y)=F(x+y)$, $F(x)^{-1}=F(-x)$.",
+        "$R(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$ के लिए: $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, $R(\\theta)^n=R(n\\theta)$, $R(\\theta)^{-1}=R(-\\theta)=R(\\theta)^T$, $|R|=1$। $3\\times3$ रूप $F(x)=\\begin{pmatrix}\\cos x&-\\sin x&0\\\\\\sin x&\\cos x&0\\\\0&0&1\\end{pmatrix}$ भी यही नियम मानता है: $F(x)F(y)=F(x+y)$, $F(x)^{-1}=F(-x)$।"
+       ],
+       [
+        "Ex: $R\\!\\left(\\frac\\pi6\\right)^{12}=R(2\\pi)=I$; if the signs are changed to $\\begin{pmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{pmatrix}$, it is $R(-\\theta)$.",
+        "उदा.: $R\\!\\left(\\frac\\pi6\\right)^{12}=R(2\\pi)=I$; चिह्न बदलकर $\\begin{pmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{pmatrix}$ हो तो यह $R(-\\theta)$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Characteristic Equation",
+    "hi": "अभिलाक्षणिक समीकरण",
+    "items": [
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you find the characteristic equation of a square matrix of order 2 and 3?",
+       "क्या आप कोटि 2 व 3 के वर्ग आव्यूह का अभिलाक्षणिक समीकरण ज्ञात कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "$|A-\\lambda I|=0$. Order 2: $\\lambda^2-(\\operatorname{tr}A)\\lambda+|A|=0$. Order 3: $\\lambda^3-(\\operatorname{tr}A)\\lambda^2+C\\lambda-|A|=0$, where $C$ = sum of the three principal $2\\times2$ minors. Sum of roots $=\\operatorname{tr}A$, product $=|A|$.",
+        "$|A-\\lambda I|=0$। कोटि 2: $\\lambda^2-(\\operatorname{tr}A)\\lambda+|A|=0$। कोटि 3: $\\lambda^3-(\\operatorname{tr}A)\\lambda^2+C\\lambda-|A|=0$, जहाँ $C$ तीनों मुख्य $2\\times2$ उपसारणिकों का योग है। मूलों का योग $=\\operatorname{tr}A$, गुणनफल $=|A|$।"
+       ],
+       [
+        "Ex: roots $-1,3$ of $|A-xI|=0$ $\\Rightarrow$ $\\operatorname{tr}A=2$, $|A|=-3$, $\\operatorname{tr}(A^2)=(-1)^2+3^2=10$.",
+        "उदा.: $|A-xI|=0$ के मूल $-1,3$ $\\Rightarrow$ $\\operatorname{tr}A=2$, $|A|=-3$, $\\operatorname{tr}(A^2)=(-1)^2+3^2=10$।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know that a square matrix always satisfies its characteristic equation?",
+       "क्या आप जानते हैं कि वर्ग आव्यूह अपने अभिलाक्षणिक समीकरण को सदैव सन्तुष्ट करता है?"
+      ],
+      "a": [
+       [
+        "Yes (Cayley–Hamilton): if $p(\\lambda)=|A-\\lambda I|$ then $p(A)=O$, with the constant term multiplied by $I$.",
+        "हाँ (केली–हैमिल्टन प्रमेय): यदि $p(\\lambda)=|A-\\lambda I|$ तो $p(A)=O$, जहाँ अचर पद के साथ $I$ लिखते हैं।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}2&0&1\\\\0&1&1\\\\1&0&1\\end{pmatrix}$ satisfies $A^3-4A^2+4A-I=O$ (here $\\operatorname{tr}A=4$, $|A|=1$).",
+        "उदा.: $A=\\begin{pmatrix}2&0&1\\\\0&1&1\\\\1&0&1\\end{pmatrix}$ समीकरण $A^3-4A^2+4A-I=O$ को सन्तुष्ट करता है (यहाँ $\\operatorname{tr}A=4$, $|A|=1$)।"
+       ]
+      ]
+     },
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write the characteristic equation of a square matrix of order 2 directly?",
+       "क्या आप कोटि 2 के वर्ग आव्यूह का अभिलाक्षणिक समीकरण सीधे लिख सकते हैं?"
+      ],
+      "a": [
+       "$A^2-(\\operatorname{tr}A)\\,A+|A|\\,I=O$",
+       [
+        "Ex: $A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$: $\\operatorname{tr}A=5$, $|A|=-2\\Rightarrow A^2-5A-2I=O$.",
+        "उदा.: $A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$: $\\operatorname{tr}A=5$, $|A|=-2\\Rightarrow A^2-5A-2I=O$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to use the characteristic equation to compute higher powers and in long-division questions?",
+       "क्या आप अभिलाक्षणिक समीकरण का प्रयोग उच्च घातों व लम्बी विभाजन वाले प्रश्नों में कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Replace $A^2$ by $pA-qI$ repeatedly to lower the power. For a polynomial: divide $f(x)$ by the characteristic polynomial $c(x)$, $f(x)=c(x)Q(x)+R(x)$, then $f(A)=R(A)$.",
+        "$A^2$ को बार-बार $pA-qI$ से बदलकर घात घटाइए। बहुपद के लिए: $f(x)$ को अभिलाक्षणिक बहुपद $c(x)$ से भाग दीजिए, $f(x)=c(x)Q(x)+R(x)$, तब $f(A)=R(A)$।"
+       ],
+       [
+        "Ex: $A^2=5A+2I\\Rightarrow A^3=5A^2+2A=27A+10I$.",
+        "उदा.: $A^2=5A+2I\\Rightarrow A^3=5A^2+2A=27A+10I$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-A: 25; C-I: 1,2,18; C-II: 2,29; J-M(XII): 2,3,5,9,10,11,18,22,25,26,29,30,39,45; J-M(XIII): 6,12,16,20,26,44,53; DPP-5: 1; QB: 116,118,120,124,126,128,133,138,144,150,156",
+      "q": [
+       "How do you find $A^n$, an entry, the trace or the sum of all elements of $A^n$ (or of $A+A^2+\\dots+A^n$)?",
+       "$A^n$, उसका कोई अवयव, अनुरेख या सभी अवयवों का योग (या $A+A^2+\\dots+A^n$ का) कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "(a) Compute $A^2,A^3$ and spot the pattern (prove by induction). (b) $A=\\lambda I+N$ with $N^k=O$: expand binomially. (c) $A^2=pA+qI$: reduce powers. (d) $A=PDP^{-1}\\Rightarrow A^n=PD^nP^{-1}$; for orthogonal $P$, $Q=PAP^T$ gives $Q^n=PA^nP^T$. (e) Rank-one $A=uv^T$: $A^n=(v^Tu)^{n-1}A$. Sum of all elements $=\\mathbf 1^TA\\mathbf 1$; if every row sums to $1$, then $A^n\\mathbf 1=\\mathbf 1$.",
+        "(क) $A^2,A^3$ निकालकर प्रतिरूप पहचानिए (आगमन से सिद्ध)। (ख) $A=\\lambda I+N$, $N^k=O$: द्विपद प्रसार। (ग) $A^2=pA+qI$: घातें घटाइए। (घ) $A=PDP^{-1}\\Rightarrow A^n=PD^nP^{-1}$; लम्बकोणीय $P$ के लिए $Q=PAP^T$ से $Q^n=PA^nP^T$। (ङ) रैंक-एक $A=uv^T$: $A^n=(v^Tu)^{n-1}A$। सभी अवयवों का योग $=\\mathbf 1^TA\\mathbf 1$; यदि प्रत्येक पंक्ति का योग $1$ हो तो $A^n\\mathbf 1=\\mathbf 1$।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$: $A^2=2A$, so $A^n=2^{n-1}A$ and the sum of all elements of $A^n$ is $2^{n+1}$; a $3\\times3$ matrix with every row sum $1$ has $A^3$ with total sum $3$.",
+        "उदा.: $A=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$: $A^2=2A$, अतः $A^n=2^{n-1}A$ तथा $A^n$ के सभी अवयवों का योग $2^{n+1}$; प्रत्येक पंक्ति का योग $1$ वाले $3\\times3$ आव्यूह के $A^3$ के सभी अवयवों का योग $3$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Important Definition",
+    "hi": "महत्वपूर्ण परिभाषा (विशेष आव्यूह)",
+    "items": [
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by an idempotent matrix and its application in the expansion of $(I+A)^n$?",
+       "वर्गसम (idempotent) आव्यूह से क्या तात्पर्य है तथा $(I+A)^n$ के प्रसार में इसका उपयोग क्या है?"
+      ],
+      "a": [
+       [
+        "$A^2=A$. Then $A^n=A$ for $n\\ge2$, $|A|=0$ or $1$ and $(I+A)^n=I+(2^n-1)A$. Also $I-A$ is idempotent and $A(I-A)=O$.",
+        "$A^2=A$। तब $n\\ge2$ के लिए $A^n=A$, $|A|=0$ या $1$ तथा $(I+A)^n=I+(2^n-1)A$। साथ ही $I-A$ वर्गसम है और $A(I-A)=O$।"
+       ],
+       [
+        "Ex: $(I+A)^n=I+127A\\Rightarrow 2^n-1=127\\Rightarrow n=7$. If $AB=B$, $BA=A$ then $A^2=ABA=A$, $B^2=B$, so $A^2+B^2=A+B$.",
+        "उदा.: $(I+A)^n=I+127A\\Rightarrow 2^n-1=127\\Rightarrow n=7$। यदि $AB=B$, $BA=A$ तो $A^2=ABA=A$, $B^2=B$, अतः $A^2+B^2=A+B$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by a periodic matrix and its application in the expansion of $(I+A)^n$?",
+       "आवर्ती (periodic) आव्यूह से क्या तात्पर्य है तथा $(I+A)^n$ के प्रसार में इसका उपयोग क्या है?"
+      ],
+      "a": [
+       [
+        "$A^{k+1}=A$ for some positive integer $k$; the least such $k$ is the period (an idempotent matrix has period 1). Powers then repeat: $A^{k+r}=A^r$, so in $(I+A)^n=\\sum\\binom nrA^r$ group the terms by power and reduce.",
+        "$A^{k+1}=A$ किसी धनपूर्णांक $k$ के लिए; ऐसा न्यूनतम $k$ आवर्तकाल है (वर्गसम आव्यूह का आवर्तकाल 1)। तब घातें दोहराती हैं: $A^{k+r}=A^r$, अतः $(I+A)^n=\\sum\\binom nrA^r$ में पदों को घात के अनुसार समूहित करके घात घटाइए।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ has $A^3=A$, so its period is $2$.",
+        "उदा.: $A=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$ के लिए $A^3=A$, अतः आवर्तकाल $2$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by an involutory matrix and its application in the expansion of $(I+A)^n$?",
+       "समाक्रमी (involutory) आव्यूह से क्या तात्पर्य है तथा $(I+A)^n$ के प्रसार में इसका उपयोग क्या है?"
+      ],
+      "a": [
+       [
+        "$A^2=I$ (so $A^{-1}=A$, $|A|=\\pm1$). Then $A^{2m}=I$, $A^{2m+1}=A$ and $(I+A)^n=2^{n-1}(I+A)$. Also $\\frac12(I\\pm A)$ are idempotent.",
+        "$A^2=I$ (अतः $A^{-1}=A$, $|A|=\\pm1$)। तब $A^{2m}=I$, $A^{2m+1}=A$ तथा $(I+A)^n=2^{n-1}(I+A)$। साथ ही $\\frac12(I\\pm A)$ वर्गसम हैं।"
+       ],
+       [
+        "Ex: for a real $2\\times2$ involutory $A\\neq\\pm I$: $\\operatorname{tr}A=0$ and $|A|=-1$ (from $A^2-(\\operatorname{tr}A)A+|A|I=I$).",
+        "उदा.: वास्तविक $2\\times2$ समाक्रमी $A\\neq\\pm I$ के लिए $\\operatorname{tr}A=0$ व $|A|=-1$ ($A^2-(\\operatorname{tr}A)A+|A|I=I$ से)।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by a nilpotent matrix and its application in the expansion of $(I+A)^n$?",
+       "शून्यघाती (nilpotent) आव्यूह से क्या तात्पर्य है तथा $(I+A)^n$ के प्रसार में इसका उपयोग क्या है?"
+      ],
+      "a": [
+       [
+        "$A^m=O$, $A^{m-1}\\neq O$; $m$ is the index ($\\le$ order). Every triangular matrix with zero diagonal is nilpotent. Then $(I+A)^n=I+nA+\\binom n2A^2+\\dots$ stops at $A^{m-1}$. Write $A=\\lambda I+N$ and expand.",
+        "$A^m=O$, $A^{m-1}\\neq O$; $m$ घातांक है ($\\le$ कोटि)। शून्य विकर्ण वाला प्रत्येक त्रिभुजाकार आव्यूह शून्यघाती होता है। तब $(I+A)^n=I+nA+\\binom n2A^2+\\dots$ का प्रसार $A^{m-1}$ तक ही रुक जाता है। $A=\\lambda I+N$ लिखकर प्रसार कीजिए।"
+       ],
+       [
+        "Ex: $B=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}=I+N$, $N^2=O$, so $B^{50}=I+50N=\\begin{pmatrix}1&50\\\\0&1\\end{pmatrix}$.",
+        "उदा.: $B=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}=I+N$, $N^2=O$, अतः $B^{50}=I+50N=\\begin{pmatrix}1&50\\\\0&1\\end{pmatrix}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Transpose of a Matrix",
+    "hi": "आव्यूह का परिवर्त",
+    "items": [
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you take the transpose of a matrix?",
+       "आव्यूह का परिवर्त (transpose) कैसे लेते हैं?"
+      ],
+      "a": [
+       [
+        "Interchange rows and columns: $(A^T)_{ij}=a_{ji}$; the order $m\\times n$ becomes $n\\times m$.",
+        "पंक्तियों व स्तम्भों को आपस में बदलिए: $(A^T)_{ij}=a_{ji}$; कोटि $m\\times n$ से $n\\times m$ हो जाती है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2&3\\\\4&5&6\\end{pmatrix}^T=\\begin{pmatrix}1&4\\\\2&5\\\\3&6\\end{pmatrix}$.",
+        "उदा.: $\\begin{pmatrix}1&2&3\\\\4&5&6\\end{pmatrix}^T=\\begin{pmatrix}1&4\\\\2&5\\\\3&6\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you denote the transpose of a matrix?",
+       "आव्यूह के परिवर्त को कैसे लिखते हैं?"
+      ],
+      "a": [
+       [
+        "$A^T$ or $A'$. Basic rules: $(A^T)^T=A$, $(kA)^T=kA^T$, $(A\\pm B)^T=A^T\\pm B^T$, $|A^T|=|A|$, $\\operatorname{tr}A^T=\\operatorname{tr}A$.",
+        "$A^T$ या $A'$। मूल नियम: $(A^T)^T=A$, $(kA)^T=kA^T$, $(A\\pm B)^T=A^T\\pm B^T$, $|A^T|=|A|$, $\\operatorname{tr}A^T=\\operatorname{tr}A$।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the pattern when we take the transpose of two or more matrices in a product?",
+       "क्या आप दो या अधिक आव्यूहों के गुणनफल का परिवर्त लेने का प्रतिरूप जानते हैं?"
+      ],
+      "a": [
+       "$(AB)^T=B^TA^T,\\qquad (ABC)^T=C^TB^TA^T,\\qquad (A^n)^T=(A^T)^n$",
+       [
+        "Ex: $A,B$ symmetric $\\Rightarrow(AB-BA)^T=BA-AB=-(AB-BA)$, so $AB-BA$ is skew-symmetric.",
+        "उदा.: $A,B$ सममित $\\Rightarrow(AB-BA)^T=BA-AB=-(AB-BA)$, अतः $AB-BA$ विषम सममित है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Symmetric and Skew Symmetric Matrix",
+    "hi": "सममित व विषम सममित आव्यूह",
+    "items": [
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you determine whether a square matrix is symmetric?",
+       "आप कैसे निर्धारित करते हैं कि वर्ग आव्यूह सममित है?"
+      ],
+      "a": [
+       [
+        "$A^T=A$. For any square $A$: $A+A^T$, $AA^T$, $A^TA$ are symmetric; $A^n$ and $A^{-1}$ of a symmetric matrix are symmetric; $AB$ is symmetric for symmetric $A,B$ iff $AB=BA$.",
+        "$A^T=A$। किसी भी वर्ग $A$ के लिए $A+A^T$, $AA^T$, $A^TA$ सममित हैं; सममित आव्यूह के $A^n$ व $A^{-1}$ भी सममित हैं; सममित $A,B$ के लिए $AB$ सममित तभी जब $AB=BA$।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\2&5\\end{pmatrix}$ is symmetric; $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}1&3\\\\2&4\\end{pmatrix}=\\begin{pmatrix}2&5\\\\5&8\\end{pmatrix}$ is symmetric.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\2&5\\end{pmatrix}$ सममित है; $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}1&3\\\\2&4\\end{pmatrix}=\\begin{pmatrix}2&5\\\\5&8\\end{pmatrix}$ सममित है।"
+       ]
+      ]
+     },
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you determine whether a square matrix is skew-symmetric?",
+       "आप कैसे निर्धारित करते हैं कि वर्ग आव्यूह विषम सममित है?"
+      ],
+      "a": [
+       [
+        "$A^T=-A$. For any square $A$: $A-A^T$ is skew-symmetric. $A^{\\text{odd}}$ of a skew matrix is skew, $A^{\\text{even}}$ is symmetric; $AB-BA$ is skew for symmetric $A,B$.",
+        "$A^T=-A$। किसी भी वर्ग $A$ के लिए $A-A^T$ विषम सममित है। विषम सममित आव्यूह की विषम घात विषम सममित तथा सम घात सममित होती है; सममित $A,B$ के लिए $AB-BA$ विषम सममित है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}0&3\\\\-3&0\\end{pmatrix}$ is skew-symmetric; its square $\\begin{pmatrix}-9&0\\\\0&-9\\end{pmatrix}$ is symmetric.",
+        "उदा.: $\\begin{pmatrix}0&3\\\\-3&0\\end{pmatrix}$ विषम सममित है; इसका वर्ग $\\begin{pmatrix}-9&0\\\\0&-9\\end{pmatrix}$ सममित है।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the determinant value of a skew-symmetric matrix of odd order?",
+       "क्या आप विषम कोटि के विषम सममित आव्यूह के सारणिक का मान जानते हैं?"
+      ],
+      "a": [
+       [
+        "It is $0$: $|A|=|A^T|=|-A|=(-1)^n|A|=-|A|$ for odd $n$. (For even order the determinant need not be $0$.)",
+        "यह $0$ होता है: विषम $n$ के लिए $|A|=|A^T|=|-A|=(-1)^n|A|=-|A|$। (सम कोटि में सारणिक शून्य होना आवश्यक नहीं।)"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}0&a&b\\\\-a&0&c\\\\-b&-c&0\\end{vmatrix}=0$.",
+        "उदा.: $\\begin{vmatrix}0&a&b\\\\-a&0&c\\\\-b&-c&0\\end{vmatrix}=0$।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the condition on the elements of a symmetric matrix?",
+       "क्या आप सममित आव्यूह के अवयवों की शर्त जानते हैं?"
+      ],
+      "a": [
+       [
+        "$a_{ij}=a_{ji}$ for all $i,j$; only $\\frac{n(n+1)}2$ elements are free, so with $s$ allowed values there are $s^{n(n+1)/2}$ symmetric matrices.",
+        "सभी $i,j$ के लिए $a_{ij}=a_{ji}$; केवल $\\frac{n(n+1)}2$ अवयव स्वतन्त्र हैं, अतः $s$ मान उपलब्ध हों तो सममित आव्यूहों की संख्या $s^{n(n+1)/2}$ है।"
+       ],
+       [
+        "Ex: $3\\times3$ symmetric matrices with entries from $\\{0,1,\\dots,9\\}$: $10^6$.",
+        "उदा.: अवयव $\\{0,1,\\dots,9\\}$ से लेने पर $3\\times3$ सममित आव्यूहों की संख्या $10^6$।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the condition on the elements of a skew-symmetric matrix?",
+       "क्या आप विषम सममित आव्यूह के अवयवों की शर्त जानते हैं?"
+      ],
+      "a": [
+       [
+        "$a_{ij}=-a_{ji}$, so every diagonal element is $0$ and the trace is $0$; only $\\frac{n(n-1)}2$ elements are free. A matrix that is both symmetric and skew-symmetric is $O$.",
+        "$a_{ij}=-a_{ji}$, अतः प्रत्येक विकर्ण अवयव $0$ तथा अनुरेख $0$; केवल $\\frac{n(n-1)}2$ अवयव स्वतन्त्र हैं। जो आव्यूह सममित व विषम सममित दोनों हो वह $O$ होता है।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you express any square matrix as the sum of a symmetric and a skew-symmetric matrix?",
+       "किसी वर्ग आव्यूह को सममित तथा विषम सममित आव्यूह के योग के रूप में कैसे व्यक्त करते हैं?"
+      ],
+      "a": [
+       "$A=\\tfrac12(A+A^T)+\\tfrac12(A-A^T)\\quad(\\text{symmetric}+\\text{skew; unique})$",
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}=\\begin{pmatrix}1&\\frac52\\\\\\frac52&4\\end{pmatrix}+\\begin{pmatrix}0&-\\frac12\\\\\\frac12&0\\end{pmatrix}$.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}=\\begin{pmatrix}1&\\frac52\\\\\\frac52&4\\end{pmatrix}+\\begin{pmatrix}0&-\\frac12\\\\\\frac12&0\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "44",
+      "o": 44,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you do in a question when a matrix is given as symmetric or skew-symmetric?",
+       "जब प्रश्न में आव्यूह सममित या विषम सममित दिया हो तो क्या करना चाहिए?"
+      ],
+      "a": [
+       [
+        "Use $A^T=\\pm A$: equate $a_{ij}=\\pm a_{ji}$ (skew: diagonal $0$, $\\operatorname{tr}=0$, $|A|=0$ if odd order); transpose the given relation; test the parity of products with $(AB)^T=B^TA^T$ and of powers with $(A^n)^T=(A^T)^n$.",
+        "$A^T=\\pm A$ का प्रयोग कीजिए: $a_{ij}=\\pm a_{ji}$ रखिए (विषम सममित: विकर्ण $0$, $\\operatorname{tr}=0$, विषम कोटि में $|A|=0$); दिये सम्बन्ध का परिवर्त लीजिए; गुणनफल की जाँच $(AB)^T=B^TA^T$ से तथा घात की $(A^n)^T=(A^T)^n$ से कीजिए।"
+       ],
+       [
+        "Ex: if $P^T=2P+I$ then also $P=2P^T+I$; substituting gives $P=4P+3I$, so $P=-I$.",
+        "उदा.: यदि $P^T=2P+I$ तो $P=2P^T+I$ भी सत्य है; प्रतिस्थापन से $P=4P+3I$, अतः $P=-I$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Orthogonal Matrix",
+    "hi": "लम्बकोणीय आव्यूह",
+    "items": [
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to define an orthogonal matrix?",
+       "क्या आप लम्बकोणीय (orthogonal) आव्यूह परिभाषित कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "$AA^T=A^TA=I$, i.e. $A^{-1}=A^T$. Then $|A|=\\pm1$; $A^T$, $A^{-1}$ and products of orthogonal matrices are orthogonal.",
+        "$AA^T=A^TA=I$, अर्थात् $A^{-1}=A^T$। तब $|A|=\\pm1$; $A^T$, $A^{-1}$ तथा लम्बकोणीय आव्यूहों के गुणनफल भी लम्बकोणीय हैं।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$ has $AA^T=I$.",
+        "उदा.: $A=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$ के लिए $AA^T=I$।"
+       ]
+      ]
+     },
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do the elements of the rows/columns of an orthogonal matrix represent?",
+       "लम्बकोणीय आव्यूह की पंक्तियों/स्तम्भों के अवयव क्या दर्शाते हैं?"
+      ],
+      "a": [
+       [
+        "Rows (and columns) are unit vectors, mutually perpendicular: $\\sum_ja_{ij}^2=1$ and $\\sum_ja_{ij}a_{kj}=0$ for $i\\neq k$.",
+        "पंक्तियाँ (तथा स्तम्भ) मात्रक सदिश हैं और परस्पर लम्बवत् हैं: $\\sum_ja_{ij}^2=1$ तथा $i\\neq k$ के लिए $\\sum_ja_{ij}a_{kj}=0$।"
+       ],
+       [
+        "Ex: $\\frac13\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\2&-2&1\\end{pmatrix}$ is orthogonal; if $AA^T=9I$ for $\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\a&2&b\\end{pmatrix}$ then $(a,b)=(-2,-1)$.",
+        "उदा.: $\\frac13\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\2&-2&1\\end{pmatrix}$ लम्बकोणीय है; यदि $\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\a&2&b\\end{pmatrix}$ के लिए $AA^T=9I$ हो तो $(a,b)=(-2,-1)$।"
+       ]
+      ]
+     },
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the relation of the trace of $AA^T$ with the elements of $A$?",
+       "क्या आप $AA^T$ के अनुरेख का $A$ के अवयवों से सम्बन्ध जानते हैं?"
+      ],
+      "a": [
+       "$\\operatorname{tr}(AA^T)=\\operatorname{tr}(A^TA)=\\sum_{i,j}a_{ij}^2\\quad(\\text{sum of squares of all elements})$",
+       [
+        "Ex: for real $A$, $\\operatorname{tr}(AA^T)=0\\Rightarrow A=O$; $\\operatorname{tr}(M^TM)=5$ means the squares of the nine entries of a $3\\times3$ matrix $M$ add up to $5$.",
+        "उदा.: वास्तविक $A$ के लिए $\\operatorname{tr}(AA^T)=0\\Rightarrow A=O$; $\\operatorname{tr}(M^TM)=5$ का अर्थ है $3\\times3$ आव्यूह $M$ के नौ अवयवों के वर्गों का योग $5$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Adjoint of a square Matrix",
+    "hi": "वर्ग आव्यूह का सहखण्डज",
+    "items": [
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the adjoint of a square matrix?",
+       "वर्ग आव्यूह का सहखण्डज (adjoint) कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "$\\operatorname{adj}A=[C_{ij}]^T$: the transpose of the matrix of cofactors $C_{ij}=(-1)^{i+j}M_{ij}$.",
+        "$\\operatorname{adj}A=[C_{ij}]^T$: सहखण्डों $C_{ij}=(-1)^{i+j}M_{ij}$ के आव्यूह का परिवर्त।"
+       ],
+       [
+        "Ex: $\\operatorname{adj}\\begin{pmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{pmatrix}=\\begin{pmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{pmatrix}$.",
+        "उदा.: $\\operatorname{adj}\\begin{pmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{pmatrix}=\\begin{pmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know a fast method to determine the adjoint of a square matrix of order 2?",
+       "क्या आप कोटि 2 के वर्ग आव्यूह का सहखण्डज निकालने की शीघ्र विधि जानते हैं?"
+      ],
+      "a": [
+       "$\\operatorname{adj}\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}\\quad(\\text{swap the diagonal, change signs of the other two})$",
+       [
+        "Ex: $\\operatorname{adj}\\begin{pmatrix}4&-1\\\\2&3\\end{pmatrix}=\\begin{pmatrix}3&1\\\\-2&4\\end{pmatrix}$.",
+        "उदा.: $\\operatorname{adj}\\begin{pmatrix}4&-1\\\\2&3\\end{pmatrix}=\\begin{pmatrix}3&1\\\\-2&4\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Basic theorem $A\\,\\operatorname{adj}A=|A|I=\\operatorname{adj}A\\cdot A$ and its use in proving properties of the adjoint.",
+       "मूल प्रमेय $A\\,\\operatorname{adj}A=|A|I=\\operatorname{adj}A\\cdot A$ तथा सहखण्डज के गुणधर्म सिद्ध करने में इसका उपयोग।"
+      ],
+      "a": [
+       [
+        "Take determinants: $|A||\\operatorname{adj}A|=|A|^n\\Rightarrow|\\operatorname{adj}A|=|A|^{n-1}$. If $|A|\\neq0$: $A^{-1}=\\frac{\\operatorname{adj}A}{|A|}$ and $\\operatorname{adj}A=|A|A^{-1}$. If $|A|=0$: $A\\operatorname{adj}A=O$.",
+        "दोनों ओर सारणिक लीजिए: $|A||\\operatorname{adj}A|=|A|^n\\Rightarrow|\\operatorname{adj}A|=|A|^{n-1}$। यदि $|A|\\neq0$: $A^{-1}=\\frac{\\operatorname{adj}A}{|A|}$ तथा $\\operatorname{adj}A=|A|A^{-1}$। यदि $|A|=0$: $A\\operatorname{adj}A=O$।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}\\sin x&\\cos x\\\\-\\cos x&\\sin x\\end{pmatrix}$: $A\\operatorname{adj}A=|A|I=I$, so $k=1$.",
+        "उदा.: $A=\\begin{pmatrix}\\sin x&\\cos x\\\\-\\cos x&\\sin x\\end{pmatrix}$: $A\\operatorname{adj}A=|A|I=I$, अतः $k=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "51",
+      "o": 51,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to write all 6 properties of the adjoint and prove them?",
+       "क्या आप सहखण्डज के सभी 6 गुणधर्म लिख सकते हैं और सिद्ध कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "For $A$ of order $n$: (i) $|\\operatorname{adj}A|=|A|^{n-1}$; (ii) $\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$; (iii) $|\\operatorname{adj}(\\operatorname{adj}A)|=|A|^{(n-1)^2}$; (iv) $\\operatorname{adj}(AB)=\\operatorname{adj}B\\operatorname{adj}A$, $\\operatorname{adj}(A^m)=(\\operatorname{adj}A)^m$; (v) $\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$; (vi) $\\operatorname{adj}(A^T)=(\\operatorname{adj}A)^T$.",
+        "कोटि $n$ के $A$ के लिए: (i) $|\\operatorname{adj}A|=|A|^{n-1}$; (ii) $\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$; (iii) $|\\operatorname{adj}(\\operatorname{adj}A)|=|A|^{(n-1)^2}$; (iv) $\\operatorname{adj}(AB)=\\operatorname{adj}B\\operatorname{adj}A$, $\\operatorname{adj}(A^m)=(\\operatorname{adj}A)^m$; (v) $\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$; (vi) $\\operatorname{adj}(A^T)=(\\operatorname{adj}A)^T$।"
+       ],
+       [
+        "Ex: $3\\times3$, $|A|=2$: $|\\operatorname{adj}(\\operatorname{adj}A)|=2^4=16$ and $|\\operatorname{adj}(2A)|=|4\\operatorname{adj}A|=4^3\\cdot2^2=256$.",
+        "उदा.: $3\\times3$, $|A|=2$: $|\\operatorname{adj}(\\operatorname{adj}A)|=2^4=16$ तथा $|\\operatorname{adj}(2A)|=|4\\operatorname{adj}A|=4^3\\cdot2^2=256$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Inverse of a Square Matrix",
+    "hi": "वर्ग आव्यूह का व्युत्क्रम",
+    "items": [
+     {
+      "id": "52",
+      "o": 52,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by the inverse of a square matrix?",
+       "वर्ग आव्यूह के व्युत्क्रम से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "If a square $B$ exists with $AB=BA=I$, then $B$ is the (unique) inverse of $A$. A one-sided relation $AB=I$ for square matrices already gives $BA=I$.",
+        "यदि वर्ग आव्यूह $B$ ऐसा हो कि $AB=BA=I$, तो $B$ ही $A$ का (अद्वितीय) व्युत्क्रम है। वर्ग आव्यूहों में केवल $AB=I$ से ही $BA=I$ मिल जाता है।"
+       ],
+       [
+        "Ex: $A^2=I\\Rightarrow A^{-1}=A$; $A^2=A^{-1}\\Rightarrow A^3=I$.",
+        "उदा.: $A^2=I\\Rightarrow A^{-1}=A$; $A^2=A^{-1}\\Rightarrow A^3=I$।"
+       ]
+      ]
+     },
+     {
+      "id": "53",
+      "o": 53,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you denote the inverse of a square matrix $A$?",
+       "वर्ग आव्यूह $A$ के व्युत्क्रम को कैसे लिखते हैं?"
+      ],
+      "a": [
+       [
+        "$A^{-1}$ (not $\\frac1A$). It satisfies $AA^{-1}=A^{-1}A=I$.",
+        "$A^{-1}$ ($\\frac1A$ नहीं)। यह $AA^{-1}=A^{-1}A=I$ को सन्तुष्ट करता है।"
+       ]
+      ]
+     },
+     {
+      "id": "54",
+      "o": 54,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for a square matrix to be invertible?",
+       "वर्ग आव्यूह के व्युत्क्रमणीय होने की शर्त क्या है?"
+      ],
+      "a": [
+       [
+        "$|A|\\neq0$ (non-singular). Then $A^{-1}$ is unique. If $|A|=1$ and all entries are integers, then $A^{-1}$ also has integer entries.",
+        "$|A|\\neq0$ (व्युत्क्रमणीय)। तब $A^{-1}$ अद्वितीय है। यदि $|A|=1$ व सभी अवयव पूर्णांक हों तो $A^{-1}$ के अवयव भी पूर्णांक होते हैं।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}2&4\\\\1&\\lambda\\end{pmatrix}$ is non-invertible only for $\\lambda=2$.",
+        "उदा.: $\\begin{pmatrix}2&4\\\\1&\\lambda\\end{pmatrix}$ केवल $\\lambda=2$ पर अव्युत्क्रमणीय है।"
+       ]
+      ]
+     },
+     {
+      "id": "55",
+      "o": 55,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the inverse of a square matrix with the help of the adjoint?",
+       "सहखण्डज की सहायता से वर्ग आव्यूह का व्युत्क्रम कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       "$A^{-1}=\\dfrac{\\operatorname{adj}A}{|A|}\\quad(|A|\\neq0)$",
+       [
+        "Ex: $A=\\begin{pmatrix}2&1\\\\5&3\\end{pmatrix}$: $|A|=1$, $A^{-1}=\\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix}$. For $\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$: $A^{-1}=\\frac1{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$.",
+        "उदा.: $A=\\begin{pmatrix}2&1\\\\5&3\\end{pmatrix}$: $|A|=1$, $A^{-1}=\\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix}$। $\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ के लिए $A^{-1}=\\frac1{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "56",
+      "o": 56,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does the inverse of the inverse of $A$ mean?",
+       "$A$ के व्युत्क्रम का व्युत्क्रम क्या होता है?"
+      ],
+      "a": [
+       "$(A^{-1})^{-1}=A$"
+      ]
+     },
+     {
+      "id": "57",
+      "o": 57,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the determinant value of the inverse of $A$?",
+       "$A$ के व्युत्क्रम के सारणिक का मान क्या है?"
+      ],
+      "a": [
+       "$|A^{-1}|=\\dfrac1{|A|}=|A|^{-1}$",
+       [
+        "Ex: $|A|=2$ (order 3): $|\\operatorname{adj}A|=4$, $|A^{-1}\\operatorname{adj}A|=\\frac12\\cdot4=2$.",
+        "उदा.: $|A|=2$ (कोटि 3): $|\\operatorname{adj}A|=4$, $|A^{-1}\\operatorname{adj}A|=\\frac12\\cdot4=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "58",
+      "o": 58,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by negative integral powers of $A$?",
+       "$A$ की ऋणात्मक पूर्णांक घातों से क्या तात्पर्य है?"
+      ],
+      "a": [
+       "$A^{-n}=(A^{-1})^n=(A^n)^{-1},\\qquad A^mA^{-n}=A^{m-n}$",
+       [
+        "Ex: $A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$: $A^{-2}=(A^{-1})^2=\\begin{pmatrix}1&-2\\\\0&1\\end{pmatrix}$.",
+        "उदा.: $A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$: $A^{-2}=(A^{-1})^2=\\begin{pmatrix}1&-2\\\\0&1\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "59",
+      "o": 59,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you take the inverse of $A^T$?",
+       "$A^T$ का व्युत्क्रम कैसे लेते हैं?"
+      ],
+      "a": [
+       "$(A^T)^{-1}=(A^{-1})^T$"
+      ]
+     },
+     {
+      "id": "60",
+      "o": 60,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the pattern when we take the inverse of two or more matrices in a product?",
+       "क्या आप दो या अधिक आव्यूहों के गुणनफल का व्युत्क्रम लेने का प्रतिरूप जानते हैं?"
+      ],
+      "a": [
+       "$(AB)^{-1}=B^{-1}A^{-1},\\qquad (ABC)^{-1}=C^{-1}B^{-1}A^{-1},\\qquad (kA)^{-1}=\\tfrac1kA^{-1}$",
+       [
+        "Ex: $|P^{-1}AP-2I|=|P^{-1}(A-2I)P|=|A-2I|$; $(A+B)^{-1}\\neq A^{-1}+B^{-1}$.",
+        "उदा.: $|P^{-1}AP-2I|=|P^{-1}(A-2I)P|=|A-2I|$; $(A+B)^{-1}\\neq A^{-1}+B^{-1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "61",
+      "o": 61,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we cancel a matrix on both sides of an equation and what does this actually mean in terms of matrix multiplication?",
+       "समीकरण के दोनों ओर से आव्यूह को कब काट सकते हैं और आव्यूह गुणन की दृष्टि से इसका वास्तविक अर्थ क्या है?"
+      ],
+      "a": [
+       [
+        "$AB=AC\\Rightarrow B=C$ only if $A$ is invertible, and it means pre-multiplying both sides by $A^{-1}$ (same side!); $BA=CA\\Rightarrow B=C$ means post-multiplying by $A^{-1}$. For singular $A$ cancellation fails.",
+        "$AB=AC\\Rightarrow B=C$ केवल तब जब $A$ व्युत्क्रमणीय हो, और इसका अर्थ दोनों ओर $A^{-1}$ से बाएँ गुणा करना है (वही पक्ष!); $BA=CA\\Rightarrow B=C$ का अर्थ $A^{-1}$ से दाएँ गुणा करना है। अव्युत्क्रमणीय $A$ के लिए कटान मान्य नहीं।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$: $A\\begin{pmatrix}0&0\\\\1&1\\end{pmatrix}=A\\cdot O=O$ but $\\begin{pmatrix}0&0\\\\1&1\\end{pmatrix}\\neq O$.",
+        "उदा.: $A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$: $A\\begin{pmatrix}0&0\\\\1&1\\end{pmatrix}=A\\cdot O=O$ पर $\\begin{pmatrix}0&0\\\\1&1\\end{pmatrix}\\neq O$।"
+       ]
+      ]
+     },
+     {
+      "id": "62",
+      "o": 62,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write both points of the property $AB=O$, prove them, and use them in questions?",
+       "क्या आप गुणधर्म $AB=O$ के दोनों बिन्दु लिख सकते हैं, सिद्ध कर सकते हैं तथा प्रश्नों में प्रयोग कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "If $AB=O$: (1) if $A$ is non-singular then $B=O$ (multiply by $A^{-1}$), and if $B$ is non-singular then $A=O$; (2) hence if both $A\\neq O$ and $B\\neq O$, both are singular, $|A|=|B|=0$. Use it as $(\\text{factor})(\\text{factor})=O$ in tricks such as $P^3=Q^3,\\ P^2Q=Q^2P\\Rightarrow(P^2+Q^2)(P-Q)=O$.",
+        "यदि $AB=O$: (1) $A$ व्युत्क्रमणीय हो तो $B=O$ ($A^{-1}$ से गुणा करने पर), तथा $B$ व्युत्क्रमणीय हो तो $A=O$; (2) अतः यदि $A\\neq O$ व $B\\neq O$ दोनों हों तो दोनों अव्युत्क्रमणीय हैं, $|A|=|B|=0$। इसका प्रयोग (गुणक)(गुणक)$=O$ के रूप में कीजिए, जैसे $P^3=Q^3,\\ P^2Q=Q^2P\\Rightarrow(P^2+Q^2)(P-Q)=O$।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}1&-1\\\\-1&1\\end{pmatrix}=O$ with both factors singular; for $3\\times3$ non-zero $A,B$ with $AB=O$ the system $AX=O$ has infinitely many solutions.",
+        "उदा.: $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}1&-1\\\\-1&1\\end{pmatrix}=O$ जहाँ दोनों गुणक अव्युत्क्रमणीय हैं; शून्येतर $3\\times3$ आव्यूह $A,B$ के लिए $AB=O$ हो तो $AX=O$ के अनन्त हल होते हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "63",
+      "o": 63,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you use the characteristic equation to find the inverse of a square matrix?",
+       "अभिलाक्षणिक समीकरण से वर्ग आव्यूह का व्युत्क्रम कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "From $A^2-pA+qI=O$ with $q=|A|\\neq0$, multiply by $A^{-1}$: $A^{-1}=\\frac1q(pI-A)$. In general solve $p(A)=O$ for $I$ and factor out $A$. The same trick turns $3A^3+2A^2+5A+I=O$ into $A^{-1}=-(3A^2+2A+5I)$.",
+        "$A^2-pA+qI=O$ में $q=|A|\\neq0$ हो तो $A^{-1}$ से गुणा करने पर $A^{-1}=\\frac1q(pI-A)$। सामान्यतः $p(A)=O$ को $I$ के लिए हल करके $A$ उभयनिष्ठ निकालिए। इसी विधि से $3A^3+2A^2+5A+I=O$ से $A^{-1}=-(3A^2+2A+5I)$ मिलता है।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$, $A^2-5A-2I=O\\Rightarrow A^{-1}=\\frac12(A-5I)=\\begin{pmatrix}-2&1\\\\\\frac32&-\\frac12\\end{pmatrix}$.",
+        "उदा.: $A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$, $A^2-5A-2I=O\\Rightarrow A^{-1}=\\frac12(A-5I)=\\begin{pmatrix}-2&1\\\\\\frac32&-\\frac12\\end{pmatrix}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Finding inverse by elementary operations",
+    "hi": "प्रारम्भिक संक्रियाओं से व्युत्क्रम",
+    "items": [
+     {
+      "id": "64",
+      "o": 64,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the inverse by elementary row operations?",
+       "प्रारम्भिक पंक्ति संक्रियाओं से व्युत्क्रम कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Write $[A\\,|\\,I]$ and apply only row operations ($R_i\\leftrightarrow R_j$, $R_i\\to kR_i$, $R_i\\to R_i+kR_j$) until the left block becomes $I$; the right block is then $A^{-1}$. A row of zeros on the left means $A$ is not invertible.",
+        "$[A\\,|\\,I]$ लिखिए और केवल पंक्ति संक्रियाएँ ($R_i\\leftrightarrow R_j$, $R_i\\to kR_i$, $R_i\\to R_i+kR_j$) तब तक कीजिए जब तक बायाँ खण्ड $I$ न बन जाए; दायाँ खण्ड तब $A^{-1}$ होता है। बाएँ खण्ड में शून्य पंक्ति आने का अर्थ $A$ व्युत्क्रमणीय नहीं है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}1&2\\\\2&3\\end{pmatrix}$: $R_2\\to R_2-2R_1$, $R_2\\to-R_2$, $R_1\\to R_1-2R_2$ give $A^{-1}=\\begin{pmatrix}-3&2\\\\2&-1\\end{pmatrix}$.",
+        "उदा.: $\\begin{pmatrix}1&2\\\\2&3\\end{pmatrix}$: $R_2\\to R_2-2R_1$, $R_2\\to-R_2$, $R_1\\to R_1-2R_2$ से $A^{-1}=\\begin{pmatrix}-3&2\\\\2&-1\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "65",
+      "o": 65,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the inverse by elementary column operations?",
+       "प्रारम्भिक स्तम्भ संक्रियाओं से व्युत्क्रम कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Write $A$ above $I$ and apply only column operations ($C_i\\leftrightarrow C_j$, $C_i\\to kC_i$, $C_i\\to C_i+kC_j$) until the upper block is $I$; the lower block is $A^{-1}$. Never mix row and column operations.",
+        "$A$ को $I$ के ऊपर लिखिए और केवल स्तम्भ संक्रियाएँ ($C_i\\leftrightarrow C_j$, $C_i\\to kC_i$, $C_i\\to C_i+kC_j$) तब तक कीजिए जब तक ऊपरी खण्ड $I$ न बन जाए; निचला खण्ड $A^{-1}$ होता है। पंक्ति व स्तम्भ संक्रियाओं को कभी मिलाइए नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "66",
+      "o": 66,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What should you keep in mind while using row operations on both sides of a matrix equation?",
+       "आव्यूह समीकरण के दोनों ओर पंक्ति संक्रियाएँ करते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Write $A=IA$ and apply each row operation to the left side and to the pre-factor $I$ of the right side (never to $A$ on the right): $A=IA\\to I=BA$, so $B=A^{-1}$. Do not use column operations in the same calculation.",
+        "$A=IA$ लिखिए और प्रत्येक पंक्ति संक्रिया बाएँ पक्ष पर तथा दाएँ पक्ष के पूर्व-गुणक $I$ पर कीजिए (दाएँ पक्ष के $A$ पर कभी नहीं): $A=IA\\to I=BA$, अतः $B=A^{-1}$। उसी गणना में स्तम्भ संक्रियाएँ न कीजिए।"
+       ]
+      ]
+     },
+     {
+      "id": "67",
+      "o": 67,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What should you keep in mind while using column operations on both sides of a matrix equation?",
+       "आव्यूह समीकरण के दोनों ओर स्तम्भ संक्रियाएँ करते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Write $A=AI$ and apply each column operation to the left side and to the post-factor $I$ of the right side: $A=AI\\to I=AB$, so $B=A^{-1}$. Do not use row operations in the same calculation.",
+        "$A=AI$ लिखिए और प्रत्येक स्तम्भ संक्रिया बाएँ पक्ष पर तथा दाएँ पक्ष के पश्च-गुणक $I$ पर कीजिए: $A=AI\\to I=AB$, अतः $B=A^{-1}$। उसी गणना में पंक्ति संक्रियाएँ न कीजिए।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "System of Equations",
+    "hi": "समीकरण निकाय",
+    "items": [
+     {
+      "id": "68",
+      "o": 68,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write a given system of equations as $AX=B$ and vice versa?",
+       "क्या आप दिये गये समीकरण निकाय को $AX=B$ के रूप में तथा इसके विपरीत लिख सकते हैं?"
+      ],
+      "a": [
+       [
+        "$A$ = coefficient matrix, $X$ = column of unknowns, $B$ = column of constants. If $|A|\\neq0$: $X=A^{-1}B$ (unique solution). Homogeneous $AX=O$ has a non-zero solution iff $|A|=0$.",
+        "$A$ = गुणांक आव्यूह, $X$ = अज्ञातों का स्तम्भ, $B$ = अचरों का स्तम्भ। यदि $|A|\\neq0$: $X=A^{-1}B$ (अद्वितीय हल)। समघात $AX=O$ का शून्येतर हल तभी जब $|A|=0$।"
+       ],
+       [
+        "Ex: $x+2y=5,\\ 3x+4y=11\\iff\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}5\\\\11\\end{pmatrix}$, giving $x=1,\\ y=2$.",
+        "उदा.: $x+2y=5,\\ 3x+4y=11\\iff\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}5\\\\11\\end{pmatrix}$, जिससे $x=1,\\ y=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "69",
+      "o": 69,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to relate $AX=B$ with Cramer's rule?",
+       "क्या आप $AX=B$ का क्रेमर नियम से सम्बन्ध बता सकते हैं?"
+      ],
+      "a": [
+       [
+        "$|A|\\neq0$: $X=\\frac{(\\operatorname{adj}A)B}{|A|}$, i.e. $x_i=\\frac{\\Delta_i}{\\Delta}$ ($\\Delta_i$: column $i$ of $|A|$ replaced by $B$). $|A|=0$: if $(\\operatorname{adj}A)B\\neq O$ the system is inconsistent; if $(\\operatorname{adj}A)B=O$ it has infinitely many solutions or none (check further).",
+        "$|A|\\neq0$: $X=\\frac{(\\operatorname{adj}A)B}{|A|}$, अर्थात् $x_i=\\frac{\\Delta_i}{\\Delta}$ ($\\Delta_i$: $|A|$ के स्तम्भ $i$ को $B$ से बदलकर)। $|A|=0$: यदि $(\\operatorname{adj}A)B\\neq O$ तो निकाय असंगत है; यदि $(\\operatorname{adj}A)B=O$ तो अनन्त हल या कोई हल नहीं (आगे जाँचिए)।"
+       ],
+       [
+        "Ex: $x+y+z=6,\\ x-y+z=2,\\ 2x+y-z=1$: $\\Delta=6$, $\\Delta_1=6$, so $x=1$; similarly $y=2,\\ z=3$.",
+        "उदा.: $x+y+z=6,\\ x-y+z=2,\\ 2x+y-z=1$: $\\Delta=6$, $\\Delta_1=6$, अतः $x=1$; इसी प्रकार $y=2,\\ z=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 34; J-II: 22,34,35,36; J-M(XII): 17; J-M(XIII): 37,39,42,50; QB: 127",
+      "q": [
+       "How do you use a matrix defined by its action on column matrices ($AX_1=Y_1,\\ AX_2=Y_2,\\dots$)?",
+       "स्तम्भ आव्यूहों पर क्रिया द्वारा परिभाषित आव्यूह ($AX_1=Y_1,\\ AX_2=Y_2,\\dots$) का उपयोग कैसे करते हैं?"
+      ],
+      "a": [
+       [
+        "Put the given columns side by side: $A[X_1\\ X_2\\ X_3]=[Y_1\\ Y_2\\ Y_3]\\Rightarrow A=YX^{-1}$ (if $X$ invertible); if $X_i=e_i$ the columns of $A$ are the $Y_i$. If $AX=\\lambda X$ then $A^nX=\\lambda^nX$ and $(A-kI)X=(\\lambda-k)X$: use it to solve or classify $(A-kI)Y=B$.",
+        "दिये स्तम्भ पास-पास रखिए: $A[X_1\\ X_2\\ X_3]=[Y_1\\ Y_2\\ Y_3]\\Rightarrow A=YX^{-1}$ ($X$ व्युत्क्रमणीय हो तो); यदि $X_i=e_i$ तो $A$ के स्तम्भ ही $Y_i$ हैं। यदि $AX=\\lambda X$ तो $A^nX=\\lambda^nX$ तथा $(A-kI)X=(\\lambda-k)X$: इससे $(A-kI)Y=B$ को हल या वर्गीकृत कीजिए।"
+       ],
+       [
+        "Ex: $A\\begin{pmatrix}1\\\\0\\end{pmatrix}=\\begin{pmatrix}2\\\\3\\end{pmatrix}$ and $A\\begin{pmatrix}0\\\\1\\end{pmatrix}=\\begin{pmatrix}4\\\\5\\end{pmatrix}\\Rightarrow A=\\begin{pmatrix}2&4\\\\3&5\\end{pmatrix}$.",
+        "उदा.: $A\\begin{pmatrix}1\\\\0\\end{pmatrix}=\\begin{pmatrix}2\\\\3\\end{pmatrix}$ तथा $A\\begin{pmatrix}0\\\\1\\end{pmatrix}=\\begin{pmatrix}4\\\\5\\end{pmatrix}\\Rightarrow A=\\begin{pmatrix}2&4\\\\3&5\\end{pmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N5",
+      "o": null,
+      "tag": "added",
+      "src": "J-II: 23; C-I: 21; C-II: 4,6,10",
+      "q": [
+       "How do you solve a matrix equation such as $AX=B$, $XA=B$ or $AXB=C$ for the unknown matrix $X$?",
+       "आव्यूह समीकरण $AX=B$, $XA=B$ या $AXB=C$ को अज्ञात आव्यूह $X$ के लिए कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "$AX=B\\Rightarrow X=A^{-1}B$ (pre-multiply); $XA=B\\Rightarrow X=BA^{-1}$ (post-multiply); $AXB=C\\Rightarrow X=A^{-1}CB^{-1}$. If a factor is singular, write $X$ with unknown entries and compare elements: the solution may not exist or may not be unique.",
+        "$AX=B\\Rightarrow X=A^{-1}B$ (बाएँ से गुणा); $XA=B\\Rightarrow X=BA^{-1}$ (दाएँ से गुणा); $AXB=C\\Rightarrow X=A^{-1}CB^{-1}$। यदि कोई गुणक अव्युत्क्रमणीय हो तो $X$ को अज्ञात अवयवों से लिखकर अवयवों की तुलना कीजिए: हल न हो या अद्वितीय न हो सकता है।"
+       ],
+       [
+        "Ex: $A=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\2&3\\end{pmatrix}$: $AX=B\\Rightarrow X=A^{-1}B=\\begin{pmatrix}-1&-3\\\\3&6\\end{pmatrix}$.",
+        "उदा.: $A=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\2&3\\end{pmatrix}$: $AX=B\\Rightarrow X=A^{-1}B=\\begin{pmatrix}-1&-3\\\\3&6\\end{pmatrix}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Rank of Matrix",
+    "hi": "आव्यूह की रैंक",
+    "items": [
+     {
+      "id": "70",
+      "o": 70,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does the rank of a matrix mean?",
+       "आव्यूह की रैंक (rank) से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "The order of the highest-order non-singular square sub-matrix. If rank is $r$: every sub-matrix of order $r+1$ or more is singular and at least one of order $r$ is non-singular; $\\operatorname{rank}\\le\\min(m,n)$.",
+        "सबसे बड़ी कोटि के व्युत्क्रमणीय वर्ग उप-आव्यूह की कोटि। यदि रैंक $r$ है तो कोटि $r+1$ या अधिक का प्रत्येक उप-आव्यूह अव्युत्क्रमणीय है तथा कोटि $r$ का कम से कम एक व्युत्क्रमणीय है; $\\operatorname{rank}\\le\\min(m,n)$।"
+       ]
+      ]
+     },
+     {
+      "id": "71",
+      "o": 71,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the rank of a matrix?",
+       "आव्यूह की रैंक कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Row-reduce to echelon form and count the non-zero rows, or find the largest non-vanishing minor: $|A|\\neq0\\Rightarrow$ rank $n$; otherwise test the $2\\times2$ minors, then the non-zero entries.",
+        "पंक्ति संक्रियाओं से सोपानी रूप में लाकर शून्येतर पंक्तियाँ गिनिए, या सबसे बड़ा अशून्य उपसारणिक ज्ञात कीजिए: $|A|\\neq0\\Rightarrow$ रैंक $n$; अन्यथा $2\\times2$ उपसारणिक जाँचिए, फिर शून्येतर अवयव।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}2&-1&3\\\\1&4&0\\\\3&3&3\\end{pmatrix}$: $R_3\\to R_3-R_1-R_2$ gives a zero row, so rank $=2$.",
+        "उदा.: $\\begin{pmatrix}2&-1&3\\\\1&4&0\\\\3&3&3\\end{pmatrix}$: $R_3\\to R_3-R_1-R_2$ से शून्य पंक्ति मिलती है, अतः रैंक $=2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Extra Reading Material",
+    "hi": "अतिरिक्त पठन सामग्री",
+    "items": [
+     {
+      "id": "72",
+      "o": 72,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is a permutation matrix? Write down its properties.",
+       "क्रमचय आव्यूह (permutation matrix) क्या है? इसके गुणधर्म लिखिए।"
+      ],
+      "a": [
+       [
+        "A matrix obtained by permuting the rows of $I$: each row and each column has exactly one $1$, the rest $0$. Properties: $P^TP=I$ (orthogonal, $P^{-1}=P^T$), $|P|=\\pm1$ (sign of the permutation), product of permutation matrices is a permutation matrix, $\\operatorname{tr}P$ = number of fixed positions; there are $n!$ of order $n$.",
+        "$I$ की पंक्तियों को क्रमचयित करके बना आव्यूह: प्रत्येक पंक्ति व स्तम्भ में ठीक एक $1$ तथा शेष $0$। गुणधर्म: $P^TP=I$ (लम्बकोणीय, $P^{-1}=P^T$), $|P|=\\pm1$ (क्रमचय का चिह्न), क्रमचय आव्यूहों का गुणनफल क्रमचय आव्यूह, $\\operatorname{tr}P$ = अचल स्थानों की संख्या; कोटि $n$ के कुल $n!$ आव्यूह।"
+       ],
+       [
+        "Ex: $5\\times5$ matrices of $0,1$ with exactly one $1$ in every row and every column are the permutation matrices: $5!=120$.",
+        "उदा.: प्रत्येक पंक्ति व स्तम्भ में ठीक एक $1$ वाले $0,1$ के $5\\times5$ आव्यूह क्रमचय आव्यूह हैं: $5!=120$।"
+       ]
+      ]
+     },
+     {
+      "id": "73",
+      "o": 73,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the effect on a matrix if we pre-multiply or post-multiply it by a permutation matrix?",
+       "आव्यूह को क्रमचय आव्यूह से बाएँ या दाएँ गुणा करने पर क्या प्रभाव पड़ता है?"
+      ],
+      "a": [
+       [
+        "$PA$ permutes the rows of $A$; $AP$ permutes the columns of $A$ (by the same pattern as the rows of $I$ were permuted).",
+        "$PA$ से $A$ की पंक्तियाँ क्रमचयित होती हैं; $AP$ से $A$ के स्तम्भ क्रमचयित होते हैं।"
+       ],
+       [
+        "Ex: $P=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$: $PA$ swaps the two rows of $A$, $AP$ swaps the two columns.",
+        "उदा.: $P=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$: $PA$ से $A$ की दोनों पंक्तियाँ तथा $AP$ से दोनों स्तम्भ आपस में बदल जाते हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "74",
+      "o": 74,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Which power of a permutation matrix is $I$?",
+       "क्रमचय आव्यूह की कौन-सी घात $I$ होती है?"
+      ],
+      "a": [
+       [
+        "$P^k=I$ where $k$ is the order of the permutation, the lcm of its cycle lengths (so $P^{n!}=I$ always).",
+        "$P^k=I$, जहाँ $k$ क्रमचय की कोटि है, अर्थात् उसके चक्रों की लम्बाइयों का ल.स.प. ($P^{n!}=I$ सदैव)।"
+       ],
+       [
+        "Ex: the cyclic matrix $\\begin{pmatrix}0&0&1\\\\1&0&0\\\\0&1&0\\end{pmatrix}$ has $P^3=I$, so $P^{49}=P$.",
+        "उदा.: चक्रीय आव्यूह $\\begin{pmatrix}0&0&1\\\\1&0&0\\\\0&1&0\\end{pmatrix}$ के लिए $P^3=I$, अतः $P^{49}=P$।"
+       ]
+      ]
+     },
+     {
+      "id": "75",
+      "o": 75,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to write $X^TAX$ directly, where $X$ is a column matrix and $A$ a square matrix?",
+       "क्या आप $X^TAX$ सीधे लिख सकते हैं, जहाँ $X$ स्तम्भ आव्यूह तथा $A$ वर्ग आव्यूह है?"
+      ],
+      "a": [
+       [
+        "$X^TAX=\\sum_{i,j}a_{ij}x_ix_j$ is a $1\\times1$ matrix (a quadratic form). For symmetric $A$: $\\sum a_{ii}x_i^2+2\\sum_{i<j}a_{ij}x_ix_j$; for skew-symmetric $A$ it is $0$.",
+        "$X^TAX=\\sum_{i,j}a_{ij}x_ix_j$ एक $1\\times1$ आव्यूह (द्विघात रूप) है। सममित $A$ के लिए: $\\sum a_{ii}x_i^2+2\\sum_{i<j}a_{ij}x_ix_j$; विषम सममित $A$ के लिए यह $0$ है।"
+       ],
+       [
+        "Ex: $\\begin{pmatrix}x&y\\end{pmatrix}\\begin{pmatrix}1&2\\\\2&3\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix}=x^2+4xy+3y^2$.",
+        "उदा.: $\\begin{pmatrix}x&y\\end{pmatrix}\\begin{pmatrix}1&2\\\\2&3\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix}=x^2+4xy+3y^2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous (added items)",
+    "hi": "विविध (जोड़े गये बिन्दु)",
+    "items": [
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 38; J-A: 11,14,27,28,29; C-I: 19; C-II: 13,20,21,22,23,24,25,30; J-M(XII): 7,8,15,24,28,40,41,42,44; J-M(XIII): 4,15,25,27,50; QB: 121,131,136,149,151,160,163",
+      "q": [
+       "How do you count (or find the extreme value of) matrices whose entries come from a given set and satisfy a condition?",
+       "दिये गये समुच्चय से अवयव लेने वाले तथा किसी शर्त को सन्तुष्ट करने वाले आव्यूहों की गणना (या चरम मान) कैसे करते हैं?"
+      ],
+      "a": [
+       [
+        "Turn the condition into conditions on the entries and count cell by cell. Useful translations: $\\operatorname{tr}(A^TA)=\\sum a_{ij}^2$; symmetric $n\\times n$ with $s$ values $\\Rightarrow s^{n(n+1)/2}$; $|A|\\neq0$ (count the complement $|A|=0$); sum of entries $=$ prime (list the possible sums). For the maximum of $|A|$ use bounds (Hadamard / AM-GM) and try a candidate.",
+        "शर्त को अवयवों पर शर्तों में बदलकर कोष्ठ-दर-कोष्ठ गणना कीजिए। उपयोगी रूपान्तरण: $\\operatorname{tr}(A^TA)=\\sum a_{ij}^2$; $s$ मानों वाले सममित $n\\times n$ आव्यूह $\\Rightarrow s^{n(n+1)/2}$; $|A|\\neq0$ (पूरक $|A|=0$ गिनिए); अवयवों का योग अभाज्य (सम्भव योग सूचीबद्ध कीजिए)। $|A|$ के अधिकतम मान हेतु सीमा (हैडामार्ड / AM-GM) लगाकर उम्मीदवार जाँचिए।"
+       ],
+       [
+        "Ex: $2\\times2$ matrices with entries in $\\{0,1,2\\}$: $50$ of the $81$ are invertible (so $P=\\frac{50}{81}$); for entries in $\\{0,1\\}$ exactly $6$ of $16$ are invertible.",
+        "उदा.: अवयव $\\{0,1,2\\}$ से लेने पर $81$ में से $50$ $2\\times2$ आव्यूह व्युत्क्रमणीय हैं ($P=\\frac{50}{81}$); अवयव $\\{0,1\\}$ हों तो $16$ में से ठीक $6$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Definition and types",
+    "hi": "1. परिभाषा व प्रकार",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$A=[a_{ij}]_{m\\times n}$, $mn$ elements; $N$ elements $\\Rightarrow$ number of orders $=$ divisors of $N$",
+        "$A=[a_{ij}]_{m\\times n}$, $mn$ अवयव; $N$ अवयव $\\Rightarrow$ कोटियों की संख्या $=N$ के भाजकों की संख्या"
+       ],
+       [
+        "$\\operatorname{tr}A=\\sum a_{ii}$; $|A|=0\\Leftrightarrow$ singular",
+        "$\\operatorname{tr}A=\\sum a_{ii}$; $|A|=0\\Leftrightarrow$ अव्युत्क्रमणीय"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Row $1\\times n$, column $m\\times1$, horizontal $m<n$, vertical $m>n$, square $m=n$",
+        "पंक्ति $1\\times n$, स्तम्भ $m\\times1$, क्षैतिज $m<n$, ऊर्ध्वाधर $m>n$, वर्ग $m=n$"
+       ],
+       [
+        "Diagonal $a_{ij}=0\\,(i\\neq j)$; scalar $=kI$; upper triangular $a_{ij}=0\\,(i>j)$; lower $a_{ij}=0\\,(i<j)$",
+        "विकर्ण $a_{ij}=0\\,(i\\neq j)$; अदिश $=kI$; ऊपरी त्रिभुजाकार $a_{ij}=0\\,(i>j)$; निचला $a_{ij}=0\\,(i<j)$"
+       ],
+       [
+        "Equal matrices: same order and $a_{ij}=b_{ij}$",
+        "समान आव्यूह: समान कोटि तथा $a_{ij}=b_{ij}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Addition, scalar multiple, trace",
+    "hi": "2. योग, अदिश गुणन, अनुरेख",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$A\\pm B=[a_{ij}\\pm b_{ij}]$ (same order), $kA=[ka_{ij}]$",
+        "$A\\pm B=[a_{ij}\\pm b_{ij}]$ (समान कोटि), $kA=[ka_{ij}]$"
+       ],
+       "$\\operatorname{tr}(A\\pm B)=\\operatorname{tr}A\\pm\\operatorname{tr}B$, $\\ |kA|=k^n|A|$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Addition is commutative and associative; additive inverse $-A$",
+        "योग क्रमविनिमेय व साहचर्य; योज्य प्रतिलोम $-A$"
+       ],
+       [
+        "$|A+B|\\neq|A|+|B|$ in general",
+        "सामान्यतः $|A+B|\\neq|A|+|B|$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Multiplication",
+    "hi": "3. गुणन",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$A_{m\\times n}B_{n\\times p}=(AB)_{m\\times p}$, $(AB)_{ij}=\\sum_ka_{ik}b_{kj}$",
+       "$|AB|=|A||B|$, $\\ AI=IA=A$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$AB$ needs columns of $A=$ rows of $B$; $AB\\neq BA$ in general",
+        "$AB$ के लिए $A$ के स्तम्भ $=B$ की पंक्तियाँ; सामान्यतः $AB\\neq BA$"
+       ],
+       [
+        "Associative and distributive; $AB=O$ does not force $A=O$ or $B=O$",
+        "साहचर्य व वितरण मान्य; $AB=O$ से $A=O$ या $B=O$ आवश्यक नहीं"
+       ],
+       [
+        "Product of a row, a matrix and a column is a $1\\times1$ matrix (number)",
+        "पंक्ति, आव्यूह व स्तम्भ का गुणनफल $1\\times1$ आव्यूह (संख्या) है"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Commuting, identities and powers",
+    "hi": "4. क्रमविनिमेयता, सर्वसमिकाएँ व घात",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$AB=BA$ commute; $AB=-BA$ anti-commute",
+        "$AB=BA$ क्रमविनिमेय; $AB=-BA$ विपरीत-क्रमविनिमेय"
+       ],
+       "$(A\\pm B)^2=A^2\\pm AB\\pm BA+B^2$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Algebraic identities hold only if $AB=BA$; $(A+kI)^n$ always expands binomially",
+        "बीजीय सर्वसमिकाएँ तभी जब $AB=BA$; $(A+kI)^n$ सदैव द्विपद से खुलता है"
+       ],
+       [
+        "Powers only for square matrices; $f(A)$ uses $I$ for the constant term",
+        "घात केवल वर्ग आव्यूह की; $f(A)$ में अचर पद के साथ $I$"
+       ],
+       [
+        "$A$ commutes with $A^n$, $A^{-1}$, $kI$, polynomials in $A$",
+        "$A$, $A^n$, $A^{-1}$, $kI$ व $A$ के बहुपदों के साथ क्रमविनिमेय है"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Characteristic equation",
+    "hi": "5. अभिलाक्षणिक समीकरण",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Order 2: $A^2-(\\operatorname{tr}A)A+|A|I=O$",
+        "कोटि 2: $A^2-(\\operatorname{tr}A)A+|A|I=O$"
+       ],
+       [
+        "Order 3: $A^3-(\\operatorname{tr}A)A^2+CA-|A|I=O$",
+        "कोटि 3: $A^3-(\\operatorname{tr}A)A^2+CA-|A|I=O$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$C$ = sum of principal $2\\times2$ minors; roots sum $=\\operatorname{tr}A$, product $=|A|$",
+        "$C$ = मुख्य $2\\times2$ उपसारणिकों का योग; मूलों का योग $\\operatorname{tr}A$, गुणनफल $|A|$"
+       ],
+       [
+        "Use: reduce high powers, divide polynomial by $c(x)$, find $A^{-1}=\\frac1{|A|}(\\dots)$",
+        "उपयोग: उच्च घात घटाना, बहुपद को $c(x)$ से भाग, $A^{-1}=\\frac1{|A|}(\\dots)$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Find $\\operatorname{tr}A$ and $|A|$ (and $C$ for order 3).",
+        "$\\operatorname{tr}A$ व $|A|$ (कोटि 3 में $C$ भी) ज्ञात कीजिए।"
+       ],
+       [
+        "Write $A^2=pA-qI$.",
+        "$A^2=pA-qI$ लिखिए।"
+       ],
+       [
+        "Substitute repeatedly to lower the power.",
+        "घात घटाने हेतु बार-बार प्रतिस्थापित कीजिए।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Idempotent, periodic, involutory, nilpotent",
+    "hi": "6. वर्गसम, आवर्ती, समाक्रमी, शून्यघाती",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Idempotent $A^2=A$: $A^n=A$, $(I+A)^n=I+(2^n-1)A$",
+        "वर्गसम $A^2=A$: $A^n=A$, $(I+A)^n=I+(2^n-1)A$"
+       ],
+       [
+        "Involutory $A^2=I$: $A^{-1}=A$, $(I+A)^n=2^{n-1}(I+A)$",
+        "समाक्रमी $A^2=I$: $A^{-1}=A$, $(I+A)^n=2^{n-1}(I+A)$"
+       ],
+       [
+        "Nilpotent $A^m=O$: $(I+A)^n=I+nA+\\binom n2A^2+\\cdots$",
+        "शून्यघाती $A^m=O$: $(I+A)^n=I+nA+\\binom n2A^2+\\cdots$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Idempotent $|A|=0$ or $1$; involutory $|A|=\\pm1$; periodic $A^{k+1}=A$ (least $k$ = period)",
+        "वर्गसम $|A|=0$ या $1$; समाक्रमी $|A|=\\pm1$; आवर्ती $A^{k+1}=A$ (न्यूनतम $k$ = आवर्तकाल)"
+       ],
+       [
+        "Nilpotent index $\\le$ order; triangular with zero diagonal is nilpotent",
+        "शून्यघाती घातांक $\\le$ कोटि; शून्य विकर्ण वाला त्रिभुजाकार शून्यघाती है"
+       ],
+       [
+        "$\\frac12(I\\pm A)$ idempotent when $A$ is involutory",
+        "$A$ समाक्रमी हो तो $\\frac12(I\\pm A)$ वर्गसम"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Transpose",
+    "hi": "7. परिवर्त",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$(A^T)^T=A$, $(kA)^T=kA^T$, $(A\\pm B)^T=A^T\\pm B^T$",
+       "$(AB)^T=B^TA^T$, $(ABC)^T=C^TB^TA^T$, $|A^T|=|A|$"
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Symmetric and skew-symmetric",
+    "hi": "8. सममित व विषम सममित",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Symmetric $A^T=A$; skew $A^T=-A$",
+        "सममित $A^T=A$; विषम सममित $A^T=-A$"
+       ],
+       "$A=\\tfrac12(A+A^T)+\\tfrac12(A-A^T)$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Skew: diagonal $0$, $\\operatorname{tr}=0$, odd order $|A|=0$; symmetric and skew $\\Rightarrow O$",
+        "विषम सममित: विकर्ण $0$, $\\operatorname{tr}=0$, विषम कोटि में $|A|=0$; सममित व विषम सममित दोनों $\\Rightarrow O$"
+       ],
+       [
+        "$A+A^T$, $AA^T$, $A^TA$ symmetric; $A-A^T$ skew",
+        "$A+A^T$, $AA^T$, $A^TA$ सममित; $A-A^T$ विषम सममित"
+       ],
+       [
+        "Skew: odd power skew, even power symmetric; symmetric $A,B$: $AB-BA$ is skew, $AB$ symmetric iff $AB=BA$",
+        "विषम सममित: विषम घात विषम सममित, सम घात सममित; सममित $A,B$: $AB-BA$ विषम सममित, $AB$ सममित तभी जब $AB=BA$"
+       ],
+       [
+        "Free elements: symmetric $\\frac{n(n+1)}2$, skew $\\frac{n(n-1)}2$",
+        "स्वतन्त्र अवयव: सममित $\\frac{n(n+1)}2$, विषम सममित $\\frac{n(n-1)}2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Orthogonal and rotation matrices",
+    "hi": "9. लम्बकोणीय व घूर्णन आव्यूह",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$AA^T=A^TA=I$, $A^{-1}=A^T$, $|A|=\\pm1$",
+       "$R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, $R(\\theta)^n=R(n\\theta)$",
+       "$\\operatorname{tr}(AA^T)=\\sum a_{ij}^2$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Rows (columns) are unit vectors, mutually perpendicular",
+        "पंक्तियाँ (स्तम्भ) मात्रक व परस्पर लम्बवत् सदिश"
+       ],
+       [
+        "$R(\\theta)^{-1}=R(-\\theta)=R(\\theta)^T$",
+        "$R(\\theta)^{-1}=R(-\\theta)=R(\\theta)^T$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Adjoint",
+    "hi": "10. सहखण्डज",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$\\operatorname{adj}A=[C_{ij}]^T$, $\\ A\\operatorname{adj}A=|A|I$",
+       "$|\\operatorname{adj}A|=|A|^{n-1}$, $\\ \\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$",
+       "$|\\operatorname{adj}(\\operatorname{adj}A)|=|A|^{(n-1)^2}$, $\\ \\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$",
+       "$\\operatorname{adj}(AB)=\\operatorname{adj}B\\operatorname{adj}A$, $\\ \\operatorname{adj}A^T=(\\operatorname{adj}A)^T$",
+       [
+        "Order 2: $\\operatorname{adj}\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$",
+        "कोटि 2: $\\operatorname{adj}\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Peel nested adj/scalars from the outside: $|\\operatorname{adj}M|=|M|^{n-1}$ and $|kM|=k^n|M|$.",
+        "बाहर से परत-दर-परत हटाइए: $|\\operatorname{adj}M|=|M|^{n-1}$ तथा $|kM|=k^n|M|$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Inverse",
+    "hi": "11. व्युत्क्रम",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$A^{-1}=\\dfrac{\\operatorname{adj}A}{|A|}$, exists iff $|A|\\neq0$",
+        "$A^{-1}=\\dfrac{\\operatorname{adj}A}{|A|}$, विद्यमान तभी जब $|A|\\neq0$"
+       ],
+       "$|A^{-1}|=\\frac1{|A|}$, $(A^{-1})^{-1}=A$, $(A^T)^{-1}=(A^{-1})^T$",
+       "$(AB)^{-1}=B^{-1}A^{-1}$, $(kA)^{-1}=\\frac1kA^{-1}$, $A^{-n}=(A^{-1})^n$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Inverse from characteristic equation: $A^2-pA+qI=O\\Rightarrow A^{-1}=\\frac1q(pI-A)$",
+        "अभिलाक्षणिक समीकरण से: $A^2-pA+qI=O\\Rightarrow A^{-1}=\\frac1q(pI-A)$"
+       ],
+       [
+        "Diagonal inverse is diagonal; symmetric inverse is symmetric; $A^2=I\\Rightarrow A^{-1}=A$",
+        "विकर्ण का व्युत्क्रम विकर्ण; सममित का व्युत्क्रम सममित; $A^2=I\\Rightarrow A^{-1}=A$"
+       ],
+       [
+        "$|A|=\\pm1$ with integer entries $\\Rightarrow$ integer inverse",
+        "पूर्णांक अवयव व $|A|=\\pm1\\Rightarrow$ व्युत्क्रम भी पूर्णांक अवयवों का"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Cancellation and $AB=O$",
+    "hi": "12. कटान व $AB=O$",
+    "color": "red",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$AB=AC\\Rightarrow B=C$ only for invertible $A$ (pre-multiply by $A^{-1}$)",
+        "$AB=AC\\Rightarrow B=C$ केवल व्युत्क्रमणीय $A$ के लिए ($A^{-1}$ से बाएँ गुणा)"
+       ],
+       [
+        "$AB=O$, $A$ non-singular $\\Rightarrow B=O$; both non-zero $\\Rightarrow|A|=|B|=0$",
+        "$AB=O$, $A$ व्युत्क्रमणीय $\\Rightarrow B=O$; दोनों शून्येतर $\\Rightarrow|A|=|B|=0$"
+       ],
+       [
+        "Factor tricks: $(P^2+Q^2)(P-Q)=O$ when $P^3=Q^3$, $P^2Q=Q^2P$",
+        "गुणनखण्ड युक्ति: $P^3=Q^3$, $P^2Q=Q^2P$ हो तो $(P^2+Q^2)(P-Q)=O$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Cancelling a singular matrix or on the wrong side.",
+        "अव्युत्क्रमणीय आव्यूह या गलत पक्ष से कटान करना।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Elementary operations",
+    "hi": "13. प्रारम्भिक संक्रियाएँ",
+    "color": "violet",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Rows: write $[A|I]$, use only row operations until $[I|A^{-1}]$.",
+        "पंक्ति: $[A|I]$ लिखिए, केवल पंक्ति संक्रियाओं से $[I|A^{-1}]$ तक जाइए।"
+       ],
+       [
+        "Columns: write $A$ over $I$, use only column operations until $I$ over $A^{-1}$.",
+        "स्तम्भ: $A$ को $I$ के ऊपर लिखिए, केवल स्तम्भ संक्रियाओं से $I$ के नीचे $A^{-1}$ पाइए।"
+       ],
+       [
+        "Equation form: $A=IA$ (rows, act on left $A$ and pre-factor $I$) or $A=AI$ (columns).",
+        "समीकरण रूप: $A=IA$ (पंक्ति, बाएँ $A$ व पूर्व-गुणक $I$ पर) अथवा $A=AI$ (स्तम्भ)।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Mixing row and column operations in one calculation.",
+        "एक ही गणना में पंक्ति व स्तम्भ संक्रियाएँ मिलाना।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. System of equations and rank",
+    "hi": "14. समीकरण निकाय व रैंक",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$AX=B$: $|A|\\neq0\\Rightarrow X=A^{-1}B=\\dfrac{(\\operatorname{adj}A)B}{|A|}$",
+       [
+        "$|A|=0$: $(\\operatorname{adj}A)B\\neq O\\Rightarrow$ no solution",
+        "$|A|=0$: $(\\operatorname{adj}A)B\\neq O\\Rightarrow$ कोई हल नहीं"
+       ],
+       [
+        "$AX=O$ has non-zero solution iff $|A|=0$",
+        "$AX=O$ का शून्येतर हल तभी जब $|A|=0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$|A|=0$ and $(\\operatorname{adj}A)B=O$: infinite solutions or none (check)",
+        "$|A|=0$ व $(\\operatorname{adj}A)B=O$: अनन्त हल या कोई नहीं (जाँचिए)"
+       ],
+       [
+        "Rank = order of the largest non-singular sub-matrix = number of non-zero rows in echelon form",
+        "रैंक = सबसे बड़े व्युत्क्रमणीय उप-आव्यूह की कोटि = सोपानी रूप में शून्येतर पंक्तियाँ"
+       ],
+       [
+        "Matrix given by $AX_i=Y_i$: $A[X_1X_2X_3]=[Y_1Y_2Y_3]$; $AX=\\lambda X\\Rightarrow A^nX=\\lambda^nX$",
+        "$AX_i=Y_i$ से दिया आव्यूह: $A[X_1X_2X_3]=[Y_1Y_2Y_3]$; $AX=\\lambda X\\Rightarrow A^nX=\\lambda^nX$"
+       ],
+       [
+        "Matrix equations: $AX=B\\Rightarrow X=A^{-1}B$, $XA=B\\Rightarrow X=BA^{-1}$",
+        "आव्यूह समीकरण: $AX=B\\Rightarrow X=A^{-1}B$, $XA=B\\Rightarrow X=BA^{-1}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Permutation matrix and quadratic form",
+    "hi": "15. क्रमचय आव्यूह व द्विघात रूप",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P^TP=I$, $|P|=\\pm1$; $PA$ permutes rows, $AP$ permutes columns",
+        "$P^TP=I$, $|P|=\\pm1$; $PA$ पंक्तियाँ क्रमचयित करता है, $AP$ स्तम्भ"
+       ],
+       [
+        "$P^k=I$, $k$ = lcm of cycle lengths",
+        "$P^k=I$, $k$ = चक्रों की लम्बाइयों का ल.स.प."
+       ],
+       [
+        "$X^TAX=\\sum a_{ij}x_ix_j$ ($=0$ if $A$ skew)",
+        "$X^TAX=\\sum a_{ij}x_ix_j$ ($A$ विषम सममित हो तो $=0$)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Permutation matrices of order $n$: $n!$; trace = number of fixed positions",
+        "कोटि $n$ के क्रमचय आव्यूह: $n!$; अनुरेख = अचल स्थानों की संख्या"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Powers, sums and counting",
+    "hi": "16. घात, योग व गणना",
+    "color": "green",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "$A^n$: find pattern of $A^2,A^3$, or $A=\\lambda I+N$, or reduce with $A^2=pA+qI$.",
+        "$A^n$: $A^2,A^3$ का प्रतिरूप, या $A=\\lambda I+N$, या $A^2=pA+qI$ से घात घटाइए।"
+       ],
+       [
+        "Rank one $A=uv^T$: $A^n=(v^Tu)^{n-1}A$; row sums $1\\Rightarrow A^n\\mathbf 1=\\mathbf 1$.",
+        "रैंक एक $A=uv^T$: $A^n=(v^Tu)^{n-1}A$; पंक्ति-योग $1\\Rightarrow A^n\\mathbf 1=\\mathbf 1$।"
+       ],
+       [
+        "Counting matrices: translate the condition (e.g. $\\operatorname{tr}A^TA=\\sum a_{ij}^2$), count cell by cell, use the complement for $|A|\\neq0$.",
+        "आव्यूह गणना: शर्त को अवयवों में बदलिए (जैसे $\\operatorname{tr}A^TA=\\sum a_{ij}^2$), कोष्ठ-दर-कोष्ठ गिनिए, $|A|\\neq0$ में पूरक लीजिए।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "17. Common mistakes checklist",
+    "hi": "17. सामान्य गलतियों की सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Do not swap factors: $AB\\neq BA$; transpose and inverse reverse the order.",
+        "गुणक न बदलिए: $AB\\neq BA$; परिवर्त व व्युत्क्रम क्रम उलट देते हैं।"
+       ],
+       [
+        "$|kA|=k^n|A|$, not $k|A|$; $|A+B|\\neq|A|+|B|$.",
+        "$|kA|=k^n|A|$, $k|A|$ नहीं; $|A+B|\\neq|A|+|B|$।"
+       ],
+       [
+        "Use $(A\\pm B)^2$ identities only when $AB=BA$.",
+        "$(A\\pm B)^2$ की सर्वसमिकाएँ तभी जब $AB=BA$।"
+       ],
+       [
+        "Constant term of $f(A)$ is a multiple of $I$.",
+        "$f(A)$ का अचर पद $I$ का गुणज होता है।"
+       ],
+       [
+        "Check $|A|\\neq0$ before writing $A^{-1}$; do not cancel singular matrices.",
+        "$A^{-1}$ लिखने से पहले $|A|\\neq0$ जाँचिए; अव्युत्क्रमणीय आव्यूह नहीं काटिए।"
+       ],
+       [
+        "$\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$ (not $k^n$); use the order $n$ carefully.",
+        "$\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$ ($k^n$ नहीं); कोटि $n$ सावधानी से लीजिए।"
+       ],
+       [
+        "Do not mix row and column operations.",
+        "पंक्ति व स्तम्भ संक्रियाएँ मिलाइए नहीं।"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Basics",
+    "hi": "1. मूल बातें",
+    "lines": [
+     [
+      "Order: $m\\times n$, elements $mn$",
+      "कोटि: $m\\times n$, अवयव $mn$"
+     ],
+     [
+      "Trace: $\\operatorname{tr}A=\\sum a_{ii}$",
+      "अनुरेख: $\\operatorname{tr}A=\\sum a_{ii}$"
+     ],
+     [
+      "Scalar matrix: $|kI_n|=k^n$",
+      "अदिश आव्यूह: $|kI_n|=k^n$"
+     ],
+     [
+      "Diagonal: $D^m=\\operatorname{diag}(d_i^m)$",
+      "विकर्ण: $D^m=\\operatorname{diag}(d_i^m)$"
+     ],
+     [
+      "Symmetric matrices: $s^{n(n+1)/2}$",
+      "सममित आव्यूहों की संख्या: $s^{n(n+1)/2}$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Operations",
+    "hi": "2. संक्रियाएँ",
+    "lines": [
+     [
+      "Sum: $A\\pm B=[a_{ij}\\pm b_{ij}]$",
+      "योग: $A\\pm B=[a_{ij}\\pm b_{ij}]$"
+     ],
+     [
+      "Trace: $\\operatorname{tr}(A\\pm B)=\\operatorname{tr}A\\pm\\operatorname{tr}B$",
+      "अनुरेख: $\\operatorname{tr}(A\\pm B)=\\operatorname{tr}A\\pm\\operatorname{tr}B$"
+     ],
+     [
+      "Scalar multiple: $|kA|=k^n|A|$",
+      "अदिश गुणज: $|kA|=k^n|A|$"
+     ],
+     [
+      "Product order: $(m\\times n)(n\\times p)=m\\times p$",
+      "गुणनफल की कोटि: $(m\\times n)(n\\times p)=m\\times p$"
+     ],
+     [
+      "Entry: $(AB)_{ij}=\\sum_ka_{ik}b_{kj}$",
+      "अवयव: $(AB)_{ij}=\\sum_ka_{ik}b_{kj}$"
+     ],
+     [
+      "Product determinant: $|AB|=|A||B|$",
+      "गुणनफल का सारणिक: $|AB|=|A||B|$"
+     ],
+     [
+      "Trace of product: $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$",
+      "गुणनफल का अनुरेख: $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$"
+     ],
+     [
+      "Identity: $AI=IA=A$",
+      "तत्समक: $AI=IA=A$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Commuting and powers",
+    "hi": "3. क्रमविनिमेयता व घात",
+    "lines": [
+     [
+      "Commute: $AB=BA$",
+      "क्रमविनिमेय: $AB=BA$"
+     ],
+     [
+      "Anti-commute: $AB=-BA$",
+      "विपरीत-क्रमविनिमेय: $AB=-BA$"
+     ],
+     [
+      "Square (if $AB=BA$): $(A\\pm B)^2=A^2\\pm2AB+B^2$",
+      "वर्ग (यदि $AB=BA$): $(A\\pm B)^2=A^2\\pm2AB+B^2$"
+     ],
+     [
+      "Difference of squares: $A^2-B^2=(A-B)(A+B)\\iff AB=BA$",
+      "वर्गान्तर: $A^2-B^2=(A-B)(A+B)\\iff AB=BA$"
+     ],
+     [
+      "Powers: $A^mA^n=A^{m+n}$, $(A^m)^n=A^{mn}$",
+      "घात: $A^mA^n=A^{m+n}$, $(A^m)^n=A^{mn}$"
+     ],
+     [
+      "Rank one: $A=uv^T\\Rightarrow A^n=(v^Tu)^{n-1}A$",
+      "रैंक एक: $A=uv^T\\Rightarrow A^n=(v^Tu)^{n-1}A$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Characteristic equation",
+    "hi": "4. अभिलाक्षणिक समीकरण",
+    "lines": [
+     [
+      "Equation: $|A-\\lambda I|=0$",
+      "समीकरण: $|A-\\lambda I|=0$"
+     ],
+     [
+      "Order 2: $A^2-(\\operatorname{tr}A)A+|A|I=O$",
+      "कोटि 2: $A^2-(\\operatorname{tr}A)A+|A|I=O$"
+     ],
+     [
+      "Order 3: $A^3-(\\operatorname{tr}A)A^2+CA-|A|I=O$",
+      "कोटि 3: $A^3-(\\operatorname{tr}A)A^2+CA-|A|I=O$"
+     ],
+     [
+      "Roots: $\\sum\\lambda=\\operatorname{tr}A$, $\\prod\\lambda=|A|$",
+      "मूल: $\\sum\\lambda=\\operatorname{tr}A$, $\\prod\\lambda=|A|$"
+     ],
+     [
+      "Inverse: $A^{-1}=\\frac1q(pI-A)$ from $A^2-pA+qI=O$",
+      "व्युत्क्रम: $A^2-pA+qI=O$ से $A^{-1}=\\frac1q(pI-A)$"
+     ],
+     [
+      "Division: $f(x)=c(x)Q(x)+R(x)\\Rightarrow f(A)=R(A)$",
+      "भाग: $f(x)=c(x)Q(x)+R(x)\\Rightarrow f(A)=R(A)$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Special matrices",
+    "hi": "5. विशेष आव्यूह",
+    "lines": [
+     [
+      "Idempotent: $A^2=A$, $A^n=A$",
+      "वर्गसम: $A^2=A$, $A^n=A$"
+     ],
+     [
+      "Idempotent: $(I+A)^n=I+(2^n-1)A$",
+      "वर्गसम: $(I+A)^n=I+(2^n-1)A$"
+     ],
+     [
+      "Involutory: $A^2=I$, $A^{-1}=A$, $|A|=\\pm1$",
+      "समाक्रमी: $A^2=I$, $A^{-1}=A$, $|A|=\\pm1$"
+     ],
+     [
+      "Involutory: $(I+A)^n=2^{n-1}(I+A)$",
+      "समाक्रमी: $(I+A)^n=2^{n-1}(I+A)$"
+     ],
+     [
+      "Periodic: $A^{k+1}=A$",
+      "आवर्ती: $A^{k+1}=A$"
+     ],
+     [
+      "Nilpotent: $A^m=O$, $(I+A)^n=I+nA+\\binom n2A^2+\\cdots$",
+      "शून्यघाती: $A^m=O$, $(I+A)^n=I+nA+\\binom n2A^2+\\cdots$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Transpose, symmetric, skew",
+    "hi": "6. परिवर्त, सममित, विषम सममित",
+    "lines": [
+     [
+      "Product: $(AB)^T=B^TA^T$",
+      "गुणनफल: $(AB)^T=B^TA^T$"
+     ],
+     [
+      "Sum: $(A\\pm B)^T=A^T\\pm B^T$, $(kA)^T=kA^T$",
+      "योग: $(A\\pm B)^T=A^T\\pm B^T$, $(kA)^T=kA^T$"
+     ],
+     [
+      "Symmetric: $A^T=A$; skew: $A^T=-A$",
+      "सममित: $A^T=A$; विषम सममित: $A^T=-A$"
+     ],
+     [
+      "Decomposition: $A=\\frac12(A+A^T)+\\frac12(A-A^T)$",
+      "वियोजन: $A=\\frac12(A+A^T)+\\frac12(A-A^T)$"
+     ],
+     [
+      "Skew, odd order: $|A|=0$",
+      "विषम सममित, विषम कोटि: $|A|=0$"
+     ],
+     [
+      "Quadratic form: $X^TAX=\\sum a_{ij}x_ix_j$",
+      "द्विघात रूप: $X^TAX=\\sum a_{ij}x_ix_j$"
+     ]
+    ]
+   },
+   {
+    "en": "7. Orthogonal",
+    "hi": "7. लम्बकोणीय",
+    "lines": [
+     [
+      "Definition: $AA^T=A^TA=I$",
+      "परिभाषा: $AA^T=A^TA=I$"
+     ],
+     [
+      "Inverse: $A^{-1}=A^T$, $|A|=\\pm1$",
+      "व्युत्क्रम: $A^{-1}=A^T$, $|A|=\\pm1$"
+     ],
+     [
+      "Trace: $\\operatorname{tr}(AA^T)=\\sum a_{ij}^2$",
+      "अनुरेख: $\\operatorname{tr}(AA^T)=\\sum a_{ij}^2$"
+     ],
+     [
+      "Rotation: $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, $R(\\theta)^n=R(n\\theta)$",
+      "घूर्णन: $R(\\alpha)R(\\beta)=R(\\alpha+\\beta)$, $R(\\theta)^n=R(n\\theta)$"
+     ],
+     [
+      "Permutation: $P^TP=I$, $P^k=I$ ($k$ = lcm of cycles)",
+      "क्रमचय: $P^TP=I$, $P^k=I$ ($k$ = चक्रों का ल.स.प.)"
+     ]
+    ]
+   },
+   {
+    "en": "8. Adjoint",
+    "hi": "8. सहखण्डज",
+    "lines": [
+     [
+      "Definition: $\\operatorname{adj}A=[C_{ij}]^T$",
+      "परिभाषा: $\\operatorname{adj}A=[C_{ij}]^T$"
+     ],
+     [
+      "Basic: $A\\operatorname{adj}A=\\operatorname{adj}A\\,A=|A|I$",
+      "मूल: $A\\operatorname{adj}A=\\operatorname{adj}A\\,A=|A|I$"
+     ],
+     [
+      "Order 2: $\\operatorname{adj}\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$",
+      "कोटि 2: $\\operatorname{adj}\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$"
+     ],
+     [
+      "Determinant: $|\\operatorname{adj}A|=|A|^{n-1}$",
+      "सारणिक: $|\\operatorname{adj}A|=|A|^{n-1}$"
+     ],
+     [
+      "Double adjoint: $\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$",
+      "द्वि-सहखण्डज: $\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$"
+     ],
+     [
+      "Double adjoint: $|\\operatorname{adj}(\\operatorname{adj}A)|=|A|^{(n-1)^2}$",
+      "द्वि-सहखण्डज: $|\\operatorname{adj}(\\operatorname{adj}A)|=|A|^{(n-1)^2}$"
+     ],
+     [
+      "Product: $\\operatorname{adj}(AB)=\\operatorname{adj}B\\operatorname{adj}A$",
+      "गुणनफल: $\\operatorname{adj}(AB)=\\operatorname{adj}B\\operatorname{adj}A$"
+     ],
+     [
+      "Power: $\\operatorname{adj}(A^m)=(\\operatorname{adj}A)^m$",
+      "घात: $\\operatorname{adj}(A^m)=(\\operatorname{adj}A)^m$"
+     ],
+     [
+      "Scalar: $\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$",
+      "अदिश: $\\operatorname{adj}(kA)=k^{n-1}\\operatorname{adj}A$"
+     ],
+     [
+      "Transpose: $\\operatorname{adj}A^T=(\\operatorname{adj}A)^T$",
+      "परिवर्त: $\\operatorname{adj}A^T=(\\operatorname{adj}A)^T$"
+     ]
+    ]
+   },
+   {
+    "en": "9. Inverse",
+    "hi": "9. व्युत्क्रम",
+    "lines": [
+     [
+      "Formula: $A^{-1}=\\frac{\\operatorname{adj}A}{|A|}$, $|A|\\neq0$",
+      "सूत्र: $A^{-1}=\\frac{\\operatorname{adj}A}{|A|}$, $|A|\\neq0$"
+     ],
+     [
+      "Order 2: $A^{-1}=\\frac1{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$",
+      "कोटि 2: $A^{-1}=\\frac1{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$"
+     ],
+     [
+      "Determinant: $|A^{-1}|=\\frac1{|A|}$",
+      "सारणिक: $|A^{-1}|=\\frac1{|A|}$"
+     ],
+     [
+      "Double inverse: $(A^{-1})^{-1}=A$",
+      "द्वि-व्युत्क्रम: $(A^{-1})^{-1}=A$"
+     ],
+     [
+      "Product: $(AB)^{-1}=B^{-1}A^{-1}$",
+      "गुणनफल: $(AB)^{-1}=B^{-1}A^{-1}$"
+     ],
+     [
+      "Transpose: $(A^T)^{-1}=(A^{-1})^T$",
+      "परिवर्त: $(A^T)^{-1}=(A^{-1})^T$"
+     ],
+     [
+      "Power: $A^{-n}=(A^{-1})^n$",
+      "घात: $A^{-n}=(A^{-1})^n$"
+     ],
+     [
+      "Scalar: $(kA)^{-1}=\\frac1kA^{-1}$",
+      "अदिश: $(kA)^{-1}=\\frac1kA^{-1}$"
+     ],
+     [
+      "Cancellation: $AB=AC\\Rightarrow B=C$ if $|A|\\neq0$",
+      "कटान: $|A|\\neq0$ हो तो $AB=AC\\Rightarrow B=C$"
+     ],
+     [
+      "Zero product: $AB=O$, $|A|\\neq0\\Rightarrow B=O$",
+      "शून्य गुणनफल: $AB=O$, $|A|\\neq0\\Rightarrow B=O$"
+     ]
+    ]
+   },
+   {
+    "en": "10. Operations, systems, rank",
+    "hi": "10. संक्रियाएँ, निकाय, रैंक",
+    "lines": [
+     [
+      "Rows: $[A\\,|\\,I]\\to[I\\,|\\,A^{-1}]$",
+      "पंक्ति: $[A\\,|\\,I]\\to[I\\,|\\,A^{-1}]$"
+     ],
+     [
+      "Columns: $\\begin{bmatrix}A\\\\I\\end{bmatrix}\\to\\begin{bmatrix}I\\\\A^{-1}\\end{bmatrix}$",
+      "स्तम्भ: $\\begin{bmatrix}A\\\\I\\end{bmatrix}\\to\\begin{bmatrix}I\\\\A^{-1}\\end{bmatrix}$"
+     ],
+     [
+      "System: $AX=B$, $X=A^{-1}B=\\frac{(\\operatorname{adj}A)B}{|A|}$",
+      "निकाय: $AX=B$, $X=A^{-1}B=\\frac{(\\operatorname{adj}A)B}{|A|}$"
+     ],
+     [
+      "Cramer: $x_i=\\Delta_i/\\Delta$",
+      "क्रेमर: $x_i=\\Delta_i/\\Delta$"
+     ],
+     [
+      "Inconsistent: $|A|=0$, $(\\operatorname{adj}A)B\\neq O$",
+      "असंगत: $|A|=0$, $(\\operatorname{adj}A)B\\neq O$"
+     ],
+     [
+      "Homogeneous: $AX=O$ has non-trivial solution iff $|A|=0$",
+      "समघात: $AX=O$ का अतुच्छ हल तभी जब $|A|=0$"
+     ],
+     [
+      "Matrix equations: $AX=B\\Rightarrow X=A^{-1}B$; $XA=B\\Rightarrow X=BA^{-1}$",
+      "आव्यूह समीकरण: $AX=B\\Rightarrow X=A^{-1}B$; $XA=B\\Rightarrow X=BA^{-1}$"
+     ],
+     [
+      "Rank: order of the largest non-singular sub-matrix",
+      "रैंक: सबसे बड़े व्युत्क्रमणीय उप-आव्यूह की कोटि"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Definition and types",
+    "hi": "परिभाषा व प्रकार",
+    "leaves": [
+     [
+      "Order $m\\times n$; $a_{ij}$",
+      "कोटि $m\\times n$; $a_{ij}$"
+     ],
+     [
+      "Diagonal, scalar, triangular",
+      "विकर्ण, अदिश, त्रिभुजाकार"
+     ],
+     [
+      "Singular iff $|A|=0$",
+      "अव्युत्क्रमणीय $\\iff|A|=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Equality and addition",
+    "hi": "समानता व योग",
+    "leaves": [
+     [
+      "Same order, equal entries",
+      "समान कोटि, समान अवयव"
+     ],
+     [
+      "$\\operatorname{tr}(A\\pm B)$ adds",
+      "$\\operatorname{tr}(A\\pm B)$ जुड़ता है"
+     ],
+     [
+      "$|A+B|\\neq|A|+|B|$",
+      "$|A+B|\\neq|A|+|B|$"
+     ]
+    ]
+   },
+   {
+    "en": "Scalar multiple",
+    "hi": "अदिश गुणज",
+    "leaves": [
+     [
+      "$kA=[ka_{ij}]$",
+      "$kA=[ka_{ij}]$"
+     ],
+     [
+      "$|kA|=k^n|A|$",
+      "$|kA|=k^n|A|$"
+     ]
+    ]
+   },
+   {
+    "en": "Multiplication",
+    "hi": "गुणन",
+    "leaves": [
+     [
+      "$(m\\times n)(n\\times p)$",
+      "$(m\\times n)(n\\times p)$"
+     ],
+     [
+      "Row $\\times$ column",
+      "पंक्ति $\\times$ स्तम्भ"
+     ],
+     [
+      "$|AB|=|A||B|$; $AB\\neq BA$",
+      "$|AB|=|A||B|$; $AB\\neq BA$"
+     ]
+    ]
+   },
+   {
+    "en": "Commuting and identities",
+    "hi": "क्रमविनिमेयता व सर्वसमिका",
+    "leaves": [
+     [
+      "$AB=BA$ for $(A\\pm B)^2$",
+      "$(A\\pm B)^2$ हेतु $AB=BA$"
+     ],
+     [
+      "$AB=-BA$ anti-commute",
+      "$AB=-BA$ विपरीत"
+     ],
+     [
+      "$(A+kI)^n$ binomial",
+      "$(A+kI)^n$ द्विपद"
+     ]
+    ]
+   },
+   {
+    "en": "Powers and characteristic equation",
+    "hi": "घात व अभिलाक्षणिक समीकरण",
+    "leaves": [
+     [
+      "$A^2-(\\operatorname{tr}A)A+|A|I=O$",
+      "$A^2-(\\operatorname{tr}A)A+|A|I=O$"
+     ],
+     [
+      "Reduce powers / divide",
+      "घात घटाइए / भाग"
+     ],
+     [
+      "Pattern, $\\lambda I+N$",
+      "प्रतिरूप, $\\lambda I+N$"
+     ]
+    ]
+   },
+   {
+    "en": "Special matrices",
+    "hi": "विशेष आव्यूह",
+    "leaves": [
+     [
+      "$A^2=A$: $(I+A)^n=I+(2^n-1)A$",
+      "$A^2=A$: $(I+A)^n=I+(2^n-1)A$"
+     ],
+     [
+      "$A^2=I$: $2^{n-1}(I+A)$",
+      "$A^2=I$: $2^{n-1}(I+A)$"
+     ],
+     [
+      "Nilpotent: finite expansion",
+      "शून्यघाती: सीमित प्रसार"
+     ]
+    ]
+   },
+   {
+    "en": "Transpose",
+    "hi": "परिवर्त",
+    "leaves": [
+     [
+      "$(AB)^T=B^TA^T$",
+      "$(AB)^T=B^TA^T$"
+     ],
+     [
+      "$|A^T|=|A|$",
+      "$|A^T|=|A|$"
+     ]
+    ]
+   },
+   {
+    "en": "Symmetric and skew",
+    "hi": "सममित व विषम सममित",
+    "leaves": [
+     [
+      "$A^T=\\pm A$",
+      "$A^T=\\pm A$"
+     ],
+     [
+      "Skew: diagonal $0$, odd order $|A|=0$",
+      "विषम सममित: विकर्ण $0$, विषम कोटि $|A|=0$"
+     ],
+     [
+      "$A=\\frac12(A+A^T)+\\frac12(A-A^T)$",
+      "$A=\\frac12(A+A^T)+\\frac12(A-A^T)$"
+     ]
+    ]
+   },
+   {
+    "en": "Orthogonal",
+    "hi": "लम्बकोणीय",
+    "leaves": [
+     [
+      "$AA^T=I$, $A^{-1}=A^T$",
+      "$AA^T=I$, $A^{-1}=A^T$"
+     ],
+     [
+      "Rows unit and perpendicular",
+      "पंक्तियाँ मात्रक व लम्बवत्"
+     ],
+     [
+      "$R(\\theta)^n=R(n\\theta)$",
+      "$R(\\theta)^n=R(n\\theta)$"
+     ]
+    ]
+   },
+   {
+    "en": "Adjoint",
+    "hi": "सहखण्डज",
+    "leaves": [
+     [
+      "$A\\operatorname{adj}A=|A|I$",
+      "$A\\operatorname{adj}A=|A|I$"
+     ],
+     [
+      "$|\\operatorname{adj}A|=|A|^{n-1}$",
+      "$|\\operatorname{adj}A|=|A|^{n-1}$"
+     ],
+     [
+      "$\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$",
+      "$\\operatorname{adj}(\\operatorname{adj}A)=|A|^{n-2}A$"
+     ]
+    ]
+   },
+   {
+    "en": "Inverse",
+    "hi": "व्युत्क्रम",
+    "leaves": [
+     [
+      "$A^{-1}=\\operatorname{adj}A/|A|$",
+      "$A^{-1}=\\operatorname{adj}A/|A|$"
+     ],
+     [
+      "$(AB)^{-1}=B^{-1}A^{-1}$",
+      "$(AB)^{-1}=B^{-1}A^{-1}$"
+     ],
+     [
+      "$AB=O$: both singular",
+      "$AB=O$: दोनों अव्युत्क्रमणीय"
+     ]
+    ]
+   },
+   {
+    "en": "Elementary operations",
+    "hi": "प्रारम्भिक संक्रियाएँ",
+    "leaves": [
+     [
+      "Rows: $[A|I]\\to[I|A^{-1}]$",
+      "पंक्ति: $[A|I]\\to[I|A^{-1}]$"
+     ],
+     [
+      "Columns only for columns",
+      "स्तम्भ केवल स्तम्भ संक्रिया"
+     ]
+    ]
+   },
+   {
+    "en": "System and rank",
+    "hi": "निकाय व रैंक",
+    "leaves": [
+     [
+      "$AX=B$, $X=A^{-1}B$",
+      "$AX=B$, $X=A^{-1}B$"
+     ],
+     [
+      "$(\\operatorname{adj}A)B$ test if $|A|=0$",
+      "$|A|=0$ में $(\\operatorname{adj}A)B$ जाँच"
+     ],
+     [
+      "Rank = largest non-singular minor",
+      "रैंक = सबसे बड़ा अशून्य उपसारणिक"
+     ]
+    ]
+   },
+   {
+    "en": "Permutation and quadratic form",
+    "hi": "क्रमचय व द्विघात रूप",
+    "leaves": [
+     [
+      "$PA$ rows, $AP$ columns",
+      "$PA$ पंक्ति, $AP$ स्तम्भ"
+     ],
+     [
+      "$P^k=I$, lcm of cycles",
+      "$P^k=I$, चक्रों का ल.स.प."
+     ],
+     [
+      "$X^TAX=\\sum a_{ij}x_ix_j$",
+      "$X^TAX=\\sum a_{ij}x_ix_j$"
+     ]
+    ]
+   },
+   {
+    "en": "Counting and patterns",
+    "hi": "गणना व प्रतिरूप",
+    "leaves": [
+     [
+      "$\\operatorname{tr}A^TA=\\sum a_{ij}^2$",
+      "$\\operatorname{tr}A^TA=\\sum a_{ij}^2$"
+     ],
+     [
+      "Symmetric: $s^{n(n+1)/2}$",
+      "सममित: $s^{n(n+1)/2}$"
+     ],
+     [
+      "Use $|A|\\neq0$ complement",
+      "$|A|\\neq0$ में पूरक"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: How do I find $A^n$ or $f(A)$?",
+    "प्रवाह-चित्र 1: $A^n$ या $f(A)$ कैसे ज्ञात करें?"
+   ],
+   "start": [
+    "A power or a polynomial of a matrix is required",
+    "आव्यूह की घात या बहुपद ज्ञात करना है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "$A$ is diagonal (or $A=PDP^{-1}$)?",
+      "$A$ विकर्ण है (या $A=PDP^{-1}$)?"
+     ],
+     "a": [
+      [
+       "$A^n=PD^nP^{-1}$; $D^n=\\operatorname{diag}(d_i^n)$."
+      ],
+      [
+       "$A^n=PD^nP^{-1}$; $D^n=\\operatorname{diag}(d_i^n)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is $A^2=A$, $A^2=I$, $A^3=I$ or $A^{k+1}=A$?",
+      "क्या $A^2=A$, $A^2=I$, $A^3=I$ या $A^{k+1}=A$?"
+     ],
+     "a": [
+      [
+       "Powers repeat: use $A^n=A$, $A^{2m}=I$, or period."
+      ],
+      [
+       "घातें दोहराती हैं: $A^n=A$, $A^{2m}=I$ या आवर्तकाल।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$A=\\lambda I+N$ with $N$ nilpotent (ones above the diagonal)?",
+      "$A=\\lambda I+N$, $N$ शून्यघाती (विकर्ण के ऊपर 1)?"
+     ],
+     "a": [
+      [
+       "Binomial expansion; it stops at $N^{m-1}$."
+      ],
+      [
+       "द्विपद प्रसार; यह $N^{m-1}$ पर रुकता है।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is $A$ of rank one ($A=uv^T$, all rows proportional)?",
+      "क्या $A$ रैंक एक का है ($A=uv^T$, सभी पंक्तियाँ समानुपाती)?"
+     ],
+     "a": [
+      [
+       "$A^n=(\\operatorname{tr}A)^{n-1}A$."
+      ],
+      [
+       "$A^n=(\\operatorname{tr}A)^{n-1}A$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Trigonometric / rotation form?",
+      "त्रिकोणमितीय / घूर्णन रूप?"
+     ],
+     "a": [
+      [
+       "$R(\\theta)^n=R(n\\theta)$."
+      ],
+      [
+       "$R(\\theta)^n=R(n\\theta)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Order 2 or a known polynomial relation $A^2=pA+qI$?",
+      "कोटि 2 या ज्ञात सम्बन्ध $A^2=pA+qI$?"
+     ],
+     "a": [
+      [
+       "Reduce powers, or divide $f(x)$ by the characteristic polynomial."
+      ],
+      [
+       "घात घटाइए, या $f(x)$ को अभिलाक्षणिक बहुपद से भाग दीजिए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Compute $A^2,A^3$, guess the pattern, prove it by induction."
+    ],
+    [
+     "$A^2,A^3$ निकालकर प्रतिरूप का अनुमान लगाइए, आगमन से सिद्ध कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: How do I evaluate an expression with adj, inverse, scalars and determinant?",
+    "प्रवाह-चित्र 2: adj, व्युत्क्रम, अदिश व सारणिक वाले व्यंजक का मान कैसे निकालें?"
+   ],
+   "start": [
+    "e.g. $|\\operatorname{adj}(\\operatorname{adj}(kA))|$ or $|A^{-1}\\operatorname{adj}A|$ is asked",
+    "जैसे $|\\operatorname{adj}(\\operatorname{adj}(kA))|$ या $|A^{-1}\\operatorname{adj}A|$ पूछा है"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Is the outermost operation $|\\cdot|$ of a product?",
+      "क्या सबसे बाहरी संक्रिया गुणनफल का $|\\cdot|$ है?"
+     ],
+     "a": [
+      [
+       "$|XY|=|X||Y|$; take each factor separately."
+      ],
+      [
+       "$|XY|=|X||Y|$; प्रत्येक गुणक अलग से लीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is there a scalar inside, $kM$?",
+      "क्या अन्दर अदिश $kM$ है?"
+     ],
+     "a": [
+      [
+       "$|kM|=k^n|M|$; $\\operatorname{adj}(kM)=k^{n-1}\\operatorname{adj}M$."
+      ],
+      [
+       "$|kM|=k^n|M|$; $\\operatorname{adj}(kM)=k^{n-1}\\operatorname{adj}M$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is there $\\operatorname{adj}M$ of an expression?",
+      "क्या किसी व्यंजक का $\\operatorname{adj}M$ है?"
+     ],
+     "a": [
+      [
+       "$|\\operatorname{adj}M|=|M|^{n-1}$; peel from the outside."
+      ],
+      [
+       "$|\\operatorname{adj}M|=|M|^{n-1}$; बाहर से हटाइए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is there $\\operatorname{adj}(\\operatorname{adj}M)$ without a determinant?",
+      "क्या बिना सारणिक के $\\operatorname{adj}(\\operatorname{adj}M)$ है?"
+     ],
+     "a": [
+      [
+       "$\\operatorname{adj}(\\operatorname{adj}M)=|M|^{n-2}M$."
+      ],
+      [
+       "$\\operatorname{adj}(\\operatorname{adj}M)=|M|^{n-2}M$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is there $M^{-1}$ or $A^T$?",
+      "क्या $M^{-1}$ या $A^T$ है?"
+     ],
+     "a": [
+      [
+       "$|M^{-1}|=1/|M|$, $|A^T|=|A|$."
+      ],
+      [
+       "$|M^{-1}|=1/|M|$, $|A^T|=|A|$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Replace $\\operatorname{adj}A$ by $|A|A^{-1}$ and simplify with $|A|^{\\text{power}}$."
+    ],
+    [
+     "$\\operatorname{adj}A$ को $|A|A^{-1}$ से बदलकर $|A|$ की घात से सरल कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: What do I do with a given relation among matrices?",
+    "प्रवाह-चित्र 3: आव्यूहों के बीच दिये सम्बन्ध का क्या करें?"
+   ],
+   "start": [
+    "A relation such as $A^2=A$, $AB=O$, $A^3=B^3$, $AB=A$ is given",
+    "$A^2=A$, $AB=O$, $A^3=B^3$, $AB=A$ जैसा सम्बन्ध दिया है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "$A^2=A$, $A^2=I$, $A^3=I$ or $A^2=A^{-1}$?",
+      "$A^2=A$, $A^2=I$, $A^3=I$ या $A^2=A^{-1}$?"
+     ],
+     "a": [
+      [
+       "Idempotent / involutory / periodic: $A^n$, $(I+A)^n$, $|A|$ values."
+      ],
+      [
+       "वर्गसम / समाक्रमी / आवर्ती: $A^n$, $(I+A)^n$, $|A|$ के मान।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$AB=O$ or an equation that factors to $XY=O$?",
+      "$AB=O$ या गुणनखण्ड होकर $XY=O$ बनने वाला समीकरण?"
+     ],
+     "a": [
+      [
+       "Both non-zero $\\Rightarrow$ both singular; if one is invertible the other is $O$."
+      ],
+      [
+       "दोनों शून्येतर $\\Rightarrow$ दोनों अव्युत्क्रमणीय; एक व्युत्क्रमणीय हो तो दूसरा $O$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$AB=B$, $BA=A$ (or $AB=A$, $BA=B$)?",
+      "$AB=B$, $BA=A$ (या $AB=A$, $BA=B$)?"
+     ],
+     "a": [
+      [
+       "$A^2=ABA=A$, $B^2=B$: both idempotent."
+      ],
+      [
+       "$A^2=ABA=A$, $B^2=B$: दोनों वर्गसम।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Relation $A^2=pA+qI$ or $f(A)=O$?",
+      "सम्बन्ध $A^2=pA+qI$ या $f(A)=O$?"
+     ],
+     "a": [
+      [
+       "Find $A^{-1}$ or reduce powers; compare traces and determinants."
+      ],
+      [
+       "$A^{-1}$ ज्ञात कीजिए या घात घटाइए; अनुरेख व सारणिक की तुलना कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Relation uses $A^T$ (e.g. $A^T=2A+I$)?",
+      "सम्बन्ध में $A^T$ है (जैसे $A^T=2A+I$)?"
+     ],
+     "a": [
+      [
+       "Transpose the relation and eliminate $A^T$."
+      ],
+      [
+       "सम्बन्ध का परिवर्त लेकर $A^T$ का विलोपन कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$AB=BA$ asked or given?",
+      "$AB=BA$ पूछा या दिया है?"
+     ],
+     "a": [
+      [
+       "Then identities like $(A+B)^2$ and $A^2-B^2$ hold."
+      ],
+      [
+       "तब $(A+B)^2$ व $A^2-B^2$ जैसी सर्वसमिकाएँ मान्य हैं।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Multiply by $A^{-1}$ (same side), take $|\\cdot|$ or $\\operatorname{tr}$ of both sides, or try $2\\times2$ unknown entries."
+    ],
+    [
+     "$A^{-1}$ से (उसी पक्ष में) गुणा कीजिए, दोनों ओर $|\\cdot|$ या $\\operatorname{tr}$ लीजिए, या $2\\times2$ में अज्ञात अवयव रखिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Which method finds the inverse?",
+    "प्रवाह-चित्र 4: व्युत्क्रम किस विधि से ज्ञात करें?"
+   ],
+   "start": [
+    "$A^{-1}$ (or a quantity involving it) is required",
+    "$A^{-1}$ (या उससे बनी राशि) ज्ञात करना है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Is $|A|=0$?",
+      "क्या $|A|=0$?"
+     ],
+     "a": [
+      [
+       "No inverse exists."
+      ],
+      [
+       "व्युत्क्रम नहीं है।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is $A$ diagonal, orthogonal ($A^T=A^{-1}$), involutory or a rotation?",
+      "क्या $A$ विकर्ण, लम्बकोणीय ($A^T=A^{-1}$), समाक्रमी या घूर्णन है?"
+     ],
+     "a": [
+      [
+       "$\\operatorname{diag}(1/d_i)$, $A^T$, $A$, $R(-\\theta)$."
+      ],
+      [
+       "$\\operatorname{diag}(1/d_i)$, $A^T$, $A$, $R(-\\theta)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Order 2?",
+      "कोटि 2?"
+     ],
+     "a": [
+      [
+       "Swap the diagonal, change the other signs, divide by $|A|$."
+      ],
+      [
+       "विकर्ण बदलिए, अन्य के चिह्न बदलिए, $|A|$ से भाग दीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A relation $A^2-pA+qI=O$ (or a polynomial equation) is known?",
+      "सम्बन्ध $A^2-pA+qI=O$ (या बहुपद समीकरण) ज्ञात है?"
+     ],
+     "a": [
+      [
+       "$A^{-1}=\\frac1q(pI-A)$."
+      ],
+      [
+       "$A^{-1}=\\frac1q(pI-A)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Order 3 and no relation?",
+      "कोटि 3 और कोई सम्बन्ध नहीं?"
+     ],
+     "a": [
+      [
+       "$A^{-1}=\\operatorname{adj}A/|A|$, or row operations on $[A|I]$."
+      ],
+      [
+       "$A^{-1}=\\operatorname{adj}A/|A|$, या $[A|I]$ पर पंक्ति संक्रियाएँ।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use the formula $A^{-1}=\\operatorname{adj}A/|A|$; for large integer matrices use row operations."
+    ],
+    [
+     "सूत्र $A^{-1}=\\operatorname{adj}A/|A|$ लगाइए; बड़े पूर्णांक आव्यूह में पंक्ति संक्रियाएँ कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Symmetric, skew-symmetric and orthogonal questions",
+    "प्रवाह-चित्र 5: सममित, विषम सममित व लम्बकोणीय प्रश्न"
+   ],
+   "start": [
+    "A matrix is given (or asked) to be symmetric, skew or orthogonal",
+    "आव्यूह के सममित, विषम सममित या लम्बकोणीय होने की जानकारी दी (या पूछी) है"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Does the question ask for the nature of an expression in $A,B$?",
+      "क्या प्रश्न $A,B$ के किसी व्यंजक का स्वरूप पूछता है?"
+     ],
+     "a": [
+      [
+       "Take its transpose with $(XY)^T=Y^TX^T$ and compare with $\\pm$ itself."
+      ],
+      [
+       "$(XY)^T=Y^TX^T$ से परिवर्त लीजिए और $\\pm$ स्वयं से तुलना कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is a matrix skew of odd order?",
+      "क्या कोई आव्यूह विषम कोटि का विषम सममित है?"
+     ],
+     "a": [
+      [
+       "$|A|=0$, diagonal $0$."
+      ],
+      [
+       "$|A|=0$, विकर्ण $0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it to be split into two parts?",
+      "क्या इसे दो भागों में बाँटना है?"
+     ],
+     "a": [
+      [
+       "$\\frac12(A+A^T)$ and $\\frac12(A-A^T)$."
+      ],
+      [
+       "$\\frac12(A+A^T)$ तथा $\\frac12(A-A^T)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is $AA^T=kI$ given (rows of an orthogonal-type matrix)?",
+      "क्या $AA^T=kI$ दिया है (लम्बकोणीय-प्रकार की पंक्तियाँ)?"
+     ],
+     "a": [
+      [
+       "Rows have equal length and are perpendicular: use dot products."
+      ],
+      [
+       "पंक्तियों की लम्बाई समान व परस्पर लम्बवत्: अदिश गुणनफल लीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Does the question count matrices?",
+      "क्या प्रश्न आव्यूहों की संख्या पूछता है?"
+     ],
+     "a": [
+      [
+       "Symmetric $n\\times n$: $s^{n(n+1)/2}$; skew: diagonal $0$."
+      ],
+      [
+       "सममित $n\\times n$: $s^{n(n+1)/2}$; विषम सममित: विकर्ण $0$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Write the general matrix with $a_{ij}=\\pm a_{ji}$ and use the given conditions."
+    ],
+    [
+     "$a_{ij}=\\pm a_{ji}$ वाला व्यापक आव्यूह लिखकर दी गयी शर्तें लगाइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: How do I count matrices or find an extreme value?",
+    "प्रवाह-चित्र 6: आव्यूहों की गणना या चरम मान कैसे निकालें?"
+   ],
+   "start": [
+    "Entries come from a set and a condition is given",
+    "अवयव किसी समुच्चय से हैं और शर्त दी गयी है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Condition on $\\operatorname{tr}(A^TA)$ or $\\operatorname{tr}(AA^T)$?",
+      "$\\operatorname{tr}(A^TA)$ या $\\operatorname{tr}(AA^T)$ पर शर्त?"
+     ],
+     "a": [
+      [
+       "$\\sum a_{ij}^2=$ given; list the square patterns."
+      ],
+      [
+       "$\\sum a_{ij}^2=$ दिया; वर्गों के प्रतिरूप सूचीबद्ध कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Sum of all entries is prime / fixed?",
+      "सभी अवयवों का योग अभाज्य / निश्चित है?"
+     ],
+     "a": [
+      [
+       "List the possible sums and count each."
+      ],
+      [
+       "सम्भव योग सूचीबद्ध कीजिए और प्रत्येक गिनिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Matrix is symmetric / skew?",
+      "आव्यूह सममित / विषम सममित है?"
+     ],
+     "a": [
+      [
+       "Count only the free entries."
+      ],
+      [
+       "केवल स्वतन्त्र अवयव गिनिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Invertible / non-singular needed?",
+      "व्युत्क्रमणीय / अव्युत्क्रमणीय चाहिए?"
+     ],
+     "a": [
+      [
+       "Count $|A|=0$ and subtract from the total."
+      ],
+      [
+       "$|A|=0$ गिनकर कुल में से घटाइए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Each row and column has one $1$?",
+      "प्रत्येक पंक्ति व स्तम्भ में एक $1$?"
+     ],
+     "a": [
+      [
+       "Permutation matrices: $n!$."
+      ],
+      [
+       "क्रमचय आव्यूह: $n!$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Cell-by-cell counting, or an AM-GM / Hadamard bound for a maximum of $|A|$."
+    ],
+    [
+     "कोष्ठ-दर-कोष्ठ गणना, या $|A|$ के अधिकतम हेतु AM-GM / हैडामार्ड सीमा।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 7: Systems, matrix equations and matrices defined by action",
+    "प्रवाह-चित्र 7: निकाय, आव्यूह समीकरण व क्रिया द्वारा परिभाषित आव्यूह"
+   ],
+   "start": [
+    "$AX=B$, a matrix equation, or $A$ known only through $AX_i=Y_i$",
+    "$AX=B$, आव्यूह समीकरण, या $A$ केवल $AX_i=Y_i$ से ज्ञात"
+   ],
+   "color": "brown",
+   "steps": [
+    {
+     "q": [
+      "Is it a system of linear equations?",
+      "क्या यह रैखिक समीकरण निकाय है?"
+     ],
+     "a": [
+      [
+       "Write $AX=B$; $|A|\\neq0\\Rightarrow X=A^{-1}B$."
+      ],
+      [
+       "$AX=B$ लिखिए; $|A|\\neq0\\Rightarrow X=A^{-1}B$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$|A|=0$?",
+      "$|A|=0$?"
+     ],
+     "a": [
+      [
+       "$(\\operatorname{adj}A)B\\neq O$: no solution; $=O$: infinite (or check ranks)."
+      ],
+      [
+       "$(\\operatorname{adj}A)B\\neq O$: कोई हल नहीं; $=O$: अनन्त (या रैंक जाँचिए)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is $AX=O$ with a non-zero solution asked?",
+      "क्या $AX=O$ का शून्येतर हल पूछा है?"
+     ],
+     "a": [
+      [
+       "Put $|A|=0$."
+      ],
+      [
+       "$|A|=0$ रखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Unknown matrix $X$ in $AX=B$, $XA=B$ or $AXB=C$?",
+      "अज्ञात आव्यूह $X$, $AX=B$, $XA=B$ या $AXB=C$ में?"
+     ],
+     "a": [
+      [
+       "$X=A^{-1}B$, $BA^{-1}$ or $A^{-1}CB^{-1}$ (keep the side)."
+      ],
+      [
+       "$X=A^{-1}B$, $BA^{-1}$ या $A^{-1}CB^{-1}$ (पक्ष बनाए रखिए)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$A$ given by $AX_i=Y_i$?",
+      "$A$ का मान $AX_i=Y_i$ से दिया है?"
+     ],
+     "a": [
+      [
+       "$A=YX^{-1}$; if $AX=\\lambda X$ use $A^nX=\\lambda^nX$."
+      ],
+      [
+       "$A=YX^{-1}$; यदि $AX=\\lambda X$ तो $A^nX=\\lambda^nX$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Rank asked?",
+      "रैंक पूछी है?"
+     ],
+     "a": [
+      [
+       "Row-reduce and count non-zero rows."
+      ],
+      [
+       "पंक्ति संक्रियाओं से शून्येतर पंक्तियाँ गिनिए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Reduce $[A|B]$ by row operations and compare ranks."
+    ],
+    [
+     "$[A|B]$ को पंक्ति संक्रियाओं से सरल करके रैंक की तुलना कीजिए।"
+    ]
+   ]
+  }
+ ]
+}
