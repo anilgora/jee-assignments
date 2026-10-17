@@ -1,0 +1,3295 @@
+{
+ "chapter": {
+  "en": "Binomial Theorem",
+  "hi": "द्विपद प्रमेय",
+  "slug": "Binomial_Theorem"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   274,
+   275,
+   276,
+   277,
+   278,
+   279,
+   280,
+   281,
+   282,
+   283,
+   284,
+   285,
+   286,
+   287,
+   295,
+   296,
+   297,
+   298,
+   299,
+   300,
+   301,
+   302,
+   303,
+   304,
+   305,
+   306,
+   307
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction",
+    "hi": "परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do monomial, binomial, trinomial and multinomial expressions mean?",
+       "एकपदी, द्विपद, त्रिपद तथा बहुपद व्यंजक से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "Monomial: 1 term; binomial: 2 terms; trinomial: 3 terms; multinomial: more than 2 terms.",
+        "एकपदी: 1 पद; द्विपद: 2 पद; त्रिपद: 3 पद; बहुपद (मल्टीनोमियल): 2 से अधिक पद।"
+       ],
+       [
+        "Ex: $a+\\dfrac bx$ is binomial; $x+y+z$ is trinomial.",
+        "उदा.: $a+\\dfrac bx$ द्विपद है; $x+y+z$ त्रिपद है।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to draw Pascal's triangle and what is its use?",
+       "क्या आप पास्कल त्रिभुज बना सकते हैं और इसका उपयोग क्या है?"
+      ],
+      "a": [
+       [
+        "Row $n$ gives the coefficients of $(x+y)^n$; each entry is the sum of the two entries above it, and each row starts and ends with 1.",
+        "पंक्ति $n$ से $(x+y)^n$ के गुणांक मिलते हैं; प्रत्येक संख्या ऊपर की दो संख्याओं का योग है तथा प्रत्येक पंक्ति 1 से शुरू व 1 पर समाप्त होती है।"
+       ],
+       [
+        "Ex: row 5 is $1,\\ 5,\\ 10,\\ 10,\\ 5,\\ 1$ (as $4+6=10$ in the row above).",
+        "उदा.: पंक्ति 5: $1,\\ 5,\\ 10,\\ 10,\\ 5,\\ 1$ (ऊपर की पंक्ति में $4+6=10$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Newton's Binomial Theorem",
+    "hi": "न्यूटन का द्विपद प्रमेय",
+    "items": [
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write down the binomial theorem?",
+       "क्या आप द्विपद प्रमेय लिख सकते हैं?"
+      ],
+      "a": [
+       "$(x+y)^n={}^nC_0x^n+{}^nC_1x^{n-1}y+\\dots+{}^nC_ry^r x^{n-r}+\\dots+{}^nC_ny^n,\\quad n\\in\\mathbb N$",
+       [
+        "Ex: $(x+2y)^5=x^5+10x^4y+40x^3y^2+80x^2y^3+80xy^4+32y^5$.",
+        "उदा.: $(x+2y)^5=x^5+10x^4y+40x^3y^2+80x^2y^3+80xy^4+32y^5$।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the number of terms in the expansion of $(x+y)^n$?",
+       "$(x+y)^n$ के प्रसार में पदों की संख्या कितनी होती है?"
+      ],
+      "a": [
+       [
+        "$n+1$ terms (one more than the index); in every term the powers of $x$ and $y$ add up to $n$.",
+        "$n+1$ पद (घात से एक अधिक); प्रत्येक पद में $x$ व $y$ की घातों का योग $n$ होता है।"
+       ],
+       [
+        "Ex: $(x+y)^9$ has 10 terms.",
+        "उदा.: $(x+y)^9$ में 10 पद हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the difference between coefficients and binomial coefficients?",
+       "गुणांक तथा द्विपद गुणांक में क्या अन्तर है?"
+      ],
+      "a": [
+       [
+        "Binomial coefficients are only ${}^nC_0,{}^nC_1,\\dots$; the coefficient of a term also includes the numbers attached to the variables.",
+        "द्विपद गुणांक केवल ${}^nC_0,{}^nC_1,\\dots$ होते हैं; किसी पद के गुणांक में चरों से जुड़ी संख्याएँ भी सम्मिलित होती हैं।"
+       ],
+       [
+        "Ex: in $(x-2y)^5$ the 2nd term is $-10x^4y$: binomial coefficient ${}^5C_1=5$, coefficient $-10$.",
+        "उदा.: $(x-2y)^5$ का दूसरा पद $-10x^4y$ है: द्विपद गुणांक ${}^5C_1=5$, गुणांक $-10$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you find the coefficient and the binomial coefficient of any term?",
+       "क्या आप किसी भी पद का गुणांक तथा द्विपद गुणांक ज्ञात कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Write $T_{r+1}={}^nC_r\\,x^{n-r}y^r$; the binomial coefficient is ${}^nC_r$, the coefficient is ${}^nC_r$ times the numerical factors of $x$ and $y$.",
+        "$T_{r+1}={}^nC_r\\,x^{n-r}y^r$ लिखिए; द्विपद गुणांक ${}^nC_r$ है, गुणांक ${}^nC_r$ में $x,y$ की संख्यात्मक गुणकों का गुणा करने पर मिलता है।"
+       ],
+       [
+        "Ex: $(2x-3)^7$, term in $x^4$ ($r=3$): binomial coefficient $35$, coefficient $35\\cdot2^4(-3)^3=-15120$.",
+        "उदा.: $(2x-3)^7$ में $x^4$ वाला पद ($r=3$): द्विपद गुणांक $35$, गुणांक $35\\cdot2^4(-3)^3=-15120$।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of coefficients and the sum of binomial coefficients?",
+       "गुणांकों का योग तथा द्विपद गुणांकों का योग कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Sum of coefficients: put every variable $=1$. Sum of binomial coefficients $={}^nC_0+\\dots+{}^nC_n=2^n$.",
+        "गुणांकों का योग: प्रत्येक चर $=1$ रखिए। द्विपद गुणांकों का योग $={}^nC_0+\\dots+{}^nC_n=2^n$।"
+       ],
+       [
+        "Ex: $(2x+y)^6$: sum of coefficients $3^6=729$, of binomial coefficients $2^6=64$.",
+        "उदा.: $(2x+y)^6$: गुणांकों का योग $3^6=729$, द्विपद गुणांकों का योग $2^6=64$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the expansions of $(1+x)^n$ and $(1-x)^n$.",
+       "$(1+x)^n$ तथा $(1-x)^n$ के प्रसार लिखिए।"
+      ],
+      "a": [
+       "$(1+x)^n=\\displaystyle\\sum_{r=0}^n{}^nC_rx^r,\\qquad(1-x)^n=\\displaystyle\\sum_{r=0}^n(-1)^r\\,{}^nC_rx^r$",
+       [
+        "Ex: $(1-x)^4=1-4x+6x^2-4x^3+x^4$.",
+        "उदा.: $(1-x)^4=1-4x+6x^2-4x^3+x^4$।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the coefficient of $x^r$ in the expansion of $(1+x)^n$?",
+       "$(1+x)^n$ के प्रसार में $x^r$ का गुणांक क्या है?"
+      ],
+      "a": [
+       [
+        "It is ${}^nC_r$ (and $0$ if $r>n$).",
+        "यह ${}^nC_r$ है (और $r>n$ होने पर $0$)।"
+       ],
+       [
+        "Ex: coefficient of $x^3$ in $(1+x)^{10}$ is ${}^{10}C_3=120$.",
+        "उदा.: $(1+x)^{10}$ में $x^3$ का गुणांक ${}^{10}C_3=120$।"
+       ]
+      ]
+     },
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write $(x+y)^n$ as a sigma of terms.",
+       "$(x+y)^n$ को पदों के सिग्मा (योग) के रूप में लिखिए।"
+      ],
+      "a": [
+       "$(x+y)^n=\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r=\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{r}y^{n-r}$",
+       [
+        "Ex: $\\displaystyle\\sum_{r=0}^{7}{}^7C_r2^{7-r}3^r=(2+3)^7=78125$.",
+        "उदा.: $\\displaystyle\\sum_{r=0}^{7}{}^7C_r2^{7-r}3^r=(2+3)^7=78125$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "General Term",
+    "hi": "सामान्य पद",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the formula of the general term in the expansion of $(x+y)^n$?",
+       "क्या आप $(x+y)^n$ के प्रसार में सामान्य पद का सूत्र जानते हैं?"
+      ],
+      "a": [
+       "$T_{r+1}={}^nC_r\\,x^{n-r}y^r\\qquad(r=0,1,\\dots,n)$",
+       [
+        "Ex: 10th term of $\\left(2x^2+\\dfrac1x\\right)^{12}$: $T_{10}={}^{12}C_9(2x^2)^3\\left(\\dfrac1x\\right)^9=\\dfrac{1760}{x^3}$.",
+        "उदा.: $\\left(2x^2+\\dfrac1x\\right)^{12}$ का 10वाँ पद: $T_{10}={}^{12}C_9(2x^2)^3\\left(\\dfrac1x\\right)^9=\\dfrac{1760}{x^3}$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find any term from the end in a binomial expansion?",
+       "किसी द्विपद प्रसार में अन्त से कोई पद कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "The $k$th term from the end is the $(n-k+2)$th term from the beginning, $T_{n-k+2}$.",
+        "अन्त से $k$ वाँ पद आरम्भ से $(n-k+2)$ वाँ पद $T_{n-k+2}$ होता है।"
+       ],
+       [
+        "Ex: 4th from the end in $\\left(2x-\\dfrac1{x^2}\\right)^{10}$ is $T_8={}^{10}C_7(2x)^3\\left(-\\dfrac1{x^2}\\right)^7=-960x^{-11}$.",
+        "उदा.: $\\left(2x-\\dfrac1{x^2}\\right)^{10}$ में अन्त से चौथा पद $T_8={}^{10}C_7(2x)^3\\left(-\\dfrac1{x^2}\\right)^7=-960x^{-11}$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the coefficient of any power of $x$ (or the term independent of $x$) in a binomial expansion?",
+       "किसी द्विपद प्रसार में $x$ की किसी घात का गुणांक (या $x$ से स्वतन्त्र पद) कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Collect the power of $x$ in $T_{r+1}$, equate it to the required power (0 for the independent term), solve for $r$; $r$ must be an integer with $0\\le r\\le n$, else the coefficient is $0$.",
+        "$T_{r+1}$ में $x$ की घात निकालिए, उसे अभीष्ट घात (स्वतन्त्र पद के लिए 0) के बराबर रखकर $r$ ज्ञात कीजिए; $r$ पूर्णांक तथा $0\\le r\\le n$ होना चाहिए, अन्यथा गुणांक $0$ है।"
+       ],
+       [
+        "Ex: $\\left(x^2+\\dfrac2x\\right)^6$: $T_{r+1}={}^6C_r2^rx^{12-3r}$; $x^3$: $r=3$, coefficient $160$; independent term: $r=4$, $240$; $x^2$: $r$ not an integer, coefficient $0$.",
+        "उदा.: $\\left(x^2+\\dfrac2x\\right)^6$: $T_{r+1}={}^6C_r2^rx^{12-3r}$; $x^3$: $r=3$, गुणांक $160$; स्वतन्त्र पद: $r=4$, $240$; $x^2$: $r$ पूर्णांक नहीं, गुणांक $0$।"
+       ]
+      ]
+     },
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of rational terms in a binomial expansion?",
+       "किसी द्विपद प्रसार में परिमेय पदों की संख्या कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Write $T_{r+1}$ with fractional powers; a term is rational (integral) when every power is an integer. Find the $r$, $0\\le r\\le n$, satisfying all the conditions (usually $r$ a multiple of the lcm of the denominators).",
+        "भिन्नात्मक घातों सहित $T_{r+1}$ लिखिए; सभी घातें पूर्णांक होने पर पद परिमेय (पूर्णांकीय) होता है। $0\\le r\\le n$ में सभी प्रतिबन्ध सन्तुष्ट करने वाले $r$ गिनिए (प्रायः $r$ हरों के ल.स. का गुणज)।"
+       ],
+       [
+        "Ex: $\\left(5^{1/3}+7^{1/4}\\right)^{60}$: $r$ multiple of $12$, $r=0,12,\\dots,60$: 6 terms. $\\left(5^{1/2}+7^{1/4}\\right)^{99}$: none.",
+        "उदा.: $\\left(5^{1/3}+7^{1/4}\\right)^{60}$: $r$ का $12$ का गुणज, $r=0,12,\\dots,60$: 6 पद। $\\left(5^{1/2}+7^{1/4}\\right)^{99}$: एक भी नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 1,7; J-II: 1; J-M(XIII): 3,18,29,36,50,51,62,64,71; J-A: 1; C-I: 15; C-II: 5; QB: 256,260,267,275",
+      "q": [
+       "How to handle the ratio of consecutive terms or coefficients (three consecutive coefficients in a given ratio or in AP)?",
+       "क्रमागत पदों या गुणांकों के अनुपात को कैसे सम्भालते हैं (तीन क्रमागत गुणांक दिए अनुपात में या समान्तर श्रेढ़ी में)?"
+      ],
+      "a": [
+       [
+        "$\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$ and $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$. For consecutive coefficients $a:b:c$ form two equations in $n,r$ and solve (for AP use $2b=a+c$).",
+        "$\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$ तथा $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$। क्रमागत गुणांक $a:b:c$ हों तो $n,r$ में दो समीकरण बनाकर हल कीजिए (समान्तर श्रेढ़ी के लिए $2b=a+c$)।"
+       ],
+       [
+        "Ex: coefficients of three consecutive terms of $(1+x)^n$ in ratio $1:3:5$: $n=4r-1$, $r=2$, $n=7$ (coefficients $7,21,35$).",
+        "उदा.: $(1+x)^n$ के तीन क्रमागत पदों के गुणांक अनुपात $1:3:5$ में: $n=4r-1$, $r=2$, $n=7$ (गुणांक $7,21,35$)।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 5,16; J-II: 1,28; J-M(XIII): 50,64; C-I: 8,10; DPP-3: 9,11; QB: 267",
+      "q": [
+       "How to solve equations involving binomial coefficients (${}^nC_x={}^nC_y$, Pascal's rule, equal coefficients of two terms)?",
+       "द्विपद गुणांकों वाले समीकरण कैसे हल करते हैं (${}^nC_x={}^nC_y$, पास्कल नियम, दो पदों के गुणांक बराबर)?"
+      ],
+      "a": [
+       [
+        "${}^nC_x={}^nC_y\\Rightarrow x=y$ or $x+y=n$; ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$. Reject the root that makes an index negative or exceed $n$.",
+        "${}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$; ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$। जो मान सूचकांक को ऋणात्मक या $n$ से बड़ा बनाए उसे छोड़िए।"
+       ],
+       [
+        "Ex: coefficients of $(r+2)$th and $3r$th terms of $(1+x)^{2n}$ equal: ${}^{2n}C_{r+1}={}^{2n}C_{3r-1}\\Rightarrow r=1$ or $(r+1)+(3r-1)=2n$, i.e. $r=\\frac n2$.",
+        "उदा.: $(1+x)^{2n}$ के $(r+2)$वें व $3r$वें पद के गुणांक बराबर: ${}^{2n}C_{r+1}={}^{2n}C_{3r-1}\\Rightarrow r=1$ या $(r+1)+(3r-1)=2n$, अर्थात् $r=\\frac n2$।"
+       ]
+      ]
+     },
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII): 5,42; QB: 269,272",
+      "q": [
+       "How to find the maximum / least value of a term (or coefficient) that contains a parameter such as $\\sin\\theta$ or $x$?",
+       "ऐसे पद (या गुणांक) का अधिकतम / न्यूनतम मान कैसे ज्ञात करते हैं जिसमें $\\sin\\theta$ या $x$ जैसा प्राचल हो?"
+      ],
+      "a": [
+       [
+        "Find the term independent of $x$ (or the required term) as a function of the parameter, then use the bounds ($\\sin\\theta\\cos\\theta=\\frac12\\sin2\\theta\\le\\frac12$, AM-GM, or calculus).",
+        "$x$ से स्वतन्त्र (या अभीष्ट) पद को प्राचल के फलन के रूप में ज्ञात कीजिए, फिर सीमाओं ($\\sin\\theta\\cos\\theta=\\frac12\\sin2\\theta\\le\\frac12$, AM-GM या कलन) का प्रयोग कीजिए।"
+       ],
+       [
+        "Ex: $\\left(x\\sin\\theta+\\dfrac{\\cos\\theta}x\\right)^{10}$: independent term ${}^{10}C_5\\sin^5\\theta\\cos^5\\theta=\\dfrac{252}{32}\\sin^52\\theta$, greatest value $\\dfrac{63}8$.",
+        "उदा.: $\\left(x\\sin\\theta+\\dfrac{\\cos\\theta}x\\right)^{10}$: स्वतन्त्र पद ${}^{10}C_5\\sin^5\\theta\\cos^5\\theta=\\dfrac{252}{32}\\sin^52\\theta$, महत्तम मान $\\dfrac{63}8$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Middle Term",
+    "hi": "मध्य पद",
+    "items": [
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the position of the middle term in a binomial expansion?",
+       "किसी द्विपद प्रसार में मध्य पद की स्थिति कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "$n$ even: one middle term $T_{\\frac n2+1}$. $n$ odd: two middle terms $T_{\\frac{n+1}2}$ and $T_{\\frac{n+3}2}$.",
+        "$n$ सम: एक मध्य पद $T_{\\frac n2+1}$। $n$ विषम: दो मध्य पद $T_{\\frac{n+1}2}$ तथा $T_{\\frac{n+3}2}$।"
+       ],
+       [
+        "Ex: $n=30$: $T_{16}$; $n=49$: $T_{25}$ and $T_{26}$.",
+        "उदा.: $n=30$: $T_{16}$; $n=49$: $T_{25}$ व $T_{26}$।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know that the binomial coefficient of the middle term is the greatest binomial coefficient?",
+       "क्या आप जानते हैं कि मध्य पद का द्विपद गुणांक महत्तम द्विपद गुणांक होता है?"
+      ],
+      "a": [
+       [
+        "Greatest of ${}^nC_r$ is ${}^nC_{n/2}$ ($n$ even) or ${}^nC_{\\frac{n-1}2}={}^nC_{\\frac{n+1}2}$ ($n$ odd); ${}^nC_r={}^nC_s\\Rightarrow r=s$ or $r+s=n$.",
+        "${}^nC_r$ का महत्तम मान ${}^nC_{n/2}$ ($n$ सम) अथवा ${}^nC_{\\frac{n-1}2}={}^nC_{\\frac{n+1}2}$ ($n$ विषम) है; ${}^nC_r={}^nC_s\\Rightarrow r=s$ या $r+s=n$।"
+       ],
+       [
+        "Ex: greatest binomial coefficient of $(1+x)^{10}$ is ${}^{10}C_5=252$; of $(x+y)^{9}$ it is ${}^9C_4={}^9C_5=126$.",
+        "उदा.: $(1+x)^{10}$ का महत्तम द्विपद गुणांक ${}^{10}C_5=252$; $(x+y)^{9}$ का ${}^9C_4={}^9C_5=126$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the coefficient of any power of $x$ in a product of two or more binomial expansions?",
+       "दो या अधिक द्विपद प्रसारों के गुणनफल में $x$ की किसी घात का गुणांक कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Take the general term of each factor; the coefficient is the sum of products of coefficients whose powers add up to the required power.",
+        "प्रत्येक गुणनखण्ड का सामान्य पद लीजिए; गुणांक उन गुणांकों के गुणनफलों का योग है जिनकी घातों का योग अभीष्ट घात हो।"
+       ],
+       [
+        "Ex: coefficient of $x^3$ in $(2+3x-5x^2)(1+x)^{10}$: $2\\cdot{}^{10}C_3+3\\cdot{}^{10}C_2-5\\cdot{}^{10}C_1=325$.",
+        "उदा.: $(2+3x-5x^2)(1+x)^{10}$ में $x^3$ का गुणांक: $2\\cdot{}^{10}C_3+3\\cdot{}^{10}C_2-5\\cdot{}^{10}C_1=325$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Numerically Greatest Term (NGT)",
+    "hi": "संख्यात्मक रूप से महत्तम पद (NGT)",
+    "items": [
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the NGT (numerically greatest term) in a binomial expansion?",
+       "किसी द्विपद प्रसार में NGT (संख्यात्मक रूप से महत्तम पद) कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "For $(a+b)^n$ find $p=\\dfrac{n+1}{1+\\left|\\frac ab\\right|}$. If $p$ is not an integer, NGT is $T_{[p]+1}$; if $p$ is an integer, $T_p$ and $T_{p+1}$ are equal and both greatest.",
+        "$(a+b)^n$ के लिए $p=\\dfrac{n+1}{1+\\left|\\frac ab\\right|}$ ज्ञात कीजिए। $p$ पूर्णांक न हो तो NGT $T_{[p]+1}$; $p$ पूर्णांक हो तो $T_p$ तथा $T_{p+1}$ बराबर और दोनों महत्तम।"
+       ],
+       [
+        "Ex: $(3-2x)^9$: $x=\\frac12$: $p=2.5\\Rightarrow T_3$; $x=1$: $p=4\\Rightarrow T_4=T_5$ (in magnitude).",
+        "उदा.: $(3-2x)^9$: $x=\\frac12$: $p=2.5\\Rightarrow T_3$; $x=1$: $p=4\\Rightarrow T_4=T_5$ (परिमाण में)।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "If the position of the NGT is given, can you write the condition on $p$?",
+       "यदि NGT की स्थिति दी हो तो क्या आप $p$ पर प्रतिबन्ध लिख सकते हैं?"
+      ],
+      "a": [
+       [
+        "$T_k$ is the only NGT $\\Leftrightarrow k-1<p<k$; $T_k$ and $T_{k+1}$ both NGT $\\Leftrightarrow p=k$. Then solve for $x$ or $n$.",
+        "$T_k$ अकेला NGT $\\Leftrightarrow k-1<p<k$; $T_k$ व $T_{k+1}$ दोनों NGT $\\Leftrightarrow p=k$। फिर $x$ या $n$ हल कीजिए।"
+       ],
+       [
+        "Ex: $T_4$ is the NGT of $(1+x)^{10}$ ($x>0$): $3<\\dfrac{11x}{1+x}<4\\Rightarrow\\dfrac38<x<\\dfrac47$.",
+        "उदा.: $(1+x)^{10}$ ($x>0$) में $T_4$ NGT है: $3<\\dfrac{11x}{1+x}<4\\Rightarrow\\dfrac38<x<\\dfrac47$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Remainder Based Problems",
+    "hi": "शेषफल आधारित प्रश्न",
+    "items": [
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to convert the base to the nearest multiple of the divisor to find a remainder?",
+       "शेषफल ज्ञात करने के लिए आधार को भाजक के निकटतम गुणज में कैसे बदलते हैं?"
+      ],
+      "a": [
+       [
+        "Write the base as (multiple of divisor) $\\pm$ small number, expand by the binomial theorem; every term except the last is divisible by the divisor. If the remainder is negative add the divisor.",
+        "आधार को (भाजक का गुणज) $\\pm$ छोटी संख्या के रूप में लिखकर द्विपद प्रमेय से प्रसारित कीजिए; अन्तिम पद के अतिरिक्त सभी पद भाजक से विभाज्य होते हैं। शेषफल ऋणात्मक आए तो भाजक जोड़िए।"
+       ],
+       [
+        "Ex: $3^{2022}=9^{1011}=(10-1)^{1011}\\equiv(-1)^{1011}=-1\\equiv4\\pmod5$.",
+        "उदा.: $3^{2022}=9^{1011}=(10-1)^{1011}\\equiv(-1)^{1011}=-1\\equiv4\\pmod5$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do when the base is very small compared to the divisor?",
+       "जब आधार भाजक की तुलना में बहुत छोटा हो तो क्या करते हैं?"
+      ],
+      "a": [
+       [
+        "Raise the base to a suitable power first (e.g. $a^k$) so that it becomes close to a multiple of the divisor, then expand.",
+        "आधार की किसी उचित घात ($a^k$) को पहले लीजिए ताकि वह भाजक के गुणज के निकट आ जाए, फिर प्रसारित कीजिए।"
+       ],
+       [
+        "Ex: $2^{100}=2\\cdot(2^3)^{33}=2(7+1)^{33}\\equiv2\\pmod7$.",
+        "उदा.: $2^{100}=2\\cdot(2^3)^{33}=2(7+1)^{33}\\equiv2\\pmod7$।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How many terms do we have to consider when finding a remainder?",
+       "शेषफल ज्ञात करते समय कितने पद लेने पड़ते हैं?"
+      ],
+      "a": [
+       [
+        "If the divisor is $d$ and base $=kd\\pm1$, one term suffices; if the divisor is $d^2$ keep the first two terms: $(1+kd)^n\\equiv1+nkd\\pmod{d^2}$; in general keep terms until the power of $d$ is as large as the divisor needs.",
+        "भाजक $d$ तथा आधार $=kd\\pm1$ हो तो एक पद पर्याप्त है; भाजक $d^2$ हो तो पहले दो पद लीजिए: $(1+kd)^n\\equiv1+nkd\\pmod{d^2}$; सामान्यतः तब तक पद लीजिए जब तक $d$ की घात भाजक के लिए पर्याप्त हो।"
+       ],
+       [
+        "Ex: $9^n-8n-1=(1+8)^n-8n-1=64(\\dots)$, divisible by $64$.",
+        "उदा.: $9^n-8n-1=(1+8)^n-8n-1=64(\\dots)$, $64$ से विभाज्य।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while finding the unit digit / last two digits / last three digits?",
+       "इकाई अंक / अन्तिम दो अंक / अन्तिम तीन अंक ज्ञात करते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Last 1, 2, 3 digits = remainder on division by $10,100,1000$. Write the base as $10k\\pm1$ or $(\\text{multiple of }10)\\pm1$ and keep the first 2 or 3 terms. Write the answer with leading zeros (e.g. 01).",
+        "अन्तिम 1, 2, 3 अंक = $10,100,1000$ से भाग देने पर शेषफल। आधार को $10k\\pm1$ रूप में लिखिए तथा पहले 2 या 3 पद रखिए। उत्तर में आगे के शून्य लिखिए (जैसे 01)।"
+       ],
+       [
+        "Ex: $21^{100}=(1+20)^{100}\\equiv1+100\\cdot20\\equiv1\\pmod{100}$: last two digits $01$.",
+        "उदा.: $21^{100}=(1+20)^{100}\\equiv1+100\\cdot20\\equiv1\\pmod{100}$: अन्तिम दो अंक $01$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for $a^n+b^n$ to be divisible by $a+b$?",
+       "$a^n+b^n$ के $a+b$ से विभाज्य होने का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "$a^n+b^n$ is divisible by $a+b$ when $n$ is an odd natural number.",
+        "$n$ विषम प्राकृत संख्या हो तो $a^n+b^n$, $a+b$ से विभाज्य होता है।"
+       ],
+       [
+        "Ex: $11^{25}+12^{25}$ is divisible by $11+12=23$.",
+        "उदा.: $11^{25}+12^{25}$, $11+12=23$ से विभाज्य है।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for $a^n-b^n$ to be divisible by $a+b$?",
+       "$a^n-b^n$ के $a+b$ से विभाज्य होने का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "$a^n-b^n$ is divisible by $a+b$ when $n$ is an even natural number.",
+        "$n$ सम प्राकृत संख्या हो तो $a^n-b^n$, $a+b$ से विभाज्य होता है।"
+       ],
+       [
+        "Ex: $8^6-3^6=261415$ is divisible by $8+3=11$.",
+        "उदा.: $8^6-3^6=261415$, $8+3=11$ से विभाज्य है।"
+       ]
+      ]
+     },
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition for $a^n-b^n$ to be divisible by $a-b$?",
+       "$a^n-b^n$ के $a-b$ से विभाज्य होने का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "$a^n-b^n$ is divisible by $a-b$ for every natural number $n$.",
+        "प्रत्येक प्राकृत संख्या $n$ के लिए $a^n-b^n$, $a-b$ से विभाज्य होता है।"
+       ],
+       [
+        "Ex: $13^9-4^9$ is divisible by $13-4=9$.",
+        "उदा.: $13^9-4^9$, $13-4=9$ से विभाज्य है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integral Part and Fractional Part Based Concept",
+    "hi": "पूर्णांक भाग व भिन्नात्मक भाग पर आधारित संकल्पना",
+    "items": [
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to prove that the integral part of a binomial expansion is odd / even?",
+       "किसी द्विपद प्रसार का पूर्णांक भाग विषम / सम सिद्ध कैसे करते हैं?"
+      ],
+      "a": [
+       [
+        "Let $R=(a+\\sqrt b)^n=I+f$ and $G=(a-\\sqrt b)^n$ with $0<G<1$. Then $R+G$ is an integer (even or odd as the terms show) and $f+G=1$, so $I=(R+G)-1$.",
+        "माना $R=(a+\\sqrt b)^n=I+f$ तथा $G=(a-\\sqrt b)^n$, $0<G<1$। तब $R+G$ पूर्णांक है (सम या विषम, पदों से स्पष्ट) तथा $f+G=1$, अतः $I=(R+G)-1$।"
+       ],
+       [
+        "Ex: $(9+4\\sqrt5)^n$, $G=(9-4\\sqrt5)^n\\in(0,1)$, $R+G=2(\\dots)$ even, so $I$ is odd.",
+        "उदा.: $(9+4\\sqrt5)^n$, $G=(9-4\\sqrt5)^n\\in(0,1)$, $R+G=2(\\dots)$ सम, अतः $I$ विषम।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the integral part and fractional part of a binomial expansion?",
+       "किसी द्विपद प्रसार का पूर्णांक भाग तथा भिन्नात्मक भाग कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "With $R=I+f$ and the conjugate $G$: $f=1-G$ (if $0<G<1$, $I=R+G-1$) or $f=-G$ (if $-1<G<0$, $I=R+G$), so $f(1-f)$-type products reduce to $R\\cdot G=(a^2-b)^n$.",
+        "$R=I+f$ तथा संयुग्मी $G$ के लिए: $f=1-G$ (यदि $0<G<1$, $I=R+G-1$) या $f=-G$ (यदि $-1<G<0$, $I=R+G$), अतः $f(1-f)$ जैसे गुणनफल $R\\cdot G=(a^2-b)^n$ में बदल जाते हैं।"
+       ],
+       [
+        "Ex: $(5+2\\sqrt6)^n=I+f$, $G=(5-2\\sqrt6)^n=1-f$ and $RG=1$, so $(I+f)(1-f)=1$; for $n=1$: $I=9$.",
+        "उदा.: $(5+2\\sqrt6)^n=I+f$, $G=(5-2\\sqrt6)^n=1-f$ तथा $RG=1$, अतः $(I+f)(1-f)=1$; $n=1$ के लिए $I=9$।"
+       ]
+      ]
+     },
+     {
+      "id": "N5",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 4,34; DPP-1: 13; QB: 257,268",
+      "q": [
+       "How to handle $(x+a)^n\\pm(x-a)^n$ (even / odd terms only, degree of the polynomial)?",
+       "$(x+a)^n\\pm(x-a)^n$ को कैसे सम्भालते हैं (केवल सम / विषम पद, बहुपद की घात)?"
+      ],
+      "a": [
+       [
+        "$(x+a)^n+(x-a)^n=2\\left[{}^nC_0x^n+{}^nC_2x^{n-2}a^2+\\dots\\right]$ (odd $r$ cancel) and the difference keeps the odd $r$. Take the highest power from the last surviving term.",
+        "$(x+a)^n+(x-a)^n=2\\left[{}^nC_0x^n+{}^nC_2x^{n-2}a^2+\\dots\\right]$ (विषम $r$ कट जाते हैं) तथा अन्तर में विषम $r$ बचते हैं। सबसे बड़ी घात बचे हुए अन्तिम पद से लीजिए।"
+       ],
+       [
+        "Ex: $(1+\\sqrt2)^4+(1-\\sqrt2)^4=2(1+6\\cdot2+4)=34$.",
+        "उदा.: $(1+\\sqrt2)^4+(1-\\sqrt2)^4=2(1+6\\cdot2+4)=34$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multinomial Theorem",
+    "hi": "बहुपद प्रमेय",
+    "items": [
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the general term of a multinomial expansion.",
+       "बहुपद प्रसार का सामान्य पद लिखिए।"
+      ],
+      "a": [
+       "$(x_1+x_2+\\dots+x_k)^n=\\displaystyle\\sum\\dfrac{n!}{r_1!\\,r_2!\\cdots r_k!}\\,x_1^{r_1}x_2^{r_2}\\cdots x_k^{r_k},\\qquad r_1+\\dots+r_k=n$",
+       [
+        "Ex: coefficient of $x^2y^3z^4$ in $(x+y+z)^9$ is $\\dfrac{9!}{2!\\,3!\\,4!}=1260$.",
+        "उदा.: $(x+y+z)^9$ में $x^2y^3z^4$ का गुणांक $\\dfrac{9!}{2!\\,3!\\,4!}=1260$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of dissimilar terms in a multinomial expansion?",
+       "बहुपद प्रसार में असमान (भिन्न) पदों की संख्या कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Number of non-negative solutions of $r_1+\\dots+r_k=n$: ${}^{n+k-1}C_{k-1}$.",
+        "$r_1+\\dots+r_k=n$ के अऋणात्मक हलों की संख्या: ${}^{n+k-1}C_{k-1}$।"
+       ],
+       [
+        "Ex: $(a+b+c)^{10}$ has ${}^{12}C_2=66$ terms.",
+        "उदा.: $(a+b+c)^{10}$ में ${}^{12}C_2=66$ पद हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the general term to find the coefficient of a power of $x$ in a multinomial expansion?",
+       "बहुपद प्रसार में $x$ की किसी घात का गुणांक ज्ञात करने के लिए सामान्य पद का उपयोग कैसे करते हैं?"
+      ],
+      "a": [
+       [
+        "Write $\\dfrac{n!}{r_1!r_2!r_3!}(\\cdot)^{r_1}(\\cdot)^{r_2}(\\cdot)^{r_3}$, impose $r_1+r_2+r_3=n$ and (power of $x$) $=$ required power, list all non-negative integer solutions and add.",
+        "$\\dfrac{n!}{r_1!r_2!r_3!}(\\cdot)^{r_1}(\\cdot)^{r_2}(\\cdot)^{r_3}$ लिखिए, $r_1+r_2+r_3=n$ तथा ($x$ की घात) $=$ अभीष्ट घात रखकर सभी अऋणात्मक पूर्णांक हल लिखिए और जोड़िए।"
+       ],
+       [
+        "Ex: $x^2$ in $(1+x+x^2)^4$: $(r_1,r_2,r_3)=(2,2,0),(3,0,1)$ give $6+4=10$.",
+        "उदा.: $(1+x+x^2)^4$ में $x^2$: $(r_1,r_2,r_3)=(2,2,0),(3,0,1)$ से $6+4=10$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Try to factorise the base before applying the multinomial theorem.",
+       "बहुपद प्रमेय लगाने से पहले आधार का गुणनखण्डन करने का प्रयास कीजिए।"
+      ],
+      "a": [
+       [
+        "Factorise (or sum a GP) so that each factor is a binomial, then use the product rule of item {#17}.",
+        "गुणनखण्डन कीजिए (या GP का योग लीजिए) ताकि प्रत्येक गुणनखण्ड द्विपद बन जाए, फिर प्रश्न {#17} का गुणनफल नियम लगाइए।"
+       ],
+       [
+        "Ex: $x^2-x-2=(x-2)(x+1)$, so $(x^2-x-2)^5=(x-2)^5(x+1)^5$ and the coefficient of $x^5$ is $-81$.",
+        "उदा.: $x^2-x-2=(x-2)(x+1)$, अतः $(x^2-x-2)^5=(x-2)^5(x+1)^5$ तथा $x^5$ का गुणांक $-81$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "DPP-1: 17",
+      "q": [
+       "How to count the distinct terms in a sum of several expansions?",
+       "कई प्रसारों के योग में भिन्न पदों की संख्या कैसे गिनते हैं?"
+      ],
+      "a": [
+       [
+        "List the set of powers of $x$ present in each expansion, take their union and count it (a power common to two expansions is one term).",
+        "प्रत्येक प्रसार में $x$ की उपस्थित घातों का समुच्चय लिखिए, उनका संघ लेकर गिनिए (दो प्रसारों में उभयनिष्ठ घात एक ही पद है)।"
+       ],
+       [
+        "Ex: $(1+x)^4+(1+x^2)^3$: powers $\\{0,1,2,3,4\\}\\cup\\{0,2,4,6\\}=\\{0,1,2,3,4,6\\}$, so 6 terms.",
+        "उदा.: $(1+x)^4+(1+x^2)^3$: घातें $\\{0,1,2,3,4\\}\\cup\\{0,2,4,6\\}=\\{0,1,2,3,4,6\\}$, अतः 6 पद।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Series Type 1",
+    "hi": "श्रेणी का योग: प्रकार 1",
+    "items": [
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write $(x+y)^n$ as a sigma of terms (type 1 form).",
+       "$(x+y)^n$ को पदों के सिग्मा के रूप में लिखिए (प्रकार 1 का रूप)।"
+      ],
+      "a": [
+       "$\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r=(x+y)^n$",
+       [
+        "Ex: $\\displaystyle\\sum_{r=0}^7{}^7C_r2^r=3^7$.",
+        "उदा.: $\\displaystyle\\sum_{r=0}^7{}^7C_r2^r=3^7$।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to identify the values of $x$, $y$ and $n$ if a series is a type 1 question?",
+       "यदि श्रेणी प्रकार 1 की हो तो $x$, $y$ तथा $n$ के मान कैसे पहचानते हैं?"
+      ],
+      "a": [
+       [
+        "Write each term as ${}^nC_r\\,x^{n-r}y^r$: the powers attached to $r$ give $y$, the remaining power $(n-r)$ gives $x$ ($x=1$ if absent), $n$ is the upper index.",
+        "प्रत्येक पद को ${}^nC_r\\,x^{n-r}y^r$ के रूप में लिखिए: $r$ वाली घातें $y$ देती हैं, शेष घात $(n-r)$ से $x$ मिलता है (न हो तो $x=1$), $n$ ऊपरी सूचकांक है।"
+       ],
+       [
+        "Ex: $\\displaystyle\\sum_{r=0}^6{}^6C_r\\dfrac{2^r}{3^r}=\\left(1+\\dfrac23\\right)^6=\\left(\\dfrac53\\right)^6$.",
+        "उदा.: $\\displaystyle\\sum_{r=0}^6{}^6C_r\\dfrac{2^r}{3^r}=\\left(1+\\dfrac23\\right)^6=\\left(\\dfrac53\\right)^6$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while solving type 1 questions?",
+       "प्रकार 1 के प्रश्न हल करते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Check the limits of $r$ (if the sum starts at $r=1$ subtract the $r=0$ term), the sign $(-1)^r$ (makes $y$ negative), and powers like $4^r=(2^2)^r$.",
+        "$r$ की सीमाएँ देखिए (योग $r=1$ से हो तो $r=0$ वाला पद घटाइए), चिह्न $(-1)^r$ ($y$ ऋणात्मक बनाता है) तथा $4^r=(2^2)^r$ जैसी घातें।"
+       ],
+       [
+        "Ex: $\\displaystyle\\sum_{r=1}^n{}^nC_r2^r=3^n-1$.",
+        "उदा.: $\\displaystyle\\sum_{r=1}^n{}^nC_r2^r=3^n-1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Series Type 2",
+    "hi": "श्रेणी का योग: प्रकार 2",
+    "items": [
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to apply type 2 and which formula to use?",
+       "प्रकार 2 कब लगाते हैं और कौन-सा सूत्र प्रयोग करते हैं?"
+      ],
+      "a": [
+       [
+        "When the upper suffix varies and the lower one is fixed: $\\displaystyle\\sum_{k=r}^{m}{}^kC_r={}^{m+1}C_{r+1}$ (hockey stick). Also coefficient of $x^r$ in $(1+x)^r+\\dots+(1+x)^m$.",
+        "जब ऊपरी सूचकांक बदलता हो और निचला स्थिर: $\\displaystyle\\sum_{k=r}^{m}{}^kC_r={}^{m+1}C_{r+1}$ (हॉकी स्टिक)। साथ ही $(1+x)^r+\\dots+(1+x)^m$ में $x^r$ का गुणांक।"
+       ],
+       [
+        "Ex: ${}^{10}C_{10}+{}^{11}C_{10}+\\dots+{}^{25}C_{10}={}^{26}C_{11}$.",
+        "उदा.: ${}^{10}C_{10}+{}^{11}C_{10}+\\dots+{}^{25}C_{10}={}^{26}C_{11}$।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to start combining two terms in type 2 questions?",
+       "प्रकार 2 के प्रश्नों में दो पदों को जोड़ना कैसे शुरू करते हैं?"
+      ],
+      "a": [
+       [
+        "Use Pascal's rule ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$ on the first two terms, then on the result and the next term, and so on.",
+        "पास्कल नियम ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$ पहले दो पदों पर लगाइए, फिर प्राप्त पद और अगले पद पर, इसी प्रकार आगे।"
+       ],
+       [
+        "Ex: ${}^{11}C_{11}+{}^{11}C_{10}={}^{12}C_{11}$, then ${}^{12}C_{11}+{}^{12}C_{10}={}^{13}C_{11}$.",
+        "उदा.: ${}^{11}C_{11}+{}^{11}C_{10}={}^{12}C_{11}$, फिर ${}^{12}C_{11}+{}^{12}C_{10}={}^{13}C_{11}$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to rewrite 1 (one) as another binomial coefficient in type 2 questions?",
+       "प्रकार 2 के प्रश्नों में 1 को किसी अन्य द्विपद गुणांक के रूप में कैसे लिखते हैं?"
+      ],
+      "a": [
+       [
+        "Write $1={}^kC_k={}^{k+1}C_{k+1}$ with the suffix that matches the first term, so that Pascal's rule can start.",
+        "$1={}^kC_k={}^{k+1}C_{k+1}$ उस सूचकांक के साथ लिखिए जो पहले पद से मेल खाए, ताकि पास्कल नियम शुरू हो सके।"
+       ],
+       [
+        "Ex: $1+{}^{11}C_{10}={}^{11}C_{11}+{}^{11}C_{10}={}^{12}C_{11}=12$.",
+        "उदा.: $1+{}^{11}C_{10}={}^{11}C_{11}+{}^{11}C_{10}={}^{12}C_{11}=12$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Series Type 3",
+    "hi": "श्रेणी का योग: प्रकार 3",
+    "items": [
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind if the sign changes alternately in a series involving binomial coefficients?",
+       "द्विपद गुणांकों वाली श्रेणी में चिह्न बारी-बारी से बदलता हो तो किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Put $x=-1$: $\\sum(-1)^r\\,{}^nC_r=0$. For a partial sum $\\displaystyle\\sum_{r=0}^{k}(-1)^r\\,{}^nC_r=(-1)^k\\,{}^{n-1}C_k$.",
+        "$x=-1$ रखिए: $\\sum(-1)^r\\,{}^nC_r=0$। आंशिक योग के लिए $\\displaystyle\\sum_{r=0}^{k}(-1)^r\\,{}^nC_r=(-1)^k\\,{}^{n-1}C_k$।"
+       ],
+       [
+        "Ex: ${}^{20}C_0-{}^{20}C_1+\\dots+{}^{20}C_{10}={}^{19}C_{10}=\\frac12\\,{}^{20}C_{10}=92378$.",
+        "उदा.: ${}^{20}C_0-{}^{20}C_1+\\dots+{}^{20}C_{10}={}^{19}C_{10}=\\frac12\\,{}^{20}C_{10}=92378$।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of coefficients of even powers of $x$ in an expansion?",
+       "किसी प्रसार में $x$ की सम घातों के गुणांकों का योग कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "For $f(x)=\\sum a_rx^r$: $a_0+a_2+a_4+\\dots=\\dfrac{f(1)+f(-1)}2$.",
+        "$f(x)=\\sum a_rx^r$ के लिए: $a_0+a_2+a_4+\\dots=\\dfrac{f(1)+f(-1)}2$।"
+       ],
+       [
+        "Ex: $(1-x+x^2)^n$: $a_0+a_2+\\dots=\\dfrac{1+3^n}2$.",
+        "उदा.: $(1-x+x^2)^n$: $a_0+a_2+\\dots=\\dfrac{1+3^n}2$।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of coefficients of odd powers of $x$ in an expansion?",
+       "किसी प्रसार में $x$ की विषम घातों के गुणांकों का योग कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "$a_1+a_3+a_5+\\dots=\\dfrac{f(1)-f(-1)}2$.",
+        "$a_1+a_3+a_5+\\dots=\\dfrac{f(1)-f(-1)}2$।"
+       ],
+       [
+        "Ex: ${}^nC_1+{}^nC_3+{}^nC_5+\\dots=2^{n-1}$.",
+        "उदा.: ${}^nC_1+{}^nC_3+{}^nC_5+\\dots=2^{n-1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to apply the Friedrich Karl Gauss technique and how to apply it?",
+       "फ्रेडरिक कार्ल गॉस विधि कब और कैसे लगाते हैं?"
+      ],
+      "a": [
+       [
+        "When terms equally distant from the ends pair up (${}^nC_r={}^nC_{n-r}$): write the sum forward and in reverse order, add, so that $2S=\\sum(t_r+t_{n-r})$.",
+        "जब सिरों से समान दूरी वाले पद युग्म बनाते हों (${}^nC_r={}^nC_{n-r}$): योग को सीधे तथा उल्टे क्रम में लिखकर जोड़िए, तब $2S=\\sum(t_r+t_{n-r})$।"
+       ],
+       [
+        "Ex: $S=\\sum r\\,{}^nC_r$: $2S=n\\sum{}^nC_r=n2^n\\Rightarrow S=n2^{n-1}$.",
+        "उदा.: $S=\\sum r\\,{}^nC_r$: $2S=n\\sum{}^nC_r=n2^n\\Rightarrow S=n2^{n-1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "When the general term contains $r$ (type 1), how to remove $r$?",
+       "जब सामान्य पद में $r$ (गुणक) हो (प्रकार 1) तो $r$ को कैसे हटाते हैं?"
+      ],
+      "a": [
+       "$r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1},\\qquad r(r-1)\\,{}^nC_r=n(n-1)\\,{}^{n-2}C_{r-2}$",
+       [
+        "Ex: $\\sum_{r=1}^n r\\,{}^nC_r=n\\sum{}^{n-1}C_{r-1}=n2^{n-1}$.",
+        "उदा.: $\\sum_{r=1}^n r\\,{}^nC_r=n\\sum{}^{n-1}C_{r-1}=n2^{n-1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "44",
+      "o": 44,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "When the general term contains $r^2$ (type 1), how to remove $r^2$?",
+       "जब सामान्य पद में $r^2$ हो (प्रकार 1) तो $r^2$ को कैसे हटाते हैं?"
+      ],
+      "a": [
+       [
+        "Write $r^2=r(r-1)+r$ and use the result of item {#43} on each part.",
+        "$r^2=r(r-1)+r$ लिखिए और प्रत्येक भाग पर प्रश्न {#43} का परिणाम लगाइए।"
+       ],
+       "$\\sum r^2\\,{}^nC_r=n(n-1)2^{n-2}+n2^{n-1}=n(n+1)2^{n-2}$",
+       [
+        "Ex: $n=10$: $\\sum r^2\\,{}^{10}C_r=10\\cdot11\\cdot2^8=28160$.",
+        "उदा.: $n=10$: $\\sum r^2\\,{}^{10}C_r=10\\cdot11\\cdot2^8=28160$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Series Type 4",
+    "hi": "श्रेणी का योग: प्रकार 4",
+    "items": [
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How and when to use differentiation to find the sum of a series of binomial coefficients?",
+       "द्विपद गुणांकों की श्रेणी का योग ज्ञात करने में अवकलन कब और कैसे प्रयोग करते हैं?"
+      ],
+      "a": [
+       [
+        "When the terms carry a factor $r$, $r-1,\\dots$ (no denominator): differentiate $(1+x)^n$ (or $x^k(1+x)^n$) once or twice and put $x=1$ (or $-1$).",
+        "जब पदों में $r$, $r-1,\\dots$ का गुणक हो (हर नहीं): $(1+x)^n$ (या $x^k(1+x)^n$) का एक या दो बार अवकलन करके $x=1$ (या $-1$) रखिए।"
+       ],
+       [
+        "Ex: $(1+x)^n$ differentiated: $n(1+x)^{n-1}=\\sum r\\,{}^nC_rx^{r-1}$; at $x=1$: $\\sum r\\,{}^nC_r=n2^{n-1}$.",
+        "उदा.: $(1+x)^n$ का अवकलन: $n(1+x)^{n-1}=\\sum r\\,{}^nC_rx^{r-1}$; $x=1$ पर $\\sum r\\,{}^nC_r=n2^{n-1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How and when to use integration to find the sum of a series of binomial coefficients?",
+       "द्विपद गुणांकों की श्रेणी का योग ज्ञात करने में समाकलन कब और कैसे प्रयोग करते हैं?"
+      ],
+      "a": [
+       [
+        "When the terms carry $\\dfrac1{r+1},\\dfrac1{r+2},\\dots$: integrate $(1+x)^n$ (or $x^k(1+x)^n$) from $0$ to $1$ (or $0$ to $x$).",
+        "जब पदों में $\\dfrac1{r+1},\\dfrac1{r+2},\\dots$ का गुणक हो: $(1+x)^n$ (या $x^k(1+x)^n$) का $0$ से $1$ (या $0$ से $x$) तक समाकलन कीजिए।"
+       ],
+       "$\\displaystyle\\sum_{r=0}^n\\dfrac{{}^nC_r}{r+1}=\\dfrac{2^{n+1}-1}{n+1}$",
+       [
+        "Ex: $n=3$: $1+\\frac32+1+\\frac14=\\frac{15}4=\\frac{2^4-1}4$.",
+        "उदा.: $n=3$: $1+\\frac32+1+\\frac14=\\frac{15}4=\\frac{2^4-1}4$।"
+       ]
+      ]
+     },
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to convert an integration-based question to type 1?",
+       "समाकलन आधारित प्रश्न को प्रकार 1 में कैसे बदलते हैं?"
+      ],
+      "a": [
+       [
+        "Use $\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$ (and similarly for $r+2$) to absorb the denominator, then sum as in type 1.",
+        "$\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$ (इसी प्रकार $r+2$ के लिए) से हर समाहित कीजिए, फिर प्रकार 1 की तरह योग कीजिए।"
+       ],
+       [
+        "Ex: $\\sum_{r=0}^n\\dfrac{{}^nC_r}{r+1}=\\dfrac1{n+1}\\sum_{r=0}^n{}^{n+1}C_{r+1}=\\dfrac{2^{n+1}-1}{n+1}$.",
+        "उदा.: $\\sum_{r=0}^n\\dfrac{{}^nC_r}{r+1}=\\dfrac1{n+1}\\sum_{r=0}^n{}^{n+1}C_{r+1}=\\dfrac{2^{n+1}-1}{n+1}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Series Type 5",
+    "hi": "श्रेणी का योग: प्रकार 5",
+    "items": [
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to identify whether a question is of type 5?",
+       "कैसे पहचानें कि प्रश्न प्रकार 5 का है?"
+      ],
+      "a": [
+       [
+        "Each term is a product ${}^nC_{r}\\cdot{}^mC_{s}$ (or a sum of squares) in which $r+s$ is constant (sum pattern) or $r-s$ is constant (difference pattern).",
+        "प्रत्येक पद गुणनफल ${}^nC_{r}\\cdot{}^mC_{s}$ (या वर्गों का योग) है जिसमें $r+s$ अचर (योग प्रतिरूप) या $r-s$ अचर (अन्तर प्रतिरूप) हो।"
+       ],
+       [
+        "Ex: ${}^{10}C_0{}^{15}C_{12}+{}^{10}C_1{}^{15}C_{11}+\\dots$ has lower suffixes adding to $12$: sum pattern.",
+        "उदा.: ${}^{10}C_0{}^{15}C_{12}+{}^{10}C_1{}^{15}C_{11}+\\dots$ में निचले सूचकांकों का योग $12$: योग प्रतिरूप।"
+       ]
+      ]
+     },
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the trick in \"sum = constant\" pattern questions of type 5?",
+       "प्रकार 5 के \"योग = अचर\" प्रतिरूप के प्रश्नों में शॉर्टकट कैसे प्रयोग करते हैं?"
+      ],
+      "a": [
+       "$\\displaystyle\\sum_{r}{}^nC_r\\,{}^mC_{k-r}={}^{n+m}C_k$",
+       [
+        "Ex: ${}^{10}C_0{}^{15}C_{12}+{}^{10}C_1{}^{15}C_{11}+\\dots+{}^{10}C_{10}{}^{15}C_2={}^{25}C_{12}$; $\\sum({}^nC_r)^2={}^{2n}C_n$.",
+        "उदा.: ${}^{10}C_0{}^{15}C_{12}+{}^{10}C_1{}^{15}C_{11}+\\dots+{}^{10}C_{10}{}^{15}C_2={}^{25}C_{12}$; $\\sum({}^nC_r)^2={}^{2n}C_n$।"
+       ]
+      ]
+     },
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the trick in \"difference = constant\" pattern questions of type 5?",
+       "प्रकार 5 के \"अन्तर = अचर\" प्रतिरूप के प्रश्नों में शॉर्टकट कैसे प्रयोग करते हैं?"
+      ],
+      "a": [
+       "$\\displaystyle\\sum_{r}{}^nC_r\\,{}^mC_{r+k}={}^{n+m}C_{n+k}$",
+       [
+        "Ex: $\\sum{}^nC_r\\,{}^nC_{r+1}={}^{2n}C_{n+1}$.",
+        "उदा.: $\\sum{}^nC_r\\,{}^nC_{r+1}={}^{2n}C_{n+1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "51",
+      "o": 51,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to do \"sum = constant\" pattern questions of type 5 subjectively?",
+       "प्रकार 5 के \"योग = अचर\" प्रतिरूप के प्रश्न विस्तार से कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Multiply $(1+x)^n=\\sum{}^nC_rx^r$ and $(1+x)^m=\\sum{}^mC_sx^s$ and compare the coefficient of $x^k$ with that in $(1+x)^{n+m}$.",
+        "$(1+x)^n=\\sum{}^nC_rx^r$ तथा $(1+x)^m=\\sum{}^mC_sx^s$ का गुणन करके $x^k$ के गुणांक की $(1+x)^{n+m}$ से तुलना कीजिए।"
+       ],
+       [
+        "Ex: $(1+x)^n(x+1)^n$: coefficient of $x^n$ gives $\\sum({}^nC_r)^2={}^{2n}C_n$.",
+        "उदा.: $(1+x)^n(x+1)^n$ में $x^n$ का गुणांक: $\\sum({}^nC_r)^2={}^{2n}C_n$।"
+       ]
+      ]
+     },
+     {
+      "id": "52",
+      "o": 52,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to do \"difference = constant\" pattern questions of type 5 subjectively?",
+       "प्रकार 5 के \"अन्तर = अचर\" प्रतिरूप के प्रश्न विस्तार से कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Write one expansion in reverse order of powers, e.g. $(x+1)^m=\\sum{}^mC_sx^{m-s}$, multiply with $(1+x)^n$ and compare the suitable coefficient of $(1+x)^{n+m}$.",
+        "एक प्रसार को घातों के उल्टे क्रम में लिखिए, जैसे $(x+1)^m=\\sum{}^mC_sx^{m-s}$, उसे $(1+x)^n$ से गुणा कीजिए और $(1+x)^{n+m}$ के उपयुक्त गुणांक से तुलना कीजिए।"
+       ],
+       [
+        "Ex: $\\sum{}^nC_r{}^nC_{r+1}$: powers $r+(n-r-1)=n-1$, so it equals the coefficient of $x^{n-1}$ in $(1+x)^{2n}$, i.e. ${}^{2n}C_{n-1}$.",
+        "उदा.: $\\sum{}^nC_r{}^nC_{r+1}$: घातें $r+(n-r-1)=n-1$, अतः यह $(1+x)^{2n}$ में $x^{n-1}$ का गुणांक ${}^{2n}C_{n-1}$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous Questions on Summation of Series",
+    "hi": "श्रेणी के योग पर विविध प्रश्न",
+    "items": [
+     {
+      "id": "53",
+      "o": 53,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Observation of a GP in series questions.",
+       "श्रेणी वाले प्रश्नों में GP की पहचान।"
+      ],
+      "a": [
+       [
+        "Terms like $(1+x)^m+x(1+x)^{m-1}+\\dots+x^m$ or $(1+x)^k,\\ k=r..m$ form a GP: sum with ratio $\\frac x{1+x}$ (or $1+x$), then find the required coefficient.",
+        "$(1+x)^m+x(1+x)^{m-1}+\\dots+x^m$ या $(1+x)^k,\\ k=r..m$ जैसे पद GP बनाते हैं: सार्व अनुपात $\\frac x{1+x}$ (या $1+x$) से योग लीजिए, फिर अभीष्ट गुणांक ज्ञात कीजिए।"
+       ],
+       [
+        "Ex: $(1+x)^5+x(1+x)^4+\\dots+x^5=(1+x)^6-x^6$, so the coefficient of $x^3$ is ${}^6C_3=20$.",
+        "उदा.: $(1+x)^5+x(1+x)^4+\\dots+x^5=(1+x)^6-x^6$, अतः $x^3$ का गुणांक ${}^6C_3=20$।"
+       ]
+      ]
+     },
+     {
+      "id": "54",
+      "o": 54,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Use of the properties of ${}^nC_r$ in series questions.",
+       "श्रेणी वाले प्रश्नों में ${}^nC_r$ के गुणधर्मों का उपयोग।"
+      ],
+      "a": [
+       [
+        "Use ${}^nC_r={}^nC_{n-r}$ to pair terms or to write half of a symmetric sum; for odd $n$: ${}^nC_0+\\dots+{}^nC_{\\frac{n-1}2}=2^{n-1}$.",
+        "${}^nC_r={}^nC_{n-r}$ से पदों के युग्म बनाइए या सममित योग का आधा लिखिए; विषम $n$ के लिए: ${}^nC_0+\\dots+{}^nC_{\\frac{n-1}2}=2^{n-1}$।"
+       ],
+       [
+        "Ex: $\\sum_{r=1}^{10}{}^{21}C_r=2^{20}-1$.",
+        "उदा.: $\\sum_{r=1}^{10}{}^{21}C_r=2^{20}-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "55",
+      "o": 55,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write an expansion with coefficients in reverse order of powers of $x$?",
+       "किसी प्रसार को $x$ की घातों के उल्टे क्रम में गुणांकों सहित कैसे लिखते हैं?"
+      ],
+      "a": [
+       [
+        "$(1+x)^n=C_0+C_1x+\\dots+C_nx^n$ and $(x+1)^n=C_0x^n+C_1x^{n-1}+\\dots+C_n$ are the same polynomial with coefficients reversed; use this to multiply and compare coefficients.",
+        "$(1+x)^n=C_0+C_1x+\\dots+C_nx^n$ तथा $(x+1)^n=C_0x^n+C_1x^{n-1}+\\dots+C_n$ एक ही बहुपद हैं जिनके गुणांक उल्टे क्रम में हैं; गुणन व गुणांक तुलना में इसका उपयोग कीजिए।"
+       ],
+       [
+        "Ex: $(1+x)^2=1+2x+x^2$ and $(x+1)^2=x^2+2x+1$.",
+        "उदा.: $(1+x)^2=1+2x+x^2$ तथा $(x+1)^2=x^2+2x+1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Binomial Theorem for any Index",
+    "hi": "किसी भी घातांक के लिए द्विपद प्रमेय",
+    "items": [
+     {
+      "id": "56",
+      "o": 56,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the conditions on $n$ and $x$ for the expansion of $(1+x)^n$ if $n$ is not a natural number?",
+       "यदि $n$ प्राकृत संख्या न हो तो $(1+x)^n$ के प्रसार के लिए $n$ तथा $x$ पर क्या प्रतिबन्ध हैं?"
+      ],
+      "a": [
+       [
+        "$n$ rational (negative or fractional) and $|x|<1$; the expansion is then an infinite series.",
+        "$n$ परिमेय (ऋणात्मक या भिन्न) तथा $|x|<1$; तब प्रसार अनन्त श्रेणी होता है।"
+       ],
+       [
+        "Ex: $(3+2x)^{-3}=3^{-3}\\left(1+\\dfrac{2x}3\\right)^{-3}$ is valid for $|x|<\\dfrac32$.",
+        "उदा.: $(3+2x)^{-3}=3^{-3}\\left(1+\\dfrac{2x}3\\right)^{-3}$, $|x|<\\dfrac32$ के लिए मान्य है।"
+       ]
+      ]
+     },
+     {
+      "id": "57",
+      "o": 57,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write all 4 expansion results.",
+       "सभी 4 प्रसार परिणाम लिखिए।"
+      ],
+      "a": [
+       "$(1+x)^{n}=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots,\\qquad(1-x)^{n}=1-nx+\\dfrac{n(n-1)}{2!}x^2-\\dots$",
+       "$(1+x)^{-n}=1-nx+\\dfrac{n(n+1)}{2!}x^2-\\dots,\\qquad(1-x)^{-n}=1+nx+\\dfrac{n(n+1)}{2!}x^2+\\dots\\quad(|x|<1)$",
+       [
+        "Ex: $(1-x)^{-2}=1+2x+3x^2+\\dots$; at $x=\\frac12$: $1+\\frac22+\\frac34+\\dots=4$.",
+        "उदा.: $(1-x)^{-2}=1+2x+3x^2+\\dots$; $x=\\frac12$ पर: $1+\\frac22+\\frac34+\\dots=4$।"
+       ]
+      ]
+     },
+     {
+      "id": "58",
+      "o": 58,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the coefficient of $x^r$ in $(1-x)^{-n}$?",
+       "$(1-x)^{-n}$ में $x^r$ का गुणांक क्या है?"
+      ],
+      "a": [
+       "$\\text{coeff. of }x^r\\text{ in }(1-x)^{-n}={}^{n+r-1}C_r\\qquad\\left(\\text{in }(1+x)^{-n}:\\ (-1)^r\\,{}^{n+r-1}C_r\\right)$",
+       [
+        "Ex: coefficient of $x^5$ in $(1-x)^{-3}$ is ${}^7C_5=21$.",
+        "उदा.: $(1-x)^{-3}$ में $x^5$ का गुणांक ${}^7C_5=21$।"
+       ]
+      ]
+     },
+     {
+      "id": "59",
+      "o": 59,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the coefficient of a power of $x$ in a product of expansions when one of them is $(1-x)^{-n}$?",
+       "जब गुणनफल में एक प्रसार $(1-x)^{-n}$ हो तो $x$ की किसी घात का गुणांक कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Expand the other (polynomial) factor, multiply each of its terms $ax^k$ by the coefficient of $x^{m-k}$ in $(1-x)^{-n}$ and add.",
+        "दूसरे (बहुपद) गुणनखण्ड को प्रसारित कीजिए, उसके प्रत्येक पद $ax^k$ को $(1-x)^{-n}$ में $x^{m-k}$ के गुणांक से गुणा करके जोड़िए।"
+       ],
+       [
+        "Ex: $x^4$ in $(1-x^2)(1-x)^{-3}$: ${}^6C_4-{}^4C_2=15-6=9$.",
+        "उदा.: $(1-x^2)(1-x)^{-3}$ में $x^4$: ${}^6C_4-{}^4C_2=15-6=9$।"
+       ]
+      ]
+     },
+     {
+      "id": "60",
+      "o": 60,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we cancel a term for simplification while finding the coefficient of a power of $x$ in a product of two or more expansions?",
+       "दो या अधिक प्रसारों के गुणनफल में $x$ की घात का गुणांक ज्ञात करते समय सरलीकरण के लिए कोई पद कब हटा सकते हैं?"
+      ],
+      "a": [
+       [
+        "A factor like $(1-x^k)$ can be replaced by $1$ when $k$ exceeds the required power; common factors of numerator and denominator cancel, e.g. $\\dfrac{1-x^k}{1-x}=1+x+\\dots+x^{k-1}$.",
+        "$(1-x^k)$ जैसे गुणनखण्ड को $1$ से बदल सकते हैं जब $k$ अभीष्ट घात से बड़ा हो; अंश व हर के उभयनिष्ठ गुणनखण्ड कट जाते हैं, जैसे $\\dfrac{1-x^k}{1-x}=1+x+\\dots+x^{k-1}$।"
+       ],
+       [
+        "Ex: $x^4$ in $\\dfrac{(1-x^5)^2}{(1-x)^3}$ equals $x^4$ in $(1-x)^{-3}$: ${}^6C_4=15$.",
+        "उदा.: $\\dfrac{(1-x^5)^2}{(1-x)^3}$ में $x^4$ का गुणांक $(1-x)^{-3}$ वाले के बराबर: ${}^6C_4=15$।"
+       ]
+      ]
+     },
+     {
+      "id": "61",
+      "o": 61,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Finding the coefficient of a power of $x$ in expansions expressed in the coefficient method.",
+       "गुणांक विधि (coefficient method) में दिए प्रसारों में $x$ की किसी घात का गुणांक ज्ञात करना।"
+      ],
+      "a": [
+       [
+        "Write each factor as a series such as $1+x+x^2+\\dots=(1-x)^{-1}$ and use ${}^{n+r-1}C_r$; this counts non-negative solutions of $a+b+\\dots=r$.",
+        "प्रत्येक गुणनखण्ड को $1+x+x^2+\\dots=(1-x)^{-1}$ जैसी श्रेणी में लिखिए और ${}^{n+r-1}C_r$ का प्रयोग कीजिए; यह $a+b+\\dots=r$ के अऋणात्मक हलों को गिनता है।"
+       ],
+       [
+        "Ex: $x^{10}$ in $(1+x+x^2+\\dots)^3=(1-x)^{-3}$: ${}^{12}C_{2}=66$.",
+        "उदा.: $(1+x+x^2+\\dots)^3=(1-x)^{-3}$ में $x^{10}$: ${}^{12}C_{2}=66$।"
+       ]
+      ]
+     },
+     {
+      "id": "N6",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII): 3,4,10",
+      "q": [
+       "How to use the binomial theorem for approximations and bounds (small $x$, large powers)?",
+       "सन्निकटन व सीमाओं के लिए द्विपद प्रमेय का उपयोग कैसे करते हैं (छोटा $x$, बड़ी घात)?"
+      ],
+      "a": [
+       [
+        "For small $|x|$: $(1+x)^n\\approx1+nx$ (add $\\frac{n(n-1)}2x^2$ if needed); for bounds keep the first few positive terms, e.g. $(1+\\frac1m)^m\\ge1+1+\\dots$.",
+        "छोटे $|x|$ के लिए: $(1+x)^n\\approx1+nx$ (आवश्यक हो तो $\\frac{n(n-1)}2x^2$ जोड़िए); सीमाओं के लिए पहले कुछ धनात्मक पद रखिए, जैसे $(1+\\frac1m)^m\\ge1+1+\\dots$।"
+       ],
+       [
+        "Ex: $(1.01)^{10}\\approx1+10(0.01)=1.1$; $\\dfrac1{a+kb}\\approx\\dfrac1a\\left(1-\\dfrac{kb}a\\right)$ for small $b$.",
+        "उदा.: $(1.01)^{10}\\approx1+10(0.01)=1.1$; छोटे $b$ के लिए $\\dfrac1{a+kb}\\approx\\dfrac1a\\left(1-\\dfrac{kb}a\\right)$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "62",
+      "o": 62,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the expansions of $e^x$ and $\\ln(1+x)$.",
+       "$e^x$ तथा $\\ln(1+x)$ के प्रसार लिखिए।"
+      ],
+      "a": [
+       "$e^x=1+x+\\dfrac{x^2}{2!}+\\dfrac{x^3}{3!}+\\dots,\\qquad\\ln(1+x)=x-\\dfrac{x^2}2+\\dfrac{x^3}3-\\dots\\quad(-1<x\\le1)$",
+       [
+        "Ex: $e=\\sum\\dfrac1{n!}$, $\\ \\ln2=1-\\frac12+\\frac13-\\dots$.",
+        "उदा.: $e=\\sum\\dfrac1{n!}$, $\\ \\ln2=1-\\frac12+\\frac13-\\dots$।"
+       ]
+      ]
+     },
+     {
+      "id": "63",
+      "o": 63,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of a series based on the expansion of $e^x$, $\\ln(1+x)$?",
+       "$e^x$, $\\ln(1+x)$ के प्रसार पर आधारित श्रेणी का योग कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Write the general term as (polynomial in $n$)$/n!$, break it into $\\frac{n(n-1)}{n!}=\\frac1{(n-2)!}$ and similar pieces, and sum each piece as $e^{x}$ (for $\\ln$, match the sign and denominator with $x^n/n$).",
+        "सामान्य पद को (बहुपद in $n$)$/n!$ के रूप में लिखकर $\\frac{n(n-1)}{n!}=\\frac1{(n-2)!}$ जैसे टुकड़ों में तोड़िए और प्रत्येक का योग $e^{x}$ से लीजिए ($\\ln$ के लिए चिह्न व हर को $x^n/n$ से मिलाइए)।"
+       ],
+       [
+        "Ex: $\\sum_{n=1}^\\infty\\dfrac{n^2}{n!}=\\sum\\dfrac{n(n-1)+n}{n!}=e+e=2e$.",
+        "उदा.: $\\sum_{n=1}^\\infty\\dfrac{n^2}{n!}=\\sum\\dfrac{n(n-1)+n}{n!}=e+e=2e$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Binomial theorem and basics",
+    "hi": "1. द्विपद प्रमेय व मूल बातें",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$(x+y)^n=\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r,\\qquad(1\\pm x)^n=\\displaystyle\\sum_{r=0}^n(\\pm1)^r\\,{}^nC_rx^r$",
+        "$(x+y)^n=\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r,\\qquad(1\\pm x)^n=\\displaystyle\\sum_{r=0}^n(\\pm1)^r\\,{}^nC_rx^r$"
+       ],
+       [
+        "${}^nC_r={}^nC_{n-r},\\qquad{}^nC_r+{}^nC_{r-1}={}^{n+1}C_r,\\qquad\\sum{}^nC_r=2^n$",
+        "${}^nC_r={}^nC_{n-r},\\qquad{}^nC_r+{}^nC_{r-1}={}^{n+1}C_r,\\qquad\\sum{}^nC_r=2^n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Monomial 1 term, binomial 2, trinomial 3, multinomial more than 2; Pascal's triangle gives the coefficients row by row",
+        "एकपदी 1 पद, द्विपद 2, त्रिपद 3, बहुपद 2 से अधिक; पास्कल त्रिभुज की पंक्ति से गुणांक मिलते हैं"
+       ],
+       [
+        "$n+1$ terms; powers of $x$ and $y$ add up to $n$ in every term",
+        "$n+1$ पद; प्रत्येक पद में $x,y$ की घातों का योग $n$"
+       ],
+       [
+        "Binomial coefficient = ${}^nC_r$ only; coefficient includes the numbers attached to $x,y$",
+        "द्विपद गुणांक केवल ${}^nC_r$; गुणांक में $x,y$ से जुड़ी संख्याएँ भी आती हैं"
+       ],
+       [
+        "Sum of coefficients: put variable $=1$; sum of binomial coefficients $=2^n$",
+        "गुणांकों का योग: चर $=1$ रखिए; द्विपद गुणांकों का योग $=2^n$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. General term, rational terms, term from the end",
+    "hi": "2. सामान्य पद, परिमेय पद, अन्त से पद",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$T_{r+1}={}^nC_r\\,x^{n-r}y^r,\\qquad k\\text{th term from the end}=T_{n-k+2}$",
+        "$T_{r+1}={}^nC_r\\,x^{n-r}y^r,\\qquad k\\text{th term from the end}=T_{n-k+2}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write $T_{r+1}$ and collect the power of $x$",
+        "$T_{r+1}$ लिखिए और $x$ की घात निकालिए"
+       ],
+       [
+        "Equate it to the required power (0 for the independent term) and solve for $r$",
+        "उसे अभीष्ट घात (स्वतन्त्र पद के लिए 0) के बराबर रखकर $r$ ज्ञात कीजिए"
+       ],
+       [
+        "Accept $r$ only if it is an integer with $0\\le r\\le n$, else the coefficient is $0$",
+        "$r$ तभी स्वीकार करें जब वह पूर्णांक तथा $0\\le r\\le n$ हो, अन्यथा गुणांक $0$"
+       ],
+       [
+        "Rational terms: make every fractional power an integer; $r$ is a multiple of the lcm of the denominators",
+        "परिमेय पद: प्रत्येक भिन्नात्मक घात पूर्णांक बनाइए; $r$ हरों के ल.स. का गुणज"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Ratio of consecutive terms $\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$; use it for three consecutive coefficients in a ratio or AP",
+        "क्रमागत पदों का अनुपात $\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$; तीन क्रमागत गुणांक अनुपात या समान्तर श्रेढ़ी में हों तो प्रयोग कीजिए"
+       ],
+       [
+        "${}^nC_x={}^nC_y\\Rightarrow x=y$ or $x+y=n$",
+        "${}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$"
+       ],
+       [
+        "Term with a parameter ($\\sin\\theta$ etc.): write the term, then use its bounds for max / min",
+        "प्राचल ($\\sin\\theta$ आदि) वाले पद में पद लिखकर उसकी सीमाओं से अधिकतम / न्यूनतम ज्ञात कीजिए"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Do not forget the sign of $y$ and powers of numbers like $(2x)^{n-r}$",
+        "$y$ का चिह्न तथा $(2x)^{n-r}$ जैसी संख्याओं की घात न भूलें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Middle term and products of expansions",
+    "hi": "3. मध्य पद व प्रसारों का गुणनफल",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$n\\text{ even}:\\ T_{\\frac n2+1};\\qquad n\\text{ odd}:\\ T_{\\frac{n+1}2},\\ T_{\\frac{n+3}2}$",
+        "$n\\text{ even}:\\ T_{\\frac n2+1};\\qquad n\\text{ odd}:\\ T_{\\frac{n+1}2},\\ T_{\\frac{n+3}2}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Middle term has the greatest binomial coefficient (${}^nC_{n/2}$ or ${}^nC_{(n\\pm1)/2}$)",
+        "मध्य पद का द्विपद गुणांक महत्तम होता है (${}^nC_{n/2}$ या ${}^nC_{(n\\pm1)/2}$)"
+       ],
+       [
+        "Product of expansions: pair general terms whose powers add up to the required power and add the products of coefficients",
+        "प्रसारों का गुणनफल: जिनकी घातों का योग अभीष्ट घात हो उन सामान्य पदों के गुणांकों के गुणनफल जोड़िए"
+       ],
+       [
+        "Factorise or sum a GP first when it makes the factors binomials",
+        "यदि गुणनखण्ड द्विपद बन सकें तो पहले गुणनखण्डन या GP का योग कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Numerically greatest term (NGT)",
+    "hi": "4. संख्यात्मक रूप से महत्तम पद",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$p=\\dfrac{n+1}{1+\\left|\\frac ab\\right|}\\ \\text{ for }(a+b)^n$",
+        "$p=\\dfrac{n+1}{1+\\left|\\frac ab\\right|}\\ \\text{ for }(a+b)^n$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Compute $p$ (use $|a/b|$)",
+        "$p$ ज्ञात कीजिए ($|a/b|$ लेकर)"
+       ],
+       [
+        "$p$ not an integer: NGT $=T_{[p]+1}$",
+        "$p$ पूर्णांक नहीं: महत्तम पद $=T_{[p]+1}$"
+       ],
+       [
+        "$p$ an integer: $T_p$ and $T_{p+1}$ are equal and both NGT",
+        "$p$ पूर्णांक: $T_p$ व $T_{p+1}$ बराबर और दोनों महत्तम"
+       ],
+       [
+        "Position $T_k$ given: $k-1<p<k$ (single NGT) or $p=k$ (two NGT); solve for $x$ or $n$",
+        "स्थिति $T_k$ दी हो: $k-1<p<k$ (एक महत्तम पद) या $p=k$ (दो महत्तम पद); $x$ या $n$ हल कीजिए"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Take modulus: NGT concerns $|T_r|$, signs are ignored",
+        "मापांक लीजिए: महत्तम पद में $|T_r|$ देखा जाता है, चिह्न नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Remainders, divisibility, last digits",
+    "hi": "5. शेषफल, विभाज्यता, अन्तिम अंक",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$a^n-b^n:\\ \\text{divisible by }a-b\\ \\forall n;\\ \\text{by }a+b\\text{ if }n\\text{ even}$",
+        "$a^n-b^n:\\ \\text{divisible by }a-b\\ \\forall n;\\ \\text{by }a+b\\text{ if }n\\text{ even}$"
+       ],
+       [
+        "$a^n+b^n:\\ \\text{divisible by }a+b\\text{ if }n\\text{ odd}$",
+        "$a^n+b^n:\\ \\text{divisible by }a+b\\text{ if }n\\text{ odd}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write the base as (multiple of divisor) $\\pm$ small number",
+        "आधार को (भाजक का गुणज) $\\pm$ छोटी संख्या में लिखिए"
+       ],
+       [
+        "If the base is small, first raise it to a power that is close to a multiple of the divisor",
+        "आधार छोटा हो तो पहले उसकी ऐसी घात लीजिए जो भाजक के गुणज के निकट हो"
+       ],
+       [
+        "Expand; all terms except the last (or first two for $d^2$) are divisible by the divisor",
+        "प्रसारित कीजिए; अन्तिम पद (या $d^2$ के लिए पहले दो) के अतिरिक्त सभी पद भाजक से विभाज्य"
+       ],
+       [
+        "Negative remainder: add the divisor",
+        "ऋणात्मक शेषफल: भाजक जोड़िए"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Last 1, 2, 3 digits = remainder mod $10,100,1000$; write leading zeros",
+        "अन्तिम 1, 2, 3 अंक = $10,100,1000$ से शेषफल; आगे के शून्य लिखिए"
+       ],
+       [
+        "$(1+kd)^n\\equiv1+nkd\\pmod{d^2}$",
+        "$(1+kd)^n\\equiv1+nkd\\pmod{d^2}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Integral and fractional part",
+    "hi": "6. पूर्णांक भाग व भिन्नात्मक भाग",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$R=(a+\\sqrt b)^n=I+f,\\quad G=(a-\\sqrt b)^n,\\quad R+G\\in\\mathbb Z,\\quad RG=(a^2-b)^n$",
+        "$R=(a+\\sqrt b)^n=I+f,\\quad G=(a-\\sqrt b)^n,\\quad R+G\\in\\mathbb Z,\\quad RG=(a^2-b)^n$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Take the conjugate $G$ and check whether $0<G<1$ or $-1<G<0$",
+        "संयुग्मी $G$ लीजिए और देखिए $0<G<1$ है या $-1<G<0$"
+       ],
+       [
+        "$0<G<1$: $f+G=1$, $I=R+G-1$; $-1<G<0$: $f=-G$, $I=R+G$",
+        "$0<G<1$: $f+G=1$, $I=R+G-1$; $-1<G<0$: $f=-G$, $I=R+G$"
+       ],
+       [
+        "Parity of $I$ from the even / odd integer $R+G$",
+        "$I$ की समता सम / विषम पूर्णांक $R+G$ से"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$(a+\\sqrt b)^n\\pm(a-\\sqrt b)^n$ keeps only even (or odd) $r$ and is twice the surviving sum",
+        "$(a+\\sqrt b)^n\\pm(a-\\sqrt b)^n$ में केवल सम (या विषम) $r$ बचते हैं और यह बचे योग का दुगुना है"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Multinomial theorem",
+    "hi": "7. बहुपद प्रमेय",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{n!}{r_1!\\,r_2!\\cdots r_k!}\\,x_1^{r_1}\\cdots x_k^{r_k},\\quad\\sum r_i=n$",
+        "$\\dfrac{n!}{r_1!\\,r_2!\\cdots r_k!}\\,x_1^{r_1}\\cdots x_k^{r_k},\\quad\\sum r_i=n$"
+       ],
+       [
+        "$\\text{number of dissimilar terms}={}^{n+k-1}C_{k-1}$",
+        "$\\text{number of dissimilar terms}={}^{n+k-1}C_{k-1}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write the general term and impose $\\sum r_i=n$",
+        "सामान्य पद लिखिए तथा $\\sum r_i=n$ रखिए"
+       ],
+       [
+        "Impose the power of $x$; list all non-negative integer solutions",
+        "$x$ की घात की शर्त रखिए; सभी अऋणात्मक पूर्णांक हल लिखिए"
+       ],
+       [
+        "Add the corresponding coefficients",
+        "संगत गुणांक जोड़िए"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Factorise the base (e.g. $(x-2)(x+1)$) before expanding",
+        "प्रसार से पहले आधार का गुणनखण्डन कीजिए (जैसे $(x-2)(x+1)$)"
+       ],
+       [
+        "Distinct terms in a sum of expansions: take the union of the powers present",
+        "प्रसारों के योग में भिन्न पद: उपस्थित घातों का संघ लीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Summation of series, types 1 and 2",
+    "hi": "8. श्रेणी का योग: प्रकार 1 व 2",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r=(x+y)^n,\\qquad\\sum_{k=r}^m{}^kC_r={}^{m+1}C_{r+1}$",
+        "$\\displaystyle\\sum_{r=0}^n{}^nC_r\\,x^{n-r}y^r=(x+y)^n,\\qquad\\sum_{k=r}^m{}^kC_r={}^{m+1}C_{r+1}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Type 1 (lower suffix varies, powers of $r$): read $x$, $y$, $n$ from the general term",
+        "प्रकार 1 (निचला सूचकांक बदले, $r$ की घातें): सामान्य पद से $x$, $y$, $n$ पढ़िए"
+       ],
+       [
+        "Check the limits: if the sum starts at $r=1$ subtract the $r=0$ term",
+        "सीमाएँ देखिए: योग $r=1$ से हो तो $r=0$ का पद घटाइए"
+       ],
+       [
+        "Type 2 (upper suffix varies): combine from the first two terms with ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$",
+        "प्रकार 2 (ऊपरी सूचकांक बदले): पहले दो पदों से ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$ द्वारा जोड़िए"
+       ],
+       [
+        "Write $1$ as ${}^kC_k$ when the first term is a 1",
+        "पहला पद 1 हो तो उसे ${}^kC_k$ लिखिए"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Sign $(-1)^r$ makes $y$ negative; check powers like $4^r=(2^2)^r$",
+        "चिह्न $(-1)^r$ से $y$ ऋणात्मक होता है; $4^r=(2^2)^r$ जैसी घातें जाँचिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Summation type 3 (sign change, even / odd, removing $r$)",
+    "hi": "9. योग प्रकार 3 (चिह्न परिवर्तन, सम / विषम, $r$ हटाना)",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$a_0+a_2+\\dots=\\dfrac{f(1)+f(-1)}2,\\qquad a_1+a_3+\\dots=\\dfrac{f(1)-f(-1)}2$",
+        "$a_0+a_2+\\dots=\\dfrac{f(1)+f(-1)}2,\\qquad a_1+a_3+\\dots=\\dfrac{f(1)-f(-1)}2$"
+       ],
+       [
+        "$r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1},\\qquad\\sum r\\,{}^nC_r=n2^{n-1},\\qquad\\sum r^2\\,{}^nC_r=n(n+1)2^{n-2}$",
+        "$r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1},\\qquad\\sum r\\,{}^nC_r=n2^{n-1},\\qquad\\sum r^2\\,{}^nC_r=n(n+1)2^{n-2}$"
+       ],
+       [
+        "$\\displaystyle\\sum_{r=0}^k(-1)^r\\,{}^nC_r=(-1)^k\\,{}^{n-1}C_k$",
+        "$\\displaystyle\\sum_{r=0}^k(-1)^r\\,{}^nC_r=(-1)^k\\,{}^{n-1}C_k$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Alternating signs: put $x=-1$ (full sum $=0$; partial sum by the formula)",
+        "बारी-बारी चिह्न: $x=-1$ रखिए (पूरा योग $=0$; आंशिक योग सूत्र से)"
+       ],
+       [
+        "Factor $r$ or $r(r-1)$ in the term: remove it with $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$",
+        "पद में गुणक $r$ या $r(r-1)$ हो तो $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$ से हटाइए"
+       ],
+       [
+        "For $r^2$ write $r^2=r(r-1)+r$",
+        "$r^2$ के लिए $r^2=r(r-1)+r$ लिखिए"
+       ],
+       [
+        "Gauss technique: reverse the sum, add, $2S=\\sum(t_r+t_{n-r})$",
+        "गॉस विधि: योग उल्टा लिखकर जोड़िए, $2S=\\sum(t_r+t_{n-r})$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Summation type 4 (differentiation, integration)",
+    "hi": "10. योग प्रकार 4 (अवकलन, समाकलन)",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\displaystyle\\sum_{r=0}^n\\dfrac{{}^nC_r}{r+1}=\\dfrac{2^{n+1}-1}{n+1},\\qquad\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$",
+        "$\\displaystyle\\sum_{r=0}^n\\dfrac{{}^nC_r}{r+1}=\\dfrac{2^{n+1}-1}{n+1},\\qquad\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Factor $r,\\ r-1$ in the numerator (no denominator): differentiate $(1+x)^n$, then put $x=1$ or $-1$",
+        "अंश में गुणक $r,\\ r-1$ (हर नहीं): $(1+x)^n$ का अवकलन करके $x=1$ या $-1$ रखिए"
+       ],
+       [
+        "Denominator $r+1,\\ r+2$: integrate $(1+x)^n$ (or $x^k(1+x)^n$) between $0$ and $1$",
+        "हर $r+1,\\ r+2$: $(1+x)^n$ (या $x^k(1+x)^n$) का $0$ से $1$ तक समाकलन कीजिए"
+       ],
+       [
+        "Or convert to type 1 by absorbing the denominator in ${}^{n+1}C_{r+1}$",
+        "या हर को ${}^{n+1}C_{r+1}$ में समाहित कर प्रकार 1 में बदलिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Summation type 5 (product of two binomial coefficients)",
+    "hi": "11. योग प्रकार 5 (दो द्विपद गुणांकों का गुणनफल)",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\displaystyle\\sum_r{}^nC_r\\,{}^mC_{k-r}={}^{n+m}C_k,\\qquad\\sum_r{}^nC_r\\,{}^mC_{r+k}={}^{n+m}C_{n+k}$",
+        "$\\displaystyle\\sum_r{}^nC_r\\,{}^mC_{k-r}={}^{n+m}C_k,\\qquad\\sum_r{}^nC_r\\,{}^mC_{r+k}={}^{n+m}C_{n+k}$"
+       ],
+       [
+        "$\\sum({}^nC_r)^2={}^{2n}C_n$",
+        "$\\sum({}^nC_r)^2={}^{2n}C_n$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Identify: lower suffixes with constant sum (sum pattern) or constant difference",
+        "पहचानिए: निचले सूचकांकों का योग अचर (योग प्रतिरूप) या अन्तर अचर"
+       ],
+       [
+        "Objective: use the formula directly",
+        "वस्तुनिष्ठ: सूत्र सीधे लगाइए"
+       ],
+       [
+        "Subjective: multiply $(1+x)^n$ and $(1+x)^m$ (one written in reverse powers for the difference pattern) and compare the coefficient of $x^k$",
+        "विस्तृत: $(1+x)^n$ व $(1+x)^m$ का गुणन कीजिए (अन्तर प्रतिरूप में एक को उल्टी घातों में लिखिए) और $x^k$ का गुणांक तुलना कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Miscellaneous series questions",
+    "hi": "12. श्रेणी पर विविध प्रश्न",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$(1+x)^m+x(1+x)^{m-1}+\\dots+x^m=(1+x)^{m+1}-x^{m+1}$",
+        "$(1+x)^m+x(1+x)^{m-1}+\\dots+x^m=(1+x)^{m+1}-x^{m+1}$"
+       ],
+       [
+        "$(1+x)^n=C_0+\\dots+C_nx^n,\\quad(x+1)^n=C_0x^n+\\dots+C_n$",
+        "$(1+x)^n=C_0+\\dots+C_nx^n,\\quad(x+1)^n=C_0x^n+\\dots+C_n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Look for a GP in the terms (ratio $\\frac x{1+x}$ or $1+x$) and sum it first",
+        "पदों में GP देखिए (अनुपात $\\frac x{1+x}$ या $1+x$) और पहले उसका योग कीजिए"
+       ],
+       [
+        "Use ${}^nC_r={}^nC_{n-r}$ for pairing and for half of a symmetric sum",
+        "${}^nC_r={}^nC_{n-r}$ से युग्म बनाइए या सममित योग का आधा लीजिए"
+       ],
+       [
+        "Reverse the order of powers to match terms when multiplying expansions",
+        "गुणन में पद मिलाने के लिए घातों का क्रम उल्टा कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Binomial theorem for any index",
+    "hi": "13. किसी भी घातांक के लिए द्विपद प्रमेय",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$(1+x)^n=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots,\\qquad(1-x)^{-n}=1+nx+\\dfrac{n(n+1)}{2!}x^2+\\dots$",
+        "$(1+x)^n=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots,\\qquad(1-x)^{-n}=1+nx+\\dfrac{n(n+1)}{2!}x^2+\\dots$"
+       ],
+       [
+        "$\\text{coeff. of }x^r\\text{ in }(1-x)^{-n}={}^{n+r-1}C_r\\quad(|x|<1)$",
+        "$\\text{coeff. of }x^r\\text{ in }(1-x)^{-n}={}^{n+r-1}C_r\\quad(|x|<1)$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Take the constant out: $(a+bx)^n=a^n\\left(1+\\frac bax\\right)^n$; valid for $\\left|\\frac bax\\right|<1$",
+        "अचर बाहर निकालिए: $(a+bx)^n=a^n\\left(1+\\frac bax\\right)^n$; $\\left|\\frac bax\\right|<1$ के लिए मान्य"
+       ],
+       [
+        "Product with $(1-x)^{-n}$: expand the polynomial factor and add term-wise coefficients",
+        "$(1-x)^{-n}$ के साथ गुणनफल: बहुपद गुणनखण्ड प्रसारित कर पदवार गुणांक जोड़िए"
+       ],
+       [
+        "Drop $(1-x^k)$ when $k$ exceeds the required power; cancel common factors",
+        "$k$ अभीष्ट घात से बड़ा हो तो $(1-x^k)$ हटाइए; उभयनिष्ठ गुणनखण्ड काटिए"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "A non-natural index gives an infinite series, valid only for $|x|<1$",
+        "प्राकृत न होने वाले घातांक पर अनन्त श्रेणी बनती है, केवल $|x|<1$ के लिए मान्य"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Series of $e^x$ and $\\ln(1+x)$",
+    "hi": "14. $e^x$ व $\\ln(1+x)$ की श्रेणियाँ",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$e^x=\\displaystyle\\sum_{n=0}^\\infty\\dfrac{x^n}{n!},\\qquad\\ln(1+x)=x-\\dfrac{x^2}2+\\dfrac{x^3}3-\\dots\\quad(-1<x\\le1)$",
+        "$e^x=\\displaystyle\\sum_{n=0}^\\infty\\dfrac{x^n}{n!},\\qquad\\ln(1+x)=x-\\dfrac{x^2}2+\\dfrac{x^3}3-\\dots\\quad(-1<x\\le1)$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write the general term as (polynomial in $n$)$/n!$",
+        "सामान्य पद को (बहुपद in $n$)$/n!$ के रूप में लिखिए"
+       ],
+       [
+        "Break into $\\frac{n(n-1)}{n!}=\\frac1{(n-2)!}$, $\\frac n{n!}=\\frac1{(n-1)!}$ and sum each as $e$",
+        "$\\frac{n(n-1)}{n!}=\\frac1{(n-2)!}$, $\\frac n{n!}=\\frac1{(n-1)!}$ में तोड़िए और प्रत्येक का योग $e$ के रूप में लीजिए"
+       ],
+       [
+        "For $\\ln$ series match the sign and the denominator $n$ with $x^n/n$",
+        "$\\ln$ श्रेणी के लिए चिह्न व हर $n$ को $x^n/n$ से मिलाइए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Approximation, parameters and special tricks",
+    "hi": "15. सन्निकटन, प्राचल व विशेष युक्तियाँ",
+    "color": "teal",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Small $|x|$: $(1+x)^n\\approx1+nx$; for bounds keep the first few positive terms",
+        "छोटे $|x|$ के लिए $(1+x)^n\\approx1+nx$; सीमाओं के लिए पहले कुछ धनात्मक पद रखिए"
+       ],
+       [
+        "$(x+a)^n+(x-a)^n$: only even $r$ survive, so degree and number of terms follow from the last surviving term",
+        "$(x+a)^n+(x-a)^n$: केवल सम $r$ बचते हैं, अतः घात व पदों की संख्या अन्तिम बचे पद से"
+       ],
+       [
+        "Sum of coefficients of positive powers = total $-$ constant term $-$ negative-power terms",
+        "धनात्मक घातों के गुणांकों का योग = कुल $-$ अचर पद $-$ ऋणात्मक घातों वाले पद"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Common mistakes checklist",
+    "hi": "16. सामान्य गलतियाँ: जाँच-सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Index of $T_{r+1}$: the $(r+1)$th term has ${}^nC_r$, not ${}^nC_{r+1}$",
+        "$T_{r+1}$ का सूचकांक: $(r+1)$वें पद में ${}^nC_r$ होता है, ${}^nC_{r+1}$ नहीं"
+       ],
+       [
+        "Range of $r$ ($0\\le r\\le n$ and integer) before accepting a root",
+        "मूल स्वीकार करने से पहले $r$ का परिसर ($0\\le r\\le n$ व पूर्णांक) जाँचिए"
+       ],
+       [
+        "Coefficient vs binomial coefficient; sign of $y$",
+        "गुणांक व द्विपद गुणांक में अन्तर; $y$ का चिह्न"
+       ],
+       [
+        "NGT: use moduli; integer $p$ gives two equal terms",
+        "महत्तम पद: मापांक लीजिए; $p$ पूर्णांक हो तो दो बराबर पद"
+       ],
+       [
+        "Remainder: convert negative remainders; last digits with leading zeros",
+        "शेषफल: ऋणात्मक शेषफल बदलिए; अन्तिम अंकों में आगे के शून्य"
+       ],
+       [
+        "Sums: limits of $r$ ($r=0$ term) and the factor $2^n$ vs $2^{n-1}$",
+        "योग: $r$ की सीमाएँ ($r=0$ वाला पद) तथा $2^n$ बनाम $2^{n-1}$"
+       ],
+       [
+        "Any index: check $|x|<1$ and the factor taken out",
+        "किसी भी घातांक: $|x|<1$ तथा बाहर निकाला गया गुणक जाँचिए"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Basics",
+    "hi": "1. मूल सूत्र",
+    "lines": [
+     [
+      "Theorem: $(x+y)^n=\\sum_{r=0}^n{}^nC_rx^{n-r}y^r$",
+      "प्रमेय: $(x+y)^n=\\sum_{r=0}^n{}^nC_rx^{n-r}y^r$"
+     ],
+     [
+      "Number of terms: $n+1$",
+      "पदों की संख्या: $n+1$"
+     ],
+     [
+      "Sum of binomial coefficients: $\\sum{}^nC_r=2^n$",
+      "द्विपद गुणांकों का योग: $\\sum{}^nC_r=2^n$"
+     ],
+     [
+      "Sum of coefficients: variable $=1$",
+      "गुणांकों का योग: चर $=1$"
+     ],
+     [
+      "Symmetry: ${}^nC_r={}^nC_{n-r}$",
+      "सममिति: ${}^nC_r={}^nC_{n-r}$"
+     ],
+     [
+      "Pascal: ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$",
+      "पास्कल: ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$"
+     ],
+     [
+      "Equal: ${}^nC_x={}^nC_y\\Rightarrow x=y\\text{ or }x+y=n$",
+      "बराबर: ${}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$"
+     ],
+     [
+      "Ratio: $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$",
+      "अनुपात: $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Terms",
+    "hi": "2. पद",
+    "lines": [
+     [
+      "General term: $T_{r+1}={}^nC_rx^{n-r}y^r$",
+      "सामान्य पद: $T_{r+1}={}^nC_rx^{n-r}y^r$"
+     ],
+     [
+      "$k$th term from the end: $T_{n-k+2}$",
+      "अन्त से $k$ वाँ पद: $T_{n-k+2}$"
+     ],
+     [
+      "Consecutive terms: $\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$",
+      "क्रमागत पद: $\\dfrac{T_{r+1}}{T_r}=\\dfrac{n-r+1}r\\cdot\\dfrac yx$"
+     ],
+     [
+      "Middle term ($n$ even): $T_{\\frac n2+1}$",
+      "मध्य पद ($n$ सम): $T_{\\frac n2+1}$"
+     ],
+     [
+      "Middle terms ($n$ odd): $T_{\\frac{n+1}2},\\ T_{\\frac{n+3}2}$",
+      "मध्य पद ($n$ विषम): $T_{\\frac{n+1}2},\\ T_{\\frac{n+3}2}$"
+     ],
+     [
+      "Greatest binomial coefficient: ${}^nC_{n/2}$ or ${}^nC_{(n\\pm1)/2}$",
+      "महत्तम द्विपद गुणांक: ${}^nC_{n/2}$ या ${}^nC_{(n\\pm1)/2}$"
+     ],
+     [
+      "NGT: $p=\\dfrac{n+1}{1+|a/b|}$; $T_{[p]+1}$ ($p$ integer: $T_p,T_{p+1}$)",
+      "महत्तम पद: $p=\\dfrac{n+1}{1+|a/b|}$; $T_{[p]+1}$ ($p$ पूर्णांक: $T_p,T_{p+1}$)"
+     ],
+     [
+      "$T_k$ is NGT: $k-1<p<k$",
+      "$T_k$ महत्तम पद हो: $k-1<p<k$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Multinomial",
+    "hi": "3. बहुपद",
+    "lines": [
+     [
+      "General term: $\\dfrac{n!}{r_1!\\cdots r_k!}x_1^{r_1}\\cdots x_k^{r_k}$",
+      "सामान्य पद: $\\dfrac{n!}{r_1!\\cdots r_k!}x_1^{r_1}\\cdots x_k^{r_k}$"
+     ],
+     [
+      "Condition: $r_1+\\dots+r_k=n$",
+      "प्रतिबन्ध: $r_1+\\dots+r_k=n$"
+     ],
+     [
+      "Dissimilar terms: ${}^{n+k-1}C_{k-1}$",
+      "असमान पद: ${}^{n+k-1}C_{k-1}$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Remainders and parts",
+    "hi": "4. शेषफल व भाग",
+    "lines": [
+     [
+      "$a^n-b^n$ divisible by $a-b$ for all $n$",
+      "$a^n-b^n$, $a-b$ से विभाज्य (सभी $n$)"
+     ],
+     [
+      "$a^n-b^n$ divisible by $a+b$ for even $n$",
+      "$a^n-b^n$, $a+b$ से विभाज्य ($n$ सम)"
+     ],
+     [
+      "$a^n+b^n$ divisible by $a+b$ for odd $n$",
+      "$a^n+b^n$, $a+b$ से विभाज्य ($n$ विषम)"
+     ],
+     [
+      "Mod $d^2$: $(1+kd)^n\\equiv1+nkd$",
+      "$d^2$ से: $(1+kd)^n\\equiv1+nkd$"
+     ],
+     [
+      "$R=I+f,\\ G=(a-\\sqrt b)^n$: $0<G<1\\Rightarrow I=R+G-1$",
+      "$R=I+f,\\ G=(a-\\sqrt b)^n$: $0<G<1\\Rightarrow I=R+G-1$"
+     ],
+     [
+      "$RG=(a^2-b)^n$",
+      "$RG=(a^2-b)^n$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Sums of series",
+    "hi": "5. श्रेणियों के योग",
+    "lines": [
+     [
+      "Even coefficients: $\\dfrac{f(1)+f(-1)}2$",
+      "सम घातों के गुणांक: $\\dfrac{f(1)+f(-1)}2$"
+     ],
+     [
+      "Odd coefficients: $\\dfrac{f(1)-f(-1)}2$",
+      "विषम घातों के गुणांक: $\\dfrac{f(1)-f(-1)}2$"
+     ],
+     [
+      "Alternating partial sum: $\\sum_{r=0}^k(-1)^r{}^nC_r=(-1)^k{}^{n-1}C_k$",
+      "आंशिक योग (एकान्तर): $\\sum_{r=0}^k(-1)^r{}^nC_r=(-1)^k{}^{n-1}C_k$"
+     ],
+     [
+      "Hockey stick: $\\sum_{k=r}^m{}^kC_r={}^{m+1}C_{r+1}$",
+      "हॉकी स्टिक: $\\sum_{k=r}^m{}^kC_r={}^{m+1}C_{r+1}$"
+     ],
+     [
+      "Remove $r$: $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$",
+      "$r$ हटाना: $r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$"
+     ],
+     [
+      "$\\sum r\\,{}^nC_r=n2^{n-1}$",
+      "$\\sum r\\,{}^nC_r=n2^{n-1}$"
+     ],
+     [
+      "$\\sum r^2\\,{}^nC_r=n(n+1)2^{n-2}$",
+      "$\\sum r^2\\,{}^nC_r=n(n+1)2^{n-2}$"
+     ],
+     [
+      "Integration: $\\sum\\dfrac{{}^nC_r}{r+1}=\\dfrac{2^{n+1}-1}{n+1}$",
+      "समाकलन: $\\sum\\dfrac{{}^nC_r}{r+1}=\\dfrac{2^{n+1}-1}{n+1}$"
+     ],
+     [
+      "$\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$",
+      "$\\dfrac{{}^nC_r}{r+1}=\\dfrac{{}^{n+1}C_{r+1}}{n+1}$"
+     ],
+     [
+      "Sum pattern: $\\sum{}^nC_r{}^mC_{k-r}={}^{n+m}C_k$",
+      "योग प्रतिरूप: $\\sum{}^nC_r{}^mC_{k-r}={}^{n+m}C_k$"
+     ],
+     [
+      "Difference pattern: $\\sum{}^nC_r{}^mC_{r+k}={}^{n+m}C_{n+k}$",
+      "अन्तर प्रतिरूप: $\\sum{}^nC_r{}^mC_{r+k}={}^{n+m}C_{n+k}$"
+     ],
+     [
+      "$\\sum({}^nC_r)^2={}^{2n}C_n$",
+      "$\\sum({}^nC_r)^2={}^{2n}C_n$"
+     ],
+     [
+      "GP: $(1+x)^m+\\dots+x^m=(1+x)^{m+1}-x^{m+1}$",
+      "GP: $(1+x)^m+\\dots+x^m=(1+x)^{m+1}-x^{m+1}$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Any index and series",
+    "hi": "6. किसी भी घातांक व श्रेणियाँ",
+    "lines": [
+     [
+      "$(1+x)^n=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots$",
+      "$(1+x)^n=1+nx+\\dfrac{n(n-1)}{2!}x^2+\\dots$"
+     ],
+     [
+      "$(1-x)^{-n}=1+nx+\\dfrac{n(n+1)}{2!}x^2+\\dots$",
+      "$(1-x)^{-n}=1+nx+\\dfrac{n(n+1)}{2!}x^2+\\dots$"
+     ],
+     [
+      "Coefficient of $x^r$ in $(1-x)^{-n}$: ${}^{n+r-1}C_r$",
+      "$(1-x)^{-n}$ में $x^r$ का गुणांक: ${}^{n+r-1}C_r$"
+     ],
+     [
+      "Coefficient of $x^r$ in $(1+x)^{-n}$: $(-1)^r{}^{n+r-1}C_r$",
+      "$(1+x)^{-n}$ में $x^r$ का गुणांक: $(-1)^r{}^{n+r-1}C_r$"
+     ],
+     [
+      "Validity: $|x|<1$",
+      "मान्यता: $|x|<1$"
+     ],
+     [
+      "$e^x=\\sum\\dfrac{x^n}{n!}$",
+      "$e^x=\\sum\\dfrac{x^n}{n!}$"
+     ],
+     [
+      "$\\ln(1+x)=x-\\dfrac{x^2}2+\\dfrac{x^3}3-\\dots$",
+      "$\\ln(1+x)=x-\\dfrac{x^2}2+\\dfrac{x^3}3-\\dots$"
+     ],
+     [
+      "$(1+x)^n\\approx1+nx$ for small $x$",
+      "छोटे $x$ के लिए $(1+x)^n\\approx1+nx$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Basics and theorem",
+    "hi": "मूल बातें व प्रमेय",
+    "leaves": [
+     [
+      "$(x+y)^n=\\sum{}^nC_rx^{n-r}y^r$",
+      "$(x+y)^n=\\sum{}^nC_rx^{n-r}y^r$"
+     ],
+     [
+      "$n+1$ terms, $\\sum{}^nC_r=2^n$",
+      "$n+1$ पद, $\\sum{}^nC_r=2^n$"
+     ],
+     [
+      "Pascal's triangle",
+      "पास्कल त्रिभुज"
+     ]
+    ]
+   },
+   {
+    "en": "General term",
+    "hi": "सामान्य पद",
+    "leaves": [
+     [
+      "$T_{r+1}={}^nC_rx^{n-r}y^r$",
+      "$T_{r+1}={}^nC_rx^{n-r}y^r$"
+     ],
+     [
+      "Power of $x$ $=$ required, solve $r$",
+      "$x$ की घात $=$ अभीष्ट, $r$ हल करें"
+     ],
+     [
+      "Rational terms: $r$ multiple of lcm",
+      "परिमेय पद: $r$ ल.स. का गुणज"
+     ]
+    ]
+   },
+   {
+    "en": "Middle term, products",
+    "hi": "मध्य पद, गुणनफल",
+    "leaves": [
+     [
+      "$n$ even: $T_{\\frac n2+1}$",
+      "$n$ सम: $T_{\\frac n2+1}$"
+     ],
+     [
+      "Greatest binomial coefficient",
+      "महत्तम द्विपद गुणांक"
+     ],
+     [
+      "Pair powers adding to required",
+      "घातें जोड़कर अभीष्ट बनाएँ"
+     ]
+    ]
+   },
+   {
+    "en": "Numerically greatest term",
+    "hi": "संख्यात्मक रूप से महत्तम पद",
+    "leaves": [
+     [
+      "$p=\\frac{n+1}{1+|a/b|}$",
+      "$p=\\frac{n+1}{1+|a/b|}$"
+     ],
+     [
+      "$T_{[p]+1}$; integer $p$: $T_p,T_{p+1}$",
+      "$T_{[p]+1}$; $p$ पूर्णांक: $T_p,T_{p+1}$"
+     ],
+     [
+      "$T_k$ NGT: $k-1<p<k$",
+      "$T_k$ महत्तम: $k-1<p<k$"
+     ]
+    ]
+   },
+   {
+    "en": "Remainders",
+    "hi": "शेषफल",
+    "leaves": [
+     [
+      "Base $=$ multiple $\\pm$ small",
+      "आधार $=$ गुणज $\\pm$ छोटा"
+     ],
+     [
+      "$a^n\\pm b^n$ divisibility rules",
+      "$a^n\\pm b^n$ विभाज्यता नियम"
+     ],
+     [
+      "Last digits: mod $10^k$",
+      "अन्तिम अंक: $10^k$ से शेष"
+     ]
+    ]
+   },
+   {
+    "en": "Integral and fractional part",
+    "hi": "पूर्णांक व भिन्नात्मक भाग",
+    "leaves": [
+     [
+      "$R=I+f$, conjugate $G$",
+      "$R=I+f$, संयुग्मी $G$"
+     ],
+     [
+      "$R+G\\in\\mathbb Z$, $RG=(a^2-b)^n$",
+      "$R+G\\in\\mathbb Z$, $RG=(a^2-b)^n$"
+     ],
+     [
+      "$I$ odd / even",
+      "$I$ विषम / सम"
+     ]
+    ]
+   },
+   {
+    "en": "Multinomial",
+    "hi": "बहुपद",
+    "leaves": [
+     [
+      "$\\frac{n!}{r_1!r_2!r_3!}$, $\\sum r_i=n$",
+      "$\\frac{n!}{r_1!r_2!r_3!}$, $\\sum r_i=n$"
+     ],
+     [
+      "Dissimilar terms ${}^{n+k-1}C_{k-1}$",
+      "असमान पद ${}^{n+k-1}C_{k-1}$"
+     ],
+     [
+      "Factorise the base",
+      "आधार का गुणनखण्डन"
+     ]
+    ]
+   },
+   {
+    "en": "Series type 1 and 2",
+    "hi": "श्रेणी प्रकार 1 व 2",
+    "leaves": [
+     [
+      "Type 1: $\\sum{}^nC_rx^{n-r}y^r=(x+y)^n$",
+      "प्रकार 1: $\\sum{}^nC_rx^{n-r}y^r=(x+y)^n$"
+     ],
+     [
+      "Type 2: $\\sum{}^kC_r={}^{m+1}C_{r+1}$",
+      "प्रकार 2: $\\sum{}^kC_r={}^{m+1}C_{r+1}$"
+     ],
+     [
+      "Pascal's rule from first two terms",
+      "पहले दो पदों से पास्कल नियम"
+     ]
+    ]
+   },
+   {
+    "en": "Series type 3",
+    "hi": "श्रेणी प्रकार 3",
+    "leaves": [
+     [
+      "Even / odd: $\\frac{f(1)\\pm f(-1)}2$",
+      "सम / विषम: $\\frac{f(1)\\pm f(-1)}2$"
+     ],
+     [
+      "$r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$",
+      "$r\\,{}^nC_r=n\\,{}^{n-1}C_{r-1}$"
+     ],
+     [
+      "Gauss: reverse and add",
+      "गॉस: उल्टा करके जोड़ें"
+     ]
+    ]
+   },
+   {
+    "en": "Series type 4",
+    "hi": "श्रेणी प्रकार 4",
+    "leaves": [
+     [
+      "Factor $r$: differentiate",
+      "गुणक $r$: अवकलन"
+     ],
+     [
+      "Denominator $r+1$: integrate $0$ to $1$",
+      "हर $r+1$: $0$ से $1$ समाकलन"
+     ],
+     [
+      "$\\frac{{}^nC_r}{r+1}=\\frac{{}^{n+1}C_{r+1}}{n+1}$",
+      "$\\frac{{}^nC_r}{r+1}=\\frac{{}^{n+1}C_{r+1}}{n+1}$"
+     ]
+    ]
+   },
+   {
+    "en": "Series type 5",
+    "hi": "श्रेणी प्रकार 5",
+    "leaves": [
+     [
+      "Sum: $\\sum{}^nC_r{}^mC_{k-r}={}^{n+m}C_k$",
+      "योग: $\\sum{}^nC_r{}^mC_{k-r}={}^{n+m}C_k$"
+     ],
+     [
+      "Difference: ${}^{n+m}C_{n+k}$",
+      "अन्तर: ${}^{n+m}C_{n+k}$"
+     ],
+     [
+      "Compare coefficient in $(1+x)^{n+m}$",
+      "$(1+x)^{n+m}$ का गुणांक तुलना"
+     ]
+    ]
+   },
+   {
+    "en": "Miscellaneous series",
+    "hi": "विविध श्रेणियाँ",
+    "leaves": [
+     [
+      "GP of binomial terms",
+      "द्विपद पदों की GP"
+     ],
+     [
+      "${}^nC_r={}^nC_{n-r}$ pairing",
+      "${}^nC_r={}^nC_{n-r}$ युग्मन"
+     ],
+     [
+      "Reverse powers",
+      "घातें उल्टी करना"
+     ]
+    ]
+   },
+   {
+    "en": "Any index",
+    "hi": "किसी भी घातांक",
+    "leaves": [
+     [
+      "$|x|<1$, infinite series",
+      "$|x|<1$, अनन्त श्रेणी"
+     ],
+     [
+      "$(1-x)^{-n}$: ${}^{n+r-1}C_r$",
+      "$(1-x)^{-n}$: ${}^{n+r-1}C_r$"
+     ],
+     [
+      "Product: expand polynomial part",
+      "गुणनफल: बहुपद भाग प्रसारित करें"
+     ]
+    ]
+   },
+   {
+    "en": "$e^x$ and $\\ln(1+x)$",
+    "hi": "$e^x$ व $\\ln(1+x)$",
+    "leaves": [
+     [
+      "$e^x=\\sum x^n/n!$",
+      "$e^x=\\sum x^n/n!$"
+     ],
+     [
+      "$\\ln(1+x)=x-\\frac{x^2}2+\\dots$",
+      "$\\ln(1+x)=x-\\frac{x^2}2+\\dots$"
+     ],
+     [
+      "Split $n^2/n!$ into $n(n-1)+n$",
+      "$n^2/n!$ को $n(n-1)+n$ में तोड़ें"
+     ]
+    ]
+   },
+   {
+    "en": "Special tricks",
+    "hi": "विशेष युक्तियाँ",
+    "leaves": [
+     [
+      "Ratio of consecutive coefficients",
+      "क्रमागत गुणांकों का अनुपात"
+     ],
+     [
+      "$(x+a)^n\\pm(x-a)^n$",
+      "$(x+a)^n\\pm(x-a)^n$"
+     ],
+     [
+      "Approximation $1+nx$",
+      "सन्निकटन $1+nx$"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which term do I need?",
+    "प्रवाह-चित्र 1: कौन-सा पद चाहिए?"
+   ],
+   "start": [
+    "A term of $(x+y)^n$ is asked",
+    "$(x+y)^n$ का कोई पद पूछा है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "$k$th term from the end?",
+      "अन्त से $k$ वाँ पद?"
+     ],
+     "a": [
+      [
+       "Use $T_{n-k+2}$."
+      ],
+      [
+       "$T_{n-k+2}$ लीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Middle term?",
+      "मध्य पद?"
+     ],
+     "a": [
+      [
+       "$n$ even: $T_{\\frac n2+1}$; $n$ odd: two terms."
+      ],
+      [
+       "$n$ सम: $T_{\\frac n2+1}$; $n$ विषम: दो पद।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Term independent of $x$ / given power of $x$?",
+      "$x$ से स्वतन्त्र पद / $x$ की दी घात?"
+     ],
+     "a": [
+      [
+       "Power of $x$ in $T_{r+1}$ $=$ required; solve $r$."
+      ],
+      [
+       "$T_{r+1}$ में $x$ की घात $=$ अभीष्ट; $r$ हल कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Rational / integral terms?",
+      "परिमेय / पूर्णांकीय पद?"
+     ],
+     "a": [
+      [
+       "All fractional powers integers; $r$ multiple of lcm."
+      ],
+      [
+       "सभी भिन्नात्मक घातें पूर्णांक; $r$ ल.स. का गुणज।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Numerically greatest term?",
+      "संख्यात्मक रूप से महत्तम पद?"
+     ],
+     "a": [
+      [
+       "$p=\\frac{n+1}{1+|a/b|}$, then $T_{[p]+1}$."
+      ],
+      [
+       "$p=\\frac{n+1}{1+|a/b|}$, फिर $T_{[p]+1}$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use $T_{r+1}={}^nC_rx^{n-r}y^r$ and read the condition."
+    ],
+    [
+     "$T_{r+1}={}^nC_rx^{n-r}y^r$ लगाकर शर्त पढ़िए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Coefficient of a power of $x$",
+    "प्रवाह-चित्र 2: $x$ की घात का गुणांक"
+   ],
+   "start": [
+    "Coefficient of $x^k$ in an expression is asked",
+    "किसी व्यंजक में $x^k$ का गुणांक पूछा है"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "A single binomial $(a+bx^p)^n$?",
+      "एकल द्विपद $(a+bx^p)^n$?"
+     ],
+     "a": [
+      [
+       "General term, equate power, solve $r$."
+      ],
+      [
+       "सामान्य पद, घात बराबर, $r$ हल।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Product of a polynomial and a binomial?",
+      "बहुपद व द्विपद का गुणनफल?"
+     ],
+     "a": [
+      [
+       "Pair powers adding to $k$; add coefficient products."
+      ],
+      [
+       "घातें जोड़कर $k$ बनाइए; गुणांकों के गुणनफल जोड़िए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three or more terms in the base?",
+      "आधार में तीन या अधिक पद?"
+     ],
+     "a": [
+      [
+       "Factorise the base, else multinomial general term."
+      ],
+      [
+       "आधार का गुणनखण्डन; अन्यथा बहुपद सामान्य पद।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Sum of consecutive powers $(1+x)^m+x(1+x)^{m-1}+\\dots$?",
+      "क्रमागत घातों का योग $(1+x)^m+x(1+x)^{m-1}+\\dots$?"
+     ],
+     "a": [
+      [
+       "GP: $(1+x)^{m+1}-x^{m+1}$."
+      ],
+      [
+       "GP: $(1+x)^{m+1}-x^{m+1}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Index negative or fractional?",
+      "घातांक ऋणात्मक या भिन्न?"
+     ],
+     "a": [
+      [
+       "Series with $|x|<1$; ${}^{n+r-1}C_r$ for $(1-x)^{-n}$."
+      ],
+      [
+       "$|x|<1$ वाली श्रेणी; $(1-x)^{-n}$ के लिए ${}^{n+r-1}C_r$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Expand the factors and multiply term by term."
+    ],
+    [
+     "गुणनखण्डों को प्रसारित कर पदवार गुणा कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Remainder and divisibility",
+    "प्रवाह-चित्र 3: शेषफल व विभाज्यता"
+   ],
+   "start": [
+    "Remainder, last digits or divisibility of $a^n\\pm b^n$ is asked",
+    "$a^n\\pm b^n$ का शेषफल, अन्तिम अंक या विभाज्यता पूछी है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Divisibility of $a^n\\pm b^n$ by $a\\pm b$?",
+      "$a^n\\pm b^n$ की $a\\pm b$ से विभाज्यता?"
+     ],
+     "a": [
+      [
+       "Use the three rules (even / odd $n$)."
+      ],
+      [
+       "तीनों नियम लगाइए ($n$ सम / विषम)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Last digits?",
+      "अन्तिम अंक?"
+     ],
+     "a": [
+      [
+       "Remainder mod $10,100,1000$; leading zeros."
+      ],
+      [
+       "$10,100,1000$ से शेषफल; आगे के शून्य।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Base close to a multiple of the divisor?",
+      "आधार भाजक के गुणज के निकट?"
+     ],
+     "a": [
+      [
+       "Write base $=kd\\pm1$ and expand."
+      ],
+      [
+       "आधार $=kd\\pm1$ लिखकर प्रसारित कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Base small compared to the divisor?",
+      "आधार भाजक से बहुत छोटा?"
+     ],
+     "a": [
+      [
+       "Raise to a power first, then convert."
+      ],
+      [
+       "पहले घात बढ़ाइए, फिर बदलिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Divisor is a square $d^2$?",
+      "भाजक वर्ग $d^2$ है?"
+     ],
+     "a": [
+      [
+       "Keep two terms: $1+nkd$."
+      ],
+      [
+       "दो पद रखिए: $1+nkd$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Several terms (GP or sum): add them first, then reduce mod the divisor."
+    ],
+    [
+     "कई पद (GP या योग): पहले जोड़िए, फिर भाजक से शेषफल।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Sums of series of binomial coefficients",
+    "प्रवाह-चित्र 4: द्विपद गुणांकों की श्रेणी का योग"
+   ],
+   "start": [
+    "A sum with ${}^nC_r$ is given",
+    "${}^nC_r$ वाला योग दिया है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Terms ${}^nC_r\\,a^r$ only?",
+      "केवल ${}^nC_r\\,a^r$ वाले पद?"
+     ],
+     "a": [
+      [
+       "Type 1: $(1+a)^n$."
+      ],
+      [
+       "प्रकार 1: $(1+a)^n$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Upper suffix varies?",
+      "ऊपरी सूचकांक बदलता है?"
+     ],
+     "a": [
+      [
+       "Type 2: hockey stick / Pascal's rule."
+      ],
+      [
+       "प्रकार 2: हॉकी स्टिक / पास्कल नियम।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Factor $r$ or $r(r-1)$ in the terms?",
+      "पदों में गुणक $r$ या $r(r-1)$?"
+     ],
+     "a": [
+      [
+       "Remove $r$ using $n\\,{}^{n-1}C_{r-1}$ (or differentiate)."
+      ],
+      [
+       "$n\\,{}^{n-1}C_{r-1}$ से $r$ हटाइए (या अवकलन)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Denominator $r+1$ or $r+2$?",
+      "हर $r+1$ या $r+2$?"
+     ],
+     "a": [
+      [
+       "Integrate, or absorb it into ${}^{n+1}C_{r+1}$."
+      ],
+      [
+       "समाकलन कीजिए, या ${}^{n+1}C_{r+1}$ में समाहित कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Product ${}^nC_r\\,{}^mC_s$ with $r\\pm s$ constant?",
+      "गुणनफल ${}^nC_r\\,{}^mC_s$ जिसमें $r\\pm s$ अचर?"
+     ],
+     "a": [
+      [
+       "Type 5: ${}^{n+m}C_k$."
+      ],
+      [
+       "प्रकार 5: ${}^{n+m}C_k$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Try $x=-1$, pairing ${}^nC_r={}^nC_{n-r}$ or a GP of terms."
+    ],
+    [
+     "$x=-1$, युग्मन ${}^nC_r={}^nC_{n-r}$ या पदों की GP आज़माइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Even, odd and alternating sums",
+    "प्रवाह-चित्र 5: सम, विषम व एकान्तर योग"
+   ],
+   "start": [
+    "Sum of some coefficients of an expansion $f(x)$",
+    "किसी प्रसार $f(x)$ के कुछ गुणांकों का योग"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "All coefficients?",
+      "सभी गुणांक?"
+     ],
+     "a": [
+      [
+       "$f(1)$."
+      ],
+      [
+       "$f(1)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Coefficients of even powers?",
+      "सम घातों के गुणांक?"
+     ],
+     "a": [
+      [
+       "$\\frac{f(1)+f(-1)}2$."
+      ],
+      [
+       "$\\frac{f(1)+f(-1)}2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Coefficients of odd powers?",
+      "विषम घातों के गुणांक?"
+     ],
+     "a": [
+      [
+       "$\\frac{f(1)-f(-1)}2$."
+      ],
+      [
+       "$\\frac{f(1)-f(-1)}2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Signs alternate?",
+      "चिह्न एकान्तर?"
+     ],
+     "a": [
+      [
+       "$f(-1)$; partial sum: $(-1)^k\\,{}^{n-1}C_k$."
+      ],
+      [
+       "$f(-1)$; आंशिक योग: $(-1)^k\\,{}^{n-1}C_k$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only positive powers of $x$?",
+      "केवल $x$ की धनात्मक घातें?"
+     ],
+     "a": [
+      [
+       "Total $-$ constant $-$ negative-power terms."
+      ],
+      [
+       "कुल $-$ अचर $-$ ऋणात्मक घात वाले पद।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Add or subtract the sums obtained, or use a substitution such as roots of unity."
+    ],
+    [
+     "प्राप्त योगों को जोड़ें या घटाएँ, या एकक के मूल जैसा प्रतिस्थापन लें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Three consecutive terms or coefficients",
+    "प्रवाह-चित्र 6: तीन क्रमागत पद या गुणांक"
+   ],
+   "start": [
+    "Consecutive coefficients are in a ratio, in AP, or two are equal",
+    "क्रमागत गुणांक अनुपात में, समान्तर श्रेढ़ी में या दो बराबर हैं"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Two coefficients equal?",
+      "दो गुणांक बराबर?"
+     ],
+     "a": [
+      [
+       "${}^nC_x={}^nC_y$: $x=y$ or $x+y=n$."
+      ],
+      [
+       "${}^nC_x={}^nC_y$: $x=y$ या $x+y=n$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Ratio $a:b:c$ given?",
+      "अनुपात $a:b:c$ दिया है?"
+     ],
+     "a": [
+      [
+       "$\\frac{n-r+1}r=\\frac ba$ and $\\frac{n-r}{r+1}=\\frac cb$; solve $n,r$."
+      ],
+      [
+       "$\\frac{n-r+1}r=\\frac ba$ तथा $\\frac{n-r}{r+1}=\\frac cb$; $n,r$ हल।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "In AP?",
+      "समान्तर श्रेढ़ी में?"
+     ],
+     "a": [
+      [
+       "$2\\,{}^nC_r={}^nC_{r-1}+{}^nC_{r+1}$."
+      ],
+      [
+       "$2\\,{}^nC_r={}^nC_{r-1}+{}^nC_{r+1}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Terms (not coefficients) given?",
+      "पद (गुणांक नहीं) दिए?"
+     ],
+     "a": [
+      [
+       "Use $\\frac{T_{r+1}}{T_r}=\\frac{n-r+1}r\\cdot\\frac yx$."
+      ],
+      [
+       "$\\frac{T_{r+1}}{T_r}=\\frac{n-r+1}r\\cdot\\frac yx$ लगाइए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Write each term with its general term and compare."
+    ],
+    [
+     "प्रत्येक पद को सामान्य पद से लिखकर तुलना कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 7: Index not a natural number",
+    "प्रवाह-चित्र 7: घातांक प्राकृत संख्या नहीं"
+   ],
+   "start": [
+    "An expression with a negative or fractional power",
+    "ऋणात्मक या भिन्न घात वाला व्यंजक"
+   ],
+   "color": "brown",
+   "steps": [
+    {
+     "q": [
+      "Is the base of the form $(a+bx)$?",
+      "आधार $(a+bx)$ रूप का है?"
+     ],
+     "a": [
+      [
+       "Take $a$ out: $a^n\\left(1+\\frac bax\\right)^n$; $|bx/a|<1$."
+      ],
+      [
+       "$a$ बाहर निकालिए: $a^n\\left(1+\\frac bax\\right)^n$; $|bx/a|<1$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Coefficient of $x^r$ in $(1-x)^{-n}$?",
+      "$(1-x)^{-n}$ में $x^r$ का गुणांक?"
+     ],
+     "a": [
+      [
+       "${}^{n+r-1}C_r$ (sign $(-1)^r$ for $(1+x)^{-n}$)."
+      ],
+      [
+       "${}^{n+r-1}C_r$ ($(1+x)^{-n}$ के लिए चिह्न $(-1)^r$)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Numerator is a polynomial?",
+      "अंश बहुपद है?"
+     ],
+     "a": [
+      [
+       "Expand it and add the term-wise coefficients."
+      ],
+      [
+       "प्रसारित कर पदवार गुणांक जोड़िए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A factor $(1-x^k)$ with $k$ above the needed power?",
+      "गुणनखण्ड $(1-x^k)$ जिसमें $k$ अभीष्ट घात से बड़ा?"
+     ],
+     "a": [
+      [
+       "Replace it by $1$."
+      ],
+      [
+       "उसे $1$ से बदल दीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Series of $\\frac1{n!}$ type?",
+      "$\\frac1{n!}$ प्रकार की श्रेणी?"
+     ],
+     "a": [
+      [
+       "Use $e^x$ (or $\\ln(1+x)$ for $\\frac{x^n}n$)."
+      ],
+      [
+       "$e^x$ ($\\frac{x^n}n$ के लिए $\\ln(1+x)$) लगाइए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Check the validity $|x|<1$ and write the first few terms."
+    ],
+    [
+     "मान्यता $|x|<1$ जाँचिए और पहले कुछ पद लिखिए।"
+    ]
+   ]
+  }
+ ]
+}
