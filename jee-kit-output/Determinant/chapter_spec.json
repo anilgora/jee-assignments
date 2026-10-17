@@ -1,0 +1,2468 @@
+{
+ "chapter": {
+  "en": "Determinant",
+  "hi": "सारणिक",
+  "slug": "Determinant"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   112
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction of Determinant",
+    "hi": "सारणिक का परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to define the order of a determinant and how its elements are represented?",
+       "क्या आप सारणिक की कोटि परिभाषित कर सकते हैं तथा उसके अवयव कैसे निरूपित किये जाते हैं?"
+      ],
+      "a": [
+       [
+        "A determinant has the same number of rows and columns, written between two vertical bars; that number $n$ is its order. $a_{ij}$ is the element in row $i$ and column $j$; $a_{11},a_{22},\\dots$ form the principal (leading) diagonal.",
+        "सारणिक में पंक्तियों व स्तम्भों की संख्या समान होती है और वह दो ऊर्ध्वाधर रेखाओं के बीच लिखा जाता है; यह संख्या $n$ उसकी कोटि है। $a_{ij}$ पंक्ति $i$ व स्तम्भ $j$ का अवयव है; $a_{11},a_{22},\\dots$ मुख्य विकर्ण बनाते हैं।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}$ has order 2 (4 elements); a third-order determinant has 9 elements and 9 minors.",
+        "उदा.: $\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}$ की कोटि 2 है (4 अवयव); तृतीय कोटि के सारणिक में 9 अवयव व 9 उपसारणिक होते हैं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Value of a Determinant by Expansion",
+    "hi": "प्रसार द्वारा सारणिक का मान",
+    "items": [
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the value of a determinant of order 2 by expansion?",
+       "द्वितीय कोटि के सारणिक का मान प्रसार द्वारा कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       "$\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$",
+       [
+        "Ex: $\\begin{vmatrix}3&2\\\\1&4\\end{vmatrix}$$=12-2=10$.",
+        "उदा.: $\\begin{vmatrix}3&2\\\\1&4\\end{vmatrix}$$=12-2=10$।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the value of a determinant of order 3 by expansion?",
+       "तृतीय कोटि के सारणिक का मान प्रसार द्वारा कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Expand along a row/column with the sign pattern $+-+\\,/\\,-+-\\,/\\,+-+$ (element $\\times$ its $2\\times2$ minor):",
+        "चिह्न-पट $+-+\\,/\\,-+-\\,/\\,+-+$ के साथ किसी पंक्ति/स्तम्भ के अनुदिश प्रसार करें (अवयव $\\times$ उसका $2\\times2$ उपसारणिक):"
+       ],
+       "$\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=a_1(b_2c_3-b_3c_2)-b_1(a_2c_3-a_3c_2)+c_1(a_2b_3-a_3b_2)$",
+       [
+        "Ex: $\\begin{vmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{vmatrix}$$=1(0-24)-2(0-20)+3(0-5)=1$.",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{vmatrix}$$=1(0-24)-2(0-20)+3(0-5)=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Along which row/column should we expand a determinant?",
+       "सारणिक का प्रसार किस पंक्ति/स्तम्भ के अनुदिश करना चाहिए?"
+      ],
+      "a": [
+       [
+        "Along the row/column with the most zeros (the value is the same along any row or column). If there is none, first create zeros with row/column operations.",
+        "उस पंक्ति/स्तम्भ के अनुदिश जिसमें सबसे अधिक शून्य हों (मान किसी भी पंक्ति/स्तम्भ के अनुदिश समान आता है)। यदि शून्य न हों तो पहले पंक्ति/स्तम्भ संक्रियाओं से शून्य बनाइए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}2&0&0\\\\3&1&4\\\\5&2&6\\end{vmatrix}$$=2(6-8)=-4$ (expanded along $R_1$).",
+        "उदा.: $\\begin{vmatrix}2&0&0\\\\3&1&4\\\\5&2&6\\end{vmatrix}$$=2(6-8)=-4$ ($R_1$ के अनुदिश)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Minor and Cofactor of element",
+    "hi": "अवयव का उपसारणिक व सहखण्ड",
+    "items": [
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you find the minor and cofactor of any element of a determinant?",
+       "सारणिक के किसी अवयव का उपसारणिक व सहखण्ड कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Minor $M_{ij}$ = determinant left after deleting row $i$ and column $j$; cofactor $C_{ij}=(-1)^{i+j}M_{ij}$.",
+        "उपसारणिक $M_{ij}$ = पंक्ति $i$ व स्तम्भ $j$ हटाने पर बचा सारणिक; सहखण्ड $C_{ij}=(-1)^{i+j}M_{ij}$।"
+       ],
+       [
+        "Ex: in $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$: $M_{11}=50-48=2$, $M_{12}=40-42=-2$, $C_{12}=2$.",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$ में: $M_{11}=50-48=2$, $M_{12}=40-42=-2$, $C_{12}=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write the relation between minor and cofactor?",
+       "क्या आप उपसारणिक व सहखण्ड का सम्बन्ध लिख सकते हैं?"
+      ],
+      "a": [
+       "$C_{ij}=(-1)^{i+j}M_{ij}$",
+       [
+        "So $C_{ij}=M_{ij}$ when $i+j$ is even and $C_{ij}=-M_{ij}$ when $i+j$ is odd (sign chessboard $+-+/-+-/+-+$).",
+        "अतः $i+j$ सम होने पर $C_{ij}=M_{ij}$ तथा विषम होने पर $C_{ij}=-M_{ij}$ (चिह्न-पट $+-+/-+-/+-+$)।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens when all elements of a row/column are multiplied by their own cofactors and added?",
+       "किसी पंक्ति/स्तम्भ के सभी अवयवों को उनके अपने सहखण्डों से गुणा करके जोड़ने पर क्या होता है?"
+      ],
+      "a": [
+       [
+        "The sum equals the value of the determinant (this is the expansion): $a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}=\\Delta$, and likewise for any row or column.",
+        "योग सारणिक के मान के बराबर होता है (यही प्रसार है): $a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}=\\Delta$, किसी भी पंक्ति या स्तम्भ के लिए।"
+       ],
+       [
+        "Ex: in a $4\\times4$ determinant $a_{11}c_{11}+a_{12}c_{12}+a_{13}c_{13}+a_{14}c_{14}=\\Delta$.",
+        "उदा.: $4\\times4$ सारणिक में $a_{11}c_{11}+a_{12}c_{12}+a_{13}c_{13}+a_{14}c_{14}=\\Delta$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens when all elements of a row/column are multiplied by the cofactors of another row/column and added?",
+       "किसी पंक्ति/स्तम्भ के अवयवों को किसी अन्य पंक्ति/स्तम्भ के सहखण्डों से गुणा करके जोड़ने पर क्या होता है?"
+      ],
+      "a": [
+       [
+        "The sum is zero: $a_{11}C_{21}+a_{12}C_{22}+a_{13}C_{23}=0$ (it is a determinant with two identical rows).",
+        "योग शून्य होता है: $a_{11}C_{21}+a_{12}C_{22}+a_{13}C_{23}=0$ (यह दो समान पंक्तियों वाला सारणिक है)।"
+       ],
+       [
+        "Ex: in $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$: $1\\cdot4+2\\cdot(-22)+3\\cdot18=0$ (cofactors of $R_2$: $4,-22,18$).",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$ में: $1\\cdot4+2\\cdot(-22)+3\\cdot18=0$ ($R_2$ के सहखण्ड: $4,-22,18$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Sarrus Rule",
+    "hi": "सारस नियम",
+    "items": [
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you use the Sarrus rule to expand a determinant of order 3?",
+       "तृतीय कोटि के सारणिक के प्रसार में सारस नियम का उपयोग कैसे करते हैं?"
+      ],
+      "a": [
+       [
+        "Rewrite the first two columns to the right; add the three products along the down-right diagonals and subtract the three along the down-left diagonals (only for order 3):",
+        "पहले दो स्तम्भ दाईं ओर दोबारा लिखिए; नीचे-दाएँ विकर्णों के तीन गुणनफल जोड़िए तथा नीचे-बाएँ विकर्णों के तीन गुणनफल घटाइए (केवल तृतीय कोटि के लिए):"
+       ],
+       "$D=(a_1b_2c_3+a_2b_3c_1+a_3b_1c_2)-(a_3b_2c_1+a_2b_1c_3+a_1b_3c_2)$",
+       [
+        "Ex: $\\begin{vmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{vmatrix}$$=(0+0+40)-(15+0+24)=1$.",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{vmatrix}$$=(0+0+40)-(15+0+24)=1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Properties of Determinant",
+    "hi": "सारणिक के गुणधर्म",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you write down all 6 properties?",
+       "क्या आप सभी 6 गुणधर्म लिख सकते हैं?"
+      ],
+      "a": [
+       [
+        "P1: rows $\\leftrightarrow$ columns (transpose): $D'=D$. P2: interchanging two rows (columns) changes the sign only. P3: two identical rows (columns) $\\Rightarrow D=0$ (also if proportional).",
+        "P1: पंक्तियाँ $\\leftrightarrow$ स्तम्भ (परिवर्त): $D'=D$। P2: दो पंक्तियाँ (स्तम्भ) बदलने पर केवल चिह्न बदलता है। P3: दो पंक्तियाँ (स्तम्भ) समान हों $\\Rightarrow D=0$ (समानुपाती होने पर भी)।"
+       ],
+       [
+        "P4: multiplying one row (column) by $k$ multiplies $D$ by $k$. P5: if each element of a row (column) is a sum of two terms, $D$ splits into a sum of two determinants. P6: if $D=f(x)$ and $f(a)=0$, then $(x-a)$ is a factor of $D$.",
+        "P4: किसी एक पंक्ति (स्तम्भ) को $k$ से गुणा करने पर $D$ भी $k$ से गुणा हो जाता है। P5: किसी पंक्ति (स्तम्भ) का प्रत्येक अवयव दो पदों का योग हो तो $D$ दो सारणिकों के योग में टूटता है। P6: यदि $D=f(x)$ तथा $f(a)=0$ तो $(x-a)$, $D$ का एक गुणनखण्ड है।"
+       ],
+       [
+        "Ex (P3): $\\begin{vmatrix}1&2&3\\\\2&4&6\\\\5&7&9\\end{vmatrix}$$=0$ (rows 1, 2 proportional).",
+        "उदा. (P3): $\\begin{vmatrix}1&2&3\\\\2&4&6\\\\5&7&9\\end{vmatrix}$$=0$ (पंक्ति 1, 2 समानुपाती)।"
+       ]
+      ]
+     },
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How and when can we add two or more determinants without expanding?",
+       "दो या अधिक सारणिकों को प्रसार किये बिना कब और कैसे जोड़ सकते हैं?"
+      ],
+      "a": [
+       [
+        "Two determinants can be added when they are identical except in one row (column); add the elements of that row (column) and keep the rest (reverse of P5).",
+        "दो सारणिक तब जोड़े जा सकते हैं जब वे केवल एक पंक्ति (स्तम्भ) में भिन्न हों; उसी पंक्ति (स्तम्भ) के अवयव जोड़ दीजिए, शेष वही रखिए (P5 का उलटा)।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&2\\\\3&4\\end{vmatrix}$$+$$\\begin{vmatrix}5&2\\\\6&4\\end{vmatrix}$$=$$\\begin{vmatrix}6&2\\\\9&4\\end{vmatrix}$$=6$.",
+        "उदा.: $\\begin{vmatrix}1&2\\\\3&4\\end{vmatrix}$$+$$\\begin{vmatrix}5&2\\\\6&4\\end{vmatrix}$$=$$\\begin{vmatrix}6&2\\\\9&4\\end{vmatrix}$$=6$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When can we take sigma inside the determinant?",
+       "कब हम योग-चिह्न ($\\sum$) को सारणिक के अन्दर ले जा सकते हैं?"
+      ],
+      "a": [
+       [
+        "When only one row (column) contains the running index $r$ and all other rows (columns) are free of $r$: sum that row (column) element by element, then evaluate.",
+        "जब केवल एक पंक्ति (स्तम्भ) में चल सूचकांक $r$ हो और शेष सभी पंक्तियाँ (स्तम्भ) $r$ से मुक्त हों: उसी पंक्ति (स्तम्भ) के प्रत्येक अवयव का योग लीजिए, फिर मान निकालिए।"
+       ],
+       [
+        "Ex: $\\sum_{r=1}^{n}$$\\begin{vmatrix}r&1\\\\2&3\\end{vmatrix}$$=$$\\begin{vmatrix}\\sum r&n\\\\2&3\\end{vmatrix}$$=\\dfrac{n(3n-1)}2$.",
+        "उदा.: $\\sum_{r=1}^{n}$$\\begin{vmatrix}r&1\\\\2&3\\end{vmatrix}$$=$$\\begin{vmatrix}\\sum r&n\\\\2&3\\end{vmatrix}$$=\\dfrac{n(3n-1)}2$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens when all elements of a determinant are multiplied by $k$?",
+       "सारणिक के सभी अवयवों को $k$ से गुणा करने पर क्या होता है?"
+      ],
+      "a": [
+       "$|kA|=k^{n}|A|$",
+       [
+        "Here $n$ is the order of the determinant.",
+        "यहाँ $n$ सारणिक की कोटि है।"
+       ],
+       [
+        "Only one row multiplied by $k$ gives $kD$; every row gives $k^nD$.",
+        "केवल एक पंक्ति को $k$ से गुणा करने पर $kD$; सभी पंक्तियों को गुणा करने पर $k^nD$ मिलता है।"
+       ],
+       [
+        "Ex: order 3, $D=5$, all elements $\\times2$: new value $=2^3\\cdot5=40$.",
+        "उदा.: तृतीय कोटि, $D=5$, सभी अवयव $\\times2$: नया मान $=2^3\\cdot5=40$।"
+       ]
+      ]
+     },
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you identify a factor of a determinant without expanding?",
+       "सारणिक का कोई गुणनखण्ड प्रसार किये बिना कैसे पहचानते हैं?"
+      ],
+      "a": [
+       [
+        "Put $x=a$ (or $a=b$); if two rows (columns) become identical or proportional, $D=0$ so $(x-a)$ is a factor. Compare degrees and one coefficient to fix the remaining constant.",
+        "$x=a$ (या $a=b$) रखिए; यदि दो पंक्तियाँ (स्तम्भ) समान या समानुपाती हो जाएँ तो $D=0$, अतः $(x-a)$ गुणनखण्ड है। शेष अचर ज्ञात करने के लिए घात व एक गुणांक की तुलना कीजिए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&1&1\\\\a&b&c\\\\a^2&b^2&c^2\\end{vmatrix}$$=0$ at $a=b$, $b=c$, $c=a$; degree 3 gives $D=(a-b)(b-c)(c-a)$.",
+        "उदा.: $\\begin{vmatrix}1&1&1\\\\a&b&c\\\\a^2&b^2&c^2\\end{vmatrix}$$a=b$, $b=c$, $c=a$ पर $0$; घात 3 होने से $D=(a-b)(b-c)(c-a)$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Row and Column Transformation",
+    "hi": "पंक्ति व स्तम्भ रूपान्तरण",
+    "items": [
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you apply a given row/column transformation?",
+       "दिया गया पंक्ति/स्तम्भ रूपान्तरण कैसे लगाते हैं?"
+      ],
+      "a": [
+       [
+        "$R_i\\to R_i+\\lambda R_j$ means: replace row $i$ by (row $i$) $+\\ \\lambda\\times$(row $j$); only row $i$ changes, all other rows are copied. Same for $C_i\\to C_i+\\lambda C_j$.",
+        "$R_i\\to R_i+\\lambda R_j$ का अर्थ: पंक्ति $i$ को (पंक्ति $i$) $+\\ \\lambda\\times$(पंक्ति $j$) से बदलिए; केवल पंक्ति $i$ बदलती है, शेष पंक्तियाँ जस की तस रहती हैं। $C_i\\to C_i+\\lambda C_j$ भी इसी प्रकार।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$; $R_2\\to R_2-4R_1,\\ R_3\\to R_3-7R_1$ gives $\\begin{vmatrix}1&2&3\\\\0&-3&-6\\\\0&-6&-11\\end{vmatrix}$$=33-36=-3$.",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$; $R_2\\to R_2-4R_1,\\ R_3\\to R_3-7R_1$ से $\\begin{vmatrix}1&2&3\\\\0&-3&-6\\\\0&-6&-11\\end{vmatrix}$$=33-36=-3$।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the value of a determinant under a row/column transformation?",
+       "पंक्ति/स्तम्भ रूपान्तरण लगाने पर सारणिक के मान का क्या होता है?"
+      ],
+      "a": [
+       [
+        "$R_i\\to R_i+\\lambda R_j$: value unchanged. $R_i\\leftrightarrow R_j$: sign changes. $R_i\\to kR_i$: value $\\times k$. $R_i\\to xR_i+yR_j+zR_k$: value $\\times x$.",
+        "$R_i\\to R_i+\\lambda R_j$: मान अपरिवर्तित। $R_i\\leftrightarrow R_j$: चिह्न बदलता है। $R_i\\to kR_i$: मान $\\times k$। $R_i\\to xR_i+yR_j+zR_k$: मान $\\times x$।"
+       ],
+       [
+        "Ex: $R_1\\to2R_1-R_2$ multiplies $D$ by $2$.",
+        "उदा.: $R_1\\to2R_1-R_2$ से $D$ का मान $2$ गुना हो जाता है।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What should we keep in mind while applying more than one operation at a time?",
+       "एक साथ एक से अधिक संक्रियाएँ लगाते समय किन बातों का ध्यान रखना चाहिए?"
+      ],
+      "a": [
+       [
+        "Apply them one after the other: a row/column used inside an operation must still be in its original form, so a row changed earlier cannot be used again. $C_1\\to C_1-C_2$ with $C_2\\to C_2-C_3$ is fine (do $C_1$ first); $R_1\\to R_1-R_2$ with $R_2\\to R_2-R_1$ is wrong.",
+        "उन्हें एक के बाद एक लगाइए: किसी संक्रिया में प्रयुक्त पंक्ति/स्तम्भ अपने मूल रूप में होना चाहिए, इसलिए पहले बदली गई पंक्ति का दोबारा उपयोग नहीं हो सकता। $C_1\\to C_1-C_2$ व $C_2\\to C_2-C_3$ एक साथ ठीक हैं (पहले $C_1$ बदलिए); $R_1\\to R_1-R_2$ व $R_2\\to R_2-R_1$ गलत है।"
+       ],
+       [
+        "Also never multiply the row being changed by a constant without correcting the value ($R_1\\to2R_1-R_2$ doubles $D$).",
+        "जिस पंक्ति को बदल रहे हैं उसे अचर से गुणा करने पर मान का सुधार भी कीजिए ($R_1\\to2R_1-R_2$ से $D$ दुगुना हो जाता है)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Four standard determinants",
+    "hi": "चार मानक सारणिक",
+    "items": [
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write down all four standard determinants. There are two other common determinants also; write them down.",
+       "चारों मानक सारणिक लिखिए। दो अन्य प्रचलित सारणिक भी हैं, उन्हें भी लिखिए।"
+      ],
+      "a": [
+       "$\\begin{vmatrix}a&b&c\\\\b&c&a\\\\c&a&b\\end{vmatrix}=-(a^3+b^3+c^3-3abc)=-(a+b+c)(a^2+b^2+c^2-ab-bc-ca)$",
+       "$\\begin{vmatrix}1&a&a^2\\\\1&b&b^2\\\\1&c&c^2\\end{vmatrix}=(a-b)(b-c)(c-a)$",
+       "$\\begin{vmatrix}1&a&a^3\\\\1&b&b^3\\\\1&c&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(a+b+c)$",
+       "$\\begin{vmatrix}1&a^2&a^3\\\\1&b^2&b^3\\\\1&c^2&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(ab+bc+ca)$",
+       [
+        "Two other common ones:",
+        "दो अन्य प्रचलित सारणिक:"
+       ],
+       "$\\begin{vmatrix}1+a&1&1\\\\1&1+b&1\\\\1&1&1+c\\end{vmatrix}=abc+ab+bc+ca=abc\\left(1+\\dfrac1a+\\dfrac1b+\\dfrac1c\\right)$",
+       "$\\begin{vmatrix}1&1&1\\\\a&b&c\\\\bc&ca&ab\\end{vmatrix}=(a-b)(b-c)(c-a)$"
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to spot the four standard determinants and their results while solving questions?",
+       "क्या आप प्रश्न हल करते समय चारों मानक सारणिकों व उनके परिणामों को पहचान पाते हैं?"
+      ],
+      "a": [
+       [
+        "Take common factors out of rows/columns (and use $R_i\\to R_i-R_j$) until a row/column of $1$'s or the cyclic pattern appears; compare with the list: powers $1,x,x^2,x^3$ in a row $\\Rightarrow$ Vandermonde type.",
+        "पंक्तियों/स्तम्भों से उभयनिष्ठ गुणनखण्ड बाहर निकालिए (तथा $R_i\\to R_i-R_j$ लगाइए) जब तक $1$ वाली पंक्ति/स्तम्भ या चक्रीय रूप न दिखे; फिर सूची से मिलाइए: किसी पंक्ति में घात $1,x,x^2,x^3$ हों $\\Rightarrow$ वाण्डरमोण्ड प्रकार।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&1&1\\\\2&3&4\\\\4&9&16\\end{vmatrix}$$=(2-3)(3-4)(4-2)=2$ (standard 2 with $a,b,c=2,3,4$).",
+        "उदा.: $\\begin{vmatrix}1&1&1\\\\2&3&4\\\\4&9&16\\end{vmatrix}$$=(2-3)(3-4)(4-2)=2$ (मानक 2, $a,b,c=2,3,4$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Two Important Operations",
+    "hi": "दो महत्त्वपूर्ण संक्रियाएँ",
+    "items": [
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the two important operations and when do we apply them?",
+       "दो महत्त्वपूर्ण संक्रियाएँ कौन-सी हैं तथा उन्हें कब लगाते हैं?"
+      ],
+      "a": [
+       [
+        "(i) A row/column of all $1$'s (or easily made): subtract it from the others ($R_1\\to R_1-R_3$, $R_2\\to R_2-R_3$) and expand along the column of $1$'s. (ii) If the three rows (columns) add up to a common factor: $R_1\\to R_1+R_2+R_3$, take the factor out.",
+        "(i) सब $1$ वाली (या आसानी से बनने वाली) पंक्ति/स्तम्भ: उसे अन्य में से घटाइए ($R_1\\to R_1-R_3$, $R_2\\to R_2-R_3$) और $1$ वाले स्तम्भ के अनुदिश प्रसार कीजिए। (ii) तीनों पंक्तियों (स्तम्भों) का योग उभयनिष्ठ गुणनखण्ड दे तो $R_1\\to R_1+R_2+R_3$ लगाकर गुणनखण्ड बाहर निकालिए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}x+1&2x&3\\\\2x&3&x+1\\\\3&x+1&2x\\end{vmatrix}$$=0$: each row sums to $3x+4$, so $(3x+4)(\\dots)=0$ and the other factor $3x^2-9x+7\\neq0$ for real $x$, giving $x=-\\frac43$.",
+        "उदा.: $\\begin{vmatrix}x+1&2x&3\\\\2x&3&x+1\\\\3&x+1&2x\\end{vmatrix}$$=0$: प्रत्येक पंक्ति का योग $3x+4$ है, अतः $(3x+4)(\\dots)=0$ तथा दूसरा गुणनखण्ड $3x^2-9x+7$ वास्तविक $x$ के लिए शून्य नहीं, इसलिए $x=-\\frac43$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Which operation do we use when the elements of a row/column are in AP?",
+       "जब किसी पंक्ति/स्तम्भ के अवयव समान्तर श्रेढ़ी में हों तो कौन-सी संक्रिया लगाते हैं?"
+      ],
+      "a": [
+       [
+        "If the entries of every row are in AP, $C_1\\to C_1-2C_2+C_3$ gives a zero column, so $D=0$. If only one row is in AP, use $C_3\\to C_3-C_2,\\ C_2\\to C_2-C_1$ to make the differences equal.",
+        "यदि प्रत्येक पंक्ति के अवयव समान्तर श्रेढ़ी में हों तो $C_1\\to C_1-2C_2+C_3$ से शून्य स्तम्भ मिलता है, अतः $D=0$। यदि केवल एक पंक्ति समान्तर श्रेढ़ी में हो तो $C_3\\to C_3-C_2,\\ C_2\\to C_2-C_1$ लगाकर अन्तर समान कीजिए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{vmatrix}$$=0$ ($C_1-2C_2+C_3=0$).",
+        "उदा.: $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{vmatrix}$$=0$ ($C_1-2C_2+C_3=0$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multiplication of Determinants",
+    "hi": "सारणिकों का गुणन",
+    "items": [
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you multiply any two determinants of the same order in all 4 ways?",
+       "क्या आप समान कोटि के किन्हीं दो सारणिकों का गुणन चारों प्रकार से कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Row$\\times$column, row$\\times$row, column$\\times$row, column$\\times$column: the $(i,j)$ element is the sum of products of the $i$-th line of the first with the $j$-th line of the second.",
+        "पंक्ति$\\times$स्तम्भ, पंक्ति$\\times$पंक्ति, स्तम्भ$\\times$पंक्ति, स्तम्भ$\\times$स्तम्भ: $(i,j)$ अवयव = पहले की $i$-वीं रेखा व दूसरे की $j$-वीं रेखा के गुणनफलों का योग।"
+       ],
+       "$\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}\\begin{vmatrix}l_1&m_1\\\\l_2&m_2\\end{vmatrix}=\\begin{vmatrix}a_1l_1+b_1l_2&a_1m_1+b_1m_2\\\\a_2l_1+b_2l_2&a_2m_1+b_2m_2\\end{vmatrix}$",
+       [
+        "Ex: $\\begin{vmatrix}1&2\\\\3&4\\end{vmatrix}$$\\begin{vmatrix}0&1\\\\1&0\\end{vmatrix}$$=(-2)(-1)=2=\\begin{vmatrix}2&1\\\\4&3\\end{vmatrix}$.",
+        "उदा.: $\\begin{vmatrix}1&2\\\\3&4\\end{vmatrix}$$\\begin{vmatrix}0&1\\\\1&0\\end{vmatrix}$$=(-2)(-1)=2=\\begin{vmatrix}2&1\\\\4&3\\end{vmatrix}$।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Memorise the result of Question 1 in Multiplication of Determinants.",
+       "सारणिकों के गुणन में प्रश्न 1 का परिणाम याद कीजिए।"
+      ],
+      "a": [
+       [
+        "The determinant of cofactors is $D^2$ (order 3); in order $n$ it is $D^{n-1}$:",
+        "सहखण्डों से बना सारणिक $D^2$ होता है (तृतीय कोटि); $n$ कोटि में यह $D^{n-1}$ होता है:"
+       ],
+       "$\\begin{vmatrix}C_{11}&C_{12}&C_{13}\\\\C_{21}&C_{22}&C_{23}\\\\C_{31}&C_{32}&C_{33}\\end{vmatrix}=D^2$",
+       [
+        "Ex: $D=\\mathrm{diag}(1,2,3)$ has $D=6$; its cofactors are $6,3,2$ on the diagonal, product $36=6^2$. Also $\\begin{vmatrix}2bc-a^2&c^2&b^2\\\\c^2&2ca-b^2&a^2\\\\b^2&a^2&2ab-c^2\\end{vmatrix}$$=(a^3+b^3+c^3-3abc)^2$.",
+        "उदा.: $D=\\mathrm{diag}(1,2,3)$ में $D=6$; उसके सहखण्ड विकर्ण पर $6,3,2$, गुणनफल $36=6^2$। साथ ही $\\begin{vmatrix}2bc-a^2&c^2&b^2\\\\c^2&2ca-b^2&a^2\\\\b^2&a^2&2ab-c^2\\end{vmatrix}$$=(a^3+b^3+c^3-3abc)^2$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you express a given determinant as the product of two determinants?",
+       "दिये गये सारणिक को दो सारणिकों के गुणनफल के रूप में कैसे व्यक्त करते हैं?"
+      ],
+      "a": [
+       [
+        "Write every element as a sum of products (a dot product of a row of one determinant and a column of another); then the given determinant is that product.",
+        "प्रत्येक अवयव को गुणनफलों के योग के रूप में लिखिए (एक सारणिक की पंक्ति व दूसरे के स्तम्भ का अदिश गुणनफल); तब दिया गया सारणिक उन दोनों का गुणनफल है।"
+       ],
+       [
+        "Ex: $(a_i+b_j)^2=a_i^2\\cdot1+a_i\\cdot2b_j+1\\cdot b_j^2$, so $\\left|(a_i+b_j)^2\\right|$ = (determinant with rows $a_i^2,\\ a_i,\\ 1$) $\\times$ (determinant with columns $1,\\ 2b_j,\\ b_j^2$) $=-2(a_1-a_2)(a_2-a_3)(a_3-a_1)(b_1-b_2)(b_2-b_3)(b_3-b_1)$. With $S_r=\\alpha^r+\\beta^r+\\gamma^r$: $|S_{i+j-2}|=\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2$.",
+        "उदा.: $(a_i+b_j)^2=a_i^2\\cdot1+a_i\\cdot2b_j+1\\cdot b_j^2$, अतः $\\left|(a_i+b_j)^2\\right|$ = (पंक्तियाँ $a_i^2,\\ a_i,\\ 1$ वाला सारणिक) $\\times$ (स्तम्भ $1,\\ 2b_j,\\ b_j^2$ वाला सारणिक) $=-2(a_1-a_2)(a_2-a_3)(a_3-a_1)(b_1-b_2)(b_2-b_3)(b_3-b_1)$। $S_r=\\alpha^r+\\beta^r+\\gamma^r$ लेने पर $|S_{i+j-2}|=\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you identify whether a question is based on multiplication of determinants?",
+       "कैसे पहचानें कि कोई प्रश्न सारणिकों के गुणन की अवधारणा पर आधारित है?"
+      ],
+      "a": [
+       [
+        "Each element is a sum of two or three products ($a_1l_1+b_1l_2+c_1l_3$), a square $(a+b)^2$, a power sum $\\alpha^n+\\beta^n$, $\\cos(\\alpha_i-\\beta_j)$, or the determinant is given with a square (e.g. $D^2$) or as a product of two determinants.",
+        "प्रत्येक अवयव दो-तीन गुणनफलों का योग ($a_1l_1+b_1l_2+c_1l_3$), वर्ग $(a+b)^2$, घात-योग $\\alpha^n+\\beta^n$, $\\cos(\\alpha_i-\\beta_j)$ हो, या सारणिक का वर्ग ($D^2$) अथवा दो सारणिकों का गुणनफल दिया हो।"
+       ],
+       [
+        "Ex: $\\cos(\\alpha_i-\\beta_j)=\\cos\\alpha_i\\cos\\beta_j+\\sin\\alpha_i\\sin\\beta_j$ has only two products, so the $3\\times3$ determinant of these elements is $0$ (a third zero column can be added).",
+        "उदा.: $\\cos(\\alpha_i-\\beta_j)=\\cos\\alpha_i\\cos\\beta_j+\\sin\\alpha_i\\sin\\beta_j$ में केवल दो गुणनफल हैं, अतः इन अवयवों वाला $3\\times3$ सारणिक $0$ है (तीसरा शून्य स्तम्भ जोड़ा जा सकता है)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "System of Equations",
+    "hi": "समीकरण निकाय",
+    "items": [
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do consistent and inconsistent systems mean?",
+       "संगत व असंगत निकाय से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "Consistent: at least one solution (unique, or infinitely many). Inconsistent: no solution.",
+        "संगत: कम से कम एक हल (अद्वितीय या अनन्त)। असंगत: कोई हल नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do trivial and non-trivial solutions mean?",
+       "तुच्छ व अतुच्छ हल से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "Trivial: every variable is $0$ (the origin). Non-trivial: at least one variable is non-zero. They are asked for homogeneous systems (all constants $0$), which always have the trivial solution.",
+        "तुच्छ: सभी चर $0$ (मूल-बिन्दु)। अतुच्छ: कम से कम एक चर अशून्य। ये समघात निकाय (सभी अचर $0$) के लिए पूछे जाते हैं, जिसका तुच्छ हल सदैव होता है।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for a unique solution of two equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में दो समीकरणों के अद्वितीय हल का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\dfrac{a_1}{a_2}\\neq\\dfrac{b_1}{b_2}$",
+       [
+        "The two lines $a_1x+b_1y+c_1=0$, $a_2x+b_2y+c_2=0$ intersect at exactly one point.",
+        "रेखाएँ $a_1x+b_1y+c_1=0$, $a_2x+b_2y+c_2=0$ ठीक एक बिन्दु पर काटती हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for infinitely many solutions of two equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में दो समीकरणों के अनन्त हलों का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$",
+       [
+        "The two lines coincide (dependent equations).",
+        "दोनों रेखाएँ संपाती हैं (आश्रित समीकरण)।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for an inconsistent system of two equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में दो समीकरणों के असंगत होने का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}\\neq\\dfrac{c_1}{c_2}$",
+       [
+        "The two lines are parallel and distinct.",
+        "दोनों रेखाएँ समान्तर व भिन्न हैं।"
+       ],
+       [
+        "Ex: $x+2y=3,\\ 2x+4y=7$ has no solution ($\\frac12=\\frac24\\neq\\frac37$).",
+        "उदा.: $x+2y=3,\\ 2x+4y=7$ का कोई हल नहीं ($\\frac12=\\frac24\\neq\\frac37$)।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for a unique solution of three equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में तीन समीकरणों के अद्वितीय हल का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=0$",
+       [
+        "with at least two of the lines not parallel: the three lines are concurrent (meet at one point).",
+        "तथा कम से कम दो रेखाएँ समान्तर न हों: तीनों रेखाएँ संगामी हैं (एक बिन्दु पर मिलती हैं)।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for infinitely many solutions of three equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में तीन समीकरणों के अनन्त हलों का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}=\\dfrac{a_2}{a_3}=\\dfrac{b_2}{b_3}=\\dfrac{c_2}{c_3}$",
+       [
+        "All three lines coincide.",
+        "तीनों रेखाएँ संपाती हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the condition for an inconsistent system of three equations in two variables; what does it mean in coordinate geometry?",
+       "दो चरों में तीन समीकरणों के असंगत होने का प्रतिबन्ध लिखिए तथा निर्देशांक ज्यामिति में इसका क्या अर्थ है?"
+      ],
+      "a": [
+       "$\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}\\neq0$",
+       [
+        "The three lines have no common point (they form a triangle). Also inconsistent: all three parallel but not all coincident ($D=0$ then).",
+        "तीनों रेखाओं का कोई उभयनिष्ठ बिन्दु नहीं (वे त्रिभुज बनाती हैं)। साथ ही तीनों समान्तर हों पर सभी संपाती न हों तो भी असंगत ($D=0$ होता है)।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition that three planes form a prism?",
+       "तीन समतलों के प्रिज़्म बनाने का प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "The planes meet pairwise (no two parallel) but have no common point: coefficient determinant $D=0$, the rows of coefficients are not proportional, and the constants do not satisfy the same relation as the rows, so some $D_x,D_y,D_z\\neq0$.",
+        "समतल युग्मों में मिलते हैं (कोई दो समान्तर नहीं) पर कोई उभयनिष्ठ बिन्दु नहीं: गुणांक सारणिक $D=0$, गुणांकों की पंक्तियाँ समानुपाती नहीं, तथा अचर पदों पर वही सम्बन्ध लागू नहीं होता, अतः कोई $D_x,D_y,D_z\\neq0$।"
+       ],
+       [
+        "Ex: $x+y+z=1,\\ x+2y+3z=2,\\ 2x+3y+4z=5$: $R_3=R_1+R_2$ but $5\\neq1+2$, a prism.",
+        "उदा.: $x+y+z=1,\\ x+2y+3z=2,\\ 2x+3y+4z=5$: $R_3=R_1+R_2$ परन्तु $5\\neq1+2$, अतः प्रिज़्म।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Cramer's Rule",
+    "hi": "क्रेमर नियम",
+    "items": [
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to write all the determinants involved in Cramer's rule?",
+       "क्या आप क्रेमर नियम में प्रयुक्त सभी सारणिक लिख सकते हैं?"
+      ],
+      "a": [
+       [
+        "For $a_1x+b_1y+c_1z=d_1$ etc., $D$ is the coefficient determinant; $D_x,D_y,D_z$ are obtained by replacing the $x$-, $y$-, $z$-column of $D$ by the constants $d_1,d_2,d_3$:",
+        "$a_1x+b_1y+c_1z=d_1$ आदि के लिए $D$ गुणांक सारणिक है; $D$ के $x$-, $y$-, $z$-स्तम्भ को अचर $d_1,d_2,d_3$ से बदलने पर $D_x,D_y,D_z$ मिलते हैं:"
+       ],
+       "$D=\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix},\\quad D_x=\\begin{vmatrix}d_1&b_1&c_1\\\\d_2&b_2&c_2\\\\d_3&b_3&c_3\\end{vmatrix},\\quad D_y=\\begin{vmatrix}a_1&d_1&c_1\\\\a_2&d_2&c_2\\\\a_3&d_3&c_3\\end{vmatrix},\\quad D_z=\\begin{vmatrix}a_1&b_1&d_1\\\\a_2&b_2&d_2\\\\a_3&b_3&d_3\\end{vmatrix}$"
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to write Cramer's rule for two equations in two variables?",
+       "क्या आप दो चरों वाले दो समीकरणों के लिए क्रेमर नियम लिख सकते हैं?"
+      ],
+      "a": [
+       "$x=\\dfrac{D_x}{D},\\quad y=\\dfrac{D_y}{D},\\quad D=\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}\\neq0$",
+       [
+        "Ex: $2x+y=5,\\ x-y=1$: $D=-3,\\ D_x=-6,\\ D_y=-3\\Rightarrow x=2,\\ y=1$.",
+        "उदा.: $2x+y=5,\\ x-y=1$: $D=-3,\\ D_x=-6,\\ D_y=-3\\Rightarrow x=2,\\ y=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to write Cramer's rule for three equations in three variables?",
+       "क्या आप तीन चरों वाले तीन समीकरणों के लिए क्रेमर नियम लिख सकते हैं?"
+      ],
+      "a": [
+       "$x=\\dfrac{D_x}{D},\\quad y=\\dfrac{D_y}{D},\\quad z=\\dfrac{D_z}{D}\\qquad(D\\neq0)$",
+       [
+        "Ex: $x+y+z=6,\\ 2x-y+z=3,\\ x+2y-z=2$: $D=7,\\ D_x=7,\\ D_y=14,\\ D_z=21\\Rightarrow(x,y,z)=(1,2,3)$.",
+        "उदा.: $x+y+z=6,\\ 2x-y+z=3,\\ x+2y-z=2$: $D=7,\\ D_x=7,\\ D_y=14,\\ D_z=21\\Rightarrow(x,y,z)=(1,2,3)$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are you able to draw the chart showing all situations for three equations in three variables?",
+       "क्या आप तीन चरों वाले तीन समीकरणों की सभी स्थितियों को दर्शाने वाला चार्ट बना सकते हैं?"
+      ],
+      "a": [
+       [
+        "$D\\neq0$: unique solution (consistent).",
+        "$D\\neq0$: अद्वितीय हल (संगत)।"
+       ],
+       [
+        "$D=0$ and at least one of $D_x,D_y,D_z\\neq0$: no solution (inconsistent).",
+        "$D=0$ तथा $D_x,D_y,D_z$ में से कम से कम एक $\\neq0$: कोई हल नहीं (असंगत)।"
+       ],
+       [
+        "$D=D_x=D_y=D_z=0$: infinitely many solutions or no solution - check further (exception case).",
+        "$D=D_x=D_y=D_z=0$: अनन्त हल या कोई हल नहीं - आगे जाँच कीजिए (अपवाद स्थिति)।"
+       ]
+      ]
+     },
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do unique / infinite / no solution represent in 3-D geometry?",
+       "तीन चरों में अद्वितीय / अनन्त / कोई हल नहीं का त्रिविमीय ज्यामिति में क्या अर्थ है?"
+      ],
+      "a": [
+       [
+        "Unique: three planes meet at one point. Infinite: three planes pass through a common line (or all coincide). None: three parallel planes, two parallel planes cut by the third, or the planes form a prism.",
+        "अद्वितीय: तीनों समतल एक बिन्दु पर मिलते हैं। अनन्त: तीनों समतल एक उभयनिष्ठ रेखा से गुजरते हैं (या सभी संपाती)। कोई नहीं: तीन समान्तर समतल, दो समान्तर समतल व उन्हें काटता तीसरा, अथवा प्रिज़्म।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How do you represent/determine infinite solutions of three equations in three variables?",
+       "तीन चरों वाले तीन समीकरणों के अनन्त हलों को कैसे निरूपित/ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "When $D=0$ find $\\lambda,\\mu$ with $R_3=\\lambda R_1+\\mu R_2$ (coefficients). The system is consistent (infinite solutions) iff the constants satisfy $d_3=\\lambda d_1+\\mu d_2$; then put $z=t$ and solve the other two equations for $x,y$.",
+        "$D=0$ होने पर $\\lambda,\\mu$ ज्ञात कीजिए ताकि $R_3=\\lambda R_1+\\mu R_2$ (गुणांकों में) हो। निकाय संगत (अनन्त हल) तभी है जब अचरों पर $d_3=\\lambda d_1+\\mu d_2$ हो; तब $z=t$ रखकर शेष दो समीकरणों से $x,y$ ज्ञात कीजिए।"
+       ],
+       [
+        "Ex: $x+2y+3z=4,\\ 2x+3y+4z=5,\\ 3x+5y+7z=k$: $R_3=R_1+R_2$, so infinite solutions iff $k=9$ (no solution otherwise).",
+        "उदा.: $x+2y+3z=4,\\ 2x+3y+4z=5,\\ 3x+5y+7z=k$: $R_3=R_1+R_2$, अतः अनन्त हल तभी जब $k=9$ (अन्यथा कोई हल नहीं)।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When should we check the exception case while solving three equations in three variables?",
+       "तीन चरों वाले तीन समीकरण हल करते समय अपवाद स्थिति की जाँच कब करनी चाहिए?"
+      ],
+      "a": [
+       [
+        "When $D=D_x=D_y=D_z=0$. Then do not conclude 'infinite': solve two of the equations or compare the planes; three parallel planes (or two parallel) have no solution although all four determinants vanish.",
+        "जब $D=D_x=D_y=D_z=0$ हो। तब सीधे 'अनन्त' न लिखिए: दो समीकरण हल कीजिए या समतलों की तुलना कीजिए; तीन समान्तर (या दो समान्तर) समतलों का कोई हल नहीं होता, चाहे चारों सारणिक शून्य हों।"
+       ],
+       [
+        "Ex: $2x+y+4z=3,\\ 2x+y+4z=7,\\ 2x+y+4z=10$: $D=D_x=D_y=D_z=0$ but no solution.",
+        "उदा.: $2x+y+4z=3,\\ 2x+y+4z=7,\\ 2x+y+4z=10$: $D=D_x=D_y=D_z=0$ परन्तु कोई हल नहीं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "System of Homogeneous Linear Equations",
+    "hi": "समघात रैखिक समीकरण निकाय",
+    "items": [
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do non-trivial solutions of a homogeneous system mean and what is the condition?",
+       "समघात निकाय के अतुच्छ हलों का क्या अर्थ है तथा उनका प्रतिबन्ध क्या है?"
+      ],
+      "a": [
+       [
+        "A homogeneous system is always consistent ($x=y=z=0$). It has non-trivial (infinitely many, non-zero) solutions iff $D=0$; if $D\\neq0$ only the trivial solution exists.",
+        "समघात निकाय सदैव संगत होता है ($x=y=z=0$)। उसके अतुच्छ (अनन्त, अशून्य) हल तभी होते हैं जब $D=0$; यदि $D\\neq0$ तो केवल तुच्छ हल है।"
+       ],
+       [
+        "Ex: $x+y+z=0,\\ x+2y+3z=0,\\ 2x+3y+kz=0$: $D=k-4$, so non-trivial solutions iff $k=4$.",
+        "उदा.: $x+y+z=0,\\ x+2y+3z=0,\\ 2x+3y+kz=0$: $D=k-4$, अतः अतुच्छ हल तभी जब $k=4$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous (added items)",
+    "hi": "विविध (जोड़े गये बिन्दु)",
+    "items": [
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-II: 7,8,9; J-M(XII): 4; J-M(XIII): 14,21; J-A: 3,4; QB: 96; DPP-1: 1,17; DPP-2: 10; DPP-3: 2,3,7; C-I: 9,18,22; C-II: 17",
+      "q": [
+       "How do you solve an equation of the form (determinant in $x$) $=0$?",
+       "$x$ वाले सारणिक $=0$ के रूप का समीकरण कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Simplify with row/column operations (take common factors, create zeros) or use P6 to factor; the roots are the zeros of the factors. Check the number of roots against the degree.",
+        "पंक्ति/स्तम्भ संक्रियाओं से सरल कीजिए (उभयनिष्ठ गुणनखण्ड निकालिए, शून्य बनाइए) या P6 से गुणनखण्ड कीजिए; मूल गुणनखण्डों के शून्य हैं। मूलों की संख्या की जाँच घात से कीजिए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}x&1&1\\\\1&x&1\\\\1&1&x\\end{vmatrix}$$=(x-1)^2(x+2)=0\\Rightarrow x=1,1,-2$.",
+        "उदा.: $\\begin{vmatrix}x&1&1\\\\1&x&1\\\\1&1&x\\end{vmatrix}$$=(x-1)^2(x+2)=0\\Rightarrow x=1,1,-2$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 6; J-II: 25; QB: 101; DPP-2: 18; DPP-3: 1,11; C-I: 6,9,19",
+      "q": [
+       "How do you find the degree, a coefficient, or the constant term of a determinant that is a polynomial in $x$?",
+       "$x$ में बहुपद के रूप वाले सारणिक की घात, कोई गुणांक या अचर पद कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Constant term $=\\Delta(0)$; sum of coefficients $=\\Delta(1)$; degree = highest power of $x$ that can occur in a product of one element from each row and column; for an identity in $x$, put convenient values of $x$ ($0,\\pm1$) and compare.",
+        "अचर पद $=\\Delta(0)$; गुणांकों का योग $=\\Delta(1)$; घात = प्रत्येक पंक्ति व स्तम्भ से एक-एक अवयव लेकर बने गुणनफल में $x$ की अधिकतम सम्भव घात; सर्वसमिका के लिए $x$ के सुविधाजनक मान ($0,\\pm1$) रखकर तुलना कीजिए।"
+       ],
+       [
+        "Ex: for $\\begin{vmatrix}x&1&1\\\\1&x&1\\\\1&1&x\\end{vmatrix}$$=x^3-3x+2$: degree $3$, constant term $\\Delta(0)=2$, coefficient of $x$ is $-3$.",
+        "उदा.: $\\begin{vmatrix}x&1&1\\\\1&x&1\\\\1&1&x\\end{vmatrix}$$=x^3-3x+2$ के लिए: घात $3$, अचर पद $\\Delta(0)=2$, $x$ का गुणांक $-3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-II: 5,7,32; J-M(XII): 4,6,8,11,22; J-M(XIII): 8,12,27; J-A: 2; QB: 89,95,103,106; DPP-2: 19; DPP-4: 4,11; C-I: 3,5,8,12,13,15,17,18,19,22; C-II: 10,16,23,24",
+      "q": [
+       "How do you handle a determinant whose elements are trigonometric (or other) functions: simplify, find its range/maximum/minimum or the number of roots?",
+       "त्रिकोणमितीय (या अन्य) फलनों वाले सारणिक को कैसे सरल करते हैं तथा उसका परिसर/अधिकतम/न्यूनतम या मूलों की संख्या कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "First reduce with $R_i\\to R_i-R_j$ (so common trigonometric parts cancel) and expand; the result is a simple expression such as $a+b\\sin2x$; then use its range $[a-|b|,a+|b|]$ or solve it for the roots in the given interval.",
+        "पहले $R_i\\to R_i-R_j$ लगाइए (ताकि उभयनिष्ठ त्रिकोणमितीय भाग कट जाएँ) और प्रसार कीजिए; परिणाम $a+b\\sin2x$ जैसा सरल व्यंजक होता है; फिर उसका परिसर $[a-|b|,a+|b|]$ लीजिए या दिये अन्तराल में मूल ज्ञात कीजिए।"
+       ],
+       [
+        "Ex: $\\begin{vmatrix}1+\\sin^2x&\\cos^2x&4\\sin2x\\\\\\sin^2x&1+\\cos^2x&4\\sin2x\\\\\\sin^2x&\\cos^2x&1+4\\sin2x\\end{vmatrix}$$=2+4\\sin2x$, range $[-2,6]$.",
+        "उदा.: $\\begin{vmatrix}1+\\sin^2x&\\cos^2x&4\\sin2x\\\\\\sin^2x&1+\\cos^2x&4\\sin2x\\\\\\sin^2x&\\cos^2x&1+4\\sin2x\\end{vmatrix}$$=2+4\\sin2x$, परिसर $[-2,6]$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Order and expansion",
+    "hi": "1. कोटि व प्रसार",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$",
+       "$\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=a_1(b_2c_3-b_3c_2)-b_1(a_2c_3-a_3c_2)+c_1(a_2b_3-a_3b_2)$",
+       [
+        "Sarrus: $D=(a_1b_2c_3+a_2b_3c_1+a_3b_1c_2)-(a_3b_2c_1+a_2b_1c_3+a_1b_3c_2)$",
+        "सारस: $D=(a_1b_2c_3+a_2b_3c_1+a_3b_1c_2)-(a_3b_2c_1+a_2b_1c_3+a_1b_3c_2)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Order = number of rows = number of columns; $a_{ij}$ lies in row $i$, column $j$",
+        "कोटि = पंक्तियों की संख्या = स्तम्भों की संख्या; $a_{ij}$ पंक्ति $i$, स्तम्भ $j$ में"
+       ],
+       [
+        "Expand along any row/column; choose the one with most zeros",
+        "किसी भी पंक्ति/स्तम्भ के अनुदिश प्रसार; सर्वाधिक शून्य वाली चुनिए"
+       ],
+       [
+        "Sign pattern for order 3: $+-+\\,/\\,-+-\\,/\\,+-+$",
+        "तृतीय कोटि का चिह्न-पट: $+-+\\,/\\,-+-\\,/\\,+-+$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Sarrus rule works only for order 3.",
+        "सारस नियम केवल तृतीय कोटि पर लगता है।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Minor and cofactor",
+    "hi": "2. उपसारणिक व सहखण्ड",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$C_{ij}=(-1)^{i+j}M_{ij}$",
+       "$a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}=\\Delta$",
+       "$a_{11}C_{21}+a_{12}C_{22}+a_{13}C_{23}=0$",
+       "$\\begin{vmatrix}C_{11}&C_{12}&C_{13}\\\\C_{21}&C_{22}&C_{23}\\\\C_{31}&C_{32}&C_{33}\\end{vmatrix}=\\Delta^2$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Minor $M_{ij}$: delete row $i$ and column $j$; order 3 has 9 minors",
+        "उपसारणिक $M_{ij}$: पंक्ति $i$ व स्तम्भ $j$ हटाइए; तृतीय कोटि में 9 उपसारणिक"
+       ],
+       [
+        "Own row/column $\\times$ own cofactors $=\\Delta$; other row/column $\\times$ these cofactors $=0$",
+        "अपनी पंक्ति/स्तम्भ $\\times$ अपने सहखण्ड $=\\Delta$; अन्य पंक्ति/स्तम्भ $\\times$ ये सहखण्ड $=0$"
+       ],
+       [
+        "Determinant of cofactors $=\\Delta^{n-1}$ (order $n$)",
+        "सहखण्डों का सारणिक $=\\Delta^{n-1}$ ($n$ कोटि)"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Forgetting the sign $(-1)^{i+j}$ when turning a minor into a cofactor.",
+        "उपसारणिक से सहखण्ड बनाते समय $(-1)^{i+j}$ भूल जाना।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Properties of determinants",
+    "hi": "3. सारणिक के गुणधर्म",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$D'=D,\\qquad |kA|=k^{n}|A|$",
+       "$\\begin{vmatrix}a_1+x&b_1+y&c_1+z\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}+\\begin{vmatrix}x&y&z\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Transpose: $D'=D$, so every row result holds for columns",
+        "परिवर्त: $D'=D$, अतः पंक्ति के सभी परिणाम स्तम्भ पर भी लागू"
+       ],
+       [
+        "Swap two rows (columns): sign changes",
+        "दो पंक्तियाँ (स्तम्भ) बदलने पर चिह्न बदलता है"
+       ],
+       [
+        "Two rows identical or proportional $\\Rightarrow D=0$; a zero row $\\Rightarrow D=0$",
+        "दो पंक्तियाँ समान या समानुपाती $\\Rightarrow D=0$; शून्य पंक्ति $\\Rightarrow D=0$"
+       ],
+       [
+        "One row $\\times k$ gives $kD$; all rows give $k^nD$",
+        "एक पंक्ति $\\times k$ से $kD$; सभी पंक्तियों से $k^nD$"
+       ],
+       [
+        "Add two determinants only if they differ in one row (column)",
+        "दो सारणिक तभी जुड़ते हैं जब वे एक ही पंक्ति (स्तम्भ) में भिन्न हों"
+       ],
+       [
+        "$\\sum$ goes inside only if one row (column) contains $r$",
+        "$\\sum$ अन्दर तभी जाता है जब केवल एक पंक्ति (स्तम्भ) में $r$ हो"
+       ],
+       [
+        "If $D=f(x)$ and $f(a)=0$, then $(x-a)$ is a factor",
+        "$D=f(x)$ तथा $f(a)=0$ हो तो $(x-a)$ गुणनखण्ड है"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$|kA|=k^n|A|$, not $k|A|$.",
+        "$|kA|=k^n|A|$, न कि $k|A|$।"
+       ],
+       [
+        "Forgetting that swapping two rows changes the sign.",
+        "दो पंक्तियाँ बदलने पर चिह्न बदलना भूल जाना।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Row and column transformations",
+    "hi": "4. पंक्ति व स्तम्भ रूपान्तरण",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$R_i\\to R_i+\\lambda R_j$: $D$ unchanged",
+        "$R_i\\to R_i+\\lambda R_j$: $D$ अपरिवर्तित"
+       ],
+       "$R_i\\leftrightarrow R_j:\\ D\\to-D,\\qquad R_i\\to kR_i:\\ D\\to kD$",
+       "$R_i\\to xR_i+yR_j+zR_k:\\ D\\to xD$"
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Choose the row/column that creates the most zeros.",
+        "वह पंक्ति/स्तम्भ चुनिए जिससे अधिकतम शून्य बनें।"
+       ],
+       [
+        "Apply the operations one after the other, never using an already changed row/column.",
+        "संक्रियाएँ क्रम से लगाइए, पहले बदली पंक्ति/स्तम्भ का उपयोग न कीजिए।"
+       ],
+       [
+        "Take out common factors, then expand along the row/column with zeros.",
+        "उभयनिष्ठ गुणनखण्ड निकालिए, फिर शून्य वाली पंक्ति/स्तम्भ के अनुदिश प्रसार कीजिए।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$R_1\\to2R_1-R_2$ doubles the value: divide by $2$.",
+        "$R_1\\to2R_1-R_2$ से मान दुगुना होता है: $2$ से भाग दीजिए।"
+       ],
+       [
+        "$R_1\\to R_1-R_2$ together with $R_2\\to R_2-R_1$ is not allowed.",
+        "$R_1\\to R_1-R_2$ व $R_2\\to R_2-R_1$ एक साथ मान्य नहीं।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Standard determinants",
+    "hi": "5. मानक सारणिक",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$\\begin{vmatrix}a&b&c\\\\b&c&a\\\\c&a&b\\end{vmatrix}=-(a^3+b^3+c^3-3abc)$",
+       "$\\begin{vmatrix}1&a&a^2\\\\1&b&b^2\\\\1&c&c^2\\end{vmatrix}=(a-b)(b-c)(c-a)$",
+       "$\\begin{vmatrix}1&a&a^3\\\\1&b&b^3\\\\1&c&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(a+b+c)$",
+       "$\\begin{vmatrix}1&a^2&a^3\\\\1&b^2&b^3\\\\1&c^2&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(ab+bc+ca)$",
+       "$\\begin{vmatrix}1+a&1&1\\\\1&1+b&1\\\\1&1&1+c\\end{vmatrix}=abc+ab+bc+ca$",
+       "$\\begin{vmatrix}1&1&1\\\\a&b&c\\\\bc&ca&ab\\end{vmatrix}=(a-b)(b-c)(c-a)$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Look for a row/column of $1$'s or powers $x,x^2,x^3$; make it by taking common factors",
+        "$1$ वाली पंक्ति/स्तम्भ या घात $x,x^2,x^3$ देखिए; उभयनिष्ठ गुणनखण्ड निकालकर बनाइए"
+       ],
+       [
+        "Cyclic pattern $(a,b,c),(b,c,a),(c,a,b)$: add all rows to get $a+b+c$",
+        "चक्रीय रूप $(a,b,c),(b,c,a),(c,a,b)$: सभी पंक्तियाँ जोड़कर $a+b+c$ प्राप्त कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Two important operations; AP",
+    "hi": "6. दो महत्त्वपूर्ण संक्रियाएँ; समान्तर श्रेढ़ी",
+    "color": "violet",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "A row/column of $1$'s: subtract it from the others, expand along it.",
+        "$1$ वाली पंक्ति/स्तम्भ: उसे अन्य में से घटाइए, उसी के अनुदिश प्रसार कीजिए।"
+       ],
+       [
+        "Rows (columns) add up to a common factor: $R_1\\to R_1+R_2+R_3$, take the factor out.",
+        "पंक्तियों (स्तम्भों) का योग उभयनिष्ठ गुणनखण्ड दे: $R_1\\to R_1+R_2+R_3$, गुणनखण्ड बाहर निकालिए।"
+       ],
+       [
+        "Entries of each row in AP: $C_1\\to C_1-2C_2+C_3$ gives a zero column, so $D=0$.",
+        "प्रत्येक पंक्ति के अवयव समान्तर श्रेढ़ी में: $C_1\\to C_1-2C_2+C_3$ से शून्य स्तम्भ, अतः $D=0$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Multiplication of determinants",
+    "hi": "7. सारणिकों का गुणन",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$|A||B|=|AB|$ (row$\\times$column; also row$\\times$row etc.)",
+        "$|A||B|=|AB|$ (पंक्ति$\\times$स्तम्भ; पंक्ति$\\times$पंक्ति आदि भी)"
+       ],
+       "$\\begin{vmatrix}C_{11}&C_{12}&C_{13}\\\\C_{21}&C_{22}&C_{23}\\\\C_{31}&C_{32}&C_{33}\\end{vmatrix}=D^2$",
+       "$S_r=\\alpha^r+\\beta^r+\\gamma^r:\\ |S_{i+j-2}|=\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2$"
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$(i,j)$ element = sum of products of line $i$ of the first and line $j$ of the second",
+        "$(i,j)$ अवयव = पहले की रेखा $i$ व दूसरे की रेखा $j$ के गुणनफलों का योग"
+       ],
+       [
+        "Clue: elements are sums of 2-3 products, squares like $(a+b)^2$, or power sums $S_r$",
+        "संकेत: अवयव 2-3 गुणनफलों के योग, $(a+b)^2$ जैसे वर्ग, या घात-योग $S_r$ हों"
+       ],
+       [
+        "Order 3 built from only 2 products per element $\\Rightarrow D=0$",
+        "तृतीय कोटि में प्रत्येक अवयव केवल 2 गुणनफलों से बना हो $\\Rightarrow D=0$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Determinant equations, polynomials, trigonometric entries",
+    "hi": "8. सारणिक समीकरण, बहुपद, त्रिकोणमितीय अवयव",
+    "color": "blue",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "To solve $\\Delta(x)=0$: simplify with operations, factor, read the roots; check the count against the degree.",
+        "$\\Delta(x)=0$ हल करने हेतु: संक्रियाओं से सरल कीजिए, गुणनखण्ड कीजिए, मूल पढ़िए; संख्या की जाँच घात से कीजिए।"
+       ],
+       [
+        "Polynomial determinant: constant term $\\Delta(0)$, sum of coefficients $\\Delta(1)$, degree from the highest power in a product of one element per row and column.",
+        "बहुपद सारणिक: अचर पद $\\Delta(0)$, गुणांकों का योग $\\Delta(1)$, घात प्रत्येक पंक्ति-स्तम्भ से एक अवयव के गुणनफल की उच्चतम घात से।"
+       ],
+       [
+        "Trigonometric entries: use $R_i\\to R_i-R_j$ to cancel common parts, reduce to $a+b\\sin2x$, then take range $[a-|b|,a+|b|]$ or solve in the interval.",
+        "त्रिकोणमितीय अवयव: उभयनिष्ठ भाग काटने हेतु $R_i\\to R_i-R_j$, $a+b\\sin2x$ तक लाइए, फिर परिसर $[a-|b|,a+|b|]$ लीजिए या अन्तराल में हल कीजिए।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Two variables: lines",
+    "hi": "9. दो चर: रेखाएँ",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{a_1}{a_2}\\neq\\dfrac{b_1}{b_2}$: unique (intersecting lines)",
+        "$\\dfrac{a_1}{a_2}\\neq\\dfrac{b_1}{b_2}$: अद्वितीय (प्रतिच्छेदी रेखाएँ)"
+       ],
+       [
+        "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$: infinite (coincident)",
+        "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}=\\dfrac{c_1}{c_2}$: अनन्त (संपाती)"
+       ],
+       [
+        "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}\\neq\\dfrac{c_1}{c_2}$: none (parallel)",
+        "$\\dfrac{a_1}{a_2}=\\dfrac{b_1}{b_2}\\neq\\dfrac{c_1}{c_2}$: कोई नहीं (समान्तर)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Three lines, two variables: concurrent $\\Leftrightarrow D=0$ (not all parallel); $D\\neq0$ means no common point",
+        "तीन रेखाएँ, दो चर: संगामी $\\Leftrightarrow D=0$ (सभी समान्तर नहीं); $D\\neq0$ पर कोई उभयनिष्ठ बिन्दु नहीं"
+       ],
+       [
+        "Three coincident lines give infinitely many solutions",
+        "तीन संपाती रेखाओं के अनन्त हल"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Cramer's rule",
+    "hi": "10. क्रेमर नियम",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       "$x=\\dfrac{D_x}{D},\\quad y=\\dfrac{D_y}{D},\\quad z=\\dfrac{D_z}{D}$",
+       [
+        "$D_x$: replace the $x$-column of $D$ by $d_1,d_2,d_3$",
+        "$D_x$: $D$ के $x$-स्तम्भ को $d_1,d_2,d_3$ से बदलिए"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Rule applies directly when $D\\neq0$",
+        "नियम सीधे तभी लगता है जब $D\\neq0$"
+       ],
+       [
+        "For two equations: $D=\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}$ and the same replacement idea",
+        "दो समीकरणों के लिए: $D=\\begin{vmatrix}a_1&b_1\\\\a_2&b_2\\end{vmatrix}$ तथा वही प्रतिस्थापन-विधि"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Three equations, three variables: all cases",
+    "hi": "11. तीन समीकरण, तीन चर: सभी स्थितियाँ",
+    "color": "red",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$D\\neq0$: unique solution (three planes meet at a point)",
+        "$D\\neq0$: अद्वितीय हल (तीन समतल एक बिन्दु पर)"
+       ],
+       [
+        "$D=0$ and some $D_x,D_y,D_z\\neq0$: no solution",
+        "$D=0$ तथा कोई $D_x,D_y,D_z\\neq0$: कोई हल नहीं"
+       ],
+       [
+        "$D=D_x=D_y=D_z=0$: infinite or none; solve to decide",
+        "$D=D_x=D_y=D_z=0$: अनन्त या कोई नहीं; हल करके निर्णय कीजिए"
+       ],
+       [
+        "When $D=0$: find $R_3=\\lambda R_1+\\mu R_2$; consistent iff $d_3=\\lambda d_1+\\mu d_2$",
+        "$D=0$ पर: $R_3=\\lambda R_1+\\mu R_2$ ज्ञात कीजिए; संगत तभी जब $d_3=\\lambda d_1+\\mu d_2$"
+       ],
+       [
+        "Infinite solutions: put $z=t$, solve for $x,y$ (planes through a common line)",
+        "अनन्त हल: $z=t$ रखकर $x,y$ ज्ञात कीजिए (समतल उभयनिष्ठ रेखा से)"
+       ],
+       [
+        "Prism: $D=0$, no two planes parallel, constants violate the row relation",
+        "प्रिज़्म: $D=0$, कोई दो समतल समान्तर नहीं, अचर पद पंक्ति-सम्बन्ध का पालन नहीं करते"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Three parallel planes: $D=D_x=D_y=D_z=0$ yet no solution.",
+        "तीन समान्तर समतल: $D=D_x=D_y=D_z=0$ फिर भी कोई हल नहीं।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Homogeneous system",
+    "hi": "12. समघात निकाय",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$D\\neq0\\Rightarrow x=y=z=0$ (trivial only); $D=0\\Rightarrow$ non-trivial solutions",
+        "$D\\neq0\\Rightarrow x=y=z=0$ (केवल तुच्छ); $D=0\\Rightarrow$ अतुच्छ हल"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "A homogeneous system is always consistent",
+        "समघात निकाय सदैव संगत होता है"
+       ],
+       [
+        "Non-trivial = non-zero = infinite solutions: same condition $D=0$",
+        "अतुच्छ = अशून्य = अनन्त हल: प्रतिबन्ध वही $D=0$"
+       ],
+       [
+        "Geometrically: planes through the origin meet in a line",
+        "ज्यामिति में: मूल-बिन्दु से गुजरने वाले समतल एक रेखा में मिलते हैं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Common mistakes checklist",
+    "hi": "13. सामान्य गलतियों की सूची",
+    "color": "brown",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Write $k^n$ (not $k$) when all elements are multiplied by $k$.",
+        "सभी अवयवों को $k$ से गुणा करने पर $k^n$ लिखिए ($k$ नहीं)।"
+       ],
+       [
+        "Correct the value when an operation multiplies the row being changed.",
+        "जिस पंक्ति को बदल रहे हैं उसे गुणा करने वाली संक्रिया पर मान ठीक कीजिए।"
+       ],
+       [
+        "Use the cofactor sign $(-1)^{i+j}$.",
+        "सहखण्ड का चिह्न $(-1)^{i+j}$ लगाइए।"
+       ],
+       [
+        "Before saying 'infinite', check the case $D=D_x=D_y=D_z=0$.",
+        "'अनन्त' लिखने से पहले $D=D_x=D_y=D_z=0$ की जाँच कीजिए।"
+       ],
+       [
+        "For a system with a parameter, substitute the special values back and check each case separately.",
+        "प्राचल वाले निकाय में विशेष मान वापस रखकर प्रत्येक स्थिति अलग से जाँचिए।"
+       ],
+       [
+        "Do not expand a determinant fully when operations or standard results do it faster.",
+        "संक्रियाओं या मानक परिणामों से काम हो सकता हो तो सारणिक को पूरा न खोलिए।"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Expansion",
+    "hi": "1. प्रसार",
+    "lines": [
+     [
+      "Order 2: $ad-bc$",
+      "द्वितीय कोटि: $ad-bc$"
+     ],
+     [
+      "Order 3: $a_1(b_2c_3-b_3c_2)-b_1(a_2c_3-a_3c_2)+c_1(a_2b_3-a_3b_2)$",
+      "तृतीय कोटि: $a_1(b_2c_3-b_3c_2)-b_1(a_2c_3-a_3c_2)+c_1(a_2b_3-a_3b_2)$"
+     ],
+     [
+      "Cofactor: $C_{ij}=(-1)^{i+j}M_{ij}$",
+      "सहखण्ड: $C_{ij}=(-1)^{i+j}M_{ij}$"
+     ],
+     [
+      "Own row: $\\sum a_{1j}C_{1j}=\\Delta$",
+      "अपनी पंक्ति: $\\sum a_{1j}C_{1j}=\\Delta$"
+     ],
+     [
+      "Other row: $\\sum a_{1j}C_{2j}=0$",
+      "अन्य पंक्ति: $\\sum a_{1j}C_{2j}=0$"
+     ],
+     [
+      "Cofactor determinant: $\\left|C_{ij}\\right|=\\Delta^{n-1}$",
+      "सहखण्ड सारणिक: $\\left|C_{ij}\\right|=\\Delta^{n-1}$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Properties",
+    "hi": "2. गुणधर्म",
+    "lines": [
+     [
+      "Transpose: $D'=D$",
+      "परिवर्त: $D'=D$"
+     ],
+     [
+      "Swap two rows: $D\\to-D$",
+      "दो पंक्तियाँ बदलें: $D\\to-D$"
+     ],
+     [
+      "Scalar: $|kA|=k^n|A|$",
+      "अदिश: $|kA|=k^n|A|$"
+     ],
+     [
+      "One row $\\times k$: $kD$",
+      "एक पंक्ति $\\times k$: $kD$"
+     ],
+     [
+      "$R_i\\to R_i+\\lambda R_j$: $D$ unchanged",
+      "$R_i\\to R_i+\\lambda R_j$: $D$ अपरिवर्तित"
+     ],
+     [
+      "$R_i\\to xR_i+yR_j+zR_k$: $D\\to xD$",
+      "$R_i\\to xR_i+yR_j+zR_k$: $D\\to xD$"
+     ],
+     [
+      "Factor: $f(a)=0\\Rightarrow(x-a)\\mid D$",
+      "गुणनखण्ड: $f(a)=0\\Rightarrow(x-a)\\mid D$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Standard determinants",
+    "hi": "3. मानक सारणिक",
+    "lines": [
+     [
+      "Cyclic: $\\begin{vmatrix}a&b&c\\\\b&c&a\\\\c&a&b\\end{vmatrix}=-(a^3+b^3+c^3-3abc)$",
+      "चक्रीय: $\\begin{vmatrix}a&b&c\\\\b&c&a\\\\c&a&b\\end{vmatrix}=-(a^3+b^3+c^3-3abc)$"
+     ],
+     [
+      "Vandermonde: $\\begin{vmatrix}1&a&a^2\\\\1&b&b^2\\\\1&c&c^2\\end{vmatrix}=(a-b)(b-c)(c-a)$",
+      "वाण्डरमोण्ड: $\\begin{vmatrix}1&a&a^2\\\\1&b&b^2\\\\1&c&c^2\\end{vmatrix}=(a-b)(b-c)(c-a)$"
+     ],
+     [
+      "With $a^3$: $\\begin{vmatrix}1&a&a^3\\\\1&b&b^3\\\\1&c&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(a+b+c)$",
+      "$a^3$ सहित: $\\begin{vmatrix}1&a&a^3\\\\1&b&b^3\\\\1&c&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(a+b+c)$"
+     ],
+     [
+      "With $a^2,a^3$: $\\begin{vmatrix}1&a^2&a^3\\\\1&b^2&b^3\\\\1&c^2&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(ab+bc+ca)$",
+      "$a^2,a^3$ सहित: $\\begin{vmatrix}1&a^2&a^3\\\\1&b^2&b^3\\\\1&c^2&c^3\\end{vmatrix}=(a-b)(b-c)(c-a)(ab+bc+ca)$"
+     ],
+     [
+      "Diagonal $1$: $\\begin{vmatrix}1+a&1&1\\\\1&1+b&1\\\\1&1&1+c\\end{vmatrix}=abc+ab+bc+ca$",
+      "विकर्ण $1$: $\\begin{vmatrix}1+a&1&1\\\\1&1+b&1\\\\1&1&1+c\\end{vmatrix}=abc+ab+bc+ca$"
+     ],
+     [
+      "Product row: $\\begin{vmatrix}1&1&1\\\\a&b&c\\\\bc&ca&ab\\end{vmatrix}=(a-b)(b-c)(c-a)$",
+      "गुणनफल पंक्ति: $\\begin{vmatrix}1&1&1\\\\a&b&c\\\\bc&ca&ab\\end{vmatrix}=(a-b)(b-c)(c-a)$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Multiplication",
+    "hi": "4. गुणन",
+    "lines": [
+     [
+      "Product: $|A||B|=|AB|$ (row$\\times$column, etc.)",
+      "गुणनफल: $|A||B|=|AB|$ (पंक्ति$\\times$स्तम्भ आदि)"
+     ],
+     [
+      "Power sums: $|S_{i+j-2}|=[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)]^2$",
+      "घात-योग: $|S_{i+j-2}|=[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)]^2$"
+     ],
+     [
+      "Squares: $\\left|(a_i+b_j)^2\\right|=-2(a_1-a_2)(a_2-a_3)(a_3-a_1)(b_1-b_2)(b_2-b_3)(b_3-b_1)$",
+      "वर्ग: $\\left|(a_i+b_j)^2\\right|=-2(a_1-a_2)(a_2-a_3)(a_3-a_1)(b_1-b_2)(b_2-b_3)(b_3-b_1)$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Systems: two variables",
+    "hi": "5. निकाय: दो चर",
+    "lines": [
+     [
+      "Unique: $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$",
+      "अद्वितीय: $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$"
+     ],
+     [
+      "Infinite: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$",
+      "अनन्त: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$"
+     ],
+     [
+      "None: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}\\neq\\frac{c_1}{c_2}$",
+      "कोई नहीं: $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}\\neq\\frac{c_1}{c_2}$"
+     ],
+     [
+      "Three lines concurrent: $\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=0$",
+      "तीन रेखाएँ संगामी: $\\begin{vmatrix}a_1&b_1&c_1\\\\a_2&b_2&c_2\\\\a_3&b_3&c_3\\end{vmatrix}=0$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Cramer's rule",
+    "hi": "6. क्रेमर नियम",
+    "lines": [
+     [
+      "Solution: $x=\\frac{D_x}{D},\\ y=\\frac{D_y}{D},\\ z=\\frac{D_z}{D}$",
+      "हल: $x=\\frac{D_x}{D},\\ y=\\frac{D_y}{D},\\ z=\\frac{D_z}{D}$"
+     ],
+     [
+      "Unique: $D\\neq0$",
+      "अद्वितीय: $D\\neq0$"
+     ],
+     [
+      "None: $D=0$, some $D_x,D_y,D_z\\neq0$",
+      "कोई नहीं: $D=0$, कोई $D_x,D_y,D_z\\neq0$"
+     ],
+     [
+      "Check case: $D=D_x=D_y=D_z=0$",
+      "जाँच स्थिति: $D=D_x=D_y=D_z=0$"
+     ],
+     [
+      "Consistency when $D=0$: $R_3=\\lambda R_1+\\mu R_2\\Rightarrow d_3=\\lambda d_1+\\mu d_2$",
+      "$D=0$ पर संगति: $R_3=\\lambda R_1+\\mu R_2\\Rightarrow d_3=\\lambda d_1+\\mu d_2$"
+     ],
+     [
+      "Homogeneous: non-trivial $\\Leftrightarrow D=0$",
+      "समघात: अतुच्छ $\\Leftrightarrow D=0$"
+     ]
+    ]
+   },
+   {
+    "en": "7. Function and equations",
+    "hi": "7. फलन व समीकरण",
+    "lines": [
+     [
+      "Constant term $=\\Delta(0)$",
+      "अचर पद $=\\Delta(0)$"
+     ],
+     [
+      "Sum of coefficients $=\\Delta(1)$",
+      "गुणांकों का योग $=\\Delta(1)$"
+     ],
+     [
+      "Range of $a+b\\sin2x$: $[a-|b|,\\,a+|b|]$",
+      "$a+b\\sin2x$ का परिसर: $[a-|b|,\\,a+|b|]$"
+     ],
+     [
+      "Sum inside: add up only the row (column) that contains $r$",
+      "योग अन्दर: केवल वह पंक्ति (स्तम्भ) जोड़िए जिसमें $r$ है"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Order and expansion",
+    "hi": "कोटि व प्रसार",
+    "leaves": [
+     [
+      "$ad-bc$; order 3 along $R_1$",
+      "$ad-bc$; तृतीय कोटि $R_1$ से"
+     ],
+     [
+      "Expand along most zeros",
+      "अधिकतम शून्य वाली रेखा से"
+     ],
+     [
+      "Sarrus: order 3 only",
+      "सारस: केवल कोटि 3"
+     ]
+    ]
+   },
+   {
+    "en": "Minor and cofactor",
+    "hi": "उपसारणिक व सहखण्ड",
+    "leaves": [
+     [
+      "$C_{ij}=(-1)^{i+j}M_{ij}$",
+      "$C_{ij}=(-1)^{i+j}M_{ij}$"
+     ],
+     [
+      "Own row $=\\Delta$; other $=0$",
+      "अपनी पंक्ति $=\\Delta$; अन्य $=0$"
+     ],
+     [
+      "$|C_{ij}|=\\Delta^{n-1}$",
+      "$|C_{ij}|=\\Delta^{n-1}$"
+     ]
+    ]
+   },
+   {
+    "en": "Properties P1-P6",
+    "hi": "गुणधर्म P1-P6",
+    "leaves": [
+     [
+      "$D'=D$; swap $\\to-D$",
+      "$D'=D$; बदलना $\\to-D$"
+     ],
+     [
+      "Proportional rows $\\to0$",
+      "समानुपाती पंक्तियाँ $\\to0$"
+     ],
+     [
+      "$k^n$; split sum; factor",
+      "$k^n$; योग तोड़ना; गुणनखण्ड"
+     ]
+    ]
+   },
+   {
+    "en": "Transformations",
+    "hi": "रूपान्तरण",
+    "leaves": [
+     [
+      "$R_i+\\lambda R_j$: unchanged",
+      "$R_i+\\lambda R_j$: अपरिवर्तित"
+     ],
+     [
+      "$xR_i+\\dots$: $\\times x$",
+      "$xR_i+\\dots$: $\\times x$"
+     ],
+     [
+      "Several operations: in order",
+      "कई संक्रियाएँ: क्रम से"
+     ]
+    ]
+   },
+   {
+    "en": "Standard determinants",
+    "hi": "मानक सारणिक",
+    "leaves": [
+     [
+      "$(a-b)(b-c)(c-a)$",
+      "$(a-b)(b-c)(c-a)$"
+     ],
+     [
+      "$\\times(a+b+c)$, $\\times(ab+bc+ca)$",
+      "$\\times(a+b+c)$, $\\times(ab+bc+ca)$"
+     ],
+     [
+      "Cyclic: $-(a^3+b^3+c^3-3abc)$",
+      "चक्रीय: $-(a^3+b^3+c^3-3abc)$"
+     ]
+    ]
+   },
+   {
+    "en": "Two operations; AP",
+    "hi": "दो संक्रियाएँ; समान्तर श्रेढ़ी",
+    "leaves": [
+     [
+      "Row of $1$'s: subtract",
+      "$1$ वाली पंक्ति: घटाइए"
+     ],
+     [
+      "Add rows: common factor",
+      "पंक्तियाँ जोड़ें: उभयनिष्ठ गुणनखण्ड"
+     ],
+     [
+      "AP: $C_1-2C_2+C_3=0$",
+      "समान्तर: $C_1-2C_2+C_3=0$"
+     ]
+    ]
+   },
+   {
+    "en": "Multiplication",
+    "hi": "गुणन",
+    "leaves": [
+     [
+      "$|A||B|=|AB|$, 4 ways",
+      "$|A||B|=|AB|$, 4 प्रकार"
+     ],
+     [
+      "$|C_{ij}|=D^2$",
+      "$|C_{ij}|=D^2$"
+     ],
+     [
+      "Spot sums of products",
+      "गुणनफलों के योग पहचानें"
+     ]
+    ]
+   },
+   {
+    "en": "Equations in $x$",
+    "hi": "$x$ में समीकरण",
+    "leaves": [
+     [
+      "Simplify, factor, roots",
+      "सरल, गुणनखण्ड, मूल"
+     ],
+     [
+      "Constant term $\\Delta(0)$",
+      "अचर पद $\\Delta(0)$"
+     ],
+     [
+      "Trig: reduce to $a+b\\sin2x$",
+      "त्रिकोणमितीय: $a+b\\sin2x$ तक"
+     ]
+    ]
+   },
+   {
+    "en": "System: two variables",
+    "hi": "निकाय: दो चर",
+    "leaves": [
+     [
+      "Ratio test: unique/infinite/none",
+      "अनुपात परीक्षण: अद्वितीय/अनन्त/कोई नहीं"
+     ],
+     [
+      "Lines: meet/coincide/parallel",
+      "रेखाएँ: मिलती/संपाती/समान्तर"
+     ],
+     [
+      "Three lines: $D=0$ concurrent",
+      "तीन रेखाएँ: $D=0$ संगामी"
+     ]
+    ]
+   },
+   {
+    "en": "Cramer's rule",
+    "hi": "क्रेमर नियम",
+    "leaves": [
+     [
+      "$x=D_x/D$, ...",
+      "$x=D_x/D$, ..."
+     ],
+     [
+      "Replace column by constants",
+      "स्तम्भ को अचर पदों से बदलें"
+     ],
+     [
+      "Needs $D\\neq0$",
+      "$D\\neq0$ आवश्यक"
+     ]
+    ]
+   },
+   {
+    "en": "Three variables: cases",
+    "hi": "तीन चर: स्थितियाँ",
+    "leaves": [
+     [
+      "$D\\neq0$: unique",
+      "$D\\neq0$: अद्वितीय"
+     ],
+     [
+      "$D=0$, $D_i\\neq0$: none",
+      "$D=0$, $D_i\\neq0$: कोई नहीं"
+     ],
+     [
+      "All zero: check; $R_3=\\lambda R_1+\\mu R_2$",
+      "सब शून्य: जाँच; $R_3=\\lambda R_1+\\mu R_2$"
+     ]
+    ]
+   },
+   {
+    "en": "Planes in 3-D",
+    "hi": "त्रिविमीय समतल",
+    "leaves": [
+     [
+      "Point / line / none",
+      "बिन्दु / रेखा / कोई नहीं"
+     ],
+     [
+      "Prism: no common point",
+      "प्रिज़्म: उभयनिष्ठ बिन्दु नहीं"
+     ],
+     [
+      "Three parallel: exception",
+      "तीन समान्तर: अपवाद"
+     ]
+    ]
+   },
+   {
+    "en": "Homogeneous system",
+    "hi": "समघात निकाय",
+    "leaves": [
+     [
+      "Always trivial solution",
+      "तुच्छ हल सदैव"
+     ],
+     [
+      "Non-trivial iff $D=0$",
+      "अतुच्छ तभी जब $D=0$"
+     ],
+     [
+      "Planes through origin",
+      "मूल-बिन्दु से समतल"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which method evaluates the determinant?",
+    "प्रवाह-चित्र 1: सारणिक का मान किस विधि से निकालें?"
+   ],
+   "start": [
+    "A determinant is given and its value (or a factor) is required",
+    "एक सारणिक दिया है और उसका मान (या गुणनखण्ड) ज्ञात करना है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Two rows/columns identical, proportional, or a zero row?",
+      "दो पंक्तियाँ/स्तम्भ समान, समानुपाती या शून्य पंक्ति?"
+     ],
+     "a": [
+      [
+       "$D=0$ (P3)."
+      ],
+      [
+       "$D=0$ (P3)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Entries of each row are in AP?",
+      "प्रत्येक पंक्ति के अवयव समान्तर श्रेढ़ी में?"
+     ],
+     "a": [
+      [
+       "$C_1\\to C_1-2C_2+C_3$ gives a zero column, $D=0$."
+      ],
+      [
+       "$C_1\\to C_1-2C_2+C_3$ से शून्य स्तम्भ, $D=0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Matches a standard form (cyclic, $1,x,x^2$, $1+a$ on diagonal)?",
+      "मानक रूप (चक्रीय, $1,x,x^2$, विकर्ण पर $1+a$) से मेल?"
+     ],
+     "a": [
+      [
+       "Write the standard result directly."
+      ],
+      [
+       "मानक परिणाम सीधे लिखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Rows (columns) add up to a common factor?",
+      "पंक्तियों (स्तम्भों) का योग उभयनिष्ठ गुणनखण्ड देता है?"
+     ],
+     "a": [
+      [
+       "$R_1\\to R_1+R_2+R_3$, take the factor out."
+      ],
+      [
+       "$R_1\\to R_1+R_2+R_3$, गुणनखण्ड बाहर निकालिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A row/column of $1$'s (or common factors to make one)?",
+      "$1$ वाली पंक्ति/स्तम्भ (या बनाने हेतु उभयनिष्ठ गुणनखण्ड)?"
+     ],
+     "a": [
+      [
+       "Subtract it from the others, expand along it."
+      ],
+      [
+       "उसे अन्य में से घटाइए, उसी के अनुदिश प्रसार कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Elements are sums of products or squares?",
+      "अवयव गुणनफलों के योग या वर्ग हैं?"
+     ],
+     "a": [
+      [
+       "Express as a product of two determinants."
+      ],
+      [
+       "दो सारणिकों के गुणनफल के रूप में लिखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only one row contains the sum index $r$?",
+      "केवल एक पंक्ति में योग-सूचकांक $r$ है?"
+     ],
+     "a": [
+      [
+       "Take $\\sum$ inside that row, then evaluate."
+      ],
+      [
+       "उस पंक्ति में $\\sum$ अन्दर लीजिए, फिर मान निकालिए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Create zeros with row/column operations and expand along the row/column with most zeros."
+    ],
+    [
+     "पंक्ति/स्तम्भ संक्रियाओं से शून्य बनाइए तथा अधिकतम शून्य वाली रेखा के अनुदिश प्रसार कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Equation or function built from a determinant",
+    "प्रवाह-चित्र 2: सारणिक से बना समीकरण या फलन"
+   ],
+   "start": [
+    "An equation $\\Delta(x)=0$ or a function $f(x)=\\Delta(x)$ is given",
+    "समीकरण $\\Delta(x)=0$ या फलन $f(x)=\\Delta(x)$ दिया है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Entries contain $\\sin x,\\cos x$ or $\\sin2x$?",
+      "अवयवों में $\\sin x,\\cos x$ या $\\sin2x$ है?"
+     ],
+     "a": [
+      [
+       "Use $R_i\\to R_i-R_j$, reduce to $a+b\\sin2x$."
+      ],
+      [
+       "$R_i\\to R_i-R_j$ से $a+b\\sin2x$ तक लाइए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Range / maximum / minimum asked?",
+      "परिसर / अधिकतम / न्यूनतम पूछा है?"
+     ],
+     "a": [
+      [
+       "Use $[a-|b|,\\,a+|b|]$ for $a+b\\sin2x$."
+      ],
+      [
+       "$a+b\\sin2x$ के लिए $[a-|b|,\\,a+|b|]$ लीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Roots asked?",
+      "मूल पूछे हैं?"
+     ],
+     "a": [
+      [
+       "Simplify, factor, solve; count in the given interval."
+      ],
+      [
+       "सरल कीजिए, गुणनखण्ड कीजिए, हल कीजिए; दिये अन्तराल में गिनिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Coefficient, constant term or degree asked?",
+      "गुणांक, अचर पद या घात पूछी है?"
+     ],
+     "a": [
+      [
+       "Constant term $\\Delta(0)$, sum $\\Delta(1)$, or compare coefficients."
+      ],
+      [
+       "अचर पद $\\Delta(0)$, योग $\\Delta(1)$, या गुणांकों की तुलना।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Factor / divisibility asked?",
+      "गुणनखण्ड / विभाज्यता पूछी है?"
+     ],
+     "a": [
+      [
+       "Put $x=a$; equal rows $\\Rightarrow(x-a)$ is a factor (P6)."
+      ],
+      [
+       "$x=a$ रखिए; समान पंक्तियाँ $\\Rightarrow(x-a)$ गुणनखण्ड (P6)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Expand fully (after operations) and compare with the required form."
+    ],
+    [
+     "संक्रियाओं के बाद पूरा प्रसार कीजिए और माँगे गये रूप से मिलाइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Is it a multiplication of determinants?",
+    "प्रवाह-चित्र 3: क्या यह सारणिकों के गुणन का प्रश्न है?"
+   ],
+   "start": [
+    "A determinant with complicated elements, or one given with a square, is shown",
+    "जटिल अवयवों वाला या वर्ग के साथ दिया सारणिक है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Each element is a sum of 2 or 3 products?",
+      "प्रत्येक अवयव 2 या 3 गुणनफलों का योग है?"
+     ],
+     "a": [
+      [
+       "Split into row$\\times$column of two determinants."
+      ],
+      [
+       "दो सारणिकों के पंक्ति$\\times$स्तम्भ में तोड़िए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Elements like $(a_i+b_j)^2$?",
+      "$(a_i+b_j)^2$ जैसे अवयव?"
+     ],
+     "a": [
+      [
+       "Write as $a_i^2\\cdot1+a_i\\cdot2b_j+1\\cdot b_j^2$ and multiply."
+      ],
+      [
+       "$a_i^2\\cdot1+a_i\\cdot2b_j+1\\cdot b_j^2$ लिखकर गुणन कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Elements are power sums $\\alpha^n+\\beta^n$?",
+      "अवयव घात-योग $\\alpha^n+\\beta^n$ हैं?"
+     ],
+     "a": [
+      [
+       "Product of two Vandermonde-type determinants."
+      ],
+      [
+       "दो वाण्डरमोण्ड प्रकार के सारणिकों का गुणनफल।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Cofactor determinant or $D^2$ appears?",
+      "सहखण्डों का सारणिक या $D^2$ आता है?"
+     ],
+     "a": [
+      [
+       "Use $|C_{ij}|=D^{n-1}$."
+      ],
+      [
+       "$|C_{ij}|=D^{n-1}$ का उपयोग कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Elements $\\cos(\\alpha_i-\\beta_j)$?",
+      "अवयव $\\cos(\\alpha_i-\\beta_j)$?"
+     ],
+     "a": [
+      [
+       "Two products per element: order-3 determinant is $0$."
+      ],
+      [
+       "प्रत्येक अवयव में दो गुणनफल: तृतीय कोटि का सारणिक $0$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Not a multiplication question: use properties and operations (Flowchart 1)."
+    ],
+    [
+     "गुणन का प्रश्न नहीं: गुणधर्म व संक्रियाएँ लगाइए (प्रवाह-चित्र 1)।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Two variables, two or three equations",
+    "प्रवाह-चित्र 4: दो चर, दो या तीन समीकरण"
+   ],
+   "start": [
+    "Equations in $x,y$ are given; nature of the solution is asked",
+    "$x,y$ में समीकरण दिये हैं; हल की प्रकृति पूछी है"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Two equations, $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$?",
+      "दो समीकरण, $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$?"
+     ],
+     "a": [
+      [
+       "Unique solution (intersecting lines)."
+      ],
+      [
+       "अद्वितीय हल (प्रतिच्छेदी रेखाएँ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two equations, all three ratios equal?",
+      "दो समीकरण, तीनों अनुपात समान?"
+     ],
+     "a": [
+      [
+       "Infinite solutions (coincident lines)."
+      ],
+      [
+       "अनन्त हल (संपाती रेखाएँ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two equations, first two ratios equal, third different?",
+      "दो समीकरण, पहले दो अनुपात समान, तीसरा भिन्न?"
+     ],
+     "a": [
+      [
+       "No solution (parallel lines)."
+      ],
+      [
+       "कोई हल नहीं (समान्तर रेखाएँ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three equations: $D\\neq0$?",
+      "तीन समीकरण: $D\\neq0$?"
+     ],
+     "a": [
+      [
+       "Inconsistent (no common point)."
+      ],
+      [
+       "असंगत (उभयनिष्ठ बिन्दु नहीं)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three equations: $D=0$ and lines not all parallel?",
+      "तीन समीकरण: $D=0$ व रेखाएँ सभी समान्तर नहीं?"
+     ],
+     "a": [
+      [
+       "Concurrent: unique solution."
+      ],
+      [
+       "संगामी: अद्वितीय हल।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "$D=0$ with all three lines parallel: infinite if they coincide, otherwise none."
+    ],
+    [
+     "$D=0$ तथा तीनों रेखाएँ समान्तर: संपाती हों तो अनन्त, अन्यथा कोई नहीं।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: System of three equations in three variables",
+    "प्रवाह-चित्र 5: तीन चरों में तीन समीकरणों का निकाय"
+   ],
+   "start": [
+    "A $3\\times3$ system (possibly with parameters) is given",
+    "$3\\times3$ निकाय (प्राचल सहित सम्भव) दिया है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "All constants are zero?",
+      "सभी अचर पद शून्य हैं?"
+     ],
+     "a": [
+      [
+       "Homogeneous: non-trivial solution $\\Leftrightarrow D=0$."
+      ],
+      [
+       "समघात: अतुच्छ हल $\\Leftrightarrow D=0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$D\\neq0$?",
+      "$D\\neq0$?"
+     ],
+     "a": [
+      [
+       "Unique solution; use Cramer's rule if values needed."
+      ],
+      [
+       "अद्वितीय हल; मान चाहिए तो क्रेमर नियम।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$D=0$: find $R_3=\\lambda R_1+\\mu R_2$; constants obey $d_3=\\lambda d_1+\\mu d_2$?",
+      "$D=0$: $R_3=\\lambda R_1+\\mu R_2$ ज्ञात कीजिए; अचर पद $d_3=\\lambda d_1+\\mu d_2$ मानते हैं?"
+     ],
+     "a": [
+      [
+       "Infinite solutions: put $z=t$."
+      ],
+      [
+       "अनन्त हल: $z=t$ रखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$D=0$ and the constants break that relation?",
+      "$D=0$ व अचर पद उस सम्बन्ध को तोड़ते हैं?"
+     ],
+     "a": [
+      [
+       "No solution (planes form a prism or two are parallel)."
+      ],
+      [
+       "कोई हल नहीं (समतल प्रिज़्म बनाते हैं या दो समान्तर हैं)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Question says 'NOT correct / which is true' for parameters?",
+      "प्रश्न में 'सही नहीं / कौन सा सत्य' प्राचल के लिए है?"
+     ],
+     "a": [
+      [
+       "Test each special value of the parameter separately."
+      ],
+      [
+       "प्राचल के प्रत्येक विशेष मान की अलग जाँच कीजिए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "$D=D_x=D_y=D_z=0$: solve two equations first (three parallel planes have no solution)."
+    ],
+    [
+     "$D=D_x=D_y=D_z=0$: पहले दो समीकरण हल कीजिए (तीन समान्तर समतलों का कोई हल नहीं)।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Which row/column operation first?",
+    "प्रवाह-चित्र 6: पहले कौन-सी पंक्ति/स्तम्भ संक्रिया?"
+   ],
+   "start": [
+    "A numeric or symbolic determinant must be simplified",
+    "संख्यात्मक या बीजीय सारणिक को सरल करना है"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Consecutive rows differ by a pattern ($x,x+1,x+2$)?",
+      "क्रमागत पंक्तियाँ किसी प्रतिरूप से भिन्न ($x,x+1,x+2$)?"
+     ],
+     "a": [
+      [
+       "$R_i\\to R_i-R_{i+1}$ to get constants."
+      ],
+      [
+       "अचर पाने हेतु $R_i\\to R_i-R_{i+1}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Entries share a common factor in a row/column?",
+      "किसी पंक्ति/स्तम्भ में उभयनिष्ठ गुणनखण्ड?"
+     ],
+     "a": [
+      [
+       "Take it out before operating."
+      ],
+      [
+       "संक्रिया से पहले उसे बाहर निकालिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A zero can be created in the same column by subtracting rows?",
+      "पंक्तियाँ घटाकर उसी स्तम्भ में शून्य बन सकता है?"
+     ],
+     "a": [
+      [
+       "Create two zeros, expand along that column."
+      ],
+      [
+       "दो शून्य बनाइए, उसी स्तम्भ से प्रसार कीजिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Row sums are equal?",
+      "पंक्तियों के योग समान हैं?"
+     ],
+     "a": [
+      [
+       "$C_1\\to C_1+C_2+C_3$ gives a column of equal entries."
+      ],
+      [
+       "$C_1\\to C_1+C_2+C_3$ से समान अवयवों वाला स्तम्भ।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Expand directly along the best row/column."
+    ],
+    [
+     "सर्वश्रेष्ठ पंक्ति/स्तम्भ के अनुदिश सीधे प्रसार कीजिए।"
+    ]
+   ]
+  }
+ ]
+}

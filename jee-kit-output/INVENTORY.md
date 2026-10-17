@@ -10,7 +10,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | DONE |
 | Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | DONE |
 | Sequence & Progression | chapters/Sequence_Progression/Theory.pdf | chapters/Sequence_Progression/XII.pdf | chapters/Sequence_Progression/XIII.pdf | chapters/Sequence_Progression/DPP.pdf | chapters/Sequence_Progression/QB.pdf | — | — | DONE |
-| Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | READY |
+| Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | DONE |
 | Matrices | chapters/Matrices/Theory.pdf | chapters/Matrices/XII.pdf | chapters/Matrices/XIII.pdf | chapters/Matrices/DPP.pdf | chapters/Matrices/QB.pdf | — | — | READY |
 | Permutations & Combinations | chapters/Permutations_Combinations/Theory.pdf | chapters/Permutations_Combinations/XII.pdf | chapters/Permutations_Combinations/XIII.pdf | chapters/Permutations_Combinations/DPP.pdf | chapters/Permutations_Combinations/QB.pdf | — | — | READY |
 | Binomial Theorem | chapters/Binomial_Theorem/Theory.pdf | chapters/Binomial_Theorem/XII.pdf | chapters/Binomial_Theorem/XIII.pdf | chapters/Binomial_Theorem/DPP.pdf | chapters/Binomial_Theorem/QB.pdf | — | — | READY |
