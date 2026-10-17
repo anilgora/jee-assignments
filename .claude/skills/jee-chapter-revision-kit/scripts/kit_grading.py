@@ -78,7 +78,12 @@ def batch_context(spec, qmap, qidx, batch):
         if src in gsources and not (src == 'QB' and no in skip):
             for i in ([m] if m else []) + o: count[i] += 1
     hi = high_threshold(ngr)
+<<<<<<< HEAD
     return dict(batch=batch, main=main, oth=oth, count=count, hi=hi, ngraded=ngr, jm=jm, skip=sorted(skip))
+=======
+    dpp_only = bool(gsources) and all(s.startswith('DPP') for s in gsources)   # chapter with DPP only (no sheets / QB)
+    return dict(batch=batch, main=main, oth=oth, count=count, hi=hi, ngraded=ngr, jm=jm, skip=sorted(skip), dpp_only=dpp_only)
+>>>>>>> origin/main
 
 
 def rng(nums):
@@ -117,6 +122,19 @@ def item_grade_lines(ctx, item_id, lang):
 
 def legend(ctx, lang):
     ng, hi = ctx['ngraded'], ctx['hi']
+<<<<<<< HEAD
+=======
+    if ctx.get('dpp_only'):
+        if lang == 'en':
+            return (f"Grade shows how often the item is tested in the DPP questions ({ng} questions): High = {hi} or more questions, Medium = 1 to {hi-1} questions, Low = none. "
+                    "Low only means the item is not tested in these questions; it can still be important for understanding. "
+                    "Practice map lists the DPP questions that test the item. "
+                    "'Main concept' = the question is mainly about this item; 'Also used in' = the question needs it as a secondary step.")
+        return (f"श्रेणी दर्शाती है कि DPP के प्रश्नों में ({ng} प्रश्न) कोई बिन्दु कितनी बार पूछा गया है: "
+                f"उच्च = {hi} या अधिक प्रश्न, मध्यम = 1 से {hi-1} प्रश्न, निम्न = कोई नहीं। निम्न का अर्थ केवल इतना है कि ये प्रश्न इसे नहीं पूछते; समझ के लिए यह फिर भी महत्त्वपूर्ण हो सकता है। "
+                "अभ्यास मानचित्र उन DPP प्रश्नों को सूचीबद्ध करता है जो इस बिन्दु को परखते हैं। "
+                "'मुख्य अवधारणा' = प्रश्न मुख्यतः इसी बिन्दु पर है; 'इनमें भी प्रयुक्त' = प्रश्न में यह द्वितीयक चरण है।")
+>>>>>>> origin/main
     if lang == 'en':
         return (f"Grade shows how often the item is tested in the JM exercise of this batch, the JA exercise and the JEE Main Question Bank taken together "
                 f"({ng} questions; a question that appears in two of these is counted once): High = {hi} or more questions, Medium = 1 to {hi-1} questions, Low = none. "
