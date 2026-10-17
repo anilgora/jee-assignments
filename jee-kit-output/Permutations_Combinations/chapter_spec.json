@@ -1,0 +1,4292 @@
+{
+ "chapter": {
+  "en": "Permutations & Combinations",
+  "hi": "क्रमचय व संचय",
+  "slug": "Permutations_Combinations"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XIII": [
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180,
+   181,
+   182,
+   183,
+   190,
+   191,
+   192,
+   193,
+   194,
+   195,
+   196,
+   197,
+   198,
+   199
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Fundamental Principle of Counting",
+    "hi": "गणना का मूल सिद्धान्त",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to add and when to multiply the number of ways?",
+       "तरीकों की संख्या को कब जोड़ें और कब गुणा करें?"
+      ],
+      "a": [
+       [
+        "Steps that are all carried out one after another (\"and\") multiply: $m\\times n$. Alternatives of which exactly one happens (\"or\") add: $m+n$.",
+        "एक के बाद एक किये जाने वाले सभी चरण (\"और\") गुणा होते हैं: $m\\times n$। वैकल्पिक कार्य जिनमें से केवल एक होता है (\"या\") जोड़े जाते हैं: $m+n$।"
+       ],
+       [
+        "Ex: 4 roads Delhi$\\to$Jaipur and 3 roads Jaipur$\\to$Bombay: Delhi to Bombay via Jaipur $4\\times3=12$; ways of leaving Jaipur $4+3=7$.",
+        "उदा.: दिल्ली$\\to$जयपुर के 4 तथा जयपुर$\\to$बम्बई के 3 मार्ग: जयपुर होकर दिल्ली से बम्बई $4\\times3=12$; जयपुर से निकलने के तरीके $4+3=7$।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use the complementary method?",
+       "पूरक विधि का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "Use it for \"at least\", \"not\" or \"neither\" conditions: required $=$ total $-$ (cases in which the condition fails).",
+        "\"कम से कम\", \"नहीं\" या \"न ही\" वाली शर्तों में प्रयोग करें: अभीष्ट $=$ कुल $-$ (वे प्रकरण जिनमें शर्त पूरी नहीं होती)।"
+       ],
+       [
+        "Ex: 3-digit numbers with at least one digit 7: $900-8\\cdot9\\cdot9=252$.",
+        "उदा.: कम से कम एक अंक 7 वाली 3 अंकों की संख्याएँ: $900-8\\cdot9\\cdot9=252$।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to deal with \"at least\" and \"at most\" in questions?",
+       "प्रश्नों में \"कम से कम\" तथा \"अधिकतम\" को कैसे सँभालें?"
+      ],
+      "a": [
+       [
+        "At least $r$: add the cases $r,r+1,\\dots$ or subtract the cases below $r$ from the total. At most $r$: add the cases $0,1,\\dots,r$.",
+        "कम से कम $r$: प्रकरण $r,r+1,\\dots$ जोड़ें या $r$ से कम वाले प्रकरण कुल में से घटाएँ। अधिकतम $r$: प्रकरण $0,1,\\dots,r$ जोड़ें।"
+       ],
+       [
+        "Ex: committee of 5 from 6 men and 4 women with at least 2 women: ${}^{10}C_5-{}^6C_5-{}^4C_1\\,{}^6C_4=186$.",
+        "उदा.: 6 पुरुषों व 4 महिलाओं में से 5 की समिति जिसमें कम से कम 2 महिलाएँ हों: ${}^{10}C_5-{}^6C_5-{}^4C_1\\,{}^6C_4=186$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 19,20; J-II: 31; J-M(XII): 21,23; J-M(XIII): 32; C-II: 2; DPP-6: 10; QB: 199",
+      "q": [
+       "How to count \"neither / none / at least one of several conditions\" using inclusion-exclusion (Venn diagram)?",
+       "\"न ही / कोई भी नहीं / कई शर्तों में से कम से कम एक\" वाली गणना समावेशन-अपवर्जन (वेन आरेख) से कैसे करें?"
+      ],
+      "a": [
+       "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+       "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+       [
+        "None of the conditions $=$ total $-n(A\\cup B\\cup C)$; \"exactly\" or \"at least\" counts follow from the Venn regions. Ex: integers $1$ to $100$ divisible by none of $2,3,5$: $100-(50+33+20)+(16+10+6)-3=26$.",
+        "कोई भी शर्त नहीं $=$ कुल $-n(A\\cup B\\cup C)$; \"ठीक\" या \"कम से कम\" वाली गणना वेन आरेख के क्षेत्रों से मिलती है। उदा.: $1$ से $100$ तक के वे पूर्णांक जो $2,3,5$ में से किसी से भी विभाज्य नहीं: $100-(50+33+20)+(16+10+6)-3=26$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Formation of Numbers",
+    "hi": "संख्याओं की रचना",
+    "items": [
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When should we take repetition as allowed or not allowed in the formation of numbers?",
+       "संख्याएँ बनाने में अंकों की पुनरावृत्ति कब मानें और कब न मानें?"
+      ],
+      "a": [
+       [
+        "Digits repeat only if the question says so (\"repetition allowed\"); otherwise each digit is used at most once. The first place of a number cannot hold 0. Fill the most restricted place first.",
+        "अंक तभी दोहराये जाते हैं जब प्रश्न में कहा हो (\"पुनरावृत्ति सम्भव\"); अन्यथा प्रत्येक अंक अधिकतम एक बार आता है। संख्या के पहले स्थान पर 0 नहीं आ सकता। सबसे अधिक प्रतिबन्ध वाला स्थान पहले भरें।"
+       ],
+       [
+        "Ex: 3-digit numbers: with repetition $9\\cdot10\\cdot10=900$; without repetition $9\\cdot9\\cdot8=648$.",
+        "उदा.: 3 अंकों की संख्याएँ: पुनरावृत्ति सहित $9\\cdot10\\cdot10=900$; पुनरावृत्ति रहित $9\\cdot9\\cdot8=648$।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of numbers divisible by 3?",
+       "3 से विभाज्य संख्याओं की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "A number is divisible by 3 iff its digit sum is. List the digit sets whose sum is a multiple of 3 (use remainders mod 3), arrange each set and subtract the arrangements that start with 0.",
+        "कोई संख्या 3 से विभाज्य होती है यदि और केवल यदि उसके अंकों का योग 3 से विभाज्य हो। जिन अंक-समूहों का योग 3 का गुणज हो उनकी सूची बनाएँ (शेषफल mod 3 से), प्रत्येक समूह को व्यवस्थित करें और 0 से प्रारम्भ होने वाली व्यवस्थाएँ घटाएँ।"
+       ],
+       [
+        "Ex: 5-digit numbers from $0,1,2,3,4,5$ without repetition: sets $\\{1,2,3,4,5\\}$ (sum 15) and $\\{0,1,2,4,5\\}$ (sum 12): $120+(120-24)=216$.",
+        "उदा.: $0,1,2,3,4,5$ से बिना पुनरावृत्ति 5 अंकों की संख्याएँ: समूह $\\{1,2,3,4,5\\}$ (योग 15) व $\\{0,1,2,4,5\\}$ (योग 12): $120+(120-24)=216$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of numbers divisible by 4?",
+       "4 से विभाज्य संख्याओं की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "A number is divisible by 4 iff its last two digits form a multiple of 4. List the allowed endings, then fill the remaining places.",
+        "कोई संख्या 4 से विभाज्य होती है यदि और केवल यदि उसके अन्तिम दो अंकों से बनी संख्या 4 की गुणज हो। सम्भव अन्त्य-अंक सूचीबद्ध करें, फिर शेष स्थान भरें।"
+       ],
+       [
+        "Ex: 4-digit numbers from $0,1,2,3,4,5$ without repetition divisible by 4: endings $04,20,40$ give $3\\times(4\\cdot3)=36$ and endings $12,24,32,52$ give $4\\times(3\\cdot3)=36$ ($0$ cannot lead); total $72$.",
+        "उदा.: $0,1,2,3,4,5$ से बिना पुनरावृत्ति 4 अंकों की 4 से विभाज्य संख्याएँ: अन्त्य $04,20,40$ से $3\\times(4\\cdot3)=36$ तथा अन्त्य $12,24,32,52$ से $4\\times(3\\cdot3)=36$ (आगे $0$ नहीं); कुल $72$।"
+       ]
+      ]
+     },
+     {
+      "id": "N9",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII): 10,15,31; J-M(XIII): 11,16,25,37; DPP-1: 11,13; DPP-2: 17; DPP-4: 9",
+      "q": [
+       "How to find the numbers divisible by 2, 5, 6, 8, 9, 11 or 25?",
+       "2, 5, 6, 8, 9, 11 या 25 से विभाज्य संख्याएँ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Use the test: 2 last digit even; 5 last digit 0 or 5; 6 both 2 and 3; 8 last three digits; 9 digit sum; 11 (sum at odd places $-$ sum at even places) divisible by 11; 25 last two digits $00,25,50,75$.",
+        "परीक्षण: 2 अन्तिम अंक सम; 5 अन्तिम अंक 0 या 5; 6 एक साथ 2 व 3; 8 अन्तिम तीन अंक; 9 अंकों का योग; 11 (विषम स्थानों का योग $-$ सम स्थानों का योग) 11 से विभाज्य; 25 अन्तिम दो अंक $00,25,50,75$।"
+       ],
+       [
+        "Fix the last digit(s) first, then fill the other places. Ex: 4-digit numbers without repetition divisible by 5 (digits $0$ to $9$): last digit 0 gives $9\\cdot8\\cdot7=504$, last digit 5 gives $8\\cdot8\\cdot7=448$; total $952$.",
+        "पहले अन्तिम अंक (अंकों) को निश्चित करें, फिर शेष स्थान भरें। उदा.: अंक $0$ से $9$, बिना पुनरावृत्ति 4 अंकों की 5 से विभाज्य संख्याएँ: अन्तिम अंक 0 से $9\\cdot8\\cdot7=504$, अन्तिम अंक 5 से $8\\cdot8\\cdot7=448$; कुल $952$।"
+       ]
+      ]
+     },
+     {
+      "id": "N7",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 29; J-M(XII): 11; DPP-1: 12; DPP-6: 9",
+      "q": [
+       "How to count (and add) palindromic numbers or words?",
+       "पैलिन्ड्रोम (समपाठी) संख्याएँ या शब्द कैसे गिनें (और जोड़ें)?"
+      ],
+      "a": [
+       [
+        "A palindrome is fixed by its first half (including the middle place): an $n$-letter palindrome has $\\lceil n/2\\rceil$ free places; the first digit of a number is non-zero.",
+        "पैलिन्ड्रोम अपने पहले आधे भाग (मध्य स्थान सहित) से निश्चित हो जाता है: $n$ अक्षरों के पैलिन्ड्रोम में $\\lceil n/2\\rceil$ स्थान स्वतन्त्र होते हैं; संख्या का पहला अंक शून्येतर होता है।"
+       ],
+       [
+        "Ex: 3-digit palindromes $9\\cdot10=90$; 7-letter palindromes from 26 letters $26^4$; for the sum, add place values digit by digit.",
+        "उदा.: 3 अंकों के पैलिन्ड्रोम $9\\cdot10=90$; 26 अक्षरों से 7 अक्षरों के पैलिन्ड्रोम $26^4$; योग के लिए अंक-दर-अंक स्थानीय मान जोड़ें।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-II: 13; J-M(XIII): 10; C-I: 12; DPP-3: 12; QB: 168",
+      "q": [
+       "How to count numbers (or selections) whose digits are strictly increasing or decreasing?",
+       "ऐसी संख्याएँ (या चयन) कैसे गिनें जिनके अंक सख्ती से बढ़ते या घटते क्रम में हों?"
+      ],
+      "a": [
+       [
+        "Choose the set of digits; its order is then fixed. Increasing $n$-digit numbers use digits $1$ to $9$: ${}^9C_n$; decreasing ones may also use $0$: ${}^{10}C_n$. The same idea holds for numbers drawn and written in sorted order.",
+        "अंकों का समुच्चय चुनें; उसका क्रम फिर निश्चित है। बढ़ते क्रम की $n$ अंकों की संख्याएँ अंक $1$ से $9$ लेती हैं: ${}^9C_n$; घटते क्रम वाली में $0$ भी आ सकता है: ${}^{10}C_n$। यही विचार क्रमबद्ध लिखे गये चयनों पर भी लगता है।"
+       ],
+       [
+        "Ex: 5-digit numbers with digits increasing: ${}^9C_5=126$; decreasing: ${}^{10}C_5=252$; their difference is $126$.",
+        "उदा.: 5 अंकों की बढ़ते अंकों वाली संख्याएँ: ${}^9C_5=126$; घटते अंकों वाली: ${}^{10}C_5=252$; इनका अन्तर $126$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "$m^n$ or $n^m$",
+    "hi": "$m^n$ या $n^m$",
+    "items": [
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve $m^n$ or $n^m$ type questions?",
+       "$m^n$ या $n^m$ प्रकार के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Ask \"who has a choice?\": the objects being assigned each choose among all the places, so the answer is (number of places)$^{\\text{(number of objects)}}$.",
+        "पूछें \"विकल्प किसके पास है?\": जिन वस्तुओं को बाँटना है उनमें से प्रत्येक सभी स्थानों में से चुनती है, अतः उत्तर $N^{k}$ है, जहाँ $N$ स्थानों की संख्या तथा $k$ वस्तुओं की संख्या है।"
+       ],
+       [
+        "Ex: 6 persons in 5 compartments $5^6$; 3 rings on 4 fingers $4^3$; $m$ toys among $n$ children (any number each) $n^m$.",
+        "उदा.: 6 व्यक्ति 5 डिब्बों में $5^6$; 3 अँगूठियाँ 4 उँगलियों पर $4^3$; $m$ खिलौने $n$ बच्चों में (कोई भी संख्या) $n^m$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Rank of Word",
+    "hi": "शब्द की कोटि (रैंक)",
+    "items": [
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the rank of a word when the letters are different?",
+       "जब अक्षर भिन्न हों तो शब्द की कोटि (रैंक) कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Write the letters alphabetically. For each letter of the word from the left, count the smaller unused letters $\\times$ (places left)!; add all and add $1$.",
+        "अक्षरों को वर्णानुक्रम में लिखें। शब्द के प्रत्येक अक्षर के लिए बायें से, उससे छोटे अप्रयुक्त अक्षरों की संख्या $\\times$ (शेष स्थान)! निकालें; सब जोड़कर $1$ जोड़ें।"
+       ],
+       [
+        "Ex: RAPID (order A, D, I, P, R): words before it start with A, D, I, P ($4\\times24=96$), then RAD$\\_\\_$ ($2$), RAI$\\_\\_$ ($2$), RAPD$\\_$ ($1$): $96+2+2+1=101$ words before it, so rank $=102$.",
+        "उदा.: RAPID (क्रम A, D, I, P, R): इससे पहले के शब्द A, D, I, P से प्रारम्भ ($4\\times24=96$), फिर RAD$\\_\\_$ ($2$), RAI$\\_\\_$ ($2$), RAPD$\\_$ ($1$): इससे पहले $96+2+2+1=101$ शब्द, अतः कोटि $=102$।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the word at a given position when the formed words are arranged alphabetically?",
+       "वर्णानुक्रम में व्यवस्थित शब्दों में दी गयी स्थिति पर स्थित शब्द कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Work backwards: divide (position $-1$) by $(n-1)!$; the quotient picks the first letter from the sorted list; continue with the remainder and $(n-2)!$, and so on (use alike-letter block sizes when letters repeat).",
+        "उल्टा चलें: (स्थिति $-1$) को $(n-1)!$ से भाग दें; भागफल क्रमबद्ध सूची से पहला अक्षर चुनता है; शेषफल व $(n-2)!$ से आगे बढ़ें (अक्षर दोहरें तो समान अक्षरों के खण्ड का आकार लें)।"
+       ],
+       [
+        "Ex: 50th word from A, D, I, P, R: $49=2\\cdot24+1$, so I; then $1=0\\cdot6+1$ gives A; $1=0\\cdot2+1$ gives D; $1=1\\cdot1+0$ gives R then P: IADRP.",
+        "उदा.: A, D, I, P, R से 50वाँ शब्द: $49=2\\cdot24+1$, अतः I; फिर $1=0\\cdot6+1$ से A; $1=0\\cdot2+1$ से D; $1=1\\cdot1+0$ से R फिर P: IADRP।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Factorial",
+    "hi": "फैक्टोरियल",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Have you remembered the factorial values up to $7!$?",
+       "क्या आपने $7!$ तक के फैक्टोरियल मान याद कर लिये हैं?"
+      ],
+      "a": [
+       "$0!=1,\\ 1!=1,\\ 2!=2,\\ 3!=6,\\ 4!=24,\\ 5!=120,\\ 6!=720,\\ 7!=5040,\\ 8!=40320$",
+       "$n!=n\\,(n-1)!,\\quad n(n-1)\\cdots(n-r+1)=\\dfrac{n!}{(n-r)!},\\quad (2n)!=2^n\\,n!\\,[1\\cdot3\\cdot5\\cdots(2n-1)]$"
+      ]
+     },
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the power of a prime number in $n!$?",
+       "$n!$ में किसी अभाज्य संख्या की घात कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$E_p(n!)=\\left\\lfloor\\dfrac np\\right\\rfloor+\\left\\lfloor\\dfrac n{p^2}\\right\\rfloor+\\left\\lfloor\\dfrac n{p^3}\\right\\rfloor+\\cdots$",
+       [
+        "Ex: $E_2(100!)=50+25+12+6+3+1=97$; $E_3(100!)=33+11+3+1=48$.",
+        "उदा.: $E_2(100!)=50+25+12+6+3+1=97$; $E_3(100!)=33+11+3+1=48$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the power of a composite number in $n!$?",
+       "$n!$ में किसी भाज्य संख्या की घात कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Factorise $N=p^aq^b\\cdots$; the power of $N$ in $n!$ is $\\min\\left(\\left\\lfloor\\frac{E_p}{a}\\right\\rfloor,\\left\\lfloor\\frac{E_q}{b}\\right\\rfloor,\\dots\\right)$.",
+        "$N=p^aq^b\\cdots$ का गुणनखण्डन करें; $n!$ में $N$ की घात $\\min\\left(\\left\\lfloor\\frac{E_p}{a}\\right\\rfloor,\\left\\lfloor\\frac{E_q}{b}\\right\\rfloor,\\dots\\right)$ है।"
+       ],
+       [
+        "Ex: power of 6 in $50!$: $E_2=47,\\ E_3=22$, so $\\min(47,22)=22$.",
+        "उदा.: $50!$ में 6 की घात: $E_2=47,\\ E_3=22$, अतः $\\min(47,22)=22$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of zeroes at the end of $n!$?",
+       "$n!$ के अन्त में शून्यों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Zeroes $=$ power of 10 $=E_5(n!)$, because 5 occurs less often than 2.",
+        "शून्य $=$ 10 की घात $=E_5(n!)$, क्योंकि 5 की घात 2 से कम होती है।"
+       ],
+       [
+        "Ex: $100!$ ends in $20+4=24$ zeroes; $45!$ in $9+1=10$ zeroes.",
+        "उदा.: $100!$ के अन्त में $20+4=24$ शून्य; $45!$ में $9+1=10$ शून्य।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Properties of ${}^nC_r$",
+    "hi": "${}^nC_r$ के गुणधर्म",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write down all 6 properties of ${}^nC_r$.",
+       "${}^nC_r$ के सभी 6 गुणधर्म लिखिए।"
+      ],
+      "a": [
+       "${}^nC_r=\\dfrac{n!}{r!\\,(n-r)!},\\quad {}^nP_r={}^nC_r\\cdot r!$",
+       [
+        "${}^nC_r={}^nC_{n-r},\\quad {}^nC_0={}^nC_n=1;\\qquad {}^nC_x={}^nC_y\\Rightarrow x=y\\ \\text{or}\\ x+y=n$",
+        "${}^nC_r={}^nC_{n-r},\\quad {}^nC_0={}^nC_n=1;\\qquad {}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$"
+       ],
+       "${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r,\\quad {}^nC_r=\\dfrac nr\\,{}^{n-1}C_{r-1},\\quad \\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}{r}$",
+       [
+        "Ex: ${}^nC_3={}^nC_5\\Rightarrow n=3+5=8$, so ${}^nC_2={}^8C_2=28$.",
+        "उदा.: ${}^nC_3={}^nC_5\\Rightarrow n=3+5=8$, अतः ${}^nC_2={}^8C_2=28$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Questions based on Selection and Arrangements",
+    "hi": "चयन तथा व्यवस्था पर आधारित प्रश्न",
+    "items": [
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to apply ${}^nP_r$ and when to apply ${}^nC_r$?",
+       "${}^nP_r$ कब लगायें और ${}^nC_r$ कब लगायें?"
+      ],
+      "a": [
+       [
+        "Only a group is chosen (committee, team, hand, subset) $\\Rightarrow{}^nC_r$. Choosing followed by an order (words, numbers, positions, prizes) $\\Rightarrow{}^nP_r={}^nC_r\\,r!$.",
+        "केवल समूह चुनना हो (समिति, टीम, हाथ, उपसमुच्चय) $\\Rightarrow{}^nC_r$। चयन के बाद क्रम भी हो (शब्द, संख्याएँ, स्थान, पुरस्कार) $\\Rightarrow{}^nP_r={}^nC_r\\,r!$।"
+       ],
+       [
+        "Ex: first three places among 10 swimmers: ${}^{10}P_3=720$; choosing any 3 of them: ${}^{10}C_3=120$.",
+        "उदा.: 10 तैराकों में पहले तीन स्थान: ${}^{10}P_3=720$; उनमें से कोई 3 चुनना: ${}^{10}C_3=120$।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know all the basic terms associated with playing cards?",
+       "क्या आप ताश के पत्तों से जुड़े सभी मूल शब्द जानते हैं?"
+      ],
+      "a": [
+       [
+        "A pack has 52 cards: 4 suits (spades, clubs black; hearts, diamonds red) of 13 cards each (A, 2 to 10, J, Q, K); 4 aces, 12 face cards, 26 red and 26 black cards.",
+        "एक गड्डी में 52 पत्ते: 4 रंग (हुकुम, चिड़ी काले; पान, ईंट लाल), प्रत्येक के 13 पत्ते (इक्का, 2 से 10, गुलाम, बेगम, बादशाह); 4 इक्के, 12 मूर्ति-पत्ते, 26 लाल तथा 26 काले पत्ते।"
+       ],
+       [
+        "Ex: 5-card hands of one suit: $4\\cdot{}^{13}C_5=5148$.",
+        "उदा.: एक ही रंग के 5 पत्तों के हाथ: $4\\cdot{}^{13}C_5=5148$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of lines and triangles formed by many points, some of them collinear?",
+       "कई बिन्दुओं से, जिनमें कुछ संरेख हों, बनने वाली कुल रेखाओं व त्रिभुजों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Lines $={}^nC_2-{}^pC_2+1,\\qquad$ triangles $={}^nC_3-{}^pC_3\\quad(p\\ \\text{of the}\\ n\\ \\text{points collinear})$",
+        "रेखाएँ $={}^nC_2-{}^pC_2+1,\\qquad$ त्रिभुज $={}^nC_3-{}^pC_3\\quad$ ($n$ में से $p$ बिन्दु संरेख)"
+       ],
+       [
+        "For several collinear sets subtract each set's ${}^{p}C_{3}$. Ex: 10 points, 6 collinear: triangles $120-20=100$, lines $45-15+1=31$.",
+        "कई संरेख समूह हों तो प्रत्येक की ${}^{p}C_{3}$ घटाएँ। उदा.: 10 बिन्दु, 6 संरेख: त्रिभुज $120-20=100$, रेखाएँ $45-15+1=31$।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of quadrilaterals formed by many points, some of them collinear?",
+       "कई बिन्दुओं से, जिनमें कुछ संरेख हों, बनने वाले कुल चतुर्भुजों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Quadrilaterals $={}^nC_4-{}^pC_4-{}^pC_3\\cdot{}^{n-p}C_1\\quad(p\\ \\text{collinear points})$",
+        "चतुर्भुज $={}^nC_4-{}^pC_4-{}^pC_3\\cdot{}^{n-p}C_1\\quad$ ($p$ संरेख बिन्दु)"
+       ],
+       [
+        "Remove the choices in which 3 or 4 of the chosen vertices lie on the line. Ex: 12 points, 5 collinear: $495-5-10\\cdot7=420$.",
+        "वे चयन हटाएँ जिनमें चुने हुए 3 या 4 शीर्ष एक रेखा पर हों। उदा.: 12 बिन्दु, 5 संरेख: $495-5-10\\cdot7=420$।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the number of diagonals of an $n$-sided polygon?",
+       "$n$ भुजाओं वाले बहुभुज के विकर्णों की संख्या क्या है?"
+      ],
+      "a": [
+       "Diagonals $={}^nC_2-n=\\dfrac{n(n-3)}2$",
+       [
+        "Ex: a regular polygon with interior angle $150^\\circ$ has $n=12$ sides, so $\\dfrac{12\\cdot9}{2}=54$ diagonals.",
+        "उदा.: जिस सम बहुभुज का अन्तः कोण $150^\\circ$ है उसकी $n=12$ भुजाएँ हैं, अतः $\\dfrac{12\\cdot9}{2}=54$ विकर्ण।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to select three numbers in A.P.?",
+       "A.P. में तीन संख्याएँ कैसे चुनें?"
+      ],
+      "a": [
+       [
+        "The first and third terms must be of the same parity (the middle term is then fixed): count pairs of equal parity from $1,2,\\dots,n$.",
+        "पहला तथा तीसरा पद समान समता (सम/विषम) के होने चाहिए (तब मध्य पद निश्चित है): $1,2,\\dots,n$ में समान समता वाले युग्म गिनें।"
+       ],
+       [
+        "$n\\ \\text{odd}:\\ \\dfrac{(n-1)^2}{4},\\qquad n\\ \\text{even}:\\ \\dfrac{n(n-2)}{4}$",
+        "$n$ विषम: $\\dfrac{(n-1)^2}{4},\\qquad n$ सम: $\\dfrac{n(n-2)}{4}$"
+       ],
+       [
+        "Ex: from $1$ to $10$: $2\\cdot{}^5C_2=20$.",
+        "उदा.: $1$ से $10$ में: $2\\cdot{}^5C_2=20$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of rectangles and squares in a chess board (grid)?",
+       "शतरंज की बिसात (ग्रिड) में आयतों व वर्गों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "Grid of $m\\times n$ unit squares: rectangles $={}^{m+1}C_2\\cdot{}^{n+1}C_2$, squares $=\\sum_{k=1}^{\\min(m,n)}(m-k+1)(n-k+1)$",
+       [
+        "Rectangles that are not squares $=$ rectangles $-$ squares. Ex: $8\\times8$ board: $1296$ rectangles, $204$ squares.",
+        "वर्ग न होने वाले आयत $=$ आयत $-$ वर्ग। उदा.: $8\\times8$ बिसात: $1296$ आयत, $204$ वर्ग।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 8; J-II: 2,3,4,6,7,11,12,42,43,44,48; J-M(XII): 2,5,20; J-M(XIII): 6,8,31,45,55; J-A: 8,9,12,18; C-I: 2; C-II: 7; DPP-3: 1,3,10,11; DPP-4: 11,13,14,17; QB: 167,170,190,194,198",
+      "q": [
+       "How to count selections with conditions: particular persons always included, never included, together or not at all, or not together?",
+       "शर्तों वाले चयन कैसे गिनें: कोई विशेष व्यक्ति सदैव सम्मिलित, कभी नहीं, साथ-साथ या बिल्कुल नहीं, अथवा साथ नहीं?"
+      ],
+      "a": [
+       [
+        "Always included: choose the rest from the remaining. Never included: choose from the others. Together or not at all: add the two cases. Two who refuse to be together: total $-$ (both). Categories (boys / girls, bowlers / batsmen): split by cases and use at least / at most.",
+        "सदैव सम्मिलित: शेष को बचे हुओं में से चुनें। कभी नहीं: दूसरों में से चुनें। साथ-साथ या बिल्कुल नहीं: दोनों प्रकरण जोड़ें। जो साथ नहीं रहना चाहते: कुल $-$ (दोनों साथ)। वर्ग (लड़के / लड़कियाँ, गेंदबाज / बल्लेबाज): प्रकरण बाँटें तथा कम से कम / अधिकतम का प्रयोग करें।"
+       ],
+       [
+        "Ex: committee of 5 from 9 where $A,B$ serve together or not at all and $C,D$ never serve together: $({}^7C_3-{}^5C_1)+({}^7C_5-{}^5C_3)=30+11=41$.",
+        "उदा.: 9 में से 5 की समिति जिसमें $A,B$ साथ-साथ या बिल्कुल नहीं तथा $C,D$ कभी साथ नहीं: $({}^7C_3-{}^5C_1)+({}^7C_5-{}^5C_3)=30+11=41$।"
+       ]
+      ]
+     },
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XIII): 48; C-I: 11; QB: 196",
+      "q": [
+       "How to find the number of intersection points of lines, diagonals or chords?",
+       "रेखाओं, विकर्णों या जीवाओं के प्रतिच्छेद बिन्दुओं की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$n$ lines (no two parallel, no three concurrent): ${}^nC_2$ points; $p$ parallel lines: $-{}^pC_2$; $q$ concurrent lines: $-{}^qC_2+1$",
+       [
+        "Chords of $n$ points on a circle (no three concurrent) meet inside in ${}^nC_4$ points. Ex: 9 points: $126$; 20 lines with 10 parallel and 10 concurrent: $190-45-45+1=101$.",
+        "वृत्त पर $n$ बिन्दुओं की जीवाएँ (कोई तीन संगामी नहीं) अन्दर ${}^nC_4$ बिन्दुओं पर कटती हैं। उदा.: 9 बिन्दु: $126$; 20 रेखाओं में 10 समान्तर व 10 संगामी: $190-45-45+1=101$।"
+       ]
+      ]
+     },
+     {
+      "id": "N8",
+      "o": null,
+      "tag": "added",
+      "src": "J-I: 9; J-II: 14; DPP-4: 4,12,16; DPP-5: 14; DPP-6: 14",
+      "q": [
+       "How to arrange when some persons or objects are tied to particular places (seats, middle place, sides of a table)?",
+       "जब कुछ व्यक्ति या वस्तुएँ विशेष स्थानों (सीट, मध्य स्थान, मेज़ की भुजाएँ) से बँधी हों तो व्यवस्था कैसे करें?"
+      ],
+      "a": [
+       [
+        "Fill the restricted places first (choose who goes there and arrange them), then arrange the others in the remaining places.",
+        "पहले प्रतिबन्धित स्थान भरें (कौन वहाँ जायेगा चुनें व उन्हें व्यवस्थित करें), फिर शेष को बचे स्थानों में व्यवस्थित करें।"
+       ],
+       [
+        "Ex: choose 4 novels of 6 and 1 dictionary of 3 and arrange them with the dictionary in the middle: ${}^3C_1\\cdot{}^6C_4\\cdot4!=1080$.",
+        "उदा.: 6 में से 4 उपन्यास व 3 में से 1 शब्दकोश चुनकर शब्दकोश को बीच में रखते हुए व्यवस्थित करें: ${}^3C_1\\cdot{}^6C_4\\cdot4!=1080$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Gap and String Method",
+    "hi": "रिक्त-स्थान (गैप) तथा गुच्छा (स्ट्रिंग) विधि",
+    "items": [
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How and when to use the string method?",
+       "स्ट्रिंग विधि का प्रयोग कैसे और कब करें?"
+      ],
+      "a": [
+       [
+        "When some objects must be together: tie them into one block, arrange the blocks ($n-k+1$ units), then arrange inside the block: $(n-k+1)!\\,k!$.",
+        "जब कुछ वस्तुएँ साथ-साथ रहनी हों: उन्हें एक गुच्छे में बाँधें, गुच्छों को व्यवस्थित करें ($n-k+1$ इकाइयाँ), फिर गुच्छे के अन्दर व्यवस्था करें: $(n-k+1)!\\,k!$।"
+       ],
+       [
+        "\"Not together\" $=$ total $-$ together. Ex: 5 boys and 3 girls in a row, not all girls together: $8!-6!\\,3!=36000$.",
+        "\"साथ नहीं\" $=$ कुल $-$ साथ। उदा.: 5 लड़के व 3 लड़कियाँ एक पंक्ति में, सभी लड़कियाँ साथ न हों: $8!-6!\\,3!=36000$।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How and when to use the gap method?",
+       "गैप विधि का प्रयोग कैसे और कब करें?"
+      ],
+      "a": [
+       [
+        "When some objects must be apart (no two together): arrange the others first, then put the restricted objects in the gaps, at most one per gap: $(n-r)!\\cdot{}^{n-r+1}P_r$.",
+        "जब कुछ वस्तुएँ अलग-अलग रहनी हों (कोई दो साथ नहीं): पहले अन्य को व्यवस्थित करें, फिर प्रतिबन्धित वस्तुओं को रिक्त स्थानों में रखें, प्रति स्थान अधिकतम एक: $(n-r)!\\cdot{}^{n-r+1}P_r$।"
+       ],
+       [
+        "Ex: 5 boys and 3 girls in a row, no two girls together: $5!\\cdot{}^6P_3=14400$.",
+        "उदा.: 5 लड़के व 3 लड़कियाँ एक पंक्ति में, कोई दो लड़कियाँ साथ नहीं: $5!\\cdot{}^6P_3=14400$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can we use the string method when two types of groups are to be kept together?",
+       "क्या दो प्रकार के समूहों को साथ रखने पर स्ट्रिंग विधि प्रयोग कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "Yes: make one block for each type, arrange the blocks among themselves, then arrange inside every block.",
+        "हाँ: प्रत्येक प्रकार का एक गुच्छा बनाएँ, गुच्छों को आपस में व्यवस्थित करें, फिर प्रत्येक गुच्छे के अन्दर व्यवस्था करें।"
+       ],
+       [
+        "Ex: 3 girls and 4 boys in a queue with all girls together and all boys together: $2!\\cdot3!\\cdot4!=288$.",
+        "उदा.: 3 लड़कियाँ व 4 लड़के कतार में, सभी लड़कियाँ साथ तथा सभी लड़के साथ: $2!\\cdot3!\\cdot4!=288$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to arrange when two types of things are to be kept alternate?",
+       "जब दो प्रकार की वस्तुओं को एकान्तर क्रम में रखना हो तो व्यवस्था कैसे करें?"
+      ],
+      "a": [
+       [
+        "Equal numbers $n,n$: $2\\cdot n!\\,n!$ (either type first). Numbers $n+1$ and $n$: the larger type must occupy both ends, $(n+1)!\\,n!$. A difference of 2 or more is impossible.",
+        "बराबर संख्या $n,n$: $2\\cdot n!\\,n!$ (कोई भी प्रकार पहले)। संख्याएँ $n+1$ व $n$: बड़ा प्रकार दोनों सिरों पर होगा, $(n+1)!\\,n!$। अन्तर 2 या अधिक हो तो असम्भव।"
+       ],
+       [
+        "Ex: 4 boys and 4 girls alternately: $2\\cdot4!\\cdot4!=1152$; 5 boys and 4 girls: $5!\\cdot4!=2880$.",
+        "उदा.: 4 लड़के व 4 लड़कियाँ एकान्तर: $2\\cdot4!\\cdot4!=1152$; 5 लड़के व 4 लड़कियाँ: $5!\\cdot4!=2880$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Station Method",
+    "hi": "स्टेशन विधि",
+    "items": [
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use the station method?",
+       "स्टेशन विधि का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When $r$ objects are to be chosen from $n$ objects in a row so that no two chosen ones are adjacent (stops of a train, persons or points in a line).",
+        "जब पंक्ति में रखी $n$ वस्तुओं में से $r$ इस प्रकार चुननी हों कि कोई दो चुनी हुई वस्तुएँ आसन्न न हों (रेलगाड़ी के पड़ाव, पंक्ति में व्यक्ति या बिन्दु)।"
+       ],
+       [
+        "Ex: a train with 12 stations stops at 5 of them, no two consecutive: ${}^8C_5=56$.",
+        "उदा.: 12 स्टेशनों में से 5 पर रुकने वाली गाड़ी, कोई दो क्रमागत नहीं: ${}^8C_5=56$।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the station method?",
+       "स्टेशन विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       "${}^{\\,n-r+1}C_r$",
+       [
+        "Put the $n-r$ unchosen objects in a row; they make $n-r+1$ stations (gaps); choose $r$ stations. Ex: 4 of 10 points in a row, no two consecutive: ${}^7C_4=35$.",
+        "न चुनी गयी $n-r$ वस्तुओं को पंक्ति में रखें; इनसे $n-r+1$ स्टेशन (रिक्त स्थान) बनते हैं; $r$ स्टेशन चुनें। उदा.: पंक्ति के 10 बिन्दुओं में से 4, कोई दो क्रमागत नहीं: ${}^7C_4=35$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Formation of Groups",
+    "hi": "समूहों का निर्माण",
+    "items": [
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways of forming groups of distinct things into given group sizes?",
+       "भिन्न वस्तुओं के दिये गये आकारों के समूह बनाने के तरीकों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "Unequal sizes $p,q,r$: $\\dfrac{n!}{p!\\,q!\\,r!}$;\\qquad $k$ unlabelled groups of equal size $p$: $\\dfrac{(kp)!}{(p!)^k\\,k!}$",
+       [
+        "If equal groups are given to different persons (labelled) do not divide by $k!$. Ex: 10 persons into groups of $2,3,5$: $2520$; into groups of $4,3,3$: $\\dfrac{10!}{4!\\,3!\\,3!\\,2!}=2100$.",
+        "यदि समान आकार के समूह अलग-अलग व्यक्तियों को दिये जायें (नामित) तो $k!$ से भाग न दें। उदा.: 10 व्यक्ति $2,3,5$ के समूहों में: $2520$; $4,3,3$ के समूहों में: $\\dfrac{10!}{4!\\,3!\\,3!\\,2!}=2100$।"
+       ]
+      ]
+     },
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use formation of groups in questions?",
+       "प्रश्नों में समूह-निर्माण का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When distinct things are divided or distributed into groups, teams, cars or persons with given sizes. If the sizes are not fixed, list every size pattern, count each by the group formula, and multiply by the ways to hand the groups to the persons.",
+        "जब भिन्न वस्तुओं को दिये गये आकारों के समूहों, टीमों, गाड़ियों या व्यक्तियों में बाँटना हो। आकार निश्चित न हों तो प्रत्येक आकार-प्रतिरूप की सूची बनाएँ, समूह सूत्र से गिनें और समूहों को व्यक्तियों में बाँटने के तरीकों से गुणा करें।"
+       ],
+       [
+        "Ex: 8 persons in 3 cars of different make, at most 3 in a car: pattern $(3,3,2)$: $3\\cdot\\dfrac{8!}{3!\\,3!\\,2!}=1680$.",
+        "उदा.: 8 व्यक्ति भिन्न कम्पनियों की 3 कारों में, प्रत्येक में अधिकतम 3: प्रतिरूप $(3,3,2)$: $3\\cdot\\dfrac{8!}{3!\\,3!\\,2!}=1680$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to distribute $n$ things among 2 or 3 persons when each person gets at least one thing?",
+       "$n$ वस्तुओं को 2 या 3 व्यक्तियों में इस प्रकार कैसे बाँटें कि प्रत्येक को कम से कम एक वस्तु मिले?"
+      ],
+      "a": [
+       "Two persons: $2^n-2$;\\qquad three persons: $3^n-3\\cdot2^n+3$",
+       [
+        "Total $-$ (one person empty) $+$ (two persons empty). Ex: 5 different balls among 3 persons: $243-96+3=150$.",
+        "कुल $-$ (एक व्यक्ति रिक्त) $+$ (दो व्यक्ति रिक्त)। उदा.: 5 भिन्न गेंदें 3 व्यक्तियों में: $243-96+3=150$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Permutation of Alike Objects taken all at a time",
+    "hi": "समान वस्तुओं के क्रमचय (सभी एक साथ लेने पर)",
+    "items": [
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to arrange things when a few of them are alike?",
+       "जब कुछ वस्तुएँ समान हों तो उनकी व्यवस्था कैसे करें?"
+      ],
+      "a": [
+       [
+        "$\\dfrac{n!}{p!\\,q!\\,r!\\cdots}\\qquad(p,q,r\\ \\text{alike objects of each kind})$",
+        "$\\dfrac{n!}{p!\\,q!\\,r!\\cdots}\\qquad$ ($p,q,r$: प्रत्येक प्रकार की समान वस्तुओं की संख्या)"
+       ],
+       [
+        "Ex: words from MATHEMATICS (M, A, T twice each) starting and ending with T: $\\dfrac{9!}{2!\\,2!}=90720$.",
+        "उदा.: MATHEMATICS (M, A, T दो-दो बार) के वे शब्द जो T से प्रारम्भ व T पर समाप्त हों: $\\dfrac{9!}{2!\\,2!}=90720$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the string method in permutation of alike objects taken all at a time?",
+       "समान वस्तुओं के क्रमचय (सभी एक साथ) में स्ट्रिंग विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Tie the objects that must be together into one block; count the arrangements of the block's own letters (alike formula) and of the units outside the block (alike formula); multiply.",
+        "जो वस्तुएँ साथ रहनी हों उन्हें एक गुच्छे में बाँधें; गुच्छे के अपने अक्षरों की व्यवस्थाएँ (समान वस्तु सूत्र) तथा गुच्छे के बाहर की इकाइयों की व्यवस्थाएँ (समान वस्तु सूत्र) गिनकर गुणा करें।"
+       ],
+       [
+        "Ex: INDEPENDENCE with all vowels (I, E, E, E, E) together: $\\dfrac{5!}{4!}\\cdot\\dfrac{8!}{3!\\,2!}=16800$.",
+        "उदा.: INDEPENDENCE में सभी स्वर (I, E, E, E, E) साथ-साथ: $\\dfrac{5!}{4!}\\cdot\\dfrac{8!}{3!\\,2!}=16800$।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the gap method in permutation of alike objects taken all at a time?",
+       "समान वस्तुओं के क्रमचय (सभी एक साथ) में गैप विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Arrange the other objects (alike formula), then choose the gaps for the restricted objects: ${}^{m+1}C_r$ if they are alike (times $r!$ if they are different).",
+        "अन्य वस्तुओं को व्यवस्थित करें (समान वस्तु सूत्र), फिर प्रतिबन्धित वस्तुओं के लिए रिक्त स्थान चुनें: वे समान हों तो ${}^{m+1}C_r$ (भिन्न हों तो $\\times\\,r!$)।"
+       ],
+       [
+        "Ex: MISSISSIPPI with no two S together: $\\dfrac{7!}{4!\\,2!}\\cdot{}^8C_4=105\\cdot70=7350$.",
+        "उदा.: MISSISSIPPI जिसमें कोई दो S साथ न हों: $\\dfrac{7!}{4!\\,2!}\\cdot{}^8C_4=105\\cdot70=7350$।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does \"without changing the order of vowels / consonants\" mean in questions?",
+       "प्रश्नों में \"स्वरों / व्यंजनों का क्रम बदले बिना\" का क्या अर्थ है?"
+      ],
+      "a": [
+       [
+        "Their relative order is fixed: arrange all objects freely and divide by $k!$ (or choose their $k$ places in ${}^nC_k$ ways and fill the rest). \"Positions of vowels fixed\" means the vowels do not move at all.",
+        "उनका आपेक्षिक क्रम निश्चित है: सभी को स्वतन्त्र रूप से व्यवस्थित कर $k!$ से भाग दें (या उनके $k$ स्थान ${}^nC_k$ तरीकों से चुनकर शेष भरें)। \"स्वरों के स्थान निश्चित\" का अर्थ है कि स्वर बिल्कुल नहीं हिलते।"
+       ],
+       [
+        "Ex: MULTIPLE (L twice, vowels U, I, E) without changing the order of vowels, other ways: $\\dfrac{8!}{2!\\,3!}-1=3359$.",
+        "उदा.: MULTIPLE (L दो बार, स्वर U, I, E) में स्वरों का क्रम बदले बिना अन्य तरीके: $\\dfrac{8!}{2!\\,3!}-1=3359$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to arrange things when two or three types of things are to be kept separated?",
+       "जब दो या तीन प्रकार की वस्तुओं को अलग-अलग रखना हो तो व्यवस्था कैसे करें?"
+      ],
+      "a": [
+       [
+        "For a kind that must not be adjacent use the gap method; for two or three such kinds use inclusion-exclusion: total $-$ (some kind has a pair together) $+\\cdots$, tying each pair into a block.",
+        "जिस प्रकार की वस्तुएँ आसन्न न हों उनके लिए गैप विधि लगायें; दो या तीन ऐसे प्रकारों के लिए समावेशन-अपवर्जन: कुल $-$ (किसी प्रकार का एक युग्म साथ) $+\\cdots$, प्रत्येक युग्म को एक गुच्छे में बाँधकर।"
+       ],
+       [
+        "Ex: HONOLULU (O, L, U twice) with no two alike letters together: $2220$.",
+        "उदा.: HONOLULU (O, L, U दो-दो बार) जिसमें कोई दो समान अक्षर साथ न हों: $2220$।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the rank of a word when letters are alike?",
+       "जब अक्षर समान हों तो शब्द की कोटि कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "As for different letters, but the number of words starting with each smaller letter is (remaining letters)! divided by the factorials of the alike letters still left.",
+        "भिन्न अक्षरों की तरह, परन्तु प्रत्येक छोटे अक्षर से प्रारम्भ होने वाले शब्दों की संख्या (शेष अक्षर)! में बचे हुए समान अक्षरों के फैक्टोरियल का भाग देकर मिलती है।"
+       ],
+       [
+        "Ex: SMALL (order A, L, L, M, S): $A\\!:12,\\ L\\!:24,\\ M\\!:12,\\ SA\\!:3,\\ SL\\!:6$, so $57$ words come before it and the rank is $58$.",
+        "उदा.: SMALL (क्रम A, L, L, M, S): $A\\!:12,\\ L\\!:24,\\ M\\!:12,\\ SA\\!:3,\\ SL\\!:6$, अतः इससे पहले $57$ शब्द हैं और कोटि $58$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Permutation of Alike Objects taken some at a time",
+    "hi": "समान वस्तुओं के क्रमचय (कुछ एक साथ लेने पर)",
+    "items": [
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of selections when alike things are taken some at a time?",
+       "समान वस्तुओं को कुछ-कुछ लेने पर चयनों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Split into types by the pattern of repeats (e.g. \"two alike\", \"all different\") and count the selections of each type; or use the coefficient method.",
+        "दोहराव के प्रतिरूप (जैसे \"दो समान\", \"सब भिन्न\") के अनुसार प्रकार बनाकर प्रत्येक के चयन गिनें; या गुणांक विधि प्रयोग करें।"
+       ],
+       [
+        "Ex: 2 letters from DADDY (D three times, A, Y): DD $1$, two different $3$; total $4$.",
+        "उदा.: DADDY (D तीन बार, A, Y) में से 2 अक्षर: DD $1$, दो भिन्न $3$; कुल $4$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of arrangements when alike things are taken some at a time?",
+       "समान वस्तुओं को कुछ-कुछ लेने पर व्यवस्थाओं की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "For every type of selection multiply its number of selections by the arrangements $\\dfrac{r!}{(\\text{alike})!}$ of that type; then add the types.",
+        "प्रत्येक प्रकार के चयन की संख्या को उसकी व्यवस्थाओं $\\dfrac{r!}{p!\\,q!\\cdots}$ ($p,q$: समान वस्तुओं की संख्याएँ) से गुणा करें; फिर प्रकारों को जोड़ें।"
+       ],
+       [
+        "Ex: arrangements of 2 letters from DADDY: $1+3\\cdot2!=7$.",
+        "उदा.: DADDY में से 2 अक्षरों की व्यवस्थाएँ: $1+3\\cdot2!=7$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Circular Permutations",
+    "hi": "वृत्तीय क्रमचय",
+    "items": [
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is circular permutation and how is it different from linear permutation?",
+       "वृत्तीय क्रमचय क्या है और यह रैखिक क्रमचय से कैसे भिन्न है?"
+      ],
+      "a": [
+       [
+        "In a circle only relative positions matter (a rotation gives the same arrangement), so there is no first place: linear $n!$, circular $(n-1)!$. If the seats are numbered or distinguishable, rotation gives a new arrangement and the answer is $n!$.",
+        "वृत्त में केवल आपेक्षिक स्थिति मायने रखती है (घुमाने पर वही व्यवस्था रहती है), इसलिए कोई पहला स्थान नहीं होता: रैखिक $n!$, वृत्तीय $(n-1)!$। यदि सीटें क्रमांकित या भिन्न हों तो घुमाने पर नयी व्यवस्था बनती है और उत्तर $n!$ होता है।"
+       ],
+       [
+        "Ex: 4 persons round a table $3!=6$; on numbered chairs $4!=24$.",
+        "उदा.: 4 व्यक्ति गोल मेज़ के चारों ओर $3!=6$; क्रमांकित कुर्सियों पर $4!=24$।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to arrange things in circular permutation?",
+       "वृत्तीय क्रमचय में वस्तुओं की व्यवस्था कैसे करें?"
+      ],
+      "a": [
+       "All $n$ different things: $(n-1)!$;\\qquad $r$ of $n$ different things: $\\dfrac{{}^nP_r}{r}$",
+       [
+        "Fix one object and arrange the rest. Ex: choose 3 of 5 persons and seat them round a table: $\\dfrac{{}^5P_3}{3}=20$.",
+        "एक वस्तु को स्थिर करके शेष को व्यवस्थित करें। उदा.: 5 में से 3 व्यक्ति चुनकर गोल मेज़ पर बैठाना: $\\dfrac{{}^5P_3}{3}=20$।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the string method in circular permutation?",
+       "वृत्तीय क्रमचय में स्ट्रिंग विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "$(n-k)!\\cdot k!\\qquad(k\\ \\text{objects together in a circle of}\\ n)$",
+        "$(n-k)!\\cdot k!\\qquad$ ($n$ वस्तुओं के वृत्त में $k$ वस्तुएँ साथ-साथ)"
+       ],
+       [
+        "Tie the $k$ objects into one block ($n-k+1$ units give $(n-k)!$ circular ways), then arrange inside. Ex: 10 persons round a table with $P_1,P_2,P_3$ together: $7!\\cdot3!$.",
+        "$k$ वस्तुओं को एक गुच्छे में बाँधें ($n-k+1$ इकाइयों के $(n-k)!$ वृत्तीय तरीके), फिर अन्दर व्यवस्था करें। उदा.: 10 व्यक्ति गोल मेज़ पर, $P_1,P_2,P_3$ साथ-साथ: $7!\\cdot3!$।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the gap method in circular permutation?",
+       "वृत्तीय क्रमचय में गैप विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "$(m-1)!\\cdot{}^{m}P_r\\qquad(m\\ \\text{unrestricted objects,}\\ r\\ \\text{restricted ones kept apart})$",
+        "$(m-1)!\\cdot{}^{m}P_r\\qquad$ ($m$ अप्रतिबन्धित वस्तुएँ, $r$ प्रतिबन्धित वस्तुएँ अलग-अलग)"
+       ],
+       [
+        "Seat the $m$ unrestricted ones in a circle; they leave $m$ gaps (not $m+1$). Ex: 6 men and 5 women round a table, no two women together: $5!\\cdot{}^6P_5=6!\\,5!$.",
+        "$m$ अप्रतिबन्धित वस्तुओं को वृत्त में बैठाएँ; उनसे $m$ रिक्त स्थान बनते हैं ($m+1$ नहीं)। उदा.: 6 पुरुष व 5 महिलाएँ गोल मेज़ पर, कोई दो महिलाएँ साथ नहीं: $5!\\cdot{}^6P_5=6!\\,5!$।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When will we consider clockwise and anti-clockwise arrangements as same, and what to do in that case?",
+       "वामावर्त तथा दक्षिणावर्त व्यवस्थाओं को कब समान मानेंगे और तब क्या करें?"
+      ],
+      "a": [
+       [
+        "When the arrangement can be turned over (garland, necklace, bracelet, beads strung on a thread): divide the circular count by 2, $\\dfrac{(n-1)!}{2}$ for $n\\ge3$.",
+        "जब व्यवस्था को पलटा जा सके (माला, हार, कंगन, धागे में पिरोये मनके): वृत्तीय गणना में 2 का भाग दें, $n\\ge3$ के लिए $\\dfrac{(n-1)!}{2}$।"
+       ],
+       [
+        "Ex: 8 different flowers strung in a garland with 4 particular flowers together: $\\dfrac{4!\\cdot4!}{2}=288$.",
+        "उदा.: 8 भिन्न फूलों की माला जिसमें 4 विशेष फूल साथ-साथ हों: $\\dfrac{4!\\cdot4!}{2}=288$।"
+       ]
+      ]
+     },
+     {
+      "id": "44",
+      "o": 44,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When will we consider clockwise and anti-clockwise arrangements as same in case of arrangement of persons?",
+       "व्यक्तियों की व्यवस्था में वामावर्त तथा दक्षिणावर्त व्यवस्थाओं को कब समान मानेंगे?"
+      ],
+      "a": [
+       [
+        "Persons at a table: the two orders are different (each person's left and right neighbours swap), so do not divide by 2. Divide only when the question says the arrangements are alike if every person has the same two neighbours.",
+        "मेज़ पर बैठे व्यक्ति: दोनों क्रम भिन्न हैं (प्रत्येक के बायें-दायें पड़ोसी बदल जाते हैं), अतः 2 से भाग न दें। केवल तभी भाग दें जब प्रश्न में कहा हो कि प्रत्येक व्यक्ति के दोनों पड़ोसी वही रहने पर व्यवस्थाएँ समान हैं।"
+       ],
+       [
+        "Ex: 5 persons at a round table $4!=24$ (beads on a necklace: $12$).",
+        "उदा.: 5 व्यक्ति गोल मेज़ पर $4!=24$ (हार के मनके: $12$)।"
+       ]
+      ]
+     },
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use permutation of alike objects taken all at a time in circular permutations?",
+       "वृत्तीय क्रमचय में समान वस्तुओं के क्रमचय (सभी एक साथ) का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Fix one object that occurs only once (or a distinct one) to remove the rotation, then arrange the rest in a line with the alike formula.",
+        "घूर्णन हटाने के लिए एक ऐसी वस्तु स्थिर करें जो केवल एक बार आती हो (या भिन्न हो), फिर शेष को समान वस्तु सूत्र से पंक्ति की तरह व्यवस्थित करें।"
+       ],
+       [
+        "Ex: one flag A, three alike B and two alike C round a circle: fix A, then $\\dfrac{5!}{3!\\,2!}=10$.",
+        "उदा.: एक झण्डा A, तीन समान B व दो समान C वृत्त में: A को स्थिर करें, फिर $\\dfrac{5!}{3!\\,2!}=10$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Station Method in Circular Permutation",
+    "hi": "वृत्तीय क्रमचय में स्टेशन विधि",
+    "items": [
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use the station method in circular permutations?",
+       "वृत्तीय क्रमचय में स्टेशन विधि का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When $r$ of $n$ objects placed on a circle (points, vertices, persons at a round table) are chosen so that no two chosen are adjacent.",
+        "जब वृत्त पर रखी $n$ वस्तुओं (बिन्दु, शीर्ष, गोल मेज़ पर बैठे व्यक्ति) में से $r$ इस प्रकार चुननी हों कि कोई दो चुनी हुई आसन्न न हों।"
+       ],
+       [
+        "Ex: choosing 3 of 9 persons round a table so that no two are neighbours: $\\dfrac96\\cdot{}^6C_3=30$.",
+        "उदा.: गोल मेज़ पर बैठे 9 व्यक्तियों में से 3 इस प्रकार चुनना कि कोई दो पड़ोसी न हों: $\\dfrac96\\cdot{}^6C_3=30$।"
+       ]
+      ]
+     },
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve formation-of-polygon type questions in circular permutations?",
+       "वृत्तीय क्रमचय में बहुभुज-निर्माण प्रकार के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "$\\dfrac{n}{n-r}\\,{}^{\\,n-r}C_r\\qquad(r\\ \\text{vertices of an}\\ n\\text{-gon, no side common})$",
+        "$\\dfrac{n}{n-r}\\,{}^{\\,n-r}C_r\\qquad$ ($n$ भुजाओं वाले बहुभुज के $r$ शीर्ष, कोई भुजा उभयनिष्ठ नहीं)"
+       ],
+       [
+        "Ex: triangles from the vertices of a regular octagon with no side of the octagon: $\\dfrac85\\cdot{}^5C_3=16$; for a nonagon $30$.",
+        "उदा.: सम अष्टभुज के शीर्षों से बने वे त्रिभुज जिनकी कोई भुजा अष्टभुज की भुजा न हो: $\\dfrac85\\cdot{}^5C_3=16$; नवभुज के लिए $30$।"
+       ]
+      ]
+     },
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the station method in circular permutations? (both methods)",
+       "वृत्तीय क्रमचय में स्टेशन विधि का प्रयोग कैसे करें? (दोनों विधियाँ)"
+      ],
+      "a": [
+       "Method 1: ${}^{n-r}C_r+{}^{n-r-1}C_{r-1}$ (first object not chosen / chosen);\\qquad Method 2: $\\dfrac{n}{n-r}\\,{}^{n-r}C_r$",
+       [
+        "Method 1 cuts the circle at one object and uses the row formula in two cases. Ex: $n=8,r=3$: $10+6=16=\\dfrac85\\cdot10$.",
+        "विधि 1 वृत्त को एक वस्तु पर काटकर दो प्रकरणों में पंक्ति सूत्र लगाती है। उदा.: $n=8,r=3$: $10+6=16=\\dfrac85\\cdot10$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Total Number of Combinations",
+    "hi": "संचयों की कुल संख्या",
+    "items": [
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of combinations when many things are given, some alike of one type, some alike of another type, etc.?",
+       "जब कई वस्तुएँ दी हों, कुछ एक प्रकार की समान, कुछ दूसरे प्रकार की समान आदि, तो संचयों की कुल संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$(p+1)(q+1)(r+1)\\cdot2^k\\qquad(p,q,r\\ \\text{alike of three kinds},\\ k\\ \\text{different things; empty selection included})$",
+        "$(p+1)(q+1)(r+1)\\cdot2^k\\qquad$ ($p,q,r$: तीन प्रकार की समान वस्तुएँ, $k$ भिन्न वस्तुएँ; रिक्त चयन सहित)"
+       ],
+       [
+        "Ex: one or more balls from 10 white, 9 green and 7 black identical balls: $11\\cdot10\\cdot8-1=879$.",
+        "उदा.: 10 सफेद, 9 हरी व 7 काली एक-सी गेंदों में से एक या अधिक गेंदें: $11\\cdot10\\cdot8-1=879$।"
+       ]
+      ]
+     },
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to subtract 1 from the answer in total-number-of-combinations questions?",
+       "संचयों की कुल संख्या वाले प्रश्नों में उत्तर में से 1 कब घटायें?"
+      ],
+      "a": [
+       [
+        "The product counts the empty selection once; subtract 1 when \"one or more\" (at least one) must be chosen, not when \"none\" is allowed.",
+        "गुणनफल में रिक्त चयन एक बार गिना जाता है; \"एक या अधिक\" (कम से कम एक) चुनना हो तो 1 घटाएँ, \"कोई नहीं\" की अनुमति हो तो न घटाएँ।"
+       ],
+       [
+        "Ex: one or more of 10 questions, each with an alternative (3 choices each: skip, question, alternative): $3^{10}-1$.",
+        "उदा.: 10 प्रश्नों में से एक या अधिक, प्रत्येक का एक विकल्प भी (प्रत्येक के 3 विकल्प: छोड़ें, प्रश्न, विकल्प): $3^{10}-1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Divisors Based Problems",
+    "hi": "भाजकों पर आधारित प्रश्न",
+    "items": [
+     {
+      "id": "51",
+      "o": 51,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of divisors?",
+       "भाजकों की कुल संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$N=p^a q^b r^c\\Rightarrow d(N)=(a+1)(b+1)(c+1)$",
+       [
+        "Ex: $21600=2^5\\,3^3\\,5^2$ has $6\\cdot4\\cdot3=72$ divisors.",
+        "उदा.: $21600=2^5\\,3^3\\,5^2$ के $6\\cdot4\\cdot3=72$ भाजक हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "52",
+      "o": 52,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of odd and even divisors?",
+       "विषम व सम भाजकों की कुल संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "Odd divisors $=(b+1)(c+1)$ (omit the prime 2);\\qquad even divisors $=a(b+1)(c+1)$",
+       [
+        "Ex: $21600$: odd $4\\cdot3=12$, even $5\\cdot4\\cdot3=60$.",
+        "उदा.: $21600$: विषम $4\\cdot3=12$, सम $5\\cdot4\\cdot3=60$।"
+       ]
+      ]
+     },
+     {
+      "id": "53",
+      "o": 53,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by proper divisors?",
+       "उचित भाजक से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Proper divisors are the divisors other than 1 and $N$ itself: $d(N)-2$.",
+        "उचित भाजक वे भाजक हैं जो 1 तथा स्वयं $N$ से भिन्न हों: $d(N)-2$।"
+       ],
+       [
+        "Ex: $21600$ has $72-2=70$ proper divisors.",
+        "उदा.: $21600$ के $72-2=70$ उचित भाजक हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "54",
+      "o": 54,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the total number of divisors divisible by a given number?",
+       "किसी दी गयी संख्या से विभाज्य भाजकों की कुल संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "If the divisor must be a multiple of $M=p^{a'}q^{b'}\\cdots$, take each exponent from its minimum: $(a-a'+1)(b-b'+1)\\cdots$. \"Not divisible by $K$\" $=$ all $-$ divisible by $K$.",
+        "यदि भाजक $M=p^{a'}q^{b'}\\cdots$ का गुणज हो तो प्रत्येक घातांक अपने न्यूनतम मान से लें: $(a-a'+1)(b-b'+1)\\cdots$। \"$K$ से विभाज्य नहीं\" $=$ सभी $-$ $K$ से विभाज्य।"
+       ],
+       [
+        "Ex: $1980=2^2\\,3^2\\,5\\cdot11$: $36$ divisors, of which multiples of 11: $3\\cdot3\\cdot2\\cdot1=18$.",
+        "उदा.: $1980=2^2\\,3^2\\,5\\cdot11$: $36$ भाजक, इनमें 11 के गुणज: $3\\cdot3\\cdot2\\cdot1=18$।"
+       ]
+      ]
+     },
+     {
+      "id": "55",
+      "o": 55,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of all divisors?",
+       "सभी भाजकों का योग कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\sigma(N)=\\dfrac{p^{a+1}-1}{p-1}\\cdot\\dfrac{q^{b+1}-1}{q-1}\\cdot\\dfrac{r^{c+1}-1}{r-1}$",
+       [
+        "Ex: $21600$: $63\\cdot40\\cdot31=78120$.",
+        "उदा.: $21600$: $63\\cdot40\\cdot31=78120$।"
+       ]
+      ]
+     },
+     {
+      "id": "56",
+      "o": 56,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of all odd and even divisors?",
+       "सभी विषम व सम भाजकों का योग कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Odd divisors: drop the factor of the prime 2, $(1+3+\\dots+3^b)(1+5+\\dots+5^c)$. Even divisors: $\\sigma(N)-$ (odd sum).",
+        "विषम भाजक: अभाज्य 2 का गुणक हटायें, $(1+3+\\dots+3^b)(1+5+\\dots+5^c)$। सम भाजक: $\\sigma(N)-$ (विषम योग)।"
+       ],
+       [
+        "Ex: $21600$: odd sum $40\\cdot31=1240$, even sum $78120-1240=76880$.",
+        "उदा.: $21600$: विषम योग $40\\cdot31=1240$, सम योग $78120-1240=76880$।"
+       ]
+      ]
+     },
+     {
+      "id": "57",
+      "o": 57,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the sum of all divisors divisible by a given number?",
+       "किसी दी गयी संख्या से विभाज्य सभी भाजकों का योग कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Divisors that are multiples of $M$ are $M\\times$ (divisors of $N/M$): sum $=M\\,\\sigma(N/M)$.",
+        "$M$ के गुणज भाजक $M\\times(N/M$ के भाजक$)$ होते हैं: योग $=M\\,\\sigma(N/M)$।"
+       ],
+       [
+        "Ex: divisors of $21600$ divisible by 10: $10\\,\\sigma(2160)=10\\cdot7440=74400$.",
+        "उदा.: $21600$ के 10 से विभाज्य भाजक: $10\\,\\sigma(2160)=10\\cdot7440=74400$।"
+       ]
+      ]
+     },
+     {
+      "id": "58",
+      "o": 58,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways in which a given number can be expressed as a product of two divisors?",
+       "किसी दी गयी संख्या को दो भाजकों के गुणनफल के रूप में कितने तरीकों से व्यक्त किया जा सकता है?"
+      ],
+      "a": [
+       [
+        "$\\dfrac{d(N)}2\\ \\ (N\\ \\text{not a perfect square}),\\qquad\\dfrac{d(N)+1}2\\ \\ (N\\ \\text{a perfect square})$",
+        "$\\dfrac{d(N)}2$ ($N$ पूर्ण वर्ग नहीं)$,\\qquad\\dfrac{d(N)+1}2$ ($N$ पूर्ण वर्ग)"
+       ],
+       [
+        "Unordered pairs $N=a\\cdot b$; ordered pairs are $d(N)$. Ex: $7056=2^4\\,3^2\\,7^2$ is a square, $d=45$: $\\dfrac{45+1}{2}=23$.",
+        "अक्रमित युग्म $N=a\\cdot b$; क्रमित युग्म $d(N)$ हैं। उदा.: $7056=2^4\\,3^2\\,7^2$ पूर्ण वर्ग है, $d=45$: $\\dfrac{45+1}{2}=23$।"
+       ]
+      ]
+     },
+     {
+      "id": "59",
+      "o": 59,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways in which a given number can be expressed as a product of two divisors which are relatively prime?",
+       "किसी संख्या को दो ऐसे भाजकों के गुणनफल के रूप में कितने तरीकों से व्यक्त करें जो परस्पर अभाज्य हों?"
+      ],
+      "a": [
+       [
+        "$2^{k-1}\\ \\text{(unordered)},\\qquad 2^{k}\\ \\text{(ordered)},\\qquad k=\\text{number of distinct primes of}\\ N$",
+        "$2^{k-1}$ (अक्रमित)$,\\qquad 2^{k}$ (क्रमित)$,\\qquad k=N$ के भिन्न अभाज्य गुणनखण्डों की संख्या"
+       ],
+       [
+        "Each prime power goes wholly to one of the two factors. Ex: $300300=2^2\\,3\\cdot5^2\\cdot7\\cdot11\\cdot13$, $k=6$: $2^5=32$.",
+        "प्रत्येक अभाज्य घात पूरी की पूरी किसी एक गुणनखण्ड में जाती है। उदा.: $300300=2^2\\,3\\cdot5^2\\cdot7\\cdot11\\cdot13$, $k=6$: $2^5=32$।"
+       ]
+      ]
+     },
+     {
+      "id": "60",
+      "o": 60,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the product of all divisors?",
+       "सभी भाजकों का गुणनफल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$\\prod\\text{divisors}=N^{\\,d(N)/2}$",
+        "भाजकों का गुणनफल $=N^{\\,d(N)/2}$"
+       ],
+       [
+        "Divisors pair up with product $N$. Ex: $N=12$: $1\\cdot2\\cdot3\\cdot4\\cdot6\\cdot12=12^3=1728$.",
+        "भाजक ऐसे युग्मों में आते हैं जिनका गुणनफल $N$ है। उदा.: $N=12$: $1\\cdot2\\cdot3\\cdot4\\cdot6\\cdot12=12^3=1728$।"
+       ]
+      ]
+     },
+     {
+      "id": "N5",
+      "o": null,
+      "tag": "added",
+      "src": "C-I: 9; QB: 185",
+      "q": [
+       "How to count ordered pairs of numbers with a given LCM or GCD?",
+       "दिये गये ल.स. या म.स. वाली संख्याओं के क्रमित युग्म कैसे गिनें?"
+      ],
+      "a": [
+       [
+        "LCM $=p^aq^b\\cdots$: for each prime the larger exponent must be $a$, giving $2a+1$ pairs of exponents, so ordered pairs $=\\prod(2a_i+1)$. GCD $=g$: write $x=ga,\\ y=gb$ with $\\gcd(a,b)=1$ and count coprime pairs in the allowed range.",
+        "ल.स. $=p^aq^b\\cdots$: प्रत्येक अभाज्य का बड़ा घातांक $a$ होना चाहिए, जिससे घातांकों के $2a+1$ युग्म मिलते हैं, अतः क्रमित युग्म $=\\prod(2a_i+1)$। म.स. $=g$: $x=ga,\\ y=gb$ लिखें जहाँ $\\gcd(a,b)=1$, फिर अनुमत परिसर में सहअभाज्य युग्म गिनें।"
+       ],
+       [
+        "Ex: LCM $=r^2t^4s^2$: $5\\cdot9\\cdot5=225$ ordered pairs.",
+        "उदा.: ल.स. $=r^2t^4s^2$: $5\\cdot9\\cdot5=225$ क्रमित युग्म।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Maximum value of ${}^nC_r$",
+    "hi": "${}^nC_r$ का अधिकतम मान",
+    "items": [
+     {
+      "id": "61",
+      "o": 61,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the maximum value of ${}^nC_r$?",
+       "${}^nC_r$ का अधिकतम मान कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "${}^nC_r$ is greatest at $r=\\dfrac n2\\ (n\\ \\text{even});\\qquad r=\\dfrac{n-1}2\\ \\text{or}\\ \\dfrac{n+1}2\\ (n\\ \\text{odd})$",
+        "${}^nC_r$ अधिकतम है $r=\\dfrac n2$ पर ($n$ सम)$;\\qquad r=\\dfrac{n-1}2$ या $\\dfrac{n+1}2$ पर ($n$ विषम)"
+       ],
+       [
+        "Ex: ${}^{40}C_r$ is greatest at $r=20$; ${}^{37}C_r$ at $r=18$ or $19$.",
+        "उदा.: ${}^{40}C_r$ अधिकतम $r=20$ पर; ${}^{37}C_r$ अधिकतम $r=18$ या $19$ पर।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Grid Problem",
+    "hi": "ग्रिड सम्बन्धी प्रश्न",
+    "items": [
+     {
+      "id": "62",
+      "o": 62,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways in a grid structure?",
+       "ग्रिड संरचना में मार्गों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "Shortest path $(0,0)\\to(a,b)$: $\\dfrac{(a+b)!}{a!\\,b!}={}^{a+b}C_a$",
+       [
+        "Arrange $a$ horizontal and $b$ vertical steps. Ex: $(0,0)\\to(9,8)$: ${}^{17}C_9=24310$.",
+        "$a$ क्षैतिज व $b$ ऊर्ध्वाधर कदमों को व्यवस्थित करें। उदा.: $(0,0)\\to(9,8)$: ${}^{17}C_9=24310$।"
+       ]
+      ]
+     },
+     {
+      "id": "63",
+      "o": 63,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways in a grid structure if we have to pass through a given point every time?",
+       "यदि ग्रिड में हर बार किसी दिये गये बिन्दु से गुजरना हो तो मार्गों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Multiply the paths of the two parts. Paths that avoid a point $=$ total $-$ paths through it.",
+        "दोनों भागों के मार्गों को गुणा करें। किसी बिन्दु से न गुजरने वाले मार्ग $=$ कुल $-$ उससे गुजरने वाले।"
+       ],
+       [
+        "Ex: $(0,0)\\to(9,9)$ avoiding $(5,5)$: ${}^{18}C_9-{}^{10}C_5\\,{}^8C_4=48620-17640=30980$.",
+        "उदा.: $(0,0)\\to(9,9)$ बिना $(5,5)$ से गुजरे: ${}^{18}C_9-{}^{10}C_5\\,{}^8C_4=48620-17640=30980$।"
+       ]
+      ]
+     },
+     {
+      "id": "64",
+      "o": 64,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways in a grid structure if exactly $r$ diagonal steps are to be taken?",
+       "यदि ग्रिड में ठीक $r$ विकर्ण कदम लेने हों तो मार्गों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$\\dfrac{(a+b-r)!}{r!\\,(a-r)!\\,(b-r)!}\\qquad(r\\ \\text{diagonal},\\ a-r\\ \\text{horizontal},\\ b-r\\ \\text{vertical steps})$",
+        "$\\dfrac{(a+b-r)!}{r!\\,(a-r)!\\,(b-r)!}\\qquad$ ($r$ विकर्ण, $a-r$ क्षैतिज, $b-r$ ऊर्ध्वाधर कदम)"
+       ],
+       [
+        "Ex: $(2,1)\\to(11,12)$ with exactly one diagonal step: $\\dfrac{19!}{8!\\,10!\\,1!}$.",
+        "उदा.: $(2,1)\\to(11,12)$ ठीक एक विकर्ण कदम के साथ: $\\dfrac{19!}{8!\\,10!\\,1!}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "De-arrangement",
+    "hi": "विचलन (डीरेंजमेंट)",
+    "items": [
+     {
+      "id": "65",
+      "o": 65,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the subjective approach to find $D_n$?",
+       "$D_n$ ज्ञात करने की विषयपरक (सब्जेक्टिव) विधि क्या है?"
+      ],
+      "a": [
+       [
+        "Choose which $r$ objects stay in their own places and derange the other $n-r$: $n!=\\sum_{r=0}^{n}{}^nC_r\\,D_{n-r}$, with $D_0=1,\\ D_1=0$; solve for $D_n$ step by step.",
+        "चुनें कि कौन-सी $r$ वस्तुएँ अपने स्थान पर रहें और शेष $n-r$ का विचलन करें: $n!=\\sum_{r=0}^{n}{}^nC_r\\,D_{n-r}$, जहाँ $D_0=1,\\ D_1=0$; इससे $D_n$ क्रमशः ज्ञात करें।"
+       ],
+       [
+        "Ex: $24=D_4+4D_3+6D_2+4D_1+D_0=D_4+8+6+0+1$, so $D_4=9$.",
+        "उदा.: $24=D_4+4D_3+6D_2+4D_1+D_0=D_4+8+6+0+1$, अतः $D_4=9$।"
+       ]
+      ]
+     },
+     {
+      "id": "66",
+      "o": 66,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the formula for $D_n$?",
+       "$D_n$ का सूत्र क्या है?"
+      ],
+      "a": [
+       "$D_n=n!\\left(1-\\dfrac1{1!}+\\dfrac1{2!}-\\dfrac1{3!}+\\cdots+\\dfrac{(-1)^n}{n!}\\right),\\qquad D_n=(n-1)(D_{n-1}+D_{n-2})$",
+       [
+        "$D_1=0,\\ D_2=1,\\ D_3=2,\\ D_4=9,\\ D_5=44,\\ D_6=265$. Ex: 5 letters, at least 3 wrongly placed: $D_5+{}^5C_1D_4+{}^5C_2D_3=44+45+20=109$.",
+        "$D_1=0,\\ D_2=1,\\ D_3=2,\\ D_4=9,\\ D_5=44,\\ D_6=265$। उदा.: 5 पत्र, कम से कम 3 गलत लिफाफों में: $D_5+{}^5C_1D_4+{}^5C_2D_3=44+45+20=109$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Summation of Numbers",
+    "hi": "संख्याओं का योग",
+    "items": [
+     {
+      "id": "67",
+      "o": 67,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the place value method in finding the sum of numbers formed by given digits?",
+       "दिये गये अंकों से बनी संख्याओं का योग ज्ञात करने में स्थानीय मान विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Sum $=f\\times(\\text{sum of the digits})\\times\\underbrace{11\\cdots1}_{\\text{number of places}}\\qquad(f=\\text{times a digit occupies one place})$",
+        "योग $=f\\times\\Sigma d\\times\\underbrace{11\\cdots1}_{n}\\qquad$ ($\\Sigma d$: अंकों का योग, $n$: स्थानों की संख्या, $f$: एक स्थान पर किसी अंक के आने की संख्या)"
+       ],
+       [
+        "If 0 is among the digits, find the sum with 0 allowed in front and subtract the sum of the numbers that begin with 0. Ex: all 4-digit numbers from $1,3,5,7$: $3!\\cdot16\\cdot1111=106656$.",
+        "यदि अंकों में 0 हो तो आगे 0 की अनुमति मानकर योग निकालें व 0 से प्रारम्भ होने वाली संख्याओं का योग घटाएँ। उदा.: $1,3,5,7$ से बनी सभी 4 अंकों की संख्याएँ: $3!\\cdot16\\cdot1111=106656$।"
+       ]
+      ]
+     },
+     {
+      "id": "68",
+      "o": 68,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the carry method in finding the sum of numbers formed by given digits?",
+       "दिये गये अंकों से बनी संख्याओं का योग ज्ञात करने में कैरी (हासिल) विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Add column by column: column sum $=f\\times$ (sum of digits); write its last digit and carry the rest to the next column.",
+        "स्तम्भ-दर-स्तम्भ जोड़ें: स्तम्भ योग $=f\\times$ (अंकों का योग); उसका अन्तिम अंक लिखें और शेष हासिल अगले स्तम्भ में ले जाएँ।"
+       ],
+       [
+        "Ex: numbers from $1,2,3$ (no repetition): each column sums $2\\cdot6=12$; $12\\cdot111=1332$.",
+        "उदा.: $1,2,3$ से बनी संख्याएँ (बिना पुनरावृत्ति): प्रत्येक स्तम्भ का योग $2\\cdot6=12$; $12\\cdot111=1332$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Distribution of Alike Objects",
+    "hi": "समान वस्तुओं का वितरण",
+    "items": [
+     {
+      "id": "69",
+      "o": 69,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use the beggars' method?",
+       "भिखारी विधि का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When identical things are distributed among distinct persons (boxes, children) and each may get none, one or more.",
+        "जब एक-सी वस्तुएँ भिन्न व्यक्तियों (डिब्बों, बच्चों) में बाँटनी हों और प्रत्येक को कुछ नहीं, एक या अधिक मिल सकें।"
+       ],
+       [
+        "Ex: 30 coins among 5 persons; choosing 6 chocolates from 8 brands.",
+        "उदा.: 30 सिक्के 5 व्यक्तियों में; 8 ब्राण्डों में से 6 चॉकलेट चुनना।"
+       ]
+      ]
+     },
+     {
+      "id": "70",
+      "o": 70,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the beggars' method?",
+       "भिखारी विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       "$n$ alike things among $p$ persons (none allowed): ${}^{\\,n+p-1}C_{p-1}$",
+       [
+        "Ex: 30 coins among 5 persons: ${}^{34}C_4$; 6 chocolates from 8 brands: ${}^{13}C_7={}^{13}C_6$.",
+        "उदा.: 30 सिक्के 5 व्यक्तियों में: ${}^{34}C_4$; 8 ब्राण्डों से 6 चॉकलेट: ${}^{13}C_7={}^{13}C_6$।"
+       ]
+      ]
+     },
+     {
+      "id": "71",
+      "o": 71,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the beggars' method when there is a minimum condition from the beggars' side?",
+       "जब भिखारियों की ओर से न्यूनतम शर्त हो तो भिखारी विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       "Person $i$ gets at least $m_i$: ${}^{\\,n-\\sum m_i+p-1}C_{p-1}$;\\qquad each at least one: ${}^{\\,n-1}C_{p-1}$",
+       [
+        "Give the minimum first, then distribute the rest freely. Ex: 20 oranges among 3 children, each at least one: ${}^{19}C_2=171$; 30 coins, $A\\ge3,B\\ge2,C\\ge3$ among 5: ${}^{26}C_4$.",
+        "पहले न्यूनतम दे दें, फिर शेष को स्वतन्त्र बाँटें। उदा.: 20 सन्तरे 3 बच्चों में, प्रत्येक को कम से कम एक: ${}^{19}C_2=171$; 30 सिक्के, $A\\ge3,B\\ge2,C\\ge3$, 5 व्यक्तियों में: ${}^{26}C_4$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Algebra based problems in distribution of alike objects",
+    "hi": "समान वस्तुओं के वितरण में बीजगणित आधारित प्रश्न",
+    "items": [
+     {
+      "id": "72",
+      "o": 72,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of an equation of type $x+y+z=100$?",
+       "$x+y+z=100$ प्रकार के समीकरण के अऋणात्मक पूर्णांक हलों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$x_1+x_2+\\cdots+x_k=n$ has ${}^{\\,n+k-1}C_{k-1}$ non-negative and ${}^{\\,n-1}C_{k-1}$ positive (natural) solutions",
+       [
+        "Ex: $x+y+z=100$: ${}^{102}C_2$ non-negative, ${}^{99}C_2$ natural.",
+        "उदा.: $x+y+z=100$: ${}^{102}C_2$ अऋणात्मक, ${}^{99}C_2$ प्राकृत।"
+       ]
+      ]
+     },
+     {
+      "id": "73",
+      "o": 73,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of an equation of type $x+y+z=100$ when conditions on $x,y,z$ are given?",
+       "$x+y+z=100$ प्रकार के समीकरण के अऋणात्मक पूर्णांक हल कैसे ज्ञात करें जब $x,y,z$ पर शर्तें दी हों?"
+      ],
+      "a": [
+       [
+        "Lower bounds: put $x=a+x'$ and so on (a negative lower bound works the same way). Upper bounds: subtract the solutions that break the bound, or use the coefficient method.",
+        "निम्न सीमा: $x=a+x'$ आदि रखें (ऋणात्मक निम्न सीमा पर भी यही विधि)। उच्च सीमा: सीमा तोड़ने वाले हल घटाएँ, या गुणांक विधि प्रयोग करें।"
+       ],
+       [
+        "Ex: $x\\ge3,\\ y\\ge2,\\ z\\ge1$ with $x+y+z=100$: ${}^{96}C_2$.",
+        "उदा.: $x\\ge3,\\ y\\ge2,\\ z\\ge1$ के साथ $x+y+z=100$: ${}^{96}C_2$।"
+       ]
+      ]
+     },
+     {
+      "id": "74",
+      "o": 74,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of an inequality such as $x+y+z+w\\le30$?",
+       "$x+y+z+w\\le30$ जैसी असमिका के अऋणात्मक पूर्णांक हल कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$x_1+\\cdots+x_k\\le n\\ \\Leftrightarrow\\ x_1+\\cdots+x_k+p=n,\\ p\\ge0\\ (\\text{dummy variable}):\\ {}^{\\,n+k}C_k$",
+        "$x_1+\\cdots+x_k\\le n\\ \\Leftrightarrow\\ x_1+\\cdots+x_k+p=n,\\ p\\ge0$ (डमी चर)$:\\ {}^{\\,n+k}C_k$"
+       ],
+       [
+        "Strict inequality $<n$ means $\\le n-1$. Ex: $x+y+z+w\\le30$: ${}^{34}C_4$; $x+y+z+w<30$: ${}^{33}C_4$.",
+        "कठोर असमिका $<n$ का अर्थ $\\le n-1$। उदा.: $x+y+z+w\\le30$: ${}^{34}C_4$; $x+y+z+w<30$: ${}^{33}C_4$।"
+       ]
+      ]
+     },
+     {
+      "id": "75",
+      "o": 75,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of an inequality when conditions on $x,y,z$ are given?",
+       "शर्तों वाली असमिका के अऋणात्मक पूर्णांक हल कैसे ज्ञात करें जब $x,y,z$ पर शर्तें दी हों?"
+      ],
+      "a": [
+       [
+        "First shift every variable by its minimum (reducing $n$), then add the dummy variable.",
+        "पहले प्रत्येक चर को उसके न्यूनतम मान से खिसकाएँ ($n$ घट जायेगा), फिर डमी चर जोड़ें।"
+       ],
+       [
+        "Ex: natural solutions of $x+y+z+w\\le30$: put $x=1+x'$ etc. to get $x'+y'+z'+w'\\le26$: ${}^{30}C_4$.",
+        "उदा.: $x+y+z+w\\le30$ के प्राकृत हल: $x=1+x'$ आदि रखने पर $x'+y'+z'+w'\\le26$: ${}^{30}C_4$।"
+       ]
+      ]
+     },
+     {
+      "id": "76",
+      "o": 76,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of positive integral solutions of equations of type $xyz=30$?",
+       "$xyz=30$ प्रकार के समीकरणों के धनात्मक पूर्णांक हलों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$N=p^aq^br\\Rightarrow$ ordered solutions of $x_1x_2\\cdots x_k=N$: ${}^{\\,a+k-1}C_{k-1}\\cdot{}^{\\,b+k-1}C_{k-1}\\cdots$",
+       [
+        "Distribute the exponent of each prime among the $k$ variables. Ex: $xyz=30$: $3\\cdot3\\cdot3=27$; $xyz=21600$: ${}^7C_2\\cdot{}^5C_2\\cdot{}^4C_2=1260$.",
+        "प्रत्येक अभाज्य का घातांक $k$ चरों में बाँटें। उदा.: $xyz=30$: $3\\cdot3\\cdot3=27$; $xyz=21600$: ${}^7C_2\\cdot{}^5C_2\\cdot{}^4C_2=1260$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Coefficient Method",
+    "hi": "गुणांक विधि",
+    "items": [
+     {
+      "id": "77",
+      "o": 77,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use the coefficient method?",
+       "गुणांक विधि का प्रयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When each variable or kind of object is bounded above (dice totals, digit sums, selections from alike objects, equal sharing): the count is a coefficient in a product of polynomials.",
+        "जब प्रत्येक चर या प्रकार की वस्तु ऊपर से सीमित हो (पासों के योग, अंकों के योग, समान वस्तुओं से चयन, बराबर बँटवारा): गणना बहुपदों के गुणनफल में एक गुणांक होती है।"
+       ],
+       [
+        "Ex: dividing 6 identical green, 6 blue and 6 red things equally between two persons is the coefficient of $x^9$ in $(1+x+\\dots+x^6)^3$, which is $37$.",
+        "उदा.: 6 एक-से हरे, 6 नीले व 6 लाल पदार्थों को दो व्यक्तियों में बराबर बाँटना $(1+x+\\dots+x^6)^3$ में $x^9$ का गुणांक है, जो $37$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "78",
+      "o": 78,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write the factors in the coefficient method and which power of $x$ is to be computed?",
+       "गुणांक विधि में गुणनखण्ड कैसे लिखें और $x$ की कौन-सी घात निकालनी है?"
+      ],
+      "a": [
+       "A variable with values $a$ to $b$ gives the factor $x^a+x^{a+1}+\\cdots+x^b$; answer $=$ coefficient of $x^{n}$ ($n=$ the total) in the product",
+       [
+        "Take out $x^a$ and use $\\dfrac{1-x^{m+1}}{1-x}$ with the series of $(1-x)^{-k}$. Ex: three dice with total 11: coefficient of $x^8$ in $(1+x+\\dots+x^5)^3$ $={}^{10}C_2-3\\cdot{}^4C_2=27$.",
+        "$x^a$ बाहर निकालें और $\\dfrac{1-x^{m+1}}{1-x}$ को $(1-x)^{-k}$ की श्रेणी के साथ प्रयोग करें। उदा.: तीन पासे, योग 11: $(1+x+\\dots+x^5)^3$ में $x^8$ का गुणांक $={}^{10}C_2-3\\cdot{}^4C_2=27$।"
+       ]
+      ]
+     },
+     {
+      "id": "79",
+      "o": 79,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use the coefficient method in finding the number of selections in permutation of alike objects taken some at a time?",
+       "समान वस्तुओं के क्रमचय (कुछ एक साथ) में चयनों की संख्या ज्ञात करने के लिए गुणांक विधि का प्रयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "A kind with $p$ alike objects gives $(1+x+\\dots+x^p)$, each different object gives $(1+x)$; the number of selections of $r$ objects is the coefficient of $x^r$.",
+        "$p$ समान वस्तुओं वाला प्रकार $(1+x+\\dots+x^p)$ देता है, प्रत्येक भिन्न वस्तु $(1+x)$ देती है; $r$ वस्तुओं के चयनों की संख्या $x^r$ का गुणांक है।"
+       ],
+       [
+        "Ex: 5 letters from MISSISSIPPI: coefficient of $x^5$ in $(1+x)(1+x+\\dots+x^4)^2(1+x+x^2)$ is $25$.",
+        "उदा.: MISSISSIPPI से 5 अक्षर: $(1+x)(1+x+\\dots+x^4)^2(1+x+x^2)$ में $x^5$ का गुणांक $25$ है।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "80",
+      "o": 80,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to express the general term of a series involving factorial as a difference of two terms?",
+       "फैक्टोरियल वाली श्रेणी के व्यापक पद को दो पदों के अन्तर के रूप में कैसे लिखें?"
+      ],
+      "a": [
+       "$r\\cdot r!=(r+1)!-r!,\\qquad\\dfrac{r}{(r+1)!}=\\dfrac1{r!}-\\dfrac1{(r+1)!}$",
+       [
+        "Write $T_r$ as $f(r+1)-f(r)$ so that the sum telescopes. Ex: $\\sum_{r=1}^{n}r\\cdot r!=(n+1)!-1$.",
+        "$T_r$ को $f(r+1)-f(r)$ के रूप में लिखें ताकि योग टेलिस्कोपिक हो जाये। उदा.: $\\sum_{r=1}^{n}r\\cdot r!=(n+1)!-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "N6",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII): 12; J-M(XIII): 7; QB: 184",
+      "q": [
+       "How to count by remainder classes (parity or residues mod $m$) when a sum must be divisible by $m$?",
+       "जब कोई योग $m$ से विभाज्य हो तो शेषफल-वर्गों (समता या mod $m$ शेष) से गणना कैसे करें?"
+      ],
+      "a": [
+       [
+        "Sort the elements by remainder mod $m$; list the combinations of remainders whose sum is $\\equiv0$; multiply the class sizes. For parity the last choice is made by the class that fixes the parity (half of all).",
+        "अवयवों को mod $m$ शेषफल से वर्गीकृत करें; उन शेषफल-संयोजनों की सूची बनाएँ जिनका योग $\\equiv0$ हो; वर्गों के आकार गुणा करें। समता के लिए अन्तिम चयन उस वर्ग से होता है जो समता निश्चित करे (कुल का आधा)।"
+       ],
+       [
+        "Ex: ordered pairs of distinct $x,y\\in\\{1,\\dots,25\\}$ with $x+y$ divisible by 5 (5 numbers in each class): $2\\,(\\,{}^5C_2+5\\cdot5+5\\cdot5)=120$.",
+        "उदा.: $\\{1,\\dots,25\\}$ के भिन्न $x,y$ के क्रमित युग्म जिनमें $x+y$, 5 से विभाज्य हो (प्रत्येक वर्ग में 5 संख्याएँ): $2\\,(\\,{}^5C_2+5\\cdot5+5\\cdot5)=120$।"
+       ]
+      ]
+     },
+     {
+      "id": "N10",
+      "o": null,
+      "tag": "added",
+      "src": "J-A: 13; DPP-2: 3,11,15",
+      "q": [
+       "How to count arrangements in which adjacent objects must differ (colouring a line or a circle)?",
+       "ऐसी व्यवस्थाएँ कैसे गिनें जिनमें आसन्न वस्तुएँ भिन्न होनी चाहिए (रेखा या वृत्त का रंगना)?"
+      ],
+      "a": [
+       "$n$ places in a line, $k$ colours, neighbours different: $k(k-1)^{n-1}$;\\qquad in a circle: $(k-1)^n+(-1)^n(k-1)$",
+       [
+        "The first place has $k$ choices and each next place $k-1$ (a circle needs the closing condition). Ex: flag of 6 strips in 4 colours: $4\\cdot3^5=972$; 5 persons in a circle, 3 hat colours: $2^5-2=30$.",
+        "पहले स्थान के $k$ विकल्प तथा प्रत्येक अगले के $k-1$ (वृत्त में अन्तिम शर्त भी लगती है)। उदा.: 4 रंगों की 6 पट्टियों वाला झण्डा: $4\\cdot3^5=972$; वृत्त में 5 व्यक्ति, 3 टोपी-रंग: $2^5-2=30$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Extra Reading Material",
+    "hi": "अतिरिक्त अध्ययन सामग्री",
+    "items": [
+     {
+      "id": "81",
+      "o": 81,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write down the formula for the distribution of $n$ distinct objects among $k$ persons if each person receives at least one object.",
+       "$n$ भिन्न वस्तुओं को $k$ व्यक्तियों में इस प्रकार बाँटने का सूत्र लिखिए कि प्रत्येक को कम से कम एक वस्तु मिले।"
+      ],
+      "a": [
+       "$\\displaystyle\\sum_{r=0}^{k-1}(-1)^r\\,{}^kC_r\\,(k-r)^n\\;=\\;k^n-{}^kC_1(k-1)^n+{}^kC_2(k-2)^n-\\cdots$",
+       [
+        "Ex: $n=5,\\ k=3$: $243-3\\cdot32+3\\cdot1=150$.",
+        "उदा.: $n=5,\\ k=3$: $243-3\\cdot32+3\\cdot1=150$।"
+       ]
+      ]
+     },
+     {
+      "id": "82",
+      "o": 82,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write down the recurrence relation of the Fibonacci sequence and write down the Fibonacci sequence also.",
+       "फिबोनाची अनुक्रम का पुनरावृत्ति सम्बन्ध लिखिए तथा फिबोनाची अनुक्रम भी लिखिए।"
+      ],
+      "a": [
+       "$F_n=F_{n-1}+F_{n-2},\\quad F_1=F_2=1:\\quad 1,1,2,3,5,8,13,21,34,\\dots$",
+       [
+        "Counting sequences with no two consecutive 0's (strings of $0,1$) obey it. Ex: 3-digit strings with no two consecutive 0's: $5=F_5$.",
+        "जिन अनुक्रमों में कोई दो क्रमागत 0 न हों (0, 1 की स्ट्रिंग) वे इसका पालन करते हैं। उदा.: 3 अंकों की स्ट्रिंग जिनमें दो क्रमागत 0 न हों: $5=F_5$।"
+       ]
+      ]
+     },
+     {
+      "id": "83",
+      "o": 83,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does a partition of a natural number mean?",
+       "प्राकृत संख्या के विभाजन (पार्टीशन) का क्या अर्थ है?"
+      ],
+      "a": [
+       [
+        "A partition of $n$ is a way of writing $n$ as a sum of positive integers, the order of the parts being ignored; $p(n)$ denotes their number.",
+        "$n$ का विभाजन $n$ को धनात्मक पूर्णांकों के योग के रूप में लिखना है, जिसमें भागों का क्रम नहीं गिना जाता; इनकी संख्या $p(n)$ से दर्शायी जाती है।"
+       ],
+       [
+        "Ex: $p(4)=5$: $4,\\ 3+1,\\ 2+2,\\ 2+1+1,\\ 1+1+1+1$; $p(8)=22$.",
+        "उदा.: $p(4)=5$: $4,\\ 3+1,\\ 2+2,\\ 2+1+1,\\ 1+1+1+1$; $p(8)=22$।"
+       ]
+      ]
+     },
+     {
+      "id": "84",
+      "o": 84,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write the recurrence relation of $P(n)$ and how to find $P(n)$ with its help?",
+       "$P(n)$ का पुनरावृत्ति सम्बन्ध कैसे लिखें और उससे $P(n)$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$p(n)=p(n-1)+p(n-2)-p(n-5)-p(n-7)+p(n-12)+p(n-15)-\\cdots,\\qquad p(0)=1,\\ p(\\text{negative})=0$",
+        "$p(n)=p(n-1)+p(n-2)-p(n-5)-p(n-7)+p(n-12)+p(n-15)-\\cdots,\\qquad p(0)=1,$ ऋणात्मक के लिए $p=0$"
+       ],
+       [
+        "The subtracted numbers $1,2,5,7,12,15,\\dots$ are the generalised pentagonal numbers $\\frac{k(3k\\mp1)}2$ (signs $+,+,-,-,+,+,\\dots$). Ex: $p(8)=p(7)+p(6)-p(3)-p(1)=15+11-3-1=22$.",
+        "घटाई जाने वाली संख्याएँ $1,2,5,7,12,15,\\dots$ सामान्यीकृत पंचभुजी संख्याएँ $\\frac{k(3k\\mp1)}2$ हैं (चिह्न $+,+,-,-,+,+,\\dots$)। उदा.: $p(8)=p(7)+p(6)-p(3)-p(1)=15+11-3-1=22$।"
+       ]
+      ]
+     },
+     {
+      "id": "85",
+      "o": 85,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does the partition of a natural number into at most $k$ parts, i.e. $P(n,k)$, mean?",
+       "प्राकृत संख्या का अधिकतम $k$ भागों में विभाजन, अर्थात् $P(n,k)$, का क्या अर्थ है?"
+      ],
+      "a": [
+       [
+        "$P(n,k)=$ number of partitions of $n$ into at most $k$ parts $=P(n,k-1)+P(n-k,k)$",
+        "$P(n,k)=$ $n$ के अधिकतम $k$ भागों में विभाजनों की संख्या $=P(n,k-1)+P(n-k,k)$"
+       ],
+       [
+        "Either at most $k-1$ parts, or exactly $k$ parts (subtract 1 from every part). Ex: $P(8,3)=10$, $P(8,4)=15$.",
+        "या तो अधिकतम $k-1$ भाग, या ठीक $k$ भाग (प्रत्येक भाग में से 1 घटाएँ)। उदा.: $P(8,3)=10$, $P(8,4)=15$।"
+       ]
+      ]
+     },
+     {
+      "id": "86",
+      "o": 86,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find $P(n,1)$, $P(n,2)$ and $P(n,3)$?",
+       "$P(n,1)$, $P(n,2)$ तथा $P(n,3)$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$P(n,1)=1,\\qquad P(n,2)=\\left\\lfloor\\dfrac n2\\right\\rfloor+1,\\qquad P(n,3)=\\text{nearest integer to}\\ \\dfrac{(n+3)^2}{12}$",
+        "$P(n,1)=1,\\qquad P(n,2)=\\left\\lfloor\\dfrac n2\\right\\rfloor+1,\\qquad P(n,3)=\\dfrac{(n+3)^2}{12}$ का निकटतम पूर्णांक"
+       ],
+       [
+        "Ex: $P(8,2)=5$, $P(8,3)=\\dfrac{121}{12}\\approx10$.",
+        "उदा.: $P(8,2)=5$, $P(8,3)=\\dfrac{121}{12}\\approx10$।"
+       ]
+      ]
+     },
+     {
+      "id": "87",
+      "o": 87,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find $P(n,k)$ if $k>3$?",
+       "यदि $k>3$ हो तो $P(n,k)$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Use $P(n,k)=P(n,k-1)+P(n-k,k)$ and build the table from the small cases (or list the partitions). Strictly increasing $n_1<\\dots<n_k$ with sum $S$: put $n_i=m_i+i-1$ to get a partition of $S-\\frac{k(k-1)}2$ into at most $k$ parts with $m_i\\ge1$.",
+        "$P(n,k)=P(n,k-1)+P(n-k,k)$ प्रयोग करें और छोटे प्रकरणों से सारणी बनाएँ (या विभाजन सूचीबद्ध करें)। सख्ती से बढ़ते $n_1<\\dots<n_k$ जिनका योग $S$ हो: $n_i=m_i+i-1$ रखने पर $S-\\frac{k(k-1)}2$ का अधिकतम $k$ भागों में विभाजन मिलता है जहाँ $m_i\\ge1$।"
+       ],
+       [
+        "Ex: $P(10,4)=23$; $n_1<\\dots<n_5$ positive with sum 20: partitions of $10$ into exactly 5 parts $=p(5)=7$.",
+        "उदा.: $P(10,4)=23$; धनात्मक $n_1<\\dots<n_5$ जिनका योग 20: 10 के ठीक 5 भागों में विभाजन $=p(5)=7$।"
+       ]
+      ]
+     },
+     {
+      "id": "88",
+      "o": 88,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does Euler's totient function represent and how to find it?",
+       "यूलर का टोशेण्ट फलन क्या दर्शाता है और इसे कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "$\\varphi(N)=N\\left(1-\\dfrac1p\\right)\\left(1-\\dfrac1q\\right)\\cdots,\\qquad\\text{sum of integers}\\le N\\ \\text{coprime to}\\ N=\\dfrac{N\\varphi(N)}2$",
+        "$\\varphi(N)=N\\left(1-\\dfrac1p\\right)\\left(1-\\dfrac1q\\right)\\cdots,\\qquad N$ तक के $N$ से सहअभाज्य पूर्णांकों का योग $=\\dfrac{N\\varphi(N)}2$"
+       ],
+       [
+        "$\\varphi(N)$ counts the integers from 1 to $N$ coprime to $N$ (for $N>1$ they pair up as $x$ and $N-x$). Ex: $\\varphi(12)=4$ (1, 5, 7, 11), sum $=24$.",
+        "$\\varphi(N)$ वह संख्या है जो 1 से $N$ तक के उन पूर्णांकों की गिनती देती है जो $N$ से सहअभाज्य हैं ($N>1$ के लिए वे $x$ व $N-x$ के युग्मों में आते हैं)। उदा.: $\\varphi(12)=4$ (1, 5, 7, 11), योग $=24$।"
+       ]
+      ]
+     },
+     {
+      "id": "89",
+      "o": 89,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does the Bell number $B_n$ represent?",
+       "बेल संख्या $B_n$ क्या दर्शाती है?"
+      ],
+      "a": [
+       "$B_n=$ number of ways to partition a set of $n$ distinct objects into non-empty unlabelled subsets",
+       [
+        "$B_0=B_1=1,\\ B_2=2,\\ B_3=5,\\ B_4=15,\\ B_5=52,\\ B_6=203$.",
+        "$B_0=B_1=1,\\ B_2=2,\\ B_3=5,\\ B_4=15,\\ B_5=52,\\ B_6=203$।"
+       ]
+      ]
+     },
+     {
+      "id": "90",
+      "o": 90,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find $B_n$ with the help of the triangle scheme?",
+       "त्रिभुज योजना की सहायता से $B_n$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Bell triangle: start with 1; each row begins with the last entry of the previous row; every next entry $=$ (entry to its left) $+$ (entry above that one). $B_n$ is the first entry of row $n$ (row 0 is $1$).",
+        "बेल त्रिभुज: 1 से प्रारम्भ करें; प्रत्येक पंक्ति पिछली पंक्ति की अन्तिम प्रविष्टि से प्रारम्भ होती है; आगे की प्रत्येक प्रविष्टि $=$ (उसके बायें की प्रविष्टि) $+$ (उस प्रविष्टि के ऊपर वाली)। $B_n$ पंक्ति $n$ की पहली प्रविष्टि है (पंक्ति 0 में $1$)।"
+       ],
+       "$1;\\ 1,2;\\ 2,3,5;\\ 5,7,10,15;\\ 15,20,27,37,52;\\ \\dots\\Rightarrow B_n=1,1,2,5,15,52,\\dots$"
+      ]
+     },
+     {
+      "id": "91",
+      "o": 91,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does the Stirling subset number $S(n,k)$ represent and how to find it?",
+       "स्टर्लिंग उपसमुच्चय संख्या $S(n,k)$ क्या दर्शाती है और इसे कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$S(n,k)=$ ways to split $n$ distinct objects into $k$ non-empty unlabelled groups;\\quad $S(n,k)=k\\,S(n-1,k)+S(n-1,k-1)$",
+       [
+        "$S(n,1)=S(n,n)=1,\\ S(n,2)=2^{n-1}-1,\\ S(n,k)=\\dfrac{1}{k!}\\sum_r(-1)^r{}^kC_r(k-r)^n$. Ex: $S(5,2)=15,\\ S(5,3)=25$.",
+        "$S(n,1)=S(n,n)=1,\\ S(n,2)=2^{n-1}-1,\\ S(n,k)=\\dfrac{1}{k!}\\sum_r(-1)^r{}^kC_r(k-r)^n$। उदा.: $S(5,2)=15,\\ S(5,3)=25$।"
+       ]
+      ]
+     },
+     {
+      "id": "92",
+      "o": 92,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the relation between $B_n$ and $S(n,k)$?",
+       "$B_n$ तथा $S(n,k)$ में क्या सम्बन्ध है?"
+      ],
+      "a": [
+       "$B_n=\\sum_{k=1}^{n}S(n,k)$",
+       [
+        "Ex: $B_4=S(4,1)+S(4,2)+S(4,3)+S(4,4)=1+7+6+1=15$.",
+        "उदा.: $B_4=S(4,1)+S(4,2)+S(4,3)+S(4,4)=1+7+6+1=15$।"
+       ]
+      ]
+     },
+     {
+      "id": "93",
+      "o": 93,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways to distribute $n$ distinct or alike objects into $k$ distinct or alike boxes?",
+       "$n$ भिन्न या समान वस्तुओं को $k$ भिन्न या समान डिब्बों में बाँटने के तरीकों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "distinct $\\to$ distinct: $k^n$;\\quad alike $\\to$ distinct: ${}^{\\,n+k-1}C_{k-1}$;\\quad distinct $\\to$ alike: $\\sum_{j\\le k}S(n,j)$;\\quad alike $\\to$ alike: $P(n,k)$",
+       [
+        "Boxes may stay empty. Ex: 8 alike books in 4 alike shelves: $P(8,4)=15$; 5 different employees in 4 alike offices: $1+15+25+10=51$.",
+        "डिब्बे रिक्त रह सकते हैं। उदा.: 8 एक-सी पुस्तकें 4 एक-सी अलमारियों में: $P(8,4)=15$; 5 भिन्न कर्मचारी 4 एक-से कार्यालयों में: $1+15+25+10=51$।"
+       ]
+      ]
+     },
+     {
+      "id": "94",
+      "o": 94,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of ways to distribute $n$ distinct or alike objects into $k$ distinct or alike boxes if each box receives at least one object?",
+       "$n$ भिन्न या समान वस्तुओं को $k$ भिन्न या समान डिब्बों में इस प्रकार बाँटने के तरीके कैसे ज्ञात करें कि प्रत्येक डिब्बे में कम से कम एक वस्तु हो?"
+      ],
+      "a": [
+       "distinct $\\to$ distinct: $k!\\,S(n,k)$;\\quad alike $\\to$ distinct: ${}^{\\,n-1}C_{k-1}$;\\quad distinct $\\to$ alike: $S(n,k)$;\\quad alike $\\to$ alike: $P(n-k,k)$",
+       [
+        "Ex: 8 alike things in 3 alike boxes, none empty: $P(5,3)=5$; 5 different things in 3 alike boxes, none empty: $S(5,3)=25$.",
+        "उदा.: 8 समान वस्तुएँ 3 एक-से डिब्बों में, कोई रिक्त नहीं: $P(5,3)=5$; 5 भिन्न वस्तुएँ 3 एक-से डिब्बों में, कोई रिक्त नहीं: $S(5,3)=25$।"
+       ]
+      ]
+     },
+     {
+      "id": "95",
+      "o": 95,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of the equation $x_1+x_2+\\cdots+x_k=n$?",
+       "समीकरण $x_1+x_2+\\cdots+x_k=n$ के अऋणात्मक पूर्णांक हलों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "${}^{\\,n+k-1}C_{k-1}$ ordered solutions; with the order $0\\le x_1\\le x_2\\le\\cdots\\le x_k$ the count is the number of partitions of $n$ into at most $k$ parts, $P(n,k)$",
+       [
+        "Ex: $x_1+x_2+x_3=8$: ${}^{10}C_2=45$ ordered, $P(8,3)=10$ with $x_1\\le x_2\\le x_3$.",
+        "उदा.: $x_1+x_2+x_3=8$: ${}^{10}C_2=45$ क्रमित, $x_1\\le x_2\\le x_3$ के साथ $P(8,3)=10$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Ordered and weighted solutions $\\left(0<x_1\\le x_2\\le\\cdots\\le x_k\\right)$",
+    "hi": "क्रमबद्ध तथा भारित हल $\\left(0<x_1\\le x_2\\le\\cdots\\le x_k\\right)$",
+    "items": [
+     {
+      "id": "96",
+      "o": 96,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the number of non-negative integral solutions of the equation $x_1+2x_2+3x_3+\\cdots+kx_k=n$?",
+       "समीकरण $x_1+2x_2+3x_3+\\cdots+kx_k=n$ के अऋणात्मक पूर्णांक हलों की संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "Number of solutions $=$ number of partitions of $n$ into parts of size at most $k$ $=P(n,k)$",
+       [
+        "Here $x_i$ is the number of parts equal to $i$. Ex: $x+2y+3z=42$: $P(42,3)=\\dfrac{45^2}{12}\\approx169$ solutions.",
+        "यहाँ $x_i$, $i$ के बराबर भागों की संख्या है। उदा.: $x+2y+3z=42$: $P(42,3)=\\dfrac{45^2}{12}\\approx169$ हल।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Key points and Steps, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, मुख्य बिन्दुओं व चरणों को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Counting principles",
+    "hi": "1. गणना के सिद्धान्त",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$m\\times n\\ (\\text{and}),\\quad m+n\\ (\\text{or})$",
+        "$m\\times n$ (और)$,\\quad m+n$ (या)"
+       ],
+       [
+        "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+        "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$"
+       ],
+       [
+        "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+        "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Steps one after another multiply; alternatives add.",
+        "क्रमिक चरण गुणा होते हैं; विकल्प जोड़े जाते हैं।"
+       ],
+       [
+        "\"At least\", \"not\", \"neither\": total $-$ complement.",
+        "\"कम से कम\", \"नहीं\", \"न ही\": कुल $-$ पूरक।"
+       ],
+       [
+        "At least $r$: add cases $r,r+1,\\dots$; at most $r$: add cases $0,\\dots,r$.",
+        "कम से कम $r$: प्रकरण $r,r+1,\\dots$ जोड़ें; अधिकतम $r$: प्रकरण $0,\\dots,r$ जोड़ें।"
+       ],
+       [
+        "Several conditions at once: inclusion-exclusion (Venn).",
+        "एक साथ कई शर्तें: समावेशन-अपवर्जन (वेन)।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Formation of numbers",
+    "hi": "2. संख्याओं की रचना",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$n\\text{-digit numbers: } 9\\cdot10^{n-1}\\ (\\text{repetition}),\\ \\ 9\\cdot9\\cdot8\\cdots\\ (\\text{no repetition})$",
+        "$n$ अंकों की संख्याएँ: $9\\cdot10^{n-1}$ (पुनरावृत्ति सहित)$,\\ \\ 9\\cdot9\\cdot8\\cdots$ (पुनरावृत्ति रहित)"
+       ],
+       [
+        "$\\text{increasing digits: }{}^9C_n,\\qquad\\text{decreasing digits: }{}^{10}C_n$",
+        "बढ़ते अंक: ${}^9C_n,\\qquad$ घटते अंक: ${}^{10}C_n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Divisible by 2: last digit even; 5: last digit 0 or 5; 3 and 9: digit sum; 4: last two digits; 8: last three digits; 25: last two digits $00,25,50,75$.",
+        "2: अन्तिम अंक सम; 5: अन्तिम अंक 0 या 5; 3 व 9: अंक-योग; 4: अन्तिम दो अंक; 8: अन्तिम तीन अंक; 25: अन्तिम दो अंक $00,25,50,75$।"
+       ],
+       [
+        "11: (odd-place sum $-$ even-place sum) divisible by 11; 6: both 2 and 3.",
+        "11: (विषम स्थान योग $-$ सम स्थान योग) 11 से विभाज्य; 6: 2 तथा 3 दोनों से।"
+       ],
+       [
+        "Palindrome: only the first half (with the middle) is free.",
+        "पैलिन्ड्रोम: केवल पहला आधा भाग (मध्य सहित) स्वतन्त्र।"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Decide: repetition allowed or not.",
+        "निर्णय लें: पुनरावृत्ति सम्भव है या नहीं।"
+       ],
+       [
+        "Fix the restricted place (last digit, first digit $\\ne0$) first.",
+        "प्रतिबन्धित स्थान (अन्तिम अंक, पहला अंक $\\ne0$) पहले निश्चित करें।"
+       ],
+       [
+        "Fill the remaining places; add the cases.",
+        "शेष स्थान भरें; प्रकरण जोड़ें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. $m^n$, rank of a word",
+    "hi": "3. $m^n$, शब्द की कोटि",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{objects}\\to\\text{places: (places)}^{\\text{(objects)}}$",
+        "वस्तुएँ $\\to$ स्थान: $N^{k}$ (स्थान $N$, वस्तुएँ $k$)"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write the letters alphabetically.",
+        "अक्षरों को वर्णानुक्रम में लिखें।"
+       ],
+       [
+        "For each letter of the word from the left: (smaller unused letters) $\\times$ (places left)!",
+        "शब्द के प्रत्येक अक्षर के लिए बायें से: (छोटे अप्रयुक्त अक्षर) $\\times$ (शेष स्थान)!"
+       ],
+       [
+        "Add everything and add 1 for the rank.",
+        "सब जोड़ें और कोटि के लिए 1 जोड़ें।"
+       ],
+       [
+        "Word at a position: divide (position $-1$) by factorials in turn.",
+        "दी गयी स्थिति का शब्द: (स्थिति $-1$) को क्रमशः फैक्टोरियल से भाग दें।"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Alike letters: divide each block by the factorials of the alike letters left.",
+        "समान अक्षर: प्रत्येक खण्ड को शेष समान अक्षरों के फैक्टोरियल से भाग दें।"
+       ],
+       [
+        "The question \"who has a choice\" decides $m^n$ or $n^m$.",
+        "\"विकल्प किसके पास है\" से तय होता है कि $m^n$ या $n^m$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Factorial and ${}^nC_r$",
+    "hi": "4. फैक्टोरियल तथा ${}^nC_r$",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$0!=1,\\ 1!=1,\\ 2!=2,\\ 3!=6,\\ 4!=24,\\ 5!=120,\\ 6!=720,\\ 7!=5040$",
+        "$0!=1,\\ 1!=1,\\ 2!=2,\\ 3!=6,\\ 4!=24,\\ 5!=120,\\ 6!=720,\\ 7!=5040$"
+       ],
+       [
+        "$E_p(n!)=\\left\\lfloor\\dfrac np\\right\\rfloor+\\left\\lfloor\\dfrac n{p^2}\\right\\rfloor+\\cdots,\\quad\\text{zeroes}=E_5(n!)$",
+        "$E_p(n!)=\\left\\lfloor\\dfrac np\\right\\rfloor+\\left\\lfloor\\dfrac n{p^2}\\right\\rfloor+\\cdots,\\quad$ शून्य $=E_5(n!)$"
+       ],
+       [
+        "${}^nC_r=\\dfrac{n!}{r!(n-r)!},\\ {}^nP_r={}^nC_r\\,r!,\\ {}^nC_r={}^nC_{n-r}$",
+        "${}^nC_r=\\dfrac{n!}{r!(n-r)!},\\ {}^nP_r={}^nC_r\\,r!,\\ {}^nC_r={}^nC_{n-r}$"
+       ],
+       [
+        "${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r,\\ {}^nC_r=\\dfrac nr{}^{n-1}C_{r-1}$",
+        "${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r,\\ {}^nC_r=\\dfrac nr{}^{n-1}C_{r-1}$"
+       ],
+       [
+        "${}^nC_x={}^nC_y\\Rightarrow x=y\\ \\text{or}\\ x+y=n$",
+        "${}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Power of a composite number: minimum of (power of each prime) divided by its exponent.",
+        "भाज्य संख्या की घात: प्रत्येक अभाज्य की घात को उसके घातांक से भाग देकर न्यूनतम लें।"
+       ],
+       [
+        "${}^nC_r$ is greatest at $r=\\frac n2$ (even $n$), at $r=\\frac{n\\pm1}2$ (odd $n$).",
+        "${}^nC_r$ अधिकतम $r=\\frac n2$ (सम $n$) तथा $r=\\frac{n\\pm1}2$ (विषम $n$) पर।"
+       ],
+       [
+        "Order matters $\\Rightarrow{}^nP_r$; order does not matter $\\Rightarrow{}^nC_r$.",
+        "क्रम मायने रखे $\\Rightarrow{}^nP_r$; क्रम मायने न रखे $\\Rightarrow{}^nC_r$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Selection and geometry",
+    "hi": "5. चयन तथा ज्यामिति",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{Lines}={}^nC_2-{}^pC_2+1,\\quad\\text{triangles}={}^nC_3-{}^pC_3$",
+        "रेखाएँ $={}^nC_2-{}^pC_2+1,\\quad$ त्रिभुज $={}^nC_3-{}^pC_3$"
+       ],
+       [
+        "$\\text{quadrilaterals}={}^nC_4-{}^pC_4-{}^pC_3\\,{}^{n-p}C_1$",
+        "चतुर्भुज $={}^nC_4-{}^pC_4-{}^pC_3\\,{}^{n-p}C_1$"
+       ],
+       [
+        "$\\text{diagonals}=\\dfrac{n(n-3)}2,\\quad\\text{chord intersections inside}={}^nC_4$",
+        "विकर्ण $=\\dfrac{n(n-3)}2,\\quad$ जीवाओं के आन्तरिक प्रतिच्छेद $={}^nC_4$"
+       ],
+       [
+        "$\\text{rectangles}={}^{m+1}C_2\\,{}^{n+1}C_2,\\ \\ \\text{squares}=\\sum(m-k+1)(n-k+1)$",
+        "आयत $={}^{m+1}C_2\\,{}^{n+1}C_2,$ वर्ग $=\\sum(m-k+1)(n-k+1)$"
+       ],
+       [
+        "$\\text{AP triples from }1..n:\\ \\dfrac{(n-1)^2}4\\ (\\text{odd}),\\ \\dfrac{n(n-2)}4\\ (\\text{even})$",
+        "$1..n$ से AP त्रिक: $\\dfrac{(n-1)^2}4$ (विषम)$,\\ \\dfrac{n(n-2)}4$ (सम)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Committee: always $\\Rightarrow$ choose the rest; never $\\Rightarrow$ exclude; together or not at all $\\Rightarrow$ add two cases; not together $\\Rightarrow$ total $-$ both.",
+        "समिति: सदैव $\\Rightarrow$ शेष चुनें; कभी नहीं $\\Rightarrow$ हटाएँ; साथ या बिल्कुल नहीं $\\Rightarrow$ दो प्रकरण जोड़ें; साथ नहीं $\\Rightarrow$ कुल $-$ दोनों।"
+       ],
+       [
+        "Lines: $p$ parallel $-{}^pC_2$; $q$ concurrent $-{}^qC_2+1$.",
+        "रेखाएँ: $p$ समान्तर $-{}^pC_2$; $q$ संगामी $-{}^qC_2+1$।"
+       ],
+       [
+        "Restricted places (seats, middle) are filled first.",
+        "प्रतिबन्धित स्थान (सीट, मध्य) पहले भरें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Gap and string method",
+    "hi": "6. गैप तथा स्ट्रिंग विधि",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{together: }(n-k+1)!\\,k!,\\qquad\\text{apart: }(n-r)!\\,{}^{n-r+1}P_r$",
+        "साथ-साथ: $(n-k+1)!\\,k!,\\qquad$ अलग-अलग: $(n-r)!\\,{}^{n-r+1}P_r$"
+       ],
+       [
+        "$\\text{alternate: }2\\,n!\\,n!\\ (n,n),\\qquad (n+1)!\\,n!\\ (n+1,n)$",
+        "एकान्तर: $2\\,n!\\,n!\\ (n,n),\\qquad (n+1)!\\,n!\\ (n+1,n)$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Together: tie into a block, arrange the units, then arrange inside the block.",
+        "साथ-साथ: गुच्छा बाँधें, इकाइयों को व्यवस्थित करें, फिर गुच्छे के अन्दर व्यवस्था करें।"
+       ],
+       [
+        "Apart: arrange the free objects, then use the gaps (one per gap).",
+        "अलग-अलग: मुक्त वस्तुओं को व्यवस्थित करें, फिर रिक्त स्थान (प्रति स्थान एक) लें।"
+       ],
+       [
+        "Two types together: one block per type.",
+        "दो प्रकार साथ: प्रत्येक प्रकार का एक गुच्छा।"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "\"Not together\" can also be done as total $-$ together.",
+        "\"साथ नहीं\" को कुल $-$ साथ से भी निकाल सकते हैं।"
+       ],
+       [
+        "Fixed relative order of $k$ objects: divide by $k!$.",
+        "$k$ वस्तुओं का आपेक्षिक क्रम निश्चित: $k!$ से भाग दें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Station method",
+    "hi": "7. स्टेशन विधि",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{row: }{}^{\\,n-r+1}C_r,\\qquad\\text{circle: }\\dfrac n{n-r}{}^{\\,n-r}C_r={}^{n-r}C_r+{}^{n-r-1}C_{r-1}$",
+        "पंक्ति: ${}^{\\,n-r+1}C_r,\\qquad$ वृत्त: $\\dfrac n{n-r}{}^{\\,n-r}C_r={}^{n-r}C_r+{}^{n-r-1}C_{r-1}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Put the $n-r$ unchosen objects in a line.",
+        "न चुनी हुई $n-r$ वस्तुओं को एक रेखा में रखें।"
+       ],
+       [
+        "They make $n-r+1$ stations; choose $r$ of them.",
+        "इनसे $n-r+1$ स्टेशन बनते हैं; $r$ चुनें।"
+       ],
+       [
+        "On a circle use $\\frac n{n-r}\\,{}^{n-r}C_r$ (polygons with no common side).",
+        "वृत्त पर $\\frac n{n-r}\\,{}^{n-r}C_r$ (बिना उभयनिष्ठ भुजा वाले बहुभुज)।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Formation of groups",
+    "hi": "8. समूहों का निर्माण",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{n!}{p!\\,q!\\,r!},\\qquad\\dfrac{(kp)!}{(p!)^k\\,k!}\\ (\\text{equal, unlabelled}),\\qquad\\dfrac{(kp)!}{(p!)^k}\\ (\\text{labelled})$",
+        "$\\dfrac{n!}{p!\\,q!\\,r!},\\qquad\\dfrac{(kp)!}{(p!)^k\\,k!}$ (समान, अनामित)$,\\qquad\\dfrac{(kp)!}{(p!)^k}$ (नामित)"
+       ],
+       [
+        "$2^n-2,\\qquad 3^n-3\\cdot2^n+3\\quad(\\text{each gets at least one})$",
+        "$2^n-2,\\qquad 3^n-3\\cdot2^n+3\\quad$ (प्रत्येक को कम से कम एक)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Equal groups given to different persons are labelled: no division by $k!$.",
+        "समान आकार के समूह अलग-अलग व्यक्तियों को दिये जायें तो वे नामित हैं: $k!$ से भाग नहीं।"
+       ],
+       [
+        "Unfixed sizes: list the size patterns, count each pattern, add.",
+        "आकार निश्चित न हों: आकार-प्रतिरूप सूचीबद्ध करें, प्रत्येक गिनें, जोड़ें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Alike objects",
+    "hi": "9. समान वस्तुएँ",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{n!}{p!\\,q!\\,r!\\cdots}$",
+        "$\\dfrac{n!}{p!\\,q!\\,r!\\cdots}$"
+       ],
+       [
+        "$\\text{selections}=(p+1)(q+1)(r+1)\\cdot2^k-1\\quad(\\text{one or more})$",
+        "चयन $=(p+1)(q+1)(r+1)\\cdot2^k-1\\quad$ (एक या अधिक)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "String and gap methods work as for different objects, with the alike formula for each part.",
+        "स्ट्रिंग व गैप विधियाँ भिन्न वस्तुओं की तरह चलती हैं, प्रत्येक भाग में समान वस्तु सूत्र के साथ।"
+       ],
+       [
+        "Some at a time: split by the pattern of repeats; arrangements $=$ selections $\\times\\ r!/(\\text{alike})!$.",
+        "कुछ-कुछ लेने पर: दोहराव के प्रतिरूप से बाँटें; व्यवस्थाएँ $=$ चयन $\\times\\ \\dfrac{r!}{p!\\,q!\\cdots}$।"
+       ],
+       [
+        "Subtract 1 only when the empty selection is not allowed.",
+        "1 केवल तब घटाएँ जब रिक्त चयन मान्य न हो।"
+       ],
+       [
+        "Two or three kinds kept separated: gap method or inclusion-exclusion.",
+        "दो या तीन प्रकार अलग रखने हों: गैप विधि या समावेशन-अपवर्जन।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Circular permutations",
+    "hi": "10. वृत्तीय क्रमचय",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$(n-1)!,\\qquad\\dfrac{{}^nP_r}r,\\qquad\\dfrac{(n-1)!}2\\ (\\text{garland, necklace})$",
+        "$(n-1)!,\\qquad\\dfrac{{}^nP_r}r,\\qquad\\dfrac{(n-1)!}2$ (माला, हार)"
+       ],
+       [
+        "$\\text{together: }(n-k)!\\,k!,\\qquad\\text{apart: }(m-1)!\\,{}^mP_r$",
+        "साथ-साथ: $(n-k)!\\,k!,\\qquad$ अलग-अलग: $(m-1)!\\,{}^mP_r$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Fix one object (a distinct one) and arrange the rest.",
+        "एक (भिन्न) वस्तु स्थिर करें और शेष को व्यवस्थित करें।"
+       ],
+       [
+        "Persons at a table: clockwise and anticlockwise differ; garlands and necklaces: same.",
+        "मेज़ पर व्यक्ति: दक्षिणावर्त व वामावर्त भिन्न; माला व हार: समान।"
+       ],
+       [
+        "Numbered seats: $n!$.",
+        "क्रमांकित सीटें: $n!$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Total combinations",
+    "hi": "11. संचयों की कुल संख्या",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$(p+1)(q+1)(r+1)\\cdots 2^k\\ \\text{(including none)}\\qquad -1\\ \\text{(one or more)}$",
+        "$(p+1)(q+1)(r+1)\\cdots 2^k$ (शून्य सहित)$\\qquad -1$ (एक या अधिक)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$p,q,r$: alike objects of each kind; $k$: different objects.",
+        "$p,q,r$: प्रत्येक प्रकार की समान वस्तुएँ; $k$: भिन्न वस्तुएँ।"
+       ],
+       [
+        "Each item with three states (skip, choose, alternative) gives $3^n$.",
+        "तीन अवस्थाओं (छोड़ना, चुनना, विकल्प) वाली प्रत्येक वस्तु से $3^n$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Divisors",
+    "hi": "12. भाजक",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$N=p^aq^br^c:\\ d(N)=(a+1)(b+1)(c+1),\\ \\text{odd}=(b+1)(c+1),\\ \\text{even}=a(b+1)(c+1)$",
+        "$N=p^aq^br^c:\\ d(N)=(a+1)(b+1)(c+1),$ विषम $=(b+1)(c+1),$ सम $=a(b+1)(c+1)$"
+       ],
+       [
+        "$\\sigma(N)=\\dfrac{p^{a+1}-1}{p-1}\\cdot\\dfrac{q^{b+1}-1}{q-1}\\cdot\\dfrac{r^{c+1}-1}{r-1}$",
+        "$\\sigma(N)=\\dfrac{p^{a+1}-1}{p-1}\\cdot\\dfrac{q^{b+1}-1}{q-1}\\cdot\\dfrac{r^{c+1}-1}{r-1}$"
+       ],
+       [
+        "$\\text{two factors: }\\dfrac{d}2\\ \\text{or}\\ \\dfrac{d+1}2\\ (\\text{square});\\quad\\text{coprime: }2^{k-1};\\quad\\prod=N^{d/2}$",
+        "दो गुणनखण्ड: $\\dfrac{d}2$ या $\\dfrac{d+1}2$ (पूर्ण वर्ग)$;\\quad$ सहअभाज्य: $2^{k-1};\\quad\\prod=N^{d/2}$"
+       ],
+       [
+        "$\\text{ordered pairs with LCM }N:\\ \\prod(2a_i+1)$",
+        "ल.स. $N$ वाले क्रमित युग्म: $\\prod(2a_i+1)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Divisors that are multiples of $M$: exponents start at those of $M$; their sum is $M\\,\\sigma(N/M)$.",
+        "$M$ के गुणज भाजक: घातांक $M$ के घातांकों से प्रारम्भ; उनका योग $M\\,\\sigma(N/M)$।"
+       ],
+       [
+        "Proper divisors exclude 1 and $N$: $d-2$.",
+        "उचित भाजक 1 तथा $N$ को छोड़कर: $d-2$।"
+       ],
+       [
+        "Even sum $=\\sigma(N)-$ odd sum.",
+        "सम योग $=\\sigma(N)-$ विषम योग।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Maximum ${}^nC_r$ and grid",
+    "hi": "13. ${}^nC_r$ का अधिकतम मान व ग्रिड",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{paths }(0,0)\\to(a,b):\\ {}^{a+b}C_a$",
+        "मार्ग $(0,0)\\to(a,b):\\ {}^{a+b}C_a$"
+       ],
+       [
+        "$\\text{exactly }r\\text{ diagonal steps:}\\ \\dfrac{(a+b-r)!}{r!\\,(a-r)!\\,(b-r)!}$",
+        "ठीक $r$ विकर्ण कदम: $\\dfrac{(a+b-r)!}{r!\\,(a-r)!\\,(b-r)!}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Via a point: multiply the two parts; avoiding a point: total $-$ via.",
+        "किसी बिन्दु से होकर: दोनों भाग गुणा करें; बिना उससे गुजरे: कुल $-$ उससे होकर।"
+       ],
+       [
+        "A diagonal step uses one horizontal and one vertical unit together.",
+        "एक विकर्ण कदम एक क्षैतिज व एक ऊर्ध्वाधर इकाई एक साथ लेता है।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. De-arrangement and summation",
+    "hi": "14. विचलन तथा योग",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$D_n=n!\\sum_{r=0}^n\\dfrac{(-1)^r}{r!},\\ \\ D_n=(n-1)(D_{n-1}+D_{n-2})$",
+        "$D_n=n!\\sum_{r=0}^n\\dfrac{(-1)^r}{r!},\\ \\ D_n=(n-1)(D_{n-1}+D_{n-2})$"
+       ],
+       [
+        "$D_1=0,D_2=1,D_3=2,D_4=9,D_5=44,D_6=265$",
+        "$D_1=0,D_2=1,D_3=2,D_4=9,D_5=44,D_6=265$"
+       ],
+       [
+        "$\\text{Sum}=f\\cdot(\\text{sum of digits})\\cdot\\underbrace{11\\cdots1}_{\\text{places}}$",
+        "योग $=f\\cdot\\Sigma d\\cdot\\underbrace{11\\cdots1}_{n}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Exactly $r$ in place: ${}^nC_r\\,D_{n-r}$.",
+        "ठीक $r$ अपने स्थान पर: ${}^nC_r\\,D_{n-r}$।"
+       ],
+       [
+        "$f$ $=$ number of times a digit occurs in one place; with 0 among the digits subtract the numbers that begin with 0.",
+        "$f$ $=$ एक स्थान पर अंक के आने की संख्या; अंकों में 0 हो तो 0 से प्रारम्भ होने वाली संख्याएँ घटाएँ।"
+       ],
+       [
+        "Carry method: column sum, write the last digit, carry the rest.",
+        "हासिल विधि: स्तम्भ योग, अन्तिम अंक लिखें, शेष आगे ले जाएँ।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Alike objects: distribution and solutions",
+    "hi": "15. समान वस्तुओं का वितरण तथा हल",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$x_1+\\cdots+x_k=n:\\ {}^{n+k-1}C_{k-1}\\ (\\ge0),\\ \\ {}^{n-1}C_{k-1}\\ (\\ge1)$",
+        "$x_1+\\cdots+x_k=n:\\ {}^{n+k-1}C_{k-1}\\ (\\ge0),\\ \\ {}^{n-1}C_{k-1}\\ (\\ge1)$"
+       ],
+       [
+        "$x_1+\\cdots+x_k\\le n:\\ {}^{n+k}C_k\\ (\\text{dummy variable})$",
+        "$x_1+\\cdots+x_k\\le n:\\ {}^{n+k}C_k$ (डमी चर)"
+       ],
+       [
+        "$x_1x_2\\cdots x_k=N:\\ \\prod{}^{a+k-1}C_{k-1}$",
+        "$x_1x_2\\cdots x_k=N:\\ \\prod{}^{a+k-1}C_{k-1}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Give each person the minimum first.",
+        "पहले प्रत्येक को न्यूनतम दें।"
+       ],
+       [
+        "Distribute the rest freely (beggars' method).",
+        "शेष को स्वतन्त्र बाँटें (भिखारी विधि)।"
+       ],
+       [
+        "Upper limits: subtract the violating cases or use coefficients.",
+        "ऊपरी सीमा: सीमा तोड़ने वाले प्रकरण घटाएँ या गुणांक प्रयोग करें।"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Remainder classes (sums divisible by $m$): combine classes whose remainders add to $0$.",
+        "शेषफल-वर्ग (योग $m$ से विभाज्य): ऐसे वर्ग मिलाएँ जिनके शेष का योग $0$ हो।"
+       ],
+       [
+        "Adjacent different: $k(k-1)^{n-1}$ in a line, $(k-1)^n+(-1)^n(k-1)$ in a circle.",
+        "आसन्न भिन्न: रेखा में $k(k-1)^{n-1}$, वृत्त में $(k-1)^n+(-1)^n(k-1)$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Coefficient method and telescoping",
+    "hi": "16. गुणांक विधि तथा टेलिस्कोपी योग",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$a\\le x\\le b\\ \\to\\ x^a+\\cdots+x^b;\\ \\ \\text{answer}=[x^{n}]\\ \\text{of the product}$",
+        "$a\\le x\\le b\\ \\to\\ x^a+\\cdots+x^b;$ उत्तर $=$ गुणनफल में $x^{n}$ का गुणांक"
+       ],
+       [
+        "$r\\cdot r!=(r+1)!-r!,\\quad\\dfrac r{(r+1)!}=\\dfrac1{r!}-\\dfrac1{(r+1)!}$",
+        "$r\\cdot r!=(r+1)!-r!,\\quad\\dfrac r{(r+1)!}=\\dfrac1{r!}-\\dfrac1{(r+1)!}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Alike objects $p$ of a kind: $(1+x+\\cdots+x^p)$; each different object: $(1+x)$.",
+        "$p$ समान वस्तुएँ: $(1+x+\\cdots+x^p)$; प्रत्येक भिन्न वस्तु: $(1+x)$।"
+       ],
+       [
+        "Use it for dice totals, digit sums with limits, equal sharing.",
+        "पासों के योग, सीमित अंक-योग, बराबर बँटवारे में प्रयोग करें।"
+       ],
+       [
+        "Factorial series: write $T_r=f(r+1)-f(r)$.",
+        "फैक्टोरियल श्रेणी: $T_r=f(r+1)-f(r)$ लिखें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "17. Extra reading: partitions, Bell, Stirling",
+    "hi": "17. अतिरिक्त पठन: विभाजन, बेल, स्टर्लिंग",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\sum_{r}(-1)^r{}^kC_r(k-r)^n=k!\\,S(n,k)\\ (\\text{onto})$",
+        "$\\sum_{r}(-1)^r{}^kC_r(k-r)^n=k!\\,S(n,k)$ (आच्छादक)"
+       ],
+       [
+        "$F_n=F_{n-1}+F_{n-2},\\ \\ P(n,k)=P(n,k-1)+P(n-k,k)$",
+        "$F_n=F_{n-1}+F_{n-2},\\ \\ P(n,k)=P(n,k-1)+P(n-k,k)$"
+       ],
+       [
+        "$P(n,1)=1,\\ P(n,2)=\\lfloor\\tfrac n2\\rfloor+1,\\ P(n,3)\\approx\\tfrac{(n+3)^2}{12}$",
+        "$P(n,1)=1,\\ P(n,2)=\\lfloor\\tfrac n2\\rfloor+1,\\ P(n,3)\\approx\\tfrac{(n+3)^2}{12}$"
+       ],
+       [
+        "$S(n,k)=kS(n-1,k)+S(n-1,k-1),\\ B_n=\\sum_kS(n,k)$",
+        "$S(n,k)=kS(n-1,k)+S(n-1,k-1),\\ B_n=\\sum_kS(n,k)$"
+       ],
+       [
+        "$\\varphi(N)=N\\prod(1-\\tfrac1p),\\ \\text{sum}=\\tfrac{N\\varphi(N)}2$",
+        "$\\varphi(N)=N\\prod(1-\\tfrac1p),$ योग $=\\tfrac{N\\varphi(N)}2$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Distinct $\\to$ alike boxes: Stirling and Bell; alike $\\to$ alike boxes: partitions.",
+        "भिन्न $\\to$ एक-से डिब्बे: स्टर्लिंग व बेल; समान $\\to$ एक-से डिब्बे: विभाजन।"
+       ],
+       [
+        "$x_1+2x_2+\\cdots+kx_k=n$ counts partitions of $n$ into parts at most $k$.",
+        "$x_1+2x_2+\\cdots+kx_k=n$ के हल $n$ के उन विभाजनों की संख्या हैं जिनके भाग अधिकतम $k$ हों।"
+       ],
+       [
+        "Bell triangle: each row starts with the last entry of the previous row.",
+        "बेल त्रिभुज: प्रत्येक पंक्ति पिछली पंक्ति की अन्तिम प्रविष्टि से प्रारम्भ।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "18. Common mistakes checklist",
+    "hi": "18. सामान्य गलतियों की जाँच-सूची",
+    "color": "orange",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Check whether order matters before choosing ${}^nP_r$ or ${}^nC_r$.",
+        "${}^nP_r$ या ${}^nC_r$ चुनने से पहले जाँचें कि क्रम मायने रखता है या नहीं।"
+       ],
+       [
+        "First digit $\\ne0$; do not forget repetition rules.",
+        "पहला अंक $\\ne0$; पुनरावृत्ति के नियम न भूलें।"
+       ],
+       [
+        "Equal groups: divide by $k!$ only when they are unlabelled.",
+        "समान समूह: $k!$ से भाग केवल तब दें जब वे अनामित हों।"
+       ],
+       [
+        "Circle: use $(n-1)!$; gaps are $m$ not $m+1$; divide by 2 only for garlands.",
+        "वृत्त: $(n-1)!$ लें; रिक्त स्थान $m$ हैं, $m+1$ नहीं; 2 से भाग केवल माला में।"
+       ],
+       [
+        "Alike objects: divide by the factorials of the alike ones.",
+        "समान वस्तुएँ: उनके फैक्टोरियल से भाग दें।"
+       ],
+       [
+        "\"At least one\": subtract the empty case (1) only if empty is not allowed.",
+        "\"कम से कम एक\": रिक्त प्रकरण (1) तभी घटाएँ जब रिक्त मान्य न हो।"
+       ],
+       [
+        "Rank of a word: add 1 at the end; do not count the word itself.",
+        "शब्द की कोटि: अन्त में 1 जोड़ें; शब्द को स्वयं न गिनें।"
+       ],
+       [
+        "Inclusion-exclusion: alternate signs; no double counting.",
+        "समावेशन-अपवर्जन: चिह्न बारी-बारी से; दोहरी गिनती नहीं।"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Basics",
+    "hi": "1. मूल सूत्र",
+    "lines": [
+     [
+      "Product / sum: $m\\times n$ / $m+n$",
+      "गुणनफल / योग: $m\\times n$ / $m+n$"
+     ],
+     [
+      "Union: $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+      "समुच्चय योग: $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$"
+     ],
+     [
+      "Three sets: $\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+      "तीन समुच्चय: $\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$"
+     ],
+     [
+      "Permutation: ${}^nP_r=\\dfrac{n!}{(n-r)!}$",
+      "क्रमचय: ${}^nP_r=\\dfrac{n!}{(n-r)!}$"
+     ],
+     [
+      "Combination: ${}^nC_r=\\dfrac{n!}{r!(n-r)!}$",
+      "संचय: ${}^nC_r=\\dfrac{n!}{r!(n-r)!}$"
+     ],
+     [
+      "Relation: ${}^nP_r={}^nC_r\\,r!$",
+      "सम्बन्ध: ${}^nP_r={}^nC_r\\,r!$"
+     ],
+     [
+      "Symmetry: ${}^nC_r={}^nC_{n-r}$",
+      "सममिति: ${}^nC_r={}^nC_{n-r}$"
+     ],
+     [
+      "Equal: ${}^nC_x={}^nC_y\\Rightarrow x=y$ or $x+y=n$",
+      "समान: ${}^nC_x={}^nC_y\\Rightarrow x=y$ या $x+y=n$"
+     ],
+     [
+      "Pascal: ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$",
+      "पास्कल: ${}^nC_r+{}^nC_{r-1}={}^{n+1}C_r$"
+     ],
+     [
+      "Ratio: $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$",
+      "अनुपात: $\\dfrac{{}^nC_r}{{}^nC_{r-1}}=\\dfrac{n-r+1}r$"
+     ],
+     [
+      "Maximum ${}^nC_r$: $r=\\frac n2$ or $\\frac{n\\pm1}2$",
+      "अधिकतम ${}^nC_r$: $r=\\frac n2$ या $\\frac{n\\pm1}2$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Factorial",
+    "hi": "2. फैक्टोरियल",
+    "lines": [
+     [
+      "Recurrence: $n!=n\\,(n-1)!$",
+      "पुनरावृत्ति: $n!=n\\,(n-1)!$"
+     ],
+     [
+      "Double: $(2n)!=2^n\\,n!\\,[1\\cdot3\\cdots(2n-1)]$",
+      "द्विगुण: $(2n)!=2^n\\,n!\\,[1\\cdot3\\cdots(2n-1)]$"
+     ],
+     [
+      "Power of $p$: $E_p(n!)=\\sum\\left\\lfloor\\dfrac n{p^k}\\right\\rfloor$",
+      "$p$ की घात: $E_p(n!)=\\sum\\left\\lfloor\\dfrac n{p^k}\\right\\rfloor$"
+     ],
+     [
+      "Zeroes at the end: $E_5(n!)$",
+      "अन्त के शून्य: $E_5(n!)$"
+     ],
+     [
+      "Telescoping: $r\\cdot r!=(r+1)!-r!$",
+      "टेलिस्कोपी: $r\\cdot r!=(r+1)!-r!$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Numbers and words",
+    "hi": "3. संख्याएँ व शब्द",
+    "lines": [
+     [
+      "Repetition: $n^r$;  no repetition: ${}^nP_r$",
+      "पुनरावृत्ति सहित: $n^r$;  रहित: ${}^nP_r$"
+     ],
+     [
+      "Increasing digits: ${}^9C_n$; decreasing: ${}^{10}C_n$",
+      "बढ़ते अंक: ${}^9C_n$; घटते: ${}^{10}C_n$"
+     ],
+     [
+      "Divisible by 4: last two digits",
+      "4 से विभाज्य: अन्तिम दो अंक"
+     ],
+     [
+      "Divisible by 11: odd $-$ even place sums",
+      "11 से विभाज्य: विषम $-$ सम स्थान योग"
+     ],
+     [
+      "Alike objects: $\\dfrac{n!}{p!\\,q!\\,r!}$",
+      "समान वस्तुएँ: $\\dfrac{n!}{p!\\,q!\\,r!}$"
+     ],
+     [
+      "Together (string): $(n-k+1)!\\,k!$",
+      "साथ (स्ट्रिंग): $(n-k+1)!\\,k!$"
+     ],
+     [
+      "Apart (gap): $(n-r)!\\,{}^{n-r+1}P_r$",
+      "अलग (गैप): $(n-r)!\\,{}^{n-r+1}P_r$"
+     ],
+     [
+      "Alternate: $2\\,n!\\,n!$ or $(n+1)!\\,n!$",
+      "एकान्तर: $2\\,n!\\,n!$ या $(n+1)!\\,n!$"
+     ],
+     [
+      "Fixed relative order of $k$: $\\dfrac{n!}{k!}$",
+      "$k$ का निश्चित आपेक्षिक क्रम: $\\dfrac{n!}{k!}$"
+     ],
+     [
+      "Adjacent different: $k(k-1)^{n-1}$",
+      "आसन्न भिन्न: $k(k-1)^{n-1}$"
+     ],
+     [
+      "Circle, adjacent different: $(k-1)^n+(-1)^n(k-1)$",
+      "वृत्त, आसन्न भिन्न: $(k-1)^n+(-1)^n(k-1)$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Geometry",
+    "hi": "4. ज्यामिति",
+    "lines": [
+     [
+      "Lines: ${}^nC_2-{}^pC_2+1$",
+      "रेखाएँ: ${}^nC_2-{}^pC_2+1$"
+     ],
+     [
+      "Triangles: ${}^nC_3-{}^pC_3$",
+      "त्रिभुज: ${}^nC_3-{}^pC_3$"
+     ],
+     [
+      "Quadrilaterals: ${}^nC_4-{}^pC_4-{}^pC_3\\,{}^{n-p}C_1$",
+      "चतुर्भुज: ${}^nC_4-{}^pC_4-{}^pC_3\\,{}^{n-p}C_1$"
+     ],
+     [
+      "Diagonals: $\\dfrac{n(n-3)}2$",
+      "विकर्ण: $\\dfrac{n(n-3)}2$"
+     ],
+     [
+      "Chord intersections inside: ${}^nC_4$",
+      "जीवाओं के आन्तरिक प्रतिच्छेद: ${}^nC_4$"
+     ],
+     [
+      "Intersections: $-{}^pC_2$ parallel, $-{}^qC_2+1$ concurrent",
+      "प्रतिच्छेद: समान्तर $-{}^pC_2$, संगामी $-{}^qC_2+1$"
+     ],
+     [
+      "Rectangles: ${}^{m+1}C_2\\,{}^{n+1}C_2$",
+      "आयत: ${}^{m+1}C_2\\,{}^{n+1}C_2$"
+     ],
+     [
+      "Squares: $\\sum(m-k+1)(n-k+1)$",
+      "वर्ग: $\\sum(m-k+1)(n-k+1)$"
+     ],
+     [
+      "AP triples: $\\frac{(n-1)^2}4$ (odd $n$), $\\frac{n(n-2)}4$ (even $n$)",
+      "AP त्रिक: $\\frac{(n-1)^2}4$ (विषम $n$), $\\frac{n(n-2)}4$ (सम $n$)"
+     ],
+     [
+      "Polygon, no common side: $\\dfrac n{n-r}\\,{}^{n-r}C_r$",
+      "बहुभुज, उभयनिष्ठ भुजा नहीं: $\\dfrac n{n-r}\\,{}^{n-r}C_r$"
+     ],
+     [
+      "Station (row): ${}^{n-r+1}C_r$",
+      "स्टेशन (पंक्ति): ${}^{n-r+1}C_r$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Groups and circles",
+    "hi": "5. समूह व वृत्त",
+    "lines": [
+     [
+      "Groups $p,q,r$: $\\dfrac{n!}{p!\\,q!\\,r!}$",
+      "समूह $p,q,r$: $\\dfrac{n!}{p!\\,q!\\,r!}$"
+     ],
+     [
+      "Equal unlabelled: $\\dfrac{(kp)!}{(p!)^k\\,k!}$",
+      "समान अनामित: $\\dfrac{(kp)!}{(p!)^k\\,k!}$"
+     ],
+     [
+      "Equal labelled: $\\dfrac{(kp)!}{(p!)^k}$",
+      "समान नामित: $\\dfrac{(kp)!}{(p!)^k}$"
+     ],
+     [
+      "Each gets one: $2^n-2$, $3^n-3\\cdot2^n+3$",
+      "प्रत्येक को एक: $2^n-2$, $3^n-3\\cdot2^n+3$"
+     ],
+     [
+      "Onto: $\\sum(-1)^r{}^kC_r(k-r)^n$",
+      "आच्छादक: $\\sum(-1)^r{}^kC_r(k-r)^n$"
+     ],
+     [
+      "Circular: $(n-1)!$;  $r$ of $n$: $\\dfrac{{}^nP_r}r$",
+      "वृत्तीय: $(n-1)!$;  $n$ में $r$: $\\dfrac{{}^nP_r}r$"
+     ],
+     [
+      "Garland / necklace: $\\dfrac{(n-1)!}2$",
+      "माला / हार: $\\dfrac{(n-1)!}2$"
+     ],
+     [
+      "Circle, together: $(n-k)!\\,k!$",
+      "वृत्त, साथ: $(n-k)!\\,k!$"
+     ],
+     [
+      "Circle, apart: $(m-1)!\\,{}^mP_r$",
+      "वृत्त, अलग: $(m-1)!\\,{}^mP_r$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Selections and divisors",
+    "hi": "6. चयन व भाजक",
+    "lines": [
+     [
+      "All selections: $(p+1)(q+1)(r+1)2^k-1$",
+      "सभी चयन: $(p+1)(q+1)(r+1)2^k-1$"
+     ],
+     [
+      "Divisors: $d(N)=(a+1)(b+1)(c+1)$",
+      "भाजक: $d(N)=(a+1)(b+1)(c+1)$"
+     ],
+     [
+      "Odd divisors: $(b+1)(c+1)$",
+      "विषम भाजक: $(b+1)(c+1)$"
+     ],
+     [
+      "Even divisors: $a(b+1)(c+1)$",
+      "सम भाजक: $a(b+1)(c+1)$"
+     ],
+     [
+      "Sum: $\\sigma(N)=\\prod\\dfrac{p^{a+1}-1}{p-1}$",
+      "योग: $\\sigma(N)=\\prod\\dfrac{p^{a+1}-1}{p-1}$"
+     ],
+     [
+      "Multiples of $M$: sum $=M\\,\\sigma(N/M)$",
+      "$M$ के गुणज: योग $=M\\,\\sigma(N/M)$"
+     ],
+     [
+      "Two factors: $\\frac{d}2$ or $\\frac{d+1}2$",
+      "दो गुणनखण्ड: $\\frac{d}2$ या $\\frac{d+1}2$"
+     ],
+     [
+      "Coprime two factors: $2^{k-1}$",
+      "सहअभाज्य दो गुणनखण्ड: $2^{k-1}$"
+     ],
+     [
+      "Product of divisors: $N^{d/2}$",
+      "भाजकों का गुणनफल: $N^{d/2}$"
+     ],
+     [
+      "Pairs with LCM $N$: $\\prod(2a_i+1)$",
+      "ल.स. $N$ वाले युग्म: $\\prod(2a_i+1)$"
+     ],
+     [
+      "Euler: $\\varphi(N)=N\\prod\\left(1-\\frac1p\\right)$",
+      "यूलर: $\\varphi(N)=N\\prod\\left(1-\\frac1p\\right)$"
+     ]
+    ]
+   },
+   {
+    "en": "7. Paths, derangements, sums",
+    "hi": "7. मार्ग, विचलन, योग",
+    "lines": [
+     [
+      "Grid: ${}^{a+b}C_a$",
+      "ग्रिड: ${}^{a+b}C_a$"
+     ],
+     [
+      "With $r$ diagonals: $\\dfrac{(a+b-r)!}{r!(a-r)!(b-r)!}$",
+      "$r$ विकर्णों सहित: $\\dfrac{(a+b-r)!}{r!(a-r)!(b-r)!}$"
+     ],
+     [
+      "$D_n=n!\\sum\\dfrac{(-1)^r}{r!}$",
+      "$D_n=n!\\sum\\dfrac{(-1)^r}{r!}$"
+     ],
+     [
+      "$D_n=(n-1)(D_{n-1}+D_{n-2})$",
+      "$D_n=(n-1)(D_{n-1}+D_{n-2})$"
+     ],
+     [
+      "$D_1..D_6=0,1,2,9,44,265$",
+      "$D_1..D_6=0,1,2,9,44,265$"
+     ],
+     [
+      "Exactly $r$ fixed: ${}^nC_r\\,D_{n-r}$",
+      "ठीक $r$ स्थिर: ${}^nC_r\\,D_{n-r}$"
+     ],
+     [
+      "Digit sum: $f\\cdot\\Sigma d\\cdot11\\cdots1$",
+      "अंक-योग: $f\\cdot\\Sigma d\\cdot11\\cdots1$"
+     ]
+    ]
+   },
+   {
+    "en": "8. Alike objects and solutions",
+    "hi": "8. समान वस्तुएँ व हल",
+    "lines": [
+     [
+      "Beggars: ${}^{n+p-1}C_{p-1}$",
+      "भिखारी: ${}^{n+p-1}C_{p-1}$"
+     ],
+     [
+      "Each at least one: ${}^{n-1}C_{p-1}$",
+      "प्रत्येक को कम से कम एक: ${}^{n-1}C_{p-1}$"
+     ],
+     [
+      "Minimum $m_i$: ${}^{n-\\sum m_i+p-1}C_{p-1}$",
+      "न्यूनतम $m_i$: ${}^{n-\\sum m_i+p-1}C_{p-1}$"
+     ],
+     [
+      "$x_1+\\dots+x_k\\le n$: ${}^{n+k}C_k$",
+      "$x_1+\\dots+x_k\\le n$: ${}^{n+k}C_k$"
+     ],
+     [
+      "$x_1x_2\\cdots x_k=N$: $\\prod{}^{a+k-1}C_{k-1}$",
+      "$x_1x_2\\cdots x_k=N$: $\\prod{}^{a+k-1}C_{k-1}$"
+     ],
+     [
+      "Bounded factor: $x^a+\\cdots+x^b$",
+      "सीमित गुणनखण्ड: $x^a+\\cdots+x^b$"
+     ],
+     [
+      "Alike $p$: $1+x+\\cdots+x^p$",
+      "समान $p$: $1+x+\\cdots+x^p$"
+     ]
+    ]
+   },
+   {
+    "en": "9. Extra reading",
+    "hi": "9. अतिरिक्त पठन",
+    "lines": [
+     [
+      "Fibonacci: $F_n=F_{n-1}+F_{n-2}$",
+      "फिबोनाची: $F_n=F_{n-1}+F_{n-2}$"
+     ],
+     [
+      "Partitions: $P(n,k)=P(n,k-1)+P(n-k,k)$",
+      "विभाजन: $P(n,k)=P(n,k-1)+P(n-k,k)$"
+     ],
+     [
+      "$P(n,2)=\\lfloor\\frac n2\\rfloor+1$, $P(n,3)\\approx\\frac{(n+3)^2}{12}$",
+      "$P(n,2)=\\lfloor\\frac n2\\rfloor+1$, $P(n,3)\\approx\\frac{(n+3)^2}{12}$"
+     ],
+     [
+      "Pentagonal: $p(n)=p(n-1)+p(n-2)-p(n-5)-p(n-7)+\\cdots$",
+      "पंचभुजी: $p(n)=p(n-1)+p(n-2)-p(n-5)-p(n-7)+\\cdots$"
+     ],
+     [
+      "Stirling: $S(n,k)=kS(n-1,k)+S(n-1,k-1)$",
+      "स्टर्लिंग: $S(n,k)=kS(n-1,k)+S(n-1,k-1)$"
+     ],
+     [
+      "$S(n,2)=2^{n-1}-1$",
+      "$S(n,2)=2^{n-1}-1$"
+     ],
+     [
+      "Bell: $B_n=\\sum S(n,k)$",
+      "बेल: $B_n=\\sum S(n,k)$"
+     ],
+     [
+      "$B_0..B_6=1,1,2,5,15,52,203$",
+      "$B_0..B_6=1,1,2,5,15,52,203$"
+     ],
+     [
+      "$x_1+2x_2+\\dots+kx_k=n$: $P(n,k)$ solutions",
+      "$x_1+2x_2+\\dots+kx_k=n$: $P(n,k)$ हल"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Counting principles",
+    "hi": "गणना सिद्धान्त",
+    "leaves": [
+     [
+      "And: multiply; or: add",
+      "और: गुणा; या: जोड़"
+     ],
+     [
+      "At least: complement",
+      "कम से कम: पूरक"
+     ],
+     [
+      "Inclusion-exclusion",
+      "समावेशन-अपवर्जन"
+     ]
+    ]
+   },
+   {
+    "en": "Numbers",
+    "hi": "संख्याएँ",
+    "leaves": [
+     [
+      "Repetition or not",
+      "पुनरावृत्ति या नहीं"
+     ],
+     [
+      "Divisibility: last digits / sum",
+      "विभाज्यता: अन्तिम अंक / योग"
+     ],
+     [
+      "Palindromes, increasing digits",
+      "पैलिन्ड्रोम, बढ़ते अंक"
+     ]
+    ]
+   },
+   {
+    "en": "Rank of word",
+    "hi": "शब्द की कोटि",
+    "leaves": [
+     [
+      "Alphabetical order",
+      "वर्णानुक्रम"
+     ],
+     [
+      "Smaller letters $\\times$ (left)!",
+      "छोटे अक्षर $\\times$ (शेष)!"
+     ],
+     [
+      "Add 1; alike: divide",
+      "1 जोड़ें; समान: भाग"
+     ]
+    ]
+   },
+   {
+    "en": "Factorial and ${}^nC_r$",
+    "hi": "फैक्टोरियल तथा ${}^nC_r$",
+    "leaves": [
+     [
+      "$E_p(n!)$, zeroes $=E_5$",
+      "$E_p(n!)$, शून्य $=E_5$"
+     ],
+     [
+      "${}^nC_r={}^nC_{n-r}$, Pascal",
+      "${}^nC_r={}^nC_{n-r}$, पास्कल"
+     ],
+     [
+      "Greatest at $r=\\frac n2$",
+      "अधिकतम $r=\\frac n2$ पर"
+     ]
+    ]
+   },
+   {
+    "en": "Selection and geometry",
+    "hi": "चयन तथा ज्यामिति",
+    "leaves": [
+     [
+      "Committee cases",
+      "समिति के प्रकरण"
+     ],
+     [
+      "Lines, triangles, diagonals",
+      "रेखाएँ, त्रिभुज, विकर्ण"
+     ],
+     [
+      "Rectangles, squares, chord points",
+      "आयत, वर्ग, जीवा-बिन्दु"
+     ]
+    ]
+   },
+   {
+    "en": "Gap and string",
+    "hi": "गैप तथा स्ट्रिंग",
+    "leaves": [
+     [
+      "Together: block",
+      "साथ: गुच्छा"
+     ],
+     [
+      "Apart: gaps",
+      "अलग: रिक्त स्थान"
+     ],
+     [
+      "Alternate: $2\\,n!\\,n!$",
+      "एकान्तर: $2\\,n!\\,n!$"
+     ]
+    ]
+   },
+   {
+    "en": "Station method",
+    "hi": "स्टेशन विधि",
+    "leaves": [
+     [
+      "Row: ${}^{n-r+1}C_r$",
+      "पंक्ति: ${}^{n-r+1}C_r$"
+     ],
+     [
+      "Circle: $\\frac n{n-r}{}^{n-r}C_r$",
+      "वृत्त: $\\frac n{n-r}{}^{n-r}C_r$"
+     ]
+    ]
+   },
+   {
+    "en": "Groups",
+    "hi": "समूह",
+    "leaves": [
+     [
+      "$\\frac{n!}{p!q!r!}$",
+      "$\\frac{n!}{p!q!r!}$"
+     ],
+     [
+      "Equal: divide by $k!$",
+      "समान: $k!$ से भाग"
+     ],
+     [
+      "Each gets one: $2^n-2$",
+      "प्रत्येक को एक: $2^n-2$"
+     ]
+    ]
+   },
+   {
+    "en": "Alike objects",
+    "hi": "समान वस्तुएँ",
+    "leaves": [
+     [
+      "$\\frac{n!}{p!q!r!}$",
+      "$\\frac{n!}{p!q!r!}$"
+     ],
+     [
+      "Some at a time: patterns",
+      "कुछ-कुछ: प्रतिरूप"
+     ],
+     [
+      "Selections $\\prod(p+1)-1$",
+      "चयन $\\prod(p+1)-1$"
+     ]
+    ]
+   },
+   {
+    "en": "Circular",
+    "hi": "वृत्तीय",
+    "leaves": [
+     [
+      "$(n-1)!$",
+      "$(n-1)!$"
+     ],
+     [
+      "Garland: divide by 2",
+      "माला: 2 से भाग"
+     ],
+     [
+      "Gap: $(m-1)!\\,{}^mP_r$",
+      "गैप: $(m-1)!\\,{}^mP_r$"
+     ]
+    ]
+   },
+   {
+    "en": "Divisors",
+    "hi": "भाजक",
+    "leaves": [
+     [
+      "$d=\\prod(a+1)$, $\\sigma(N)$",
+      "$d=\\prod(a+1)$, $\\sigma(N)$"
+     ],
+     [
+      "Two factors, coprime $2^{k-1}$",
+      "दो गुणनखण्ड, सहअभाज्य $2^{k-1}$"
+     ],
+     [
+      "Product $N^{d/2}$",
+      "गुणनफल $N^{d/2}$"
+     ]
+    ]
+   },
+   {
+    "en": "Grid and derangement",
+    "hi": "ग्रिड तथा विचलन",
+    "leaves": [
+     [
+      "Paths ${}^{a+b}C_a$",
+      "मार्ग ${}^{a+b}C_a$"
+     ],
+     [
+      "$D_n$ table",
+      "$D_n$ सारणी"
+     ],
+     [
+      "Place value sum",
+      "स्थानीय मान योग"
+     ]
+    ]
+   },
+   {
+    "en": "Distribution of alike",
+    "hi": "समान वस्तुओं का वितरण",
+    "leaves": [
+     [
+      "Beggars ${}^{n+p-1}C_{p-1}$",
+      "भिखारी ${}^{n+p-1}C_{p-1}$"
+     ],
+     [
+      "Minimum first",
+      "पहले न्यूनतम"
+     ],
+     [
+      "Dummy variable for $\\le$",
+      "$\\le$ के लिए डमी चर"
+     ]
+    ]
+   },
+   {
+    "en": "Coefficient method",
+    "hi": "गुणांक विधि",
+    "leaves": [
+     [
+      "Factor per variable",
+      "प्रति चर गुणनखण्ड"
+     ],
+     [
+      "Coefficient of $x^n$",
+      "$x^n$ का गुणांक"
+     ]
+    ]
+   },
+   {
+    "en": "Residues and colouring",
+    "hi": "शेषफल-वर्ग तथा रंगना",
+    "leaves": [
+     [
+      "Classes mod $m$",
+      "mod $m$ वर्ग"
+     ],
+     [
+      "Line $k(k-1)^{n-1}$",
+      "रेखा $k(k-1)^{n-1}$"
+     ]
+    ]
+   },
+   {
+    "en": "Partitions, Bell, Stirling",
+    "hi": "विभाजन, बेल, स्टर्लिंग",
+    "leaves": [
+     [
+      "$P(n,k)$ recursion",
+      "$P(n,k)$ पुनरावृत्ति"
+     ],
+     [
+      "$S(n,k)$, $B_n$",
+      "$S(n,k)$, $B_n$"
+     ],
+     [
+      "Fibonacci, $\\varphi(N)$",
+      "फिबोनाची, $\\varphi(N)$"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which counting method for a basic problem?",
+    "प्रवाह-चित्र 1: साधारण गणना के लिए कौन-सी विधि?"
+   ],
+   "start": [
+    "A counting problem is given",
+    "गणना का प्रश्न दिया है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Does the order matter?",
+      "क्या क्रम मायने रखता है?"
+     ],
+     "a": [
+      [
+       "Use ${}^nP_r$ (or fill places)."
+      ],
+      [
+       "${}^nP_r$ प्रयोग करें (या स्थान भरें)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only a group is chosen?",
+      "क्या केवल समूह चुनना है?"
+     ],
+     "a": [
+      [
+       "Use ${}^nC_r$."
+      ],
+      [
+       "${}^nC_r$ प्रयोग करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Words \"at least\", \"not\", \"neither\"?",
+      "क्या \"कम से कम\", \"नहीं\", \"न ही\" शब्द हैं?"
+     ],
+     "a": [
+      [
+       "Total $-$ complement; for several conditions use inclusion-exclusion."
+      ],
+      [
+       "कुल $-$ पूरक; कई शर्तों में समावेशन-अपवर्जन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Each object chooses among places?",
+      "क्या प्रत्येक वस्तु स्थानों में से चुनती है?"
+     ],
+     "a": [
+      [
+       "Use (places)$^{\\text{(objects)}}$."
+      ],
+      [
+       "$N^{k}$ प्रयोग करें ($N$ स्थान, $k$ वस्तुएँ)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Split into cases, multiply inside a case, add the cases."
+    ],
+    [
+     "प्रकरणों में बाँटें, प्रकरण में गुणा करें, प्रकरण जोड़ें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Forming numbers",
+    "प्रवाह-चित्र 2: संख्याएँ बनाना"
+   ],
+   "start": [
+    "Numbers are to be formed from given digits",
+    "दिये अंकों से संख्याएँ बनानी हैं"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Divisible by 3 or 9?",
+      "क्या 3 या 9 से विभाज्य?"
+     ],
+     "a": [
+      [
+       "Choose digit sets by digit sum, then arrange."
+      ],
+      [
+       "अंक-योग से अंक-समूह चुनें, फिर व्यवस्थित करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Divisible by 2, 4, 5, 8, 25?",
+      "क्या 2, 4, 5, 8, 25 से विभाज्य?"
+     ],
+     "a": [
+      [
+       "Fix the last digit(s) first."
+      ],
+      [
+       "पहले अन्तिम अंक (अंकों) को निश्चित करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Digits strictly increasing / decreasing?",
+      "क्या अंक सख्ती से बढ़ते / घटते हैं?"
+     ],
+     "a": [
+      [
+       "Choose the set: ${}^9C_n$ or ${}^{10}C_n$."
+      ],
+      [
+       "समुच्चय चुनें: ${}^9C_n$ या ${}^{10}C_n$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Palindrome?",
+      "क्या पैलिन्ड्रोम है?"
+     ],
+     "a": [
+      [
+       "Only the first half is free."
+      ],
+      [
+       "केवल पहला आधा भाग स्वतन्त्र।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Sum of all such numbers?",
+      "क्या ऐसी सभी संख्याओं का योग चाहिए?"
+     ],
+     "a": [
+      [
+       "Place-value method with $f$."
+      ],
+      [
+       "$f$ सहित स्थानीय मान विधि।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Fill the restricted place first, then the others; subtract numbers starting with 0."
+    ],
+    [
+     "प्रतिबन्धित स्थान पहले भरें, फिर शेष; 0 से प्रारम्भ संख्याएँ घटाएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Arrangements with conditions",
+    "प्रवाह-चित्र 3: शर्तों वाली व्यवस्थाएँ"
+   ],
+   "start": [
+    "Persons or letters are arranged in a row",
+    "व्यक्ति या अक्षर पंक्ति में व्यवस्थित करने हैं"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Some must be together?",
+      "क्या कुछ को साथ रखना है?"
+     ],
+     "a": [
+      [
+       "String method: block, then inside."
+      ],
+      [
+       "स्ट्रिंग विधि: गुच्छा, फिर अन्दर।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Some must be apart?",
+      "क्या कुछ को अलग रखना है?"
+     ],
+     "a": [
+      [
+       "Gap method (or total $-$ together)."
+      ],
+      [
+       "गैप विधि (या कुल $-$ साथ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two types alternate?",
+      "क्या दो प्रकार एकान्तर हैं?"
+     ],
+     "a": [
+      [
+       "$2\\,n!\\,n!$ or $(n+1)!\\,n!$."
+      ],
+      [
+       "$2\\,n!\\,n!$ या $(n+1)!\\,n!$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Order of some objects fixed?",
+      "क्या कुछ वस्तुओं का क्रम निश्चित है?"
+     ],
+     "a": [
+      [
+       "Divide by the factorial of their number."
+      ],
+      [
+       "उनकी संख्या के फैक्टोरियल से भाग दें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Some tied to particular places?",
+      "क्या कुछ विशेष स्थानों से बँधे हैं?"
+     ],
+     "a": [
+      [
+       "Fill those places first."
+      ],
+      [
+       "पहले वे स्थान भरें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Alike objects: divide by the factorials of the alike ones."
+    ],
+    [
+     "समान वस्तुएँ: समान वस्तुओं के फैक्टोरियल से भाग दें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Selections and committees",
+    "प्रवाह-चित्र 4: चयन तथा समितियाँ"
+   ],
+   "start": [
+    "A group is to be selected",
+    "एक समूह चुनना है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "A particular person always / never in?",
+      "क्या कोई विशेष व्यक्ति सदैव / कभी नहीं?"
+     ],
+     "a": [
+      [
+       "Choose the rest from the remaining."
+      ],
+      [
+       "शेष को बचे हुओं में से चुनें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two together or not at all?",
+      "क्या दो साथ-साथ या बिल्कुल नहीं?"
+     ],
+     "a": [
+      [
+       "Add the two cases."
+      ],
+      [
+       "दोनों प्रकरण जोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two refuse to be together?",
+      "क्या दो साथ नहीं रहना चाहते?"
+     ],
+     "a": [
+      [
+       "Total $-$ both together."
+      ],
+      [
+       "कुल $-$ दोनों साथ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Categories with at least / at most?",
+      "क्या वर्गों में कम से कम / अधिकतम है?"
+     ],
+     "a": [
+      [
+       "Split by cases per category."
+      ],
+      [
+       "प्रत्येक वर्ग के प्रकरणों में बाँटें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Alike objects taken some at a time?",
+      "क्या समान वस्तुएँ कुछ-कुछ ली जा रही हैं?"
+     ],
+     "a": [
+      [
+       "Pattern cases or coefficient method."
+      ],
+      [
+       "प्रतिरूप-प्रकरण या गुणांक विधि।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Complementary counting if the direct cases are many."
+    ],
+    [
+     "सीधे प्रकरण अधिक हों तो पूरक गणना।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Distribution and groups",
+    "प्रवाह-चित्र 5: वितरण तथा समूह"
+   ],
+   "start": [
+    "Objects are divided or distributed",
+    "वस्तुएँ बाँटी या वितरित की जा रही हैं"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Are the objects distinct?",
+      "क्या वस्तुएँ भिन्न हैं?"
+     ],
+     "a": [
+      [
+       "Group formula $\\frac{n!}{p!q!r!}$, divide by $k!$ for equal unlabelled groups."
+      ],
+      [
+       "समूह सूत्र $\\frac{n!}{p!q!r!}$, समान अनामित समूहों पर $k!$ से भाग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Each person must get at least one?",
+      "क्या प्रत्येक को कम से कम एक मिलना है?"
+     ],
+     "a": [
+      [
+       "$2^n-2$, $3^n-3\\cdot2^n+3$ or the onto formula."
+      ],
+      [
+       "$2^n-2$, $3^n-3\\cdot2^n+3$ या आच्छादक सूत्र।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Objects alike, persons distinct?",
+      "क्या वस्तुएँ समान, व्यक्ति भिन्न हैं?"
+     ],
+     "a": [
+      [
+       "Beggars' method ${}^{n+p-1}C_{p-1}$."
+      ],
+      [
+       "भिखारी विधि ${}^{n+p-1}C_{p-1}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A minimum for some persons?",
+      "क्या कुछ व्यक्तियों के लिए न्यूनतम शर्त है?"
+     ],
+     "a": [
+      [
+       "Give the minimum first."
+      ],
+      [
+       "पहले न्यूनतम दें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Boxes alike?",
+      "क्या डिब्बे एक-से हैं?"
+     ],
+     "a": [
+      [
+       "Stirling numbers (distinct) or partitions (alike)."
+      ],
+      [
+       "स्टर्लिंग संख्याएँ (भिन्न) या विभाजन (समान)।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Upper limits: coefficient method or subtract the bad cases."
+    ],
+    [
+     "ऊपरी सीमा: गुणांक विधि या अवांछित प्रकरण घटाएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Equations and sums",
+    "प्रवाह-चित्र 6: समीकरण तथा योग"
+   ],
+   "start": [
+    "Integral solutions or a digit-sum condition",
+    "पूर्णांक हल या अंक-योग की शर्त"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "$x_1+\\dots+x_k=n$ with lower bounds?",
+      "क्या निम्न सीमा वाला $x_1+\\dots+x_k=n$ है?"
+     ],
+     "a": [
+      [
+       "Shift the variables, then ${}^{n'+k-1}C_{k-1}$."
+      ],
+      [
+       "चरों को खिसकाएँ, फिर ${}^{n'+k-1}C_{k-1}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "An inequality $\\le n$?",
+      "क्या असमिका $\\le n$ है?"
+     ],
+     "a": [
+      [
+       "Add a dummy variable."
+      ],
+      [
+       "डमी चर जोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Upper bounds or dice / digit limits?",
+      "क्या ऊपरी सीमाएँ या पासे / अंक की सीमाएँ हैं?"
+     ],
+     "a": [
+      [
+       "Coefficient of $x^n$ in the product."
+      ],
+      [
+       "गुणनफल में $x^n$ का गुणांक।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A product $x_1x_2\\cdots=N$?",
+      "क्या गुणनफल $x_1x_2\\cdots=N$ है?"
+     ],
+     "a": [
+      [
+       "Distribute the exponent of each prime."
+      ],
+      [
+       "प्रत्येक अभाज्य का घातांक बाँटें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A weighted sum $x_1+2x_2+\\dots$?",
+      "क्या भारित योग $x_1+2x_2+\\dots$ है?"
+     ],
+     "a": [
+      [
+       "Partitions $P(n,k)$."
+      ],
+      [
+       "विभाजन $P(n,k)$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Sum divisible by $m$: remainder classes."
+    ],
+    [
+     "योग $m$ से विभाज्य: शेषफल-वर्ग।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 7: Circle, polygon and geometry",
+    "प्रवाह-चित्र 7: वृत्त, बहुभुज तथा ज्यामिति"
+   ],
+   "start": [
+    "Points, lines or persons on a circle or plane",
+    "वृत्त या तल पर बिन्दु, रेखाएँ या व्यक्ति"
+   ],
+   "color": "brown",
+   "steps": [
+    {
+     "q": [
+      "Seating round a table?",
+      "क्या गोल मेज़ पर बैठाना है?"
+     ],
+     "a": [
+      [
+       "$(n-1)!$; garland or necklace: divide by 2."
+      ],
+      [
+       "$(n-1)!$; माला या हार: 2 से भाग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Together or apart on a circle?",
+      "क्या वृत्त पर साथ या अलग?"
+     ],
+     "a": [
+      [
+       "$(n-k)!\\,k!$ or $(m-1)!\\,{}^mP_r$."
+      ],
+      [
+       "$(n-k)!\\,k!$ या $(m-1)!\\,{}^mP_r$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Non-adjacent selection or polygon without a common side?",
+      "क्या अनासन्न चयन या उभयनिष्ठ भुजा रहित बहुभुज?"
+     ],
+     "a": [
+      [
+       "Station: $\\frac n{n-r}{}^{n-r}C_r$ (row: ${}^{n-r+1}C_r$)."
+      ],
+      [
+       "स्टेशन: $\\frac n{n-r}{}^{n-r}C_r$ (पंक्ति: ${}^{n-r+1}C_r$)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Collinear points?",
+      "क्या संरेख बिन्दु हैं?"
+     ],
+     "a": [
+      [
+       "Subtract ${}^pC_k$ for each collinear set."
+      ],
+      [
+       "प्रत्येक संरेख समूह की ${}^pC_k$ घटाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Intersection points of lines or chords?",
+      "क्या रेखाओं या जीवाओं के प्रतिच्छेद बिन्दु?"
+     ],
+     "a": [
+      [
+       "${}^nC_4$; parallel $-{}^pC_2$, concurrent $-{}^qC_2+1$."
+      ],
+      [
+       "${}^nC_4$; समान्तर $-{}^pC_2$, संगामी $-{}^qC_2+1$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Rectangles ${}^{m+1}C_2\\,{}^{n+1}C_2$; squares by side length."
+    ],
+    [
+     "आयत ${}^{m+1}C_2\\,{}^{n+1}C_2$; वर्ग भुजा के अनुसार।"
+    ]
+   ]
+  }
+ ]
+}

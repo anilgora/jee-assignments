@@ -5,3 +5,4 @@ Logarithm: DONE 2026-10-17
 Sequence_Progression: DONE 2026-10-17
 Determinant: DONE 2026-10-17
 Matrices: DONE 2026-10-17
+Permutations_Combinations: DONE 2026-10-17
