@@ -8,7 +8,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Chapter | Theory | XII | XIII | DPP | QB | Missing (required) | Optional absent | Status |
 |---|---|---|---|---|---|---|---|---|
 | Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | DONE |
-| Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | READY |
+| Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | DONE |
 | Sequence & Progression | chapters/Sequence_Progression/Theory.pdf | chapters/Sequence_Progression/XII.pdf | chapters/Sequence_Progression/XIII.pdf | chapters/Sequence_Progression/DPP.pdf | chapters/Sequence_Progression/QB.pdf | — | — | READY |
 | Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | READY |
 | Matrices | chapters/Matrices/Theory.pdf | chapters/Matrices/XII.pdf | chapters/Matrices/XIII.pdf | chapters/Matrices/DPP.pdf | chapters/Matrices/QB.pdf | — | — | READY |
