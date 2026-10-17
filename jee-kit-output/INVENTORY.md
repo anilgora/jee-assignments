@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Ellipse)
+READY: all tools present (2026-10-17, re-checked this run for Hyperbola)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -20,7 +20,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | DONE |
 | Parabola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Parabola/QB.pdf | — | — | DONE |
 | Ellipse | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Ellipse/QB.pdf | — | — | DONE |
-| Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | READY |
+| Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | DONE |
 | Trigonometric Ratio | chapters/Trigonometric_Ratio/Theory.pdf | chapters/Trigonometric_Ratio/XII.pdf | chapters/Trigonometric_Ratio/XIII.pdf | chapters/Trigonometric_Ratio/DPP.pdf | chapters/Trigonometric_Ratio/QB.pdf | — | — | READY |
 | Trigonometric Equation | chapters/Trigonometric_Equation/Theory.pdf | chapters/Trigonometric_Equation/XII.pdf | chapters/Trigonometric_Equation/XIII.pdf | chapters/Trigonometric_Equation/DPP.pdf | chapters/Trigonometric_Equation/QB.pdf | — | — | READY |
 | Solution of Triangle | chapters/Solution_of_Triangle/Theory.pdf | chapters/Solution_of_Triangle/XII.pdf | chapters/Solution_of_Triangle/XIII.pdf | chapters/Solution_of_Triangle/DPP.pdf | — | — | QB | READY |
