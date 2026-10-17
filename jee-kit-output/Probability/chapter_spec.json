@@ -1,0 +1,2885 @@
+{
+ "chapter": {
+  "en": "Probability",
+  "hi": "प्रायिकता",
+  "slug": "Probability"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   202,
+   220,
+   221,
+   222,
+   223,
+   224,
+   225,
+   226,
+   227,
+   228,
+   229,
+   230,
+   231,
+   232,
+   233,
+   234,
+   235,
+   236,
+   237,
+   238,
+   239,
+   240,
+   241,
+   242,
+   243,
+   247,
+   248,
+   249,
+   250,
+   251,
+   252,
+   253,
+   254,
+   255
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Important Definitions",
+    "hi": "महत्वपूर्ण परिभाषाएँ",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by sample space?",
+       "प्रतिदर्श समष्टि से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Sample space $S$ = set of all possible outcomes of a random experiment; each outcome is a sample point; an event is a subset of $S$.",
+        "प्रतिदर्श समष्टि $S$ = किसी यादृच्छिक प्रयोग के सभी सम्भव परिणामों का समुच्चय; प्रत्येक परिणाम एक प्रतिदर्श बिन्दु है; घटना $S$ का उपसमुच्चय है।"
+       ],
+       [
+        "Ex: a coin is tossed and a die is thrown: $S=\\{H1,\\dots,H6,T1,\\dots,T6\\}$, $n(S)=12$.",
+        "उदा.: एक सिक्का उछाला और एक पासा फेंका: $S=\\{H1,\\dots,H6,T1,\\dots,T6\\}$, $n(S)=12$।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by impossible and sure event?",
+       "असम्भव तथा निश्चित घटना से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Impossible event: $\\phi$, probability $0$. Sure event: $S$ itself, probability $1$.",
+        "असम्भव घटना: $\\phi$, प्रायिकता $0$। निश्चित घटना: स्वयं $S$, प्रायिकता $1$।"
+       ],
+       [
+        "Ex: two dice: sum $=13$ is impossible ($P=0$); sum $\\le 12$ is sure ($P=1$).",
+        "उदा.: दो पासे: योग $=13$ असम्भव ($P=0$); योग $\\le 12$ निश्चित ($P=1$)।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by equally likely events, mutually exclusive events and exhaustive events? What is the condition for two or more events to be mutually exclusive and exhaustive?",
+       "समसम्भाव्य, परस्पर अपवर्जी तथा निःशेष घटनाओं से क्या तात्पर्य है? दो या अधिक घटनाओं के परस्पर अपवर्जी व निःशेष होने की शर्त क्या है?"
+      ],
+      "a": [
+       [
+        "Equally likely: same chance. Mutually exclusive: $A_i\\cap A_j=\\phi$ for $i\\ne j$. Exhaustive: $A_1\\cup A_2\\cup\\dots\\cup A_n=S$.",
+        "समसम्भाव्य: समान सम्भावना। परस्पर अपवर्जी: $i\\ne j$ के लिए $A_i\\cap A_j=\\phi$। निःशेष: $A_1\\cup A_2\\cup\\dots\\cup A_n=S$।"
+       ],
+       [
+        "Mutually exclusive and exhaustive $\\Rightarrow P(A_1)+P(A_2)+\\dots+P(A_n)=1$.",
+        "परस्पर अपवर्जी और निःशेष $\\Rightarrow P(A_1)+P(A_2)+\\dots+P(A_n)=1$।"
+       ],
+       [
+        "Ex: die: $\\{1,2\\},\\{3,4\\},\\{5,6\\}$ are equally likely, mutually exclusive and exhaustive.",
+        "उदा.: पासा: $\\{1,2\\},\\{3,4\\},\\{5,6\\}$ समसम्भाव्य, परस्पर अपवर्जी तथा निःशेष हैं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Definition of Probability",
+    "hi": "प्रायिकता की परिभाषा",
+    "items": [
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the formula for calculation of probability of an event by classical definition of probability?",
+       "प्रायिकता की चिरसम्मत परिभाषा से किसी घटना की प्रायिकता का सूत्र क्या है?"
+      ],
+      "a": [
+       "$P(A)=\\dfrac{n(A)}{n(S)}=\\dfrac{\\text{favourable outcomes}}{\\text{total outcomes}}$",
+       [
+        "Valid only when all outcomes are equally likely; count $n(A)$ and $n(S)$ with permutations and combinations.",
+        "यह तभी मान्य है जब सभी परिणाम समसम्भाव्य हों; $n(A)$ व $n(S)$ क्रमचय-संचय से गिनिए।"
+       ],
+       [
+        "Ex: two numbers from $1,\\dots,20$, both even: $\\dfrac{{}^{10}C_2}{{}^{20}C_2}=\\dfrac{45}{190}=\\dfrac9{38}$.",
+        "उदा.: $1,\\dots,20$ में से दो संख्याएँ, दोनों सम: $\\dfrac{{}^{10}C_2}{{}^{20}C_2}=\\dfrac{45}{190}=\\dfrac9{38}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I 6; J-M(XII) 36; J-A 30; DPP-3 5, 6",
+      "q": [
+       "What conditions must the probabilities satisfy (bounds on $P(A)$, $P(A\\cap B)$, $P(A\\cup B)$)?",
+       "प्रायिकताओं को कौन-सी शर्तें माननी होती हैं ($P(A)$, $P(A\\cap B)$, $P(A\\cup B)$ की सीमाएँ)?"
+      ],
+      "a": [
+       [
+        "$0\\le P(A)\\le1$; for mutually exclusive events $\\sum P(A_i)\\le1$ (each value also in $[0,1]$).",
+        "$0\\le P(A)\\le1$; परस्पर अपवर्जी घटनाओं के लिए $\\sum P(A_i)\\le1$ (प्रत्येक मान भी $[0,1]$ में)।"
+       ],
+       "$\\max\\{0,\\,P(A)+P(B)-1\\}\\le P(A\\cap B)\\le\\min\\{P(A),P(B)\\}\\le\\max\\{P(A),P(B)\\}\\le P(A\\cup B)\\le P(A)+P(B)$",
+       [
+        "Ex: $P(A)=0.6,\\ P(B)=0.8\\Rightarrow 0.4\\le P(A\\cap B)\\le0.6$, so $P(A|B)\\le\\dfrac{0.6}{0.8}=\\dfrac34$.",
+        "उदा.: $P(A)=0.6,\\ P(B)=0.8\\Rightarrow 0.4\\le P(A\\cap B)\\le0.6$, अतः $P(A|B)\\le\\dfrac{0.6}{0.8}=\\dfrac34$।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the relation between probabilities of an event and its complement?",
+       "किसी घटना तथा उसकी पूरक घटना की प्रायिकताओं में क्या सम्बन्ध है?"
+      ],
+      "a": [
+       "$P(A')=1-P(A)$",
+       [
+        "Ex: $P(A)=\\dfrac27\\Rightarrow P(A')=\\dfrac57$.",
+        "उदा.: $P(A)=\\dfrac27\\Rightarrow P(A')=\\dfrac57$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use complementary method in probability?",
+       "प्रायिकता में पूरक विधि का उपयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When the event has many cases but its opposite has few: \"at least one\", \"not all\", \"problem is solved\", \"target is hit\". Find $1-P(\\text{opposite})$.",
+        "जब घटना में बहुत स्थितियाँ हों पर विपरीत में कम: \"कम से कम एक\", \"सभी नहीं\", \"प्रश्न हल हो\", \"लक्ष्य भेदा जाए\"। $1-P(E')$ लीजिए ($E'$ = विपरीत घटना)।"
+       ],
+       [
+        "Ex: at least one six in 3 throws: $1-\\left(\\dfrac56\\right)^3=\\dfrac{91}{216}$.",
+        "उदा.: 3 बार फेंकने पर कम से कम एक छक्का: $1-\\left(\\dfrac56\\right)^3=\\dfrac{91}{216}$।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to deal \"at least\" and \"at most\" in questions of probability?",
+       "प्रायिकता के प्रश्नों में \"कम से कम\" तथा \"अधिक से अधिक\" को कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "At least $r$: $P(X\\ge r)=1-P(X\\le r-1)$ (use when it has fewer cases). At most $r$: $P(X\\le r)=P(0)+P(1)+\\dots+P(r)$.",
+        "कम से कम $r$: $P(X\\ge r)=1-P(X\\le r-1)$ (जब इसमें कम स्थितियाँ हों)। अधिक से अधिक $r$: $P(X\\le r)=P(0)+P(1)+\\dots+P(r)$।"
+       ],
+       [
+        "Ex: two dice, total at least 5: $1-P(2,3,4)=1-\\dfrac{1+2+3}{36}=\\dfrac56$.",
+        "उदा.: दो पासे, योग कम से कम 5: $1-P(2,3,4)=1-\\dfrac{1+2+3}{36}=\\dfrac56$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Whether things given are to be considered as alike or distinct?",
+       "दी गई वस्तुओं को समान मानें या भिन्न?"
+      ],
+      "a": [
+       [
+        "Always treat objects as distinct (balls of one colour, letters, identical coins) so that the outcomes are equally likely; count numerator and denominator the same way.",
+        "वस्तुओं को सदैव भिन्न मानिए (एक रंग की गेंदें, अक्षर, एक जैसे सिक्के) ताकि परिणाम समसम्भाव्य हों; अंश और हर एक ही ढंग से गिनिए।"
+       ],
+       [
+        "Ex: 3 white, 6 red balls, two drawn, both red: $\\dfrac{{}^6C_2}{{}^9C_2}=\\dfrac{15}{36}=\\dfrac5{12}$.",
+        "उदा.: 3 सफेद, 6 लाल गेंदें, दो निकालीं, दोनों लाल: $\\dfrac{{}^6C_2}{{}^9C_2}=\\dfrac{15}{36}=\\dfrac5{12}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Odds",
+    "hi": "संयोगानुपात (पक्ष/विपक्ष)",
+    "items": [
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to calculate odds in favour of an event and odds against an event from the probability of the event?",
+       "घटना की प्रायिकता से घटना के पक्ष में तथा विपक्ष में संयोगानुपात कैसे निकालें?"
+      ],
+      "a": [
+       "$\\text{Odds in favour}=\\dfrac{P}{1-P}=\\dfrac{\\text{favourable}}{\\text{unfavourable}},\\qquad \\text{odds against}=\\dfrac{1-P}{P}$",
+       [
+        "Ex: $P=\\dfrac27$: odds in favour $2:5$, odds against $5:2$.",
+        "उदा.: $P=\\dfrac27$: पक्ष में $2:5$, विपक्ष में $5:2$।"
+       ]
+      ]
+     },
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to calculate probability of the event from the odds in favour of an event and odds against an event?",
+       "पक्ष में तथा विपक्ष में संयोगानुपात से घटना की प्रायिकता कैसे निकालें?"
+      ],
+      "a": [
+       [
+        "Odds in favour $p:q\\Rightarrow P=\\dfrac p{p+q}$; odds against $p:q\\Rightarrow P=\\dfrac q{p+q}$.",
+        "पक्ष में $p:q\\Rightarrow P=\\dfrac p{p+q}$; विपक्ष में $p:q\\Rightarrow P=\\dfrac q{p+q}$।"
+       ],
+       [
+        "Ex: odds against A are $4:3\\Rightarrow P(A)=\\dfrac37$.",
+        "उदा.: A के विपक्ष में $4:3\\Rightarrow P(A)=\\dfrac37$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Creation of Sample Space",
+    "hi": "प्रतिदर्श समष्टि की रचना",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you create sample space when a die is thrown one/two times?",
+       "क्या आप एक पासे को एक/दो बार फेंकने पर प्रतिदर्श समष्टि बना सकते हैं?"
+      ],
+      "a": [
+       [
+        "One die: $\\{1,\\dots,6\\}$, 6 outcomes. Two dice (or one die twice): ordered pairs $(i,j)$, $6\\times6=36$ outcomes; $n$ dice: $6^n$.",
+        "एक पासा: $\\{1,\\dots,6\\}$, 6 परिणाम। दो पासे (या एक पासा दो बार): क्रमित युग्म $(i,j)$, $6\\times6=36$ परिणाम; $n$ पासे: $6^n$।"
+       ],
+       [
+        "Ex: $P(\\text{doublet})=\\dfrac6{36}=\\dfrac16$.",
+        "उदा.: युग्मक की प्रायिकता $=\\dfrac6{36}=\\dfrac16$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you create sample space when a coin is tossed one/two/three/four times?",
+       "क्या आप सिक्के को एक/दो/तीन/चार बार उछालने पर प्रतिदर्श समष्टि बना सकते हैं?"
+      ],
+      "a": [
+       [
+        "$n$ tosses: $2^n$ sequences of H and T (2, 4, 8, 16); $P(\\text{exactly } r\\text{ heads})=\\dfrac{{}^nC_r}{2^n}$.",
+        "$n$ उछाल: H व T के $2^n$ अनुक्रम (2, 4, 8, 16); ठीक $r$ चित की प्रायिकता $=\\dfrac{{}^nC_r}{2^n}$।"
+       ],
+       [
+        "Ex: 4 tosses, exactly 2 heads: $\\dfrac{{}^4C_2}{16}=\\dfrac38$.",
+        "उदा.: 4 उछाल, ठीक 2 चित: $\\dfrac{{}^4C_2}{16}=\\dfrac38$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When two dice are thrown do you know the pattern in probabilities when sum of the numbers on them is 2 to 12?",
+       "दो पासे फेंकने पर योग 2 से 12 होने की प्रायिकताओं का क्रम क्या आप जानते हैं?"
+      ],
+      "a": [
+       [
+        "Ways for sum $s$: $s-1$ for $2\\le s\\le7$ and $13-s$ for $7\\le s\\le12$: $1,2,3,4,5,6,5,4,3,2,1$ (out of 36).",
+        "योग $s$ के तरीके: $2\\le s\\le7$ के लिए $s-1$ तथा $7\\le s\\le12$ के लिए $13-s$: $1,2,3,4,5,6,5,4,3,2,1$ (36 में से)।"
+       ],
+       [
+        "Ex: $P(\\text{sum }9)=\\dfrac4{36}=\\dfrac19$; sum 7 is the most likely ($\\dfrac16$).",
+        "उदा.: योग 9 की प्रायिकता $=\\dfrac4{36}=\\dfrac19$; योग 7 सबसे अधिक सम्भाव्य ($\\dfrac16$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Venn Diagram",
+    "hi": "वेन आरेख",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you draw Venn diagram of 2 events and how to use it in questions?",
+       "क्या आप 2 घटनाओं का वेन आरेख बना सकते हैं और प्रश्नों में इसका उपयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Four regions: $a=P(A\\text{ only})$, $b=P(B\\text{ only})$, $c=P(A\\cap B)$, $d=P(\\text{neither})$, $a+b+c+d=1$; write every given value in $a,b,c,d$ and solve.",
+        "चार भाग: $a$ = केवल $A$, $b$ = केवल $B$, $c=P(A\\cap B)$, $d$ = कोई नहीं (प्रायिकताएँ), $a+b+c+d=1$; प्रत्येक दिया मान $a,b,c,d$ में लिखकर हल कीजिए।"
+       ],
+       [
+        "Ex: $P(A)=\\dfrac38,\\ P(B)=\\dfrac12,\\ P(A\\cap B)=\\dfrac14$: $a=\\dfrac18,\\ b=\\dfrac14,\\ d=\\dfrac38$.",
+        "उदा.: $P(A)=\\dfrac38,\\ P(B)=\\dfrac12,\\ P(A\\cap B)=\\dfrac14$: $a=\\dfrac18,\\ b=\\dfrac14,\\ d=\\dfrac38$।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you draw Venn diagram of 3 events and how to use it in questions?",
+       "क्या आप 3 घटनाओं का वेन आरेख बना सकते हैं और प्रश्नों में इसका उपयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Eight regions (only $A$, only $B$, only $C$, three \"exactly two\" parts, $A\\cap B\\cap C$, none); fill from the centre outwards.",
+        "आठ भाग (केवल $A$, केवल $B$, केवल $C$, \"ठीक दो\" के तीन भाग, $A\\cap B\\cap C$, कोई नहीं); केन्द्र से बाहर की ओर भरिए।"
+       ],
+       "$P(\\text{exactly two})=\\sum P(A\\cap B)-3P(A\\cap B\\cap C),\\quad P(\\text{at least two})=\\sum P(A\\cap B)-2P(A\\cap B\\cap C)$",
+       "$P(\\text{exactly one})=\\sum P(A)-2\\sum P(A\\cap B)+3P(A\\cap B\\cap C)$"
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write formulae of probabilities of union of two/three/four or more events?",
+       "दो/तीन/चार या अधिक घटनाओं के सम्मिलन की प्रायिकता के सूत्र लिखिए।"
+      ],
+      "a": [
+       "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$",
+       "$P(A\\cup B\\cup C)=\\sum P(A)-\\sum P(A\\cap B)+P(A\\cap B\\cap C)$",
+       [
+        "Ex: $P(A)=0.25,\\ P(B)=0.5,\\ P(A\\cap B)=0.14$: $P(A\\cup B)=0.61$, neither $=0.39$.",
+        "उदा.: $P(A)=0.25,\\ P(B)=0.5,\\ P(A\\cap B)=0.14$: $P(A\\cup B)=0.61$, कोई नहीं $=0.39$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know the pattern in formula of probability of union of events?",
+       "क्या आप घटनाओं के सम्मिलन की प्रायिकता के सूत्र का क्रम जानते हैं?"
+      ],
+      "a": [
+       "$P(A_1\\cup\\dots\\cup A_n)=S_1-S_2+S_3-\\dots+(-1)^{n-1}S_n$",
+       [
+        "$S_k$ = sum of probabilities of all intersections of $k$ events (${}^nC_k$ terms); signs alternate.",
+        "$S_k$ = $k$ घटनाओं के सभी सर्वनिष्ठों की प्रायिकताओं का योग (${}^nC_k$ पद); चिह्न एकान्तर।"
+       ],
+       [
+        "Ex: $1$ to $50$, multiple of 4, 6 or 7: $\\dfrac{12+8+7-4-1-1+0}{50}=\\dfrac{21}{50}$.",
+        "उदा.: $1$ से $50$, 4, 6 या 7 का गुणज: $\\dfrac{12+8+7-4-1-1+0}{50}=\\dfrac{21}{50}$।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Do you know other ways of expressing union/intersection/difference of two events?",
+       "क्या आप दो घटनाओं के सम्मिलन/सर्वनिष्ठ/अन्तर को व्यक्त करने के अन्य तरीके जानते हैं?"
+      ],
+      "a": [
+       [
+        "$A\\cup B$ = $A+B$ = \"$A$ or $B$\" (at least one); $A\\cap B$ = $AB$ = \"$A$ and $B$\"; $A-B=A\\cap B'$ = \"only $A$\".",
+        "$A\\cup B$ = $A+B$ = \"$A$ या $B$\" (कम से कम एक); $A\\cap B$ = $AB$ = \"$A$ और $B$\"; $A-B=A\\cap B'$ = \"केवल $A$\"।"
+       ],
+       "$P(A\\cap B')=P(A)-P(A\\cap B),\\quad P(A'\\cap B')=1-P(A\\cup B),\\quad P(A'\\cup B')=1-P(A\\cap B)$",
+       [
+        "Ex: $P(A)=0.7,\\ P(A\\cap B')=0.5\\Rightarrow P(A\\cap B)=0.2$.",
+        "उदा.: $P(A)=0.7,\\ P(A\\cap B')=0.5\\Rightarrow P(A\\cap B)=0.2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Conditional Probability",
+    "hi": "सप्रतिबन्ध प्रायिकता",
+    "items": [
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is conditional probability?",
+       "सप्रतिबन्ध प्रायिकता क्या है?"
+      ],
+      "a": [
+       "$P(A|B)=\\dfrac{P(A\\cap B)}{P(B)},\\quad P(B)>0$",
+       [
+        "Ex: die, odd number shown; $P(\\text{prime}|\\text{odd})=\\dfrac{n\\{3,5\\}}{n\\{1,3,5\\}}=\\dfrac23$.",
+        "उदा.: पासे पर विषम संख्या आई; विषम दिया होने पर अभाज्य की प्रायिकता $=\\dfrac{n\\{3,5\\}}{n\\{1,3,5\\}}=\\dfrac23$।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How a conditional probability can be expressed in various ways?",
+       "सप्रतिबन्ध प्रायिकता को विभिन्न प्रकार से कैसे व्यक्त किया जा सकता है?"
+      ],
+      "a": [
+       "$P(A\\cap B)=P(B)\\,P(A|B)=P(A)\\,P(B|A),\\qquad \\dfrac{P(A|B)}{P(B|A)}=\\dfrac{P(A)}{P(B)}$",
+       [
+        "With the Venn regions: $P(A|B)=\\dfrac{c}{b+c}$, $P(B|A')=\\dfrac{b}{b+d}$, $P(A|A\\cup B)=\\dfrac{a+c}{a+b+c}$.",
+        "वेन भागों से: $P(A|B)=\\dfrac{c}{b+c}$, $P(B|A')=\\dfrac{b}{b+d}$, $P(A|A\\cup B)=\\dfrac{a+c}{a+b+c}$।"
+       ],
+       [
+        "Ex: $P(A|B)=\\dfrac12,\\ P(B|A)=\\dfrac13,\\ P(A\\cap B)=\\dfrac16\\Rightarrow P(B)=\\dfrac13,\\ P(A)=\\dfrac12$.",
+        "उदा.: $P(A|B)=\\dfrac12,\\ P(B|A)=\\dfrac13,\\ P(A\\cap B)=\\dfrac16\\Rightarrow P(B)=\\dfrac13,\\ P(A)=\\dfrac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to read when a conditional probability expression is given?",
+       "सप्रतिबन्ध प्रायिकता का व्यंजक दिया हो तो उसे कैसे पढ़ें?"
+      ],
+      "a": [
+       [
+        "$P(A|B)$: \"probability of $A$ given that $B$ has occurred\"; the event after the bar is the condition (already known), the event before it is asked.",
+        "$P(A|B)$: \"जब $B$ घटित हो चुकी है तब $A$ की प्रायिकता\"; रेखा के बाद वाली घटना शर्त (ज्ञात) है, पहले वाली पूछी गई है।"
+       ],
+       [
+        "Ex: \"11 was picked given that the sum was even\" $=P(11\\text{ picked}\\,|\\,\\text{sum even})$.",
+        "उदा.: \"योग सम था, तब 11 चुनी गई\" $=P(E|F)$, $E$: 11 चुनी, $F$: योग सम।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What happens to the sample space in case of conditional probability questions?",
+       "सप्रतिबन्ध प्रायिकता के प्रश्नों में प्रतिदर्श समष्टि का क्या होता है?"
+      ],
+      "a": [
+       [
+        "The given event $B$ becomes the new (reduced) sample space: $P(A|B)=\\dfrac{n(A\\cap B)}{n(B)}$ for equally likely outcomes.",
+        "दी गई घटना $B$ नई (घटी हुई) प्रतिदर्श समष्टि बन जाती है: समसम्भाव्य परिणामों के लिए $P(A|B)=\\dfrac{n(A\\cap B)}{n(B)}$।"
+       ],
+       [
+        "Ex: two dice, total 8: $(2,6),(3,5),(4,4),(5,3),(6,2)$; $P(\\text{second die }5)=\\dfrac15$.",
+        "उदा.: दो पासे, योग 8: $(2,6),(3,5),(4,4),(5,3),(6,2)$; दूसरे पासे पर 5 की प्रायिकता $=\\dfrac15$।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while solving conditional probability questions?",
+       "सप्रतिबन्ध प्रायिकता के प्रश्न हल करते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Identify which event is given. $P(A'|B)=1-P(A|B)$, but $P(A|B')\\ne1-P(A|B)$ in general; $P(A|B)\\ne P(B|A)$.",
+        "पहचानिए कौन-सी घटना दी गई है। $P(A'|B)=1-P(A|B)$, परन्तु सामान्यतः $P(A|B')\\ne1-P(A|B)$; $P(A|B)\\ne P(B|A)$।"
+       ],
+       [
+        "Ex: $P(A)=\\dfrac12,\\ P(B)=\\dfrac13,\\ P(A\\cap B)=\\dfrac14$: $P(A'|B)=\\dfrac14$, $P(A|B')=\\dfrac{1/4}{2/3}=\\dfrac38$.",
+        "उदा.: $P(A)=\\dfrac12,\\ P(B)=\\dfrac13,\\ P(A\\cap B)=\\dfrac14$: $P(A'|B)=\\dfrac14$, $P(A|B')=\\dfrac{1/4}{2/3}=\\dfrac38$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is conditional probability when A is subset of B?",
+       "जब A, B का उपसमुच्चय हो तब सप्रतिबन्ध प्रायिकता क्या है?"
+      ],
+      "a": [
+       "$A\\subseteq B:\\quad P(A|B)=\\dfrac{P(A)}{P(B)},\\qquad P(B|A)=1$",
+       [
+        "Ex: die, $A=\\{2\\}$, $B$ = even: $P(A|B)=\\dfrac13$, $P(B|A)=1$.",
+        "उदा.: पासा, $A=\\{2\\}$, $B$ = सम: $P(A|B)=\\dfrac13$, $P(B|A)=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is conditional probability when A and B are disjoint?",
+       "जब A तथा B असंयुक्त हों तब सप्रतिबन्ध प्रायिकता क्या है?"
+      ],
+      "a": [
+       "$A\\cap B=\\phi:\\quad P(A|B)=P(B|A)=0$",
+       [
+        "Ex: die: $P(\\text{odd}|\\text{even})=0$.",
+        "उदा.: पासा: सम दिया हो तो विषम की प्रायिकता $=0$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Multiplication Theorem",
+    "hi": "गुणन प्रमेय",
+    "items": [
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use multiplication theorem and what to keep in mind?",
+       "गुणन प्रमेय का उपयोग कैसे करें और क्या ध्यान रखें?"
+      ],
+      "a": [
+       "$P(A\\cap B)=P(A)\\,P(B|A),\\qquad P(A_1\\cap A_2\\cap A_3)=P(A_1)\\,P(A_2|A_1)\\,P(A_3|A_1\\cap A_2)$",
+       [
+        "Draws one by one: without replacement the bag changes after every draw; with replacement it does not. Multiply along the order, add over different orders.",
+        "एक-एक करके निकालना: बिना प्रतिस्थापन हर बार थैला बदलता है; प्रतिस्थापन सहित नहीं। क्रम के अनुसार गुणा, अलग-अलग क्रमों का योग।"
+       ],
+       [
+        "Ex: 3 white, 6 red, without replacement, first white then red: $\\dfrac39\\cdot\\dfrac68=\\dfrac14$.",
+        "उदा.: 3 सफेद, 6 लाल, बिना प्रतिस्थापन, पहले सफेद फिर लाल: $\\dfrac39\\cdot\\dfrac68=\\dfrac14$।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use ${}^nC_r$ method?",
+       "${}^nC_r$ विधि का उपयोग कब करें?"
+      ],
+      "a": [
+       [
+        "When balls are drawn without replacement and the order is not asked (drawn together or \"one is ..., one is ...\"): $P=\\dfrac{\\text{ways to select favourable}}{{}^nC_r}$; it equals the one-by-one answer.",
+        "जब बिना प्रतिस्थापन निकालें और क्रम न पूछा हो (एक साथ या \"एक ... , एक ...\"): $P=\\dfrac{m}{{}^nC_r}$ ($m$ = अनुकूल चयन के तरीके); यह एक-एक करके वाले उत्तर के बराबर है।"
+       ],
+       [
+        "Ex: 3 white, 6 red, two drawn, one of each: $\\dfrac{{}^3C_1\\,{}^6C_1}{{}^9C_2}=\\dfrac12=2!\\cdot\\dfrac39\\cdot\\dfrac68$.",
+        "उदा.: 3 सफेद, 6 लाल, दो निकालीं, एक-एक प्रत्येक रंग: $\\dfrac{{}^3C_1\\,{}^6C_1}{{}^9C_2}=\\dfrac12=2!\\cdot\\dfrac39\\cdot\\dfrac68$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Independent Events",
+    "hi": "स्वतन्त्र घटनाएँ",
+    "items": [
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean when 2 or more events are independent?",
+       "2 या अधिक घटनाओं के स्वतन्त्र होने से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "Occurrence of one does not change the chance of the other: $P(A|B)=P(A)$. Separate tosses, throws, shots, draws with replacement are independent.",
+        "एक के घटित होने से दूसरी की सम्भावना नहीं बदलती: $P(A|B)=P(A)$। अलग-अलग उछाल, फेंक, निशाने, प्रतिस्थापन सहित निकालना स्वतन्त्र होते हैं।"
+       ],
+       [
+        "Independent $\\ne$ mutually exclusive: mutually exclusive events with non-zero probabilities are never independent.",
+        "स्वतन्त्र $\\ne$ परस्पर अपवर्जी: शून्येतर प्रायिकता वाली परस्पर अपवर्जी घटनाएँ कभी स्वतन्त्र नहीं होतीं।"
+       ]
+      ]
+     },
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether 2 events are independent?",
+       "कैसे जाँचें कि 2 घटनाएँ स्वतन्त्र हैं?"
+      ],
+      "a": [
+       "$A,B\\text{ independent}\\iff P(A\\cap B)=P(A)\\,P(B)$",
+       [
+        "Then $A,B'$; $A',B$; $A',B'$ are also independent.",
+        "तब $A,B'$; $A',B$; $A',B'$ भी स्वतन्त्र हैं।"
+       ],
+       [
+        "Ex: card: King and diamond: $\\dfrac1{52}=\\dfrac1{13}\\cdot\\dfrac14$, independent.",
+        "उदा.: पत्ता: बादशाह और ईंट: $\\dfrac1{52}=\\dfrac1{13}\\cdot\\dfrac14$, स्वतन्त्र।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether 3 events are independent?",
+       "कैसे जाँचें कि 3 घटनाएँ स्वतन्त्र हैं?"
+      ],
+      "a": [
+       [
+        "All four: $P(A\\cap B)=P(A)P(B)$, $P(B\\cap C)=P(B)P(C)$, $P(C\\cap A)=P(C)P(A)$ and $P(A\\cap B\\cap C)=P(A)P(B)P(C)$. The first three alone = pairwise independent.",
+        "चारों: $P(A\\cap B)=P(A)P(B)$, $P(B\\cap C)=P(B)P(C)$, $P(C\\cap A)=P(C)P(A)$ तथा $P(A\\cap B\\cap C)=P(A)P(B)P(C)$। केवल पहली तीन = युग्मतः स्वतन्त्र।"
+       ],
+       [
+        "Ex: two coins, $A$: head on 1st, $B$: head on 2nd, $C$: exactly one head: pairwise independent, but $P(A\\cap B\\cap C)=0\\ne\\dfrac18$.",
+        "उदा.: दो सिक्के, $A$: पहले पर चित, $B$: दूसरे पर चित, $C$: ठीक एक चित: युग्मतः स्वतन्त्र, पर $P(A\\cap B\\cap C)=0\\ne\\dfrac18$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use Venn diagram in case 2 events are independent?",
+       "2 घटनाएँ स्वतन्त्र हों तो वेन आरेख का उपयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "With $P(A)=p_1,\\ P(B)=p_2$: both $p_1p_2$, only $A$ $p_1(1-p_2)$, only $B$ $(1-p_1)p_2$, neither $(1-p_1)(1-p_2)$; exactly one $=p_1+p_2-2p_1p_2$.",
+        "$P(A)=p_1,\\ P(B)=p_2$ हो तो: दोनों $p_1p_2$, केवल $A$ $p_1(1-p_2)$, केवल $B$ $(1-p_1)p_2$, कोई नहीं $(1-p_1)(1-p_2)$; ठीक एक $=p_1+p_2-2p_1p_2$।"
+       ],
+       [
+        "Ex: $p_1=\\dfrac12,\\ p_2=\\dfrac23$: problem solved $=1-\\dfrac12\\cdot\\dfrac13=\\dfrac56$.",
+        "उदा.: $p_1=\\dfrac12,\\ p_2=\\dfrac23$: प्रश्न हल हो $=1-\\dfrac12\\cdot\\dfrac13=\\dfrac56$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use Venn diagram in case 3 events are independent?",
+       "3 घटनाएँ स्वतन्त्र हों तो वेन आरेख का उपयोग कैसे करें?"
+      ],
+      "a": [
+       [
+        "Each region is a product: only $A$ $=p_1q_2q_3$, $A\\cap B$ only $=p_1p_2q_3$, all $=p_1p_2p_3$, none $=q_1q_2q_3$ ($q_i=1-p_i$).",
+        "प्रत्येक भाग एक गुणनफल: केवल $A$ $=p_1q_2q_3$, केवल $A\\cap B$ $=p_1p_2q_3$, सभी $=p_1p_2p_3$, कोई नहीं $=q_1q_2q_3$ ($q_i=1-p_i$)।"
+       ],
+       [
+        "Ex: $\\dfrac16,\\dfrac14,\\dfrac13$: at least one $=1-\\dfrac56\\cdot\\dfrac34\\cdot\\dfrac23=\\dfrac7{12}$.",
+        "उदा.: $\\dfrac16,\\dfrac14,\\dfrac13$: कम से कम एक $=1-\\dfrac56\\cdot\\dfrac34\\cdot\\dfrac23=\\dfrac7{12}$।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve infinite GP pattern based questions in independent events?",
+       "स्वतन्त्र घटनाओं में अनन्त गुणोत्तर श्रेणी वाले प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Trials repeated until a success (players in turn): first success at trial $k$: $q^{k-1}p$; $P(\\text{more than }k\\text{ trials})=q^k$.",
+        "सफलता मिलने तक प्रयोग दोहराना (बारी-बारी से खिलाड़ी): पहली सफलता $k$ वें प्रयास पर: $q^{k-1}p$; $k$ से अधिक प्रयासों की प्रायिकता $=q^k$।"
+       ],
+       "$P(\\text{first of two players wins})=p+q^2p+q^4p+\\dots=\\dfrac p{1-q^2}$",
+       [
+        "Ex: Ram and Shyam throw a die in turn, face 1 wins, Ram first: $\\dfrac{1/6}{1-25/36}=\\dfrac6{11}$.",
+        "उदा.: राम व श्याम बारी-बारी पासा फेंकते हैं, 1 आने पर जीत, राम पहले: $\\dfrac{1/6}{1-25/36}=\\dfrac6{11}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Law of Total Probability",
+    "hi": "सम्पूर्ण प्रायिकता का नियम",
+    "items": [
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve questions of law of total probability?",
+       "सम्पूर्ण प्रायिकता के नियम वाले प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       "$P(A)=\\displaystyle\\sum_{i=1}^n P(B_i)\\,P(A|B_i),\\quad B_1,\\dots,B_n\\text{ mutually exclusive and exhaustive}$",
+       [
+        "Ex: 3 fair coins and 1 double-headed coin, one drawn and tossed: $P(H)=\\dfrac34\\cdot\\dfrac12+\\dfrac14\\cdot1=\\dfrac58$.",
+        "उदा.: 3 सामान्य सिक्के व 1 दोनों ओर चित वाला, एक निकालकर उछाला: $P(H)=\\dfrac34\\cdot\\dfrac12+\\dfrac14\\cdot1=\\dfrac58$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Can you solve law of total probability questions by drawing tree diagram?",
+       "क्या आप वृक्ष आरेख बनाकर सम्पूर्ण प्रायिकता के प्रश्न हल कर सकते हैं?"
+      ],
+      "a": [
+       [
+        "First branches: the cases $B_i$ with $P(B_i)$; second branches: $P(A|B_i)$. Multiply along each path ending in $A$ and add the paths.",
+        "पहली शाखाएँ: स्थितियाँ $B_i$ व $P(B_i)$; दूसरी शाखाएँ: $P(A|B_i)$। $A$ पर समाप्त प्रत्येक पथ पर गुणा कीजिए और पथों को जोड़िए।"
+       ],
+       [
+        "Ex: coins above: paths fair$\\to H$: $\\dfrac38$, double-headed$\\to H$: $\\dfrac14$; total $\\dfrac58$.",
+        "उदा.: ऊपर के सिक्के: पथ सामान्य$\\to H$: $\\dfrac38$, दोनों ओर चित$\\to H$: $\\dfrac14$; योग $\\dfrac58$।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to express solution of questions of law of total probability in board method?",
+       "सम्पूर्ण प्रायिकता के प्रश्न का हल बोर्ड विधि में कैसे लिखें?"
+      ],
+      "a": [
+       [
+        "Write: let $E_1,E_2,\\dots$ be the cases (mutually exclusive, exhaustive) and $A$ the event; state $P(E_i)$ and $P(A|E_i)$; then $P(A)=\\sum P(E_i)P(A|E_i)$.",
+        "लिखिए: माना $E_1,E_2,\\dots$ स्थितियाँ (परस्पर अपवर्जी, निःशेष) तथा $A$ घटना; $P(E_i)$ व $P(A|E_i)$ लिखिए; फिर $P(A)=\\sum P(E_i)P(A|E_i)$।"
+       ],
+       [
+        "Ex: purse compartments $1R2P,\\ 2R3P,\\ 3R4P$: $P(R)=\\dfrac13\\left(\\dfrac13+\\dfrac25+\\dfrac37\\right)=\\dfrac{122}{315}$.",
+        "उदा.: बटुए के खाने $1R2P,\\ 2R3P,\\ 3R4P$: $P(R)=\\dfrac13\\left(\\dfrac13+\\dfrac25+\\dfrac37\\right)=\\dfrac{122}{315}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Bayes' Theorem",
+    "hi": "बेज़ प्रमेय",
+    "items": [
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to identify whether a question is of Bayes' theorem?",
+       "कैसे पहचानें कि प्रश्न बेज़ प्रमेय का है?"
+      ],
+      "a": [
+       [
+        "The result (effect) is given and the probability of a cause is asked: \"given that the ball is red, find the probability that it came from bag II\".",
+        "परिणाम (प्रभाव) दिया है और किसी कारण की प्रायिकता पूछी है: \"गेंद लाल है, तो प्रायिकता कि वह थैले II से निकली\"।"
+       ],
+       "$P(B_i|A)=\\dfrac{P(B_i)\\,P(A|B_i)}{\\sum_j P(B_j)\\,P(A|B_j)}$",
+       [
+        "Ex: compartments above, coin is a rupee: $P(\\text{3rd}|R)=\\dfrac{\\frac13\\cdot\\frac37}{122/315}=\\dfrac{45}{122}$.",
+        "उदा.: ऊपर के खाने, सिक्का रुपया है: $P(C_3|R)=\\dfrac{\\frac13\\cdot\\frac37}{122/315}=\\dfrac{45}{122}$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write denominator in Bayes' theorem questions?",
+       "बेज़ प्रमेय के प्रश्नों में हर कैसे लिखें?"
+      ],
+      "a": [
+       [
+        "Denominator = total probability of the observed event: all paths that lead to the observation. Numerator = only the path of the asked cause.",
+        "हर = देखी गई घटना की सम्पूर्ण प्रायिकता: वे सभी पथ जो उस परिणाम तक पहुँचते हैं। अंश = केवल पूछे गए कारण का पथ।"
+       ],
+       [
+        "Ex: 4 fair coins, 1 double-headed; HH seen: $P(\\text{fair}|HH)=\\dfrac{\\frac45\\cdot\\frac14}{\\frac45\\cdot\\frac14+\\frac15\\cdot1}=\\dfrac12$.",
+        "उदा.: 4 सामान्य, 1 दोनों ओर चित वाला सिक्का; HH आया: $P(F|HH)=\\dfrac{\\frac45\\cdot\\frac14}{\\frac45\\cdot\\frac14+\\frac15\\cdot1}=\\dfrac12$।"
+       ]
+      ]
+     },
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to use extended Bayes' theorem and when to use?",
+       "विस्तारित बेज़ प्रमेय का उपयोग कैसे और कब करें?"
+      ],
+      "a": [
+       [
+        "When, after an observation $A$, the probability of a further event $C$ (next toss/draw) is asked: $P(C|A)=\\sum_i P(B_i|A)\\,P(C|B_i\\cap A)=\\dfrac{\\sum P(B_i)P(A\\cap C|B_i)}{\\sum P(B_i)P(A|B_i)}$.",
+        "जब परिणाम $A$ के बाद अगली घटना $C$ (अगला उछाल/निकालना) की प्रायिकता पूछी हो: $P(C|A)=\\sum_i P(B_i|A)\\,P(C|B_i\\cap A)=\\dfrac{\\sum P(B_i)P(A\\cap C|B_i)}{\\sum P(B_i)P(A|B_i)}$।"
+       ],
+       [
+        "Ex: 3 fair and 2 double-headed coins; head seen, same coin tossed again: $\\dfrac{\\frac35\\cdot\\frac14+\\frac25}{\\frac35\\cdot\\frac12+\\frac25}=\\dfrac{11}{14}$.",
+        "उदा.: 3 सामान्य व 2 दोनों ओर चित वाले सिक्के; चित आया, वही सिक्का फिर उछाला: $\\dfrac{\\frac35\\cdot\\frac14+\\frac25}{\\frac35\\cdot\\frac12+\\frac25}=\\dfrac{11}{14}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Binomial Probability Distribution (BPD)",
+    "hi": "द्विपद प्रायिकता बंटन (BPD)",
+    "items": [
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the conditions for a trial to be Bernoulli trials?",
+       "प्रयासों के बरनौली प्रयास होने की शर्तें क्या हैं?"
+      ],
+      "a": [
+       [
+        "(i) finite number $n$ of trials, (ii) trials independent, (iii) each trial has two outcomes, success or failure, (iv) $P(\\text{success})=p$ same in every trial.",
+        "(i) प्रयासों की संख्या $n$ परिमित, (ii) प्रयास स्वतन्त्र, (iii) प्रत्येक के दो परिणाम, सफलता या असफलता, (iv) सफलता की प्रायिकता $p$ प्रत्येक प्रयास में समान।"
+       ],
+       [
+        "Ex: draws with replacement are Bernoulli trials; draws without replacement are not.",
+        "उदा.: प्रतिस्थापन सहित निकालना बरनौली प्रयास है; बिना प्रतिस्थापन नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is X and q in BPD?",
+       "BPD में X तथा q क्या हैं?"
+      ],
+      "a": [
+       [
+        "$X$ = number of successes in $n$ trials ($X=0,1,\\dots,n$); $p=P(\\text{success})$, $q=1-p=P(\\text{failure})$.",
+        "$X$ = $n$ प्रयासों में सफलताओं की संख्या ($X=0,1,\\dots,n$); $p$ = सफलता की प्रायिकता, $q=1-p$ = असफलता की प्रायिकता।"
+       ],
+       [
+        "Ex: success = \"six\" on a die: $p=\\dfrac16,\\ q=\\dfrac56$.",
+        "उदा.: सफलता = पासे पर \"छः\": $p=\\dfrac16,\\ q=\\dfrac56$।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the formula for $P(X=r)$?",
+       "$P(X=r)$ का सूत्र क्या है?"
+      ],
+      "a": [
+       "$P(X=r)={}^nC_r\\,p^r\\,q^{\\,n-r},\\quad r=0,1,\\dots,n$",
+       [
+        "Ex: a die thrown 5 times, 3 appears exactly twice: ${}^5C_2\\left(\\dfrac16\\right)^2\\left(\\dfrac56\\right)^3=\\dfrac{625}{3888}$.",
+        "उदा.: पासा 5 बार फेंका, 3 ठीक दो बार: ${}^5C_2\\left(\\dfrac16\\right)^2\\left(\\dfrac56\\right)^3=\\dfrac{625}{3888}$।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How is BPD denoted ($B(n,p)$)?",
+       "BPD को कैसे दर्शाते हैं ($B(n,p)$)?"
+      ],
+      "a": [
+       [
+        "$X\\sim B(n,p)$: $n$ trials, success probability $p$; the probabilities are the terms of $(q+p)^n$, so they add to $1$.",
+        "$X\\sim B(n,p)$: $n$ प्रयास, सफलता की प्रायिकता $p$; प्रायिकताएँ $(q+p)^n$ के पद हैं, अतः योग $1$।"
+       ],
+       [
+        "Ex: $B(5,\\tfrac12)$: $P(X=0)=\\dfrac1{32}$; $\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}{r}\\cdot\\dfrac pq$.",
+        "उदा.: $B(5,\\tfrac12)$: $P(X=0)=\\dfrac1{32}$; $\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}{r}\\cdot\\dfrac pq$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-A 11, 25; J-M(XII) 9; DPP-5 2, 12; C-II 35",
+      "q": [
+       "How to find the least number of trials $n$ so that the probability of at least one (or at least $r$) success is at least $k$?",
+       "कम से कम एक (या कम से कम $r$) सफलता की प्रायिकता कम से कम $k$ हो, इसके लिए प्रयासों की न्यूनतम संख्या $n$ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "At least one: $1-q^n\\ge k\\iff q^n\\le1-k$; take logs or try $n=1,2,\\dots$. At least $r$: $1-\\sum_{i=0}^{r-1}{}^nC_ip^iq^{n-i}\\ge k$, test values of $n$.",
+        "कम से कम एक: $1-q^n\\ge k\\iff q^n\\le1-k$; लघुगणक लीजिए या $n=1,2,\\dots$ जाँचिए। कम से कम $r$: $1-\\sum_{i=0}^{r-1}{}^nC_ip^iq^{n-i}\\ge k$, $n$ के मान जाँचिए।"
+       ],
+       [
+        "Ex: fair coin, $P(\\text{at least one head})\\ge0.9$: $\\left(\\dfrac12\\right)^n\\le0.1\\Rightarrow n=4$.",
+        "उदा.: सामान्य सिक्का, कम से कम एक चित की प्रायिकता $\\ge0.9$: $\\left(\\dfrac12\\right)^n\\le0.1\\Rightarrow n=4$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-I 36; J-II 37",
+      "q": [
+       "How to find the most probable number of successes in $B(n,p)$?",
+       "$B(n,p)$ में सफलताओं की सर्वाधिक सम्भाव्य संख्या कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "The most probable $r$ satisfies $(n+1)p-1\\le r\\le(n+1)p$; if $(n+1)p$ is an integer, both $(n+1)p-1$ and $(n+1)p$ are most probable.",
+        "सर्वाधिक सम्भाव्य $r$ के लिए $(n+1)p-1\\le r\\le(n+1)p$; यदि $(n+1)p$ पूर्णांक हो तो $(n+1)p-1$ तथा $(n+1)p$ दोनों सर्वाधिक सम्भाव्य हैं।"
+       ],
+       [
+        "Ex: fair coin tossed 99 times: $(n+1)p=50$, so $r=49$ and $50$.",
+        "उदा.: सामान्य सिक्का 99 बार: $(n+1)p=50$, अतः $r=49$ तथा $50$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Probability through Tree Diagram",
+    "hi": "वृक्ष आरेख द्वारा प्रायिकता",
+    "items": [
+     {
+      "id": "44",
+      "o": 44,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve questions of probability through tree diagram?",
+       "वृक्ष आरेख द्वारा प्रायिकता के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "One level per stage; write on each branch its conditional probability (the bag after the earlier stages); required probability = sum of the products along the favourable paths.",
+        "प्रत्येक चरण का एक स्तर; हर शाखा पर उसकी सप्रतिबन्ध प्रायिकता (पिछले चरणों के बाद का थैला) लिखिए; अभीष्ट प्रायिकता = अनुकूल पथों के गुणनफलों का योग।"
+       ],
+       [
+        "Ex: bag 1R, 2B; ball replaced with one more of its colour; three reds: $\\dfrac13\\cdot\\dfrac24\\cdot\\dfrac35=\\dfrac1{10}$.",
+        "उदा.: थैला 1R, 2B; गेंद उसी रंग की एक और गेंद के साथ वापस; तीनों लाल: $\\dfrac13\\cdot\\dfrac24\\cdot\\dfrac35=\\dfrac1{10}$।"
+       ]
+      ]
+     },
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to compute probability of any branch of a tree?",
+       "वृक्ष की किसी शाखा की प्रायिकता कैसे निकालें?"
+      ],
+      "a": [
+       [
+        "Probability of a path = product of the probabilities on its branches from the start; the branches leaving one node add up to $1$.",
+        "पथ की प्रायिकता = आरम्भ से उसकी शाखाओं की प्रायिकताओं का गुणनफल; एक बिन्दु से निकलने वाली शाखाओं का योग $1$ होता है।"
+       ],
+       [
+        "Ex: same bag, blue then blue: $\\dfrac23\\cdot\\dfrac34=\\dfrac12$.",
+        "उदा.: वही थैला, पहले नीली फिर नीली: $\\dfrac23\\cdot\\dfrac34=\\dfrac12$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Geometrical Probability",
+    "hi": "ज्यामितीय प्रायिकता",
+    "items": [
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve geometrical probability questions?",
+       "ज्यामितीय प्रायिकता के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       "$P=\\dfrac{\\text{favourable length / area / volume}}{\\text{total length / area / volume}}$",
+       [
+        "Two real numbers $x,y$ from $[0,a]$: sample space = square of side $a$; draw the region of the condition.",
+        "$[0,a]$ से दो वास्तविक संख्याएँ $x,y$: प्रतिदर्श समष्टि = भुजा $a$ का वर्ग; शर्त का क्षेत्र बनाइए।"
+       ],
+       [
+        "Ex: point in a circle of radius $a$, nearer the circumference than the centre: $1-\\dfrac{\\pi(a/2)^2}{\\pi a^2}=\\dfrac34$.",
+        "उदा.: त्रिज्या $a$ के वृत्त में बिन्दु, केन्द्र की अपेक्षा परिधि के निकट: $1-\\dfrac{\\pi(a/2)^2}{\\pi a^2}=\\dfrac34$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Probability Distribution of Random Variable",
+    "hi": "यादृच्छिक चर का प्रायिकता बंटन",
+    "items": [
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to write probability distribution of a random variable for an experiment?",
+       "किसी प्रयोग के लिए यादृच्छिक चर का प्रायिकता बंटन कैसे लिखें?"
+      ],
+      "a": [
+       [
+        "List all values $x_i$ of $X$ and $p_i=P(X=x_i)$ with $p_i\\ge0$, $\\sum p_i=1$ (use this to find an unknown $k$). Drawing without replacement: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$.",
+        "$X$ के सभी मान $x_i$ तथा $p_i=P(X=x_i)$ लिखिए, $p_i\\ge0$, $\\sum p_i=1$ (अज्ञात $k$ इसी से)। बिना प्रतिस्थापन: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$।"
+       ],
+       [
+        "Ex: two coins, $X$ = number of heads: $0,1,2$ with $\\dfrac14,\\dfrac12,\\dfrac14$.",
+        "उदा.: दो सिक्के, $X$ = चितों की संख्या: $0,1,2$ की प्रायिकताएँ $\\dfrac14,\\dfrac12,\\dfrac14$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Mean and Variance of Probability Distribution",
+    "hi": "प्रायिकता बंटन का माध्य और प्रसरण",
+    "items": [
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to calculate mean and variance of probability distribution?",
+       "प्रायिकता बंटन का माध्य और प्रसरण कैसे निकालें?"
+      ],
+      "a": [
+       "$\\mu=E(X)=\\sum p_ix_i,\\qquad \\sigma^2=\\sum p_ix_i^2-\\mu^2,\\qquad \\sigma=\\sqrt{\\sigma^2}$",
+       [
+        "Expectation of a game $=\\sum p_iM_i$ (negative: unfavourable). $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$.",
+        "खेल की प्रत्याशा $=\\sum p_iM_i$ (ऋणात्मक: प्रतिकूल)। $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$।"
+       ],
+       [
+        "Ex: two coins, $X$ = heads: $\\mu=1$, $\\sigma^2=\\dfrac12+1-1=\\dfrac12$.",
+        "उदा.: दो सिक्के, $X$ = चित: $\\mu=1$, $\\sigma^2=\\dfrac12+1-1=\\dfrac12$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Mean and Variance of Binomial Probability Distribution",
+    "hi": "द्विपद प्रायिकता बंटन का माध्य और प्रसरण",
+    "items": [
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to calculate mean and variance of binomial probability distribution?",
+       "द्विपद प्रायिकता बंटन का माध्य और प्रसरण कैसे निकालें?"
+      ],
+      "a": [
+       "$\\text{Mean}=np,\\qquad \\text{Variance}=npq,\\qquad \\text{SD}=\\sqrt{npq}$",
+       [
+        "Variance $<$ mean; $\\dfrac{\\text{variance}}{\\text{mean}}=q$ gives $q$, then $p$ and $n$.",
+        "प्रसरण $<$ माध्य; प्रसरण $\\div$ माध्य $=q$ से $q$, फिर $p$ और $n$।"
+       ],
+       [
+        "Ex: mean 4, variance 2: $q=\\dfrac12,\\ p=\\dfrac12,\\ n=8$.",
+        "उदा.: माध्य 4, प्रसरण 2: $q=\\dfrac12,\\ p=\\dfrac12,\\ n=8$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve probability questions of units digit in product of n numbers?",
+       "n संख्याओं के गुणनफल के इकाई अंक वाले प्रायिकता प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Only the last digits matter; each last digit $0$ to $9$ has probability $\\dfrac1{10}$. Units digit of the product of $n$ numbers:",
+        "केवल अन्तिम अंक महत्वपूर्ण हैं; प्रत्येक अन्तिम अंक $0$ से $9$ की प्रायिकता $\\dfrac1{10}$। $n$ संख्याओं के गुणनफल का इकाई अंक:"
+       ],
+       "$1,3,7,9:\\ \\dfrac{4^n}{10^n};\\quad 2,4,6,8:\\ \\dfrac{8^n-4^n}{10^n};\\quad 5:\\ \\dfrac{5^n-4^n}{10^n};\\quad 0:\\ \\dfrac{10^n-8^n-5^n+4^n}{10^n}$",
+       [
+        "Ex: two numbers multiplied, units digit 5: $\\dfrac{25-16}{100}=\\dfrac9{100}$.",
+        "उदा.: दो संख्याओं का गुणनफल, इकाई अंक 5: $\\dfrac{25-16}{100}=\\dfrac9{100}$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Basic terms",
+    "hi": "1. मूल पद",
+    "color": "blue",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Random experiment: outcome is one of known possible outcomes; sample space $S$ = set of all outcomes; event = subset of $S$",
+        "यादृच्छिक प्रयोग: परिणाम ज्ञात सम्भव परिणामों में से एक; प्रतिदर्श समष्टि $S$ = सभी परिणामों का समुच्चय; घटना = $S$ का उपसमुच्चय"
+       ],
+       [
+        "Impossible event $\\phi$: $P=0$; sure event $S$: $P=1$",
+        "असम्भव घटना $\\phi$: $P=0$; निश्चित घटना $S$: $P=1$"
+       ],
+       [
+        "Mutually exclusive: $A_i\\cap A_j=\\phi$; exhaustive: $\\cup A_i=S$; equally likely: same chance",
+        "परस्पर अपवर्जी: $A_i\\cap A_j=\\phi$; निःशेष: $\\cup A_i=S$; समसम्भाव्य: समान सम्भावना"
+       ],
+       [
+        "Mutually exclusive and exhaustive $\\Rightarrow\\sum P(A_i)=1$; pairwise exclusive $\\Rightarrow$ all exclusive",
+        "परस्पर अपवर्जी व निःशेष $\\Rightarrow\\sum P(A_i)=1$; युग्मतः अपवर्जी $\\Rightarrow$ सभी अपवर्जी"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Classical definition and complement",
+    "hi": "2. चिरसम्मत परिभाषा व पूरक",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A)=\\dfrac{n(A)}{n(S)},\\qquad P(A')=1-P(A)$",
+        "$P(A)=\\dfrac{n(A)}{n(S)},\\qquad P(A')=1-P(A)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Outcomes must be equally likely: treat alike objects as distinct",
+        "परिणाम समसम्भाव्य हों: समान वस्तुओं को भिन्न मानिए"
+       ],
+       [
+        "Count $n(A)$, $n(S)$ with P and C in the same way (both ordered or both unordered)",
+        "$n(A)$, $n(S)$ को क्रमचय-संचय से एक ही ढंग से गिनिए (दोनों क्रमित या दोनों अक्रमित)"
+       ],
+       [
+        "\"At least one\", \"not all\", \"solved\", \"hit\": use $1-P(\\text{opposite})$",
+        "\"कम से कम एक\", \"सभी नहीं\", \"हल हो\", \"भेदा जाए\": $1-P(E^{\\prime})$, $E^{\\prime}$ विपरीत घटना"
+       ],
+       [
+        "At least $r$: $1-P(X\\le r-1)$; at most $r$: $P(0)+\\dots+P(r)$",
+        "कम से कम $r$: $1-P(X\\le r-1)$; अधिक से अधिक $r$: $P(0)+\\dots+P(r)$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Numerator and denominator counted differently (one ordered, one not)",
+        "अंश व हर अलग ढंग से गिनना (एक क्रमित, एक अक्रमित)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Bounds on probabilities",
+    "hi": "3. प्रायिकताओं की सीमाएँ",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\max\\{0,P(A)+P(B)-1\\}\\le P(A\\cap B)\\le\\min\\{P(A),P(B)\\}$",
+        "$\\max\\{0,P(A)+P(B)-1\\}\\le P(A\\cap B)\\le\\min\\{P(A),P(B)\\}$"
+       ],
+       [
+        "$\\max\\{P(A),P(B)\\}\\le P(A\\cup B)\\le\\min\\{1,P(A)+P(B)\\}$",
+        "$\\max\\{P(A),P(B)\\}\\le P(A\\cup B)\\le\\min\\{1,P(A)+P(B)\\}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Every probability in $[0,1]$; mutually exclusive events: sum $\\le1$; solve all inequalities together",
+        "प्रत्येक प्रायिकता $[0,1]$ में; परस्पर अपवर्जी घटनाएँ: योग $\\le1$; सभी असमिकाएँ साथ हल कीजिए"
+       ],
+       [
+        "$P(A)=0$ does not force $A=\\phi$ in a general sample space",
+        "सामान्य प्रतिदर्श समष्टि में $P(A)=0$ से $A=\\phi$ आवश्यक नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Odds",
+    "hi": "4. संयोगानुपात",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{in favour}=\\dfrac{P}{1-P},\\qquad\\text{against}=\\dfrac{1-P}{P}$",
+        "पक्ष $=\\dfrac{P}{1-P}$, विपक्ष $=\\dfrac{1-P}{P}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Odds in favour $p:q\\Rightarrow P=\\dfrac p{p+q}$; odds against $p:q\\Rightarrow P=\\dfrac q{p+q}$",
+        "पक्ष में $p:q\\Rightarrow P=\\dfrac p{p+q}$; विपक्ष में $p:q\\Rightarrow P=\\dfrac q{p+q}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Sample spaces of dice and coins",
+    "hi": "5. पासों व सिक्कों की प्रतिदर्श समष्टि",
+    "color": "violet",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$n$ dice: $6^n$ ordered outcomes; $n$ coins: $2^n$; one die twice = two dice",
+        "$n$ पासे: $6^n$ क्रमित परिणाम; $n$ सिक्के: $2^n$; एक पासा दो बार = दो पासे"
+       ],
+       [
+        "Two dice, ways of sum $2,\\dots,12$: $1,2,3,4,5,6,5,4,3,2,1$; doublet $\\dfrac16$",
+        "दो पासे, योग $2,\\dots,12$ के तरीके: $1,2,3,4,5,6,5,4,3,2,1$; युग्मक $\\dfrac16$"
+       ],
+       [
+        "Exactly $r$ heads in $n$ tosses: $\\dfrac{{}^nC_r}{2^n}$",
+        "$n$ उछालों में ठीक $r$ चित: $\\dfrac{{}^nC_r}{2^n}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Venn diagram and union",
+    "hi": "6. वेन आरेख व सम्मिलन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$",
+        "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$"
+       ],
+       [
+        "$P(A\\cup B\\cup C)=\\sum P(A)-\\sum P(A\\cap B)+P(A\\cap B\\cap C)$",
+        "$P(A\\cup B\\cup C)=\\sum P(A)-\\sum P(A\\cap B)+P(A\\cap B\\cap C)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Only $A$: $P(A)-P(A\\cap B)$; exactly one of $A,B$: $P(A)+P(B)-2P(A\\cap B)$; neither: $1-P(A\\cup B)$",
+        "केवल $A$: $P(A)-P(A\\cap B)$; $A,B$ में से ठीक एक: $P(A)+P(B)-2P(A\\cap B)$; कोई नहीं: $1-P(A\\cup B)$"
+       ],
+       [
+        "Three events: exactly two $=\\sum P(A\\cap B)-3P(A\\cap B\\cap C)$; at least two $=\\sum P(A\\cap B)-2P(A\\cap B\\cap C)$",
+        "तीन घटनाएँ: ठीक दो $=\\sum P(A\\cap B)-3P(A\\cap B\\cap C)$; कम से कम दो $=\\sum P(A\\cap B)-2P(A\\cap B\\cap C)$"
+       ],
+       [
+        "Exactly one of three $=\\sum P(A)-2\\sum P(A\\cap B)+3P(A\\cap B\\cap C)$",
+        "तीन में से ठीक एक $=\\sum P(A)-2\\sum P(A\\cap B)+3P(A\\cap B\\cap C)$"
+       ],
+       [
+        "$n$ events: $S_1-S_2+S_3-\\dots$ (alternate signs); De Morgan: $(A\\cup B)'=A'\\cap B'$",
+        "$n$ घटनाएँ: $S_1-S_2+S_3-\\dots$ (एकान्तर चिह्न); डी मॉर्गन: $(A\\cup B)'=A'\\cap B'$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write unknown region probabilities $a,b,c,\\dots$",
+        "अज्ञात भागों की प्रायिकताएँ $a,b,c,\\dots$ लिखिए"
+       ],
+       [
+        "Turn every given value into an equation; total $=1$",
+        "प्रत्येक दिए मान को समीकरण में बदलिए; कुल $=1$"
+       ],
+       [
+        "Solve and add the regions asked",
+        "हल करके पूछे गए भाग जोड़िए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Conditional probability",
+    "hi": "7. सप्रतिबन्ध प्रायिकता",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}=\\dfrac{n(A\\cap B)}{n(B)}$",
+        "$P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}=\\dfrac{n(A\\cap B)}{n(B)}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "The given event (after the bar) is the new sample space",
+        "दी गई घटना (रेखा के बाद) नई प्रतिदर्श समष्टि है"
+       ],
+       [
+        "$P(A'|B)=1-P(A|B)$; $A\\subseteq B$: $P(B|A)=1$, $P(A|B)=\\dfrac{P(A)}{P(B)}$; disjoint: $P(A|B)=0$",
+        "$P(A'|B)=1-P(A|B)$; $A\\subseteq B$: $P(B|A)=1$, $P(A|B)=\\dfrac{P(A)}{P(B)}$; असंयुक्त: $P(A|B)=0$"
+       ],
+       [
+        "$\\dfrac{P(A|B)}{P(B|A)}=\\dfrac{P(A)}{P(B)}$",
+        "$\\dfrac{P(A|B)}{P(B|A)}=\\dfrac{P(A)}{P(B)}$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$P(A|B')\\ne1-P(A|B)$ and $P(A|B)\\ne P(B|A)$",
+        "$P(A|B')\\ne1-P(A|B)$ तथा $P(A|B)\\ne P(B|A)$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Multiplication theorem",
+    "hi": "8. गुणन प्रमेय",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A\\cap B)=P(A)P(B|A),\\quad P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)$",
+        "$P(A\\cap B)=P(A)P(B|A),\\quad P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "One by one without replacement: bag shrinks after each draw; with replacement: same bag",
+        "एक-एक करके बिना प्रतिस्थापन: हर बार थैला घटता है; प्रतिस्थापन सहित: वही थैला"
+       ],
+       [
+        "Order not asked: ${}^nC_r$ method $=\\dfrac{\\text{favourable selections}}{{}^nC_r}$",
+        "क्रम न पूछा हो: ${}^nC_r$ विधि $=\\dfrac{m}{{}^nC_r}$ ($m$ = अनुकूल चयन)"
+       ],
+       [
+        "One-by-one for \"one of each\": multiply by the number of orders",
+        "\"प्रत्येक में से एक\" एक-एक करके: क्रमों की संख्या से गुणा"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Independent events",
+    "hi": "9. स्वतन्त्र घटनाएँ",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A\\cap B)=P(A)P(B);\\qquad P(A\\cup B)=1-P(A')P(B')$",
+        "$P(A\\cap B)=P(A)P(B);\\qquad P(A\\cup B)=1-P(A')P(B')$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Then $A,B'$; $A',B$; $A',B'$ are independent",
+        "तब $A,B'$; $A',B$; $A',B'$ भी स्वतन्त्र"
+       ],
+       [
+        "Three events: 3 pairwise conditions and $P(ABC)=P(A)P(B)P(C)$",
+        "तीन घटनाएँ: 3 युग्म शर्तें तथा $P(ABC)=P(A)P(B)P(C)$"
+       ],
+       [
+        "Venn regions are products: only $A$ $=p_1q_2$, exactly one $=p_1+p_2-2p_1p_2$",
+        "वेन भाग गुणनफल हैं: केवल $A$ $=p_1q_2$, ठीक एक $=p_1+p_2-2p_1p_2$"
+       ],
+       [
+        "At least one of $n$: $1-q_1q_2\\dots q_n$",
+        "$n$ में से कम से कम एक: $1-q_1q_2\\dots q_n$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Mutually exclusive with non-zero probabilities $\\Rightarrow$ NOT independent",
+        "शून्येतर प्रायिकता वाली परस्पर अपवर्जी घटनाएँ $\\Rightarrow$ स्वतन्त्र नहीं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Repeated trials (infinite GP)",
+    "hi": "10. बार-बार प्रयास (अनन्त गुणोत्तर श्रेणी)",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(X=k)=q^{k-1}p,\\quad P(X>k)=q^k,\\quad P(\\text{1st of 2 wins})=\\dfrac p{1-q^2}$",
+        "$P(X=k)=q^{k-1}p,\\quad P(X>k)=q^k$; दो में पहला जीते: $\\dfrac p{1-q^2}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Three players in turn: first wins $\\dfrac p{1-q^3}$",
+        "तीन खिलाड़ी बारी-बारी: पहला जीते $\\dfrac p{1-q^3}$"
+       ],
+       [
+        "Short method: $x+qx+q^2x=1$ type equations for the players' shares",
+        "संक्षिप्त विधि: खिलाड़ियों के भाग के लिए $x+qx+q^2x=1$ प्रकार के समीकरण"
+       ],
+       [
+        "Number of tosses until first success: mean $\\dfrac1p$",
+        "पहली सफलता तक उछालों की संख्या: माध्य $\\dfrac1p$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Total probability and Bayes",
+    "hi": "11. सम्पूर्ण प्रायिकता व बेज़",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(A)=\\sum P(B_i)P(A|B_i),\\qquad P(B_i|A)=\\dfrac{P(B_i)P(A|B_i)}{\\sum P(B_j)P(A|B_j)}$",
+        "$P(A)=\\sum P(B_i)P(A|B_i),\\qquad P(B_i|A)=\\dfrac{P(B_i)P(A|B_i)}{\\sum P(B_j)P(A|B_j)}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "List the cases $B_i$ (bags, coins, machines), mutually exclusive and exhaustive",
+        "स्थितियाँ $B_i$ (थैले, सिक्के, मशीनें) लिखिए, परस्पर अपवर्जी व निःशेष"
+       ],
+       [
+        "Write $P(B_i)$ and $P(A|B_i)$ (tree diagram)",
+        "$P(B_i)$ तथा $P(A|B_i)$ लिखिए (वृक्ष आरेख)"
+       ],
+       [
+        "Effect asked: add the paths (total probability)",
+        "परिणाम पूछा: पथ जोड़िए (सम्पूर्ण प्रायिकता)"
+       ],
+       [
+        "Cause asked after effect given: one path $\\div$ all paths (Bayes)",
+        "परिणाम दिया, कारण पूछा: एक पथ $\\div$ सभी पथ (बेज़)"
+       ],
+       [
+        "Next event after an observation: extended Bayes $\\dfrac{\\sum P(B_i)P(A\\cap C|B_i)}{\\sum P(B_i)P(A|B_i)}$",
+        "परिणाम के बाद अगली घटना: विस्तारित बेज़ $\\dfrac{\\sum P(B_i)P(A\\cap C|B_i)}{\\sum P(B_i)P(A|B_i)}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Unknown composition (\"all numbers equally likely\"): each possible content is a case $B_i$",
+        "अज्ञात संरचना (\"सभी संख्याएँ समसम्भाव्य\"): प्रत्येक सम्भव सामग्री एक स्थिति $B_i$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Binomial distribution",
+    "hi": "12. द्विपद बंटन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P(X=r)={}^nC_rp^rq^{n-r},\\qquad \\text{mean}=np,\\ \\text{variance}=npq$",
+        "$P(X=r)={}^nC_rp^rq^{n-r}$, माध्य $=np$, प्रसरण $=npq$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Bernoulli trials: finite, independent, two outcomes, same $p$",
+        "बरनौली प्रयास: परिमित, स्वतन्त्र, दो परिणाम, समान $p$"
+       ],
+       [
+        "$\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}r\\cdot\\dfrac pq$ (use for equal or AP conditions)",
+        "$\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}r\\cdot\\dfrac pq$ (बराबर या समान्तर शर्तों में)"
+       ],
+       [
+        "Most probable $r$: $(n+1)p-1\\le r\\le(n+1)p$",
+        "सर्वाधिक सम्भाव्य $r$: $(n+1)p-1\\le r\\le(n+1)p$"
+       ],
+       [
+        "Least $n$ for $P(\\text{at least one})\\ge k$: $q^n\\le1-k$",
+        "कम से कम एक की प्रायिकता $\\ge k$ के लिए न्यूनतम $n$: $q^n\\le1-k$"
+       ],
+       [
+        "$\\dfrac{\\text{variance}}{\\text{mean}}=q<1$",
+        "प्रसरण $\\div$ माध्य $=q<1$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Drawing without replacement is not binomial",
+        "बिना प्रतिस्थापन निकालना द्विपद नहीं है"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Tree diagram",
+    "hi": "13. वृक्ष आरेख",
+    "color": "brown",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "One level per stage; branch = conditional probability given the path so far",
+        "प्रत्येक चरण का एक स्तर; शाखा = अब तक के पथ पर सप्रतिबन्ध प्रायिकता"
+       ],
+       [
+        "Path probability = product; required probability = sum of favourable paths",
+        "पथ प्रायिकता = गुणनफल; अभीष्ट प्रायिकता = अनुकूल पथों का योग"
+       ],
+       [
+        "Branches from one node add to $1$ (check)",
+        "एक बिन्दु से निकली शाखाओं का योग $1$ (जाँच)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Geometrical probability",
+    "hi": "14. ज्यामितीय प्रायिकता",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$P=\\dfrac{\\text{favourable length/area/volume}}{\\text{total length/area/volume}}$",
+        "प्रायिकता = अनुकूल लम्बाई/क्षेत्रफल/आयतन $\\div$ कुल लम्बाई/क्षेत्रफल/आयतन"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Two real numbers in $[0,a]$: square of side $a$; $|x-y|\\le d$ is the band between two lines",
+        "$[0,a]$ में दो वास्तविक संख्याएँ: भुजा $a$ का वर्ग; $|x-y|\\le d$ दो रेखाओं के बीच की पट्टी"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Random variable: mean and variance",
+    "hi": "15. यादृच्छिक चर: माध्य व प्रसरण",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\sum p_i=1,\\qquad \\mu=\\sum p_ix_i,\\qquad \\sigma^2=\\sum p_ix_i^2-\\mu^2$",
+        "$\\sum p_i=1,\\qquad \\mu=\\sum p_ix_i,\\qquad \\sigma^2=\\sum p_ix_i^2-\\mu^2$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Unknown $k$ in a table: $\\sum p_i=1$ and every $p_i\\ge0$ (reject the other root)",
+        "सारणी में अज्ञात $k$: $\\sum p_i=1$ तथा प्रत्येक $p_i\\ge0$ (दूसरा मूल अस्वीकार)"
+       ],
+       [
+        "Number of defectives in a sample without replacement: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$",
+        "बिना प्रतिस्थापन नमूने में दोषपूर्ण की संख्या: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$"
+       ],
+       [
+        "Expectation of a game $=\\sum p_iM_i$; $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$",
+        "खेल की प्रत्याशा $=\\sum p_iM_i$; $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "16. Units digit of a product",
+    "hi": "16. गुणनफल का इकाई अंक",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$1,3,7,9:\\ \\dfrac{4^n}{10^n};\\ \\ 2,4,6,8:\\ \\dfrac{8^n-4^n}{10^n};\\ \\ 5:\\ \\dfrac{5^n-4^n}{10^n};\\ \\ 0:\\ \\dfrac{10^n-8^n-5^n+4^n}{10^n}$",
+        "$1,3,7,9:\\ \\dfrac{4^n}{10^n};\\ \\ 2,4,6,8:\\ \\dfrac{8^n-4^n}{10^n};\\ \\ 5:\\ \\dfrac{5^n-4^n}{10^n};\\ \\ 0:\\ \\dfrac{10^n-8^n-5^n+4^n}{10^n}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Only last digits matter; each digit $0$ to $9$ has probability $\\dfrac1{10}$",
+        "केवल अन्तिम अंक महत्वपूर्ण; प्रत्येक अंक $0$ से $9$ की प्रायिकता $\\dfrac1{10}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "17. Common mistakes checklist",
+    "hi": "17. सामान्य गलतियों की जाँच-सूची",
+    "color": "orange",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Are all outcomes equally likely? (distinct objects, ordered pairs for dice)",
+        "क्या सभी परिणाम समसम्भाव्य हैं? (भिन्न वस्तुएँ, पासों के क्रमित युग्म)"
+       ],
+       [
+        "With or without replacement?",
+        "प्रतिस्थापन सहित या रहित?"
+       ],
+       [
+        "Which event is given? (conditional, Bayes)",
+        "कौन-सी घटना दी गई है? (सप्रतिबन्ध, बेज़)"
+       ],
+       [
+        "Independent or mutually exclusive? Never mix them",
+        "स्वतन्त्र या परस्पर अपवर्जी? दोनों को मत मिलाइए"
+       ],
+       [
+        "Three events independent: check all four conditions",
+        "तीन घटनाएँ स्वतन्त्र: चारों शर्तें जाँचिए"
+       ],
+       [
+        "Probabilities found must lie in $[0,1]$; reject other roots",
+        "प्राप्त प्रायिकताएँ $[0,1]$ में हों; अन्य मूल अस्वीकार"
+       ],
+       [
+        "Binomial needs independent trials with the same $p$",
+        "द्विपद के लिए समान $p$ वाले स्वतन्त्र प्रयास चाहिए"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Definition and bounds",
+    "hi": "1. परिभाषा व सीमाएँ",
+    "lines": [
+     [
+      "Classical: $P(A)=\\dfrac{n(A)}{n(S)}$",
+      "चिरसम्मत: $P(A)=\\dfrac{n(A)}{n(S)}$"
+     ],
+     [
+      "Complement: $P(A')=1-P(A)$",
+      "पूरक: $P(A')=1-P(A)$"
+     ],
+     [
+      "Range: $0\\le P(A)\\le1$",
+      "परिसर: $0\\le P(A)\\le1$"
+     ],
+     [
+      "Exclusive and exhaustive: $\\sum P(A_i)=1$",
+      "अपवर्जी व निःशेष: $\\sum P(A_i)=1$"
+     ],
+     [
+      "Bounds: $P(A)+P(B)-1\\le P(A\\cap B)\\le\\min\\{P(A),P(B)\\}$",
+      "सीमाएँ: $P(A)+P(B)-1\\le P(A\\cap B)\\le\\min\\{P(A),P(B)\\}$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Odds",
+    "hi": "2. संयोगानुपात",
+    "lines": [
+     [
+      "In favour: $\\dfrac{P}{1-P}$; against: $\\dfrac{1-P}P$",
+      "पक्ष: $\\dfrac{P}{1-P}$; विपक्ष: $\\dfrac{1-P}P$"
+     ],
+     [
+      "Odds in favour $p:q$: $P=\\dfrac p{p+q}$",
+      "पक्ष में $p:q$: $P=\\dfrac p{p+q}$"
+     ],
+     [
+      "Odds against $p:q$: $P=\\dfrac q{p+q}$",
+      "विपक्ष में $p:q$: $P=\\dfrac q{p+q}$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Dice and coins",
+    "hi": "3. पासे व सिक्के",
+    "lines": [
+     [
+      "$n$ dice / coins: $6^n$ / $2^n$ outcomes",
+      "$n$ पासे / सिक्के: $6^n$ / $2^n$ परिणाम"
+     ],
+     [
+      "Two dice, sum $s$: $\\dfrac{6-|s-7|}{36}$",
+      "दो पासे, योग $s$: $\\dfrac{6-|s-7|}{36}$"
+     ],
+     [
+      "$r$ heads in $n$ tosses: $\\dfrac{{}^nC_r}{2^n}$",
+      "$n$ उछाल में $r$ चित: $\\dfrac{{}^nC_r}{2^n}$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Union and Venn diagram",
+    "hi": "4. सम्मिलन व वेन आरेख",
+    "lines": [
+     [
+      "Two: $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$",
+      "दो: $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$"
+     ],
+     [
+      "Three: $P(A\\cup B\\cup C)=\\sum P(A)-\\sum P(A\\cap B)+P(A\\cap B\\cap C)$",
+      "तीन: $P(A\\cup B\\cup C)=\\sum P(A)-\\sum P(A\\cap B)+P(A\\cap B\\cap C)$"
+     ],
+     [
+      "$n$ events: $S_1-S_2+S_3-\\dots+(-1)^{n-1}S_n$",
+      "$n$ घटनाएँ: $S_1-S_2+S_3-\\dots+(-1)^{n-1}S_n$"
+     ],
+     [
+      "Only $A$: $P(A\\cap B')=P(A)-P(A\\cap B)$",
+      "केवल $A$: $P(A\\cap B')=P(A)-P(A\\cap B)$"
+     ],
+     [
+      "Exactly one of two: $P(A)+P(B)-2P(A\\cap B)$",
+      "दो में से ठीक एक: $P(A)+P(B)-2P(A\\cap B)$"
+     ],
+     [
+      "Neither: $P(A'\\cap B')=1-P(A\\cup B)$",
+      "कोई नहीं: $P(A'\\cap B')=1-P(A\\cup B)$"
+     ],
+     [
+      "Exactly two of three: $\\sum P(A\\cap B)-3P(A\\cap B\\cap C)$",
+      "तीन में से ठीक दो: $\\sum P(A\\cap B)-3P(A\\cap B\\cap C)$"
+     ],
+     [
+      "At least two of three: $\\sum P(A\\cap B)-2P(A\\cap B\\cap C)$",
+      "तीन में से कम से कम दो: $\\sum P(A\\cap B)-2P(A\\cap B\\cap C)$"
+     ],
+     [
+      "Exactly one of three: $\\sum P(A)-2\\sum P(A\\cap B)+3P(A\\cap B\\cap C)$",
+      "तीन में से ठीक एक: $\\sum P(A)-2\\sum P(A\\cap B)+3P(A\\cap B\\cap C)$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Conditional and multiplication",
+    "hi": "5. सप्रतिबन्ध व गुणन",
+    "lines": [
+     [
+      "Conditional: $P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}$",
+      "सप्रतिबन्ध: $P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}$"
+     ],
+     [
+      "Complement: $P(A'|B)=1-P(A|B)$",
+      "पूरक: $P(A'|B)=1-P(A|B)$"
+     ],
+     [
+      "Subset $A\\subseteq B$: $P(B|A)=1$",
+      "उपसमुच्चय $A\\subseteq B$: $P(B|A)=1$"
+     ],
+     [
+      "Disjoint: $P(A|B)=0$",
+      "असंयुक्त: $P(A|B)=0$"
+     ],
+     [
+      "Multiplication: $P(A\\cap B)=P(A)P(B|A)$",
+      "गुणन: $P(A\\cap B)=P(A)P(B|A)$"
+     ],
+     [
+      "Three: $P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)$",
+      "तीन: $P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Independent events",
+    "hi": "6. स्वतन्त्र घटनाएँ",
+    "lines": [
+     [
+      "Test: $P(A\\cap B)=P(A)P(B)$",
+      "जाँच: $P(A\\cap B)=P(A)P(B)$"
+     ],
+     [
+      "Three: pairwise and $P(ABC)=P(A)P(B)P(C)$",
+      "तीन: युग्मतः तथा $P(ABC)=P(A)P(B)P(C)$"
+     ],
+     [
+      "At least one: $1-q_1q_2\\cdots q_n$",
+      "कम से कम एक: $1-q_1q_2\\cdots q_n$"
+     ],
+     [
+      "Exactly one of two: $p_1q_2+q_1p_2$",
+      "दो में से ठीक एक: $p_1q_2+q_1p_2$"
+     ],
+     [
+      "First success at trial $k$: $q^{k-1}p$",
+      "$k$ वें प्रयास पर पहली सफलता: $q^{k-1}p$"
+     ],
+     [
+      "More than $k$ trials: $q^k$",
+      "$k$ से अधिक प्रयास: $q^k$"
+     ],
+     [
+      "First of two in turn wins: $\\dfrac p{1-q^2}$",
+      "दो में से पहला (बारी-बारी) जीते: $\\dfrac p{1-q^2}$"
+     ]
+    ]
+   },
+   {
+    "en": "7. Total probability and Bayes",
+    "hi": "7. सम्पूर्ण प्रायिकता व बेज़",
+    "lines": [
+     [
+      "Total: $P(A)=\\sum P(B_i)P(A|B_i)$",
+      "सम्पूर्ण: $P(A)=\\sum P(B_i)P(A|B_i)$"
+     ],
+     [
+      "Bayes: $P(B_i|A)=\\dfrac{P(B_i)P(A|B_i)}{\\sum P(B_j)P(A|B_j)}$",
+      "बेज़: $P(B_i|A)=\\dfrac{P(B_i)P(A|B_i)}{\\sum P(B_j)P(A|B_j)}$"
+     ],
+     [
+      "Extended: $P(C|A)=\\sum P(B_i|A)P(C|B_iA)$",
+      "विस्तारित: $P(C|A)=\\sum P(B_i|A)P(C|B_iA)$"
+     ]
+    ]
+   },
+   {
+    "en": "8. Binomial distribution",
+    "hi": "8. द्विपद बंटन",
+    "lines": [
+     [
+      "$B(n,p)$: $P(X=r)={}^nC_rp^rq^{n-r}$",
+      "$B(n,p)$: $P(X=r)={}^nC_rp^rq^{n-r}$"
+     ],
+     [
+      "Ratio: $\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}r\\cdot\\dfrac pq$",
+      "अनुपात: $\\dfrac{P(X=r)}{P(X=r-1)}=\\dfrac{n-r+1}r\\cdot\\dfrac pq$"
+     ],
+     [
+      "Mean $np$, variance $npq$, SD $\\sqrt{npq}$",
+      "माध्य $np$, प्रसरण $npq$, मानक विचलन $\\sqrt{npq}$"
+     ],
+     [
+      "Most probable: $(n+1)p-1\\le r\\le(n+1)p$",
+      "सर्वाधिक सम्भाव्य: $(n+1)p-1\\le r\\le(n+1)p$"
+     ],
+     [
+      "Least trials: $1-q^n\\ge k\\iff q^n\\le1-k$",
+      "न्यूनतम प्रयास: $1-q^n\\ge k\\iff q^n\\le1-k$"
+     ]
+    ]
+   },
+   {
+    "en": "9. Random variable",
+    "hi": "9. यादृच्छिक चर",
+    "lines": [
+     [
+      "Distribution: $p_i\\ge0,\\ \\sum p_i=1$",
+      "बंटन: $p_i\\ge0,\\ \\sum p_i=1$"
+     ],
+     [
+      "Mean: $\\mu=\\sum p_ix_i$",
+      "माध्य: $\\mu=\\sum p_ix_i$"
+     ],
+     [
+      "Variance: $\\sigma^2=\\sum p_ix_i^2-\\mu^2$",
+      "प्रसरण: $\\sigma^2=\\sum p_ix_i^2-\\mu^2$"
+     ],
+     [
+      "Linear: $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$",
+      "रैखिक: $E(aX+b)=a\\mu+b$, $\\mathrm{Var}(aX+b)=a^2\\sigma^2$"
+     ],
+     [
+      "Sample without replacement: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$",
+      "बिना प्रतिस्थापन नमूना: $P(X=r)=\\dfrac{{}^aC_r\\,{}^bC_{m-r}}{{}^{a+b}C_m}$"
+     ]
+    ]
+   },
+   {
+    "en": "10. Geometry and units digit",
+    "hi": "10. ज्यामिति व इकाई अंक",
+    "lines": [
+     [
+      "Geometrical: $P=\\dfrac{\\text{favourable measure}}{\\text{total measure}}$",
+      "ज्यामितीय: $P$ = अनुकूल माप $\\div$ कुल माप"
+     ],
+     [
+      "Units digit $1,3,7,9$: $\\dfrac{4^n}{10^n}$",
+      "इकाई अंक $1,3,7,9$: $\\dfrac{4^n}{10^n}$"
+     ],
+     [
+      "Units digit $2,4,6,8$: $\\dfrac{8^n-4^n}{10^n}$",
+      "इकाई अंक $2,4,6,8$: $\\dfrac{8^n-4^n}{10^n}$"
+     ],
+     [
+      "Units digit $5$: $\\dfrac{5^n-4^n}{10^n}$",
+      "इकाई अंक $5$: $\\dfrac{5^n-4^n}{10^n}$"
+     ],
+     [
+      "Units digit $0$: $\\dfrac{10^n-8^n-5^n+4^n}{10^n}$",
+      "इकाई अंक $0$: $\\dfrac{10^n-8^n-5^n+4^n}{10^n}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Basic terms",
+    "hi": "मूल पद",
+    "leaves": [
+     [
+      "$S$, events, sample points",
+      "$S$, घटनाएँ, प्रतिदर्श बिन्दु"
+     ],
+     [
+      "Exclusive, exhaustive: $\\sum P=1$",
+      "अपवर्जी, निःशेष: $\\sum P=1$"
+     ]
+    ]
+   },
+   {
+    "en": "Classical definition",
+    "hi": "चिरसम्मत परिभाषा",
+    "leaves": [
+     [
+      "$P=\\dfrac{n(A)}{n(S)}$",
+      "$P=\\dfrac{n(A)}{n(S)}$"
+     ],
+     [
+      "Treat objects as distinct",
+      "वस्तुएँ भिन्न मानिए"
+     ],
+     [
+      "$P(A')=1-P(A)$",
+      "$P(A')=1-P(A)$"
+     ]
+    ]
+   },
+   {
+    "en": "Bounds",
+    "hi": "सीमाएँ",
+    "leaves": [
+     [
+      "$0\\le P\\le1$",
+      "$0\\le P\\le1$"
+     ],
+     [
+      "$P(A)+P(B)-1\\le P(AB)$",
+      "$P(A)+P(B)-1\\le P(AB)$"
+     ]
+    ]
+   },
+   {
+    "en": "Odds",
+    "hi": "संयोगानुपात",
+    "leaves": [
+     [
+      "In favour $p:q\\Rightarrow\\dfrac p{p+q}$",
+      "पक्ष $p:q\\Rightarrow\\dfrac p{p+q}$"
+     ],
+     [
+      "Against $p:q\\Rightarrow\\dfrac q{p+q}$",
+      "विपक्ष $p:q\\Rightarrow\\dfrac q{p+q}$"
+     ]
+    ]
+   },
+   {
+    "en": "Dice and coins",
+    "hi": "पासे व सिक्के",
+    "leaves": [
+     [
+      "$6^n$, $2^n$ outcomes",
+      "$6^n$, $2^n$ परिणाम"
+     ],
+     [
+      "Sum pattern $1,\\dots,6,\\dots,1$",
+      "योग क्रम $1,\\dots,6,\\dots,1$"
+     ]
+    ]
+   },
+   {
+    "en": "Venn diagram",
+    "hi": "वेन आरेख",
+    "leaves": [
+     [
+      "$P(A\\cup B)=P(A)+P(B)-P(AB)$",
+      "$P(A\\cup B)=P(A)+P(B)-P(AB)$"
+     ],
+     [
+      "Exactly one / two of three",
+      "तीन में से ठीक एक / दो"
+     ],
+     [
+      "$S_1-S_2+S_3-\\dots$",
+      "$S_1-S_2+S_3-\\dots$"
+     ]
+    ]
+   },
+   {
+    "en": "Conditional",
+    "hi": "सप्रतिबन्ध",
+    "leaves": [
+     [
+      "$P(A|B)=\\dfrac{P(AB)}{P(B)}$",
+      "$P(A|B)=\\dfrac{P(AB)}{P(B)}$"
+     ],
+     [
+      "Given event = new $S$",
+      "दी गई घटना = नई $S$"
+     ]
+    ]
+   },
+   {
+    "en": "Multiplication",
+    "hi": "गुणन",
+    "leaves": [
+     [
+      "$P(AB)=P(A)P(B|A)$",
+      "$P(AB)=P(A)P(B|A)$"
+     ],
+     [
+      "${}^nC_r$ method when order not asked",
+      "क्रम न पूछा हो तो ${}^nC_r$ विधि"
+     ]
+    ]
+   },
+   {
+    "en": "Independent events",
+    "hi": "स्वतन्त्र घटनाएँ",
+    "leaves": [
+     [
+      "$P(AB)=P(A)P(B)$",
+      "$P(AB)=P(A)P(B)$"
+     ],
+     [
+      "Three: 4 conditions",
+      "तीन: 4 शर्तें"
+     ],
+     [
+      "At least one: $1-\\prod q_i$",
+      "कम से कम एक: $1-\\prod q_i$"
+     ]
+    ]
+   },
+   {
+    "en": "Repeated trials",
+    "hi": "बार-बार प्रयास",
+    "leaves": [
+     [
+      "$q^{k-1}p$, $P(X>k)=q^k$",
+      "$q^{k-1}p$, $P(X>k)=q^k$"
+     ],
+     [
+      "First player: $\\dfrac p{1-q^2}$",
+      "पहला खिलाड़ी: $\\dfrac p{1-q^2}$"
+     ]
+    ]
+   },
+   {
+    "en": "Total probability",
+    "hi": "सम्पूर्ण प्रायिकता",
+    "leaves": [
+     [
+      "$\\sum P(B_i)P(A|B_i)$",
+      "$\\sum P(B_i)P(A|B_i)$"
+     ],
+     [
+      "Tree: add the paths",
+      "वृक्ष: पथ जोड़िए"
+     ]
+    ]
+   },
+   {
+    "en": "Bayes' theorem",
+    "hi": "बेज़ प्रमेय",
+    "leaves": [
+     [
+      "Effect given, cause asked",
+      "परिणाम दिया, कारण पूछा"
+     ],
+     [
+      "One path $\\div$ all paths",
+      "एक पथ $\\div$ सभी पथ"
+     ],
+     [
+      "Extended: next event",
+      "विस्तारित: अगली घटना"
+     ]
+    ]
+   },
+   {
+    "en": "Binomial distribution",
+    "hi": "द्विपद बंटन",
+    "leaves": [
+     [
+      "${}^nC_rp^rq^{n-r}$",
+      "${}^nC_rp^rq^{n-r}$"
+     ],
+     [
+      "Mean $np$, variance $npq$",
+      "माध्य $np$, प्रसरण $npq$"
+     ],
+     [
+      "Least $n$: $q^n\\le1-k$",
+      "न्यूनतम $n$: $q^n\\le1-k$"
+     ]
+    ]
+   },
+   {
+    "en": "Tree diagram",
+    "hi": "वृक्ष आरेख",
+    "leaves": [
+     [
+      "Path = product",
+      "पथ = गुणनफल"
+     ],
+     [
+      "Answer = sum of paths",
+      "उत्तर = पथों का योग"
+     ]
+    ]
+   },
+   {
+    "en": "Random variable",
+    "hi": "यादृच्छिक चर",
+    "leaves": [
+     [
+      "$\\sum p_i=1$",
+      "$\\sum p_i=1$"
+     ],
+     [
+      "$\\mu=\\sum p_ix_i$, $\\sigma^2=\\sum p_ix_i^2-\\mu^2$",
+      "$\\mu=\\sum p_ix_i$, $\\sigma^2=\\sum p_ix_i^2-\\mu^2$"
+     ]
+    ]
+   },
+   {
+    "en": "Geometry and units digit",
+    "hi": "ज्यामिति व इकाई अंक",
+    "leaves": [
+     [
+      "Ratio of lengths / areas",
+      "लम्बाइयों / क्षेत्रफलों का अनुपात"
+     ],
+     [
+      "Units digit: last digits only",
+      "इकाई अंक: केवल अन्तिम अंक"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which basic method?",
+    "प्रवाह-चित्र 1: कौन-सी मूल विधि?"
+   ],
+   "start": [
+    "A probability is asked",
+    "कोई प्रायिकता पूछी है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Outcomes equally likely and countable?",
+      "परिणाम समसम्भाव्य व गिनने योग्य?"
+     ],
+     "a": [
+      [
+       "$P=\\dfrac{n(A)}{n(S)}$ with P and C (objects distinct)."
+      ],
+      [
+       "क्रमचय-संचय से $P=\\dfrac{n(A)}{n(S)}$ (वस्तुएँ भिन्न)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "\"At least one\" / \"not all\"?",
+      "\"कम से कम एक\" / \"सभी नहीं\"?"
+     ],
+     "a": [
+      [
+       "Complement: $1-P(\\text{opposite})$."
+      ],
+      [
+       "पूरक: $1-P(E')$, $E'$ विपरीत घटना।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Odds given?",
+      "संयोगानुपात दिया है?"
+     ],
+     "a": [
+      [
+       "In favour $p:q\\Rightarrow\\dfrac p{p+q}$."
+      ],
+      [
+       "पक्ष में $p:q\\Rightarrow\\dfrac p{p+q}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Point / length / area chosen at random?",
+      "बिन्दु / लम्बाई / क्षेत्रफल यादृच्छिक चुना?"
+     ],
+     "a": [
+      [
+       "Geometrical: ratio of measures."
+      ],
+      [
+       "ज्यामितीय: मापों का अनुपात।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Units digit of a product?",
+      "गुणनफल का इकाई अंक?"
+     ],
+     "a": [
+      [
+       "Use last digits: $\\dfrac{4^n}{10^n}$, $\\dfrac{5^n-4^n}{10^n}$, ..."
+      ],
+      [
+       "अन्तिम अंक: $\\dfrac{4^n}{10^n}$, $\\dfrac{5^n-4^n}{10^n}$, ..."
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Break into mutually exclusive cases and add."
+    ],
+    [
+     "परस्पर अपवर्जी स्थितियों में बाँटकर जोड़िए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Probabilities of events given",
+    "प्रवाह-चित्र 2: घटनाओं की प्रायिकताएँ दी हैं"
+   ],
+   "start": [
+    "Values such as $P(A)$, $P(A\\cap B)$, $P(A|B)$ are given",
+    "$P(A)$, $P(A\\cap B)$, $P(A|B)$ जैसे मान दिए हैं"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Two or three events with unions / \"exactly\"?",
+      "दो या तीन घटनाएँ, सम्मिलन / \"ठीक\"?"
+     ],
+     "a": [
+      [
+       "Venn regions $a,b,c,\\dots$; total $=1$."
+      ],
+      [
+       "वेन भाग $a,b,c,\\dots$; कुल $=1$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Events said to be independent?",
+      "घटनाएँ स्वतन्त्र कही गई हैं?"
+     ],
+     "a": [
+      [
+       "Regions are products $p_1q_2$, ...; use $P(AB)=P(A)P(B)$."
+      ],
+      [
+       "भाग गुणनफल $p_1q_2$, ...; $P(AB)=P(A)P(B)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Mutually exclusive with unknown values?",
+      "अज्ञात मानों वाली परस्पर अपवर्जी?"
+     ],
+     "a": [
+      [
+       "Each in $[0,1]$ and sum $\\le1$; intersect the ranges."
+      ],
+      [
+       "प्रत्येक $[0,1]$ में तथा योग $\\le1$; परिसरों का सर्वनिष्ठ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Conditional values given?",
+      "सप्रतिबन्ध मान दिए हैं?"
+     ],
+     "a": [
+      [
+       "$P(AB)=P(A)P(B|A)=P(B)P(A|B)$."
+      ],
+      [
+       "$P(AB)=P(A)P(B|A)=P(B)P(A|B)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Greatest / least value asked?",
+      "महत्तम / न्यूनतम मान पूछा?"
+     ],
+     "a": [
+      [
+       "Bounds $P(A)+P(B)-1\\le P(AB)\\le\\min$."
+      ],
+      [
+       "सीमाएँ $P(A)+P(B)-1\\le P(AB)\\le\\min$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Express the asked event through $P(A),P(B),P(A\\cap B)$."
+    ],
+    [
+     "पूछी गई घटना को $P(A),P(B),P(A\\cap B)$ में लिखिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Drawing balls / cards",
+    "प्रवाह-चित्र 3: गेंदें / पत्ते निकालना"
+   ],
+   "start": [
+    "Objects are drawn from a bag or pack",
+    "थैले या गड्डी से वस्तुएँ निकाली जाती हैं"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "With replacement?",
+      "प्रतिस्थापन सहित?"
+     ],
+     "a": [
+      [
+       "Independent draws: binomial / product of equal factors."
+      ],
+      [
+       "स्वतन्त्र निकालना: द्विपद / समान गुणकों का गुणनफल।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Without replacement, order not asked?",
+      "बिना प्रतिस्थापन, क्रम नहीं पूछा?"
+     ],
+     "a": [
+      [
+       "${}^nC_r$ method."
+      ],
+      [
+       "${}^nC_r$ विधि।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Without replacement, order matters (\"$k$th draw\", \"first ... then ...\")?",
+      "बिना प्रतिस्थापन, क्रम महत्वपूर्ण (\"$k$ वाँ\", \"पहले ... फिर ...\")?"
+     ],
+     "a": [
+      [
+       "Multiplication theorem along the order."
+      ],
+      [
+       "क्रम के अनुसार गुणन प्रमेय।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Balls added or transferred between draws?",
+      "निकालने के बीच गेंदें जोड़ी या स्थानान्तरित?"
+     ],
+     "a": [
+      [
+       "Tree diagram; total probability over the cases."
+      ],
+      [
+       "वृक्ष आरेख; स्थितियों पर सम्पूर्ण प्रायिकता।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Something observed, earlier stage asked?",
+      "कुछ देखा गया, पहले चरण के बारे में पूछा?"
+     ],
+     "a": [
+      [
+       "Bayes' theorem."
+      ],
+      [
+       "बेज़ प्रमेय।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Count with P and C and divide."
+    ],
+    [
+     "क्रमचय-संचय से गिनकर भाग दीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Several cases (bags, coins, machines)",
+    "प्रवाह-चित्र 4: कई स्थितियाँ (थैले, सिक्के, मशीनें)"
+   ],
+   "start": [
+    "The experiment first chooses one of several cases",
+    "प्रयोग पहले कई स्थितियों में से एक चुनता है"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Probability of the final result asked?",
+      "अन्तिम परिणाम की प्रायिकता पूछी?"
+     ],
+     "a": [
+      [
+       "Total probability $\\sum P(B_i)P(A|B_i)$."
+      ],
+      [
+       "सम्पूर्ण प्रायिकता $\\sum P(B_i)P(A|B_i)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Result given, a case asked?",
+      "परिणाम दिया, स्थिति पूछी?"
+     ],
+     "a": [
+      [
+       "Bayes: that path $\\div$ all paths."
+      ],
+      [
+       "बेज़: वह पथ $\\div$ सभी पथ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Result given, next draw / toss asked?",
+      "परिणाम दिया, अगला निकालना / उछाल पूछा?"
+     ],
+     "a": [
+      [
+       "Extended Bayes."
+      ],
+      [
+       "विस्तारित बेज़।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Composition unknown, all equally likely?",
+      "संरचना अज्ञात, सभी समसम्भाव्य?"
+     ],
+     "a": [
+      [
+       "Each possible content is a case $B_i$."
+      ],
+      [
+       "प्रत्येक सम्भव सामग्री एक स्थिति $B_i$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Draw the tree and read the paths."
+    ],
+    [
+     "वृक्ष बनाकर पथ पढ़िए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Repeated independent trials",
+    "प्रवाह-चित्र 5: बार-बार स्वतन्त्र प्रयास"
+   ],
+   "start": [
+    "The same trial is repeated",
+    "एक ही प्रयास दोहराया जाता है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Fixed number $n$, count of successes asked?",
+      "निश्चित $n$, सफलताओं की संख्या पूछी?"
+     ],
+     "a": [
+      [
+       "Binomial ${}^nC_rp^rq^{n-r}$."
+      ],
+      [
+       "द्विपद ${}^nC_rp^rq^{n-r}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Least $n$ for a required probability?",
+      "आवश्यक प्रायिकता के लिए न्यूनतम $n$?"
+     ],
+     "a": [
+      [
+       "$q^n\\le1-k$ or test $n=1,2,\\dots$"
+      ],
+      [
+       "$q^n\\le1-k$ या $n=1,2,\\dots$ जाँचिए"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Most probable number?",
+      "सर्वाधिक सम्भाव्य संख्या?"
+     ],
+     "a": [
+      [
+       "$(n+1)p-1\\le r\\le(n+1)p$."
+      ],
+      [
+       "$(n+1)p-1\\le r\\le(n+1)p$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Repeated until a success / players in turn?",
+      "सफलता तक दोहराना / बारी-बारी खिलाड़ी?"
+     ],
+     "a": [
+      [
+       "Infinite GP: $\\dfrac p{1-q^2}$, $q^{k-1}p$."
+      ],
+      [
+       "अनन्त गुणोत्तर श्रेणी: $\\dfrac p{1-q^2}$, $q^{k-1}p$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Mean / variance of successes?",
+      "सफलताओं का माध्य / प्रसरण?"
+     ],
+     "a": [
+      [
+       "$np$, $npq$."
+      ],
+      [
+       "$np$, $npq$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Multiply the probabilities of the individual trials."
+    ],
+    [
+     "प्रत्येक प्रयास की प्रायिकताओं का गुणा कीजिए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Random variable",
+    "प्रवाह-चित्र 6: यादृच्छिक चर"
+   ],
+   "start": [
+    "A random variable $X$ is given or defined",
+    "यादृच्छिक चर $X$ दिया या परिभाषित है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Table with unknown $k$?",
+      "अज्ञात $k$ वाली सारणी?"
+     ],
+     "a": [
+      [
+       "$\\sum p_i=1$, all $p_i\\ge0$."
+      ],
+      [
+       "$\\sum p_i=1$, सभी $p_i\\ge0$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$X$ = successes in independent trials?",
+      "$X$ = स्वतन्त्र प्रयासों में सफलताएँ?"
+     ],
+     "a": [
+      [
+       "Binomial: mean $np$, variance $npq$."
+      ],
+      [
+       "द्विपद: माध्य $np$, प्रसरण $npq$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$X$ = count in a sample without replacement?",
+      "$X$ = बिना प्रतिस्थापन नमूने में गिनती?"
+     ],
+     "a": [
+      [
+       "$P(X=r)=\\dfrac{{}^aC_r{}^bC_{m-r}}{{}^{a+b}C_m}$, then $\\sum p_ix_i$."
+      ],
+      [
+       "$P(X=r)=\\dfrac{{}^aC_r{}^bC_{m-r}}{{}^{a+b}C_m}$, फिर $\\sum p_ix_i$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Number of tosses until a stop?",
+      "रुकने तक उछालों की संख्या?"
+     ],
+     "a": [
+      [
+       "$P(X=k)$ from the stopping rule; mean $\\sum kP(X=k)$."
+      ],
+      [
+       "रुकने के नियम से $P(X=k)$; माध्य $\\sum kP(X=k)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Conditional on $X$?",
+      "$X$ पर सप्रतिबन्ध?"
+     ],
+     "a": [
+      [
+       "$P(X\\in A|X\\in B)=\\dfrac{P(X\\in A\\cap B)}{P(X\\in B)}$."
+      ],
+      [
+       "$P(X\\in A|X\\in B)=\\dfrac{P(X\\in A\\cap B)}{P(X\\in B)}$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Mean $\\sum p_ix_i$, variance $\\sum p_ix_i^2-\\mu^2$."
+    ],
+    [
+     "माध्य $\\sum p_ix_i$, प्रसरण $\\sum p_ix_i^2-\\mu^2$।"
+    ]
+   ]
+  }
+ ]
+}
