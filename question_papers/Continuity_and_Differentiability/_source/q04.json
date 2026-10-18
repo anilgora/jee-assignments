@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\max\\left\\{\\{x\\},\\dfrac{|x|}{4}\\right\\}$, where $\\{t\\}=t-[t]$ and $[t]$ denotes the greatest integer less than or equal to $t$. Then the sum of all the points of the interval $(-4,4)$ at which $f$ is not differentiable is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\max\\left\\{\\{x\\},\\dfrac{|x|}{4}\\right\\}$ द्वारा परिभाषित है, जहाँ $\\{t\\}=t-[t]$ है तथा $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। तब अन्तराल $(-4,4)$ के उन सभी बिन्दुओं का योग, जिन पर $f$ अवकलनीय नहीं है, ______ है।"
+ ],
+ "solution": [
+  "On $[n,n+1)$: $\\{x\\}=x-n$. Compare with $\\frac{|x|}{4}$",
+  "$x\\ge0$: $x-n>\\frac{x}{4}\\iff x>\\frac{4n}{3}$, which lies in $[n,n+1)$ for $n=0,1,2$: corners at $\\frac{4}{3},\\frac{8}{3}$ ($n=0$ gives $x>0$, no corner)",
+  "$x<0$: $x-n>-\\frac{x}{4}\\iff x>\\frac{4n}{5}$, in $[n,n+1)$ for $n=-4,\\dots,-1$: corners at $-\\frac{16}{5},-\\frac{12}{5},-\\frac{8}{5},-\\frac{4}{5}$ (slopes $1$ and $-\\frac14$ differ)",
+  "Integers $n=-3,\\dots,3$: as $x\\to n^{-}$, $\\{x\\}\\to1>\\frac{|n|}{4}$, so $f\\to1$, but $f(n)=\\frac{|n|}{4}<1$: discontinuous, hence not differentiable",
+  "Sum $=\\left(\\frac43+\\frac83\\right)-\\frac{16+12+8+4}{5}+(-3-2-\\dots+3)=4-8+0=-4$",
+  "",
+  "Final Answer: -4"
+ ],
+ "solution_full": [
+  "Write $u(x)=\\{x\\}$ and $v(x)=\\dfrac{|x|}{4}$. On $(-4,4)$, $0\\le v<1$.",
+  "Integer points $n\\in\\{-3,\\dots,3\\}$: $\\lim_{x\\to n^{-}}u(x)=1$ while $v(n)=\\frac{|n|}{4}\\le\\frac34<1$, so $\\lim_{x\\to n^{-}}f(x)=1$. But $f(n)=\\max\\left\\{0,\\frac{|n|}{4}\\right\\}=\\frac{|n|}{4}\\neq1$. So $f$ is discontinuous, and hence not differentiable, at each of these $7$ integers (including $0$).",
+  "Non-integer points: $f$ is the maximum of two functions that are differentiable away from integers and $0$; $f$ fails to be differentiable only where $u=v$ with different slopes.",
+  "For $x\\in(n,n+1)$ with $n\\ge0$: $u=x-n$ (slope $1$), $v=\\frac{x}{4}$ (slope $\\frac14$). $u=v\\iff x=\\frac{4n}{3}$. This lies in $(n,n+1)$ iff $0<\\frac{n}{3}<1$, i.e. $n=1,2$: $x=\\frac43,\\frac83$. (For $n=3$, $x=4$ is outside $(3,4)$.)",
+  "For $x\\in(n,n+1)$ with $n\\le-1$: $u=x-n$ (slope $1$), $v=-\\frac{x}{4}$ (slope $-\\frac14$). $u=v\\iff x=\\frac{4n}{5}$, which lies in $(n,n+1)$ iff $-\\frac{n}{5}<1$, true for $n=-4,-3,-2,-1$: $x=-\\frac{16}{5},-\\frac{12}{5},-\\frac{8}{5},-\\frac{4}{5}$.",
+  "At each such crossing the slopes differ, so there is a corner.",
+  "Sum of the integer points: $-3-2-1+0+1+2+3=0$.",
+  "Sum of the crossings: $\\frac43+\\frac83-\\frac{16+12+8+4}{5}=4-8=-4$.",
+  "Total sum $=-4$ ($13$ points in all).",
+  "",
+  "Final Answer: -4"
+ ],
+ "originality_note": "New: the maximum of the sawtooth {x} and the tent |x|/4 is asymmetric, because {x} rises on both sides of 0 while |x|/4 changes slope, so the crossings are at 4n/3 for x > 0 and at 4n/5 for x < 0, and every integer except +-4 is a jump (way 2: a function built as a max of two simple functions). Closest known: min{{x}, {-x}} or max of [x]-type and linear functions. Different because: the two sides need different crossing formulas and the sum is asked, so missing one class changes the answer.",
+ "web_check": "not found",
+ "level": 3,
+ "key_step": "Split into unit intervals; crossings x = 4n/3 (x > 0) and 4n/5 (x < 0) give corners, and every integer in (-4,4) is a jump of the max.",
+ "justification": "Three ideas combined with interval-by-interval casework and no options: jumps of the max at integers, corners at crossings, and asymmetric crossing formulas on the two sides. Similar counting demand to 2023-P2-Q6 (L3), below 2026-P1-Q10 (L4) which has more cancellation.",
+ "nearest_anchor": "2023-P2-Q6 (L3)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Continuity and Differentiability of functions": "One-sided limits at integers show discontinuity (hence non-differentiability); unequal one-sided slopes at crossings give corners.",
+  "Continuity and Differentiability of functions involving GIF and fractional part": "{x} = x - n on [n, n+1) and its jump from 1 to 0 at each integer drive both the crossings and the discontinuities.",
+  "Continuity and Differentiability of functions involving max min operators": "f = max{{x}, |x|/4} switches branch at the crossings {x} = |x|/4, where the max has a corner."
+ },
+ "stem_review": "Read as a student: f has domain and codomain, {t} and [t] are defined, the interval is open so +-4 are excluded, 'sum of all the points' has one reading. Checked by a fine grid scan that the 13 points are exactly those listed. Answer -4, a negative integer. Changed: reworded the ending to 'the sum of all the points ... is'.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Continuity and Differentiability of functions",
+  "Continuity and Differentiability of functions involving GIF and fractional part",
+  "Continuity and Differentiability of functions involving max min operators"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

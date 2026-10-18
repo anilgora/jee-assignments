@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $p(x)$ be a cubic polynomial with real coefficients and leading coefficient $1$ such that $p(1)=0$. Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=|p(x)|$. It is given that $f$ is not differentiable at exactly one point of $\\mathbb{R}$, namely at $x=3$. Then $f'(0)$ is equal to",
+  "",
+  "(A) $7$",
+  "(B) $-3$",
+  "(C) $-7$",
+  "(D) $3$"
+ ],
+ "hindi": [
+  "माना कि $p(x)$ वास्तविक गुणांकों वाला एक त्रिघात बहुपद है जिसका अग्रग गुणांक $1$ है तथा $p(1)=0$ है। माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=|p(x)|$ द्वारा परिभाषित है। दिया गया है कि $f$, $\\mathbb{R}$ के ठीक एक बिन्दु, अर्थात $x=3$ पर, अवकलनीय नहीं है। तब $f'(0)$ बराबर है",
+  "",
+  "(A) $7$",
+  "(B) $-3$",
+  "(C) $-7$",
+  "(D) $3$"
+ ],
+ "solution": [
+  "$|p|$ fails to be differentiable at a real root $r$ of $p$ exactly when $p'(r)\\neq0$ (simple root); elsewhere $|p|$ is differentiable",
+  "So $3$ is a simple root, and $1$, being a root where $f$ is differentiable, is a repeated root $\\Rightarrow p(x)=(x-1)^{2}(x-3)$",
+  "$p'(x)=2(x-1)(x-3)+(x-1)^{2}=(x-1)(3x-7)\\Rightarrow p'(0)=7$",
+  "$p(0)=-3<0$, so $f=-p$ near $0$ and $f'(0)=-p'(0)=-7$",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Away from the real roots of $p$, $f=|p|$ equals $p$ or $-p$ on a neighbourhood, so it is differentiable there.",
+  "At a real root $r$: if $p'(r)\\neq0$, then $p(x)\\approx p'(r)(x-r)$ changes sign at $r$, and $f$ has left and right derivatives $-|p'(r)|$ and $|p'(r)|$, which differ; so $f$ is not differentiable at $r$. If $p'(r)=0$, then $\\dfrac{|p(x)|}{|x-r|}\\to0$, so $f'(r)=0$ exists.",
+  "Hence $f$ is non-differentiable exactly at the simple real roots of $p$.",
+  "Since $f$ is not differentiable at $x=3$, $3$ is a simple root of $p$. Since $p(1)=0$ and $f$ is differentiable at $x=1$, the root $1$ is not simple, so $(x-1)^{2}$ divides $p(x)$.",
+  "With leading coefficient $1$ and roots $1,1,3$: $p(x)=(x-1)^{2}(x-3)$. Its only simple root is $3$, so the condition holds.",
+  "$p'(x)=2(x-1)(x-3)+(x-1)^{2}=(x-1)(2x-6+x-1)=(x-1)(3x-7)$, so $p'(0)=(-1)(-7)=7$.",
+  "$p(0)=(1)(-3)=-3<0$; by continuity $p<0$ near $0$, so $f(x)=-p(x)$ there.",
+  "Therefore $f'(0)=-p'(0)=-7$.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: the cubic is recovered from where |p| fails to be differentiable (a given corner at x = 3 and a given root at x = 1 where there is no corner forces a double root), then the sign of p near 0 fixes f'(0) (way 5). Closest known: count the points of non-differentiability of |p(x)| for a given p. Different because: the direction is reversed (the non-differentiability data determine p) and the final derivative needs the sign of p.",
+ "web_check": "not found",
+ "level": 2,
+ "key_step": "A root of p where |p| is differentiable must be repeated, so p = (x-1)^2 (x-3); then f'(0) = -p'(0) because p(0) < 0.",
+ "justification": "Routine chain of three standard steps: corners of |p| at simple roots, Vieta-free reconstruction of p, and the sign of p for the derivative of |p|. Options allow checking. Slightly above 2025-P1-Q15 (L1) because of the reverse deduction.",
+ "nearest_anchor": "2025-P1-Q15 (L1)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Determination of functions using differentiability": "The given point of non-differentiability (x = 3) and the differentiability at the root x = 1 determine p(x) = (x-1)^2 (x-3).",
+  "Continuity and Differentiability of functions": "|p| is non-differentiable exactly at simple real roots (unequal one-sided derivatives), and f'(0) = -p'(0) since p < 0 near 0."
+ },
+ "stem_review": "Read as a student: p, its degree, leading coefficient and real coefficients are stated; f is defined with domain and codomain; 'exactly one point, namely x = 3' has one reading. Checked that p = (x-1)^2(x-3) is the only monic cubic satisfying the data and that the answer -7 sits at option C. Changed: added 'with real coefficients'.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 2,
+ "answer_plan": "Option C",
+ "blueprint_concepts": [
+  "Determination of functions using differentiability",
+  "Continuity and Differentiability of functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

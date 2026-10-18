@@ -1,0 +1,58 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$f(t)=\\begin{cases}2t-t^{2}, & t\\le 2,\\\\ \\dfrac{3}{2}(t-2), & t>2,\\end{cases}$$",
+  "and let $g:\\mathbb{R}\\to\\mathbb{R}$ be defined by $g(x)=\\max\\{f(t):x-1\\le t\\le x\\}$. Let $S$ be the set of all points of the interval $(0,5)$ at which $g$ is not differentiable. Then the sum of all the elements of $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ इस प्रकार परिभाषित है",
+  "$$f(t)=\\begin{cases}2t-t^{2}, & t\\le 2,\\\\ \\dfrac{3}{2}(t-2), & t>2,\\end{cases}$$",
+  "तथा माना कि $g:\\mathbb{R}\\to\\mathbb{R}$, $g(x)=\\max\\{f(t):x-1\\le t\\le x\\}$ द्वारा परिभाषित है। माना कि $S$ अन्तराल $(0,5)$ के उन सभी बिन्दुओं का समुच्चय है जिन पर $g$ अवकलनीय नहीं है। तब $S$ के सभी अवयवों का योग ______ है।"
+ ],
+ "solution": [
+  "$f$ increases on $(-\\infty,1]$ to $f(1)=1$, decreases on $[1,2]$ to $0$, then increases linearly with slope $\\frac32$",
+  "$0<x\\le1$: window inside $(-\\infty,1]$, $g(x)=f(x)=2x-x^{2}$",
+  "$1\\le x\\le2$: window contains $t=1$, $g(x)=1$",
+  "$2\\le x\\le3$: $g(x)=\\max\\{f(x-1),f(x)\\}=\\max\\{1-(x-2)^{2},\\frac32(x-2)\\}$; equal when $u=x-2$ satisfies $u^{2}+\\frac32u-1=0\\Rightarrow u=\\frac12$",
+  "$x\\ge3$: $g(x)=\\frac32(x-2)$",
+  "Junctions: at $x=1$ and $x=2$ both one-sided derivatives are $0$; at $x=3$ the same line continues. At $x=\\frac52$: left derivative $-2u=-1$, right derivative $\\frac32$: corner",
+  "$S=\\left\\{\\frac52\\right\\}$, sum $=2.5$",
+  "",
+  "Final Answer: 2.50"
+ ],
+ "solution_full": [
+  "Shape of $f$: for $t\\le2$, $f(t)=1-(t-1)^{2}$, increasing on $(-\\infty,1]$, maximum $1$ at $t=1$, decreasing on $[1,2]$ with $f(2)=0$. For $t>2$, $f(t)=\\frac32(t-2)$ is increasing and $f$ is continuous at $2$.",
+  "Case $x\\le1$: $[x-1,x]\\subset(-\\infty,1]$ where $f$ increases, so $g(x)=f(x)=2x-x^{2}$ and $g'(x)=2-2x$.",
+  "Case $1\\le x\\le2$: the window contains $t=1$, the global maximum point of $f$ on $(-\\infty,2]$, and $[x-1,x]\\subset(-\\infty,2]$. So $g(x)=1$.",
+  "Case $2\\le x\\le3$: on $[x-1,2]\\subset[1,2]$, $f$ decreases, so its maximum is $f(x-1)=1-(x-2)^{2}$; on $(2,x]$ the maximum is $f(x)=\\frac32(x-2)$. Hence $g(x)=\\max\\left\\{1-(x-2)^{2},\\frac32(x-2)\\right\\}$.",
+  "With $u=x-2\\in[0,1]$: $1-u^{2}\\ge\\frac32u\\iff 2u^{2}+3u-2\\le0\\iff(2u-1)(u+2)\\le0\\iff u\\le\\frac12$. So $g=1-(x-2)^{2}$ on $\\left[2,\\frac52\\right]$ and $g=\\frac32(x-2)$ on $\\left[\\frac52,3\\right]$.",
+  "Case $x\\ge3$: $[x-1,x]\\subset[2,\\infty)$ where $f$ increases, so $g(x)=\\frac32(x-2)$.",
+  "Check the junctions. $x=1$: $g'(1^{-})=2-2=0$ and $g'(1^{+})=0$. $x=2$: $g'(2^{-})=0$ and $g'(2^{+})=-2(x-2)\\big|_{x=2}=0$. $x=3$: the formula $\\frac32(x-2)$ is the same on both sides. So $g$ is differentiable at $1,2,3$.",
+  "$x=\\frac52$: $g'\\left(\\frac52^{-}\\right)=-2\\cdot\\frac12=-1$ and $g'\\left(\\frac52^{+}\\right)=\\frac32$. These differ, so $g$ is not differentiable at $\\frac52$.",
+  "Inside each case $g$ is a polynomial, so $S=\\left\\{\\frac52\\right\\}$ and the required sum is $2.50$.",
+  "",
+  "Final Answer: 2.50"
+ ],
+ "originality_note": "New: a sliding-window maximum g(x) = max f on [x-1, x] of a piecewise function with a hump and a rising tail; the window max is flat over the hump, smooth at the regime changes, and has a single corner where the trailing end of the hump and the leading end of the line tie (way 2: function of a moving interval). Closest known: g(x) = max{f(t): 0 <= t <= x} (running max from a fixed left end, as in JEE Main 2021). Different because: the window has fixed length, so the left end matters and the tie f(x-1) = f(x) creates the corner, while the apparent junctions 1, 2, 3 are smooth.",
+ "web_check": "ingredient only",
+ "level": 3,
+ "key_step": "Split by the position of the window: g = f(x), then 1, then max{f(x-1), f(x)}, then f(x); the only corner is the tie x = 5/2.",
+ "justification": "An unfamiliar construction (moving-window max) requiring four regimes and a check of each junction, with a numerical answer; the algebra is light. Placed with 2024-P1-Q17 (L3) and above the running-max JEE Main problems.",
+ "nearest_anchor": "2024-P1-Q17 (L3)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Continuity and Differentiability of functions involving max min operators": "g is a maximum over a moving window; in the third regime it is max{f(x-1), f(x)}, which has a corner at the tie x = 5/2.",
+  "Continuity and Differentiability of functions involving non uniformly defined functions": "f is defined by different formulas for t <= 2 and t > 2; which piece supplies the maximum decides the formula of g in each regime."
+ },
+ "stem_review": "Read as a student: f and g have domain and codomain, the window [x-1, x] is closed, S is on the open interval (0,5), one reading. Checked by a fine numerical scan of g that the only non-smooth point in (0,5) is 2.5. Answer 2.50, a positive decimal. Changed: No change.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Continuity and Differentiability of functions involving max min operators",
+  "Continuity and Differentiability of functions involving non uniformly defined functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

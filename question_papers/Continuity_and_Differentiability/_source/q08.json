@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $a\\in\\mathbb{R}$ and let $f:[-1,3]\\setminus\\{1\\}\\to\\mathbb{R}$ be defined by",
+  "$$f(x)=\\frac{x^{3}-3x^{2}+ax+5}{x-1}.$$",
+  "Suppose that $\\lim_{x\\to1}f(x)$ exists. Then the sum of all integers $m$ for which the equation $f(x)=m$ has at least one solution in $[-1,3]\\setminus\\{1\\}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a\\in\\mathbb{R}$ तथा $f:[-1,3]\\setminus\\{1\\}\\to\\mathbb{R}$ इस प्रकार परिभाषित है",
+  "$$f(x)=\\frac{x^{3}-3x^{2}+ax+5}{x-1}.$$",
+  "माना कि $\\lim_{x\\to1}f(x)$ का अस्तित्व है। तब उन सभी पूर्णांकों $m$ का योग, जिनके लिए समीकरण $f(x)=m$ का $[-1,3]\\setminus\\{1\\}$ में कम से कम एक हल है, ______ है।"
+ ],
+ "solution": [
+  "Limit exists at $1$ (removable, not infinite discontinuity) $\\Rightarrow$ numerator vanishes at $1$: $1-3+a+5=0\\Rightarrow a=-3$",
+  "$x^{3}-3x^{2}-3x+5=(x-1)(x^{2}-2x-5)\\Rightarrow f(x)=(x-1)^{2}-6$, $x\\neq1$",
+  "On $[-1,1)$, $f$ is continuous and decreasing from $f(-1)=-2$ towards $-6$; on $(1,3]$ increasing from near $-6$ to $f(3)=-2$",
+  "By IVT every value in $(-6,-2]$ is taken; $-6$ (the limit at the removable discontinuity) is not taken",
+  "$m\\in\\{-5,-4,-3,-2\\}$, sum $=-14$",
+  "",
+  "Final Answer: -14"
+ ],
+ "solution_full": [
+  "As $x\\to1$ the denominator tends to $0$. If the numerator tended to a non-zero value, $|f(x)|\\to\\infty$ (an infinite discontinuity) and the limit would not exist. So the numerator vanishes at $x=1$: $1-3+a+5=0$, giving $a=-3$.",
+  "Then $x^{3}-3x^{2}-3x+5=(x-1)(x^{2}-2x-5)$, so $f(x)=x^{2}-2x-5=(x-1)^{2}-6$ for $x\\in[-1,3]$, $x\\neq1$, and $\\lim_{x\\to1}f(x)=-6$. The discontinuity at $1$ is removable, but $1$ is not in the domain.",
+  "On $[-1,1)$: $f$ is continuous and strictly decreasing, $f(-1)=4-6=-2$, and $f(x)\\to-6$ as $x\\to1^{-}$. By the intermediate value theorem on $[-1,t]$ for $t<1$, $f$ takes every value in $[f(t),-2]$; letting $t\\to1^{-}$, $f$ takes every value in $(-6,-2]$.",
+  "On $(1,3]$: similarly $f$ increases from values near $-6$ to $f(3)=4-6=-2$, giving the same set $(-6,-2]$.",
+  "The value $-6$ would need $(x-1)^{2}=0$, i.e. $x=1$, which is excluded. So the range of $f$ is $(-6,-2]$.",
+  "Integers in $(-6,-2]$: $-5,-4,-3,-2$. Their sum is $-14$.",
+  "",
+  "Final Answer: -14"
+ ],
+ "originality_note": "New: the existence of the limit at a point outside the domain forces a removable discontinuity, and the missing value (the limit) is exactly the excluded end of the range, so the integer count must drop it; the rest of the range comes from the intermediate value theorem on each side (way 5). Closest known: choose a so that (x^3 + ...)/(x-1) has a limit at 1. Different because: the question turns the removable discontinuity into a range question where the missing value matters.",
+ "web_check": "not found",
+ "level": 2,
+ "key_step": "Limit exists means the numerator vanishes at 1, so f = (x-1)^2 - 6 off x = 1; the range is (-6, -2] with -6 missing.",
+ "justification": "Routine chain: removable vs infinite discontinuity, factorisation, IVT for the range, and the excluded value. Similar length to 2025-P2-Q1 (L2); the trap at -6 keeps it at 2 rather than 1.",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Intermediate Value theorem": "On [-1,1) and on (1,3], f is continuous and monotonic, so by the IVT it takes every value in (-6, -2].",
+  "Types of discontinuity": "A finite limit at x = 1 means the discontinuity is removable, not infinite, which forces a = -3; the limit value -6 is not attained."
+ },
+ "stem_review": "Read as a student: a and f (domain [-1,3] without 1, codomain) are defined; 'limit exists' is the only hypothesis; m ranges over integers and a solution must lie in the domain. Checked by sympy (factorisation) and a grid that the range is (-6, -2]. Answer -14, a negative integer. Changed: No change.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Intermediate Value theorem",
+  "Types of discontinuity"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

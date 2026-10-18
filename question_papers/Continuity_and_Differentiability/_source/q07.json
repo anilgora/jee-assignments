@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function which is continuous at $x=0$ and satisfies",
+  "$$f(x)=f\\left(\\frac{x}{2}\\right)\\cos\\left(\\frac{x}{2}\\right)\\quad\\text{for all }x\\in\\mathbb{R}.$$",
+  "If $f\\left(\\dfrac{\\pi}{2}\\right)=140$, then the value of $f\\left(\\dfrac{\\pi}{6}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक ऐसा फलन है जो $x=0$ पर सतत है तथा सभी $x\\in\\mathbb{R}$ के लिए",
+  "$$f(x)=f\\left(\\frac{x}{2}\\right)\\cos\\left(\\frac{x}{2}\\right)$$",
+  "को सन्तुष्ट करता है। यदि $f\\left(\\dfrac{\\pi}{2}\\right)=140$ है, तो $f\\left(\\dfrac{\\pi}{6}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Iterating $n$ times: $f(x)=f\\left(\\frac{x}{2^{n}}\\right)\\prod_{k=1}^{n}\\cos\\frac{x}{2^{k}}$",
+  "For $x\\neq0$: $\\prod_{k=1}^{n}\\cos\\frac{x}{2^{k}}=\\dfrac{\\sin x}{2^{n}\\sin\\frac{x}{2^{n}}}$ (multiply by $\\sin\\frac{x}{2^{n}}$ and use $2\\sin\\theta\\cos\\theta=\\sin2\\theta$ repeatedly)",
+  "$n\\to\\infty$: $f\\left(\\frac{x}{2^{n}}\\right)\\to f(0)$ by continuity at $0$, and $2^{n}\\sin\\frac{x}{2^{n}}\\to x$",
+  "$\\Rightarrow f(x)=f(0)\\dfrac{\\sin x}{x}$ for $x\\neq0$",
+  "$f\\left(\\frac{\\pi}{2}\\right)=\\frac{2f(0)}{\\pi}=140\\Rightarrow f(0)=70\\pi$; $f\\left(\\frac{\\pi}{6}\\right)=70\\pi\\cdot\\frac{1/2}{\\pi/6}=210$",
+  "",
+  "Final Answer: 210"
+ ],
+ "solution_full": [
+  "Replacing $x$ by $\\frac{x}{2},\\frac{x}{4},\\dots$ in the relation and substituting back, for every positive integer $n$:",
+  "$$f(x)=f\\left(\\frac{x}{2^{n}}\\right)\\cos\\frac{x}{2}\\cos\\frac{x}{4}\\cdots\\cos\\frac{x}{2^{n}}.$$",
+  "Fix $x\\neq0$ and $n$ large enough that $\\sin\\frac{x}{2^{n}}\\neq0$. Multiplying the product by $2^{n}\\sin\\frac{x}{2^{n}}$ and using $2\\sin\\theta\\cos\\theta=\\sin2\\theta$ $n$ times gives $\\sin x$, so",
+  "$$\\prod_{k=1}^{n}\\cos\\frac{x}{2^{k}}=\\frac{\\sin x}{2^{n}\\sin\\frac{x}{2^{n}}}.$$",
+  "As $n\\to\\infty$, $\\frac{x}{2^{n}}\\to0$. By continuity of $f$ at $0$, $f\\left(\\frac{x}{2^{n}}\\right)\\to f(0)$. Also $2^{n}\\sin\\frac{x}{2^{n}}=x\\cdot\\dfrac{\\sin(x/2^{n})}{x/2^{n}}\\to x$.",
+  "The left side $f(x)$ does not depend on $n$, so $f(x)=f(0)\\dfrac{\\sin x}{x}$ for all $x\\neq0$. (This $f$ does satisfy the relation, since $\\frac{\\sin x}{x}=\\frac{\\sin(x/2)}{x/2}\\cos\\frac{x}{2}$.)",
+  "$f\\left(\\frac{\\pi}{2}\\right)=f(0)\\cdot\\dfrac{1}{\\pi/2}=\\dfrac{2f(0)}{\\pi}=140$, so $f(0)=70\\pi$.",
+  "$f\\left(\\frac{\\pi}{6}\\right)=70\\pi\\cdot\\dfrac{1/2}{\\pi/6}=70\\pi\\cdot\\dfrac{3}{\\pi}=210$.",
+  "",
+  "Final Answer: 210"
+ ],
+ "originality_note": "New: a halving functional equation whose iteration produces the product cos(x/2)cos(x/4)...cos(x/2^n); continuity at a single point (0) is what lets the iteration close up to f(0) sin x / x (way 1: iteration). Closest known: f(x) = f(x/2) + x type equations solved by telescoping with continuity at 0, and the separate product identity for cos(x/2^k). Different because: the iteration is multiplicative and the limit needs the telescoping sine product.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "Iterate to f(x) = f(x/2^n) times the cosine product, telescope the product to sin x/(2^n sin(x/2^n)), and pass to the limit using continuity at 0.",
+ "justification": "A routine chain once iteration is tried: iteration, a known product identity, and a limit justified by continuity at 0. Same kind of functional-equation demand as 2024-P2-Q8 (L2).",
+ "nearest_anchor": "2024-P2-Q8 (L2)",
+ "confidence": "High",
+ "concept_use": {
+  "Continuity of a function defined by a functional equation": "Continuity at x = 0 turns f(x/2^n) into f(0) in the limit, which determines f(x) = f(0) sin x / x everywhere."
+ },
+ "stem_review": "Read as a student: f has domain and codomain, continuity is only at 0, the relation holds for all real x, one given value. Checked numerically that f(0) sin x/x satisfies the relation and that f(pi/6) = 210. Answer 210, a positive 3-digit integer. Changed: No change.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Continuity of a function defined by a functional equation"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

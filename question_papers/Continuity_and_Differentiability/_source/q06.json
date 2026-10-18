@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $a$ and $b$ be real numbers and let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$f(x)=\\begin{cases}x^{3}, & x\\text{ rational},\\\\ ax+b, & x\\text{ irrational}.\\end{cases}$$",
+  "Suppose that $f$ is continuous at $x=-1$ and that $f$ is differentiable at some point $c\\neq-1$. Then the value of $a+b$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$ तथा $b$ वास्तविक संख्याएँ हैं तथा $f:\\mathbb{R}\\to\\mathbb{R}$ इस प्रकार परिभाषित है कि $x$ परिमेय होने पर $f(x)=x^{3}$ तथा $x$ अपरिमेय होने पर $f(x)=ax+b$ है।",
+  "माना कि $f$, $x=-1$ पर सतत है तथा $f$ किसी बिन्दु $c\\neq-1$ पर अवकलनीय है। तब $a+b$ का मान ______ है।"
+ ],
+ "solution": [
+  "Rationals and irrationals are dense, so $f$ is continuous at $x_0$ iff $x_0^{3}=ax_0+b$, i.e. iff $x_0$ is a root of $q(x)=x^{3}-ax-b$",
+  "Differentiable at $c$: difference quotients along rationals $\\to3c^{2}$, along irrationals $\\to a$; so $q(c)=0$ and $a=3c^{2}$, i.e. $q'(c)=0$: $c$ is a repeated root",
+  "Roots of $q$: $-1,c,c$ with $c\\neq-1$; no $x^{2}$ term $\\Rightarrow -1+2c=0\\Rightarrow c=\\frac12$",
+  "$a=3c^{2}=\\frac34$, $b=c^{3}-ac=\\frac18-\\frac38=-\\frac14$",
+  "$a+b=0.5$",
+  "",
+  "Final Answer: 0.50"
+ ],
+ "solution_full": [
+  "Every interval contains rationals and irrationals. If $x_0^{3}\\neq ax_0+b$, then near $x_0$ the values of $f$ approach two different numbers, so $f$ is discontinuous at $x_0$. If $x_0^{3}=ax_0+b$, both pieces tend to the same value and $f$ is continuous at $x_0$.",
+  "So $f$ is continuous exactly at the real roots of $q(x)=x^{3}-ax-b$. Continuity at $-1$ gives $q(-1)=0$, i.e. $-1+a-b=0$.",
+  "Differentiability at $c$ requires continuity, so $q(c)=0$. Then for rational $x\\to c$: $\\dfrac{f(x)-f(c)}{x-c}=\\dfrac{x^{3}-c^{3}}{x-c}\\to3c^{2}$; for irrational $x\\to c$: $\\dfrac{ax+b-(ac+b)}{x-c}=a$. Both limits must agree, so $a=3c^{2}$. Conversely, if $q(c)=0$ and $a=3c^{2}$, both quotients tend to $3c^{2}$ and $f'(c)=3c^{2}$.",
+  "$a=3c^{2}$ means $q'(c)=3c^{2}-a=0$, so $c$ is a repeated root of $q$.",
+  "$q$ is a cubic with roots $-1$ and the repeated root $c\\neq-1$, so its roots are $-1,c,c$. The coefficient of $x^{2}$ in $q$ is $0$, so $-1+2c=0$ and $c=\\dfrac12$.",
+  "Then $a=3\\cdot\\dfrac14=\\dfrac34$ and $b=c^{3}-ac=\\dfrac18-\\dfrac38=-\\dfrac14$. Check: $q(x)=x^{3}-\\frac34x+\\frac14=\\frac14(x+1)(2x-1)^{2}$.",
+  "Hence $a+b=\\dfrac34-\\dfrac14=0.50$.",
+  "",
+  "Final Answer: 0.50"
+ ],
+ "originality_note": "New: for a function given by different formulas on rationals and irrationals, continuity points are the roots of x^3 - ax - b and differentiability points are its repeated roots, so 'continuous at -1 and differentiable elsewhere' pins the cubic by Vieta (way 5). Closest known: f = x on Q, 1-x on Q^c is continuous only at 1/2. Different because: differentiability (tangency of the two formulas) is required and the root structure determines a and b.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "Differentiability at c needs q(c) = 0 and a = 3c^2, i.e. a repeated root; Vieta then gives c = 1/2.",
+ "justification": "A routine chain of three steps (continuity iff equal formulas, derivative match along both sets, Vieta) built on the familiar rational/irrational continuity idea. Comparable to 2024-P1-Q1 (L2) in length; the tangency step keeps it from L1.",
+ "nearest_anchor": "2024-P1-Q1 (L2)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Continuity and Differentiability of functions involving non uniformly defined functions": "f is defined by x^3 on the rationals and ax + b on the irrationals; continuity needs the two formulas to agree and differentiability needs their derivatives to agree as well."
+ },
+ "stem_review": "Read as a student: a, b and f (domain, codomain, both cases) are defined; 'differentiable at some point c not equal to -1' excludes the other solution a = 3, b = 2 (differentiable at -1). Checked with sympy that the system has exactly these two solutions. Answer 0.50, a decimal between 0 and 1. Changed: wrote 'x rational' inside text in the cases block.",
+ "chapter": "Continuity and Differentiability",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Continuity and Differentiability of functions involving non uniformly defined functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}
