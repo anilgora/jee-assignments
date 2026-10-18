@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "english": [
+  "The value of $\\displaystyle\\sum_{k=0}^{14}\\binom{14}{k}\\cos^{2}\\dfrac{k\\pi}{3}$ is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\sum_{k=0}^{14}\\binom{14}{k}\\cos^{2}\\dfrac{k\\pi}{3}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\cos^{2}\\dfrac{k\\pi}{3}$ is $1$ if $3\\mid k$ and $\\dfrac{1}{4}$ otherwise, so the sum is $A+\\dfrac{1}{4}(2^{14}-A)$ with $A=\\displaystyle\\sum_{3\\mid k}\\binom{14}{k}$",
+  "Multisection with the cube roots of unity $1,\\omega,\\omega^{2}$: $A=\\dfrac{2^{14}+(1+\\omega)^{14}+(1+\\omega^{2})^{14}}{3}$",
+  "$1+\\omega=e^{i\\pi/3}$ (a sixth root of unity): $(1+\\omega)^{14}+(1+\\omega^{2})^{14}=2\\cos\\dfrac{14\\pi}{3}=2\\cos\\dfrac{2\\pi}{3}=-1$",
+  "$A=\\dfrac{16384-1}{3}=5461$; sum $=5461+\\dfrac{16384-5461}{4}=5461+2730.75=8191.75$",
+  "",
+  "Final Answer: 8191.75"
+ ],
+ "solution_full": [
+  "For integer $k$, $\\cos\\dfrac{k\\pi}{3}\\in\\left\\{\\pm1,\\pm\\dfrac{1}{2}\\right\\}$: it is $\\pm1$ exactly when $3\\mid k$. So $\\cos^{2}\\dfrac{k\\pi}{3}=1$ if $3\\mid k$ and $\\dfrac{1}{4}$ otherwise.",
+  "Let $A=\\displaystyle\\sum_{3\\mid k}\\binom{14}{k}$. The sum equals $A+\\dfrac{1}{4}\\left(2^{14}-A\\right)=\\dfrac{3A}{4}+2^{12}$.",
+  "Let $\\omega=e^{2\\pi i/3}$. Since $1+\\omega^{k}+\\omega^{2k}$ is $3$ for $3\\mid k$ and $0$ otherwise, $3A=2^{14}+(1+\\omega)^{14}+(1+\\omega^{2})^{14}$.",
+  "$1+\\omega=e^{i\\pi/3}$ and $1+\\omega^{2}=e^{-i\\pi/3}$ are sixth roots of unity, so $(1+\\omega)^{14}+(1+\\omega^{2})^{14}=2\\cos\\dfrac{14\\pi}{3}=2\\cos\\dfrac{2\\pi}{3}=-1$.",
+  "$3A=16383$, $A=5461$.",
+  "Sum $=\\dfrac{3\\cdot5461}{4}+4096=4095.75+4096=8191.75$.",
+  "(Check by $\\cos^{2}x=\\dfrac{1+\\cos2x}{2}$: the sum is $2^{13}+\\dfrac{1}{2}\\mathrm{Re}(1+\\omega)^{14}=8192-\\dfrac{1}{4}=8191.75$.)",
+  "",
+  "Final Answer: 8191.75"
+ ],
+ "originality_note": "New: the weight cos^2(k pi/3) takes only the values 1 and 1/4, so the sum is a weighted multisection of the binomial row (way 4). Closest known: sums C(n,0)+C(n,3)+C(n,6)+... and sum C(n,k) cos k theta = Re(1+e^{i theta})^n. Different because: the square of the cosine is used as the weight, which the student must recognise as a two-valued filter or reduce by the double angle.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "nth root of unity",
+  "Multisection of series using roots of unity"
+ ],
+ "concept_use": {
+  "nth root of unity": "1+omega = e^{i pi/3} is a sixth root of unity, so its 14th power is e^{14 i pi/3} = e^{2 i pi/3}.",
+  "Multisection of series using roots of unity": "A = sum of C(14,3k) is extracted with the filter 1+omega^k+omega^{2k}, and the cos^2 weight splits the row into multiples of 3 and the rest."
+ },
+ "level": 2,
+ "key_step": "See cos^2(k pi/3) as 1 or 1/4 and extract the multiples of 3 by the cube-root filter.",
+ "justification": "One standard filter plus a weighting observation; routine chain, numerical. Level 2, like 2023-P1-Q13 (L1) raised by the extra multisection step.",
+ "nearest_anchor": "2023-P1-Q13 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked the sum by direct computation (8191.75, exact to two decimals). Answer positive decimal. No change."
+}

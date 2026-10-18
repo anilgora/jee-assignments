@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $C$ be the circle $z\\bar{z}+(3-4i)z+(3+4i)\\bar{z}+21=0$ in the Argand plane, where $i=\\sqrt{-1}$, and let $K$ be its centre. The line $(2-i)z+(2+i)\\bar{z}+12=0$ meets $C$ at the points $P$ and $Q$. Then the value of $\\cos\\angle PKQ$ is ______."
+ ],
+ "hindi": [
+  "माना कि $C$ आर्गण्ड तल में वृत्त $z\\bar{z}+(3-4i)z+(3+4i)\\bar{z}+21=0$ है, जहाँ $i=\\sqrt{-1}$ है, तथा $K$ इसका केन्द्र है। रेखा $(2-i)z+(2+i)\\bar{z}+12=0$, $C$ को बिन्दुओं $P$ तथा $Q$ पर मिलती है। तब $\\cos\\angle PKQ$ का मान ______ है।"
+ ],
+ "solution": [
+  "$z\\bar{z}+\\bar{a}z+a\\bar{z}+b=0$ with $a=3+4i$, $b=21$: centre $K=-a=-3-4i$, $r^{2}=|a|^{2}-b=4$",
+  "Line: $2\\,\\mathrm{Re}((2-i)z)+12=0$, i.e. $4x+2y+12=0$; distance of $K$: $d=\\dfrac{|-12-8+12|}{\\sqrt{20}}=\\dfrac{8}{2\\sqrt{5}}=\\dfrac{4}{\\sqrt{5}}<2$",
+  "$\\cos\\dfrac{\\angle PKQ}{2}=\\dfrac{d}{r}$, so $\\cos\\angle PKQ=\\dfrac{2d^{2}}{r^{2}}-1=\\dfrac{2\\cdot\\frac{16}{5}}{4}-1=0.6$",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "solution_full": [
+  "A circle $z\\bar{z}+\\bar{a}z+a\\bar{z}+b=0$ ($b$ real) can be written $|z+a|^{2}=|a|^{2}-b$. Here the coefficient of $\\bar{z}$ is $a=3+4i$ and that of $z$ is $\\bar{a}=3-4i$, so $|z+3+4i|^{2}=25-21=4$.",
+  "So $K=-3-4i$ and $r=2$.",
+  "For $z=x+iy$, $(2-i)z+(2+i)\\bar{z}=2\\,\\mathrm{Re}((2-i)(x+iy))=2(2x+y)$, so the line is $4x+2y+12=0$, i.e. $2x+y+6=0$.",
+  "Distance of $K(-3,-4)$ from the line: $d=\\dfrac{|-6-4+6|}{\\sqrt{5}}=\\dfrac{4}{\\sqrt{5}}<2$, so the line cuts $C$ at two points $P,Q$.",
+  "In the isosceles triangle $PKQ$ the perpendicular from $K$ bisects $\\angle PKQ$, so $\\cos\\dfrac{\\angle PKQ}{2}=\\dfrac{d}{r}=\\dfrac{2}{\\sqrt{5}}$.",
+  "$\\cos\\angle PKQ=2\\cdot\\dfrac{4}{5}-1=\\dfrac{3}{5}=0.6$.",
+  "Check: the line meets $C$ at $P=-1-4i$ and $Q=-\\dfrac{9}{5}-\\dfrac{12}{5}i$; $\\overrightarrow{KP}=(2,0)$, $\\overrightarrow{KQ}=\\left(\\dfrac{6}{5},\\dfrac{8}{5}\\right)$, and $\\cos\\angle PKQ=\\dfrac{12/5}{2\\cdot2}=0.6$.",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "originality_note": "New: a circle and a line both given in complex form, with the angle at the centre asked, so the centre-radius form, the line's normal form and the double-angle step are chained (way 5, routine combination). Closest known: centre and radius of z zbar + abar z + a zbar + b = 0; length of a chord. Different because: the angle subtended at the centre is asked rather than the chord, a light variant flagged as standard ingredients.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Straight line and circle in complex numbers"
+ ],
+ "concept_use": {
+  "Straight line and circle in complex numbers": "The circle gives K = -a and r^2 = |a|^2 - b; the line (2-i)z + (2+i)zbar + 12 = 0 is 4x+2y+12 = 0; their distance d fixes the angle at the centre."
+ },
+ "level": 2,
+ "key_step": "Read K = -3-4i, r = 2 from the complex circle, distance d = 4/sqrt5 from the line, then cos PKQ = 2d^2/r^2 - 1.",
+ "justification": "Three routine steps in sequence with no insight; level 2, near 2024-P1-Q15 (L1) plus the double-angle step.",
+ "nearest_anchor": "2024-P1-Q15 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the line cuts C at two points (d < r) and verified the angle from the intersection points. Answer 0.6, decimal between 0 and 1. No change."
+}

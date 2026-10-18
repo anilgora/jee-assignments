@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $T$ be the set of all complex numbers $z=x+iy$, with $x$ and $y$ integers, $z\\neq\\pm2$ and $i=\\sqrt{-1}$, satisfying $\\dfrac{\\pi}{4}\\leq\\arg\\left(\\dfrac{z-2}{z+2}\\right)\\leq\\dfrac{\\pi}{2}$, where $\\arg$ denotes the principal argument. Then the number of elements in $T$ is ______."
+ ],
+ "hindi": [
+  "माना कि $T$ उन सभी सम्मिश्र संख्याओं $z=x+iy$ का समुच्चय है, जहाँ $x$ तथा $y$ पूर्णांक हैं, $z\\neq\\pm2$ है और $i=\\sqrt{-1}$ है, जो $\\dfrac{\\pi}{4}\\leq\\arg\\left(\\dfrac{z-2}{z+2}\\right)\\leq\\dfrac{\\pi}{2}$ को संतुष्ट करती हैं, जहाँ $\\arg$ मुख्य कोणांक को दर्शाता है। तब $T$ में अवयवों की संख्या ______ है।"
+ ],
+ "solution": [
+  "$\\arg\\dfrac{z-2}{z+2}$ is the angle subtended at $z$ by the segment from $-2$ to $2$; it is positive exactly when $y>0$",
+  "$=\\dfrac{\\pi}{2}$ on the semicircle $x^{2}+y^{2}=4$, $y>0$; $=\\dfrac{\\pi}{4}$ on the major arc of $x^{2}+(y-2)^{2}=8$ ($r=2\\sqrt{2}$, centre $2i$), $y>0$",
+  "The angle is larger inside a circle through $\\pm2$ and smaller outside, so $T$: $y\\geq1$, $x^{2}+y^{2}\\geq4$, $x^{2}+(y-2)^{2}\\leq8$ (boundaries included)",
+  "Count: $y=1$: $x=\\pm2$ (2); $y=2$: $|x|\\leq2$ (5); $y=3$: $|x|\\leq2$ (5); $y=4$: $|x|\\leq2$ (5); $y\\geq5$: $(y-2)^{2}>8$ (0)",
+  "Number of elements $=2+5+5+5=17$",
+  "",
+  "Final Answer: 17"
+ ],
+ "solution_full": [
+  "For $z\\neq\\pm2$, $\\dfrac{z-2}{z+2}=\\dfrac{(z-2)(\\bar{z}+2)}{|z+2|^{2}}$ and $(z-2)(\\bar{z}+2)=(x^{2}+y^{2}-4)+4iy$.",
+  "So the argument lies in $\\left[\\dfrac{\\pi}{4},\\dfrac{\\pi}{2}\\right]$ exactly when $4y>0$, $x^{2}+y^{2}-4\\geq0$ and $4y\\geq x^{2}+y^{2}-4$ (imaginary part at least the real part, both on the correct side).",
+  "Geometrically: $x^{2}+y^{2}-4=0$ is the circle on the segment from $-2$ to $2$ as diameter (angle $\\dfrac{\\pi}{2}$), and $x^{2}+y^{2}-4y-4=0$, i.e. $x^{2}+(y-2)^{2}=8$, is the circle through $\\pm2$ whose upper major arc sees the segment at $\\dfrac{\\pi}{4}$. The region lies between the two arcs, boundaries included.",
+  "Hence $T$ consists of the lattice points with $y\\geq1$, $x^{2}+y^{2}\\geq4$ and $x^{2}+(y-2)^{2}\\leq8$.",
+  "$y=1$: need $x^{2}\\geq3$ and $x^{2}\\leq7$, so $x=\\pm2$: $2$ points.",
+  "$y=2$: need $x^{2}\\geq0$ and $x^{2}\\leq8$: $x=-2,\\ldots,2$: $5$ points (including $2i$ on the semicircle).",
+  "$y=3$: $x^{2}\\leq7$: $x=-2,\\ldots,2$: $5$ points. $y=4$: $x^{2}\\leq4$: $x=-2,\\ldots,2$: $5$ points (including $\\pm2+4i$ on the larger circle).",
+  "$y\\geq5$: $(y-2)^{2}\\geq9>8$, no points. Points with $y\\leq0$ give an argument outside the interval.",
+  "Total $=2+5+5+5=17$.",
+  "",
+  "Final Answer: 17"
+ ],
+ "originality_note": "New: the set between two argument arcs over the same chord is a lune-like region, and the question counts its lattice points, so both arcs, the half-plane and the inclusion of boundary points matter (way 2, a set defined by a construction). Closest known: locus arg((z-a)/(z-b)) = constant is an arc. Different because: an inequality between two angles turns into a region bounded by two different circles, and the count is sensitive to each boundary.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Geometrical Loci in Complex Plane (Line, Circle, Apollonius Circle, Conics)",
+  "Argument Locus representing circular arcs"
+ ],
+ "concept_use": {
+  "Geometrical Loci in Complex Plane (Line, Circle, Apollonius Circle, Conics)": "The two boundaries are the circles x^2+y^2 = 4 and x^2+(y-2)^2 = 8, written from the complex conditions.",
+  "Argument Locus representing circular arcs": "arg((z-2)/(z+2)) = pi/2 and = pi/4 are the upper arcs of those circles; angle larger inside, smaller outside decides the region."
+ },
+ "level": 3,
+ "key_step": "Turn the double inequality on the argument into the region between the semicircle and the pi/4 arc, then count lattice points with the boundaries.",
+ "justification": "Two arc loci and their inside/outside rule plus a count where one boundary slip changes the answer; average Advanced numerical. Near 2023-P1-Q6 (L3, lattice points in regions) and 2021-P1-Q16 (L3, argument arcs).",
+ "nearest_anchor": "2021-P1-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked boundary points (on both arcs) are included by the non-strict inequalities and that z = 2, -2 make the quotient zero or undefined. Changed: added 'z != +-2' to make the domain explicit. Answer 17, positive 2-digit integer."
+}

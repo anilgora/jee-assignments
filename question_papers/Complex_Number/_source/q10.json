@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $S$ be the set of all complex numbers $z$ satisfying $|z-8|=3|z|$. Let $M$ and $m$ be the maximum and the minimum values of $|z-14-8i|$ over $z\\in S$, where $i=\\sqrt{-1}$. Then the value of $M^{2}+m^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ उन सभी सम्मिश्र संख्याओं $z$ का समुच्चय है जो $|z-8|=3|z|$ को संतुष्ट करती हैं। माना कि $z\\in S$ पर $|z-14-8i|$ के अधिकतम तथा न्यूनतम मान क्रमशः $M$ तथा $m$ हैं, जहाँ $i=\\sqrt{-1}$ है। तब $M^{2}+m^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$|z-8|^{2}=9|z|^{2}$: $(x-8)^{2}+y^{2}=9(x^{2}+y^{2})\\Rightarrow x^{2}+y^{2}+2x-8=0$, the Apollonius circle with centre $-1$, radius $3$",
+  "$p=14+8i$: distance from the centre $=|15+8i|=17>3$, so $p$ is outside",
+  "Triangle inequality: $17-3\\leq|z-p|\\leq17+3$, both attained on the line through the centre and $p$: $m=14$, $M=20$",
+  "$M^{2}+m^{2}=400+196=596$",
+  "",
+  "Final Answer: 596"
+ ],
+ "solution_full": [
+  "Put $z=x+iy$. Then $|z-8|=3|z|$ gives $(x-8)^{2}+y^{2}=9(x^{2}+y^{2})$, i.e. $8x^{2}+8y^{2}+16x-64=0$, i.e. $x^{2}+y^{2}+2x-8=0$.",
+  "So $S$ is the circle $(x+1)^{2}+y^{2}=9$: centre $c=-1$, radius $3$. (Check: $z=2$ gives $6=3\\cdot2$; $z=-4$ gives $12=3\\cdot4$.)",
+  "Let $p=14+8i$. Then $|p-c|=|15+8i|=\\sqrt{225+64}=17$.",
+  "For $z$ on the circle, $|z-p|\\leq|z-c|+|c-p|=3+17=20$ and $|z-p|\\geq|c-p|-|z-c|=17-3=14$.",
+  "Equality holds at the two points where the line through $c$ and $p$ meets the circle, so $M=20$ and $m=14$.",
+  "$M^{2}+m^{2}=400+196=596$.",
+  "",
+  "Final Answer: 596"
+ ],
+ "originality_note": "New: the Apollonius circle is used only as the carrier of a distance extremum, with the point placed so that the answer comes through the triangle inequality (way 5). Closest known: maximum and minimum of |z - p| on a circle; Apollonius circle |z - a| = k|z - b|. Different because: the circle must first be recovered from the ratio form before the extremum; this is a routine combination, flagged as standard ingredients.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Triangle Inequalities & Modulus Extremum Problems",
+  "Geometrical Loci in Complex Plane (Line, Circle, Apollonius Circle, Conics)"
+ ],
+ "concept_use": {
+  "Triangle Inequalities & Modulus Extremum Problems": "| |c-p| - r | <= |z-p| <= |c-p| + r gives m = 14 and M = 20.",
+  "Geometrical Loci in Complex Plane (Line, Circle, Apollonius Circle, Conics)": "|z-8| = 3|z| is converted to the Apollonius circle with centre -1 and radius 3."
+ },
+ "level": 2,
+ "key_step": "Convert the ratio condition to the circle centre -1, radius 3, then max/min distance = 17 +- 3.",
+ "justification": "Two standard steps chained (Apollonius circle, distance extremum); routine, no insight. Above 2025-P1-Q7 (L1) because of the extra extremum step, so level 2.",
+ "nearest_anchor": "2025-P1-Q7 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the point 14+8i is outside the circle and both extremes are attained. Answer 596, positive 3-digit integer. No change."
+}

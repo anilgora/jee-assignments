@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $C$ be the locus of the complex numbers $z$ satisfying $|z|=3|z-4|$. The ray $\\arg z=\\dfrac{\\pi}{12}$ meets $C$ at two points $P$ and $Q$. If $O$ is the origin, then the value of $OP\\cdot OQ$ is ______."
+ ],
+ "hindi": [
+  "माना कि $C$ उन सम्मिश्र संख्याओं $z$ का बिन्दुपथ है जो $|z|=3|z-4|$ को संतुष्ट करती हैं। किरण $\\arg z=\\dfrac{\\pi}{12}$, $C$ को दो बिन्दुओं $P$ तथा $Q$ पर मिलती है। यदि $O$ मूल बिन्दु है, तो $OP\\cdot OQ$ का मान ______ है।"
+ ],
+ "solution": [
+  "$C$: $x^{2}+y^{2}=9\\left((x-4)^{2}+y^{2}\\right)\\Rightarrow x^{2}+y^{2}-9x+18=0$, circle with centre $\\dfrac{9}{2}$, radius $\\dfrac{3}{2}$; $O$ is outside",
+  "On the ray, $z=re^{i\\pi/12}$, $r>0$: $r^{2}-9r\\cos\\dfrac{\\pi}{12}+18=0$",
+  "Discriminant $81\\cos^{2}\\dfrac{\\pi}{12}-72>0$ ($\\cos^{2}\\dfrac{\\pi}{12}\\approx0.933$) and both roots are positive, so the ray meets $C$ twice",
+  "$OP\\cdot OQ=r_{1}r_{2}=18$ (the power of $O$ with respect to $C$)",
+  "",
+  "Final Answer: 18"
+ ],
+ "solution_full": [
+  "With $z=x+iy$: $x^{2}+y^{2}=9\\left[(x-4)^{2}+y^{2}\\right]$, i.e. $8x^{2}+8y^{2}-72x+144=0$, i.e. $x^{2}+y^{2}-9x+18=0$.",
+  "So $C$ is the Apollonius circle $\\left(x-\\dfrac{9}{2}\\right)^{2}+y^{2}=\\dfrac{9}{4}$: centre $\\dfrac{9}{2}$, radius $\\dfrac{3}{2}$. (It meets the real axis at $3$ and $6$, which divide the segment from $0$ to $4$ internally and externally in the ratio $3:1$.)",
+  "Points of the ray $\\arg z=\\dfrac{\\pi}{12}$ are $z=r\\left(\\cos\\dfrac{\\pi}{12}+i\\sin\\dfrac{\\pi}{12}\\right)$ with $r>0$, and $x^{2}+y^{2}=r^{2}$, $x=r\\cos\\dfrac{\\pi}{12}$.",
+  "Substituting: $r^{2}-9r\\cos\\dfrac{\\pi}{12}+18=0$.",
+  "The discriminant is $81\\cos^{2}\\dfrac{\\pi}{12}-72=81\\cdot\\dfrac{2+\\sqrt{3}}{4}-72>0$; the sum $9\\cos\\dfrac{\\pi}{12}$ and the product $18$ of the roots are positive, so both roots are positive and give the points $P,Q$ on the ray. (Also $\\sin\\dfrac{\\pi}{12}<\\dfrac{1}{3}=\\dfrac{3/2}{9/2}$, so the ray cuts the circle.)",
+  "Hence $OP\\cdot OQ=r_{1}r_{2}=18$, which is the power of $O$: $0^{2}+0^{2}-9\\cdot0+18=18$.",
+  "",
+  "Final Answer: 18"
+ ],
+ "originality_note": "New: the product of the two intercepts of a ray from one Apollonius point on the Apollonius circle is the power of that point, k^2|AB|^2/(k^2-1), independent of the ray (way 4, invariant). Closest known: the Apollonius circle |z - a| = k|z - b| and its centre and radius. Different because: the ray, not the circle, is the object asked about, and the answer comes from Vieta (power of a point) rather than from the intersection points.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Circle in complex form; Apollonius locus |z-z1|/|z-z2| = k",
+  "Perpendicular bisector, ray and angle loci"
+ ],
+ "concept_use": {
+  "Circle in complex form; Apollonius locus |z-z1|/|z-z2| = k": "|z| = 3|z-4| is converted to the circle x^2+y^2-9x+18 = 0 (centre 9/2, radius 3/2).",
+  "Perpendicular bisector, ray and angle loci": "arg z = pi/12 is the ray z = r e^{i pi/12}, r > 0; both roots must be positive to lie on the ray."
+ },
+ "level": 2,
+ "key_step": "Substitute the ray z = r e^{i pi/12} into the Apollonius circle and use the product of roots r1 r2 = 18.",
+ "justification": "Routine chain (Apollonius circle, parametrise the ray, Vieta) with a check that both points are on the ray; no insight. Level 2, above 2025-P1-Q7 (L1).",
+ "nearest_anchor": "2025-P1-Q7 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the ray (not the whole line) meets the circle at two points, both with r > 0. Answer 18, positive 2-digit integer. No change."
+}

@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "english": [
+  "For a real number $b$, let $L_{b}$ denote the line $(3-4i)z+(3+4i)\\bar{z}+b=0$ in the Argand plane, where $i=\\sqrt{-1}$. Let $b_{0}$ be the greater of the two values of $b$ for which $L_{b}$ touches the circle $|z-1-2i|=2$, and let $L_{b_{0}}$ touch this circle at the point $z_{0}$. Then the value of $\\mathrm{Re}(z_{0})-\\mathrm{Im}(z_{0})$ is ______."
+ ],
+ "hindi": [
+  "एक वास्तविक संख्या $b$ के लिए माना कि $L_{b}$ आर्गण्ड तल में रेखा $(3-4i)z+(3+4i)\\bar{z}+b=0$ को दर्शाता है, जहाँ $i=\\sqrt{-1}$ है। माना कि $b$ के उन दो मानों में से, जिनके लिए $L_{b}$ वृत्त $|z-1-2i|=2$ को स्पर्श करती है, बड़ा मान $b_{0}$ है, तथा $L_{b_{0}}$ इस वृत्त को बिन्दु $z_{0}$ पर स्पर्श करती है। तब $\\mathrm{Re}(z_{0})-\\mathrm{Im}(z_{0})$ का मान ______ है।"
+ ],
+ "solution": [
+  "$z\\bar{a}+\\bar{z}a+b=0$ with $a=3+4i$: $2(3x+4y)+b=0$; distance of $c$ from it is $\\dfrac{|c\\bar{a}+\\bar{c}a+b|}{2|a|}$",
+  "$c=1+2i$: $c\\bar{a}+\\bar{c}a=2\\mathrm{Re}((1+2i)(3-4i))=22$; tangency: $\\dfrac{|22+b|}{10}=2\\Rightarrow b=-2$ or $-42$, so $b_{0}=-2$",
+  "Line $3x+4y=1$; at the centre $3+8=11>1$, so the contact point is $c-2\\cdot\\dfrac{a}{|a|}=1+2i-\\dfrac{2(3+4i)}{5}=-\\dfrac{1}{5}+\\dfrac{2}{5}i$",
+  "$\\mathrm{Re}(z_{0})-\\mathrm{Im}(z_{0})=-0.2-0.4=-0.6$",
+  "",
+  "Final Answer: -0.6"
+ ],
+ "solution_full": [
+  "With $a=3+4i$, the line $z\\bar{a}+\\bar{z}a+b=0$ is $2\\,\\mathrm{Re}(z\\bar{a})+b=0$, i.e. $6x+8y+b=0$, with normal along $a$.",
+  "The circle has centre $c=1+2i$ and radius $2$. The distance of $c$ from $L_{b}$ is $\\dfrac{|6+16+b|}{\\sqrt{36+64}}=\\dfrac{|22+b|}{10}$.",
+  "Tangency: $|22+b|=20$, so $b=-2$ or $b=-42$. The greater value is $b_{0}=-2$, giving $3x+4y=1$.",
+  "The point of contact is the foot of the perpendicular from $c$ to the line. Along the unit normal $\\dfrac{a}{|a|}=\\dfrac{3+4i}{5}$, the value of $3x+4y$ at $c$ is $11$, larger than $1$, so we move from $c$ in the direction $-\\dfrac{a}{|a|}$ through the radius $2$.",
+  "$z_{0}=1+2i-\\dfrac{2}{5}(3+4i)=-\\dfrac{1}{5}+\\dfrac{2}{5}i$. Check: $3\\left(-\\dfrac{1}{5}\\right)+4\\cdot\\dfrac{2}{5}=1$ and $|z_{0}-c|=\\left|-\\dfrac{6}{5}-\\dfrac{8}{5}i\\right|=2$.",
+  "$\\mathrm{Re}(z_{0})-\\mathrm{Im}(z_{0})=-\\dfrac{1}{5}-\\dfrac{2}{5}=-0.6$.",
+  "",
+  "Final Answer: -0.6"
+ ],
+ "originality_note": "New: tangency of a family of complex-form lines to a circle, then the contact point read off as the centre moved along the unit normal a/|a| (way 3). Closest known: condition for z abar + zbar a + b = 0 to touch a circle (textbook). Different because: the point of contact and the choice of branch (greater b) are asked, which needs the side of the centre; this is a routine variant and is flagged as a standard ingredient.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Straight line in complex form (z.a_bar + z_bar.a + b = 0)",
+  "Straight line and circle in complex numbers"
+ ],
+ "concept_use": {
+  "Straight line in complex form (z.a_bar + z_bar.a + b = 0)": "The line is read as 2 Re(z abar) + b = 0 with normal a = 3+4i, giving the distance formula |c abar + cbar a + b|/(2|a|).",
+  "Straight line and circle in complex numbers": "Tangency (distance = radius) gives b = -2, -42, and the contact point is c - r a/|a|."
+ },
+ "level": 2,
+ "key_step": "Use the distance |c abar + cbar a + b|/(2|a|) = r to get b0 = -2, then the foot c - r a/|a|.",
+ "justification": "Three routine steps (convert, tangency, foot of perpendicular) with a sign decision; no real insight. Level 2, like 2024-P1-Q15 (L1) plus one more step.",
+ "nearest_anchor": "2024-P1-Q15 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that 'the greater of the two values' picks b0 = -2 and that the tangency point is unique. Answer -0.6, negative decimal. No change."
+}

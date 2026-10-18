@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $S=\\{z\\in\\mathbb{C}:|z-3-4i|=2\\}$, where $i=\\sqrt{-1}$. Let $M$ and $m$ be the maximum and the minimum values of $|z^{2}+7-24i|$ over $z\\in S$. Then the value of $m-M$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S=\\{z\\in\\mathbb{C}:|z-3-4i|=2\\}$ है, जहाँ $i=\\sqrt{-1}$ है। माना कि $z\\in S$ पर $|z^{2}+7-24i|$ के अधिकतम तथा न्यूनतम मान क्रमशः $M$ तथा $m$ हैं। तब $m-M$ का मान ______ है।"
+ ],
+ "solution": [
+  "$(3+4i)^{2}=-7+24i$, so $z^{2}+7-24i=z^{2}-(3+4i)^{2}=(z-3-4i)(z+3+4i)$",
+  "On $S$: $|z^{2}+7-24i|=2|z-(-3-4i)|$",
+  "$-3-4i$ is at distance $|6+8i|=10$ from the centre $3+4i$, so $|z+3+4i|$ ranges over $[10-2,10+2]=[8,12]$ (ends attained on the line of centres)",
+  "$m=16$, $M=24$, $m-M=-8$",
+  "",
+  "Final Answer: -8"
+ ],
+ "solution_full": [
+  "Note that $(3+4i)^{2}=9-16+24i=-7+24i$. Hence $z^{2}+7-24i=z^{2}-(3+4i)^{2}=(z-(3+4i))(z+(3+4i))$.",
+  "For $z\\in S$, $|z-(3+4i)|=2$, so $|z^{2}+7-24i|=2\\,|z-(-3-4i)|$.",
+  "The point $q=-3-4i$ is at distance $|(3+4i)-(-3-4i)|=|6+8i|=10$ from the centre of $S$, which exceeds the radius $2$.",
+  "By the triangle inequality, $10-2\\leq|z-q|\\leq10+2$ for $z\\in S$, with equality at $z=3+4i\\mp\\dfrac{2}{10}(6+8i)$, i.e. at $z=1.8+2.4i$ (minimum) and $z=4.2+5.6i$ (maximum).",
+  "Therefore $m=2\\cdot8=16$ and $M=2\\cdot12=24$. Check at $z=4.2+5.6i$: $z^{2}=-13.72+47.04i$, $z^{2}+7-24i=-6.72+23.04i$, modulus $\\sqrt{45.1584+530.8416}=24$.",
+  "$m-M=16-24=-8$.",
+  "",
+  "Final Answer: -8"
+ ],
+ "originality_note": "New: the constant in |z^2 + 7 - 24i| is minus the square of the circle's centre, so the expression factors and one factor is constant on the circle (way 4, hidden factorisation). Closest known: max/min of |z - p| for z on a circle. Different because: the quadratic expression must be factored using (3+4i)^2 before the distance extremum applies.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Triangle Inequalities & Modulus Extremum Problems",
+  "Maximum and minimum distance of a point from a circle"
+ ],
+ "concept_use": {
+  "Triangle Inequalities & Modulus Extremum Problems": "|ab| = |a||b| reduces the expression to 2|z+3+4i|, and the triangle inequality bounds it.",
+  "Maximum and minimum distance of a point from a circle": "The distance from -3-4i to points of the circle runs from 10-2 to 10+2."
+ },
+ "level": 3,
+ "key_step": "Recognise 7 - 24i = -(3+4i)^2, factor, and use that |z - 3 - 4i| = 2 on S.",
+ "justification": "The hidden factorisation is the idea a student must find; without it the problem is a heavy two-variable optimisation. After it, a standard distance extremum. Average Advanced, like 2023-P1-Q11 (L3).",
+ "nearest_anchor": "2023-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that -3-4i is outside S's reach so the minimum is positive and both extremes are attained. Answer -8 asked as m - M, negative integer. No change."
+}

@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Complex Number",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $E$ be the locus of the complex numbers $z$ satisfying $|z-3-4i|+|z+3+4i|=20$, where $i=\\sqrt{-1}$. Let the latus rectum of $E$ through the focus $3+4i$ have the end points $P$ and $Q$, representing the complex numbers $p$ and $q$. Then the value of $\\mathrm{Re}(p)\\cdot\\mathrm{Re}(q)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ उन सम्मिश्र संख्याओं $z$ का बिन्दुपथ है जो $|z-3-4i|+|z+3+4i|=20$ को संतुष्ट करती हैं, जहाँ $i=\\sqrt{-1}$ है। माना कि नाभि $3+4i$ से होकर जाने वाले $E$ के नाभिलम्ब के अन्त्य बिन्दु $P$ तथा $Q$ हैं, जो सम्मिश्र संख्याओं $p$ तथा $q$ को निरूपित करते हैं। तब $\\mathrm{Re}(p)\\cdot\\mathrm{Re}(q)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Ellipse with foci $\\pm(3+4i)$: centre $0$, $2a=20$, $2c=|6+8i|=10$, so $a=10$, $c=5$, $b^{2}=75$",
+  "Major axis along $u=\\dfrac{3+4i}{5}$; the latus rectum through $3+4i$ is perpendicular to it, along $iu=\\dfrac{-4+3i}{5}$, with semi-length $\\dfrac{b^{2}}{a}=\\dfrac{15}{2}$",
+  "$p,q=3+4i\\pm\\dfrac{15}{2}\\cdot\\dfrac{-4+3i}{5}=3+4i\\pm(-6+4.5i)$: $p=-3+8.5i$, $q=9-0.5i$",
+  "Check: $|p-3-4i|=7.5$, $|p+3+4i|=|12.5i|=12.5$, sum $20$",
+  "$\\mathrm{Re}(p)\\cdot\\mathrm{Re}(q)=(-3)(9)=-27$",
+  "",
+  "Final Answer: -27"
+ ],
+ "solution_full": [
+  "The sum of distances from the fixed points $S_{1}=3+4i$ and $S_{2}=-3-4i$ is $20>|S_{1}-S_{2}|=10$, so $E$ is an ellipse with foci $S_{1},S_{2}$, centre $0$, $2a=20$, $2c=10$.",
+  "So $a=10$, $c=5$, $b^{2}=a^{2}-c^{2}=75$, $e=\\dfrac{1}{2}$. The major axis is along the unit vector $u=\\dfrac{3+4i}{5}$.",
+  "The latus rectum through $S_{1}$ is the chord through $S_{1}$ perpendicular to the major axis, i.e. along $iu=\\dfrac{-4+3i}{5}$ (multiplication by $i$ turns through $\\dfrac{\\pi}{2}$). Its half-length is $\\dfrac{b^{2}}{a}=\\dfrac{75}{10}=\\dfrac{15}{2}$.",
+  "Hence $p,q=S_{1}\\pm\\dfrac{15}{2}\\cdot\\dfrac{-4+3i}{5}=3+4i\\pm(-6+4.5i)$, i.e. $p=-3+8.5i$ and $q=9-0.5i$.",
+  "Check for $p$: $|p-S_{1}|=|-6+4.5i|=7.5$ and $|p-S_{2}|=|0+12.5i|=12.5$; sum $=20$. For $q$: $|6-4.5i|=7.5$ and $|12+3.5i|=\\sqrt{144+12.25}=12.5$; sum $=20$.",
+  "(Alternatively: at an end of the latus rectum the two focal distances are $\\dfrac{b^{2}}{a}=7.5$ and $2a-7.5=12.5$, and $7.5^{2}+10^{2}=12.5^{2}$, consistent with the right angle at the focus $S_{1}$.)",
+  "$\\mathrm{Re}(p)\\cdot\\mathrm{Re}(q)=(-3)(9)=-27$.",
+  "",
+  "Final Answer: -27"
+ ],
+ "originality_note": "New: an ellipse given by a complex focal-sum locus with an oblique axis; the latus rectum end points are found by turning the axis direction through pi/2 (multiplication by i) and using b^2/a (way 5). Closest known: ends of the latus rectum of x^2/a^2 + y^2/b^2 = 1. Different because: the axis is oblique, so the student must work with the direction (3+4i)/5 and its rotation instead of standard coordinates.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Ellipse and hyperbola loci in complex form",
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum"
+ ],
+ "concept_use": {
+  "Ellipse and hyperbola loci in complex form": "|z - S1| + |z - S2| = 20 is read as an ellipse with foci +-(3+4i), a = 10, c = 5.",
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum": "b^2 = a^2 - c^2 = 75, the major axis along (3+4i)/5, and the latus rectum of half-length b^2/a perpendicular to it through the focus."
+ },
+ "level": 3,
+ "key_step": "Get a, c, b^2 from the focal-sum locus, then place the latus rectum through 3+4i along i(3+4i)/5 with half-length b^2/a.",
+ "justification": "Standard ellipse elements applied to an oblique ellipse given in complex form; the rotation step and exact coordinates with no options make it an average Advanced numerical. Near 2026-P2-Q13 (L3, conic elements from given data).",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "stem_review": "Read as a student: every symbol, locus and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the sum 20 exceeds the focal distance 10, and verified both end points on E. The product does not depend on which end is called P. Answer -27, negative integer. No change."
+}
