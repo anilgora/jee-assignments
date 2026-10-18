@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "Let $\\overrightarrow{a}$, $\\overrightarrow{b}$ and $\\overrightarrow{c}$ be vectors such that $|\\overrightarrow{a}|=1$, $|\\overrightarrow{b}|=2$, $|\\overrightarrow{c}|=1$, $\\overrightarrow{a}\\cdot\\overrightarrow{b}=1$, $\\overrightarrow{b}\\cdot\\overrightarrow{c}=1$ and $\\overrightarrow{c}\\cdot\\overrightarrow{a}=\\frac12$. Then the volume of the parallelepiped whose coterminous edges are $\\overrightarrow{a}$, $\\overrightarrow{b}$ and $\\overrightarrow{c}$ is ______."
+ ],
+ "hindi": [
+  "माना कि सदिश $\\overrightarrow{a}$, $\\overrightarrow{b}$ तथा $\\overrightarrow{c}$ इस प्रकार हैं कि $|\\overrightarrow{a}|=1$, $|\\overrightarrow{b}|=2$, $|\\overrightarrow{c}|=1$, $\\overrightarrow{a}\\cdot\\overrightarrow{b}=1$, $\\overrightarrow{b}\\cdot\\overrightarrow{c}=1$ तथा $\\overrightarrow{c}\\cdot\\overrightarrow{a}=\\frac12$ है। तब उस समान्तर षट्फलक का आयतन, जिसकी संलग्न (coterminous) कोरें $\\overrightarrow{a}$, $\\overrightarrow{b}$ तथा $\\overrightarrow{c}$ हैं, ______ है।"
+ ],
+ "solution": [
+  "Let $M$ have rows $\\overrightarrow{a},\\overrightarrow{b},\\overrightarrow{c}$ (components); $\\det M=[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]$",
+  "Row-by-row multiplication of $\\det M$ with $\\det M^{T}=\\det M$: $[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]^{2}=\\begin{vmatrix}\\overrightarrow{a}\\cdot\\overrightarrow{a}&\\overrightarrow{a}\\cdot\\overrightarrow{b}&\\overrightarrow{a}\\cdot\\overrightarrow{c}\\\\\\overrightarrow{b}\\cdot\\overrightarrow{a}&\\overrightarrow{b}\\cdot\\overrightarrow{b}&\\overrightarrow{b}\\cdot\\overrightarrow{c}\\\\\\overrightarrow{c}\\cdot\\overrightarrow{a}&\\overrightarrow{c}\\cdot\\overrightarrow{b}&\\overrightarrow{c}\\cdot\\overrightarrow{c}\\end{vmatrix}$",
+  "$=\\begin{vmatrix}1&1&\\frac12\\\\1&4&1\\\\\\frac12&1&1\\end{vmatrix}=1(4-1)-1\\left(1-\\frac12\\right)+\\frac12\\left(1-2\\right)=2$",
+  "Volume $=|[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]|=\\sqrt2\\approx1.41$",
+  "",
+  "Final Answer: 1.41"
+ ],
+ "solution_full": [
+  "Write $\\overrightarrow{a}=(a_1,a_2,a_3)$ and so on, and let $M$ be the matrix with rows $\\overrightarrow{a},\\overrightarrow{b},\\overrightarrow{c}$. Then $\\det M=[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]$, the scalar triple product, whose absolute value is the volume.",
+  "Multiply $\\det M$ by $\\det M^{T}$ (equal to $\\det M$) row by column: the $(i,j)$ entry of the product is the dot product of the $i$-th and $j$-th vectors.",
+  "So $[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]^{2}=\\begin{vmatrix}\\overrightarrow{a}\\cdot\\overrightarrow{a}&\\overrightarrow{a}\\cdot\\overrightarrow{b}&\\overrightarrow{a}\\cdot\\overrightarrow{c}\\\\\\overrightarrow{b}\\cdot\\overrightarrow{a}&\\overrightarrow{b}\\cdot\\overrightarrow{b}&\\overrightarrow{b}\\cdot\\overrightarrow{c}\\\\\\overrightarrow{c}\\cdot\\overrightarrow{a}&\\overrightarrow{c}\\cdot\\overrightarrow{b}&\\overrightarrow{c}\\cdot\\overrightarrow{c}\\end{vmatrix}$.",
+  "Substituting the data: $\\begin{vmatrix}1&1&\\frac12\\\\1&4&1\\\\\\frac12&1&1\\end{vmatrix}=1(4-1)-1\\left(1-\\frac12\\right)+\\frac12(1-2)=3-\\frac12-\\frac12=2$.",
+  "The data are consistent: the leading minors $1$, $4-1=3$ and $2$ are positive, so such vectors exist.",
+  "Hence the volume is $\\sqrt2=1.41421\\ldots$, which is $1.41$ to two decimal places.",
+  "",
+  "Final Answer: 1.41"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New use: the multiplication theorem det(M) det(M^T) = det(M M^T) turns six given dot products into the square of a scalar triple product (way 5). Closest known: the Gram identity [a b c]^2 = det of dot products, usually stated as a formula. Different because: the vectors are not given in components, so the product of determinants is the only route.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Multiplication of Determinants"
+ ],
+ "concept_use": {
+  "Multiplication of Determinants": "det M times det M^T, multiplied row by column, gives the determinant of dot products, which equals [a b c]^2."
+ },
+ "stem_review": "Read as a student: vectors in space, all magnitudes and dot products given; 'coterminous edges' standard; data consistent (Gram matrix positive definite). Checked: Gram determinant 2, volume sqrt 2 = 1.41421 (no rounding boundary). Answer 1.41, a positive decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Square of the triple product equals the determinant of dot products by multiplying det M with det M^T.",
+ "justification": "One known identity from the multiplication theorem and a numeric 3x3 determinant; routine with a recall step. Comparable to 2021-P1-Q19 (L3) on the same data type but simpler; placed at L2 like 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

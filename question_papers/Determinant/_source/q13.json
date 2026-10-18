@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 3,
+ "english": [
+  "For real numbers $\\alpha$, $\\beta$ and $\\gamma$, let",
+  "$$D(\\alpha,\\beta,\\gamma)=\\begin{vmatrix}1&\\sin(\\alpha-\\beta)&\\sin(\\alpha-\\gamma)\\\\\\sin(\\beta-\\alpha)&1&\\sin(\\beta-\\gamma)\\\\\\sin(\\gamma-\\alpha)&\\sin(\\gamma-\\beta)&1\\end{vmatrix}.$$",
+  "Then the maximum value of $D(\\alpha,\\beta,\\gamma)$, as $\\alpha$, $\\beta$ and $\\gamma$ vary over $\\mathbb{R}$, is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्याओं $\\alpha$, $\\beta$ तथा $\\gamma$ के लिए माना कि",
+  "$$D(\\alpha,\\beta,\\gamma)=\\begin{vmatrix}1&\\sin(\\alpha-\\beta)&\\sin(\\alpha-\\gamma)\\\\\\sin(\\beta-\\alpha)&1&\\sin(\\beta-\\gamma)\\\\\\sin(\\gamma-\\alpha)&\\sin(\\gamma-\\beta)&1\\end{vmatrix}$$",
+  "है। तब $\\alpha$, $\\beta$ तथा $\\gamma$ के $\\mathbb{R}$ पर बदलने पर $D(\\alpha,\\beta,\\gamma)$ का अधिकतम मान ______ है।"
+ ],
+ "solution": [
+  "Let $u=\\alpha-\\beta$, $v=\\beta-\\gamma$, $w=\\gamma-\\alpha$ ($u+v+w=0$) and $s_1=\\sin u$, $s_2=\\sin v$, $s_3=\\sin w$; since $\\sin(-\\theta)=-\\sin\\theta$,",
+  "$D=\\begin{vmatrix}1&s_1&-s_3\\\\-s_1&1&s_2\\\\s_3&-s_2&1\\end{vmatrix}=(1+s_2^{2})-s_1(-s_1-s_2s_3)-s_3(s_1s_2-s_3)=1+s_1^{2}+s_2^{2}+s_3^{2}$",
+  "$\\sin^{2}u+\\sin^{2}v=1-\\cos(u+v)\\cos(u-v)$ and $\\sin^{2}w=1-\\cos^{2}(u+v)$; with $c=\\cos(u+v)$:",
+  "$s_1^{2}+s_2^{2}+s_3^{2}=2-c\\cos(u-v)-c^{2}\\le2+|c|-c^{2}\\le\\frac94$",
+  "Equality for $u=v=\\frac{2\\pi}{3}$ ($c=-\\frac12$, $\\cos(u-v)=1$): $D_{\\max}=1+\\frac94=3.25$",
+  "",
+  "Final Answer: 3.25"
+ ],
+ "solution_full": [
+  "Put $u=\\alpha-\\beta$, $v=\\beta-\\gamma$, $w=\\gamma-\\alpha$, so $u+v+w=0$. By $\\sin(-\\theta)=-\\sin\\theta$: $\\sin(\\beta-\\alpha)=-\\sin u$, $\\sin(\\alpha-\\gamma)=-\\sin w$, $\\sin(\\gamma-\\beta)=-\\sin v$.",
+  "With $s_1=\\sin u$, $s_2=\\sin v$, $s_3=\\sin w$ the matrix is $I+S$ with $S$ skew-symmetric: $D=\\begin{vmatrix}1&s_1&-s_3\\\\-s_1&1&s_2\\\\s_3&-s_2&1\\end{vmatrix}$.",
+  "Expanding along the first row: $1(1+s_2^{2})-s_1(-s_1-s_2s_3)+(-s_3)(s_1s_2-s_3)=1+s_2^{2}+s_1^{2}+s_1s_2s_3-s_1s_2s_3+s_3^{2}$.",
+  "So $D=1+\\sin^{2}(\\alpha-\\beta)+\\sin^{2}(\\beta-\\gamma)+\\sin^{2}(\\gamma-\\alpha)$; the cubic terms cancel.",
+  "Compound angles: $\\sin^{2}u+\\sin^{2}v=1-\\frac{\\cos2u+\\cos2v}{2}=1-\\cos(u+v)\\cos(u-v)$, and $\\sin^{2}w=\\sin^{2}(u+v)=1-\\cos^{2}(u+v)$.",
+  "With $c=\\cos(u+v)$: $S=s_1^{2}+s_2^{2}+s_3^{2}=2-c\\cos(u-v)-c^{2}\\le2+|c|-c^{2}=\\frac94-\\left(|c|-\\frac12\\right)^{2}\\le\\frac94$.",
+  "Equality needs $|c|=\\frac12$ and $c\\cos(u-v)=-|c|$: take $u=v=\\frac{2\\pi}{3}$, so $u+v=\\frac{4\\pi}{3}$, $c=-\\frac12$, $\\cos(u-v)=1$; then each $\\sin^{2}$ is $\\frac34$ and $S=\\frac94$.",
+  "Such angles exist, for example $\\alpha=0$, $\\beta=-\\frac{2\\pi}{3}$, $\\gamma=-\\frac{4\\pi}{3}$. Hence $D_{\\max}=1+\\frac94=\\frac{13}{4}=3.25$.",
+  "",
+  "Final Answer: 3.25"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: a determinant of I plus a skew-symmetric matrix of sines of angle differences, which equals 1 plus the sum of three sin^2 terms whose angles add to zero; the maximum then needs a compound-angle bound (way 5). Closest known: a skew-symmetric determinant of odd order is 0, and the maximum 9/4 of sin^2 A + sin^2 B + sin^2 C type sums. Different because: the diagonal 1 makes the value non-zero, and the student must see the cancellation of the cubic terms before optimising.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Determinants with trigonometric or logarithmic entries",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)"
+ ],
+ "concept_use": {
+  "Determinants with trigonometric or logarithmic entries": "The entries are sines of angle differences; expansion gives 1 + sum of sin^2 of the three differences.",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "sin(-theta) = -sin theta and sin^2 u + sin^2 v = 1 - cos(u+v)cos(u-v) (compound angles) give the bound 9/4."
+ },
+ "stem_review": "Read as a student: alpha, beta, gamma real and free; D written in full; the maximum is attained (shown). Checked symbolically that D = 1 + sum sin^2 and by a grid search (max about 3.24999). Answer 3.25, a positive decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Expansion of I + skew gives 1 + sum sin^2; bound the sum by 9/4 with a compound-angle identity.",
+ "justification": "Two linked ideas (skew-symmetric expansion with cancelling cubic terms, and a constrained trigonometric maximum), numerical answer with no options. Comparable to 2021-P2-Q2 (L3) and 2024-P1-Q3 (L3) for the trigonometric step.",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,67 @@
+{
+ "type": "SCQ",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "Let $\\omega$ be a complex cube root of unity with $\\omega\\ne1$. The equation",
+  "$$\\begin{vmatrix}x&1&\\omega\\\\\\omega&x&1\\\\1&\\omega&x\\end{vmatrix}=0$$",
+  "in the complex variable $x$ has a repeated root $\\alpha$ and another root $\\beta$. Then $\\dfrac{\\beta}{\\alpha}$ is equal to",
+  "",
+  "(A) $-\\dfrac{1}{2}$",
+  "(B) $2$",
+  "(C) $\\omega$",
+  "(D) $-2$"
+ ],
+ "hindi": [
+  "माना कि $\\omega$ इकाई का एक सम्मिश्र घनमूल है तथा $\\omega\\ne1$ है। सम्मिश्र चर $x$ में समीकरण",
+  "$$\\begin{vmatrix}x&1&\\omega\\\\\\omega&x&1\\\\1&\\omega&x\\end{vmatrix}=0$$",
+  "का एक पुनरावृत्त मूल $\\alpha$ तथा एक अन्य मूल $\\beta$ है। तब $\\dfrac{\\beta}{\\alpha}$ बराबर है",
+  "",
+  "(A) $-\\dfrac{1}{2}$",
+  "(B) $2$",
+  "(C) $\\omega$",
+  "(D) $-2$"
+ ],
+ "solution": [
+  "Circulant with first row $(a,b,c)=(x,1,\\omega)$: $\\Delta=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)$",
+  "$a+b+c=x+1+\\omega=x-\\omega^{2}$",
+  "$a+b\\omega+c\\omega^{2}=x+\\omega+\\omega^{3}=x+1+\\omega=x-\\omega^{2}$",
+  "$a+b\\omega^{2}+c\\omega=x+\\omega^{2}+\\omega^{2}=x+2\\omega^{2}$",
+  "$\\Delta=(x-\\omega^{2})^{2}(x+2\\omega^{2})$ (check: expanding gives $x^{3}-3\\omega x+2$)",
+  "$\\alpha=\\omega^{2}$, $\\beta=-2\\omega^{2}$, so $\\dfrac{\\beta}{\\alpha}=-2$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "Each row is the previous row shifted one place to the right, so the determinant is circulant with first row $(a,b,c)=(x,1,\\omega)$.",
+  "For a circulant, $\\Delta=a^{3}+b^{3}+c^{3}-3abc=(a+b+c)(a+b\\omega+c\\omega^{2})(a+b\\omega^{2}+c\\omega)$, because $1+\\omega+\\omega^{2}=0$ and $\\omega^{3}=1$.",
+  "Direct expansion: $\\Delta=x^{3}+1+\\omega^{3}-3x\\omega=x^{3}-3\\omega x+2$.",
+  "First factor: $x+1+\\omega=x-\\omega^{2}$.",
+  "Second factor: $x+1\\cdot\\omega+\\omega\\cdot\\omega^{2}=x+\\omega+1=x-\\omega^{2}$.",
+  "Third factor: $x+1\\cdot\\omega^{2}+\\omega\\cdot\\omega=x+2\\omega^{2}$.",
+  "So $\\Delta=(x-\\omega^{2})^{2}(x+2\\omega^{2})$: two of the three linear factors coincide because $\\omega^{3}=1$ makes $c\\,\\omega^{2}=1$.",
+  "Check: the product of the roots is $\\omega^{4}\\cdot(-2\\omega^{2})=-2\\omega^{6}=-2$, which equals $-2$ from $x^{3}-3\\omega x+2$; the sum of the roots is $2\\omega^{2}-2\\omega^{2}=0$, matching the missing $x^{2}$ term.",
+  "The repeated root is $\\alpha=\\omega^{2}$ and the other root is $\\beta=-2\\omega^{2}$, so $\\dfrac{\\beta}{\\alpha}=-2$, whichever non-real cube root $\\omega$ is.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "answer_plan": "Option D",
+ "originality_note": "New: a circulant whose entries include omega itself, so two of the three eigenvalue factors coincide and the cubic acquires a repeated root (way 4: hidden coincidence). Closest known: the IIT problem det[[x+1, omega, omega^2],[omega, x+omega^2, 1],[omega^2, 1, x+omega]] = 0 giving x = 0. Different because: here the structure is a pure circulant, the roots are omega^2 (double) and -2 omega^2, and the question asks for their ratio.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Special forms: circulant and Vandermonde determinants",
+  "Cube root of unity"
+ ],
+ "concept_use": {
+  "Special forms: circulant and Vandermonde determinants": "The circulant factorisation (a+b+c)(a+b omega+c omega^2)(a+b omega^2+c omega) gives the three linear factors.",
+  "Cube root of unity": "omega^3 = 1 and 1 + omega + omega^2 = 0 simplify the factors to (x - omega^2)^2 (x + 2 omega^2)."
+ },
+ "stem_review": "Read as a student: omega is a non-real cube root of unity; x is a complex variable; 'repeated root' and 'another root' are well defined since the cubic is (x-omega^2)^2(x+2omega^2). Checked with sympy for omega = e^{2 pi i/3}; the ratio does not depend on the choice of omega. Answer -2 at (D) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Factorise the circulant with omega: two factors equal x - omega^2.",
+ "justification": "A standard circulant factorisation with cube roots of unity, followed by reading off the roots; routine but several steps. Comparable to 2026-P1-Q13 (L3) in topic but much shorter; placed at L2 like 2025-P1-Q1 (L2).",
+ "nearest_anchor": "2025-P1-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

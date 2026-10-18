@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "For each real number $\\lambda\\ne7$, the system of equations",
+  "$$x+y+z=3,\\qquad x+2y+3z=6,\\qquad x+4y+\\lambda z=\\lambda^{2}-7\\lambda+12$$",
+  "has a unique solution $(x_\\lambda,y_\\lambda,z_\\lambda)$. Then $\\displaystyle\\lim_{\\lambda\\to7}y_\\lambda$ is equal to",
+  "",
+  "(A) $7$",
+  "(B) $-11$",
+  "(C) $11$",
+  "(D) $-7$"
+ ],
+ "hindi": [
+  "प्रत्येक वास्तविक संख्या $\\lambda\\ne7$ के लिए समीकरण निकाय",
+  "$$x+y+z=3,\\qquad x+2y+3z=6,\\qquad x+4y+\\lambda z=\\lambda^{2}-7\\lambda+12$$",
+  "का एक अद्वितीय हल $(x_\\lambda,y_\\lambda,z_\\lambda)$ है। तब $\\displaystyle\\lim_{\\lambda\\to7}y_\\lambda$ बराबर है",
+  "",
+  "(A) $7$",
+  "(B) $-11$",
+  "(C) $11$",
+  "(D) $-7$"
+ ],
+ "solution": [
+  "$\\Delta=\\begin{vmatrix}1&1&1\\\\1&2&3\\\\1&4&\\lambda\\end{vmatrix}=(2\\lambda-12)-(\\lambda-3)+2=\\lambda-7$",
+  "With $c=\\lambda^{2}-7\\lambda+12$: $\\Delta_2=\\begin{vmatrix}1&3&1\\\\1&6&3\\\\1&c&\\lambda\\end{vmatrix}=3\\lambda-2c+3=-(2\\lambda-3)(\\lambda-7)$",
+  "Cramer: $y_\\lambda=\\dfrac{\\Delta_2}{\\Delta}=3-2\\lambda$ for $\\lambda\\ne7$ (the factor $\\lambda-7$ cancels)",
+  "$\\displaystyle\\lim_{\\lambda\\to7}y_\\lambda=3-14=-11$ (similarly $x_\\lambda=z_\\lambda=\\lambda\\to7$)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Coefficient determinant: $\\Delta=1(2\\lambda-12)-1(\\lambda-3)+1(4-2)=\\lambda-7$, non-zero for $\\lambda\\ne7$, so Cramer's rule applies.",
+  "Let $c=\\lambda^{2}-7\\lambda+12$. Replacing the second column by the constants: $\\Delta_2=\\begin{vmatrix}1&3&1\\\\1&6&3\\\\1&c&\\lambda\\end{vmatrix}=1(6\\lambda-3c)-3(\\lambda-3)+1(c-6)=3\\lambda-2c+3$.",
+  "Substituting $c$: $\\Delta_2=3\\lambda-2\\lambda^{2}+14\\lambda-24+3=-(2\\lambda^{2}-17\\lambda+21)=-(2\\lambda-3)(\\lambda-7)$.",
+  "So $y_\\lambda=\\dfrac{\\Delta_2}{\\Delta}=-(2\\lambda-3)=3-2\\lambda$ for every $\\lambda\\ne7$.",
+  "Similarly $\\Delta_1=\\Delta_3=c-12=\\lambda(\\lambda-7)$, so $x_\\lambda=z_\\lambda=\\lambda$; check: $\\lambda+(3-2\\lambda)+\\lambda=3$.",
+  "At $\\lambda=7$ itself $\\Delta=0$ and the system has infinitely many solutions (the constant becomes $12=3\\cdot6-2\\cdot3$); the limit picks out the solution $(7,-11,7)$ of that line.",
+  "$\\displaystyle\\lim_{\\lambda\\to7}y_\\lambda=3-14=-11$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "answer_plan": "Option B",
+ "originality_note": "New: the limit of a Cramer quotient at the parameter where the coefficient determinant vanishes; numerator and denominator share the factor (lambda - 7), and the limit selects one point of the solution line of the singular system (way 4). Closest known: finding lambda for unique, no or infinitely many solutions. Different because: the question asks for the limiting solution, not the classification.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Cramer's rule"
+ ],
+ "concept_use": {
+  "Cramer's rule": "y = Delta_2/Delta by Cramer's rule; both determinants contain the factor lambda - 7, which cancels before the limit."
+ },
+ "stem_review": "Read as a student: lambda real and not 7, the unique solution exists because Delta = lambda - 7; the limit is of a well-defined function. Checked with sympy: solution (lambda, 3-2 lambda, lambda). Answer -11 at (B) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Cramer's rule gives y = Delta_2/Delta = 3 - 2 lambda after cancelling lambda - 7.",
+ "justification": "Two 3x3 determinants and a cancellation, then a direct limit; routine multi-step. Comparable to 2023-P1-Q14 (L1) on systems, but the limiting step adds a stage, so L2.",
+ "nearest_anchor": "2023-P1-Q14 (L1)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "Let $R(x)=\\alpha x^{2}+\\beta x+\\gamma$ be the remainder when the polynomial $x^{6}$ is divided by $(x-1)(x-2)(x-3)$. Then the value of $\\alpha$ is ______."
+ ],
+ "hindi": [
+  "माना कि बहुपद $x^{6}$ को $(x-1)(x-2)(x-3)$ से भाग देने पर शेषफल $R(x)=\\alpha x^{2}+\\beta x+\\gamma$ है। तब $\\alpha$ का मान ______ है।"
+ ],
+ "solution": [
+  "$x^{6}=(x-1)(x-2)(x-3)Q(x)+R(x)$; remainder theorem at $x=1,2,3$: $R(1)=1$, $R(2)=64$, $R(3)=729$",
+  "$\\alpha+\\beta+\\gamma=1$, $4\\alpha+2\\beta+\\gamma=64$, $9\\alpha+3\\beta+\\gamma=729$",
+  "$\\Delta=\\begin{vmatrix}1&1&1\\\\4&2&1\\\\9&3&1\\end{vmatrix}=-1+5-6=-2$, $\\Delta_\\alpha=\\begin{vmatrix}1&1&1\\\\64&2&1\\\\729&3&1\\end{vmatrix}=-1+665-1266=-602$",
+  "Cramer: $\\alpha=\\dfrac{-602}{-2}=301$",
+  "",
+  "Final Answer: 301"
+ ],
+ "solution_full": [
+  "By the division algorithm $x^{6}=(x-1)(x-2)(x-3)Q(x)+R(x)$ with $\\deg R\\le2$.",
+  "Putting $x=1,2,3$ (the remainder theorem for each linear factor) gives $R(1)=1$, $R(2)=2^{6}=64$, $R(3)=3^{6}=729$.",
+  "So $\\alpha+\\beta+\\gamma=1$, $4\\alpha+2\\beta+\\gamma=64$, $9\\alpha+3\\beta+\\gamma=729$.",
+  "Coefficient determinant: $\\Delta=\\begin{vmatrix}1&1&1\\\\4&2&1\\\\9&3&1\\end{vmatrix}=1(2-3)-1(4-9)+1(12-18)=-1+5-6=-2\\ne0$.",
+  "Replace the first column by the constants: $\\Delta_\\alpha=\\begin{vmatrix}1&1&1\\\\64&2&1\\\\729&3&1\\end{vmatrix}=1(2-3)-1(64-729)+1(192-1458)=-1+665-1266=-602$.",
+  "By Cramer's rule, $\\alpha=\\dfrac{\\Delta_\\alpha}{\\Delta}=301$.",
+  "Check: $\\alpha$ is the second divided difference $\\dfrac{729-2\\cdot64+1}{2}=\\dfrac{602}{2}=301$; the full remainder is $301x^{2}-840x+540$, and $R(2)=1204-1680+540=64$.",
+  "",
+  "Final Answer: 301"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New combination: the remainder on division by a cubic with three known roots is found through three remainder-theorem values and one Cramer quotient, without long division (way 5). Closest known: remainder of a polynomial on division by (x-a)(x-b), found from two values. Different because: three nodes give a 3x3 system, and only one coefficient is asked, which Cramer's rule gives directly.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Cramer's rule",
+  "Remainder & Factor Theorems."
+ ],
+ "concept_use": {
+  "Cramer's rule": "alpha = Delta_alpha / Delta from the 3x3 system for the coefficients of R.",
+  "Remainder & Factor Theorems.": "The remainder theorem gives R(1) = 1, R(2) = 64, R(3) = 729, the right-hand sides of the system."
+ },
+ "stem_review": "Read as a student: the divisor is a cubic with distinct roots, so the remainder has degree at most 2 and is unique; alpha is its x^2-coefficient. Checked with sympy: remainder 301x^2 - 840x + 540. Answer 301, a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Remainder theorem at 1, 2, 3 gives a 3x3 system; Cramer gives alpha.",
+ "justification": "Routine chain: three substitutions, two determinants; no insight beyond setting up the system. Comparable to 2024-P1-Q8 (L2) in demand.",
+ "nearest_anchor": "2024-P1-Q8 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

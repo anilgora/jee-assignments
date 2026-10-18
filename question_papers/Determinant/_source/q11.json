@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "For real numbers $x$ and $\\lambda$, let",
+  "$$D(x,\\lambda)=\\begin{vmatrix}1&\\cos x&\\sin x\\\\\\cos x&1&\\lambda\\\\\\sin x&\\lambda&1\\end{vmatrix}.$$",
+  "Then the maximum value of $D(x,\\lambda)$, as $x$ and $\\lambda$ vary over $\\mathbb{R}$, is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्याओं $x$ तथा $\\lambda$ के लिए माना कि",
+  "$$D(x,\\lambda)=\\begin{vmatrix}1&\\cos x&\\sin x\\\\\\cos x&1&\\lambda\\\\\\sin x&\\lambda&1\\end{vmatrix}$$",
+  "है। तब $x$ तथा $\\lambda$ के $\\mathbb{R}$ पर बदलने पर $D(x,\\lambda)$ का अधिकतम मान ______ है।"
+ ],
+ "solution": [
+  "Expanding along $R_1$: $D=(1-\\lambda^{2})-\\cos x(\\cos x-\\lambda\\sin x)+\\sin x(\\lambda\\cos x-\\sin x)$",
+  "$=1-\\lambda^{2}-(\\cos^{2}x+\\sin^{2}x)+2\\lambda\\sin x\\cos x=\\lambda\\sin 2x-\\lambda^{2}$",
+  "For fixed $\\lambda$: $D\\le|\\lambda|-\\lambda^{2}=\\frac14-\\left(|\\lambda|-\\frac12\\right)^{2}\\le\\frac14$",
+  "Equality at $\\lambda=\\frac12$, $x=\\frac{\\pi}{4}$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "Expand along the first row: $D=1\\cdot(1-\\lambda^{2})-\\cos x\\,(\\cos x-\\lambda\\sin x)+\\sin x\\,(\\lambda\\cos x-\\sin x)$.",
+  "$=1-\\lambda^{2}-\\cos^{2}x+\\lambda\\sin x\\cos x+\\lambda\\sin x\\cos x-\\sin^{2}x$.",
+  "Using $\\sin^{2}x+\\cos^{2}x=1$ and $2\\sin x\\cos x=\\sin 2x$: $D(x,\\lambda)=\\lambda\\sin 2x-\\lambda^{2}$.",
+  "For a fixed $\\lambda$, the largest value of $\\lambda\\sin 2x$ over $x$ is $|\\lambda|$ (take $\\sin 2x=\\pm1$ with the sign of $\\lambda$).",
+  "So $D\\le|\\lambda|-\\lambda^{2}=\\frac14-\\left(|\\lambda|-\\frac12\\right)^{2}\\le\\frac14$.",
+  "Equality holds for $\\lambda=\\frac12$ and $x=\\frac{\\pi}{4}$: $D=\\frac12\\cdot1-\\frac14=\\frac14$.",
+  "Hence the maximum value is $0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a symmetric determinant with cos x, sin x in one row and a free parameter lambda elsewhere; sin^2 + cos^2 = 1 kills the constant part and the remaining two-variable function lambda sin 2x - lambda^2 is maximised jointly (way 5). Closest known: maximum of a trigonometric determinant in one variable such as 2 + sin 2x. Different because: the extremum is over two variables and needs completing the square in |lambda|.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Determinants with trigonometric or logarithmic entries"
+ ],
+ "concept_use": {
+  "Determinants with trigonometric or logarithmic entries": "The entries cos x, sin x combine through sin^2 x + cos^2 x = 1 and 2 sin x cos x = sin 2x, leaving lambda sin 2x - lambda^2."
+ },
+ "stem_review": "Read as a student: x and lambda real and independent; D written in full; maximum over both variables is attained. Checked with sympy (D = lambda(sin 2x - lambda)) and a grid search (max 0.25). Answer 0.25, a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Expansion collapses to lambda sin 2x - lambda^2; maximise over x then over lambda.",
+ "justification": "One expansion with a trigonometric simplification, then a two-step maximisation; routine multi-step. Comparable to 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

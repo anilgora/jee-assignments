@@ -1,0 +1,58 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 3,
+ "english": [
+  "For a real number $k$, consider the system of equations",
+  "$$kx+2y-z=1,\\qquad 2x+(k+3)y-2z=1,\\qquad -x-2y+kz=1.$$",
+  "Then the sum of all real values of $k$ for which this system has no solution is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $k$ के लिए समीकरण निकाय",
+  "$$kx+2y-z=1,\\qquad 2x+(k+3)y-2z=1,\\qquad -x-2y+kz=1$$",
+  "पर विचार कीजिए। तब $k$ के उन सभी वास्तविक मानों का योग, जिनके लिए इस निकाय का कोई हल नहीं है, ______ है।"
+ ],
+ "solution": [
+  "$\\Delta=\\begin{vmatrix}k&2&-1\\\\2&k+3&-2\\\\-1&-2&k\\end{vmatrix}=(k-1)^{2}(k+5)$ (the matrix is $(k-1)I+\\mathbf{v}\\mathbf{v}^{T}$, $\\mathbf{v}=(1,2,-1)$)",
+  "$k\\ne1,-5$: unique solution by Cramer's rule",
+  "$\\Delta=0\\iff$ the homogeneous system has non-trivial solutions; at $k=1$ every row is a multiple of $(1,2,-1)$:",
+  "$x+2y-z=1$, $x+2y-z=\\frac12$, $x+2y-z=-1$: three parallel, disjoint planes, so no solution",
+  "$k=-5$: $\\Delta_1=\\begin{vmatrix}1&2&-1\\\\1&-2&-2\\\\1&-2&-5\\end{vmatrix}=12\\ne0$, so no solution",
+  "Sum $=1+(-5)=-4$",
+  "",
+  "Final Answer: -4"
+ ],
+ "solution_full": [
+  "Expanding along the first row: $\\Delta=k\\left[k(k+3)-4\\right]-2(2k-2)+(-1)(-4+k+3)=k^{3}+3k^{2}-4k-4k+4-k+1=k^{3}+3k^{2}-9k+5$.",
+  "$k^{3}+3k^{2}-9k+5=(k-1)^{2}(k+5)$. (Structure: the matrix is $(k-1)I+\\mathbf{v}\\mathbf{v}^{T}$ with $\\mathbf{v}=(1,2,-1)$, $|\\mathbf{v}|^{2}=6$.)",
+  "For $k\\ne1,-5$, $\\Delta\\ne0$ and Cramer's rule gives a unique solution, so these $k$ are excluded.",
+  "$\\Delta=0$ is also exactly the condition for the associated homogeneous system (right-hand sides $0$) to have non-trivial solutions; we now test the two values against the given constants.",
+  "$k=1$: the equations are $x+2y-z=1$, $2(x+2y-z)=1$, $-(x+2y-z)=1$, that is $x+2y-z=1,\\ \\frac12,\\ -1$. The three planes are parallel and pairwise disjoint, so there is no solution.",
+  "$k=-5$: the rank of the coefficient matrix is $2$ (the minor $\\begin{vmatrix}-5&2\\\\2&-2\\end{vmatrix}=6\\ne0$). Replacing the first column by the constants: $\\Delta_1=\\begin{vmatrix}1&2&-1\\\\1&-2&-2\\\\1&-2&-5\\end{vmatrix}=1(10-4)-2(-5+2)-1(-2+2)=12\\ne0$.",
+  "Since $\\Delta=0$ but $\\Delta_1\\ne0$, the system is inconsistent at $k=-5$ as well.",
+  "So the system has no solution exactly for $k=1$ and $k=-5$, and the sum is $-4$.",
+  "",
+  "Final Answer: -4"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: a parameter family whose coefficient matrix is (k-1)I plus a rank-one matrix, so at the double root the three planes are parallel and disjoint and at the simple root the system fails by a non-zero Cramer determinant (way 5). Closest known: the system kx+y+z=1, x+ky+z=1, x+y+kz=1. Different because: the rank-one direction is (1,2,-1), so the parallel planes are not visible from the rows, and both singular values must be tested separately.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Cramer's rule",
+  "Solving system of linear equations when all three planes are parallel and disjoint",
+  "Solving system of homogeneous linear equations"
+ ],
+ "concept_use": {
+  "Cramer's rule": "For k != 1, -5 the system has a unique solution by Cramer's rule, and at k = -5 the non-zero Delta_1 shows inconsistency.",
+  "Solving system of linear equations when all three planes are parallel and disjoint": "At k = 1 every equation is a multiple of x + 2y - z with right-hand sides 1, 1/2, -1: three parallel, disjoint planes.",
+  "Solving system of homogeneous linear equations": "Delta = 0 is the condition for the homogeneous system to have non-trivial solutions; it gives the two candidate values k = 1 and k = -5."
+ },
+ "stem_review": "Read as a student: k real; 'no solution' is the only condition; both singular values give no solution, so the sum is -4. Checked ranks with sympy: k = 1 rank 1 vs augmented 2; k = -5 rank 2 vs 3. Answer -4, a negative integer as planned. Changed: removed a leftover fragment from the first line of the full solution.",
+ "level": 3,
+ "key_step": "Factor Delta = (k-1)^2(k+5); k = 1 gives parallel disjoint planes and k = -5 gives Delta_1 != 0.",
+ "justification": "Three concepts linked: singular values from the determinant, recognising rank one (parallel planes) at the double root, and a Cramer determinant test at the other; numerical answer. Comparable to 2023-P1-Q14 (L1) in topic but with two separate case checks and a factorisation, like 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

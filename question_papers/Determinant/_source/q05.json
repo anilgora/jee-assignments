@@ -1,0 +1,63 @@
+{
+ "type": "SCQ",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "For a real number $k$, let $p,q,r:\\mathbb{R}\\to\\mathbb{R}$ be defined by $p(x)=x^{2}+1$, $q(x)=x^{2}+x$ and $r(x)=2x^{2}+kx+k^{2}$. Then the sum of all real values of $k$ for which",
+  "$$\\begin{vmatrix}p(1)&p(2)&p(3)\\\\q(1)&q(2)&q(3)\\\\r(1)&r(2)&r(3)\\end{vmatrix}=0$$",
+  "is",
+  "",
+  "(A) $-1$",
+  "(B) $1$",
+  "(C) $-2$",
+  "(D) $3$"
+ ],
+ "hindi": [
+  "वास्तविक संख्या $k$ के लिए माना कि $p,q,r:\\mathbb{R}\\to\\mathbb{R}$, $p(x)=x^{2}+1$, $q(x)=x^{2}+x$ तथा $r(x)=2x^{2}+kx+k^{2}$ द्वारा परिभाषित हैं। तब $k$ के उन सभी वास्तविक मानों का योग, जिनके लिए",
+  "$$\\begin{vmatrix}p(1)&p(2)&p(3)\\\\q(1)&q(2)&q(3)\\\\r(1)&r(2)&r(3)\\end{vmatrix}=0$$",
+  "है,",
+  "",
+  "(A) $-1$",
+  "(B) $1$",
+  "(C) $-2$",
+  "(D) $3$"
+ ],
+ "solution": [
+  "Each row is (coefficients of $x^{2},x,1$) times the columns $(j^{2},j,1)$, $j=1,2,3$; the column determinant $\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}=-2\\ne0$",
+  "So the determinant is $0\\iff$ one row is a linear combination of the others $\\iff r=\\lambda p+\\mu q$",
+  "Comparing coefficients: $x$: $\\mu=k$; constant: $\\lambda=k^{2}$; $x^{2}$: $\\lambda+\\mu=2$",
+  "$k^{2}+k-2=0\\Rightarrow k=1$ or $k=-2$ (directly: $\\Delta=-2(k^{2}+k-2)$)",
+  "Sum $=-1$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "For a polynomial $s(x)=ax^{2}+bx+c$ the row $(s(1),s(2),s(3))$ equals $a(1,4,9)+b(1,2,3)+c(1,1,1)$.",
+  "Hence the determinant equals $\\begin{vmatrix}1&0&1\\\\1&1&0\\\\2&k&k^{2}\\end{vmatrix}\\cdot\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}$ (rows of coefficients times the rows $(j^{2}),(j),(1)$).",
+  "$\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}=1(2-3)-4(1-3)+9(1-2)=-2\\ne0$.",
+  "$\\begin{vmatrix}1&0&1\\\\1&1&0\\\\2&k&k^{2}\\end{vmatrix}=1(k^{2}-0)-0+1(k-2)=k^{2}+k-2$.",
+  "So the determinant is $-2(k^{2}+k-2)$. It vanishes exactly when the coefficient rows are dependent, that is when $r$ is a linear combination $\\lambda p+\\mu q$: $\\mu=k$ ($x$-coefficient), $\\lambda=k^{2}$ (constant), $\\lambda+\\mu=2$ ($x^{2}$-coefficient).",
+  "$k^{2}+k-2=(k-1)(k+2)=0$, so $k=1$ ($r=p+q$) or $k=-2$ ($r=4p-2q$).",
+  "Check for $k=1$: rows $(2,5,10)$, $(2,6,12)$, $(4,11,22)$, and the third is the sum of the first two.",
+  "The sum of the values is $1+(-2)=-1$. The product $-2$ is option (C).",
+  "",
+  "Correct Option: (A)"
+ ],
+ "answer_plan": "Option A",
+ "originality_note": "New: a determinant of values of three quadratics at 1, 2, 3 vanishes exactly when one quadratic is a combination of the other two, with a parameter entering both linearly and quadratically (way 5). Closest known: rows proportional or in AP give a zero determinant. Different because: the dependence is among polynomials, not among the visible rows, and it fixes k through a quadratic equation.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Determinant when a row is a linear combination of the others"
+ ],
+ "concept_use": {
+  "Determinant when a row is a linear combination of the others": "The determinant vanishes exactly when the third row (values of r) is a linear combination of the first two, i.e. r = lambda p + mu q; this gives k^2 + k - 2 = 0."
+ },
+ "stem_review": "Read as a student: p, q, r defined on R with the parameter k introduced first; the determinant is written in full; 'sum of all real values' is clear since there are two. Checked with sympy: determinant -2(k-1)(k+2). Answer -1 at (A) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Determinant zero iff r is a combination of p and q, which gives k^2 + k - 2 = 0.",
+ "justification": "Routine: either expand a 3x3 determinant with a quadratic parameter or use the linear-dependence view, then Vieta; several standard steps, no new idea. Comparable to 2025-P1-Q1 (L2).",
+ "nearest_anchor": "2025-P1-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

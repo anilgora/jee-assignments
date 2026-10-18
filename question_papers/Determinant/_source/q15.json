@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "For a real number $t$, let",
+  "$$D(t)=\\begin{vmatrix}(1+t)^{2}&(1+2t)^{2}&(1+3t)^{2}\\\\(2+t)^{2}&(2+2t)^{2}&(2+3t)^{2}\\\\(3+t)^{2}&(3+2t)^{2}&(3+3t)^{2}\\end{vmatrix}.$$",
+  "Let $t_0$ be the real number for which $D(t_0)=27$. Then the value of $t_0$ is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $t$ के लिए माना कि",
+  "$$D(t)=\\begin{vmatrix}(1+t)^{2}&(1+2t)^{2}&(1+3t)^{2}\\\\(2+t)^{2}&(2+2t)^{2}&(2+3t)^{2}\\\\(3+t)^{2}&(3+2t)^{2}&(3+3t)^{2}\\end{vmatrix}$$",
+  "है। माना कि $t_0$ वह वास्तविक संख्या है जिसके लिए $D(t_0)=27$ है। तब $t_0$ का मान ______ है।"
+ ],
+ "solution": [
+  "$(i+jt)^{2}=1\\cdot j^{2}t^{2}+i\\cdot 2jt+i^{2}\\cdot1$, so $D(t)$ is the row-by-column product of",
+  "$\\begin{vmatrix}1&1&1\\\\1&2&3\\\\1&4&9\\end{vmatrix}$ (rows indexed by $i$, columns $1,i,i^{2}$ transposed) and $\\begin{vmatrix}t^{2}&4t^{2}&9t^{2}\\\\2t&4t&6t\\\\1&1&1\\end{vmatrix}$",
+  "First factor: Vandermonde $(2-1)(3-1)(3-2)=2$",
+  "Second: take $t^{2}$ from $R_1$ and $2t$ from $R_2$: $2t^{3}\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}=2t^{3}(-2)=-4t^{3}$",
+  "$D(t)=-8t^{3}=27\\Rightarrow t^{3}=-\\frac{27}{8}\\Rightarrow t_0=-\\frac32$",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "solution_full": [
+  "The $(i,j)$ entry is $(i+jt)^{2}=1\\cdot(j^{2}t^{2})+i\\cdot(2jt)+i^{2}\\cdot1$ for $i,j\\in\\{1,2,3\\}$.",
+  "So the matrix of $D(t)$ is $AB$, where $A$ has rows $(1,i,i^{2})$ for $i=1,2,3$ and $B$ has rows $(t^{2},4t^{2},9t^{2})$, $(2t,4t,6t)$, $(1,1,1)$. By the multiplication theorem $D(t)=\\det A\\cdot\\det B$.",
+  "$\\det A=\\begin{vmatrix}1&1&1\\\\1&2&4\\\\1&3&9\\end{vmatrix}$ is a Vandermonde determinant: $(2-1)(3-1)(3-2)=2$.",
+  "In $\\det B$ take $t^{2}$ out of the first row and $2t$ out of the second: $\\det B=2t^{3}\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}$.",
+  "$\\begin{vmatrix}1&4&9\\\\1&2&3\\\\1&1&1\\end{vmatrix}=1(2-3)-4(1-3)+9(1-2)=-1+8-9=-2$, so $\\det B=-4t^{3}$.",
+  "Hence $D(t)=-8t^{3}$ for all $t$ (check: $D(1)$ has rows $(4,9,16),(9,16,25),(16,25,36)$ with determinant $-8$).",
+  "$-8t^{3}=27$ has the single real root $t_0=-\\frac32=-1.5$.",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a determinant of squares (i + jt)^2 that factors, by the multiplication theorem, into a Vandermonde determinant times a scaled one, giving the clean form -8t^3 (way 4: hidden product structure). Closest known: det of (a_i + b_j)^2 style matrices and the power-sum determinant equal to a squared Vandermonde. Different because: the parameter enters every entry, and the student must split each square into three rank-one terms and extract t^3.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Multiplication of Determinants",
+  "Application of properties of determinant"
+ ],
+ "concept_use": {
+  "Multiplication of Determinants": "The matrix of D(t) is the product AB of a Vandermonde matrix and a parameter matrix, so D = det A det B.",
+  "Application of properties of determinant": "Factors t^2 and 2t come out of rows of B, and det A is evaluated as a Vandermonde product; these properties give -8t^3."
+ },
+ "stem_review": "Read as a student: t real; D(t) written in full; D(t) = -8t^3, so D(t0) = 27 has exactly one real root and t0 is well defined. Checked with sympy. Answer -1.50, a negative decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Write (i+jt)^2 as a sum of three products and use det(AB) = det A det B.",
+ "justification": "Recognising a product of two determinants and two standard evaluations; routine chain. A student who expands directly also succeeds with effort. Comparable to 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

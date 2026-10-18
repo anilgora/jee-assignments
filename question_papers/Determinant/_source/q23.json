@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 3,
+ "english": [
+  "Let $S$ be the set of all $\\theta\\in(0,\\pi)$ for which the system of equations",
+  "$$x\\sin\\theta+y\\cos\\theta+z=0,\\qquad x\\cos\\theta+y\\sin\\theta+z=0,\\qquad x+y+2z=0$$",
+  "has a non-trivial solution. Then the value of $\\dfrac{1}{\\pi}\\displaystyle\\sum_{\\theta\\in S}\\theta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$, $(0,\\pi)$ में उन सभी $\\theta$ का समुच्चय है जिनके लिए समीकरण निकाय",
+  "$$x\\sin\\theta+y\\cos\\theta+z=0,\\qquad x\\cos\\theta+y\\sin\\theta+z=0,\\qquad x+y+2z=0$$",
+  "का एक अतुच्छ (non-trivial) हल है। तब $\\dfrac{1}{\\pi}\\displaystyle\\sum_{\\theta\\in S}\\theta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Non-trivial solution $\\iff\\begin{vmatrix}\\sin\\theta&\\cos\\theta&1\\\\\\cos\\theta&\\sin\\theta&1\\\\1&1&2\\end{vmatrix}=0$",
+  "Expanding: $2\\sin^{2}\\theta-2\\cos^{2}\\theta+2(\\cos\\theta-\\sin\\theta)=2(\\sin\\theta-\\cos\\theta)(\\sin\\theta+\\cos\\theta-1)$",
+  "$\\tan\\theta=1\\Rightarrow\\theta=n\\pi+\\frac{\\pi}{4}$: in $(0,\\pi)$ only $\\frac{\\pi}{4}$",
+  "$\\sin\\theta+\\cos\\theta=1\\Rightarrow\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)=\\frac{1}{\\sqrt2}\\Rightarrow\\theta=2n\\pi$ or $\\theta=2n\\pi+\\frac{\\pi}{2}$: in $(0,\\pi)$ only $\\frac{\\pi}{2}$",
+  "$S=\\left\\{\\frac{\\pi}{4},\\frac{\\pi}{2}\\right\\}$, value $=\\frac14+\\frac12=0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "A homogeneous system has a non-trivial solution exactly when its coefficient determinant is zero.",
+  "Expanding along the first row: $\\sin\\theta(2\\sin\\theta-1)-\\cos\\theta(2\\cos\\theta-1)+1(\\cos\\theta-\\sin\\theta)=2\\sin^{2}\\theta-2\\cos^{2}\\theta+2\\cos\\theta-2\\sin\\theta$.",
+  "$=2(\\sin\\theta-\\cos\\theta)(\\sin\\theta+\\cos\\theta)-2(\\sin\\theta-\\cos\\theta)=2(\\sin\\theta-\\cos\\theta)(\\sin\\theta+\\cos\\theta-1)$.",
+  "First factor: $\\sin\\theta=\\cos\\theta\\iff\\tan\\theta=1\\iff\\theta=n\\pi+\\frac{\\pi}{4}$, $n\\in\\mathbb{Z}$. In $(0,\\pi)$: $\\theta=\\frac{\\pi}{4}$.",
+  "Second factor: $\\sin\\theta+\\cos\\theta=1\\iff\\sqrt2\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)=1\\iff\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)=\\sin\\frac{\\pi}{4}$.",
+  "General solution: $\\theta+\\frac{\\pi}{4}=n\\pi+(-1)^{n}\\frac{\\pi}{4}$, i.e. $\\theta=2m\\pi$ (even $n$) or $\\theta=(2m+1)\\pi-\\frac{\\pi}{2}=2m\\pi+\\frac{\\pi}{2}$ (odd $n$). In the open interval $(0,\\pi)$ only $\\theta=\\frac{\\pi}{2}$; $\\theta=0$ is excluded.",
+  "Check $\\theta=\\frac{\\pi}{2}$: the equations become $x+z=0$, $y+z=0$, $x+y+2z=0$, satisfied by $(1,1,-1)$.",
+  "So $S=\\left\\{\\frac{\\pi}{4},\\frac{\\pi}{2}\\right\\}$ and $\\dfrac{1}{\\pi}\\left(\\frac{\\pi}{4}+\\frac{\\pi}{2}\\right)=\\frac34=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a homogeneous system with swapped sin and cos in two rows, whose determinant factors as (sin - cos)(sin + cos - 1), so two different general-solution families must be intersected with an open interval (way 5). Closest known: the IIT problem (sin 3 theta) x - y + z = 0, (cos 2 theta) x + 4y + 3z = 0, 2x + 7y + 7z = 0. Different because: the factorisation and both families are new, and the end point theta = 0 of one family must be excluded.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Solving system of homogeneous linear equations",
+  "General solution of sin(x) = k, cos(x) = k, tan(x) = k"
+ ],
+ "concept_use": {
+  "Solving system of homogeneous linear equations": "Non-trivial solutions exist iff the coefficient determinant 2(sin - cos)(sin + cos - 1) vanishes.",
+  "General solution of sin(x) = k, cos(x) = k, tan(x) = k": "The general solutions of tan theta = 1 and sin(theta + pi/4) = 1/sqrt 2 give the members of S in (0, pi)."
+ },
+ "stem_review": "Read as a student: S is a subset of the open interval (0, pi), so theta = 0 is excluded; the sum is over a finite set. Checked the factorisation with sympy and the roots numerically: pi/4 and pi/2 only. Answer 0.75, a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Factor the determinant into (sin - cos)(sin + cos - 1) and solve both families in (0, pi).",
+ "justification": "Two linked ideas (factorising a trigonometric determinant, and general solutions of two equations with an excluded end point); numerical answer. Comparable to 2023-P2-Q3 (L3) and 2025-P2-Q3 (L3).",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,57 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 3,
+ "english": [
+  "Let $a$, $b$ and $c$ be real numbers such that the system of equations",
+  "$$x-2y+2z=3,\\qquad 2x+ay+bz=1,\\qquad 3x-6y+cz=-12$$",
+  "has no solution and no two of the planes $P_1:\\ x-2y+2z=3$, $P_2:\\ 2x+ay+bz=1$, $P_3:\\ 3x-6y+cz=-12$ have a common point. The line",
+  "$$L:\\ \\frac{x-1}{2}=\\frac{y+1}{1}=\\frac{z}{-1}$$",
+  "meets the plane, among $P_1$, $P_2$, $P_3$, that is farthest from the origin at the point $Q$. Then the $z$-coordinate of $Q$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$, $b$ तथा $c$ ऐसी वास्तविक संख्याएँ हैं कि समीकरण निकाय",
+  "$$x-2y+2z=3,\\qquad 2x+ay+bz=1,\\qquad 3x-6y+cz=-12$$",
+  "का कोई हल नहीं है तथा तलों $P_1:\\ x-2y+2z=3$, $P_2:\\ 2x+ay+bz=1$, $P_3:\\ 3x-6y+cz=-12$ में से किन्हीं दो का कोई उभयनिष्ठ बिन्दु नहीं है। रेखा",
+  "$$L:\\ \\frac{x-1}{2}=\\frac{y+1}{1}=\\frac{z}{-1}$$",
+  "तलों $P_1$, $P_2$, $P_3$ में से मूलबिन्दु से सबसे दूर स्थित तल को बिन्दु $Q$ पर मिलती है। तब $Q$ का $z$-निर्देशांक ______ है।"
+ ],
+ "solution": [
+  "Pairwise disjoint planes are parallel: normals $\\propto(1,-2,2)$, so $a=-4$, $b=4$, $c=6$",
+  "Planes $x-2y+2z=c_i$ with $c_1=3$, $c_2=\\frac12$, $c_3=-4$; distances from $O$: $\\frac{|c_i|}{3}=1,\\ \\frac16,\\ \\frac43$, so $P_3$ is farthest",
+  "Point of $L$: $(1+2t,\\ -1+t,\\ -t)$; $x-2y+2z=3-2t$ (direction $\\cdot$ normal $=-2\\ne0$, so $L$ meets each plane)",
+  "$3-2t=-4\\Rightarrow t=\\frac72$, $Q=\\left(8,\\ \\frac52,\\ -\\frac72\\right)$",
+  "",
+  "Final Answer: -3.50"
+ ],
+ "solution_full": [
+  "Two planes without a common point are parallel and distinct, so the normals $(2,a,b)$ and $(3,-6,c)$ are multiples of $(1,-2,2)$: $a=-4$, $b=4$ (factor $2$) and $c=6$ (factor $3$).",
+  "Dividing by these factors: $P_1:\\ x-2y+2z=3$, $P_2:\\ x-2y+2z=\\frac12$, $P_3:\\ x-2y+2z=-4$. The constants are distinct, so the planes are pairwise disjoint and the system has no solution, as required.",
+  "The distance of the origin from $x-2y+2z=c$ is $\\dfrac{|c|}{\\sqrt{1+4+4}}=\\dfrac{|c|}{3}$: $1$ for $P_1$, $\\frac16$ for $P_2$, $\\frac43$ for $P_3$. So $P_3$ is the farthest.",
+  "A general point of $L$ is $(1+2t,\\ -1+t,\\ -t)$. The direction $(2,1,-1)$ has dot product $2-2-2=-2\\ne0$ with the normal, so $L$ is not parallel to the planes and meets each in exactly one point.",
+  "On $L$: $x-2y+2z=(1+2t)-2(-1+t)+2(-t)=3-2t$.",
+  "For $P_3$: $3-2t=-4$, so $t=\\frac72$ and $Q=\\left(1+7,\\ -1+\\frac72,\\ -\\frac72\\right)=\\left(8,\\ \\frac52,\\ -\\frac72\\right)$. Check: $8-5-7=-4$.",
+  "Hence the $z$-coordinate of $Q$ is $-\\frac72=-3.5$.",
+  "",
+  "Final Answer: -3.50"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: an inconsistent system whose three planes are forced to be parallel and disjoint, then ranked by distance from the origin, and finally cut by a line (way 5). Closest known: conditions for parallel planes, and the point where a line meets a plane. Different because: the plane to be used is chosen by a distance comparison after the parallel conditions, linking the system to line-plane geometry.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Solving system of linear equations when all three planes are parallel and disjoint",
+  "Line and a plane"
+ ],
+ "concept_use": {
+  "Solving system of linear equations when all three planes are parallel and disjoint": "No solution with no two planes meeting forces the three planes to be parallel and distinct, giving a = -4, b = 4, c = 6.",
+  "Line and a plane": "The line L is written parametrically and meets the plane P3 where 3 - 2t = -4; its direction is not perpendicular to the normal, so the intersection exists."
+ },
+ "stem_review": "Read as a student: a, b, c real; both conditions stated; 'farthest from the origin' compares the three planes; the line meets each plane once. Checked with sympy: Q = (8, 5/2, -7/2). Answer -3.50, a negative decimal as planned. Changed: removed the confusing parenthetical remark at the end of the full solution.",
+ "level": 3,
+ "key_step": "Parallel-and-disjoint conditions fix the planes; the distance comparison picks P3; line-plane intersection gives Q.",
+ "justification": "Two chapters linked through a three-stage chain (parallel conditions, distance comparison, line-plane intersection); numerical answer. Comparable to 2025-P1-Q5 (L3) and 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2025-P1-Q5 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

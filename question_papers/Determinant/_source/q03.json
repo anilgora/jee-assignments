@@ -1,0 +1,65 @@
+{
+ "type": "SCQ",
+ "chapter": "Determinant",
+ "target_level": 2,
+ "english": [
+  "For each positive integer $n$, let",
+  "$$D_n=\\begin{vmatrix}n&n+1&n+2\\\\n+2&n&n+1\\\\n+1&n+2&n\\end{vmatrix}.$$",
+  "Then the number of integers $n$ with $1\\le n\\le 100$ for which $D_n$ is the square of an integer is",
+  "",
+  "(A) $10$",
+  "(B) $9$",
+  "(C) $3$",
+  "(D) $8$"
+ ],
+ "hindi": [
+  "प्रत्येक धनात्मक पूर्णांक $n$ के लिए माना कि",
+  "$$D_n=\\begin{vmatrix}n&n+1&n+2\\\\n+2&n&n+1\\\\n+1&n+2&n\\end{vmatrix}$$",
+  "है। तब $1\\le n\\le 100$ वाले उन पूर्णांकों $n$ की संख्या, जिनके लिए $D_n$ किसी पूर्णांक का वर्ग है,",
+  "",
+  "(A) $10$",
+  "(B) $9$",
+  "(C) $3$",
+  "(D) $8$"
+ ],
+ "solution": [
+  "$C_1\\to C_1+C_2+C_3$ gives the column $3n+3$, so $D_n=3(n+1)\\begin{vmatrix}1&n+1&n+2\\\\1&n&n+1\\\\1&n+2&n\\end{vmatrix}$",
+  "$R_2\\to R_2-R_1$, $R_3\\to R_3-R_1$: $\\begin{vmatrix}1&n+1&n+2\\\\0&-1&-1\\\\0&1&-2\\end{vmatrix}=2+1=3$",
+  "$D_n=9(n+1)$, a perfect square $\\iff n+1$ is a perfect square",
+  "$2\\le n+1\\le 101$: $n+1\\in\\{4,9,16,\\dots,100\\}$, that is $2^{2},\\dots,10^{2}$",
+  "Number of values $=9$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "The matrix is circulant: each row is the previous one shifted cyclically, so every row and every column has sum $3n+3$.",
+  "Apply $C_1\\to C_1+C_2+C_3$; the first column becomes $(3n+3,3n+3,3n+3)$, and $3(n+1)$ comes out as a common factor.",
+  "$D_n=3(n+1)\\begin{vmatrix}1&n+1&n+2\\\\1&n&n+1\\\\1&n+2&n\\end{vmatrix}$.",
+  "Apply $R_2\\to R_2-R_1$ and $R_3\\to R_3-R_1$: $\\begin{vmatrix}1&n+1&n+2\\\\0&-1&-1\\\\0&1&-2\\end{vmatrix}=(-1)(-2)-(-1)(1)=3$.",
+  "So $D_n=9(n+1)$. This agrees with the circulant formula $a^{3}+b^{3}+c^{3}-3abc=(a+b+c)\\cdot\\frac12[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}]=(3n+3)\\cdot3$.",
+  "Since $9$ is a square, $D_n$ is a perfect square exactly when $n+1$ is a perfect square.",
+  "For $1\\le n\\le 100$ we have $2\\le n+1\\le 101$, and the squares in this range are $4,9,\\dots,100$, that is $k^{2}$ for $k=2,\\dots,10$.",
+  "Hence $9$ values of $n$ (namely $n=3,8,15,\\dots,99$). Including $n+1=1$ (outside the range) would give $10$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "answer_plan": "Option B",
+ "originality_note": "New: a circulant determinant with consecutive entries collapses to 9(n+1), turning the question into counting perfect squares in a range (way 5). Closest known: proving the circulant identity a^3+b^3+c^3-3abc as a factorisation. Different because: the factorisation is only the first step; the question is arithmetic on the resulting expression.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Special forms: circulant and Vandermonde determinants",
+  "Application of properties of determinant"
+ ],
+ "concept_use": {
+  "Special forms: circulant and Vandermonde determinants": "The circulant structure (equal row sums, factor a+b+c and the second factor 1/2 sum of squared differences) gives D_n = 9(n+1).",
+  "Application of properties of determinant": "C1 -> C1+C2+C3, taking out the common factor 3(n+1), and R2-R1, R3-R1 are the properties used."
+ },
+ "stem_review": "Read as a student: n positive integer, D_n written in full, range 1 <= n <= 100 inclusive, 'square of an integer' unambiguous. Checked by direct computation for every n from 1 to 100: 9 values. Answer at (B) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Column sum gives the factor 3(n+1); the rest is 3, so D_n = 9(n+1).",
+ "justification": "A standard circulant factorisation followed by a short count; routine chain of three steps without a new idea. Comparable to 2026-P1-Q4 (L2) in demand.",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

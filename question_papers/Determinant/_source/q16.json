@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "chapter": "Determinant",
+ "target_level": 3,
+ "english": [
+  "For a real number $\\lambda$, consider the system of equations",
+  "$$x+2y-z=0,\\qquad 2x+\\lambda y+2z=0,\\qquad 3y+\\lambda z=0.$$",
+  "Let $T$ be the set of all triples $(x,y,z)$ of integers, not all zero, that satisfy this system for at least one real value of $\\lambda$. Then the least value of $x^{2}+y^{2}+z^{2}$ for $(x,y,z)\\in T$ is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $\\lambda$ के लिए समीकरण निकाय",
+  "$$x+2y-z=0,\\qquad 2x+\\lambda y+2z=0,\\qquad 3y+\\lambda z=0$$",
+  "पर विचार कीजिए। माना कि $T$ पूर्णांकों के उन सभी त्रिकों $(x,y,z)$, जिनमें सभी शून्य नहीं हैं, का समुच्चय है जो $\\lambda$ के कम से कम एक वास्तविक मान के लिए इस निकाय को संतुष्ट करते हैं। तब $(x,y,z)\\in T$ के लिए $x^{2}+y^{2}+z^{2}$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "Non-trivial solution $\\iff\\begin{vmatrix}1&2&-1\\\\2&\\lambda&2\\\\0&3&\\lambda\\end{vmatrix}=\\lambda^{2}-4\\lambda-12=(\\lambda-6)(\\lambda+2)=0$",
+  "For such $\\lambda$ the rank is $2$; from equations 1 and 3 (cross-multiplication, Cramer's rule for two equations):",
+  "$\\dfrac{x}{\\begin{vmatrix}2&-1\\\\3&\\lambda\\end{vmatrix}}=\\dfrac{-y}{\\begin{vmatrix}1&-1\\\\0&\\lambda\\end{vmatrix}}=\\dfrac{z}{\\begin{vmatrix}1&2\\\\0&3\\end{vmatrix}}$, i.e. $x:y:z=(2\\lambda+3):(-\\lambda):3$",
+  "$\\lambda=6$: $15:-6:3=5:-2:1$, integer solutions $k(5,-2,1)$, $x^{2}+y^{2}+z^{2}=30k^{2}$",
+  "$\\lambda=-2$: $-1:2:3$, integer solutions $k(-1,2,3)$, $x^{2}+y^{2}+z^{2}=14k^{2}$",
+  "Least value (at $k=\\pm1$, $\\lambda=-2$) $=14$",
+  "",
+  "Final Answer: 14"
+ ],
+ "solution_full": [
+  "A homogeneous system has a solution other than $(0,0,0)$ exactly when its coefficient determinant is zero.",
+  "$\\begin{vmatrix}1&2&-1\\\\2&\\lambda&2\\\\0&3&\\lambda\\end{vmatrix}=1(\\lambda^{2}-6)-2(2\\lambda-0)+(-1)(6-0)=\\lambda^{2}-4\\lambda-12=(\\lambda-6)(\\lambda+2)$.",
+  "So only $\\lambda=6$ and $\\lambda=-2$ give triples in $T$; for every other $\\lambda$ the only solution is the trivial one.",
+  "For these $\\lambda$ the first and third equations are independent (their coefficient rows are not proportional), so the solutions form a line, given by Cramer's rule for two equations in three unknowns: $x:y:z=\\begin{vmatrix}2&-1\\\\3&\\lambda\\end{vmatrix}:-\\begin{vmatrix}1&-1\\\\0&\\lambda\\end{vmatrix}:\\begin{vmatrix}1&2\\\\0&3\\end{vmatrix}=(2\\lambda+3):(-\\lambda):3$.",
+  "$\\lambda=6$: $x:y:z=15:-6:3=5:-2:1$. Check in equation 2: $10-12+2=0$. Integer solutions are $k(5,-2,1)$ with $k$ a non-zero integer, and $x^{2}+y^{2}+z^{2}=30k^{2}\\ge30$.",
+  "$\\lambda=-2$: $x:y:z=-1:2:3$. Check in equation 2: $-2-4+6=0$. Integer solutions are $k(-1,2,3)$, and $x^{2}+y^{2}+z^{2}=14k^{2}\\ge14$.",
+  "Both directions are primitive (coordinates with no common factor), so no smaller integer multiples exist. The least value is $14$, at $(-1,2,3)$ or $(1,-2,-3)$. Taking only the positive $\\lambda$ would give $30$.",
+  "",
+  "Final Answer: 14"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: the union of the solution lines of a homogeneous system over all admissible parameter values, with an integer-lattice minimisation on the lines; Cramer-type cross-multiplication gives each line (way 5). Closest known: find lambda for which a homogeneous system has a non-trivial solution. Different because: both roots matter, and the answer needs the primitive integer direction of each line and a comparison.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Cramer's rule",
+  "Solving system of homogeneous linear equations"
+ ],
+ "concept_use": {
+  "Cramer's rule": "For each critical lambda the ratios x:y:z are the 2x2 determinants from two equations (Cramer's rule for a homogeneous pair), giving the direction of the solution line.",
+  "Solving system of homogeneous linear equations": "Non-trivial solutions exist iff the coefficient determinant (lambda-6)(lambda+2) vanishes, which fixes lambda = 6 or -2."
+ },
+ "stem_review": "Read as a student: lambda real; T is the set of non-zero integer triples solving the system for some lambda; the least value exists. Checked with sympy: roots 6, -2, null vectors (5,-2,1) and (-1,2,3). Answer 14, a positive 2-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Find both lambda from the determinant, get each solution line by cross-multiplication, compare primitive directions.",
+ "justification": "Two linked ideas (determinant condition with two roots, and the solution line by cross-multiplication) plus a minimisation trap (the negative root wins); numerical answer. Comparable to 2021-P1-Q19 (L3) and 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
