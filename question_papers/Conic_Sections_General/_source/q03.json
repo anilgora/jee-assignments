@@ -1,0 +1,48 @@
+{
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{9}+\\dfrac{y^{2}}{4}=1$ and, for a non-zero real number $k$, let $H_{k}$ be the hyperbola $xy=k$. Let $S$ be the set of all non-zero real numbers $k$ for which $E$ and $H_{k}$ have exactly two common tangents. Then the product of all the elements of $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{9}+\\dfrac{y^{2}}{4}=1$ है तथा किसी शून्येतर वास्तविक संख्या $k$ के लिए $H_{k}$ अतिपरवलय $xy=k$ है। माना कि $S$ उन सभी शून्येतर वास्तविक संख्याओं $k$ का समुच्चय है जिनके लिए $E$ तथा $H_{k}$ की ठीक दो उभयनिष्ठ स्पर्श रेखाएँ हैं। तब $S$ के सभी अवयवों का गुणनफल ______ है।"
+ ],
+ "solution": [
+  "Vertical and horizontal lines are never tangent to $xy=k$, so a common tangent is $y=mx+c$, $m\\neq0$",
+  "Tangent to $E$: $c^{2}=9m^{2}+4$. Tangent to $H_{k}$: $mx^{2}+cx-k=0$ has equal roots $\\Rightarrow c^{2}=-4mk$",
+  "$\\Rightarrow 9m^{2}+4km+4=0$; each real root $m$ gives two lines $c=\\pm\\sqrt{9m^{2}+4}$",
+  "Discriminant $16k^{2}-144$: $|k|>3$ gives two slopes (four tangents), $|k|<3$ none, $|k|=3$ a double root $m=-\\dfrac{2k}{9}$ (exactly two tangents)",
+  "$S=\\{3,-3\\}$, product $=-9$",
+  "",
+  "Final Answer: -9"
+ ],
+ "solution_full": [
+  "A vertical line $x=t$ meets $xy=k$ in exactly one point without touching it, and a horizontal line likewise, so neither is tangent to $H_{k}$. Hence every common tangent has the form $y=mx+c$ with $m\\neq0$.",
+  "Condition for tangency to $E$ (with $a^{2}=9$, $b^{2}=4$): $c^{2}=a^{2}m^{2}+b^{2}=9m^{2}+4$.",
+  "Condition for tangency to $H_{k}$: substituting $y=mx+c$ in $xy=k$ gives $mx^{2}+cx-k=0$, which must have equal roots: $c^{2}+4mk=0$, i.e. $c^{2}=-4mk$.",
+  "Eliminating $c^{2}$: $9m^{2}+4km+4=0$. A root $m=0$ is impossible (the constant term is $4$), and for each real root $m$ the value $c^{2}=9m^{2}+4>0$ gives two distinct lines $c=\\pm\\sqrt{9m^{2}+4}$. (For such $m$, $-4mk=9m^{2}+4>0$ automatically.)",
+  "The discriminant of the quadratic in $m$ is $16k^{2}-144$.",
+  "If $|k|>3$: two distinct real slopes, hence four common tangents. If $|k|<3$: no real slope, no common tangent (then $H_{k}$ cuts $E$). If $|k|=3$: one double root $m=-\\dfrac{4k}{18}=-\\dfrac{2k}{9}$, giving exactly two common tangents (for $k=3$: $y=-\\dfrac{2}{3}x\\pm2\\sqrt{2}$).",
+  "So $S=\\{3,-3\\}$ and the product of its elements is $-9$.",
+  "",
+  "Final Answer: -9"
+ ],
+ "originality_note": "New: the number of common tangents of an ellipse and a rectangular hyperbola xy = k is read off a quadratic in the slope, and 'exactly two' forces the touching case, which occurs for both signs of k (way 3, a family member selected by a condition on the count of common tangents). Closest known: the common tangent of y^2 = 8x and xy = -1 (a published JEE Main problem). Different because: an ellipse replaces the parabola, k is the unknown, and the count condition with the negative branch decides the answer.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "Equate the two tangency conditions to get 9m^2 + 4km + 4 = 0 and require a double root, remembering k < 0 as well.",
+ "justification": "Routine chain of standard tangency conditions; the only decision is reading 'exactly two' as a double root and not forgetting the negative k. Like 2024-P2-Q7 (L2) in demand.",
+ "nearest_anchor": "2024-P2-Q7 (L2)",
+ "confidence": "High",
+ "stem_review": "Read as a student: every curve, point and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that vertical and horizontal lines are not tangent to xy = k, that each slope gives two lines, and that both k = 3 and k = -3 belong to S. Answer -9, a negative integer. No change.",
+ "blueprint_concepts": [
+  "Common tangents to any two conics"
+ ],
+ "concept_use": {
+  "Common tangents to any two conics": "Common tangents of E and xy = k: equating c^2 = 9m^2 + 4 and c^2 = -4mk gives a quadratic in m whose double root gives exactly two common tangents."
+ },
+ "type": "Numerical",
+ "chapter": "Conic Sections (General)",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "multi_concept": false,
+ "eq_relation": false
+}

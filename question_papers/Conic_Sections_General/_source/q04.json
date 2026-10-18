@@ -1,0 +1,50 @@
+{
+ "english": [
+  "Let $P$ be the parabola $y^{2}=4x$ and $C$ the circle $x^{2}+y^{2}-2x-4=0$. The common tangents of $P$ and $C$ meet at the point $T$, and they touch $C$ at the points $B_{1}$ and $B_{2}$. If $K$ is the centre of $C$, then the area of the quadrilateral $TB_{1}KB_{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $P$ परवलय $y^{2}=4x$ है तथा $C$ वृत्त $x^{2}+y^{2}-2x-4=0$ है। $P$ तथा $C$ की उभयनिष्ठ स्पर्श रेखाएँ बिन्दु $T$ पर मिलती हैं तथा $C$ को बिन्दुओं $B_{1}$ तथा $B_{2}$ पर स्पर्श करती हैं। यदि $K$, $C$ का केन्द्र है, तो चतुर्भुज $TB_{1}KB_{2}$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$C:(x-1)^{2}+y^{2}=5$, centre $K(1,0)$ (the focus of $P$), radius $\\sqrt5$",
+  "Tangent to $P$: $y=mx+\\dfrac{1}{m}$; distance from $K$ $=\\dfrac{|m+1/m|}{\\sqrt{1+m^{2}}}=\\dfrac{\\sqrt{1+m^{2}}}{|m|}=\\sqrt5\\Rightarrow m^{2}=\\dfrac14$ (the tangent $x=0$ is at distance $1$, not a common tangent)",
+  "Common tangents $x-2y+4=0$ and $x+2y+4=0$, meeting at $T(-4,0)$",
+  "Normal to $C$ at $B_{i}$ passes through $K$, so $KB_{i}\\perp TB_{i}$: $B_{1},B_{2}=(0,\\pm2)$ (feet of the perpendiculars from $K$), and $TB_{i}=\\sqrt{TK^{2}-5}=\\sqrt{25-5}=2\\sqrt5$",
+  "Area $=2\\cdot\\dfrac12\\cdot KB_{1}\\cdot TB_{1}=\\sqrt5\\cdot2\\sqrt5=10$",
+  "",
+  "Final Answer: 10"
+ ],
+ "solution_full": [
+  "Completing squares, $C:(x-1)^{2}+y^{2}=5$, so $K=(1,0)$ and the radius is $r=\\sqrt5$. Note that $K$ is the focus of $y^{2}=4x$.",
+  "Every tangent of $P$ other than $x=0$ is $y=mx+\\dfrac{1}{m}$, $m\\neq0$. The line $x=0$ is at distance $1\\neq\\sqrt5$ from $K$, so it is not tangent to $C$.",
+  "The line $mx-y+\\dfrac1m=0$ touches $C$ when its distance from $K$ equals $\\sqrt5$: $\\dfrac{|m+\\frac1m|}{\\sqrt{m^{2}+1}}=\\dfrac{m^{2}+1}{|m|\\sqrt{m^{2}+1}}=\\dfrac{\\sqrt{m^{2}+1}}{|m|}=\\sqrt5$, so $1+\\dfrac{1}{m^{2}}=5$, $m^{2}=\\dfrac14$, $m=\\pm\\dfrac12$.",
+  "The common tangents are $y=\\dfrac x2+2$ and $y=-\\dfrac x2-2$, i.e. $x-2y+4=0$ and $x+2y+4=0$. Putting $y=0$ in each gives $x=-4$, so $T=(-4,0)$.",
+  "The radius of $C$ to the point of contact is along the normal of $C$, so $KB_{i}$ is perpendicular to the tangent and $B_{i}$ is the foot of the perpendicular from $K$. For $x-2y+4=0$: $B_{1}=(1,0)-\\dfrac{1+4}{5}(1,-2)=(0,2)$; similarly $B_{2}=(0,-2)$.",
+  "$TK=5$, and in the right triangle $TB_{1}K$: $TB_{1}=\\sqrt{TK^{2}-r^{2}}=\\sqrt{25-5}=2\\sqrt5$ (check: distance from $(-4,0)$ to $(0,2)$ is $\\sqrt{16+4}=2\\sqrt5$).",
+  "The quadrilateral $TB_{1}KB_{2}$ is made of the two congruent right triangles $TB_{1}K$ and $TB_{2}K$, so its area is $2\\cdot\\dfrac12\\cdot\\sqrt5\\cdot2\\sqrt5=10$.",
+  "",
+  "Final Answer: 10"
+ ],
+ "originality_note": "New: a circle centred at the focus of the parabola, where the distance condition collapses to sqrt(1+m^2)/|m| = r, and the circle's points of contact are the feet of the perpendiculars from the focus, which lie on the tangent at the vertex; the asked kite uses the tangent-normal right angle (way 4, hidden structure). Closest known: common tangents of y^2 = 4x and x^2 + y^2 + 2x = 0 forming an equilateral triangle; 2023-P1-Q2 (quadrilateral of contact points for an ellipse and a parabola). Different because: the asked figure is the kite of the circle's contact points with the centre and the meeting point, not the quadrilateral of all contact points.",
+ "web_check": "ingredient only",
+ "level": 3,
+ "key_step": "Recognise the centre as the focus so that the tangency condition becomes sqrt(1+m^2)/|m| = sqrt5, then use the radius-tangent right angle for the kite.",
+ "justification": "Two ideas linked (slope-form tangency with a circle by distance, then the tangent-normal right angle and tangent length) in numerical format. Nearest is 2023-P1-Q2 (L3), common tangents of two conics with an area; slightly lighter algebra here, so Medium confidence.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "stem_review": "Read as a student: every curve, point and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that there are exactly two common tangents (x = 0 is not one), so T, B1, B2 are well defined, and that the vertex order T, B1, K, B2 gives a convex kite. Answer 10, a positive 2-digit integer. Changed: the first draft asked for the quadrilateral of all four contact points, which is the ask of 2023-P1-Q2; replaced by the kite TB1KB2.",
+ "blueprint_concepts": [
+  "Common tangents to any two conics",
+  "Tangent and normal to a circle"
+ ],
+ "concept_use": {
+  "Common tangents to any two conics": "Common tangents of the parabola and the circle: slope-form tangent of y^2 = 4x with the distance condition from the centre gives m = +-1/2.",
+  "Tangent and normal to a circle": "The radius to the point of contact is the normal of the circle, so KB is perpendicular to TB; tangent length sqrt(TK^2 - r^2) gives the kite area."
+ },
+ "type": "Numerical",
+ "chapter": "Conic Sections (General)",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "multi_concept": false,
+ "eq_relation": false
+}
