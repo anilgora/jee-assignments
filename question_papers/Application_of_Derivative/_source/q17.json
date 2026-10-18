@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 2,
+ "english": [
+  "Let $k$ be a real number and let $f:(0,\\infty)\\to\\mathbb{R}$ be defined by $f(x)=x+\\dfrac{k}{x}$. Suppose $f$ satisfies all the conditions of Rolle's theorem on the interval $[1,4]$. If $c$ is the point of $\\left(\\dfrac{1}{4},25\\right)$ given by Lagrange's mean value theorem for $f$ on $\\left[\\dfrac{1}{4},25\\right]$, then the value of $c$ is ______."
+ ],
+ "hindi": [
+  "माना कि $k$ एक वास्तविक संख्या है तथा $f:(0,\\infty)\\to\\mathbb{R}$, $f(x)=x+\\dfrac{k}{x}$ द्वारा परिभाषित है। मान लीजिए कि $f$ अन्तराल $[1,4]$ पर रोले प्रमेय की सभी शर्तों को सन्तुष्ट करता है। यदि $f$ के लिए अन्तराल $\\left[\\dfrac{1}{4},25\\right]$ पर लग्रांज माध्यमान प्रमेय द्वारा प्राप्त $\\left(\\dfrac{1}{4},25\\right)$ का बिन्दु $c$ है, तो $c$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f$ is continuous and differentiable on $[1,4]$; Rolle needs $f(1)=f(4)$: $1+k=4+\\frac k4\\Rightarrow k=4$ (Rolle point $c=2$).",
+  "LMVT on $[a,b]$: $\\dfrac{f(b)-f(a)}{b-a}=1+\\dfrac{4\\left(\\frac1b-\\frac1a\\right)}{b-a}=1-\\dfrac{4}{ab}$",
+  "$f'(c)=1-\\dfrac{4}{c^{2}}=1-\\dfrac{4}{ab}\\Rightarrow c^{2}=ab=\\dfrac14\\cdot25\\Rightarrow c=\\dfrac52$ (positive root, inside the interval)",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "solution_full": [
+  "On $[1,4]\\subset(0,\\infty)$, $f$ is continuous and differentiable for every $k$, so the only Rolle condition that restricts $k$ is $f(1)=f(4)$: $1+k=4+\\dfrac{k}{4}\\Rightarrow\\dfrac{3k}{4}=3\\Rightarrow k=4$. (Then $f'(x)=1-\\dfrac{4}{x^{2}}=0$ at $x=2\\in(1,4)$.)",
+  "So $f(x)=x+\\dfrac4x$, which is continuous on $\\left[\\dfrac14,25\\right]$ and differentiable on $\\left(\\dfrac14,25\\right)$, so Lagrange's mean value theorem applies.",
+  "For $0<a<b$: $\\dfrac{f(b)-f(a)}{b-a}=\\dfrac{(b-a)+4\\left(\\frac1b-\\frac1a\\right)}{b-a}=1-\\dfrac{4}{ab}$.",
+  "With $a=\\dfrac14$, $b=25$: the chord slope is $1-\\dfrac{4}{25/4}=1-\\dfrac{16}{25}=\\dfrac{9}{25}$ (directly: $\\dfrac{25.16-16.25}{24.75}=0.36$).",
+  "$f'(c)=1-\\dfrac{4}{c^{2}}=\\dfrac{9}{25}\\Rightarrow c^{2}=\\dfrac{25}{4}\\Rightarrow c=\\dfrac52$, since $c$ must lie in $\\left(\\dfrac14,25\\right)$; $c$ is the geometric mean of the end points.",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: Rolle's theorem fixes the parameter of f(x) = x + k/x, and the LMVT point on a second interval comes out as the geometric mean of its end points (way 5). Closest known: LMVT for 1/x giving c = sqrt(ab). Different because: the parameter is not given but recovered from Rolle's hypothesis on another interval, so both theorems are used in sequence.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Rolle's theorem and its application",
+  "LMVT and its application"
+ ],
+ "concept_use": {
+  "Rolle's theorem and its application": "Rolle's condition f(1) = f(4) on [1,4] fixes k = 4.",
+  "LMVT and its application": "f'(c) equals the chord slope 1 - 4/(ab) on [1/4, 25], giving c = sqrt(ab) = 5/2."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (positive decimal); Hindi mirrors the English maths. k is fixed by Rolle's hypothesis; the LMVT point is unique in the interval. No change.",
+ "level": 2,
+ "key_step": "Use f(1) = f(4) to get k, then f'(c) = 1 - 4/(ab).",
+ "justification": "Two standard theorem applications in sequence, each one routine step; a routine chain at L2, like the Rolle/IVT statements of 2021-P2-Q3.",
+ "nearest_anchor": "2021-P2-Q3 (L2)",
+ "confidence": "High",
+ "multi_concept": true,
+ "eq_relation": false
+}

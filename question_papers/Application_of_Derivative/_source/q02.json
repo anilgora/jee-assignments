@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Application of Derivative",
+ "target_level": 2,
+ "english": [
+  "A rectangle $R$ with sides parallel to the coordinate axes is inscribed in the circle $x^{2}+y^{2}=25$. Its vertex $V(x,y)$ in the first quadrant moves on the circle so that $\\dfrac{dx}{dt}=-1$ unit per second. Using differentials, the approximate area of $R$ (in square units) $0.1$ second after the instant at which $V$ is at $(3,4)$ is",
+  "",
+  "(A) $47.3$",
+  "(B) $45.5$",
+  "(C) $48.7$",
+  "(D) $47.825$"
+ ],
+ "hindi": [
+  "निर्देशांक अक्षों के समान्तर भुजाओं वाला एक आयत $R$ वृत्त $x^{2}+y^{2}=25$ के अन्तर्गत है। प्रथम चतुर्थांश में इसका शीर्ष $V(x,y)$ वृत्त पर इस प्रकार गति करता है कि $\\dfrac{dx}{dt}=-1$ इकाई प्रति सेकण्ड। अवकलों का उपयोग करके, जिस क्षण $V$ बिन्दु $(3,4)$ पर है उससे $0.1$ सेकण्ड बाद $R$ का सन्निकट क्षेत्रफल (वर्ग इकाई में) है",
+  "",
+  "(A) $47.3$",
+  "(B) $45.5$",
+  "(C) $48.7$",
+  "(D) $47.825$"
+ ],
+ "solution": [
+  "Area $A=(2x)(2y)=4xy$; at $(3,4)$, $A=48$.",
+  "$x^{2}+y^{2}=25\\Rightarrow x\\dfrac{dx}{dt}+y\\dfrac{dy}{dt}=0\\Rightarrow \\dfrac{dy}{dt}=-\\dfrac{3(-1)}{4}=\\dfrac34$",
+  "$\\dfrac{dA}{dt}=4\\left(x\\dfrac{dy}{dt}+y\\dfrac{dx}{dt}\\right)=4\\left(\\dfrac94-4\\right)=-7$",
+  "Differentials: $\\Delta A\\approx \\dfrac{dA}{dt}\\,\\Delta t=-7(0.1)=-0.7\\Rightarrow A\\approx 48-0.7=47.3$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "The rectangle has vertices $(\\pm x,\\pm y)$, so its sides are $2x$ and $2y$ and its area is $A=4xy$. At $V(3,4)$, $A=4\\cdot 3\\cdot 4=48$.",
+  "Since $V$ stays on the circle, $x^{2}+y^{2}=25$ for all $t$. Differentiating with respect to $t$: $2x\\dfrac{dx}{dt}+2y\\dfrac{dy}{dt}=0$.",
+  "At $(3,4)$ with $\\dfrac{dx}{dt}=-1$: $3(-1)+4\\dfrac{dy}{dt}=0\\Rightarrow \\dfrac{dy}{dt}=\\dfrac{3}{4}$ (the vertex rises as it moves left, as it must on the circle).",
+  "By the product rule, $\\dfrac{dA}{dt}=4\\left(\\dfrac{dx}{dt}\\,y+x\\,\\dfrac{dy}{dt}\\right)=4\\left((-1)(4)+3\\cdot\\dfrac{3}{4}\\right)=4\\left(-4+\\dfrac{9}{4}\\right)=-7$ square units per second.",
+  "Treating $A$ as a function of $t$, the differential gives $\\Delta A\\approx dA=\\dfrac{dA}{dt}\\,\\Delta t$ with $\\Delta t=0.1$: $\\Delta A\\approx -0.7$.",
+  "Hence the approximate area after $0.1$ second is $48-0.7=47.3$ square units.",
+  "(For comparison, the exact area is about $47.25$, so the approximation is sound.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "answer_plan": "Option A",
+ "originality_note": "New: a related-rate of the area of a rectangle whose vertex slides on a circle, fed into a differential (linear-in-time) estimate (way 5). Closest known: rate of change of area of an inscribed rectangle. Different because: the rate is not the answer; it is used through dA = A'(t) dt to estimate a later area, so both concepts are needed.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Rate measure and related rates",
+  "Approximation and errors using differentials"
+ ],
+ "concept_use": {
+  "Rate measure and related rates": "dy/dt from x^2+y^2=25 and dA/dt = 4(x y' + y x') = -7 at (3,4).",
+  "Approximation and errors using differentials": "Delta A ~ (dA/dt) Delta t gives the approximate area 48 - 0.7 = 47.3."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (Option A); Hindi mirrors the English maths. Changed: rewrote the clumsy 'changing at a certain rate. Using this rate' into 'Using differentials, the approximate area 0.1 second after the instant'.",
+ "level": 2,
+ "key_step": "Implicit differentiation of the circle to get dy/dt, then the differential estimate of the area.",
+ "justification": "Routine chain of three standard steps with no insight (implicit rate, product rule, differential), the profile of the L2 anchors such as 2023-P2-Q9; options allow a check, so not higher.",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": true,
+ "eq_relation": false
+}

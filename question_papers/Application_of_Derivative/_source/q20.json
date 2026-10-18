@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 3,
+ "english": [
+  "Let $g:\\mathbb{R}\\to\\mathbb{R}$ and $h:\\mathbb{R}\\to\\mathbb{R}$ be defined by $g(x)=\\dfrac{8x}{1+x^{2}}$ and $h(x)=2\\left(g(x)\\right)^{3}-3\\left(g(x)\\right)^{2}-36g(x)$. Then the number of integers in the range of $h$ is ______."
+ ],
+ "hindi": [
+  "माना कि $g:\\mathbb{R}\\to\\mathbb{R}$ तथा $h:\\mathbb{R}\\to\\mathbb{R}$, $g(x)=\\dfrac{8x}{1+x^{2}}$ तथा $h(x)=2\\left(g(x)\\right)^{3}-3\\left(g(x)\\right)^{2}-36g(x)$ द्वारा परिभाषित हैं। तब $h$ के परिसर में पूर्णांकों की संख्या ______ है।"
+ ],
+ "solution": [
+  "$g$ is bounded: $1+x^{2}\\ge2|x|\\Rightarrow |g(x)|\\le4$, with $g(\\pm1)=\\pm4$; $g$ is continuous, so its range is $[-4,4]$.",
+  "$h=\\varphi(g)$, $\\varphi(t)=2t^{3}-3t^{2}-36t$; range of $h$ $=\\varphi([-4,4])$.",
+  "$\\varphi'(t)=6(t-3)(t+2)$; $\\varphi(-4)=-32$, $\\varphi(-2)=44$, $\\varphi(3)=-81$, $\\varphi(4)=-64$",
+  "Absolute max $44$, absolute min $-81$ on $[-4,4]$; range of $h$ $=[-81,44]$ (continuity)",
+  "Number of integers $=44-(-81)+1=126$",
+  "",
+  "Final Answer: 126"
+ ],
+ "solution_full": [
+  "Bound on $g$: $1+x^{2}-2|x|=(|x|-1)^{2}\\ge0$, so $\\left|\\dfrac{8x}{1+x^{2}}\\right|\\le\\dfrac{8|x|}{2|x|}=4$ for $x\\neq0$ (and $g(0)=0$). Equality holds at $x=\\pm1$: $g(1)=4$, $g(-1)=-4$. So the greatest and least values of $g$ are $4$ and $-4$.",
+  "$g$ is continuous on $\\mathbb{R}$, so by the intermediate value property its range is the whole interval $[-4,4]$.",
+  "Write $h(x)=\\varphi(g(x))$ with $\\varphi(t)=2t^{3}-3t^{2}-36t$. Then the range of $h$ is $\\varphi([-4,4])$.",
+  "$\\varphi'(t)=6t^{2}-6t-36=6(t-3)(t+2)$, so the critical points in $[-4,4]$ are $t=-2$ and $t=3$.",
+  "Values: $\\varphi(-4)=-128-48+144=-32$, $\\varphi(-2)=-16-12+72=44$, $\\varphi(3)=54-27-108=-81$, $\\varphi(4)=128-48-144=-64$.",
+  "So on the closed interval $[-4,4]$, the absolute maximum of $\\varphi$ is $44$ (at $t=-2$) and the absolute minimum is $-81$ (at $t=3$). Since $\\varphi$ is continuous, $\\varphi([-4,4])=[-81,44]$, which is the range of $h$.",
+  "The integers in $[-81,44]$ number $44-(-81)+1=126$.",
+  "",
+  "Final Answer: 126"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: range of a cubic composed with a bounded rational function, where the bounded inner range [-4,4] becomes the closed interval on which the cubic's absolute extrema are taken (way 5). Closest known: range of x/(1+x^2), and absolute extrema of a cubic on an interval. Different because: the interval is not given but produced by the bounded function, and both interior critical points lie inside it.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Absolute (Global) Maxima & Minima on Closed Intervals",
+  "Bounded functions; greatest and least values"
+ ],
+ "concept_use": {
+  "Absolute (Global) Maxima & Minima on Closed Intervals": "Absolute max 44 and min -81 of 2t^3 - 3t^2 - 36t on [-4,4] from end points and critical points.",
+  "Bounded functions; greatest and least values": "8x/(1+x^2) is bounded with greatest value 4 and least value -4, giving the interval [-4,4]."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (positive 3-digit integer); Hindi mirrors the English maths. Range of h is an interval by continuity, so the integer count is well defined. No change.",
+ "level": 3,
+ "key_step": "Range of the inner bounded function is [-4,4]; then absolute extrema of the cubic on this closed interval.",
+ "justification": "Two ideas linked (bounded inner function supplies the interval, then closed-interval extrema with four values to compare) in numerical form; one stage beyond the routine range anchor 2021-P1-Q12 (L2).",
+ "nearest_anchor": "2021-P1-Q12 (L2) / 2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

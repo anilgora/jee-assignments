@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 3,
+ "english": [
+  "Let $S$ be the set of all ordered pairs $(a,b)$ of integers for which the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=ax+b\\sin x$ is one-one and satisfies $|f(x)-f(y)|\\le6|x-y|$ for all $x,y\\in\\mathbb{R}$. Then the number of elements in $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ पूर्णांकों के उन सभी क्रमित युग्मों $(a,b)$ का समुच्चय है जिनके लिए $f(x)=ax+b\\sin x$ द्वारा परिभाषित फलन $f:\\mathbb{R}\\to\\mathbb{R}$ एकैकी है तथा सभी $x,y\\in\\mathbb{R}$ के लिए $|f(x)-f(y)|\\le6|x-y|$ को सन्तुष्ट करता है। तब $S$ में अवयवों की संख्या ______ है।"
+ ],
+ "solution": [
+  "$f'(x)=a+b\\cos x$ takes all values between $a-|b|$ and $a+|b|$.",
+  "Bound: by LMVT $f(x)-f(y)=f'(\\xi)(x-y)$, so the bound holds iff $|f'|\\le6$ everywhere (necessity: divide by $x-y$ and let $y\\to x$) $\\Leftrightarrow |a|+|b|\\le6$.",
+  "One-one: if $|b|>|a|$, $f'$ changes sign, $f$ is not monotonic, so not one-one; if $a=b=0$, constant. If $|a|\\ge|b|$, $a\\neq0$: $f'$ has constant sign with isolated zeros, strictly monotonic, one-one.",
+  "Count $|a|=k$, $|b|\\le\\min(k,6-k)$: $k=1,\\ldots,6$ give $3,5,7,5,3,1$ values of $b$; total $24$, times $2$ signs of $a$",
+  "$|S|=48$",
+  "",
+  "Final Answer: 48"
+ ],
+ "solution_full": [
+  "$f'(x)=a+b\\cos x$. As $\\cos x$ runs over $[-1,1]$, $f'$ takes every value in $[a-|b|,a+|b|]$, so $\\max|f'|=|a|+|b|$.",
+  "Lipschitz condition. If $|f'(t)|\\le6$ for all $t$, then by Lagrange's mean value theorem $|f(x)-f(y)|=|f'(\\xi)||x-y|\\le6|x-y|$. Conversely, if $|f(x)-f(y)|\\le6|x-y|$ for all $x,y$, then $\\left|\\dfrac{f(x)-f(y)}{x-y}\\right|\\le6$, and letting $y\\to x$ gives $|f'(x)|\\le6$. So the condition is $|a|+|b|\\le6$.",
+  "One-one condition. A continuous one-one function on $\\mathbb{R}$ is strictly monotonic. If $|b|>|a|$, then $a-|b|<0<a+|b|$, so $f'$ takes both signs on intervals and $f$ is not monotonic, hence many-one. If $a=b=0$, $f$ is constant.",
+  "If $|a|\\ge|b|$ and $a\\neq0$, then $f'(x)=a+b\\cos x$ has the sign of $a$ except at isolated points where it may vanish (when $|a|=|b|$), so $f$ is strictly monotonic and one-one (by the mean value theorem $f(x)-f(y)=f'(\\xi)(x-y)\\neq0$ for $x\\neq y$, since $f'$ cannot vanish on a whole interval).",
+  "So $S=\\{(a,b)\\in\\mathbb{Z}^{2}:a\\neq0,\\ |b|\\le|a|,\\ |a|+|b|\\le6\\}$.",
+  "For $|a|=k$: $|b|\\le\\min(k,6-k)$, giving $2\\min(k,6-k)+1$ values: $k=1:3$, $k=2:5$, $k=3:7$, $k=4:5$, $k=5:3$, $k=6:1$, total $24$.",
+  "Each $k$ has two values of $a$ ($\\pm k$), so $|S|=2\\times24=48$.",
+  "",
+  "Final Answer: 48"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: integer pairs (a,b) for which ax + b sin x is simultaneously one-one and 6-Lipschitz, the Lipschitz part being exactly the LMVT bound |f'| <= 6 (way 5). Closest known: ax + b sin x is one-one iff |a| >= |b|. Different because: the extra global inequality |f(x)-f(y)| <= 6|x-y| must be converted by LMVT (both directions) into |a| + |b| <= 6, turning the problem into a lattice count.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "LMVT and its application",
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests"
+ ],
+ "concept_use": {
+  "LMVT and its application": "f(x) - f(y) = f'(xi)(x - y) turns the condition |f(x)-f(y)| <= 6|x-y| into |a| + |b| <= 6, and shows strict monotonicity.",
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests": "f one-one iff strictly monotonic iff |a| >= |b| with a not 0; a sign change of f' makes f many-one."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (positive 2-digit integer); Hindi mirrors the English maths. a, b integers with no other bound needed (|a|+|b| <= 6 bounds them). No change.",
+ "level": 3,
+ "key_step": "Translate the Lipschitz inequality via LMVT into |a|+|b| <= 6 and the one-one condition into |b| <= |a|, then count lattice points.",
+ "justification": "Two linked conversions (LMVT in both directions, one-one via monotonicity) and a lattice count with boundary cases; below the L4 counting anchor 2026-P2-Q10 because each step is standard, above the routine L2 2021-P1-Q12.",
+ "nearest_anchor": "2026-P2-Q10 (L4) / 2021-P1-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

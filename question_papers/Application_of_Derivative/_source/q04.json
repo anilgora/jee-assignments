@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Application of Derivative",
+ "target_level": 2,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x+\\log_{e}\\left(x^{2}-2x+2\\right)$. Then which of the following is TRUE?",
+  "",
+  "(A) $e<\\left(\\dfrac{18}{13}\\right)^{3}$",
+  "(B) $e<\\left(\\dfrac{25}{18}\\right)^{3}$",
+  "(C) $\\sqrt{e}<\\dfrac{8}{5}$",
+  "(D) $e>\\dfrac{169}{64}$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x+\\log_{e}\\left(x^{2}-2x+2\\right)$ द्वारा परिभाषित है। तब निम्न में से कौन-सा सत्य है?",
+  "",
+  "(A) $e<\\left(\\dfrac{18}{13}\\right)^{3}$",
+  "(B) $e<\\left(\\dfrac{25}{18}\\right)^{3}$",
+  "(C) $\\sqrt{e}<\\dfrac{8}{5}$",
+  "(D) $e>\\dfrac{169}{64}$"
+ ],
+ "solution": [
+  "$x^{2}-2x+2=(x-1)^{2}+1>0$; $f'(x)=1+\\dfrac{2x-2}{x^{2}-2x+2}=\\dfrac{x^{2}}{x^{2}-2x+2}\\ge 0$, zero only at $x=0$, so $f$ is strictly increasing on $\\mathbb{R}$; $f(0)=\\log_e 2$.",
+  "(A) $f\\left(\\frac13\\right)>f(0)$: $\\frac13+\\log_e\\frac{13}{9}>\\log_e 2\\Rightarrow e^{1/3}>\\frac{18}{13}\\Rightarrow e>\\left(\\frac{18}{13}\\right)^{3}$, so (A) is wrong",
+  "(B) $f\\left(-\\frac13\\right)<f(0)$: $-\\frac13+\\log_e\\frac{25}{9}<\\log_e2\\Rightarrow e^{1/3}>\\frac{25}{18}$, so (B) is wrong",
+  "(C) $f\\left(\\frac12\\right)>f(0)$: $\\frac12+\\log_e\\frac54>\\log_e2\\Rightarrow \\sqrt e>\\frac85$, so (C) is wrong",
+  "(D) $f\\left(-\\frac12\\right)<f(0)$: $-\\frac12+\\log_e\\frac{13}{4}<\\log_e 2\\Rightarrow \\sqrt e>\\frac{13}{8}\\Rightarrow e>\\frac{169}{64}$, so (D) is correct",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "Domain: $x^{2}-2x+2=(x-1)^{2}+1\\ge 1>0$ for all real $x$, so $f$ is defined and differentiable on $\\mathbb{R}$.",
+  "$f'(x)=1+\\dfrac{2x-2}{x^{2}-2x+2}=\\dfrac{x^{2}-2x+2+2x-2}{x^{2}-2x+2}=\\dfrac{x^{2}}{x^{2}-2x+2}$.",
+  "So $f'(x)\\ge 0$ for all $x$, with equality only at the single point $x=0$. Hence $f$ is strictly increasing on $\\mathbb{R}$ (always increasing), and $a<b\\Rightarrow f(a)<f(b)$. Also $f(0)=\\log_{e}2$.",
+  "(A) $f\\left(\\frac13\\right)=\\frac13+\\log_{e}\\frac{13}{9}$. Since $\\frac13>0$, $f\\left(\\frac13\\right)>\\log_{e}2$, i.e. $\\frac13>\\log_{e}\\frac{18}{13}$, so $e^{1/3}>\\frac{18}{13}$ and $e>\\left(\\frac{18}{13}\\right)^{3}$. Statement (A) says the opposite, so (A) is wrong.",
+  "(B) $f\\left(-\\frac13\\right)=-\\frac13+\\log_{e}\\frac{25}{9}<\\log_{e}2$, so $\\log_{e}\\frac{25}{18}<\\frac13$, i.e. $e>\\left(\\frac{25}{18}\\right)^{3}$. So (B) is wrong.",
+  "(C) $f\\left(\\frac12\\right)=\\frac12+\\log_{e}\\frac54>\\log_{e}2$, so $\\frac12>\\log_{e}\\frac85$, i.e. $\\sqrt{e}>\\frac85$. So (C) is wrong.",
+  "(D) $f\\left(-\\frac12\\right)=-\\frac12+\\log_{e}\\frac{13}{4}<\\log_{e}2$, so $\\log_{e}\\frac{13}{8}<\\frac12$, i.e. $\\sqrt{e}>\\frac{13}{8}$ and $e>\\frac{169}{64}$. So (D) is correct.",
+  "Each wrong option is exactly the reversed inequality obtained by treating $f$ as decreasing.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "answer_plan": "Option D",
+ "originality_note": "New: one always-increasing function f(x)=x+ln(x^2-2x+2) generates four close numerical bounds on e at x = 1/3, -1/3, 1/2, -1/2 (way 5). Closest known: proving e^x > 1+x or x > ln(1+x) by monotonicity. Different because: the comparison numbers (18/13)^3, (25/18)^3, 169/64 are within 2% of e and come only from evaluating f at chosen points.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Always increasing/always decreasing based",
+  "Proving inequalities using monotonicity"
+ ],
+ "concept_use": {
+  "Always increasing/always decreasing based": "f'(x) = x^2/(x^2-2x+2) >= 0 with a single zero, so f is increasing on the whole real line.",
+  "Proving inequalities using monotonicity": "Each option is f(a) compared with f(0) for a = 1/3, -1/3, 1/2, -1/2, converted into a bound on e."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (Option D); Hindi mirrors the English maths. Checked exactly one statement (D) is true and all four come from f at a point. No change.",
+ "level": 2,
+ "key_step": "Simplify f' to x^2/(x^2-2x+2) and compare f at the four points with f(0).",
+ "justification": "A routine chain (derivative simplification, monotonicity, four substitutions) with no insight, as in the monotonicity anchors 2024-P2-Q10 (L1) and 2021-P1-Q12 (L2); four evaluations push it to 2.",
+ "nearest_anchor": "2024-P2-Q10 (L1) / 2021-P1-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

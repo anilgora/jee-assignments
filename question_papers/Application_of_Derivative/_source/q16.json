@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 3,
+ "english": [
+  "Let $\\alpha$ be the least real number and $\\beta$ the greatest real number such that",
+  "$$\\frac{x}{(1+x)^{\\alpha}}\\le\\log_{e}(1+x)\\le\\frac{x}{(1+x)^{\\beta}}$$",
+  "for all $x\\ge0$. Then the value of $\\alpha+\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\alpha$ वह न्यूनतम वास्तविक संख्या तथा $\\beta$ वह अधिकतम वास्तविक संख्या है जिनके लिए",
+  "$$\\frac{x}{(1+x)^{\\alpha}}\\le\\log_{e}(1+x)\\le\\frac{x}{(1+x)^{\\beta}}$$",
+  "सभी $x\\ge0$ के लिए सत्य है। तब $\\alpha+\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Near $0$: $\\log_e(1+x)=x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}-\\cdots$ and $\\dfrac{x}{(1+x)^{k}}=x-kx^{2}+\\cdots$",
+  "Right inequality near $0$ needs $-\\frac12\\le-\\beta$, i.e. $\\beta\\le\\frac12$. For $\\beta=\\frac12$: $h(x)=\\dfrac{x}{\\sqrt{1+x}}-\\log_e(1+x)$, $h'(x)=\\dfrac{\\left(\\sqrt{1+x}-1\\right)^{2}}{2(1+x)^{3/2}}\\ge0$, $h(0)=0$, so $h\\ge0$; smaller $\\beta$ only enlarges the right side. Hence $\\beta=\\frac12$.",
+  "Left inequality: for $\\alpha<1$, $\\dfrac{x}{(1+x)^{\\alpha}}\\ge\\dfrac{x^{1-\\alpha}}{2}$ for $x\\ge1$, which exceeds $\\log_e(1+x)$ for large $x$ ($x^{1-\\alpha}$ outgrows $\\log_e x$), so $\\alpha\\ge1$.",
+  "For $\\alpha=1$: $u(x)=\\log_e(1+x)-\\dfrac{x}{1+x}$, $u'(x)=\\dfrac{x}{(1+x)^{2}}\\ge0$, $u(0)=0$, so it holds; larger $\\alpha$ only lowers the left side. Hence $\\alpha=1$.",
+  "$\\alpha+\\beta=1.5$",
+  "",
+  "Final Answer: 1.5"
+ ],
+ "solution_full": [
+  "Series for $|x|<1$: $\\log_{e}(1+x)=x-\\dfrac{x^{2}}{2}+\\dfrac{x^{3}}{3}-\\cdots$, and by the binomial series $\\dfrac{x}{(1+x)^{k}}=x\\left(1-kx+\\dfrac{k(k+1)}{2}x^{2}-\\cdots\\right)=x-kx^{2}+O(x^{3})$.",
+  "Upper bound. If $\\beta>\\dfrac12$, then $\\dfrac{x}{(1+x)^{\\beta}}-\\log_{e}(1+x)=\\left(\\dfrac12-\\beta\\right)x^{2}+O(x^{3})<0$ for small $x>0$, so the inequality fails. Hence $\\beta\\le\\dfrac12$.",
+  "For $\\beta=\\dfrac12$, let $h(x)=\\dfrac{x}{\\sqrt{1+x}}-\\log_{e}(1+x)$ on $[0,\\infty)$. Then $h'(x)=\\dfrac{1}{\\sqrt{1+x}}-\\dfrac{x}{2(1+x)^{3/2}}-\\dfrac{1}{1+x}=\\dfrac{x+2-2\\sqrt{1+x}}{2(1+x)^{3/2}}=\\dfrac{\\left(\\sqrt{1+x}-1\\right)^{2}}{2(1+x)^{3/2}}\\ge0$.",
+  "So $h$ is increasing and $h(x)\\ge h(0)=0$: $\\log_{e}(1+x)\\le\\dfrac{x}{\\sqrt{1+x}}$ for all $x\\ge0$. For $\\beta<\\dfrac12$ the right side is even larger. So the greatest $\\beta$ is $\\dfrac12$.",
+  "Lower bound. The series only gives $\\alpha\\ge\\dfrac12$ near $0$; the behaviour for large $x$ decides. If $0\\le\\alpha<1$, then for $x\\ge1$, $(1+x)^{\\alpha}\\le(2x)^{\\alpha}\\le2x^{\\alpha}$, so $\\dfrac{x}{(1+x)^{\\alpha}}\\ge\\dfrac{x^{1-\\alpha}}{2}$ (and if $\\alpha<0$, directly $\\dfrac{x}{(1+x)^{\\alpha}}\\ge x^{1-\\alpha}$), while $\\dfrac{\\log_{e}(1+x)}{x^{1-\\alpha}}\\to0$ as $x\\to\\infty$. So the left inequality fails for large $x$, and $\\alpha\\ge1$.",
+  "For $\\alpha=1$, let $u(x)=\\log_{e}(1+x)-\\dfrac{x}{1+x}$. Then $u'(x)=\\dfrac{1}{1+x}-\\dfrac{1}{(1+x)^{2}}=\\dfrac{x}{(1+x)^{2}}\\ge0$ and $u(0)=0$, so $u\\ge0$ on $[0,\\infty)$. For $\\alpha>1$ the left side is smaller still. So the least $\\alpha$ is $1$.",
+  "Hence $\\alpha+\\beta=1+\\dfrac12=1.5$.",
+  "",
+  "Final Answer: 1.5"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: best exponents in a two-sided power bound for log(1+x), where the upper exponent is decided at x -> 0 by the series but the lower exponent is decided at x -> infinity, not by the series (way 4: two different regimes). Closest known: the inequalities x/(1+x) <= ln(1+x) <= x. Different because: the exponents are unknown, the naive series answer alpha = 1/2 is wrong, and the sharp upper bound x/sqrt(1+x) needs a perfect-square derivative. (First design, the least lambda making (1+3/x)^(x+lambda) decreasing, was found as a published result in the web check and was replaced.)",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Proving inequalities using monotonicity",
+  "Exponential and logarithmic series (e^x, ln(1+x))"
+ ],
+ "concept_use": {
+  "Proving inequalities using monotonicity": "h(x) = x/sqrt(1+x) - ln(1+x) and u(x) = ln(1+x) - x/(1+x) are increasing from 0, proving both sharp bounds.",
+  "Exponential and logarithmic series (e^x, ln(1+x))": "ln(1+x) = x - x^2/2 + ... compared with x - kx^2 + ... forces beta <= 1/2."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (positive decimal); Hindi mirrors the English maths. Both extremal constants exist (sets are [1, infinity) and (-infinity, 1/2]). No change.",
+ "level": 3,
+ "key_step": "Use the series at 0 for beta but the growth comparison at infinity for alpha; prove both extremal cases by a monotone auxiliary function.",
+ "justification": "Two linked ideas (series comparison and monotonicity proof) with a trap (the series suggests alpha = 1/2); similar to the series-bound anchor 2021-P2-Q16 (L3) and short of the L4 limit-expansion anchor 2025-P1-Q11.",
+ "nearest_anchor": "2021-P2-Q16 (L3) / 2025-P1-Q11 (L4)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

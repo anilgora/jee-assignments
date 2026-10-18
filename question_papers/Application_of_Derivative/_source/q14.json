@@ -1,0 +1,57 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\dfrac{x}{1+x^{2}}$. For each $t\\in\\mathbb{R}$, let $g(t)$ denote the least value of $f$ on the closed interval $[t,t+1]$. If $M$ is the greatest value of $g(t)$ as $t$ varies over $\\mathbb{R}$, then the value of $M^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\dfrac{x}{1+x^{2}}$ द्वारा परिभाषित है। प्रत्येक $t\\in\\mathbb{R}$ के लिए, माना $g(t)$ संवृत अन्तराल $[t,t+1]$ पर $f$ के न्यूनतम मान को दर्शाता है। यदि $t$ के $\\mathbb{R}$ पर परिवर्तित होने पर $g(t)$ का अधिकतम मान $M$ है, तो $M^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f'(x)=\\dfrac{1-x^{2}}{(1+x^{2})^{2}}$: $f$ decreases on $(-\\infty,-1]$, increases on $[-1,1]$, decreases on $[1,\\infty)$; $f''(1)=-\\frac12<0$ (local max $\\frac12$), $f''(-1)=\\frac12>0$ (local min $-\\frac12$).",
+  "$t\\le0$: the interval contains a point $\\le0$, so $g(t)\\le0$.",
+  "$t\\ge1$: $f$ decreasing on $[t,t+1]$, $g(t)=f(t+1)\\le f(2)=\\frac25$.",
+  "$0\\le t\\le1$: the only interior extremum is the maximum at $1$, so the least value is at an endpoint: $g(t)=\\min\\{f(t),f(t+1)\\}$; $f(t)$ increases and $f(t+1)$ decreases in $t$, so $g$ is greatest when $f(t)=f(t+1)$.",
+  "$\\dfrac{t}{1+t^{2}}=\\dfrac{t+1}{1+(t+1)^{2}}\\Rightarrow t^{2}+t-1=0$, $t=\\dfrac{\\sqrt5-1}{2}$; with $1+t^{2}=2-t$: $M=\\dfrac{t}{2-t}=\\dfrac{1}{\\sqrt5}>\\dfrac25$",
+  "$M^{2}=\\dfrac15=0.2$",
+  "",
+  "Final Answer: 0.2"
+ ],
+ "solution_full": [
+  "$f'(x)=\\dfrac{(1+x^{2})-2x^{2}}{(1+x^{2})^{2}}=\\dfrac{1-x^{2}}{(1+x^{2})^{2}}$. So $f$ is decreasing on $(-\\infty,-1]$, increasing on $[-1,1]$ and decreasing on $[1,\\infty)$.",
+  "$f''(x)=\\dfrac{2x(x^{2}-3)}{(1+x^{2})^{3}}$, so $f''(1)=-\\dfrac12<0$ and $f''(-1)=\\dfrac12>0$: local maximum $f(1)=\\dfrac12$ and local minimum $f(-1)=-\\dfrac12$. Also $f(x)>0$ for $x>0$ and $f(x)\\le0$ for $x\\le0$.",
+  "$g(t)$ is the absolute minimum of the continuous $f$ on the closed interval $[t,t+1]$, attained at an endpoint or at a critical point inside.",
+  "Case $t\\le0$: $t\\in[t,t+1]$ and $f(t)\\le0$, so $g(t)\\le0$.",
+  "Case $t\\ge1$: $f$ is decreasing on $[t,t+1]$, so $g(t)=f(t+1)$, which is decreasing in $t$; hence $g(t)\\le f(2)=\\dfrac25$.",
+  "Case $0<t<1$: the only critical point inside $[t,t+1]$ is $x=1$, a maximum, so the minimum is at an endpoint: $g(t)=\\min\\{f(t),f(t+1)\\}$. On $(0,1)$, $f(t)$ is increasing in $t$ and $f(t+1)$ is decreasing in $t$, so $g$ increases while $f(t)<f(t+1)$ and decreases afterwards; its greatest value is at $f(t)=f(t+1)$.",
+  "$\\dfrac{t}{1+t^{2}}=\\dfrac{t+1}{t^{2}+2t+2}\\Rightarrow t^{3}+2t^{2}+2t=t^{3}+t^{2}+t+1\\Rightarrow t^{2}+t-1=0$, so $t=\\dfrac{\\sqrt5-1}{2}\\in(0,1)$.",
+  "Using $t^{2}=1-t$: $1+t^{2}=2-t$ and $f(t)=\\dfrac{t}{2-t}=\\dfrac{\\sqrt5-1}{5-\\sqrt5}=\\dfrac{1}{\\sqrt5}\\approx0.447$, which exceeds $\\dfrac25$ from the case $t\\ge1$ and $0$ from $t\\le0$.",
+  "Therefore $M=\\dfrac{1}{\\sqrt5}$ and $M^{2}=\\dfrac15=0.2$.",
+  "",
+  "Final Answer: 0.2"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: the max-min of a sliding window, g(t) = min of x/(1+x^2) on [t, t+1], maximised over t (way 2: a function defined by a construction). Closest known: greatest and least values of x/(1+x^2). Different because: the window minimum switches between the two endpoints, and the balance f(t) = f(t+1) gives a golden-ratio equation.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Intervals of monotonicity",
+  "Greatest and least value of a function in an interval",
+  "Maxima & Minima: First & Second Derivative Tests",
+  "Absolute (Global) Maxima & Minima on Closed Intervals"
+ ],
+ "concept_use": {
+  "Intervals of monotonicity": "Sign of f' = (1-x^2)/(1+x^2)^2 gives the three monotonic pieces used in every case of t.",
+  "Greatest and least value of a function in an interval": "g(t) is the least value of f on [t,t+1], and M is the greatest value of g.",
+  "Maxima & Minima: First & Second Derivative Tests": "f''(1) < 0 and f''(-1) > 0 classify x = 1 as the maximum and x = -1 as the minimum; g increases then decreases around the balance point.",
+  "Absolute (Global) Maxima & Minima on Closed Intervals": "On each closed window the absolute minimum is at an endpoint or a critical point, so g(t) = min{f(t), f(t+1)} for 0 < t < 1."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (decimal between 0 and 1); Hindi mirrors the English maths. g defined for every t; greatest value attained. No change.",
+ "level": 3,
+ "key_step": "See that for 0<t<1 the window minimum is at an endpoint and g is maximal when f(t) = f(t+1).",
+ "justification": "Casework over t plus a balancing argument and a golden-ratio equation: two ideas linked with exact algebra in numerical form, like the extremum-sign anchor 2026-P1-Q1 (L3) and above the routine monotonicity anchor 2021-P1-Q12 (L2).",
+ "nearest_anchor": "2026-P1-Q1 (L3) / 2021-P1-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

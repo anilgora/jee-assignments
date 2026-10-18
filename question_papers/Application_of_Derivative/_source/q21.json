@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 2,
+ "english": [
+  "Let $S$ be the sphere $x^{2}+y^{2}+z^{2}=25$ and let $Q$ be the point $(6,7,6)$. For a real number $d$ with $|d|<55$, the plane $6x+7y+6z=d$ cuts $S$ in a circle $C_{d}$. Among all right circular cones with vertex $Q$ and base $C_{d}$, the cone of maximum volume is obtained for $d$ equal to ______."
+ ],
+ "hindi": [
+  "माना कि $S$ गोला $x^{2}+y^{2}+z^{2}=25$ है तथा $Q$ बिन्दु $(6,7,6)$ है। किसी वास्तविक संख्या $d$, $|d|<55$, के लिए तल $6x+7y+6z=d$ गोले $S$ को एक वृत्त $C_{d}$ में काटता है। शीर्ष $Q$ तथा आधार $C_{d}$ वाले सभी लम्ब वृत्तीय शंकुओं में से अधिकतम आयतन वाला शंकु $d$ के ______ के बराबर होने पर प्राप्त होता है।"
+ ],
+ "solution": [
+  "$|\\overrightarrow{OQ}|=\\sqrt{36+49+36}=11$ and the plane's normal is along $\\overrightarrow{OQ}$, so $Q$ lies on the axis of $C_{d}$; the centre of $C_{d}$ is at signed distance $u=\\dfrac{d}{11}$ from $O$ towards $Q$, $u\\in(-5,5)$.",
+  "Radius$^{2}$ of $C_{d}=25-u^{2}$, height $=11-u$: $V=\\dfrac{\\pi}{3}(25-u^{2})(11-u)$",
+  "$\\dfrac{dV}{du}=\\dfrac{\\pi}{3}\\left(3u^{2}-22u-25\\right)=\\dfrac{\\pi}{3}(3u-25)(u+1)$; in $(-5,5)$ only $u=-1$, where $V'$ changes from $+$ to $-$: maximum.",
+  "$d=11u=-11$",
+  "",
+  "Final Answer: -11"
+ ],
+ "solution_full": [
+  "The centre of $S$ is $O(0,0,0)$ and its radius is $5$. $|\\overrightarrow{OQ}|=\\sqrt{6^{2}+7^{2}+6^{2}}=11>5$, so $Q$ is outside $S$.",
+  "The normal of the plane $6x+7y+6z=d$ is $(6,7,6)$, parallel to $\\overrightarrow{OQ}$. The centre of $C_{d}$ is the foot of the perpendicular from $O$, $\\dfrac{d}{121}(6,7,6)$, at signed distance $u=\\dfrac{d}{11}$ from $O$ along $\\overrightarrow{OQ}$. So $O$, the centre of $C_{d}$ and $Q$ are collinear on the axis of $C_{d}$, and every such cone is right circular.",
+  "The plane cuts $S$ iff $|u|<5$, i.e. $|d|<55$. Radius of $C_{d}$: $r^{2}=25-u^{2}$. Height of the cone (distance from $Q$ to the plane): $11-u$.",
+  "Volume: $V(u)=\\dfrac{\\pi}{3}(25-u^{2})(11-u)=\\dfrac{\\pi}{3}\\left(u^{3}-11u^{2}-25u+275\\right)$, $u\\in(-5,5)$.",
+  "$V'(u)=\\dfrac{\\pi}{3}\\left(3u^{2}-22u-25\\right)=\\dfrac{\\pi}{3}(3u-25)(u+1)$. The root $u=\\dfrac{25}{3}$ is outside $(-5,5)$, so the only critical point is $u=-1$.",
+  "$V'>0$ on $(-5,-1)$ and $V'<0$ on $(-1,5)$, so $u=-1$ gives the maximum volume $V=\\dfrac{\\pi}{3}\\cdot24\\cdot12=96\\pi$ (the base lies on the far side of the centre from $Q$).",
+  "Hence $d=11u=-11$.",
+  "",
+  "Final Answer: -11"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: cones with a fixed external vertex over the parallel sections of a sphere, parametrised by the plane constant d in coordinates (way 5). Closest known: maximum volume of a cone inscribed in a sphere (vertex on the sphere, height 4R/3). Different because: the vertex is outside the sphere at distance 11, the optimum section lies beyond the centre (u = -1), and the answer is the plane's constant d.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Geometrical problems based on optimization(maxima and minima)",
+  "Sphere in three dimensions"
+ ],
+ "concept_use": {
+  "Geometrical problems based on optimization(maxima and minima)": "V(u) = (pi/3)(25 - u^2)(11 - u) maximised at u = -1 by the first derivative test.",
+  "Sphere in three dimensions": "Centre, radius 5, section radius sqrt(25 - u^2) and the distance d/11 of the plane from the centre."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (negative integer); Hindi mirrors the English maths. |d| < 55 guarantees a circle of section; Q on the axis so cones are right circular. No change.",
+ "level": 2,
+ "key_step": "Parametrise by the signed distance u = d/11 of the cutting plane from the centre and maximise (25 - u^2)(11 - u).",
+ "justification": "Routine optimisation once the sphere-section geometry is set up (three standard steps, one cubic derivative); L2 numerical, between the L1 and L3 3D anchors 2024-P2-Q6 and 2026-P1-Q6.",
+ "nearest_anchor": "2026-P1-Q6 (L3) / 2024-P2-Q6 (L1)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}

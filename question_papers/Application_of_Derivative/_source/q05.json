@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 2,
+ "english": [
+  "Let $P$ be a point in the first quadrant on the curve $y=x^{2}$ such that the normal to the curve at $P$ passes through the point $\\left(0,\\dfrac{9}{2}\\right)$. The tangent and the normal to the curve at $P$ meet the $x$-axis at $T$ and $G$, respectively. Then the area of the triangle $PTG$ is ______."
+ ],
+ "hindi": [
+  "माना कि वक्र $y=x^{2}$ पर प्रथम चतुर्थांश में $P$ एक ऐसा बिन्दु है कि $P$ पर वक्र का अभिलम्ब बिन्दु $\\left(0,\\dfrac{9}{2}\\right)$ से होकर जाता है। $P$ पर वक्र की स्पर्श रेखा तथा अभिलम्ब $x$-अक्ष को क्रमशः $T$ तथा $G$ पर मिलते हैं। तब त्रिभुज $PTG$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "Normal at $P(a,a^{2})$: $(x-a)+2a(y-a^{2})=0$; through $\\left(0,\\frac92\\right)$: $-a+2a\\left(\\frac92-a^{2}\\right)=0\\Rightarrow a^{2}=4$, $a=2$ ($a>0$). $P(2,4)$, $m=y'=4$.",
+  "Subtangent $TM=\\dfrac{y}{m}=1$, subnormal $MG=ym=16$ ($M$ the foot of the ordinate), so $TG=17$.",
+  "Area $=\\dfrac12\\cdot TG\\cdot y=\\dfrac12\\cdot 17\\cdot 4=34$",
+  "",
+  "Final Answer: 34"
+ ],
+ "solution_full": [
+  "For $y=x^{2}$, $y'=2x$. At $P(a,a^{2})$, $a>0$, the slope of the tangent is $2a$ and the normal is $y-a^{2}=-\\dfrac{1}{2a}(x-a)$, i.e. $(x-a)+2a(y-a^{2})=0$.",
+  "It passes through $\\left(0,\\frac92\\right)$: $-a+2a\\left(\\frac92-a^{2}\\right)=0\\Rightarrow a\\left(8-2a^{2}\\right)=0$. The root $a=0$ is not in the first quadrant, so $a^{2}=4$, $a=2$, $P(2,4)$ and the slope is $m=4$.",
+  "Let $M(2,0)$ be the foot of the ordinate of $P$. The subtangent is $TM=\\left|\\dfrac{y}{m}\\right|=\\dfrac44=1$, so $T=(1,0)$ (check: tangent $y=4x-4$ meets $y=0$ at $x=1$).",
+  "The subnormal is $MG=|y\\,m|=4\\cdot 4=16$, so $G=(18,0)$ (check: normal $y-4=-\\frac14(x-2)$ meets $y=0$ at $x=18$).",
+  "$T$ and $G$ lie on opposite sides of $M$, so $TG=TM+MG=17$, and the height of the triangle from $P$ is the ordinate $4$.",
+  "Area of $\\triangle PTG=\\dfrac{1}{2}\\cdot 17\\cdot 4=34$.",
+  "",
+  "Final Answer: 34"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: the normal condition through a point on the y-axis fixes P, then the triangle PTG is read off from subtangent plus subnormal (way 5). Closest known: area of the triangle formed by the tangent, normal and x-axis at a given point. Different because: P is not given but defined by a normal passing through (0, 9/2), and the base is subtangent + subnormal.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Equation of a normal to a curve",
+  "Length of tangent, subtangent, normal and subnormal"
+ ],
+ "concept_use": {
+  "Equation of a normal to a curve": "Normal at (a,a^2) through (0,9/2) gives a = 2.",
+  "Length of tangent, subtangent, normal and subnormal": "TG = subtangent + subnormal = 1 + 16 gives the base of triangle PTG."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (positive 2-digit integer); Hindi mirrors the English maths. First quadrant excludes the root a = 0. No change.",
+ "level": 2,
+ "key_step": "Normal through (0,9/2) gives a^2 = 4; base TG = y/m + ym.",
+ "justification": "Routine two-stage chain (normal condition, then subtangent/subnormal) with no insight; numerical format nudges it but it stays at the level of 2023-P1-Q7 (L2).",
+ "nearest_anchor": "2023-P1-Q7 (L2)",
+ "confidence": "High",
+ "multi_concept": true,
+ "eq_relation": false
+}

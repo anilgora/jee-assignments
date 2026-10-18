@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Application of Derivative",
+ "target_level": 3,
+ "english": [
+  "A sector of a circle has a constant area of $25\\ \\text{cm}^{2}$, while its radius $r$ and its central angle vary with time. At the instant when $r=4$ cm, the central angle is decreasing at the rate of $\\dfrac{45}{\\pi}$ degrees per second. Then the rate of change of the perimeter of the sector (in cm per second) at that instant is ______."
+ ],
+ "hindi": [
+  "किसी वृत्त के एक त्रिज्यखण्ड का क्षेत्रफल अचर $25\\ \\text{cm}^{2}$ है, जबकि इसकी त्रिज्या $r$ तथा केन्द्रीय कोण समय के साथ परिवर्तित होते हैं। जिस क्षण $r=4$ cm है, उस क्षण केन्द्रीय कोण $\\dfrac{45}{\\pi}$ अंश प्रति सेकण्ड की दर से घट रहा है। तब उस क्षण त्रिज्यखण्ड के परिमाप के परिवर्तन की दर (cm प्रति सेकण्ड में) ______ है।"
+ ],
+ "solution": [
+  "Angle $\\theta$ in radians: $\\dfrac{d\\theta}{dt}=-\\dfrac{45}{\\pi}\\cdot\\dfrac{\\pi}{180}=-\\dfrac14$ rad/s.",
+  "Area $\\dfrac12r^{2}\\theta=25\\Rightarrow\\theta=\\dfrac{50}{r^{2}}$; at $r=4$, $\\theta=\\dfrac{25}{8}$ ($<2\\pi$, valid).",
+  "$\\dfrac{d\\theta}{dt}=-\\dfrac{100}{r^{3}}\\dfrac{dr}{dt}\\Rightarrow -\\dfrac14=-\\dfrac{100}{64}\\dfrac{dr}{dt}\\Rightarrow \\dfrac{dr}{dt}=0.16$",
+  "Perimeter $P=2r+r\\theta=2r+\\dfrac{50}{r}$, $\\dfrac{dP}{dt}=\\left(2-\\dfrac{50}{r^{2}}\\right)\\dfrac{dr}{dt}=\\left(2-\\dfrac{25}{8}\\right)(0.16)=-0.18$",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "solution_full": [
+  "Work with the central angle $\\theta$ in radians, since the formulas $s=r\\theta$ (arc) and $\\dfrac12r^{2}\\theta$ (area) hold only in radians. $1^{\\circ}=\\dfrac{\\pi}{180}$ rad, so the given rate is $\\dfrac{d\\theta}{dt}=-\\dfrac{45}{\\pi}\\cdot\\dfrac{\\pi}{180}=-\\dfrac14$ rad per second.",
+  "Constant area: $\\dfrac12r^{2}\\theta=25\\Rightarrow \\theta=\\dfrac{50}{r^{2}}$. At $r=4$: $\\theta=\\dfrac{50}{16}=\\dfrac{25}{8}$ radian, which is less than $2\\pi$, so the sector exists.",
+  "Differentiating $\\theta=50r^{-2}$: $\\dfrac{d\\theta}{dt}=-\\dfrac{100}{r^{3}}\\dfrac{dr}{dt}$. At $r=4$: $-\\dfrac14=-\\dfrac{100}{64}\\dfrac{dr}{dt}\\Rightarrow \\dfrac{dr}{dt}=\\dfrac{64}{400}=0.16$ cm/s (the radius grows as the angle shrinks).",
+  "Perimeter $=$ two radii $+$ arc: $P=2r+r\\theta=2r+\\dfrac{50}{r}$.",
+  "$\\dfrac{dP}{dt}=\\left(2-\\dfrac{50}{r^{2}}\\right)\\dfrac{dr}{dt}=\\left(2-\\dfrac{50}{16}\\right)(0.16)=\\left(-\\dfrac98\\right)(0.16)=-0.18$ cm/s.",
+  "So the perimeter is decreasing at $0.18$ cm/s at that instant.",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a sector kept at constant area while its angle shrinks at a rate given in degrees (way 5); the perimeter rate needs the radian conversion, the constraint and two chained rates. Closest known: maximum area of a sector of given perimeter. Different because: the area is fixed instead of the perimeter, the data rate is in degrees, and the asked rate is of the perimeter.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Rate measure and related rates",
+  "Measurement of angles: degree, radian, arc length and sector area"
+ ],
+ "concept_use": {
+  "Rate measure and related rates": "d theta/dt = -100 r^-3 dr/dt and dP/dt = (2 - 50/r^2) dr/dt chain the rates.",
+  "Measurement of angles: degree, radian, arc length and sector area": "45/pi degrees per second = 1/4 rad/s; arc r theta and area r^2 theta/2 in radians."
+ },
+ "stem_review": "Read as a student: every symbol, curve and function introduced with its domain; conditions complete; one reading of each sentence; answer unique and equal to the plan (negative decimal); Hindi mirrors the English maths. Units stated (degrees per second, cm); sector valid (theta = 25/8 < 2 pi). No change.",
+ "level": 3,
+ "key_step": "Convert the angular rate to radians, use the constant-area constraint to get dr/dt, then differentiate the perimeter.",
+ "justification": "Two ideas linked (unit conversion that is easy to miss, and a two-stage related-rate chain through a constraint) in numerical format with no options; above the routine L2 measure anchor 2021-P1-Q18 and comparable to 2024-P1-Q3 (L3).",
+ "nearest_anchor": "2021-P1-Q18 (L2) / 2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": true,
+ "eq_relation": false
+}
