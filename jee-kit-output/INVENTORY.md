@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Limit)
+READY: all tools present (re-checked 2026-10-18 for Continuity & Differentiability)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -28,7 +28,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Function | chapters/Function/Theory.pdf | chapters/Function/XII.pdf | chapters/Function/XIII.pdf | chapters/Function/DPP.pdf | chapters/Function/QB.pdf | — | — | DONE |
 | Inverse Trigonometric Function | chapters/Inverse_Trigonometric_Function/Theory.pdf | chapters/Inverse_Trigonometric_Function/XII.pdf | chapters/Inverse_Trigonometric_Function/XIII.pdf | chapters/Inverse_Trigonometric_Function/DPP.pdf | chapters/Inverse_Trigonometric_Function/QB.pdf | — | — | DONE |
 | Limit | chapters/Limit/Theory.pdf | chapters/Limit/XII.pdf | chapters/Limit/XIII.pdf | chapters/Limit/DPP.pdf | chapters/Limit/QB.pdf | — | — | DONE |
-| Continuity & Differentiability | chapters/Continuity_Differentiability/Theory.pdf | chapters/Continuity_Differentiability/XII.pdf | chapters/Continuity_Differentiability/XIII.pdf | chapters/Continuity_Differentiability/DPP.pdf | chapters/Continuity_Differentiability/QB.pdf | — | — | READY |
+| Continuity & Differentiability | chapters/Continuity_Differentiability/Theory.pdf | chapters/Continuity_Differentiability/XII.pdf | chapters/Continuity_Differentiability/XIII.pdf | chapters/Continuity_Differentiability/DPP.pdf | chapters/Continuity_Differentiability/QB.pdf | — | — | DONE |
 | Method of Differentiation | chapters/Method_of_Differentiation/Theory.pdf | chapters/Method_of_Differentiation/XII.pdf | chapters/Method_of_Differentiation/XIII.pdf | — | chapters/Method_of_Differentiation/QB.pdf | — | DPP | READY |
 | Tangent & Normal | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Tangent_Normal/QB.pdf | — | — | READY |
 | Monotonicity | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Monotonicity/QB.pdf | — | — | READY |

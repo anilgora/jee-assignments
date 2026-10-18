@@ -21,3 +21,4 @@ Vector_3D: DONE 2026-10-17
 Function: DONE 2026-10-17
 Inverse_Trigonometric_Function: DONE 2026-10-17
 Limit: DONE 2026-10-17
+Continuity_Differentiability: DONE 2026-10-18
