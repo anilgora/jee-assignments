@@ -1,0 +1,56 @@
+{
+ "type": "SCQ",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $C$ be the curve in the region $y>0$ passing through the point $(0,1)$ such that every point $(x,y)$ of $C$ satisfies $y\\,dx=\\left(x+2y^{3}e^{y}\\right)dy$. If $C$ meets the line $y=2$ at the point $(\\alpha,2)$, then $\\alpha$ is equal to",
+  "",
+  "(A) $2e^{2}$",
+  "(B) $8e^{2}$",
+  "(C) $e^{2}$",
+  "(D) $4e^{2}$"
+ ],
+ "hindi": [
+  "माना कि $C$ क्षेत्र $y>0$ में बिन्दु $(0,1)$ से होकर जाने वाला वह वक्र है जिसका प्रत्येक बिन्दु $(x,y)$ समीकरण $y\\,dx=\\left(x+2y^{3}e^{y}\\right)dy$ को संतुष्ट करता है। यदि $C$ रेखा $y=2$ से बिन्दु $(\\alpha,2)$ पर मिलता है, तो $\\alpha$ बराबर है",
+  "",
+  "(A) $2e^{2}$",
+  "(B) $8e^{2}$",
+  "(C) $e^{2}$",
+  "(D) $4e^{2}$"
+ ],
+ "solution": [
+  "Not linear in $y$, but linear in $x$: $\\dfrac{dx}{dy}-\\dfrac{x}{y}=2y^{2}e^{y}$, IF $=\\dfrac1y$",
+  "$\\dfrac{d}{dy}\\left(\\dfrac{x}{y}\\right)=2ye^{y}\\Rightarrow \\dfrac{x}{y}=2(y-1)e^{y}+C$",
+  "At $(0,1)$: $0=0+C\\Rightarrow C=0$, so $x=2y(y-1)e^{y}$",
+  "$y=2$: $\\alpha=2\\cdot2\\cdot1\\cdot e^{2}=4e^{2}$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "Solving for $\\dfrac{dy}{dx}$ gives $\\dfrac{dy}{dx}=\\dfrac{y}{x+2y^{3}e^{y}}$, which is not linear in $y$. Treat $x$ as a function of $y$ instead: dividing by $y\\,dy$ ($y>0$), $\\dfrac{dx}{dy}=\\dfrac{x}{y}+2y^{2}e^{y}$, that is, $\\dfrac{dx}{dy}-\\dfrac{1}{y}x=2y^{2}e^{y}$.",
+  "This is linear in $x$ with $P(y)=-\\dfrac1y$. Integrating factor: $e^{-\\int dy/y}=\\dfrac1y$.",
+  "Multiply: $\\dfrac{d}{dy}\\left(\\dfrac{x}{y}\\right)=2ye^{y}$. Integrating by parts, $\\int 2ye^{y}dy=2ye^{y}-2e^{y}+C$, so $\\dfrac{x}{y}=2(y-1)e^{y}+C$.",
+  "The curve passes through $(0,1)$: $\\dfrac{0}{1}=2(0)e+C$, so $C=0$ and $x=2y(y-1)e^{y}$.",
+  "For $y=2$: $\\alpha=2\\cdot2\\cdot(2-1)e^{2}=4e^{2}$.",
+  "Option (A) comes from forgetting to multiply $\\dfrac{x}{y}$ back by $y$.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "answer_plan": "Option D",
+ "originality_note": "New: a curve given in differential form that is linear only when x is the dependent variable, and is then read at a given height. Closest known: textbook equations such as (x + y^3)dy = y dx. Different because: the forcing term 2y^2 e^y needs integration by parts and the curve passes through a point on the y-axis, so the constant vanishes.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Linear differential equation in x (dx/dy form)"
+ ],
+ "concept_use": {
+  "Linear differential equation in x (dx/dy form)": "The equation is rewritten as dx/dy - x/y = 2y^2 e^y, a linear equation in x with integrating factor 1/y, and solved with the point (0,1)."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; the region y > 0 is stated so dividing by y is valid; answer (D) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Switch to dx/dy: linear in x with IF 1/y, then integration by parts.",
+ "justification": "Recognising the dx/dy form, integrating factor and one integration by parts: three routine steps. Comparable to 2023-P2-Q9 (L2), linear DE then a value.",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

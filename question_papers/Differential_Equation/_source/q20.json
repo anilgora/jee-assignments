@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $y=y(x)$, $0\\le x\\le5$, be the solution of the differential equation $\\dfrac{dy}{dx}=\\dfrac{x+3y+19}{3x+y+9}$ with $y(0)=-6$. Then the value of $y(5)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $y=y(x)$, $0\\le x\\le5$, अवकल समीकरण $\\dfrac{dy}{dx}=\\dfrac{x+3y+19}{3x+y+9}$ का वह हल है जिसके लिए $y(0)=-6$ है। तब $y(5)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$x+3y+19=0$ and $3x+y+9=0$ meet at $(-1,-6)$; $X=x+1$, $Y=y+6$: $\\dfrac{dY}{dX}=\\dfrac{X+3Y}{3X+Y}$",
+  "$Y=vX$: $Xv'=\\dfrac{1-v^{2}}{3+v}$; $\\dfrac{3+v}{(1-v)(1+v)}=\\dfrac{2}{1-v}+\\dfrac{1}{1+v}$",
+  "$-2\\ln(1-v)+\\ln(1+v)=\\ln X+c\\Rightarrow\\dfrac{1+v}{(1-v)^{2}}=KX\\Rightarrow X+Y=K(X-Y)^{2}$",
+  "At $x=0$: $(X,Y)=(1,0)\\Rightarrow K=1$; at $x=5$: $X=6$, $6+Y=(6-Y)^{2}\\Rightarrow Y^{2}-13Y+30=0\\Rightarrow Y=3$ or $10$",
+  "On the branch through $(1,0)$, $X-Y>0$ and $X-Y=s$ increases from $1$: $s=3$ gives $X=6$, $Y=3$ ($Y=10$ has $s=-4$, another branch)",
+  "$y(5)=-6+3=-3$",
+  "",
+  "Final Answer: -3"
+ ],
+ "solution_full": [
+  "Solve $x+3y+19=0$, $3x+y+9=0$: $(x,y)=(-1,-6)$. Put $x=X-1$, $y=Y-6$. Then $x+3y+19=X+3Y$ and $3x+y+9=3X+Y$, so $\\dfrac{dY}{dX}=\\dfrac{X+3Y}{3X+Y}$, which is homogeneous.",
+  "Put $Y=vX$: $v+X\\dfrac{dv}{dX}=\\dfrac{1+3v}{3+v}$, so $X\\dfrac{dv}{dX}=\\dfrac{1+3v-3v-v^{2}}{3+v}=\\dfrac{1-v^{2}}{3+v}$.",
+  "Separate and use partial fractions: $\\dfrac{3+v}{(1-v)(1+v)}=\\dfrac{2}{1-v}+\\dfrac{1}{1+v}$. Integrating, $-2\\ln\\left|1-v\\right|+\\ln\\left|1+v\\right|=\\ln\\left|X\\right|+c$.",
+  "So $\\dfrac{1+v}{(1-v)^{2}}=KX$. Multiply by $X$ and use $v=\\dfrac YX$: $\\dfrac{X(X+Y)}{(X-Y)^{2}}=KX$, that is, $X+Y=K(X-Y)^{2}$, a family of parabolas.",
+  "At $x=0$, $y=-6$: $X=1$, $Y=0$, so $K=1$ and $X+Y=(X-Y)^{2}$.",
+  "Parametrise by $s=X-Y$: $X+Y=s^{2}$, so $X=\\dfrac{s^{2}+s}{2}$, $Y=\\dfrac{s^{2}-s}{2}$. At the initial point $s=1$. Since $\\dfrac{dX}{ds}=\\dfrac{2s+1}{2}>0$ for $s>0$ and $3X+Y=2s^{2}+s>0$, the solution is a smooth function $y(x)$ for $s\\ge1$.",
+  "$x=5$ means $X=6$: $s^{2}+s=12$, $s=3$, so $Y=\\dfrac{9-3}{2}=3$. (The other root $s=-4$ lies on a different branch.)",
+  "Hence $y(5)=Y-6=-3$.",
+  "",
+  "Final Answer: -3"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: a reducible-to-homogeneous equation with coefficient pattern (1,3;3,1) whose solution family is the parabolas X + Y = K(X - Y)^2, with a branch decision at the end (way 5). Closest known: dy/dx = (x + 2y - 3)/(2x + y - 3), whose solutions are cubic curves. Different because: the coefficients give parabolas and the quadratic in Y has two roots, only one on the solution branch.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Equations reducible to homogeneous form: (a1x+b1y+c1)/(a2x+b2y+c2)"
+ ],
+ "concept_use": {
+  "Equations reducible to homogeneous form: (a1x+b1y+c1)/(a2x+b2y+c2)": "The lines x + 3y + 19 = 0 and 3x + y + 9 = 0 meet at (-1,-6); shifting the origin there makes the equation homogeneous, solved by Y = vX and partial fractions, giving the parabolas X + Y = K(X - Y)^2."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; interval [0,5] stated; the branch choice is argued; answer -3 is a negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Shift to (-1,-6), Y = vX, partial fractions: X + Y = (X - Y)^2; choose the branch.",
+ "justification": "Standard reduction with partial fractions and a branch choice; routine but several steps. Comparable to 2025-P2-Q9 (L2).",
+ "nearest_anchor": "2025-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

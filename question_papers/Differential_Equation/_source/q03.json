@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $f:(0,\\infty)\\to\\mathbb{R}$ be a differentiable function such that $xf'(x)-f(x)=x^{2}\\left(1+\\ln x\\right)$ for all $x>0$ and $\\displaystyle\\lim_{x\\to0^{+}}\\dfrac{f(x)}{x}=1$. Then $f(e)$ is equal to",
+  "",
+  "(A) $e^{2}$",
+  "(B) $e^{2}+e$",
+  "(C) $2e^{2}+e$",
+  "(D) $e^{2}-e$"
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए सभी $x>0$ हेतु $xf'(x)-f(x)=x^{2}\\left(1+\\ln x\\right)$ तथा $\\displaystyle\\lim_{x\\to0^{+}}\\dfrac{f(x)}{x}=1$ है। तब $f(e)$ बराबर है",
+  "",
+  "(A) $e^{2}$",
+  "(B) $e^{2}+e$",
+  "(C) $2e^{2}+e$",
+  "(D) $e^{2}-e$"
+ ],
+ "solution": [
+  "Linear form $f'-\\dfrac{1}{x}f=x(1+\\ln x)$ has IF $\\dfrac1x$; by inspection $\\dfrac{xf'-f}{x^{2}}=\\dfrac{d}{dx}\\left(\\dfrac{f}{x}\\right)$",
+  "$\\dfrac{d}{dx}\\left(\\dfrac{f}{x}\\right)=1+\\ln x=\\dfrac{d}{dx}(x\\ln x)\\Rightarrow \\dfrac{f(x)}{x}=x\\ln x+C$",
+  "$x\\ln x\\to0$ as $x\\to0^{+}$, so the limit condition gives $C=1$",
+  "$f(x)=x^{2}\\ln x+x\\Rightarrow f(e)=e^{2}+e$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Write the equation as $f'(x)-\\dfrac{1}{x}f(x)=x(1+\\ln x)$, a linear equation with $P=-\\dfrac1x$. The integrating factor is $e^{-\\int dx/x}=\\dfrac1x$ on $(0,\\infty)$.",
+  "Multiplying by the integrating factor is the same as dividing the original equation by $x^{2}$, and the left side is then an exact derivative: $\\dfrac{xf'(x)-f(x)}{x^{2}}=\\dfrac{d}{dx}\\left(\\dfrac{f(x)}{x}\\right)$.",
+  "The right side becomes $1+\\ln x$. Since $\\dfrac{d}{dx}(x\\ln x)=\\ln x+1$, it is also an exact derivative.",
+  "Hence $\\dfrac{d}{dx}\\left(\\dfrac{f(x)}{x}-x\\ln x\\right)=0$ on $(0,\\infty)$, so $\\dfrac{f(x)}{x}=x\\ln x+C$.",
+  "Now $\\displaystyle\\lim_{x\\to0^{+}}x\\ln x=0$, so $\\displaystyle\\lim_{x\\to0^{+}}\\dfrac{f(x)}{x}=C$. The given limit is $1$, so $C=1$.",
+  "Therefore $f(x)=x^{2}\\ln x+x$ and $f(e)=e^{2}\\cdot1+e=e^{2}+e$.",
+  "Option (C) results from integrating $1+\\ln x$ as $x+x\\ln x$ (forgetting that $\\int\\ln x\\,dx=x\\ln x-x$); option (A) from taking $C=0$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "answer_plan": "Option B",
+ "originality_note": "New: a linear equation whose constant is fixed not by a value of f but by the limit of f(x)/x at the singular end x = 0, where x ln x vanishes (way 5). Closest known: xy' - y = x^2 type textbook equations with y(1) given. Different because: the condition at x -> 0+ needs the limit of x ln x and decides the constant.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Linear differential equation in y; integrating factor",
+  "Exact differential equations; integrating factors by inspection"
+ ],
+ "concept_use": {
+  "Linear differential equation in y; integrating factor": "The equation is a linear equation in f with P = -1/x, whose integrating factor 1/x is used.",
+  "Exact differential equations; integrating factors by inspection": "Dividing by x^2 shows (xf' - f)/x^2 = d(f/x) and 1 + ln x = d(x ln x), both recognised by inspection."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; the limit condition is stated at 0+ inside the domain's closure; answer (B) as planned; options all expressions in e. Changed: No change.",
+ "level": 2,
+ "key_step": "d(f/x) = d(x ln x) by inspection, then the limit at 0+ fixes C = 1.",
+ "justification": "Standard integrating factor plus two inspections and a familiar limit; a routine chain with no real insight. Comparable to 2024-P1-Q1 (L2), a linear DE solved with a side condition.",
+ "nearest_anchor": "2024-P1-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

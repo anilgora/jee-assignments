@@ -1,0 +1,58 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 3,
+ "english": [
+  "Let $f:(0,\\infty)\\to(0,\\infty)$ be a differentiable function with $f(1)=1$ such that $x^{2}f'(x)=3xf(x)-\\left(f(x)\\right)^{2}$ for all $x>0$. Let $g:(0,\\infty)\\to\\mathbb{R}$ be a differentiable function with $g(1)=0$ such that",
+  "$$g'(x)+\\dfrac{2x}{1+x^{2}}\\,g(x)=f(x)\\quad\\text{for all } x>0.$$",
+  "Then the value of $g(15)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to(0,\\infty)$ एक अवकलनीय फलन है, $f(1)=1$, जिसके लिए सभी $x>0$ हेतु $x^{2}f'(x)=3xf(x)-\\left(f(x)\\right)^{2}$ है। माना कि $g:(0,\\infty)\\to\\mathbb{R}$ एक अवकलनीय फलन है, $g(1)=0$, जिसके लिए सभी $x>0$ हेतु",
+  "$$g'(x)+\\dfrac{2x}{1+x^{2}}\\,g(x)=f(x)$$",
+  "है। तब $g(15)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f'=3\\dfrac fx-\\left(\\dfrac fx\\right)^{2}$ is homogeneous; $f=vx$: $v+xv'=3v-v^{2}\\Rightarrow xv'=v(2-v)$",
+  "Separable: $\\dfrac{dv}{v(2-v)}=\\dfrac{dx}{x}\\Rightarrow\\dfrac12\\ln\\dfrac{v}{2-v}=\\ln x+c$; $v(1)=1\\Rightarrow c=0$",
+  "$\\dfrac{v}{2-v}=x^{2}\\Rightarrow v=\\dfrac{2x^{2}}{1+x^{2}}$, $f(x)=\\dfrac{2x^{3}}{1+x^{2}}$",
+  "Linear in $g$ with IF $e^{\\int\\frac{2x}{1+x^{2}}dx}=1+x^{2}$: $\\left((1+x^{2})g\\right)'=(1+x^{2})f=2x^{3}$",
+  "$(1+x^{2})g=\\dfrac{x^{4}}{2}+K$; $g(1)=0\\Rightarrow K=-\\dfrac12$, so $g=\\dfrac{x^{4}-1}{2(1+x^{2})}=\\dfrac{x^{2}-1}{2}$",
+  "$g(15)=\\dfrac{224}{2}=112$",
+  "",
+  "Final Answer: 112"
+ ],
+ "solution_full": [
+  "Divide the first equation by $x^{2}$: $f'(x)=3\\dfrac{f}{x}-\\left(\\dfrac fx\\right)^{2}$. The right side depends only on $\\dfrac fx$, so the equation is homogeneous.",
+  "Put $f=vx$, $f'=v+xv'$: $v+xv'=3v-v^{2}$, so $x\\dfrac{dv}{dx}=v(2-v)$. With $f(1)=1$, $v(1)=1$, and $v$ stays in $(0,2)$ (the constant solutions $v=0$ and $v=2$ cannot be crossed).",
+  "Separate the variables: $\\dfrac{dv}{v(2-v)}=\\dfrac{dx}{x}$. Partial fractions: $\\dfrac{1}{v(2-v)}=\\dfrac12\\left(\\dfrac1v+\\dfrac1{2-v}\\right)$, so $\\dfrac12\\ln\\dfrac{v}{2-v}=\\ln x+c$.",
+  "At $x=1$, $v=1$: $c=0$. Hence $\\dfrac{v}{2-v}=x^{2}$, $v=\\dfrac{2x^{2}}{1+x^{2}}$ and $f(x)=\\dfrac{2x^{3}}{1+x^{2}}$, which is positive on $(0,\\infty)$.",
+  "The second equation is linear in $g$ with $P(x)=\\dfrac{2x}{1+x^{2}}$. Integrating factor: $e^{\\ln(1+x^{2})}=1+x^{2}$.",
+  "Then $\\dfrac{d}{dx}\\left((1+x^{2})g\\right)=(1+x^{2})f(x)=2x^{3}$, so $(1+x^{2})g(x)=\\dfrac{x^{4}}{2}+K$.",
+  "$g(1)=0$ gives $0=\\dfrac12+K$, $K=-\\dfrac12$. So $g(x)=\\dfrac{x^{4}-1}{2(1+x^{2})}=\\dfrac{(x^{2}-1)(x^{2}+1)}{2(x^{2}+1)}=\\dfrac{x^{2}-1}{2}$.",
+  "$g(15)=\\dfrac{225-1}{2}=112$.",
+  "",
+  "Final Answer: 112"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the integrating factor 1 + x^2 of the linear equation for g is exactly the denominator of f, which comes from the homogeneous equation, so (1 + x^2) f = 2x^3 and g becomes a polynomial (way 5). Closest known: 3x^2 dy = (3xy + y^2)dx type homogeneous exercises. Different because: the logistic-type v-equation and the cancellation with the second equation are new; web search found only different homogeneous equations.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Variable separable equations",
+  "Homogeneous differential equations",
+  "Linear differential equation in y; integrating factor"
+ ],
+ "concept_use": {
+  "Variable separable equations": "After f = vx the homogeneous equation becomes x v' = v(2 - v), which is separated and integrated with partial fractions.",
+  "Homogeneous differential equations": "The equation for f has right side 3(f/x) - (f/x)^2, a function of f/x only, so the substitution f = vx is used.",
+  "Linear differential equation in y; integrating factor": "The equation for g is linear with integrating factor 1 + x^2, and this factor cancels the denominator of f."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; f > 0 stated so v stays in (0,2); both functions have domains; answer 112 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Solve the homogeneous equation by v = f/x and partial fractions, then see that the IF 1 + x^2 cancels f's denominator.",
+ "justification": "Two standard methods chained, with partial fractions and a cancellation that rewards the right form of f; two ideas linked. Comparable to 2025-P2-Q14 (L3), a composed numerical in which the first part feeds the second.",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

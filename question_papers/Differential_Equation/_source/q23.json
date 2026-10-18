@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $y:(0,\\infty)\\to\\mathbb{R}$ be a differentiable function such that $x\\dfrac{dy}{dx}=y-x^{3}y^{2}$ for all $x>0$ and $y(1)=\\dfrac45$. Then the value of $y(2)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $y:(0,\\infty)\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए सभी $x>0$ हेतु $x\\dfrac{dy}{dx}=y-x^{3}y^{2}$ तथा $y(1)=\\dfrac45$ है। तब $y(2)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Bernoulli with $n=2$: $y'-\\dfrac yx=-x^{2}y^{2}$; put $w=\\dfrac1y$, $w'=-\\dfrac{y'}{y^{2}}$",
+  "$w'+\\dfrac wx=x^{2}$, IF $x$: $(xw)'=x^{3}\\Rightarrow xw=\\dfrac{x^{4}}{4}+c$",
+  "$w(1)=\\dfrac54\\Rightarrow c=1$, so $y=\\dfrac{4x}{x^{4}+4}$",
+  "$y(2)=\\dfrac{8}{20}=0.4$",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "solution_full": [
+  "Divide by $x$: $\\dfrac{dy}{dx}-\\dfrac{1}{x}y=-x^{2}y^{2}$, a Bernoulli equation with $n=2$.",
+  "Since $y(1)\\neq0$ and the solution we obtain never vanishes, put $w=\\dfrac1y$: $\\dfrac{dw}{dx}=-\\dfrac{1}{y^{2}}\\dfrac{dy}{dx}$. Dividing the equation by $-y^{2}$: $\\dfrac{dw}{dx}+\\dfrac{1}{x}w=x^{2}$.",
+  "This is linear in $w$ with integrating factor $x$: $\\dfrac{d}{dx}(xw)=x^{3}$, so $xw=\\dfrac{x^{4}}{4}+c$.",
+  "At $x=1$: $w=\\dfrac54$, so $\\dfrac54=\\dfrac14+c$, $c=1$. Hence $w=\\dfrac{x^{4}+4}{4x}$ and $y=\\dfrac{4x}{x^{4}+4}$, which is positive on $(0,\\infty)$.",
+  "$y(2)=\\dfrac{8}{16+4}=0.4$.",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a Bernoulli equation whose solution is the rational function 4x/(x^4 + 4), read at x = 2. Closest known: y' + y/x = x y^2 textbook exercises. Different because: the forcing power x^3 and the initial value 4/5 give a different rational solution; the ingredient (w = 1/y) is standard.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Bernoulli's equation"
+ ],
+ "concept_use": {
+  "Bernoulli's equation": "The equation y' - y/x = -x^2 y^2 is a Bernoulli equation (n = 2); w = 1/y turns it into the linear equation w' + w/x = x^2."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; domain stated, solution never zero; answer 0.40 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "w = 1/y gives a linear equation with IF x.",
+ "justification": "A direct application of the Bernoulli substitution and an integrating factor: routine chain of three steps. Comparable to 2023-P2-Q9 (L2).",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,44 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function such that $3\\displaystyle\\int_{0}^{x}f(t)\\,dt=x\\left(f(x)+2f(0)\\right)$ for all $x\\in\\mathbb{R}$, $f(0)=2$ and $f(1)=5$. Then the value of $f(8)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए सभी $x\\in\\mathbb{R}$ हेतु $3\\displaystyle\\int_{0}^{x}f(t)\\,dt=x\\left(f(x)+2f(0)\\right)$, $f(0)=2$ तथा $f(1)=5$ है। तब $f(8)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Differentiate (Newton-Leibniz): $3f(x)=f(x)+2f(0)+xf'(x)\\Rightarrow xf'(x)=2\\left(f(x)-f(0)\\right)$",
+  "$g=f-f(0)$: $xg'=2g\\Rightarrow g=kx^{2}$ for $x>0$",
+  "$f(x)=2+kx^{2}$, $f(1)=5\\Rightarrow k=3$; check: $3(2x+x^{3})=x(3x^{2}+2+4)$",
+  "$f(8)=2+192=194$",
+  "",
+  "Final Answer: 194"
+ ],
+ "solution_full": [
+  "The left side is differentiable with derivative $3f(x)$ (Newton-Leibniz). Differentiate both sides: $3f(x)=f(x)+2f(0)+xf'(x)$, so $xf'(x)=2\\left(f(x)-f(0)\\right)$.",
+  "Put $g(x)=f(x)-f(0)$: $xg'(x)=2g(x)$. On $(0,\\infty)$ this separates: $\\dfrac{g'}{g}=\\dfrac2x$ where $g\\neq0$, and every solution is $g=kx^{2}$. So $f(x)=2+kx^{2}$ for $x>0$.",
+  "Check in the integral equation for $x>0$: $3\\displaystyle\\int_0^x\\left(2+kt^{2}\\right)dt=6x+kx^{3}$ and $x\\left(2+kx^{2}+4\\right)=6x+kx^{3}$, equal for every $k$. So the equation itself does not fix $k$; the value $f(1)=5$ does: $2+k=5$, $k=3$.",
+  "Hence $f(x)=2+3x^{2}$ for $x>0$ and $f(8)=2+3\\cdot64=194$. (The values for $x<0$ do not affect $f(8)$.)",
+  "",
+  "Final Answer: 194"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the functions for which the rule 3 integral_0^x f = x(f(x) + 2f(0)) holds exactly are the quadratics with no linear term, found by differentiating an integral identity (way 3). Closest known: integral equations such as integral_0^x f = x f(x) - x^2 that reduce to a linear DE. Different because: the identity contains f(0) and the solution family has two constants, one fixed by f(0) and one by f(1); web search found only different integral equations.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Differential equations involving definite integrals or Newton-Leibniz"
+ ],
+ "concept_use": {
+  "Differential equations involving definite integrals or Newton-Leibniz": "Differentiating the integral equation with the Newton-Leibniz rule gives the differential equation x f' = 2(f - f(0)), solved to f = f(0) + kx^2."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; f differentiable on R stated; the value f(8) is unique (it depends only on x > 0); answer 194 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Differentiate: x f' = 2(f - f(0)), so f = f(0) + kx^2.",
+ "justification": "Newton-Leibniz differentiation and a separable equation; routine chain. Comparable to 2023-P2-Q1 (L2), an integral equation reduced to a DE.",
+ "nearest_anchor": "2023-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

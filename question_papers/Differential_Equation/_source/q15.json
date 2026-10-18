@@ -1,0 +1,59 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 3,
+ "english": [
+  "For a point $P(x,y)\\neq(0,0)$, let $\\theta\\in(-\\pi,\\pi]$ be the angle with $x=\\sqrt{x^{2}+y^{2}}\\cos\\theta$ and $y=\\sqrt{x^{2}+y^{2}}\\sin\\theta$. Let $C$ be the curve $x^{2}+y^{2}=g(\\theta)$, $-\\pi<\\theta<1$, where $g$ is a differentiable function with $g(0)=1$, such that every point of $C$ satisfies",
+  "$$2\\left(x^{2}+y^{2}\\right)\\left(x\\,dx+y\\,dy\\right)=\\left[\\left(x^{2}+y^{2}+2\\theta\\right)^{2}-2\\right]\\left(x\\,dy-y\\,dx\\right).$$",
+  "The curve $C$ meets the circle $x^{2}+y^{2}=\\dfrac{5}{3}$ at exactly two points. If $\\theta_1<\\theta_2$ are the values of $\\theta$ at these points, then the value of $\\theta_1$ is ______."
+ ],
+ "hindi": [
+  "बिन्दु $P(x,y)\\neq(0,0)$ के लिए माना कि $\\theta\\in(-\\pi,\\pi]$ वह कोण है जिसके लिए $x=\\sqrt{x^{2}+y^{2}}\\cos\\theta$ तथा $y=\\sqrt{x^{2}+y^{2}}\\sin\\theta$ है। माना कि $C$ वक्र $x^{2}+y^{2}=g(\\theta)$, $-\\pi<\\theta<1$ है, जहाँ $g$ एक अवकलनीय फलन है, $g(0)=1$, तथा $C$ का प्रत्येक बिन्दु निम्न को संतुष्ट करता है",
+  "$$2\\left(x^{2}+y^{2}\\right)\\left(x\\,dx+y\\,dy\\right)=\\left[\\left(x^{2}+y^{2}+2\\theta\\right)^{2}-2\\right]\\left(x\\,dy-y\\,dx\\right).$$",
+  "वक्र $C$ वृत्त $x^{2}+y^{2}=\\dfrac{5}{3}$ से ठीक दो बिन्दुओं पर मिलता है। यदि इन बिन्दुओं पर $\\theta$ के मान $\\theta_1<\\theta_2$ हैं, तो $\\theta_1$ का मान ______ है।"
+ ],
+ "solution": [
+  "Polar form: $x\\,dx+y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^{2}d\\theta$; put $s=r^{2}=g(\\theta)$, so $x\\,dx+y\\,dy=\\dfrac12ds$",
+  "Equation: $2s\\cdot\\dfrac12\\,ds=\\left[(s+2\\theta)^{2}-2\\right]s\\,d\\theta\\Rightarrow\\dfrac{ds}{d\\theta}=(s+2\\theta)^{2}-2$",
+  "Function of $s+2\\theta$: $u=s+2\\theta$, $u'=s'+2=u^{2}\\Rightarrow-\\dfrac1u=\\theta+c$; $u(0)=1\\Rightarrow c=-1$",
+  "$s=\\dfrac{1}{1-\\theta}-2\\theta$ (positive on $(-\\pi,1)$)",
+  "$s=\\dfrac53$: $\\dfrac{1}{1-\\theta}=\\dfrac53+2\\theta\\Rightarrow3=(5+6\\theta)(1-\\theta)=5+\\theta-6\\theta^{2}\\Rightarrow6\\theta^{2}-\\theta-2=0$, so $\\theta=-\\dfrac12$ or $\\dfrac23$",
+  "$\\theta_1=-0.5$",
+  "",
+  "Final Answer: -0.50"
+ ],
+ "solution_full": [
+  "With $r=\\sqrt{x^{2}+y^{2}}$, $x=r\\cos\\theta$, $y=r\\sin\\theta$: $x\\,dx+y\\,dy=r\\,dr$ and $x\\,dy-y\\,dx=r^{2}\\,d\\theta$.",
+  "Let $s=r^{2}$ (a second substitution). Then $x\\,dx+y\\,dy=r\\,dr=\\dfrac12\\,ds$, and along $C$, $s=g(\\theta)$.",
+  "The equation becomes $2s\\cdot\\dfrac12\\,ds=\\left[(s+2\\theta)^{2}-2\\right]s\\,d\\theta$. Since $s>0$, $\\dfrac{ds}{d\\theta}=(s+2\\theta)^{2}-2$.",
+  "The right side is a function of the linear combination $s+2\\theta$. Put $u=s+2\\theta$: $\\dfrac{du}{d\\theta}=\\dfrac{ds}{d\\theta}+2=u^{2}$.",
+  "Separate: $\\dfrac{du}{u^{2}}=d\\theta$, so $-\\dfrac1u=\\theta+c$. At $\\theta=0$, $s=1$, so $u=1$ and $c=-1$. Hence $u=\\dfrac{1}{1-\\theta}$ for $\\theta<1$ and $s=g(\\theta)=\\dfrac{1}{1-\\theta}-2\\theta$.",
+  "Check that $s>0$ on $(-\\pi,1)$: for $\\theta\\le0$ both terms are positive; for $0<\\theta<1$, $s'(\\theta)=\\dfrac{1}{(1-\\theta)^{2}}-2$ vanishes at $1-\\theta=\\dfrac{1}{\\sqrt2}$, where $s=2\\sqrt2-2>0$. So $C$ is well defined.",
+  "Intersection with $s=\\dfrac53$: $\\dfrac{1}{1-\\theta}=\\dfrac53+2\\theta$. Multiplying by $3(1-\\theta)$: $3=(5+6\\theta)(1-\\theta)=5+\\theta-6\\theta^{2}$, so $6\\theta^{2}-\\theta-2=0$.",
+  "Roots: $\\theta=\\dfrac{1\\pm7}{12}$, that is, $\\theta=\\dfrac23$ and $\\theta=-\\dfrac12$. Both lie in $(-\\pi,1)$, so there are exactly two points.",
+  "Hence $\\theta_1=-\\dfrac12=-0.5$.",
+  "",
+  "Final Answer: -0.50"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a Cartesian differential form that becomes, after the polar substitution and s = r^2, an equation of type f(s + 2 theta), integrated with u' = u^2, and then read on a circle (way 5). Closest known: x dx + y dy = (x^2 + y^2) ... (x dy - y dx) polar exercises. Different because: the polar angle itself appears inside the bracket, so a third substitution u = s + 2 theta is needed.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Equations reducible to variable separable: dy/dx = f(ax + by + c)",
+  "Equations reducible to variable separable by a general substitution",
+  "Polar substitution technique"
+ ],
+ "concept_use": {
+  "Equations reducible to variable separable: dy/dx = f(ax + by + c)": "After the polar and s = r^2 substitutions the equation is ds/dtheta = (s + 2 theta)^2 - 2, a function of s + 2 theta; u = s + 2 theta makes it u' = u^2.",
+  "Equations reducible to variable separable by a general substitution": "The substitution s = r^2 = x^2 + y^2 (in the dependent variable) turns x dx + y dy into ds/2 and makes the polar equation first order in s.",
+  "Polar substitution technique": "x dx + y dy = r dr and x dy - y dx = r^2 d theta convert the Cartesian differential form into an equation between r and theta."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; theta is defined explicitly with its range, the curve is given as a polar graph with g(0) = 1, and both intersection angles lie in (-pi, 1); answer -0.50 is a negative decimal as planned. Changed: No change to the stem.",
+ "level": 3,
+ "key_step": "Convert to polar with s = r^2, then u = s + 2 theta gives u' = u^2.",
+ "justification": "Three substitutions in sequence (polar, s = r^2, u = s + 2 theta), each standard, plus the intersection; two ideas linked with a long but checkable chain. Comparable to 2025-P2-Q14 (L3).",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

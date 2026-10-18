@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Consider the family of all circles that pass through the origin and have their centres on the line $y=x$. Let $S$ be the orthogonal trajectory of this family that passes through the point $(1,3)$. The curve $S$ is part of a circle which meets the $x$-axis at the origin and at one more point $(\\beta,0)$. Then the value of $\\beta$ is ______."
+ ],
+ "hindi": [
+  "उन सभी वृत्तों के कुल पर विचार कीजिए जो मूलबिन्दु से होकर जाते हैं तथा जिनके केन्द्र रेखा $y=x$ पर हैं। माना कि $S$ इस कुल का बिन्दु $(1,3)$ से होकर जाने वाला लंबकोणीय संछेदी है। वक्र $S$ एक वृत्त का भाग है जो $x$-अक्ष से मूलबिन्दु पर तथा एक अन्य बिन्दु $(\\beta,0)$ पर मिलता है। तब $\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Family: $x^{2}+y^{2}=2c(x+y)$; differentiate: $x+yp=c(1+p)$; eliminate $c$:",
+  "$(x^{2}+y^{2})(1+p)=2(x+y)(x+yp)\\Rightarrow p=\\dfrac{x^{2}+2xy-y^{2}}{x^{2}-2xy-y^{2}}$",
+  "Trajectories: $p\\to-\\dfrac1p$: $\\dfrac{dy}{dx}=-\\dfrac{x^{2}-2xy-y^{2}}{x^{2}+2xy-y^{2}}$, satisfied by the circles $x^{2}+y^{2}=2k(x-y)$ (centres on $y=-x$)",
+  "At $(1,3)$: $10=2k(-2)\\Rightarrow k=-\\dfrac52$: $x^{2}+y^{2}+5x-5y=0$",
+  "$y=0$: $x(x+5)=0\\Rightarrow\\beta=-5$",
+  "",
+  "Final Answer: -5"
+ ],
+ "solution_full": [
+  "A circle through the origin with centre $(c,c)$ is $x^{2}+y^{2}=2c(x+y)$. Differentiate: $2x+2yp=2c(1+p)$, where $p=\\dfrac{dy}{dx}$, so $c=\\dfrac{x+yp}{1+p}$.",
+  "Eliminate $c$: $(x^{2}+y^{2})(1+p)=2(x+y)(x+yp)$. Solving for $p$: $p\\left(x^{2}+y^{2}-2xy-2y^{2}\\right)=2x^{2}+2xy-x^{2}-y^{2}$, so $p=\\dfrac{x^{2}+2xy-y^{2}}{x^{2}-2xy-y^{2}}$ is the slope of the family; this is its differential equation.",
+  "For the orthogonal trajectories replace $p$ by $-\\dfrac1p$: $\\dfrac{dy}{dx}=-\\dfrac{x^{2}-2xy-y^{2}}{x^{2}+2xy-y^{2}}$.",
+  "This equation is homogeneous; by the same elimination it is the differential equation of the circles $x^{2}+y^{2}=2k(x-y)$ (centres $(k,-k)$ on $y=-x$): differentiating gives $k=\\dfrac{x+yp}{1-p}$ and eliminating $k$ gives $(x^{2}+y^{2})(1-p)=2(x-y)(x+yp)$, which rearranges to the equation above.",
+  "Through $(1,3)$: $1+9=2k(1-3)$, so $k=-\\dfrac52$ and the circle is $x^{2}+y^{2}+5x-5y=0$.",
+  "On the $x$-axis: $x^{2}+5x=0$, so $x=0$ or $x=-5$. Hence $\\beta=-5$.",
+  "Check of orthogonality at $(1,3)$: the family member through $(1,3)$ has $c=\\dfrac{10}{8}$, centre $\\left(\\frac54,\\frac54\\right)$; the trajectory has centre $\\left(-\\frac52,\\frac52\\right)$. The radii to $(1,3)$ are $\\left(-\\frac14,\\frac74\\right)$ and $\\left(\\frac72,\\frac12\\right)$, with dot product $-\\frac78+\\frac78=0$, so the circles cut at right angles.",
+  "",
+  "Final Answer: -5"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the orthogonal trajectories of circles through the origin with centres on y = x are circles through the origin with centres on y = -x, read off one member's second x-intercept. Closest known: orthogonal trajectories of x^2 + y^2 = 2cx (circles on the y-axis). Different because: the centre line is oblique, so both the formation and the trajectory equation are less symmetric.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Orthogonal trajectories",
+  "Formation of a differential equation by eliminating arbitrary constants"
+ ],
+ "concept_use": {
+  "Orthogonal trajectories": "The trajectories satisfy the family's slope equation with p replaced by -1/p; they are the circles x^2 + y^2 = 2k(x - y), and the one through (1,3) is selected.",
+  "Formation of a differential equation by eliminating arbitrary constants": "The family's equation is formed by eliminating c from x^2 + y^2 = 2c(x + y) and its derivative."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; family described in words without ambiguity; the trajectory circle is unique; answer -5 is a negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Form the slope equation by eliminating c, replace p by -1/p, recognise the circles with centres on y = -x.",
+ "justification": "Formation plus the standard orthogonal-trajectory step and a recognition; routine but several steps. Comparable to 2026-P2-Q3 (L2).",
+ "nearest_anchor": "2026-P2-Q3 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $y=y(x)$ be the solution of the differential equation $\\dfrac{dy}{dx}=\\dfrac{1-y}{x+2y-3}$ with $y(3)=\\dfrac12$. The solution curve meets the line $x+y=5$ at a point $(a,b)$. Then the value of $b$ is ______."
+ ],
+ "hindi": [
+  "माना कि $y=y(x)$ अवकल समीकरण $\\dfrac{dy}{dx}=\\dfrac{1-y}{x+2y-3}$ का वह हल है जिसके लिए $y(3)=\\dfrac12$ है। हल वक्र रेखा $x+y=5$ से बिन्दु $(a,b)$ पर मिलता है। तब $b$ का मान ______ है।"
+ ],
+ "solution": [
+  "Lines $y-1=0$ and $x+2y-3=0$ meet at $(1,1)$; $X=x-1$, $Y=y-1$: $\\dfrac{dY}{dX}=-\\dfrac{Y}{X+2Y}$, homogeneous",
+  "$Y=vX$: $Xv'=-\\dfrac{2v(1+v)}{1+2v}\\Rightarrow\\dfrac{(1+2v)dv}{v(1+v)}=-\\dfrac{2dX}{X}\\Rightarrow v(1+v)X^{2}=K$, i.e. $Y(X+Y)=K$",
+  "At $(3,\\frac12)$: $X=2$, $Y=-\\frac12$: $K=-\\frac12\\cdot\\frac32=-\\frac34$",
+  "On $x+y=5$: $X+Y=3\\Rightarrow 3Y=-\\frac34\\Rightarrow Y=-\\frac14$, $b=1+Y=0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "The lines $1-y=0$ and $x+2y-3=0$ intersect at $(1,1)$. Shift the origin: $x=X+1$, $y=Y+1$. Then $1-y=-Y$ and $x+2y-3=X+2Y$, so $\\dfrac{dY}{dX}=\\dfrac{-Y}{X+2Y}$, which is homogeneous.",
+  "Put $Y=vX$: $v+X\\dfrac{dv}{dX}=\\dfrac{-v}{1+2v}$, so $X\\dfrac{dv}{dX}=\\dfrac{-v-v-2v^{2}}{1+2v}=-\\dfrac{2v(1+v)}{1+2v}$.",
+  "Separate: $\\dfrac{1+2v}{v(1+v)}\\,dv=-\\dfrac{2\\,dX}{X}$. The numerator is the derivative of $v(1+v)$, so $\\ln\\left|v(1+v)\\right|=-2\\ln\\left|X\\right|+c$ and $v(1+v)X^{2}=K$.",
+  "Since $v(1+v)X^{2}=Y(X+Y)$, the solutions are $Y(X+Y)=K$, that is, $(y-1)(x+y-2)=K$.",
+  "At $(3,\\frac12)$: $(-\\frac12)(\\frac32)=-\\frac34$, so $K=-\\frac34$. On this branch $Y<0$ throughout (it cannot reach $Y=0$ because $K\\neq0$), and $X=-\\frac{3}{4Y}-Y$.",
+  "The line $x+y=5$ is $X+Y=3$. Then $3Y=-\\frac34$, $Y=-\\frac14$, and $X=3-Y=\\frac{13}{4}$, so the point is $\\left(\\frac{17}{4},\\frac34\\right)$; it is the only intersection.",
+  "Hence $b=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a reducible-to-homogeneous equation whose solutions are the hyperbolas (y - 1)(x + y - 2) = K, so the curve meets the line x + y = 5 where it meets X + Y = 3 and Y follows at once (way 4). Closest known: dy/dx = (2x - y + 1)/(x + 2y - 3) type exercises. Different because: the numerator has no x term, the integral is a log of v(1 + v), and the chosen line is parallel to an asymptotic direction of the solution, which makes the intersection linear.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Homogeneous differential equations",
+  "Equations reducible to homogeneous form: (a1x+b1y+c1)/(a2x+b2y+c2)"
+ ],
+ "concept_use": {
+  "Homogeneous differential equations": "After the shift the equation dY/dX = -Y/(X + 2Y) is homogeneous and is solved by Y = vX and separation.",
+  "Equations reducible to homogeneous form: (a1x+b1y+c1)/(a2x+b2y+c2)": "The numerator and denominator are linear expressions whose lines meet at (1,1); shifting the origin there is the reduction to homogeneous form."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; the solution branch through (3, 1/2) has Y < 0 and meets x + y = 5 once; answer 0.75 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Shift to (1,1), Y = vX, get Y(X + Y) = K.",
+ "justification": "Standard reduction and a separable log integral, then one substitution: a routine chain. Comparable to 2025-P2-Q9 (L2).",
+ "nearest_anchor": "2025-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Consider the differential equation $x\\dfrac{dy}{dx}=2y$, $x\\in\\mathbb{R}$, whose general solution is usually written as $y=cx^{2}$, $c\\in\\mathbb{R}$. Which of the following functions $y:\\mathbb{R}\\to\\mathbb{R}$ is differentiable on $\\mathbb{R}$, satisfies the equation at every $x\\in\\mathbb{R}$, and is not of the form $y=cx^{2}$ for any single constant $c$?",
+  "",
+  "(A) $y=\\begin{cases}x^{2}, & x\\ge 0\\\\ -2x^{2}, & x<0\\end{cases}$",
+  "(B) $y=3x^{2}$",
+  "(C) $y=\\begin{cases}x^{2}, & x\\ge 0\\\\ x^{2}+x, & x<0\\end{cases}$",
+  "(D) $y=\\left|x\\right|^{3}$"
+ ],
+ "hindi": [
+  "अवकल समीकरण $x\\dfrac{dy}{dx}=2y$, $x\\in\\mathbb{R}$ पर विचार कीजिए, जिसका व्यापक हल प्रायः $y=cx^{2}$, $c\\in\\mathbb{R}$ के रूप में लिखा जाता है। निम्न में से कौन-सा फलन $y:\\mathbb{R}\\to\\mathbb{R}$, $\\mathbb{R}$ पर अवकलनीय है, प्रत्येक $x\\in\\mathbb{R}$ पर समीकरण को संतुष्ट करता है, तथा किसी भी एक अचर $c$ के लिए $y=cx^{2}$ के रूप का नहीं है?",
+  "",
+  "(A) $y=\\begin{cases}x^{2}, & x\\ge 0\\\\ -2x^{2}, & x<0\\end{cases}$",
+  "(B) $y=3x^{2}$",
+  "(C) $y=\\begin{cases}x^{2}, & x\\ge 0\\\\ x^{2}+x, & x<0\\end{cases}$",
+  "(D) $y=\\left|x\\right|^{3}$"
+ ],
+ "solution": [
+  "On $(0,\\infty)$ and on $(-\\infty,0)$ separately the solutions are $y=c_1x^{2}$ and $y=c_2x^{2}$; at $x=0$ the equation only needs $y(0)=0$",
+  "(A): each piece satisfies $xy'=2y$; both one-sided derivatives at $0$ are $0$, so $y$ is differentiable and $0\\cdot y'(0)=0=2y(0)$; $c_1=1\\neq c_2=-2$, so not of the form $cx^{2}$",
+  "(B) is a solution but is of the form $cx^{2}$",
+  "(C): for $x<0$, $x(2x+1)=2x^{2}+x\\neq 2(x^{2}+x)$; also the left derivative at $0$ is $1\\neq0$",
+  "(D): for $x>0$, $x\\cdot3x^{2}=3x^{3}\\neq2x^{3}$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Separating variables, $\\dfrac{dy}{y}=\\dfrac{2\\,dx}{x}$ on any interval not containing $0$ (where $y\\neq0$), so on $(0,\\infty)$ every solution is $y=c_1x^{2}$ and on $(-\\infty,0)$ every solution is $y=c_2x^{2}$ (the zero function is included as $c=0$).",
+  "At $x=0$ the equation reads $0\\cdot y'(0)=2y(0)$, so it only requires $y(0)=0$, which both pieces give. A function made of $c_1x^{2}$ for $x\\ge0$ and $c_2x^{2}$ for $x<0$ has right derivative $0$ and left derivative $0$ at the origin, so it is differentiable on $\\mathbb{R}$. Hence the full set of solutions on $\\mathbb{R}$ is a two-parameter set, larger than the one-parameter family $y=cx^{2}$.",
+  "(A) is this construction with $c_1=1$, $c_2=-2$. It satisfies the equation for every $x$ and is differentiable at $0$. Since $c_1\\neq c_2$, no single $c$ gives it. So (A) satisfies all three conditions.",
+  "(B) $y=3x^{2}$ is a solution, but it is $cx^{2}$ with $c=3$, so it fails the last condition.",
+  "(C) For $x<0$: $xy'=x(2x+1)=2x^{2}+x$ while $2y=2x^{2}+2x$; these differ, so the equation fails. Moreover the left derivative at $0$ is $1$ and the right derivative is $0$, so it is not differentiable at $0$.",
+  "(D) For $x>0$: $y=x^{3}$, $xy'=3x^{3}\\neq 2x^{3}=2y$, so it is not a solution.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "answer_plan": "Option A",
+ "originality_note": "New: the general solution of xy' = 2y, obtained on each half-line, does not cover all solutions on R because the equation degenerates at x = 0; the question asks which function is a genuine solution outside the family. Closest known: questions asking which function is a solution of a given DE. Different because: the student must check differentiability at the singular point x = 0 and see that the solution set on R is two-parameter.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "General vs particular solution; verifying a solution"
+ ],
+ "concept_use": {
+  "General vs particular solution; verifying a solution": "The usual general solution y = cx^2 is shown not to contain every solution on R: the solution set on R is two-parameter, and option (A) is a solution that no single c gives; (B) is a solution that is a particular case of the general solution."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; the phrase 'not of the form cx^2 for any single constant c' has one reading; only (A) meets all three conditions (B is a solution but of the form; C and D fail the equation). Web search found lecture notes on pasting solutions of this equation, not this question. Changed: No change.",
+ "level": 2,
+ "key_step": "Solutions on each side of 0 are independent multiples of x^2; pasting them is differentiable at 0.",
+ "justification": "Needs the idea that the singular point x = 0 lets the constants differ on the two sides, plus a differentiability check; a conceptual step but short. Comparable to 2021-P2-Q4 (L3), which also asks which functions belong to a solution family, but this is a single check, so L2.",
+ "nearest_anchor": "2021-P2-Q4 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

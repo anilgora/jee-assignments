@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $y=y(x)$ be the solution of the differential equation",
+  "$$(x+2y)\\left(x\\,dx+y\\,dy\\right)=(2x-y)\\left(x\\,dy-y\\,dx\\right)$$",
+  "with $y(1)=-3$, defined on an interval containing $[0,1]$. Then the value of $y(0)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $y=y(x)$ अवकल समीकरण",
+  "$$(x+2y)\\left(x\\,dx+y\\,dy\\right)=(2x-y)\\left(x\\,dy-y\\,dx\\right)$$",
+  "का वह हल है जिसके लिए $y(1)=-3$ है, तथा यह $[0,1]$ को समाहित करने वाले अन्तराल पर परिभाषित है। तब $y(0)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Homogeneous; in polar form $x\\,dx+y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^{2}d\\theta$, $x+2y=r(\\cos\\theta+2\\sin\\theta)$, $2x-y=r(2\\cos\\theta-\\sin\\theta)$",
+  "$\\dfrac{dr}{r}=\\dfrac{2\\cos\\theta-\\sin\\theta}{\\cos\\theta+2\\sin\\theta}d\\theta\\Rightarrow r=k(\\cos\\theta+2\\sin\\theta)$",
+  "$r^{2}=k(x+2y)$: circles $x^{2}+y^{2}=k(x+2y)$; at $(1,-3)$: $10=-5k\\Rightarrow k=-2$",
+  "$x^{2}+y^{2}+2x+4y=0$: centre $(-1,-2)$, radius $\\sqrt5$; $(1,-3)$ is on the lower arc $y=-2-\\sqrt{5-(x+1)^{2}}$",
+  "$y(0)=-2-2=-4$",
+  "",
+  "Final Answer: -4"
+ ],
+ "solution_full": [
+  "Both sides are homogeneous of degree $2$, and the combinations $x\\,dx+y\\,dy$ and $x\\,dy-y\\,dx$ suggest polar coordinates: $x\\,dx+y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^{2}\\,d\\theta$.",
+  "Also $x+2y=r(\\cos\\theta+2\\sin\\theta)$ and $2x-y=r(2\\cos\\theta-\\sin\\theta)$. The equation becomes $r^{2}(\\cos\\theta+2\\sin\\theta)\\,dr=r^{3}(2\\cos\\theta-\\sin\\theta)\\,d\\theta$.",
+  "Separate: $\\dfrac{dr}{r}=\\dfrac{2\\cos\\theta-\\sin\\theta}{\\cos\\theta+2\\sin\\theta}\\,d\\theta$. The numerator is the derivative of the denominator, so $\\ln r=\\ln\\left|\\cos\\theta+2\\sin\\theta\\right|+c$, and $r=k(\\cos\\theta+2\\sin\\theta)$.",
+  "Multiply by $r$: $x^{2}+y^{2}=k(x+2y)$, a family of circles through the origin.",
+  "At $(1,-3)$: $10=k(1-6)$, so $k=-2$ and the circle is $x^{2}+y^{2}+2x+4y=0$, with centre $(-1,-2)$ and radius $\\sqrt5$.",
+  "As a function of $x$ the solution through $(1,-3)$ is the lower arc $y=-2-\\sqrt{5-(x+1)^{2}}$ (it gives $-3$ at $x=1$), defined for $-1-\\sqrt5<x<-1+\\sqrt5$, which contains $[0,1]$. The upper arc passes through the origin, where the equation is singular.",
+  "Hence $y(0)=-2-\\sqrt4=-4$.",
+  "",
+  "Final Answer: -4"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: a homogeneous equation written in polar-friendly differentials whose solutions are the circles x^2 + y^2 = k(x + 2y) through the origin, read on the correct arc (way 5). Closest known: homogeneous equations solved by y = vx; polar exercises with x dy - y dx. Different because: the theta-integral is a log of cos + 2 sin, the solutions are circles, and the arc must be chosen.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Polar substitution technique",
+  "Homogeneous differential equations"
+ ],
+ "concept_use": {
+  "Polar substitution technique": "In polar coordinates x dx + y dy = r dr and x dy - y dx = r^2 d theta, so the equation separates in r and theta.",
+  "Homogeneous differential equations": "Both sides are homogeneous of degree 2; for a homogeneous equation the polar form always separates (dr/r is a function of theta), which is the route used here."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; the interval containing [0,1] picks the lower arc, so y(0) = -4 is unique; answer is a negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Go to polar: dr/r = d(ln(cos theta + 2 sin theta)), giving circles through the origin.",
+ "justification": "A polar conversion and a log integral, then choosing the arc; a routine chain. Comparable to 2025-P2-Q9 (L2).",
+ "nearest_anchor": "2025-P2-Q9 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

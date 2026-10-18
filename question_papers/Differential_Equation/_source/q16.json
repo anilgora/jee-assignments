@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Differential Equation",
+ "target_level": 2,
+ "english": [
+  "Let $y=y(x)$, $x\\ge1$, be the solution of the differential equation $\\dfrac{dy}{dx}=\\dfrac{y}{x}+\\dfrac{x^{3}}{y^{2}}$ with $y(1)=1$. Then the value of $y(22)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $y=y(x)$, $x\\ge1$, अवकल समीकरण $\\dfrac{dy}{dx}=\\dfrac{y}{x}+\\dfrac{x^{3}}{y^{2}}$ का वह हल है जिसके लिए $y(1)=1$ है। तब $y(22)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Not homogeneous, but $y=vx$ still separates it: $v+xv'=v+\\dfrac{x^{3}}{x^{2}v^{2}}=v+\\dfrac{x}{v^{2}}$",
+  "$xv'=\\dfrac{x}{v^{2}}\\Rightarrow v^{2}dv=dx\\Rightarrow v^{3}=3x+c$",
+  "$v(1)=1\\Rightarrow c=-2$, so $y=x\\left(3x-2\\right)^{1/3}$",
+  "$y(22)=22\\cdot64^{1/3}=22\\cdot4=88$",
+  "",
+  "Final Answer: 88"
+ ],
+ "solution_full": [
+  "The term $\\dfrac{x^{3}}{y^{2}}$ has degree $1$, so the equation is not homogeneous. The substitution $y=vx$ is still useful because it removes the $\\dfrac yx$ term.",
+  "With $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$ and $\\dfrac{x^{3}}{y^{2}}=\\dfrac{x^{3}}{x^{2}v^{2}}=\\dfrac{x}{v^{2}}$. So $v+x\\dfrac{dv}{dx}=v+\\dfrac{x}{v^{2}}$.",
+  "This gives $\\dfrac{dv}{dx}=\\dfrac{1}{v^{2}}$, so $v^{2}\\,dv=dx$ and $\\dfrac{v^{3}}{3}=x+c_1$, that is, $v^{3}=3x+c$.",
+  "At $x=1$: $v=\\dfrac{y}{x}=1$, so $1=3+c$ and $c=-2$. Hence $v=(3x-2)^{1/3}$, which is positive for $x\\ge1$, and $y=x(3x-2)^{1/3}$.",
+  "At $x=22$: $3\\cdot22-2=64$, $v=4$, $y=88$.",
+  "",
+  "Final Answer: 88"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: the substitution y = vx used outside its usual homogeneous setting, where it gives the autonomous equation v' = 1/v^2 (way 5). Closest known: Bernoulli equations y' - y/x = x^3 y^{-2} solved with u = y^3. Different because: the intended route is y = vx with an autonomous v-equation; the answer point makes the cube root exact.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Equations reducible to variable separable by a general substitution"
+ ],
+ "concept_use": {
+  "Equations reducible to variable separable by a general substitution": "The substitution y = vx in a non-homogeneous equation removes the y/x term and leaves the separable equation v' = 1/v^2."
+ },
+ "stem_review": "Read as a student: every symbol and function introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; domain x >= 1 stated; v stays positive; answer 88 is a positive 2-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "y = vx gives v' = 1/v^2, so v^3 = 3x - 2.",
+ "justification": "One substitution and a one-line integration; routine chain of three steps. Comparable to 2025-P2-Q9 (L2), a homogeneous-type equation evaluated at a point.",
+ "nearest_anchor": "2025-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}
