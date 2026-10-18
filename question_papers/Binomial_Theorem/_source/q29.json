@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Exponential and logarithmic series (e^x, ln(1+x))",
+  "Evaluation of limit involving exponential and logarithmic functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The value of $\\displaystyle\\lim_{x\\to0}\\dfrac{(1+x)^{2x}-(1-x)^{-2x}}{x^{3}}$ is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\lim_{x\\to0}\\dfrac{(1+x)^{2x}-(1-x)^{-2x}}{x^{3}}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$(1+x)^{2x}=e^{2x\\log_{e}(1+x)}$, $2x\\log_{e}(1+x)=2x^{2}-x^{3}+O(x^{4})$",
+  "$(1-x)^{-2x}=e^{-2x\\log_{e}(1-x)}$, $-2x\\log_{e}(1-x)=2x^{2}+x^{3}+O(x^{4})$",
+  "$e^{u}=1+u+O(u^{2})$ with $u=O(x^{2})$: the two powers are $1+2x^{2}-x^{3}+O(x^{4})$ and $1+2x^{2}+x^{3}+O(x^{4})$",
+  "Numerator $=-2x^{3}+O(x^{4})\\Rightarrow$ limit $=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "For $0<|x|<1$ both powers are defined: $(1+x)^{2x}=e^{2x\\log_{e}(1+x)}$ and $(1-x)^{-2x}=e^{-2x\\log_{e}(1-x)}$.",
+  "Logarithmic series: $\\log_{e}(1+x)=x-\\dfrac{x^{2}}{2}+O(x^{3})$, so $2x\\log_{e}(1+x)=2x^{2}-x^{3}+O(x^{4})$.",
+  "$\\log_{e}(1-x)=-x-\\dfrac{x^{2}}{2}+O(x^{3})$, so $-2x\\log_{e}(1-x)=2x^{2}+x^{3}+O(x^{4})$.",
+  "Exponential series: $e^{u}=1+u+\\dfrac{u^{2}}{2}+\\dots$; here $u=O(x^{2})$, so $u^{2}=O(x^{4})$ and $e^{u}=1+u+O(x^{4})$.",
+  "Hence $(1+x)^{2x}=1+2x^{2}-x^{3}+O(x^{4})$ and $(1-x)^{-2x}=1+2x^{2}+x^{3}+O(x^{4})$.",
+  "Their difference is $-2x^{3}+O(x^{4})$, and the limit is $-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: two mirror-image variable powers whose second-order terms are equal and whose third-order terms are opposite, so the difference is of order x^3 (way 4, hidden symmetry). Closest known: lim ((1+x)^(1/x) - e)/x. Different because: the exponents grow with x (not 1/x), and the cancellation of the x^2 terms is the point.",
+ "web_check": "not found",
+ "concept_use": {
+  "Exponential and logarithmic series (e^x, ln(1+x))": "The logarithmic series of log(1+x), log(1-x) and the exponential series e^u = 1 + u + O(u^2) give the expansions.",
+  "Evaluation of limit involving exponential and logarithmic functions": "The limit of a quotient of exponential-logarithmic expressions is read from the x^3 coefficient."
+ },
+ "stem_review": "Read as a student: the limit is a single expression defined for 0 < |x| < 1; answer -2 is a negative integer as planned (sympy limit checked); Hindi mirrors. No change.",
+ "level": 3,
+ "key_step": "Write both powers as e^(x log) and expand to order x^3.",
+ "justification": "Composition of the logarithmic and exponential series with order bookkeeping; two linked series ideas, numerical. Above 2024-P2-Q3 (L1, 1^infinity limit) and below 2025-P1-Q11 (L4).",
+ "nearest_anchor": "2025-P1-Q11 (L4)",
+ "confidence": "Medium"
+}

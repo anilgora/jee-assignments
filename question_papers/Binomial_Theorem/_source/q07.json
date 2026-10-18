@@ -1,0 +1,58 @@
+{
+ "type": "SCQ",
+ "chapter": "Binomial Theorem",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "blueprint_concepts": [
+  "Fermat's little theorem for remainders",
+  "Euler's theorem for remainders"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The remainder when $3^{5^{100}}$ is divided by $77$ is",
+  "",
+  "(A) $3$",
+  "(B) $1$",
+  "(C) $34$",
+  "(D) $45$"
+ ],
+ "hindi": [
+  "$3^{5^{100}}$ को $77$ से भाग देने पर शेषफल है",
+  "",
+  "(A) $3$",
+  "(B) $1$",
+  "(C) $34$",
+  "(D) $45$"
+ ],
+ "solution": [
+  "Euler: $\\gcd(3,77)=1$, $\\phi(77)=60\\Rightarrow3^{60}\\equiv1\\pmod{77}$",
+  "$5^{100}\\bmod60$: $5^{2}=25$, $5^{3}=125\\equiv5$, so even powers of $5$ are $\\equiv25\\pmod{60}$; hence $3^{5^{100}}\\equiv3^{25}\\pmod{77}$",
+  "Fermat mod $7$: $3^{6}\\equiv1$, $3^{25}\\equiv3^{1}=3$. Fermat mod $11$: $3^{5}=243\\equiv1$, $3^{25}\\equiv1$",
+  "$N\\equiv3\\pmod7$, $N\\equiv1\\pmod{11}$: from $1,12,23,34,45$ the value $45$ leaves $3$ on division by $7$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "Since $\\gcd(3,77)=1$ and $\\phi(77)=\\phi(7)\\phi(11)=6\\cdot10=60$, Euler's theorem gives $3^{60}\\equiv1\\pmod{77}$. So only $5^{100}\\bmod60$ matters.",
+  "$5^{2}=25$ and $5^{3}=125=2\\cdot60+5$, so $5^{3}\\equiv5$, and then $5^{k}\\equiv5$ for odd $k$, $5^{k}\\equiv25$ for even $k\\ge2$ (modulo $60$). Hence $5^{100}\\equiv25$, and $3^{5^{100}}\\equiv3^{25}\\pmod{77}$.",
+  "Modulo $7$ (Fermat, $7$ prime): $3^{6}\\equiv1$, $25=4\\cdot6+1$, so $3^{25}\\equiv3$.",
+  "Modulo $11$ (Fermat, $11$ prime): $3^{10}\\equiv1$; in fact $3^{5}=243=22\\cdot11+1\\equiv1$, so $3^{25}=(3^{5})^{5}\\equiv1$.",
+  "Find $N\\in\\{0,\\dots,76\\}$ with $N\\equiv1\\pmod{11}$ and $N\\equiv3\\pmod7$: the candidates $1,12,23,34,45,\\dots$ leave remainders $1,5,2,6,3$ on division by $7$, so $N=45$.",
+  "(Option (A) is the remainder modulo $7$ only, option (B) the remainder modulo $11$ only.)",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: a power tower whose exponent is reduced modulo phi(77) = 60 by Euler's theorem and whose final power is split by Fermat's theorem modulo 7 and 11 (way 5, the two theorems at two different levels of the tower). Closest known: remainder of a^(b^c) modulo a prime. Different because: the modulus is composite, so Euler reduces the tower and Fermat finishes on the prime factors.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Fermat's little theorem for remainders": "Fermat's theorem modulo 7 and 11 evaluates 3^25 on each prime factor before combining.",
+  "Euler's theorem for remainders": "Euler's theorem with phi(77) = 60 reduces the tower exponent 5^100 to 25."
+ },
+ "stem_review": "Read as a student: the tower 3^(5^100) is read top-down (standard convention), remainder is the usual least non-negative one; answer 45 at option D as planned; options numbers; Hindi mirrors. No change.",
+ "level": 2,
+ "key_step": "Reduce 5^100 modulo 60 with Euler, then evaluate 3^25 modulo 7 and 11 with Fermat and combine.",
+ "justification": "A chain of standard number-theory steps (Euler reduction, two Fermat evaluations, combination) without a real insight; option elimination helps. Routine chain as in the L2 anchors, e.g. 2024-P1-Q8 (L2).",
+ "nearest_anchor": "2024-P1-Q8 (L2)",
+ "confidence": "Medium"
+}

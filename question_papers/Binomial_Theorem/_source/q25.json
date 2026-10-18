@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Multinomial theorem: general term and coefficient extraction"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The coefficient of $x^{3}$ in the expansion of $\\left(1+\\dfrac{x}{2}+\\dfrac{x^{2}}{4}\\right)^{5}$ is ______."
+ ],
+ "hindi": [
+  "$\\left(1+\\dfrac{x}{2}+\\dfrac{x^{2}}{4}\\right)^{5}$ के प्रसार में $x^{3}$ का गुणांक ______ है।"
+ ],
+ "solution": [
+  "General term: $\\dfrac{5!}{a!\\,b!\\,c!}\\left(\\dfrac{x}{2}\\right)^{b}\\left(\\dfrac{x^{2}}{4}\\right)^{c}$, $a+b+c=5$; need $b+2c=3$",
+  "$(a,b,c)=(2,3,0)$: $\\dfrac{5!}{2!\\,3!}\\cdot\\dfrac{1}{8}=\\dfrac{10}{8}$",
+  "$(a,b,c)=(3,1,1)$: $\\dfrac{5!}{3!\\,1!\\,1!}\\cdot\\dfrac{1}{2}\\cdot\\dfrac{1}{4}=\\dfrac{20}{8}$",
+  "Coefficient $=\\dfrac{30}{8}=\\dfrac{15}{4}=3.75$",
+  "",
+  "Final Answer: 3.75"
+ ],
+ "solution_full": [
+  "Multinomial theorem: $(p+q+s)^{5}=\\sum\\dfrac{5!}{a!\\,b!\\,c!}p^{a}q^{b}s^{c}$ over $a+b+c=5$. With $p=1$, $q=\\dfrac{x}{2}$, $s=\\dfrac{x^{2}}{4}$ the general term is $\\dfrac{5!}{a!\\,b!\\,c!}\\cdot\\dfrac{1}{2^{b}4^{c}}x^{b+2c}$.",
+  "For $x^{3}$: $b+2c=3$ with $a=5-b-c\\ge0$. So $c=0,b=3,a=2$ or $c=1,b=1,a=3$.",
+  "$(2,3,0)$: $\\dfrac{120}{2\\cdot6}\\cdot\\dfrac{1}{8}=\\dfrac{10}{8}$.",
+  "$(3,1,1)$: $\\dfrac{120}{6}\\cdot\\dfrac{1}{2}\\cdot\\dfrac{1}{4}=\\dfrac{20}{8}$.",
+  "Total: $\\dfrac{30}{8}=\\dfrac{15}{4}=3.75$.",
+  "(Check: $1+y+y^{2}=\\dfrac{1-y^{3}}{1-y}$ with $y=\\dfrac{x}{2}$, so the expression is $(1-y^{3})^{5}(1-y)^{-5}$; the $y^{3}$ coefficient is $\\binom{7}{3}-5=30$, and $30\\cdot\\dfrac{1}{8}=\\dfrac{15}{4}$.)",
+  "",
+  "Final Answer: 3.75"
+ ],
+ "originality_note": "New: a trinomial whose terms form a geometric progression in x/2, so the coefficient can be found by the multinomial general term or by (1-y^3)^5 (1-y)^(-5) (way 5). Closest known: coefficient of x^k in (1 + x + x^2)^n. Different because: the scaled GP terms give a non-integer coefficient and two independent routes check it.",
+ "web_check": "not found",
+ "concept_use": {
+  "Multinomial theorem: general term and coefficient extraction": "The multinomial general term with b + 2c = 3 picks (2,3,0) and (3,1,1), whose coefficients sum to 15/4."
+ },
+ "stem_review": "Read as a student: a single polynomial expansion, coefficient of x^3 unambiguous; answer 3.75 is a positive decimal as planned; Hindi mirrors. No change.",
+ "level": 2,
+ "key_step": "List the (a,b,c) with b + 2c = 3 and a + b + c = 5.",
+ "justification": "Standard multinomial coefficient extraction with two cases and fractions; routine multi-step. Comparable to 2025-P1-Q1 (L2).",
+ "nearest_anchor": "2025-P1-Q1 (L2)",
+ "confidence": "High"
+}

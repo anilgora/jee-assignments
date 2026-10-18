@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Numerically greatest term for a given value of x",
+  "Greatest binomial coefficient (distinct from numerically greatest term)",
+  "Middle term(s) of an expansion"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $n$ be the positive integer for which the greatest binomial coefficient in the expansion of $(1+y)^{n}$ is $70$. In the expansion of $(1-3x)^{n}$ in ascending powers of $x$, let $T$ be the numerically greatest term and $M$ be the middle term, both evaluated at $x=1$. Then the value of $\\dfrac{T}{M}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $n$ वह धनात्मक पूर्णांक है जिसके लिए $(1+y)^{n}$ के प्रसार में महत्तम द्विपद गुणांक $70$ है। $(1-3x)^{n}$ के $x$ की आरोही घातों में प्रसार में माना $T$ संख्यात्मक रूप से महत्तम पद तथा $M$ मध्य पद है, दोनों का मान $x=1$ पर लिया गया है। तब $\\dfrac{T}{M}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\binom{8}{4}=70$ is the greatest coefficient for $n=8$ ($\\binom{7}{3}=35$, $\\binom{9}{4}=126$), so $n=8$",
+  "At $x=1$: $|T_{r+1}|=\\binom{8}{r}3^{r}$, $\\dfrac{|T_{r+1}|}{|T_{r}|}=\\dfrac{9-r}{r}\\cdot3\\ge1\\iff r\\le\\dfrac{27}{4}$, so $r\\le6$: greatest is $T_{7}$",
+  "$T=T_{7}=\\binom{8}{6}(-3)^{6}=28\\cdot729$, $M=T_{5}=\\binom{8}{4}(-3)^{4}=70\\cdot81$",
+  "$\\dfrac{T}{M}=\\dfrac{28}{70}\\cdot9=\\dfrac{18}{5}=3.6$",
+  "",
+  "Final Answer: 3.60"
+ ],
+ "solution_full": [
+  "The greatest binomial coefficient of $(1+y)^{n}$ is the middle one and grows with $n$: $\\binom{7}{3}=35$, $\\binom{8}{4}=70$, $\\binom{9}{4}=126$. So $n=8$.",
+  "Terms of $(1-3x)^{8}$: $T_{r+1}=\\binom{8}{r}(-3x)^{r}$. At $x=1$, $|T_{r+1}|=\\binom{8}{r}3^{r}$.",
+  "$\\dfrac{|T_{r+1}|}{|T_{r}|}=\\dfrac{9-r}{r}\\cdot3$. This is $\\ge1$ iff $3(9-r)\\ge r$, i.e. $r\\le\\dfrac{27}{4}=6.75$. So $|T_{r}|$ increases up to $r=6$, i.e. up to $T_{7}$, and decreases after it; $T_{7}$ is the unique numerically greatest term.",
+  "$T_{7}=\\binom{8}{6}(-3)^{6}=28\\cdot729=20\\,412$ (positive, as the power of $-3$ is even; $|T_{6}|=13\\,608$, $|T_{8}|=17\\,496$).",
+  "There are $9$ terms, so the middle term is $T_{5}=\\binom{8}{4}(-3)^{4}=70\\cdot81=5\\,670$.",
+  "$\\dfrac{T}{M}=\\dfrac{20\\,412}{5\\,670}=\\dfrac{18}{5}=3.6$.",
+  "",
+  "Final Answer: 3.60"
+ ],
+ "originality_note": "New: three notions in one expansion (greatest binomial coefficient fixing n, numerically greatest term, middle term) compared through a ratio, with a negative base so that 'numerically' matters (way 5). Closest known: numerically greatest term in (1 - 3x)^n or (2 - 3x)^n at a given x. Different because: n is fixed by the greatest binomial coefficient and the answer compares the greatest term with the middle term rather than giving the term itself.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Numerically greatest term for a given value of x": "The ratio test locates the numerically greatest term T7 of (1 - 3x)^8 at x = 1.",
+  "Greatest binomial coefficient (distinct from numerically greatest term)": "The greatest binomial coefficient 70 = C(8,4) fixes n = 8.",
+  "Middle term(s) of an expansion": "The middle term T5 of the 9-term expansion is M."
+ },
+ "stem_review": "Read as a student: n fixed uniquely, 'ascending powers of x' fixes the term order, both terms evaluated at x = 1, numerically greatest term unique (ratio bound 27/4 not an integer); signs of T7 and T5 both positive; Changed: the base (2 - 5x) was replaced by (1 - 3x) so that the answer does not repeat Q27's 2.50; answer 3.60 is a positive decimal as planned; Hindi mirrors. No change.",
+ "level": 3,
+ "key_step": "Run the ratio test on absolute values to locate T7, then form the ratio with the middle term.",
+ "justification": "Three standard facts chained with a sign trap and careful arithmetic; numerical. Near 2025-P2-Q10 (L4, largest coefficient) but easier since only the term's position and a ratio are needed.",
+ "nearest_anchor": "2025-P2-Q10 (L4)",
+ "confidence": "Medium"
+}

@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Binomial sums by the differentiation technique (sum of r.C_r, r^2.C_r)",
+  "Binomial sums by the integration technique (sum of C_r/(r+1))",
+  "Binomial sums with alternating signs"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The value of $\\displaystyle\\sum_{r=0}^{15}(-1)^{r}\\,\\dfrac{r^{2}+3}{r+1}\\binom{15}{r}$ is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\sum_{r=0}^{15}(-1)^{r}\\,\\dfrac{r^{2}+3}{r+1}\\binom{15}{r}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\dfrac{r^{2}+3}{r+1}=(r-1)+\\dfrac{4}{r+1}$",
+  "$\\sum(-1)^{r}\\binom{15}{r}=0$; differentiating $(1-x)^{15}$ and putting $x=1$: $\\sum(-1)^{r}r\\binom{15}{r}=0$",
+  "Integrating $(1-x)^{15}$ over $[0,1]$: $\\sum(-1)^{r}\\dfrac{\\binom{15}{r}}{r+1}=\\dfrac{1}{16}$",
+  "Sum $=0-0+4\\cdot\\dfrac{1}{16}=\\dfrac{1}{4}=0.25$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "Divide: $r^{2}+3=(r+1)(r-1)+4$, so $\\dfrac{r^{2}+3}{r+1}=r-1+\\dfrac{4}{r+1}$.",
+  "The sum splits as $\\sum(-1)^{r}r\\binom{15}{r}-\\sum(-1)^{r}\\binom{15}{r}+4\\sum(-1)^{r}\\dfrac{\\binom{15}{r}}{r+1}$.",
+  "$\\sum_{r=0}^{15}(-1)^{r}\\binom{15}{r}=(1-1)^{15}=0$.",
+  "Differentiate $(1-x)^{15}=\\sum(-1)^{r}\\binom{15}{r}x^{r}$: $-15(1-x)^{14}=\\sum(-1)^{r}r\\binom{15}{r}x^{r-1}$; at $x=1$ this gives $\\sum(-1)^{r}r\\binom{15}{r}=0$.",
+  "Integrate $(1-x)^{15}$ from $0$ to $1$: $\\dfrac{1}{16}=\\sum(-1)^{r}\\binom{15}{r}\\dfrac{1}{r+1}$.",
+  "Therefore the sum is $0-0+\\dfrac{4}{16}=\\dfrac{1}{4}=0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: a rational weight (r^2+3)/(r+1) that splits into a differentiation part, a plain part and an integration part, two of which vanish in the alternating sum (way 4, hidden cancellation). Closest known: sum (-1)^r C_r/(r+1) = 1/(n+1). Different because: the weight must first be divided, and the vanishing of the alternating r-sum is needed.",
+ "web_check": "not found",
+ "concept_use": {
+  "Binomial sums by the differentiation technique (sum of r.C_r, r^2.C_r)": "sum (-1)^r r C(15,r) = 0 from differentiating (1-x)^15 at x = 1.",
+  "Binomial sums by the integration technique (sum of C_r/(r+1))": "sum (-1)^r C(15,r)/(r+1) = 1/16 from integrating (1-x)^15 over [0,1].",
+  "Binomial sums with alternating signs": "All three pieces are alternating sums; sum (-1)^r C(15,r) = 0 as well."
+ },
+ "stem_review": "Read as a student: a single finite sum, no parameters; answer 0.25 is a decimal between 0 and 1 as planned (exact sum checked by code); Hindi mirrors. No change.",
+ "level": 3,
+ "key_step": "Divide (r^2+3)/(r+1) = r - 1 + 4/(r+1) and use differentiation and integration of (1-x)^15.",
+ "justification": "Three standard sums combined after a polynomial division; the student must see the split and that two parts vanish. L3 two-ideas-linked, comparable to 2024-P2-Q13 (L3).",
+ "nearest_anchor": "2024-P2-Q13 (L3)",
+ "confidence": "Medium"
+}

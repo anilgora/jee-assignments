@@ -1,0 +1,56 @@
+{
+ "type": "SCQ",
+ "chapter": "Binomial Theorem",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Number of terms; number of rational and irrational terms"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The expression $\\left(\\sqrt{3}+\\sqrt[3]{5}\\right)^{50}+\\left(\\sqrt{3}-\\sqrt[3]{5}\\right)^{50}$ is expanded by the binomial theorem and the like terms are combined. Then the number of irrational terms in the resulting expression is",
+  "",
+  "(A) $17$",
+  "(B) $42$",
+  "(C) $18$",
+  "(D) $26$"
+ ],
+ "hindi": [
+  "व्यंजक $\\left(\\sqrt{3}+\\sqrt[3]{5}\\right)^{50}+\\left(\\sqrt{3}-\\sqrt[3]{5}\\right)^{50}$ का द्विपद प्रमेय द्वारा प्रसार करके समान पदों को मिलाया जाता है। तब प्राप्त व्यंजक में अपरिमेय पदों की संख्या है",
+  "",
+  "(A) $17$",
+  "(B) $42$",
+  "(C) $18$",
+  "(D) $26$"
+ ],
+ "solution": [
+  "General term of the two expansions: $\\binom{50}{r}3^{\\frac{50-r}{2}}5^{\\frac{r}{3}}$ and $(-1)^{r}$ times it, so odd $r$ cancel and even $r$ double.",
+  "Surviving terms: $r=0,2,\\dots,50$, i.e. $26$ terms.",
+  "Rational: $r$ even (then $\\frac{50-r}{2}$ is an integer) and $3\\mid r$, i.e. $r\\in\\{0,6,\\dots,48\\}$: $9$ terms.",
+  "Irrational terms $=26-9=17$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Expansion: $\\left(\\sqrt{3}\\pm\\sqrt[3]{5}\\right)^{50}=\\sum_{r=0}^{50}\\binom{50}{r}(\\pm1)^{r}3^{\\frac{50-r}{2}}5^{\\frac{r}{3}}$.",
+  "Adding the two expansions, the terms with odd $r$ cancel and those with even $r$ appear with coefficient $2\\binom{50}{r}$. So after combining, the expression has one term for each even $r$ in $0,2,\\dots,50$: $26$ terms.",
+  "A surviving term $2\\binom{50}{r}3^{\\frac{50-r}{2}}5^{\\frac{r}{3}}$ is rational exactly when both exponents are integers. Since $r$ is even, $\\frac{50-r}{2}$ is an integer; $\\frac{r}{3}$ is an integer iff $3\\mid r$.",
+  "So rational terms correspond to even multiples of $3$, i.e. multiples of $6$: $r=0,6,12,\\dots,48$, which is $9$ values.",
+  "The remaining $26-9=17$ terms contain $5^{1/3}$ or $5^{2/3}$ and are irrational (distinct terms have different powers, so they do not merge into rational terms).",
+  "(Counting in a single expansion would give $51-9=42$, option (B); the cancellation of odd $r$ is the point of the question.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: rational/irrational term counting after the odd-r terms of (a+b)^n + (a-b)^n cancel, so the count is over even r only (way 5, the sum changes which terms exist). Closest known: number of irrational terms in (5^(1/6) + 2^(1/8))^100. Different because: the term set is first thinned by the conjugate sum, which changes both the total and the irrational count.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Number of terms; number of rational and irrational terms": "Number of terms after combining (26, even r only) and the count of rational terms (r multiple of 6) give the 17 irrational terms."
+ },
+ "stem_review": "Read as a student: 'like terms combined' fixes the term count, 'irrational terms' is standard; answer 17 at option A as planned; options are counts; Hindi mirrors. Checked that no two surviving terms merge (distinct r give distinct radical parts). No change.",
+ "level": 2,
+ "key_step": "Notice the odd-r terms cancel, then count r even with 3 | r.",
+ "justification": "Routine rationality count plus one extra step (cancellation in the conjugate sum); several standard steps, no real insight. Same level as the routine counting anchors such as 2021-P2-Q1 (L2).",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium"
+}

@@ -1,0 +1,44 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Telescoping series involving binomial coefficients"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The sum $\\displaystyle\\sum_{k=3}^{14}\\dfrac{\\binom{k}{2}}{\\binom{k}{3}\\binom{k+1}{3}}$ can be written as $1-\\dfrac{1}{N}$ for a positive integer $N$. Then the value of $N$ is ______."
+ ],
+ "hindi": [
+  "योग $\\displaystyle\\sum_{k=3}^{14}\\dfrac{\\binom{k}{2}}{\\binom{k}{3}\\binom{k+1}{3}}$ को किसी धनात्मक पूर्णांक $N$ के लिए $1-\\dfrac{1}{N}$ के रूप में लिखा जा सकता है। तब $N$ का मान ______ है।"
+ ],
+ "solution": [
+  "Pascal: $\\binom{k+1}{3}-\\binom{k}{3}=\\binom{k}{2}$",
+  "So $\\dfrac{\\binom{k}{2}}{\\binom{k}{3}\\binom{k+1}{3}}=\\dfrac{1}{\\binom{k}{3}}-\\dfrac{1}{\\binom{k+1}{3}}$",
+  "Telescoping: sum $=\\dfrac{1}{\\binom{3}{3}}-\\dfrac{1}{\\binom{15}{3}}=1-\\dfrac{1}{455}$",
+  "$N=\\binom{15}{3}=455$",
+  "",
+  "Final Answer: 455"
+ ],
+ "solution_full": [
+  "Pascal's rule $\\binom{k+1}{3}=\\binom{k}{3}+\\binom{k}{2}$ gives $\\binom{k}{2}=\\binom{k+1}{3}-\\binom{k}{3}$.",
+  "Hence each term is $\\dfrac{\\binom{k+1}{3}-\\binom{k}{3}}{\\binom{k}{3}\\binom{k+1}{3}}=\\dfrac{1}{\\binom{k}{3}}-\\dfrac{1}{\\binom{k+1}{3}}$ (valid for $k\\ge3$, where $\\binom{k}{3}\\neq0$).",
+  "Summing from $k=3$ to $14$, the inner terms cancel: $\\dfrac{1}{\\binom{3}{3}}-\\dfrac{1}{\\binom{15}{3}}=1-\\dfrac{1}{455}$.",
+  "$\\binom{15}{3}=\\dfrac{15\\cdot14\\cdot13}{6}=455$, so $N=455$ (the representation $1-\\dfrac{1}{N}$ is unique).",
+  "",
+  "Final Answer: 455"
+ ],
+ "originality_note": "New: the numerator C(k,2) is exactly the Pascal difference of the two denominator factors, so the term splits as a difference of reciprocals of binomial coefficients (way 4, hidden telescoping). Closest known: telescoping sums 1/(k(k+1)) or hockey-stick sums of C(k,r). Different because: the telescoping happens in reciprocals of C(k,3) via Pascal's rule.",
+ "web_check": "not found",
+ "concept_use": {
+  "Telescoping series involving binomial coefficients": "Pascal's rule turns the term into 1/C(k,3) - 1/C(k+1,3), which telescopes to 1 - 1/C(15,3)."
+ },
+ "stem_review": "Read as a student: summation range stated, N positive integer and unique; answer 455 is a positive 3-digit integer as planned; Hindi mirrors. No change.",
+ "level": 2,
+ "key_step": "Recognise C(k,2) = C(k+1,3) - C(k,3) in the numerator.",
+ "justification": "One standard identity followed by telescoping; routine but needs the right identity. Comparable to routine L2 anchors such as 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "Medium"
+}

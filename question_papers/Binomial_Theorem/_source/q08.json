@@ -1,0 +1,58 @@
+{
+ "type": "SCQ",
+ "chapter": "Binomial Theorem",
+ "target_level": 2,
+ "answer_plan": "Option C",
+ "blueprint_concepts": [
+  "Double Summations in Binomial Coefficients",
+  "Sum of products of binomial coefficients (sum of C_r.C_(r+k))"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The value of $\\displaystyle\\sum_{0\\le i<j\\le6}(j-i)\\binom{6}{i}\\binom{6}{j}$ is",
+  "",
+  "(A) $1386$",
+  "(B) $924$",
+  "(C) $2772$",
+  "(D) $5544$"
+ ],
+ "hindi": [
+  "$\\displaystyle\\sum_{0\\le i<j\\le6}(j-i)\\binom{6}{i}\\binom{6}{j}$ का मान है",
+  "",
+  "(A) $1386$",
+  "(B) $924$",
+  "(C) $2772$",
+  "(D) $5544$"
+ ],
+ "solution": [
+  "Group by $k=j-i\\ge1$: the sum is $\\sum_{k=1}^{6}k\\sum_{i}\\binom{6}{i}\\binom{6}{i+k}$",
+  "$\\sum_{i}\\binom{6}{i}\\binom{6}{i+k}=\\sum_{i}\\binom{6}{i}\\binom{6}{6-k-i}=\\binom{12}{6-k}=\\binom{12}{6+k}$",
+  "So the sum is $\\sum_{k=1}^{6}k\\binom{12}{6+k}=1\\cdot792+2\\cdot495+3\\cdot220+4\\cdot66+5\\cdot12+6\\cdot1$",
+  "$=792+990+660+264+60+6=2772$ (equal to $\\dfrac{6}{2}\\binom{12}{6}$)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Put $k=j-i$; the condition $0\\le i<j\\le6$ means $1\\le k\\le6$ and $0\\le i\\le6-k$. So the double sum is $\\sum_{k=1}^{6}k\\,S_{k}$ with $S_{k}=\\sum_{i=0}^{6-k}\\binom{6}{i}\\binom{6}{i+k}$.",
+  "Since $\\binom{6}{i+k}=\\binom{6}{6-k-i}$, $S_{k}$ is the coefficient of $x^{6-k}$ in $(1+x)^{6}(1+x)^{6}=(1+x)^{12}$, i.e. $S_{k}=\\binom{12}{6-k}=\\binom{12}{6+k}$.",
+  "Values: $\\binom{12}{7}=792$, $\\binom{12}{8}=495$, $\\binom{12}{9}=220$, $\\binom{12}{10}=66$, $\\binom{12}{11}=12$, $\\binom{12}{12}=1$.",
+  "Sum: $792+2\\cdot495+3\\cdot220+4\\cdot66+5\\cdot12+6\\cdot1=792+990+660+264+60+6=2772$.",
+  "Check by a closed form: $\\sum_{k\\ge1}k\\binom{2n}{n+k}=\\dfrac{n}{2}\\binom{2n}{n}$; with $n=6$, $3\\cdot924=2772$.",
+  "(Option (A) is half the answer and option (B) is $\\binom{12}{6}$; option (D) double counts ordered pairs.)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: a double sum over i<j weighted by the gap j-i, which regroups by the gap into sums of products C_i C_(i+k) = C(12, 6+k) and then a weighted single sum (way 5). Closest known: sum over i<j of C_i C_j. Different because: the weight j - i forces grouping by the gap rather than the symmetry trick.",
+ "web_check": "not found",
+ "concept_use": {
+  "Double Summations in Binomial Coefficients": "The double sum over 0 <= i < j <= 6 is regrouped by k = j - i into a single sum over k.",
+  "Sum of products of binomial coefficients (sum of C_r.C_(r+k))": "Each inner sum is a sum of products C(6,i) C(6,i+k) = C(12,6+k)."
+ },
+ "stem_review": "Read as a student: summation set 0 <= i < j <= 6 fully specified; answer 2772 at option C as planned; options numbers; Hindi mirrors. No change.",
+ "level": 2,
+ "key_step": "Regroup the double sum by the gap k = j - i and use sum C_i C_(i+k) = C(12, 6+k).",
+ "justification": "Standard regrouping and the Vandermonde-type product sum, then six terms of arithmetic; a routine multi-step chain. Comparable to 2021-P2-Q1 (L2, counting with several sets).",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium"
+}

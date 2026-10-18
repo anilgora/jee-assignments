@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Numerically greatest term for a given value of x",
+  "Greatest binomial coefficient (distinct from numerically greatest term)"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $S$ be the set of all real numbers $x>0$ for which no term in the expansion of $(2+x)^{8}$ is numerically greater than the term having the greatest binomial coefficient. If $\\alpha$ and $\\beta$ are the least and the greatest elements of $S$ respectively, then the value of $\\alpha+\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना $S$ उन सभी वास्तविक संख्याओं $x>0$ का समुच्चय है जिनके लिए $(2+x)^{8}$ के प्रसार का कोई भी पद, महत्तम द्विपद गुणांक वाले पद से संख्यात्मक रूप से बड़ा नहीं है। यदि $\\alpha$ तथा $\\beta$ क्रमशः $S$ के न्यूनतम तथा अधिकतम अवयव हैं, तो $\\alpha+\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Greatest binomial coefficient: $\\binom{8}{4}$, in $T_{5}=\\binom{8}{4}2^{4}x^{4}$",
+  "$\\dfrac{T_{r+1}}{T_{r}}=\\dfrac{9-r}{r}\\cdot\\dfrac{x}{2}$ decreases in $r$, so $T_{5}$ is a greatest term iff $T_{5}\\ge T_{4}$ and $T_{5}\\ge T_{6}$",
+  "$\\dfrac{T_{5}}{T_{4}}=\\dfrac{5}{4}\\cdot\\dfrac{x}{2}\\ge1\\Rightarrow x\\ge\\dfrac{8}{5}$; $\\dfrac{T_{6}}{T_{5}}=\\dfrac{4}{5}\\cdot\\dfrac{x}{2}\\le1\\Rightarrow x\\le\\dfrac{5}{2}$",
+  "$S=\\left[\\dfrac{8}{5},\\dfrac{5}{2}\\right]$, $\\alpha+\\beta=1.6+2.5=4.1$",
+  "",
+  "Final Answer: 4.10"
+ ],
+ "solution_full": [
+  "Terms: $T_{r+1}=\\binom{8}{r}2^{8-r}x^{r}$, $r=0,\\dots,8$ (all positive for $x>0$). The greatest binomial coefficient is $\\binom{8}{4}=70$, in $T_{5}$.",
+  "Ratio of consecutive terms: $\\dfrac{T_{r+1}}{T_{r}}=\\dfrac{\\binom{8}{r}}{\\binom{8}{r-1}}\\cdot\\dfrac{x}{2}=\\dfrac{9-r}{r}\\cdot\\dfrac{x}{2}$, which decreases as $r$ increases. So the terms rise and then fall, and $T_{5}$ is not exceeded by any term exactly when $T_{5}\\ge T_{4}$ and $T_{5}\\ge T_{6}$.",
+  "$T_{5}\\ge T_{4}$: $\\dfrac{5}{4}\\cdot\\dfrac{x}{2}\\ge1\\iff x\\ge\\dfrac{8}{5}$.",
+  "$T_{6}\\le T_{5}$: $\\dfrac{4}{5}\\cdot\\dfrac{x}{2}\\le1\\iff x\\le\\dfrac{5}{2}$.",
+  "So $S=\\left[\\dfrac{8}{5},\\dfrac{5}{2}\\right]$; at the ends $T_{5}$ ties with $T_{4}$ or $T_{6}$, which is allowed ('no term is greater').",
+  "$\\alpha=\\dfrac{8}{5}$, $\\beta=\\dfrac{5}{2}$, $\\alpha+\\beta=\\dfrac{41}{10}=4.1$.",
+  "",
+  "Final Answer: 4.10"
+ ],
+ "originality_note": "New: the set of x for which the term with the greatest binomial coefficient is also a numerically greatest term, so the two notions of 'greatest' are reconciled (way 5). Closest known: numerically greatest term of (a + bx)^n for a given x. Different because: x is the unknown and the question asks where the two kinds of greatest term coincide.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Numerically greatest term for a given value of x": "The ratio test T(r+1)/T(r) = ((9-r)/r)(x/2) decides when T5 is a numerically greatest term.",
+  "Greatest binomial coefficient (distinct from numerically greatest term)": "The greatest binomial coefficient C(8,4) identifies the term T5 whose position is tested."
+ },
+ "stem_review": "Read as a student: x > 0 stated (so numerically greatest equals greatest), ties allowed by 'no term is numerically greater', S is a closed interval so alpha and beta exist; answer 4.10 is a positive decimal as planned; Hindi mirrors. No change.",
+ "level": 3,
+ "key_step": "Separate the greatest binomial coefficient from the greatest term and translate 'T5 is greatest' into two ratio inequalities.",
+ "justification": "Two concepts deliberately contrasted, then ratio inequalities with endpoint care; numerical. Below 2025-P2-Q10 (L4, largest coefficient of (1+2x/5)^23) because the position is given here.",
+ "nearest_anchor": "2025-P2-Q10 (L4)",
+ "confidence": "Medium"
+}

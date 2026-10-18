@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Binomial Theorem",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Binomial theorem for a positive integral index; general term",
+  "Term independent of x",
+  "Coefficient of a specified power of x"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $p$ be a positive integer such that the expansion of $\\left(x^{p}-\\dfrac{1}{4x}\\right)^{6}$, $x\\neq0$, contains a term independent of $x$ and also contains a term in $x^{24}$. Then the coefficient of $x^{24}$ in this expansion is ______."
+ ],
+ "hindi": [
+  "माना कि $p$ एक ऐसा धनात्मक पूर्णांक है कि $\\left(x^{p}-\\dfrac{1}{4x}\\right)^{6}$, $x\\neq0$, के प्रसार में $x$ से स्वतंत्र एक पद है तथा $x^{24}$ वाला एक पद भी है। तब इस प्रसार में $x^{24}$ का गुणांक ______ है।"
+ ],
+ "solution": [
+  "$T_{r+1}=\\binom{6}{r}\\left(-\\dfrac{1}{4}\\right)^{r}x^{6p-(p+1)r}$, $0\\le r\\le6$",
+  "Term independent of $x$: $r=\\dfrac{6p}{p+1}$; as $\\gcd(p,p+1)=1$, $(p+1)\\mid6\\Rightarrow p\\in\\{1,2,5\\}$",
+  "A term in $x^{24}$ needs $6p\\ge24$ (the largest power is $x^{6p}$), so $p=5$",
+  "$p=5$: $30-6r=24\\Rightarrow r=1$; coefficient $\\binom{6}{1}\\left(-\\dfrac{1}{4}\\right)=-\\dfrac{3}{2}$",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "solution_full": [
+  "General term: $T_{r+1}=\\binom{6}{r}\\left(x^{p}\\right)^{6-r}\\left(-\\dfrac{1}{4x}\\right)^{r}=\\binom{6}{r}\\left(-\\dfrac{1}{4}\\right)^{r}x^{6p-(p+1)r}$, $r=0,1,\\dots,6$.",
+  "Term independent of $x$: $6p=(p+1)r$, so $r=\\dfrac{6p}{p+1}$. Since $p$ and $p+1$ are coprime, $p+1$ must divide $6$, giving $p+1\\in\\{2,3,6\\}$, i.e. $p\\in\\{1,2,5\\}$ (then $r=3,4,5$, all within $0\\le r\\le6$).",
+  "Term in $x^{24}$: the exponents are $6p,\\ 5p-1,\\dots$; the largest is $6p$, so $6p\\ge24$, i.e. $p\\ge4$. Of $1,2,5$ only $p=5$ remains.",
+  "For $p=5$ the exponent is $30-6r$, and $30-6r=24$ gives $r=1$, so $x^{24}$ does occur.",
+  "Its coefficient: $\\binom{6}{1}\\left(-\\dfrac{1}{4}\\right)^{1}=-\\dfrac{6}{4}=-1.5$.",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "originality_note": "New: the exponent p of the expansion is not given; it is fixed by requiring both a constant term and a term in x^24 (divisibility (p+1) | 6 and a size condition), and the answer is a coefficient for that p (way 3, an object fixed by two conditions). Closest known: term independent of x in (x^2 - 1/x)^n for given n. Different because: the unknown is the power inside the base, and the two existence conditions act together.",
+ "web_check": "not found",
+ "concept_use": {
+  "Binomial theorem for a positive integral index; general term": "General term C(6,r)(-1/4)^r x^(6p-(p+1)r) with p unknown.",
+  "Term independent of x": "Existence of a term independent of x forces (p+1) | 6, p in {1,2,5}.",
+  "Coefficient of a specified power of x": "The term in x^24 picks p = 5 (r = 1) and its coefficient -3/2 is the answer."
+ },
+ "stem_review": "Read as a student: p positive integer, both existence conditions stated, x non-zero; they force p = 5 uniquely (checked p up to 200 by code and by the divisibility argument); answer -1.50 is a negative decimal as planned; Hindi mirrors. No change.",
+ "level": 3,
+ "key_step": "Turn the two existence conditions into (p+1) | 6 and 6p >= 24.",
+ "justification": "Two linked conditions on an unknown inner exponent, a divisibility argument, then a general-term evaluation; numerical. Typical L3: two ideas combined, as in 2024-P2-Q13 (L3).",
+ "nearest_anchor": "2024-P2-Q13 (L3)",
+ "confidence": "Medium"
+}
