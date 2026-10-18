@@ -23,3 +23,4 @@ Inverse_Trigonometric_Function: DONE 2026-10-17
 Limit: DONE 2026-10-17
 Continuity_Differentiability: DONE 2026-10-18
 Method_of_Differentiation: DONE 2026-10-18
+Tangent_Normal: DONE 2026-10-18
