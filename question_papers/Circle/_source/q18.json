@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Chord whose mid point is given for Circle",
+  "Chord whose mid point is given for parabola"
+ ],
+ "concept_use": {
+  "Chord whose mid point is given for Circle": "Chord of C with midpoint M is perpendicular to O'M; this fixes h = -3.",
+  "Chord whose mid point is given for parabola": "Chord of the parabola y^2 = -8x with midpoint M(h,k) is T = S1 with slope -4/k; with the focus condition it fixes k = +-2."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Consider the parabola $y^{2}=-8x$ with focus $F$ and the circle $C:x^{2}+y^{2}+14x+25=0$. Let $\\mathcal{L}$ be the set of all lines through $F$, each of which meets the parabola at two distinct points and meets $C$ at two distinct points, such that the chord of the parabola and the chord of $C$ cut off by the line have the same midpoint. Then the product of the $y$-intercepts of the lines in $\\mathcal{L}$ is ______."
+ ],
+ "hindi": [
+  "नाभि $F$ वाले परवलय $y^{2}=-8x$ तथा वृत्त $C:x^{2}+y^{2}+14x+25=0$ पर विचार कीजिए। माना $\\mathcal{L}$, $F$ से होकर जाने वाली उन सभी रेखाओं का समुच्चय है जिनमें से प्रत्येक परवलय को दो भिन्न बिन्दुओं पर तथा $C$ को दो भिन्न बिन्दुओं पर मिलती है, तथा रेखा द्वारा काटी गई परवलय की जीवा तथा $C$ की जीवा का मध्यबिन्दु एक ही है। तब $\\mathcal{L}$ की रेखाओं के $y$-अन्तःखण्डों का गुणनफल ______ है।"
+ ],
+ "solution": [
+  "$F=(-2,0)$; $C$: centre $O'(-7,0)$, $r^{2}=24$. Let the common midpoint be $M(h,k)$",
+  "Parabola chord with midpoint $M$ ($T=S_{1}$): $ky+4x=k^{2}+4h$, slope $-\\dfrac{4}{k}$ ($k\\neq0$)",
+  "Circle chord with midpoint $M$ is perpendicular to $O'M$: $\\dfrac{k}{h+7}\\cdot\\left(-\\dfrac{4}{k}\\right)=-1\\Rightarrow h=-3$",
+  "Through $F$: $\\dfrac{k}{h+2}=-\\dfrac{4}{k}\\Rightarrow k^{2}=-4(h+2)=4\\Rightarrow k=\\pm2$; lines $y=-2(x+2)$ and $y=2(x+2)$",
+  "$k=0$ would give the vertical line $x=-2$, which misses $C$ ($5^{2}>24$). $M(-3,\\pm2)$ is inside $C$ ($16+4<24$) and inside the parabola, so both chords exist",
+  "$y$-intercepts $-4$ and $4$; product $=-16$",
+  "",
+  "Final Answer: -16"
+ ],
+ "solution_full": [
+  "$y^{2}=-8x$ has $4a=8$, focus $F=(-2,0)$. $C$: $(x+7)^{2}+y^{2}=24$, centre $O'=(-7,0)$, radius $\\sqrt{24}$.",
+  "Let the common midpoint be $M(h,k)$.",
+  "Parabola: the chord with midpoint $M$ is $T=S_{1}$: $ky+4(x+h)=k^{2}+8h$, i.e. $ky+4x=k^{2}+4h$. For $k\\neq0$ its slope is $-\\dfrac{4}{k}$.",
+  "Circle: the chord with midpoint $M$ is perpendicular to $O'M$, whose slope is $\\dfrac{k}{h+7}$. So $\\dfrac{k}{h+7}\\cdot\\left(-\\dfrac{4}{k}\\right)=-1$, giving $h+7=4$, $h=-3$.",
+  "The line passes through $F(-2,0)$: slope of $FM=\\dfrac{k}{h+2}=\\dfrac{k}{-1}$ must equal $-\\dfrac{4}{k}$, so $k^{2}=4$, $k=\\pm2$.",
+  "$k=2$: slope $-2$, line $y=-2(x+2)$; $k=-2$: slope $2$, line $y=2(x+2)$.",
+  "Case $k=0$: the chord is vertical, $x=-2$ through $F$; its distance from $O'$ is $5>\\sqrt{24}$, so it does not meet $C$ and is excluded.",
+  "Existence: $M=(-3,\\pm2)$ satisfies $k^{2}=4<-8h=24$, so $M$ is inside the parabola, and $(h+7)^{2}+k^{2}=20<24$, so $M$ is inside $C$. Each line therefore cuts both curves in chords bisected at $M$.",
+  "$y$-intercepts: $-4$ and $4$. Product $=-16$.",
+  "",
+  "Final Answer: -16"
+ ],
+ "originality_note": "New: a line through the focus that is bisected at the same point by a parabola and by a circle; the two chord-with-midpoint conditions fix the midpoint, and the vertical line is excluded by the circle (way 5, the link between the two midpoint conditions is the discovery). Closest known: chord of a parabola with a given midpoint; chord of a circle with a given midpoint. Different because: the midpoint is unknown and must satisfy both midpoint conditions and the focus condition at once.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Changed the circle from x^2 + y^2 + 14x + 24 = 0 to ... + 25 = 0 so that the vertical line x = -2 is clearly not a chord of C (first version made it a tangent, a borderline case). Checked both lines meet each curve in two points. Answer -16 is a negative integer as planned.",
+ "level": 3,
+ "key_step": "Combine slope -4/k of the parabola chord with perpendicularity to O'M (h = -3) and the focus condition (k^2 = 4).",
+ "justification": "Two chord-with-midpoint conditions from two chapters plus the focus condition and existence checks: two ideas linked, numerical. Comparable to 2023-P1-Q7 (L2) but with an extra linked condition, so L3 like 2026-P2-Q13 (L3).",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium"
+}

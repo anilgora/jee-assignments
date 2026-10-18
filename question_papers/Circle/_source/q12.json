@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Tangent and normal to a circle",
+  "Normal to the parabola: point, slope and parametric forms"
+ ],
+ "concept_use": {
+  "Tangent and normal to a circle": "Tangent to a circle: a normal of the parabola is tangent to C when its distance from the centre (1,0) equals the radius sqrt 90.",
+  "Normal to the parabola: point, slope and parametric forms": "Normal to the parabola in parametric form y = -tx + 2t + t^3 at (t^2, 2t), used to write the distance and the intercepts."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Consider the parabola $y^{2}=4x$ and the circle $C:x^{2}+y^{2}-2x-89=0$. The normals to the parabola that are also tangents to $C$ form, together with the $y$-axis, a triangle. Then the area of this triangle is ______."
+ ],
+ "hindi": [
+  "परवलय $y^{2}=4x$ तथा वृत्त $C:x^{2}+y^{2}-2x-89=0$ पर विचार कीजिए। परवलय के वे अभिलम्ब जो $C$ की स्पर्श रेखाएँ भी हैं, $y$-अक्ष के साथ एक त्रिभुज बनाते हैं। तब इस त्रिभुज का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$C$: centre $S(1,0)$ (the focus), radius $\\sqrt{90}$. Normal at $(t^{2},2t)$: $tx+y=2t+t^{3}$",
+  "Distance from $S$: $\\dfrac{|t-2t-t^{3}|}{\\sqrt{1+t^{2}}}=\\dfrac{|t|(1+t^{2})}{\\sqrt{1+t^{2}}}=|t|\\sqrt{1+t^{2}}$",
+  "Tangent to $C$: $t^{2}(1+t^{2})=90\\Rightarrow t^{2}=9$, $t=\\pm3$ (the axis $t=0$ passes through $S$)",
+  "Normals: $\\pm3x+y=\\pm33$, i.e. $y=\\mp3x\\pm33$: both meet the $x$-axis at $(11,0)$ and the $y$-axis at $(0,\\pm33)$",
+  "Area $=\\dfrac{1}{2}\\cdot66\\cdot11=363$",
+  "",
+  "Final Answer: 363"
+ ],
+ "solution_full": [
+  "$C$: $(x-1)^{2}+y^{2}=90$, centre $(1,0)$, which is the focus $S$ of $y^{2}=4x$, radius $\\sqrt{90}$.",
+  "The normal at $(t^{2},2t)$ is $y=-tx+2t+t^{3}$, i.e. $tx+y-2t-t^{3}=0$.",
+  "Distance from $S(1,0)$: $\\dfrac{|t-2t-t^{3}|}{\\sqrt{t^{2}+1}}=\\dfrac{|t|(1+t^{2})}{\\sqrt{1+t^{2}}}=|t|\\sqrt{1+t^{2}}$.",
+  "The normal touches $C$ when this equals $\\sqrt{90}$: $t^{2}(1+t^{2})=90$, so $t^{4}+t^{2}-90=0$, $(t^{2}+10)(t^{2}-9)=0$, $t^{2}=9$, $t=\\pm3$. (The normal $t=0$ is the axis, which passes through the centre and is not a tangent.)",
+  "$t=3$: $y=-3x+33$; $t=-3$: $y=3x-33$.",
+  "Both meet the $x$-axis at $(11,0)$. They meet the $y$-axis at $(0,33)$ and $(0,-33)$.",
+  "The triangle has vertices $(11,0)$, $(0,33)$, $(0,-33)$: base $66$ on the $y$-axis, height $11$.",
+  "Area $=\\dfrac{1}{2}\\cdot66\\cdot11=363$.",
+  "",
+  "Final Answer: 363"
+ ],
+ "originality_note": "New: normals of a parabola that are tangent to a circle centred at the focus, where the focus-to-normal distance simplifies to |t| sqrt(1 + t^2) (way 4, a hidden invariant). Closest known: normals from a given point to a parabola (cubic in m); circle touching a parabola. Different because: the normals are selected by tangency to a circle, not by passing through a point, and the distance from the focus collapses to a quartic with a clean root.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that exactly two normals qualify and that they meet the y-axis at distinct points, so the triangle exists. Answer 363 is a positive 3-digit integer as planned. No change.",
+ "level": 3,
+ "key_step": "Distance from the focus to the normal at t is |t| sqrt(1 + t^2); solve t^2(1 + t^2) = 90.",
+ "justification": "Parametric normal plus a distance condition that simplifies only if the student spots the factor (1 + t^2), then intercept geometry; numerical. Comparable to 2023-P1-Q7 (L2) but with a quartic and an extra stage, so L3 like 2026-P2-Q13 (L3).",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium"
+}

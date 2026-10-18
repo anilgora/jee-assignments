@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Parametric form of a circle"
+ ],
+ "concept_use": {
+  "Parametric form of a circle": "The parametric form x = 3 + 4 cos t, y = 3 + 4 sin t turns xy into a trigonometric expression, reduced with u = cos t + sin t."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $C$ be the circle $x^{2}+y^{2}-6x-6y+2=0$. Then the minimum value of $xy$ over all points $(x,y)$ on $C$ is ______."
+ ],
+ "hindi": [
+  "माना कि $C$ वृत्त $x^{2}+y^{2}-6x-6y+2=0$ है। तब $C$ पर स्थित सभी बिन्दुओं $(x,y)$ के लिए $xy$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$C$: centre $(3,3)$, $r=\\sqrt{9+9-2}=4$; parametric form $x=3+4\\cos\\theta$, $y=3+4\\sin\\theta$",
+  "$xy=9+12(\\cos\\theta+\\sin\\theta)+16\\sin\\theta\\cos\\theta$. Put $u=\\cos\\theta+\\sin\\theta\\in[-\\sqrt{2},\\sqrt{2}]$, $\\sin\\theta\\cos\\theta=\\dfrac{u^{2}-1}{2}$",
+  "$xy=8u^{2}+12u+1$, a parabola in $u$ with vertex at $u=-\\dfrac{3}{4}\\in[-\\sqrt{2},\\sqrt{2}]$",
+  "Minimum $=8\\cdot\\dfrac{9}{16}-9+1=-3.5$",
+  "",
+  "Final Answer: -3.5"
+ ],
+ "solution_full": [
+  "Completing squares: $(x-3)^{2}+(y-3)^{2}=16$, centre $(3,3)$, radius $4$.",
+  "Parametric form: $x=3+4\\cos\\theta$, $y=3+4\\sin\\theta$, $\\theta\\in[0,2\\pi)$.",
+  "$xy=9+12\\cos\\theta+12\\sin\\theta+16\\sin\\theta\\cos\\theta$.",
+  "Let $u=\\cos\\theta+\\sin\\theta=\\sqrt{2}\\sin\\left(\\theta+\\dfrac{\\pi}{4}\\right)$, so $u$ takes every value in $[-\\sqrt{2},\\sqrt{2}]$, and $u^{2}=1+2\\sin\\theta\\cos\\theta$, so $\\sin\\theta\\cos\\theta=\\dfrac{u^{2}-1}{2}$.",
+  "$xy=9+12u+8(u^{2}-1)=8u^{2}+12u+1$.",
+  "This quadratic opens upward with vertex at $u=-\\dfrac{12}{16}=-\\dfrac{3}{4}$, which lies in $[-\\sqrt{2},\\sqrt{2}]$.",
+  "Minimum value $=8\\cdot\\dfrac{9}{16}+12\\left(-\\dfrac{3}{4}\\right)+1=\\dfrac{9}{2}-9+1=-\\dfrac{7}{2}=-3.5$.",
+  "",
+  "Final Answer: -3.5"
+ ],
+ "originality_note": "New: the product xy on a circle centred on y = x, reduced through the parametric form and u = cos t + sin t to a quadratic whose vertex lies inside the range of u (way 4, a symmetric substitution makes the expression one-variable). Closest known: maximum of a linear expression ax + by on a circle. Different because: the expression is quadratic, so the parametric form alone does not finish; the u-substitution and the range check are needed.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the minimum is attained (u = -3/4 is in range) and that -3.5 has two decimal places at most. Answer -3.5 is a negative decimal as planned. No change.",
+ "level": 2,
+ "key_step": "Parametrise, set u = cos t + sin t, minimise 8u^2 + 12u + 1 on [-sqrt2, sqrt2].",
+ "justification": "Parametric form plus a standard trigonometric substitution and a range check: a routine multi-step chain. Comparable to 2024-P1-Q3 (L3) in kind but simpler; placed at L2 like 2026-P2-Q3 (L2).",
+ "nearest_anchor": "2026-P2-Q3 (L2)",
+ "confidence": "High"
+}

@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Orthogonality of two circles",
+  "Family of circles"
+ ],
+ "concept_use": {
+  "Orthogonality of two circles": "Orthogonality of two circles: 2(g1 g2 + f1 f2) = c1 + c2 fixes lambda = 12, and the right angle between radii at P gives PQ/2 = r1 r2/d.",
+  "Family of circles": "Family of circles through (1,0) and (5,0): (x-1)(x-5) + y^2 + lambda y = 0."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Among all circles passing through the points $(1,0)$ and $(5,0)$, let $\\Gamma$ be the one that cuts the circle $C:x^{2}+y^{2}-6x-4y-11=0$ orthogonally. If $\\Gamma$ and $C$ intersect at $P$ and $Q$, then the value of $PQ^{2}$ is ______."
+ ],
+ "hindi": [
+  "बिन्दुओं $(1,0)$ तथा $(5,0)$ से होकर जाने वाले सभी वृत्तों में से माना $\\Gamma$ वह वृत्त है जो वृत्त $C:x^{2}+y^{2}-6x-4y-11=0$ को लम्बकोणीय रूप से काटता है। यदि $\\Gamma$ तथा $C$ बिन्दुओं $P$ तथा $Q$ पर प्रतिच्छेद करते हैं, तो $PQ^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Family through $(1,0),(5,0)$: $(x-1)(x-5)+y^{2}+\\lambda y=0$, i.e. $x^{2}+y^{2}-6x+\\lambda y+5=0$",
+  "Orthogonal to $C$ ($g=-3$, $f=-2$, $c=-11$): $2\\left[(-3)(-3)+\\dfrac{\\lambda}{2}(-2)\\right]=5-11\\Rightarrow18-2\\lambda=-6\\Rightarrow\\lambda=12$",
+  "$\\Gamma$: centre $(3,-6)$, $r_{1}^{2}=9+36-5=40$; $C$: centre $(3,2)$, $r_{2}^{2}=24$; $d=8$ ($d^{2}=64=40+24$)",
+  "For orthogonal circles the common chord has length $\\dfrac{2r_{1}r_{2}}{d}$: $PQ^{2}=\\dfrac{4\\cdot40\\cdot24}{64}=60$",
+  "",
+  "Final Answer: 60"
+ ],
+ "solution_full": [
+  "Every circle through $(1,0)$ and $(5,0)$ belongs to the family $(x-1)(x-5)+y^{2}+\\lambda y=0$ (the point circle on the chord plus $\\lambda$ times the line $y=0$): $x^{2}+y^{2}-6x+\\lambda y+5=0$, centre $\\left(3,-\\dfrac{\\lambda}{2}\\right)$.",
+  "$C$: $g=-3$, $f=-2$, $c=-11$; centre $(3,2)$, radius$^{2}=9+4+11=24$.",
+  "Orthogonality: $2(g_{1}g_{2}+f_{1}f_{2})=c_{1}+c_{2}$: $2\\left(9-\\lambda\\right)=5-11=-6$, so $\\lambda=12$.",
+  "$\\Gamma$: $x^{2}+y^{2}-6x+12y+5=0$, centre $(3,-6)$, radius$^{2}=9+36-5=40$. Distance of centres $d=8$; check $64=40+24$.",
+  "The common chord $PQ$ is perpendicular to the line of centres. In the right triangle formed by the two centres and $P$ (right angle at $P$, by orthogonality), the half-chord is the altitude to the hypotenuse: $\\dfrac{PQ}{2}=\\dfrac{r_{1}r_{2}}{d}$.",
+  "$PQ^{2}=\\dfrac{4r_{1}^{2}r_{2}^{2}}{d^{2}}=\\dfrac{4\\cdot40\\cdot24}{64}=60$.",
+  "Check: $\\Gamma-C=16y+16=0$, $y=-1$; on $C$: $x^{2}-6x-6=0$, $x=3\\pm\\sqrt{15}$, so $PQ=2\\sqrt{15}$, $PQ^{2}=60$.",
+  "",
+  "Final Answer: 60"
+ ],
+ "originality_note": "New: a member of the coaxal family through two points is selected by orthogonality, and the common chord is obtained from the right angle between the radii (way 5). Closest known: circle through two points orthogonal to a given circle; common chord of two given circles. Different because: after fixing the member, the orthogonality also gives the chord directly as 2 r1 r2/d.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the orthogonal member is unique (linear in lambda) and real. Answer 60 is a positive 2-digit integer as planned. No change.",
+ "level": 3,
+ "key_step": "Fix lambda by orthogonality, then the common chord of orthogonal circles is 2 r1 r2/d.",
+ "justification": "Family plus orthogonality plus the chord of orthogonal circles: two ideas linked, numerical. Comparable to 2021-P1-Q1 (L3).",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

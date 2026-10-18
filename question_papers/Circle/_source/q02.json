@@ -1,0 +1,64 @@
+{
+ "type": "SCQ",
+ "chapter": "Circle",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Intercepts of a circle",
+  "Position of point wrt a circle"
+ ],
+ "concept_use": {
+  "Intercepts of a circle": "Intercept lengths 2 sqrt(g^2 - c) = 6 and 2 sqrt(f^2 - c) = 8 give the equations for g, f and c.",
+  "Position of point wrt a circle": "The origin is inside exactly when S(0,0) = c < 0, which selects the two circles with c = -8."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Consider all circles that pass through the point $(4,0)$, cut off a chord of length $6$ on the $x$-axis and cut off a chord of length $8$ on the $y$-axis. Then the number of such circles for which the origin lies inside the circle is",
+  "",
+  "(A) $2$",
+  "(B) $4$",
+  "(C) $1$",
+  "(D) $0$"
+ ],
+ "hindi": [
+  "उन सभी वृत्तों पर विचार कीजिए जो बिन्दु $(4,0)$ से होकर जाते हैं, $x$-अक्ष पर लम्बाई $6$ की जीवा तथा $y$-अक्ष पर लम्बाई $8$ की जीवा काटते हैं। तब ऐसे वृत्तों की संख्या, जिनके अन्दर मूलबिन्दु स्थित है, है",
+  "",
+  "(A) $2$",
+  "(B) $4$",
+  "(C) $1$",
+  "(D) $0$"
+ ],
+ "solution": [
+  "Let the circle be $x^{2}+y^{2}+2gx+2fy+c=0$. Intercepts: $2\\sqrt{g^{2}-c}=6$, $2\\sqrt{f^{2}-c}=8$",
+  "So $g^{2}-c=9$, $f^{2}-c=16$; through $(4,0)$: $16+8g+c=0\\Rightarrow c=-16-8g$",
+  "$g^{2}+8g+16=9\\Rightarrow g^{2}+8g+7=0\\Rightarrow g=-1$ or $g=-7$",
+  "$g=-1$: $c=-8$, $f^{2}=8$ (two circles); $g=-7$: $c=40$, $f^{2}=56$ (two circles). So there are four circles",
+  "Origin inside $\\iff S(0,0)=c<0$, true only for $c=-8$",
+  "Number of circles $=2$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Write the circle as $x^{2}+y^{2}+2gx+2fy+c=0$.",
+  "On the $x$-axis ($y=0$): $x^{2}+2gx+c=0$; the chord length is $|x_{1}-x_{2}|=2\\sqrt{g^{2}-c}$. So $2\\sqrt{g^{2}-c}=6$, i.e. $g^{2}-c=9$.",
+  "On the $y$-axis ($x=0$): $y^{2}+2fy+c=0$; the chord length is $2\\sqrt{f^{2}-c}=8$, i.e. $f^{2}-c=16$.",
+  "The circle passes through $(4,0)$: $16+8g+c=0$, so $c=-16-8g$.",
+  "Substituting in $g^{2}-c=9$: $g^{2}+8g+16=9$, i.e. $g^{2}+8g+7=0$, so $(g+1)(g+7)=0$.",
+  "$g=-1$: $c=-8$ and $f^{2}=16+c=8$, so $f=\\pm2\\sqrt{2}$: two circles.",
+  "$g=-7$: $c=40$ and $f^{2}=56$, so $f=\\pm2\\sqrt{14}$: two circles. In each case the radius squared $g^{2}+f^{2}-c$ is positive ($1$ and $65$), so all four circles are real.",
+  "The origin lies inside a circle exactly when $S(0,0)<0$, and $S(0,0)=c$.",
+  "For $g=-1$, $c=-8<0$: origin inside. For $g=-7$, $c=40>0$: origin outside.",
+  "Hence exactly $2$ circles contain the origin.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the circle is fixed only up to two branches by a point and two intercept lengths (way 3, an object fixed by two conditions), and the count is filtered by the position of the origin read off from c. Closest known: circle through the origin cutting given intercepts. Different because: the circle does not pass through the origin, there are four circles and the position test separates them.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, the options have one form and the Hindi mirrors the English. Checked that all four circles are real and that the count asked is of circles, not of values of g. Answer 2 at (A) as planned. No change.",
+ "level": 2,
+ "key_step": "Solve the three equations from the two intercepts and the point, then use S(0,0) = c to test the origin.",
+ "justification": "A chain of standard formulas (intercepts, point on circle, position by sign of S) with a two-way case split; no insight needed. Matches the routine multi-step L2 anchors such as 2026-P1-Q2 (L2).",
+ "nearest_anchor": "2026-P1-Q2 (L2)",
+ "confidence": "High"
+}

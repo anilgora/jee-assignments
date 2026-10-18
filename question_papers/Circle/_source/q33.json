@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Maximum and minimum distance of a point from a circle",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint"
+ ],
+ "concept_use": {
+  "Maximum and minimum distance of a point from a circle": "Maximum distance of the origin from C_t is d + r = t^2 + 27/(4t), valid whether the origin is inside or outside.",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "AM-GM inequality with the split t^2 + 27/(8t) + 27/(8t) gives the least value 27/4 at t = 3/2."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "For $t>0$, let $C_{t}$ be the circle with centre $(t^{2},0)$ and radius $\\dfrac{27}{4t}$, and let $M(t)$ denote the greatest distance of the origin from the points of $C_{t}$. Then the least value of $M(t)$, $t>0$, is ______."
+ ],
+ "hindi": [
+  "$t>0$ के लिए माना कि $C_{t}$ केन्द्र $(t^{2},0)$ तथा त्रिज्या $\\dfrac{27}{4t}$ वाला वृत्त है, तथा $M(t)$ मूलबिन्दु की $C_{t}$ के बिन्दुओं से अधिकतम दूरी को निरूपित करता है। तब $t>0$ के लिए $M(t)$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "Greatest distance of a point from a circle $=d+r$ (whether the point is inside or outside): $M(t)=t^{2}+\\dfrac{27}{4t}$",
+  "AM-GM on three terms: $t^{2}+\\dfrac{27}{8t}+\\dfrac{27}{8t}\\geq3\\sqrt[3]{t^{2}\\cdot\\dfrac{27}{8t}\\cdot\\dfrac{27}{8t}}=3\\sqrt[3]{\\dfrac{729}{64}}=3\\cdot\\dfrac{9}{4}$",
+  "Equality when $t^{2}=\\dfrac{27}{8t}$, i.e. $t^{3}=\\dfrac{27}{8}$, $t=\\dfrac{3}{2}$",
+  "Least value $=\\dfrac{27}{4}=6.75$",
+  "",
+  "Final Answer: 6.75"
+ ],
+ "solution_full": [
+  "For a point at distance $d$ from the centre of a circle of radius $r$, the greatest distance to the circle is $d+r$, attained at the end of the diameter through the point, whether the point is inside or outside.",
+  "Here $d=t^{2}$ and $r=\\dfrac{27}{4t}$, so $M(t)=t^{2}+\\dfrac{27}{4t}$.",
+  "Split the second term into two equal parts so that the product of the three terms is constant: $M(t)=t^{2}+\\dfrac{27}{8t}+\\dfrac{27}{8t}$.",
+  "By AM-GM, $M(t)\\geq3\\sqrt[3]{t^{2}\\cdot\\dfrac{27}{8t}\\cdot\\dfrac{27}{8t}}=3\\sqrt[3]{\\dfrac{729}{64}}=3\\cdot\\dfrac{9}{4}=\\dfrac{27}{4}$.",
+  "Equality holds when $t^{2}=\\dfrac{27}{8t}$, i.e. $t^{3}=\\dfrac{27}{8}$, $t=\\dfrac{3}{2}$; then $M=\\dfrac{9}{4}+\\dfrac{9}{2}=\\dfrac{27}{4}$.",
+  "(At $t=\\dfrac{3}{2}$ the centre is $\\left(\\dfrac{9}{4},0\\right)$ and the radius $\\dfrac{9}{2}$, so the origin is inside $C_{t}$; the formula $d+r$ holds anyway.)",
+  "Least value $=6.75$.",
+  "",
+  "Final Answer: 6.75"
+ ],
+ "originality_note": "New: a moving circle whose centre distance and radius vary oppositely, so the greatest distance d + r is minimised by an unequal-split three-term AM-GM (way 5). Closest known: greatest distance of a fixed point from a fixed circle; AM-GM on x + k/x. Different because: the circle moves with t, and the balance needs the split 27/(8t) + 27/(8t).",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the least value is attained (t = 3/2) and that 6.75 is exact. Answer 6.75 is a positive decimal as planned. No change.",
+ "level": 3,
+ "key_step": "Write M(t) = t^2 + 27/(4t) and apply three-term AM-GM with the split 27/(8t) twice.",
+ "justification": "The distance step is routine, but the unequal AM-GM split (or calculus with a cube root) is a less practised step; numerical. Borderline L2/L3, placed with 2023-P2-Q8 (L3) as an optimisation numerical.",
+ "nearest_anchor": "2023-P2-Q8 (L3)",
+ "confidence": "Medium"
+}

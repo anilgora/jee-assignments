@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Angle between line and circle",
+  "Angle between two circles"
+ ],
+ "concept_use": {
+  "Angle between line and circle": "Angle between line and circle: theta is the angle between L and the tangent 12x + 5y = 169 at P, tan theta = 5/12.",
+  "Angle between two circles": "Angle between two circles: phi is the angle between their tangents at P (equivalently by the cosine formula), here pi/2 - theta, tan phi = 12/5."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "The line $L:x=12$ meets the circle $C_{1}:x^{2}+y^{2}=169$ at the point $P$ in the first quadrant, and $\\theta$ is the acute angle at which $L$ cuts $C_{1}$ at $P$. Let $C_{2}$ be a circle of radius $7$ whose centre lies on $L$ and which passes through $P$, and let $\\phi$ be the acute angle between $C_{1}$ and $C_{2}$ at $P$. Then the value of $\\dfrac{\\tan\\phi}{\\tan\\theta}$ is ______."
+ ],
+ "hindi": [
+  "रेखा $L:x=12$ वृत्त $C_{1}:x^{2}+y^{2}=169$ को प्रथम चतुर्थांश के बिन्दु $P$ पर मिलती है, तथा $\\theta$ वह न्यून कोण है जिस पर $L$, $C_{1}$ को $P$ पर काटती है। माना $C_{2}$ त्रिज्या $7$ का एक वृत्त है जिसका केन्द्र $L$ पर स्थित है तथा जो $P$ से होकर जाता है, तथा $\\phi$ बिन्दु $P$ पर $C_{1}$ तथा $C_{2}$ के बीच का न्यून कोण है। तब $\\dfrac{\\tan\\phi}{\\tan\\theta}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$P=(12,5)$; tangent to $C_{1}$ at $P$: $12x+5y=169$, direction $(5,-12)$. $L$ has direction $(0,1)$: $\\cos\\theta=\\dfrac{12}{13}$, $\\tan\\theta=\\dfrac{5}{12}$",
+  "The tangent to $C_{2}$ at $P$ is perpendicular to its radius, which lies along $L$; so the angle between the tangents of $C_{1}$ and $C_{2}$ is $\\phi=\\dfrac{\\pi}{2}-\\theta$",
+  "$\\tan\\phi=\\cot\\theta=\\dfrac{12}{5}$ (check with centre $(12,12)$: $\\cos\\phi=\\dfrac{169+49-288}{2\\cdot13\\cdot7}$ in absolute value $=\\dfrac{5}{13}$)",
+  "$\\dfrac{\\tan\\phi}{\\tan\\theta}=\\dfrac{12/5}{5/12}=\\dfrac{144}{25}=5.76$",
+  "",
+  "Final Answer: 5.76"
+ ],
+ "solution_full": [
+  "$x=12$ on $x^{2}+y^{2}=169$ gives $y=\\pm5$; in the first quadrant $P=(12,5)$.",
+  "The angle at which a line cuts a circle is the angle between the line and the tangent at the point of intersection. The tangent to $C_{1}$ at $P$ is $12x+5y=169$, with direction $(5,-12)$; $L$ has direction $(0,1)$.",
+  "$\\cos\\theta=\\dfrac{|0\\cdot5+1\\cdot(-12)|}{13}=\\dfrac{12}{13}$, so $\\sin\\theta=\\dfrac{5}{13}$ and $\\tan\\theta=\\dfrac{5}{12}$.",
+  "$C_{2}$ has its centre on $L$ and passes through $P\\in L$, so its radius at $P$ lies along $L$. Its tangent at $P$ is perpendicular to $L$.",
+  "The angle between $C_{1}$ and $C_{2}$ is the angle between their tangents at $P$. Since the tangent of $C_{2}$ is perpendicular to $L$, this angle is $\\phi=\\dfrac{\\pi}{2}-\\theta$, so $\\tan\\phi=\\cot\\theta=\\dfrac{12}{5}$ (the same for both possible centres $(12,12)$ and $(12,-2)$).",
+  "Check with the formula $\\cos\\phi=\\dfrac{|r_{1}^{2}+r_{2}^{2}-d^{2}|}{2r_{1}r_{2}}$: centre $(12,12)$, $d^{2}=288$: $\\dfrac{|169+49-288|}{182}=\\dfrac{70}{182}=\\dfrac{5}{13}$; centre $(12,-2)$, $d^{2}=148$: $\\dfrac{70}{182}=\\dfrac{5}{13}$. So $\\tan\\phi=\\dfrac{12}{5}$.",
+  "$\\dfrac{\\tan\\phi}{\\tan\\theta}=\\dfrac{12}{5}\\cdot\\dfrac{12}{5}=\\dfrac{144}{25}=5.76$.",
+  "",
+  "Final Answer: 5.76"
+ ],
+ "originality_note": "New: any circle centred on a line through a point of a given circle cuts that circle at the complement of the line-circle angle, so the radius 7 does not matter (way 4, a hidden invariant). Closest known: angle between two given circles by the cosine formula; angle between a line and a circle. Different because: the two angles are linked by the geometry of the radius along the line, and the circle C2 is not uniquely placed yet the answer is fixed.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that both possible centres of C2 give the same phi, so the answer is unique. Answer 5.76 is a positive decimal as planned. No change.",
+ "level": 2,
+ "key_step": "The tangent to C2 at P is perpendicular to L, so phi = pi/2 - theta.",
+ "justification": "Two angle definitions and one perpendicularity observation (or the cosine formula); routine. Comparable to 2026-P2-Q17 (L2), the angle between tangents of two conics.",
+ "nearest_anchor": "2026-P2-Q17 (L2)",
+ "confidence": "High"
+}

@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Maximum and minimum distance of a point from a circle",
+  "Position of point wrt a circle"
+ ],
+ "concept_use": {
+  "Maximum and minimum distance of a point from a circle": "Maximum and minimum distance of a point from a circle: d + r and |d - r|, so M - m = 2d inside, 2r outside.",
+  "Position of point wrt a circle": "Position of point with respect to the circle: P_k inside or on C for k <= 13, outside for k >= 14, which decides the formula."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $C$ be the circle $x^{2}+y^{2}-6x-8y-75=0$. For $k=1,2,\\ldots,20$, let $M_{k}$ and $m_{k}$ denote the greatest and the least distances, respectively, of the point $P_{k}(k,4)$ from the points of $C$. Then the value of $\\displaystyle\\sum_{k=1}^{20}\\left(M_{k}-m_{k}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $C$ वृत्त $x^{2}+y^{2}-6x-8y-75=0$ है। $k=1,2,\\ldots,20$ के लिए माना $M_{k}$ तथा $m_{k}$ क्रमशः बिन्दु $P_{k}(k,4)$ की $C$ के बिन्दुओं से अधिकतम तथा न्यूनतम दूरियाँ हैं। तब $\\displaystyle\\sum_{k=1}^{20}\\left(M_{k}-m_{k}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$C$: centre $O(3,4)$, $r=10$; $d_{k}=OP_{k}=|k-3|$",
+  "Inside or on $C$ ($d_{k}\\leq10$): $M_{k}=r+d_{k}$, $m_{k}=r-d_{k}$, so $M_{k}-m_{k}=2d_{k}$; outside ($d_{k}>10$): $M_{k}-m_{k}=(d_{k}+r)-(d_{k}-r)=2r=20$",
+  "$k=1,\\ldots,13$: $d_{k}=2,1,0,1,\\ldots,10$, sum of $2d_{k}=2(2+1+0+55)=116$",
+  "$k=14,\\ldots,20$: $7$ points outside, contributing $7\\cdot20=140$",
+  "Total $=116+140=256$",
+  "",
+  "Final Answer: 256"
+ ],
+ "solution_full": [
+  "$C$: $(x-3)^{2}+(y-4)^{2}=100$, centre $O(3,4)$, radius $10$. All $P_{k}$ lie on the line $y=4$ through $O$, so $d_{k}=OP_{k}=|k-3|$.",
+  "Position: $P_{k}$ is inside or on $C$ when $d_{k}\\leq10$ ($k\\leq13$) and outside when $k\\geq14$.",
+  "For any point at distance $d$ from $O$, the greatest distance to the circle is $d+r$ (along $PO$ produced). The least distance is $r-d$ if the point is inside or on $C$ and $d-r$ if it is outside.",
+  "Hence $M_{k}-m_{k}=2d_{k}$ for $k\\leq13$ and $M_{k}-m_{k}=2r=20$ for $k\\geq14$. (At $k=3$, $P_{3}=O$ and $M_{3}=m_{3}=10$.)",
+  "$k=1$ to $13$: $d_{k}=2,1,0,1,2,\\ldots,10$, whose sum is $2+1+0+55=58$; contribution $116$.",
+  "$k=14$ to $20$: $7$ terms, each $20$; contribution $140$.",
+  "$\\displaystyle\\sum_{k=1}^{20}(M_{k}-m_{k})=116+140=256$.",
+  "",
+  "Final Answer: 256"
+ ],
+ "originality_note": "New: the difference M - m equals 2 min(d, r), so the sum switches formula exactly where the moving point leaves the circle (way 2, a function of k with a change of regime). Closest known: greatest and least distance of a given point from a circle. Different because: the position of each point must be decided and the two regimes give different formulas inside one sum.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked the boundary k = 13 (on the circle: m = 0, M = 20, matches 2d = 20) and k = 3 (centre). Answer 256 is a positive 3-digit integer as planned. No change.",
+ "level": 2,
+ "key_step": "M - m = 2 min(d, r); split the sum at the point where P_k leaves the circle.",
+ "justification": "Standard distance facts with a position split and a small sum; routine multi-step. Comparable to 2026-P1-Q2 (L2).",
+ "nearest_anchor": "2026-P1-Q2 (L2)",
+ "confidence": "High"
+}

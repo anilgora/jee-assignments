@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Circle",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Tangent and normal to a circle",
+  "Equation of a tangent to a curve"
+ ],
+ "concept_use": {
+  "Tangent and normal to a circle": "The tangent to the circle: distance from the centre equals the radius, and the point of contact is the foot of the perpendicular from the centre (radius perpendicular to tangent).",
+  "Equation of a tangent to a curve": "Equation of the tangent to the curve y = x^3 at (t, t^3): y = 3t^2 x - 2t^3."
+ },
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $P$ be the point of the curve $y=x^{3}$, $x>0$, at which the tangent to the curve also touches the circle $x^{2}+y^{2}=\\dfrac{1}{25}$. If this tangent touches the circle at the point $(a,b)$, then the value of $a$ is ______."
+ ],
+ "hindi": [
+  "माना कि $P$ वक्र $y=x^{3}$, $x>0$ का वह बिन्दु है जिस पर वक्र की स्पर्श रेखा वृत्त $x^{2}+y^{2}=\\dfrac{1}{25}$ को भी स्पर्श करती है। यदि यह स्पर्श रेखा वृत्त को बिन्दु $(a,b)$ पर स्पर्श करती है, तो $a$ का मान ______ है।"
+ ],
+ "solution": [
+  "Tangent to $y=x^{3}$ at $(t,t^{3})$, $t>0$: $y=3t^{2}x-2t^{3}$",
+  "Touches the circle: $\\dfrac{2t^{3}}{\\sqrt{1+9t^{4}}}=\\dfrac{1}{5}\\Rightarrow100t^{6}=1+9t^{4}$; with $u=t^{2}$: $100u^{3}-9u^{2}-1=0$",
+  "$u=\\dfrac{1}{4}$ is a root and $100u^{3}-9u^{2}-1=(4u-1)(25u^{2}+4u+1)$, the quadratic having no real root; so $t=\\dfrac{1}{2}$",
+  "Tangent: $y=\\dfrac{3}{4}x-\\dfrac{1}{4}$, i.e. $3x-4y-1=0$",
+  "Point of contact = foot of perpendicular from $O$: $\\dfrac{a}{3}=\\dfrac{b}{-4}=\\dfrac{1}{25}\\Rightarrow(a,b)=\\left(\\dfrac{3}{25},-\\dfrac{4}{25}\\right)$",
+  "$a=0.12$",
+  "",
+  "Final Answer: 0.12"
+ ],
+ "solution_full": [
+  "At $(t,t^{3})$ the slope of $y=x^{3}$ is $3t^{2}$, so the tangent is $y-t^{3}=3t^{2}(x-t)$, i.e. $3t^{2}x-y-2t^{3}=0$.",
+  "It touches $x^{2}+y^{2}=\\dfrac{1}{25}$ when its distance from the origin is $\\dfrac{1}{5}$: $\\dfrac{2t^{3}}{\\sqrt{9t^{4}+1}}=\\dfrac{1}{5}$ (with $t>0$).",
+  "Squaring: $100t^{6}=9t^{4}+1$. With $u=t^{2}>0$: $100u^{3}-9u^{2}-1=0$.",
+  "$u=\\dfrac{1}{4}$: $\\dfrac{100}{64}-\\dfrac{9}{16}-1=0$, so $(4u-1)$ is a factor: $100u^{3}-9u^{2}-1=(4u-1)(25u^{2}+4u+1)$, and $25u^{2}+4u+1$ has discriminant $16-100<0$.",
+  "So $u=\\dfrac{1}{4}$, $t=\\dfrac{1}{2}$ is the only point, $P=\\left(\\dfrac{1}{2},\\dfrac{1}{8}\\right)$.",
+  "Tangent: $y=\\dfrac{3}{4}x-\\dfrac{1}{4}$, i.e. $3x-4y-1=0$; its distance from $O$ is $\\dfrac{1}{5}$, as required.",
+  "The radius to the point of contact is perpendicular to the tangent, so the point of contact is the foot of the perpendicular from $O$: $(a,b)=\\lambda(3,-4)$ with $3(3\\lambda)-4(-4\\lambda)-1=0$, $\\lambda=\\dfrac{1}{25}$.",
+  "$(a,b)=\\left(\\dfrac{3}{25},-\\dfrac{4}{25}\\right)$, so $a=0.12$.",
+  "",
+  "Final Answer: 0.12"
+ ],
+ "originality_note": "New: a tangent of a cubic that is simultaneously tangent to a small circle centred at the origin, found through a cubic in t^2 with a rational root, and then the contact point on the circle (way 5). Closest known: tangent to a curve at a point; tangent to a circle with given slope. Different because: the point on the curve is unknown and fixed only by the tangency with the circle, and the answer is on the circle, not on the curve.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, curve and parameter is introduced, the conditions are complete, there is one reading, the answer is unique and equals the Answer Plan, and the Hindi mirrors the English. Checked that the curve point is unique for x > 0 (cubic in t^2 has one positive root) and that 'touches the circle at (a,b)' has one reading. Answer 0.12 lies between 0 and 1 as planned. No change.",
+ "level": 3,
+ "key_step": "Tangency of y = 3t^2 x - 2t^3 with the circle gives 100u^3 - 9u^2 - 1 = 0, u = 1/4; then the foot of the perpendicular.",
+ "justification": "Three stages (tangent to curve, tangency condition leading to a cubic solved by inspection, contact point) with no options; average Advanced numerical. Comparable to 2025-P2-Q14 (L3).",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium"
+}
