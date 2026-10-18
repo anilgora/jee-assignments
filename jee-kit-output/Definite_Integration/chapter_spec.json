@@ -1,0 +1,2357 @@
+{
+ "chapter": {
+  "en": "Definite Integration",
+  "hi": "निश्चित समाकलन",
+  "slug": "Definite_Integration"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88
+  ]
+ },
+ "graded_sources": [
+  "<jm>",
+  "J-A",
+  "QB"
+ ],
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction",
+    "hi": "परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What does $\\int_a^b f(x)\\,dx$ represent for the graph of $y=f(x)$?",
+       "$y=f(x)$ के आलेख के लिए $\\int_a^b f(x)\\,dx$ क्या दर्शाता है?"
+      ],
+      "a": [
+       [
+        "The algebraic sum of the areas between $y=f(x)$, the $x$-axis and $x=a$, $x=b$: area above the axis with $+$ sign, below with $-$ sign. So the value can be positive, zero or negative.",
+        "$y=f(x)$, $x$-अक्ष तथा $x=a$, $x=b$ के बीच के क्षेत्रफलों का बीजीय योग: अक्ष के ऊपर का क्षेत्रफल $+$ चिह्न से, नीचे का $-$ चिह्न से। अतः मान धनात्मक, शून्य या ऋणात्मक हो सकता है।"
+       ],
+       [
+        "Ex: $\\int_{-2}^{0}\\sqrt{4-x^2}\\,dx=\\pi$ (quarter circle of radius 2).",
+        "उदा: $\\int_{-2}^{0}\\sqrt{4-x^2}\\,dx=\\pi$ (त्रिज्या 2 का चौथाई वृत्त)।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while substituting in questions of definite integration?",
+       "निश्चित समाकलन के प्रश्नों में प्रतिस्थापन करते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Change the limits to the new variable (no need to come back to $x$). The substitution $t=\\phi(x)$ must be continuous and monotonic (one-one) on the whole interval.",
+        "सीमाएँ नए चर में बदलें ($x$ पर लौटने की आवश्यकता नहीं)। प्रतिस्थापन $t=\\phi(x)$ पूरे अन्तराल में सतत तथा एकदिष्ट (एकैकी) होना चाहिए।"
+       ],
+       [
+        "Ex: in $\\int_0^{2\\pi}\\dfrac{dx}{2+\\sin x}$, $\\tan\\frac x2=t$ is not valid ($\\tan\\frac x2$ breaks at $x=\\pi$); split at $\\pi$ first. Value $=\\dfrac{2\\pi}{\\sqrt3}$.",
+        "उदा: $\\int_0^{2\\pi}\\dfrac{dx}{2+\\sin x}$ में $\\tan\\frac x2=t$ मान्य नहीं ($x=\\pi$ पर $\\tan\\frac x2$ असतत); पहले $\\pi$ पर विभाजित करें। मान $=\\dfrac{2\\pi}{\\sqrt3}$।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the relation of the limits with $dx$ in definite integration?",
+       "निश्चित समाकलन में सीमाओं का $dx$ से क्या सम्बन्ध है?"
+      ],
+      "a": [
+       [
+        "The limits are values of the variable written in the differential: in $\\int_a^b f\\,d(g(x))$ the limits are values of $g(x)$, not of $x$. After substitution, write the limits of the new variable.",
+        "सीमाएँ उस चर के मान हैं जो अवकल में लिखा है: $\\int_a^b f\\,d(g(x))$ में सीमाएँ $g(x)$ के मान हैं, $x$ के नहीं। प्रतिस्थापन के बाद नए चर की सीमाएँ लिखें।"
+       ],
+       [
+        "Ex: $\\int_{\\ln x=0}^{\\ln x=1}x\\,d(\\ln x)=\\int_1^e x\\cdot\\dfrac1x\\,dx=e-1$.",
+        "उदा: $\\int_{\\ln x=0}^{\\ln x=1}x\\,d(\\ln x)=\\int_1^e x\\cdot\\dfrac1x\\,dx=e-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the condition for the result $\\int_a^b f'(x)\\,dx=\\big[f(x)\\big]_a^b$?",
+       "परिणाम $\\int_a^b f'(x)\\,dx=\\big[f(x)\\big]_a^b$ के लिए क्या शर्त है?"
+      ],
+      "a": [
+       "$\\int_a^b f'(x)\\,dx=f(b)-f(a)$, valid if $f$ is continuous on $[a,b]$",
+       [
+        "So any definite integral is found from an antiderivative (substitution, parts $\\int_a^b uv'=\\big[uv\\big]_a^b-\\int_a^b u'v$, partial fractions); check that the antiderivative has no break inside $[a,b]$, else split there.",
+        "अतः कोई भी निश्चित समाकल प्रतिअवकलज से ज्ञात होता है (प्रतिस्थापन, खण्डशः $\\int_a^b uv'=\\big[uv\\big]_a^b-\\int_a^b u'v$, आंशिक भिन्न); जाँचें कि प्रतिअवकलज $[a,b]$ के अन्दर असतत न हो, अन्यथा वहाँ विभाजित करें।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi}\\sec^2x\\,dx\\ne\\big[\\tan x\\big]_0^{\\pi}=0$, because $\\tan x$ breaks at $\\frac\\pi2$.",
+        "उदा: $\\int_0^{\\pi}\\sec^2x\\,dx\\ne\\big[\\tan x\\big]_0^{\\pi}=0$, क्योंकि $\\frac\\pi2$ पर $\\tan x$ असतत है।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": "rephrased",
+      "src": "J-I 27; J-A 26, 35; theory sheet 'Important Points' 2 and 4",
+      "q": [
+       "What is the condition for the result $\\int_a^a f(x)\\,dx=0$? What follows when $\\int_a^b f(x)\\,dx=0$?",
+       "परिणाम $\\int_a^a f(x)\\,dx=0$ के लिए क्या शर्त है? $\\int_a^b f(x)\\,dx=0$ होने पर क्या निष्कर्ष निकलता है?"
+      ],
+      "a": [
+       [
+        "$\\int_a^a f(x)\\,dx=0$ if $x=a$ is in the domain of $f$. If $f$ is continuous and $\\int_a^b f(x)\\,dx=0$, then $f(x)=0$ has at least one root in $(a,b)$ (Rolle on $F(x)=\\int_a^x f$).",
+        "$\\int_a^a f(x)\\,dx=0$ यदि $x=a$, $f$ के प्रान्त में है। यदि $f$ सतत है तथा $\\int_a^b f(x)\\,dx=0$, तो $f(x)=0$ का $(a,b)$ में कम से कम एक मूल है ($F(x)=\\int_a^x f$ पर रोले)।"
+       ],
+       [
+        "Ex: $\\int_0^1(6x^2-6x+1)\\,dx=0$, so $6x^2-6x+1=0$ has a root in $(0,1)$.",
+        "उदा: $\\int_0^1(6x^2-6x+1)\\,dx=0$, अतः $6x^2-6x+1=0$ का एक मूल $(0,1)$ में है।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the condition to bring the limit inside the integration sign?",
+       "सीमा-मान को समाकलन चिह्न के अन्दर ले जाने की क्या शर्त है?"
+      ],
+      "a": [
+       "$\\lim\\limits_{n\\to\\infty}\\int_p^q f_n(x)\\,dx=\\int_p^q\\lim\\limits_{n\\to\\infty}f_n(x)\\,dx$ if $p,q$ are independent of $n$",
+       [
+        "Ex: $\\lim\\limits_{n\\to\\infty}\\int_0^1\\left(1+\\dfrac xn\\right)^n dx=\\int_0^1e^x\\,dx=e-1$.",
+        "उदा: $\\lim\\limits_{n\\to\\infty}\\int_0^1\\left(1+\\dfrac xn\\right)^n dx=\\int_0^1e^x\\,dx=e-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "If $f(x)$ and $g(x)$ are inverses of each other and $f(a)=c$, $f(b)=d$, what is $\\int_a^b f(x)\\,dx+\\int_c^d g(y)\\,dy$?",
+       "यदि $f(x)$ तथा $g(x)$ एक-दूसरे के प्रतिलोम हैं तथा $f(a)=c$, $f(b)=d$, तो $\\int_a^b f(x)\\,dx+\\int_c^d g(y)\\,dy$ क्या है?"
+      ],
+      "a": [
+       "$\\int_a^b f(x)\\,dx+\\int_c^d g(y)\\,dy=bd-ac$",
+       [
+        "Proof: put $y=f(x)$ in the second integral and use parts. Use it when one of the two integrals has no easy antiderivative.",
+        "उपपत्ति: दूसरे समाकल में $y=f(x)$ रखें और खण्डशः लगाएँ। इसका उपयोग तब करें जब किसी एक समाकल का प्रतिअवकलज सरल न हो।"
+       ],
+       [
+        "Ex: $\\int_1^e\\ln x\\,dx+\\int_0^1e^y\\,dy=e\\cdot1-1\\cdot0=e$.",
+        "उदा: $\\int_1^e\\ln x\\,dx+\\int_0^1e^y\\,dy=e\\cdot1-1\\cdot0=e$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the value of $\\int_0^{\\pi/2}\\sin^n x\\,dx$ and $\\int_0^{\\pi/2}\\cos^n x\\,dx$ if $n=1,2,3,4$?",
+       "$n=1,2,3,4$ के लिए $\\int_0^{\\pi/2}\\sin^n x\\,dx$ तथा $\\int_0^{\\pi/2}\\cos^n x\\,dx$ का मान क्या है?"
+      ],
+      "a": [
+       [
+        "Both are equal (king property): $1,\\ \\dfrac\\pi4,\\ \\dfrac23,\\ \\dfrac{3\\pi}{16}$ for $n=1,2,3,4$.",
+        "दोनों बराबर हैं (किंग गुणधर्म): $n=1,2,3,4$ के लिए $1,\\ \\dfrac\\pi4,\\ \\dfrac23,\\ \\dfrac{3\\pi}{16}$।"
+       ],
+       [
+        "For larger $n$ use Wallis ({#38}).",
+        "बड़े $n$ के लिए वालिस ({#38}) लगाएँ।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute if the limits are reciprocals of each other?",
+       "यदि सीमाएँ एक-दूसरे की व्युत्क्रम हों तो क्या प्रतिस्थापन करें?"
+      ],
+      "a": [
+       [
+        "Put $x=\\dfrac1t$ (also when the limits are $0$ and $\\infty$), then add the new form to the old one.",
+        "$x=\\dfrac1t$ रखें (सीमाएँ $0$ तथा $\\infty$ हों तब भी), फिर नए रूप को पुराने में जोड़ें।"
+       ],
+       [
+        "Ex: $\\int_{1/2}^{2}\\dfrac{\\ln x}{1+x^2}dx$: $x=\\frac1t$ gives $I=-I$, so $I=0$.",
+        "उदा: $\\int_{1/2}^{2}\\dfrac{\\ln x}{1+x^2}dx$: $x=\\frac1t$ से $I=-I$, अतः $I=0$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 2 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 2",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What will be the effect on the value of a definite integral if the limits are interchanged?",
+       "सीमाएँ परस्पर बदलने पर निश्चित समाकल के मान पर क्या प्रभाव होगा?"
+      ],
+      "a": [
+       "$\\int_a^b f(x)\\,dx=-\\int_b^a f(x)\\,dx$",
+       [
+        "Only the sign changes. (P1: the variable of integration is a dummy, $\\int_a^b f(x)\\,dx=\\int_a^b f(t)\\,dt$.)",
+        "केवल चिह्न बदलता है। (P1: समाकलन का चर कृत्रिम है, $\\int_a^b f(x)\\,dx=\\int_a^b f(t)\\,dt$।)"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 3 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 3",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write property 3.",
+       "गुणधर्म 3 लिखिए।"
+      ],
+      "a": [
+       "$\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx$",
+       [
+        "$c$ need not lie between $a$ and $b$.",
+        "$c$ का $a$ तथा $b$ के बीच होना आवश्यक नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "In which type of definite integrals can P3 be used?",
+       "किस प्रकार के निश्चित समाकलों में P3 का उपयोग होता है?"
+      ],
+      "a": [
+       [
+        "Non-uniform or discontinuous integrands: modulus, $[x]$, $\\{x\\}$, max/min, piecewise functions. Break the interval at the points where the formula changes (zeros inside $|\\ |$, integer values inside $[\\ ]$).",
+        "असमान या असतत समाकल्य: मापांक, $[x]$, $\\{x\\}$, अधिकतम/न्यूनतम, खण्डशः परिभाषित फलन। अन्तराल को उन बिन्दुओं पर तोड़ें जहाँ सूत्र बदलता है ($|\\ |$ के अन्दर के शून्यक, $[\\ ]$ के अन्दर पूर्णांक मान)।"
+       ],
+       [
+        "Ex: $\\int_0^2[x^2]\\,dx=\\int_1^{\\sqrt2}1\\,dx+\\int_{\\sqrt2}^{\\sqrt3}2\\,dx+\\int_{\\sqrt3}^{2}3\\,dx=5-\\sqrt2-\\sqrt3$.",
+        "उदा: $\\int_0^2[x^2]\\,dx=\\int_1^{\\sqrt2}1\\,dx+\\int_{\\sqrt2}^{\\sqrt3}2\\,dx+\\int_{\\sqrt3}^{2}3\\,dx=5-\\sqrt2-\\sqrt3$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "If $f(y)$ is a non-negative continuous function such that $f(y)+f\\left(y+\\frac12\\right)=7\\ \\forall\\,y\\ge0$, find $\\int_0^5 f(y)\\,dy$.",
+       "यदि $f(y)$ एक ऋणेतर सतत फलन है जिसके लिए $f(y)+f\\left(y+\\frac12\\right)=7\\ \\forall\\,y\\ge0$, तो $\\int_0^5 f(y)\\,dy$ ज्ञात कीजिए।"
+      ],
+      "a": [
+       [
+        "Split $[0,5]$ into pieces of length $\\frac12$ (P3). In $\\int_{1/2}^{1}f(y)\\,dy$ put $y=t+\\frac12$: it becomes $\\int_0^{1/2}(7-f(t))\\,dt$. So each pair of neighbouring pieces gives $\\frac72$.",
+        "$[0,5]$ को $\\frac12$ लम्बाई के भागों में तोड़ें (P3)। $\\int_{1/2}^{1}f(y)\\,dy$ में $y=t+\\frac12$ रखें: यह $\\int_0^{1/2}(7-f(t))\\,dt$ बनता है। अतः प्रत्येक दो पड़ोसी भागों का योग $\\frac72$ है।"
+       ],
+       "$\\int_0^5 f(y)\\,dy=5\\times\\dfrac72=\\dfrac{35}{2}$"
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 4 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 4",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the property of definite integrals related to odd and even functions.",
+       "विषम तथा सम फलनों से सम्बन्धित निश्चित समाकलों का गुणधर्म लिखिए।"
+      ],
+      "a": [
+       "$\\int_{-a}^{a}f(x)\\,dx=\\int_0^a[f(x)+f(-x)]\\,dx=\\begin{cases}2\\int_0^a f(x)\\,dx, & f\\text{ even}\\\\ 0, & f\\text{ odd}\\end{cases}$",
+       [
+        "Valid for discontinuous functions too. Split any integrand into even part $+$ odd part; the odd part contributes $0$.",
+        "असतत फलनों के लिए भी मान्य। किसी भी समाकल्य को सम भाग $+$ विषम भाग में तोड़ें; विषम भाग का योगदान $0$ है।"
+       ],
+       [
+        "Ex: $\\int_{-\\pi/2}^{\\pi/2}\\cos^2x\\,dx=2\\int_0^{\\pi/2}\\cos^2x\\,dx=\\dfrac\\pi2$.",
+        "उदा: $\\int_{-\\pi/2}^{\\pi/2}\\cos^2x\\,dx=2\\int_0^{\\pi/2}\\cos^2x\\,dx=\\dfrac\\pi2$।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the pattern of limits when the odd and even property of definite integrals is used?",
+       "विषम-सम गुणधर्म का उपयोग होने पर सीमाओं का प्रारूप क्या होता है?"
+      ],
+      "a": [
+       [
+        "Limits $-a$ to $a$ (opposite signs). If the limits are symmetric about $c$ (e.g. $c-a$ to $c+a$), shift $x-c=t$ first. If $f$ is neither odd nor even, use $\\int_0^a[f(x)+f(-x)]dx$.",
+        "सीमाएँ $-a$ से $a$ (विपरीत चिह्न)। यदि सीमाएँ $c$ के सापेक्ष सममित हों (जैसे $c-a$ से $c+a$), तो पहले $x-c=t$ रखें। यदि $f$ न सम हो न विषम, तो $\\int_0^a[f(x)+f(-x)]dx$ लें।"
+       ],
+       [
+        "Ex: $\\int_{-\\pi}^{\\pi}\\dfrac{\\cos^2x}{1+3^x}dx=\\int_0^{\\pi}\\cos^2x\\,dx=\\dfrac\\pi2$ (because $\\frac1{1+3^x}+\\frac1{1+3^{-x}}=1$).",
+        "उदा: $\\int_{-\\pi}^{\\pi}\\dfrac{\\cos^2x}{1+3^x}dx=\\int_0^{\\pi}\\cos^2x\\,dx=\\dfrac\\pi2$ (क्योंकि $\\frac1{1+3^x}+\\frac1{1+3^{-x}}=1$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 5 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 5",
+    "items": [
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write King property.",
+       "किंग गुणधर्म लिखिए।"
+      ],
+      "a": [
+       "$\\int_a^b f(x)\\,dx=\\int_a^b f(a+b-x)\\,dx$;  in particular $\\int_0^a f(x)\\,dx=\\int_0^a f(a-x)\\,dx$",
+       [
+        "Proof: put $x=a+b-t$. Valid for discontinuous functions too.",
+        "उपपत्ति: $x=a+b-t$ रखें। असतत फलनों के लिए भी मान्य।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi/2}\\sin^2x\\,dx=\\int_0^{\\pi/2}\\cos^2x\\,dx$; adding, $2I=\\dfrac\\pi2$, $I=\\dfrac\\pi4$.",
+        "उदा: $\\int_0^{\\pi/2}\\sin^2x\\,dx=\\int_0^{\\pi/2}\\cos^2x\\,dx$; जोड़ने पर $2I=\\dfrac\\pi2$, $I=\\dfrac\\pi4$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do while applying King property on definite integrals?",
+       "निश्चित समाकलों पर किंग गुणधर्म लगाते समय क्या करें?"
+      ],
+      "a": [
+       [
+        "Write $I$ with $x$ replaced by $a+b-x$ (limits unchanged), then add (or subtract) the two forms so that the integrand simplifies; after that, evaluate the simpler integral.",
+        "$I$ में $x$ के स्थान पर $a+b-x$ लिखें (सीमाएँ वही), फिर दोनों रूपों को जोड़ें (या घटाएँ) ताकि समाकल्य सरल हो जाए; इसके बाद सरल समाकल का मान निकालें।"
+       ],
+       [
+        "Ex: $I=\\int_0^{\\pi/2}\\dfrac{\\sin^3x}{\\sin^3x+\\cos^3x}dx$; king and add: $2I=\\int_0^{\\pi/2}dx$, $I=\\dfrac\\pi4$.",
+        "उदा: $I=\\int_0^{\\pi/2}\\dfrac{\\sin^3x}{\\sin^3x+\\cos^3x}dx$; किंग लगाकर जोड़ें: $2I=\\int_0^{\\pi/2}dx$, $I=\\dfrac\\pi4$।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "In which type of definite integrals can King property be used?",
+       "किस प्रकार के निश्चित समाकलों में किंग गुणधर्म का उपयोग होता है?"
+      ],
+      "a": [
+       "$\\int_a^b\\dfrac{f(x)}{f(x)+f(a+b-x)}dx=\\dfrac{b-a}{2}$",
+       [
+        "When the denominator stays the same after king (e.g. $\\sin^n x+\\cos^n x$, $\\sqrt x+\\sqrt{a+b-x}$, $1+\\tan^k x$), and in $\\ln(1+\\tan x)$-type integrands.",
+        "जब किंग के बाद हर वही रहे (जैसे $\\sin^n x+\\cos^n x$, $\\sqrt x+\\sqrt{a+b-x}$, $1+\\tan^k x$), तथा $\\ln(1+\\tan x)$ प्रकार के समाकल्यों में।"
+       ],
+       [
+        "Ex: $\\int_2^4\\dfrac{\\sqrt x}{\\sqrt x+\\sqrt{6-x}}dx=\\dfrac{4-2}{2}=1$.",
+        "उदा: $\\int_2^4\\dfrac{\\sqrt x}{\\sqrt x+\\sqrt{6-x}}dx=\\dfrac{4-2}{2}=1$।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What is the condition on $f(x)$ when we apply king on $\\int_a^b x\\,f(x)\\,dx$?",
+       "$\\int_a^b x\\,f(x)\\,dx$ पर किंग लगाते समय $f(x)$ पर क्या शर्त है?"
+      ],
+      "a": [
+       "$f(a+b-x)=f(x)\\ \\Rightarrow\\ \\int_a^b x\\,f(x)\\,dx=\\dfrac{a+b}{2}\\int_a^b f(x)\\,dx$",
+       [
+        "Typical: $\\int_0^{\\pi}x\\,f(\\sin x)\\,dx=\\dfrac\\pi2\\int_0^{\\pi}f(\\sin x)\\,dx$.",
+        "प्रायः: $\\int_0^{\\pi}x\\,f(\\sin x)\\,dx=\\dfrac\\pi2\\int_0^{\\pi}f(\\sin x)\\,dx$।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi}x\\sin x\\,dx=\\dfrac\\pi2\\int_0^{\\pi}\\sin x\\,dx=\\pi$.",
+        "उदा: $\\int_0^{\\pi}x\\sin x\\,dx=\\dfrac\\pi2\\int_0^{\\pi}\\sin x\\,dx=\\pi$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 6 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 6",
+    "items": [
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write Queen property.",
+       "क्वीन गुणधर्म लिखिए।"
+      ],
+      "a": [
+       "$\\int_0^{2a}f(x)\\,dx=\\int_0^a[f(x)+f(2a-x)]\\,dx=\\begin{cases}2\\int_0^a f(x)\\,dx, & f(2a-x)=f(x)\\\\ 0, & f(2a-x)=-f(x)\\end{cases}$",
+       [
+        "Ex: $\\int_0^{\\pi}\\sin^4x\\,dx=2\\int_0^{\\pi/2}\\sin^4x\\,dx=2\\cdot\\dfrac{3\\pi}{16}=\\dfrac{3\\pi}{8}$.",
+        "उदा: $\\int_0^{\\pi}\\sin^4x\\,dx=2\\int_0^{\\pi/2}\\sin^4x\\,dx=2\\cdot\\dfrac{3\\pi}{16}=\\dfrac{3\\pi}{8}$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the limitation while applying Queen property on definite integrals?",
+       "निश्चित समाकलों पर क्वीन गुणधर्म लगाते समय क्या सीमा (बन्धन) है?"
+      ],
+      "a": [
+       [
+        "The lower limit must be $0$ (if not, shift $x=t+a$ first or use king). It only reduces the upper limit to half.",
+        "निम्न सीमा $0$ होनी चाहिए (अन्यथा पहले $x=t+a$ से खिसकाएँ या किंग लगाएँ)। यह केवल ऊपरी सीमा को आधा करता है।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "In which type of definite integrals can Queen property be used?",
+       "किस प्रकार के निश्चित समाकलों में क्वीन गुणधर्म का उपयोग होता है?"
+      ],
+      "a": [
+       [
+        "When $f(2a-x)=\\pm f(x)$: powers and products of $\\sin x$, $\\cos x$ over $[0,\\pi]$ or $[0,2\\pi]$, $|\\sin x|$, $|\\cos x|$; apply it repeatedly to reach $[0,\\frac\\pi2]$.",
+        "जब $f(2a-x)=\\pm f(x)$: $[0,\\pi]$ या $[0,2\\pi]$ पर $\\sin x$, $\\cos x$ की घातें व गुणनफल, $|\\sin x|$, $|\\cos x|$; बार-बार लगाकर $[0,\\frac\\pi2]$ तक पहुँचें।"
+       ],
+       [
+        "Ex: $\\int_0^{2\\pi}\\sin^5x\\cos^4x\\,dx=0$, because $f(2\\pi-x)=-f(x)$.",
+        "उदा: $\\int_0^{2\\pi}\\sin^5x\\cos^4x\\,dx=0$, क्योंकि $f(2\\pi-x)=-f(x)$।"
+       ]
+      ]
+     },
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How will we identify when to apply Queen property in definite integrals?",
+       "निश्चित समाकलों में क्वीन गुणधर्म कब लगाना है, यह कैसे पहचानें?"
+      ],
+      "a": [
+       [
+        "Lower limit $0$, upper limit $\\pi$, $2\\pi$ (any $2a$) and the integrand built from $\\sin x$, $\\cos x$, so that we need to reduce the upper limit to $\\frac\\pi2$ and then use Wallis or king.",
+        "निम्न सीमा $0$, ऊपरी सीमा $\\pi$, $2\\pi$ (कोई भी $2a$) तथा समाकल्य $\\sin x$, $\\cos x$ से बना हो, ताकि ऊपरी सीमा को $\\frac\\pi2$ तक घटाकर वालिस या किंग लगाया जा सके।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi}|\\cos x|\\,dx=2\\int_0^{\\pi/2}\\cos x\\,dx=2$.",
+        "उदा: $\\int_0^{\\pi}|\\cos x|\\,dx=2\\int_0^{\\pi/2}\\cos x\\,dx=2$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the result of $\\int_0^{\\pi/2}\\ln(\\sin x)\\,dx$.",
+       "$\\int_0^{\\pi/2}\\ln(\\sin x)\\,dx$ का परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\int_0^{\\pi/2}\\ln(\\sin x)\\,dx=\\int_0^{\\pi/2}\\ln(\\cos x)\\,dx=-\\dfrac\\pi2\\ln2$",
+       [
+        "Proof: king, add, $\\sin x\\cos x=\\frac12\\sin2x$, then queen.",
+        "उपपत्ति: किंग, जोड़ें, $\\sin x\\cos x=\\frac12\\sin2x$, फिर क्वीन।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi/4}\\ln(1+\\tan x)\\,dx=\\dfrac\\pi8\\ln2$ (king gives $\\ln\\frac{2}{1+\\tan x}$).",
+        "उदा: $\\int_0^{\\pi/4}\\ln(1+\\tan x)\\,dx=\\dfrac\\pi8\\ln2$ (किंग से $\\ln\\frac{2}{1+\\tan x}$)।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Property 7 of Definite Integral",
+    "hi": "निश्चित समाकल का गुणधर्म 7",
+    "items": [
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to apply the property of periodic functions in definite integrals?",
+       "निश्चित समाकलों में आवर्ती फलनों का गुणधर्म कैसे लगाएँ?"
+      ],
+      "a": [
+       "$f(x+T)=f(x)$:  $\\int_0^{nT}f=n\\int_0^{T}f$,  $\\int_a^{a+nT}f=n\\int_0^{T}f$,  $\\int_{mT}^{nT}f=(n-m)\\int_0^{T}f$,  $\\int_{nT}^{a+nT}f=\\int_0^{a}f$",
+       [
+        "Find the period ($|\\sin x|$: $\\pi$; $\\{x\\}$: $1$), take out whole periods, and integrate the remaining part separately.",
+        "आवर्तकाल ज्ञात करें ($|\\sin x|$: $\\pi$; $\\{x\\}$: $1$), पूरे आवर्त बाहर निकालें, तथा बचे हुए भाग का अलग से समाकलन करें।"
+       ],
+       [
+        "Ex: $\\int_0^{16\\pi/3}|\\sin x|\\,dx=5\\int_0^{\\pi}|\\sin x|\\,dx+\\int_0^{\\pi/3}\\sin x\\,dx=10+\\dfrac12=\\dfrac{21}{2}$.",
+        "उदा: $\\int_0^{16\\pi/3}|\\sin x|\\,dx=5\\int_0^{\\pi}|\\sin x|\\,dx+\\int_0^{\\pi/3}\\sin x\\,dx=10+\\dfrac12=\\dfrac{21}{2}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Differentiation of Integration",
+    "hi": "समाकलन का अवकलन",
+    "items": [
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to differentiate an indefinite integral?",
+       "अनिश्चित समाकल का अवकलन कैसे करें?"
+      ],
+      "a": [
+       "$\\dfrac{d}{dx}\\int f(x)\\,dx=f(x)$",
+       [
+        "No need to integrate first; also $\\dfrac{d}{dx}\\int_a^x f(t)\\,dt=f(x)$ for constant $a$.",
+        "पहले समाकलन की आवश्यकता नहीं; अचर $a$ के लिए $\\dfrac{d}{dx}\\int_a^x f(t)\\,dt=f(x)$ भी।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to differentiate a definite integral (Leibnitz rule), and prove it.",
+       "निश्चित समाकल का अवकलन कैसे करें (लैबनिट्ज़ नियम), तथा सिद्ध कीजिए।"
+      ],
+      "a": [
+       "$\\dfrac{d}{dx}\\int_{g(x)}^{h(x)}f(t)\\,dt=f(h(x))\\,h'(x)-f(g(x))\\,g'(x)$",
+       [
+        "Proof: with $P'(t)=f(t)$, $\\int_{g}^{h}f=P(h(x))-P(g(x))$; differentiate by the chain rule ($f$ continuous).",
+        "उपपत्ति: $P'(t)=f(t)$ लेकर $\\int_{g}^{h}f=P(h(x))-P(g(x))$; शृंखला नियम से अवकलन करें ($f$ सतत)।"
+       ],
+       [
+        "Ex: $F(x)=\\int_x^{x^2}\\ln t\\,dt\\Rightarrow F'(x)=2x\\ln x^2-\\ln x=(4x-1)\\ln x$.",
+        "उदा: $F(x)=\\int_x^{x^2}\\ln t\\,dt\\Rightarrow F'(x)=2x\\ln x^2-\\ln x=(4x-1)\\ln x$।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while applying Leibnitz rule?",
+       "लैबनिट्ज़ नियम लगाते समय किन बातों का ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "The integrand must be free of $x$: take $x$ outside (e.g. $\\int_0^x(x-t)f(t)dt=x\\int_0^x f-\\int_0^x tf$) or substitute so that $x$ goes into the limits. For $\\frac00$ limits containing $\\int_0^{g(x)}$, use L'Hospital with Leibnitz.",
+        "समाकल्य $x$ से मुक्त होना चाहिए: $x$ को बाहर निकालें (जैसे $\\int_0^x(x-t)f(t)dt=x\\int_0^x f-\\int_0^x tf$) या ऐसा प्रतिस्थापन करें कि $x$ सीमाओं में चला जाए। $\\int_0^{g(x)}$ वाली $\\frac00$ सीमाओं में लैबनिट्ज़ सहित लोपिताल लगाएँ।"
+       ],
+       [
+        "Ex: $\\lim\\limits_{x\\to0}\\dfrac{\\int_0^{x^2}\\sin\\sqrt t\\,dt}{x^3}=\\lim\\limits_{x\\to0}\\dfrac{2x\\sin x}{3x^2}=\\dfrac23$.",
+        "उदा: $\\lim\\limits_{x\\to0}\\dfrac{\\int_0^{x^2}\\sin\\sqrt t\\,dt}{x^3}=\\lim\\limits_{x\\to0}\\dfrac{2x\\sin x}{3x^2}=\\dfrac23$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Determination of Function",
+    "hi": "फलन का निर्धारण",
+    "items": [
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve questions on determination of a function if an identity involving a definite integral is given?",
+       "निश्चित समाकल वाली सर्वसमिका दी हो तो फलन निर्धारण के प्रश्न कैसे हल करें?"
+      ],
+      "a": [
+       [
+        "Constant limits: $\\int_a^b f(t)\\,dt$ is a constant $k$ (or $A\\sin x+B\\cos x$ type after expanding); assume it, put back and solve for $k$. Variable limits: differentiate (Leibnitz) to get a differential equation; the starting value comes from putting the lower limit.",
+        "अचर सीमाएँ: $\\int_a^b f(t)\\,dt$ एक अचर $k$ है (या प्रसार के बाद $A\\sin x+B\\cos x$ प्रकार); इसे मानकर वापस रखें और $k$ ज्ञात करें। चर सीमाएँ: अवकलन (लैबनिट्ज़) करके अवकल समीकरण बनाएँ; प्रारम्भिक मान निम्न सीमा रखने से मिलता है।"
+       ],
+       [
+        "Ex: $f(x)=x+\\int_0^1 tf(t)\\,dt$: $f=x+k$, $k=\\int_0^1t(t+k)dt=\\frac13+\\frac k2\\Rightarrow k=\\frac23$, $f(x)=x+\\frac23$.",
+        "उदा: $f(x)=x+\\int_0^1 tf(t)\\,dt$: $f=x+k$, $k=\\int_0^1t(t+k)dt=\\frac13+\\frac k2\\Rightarrow k=\\frac23$, $f(x)=x+\\frac23$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Definite Integral as a Limit of Sum",
+    "hi": "योग की सीमा के रूप में निश्चित समाकल",
+    "items": [
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to convert an expression given in sigma form to integral form?",
+       "सिग्मा रूप में दिए व्यंजक को समाकल रूप में कैसे बदलें?"
+      ],
+      "a": [
+       "$\\lim\\limits_{n\\to\\infty}\\dfrac1n\\sum_{r=0}^{n-1}f\\left(\\dfrac rn\\right)=\\int_0^1 f(x)\\,dx$",
+       [
+        "Write the general term as $\\frac1n f\\left(\\frac rn\\right)$ (take out the highest power of $n$); replace $\\lim\\sum$ by $\\int$, $\\frac rn$ by $x$, $\\frac1n$ by $dx$.",
+        "व्यापक पद को $\\frac1n f\\left(\\frac rn\\right)$ के रूप में लिखें ($n$ की उच्चतम घात बाहर निकालें); $\\lim\\sum$ के स्थान पर $\\int$, $\\frac rn$ के स्थान पर $x$, $\\frac1n$ के स्थान पर $dx$ लिखें।"
+       ],
+       [
+        "Ex: $\\lim\\limits_{n\\to\\infty}\\sum_{r=1}^{n}\\dfrac{n}{n^2+r^2}=\\int_0^1\\dfrac{dx}{1+x^2}=\\dfrac\\pi4$.",
+        "उदा: $\\lim\\limits_{n\\to\\infty}\\sum_{r=1}^{n}\\dfrac{n}{n^2+r^2}=\\int_0^1\\dfrac{dx}{1+x^2}=\\dfrac\\pi4$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to compute the upper and lower limits while converting?",
+       "बदलते समय ऊपरी तथा निम्न सीमाएँ कैसे ज्ञात करें?"
+      ],
+      "a": [
+       [
+        "Lower limit $=\\lim\\frac rn$ at the first value of $r$, upper limit $=\\lim\\frac rn$ at the last value: $r=1$ to $n$ gives $0$ to $1$; $r=1$ to $pn$ gives $0$ to $p$.",
+        "निम्न सीमा $=r$ के प्रथम मान पर $\\lim\\frac rn$, ऊपरी सीमा $=$ अन्तिम मान पर $\\lim\\frac rn$: $r=1$ से $n$ तक से $0$ से $1$; $r=1$ से $pn$ तक से $0$ से $p$।"
+       ],
+       [
+        "Ex: $\\lim\\limits_{n\\to\\infty}\\sum_{r=1}^{2n}\\dfrac{1}{n+r}=\\int_0^2\\dfrac{dx}{1+x}=\\ln3$.",
+        "उदा: $\\lim\\limits_{n\\to\\infty}\\sum_{r=1}^{2n}\\dfrac{1}{n+r}=\\int_0^2\\dfrac{dx}{1+x}=\\ln3$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do if the expression is given in the form of a continued product?",
+       "यदि व्यंजक सतत गुणनफल के रूप में दिया हो तो क्या करें?"
+      ],
+      "a": [
+       [
+        "Put the limit $=L$ and take $\\ln$: the product becomes a sum $\\frac1n\\sum\\ln f\\left(\\frac rn\\right)$, so $\\ln L=\\int_0^1\\ln f(x)\\,dx$.",
+        "सीमा $=L$ मानकर $\\ln$ लें: गुणनफल योग $\\frac1n\\sum\\ln f\\left(\\frac rn\\right)$ बन जाता है, अतः $\\ln L=\\int_0^1\\ln f(x)\\,dx$।"
+       ],
+       [
+        "Ex: $\\lim\\limits_{n\\to\\infty}\\left(\\dfrac{(n+1)(n+2)\\cdots(2n)}{n^n}\\right)^{1/n}=e^{\\int_0^1\\ln(1+x)dx}=\\dfrac4e$.",
+        "उदा: $\\lim\\limits_{n\\to\\infty}\\left(\\dfrac{(n+1)(n+2)\\cdots(2n)}{n^n}\\right)^{1/n}=e^{\\int_0^1\\ln(1+x)dx}=\\dfrac4e$।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "For a finite $n$, how to check the order among $\\dfrac1n\\sum_{r=0}^{n-1}f\\left(\\dfrac rn\\right)$, $\\int_0^1 f(x)\\,dx$ and $\\dfrac1n\\sum_{r=1}^{n}f\\left(\\dfrac rn\\right)$?",
+       "परिमित $n$ के लिए $\\dfrac1n\\sum_{r=0}^{n-1}f\\left(\\dfrac rn\\right)$, $\\int_0^1 f(x)\\,dx$ तथा $\\dfrac1n\\sum_{r=1}^{n}f\\left(\\dfrac rn\\right)$ का क्रम कैसे जाँचें?"
+      ],
+      "a": [
+       [
+        "These are left rectangles $Q$, area $P$, right rectangles $R$. $f$ increasing: $Q<P<R$; $f$ decreasing: $R<P<Q$.",
+        "ये बाएँ आयत $Q$, क्षेत्रफल $P$, दाएँ आयत $R$ हैं। $f$ वर्धमान: $Q<P<R$; $f$ ह्रासमान: $R<P<Q$।"
+       ],
+       [
+        "Ex: $f=x^2$, $n=2$: $\\frac18<\\frac13<\\frac58$.",
+        "उदा: $f=x^2$, $n=2$: $\\frac18<\\frac13<\\frac58$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Definite Integration by Estimation",
+    "hi": "आकलन द्वारा निश्चित समाकलन",
+    "items": [
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to estimate a definite integral with the help of monotonicity?",
+       "एकदिष्टता की सहायता से निश्चित समाकल का आकलन कैसे करें?"
+      ],
+      "a": [
+       "$f$ increasing on $[a,b]$: $(b-a)f(a)<\\int_a^b f(x)\\,dx<(b-a)f(b)$ (reverse for decreasing)",
+       [
+        "Non-monotonic: $(b-a)\\cdot\\min f\\le\\int_a^b f\\le(b-a)\\cdot\\max f$ (find max/min by derivative).",
+        "अ-एकदिष्ट: $(b-a)\\cdot\\min f\\le\\int_a^b f\\le(b-a)\\cdot\\max f$ (अवकलज से अधिकतम/न्यूनतम)।"
+       ],
+       [
+        "Ex: $e^{x^2}$ increases on $[0,1]$, so $1<\\int_0^1e^{x^2}dx<e$.",
+        "उदा: $[0,1]$ पर $e^{x^2}$ वर्धमान है, अतः $1<\\int_0^1e^{x^2}dx<e$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to estimate a definite integral with the help of concavity?",
+       "अवतलता की सहायता से निश्चित समाकल का आकलन कैसे करें?"
+      ],
+      "a": [
+       "Concave up: $(b-a)\\,f\\left(\\dfrac{a+b}{2}\\right)<\\int_a^b f(x)\\,dx<(b-a)\\,\\dfrac{f(a)+f(b)}{2}$ (reverse for concave down)",
+       [
+        "The chord (trapezium) lies above a concave-up curve, the tangent at the midpoint lies below it.",
+        "अवतल-ऊपर वक्र के ऊपर जीवा (समलम्ब) तथा नीचे मध्य-बिन्दु की स्पर्श रेखा होती है।"
+       ],
+       [
+        "Ex: $e^x$ on $[0,1]$: $e^{1/2}\\approx1.649<e-1\\approx1.718<\\dfrac{1+e}{2}\\approx1.859$.",
+        "उदा: $[0,1]$ पर $e^x$: $e^{1/2}\\approx1.649<e-1\\approx1.718<\\dfrac{1+e}{2}\\approx1.859$।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to estimate a definite integral by splitting the interval into two or more parts?",
+       "अन्तराल को दो या अधिक भागों में बाँटकर निश्चित समाकल का आकलन कैसे करें?"
+      ],
+      "a": [
+       "$\\int_a^b f(x)\\,dx\\approx\\dfrac{b-a}{4}\\left[f(a)+2f\\left(\\dfrac{a+b}{2}\\right)+f(b)\\right]$",
+       [
+        "Apply the bounds of {#34} / {#35} on each part and add; more parts give a sharper estimate (the formula above uses the midpoint).",
+        "प्रत्येक भाग पर {#34} / {#35} की सीमाएँ लगाकर जोड़ें; अधिक भागों से आकलन अधिक सटीक होता है (उपरोक्त सूत्र मध्य-बिन्दु लेता है)।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi/2}\\sin x\\,dx\\approx\\dfrac\\pi8\\left(0+\\sqrt2+1\\right)\\approx0.948$ (exact value $1$).",
+        "उदा: $\\int_0^{\\pi/2}\\sin x\\,dx\\approx\\dfrac\\pi8\\left(0+\\sqrt2+1\\right)\\approx0.948$ (वास्तविक मान $1$)।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to estimate a definite integral by assumption of functions?",
+       "फलनों की कल्पना (तुलना) द्वारा निश्चित समाकल का आकलन कैसे करें?"
+      ],
+      "a": [
+       "$f_1(x)\\le f(x)\\le f_2(x)$ on $[a,b]\\Rightarrow\\int_a^b f_1\\le\\int_a^b f\\le\\int_a^b f_2$;  $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$",
+       [
+        "Compare with an easy function: on $(0,1)$, $x^3<x^2$; $\\sin x<x$; $1+x<e^x$; $\\sqrt{1-x^2}\\ge1-x^2$, etc.",
+        "किसी सरल फलन से तुलना करें: $(0,1)$ पर $x^3<x^2$; $\\sin x<x$; $1+x<e^x$; $\\sqrt{1-x^2}\\ge1-x^2$, आदि।"
+       ],
+       [
+        "Ex: on $(0,1)$, $2^{x^3}<2^{x^2}$, so $\\int_0^1 2^{x^3}dx<\\int_0^1 2^{x^2}dx$.",
+        "उदा: $(0,1)$ पर $2^{x^3}<2^{x^2}$, अतः $\\int_0^1 2^{x^3}dx<\\int_0^1 2^{x^2}dx$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Walli's Theorem",
+    "hi": "वालिस प्रमेय",
+    "items": [
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write Walli's Theorem and use it in some basic examples.",
+       "वालिस प्रमेय लिखिए तथा कुछ मूल उदाहरणों में उपयोग कीजिए।"
+      ],
+      "a": [
+       "$\\int_0^{\\pi/2}\\sin^n x\\cos^m x\\,dx=\\dfrac{[(n-1)(n-3)\\cdots][(m-1)(m-3)\\cdots]}{(m+n)(m+n-2)\\cdots}\\cdot K$",
+       [
+        "Each product stops at $1$ or $2$; $K=\\dfrac\\pi2$ if $m$ and $n$ are both even, otherwise $K=1$. With $m=0$: $\\int_0^{\\pi/2}\\sin^n x\\,dx$.",
+        "प्रत्येक गुणनफल $1$ या $2$ पर रुकता है; यदि $m$ तथा $n$ दोनों सम हों तो $K=\\dfrac\\pi2$, अन्यथा $K=1$। $m=0$ लेने पर $\\int_0^{\\pi/2}\\sin^n x\\,dx$।"
+       ],
+       [
+        "Ex: $\\int_0^{\\pi/2}\\sin^4x\\cos^6x\\,dx=\\dfrac{(3\\cdot1)(5\\cdot3\\cdot1)}{10\\cdot8\\cdot6\\cdot4\\cdot2}\\cdot\\dfrac\\pi2=\\dfrac{3\\pi}{512}$.",
+        "उदा: $\\int_0^{\\pi/2}\\sin^4x\\cos^6x\\,dx=\\dfrac{(3\\cdot1)(5\\cdot3\\cdot1)}{10\\cdot8\\cdot6\\cdot4\\cdot2}\\cdot\\dfrac\\pi2=\\dfrac{3\\pi}{512}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration by Reduction",
+    "hi": "समानयन द्वारा समाकलन",
+    "items": [
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the basic theme to solve integration by reduction questions?",
+       "समानयन द्वारा समाकलन के प्रश्न हल करने का मूल विचार क्या है?"
+      ],
+      "a": [
+       [
+        "Use parts (often with $1$ as the second function, or split one factor off) to relate $I_n$ to $I_{n-1}$ or $I_{n-2}$; in definite form the boundary term $[uv]_a^b$ often vanishes. Then use the relation repeatedly.",
+        "खण्डशः (प्रायः $1$ को द्वितीय फलन लेकर, या एक गुणनखण्ड अलग करके) से $I_n$ को $I_{n-1}$ या $I_{n-2}$ से जोड़ें; निश्चित रूप में सीमा पद $[uv]_a^b$ प्रायः शून्य हो जाता है। फिर सम्बन्ध को बार-बार लगाएँ।"
+       ],
+       "$\\int_1^e(\\ln x)^n dx:\\ I_n=e-nI_{n-1}$;  $\\int_0^{\\pi/4}\\tan^n x\\,dx:\\ I_n+I_{n-2}=\\dfrac1{n-1}$",
+       [
+        "Ex: $\\int_1^e(\\ln x)^2dx=e-2\\int_1^e\\ln x\\,dx=e-2$.",
+        "उदा: $\\int_1^e(\\ln x)^2dx=e-2\\int_1^e\\ln x\\,dx=e-2$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Meaning and basic rules",
+    "hi": "1. अर्थ तथा मूल नियम",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_a^b f(x)\\,dx=F(b)-F(a)$, where $F'=f$ and $F$ is continuous on $[a,b]$",
+        "$\\int_a^b f(x)\\,dx=F(b)-F(a)$, जहाँ $F'=f$ तथा $F$, $[a,b]$ पर सतत है"
+       ],
+       [
+        "$\\int_a^b f(x)dx=\\int_a^b f(t)dt$,  $\\int_a^b f=-\\int_b^a f$,  $\\int_a^a f=0$",
+        "$\\int_a^b f(x)dx=\\int_a^b f(t)dt$,  $\\int_a^b f=-\\int_b^a f$,  $\\int_a^a f=0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Value $=$ algebraic sum of areas: above the $x$-axis $+$, below $-$",
+        "मान $=$ क्षेत्रफलों का बीजीय योग: $x$-अक्ष के ऊपर $+$, नीचे $-$"
+       ],
+       [
+        "$f\\ge0$ on $[a,b]\\Rightarrow\\int_a^b f\\ge0$; $f$ continuous and $\\int_a^b f=0\\Rightarrow f$ has a root in $(a,b)$",
+        "$[a,b]$ पर $f\\ge0\\Rightarrow\\int_a^b f\\ge0$; $f$ सतत तथा $\\int_a^b f=0\\Rightarrow(a,b)$ में $f$ का एक मूल"
+       ],
+       [
+        "Limit inside the integral: allowed when the limits do not depend on $n$",
+        "सीमा-मान को समाकल के अन्दर: तब मान्य जब सीमाएँ $n$ पर निर्भर न हों"
+       ],
+       [
+        "Parts in definite form: $\\int_a^b uv'\\,dx=\\big[uv\\big]_a^b-\\int_a^b u'v\\,dx$",
+        "निश्चित रूप में खण्डशः: $\\int_a^b uv'\\,dx=\\big[uv\\big]_a^b-\\int_a^b u'v\\,dx$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Antiderivative must not break inside $[a,b]$ ($\\tan x$ at $\\frac\\pi2$, $\\tan\\frac x2$ at $\\pi$, $\\tan^{-1}\\frac1x$ at $0$)",
+        "प्रतिअवकलज $[a,b]$ के अन्दर असतत न हो ($\\frac\\pi2$ पर $\\tan x$, $\\pi$ पर $\\tan\\frac x2$, $0$ पर $\\tan^{-1}\\frac1x$)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Substitution in definite integrals",
+    "hi": "2. निश्चित समाकलों में प्रतिस्थापन",
+    "color": "teal",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Change the limits with the substitution; do not return to $x$",
+        "प्रतिस्थापन के साथ सीमाएँ बदलें; $x$ पर न लौटें"
+       ],
+       [
+        "Substitution must be continuous and one-one on the whole interval",
+        "प्रतिस्थापन पूरे अन्तराल पर सतत तथा एकैकी हो"
+       ],
+       [
+        "Limits belong to the variable in the differential: $\\int_{\\ln x=0}^{1}x\\,d(\\ln x)=\\int_1^e dx$",
+        "सीमाएँ अवकल वाले चर की होती हैं: $\\int_{\\ln x=0}^{1}x\\,d(\\ln x)=\\int_1^e dx$"
+       ],
+       [
+        "Reciprocal limits ($\\frac1a$ to $a$, or $0$ to $\\infty$): put $x=\\frac1t$ and add",
+        "व्युत्क्रम सीमाएँ ($\\frac1a$ से $a$, या $0$ से $\\infty$): $x=\\frac1t$ रखकर जोड़ें"
+       ],
+       [
+        "Equal new limits $\\Rightarrow$ integral $=0$",
+        "नई सीमाएँ बराबर $\\Rightarrow$ समाकल $=0$"
+       ]
+      ]
+     ],
+     [
+      "formula",
+      [
+       [
+        "Inverse functions: $\\int_a^b f(x)dx+\\int_{f(a)}^{f(b)}f^{-1}(y)dy=b\\,f(b)-a\\,f(a)$",
+        "प्रतिलोम फलन: $\\int_a^b f(x)dx+\\int_{f(a)}^{f(b)}f^{-1}(y)dy=b\\,f(b)-a\\,f(a)$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Values to remember",
+    "hi": "3. याद रखने योग्य मान",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_0^{\\pi/2}\\sin^n x\\,dx=\\int_0^{\\pi/2}\\cos^n x\\,dx=1,\\ \\dfrac\\pi4,\\ \\dfrac23,\\ \\dfrac{3\\pi}{16}$  $(n=1,2,3,4)$",
+        "$\\int_0^{\\pi/2}\\sin^n x\\,dx=\\int_0^{\\pi/2}\\cos^n x\\,dx=1,\\ \\dfrac\\pi4,\\ \\dfrac23,\\ \\dfrac{3\\pi}{16}$  $(n=1,2,3,4)$"
+       ],
+       [
+        "$\\int_0^{\\pi/2}\\ln\\sin x\\,dx=\\int_0^{\\pi/2}\\ln\\cos x\\,dx=-\\dfrac\\pi2\\ln2$,  $\\int_0^{\\pi/4}\\ln(1+\\tan x)dx=\\dfrac\\pi8\\ln2$",
+        "$\\int_0^{\\pi/2}\\ln\\sin x\\,dx=\\int_0^{\\pi/2}\\ln\\cos x\\,dx=-\\dfrac\\pi2\\ln2$,  $\\int_0^{\\pi/4}\\ln(1+\\tan x)dx=\\dfrac\\pi8\\ln2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. P3: splitting the interval",
+    "hi": "4. P3: अन्तराल का विभाजन",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_a^b f=\\int_a^c f+\\int_c^b f$  ($c$ anywhere)",
+        "$\\int_a^b f=\\int_a^c f+\\int_c^b f$  ($c$ कहीं भी)"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Find the break points: zeros inside $|\\ |$, integer values inside $[\\ ]$ or $\\{\\ \\}$, points where max/min or the formula changes",
+        "विभाजन बिन्दु ज्ञात करें: $|\\ |$ के अन्दर के शून्यक, $[\\ ]$ या $\\{\\ \\}$ के अन्दर पूर्णांक मान, जहाँ अधिकतम/न्यूनतम या सूत्र बदलता है"
+       ],
+       [
+        "Write the function without $|\\ |$, $[\\ ]$ on each piece",
+        "प्रत्येक भाग पर फलन को $|\\ |$, $[\\ ]$ के बिना लिखें"
+       ],
+       [
+        "Integrate piece by piece and add",
+        "भाग-दर-भाग समाकलन करके जोड़ें"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\int_0^n[x]dx=\\dfrac{n(n-1)}2$,  $\\int_0^n\\{x\\}dx=\\dfrac n2$  ($n\\in\\mathbb N$)",
+        "$\\int_0^n[x]dx=\\dfrac{n(n-1)}2$,  $\\int_0^n\\{x\\}dx=\\dfrac n2$  ($n\\in\\mathbb N$)"
+       ],
+       [
+        "$f(y)+f(y+k)=c$: pieces of length $k$, each pair adds to $ck$",
+        "$f(y)+f(y+k)=c$: $k$ लम्बाई के भाग, प्रत्येक जोड़ी का योग $ck$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. P4: odd and even functions",
+    "hi": "5. P4: विषम तथा सम फलन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_{-a}^{a}f=\\int_0^a[f(x)+f(-x)]dx$;  $=2\\int_0^a f$ (even), $=0$ (odd)",
+        "$\\int_{-a}^{a}f=\\int_0^a[f(x)+f(-x)]dx$;  $=2\\int_0^a f$ (सम), $=0$ (विषम)"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Use when limits are $-a$ to $a$; limits $c\\pm a$: put $x-c=t$ first",
+        "जब सीमाएँ $-a$ से $a$ हों; सीमाएँ $c\\pm a$: पहले $x-c=t$ रखें"
+       ],
+       [
+        "Split into even part $+$ odd part; odd: $x^{2k+1}$, $\\sin x$, $\\tan x$, $\\ln\\frac{1-x}{1+x}$, $\\ln(x+\\sqrt{x^2+1})$",
+        "सम भाग $+$ विषम भाग में तोड़ें; विषम: $x^{2k+1}$, $\\sin x$, $\\tan x$, $\\ln\\frac{1-x}{1+x}$, $\\ln(x+\\sqrt{x^2+1})$"
+       ],
+       [
+        "$\\int_{-a}^{a}\\dfrac{f(x)}{1+b^{x}}dx=\\int_0^a f(x)dx$ for even $f$ (also $\\frac{1}{1+e^{g(x)}}$ with $g$ odd)",
+        "सम $f$ के लिए $\\int_{-a}^{a}\\dfrac{f(x)}{1+b^{x}}dx=\\int_0^a f(x)dx$ (विषम $g$ के साथ $\\frac{1}{1+e^{g(x)}}$ भी)"
+       ],
+       [
+        "$\\int_0^x f(t)dt$ is even if $f$ is odd, and odd if $f$ is even",
+        "यदि $f$ विषम है तो $\\int_0^x f(t)dt$ सम है, तथा $f$ सम हो तो विषम"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. P5: King property",
+    "hi": "6. P5: किंग गुणधर्म",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_a^b f(x)dx=\\int_a^b f(a+b-x)dx$",
+        "$\\int_a^b f(x)dx=\\int_a^b f(a+b-x)dx$"
+       ],
+       [
+        "$\\int_a^b\\dfrac{f(x)}{f(x)+f(a+b-x)}dx=\\dfrac{b-a}2$;  $f(a+b-x)=f(x)\\Rightarrow\\int_a^b xf(x)dx=\\dfrac{a+b}2\\int_a^b f(x)dx$",
+        "$\\int_a^b\\dfrac{f(x)}{f(x)+f(a+b-x)}dx=\\dfrac{b-a}2$;  $f(a+b-x)=f(x)\\Rightarrow\\int_a^b xf(x)dx=\\dfrac{a+b}2\\int_a^b f(x)dx$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Replace $x$ by $a+b-x$ (limits unchanged)",
+        "$x$ के स्थान पर $a+b-x$ रखें (सीमाएँ वही)"
+       ],
+       [
+        "Add (or subtract) the two forms of $I$",
+        "$I$ के दोनों रूपों को जोड़ें (या घटाएँ)"
+       ],
+       [
+        "Evaluate the simpler integral; divide by 2",
+        "सरल समाकल का मान निकालें; 2 से भाग दें"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Use when the denominator is unchanged by king, for $x\\cdot f(\\sin x)$ on $[0,\\pi]$, and for $\\ln(1+\\tan x)$-type",
+        "जब किंग से हर न बदले, $[0,\\pi]$ पर $x\\cdot f(\\sin x)$ के लिए, तथा $\\ln(1+\\tan x)$ प्रकार में"
+       ],
+       [
+        "$f(x)+f(a+b-x)=c\\Rightarrow\\int_a^b f=\\dfrac{c(b-a)}2$",
+        "$f(x)+f(a+b-x)=c\\Rightarrow\\int_a^b f=\\dfrac{c(b-a)}2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. P6: Queen property",
+    "hi": "7. P6: क्वीन गुणधर्म",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_0^{2a}f=\\int_0^a[f(x)+f(2a-x)]dx$;  $=2\\int_0^a f$ if $f(2a-x)=f(x)$, $=0$ if $f(2a-x)=-f(x)$",
+        "$\\int_0^{2a}f=\\int_0^a[f(x)+f(2a-x)]dx$;  $f(2a-x)=f(x)$ हो तो $=2\\int_0^a f$, $f(2a-x)=-f(x)$ हो तो $=0$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Lower limit must be $0$; it halves the upper limit",
+        "निम्न सीमा $0$ होनी चाहिए; यह ऊपरी सीमा को आधा करता है"
+       ],
+       [
+        "Typical: $\\sin$, $\\cos$ powers on $[0,\\pi]$, $[0,2\\pi]$; repeat until $[0,\\frac\\pi2]$, then Wallis or king",
+        "प्रायः: $[0,\\pi]$, $[0,2\\pi]$ पर $\\sin$, $\\cos$ की घातें; $[0,\\frac\\pi2]$ तक दोहराएँ, फिर वालिस या किंग"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. P7: periodic functions",
+    "hi": "8. P7: आवर्ती फलन",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_0^{nT}f=n\\int_0^T f$,  $\\int_a^{a+nT}f=n\\int_0^T f$,  $\\int_{nT}^{a+nT}f=\\int_0^a f$",
+        "$\\int_0^{nT}f=n\\int_0^T f$,  $\\int_a^{a+nT}f=n\\int_0^T f$,  $\\int_{nT}^{a+nT}f=\\int_0^a f$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Periods: $|\\sin x|$, $|\\cos x|$, $\\sin^2x$, $\\tan x$: $\\pi$; $|\\sin x|+|\\cos x|$: $\\frac\\pi2$; $\\{x\\}$, $x-[x]$: $1$",
+        "आवर्तकाल: $|\\sin x|$, $|\\cos x|$, $\\sin^2x$, $\\tan x$: $\\pi$; $|\\sin x|+|\\cos x|$: $\\frac\\pi2$; $\\{x\\}$, $x-[x]$: $1$"
+       ],
+       [
+        "$f(x)+f(x+k)=c\\Rightarrow f$ has period $2k$",
+        "$f(x)+f(x+k)=c\\Rightarrow f$ का आवर्तकाल $2k$"
+       ],
+       [
+        "Remove whole periods, then integrate the remaining part",
+        "पूरे आवर्त हटाएँ, फिर बचे भाग का समाकलन करें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Leibnitz rule",
+    "hi": "9. लैबनिट्ज़ नियम",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{d}{dx}\\int_{g(x)}^{h(x)}f(t)dt=f(h(x))h'(x)-f(g(x))g'(x)$;  $\\dfrac{d}{dx}\\int f(x)dx=f(x)$",
+        "$\\dfrac{d}{dx}\\int_{g(x)}^{h(x)}f(t)dt=f(h(x))h'(x)-f(g(x))g'(x)$;  $\\dfrac{d}{dx}\\int f(x)dx=f(x)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Integrand must be free of $x$: take $x$ out or substitute first",
+        "समाकल्य $x$ से मुक्त हो: पहले $x$ को बाहर निकालें या प्रतिस्थापन करें"
+       ],
+       [
+        "$\\frac00$ limits with integrals: L'Hospital $+$ Leibnitz",
+        "समाकल वाली $\\frac00$ सीमाएँ: लोपिताल $+$ लैबनिट्ज़"
+       ],
+       [
+        "$F(x)=\\int_a^x f$: $F'=f$ gives monotonicity, maxima, minima, range of $F$",
+        "$F(x)=\\int_a^x f$: $F'=f$ से $F$ की एकदिष्टता, उच्चिष्ठ, निम्निष्ठ, परिसर"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Determination of function",
+    "hi": "10. फलन का निर्धारण",
+    "color": "green",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Constant limits: put $\\int_a^b f(t)dt=k$ (or $A$, $B$ for several parts), substitute back, solve for $k$",
+        "अचर सीमाएँ: $\\int_a^b f(t)dt=k$ रखें (अनेक भागों के लिए $A$, $B$), वापस रखें, $k$ ज्ञात करें"
+       ],
+       [
+        "Variable limits: differentiate (Leibnitz) to get a differential equation",
+        "चर सीमाएँ: अवकलन (लैबनिट्ज़) से अवकल समीकरण बनाएँ"
+       ],
+       [
+        "Initial value: put $x$ equal to the lower limit",
+        "प्रारम्भिक मान: $x$ को निम्न सीमा के बराबर रखें"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$f(x)$, $f(\\frac1x)$ given together: replace $x$ by $\\frac1x$ and solve the two equations",
+        "$f(x)$, $f(\\frac1x)$ एक साथ दिए हों: $x$ के स्थान पर $\\frac1x$ रखकर दोनों समीकरण हल करें"
+       ],
+       [
+        "$f'(x)=f'(a-x)\\Rightarrow f(x)+f(a-x)=$ constant",
+        "$f'(x)=f'(a-x)\\Rightarrow f(x)+f(a-x)=$ अचर"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Limit of a sum",
+    "hi": "11. योग की सीमा",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\lim\\limits_{n\\to\\infty}\\dfrac1n\\sum_{r}f\\left(\\dfrac rn\\right)=\\int_{\\alpha}^{\\beta}f(x)\\,dx$,  $\\alpha=\\lim\\frac{r_{\\text{first}}}n$, $\\beta=\\lim\\frac{r_{\\text{last}}}n$",
+        "$\\lim\\limits_{n\\to\\infty}\\dfrac1n\\sum_{r}f\\left(\\dfrac rn\\right)=\\int_{\\alpha}^{\\beta}f(x)\\,dx$,  $\\alpha=\\lim\\frac{r_{\\text{first}}}n$, $\\beta=\\lim\\frac{r_{\\text{last}}}n$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Write the $r$th term; take out $\\frac1n$ (highest power of $n$)",
+        "$r$वाँ पद लिखें; $\\frac1n$ ($n$ की उच्चतम घात) बाहर निकालें"
+       ],
+       [
+        "$\\frac rn\\to x$, $\\frac1n\\to dx$, $\\lim\\sum\\to\\int$; find the limits",
+        "$\\frac rn\\to x$, $\\frac1n\\to dx$, $\\lim\\sum\\to\\int$; सीमाएँ ज्ञात करें"
+       ],
+       [
+        "Continued product: take $\\ln$ first",
+        "सतत गुणनफल: पहले $\\ln$ लें"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$f$ increasing: left sum $<\\int_0^1 f<$ right sum; decreasing: reverse",
+        "$f$ वर्धमान: बायाँ योग $<\\int_0^1 f<$ दायाँ योग; ह्रासमान: उल्टा"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Estimation",
+    "hi": "12. आकलन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$m\\le f\\le M$ on $[a,b]\\Rightarrow m(b-a)\\le\\int_a^b f\\le M(b-a)$",
+        "$m\\le f\\le M$ on $[a,b]\\Rightarrow m(b-a)\\le\\int_a^b f\\le M(b-a)$"
+       ],
+       [
+        "Concave up: $(b-a)f\\left(\\frac{a+b}2\\right)<\\int_a^b f<(b-a)\\frac{f(a)+f(b)}2$",
+        "अवतल-ऊपर: $(b-a)f\\left(\\frac{a+b}2\\right)<\\int_a^b f<(b-a)\\frac{f(a)+f(b)}2$"
+       ],
+       [
+        "$f_1\\le f\\le f_2\\Rightarrow\\int f_1\\le\\int f\\le\\int f_2$;  $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$",
+        "$f_1\\le f\\le f_2\\Rightarrow\\int f_1\\le\\int f\\le\\int f_2$;  $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Monotonic: use end values; otherwise find max/min by derivative",
+        "एकदिष्ट: अन्त्य मान लें; अन्यथा अवकलज से अधिकतम/न्यूनतम"
+       ],
+       [
+        "Split the interval for sharper bounds; midpoint rule $\\frac{b-a}4\\left[f(a)+2f(\\frac{a+b}2)+f(b)\\right]$",
+        "अधिक सटीक सीमाओं के लिए अन्तराल बाँटें; मध्य-बिन्दु नियम $\\frac{b-a}4\\left[f(a)+2f(\\frac{a+b}2)+f(b)\\right]$"
+       ],
+       [
+        "Useful comparisons: on $(0,1)$ $x^n$ decreases with $n$; $\\sin x<x$; $1+x<e^x$",
+        "उपयोगी तुलना: $(0,1)$ पर $n$ बढ़ने से $x^n$ घटता है; $\\sin x<x$; $1+x<e^x$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Wallis and reduction",
+    "hi": "13. वालिस तथा समानयन",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int_0^{\\pi/2}\\sin^n x\\cos^m x\\,dx=\\dfrac{[(n-1)(n-3)\\cdots][(m-1)(m-3)\\cdots]}{(m+n)(m+n-2)\\cdots}\\cdot K$,  $K=\\dfrac\\pi2$ ($m$, $n$ both even), else $1$",
+        "$\\int_0^{\\pi/2}\\sin^n x\\cos^m x\\,dx=\\dfrac{[(n-1)(n-3)\\cdots][(m-1)(m-3)\\cdots]}{(m+n)(m+n-2)\\cdots}\\cdot K$,  $K=\\dfrac\\pi2$ ($m$, $n$ दोनों सम), अन्यथा $1$"
+       ],
+       [
+        "$I_n=\\int_0^{\\pi/2}\\sin^nx\\,dx=\\dfrac{n-1}{n}I_{n-2}$;  $\\int_0^{\\pi/4}\\tan^nx:\\ I_n+I_{n-2}=\\dfrac1{n-1}$;  $\\int_1^e(\\ln x)^n:\\ I_n=e-nI_{n-1}$",
+        "$I_n=\\int_0^{\\pi/2}\\sin^nx\\,dx=\\dfrac{n-1}{n}I_{n-2}$;  $\\int_0^{\\pi/4}\\tan^nx:\\ I_n+I_{n-2}=\\dfrac1{n-1}$;  $\\int_1^e(\\ln x)^n:\\ I_n=e-nI_{n-1}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Reduction: parts with $1$ as second function or one factor split off; boundary term often $0$",
+        "समानयन: $1$ को द्वितीय फलन लेकर या एक गुणनखण्ड अलग करके खण्डशः; सीमा पद प्रायः $0$"
+       ],
+       [
+        "Other limits: use queen / king / periodicity to reach $[0,\\frac\\pi2]$ first",
+        "अन्य सीमाएँ: पहले क्वीन / किंग / आवर्तिता से $[0,\\frac\\pi2]$ तक पहुँचें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Common mistakes checklist",
+    "hi": "14. सामान्य त्रुटियों की जाँच-सूची",
+    "color": "brown",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Did the antiderivative or substitution break inside the interval? Split there.",
+        "क्या प्रतिअवकलज या प्रतिस्थापन अन्तराल के अन्दर असतत हुआ? वहाँ विभाजित करें।"
+       ],
+       [
+        "Did you change the limits with the substitution?",
+        "क्या प्रतिस्थापन के साथ सीमाएँ बदलीं?"
+       ],
+       [
+        "$|f|$, $[f]$: found all break points inside the interval?",
+        "$|f|$, $[f]$: अन्तराल के अन्दर सभी विभाजन बिन्दु मिले?"
+       ],
+       [
+        "King: keep the same limits; queen: lower limit $0$",
+        "किंग: सीमाएँ वही रखें; क्वीन: निम्न सीमा $0$"
+       ],
+       [
+        "Leibnitz: integrand free of $x$? both limit terms with chain factor?",
+        "लैबनिट्ज़: समाकल्य $x$ से मुक्त? दोनों सीमा पद शृंखला गुणक सहित?"
+       ],
+       [
+        "Limit of sum: correct limits from first and last $r$",
+        "योग की सीमा: प्रथम तथा अन्तिम $r$ से सही सीमाएँ"
+       ],
+       [
+        "Wallis: $K=\\frac\\pi2$ only when both powers are even",
+        "वालिस: $K=\\frac\\pi2$ केवल तब जब दोनों घातें सम हों"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "Basics",
+    "hi": "मूल",
+    "lines": [
+     [
+      "Newton-Leibnitz: $\\int_a^b f(x)dx=F(b)-F(a)$, $F'=f$, $F$ continuous",
+      "न्यूटन-लैबनिट्ज़: $\\int_a^b f(x)dx=F(b)-F(a)$, $F'=f$, $F$ सतत"
+     ],
+     [
+      "Dummy variable: $\\int_a^b f(x)dx=\\int_a^b f(t)dt$",
+      "कृत्रिम चर: $\\int_a^b f(x)dx=\\int_a^b f(t)dt$"
+     ],
+     [
+      "Interchange: $\\int_a^b f=-\\int_b^a f$,  $\\int_a^a f=0$",
+      "सीमा परिवर्तन: $\\int_a^b f=-\\int_b^a f$,  $\\int_a^a f=0$"
+     ],
+     [
+      "Parts: $\\int_a^b uv'=\\big[uv\\big]_a^b-\\int_a^b u'v$",
+      "खण्डशः: $\\int_a^b uv'=\\big[uv\\big]_a^b-\\int_a^b u'v$"
+     ],
+     [
+      "Limit inside: $\\lim\\int_p^q f_n=\\int_p^q\\lim f_n$ ($p,q$ free of $n$)",
+      "सीमा अन्दर: $\\lim\\int_p^q f_n=\\int_p^q\\lim f_n$ ($p,q$, $n$ से मुक्त)"
+     ],
+     [
+      "Inverse pair: $\\int_a^b f+\\int_{f(a)}^{f(b)}f^{-1}=bf(b)-af(a)$",
+      "प्रतिलोम युग्म: $\\int_a^b f+\\int_{f(a)}^{f(b)}f^{-1}=bf(b)-af(a)$"
+     ],
+     [
+      "Root: $\\int_a^b f=0$, $f$ continuous $\\Rightarrow f(c)=0$, $c\\in(a,b)$",
+      "मूल: $\\int_a^b f=0$, $f$ सतत $\\Rightarrow f(c)=0$, $c\\in(a,b)$"
+     ]
+    ]
+   },
+   {
+    "en": "Properties",
+    "hi": "गुणधर्म",
+    "lines": [
+     [
+      "P3: $\\int_a^b f=\\int_a^c f+\\int_c^b f$",
+      "P3: $\\int_a^b f=\\int_a^c f+\\int_c^b f$"
+     ],
+     [
+      "P4: $\\int_{-a}^{a}f=\\int_0^a[f(x)+f(-x)]dx$; even $2\\int_0^a f$, odd $0$",
+      "P4: $\\int_{-a}^{a}f=\\int_0^a[f(x)+f(-x)]dx$; सम $2\\int_0^a f$, विषम $0$"
+     ],
+     [
+      "P5 King: $\\int_a^b f(x)dx=\\int_a^b f(a+b-x)dx$",
+      "P5 किंग: $\\int_a^b f(x)dx=\\int_a^b f(a+b-x)dx$"
+     ],
+     [
+      "King, ratio: $\\int_a^b\\dfrac{f(x)}{f(x)+f(a+b-x)}dx=\\dfrac{b-a}2$",
+      "किंग, अनुपात: $\\int_a^b\\dfrac{f(x)}{f(x)+f(a+b-x)}dx=\\dfrac{b-a}2$"
+     ],
+     [
+      "King, $x f(x)$: $\\int_a^b xf(x)dx=\\dfrac{a+b}2\\int_a^b f$ if $f(a+b-x)=f(x)$",
+      "किंग, $x f(x)$: यदि $f(a+b-x)=f(x)$ तो $\\int_a^b xf(x)dx=\\dfrac{a+b}2\\int_a^b f$"
+     ],
+     [
+      "P6 Queen: $\\int_0^{2a}f=\\int_0^a[f(x)+f(2a-x)]dx$",
+      "P6 क्वीन: $\\int_0^{2a}f=\\int_0^a[f(x)+f(2a-x)]dx$"
+     ],
+     [
+      "Queen cases: $2\\int_0^a f$ if $f(2a-x)=f(x)$; $0$ if $f(2a-x)=-f(x)$",
+      "क्वीन स्थितियाँ: $f(2a-x)=f(x)$ हो तो $2\\int_0^a f$; $f(2a-x)=-f(x)$ हो तो $0$"
+     ],
+     [
+      "P7 Periodic: $\\int_a^{a+nT}f=n\\int_0^T f$,  $\\int_{nT}^{a+nT}f=\\int_0^a f$",
+      "P7 आवर्ती: $\\int_a^{a+nT}f=n\\int_0^T f$,  $\\int_{nT}^{a+nT}f=\\int_0^a f$"
+     ],
+     [
+      "Reciprocal limits: $x=\\dfrac1t$",
+      "व्युत्क्रम सीमाएँ: $x=\\dfrac1t$"
+     ],
+     [
+      "$\\dfrac{1}{1+b^x}+\\dfrac{1}{1+b^{-x}}=1$",
+      "$\\dfrac{1}{1+b^x}+\\dfrac{1}{1+b^{-x}}=1$"
+     ]
+    ]
+   },
+   {
+    "en": "Standard values",
+    "hi": "मानक मान",
+    "lines": [
+     [
+      "$\\int_0^{\\pi/2}\\sin^n x=\\int_0^{\\pi/2}\\cos^n x$: $1,\\ \\frac\\pi4,\\ \\frac23,\\ \\frac{3\\pi}{16}$ ($n=1..4$)",
+      "$\\int_0^{\\pi/2}\\sin^n x=\\int_0^{\\pi/2}\\cos^n x$: $1,\\ \\frac\\pi4,\\ \\frac23,\\ \\frac{3\\pi}{16}$ ($n=1..4$)"
+     ],
+     [
+      "Log-sine: $\\int_0^{\\pi/2}\\ln\\sin x\\,dx=-\\dfrac\\pi2\\ln2$",
+      "लॉग-साइन: $\\int_0^{\\pi/2}\\ln\\sin x\\,dx=-\\dfrac\\pi2\\ln2$"
+     ],
+     [
+      "$\\int_0^{\\pi/4}\\ln(1+\\tan x)dx=\\dfrac\\pi8\\ln2$",
+      "$\\int_0^{\\pi/4}\\ln(1+\\tan x)dx=\\dfrac\\pi8\\ln2$"
+     ],
+     [
+      "$\\int_0^{n}[x]dx=\\dfrac{n(n-1)}2$,  $\\int_0^n\\{x\\}dx=\\dfrac n2$",
+      "$\\int_0^{n}[x]dx=\\dfrac{n(n-1)}2$,  $\\int_0^n\\{x\\}dx=\\dfrac n2$"
+     ],
+     [
+      "Wallis: $\\int_0^{\\pi/2}\\sin^nx\\cos^mx=\\dfrac{[(n-1)(n-3)\\cdots][(m-1)(m-3)\\cdots]}{(m+n)(m+n-2)\\cdots}K$",
+      "वालिस: $\\int_0^{\\pi/2}\\sin^nx\\cos^mx=\\dfrac{[(n-1)(n-3)\\cdots][(m-1)(m-3)\\cdots]}{(m+n)(m+n-2)\\cdots}K$"
+     ],
+     [
+      "Wallis $K$: $\\frac\\pi2$ if $m,n$ both even, else $1$",
+      "वालिस $K$: $m,n$ दोनों सम हों तो $\\frac\\pi2$, अन्यथा $1$"
+     ]
+    ]
+   },
+   {
+    "en": "Leibnitz and determination",
+    "hi": "लैबनिट्ज़ तथा निर्धारण",
+    "lines": [
+     [
+      "Leibnitz: $\\dfrac{d}{dx}\\int_{g(x)}^{h(x)}f(t)dt=f(h)h'-f(g)g'$",
+      "लैबनिट्ज़: $\\dfrac{d}{dx}\\int_{g(x)}^{h(x)}f(t)dt=f(h)h'-f(g)g'$"
+     ],
+     [
+      "Indefinite: $\\dfrac{d}{dx}\\int f(x)dx=f(x)$",
+      "अनिश्चित: $\\dfrac{d}{dx}\\int f(x)dx=f(x)$"
+     ],
+     [
+      "$x$ inside: $\\int_0^x(x-t)f(t)dt=x\\int_0^x f-\\int_0^x tf$",
+      "अन्दर $x$: $\\int_0^x(x-t)f(t)dt=x\\int_0^x f-\\int_0^x tf$"
+     ],
+     [
+      "Constant limits: $\\int_a^b f(t)dt=k$ (a constant)",
+      "अचर सीमाएँ: $\\int_a^b f(t)dt=k$ (एक अचर)"
+     ]
+    ]
+   },
+   {
+    "en": "Limit of sum",
+    "hi": "योग की सीमा",
+    "lines": [
+     [
+      "Basic: $\\lim\\limits_{n\\to\\infty}\\dfrac1n\\sum_{r=0}^{n-1}f\\left(\\dfrac rn\\right)=\\int_0^1 f(x)dx$",
+      "मूल: $\\lim\\limits_{n\\to\\infty}\\dfrac1n\\sum_{r=0}^{n-1}f\\left(\\dfrac rn\\right)=\\int_0^1 f(x)dx$"
+     ],
+     [
+      "Interval: $\\int_a^b f=\\lim\\dfrac{b-a}n\\sum_{r=0}^{n-1}f\\left(a+\\dfrac{(b-a)r}n\\right)$",
+      "अन्तराल: $\\int_a^b f=\\lim\\dfrac{b-a}n\\sum_{r=0}^{n-1}f\\left(a+\\dfrac{(b-a)r}n\\right)$"
+     ],
+     [
+      "Limits: $r=1\\to pn$ gives $0\\to p$",
+      "सीमाएँ: $r=1\\to pn$ से $0\\to p$"
+     ],
+     [
+      "Product: $\\ln L=\\int_0^1\\ln f(x)dx$",
+      "गुणनफल: $\\ln L=\\int_0^1\\ln f(x)dx$"
+     ],
+     [
+      "Order ($f\\uparrow$): $\\frac1n\\sum_{0}^{n-1}f<\\int_0^1 f<\\frac1n\\sum_{1}^{n}f$",
+      "क्रम ($f\\uparrow$): $\\frac1n\\sum_{0}^{n-1}f<\\int_0^1 f<\\frac1n\\sum_{1}^{n}f$"
+     ]
+    ]
+   },
+   {
+    "en": "Estimation and reduction",
+    "hi": "आकलन तथा समानयन",
+    "lines": [
+     [
+      "Bounds: $m(b-a)\\le\\int_a^b f\\le M(b-a)$",
+      "सीमाएँ: $m(b-a)\\le\\int_a^b f\\le M(b-a)$"
+     ],
+     [
+      "Concave up: $(b-a)f\\left(\\frac{a+b}2\\right)<\\int_a^b f<\\frac{(b-a)(f(a)+f(b))}2$",
+      "अवतल-ऊपर: $(b-a)f\\left(\\frac{a+b}2\\right)<\\int_a^b f<\\frac{(b-a)(f(a)+f(b))}2$"
+     ],
+     [
+      "Midpoint: $\\int_a^b f\\approx\\frac{b-a}4\\left[f(a)+2f\\left(\\frac{a+b}2\\right)+f(b)\\right]$",
+      "मध्य-बिन्दु: $\\int_a^b f\\approx\\frac{b-a}4\\left[f(a)+2f\\left(\\frac{a+b}2\\right)+f(b)\\right]$"
+     ],
+     [
+      "Comparison: $f_1\\le f\\le f_2\\Rightarrow\\int f_1\\le\\int f\\le\\int f_2$",
+      "तुलना: $f_1\\le f\\le f_2\\Rightarrow\\int f_1\\le\\int f\\le\\int f_2$"
+     ],
+     [
+      "Modulus: $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$",
+      "मापांक: $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$"
+     ],
+     [
+      "$\\int_0^{\\pi/2}\\sin^n x:\\ I_n=\\dfrac{n-1}nI_{n-2}$",
+      "$\\int_0^{\\pi/2}\\sin^n x:\\ I_n=\\dfrac{n-1}nI_{n-2}$"
+     ],
+     [
+      "$\\int_0^{\\pi/4}\\tan^n x:\\ I_n+I_{n-2}=\\dfrac1{n-1}$",
+      "$\\int_0^{\\pi/4}\\tan^n x:\\ I_n+I_{n-2}=\\dfrac1{n-1}$"
+     ],
+     [
+      "$\\int_1^e(\\ln x)^n:\\ I_n=e-nI_{n-1}$",
+      "$\\int_1^e(\\ln x)^n:\\ I_n=e-nI_{n-1}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Meaning",
+    "hi": "अर्थ",
+    "leaves": [
+     [
+      "Signed area",
+      "चिह्न सहित क्षेत्रफल"
+     ],
+     [
+      "$F(b)-F(a)$, $F$ continuous",
+      "$F(b)-F(a)$, $F$ सतत"
+     ]
+    ]
+   },
+   {
+    "en": "Substitution",
+    "hi": "प्रतिस्थापन",
+    "leaves": [
+     [
+      "Change limits",
+      "सीमाएँ बदलें"
+     ],
+     [
+      "Continuous, one-one",
+      "सतत, एकैकी"
+     ],
+     [
+      "Reciprocal limits: $x=\\frac1t$",
+      "व्युत्क्रम सीमाएँ: $x=\\frac1t$"
+     ]
+    ]
+   },
+   {
+    "en": "Inverse functions",
+    "hi": "प्रतिलोम फलन",
+    "leaves": [
+     [
+      "$\\int_a^bf+\\int_c^dg=bd-ac$",
+      "$\\int_a^bf+\\int_c^dg=bd-ac$"
+     ]
+    ]
+   },
+   {
+    "en": "P3 splitting",
+    "hi": "P3 विभाजन",
+    "leaves": [
+     [
+      "$|\\ |$, $[\\ ]$, $\\{\\ \\}$, max/min",
+      "$|\\ |$, $[\\ ]$, $\\{\\ \\}$, अधि./न्यून."
+     ],
+     [
+      "Break at changes",
+      "परिवर्तन बिन्दुओं पर तोड़ें"
+     ]
+    ]
+   },
+   {
+    "en": "P4 odd / even",
+    "hi": "P4 विषम / सम",
+    "leaves": [
+     [
+      "Limits $-a$ to $a$",
+      "सीमाएँ $-a$ से $a$"
+     ],
+     [
+      "Odd part $=0$",
+      "विषम भाग $=0$"
+     ],
+     [
+      "$\\frac{f}{1+b^x}\\to\\int_0^a f$",
+      "$\\frac{f}{1+b^x}\\to\\int_0^a f$"
+     ]
+    ]
+   },
+   {
+    "en": "P5 King",
+    "hi": "P5 किंग",
+    "leaves": [
+     [
+      "$x\\to a+b-x$, add",
+      "$x\\to a+b-x$, जोड़ें"
+     ],
+     [
+      "$\\frac{f}{f+f(a+b-x)}=\\frac{b-a}2$",
+      "$\\frac{f}{f+f(a+b-x)}=\\frac{b-a}2$"
+     ],
+     [
+      "$xf(x)$: $\\frac{a+b}2\\int f$",
+      "$xf(x)$: $\\frac{a+b}2\\int f$"
+     ]
+    ]
+   },
+   {
+    "en": "P6 Queen",
+    "hi": "P6 क्वीन",
+    "leaves": [
+     [
+      "$f(2a-x)=\\pm f(x)$",
+      "$f(2a-x)=\\pm f(x)$"
+     ],
+     [
+      "Lower limit $0$",
+      "निम्न सीमा $0$"
+     ],
+     [
+      "$\\int_0^{\\pi/2}\\ln\\sin x=-\\frac\\pi2\\ln2$",
+      "$\\int_0^{\\pi/2}\\ln\\sin x=-\\frac\\pi2\\ln2$"
+     ]
+    ]
+   },
+   {
+    "en": "P7 Periodic",
+    "hi": "P7 आवर्ती",
+    "leaves": [
+     [
+      "$\\int_a^{a+nT}f=n\\int_0^Tf$",
+      "$\\int_a^{a+nT}f=n\\int_0^Tf$"
+     ],
+     [
+      "Remove whole periods",
+      "पूरे आवर्त हटाएँ"
+     ]
+    ]
+   },
+   {
+    "en": "Leibnitz",
+    "hi": "लैबनिट्ज़",
+    "leaves": [
+     [
+      "$f(h)h'-f(g)g'$",
+      "$f(h)h'-f(g)g'$"
+     ],
+     [
+      "Take $x$ out first",
+      "पहले $x$ बाहर निकालें"
+     ],
+     [
+      "$\\frac00$: L'Hospital",
+      "$\\frac00$: लोपिताल"
+     ]
+    ]
+   },
+   {
+    "en": "Determination of function",
+    "hi": "फलन निर्धारण",
+    "leaves": [
+     [
+      "Constant limits: $=k$",
+      "अचर सीमाएँ: $=k$"
+     ],
+     [
+      "Variable limits: differentiate",
+      "चर सीमाएँ: अवकलन"
+     ]
+    ]
+   },
+   {
+    "en": "Limit of sum",
+    "hi": "योग की सीमा",
+    "leaves": [
+     [
+      "$\\frac rn\\to x$, $\\frac1n\\to dx$",
+      "$\\frac rn\\to x$, $\\frac1n\\to dx$"
+     ],
+     [
+      "Product: take $\\ln$",
+      "गुणनफल: $\\ln$ लें"
+     ],
+     [
+      "Left $<\\int<$ right ($f\\uparrow$)",
+      "बायाँ $<\\int<$ दायाँ ($f\\uparrow$)"
+     ]
+    ]
+   },
+   {
+    "en": "Estimation",
+    "hi": "आकलन",
+    "leaves": [
+     [
+      "$m(b-a)\\le\\int\\le M(b-a)$",
+      "$m(b-a)\\le\\int\\le M(b-a)$"
+     ],
+     [
+      "Concavity: tangent / chord",
+      "अवतलता: स्पर्श रेखा / जीवा"
+     ],
+     [
+      "Compare functions",
+      "फलनों की तुलना"
+     ]
+    ]
+   },
+   {
+    "en": "Wallis",
+    "hi": "वालिस",
+    "leaves": [
+     [
+      "$\\int_0^{\\pi/2}\\sin^nx\\cos^mx$",
+      "$\\int_0^{\\pi/2}\\sin^nx\\cos^mx$"
+     ],
+     [
+      "$K=\\frac\\pi2$ if both even",
+      "दोनों सम हों तो $K=\\frac\\pi2$"
+     ]
+    ]
+   },
+   {
+    "en": "Reduction",
+    "hi": "समानयन",
+    "leaves": [
+     [
+      "Parts: $I_n$ to $I_{n-1}$, $I_{n-2}$",
+      "खण्डशः: $I_n$ से $I_{n-1}$, $I_{n-2}$"
+     ],
+     [
+      "$I_n+I_{n-2}=\\frac1{n-1}$ ($\\tan$)",
+      "$I_n+I_{n-2}=\\frac1{n-1}$ ($\\tan$)"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which property for a definite integral?",
+    "प्रवाह-चित्र 1: निश्चित समाकल के लिए कौन-सा गुणधर्म?"
+   ],
+   "start": [
+    "Definite integral given",
+    "निश्चित समाकल दिया है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Contains $|\\ |$, $[\\ ]$, $\\{\\ \\}$, max/min or a piecewise rule?",
+      "क्या $|\\ |$, $[\\ ]$, $\\{\\ \\}$, अधिकतम/न्यूनतम या खण्डशः नियम है?"
+     ],
+     "a": [
+      [
+       "P3: split at the break points."
+      ],
+      [
+       "P3: विभाजन बिन्दुओं पर तोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Limits $-a$ to $a$ (or symmetric about $c$)?",
+      "क्या सीमाएँ $-a$ से $a$ (या $c$ के सापेक्ष सममित) हैं?"
+     ],
+     "a": [
+      [
+       "P4: odd part $=0$; shift $x-c=t$ if needed."
+      ],
+      [
+       "P4: विषम भाग $=0$; आवश्यकता हो तो $x-c=t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Limits reciprocal ($\\frac1a$, $a$) or $0$ to $\\infty$?",
+      "क्या सीमाएँ व्युत्क्रम ($\\frac1a$, $a$) या $0$ से $\\infty$ हैं?"
+     ],
+     "a": [
+      [
+       "Put $x=\\frac1t$ and add."
+      ],
+      [
+       "$x=\\frac1t$ रखकर जोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Integrand periodic and the range is many periods?",
+      "क्या समाकल्य आवर्ती है तथा परास कई आवर्त है?"
+     ],
+     "a": [
+      [
+       "P7: $n\\int_0^T f$ + remaining part."
+      ],
+      [
+       "P7: $n\\int_0^T f$ + बचा भाग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Denominator or $f(\\sin x)$ unchanged by $x\\to a+b-x$?",
+      "क्या $x\\to a+b-x$ से हर या $f(\\sin x)$ अपरिवर्तित है?"
+     ],
+     "a": [
+      [
+       "P5 king: write both forms and add."
+      ],
+      [
+       "P5 किंग: दोनों रूप लिखकर जोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Lower limit $0$, upper $\\pi$ or $2\\pi$, powers of $\\sin$, $\\cos$?",
+      "क्या निम्न सीमा $0$, ऊपरी $\\pi$ या $2\\pi$, $\\sin$, $\\cos$ की घातें हैं?"
+     ],
+     "a": [
+      [
+       "P6 queen to $[0,\\frac\\pi2]$, then Wallis."
+      ],
+      [
+       "P6 क्वीन से $[0,\\frac\\pi2]$, फिर वालिस।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Find an antiderivative (substitution with new limits, parts) and check its continuity."
+    ],
+    [
+     "प्रतिअवकलज ज्ञात करें (नई सीमाओं सहित प्रतिस्थापन, खण्डशः) तथा उसकी सततता जाँचें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Integral with a variable in the limits",
+    "प्रवाह-चित्र 2: सीमाओं में चर वाला समाकल"
+   ],
+   "start": [
+    "$\\int_{g(x)}^{h(x)}f(t)\\,dt$ appears",
+    "$\\int_{g(x)}^{h(x)}f(t)\\,dt$ आता है"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Does $x$ appear inside the integrand?",
+      "क्या समाकल्य के अन्दर $x$ है?"
+     ],
+     "a": [
+      [
+       "Take $x$ out or substitute so $x$ goes to the limits."
+      ],
+      [
+       "$x$ को बाहर निकालें या प्रतिस्थापन से $x$ को सीमाओं में ले जाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Asked for a derivative, slope, monotonicity or extremum?",
+      "क्या अवकलज, ढाल, एकदिष्टता या चरम मान पूछा है?"
+     ],
+     "a": [
+      [
+       "Leibnitz: $f(h)h'-f(g)g'$."
+      ],
+      [
+       "लैबनिट्ज़: $f(h)h'-f(g)g'$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A limit of the form $\\frac00$?",
+      "क्या $\\frac00$ रूप की सीमा है?"
+     ],
+     "a": [
+      [
+       "L'Hospital, differentiating the integral by Leibnitz."
+      ],
+      [
+       "लोपिताल, समाकल का अवकलन लैबनिट्ज़ से।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "An identity to find $f$?",
+      "क्या $f$ ज्ञात करने हेतु सर्वसमिका है?"
+     ],
+     "a": [
+      [
+       "Differentiate to a differential equation; initial value at the lower limit."
+      ],
+      [
+       "अवकलन से अवकल समीकरण; प्रारम्भिक मान निम्न सीमा पर।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Evaluate the integral directly, then work with the function."
+    ],
+    [
+     "समाकल का सीधा मान निकालें, फिर फलन पर कार्य करें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Determination of a function",
+    "प्रवाह-चित्र 3: फलन का निर्धारण"
+   ],
+   "start": [
+    "Identity with a definite integral given",
+    "निश्चित समाकल वाली सर्वसमिका दी है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Are both limits constants?",
+      "क्या दोनों सीमाएँ अचर हैं?"
+     ],
+     "a": [
+      [
+       "Put $\\int_a^b f=k$ (or $A$, $B$ after expanding $\\sin(x-y)$ etc.) and solve."
+      ],
+      [
+       "$\\int_a^b f=k$ रखें ($\\sin(x-y)$ आदि के प्रसार के बाद $A$, $B$) और हल करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is a limit a function of $x$?",
+      "क्या कोई सीमा $x$ का फलन है?"
+     ],
+     "a": [
+      [
+       "Differentiate (Leibnitz); solve the differential equation."
+      ],
+      [
+       "अवकलन (लैबनिट्ज़); अवकल समीकरण हल करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$f(x)$ and $f(\\frac1x)$ (or $f(a-x)$) together?",
+      "क्या $f(x)$ तथा $f(\\frac1x)$ (या $f(a-x)$) साथ हैं?"
+     ],
+     "a": [
+      [
+       "Replace $x$ by $\\frac1x$ (or $a-x$) and solve the pair."
+      ],
+      [
+       "$x$ के स्थान पर $\\frac1x$ (या $a-x$) रखकर युग्म हल करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A relation like $f(x)+f(x+k)=c$?",
+      "क्या $f(x)+f(x+k)=c$ जैसा सम्बन्ध है?"
+     ],
+     "a": [
+      [
+       "Split into pieces of length $k$ (P3); $f$ has period $2k$."
+      ],
+      [
+       "$k$ लम्बाई के भागों में तोड़ें (P3); $f$ का आवर्तकाल $2k$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use king / odd-even on the given relation."
+    ],
+    [
+     "दिए सम्बन्ध पर किंग / विषम-सम लगाएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Limit of a sum or product",
+    "प्रवाह-चित्र 4: योग या गुणनफल की सीमा"
+   ],
+   "start": [
+    "$\\lim\\limits_{n\\to\\infty}$ of a sum or product",
+    "योग या गुणनफल की $\\lim\\limits_{n\\to\\infty}$"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Is it a continued product or an $n$th root?",
+      "क्या यह सतत गुणनफल या $n$वाँ मूल है?"
+     ],
+     "a": [
+      [
+       "Take $\\ln$ to turn it into a sum."
+      ],
+      [
+       "$\\ln$ लेकर योग में बदलें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Can the term be written as $\\frac1nf\\left(\\frac rn\\right)$?",
+      "क्या पद को $\\frac1nf\\left(\\frac rn\\right)$ लिखा जा सकता है?"
+     ],
+     "a": [
+      [
+       "$\\frac rn\\to x$, $\\frac1n\\to dx$; limits from first and last $r$."
+      ],
+      [
+       "$\\frac rn\\to x$, $\\frac1n\\to dx$; सीमाएँ प्रथम व अन्तिम $r$ से।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Finite $n$ compared with the integral?",
+      "क्या परिमित $n$ की समाकल से तुलना है?"
+     ],
+     "a": [
+      [
+       "Left / right rectangles with monotonicity."
+      ],
+      [
+       "एकदिष्टता सहित बाएँ / दाएँ आयत।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use sequence / series methods (other chapters)."
+    ],
+    [
+     "अनुक्रम / श्रेणी विधियाँ (अन्य अध्याय)।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Inequality or estimate",
+    "प्रवाह-चित्र 5: असमिका या आकलन"
+   ],
+   "start": [
+    "Bound or compare integrals",
+    "समाकलों की सीमा या तुलना"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Is $f$ monotonic on the interval?",
+      "क्या अन्तराल पर $f$ एकदिष्ट है?"
+     ],
+     "a": [
+      [
+       "$(b-a)\\cdot$ end values."
+      ],
+      [
+       "$(b-a)\\cdot$ अन्त्य मान।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Known concavity?",
+      "क्या अवतलता ज्ञात है?"
+     ],
+     "a": [
+      [
+       "Midpoint tangent and chord bounds."
+      ],
+      [
+       "मध्य-बिन्दु स्पर्श रेखा तथा जीवा की सीमाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Two integrals on the same interval?",
+      "क्या एक ही अन्तराल पर दो समाकल हैं?"
+     ],
+     "a": [
+      [
+       "Compare the integrands pointwise."
+      ],
+      [
+       "समाकल्यों की बिन्दुवार तुलना।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Need a sharper value?",
+      "क्या अधिक सटीक मान चाहिए?"
+     ],
+     "a": [
+      [
+       "Split the interval / midpoint rule."
+      ],
+      [
+       "अन्तराल बाँटें / मध्य-बिन्दु नियम।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Find max and min of $f$ by derivative."
+    ],
+    [
+     "अवकलज से $f$ का अधिकतम व न्यूनतम।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Trigonometric powers",
+    "प्रवाह-चित्र 6: त्रिकोणमितीय घातें"
+   ],
+   "start": [
+    "$\\int\\sin^n x\\cos^m x$ or $I_n$",
+    "$\\int\\sin^n x\\cos^m x$ या $I_n$"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Limits $0$ to $\\frac\\pi2$?",
+      "क्या सीमाएँ $0$ से $\\frac\\pi2$ हैं?"
+     ],
+     "a": [
+      [
+       "Wallis directly."
+      ],
+      [
+       "सीधे वालिस।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Limits $0$ to $\\pi$, $2\\pi$ or $-\\frac\\pi2$ to $\\frac\\pi2$?",
+      "क्या सीमाएँ $0$ से $\\pi$, $2\\pi$ या $-\\frac\\pi2$ से $\\frac\\pi2$ हैं?"
+     ],
+     "a": [
+      [
+       "Queen / odd-even to reach $[0,\\frac\\pi2]$."
+      ],
+      [
+       "क्वीन / विषम-सम से $[0,\\frac\\pi2]$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "A family $I_n$ with a relation asked?",
+      "क्या $I_n$ कुल तथा सम्बन्ध पूछा है?"
+     ],
+     "a": [
+      [
+       "Reduction by parts: $I_n$ to $I_{n-2}$."
+      ],
+      [
+       "खण्डशः समानयन: $I_n$ से $I_{n-2}$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use identities or substitution."
+    ],
+    [
+     "सर्वसमिकाएँ या प्रतिस्थापन।"
+    ]
+   ]
+  }
+ ]
+}

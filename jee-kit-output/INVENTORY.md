@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (re-checked 2026-10-18 for Indefinite Integration)
+READY: all tools present (re-checked 2026-10-18 for Definite Integration)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -34,7 +34,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Monotonicity | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Monotonicity/QB.pdf | — | — | DONE |
 | Maxima and Minima | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Maxima_and_Minima/QB.pdf | — | — | DONE |
 | Indefinite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Indefinite_Integration/QB.pdf | — | — | DONE |
-| Definite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Definite_Integration/QB.pdf | — | — | READY |
+| Definite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Definite_Integration/QB.pdf | — | — | DONE |
 | Differential Equation | chapters/Differential_Equation/Theory.pdf | chapters/Differential_Equation/XII.pdf | chapters/Differential_Equation/XIII.pdf | — | chapters/Differential_Equation/QB.pdf | — | DPP | READY |
 | Area Under Curve | chapters/Area_Under_Curve/Theory.pdf | chapters/Area_Under_Curve/XII.pdf | chapters/Area_Under_Curve/XIII.pdf | — | chapters/Area_Under_Curve/QB.pdf | — | DPP | READY |
 
@@ -47,4 +47,6 @@ None.
 None found — each folder has at most one file per role.
 
 ## Note on the combined Integration DPP
-`chapters/Integration/DPP.pdf` holds two series that both start at DPP #1: pages 1-56 are the Indefinite Integration DPPs #1-5, and pages 57-124 are the Definite Integration DPPs #1-5. In the kits, the Definite series is keyed DPP-D1 ... DPP-D5.
+`chapters/Integration/DPP.pdf` holds two series that both start at DPP #1: pages 1-56 are the Indefinite Integration DPPs #1-5, and pages 57-124 are the Definite Integration DPPs #1-5. In the kits, the Definite series is keyed DPP-D1 ... DPP-D5. The Definite Integration QB is numbered 21-88 (it continues the Indefinite QB 1-20).
+
+_Inventory refreshed 2026-10-18 (Definite Integration run): all PDFs re-listed; no new or changed files since the previous run. Next ready chapter: Differential Equation._
