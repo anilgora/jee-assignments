@@ -26,3 +26,4 @@ Method_of_Differentiation: DONE 2026-10-18
 Tangent_Normal: DONE 2026-10-18
 Monotonicity: DONE 2026-10-18
 Maxima_and_Minima: DONE 2026-10-18
+Indefinite_Integration: DONE 2026-10-18

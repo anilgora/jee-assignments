@@ -1,0 +1,2415 @@
+{
+ "chapter": {
+  "en": "Indefinite Integration",
+  "hi": "अनिश्चित समाकलन",
+  "slug": "Indefinite_Integration"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   18,
+   19,
+   20
+  ]
+ },
+ "graded_sources": [
+  "<jm>",
+  "J-A",
+  "QB"
+ ],
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction",
+    "hi": "परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define the terms: integral, primitive, integrand, anti-derivative.",
+       "पद परिभाषित कीजिए: समाकल, पूर्वग (primitive), समाकल्य, प्रतिअवकलज।"
+      ],
+      "a": [
+       [
+        "If $\\dfrac{d}{dx}\\phi(x)=f(x)$ then $\\int f(x)\\,dx=\\phi(x)+C$: $f$ is the integrand, $\\phi$ is a primitive (anti-derivative) of $f$, $C$ is the constant of integration (so the integral is called indefinite).",
+        "यदि $\\dfrac{d}{dx}\\phi(x)=f(x)$ तो $\\int f(x)\\,dx=\\phi(x)+C$: $f$ समाकल्य है, $\\phi$, $f$ का पूर्वग (प्रतिअवकलज) है, $C$ समाकलन अचर है (इसीलिए समाकल अनिश्चित कहलाता है)।"
+       ],
+       [
+        "Two primitives of the same $f$ differ by a constant; a given value such as $f(a)=k$ fixes $C$.",
+        "एक ही $f$ के दो पूर्वग एक अचर से भिन्न होते हैं; दिया गया मान, जैसे $f(a)=k$, $C$ ज्ञात कराता है।"
+       ],
+       [
+        "Ex: $\\dfrac{d}{dx}x^x=x^x(1+\\ln x)\\Rightarrow\\int x^x(1+\\ln x)\\,dx=x^x+C$.",
+        "उदा: $\\dfrac{d}{dx}x^x=x^x(1+\\ln x)\\Rightarrow\\int x^x(1+\\ln x)\\,dx=x^x+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Standard Integrals",
+    "hi": "मानक समाकल",
+    "items": [
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write all five sets of standard integral results.",
+       "मानक समाकलों के पाँचों समूहों के परिणाम लिखिए।"
+      ],
+      "a": [
+       "(1) $\\int x^n dx=\\dfrac{x^{n+1}}{n+1}+C\\ (n\\ne-1)$, $\\int\\dfrac{dx}{x}=\\ln|x|+C$",
+       "(2) $\\int e^x dx=e^x+C$, $\\int a^x dx=\\dfrac{a^x}{\\ln a}+C$",
+       "(3) $\\int\\sin x\\,dx=-\\cos x+C$, $\\int\\cos x\\,dx=\\sin x+C$",
+       "(4) $\\int\\sec^2x\\,dx=\\tan x$, $\\int\\text{cosec}^2x\\,dx=-\\cot x$, $\\int\\sec x\\tan x\\,dx=\\sec x$, $\\int\\text{cosec}\\,x\\cot x\\,dx=-\\text{cosec}\\,x$",
+       "(5) $\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa$, $\\int\\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa$, $\\int\\dfrac{dx}{x\\sqrt{x^2-1}}=\\sec^{-1}|x|$, $\\int\\dfrac{dx}{x^2-a^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{x-a}{x+a}\\right|$",
+       [
+        "With $ax+b$ in place of $x$ divide the result by $a$. First simplify the integrand ($e^{\\ln f}=f$, identities, product to sum).",
+        "$x$ के स्थान पर $ax+b$ हो तो परिणाम को $a$ से भाग दें। पहले समाकल्य को सरल करें ($e^{\\ln f}=f$, सर्वसमिकाएँ, गुणनफल से योग)।"
+       ],
+       [
+        "Ex: $\\int\\cos2x\\cos3x\\,dx=\\tfrac12\\int(\\cos5x+\\cos x)\\,dx=\\dfrac{\\sin5x}{10}+\\dfrac{\\sin x}{2}+C$.",
+        "उदा: $\\int\\cos2x\\cos3x\\,dx=\\tfrac12\\int(\\cos5x+\\cos x)\\,dx=\\dfrac{\\sin5x}{10}+\\dfrac{\\sin x}{2}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate linear/linear?",
+       "रैखिक/रैखिक का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Write the numerator as $k(\\text{denominator})+$ constant, so $\\dfrac{ax+b}{cx+d}=\\dfrac ac+\\dfrac{m}{cx+d}$; then integrate term by term.",
+        "अंश को $k(\\text{Dr})+$ अचर के रूप में लिखें, अर्थात् $\\dfrac{ax+b}{cx+d}=\\dfrac ac+\\dfrac{m}{cx+d}$; फिर पद-दर-पद समाकलन करें।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{x}{x+3}dx=\\int\\left(1-\\dfrac3{x+3}\\right)dx=x-3\\ln|x+3|+C$.",
+        "उदा: $\\int\\dfrac{x}{x+3}dx=\\int\\left(1-\\dfrac3{x+3}\\right)dx=x-3\\ln|x+3|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\sin^n x$, $\\cos^n x$ (small $n$)?",
+       "$\\sin^n x$, $\\cos^n x$ (छोटा $n$) का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Lower the power by multiple-angle formulas: $\\sin^2x=\\dfrac{1-\\cos2x}2$, $\\cos^2x=\\dfrac{1+\\cos2x}2$, $\\sin^3x=\\dfrac{3\\sin x-\\sin3x}4$, $\\cos^3x=\\dfrac{3\\cos x+\\cos3x}4$; $\\sin^4x=(\\sin^2x)^2$.",
+        "बहु-कोण सूत्रों से घात घटाएँ: $\\sin^2x=\\dfrac{1-\\cos2x}2$, $\\cos^2x=\\dfrac{1+\\cos2x}2$, $\\sin^3x=\\dfrac{3\\sin x-\\sin3x}4$, $\\cos^3x=\\dfrac{3\\cos x+\\cos3x}4$; $\\sin^4x=(\\sin^2x)^2$।"
+       ],
+       [
+        "Ex: $\\int\\sin^2x\\,dx=\\dfrac x2-\\dfrac{\\sin2x}4+C$;  $\\int\\cos^3x\\,dx=\\dfrac{3\\sin x}4+\\dfrac{\\sin3x}{12}+C$.",
+        "उदा: $\\int\\sin^2x\\,dx=\\dfrac x2-\\dfrac{\\sin2x}4+C$;  $\\int\\cos^3x\\,dx=\\dfrac{3\\sin x}4+\\dfrac{\\sin3x}{12}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "Integrate $\\dfrac1{1+\\sin x}$ (and $\\dfrac1{1+\\cos x}$).",
+       "$\\dfrac1{1+\\sin x}$ (तथा $\\dfrac1{1+\\cos x}$) का समाकलन कीजिए।"
+      ],
+      "a": [
+       [
+        "Multiply by the conjugate: $\\dfrac{1}{1+\\sin x}=\\dfrac{1-\\sin x}{\\cos^2x}=\\sec^2x-\\sec x\\tan x$; or use half angles: $1+\\cos x=2\\cos^2\\dfrac x2$.",
+        "संयुग्मी से गुणा करें: $\\dfrac{1}{1+\\sin x}=\\dfrac{1-\\sin x}{\\cos^2x}=\\sec^2x-\\sec x\\tan x$; अथवा अर्ध-कोण लें: $1+\\cos x=2\\cos^2\\dfrac x2$।"
+       ],
+       "$\\int\\dfrac{dx}{1+\\sin x}=\\tan x-\\sec x+C,\\qquad\\int\\dfrac{dx}{1+\\cos x}=\\tan\\dfrac x2+C$"
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate 1/Quadratic?",
+       "1/द्विघात का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Complete the square: $D>0\\to\\int\\dfrac{dx}{X^2-a^2}$, $D=0\\to\\int\\dfrac{dx}{(ax+b)^2}$, $D<0\\to\\int\\dfrac{dx}{X^2+a^2}$.",
+        "पूर्ण वर्ग बनाएँ: $D>0\\to\\int\\dfrac{dx}{X^2-a^2}$, $D=0\\to\\int\\dfrac{dx}{(ax+b)^2}$, $D<0\\to\\int\\dfrac{dx}{X^2+a^2}$।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{x^2-6x+10}=\\int\\dfrac{dx}{(x-3)^2+1}=\\tan^{-1}(x-3)+C$.",
+        "उदा: $\\int\\dfrac{dx}{x^2-6x+10}=\\int\\dfrac{dx}{(x-3)^2+1}=\\tan^{-1}(x-3)+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration by Substitution",
+    "hi": "प्रतिस्थापन द्वारा समाकलन",
+    "items": [
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I 4, 5; J-II 4-10; DPP; J-M (both); QB (theory sheet section 2)",
+      "q": [
+       "What is the general method of substitution, and which forms does it give directly?",
+       "प्रतिस्थापन की सामान्य विधि क्या है, और इससे कौन-से रूप सीधे मिलते हैं?"
+      ],
+      "a": [
+       "$\\int f(\\phi(x))\\,\\phi'(x)\\,dx\\ \\xrightarrow{\\ \\phi(x)=t\\ }\\ \\int f(t)\\,dt$",
+       [
+        "Split the integrand so that one factor is the derivative of the expression inside the other. Direct forms: $\\int\\dfrac{f'(x)}{f(x)}dx=\\ln|f(x)|+C$, $\\int[f(x)]^nf'(x)\\,dx=\\dfrac{[f(x)]^{n+1}}{n+1}+C$.",
+        "समाकल्य को ऐसे तोड़ें कि एक गुणनखण्ड दूसरे के अन्दर वाले व्यंजक का अवकलज हो। सीधे रूप: $\\int\\dfrac{f'(x)}{f(x)}dx=\\ln|f(x)|+C$, $\\int[f(x)]^nf'(x)\\,dx=\\dfrac{[f(x)]^{n+1}}{n+1}+C$।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{x^5}{1+x^6}dx$, put $1+x^6=t$: $=\\dfrac16\\ln(1+x^6)+C$.",
+        "उदा: $\\int\\dfrac{x^5}{1+x^6}dx$, $1+x^6=t$ रखें: $=\\dfrac16\\ln(1+x^6)+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the results of integration of $\\tan x$, $\\cot x$, $\\sec x$ and $\\text{cosec}\\,x$.",
+       "$\\tan x$, $\\cot x$, $\\sec x$ तथा $\\text{cosec}\\,x$ के समाकलन के परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\int\\tan x\\,dx=\\ln|\\sec x|+C,\\qquad\\int\\cot x\\,dx=\\ln|\\sin x|+C$",
+       "$\\int\\sec x\\,dx=\\ln|\\sec x+\\tan x|+C=\\ln\\left|\\tan\\left(\\dfrac\\pi4+\\dfrac x2\\right)\\right|+C$",
+       "$\\int\\text{cosec}\\,x\\,dx=\\ln|\\text{cosec}\\,x-\\cot x|+C=\\ln\\left|\\tan\\dfrac x2\\right|+C$"
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Integrate $\\dfrac1{a\\sin x+b\\cos x}$.",
+       "$\\dfrac1{a\\sin x+b\\cos x}$ का समाकलन कीजिए।"
+      ],
+      "a": [
+       [
+        "Write $a\\sin x+b\\cos x=r\\sin(x+\\alpha)$, $r=\\sqrt{a^2+b^2}$, $\\tan\\alpha=\\dfrac ba$; then $\\int=\\dfrac1r\\int\\text{cosec}(x+\\alpha)\\,dx=\\dfrac1r\\ln\\left|\\tan\\dfrac{x+\\alpha}2\\right|+C$.",
+        "$a\\sin x+b\\cos x=r\\sin(x+\\alpha)$ लिखें, $r=\\sqrt{a^2+b^2}$, $\\tan\\alpha=\\dfrac ba$; तब $\\int=\\dfrac1r\\int\\text{cosec}(x+\\alpha)\\,dx=\\dfrac1r\\ln\\left|\\tan\\dfrac{x+\\alpha}2\\right|+C$।"
+       ],
+       [
+        "Ex: $\\cos x+\\sqrt3\\sin x=2\\sin\\left(x+\\dfrac\\pi6\\right)$, so $\\int\\dfrac{dx}{\\cos x+\\sqrt3\\sin x}=\\dfrac12\\ln\\left|\\tan\\left(\\dfrac x2+\\dfrac\\pi{12}\\right)\\right|+C$.",
+        "उदा: $\\cos x+\\sqrt3\\sin x=2\\sin\\left(x+\\dfrac\\pi6\\right)$, अतः $\\int\\dfrac{dx}{\\cos x+\\sqrt3\\sin x}=\\dfrac12\\ln\\left|\\tan\\left(\\dfrac x2+\\dfrac\\pi{12}\\right)\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What kind of substitution is used to deal with an inverse trigonometric function?",
+       "प्रतिलोम त्रिकोणमितीय फलन वाले समाकल्य में कौन-सा प्रतिस्थापन लें?"
+      ],
+      "a": [
+       [
+        "If the derivative of the inverse function is present, put the inverse function $=t$ ($\\sin^{-1}x=t$, $\\tan^{-1}x=t$). If $\\sin^{-1}$, $\\tan^{-1}$ acts on an algebraic expression, put $x=$ a trigonometric function so that it simplifies (e.g. $x=a\\tan^2\\theta$ in $\\sin^{-1}\\sqrt{\\frac{x}{a+x}}$).",
+        "यदि प्रतिलोम फलन का अवकलज उपस्थित हो तो प्रतिलोम फलन $=t$ रखें ($\\sin^{-1}x=t$, $\\tan^{-1}x=t$)। यदि $\\sin^{-1}$, $\\tan^{-1}$ किसी बीजीय व्यंजक पर हो तो $x=$ कोई त्रिकोणमितीय फलन रखें जिससे वह सरल हो जाए (जैसे $\\sin^{-1}\\sqrt{\\frac{x}{a+x}}$ में $x=a\\tan^2\\theta$)।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{\\sin^{-1}x}{\\sqrt{1-x^2}}dx=\\dfrac{(\\sin^{-1}x)^2}2+C$;  $\\int\\dfrac{e^{\\tan^{-1}x}}{1+x^2}dx=e^{\\tan^{-1}x}+C$.",
+        "उदा: $\\int\\dfrac{\\sin^{-1}x}{\\sqrt{1-x^2}}dx=\\dfrac{(\\sin^{-1}x)^2}2+C$;  $\\int\\dfrac{e^{\\tan^{-1}x}}{1+x^2}dx=e^{\\tan^{-1}x}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "10",
+      "o": 10,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What kind of substitution is used to deal with a logarithmic function?",
+       "लघुगणकीय फलन वाले समाकल्य में कौन-सा प्रतिस्थापन लें?"
+      ],
+      "a": [
+       [
+        "When $\\dfrac1x$ is present with a function of $\\ln x$, put $\\ln x=t$, $\\dfrac{dx}x=dt$. (If $\\dfrac1x$ is absent, use parts with $\\ln x$ as first function.)",
+        "जब $\\ln x$ के फलन के साथ $\\dfrac1x$ उपस्थित हो तो $\\ln x=t$, $\\dfrac{dx}x=dt$ रखें। ($\\dfrac1x$ न हो तो $\\ln x$ को प्रथम फलन लेकर खण्डशः समाकलन करें।)"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{x\\ln x}=\\ln|\\ln x|+C$.",
+        "उदा: $\\int\\dfrac{dx}{x\\ln x}=\\ln|\\ln x|+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration by Trigonometric Substitution",
+    "hi": "त्रिकोणमितीय प्रतिस्थापन द्वारा समाकलन",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Which trigonometric substitution should be used?",
+       "कौन-सा त्रिकोणमितीय प्रतिस्थापन प्रयोग करें?"
+      ],
+      "a": [
+       [
+        "$a^2+x^2$: $x=a\\tan\\theta$;  $a^2-x^2$: $x=a\\sin\\theta$;  $x^2-a^2$: $x=a\\sec\\theta$;  $\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac{x}{a-x}}$: $x=a\\sin^2\\theta$.",
+        "$a^2+x^2$: $x=a\\tan\\theta$;  $a^2-x^2$: $x=a\\sin\\theta$;  $x^2-a^2$: $x=a\\sec\\theta$;  $\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac{x}{a-x}}$: $x=a\\sin^2\\theta$।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{(1+x^2)^2}$, $x=\\tan\\theta$: $\\int\\cos^2\\theta\\,d\\theta=\\dfrac12\\tan^{-1}x+\\dfrac{x}{2(1+x^2)}+C$.",
+        "उदा: $\\int\\dfrac{dx}{(1+x^2)^2}$, $x=\\tan\\theta$: $\\int\\cos^2\\theta\\,d\\theta=\\dfrac12\\tan^{-1}x+\\dfrac{x}{2(1+x^2)}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the results of $\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}$, $\\int\\dfrac{dx}{\\sqrt{x^2+a^2}}$ and $\\int\\dfrac{dx}{\\sqrt{x^2-a^2}}$.",
+       "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}$, $\\int\\dfrac{dx}{\\sqrt{x^2+a^2}}$ तथा $\\int\\dfrac{dx}{\\sqrt{x^2-a^2}}$ के परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa+C$",
+       "$\\int\\dfrac{dx}{\\sqrt{x^2+a^2}}=\\ln\\left|x+\\sqrt{x^2+a^2}\\right|+C,\\qquad\\int\\dfrac{dx}{\\sqrt{x^2-a^2}}=\\ln\\left|x+\\sqrt{x^2-a^2}\\right|+C$"
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\dfrac1{\\sqrt{\\text{Quad.}}}$?",
+       "$\\dfrac1{\\sqrt{Q}}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Complete the square. Leading coefficient $>0$: $\\int\\dfrac{dx}{\\sqrt{X^2\\pm a^2}}$ (or $\\int\\dfrac{dx}{|ax+b|}$ if $D=0$); leading coefficient $<0$: $\\int\\dfrac{dx}{\\sqrt{a^2-X^2}}$.",
+        "पूर्ण वर्ग बनाएँ। प्रमुख गुणांक $>0$: $\\int\\dfrac{dx}{\\sqrt{X^2\\pm a^2}}$ ($D=0$ हो तो $\\int\\dfrac{dx}{|ax+b|}$); प्रमुख गुणांक $<0$: $\\int\\dfrac{dx}{\\sqrt{a^2-X^2}}$।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{\\sqrt{x^2+2x+5}}=\\ln\\left|x+1+\\sqrt{x^2+2x+5}\\right|+C$.",
+        "उदा: $\\int\\dfrac{dx}{\\sqrt{x^2+2x+5}}=\\ln\\left|x+1+\\sqrt{x^2+2x+5}\\right|+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration by Parts",
+    "hi": "खण्डशः समाकलन",
+    "items": [
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the formula for integration by parts.",
+       "खण्डशः समाकलन का सूत्र लिखिए।"
+      ],
+      "a": [
+       "$\\int\\text{I}\\cdot\\text{II}\\,dx=\\text{I}\\int\\text{II}\\,dx-\\int\\left(\\dfrac{d}{dx}\\text{I}\\int\\text{II}\\,dx\\right)dx$",
+       [
+        "Ex: $\\int x\\sin x\\,dx=-x\\cos x+\\sin x+C$.",
+        "उदा: $\\int x\\sin x\\,dx=-x\\cos x+\\sin x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How would we choose the first and the second function?",
+       "प्रथम तथा द्वितीय फलन कैसे चुनें?"
+      ],
+      "a": [
+       [
+        "ILATE: the first function is the one that comes first in Inverse, Logarithmic, Algebraic, Trigonometric, Exponential; the second function must be easy to integrate.",
+        "ILATE: प्रथम फलन वह जो क्रम प्रतिलोम (I), लघुगणकीय (L), बीजीय (A), त्रिकोणमितीय (T), चरघातांकी (E) में पहले आए; द्वितीय फलन का समाकलन सरल होना चाहिए।"
+       ],
+       [
+        "Ex: $\\int x\\ln x\\,dx=\\dfrac{x^2}2\\ln x-\\dfrac{x^2}4+C$ ($\\ln x$ first).",
+        "उदा: $\\int x\\ln x\\,dx=\\dfrac{x^2}2\\ln x-\\dfrac{x^2}4+C$ ($\\ln x$ प्रथम)।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the trick of integration by parts and in which type of functions is it used?",
+       "खण्डशः समाकलन की युक्ति क्या है और यह किस प्रकार के फलनों में प्रयोग होती है?"
+      ],
+      "a": [
+       [
+        "(i) A single function whose integral is not known ($\\ln x$, $\\sin^{-1}x$, $\\tan^{-1}x$): take $1$ as the second function. (ii) Cyclic integrals ($e^{ax}\\sin bx$, $\\sec^3x$): the same integral comes back; move it to the left side. (iii) Forcing: write the integrand as $\\text{I}\\cdot\\text{II}$ with a convenient factor.",
+        "(i) एकल फलन जिसका समाकल ज्ञात नहीं ($\\ln x$, $\\sin^{-1}x$, $\\tan^{-1}x$): $1$ को द्वितीय फलन लें। (ii) चक्रीय समाकल ($e^{ax}\\sin bx$, $\\sec^3x$): वही समाकल पुनः आता है; उसे बाईं ओर ले जाएँ। (iii) बलपूर्वक: समाकल्य को सुविधाजनक गुणनखण्ड से $\\text{I}\\cdot\\text{II}$ के रूप में लिखें।"
+       ],
+       [
+        "Ex: $\\int\\tan^{-1}x\\,dx=x\\tan^{-1}x-\\dfrac12\\ln(1+x^2)+C$.",
+        "उदा: $\\int\\tan^{-1}x\\,dx=x\\tan^{-1}x-\\dfrac12\\ln(1+x^2)+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the results of $\\int\\sqrt{a^2-x^2}\\,dx$, $\\int\\sqrt{x^2-a^2}\\,dx$ and $\\int\\sqrt{x^2+a^2}\\,dx$.",
+       "$\\int\\sqrt{a^2-x^2}\\,dx$, $\\int\\sqrt{x^2-a^2}\\,dx$ तथा $\\int\\sqrt{x^2+a^2}\\,dx$ के परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\int\\sqrt{a^2-x^2}\\,dx=\\dfrac x2\\sqrt{a^2-x^2}+\\dfrac{a^2}2\\sin^{-1}\\dfrac xa+C$",
+       "$\\int\\sqrt{x^2-a^2}\\,dx=\\dfrac x2\\sqrt{x^2-a^2}-\\dfrac{a^2}2\\ln\\left|x+\\sqrt{x^2-a^2}\\right|+C$",
+       "$\\int\\sqrt{x^2+a^2}\\,dx=\\dfrac x2\\sqrt{x^2+a^2}+\\dfrac{a^2}2\\ln\\left|x+\\sqrt{x^2+a^2}\\right|+C$"
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the results of $\\int e^{ax}\\sin bx\\,dx$ and $\\int e^{ax}\\cos bx\\,dx$, and prove them.",
+       "$\\int e^{ax}\\sin bx\\,dx$ तथा $\\int e^{ax}\\cos bx\\,dx$ के परिणाम लिखिए और सिद्ध कीजिए।"
+      ],
+      "a": [
+       "$\\int e^{ax}\\sin bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\sin bx-b\\cos bx)+C$",
+       "$\\int e^{ax}\\cos bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\cos bx+b\\sin bx)+C$",
+       [
+        "Proof: integrate by parts twice (cyclic); $I$ reappears with factor $-\\dfrac{b^2}{a^2}$; solve for $I$. Ex: $\\int e^{2x}\\sin3x\\,dx=\\dfrac{e^{2x}}{13}(2\\sin3x-3\\cos3x)+C$.",
+        "उपपत्ति: दो बार खण्डशः समाकलन (चक्रीय); $I$ गुणक $-\\dfrac{b^2}{a^2}$ के साथ पुनः आता है; $I$ हल करें। उदा: $\\int e^{2x}\\sin3x\\,dx=\\dfrac{e^{2x}}{13}(2\\sin3x-3\\cos3x)+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration of Rational Function",
+    "hi": "परिमेय फलन का समाकलन",
+    "items": [
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate 1/linear?",
+       "1/रैखिक का समाकलन कैसे करें?"
+      ],
+      "a": [
+       "$\\int\\dfrac{dx}{ax+b}=\\dfrac1a\\ln|ax+b|+C$",
+       [
+        "Ex: $\\int\\dfrac{dx}{3x+2}=\\dfrac13\\ln|3x+2|+C$.",
+        "उदा: $\\int\\dfrac{dx}{3x+2}=\\dfrac13\\ln|3x+2|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate polynomial/linear?",
+       "बहुपद/रैखिक का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Divide: $\\dfrac{P(x)}{ax+b}=Q(x)+\\dfrac{r}{ax+b}$ (remainder $r=P(-b/a)$).",
+        "भाग दें: $\\dfrac{P(x)}{ax+b}=Q(x)+\\dfrac{r}{ax+b}$ (शेषफल $r=P(-b/a)$)।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{x^3+x^2+x+4}{x+1}dx=\\int\\left(x^2+1+\\dfrac3{x+1}\\right)dx=\\dfrac{x^3}3+x+3\\ln|x+1|+C$.",
+        "उदा: $\\int\\dfrac{x^3+x^2+x+4}{x+1}dx=\\int\\left(x^2+1+\\dfrac3{x+1}\\right)dx=\\dfrac{x^3}3+x+3\\ln|x+1|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "21",
+      "o": 21,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to integrate $\\sqrt{\\text{Quadratic}}$?",
+       "$\\sqrt{Q}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Complete the square and use the three results of {#17}: $\\sqrt{X^2-a^2}$, $\\sqrt{X^2+a^2}$, $\\sqrt{a^2-X^2}$ ($D=0$: $\\sqrt{(ax+b)^2}=|ax+b|$).",
+        "पूर्ण वर्ग बनाकर {#17} के तीन परिणाम लगाएँ: $\\sqrt{X^2-a^2}$, $\\sqrt{X^2+a^2}$, $\\sqrt{a^2-X^2}$ ($D=0$: $\\sqrt{(ax+b)^2}=|ax+b|$)।"
+       ],
+       [
+        "Ex: $\\int\\sqrt{x^2+2x+5}\\,dx=\\dfrac{x+1}2\\sqrt{x^2+2x+5}+2\\ln\\left|x+1+\\sqrt{x^2+2x+5}\\right|+C$.",
+        "उदा: $\\int\\sqrt{x^2+2x+5}\\,dx=\\dfrac{x+1}2\\sqrt{x^2+2x+5}+2\\ln\\left|x+1+\\sqrt{x^2+2x+5}\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate linear/quadratic, linear/$\\sqrt{\\text{quadratic}}$ and linear$\\cdot\\sqrt{\\text{quadratic}}$?",
+       "रैखिक/द्विघात, रैखिक/$\\sqrt{Q}$ तथा रैखिक$\\cdot\\sqrt{Q}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Write linear $=A\\dfrac{d}{dx}(Q)+B$ (compare coefficients). The $A$-part is $\\int\\dfrac{Q'}{Q}$, $\\int\\dfrac{Q'}{\\sqrt Q}=2\\sqrt Q$ or $\\int Q'\\sqrt Q=\\dfrac23Q^{3/2}$; the $B$-part is item {#6}, {#13} or {#21}. Polynomial/quadratic: divide first.",
+        "रैखिक $=A\\dfrac{d}{dx}(Q)+B$ लिखें (गुणांकों की तुलना)। $A$-भाग $\\int\\dfrac{Q'}{Q}$, $\\int\\dfrac{Q'}{\\sqrt Q}=2\\sqrt Q$ या $\\int Q'\\sqrt Q=\\dfrac23Q^{3/2}$; $B$-भाग बिन्दु {#6}, {#13} या {#21}। बहुपद/द्विघात: पहले भाग दें।"
+       ],
+       [
+        "Ex: $4x+3=2(2x-2)+7$, so $\\int\\dfrac{4x+3}{\\sqrt{x^2-2x+2}}dx=4\\sqrt{x^2-2x+2}+7\\ln\\left|x-1+\\sqrt{x^2-2x+2}\\right|+C$.",
+        "उदा: $4x+3=2(2x-2)+7$, अतः $\\int\\dfrac{4x+3}{\\sqrt{x^2-2x+2}}dx=4\\sqrt{x^2-2x+2}+7\\ln\\left|x-1+\\sqrt{x^2-2x+2}\\right|+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Two Classic Integrals",
+    "hi": "दो विशिष्ट समाकल",
+    "items": [
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write both results of the two classic integrals and prove them.",
+       "दोनों विशिष्ट समाकलों के परिणाम लिखिए और सिद्ध कीजिए।"
+      ],
+      "a": [
+       "$\\int e^x[f(x)+f'(x)]\\,dx=e^xf(x)+C,\\qquad\\int[xf'(x)+f(x)]\\,dx=xf(x)+C$",
+       [
+        "Proof: $\\dfrac{d}{dx}[e^xf(x)]=e^x(f+f')$ and $\\dfrac{d}{dx}[xf(x)]=f+xf'$ (or parts on $\\int e^xf\\,dx$). Ex: $\\int e^x(\\sin x+\\cos x)\\,dx=e^x\\sin x+C$.",
+        "उपपत्ति: $\\dfrac{d}{dx}[e^xf(x)]=e^x(f+f')$ तथा $\\dfrac{d}{dx}[xf(x)]=f+xf'$ (या $\\int e^xf\\,dx$ पर खण्डशः)। उदा: $\\int e^x(\\sin x+\\cos x)\\,dx=e^x\\sin x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When would we apply the classic integral results?",
+       "विशिष्ट समाकल परिणाम कब लगाएँ?"
+      ],
+      "a": [
+       [
+        "When the integrand is $e^x\\times$(something) and the something splits into a function plus its derivative (simplify, split fractions, use $\\frac{x-1}{x^2}=\\frac1x-\\frac1{x^2}$ etc.); similarly $f+xf'$ without $e^x$.",
+        "जब समाकल्य $e^x\\times$(कुछ) हो और वह 'कुछ' किसी फलन तथा उसके अवकलज के योग में टूट जाए (सरल करें, भिन्न तोड़ें, $\\frac{x-1}{x^2}=\\frac1x-\\frac1{x^2}$ आदि); इसी प्रकार $e^x$ के बिना $f+xf'$।"
+       ],
+       [
+        "Ex: $\\int e^x\\dfrac{x-1}{x^2}dx=\\int e^x\\left(\\dfrac1x-\\dfrac1{x^2}\\right)dx=\\dfrac{e^x}x+C$.",
+        "उदा: $\\int e^x\\dfrac{x-1}{x^2}dx=\\int e^x\\left(\\dfrac1x-\\dfrac1{x^2}\\right)dx=\\dfrac{e^x}x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to do in questions of classic integral if an expression other than $x$ is in the power of $e$?",
+       "विशिष्ट समाकल के प्रश्नों में $e$ की घात में $x$ के अतिरिक्त कोई व्यंजक हो तो क्या करें?"
+      ],
+      "a": [
+       [
+        "Put the exponent $=t$ (e.g. $kx=t$, $\\ln x=t$), or use $\\int e^{kx}[kf(x)+f'(x)]\\,dx=e^{kx}f(x)+C$.",
+        "घातांक $=t$ रखें (जैसे $kx=t$, $\\ln x=t$), या $\\int e^{kx}[kf(x)+f'(x)]\\,dx=e^{kx}f(x)+C$ प्रयोग करें।"
+       ],
+       [
+        "Ex: $\\int e^{2x}(2\\tan x+\\sec^2x)\\,dx=e^{2x}\\tan x+C$.",
+        "उदा: $\\int e^{2x}(2\\tan x+\\sec^2x)\\,dx=e^{2x}\\tan x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the result of $\\int e^{g(x)}\\left(f(x)g'(x)+f'(x)\\right)dx$.",
+       "$\\int e^{g(x)}\\left(f(x)g'(x)+f'(x)\\right)dx$ का परिणाम लिखिए।"
+      ],
+      "a": [
+       "$\\int e^{g(x)}\\left(f(x)g'(x)+f'(x)\\right)dx=e^{g(x)}f(x)+C$",
+       [
+        "Reason: it is $\\dfrac{d}{dx}\\left[e^{g(x)}f(x)\\right]$. Ex: $\\int e^{x^2}\\left(2x\\ln x+\\dfrac1x\\right)dx=e^{x^2}\\ln x+C$.",
+        "कारण: यह $\\dfrac{d}{dx}\\left[e^{g(x)}f(x)\\right]$ है। उदा: $\\int e^{x^2}\\left(2x\\ln x+\\dfrac1x\\right)dx=e^{x^2}\\ln x+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration of Trigonometric Functions",
+    "hi": "त्रिकोणमितीय फलनों का समाकलन",
+    "items": [
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\sin^mx\\cos^nx$ if at least one of $m$, $n$ is odd?",
+       "$\\sin^mx\\cos^nx$ का समाकलन कैसे करें यदि $m$, $n$ में कम से कम एक विषम हो?"
+      ],
+      "a": [
+       [
+        "$m$ odd: put $\\cos x=t$; $n$ odd: put $\\sin x=t$ (keep one odd power for $dt$, convert the rest with $\\sin^2x+\\cos^2x=1$).",
+        "$m$ विषम: $\\cos x=t$ रखें; $n$ विषम: $\\sin x=t$ रखें (एक विषम घात $dt$ हेतु रखें, शेष को $\\sin^2x+\\cos^2x=1$ से बदलें)।"
+       ],
+       [
+        "Ex: $\\int\\sin^5x\\cos^4x\\,dx=-\\dfrac{\\cos^5x}5+\\dfrac{2\\cos^7x}7-\\dfrac{\\cos^9x}9+C$.",
+        "उदा: $\\int\\sin^5x\\cos^4x\\,dx=-\\dfrac{\\cos^5x}5+\\dfrac{2\\cos^7x}7-\\dfrac{\\cos^9x}9+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\sin^mx\\cos^nx$ if both $m$ and $n$ are even?",
+       "$\\sin^mx\\cos^nx$ का समाकलन कैसे करें यदि $m$ तथा $n$ दोनों सम हों?"
+      ],
+      "a": [
+       [
+        "Convert higher powers into multiple angles: $\\sin x\\cos x=\\frac12\\sin2x$, $\\sin^2x=\\frac{1-\\cos2x}2$, $\\cos^2x=\\frac{1+\\cos2x}2$.",
+        "उच्च घातों को बहु-कोणों में बदलें: $\\sin x\\cos x=\\frac12\\sin2x$, $\\sin^2x=\\frac{1-\\cos2x}2$, $\\cos^2x=\\frac{1+\\cos2x}2$।"
+       ],
+       [
+        "Ex: $\\int\\sin^2x\\cos^2x\\,dx=\\dfrac x8-\\dfrac{\\sin4x}{32}+C$.",
+        "उदा: $\\int\\sin^2x\\cos^2x\\,dx=\\dfrac x8-\\dfrac{\\sin4x}{32}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\sin^mx\\cos^nx$ if $m+n$ is a negative even integer?",
+       "$\\sin^mx\\cos^nx$ का समाकलन कैसे करें यदि $m+n$ ऋणात्मक सम पूर्णांक हो?"
+      ],
+      "a": [
+       [
+        "Write it as $\\tan^mx\\,\\sec^{-(m+n)}x$, keep $\\sec^2x$ for $dt$ and put $\\tan x=t$.",
+        "इसे $\\tan^mx\\,\\sec^{-(m+n)}x$ लिखें, $dt$ हेतु $\\sec^2x$ रखें और $\\tan x=t$ रखें।"
+       ],
+       [
+        "Ex: $\\int(\\sin x)^{1/3}(\\cos x)^{-7/3}dx=\\int\\tan^{1/3}x\\sec^2x\\,dx=\\dfrac34\\tan^{4/3}x+C$.",
+        "उदा: $\\int(\\sin x)^{1/3}(\\cos x)^{-7/3}dx=\\int\\tan^{1/3}x\\sec^2x\\,dx=\\dfrac34\\tan^{4/3}x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\dfrac1{a\\sin^2x+b\\cos^2x+c\\sin x\\cos x+d}$?",
+       "$\\dfrac1{a\\sin^2x+b\\cos^2x+c\\sin x\\cos x+d}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Multiply numerator and denominator by $\\sec^2x$ ($d=d\\sec^2x\\cos^2x$, i.e. $d\\to d(1+\\tan^2x)$) and put $\\tan x=t$: it becomes $\\int\\dfrac{dt}{\\text{quadratic in }t}$.",
+        "अंश व हर को $\\sec^2x$ से गुणा करें ($d\\to d(1+\\tan^2x)$) और $\\tan x=t$ रखें: यह $\\int\\dfrac{dt}{Q(t)}$ बन जाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{\\sin^2x+4\\cos^2x}=\\int\\dfrac{dt}{t^2+4}=\\dfrac12\\tan^{-1}\\left(\\dfrac{\\tan x}2\\right)+C$.",
+        "उदा: $\\int\\dfrac{dx}{\\sin^2x+4\\cos^2x}=\\int\\dfrac{dt}{t^2+4}=\\dfrac12\\tan^{-1}\\left(\\dfrac{\\tan x}2\\right)+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\dfrac1{a\\sin x+b\\cos x+c}$?",
+       "$\\dfrac1{a\\sin x+b\\cos x+c}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Write $\\sin x=\\dfrac{2\\tan\\frac x2}{1+\\tan^2\\frac x2}$, $\\cos x=\\dfrac{1-\\tan^2\\frac x2}{1+\\tan^2\\frac x2}$ and put $\\tan\\dfrac x2=t$.",
+        "$\\sin x=\\dfrac{2\\tan\\frac x2}{1+\\tan^2\\frac x2}$, $\\cos x=\\dfrac{1-\\tan^2\\frac x2}{1+\\tan^2\\frac x2}$ लिखें और $\\tan\\dfrac x2=t$ रखें।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{1+\\sin x+\\cos x}=\\ln\\left|1+\\tan\\dfrac x2\\right|+C$.",
+        "उदा: $\\int\\dfrac{dx}{1+\\sin x+\\cos x}=\\ln\\left|1+\\tan\\dfrac x2\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$?",
+       "$\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Write Nr $=A(\\text{Dr})+B\\dfrac{d}{dx}(\\text{Dr})+C$ and compare coefficients: $\\int=Ax+B\\ln|\\text{Dr}|+C\\int\\dfrac{dx}{\\text{Dr}}$ (last part by {#31}).",
+        "अंश $=A(\\text{Dr})+B\\dfrac{d}{dx}(\\text{Dr})+C$ लिखकर गुणांकों की तुलना करें: $\\int=Ax+B\\ln|\\text{Dr}|+C\\int\\dfrac{dx}{\\text{Dr}}$ (अन्तिम भाग {#31} से)।"
+       ],
+       [
+        "Ex: $\\sin x=\\tfrac12(\\sin x+\\cos x)-\\tfrac12(\\cos x-\\sin x)$, so $\\int\\dfrac{\\sin x}{\\sin x+\\cos x}dx=\\dfrac x2-\\dfrac12\\ln|\\sin x+\\cos x|+C$.",
+        "उदा: $\\sin x=\\tfrac12(\\sin x+\\cos x)-\\tfrac12(\\cos x-\\sin x)$, अतः $\\int\\dfrac{\\sin x}{\\sin x+\\cos x}dx=\\dfrac x2-\\dfrac12\\ln|\\sin x+\\cos x|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate when $(\\sin x+\\cos x)$ or $(\\sin x-\\cos x)$ is in the numerator and $\\sin2x$ in the denominator?",
+       "जब अंश में $(\\sin x+\\cos x)$ या $(\\sin x-\\cos x)$ तथा हर में $\\sin2x$ हो तो समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Nr $=\\sin x+\\cos x$: put $\\sin x-\\cos x=t$, $\\sin2x=1-t^2$. Nr $=\\sin x-\\cos x$: put $\\sin x+\\cos x=t$, $\\sin2x=t^2-1$. ($\\sin x$ or $\\cos x$ alone: split as half-sum / half-difference.)",
+        "अंश $=\\sin x+\\cos x$: $\\sin x-\\cos x=t$, $\\sin2x=1-t^2$ रखें। अंश $=\\sin x-\\cos x$: $\\sin x+\\cos x=t$, $\\sin2x=t^2-1$ रखें। (केवल $\\sin x$ या $\\cos x$: आधे योग / आधे अन्तर में तोड़ें।)"
+       ],
+       [
+        "Ex: $\\int\\dfrac{\\sin x+\\cos x}{8+\\sin2x}dx=\\int\\dfrac{dt}{9-t^2}=\\dfrac16\\ln\\left|\\dfrac{3+\\sin x-\\cos x}{3-\\sin x+\\cos x}\\right|+C$.",
+        "उदा: $\\int\\dfrac{\\sin x+\\cos x}{8+\\sin2x}dx=\\int\\dfrac{dt}{9-t^2}=\\dfrac16\\ln\\left|\\dfrac{3+\\sin x-\\cos x}{3-\\sin x+\\cos x}\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate when $(\\sin x+\\cos x)$ or $(\\sin x-\\cos x)$ is in the denominator and $\\sin2x$ in the numerator?",
+       "जब हर में $(\\sin x+\\cos x)$ या $(\\sin x-\\cos x)$ तथा अंश में $\\sin2x$ हो तो समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Write $\\sin2x=(\\sin x+\\cos x)^2-1$ or $\\sin2x=1-(\\sin x-\\cos x)^2$, divide, and use {#8} for $\\int\\dfrac{dx}{\\sin x\\pm\\cos x}$.",
+        "$\\sin2x=(\\sin x+\\cos x)^2-1$ या $\\sin2x=1-(\\sin x-\\cos x)^2$ लिखें, भाग दें, और $\\int\\dfrac{dx}{\\sin x\\pm\\cos x}$ हेतु {#8} लगाएँ।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{\\sin2x}{\\sin x+\\cos x}dx=\\sin x-\\cos x-\\dfrac1{\\sqrt2}\\ln\\left|\\tan\\left(\\dfrac x2+\\dfrac\\pi8\\right)\\right|+C$.",
+        "उदा: $\\int\\dfrac{\\sin2x}{\\sin x+\\cos x}dx=\\sin x-\\cos x-\\dfrac1{\\sqrt2}\\ln\\left|\\tan\\left(\\dfrac x2+\\dfrac\\pi8\\right)\\right|+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration by Partial Fraction",
+    "hi": "आंशिक भिन्नों द्वारा समाकलन",
+    "items": [
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When would we use the partial fraction method?",
+       "आंशिक भिन्न विधि कब प्रयोग करें?"
+      ],
+      "a": [
+       [
+        "For a rational function $\\dfrac{P(x)}{Q(x)}$ whose denominator factorises. If $\\deg P\\ge\\deg Q$ divide first ($T(x)+\\dfrac{P_1}{Q}$). A substitution ($x^2=t$, $e^x=t$, $\\sin x=t$) often makes the integrand rational first.",
+        "परिमेय फलन $\\dfrac{P(x)}{Q(x)}$ हेतु जिसके हर के गुणनखण्ड हों। यदि $\\deg P\\ge\\deg Q$ तो पहले भाग दें ($T(x)+\\dfrac{P_1}{Q}$)। प्रायः एक प्रतिस्थापन ($x^2=t$, $e^x=t$, $\\sin x=t$) पहले समाकल्य को परिमेय बनाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{x\\,dx}{(x^2+2)(x^2+1)}$, $x^2+1=t$: $=\\dfrac12\\ln\\dfrac{x^2+1}{x^2+2}+C$.",
+        "उदा: $\\int\\dfrac{x\\,dx}{(x^2+2)(x^2+1)}$, $x^2+1=t$: $=\\dfrac12\\ln\\dfrac{x^2+1}{x^2+2}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to break the fraction if the denominator is a product of non-repeating linear factors?",
+       "यदि हर अपुनरावर्ती रैखिक गुणनखण्डों का गुणनफल हो तो भिन्न कैसे तोड़ें?"
+      ],
+      "a": [
+       "$\\dfrac{P(x)}{(x-a_1)(x-a_2)\\cdots(x-a_n)}=\\dfrac{A_1}{x-a_1}+\\dfrac{A_2}{x-a_2}+\\cdots+\\dfrac{A_n}{x-a_n}$",
+       [
+        "$A_k$: cover $(x-a_k)$ and put $x=a_k$. Ex: $\\int\\dfrac{dx}{(x-1)(x-2)(x-3)}=\\dfrac12\\ln|x-1|-\\ln|x-2|+\\dfrac12\\ln|x-3|+C$.",
+        "$A_k$: $(x-a_k)$ ढककर $x=a_k$ रखें। उदा: $\\int\\dfrac{dx}{(x-1)(x-2)(x-3)}=\\dfrac12\\ln|x-1|-\\ln|x-2|+\\dfrac12\\ln|x-3|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to break the fraction if the denominator is a product of linear factors, some of them repeating?",
+       "यदि हर रैखिक गुणनखण्डों का गुणनफल हो और कुछ पुनरावर्ती हों तो भिन्न कैसे तोड़ें?"
+      ],
+      "a": [
+       "$\\dfrac{1}{(x-a)^k(x-b)}=\\dfrac{A_1}{x-a}+\\dfrac{A_2}{(x-a)^2}+\\cdots+\\dfrac{A_k}{(x-a)^k}+\\dfrac{B}{x-b}$",
+       [
+        "Find $A_k$, $B$ by putting $x=a$, $x=b$; the rest by comparing coefficients. Ex: $\\dfrac1{x^2(x+1)}=-\\dfrac1x+\\dfrac1{x^2}+\\dfrac1{x+1}$, $\\int=\\ln\\left|\\dfrac{x+1}x\\right|-\\dfrac1x+C$.",
+        "$x=a$, $x=b$ रखकर $A_k$, $B$; शेष गुणांकों की तुलना से। उदा: $\\dfrac1{x^2(x+1)}=-\\dfrac1x+\\dfrac1{x^2}+\\dfrac1{x+1}$, $\\int=\\ln\\left|\\dfrac{x+1}x\\right|-\\dfrac1x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to break the fraction if the denominator is a product of linear and quadratic factors?",
+       "यदि हर रैखिक तथा द्विघात गुणनखण्डों का गुणनफल हो तो भिन्न कैसे तोड़ें?"
+      ],
+      "a": [
+       "$\\dfrac{1}{(x-a)(x^2+bx+c)}=\\dfrac{A}{x-a}+\\dfrac{Bx+C}{x^2+bx+c}$",
+       [
+        "An irreducible quadratic factor gets a linear numerator. Ex: $\\int\\dfrac{dx}{(x-1)(x^2+1)}=\\dfrac12\\ln|x-1|-\\dfrac14\\ln(x^2+1)-\\dfrac12\\tan^{-1}x+C$.",
+        "अखण्डनीय द्विघात गुणनखण्ड को रैखिक अंश मिलता है। उदा: $\\int\\dfrac{dx}{(x-1)(x^2+1)}=\\dfrac12\\ln|x-1|-\\dfrac14\\ln(x^2+1)-\\dfrac12\\tan^{-1}x+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "items": [
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to apply the 'kutur putur' profile?",
+       "'कुतुर पुतुर' प्रोफ़ाइल कैसे लगाएँ?"
+      ],
+      "a": [
+       [
+        "For $\\int\\dfrac{dx}{x(x^n+1)}$, $\\int\\dfrac{dx}{x^2(x^n+1)^{(n-1)/n}}$, $\\int\\dfrac{dx}{x^n(1+x^n)^{1/n}}$: take $x^n$ common from the bracket and put $1+x^{-n}=t$ (or $t^n$).",
+        "$\\int\\dfrac{dx}{x(x^n+1)}$, $\\int\\dfrac{dx}{x^2(x^n+1)^{(n-1)/n}}$, $\\int\\dfrac{dx}{x^n(1+x^n)^{1/n}}$ हेतु: कोष्ठक से $x^n$ उभयनिष्ठ लें और $1+x^{-n}=t$ (या $t^n$) रखें।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{x^2(x^4+1)^{3/4}}=\\int\\dfrac{dx}{x^5(1+x^{-4})^{3/4}}=-\\left(1+\\dfrac1{x^4}\\right)^{1/4}+C$.",
+        "उदा: $\\int\\dfrac{dx}{x^2(x^4+1)^{3/4}}=\\int\\dfrac{dx}{x^5(1+x^{-4})^{3/4}}=-\\left(1+\\dfrac1{x^4}\\right)^{1/4}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to keep in mind while taking a power of $x$ out as common?",
+       "$x$ की घात को उभयनिष्ठ लेते समय क्या ध्यान रखें?"
+      ],
+      "a": [
+       [
+        "Out of a root, $\\sqrt{x^2}=|x|$ (and $\\sqrt[n]{x^n}=|x|$ for even $n$): for $x>0$ it is $x$, for $x<0$ it is $-x$, so the answer may differ in sign on the two sides; state the interval.",
+        "मूल के बाहर $\\sqrt{x^2}=|x|$ (सम $n$ हेतु $\\sqrt[n]{x^n}=|x|$): $x>0$ हेतु $x$, $x<0$ हेतु $-x$, अतः दोनों ओर उत्तर का चिह्न भिन्न हो सकता है; अन्तराल लिखें।"
+       ],
+       [
+        "Ex: $\\sqrt{x^4+x^2}=|x|\\sqrt{x^2+1}$, not $x\\sqrt{x^2+1}$.",
+        "उदा: $\\sqrt{x^4+x^2}=|x|\\sqrt{x^2+1}$, न कि $x\\sqrt{x^2+1}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Miscellaneous Type",
+    "hi": "विविध प्रकार",
+    "items": [
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to integrate $\\dfrac{ax^2+bx+c}{x^4+px^2+q}$ if $q>0$?",
+       "$q>0$ हो तो $\\dfrac{ax^2+bx+c}{x^4+px^2+q}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Split into $\\dfrac{x^2+k}{x^4+px^2+k^2}$, $\\dfrac{x^2-k}{x^4+px^2+k^2}$ ($k=\\sqrt q$) and $\\dfrac{bx}{\\cdots}$ (put $x^2=t$). Divide by $x^2$: $x^2+k$ needs $x-\\dfrac kx=t$; $x^2-k$ needs $x+\\dfrac kx=t$.",
+        "$\\dfrac{x^2+k}{x^4+px^2+k^2}$, $\\dfrac{x^2-k}{x^4+px^2+k^2}$ ($k=\\sqrt q$) तथा $\\dfrac{bx}{\\cdots}$ ($x^2=t$) में तोड़ें। $x^2$ से भाग दें: $x^2+k$ हेतु $x-\\dfrac kx=t$; $x^2-k$ हेतु $x+\\dfrac kx=t$।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{x^2+1}{x^4+1}dx=\\int\\dfrac{d(x-\\frac1x)}{(x-\\frac1x)^2+2}=\\dfrac1{\\sqrt2}\\tan^{-1}\\dfrac{x^2-1}{\\sqrt2\\,x}+C$.",
+        "उदा: $\\int\\dfrac{x^2+1}{x^4+1}dx=\\int\\dfrac{d(x-\\frac1x)}{(x-\\frac1x)^2+2}=\\dfrac1{\\sqrt2}\\tan^{-1}\\dfrac{x^2-1}{\\sqrt2\\,x}+C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Integration of Irrational Algebraic Functions",
+    "hi": "अपरिमेय बीजीय फलनों का समाकलन",
+    "items": [
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute while integrating an expression containing $(x-\\alpha)(\\beta-x)$, and what are $dx$, $x-\\alpha$ and $\\beta-x$ then?",
+       "$(x-\\alpha)(\\beta-x)$ वाले व्यंजक के समाकलन में क्या प्रतिस्थापन करें, और तब $dx$, $x-\\alpha$ तथा $\\beta-x$ क्या होंगे?"
+      ],
+      "a": [
+       "$x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta:\\quad dx=(\\beta-\\alpha)\\sin2\\theta\\,d\\theta,\\ x-\\alpha=(\\beta-\\alpha)\\sin^2\\theta,\\ \\beta-x=(\\beta-\\alpha)\\cos^2\\theta$",
+       [
+        "Used for $\\sqrt{\\dfrac{x-\\alpha}{\\beta-x}}$, $\\sqrt{(x-\\alpha)(\\beta-x)}$ ($\\beta>x>\\alpha$). Ex: $\\int\\dfrac{dx}{\\sqrt{(x-1)(3-x)}}=2\\sin^{-1}\\sqrt{\\dfrac{x-1}2}+C$.",
+        "$\\sqrt{\\dfrac{x-\\alpha}{\\beta-x}}$, $\\sqrt{(x-\\alpha)(\\beta-x)}$ ($\\beta>x>\\alpha$) हेतु। उदा: $\\int\\dfrac{dx}{\\sqrt{(x-1)(3-x)}}=2\\sin^{-1}\\sqrt{\\dfrac{x-1}2}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What to substitute while integrating an expression containing $(x-\\alpha)(x-\\beta)$, and what are $dx$, $x-\\alpha$ and $x-\\beta$ then?",
+       "$(x-\\alpha)(x-\\beta)$ वाले व्यंजक के समाकलन में क्या प्रतिस्थापन करें, और तब $dx$, $x-\\alpha$ तथा $x-\\beta$ क्या होंगे?"
+      ],
+      "a": [
+       "$x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta:\\quad dx=2(\\alpha-\\beta)\\sec^2\\theta\\tan\\theta\\,d\\theta,\\ x-\\alpha=(\\alpha-\\beta)\\tan^2\\theta,\\ x-\\beta=(\\alpha-\\beta)\\sec^2\\theta$",
+       [
+        "For $\\int\\dfrac{dx}{\\sqrt{(x-\\alpha)(x-\\beta)}}$ also put $x-\\alpha=t^2$. Ex: $\\int\\dfrac{dx}{\\sqrt{(x-1)(x-3)}}=2\\ln\\left|\\sqrt{x-1}+\\sqrt{x-3}\\right|+C$.",
+        "$\\int\\dfrac{dx}{\\sqrt{(x-\\alpha)(x-\\beta)}}$ हेतु $x-\\alpha=t^2$ भी रख सकते हैं। उदा: $\\int\\dfrac{dx}{\\sqrt{(x-1)(x-3)}}=2\\ln\\left|\\sqrt{x-1}+\\sqrt{x-3}\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "44",
+      "o": 44,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to integrate $\\int\\dfrac{dx}{(ax+b)\\sqrt{px+q}}$ and $\\int\\dfrac{dx}{(ax^2+bx+c)\\sqrt{px+q}}$?",
+       "$\\int\\dfrac{dx}{(ax+b)\\sqrt{px+q}}$ तथा $\\int\\dfrac{dx}{(ax^2+bx+c)\\sqrt{px+q}}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Put $px+q=t^2$; the integral becomes a rational function of $t$.",
+        "$px+q=t^2$ रखें; समाकल $t$ का परिमेय फलन बन जाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{(x-3)\\sqrt{x+1}}=\\int\\dfrac{2\\,dt}{t^2-4}=\\dfrac12\\ln\\left|\\dfrac{\\sqrt{x+1}-2}{\\sqrt{x+1}+2}\\right|+C$.",
+        "उदा: $\\int\\dfrac{dx}{(x-3)\\sqrt{x+1}}=\\int\\dfrac{2\\,dt}{t^2-4}=\\dfrac12\\ln\\left|\\dfrac{\\sqrt{x+1}-2}{\\sqrt{x+1}+2}\\right|+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "45",
+      "o": 45,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to integrate $\\int\\dfrac{dx}{(ax+b)\\sqrt{px^2+qx+r}}$?",
+       "$\\int\\dfrac{dx}{(ax+b)\\sqrt{px^2+qx+r}}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Put $ax+b=\\dfrac1t$; it reduces to $\\int\\dfrac{dt}{\\sqrt{\\text{quadratic in }t}}$ ({#13}).",
+        "$ax+b=\\dfrac1t$ रखें; यह $\\int\\dfrac{dt}{\\sqrt{Q(t)}}$ ({#13}) बन जाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{(x+1)\\sqrt{x^2+x+1}}=-\\ln\\left|t-\\dfrac12+\\sqrt{t^2-t+1}\\right|+C$, $t=\\dfrac1{x+1}$.",
+        "उदा: $\\int\\dfrac{dx}{(x+1)\\sqrt{x^2+x+1}}=-\\ln\\left|t-\\dfrac12+\\sqrt{t^2-t+1}\\right|+C$, $t=\\dfrac1{x+1}$।"
+       ]
+      ]
+     },
+     {
+      "id": "46",
+      "o": 46,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to integrate $\\int\\dfrac{dx}{(ax^2+b)\\sqrt{px^2+q}}$?",
+       "$\\int\\dfrac{dx}{(ax^2+b)\\sqrt{px^2+q}}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Put $x=\\dfrac1t$, then $p+qt^2=y^2$ (or divide by $x^3$ and put $p+\\dfrac q{x^2}=y^2$): it becomes $\\int\\dfrac{dy}{\\text{quadratic in }y}$.",
+        "$x=\\dfrac1t$ रखें, फिर $p+qt^2=y^2$ (या $x^3$ से भाग देकर $p+\\dfrac q{x^2}=y^2$): यह $\\int\\dfrac{dy}{Q(y)}$ बन जाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{(1+x^2)\\sqrt{1-x^2}}=\\dfrac1{\\sqrt2}\\tan^{-1}\\dfrac{\\sqrt2\\,x}{\\sqrt{1-x^2}}+C$.",
+        "उदा: $\\int\\dfrac{dx}{(1+x^2)\\sqrt{1-x^2}}=\\dfrac1{\\sqrt2}\\tan^{-1}\\dfrac{\\sqrt2\\,x}{\\sqrt{1-x^2}}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII) 18; J-M(XIII) 82; J-A 27; QB 3",
+      "q": [
+       "How to integrate $\\dfrac{1}{(x-a)^m(x-b)^n}$ when $m+n=2$ (powers may be fractions)?",
+       "$m+n=2$ होने पर (घातें भिन्न भी हो सकती हैं) $\\dfrac{1}{(x-a)^m(x-b)^n}$ का समाकलन कैसे करें?"
+      ],
+      "a": [
+       [
+        "Take $(x-b)^2$ out: integrand $=\\dfrac{1}{(x-b)^2}\\left(\\dfrac{x-a}{x-b}\\right)^{-m}$; put $\\dfrac{x-a}{x-b}=t$, $dt=\\dfrac{a-b}{(x-b)^2}dx$, so it becomes $\\dfrac{1}{a-b}\\int t^{-m}dt$.",
+        "$(x-b)^2$ बाहर लें: समाकल्य $=\\dfrac{1}{(x-b)^2}\\left(\\dfrac{x-a}{x-b}\\right)^{-m}$; $\\dfrac{x-a}{x-b}=t$ रखें, $dt=\\dfrac{a-b}{(x-b)^2}dx$, अतः यह $\\dfrac{1}{a-b}\\int t^{-m}dt$ बन जाता है।"
+       ],
+       [
+        "Ex: $\\int\\dfrac{dx}{(x-1)^{1/2}(x+1)^{3/2}}=\\sqrt{\\dfrac{x-1}{x+1}}+C$.",
+        "उदा: $\\int\\dfrac{dx}{(x-1)^{1/2}(x+1)^{3/2}}=\\sqrt{\\dfrac{x-1}{x+1}}+C$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Meaning of integration",
+    "hi": "1. समाकलन का अर्थ",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{d}{dx}\\phi(x)=f(x)\\iff\\int f(x)\\,dx=\\phi(x)+C$",
+        "$\\dfrac{d}{dx}\\phi(x)=f(x)\\iff\\int f(x)\\,dx=\\phi(x)+C$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$f$ = integrand, $\\phi$ = primitive / anti-derivative, $C$ = constant of integration",
+        "$f$ = समाकल्य, $\\phi$ = पूर्वग / प्रतिअवकलज, $C$ = समाकलन अचर"
+       ],
+       [
+        "Two primitives of $f$ differ by a constant; a given value $f(a)=k$ fixes $C$",
+        "$f$ के दो पूर्वग एक अचर से भिन्न; दिया गया मान $f(a)=k$ से $C$ ज्ञात"
+       ],
+       [
+        "Check any answer by differentiating it",
+        "किसी भी उत्तर को अवकलन करके जाँचें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Standard results",
+    "hi": "2. मानक परिणाम",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int x^ndx=\\dfrac{x^{n+1}}{n+1}\\ (n\\ne-1)$,  $\\int\\dfrac{dx}x=\\ln|x|$,  $\\int a^xdx=\\dfrac{a^x}{\\ln a}$",
+        "$\\int x^ndx=\\dfrac{x^{n+1}}{n+1}\\ (n\\ne-1)$,  $\\int\\dfrac{dx}x=\\ln|x|$,  $\\int a^xdx=\\dfrac{a^x}{\\ln a}$"
+       ],
+       [
+        "$\\int\\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa$,  $\\int\\dfrac{dx}{x^2-a^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{x-a}{x+a}\\right|$",
+        "$\\int\\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa$,  $\\int\\dfrac{dx}{x^2-a^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{x-a}{x+a}\\right|$"
+       ],
+       [
+        "$\\int\\tan x=\\ln|\\sec x|$, $\\int\\cot x=\\ln|\\sin x|$, $\\int\\sec x=\\ln|\\sec x+\\tan x|$, $\\int\\text{cosec}\\,x=\\ln|\\tan\\frac x2|$",
+        "$\\int\\tan x=\\ln|\\sec x|$, $\\int\\cot x=\\ln|\\sin x|$, $\\int\\sec x=\\ln|\\sec x+\\tan x|$, $\\int\\text{cosec}\\,x=\\ln|\\tan\\frac x2|$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$ax+b$ in place of $x$: divide the result by $a$",
+        "$x$ के स्थान पर $ax+b$: परिणाम को $a$ से भाग दें"
+       ],
+       [
+        "Simplify first: $e^{\\ln f}=f$, identities, product to sum, $\\sin^2,\\cos^2,\\sin^3,\\cos^3$ to multiple angles",
+        "पहले सरल करें: $e^{\\ln f}=f$, सर्वसमिकाएँ, गुणनफल से योग, $\\sin^2,\\cos^2,\\sin^3,\\cos^3$ को बहु-कोण में"
+       ],
+       [
+        "linear/linear $=$ constant $+\\dfrac{k}{\\text{linear}}$;  $\\dfrac1{1\\pm\\sin x}$: multiply by conjugate",
+        "रैखिक/रैखिक $=$ अचर $+\\dfrac{k}{\\text{linear}}$;  $\\dfrac1{1\\pm\\sin x}$: संयुग्मी से गुणा"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Substitution",
+    "hi": "3. प्रतिस्थापन",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int f(\\phi(x))\\phi'(x)\\,dx=\\int f(t)\\,dt,\\ \\ \\phi(x)=t$",
+        "$\\int f(\\phi(x))\\phi'(x)\\,dx=\\int f(t)\\,dt,\\ \\ \\phi(x)=t$"
+       ],
+       [
+        "$\\int\\dfrac{f'}{f}=\\ln|f|$,  $\\int f^nf'=\\dfrac{f^{n+1}}{n+1}$",
+        "$\\int\\dfrac{f'}{f}=\\ln|f|$,  $\\int f^nf'=\\dfrac{f^{n+1}}{n+1}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Look for a factor that is the derivative of an inside expression",
+        "ऐसा गुणनखण्ड खोजें जो अन्दर वाले व्यंजक का अवकलज हो"
+       ],
+       [
+        "$\\frac1x$ with $\\ln x$: put $\\ln x=t$;  $\\frac1{1+x^2}$ with $\\tan^{-1}x$: put $\\tan^{-1}x=t$",
+        "$\\ln x$ के साथ $\\frac1x$: $\\ln x=t$;  $\\tan^{-1}x$ के साथ $\\frac1{1+x^2}$: $\\tan^{-1}x=t$"
+       ],
+       [
+        "$\\dfrac1{a\\sin x+b\\cos x}$: write $r\\sin(x+\\alpha)$, integrate cosec",
+        "$\\dfrac1{a\\sin x+b\\cos x}$: $r\\sin(x+\\alpha)$ लिखें, $\\text{cosec}\\,(x+\\alpha)$ का समाकलन"
+       ],
+       [
+        "Exponentials: put $e^x=t$ (or divide by the largest power of $e^x$)",
+        "चरघातांकी: $e^x=t$ रखें (या $e^x$ की सबसे बड़ी घात से भाग दें)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Trigonometric substitution and square roots",
+    "hi": "4. त्रिकोणमितीय प्रतिस्थापन और वर्गमूल",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$a^2+x^2: x=a\\tan\\theta$;  $a^2-x^2: x=a\\sin\\theta$;  $x^2-a^2: x=a\\sec\\theta$",
+        "$a^2+x^2: x=a\\tan\\theta$;  $a^2-x^2: x=a\\sin\\theta$;  $x^2-a^2: x=a\\sec\\theta$"
+       ],
+       [
+        "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa$,  $\\int\\dfrac{dx}{\\sqrt{x^2\\pm a^2}}=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$",
+        "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa$,  $\\int\\dfrac{dx}{\\sqrt{x^2\\pm a^2}}=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac{x}{a-x}}$: $x=a\\sin^2\\theta$",
+        "$\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac{x}{a-x}}$: $x=a\\sin^2\\theta$"
+       ],
+       [
+        "$\\dfrac1{\\text{Quad}}$, $\\dfrac1{\\sqrt{\\text{Quad}}}$, $\\sqrt{\\text{Quad}}$: complete the square first",
+        "$\\dfrac1{Q}$, $\\dfrac1{\\sqrt{Q}}$, $\\sqrt{Q}$: पहले पूर्ण वर्ग बनाएँ"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Integration by parts",
+    "hi": "5. खण्डशः समाकलन",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int\\text{I}\\cdot\\text{II}\\,dx=\\text{I}\\int\\text{II}-\\int\\left(\\text{I}'\\int\\text{II}\\right)dx$",
+        "$\\int\\text{I}\\cdot\\text{II}\\,dx=\\text{I}\\int\\text{II}-\\int\\left(\\text{I}'\\int\\text{II}\\right)dx$"
+       ],
+       [
+        "$\\int e^{ax}\\sin bx=\\dfrac{e^{ax}(a\\sin bx-b\\cos bx)}{a^2+b^2}$,  $\\int e^{ax}\\cos bx=\\dfrac{e^{ax}(a\\cos bx+b\\sin bx)}{a^2+b^2}$",
+        "$\\int e^{ax}\\sin bx=\\dfrac{e^{ax}(a\\sin bx-b\\cos bx)}{a^2+b^2}$,  $\\int e^{ax}\\cos bx=\\dfrac{e^{ax}(a\\cos bx+b\\sin bx)}{a^2+b^2}$"
+       ],
+       [
+        "$\\int\\sqrt{a^2-x^2}=\\frac x2\\sqrt{a^2-x^2}+\\frac{a^2}2\\sin^{-1}\\frac xa$,  $\\int\\sqrt{x^2\\pm a^2}=\\frac x2\\sqrt{x^2\\pm a^2}\\pm\\frac{a^2}2\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$",
+        "$\\int\\sqrt{a^2-x^2}=\\frac x2\\sqrt{a^2-x^2}+\\frac{a^2}2\\sin^{-1}\\frac xa$,  $\\int\\sqrt{x^2\\pm a^2}=\\frac x2\\sqrt{x^2\\pm a^2}\\pm\\frac{a^2}2\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "First function by ILATE: Inverse, Log, Algebraic, Trig, Exponential",
+        "$\\text{ILATE}$ से प्रथम फलन: प्रतिलोम, लघुगणक, बीजीय, त्रिकोणमितीय, चरघातांकी"
+       ],
+       [
+        "Single function ($\\ln x$, $\\tan^{-1}x$): take $1$ as second function",
+        "एकल फलन ($\\ln x$, $\\tan^{-1}x$): $1$ को द्वितीय फलन लें"
+       ],
+       [
+        "Cyclic: integral comes back, move it to the left; $I_n$ relations come from parts",
+        "चक्रीय: समाकल वापस आता है, उसे बाईं ओर ले जाएँ; $I_n$ सम्बन्ध खण्डशः से मिलते हैं"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Two classic integrals",
+    "hi": "6. दो विशिष्ट समाकल",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\int e^x[f+f']dx=e^xf+C$,  $\\int[f+xf']dx=xf+C$",
+        "$\\int e^x[f+f']dx=e^xf+C$,  $\\int[f+xf']dx=xf+C$"
+       ],
+       [
+        "$\\int e^{kx}[kf+f']dx=e^{kx}f$,  $\\int e^{g}(fg'+f')dx=e^{g}f$",
+        "$\\int e^{kx}[kf+f']dx=e^{kx}f$,  $\\int e^{g}(fg'+f')dx=e^{g}f$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Split the bracket into a function plus its derivative (break fractions, use identities)",
+        "कोष्ठक को फलन व उसके अवकलज में तोड़ें (भिन्न तोड़ें, सर्वसमिकाएँ लगाएँ)"
+       ],
+       [
+        "Exponent other than $x$: put the exponent $=t$",
+        "घातांक $x$ न हो: घातांक $=t$ रखें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Rational functions",
+    "hi": "7. परिमेय फलन",
+    "color": "brown",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "1/linear: $\\frac1a\\ln|ax+b|$;  poly/linear or poly/quad: divide first",
+        "1/रैखिक: $\\frac1a\\ln|ax+b|$;  बहुपद/रैखिक या बहुपद/द्विघात: पहले भाग दें"
+       ],
+       [
+        "linear/Q, linear/$\\sqrt Q$, linear$\\cdot\\sqrt Q$: linear $=A\\,Q'+B$",
+        "रैखिक/Q, रैखिक/$\\sqrt Q$, रैखिक$\\cdot\\sqrt Q$: रैखिक $=A\\,Q'+B$"
+       ],
+       [
+        "$\\int\\frac{Q'}{\\sqrt Q}=2\\sqrt Q$,  $\\int Q'\\sqrt Q=\\frac23Q^{3/2}$",
+        "$\\int\\frac{Q'}{\\sqrt Q}=2\\sqrt Q$,  $\\int Q'\\sqrt Q=\\frac23Q^{3/2}$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Partial fractions",
+    "hi": "8. आंशिक भिन्न",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{P}{(x-a)(x-b)}=\\dfrac A{x-a}+\\dfrac B{x-b}$,  $\\dfrac{P}{(x-a)^2(x-b)}=\\dfrac{A_1}{x-a}+\\dfrac{A_2}{(x-a)^2}+\\dfrac B{x-b}$",
+        "$\\dfrac{P}{(x-a)(x-b)}=\\dfrac A{x-a}+\\dfrac B{x-b}$,  $\\dfrac{P}{(x-a)^2(x-b)}=\\dfrac{A_1}{x-a}+\\dfrac{A_2}{(x-a)^2}+\\dfrac B{x-b}$"
+       ],
+       [
+        "$\\dfrac{P}{(x-a)(x^2+bx+c)}=\\dfrac A{x-a}+\\dfrac{Bx+C}{x^2+bx+c}$",
+        "$\\dfrac{P}{(x-a)(x^2+bx+c)}=\\dfrac A{x-a}+\\dfrac{Bx+C}{x^2+bx+c}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Improper ($\\deg P\\ge\\deg Q$)? Divide first",
+        "अनुचित ($\\deg P\\ge\\deg Q$)? पहले भाग दें"
+       ],
+       [
+        "Substitute ($x^2=t$, $e^x=t$, $\\sin x=t$) to make it rational if needed",
+        "आवश्यकता हो तो परिमेय बनाने हेतु प्रतिस्थापन ($x^2=t$, $e^x=t$, $\\sin x=t$)"
+       ],
+       [
+        "Cover-up: put $x=a$ for $\\frac{A}{x-a}$; compare coefficients for the rest",
+        "ढकने की विधि: $\\frac{A}{x-a}$ हेतु $x=a$; शेष हेतु गुणांकों की तुलना"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Trigonometric integrands",
+    "hi": "9. त्रिकोणमितीय समाकल्य",
+    "color": "teal",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$\\sin^mx\\cos^nx$: $m$ odd $\\to\\cos x=t$; $n$ odd $\\to\\sin x=t$; both even $\\to$ multiple angles; $m+n$ negative even $\\to\\tan x=t$",
+        "$\\sin^mx\\cos^nx$: $m$ विषम $\\to\\cos x=t$; $n$ विषम $\\to\\sin x=t$; दोनों सम $\\to$ बहु-कोण; $m+n$ ऋणात्मक सम $\\to\\tan x=t$"
+       ],
+       [
+        "$\\dfrac1{a\\sin^2x+b\\cos^2x+c\\sin x\\cos x+d}$: multiply by $\\sec^2x$, $\\tan x=t$",
+        "$\\dfrac1{a\\sin^2x+b\\cos^2x+c\\sin x\\cos x+d}$: $\\sec^2x$ से गुणा, $\\tan x=t$"
+       ],
+       [
+        "$\\dfrac1{a\\sin x+b\\cos x+c}$: $\\tan\\frac x2=t$",
+        "$\\dfrac1{a\\sin x+b\\cos x+c}$: $\\tan\\frac x2=t$"
+       ],
+       [
+        "$\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$: Nr $=A\\,$Dr$+B\\,$Dr$'+C$",
+        "$\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$: अंश $=A\\,$हर$+B\\,$हर$'+C$"
+       ],
+       [
+        "$(\\sin x+\\cos x)$ over $\\sin2x$: $\\sin x-\\cos x=t$; $(\\sin x-\\cos x)$ over $\\sin2x$: $\\sin x+\\cos x=t$",
+        "$\\sin2x$ के ऊपर $(\\sin x+\\cos x)$: $\\sin x-\\cos x=t$; $(\\sin x-\\cos x)$: $\\sin x+\\cos x=t$"
+       ],
+       [
+        "$\\sin2x$ over $(\\sin x\\pm\\cos x)$: $\\sin2x=(\\sin x+\\cos x)^2-1=1-(\\sin x-\\cos x)^2$",
+        "$(\\sin x\\pm\\cos x)$ के ऊपर $\\sin2x$: $\\sin2x=(\\sin x+\\cos x)^2-1=1-(\\sin x-\\cos x)^2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Miscellaneous profiles",
+    "hi": "10. विविध प्रोफ़ाइल",
+    "color": "green",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Kutur putur: $x(x^n+1)$, $x^2(x^n+1)^{(n-1)/n}$, $x^n(1+x^n)^{1/n}$ in Dr: take $x^n$ common, $1+x^{-n}=t$",
+        "कुतुर पुतुर: हर में $x(x^n+1)$, $x^2(x^n+1)^{(n-1)/n}$, $x^n(1+x^n)^{1/n}$: $x^n$ उभयनिष्ठ, $1+x^{-n}=t$"
+       ],
+       [
+        "$\\dfrac{x^2\\pm k}{x^4+px^2+k^2}$: divide by $x^2$; $x^2+k\\to x-\\frac kx=t$, $x^2-k\\to x+\\frac kx=t$",
+        "$\\dfrac{x^2\\pm k}{x^4+px^2+k^2}$: $x^2$ से भाग; $x^2+k\\to x-\\frac kx=t$, $x^2-k\\to x+\\frac kx=t$"
+       ],
+       [
+        "$\\sqrt{\\tan x}$, $\\dfrac1{1+x^4}$, $\\dfrac{x^2}{1+x^4}$ reduce to this profile",
+        "$\\sqrt{\\tan x}$, $\\dfrac1{1+x^4}$, $\\dfrac{x^2}{1+x^4}$ इसी प्रोफ़ाइल में बदलते हैं"
+       ],
+       [
+        "$\\dfrac1{(x-a)^m(x-b)^n}$, $m+n=2$: $\\dfrac{x-a}{x-b}=t$",
+        "$\\dfrac1{(x-a)^m(x-b)^n}$, $m+n=2$: $\\dfrac{x-a}{x-b}=t$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Irrational algebraic functions",
+    "hi": "11. अपरिमेय बीजीय फलन",
+    "color": "orange",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "$(x-\\alpha)(\\beta-x)$: $x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$",
+        "$(x-\\alpha)(\\beta-x)$: $x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$"
+       ],
+       [
+        "$(x-\\alpha)(x-\\beta)$: $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$ (or $x-\\alpha=t^2$)",
+        "$(x-\\alpha)(x-\\beta)$: $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$ (या $x-\\alpha=t^2$)"
+       ],
+       [
+        "$\\dfrac1{(\\text{lin or quad})\\sqrt{px+q}}$: $px+q=t^2$",
+        "$\\dfrac1{(\\text{lin or quad})\\sqrt{px+q}}$: $px+q=t^2$"
+       ],
+       [
+        "$\\dfrac1{(ax+b)\\sqrt{px^2+qx+r}}$: $ax+b=\\frac1t$",
+        "$\\dfrac1{(ax+b)\\sqrt{px^2+qx+r}}$: $ax+b=\\frac1t$"
+       ],
+       [
+        "$\\dfrac1{(ax^2+b)\\sqrt{px^2+q}}$: $x=\\frac1t$, then $p+qt^2=y^2$",
+        "$\\dfrac1{(ax^2+b)\\sqrt{px^2+q}}$: $x=\\frac1t$, फिर $p+qt^2=y^2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Common mistakes checklist",
+    "hi": "12. सामान्य गलतियों की जाँच-सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Never forget $+C$; use the given value to find $C$",
+        "$+C$ कभी न भूलें; दिए गए मान से $C$ ज्ञात करें"
+       ],
+       [
+        "$\\int\\dfrac{dx}x=\\ln|x|$ (modulus), $\\sqrt{x^2}=|x|$",
+        "$\\int\\dfrac{dx}x=\\ln|x|$ (मापांक), $\\sqrt{x^2}=|x|$"
+       ],
+       [
+        "Divide by the coefficient of $x$ for $f(ax+b)$",
+        "$f(ax+b)$ हेतु $x$ के गुणांक से भाग दें"
+       ],
+       [
+        "$\\dfrac{x^{n+1}}{n+1}$ fails for $n=-1$",
+        "$\\dfrac{x^{n+1}}{n+1}$, $n=-1$ हेतु लागू नहीं"
+       ],
+       [
+        "Answers in different forms can differ by a constant; compare by differentiating",
+        "भिन्न रूपों के उत्तर एक अचर से भिन्न हो सकते हैं; अवकलन से तुलना करें"
+       ],
+       [
+        "Change $dx$ fully when substituting; no $x$ may remain",
+        "प्रतिस्थापन में $dx$ पूरा बदलें; कोई $x$ शेष न रहे"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "Basic",
+    "hi": "मूल",
+    "lines": [
+     [
+      "Power: $\\int x^ndx=\\dfrac{x^{n+1}}{n+1}+C,\\ n\\ne-1$",
+      "घात: $\\int x^ndx=\\dfrac{x^{n+1}}{n+1}+C,\\ n\\ne-1$"
+     ],
+     [
+      "Reciprocal: $\\int\\dfrac{dx}{ax+b}=\\dfrac1a\\ln|ax+b|$",
+      "व्युत्क्रम: $\\int\\dfrac{dx}{ax+b}=\\dfrac1a\\ln|ax+b|$"
+     ],
+     [
+      "Exponential: $\\int e^xdx=e^x$, $\\int a^xdx=\\dfrac{a^x}{\\ln a}$",
+      "चरघातांकी: $\\int e^xdx=e^x$, $\\int a^xdx=\\dfrac{a^x}{\\ln a}$"
+     ],
+     [
+      "Sine, cosine: $\\int\\sin x=-\\cos x$, $\\int\\cos x=\\sin x$",
+      "साइन, कोसाइन: $\\int\\sin x=-\\cos x$, $\\int\\cos x=\\sin x$"
+     ],
+     [
+      "Squares: $\\int\\sec^2x=\\tan x$, $\\int\\text{cosec}^2x=-\\cot x$",
+      "वर्ग: $\\int\\sec^2x=\\tan x$, $\\int\\text{cosec}^2x=-\\cot x$"
+     ],
+     [
+      "Products: $\\int\\sec x\\tan x=\\sec x$, $\\int\\text{cosec}\\,x\\cot x=-\\text{cosec}\\,x$",
+      "गुणनफल: $\\int\\sec x\\tan x=\\sec x$, $\\int\\text{cosec}\\,x\\cot x=-\\text{cosec}\\,x$"
+     ],
+     [
+      "Tan, cot: $\\int\\tan x=\\ln|\\sec x|$, $\\int\\cot x=\\ln|\\sin x|$",
+      "टैन, कोट: $\\int\\tan x=\\ln|\\sec x|$, $\\int\\cot x=\\ln|\\sin x|$"
+     ],
+     [
+      "Sec: $\\int\\sec x=\\ln|\\sec x+\\tan x|=\\ln\\left|\\tan\\left(\\frac\\pi4+\\frac x2\\right)\\right|$",
+      "सेक: $\\int\\sec x=\\ln|\\sec x+\\tan x|=\\ln\\left|\\tan\\left(\\frac\\pi4+\\frac x2\\right)\\right|$"
+     ],
+     [
+      "Cosec: $\\int\\text{cosec}\\,x=\\ln|\\text{cosec}\\,x-\\cot x|=\\ln\\left|\\tan\\frac x2\\right|$",
+      "कोसेक: $\\int\\text{cosec}\\,x=\\ln|\\text{cosec}\\,x-\\cot x|=\\ln\\left|\\tan\\frac x2\\right|$"
+     ]
+    ]
+   },
+   {
+    "en": "Algebraic standard forms",
+    "hi": "बीजीय मानक रूप",
+    "lines": [
+     [
+      "$\\int\\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa$",
+      "$\\int\\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa$"
+     ],
+     [
+      "$\\int\\dfrac{dx}{x^2-a^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{x-a}{x+a}\\right|$",
+      "$\\int\\dfrac{dx}{x^2-a^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{x-a}{x+a}\\right|$"
+     ],
+     [
+      "$\\int\\dfrac{dx}{a^2-x^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{a+x}{a-x}\\right|$",
+      "$\\int\\dfrac{dx}{a^2-x^2}=\\dfrac1{2a}\\ln\\left|\\dfrac{a+x}{a-x}\\right|$"
+     ],
+     [
+      "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa$",
+      "$\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa$"
+     ],
+     [
+      "$\\int\\dfrac{dx}{\\sqrt{x^2\\pm a^2}}=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$",
+      "$\\int\\dfrac{dx}{\\sqrt{x^2\\pm a^2}}=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$"
+     ],
+     [
+      "$\\int\\dfrac{dx}{x\\sqrt{x^2-a^2}}=\\dfrac1a\\sec^{-1}\\dfrac{|x|}a$",
+      "$\\int\\dfrac{dx}{x\\sqrt{x^2-a^2}}=\\dfrac1a\\sec^{-1}\\dfrac{|x|}a$"
+     ],
+     [
+      "$\\int\\sqrt{a^2-x^2}\\,dx=\\dfrac x2\\sqrt{a^2-x^2}+\\dfrac{a^2}2\\sin^{-1}\\dfrac xa$",
+      "$\\int\\sqrt{a^2-x^2}\\,dx=\\dfrac x2\\sqrt{a^2-x^2}+\\dfrac{a^2}2\\sin^{-1}\\dfrac xa$"
+     ],
+     [
+      "$\\int\\sqrt{x^2\\pm a^2}\\,dx=\\dfrac x2\\sqrt{x^2\\pm a^2}\\pm\\dfrac{a^2}2\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$",
+      "$\\int\\sqrt{x^2\\pm a^2}\\,dx=\\dfrac x2\\sqrt{x^2\\pm a^2}\\pm\\dfrac{a^2}2\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|$"
+     ]
+    ]
+   },
+   {
+    "en": "Substitution and parts",
+    "hi": "प्रतिस्थापन और खण्डशः",
+    "lines": [
+     [
+      "Substitution: $\\int f(\\phi(x))\\phi'(x)dx=\\int f(t)dt$",
+      "प्रतिस्थापन: $\\int f(\\phi(x))\\phi'(x)dx=\\int f(t)dt$"
+     ],
+     [
+      "Log form: $\\int\\dfrac{f'(x)}{f(x)}dx=\\ln|f(x)|$",
+      "लघुगणक रूप: $\\int\\dfrac{f'(x)}{f(x)}dx=\\ln|f(x)|$"
+     ],
+     [
+      "Power form: $\\int f^nf'\\,dx=\\dfrac{f^{n+1}}{n+1}$",
+      "घात रूप: $\\int f^nf'\\,dx=\\dfrac{f^{n+1}}{n+1}$"
+     ],
+     [
+      "Parts: $\\int uv\\,dx=u\\int v-\\int(u'\\int v)dx$ (ILATE)",
+      "खण्डशः: $\\int uv\\,dx=u\\int v-\\int(u'\\int v)dx$ (ILATE)"
+     ],
+     [
+      "$\\int e^{ax}\\sin bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\sin bx-b\\cos bx)$",
+      "$\\int e^{ax}\\sin bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\sin bx-b\\cos bx)$"
+     ],
+     [
+      "$\\int e^{ax}\\cos bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\cos bx+b\\sin bx)$",
+      "$\\int e^{ax}\\cos bx\\,dx=\\dfrac{e^{ax}}{a^2+b^2}(a\\cos bx+b\\sin bx)$"
+     ],
+     [
+      "Classic 1: $\\int e^x(f+f')dx=e^xf$",
+      "विशिष्ट 1: $\\int e^x(f+f')dx=e^xf$"
+     ],
+     [
+      "Classic 2: $\\int(f+xf')dx=xf$",
+      "विशिष्ट 2: $\\int(f+xf')dx=xf$"
+     ],
+     [
+      "General: $\\int e^{g}(fg'+f')dx=e^{g}f$",
+      "व्यापक: $\\int e^{g}(fg'+f')dx=e^{g}f$"
+     ]
+    ]
+   },
+   {
+    "en": "Which substitution",
+    "hi": "कौन-सा प्रतिस्थापन",
+    "lines": [
+     [
+      "$a^2+x^2$: $x=a\\tan\\theta$;  $a^2-x^2$: $x=a\\sin\\theta$;  $x^2-a^2$: $x=a\\sec\\theta$",
+      "$a^2+x^2$: $x=a\\tan\\theta$;  $a^2-x^2$: $x=a\\sin\\theta$;  $x^2-a^2$: $x=a\\sec\\theta$"
+     ],
+     [
+      "$\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac x{a-x}}$: $x=a\\sin^2\\theta$",
+      "$\\sqrt{\\frac{a-x}{a+x}}$: $x=a\\cos2\\theta$;  $\\sqrt{\\frac x{a-x}}$: $x=a\\sin^2\\theta$"
+     ],
+     [
+      "$(x-\\alpha)(\\beta-x)$: $x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$",
+      "$(x-\\alpha)(\\beta-x)$: $x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$"
+     ],
+     [
+      "$(x-\\alpha)(x-\\beta)$: $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$",
+      "$(x-\\alpha)(x-\\beta)$: $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$"
+     ],
+     [
+      "$\\dfrac1{(ax+b)\\sqrt{px+q}}$: $px+q=t^2$;  $\\dfrac1{(ax+b)\\sqrt{Q}}$: $ax+b=\\frac1t$",
+      "$\\dfrac1{(ax+b)\\sqrt{px+q}}$: $px+q=t^2$;  $\\dfrac1{(ax+b)\\sqrt{Q}}$: $ax+b=\\frac1t$"
+     ],
+     [
+      "$\\dfrac1{(ax^2+b)\\sqrt{px^2+q}}$: $x=\\frac1t$",
+      "$\\dfrac1{(ax^2+b)\\sqrt{px^2+q}}$: $x=\\frac1t$"
+     ],
+     [
+      "$\\dfrac1{(x-a)^m(x-b)^n},\\ m+n=2$: $\\dfrac{x-a}{x-b}=t$",
+      "$\\dfrac1{(x-a)^m(x-b)^n},\\ m+n=2$: $\\dfrac{x-a}{x-b}=t$"
+     ],
+     [
+      "Kutur putur: $1+x^{-n}=t$",
+      "कुतुर पुतुर: $1+x^{-n}=t$"
+     ],
+     [
+      "$\\dfrac{x^2\\pm k}{x^4+px^2+k^2}$: $x\\mp\\dfrac kx=t$",
+      "$\\dfrac{x^2\\pm k}{x^4+px^2+k^2}$: $x\\mp\\dfrac kx=t$"
+     ]
+    ]
+   },
+   {
+    "en": "Trigonometric integrands",
+    "hi": "त्रिकोणमितीय समाकल्य",
+    "lines": [
+     [
+      "Power reduction: $\\sin^2x=\\frac{1-\\cos2x}2$, $\\cos^2x=\\frac{1+\\cos2x}2$",
+      "घात घटाना: $\\sin^2x=\\frac{1-\\cos2x}2$, $\\cos^2x=\\frac{1+\\cos2x}2$"
+     ],
+     [
+      "Cubes: $\\sin^3x=\\frac{3\\sin x-\\sin3x}4$, $\\cos^3x=\\frac{3\\cos x+\\cos3x}4$",
+      "घन: $\\sin^3x=\\frac{3\\sin x-\\sin3x}4$, $\\cos^3x=\\frac{3\\cos x+\\cos3x}4$"
+     ],
+     [
+      "$\\sin^mx\\cos^nx$: odd power $\\to$ other function $=t$; $m+n$ neg. even $\\to\\tan x=t$",
+      "$\\sin^mx\\cos^nx$: विषम घात $\\to$ दूसरा फलन $=t$; $m+n$ ऋण. सम $\\to\\tan x=t$"
+     ],
+     [
+      "$\\dfrac1{a\\sin x+b\\cos x}=\\dfrac1{r\\sin(x+\\alpha)}$, $r=\\sqrt{a^2+b^2}$",
+      "$\\dfrac1{a\\sin x+b\\cos x}=\\dfrac1{r\\sin(x+\\alpha)}$, $r=\\sqrt{a^2+b^2}$"
+     ],
+     [
+      "$\\dfrac1{a\\sin^2x+b\\cos^2x+\\cdots}$: $\\tan x=t$;  $\\dfrac1{a\\sin x+b\\cos x+c}$: $\\tan\\frac x2=t$",
+      "$\\dfrac1{a\\sin^2x+b\\cos^2x+\\cdots}$: $\\tan x=t$;  $\\dfrac1{a\\sin x+b\\cos x+c}$: $\\tan\\frac x2=t$"
+     ],
+     [
+      "Nr $=A\\,$Dr$+B\\,$Dr$'+C$ for $\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$",
+      "अंश $=A\\,$हर$+B\\,$हर$'+C$, $\\dfrac{l\\sin x+m\\cos x+n}{a\\sin x+b\\cos x+c}$ हेतु"
+     ],
+     [
+      "$\\dfrac1{1+\\sin x}$: $\\tan x-\\sec x$;  $\\dfrac1{1+\\cos x}$: $\\tan\\frac x2$",
+      "$\\dfrac1{1+\\sin x}$: $\\tan x-\\sec x$;  $\\dfrac1{1+\\cos x}$: $\\tan\\frac x2$"
+     ],
+     [
+      "$\\sin2x=1-(\\sin x-\\cos x)^2=(\\sin x+\\cos x)^2-1$",
+      "$\\sin2x=1-(\\sin x-\\cos x)^2=(\\sin x+\\cos x)^2-1$"
+     ]
+    ]
+   },
+   {
+    "en": "Partial fractions",
+    "hi": "आंशिक भिन्न",
+    "lines": [
+     [
+      "Distinct linear: $\\dfrac{A}{x-a}+\\dfrac{B}{x-b}$",
+      "भिन्न रैखिक: $\\dfrac{A}{x-a}+\\dfrac{B}{x-b}$"
+     ],
+     [
+      "Repeated: $\\dfrac{A_1}{x-a}+\\dfrac{A_2}{(x-a)^2}+\\cdots+\\dfrac{A_k}{(x-a)^k}$",
+      "पुनरावर्ती: $\\dfrac{A_1}{x-a}+\\dfrac{A_2}{(x-a)^2}+\\cdots+\\dfrac{A_k}{(x-a)^k}$"
+     ],
+     [
+      "Quadratic factor: $\\dfrac{Bx+C}{x^2+bx+c}$",
+      "द्विघात गुणनखण्ड: $\\dfrac{Bx+C}{x^2+bx+c}$"
+     ],
+     [
+      "Linear over quadratic: linear $=A\\,Q'+B$",
+      "रैखिक/द्विघात: रैखिक $=A\\,Q'+B$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Basics",
+    "hi": "मूल बातें",
+    "leaves": [
+     [
+      "$\\int f=\\phi+C\\iff\\phi'=f$",
+      "$\\int f=\\phi+C\\iff\\phi'=f$"
+     ],
+     [
+      "Given value fixes $C$",
+      "दिया मान $C$ देता है"
+     ]
+    ]
+   },
+   {
+    "en": "Standard results",
+    "hi": "मानक परिणाम",
+    "leaves": [
+     [
+      "Five sets of results",
+      "परिणामों के पाँच समूह"
+     ],
+     [
+      "$ax+b$: divide by $a$",
+      "$ax+b$: $a$ से भाग"
+     ],
+     [
+      "Simplify first",
+      "पहले सरल करें"
+     ]
+    ]
+   },
+   {
+    "en": "1/Quad, 1/$\\sqrt{\\text{Quad}}$, $\\sqrt{\\text{Quad}}$",
+    "hi": "1/द्विघात, 1/$\\sqrt{Q}$, $\\sqrt{Q}$",
+    "leaves": [
+     [
+      "Complete the square",
+      "पूर्ण वर्ग"
+     ],
+     [
+      "$\\tan^{-1}$, $\\ln$, $\\sin^{-1}$ forms",
+      "$\\tan^{-1}$, $\\ln$, $\\sin^{-1}$ रूप"
+     ]
+    ]
+   },
+   {
+    "en": "Substitution",
+    "hi": "प्रतिस्थापन",
+    "leaves": [
+     [
+      "$\\phi(x)=t$ when $\\phi'$ present",
+      "$\\phi'$ हो तो $\\phi(x)=t$"
+     ],
+     [
+      "$\\int f'/f=\\ln|f|$",
+      "$\\int f'/f=\\ln|f|$"
+     ],
+     [
+      "$\\ln x=t$, $\\tan^{-1}x=t$",
+      "$\\ln x=t$, $\\tan^{-1}x=t$"
+     ]
+    ]
+   },
+   {
+    "en": "Trig substitution",
+    "hi": "त्रिकोणमितीय प्रतिस्थापन",
+    "leaves": [
+     [
+      "$a^2+x^2\\to a\\tan\\theta$",
+      "$a^2+x^2\\to a\\tan\\theta$"
+     ],
+     [
+      "$a^2-x^2\\to a\\sin\\theta$",
+      "$a^2-x^2\\to a\\sin\\theta$"
+     ],
+     [
+      "$x^2-a^2\\to a\\sec\\theta$",
+      "$x^2-a^2\\to a\\sec\\theta$"
+     ]
+    ]
+   },
+   {
+    "en": "Integration by parts",
+    "hi": "खण्डशः समाकलन",
+    "leaves": [
+     [
+      "ILATE",
+      "ILATE"
+     ],
+     [
+      "$1$ as second function",
+      "$1$ द्वितीय फलन"
+     ],
+     [
+      "Cyclic: $e^{ax}\\sin bx$",
+      "चक्रीय: $e^{ax}\\sin bx$"
+     ]
+    ]
+   },
+   {
+    "en": "Classic integrals",
+    "hi": "विशिष्ट समाकल",
+    "leaves": [
+     [
+      "$e^x(f+f')\\to e^xf$",
+      "$e^x(f+f')\\to e^xf$"
+     ],
+     [
+      "$f+xf'\\to xf$",
+      "$f+xf'\\to xf$"
+     ],
+     [
+      "$e^g(fg'+f')\\to e^gf$",
+      "$e^g(fg'+f')\\to e^gf$"
+     ]
+    ]
+   },
+   {
+    "en": "Rational functions",
+    "hi": "परिमेय फलन",
+    "leaves": [
+     [
+      "Divide if improper",
+      "अनुचित हो तो भाग"
+     ],
+     [
+      "linear $=A\\,Q'+B$",
+      "रैखिक $=A\\,Q'+B$"
+     ]
+    ]
+   },
+   {
+    "en": "Partial fractions",
+    "hi": "आंशिक भिन्न",
+    "leaves": [
+     [
+      "Distinct: $\\frac A{x-a}$",
+      "भिन्न: $\\frac A{x-a}$"
+     ],
+     [
+      "Repeated: up to $\\frac{A_k}{(x-a)^k}$",
+      "पुनरावर्ती: $\\frac{A_k}{(x-a)^k}$ तक"
+     ],
+     [
+      "Quadratic: $\\frac{Bx+C}{Q}$",
+      "द्विघात: $\\frac{Bx+C}{Q}$"
+     ]
+    ]
+   },
+   {
+    "en": "$\\sin^mx\\cos^nx$",
+    "hi": "$\\sin^mx\\cos^nx$",
+    "leaves": [
+     [
+      "Odd: other $=t$",
+      "विषम: दूसरा $=t$"
+     ],
+     [
+      "Both even: multiple angles",
+      "दोनों सम: बहु-कोण"
+     ],
+     [
+      "$m+n$ neg. even: $\\tan x=t$",
+      "$m+n$ ऋण. सम: $\\tan x=t$"
+     ]
+    ]
+   },
+   {
+    "en": "Other trig forms",
+    "hi": "अन्य त्रिकोणमितीय रूप",
+    "leaves": [
+     [
+      "$\\sin^2,\\cos^2$ in Dr: $\\tan x=t$",
+      "हर में $\\sin^2,\\cos^2$: $\\tan x=t$"
+     ],
+     [
+      "$\\sin,\\cos$ in Dr: $\\tan\\frac x2=t$",
+      "हर में $\\sin,\\cos$: $\\tan\\frac x2=t$"
+     ],
+     [
+      "Nr $=A\\,$Dr$+B\\,$Dr$'+C$",
+      "अंश $=A\\,$हर$+B\\,$हर$'+C$"
+     ],
+     [
+      "$\\sin x\\pm\\cos x$ with $\\sin2x$",
+      "$\\sin2x$ के साथ $\\sin x\\pm\\cos x$"
+     ]
+    ]
+   },
+   {
+    "en": "Miscellaneous",
+    "hi": "विविध",
+    "leaves": [
+     [
+      "Kutur putur: $1+x^{-n}=t$",
+      "कुतुर पुतुर: $1+x^{-n}=t$"
+     ],
+     [
+      "$\\frac{x^2\\pm k}{x^4+px^2+k^2}$: $x\\mp\\frac kx=t$",
+      "$\\frac{x^2\\pm k}{x^4+px^2+k^2}$: $x\\mp\\frac kx=t$"
+     ],
+     [
+      "$\\sqrt{x^2}=|x|$",
+      "$\\sqrt{x^2}=|x|$"
+     ]
+    ]
+   },
+   {
+    "en": "Irrational functions",
+    "hi": "अपरिमेय फलन",
+    "leaves": [
+     [
+      "$(x-\\alpha)(\\beta-x)$: $\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$",
+      "$(x-\\alpha)(\\beta-x)$: $\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$"
+     ],
+     [
+      "$\\sqrt{px+q}=t$;  $ax+b=\\frac1t$;  $x=\\frac1t$",
+      "$\\sqrt{px+q}=t$;  $ax+b=\\frac1t$;  $x=\\frac1t$"
+     ],
+     [
+      "$m+n=2$: $\\frac{x-a}{x-b}=t$",
+      "$m+n=2$: $\\frac{x-a}{x-b}=t$"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: First look at any integral",
+    "प्रवाह-चित्र 1: किसी भी समाकल पर पहली दृष्टि"
+   ],
+   "start": [
+    "Integrand given",
+    "समाकल्य दिया है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Can it be simplified to standard forms (identities, splitting)?",
+      "क्या इसे मानक रूपों में सरल किया जा सकता है (सर्वसमिकाएँ, विभाजन)?"
+     ],
+     "a": [
+      [
+       "Simplify and use the five sets of standard results."
+      ],
+      [
+       "सरल करके मानक परिणामों के पाँच समूह लगाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is the derivative of an inside expression present as a factor?",
+      "क्या अन्दर वाले व्यंजक का अवकलज गुणनखण्ड के रूप में है?"
+     ],
+     "a": [
+      [
+       "Substitution: inside expression $=t$."
+      ],
+      [
+       "प्रतिस्थापन: अन्दर वाला व्यंजक $=t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $e^x$(or $e^{g}$) times a bracket?",
+      "क्या यह $e^x$ (या $e^{g}$) गुणा एक कोष्ठक है?"
+     ],
+     "a": [
+      [
+       "Look for $f+f'$: classic result $e^xf$ ($e^gf$)."
+      ],
+      [
+       "$f+f'$ खोजें: विशिष्ट परिणाम $e^xf$ ($e^gf$)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Product of two different types of functions?",
+      "क्या दो भिन्न प्रकार के फलनों का गुणनफल है?"
+     ],
+     "a": [
+      [
+       "Parts, first function by ILATE."
+      ],
+      [
+       "खण्डशः, ILATE से प्रथम फलन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Rational function of $x$?",
+      "क्या $x$ का परिमेय फलन है?"
+     ],
+     "a": [
+      [
+       "Use Flowchart 3."
+      ],
+      [
+       "प्रवाह-चित्र 3 देखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only trigonometric functions?",
+      "क्या केवल त्रिकोणमितीय फलन हैं?"
+     ],
+     "a": [
+      [
+       "Use Flowchart 4."
+      ],
+      [
+       "प्रवाह-चित्र 4 देखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Square roots of algebraic expressions?",
+      "क्या बीजीय व्यंजकों के वर्गमूल हैं?"
+     ],
+     "a": [
+      [
+       "Use Flowchart 5."
+      ],
+      [
+       "प्रवाह-चित्र 5 देखें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Try taking the highest power of $x$ common, or parts with $1$ as second function."
+    ],
+    [
+     "$x$ की सबसे बड़ी घात उभयनिष्ठ लें, या $1$ को द्वितीय फलन लेकर खण्डशः।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Integration by parts",
+    "प्रवाह-चित्र 2: खण्डशः समाकलन"
+   ],
+   "start": [
+    "Parts is needed",
+    "खण्डशः की आवश्यकता है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Only one function ($\\ln x$, $\\sin^{-1}x$, $\\tan^{-1}x$)?",
+      "केवल एक फलन ($\\ln x$, $\\sin^{-1}x$, $\\tan^{-1}x$)?"
+     ],
+     "a": [
+      [
+       "Take $1$ as the second function."
+      ],
+      [
+       "$1$ को द्वितीय फलन लें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$e^{ax}\\sin bx$, $e^{ax}\\cos bx$, $\\sec^3x$?",
+      "$e^{ax}\\sin bx$, $e^{ax}\\cos bx$, $\\sec^3x$?"
+     ],
+     "a": [
+      [
+       "Cyclic: parts twice, the integral returns; solve for it (or use the formula)."
+      ],
+      [
+       "चक्रीय: दो बार खण्डशः, समाकल लौटता है; उसे हल करें (या सूत्र लगाएँ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$e^x$ times a sum that splits as $f+f'$?",
+      "$e^x$ गुणा ऐसा योग जो $f+f'$ में टूटे?"
+     ],
+     "a": [
+      [
+       "Write $e^xf+C$ directly."
+      ],
+      [
+       "सीधे $e^xf+C$ लिखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$I_n$ asked (powers $n$, $n-2$)?",
+      "$I_n$ पूछा गया (घातें $n$, $n-2$)?"
+     ],
+     "a": [
+      [
+       "Parts once to relate $I_n$ with $I_{n-1}$ or $I_{n-2}$."
+      ],
+      [
+       "एक बार खण्डशः से $I_n$ को $I_{n-1}$ या $I_{n-2}$ से जोड़ें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "First function by ILATE; repeat parts while a polynomial remains."
+    ],
+    [
+     "ILATE से प्रथम फलन; बहुपद शेष रहने तक खण्डशः दोहराएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Rational functions",
+    "प्रवाह-चित्र 3: परिमेय फलन"
+   ],
+   "start": [
+    "$\\dfrac{P(x)}{Q(x)}$ given",
+    "$\\dfrac{P(x)}{Q(x)}$ दिया है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "$\\deg P\\ge\\deg Q$?",
+      "$\\deg P\\ge\\deg Q$?"
+     ],
+     "a": [
+      [
+       "Divide first."
+      ],
+      [
+       "पहले भाग दें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Numerator a multiple of $Q'$ (or of $x^{n-1}$ with $x^n$ in $Q$)?",
+      "अंश $Q'$ का गुणज (या $Q$ में $x^n$ के साथ $x^{n-1}$)?"
+     ],
+     "a": [
+      [
+       "Substitute $Q=t$ (or $x^n=t$)."
+      ],
+      [
+       "$Q=t$ (या $x^n=t$) रखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$Q$ is a quadratic?",
+      "$Q$ द्विघात है?"
+     ],
+     "a": [
+      [
+       "Linear $=A\\,Q'+B$; complete the square."
+      ],
+      [
+       "रैखिक $=A\\,Q'+B$; पूर्ण वर्ग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$Q=x^4+px^2+k^2$ and $P$ even?",
+      "$Q=x^4+px^2+k^2$ तथा $P$ सम?"
+     ],
+     "a": [
+      [
+       "Divide by $x^2$, $x\\mp\\frac kx=t$."
+      ],
+      [
+       "$x^2$ से भाग, $x\\mp\\frac kx=t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$Q=x(x^n+1)$ type?",
+      "$Q=x(x^n+1)$ प्रकार?"
+     ],
+     "a": [
+      [
+       "Kutur putur: take $x^n$ common, $1+x^{-n}=t$."
+      ],
+      [
+       "कुतुर पुतुर: $x^n$ उभयनिष्ठ, $1+x^{-n}=t$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Factorise $Q$ and use partial fractions (distinct / repeated / quadratic factors)."
+    ],
+    [
+     "$Q$ के गुणनखण्ड करके आंशिक भिन्न (भिन्न / पुनरावर्ती / द्विघात गुणनखण्ड)।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Trigonometric integrands",
+    "प्रवाह-चित्र 4: त्रिकोणमितीय समाकल्य"
+   ],
+   "start": [
+    "Integrand has only $\\sin x$, $\\cos x$",
+    "समाकल्य में केवल $\\sin x$, $\\cos x$"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "$\\sin^mx\\cos^nx$ with an odd power?",
+      "$\\sin^mx\\cos^nx$ में कोई विषम घात?"
+     ],
+     "a": [
+      [
+       "Put the other function $=t$."
+      ],
+      [
+       "दूसरा फलन $=t$ रखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\sin^mx\\cos^nx$, $m+n$ negative even?",
+      "$\\sin^mx\\cos^nx$, $m+n$ ऋणात्मक सम?"
+     ],
+     "a": [
+      [
+       "Divide by $\\cos^{m+n}$, put $\\tan x=t$."
+      ],
+      [
+       "$\\cos^{m+n}$ से भाग, $\\tan x=t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Dr has $\\sin^2x$, $\\cos^2x$, $\\sin x\\cos x$?",
+      "हर में $\\sin^2x$, $\\cos^2x$, $\\sin x\\cos x$?"
+     ],
+     "a": [
+      [
+       "Multiply by $\\sec^2x$, $\\tan x=t$."
+      ],
+      [
+       "$\\sec^2x$ से गुणा, $\\tan x=t$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Dr linear in $\\sin x$, $\\cos x$ (with constant)?",
+      "हर $\\sin x$, $\\cos x$ में रैखिक (अचर सहित)?"
+     ],
+     "a": [
+      [
+       "Nr const: $\\tan\\frac x2=t$; Nr linear: Nr $=A\\,$Dr$+B\\,$Dr$'+C$."
+      ],
+      [
+       "अंश अचर: $\\tan\\frac x2=t$; अंश रैखिक: अंश $=A\\,$हर$+B\\,$हर$'+C$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\sin x\\pm\\cos x$ together with $\\sin2x$?",
+      "$\\sin2x$ के साथ $\\sin x\\pm\\cos x$?"
+     ],
+     "a": [
+      [
+       "Put the other combination $=t$ / write $\\sin2x$ through it."
+      ],
+      [
+       "दूसरा संयोजन $=t$ / $\\sin2x$ को उसके द्वारा लिखें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Both powers even: multiple angles; otherwise product to sum."
+    ],
+    [
+     "दोनों घातें सम: बहु-कोण; अन्यथा गुणनफल से योग।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Square roots",
+    "प्रवाह-चित्र 5: वर्गमूल"
+   ],
+   "start": [
+    "Integrand has a square root",
+    "समाकल्य में वर्गमूल है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "$\\sqrt{a^2\\pm x^2}$ or $\\sqrt{x^2-a^2}$ alone?",
+      "केवल $\\sqrt{a^2\\pm x^2}$ या $\\sqrt{x^2-a^2}$?"
+     ],
+     "a": [
+      [
+       "Standard results / $x=a\\sin\\theta$, $a\\tan\\theta$, $a\\sec\\theta$."
+      ],
+      [
+       "मानक परिणाम / $x=a\\sin\\theta$, $a\\tan\\theta$, $a\\sec\\theta$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\sqrt{\\text{Quad}}$ with a linear factor in Nr?",
+      "अंश में रैखिक गुणनखण्ड के साथ $\\sqrt{Q}$?"
+     ],
+     "a": [
+      [
+       "Linear $=A\\,Q'+B$; complete the square."
+      ],
+      [
+       "रैखिक $=A\\,Q'+B$; पूर्ण वर्ग।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$(x-\\alpha)$ and $(\\beta-x)$ or $(x-\\beta)$?",
+      "$(x-\\alpha)$ तथा $(\\beta-x)$ या $(x-\\beta)$?"
+     ],
+     "a": [
+      [
+       "$x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$ / $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$."
+      ],
+      [
+       "$x=\\alpha\\cos^2\\theta+\\beta\\sin^2\\theta$ / $x=\\alpha\\sec^2\\theta-\\beta\\tan^2\\theta$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$\\sqrt{px+q}$ in Dr?",
+      "हर में $\\sqrt{px+q}$?"
+     ],
+     "a": [
+      [
+       "Put $px+q=t^2$."
+      ],
+      [
+       "$px+q=t^2$ रखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$(ax+b)\\sqrt{\\text{Quad}}$ in Dr?",
+      "हर में $(ax+b)\\sqrt{Q}$?"
+     ],
+     "a": [
+      [
+       "Put $ax+b=\\frac1t$."
+      ],
+      [
+       "$ax+b=\\frac1t$ रखें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$(ax^2+b)\\sqrt{px^2+q}$ in Dr?",
+      "हर में $(ax^2+b)\\sqrt{px^2+q}$?"
+     ],
+     "a": [
+      [
+       "Put $x=\\frac1t$, then $p+qt^2=y^2$."
+      ],
+      [
+       "$x=\\frac1t$, फिर $p+qt^2=y^2$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "$(x-a)^m(x-b)^n$ in Dr with $m+n=2$?",
+      "हर में $(x-a)^m(x-b)^n$, $m+n=2$?"
+     ],
+     "a": [
+      [
+       "Put $\\frac{x-a}{x-b}=t$."
+      ],
+      [
+       "$\\frac{x-a}{x-b}=t$ रखें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Take the highest power of $x$ out of the root (mind $\\sqrt{x^2}=|x|$) and substitute."
+    ],
+    [
+     "मूल से $x$ की सबसे बड़ी घात बाहर लें ($\\sqrt{x^2}=|x|$ ध्यान दें) और प्रतिस्थापन करें।"
+    ]
+   ]
+  }
+ ]
+}
