@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 3,
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ and let $P_1=\\left(4,\\dfrac{12}{5}\\right)$. For each $n\\ge1$, the normal to $E$ at $P_n$ meets the $x$-axis at $G_n$, and $P_{n+1}$ is the point of $E$ in the first quadrant whose abscissa is equal to the abscissa of $G_n$. Let $x_n$ denote the abscissa of $P_n$. Then the value of $\\displaystyle\\sum_{n=1}^{\\infty}x_n$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ है तथा $P_1=\\left(4,\\dfrac{12}{5}\\right)$ है। प्रत्येक $n\\ge1$ के लिए, $P_n$ पर $E$ का अभिलम्ब $x$-अक्ष को $G_n$ पर मिलता है, तथा $P_{n+1}$ प्रथम चतुर्थांश में $E$ का वह बिन्दु है जिसका भुज $G_n$ के भुज के बराबर है। माना $x_n$ बिन्दु $P_n$ का भुज है। तब $\\displaystyle\\sum_{n=1}^{\\infty}x_n$ का मान ______ है।"
+ ],
+ "solution": [
+  "$P_n(5\\cos\\theta_n,4\\sin\\theta_n)$; normal: $\\dfrac{5x}{\\cos\\theta_n}-\\dfrac{4y}{\\sin\\theta_n}=25-16=9$",
+  "$y=0$: $x_{G_n}=\\dfrac95\\cos\\theta_n=\\dfrac{9}{25}x_n$ (i.e. $e^{2}x_n$ with $e^{2}=\\dfrac{9}{25}$)",
+  "$0<x_{G_n}<5$, so $P_{n+1}$ exists and $x_{n+1}=\\dfrac{9}{25}x_n$: a GP with $x_1=4$, ratio $\\dfrac{9}{25}$",
+  "$\\displaystyle\\sum x_n=\\dfrac{4}{1-\\frac{9}{25}}=\\dfrac{4\\cdot25}{16}=6.25$",
+  "",
+  "Final Answer: 6.25"
+ ],
+ "solution_full": [
+  "$P_1$ is on $E$: $\\dfrac{16}{25}+\\dfrac{144/25}{16}=\\dfrac{16}{25}+\\dfrac{9}{25}=1$. Write a first-quadrant point as $P_n(5\\cos\\theta_n,4\\sin\\theta_n)$, $0<\\theta_n<\\dfrac{\\pi}{2}$.",
+  "The normal at the point with eccentric angle $\\theta$ is $\\dfrac{ax}{\\cos\\theta}-\\dfrac{by}{\\sin\\theta}=a^{2}-b^{2}$, here $\\dfrac{5x}{\\cos\\theta_n}-\\dfrac{4y}{\\sin\\theta_n}=9$.",
+  "Putting $y=0$: $x=\\dfrac{9\\cos\\theta_n}{5}=\\dfrac{9}{25}\\cdot5\\cos\\theta_n=\\dfrac{9}{25}x_n$. So $G_n=\\left(\\dfrac{9}{25}x_n,0\\right)$; note $\\dfrac{9}{25}=e^{2}$.",
+  "Since $0<\\dfrac{9}{25}x_n<5$, there is exactly one point of $E$ in the first quadrant with this abscissa, so $P_{n+1}$ is well defined and $x_{n+1}=\\dfrac{9}{25}x_n$.",
+  "Thus $x_n=4\\left(\\dfrac{9}{25}\\right)^{n-1}$, a geometric progression with ratio less than $1$, and $\\displaystyle\\sum_{n=1}^{\\infty}x_n=\\dfrac{4}{1-\\frac{9}{25}}=\\dfrac{100}{16}=\\dfrac{25}{4}=6.25$.",
+  "",
+  "Final Answer: 6.25"
+ ],
+ "originality_note": "New: an iteration in which each normal's foot on the major axis becomes the abscissa of the next point, giving a GP with ratio e^2 (way 1, iteration). Closest known: the normal at P meets the major axis at G with CG = e^2 CN. Different because: the standard relation is only one step; the question builds a chain of points and asks for the sum, which needs the relation to be recognised as a contraction.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that P1 lies on E, that every G_n lies strictly between 0 and 5 so P_(n+1) exists and is unique in the first quadrant, and that the sum is exact. Changed: No change.",
+ "level": 3,
+ "key_step": "The normal's x-intercept is e^2 times the abscissa of the point, so x_(n+1) = (9/25) x_n.",
+ "justification": "Two ideas linked: the parametric normal and its intercept, then recognising the iteration as a geometric progression; numerical format. Closest in demand to 2023-P1-Q2 (L3), an ellipse question chaining tangent/normal facts.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Parametric coordinates for Ellipse",
+  "Tangent and normal for Ellipse"
+ ],
+ "concept_use": {
+  "Parametric coordinates for Ellipse": "Each P_n is written as (5 cos theta_n, 4 sin theta_n), which makes the normal's x-intercept (9/5) cos theta_n = (9/25) x_n.",
+  "Tangent and normal for Ellipse": "The normal ax/cos theta - by/sin theta = a^2 - b^2 at P_n meets the x-axis at G_n, which defines the next point and the ratio 9/25."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

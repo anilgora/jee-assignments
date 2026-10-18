@@ -1,0 +1,43 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{11}=1$. For a real number $c$, let $L_c$ be the line $3x+4y=c$. Let $c_0<0$ be such that there is exactly one point on $L_{c_0}$ from which the two tangents drawn to $E$ are perpendicular to each other. Then the value of $c_0$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{11}=1$ है। किसी वास्तविक संख्या $c$ के लिए, माना $L_c$ रेखा $3x+4y=c$ है। माना $c_0<0$ ऐसा है कि $L_{c_0}$ पर ठीक एक ऐसा बिन्दु है जिससे $E$ पर खींची गई दोनों स्पर्श रेखाएँ परस्पर लम्बवत हैं। तब $c_0$ का मान ______ है।"
+ ],
+ "solution": [
+  "Points from which the tangents are perpendicular form the director circle $x^{2}+y^{2}=a^{2}+b^{2}=36$",
+  "Exactly one such point on $L_c$ $\\iff$ $L_c$ touches this circle: $\\dfrac{|c|}{5}=6\\Rightarrow c=\\pm30$",
+  "$c_0<0\\Rightarrow c_0=-30$ (point of contact $\\left(-\\dfrac{18}{5},-\\dfrac{24}{5}\\right)$)",
+  "",
+  "Final Answer: -30"
+ ],
+ "solution_full": [
+  "The tangent of slope $m$ to $E$ is $y=mx\\pm\\sqrt{25m^{2}+11}$. Through $(h,k)$: $(k-mh)^{2}=25m^{2}+11$, i.e. $(h^{2}-25)m^{2}-2hkm+k^{2}-11=0$.",
+  "The two tangents are perpendicular iff the product of the roots is $-1$: $\\dfrac{k^{2}-11}{h^{2}-25}=-1$, i.e. $h^{2}+k^{2}=36$ (the director circle; the vertical-horizontal pairs from $(\\pm5,\\pm\\sqrt{11})$ also lie on it).",
+  "So the required points of $L_c$ are its intersections with $x^{2}+y^{2}=36$. There is exactly one when $L_c$ is tangent to this circle: distance of the origin from $3x+4y=c$ equals $6$, $\\dfrac{|c|}{5}=6$, $c=\\pm30$.",
+  "With $c_0<0$: $c_0=-30$; the point is $-6\\cdot\\dfrac{(3,4)}{5}=\\left(-\\dfrac{18}{5},-\\dfrac{24}{5}\\right)$.",
+  "",
+  "Final Answer: -30"
+ ],
+ "originality_note": "New: the director circle is used as a set and the line is made tangent to it, so 'exactly one point' becomes a distance condition (way 5). Closest known: equation of the director circle (a plain statement, listed as a known skeleton for circles). Different because: the question asks for a line parameter fixed by uniqueness, not for the circle itself. The ingredient is standard and the question is deliberately short (level 2).",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that both signs c = +-30 give one point and that c0 < 0 selects one; included the vertical/horizontal tangent case in the full solution. Changed: No change.",
+ "level": 2,
+ "key_step": "Perpendicular tangents come from the director circle x^2 + y^2 = 36; uniqueness means the line touches it.",
+ "justification": "Two routine steps (director circle, tangency of a line to a circle) in numerical format; nothing unfamiliar. Comparable to 2026-P2-Q2 (L2), perpendicular tangents with a short finish.",
+ "nearest_anchor": "2026-P2-Q2 (L2)",
+ "confidence": "Medium",
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Director circle for Ellipse"
+ ],
+ "concept_use": {
+  "Director circle for Ellipse": "The points from which the tangents to E are perpendicular form the director circle x^2 + y^2 = 36; the line has exactly one such point when it touches this circle."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

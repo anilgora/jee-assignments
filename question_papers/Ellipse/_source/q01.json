@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Ellipse",
+ "target_level": 3,
+ "english": [
+  "Let $S$ be the focus of the ellipse $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{9}=1$ that lies on the positive $x$-axis, and let $D$ be the directrix of the ellipse corresponding to $S$. For a chord $PQ$ of the ellipse passing through $S$, let $\\Gamma$ be the circle having $PQ$ as a diameter, let $r$ be the radius of $\\Gamma$ and let $d$ be the distance of the centre of $\\Gamma$ from $D$. Then, for every such chord $PQ$, $\\dfrac{r}{d}$ is equal to",
+  "",
+  "(A) $\\dfrac{3}{5}$",
+  "(B) $1$",
+  "(C) $\\dfrac{4}{5}$",
+  "(D) $\\dfrac{16}{25}$"
+ ],
+ "hindi": [
+  "माना कि दीर्घवृत्त $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{9}=1$ की वह नाभि $S$ है जो धनात्मक $x$-अक्ष पर स्थित है, तथा $S$ के संगत नियता $D$ है। दीर्घवृत्त की $S$ से होकर जाने वाली किसी जीवा $PQ$ के लिए, माना $\\Gamma$ वह वृत्त है जिसका व्यास $PQ$ है, $r$ वृत्त $\\Gamma$ की त्रिज्या है तथा $d$ वृत्त $\\Gamma$ के केन्द्र की $D$ से दूरी है। तब, प्रत्येक ऐसी जीवा $PQ$ के लिए, $\\dfrac{r}{d}$ बराबर है",
+  "",
+  "(A) $\\dfrac{3}{5}$",
+  "(B) $1$",
+  "(C) $\\dfrac{4}{5}$",
+  "(D) $\\dfrac{16}{25}$"
+ ],
+ "solution": [
+  "$a=5,\\ b=3,\\ ae=4\\Rightarrow e=\\dfrac45$, $S(4,0)$, $D:\\ x=\\dfrac{a}{e}=\\dfrac{25}{4}$",
+  "Diametric form $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$: centre of $\\Gamma$ is the midpoint $M\\left(\\dfrac{x_1+x_2}{2},\\dfrac{y_1+y_2}{2}\\right)$ and $r=\\dfrac{PQ}{2}$",
+  "$PQ$ passes through $S$, so $PQ=SP+SQ=(a-ex_1)+(a-ex_2)$ (focal distances)",
+  "$\\Rightarrow r=a-e\\,\\dfrac{x_1+x_2}{2}=e\\left(\\dfrac{a}{e}-x_M\\right)$",
+  "$M$ is inside the ellipse, so $x_M<\\dfrac ae$ and $d=\\dfrac{a}{e}-x_M$",
+  "$\\dfrac{r}{d}=e=\\dfrac45$ for every focal chord (so $\\Gamma$ never meets $D$; $1$ is the parabola value)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "For $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{9}=1$: $a=5$, $b=3$, $a^{2}e^{2}=a^{2}-b^{2}=16$, so $ae=4$ and $e=\\dfrac45$. The focus on the positive $x$-axis is $S(4,0)$ and its directrix is $D:\\ x=\\dfrac{a}{e}=\\dfrac{25}{4}$.",
+  "Let $P(x_1,y_1)$ and $Q(x_2,y_2)$ be the ends of a chord through $S$. The circle on $PQ$ as diameter is $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$. Completing squares, its centre is the midpoint $M\\left(\\dfrac{x_1+x_2}{2},\\dfrac{y_1+y_2}{2}\\right)$ and its radius is $r=\\dfrac{PQ}{2}$.",
+  "Since $S$ lies on the segment $PQ$, $PQ=SP+SQ$. For a point $(x,y)$ of the ellipse the distance from $S$ is $e$ times its distance from $D$, that is, $SP=e\\left(\\dfrac{a}{e}-x_1\\right)=a-ex_1$ and $SQ=a-ex_2$.",
+  "Hence $r=\\dfrac{SP+SQ}{2}=a-e\\,\\dfrac{x_1+x_2}{2}=a-e\\,x_M=e\\left(\\dfrac{a}{e}-x_M\\right)$.",
+  "The midpoint $M$ of a chord lies inside the ellipse, so $x_M<a<\\dfrac{a}{e}$ and the distance of $M$ from the line $x=\\dfrac ae$ is $d=\\dfrac{a}{e}-x_M$.",
+  "Therefore $\\dfrac{r}{d}=e=\\dfrac45$, the same for every chord through $S$ (including the major axis: $r=5$, $d=\\dfrac{25}{4}$). In particular $r<d$, so $\\Gamma$ never meets $D$.",
+  "Option (B) is the value for a parabola (the circle then touches the directrix), (A) uses $\\dfrac{b}{a}$, and (D) is $e^{2}$.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: the ratio radius : distance-from-directrix for the circle on any focal chord is the invariant e (way 4, hidden invariant). Closest known: for a parabola the circle on a focal chord as diameter touches the directrix. Different because: for the ellipse the focal distances a - ex make the ratio equal to e, so the student must build the invariant from the focal-distance form rather than quote the parabola fact.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that the answer does not depend on the chord (numerically for five chords including the major axis). Changed: No change.",
+ "level": 3,
+ "key_step": "PQ = SP + SQ = 2a - e(x1 + x2) turns the radius into e times the distance of the midpoint from the directrix.",
+ "justification": "Two ideas linked: diametric circle (centre = midpoint, radius = half chord) and focal distance a - ex; the invariant is not a standard ellipse result. Comparable to 2023-P1-Q2 (L3), an ellipse SCQ-style chain with a structural check.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "answer_plan": "Option C",
+ "blueprint_concepts": [
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum",
+  "Diametrical form of circle"
+ ],
+ "concept_use": {
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum": "The circle with diameter PQ is written in diametric form (x - x1)(x - x2) + (y - y1)(y - y2) = 0, giving its centre as the midpoint of PQ and its radius PQ/2.",
+  "Diametrical form of circle": "Focus S(4,0), eccentricity 4/5 and the directrix x = 25/4 give the focal distances SP = a - ex1, SQ = a - ex2 and the distance d of the centre from the directrix."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

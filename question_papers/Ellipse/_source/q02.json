@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Ellipse",
+ "target_level": 3,
+ "english": [
+  "Let $P$ and $Q$ be distinct points on the ellipse $\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{4}=1$ such that the chord $PQ$ is parallel to the line $x+2\\sqrt{3}\\,y=0$. Let $O$ be the origin. Then the minimum value of $\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}$, taken over all such chords $PQ$, is",
+  "",
+  "(A) $-13$",
+  "(B) $-16$",
+  "(C) $-7$",
+  "(D) $-10$"
+ ],
+ "hindi": [
+  "माना कि दीर्घवृत्त $\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{4}=1$ पर $P$ तथा $Q$ ऐसे भिन्न बिन्दु हैं कि जीवा $PQ$ रेखा $x+2\\sqrt{3}\\,y=0$ के समान्तर है। माना $O$ मूलबिन्दु है। तब ऐसी सभी जीवाओं $PQ$ पर $\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}$ का न्यूनतम मान है",
+  "",
+  "(A) $-13$",
+  "(B) $-16$",
+  "(C) $-7$",
+  "(D) $-10$"
+ ],
+ "solution": [
+  "$P(4\\cos\\alpha,2\\sin\\alpha)$, $Q(4\\cos\\beta,2\\sin\\beta)$; slope of $PQ=\\dfrac{2(\\sin\\beta-\\sin\\alpha)}{4(\\cos\\beta-\\cos\\alpha)}=-\\dfrac12\\cot\\dfrac{\\alpha+\\beta}{2}$",
+  "Parallel to $x+2\\sqrt3y=0$ (slope $-\\dfrac{1}{2\\sqrt3}$): $\\cot\\dfrac{\\alpha+\\beta}{2}=\\dfrac{1}{\\sqrt3}\\Rightarrow\\dfrac{\\alpha+\\beta}{2}=\\dfrac{\\pi}{3}+k\\pi\\Rightarrow\\cos(\\alpha+\\beta)=-\\dfrac12$",
+  "$\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}=16\\cos\\alpha\\cos\\beta+4\\sin\\alpha\\sin\\beta=10\\cos(\\alpha-\\beta)+6\\cos(\\alpha+\\beta)$",
+  "$=10\\cos(\\alpha-\\beta)-3$, with $\\alpha+\\beta$ fixed and $\\alpha-\\beta$ free",
+  "Minimum at $\\alpha-\\beta=\\pi$ ($P,Q$ ends of a diameter, e.g. $\\alpha=\\dfrac{5\\pi}{6},\\ \\beta=-\\dfrac{\\pi}{6}$): $-10-3=-13$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Write $P(4\\cos\\alpha,2\\sin\\alpha)$ and $Q(4\\cos\\beta,2\\sin\\beta)$ with $\\alpha\\ne\\beta$ (mod $2\\pi$).",
+  "Slope of $PQ$: $\\dfrac{2(\\sin\\beta-\\sin\\alpha)}{4(\\cos\\beta-\\cos\\alpha)}=\\dfrac{2\\cdot2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\beta-\\alpha}{2}}{4\\cdot(-2)\\sin\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\beta-\\alpha}{2}}=-\\dfrac12\\cot\\dfrac{\\alpha+\\beta}{2}$.",
+  "The line $x+2\\sqrt3\\,y=0$ has slope $-\\dfrac{1}{2\\sqrt3}$. Equating, $\\cot\\dfrac{\\alpha+\\beta}{2}=\\dfrac1{\\sqrt3}$, so $\\dfrac{\\alpha+\\beta}{2}=\\dfrac{\\pi}{3}+k\\pi$ and $\\alpha+\\beta=\\dfrac{2\\pi}{3}+2k\\pi$. In every case $\\cos(\\alpha+\\beta)=-\\dfrac12$.",
+  "Now $\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}=16\\cos\\alpha\\cos\\beta+4\\sin\\alpha\\sin\\beta$. Using $2\\cos\\alpha\\cos\\beta=\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)$ and $2\\sin\\alpha\\sin\\beta=\\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)$:",
+  "$\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}=8[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)]+2[\\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)]=10\\cos(\\alpha-\\beta)+6\\cos(\\alpha+\\beta)=10\\cos(\\alpha-\\beta)-3$.",
+  "The constraint fixes only $\\alpha+\\beta$; $\\alpha-\\beta$ can take any value with $\\alpha\\ne\\beta$. The minimum $-13$ occurs at $\\alpha-\\beta=\\pi$, for example $\\alpha=\\dfrac{5\\pi}{6}$, $\\beta=-\\dfrac{\\pi}{6}$, giving $P(-2\\sqrt3,1)$, $Q(2\\sqrt3,-1)$; then $\\overrightarrow{OP}\\cdot\\overrightarrow{OQ}=-12-1=-13$.",
+  "Option (B) $-a^{2}$ would need the diameter along the major axis, which is not parallel to the given line; (C) and (D) drop or mis-sign the $6\\cos(\\alpha+\\beta)$ term.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the extreme of OP.OQ over a family of parallel chords, where the chord direction fixes alpha + beta and the product-to-sum identity separates the free variable alpha - beta (way 5). Closest known: chords in a given direction have constant sum of eccentric angles; maximum area of triangle OPQ. Different because: the quantity is a dot product whose two parts behave differently under the constraint, so the constraint must be decoded first.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that P and Q distinct is stated, that the minimum is attained (a diameter parallel to the line), and numerically over 4000 chords. Changed: No change.",
+ "level": 3,
+ "key_step": "Decode 'parallel to the line' into cos(alpha + beta) = -1/2, then 10 cos(alpha - beta) - 3.",
+ "justification": "Two linked ideas: the chord-direction condition on eccentric angles and the extreme of a trigonometric expression under the constraint alpha + beta fixed. Comparable to 2025-P2-Q7 (L3), eccentric-angle reasoning on an ellipse.",
+ "nearest_anchor": "2025-P2-Q7 (L3)",
+ "confidence": "Medium",
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Parametric coordinates for Ellipse",
+  "Maximum and minimum of general trigonometric expressions under constraints"
+ ],
+ "concept_use": {
+  "Parametric coordinates for Ellipse": "P and Q are written as (4 cos alpha, 2 sin alpha) and (4 cos beta, 2 sin beta); the slope of PQ in eccentric angles gives the condition on alpha + beta.",
+  "Maximum and minimum of general trigonometric expressions under constraints": "OP.OQ = 10 cos(alpha - beta) + 6 cos(alpha + beta) is minimised under the constraint cos(alpha + beta) = -1/2, giving -13 at alpha - beta = pi."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

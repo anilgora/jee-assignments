@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "Let $\\theta$ be the acute angle between the two tangents drawn from the point $P(4,4)$ to the ellipse $\\dfrac{x^{2}}{10}+\\dfrac{y^{2}}{6}=1$. Then the value of $\\tan\\theta$ is ______."
+ ],
+ "hindi": [
+  "माना कि बिन्दु $P(4,4)$ से दीर्घवृत्त $\\dfrac{x^{2}}{10}+\\dfrac{y^{2}}{6}=1$ पर खींची गई दोनों स्पर्श रेखाओं के बीच का न्यून कोण $\\theta$ है। तब $\\tan\\theta$ का मान ______ है।"
+ ],
+ "solution": [
+  "$P$ is outside: $S_1=\\dfrac{16}{10}+\\dfrac{16}{6}-1=\\dfrac{49}{15}$",
+  "Pair of tangents $SS_1=T^{2}$, $T=\\dfrac{2x}{5}+\\dfrac{2y}{3}-1$; second-degree part: $\\dfrac{49}{15}\\left(\\dfrac{x^{2}}{10}+\\dfrac{y^{2}}{6}\\right)-\\left(\\dfrac{2x}{5}+\\dfrac{2y}{3}\\right)^{2}$",
+  "$A=\\dfrac{49}{150}-\\dfrac{4}{25}=\\dfrac16$, $B=\\dfrac{49}{90}-\\dfrac49=\\dfrac{1}{10}$, $2H=-\\dfrac{8}{15}\\Rightarrow H=-\\dfrac{4}{15}$",
+  "$\\tan\\theta=\\dfrac{2\\sqrt{H^{2}-AB}}{|A+B|}=\\dfrac{2\\sqrt{\\frac{16}{225}-\\frac{1}{60}}}{\\frac{4}{15}}=\\dfrac{2\\cdot\\frac{7}{30}}{\\frac{4}{15}}=\\dfrac74=1.75$",
+  "",
+  "Final Answer: 1.75"
+ ],
+ "solution_full": [
+  "$S_1=\\dfrac{16}{10}+\\dfrac{16}{6}-1=\\dfrac{24+40-15}{15}=\\dfrac{49}{15}>0$, so $P$ is outside and two tangents exist.",
+  "Slopes of the tangents from $P$: $y=mx+(4-4m)$ touches the ellipse iff $(4-4m)^{2}=10m^{2}+6$, i.e. $6m^{2}-32m+10=0$, or $3m^{2}-16m+5=0$; so $m_1+m_2=\\dfrac{16}{3}$, $m_1m_2=\\dfrac53$ (no tangent is vertical, as $16\\ne10$).",
+  "Equivalently, the pair of tangents is $SS_1=T^{2}$ with $T=\\dfrac{4x}{10}+\\dfrac{4y}{6}-1$; its second-degree part is $Ax^{2}+2Hxy+By^{2}$ with $A=\\dfrac{49}{150}-\\dfrac{16}{100}=\\dfrac16$, $B=\\dfrac{49}{90}-\\dfrac{16}{36}=\\dfrac{1}{10}$, $H=-\\dfrac{4}{15}$. The lines through $P$ are parallel to $Ax^{2}+2Hxy+By^{2}=0$, so their slopes satisfy $Bm^{2}+2Hm+A=0$, i.e. $3m^{2}-16m+5=0$, agreeing with the direct computation.",
+  "$\\tan\\theta=\\left|\\dfrac{m_1-m_2}{1+m_1m_2}\\right|=\\dfrac{\\sqrt{(m_1+m_2)^{2}-4m_1m_2}}{1+m_1m_2}=\\dfrac{\\sqrt{\\frac{256}{9}-\\frac{20}{3}}}{\\frac{8}{3}}=\\dfrac{\\frac{14}{3}}{\\frac83}=\\dfrac74$.",
+  "Since $1+m_1m_2>0$, the angle given by this value is acute, so $\\tan\\theta=1.75$. (Same value from $\\dfrac{2\\sqrt{H^{2}-AB}}{|A+B|}=\\dfrac{2\\cdot\\frac{7}{30}}{\\frac{4}{15}}$.)",
+  "",
+  "Final Answer: 1.75"
+ ],
+ "originality_note": "New: the angle between the tangents is read from the second-degree part of SS1 = T^2 (the pair-of-lines angle formula), cross-checked by the slope quadratic of the tangents from an external point (way 5). Closest known: angle between the pair of tangents from a point to an ellipse, a standard exercise. Different because: only the numbers are new; the question is deliberately a routine level-2 application in which the two routes must agree. Standard skeleton at L2, flagged honestly.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that P is outside, that no tangent is vertical, and that the formula gives the acute angle (1 + m1 m2 > 0). Changed: No change.",
+ "level": 2,
+ "key_step": "A = 1/6, B = 1/10, H = -4/15 from SS1 = T^2, then tan theta = 2 sqrt(H^2 - AB)/|A + B|.",
+ "justification": "Routine application of the pair-of-tangents equation and the angle formula (or Vieta on the slope quadratic); several steps, no insight. Comparable to 2026-P2-Q17 (L2), angle between tangents to ellipses.",
+ "nearest_anchor": "2026-P2-Q17 (L2)",
+ "confidence": "High",
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Pair of tangents for Ellipse",
+  "tangents drawn from an external point to a Ellipse"
+ ],
+ "concept_use": {
+  "Pair of tangents for Ellipse": "The pair of tangents SS1 = T^2 from P(4,4) gives the second-degree part with A = 1/6, B = 1/10, H = -4/15, whose angle formula gives tan theta = 7/4.",
+  "tangents drawn from an external point to a Ellipse": "The tangents from the external point P(4,4) have slopes satisfying 3m^2 - 16m + 5 = 0; Vieta gives the same tan theta = 7/4 and confirms the angle is acute."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

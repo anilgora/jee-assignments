@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "Let $S$ be the point $(3,0)$ and let $L$ be the line $x=\\dfrac{16}{3}$. Let $T$ be the set of all integers $\\lambda$ for which the point $P(\\lambda,\\lambda+1)$ satisfies $PS<\\dfrac34\\,PN$, where $N$ is the foot of the perpendicular from $P$ to $L$. Then the sum of all the elements of $T$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ बिन्दु $(3,0)$ है तथा $L$ रेखा $x=\\dfrac{16}{3}$ है। माना $T$ उन सभी पूर्णांकों $\\lambda$ का समुच्चय है जिनके लिए बिन्दु $P(\\lambda,\\lambda+1)$ प्रतिबन्ध $PS<\\dfrac34\\,PN$ को सन्तुष्ट करता है, जहाँ $N$ बिन्दु $P$ से $L$ पर डाले गए लम्ब का पाद है। तब $T$ के सभी अवयवों का योग ______ है।"
+ ],
+ "solution": [
+  "$PS=\\dfrac34PN$ is the ellipse with focus $(3,0)$, directrix $x=\\dfrac{16}{3}$, $e=\\dfrac34$: $ae=3$, $\\dfrac ae=\\dfrac{16}{3}\\Rightarrow a=4$, $b^{2}=16-9=7$",
+  "$PS^{2}-\\dfrac{9}{16}PN^{2}=(x-3)^{2}+y^{2}-\\dfrac{9}{16}\\left(x-\\dfrac{16}{3}\\right)^{2}=7\\left(\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{7}-1\\right)$, so $PS<\\dfrac34PN$ iff $P$ is inside $\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{7}=1$",
+  "$\\dfrac{\\lambda^{2}}{16}+\\dfrac{(\\lambda+1)^{2}}{7}<1\\Rightarrow23\\lambda^{2}+32\\lambda-96<0$",
+  "Roots $\\dfrac{-32\\pm\\sqrt{9856}}{46}\\approx-2.85,\\ 1.46$; integers $\\lambda=-2,-1,0,1$",
+  "Sum $=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "The locus $PS=\\dfrac34PN$ is the ellipse with focus $S(3,0)$, directrix $x=\\dfrac{16}{3}$ and $e=\\dfrac34$. For the standard ellipse centred at the origin, $ae=3$ and $\\dfrac ae=\\dfrac{16}{3}$ give $a^{2}=16$, $a=4$, and $b^{2}=a^{2}(1-e^{2})=16\\cdot\\dfrac{7}{16}=7$.",
+  "For any point $(x,y)$: $PS^{2}-\\dfrac{9}{16}PN^{2}=(x-3)^{2}+y^{2}-\\dfrac{9}{16}\\left(x-\\dfrac{16}{3}\\right)^{2}=\\dfrac{7}{16}x^{2}+y^{2}-7=7\\left(\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{7}-1\\right)$.",
+  "So $PS<\\dfrac34PN$ exactly when $S_1=\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{7}-1<0$, i.e. when $P$ lies inside the ellipse.",
+  "For $P(\\lambda,\\lambda+1)$: $7\\lambda^{2}+16(\\lambda+1)^{2}<112$, i.e. $23\\lambda^{2}+32\\lambda-96<0$.",
+  "The roots are $\\dfrac{-32\\pm\\sqrt{1024+8832}}{46}=\\dfrac{-32\\pm\\sqrt{9856}}{46}$, about $-2.85$ and $1.46$. Check the boundary integers: $\\lambda=-3$ gives $207-96-96=15>0$; $\\lambda=2$ gives $92+64-96=60>0$; $\\lambda=-2$ gives $92-64-96<0$; $\\lambda=1$ gives $23+32-96<0$.",
+  "So $T=\\{-2,-1,0,1\\}$ and the sum is $-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: the position test is hidden inside a focus-directrix inequality, so the student must recognise PS < e PN as the interior of an ellipse and identify that ellipse from its focus and directrix (way 4, hidden structure). Closest known: integer values of a parameter for which a point lies inside an ellipse. Different because: the ellipse is never written; it has to be built from the basic elements, and the identity PS^2 - e^2 PN^2 = (1 - e^2)a^2 S1 converts the inequality.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that the inequality is equivalent to the interior for every point of the plane (identity verified symbolically), and the boundary integers -3 and 2. Changed: No change.",
+ "level": 2,
+ "key_step": "Recognise PS = (3/4)PN as x^2/16 + y^2/7 = 1, so the condition is S1 < 0.",
+ "justification": "Short chain: identify the ellipse from focus, directrix and e, then a quadratic inequality and an integer count; the hidden ellipse is the only idea. Comparable to 2021-P1-Q17 (L1) and 2024-P1-Q8 (L2) in effort; L2.",
+ "nearest_anchor": "2024-P1-Q8 (L2)",
+ "confidence": "Medium",
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Position of a point wrt a Ellipse",
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum"
+ ],
+ "concept_use": {
+  "Position of a point wrt a Ellipse": "The inequality PS < (3/4)PN is turned into S1 < 0, i.e. the point (lambda, lambda + 1) must lie inside x^2/16 + y^2/7 = 1, giving 23 lambda^2 + 32 lambda - 96 < 0.",
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum": "The focus (3,0), the directrix x = 16/3 and e = 3/4 identify the ellipse: ae = 3, a/e = 16/3, so a = 4 and b^2 = 7."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

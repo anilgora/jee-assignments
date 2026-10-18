@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 3,
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{19}+\\dfrac{y^{2}}{6}=1$. Let $P$ be the point in the first quadrant on the line $4x=3y$ from which the two tangents drawn to $E$ are perpendicular to each other. If $m_1$ and $m_2$ are the slopes of these two tangents, then the value of $m_1+m_2$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{19}+\\dfrac{y^{2}}{6}=1$ है। माना रेखा $4x=3y$ पर प्रथम चतुर्थांश में $P$ वह बिन्दु है जिससे $E$ पर खींची गई दोनों स्पर्श रेखाएँ परस्पर लम्बवत हैं। यदि इन दोनों स्पर्श रेखाओं की प्रवणताएँ $m_1$ तथा $m_2$ हैं, तो $m_1+m_2$ का मान ______ है।"
+ ],
+ "solution": [
+  "$P$ lies on the director circle $x^{2}+y^{2}=19+6=25$; with $y=\\dfrac43x$, $x>0$: $P(3,4)$",
+  "Tangent $y=mx+c$ through $P$ with $c^{2}=19m^{2}+6$: $(4-3m)^{2}=19m^{2}+6\\Rightarrow10m^{2}+24m-10=0$",
+  "$m_1m_2=-1$ (check), $m_1+m_2=-\\dfrac{24}{10}=-2.4$",
+  "",
+  "Final Answer: -2.4"
+ ],
+ "solution_full": [
+  "From $(h,k)$ the slopes of the tangents to $E$ satisfy $(k-mh)^{2}=19m^{2}+6$, i.e. $(h^{2}-19)m^{2}-2hkm+(k^{2}-6)=0$. The tangents are perpendicular iff $\\dfrac{k^{2}-6}{h^{2}-19}=-1$, i.e. $h^{2}+k^{2}=25$ (director circle).",
+  "With $k=\\dfrac43h$: $h^{2}+\\dfrac{16}{9}h^{2}=25$, $h^{2}=9$, and in the first quadrant $P(3,4)$. $P$ is outside $E$: $\\dfrac{9}{19}+\\dfrac{16}{6}>1$.",
+  "For $P(3,4)$: $(9-19)m^{2}-24m+(16-6)=0$, i.e. $-10m^{2}-24m+10=0$, or $5m^{2}+12m-5=0$.",
+  "The discriminant $144+100>0$ gives two real slopes with $m_1m_2=-1$, as required, and $m_1+m_2=-\\dfrac{12}{5}=-2.4$.",
+  "",
+  "Final Answer: -2.4"
+ ],
+ "originality_note": "New: the point is located on a ray by the perpendicular-tangent condition, and then the slope quadratic from that point is read through Vieta (way 5). Closest known: director circle of an ellipse; sum and product of slopes of tangents from a point. Different because: the point is not given; it is defined by the director-circle property, and the answer is the sum, not the (known) product.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that only one point of the ray lies on the director circle in the first quadrant, that it is outside E, and that both slopes are real. Changed: No change.",
+ "level": 3,
+ "key_step": "Locate P(3,4) on the director circle, then sum of roots of (h^2 - a^2)m^2 - 2hkm + (k^2 - b^2) = 0.",
+ "justification": "Two ideas linked (director circle to find P, slope quadratic of tangents from P) with a numerical answer. Comparable to 2023-P1-Q2 (L3), tangents of an ellipse with a structural step; could be read as L2.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Director circle for Ellipse",
+  "tangents drawn from an external point to a Ellipse"
+ ],
+ "concept_use": {
+  "Director circle for Ellipse": "P is found as the point of the ray y = 4x/3 on the director circle x^2 + y^2 = 25, where the tangents are perpendicular.",
+  "tangents drawn from an external point to a Ellipse": "The tangents from the external point P(3,4) have slopes satisfying -10m^2 - 24m + 10 = 0, whose sum of roots is -2.4."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

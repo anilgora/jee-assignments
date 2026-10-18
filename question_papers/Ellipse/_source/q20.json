@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "From the point $P(2,4)$, two tangents are drawn to the ellipse $\\dfrac{x^{2}}{21}+\\dfrac{y^{2}}{15}=1$. These tangents meet the $x$-axis at the points $A$ and $B$. Then the area of the triangle $PAB$ is ______."
+ ],
+ "hindi": [
+  "बिन्दु $P(2,4)$ से दीर्घवृत्त $\\dfrac{x^{2}}{21}+\\dfrac{y^{2}}{15}=1$ पर दो स्पर्श रेखाएँ खींची जाती हैं। ये स्पर्श रेखाएँ $x$-अक्ष को बिन्दुओं $A$ तथा $B$ पर मिलती हैं। तब त्रिभुज $PAB$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$P$ is outside: $\\dfrac{4}{21}+\\dfrac{16}{15}>1$. Tangent $y=mx+c$ with $c^{2}=21m^{2}+15$ through $P$: $(4-2m)^{2}=21m^{2}+15$",
+  "$17m^{2}+16m-1=0\\Rightarrow(17m-1)(m+1)=0\\Rightarrow m=\\dfrac1{17},\\ -1$",
+  "Lines $y-4=m(x-2)$ meet $y=0$ at $x=2-\\dfrac4m$: $A(-66,0)$, $B(6,0)$",
+  "Area $=\\dfrac12\\cdot AB\\cdot4=\\dfrac12\\cdot72\\cdot4=144$",
+  "",
+  "Final Answer: 144"
+ ],
+ "solution_full": [
+  "$P(2,4)$ is outside the ellipse since $\\dfrac{4}{21}+\\dfrac{16}{15}-1=\\dfrac{20+112-105}{105}>0$, so two tangents exist. Neither is vertical, because $x=2$ is not a tangent ($2^{2}\\ne21$).",
+  "A line of slope $m$ through $P$ is $y=mx+(4-2m)$; it touches the ellipse iff $(4-2m)^{2}=21m^{2}+15$, i.e. $16-16m+4m^{2}=21m^{2}+15$, so $17m^{2}+16m-1=0$.",
+  "$(17m-1)(m+1)=0$: $m_1=\\dfrac{1}{17}$, $m_2=-1$. Check: for $m=-1$, $c=6$ and $c^{2}=36=21+15$.",
+  "Tangent with slope $\\dfrac1{17}$: $y=\\dfrac{x+66}{17}$, meeting the $x$-axis at $A(-66,0)$. Tangent with slope $-1$: $y=6-x$, meeting the $x$-axis at $B(6,0)$.",
+  "$AB=72$ and the height of $P$ above the $x$-axis is $4$, so the area of $\\triangle PAB$ is $\\dfrac12\\cdot72\\cdot4=144$.",
+  "",
+  "Final Answer: 144"
+ ],
+ "originality_note": "New: the triangle cut off on the x-axis by the two tangents from a point, where one tangent is almost horizontal and gives a far intercept (way 5). Closest known: area of the triangle formed by the two tangents and the chord of contact. Different because: the base is on the x-axis, so the slopes themselves (from the tangency condition) are needed, not the chord-of-contact formula. Standard ingredient.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that P is outside, that no tangent is vertical or horizontal (both meet the x-axis), and that the slopes are rational so the area is exact. Changed: No change.",
+ "level": 2,
+ "key_step": "Tangency condition through P gives 17m^2 + 16m - 1 = 0, slopes 1/17 and -1.",
+ "justification": "Routine chain: tangency condition, quadratic in m, intercepts, area. Comparable to 2024-P1-Q4 (L2), tangents from an external point to an ellipse.",
+ "nearest_anchor": "2024-P1-Q4 (L2)",
+ "confidence": "High",
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "tangents drawn from an external point to a Ellipse"
+ ],
+ "concept_use": {
+  "tangents drawn from an external point to a Ellipse": "The two tangents from the external point P(2,4) are found from (4 - 2m)^2 = 21m^2 + 15, giving slopes 1/17 and -1 and the x-intercepts -66 and 6."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

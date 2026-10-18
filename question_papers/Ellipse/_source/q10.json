@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "Let $S$ be the origin. Let $\\mathcal{P}$ be the parabola with focus $S$ and directrix $3x+4y+50=0$, and let $\\mathcal{E}$ be the ellipse with focus $S$, corresponding directrix $3x+4y+175=0$ and eccentricity $\\dfrac12$. Let $P$ and $Q$ be the two points common to $\\mathcal{P}$ and $\\mathcal{E}$. Then the area of the triangle $SPQ$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ मूलबिन्दु है। माना $\\mathcal{P}$ वह परवलय है जिसकी नाभि $S$ तथा नियता $3x+4y+50=0$ है, तथा $\\mathcal{E}$ वह दीर्घवृत्त है जिसकी नाभि $S$, संगत नियता $3x+4y+175=0$ तथा उत्केन्द्रता $\\dfrac12$ है। माना $\\mathcal{P}$ तथा $\\mathcal{E}$ के दो उभयनिष्ठ बिन्दु $P$ तथा $Q$ हैं। तब त्रिभुज $SPQ$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "Let $u=\\dfrac{3x+4y}{5}$ (signed distance along the common axis). $\\mathcal{P}$: $SX=u+10$; $\\mathcal{E}$: $SX=\\dfrac{u+35}{2}$ (both directrices lie on the side $u<0$, the curves on the other side)",
+  "Common point: $u+10=\\dfrac{u+35}{2}\\Rightarrow u=15$, so $3x+4y=75$ and $SX=25$",
+  "$x^{2}+y^{2}=625$ with $y=\\dfrac{75-3x}{4}$: $25x^{2}-450x-4375=0\\Rightarrow x^{2}-18x-175=0\\Rightarrow x=25$ or $x=-7$",
+  "$P(25,0)$, $Q(-7,24)$ (check: $SQ=25$, distance to $3x+4y+50=0$ is $\\dfrac{125}{5}=25$)",
+  "Area $=\\dfrac12|25\\cdot24-0\\cdot(-7)|=300$",
+  "",
+  "Final Answer: 300"
+ ],
+ "solution_full": [
+  "Both directrices are perpendicular to the direction $(3,4)$, so both conics have the axis through $S$ in that direction. For a point $X(x,y)$ put $u=\\dfrac{3x+4y}{5}$; the distance of $X$ from $3x+4y+c=0$ is $\\dfrac{|5u+c|}{5}$.",
+  "$\\mathcal{P}$: $SX=|u+10|$. If $u<-10$ this would give $SX=-u-10<|u|\\le SX$, impossible, so on $\\mathcal{P}$, $SX=u+10$.",
+  "$\\mathcal{E}$: $SX=\\dfrac12|u+35|$. If $u<-35$ then $SX=\\dfrac{-u-35}{2}<-u\\le SX$, impossible, so on $\\mathcal{E}$, $SX=\\dfrac{u+35}{2}$.",
+  "At a common point $u+10=\\dfrac{u+35}{2}$, so $u=15$: every common point lies on the line $3x+4y=75$ and has $SX=25$.",
+  "Solve $x^{2}+y^{2}=625$, $y=\\dfrac{75-3x}{4}$: $16x^{2}+(75-3x)^{2}=10000\\Rightarrow25x^{2}-450x-4375=0\\Rightarrow x^{2}-18x-175=0\\Rightarrow(x-25)(x+7)=0$.",
+  "So $P(25,0)$ and $Q(-7,24)$. Check $Q$: $SQ=25$; distance to $3x+4y+50=0$ is $\\dfrac{-21+96+50}{5}=25$; distance to $3x+4y+175=0$ is $\\dfrac{250}{5}=50=2\\,SQ$.",
+  "Area of $\\triangle SPQ$ with $S$ at the origin: $\\dfrac12|x_Py_Q-x_Qy_P|=\\dfrac12|25\\cdot24-(-7)\\cdot0|=300$.",
+  "",
+  "Final Answer: 300"
+ ],
+ "originality_note": "New: a parabola and an ellipse sharing a focus and an oblique axis meet where the two focal-distance laws agree, which is a single line u = 15 (way 4, hidden linearity). Closest known: intersection of two conics with a common focus via equal distances to directrices. Different because: one curve is an ellipse with e = 1/2 and parallel oblique directrices, so the common chord comes from equating u + 10 and (u + 35)/2, never from the full second-degree equations.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that the absolute values open with one sign on each curve (so exactly two common points), that both points satisfy both definitions, and that the area is an exact integer. Changed: No change.",
+ "level": 2,
+ "key_step": "Equate the two focal-distance laws SX = u + 10 and SX = (u + 35)/2 to get the common chord u = 15.",
+ "justification": "Once both definitions are written along the common axis the problem is a routine chain (linear equation, circle-line intersection, area). Comparable to 2025-P2-Q4 (L2), a conic set up by a locus definition.",
+ "nearest_anchor": "2025-P2-Q4 (L2)",
+ "confidence": "Medium",
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "ellipse from the focus-directrix definition with a general axis",
+  "parabola from the focus-directrix definition with a general axis"
+ ],
+ "concept_use": {
+  "ellipse from the focus-directrix definition with a general axis": "The ellipse is used through its focus-directrix definition with the oblique directrix 3x + 4y + 175 = 0: SX = (1/2) distance(X, directrix) = (u + 35)/2.",
+  "parabola from the focus-directrix definition with a general axis": "The parabola is used through its focus-directrix definition with the oblique directrix 3x + 4y + 50 = 0: SX = u + 10; equating the two gives the common points."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

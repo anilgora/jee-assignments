@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 3,
+ "english": [
+  "Consider all ellipses $\\dfrac{x^{2}}{a^{2}}+\\dfrac{y^{2}}{b^{2}}=1$, $a>b>0$, that pass through the point $(4,3)$. For such an ellipse, let $A$ be an end of its major axis and $B$ an end of its minor axis. Among these ellipses, let $E_0$ be the one for which the length $AB$ is the least, and let $d$ be the distance between the foci of $E_0$. Then the value of $d^{2}$ is ______."
+ ],
+ "hindi": [
+  "बिन्दु $(4,3)$ से होकर जाने वाले सभी दीर्घवृत्तों $\\dfrac{x^{2}}{a^{2}}+\\dfrac{y^{2}}{b^{2}}=1$, $a>b>0$, पर विचार कीजिए। ऐसे किसी दीर्घवृत्त के लिए, माना $A$ उसके दीर्घ अक्ष का एक अन्त्य बिन्दु तथा $B$ उसके लघु अक्ष का एक अन्त्य बिन्दु है। इन दीर्घवृत्तों में से माना $E_0$ वह है जिसके लिए लम्बाई $AB$ न्यूनतम है, तथा $d$ दीर्घवृत्त $E_0$ की नाभियों के बीच की दूरी है। तब $d^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$AB^{2}=a^{2}+b^{2}$ and $\\dfrac{16}{a^{2}}+\\dfrac{9}{b^{2}}=1$",
+  "$a^{2}+b^{2}=(a^{2}+b^{2})\\left(\\dfrac{16}{a^{2}}+\\dfrac{9}{b^{2}}\\right)=25+\\dfrac{16b^{2}}{a^{2}}+\\dfrac{9a^{2}}{b^{2}}\\ge25+2\\sqrt{144}=49$ (AM-GM)",
+  "Equality: $16b^{4}=9a^{4}\\Rightarrow\\dfrac{b^{2}}{a^{2}}=\\dfrac34$ (so $a>b$ holds); then $\\dfrac{16}{a^{2}}+\\dfrac{12}{a^{2}}=1\\Rightarrow a^{2}=28,\\ b^{2}=21$",
+  "$d=2ae$, $d^{2}=4(a^{2}-b^{2})=4\\cdot7=28$",
+  "",
+  "Final Answer: 28"
+ ],
+ "solution_full": [
+  "$A(\\pm a,0)$ and $B(0,\\pm b)$, so $AB^{2}=a^{2}+b^{2}$ for every choice of the ends. Minimising $AB$ is the same as minimising $a^{2}+b^{2}$.",
+  "The ellipse passes through $(4,3)$: $\\dfrac{16}{a^{2}}+\\dfrac{9}{b^{2}}=1$.",
+  "Multiply $a^{2}+b^{2}$ by this expression (which equals $1$): $a^{2}+b^{2}=16+9+\\dfrac{16b^{2}}{a^{2}}+\\dfrac{9a^{2}}{b^{2}}$.",
+  "By AM-GM, $\\dfrac{16b^{2}}{a^{2}}+\\dfrac{9a^{2}}{b^{2}}\\ge2\\sqrt{16\\cdot9}=24$, so $a^{2}+b^{2}\\ge49$, with equality when $\\dfrac{16b^{2}}{a^{2}}=\\dfrac{9a^{2}}{b^{2}}$, i.e. $\\dfrac{b^{2}}{a^{2}}=\\dfrac34$.",
+  "Then $\\dfrac{9}{b^{2}}=\\dfrac{12}{a^{2}}$ and $\\dfrac{28}{a^{2}}=1$: $a^{2}=28$, $b^{2}=21$. Since $b^{2}<a^{2}$, this ellipse belongs to the family, so $E_0:\\ \\dfrac{x^{2}}{28}+\\dfrac{y^{2}}{21}=1$ with $AB=7$.",
+  "For $E_0$: $a^{2}e^{2}=a^{2}-b^{2}=7$, the foci are $(\\pm\\sqrt7,0)$ and $d=2\\sqrt7$, so $d^{2}=28$ (and $e=\\dfrac12$).",
+  "",
+  "Final Answer: 28"
+ ],
+ "originality_note": "New: the least distance between the ends of the two axes over the ellipses through a fixed point, done by multiplying by the constraint and AM-GM, then read off the foci (way 5). Closest known: least area pi ab of an ellipse through a fixed point (AM-GM on 2hk/ab). Different because: the quantity is a^2 + b^2, the bound is (4 + 3)^2 and the equality case must be checked against a > b before the foci are found.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that the minimising ellipse satisfies a > b (b^2/a^2 = 3/4) and that AB is the same for every choice of ends. Changed: No change.",
+ "level": 3,
+ "key_step": "Write a^2 + b^2 = (a^2 + b^2)(16/a^2 + 9/b^2) and apply AM-GM; equality gives b^2/a^2 = 3/4.",
+ "justification": "Two ideas linked: the constrained AM-GM (multiply by the constraint) and the elements of the ellipse (axis ends, foci) with an equality check; numerical answer. Comparable to 2026-P2-Q13 (L3), a numerical conic question linking foci and axes.",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium",
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint"
+ ],
+ "concept_use": {
+  "Basic elements of the standard ellipse: focus, directrix, axis, latus rectum": "The ends of the major and minor axes give AB^2 = a^2 + b^2, and the foci of the optimal ellipse give d^2 = 4(a^2 - b^2) = 28.",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "AM-GM on 16b^2/a^2 + 9a^2/b^2 after multiplying by the constraint 16/a^2 + 9/b^2 = 1 gives the minimum 49 and the equality case b^2/a^2 = 3/4."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

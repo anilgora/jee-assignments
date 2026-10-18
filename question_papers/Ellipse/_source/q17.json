@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "The tangent to the curve $y=\\dfrac{2}{1+x^{2}}$, $x\\in\\mathbb{R}$, at the point where $x=1$ touches the ellipse $\\dfrac{x^{2}}{3}+\\dfrac{y^{2}}{b^{2}}=1$, $0<b<\\sqrt3$, at the point $(\\alpha,\\beta)$. Then the value of $\\beta$ is ______."
+ ],
+ "hindi": [
+  "वक्र $y=\\dfrac{2}{1+x^{2}}$, $x\\in\\mathbb{R}$, के उस बिन्दु पर, जहाँ $x=1$ है, खींची गई स्पर्श रेखा दीर्घवृत्त $\\dfrac{x^{2}}{3}+\\dfrac{y^{2}}{b^{2}}=1$, $0<b<\\sqrt3$, को बिन्दु $(\\alpha,\\beta)$ पर स्पर्श करती है। तब $\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "$y(1)=1$, $y'=-\\dfrac{4x}{(1+x^{2})^{2}}\\Rightarrow y'(1)=-1$; tangent: $y=-x+2$",
+  "$y=mx+c$ touches the ellipse iff $c^{2}=a^{2}m^{2}+b^{2}$: $4=3+b^{2}\\Rightarrow b^{2}=1$",
+  "Point of contact $\\left(-\\dfrac{a^{2}m}{c},\\dfrac{b^{2}}{c}\\right)=\\left(\\dfrac32,\\dfrac12\\right)$; check $\\dfrac{9}{12}+\\dfrac14=1$",
+  "$\\beta=0.5$",
+  "",
+  "Final Answer: 0.5"
+ ],
+ "solution_full": [
+  "At $x=1$: $y=\\dfrac{2}{2}=1$. $\\dfrac{dy}{dx}=-\\dfrac{4x}{(1+x^{2})^{2}}$, so the slope at $x=1$ is $-\\dfrac{4}{4}=-1$.",
+  "Tangent to the curve: $y-1=-(x-1)$, i.e. $y=-x+2$ ($m=-1$, $c=2$).",
+  "The line $y=mx+c$ touches $\\dfrac{x^{2}}{a^{2}}+\\dfrac{y^{2}}{b^{2}}=1$ iff $c^{2}=a^{2}m^{2}+b^{2}$. Here $4=3\\cdot1+b^{2}$, so $b^{2}=1$ (and $0<1<\\sqrt3$).",
+  "The point of contact of the tangent $y=mx+c$ is $\\left(-\\dfrac{a^{2}m}{c},\\dfrac{b^{2}}{c}\\right)=\\left(\\dfrac{3}{2},\\dfrac{1}{2}\\right)$. Check: it is on $x+y=2$ and $\\dfrac{9/4}{3}+\\dfrac14=\\dfrac34+\\dfrac14=1$.",
+  "Hence $\\beta=\\dfrac12=0.5$.",
+  "",
+  "Final Answer: 0.5"
+ ],
+ "originality_note": "New: one line is the tangent to a non-conic curve at a given point and must also touch an ellipse with unknown minor axis; the contact point follows from the tangency condition (way 5). Closest known: condition for y = mx + c to touch an ellipse; common tangents of two conics. Different because: the line comes from calculus on y = 2/(1 + x^2), and the unknown b is fixed by the tangency condition before the contact point is read.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that b^2 = 1 lies in the stated range, that the contact point is on both line and ellipse, and that the answer is exact. Changed: No change.",
+ "level": 2,
+ "key_step": "Tangent y = 2 - x from the derivative, then c^2 = a^2 m^2 + b^2 gives b^2 = 1 and the contact point (3/2, 1/2).",
+ "justification": "Routine three-step chain across two chapters (derivative, tangency condition, contact point); nothing unfamiliar. Comparable to 2026-P1-Q2 (L2), tangent slopes on several curves.",
+ "nearest_anchor": "2026-P1-Q2 (L2)",
+ "confidence": "High",
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Tangent and normal for Ellipse",
+  "Equation of a tangent to a curve"
+ ],
+ "concept_use": {
+  "Tangent and normal for Ellipse": "The tangency condition c^2 = a^2 m^2 + b^2 fixes b^2 = 1, and the contact point (-a^2 m/c, b^2/c) of a tangent to the ellipse gives beta = 1/2.",
+  "Equation of a tangent to a curve": "The tangent to y = 2/(1 + x^2) at x = 1 is found from dy/dx = -4x/(1 + x^2)^2: y = -x + 2."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Ellipse",
+ "target_level": 2,
+ "english": [
+  "Let $M$ be the midpoint of a chord of the ellipse $\\dfrac{x^{2}}{4}+\\dfrac{y^{2}}{3}=1$ whose slope is $\\dfrac12$. If $M$ lies on the line $x-y=1$, then the abscissa of $M$ is ______."
+ ],
+ "hindi": [
+  "माना कि दीर्घवृत्त $\\dfrac{x^{2}}{4}+\\dfrac{y^{2}}{3}=1$ की एक जीवा, जिसकी प्रवणता $\\dfrac12$ है, का मध्यबिन्दु $M$ है। यदि $M$ रेखा $x-y=1$ पर स्थित है, तो $M$ का भुज ______ है।"
+ ],
+ "solution": [
+  "Chord bisected at $M(h,k)$ ($T=S_1$): $\\dfrac{hx}{4}+\\dfrac{ky}{3}=\\dfrac{h^{2}}{4}+\\dfrac{k^{2}}{3}$, slope $-\\dfrac{3h}{4k}$",
+  "$-\\dfrac{3h}{4k}=\\dfrac12\\Rightarrow k=-\\dfrac32h$ (midpoints of chords of slope $\\dfrac12$ lie on $y=-\\dfrac32x$)",
+  "With $h-k=1$: $\\dfrac52h=1\\Rightarrow h=\\dfrac25$, $k=-\\dfrac35$; $M$ inside since $\\dfrac{1}{25}+\\dfrac{3}{25}<1$",
+  "Abscissa $=0.4$",
+  "",
+  "Final Answer: 0.4"
+ ],
+ "solution_full": [
+  "The chord of the ellipse with midpoint $M(h,k)$ is $T=S_1$: $\\dfrac{hx}{4}+\\dfrac{ky}{3}=\\dfrac{h^{2}}{4}+\\dfrac{k^{2}}{3}$, whose slope is $-\\dfrac{3h}{4k}$ (for $k\\ne0$).",
+  "Slope $\\dfrac12$: $-\\dfrac{3h}{4k}=\\dfrac12$, so $k=-\\dfrac{3h}{2}$. ($k=0$ would give a vertical chord, so $k\\ne0$.)",
+  "$M$ on $x-y=1$: $h+\\dfrac{3h}{2}=1$, so $h=\\dfrac25$ and $k=-\\dfrac35$.",
+  "$M$ is inside the ellipse: $\\dfrac{4/25}{4}+\\dfrac{9/25}{3}=\\dfrac{4}{25}<1$, so the chord exists; its ends are $x=\\dfrac{2\\pm3\\sqrt7}{5}$ on $y=\\dfrac{x}{2}-\\dfrac45$, with midpoint abscissa $\\dfrac25$.",
+  "Hence the abscissa of $M$ is $0.4$.",
+  "",
+  "Final Answer: 0.4"
+ ],
+ "originality_note": "New: the midpoint is fixed by the chord's slope (which puts it on a diameter) together with a second line (way 5). Closest known: locus of midpoints of parallel chords is a diameter y = -(b^2/(a^2 m)) x. Different because: the diameter is not asked; it is an intermediate object intersected with another line, and the existence of the chord is checked. Standard ingredient, level 2.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, point and curve introduced, conditions complete, one reading of each sentence; answer recomputed with sympy and unique; answer matches the plan. Checked that M is inside the ellipse so the chord exists, and that the chord's actual ends have midpoint (2/5, -3/5). Changed: No change.",
+ "level": 2,
+ "key_step": "T = S1 slope -3h/(4k) = 1/2 puts M on y = -3x/2; intersect with x - y = 1.",
+ "justification": "Short routine chain (midpoint-chord slope, intersection of two lines, existence check). Comparable to 2021-P2-Q18 (L2) on ellipse chord midpoints; could be read as L1.",
+ "nearest_anchor": "2021-P2-Q18 (L2)",
+ "confidence": "Medium",
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Chord whose mid point is given for Ellipse"
+ ],
+ "concept_use": {
+  "Chord whose mid point is given for Ellipse": "The chord bisected at M(h,k) is T = S1 with slope -3h/(4k); setting it to 1/2 gives k = -3h/2, and the line x - y = 1 then gives h = 2/5."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}
