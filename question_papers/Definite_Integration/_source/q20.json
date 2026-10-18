@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\dfrac{\\sin^{2}x}{1+\\cos^{2}x}$. Then the value of $\\displaystyle\\lim_{T\\to\\infty}\\frac{1}{T}\\int_{0}^{T}f(x)\\,dx$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\dfrac{\\sin^{2}x}{1+\\cos^{2}x}$ द्वारा परिभाषित है। तब $\\displaystyle\\lim_{T\\to\\infty}\\frac{1}{T}\\int_{0}^{T}f(x)\\,dx$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f$ has period $\\pi$; for $n\\pi\\le T<(n+1)\\pi$: $nA\\le\\int_0^Tf\\le(n+1)A$ with $A=\\int_0^{\\pi}f$, so the limit is $\\frac{A}{\\pi}$",
+  "$f(\\pi-x)=f(x)$, so $A=2\\int_0^{\\pi/2}f$ (this also keeps $\\tan x$ continuous on $[0,\\frac{\\pi}{2})$)",
+  "$f=\\frac{2}{1+\\cos^{2}x}-1$; with $t=\\tan x$: $\\int_0^{\\pi/2}\\frac{dx}{1+\\cos^{2}x}=\\int_0^{\\infty}\\frac{dt}{t^{2}+2}=\\frac{\\pi}{2\\sqrt2}$",
+  "$\\int_0^{\\pi/2}f=\\frac{\\pi}{\\sqrt2}-\\frac{\\pi}{2}$, $A=\\pi(\\sqrt2-1)$, limit $=\\sqrt2-1\\approx0.41$",
+  "",
+  "Final Answer: 0.41"
+ ],
+ "solution_full": [
+  "$f(x+\\pi)=f(x)$, so $f$ is periodic with period $\\pi$; let $A=\\int_0^{\\pi}f$. For $T>0$ write $n=[T/\\pi]$; since $f\\ge0$, $nA\\le\\int_0^{T}f\\le(n+1)A$, and $\\frac{n\\pi}{T}\\to1$. Hence the limit equals $\\dfrac{A}{\\pi}$ (the average over one period).",
+  "Since $f(\\pi-x)=f(x)$, the property $\\int_0^{2a}f=2\\int_0^{a}f$ with $a=\\frac{\\pi}{2}$ gives $A=2\\int_0^{\\pi/2}f$. Working on $[0,\\frac{\\pi}{2})$ also avoids the discontinuity of $\\tan x$ at $\\frac{\\pi}{2}$.",
+  "$f=\\dfrac{2-(1+\\cos^{2}x)}{1+\\cos^{2}x}=\\dfrac{2}{1+\\cos^{2}x}-1$.",
+  "$\\int_0^{\\pi/2}\\dfrac{dx}{1+\\cos^{2}x}=\\int_0^{\\pi/2}\\dfrac{\\sec^{2}x\\,dx}{\\tan^{2}x+2}=\\int_0^{\\infty}\\dfrac{dt}{t^{2}+2}=\\dfrac{1}{\\sqrt2}\\cdot\\dfrac{\\pi}{2}$.",
+  "So $\\int_0^{\\pi/2}f=\\dfrac{\\pi}{\\sqrt2}-\\dfrac{\\pi}{2}$ and $A=\\pi\\left(\\sqrt2-1\\right)$.",
+  "The limit is $\\dfrac{A}{\\pi}=\\sqrt2-1=0.4142\\ldots$, which is $0.41$ to two decimal places.",
+  "",
+  "Final Answer: 0.41"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: the long-run mean value of a periodic function, where the period integral must be halved by symmetry so that the tan substitution is legitimate (way 5). Closest known: int_0^{n pi} |sin x| dx = 2n and int_0^pi dx/(1 + cos^2 x). Different because: the question is a limit of averages and needs the sandwich nA <= int <= (n+1)A.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Property int(0 to 2a) f(x) dx = 2.int(0 to a) f(x) dx when f(2a - x) = f(x)",
+  "Property for periodic functions"
+ ],
+ "concept_use": {
+  "Property int(0 to 2a) f(x) dx = 2.int(0 to a) f(x) dx when f(2a - x) = f(x)": "f(pi - x) = f(x), so the integral over a period is 2 int_0^{pi/2} f, computed by t = tan x on [0, pi/2).",
+  "Property for periodic functions": "f has period pi, so int_0^T f lies between nA and (n+1)A and the limit is the mean value A/pi."
+ },
+ "stem_review": "Read as a student: f has domain/codomain; the limit exists (f >= 0 periodic). Checked: (1/pi) int_0^pi f = 0.41421 and the average over [0, 50pi+1] = 0.4128. Answer 0.41 lies between 0 and 1 as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Mean over T tends to the mean over one period pi; that period integral is 2 int_0^{pi/2} f by symmetry, then t = tan x.",
+ "justification": "Two linked ideas (periodicity with a sandwich argument for the limit, and a symmetry reduction that makes the substitution valid) with a numerical answer. Comparable to 2024-P2-Q13 (L3).",
+ "nearest_anchor": "2024-P2-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

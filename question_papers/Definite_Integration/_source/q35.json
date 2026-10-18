@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 2,
+ "english": [
+  "For a real number $p>-1$, let $W(p)=\\displaystyle\\int_{0}^{\\pi/2}\\sin^{p}x\\,dx$. Then the value of $W\\left(\\dfrac52\\right)W\\left(\\dfrac72\\right)$ is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $p>-1$ के लिए माना $W(p)=\\displaystyle\\int_{0}^{\\pi/2}\\sin^{p}x\\,dx$ है। तब $W\\left(\\dfrac52\\right)W\\left(\\dfrac72\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Gamma form: $W(p)=\\frac{\\sqrt\\pi}{2}\\cdot\\frac{\\Gamma\\left(\\frac{p+1}{2}\\right)}{\\Gamma\\left(\\frac p2+1\\right)}$",
+  "$W(p)W(p+1)=\\frac{\\pi}{4}\\cdot\\frac{\\Gamma\\left(\\frac{p+1}{2}\\right)}{\\Gamma\\left(\\frac{p+3}{2}\\right)}=\\frac{\\pi}{4}\\cdot\\frac{2}{p+1}=\\frac{\\pi}{2(p+1)}$ (using $\\Gamma(s+1)=s\\Gamma(s)$)",
+  "This is the Wallis relation $(n+1)W_nW_{n+1}=\\frac{\\pi}{2}$ extended to real $p$",
+  "$p=\\frac52$: $W\\left(\\frac52\\right)W\\left(\\frac72\\right)=\\frac{\\pi}{7}\\approx0.45$",
+  "",
+  "Final Answer: 0.45"
+ ],
+ "solution_full": [
+  "For non-integer $p$ Wallis' product formula does not apply directly; use the Gamma form of the same integral: $\\int_0^{\\pi/2}\\sin^{p}x\\,dx=\\dfrac{\\Gamma\\left(\\frac{p+1}{2}\\right)\\Gamma\\left(\\frac12\\right)}{2\\,\\Gamma\\left(\\frac{p}{2}+1\\right)}$, with $\\Gamma\\left(\\frac12\\right)=\\sqrt\\pi$.",
+  "Then $W(p)W(p+1)=\\dfrac{\\pi}{4}\\cdot\\dfrac{\\Gamma\\left(\\frac{p+1}{2}\\right)}{\\Gamma\\left(\\frac p2+1\\right)}\\cdot\\dfrac{\\Gamma\\left(\\frac{p}{2}+1\\right)}{\\Gamma\\left(\\frac{p+3}{2}\\right)}=\\dfrac{\\pi}{4}\\cdot\\dfrac{\\Gamma\\left(\\frac{p+1}{2}\\right)}{\\Gamma\\left(\\frac{p+1}{2}+1\\right)}=\\dfrac{\\pi}{4}\\cdot\\dfrac{2}{p+1}=\\dfrac{\\pi}{2(p+1)}$.",
+  "For integer $p=n$ this is the familiar Wallis consequence $W_nW_{n+1}=\\dfrac{\\pi}{2(n+1)}$, which follows from the Wallis reduction $W_{n+2}=\\frac{n+1}{n+2}W_n$; the same reduction holds for real $p$, and the Gamma form supplies the starting value.",
+  "With $p=\\frac52$: $W\\left(\\frac52\\right)W\\left(\\frac72\\right)=\\dfrac{\\pi}{2\\cdot\\frac72}=\\dfrac{\\pi}{7}=0.4487\\ldots$, which is $0.45$ to two decimal places.",
+  "",
+  "Final Answer: 0.45"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: two Wallis-type integrals with half-integer exponents, neither elementary, whose product is elementary (pi/7) by the Gamma form (way 4). Closest known: the Wallis identity (n+1) W_n W_{n+1} = pi/2 for integer n (standard exercise). Different because: the exponents are fractional, so Wallis' formula alone fails and Gamma is needed.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Walli's theorem in Integration",
+  "Gamma function as a shortcut for standard definite integrals"
+ ],
+ "concept_use": {
+  "Walli's theorem in Integration": "The Wallis relation W_n W_{n+1} = pi/(2(n+1)) (from the reduction W_{n+2} = (n+1)/(n+2) W_n) is the pattern being extended to p = 5/2.",
+  "Gamma function as a shortcut for standard definite integrals": "W(p) = Gamma((p+1)/2) sqrt(pi)/(2 Gamma(p/2 + 1)) evaluates the fractional-power integrals; Gamma(s+1) = s Gamma(s) collapses the product."
+ },
+ "stem_review": "Read as a student: W(p) is defined for p > -1 (convergent); product checked by quadrature: 0.448799 = pi/7. Answer 0.45 lies between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Write each integral in Gamma form; the Gamma values telescope to 2/(p+1).",
+ "justification": "Routine for a student who knows the Gamma form: two substitutions into a formula and one cancellation. Above 2021-P2-Q11 (L1); L2.",
+ "nearest_anchor": "2021-P2-Q11 (L1)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

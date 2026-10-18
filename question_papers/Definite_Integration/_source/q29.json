@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $G:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$G(x)=\\int_{0}^{x^{2}+2x}(t+1)^{2}(t-3)\\,e^{t^{2}}\\,dt.$$",
+  "Then the sum of all the points of local extremum of $G$ is ______."
+ ],
+ "hindi": [
+  "माना कि $G:\\mathbb{R}\\to\\mathbb{R}$",
+  "$$G(x)=\\int_{0}^{x^{2}+2x}(t+1)^{2}(t-3)\\,e^{t^{2}}\\,dt$$",
+  "द्वारा परिभाषित है। तब $G$ के सभी स्थानीय चरम बिन्दुओं का योग ______ है।"
+ ],
+ "solution": [
+  "Newton-Leibniz with $u=x^{2}+2x$: $G'(x)=(2x+2)(u+1)^{2}(u-3)e^{u^{2}}$",
+  "$u+1=(x+1)^{2}$, $u-3=(x+3)(x-1)$: $G'(x)=2(x+1)^{5}(x+3)(x-1)e^{u^{2}}$",
+  "Critical points $-3,-1,1$. Signs: $-$ on $(-\\infty,-3)$, $+$ on $(-3,-1)$, $-$ on $(-1,1)$, $+$ on $(1,\\infty)$",
+  "Minima at $-3,1$; maximum at $-1$ (odd power $5$: sign changes, though $G''(-1)=0$, so the second derivative test fails there)",
+  "Sum $=-3-1+1=-3$",
+  "",
+  "Final Answer: -3"
+ ],
+ "solution_full": [
+  "Let $u(x)=x^{2}+2x$. By the Newton-Leibniz rule, $G'(x)=u'(x)\\,(u+1)^{2}(u-3)e^{u^{2}}=(2x+2)(u+1)^{2}(u-3)e^{u^{2}}$.",
+  "$u+1=x^{2}+2x+1=(x+1)^{2}$, so $(u+1)^{2}=(x+1)^{4}$; $u-3=x^{2}+2x-3=(x+3)(x-1)$. Hence $G'(x)=2(x+1)^{5}(x+3)(x-1)e^{u^{2}}$.",
+  "Critical points: $x=-3,-1,1$. Since $e^{u^{2}}>0$, the sign of $G'$ is that of $(x+1)^{5}(x+3)(x-1)$.",
+  "$x<-3$: $(-)(-)(-)<0$. $-3<x<-1$: $(-)(+)(-)>0$. $-1<x<1$: $(+)(+)(-)<0$. $x>1$: $(+)(+)(+)>0$.",
+  "First derivative test: local minimum at $x=-3$, local maximum at $x=-1$, local minimum at $x=1$. At $x=-1$ the factor $(x+1)^{5}$ gives $G''(-1)=0$, so the second derivative test is inconclusive there; the first derivative test settles it.",
+  "Sum of the points of local extremum $=-3+(-1)+1=-3$.",
+  "",
+  "Final Answer: -3"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the upper limit x^2 + 2x and the double zero of the integrand at t = -1 combine into a fifth-power factor (x+1)^5 in G', so x = -1 is an extremum invisible to the second derivative test (way 5). Closest known: extrema of int_0^x f(t) dt with a double root of f (not an extremum). Different because: here the composition turns the double root into an odd power, so the point is an extremum.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Maxima and minima of a function defined by a definite integral",
+  "Maxima & Minima: First & Second Derivative Tests"
+ ],
+ "concept_use": {
+  "Maxima and minima of a function defined by a definite integral": "G(x) is defined by a definite integral with variable upper limit x^2 + 2x; its extrema come from the sign of G'.",
+  "Maxima & Minima: First & Second Derivative Tests": "The first derivative test classifies all three points; the second derivative test fails at x = -1 (G''(-1) = 0) because of the fifth power."
+ },
+ "stem_review": "Read as a student: G has domain/codomain; 'points of local extremum' means x-values. Signs of G' checked numerically around -3, -1, 1. Answer -3, a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Rewrite G' = 2(x+1)^5(x+3)(x-1)e^{(x^2+2x)^2} and use the first derivative test at x = -1.",
+ "justification": "Two linked ideas: chain rule with the Newton-Leibniz rule exposing a composite factor, and a point where the second derivative test fails but the first succeeds; numerical answer. Lighter than 2021-P2-Q9 (L4, parity of exponents decides extrema) but the same kind of idea; L3.",
+ "nearest_anchor": "2021-P2-Q9 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,59 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "The value of",
+  "$$\\int_{-\\pi/2}^{3\\pi/2}\\frac{\\sin^{4}x}{\\left(\\sin^{4}x+\\cos^{4}x\\right)\\left(1+e^{\\cos x}\\right)}\\,dx$$",
+  "is ______."
+ ],
+ "hindi": [
+  "$$\\int_{-\\pi/2}^{3\\pi/2}\\frac{\\sin^{4}x}{\\left(\\sin^{4}x+\\cos^{4}x\\right)\\left(1+e^{\\cos x}\\right)}\\,dx$$",
+  "का मान ______ है।"
+ ],
+ "solution": [
+  "Let $g(x)=\\frac{\\sin^{4}x}{\\sin^{4}x+\\cos^{4}x}$. Queen's rule $x\\to\\pi-x$ on $[-\\frac{\\pi}{2},\\frac{3\\pi}{2}]$: $g$ unchanged, $\\cos x\\to-\\cos x$",
+  "$\\frac{1}{1+e^{-\\cos x}}=1-\\frac{1}{1+e^{\\cos x}}$, so $2I=\\int_{-\\pi/2}^{3\\pi/2}g\\,dx$",
+  "Split: $\\int_{-\\pi/2}^{0}g=\\int_0^{\\pi/2}g$ ($g$ even); $\\int_0^{\\pi}g=2\\int_0^{\\pi/2}g$ ($g(\\pi-x)=g(x)$); $\\int_{\\pi}^{3\\pi/2}g=\\int_{-\\pi/2}^{0}g$ ($x\\to\\pi-x$)",
+  "So $\\int_{-\\pi/2}^{3\\pi/2}g=4\\int_0^{\\pi/2}g$, and by King's rule $\\int_0^{\\pi/2}g=\\frac{\\pi}{4}$ ($g(\\frac{\\pi}{2}-x)=1-g(x)$)",
+  "$2I=\\pi\\Rightarrow I=\\frac{\\pi}{2}\\approx1.57$",
+  "",
+  "Final Answer: 1.57"
+ ],
+ "solution_full": [
+  "Let $g(x)=\\dfrac{\\sin^{4}x}{\\sin^{4}x+\\cos^{4}x}$ and $p(x)=\\dfrac{1}{1+e^{\\cos x}}$, so $I=\\int_{-\\pi/2}^{3\\pi/2}g\\,p\\,dx$.",
+  "Queen's rule on $[-\\frac{\\pi}{2},\\frac{3\\pi}{2}]$ (here $a+b=\\pi$): replace $x$ by $\\pi-x$. Since $\\sin(\\pi-x)=\\sin x$ and $\\cos(\\pi-x)=-\\cos x$, $g(\\pi-x)=g(x)$ and $p(\\pi-x)=\\dfrac{1}{1+e^{-\\cos x}}=\\dfrac{e^{\\cos x}}{e^{\\cos x}+1}=1-p(x)$.",
+  "So $I=\\int g(1-p)\\,dx$ and, adding, $2I=\\int_{-\\pi/2}^{3\\pi/2}g(x)\\,dx$.",
+  "Split $[-\\frac{\\pi}{2},\\frac{3\\pi}{2}]$ at $0$ and $\\pi$. Even function: $g(-x)=g(x)$, so $\\int_{-\\pi/2}^{0}g=\\int_0^{\\pi/2}g$.",
+  "Property $\\int_0^{2a}g=2\\int_0^{a}g$ when $g(2a-x)=g(x)$, with $a=\\frac{\\pi}{2}$: $\\int_0^{\\pi}g=2\\int_0^{\\pi/2}g$.",
+  "Queen's rule on $[\\pi,\\frac{3\\pi}{2}]$ via $x\\to\\pi-x$ maps it onto $[-\\frac{\\pi}{2},0]$: $\\int_{\\pi}^{3\\pi/2}g=\\int_{-\\pi/2}^{0}g=\\int_0^{\\pi/2}g$.",
+  "Hence $\\int_{-\\pi/2}^{3\\pi/2}g=4\\int_0^{\\pi/2}g$.",
+  "King's rule on $[0,\\frac{\\pi}{2}]$: $g\\left(\\frac{\\pi}{2}-x\\right)=\\dfrac{\\cos^{4}x}{\\cos^{4}x+\\sin^{4}x}=1-g(x)$, so $2\\int_0^{\\pi/2}g=\\frac{\\pi}{2}$ and $\\int_0^{\\pi/2}g=\\frac{\\pi}{4}$.",
+  "Therefore $2I=\\pi$, $I=\\dfrac{\\pi}{2}=1.5707\\ldots$, which is $1.57$ to two decimal places.",
+  "",
+  "Final Answer: 1.57"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: an interval of length 2 pi centred at pi/2 (not at 0), on which a reflection about pi/2 removes the exponential factor and the remaining integral must be reassembled from three pieces by evenness, the 2a-property and king's rule (way 5). Closest known: int_{-a}^{a} f(x)/(1+e^{x}) dx = int_0^a f(x) dx for even f. Different because: the reflection is about pi/2 with e^{cos x}, and the leftover integral over an off-centre interval needs three properties.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx",
+  "Queen's rule: int(a to b) f(x) dx = int(a to b) f(a + b - x) dx",
+  "Property for odd and even functions",
+  "Property int(0 to 2a) f(x) dx = 2.int(0 to a) f(x) dx when f(2a - x) = f(x)"
+ ],
+ "concept_use": {
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx": "King's rule on [0, pi/2]: g(pi/2 - x) = 1 - g(x), so int_0^{pi/2} g = pi/4.",
+  "Queen's rule: int(a to b) f(x) dx = int(a to b) f(a + b - x) dx": "Queen's rule with x -> pi - x on [-pi/2, 3pi/2] pairs 1/(1+e^{cos x}) with its complement, giving 2I = int g.",
+  "Property for odd and even functions": "g is even, so int_{-pi/2}^0 g = int_0^{pi/2} g; cos x is odd about pi/2, which is what makes the exponential factors complementary.",
+  "Property int(0 to 2a) f(x) dx = 2.int(0 to a) f(x) dx when f(2a - x) = f(x)": "g(pi - x) = g(x), so int_0^pi g = 2 int_0^{pi/2} g."
+ },
+ "stem_review": "Read as a student: integrand continuous on the whole interval (denominators positive); value pi/2 checked by mpmath. Answer 1.57 (positive decimal, rounding unambiguous). Changed: the first design (x sin^4 x weight) was replaced because it repeated the x-weight idea of Q2.",
+ "level": 3,
+ "key_step": "Reflect about pi/2 (x -> pi - x) to remove 1/(1+e^{cos x}), then rebuild int_{-pi/2}^{3pi/2} g as 4 int_0^{pi/2} g.",
+ "justification": "Several properties chained (queen, even function, 2a-property, king), each standard; numerical answer. Average Advanced, like 2021-P2-Q16 (L3) in its use of several integral properties.",
+ "nearest_anchor": "2021-P2-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

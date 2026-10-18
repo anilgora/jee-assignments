@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Definite Integration",
+ "target_level": 2,
+ "english": [
+  "Let $f:(0,\\infty)\\to\\mathbb{R}$ be a function, differentiable at $x=1$, such that $f(xy)=f(x)+f(y)$ for all $x,y\\in(0,\\infty)$ and $\\displaystyle\\lim_{h\\to0}\\frac{f(1+h)}{h}=2$. Then",
+  "$$\\lim_{x\\to1}\\frac{1}{(x-1)^{2}}\\int_{x}^{x^{2}}f(t)\\,dt$$",
+  "is equal to",
+  "",
+  "(A) $6$",
+  "(B) $2$",
+  "(C) $3$",
+  "(D) $\\dfrac32$"
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to\\mathbb{R}$ एक फलन है जो $x=1$ पर अवकलनीय है, जिसके लिए सभी $x,y\\in(0,\\infty)$ के लिए $f(xy)=f(x)+f(y)$ तथा $\\displaystyle\\lim_{h\\to0}\\frac{f(1+h)}{h}=2$ है। तब",
+  "$$\\lim_{x\\to1}\\frac{1}{(x-1)^{2}}\\int_{x}^{x^{2}}f(t)\\,dt$$",
+  "बराबर है",
+  "",
+  "(A) $6$",
+  "(B) $2$",
+  "(C) $3$",
+  "(D) $\\dfrac32$"
+ ],
+ "solution": [
+  "$x=y=1$: $f(1)=0$, so $f'(1)=\\lim\\frac{f(1+h)}{h}=2$",
+  "$f'(x)=\\lim\\frac{f(x(1+h/x))-f(x)}{h}=\\lim\\frac{f(1+h/x)}{h}=\\frac{f'(1)}{x}=\\frac2x$, so $f(x)=2\\ln x$",
+  "Limit is $\\frac00$; L'Hospital with Newton-Leibniz: $\\frac{2x f(x^{2})-f(x)}{2(x-1)}=\\frac{(8x-2)\\ln x}{2(x-1)}$",
+  "$\\frac{\\ln x}{x-1}\\to1$, so the limit is $\\frac{8-2}{2}=3$",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Putting $x=y=1$ gives $f(1)=0$, so the given limit is $f'(1)=\\lim_{h\\to0}\\dfrac{f(1+h)-f(1)}{h}=2$.",
+  "For $x>0$: $f(x+h)=f\\!\\left(x\\left(1+\\frac hx\\right)\\right)=f(x)+f\\!\\left(1+\\frac hx\\right)$, so $\\dfrac{f(x+h)-f(x)}{h}=\\dfrac1x\\cdot\\dfrac{f(1+h/x)}{h/x}\\to\\dfrac{2}{x}$. Hence $f'(x)=\\dfrac2x$ and, with $f(1)=0$, $f(x)=2\\ln x$.",
+  "At $x=1$ both $\\int_x^{x^{2}}f$ and $(x-1)^{2}$ vanish; $f$ is continuous, so L'Hospital's rule applies with the Newton-Leibniz rule.",
+  "$\\dfrac{d}{dx}\\int_x^{x^{2}}f(t)dt=f(x^{2})\\cdot2x-f(x)=2x\\cdot4\\ln x-2\\ln x=(8x-2)\\ln x$, and $\\dfrac{d}{dx}(x-1)^{2}=2(x-1)$.",
+  "So the limit equals $\\lim_{x\\to1}\\dfrac{(8x-2)}{2}\\cdot\\dfrac{\\ln x}{x-1}=\\dfrac{6}{2}\\cdot1=3$.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "answer_plan": "Option C",
+ "originality_note": "New: the integrand is known only through a functional equation and a limit, and the integral runs over [x, x^2], whose length is first order in x - 1 while the integrand is also first order, giving a second-order zero (way 5). Closest known: lim (int_0^{x^2} f)/x^n by L'Hospital. Different because: both limits move and the integrand must first be recovered from f(xy) = f(x) + f(y).",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Definite integrals combined with limits and functional equations",
+  "Newton-Leibniz rule: differentiating an integral with variable limits"
+ ],
+ "concept_use": {
+  "Definite integrals combined with limits and functional equations": "The logarithmic functional equation and the limit fix f(x) = 2 ln x; the limit of the integral expression is a 0/0 limit.",
+  "Newton-Leibniz rule: differentiating an integral with variable limits": "The derivative of int_x^{x^2} f(t) dt is 2x f(x^2) - f(x), used in L'Hospital's rule."
+ },
+ "stem_review": "Read as a student: f has domain, codomain and the stated differentiability; the equation and limit are quantified; the limit exists. Checked numerically at x = 1 + 1e-6 (value 3.0000017). Options one form; (C) correct as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Recover f = 2 ln x, then L'Hospital with the derivative 2x f(x^2) - f(x).",
+ "justification": "Routine chain: functional equation to f, Newton-Leibniz derivative, one L'Hospital step, a standard limit. Above 2024-P2-Q3 (L1), a single 1^infinity move.",
+ "nearest_anchor": "2024-P2-Q3 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

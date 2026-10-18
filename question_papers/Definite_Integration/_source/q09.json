@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a polynomial function such that",
+  "$$\\int_{x-1}^{x+1}f(t)\\,dt=x^{3}\\quad\\text{for all }x\\in\\mathbb{R}.$$",
+  "Then the value of $f(-4)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक बहुपद फलन है जिसके लिए",
+  "$$\\int_{x-1}^{x+1}f(t)\\,dt=x^{3},\\quad x\\in\\mathbb{R}.$$",
+  "तब $f(-4)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Newton-Leibniz: $f(x+1)-f(x-1)=3x^{2}$ for all $x$",
+  "$f(x+1)-f(x-1)$ lowers the degree by one, so $f$ is a cubic $ax^{3}+bx^{2}+cx+d$:",
+  "$a(6x^{2}+2)+4bx+2c=3x^{2}\\Rightarrow a=\\frac12,\\ b=0,\\ c=-\\frac12$",
+  "$d$ is not fixed by the derivative; FTC part 2 at $x=0$: $\\int_{-1}^{1}f=2d=0$ (odd terms vanish) $\\Rightarrow d=0$",
+  "$f(x)=\\frac{x^{3}-x}{2}$, $f(-4)=\\frac{-64+4}{2}=-30$",
+  "",
+  "Final Answer: -30"
+ ],
+ "solution_full": [
+  "Differentiate both sides with the Newton-Leibniz rule (both limits depend on $x$): $f(x+1)\\cdot1-f(x-1)\\cdot1=3x^{2}$ for all $x$.",
+  "If $f$ has degree $m\\ge1$ with leading coefficient $a$, then $f(x+1)-f(x-1)$ has degree $m-1$ with leading coefficient $2ma$. Matching with $3x^{2}$: $m=3$ and $6a=3$, so $a=\\frac12$.",
+  "Write $f(x)=\\frac12x^{3}+bx^{2}+cx+d$. Then $f(x+1)-f(x-1)=\\frac12(6x^{2}+2)+b(4x)+2c=3x^{2}+4bx+1+2c$.",
+  "Comparing with $3x^{2}$: $b=0$ and $1+2c=0$, so $c=-\\frac12$.",
+  "The derivative condition loses the constant $d$. Use the given equation itself at $x=0$ (the integral evaluated by the second part of the fundamental theorem): $\\int_{-1}^{1}\\left(\\frac{t^{3}}{2}-\\frac t2+d\\right)dt=0+0+2d$, which must equal $0^{3}=0$. So $d=0$.",
+  "Check: $\\int_{x-1}^{x+1}\\frac{t^{3}-t}{2}dt=\\left[\\frac{t^{4}}{8}-\\frac{t^{2}}{4}\\right]_{x-1}^{x+1}=x^{3}+x-x=x^{3}$.",
+  "Hence $f(x)=\\dfrac{x^{3}-x}{2}$ and $f(-4)=\\dfrac{-64+4}{2}=-30$.",
+  "",
+  "Final Answer: -30"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the integral of f over a sliding window of fixed length is prescribed, which becomes a difference equation for f; the lost constant must be recovered from the integral itself (way 5). Closest known: int_0^x f(t) dt = given function, then differentiate. Different because: both limits move, the derivative gives a difference equation, and differentiation loses information that must be restored.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Fundamental theorem of calculus (both parts)",
+  "Newton-Leibniz rule: differentiating an integral with variable limits"
+ ],
+ "concept_use": {
+  "Fundamental theorem of calculus (both parts)": "The second part (int = F(b) - F(a)) at x = 0 fixes the constant d that differentiation loses; the final check integrates the cubic.",
+  "Newton-Leibniz rule: differentiating an integral with variable limits": "Differentiating int_{x-1}^{x+1} f with both limits variable gives the difference equation f(x+1) - f(x-1) = 3x^2."
+ },
+ "stem_review": "Read as a student: f is a polynomial with domain/codomain (needed for uniqueness); the identity holds for all x. Checked with sympy that (x^3-x)/2 satisfies the identity. Answer -30, a negative integer as planned. Changed: added 'polynomial' to the stem (without it f is not unique).",
+ "level": 3,
+ "key_step": "Differentiate to f(x+1) - f(x-1) = 3x^2, solve for a cubic, then fix the constant from the original integral at x = 0.",
+ "justification": "Two linked ideas: Newton-Leibniz with two moving limits giving a difference equation, and recovering the constant lost on differentiation; numerical answer with no options. Comparable to 2024-P2-Q13 (L3).",
+ "nearest_anchor": "2024-P2-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

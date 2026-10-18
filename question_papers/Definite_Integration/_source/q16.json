@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Considering the principal value of $\\cot^{-1}$, which takes values in $(0,\\pi)$, let",
+  "$$L=\\lim_{n\\to\\infty}\\sum_{k=1}^{2n}\\frac{k(k-2n)}{n^{3}}\\cot^{-1}\\left(\\frac{(k-n)^{3}}{n^{3}}\\right).$$",
+  "Then the value of $L$ is ______."
+ ],
+ "hindi": [
+  "$\\cot^{-1}$ के मुख्य मान (जो $(0,\\pi)$ में है) को लेते हुए माना",
+  "$$L=\\lim_{n\\to\\infty}\\sum_{k=1}^{2n}\\frac{k(k-2n)}{n^{3}}\\cot^{-1}\\left(\\frac{(k-n)^{3}}{n^{3}}\\right).$$",
+  "तब $L$ का मान ______ है।"
+ ],
+ "solution": [
+  "With $x=\\frac kn$, $\\Delta x=\\frac1n$: $\\frac{k(k-2n)}{n^{3}}=\\frac1n\\cdot x(x-2)$, $k=1..2n$ covers $(0,2]$: $L=\\int_0^{2}x(x-2)\\cot^{-1}\\left((x-1)^{3}\\right)dx$",
+  "King's rule $x\\to2-x$: $x(x-2)$ unchanged, $(x-1)^{3}\\to-(x-1)^{3}$ (odd), $\\cot^{-1}(-y)=\\pi-\\cot^{-1}y$",
+  "$2L=\\pi\\int_0^{2}x(x-2)\\,dx=\\pi\\left(\\frac83-4\\right)=-\\frac{4\\pi}{3}$",
+  "$L=-\\frac{2\\pi}{3}\\approx-2.09$",
+  "",
+  "Final Answer: -2.09"
+ ],
+ "solution_full": [
+  "Put $x_k=\\frac kn$, $\\Delta x=\\frac1n$; as $k$ runs from $1$ to $2n$, $x_k$ runs through $(0,2]$. The term is $\\frac1n\\cdot x_k(x_k-2)\\cot^{-1}\\left((x_k-1)^{3}\\right)$, so by the definition of the integral as a limit of a sum,",
+  "$$L=\\int_0^{2}x(x-2)\\cot^{-1}\\left((x-1)^{3}\\right)dx.$$",
+  "King's rule on $[0,2]$ ($x\\to2-x$): $x(x-2)\\to(2-x)(-x)=x(x-2)$, and $(x-1)^{3}\\to(1-x)^{3}=-(x-1)^{3}$ because $y\\mapsto y^{3}$ is an odd function.",
+  "For the principal value, $\\cot^{-1}(-y)=\\pi-\\cot^{-1}y$. So $L=\\int_0^{2}x(x-2)\\left[\\pi-\\cot^{-1}\\left((x-1)^{3}\\right)\\right]dx=\\pi\\int_0^2x(x-2)dx-L$.",
+  "$\\int_0^{2}(x^{2}-2x)dx=\\frac83-4=-\\frac43$, so $2L=-\\frac{4\\pi}{3}$ and $L=-\\frac{2\\pi}{3}=-2.094\\ldots$",
+  "To two decimal places, $L=-2.09$.",
+  "",
+  "Final Answer: -2.09"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a Riemann sum over [0,2] whose integral has no elementary antiderivative but collapses by the king pairing of cot^-1(y) and cot^-1(-y), with a symmetric weight (way 5). Closest known: limits of sums converted to int_0^1 x^n dx, and int_{-a}^{a} cot^-1(x) dx = a pi. Different because: the sum runs to 2n, the odd function is (x-1)^3 about the midpoint, and the weight changes the value.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx",
+  "Property for odd and even functions",
+  "Definite integral as the limit of a sum"
+ ],
+ "concept_use": {
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx": "King's rule x -> 2 - x on [0,2] leaves x(x-2) unchanged and pairs cot^-1(y) with cot^-1(-y).",
+  "Property for odd and even functions": "(x-1)^3 is odd in (x-1), so it changes sign under x -> 2 - x, and cot^-1(-y) = pi - cot^-1(y) for the principal branch.",
+  "Definite integral as the limit of a sum": "The sum with k from 1 to 2n and factor 1/n is a Riemann sum for int_0^2 x(x-2) cot^-1((x-1)^3) dx."
+ },
+ "stem_review": "Read as a student: the branch of cot^-1 is stated; the limit exists; L = -2 pi/3 checked by quadrature and by the sum at n = 3000 (-2.0943950). Answer -2.09, a negative decimal as planned. Changed: replaced an exponential pairing factor by cot^-1 to avoid repeating Q15's device.",
+ "level": 3,
+ "key_step": "Convert to int_0^2 x(x-2) cot^-1((x-1)^3) dx, then pair x with 2 - x using cot^-1(-y) = pi - cot^-1 y.",
+ "justification": "Two linked ideas: reading a Riemann sum over [0,2] and a symmetry pairing on an integral with no antiderivative; numerical answer. Comparable to 2021-P2-Q16 (L3).",
+ "nearest_anchor": "2021-P2-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x-\\dfrac{\\sin(\\pi x)}{2\\pi}$. Then $f$ is a bijection; let $f^{-1}$ denote its inverse. Then the area of the region bounded by the curves $y=f(x)$ and $y=f^{-1}(x)$ and lying in the strip $0\\le x\\le3$ is",
+  "",
+  "(A) $\\dfrac{3}{\\pi^{2}}$",
+  "(B) $\\dfrac{3}{\\pi}$",
+  "(C) $\\dfrac{6}{\\pi}$",
+  "(D) $\\dfrac{6}{\\pi^{2}}$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x-\\dfrac{\\sin(\\pi x)}{2\\pi}$ द्वारा परिभाषित है। तब $f$ एकैकी आच्छादक है; माना $f^{-1}$ इसका प्रतिलोम फलन है। तब वक्रों $y=f(x)$ तथा $y=f^{-1}(x)$ से परिबद्ध तथा पट्टी $0\\le x\\le3$ में स्थित क्षेत्र का क्षेत्रफल है",
+  "",
+  "(A) $\\dfrac{3}{\\pi^{2}}$",
+  "(B) $\\dfrac{3}{\\pi}$",
+  "(C) $\\dfrac{6}{\\pi}$",
+  "(D) $\\dfrac{6}{\\pi^{2}}$"
+ ],
+ "solution": [
+  "$f'(x)=1-\\frac12\\cos\\pi x\\ge\\frac12>0$: $f$ increasing, so $f$ and $f^{-1}$ meet only on $y=x$, where $\\sin\\pi x=0$, i.e. at $x=0,1,2,3$",
+  "The curves are mirror images in $y=x$, so the region consists of three loops, each of area $2\\int|x-f(x)|dx$ over a unit interval",
+  "Check with the inverse-pair formula on $[0,1]$: $\\int_0^1 f^{-1}(y)dy=1\\cdot f(1)-0-\\int_0^1 f=1-\\left(\\frac12-\\frac{1}{\\pi^{2}}\\right)$, so $\\int_0^1(f^{-1}-f)=\\frac{2}{\\pi^{2}}$",
+  "Each loop: $2\\int_0^1\\frac{\\sin\\pi x}{2\\pi}dx=\\frac{2}{\\pi^{2}}$ (same for $[1,2]$, $[2,3]$ with $|\\sin\\pi x|$)",
+  "Area $=3\\cdot\\frac{2}{\\pi^{2}}=\\frac{6}{\\pi^{2}}$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "$f'(x)=1-\\frac12\\cos(\\pi x)\\ge\\frac12>0$, so $f$ is strictly increasing and continuous; since $f(x)-x$ is bounded, $f(x)\\to\\pm\\infty$ as $x\\to\\pm\\infty$, so $f$ is a bijection and $f^{-1}$ exists and is increasing.",
+  "The graph of $f^{-1}$ is the reflection of the graph of $f$ in $y=x$. For an increasing function, $f(x)=f^{-1}(x)$ forces $f(x)=x$; here $f(x)=x\\iff\\sin(\\pi x)=0\\iff x\\in\\mathbb{Z}$. In the strip the curves meet at $(0,0),(1,1),(2,2),(3,3)$.",
+  "Between consecutive integers one curve lies above $y=x$ and the other below it, so the region is three closed loops, each symmetric about $y=x$; the area of a loop is twice the area between $y=f(x)$ and $y=x$.",
+  "On $[0,1]$: $x-f(x)=\\dfrac{\\sin\\pi x}{2\\pi}\\ge0$, so the loop has area $2\\int_0^1\\dfrac{\\sin\\pi x}{2\\pi}dx=\\dfrac{1}{\\pi}\\cdot\\dfrac{2}{\\pi}=\\dfrac{2}{\\pi^{2}}$.",
+  "The same follows from the formula for a function and its inverse: $\\int_0^1 f(x)dx+\\int_{f(0)}^{f(1)}f^{-1}(y)dy=1\\cdot f(1)-0\\cdot f(0)=1$. With $\\int_0^1 f=\\dfrac12-\\dfrac{1}{\\pi^{2}}$ we get $\\int_0^1 f^{-1}=\\dfrac12+\\dfrac{1}{\\pi^{2}}$, and the loop area is $\\int_0^1(f^{-1}-f)=\\dfrac{2}{\\pi^{2}}$.",
+  "On $[1,2]$ and $[2,3]$ the same computation with $|\\sin\\pi x|$ gives $\\dfrac{2}{\\pi^{2}}$ each.",
+  "Total area $=\\dfrac{6}{\\pi^{2}}$.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "answer_plan": "Option D",
+ "originality_note": "New: a perturbation x - sin(pi x)/(2 pi) of the identity whose graph and inverse graph form a chain of loops through the integer points, cut by a strip (way 4). Closest known: area bounded by f(x) = x + sin x and its inverse between x = 0 and 2pi (textbook, allen.in). Different because: the loops sit at every integer, the strip must be read as three loops, and the inverse formula gives int f^{-1} directly.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "When a function and its inverse are both given",
+  "Inverse of a function: existence, graph symmetry about y = x",
+  "Area bounded by a curve and its inverse"
+ ],
+ "concept_use": {
+  "When a function and its inverse are both given": "int_0^1 f + int_{f(0)}^{f(1)} f^{-1} = 1 f(1) - 0 f(0) gives int_0^1 f^{-1} without finding f^{-1}, hence the loop area.",
+  "Inverse of a function: existence, graph symmetry about y = x": "f' >= 1/2 > 0 gives the bijection; the graphs are symmetric about y = x, so they meet only on y = x (at the integers).",
+  "Area bounded by a curve and its inverse": "The region between a curve and its inverse is three loops; each has twice the area between y = f(x) and y = x."
+ },
+ "stem_review": "Read as a student: f has domain and codomain; bijectivity is stated so the inverse is defined; the region is fixed by the two curves and the strip 0 <= x <= 3. Area 6/pi^2 checked numerically with a numerical inverse. Options one form; (D) correct as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Intersections of f and f^{-1} lie on y = x (f increasing), and each loop is twice the area between f and the line y = x.",
+ "justification": "Two ideas linked: the symmetry/intersection argument for an increasing function and its inverse, then a modulus integral over three loops. Comparable to the Advanced area questions at L3 such as 2026-P2-Q18 (L3); harder than routine area 2024-P2-Q2 (L2).",
+ "nearest_anchor": "2026-P2-Q18 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

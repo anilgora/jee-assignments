@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $F:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$F(x)=\\int_{0}^{x}\\frac{1+t^{2}}{1-t^{2}+t^{4}}\\,dt.$$",
+  "Then the value of $F\\left(-\\dfrac{1+\\sqrt5}{2}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $F:\\mathbb{R}\\to\\mathbb{R}$",
+  "$$F(x)=\\int_{0}^{x}\\frac{1+t^{2}}{1-t^{2}+t^{4}}\\,dt$$",
+  "द्वारा परिभाषित है। तब $F\\left(-\\dfrac{1+\\sqrt5}{2}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$1-t^{2}+t^{4}>0$, so the integrand is continuous and $F$ is continuous and odd with $F'=\\frac{1+t^{2}}{1-t^{2}+t^{4}}$ (FTC)",
+  "$\\frac{d}{dx}\\tan^{-1}\\frac{x}{1-x^{2}}=\\frac{1+x^{2}}{1-x^{2}+x^{4}}$ for $x\\neq\\pm1$, but $\\tan^{-1}\\frac{x}{1-x^{2}}$ jumps by $\\pi$ at $x=\\pm1$",
+  "So $F(x)=\\tan^{-1}\\frac{x}{1-x^{2}}$ on $(-1,1)$ and $F(x)=\\tan^{-1}\\frac{x}{1-x^{2}}-\\pi$ for $x<-1$ (continuity at $-1$: left limit of $\\tan^{-1}$ is $\\frac{\\pi}{2}$, $F(-1)=-\\frac{\\pi}{2}$)",
+  "$x_0=-\\frac{1+\\sqrt5}{2}$ satisfies $x_0^{2}+x_0-1=0$, so $\\frac{x_0}{1-x_0^{2}}=1$",
+  "$F(x_0)=\\frac{\\pi}{4}-\\pi=-\\frac{3\\pi}{4}\\approx-2.36$",
+  "",
+  "Final Answer: -2.36"
+ ],
+ "solution_full": [
+  "$1-t^{2}+t^{4}=\\left(t^{2}-\\frac12\\right)^{2}+\\frac34>0$, so the integrand is continuous on $\\mathbb{R}$. By the first part of the fundamental theorem, $F$ is differentiable with $F'(x)=\\dfrac{1+x^{2}}{1-x^{2}+x^{4}}$; $F$ is odd since the integrand is even.",
+  "For $x\\neq\\pm1$, $\\dfrac{d}{dx}\\tan^{-1}\\dfrac{x}{1-x^{2}}=\\dfrac{1+x^{2}}{(1-x^{2})^{2}+x^{2}}=\\dfrac{1+x^{2}}{1-x^{2}+x^{4}}$. So $\\phi(x)=\\tan^{-1}\\dfrac{x}{1-x^{2}}$ is an antiderivative on each of $(-\\infty,-1)$, $(-1,1)$, $(1,\\infty)$, but not across $\\pm1$.",
+  "On $(-1,1)$, $F$ and $\\phi$ have the same derivative and $F(0)=\\phi(0)=0$, so $F=\\phi$ there. As $x\\to-1^{+}$, $\\frac{x}{1-x^{2}}\\to-\\infty$, so $F(-1)=-\\frac{\\pi}{2}$ (by continuity of $F$).",
+  "On $(-\\infty,-1)$, $F=\\phi+C$. As $x\\to-1^{-}$, $\\frac{x}{1-x^{2}}\\to+\\infty$ and $\\phi\\to\\frac{\\pi}{2}$. Continuity of $F$ at $-1$ gives $\\frac{\\pi}{2}+C=-\\frac{\\pi}{2}$, so $C=-\\pi$.",
+  "Let $x_0=-\\frac{1+\\sqrt5}{2}<-1$. Then $x_0$ is a root of $x^{2}+x-1=0$, i.e. $x_0^{2}+x_0-1=0$, so $1-x_0^{2}=x_0$ and $\\frac{x_0}{1-x_0^{2}}=1$.",
+  "Hence $F(x_0)=\\tan^{-1}1-\\pi=\\frac{\\pi}{4}-\\pi=-\\frac{3\\pi}{4}=-2.356\\ldots$, which is $-2.36$ to two decimal places. (The naive value $\\phi(x_0)-\\phi(0)=\\frac{\\pi}{4}$ ignores the jump.)",
+  "Cross-check: $\\frac{1+t^{2}}{1-t^{2}+t^{4}}=\\frac12\\left[\\frac{1}{t^{2}+\\sqrt3t+1}+\\frac{1}{t^{2}-\\sqrt3t+1}\\right]$ gives the continuous antiderivative $\\tan^{-1}(2x+\\sqrt3)+\\tan^{-1}(2x-\\sqrt3)$, whose value at $x_0$ is also $-\\frac{3\\pi}{4}$.",
+  "",
+  "Final Answer: -2.36"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: the evaluation point is chosen beyond the jump of the natural antiderivative tan^-1(x/(1-x^2)) and exactly where its argument equals 1, so the naive answer pi/4 is wrong and the correct one is -3 pi/4 (way 4). Closest known: the textbook trap int_{-1}^{1} d/dx(tan^-1(1/x)) dx. Different because: the function is an integral function evaluated at a golden-ratio point and continuity of F must be used to fix the constant.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Evaluation via the antiderivative; handling discontinuous antiderivatives",
+  "Fundamental theorem of calculus (both parts)"
+ ],
+ "concept_use": {
+  "Evaluation via the antiderivative; handling discontinuous antiderivatives": "tan^-1(x/(1-x^2)) is an antiderivative only on intervals avoiding x = +-1; a constant -pi must be added for x < -1.",
+  "Fundamental theorem of calculus (both parts)": "F(x) = int_0^x is continuous with F' = integrand (part 1), and continuity of F fixes the constant on (-inf, -1)."
+ },
+ "stem_review": "Read as a student: F has domain/codomain; integrand continuous; evaluation point explicit. Checked by mpmath quadrature: F(x0) = -2.35619 = -3pi/4. Answer -2.36 (negative decimal, clearly rounded). Changed: No change.",
+ "level": 3,
+ "key_step": "The antiderivative tan^-1(x/(1-x^2)) jumps at x = -1; continuity of F forces F = tan^-1(x/(1-x^2)) - pi for x < -1.",
+ "justification": "Two linked ideas (FTC continuity of an integral function, and recognising the jump of the antiderivative) with a numerical answer. Same demand as 2024-P2-Q13 (L3) on piecewise antiderivatives.",
+ "nearest_anchor": "2024-P2-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

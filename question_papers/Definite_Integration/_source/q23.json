@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $f:[0,14]\\to\\mathbb{R}$ be defined by $f(x)=\\max\\left\\{[x],\\,|x-7|\\right\\}$, where $[t]$ denotes the greatest integer less than or equal to $t$. Then the value of $\\displaystyle\\int_{0}^{14}f(x)\\,dx$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:[0,14]\\to\\mathbb{R}$, $f(x)=\\max\\left\\{[x],\\,|x-7|\\right\\}$ द्वारा परिभाषित है, जहाँ $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। तब $\\displaystyle\\int_{0}^{14}f(x)\\,dx$ का मान ______ है।"
+ ],
+ "solution": [
+  "On $[n,n+1)$, $[x]=n$; compare $n$ with $|x-7|$",
+  "$n=0,1,2,3$ ($x<4$): $|x-7|=7-x>3\\ge n$, so $f=7-x$: $\\int_0^4(7-x)dx=28-8=20$",
+  "$n=4,5,6$ ($4\\le x<7$): $7-x\\le3<n$, so $f=n$: $4+5+6=15$",
+  "$n=7,\\dots,13$: $|x-7|=x-7<n-6<n$, so $f=n$: $7+8+\\dots+13=70$",
+  "Total $=20+15+70=105$",
+  "",
+  "Final Answer: 105"
+ ],
+ "solution_full": [
+  "On each $[n,n+1)$, $n=0,1,\\dots,13$, $[x]=n$, so $f(x)=\\max\\{n,|x-7|\\}$ there; by additivity the integral is the sum over these $14$ subintervals.",
+  "For $0\\le x<4$: $|x-7|=7-x>3$, and $n\\le3$, so $f(x)=7-x$. Contribution $\\int_0^{4}(7-x)\\,dx=28-8=20$.",
+  "For $4\\le x<7$: $|x-7|=7-x\\le3<4\\le n$, so $f(x)=n$. Contribution $4+5+6=15$.",
+  "For $7\\le x<14$: $|x-7|=x-7<n+1-7=n-6<n$, so $f(x)=n$. Contribution $7+8+\\cdots+13=70$.",
+  "Total $=20+15+70=105$.",
+  "",
+  "Final Answer: 105"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the maximum of a step function and a V-shaped function, where the V wins only on [0,4] and the steps win elsewhere; the student must locate the switch (way 2). Closest known: int max([x], {x}) dx and int |x - a| dx. Different because: the comparison changes along the interval and the V is centred inside.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Additivity over subintervals for piecewise and discontinuous integrands",
+  "Definite integrals of GIF and fractional part functions",
+  "Definite integrals with modulus and max / min integrands"
+ ],
+ "concept_use": {
+  "Additivity over subintervals for piecewise and discontinuous integrands": "The integral is split at every integer of [0,14] (where [x] jumps) and the pieces are added.",
+  "Definite integrals of GIF and fractional part functions": "[x] is constant n on [n, n+1), which makes each piece either n or a linear function.",
+  "Definite integrals with modulus and max / min integrands": "max{n, |x-7|} must be resolved on each unit interval; the switch happens exactly at x = 4."
+ },
+ "stem_review": "Read as a student: f defined on [0,14]; [t] defined; checked numerically: 105. Answer is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Find where |x - 7| exceeds [x] (only for x < 4), then integrate pieces.",
+ "justification": "Careful casework over 14 unit intervals with one switch point; numerical answer with no check. Comparable to 2021-P2-Q19 (L4) in kind but with simpler breakpoints, so L3.",
+ "nearest_anchor": "2021-P2-Q19 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

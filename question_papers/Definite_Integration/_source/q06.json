@@ -1,0 +1,66 @@
+{
+ "type": "SCQ",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function such that $f(x+y)=f(x)+f(y)+xy(x+y)$ for all $x,y\\in\\mathbb{R}$ and $\\displaystyle\\lim_{x\\to0}\\frac{f(x)}{\\sin x}=-3$. Let $G:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$G(x)=\\int_{x}^{2x}f(t)\\,dt.$$",
+  "Then the minimum value of $G$ is",
+  "",
+  "(A) $-\\dfrac{81}{40}$",
+  "(B) $-\\dfrac{81}{20}$",
+  "(C) $-\\dfrac{27}{4}$",
+  "(D) $-\\dfrac{9}{5}$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए सभी $x,y\\in\\mathbb{R}$ के लिए $f(x+y)=f(x)+f(y)+xy(x+y)$ तथा $\\displaystyle\\lim_{x\\to0}\\frac{f(x)}{\\sin x}=-3$ है। माना कि $G:\\mathbb{R}\\to\\mathbb{R}$",
+  "$$G(x)=\\int_{x}^{2x}f(t)\\,dt$$",
+  "द्वारा परिभाषित है। तब $G$ का न्यूनतम मान है",
+  "",
+  "(A) $-\\dfrac{81}{40}$",
+  "(B) $-\\dfrac{81}{20}$",
+  "(C) $-\\dfrac{27}{4}$",
+  "(D) $-\\dfrac{9}{5}$"
+ ],
+ "solution": [
+  "$x=y=0$: $f(0)=0$. Then $\\lim\\frac{f(x)}{\\sin x}=\\lim\\frac{f(x)-f(0)}{x}=f'(0)=-3$",
+  "$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=\\lim\\left(\\frac{f(h)}{h}+x^{2}+xh\\right)=-3+x^{2}$, so $f(x)=\\frac{x^{3}}{3}-3x$",
+  "Newton-Leibniz: $G'(x)=2f(2x)-f(x)=\\frac{16x^{3}}{3}-12x-\\frac{x^{3}}{3}+3x=5x^{3}-9x$",
+  "$G'=0$ at $x=0,\\pm\\frac{3}{\\sqrt5}$; $G'$ changes $-\\to+$ at $\\pm\\frac{3}{\\sqrt5}$: minima",
+  "$G(x)=\\left[\\frac{t^{4}}{12}-\\frac{3t^{2}}{2}\\right]_x^{2x}=\\frac54x^{4}-\\frac92x^{2}$; at $x^{2}=\\frac95$: $\\frac{81}{20}-\\frac{81}{10}=-\\frac{81}{20}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Put $x=y=0$: $f(0)=2f(0)$, so $f(0)=0$.",
+  "Then $\\dfrac{f(x)}{\\sin x}=\\dfrac{f(x)-f(0)}{x}\\cdot\\dfrac{x}{\\sin x}\\to f'(0)$, so $f'(0)=-3$.",
+  "For any $x$: $\\dfrac{f(x+h)-f(x)}{h}=\\dfrac{f(h)}{h}+x^{2}+xh\\to-3+x^{2}$ as $h\\to0$. So $f'(x)=x^{2}-3$ and, with $f(0)=0$, $f(x)=\\dfrac{x^{3}}{3}-3x$.",
+  "By the Newton-Leibniz rule, $G'(x)=f(2x)\\cdot2-f(x)\\cdot1=2\\left(\\dfrac{8x^{3}}{3}-6x\\right)-\\dfrac{x^{3}}{3}+3x=5x^{3}-9x=x(5x^{2}-9)$.",
+  "Critical points: $x=0$ and $x=\\pm\\dfrac{3}{\\sqrt5}$. Sign of $G'$: negative on $\\left(-\\infty,-\\frac{3}{\\sqrt5}\\right)$, positive on $\\left(-\\frac{3}{\\sqrt5},0\\right)$, negative on $\\left(0,\\frac{3}{\\sqrt5}\\right)$, positive after. So $x=\\pm\\frac{3}{\\sqrt5}$ are local minima and $x=0$ a local maximum.",
+  "Explicitly $G(x)=\\left[\\dfrac{t^{4}}{12}-\\dfrac{3t^{2}}{2}\\right]_{x}^{2x}=\\dfrac{15x^{4}}{12}-\\dfrac{9x^{2}}{2}=\\dfrac54x^{4}-\\dfrac92x^{2}$, which tends to $+\\infty$ as $|x|\\to\\infty$, so the least of the local minima is the minimum value.",
+  "At $x^{2}=\\dfrac95$: $G=\\dfrac54\\cdot\\dfrac{81}{25}-\\dfrac92\\cdot\\dfrac95=\\dfrac{81}{20}-\\dfrac{162}{20}=-\\dfrac{81}{20}$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "answer_plan": "Option B",
+ "originality_note": "New: a cubic functional equation fixed by a limit, followed by the extremum of the integral of f over the moving interval [x, 2x] (way 5). Closest known: f(x+y) = f(x) + f(y) + 2xy type equations; minima of int_0^x f. Different because: the window [x, 2x] scales with x, giving G' = 2f(2x) - f(x) and a quartic G.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Newton-Leibniz rule: differentiating an integral with variable limits",
+  "Maxima and minima of a function defined by a definite integral",
+  "Definite integrals combined with limits and functional equations"
+ ],
+ "concept_use": {
+  "Newton-Leibniz rule: differentiating an integral with variable limits": "G'(x) = 2 f(2x) - f(x) with both limits variable.",
+  "Maxima and minima of a function defined by a definite integral": "Sign of G' locates the minima at x = +-3/sqrt5; G -> infinity confirms the global minimum -81/20.",
+  "Definite integrals combined with limits and functional equations": "The functional equation and the limit lim f(x)/sin x = f'(0) = -3 determine f(x) = x^3/3 - 3x."
+ },
+ "stem_review": "Read as a student: f differentiable with domain/codomain; the equation holds for all real x, y; the limit fixes f'(0); G has domain R; 'minimum value' exists since G -> infinity. Checked with sympy. Options one form; (B) correct as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Get f from the functional equation (f' = f'(0) + x^2), then G' = 2f(2x) - f(x) = 5x^3 - 9x.",
+ "justification": "Two ideas linked: solving the functional equation via the derivative and an extremum of an integral with both limits variable. Comparable to 2023-P2-Q8 (L3) on the minimum of an integral function.",
+ "nearest_anchor": "2023-P2-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

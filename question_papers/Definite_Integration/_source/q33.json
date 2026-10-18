@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 3,
+ "english": [
+  "Let $I=\\displaystyle\\int_{0}^{1}\\cos\\left(x^{2}\\right)dx$. Then the greatest integer less than or equal to $100I$ is ______."
+ ],
+ "hindi": [
+  "माना $I=\\displaystyle\\int_{0}^{1}\\cos\\left(x^{2}\\right)dx$ है। तब $100I$ से कम या उसके बराबर महत्तम पूर्णांक ______ है।"
+ ],
+ "solution": [
+  "For $t\\ge0$: $1-\\frac{t^{2}}{2}\\le\\cos t\\le1-\\frac{t^{2}}{2}+\\frac{t^{4}}{24}$ (monotonicity, below)",
+  "Lower: $\\phi(t)=\\cos t-1+\\frac{t^{2}}{2}$, $\\phi'=t-\\sin t\\ge0$, $\\phi(0)=0\\Rightarrow\\phi\\ge0$",
+  "Upper: $\\psi(t)=1-\\frac{t^{2}}{2}+\\frac{t^{4}}{24}-\\cos t$, $\\psi'=-t+\\frac{t^{3}}{6}+\\sin t\\ge0$ (its derivative $-1+\\frac{t^{2}}{2}+\\cos t=\\phi\\ge0$), so $\\psi\\ge0$",
+  "Put $t=x^{2}$ and integrate on $[0,1]$: $1-\\frac{1}{10}\\le I\\le1-\\frac1{10}+\\frac{1}{216}$, i.e. $0.9\\le I\\le0.9047$",
+  "$90\\le100I\\le90.47\\Rightarrow[100I]=90$",
+  "",
+  "Final Answer: 90"
+ ],
+ "solution_full": [
+  "Two inequalities for $t\\ge0$, proved by monotonicity. Let $\\phi(t)=\\cos t-1+\\frac{t^{2}}{2}$: $\\phi(0)=0$ and $\\phi'(t)=t-\\sin t\\ge0$ (since $\\sin t\\le t$), so $\\phi$ is increasing and $\\phi(t)\\ge0$, i.e. $\\cos t\\ge1-\\frac{t^{2}}{2}$.",
+  "Let $\\psi(t)=1-\\frac{t^{2}}{2}+\\frac{t^{4}}{24}-\\cos t$: $\\psi(0)=0$, $\\psi'(t)=-t+\\frac{t^{3}}{6}+\\sin t$, $\\psi'(0)=0$, and $\\psi''(t)=-1+\\frac{t^{2}}{2}+\\cos t=\\phi(t)\\ge0$. So $\\psi'$ is increasing, $\\psi'\\ge0$, $\\psi$ is increasing and $\\psi\\ge0$, i.e. $\\cos t\\le1-\\frac{t^{2}}{2}+\\frac{t^{4}}{24}$.",
+  "Put $t=x^{2}$ ($0\\le x\\le1$): $1-\\frac{x^{4}}{2}\\le\\cos(x^{2})\\le1-\\frac{x^{4}}{2}+\\frac{x^{8}}{24}$, with equality only at $x=0$.",
+  "Integrate over $[0,1]$: $1-\\frac{1}{10}<I<1-\\frac1{10}+\\frac{1}{216}$, i.e. $0.9<I<0.90463$.",
+  "So $90<100I<90.47$, and the greatest integer less than or equal to $100I$ is $90$. (Numerically $I=0.90452\\ldots$)",
+  "",
+  "Final Answer: 90"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: a Fresnel-type integral with no elementary antiderivative, bounded tightly enough to fix two digits by polynomial inequalities proved with monotonicity (way 5). Closest known: bounds for int_0^1 sin x/x dx or int_0^1 e^{-x^2} dx. Different because: the inequalities are applied at t = x^2, so the bounds are x^4 and x^8 terms, and the answer is a two-digit integer part.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Estimation & Inequality Bounding of Definite Integrals",
+  "Proving inequalities using monotonicity"
+ ],
+ "concept_use": {
+  "Estimation & Inequality Bounding of Definite Integrals": "Integrating the pointwise bounds on cos(x^2) over [0,1] traps I in (0.9, 0.90463).",
+  "Proving inequalities using monotonicity": "cos t >= 1 - t^2/2 and cos t <= 1 - t^2/2 + t^4/24 are proved by showing the differences are increasing from 0."
+ },
+ "stem_review": "Read as a student: I is defined; the integer part of 100 I is asked explicitly; mpmath gives 100 I = 90.452. Answer 90, a positive 2-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Prove 1 - t^2/2 <= cos t <= 1 - t^2/2 + t^4/24 by monotonicity, put t = x^2 and integrate.",
+ "justification": "Two linked ideas: proving two inequalities by monotonicity (one needs a second derivative) and choosing bounds tight enough for two digits; numerical answer. Comparable to 2021-P2-Q16 (L3, inequality statements by series bounds).",
+ "nearest_anchor": "2021-P2-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

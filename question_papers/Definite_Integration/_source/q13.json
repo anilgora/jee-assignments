@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 2,
+ "english": [
+  "The value of $\\displaystyle\\int_{1}^{e^{12}}\\frac{x\\,\\log_{e}x\\,\\left(12-\\log_{e}x\\right)}{x^{2}+e^{12}}\\,dx$ is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\int_{1}^{e^{12}}\\frac{x\\,\\log_{e}x\\,\\left(12-\\log_{e}x\\right)}{x^{2}+e^{12}}\\,dx$ का मान ______ है।"
+ ],
+ "solution": [
+  "Substitute $x=e^{t}$ (increasing, so the limits become $t=0$ to $t=12$): $dx=e^{t}dt$, $\\frac{x\\,dx}{x^{2}+e^{12}}=\\frac{e^{2t}dt}{e^{2t}+e^{12}}$",
+  "$I=\\int_0^{12}t(12-t)\\,h(t)\\,dt$ with $h(t)=\\frac{1}{1+e^{12-2t}}$",
+  "King's rule $t\\to12-t$: $t(12-t)$ unchanged, $h(12-t)=\\frac{1}{1+e^{2t-12}}=1-h(t)$",
+  "$2I=\\int_0^{12}t(12-t)\\,dt=864-576=288\\Rightarrow I=144$",
+  "",
+  "Final Answer: 144"
+ ],
+ "solution_full": [
+  "Put $x=e^{t}$. On $[0,12]$ this is increasing, so $x=1\\mapsto t=0$, $x=e^{12}\\mapsto t=12$, and $dx=e^{t}dt$, $\\log_e x=t$.",
+  "Then $\\dfrac{x\\,dx}{x^{2}+e^{12}}=\\dfrac{e^{2t}dt}{e^{2t}+e^{12}}=\\dfrac{dt}{1+e^{12-2t}}$, so $I=\\int_0^{12}\\dfrac{t(12-t)}{1+e^{12-2t}}dt$.",
+  "Let $h(t)=\\dfrac{1}{1+e^{12-2t}}$. Then $h(12-t)=\\dfrac{1}{1+e^{2t-12}}=\\dfrac{e^{12-2t}}{e^{12-2t}+1}=1-h(t)$, while $t(12-t)$ is unchanged by $t\\to12-t$.",
+  "King's rule: $I=\\int_0^{12}t(12-t)\\,(1-h(t))\\,dt$. Adding to the original form: $2I=\\int_0^{12}t(12-t)\\,dt=6\\cdot144-\\dfrac{1728}{3}=864-576=288$.",
+  "So $I=144$.",
+  "",
+  "Final Answer: 144"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: a logarithmic integrand on [1, e^12] that becomes a king pair only after the exponential substitution, with a symmetric polynomial weight t(12-t) (way 5). Closest known: int_0^a dx/(1+e^{x - a/2}) = a/2. Different because: the symmetry is hidden in x -> e^{12}/x, visible only after x = e^t, and the weight is not constant.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Substitution in a definite integral: changing limits and the monotonicity requirement",
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx"
+ ],
+ "concept_use": {
+  "Substitution in a definite integral: changing limits and the monotonicity requirement": "x = e^t is monotonic increasing, so the limits change from [1, e^12] to [0, 12] and the integrand becomes t(12-t)/(1+e^{12-2t}).",
+  "King's rule: int(0 to a) f(x) dx = int(0 to a) f(a - x) dx": "King's rule t -> 12 - t pairs h(t) with 1 - h(t) while t(12-t) is symmetric, giving 2I = int_0^12 t(12-t) dt."
+ },
+ "stem_review": "Read as a student: log_e defined by notation; integrand continuous on [1, e^12]; value 144 checked by mpmath quadrature. Answer is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "After x = e^t the integrand is t(12-t)/(1+e^{12-2t}); king's rule turns the denominator factor into 1/2.",
+ "justification": "Routine chain of two familiar moves (substitution, king pairing) and a polynomial integral; same demand as 2024-P2-Q16 (L2).",
+ "nearest_anchor": "2024-P2-Q16 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 2,
+ "english": [
+  "Let $F:\\mathbb{R}\\to\\mathbb{R}$ be defined by $F(x)=\\displaystyle\\int_{-2}^{x}(t-3)\\,|t-2|\\,dt$. Then the minimum value of $F$ is ______."
+ ],
+ "hindi": [
+  "माना कि $F:\\mathbb{R}\\to\\mathbb{R}$, $F(x)=\\displaystyle\\int_{-2}^{x}(t-3)\\,|t-2|\\,dt$ द्वारा परिभाषित है। तब $F$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$F'(x)=(x-3)|x-2|$: zero at $x=2$ and $x=3$",
+  "$F'<0$ on $(-\\infty,2)$ and $(2,3)$ (no sign change at $2$), $F'>0$ on $(3,\\infty)$: $F$ decreases up to $3$, then increases, so the minimum is $F(3)$",
+  "$F(3)=\\int_{-2}^{2}(t-3)(2-t)dt+\\int_2^3(t-3)(t-2)dt=-\\frac{88}{3}-\\frac16=-\\frac{59}{2}$",
+  "",
+  "Final Answer: -29.50"
+ ],
+ "solution_full": [
+  "The integrand is continuous, so $F'(x)=(x-3)|x-2|$.",
+  "Critical points: $x=2$ and $x=3$. For $x<3$, $x\\neq2$: $x-3<0$ and $|x-2|>0$, so $F'<0$; for $x>3$, $F'>0$. Thus $F$ is decreasing on $(-\\infty,3]$ (the point $2$ is stationary but not an extremum) and increasing on $[3,\\infty)$, and $F(3)$ is the minimum value.",
+  "$F(3)=\\int_{-2}^{2}(t-3)(2-t)\\,dt+\\int_{2}^{3}(t-3)(t-2)\\,dt$.",
+  "First: $(t-3)(2-t)=-t^{2}+5t-6$; $\\int_{-2}^{2}=-\\frac{16}{3}+0-24=-\\frac{88}{3}$.",
+  "Second: $\\int_2^{3}(t-2)(t-3)\\,dt=-\\frac{1}{6}$.",
+  "$F(3)=-\\frac{88}{3}-\\frac16=-\\frac{177}{6}=-29.50$.",
+  "",
+  "Final Answer: -29.50"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: the integrand has a stationary point without sign change (the modulus factor) and the global minimum is at the other root, where the integral must be split at the corner (way 5). Closest known: minimum of int_0^x (t-a)(t-b) dt. Different because: the modulus produces a double-root-like point that is not an extremum, and the lower limit -2 makes the value non-trivial.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Maxima and minima of a function defined by a definite integral"
+ ],
+ "concept_use": {
+  "Maxima and minima of a function defined by a definite integral": "F' = (x-3)|x-2| changes sign only at x = 3; x = 2 is stationary without an extremum, so F(3) is the minimum, evaluated by splitting at t = 2."
+ },
+ "stem_review": "Read as a student: F has domain/codomain; the minimum exists (F decreasing then increasing, F -> infinity). Checked with sympy: -59/2. Answer -29.50, a negative decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Sign of F' = (x-3)|x-2| shows the minimum is at x = 3; split the integral at t = 2.",
+ "justification": "Routine chain: derivative of an integral function, sign analysis, one split integral. Lighter than 2023-P2-Q8 (L3); L2.",
+ "nearest_anchor": "2023-P2-Q8 (L3)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

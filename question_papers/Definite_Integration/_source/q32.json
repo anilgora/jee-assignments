@@ -1,0 +1,43 @@
+{
+ "type": "Numerical",
+ "chapter": "Definite Integration",
+ "target_level": 2,
+ "english": [
+  "Let $I=\\displaystyle\\int_{0}^{30}\\frac{x}{1+e^{-x}}\\,dx$. Then the greatest integer less than or equal to $I$ is ______."
+ ],
+ "hindi": [
+  "माना $I=\\displaystyle\\int_{0}^{30}\\frac{x}{1+e^{-x}}\\,dx$ है। तब $I$ से कम या उसके बराबर महत्तम पूर्णांक ______ है।"
+ ],
+ "solution": [
+  "$\\frac{x}{1+e^{-x}}=x-\\frac{x}{e^{x}+1}$, so $I=450-D$ with $D=\\int_0^{30}\\frac{x}{e^{x}+1}dx$",
+  "$0<\\frac{x}{e^{x}+1}<xe^{-x}$ on $(0,30]$, so $0<D<\\int_0^{30}xe^{-x}dx=1-31e^{-30}<1$",
+  "$449<I<450\\Rightarrow[I]=449$",
+  "",
+  "Final Answer: 449"
+ ],
+ "solution_full": [
+  "$\\dfrac{x}{1+e^{-x}}=\\dfrac{xe^{x}}{e^{x}+1}=x-\\dfrac{x}{e^{x}+1}$, so $I=\\int_0^{30}x\\,dx-D=450-D$, where $D=\\int_0^{30}\\dfrac{x}{e^{x}+1}dx$.",
+  "For $x>0$: $\\dfrac{x}{e^{x}+1}>0$ and $\\dfrac{x}{e^{x}+1}<\\dfrac{x}{e^{x}}=xe^{-x}$.",
+  "Hence $0<D<\\int_0^{30}xe^{-x}dx=\\left[-(x+1)e^{-x}\\right]_0^{30}=1-31e^{-30}<1$.",
+  "So $449<I<450$ and the greatest integer less than or equal to $I$ is $449$. (Numerically $I\\approx449.18$.)",
+  "",
+  "Final Answer: 449"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: a non-elementary integral pinned between two consecutive integers by subtracting the main term x and bounding the small remainder by x e^{-x} (way 4). Closest known: bounds 1/2 <= int ... <= 1 by max and min of the integrand. Different because: the integrand is large but its deviation from x is small and integrable, so a tight integer bound follows.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Estimation & Inequality Bounding of Definite Integrals"
+ ],
+ "concept_use": {
+  "Estimation & Inequality Bounding of Definite Integrals": "The deficit int_0^30 x/(e^x+1) dx is bounded between 0 and int_0^30 x e^{-x} dx < 1 by comparing integrands, which pins [I]."
+ },
+ "stem_review": "Read as a student: I is defined; 'greatest integer less than or equal to I' is explicit; quadrature gives 449.18. Answer 449, a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Write the integrand as x - x/(e^x + 1) and bound the remainder by x e^{-x}.",
+ "justification": "Routine chain: algebraic split, comparison, one integration by parts. Lighter than 2023-P2-Q8 (L3) in idea; L2.",
+ "nearest_anchor": "2023-P2-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
