@@ -1,7 +1,7 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (re-checked 2026-10-18 for Area Under Curve)
+READY: all tools present (re-checked 2026-10-18, scheduled run: no chapter ready)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
@@ -50,3 +50,5 @@ None found — each folder has at most one file per role.
 `chapters/Integration/DPP.pdf` holds two series that both start at DPP #1: pages 1-56 are the Indefinite Integration DPPs #1-5, and pages 57-124 are the Definite Integration DPPs #1-5. In the kits, the Definite series is keyed DPP-D1 ... DPP-D5. The Definite Integration QB is numbered 21-88 (it continues the Indefinite QB 1-20).
 
 _Inventory refreshed 2026-10-18 (Area Under Curve run): all 123 PDFs re-listed; no new or changed files since the previous run. Every chapter in the master index is now DONE._
+
+_Inventory re-checked 2026-10-18 (later scheduled run): still 123 PDFs, no new files merged from main. All 30 chapters DONE; no chapter ready to build._
