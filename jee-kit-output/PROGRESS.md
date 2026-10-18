@@ -28,3 +28,4 @@ Monotonicity: DONE 2026-10-18
 Maxima_and_Minima: DONE 2026-10-18
 Indefinite_Integration: DONE 2026-10-18
 Definite_Integration: DONE 2026-10-18
+Differential_Equation: DONE 2026-10-18

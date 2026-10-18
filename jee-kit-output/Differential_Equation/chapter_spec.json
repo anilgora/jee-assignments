@@ -1,0 +1,2283 @@
+{
+ "chapter": {
+  "en": "Differential Equation",
+  "hi": "अवकल समीकरण",
+  "slug": "Differential_Equation"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XII": [],
+  "XIII": [
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119,
+   120,
+   121,
+   122,
+   123,
+   124,
+   125,
+   133,
+   134,
+   135,
+   136,
+   137,
+   138,
+   139,
+   140,
+   141,
+   142,
+   143,
+   144,
+   145,
+   146,
+   147,
+   148
+  ]
+ },
+ "graded_sources": [
+  "<jm>",
+  "J-A",
+  "QB"
+ ],
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Introduction",
+    "hi": "परिचय",
+    "items": [
+     {
+      "id": "1",
+      "o": 1,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by ordinary differential equation and partial differential equation?",
+       "साधारण अवकल समीकरण और आंशिक अवकल समीकरण से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "An equation containing the independent variable, the dependent variable and derivatives of the dependent variable is a differential equation (DE).",
+        "जिस समीकरण में स्वतन्त्र चर, आश्रित चर और आश्रित चर के अवकलज हों, वह अवकल समीकरण कहलाता है।"
+       ],
+       [
+        "Ordinary: the dependent variable depends on ONE independent variable, e.g. $\\frac{dy}{dx}+xy=\\sin x$. Partial: on two or more, with partial derivatives, e.g. $\\frac{\\partial^2z}{\\partial x^2}+\\frac{\\partial^2z}{\\partial y^2}=0$.",
+        "साधारण: आश्रित चर केवल एक स्वतन्त्र चर पर निर्भर, जैसे $\\frac{dy}{dx}+xy=\\sin x$। आंशिक: दो या अधिक चरों पर, आंशिक अवकलजों सहित, जैसे $\\frac{\\partial^2z}{\\partial x^2}+\\frac{\\partial^2z}{\\partial y^2}=0$।"
+       ],
+       [
+        "JEE uses only ordinary DEs.",
+        "JEE में केवल साधारण अवकल समीकरण आते हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "2",
+      "o": 2,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by general solution, complete integral, complete primitive?",
+       "व्यापक हल, पूर्ण समाकल और पूर्ण पूर्वग से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "A relation between $x$ and $y$ (free of derivatives) that satisfies the DE is a solution (primitive). The general solution contains as many independent arbitrary constants as the order of the DE.",
+        "$x$ और $y$ का (अवकलज रहित) सम्बन्ध जो अवकल समीकरण को सन्तुष्ट करे, उसका हल (पूर्वग) है। व्यापक हल में उतने स्वतन्त्र स्वेच्छ अचर होते हैं जितनी समीकरण की कोटि है।"
+       ],
+       [
+        "General solution = complete integral = complete primitive.",
+        "व्यापक हल = पूर्ण समाकल = पूर्ण पूर्वग।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=2x\\Rightarrow y=x^2+c$ (general solution).",
+        "उदा: $\\frac{dy}{dx}=2x\\Rightarrow y=x^2+c$ (व्यापक हल)।"
+       ]
+      ]
+     },
+     {
+      "id": "3",
+      "o": 3,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define particular solution of a differential equation.",
+       "अवकल समीकरण का विशिष्ट हल परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "A solution obtained from the general solution by giving particular values to the arbitrary constants (usually from an initial condition $y(x_0)=y_0$).",
+        "व्यापक हल में स्वेच्छ अचरों को विशिष्ट मान देकर (प्रायः प्रारम्भिक प्रतिबन्ध $y(x_0)=y_0$ से) प्राप्त हल विशिष्ट हल है।"
+       ],
+       [
+        "Ex: $y=x^2+c$ through $(2,5)$: $c=1$, so $y=x^2+1$.",
+        "उदा: $y=x^2+c$, $(2,5)$ से होकर: $c=1$, अतः $y=x^2+1$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XII):14, J-M(XII):63, J-M(XIII):4, J-M(XIII):36, J-M(XIII):65, QB:125, QB:140, J-II:49, C-I:4",
+      "q": [
+       "How to fix the constant when, instead of $y(x_0)$, a limit or boundedness condition is given (e.g. $y$ bounded, $y\\to0$ as $x\\to\\infty$)?",
+       "जब $y(x_0)$ के स्थान पर सीमा या परिबद्धता का प्रतिबन्ध दिया हो (जैसे $y$ परिबद्ध, $x\\to\\infty$ पर $y\\to0$), तब अचर कैसे निश्चित करते हैं?"
+      ],
+      "a": [
+       [
+        "Solve generally, then take the limit of the general solution: a term like $Ce^{kx}$ ($k>0$, $x\\to\\infty$) must have $C=0$; a condition like $\\lim_{x\\to0}xy=1$ gives $C$ directly.",
+        "व्यापक हल निकालकर उसकी सीमा लीजिए: $Ce^{kx}$ ($k>0$, $x\\to\\infty$) जैसे पद के लिए $C=0$ होना चाहिए; $\\lim_{x\\to0}xy=1$ जैसा प्रतिबन्ध सीधे $C$ देता है।"
+       ],
+       [
+        "Ex: $y'-y=-e^{-x}$: $y=\\frac{e^{-x}}2+Ce^x$; $y\\to0$ as $x\\to\\infty\\Rightarrow C=0$.",
+        "उदा: $y'-y=-e^{-x}$: $y=\\frac{e^{-x}}2+Ce^x$; $x\\to\\infty$ पर $y\\to0\\Rightarrow C=0$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Order and Degree of a Differential Equation",
+    "hi": "अवकल समीकरण की कोटि और घात",
+    "items": [
+     {
+      "id": "4",
+      "o": 4,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define order of a differential equation and how to find it?",
+       "अवकल समीकरण की कोटि परिभाषित कीजिए और इसे कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "Order = order of the highest order derivative present in the DE.",
+        "कोटि = समीकरण में उपस्थित उच्चतम कोटि के अवकलज की कोटि।"
+       ],
+       [
+        "Ex: $\\frac{d^2y}{dx^2}+\\left(\\frac{dy}{dx}\\right)^3=y^2+\\sin x$: order $2$.",
+        "उदा: $\\frac{d^2y}{dx^2}+\\left(\\frac{dy}{dx}\\right)^3=y^2+\\sin x$: कोटि $2$।"
+       ]
+      ]
+     },
+     {
+      "id": "5",
+      "o": 5,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define degree of a differential equation and how to find it?",
+       "अवकल समीकरण की घात परिभाषित कीजिए और इसे कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "First make the DE a polynomial in all the derivatives (remove radicals and fractional powers of derivatives). Degree = power of the highest order derivative.",
+        "पहले समीकरण को सभी अवकलजों में बहुपद बनाइए (अवकलजों के मूलांक व भिन्नात्मक घातें हटाइए)। घात = उच्चतम कोटि के अवकलज की घात।"
+       ],
+       [
+        "Ex: $\\frac{d^2y}{dx^2}=\\left(1+\\left(\\frac{dy}{dx}\\right)^2\\right)^{1/3}$: cube both sides, order $2$, degree $3$.",
+        "उदा: $\\frac{d^2y}{dx^2}=\\left(1+\\left(\\frac{dy}{dx}\\right)^2\\right)^{1/3}$: दोनों ओर घन करें, कोटि $2$, घात $3$।"
+       ]
+      ]
+     },
+     {
+      "id": "6",
+      "o": 6,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Does every differential equation have a degree and order?",
+       "क्या प्रत्येक अवकल समीकरण की घात और कोटि होती है?"
+      ],
+      "a": [
+       [
+        "Order always exists. Degree is NOT defined when a derivative occurs inside a transcendental function ($\\sin,\\ e^{(\\ )},\\ \\ln$, ...) and the DE cannot be made a polynomial in derivatives.",
+        "कोटि सदैव होती है। जब कोई अवकलज अबीजीय फलन ($\\sin,\\ e^{(\\ )},\\ \\ln$, ...) के अन्दर हो और समीकरण अवकलजों में बहुपद न बन सके, तब घात परिभाषित नहीं होती।"
+       ],
+       [
+        "Ex: $\\frac{d^2y}{dx^2}+\\sin\\left(\\frac{dy}{dx}\\right)=x$: order $2$, degree not defined. But $\\sin^{-1}\\left(\\frac{dy}{dx}\\right)=x+2\\Rightarrow\\frac{dy}{dx}=\\sin(x+2)$: degree $1$.",
+        "उदा: $\\frac{d^2y}{dx^2}+\\sin\\left(\\frac{dy}{dx}\\right)=x$: कोटि $2$, घात परिभाषित नहीं। परन्तु $\\sin^{-1}\\left(\\frac{dy}{dx}\\right)=x+2\\Rightarrow\\frac{dy}{dx}=\\sin(x+2)$: घात $1$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Formation of Differential Equation",
+    "hi": "अवकल समीकरण का निर्माण",
+    "items": [
+     {
+      "id": "7",
+      "o": 7,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether arbitrary constants in the equation of a family of curves are independent?",
+       "वक्र कुल के समीकरण में स्वेच्छ अचर स्वतन्त्र हैं या नहीं, यह कैसे जाँचते हैं?"
+      ],
+      "a": [
+       [
+        "Constants are independent when the equation cannot be rewritten with fewer constants. Combine constants first: $c_1e^{x+c_2}=(c_1e^{c_2})e^x=Ae^x$.",
+        "अचर स्वतन्त्र हैं जब समीकरण को कम अचरों में न लिखा जा सके। पहले अचरों को मिलाइए: $c_1e^{x+c_2}=(c_1e^{c_2})e^x=Ae^x$।"
+       ],
+       [
+        "Ex: $ax+by+c=0$: $2$; $y^2=4A(x+A)$: $1$; $y^2=4A(x+B)$: $2$; $y=c_1e^{x+c_2}$: $1$.",
+        "उदा: $ax+by+c=0$: $2$; $y^2=4A(x+A)$: $1$; $y^2=4A(x+B)$: $2$; $y=c_1e^{x+c_2}$: $1$।"
+       ]
+      ]
+     },
+     {
+      "id": "8",
+      "o": 8,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to form a differential equation if the equation of a family of curves is given?",
+       "वक्र कुल का समीकरण दिया हो तो अवकल समीकरण कैसे बनाते हैं?"
+      ],
+      "a": [
+       [
+        "Count the independent constants $n$; differentiate $n$ times; eliminate the constants. The DE has order $n$.",
+        "स्वतन्त्र अचर $n$ गिनिए; $n$ बार अवकलन कीजिए; अचरों का विलोपन कीजिए। अवकल समीकरण की कोटि $n$ होगी।"
+       ],
+       [
+        "Ex: $y=Ae^{2x}+Be^{-2x}+C$: $\\frac{d^3y}{dx^3}=4\\frac{dy}{dx}$.",
+        "उदा: $y=Ae^{2x}+Be^{-2x}+C$: $\\frac{d^3y}{dx^3}=4\\frac{dy}{dx}$।"
+       ]
+      ]
+     },
+     {
+      "id": "9",
+      "o": 9,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to form a differential equation if information about the family of curves is provided instead of its equation?",
+       "वक्र कुल का समीकरण न देकर उसके बारे में जानकारी दी हो तो अवकल समीकरण कैसे बनाते हैं?"
+      ],
+      "a": [
+       [
+        "Write the general equation of the family from the description (with the fewest constants), then differentiate and eliminate as usual.",
+        "वर्णन से कुल का व्यापक समीकरण (न्यूनतम अचरों के साथ) लिखिए, फिर सामान्य रूप से अवकलन और विलोपन कीजिए।"
+       ],
+       [
+        "Ex: circles touching the $x$-axis at $O$: $x^2+y^2-2ay=0\\Rightarrow(x^2-y^2)\\frac{dy}{dx}=2xy$.",
+        "उदा: $O$ पर $x$-अक्ष को स्पर्श करने वाले वृत्त: $x^2+y^2-2ay=0\\Rightarrow(x^2-y^2)\\frac{dy}{dx}=2xy$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Elementary Types",
+    "hi": "प्रारम्भिक प्रकार",
+    "items": [
+     {
+      "id": "10",
+      "o": 10,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What are the various types of differential equations?",
+       "अवकल समीकरणों के विभिन्न प्रकार कौन-से हैं?"
+      ],
+      "a": [
+       [
+        "First order, first degree types: variable separable (incl. $f(ax+by+c)$, polar substitution), homogeneous, reducible to homogeneous, linear (in $y$ or in $x$), Bernoulli / reducible to linear, exact differential.",
+        "प्रथम कोटि, प्रथम घात के प्रकार: चर पृथक्करणीय ($f(ax+by+c)$, ध्रुवीय प्रतिस्थापन सहित), समघातीय, समघातीय में बदलने योग्य, रैखिक ($y$ में या $x$ में), बरनौली / रैखिक में बदलने योग्य, यथातथ अवकल।"
+       ],
+       [
+        "Check in this order: separable? homogeneous? linear in $y$ or $x$? Bernoulli / substitution? exact grouping?",
+        "इस क्रम में जाँचिए: पृथक्करणीय? समघातीय? $y$ या $x$ में रैखिक? बरनौली / प्रतिस्थापन? यथातथ समूहन?"
+       ]
+      ]
+     },
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:17, QB:127",
+      "q": [
+       "How to solve simple second order differential equations?",
+       "सरल द्वितीय कोटि के अवकल समीकरण कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "$y''=f(x)$: integrate twice (two constants). $y$ absent: put $p=\\frac{dy}{dx}$. $y''=f(y)$: multiply by $2y'$: $(y')^2=2\\int f(y)\\,dy+C$.",
+        "$y''=f(x)$: दो बार समाकलन (दो अचर)। $y$ अनुपस्थित: $p=\\frac{dy}{dx}$ रखिए। $y''=f(y)$: $2y'$ से गुणा: $(y')^2=2\\int f(y)\\,dy+C$।"
+       ],
+       [
+        "Ex: $y''=y\\Rightarrow(y')^2=y^2+C$; $y''=6x\\Rightarrow y=x^3+c_1x+c_2$.",
+        "उदा: $y''=y\\Rightarrow(y')^2=y^2+C$; $y''=6x\\Rightarrow y=x^3+c_1x+c_2$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Variable Separable",
+    "hi": "चर पृथक्करणीय",
+    "items": [
+     {
+      "id": "11",
+      "o": 11,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve variable separable differential equations?",
+       "चर पृथक्करणीय अवकल समीकरण कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Write it as $f(x)\\,dx=g(y)\\,dy$ and integrate: $\\int f(x)\\,dx=\\int g(y)\\,dy+c$.",
+        "इसे $f(x)\\,dx=g(y)\\,dy$ रूप में लिखकर समाकलन कीजिए: $\\int f(x)\\,dx=\\int g(y)\\,dy+c$।"
+       ],
+       [
+        "Ex: $x(y^2+1)dx+y(x^2+1)dy=0\\Rightarrow(x^2+1)(y^2+1)=C$.",
+        "उदा: $x(y^2+1)dx+y(x^2+1)dy=0\\Rightarrow(x^2+1)(y^2+1)=C$।"
+       ]
+      ]
+     },
+     {
+      "id": "12",
+      "o": 12,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve differential equation questions by forming the differential equation with the help of given information about the curve by assuming a point $(x,y)$ on the curve?",
+       "वक्र पर एक बिन्दु $(x,y)$ मानकर, वक्र की दी गई जानकारी से अवकल समीकरण बनाकर प्रश्न कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Take $P(x,y)$, $m=\\frac{dy}{dx}$. Tangent $Y-y=m(X-x)$: $x$-intercept $x-\\frac ym$, $y$-intercept $y-mx$. Normal $Y-y=-\\frac1m(X-x)$: $x$-intercept $x+my$.",
+        "$P(x,y)$, $m=\\frac{dy}{dx}$ लें। स्पर्श रेखा $Y-y=m(X-x)$: $x$-अन्तःखण्ड $x-\\frac ym$, $y$-अन्तःखण्ड $y-mx$। अभिलम्ब $Y-y=-\\frac1m(X-x)$: $x$-अन्तःखण्ड $x+my$।"
+       ],
+       [
+        "Subtangent $\\left|\\frac ym\\right|$, subnormal $|ym|$, tangent length $\\left|\\frac ym\\right|\\sqrt{1+m^2}$, normal length $|y|\\sqrt{1+m^2}$. Translate the condition into a DE, solve, use the given point.",
+        "अधःस्पर्शी $\\left|\\frac ym\\right|$, अधोलम्ब $|ym|$, स्पर्श रेखा की लम्बाई $\\left|\\frac ym\\right|\\sqrt{1+m^2}$, अभिलम्ब की लम्बाई $|y|\\sqrt{1+m^2}$। प्रतिबन्ध को अवकल समीकरण में बदलिए, हल कीजिए, दिया बिन्दु लगाइए।"
+       ],
+       [
+        "Ex: tangent segment between the axes bisected at $P$: $\\frac{dy}{dx}=-\\frac yx\\Rightarrow xy=c$; through $(2,3)$: $xy=6$.",
+        "उदा: अक्षों के बीच स्पर्श रेखा का खण्ड $P$ पर समद्विभाजित: $\\frac{dy}{dx}=-\\frac yx\\Rightarrow xy=c$; $(2,3)$ से: $xy=6$।"
+       ]
+      ]
+     },
+     {
+      "id": "13",
+      "o": 13,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve differential equation questions by forming the differential equation if an identity in a definite integral is given?",
+       "निश्चित समाकल वाली सर्वसमिका दी हो तो अवकल समीकरण बनाकर प्रश्न कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Differentiate both sides (Leibniz rule) to get a DE; the initial condition comes from putting the lower limit in the identity.",
+        "दोनों पक्षों का अवकलन (लेबनिज़ नियम) करके अवकल समीकरण प्राप्त कीजिए; प्रारम्भिक प्रतिबन्ध सर्वसमिका में निम्न सीमा रखने से मिलता है।"
+       ],
+       [
+        "Ex: $f(x)=\\int_0^xe^tf(t)\\,dt+e^x\\Rightarrow f'=e^x(f+1),\\ f(0)=1\\Rightarrow f(x)=2e^{e^x-1}-1$.",
+        "उदा: $f(x)=\\int_0^xe^tf(t)\\,dt+e^x\\Rightarrow f'=e^x(f+1),\\ f(0)=1\\Rightarrow f(x)=2e^{e^x-1}-1$।"
+       ]
+      ]
+     },
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:26, J-I:33-36, J-II:8, J-II:9, J-II:36, J-II:37, J-M(XIII):34, C-I:2, C-II:16, C-II:17, C-II:20",
+      "q": [
+       "How to solve rate problems (growth and decay, Newton's law of cooling, mixture in a tank) by forming a differential equation?",
+       "दर वाले प्रश्न (वृद्धि व क्षय, न्यूटन का शीतलन नियम, टंकी में मिश्रण) अवकल समीकरण बनाकर कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Write \"rate of change = given law\": growth/decay $\\frac{dN}{dt}=kN\\Rightarrow N=N_0e^{kt}$; cooling $\\frac{dT}{dt}=-k(T-T_s)$; mixture $\\frac{dQ}{dt}=(\\text{rate in})-\\frac{Q}{V(t)}\\cdot(\\text{outflow})$. Two data fix $C$ and $k$.",
+        "\"परिवर्तन की दर = दिया नियम\" लिखिए: वृद्धि/क्षय $\\frac{dN}{dt}=kN\\Rightarrow N=N_0e^{kt}$; शीतलन $\\frac{dT}{dt}=-k(T-T_s)$; मिश्रण $\\frac{dQ}{dt}=(\\text{rate in})-\\frac{Q}{V(t)}\\cdot(\\text{outflow})$। दो आँकड़ों से $C$ व $k$ निकलते हैं।"
+       ],
+       [
+        "Ex: $N(0)=1000$, $20\\%$ rise in $2$ h: $N=1000\\left(\\frac65\\right)^{t/2}$; doubling time $t=\\frac{2\\ln2}{\\ln(6/5)}$.",
+        "उदा: $N(0)=1000$, $2$ घण्टे में $20\\%$ वृद्धि: $N=1000\\left(\\frac65\\right)^{t/2}$; दुगुना होने का समय $t=\\frac{2\\ln2}{\\ln(6/5)}$।"
+       ]
+      ]
+     },
+     {
+      "id": "14",
+      "o": 14,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to assume the integration constant as $\\ln c$?",
+       "समाकलन अचर को $\\ln c$ कब मानते हैं?"
+      ],
+      "a": [
+       [
+        "When the other terms after integration are logarithms: write $+\\ln c$ so that the answer can be combined into one log and written without logs.",
+        "जब समाकलन के बाद अन्य पद लघुगणक हों: $+\\ln c$ लिखिए ताकि उत्तर एक लघुगणक में मिलकर बिना लघुगणक के लिखा जा सके।"
+       ],
+       [
+        "Ex: $\\frac{dy}{y}=\\frac{dx}{x}\\Rightarrow\\ln|y|=\\ln|x|+\\ln c\\Rightarrow y=cx$.",
+        "उदा: $\\frac{dy}{y}=\\frac{dx}{x}\\Rightarrow\\ln|y|=\\ln|x|+\\ln c\\Rightarrow y=cx$।"
+       ]
+      ]
+     },
+     {
+      "id": "15",
+      "o": 15,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "What do you mean by initial ordinate of a line (tangent)?",
+       "किसी रेखा (स्पर्श रेखा) की प्रारम्भिक कोटि से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Initial ordinate = the $y$-intercept of the line. For the tangent at $P(x,y)$: $y-x\\frac{dy}{dx}$.",
+        "प्रारम्भिक कोटि = रेखा का $y$-अन्तःखण्ड। $P(x,y)$ पर स्पर्श रेखा के लिए: $y-x\\frac{dy}{dx}$।"
+       ]
+      ]
+     },
+     {
+      "id": "16",
+      "o": 16,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by polar radius of a point?",
+       "किसी बिन्दु की ध्रुवीय त्रिज्या से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "Polar radius (radius vector) of $P(x,y)$ = distance $OP=\\sqrt{x^2+y^2}$; the polar angle is $\\theta$ with $\\tan\\theta=\\frac yx$.",
+        "$P(x,y)$ की ध्रुवीय त्रिज्या (त्रिज्या सदिश) = दूरी $OP=\\sqrt{x^2+y^2}$; ध्रुवीय कोण $\\theta$, जहाँ $\\tan\\theta=\\frac yx$।"
+       ],
+       [
+        "Ex: normal length $=OP$: $y^2(1+m^2)=x^2+y^2\\Rightarrow m=\\pm\\frac xy\\Rightarrow x^2\\mp y^2=C$ (rectangular hyperbola or circle).",
+        "उदा: अभिलम्ब की लम्बाई $=OP$: $y^2(1+m^2)=x^2+y^2\\Rightarrow m=\\pm\\frac xy\\Rightarrow x^2\\mp y^2=C$ (आयतीय अतिपरवलय या वृत्त)।"
+       ]
+      ]
+     },
+     {
+      "id": "17",
+      "o": 17,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to solve $\\frac{dy}{dx}=f(ax+by+c)$?",
+       "$\\frac{dy}{dx}=f(ax+by+c)$ कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Put $t=ax+by+c$: $\\frac{dt}{dx}=a+bf(t)\\Rightarrow\\int\\frac{dt}{a+bf(t)}=x+C$.",
+        "$t=ax+by+c$ रखिए: $\\frac{dt}{dx}=a+bf(t)\\Rightarrow\\int\\frac{dt}{a+bf(t)}=x+C$।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=(x+y)^2$: $t=x+y$, $\\frac{dt}{dx}=1+t^2\\Rightarrow\\tan^{-1}(x+y)=x+C$.",
+        "उदा: $\\frac{dy}{dx}=(x+y)^2$: $t=x+y$, $\\frac{dt}{dx}=1+t^2\\Rightarrow\\tan^{-1}(x+y)=x+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "18",
+      "o": 18,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "How to solve $\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$ if $a_2+b_1=0$?",
+       "$\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$ को $a_2+b_1=0$ होने पर कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Cross-multiply; the terms $a_2x\\,dy+(-b_1)y\\,dx$ combine to $a_2\\,d(xy)$; integrate term by term.",
+        "वज्र-गुणन कीजिए; पद $a_2x\\,dy+(-b_1)y\\,dx$ मिलकर $a_2\\,d(xy)$ बनते हैं; पदशः समाकलन कीजिए।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=\\frac{4x-3y}{3x-2y}$: $3\\,d(xy)-2y\\,dy-4x\\,dx=0\\Rightarrow3xy-y^2-2x^2=c$.",
+        "उदा: $\\frac{dy}{dx}=\\frac{4x-3y}{3x-2y}$: $3\\,d(xy)-2y\\,dy-4x\\,dx=0\\Rightarrow3xy-y^2-2x^2=c$।"
+       ]
+      ]
+     },
+     {
+      "id": "19",
+      "o": 19,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What are the two polar substitutions and derive their corresponding results involving differentials?",
+       "दो ध्रुवीय प्रतिस्थापन कौन-से हैं और उनसे अवकलों वाले परिणाम व्युत्पन्न कीजिए।"
+      ],
+      "a": [
+       [
+        "$x=r\\cos\\theta,\\ y=r\\sin\\theta$: $x\\,dx+y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^2d\\theta$.",
+        "$x=r\\cos\\theta,\\ y=r\\sin\\theta$: $x\\,dx+y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^2d\\theta$।"
+       ],
+       [
+        "$x=r\\sec\\theta,\\ y=r\\tan\\theta$: $x\\,dx-y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$.",
+        "$x=r\\sec\\theta,\\ y=r\\tan\\theta$: $x\\,dx-y\\,dy=r\\,dr$, $x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$।"
+       ],
+       [
+        "(From $x^2+y^2=r^2$ and $\\tan\\theta=\\frac yx$; resp. $x^2-y^2=r^2$ and $\\sin\\theta=\\frac yx$.)",
+        "($x^2+y^2=r^2$ व $\\tan\\theta=\\frac yx$ से; तथा $x^2-y^2=r^2$ व $\\sin\\theta=\\frac yx$ से।)"
+       ]
+      ]
+     },
+     {
+      "id": "20",
+      "o": 20,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to use polar substitutions in differential equation questions?",
+       "अवकल समीकरण के प्रश्नों में ध्रुवीय प्रतिस्थापन कब प्रयोग करते हैं?"
+      ],
+      "a": [
+       [
+        "When the DE contains $x\\,dx\\pm y\\,dy$, $x\\,dy-y\\,dx$ together with $x^2\\pm y^2$ or $\\frac yx$.",
+        "जब समीकरण में $x\\,dx\\pm y\\,dy$, $x\\,dy-y\\,dx$ के साथ $x^2\\pm y^2$ या $\\frac yx$ हों।"
+       ],
+       [
+        "Ex: $\\frac{x\\,dx+y\\,dy}{\\sqrt{x^2+y^2}}=\\frac{y\\,dx-x\\,dy}{x^2}$: $dr=-\\sec^2\\theta\\,d\\theta\\Rightarrow\\sqrt{x^2+y^2}+\\frac yx=C$.",
+        "उदा: $\\frac{x\\,dx+y\\,dy}{\\sqrt{x^2+y^2}}=\\frac{y\\,dx-x\\,dy}{x^2}$: $dr=-\\sec^2\\theta\\,d\\theta\\Rightarrow\\sqrt{x^2+y^2}+\\frac yx=C$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Homogeneous Differential Equation",
+    "hi": "समघातीय अवकल समीकरण",
+    "items": [
+     {
+      "id": "21",
+      "o": 21,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a given differential equation is a homogeneous differential equation?",
+       "कैसे जाँचें कि दिया गया अवकल समीकरण समघातीय है?"
+      ],
+      "a": [
+       [
+        "$\\frac{dy}{dx}=\\frac{f(x,y)}{g(x,y)}$ is homogeneous if $f,g$ are homogeneous of the same degree: $f(\\lambda x,\\lambda y)=\\lambda^nf(x,y)$; equivalently $\\frac{dy}{dx}=F\\left(\\frac yx\\right)$.",
+        "$\\frac{dy}{dx}=\\frac{f(x,y)}{g(x,y)}$ समघातीय है यदि $f,g$ समान घात के समघातीय फलन हों: $f(\\lambda x,\\lambda y)=\\lambda^nf(x,y)$; अर्थात् $\\frac{dy}{dx}=F\\left(\\frac yx\\right)$।"
+       ],
+       [
+        "Ex: $(x-y)\\frac{dy}{dx}=x+2y$ is homogeneous (both sides degree $1$).",
+        "उदा: $(x-y)\\frac{dy}{dx}=x+2y$ समघातीय है (दोनों ओर घात $1$)।"
+       ]
+      ]
+     },
+     {
+      "id": "22",
+      "o": 22,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What substitution is to be done in homogeneous differential equations?",
+       "समघातीय अवकल समीकरणों में कौन-सा प्रतिस्थापन करते हैं?"
+      ],
+      "a": [
+       [
+        "Put $y=vx$: $\\frac{dy}{dx}=v+x\\frac{dv}{dx}$, so $\\int\\frac{dv}{F(v)-v}=\\ln|x|+c$. (If $\\frac{dx}{dy}=G\\left(\\frac xy\\right)$ is simpler, put $x=vy$.)",
+        "$y=vx$ रखिए: $\\frac{dy}{dx}=v+x\\frac{dv}{dx}$, अतः $\\int\\frac{dv}{F(v)-v}=\\ln|x|+c$। (यदि $\\frac{dx}{dy}=G\\left(\\frac xy\\right)$ सरल हो तो $x=vy$ रखिए।)"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=\\frac{x+y}{x}$: $x\\frac{dv}{dx}=1\\Rightarrow y=x\\ln|x|+cx$.",
+        "उदा: $\\frac{dy}{dx}=\\frac{x+y}{x}$: $x\\frac{dv}{dx}=1\\Rightarrow y=x\\ln|x|+cx$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Equations reducible to Homogeneous Differential Equation",
+    "hi": "समघातीय अवकल समीकरण में बदलने योग्य समीकरण",
+    "items": [
+     {
+      "id": "23",
+      "o": 23,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve the equation $\\frac{dy}{dx}=\\frac{L_1}{L_2}$ if $L_1$ and $L_2$ are intersecting lines?",
+       "यदि $L_1$ और $L_2$ प्रतिच्छेदी रेखाएँ हों तो $\\frac{dy}{dx}=\\frac{L_1}{L_2}$ कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "$L_i=a_ix+b_iy+c_i$. Find the point of intersection $(h,k)$; put $x=X+h$, $y=Y+k$: $\\frac{dY}{dX}=\\frac{a_1X+b_1Y}{a_2X+b_2Y}$ (homogeneous), then $Y=vX$.",
+        "$L_i=a_ix+b_iy+c_i$। प्रतिच्छेद बिन्दु $(h,k)$ ज्ञात कीजिए; $x=X+h$, $y=Y+k$ रखिए: $\\frac{dY}{dX}=\\frac{a_1X+b_1Y}{a_2X+b_2Y}$ (समघातीय), फिर $Y=vX$।"
+       ],
+       [
+        "If $L_1\\parallel L_2$ put $t=a_1x+b_1y$ (#17); if $a_2+b_1=0$ group into $d(xy)$ (#18).",
+        "यदि $L_1\\parallel L_2$ तो $t=a_1x+b_1y$ (#17); यदि $a_2+b_1=0$ तो $d(xy)$ में समूहन (#18)।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=\\frac{x+2y-4}{2x+y-5}$: lines meet at $(2,1)$; $X=x-2,\\ Y=y-1$: $\\frac{dY}{dX}=\\frac{X+2Y}{2X+Y}$.",
+        "उदा: $\\frac{dy}{dx}=\\frac{x+2y-4}{2x+y-5}$: रेखाएँ $(2,1)$ पर मिलती हैं; $X=x-2,\\ Y=y-1$: $\\frac{dY}{dX}=\\frac{X+2Y}{2X+Y}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Linear Differential Equation",
+    "hi": "रैखिक अवकल समीकरण",
+    "items": [
+     {
+      "id": "24",
+      "o": 24,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a given differential equation is a linear differential equation?",
+       "कैसे जाँचें कि दिया गया अवकल समीकरण रैखिक है?"
+      ],
+      "a": [
+       [
+        "Linear: the dependent variable and all its derivatives occur only in the first degree and are never multiplied together (no $y^2$, $yy'$, $\\sin y$, ...).",
+        "रैखिक: आश्रित चर और उसके सभी अवकलज केवल प्रथम घात में हों और आपस में गुणा न हों ($y^2$, $yy'$, $\\sin y$, ... नहीं)।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}+y\\tan x=\\sec x$ is linear; $\\frac{dy}{dx}+y^2=x$ is not.",
+        "उदा: $\\frac{dy}{dx}+y\\tan x=\\sec x$ रैखिक है; $\\frac{dy}{dx}+y^2=x$ नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "25",
+      "o": 25,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the general form of a linear differential equation?",
+       "रैखिक अवकल समीकरण का व्यापक रूप क्या है?"
+      ],
+      "a": [
+       "$a_0(x)\\dfrac{d^ny}{dx^n}+a_1(x)\\dfrac{d^{n-1}y}{dx^{n-1}}+\\dots+a_n(x)\\,y=\\phi(x)$",
+       [
+        "The coefficients $a_0,\\dots,a_n$ and $\\phi$ are functions of $x$ only.",
+        "गुणांक $a_0,\\dots,a_n$ तथा $\\phi$ केवल $x$ के फलन हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "26",
+      "o": 26,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Are all differential equations of degree one linear?",
+       "क्या घात एक वाले सभी अवकल समीकरण रैखिक होते हैं?"
+      ],
+      "a": [
+       [
+        "No. A linear DE always has degree $1$, but a degree-$1$ DE need not be linear.",
+        "नहीं। रैखिक समीकरण की घात सदैव $1$ होती है, परन्तु घात $1$ वाला समीकरण आवश्यक रूप से रैखिक नहीं।"
+       ],
+       [
+        "Ex: $\\frac{d^2y}{dx^2}+\\left(\\frac{dy}{dx}\\right)^3+y^2=0$: degree $1$, not linear.",
+        "उदा: $\\frac{d^2y}{dx^2}+\\left(\\frac{dy}{dx}\\right)^3+y^2=0$: घात $1$, रैखिक नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "27",
+      "o": 27,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the standard form of a first order linear differential equation?",
+       "प्रथम कोटि के रैखिक अवकल समीकरण का मानक रूप क्या है?"
+      ],
+      "a": [
+       "$\\dfrac{dy}{dx}+P(x)\\,y=Q(x)$",
+       [
+        "Linear in $x$: $\\frac{dx}{dy}+P(y)\\,x=Q(y)$ (use it when $y$ appears non-linearly but $x$ linearly).",
+        "$x$ में रैखिक: $\\frac{dx}{dy}+P(y)\\,x=Q(y)$ (जब $y$ अरैखिक पर $x$ रैखिक रूप में हो)।"
+       ]
+      ]
+     },
+     {
+      "id": "28",
+      "o": 28,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve a first order linear differential equation?",
+       "प्रथम कोटि का रैखिक अवकल समीकरण कैसे हल करते हैं?"
+      ],
+      "a": [
+       "$\\text{IF}=e^{\\int P\\,dx},\\qquad y\\cdot\\text{IF}=\\displaystyle\\int Q\\cdot\\text{IF}\\,dx+C$",
+       [
+        "Bring to standard form, multiply by IF; the left side becomes $\\frac{d}{dx}(y\\cdot\\text{IF})$; integrate. Use $e^{\\ln g}=g$.",
+        "मानक रूप में लाइए, IF से गुणा कीजिए; बायाँ पक्ष $\\frac{d}{dx}(y\\cdot\\text{IF})$ बनता है; समाकलन कीजिए। $e^{\\ln g}=g$ का प्रयोग करें।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}+\\frac yx=x^2$: IF $=x$, $xy=\\frac{x^4}{4}+C$.",
+        "उदा: $\\frac{dy}{dx}+\\frac yx=x^2$: IF $=x$, $xy=\\frac{x^4}{4}+C$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "J-A:9, C-II:21",
+      "q": [
+       "How to handle a differential inequality such as $f'(x)>2f(x)$?",
+       "$f'(x)>2f(x)$ जैसी अवकल असमिका को कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Bring it to $f'+Pf>0$ and multiply by IF $=e^{\\int P\\,dx}>0$: $\\left(f\\,e^{\\int P\\,dx}\\right)'>0$, so $f\\,e^{\\int P\\,dx}$ is increasing; compare with its value at the given point.",
+        "इसे $f'+Pf>0$ रूप में लाकर IF $=e^{\\int P\\,dx}>0$ से गुणा कीजिए: $\\left(f\\,e^{\\int P\\,dx}\\right)'>0$, अतः $f\\,e^{\\int P\\,dx}$ वर्धमान है; दिए बिन्दु पर मान से तुलना कीजिए।"
+       ],
+       [
+        "Ex: $f'>2f$, $f(0)=1$: $(e^{-2x}f)'>0\\Rightarrow f(x)>e^{2x}$ for $x>0$.",
+        "उदा: $f'>2f$, $f(0)=1$: $(e^{-2x}f)'>0\\Rightarrow x>0$ के लिए $f(x)>e^{2x}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Equations reducible to Linear Differential Equation",
+    "hi": "रैखिक अवकल समीकरण में बदलने योग्य समीकरण",
+    "items": [
+     {
+      "id": "29",
+      "o": 29,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Write the standard form of Bernoulli's equation.",
+       "बरनौली समीकरण का मानक रूप लिखिए।"
+      ],
+      "a": [
+       "$\\dfrac{dy}{dx}+P(x)\\,y=Q(x)\\,y^n\\quad(n\\ne0,1)$"
+      ]
+     },
+     {
+      "id": "30",
+      "o": 30,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What substitution is to be done in Bernoulli's equation?",
+       "बरनौली समीकरण में कौन-सा प्रतिस्थापन करते हैं?"
+      ],
+      "a": [
+       [
+        "Divide by $y^n$ and put $z=y^{1-n}$: $\\frac{dz}{dx}+(1-n)P\\,z=(1-n)Q$ (linear in $z$).",
+        "$y^n$ से भाग देकर $z=y^{1-n}$ रखिए: $\\frac{dz}{dx}+(1-n)P\\,z=(1-n)Q$ ($z$ में रैखिक)।"
+       ],
+       [
+        "Ex: $\\frac{dy}{dx}=xy+x^3y^2$: $z=\\frac1y$, $\\frac{dz}{dx}+xz=-x^3\\Rightarrow z=2-x^2+Ce^{-x^2/2}$.",
+        "उदा: $\\frac{dy}{dx}=xy+x^3y^2$: $z=\\frac1y$, $\\frac{dz}{dx}+xz=-x^3\\Rightarrow z=2-x^2+Ce^{-x^2/2}$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "When to check for change of variable to convert into a linear differential equation?",
+       "रैखिक अवकल समीकरण में बदलने के लिए चर-परिवर्तन कब देखना चाहिए?"
+      ],
+      "a": [
+       [
+        "When the DE has the form $f'(y)\\frac{dy}{dx}+P(x)f(y)=Q(x)$: put $f(y)=t$ to get $\\frac{dt}{dx}+Pt=Q$ (e.g. $\\sec^2y$ with $\\tan y$, $e^y$ with $e^y$, $\\frac1y$ with $\\ln y$).",
+        "जब समीकरण $f'(y)\\frac{dy}{dx}+P(x)f(y)=Q(x)$ रूप का हो: $f(y)=t$ रखकर $\\frac{dt}{dx}+Pt=Q$ (जैसे $\\sec^2y$ के साथ $\\tan y$, $e^y$ के साथ $e^y$, $\\frac1y$ के साथ $\\ln y$)।"
+       ],
+       [
+        "Ex: $\\sec^2y\\frac{dy}{dx}+\\tan y=x$: $t=\\tan y$, $t'+t=x\\Rightarrow\\tan y=x-1+Ce^{-x}$.",
+        "उदा: $\\sec^2y\\frac{dy}{dx}+\\tan y=x$: $t=\\tan y$, $t'+t=x\\Rightarrow\\tan y=x-1+Ce^{-x}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Orthogonal Trajectory",
+    "hi": "लम्बकोणीय संछेदी",
+    "items": [
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define orthogonal trajectory of a family of curves.",
+       "वक्र कुल का लम्बकोणीय संछेदी परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "A curve that cuts every curve of the family at a fixed angle $\\alpha$ is an isogonal trajectory; if $\\alpha=\\frac\\pi2$ it is an orthogonal trajectory.",
+        "जो वक्र कुल के प्रत्येक वक्र को नियत कोण $\\alpha$ पर काटे, वह समान-कोण संछेदी है; यदि $\\alpha=\\frac\\pi2$ तो वह लम्बकोणीय संछेदी है।"
+       ],
+       [
+        "Ex: lines through $O$ are the orthogonal trajectories of circles centred at $O$.",
+        "उदा: $O$ से जाने वाली रेखाएँ, $O$ केन्द्र वाले वृत्तों की लम्बकोणीय संछेदी हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to find the orthogonal trajectory of a family of curves?",
+       "वक्र कुल का लम्बकोणीय संछेदी कैसे ज्ञात करते हैं?"
+      ],
+      "a": [
+       [
+        "(i) Form the DE of the family (eliminate the constant). (ii) Replace $\\frac{dy}{dx}$ by $-\\frac{dx}{dy}$. (iii) Solve the new DE.",
+        "(i) कुल का अवकल समीकरण बनाइए (अचर का विलोपन)। (ii) $\\frac{dy}{dx}$ के स्थान पर $-\\frac{dx}{dy}$ रखिए। (iii) नया समीकरण हल कीजिए।"
+       ],
+       [
+        "Ex: $x^2+y^2-2ay=0$: $\\frac{dy}{dx}=\\frac{2xy}{x^2-y^2}$; trajectories $\\frac{dy}{dx}=\\frac{y^2-x^2}{2xy}$, i.e. $x^2+y^2=cx$.",
+        "उदा: $x^2+y^2-2ay=0$: $\\frac{dy}{dx}=\\frac{2xy}{x^2-y^2}$; संछेदी $\\frac{dy}{dx}=\\frac{y^2-x^2}{2xy}$, अर्थात् $x^2+y^2=cx$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Exact Differential",
+    "hi": "यथातथ अवकल",
+    "items": [
+     {
+      "id": "34",
+      "o": 34,
+      "tag": "rephrased",
+      "src": "",
+      "q": [
+       "Write three results of exact differential.",
+       "यथातथ अवकल के तीन परिणाम लिखिए।"
+      ],
+      "a": [
+       "$x\\,dy+y\\,dx=d(xy),\\quad\\dfrac{x\\,dy-y\\,dx}{x^2}=d\\left(\\dfrac yx\\right),\\quad\\dfrac{y\\,dx-x\\,dy}{y^2}=d\\left(\\dfrac xy\\right)$",
+       "$\\dfrac{x\\,dy+y\\,dx}{xy}=d(\\ln xy),\\quad\\dfrac{x\\,dy-y\\,dx}{xy}=d\\left(\\ln\\dfrac yx\\right),\\quad\\dfrac{x\\,dy-y\\,dx}{x^2+y^2}=d\\left(\\tan^{-1}\\dfrac yx\\right)$",
+       "$\\dfrac{x\\,dx+y\\,dy}{x^2+y^2}=d\\left(\\tfrac12\\ln(x^2+y^2)\\right),\\quad\\dfrac{x\\,dy+y\\,dx}{x^2y^2}=-d\\left(\\dfrac1{xy}\\right),\\quad\\dfrac{ye^x\\,dx-e^x\\,dy}{y^2}=d\\left(\\dfrac{e^x}{y}\\right)$"
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to solve exact differential based questions?",
+       "यथातथ अवकल पर आधारित प्रश्न कैसे हल करते हैं?"
+      ],
+      "a": [
+       [
+        "Group the terms so that each group is a standard exact differential (divide by a suitable factor such as $x^2$, $y^2$, $xy$, $x^2+y^2$), then integrate term by term. For $yf(xy)\\,dx+xg(xy)\\,dy=0$ put $xy=v$.",
+        "पदों का ऐसा समूहन कीजिए कि प्रत्येक समूह मानक यथातथ अवकल बने (उपयुक्त गुणक जैसे $x^2$, $y^2$, $xy$, $x^2+y^2$ से भाग दें), फिर पदशः समाकलन। $yf(xy)\\,dx+xg(xy)\\,dy=0$ में $xy=v$ रखिए।"
+       ],
+       [
+        "Ex: $(2xy^2-y)dx+x\\,dy=0$: $2x\\,dx-d\\left(\\frac xy\\right)=0\\Rightarrow x^2-\\frac xy=c$.",
+        "उदा: $(2xy^2-y)dx+x\\,dy=0$: $2x\\,dx-d\\left(\\frac xy\\right)=0\\Rightarrow x^2-\\frac xy=c$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Basic terms",
+    "hi": "1. मूल पद",
+    "color": "blue",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "DE: relation of $x$, $y$ and derivatives of $y$; ordinary = one independent variable, partial = two or more",
+        "अवकल समीकरण: $x$, $y$ व $y$ के अवकलजों का सम्बन्ध; साधारण = एक स्वतन्त्र चर, आंशिक = दो या अधिक"
+       ],
+       [
+        "General solution (complete integral / primitive): number of independent constants = order",
+        "व्यापक हल (पूर्ण समाकल / पूर्वग): स्वतन्त्र अचरों की संख्या = कोटि"
+       ],
+       [
+        "Particular solution: constants fixed by the given condition $y(x_0)=y_0$",
+        "विशिष्ट हल: दिए प्रतिबन्ध $y(x_0)=y_0$ से अचर निश्चित"
+       ],
+       [
+        "A condition like \"$y$ bounded\" or \"$y\\to0$ as $x\\to\\infty$\" also fixes a constant (usually makes the $Ce^{kx}$ term vanish)",
+        "\"$y$ परिबद्ध\" या \"$x\\to\\infty$ पर $y\\to0$\" जैसा प्रतिबन्ध भी अचर निश्चित करता है (प्रायः $Ce^{kx}$ पद शून्य)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Order and degree",
+    "hi": "2. कोटि और घात",
+    "color": "teal",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Order = highest derivative present",
+        "कोटि = उपस्थित उच्चतम अवकलज"
+       ],
+       [
+        "Degree = power of the highest derivative after making the DE a polynomial in derivatives (clear radicals, fractional powers)",
+        "घात = समीकरण को अवकलजों में बहुपद बनाने (मूलांक, भिन्नात्मक घात हटाने) के बाद उच्चतम अवकलज की घात"
+       ],
+       [
+        "Degree not defined if a derivative stays inside $\\sin,\\ e^{(\\ )},\\ \\ln$; but $\\sin^{-1}y'=x\\Rightarrow y'=\\sin x$ has degree $1$",
+        "यदि अवकलज $\\sin,\\ e^{(\\ )},\\ \\ln$ के अन्दर रहे तो घात परिभाषित नहीं; परन्तु $\\sin^{-1}y'=x\\Rightarrow y'=\\sin x$ की घात $1$"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Order and degree are positive integers; remove radicals of derivatives before reading the degree",
+        "कोटि और घात धनात्मक पूर्णांक हैं; घात पढ़ने से पहले अवकलजों के मूलांक हटाइए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Formation of a DE",
+    "hi": "3. अवकल समीकरण का निर्माण",
+    "color": "green",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Write the family with the fewest independent constants ($c_1e^{x+c_2}=Ae^x$)",
+        "कुल को न्यूनतम स्वतन्त्र अचरों में लिखिए ($c_1e^{x+c_2}=Ae^x$)"
+       ],
+       [
+        "Differentiate as many times as there are constants",
+        "जितने अचर, उतनी बार अवकलन"
+       ],
+       [
+        "Eliminate the constants; order of DE = number of constants",
+        "अचरों का विलोपन; कोटि = अचरों की संख्या"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Family in words: write its equation first (circles touching $x$-axis at $O$: $x^2+y^2-2ay=0$)",
+        "शब्दों में कुल: पहले समीकरण लिखिए ($O$ पर $x$-अक्ष स्पर्शी वृत्त: $x^2+y^2-2ay=0$)"
+       ],
+       [
+        "$y^2=4A(x+A)$ has $1$ constant; $y^2=4A(x+B)$ has $2$",
+        "$y^2=4A(x+A)$ में $1$ अचर; $y^2=4A(x+B)$ में $2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Variable separable",
+    "hi": "4. चर पृथक्करणीय",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$f(x)\\,dx=g(y)\\,dy\\ \\Rightarrow\\ \\int f(x)\\,dx=\\int g(y)\\,dy+c$",
+        "$f(x)\\,dx=g(y)\\,dy\\ \\Rightarrow\\ \\int f(x)\\,dx=\\int g(y)\\,dy+c$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Take $+\\ln c$ when the other terms are logarithms",
+        "अन्य पद लघुगणक हों तो $+\\ln c$ लें"
+       ],
+       [
+        "$\\frac{dy}{dx}=f(ax+by+c)$: put $t=ax+by+c$, $\\frac{dt}{dx}=a+bf(t)$",
+        "$\\frac{dy}{dx}=f(ax+by+c)$: $t=ax+by+c$, $\\frac{dt}{dx}=a+bf(t)$"
+       ],
+       [
+        "$\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$, $a_2+b_1=0$: cross-multiply, group $d(xy)$",
+        "$\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$, $a_2+b_1=0$: वज्र-गुणन, $d(xy)$ समूहन"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Do not lose solutions when dividing (e.g. $y=0$, $y=3$ constant solutions)",
+        "भाग देते समय हल न खोएँ (जैसे $y=0$, $y=3$ अचर हल)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Polar substitutions",
+    "hi": "5. ध्रुवीय प्रतिस्थापन",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$x=r\\cos\\theta,\\ y=r\\sin\\theta:\\ x\\,dx+y\\,dy=r\\,dr,\\ \\ x\\,dy-y\\,dx=r^2d\\theta$",
+        "$x=r\\cos\\theta,\\ y=r\\sin\\theta:\\ x\\,dx+y\\,dy=r\\,dr,\\ \\ x\\,dy-y\\,dx=r^2d\\theta$"
+       ],
+       [
+        "$x=r\\sec\\theta,\\ y=r\\tan\\theta:\\ x\\,dx-y\\,dy=r\\,dr,\\ \\ x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$",
+        "$x=r\\sec\\theta,\\ y=r\\tan\\theta:\\ x\\,dx-y\\,dy=r\\,dr,\\ \\ x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Use when $x\\,dx\\pm y\\,dy$, $x\\,dy-y\\,dx$ appear with $x^2\\pm y^2$ or $\\frac yx$",
+        "जब $x\\,dx\\pm y\\,dy$, $x\\,dy-y\\,dx$ के साथ $x^2\\pm y^2$ या $\\frac yx$ हों"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Curves from geometric conditions",
+    "hi": "6. ज्यामितीय प्रतिबन्धों से वक्र",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "Tangent: $Y-y=m(X-x)$, $x$-int $=x-\\frac ym$, $y$-int (initial ordinate) $=y-mx$",
+        "स्पर्श रेखा: $Y-y=m(X-x)$, $x$-अन्तःखण्ड $=x-\\frac ym$, $y$-अन्तःखण्ड (प्रारम्भिक कोटि) $=y-mx$"
+       ],
+       [
+        "Normal: $Y-y=-\\frac1m(X-x)$, $x$-int $=x+my$",
+        "अभिलम्ब: $Y-y=-\\frac1m(X-x)$, $x$-अन्तःखण्ड $=x+my$"
+       ],
+       [
+        "Subtangent $\\left|\\frac ym\\right|$, subnormal $|ym|$, lengths $\\left|\\frac ym\\right|\\sqrt{1+m^2}$, $|y|\\sqrt{1+m^2}$",
+        "अधःस्पर्शी $\\left|\\frac ym\\right|$, अधोलम्ब $|ym|$, लम्बाइयाँ $\\left|\\frac ym\\right|\\sqrt{1+m^2}$, $|y|\\sqrt{1+m^2}$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Take $P(x,y)$ on the curve, $m=\\frac{dy}{dx}$",
+        "वक्र पर $P(x,y)$, $m=\\frac{dy}{dx}$ लें"
+       ],
+       [
+        "Translate the condition into a DE (polar radius $OP=\\sqrt{x^2+y^2}$)",
+        "प्रतिबन्ध को अवकल समीकरण में बदलिए (ध्रुवीय त्रिज्या $OP=\\sqrt{x^2+y^2}$)"
+       ],
+       [
+        "Solve; use the given point; check both signs of $\\pm$",
+        "हल कीजिए; दिया बिन्दु लगाइए; $\\pm$ के दोनों चिह्न जाँचिए"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Area or arc-length condition $\\int_a^x\\dots$: differentiate both sides first",
+        "क्षेत्रफल या चाप-लम्बाई प्रतिबन्ध $\\int_a^x\\dots$: पहले दोनों पक्षों का अवकलन"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Integral identities",
+    "hi": "7. समाकल सर्वसमिकाएँ",
+    "color": "brown",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Differentiate the identity (Leibniz rule) to get a DE",
+        "सर्वसमिका का अवकलन (लेबनिज़ नियम) कर अवकल समीकरण बनाइए"
+       ],
+       [
+        "Put $x=$ lower limit in the identity for the initial value",
+        "प्रारम्भिक मान के लिए सर्वसमिका में $x=$ निम्न सीमा रखिए"
+       ],
+       [
+        "Solve the DE (separable or linear)",
+        "समीकरण हल कीजिए (पृथक्करणीय या रैखिक)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Homogeneous DE",
+    "hi": "8. समघातीय अवकल समीकरण",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\frac{dy}{dx}=F\\left(\\frac yx\\right):\\ y=vx,\\ \\ \\int\\dfrac{dv}{F(v)-v}=\\ln|x|+c$",
+        "$\\frac{dy}{dx}=F\\left(\\frac yx\\right):\\ y=vx,\\ \\ \\int\\dfrac{dv}{F(v)-v}=\\ln|x|+c$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Test: $f(\\lambda x,\\lambda y)=\\lambda^nf(x,y)$ for numerator and denominator with the same $n$",
+        "परीक्षण: अंश व हर दोनों के लिए समान $n$ से $f(\\lambda x,\\lambda y)=\\lambda^nf(x,y)$"
+       ],
+       [
+        "If $\\frac{dx}{dy}=G\\left(\\frac xy\\right)$ is simpler, put $x=vy$",
+        "यदि $\\frac{dx}{dy}=G\\left(\\frac xy\\right)$ सरल हो, $x=vy$ रखें"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Reducible to homogeneous",
+    "hi": "9. समघातीय में बदलने योग्य",
+    "color": "teal",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "$\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$: if $a_2+b_1=0$, group into $d(xy)$",
+        "$\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$: यदि $a_2+b_1=0$, $d(xy)$ में समूहन"
+       ],
+       [
+        "If $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}$ (parallel), put $t=a_1x+b_1y$",
+        "यदि $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}$ (समान्तर), $t=a_1x+b_1y$"
+       ],
+       [
+        "Else shift to the intersection $(h,k)$: $x=X+h,\\ y=Y+k$, then $Y=vX$",
+        "अन्यथा प्रतिच्छेद $(h,k)$ पर स्थानान्तरण: $x=X+h,\\ y=Y+k$, फिर $Y=vX$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "10. Linear DE",
+    "hi": "10. रैखिक अवकल समीकरण",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\dfrac{dy}{dx}+Py=Q:\\quad \\text{IF}=e^{\\int P\\,dx},\\quad y\\cdot\\text{IF}=\\int Q\\cdot\\text{IF}\\,dx+C$",
+        "$\\dfrac{dy}{dx}+Py=Q:\\quad \\text{IF}=e^{\\int P\\,dx},\\quad y\\cdot\\text{IF}=\\int Q\\cdot\\text{IF}\\,dx+C$"
+       ],
+       [
+        "$\\dfrac{dx}{dy}+P_1x=Q_1:\\quad x\\cdot e^{\\int P_1dy}=\\int Q_1e^{\\int P_1dy}\\,dy+C$",
+        "$\\dfrac{dx}{dy}+P_1x=Q_1:\\quad x\\cdot e^{\\int P_1dy}=\\int Q_1e^{\\int P_1dy}\\,dy+C$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Linear: $y$ and derivatives only in degree one, never multiplied; general form $a_0y^{(n)}+\\dots+a_ny=\\phi(x)$",
+        "रैखिक: $y$ व अवकलज केवल प्रथम घात में, आपस में गुणा नहीं; व्यापक रूप $a_0y^{(n)}+\\dots+a_ny=\\phi(x)$"
+       ],
+       [
+        "Linear $\\Rightarrow$ degree $1$, but degree $1\\not\\Rightarrow$ linear",
+        "रैखिक $\\Rightarrow$ घात $1$, परन्तु घात $1\\not\\Rightarrow$ रैखिक"
+       ],
+       [
+        "$y$ non-linear but $x$ linear: use the $\\frac{dx}{dy}$ form",
+        "$y$ अरैखिक पर $x$ रैखिक: $\\frac{dx}{dy}$ रूप लें"
+       ],
+       [
+        "Inequality $f'+Pf>0$ (e.g. $f'>2f$): $(f\\cdot\\text{IF})'>0$, so $f\\cdot\\text{IF}$ is increasing",
+        "असमिका $f'+Pf>0$ (जैसे $f'>2f$): $(f\\cdot\\text{IF})'>0$, अतः $f\\cdot\\text{IF}$ वर्धमान"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Make the coefficient of $\\frac{dy}{dx}$ equal to $1$ before finding IF; $e^{\\ln g}=g$, $e^{-\\ln g}=\\frac1g$",
+        "IF से पहले $\\frac{dy}{dx}$ का गुणांक $1$ कीजिए; $e^{\\ln g}=g$, $e^{-\\ln g}=\\frac1g$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "11. Bernoulli and change of variable",
+    "hi": "11. बरनौली और चर-परिवर्तन",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$y'+Py=Qy^n:\\ z=y^{1-n},\\ \\ z'+(1-n)Pz=(1-n)Q$",
+        "$y'+Py=Qy^n:\\ z=y^{1-n},\\ \\ z'+(1-n)Pz=(1-n)Q$"
+       ],
+       [
+        "$f'(y)\\,y'+Pf(y)=Q:\\ t=f(y),\\ \\ t'+Pt=Q$",
+        "$f'(y)\\,y'+Pf(y)=Q:\\ t=f(y),\\ \\ t'+Pt=Q$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Typical $f(y)$: $\\tan y$ (with $\\sec^2y$), $e^y$, $\\ln y$ (with $\\frac1y$), $\\sin y$ (with $\\cos y$), $y^2$ (with $2y$)",
+        "प्रायः $f(y)$: $\\tan y$ ($\\sec^2y$ के साथ), $e^y$, $\\ln y$ ($\\frac1y$ के साथ), $\\sin y$ ($\\cos y$ के साथ), $y^2$ ($2y$ के साथ)"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "12. Rate problems (growth, decay, cooling, mixture)",
+    "hi": "12. दर वाले प्रश्न (वृद्धि, क्षय, शीतलन, मिश्रण)",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\frac{dN}{dt}=kN\\Rightarrow N=N_0e^{kt}$; cooling $\\frac{dT}{dt}=-k(T-T_s)\\Rightarrow T-T_s=(T_0-T_s)e^{-kt}$",
+        "$\\frac{dN}{dt}=kN\\Rightarrow N=N_0e^{kt}$; शीतलन $\\frac{dT}{dt}=-k(T-T_s)\\Rightarrow T-T_s=(T_0-T_s)e^{-kt}$"
+       ],
+       [
+        "Mixture: $\\frac{dQ}{dt}=(\\text{rate in})-\\frac{Q}{V(t)}\\cdot(\\text{outflow rate})$",
+        "मिश्रण: $\\frac{dQ}{dt}=(\\text{rate in})-\\frac{Q}{V(t)}\\cdot(\\text{outflow rate})$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Name the variable and write \"rate = ...\" as a DE",
+        "चर का नाम दें और \"दर = ...\" को अवकल समीकरण लिखिए"
+       ],
+       [
+        "Use two given data to find the constant and $k$",
+        "दिए गए दो आँकड़ों से अचर व $k$ ज्ञात कीजिए"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "13. Orthogonal trajectories",
+    "hi": "13. लम्बकोणीय संछेदी",
+    "color": "violet",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Form the DE of the family (eliminate the parameter)",
+        "कुल का अवकल समीकरण बनाइए (प्राचल का विलोपन)"
+       ],
+       [
+        "Replace $\\frac{dy}{dx}$ by $-\\frac{dx}{dy}$",
+        "$\\frac{dy}{dx}$ के स्थान पर $-\\frac{dx}{dy}$"
+       ],
+       [
+        "Solve the new DE",
+        "नया समीकरण हल कीजिए"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Isogonal: fixed angle $\\alpha$; orthogonal: $\\alpha=\\frac\\pi2$",
+        "समान-कोण: नियत कोण $\\alpha$; लम्बकोणीय: $\\alpha=\\frac\\pi2$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "14. Exact differentials",
+    "hi": "14. यथातथ अवकल",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$x\\,dy+y\\,dx=d(xy),\\ \\ \\frac{x\\,dy-y\\,dx}{x^2}=d\\left(\\frac yx\\right),\\ \\ \\frac{y\\,dx-x\\,dy}{y^2}=d\\left(\\frac xy\\right)$",
+        "$x\\,dy+y\\,dx=d(xy),\\ \\ \\frac{x\\,dy-y\\,dx}{x^2}=d\\left(\\frac yx\\right),\\ \\ \\frac{y\\,dx-x\\,dy}{y^2}=d\\left(\\frac xy\\right)$"
+       ],
+       [
+        "$\\frac{x\\,dy+y\\,dx}{xy}=d(\\ln xy),\\ \\ \\frac{x\\,dy-y\\,dx}{xy}=d\\left(\\ln\\frac yx\\right),\\ \\ \\frac{x\\,dy-y\\,dx}{x^2+y^2}=d\\left(\\tan^{-1}\\frac yx\\right)$",
+        "$\\frac{x\\,dy+y\\,dx}{xy}=d(\\ln xy),\\ \\ \\frac{x\\,dy-y\\,dx}{xy}=d\\left(\\ln\\frac yx\\right),\\ \\ \\frac{x\\,dy-y\\,dx}{x^2+y^2}=d\\left(\\tan^{-1}\\frac yx\\right)$"
+       ],
+       [
+        "$\\frac{x\\,dx+y\\,dy}{x^2+y^2}=d\\left(\\frac12\\ln(x^2+y^2)\\right),\\ \\ \\frac{x\\,dy+y\\,dx}{x^2y^2}=-d\\left(\\frac1{xy}\\right),\\ \\ \\frac{ye^x\\,dx-e^x\\,dy}{y^2}=d\\left(\\frac{e^x}y\\right)$",
+        "$\\frac{x\\,dx+y\\,dy}{x^2+y^2}=d\\left(\\frac12\\ln(x^2+y^2)\\right),\\ \\ \\frac{x\\,dy+y\\,dx}{x^2y^2}=-d\\left(\\frac1{xy}\\right),\\ \\ \\frac{ye^x\\,dx-e^x\\,dy}{y^2}=d\\left(\\frac{e^x}y\\right)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Divide by a suitable factor ($x^2,\\ y^2,\\ xy,\\ x^2+y^2$) and group; $yf(xy)\\,dx+xg(xy)\\,dy=0$: put $xy=v$",
+        "उपयुक्त गुणक ($x^2,\\ y^2,\\ xy,\\ x^2+y^2$) से भाग देकर समूहन; $yf(xy)\\,dx+xg(xy)\\,dy=0$: $xy=v$"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "15. Common mistakes checklist",
+    "hi": "15. सामान्य गलतियों की सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Degree asked: make the DE a polynomial in derivatives first",
+        "घात पूछी हो: पहले अवकलजों में बहुपद बनाइए"
+       ],
+       [
+        "Linear DE: coefficient of $y'$ must be $1$ before IF",
+        "रैखिक समीकरण: IF से पहले $y'$ का गुणांक $1$"
+       ],
+       [
+        "Check the domain sign: $e^{\\int\\frac{dx}x}=|x|$, take $x$ for $x>0$",
+        "प्रांत का चिह्न: $e^{\\int\\frac{dx}x}=|x|$, $x>0$ के लिए $x$"
+       ],
+       [
+        "Geometric problems: keep both signs of $\\pm$ until the point decides",
+        "ज्यामितीय प्रश्न: बिन्दु से निर्णय होने तक $\\pm$ दोनों चिह्न रखिए"
+       ],
+       [
+        "Do not forget the constant; apply the initial condition only after integrating",
+        "अचर न भूलें; प्रारम्भिक प्रतिबन्ध समाकलन के बाद ही लगाइए"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "Order, degree, formation",
+    "hi": "कोटि, घात, निर्माण",
+    "lines": [
+     [
+      "Order: highest derivative present",
+      "कोटि: उपस्थित उच्चतम अवकलज"
+     ],
+     [
+      "Degree: power of highest derivative (polynomial form)",
+      "घात: उच्चतम अवकलज की घात (बहुपद रूप)"
+     ],
+     [
+      "Formation: $n$ constants $\\to$ differentiate $n$ times, order $n$",
+      "निर्माण: $n$ अचर $\\to$ $n$ बार अवकलन, कोटि $n$"
+     ]
+    ]
+   },
+   {
+    "en": "Variable separable",
+    "hi": "चर पृथक्करणीय",
+    "lines": [
+     [
+      "Separable: $\\int f(x)\\,dx=\\int g(y)\\,dy+c$",
+      "पृथक्करणीय: $\\int f(x)\\,dx=\\int g(y)\\,dy+c$"
+     ],
+     [
+      "$y'=f(ax+by+c)$: $t=ax+by+c,\\ t'=a+bf(t)$",
+      "$y'=f(ax+by+c)$: $t=ax+by+c,\\ t'=a+bf(t)$"
+     ],
+     [
+      "$a_2+b_1=0$: group $a_2\\,d(xy)$",
+      "$a_2+b_1=0$: $a_2\\,d(xy)$ समूहन"
+     ],
+     [
+      "Polar 1: $x\\,dx+y\\,dy=r\\,dr,\\ x\\,dy-y\\,dx=r^2d\\theta$",
+      "ध्रुवीय 1: $x\\,dx+y\\,dy=r\\,dr,\\ x\\,dy-y\\,dx=r^2d\\theta$"
+     ],
+     [
+      "Polar 2: $x\\,dx-y\\,dy=r\\,dr,\\ x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$",
+      "ध्रुवीय 2: $x\\,dx-y\\,dy=r\\,dr,\\ x\\,dy-y\\,dx=r^2\\sec\\theta\\,d\\theta$"
+     ]
+    ]
+   },
+   {
+    "en": "Tangent and normal lengths",
+    "hi": "स्पर्श रेखा व अभिलम्ब की लम्बाइयाँ",
+    "lines": [
+     [
+      "Tangent intercepts: $x-\\frac ym,\\ \\ y-mx$",
+      "स्पर्श रेखा अन्तःखण्ड: $x-\\frac ym,\\ \\ y-mx$"
+     ],
+     [
+      "Normal $x$-intercept: $x+my$",
+      "अभिलम्ब $x$-अन्तःखण्ड: $x+my$"
+     ],
+     [
+      "Subtangent $\\left|\\frac ym\\right|$, subnormal $|ym|$",
+      "अधःस्पर्शी $\\left|\\frac ym\\right|$, अधोलम्ब $|ym|$"
+     ],
+     [
+      "Lengths: $T=\\left|\\frac ym\\right|\\sqrt{1+m^2},\\ N=|y|\\sqrt{1+m^2}$",
+      "लम्बाइयाँ: $T=\\left|\\frac ym\\right|\\sqrt{1+m^2},\\ N=|y|\\sqrt{1+m^2}$"
+     ],
+     [
+      "Polar radius: $OP=\\sqrt{x^2+y^2}$",
+      "ध्रुवीय त्रिज्या: $OP=\\sqrt{x^2+y^2}$"
+     ]
+    ]
+   },
+   {
+    "en": "Homogeneous",
+    "hi": "समघातीय",
+    "lines": [
+     [
+      "$y=vx$: $\\int\\frac{dv}{F(v)-v}=\\ln|x|+c$",
+      "$y=vx$: $\\int\\frac{dv}{F(v)-v}=\\ln|x|+c$"
+     ],
+     [
+      "Shift: $x=X+h,\\ y=Y+k$ ($(h,k)$ = intersection)",
+      "स्थानान्तरण: $x=X+h,\\ y=Y+k$ ($(h,k)$ = प्रतिच्छेद)"
+     ]
+    ]
+   },
+   {
+    "en": "Linear and reducible",
+    "hi": "रैखिक और बदलने योग्य",
+    "lines": [
+     [
+      "Linear: $y\\,e^{\\int P\\,dx}=\\int Qe^{\\int P\\,dx}dx+C$",
+      "रैखिक: $y\\,e^{\\int P\\,dx}=\\int Qe^{\\int P\\,dx}dx+C$"
+     ],
+     [
+      "Linear in $x$: $x\\,e^{\\int P_1dy}=\\int Q_1e^{\\int P_1dy}dy+C$",
+      "$x$ में रैखिक: $x\\,e^{\\int P_1dy}=\\int Q_1e^{\\int P_1dy}dy+C$"
+     ],
+     [
+      "Bernoulli: $z=y^{1-n}$, $z'+(1-n)Pz=(1-n)Q$",
+      "बरनौली: $z=y^{1-n}$, $z'+(1-n)Pz=(1-n)Q$"
+     ],
+     [
+      "Change of variable: $t=f(y)$ in $f'(y)y'+Pf(y)=Q$",
+      "चर-परिवर्तन: $f'(y)y'+Pf(y)=Q$ में $t=f(y)$"
+     ],
+     [
+      "Inequality: $f'+Pf>0\\Rightarrow f\\,e^{\\int P}$ increasing",
+      "असमिका: $f'+Pf>0\\Rightarrow f\\,e^{\\int P}$ वर्धमान"
+     ]
+    ]
+   },
+   {
+    "en": "Rate problems",
+    "hi": "दर वाले प्रश्न",
+    "lines": [
+     [
+      "Growth/decay: $N=N_0e^{kt}$",
+      "वृद्धि/क्षय: $N=N_0e^{kt}$"
+     ],
+     [
+      "Cooling: $T-T_s=(T_0-T_s)e^{-kt}$",
+      "शीतलन: $T-T_s=(T_0-T_s)e^{-kt}$"
+     ],
+     [
+      "Mixture: $Q'=\\text{in}-\\frac{Q}{V}\\cdot\\text{out}$",
+      "मिश्रण: $Q'=\\text{in}-\\frac{Q}{V}\\cdot\\text{out}$"
+     ]
+    ]
+   },
+   {
+    "en": "Trajectories and exact forms",
+    "hi": "संछेदी और यथातथ रूप",
+    "lines": [
+     [
+      "Orthogonal trajectory: $\\frac{dy}{dx}\\to-\\frac{dx}{dy}$",
+      "लम्बकोणीय संछेदी: $\\frac{dy}{dx}\\to-\\frac{dx}{dy}$"
+     ],
+     [
+      "$d(xy)=x\\,dy+y\\,dx$",
+      "$d(xy)=x\\,dy+y\\,dx$"
+     ],
+     [
+      "$d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2},\\ d\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^2}$",
+      "$d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2},\\ d\\left(\\frac xy\\right)=\\frac{y\\,dx-x\\,dy}{y^2}$"
+     ],
+     [
+      "$d\\left(\\tan^{-1}\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2+y^2}$",
+      "$d\\left(\\tan^{-1}\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2+y^2}$"
+     ],
+     [
+      "$d\\left(\\ln\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{xy},\\ d(\\ln xy)=\\frac{x\\,dy+y\\,dx}{xy}$",
+      "$d\\left(\\ln\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{xy},\\ d(\\ln xy)=\\frac{x\\,dy+y\\,dx}{xy}$"
+     ],
+     [
+      "$d\\left(\\frac12\\ln(x^2+y^2)\\right)=\\frac{x\\,dx+y\\,dy}{x^2+y^2}$",
+      "$d\\left(\\frac12\\ln(x^2+y^2)\\right)=\\frac{x\\,dx+y\\,dy}{x^2+y^2}$"
+     ],
+     [
+      "$d\\left(\\frac{e^x}{y}\\right)=\\frac{ye^x\\,dx-e^x\\,dy}{y^2}$",
+      "$d\\left(\\frac{e^x}{y}\\right)=\\frac{ye^x\\,dx-e^x\\,dy}{y^2}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Basics",
+    "hi": "मूल बातें",
+    "leaves": [
+     [
+      "Ordinary / partial",
+      "साधारण / आंशिक"
+     ],
+     [
+      "General: $n$ constants",
+      "व्यापक: $n$ अचर"
+     ],
+     [
+      "Particular: $y(x_0)=y_0$",
+      "विशिष्ट: $y(x_0)=y_0$"
+     ]
+    ]
+   },
+   {
+    "en": "Order and degree",
+    "hi": "कोटि और घात",
+    "leaves": [
+     [
+      "Order: highest derivative",
+      "कोटि: उच्चतम अवकलज"
+     ],
+     [
+      "Degree: after polynomial form",
+      "घात: बहुपद रूप के बाद"
+     ],
+     [
+      "$\\sin y'$: degree undefined",
+      "$\\sin y'$: घात अपरिभाषित"
+     ]
+    ]
+   },
+   {
+    "en": "Formation",
+    "hi": "निर्माण",
+    "leaves": [
+     [
+      "Differentiate $n$ times",
+      "$n$ बार अवकलन"
+     ],
+     [
+      "Eliminate constants",
+      "अचरों का विलोपन"
+     ],
+     [
+      "Count independent constants",
+      "स्वतन्त्र अचर गिनें"
+     ]
+    ]
+   },
+   {
+    "en": "Variable separable",
+    "hi": "चर पृथक्करणीय",
+    "leaves": [
+     [
+      "$\\int f\\,dx=\\int g\\,dy$",
+      "$\\int f\\,dx=\\int g\\,dy$"
+     ],
+     [
+      "$+\\ln c$",
+      "$+\\ln c$"
+     ],
+     [
+      "$t=ax+by+c$",
+      "$t=ax+by+c$"
+     ]
+    ]
+   },
+   {
+    "en": "Polar substitution",
+    "hi": "ध्रुवीय प्रतिस्थापन",
+    "leaves": [
+     [
+      "$x\\,dx+y\\,dy=r\\,dr$",
+      "$x\\,dx+y\\,dy=r\\,dr$"
+     ],
+     [
+      "$x\\,dy-y\\,dx=r^2d\\theta$",
+      "$x\\,dy-y\\,dx=r^2d\\theta$"
+     ]
+    ]
+   },
+   {
+    "en": "Geometric curves",
+    "hi": "ज्यामितीय वक्र",
+    "leaves": [
+     [
+      "$Y-y=m(X-x)$",
+      "$Y-y=m(X-x)$"
+     ],
+     [
+      "Initial ordinate $y-mx$",
+      "प्रारम्भिक कोटि $y-mx$"
+     ],
+     [
+      "Subtangent, subnormal",
+      "अधःस्पर्शी, अधोलम्ब"
+     ]
+    ]
+   },
+   {
+    "en": "Integral identity",
+    "hi": "समाकल सर्वसमिका",
+    "leaves": [
+     [
+      "Differentiate both sides",
+      "दोनों पक्षों का अवकलन"
+     ],
+     [
+      "$x=a$ gives $f(a)$",
+      "$x=a$ से $f(a)$"
+     ]
+    ]
+   },
+   {
+    "en": "Homogeneous",
+    "hi": "समघातीय",
+    "leaves": [
+     [
+      "$y'=F\\left(\\frac yx\\right)$",
+      "$y'=F\\left(\\frac yx\\right)$"
+     ],
+     [
+      "$y=vx$",
+      "$y=vx$"
+     ],
+     [
+      "Shift to $(h,k)$",
+      "$(h,k)$ पर स्थानान्तरण"
+     ]
+    ]
+   },
+   {
+    "en": "Linear",
+    "hi": "रैखिक",
+    "leaves": [
+     [
+      "$y'+Py=Q$",
+      "$y'+Py=Q$"
+     ],
+     [
+      "$\\text{IF}=e^{\\int P\\,dx}$",
+      "$\\text{IF}=e^{\\int P\\,dx}$"
+     ],
+     [
+      "Linear in $x$",
+      "$x$ में रैखिक"
+     ]
+    ]
+   },
+   {
+    "en": "Bernoulli / substitution",
+    "hi": "बरनौली / प्रतिस्थापन",
+    "leaves": [
+     [
+      "$z=y^{1-n}$",
+      "$z=y^{1-n}$"
+     ],
+     [
+      "$t=f(y)$",
+      "$t=f(y)$"
+     ]
+    ]
+   },
+   {
+    "en": "Rate problems",
+    "hi": "दर वाले प्रश्न",
+    "leaves": [
+     [
+      "$N=N_0e^{kt}$",
+      "$N=N_0e^{kt}$"
+     ],
+     [
+      "Cooling, mixture",
+      "शीतलन, मिश्रण"
+     ]
+    ]
+   },
+   {
+    "en": "Inequalities",
+    "hi": "असमिकाएँ",
+    "leaves": [
+     [
+      "$f'>kf\\Rightarrow(e^{-kx}f)'>0$",
+      "$f'>kf\\Rightarrow(e^{-kx}f)'>0$"
+     ]
+    ]
+   },
+   {
+    "en": "Orthogonal trajectory",
+    "hi": "लम्बकोणीय संछेदी",
+    "leaves": [
+     [
+      "$y'\\to-\\frac1{y'}$",
+      "$y'\\to-\\frac1{y'}$"
+     ],
+     [
+      "Fixed angle: isogonal",
+      "नियत कोण: समान-कोण"
+     ]
+    ]
+   },
+   {
+    "en": "Exact differential",
+    "hi": "यथातथ अवकल",
+    "leaves": [
+     [
+      "$d(xy),\\ d\\left(\\frac yx\\right)$",
+      "$d(xy),\\ d\\left(\\frac yx\\right)$"
+     ],
+     [
+      "$d\\left(\\tan^{-1}\\frac yx\\right)$",
+      "$d\\left(\\tan^{-1}\\frac yx\\right)$"
+     ],
+     [
+      "Group terms",
+      "पदों का समूहन"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Which method solves a first-order DE?",
+    "प्रवाह-चित्र 1: प्रथम कोटि का समीकरण किस विधि से हल हो?"
+   ],
+   "start": [
+    "$\\frac{dy}{dx}=f(x,y)$ given",
+    "$\\frac{dy}{dx}=f(x,y)$ दिया है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Can $x$ and $y$ be separated?",
+      "क्या $x$ और $y$ पृथक हो सकते हैं?"
+     ],
+     "a": [
+      [
+       "Variable separable: integrate both sides."
+      ],
+      [
+       "चर पृथक्करणीय: दोनों ओर समाकलन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $f(ax+by+c)$?",
+      "क्या यह $f(ax+by+c)$ है?"
+     ],
+     "a": [
+      [
+       "Put $t=ax+by+c$."
+      ],
+      [
+       "$t=ax+by+c$ रखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $F\\left(\\frac yx\\right)$ (same-degree numerator and denominator)?",
+      "क्या यह $F\\left(\\frac yx\\right)$ है (अंश-हर समान घात)?"
+     ],
+     "a": [
+      [
+       "Homogeneous: $y=vx$."
+      ],
+      [
+       "समघातीय: $y=vx$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $y'+Py=Q$?",
+      "क्या यह $y'+Py=Q$ है?"
+     ],
+     "a": [
+      [
+       "Linear: IF $=e^{\\int P\\,dx}$."
+      ],
+      [
+       "रैखिक: IF $=e^{\\int P\\,dx}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it linear in $x$ when written as $\\frac{dx}{dy}$?",
+      "क्या $\\frac{dx}{dy}$ रूप में $x$ में रैखिक है?"
+     ],
+     "a": [
+      [
+       "$\\frac{dx}{dy}+P_1x=Q_1$, IF $=e^{\\int P_1dy}$."
+      ],
+      [
+       "$\\frac{dx}{dy}+P_1x=Q_1$, IF $=e^{\\int P_1dy}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is there a $y^n$ on the right?",
+      "क्या दाईं ओर $y^n$ है?"
+     ],
+     "a": [
+      [
+       "Bernoulli: $z=y^{1-n}$."
+      ],
+      [
+       "बरनौली: $z=y^{1-n}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $f'(y)y'+Pf(y)=Q$?",
+      "क्या यह $f'(y)y'+Pf(y)=Q$ है?"
+     ],
+     "a": [
+      [
+       "Put $t=f(y)$, then linear."
+      ],
+      [
+       "$t=f(y)$ रखिए, फिर रैखिक।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Try grouping into exact differentials or a polar substitution."
+    ],
+    [
+     "यथातथ अवकलों में समूहन या ध्रुवीय प्रतिस्थापन आज़माइए।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: $\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$",
+    "प्रवाह-चित्र 2: $\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$"
+   ],
+   "start": [
+    "Ratio of two linear expressions",
+    "दो रैखिक व्यंजकों का अनुपात"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "Is $a_2+b_1=0$?",
+      "क्या $a_2+b_1=0$?"
+     ],
+     "a": [
+      [
+       "Cross-multiply and group $d(xy)$."
+      ],
+      [
+       "वज्र-गुणन व $d(xy)$ समूहन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Are the lines parallel ($\\frac{a_1}{a_2}=\\frac{b_1}{b_2}$)?",
+      "क्या रेखाएँ समान्तर हैं ($\\frac{a_1}{a_2}=\\frac{b_1}{b_2}$)?"
+     ],
+     "a": [
+      [
+       "Put $t=a_1x+b_1y$."
+      ],
+      [
+       "$t=a_1x+b_1y$ रखिए।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Are $c_1=c_2=0$?",
+      "क्या $c_1=c_2=0$?"
+     ],
+     "a": [
+      [
+       "Already homogeneous: $y=vx$."
+      ],
+      [
+       "पहले से समघातीय: $y=vx$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Shift the origin to the intersection $(h,k)$, then $Y=vX$."
+    ],
+    [
+     "मूलबिन्दु को प्रतिच्छेद $(h,k)$ पर ले जाइए, फिर $Y=vX$।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Curve from a stated property",
+    "प्रवाह-चित्र 3: दिए गुण से वक्र"
+   ],
+   "start": [
+    "A property of tangent / normal / area is given",
+    "स्पर्श रेखा / अभिलम्ब / क्षेत्रफल का गुण दिया है"
+   ],
+   "color": "green",
+   "steps": [
+    {
+     "q": [
+      "Does it involve intercepts of the tangent?",
+      "क्या इसमें स्पर्श रेखा के अन्तःखण्ड हैं?"
+     ],
+     "a": [
+      [
+       "Use $x-\\frac ym$ and $y-mx$."
+      ],
+      [
+       "$x-\\frac ym$ व $y-mx$ लें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Does it involve the normal?",
+      "क्या इसमें अभिलम्ब है?"
+     ],
+     "a": [
+      [
+       "$Y-y=-\\frac1m(X-x)$, length $|y|\\sqrt{1+m^2}$."
+      ],
+      [
+       "$Y-y=-\\frac1m(X-x)$, लम्बाई $|y|\\sqrt{1+m^2}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Does it involve area or arc length up to $x$?",
+      "क्या इसमें $x$ तक क्षेत्रफल या चाप-लम्बाई है?"
+     ],
+     "a": [
+      [
+       "Write $\\int_a^x$, differentiate both sides."
+      ],
+      [
+       "$\\int_a^x$ लिखकर दोनों पक्षों का अवकलन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Does it involve $OP$ or the angle of $OP$?",
+      "क्या इसमें $OP$ या $OP$ का कोण है?"
+     ],
+     "a": [
+      [
+       "Use $\\sqrt{x^2+y^2}$; often polar substitution."
+      ],
+      [
+       "$\\sqrt{x^2+y^2}$ लें; प्रायः ध्रुवीय प्रतिस्थापन।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Write the condition with $m=\\frac{dy}{dx}$, solve, apply the given point."
+    ],
+    [
+     "प्रतिबन्ध को $m=\\frac{dy}{dx}$ से लिखें, हल करें, बिन्दु लगाएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Order, degree and formation",
+    "प्रवाह-चित्र 4: कोटि, घात और निर्माण"
+   ],
+   "start": [
+    "Question on order / degree / family",
+    "कोटि / घात / कुल पर प्रश्न"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Is the degree asked?",
+      "क्या घात पूछी है?"
+     ],
+     "a": [
+      [
+       "Remove radicals and fractional powers; degree undefined if $y'$ is inside $\\sin$, $e$, $\\ln$."
+      ],
+      [
+       "मूलांक व भिन्नात्मक घात हटाएँ; $y'$ यदि $\\sin$, $e$, $\\ln$ में हो तो घात अपरिभाषित।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is the family given by an equation?",
+      "क्या कुल समीकरण से दिया है?"
+     ],
+     "a": [
+      [
+       "Count independent constants, differentiate, eliminate."
+      ],
+      [
+       "स्वतन्त्र अचर गिनें, अवकलन, विलोपन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is the family described in words?",
+      "क्या कुल शब्दों में वर्णित है?"
+     ],
+     "a": [
+      [
+       "Write its equation first, then form the DE."
+      ],
+      [
+       "पहले समीकरण लिखें, फिर अवकल समीकरण।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Order = highest derivative."
+    ],
+    [
+     "कोटि = उच्चतम अवकलज।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Exact differential or substitution?",
+    "प्रवाह-चित्र 5: यथातथ अवकल या प्रतिस्थापन?"
+   ],
+   "start": [
+    "$M\\,dx+N\\,dy=0$ not of a standard type",
+    "$M\\,dx+N\\,dy=0$ मानक प्रकार का नहीं"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Do $x\\,dy\\pm y\\,dx$ appear?",
+      "क्या $x\\,dy\\pm y\\,dx$ आते हैं?"
+     ],
+     "a": [
+      [
+       "Divide by $x^2,\\ y^2,\\ xy$ or $x^2+y^2$ to make an exact form."
+      ],
+      [
+       "$x^2,\\ y^2,\\ xy$ या $x^2+y^2$ से भाग देकर यथातथ रूप।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Do $x\\,dx\\pm y\\,dy$ appear with $x^2\\pm y^2$?",
+      "क्या $x\\,dx\\pm y\\,dy$ के साथ $x^2\\pm y^2$ हैं?"
+     ],
+     "a": [
+      [
+       "Polar substitution."
+      ],
+      [
+       "ध्रुवीय प्रतिस्थापन।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it $yf(xy)\\,dx+xg(xy)\\,dy=0$?",
+      "क्या यह $yf(xy)\\,dx+xg(xy)\\,dy=0$ है?"
+     ],
+     "a": [
+      [
+       "Put $xy=v$."
+      ],
+      [
+       "$xy=v$ रखिए।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Try $t=$ the repeated expression, then check linear / separable."
+    ],
+    [
+     "$t=$ दोहराया व्यंजक रखें, फिर रैखिक / पृथक्करणीय जाँचें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 6: Word and condition problems",
+    "प्रवाह-चित्र 6: शाब्दिक व प्रतिबन्ध वाले प्रश्न"
+   ],
+   "start": [
+    "Rate, inequality or extra condition given",
+    "दर, असमिका या अतिरिक्त प्रतिबन्ध दिया है"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Is a rate proportional to the amount?",
+      "क्या दर मात्रा के समानुपाती है?"
+     ],
+     "a": [
+      [
+       "$\\frac{dN}{dt}=kN$; cooling: $\\frac{dT}{dt}=-k(T-T_s)$."
+      ],
+      [
+       "$\\frac{dN}{dt}=kN$; शीतलन: $\\frac{dT}{dt}=-k(T-T_s)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is it a tank / mixture?",
+      "क्या यह टंकी / मिश्रण है?"
+     ],
+     "a": [
+      [
+       "$Q'=$ in $-\\frac QV\\cdot$ out; linear DE."
+      ],
+      [
+       "$Q'=$ in $-\\frac QV\\cdot$ out; रैखिक समीकरण।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is an inequality like $f'>kf$ given?",
+      "क्या $f'>kf$ जैसी असमिका दी है?"
+     ],
+     "a": [
+      [
+       "Multiply by IF: $(e^{-kx}f)'>0$, use monotonicity."
+      ],
+      [
+       "IF से गुणा: $(e^{-kx}f)'>0$, एकदिष्टता लें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Is \"bounded\" or a limit at $\\infty$ given?",
+      "क्या \"परिबद्ध\" या $\\infty$ पर सीमा दी है?"
+     ],
+     "a": [
+      [
+       "Choose $C$ so the growing term vanishes."
+      ],
+      [
+       "$C$ ऐसा चुनें कि बढ़ता पद शून्य हो।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Use the initial condition to fix $C$."
+    ],
+    [
+     "$C$ के लिए प्रारम्भिक प्रतिबन्ध लगाइए।"
+    ]
+   ]
+  }
+ ]
+}
