@@ -1,0 +1,55 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $C$ be the curve $\\{(x,y)\\in\\mathbb{R}^{2}:y^{3}+3y=2x\\}$, and let $P$ be the point of $C$ with abscissa $7$. If $O$ is the origin, then the area of the region bounded by $C$ and the line segment $OP$ is equal to",
+  "",
+  "(A) $2$",
+  "(B) $5$",
+  "(C) $7$",
+  "(D) $9$"
+ ],
+ "hindi": [
+  "माना कि $C$ वक्र $\\{(x,y)\\in\\mathbb{R}^{2}:y^{3}+3y=2x\\}$ है तथा $P$ वक्र $C$ का वह बिन्दु है जिसका भुज $7$ है। यदि $O$ मूलबिन्दु है, तो $C$ तथा रेखाखण्ड $OP$ द्वारा परिबद्ध क्षेत्र का क्षेत्रफल बराबर है",
+  "",
+  "(A) $2$",
+  "(B) $5$",
+  "(C) $7$",
+  "(D) $9$"
+ ],
+ "solution": [
+  "$x=\\dfrac{y^{3}+3y}{2}$ is increasing in $y$, so each $x$ gives one point of $C$; at $x=7$: $y^{3}+3y=14\\Rightarrow y=2$, $P(7,2)$.",
+  "$OP$: $x=\\dfrac{7y}{2}$. For $0\\le y\\le 2$: $\\dfrac{7y}{2}-\\dfrac{y^{3}+3y}{2}=\\dfrac{y(4-y^{2})}{2}\\ge 0$, so $OP$ lies to the right of $C$.",
+  "Area $=\\displaystyle\\int_{0}^{2}\\dfrac{4y-y^{3}}{2}\\,dy=\\dfrac{1}{2}\\left(8-4\\right)=2$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "$C$ cannot be written easily as $y=f(x)$, but it is $x=g(y)=\\dfrac{y^{3}+3y}{2}$ with $g'(y)=\\dfrac{3y^{2}+3}{2}>0$, so $g$ is strictly increasing and $C$ meets every vertical line exactly once.",
+  "For $x=7$: $y^{3}+3y-14=0\\Rightarrow (y-2)(y^{2}+2y+7)=0$, and the quadratic has no real root, so $P=(7,2)$.",
+  "The segment $OP$ is $y=\\dfrac{2x}{7}$, i.e. $x=\\dfrac{7y}{2}$, $0\\le y\\le 2$.",
+  "Between the two: $\\dfrac{7y}{2}-g(y)=\\dfrac{7y-y^{3}-3y}{2}=\\dfrac{y(2-y)(2+y)}{2}\\ge 0$ on $[0,2]$, zero only at $y=0,2$. So $C$ and $OP$ meet only at $O$ and $P$ and bound one region.",
+  "Using horizontal strips: Area $=\\displaystyle\\int_{0}^{2}\\left(\\dfrac{7y}{2}-\\dfrac{y^{3}+3y}{2}\\right)dy=\\dfrac{1}{2}\\int_{0}^{2}(4y-y^{3})\\,dy=\\dfrac{1}{2}\\left[2y^{2}-\\dfrac{y^{4}}{4}\\right]_{0}^{2}=\\dfrac{1}{2}(8-4)=2$.",
+  "(Check: the area between $C$, the $x$-axis and $x=7$ is $14-\\int_{0}^{2}g(y)dy=14-5=9$, the triangle under $OP$ has area $7$, and $9-7=2$.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: a curve given only implicitly (y^3 + 3y = 2x) that is a function of y, cut by the chord from O to the point with abscissa 7 (way 5). Closest known: area under the inverse of x^3 + x. Different because: the region is a curve-chord region, and the y-integration is forced because y(x) has no usable closed form.",
+ "web_check": "not found",
+ "concept_use": {
+  "Area obtained by integrating with respect to y": "The curve is x = (y^3+3y)/2; the area is the integral of 7y/2 - (y^3+3y)/2 over 0 <= y <= 2."
+ },
+ "stem_review": "Read as a student: every curve and symbol introduced, region named by its bounding curves, one reading, answer unique and equal to the plan; options of one form; Hindi mirrors the English maths. Checked that the cubic in y has the single real root y = 2 at x = 7, so P is unique; distractors 5, 7, 9 are the integral of g, the triangle and the area under C. No change.",
+ "level": 2,
+ "key_step": "Recognise C as x = g(y) and integrate the horizontal width between the chord and the curve.",
+ "justification": "Needs the decision to integrate in y plus a routine root and integral; three routine steps with no insight, like 2021-P1-Q2 (L2).",
+ "nearest_anchor": "2021-P1-Q2 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "chapter": "Area Under Curve",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Area obtained by integrating with respect to y"
+ ],
+ "eq_relation": false
+}

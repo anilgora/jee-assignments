@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Consider the curves $y=\\sin^{-1}x$ and $y=\\cos^{-1}x$, $0\\le x\\le 1$, where the inverse trigonometric functions take their principal values. Let $A_{1}$ be the area of the region bounded by these two curves and the line $x=1$, and let $A_{2}$ be the area of the region bounded by these two curves and the $y$-axis. Then the value of $A_{1}-A_{2}$ is ______."
+ ],
+ "hindi": [
+  "वक्रों $y=\\sin^{-1}x$ तथा $y=\\cos^{-1}x$, $0\\le x\\le 1$, पर विचार कीजिए, जहाँ प्रतिलोम त्रिकोणमितीय फलन अपने मुख्य मान लेते हैं। माना कि $A_{1}$ इन दोनों वक्रों तथा रेखा $x=1$ द्वारा परिबद्ध क्षेत्र का क्षेत्रफल है, तथा $A_{2}$ इन दोनों वक्रों तथा $y$-अक्ष द्वारा परिबद्ध क्षेत्र का क्षेत्रफल है। तब $A_{1}-A_{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "The curves meet where $\\sin^{-1}x=\\cos^{-1}x=\\dfrac{\\pi}{4}$, at $\\left(\\dfrac{1}{\\sqrt2},\\dfrac{\\pi}{4}\\right)$; $\\cos^{-1}x-\\sin^{-1}x$ is positive before it and negative after it.",
+  "Horizontal strips ($x=\\sin y$ and $x=\\cos y$):",
+  "$A_{2}=\\displaystyle\\int_{0}^{\\pi/4}\\sin y\\,dy+\\int_{\\pi/4}^{\\pi/2}\\cos y\\,dy=2\\left(1-\\dfrac{1}{\\sqrt2}\\right)=2-\\sqrt2$",
+  "$A_{1}=\\displaystyle\\int_{0}^{\\pi/4}(1-\\cos y)\\,dy+\\int_{\\pi/4}^{\\pi/2}(1-\\sin y)\\,dy=\\dfrac{\\pi}{2}-\\sqrt2$",
+  "$A_{1}-A_{2}=\\dfrac{\\pi}{2}-2\\approx -0.43$ (check: it equals the signed integral $\\int_{0}^{1}(\\sin^{-1}x-\\cos^{-1}x)\\,dx$).",
+  "",
+  "Final Answer: -0.43"
+ ],
+ "solution_full": [
+  "On $[0,1]$, $\\sin^{-1}x$ increases from $0$ to $\\dfrac{\\pi}{2}$ and $\\cos^{-1}x$ decreases from $\\dfrac{\\pi}{2}$ to $0$. They are equal where $\\sin^{-1}x=\\dfrac{\\pi}{4}$ (since the sum is $\\dfrac{\\pi}{2}$), i.e. at $P\\left(\\dfrac{1}{\\sqrt2},\\dfrac{\\pi}{4}\\right)$.",
+  "So the difference $\\cos^{-1}x-\\sin^{-1}x$ changes sign at $x=\\dfrac{1}{\\sqrt2}$: the region with the $y$-axis lies over $\\left[0,\\dfrac{1}{\\sqrt2}\\right]$ and the region with $x=1$ over $\\left[\\dfrac{1}{\\sqrt2},1\\right]$.",
+  "Vertical strips would need $\\int\\sin^{-1}x\\,dx$; horizontal strips are simpler. Inverting: $y=\\sin^{-1}x\\Leftrightarrow x=\\sin y$ and $y=\\cos^{-1}x\\Leftrightarrow x=\\cos y$, $0\\le y\\le\\dfrac{\\pi}{2}$.",
+  "Region $A_{2}$ (left of both curves, right of the $y$-axis): for $0\\le y\\le\\frac{\\pi}{4}$ its horizontal strip is $0\\le x\\le\\sin y$; for $\\frac{\\pi}{4}\\le y\\le\\frac{\\pi}{2}$ it is $0\\le x\\le\\cos y$. $A_{2}=\\left[-\\cos y\\right]_{0}^{\\pi/4}+\\left[\\sin y\\right]_{\\pi/4}^{\\pi/2}=\\left(1-\\dfrac{1}{\\sqrt2}\\right)+\\left(1-\\dfrac{1}{\\sqrt2}\\right)=2-\\sqrt2$.",
+  "Region $A_{1}$ (right of both curves, left of $x=1$): for $0\\le y\\le\\frac{\\pi}{4}$ the strip is $\\cos y\\le x\\le 1$; for $\\frac{\\pi}{4}\\le y\\le\\frac{\\pi}{2}$ it is $\\sin y\\le x\\le 1$. $A_{1}=\\left(\\dfrac{\\pi}{4}-\\dfrac{1}{\\sqrt2}\\right)+\\left(\\dfrac{\\pi}{4}-\\dfrac{1}{\\sqrt2}\\right)=\\dfrac{\\pi}{2}-\\sqrt2$.",
+  "$A_{1}-A_{2}=\\dfrac{\\pi}{2}-2\\approx 1.5708-2=-0.4292$, i.e. $-0.43$.",
+  "Check by the sign change: $A_{1}-A_{2}=\\displaystyle\\int_{0}^{1}(\\sin^{-1}x-\\cos^{-1}x)\\,dx$, and $\\int_{0}^{1}\\sin^{-1}x\\,dx=\\dfrac{\\pi}{2}-1$, $\\int_{0}^{1}\\cos^{-1}x\\,dx=1$, which gives $\\dfrac{\\pi}{2}-2$ again.",
+  "",
+  "Final Answer: -0.43"
+ ],
+ "originality_note": "New: the two regions cut off by sin^-1 x and cos^-1 x against the y-axis and against x = 1 compared through their difference, which is the signed integral of the difference (way 5). Closest known: area between sin^-1 x, cos^-1 x and the x-axis. Different because: the two regions on either side of the crossing are compared and the y-strips handle each.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Area bounded by a curve and the x-axis; handling sign changes": "The difference sin^-1 x - cos^-1 x changes sign at 1/sqrt2, so the two areas come from opposite signs and A1 - A2 is its signed integral.",
+  "Area bounded by two curves": "A1 and A2 are each regions bounded by the two curves and a line (x = 1 or the y-axis).",
+  "Area obtained by integrating with respect to y": "Writing x = sin y and x = cos y and integrating horizontal strips for A1 and A2."
+ },
+ "stem_review": "Read as a student: every function introduced with its domain, every condition stated, one reading, answer unique and equal to the plan; Hindi mirrors the English maths. Principal values stated; the two regions named by their bounding curves; answer -0.4292 rounds unambiguously to -0.43. Removed a confusing self-check sentence from the shortened solution. No change to the stem.",
+ "level": 3,
+ "key_step": "Locate the crossing at (1/sqrt2, pi/4) and integrate both regions in y.",
+ "justification": "Two regions, inverse functions and the y-strip choice with careful limits; numerical with a signed answer. Comparable to 2026-P2-Q18 (L3) common-area work.",
+ "nearest_anchor": "2026-P2-Q18 (L3)",
+ "confidence": "Medium",
+ "chapter": "Area Under Curve",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Area bounded by a curve and the x-axis; handling sign changes",
+  "Area bounded by two curves",
+  "Area obtained by integrating with respect to y"
+ ],
+ "multi_concept": true,
+ "eq_relation": false
+}
