@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "english": [
+  "A ray of light travelling along the line $y=16$ in the direction of decreasing $x$ strikes the parabolic mirror $y^{2}=16x$ at the point $P$. After reflection at $P$, the ray strikes the mirror again at the point $Q$. The tangents to the mirror at $P$ and $Q$ meet at the point $T$, and the normals to the mirror at $P$ and $Q$ meet at the point $N$. Then the area of the quadrilateral $PTQN$ is ______."
+ ],
+ "hindi": [
+  "रेखा $y=16$ के अनुदिश $x$ के घटने की दिशा में चलती हुई एक प्रकाश किरण परवलयिक दर्पण $y^{2}=16x$ से बिन्दु $P$ पर टकराती है। $P$ पर परावर्तन के बाद किरण दर्पण से पुनः बिन्दु $Q$ पर टकराती है। $P$ तथा $Q$ पर दर्पण की स्पर्श रेखाएँ बिन्दु $T$ पर मिलती हैं, तथा $P$ और $Q$ पर दर्पण के अभिलम्ब बिन्दु $N$ पर मिलते हैं। तब चतुर्भुज $PTQN$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$a=4$, $P(16,16)$, $t_{1}=2$. Reflection property: a ray parallel to the axis reflects through the focus $S(4,0)$, so $PQ$ is a focal chord: $t_{2}=-\\dfrac{1}{2}$, $Q(1,-4)$",
+  "Tangents: at $P$: $2y=x+16$ (slope $\\dfrac{1}{2}$); at $Q$: $-\\dfrac{y}{2}=x+1$ (slope $-2$); perpendicular, meeting on the directrix at $T(at_{1}t_{2},a(t_{1}+t_{2}))=(-4,6)$",
+  "Normals at $P$, $Q$ are perpendicular to these tangents, so $PTQN$ has right angles at $P$, $T$, $Q$: a rectangle",
+  "$PT=\\sqrt{20^{2}+10^{2}}=10\\sqrt{5}$, $QT=\\sqrt{5^{2}+10^{2}}=5\\sqrt{5}$; area $=10\\sqrt{5}\\cdot5\\sqrt{5}=250$",
+  "",
+  "Final Answer: 250"
+ ],
+ "solution_full": [
+  "For $y^{2}=16x$, $a=4$, the focus is $S(4,0)$ and the directrix is $x=-4$. The ray $y=16$ meets the mirror where $16^{2}=16x$, i.e. at $P(16,16)$, the point with parameter $t_{1}=2$ (points $(4t^{2},8t)$). It arrives from the side $x>16$, i.e. inside the parabola.",
+  "Reflection property: the tangent at $P$ makes equal angles with the line through $P$ parallel to the axis and with $PS$; so a ray travelling parallel to the axis is reflected along $PS$. The reflected ray passes through the focus, so $PQ$ is a focal chord and $t_{1}t_{2}=-1$: $t_{2}=-\\dfrac{1}{2}$, $Q=(1,-4)$.",
+  "Tangent at $P$: $t_{1}y=x+at_{1}^{2}$, i.e. $2y=x+16$, slope $\\dfrac{1}{2}$. Tangent at $Q$: $-\\dfrac{1}{2}y=x+1$, slope $-2$. The product of the slopes is $-1$; they meet at $T=(at_{1}t_{2},a(t_{1}+t_{2}))=(-4,6)$, on the directrix.",
+  "The normal at $P$ is perpendicular to the tangent at $P$, and the normal at $Q$ is perpendicular to the tangent at $Q$. Since the two tangents are perpendicular, the normal at $P$ is parallel to the tangent at $Q$ and the normal at $Q$ is parallel to the tangent at $P$. So $PTQN$ is a rectangle with vertices in this order. (Directly: normal at $P$: $y-16=-2(x-16)$; normal at $Q$: $y+4=\\dfrac{1}{2}(x-1)$; they meet at $N(21,6)$.)",
+  "$PT=\\sqrt{(16+4)^{2}+(16-6)^{2}}=\\sqrt{500}=10\\sqrt{5}$ and $QT=\\sqrt{(1+4)^{2}+(-4-6)^{2}}=\\sqrt{125}=5\\sqrt{5}$.",
+  "Area of the rectangle $PTQN=PT\\cdot QT=10\\sqrt{5}\\cdot5\\sqrt{5}=250$.",
+  "",
+  "Final Answer: 250"
+ ],
+ "originality_note": "New: a light ray reflected twice in a parabolic mirror; the reflection property turns PQ into a focal chord, so the tangents and normals at P and Q form a rectangle whose area is PT times QT (way 4, hidden symmetry). Closest known: 'a ray parallel to the axis reflects through the focus' and 'tangents at the ends of a focal chord are perpendicular and meet on the directrix'. Different because: the question combines the reflection path with both tangents and both normals and needs the rectangle to be seen (or N computed).",
+ "web_check": "not found",
+ "concept_use": {
+  "Reflection property of parabola": "The reflection property sends the ray from P through the focus, so Q is the other end of the focal chord (t1 t2 = -1).",
+  "Tangent to the parabola: point, slope and parametric forms": "The parametric tangents at P and Q (2y = x + 16 and -y/2 = x + 1) give their perpendicularity and their meeting point T(-4, 6)."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that the ray meets the mirror from the concave side at P(16, 16), that the reflected ray meets the mirror again only at Q(1, -4) and that the second reflection is parallel to the axis, that P, T, Q, N in this order form a rectangle (N = (21, 6)), and that 250 is a positive three-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Using the reflection property to make PQ a focal chord, then seeing that the tangents and normals at P and Q form a rectangle.",
+ "justification": "Two linked ideas (reflection property, perpendicular tangents at the ends of a focal chord) followed by a short computation; numerical. Above the routine perpendicular-tangent anchor 2026-P2-Q2 (L2) by one genuine link.",
+ "nearest_anchor": "2026-P2-Q2 (L2)",
+ "confidence": "Medium",
+ "chapter": "Parabola",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Reflection property of parabola",
+  "Tangent to the parabola: point, slope and parametric forms"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

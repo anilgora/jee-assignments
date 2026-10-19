@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{32}+\\dfrac{y^{2}}{8}=1$ and let $C$ be the parabola $y^{2}=4x$. Let $P$ be a point such that the polar of $P$ with respect to $E$ touches $C$ and the polar of $P$ with respect to $C$ touches $E$. If $O$ is the origin, then the value of $OP^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{32}+\\dfrac{y^{2}}{8}=1$ है तथा $C$ परवलय $y^{2}=4x$ है। माना कि $P$ एक ऐसा बिन्दु है कि $E$ के सापेक्ष $P$ की ध्रुवी, $C$ को स्पर्श करती है तथा $C$ के सापेक्ष $P$ की ध्रुवी, $E$ को स्पर्श करती है। यदि $O$ मूलबिन्दु है, तो $OP^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $P(h,k)$. If $k=0$, the polar w.r.t. $E$ is the vertical line $x=\\dfrac{32}{h}$ ($h\\neq0$), which never touches $C$ (only $x=0$ does); so $k\\neq0$",
+  "Polar w.r.t. $E$: $\\dfrac{hx}{32}+\\dfrac{ky}{8}=1\\Rightarrow y=-\\dfrac{h}{4k}x+\\dfrac{8}{k}$; touches $C$ iff $c\\,m=1$: $-\\dfrac{2h}{k^{2}}=1\\Rightarrow k^{2}=-2h$",
+  "Polar w.r.t. $C$: $ky=2(x+h)\\Rightarrow y=\\dfrac{2}{k}x+\\dfrac{2h}{k}$; touches $E$ iff $c^{2}=32m^{2}+8$: $h^{2}=32+2k^{2}$",
+  "$h^{2}=32-4h\\Rightarrow(h+8)(h-4)=0$; $h=4$ gives $k^{2}<0$, so $h=-8$, $k^{2}=16$",
+  "$OP^{2}=64+16=80$",
+  "",
+  "Final Answer: 80"
+ ],
+ "solution_full": [
+  "Let $P=(h,k)$. The polar of $P$ with respect to $E$ is $\\dfrac{hx}{32}+\\dfrac{ky}{8}=1$ (for $P=O$ there is no polar line, so $P\\neq O$), and with respect to $C$ it is $ky=2(x+h)$.",
+  "If $k=0$, then $h\\neq0$ and the polar with respect to $E$ is $x=\\dfrac{32}{h}$, a vertical line; the only vertical tangent of $C$ is $x=0$, so this is impossible. Hence $k\\neq0$.",
+  "Polar w.r.t. $E$: $y=-\\dfrac{h}{4k}x+\\dfrac{8}{k}$. A line $y=mx+c$ touches $y^{2}=4x$ iff $m\\neq0$ and $c=\\dfrac{1}{m}$, i.e. $cm=1$: $\\dfrac{8}{k}\\cdot\\left(-\\dfrac{h}{4k}\\right)=1$, so $k^{2}=-2h$ (and $h<0$).",
+  "Polar w.r.t. $C$: $y=\\dfrac{2}{k}x+\\dfrac{2h}{k}$. A line $y=mx+c$ touches $\\dfrac{x^{2}}{32}+\\dfrac{y^{2}}{8}=1$ iff $c^{2}=32m^{2}+8$: $\\dfrac{4h^{2}}{k^{2}}=\\dfrac{128}{k^{2}}+8$, i.e. $h^{2}=32+2k^{2}$.",
+  "Substituting $k^{2}=-2h$: $h^{2}+4h-32=0$, i.e. $(h+8)(h-4)=0$. $h=4$ would give $k^{2}=-8$; so $h=-8$ and $k^{2}=16$, $P=(-8,\\pm4)$.",
+  "Check for $P(-8,4)$: polar w.r.t. $E$ is $y=\\dfrac{x}{2}+2$, and $c=2=\\dfrac{1}{1/2}$; polar w.r.t. $C$ is $y=\\dfrac{x}{2}-4$, and $c^{2}=16=32\\cdot\\dfrac{1}{4}+8$.",
+  "$OP^{2}=(-8)^{2}+4^{2}=80$ for both points.",
+  "",
+  "Final Answer: 80"
+ ],
+ "originality_note": "New: a point fixed by two crossed conditions, its polar for the ellipse touching the parabola and its polar for the parabola touching the ellipse (way 3, a family defined by two conditions). Closest known: 'locus of the pole of a tangent of one conic with respect to another' exercises (one condition, a locus). Different because: the two loci are intersected, so the answer is a specific point, with a spurious root (h = 4) to reject.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Pole and polar for parabola": "The polar of P(h, k) with respect to y^2 = 4x, ky = 2(x + h), is required to touch the ellipse.",
+  "Pole and polar for Ellipse": "The polar of P(h, k) with respect to the ellipse, hx/32 + ky/8 = 1, is required to touch the parabola."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that the conditions give exactly the two points (-8, ±4), both with OP^2 = 80, that the cases k = 0 and P = O are impossible, and that 80 is a positive two-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing both polars, applying the two tangency conditions and rejecting h = 4.",
+ "justification": "Two linked conditions on polars with respect to two different conics, each needing the right tangency condition, and a root to reject; numerical. Comparable in demand to the ellipse-parabola tangent anchor 2023-P1-Q2 (L3).",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "chapter": "Parabola",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Pole and polar for parabola",
+  "Pole and polar for Ellipse"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

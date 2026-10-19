@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $S$ be the set of all real numbers $\\lambda$ for which the point $(\\lambda,2\\lambda+1)$ lies inside the ellipse $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ and outside the parabola $y^{2}=4(x+1)$. Then the sum of all the integers in $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ उन सभी वास्तविक संख्याओं $\\lambda$ का समुच्चय है जिनके लिए बिन्दु $(\\lambda,2\\lambda+1)$ दीर्घवृत्त $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ के अन्दर तथा परवलय $y^{2}=4(x+1)$ के बाहर स्थित है। तब $S$ में स्थित सभी पूर्णांकों का योग ______ है।"
+ ],
+ "solution": [
+  "Inside $E$: $\\dfrac{\\lambda^{2}}{25}+\\dfrac{(2\\lambda+1)^{2}}{16}<1\\Rightarrow116\\lambda^{2}+100\\lambda-375<0\\Rightarrow\\lambda\\in(\\lambda_{1},\\lambda_{2})$, $\\lambda_{1,2}=\\dfrac{-25\\mp10\\sqrt{115}}{58}$, i.e. $\\lambda_{1}\\approx-2.28$, $\\lambda_{2}\\approx1.42$",
+  "Outside the parabola: $(2\\lambda+1)^{2}-4(\\lambda+1)>0\\Rightarrow4\\lambda^{2}-3>0\\Rightarrow|\\lambda|>\\dfrac{\\sqrt{3}}{2}$",
+  "$S=\\left(\\lambda_{1},-\\dfrac{\\sqrt{3}}{2}\\right)\\cup\\left(\\dfrac{\\sqrt{3}}{2},\\lambda_{2}\\right)$; integers: $-2,-1,1$ ($0$ is excluded: $(0,1)$ is inside the parabola)",
+  "Sum $=-2-1+1=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "A point $(x_{1},y_{1})$ is inside the ellipse when $\\dfrac{x_{1}^{2}}{25}+\\dfrac{y_{1}^{2}}{16}-1<0$, and outside the parabola $y^{2}=4(x+1)$ when $y_{1}^{2}-4(x_{1}+1)>0$.",
+  "Ellipse: $\\dfrac{\\lambda^{2}}{25}+\\dfrac{(2\\lambda+1)^{2}}{16}<1\\iff16\\lambda^{2}+25(4\\lambda^{2}+4\\lambda+1)<400\\iff116\\lambda^{2}+100\\lambda-375<0$.",
+  "The roots are $\\lambda=\\dfrac{-100\\pm\\sqrt{10000+174000}}{232}=\\dfrac{-25\\pm10\\sqrt{115}}{58}$, i.e. about $-2.280$ and $1.418$. So the condition is $-2.280<\\lambda<1.418$ (approximately).",
+  "Parabola: $(2\\lambda+1)^{2}-4(\\lambda+1)=4\\lambda^{2}-3>0\\iff\\lambda<-\\dfrac{\\sqrt{3}}{2}$ or $\\lambda>\\dfrac{\\sqrt{3}}{2}$ ($\\dfrac{\\sqrt{3}}{2}\\approx0.866$).",
+  "Hence $S=\\left(\\dfrac{-25-10\\sqrt{115}}{58},-\\dfrac{\\sqrt{3}}{2}\\right)\\cup\\left(\\dfrac{\\sqrt{3}}{2},\\dfrac{-25+10\\sqrt{115}}{58}\\right)$.",
+  "Integers in $S$: $-2$ (point $(-2,-3)$: $\\dfrac{4}{25}+\\dfrac{9}{16}<1$ and $9-(-4)>0$), $-1$ (point $(-1,-1)$: inside $E$, $1-0>0$), and $1$ (point $(1,3)$: $\\dfrac{1}{25}+\\dfrac{9}{16}<1$, $9-8>0$). $\\lambda=0$ fails ($(0,1)$: $1-4<0$, inside the parabola), $\\lambda=2$ fails ($(2,5)$ is outside $E$) and $\\lambda=-3$ fails ($(-3,-5)$ is outside $E$).",
+  "Sum $=(-2)+(-1)+1=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: a point moving on a line through the interior of both conics, so that the 'inside ellipse, outside parabola' set is two intervals separated by a gap at lambda = 0 (way 5, the gap is the trap). Closest known: 'range of a for which (a, a^2) or (a, a+1) lies inside a conic' exercises and 2023-P1-Q6 (lattice points inside an ellipse and a parabola). Different because: the parabola is shifted and the answer requires both irrational ellipse bounds and the excluded middle integer.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Position of a point wrt a parabola": "The sign of y^2 - 4(x + 1) at (lambda, 2lambda + 1) decides 'outside the parabola', giving |lambda| > sqrt3/2.",
+  "Position of a point wrt a Ellipse": "The sign of x^2/25 + y^2/16 - 1 at (lambda, 2lambda + 1) decides 'inside the ellipse', giving 116 lambda^2 + 100 lambda - 375 < 0."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that 'inside' and 'outside' are strict and that no integer lies on a boundary (the bounds are irrational), so S's integers are exactly -2, -1, 1; -2 is a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Combining the two quadratic conditions into a union of two intervals and noticing that 0 is excluded.",
+ "justification": "Two position conditions must be set up and intersected, with irrational bounds that have to be located between integers and a gap that removes 0; numerical answer with no options. Similar in demand to 2023-P1-Q6 (L3), which also combines position relative to an ellipse and a parabola.",
+ "nearest_anchor": "2023-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "chapter": "Parabola",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Position of a point wrt a parabola",
+  "Position of a point wrt a Ellipse"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

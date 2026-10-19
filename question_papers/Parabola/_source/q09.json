@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Each chord of the parabola $y^{2}=12x$ that passes through the point $A(15,6)$ bounds, together with the parabola, a region. Then the least possible area of such a region is ______."
+ ],
+ "hindi": [
+  "परवलय $y^{2}=12x$ की प्रत्येक जीवा, जो बिन्दु $A(15,6)$ से होकर जाती है, परवलय के साथ एक क्षेत्र परिबद्ध करती है। तब ऐसे क्षेत्र का न्यूनतम सम्भव क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$A$ is inside ($36<180$). A chord through $A$ (not horizontal, as $y=6$ meets the parabola once): $x=my+15-6m$",
+  "With $y^{2}=12x$: $y^{2}-12my-12(15-6m)=0$, so $(y_{2}-y_{1})^{2}=144m^{2}-288m+720=144\\left[(m-1)^{2}+4\\right]$",
+  "Area of the segment $=\\displaystyle\\int_{y_{1}}^{y_{2}}\\left(my+15-6m-\\frac{y^{2}}{12}\\right)dy=\\frac{(y_{2}-y_{1})^{3}}{72}$, increasing in $|y_{2}-y_{1}|$; least at $m=1$: $|y_{2}-y_{1}|=24$",
+  "Archimedes check for $m=1$: chord $y=x-9$ from $(3,-6)$ to $(27,18)$, length $24\\sqrt{2}$; tangent parallel to it touches at $(3,6)$, height $\\dfrac{|3-6-9|}{\\sqrt{2}}=6\\sqrt{2}$; area $=\\dfrac{2}{3}\\cdot24\\sqrt{2}\\cdot6\\sqrt{2}=192$",
+  "",
+  "Final Answer: 192"
+ ],
+ "solution_full": [
+  "Since $6^{2}=36<12\\cdot15=180$, the point $A(15,6)$ is inside the parabola, so every line through $A$ other than $y=6$ (parallel to the axis, meeting the curve once) cuts the parabola in a chord.",
+  "Such a line is $x-15=m(y-6)$, i.e. $x=my+15-6m$, $m\\in\\mathbb{R}$.",
+  "Substituting $x=\\dfrac{y^{2}}{12}$: $y^{2}-12my-12(15-6m)=0$. If $y_{1}<y_{2}$ are its roots, $(y_{2}-y_{1})^{2}=(12m)^{2}+48(15-6m)=144m^{2}-288m+720=144\\left[(m-1)^{2}+4\\right]$.",
+  "The region between the chord and the parabola has area $\\displaystyle\\int_{y_{1}}^{y_{2}}\\left(my+15-6m-\\frac{y^{2}}{12}\\right)dy=\\frac{1}{12}\\int_{y_{1}}^{y_{2}}(y-y_{1})(y_{2}-y)\\,dy=\\frac{(y_{2}-y_{1})^{3}}{72}$.",
+  "This increases with $y_{2}-y_{1}$, which is least when $m=1$: $(y_{2}-y_{1})^{2}=576$, $y_{2}-y_{1}=24$. (At $m=1$ the chord is bisected by $A$: $\\dfrac{y_{1}+y_{2}}{2}=6m=6$.)",
+  "For $m=1$ the chord is $y=x-9$, meeting the parabola at $y=-6$ and $y=18$, i.e. at $(3,-6)$ and $(27,18)$; its length is $\\sqrt{24^{2}+24^{2}}=24\\sqrt{2}$.",
+  "By Archimedes' result the segment is $\\dfrac{2}{3}$ of the parallelogram formed by the chord and the tangent parallel to it. The tangent of slope $1$ to $y^{2}=12x$ touches at $\\left(\\dfrac{3}{1},\\dfrac{6}{1}\\right)=(3,6)$; its distance from $x-y-9=0$ is $\\dfrac{|3-6-9|}{\\sqrt{2}}=6\\sqrt{2}$.",
+  "Least area $=\\dfrac{2}{3}\\cdot24\\sqrt{2}\\cdot6\\sqrt{2}=\\dfrac{2}{3}\\cdot288=192$ (the same as $\\dfrac{24^{3}}{72}$).",
+  "",
+  "Final Answer: 192"
+ ],
+ "originality_note": "New: minimising the area cut off by chords through a fixed interior point; the minimum chord turns out to be the one bisected by the point, because the segment area depends only on the y-spread of the chord (way 4, hidden invariant). Closest known: 'chord of a parabola bisected at a given point' and 2025-P2-Q6 (locus of midpoints of chords cutting a fixed area). Different because: the chord is not given; it must be found by minimising, and Archimedes' 2/3 rule then evaluates the segment.",
+ "web_check": "not found",
+ "concept_use": {
+  "Chord of a parabola": "The chords through A are written as x = my + 15 - 6m, and the spread y2 - y1 of their ends is found from the quadratic in y.",
+  "Area of a parabolic segment (Archimedes' 2/3 result)": "The segment's area is evaluated by Archimedes' 2/3 rule (chord 24 sqrt2, height 6 sqrt2 to the parallel tangent), consistent with (y2 - y1)^3/72."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that A is inside the parabola, that every non-horizontal line through A gives a chord and a bounded region, that the minimum is attained (m = 1) and equals 192 (numerical minimisation over m confirms), a positive three-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Expressing the segment area through y2 - y1 and minimising the quadratic 144[(m-1)^2 + 4].",
+ "justification": "Two linked ideas (segment area as a function of the chord, and an optimisation over the chord family) in numerical format. Lighter than the chord-area locus 2025-P2-Q6 (L4) but clearly above the routine area anchor 2024-P2-Q2 (L2).",
+ "nearest_anchor": "2025-P2-Q6 (L4)",
+ "confidence": "Medium",
+ "chapter": "Parabola",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Chord of a parabola",
+  "Area of a parabolic segment (Archimedes' 2/3 result)"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "The set of all real numbers $h$ for which three distinct normals can be drawn to the parabola $y^{2}=4x$ from the point $(h,h-2)$ is the interval $(\\alpha,\\infty)$. Then the value of $\\alpha$ is ______."
+ ],
+ "hindi": [
+  "उन सभी वास्तविक संख्याओं $h$ का समुच्चय, जिनके लिए बिन्दु $(h,h-2)$ से परवलय $y^{2}=4x$ पर तीन भिन्न अभिलम्ब खींचे जा सकते हैं, अन्तराल $(\\alpha,\\infty)$ है। तब $\\alpha$ का मान ______ है।"
+ ],
+ "solution": [
+  "Normal $y=-tx+2t+t^{3}$ through $(h,h-2)$; with $u=h-2$: $g(t)=t^{3}-ut-u=0$. Three distinct normals $\\iff$ three distinct real roots",
+  "$u\\leq0$: $g'(t)=3t^{2}-u\\geq0$, $g$ increasing, one root",
+  "$u>0$: critical points $t=\\pm c$, $c=\\sqrt{\\dfrac{u}{3}}$; using $c^{3}=\\dfrac{u}{3}c$: $g(\\pm c)=\\mp\\dfrac{2u}{3}c-u$",
+  "$g(c)g(-c)=u^{2}-\\dfrac{4u^{2}}{9}c^{2}=u^{2}\\left(1-\\dfrac{4u}{27}\\right)<0\\iff u>\\dfrac{27}{4}$",
+  "$h>2+\\dfrac{27}{4}=\\dfrac{35}{4}$, so $\\alpha=8.75$",
+  "",
+  "Final Answer: 8.75"
+ ],
+ "solution_full": [
+  "The normal to $y^{2}=4x$ at $(t^{2},2t)$ is $y=-tx+2t+t^{3}$. It passes through $(h,h-2)$ when $t^{3}+(2-h)t-(h-2)=0$. Put $u=h-2$: $g(t)=t^{3}-ut-u=0$.",
+  "Distinct feet give distinct normals (different slopes $-t$), so three distinct normals exist exactly when $g$ has three distinct real roots.",
+  "If $u\\leq0$: $g'(t)=3t^{2}-u\\geq0$, with equality at most at one point, so $g$ is strictly increasing and has exactly one real root.",
+  "If $u>0$: $g'(t)=0$ at $t=\\pm c$, $c=\\sqrt{\\dfrac{u}{3}}$; $g$ has a local maximum at $-c$ and a local minimum at $c$. Three distinct real roots $\\iff g(-c)>0>g(c)\\iff g(c)g(-c)<0$ (since $g(-c)>g(c)$).",
+  "Using $c^{2}=\\dfrac{u}{3}$: $g(c)=\\dfrac{u}{3}c-uc-u=-\\dfrac{2u}{3}c-u$ and $g(-c)=\\dfrac{2u}{3}c-u$.",
+  "$g(c)g(-c)=u^{2}-\\dfrac{4u^{2}}{9}c^{2}=u^{2}-\\dfrac{4u^{3}}{27}=u^{2}\\left(1-\\dfrac{4u}{27}\\right)$. This is negative exactly when $u>\\dfrac{27}{4}$.",
+  "At $u=\\dfrac{27}{4}$ the cubic has a double root (only two distinct normals). So the condition is $h-2>\\dfrac{27}{4}$, i.e. $h>\\dfrac{35}{4}$, and $\\alpha=\\dfrac{35}{4}=8.75$.",
+  "",
+  "Final Answer: 8.75"
+ ],
+ "originality_note": "New: the point moves on a line through (2, 0), the point of the axis where the co-normal cubic degenerates, so the three-normal condition becomes u^2(1 - 4u/27) < 0 with u = h - 2 (way 3, a family of points cut by a condition on a cubic). Closest known: 'points on the axis from which three normals can be drawn (h > 2a)' and the condition 27ak^2 < 4(h - 2a)^3. Different because: both coordinates vary together, so the answer needs the derivative analysis of a cubic with a parameter in two coefficients.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Normals to Parabola: Maximum of 3 co-normal points, sum of ordinates = 0, centroid of co-normal points.": "Normals from (h, h - 2) correspond to roots of the co-normal cubic t^3 + (2 - h)t - (h - 2) = 0; three distinct normals need three distinct real roots.",
+  "Analysis of roots of cubic polynomial with the help of derivative": "The number of real roots of g(t) = t^3 - ut - u is decided from g' (monotonic for u <= 0) and the sign of the product of the extreme values for u > 0."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that the set is exactly (35/4, infinity) (numerical root counts at h = 8.74 and 8.76 give 1 and 3), that the boundary value gives only two distinct normals, and that 8.75 is a positive decimal as planned. Changed: removed a name for the line y = x - 2, which the stem did not need.",
+ "level": 3,
+ "key_step": "Reducing 'three normals' to three distinct real roots of t^3 - ut - u and using the product of the extreme values.",
+ "justification": "Two linked ideas (co-normal cubic, root analysis by derivatives) with a parameter in two coefficients; numerical answer with a boundary to handle. Comparable to the root-counting anchor 2023-P2-Q7 (L3) and to 2026-P1-Q1 (L3).",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "chapter": "Parabola",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Normals to Parabola: Maximum of 3 co-normal points, sum of ordinates = 0, centroid of co-normal points.",
+  "Analysis of roots of cubic polynomial with the help of derivative"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

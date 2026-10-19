@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $P$ be the point on the parabola $y^{2}=4x$ that is nearest to the point $A(-1,14)$, and let $S$ be the focus of the parabola. Then the area of the triangle $SAP$ is",
+  "",
+  "(A) $20$",
+  "(B) $25$",
+  "(C) $50$",
+  "(D) $30$"
+ ],
+ "hindi": [
+  "माना कि परवलय $y^{2}=4x$ पर स्थित $P$ वह बिन्दु है जो बिन्दु $A(-1,14)$ के निकटतम है, तथा $S$ परवलय की नाभि है। तब त्रिभुज $SAP$ का क्षेत्रफल है",
+  "",
+  "(A) $20$",
+  "(B) $25$",
+  "(C) $50$",
+  "(D) $30$"
+ ],
+ "solution": [
+  "The nearest point is the foot of a normal through $A$. Normal at $(t^{2},2t)$: $y=-tx+2t+t^{3}$",
+  "Through $A(-1,14)$: $t^{3}+3t-14=0\\Rightarrow(t-2)(t^{2}+2t+7)=0\\Rightarrow t=2$ (only real root)",
+  "$AP^{2}=f(t)=(t^{2}+1)^{2}+(2t-14)^{2}$, $f'(t)=4(t^{3}+3t-14)$ changes sign only at $t=2$, so $t=2$ gives the global minimum: $P(4,4)$",
+  "$S(1,0)$: $\\overrightarrow{SA}=(-2,14)$, $\\overrightarrow{SP}=(3,4)$; area $=\\dfrac{1}{2}|(-2)(4)-(14)(3)|=25$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "For a point $P(t^{2},2t)$ of $y^{2}=4x$, the square of the distance from $A(-1,14)$ is $f(t)=(t^{2}+1)^{2}+(2t-14)^{2}$.",
+  "$f'(t)=4t(t^{2}+1)+4(2t-14)=4(t^{3}+3t-14)$. Equivalently, the nearest point is the foot of a normal through $A$: the normal at $(t^{2},2t)$ is $y=-tx+2t+t^{3}$, and it passes through $(-1,14)$ when $14=t+2t+t^{3}$, the same cubic.",
+  "$t^{3}+3t-14=(t-2)(t^{2}+2t+7)$, and $t^{2}+2t+7=(t+1)^{2}+6>0$. So $t=2$ is the only real root.",
+  "Since $t^{3}+3t-14$ is increasing, $f'(t)<0$ for $t<2$ and $f'(t)>0$ for $t>2$; hence $f$ has its global minimum at $t=2$ and the nearest point is $P(4,4)$ (distance $\\sqrt{25+100}=5\\sqrt{5}$).",
+  "The focus of $y^{2}=4x$ is $S(1,0)$. With $\\overrightarrow{SA}=(-2,14)$ and $\\overrightarrow{SP}=(3,4)$, area of triangle $SAP=\\dfrac{1}{2}|(-2)(4)-(14)(3)|=\\dfrac{1}{2}|-8-42|=25$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: the point is taken on the directrix, which makes the normal cubic t^3+3t-14 monotonic (a single foot, so the nearest point is forced), and the question then closes a triangle with the focus (way 5, combination of nearest point and focal geometry). Closest known: 'shortest distance from a point to y^2 = 4ax by the normal' textbook exercises. Different because: the nearest point is used to build triangle SAP, and the uniqueness of the foot has to be argued from the monotonic cubic.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Normal to the parabola: point, slope and parametric forms": "The parametric normal y = -tx + 2t + t^3 is made to pass through A(-1, 14), giving t^3 + 3t - 14 = 0.",
+  "Minimum distance of a point from a curve": "The nearest point is located where the derivative of the squared distance f(t) vanishes (equivalently, along the normal), and the sign change of f' shows it is the global minimum."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that the nearest point is unique (single real root, f' changes sign once), that S, A, P are not collinear, and that only (B) 25 is correct; (C) 50 is the value without the factor 1/2. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the normal through A and seeing the cubic has the single real root t = 2.",
+ "justification": "Routine three-step chain (normal through a point, solve a cubic with an obvious root, area by coordinates). Matches the demand of 2023-P1-Q7 (L2, normal and triangle with the focus).",
+ "nearest_anchor": "2023-P1-Q7 (L2)",
+ "confidence": "High",
+ "chapter": "Parabola",
+ "target_level": 2,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Normal to the parabola: point, slope and parametric forms",
+  "Minimum distance of a point from a curve"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

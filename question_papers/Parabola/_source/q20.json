@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "english": [
+  "The parabola $y^{2}=2(x-h)$ touches the ellipse $\\dfrac{x^{2}}{12}+\\dfrac{y^{2}}{6}=1$ at two distinct points. Then the value of $h$ is ______."
+ ],
+ "hindi": [
+  "परवलय $y^{2}=2(x-h)$ दीर्घवृत्त $\\dfrac{x^{2}}{12}+\\dfrac{y^{2}}{6}=1$ को दो भिन्न बिन्दुओं पर स्पर्श करता है। तब $h$ का मान ______ है।"
+ ],
+ "solution": [
+  "Contact points are $(x_{1},\\pm y_{1})$, $y_{1}\\neq0$; at each, the curves have a common normal, so their normals meet the $x$-axis at the same point",
+  "Parabola $y^{2}=4A(x-h)$, $4A=2$: subnormal $=2A=1$, so the normal at $(x_{1},y_{1})$ meets the axis at $(x_{1}+1,0)$",
+  "Ellipse: $e^{2}=1-\\dfrac{6}{12}=\\dfrac{1}{2}$; the normal at $(x_{1},y_{1})$ meets the major axis at $(e^{2}x_{1},0)=\\left(\\dfrac{x_{1}}{2},0\\right)$",
+  "$x_{1}+1=\\dfrac{x_{1}}{2}\\Rightarrow x_{1}=-2$; $y_{1}^{2}=6\\left(1-\\dfrac{4}{12}\\right)=4$; $4=2(-2-h)\\Rightarrow h=-4$",
+  "Check: $x^{2}+4(x+4)=12\\Rightarrow(x+2)^{2}=0$",
+  "",
+  "Final Answer: -4"
+ ],
+ "solution_full": [
+  "Both curves are symmetric in the $x$-axis, so two distinct contact points are $(x_{1},y_{1})$ and $(x_{1},-y_{1})$ with $y_{1}\\neq0$. At a contact point the curves have the same tangent, hence the same normal, and this normal is not the $x$-axis.",
+  "Parabola $y^{2}=2(x-h)$: here $4A=2$, $A=\\dfrac{1}{2}$. Its subnormal is constant and equal to $2A=1$: differentiating, $2y\\dfrac{dy}{dx}=2$, so the subnormal $y\\dfrac{dy}{dx}=1$, and the normal at $(x_{1},y_{1})$ meets the axis at $(x_{1}+1,0)$.",
+  "Ellipse $\\dfrac{x^{2}}{12}+\\dfrac{y^{2}}{6}=1$: $e^{2}=1-\\dfrac{b^{2}}{a^{2}}=\\dfrac{1}{2}$. The normal at $(x_{1},y_{1})$, $\\dfrac{12x}{x_{1}}-\\dfrac{6y}{y_{1}}=12-6$, meets the major axis at $x=\\dfrac{6x_{1}}{12}=e^{2}x_{1}=\\dfrac{x_{1}}{2}$.",
+  "The common normal meets the axis at one point: $x_{1}+1=\\dfrac{x_{1}}{2}$, so $x_{1}=-2$.",
+  "From the ellipse, $y_{1}^{2}=6\\left(1-\\dfrac{4}{12}\\right)=4$, so the contact points are $(-2,\\pm2)$. From the parabola, $4=2(-2-h)$, so $h=-4$.",
+  "Check: with $h=-4$, eliminating $y$: $\\dfrac{x^{2}}{12}+\\dfrac{2(x+4)}{6}=1\\iff x^{2}+4x+4=0\\iff(x+2)^{2}=0$, a double root, so the curves touch at $(-2,\\pm2)$ and meet nowhere else.",
+  "",
+  "Final Answer: -4"
+ ],
+ "originality_note": "New: the contact of a parabola and an ellipse along a common normal is found by equating where the two normals cut the axis, using the constant subnormal of the parabola and the e^2 x1 normal intercept of the ellipse (way 5). Closest known: 'find h so that a parabola touches an ellipse' (usually by a discriminant) and the separate textbook properties (subnormal = 2a; normal of an ellipse meets the major axis at e^2 x1). Different because: the two properties are combined at a common point; the discriminant route is a check. An earlier design (common tangents of an ellipse and a parabola meeting the x-axis) was replaced because it matched JEE Advanced 2023 P1 Q2.",
+ "web_check": "found: redesigned",
+ "concept_use": {
+  "Miscellaneous properties of parabola": "The parabola's subnormal is constant (2A = 1), so its normal at (x1, y1) meets the axis at (x1 + 1, 0).",
+  "Miscellaneous properties of Ellipse": "The ellipse's normal at (x1, y1) meets the major axis at (e^2 x1, 0) with e^2 = 1/2."
+ },
+ "stem_review": "Read as a student: every curve and point is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and checked by an independent numerical route, is unique and matches the Answer Plan; no hyperbolic functions or asymptotes. Checked that h = -4 is the only value giving two distinct contact points (the other contacts occur only at a vertex, h = ±2 sqrt3, with a single contact point), that the curves meet nowhere else, and that -4 is a negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Equating the axis intercepts of the two normals at the contact point (subnormal 1 and e^2 x1).",
+ "justification": "Routine: two standard properties (or a discriminant) and a substitution, three short steps. Like 2024-P1-Q4 (L2) and 2021-P2-Q18 (L2) among conic anchors.",
+ "nearest_anchor": "2024-P1-Q4 (L2)",
+ "confidence": "High",
+ "chapter": "Parabola",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Miscellaneous properties of parabola",
+  "Miscellaneous properties of Ellipse"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}
