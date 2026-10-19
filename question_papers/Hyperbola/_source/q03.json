@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "chapter": "Hyperbola",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Miscellaneous properties of Hyperbola",
+  "Maximum and minimum of general trigonometric expressions under constraints"
+ ],
+ "level": 3,
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $S(4,0)$ and $S'(-4,0)$ be the foci of the hyperbola $\\dfrac{x^{2}}{9}-\\dfrac{y^{2}}{7}=1$. For a point $P$ on the hyperbola, let $p_{1}$ and $p_{2}$ denote the perpendicular distances of $S$ and $S'$, respectively, from the tangent to the hyperbola at $P$. As $P$ varies over the hyperbola, the least value of $9p_{1}+p_{2}$ is",
+  "",
+  "(A) $6\\sqrt{7}$",
+  "(B) $16$",
+  "(C) $10\\sqrt{7}$",
+  "(D) $64$"
+ ],
+ "hindi": [
+  "माना अतिपरवलय $\\dfrac{x^{2}}{9}-\\dfrac{y^{2}}{7}=1$ की नाभियाँ $S(4,0)$ तथा $S'(-4,0)$ हैं। अतिपरवलय पर किसी बिन्दु $P$ के लिए, माना $P$ पर अतिपरवलय की स्पर्श रेखा से $S$ तथा $S'$ की लम्बवत् दूरियाँ क्रमशः $p_{1}$ तथा $p_{2}$ हैं। जब $P$ अतिपरवलय पर गति करता है, तब $9p_{1}+p_{2}$ का न्यूनतम मान है",
+  "",
+  "(A) $6\\sqrt{7}$",
+  "(B) $16$",
+  "(C) $10\\sqrt{7}$",
+  "(D) $64$"
+ ],
+ "solution": [
+  "Product of perpendiculars from the foci on any tangent: $p_{1}p_{2}=b^{2}=7$",
+  "$P(3\\sec\\theta,\\sqrt{7}\\tan\\theta)$, tangent $\\dfrac{x\\sec\\theta}{3}-\\dfrac{y\\tan\\theta}{\\sqrt{7}}=1$: $\\dfrac{p_{2}}{p_{1}}=\\left|\\dfrac{4\\sec\\theta+3}{4\\sec\\theta-3}\\right|$",
+  "Right branch ($\\sec\\theta\\ge1$): $\\dfrac{p_{2}}{p_{1}}\\in(1,7]$, largest at $\\theta=0$; so $p_{2}^{2}=7\\cdot\\dfrac{p_{2}}{p_{1}}\\in(7,49]$, i.e. $p_{2}\\in(\\sqrt{7},7]$",
+  "$9p_{1}+p_{2}=\\dfrac{63}{p_{2}}+p_{2}$; AM-GM equality needs $p_{2}=\\sqrt{63}>7$, not attainable, and $\\dfrac{63}{t}+t$ decreases for $t<\\sqrt{63}$",
+  "So on the right branch the least value is at $p_{2}=7$, $p_{1}=1$ (vertex $(3,0)$): $9+7=16$",
+  "Left branch: roles swap, $p_{1}\\in(\\sqrt{7},7]$ and $9p_{1}+\\dfrac{7}{p_{1}}>10\\sqrt{7}>16$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Here $a=3$, $b=\\sqrt{7}$, $c=4$, $e=\\dfrac{4}{3}$. Take $P(3\\sec\\theta,\\sqrt{7}\\tan\\theta)$; $\\sec\\theta>0$ on the right branch and $\\sec\\theta<0$ on the left branch.",
+  "Tangent at $P$: $\\dfrac{x\\sec\\theta}{3}-\\dfrac{y\\tan\\theta}{\\sqrt{7}}=1$. With $N=\\sqrt{\\dfrac{\\sec^{2}\\theta}{9}+\\dfrac{\\tan^{2}\\theta}{7}}$: $p_{1}=\\dfrac{\\left|\\frac{4}{3}\\sec\\theta-1\\right|}{N}$, $p_{2}=\\dfrac{\\left|\\frac{4}{3}\\sec\\theta+1\\right|}{N}$.",
+  "Product: $p_{1}p_{2}=\\dfrac{\\frac{16}{9}\\sec^{2}\\theta-1}{N^{2}}=\\dfrac{63(16\\sec^{2}\\theta-9)}{9(7\\sec^{2}\\theta+9\\tan^{2}\\theta)}=\\dfrac{7(16\\sec^{2}\\theta-9)}{16\\sec^{2}\\theta-9}=7$. This is the property that the product of the perpendiculars from the foci on any tangent equals $b^{2}$.",
+  "Ratio: $\\dfrac{p_{2}}{p_{1}}=\\left|\\dfrac{4\\sec\\theta+3}{4\\sec\\theta-3}\\right|$. On the right branch, $\\sec\\theta\\ge1$, so the ratio is greater than $1$ and is largest, equal to $\\dfrac{7}{1}=7$, at $\\sec\\theta=1$; as $\\sec\\theta\\to\\infty$ it tends to $1$. Hence $\\dfrac{p_{2}}{p_{1}}\\in(1,7]$.",
+  "Since $p_{2}^{2}=p_{1}p_{2}\\cdot\\dfrac{p_{2}}{p_{1}}=7\\cdot\\dfrac{p_{2}}{p_{1}}$, the range is $p_{2}\\in(\\sqrt{7},7]$.",
+  "Now $9p_{1}+p_{2}=\\dfrac{63}{p_{2}}+p_{2}=g(p_{2})$. AM-GM gives $g\\ge2\\sqrt{63}=6\\sqrt{7}$ with equality only at $p_{2}=\\sqrt{63}\\approx7.94$, which is outside $(\\sqrt{7},7]$. Since $g'(t)=1-\\dfrac{63}{t^{2}}<0$ for $t<\\sqrt{63}$, $g$ is decreasing on $(\\sqrt{7},7]$ and its least value is $g(7)=9+7=16$, attained at the vertex $(3,0)$, where the tangent $x=3$ gives $p_{1}=1$, $p_{2}=7$.",
+  "On the left branch the roles of the foci are exchanged: $p_{1}\\in(\\sqrt{7},7]$, $p_{2}=\\dfrac{7}{p_{1}}$, and $9p_{1}+\\dfrac{7}{p_{1}}$ is increasing there (derivative $9-\\dfrac{7}{p_{1}^{2}}>0$), so its values exceed $10\\sqrt{7}>16$; at the vertex $(-3,0)$ it equals $64$.",
+  "Hence the least value is $16$. Option (A) is the unattainable AM-GM bound.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a weighted sum of the two focal perpendiculars on a tangent is minimised under the constraint p1 p2 = b^2 with the ratio p2/p1 confined to (1, 7], so the AM-GM point is not attainable and the minimum sits at the vertex (way 4). Closest known: product of perpendiculars from the foci on a tangent equals b^2. Different because: the extremum is decided by the trigonometric range of the ratio, not by AM-GM.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Miscellaneous properties of Hyperbola": "The property p1 p2 = b^2 = 7 for the perpendiculars from the foci on any tangent turns 9 p1 + p2 into a function of one variable.",
+  "Maximum and minimum of general trigonometric expressions under constraints": "The ratio p2/p1 = (4 sec(theta) + 3)/(4 sec(theta) - 3) is confined to (1, 7] by sec(theta) >= 1, and the minimum is taken under this constraint (the AM-GM point is excluded)."
+ },
+ "stem_review": "Read as a student: every curve, point and symbol is introduced, every condition is stated, there is one reading of each sentence; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no asymptote wording. Checked that P ranges over both branches and the least value 16 is attained (at (3,0)), so 'least value' is correct; the trap value 6 sqrt 7 is not attained. Changed: No change.",
+ "key_step": "p1 p2 = 7 with p2/p1 in (1, 7], so 63/p2 + p2 is decreasing on the allowed range and the minimum is at the vertex.",
+ "justification": "Two ideas linked: the focal-perpendicular product property and a constrained extremum where the obvious AM-GM value is a trap. Comparable to 2026-P2-Q13 (L3) on hyperbola properties; the trap and range check keep it at 3 rather than 2.",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium"
+}

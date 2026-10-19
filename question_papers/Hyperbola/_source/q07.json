@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 3,
+ "english": [
+  "Let $H$ be the hyperbola having one focus at $S(1,0)$, the corresponding directrix $3x+4y-15=0$, and passing through the point $P(3,0)$. Then the distance between the two directrices of $H$ is ______."
+ ],
+ "hindi": [
+  "माना कि $H$ वह अतिपरवलय है जिसकी एक नाभि $S(1,0)$ है, संगत नियता $3x+4y-15=0$ है, तथा जो बिन्दु $P(3,0)$ से होकर जाता है। तब $H$ की दोनों नियताओं के बीच की दूरी ______ है।"
+ ],
+ "solution": [
+  "$PS=2$, distance of $P$ from the directrix $=\\dfrac{|9-15|}{5}=\\dfrac65$, so $e=\\dfrac{PS}{PM}=\\dfrac53$",
+  "Distance of the focus from its directrix $p=\\dfrac{|3-15|}{5}=\\dfrac{12}{5}$",
+  "Along the axis, $p=CS-CZ=ae-\\dfrac ae=a\\left(\\dfrac53-\\dfrac35\\right)=\\dfrac{16a}{15}\\Rightarrow a=\\dfrac94$",
+  "Distance between the directrices $=\\dfrac{2a}{e}=2\\cdot\\dfrac94\\cdot\\dfrac35=\\dfrac{27}{10}=2.7$",
+  "",
+  "Final Answer: 2.7"
+ ],
+ "solution_full": [
+  "By the focus-directrix definition, every point $X$ of $H$ satisfies $XS=e\\cdot XM$, where $XM$ is the distance of $X$ from the directrix $3x+4y-15=0$ and $e>1$.",
+  "For $P(3,0)$: $PS=\\sqrt{(3-1)^{2}+0^{2}}=2$ and $PM=\\dfrac{|3\\cdot3+4\\cdot0-15|}{5}=\\dfrac65$. Hence $e=\\dfrac{2}{6/5}=\\dfrac53$, which is greater than $1$, so the conic is indeed a hyperbola.",
+  "The distance of the focus $S$ from the corresponding directrix is $p=\\dfrac{|3\\cdot1+0-15|}{5}=\\dfrac{12}{5}$.",
+  "The transverse axis is the line through $S$ perpendicular to the directrix. If $C$ is the centre and $Z$ the foot of the directrix on the axis, then $CS=ae$ and $CZ=\\dfrac ae$, with $Z$ between $C$ and $S$. Hence $p=ae-\\dfrac ae=a\\cdot\\dfrac{e^{2}-1}{e}$.",
+  "With $e=\\dfrac53$: $\\dfrac{e^{2}-1}{e}=\\dfrac{16/9}{5/3}=\\dfrac{16}{15}$, so $\\dfrac{16a}{15}=\\dfrac{12}{5}$, giving $a=\\dfrac94$.",
+  "The two directrices are parallel lines at distance $\\dfrac ae$ on either side of the centre, so the distance between them is $\\dfrac{2a}{e}=2\\cdot\\dfrac94\\cdot\\dfrac35=\\dfrac{27}{10}=2.7$.",
+  "Check: the vertices on the axis $(1+3t,\\,4t)$ are $\\left(\\dfrac{19}{10},\\dfrac65\\right)$ and $\\left(\\dfrac{23}{5},\\dfrac{24}{5}\\right)$, whose distance is $\\dfrac92=2a$.",
+  "",
+  "Final Answer: 2.7"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: the hyperbola is fixed by a focus, an oblique directrix and one point on it, so e must first be read off from that point and then a is recovered from the focus-directrix gap p = a(e^2-1)/e before the directrix spacing 2a/e is obtained (way 5). Closest known: writing the equation of a conic from a given focus, directrix and eccentricity. Different because: e is not given, no equation is needed, and the answer comes from the chain e -> p -> a -> 2a/e along an oblique axis.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "hyperbola from the focus-directrix definition with a general axis",
+  "Basic elements of the standard hyperbola: focus, directrix, axis, latus rectum"
+ ],
+ "concept_use": {
+  "hyperbola from the focus-directrix definition with a general axis": "The definition PS = e PM with the oblique directrix 3x+4y-15=0 gives e = 5/3 from the point P(3,0), and the focus-directrix gap p = 12/5 along the general axis.",
+  "Basic elements of the standard hyperbola: focus, directrix, axis, latus rectum": "The relations CS = ae, CZ = a/e give p = a(e^2-1)/e, hence a = 9/4, and the distance between the directrices 2a/e = 2.7."
+ },
+ "stem_review": "Read as a student: every curve, point and symbol is introduced, the conditions are complete, each sentence has one reading; answer recomputed with sympy and unique; it matches the Answer Plan. Checked that e = 5/3 > 1 so the conic is a hyperbola and that a is determined uniquely; 2.7 is exact. Changed: No change.",
+ "level": 3,
+ "key_step": "Reading e from the given point, then using p = ae - a/e to recover a before computing 2a/e.",
+ "justification": "Two linked ideas: the focus-directrix definition with an oblique directrix to get e, and the axis relations of the basic elements to get a and the directrix spacing. Comparable to the focus-directrix hyperbola item of 2026-P1-Q16 (L3), with a numerical answer and no options.",
+ "nearest_anchor": "2026-P1-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

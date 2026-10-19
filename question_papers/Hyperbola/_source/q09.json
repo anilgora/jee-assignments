@@ -1,0 +1,58 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 3,
+ "english": [
+  "Consider the ellipse $E:\\dfrac{x^{2}}{81}+\\dfrac{y^{2}}{49}=1$ and the hyperbola $H:\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}=1$. A point $(x,y)$ is said to lie inside $H$ if $\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}>1$. Then the number of points $(x,y)$, with both $x$ and $y$ integers, that lie inside $E$ (that is, $\\dfrac{x^{2}}{81}+\\dfrac{y^{2}}{49}<1$) and inside $H$ is ______."
+ ],
+ "hindi": [
+  "दीर्घवृत्त $E:\\dfrac{x^{2}}{81}+\\dfrac{y^{2}}{49}=1$ तथा अतिपरवलय $H:\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}=1$ पर विचार कीजिए। एक बिन्दु $(x,y)$ को $H$ के अन्दर स्थित कहा जाता है यदि $\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}>1$ हो। तब उन बिन्दुओं $(x,y)$ की संख्या, जिनमें $x$ तथा $y$ दोनों पूर्णांक हैं और जो $E$ के अन्दर (अर्थात् $\\dfrac{x^{2}}{81}+\\dfrac{y^{2}}{49}<1$) तथा $H$ के अन्दर स्थित हैं, ______ है।"
+ ],
+ "solution": [
+  "Both regions are symmetric in $x$ and in $y$; count for $x>0$ and double",
+  "Inside $H$: $y^{2}<\\dfrac94(x^{2}-4)$, needs $|x|\\ge3$. Inside $E$: $y^{2}<\\dfrac{49}{81}(81-x^{2})$, needs $|x|\\le8$",
+  "$x=3$: $y^{2}<11.25$ (H), $y^{2}<43.6$ (E) $\\Rightarrow |y|\\le3$: $7$ points",
+  "$x=4$: $y^{2}<27$, $y^{2}<39.3\\Rightarrow |y|\\le5$: $11$",
+  "$x=5$: $y^{2}<47.25$, $y^{2}<33.9\\Rightarrow |y|\\le5$: $11$",
+  "$x=6$: $y^{2}<72$, $y^{2}<27.2\\Rightarrow |y|\\le5$: $11$",
+  "$x=7$: $y^{2}<19.4$ (E binds) $\\Rightarrow |y|\\le4$: $9$",
+  "$x=8$: $y^{2}<10.3\\Rightarrow |y|\\le3$: $7$",
+  "For $x>0$: $7+11+11+11+9+7=56$; total $=2\\times56=112$",
+  "",
+  "Final Answer: 112"
+ ],
+ "solution_full": [
+  "Both conditions involve only $x^{2}$ and $y^{2}$, so the set of counted points is symmetric about both axes. Points with $x=0$ are not inside $H$ (that needs $-\\dfrac{y^{2}}{9}>1$). So we count the points with $x>0$ and double.",
+  "Inside $H$: $\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{9}>1\\Leftrightarrow y^{2}<\\dfrac94\\left(x^{2}-4\\right)$. This needs $x^{2}>4$, so $x\\ge3$ (at $x=2$ the bound is $y^{2}<0$).",
+  "Inside $E$: $\\dfrac{x^{2}}{81}+\\dfrac{y^{2}}{49}<1\\Leftrightarrow y^{2}<\\dfrac{49}{81}\\left(81-x^{2}\\right)$. This needs $x\\le8$.",
+  "For each $x$ from $3$ to $8$ the admissible $y$ satisfy $y^{2}<\\min$ of the two bounds:",
+  "$x=3$: $\\dfrac94\\cdot5=11.25$ and $\\dfrac{49\\cdot72}{81}=43.56$; $y^{2}<11.25\\Rightarrow |y|\\le3$, giving $7$ values.",
+  "$x=4$: $\\dfrac94\\cdot12=27$ and $\\dfrac{49\\cdot65}{81}=39.32$; $y^{2}<27\\Rightarrow |y|\\le5$, giving $11$ values.",
+  "$x=5$: $\\dfrac94\\cdot21=47.25$ and $\\dfrac{49\\cdot56}{81}=33.88$; $y^{2}<33.88\\Rightarrow |y|\\le5$, giving $11$ values.",
+  "$x=6$: $\\dfrac94\\cdot32=72$ and $\\dfrac{49\\cdot45}{81}=27.22$; $y^{2}<27.22\\Rightarrow |y|\\le5$, giving $11$ values.",
+  "$x=7$: $\\dfrac94\\cdot45=101.25$ and $\\dfrac{49\\cdot32}{81}=19.36$; $y^{2}<19.36\\Rightarrow |y|\\le4$, giving $9$ values.",
+  "$x=8$: $\\dfrac94\\cdot60=135$ and $\\dfrac{49\\cdot17}{81}=10.28$; $y^{2}<10.28\\Rightarrow |y|\\le3$, giving $7$ values.",
+  "Total for $x>0$: $7+11+11+11+9+7=56$. By symmetry the same number lies at $x<0$, so the required number is $2\\times56=112$.",
+  "",
+  "Final Answer: 112"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: lattice points in the region common to the interior of an ellipse and the focal side of a hyperbola, where the binding curve switches from H to E between x = 4 and x = 5 (way 5). Closest known: lattice points inside an ellipse or between curves (2023-P1-Q6 type). Different because: two position conditions of different conics compete and the solver must take the smaller bound column by column.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Position of a point wrt a Hyperbola",
+  "Position of a point wrt a Ellipse"
+ ],
+ "concept_use": {
+  "Position of a point wrt a Hyperbola": "Position of a point with respect to H: the point is inside H when x^2/4 - y^2/9 > 1, which gives y^2 < 9(x^2-4)/4 and x >= 3.",
+  "Position of a point wrt a Ellipse": "Position of a point with respect to E: the point is inside E when x^2/81 + y^2/49 < 1, which gives y^2 < 49(81-x^2)/81 and x <= 8; it binds for x >= 5."
+ },
+ "stem_review": "Read as a student: every curve, point and symbol is introduced, the conditions are complete, each sentence has one reading; answer recomputed with sympy and unique; it matches the Answer Plan. Checked that 'inside H' is defined in the stem, that the inequalities are strict (no boundary point is an integer point on either curve within the range), and that the count 112 matches a brute-force enumeration. Changed: No change.",
+ "level": 3,
+ "key_step": "Column-wise count with the minimum of the two bounds, noticing where the ellipse takes over from the hyperbola.",
+ "justification": "Same kind of lattice counting inside two conics as 2023-P1-Q6 (L3), here with no options and a switch of the binding curve, so one slip gives a wrong count.",
+ "nearest_anchor": "2023-P1-Q6 (L3)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

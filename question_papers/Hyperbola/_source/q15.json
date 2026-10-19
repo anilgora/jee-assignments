@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Pair of tangents for Hyperbola",
+  "Pair of tangents for Ellipse"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{3}+y^{2}=1$ and let $H$ be the hyperbola $\\dfrac{x^{2}}{7}-\\dfrac{y^{2}}{6}=1$. Let $P(0,\\lambda)$, where $\\lambda>0$, be a point such that the pair of tangents drawn from $P$ to $E$ is the same pair of lines as the pair of tangents drawn from $P$ to $H$. Then the value of $\\lambda$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{3}+y^{2}=1$ है तथा $H$ अतिपरवलय $\\dfrac{x^{2}}{7}-\\dfrac{y^{2}}{6}=1$ है। माना कि $P(0,\\lambda)$, जहाँ $\\lambda>0$, एक ऐसा बिन्दु है कि $P$ से $E$ पर खींची गई स्पर्श रेखाओं का युग्म वही रेखा-युग्म है जो $P$ से $H$ पर खींची गई स्पर्श रेखाओं का युग्म है। तब $\\lambda$ का मान ______ है।"
+ ],
+ "solution": [
+  "Pair of tangents $SS_{1}=T^{2}$",
+  "For $E$: $\\left(\\dfrac{x^{2}}{3}+y^{2}-1\\right)(\\lambda^{2}-1)=(\\lambda y-1)^{2}\\Rightarrow \\dfrac{\\lambda^{2}-1}{3}x^{2}-y^{2}+2\\lambda y-\\lambda^{2}=0$",
+  "For $H$: $\\left(\\dfrac{x^{2}}{7}-\\dfrac{y^{2}}{6}-1\\right)\\left(-\\dfrac{\\lambda^{2}}{6}-1\\right)=\\left(-\\dfrac{\\lambda y}{6}-1\\right)^{2}$; multiplying by $-6$: $\\dfrac{\\lambda^{2}+6}{7}x^{2}-y^{2}+2\\lambda y-\\lambda^{2}=0$",
+  "The $y$-terms already agree, so the pairs coincide iff $\\dfrac{\\lambda^{2}-1}{3}=\\dfrac{\\lambda^{2}+6}{7}\\Rightarrow 4\\lambda^{2}=25\\Rightarrow\\lambda=\\dfrac52$",
+  "Check: tangents $y=\\pm\\dfrac{\\sqrt7}{2}x+\\dfrac52$; $3\\cdot\\dfrac74+1=\\dfrac{25}{4}=7\\cdot\\dfrac74-6$, so they touch both curves",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "solution_full": [
+  "The pair of tangents from $(x_{1},y_{1})$ to a conic $S=0$ is $SS_{1}=T^{2}$, where $S_{1}=S(x_{1},y_{1})$ and $T=0$ is the chord of contact form.",
+  "Ellipse, from $P(0,\\lambda)$: $S=\\dfrac{x^{2}}{3}+y^{2}-1$, $S_{1}=\\lambda^{2}-1$, $T=\\lambda y-1$. Then $\\left(\\dfrac{x^{2}}{3}+y^{2}-1\\right)(\\lambda^{2}-1)=\\lambda^{2}y^{2}-2\\lambda y+1$.",
+  "Expanding: $\\dfrac{\\lambda^{2}-1}{3}x^{2}+(\\lambda^{2}-1)y^{2}-(\\lambda^{2}-1)-\\lambda^{2}y^{2}+2\\lambda y-1=0$, i.e. $\\dfrac{\\lambda^{2}-1}{3}x^{2}-y^{2}+2\\lambda y-\\lambda^{2}=0$.",
+  "Hyperbola, from $P(0,\\lambda)$: $S=\\dfrac{x^{2}}{7}-\\dfrac{y^{2}}{6}-1$, $S_{1}=-\\dfrac{\\lambda^{2}}{6}-1=-\\dfrac{\\lambda^{2}+6}{6}$, $T=-\\dfrac{\\lambda y}{6}-1$.",
+  "$SS_{1}=T^{2}$ multiplied by $-6$: $(\\lambda^{2}+6)\\left(\\dfrac{x^{2}}{7}-\\dfrac{y^{2}}{6}-1\\right)=-6\\left(\\dfrac{\\lambda^{2}y^{2}}{36}+\\dfrac{\\lambda y}{3}+1\\right)$.",
+  "Expanding: $\\dfrac{\\lambda^{2}+6}{7}x^{2}-\\dfrac{\\lambda^{2}+6}{6}y^{2}-\\lambda^{2}-6+\\dfrac{\\lambda^{2}}{6}y^{2}+2\\lambda y+6=0$, i.e. $\\dfrac{\\lambda^{2}+6}{7}x^{2}-y^{2}+2\\lambda y-\\lambda^{2}=0$.",
+  "Both equations have the same coefficients of $y^{2}$, $y$ and the constant, so they represent the same pair of lines exactly when the $x^{2}$ coefficients agree: $\\dfrac{\\lambda^{2}-1}{3}=\\dfrac{\\lambda^{2}+6}{7}$.",
+  "$7\\lambda^{2}-7=3\\lambda^{2}+18\\Rightarrow 4\\lambda^{2}=25\\Rightarrow\\lambda=\\dfrac52$ (as $\\lambda>0$).",
+  "Check by slopes: with $\\lambda=\\dfrac52$ the common joint equation is $\\dfrac74x^{2}-y^{2}+5y-\\dfrac{25}{4}=0$, i.e. $\\dfrac74x^{2}=\\left(y-\\dfrac52\\right)^{2}$, the lines $y=\\pm\\dfrac{\\sqrt7}{2}x+\\dfrac52$. For $E$: $a^{2}m^{2}+b^{2}=3\\cdot\\dfrac74+1=\\dfrac{25}{4}=c^{2}$. For $H$: $a^{2}m^{2}-b^{2}=7\\cdot\\dfrac74-6=\\dfrac{25}{4}=c^{2}$, and $m^{2}=\\dfrac74>\\dfrac67$, so both lines touch $H$ at real points.",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "concept_use": {
+  "Pair of tangents for Hyperbola": "SS1 = T^2 for H from (0, lambda) gives (lambda^2+6)x^2/7 - y^2 + 2 lambda y - lambda^2 = 0.",
+  "Pair of tangents for Ellipse": "SS1 = T^2 for E from (0, lambda) gives (lambda^2-1)x^2/3 - y^2 + 2 lambda y - lambda^2 = 0; equating the two joint equations fixes lambda."
+ },
+ "originality_note": "New: the point is defined by the coincidence of two joint equations (the tangent pair to an ellipse and to a hyperbola from the same point), so the answer comes from comparing coefficients of two SS1 = T^2 equations (way 5). Closest known: equation of the pair of tangents from a point to an ellipse; common tangents of two conics. Different because: the condition is stated on the pairs from one point, and the joint equations turn out to share every coefficient except that of x^2.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every curve, point and parameter introduced, conditions complete (quadrant / sign / branch stated), one reading of each sentence; answer recomputed with sympy and unique; answer equals the plan (positive decimal: 2.5). Changed: No change. Checked that lambda = 5/2 is the only positive value, that P is outside E (tangents real) and that both lines touch H at real points (m^2 = 7/4 > 6/7).",
+ "level": 3,
+ "key_step": "Write SS1 = T^2 for both conics from (0, lambda) and compare the joint equations.",
+ "justification": "Two pair-of-tangents equations with a parameter must be expanded correctly and compared; the link (same pair of lines) is the idea, executed without options. Comparable to 2023-P1-Q2 (L3) on common tangents of an ellipse and a parabola.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium"
+}

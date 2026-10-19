@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 3,
+ "english": [
+  "Consider the hyperbola $H:\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{5}=1$ and the parabola $C:y^{2}=12x$. Exactly two normals to $H$ are tangents to $C$; let them touch $C$ at the points $Q_{1}$ and $Q_{2}$. Then the length $Q_{1}Q_{2}$ is ______."
+ ],
+ "hindi": [
+  "अतिपरवलय $H:\\dfrac{x^{2}}{4}-\\dfrac{y^{2}}{5}=1$ तथा परवलय $C:y^{2}=12x$ पर विचार कीजिए। $H$ के ठीक दो अभिलम्ब $C$ की स्पर्श रेखाएँ हैं; माना कि ये $C$ को बिन्दुओं $Q_{1}$ तथा $Q_{2}$ पर स्पर्श करते हैं। तब लम्बाई $Q_{1}Q_{2}$ ______ है।"
+ ],
+ "solution": [
+  "Normal at $P(2\\sec\\theta,\\sqrt5\\tan\\theta)$: $2x\\cos\\theta+\\sqrt5\\,y\\cot\\theta=9$, i.e. $y=-\\dfrac{2\\sin\\theta}{\\sqrt5}x+\\dfrac{9\\tan\\theta}{\\sqrt5}$",
+  "Tangent to $y^{2}=12x$ $\\Leftrightarrow$ intercept $=\\dfrac3m$: $\\dfrac{9\\tan\\theta}{\\sqrt5}\\cdot\\left(-\\dfrac{2\\sin\\theta}{\\sqrt5}\\right)=3\\Rightarrow \\dfrac{\\sin^{2}\\theta}{\\cos\\theta}=-\\dfrac56$",
+  "So $\\cos\\theta<0$: $P$ is on the left branch (no normal at a right-branch point works). With $u=-\\cos\\theta>0$: $1-u^{2}=\\dfrac56u\\Rightarrow 6u^{2}+5u-6=0\\Rightarrow u=\\dfrac23$",
+  "$\\sec\\theta=-\\dfrac32$, $\\sin\\theta=\\pm\\dfrac{\\sqrt5}{3}$: $P=\\left(-3,\\pm\\dfrac52\\right)$, slopes $m=\\pm\\dfrac23$",
+  "Points of contact $\\left(\\dfrac{3}{m^{2}},\\dfrac{6}{m}\\right)=\\left(\\dfrac{27}{4},\\pm9\\right)$",
+  "$Q_{1}Q_{2}=18$",
+  "",
+  "Final Answer: 18"
+ ],
+ "solution_full": [
+  "Take $P(2\\sec\\theta,\\sqrt5\\tan\\theta)$ on $H$ ($a=2$, $b=\\sqrt5$, $a^{2}+b^{2}=9$). The normal at $P$ is $\\dfrac{a x}{\\sec\\theta}+\\dfrac{b y}{\\tan\\theta}=a^{2}+b^{2}$, i.e. $2x\\cos\\theta+\\sqrt5\\,y\\cot\\theta=9$.",
+  "For $\\sin\\theta\\ne0$ this is $y=mx+k$ with $m=-\\dfrac{2\\sin\\theta}{\\sqrt5}$ and $k=\\dfrac{9\\tan\\theta}{\\sqrt5}$. (At the vertices the normal is the $x$-axis, which is the axis of $C$ and not a tangent.)",
+  "A line $y=mx+k$ ($m\\ne0$) touches $y^{2}=4\\cdot3\\,x$ if and only if $k=\\dfrac3m$, i.e. $km=3$.",
+  "$km=\\dfrac{9\\tan\\theta}{\\sqrt5}\\cdot\\left(-\\dfrac{2\\sin\\theta}{\\sqrt5}\\right)=-\\dfrac{18\\sin^{2}\\theta}{5\\cos\\theta}=3$, so $\\dfrac{\\sin^{2}\\theta}{\\cos\\theta}=-\\dfrac56$.",
+  "The left side has the sign of $\\cos\\theta$, so $\\cos\\theta<0$: only points of the left branch qualify. Put $u=-\\cos\\theta>0$: $\\dfrac{1-u^{2}}{u}=\\dfrac56\\Rightarrow 6u^{2}+5u-6=0\\Rightarrow(3u-2)(2u+3)=0\\Rightarrow u=\\dfrac23$.",
+  "Then $\\sec\\theta=-\\dfrac32$ and $\\sin^{2}\\theta=\\dfrac59$, so $P=\\left(-3,\\ \\pm\\dfrac52\\right)$; check: $\\dfrac94-\\dfrac{25}{4\\cdot5}=1$. These are exactly two points, hence exactly two normals.",
+  "At $P\\left(-3,\\dfrac52\\right)$: $\\tan\\theta=-\\dfrac{\\sqrt5}{2}$, $\\sin\\theta=-\\dfrac{\\sqrt5}{3}$, $m=\\dfrac23$, $k=\\dfrac92$: the normal is $y=\\dfrac23x+\\dfrac92$. At $P\\left(-3,-\\dfrac52\\right)$ the normal is $y=-\\dfrac23x-\\dfrac92$.",
+  "The point of contact of $y=mx+\\dfrac3m$ with $y^{2}=12x$ is $\\left(\\dfrac{3}{m^{2}},\\dfrac{6}{m}\\right)$: $Q_{1}=\\left(\\dfrac{27}{4},9\\right)$ and $Q_{2}=\\left(\\dfrac{27}{4},-9\\right)$.",
+  "Hence $Q_{1}Q_{2}=9-(-9)=18$.",
+  "",
+  "Final Answer: 18"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: normals of a hyperbola that are tangents of a parabola; the tangency condition forces cos(theta) < 0, so only the left branch, away from the parabola, contributes (way 5). Closest known: common tangents of a hyperbola and a parabola. Different because: a normal (not a tangent) of H is matched with a tangent of C, and the sign argument that excludes the whole right branch is the key step.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Tangent and normal for Hyperbola",
+  "Tangent to the parabola: point, slope and parametric forms"
+ ],
+ "concept_use": {
+  "Tangent and normal for Hyperbola": "The normal to H at (2 sec theta, sqrt5 tan theta), 2x cos theta + sqrt5 y cot theta = 9, gives the slope and intercept of the line.",
+  "Tangent to the parabola: point, slope and parametric forms": "The tangency condition k = 3/m for y^2 = 12x and the point of contact (3/m^2, 6/m) give the equation for theta and the points Q1, Q2."
+ },
+ "stem_review": "Read as a student: every curve, point and symbol is introduced, the conditions are complete, each sentence has one reading; answer recomputed with sympy and unique; it matches the Answer Plan. Checked that there are exactly two such normals (the stem claims it), that the x-axis normal at the vertices is not a tangent of C, and that Q1Q2 = 18 exactly. Changed: No change.",
+ "level": 3,
+ "key_step": "Equating km = 3 for the normal and seeing that it forces cos(theta) < 0, i.e. the left branch.",
+ "justification": "Two ideas linked: the parametric normal of a hyperbola and the tangency condition of a parabola, with a sign argument on the branch. Comparable to 2023-P1-Q2 (L3) on common tangents of a conic and a parabola, in numerical form.",
+ "nearest_anchor": "2023-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

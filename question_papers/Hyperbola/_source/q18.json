@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Miscellaneous properties of Hyperbola",
+  "Miscellaneous properties of Ellipse"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $E$ be the ellipse $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ and let $H$ be the hyperbola $\\dfrac{(x-10)^{2}}{45}-\\dfrac{y^{2}}{4}=1$. The curves $E$ and $H$ have exactly two common tangents, and these two lines intersect at the point $(\\alpha,0)$. Then the value of $\\alpha$ is ______."
+ ],
+ "hindi": [
+  "माना कि $E$ दीर्घवृत्त $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$ है तथा $H$ अतिपरवलय $\\dfrac{(x-10)^{2}}{45}-\\dfrac{y^{2}}{4}=1$ है। वक्रों $E$ तथा $H$ की ठीक दो उभयनिष्ठ स्पर्श रेखाएँ हैं तथा ये दोनों रेखाएँ बिन्दु $(\\alpha,0)$ पर प्रतिच्छेद करती हैं। तब $\\alpha$ का मान ______ है।"
+ ],
+ "solution": [
+  "$E$: $c^{2}=25-16=9$, foci $(\\pm3,0)$. $H$: $c^{2}=45+4=49$, foci $(10\\pm7,0)=(3,0),(17,0)$. Common focus $S(3,0)$",
+  "Foot of perpendicular from a focus to any tangent lies on the auxiliary circle: $x^{2}+y^{2}=25$ for $E$, $(x-10)^{2}+y^{2}=45$ for $H$",
+  "So for a common tangent the foot $N$ from $S$ lies on both circles: $20x-100=-20\\Rightarrow x=4$, $y=\\pm3$",
+  "Tangent through $N(4,3)$ perpendicular to $SN$ (direction $(1,3)$): $x+3y=13$; through $N(4,-3)$: $x-3y=13$",
+  "Check: $y=-\\dfrac{x}{3}+\\dfrac{13}{3}$ gives $25\\cdot\\dfrac19+16=\\dfrac{169}{9}$ for $E$ and, about $C(10,0)$, $45\\cdot\\dfrac19-4=1=\\left(\\dfrac{13}{3}-\\dfrac{10}{3}\\right)^{2}$ for $H$",
+  "The lines meet at $y=0,\\ x=13$",
+  "",
+  "Final Answer: 13"
+ ],
+ "solution_full": [
+  "For $E$: $a^{2}=25,\\ b^{2}=16$, $c^{2}=a^{2}-b^{2}=9$, foci $(\\pm3,0)$, auxiliary circle $x^{2}+y^{2}=25$.",
+  "For $H$: centre $C(10,0)$, $a^{2}=45,\\ b^{2}=4$, $c^{2}=a^{2}+b^{2}=49$, foci $(10\\pm7,0)$, i.e. $(3,0)$ and $(17,0)$; auxiliary circle $(x-10)^{2}+y^{2}=45$. So $S(3,0)$ is a focus of both curves.",
+  "Property (ellipse and hyperbola): the foot of the perpendicular from a focus to any tangent lies on the auxiliary circle.",
+  "Let $L$ be a common tangent and $N$ the foot of the perpendicular from $S$ to $L$. By the property for $E$, $N$ is on $x^{2}+y^{2}=25$; by the property for $H$, $N$ is on $(x-10)^{2}+y^{2}=45$.",
+  "Subtracting: $x^{2}-(x-10)^{2}=25-45$, i.e. $20x-100=-20$, so $x=4$ and $y^{2}=9$: $N=(4,3)$ or $(4,-3)$. Hence there are at most two common tangents, and $L$ is the line through $N$ perpendicular to $SN$.",
+  "For $N(4,3)$: $\\overrightarrow{SN}=(1,3)$, so $L$: $1(x-4)+3(y-3)=0$, i.e. $x+3y=13$. For $N(4,-3)$: $x-3y=13$.",
+  "Verification for $x+3y=13$, i.e. $y=-\\dfrac13x+\\dfrac{13}{3}$: for $E$, $a^{2}m^{2}+b^{2}=\\dfrac{25}{9}+16=\\dfrac{169}{9}=\\left(\\dfrac{13}{3}\\right)^{2}$, a tangent. For $H$, with $X=x-10$: $y=-\\dfrac13X+1$, and $a^{2}m^{2}-b^{2}=\\dfrac{45}{9}-4=1=1^{2}$ with $m^{2}=\\dfrac19>\\dfrac{4}{45}$, a tangent touching $H$ at a real point. By symmetry $x-3y=13$ is also a common tangent.",
+  "Solving $x+3y=13$ and $x-3y=13$: $y=0,\\ x=13$. Hence $\\alpha=13$.",
+  "",
+  "Final Answer: 13"
+ ],
+ "concept_use": {
+  "Miscellaneous properties of Hyperbola": "The foot of the perpendicular from the focus S(3,0) of H to any tangent of H lies on its auxiliary circle (x-10)^2+y^2=45.",
+  "Miscellaneous properties of Ellipse": "The foot of the perpendicular from the focus S(3,0) of E to any tangent of E lies on its auxiliary circle x^2+y^2=25; intersecting the two circles gives N(4,+-3)."
+ },
+ "originality_note": "New: an ellipse and a non-concentric hyperbola share one focus, so every common tangent is located by intersecting the two auxiliary circles (feet of perpendiculars from the shared focus), which also shows there are only two (way 5). Closest known: locus of the foot of the perpendicular from a focus to a tangent is the auxiliary circle; common tangents of two conics by the slope condition. Different because: the two loci are combined through a shared focus, turning a quartic common-tangent problem into intersecting two circles.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every curve, point and parameter introduced, conditions complete (quadrant / sign / branch stated), one reading of each sentence; answer recomputed with sympy and unique; answer equals the plan (positive 2-digit integer: 13). Changed: No change. Checked by the slope method (9m^4+8m^2-1=0) that there are exactly two common tangents, so 'exactly two' in the stem is true, and that both touch H at real points.",
+ "level": 2,
+ "key_step": "Feet of perpendiculars from the shared focus lie on both auxiliary circles, giving N(4,+-3).",
+ "justification": "With the auxiliary-circle property the work is a short routine chain; by the slope method it is a routine but longer elimination. Either way no new idea beyond standard results. Comparable to 2021-P2-Q18 (L2), an ellipse integer question on standard properties.",
+ "nearest_anchor": "2021-P2-Q18 (L2)",
+ "confidence": "Medium"
+}

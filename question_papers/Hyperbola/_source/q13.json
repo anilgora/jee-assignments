@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Hyperbola",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Director circle for Hyperbola",
+  "tangents drawn from an external point to a Hyperbola"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $H$ be the hyperbola $\\dfrac{x^{2}}{17}-\\dfrac{y^{2}}{4}=1$. Let $P$ be a point in the first quadrant lying on the line $2x=3y$ such that the two tangents drawn from $P$ to $H$ are perpendicular to each other. Then the slope of the tangent from $P$ to $H$ having positive slope is ______."
+ ],
+ "hindi": [
+  "माना कि $H$ अतिपरवलय $\\dfrac{x^{2}}{17}-\\dfrac{y^{2}}{4}=1$ है। माना कि प्रथम चतुर्थांश में रेखा $2x=3y$ पर स्थित एक बिन्दु $P$ ऐसा है कि $P$ से $H$ पर खींची गई दोनों स्पर्श रेखाएँ परस्पर लम्बवत हैं। तब $P$ से $H$ पर खींची गई धनात्मक प्रवणता वाली स्पर्श रेखा की प्रवणता ______ है।"
+ ],
+ "solution": [
+  "Perpendicular tangents meet on the director circle $x^{2}+y^{2}=17-4=13$",
+  "With $y=\\dfrac{2x}{3}$: $\\dfrac{13x^{2}}{9}=13\\Rightarrow x=3$ (first quadrant), so $P(3,2)$",
+  "Tangent through $P$: $y=mx+(2-3m)$; tangency to $H$ needs $(2-3m)^{2}=17m^{2}-4$",
+  "$\\Rightarrow 8m^{2}+12m-8=0\\Rightarrow 2m^{2}+3m-2=0\\Rightarrow m=\\dfrac12$ or $m=-2$ (product $-1$, as expected)",
+  "Both give real points of contact since $17m^{2}-4>0$; positive slope $=\\dfrac12$",
+  "",
+  "Final Answer: 0.5"
+ ],
+ "solution_full": [
+  "For $\\dfrac{x^{2}}{a^{2}}-\\dfrac{y^{2}}{b^{2}}=1$ the line $y=mx+c$ is a tangent if and only if $c^{2}=a^{2}m^{2}-b^{2}$ (with $a^{2}m^{2}-b^{2}>0$).",
+  "The locus of the point of intersection of two perpendicular tangents is the director circle $x^{2}+y^{2}=a^{2}-b^{2}$. Here $a^{2}=17,\\ b^{2}=4$, so the director circle is $x^{2}+y^{2}=13$.",
+  "$P$ lies on this circle and on $2x=3y$. Putting $y=\\dfrac{2x}{3}$: $x^{2}+\\dfrac{4x^{2}}{9}=13$, i.e. $\\dfrac{13x^{2}}{9}=13$, so $x^{2}=9$. In the first quadrant $x=3,\\ y=2$, so $P=(3,2)$.",
+  "A line through $P$ with slope $m$ is $y-2=m(x-3)$, i.e. $y=mx+(2-3m)$.",
+  "It touches $H$ when $(2-3m)^{2}=17m^{2}-4$: $4-12m+9m^{2}=17m^{2}-4$, i.e. $8m^{2}+12m-8=0$, i.e. $2m^{2}+3m-2=0$.",
+  "$(2m-1)(m+2)=0$, so $m=\\dfrac12$ or $m=-2$. The product of the slopes is $-1$, which confirms that the two tangents are perpendicular.",
+  "For both slopes $17m^{2}-4>0$ ($\\dfrac{17}{4}-4=\\dfrac14$ and $68-4=64$), so each line touches $H$ at a real point: $\\left(-17,-8\\right)$ for $m=\\dfrac12$ and $\\left(\\dfrac{17}{4},-\\dfrac{1}{2}\\right)$ for $m=-2$.",
+  "The tangent with positive slope has slope $\\dfrac12=0.5$.",
+  "",
+  "Final Answer: 0.5"
+ ],
+ "concept_use": {
+  "Director circle for Hyperbola": "P is located as the intersection of the director circle x^2+y^2=13 with the line 2x=3y, giving P(3,2).",
+  "tangents drawn from an external point to a Hyperbola": "The slopes of the two tangents from P(3,2) come from (2-3m)^2 = 17m^2 - 4, i.e. 2m^2+3m-2=0, giving 1/2 and -2."
+ },
+ "originality_note": "New: the external point is fixed by two conditions (perpendicular tangents and a given line), then the tangent slopes are read from the slope quadratic (way 5). Closest known: equation of the director circle of a hyperbola; tangents from a given point. Different because: the point is not given; it must first be located on the director circle before the slope quadratic is formed.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every curve, point and parameter introduced, conditions complete (quadrant / sign / branch stated), one reading of each sentence; answer recomputed with sympy and unique; answer equals the plan (decimal between 0 and 1: 0.5). Changed: No change. Checked that both slopes satisfy 17m^2-4>0 so both tangents touch H at real points, and that P is unique in the first quadrant.",
+ "level": 2,
+ "key_step": "Locate P on the director circle x^2+y^2=13 and the line 2x=3y, then solve the tangent-slope quadratic.",
+ "justification": "Routine chain of three standard steps (director circle, intersection with a line, tangency condition c^2=a^2m^2-b^2) with no insight needed. Comparable to 2026-P2-Q2 (L2) on perpendicular tangents.",
+ "nearest_anchor": "2026-P2-Q2 (L2)",
+ "confidence": "High"
+}
