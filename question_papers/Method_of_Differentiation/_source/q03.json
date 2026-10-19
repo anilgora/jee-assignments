@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $L=\\displaystyle\\lim_{x\\to2}\\dfrac{\\left(x^{3}-7\\right)^{x^{x}}-1}{(x-1)^{x}-1}$. Then the value of $L$ is ______."
+ ],
+ "hindi": [
+  "माना कि $L=\\displaystyle\\lim_{x\\to2}\\dfrac{\\left(x^{3}-7\\right)^{x^{x}}-1}{(x-1)^{x}-1}$ है। तब $L$ का मान ______ है।"
+ ],
+ "solution": [
+  "Both bases $\\to1$ at $x=2$, so $L=\\dfrac{N'(2)}{D'(2)}$ with $N=\\left(x^{3}-7\\right)^{x^{x}}$, $D=(x-1)^{x}$ (both equal $1$ at $x=2$)",
+  "Logarithmic differentiation: $\\dfrac{N'}{N}=\\left(x^{x}\\right)'\\log_{e}\\left(x^{3}-7\\right)+x^{x}\\cdot\\dfrac{3x^{2}}{x^{3}-7}$",
+  "At $x=2$: $\\log_{e}1=0$ kills the first term, so $N'(2)=1\\cdot\\left(4\\cdot\\dfrac{12}{1}\\right)=48$",
+  "$\\dfrac{D'}{D}=\\log_{e}(x-1)+\\dfrac{x}{x-1}\\Rightarrow D'(2)=0+2=2$",
+  "Check with $e^{u}-1\\sim u$: numerator $\\sim x^{x}\\log_{e}\\left(x^{3}-7\\right)\\sim4\\cdot12(x-2)$, denominator $\\sim x\\log_{e}(x-1)\\sim2(x-2)$",
+  "$L=\\dfrac{48}{2}=24$",
+  "",
+  "Final Answer: 24"
+ ],
+ "solution_full": [
+  "Write $N(x)=\\left(x^{3}-7\\right)^{x^{x}}=e^{x^{x}\\log_{e}\\left(x^{3}-7\\right)}$ and $D(x)=(x-1)^{x}=e^{x\\log_{e}(x-1)}$, defined near $x=2$ (there $x^{3}-7>0$ and $x-1>0$). At $x=2$: $x^{3}-7=1$ and $x-1=1$, so $N(2)=D(2)=1$ and $L$ is a $\\dfrac00$ form: $L=\\displaystyle\\lim_{x\\to2}\\dfrac{N(x)-N(2)}{D(x)-D(2)}=\\dfrac{N'(2)}{D'(2)}$, provided $D'(2)\\neq0$.",
+  "Logarithmic differentiation of $N$: $\\log_{e}N=x^{x}\\log_{e}\\left(x^{3}-7\\right)$, so $\\dfrac{N'}{N}=\\left(x^{x}\\right)'\\log_{e}\\left(x^{3}-7\\right)+x^{x}\\cdot\\dfrac{3x^{2}}{x^{3}-7}$, where $\\left(x^{x}\\right)'=x^{x}\\left(1+\\log_{e}x\\right)$.",
+  "At $x=2$: $\\log_{e}\\left(x^{3}-7\\right)=\\log_{e}1=0$, so the first term vanishes whatever $\\left(x^{x}\\right)'$ is. The second term is $2^{2}\\cdot\\dfrac{12}{1}=48$. Hence $N'(2)=N(2)\\cdot48=48$.",
+  "Logarithmic differentiation of $D$: $\\log_{e}D=x\\log_{e}(x-1)$, so $\\dfrac{D'}{D}=\\log_{e}(x-1)+\\dfrac{x}{x-1}$. At $x=2$ this is $0+2=2$, so $D'(2)=2\\neq0$.",
+  "Independent check with standard limits: as $x\\to2$, $e^{u}-1\\sim u$ when $u\\to0$. Here $u_{N}=x^{x}\\log_{e}\\left(x^{3}-7\\right)$ and $\\log_{e}\\left(1+(x^{3}-8)\\right)\\sim x^{3}-8\\sim12(x-2)$, so the numerator $\\sim4\\cdot12(x-2)=48(x-2)$. Similarly $u_{D}=x\\log_{e}\\left(1+(x-2)\\right)\\sim2(x-2)$.",
+  "Therefore $L=\\dfrac{48(x-2)}{2(x-2)}\\to24$.",
+  "",
+  "Final Answer: 24"
+ ],
+ "originality_note": "New: two 'tower' expressions whose bases both equal 1 at x = 2, so the logarithmic derivative loses the term containing the derivative of the exponent and the limit is a ratio of two clean logarithmic derivatives (way 4, hidden simplification). Closest known: lim (x^x - 1)/(x - 1)-type and 1^infinity limits; derivative of x^{x^x}. Different because: the variable exponent x^x need not be differentiated at all, which a student must notice, and the same limit is reachable by e^u - 1 ~ u and ln(1+u) ~ u.",
+ "web_check": "not found",
+ "concept_use": {
+  "Logarithmic Differentiation": "N'(2) and D'(2) are found by differentiating log N = x^x ln(x^3 - 7) and log D = x ln(x - 1).",
+  "Evaluation of limit involving exponential and logarithmic functions": "The limit is a 0/0 form of exponential type; e^u - 1 ~ u and ln(1 + u) ~ u give the same value 24 as a check."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that both expressions are defined near x = 2 (x^3 - 7 > 0, x - 1 > 0), that the denominator's derivative at 2 is non-zero, and that the answer 24 is a positive 2-digit integer (numerically 24.0000045 at x = 2 + 10^-8). Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising the limit as N'(2)/D'(2) and that ln(base) = 0 at x = 2 removes the derivative of x^x.",
+ "justification": "Two linked ideas: reading the limit as a ratio of derivatives (or using e^u - 1 ~ u) and logarithmic differentiation of variable-exponent functions; numerical format with no options. Above the L2 limit anchor 2025-P2-Q1 and level with 2025-P2-Q14 (L3).",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium",
+ "chapter": "Method of Differentiation",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Logarithmic Differentiation",
+  "Evaluation of limit involving exponential and logarithmic functions"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

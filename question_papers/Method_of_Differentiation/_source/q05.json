@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $C$ be the curve $y^{2}+y=x^{3}-x$ in the $xy$-plane, and let $O$ be the origin. The tangent to $C$ at $O$ meets $C$ again at the point $Q$. The tangent to $C$ at $Q$ meets $C$ again at the point $R(\\alpha,\\beta)$. Then the value of $\\alpha\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $xy$-तल में $C$ वक्र $y^{2}+y=x^{3}-x$ है तथा $O$ मूलबिन्दु है। $O$ पर $C$ की स्पर्श रेखा $C$ को पुनः बिन्दु $Q$ पर मिलती है। $Q$ पर $C$ की स्पर्श रेखा $C$ को पुनः बिन्दु $R(\\alpha,\\beta)$ पर मिलती है। तब $\\alpha\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Implicit differentiation: $(2y+1)\\dfrac{dy}{dx}=3x^{2}-1$",
+  "At $O(0,0)$: slope $-1$, tangent $y=-x$. Substituting: $x^{2}-x=x^{3}-x\\Rightarrow x^{2}(x-1)=0$; the double root $x=0$ is the tangency, so $Q=(1,-1)$",
+  "At $Q(1,-1)$: $(-1)\\dfrac{dy}{dx}=2\\Rightarrow$ slope $-2$, tangent $y=1-2x$",
+  "Substituting: $(1-2x)^{2}+(1-2x)=x^{3}-x\\Rightarrow x^{3}-4x^{2}+5x-2=0\\Rightarrow(x-1)^{2}(x-2)=0$",
+  "So $\\alpha=2$, $\\beta=1-4=-3$ (check: $9-3=6=8-2$), and $\\alpha\\beta=-6$",
+  "",
+  "Final Answer: -6"
+ ],
+ "solution_full": [
+  "Differentiate $y^{2}+y=x^{3}-x$ implicitly with respect to $x$: $2y\\dfrac{dy}{dx}+\\dfrac{dy}{dx}=3x^{2}-1$, so $\\dfrac{dy}{dx}=\\dfrac{3x^{2}-1}{2y+1}$ wherever $2y+1\\neq0$.",
+  "At $O(0,0)$ (which lies on $C$): $\\dfrac{dy}{dx}=\\dfrac{-1}{1}=-1$. The tangent at $O$ is $y=-x$.",
+  "Points common to $y=-x$ and $C$: $x^{2}-x=x^{3}-x$, i.e. $x^{3}-x^{2}=0$, i.e. $x^{2}(x-1)=0$. The double root $x=0$ corresponds to the point of contact $O$; the other root gives $Q=(1,-1)$. (Check: $1-1=0=1-1$.)",
+  "At $Q(1,-1)$: $2y+1=-1$ and $3x^{2}-1=2$, so $\\dfrac{dy}{dx}=-2$. The tangent at $Q$ is $y+1=-2(x-1)$, i.e. $y=1-2x$.",
+  "Substituting in $C$: $(1-2x)^{2}+(1-2x)=x^{3}-x$, i.e. $4x^{2}-6x+2=x^{3}-x$, i.e. $x^{3}-4x^{2}+5x-2=0$. Since the line touches $C$ at $x=1$, $(x-1)^{2}$ is a factor: $x^{3}-4x^{2}+5x-2=(x-1)^{2}(x-2)$.",
+  "The other point is $x=2$, $y=1-4=-3$; check: $(-3)^{2}+(-3)=6$ and $2^{3}-2=6$. So $R=(2,-3)$, $\\alpha=2$, $\\beta=-3$.",
+  "Hence $\\alpha\\beta=-6$.",
+  "",
+  "Final Answer: -6"
+ ],
+ "originality_note": "New: a two-step iteration of the tangent-and-meet-again map on a cubic curve, where implicit differentiation gives each slope and the known double root factors each cubic (way 1, iteration). Closest known: the tangent-chord construction on elliptic curves (this curve appears in number-theory notes, where the first step at (0,0) is a group-law example) and JEE problems 'tangent at P to y = x^3 meets the curve again'. Different because: the question is framed as two successive tangents, needs implicit differentiation at both points and the factorisation with the repeated root each time; no group-law reflection is used.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Differentiation of Implicit functions": "dy/dx = (3x^2 - 1)/(2y + 1) is obtained by differentiating y^2 + y = x^3 - x implicitly, at O and at Q.",
+  "Equation of a tangent to a curve": "The tangent lines y = -x at O and y = 1 - 2x at Q are written and intersected with C to get Q and R."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that O lies on C, that 2y + 1 is non-zero at O and Q (so the tangents are non-vertical), that each tangent meets C at exactly one other point (double root at the contact point), and that R = (2,-3) lies on C. The answer -6 is a negative integer as planned. Changed: the first design used y^2 = x^3 - x + 1, but a published worksheet runs the same first step on that curve, so the curve was changed.",
+ "level": 3,
+ "key_step": "Using the double root at the contact point to factor each cubic, twice, with implicit slopes.",
+ "justification": "Two linked stages (implicit slope, tangent, meet-again by factoring with a known double root), repeated; no options and a sign-sensitive answer. Harder than the single-step normal anchor 2023-P1-Q7 (L2), level with average Advanced chains such as 2026-P1-Q1 (L3).",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "chapter": "Method of Differentiation",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Differentiation of Implicit functions",
+  "Equation of a tangent to a curve"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

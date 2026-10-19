@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $F:(-1,1)\\to\\mathbb{R}$ be defined by",
+  "$$F(x)=\\begin{vmatrix}\\sqrt{1+x} & \\sin x & \\log_{e}(1+x)\\\\ \\tan x & e^{\\sin x} & x^{2}\\\\ 1-\\cos x & e^{x}-1 & \\dfrac{1}{1+x}\\end{vmatrix}$$",
+  "Then the value of $F'(0)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $F:(-1,1)\\to\\mathbb{R}$ निम्न द्वारा परिभाषित है",
+  "$$F(x)=\\begin{vmatrix}\\sqrt{1+x} & \\sin x & \\log_{e}(1+x)\\\\ \\tan x & e^{\\sin x} & x^{2}\\\\ 1-\\cos x & e^{x}-1 & \\dfrac{1}{1+x}\\end{vmatrix}$$",
+  "तब $F'(0)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Differentiate row by row: $F'(x)=\\Delta_{1}+\\Delta_{2}+\\Delta_{3}$, where $\\Delta_{i}$ has row $i$ differentiated",
+  "At $x=0$ the rows are $R_{1}=(1,0,0)$, $R_{2}=(0,1,0)$, $R_{3}=(0,0,1)$",
+  "$R_{1}'(0)=\\left(\\dfrac12,1,1\\right)$: $\\Delta_{1}(0)=\\begin{vmatrix}\\frac12&1&1\\\\0&1&0\\\\0&0&1\\end{vmatrix}=\\dfrac12$",
+  "$R_{2}'(0)=\\left(1,\\cos0\\cdot e^{0},0\\right)=(1,1,0)$: $\\Delta_{2}(0)=1$",
+  "$R_{3}'(0)=\\left(0,1,-1\\right)$: $\\Delta_{3}(0)=-1$",
+  "$F'(0)=\\dfrac12+1-1=0.5$",
+  "",
+  "Final Answer: 0.50"
+ ],
+ "solution_full": [
+  "For a determinant whose entries are differentiable functions, $F'(x)=\\Delta_{1}(x)+\\Delta_{2}(x)+\\Delta_{3}(x)$, where $\\Delta_{i}$ is $F$ with the $i$-th row replaced by its derivative and the other rows unchanged. All entries are differentiable on $(-1,1)$.",
+  "At $x=0$: $\\sqrt{1}=1$, $\\sin0=0$, $\\log_{e}1=0$; $\\tan0=0$, $e^{0}=1$, $0^{2}=0$; $1-\\cos0=0$, $e^{0}-1=0$, $\\dfrac11=1$. So the rows at $0$ are $(1,0,0)$, $(0,1,0)$, $(0,0,1)$: the matrix is the identity.",
+  "Derivatives of the rows: $R_{1}'=\\left(\\dfrac{1}{2\\sqrt{1+x}},\\cos x,\\dfrac{1}{1+x}\\right)$, $R_{2}'=\\left(\\sec^{2}x,\\cos x\\,e^{\\sin x},2x\\right)$, $R_{3}'=\\left(\\sin x,e^{x},-\\dfrac{1}{(1+x)^{2}}\\right)$. At $x=0$: $R_{1}'(0)=\\left(\\dfrac12,1,1\\right)$, $R_{2}'(0)=(1,1,0)$, $R_{3}'(0)=(0,1,-1)$.",
+  "$\\Delta_{1}(0)=\\begin{vmatrix}\\frac12&1&1\\\\0&1&0\\\\0&0&1\\end{vmatrix}=\\dfrac12$ (upper triangular).",
+  "$\\Delta_{2}(0)=\\begin{vmatrix}1&0&0\\\\1&1&0\\\\0&0&1\\end{vmatrix}=1$ (lower triangular).",
+  "$\\Delta_{3}(0)=\\begin{vmatrix}1&0&0\\\\0&1&0\\\\0&1&-1\\end{vmatrix}=-1$.",
+  "Hence $F'(0)=\\dfrac12+1-1=\\dfrac12=0.50$. (Because the other two rows are rows of the identity, each $\\Delta_{i}(0)$ is just the $i$-th diagonal entry of $R_{i}'(0)$.)",
+  "",
+  "Final Answer: 0.50"
+ ],
+ "originality_note": "New: a determinant of unrelated transcendental entries that equals the identity matrix at x = 0, so the row-by-row derivative at 0 collapses to the derivatives of the diagonal entries (way 4, hidden structure). Closest known: textbook 'differentiate the determinant' exercises and the JEE problem with rows (cos x, x, 1), (2 sin x, x^2, 2x), (tan x, x, 1). Different because: expanding F is long, while the identity at 0 makes each of the three row-derivative determinants triangular.",
+ "web_check": "not found",
+ "concept_use": {
+  "Differentiation of Determinants": "F'(0) is computed as the sum of the three determinants obtained by differentiating one row at a time."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that every entry is defined and differentiable on (-1,1) (tan x needs |x| < pi/2, which holds), that F(0) is the identity determinant, and that a numerical derivative of the full determinant at 0 gives 0.5. The answer 0.50 lies in (0,1) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Using the row-wise derivative rule at x = 0, where the matrix is the identity.",
+ "justification": "One standard rule applied with three small determinant evaluations; routine multi-step with no insight, numerical answer. Above the one-move determinant anchor 2023-P1-Q14 (L1), at the routine-chain level of 2025-P2-Q1 (L2).",
+ "nearest_anchor": "2023-P1-Q14 (L1)",
+ "confidence": "Medium",
+ "chapter": "Method of Differentiation",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Differentiation of Determinants"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $p:\\mathbb{R}\\to\\mathbb{R}$ be defined by $p(x)=(1+x)(1+2x)(1+3x)(1+4x)(1+5x)(1+6x)$. Then the value of $\\displaystyle\\lim_{x\\to0}\\dfrac{p(x)-1-21x}{x^{2}}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $p:\\mathbb{R}\\to\\mathbb{R}$, $p(x)=(1+x)(1+2x)(1+3x)(1+4x)(1+5x)(1+6x)$ द्वारा परिभाषित है। तब $\\displaystyle\\lim_{x\\to0}\\dfrac{p(x)-1-21x}{x^{2}}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$p(0)=1$; $\\dfrac{p'}{p}=\\displaystyle\\sum_{k=1}^{6}\\dfrac{k}{1+kx}\\Rightarrow p'(0)=21$, so the limit is $\\dfrac00$",
+  "L'Hospital: limit $=\\displaystyle\\lim_{x\\to0}\\dfrac{p'(x)-21}{2x}$, again $\\dfrac00$; once more: $=\\dfrac{p''(0)}{2}$",
+  "$p''=p\\left[\\left(\\displaystyle\\sum\\dfrac{k}{1+kx}\\right)^{2}-\\sum\\dfrac{k^{2}}{(1+kx)^{2}}\\right]\\Rightarrow p''(0)=21^{2}-91=350$",
+  "Limit $=\\dfrac{350}{2}=175$",
+  "",
+  "Final Answer: 175"
+ ],
+ "solution_full": [
+  "At $x=0$: $p(0)=1$, so the numerator tends to $0$, as does $x^{2}$.",
+  "Logarithmic derivative: $\\dfrac{p'(x)}{p(x)}=\\displaystyle\\sum_{k=1}^{6}\\dfrac{k}{1+kx}$, so $p'(0)=1+2+\\dots+6=21$. Hence the derivative of the numerator, $p'(x)-21$, also tends to $0$.",
+  "By L'Hospital's rule twice (both stages are $\\dfrac00$ forms of differentiable functions): $\\displaystyle\\lim_{x\\to0}\\dfrac{p(x)-1-21x}{x^{2}}=\\lim_{x\\to0}\\dfrac{p'(x)-21}{2x}=\\lim_{x\\to0}\\dfrac{p''(x)}{2}=\\dfrac{p''(0)}{2}$.",
+  "Differentiate $p'=p\\,S$ with $S(x)=\\displaystyle\\sum_{k=1}^{6}\\dfrac{k}{1+kx}$: $p''=p'S+pS'=p\\left(S^{2}+S'\\right)$, and $S'(x)=-\\displaystyle\\sum_{k=1}^{6}\\dfrac{k^{2}}{(1+kx)^{2}}$.",
+  "At $x=0$: $S(0)=21$ and $S'(0)=-(1+4+9+16+25+36)=-91$, so $p''(0)=441-91=350$.",
+  "Therefore the limit is $\\dfrac{350}{2}=175$. (This is the coefficient of $x^{2}$ in $p(x)$, the sum of the products $jk$ over $1\\le j<k\\le6$.)",
+  "",
+  "Final Answer: 175"
+ ],
+ "originality_note": "New: a second-order L'Hospital limit on a six-factor product, where the second derivative at 0 is obtained from (sum k)^2 - (sum k^2) (way 5). Closest known: lim ((1+x)(1+2x)(1+3x) - 1)/x (first order) and lim (1 - cos x cos 2x cos 3x)/x^2. Different because: the linear term is removed, so the second-order coefficient (an elementary symmetric sum) must be found.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "L'Hospital Rule": "The limit is reduced by L'Hospital's rule twice to p''(0)/2, after checking both 0/0 stages."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the subtracted 21x equals p'(0)x (so the limit is finite), that the stem gives p a domain, and that sympy gives 175, a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Applying L'Hospital twice and getting p''(0) from the logarithmic derivative.",
+ "justification": "A routine chain: two L'Hospital steps and a second derivative of a product evaluated at 0; no insight needed, numerical answer. Level with the routine limit anchor 2025-P2-Q1 (L2).",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "High",
+ "chapter": "Method of Differentiation",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "L'Hospital Rule"
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

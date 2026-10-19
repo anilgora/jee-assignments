@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x^{2}e^{-4x}$, and let $g:\\mathbb{R}\\to\\mathbb{R}$ be defined by $g(x)=f^{(9)}(x)$, where $f^{(9)}$ denotes the ninth derivative of $f$. Then the sum of the $x$-coordinates of all the points of inflection of the graph of $y=g(x)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x^{2}e^{-4x}$ द्वारा परिभाषित है, तथा $g:\\mathbb{R}\\to\\mathbb{R}$, $g(x)=f^{(9)}(x)$ द्वारा परिभाषित है, जहाँ $f^{(9)}$, $f$ का नौवाँ अवकलज है। तब $y=g(x)$ के आलेख के सभी नति परिवर्तन बिन्दुओं के $x$-निर्देशांकों का योग ______ है।"
+ ],
+ "solution": [
+  "Leibniz rule (only three terms survive since $(x^{2})'''=0$): $f^{(n)}(x)=(-4)^{n-2}e^{-4x}\\left[16x^{2}-8nx+n(n-1)\\right]$",
+  "Points of inflection of $g=f^{(9)}$: where $g''=f^{(11)}$ changes sign",
+  "$f^{(11)}(x)=(-4)^{9}e^{-4x}\\left[16x^{2}-88x+110\\right]$; $e^{-4x}>0$, so the sign is that of the quadratic",
+  "Discriminant $=88^{2}-64\\cdot110=704>0$: two simple roots, and $g''$ changes sign at each, so both are points of inflection",
+  "Sum of roots $=\\dfrac{88}{16}=5.5$",
+  "",
+  "Final Answer: 5.50"
+ ],
+ "solution_full": [
+  "By the Leibniz rule, $f^{(n)}=\\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}\\left(x^{2}\\right)^{(k)}\\left(e^{-4x}\\right)^{(n-k)}$. Only $k=0,1,2$ contribute because $\\left(x^{2}\\right)^{(k)}=0$ for $k\\ge3$, and $\\left(e^{-4x}\\right)^{(m)}=(-4)^{m}e^{-4x}$.",
+  "So $f^{(n)}(x)=e^{-4x}\\left[(-4)^{n}x^{2}+n(-4)^{n-1}\\cdot2x+\\dfrac{n(n-1)}{2}(-4)^{n-2}\\cdot2\\right]=(-4)^{n-2}e^{-4x}\\left[16x^{2}-8nx+n(n-1)\\right]$.",
+  "$g=f^{(9)}$ is twice differentiable and $g''=f^{(11)}$. A point of inflection of $y=g(x)$ is where $g''$ changes sign.",
+  "With $n=11$: $g''(x)=(-4)^{9}e^{-4x}\\left[16x^{2}-88x+110\\right]$. Since $e^{-4x}>0$ and $(-4)^{9}$ is a non-zero constant, the sign of $g''$ changes exactly where $16x^{2}-88x+110$ changes sign.",
+  "Its discriminant is $88^{2}-4\\cdot16\\cdot110=7744-7040=704>0$, so it has two distinct real roots $x=\\dfrac{11\\pm\\sqrt{11}}{4}$. At each simple root the quadratic changes sign, so $g$ has exactly two points of inflection.",
+  "By Vieta, the sum of their $x$-coordinates is $\\dfrac{88}{16}=\\dfrac{11}{2}=5.50$.",
+  "",
+  "Final Answer: 5.50"
+ ],
+ "originality_note": "New: the points of inflection of a high-order derivative g = f^(9), found from the closed form of the n-th derivative by Leibniz's rule and read off by Vieta (way 5). Closest known: n-th derivative of x^2 e^{ax} by Leibniz; inflection points of x^n e^{-x}. Different because: the curve examined is the ninth derivative itself, so the student must go two orders further (f^(11)) and confirm the sign change at simple roots.",
+ "web_check": "not found",
+ "concept_use": {
+  "Higher order derivatives": "f^(9) and f^(11) come from the Leibniz formula for the n-th derivative of x^2 e^{-4x}.",
+  "Concavity, Convexity & Points of Inflection: Second derivative test (f''(x) sign changes).": "Points of inflection of g are where g'' = f^(11) changes sign; both simple roots of 16x^2 - 88x + 110 qualify."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that 'ninth derivative' is defined in the stem, that both roots are simple (discriminant 704), that g'' really changes sign at each (so no extra or missing inflection points), and that the sum 5.5 is exact to two decimals (sympy roots (11 ± sqrt 11)/4). Changed: No change.",
+ "level": 3,
+ "key_step": "Writing f^(n) in closed form by Leibniz and taking n = 11 for g''.",
+ "justification": "Two linked ideas: the Leibniz closed form for the n-th derivative and the sign-change criterion for inflection, then Vieta; explicit rather than hidden, so below the hidden-Leibniz anchor 2026-P2-Q5 (L4).",
+ "nearest_anchor": "2026-P2-Q5 (L4)",
+ "confidence": "Medium",
+ "chapter": "Method of Differentiation",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Higher order derivatives",
+  "Concavity, Convexity & Points of Inflection: Second derivative test (f''(x) sign changes)."
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}

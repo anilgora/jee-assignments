@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $a$ and $b$ be real numbers such that $L=\\displaystyle\\lim_{x\\to0}\\dfrac{a\\sin^{-1}x+b\\tan x-\\sin x}{x^{5}}$ exists and is finite, where $\\sin^{-1}$ denotes the principal value of the inverse sine function. Then the value of $\\dfrac{a}{L}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$ तथा $b$ ऐसी वास्तविक संख्याएँ हैं कि $L=\\displaystyle\\lim_{x\\to0}\\dfrac{a\\sin^{-1}x+b\\tan x-\\sin x}{x^{5}}$ का अस्तित्व है तथा यह परिमित है, जहाँ $\\sin^{-1}$ प्रतिलोम ज्या फलन का मुख्य मान है। तब $\\dfrac{a}{L}$ का मान ______ है।"
+ ],
+ "solution": [
+  "One L'Hospital step removes $\\sin^{-1}$: $L=\\displaystyle\\lim_{x\\to0}\\dfrac{a(1-x^{2})^{-1/2}+b\\sec^{2}x-\\cos x}{5x^{4}}$",
+  "Expansions: $(1-x^{2})^{-1/2}=1+\\dfrac{x^{2}}{2}+\\dfrac{3x^{4}}{8}+\\dots$, $\\sec^{2}x=1+\\tan^{2}x=1+x^{2}+\\dfrac{2x^{4}}{3}+\\dots$, $\\cos x=1-\\dfrac{x^{2}}{2}+\\dfrac{x^{4}}{24}-\\dots$",
+  "Finite limit needs the constant and $x^{2}$ terms to vanish: $a+b-1=0$ and $\\dfrac a2+b+\\dfrac12=0\\Rightarrow a=3,\\ b=-2$",
+  "$x^{4}$ coefficient: $\\dfrac98-\\dfrac43-\\dfrac1{24}=-\\dfrac14\\Rightarrow L=\\dfrac{-1/4}{5}=-\\dfrac1{20}$",
+  "$\\dfrac aL=3\\cdot(-20)=-60$",
+  "",
+  "Final Answer: -60"
+ ],
+ "solution_full": [
+  "The numerator $N(x)=a\\sin^{-1}x+b\\tan x-\\sin x$ vanishes at $0$, so for a finite limit we may apply L'Hospital's rule once (the new limit, if it exists, equals $L$): $L=\\displaystyle\\lim_{x\\to0}\\dfrac{N'(x)}{5x^{4}}$ with $N'(x)=\\dfrac{a}{\\sqrt{1-x^{2}}}+b\\sec^{2}x-\\cos x$. Differentiating once replaces $\\sin^{-1}x$ by an algebraic function, which is easier to expand; further L'Hospital steps would be cumbersome, so expand instead.",
+  "Maclaurin expansions up to $x^{4}$: $(1-x^{2})^{-1/2}=1+\\dfrac{x^{2}}{2}+\\dfrac{3x^{4}}{8}+O(x^{6})$ (binomial series); $\\tan x=x+\\dfrac{x^{3}}{3}+O(x^{5})$, so $\\sec^{2}x=1+\\tan^{2}x=1+x^{2}+\\dfrac{2x^{4}}{3}+O(x^{6})$; $\\cos x=1-\\dfrac{x^{2}}{2}+\\dfrac{x^{4}}{24}+O(x^{6})$.",
+  "So $N'(x)=(a+b-1)+\\left(\\dfrac a2+b+\\dfrac12\\right)x^{2}+\\left(\\dfrac{3a}{8}+\\dfrac{2b}{3}-\\dfrac1{24}\\right)x^{4}+O(x^{6})$.",
+  "For $\\dfrac{N'(x)}{5x^{4}}$ to have a finite limit, the constant term and the $x^{2}$ term must be zero: $a+b=1$ and $a+2b=-1$. Hence $b=-2$, $a=3$.",
+  "Then the $x^{4}$ coefficient is $\\dfrac98-\\dfrac43-\\dfrac1{24}=\\dfrac{27-32-1}{24}=-\\dfrac14$, so $L=\\dfrac{-1/4}{5}=-\\dfrac1{20}$, which is finite and non-zero.",
+  "(Check by direct expansion: $3\\sin^{-1}x-2\\tan x-\\sin x=3\\cdot\\dfrac{3x^{5}}{40}-2\\cdot\\dfrac{2x^{5}}{15}-\\dfrac{x^{5}}{120}+O(x^{7})=-\\dfrac{x^{5}}{20}+O(x^{7})$.)",
+  "Therefore $\\dfrac aL=\\dfrac{3}{-1/20}=-60$.",
+  "",
+  "Final Answer: -60"
+ ],
+ "originality_note": "New: three different odd functions (inverse sine, tangent, sine) whose x and x^3 terms cancel for exactly one (a, b), so the fifth-order terms decide L; one L'Hospital step turns sin^{-1} into an algebraic function before expanding (way 4, two orders cancel). Closest known: 'find a, b so that lim (x(1 + a cos x) - b sin x)/x^3 = 1' and lim (tan x - sin x)/x^3. Different because: the cancellation runs to fifth order across inverse-trigonometric and trigonometric series, and the answer needs both the parameters and the limit.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "L'Hospital Rule": "One L'Hospital step replaces sin^{-1}x, tan x, sin x by their derivatives before expanding.",
+  "Taylor / Maclaurin Series Expansion: Evaluating indeterminate limits where L'Hôpital fails or becomes cumbersome.": "Maclaurin series of (1 - x^2)^{-1/2}, sec^2 x and cos x to x^4 fix a, b and the value of L, where repeated L'Hospital would be cumbersome."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the principal value is stated, that the finiteness condition determines a and b uniquely (a = 3, b = -2), that L = -1/20 is non-zero so a/L is defined, and that a high-precision evaluation at x = 10^-3 gives -0.04999997. The answer -60 is a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Matching the constant and x^2 terms of the differentiated numerator to fix (a, b), then reading the x^4 term.",
+ "justification": "Two linked ideas (finiteness forces coefficient conditions; series to fourth order after one L'Hospital step) with a precise numerical finish. Easier than the series-with-parameters anchor 2025-P1-Q11 (L4) because the series are standard.",
+ "nearest_anchor": "2025-P1-Q11 (L4)",
+ "confidence": "Medium",
+ "chapter": "Method of Differentiation",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "L'Hospital Rule",
+  "Taylor / Maclaurin Series Expansion: Evaluating indeterminate limits where L'Hôpital fails or becomes cumbersome."
+ ],
+ "eq_relation": false,
+ "multi_concept": false
+}
