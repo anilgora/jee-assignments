@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Sequence and Progression",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $a$ and $b$ be positive real numbers whose geometric mean is $2$, and let $A$ and $H$ denote the arithmetic mean and the harmonic mean of $a$ and $b$, respectively. Over all such pairs, $A+4H$ attains its minimum value. For a pair at which this minimum is attained, the ratio of the larger of $a,b$ to the smaller is",
+  "",
+  "(A) $7+4\\sqrt3$",
+  "(B) $2+\\sqrt3$",
+  "(C) $3+2\\sqrt2$",
+  "(D) $4$"
+ ],
+ "hindi": [
+  "माना $a$ तथा $b$ ऐसी धनात्मक वास्तविक संख्याएँ हैं जिनका गुणोत्तर माध्य $2$ है, तथा $A$ और $H$ क्रमशः $a$ और $b$ के समान्तर माध्य और हरात्मक माध्य हैं। ऐसे सभी युग्मों पर $A+4H$ अपना न्यूनतम मान प्राप्त करता है। जिस युग्म के लिए यह न्यूनतम मान प्राप्त होता है, उसके लिए $a,b$ में से बड़ी संख्या और छोटी संख्या का अनुपात है",
+  "",
+  "(A) $7+4\\sqrt3$",
+  "(B) $2+\\sqrt3$",
+  "(C) $3+2\\sqrt2$",
+  "(D) $4$"
+ ],
+ "solution": [
+  "For two positive numbers $G^2=AH$, so $AH=4$",
+  "AM-GM on $A$ and $4H$: $A+4H\\ge2\\sqrt{4AH}=8$, equality iff $A=4H$, i.e. $A=4,\\ H=1$ (consistent with $A\\ge G\\ge H$)",
+  "$a+b=2A=8,\\ ab=G^2=4\\Rightarrow a,b$ are roots of $t^2-8t+4=0$, so $a,b=4\\pm2\\sqrt3$",
+  "Ratio $=\\dfrac{4+2\\sqrt3}{4-2\\sqrt3}=\\dfrac{(4+2\\sqrt3)^2}{16-12}=7+4\\sqrt3$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "For positive $a,b$: $A=\\dfrac{a+b}{2}$, $G=\\sqrt{ab}$, $H=\\dfrac{2ab}{a+b}$. Multiplying, $AH=ab=G^2$.",
+  "Here $G=2$, so $AH=4$ for every admissible pair.",
+  "$A$ and $4H$ are positive with constant product $4AH=16$, so by AM-GM $A+4H\\ge2\\sqrt{16}=8$.",
+  "Equality holds if and only if $A=4H$. With $AH=4$ this gives $4H^2=4$, so $H=1$ and $A=4$. These values satisfy $A\\ge G\\ge H$ ($4\\ge2\\ge1$), so the minimum $8$ is attained.",
+  "From $A=4$: $a+b=8$; from $G=2$: $ab=4$. So $a$ and $b$ are the roots of $t^2-8t+4=0$, namely $t=4\\pm2\\sqrt3$; both are positive and they are unequal.",
+  "The required ratio is $\\dfrac{4+2\\sqrt3}{4-2\\sqrt3}$. Multiplying numerator and denominator by $4+2\\sqrt3$: $\\dfrac{(4+2\\sqrt3)^2}{16-12}=\\dfrac{28+16\\sqrt3}{4}=7+4\\sqrt3$.",
+  "(The value $2+\\sqrt3$ is its square root, and $4$ is the ratio $A:H$, not $a:b$.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the GM is fixed, so G^2 = AH turns the extremum of A + 4H into a fixed-product AM-GM, and the optimum fixes an unequal pair a, b (way 5: relation G^2 = AH linked with a constrained minimum). Closest known: 'AM and HM of two numbers are given, find the numbers' exercises. Different because: neither A nor H is given; they come out of the extremum condition, and the answer is the ratio of the recovered numbers.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint",
+  "Relation between AM, GM and HM"
+ ],
+ "concept_use": {
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "A + 4H >= 2 sqrt(4AH) = 8 with equality at A = 4H decides the optimal A and H.",
+  "Relation between AM, GM and HM": "G^2 = AH for two positive numbers converts the fixed GM into the fixed product AH = 4."
+ },
+ "stem_review": "Read as a student: every symbol and progression is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions or brute force), is unique and equals the Answer Plan. Checked that the optimum has a different from b, so 'the larger of a, b' makes sense. Changed: No change.",
+ "level": 2,
+ "key_step": "Using G^2 = AH to make the product of A and 4H constant, then AM-GM.",
+ "justification": "Three routine steps (G^2 = AH, AM-GM with equality case, solve a quadratic and rationalise) with no real insight; options allow checking. Level 2 like 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

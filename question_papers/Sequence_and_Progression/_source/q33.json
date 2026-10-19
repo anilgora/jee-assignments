@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "The sum $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}\\,4}{n(n+1)(n+2)}$ can be written as $\\alpha\\log_e2+\\beta$, where $\\alpha$ and $\\beta$ are integers. Then the value of $\\alpha\\beta$ is ______."
+ ],
+ "hindi": [
+  "योग $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}\\,4}{n(n+1)(n+2)}$ को $\\alpha\\log_e2+\\beta$ के रूप में लिखा जा सकता है, जहाँ $\\alpha$ तथा $\\beta$ पूर्णांक हैं। तब $\\alpha\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\dfrac{4}{n(n+1)(n+2)}=\\dfrac2n-\\dfrac4{n+1}+\\dfrac2{n+2}$",
+  "From $\\log_e2=1-\\frac12+\\frac13-\\cdots$: $\\displaystyle\\sum\\frac{(-1)^{n+1}}{n}=\\log_e2,\\ \\sum\\frac{(-1)^{n+1}}{n+1}=1-\\log_e2,\\ \\sum\\frac{(-1)^{n+1}}{n+2}=\\log_e2-\\frac12$",
+  "Sum $=2\\log_e2-4(1-\\log_e2)+2\\left(\\log_e2-\\frac12\\right)=8\\log_e2-5$",
+  "$\\log_e2$ is irrational, so $\\alpha=8,\\ \\beta=-5$ and $\\alpha\\beta=-40$",
+  "",
+  "Final Answer: -40"
+ ],
+ "solution_full": [
+  "Partial fractions: $\\dfrac{4}{n(n+1)(n+2)}=\\dfrac{2}{n}-\\dfrac{4}{n+1}+\\dfrac{2}{n+2}$ (the weights $1,-2,1$ that make the non-alternating series telescope).",
+  "The series $\\log_e(1+x)=x-\\dfrac{x^2}{2}+\\dfrac{x^3}{3}-\\cdots$ at $x=1$ gives $\\displaystyle\\sum_{n\\ge1}\\frac{(-1)^{n+1}}{n}=\\log_e2$.",
+  "Shifting the index: $\\displaystyle\\sum_{n\\ge1}\\frac{(-1)^{n+1}}{n+1}=\\frac12-\\frac13+\\frac14-\\cdots=1-\\log_e2$, and $\\displaystyle\\sum_{n\\ge1}\\frac{(-1)^{n+1}}{n+2}=\\frac13-\\frac14+\\cdots=\\log_e2-1+\\frac12=\\log_e2-\\frac12$.",
+  "All three series converge, so the given sum is $2\\log_e2-4(1-\\log_e2)+2\\left(\\log_e2-\\dfrac12\\right)=8\\log_e2-5$.",
+  "Numerically $8\\log_e2-5\\approx0.5452$, which agrees with the partial sums.",
+  "If $\\alpha\\log_e2+\\beta=8\\log_e2-5$ with integers $\\alpha,\\beta$ and $\\alpha\\neq8$, then $\\log_e2$ would be rational, which is false. So $\\alpha=8$, $\\beta=-5$, and $\\alpha\\beta=-40$.",
+  "",
+  "Final Answer: -40"
+ ],
+ "originality_note": "New: the familiar telescoping fraction 1/(n(n+1)(n+2)) is given alternating signs, so it no longer telescopes; its partial-fraction pieces become three shifted copies of the series for log_e 2 (way 5: linear-denominator decomposition linked with the logarithmic series). Closest known: 'sum 1/(n(n+1)(n+2)) = 1/4' and 'sum (-1)^{n+1}/(n(n+1)) = 2 log 2 - 1'. Different because: the cubic denominator with alternation needs three index shifts of log 2 and gives a mixed answer 8 log 2 - 5.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Sum of a telescopic series whose nth term is product of linear factors in denominator",
+  "Exponential and logarithmic series (e^x, ln(1+x))"
+ ],
+ "concept_use": {
+  "Sum of a telescopic series whose nth term is product of linear factors in denominator": "The partial-fraction split 2/n - 4/(n+1) + 2/(n+2) (the telescoping decomposition with linear factors) is the first step.",
+  "Exponential and logarithmic series (e^x, ln(1+x))": "The series log_e 2 = 1 - 1/2 + 1/3 - ... and its index shifts evaluate the three alternating pieces."
+ },
+ "stem_review": "Read as a student: every symbol, sum and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, high-precision partial sums or simulation), is unique and equals the Answer Plan. Stated that alpha and beta are integers; the irrationality of log_e 2 makes them unique. Changed: No change.",
+ "level": 3,
+ "key_step": "Splitting into 2/n - 4/(n+1) + 2/(n+2) and evaluating three shifted alternating harmonic series.",
+ "justification": "Two ideas linked (partial fractions of a telescoping type, then shifted log series) with sign and shift precision; numerical. Level 3 like 2021-P2-Q16 (L3).",
+ "nearest_anchor": "2021-P2-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

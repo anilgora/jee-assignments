@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $a_1,a_2,a_3,\\dots$ be an arithmetic progression of real numbers such that $a_1a_2=10$, $a_2a_3=40$ and $a_3a_4=88$. Then the value of $\\left|a_{12}\\right|$ is ______."
+ ],
+ "hindi": [
+  "माना $a_1,a_2,a_3,\\dots$ वास्तविक संख्याओं की एक समान्तर श्रेढ़ी है, जिसके लिए $a_1a_2=10$, $a_2a_3=40$ तथा $a_3a_4=88$ है। तब $\\left|a_{12}\\right|$ का मान ______ है।"
+ ],
+ "solution": [
+  "With common difference $d$: $a_{n+1}a_{n+2}-a_na_{n+1}=a_{n+1}(a_{n+2}-a_n)=2d\\,a_{n+1}$",
+  "$40-10=2d\\,a_2,\\ 88-40=2d\\,a_3\\Rightarrow 18=2d(a_3-a_2)=2d^2\\Rightarrow d^2=9$",
+  "$a_2=\\dfrac{15}{d}$: $(d,a_2)=(3,5)$ or $(-3,-5)$; then $a_1=a_2-d=\\pm2$ and $a_1a_2=10$ checks",
+  "$a_{12}=a_2+10d=\\pm35\\Rightarrow\\left|a_{12}\\right|=35$",
+  "",
+  "Final Answer: 35"
+ ],
+ "solution_full": [
+  "Let $d$ be the common difference. For any $n$, $a_{n+1}a_{n+2}-a_na_{n+1}=a_{n+1}(a_{n+2}-a_n)=a_{n+1}\\cdot2d$.",
+  "So the products of consecutive terms have differences that again form an arithmetic progression: $2d\\,a_2,\\ 2d\\,a_3,\\dots$ with common difference $2d\\cdot d=2d^2$.",
+  "From the data: $a_2a_3-a_1a_2=30=2d\\,a_2$ and $a_3a_4-a_2a_3=48=2d\\,a_3$.",
+  "Subtracting: $48-30=2d(a_3-a_2)=2d^2$, so $d^2=9$ and $d=\\pm3$.",
+  "If $d=3$: $a_2=\\dfrac{30}{6}=5$, $a_1=2$, $a_3=8$, $a_4=11$, and $2\\cdot5=10$, $5\\cdot8=40$, $8\\cdot11=88$ hold.",
+  "If $d=-3$: $a_2=-5$, $a_1=-2$, $a_3=-8$, $a_4=-11$; the products are the same.",
+  "In both cases $a_{12}=a_1+11d=\\pm(2+33)=\\pm35$, so $\\left|a_{12}\\right|=35$.",
+  "",
+  "Final Answer: 35"
+ ],
+ "originality_note": "New: an AP is recovered from the products of consecutive terms; the operation 'product of neighbours' turns the AP into a sequence whose differences form an AP with common difference 2d^2 (way 5: operation on AP terms linked to the AP itself). Closest known: 'sum of four consecutive AP terms is 32 and the product of the middle two is 60'. Different because: only the three neighbour products are given, d is found from their second difference, and the sign ambiguity is removed by asking for |a_12|.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Arithmetic Progression (AP) & Sum of AP",
+  "Operations on terms of an AP"
+ ],
+ "concept_use": {
+  "Arithmetic Progression (AP) & Sum of AP": "a_n = a_1 + (n-1)d gives a_12 = a_1 + 11d once a_1 and d are known.",
+  "Operations on terms of an AP": "The products a_n a_{n+1} have consecutive differences 2d a_{n+1}, whose own difference 2d^2 gives d^2 = 9."
+ },
+ "stem_review": "Read as a student: every symbol and progression is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions or brute force), is unique and equals the Answer Plan. Asked for |a_12| because a and -a give the same products. Changed: No change.",
+ "level": 2,
+ "key_step": "Seeing that differences of neighbour products are 2d a_{n+1}, so their difference is 2d^2.",
+ "justification": "Routine chain of three steps with one light observation; numerical but short. Level 2 like 2023-P2-Q9 (L2).",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

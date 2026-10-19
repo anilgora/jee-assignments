@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $z=\\cos\\dfrac{\\pi}{6}+i\\sin\\dfrac{\\pi}{6}$, where $i=\\sqrt{-1}$. Then the value of $\\displaystyle\\sum_{k=0}^{11}\\left|1+z^k\\right|^8$ is ______."
+ ],
+ "hindi": [
+  "माना $z=\\cos\\dfrac{\\pi}{6}+i\\sin\\dfrac{\\pi}{6}$ है, जहाँ $i=\\sqrt{-1}$ है। तब $\\displaystyle\\sum_{k=0}^{11}\\left|1+z^k\\right|^8$ का मान ______ है।"
+ ],
+ "solution": [
+  "$|z|=1$, $\\bar z=z^{-1}$, $z^{12}=1$: $\\left|1+z^k\\right|^8=(1+z^k)^4(1+z^{-k})^4=z^{-4k}(1+z^k)^8$",
+  "$\\displaystyle\\sum_{k=0}^{11}z^{-4k}(1+z^k)^8=\\sum_{j=0}^{8}\\binom8j\\sum_{k=0}^{11}\\left(z^{j-4}\\right)^k$",
+  "Inner GP: $=12$ if $z^{j-4}=1$, else $\\dfrac{1-z^{12(j-4)}}{1-z^{j-4}}=0$; since $-4\\le j-4\\le4$, only $j=4$ survives",
+  "Sum $=12\\binom84=12\\cdot70=840$",
+  "",
+  "Final Answer: 840"
+ ],
+ "solution_full": [
+  "By De Moivre's theorem $z^k=\\cos\\dfrac{k\\pi}{6}+i\\sin\\dfrac{k\\pi}{6}$, so $z^{12}=1$ and $z^m=1$ exactly when $12\\mid m$. Also $|z|=1$, so $\\bar z=z^{-1}$.",
+  "For any complex $w$, $|w|^2=w\\bar w$. Hence $\\left|1+z^k\\right|^8=\\left((1+z^k)(1+z^{-k})\\right)^4=(1+z^k)^4\\cdot\\dfrac{(z^k+1)^4}{z^{4k}}=z^{-4k}(1+z^k)^8$.",
+  "Expanding by the binomial theorem: $\\displaystyle\\sum_{k=0}^{11}z^{-4k}\\sum_{j=0}^{8}\\binom8jz^{kj}=\\sum_{j=0}^{8}\\binom8j\\sum_{k=0}^{11}\\left(z^{j-4}\\right)^k$.",
+  "The inner sum is a geometric progression of $12$ terms with ratio $w=z^{j-4}$. If $w=1$ it equals $12$; otherwise it equals $\\dfrac{1-w^{12}}{1-w}=0$ because $w^{12}=\\left(z^{12}\\right)^{j-4}=1$.",
+  "$w=1$ needs $12\\mid(j-4)$; as $j-4\\in\\{-4,\\dots,4\\}$ this happens only for $j=4$.",
+  "So the sum is $12\\dbinom84=12\\cdot70=840$. (Direct check: $\\left|1+z^k\\right|=2\\left|\\cos\\dfrac{k\\pi}{12}\\right|$ and $\\displaystyle\\sum_{k=0}^{11}256\\cos^8\\frac{k\\pi}{12}=840$.)",
+  "",
+  "Final Answer: 840"
+ ],
+ "originality_note": "New: a sum of 8th powers of chord lengths over the 12th roots of unity is turned into a binomial double sum in which a geometric progression of roots of unity kills every term but the middle one (way 5: GP summation over roots of unity linked with |w|^2 = w w-bar). Closest known: roots-of-unity filters for sums of binomial coefficients, and products of distances such as the octagon product (2023-P2-Q11). Different because: the quantity is a sum of even powers of moduli, so the conjugate must be written as a power of z before the GP filter applies.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Geometric Progression (GP) & Sum of GP",
+  "Summation of series involving complex numbers"
+ ],
+ "concept_use": {
+  "Geometric Progression (GP) & Sum of GP": "For each j the inner sum over k is a 12-term GP with ratio z^{j-4}, equal to 12 or 0.",
+  "Summation of series involving complex numbers": "|1 + z^k|^8 = z^{-4k}(1 + z^k)^8 uses |w|^2 = w w-bar with z-bar = 1/z, and the binomial expansion turns the sum into GP sums over 12th roots of unity."
+ },
+ "stem_review": "Read as a student: every symbol, progression and function is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, brute force or simulation), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing |1+z^k|^8 = z^{-4k}(1+z^k)^8 so that a GP over 12th roots of unity filters out all but j = 4.",
+ "justification": "Two ideas linked (modulus to power of z, then the GP/roots-of-unity filter); direct evaluation is heavy, so the idea matters. Level 3 like 2021-P1-Q4 (L3); below 2025-P2-Q13 (L4) because the filter is a known move.",
+ "nearest_anchor": "2021-P1-Q4 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

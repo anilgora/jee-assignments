@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $b_k=2^{k-4}$ for $k=1,2,3,\\dots$, and for each positive integer $n$ let $P_n=b_1^{1/2}\\,b_2^{1/4}\\,b_3^{1/8}\\cdots b_n^{1/2^n}$. Then the value of $\\log_2\\left(\\displaystyle\\lim_{n\\to\\infty}P_n\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना $k=1,2,3,\\dots$ के लिए $b_k=2^{k-4}$ है, तथा प्रत्येक धनात्मक पूर्णांक $n$ के लिए $P_n=b_1^{1/2}\\,b_2^{1/4}\\,b_3^{1/8}\\cdots b_n^{1/2^n}$ है। तब $\\log_2\\left(\\displaystyle\\lim_{n\\to\\infty}P_n\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\log_2P_n=\\displaystyle\\sum_{k=1}^{n}\\frac{k-4}{2^k}$: the product is converted into an AGP",
+  "AGP: $S=\\displaystyle\\sum_{k\\ge1}\\frac{k}{2^k}$, $S-\\frac S2=\\sum_{k\\ge1}\\frac1{2^k}=1\\Rightarrow S=2$; also $\\displaystyle\\sum_{k\\ge1}\\frac{4}{2^k}=4$",
+  "$\\log_2P_n\\to2-4=-2$, so $\\displaystyle\\lim P_n=2^{-2}$ and the required value is $-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "Taking logarithms to base $2$: $\\log_2P_n=\\displaystyle\\sum_{k=1}^{n}\\frac{1}{2^k}\\log_2b_k=\\sum_{k=1}^{n}\\frac{k-4}{2^k}$. So the product becomes the partial sum of the series $\\displaystyle\\sum\\frac{k-4}{2^k}$, whose numerators are in arithmetic progression and denominators in geometric progression.",
+  "Split it as $\\displaystyle\\sum\\frac{k}{2^k}-4\\sum\\frac{1}{2^k}$; both series converge.",
+  "For $S=\\displaystyle\\sum_{k\\ge1}\\frac{k}{2^k}$: $S-\\dfrac S2=\\dfrac12+\\dfrac14+\\dfrac18+\\cdots=1$, so $S=2$.",
+  "$\\displaystyle\\sum_{k\\ge1}\\frac{4}{2^k}=4$.",
+  "Hence $\\log_2P_n\\to2-4=-2$. Since $2^x$ is continuous, $P_n\\to2^{-2}=\\dfrac14$, and $\\log_2\\left(\\lim P_n\\right)=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: an infinite product whose exponents halve while its bases form a GP is converted by logarithms into an AGP with a shifted numerator, giving a negative logarithm (way 5: conversion of a product into an AGP). Closest known: '2^{1/2} 4^{1/4} 8^{1/8} ... = 4'. Different because: the bases 2^{k-4} shift the numerators to k - 4, so the AGP has terms of both signs and the limit is 1/4, not 4.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Sum of an Arithmetico Geometric Progression",
+  "Sequences convertible to AGP"
+ ],
+ "concept_use": {
+  "Sum of an Arithmetico Geometric Progression": "The AGP sum of k/2^k = 2 (by S - S/2) gives log_2 of the limit.",
+  "Sequences convertible to AGP": "Taking log_2 converts the product into the series sum (k - 4)/2^k, a sequence convertible to an AGP."
+ },
+ "stem_review": "Read as a student: every symbol, point and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, numerical scan or brute force), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Converting the product to the AGP sum (k - 4)/2^k by taking log_2.",
+ "justification": "Routine conversion plus one standard AGP sum; slightly more than one move. Level 2 like 2024-P1-Q8 (L2) log manipulation.",
+ "nearest_anchor": "2024-P1-Q8 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

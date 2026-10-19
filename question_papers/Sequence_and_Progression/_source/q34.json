@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "For each positive integer $n$, let $A_n=\\displaystyle\\sum_{k=1}^{n}\\frac{1}{k(k+1)(k+2)}$, $B_n=\\displaystyle\\sum_{k=1}^{n}k(k+1)(k+2)$ and $C_n=\\displaystyle\\sum_{k=1}^{n}\\frac{k}{k^4+k^2+1}$. Let $N$ be the positive integer for which $A_N=\\dfrac{5}{21}$. Then the value of $\\dfrac{B_N}{C_N}$ is ______."
+ ],
+ "hindi": [
+  "प्रत्येक धनात्मक पूर्णांक $n$ के लिए माना $A_n=\\displaystyle\\sum_{k=1}^{n}\\frac{1}{k(k+1)(k+2)}$, $B_n=\\displaystyle\\sum_{k=1}^{n}k(k+1)(k+2)$ तथा $C_n=\\displaystyle\\sum_{k=1}^{n}\\frac{k}{k^4+k^2+1}$ है। माना $N$ वह धनात्मक पूर्णांक है जिसके लिए $A_N=\\dfrac{5}{21}$ है। तब $\\dfrac{B_N}{C_N}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\dfrac1{k(k+1)(k+2)}=\\dfrac12\\left[\\dfrac1{k(k+1)}-\\dfrac1{(k+1)(k+2)}\\right]\\Rightarrow A_n=\\dfrac14-\\dfrac1{2(n+1)(n+2)}$",
+  "$A_N=\\dfrac5{21}\\Rightarrow\\dfrac1{2(N+1)(N+2)}=\\dfrac1{84}\\Rightarrow(N+1)(N+2)=42\\Rightarrow N=5$",
+  "$B_n=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\Rightarrow B_5=420$",
+  "$k^4+k^2+1=(k^2-k+1)(k^2+k+1)$, $\\dfrac{k}{k^4+k^2+1}=\\dfrac12\\left[\\dfrac1{k^2-k+1}-\\dfrac1{k^2+k+1}\\right]$ and $k^2+k+1=(k+1)^2-(k+1)+1$, so $C_n=\\dfrac12\\left(1-\\dfrac1{n^2+n+1}\\right)$, $C_5=\\dfrac{15}{31}$",
+  "$\\dfrac{B_5}{C_5}=420\\cdot\\dfrac{31}{15}=868$",
+  "",
+  "Final Answer: 868"
+ ],
+ "solution_full": [
+  "Telescoping with linear factors: $\\dfrac1{k(k+1)(k+2)}=\\dfrac12\\left[\\dfrac1{k(k+1)}-\\dfrac1{(k+1)(k+2)}\\right]$, so $A_n=\\dfrac12\\left[\\dfrac12-\\dfrac1{(n+1)(n+2)}\\right]=\\dfrac14-\\dfrac1{2(n+1)(n+2)}$.",
+  "$A_N=\\dfrac5{21}$ gives $\\dfrac1{2(N+1)(N+2)}=\\dfrac14-\\dfrac5{21}=\\dfrac1{84}$, so $(N+1)(N+2)=42=6\\cdot7$ and $N=5$ (unique, since $A_n$ is increasing).",
+  "Product of linear factors: $k(k+1)(k+2)=\\dfrac{k(k+1)(k+2)(k+3)-(k-1)k(k+1)(k+2)}{4}$, so $B_n=\\dfrac{n(n+1)(n+2)(n+3)}{4}$ and $B_5=\\dfrac{5\\cdot6\\cdot7\\cdot8}{4}=420$.",
+  "For $C_n$: $k^4+k^2+1=(k^2+1)^2-k^2=(k^2-k+1)(k^2+k+1)$, and the two factors differ by $2k$, so $\\dfrac{k}{k^4+k^2+1}=\\dfrac12\\left[\\dfrac1{k^2-k+1}-\\dfrac1{k^2+k+1}\\right]$.",
+  "Since $k^2+k+1=(k+1)^2-(k+1)+1$, the bracket is $f(k)-f(k+1)$ with $f(k)=\\dfrac1{k^2-k+1}$, so $C_n=\\dfrac12\\left(f(1)-f(n+1)\\right)=\\dfrac12\\left(1-\\dfrac1{n^2+n+1}\\right)$.",
+  "$C_5=\\dfrac12\\left(1-\\dfrac1{31}\\right)=\\dfrac{15}{31}$.",
+  "$\\dfrac{B_5}{C_5}=420\\cdot\\dfrac{31}{15}=28\\cdot31=868$.",
+  "",
+  "Final Answer: 868"
+ ],
+ "originality_note": "New: one index N is fixed by a linear-denominator telescoping sum, and the answer combines a product-of-linear-factors sum with a quartic-denominator telescoping (Sophie Germain type factorisation) at that N (way 5: three telescoping types linked through a common index). Closest known: the separate textbook sums sum 1/(k(k+1)(k+2)), sum k(k+1)(k+2) and sum k/(k^4 + k^2 + 1). Different because: N is not given and must be recovered from A_N = 5/21 before the other two sums are evaluated.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Sum of a telescopic series whose nth term is product of linear factors in denominator",
+  "Sum of a telescopic series whose nth term is product of linear factors",
+  "Miscellaneous telescopic series"
+ ],
+ "concept_use": {
+  "Sum of a telescopic series whose nth term is product of linear factors in denominator": "A_n = 1/4 - 1/(2(n+1)(n+2)) by telescoping, and A_N = 5/21 gives N = 5.",
+  "Sum of a telescopic series whose nth term is product of linear factors": "B_n = n(n+1)(n+2)(n+3)/4 by the telescoping of products of linear factors; B_5 = 420.",
+  "Miscellaneous telescopic series": "C_n uses k^4 + k^2 + 1 = (k^2 - k + 1)(k^2 + k + 1) and telescopes to (1/2)(1 - 1/(n^2 + n + 1)); C_5 = 15/31."
+ },
+ "stem_review": "Read as a student: every symbol, sum and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, high-precision partial sums or simulation), is unique and equals the Answer Plan. Each of the three sums is a different telescoping type, as the row requires. Changed: No change.",
+ "level": 3,
+ "key_step": "Recovering N = 5 from A_N = 5/21, then telescoping B_N and the quartic-denominator C_N.",
+ "justification": "Three standard telescoping evaluations chained through a recovered index, with exact arithmetic and no options; numerical. Level 3 like 2021-P1-Q15 (L3).",
+ "nearest_anchor": "2021-P1-Q15 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $b_1,b_2,b_3,\\dots$ be a geometric progression of real numbers such that $\\displaystyle\\sum_{n=1}^{\\infty}b_n=6$ and $\\displaystyle\\sum_{n=1}^{\\infty}nb_n=12$. Then the value of $\\displaystyle\\sum_{n=1}^{\\infty}n^2b_n$ is ______."
+ ],
+ "hindi": [
+  "माना $b_1,b_2,b_3,\\dots$ वास्तविक संख्याओं की एक गुणोत्तर श्रेढ़ी है जिसके लिए $\\displaystyle\\sum_{n=1}^{\\infty}b_n=6$ तथा $\\displaystyle\\sum_{n=1}^{\\infty}nb_n=12$ है। तब $\\displaystyle\\sum_{n=1}^{\\infty}n^2b_n$ का मान ______ है।"
+ ],
+ "solution": [
+  "$b_n=br^{n-1}$, $|r|<1$: $\\dfrac{b}{1-r}=6$ and (AGP) $\\displaystyle\\sum nbr^{n-1}=\\frac{b}{(1-r)^2}=12\\Rightarrow\\frac1{1-r}=2,\\ r=\\frac12,\\ b=3$",
+  "$T=\\displaystyle\\sum n^2r^{n-1}$: $T-rT=\\displaystyle\\sum(2n-1)r^{n-1}=\\frac{2}{(1-r)^2}-\\frac1{1-r}=\\frac{1+r}{(1-r)^2}\\Rightarrow T=\\frac{1+r}{(1-r)^3}$",
+  "$T=\\dfrac{3/2}{1/8}=12\\Rightarrow\\displaystyle\\sum n^2b_n=bT=36$",
+  "",
+  "Final Answer: 36"
+ ],
+ "solution_full": [
+  "Let $b_n=br^{n-1}$. Convergence of $\\sum b_n$ forces $|r|<1$, and then $\\displaystyle\\sum b_n=\\frac{b}{1-r}=6$.",
+  "$\\displaystyle\\sum nb_n=b\\sum nr^{n-1}$ is an arithmetico-geometric series: with $U=\\sum nr^{n-1}$, $U-rU=\\sum r^{n-1}=\\dfrac1{1-r}$, so $U=\\dfrac1{(1-r)^2}$ and $\\displaystyle\\sum nb_n=\\frac{b}{(1-r)^2}=12$.",
+  "Dividing, $\\dfrac{1}{1-r}=2$, so $r=\\dfrac12$ and $b=6(1-r)=3$.",
+  "For $T=\\displaystyle\\sum n^2r^{n-1}$: $T-rT=\\sum\\left(n^2-(n-1)^2\\right)r^{n-1}=\\sum(2n-1)r^{n-1}=2U-\\dfrac{1}{1-r}=\\dfrac{2}{(1-r)^2}-\\dfrac{1}{1-r}=\\dfrac{1+r}{(1-r)^2}$.",
+  "So $T=\\dfrac{1+r}{(1-r)^3}=\\dfrac{3/2}{1/8}=12$.",
+  "$\\displaystyle\\sum n^2b_n=bT=3\\cdot12=36$.",
+  "",
+  "Final Answer: 36"
+ ],
+ "originality_note": "New: the GP is recovered from its zeroth and first weighted sums, and the second weighted sum is then found by applying the AGP difference trick twice (way 5: GP linked with first- and second-order AGP sums). Closest known: the textbook formulas for sum n x^n and sum n^2 x^n. Different because: the ratio and first term are unknown and come out of the ratio of the two given sums.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Geometric Progression (GP) & Sum of GP",
+  "Sum of an Arithmetico Geometric Progression"
+ ],
+ "concept_use": {
+  "Geometric Progression (GP) & Sum of GP": "b/(1 - r) = 6 for the infinite GP fixes b once r is known.",
+  "Sum of an Arithmetico Geometric Progression": "The AGP sum b/(1 - r)^2 = 12 gives r = 1/2, and the AGP difference trick applied twice gives sum n^2 r^{n-1} = (1 + r)/(1 - r)^3."
+ },
+ "stem_review": "Read as a student: every symbol, progression and function is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, brute force or simulation), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Dividing the two AGP-type sums to get 1/(1 - r) = 2, then a second differencing for sum n^2 r^{n-1}.",
+ "justification": "Chain of an AGP sum, solving for the GP, and a second-order AGP sum, all exact with no options; numerical format raises it from 2. Level 3 like 2021-P2-Q16 (L3).",
+ "nearest_anchor": "2021-P2-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

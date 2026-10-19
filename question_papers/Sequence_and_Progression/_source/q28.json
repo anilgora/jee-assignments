@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "The value of the series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n(n+1)}{3^{n+1}}=\\frac{2}{3^2}+\\frac{6}{3^3}+\\frac{12}{3^4}+\\frac{20}{3^5}+\\cdots$ is ______."
+ ],
+ "hindi": [
+  "श्रेणी $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n(n+1)}{3^{n+1}}=\\frac{2}{3^2}+\\frac{6}{3^3}+\\frac{12}{3^4}+\\frac{20}{3^5}+\\cdots$ का मान ______ है।"
+ ],
+ "solution": [
+  "Numerators $2,6,12,20,\\dots$ have differences $4,6,8,\\dots$ (an AP), so one subtraction gives an AGP",
+  "$S-\\dfrac S3=\\displaystyle\\sum_{n\\ge1}\\frac{n(n+1)-(n-1)n}{3^{n+1}}=\\sum\\frac{2n}{3^{n+1}}=\\frac23\\sum\\frac{n}{3^n}$",
+  "AGP: $\\displaystyle\\sum\\frac{n}{3^n}=\\frac{1/3}{(2/3)^2}=\\frac34$, so $\\dfrac23S=\\dfrac23\\cdot\\dfrac34=\\dfrac12$",
+  "$S=\\dfrac34=0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "Let $S=\\displaystyle\\sum_{n\\ge1}\\frac{n(n+1)}{3^{n+1}}$; it converges (ratio test with ratio $\\frac13$).",
+  "$\\dfrac S3=\\displaystyle\\sum_{n\\ge1}\\frac{n(n+1)}{3^{n+2}}=\\sum_{n\\ge2}\\frac{(n-1)n}{3^{n+1}}$.",
+  "Subtracting term by term: $S-\\dfrac S3=\\displaystyle\\sum_{n\\ge1}\\frac{n(n+1)-(n-1)n}{3^{n+1}}=\\sum_{n\\ge1}\\frac{2n}{3^{n+1}}$, since the numerators $2,6,12,20,\\dots$ have differences $4,6,8,\\dots=2(n)$, an arithmetic progression. The new series is arithmetico-geometric.",
+  "$\\displaystyle\\sum_{n\\ge1}\\frac{2n}{3^{n+1}}=\\frac23\\sum_{n\\ge1}\\frac{n}{3^n}$, and with $T=\\displaystyle\\sum\\frac{n}{3^n}$: $T-\\dfrac T3=\\displaystyle\\sum\\frac1{3^n}=\\frac12$, so $T=\\dfrac34$.",
+  "Hence $\\dfrac23S=\\dfrac23\\cdot\\dfrac34=\\dfrac12$ and $S=\\dfrac34=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "originality_note": "New: a series with quadratic numerators n(n + 1) over a GP is reduced to an AGP by one shift-and-subtract step, because the numerators have differences in AP (way 5: method of differences converting to an AGP). Closest known: 'sum n^2 x^n' by differentiation. Different because: the numerators are pronic numbers written out as 2, 6, 12, 20, and the intended route is the shift-and-subtract conversion, not a memorised formula.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Sequences convertible to AGP"
+ ],
+ "concept_use": {
+  "Sequences convertible to AGP": "Shifting by one place and subtracting converts the quadratic-numerator series into the AGP sum 2n/3^{n+1}, which is then summed by the same trick."
+ },
+ "stem_review": "Read as a student: every symbol, point and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, numerical scan or brute force), is unique and equals the Answer Plan. The stem starts with 'The value of', not an imperative. Changed: No change.",
+ "level": 2,
+ "key_step": "Shift-and-subtract to turn n(n+1)/3^{n+1} into an AGP.",
+ "justification": "Routine two-stage differencing with standard sums; no insight. Level 2 like 2023-P2-Q1 (L2).",
+ "nearest_anchor": "2023-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

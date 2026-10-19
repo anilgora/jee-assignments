@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $a$ and $b$ be distinct positive real numbers. Numbers $A_1,A_2,A_3$, positive numbers $G_1,G_2,G_3$, and numbers $H_1,H_2,H_3$ are inserted between $a$ and $b$ such that $a,A_1,A_2,A_3,b$ are in arithmetic progression, $a,G_1,G_2,G_3,b$ are in geometric progression, and $a,H_1,H_2,H_3,b$ are in harmonic progression. Suppose that $G_1G_2G_3=1000$. Then the minimum value of $A_1+36H_3$, taken over all such pairs $(a,b)$, is ______."
+ ],
+ "hindi": [
+  "माना $a$ तथा $b$ भिन्न धनात्मक वास्तविक संख्याएँ हैं। $a$ और $b$ के बीच संख्याएँ $A_1,A_2,A_3$, धनात्मक संख्याएँ $G_1,G_2,G_3$ तथा संख्याएँ $H_1,H_2,H_3$ इस प्रकार रखी जाती हैं कि $a,A_1,A_2,A_3,b$ समान्तर श्रेढ़ी में, $a,G_1,G_2,G_3,b$ गुणोत्तर श्रेढ़ी में तथा $a,H_1,H_2,H_3,b$ हरात्मक श्रेढ़ी में हैं। माना $G_1G_2G_3=1000$ है। तब ऐसे सभी युग्मों $(a,b)$ पर $A_1+36H_3$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$G_1G_3=G_2^2=ab\\Rightarrow G_2^3=1000\\Rightarrow ab=100$",
+  "$A_1=\\dfrac{3a+b}{4}$; $\\dfrac1{H_3}=\\dfrac1a+\\dfrac34\\left(\\dfrac1b-\\dfrac1a\\right)=\\dfrac{3a+b}{4ab}$, so $A_1H_3=ab=100$",
+  "$A_1+36H_3=A_1+\\dfrac{3600}{A_1}\\ge2\\sqrt{3600}=120$, equality iff $A_1=60$",
+  "$A_1=60$: $3a+b=240,\\ ab=100\\Rightarrow3a^2-240a+100=0$ has two positive roots with $b=240-3a>0$, $a\\neq b$; minimum attained",
+  "",
+  "Final Answer: 120"
+ ],
+ "solution_full": [
+  "In the geometric progression $a,G_1,G_2,G_3,b$, terms equidistant from the ends have equal products: $G_1G_3=G_2^2=ab$. So $G_1G_2G_3=G_2^3=1000$, $G_2=10$ and $ab=100$.",
+  "The arithmetic progression has common difference $\\dfrac{b-a}{4}$, so $A_1=a+\\dfrac{b-a}{4}=\\dfrac{3a+b}{4}$.",
+  "In the harmonic progression the reciprocals $\\dfrac1a,\\dfrac1{H_1},\\dfrac1{H_2},\\dfrac1{H_3},\\dfrac1b$ are in arithmetic progression, so $\\dfrac1{H_3}=\\dfrac1a+\\dfrac34\\left(\\dfrac1b-\\dfrac1a\\right)=\\dfrac{b+3a}{4ab}$ and $H_3=\\dfrac{4ab}{3a+b}$.",
+  "Hence $A_1H_3=ab=100$ (the AM-HM pairing $A_kH_{4-k}=ab$).",
+  "$A_1+36H_3=A_1+\\dfrac{3600}{A_1}$. By AM-GM, $A_1+\\dfrac{3600}{A_1}\\ge2\\sqrt{3600}=120$, with equality iff $A_1=60$.",
+  "Attainment: $A_1=60$ means $3a+b=240$; with $ab=100$, $a(240-3a)=100$, i.e. $3a^2-240a+100=0$. Its discriminant $240^2-1200>0$, both roots are positive and less than $80$, so $b=240-3a>0$; and $a=b$ would force $a=60$, $ab=3600\\neq100$. So a valid pair exists.",
+  "The minimum value of $A_1+36H_3$ is $120$.",
+  "",
+  "Final Answer: 120"
+ ],
+ "originality_note": "New: three AMs, GMs and HMs are inserted together; the GM product fixes ab, the AM-HM pairing A_1 H_3 = ab makes the product of A_1 and H_3 constant, and AM-GM gives the minimum, which must be shown attainable with a distinct from b (way 5: inserted means linked with a constrained extremum). Closest known: 'A_1 H_n = G_1 G_n = ab for inserted means' identity exercises. Different because: the identity is the hidden key to an extremum, not the asked result.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Arithmetic Progression (AP) & Sum of AP",
+  "Geometric Progression (GP) & Sum of GP",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint",
+  "Relation between AM, GM and HM"
+ ],
+ "concept_use": {
+  "Arithmetic Progression (AP) & Sum of AP": "A_1 = (3a + b)/4 from the AP a, A_1, A_2, A_3, b.",
+  "Geometric Progression (GP) & Sum of GP": "G_1 G_3 = G_2^2 = ab in the GP a, G_1, G_2, G_3, b, so G_1 G_2 G_3 = 1000 gives ab = 100.",
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "AM-GM on A_1 and 3600/A_1 gives the minimum 120 with equality at A_1 = 60.",
+  "Relation between AM, GM and HM": "The AM-HM relation for inserted means, A_1 H_3 = ab, makes the product A_1 * 36H_3 constant."
+ },
+ "stem_review": "Read as a student: every symbol and progression is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions or brute force), is unique and equals the Answer Plan. Checked that the equality case gives distinct positive a, b. Changed: the imperative 'Between a and b insert ...' was rewritten as 'Numbers ... are inserted between a and b ...'.",
+ "level": 3,
+ "key_step": "Seeing A_1 H_3 = ab so that A_1 + 36H_3 has constant product, after getting ab from the GM product.",
+ "justification": "Two ideas linked (inserted-means identities, then AM-GM with attainment check) across four concepts; numerical format. Level 3 like 2021-P1-Q15 (L3) in idea count.",
+ "nearest_anchor": "2021-P1-Q15 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

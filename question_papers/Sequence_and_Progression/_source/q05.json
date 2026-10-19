@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "Option A",
+ "english": [
+  "Consider all vectors $\\overrightarrow{r}=x\\hat{i}+y\\hat{j}+z\\hat{k}$, with $x,y,z$ real, satisfying $\\overrightarrow{r}\\cdot\\left(\\hat{i}+\\hat{j}+\\hat{k}\\right)=7$. Among these vectors let $\\overrightarrow{r_0}$ be the one for which $x^2+\\dfrac{y^2}{4}+\\dfrac{z^2}{9}$ attains its minimum value, and let $\\theta$ be the angle between $\\overrightarrow{r_0}$ and $\\hat{i}+\\hat{j}+\\hat{k}$. Then $\\tan^2\\theta$ is equal to",
+  "",
+  "(A) $\\dfrac12$",
+  "(B) $2$",
+  "(C) $\\dfrac13$",
+  "(D) $\\dfrac32$"
+ ],
+ "hindi": [
+  "उन सभी सदिशों $\\overrightarrow{r}=x\\hat{i}+y\\hat{j}+z\\hat{k}$ पर विचार कीजिए, जहाँ $x,y,z$ वास्तविक हैं तथा $\\overrightarrow{r}\\cdot\\left(\\hat{i}+\\hat{j}+\\hat{k}\\right)=7$ है। इन सदिशों में से माना $\\overrightarrow{r_0}$ वह सदिश है जिसके लिए $x^2+\\dfrac{y^2}{4}+\\dfrac{z^2}{9}$ अपना न्यूनतम मान प्राप्त करता है, तथा $\\theta$ सदिशों $\\overrightarrow{r_0}$ और $\\hat{i}+\\hat{j}+\\hat{k}$ के बीच का कोण है। तब $\\tan^2\\theta$ बराबर है",
+  "",
+  "(A) $\\dfrac12$",
+  "(B) $2$",
+  "(C) $\\dfrac13$",
+  "(D) $\\dfrac32$"
+ ],
+ "solution": [
+  "Take $\\overrightarrow{u}=x\\hat i+\\dfrac y2\\hat j+\\dfrac z3\\hat k$, $\\overrightarrow{v}=\\hat i+2\\hat j+3\\hat k$: $\\overrightarrow u\\cdot\\overrightarrow v=x+y+z=7$",
+  "Cauchy-Schwarz: $49=(\\overrightarrow u\\cdot\\overrightarrow v)^2\\le|\\overrightarrow u|^2|\\overrightarrow v|^2=14\\left(x^2+\\dfrac{y^2}{4}+\\dfrac{z^2}{9}\\right)$, minimum $\\dfrac72$",
+  "Equality iff $\\overrightarrow u=\\lambda\\overrightarrow v$: $x=\\lambda,\\ y=4\\lambda,\\ z=9\\lambda$; $14\\lambda=7\\Rightarrow\\lambda=\\dfrac12$, so $\\overrightarrow{r_0}=\\dfrac12\\hat i+2\\hat j+\\dfrac92\\hat k$",
+  "$|\\overrightarrow{r_0}|^2=\\dfrac14+4+\\dfrac{81}{4}=\\dfrac{49}{2}$; $\\cos\\theta=\\dfrac{7}{\\frac{7}{\\sqrt2}\\cdot\\sqrt3}=\\sqrt{\\dfrac23}\\Rightarrow\\tan^2\\theta=\\dfrac{1}{\\cos^2\\theta}-1=\\dfrac12$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Write the constraint as a dot product with weights that match the objective: let $\\overrightarrow{u}=x\\hat i+\\dfrac y2\\hat j+\\dfrac z3\\hat k$ and $\\overrightarrow{v}=\\hat i+2\\hat j+3\\hat k$. Then $\\overrightarrow u\\cdot\\overrightarrow v=x+y+z=\\overrightarrow r\\cdot(\\hat i+\\hat j+\\hat k)=7$ and $|\\overrightarrow u|^2=x^2+\\dfrac{y^2}{4}+\\dfrac{z^2}{9}$.",
+  "By the Cauchy-Schwarz inequality, $(\\overrightarrow u\\cdot\\overrightarrow v)^2\\le|\\overrightarrow u|^2|\\overrightarrow v|^2$, so $49\\le14\\left(x^2+\\dfrac{y^2}{4}+\\dfrac{z^2}{9}\\right)$, that is, the expression is at least $\\dfrac72$.",
+  "Equality holds exactly when $\\overrightarrow u$ is parallel to $\\overrightarrow v$: $x=\\lambda$, $\\dfrac y2=2\\lambda$, $\\dfrac z3=3\\lambda$, so $(x,y,z)=(\\lambda,4\\lambda,9\\lambda)$.",
+  "The constraint gives $\\lambda+4\\lambda+9\\lambda=7$, so $\\lambda=\\dfrac12$ and $\\overrightarrow{r_0}=\\dfrac12\\hat i+2\\hat j+\\dfrac92\\hat k$ is the unique minimiser.",
+  "$|\\overrightarrow{r_0}|^2=\\dfrac14+4+\\dfrac{81}{4}=\\dfrac{49}{2}$, so $|\\overrightarrow{r_0}|=\\dfrac{7}{\\sqrt2}$, and $|\\hat i+\\hat j+\\hat k|=\\sqrt3$.",
+  "$\\cos\\theta=\\dfrac{\\overrightarrow{r_0}\\cdot(\\hat i+\\hat j+\\hat k)}{|\\overrightarrow{r_0}|\\sqrt3}=\\dfrac{7}{\\frac{7}{\\sqrt2}\\sqrt3}=\\sqrt{\\dfrac23}$.",
+  "$\\tan^2\\theta=\\sec^2\\theta-1=\\dfrac32-1=\\dfrac12$. (The values $2$ and $\\dfrac32$ are $\\cot^2\\theta$ and $\\sec^2\\theta$.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the weighted Cauchy-Schwarz equality case produces a specific vector r_0 = (1/2, 2, 9/2), and the question asks for the angle between this extremal vector and the constraint normal (way 5: Cauchy-Schwarz equality vector linked with the dot-product angle). Closest known: 'minimise x^2 + y^2 + z^2 subject to a linear condition' (foot of perpendicular). Different because: the objective is weighted, so the minimiser is not along the normal and the angle is non-zero.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Cauchy-Schwarz Inequality: Application in algebraic extrema.",
+  "Application of dot product"
+ ],
+ "concept_use": {
+  "Cauchy-Schwarz Inequality: Application in algebraic extrema.": "The weighted Cauchy-Schwarz inequality with u = (x, y/2, z/3), v = (1, 2, 3) gives the minimum 7/2 and its equality case u = lambda v.",
+  "Application of dot product": "The dot product gives the constraint as u.v = 7 and gives cos(theta) = r_0.(i+j+k)/(|r_0| sqrt 3)."
+ },
+ "stem_review": "Read as a student: every symbol and progression is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions or brute force), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Choosing u = (x, y/2, z/3) and v = (1, 2, 3) so that Cauchy-Schwarz fits the weighted objective, then using its equality case.",
+ "justification": "A weighted Cauchy-Schwarz (less practised than the plain form) linked with a vector-angle computation; two ideas, options available. Level 3 like 2023-P1-Q5 (L3) in vector demand.",
+ "nearest_anchor": "2023-P1-Q5 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

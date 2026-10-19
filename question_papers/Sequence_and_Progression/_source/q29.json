@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $u_1,u_2,u_3,\\dots$ be the sequence defined by $u_1=2$, $u_2=5$ and $u_{n+2}-2u_{n+1}+u_n=2+2^n$ for all $n\\ge1$. Then the value of $u_1+u_2+\\cdots+u_8$ is ______."
+ ],
+ "hindi": [
+  "माना $u_1,u_2,u_3,\\dots$, $u_1=2$, $u_2=5$ तथा सभी $n\\ge1$ के लिए $u_{n+2}-2u_{n+1}+u_n=2+2^n$ द्वारा परिभाषित अनुक्रम है। तब $u_1+u_2+\\cdots+u_8$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $v_n=u_{n+1}-u_n$; then $v_1=3$ and $v_{n+1}-v_n=2+2^n$",
+  "$v_n=3+\\displaystyle\\sum_{k=1}^{n-1}(2+2^k)=2^n+(2n-1)$: the differences are an AP part plus a GP part",
+  "$u_n=2+\\displaystyle\\sum_{k=1}^{n-1}\\left(2^k+2k-1\\right)=2+(2^n-2)+(n-1)^2=2^n+(n-1)^2$ (check: $2,5,12,25,48$)",
+  "$\\displaystyle\\sum_{n=1}^{8}u_n=(2^9-2)+(0^2+1^2+\\cdots+7^2)=510+140=650$",
+  "",
+  "Final Answer: 650"
+ ],
+ "solution_full": [
+  "Let $v_n=u_{n+1}-u_n$. The given relation says $v_{n+1}-v_n=2+2^n$, and $v_1=u_2-u_1=3$.",
+  "Adding: $v_n=v_1+\\displaystyle\\sum_{k=1}^{n-1}(2+2^k)=3+2(n-1)+(2^n-2)=2^n+(2n-1)$.",
+  "So the differences of consecutive terms split into $2n-1$ (an arithmetic progression) and $2^n$ (a geometric progression).",
+  "Then $u_n=u_1+\\displaystyle\\sum_{k=1}^{n-1}v_k=2+\\sum_{k=1}^{n-1}2^k+\\sum_{k=1}^{n-1}(2k-1)=2+(2^n-2)+(n-1)^2=2^n+(n-1)^2$.",
+  "Check: $u_1=2$, $u_2=5$, $u_3=12$, $u_4=25$, $u_5=48$, and $u_3-2u_2+u_1=4=2+2^1$.",
+  "$\\displaystyle\\sum_{n=1}^{8}u_n=\\sum_{n=1}^{8}2^n+\\sum_{j=0}^{7}j^2=(2^9-2)+\\frac{7\\cdot8\\cdot15}{6}=510+140=650$.",
+  "",
+  "Final Answer: 650"
+ ],
+ "originality_note": "New: a second-order difference condition whose forcing term is 2 + 2^n, so the first differences are an AP part plus a GP part and both summation methods are needed in one sequence (way 5: differences in AP and in GP combined). Closest known: 'sum of 3 + 7 + 13 + 21 + ...' (differences in AP) and '1 + 3 + 7 + 15 + ...' (differences in GP) separately. Different because: the sequence is given by a recurrence on second differences, not by listed terms, and both kinds of differences are mixed.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Sum of a sequence for which difference of consecutive terms form an AP",
+  "Sum of a sequence for which difference of consecutive terms form a GP"
+ ],
+ "concept_use": {
+  "Sum of a sequence for which difference of consecutive terms form an AP": "The (2n - 1) part of the first differences is an AP whose partial sums give (n - 1)^2.",
+  "Sum of a sequence for which difference of consecutive terms form a GP": "The 2^n part of the first differences is a GP whose partial sums give 2^n - 2, and the sum of the 2^n part over n = 1..8 is 510."
+ },
+ "stem_review": "Read as a student: every symbol, point and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, numerical scan or brute force), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Passing to first differences v_n = 2^n + 2n - 1 and summing the AP and GP parts separately, twice.",
+ "justification": "Several stages (differences, closed form of v_n, closed form of u_n, final sum) with exact arithmetic and no options; numerical. Level 3 like 2026-P1-Q11 (L3).",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

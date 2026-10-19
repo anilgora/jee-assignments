@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $\\alpha$ and $\\beta$ be real numbers in $\\left(0,\\dfrac{\\pi}{2}\\right)$ such that $\\alpha+\\beta=\\dfrac{\\pi}{2}$. Then the minimum value of $\\left(1+24\\,\\mathrm{cosec}^2\\alpha\\right)\\left(1+2\\,\\mathrm{cosec}^2\\beta\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना $\\alpha$ तथा $\\beta$, $\\left(0,\\dfrac{\\pi}{2}\\right)$ में ऐसी वास्तविक संख्याएँ हैं कि $\\alpha+\\beta=\\dfrac{\\pi}{2}$ है। तब $\\left(1+24\\,\\mathrm{cosec}^2\\alpha\\right)\\left(1+2\\,\\mathrm{cosec}^2\\beta\\right)$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$\\beta=\\dfrac\\pi2-\\alpha\\Rightarrow\\mathrm{cosec}\\,\\beta=\\sec\\alpha$. Put $t=\\tan^2\\alpha>0$: $\\mathrm{cosec}^2\\alpha=1+\\dfrac1t,\\ \\sec^2\\alpha=1+t$",
+  "Product $=\\left(25+\\dfrac{24}{t}\\right)(3+2t)=123+50t+\\dfrac{72}{t}$",
+  "AM-GM: $50t+\\dfrac{72}{t}\\ge2\\sqrt{3600}=120$, equality at $t=\\dfrac65$ (attainable)",
+  "Minimum $=123+120=243$",
+  "",
+  "Final Answer: 243"
+ ],
+ "solution_full": [
+  "From $\\alpha+\\beta=\\dfrac\\pi2$: $\\mathrm{cosec}\\,\\beta=\\dfrac{1}{\\sin\\left(\\frac\\pi2-\\alpha\\right)}=\\sec\\alpha$, so the expression is $\\left(1+24\\,\\mathrm{cosec}^2\\alpha\\right)\\left(1+2\\sec^2\\alpha\\right)$ with $\\alpha\\in\\left(0,\\dfrac\\pi2\\right)$.",
+  "Let $t=\\tan^2\\alpha$, which takes every value in $(0,\\infty)$. Then $\\mathrm{cosec}^2\\alpha=1+\\cot^2\\alpha=1+\\dfrac1t$ and $\\sec^2\\alpha=1+t$.",
+  "The expression becomes $\\left(1+24+\\dfrac{24}{t}\\right)\\left(1+2+2t\\right)=\\left(25+\\dfrac{24}{t}\\right)(3+2t)=75+50t+\\dfrac{72}{t}+48=123+50t+\\dfrac{72}{t}$.",
+  "$50t$ and $\\dfrac{72}{t}$ are positive with constant product $3600$, so by AM-GM $50t+\\dfrac{72}{t}\\ge2\\sqrt{3600}=120$.",
+  "Equality holds iff $50t=\\dfrac{72}{t}$, i.e. $t^2=\\dfrac{36}{25}$, $t=\\dfrac65$; this corresponds to $\\tan\\alpha=\\sqrt{\\dfrac65}$, a valid $\\alpha$, with $\\beta=\\dfrac\\pi2-\\alpha$.",
+  "The minimum value is $123+120=243$. (Guessing the symmetric point $\\alpha=\\beta=\\dfrac\\pi4$ gives $49\\cdot5=245$, which is not the minimum.)",
+  "",
+  "Final Answer: 243"
+ ],
+ "originality_note": "New: a product of two trigonometric factors with unequal weights under the constraint alpha + beta = pi/2 collapses, after t = tan^2 alpha, to 123 + 50t + 72/t; the unequal weights move the optimum away from pi/4 (way 5: complementary-angle constraint linked with AM-GM). Closest known: '(1 + 1/sin^n a)(1 + 1/cos^n a) is least at pi/4'. Different because: the coefficients 24 and 2 break the symmetry, so the symmetric guess gives 245, not the minimum 243.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint",
+  "Maximum and minimum of general trigonometric expressions under constraints"
+ ],
+ "concept_use": {
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "AM-GM on 50t + 72/t >= 120 with equality at t = 6/5 gives the minimum.",
+  "Maximum and minimum of general trigonometric expressions under constraints": "The constraint alpha + beta = pi/2 turns cosec beta into sec alpha, and t = tan^2 alpha turns the trigonometric product into a rational function of t."
+ },
+ "stem_review": "Read as a student: every symbol, progression and function is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, brute force or simulation), is unique and equals the Answer Plan. Checked that the symmetric guess alpha = beta = pi/4 gives 245, so the planned answer 243 is not reachable by guessing. Changed: No change.",
+ "level": 3,
+ "key_step": "Reducing to 123 + 50t + 72/t with t = tan^2 alpha and applying AM-GM away from the symmetric point.",
+ "justification": "Two linked steps (constraint and identities to a rational function, then AM-GM with unequal weights) and a symmetric-guess trap; numerical. Level 3 like 2026-P1-Q1 (L3).",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

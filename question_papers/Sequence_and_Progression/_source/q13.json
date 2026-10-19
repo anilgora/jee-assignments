@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Let $a$ be a real number with $|a|<2$ such that $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{1+a+a^2+\\cdots+a^n}{2^n}=\\frac85$. Then the value of $a$ is ______."
+ ],
+ "hindi": [
+  "माना $a$ एक वास्तविक संख्या है, जहाँ $|a|<2$ है, तथा $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{1+a+a^2+\\cdots+a^n}{2^n}=\\frac85$ है। तब $a$ का मान ______ है।"
+ ],
+ "solution": [
+  "For $a\\neq1$: $1+a+\\cdots+a^n=\\dfrac{1-a^{n+1}}{1-a}$, so the series splits into two GPs (ratios $\\frac12$ and $\\frac a2$, both less than $1$ in modulus)",
+  "$\\displaystyle\\sum=\\frac1{1-a}\\left[\\sum\\frac1{2^n}-a\\sum\\left(\\frac a2\\right)^n\\right]=\\frac1{1-a}\\left[2-\\frac{2a}{2-a}\\right]=\\frac{4}{2-a}$ (also true for $a=1$: $\\sum\\frac{n+1}{2^n}=4$)",
+  "$\\dfrac4{2-a}=\\dfrac85\\Rightarrow2-a=\\dfrac52\\Rightarrow a=-0.5$",
+  "",
+  "Final Answer: -0.5"
+ ],
+ "solution_full": [
+  "If $a=1$, the $n$-th numerator is $n+1$ and the sum is $\\displaystyle\\sum_{n\\ge0}\\frac{n+1}{2^n}=4\\neq\\frac85$, so $a\\neq1$.",
+  "For $a\\neq1$ the numerator is a finite GP: $1+a+\\cdots+a^n=\\dfrac{1-a^{n+1}}{1-a}$.",
+  "So the given series is $\\dfrac{1}{1-a}\\left[\\displaystyle\\sum_{n\\ge0}\\frac{1}{2^n}-a\\sum_{n\\ge0}\\left(\\frac a2\\right)^n\\right]$; both are convergent GPs because $\\left|\\dfrac a2\\right|<1$.",
+  "$\\displaystyle\\sum_{n\\ge0}\\frac1{2^n}=2$ and $\\displaystyle\\sum_{n\\ge0}\\left(\\frac a2\\right)^n=\\frac{2}{2-a}$.",
+  "Hence the sum is $\\dfrac1{1-a}\\left[2-\\dfrac{2a}{2-a}\\right]=\\dfrac{1}{1-a}\\cdot\\dfrac{4-4a}{2-a}=\\dfrac{4}{2-a}$.",
+  "$\\dfrac{4}{2-a}=\\dfrac85$ gives $2-a=\\dfrac52$, so $a=-\\dfrac12$, which satisfies $|a|<2$.",
+  "",
+  "Final Answer: -0.5"
+ ],
+ "originality_note": "New: a series whose terms are partial sums of a GP with an unknown ratio, inverted to find the ratio (way 5: sequence convertible to GP linked with an equation for the ratio). Closest known: 'sum of 1 + (1 + x) + (1 + x + x^2) + ...' (sums of partial sums of a GP). Different because: the inner ratio is the unknown, the outer weights 1/2^n fix it through the closed form 4/(2 - a), and the case a = 1 must be excluded.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Geometric Progression (GP) & Sum of GP",
+  "Sequences convertible to GP"
+ ],
+ "concept_use": {
+  "Geometric Progression (GP) & Sum of GP": "The outer sums of 1/2^n and (a/2)^n are infinite GP sums.",
+  "Sequences convertible to GP": "Each term (1 - a^{n+1})/(1 - a) is converted into a difference of two GP terms, splitting the series into two GPs."
+ },
+ "stem_review": "Read as a student: every symbol, progression and function is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, brute force or simulation), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the numerator as (1 - a^{n+1})/(1 - a) to split into two geometric series.",
+ "justification": "Routine conversion to two GPs and one linear equation; no insight beyond the standard split. Level 2 like 2023-P2-Q1 (L2).",
+ "nearest_anchor": "2023-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

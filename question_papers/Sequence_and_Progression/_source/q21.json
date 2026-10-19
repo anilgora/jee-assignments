@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $A$ be a point on the positive $x$-axis and $B$ a point on the positive $y$-axis such that the line segment $AB$ touches the circle $x^2+y^2=1$. Let $O$ be the origin and let $r$ be the radius of the circle inscribed in the triangle $OAB$. Then the minimum value of $r$, taken over all such positions of $A$ and $B$, is ______."
+ ],
+ "hindi": [
+  "माना $A$ धनात्मक $x$-अक्ष पर तथा $B$ धनात्मक $y$-अक्ष पर ऐसे बिन्दु हैं कि रेखाखण्ड $AB$ वृत्त $x^2+y^2=1$ को स्पर्श करता है। माना $O$ मूलबिन्दु है तथा $r$ त्रिभुज $OAB$ के अन्तर्वृत्त की त्रिज्या है। तब $A$ और $B$ की ऐसी सभी स्थितियों पर $r$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "Let $OA=a,\\ OB=b,\\ AB=c$. Distance of $O$ from $AB$ $=\\dfrac{ab}{c}=1\\Rightarrow c=ab$",
+  "AM-GM: $c^2=a^2+b^2\\ge2ab=2c\\Rightarrow c\\ge2$, equality iff $a=b=\\sqrt2$",
+  "Right angle at $O$: $r=\\dfrac{a+b-c}{2}$ and $(a+b)^2=c^2+2ab=c^2+2c$, so $r=\\dfrac{\\sqrt{c^2+2c}-c}{2}=\\dfrac{1}{1+\\sqrt{1+\\frac2c}}$, increasing in $c$",
+  "Minimum at $c=2$: $r=\\dfrac{1}{1+\\sqrt2}=\\sqrt2-1\\approx0.414$",
+  "",
+  "Final Answer: 0.41"
+ ],
+ "solution_full": [
+  "Let $OA=a$, $OB=b$ and $AB=c$; the triangle $OAB$ is right-angled at $O$, so $c^2=a^2+b^2$.",
+  "$AB$ touches the unit circle centred at $O$, so the perpendicular distance from $O$ to $AB$ is $1$. Twice the area of the triangle is $ab=c\\cdot1$, hence $c=ab$.",
+  "By AM-GM, $c^2=a^2+b^2\\ge2ab=2c$, so $c\\ge2$, with equality iff $a=b$, i.e. $a=b=\\sqrt2$.",
+  "For a right triangle the inradius is $r=\\dfrac{a+b-c}{2}$. Since $(a+b)^2=a^2+b^2+2ab=c^2+2c$, $r=\\dfrac{\\sqrt{c^2+2c}-c}{2}$.",
+  "Rationalising: $r=\\dfrac{2c}{2\\left(\\sqrt{c^2+2c}+c\\right)}=\\dfrac{1}{1+\\sqrt{1+\\frac2c}}$, which increases as $c$ increases (and tends to $\\dfrac12$ as $c\\to\\infty$).",
+  "So the least value of $r$ occurs at the least $c$, namely $c=2$: $r=\\dfrac{1}{1+\\sqrt2}=\\sqrt2-1=0.4142\\ldots$",
+  "Correct to two decimal places, the minimum value of $r$ is $0.41$.",
+  "",
+  "Final Answer: 0.41"
+ ],
+ "originality_note": "New: the inradius of the right triangle cut off by a tangent to the unit circle is expressed through the hypotenuse alone (c = ab from the tangency), and AM-GM bounds the hypotenuse; the extremum of r comes from monotonicity in c (way 5: AM-GM constraint linked with a geometric extremum). Closest known: 'least area of the triangle formed by a tangent to x^2 + y^2 = 1 and the axes' (answer 1). Different because: the quantity is the inradius, which is not a monotone function of a and b directly, and r has no maximum (only the supremum 1/2), so the minimum must be argued.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint",
+  "Geometrical problems based on optimization(maxima and minima)"
+ ],
+ "concept_use": {
+  "Arithmetic Mean (AM), Geometric Mean (GM) & AM-GM Inequality: maximising / minimising expressions under a constraint": "AM-GM on a^2 + b^2 >= 2ab with c = ab gives the bound c >= 2 and the extremal triangle a = b = sqrt 2.",
+  "Geometrical problems based on optimization(maxima and minima)": "The geometric optimisation: the inradius r = 1/(1 + sqrt(1 + 2/c)) is increasing in c, so the least r is at the least c."
+ },
+ "stem_review": "Read as a student: every symbol, point and sequence is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, numerical scan or brute force), is unique and equals the Answer Plan. The exact minimum is sqrt2 - 1 = 0.4142..., so the two-decimal answer 0.41 is unambiguous. Changed: No change.",
+ "level": 3,
+ "key_step": "Getting c = ab from the tangency, writing r in terms of c only, and bounding c by AM-GM.",
+ "justification": "Two ideas linked (tangency gives c = ab; AM-GM bound plus monotonicity of r) with care over min versus sup; numerical. Level 3 like 2021-P1-Q1 (L3) coordinate-geometry demand.",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

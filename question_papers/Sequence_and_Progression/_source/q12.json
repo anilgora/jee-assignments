@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Sequence and Progression",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "For positive integers $p$ and $q$, consider the arithmetic progressions $7,\\ 7+p,\\ 7+2p,\\ \\dots$ and $7,\\ 7+q,\\ 7+2q,\\ \\dots$. Let $S$ be the set of all ordered pairs $(p,q)$ for which the numbers common to the two progressions form an arithmetic progression with common difference $36$. Then the arithmetic mean of the numbers $p+q$, taken over all pairs $(p,q)\\in S$, is ______."
+ ],
+ "hindi": [
+  "धनात्मक पूर्णांकों $p$ तथा $q$ के लिए समान्तर श्रेढ़ियों $7,\\ 7+p,\\ 7+2p,\\ \\dots$ तथा $7,\\ 7+q,\\ 7+2q,\\ \\dots$ पर विचार कीजिए। माना $S$ उन सभी क्रमित युग्मों $(p,q)$ का समुच्चय है जिनके लिए दोनों श्रेढ़ियों में उभयनिष्ठ संख्याएँ $36$ सार्व अन्तर वाली एक समान्तर श्रेढ़ी बनाती हैं। तब सभी युग्मों $(p,q)\\in S$ पर ली गई संख्याओं $p+q$ का समान्तर माध्य ______ है।"
+ ],
+ "solution": [
+  "$7+N$ is common iff $p\\mid N$ and $q\\mid N$, i.e. $\\mathrm{lcm}(p,q)\\mid N$: common terms form an AP with difference $\\mathrm{lcm}(p,q)$",
+  "So $S=\\{(p,q):\\mathrm{lcm}(p,q)=36=2^2\\cdot3^2\\}$; for each prime the exponent pair has maximum $2$: $5$ choices, $|S|=25$",
+  "For $p=2^i3^j$ the number of partners $q$ is $c_ic_j$ with $c_0=c_1=1,\\ c_2=3$",
+  "$\\displaystyle\\sum_{S}p=(1+2+3\\cdot4)(1+3+3\\cdot9)=15\\cdot31=465$; by symmetry $\\displaystyle\\sum_S q=465$",
+  "Mean of $p+q=\\dfrac{930}{25}=37.2$",
+  "",
+  "Final Answer: 37.2"
+ ],
+ "solution_full": [
+  "A number $7+N$ ($N\\ge0$) is a term of the first progression iff $p\\mid N$, and of the second iff $q\\mid N$. So it is common iff $\\mathrm{lcm}(p,q)\\mid N$, and the common terms are $7,\\ 7+L,\\ 7+2L,\\dots$ with $L=\\mathrm{lcm}(p,q)$.",
+  "Hence $(p,q)\\in S$ exactly when $\\mathrm{lcm}(p,q)=36=2^2\\cdot3^2$; in particular $p\\mid36$ and $q\\mid36$.",
+  "Write $p=2^{i}3^{j}$ and $q=2^{k}3^{l}$ with exponents in $\\{0,1,2\\}$. The condition is $\\max(i,k)=2$ and $\\max(j,l)=2$.",
+  "For the prime $2$ the pairs $(i,k)$ with maximum $2$ are $(2,0),(2,1),(2,2),(0,2),(1,2)$: five; the same for the prime $3$. So $|S|=25$.",
+  "Fix $p=2^i3^j$. If $i=2$, $k$ can be $0,1,2$ (3 choices); if $i<2$, $k=2$ (1 choice). So the number of $q$ is $c_ic_j$ with $c_0=c_1=1$, $c_2=3$.",
+  "$\\displaystyle\\sum_{(p,q)\\in S}p=\\sum_{i,j}2^i3^jc_ic_j=\\left(1+2+3\\cdot4\\right)\\left(1+3+3\\cdot9\\right)=15\\cdot31=465$.",
+  "The set $S$ is symmetric in $p$ and $q$, so $\\displaystyle\\sum_S q=465$ too, and the mean of $p+q$ is $\\dfrac{465+465}{25}=37.2$.",
+  "",
+  "Final Answer: 37.2"
+ ],
+ "originality_note": "New: the common difference of the common-term AP is prescribed, which turns into lcm(p, q) = 36, and the asked quantity is an average over all such pairs computed by a multiplicative weighting (way 5: common terms of APs linked with LCM counting). Closest known: 'number of ordered pairs with lcm(p, q) = n' and 'common terms of two APs' exercises. Different because: the LCM condition is hidden in the AP statement, and the answer needs a weighted sum over pairs rather than a count.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Common terms of 2 or more Aps",
+  "Counting ordered pairs with a given GCD or LCM"
+ ],
+ "concept_use": {
+  "Common terms of 2 or more Aps": "The common terms of the two progressions form an AP with common difference lcm(p, q), which turns the condition into lcm(p, q) = 36.",
+  "Counting ordered pairs with a given GCD or LCM": "Counting ordered pairs with lcm 36 by prime exponents (5 x 5 = 25) and weighting each p by its number of partners gives the sum 465."
+ },
+ "stem_review": "Read as a student: every symbol, progression and function is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy/fractions, brute force or simulation), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Turning 'common terms have difference 36' into lcm(p, q) = 36, then a weighted sum over exponent pairs.",
+ "justification": "Two ideas linked (common-term AP difference = lcm, then exponent-pair counting with weights) and a precision risk in the weighted sum; numerical. Level 3 like 2026-P1-Q11 (L3).",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
