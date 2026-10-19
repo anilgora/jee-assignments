@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|": "PA + PB is minimised on each line by reflecting one of the points (images (6,-2) and (-3,-3)) and comparing the minima sqrt 50 and sqrt 58.",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs": "The graph of y = |x - 2| is split into the two rays y = x - 2 (x >= 2) and y = 2 - x (x <= 2), and the minimiser must lie on its ray."
+ },
+ "english": [
+  "Let $A(0,4)$ and $B(5,5)$, and let $\\Gamma$ be the graph of $y=|x-2|$, $x\\in\\mathbb{R}$. The point $P$ of $\\Gamma$ at which $PA+PB$ is minimum has abscissa $\\gamma$. Then the value of $\\gamma$ is ______."
+ ],
+ "hindi": [
+  "माना $A(0,4)$ तथा $B(5,5)$ है, तथा $\\Gamma$, $y=|x-2|$, $x\\in\\mathbb{R}$ का आलेख है। $\\Gamma$ का वह बिन्दु $P$ जिस पर $PA+PB$ न्यूनतम है, उसका भुज $\\gamma$ है। तब $\\gamma$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\Gamma$ is two rays from $(2,0)$: $y=x-2$ ($x\\ge2$) and $y=2-x$ ($x\\le2$); $A$ and $B$ lie above both (on the same side of each line)",
+  "Right ray: image of $A$ in $x-y-2=0$ is $A'=(6,-2)$; $A'B=\\sqrt{1+49}=\\sqrt{50}$; $A'B$ meets $y=x-2$ at $\\left(\\frac{21}4,\\frac{13}4\\right)$, with $x\\ge2$, so it is on the ray",
+  "Left ray: image of $B$ in $x+y-2=0$ is $B'=(-3,-3)$; $AB'=\\sqrt{9+49}=\\sqrt{58}$ (attained at $(-0.6,2.6)$)",
+  "Corner $(2,0)$: $\\sqrt{20}+\\sqrt{34}>\\sqrt{58}$",
+  "Minimum $\\sqrt{50}$ at $P=\\left(\\frac{21}{4},\\frac{13}{4}\\right)$, so $\\gamma=5.25$",
+  "",
+  "Final Answer: 5.25"
+ ],
+ "solution_full": [
+  "$\\Gamma$ consists of the ray $y=x-2$, $x\\ge2$, and the ray $y=2-x$, $x\\le2$, meeting at $V(2,0)$. $A$ and $B$ satisfy $y>|x-2|$, so they lie above $\\Gamma$ and on the same side of each of the two full lines.",
+  "On each ray minimise separately by reflection, then compare.",
+  "Right ray, line $x-y-2=0$: the image of $(a,b)$ is $(b+2,a-2)$, so $A'=(6,-2)$. $PA+PB=PA'+PB\\ge A'B=\\sqrt{1^2+7^2}=\\sqrt{50}$. Segment $A'B$: $(6-t,-2+7t)$ meets $x-y=2$ when $8-8t=2$, $t=\\frac34$, at $\\left(\\frac{21}{4},\\frac{13}{4}\\right)$, which has $x\\ge2$, so the bound is attained on the ray.",
+  "Left ray, line $x+y-2=0$: the image of $(a,b)$ is $(2-b,2-a)$, so $B'=(-3,-3)$ and the bound is $AB'=\\sqrt{9+49}=\\sqrt{58}$, attained at $(-0.6,2.6)$ on the ray.",
+  "At the corner $V$: $VA+VB=\\sqrt{20}+\\sqrt{34}\\approx10.3$.",
+  "The least value is $\\sqrt{50}$, attained only at $P=\\left(\\frac{21}{4},\\frac{13}{4}\\right)$. Hence $\\gamma=\\frac{21}{4}=5.25$.",
+  "",
+  "Final Answer: 5.25"
+ ],
+ "originality_note": "New: the reflection minimisation is done on the V-shaped graph y = |x-2|, so it must be done on each ray (with a different point reflected), the feasibility of each minimiser checked and the results compared (way 5: optimisation on a line + graph of |f(x)|). Closest known: 'reflect a point to minimise PA + PB across one line' (known skeleton, used here as a step). Different because: the constraint set is a broken line from a modulus graph, which creates the comparison.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that A and B are above the graph and that the minimiser on each ray lies on that ray. Changed: No change.",
+ "level": 2,
+ "key_step": "Splitting the graph of |x-2| into two rays and comparing the two reflection minima.",
+ "justification": "A standard reflection minimisation applied twice with a comparison; routine multi-step. L2 like 2021-P1-Q2-type routine chains.",
+ "nearest_anchor": "2021-P1-Q2 (L2)",
+ "confidence": "Medium"
+}

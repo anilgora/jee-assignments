@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|",
+  "Reflection property of Ellipse"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|": "The minimum of PA + PB on the line is found by reflecting A in the line: minimum sqrt 58 at P0 = (2.9, 2.1).",
+  "Reflection property of Ellipse": "The reflection property of the ellipse shows E touches the line at P0, so 2a equals the minimum (and b^2 = d_A d_B as a check)."
+ },
+ "english": [
+  "Let $A(-2,0)$ and $B(2,0)$, and let $P_0$ be the point of the line $x+y=5$ at which $PA+PB$, for $P$ on this line, is minimum. Let $E$ be the ellipse with foci $A$ and $B$ that passes through $P_0$. Then the square of the length of the minor axis of $E$ is ______."
+ ],
+ "hindi": [
+  "माना $A(-2,0)$ तथा $B(2,0)$ है, तथा $P_0$ रेखा $x+y=5$ का वह बिन्दु है जिस पर, इस रेखा पर स्थित $P$ के लिए, $PA+PB$ न्यूनतम है। माना $E$ वह दीर्घवृत्त है जिसकी नाभियाँ $A$ तथा $B$ हैं और जो $P_0$ से होकर जाता है। तब $E$ के लघु अक्ष की लम्बाई का वर्ग ______ है।"
+ ],
+ "solution": [
+  "$A,B$ are on the same side of $x+y=5$. Image of $A$: $A'=(5-0,5+2)=(5,7)$; $PA+PB=PA'+PB\\ge A'B=\\sqrt{9+49}=\\sqrt{58}$",
+  "Line $A'B$ meets $x+y=5$ at $P_0=(2.9,2.1)$, and $E$ has $2a=P_0A+P_0B=\\sqrt{58}$, $c=2$",
+  "(Reflection property: $P_0A$ and $P_0B$ make equal angles with the line, so the line is the tangent to $E$ at $P_0$; then $b^2=d_Ad_B=\\frac7{\\sqrt2}\\cdot\\frac3{\\sqrt2}=\\frac{21}2$)",
+  "$b^2=a^2-c^2=\\frac{58}4-4=\\frac{21}2$, so $(2b)^2=4b^2=42$",
+  "",
+  "Final Answer: 42"
+ ],
+ "solution_full": [
+  "$x+y-5$ is $-7$ at $A$ and $-3$ at $B$, so both points are on the same side of the line.",
+  "The image of $A$ in $x+y=5$ is $A'=(5-0,\\,5-(-2))=(5,7)$. For $P$ on the line $PA=PA'$, so $PA+PB=PA'+PB\\ge A'B=\\sqrt{3^2+7^2}=\\sqrt{58}$, with equality when $P$ lies on segment $A'B$.",
+  "Line $A'B$: $(2+3t,\\,7t)$; on $x+y=5$: $2+10t=5$, $t=0.3$, so $P_0=(2.9,\\,2.1)$ and the minimum is $\\sqrt{58}$.",
+  "At $P_0$ the segments $P_0A$ and $P_0B$ make equal angles with the line $x+y=5$. By the reflection property, the ellipse with foci $A,B$ through $P_0$ has this line as its tangent at $P_0$ (no point of the line lies inside $E$, since $PA+PB\\ge\\sqrt{58}$ on it).",
+  "$E$ has $2a=P_0A+P_0B=\\sqrt{58}$, so $a^2=\\frac{58}{4}=\\frac{29}{2}$, and $c=2$. Then $b^2=a^2-c^2=\\frac{29}{2}-4=\\frac{21}{2}$.",
+  "Check with the tangent property $b^2=d_Ad_B$ (product of the perpendiculars from the foci to a tangent): $\\frac{7}{\\sqrt2}\\cdot\\frac{3}{\\sqrt2}=\\frac{21}{2}$.",
+  "The minor axis is $2b$, and $(2b)^2=4b^2=42$.",
+  "",
+  "Final Answer: 42"
+ ],
+ "originality_note": "New: the minimiser of PA + PB on a line is identified, through the reflection property, as the point of contact of the confocal ellipse touching that line, which gives b^2 directly as the product of the focal perpendiculars (way 5: the optimisation and the reflection property are the same fact). Closest known: 'reflect a point to minimise PA + PB across one line' (known skeleton, used here only as one step). Different because: the asked quantity is a parameter of the ellipse through the minimiser.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that A and B are on the same side of the line (otherwise the minimum is on segment AB). Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising that the ellipse through the minimiser touches the line (reflection property), so 2a is the minimum value or b^2 = d_A d_B.",
+ "justification": "A standard reflection step linked to an ellipse property; numerical. Comparable to 2024-P1-Q4 (L2) plus the linking idea, so L3.",
+ "nearest_anchor": "2024-P1-Q4 (L2)",
+ "confidence": "Medium"
+}

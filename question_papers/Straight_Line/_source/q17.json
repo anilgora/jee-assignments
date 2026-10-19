@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Position of points wrt a line",
+  "Distance of a point from a line, distance between parallel lines"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Position of points wrt a line": "The side of the line not containing the origin is found from the sign of 3x + 4y - 12 at the origin.",
+  "Distance of a point from a line, distance between parallel lines": "The distance (3x + 4y - 12)/5 < 10 bounds the strip, giving 3x + 4y < 62."
+ },
+ "english": [
+  "Let $S$ be the set of all points $(x,y)$, where $x$ and $y$ are positive integers, that lie on the side of the line $3x+4y=12$ not containing the origin and whose distance from this line is less than $10$. Then the number of elements of $S$ is ______."
+ ],
+ "hindi": [
+  "माना $S$ उन सभी बिन्दुओं $(x,y)$ का समुच्चय है, जहाँ $x$ तथा $y$ धनात्मक पूर्णांक हैं, जो रेखा $3x+4y=12$ के उस ओर स्थित हैं जिस ओर मूल बिन्दु नहीं है, तथा जिनकी इस रेखा से दूरी $10$ से कम है। तब $S$ के अवयवों की संख्या ______ है।"
+ ],
+ "solution": [
+  "At the origin $3x+4y-12<0$, so the other side is $3x+4y>12$; distance $\\dfrac{3x+4y-12}{5}<10\\Rightarrow3x+4y<62$",
+  "Count $x,y\\ge1$ with $12<3x+4y<62$, i.e. $13\\le3x+4y\\le61$",
+  "For each $x$: $y$ from $\\max\\left(1,\\left\\lfloor\\frac{12-3x}{4}\\right\\rfloor+1\\right)$ to $\\left\\lfloor\\frac{61-3x}{4}\\right\\rfloor$",
+  "$x=1:12$ ($y=3..14$), $x=2:12$ ($2..13$), $x=3:13$ ($1..13$), then $x=4..19$: $12,11,10,10,9,8,7,7,6,5,4,4,3,2,1,1$",
+  "Total $=12+12+13+12+11+10+10+9+8+7+7+6+5+4+4+3+2+1+1=137$",
+  "",
+  "Final Answer: 137"
+ ],
+ "solution_full": [
+  "Let $f(x,y)=3x+4y-12$. At the origin $f=-12<0$, so the side not containing the origin is $f>0$, i.e. $3x+4y>12$.",
+  "For such a point the distance from the line is $\\dfrac{3x+4y-12}{5}$, and it is less than $10$ when $3x+4y<62$.",
+  "So we count positive integers $x,y$ with $13\\le3x+4y\\le61$.",
+  "Upper bound for $y$: $y\\le\\left\\lfloor\\dfrac{61-3x}{4}\\right\\rfloor$, and $x\\le19$ (since $y\\ge1$ needs $3x\\le57$).",
+  "Lower bound: $y\\ge1$, and also $4y\\ge13-3x$, which matters only for $x=1$ ($y\\ge3$) and $x=2$ ($y\\ge2$).",
+  "$x=1$: $3\\le y\\le14$, $12$ values. $x=2$: $2\\le y\\le13$, $12$. $x=3$: $1\\le y\\le13$, $13$. $x=4$: $y\\le12$, $12$. $x=5$: $11$. $x=6$: $10$. $x=7$: $10$. $x=8$: $9$. $x=9$: $8$. $x=10$: $7$. $x=11$: $7$. $x=12$: $6$. $x=13$: $5$. $x=14$: $4$. $x=15$: $4$. $x=16$: $3$. $x=17$: $2$. $x=18$: $1$. $x=19$: $1$.",
+  "Sum: $12+12+13+12+11+10+10+9+8+7+7+6+5+4+4+3+2+1+1=137$.",
+  "",
+  "Final Answer: 137"
+ ],
+ "originality_note": "New: a lattice-point count in a strip defined by a side condition and a distance bound from the same line (way 5: position of points + distance from a line). Closest known: 'number of integer points inside a triangle'. Different because: the region is a strip on the far side of the line cut by the quadrant, so the side test and the distance inequality must both be translated before counting.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. 'Positive integers' and 'less than 10' (strict) fix the count; checked by brute force (137). Changed: No change.",
+ "level": 2,
+ "key_step": "Translating 'side not containing the origin' and 'distance < 10' into 12 < 3x + 4y < 62, then counting row by row.",
+ "justification": "Two standard translations followed by a careful but routine count with no options; some precision risk. Placed at L2 with 2021-P2-Q17 (L1) as the nearest counting anchor plus the extra translation and length of the count.",
+ "nearest_anchor": "2021-P2-Q17 (L1)",
+ "confidence": "Medium"
+}

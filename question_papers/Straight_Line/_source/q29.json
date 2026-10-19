@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "General second-degree equation representing a pair of lines (abc + 2fgh - af^2 - bg^2 - ch^2 = 0)",
+  "Classification by eccentricity; degenerate conics"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "General second-degree equation representing a pair of lines (abc + 2fgh - af^2 - bg^2 - ch^2 = 0)": "Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = (k+7)(k-3)/4 shows that k = 3 and k = -7 give pairs of straight lines, which are excluded.",
+  "Classification by eccentricity; degenerate conics": "The classification by h^2 - ab (eccentricity > 1 for h^2 > ab) gives the hyperbola range |k| >= 3, and degenerate conics are separated out."
+ },
+ "english": [
+  "For an integer $k$, let $\\mathcal{C}_k$ denote the curve $x^2+kxy+y^2-4x-y-1=0$. Here a pair of straight lines is not regarded as a hyperbola. Then the number of integers $k$ with $|k|\\le10$ for which $\\mathcal{C}_k$ is a hyperbola is ______."
+ ],
+ "hindi": [
+  "एक पूर्णांक $k$ के लिए, माना $\\mathcal{C}_k$ वक्र $x^2+kxy+y^2-4x-y-1=0$ को दर्शाता है। यहाँ सरल रेखाओं के युग्म को अतिपरवलय नहीं माना गया है। तब उन पूर्णांकों $k$, $|k|\\le10$, की संख्या जिनके लिए $\\mathcal{C}_k$ एक अतिपरवलय है, ______ है।"
+ ],
+ "solution": [
+  "$a=b=1,\\ h=\\frac k2,\\ g=-2,\\ f=-\\frac12,\\ c=-1$",
+  "Type: $e>1$ (hyperbola or a pair of intersecting lines) needs $h^2>ab\\iff k^2>4\\iff|k|\\ge3$: $16$ integers with $|k|\\le10$",
+  "Degenerate when $\\Delta=abc+2fgh-af^2-bg^2-ch^2=-1+k-\\frac14-4+\\frac{k^2}4=\\dfrac{(k+7)(k-3)}{4}=0$",
+  "$k=3$ and $k=-7$ give pairs of lines (e.g. $k=3$: $x=\\frac{-(3y-4)\\pm\\sqrt5(y-2)}{2}$), so they are excluded",
+  "Number $=16-2=14$",
+  "",
+  "Final Answer: 14"
+ ],
+ "solution_full": [
+  "Compare with $ax^2+2hxy+by^2+2gx+2fy+c=0$: $a=b=1$, $h=\\frac k2$, $g=-2$, $f=-\\frac12$, $c=-1$.",
+  "Classification of a non-degenerate conic by $h^2-ab$: ellipse ($e<1$) if $h^2<ab$, parabola ($e=1$) if $h^2=ab$, hyperbola ($e>1$) if $h^2>ab$. Here $h^2>ab\\iff k^2>4\\iff|k|\\ge3$ for integers; with $|k|\\le10$ there are $8+8=16$ such integers.",
+  "The curve is degenerate (a pair of straight lines) when $\\Delta=abc+2fgh-af^2-bg^2-ch^2=0$:",
+  "$\\Delta=-1+2\\left(-\\frac12\\right)(-2)\\frac k2-\\frac14-4+\\frac{k^2}{4}=\\dfrac{k^2+4k-21}{4}=\\dfrac{(k+7)(k-3)}{4}$.",
+  "So $\\Delta=0$ exactly for $k=3$ and $k=-7$, both with $|k|\\ge3$. For $k=3$, as a quadratic in $x$: $x^2+(3y-4)x+(y^2-y-1)=0$ has discriminant $5(y-2)^2$, a perfect square, so the curve is two lines through $(-1,2)$; for $k=-7$ the discriminant is $5(3y+2)^2$. These two values are excluded.",
+  "For the other $14$ integers $\\Delta\\neq0$ and $h^2>ab$, so the curve is a hyperbola (a non-degenerate conic with $h^2>ab$ always has real points).",
+  "",
+  "Final Answer: 14"
+ ],
+ "originality_note": "New: a one-parameter family of conics is classified over a range of integers, where the trap is that the degenerate members (Delta = 0) fall inside the hyperbola range (way 2: a family defined by a construction, then analysed). Closest known: 'find lambda for which the equation represents a pair of lines'. Different because: the count needs both the eccentricity classification (h^2 - ab) and the removal of the degenerate members.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Stated explicitly that a pair of straight lines is not regarded as a hyperbola, so the count has one reading. Changed: added that sentence.",
+ "level": 3,
+ "key_step": "Counting |k| >= 3 from h^2 > ab and removing the two degenerate values k = 3, -7 found from Delta = 0.",
+ "justification": "Classification plus the degenerate-case trap with a count and no options; two linked checks. Comparable to 2026-P2-Q13 (L3) on conic identification, with the numerical count.",
+ "nearest_anchor": "2026-P2-Q13 (L3)",
+ "confidence": "Medium"
+}

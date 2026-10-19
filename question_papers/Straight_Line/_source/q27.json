@@ -1,0 +1,57 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Pair of straight lines: homogeneous second-degree equation and component slopes",
+  "General second-degree equation representing a pair of lines (abc + 2fgh - af^2 - bg^2 - ch^2 = 0)",
+  "Homogenisation: joint equation of lines from origin to a line-curve intersection"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Pair of straight lines: homogeneous second-degree equation and component slopes": "The homogeneous part (3x - y)(x + 2y) gives the component slopes 3 and -1/2 and the form of the two lines.",
+  "General second-degree equation representing a pair of lines (abc + 2fgh - af^2 - bg^2 - ch^2 = 0)": "The pair-of-lines condition (Delta = 0, equivalently the factorisation) gives the second equation linking lambda and mu.",
+  "Homogenisation: joint equation of lines from origin to a line-curve intersection": "Homogenising with x + y = 1 gives the joint equation of OA and OB; perpendicularity (sum of x^2 and y^2 coefficients zero) gives lambda + 2mu = -2."
+ },
+ "english": [
+  "Let $\\lambda$ and $\\mu$ be real numbers such that the equation $3x^2+5xy-2y^2+x+\\lambda y+\\mu=0$ represents a pair of straight lines whose point of intersection lies in the fourth quadrant. The line $x+y=1$ meets these two lines at the points $A$ and $B$, and $\\angle AOB=\\dfrac{\\pi}{2}$, where $O$ is the origin. Then the value of $\\lambda+\\mu$ is ______."
+ ],
+ "hindi": [
+  "माना $\\lambda$ तथा $\\mu$ वास्तविक संख्याएँ इस प्रकार हैं कि समीकरण $3x^2+5xy-2y^2+x+\\lambda y+\\mu=0$ सरल रेखाओं के एक युग्म को निरूपित करता है जिनका प्रतिच्छेदन बिन्दु चतुर्थ चतुर्थांश में स्थित है। रेखा $x+y=1$ इन दोनों रेखाओं से बिन्दुओं $A$ तथा $B$ पर मिलती है, तथा $\\angle AOB=\\dfrac{\\pi}{2}$ है, जहाँ $O$ मूल बिन्दु है। तब $\\lambda+\\mu$ का मान ______ है।"
+ ],
+ "solution": [
+  "Homogenise with $x+y=1$: $3x^2+5xy-2y^2+(x+\\lambda y)(x+y)+\\mu(x+y)^2=0$ gives the pair $OA,OB$",
+  "$OA\\perp OB$: coefficient of $x^2$ + coefficient of $y^2=0$: $(3+1+\\mu)+(-2+\\lambda+\\mu)=0\\Rightarrow\\lambda+2\\mu=-2$",
+  "$3x^2+5xy-2y^2=(3x-y)(x+2y)$ (slopes $3,-\\frac12$), so the lines are $(3x-y+p)(x+2y+q)=0$: $3q+p=1,\\ 2p-q=\\lambda,\\ pq=\\mu$",
+  "With $\\lambda=-2-2\\mu$: $p=1-3q$, $2-7q=-2-2q(1-3q)\\Rightarrow6q^2+5q-4=0\\Rightarrow q=\\frac12$ or $-\\frac43$ (same as $\\Delta=0$)",
+  "$q=\\frac12,p=-\\frac12$: lines $6x-2y-1=0,\\ 2x+4y+1=0$ meet at $\\left(\\frac1{14},-\\frac27\\right)$, fourth quadrant; $\\lambda=-\\frac32,\\mu=-\\frac14$",
+  "$q=-\\frac43,p=5$: they meet at $\\left(-\\frac{26}{21},\\frac97\\right)$, second quadrant, rejected",
+  "$\\lambda+\\mu=-\\frac74=-1.75$",
+  "",
+  "Final Answer: -1.75"
+ ],
+ "solution_full": [
+  "Joint equation of $OA$ and $OB$: make the given equation homogeneous using $x+y=1$:",
+  "$3x^2+5xy-2y^2+(x+\\lambda y)(x+y)+\\mu(x+y)^2=0$.",
+  "Coefficient of $x^2$: $3+1+\\mu$; coefficient of $y^2$: $-2+\\lambda+\\mu$. Lines through $O$ are perpendicular exactly when these add to zero: $\\lambda+2\\mu+2=0$.",
+  "The second-degree part factors as $(3x-y)(x+2y)$, so the component slopes are $3$ and $-\\frac12$ and the lines are $(3x-y+p)(x+2y+q)=0$. Expanding: $x$-coefficient $3q+p=1$, $y$-coefficient $2p-q=\\lambda$, constant $pq=\\mu$.",
+  "(Equivalently $abc+2fgh-af^2-bg^2-ch^2=0$ with $a=3,h=\\frac52,b=-2,g=\\frac12,f=\\frac{\\lambda}{2},c=\\mu$.)",
+  "Put $p=1-3q$: $\\lambda=2-7q$ and $\\mu=q-3q^2$. Then $\\lambda+2\\mu+2=0$ gives $2-7q+2q-6q^2+2=0$, i.e. $6q^2+5q-4=0$, so $q=\\frac12$ or $q=-\\frac43$.",
+  "$q=\\frac12$: $p=-\\frac12$, $\\lambda=-\\frac32$, $\\mu=-\\frac14$; lines $3x-y-\\frac12=0$ and $x+2y+\\frac12=0$ meet at $\\left(\\frac1{14},-\\frac27\\right)$, in the fourth quadrant.",
+  "$q=-\\frac43$: $p=5$, $\\lambda=\\frac{34}{3}$, $\\mu=-\\frac{20}{3}$; lines $3x-y+5=0$ and $x+2y-\\frac43=0$ meet at $\\left(-\\frac{26}{21},\\frac97\\right)$, in the second quadrant. Rejected.",
+  "Check for the chosen pair: $A=\\left(\\frac38,\\frac58\\right)$ and $B=\\left(\\frac52,-\\frac32\\right)$ on $x+y=1$; $\\overrightarrow{OA}\\cdot\\overrightarrow{OB}=\\frac{15}{16}-\\frac{15}{16}=0$. Neither line is parallel to $x+y=1$.",
+  "$\\lambda+\\mu=-\\frac32-\\frac14=-\\frac74=-1.75$.",
+  "",
+  "Final Answer: -1.75"
+ ],
+ "originality_note": "New: two unknown coefficients are fixed by two conditions of different kinds, the pair-of-lines condition (Delta = 0, through the component slopes) and a right angle subtended at the origin (homogenisation), with a quadrant condition to choose between the two solutions (way 3). Closest known: 'the line x + y = k meets a given pair of lines at A, B with angle AOB = 90 degrees; find k' (found in the web check as a related exercise). Different because: the pair is not given; its coefficients are the unknowns and Delta = 0 must be solved together with the perpendicularity condition.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that x + y = 1 is not parallel to either line and that exactly one of the two solutions has its vertex in the fourth quadrant. Changed: added the quadrant condition.",
+ "level": 3,
+ "key_step": "Combining the homogenised right-angle condition lambda + 2mu = -2 with the factorisation (Delta = 0) and selecting the root by the quadrant.",
+ "justification": "Three standard pair-of-lines tools in one system with a selection; numerical. Comparable to L3 chains such as 2021-P1-Q1.",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

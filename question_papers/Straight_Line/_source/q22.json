@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Rotation of axes",
+  "Identifying a conic from the general second-degree equation (h^2 - ab, Delta)"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Rotation of axes": "The axes are rotated through theta with tan 2theta = 24/7 to remove the xy term, giving 50X^2 - 25Y^2 = 1250.",
+  "Identifying a conic from the general second-degree equation (h^2 - ab, Delta)": "h^2 - ab > 0 and Delta != 0 identify the curve as a (non-degenerate) hyperbola, and the positive coefficient gives the transverse axis."
+ },
+ "english": [
+  "Consider the curve $23x^2+72xy+2y^2=1250$. Then the square of the distance between its foci is ______."
+ ],
+ "hindi": [
+  "वक्र $23x^2+72xy+2y^2=1250$ पर विचार कीजिए। तब इसकी नाभियों के बीच की दूरी का वर्ग ______ है।"
+ ],
+ "solution": [
+  "$h^2-ab=36^2-46>0$ and $\\Delta=-1250(ab-h^2)\\neq0$: a hyperbola, centre $O$",
+  "Rotate the axes through $\\theta$ with $\\tan2\\theta=\\dfrac{2h}{a-b}=\\dfrac{72}{21}=\\dfrac{24}{7}$: $\\cos\\theta=\\frac45,\\ \\sin\\theta=\\frac35$",
+  "New coefficients: $23\\cdot\\frac{16}{25}+72\\cdot\\frac{12}{25}+2\\cdot\\frac9{25}=50$ and $23\\cdot\\frac9{25}-72\\cdot\\frac{12}{25}+2\\cdot\\frac{16}{25}=-25$",
+  "$50X^2-25Y^2=1250\\Rightarrow\\dfrac{X^2}{25}-\\dfrac{Y^2}{50}=1$: $c^2=25+50=75$",
+  "$(2c)^2=4\\cdot75=300$",
+  "",
+  "Final Answer: 300"
+ ],
+ "solution_full": [
+  "Here $a=23$, $2h=72$ so $h=36$, $b=2$, $g=f=0$, $c=-1250$.",
+  "$\\Delta=abc+2fgh-af^2-bg^2-ch^2=c(ab-h^2)=-1250(46-1296)\\neq0$, so the curve is not a pair of lines; $h^2-ab=1296-46=1250>0$, so it is a hyperbola. With no first-degree terms its centre is the origin.",
+  "To remove the $xy$ term rotate the axes through $\\theta$ with $\\tan2\\theta=\\dfrac{2h}{a-b}=\\dfrac{72}{21}=\\dfrac{24}{7}$. Taking $2\\theta$ acute, $\\cos2\\theta=\\frac7{25}$, so $\\cos\\theta=\\frac45$, $\\sin\\theta=\\frac35$.",
+  "With $x=X\\cos\\theta-Y\\sin\\theta$, $y=X\\sin\\theta+Y\\cos\\theta$: coefficient of $X^2$ $=a\\cos^2\\theta+2h\\sin\\theta\\cos\\theta+b\\sin^2\\theta=\\frac{23\\cdot16+72\\cdot12+2\\cdot9}{25}=\\frac{1250}{25}=50$.",
+  "Coefficient of $Y^2$ $=a\\sin^2\\theta-2h\\sin\\theta\\cos\\theta+b\\cos^2\\theta=\\frac{207-864+32}{25}=-25$. (Check: $50+(-25)=a+b=25$ and $50(-25)=ab-h^2=-1250$.)",
+  "So $50X^2-25Y^2=1250$, i.e. $\\dfrac{X^2}{25}-\\dfrac{Y^2}{50}=1$, with transverse axis along $X$, $a^2=25$, $b^2=50$.",
+  "$c^2=a^2+b^2=75$, the distance between the foci is $2c=10\\sqrt3$, and its square is $300$.",
+  "",
+  "Final Answer: 300"
+ ],
+ "originality_note": "New: a hyperbola with an xy term whose rotation angle has tan 2theta = 24/7, so the rotation is exact and the new coefficients 50 and -25 are integers; the question is about the foci, so the student must identify the type and the transverse axis first (way 5). Closest known: textbook rotation of 7x^2 - 6 sqrt3 xy + 13y^2 = 16 (an ellipse). Different because: a different conic with different coefficients, and the focal distance requires knowing which axis is transverse.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. The stem says 'curve' and does not reveal the type. Changed: No change.",
+ "level": 2,
+ "key_step": "Identifying the hyperbola and rotating through tan 2theta = 24/7 to get 50X^2 - 25Y^2 = 1250.",
+ "justification": "Standard identification and rotation with clean numbers; a routine multi-step computation. Comparable to 2025-P2-Q4 (L2) on hyperbola parameters.",
+ "nearest_anchor": "2025-P2-Q4 (L2)",
+ "confidence": "High"
+}

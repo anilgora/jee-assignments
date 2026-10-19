@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Triangle formed by a pair of lines and a given line (area, centroid)",
+  "Area of triangle"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Triangle formed by a pair of lines and a given line (area, centroid)": "The pair gives the lines y = 3x and y = x/2; the centroid of the triangle formed with the third line fixes A and B.",
+  "Area of triangle": "The area of triangle OAB is (1/2)|x_A y_B - x_B y_A| = 135."
+ },
+ "english": [
+  "A line meets the two lines represented by $3x^2-7xy+2y^2=0$ at the points $A$ and $B$, both different from the origin $O$, such that the centroid of triangle $OAB$ is $(8,9)$. Then the area of triangle $OAB$ is ______."
+ ],
+ "hindi": [
+  "एक रेखा $3x^2-7xy+2y^2=0$ द्वारा निरूपित दोनों रेखाओं से बिन्दुओं $A$ तथा $B$ पर मिलती है, जो दोनों मूल बिन्दु $O$ से भिन्न हैं, इस प्रकार कि त्रिभुज $OAB$ का केन्द्रक $(8,9)$ है। तब त्रिभुज $OAB$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$3x^2-7xy+2y^2=(3x-y)(x-2y)$: lines $y=3x$ and $y=\\frac x2$",
+  "$A=(s,3s)$, $B=(2u,u)$; centroid: $s+2u=24,\\ 3s+u=27\\Rightarrow u=9,\\ s=6$",
+  "$A(6,18)$, $B(18,9)$",
+  "Area $=\\dfrac12|x_Ay_B-x_By_A|=\\dfrac12|54-324|=135$",
+  "",
+  "Final Answer: 135"
+ ],
+ "solution_full": [
+  "$3x^2-7xy+2y^2=0$ factors as $(3x-y)(x-2y)=0$, so the lines are $y=3x$ and $y=\\frac x2$, through $O$.",
+  "Let $A=(s,3s)$ on $y=3x$ and $B=(2u,u)$ on $y=\\frac x2$ (the labels can be swapped without changing the triangle).",
+  "Centroid of $OAB$: $\\left(\\dfrac{s+2u}{3},\\dfrac{3s+u}{3}\\right)=(8,9)$, so $s+2u=24$ and $3s+u=27$.",
+  "From the first, $s=24-2u$; then $72-6u+u=27$, so $u=9$ and $s=6$. Hence $A=(6,18)$, $B=(18,9)$, and the line is $AB:3x+4y=90$.",
+  "Area of $OAB=\\dfrac12\\left|x_Ay_B-x_By_A\\right|=\\dfrac12|6\\cdot9-18\\cdot18|=\\dfrac12\\cdot270=135$.",
+  "",
+  "Final Answer: 135"
+ ],
+ "originality_note": "New: the third side of the triangle cut from a pair of lines is not given; it is recovered from the centroid, and the area is then computed (way 3: the inverse of the usual centroid formula). Closest known: 'centroid / area of the triangle formed by ax^2 + 2hxy + by^2 = 0 and lx + my + n = 0' (standard formula, found in the web check). Different because: the centroid is the data and the line is the unknown.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that the centroid determines A and B uniquely (linear system) and that the triangle is non-degenerate. Changed: No change.",
+ "level": 2,
+ "key_step": "Parametrising A and B on the component lines and solving the centroid equations.",
+ "justification": "Factorisation, a 2x2 linear system and the area formula; routine chain. L2 like 2026-P2-Q1 (vector area, L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

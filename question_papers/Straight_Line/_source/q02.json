@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Distance of a point from a line, distance between parallel lines",
+  "Intercepts of a circle"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Distance of a point from a line, distance between parallel lines": "The distance between the parallel tangents (after normalising 6x-8y-30=0) gives the diameter 4 and the mid-parallel for the centre.",
+  "Intercepts of a circle": "The intercept formulas 2 sqrt(r^2-k^2) on the x-axis and 2 sqrt(r^2-h^2) on the y-axis fix k and give the answer."
+ },
+ "english": [
+  "A circle $C$ touches each of the lines $3x-4y+5=0$ and $6x-8y-30=0$, cuts off a chord of length $2\\sqrt3$ on the $x$-axis and meets the $y$-axis. Then the length of the chord that $C$ cuts off on the $y$-axis is",
+  "",
+  "(A) $\\dfrac{2\\sqrt{35}}{3}$",
+  "(B) $\\dfrac{\\sqrt{35}}{3}$",
+  "(C) $\\dfrac{2\\sqrt{5}}{3}$",
+  "(D) $2\\sqrt{3}$"
+ ],
+ "hindi": [
+  "एक वृत्त $C$ प्रत्येक रेखा $3x-4y+5=0$ तथा $6x-8y-30=0$ को स्पर्श करता है, $x$-अक्ष पर $2\\sqrt3$ लम्बाई की जीवा काटता है तथा $y$-अक्ष से मिलता है। तब $C$ द्वारा $y$-अक्ष पर काटी गई जीवा की लम्बाई है",
+  "",
+  "(A) $\\dfrac{2\\sqrt{35}}{3}$",
+  "(B) $\\dfrac{\\sqrt{35}}{3}$",
+  "(C) $\\dfrac{2\\sqrt{5}}{3}$",
+  "(D) $2\\sqrt{3}$"
+ ],
+ "solution": [
+  "Second line: $3x-4y-15=0$, parallel to the first; distance between them $=\\dfrac{|5+15|}{5}=4$",
+  "A circle touching two parallel lines has diameter $4$, so $r=2$, and its centre $(h,k)$ is on the mid-parallel $3x-4y-5=0$",
+  "$x$-intercept: $2\\sqrt{r^2-k^2}=2\\sqrt3\\Rightarrow k^2=1$",
+  "$k=1\\Rightarrow h=3$: $|h|>r$, the circle misses the $y$-axis; $k=-1\\Rightarrow h=\\dfrac13$",
+  "$y$-intercept $=2\\sqrt{r^2-h^2}=2\\sqrt{4-\\frac19}=\\dfrac{2\\sqrt{35}}{3}$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Divide the second line by $2$: $3x-4y-15=0$. It is parallel to $3x-4y+5=0$, so the circle lies between two parallel lines and touches both.",
+  "Distance between the parallel lines $=\\dfrac{|5-(-15)|}{\\sqrt{9+16}}=4$. A circle touching both has this distance as a diameter, so $r=2$.",
+  "Its centre $(h,k)$ is equidistant from the two lines, so it lies on the mid-parallel $3x-4y+\\dfrac{5-15}{2}=0$, i.e. $3x-4y-5=0$.",
+  "The chord on the $x$-axis has length $2\\sqrt{r^2-k^2}$ (here $|k|$ is the distance of the centre from the $x$-axis). So $2\\sqrt{4-k^2}=2\\sqrt3\\Rightarrow k^2=1$.",
+  "Case $k=1$: $3h-4-5=0\\Rightarrow h=3$. The distance of the centre from the $y$-axis is $3>2=r$, so this circle does not meet the $y$-axis; it is rejected.",
+  "Case $k=-1$: $3h+4-5=0\\Rightarrow h=\\dfrac13$. Here $|h|<r$, so the circle meets the $y$-axis.",
+  "$C:\\left(x-\\frac13\\right)^2+(y+1)^2=4$. Its chord on the $y$-axis has length $2\\sqrt{r^2-h^2}=2\\sqrt{4-\\frac19}=2\\sqrt{\\frac{35}{9}}=\\dfrac{2\\sqrt{35}}{3}$.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: two parallel tangents written with different scalings fix the radius and the locus of the centre, an x-intercept fixes two candidate circles, and the condition 'meets the y-axis' selects one (way 3: object fixed by two conditions plus a selection). Closest known: circle touching two parallel lines with centre on a given line. Different because: the centre is located through an intercept condition and one candidate must be rejected because its y-intercept is not real.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. The second line is deliberately not normalised; checked that the two candidate circles are distinct and only one meets the y-axis. Changed: added 'meets the y-axis' to make C unique.",
+ "level": 3,
+ "key_step": "Radius from the distance between parallel lines, centre on the mid-parallel, then rejecting the candidate circle that misses the y-axis.",
+ "justification": "Several standard results chained with a normalisation trap and a case rejection; each step is routine but two conditions must be combined and one case discarded. Similar in demand to 2021-P1-Q1 (L3), a circle located from line conditions.",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

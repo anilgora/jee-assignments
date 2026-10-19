@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle",
+  "Angle between the lines of a pair; parallel and perpendicular conditions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle": "The orthocentre of the triangle O, P, Q is found as the intersection of two altitudes (checked with the third).",
+  "Angle between the lines of a pair; parallel and perpendicular conditions": "The angle condition tan theta = 2 sqrt(h^2 - ab)/|a+b| = 1 with h > 0 fixes h = 7/2 and hence the pair of lines."
+ },
+ "english": [
+  "Let $h>0$ be such that the two lines represented by $3x^2+2hxy+2y^2=0$ are inclined to each other at an angle $\\dfrac{\\pi}{4}$. These two lines and the line $x+3y+2=0$ form a triangle whose orthocentre is $(\\alpha,\\beta)$. Then the value of $\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना $h>0$ इस प्रकार है कि $3x^2+2hxy+2y^2=0$ द्वारा निरूपित दोनों रेखाएँ एक-दूसरे से कोण $\\dfrac{\\pi}{4}$ पर झुकी हैं। ये दोनों रेखाएँ तथा रेखा $x+3y+2=0$ एक त्रिभुज बनाती हैं जिसका लम्बकेन्द्र $(\\alpha,\\beta)$ है। तब $\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\tan\\dfrac{\\pi}{4}=\\dfrac{2\\sqrt{h^2-6}}{|3+2|}=1\\Rightarrow h^2=\\dfrac{49}{4}\\Rightarrow h=\\dfrac72$",
+  "$3x^2+7xy+2y^2=(3x+y)(x+2y)=0$: lines $y=-3x$ and $y=-\\frac x2$",
+  "With $x+3y+2=0$: vertices $O(0,0)$, $P\\left(\\frac14,-\\frac34\\right)$, $Q(4,-2)$",
+  "Altitude from $O$ is perpendicular to $PQ$ (slope $-\\frac13$): $y=3x$",
+  "Altitude from $P$ is perpendicular to $OQ$ (slope $-\\frac12$): $y+\\frac34=2\\left(x-\\frac14\\right)$, i.e. $y=2x-\\frac54$",
+  "$3x=2x-\\frac54\\Rightarrow x=-\\frac54,\\ y=-\\frac{15}{4}$, so $\\beta=-3.75$",
+  "",
+  "Final Answer: -3.75"
+ ],
+ "solution_full": [
+  "For $ax^2+2hxy+by^2=0$ the angle $\\theta$ between the lines satisfies $\\tan\\theta=\\dfrac{2\\sqrt{h^2-ab}}{|a+b|}$. Here $a=3,b=2$: $\\dfrac{2\\sqrt{h^2-6}}{5}=1\\Rightarrow h^2-6=\\dfrac{25}{4}\\Rightarrow h^2=\\dfrac{49}{4}$, and $h>0$ gives $h=\\dfrac72$.",
+  "The pair is $3x^2+7xy+2y^2=0$, i.e. $(3x+y)(x+2y)=0$: the lines $y=-3x$ and $y=-\\dfrac x2$. (Check: $\\tan\\theta=\\left|\\dfrac{-3+\\frac12}{1+\\frac32}\\right|=1$.)",
+  "Vertices: $O(0,0)$; $y=-3x$ with $x+3y+2=0$ gives $-8x+2=0$, $P\\left(\\frac14,-\\frac34\\right)$; $y=-\\frac x2$ with $x+3y+2=0$ gives $-\\frac x2+2=0$, $Q(4,-2)$.",
+  "The line $PQ$ is $x+3y+2=0$ with slope $-\\frac13$, so the altitude from $O$ is $y=3x$.",
+  "$OQ$ has slope $-\\frac12$, so the altitude from $P$ has slope $2$: $y+\\frac34=2\\left(x-\\frac14\\right)$, i.e. $y=2x-\\frac54$.",
+  "Intersection: $3x=2x-\\frac54\\Rightarrow x=-\\frac54$, $y=-\\frac{15}{4}$.",
+  "Check with the third altitude: from $Q$ perpendicular to $OP$ (slope $-3$) is $y+2=\\frac13(x-4)$; at $x=-\\frac54$, $y=-2-\\frac74=-\\frac{15}{4}$. So the orthocentre is $\\left(-\\frac54,-\\frac{15}4\\right)$ and $\\beta=-3.75$.",
+  "",
+  "Final Answer: -3.75"
+ ],
+ "originality_note": "New: the pair through the origin is fixed only by an angle condition with a sign choice on h, and the third side is placed so that no angle is right; the orthocentre is then found (way 5: angle-of-pair condition + triangle centre). Closest known: 'orthocentre of the triangle formed by 6x^2+xy-y^2=0 and x+3y=10' (a published problem, found in the web check). Different because: the pair is not given (h from the angle pi/4 and h>0), and the pair and line differ; the first design used 6x^2+xy-y^2 and was replaced.",
+ "web_check": "found: redesigned",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. First design used 6x^2+2hxy-y^2 (giving the published pair 6x^2+xy-y^2); replaced by 3x^2+2hxy+2y^2 with h>0. Checked that the third line is not perpendicular to either line, so the orthocentre is not a vertex. Changed: pair and third line redesigned.",
+ "level": 3,
+ "key_step": "Fixing h from tan(pi/4) = 2 sqrt(h^2 - ab)/|a+b| with h>0, then intersecting two altitudes.",
+ "justification": "Two standard stages (angle of a pair with a sign choice, orthocentre by altitudes) with a numerical answer and no options to check. Rated like the coordinate-geometry chains at L3 (2021-P1-Q1).",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

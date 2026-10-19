@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Distance formula, Section formula, harmonic conjugate",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle",
+  "Area of triangle",
+  "Locus based questions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Distance formula, Section formula, harmonic conjugate": "D and E divide AB internally and externally in the ratio 2:1 (section formula, harmonic conjugates): D = (6,0), E = (18,0).",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle": "The centroid G = (A+B+C)/3 moves on a circle of radius 2 centred at (7,0).",
+  "Area of triangle": "The area of triangle DEG is (1/2)(DE)(height of G above AB) = 12|sin theta|, maximised to 12.",
+  "Locus based questions": "The locus of C (CA = 2CB) is the circle on DE as diameter, and the locus of G is found from it."
+ },
+ "english": [
+  "Let $A(0,0)$ and $B(9,0)$. A point $C$, not on the $x$-axis, moves in such a way that $CA=2\\,CB$. The bisectors of the interior and the exterior angles of triangle $ABC$ at $C$ meet the line $AB$ at $D$ and $E$ respectively, and $G$ is the centroid of triangle $ABC$. Then the maximum value of the area of triangle $DEG$ is ______."
+ ],
+ "hindi": [
+  "माना $A(0,0)$ तथा $B(9,0)$ है। एक बिन्दु $C$, जो $x$-अक्ष पर नहीं है, इस प्रकार गति करता है कि $CA=2\\,CB$ है। त्रिभुज $ABC$ के शीर्ष $C$ पर अन्तः कोण तथा बाह्य कोण के समद्विभाजक रेखा $AB$ से क्रमशः $D$ तथा $E$ पर मिलते हैं, तथा $G$ त्रिभुज $ABC$ का केन्द्रक है। तब त्रिभुज $DEG$ के क्षेत्रफल का अधिकतम मान ______ है।"
+ ],
+ "solution": [
+  "Bisector theorem: $D$ and $E$ divide $AB$ internally and externally in $CA:CB=2:1$, so they are fixed harmonic conjugates: $D=(6,0)$, $E=(18,0)$",
+  "Since $\\angle DCE=90^\\circ$, $C$ lies on the circle on $DE$ as diameter: centre $(12,0)$, radius $6$ (the locus of $CA=2CB$)",
+  "$G=\\dfrac{A+B+C}{3}$: with $C=(12+6\\cos\\theta,6\\sin\\theta)$, $G=(7+2\\cos\\theta,2\\sin\\theta)$, a circle of radius $2$",
+  "$D,E$ are on the $x$-axis with $DE=12$, so area $DEG=\\dfrac12\\cdot12\\cdot|2\\sin\\theta|\\le12$",
+  "Maximum at $C=(12,\\pm6)$, which is not on the $x$-axis",
+  "",
+  "Final Answer: 12"
+ ],
+ "solution_full": [
+  "By the interior and exterior angle-bisector theorems, $D$ divides $AB$ internally and $E$ divides $AB$ externally in the ratio $CA:CB=2:1$. So $D$ and $E$ are harmonic conjugates with respect to $A,B$, and they do not depend on the position of $C$.",
+  "Section formula: $D=\\dfrac{2(9,0)+1(0,0)}{3}=(6,0)$ and $E=\\dfrac{2(9,0)-1(0,0)}{2-1}=(18,0)$.",
+  "The two bisectors at $C$ are perpendicular, so $\\angle DCE=90^\\circ$ and $C$ lies on the circle with diameter $DE$: centre $(12,0)$, radius $6$.",
+  "(Directly: $CA^2=4CB^2\\Rightarrow x^2+y^2=4\\left((x-9)^2+y^2\\right)\\Rightarrow x^2+y^2-24x+108=0$, the same circle.)",
+  "Write $C=(12+6\\cos\\theta,\\,6\\sin\\theta)$, $\\sin\\theta\\neq0$. The centroid is $G=\\left(\\dfrac{0+9+12+6\\cos\\theta}{3},\\dfrac{6\\sin\\theta}{3}\\right)=(7+2\\cos\\theta,\\,2\\sin\\theta)$, so $G$ moves on a circle of radius $2$ centred at $(7,0)$.",
+  "$D$ and $E$ lie on the $x$-axis with $DE=12$, so the area of triangle $DEG$ is $\\dfrac12\\cdot12\\cdot|2\\sin\\theta|=12|\\sin\\theta|$.",
+  "The maximum is $12$, attained for $\\theta=\\pm\\dfrac{\\pi}{2}$, i.e. $C=(12,\\pm6)$, which is allowed.",
+  "",
+  "Final Answer: 12"
+ ],
+ "originality_note": "New: the feet of the two bisectors at the moving vertex are fixed harmonic conjugates (way 4: a hidden invariant), the locus of C is the circle on DE, and the centroid traces a scaled circle, so the area of DEG is maximised without calculus. Closest known: 'locus of C with CA = k CB is a circle' (Apollonius). Different because: the question is about the triangle formed by the bisector feet and the centroid, which is clean only after noticing D and E are fixed.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Stated that C is not on the x-axis so the triangle exists; the maximum is attained at C = (12, 6), which is allowed. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that D and E are fixed (harmonic division in the ratio 2:1) and that the centroid traces a circle of radius 2.",
+ "justification": "Two linked ideas (bisector theorem giving fixed harmonic points, locus scaled to the centroid) with an area maximum; numerical but short once seen. Comparable to the locus-and-area demand of 2026-P1-Q2 (L2) plus a non-obvious invariant, so L3.",
+ "nearest_anchor": "2026-P1-Q2 (L2)",
+ "confidence": "Medium"
+}

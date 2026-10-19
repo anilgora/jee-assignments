@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Angle bisectors",
+  "Inradius and incenter based questions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Angle bisectors": "The centres of circles touching all three lines are intersections of the internal and external angle bisectors (x - 2y = 0, 2x + y = 0 at O, and the axis x = 3).",
+  "Inradius and incenter based questions": "The incentre (3, 3/2) with r = Delta/s = 3/2 and the exradii Delta/(s - a) give the smallest and largest radii."
+ },
+ "english": [
+  "Consider all the circles each of which touches the three lines $y=0$, $4x-3y=0$ and $4x+3y=24$. Let $r_1$ and $r_2$ be the smallest and the largest of the radii of these circles. Then the value of $\\dfrac{r_1}{r_2}$ is ______."
+ ],
+ "hindi": [
+  "उन सभी वृत्तों पर विचार कीजिए जिनमें से प्रत्येक तीनों रेखाओं $y=0$, $4x-3y=0$ तथा $4x+3y=24$ को स्पर्श करता है। माना $r_1$ तथा $r_2$ इन वृत्तों की त्रिज्याओं में सबसे छोटी तथा सबसे बड़ी हैं। तब $\\dfrac{r_1}{r_2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "The lines form the triangle $O(0,0)$, $B(6,0)$, $C(3,4)$: sides $OB=6$, $OC=BC=5$, area $12$, $s=8$",
+  "A centre equidistant from all three lines lies on an angle bisector at each vertex: the incentre and the three excentres (four circles)",
+  "At $O$: internal bisector $y=\\frac x2$, external $y=-2x$; with the axis of symmetry $x=3$: incentre $(3,\\frac32)$, excentre opposite $C$: $(3,-6)$",
+  "Radii: $r=\\dfrac{\\Delta}{s}=\\dfrac32$, $r_C=\\dfrac{12}{8-6}=6$, $r_O=r_B=\\dfrac{12}{8-5}=4$ (centres $(8,4),(-2,4)$)",
+  "$\\dfrac{r_1}{r_2}=\\dfrac{3/2}{6}=0.25$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "The lines meet at $O(0,0)$ ($y=0$ and $4x-3y=0$), $B(6,0)$ ($y=0$ and $4x+3y=24$) and $C(3,4)$. So $OB=6$, $OC=BC=5$, area $\\Delta=\\frac12\\cdot6\\cdot4=12$, $s=8$.",
+  "A circle touching all three lines has its centre equidistant from them, so the centre lies on an angle bisector (internal or external) at every vertex. The bisectors meet in exactly four points: the incentre and the three excentres. So there are four circles.",
+  "Bisectors at $O$ of $y=0$ and $4x-3y=0$: $y=\\pm\\dfrac{4x-3y}{5}\\Rightarrow x-2y=0$ (internal, the triangle lies in $0<y<\\frac{4x}{3}$) and $2x+y=0$ (external).",
+  "Incentre: on $x-2y=0$ and on the axis of symmetry $x=3$, so $I\\left(3,\\frac32\\right)$, $r=\\frac32$ (also $\\frac{\\Delta}{s}=\\frac{12}{8}$).",
+  "Excentre opposite $C$: on $2x+y=0$ and $x=3$: $(3,-6)$, radius $6$ $=\\frac{\\Delta}{s-6}$.",
+  "Excentre opposite $O$: on $x-2y=0$ at distance from $y=0$ equal to the distance from $4x+3y=24$: $(8,4)$, radius $4=\\frac{\\Delta}{s-5}$; by symmetry the excentre opposite $B$ is $(-2,4)$, radius $4$.",
+  "So the radii are $\\frac32,4,4,6$; $r_1=\\frac32$, $r_2=6$, and $\\dfrac{r_1}{r_2}=\\dfrac14=0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: the set of all circles touching three lines (incircle and excircles) is described without naming them, and the ratio of the extreme radii is asked (way 3). Closest known: 'find the incentre of the triangle formed by three lines'. Different because: the student must realise there are four such circles (centres at bisector intersections) and compare inradius and exradii.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that exactly four circles exist and their radii are 3/2, 4, 4, 6. Changed: No change.",
+ "level": 3,
+ "key_step": "Realising the circles are the incircle and three excircles (bisector intersections) and comparing r with the exradii.",
+ "justification": "Bisector identification plus inradius/exradius formulas; the idea that four circles qualify is the main trap. Comparable to 2023-P2-Q15 (L4, inradius) but lighter; L3.",
+ "nearest_anchor": "2023-P2-Q15 (L4)",
+ "confidence": "Medium"
+}

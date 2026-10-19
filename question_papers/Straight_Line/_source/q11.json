@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle",
+  "Circumradius and circumcenter based questions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle": "The circumcentre S and orthocentre H are the triangle centres used; angle BHC = 180 - A and angle BSC = 2A come from their properties.",
+  "Circumradius and circumcenter based questions": "Circumradius by the sine rule R = BC/(2 sin(angle)) for triangles HBC and SBC gives R2 = R and R1 = R/(2 cos A)."
+ },
+ "english": [
+  "Let $A(1,2)$, $B(-2,6)$ and $C(7,10)$ be the vertices of triangle $ABC$, and let $S$ and $H$ be its circumcentre and orthocentre respectively. Let $R_1$ and $R_2$ be the circumradii of triangles $SBC$ and $HBC$ respectively. Then the value of $\\dfrac{R_2}{R_1}$ is ______."
+ ],
+ "hindi": [
+  "माना $A(1,2)$, $B(-2,6)$ तथा $C(7,10)$ त्रिभुज $ABC$ के शीर्ष हैं, तथा $S$ और $H$ क्रमशः इसके परिकेन्द्र और लम्बकेन्द्र हैं। माना $R_1$ तथा $R_2$ क्रमशः त्रिभुजों $SBC$ तथा $HBC$ की परित्रिज्याएँ हैं। तब $\\dfrac{R_2}{R_1}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\overrightarrow{AB}=(-3,4)$, $\\overrightarrow{AC}=(6,8)$: $\\cos A=\\dfrac{-18+32}{5\\cdot10}=\\dfrac{7}{25}$; the triangle is acute (checks at $B$, $C$ positive)",
+  "$\\angle BHC=180^\\circ-A$, so $R_2=\\dfrac{BC}{2\\sin(180^\\circ-A)}=\\dfrac{BC}{2\\sin A}=R$",
+  "$SB=SC=R$ and $\\angle BSC=2A$, so $R_1=\\dfrac{BC}{2\\sin2A}=\\dfrac{2R\\sin A}{4\\sin A\\cos A}=\\dfrac{R}{2\\cos A}$",
+  "$\\dfrac{R_2}{R_1}=2\\cos A=\\dfrac{14}{25}=0.56$",
+  "",
+  "Final Answer: 0.56"
+ ],
+ "solution_full": [
+  "$AB=|(-3,4)|=5$, $AC=|(6,8)|=10$, $BC=|(9,4)|=\\sqrt{97}$. $\\cos A=\\dfrac{\\overrightarrow{AB}\\cdot\\overrightarrow{AC}}{AB\\cdot AC}=\\dfrac{-18+32}{50}=\\dfrac{7}{25}$.",
+  "At $B$: $\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=(3,-4)\\cdot(9,4)=11>0$; at $C$: $\\overrightarrow{CA}\\cdot\\overrightarrow{CB}=(-6,-8)\\cdot(-9,-4)=86>0$. So the triangle is acute, $S$ and $H$ lie inside it.",
+  "Triangle $HBC$: in an acute triangle $\\angle BHC=180^\\circ-A$. By the sine rule its circumradius is $R_2=\\dfrac{BC}{2\\sin(180^\\circ-A)}=\\dfrac{BC}{2\\sin A}=R$, the circumradius of $ABC$.",
+  "Triangle $SBC$: $SB=SC=R$ and the central angle is $\\angle BSC=2A$. So $R_1=\\dfrac{BC}{2\\sin2A}$. With $BC=2R\\sin A$: $R_1=\\dfrac{2R\\sin A}{4\\sin A\\cos A}=\\dfrac{R}{2\\cos A}$.",
+  "Hence $\\dfrac{R_2}{R_1}=2\\cos A=\\dfrac{14}{25}=0.56$.",
+  "Numerical check: $S=\\left(\\frac{37}{12},\\frac{107}{16}\\right)$, $H=\\left(-\\frac16,\\frac{37}{8}\\right)$, $R=R_2\\approx5.1296$, $R_1\\approx9.1600$, ratio $0.56$.",
+  "",
+  "Final Answer: 0.56"
+ ],
+ "originality_note": "New: the ratio of the circumradii of SBC and HBC is the invariant 2 cos A (way 4: hidden invariant), which makes a heavy coordinate computation collapse once the angle relations angle BHC = 180 - A and angle BSC = 2A are used. Closest known: 'the circumradius of HBC equals R'. Different because: it is combined with the central-angle triangle SBC, and the data are coordinates, so the student must see the angle route.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked the triangle is acute (so angle BSC = 2A, not 360 - 2A) and scalene. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising R(HBC) = R and R(SBC) = R/(2 cos A), so only cos A is needed.",
+ "justification": "Two triangle-centre facts linked through the sine rule; the brute-force route is long, the idea route is short. Comparable to 2023-P2-Q15 (L4) in topic but much lighter; placed at L3 with 2021-P1-Q1 (L3).",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

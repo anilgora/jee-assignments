@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Shifting of origin",
+  "ellipse with axis parallel to a coordinate axis (shifted form)"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Shifting of origin": "Shifting the origin, x = X + h, y = Y + k, gives the coefficients of X, Y and the constant term, which fix h = 1 and k = -1/2.",
+  "ellipse with axis parallel to a coordinate axis (shifted form)": "The ellipse in shifted form (x-1)^2/(25/4) + (y+2)^2/(9/4) = 1 gives a, b, c = 2 and the foci (1 +- 2, -2)."
+ },
+ "english": [
+  "The origin is shifted to a point $O'(h,k)$, the axes remaining parallel to the original axes, and the equation $36x^2+100y^2-72x+400y+211=0$ of an ellipse is referred to the new axes $X$ and $Y$. The new equation contains neither a term in $X$ nor a constant term, and the coefficient of $Y$ in it is positive. Let $F$ be the focus of the ellipse whose $X$-coordinate is positive. Then the slope of the line $O'F$ is ______."
+ ],
+ "hindi": [
+  "मूल बिन्दु को बिन्दु $O'(h,k)$ पर स्थानान्तरित किया जाता है, अक्ष मूल अक्षों के समान्तर रहते हैं, तथा एक दीर्घवृत्त का समीकरण $36x^2+100y^2-72x+400y+211=0$ नए अक्षों $X$ तथा $Y$ के सापेक्ष लिखा जाता है। नए समीकरण में न तो $X$ वाला पद है और न ही अचर पद, तथा इसमें $Y$ का गुणांक धनात्मक है। माना $F$ दीर्घवृत्त की वह नाभि है जिसका $X$-निर्देशांक धनात्मक है। तब रेखा $O'F$ की प्रवणता ______ है।"
+ ],
+ "solution": [
+  "$x=X+h,\\ y=Y+k$: coefficient of $X$ is $72h-72$, of $Y$ is $200k+400$, constant is $36h^2+100k^2-72h+400k+211$",
+  "No $X$ term: $h=1$; no constant: $100k^2+400k+175=0\\Rightarrow k=-\\frac12$ or $-\\frac72$; $Y$-coefficient $>0$ needs $k>-2$, so $k=-\\frac12$",
+  "Ellipse: $36(x-1)^2+100(y+2)^2=225$, i.e. $\\dfrac{(x-1)^2}{25/4}+\\dfrac{(y+2)^2}{9/4}=1$: $a=\\frac52,\\ b=\\frac32,\\ c=2$, foci $(1\\pm2,-2)$",
+  "In the new system the centre is $(0,-\\frac32)$, so $F=\\left(2,-\\frac32\\right)$",
+  "Slope of $O'F=\\dfrac{-3/2}{2}=-0.75$",
+  "",
+  "Final Answer: -0.75"
+ ],
+ "solution_full": [
+  "Put $x=X+h$, $y=Y+k$. Then $36(X+h)^2+100(Y+k)^2-72(X+h)+400(Y+k)+211=0$ has",
+  "coefficient of $X$: $72h-72$; coefficient of $Y$: $200k+400$; constant: $36h^2+100k^2-72h+400k+211$.",
+  "No $X$ term: $h=1$. No constant term: $36+100k^2-72+400k+211=0\\Rightarrow100k^2+400k+175=0\\Rightarrow4k^2+16k+7=0\\Rightarrow k=-\\frac12$ or $k=-\\frac72$.",
+  "The coefficient of $Y$ is $200k+400$: $+300$ for $k=-\\frac12$ and $-300$ for $k=-\\frac72$. So $O'=\\left(1,-\\frac12\\right)$. (The vanishing constant means $O'$ lies on the ellipse; with no $X$ term it is an end of the vertical axis.)",
+  "Completing squares: $36(x-1)^2+100(y+2)^2=36+400-211=225$, so $\\dfrac{(x-1)^2}{25/4}+\\dfrac{(y+2)^2}{9/4}=1$, an ellipse with centre $(1,-2)$, horizontal major axis, $a=\\frac52$, $b=\\frac32$, $c=\\sqrt{a^2-b^2}=2$.",
+  "Foci: $(3,-2)$ and $(-1,-2)$. In the new system ($X=x-1$, $Y=y+\\frac12$) they are $\\left(2,-\\frac32\\right)$ and $\\left(-2,-\\frac32\\right)$, so $F=\\left(2,-\\frac32\\right)$.",
+  "Slope of $O'F=\\dfrac{-\\frac32-0}{2-0}=-\\dfrac34=-0.75$.",
+  "",
+  "Final Answer: -0.75"
+ ],
+ "originality_note": "New: the new origin is not the centre but is fixed by asking for no X term and no constant term (so it is a point of the ellipse at the end of the vertical axis), with the sign of the Y coefficient selecting one of two such points (way 3). Closest known: 'shift the origin to remove the first-degree terms'. Different because: the conditions place the origin on the curve, and the foci must then be located relative to it.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. The sign condition on the Y coefficient removes the second root k = -7/2; 'focus with positive X-coordinate' names F. Changed: No change.",
+ "level": 3,
+ "key_step": "Choosing h, k from the vanishing X term and constant (two roots, sign of the Y coefficient), then the foci of the shifted ellipse in the new system.",
+ "justification": "Shifting-origin algebra with a root selection, then ellipse parameters; several linked stages with a numerical answer. Borderline 2/3; comparable to 2024-P1-Q4 (L2) plus the selection and coordinate change.",
+ "nearest_anchor": "2024-P1-Q4 (L2)",
+ "confidence": "Low"
+}

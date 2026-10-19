@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Foot of perpendicular and image of a point in a line",
+  "Image of a line in a line; reflection of a light ray",
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Foot of perpendicular and image of a point in a line": "The images A1 = (1,-2) of A in the x-axis and B2 = (7,6) of B in x + y = 8 are found by the image-of-a-point formula.",
+  "Image of a line in a line; reflection of a light ray": "Line QB is the image of line PQ in the mirror x + y = 8 (reflected ray), which gives its slope 3/4.",
+  "Optimisation on a line: minimise PA + PB, maximise |PA - PB|": "AP + PQ + QB = A1P + PQ + QB2 >= A1B2 is minimised when P, Q lie on segment A1B2 (reflection method)."
+ },
+ "english": [
+  "Let $A(1,2)$ and $B(2,1)$. Let $P$ be a point on the $x$-axis and $Q$ a point on the line $x+y=8$ such that $AP+PQ+QB$ is minimum. Then the slope of the line $QB$ is ______."
+ ],
+ "hindi": [
+  "माना $A(1,2)$ तथा $B(2,1)$ है। माना $P$, $x$-अक्ष पर एक बिन्दु तथा $Q$, रेखा $x+y=8$ पर एक बिन्दु इस प्रकार हैं कि $AP+PQ+QB$ न्यूनतम है। तब रेखा $QB$ की प्रवणता ______ है।"
+ ],
+ "solution": [
+  "Image of $A$ in the $x$-axis: $A_1(1,-2)$; image of $B$ in $x+y=8$: $B_2(8-1,8-2)=(7,6)$",
+  "$AP+PQ+QB=A_1P+PQ+QB_2\\ge A_1B_2$, with equality when $P,Q$ lie on segment $A_1B_2$ in this order",
+  "$A_1B_2$: $(1+6t,-2+8t)$; $y=0$ at $t=\\frac14$: $P\\left(\\frac52,0\\right)$; $x+y=8$ at $t=\\frac9{14}$: $Q\\left(\\frac{34}7,\\frac{22}7\\right)$; $\\frac14<\\frac9{14}<1$, so the order is right",
+  "$PQ$ has slope $\\frac43$; $QB$ is the image of line $PQ$ in $x+y=8$, so its slope is $\\frac34$ (check: $\\dfrac{1-\\frac{22}7}{2-\\frac{34}7}=\\dfrac{-15}{-20}$)",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "$A$ and $B$ lie above the $x$-axis and on the origin side of $x+y=8$ ($1+2<8$, $2+1<8$).",
+  "Let $A_1$ be the image of $A$ in the $x$-axis and $B_2$ the image of $B$ in $x+y=8$: $A_1=(1,-2)$ and, since the image of $(a,b)$ in $x+y=8$ is $(8-b,8-a)$, $B_2=(7,6)$.",
+  "For every $P$ on the $x$-axis $AP=A_1P$, and for every $Q$ on $x+y=8$ $QB=QB_2$. So $AP+PQ+QB=A_1P+PQ+QB_2\\ge A_1B_2=\\sqrt{36+64}=10$, with equality exactly when $P$ and $Q$ lie on the segment $A_1B_2$ in the order $A_1,P,Q,B_2$.",
+  "Segment $A_1B_2$: $(1+6t,\\,-2+8t)$, $0\\le t\\le1$. It meets $y=0$ at $t=\\frac14$, giving $P\\left(\\frac52,0\\right)$, and $x+y=8$ at $-1+14t=8$, $t=\\frac{9}{14}$, giving $Q\\left(\\frac{34}{7},\\frac{22}{7}\\right)$. As $0<\\frac14<\\frac9{14}<1$, the minimum is attained there.",
+  "This is also the path of a light ray from $A$ reflected first by a mirror along the $x$-axis and then by a mirror along $x+y=8$: line $PQ$ is the image of line $AP$ in the $x$-axis, and line $QB$ is the image of line $PQ$ in $x+y=8$.",
+  "Line $PQ$ has slope $\\frac86=\\frac43$. Reflection in a line of slope $-1$ sends a direction of slope $s$ to slope $\\frac1s$, so $QB$ has slope $\\frac34$.",
+  "Direct check: $\\dfrac{1-\\frac{22}{7}}{2-\\frac{34}{7}}=\\dfrac{-\\frac{15}{7}}{-\\frac{20}{7}}=\\dfrac34$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "originality_note": "New: a two-mirror shortest path between two points with one oblique mirror not through the origin, solved by reflecting each end point in its own mirror, and the last leg read as the image of a line in a line (way 4). Closest known: Putnam 1998 (perimeter PQ+QR+RP with Q on the x-axis and R on y = x, reflecting P in both lines; found in the web check). Different because: the first design used the same mirrors (x-axis and y = x); it was replaced by the mirror x + y = 8 and two distinct end points, and the asked quantity is the slope of the final leg.",
+ "web_check": "found: redesigned",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. First design used the mirrors y = 0 and y = x (close to the Putnam 1998 perimeter problem found in the web check); changed the second mirror to x + y = 8 and the points to A(1,2), B(2,1). Checked numerically (grid search) that the minimum 10 is attained at P = (2.5,0), Q = (34/7, 22/7). Changed: mirrors and points redesigned.",
+ "level": 3,
+ "key_step": "Reflecting A in the x-axis and B in x + y = 8 and checking that the segment A1B2 meets the mirrors in the right order.",
+ "justification": "The single-reflection minimum is standard; doing it with two mirrors, checking the order and reading the last leg as an image line is a two-idea chain with a numerical answer. Comparable to L3 chains (2021-P1-Q1).",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium"
+}

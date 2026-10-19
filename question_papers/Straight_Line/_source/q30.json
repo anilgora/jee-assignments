@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Straight Line",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Homogenisation: joint equation of lines from origin to a line-curve intersection",
+  "Pair of straight lines: homogeneous second-degree equation and component slopes"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Homogenisation: joint equation of lines from origin to a line-curve intersection": "The joint equation of OA and OB is obtained by homogenising the circle with (y - mx)/2 = 1.",
+  "Pair of straight lines: homogeneous second-degree equation and component slopes": "The slopes of OA, OB are the roots of -2k^2 + (4m - 1)k + (1 + m - m^2) = 0 from the homogeneous pair; their sum is zero."
+ },
+ "english": [
+  "A line $L$ of slope $m$ passes through the point $(0,2)$ and meets the circle $x^2+y^2-2x-4y-4=0$ at the points $A$ and $B$. Let $O$ be the origin. The slopes of the lines $OA$ and $OB$ are equal in magnitude and opposite in sign. Then the value of $m$ is ______."
+ ],
+ "hindi": [
+  "प्रवणता $m$ की एक रेखा $L$ बिन्दु $(0,2)$ से होकर जाती है तथा वृत्त $x^2+y^2-2x-4y-4=0$ से बिन्दुओं $A$ तथा $B$ पर मिलती है। माना $O$ मूल बिन्दु है। रेखाओं $OA$ तथा $OB$ की प्रवणताएँ परिमाण में समान तथा चिह्न में विपरीत हैं। तब $m$ का मान ______ है।"
+ ],
+ "solution": [
+  "$L:y=mx+2$, i.e. $\\dfrac{y-mx}{2}=1$",
+  "Homogenise: $x^2+y^2-(2x+4y)\\dfrac{y-mx}{2}-4\\left(\\dfrac{y-mx}{2}\\right)^2=0$",
+  "$\\Rightarrow(1+m-m^2)x^2+(4m-1)xy-2y^2=0$, the joint equation of $OA,OB$",
+  "Slopes $k_1,k_2$ satisfy $-2k^2+(4m-1)k+(1+m-m^2)=0$; $k_1+k_2=0\\Rightarrow4m-1=0\\Rightarrow m=\\frac14$",
+  "Then $k^2=\\dfrac{1+m-m^2}{2}=\\dfrac{19}{32}>0$, so the slopes are real, nonzero and opposite",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "$(0,2)$ lies inside the circle ($0+4-0-8-4<0$), so every line through it meets the circle at two points $A,B$, neither of which is $O$ (the circle does not pass through $O$).",
+  "$L:y=mx+2$ can be written $\\dfrac{y-mx}{2}=1$. Making the circle's equation homogeneous with this gives the pair of lines $OA,OB$:",
+  "$x^2+y^2-(2x+4y)\\cdot\\dfrac{y-mx}{2}-4\\cdot\\dfrac{(y-mx)^2}{4}=0$.",
+  "Expanding: $x^2+y^2-\\left(xy-mx^2+2y^2-2mxy\\right)-\\left(y^2-2mxy+m^2x^2\\right)=0$, i.e. $(1+m-m^2)x^2+(4m-1)xy-2y^2=0$.",
+  "Putting $y=kx$: $-2k^2+(4m-1)k+(1+m-m^2)=0$, whose roots are the slopes $k_1,k_2$ of $OA,OB$. (Neither line is vertical, since the coefficient of $y^2$ is non-zero.)",
+  "Equal magnitude and opposite sign means $k_1+k_2=0$ with $k_1\\neq0$: $\\dfrac{4m-1}{2}=0$, so $m=\\dfrac14$.",
+  "Check: $k^2=\\dfrac{1+\\frac14-\\frac1{16}}{2}=\\dfrac{19}{32}$, so $k=\\pm\\sqrt{\\frac{19}{32}}\\approx\\pm0.77$; the points are about $(-1.96,1.51)$ and $(3.84,2.96)$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: homogenisation with a moving chord through a fixed interior point, with the condition that the chord subtends at the origin a pair of lines symmetric about the axes, i.e. the xy coefficient vanishes (way 5). Closest known: 'the chord subtends a right angle at the origin' (sum of the x^2 and y^2 coefficients zero). Different because: the condition is on the sum of the slopes, read from the component slopes of the homogeneous pair.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, line, curve and symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical brute-force check), is unique and equals the Answer Plan. Checked that (0,2) is inside the circle, that O is not on the circle, and that for m = 1/4 the slopes are real and nonzero. Changed: No change.",
+ "level": 3,
+ "key_step": "Homogenising the circle with y - mx = 2 and setting the xy coefficient (sum of slopes) to zero.",
+ "justification": "Homogenisation with a parameter plus reading the slope sum from the homogeneous pair; two linked ideas, numerical. Borderline 2/3; comparable to 2025-P2-Q4 (L2) with the extra homogenisation step, so L3.",
+ "nearest_anchor": "2025-P2-Q4 (L2)",
+ "confidence": "Low"
+}
