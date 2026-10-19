@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "From 4 men and 4 women, a team of 5 containing at least two women is chosen, and the members of the team are then seated in a row of 5 chairs. Let $N_{1}$ be the number of (team, seating) pairs in which no two women sit in adjacent chairs, and let $N_{2}$ be the number of (team, seating) pairs in which all the women of the team occupy consecutive chairs. Then the value of $N_{1}-N_{2}$ is ______."
+ ],
+ "hindi": [
+  "4 पुरुषों तथा 4 महिलाओं में से कम से कम दो महिलाओं वाली 5 सदस्यों की एक टीम चुनी जाती है, और फिर टीम के सदस्यों को 5 कुर्सियों की एक पंक्ति में बैठाया जाता है। माना कि $N_{1}$ उन (टीम, बैठक-व्यवस्था) युग्मों की संख्या है जिनमें कोई दो महिलाएँ आसन्न कुर्सियों पर नहीं बैठतीं, तथा $N_{2}$ उन (टीम, बैठक-व्यवस्था) युग्मों की संख्या है जिनमें टीम की सभी महिलाएँ क्रमागत कुर्सियों पर बैठती हैं। तब $N_{1}-N_{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Teams: $w$ women, $5-w$ men, $w=2,3,4$: $\\binom{4}{2}\\binom{4}{3}=24$, $\\binom{4}{3}\\binom{4}{2}=24$, $\\binom{4}{4}\\binom{4}{1}=4$",
+  "No two women adjacent (gap method): $w=2$: $3!\\cdot{}^{4}P_{2}=72$; $w=3$: $2!\\cdot{}^{3}P_{3}=12$; $w=4$: 1 man gives 2 gaps $<4$, so $0$",
+  "$N_{1}=24\\cdot72+24\\cdot12+4\\cdot0=2016$",
+  "Women together (bundle): $w=2$: $4!\\cdot2!=48$; $w=3$: $3!\\cdot3!=36$; $w=4$: $2!\\cdot4!=48$",
+  "$N_{2}=24\\cdot48+24\\cdot36+4\\cdot48=2208$; $N_{1}-N_{2}=-192$",
+  "",
+  "Final Answer: -192"
+ ],
+ "solution_full": [
+  "Committee with constraint: a team has $w\\in\\{2,3,4\\}$ women and $5-w$ men. Number of teams: $w=2$: $\\binom{4}{2}\\binom{4}{3}=24$; $w=3$: $\\binom{4}{3}\\binom{4}{2}=24$; $w=4$: $\\binom{4}{4}\\binom{4}{1}=4$.",
+  "$N_{1}$ (gap method): seat the $5-w$ men first, then put the women into distinct gaps among them. Viewing the seating as a row of M's and W's (alike objects), this is the condition that no two W's are adjacent.",
+  "$w=2$: $3!$ orders of men, 4 gaps, ${}^{4}P_{2}=12$ placements: $72$. $w=3$: $2!$ orders of men, 3 gaps, ${}^{3}P_{3}=6$: $12$. $w=4$: one man gives only 2 gaps for 4 women, so no seating.",
+  "$N_{1}=24\\cdot72+24\\cdot12+4\\cdot0=1728+288=2016$.",
+  "$N_{2}$ (bundle method): tie the $w$ women into one block ($w!$ inner orders) and arrange the block with the $5-w$ men: $(6-w)!$ orders.",
+  "$w=2$: $4!\\cdot2!=48$; $w=3$: $3!\\cdot3!=36$; $w=4$: $2!\\cdot4!=48$. $N_{2}=24\\cdot48+24\\cdot36+4\\cdot48=1152+864+192=2208$.",
+  "Hence $N_{1}-N_{2}=2016-2208=-192$.",
+  "",
+  "Final Answer: -192"
+ ],
+ "originality_note": "New: one committee-then-seating process scored twice, once with the gap method and once with the bundle method, across the cases w = 2, 3, 4 women; the case w = 4 is impossible for one count and large for the other (way 5: four ideas in one process). Closest known: 'committee of 5 with at least 2 women' (NCERT) and 'seat m men and n women so that no two women sit together'. Different because: the selection and the two seating rules interact case by case, and the sign of the answer depends on the empty case.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Arrangements with specified objects together (bundle method)",
+  "Arrangements with specified objects separated (gap method)",
+  "Arrangements where no two alike objects are adjacent",
+  "Committee and team formation with constraints"
+ ],
+ "concept_use": {
+  "Arrangements with specified objects together (bundle method)": "N2 treats the women of the team as one block (bundle method).",
+  "Arrangements with specified objects separated (gap method)": "N1 seats the men first and puts the women into separate gaps (gap method).",
+  "Arrangements where no two alike objects are adjacent": "In the M/W pattern of a seating, 'no two women adjacent' is the condition that no two alike letters W are adjacent; with 4 W and 1 M it is impossible.",
+  "Committee and team formation with constraints": "Teams with at least two women are counted by cases w = 2, 3, 4 (committee with a constraint)."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all teams and seatings (N1 = 2016, N2 = 2208), that for w = 2 'consecutive' means adjacent so the two counts are disjoint, and that -192 is a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Splitting by the number of women and counting each case with the gap method and with the bundle method.",
+ "justification": "Casework over three team types, each needing two different arrangement methods, with one empty case; exact arithmetic with no options. Level 3, comparable to the restricted team counting in 2024-P1-Q11 (L4) but more routine.",
+ "nearest_anchor": "2024-P1-Q11 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

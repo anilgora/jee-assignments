@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "A bag contains three identical white balls and three balls of different colours (one red, one green and one blue). Let $N_{1}$ be the number of ways of selecting three balls from the bag. Let $N_{2}$ be the number of ways of selecting three balls if the three white balls are numbered 1, 2, 3, so that all six balls are distinguishable. Then the value of $\\dfrac{N_{1}}{N_{2}}$ is ______."
+ ],
+ "hindi": [
+  "एक थैले में तीन सर्वसम सफ़ेद गेंदें तथा भिन्न रंगों की तीन गेंदें (एक लाल, एक हरी तथा एक नीली) हैं। माना कि $N_{1}$ थैले में से तीन गेंदें चुनने के तरीकों की संख्या है। माना कि $N_{2}$ तीन गेंदें चुनने के तरीकों की संख्या है यदि तीनों सफ़ेद गेंदों पर 1, 2, 3 अंकित हों, जिससे सभी छः गेंदें विभेद्य हो जाएँ। तब $\\dfrac{N_{1}}{N_{2}}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$N_{1}$: choose $k$ coloured balls ($\\binom{3}{k}$), the rest white (one way, $3-k\\leq3$): $\\sum_{k=0}^{3}\\binom{3}{k}=2^{3}=8$",
+  "$N_{2}$: 3 from 6 distinct balls: $\\binom{6}{3}=20$",
+  "$\\dfrac{N_{1}}{N_{2}}=\\dfrac{8}{20}=0.4$",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "solution_full": [
+  "With identical white balls, a selection is fixed by which coloured balls it contains; if it contains $k$ coloured balls ($\\binom{3}{k}$ ways), it contains $3-k$ white balls, and there is only one way to take them because they are identical (and $3-k\\leq3$ are available).",
+  "$N_{1}=\\binom{3}{0}+\\binom{3}{1}+\\binom{3}{2}+\\binom{3}{3}=1+3+3+1=8$.",
+  "With all six balls distinguishable, $N_{2}=\\binom{6}{3}=20$.",
+  "$\\dfrac{N_{1}}{N_{2}}=\\dfrac{8}{20}=0.4$.",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "originality_note": "New: the same selection counted with identical and with distinguishable copies, where the identical white balls make every subset of the coloured balls give exactly one selection (2^3), compared with C(6,3) (way 5). Closest known: selections of r objects from p alike and q distinct objects. Different because: the ratio isolates the effect of identical copies.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Selection of r objects from n distinct objects",
+  "Selection from a mix of distinct and identical objects"
+ ],
+ "concept_use": {
+  "Selection of r objects from n distinct objects": "N2 = C(6,3) is the selection of 3 objects from 6 distinct objects.",
+  "Selection from a mix of distinct and identical objects": "N1 is a selection from a mix of identical (white) and distinct (coloured) balls, equal to the number of subsets of the coloured balls."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by listing the distinct multisets (8) and the 3-subsets of six labelled balls (20), and that 0.40 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Seeing that with identical white balls a selection is determined by its coloured balls.",
+ "justification": "Two short standard counts and a ratio. Level 2 (more than one move, no insight).",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

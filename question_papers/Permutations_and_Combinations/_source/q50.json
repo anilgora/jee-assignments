@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "english": [
+  "The value of $\\displaystyle\\sum_{d\\,\\mid\\,180}(-1)^{d+1}\\,d$, where the sum is taken over all positive divisors $d$ of 180, is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\sum_{d\\,\\mid\\,180}(-1)^{d+1}\\,d$ का मान, जहाँ योग 180 के सभी धनात्मक भाजकों $d$ पर लिया गया है, ______ है।"
+ ],
+ "solution": [
+  "$(-1)^{d+1}=+1$ for odd $d$, $-1$ for even $d$: sum $=$ (sum of odd divisors) $-$ (sum of even divisors)",
+  "$180=2^{2}\\cdot3^{2}\\cdot5$: odd divisors sum $=(1+3+9)(1+5)=78$",
+  "Even divisors $=2^{a}m$, $a\\in\\{1,2\\}$, $m$ odd: sum $=(2+4)\\cdot78=468$",
+  "Value $=78-468=-390$ $\\left(=(1-2-4)\\cdot78\\right)$",
+  "",
+  "Final Answer: -390"
+ ],
+ "solution_full": [
+  "For odd $d$, $(-1)^{d+1}=1$, and for even $d$, $(-1)^{d+1}=-1$. So the sum equals (sum of odd divisors) $-$ (sum of even divisors).",
+  "$180=2^{2}\\cdot3^{2}\\cdot5$. Every divisor is $2^{a}m$ with $a\\in\\{0,1,2\\}$ and $m$ an odd divisor, i.e. a divisor of $3^{2}\\cdot5=45$.",
+  "Sum of odd divisors ($a=0$): $(1+3+9)(1+5)=13\\cdot6=78$.",
+  "Sum of even divisors ($a=1,2$): $(2+4)\\cdot78=468$. (Check: $\\sigma(180)=(1+2+4)\\cdot78=546=78+468$.)",
+  "The sum is $78-468=-390$, i.e. $(1-2-4)\\cdot78$.",
+  "",
+  "Final Answer: -390"
+ ],
+ "originality_note": "New: a signed divisor sum in which the sign depends on the parity of the divisor, so the sum-of-divisors product formula must be split by the power of 2 and recombined with signs (way 4: a factorisation of a signed sum). Closest known: 'sum of the odd divisors of 180' and 'sum of all divisors of N'. Different because: the alternating sign makes the answer (1 - 2 - 4) times the odd part.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Divisors based problems",
+  "Number of divisors, sum of divisors and product of divisors"
+ ],
+ "concept_use": {
+  "Divisors based problems": "180 = 2^2 3^2 5 and the divisors are 2^a m with m odd; this is the divisor-based structure used to split by parity.",
+  "Number of divisors, sum of divisors and product of divisors": "The sum-of-divisors formula (1+3+9)(1+5) = 78 for the odd part and (2+4) x 78 for the even part."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by direct summation over the 18 divisors (-390), that (-1)^(d+1) is +1 for odd d, and that -390 is a negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Splitting the divisors by the power of 2 and using the sum-of-divisors product.",
+ "justification": "A routine use of the sum-of-divisors formula with a parity split, with none of the factoring insight of 2026-P2-Q6 (L4); level 2.",
+ "nearest_anchor": "2024-P2-Q8 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

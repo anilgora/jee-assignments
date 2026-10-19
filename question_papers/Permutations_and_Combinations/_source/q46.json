@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "A college has 5 teachers in Physics, 4 in Chemistry and 3 in Mathematics. A committee of 4 teachers is to be formed containing at least one teacher from each of the three departments. Two of the teachers, $X$ (from Physics) and $Y$ (from Mathematics), refuse to serve together on the committee. Then the number of ways of forming the committee is ______."
+ ],
+ "hindi": [
+  "एक महाविद्यालय में भौतिकी के 5, रसायन के 4 तथा गणित के 3 शिक्षक हैं। 4 शिक्षकों की एक समिति बनानी है जिसमें तीनों विभागों में से प्रत्येक से कम से कम एक शिक्षक हो। शिक्षकों में से दो, $X$ (भौतिकी से) तथा $Y$ (गणित से), समिति में एक साथ कार्य करने से मना करते हैं। तब समिति बनाने के तरीकों की संख्या ______ है।"
+ ],
+ "solution": [
+  "Without the refusal: one department gives 2 members: $\\binom{5}{2}\\cdot4\\cdot3+5\\binom{4}{2}\\cdot3+5\\cdot4\\binom{3}{2}=120+90+60=270$",
+  "Complement: committees with both $X$ and $Y$; the other 2 come from the remaining $4P,4C,2M$ and must include a chemist",
+  "$\\binom{10}{2}-\\binom{6}{2}=45-15=30$",
+  "Required $=270-30=240$",
+  "",
+  "Final Answer: 240"
+ ],
+ "solution_full": [
+  "Committees of 4 with all three departments: the department sizes are $2,1,1$ in some order. Physics twice: $\\binom{5}{2}\\cdot4\\cdot3=120$; Chemistry twice: $5\\cdot\\binom{4}{2}\\cdot3=90$; Mathematics twice: $5\\cdot4\\cdot\\binom{3}{2}=60$. Total $270$.",
+  "(Check by complementary counting: $\\binom{12}{4}-\\left[\\binom{7}{4}+\\binom{8}{4}+\\binom{9}{4}\\right]+\\left[\\binom{3}{4}+\\binom{4}{4}+\\binom{5}{4}\\right]=495-231+6=270$.)",
+  "Remove the committees containing both $X$ and $Y$. With $X$ and $Y$ in, Physics and Mathematics are covered, and the other 2 members come from the remaining $4$ Physics, $4$ Chemistry and $2$ Mathematics teachers, with at least one chemist.",
+  "By complementary counting, that is $\\binom{10}{2}-\\binom{6}{2}=45-15=30$.",
+  "Number of committees $=270-30=240$.",
+  "",
+  "Final Answer: 240"
+ ],
+ "originality_note": "New: a committee condition (every department represented) with a refusal clause whose correction term itself needs a complement (the remaining two must supply a chemist) (way 5). Closest known: 'committee of 5 from 6 men and 4 women with at least 2 women' (NCERT) and 'two persons refuse to serve together'. Different because: the refusal correction depends on which departments X and Y already cover. The first design used the NCERT 6-men-4-women base and was replaced.",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Committee and team formation with constraints",
+  "Counting by bijection and complementary counting"
+ ],
+ "concept_use": {
+  "Committee and team formation with constraints": "The committee must include every department (a constraint split into the patterns 2,1,1) and must not contain both X and Y.",
+  "Counting by bijection and complementary counting": "Complementary counting is used twice: removing committees with both X and Y, and inside that, removing pairs without a chemist (also the check 495 - 231 + 6)."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all 495 committees (240), that X and Y belong to different departments as stated, and that 240 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Counting the 270 committees with all departments and removing the 30 with both X and Y.",
+ "justification": "Routine committee casework and a complement; level 2.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

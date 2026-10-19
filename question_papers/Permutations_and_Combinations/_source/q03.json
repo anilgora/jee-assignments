@@ -1,0 +1,56 @@
+{
+ "type": "SCQ",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "Six students $S_{1},S_{2},\\ldots,S_{6}$ write a test. For peer review the six answer scripts are redistributed among them, one script to each student, in such a way that no student receives the script written by that student; all such redistributions are equally likely. The probability that $S_{1}$ receives the script of $S_{2}$ and $S_{2}$ receives the script of $S_{1}$ is",
+  "",
+  "(A) $\\dfrac{1}{30}$",
+  "(B) $\\dfrac{9}{265}$",
+  "(C) $\\dfrac{1}{25}$",
+  "(D) $\\dfrac{44}{265}$"
+ ],
+ "hindi": [
+  "छः विद्यार्थी $S_{1},S_{2},\\ldots,S_{6}$ एक परीक्षा देते हैं। परस्पर मूल्यांकन के लिए छः उत्तर-पुस्तिकाएँ उनमें इस प्रकार पुनः वितरित की जाती हैं कि प्रत्येक विद्यार्थी को एक पुस्तिका मिले और किसी भी विद्यार्थी को उसकी स्वयं लिखी पुस्तिका न मिले; ऐसे सभी वितरण समसम्भाव्य हैं। $S_{1}$ को $S_{2}$ की पुस्तिका तथा $S_{2}$ को $S_{1}$ की पुस्तिका मिलने की प्रायिकता है",
+  "",
+  "(A) $\\dfrac{1}{30}$",
+  "(B) $\\dfrac{9}{265}$",
+  "(C) $\\dfrac{1}{25}$",
+  "(D) $\\dfrac{44}{265}$"
+ ],
+ "solution": [
+  "Sample space: derangements of 6 scripts, $D_{6}=6!\\left(1-1+\\dfrac{1}{2!}-\\dfrac{1}{3!}+\\dfrac{1}{4!}-\\dfrac{1}{5!}+\\dfrac{1}{6!}\\right)=265$",
+  "Favourable: $S_{1}\\leftrightarrow S_{2}$ swapped; the other 4 scripts must still avoid their writers $\\Rightarrow D_{4}=9$",
+  "Probability $=\\dfrac{D_{4}}{D_{6}}=\\dfrac{9}{265}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "A redistribution is a permutation $\\sigma$ of $\\{1,\\ldots,6\\}$ ($S_{i}$ receives the script of $S_{\\sigma(i)}$) with $\\sigma(i)\\neq i$ for all $i$, i.e. a derangement. All derangements are equally likely, so the sample space has $D_{6}$ elements.",
+  "$D_{n}=n!\\sum_{k=0}^{n}\\dfrac{(-1)^{k}}{k!}$ gives $D_{4}=24\\left(\\dfrac{1}{2}-\\dfrac{1}{6}+\\dfrac{1}{24}\\right)=9$ and $D_{6}=720\\left(\\dfrac{1}{2}-\\dfrac{1}{6}+\\dfrac{1}{24}-\\dfrac{1}{120}+\\dfrac{1}{720}\\right)=360-120+30-6+1=265$.",
+  "Favourable outcomes: $\\sigma(1)=2$ and $\\sigma(2)=1$. Then $\\sigma$ maps $\\{3,4,5,6\\}$ onto itself, and the condition $\\sigma(i)\\neq i$ for $i=3,4,5,6$ says this restriction is a derangement of four objects: $D_{4}=9$ ways.",
+  "Hence the probability is $\\dfrac{9}{265}$.",
+  "(Treating the redistribution as an arbitrary permutation would give $\\dfrac{4!}{6!}=\\dfrac{1}{30}$, which ignores the condition that defines the sample space.)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a conditional matching probability in which the sample space itself is the set of derangements and the event (a 2-cycle between two given people) leaves a smaller derangement, so the answer is the ratio D4/D6 (way 5). Closest known: 'probability that no letter goes into the right envelope' (D_n/n!). Different because: the derangement is the condition, not the event, and the event forces a second derangement inside it.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Derangements",
+  "Derangement and matching probability problems"
+ ],
+ "concept_use": {
+  "Derangements": "The sample space is the set of D6 = 265 derangements, and the four remaining scripts must again be deranged (D4 = 9).",
+  "Derangement and matching probability problems": "Matching probability under the condition 'nobody gets their own script': favourable derangements divided by all derangements; the unconditional value 1/30 is the distractor."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked that 'redistributions equally likely' fixes the sample space as derangements, that the swap leaves exactly a derangement of the other four, and that 9/265 is at (B) as planned. Changed: replaced 'his or her own script' by 'the script written by that student'.",
+ "level": 3,
+ "key_step": "Recognising that the sample space is the set of derangements and that the event leaves a derangement of the remaining four.",
+ "justification": "Two ideas linked: the conditional sample space (derangements, not all permutations) and the reduction of the event to D4; the natural mistake 1/30 is an option. Comparable to the conditional probability 2024-P1-Q2 (L3).",
+ "nearest_anchor": "2024-P1-Q2 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

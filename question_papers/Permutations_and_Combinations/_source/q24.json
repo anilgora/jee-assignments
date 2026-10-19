@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Five married couples sit at a round table with ten equally spaced seats so that men and women alternate. Two seatings are regarded as the same if one can be obtained from the other by a rotation. Let Mr. X and Mrs. X be one of the couples. Then the number of seatings in which Mrs. X sits diametrically opposite Mr. X is ______."
+ ],
+ "hindi": [
+  "पाँच विवाहित दम्पति दस समान दूरी वाली सीटों वाली एक गोल मेज़ पर इस प्रकार बैठते हैं कि पुरुष तथा महिलाएँ एकान्तर क्रम में हों। दो बैठक-व्यवस्थाएँ समान मानी जाती हैं यदि एक को दूसरे से घूर्णन द्वारा प्राप्त किया जा सके। माना कि श्री X तथा श्रीमती X इन दम्पतियों में से एक हैं। तब उन बैठक-व्यवस्थाओं की संख्या, जिनमें श्रीमती X, श्री X के ठीक व्यासतः सम्मुख बैठती हैं, ______ है।"
+ ],
+ "solution": [
+  "Fix Mr. X at seat 0 (removes rotations); men take the even seats $0,2,4,6,8$, women the odd seats",
+  "Seat opposite 0 is seat 5, an odd (women's) seat, so Mrs. X sits there: 1 way",
+  "Other 4 men in seats $2,4,6,8$: $4!$; other 4 women in seats $1,3,7,9$: $4!$",
+  "Number $=4!\\cdot4!=576$",
+  "",
+  "Final Answer: 576"
+ ],
+ "solution_full": [
+  "Number the seats $0,1,\\ldots,9$ round the table. Fixing Mr. X at seat 0 removes the rotations, so each seating is counted once.",
+  "Men and women alternate, so the men occupy the even seats $0,2,4,6,8$ and the women the odd seats $1,3,5,7,9$.",
+  "The seat diametrically opposite seat 0 is seat 5. It is an odd seat, so Mrs. X can sit there and the alternation is kept: 1 way.",
+  "The other four men fill seats $2,4,6,8$ in $4!=24$ ways, and the other four women fill seats $1,3,7,9$ in $4!=24$ ways.",
+  "Number of seatings $=24\\cdot24=576$. (Without the condition on Mrs. X the alternating seatings number $4!\\cdot5!=2880$.)",
+  "",
+  "Final Answer: 576"
+ ],
+ "originality_note": "New: an alternating round-table seating with ten equally spaced seats where the 'diametrically opposite' condition is compatible with alternation only because 10/2 = 5 is odd (way 4: a parity feature of the seats). Closest known: 'n men and n women alternately round a table: (n-1)! n!' and the AMC no-spouse-adjacent-or-opposite problem. Different because: the opposite-seat condition is required, not forbidden, and its compatibility with alternation must be seen. The first design (A, B together and C, D apart at a table of seven) was a published skeleton and was replaced.",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Circular arrangements with restrictions (together, alternating)"
+ ],
+ "concept_use": {
+  "Circular arrangements with restrictions (together, alternating)": "Alternating circular seating with one person fixed to remove rotations: the men's and women's seats are the even and odd seats, and Mrs. X's seat is forced."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all seatings with Mr. X fixed (576), that ten equally spaced seats make 'diametrically opposite' well defined, and that 576 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Fixing Mr. X, seeing that the opposite seat is a women's seat, and arranging the rest alternately.",
+ "justification": "Alternating circular seating with one forced seat: two routine steps. Level 2.",
+ "nearest_anchor": "2026-P2-Q2 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

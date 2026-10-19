@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "All the distinct words (with or without meaning) obtained by arranging the six letters of the word PEPPER are listed in dictionary order. One of these words is chosen at random. Let $p$ be the probability that the chosen word comes before PEPPER in the list and $q$ the probability that it comes after PEPPER. Then the value of $p-q$ is ______."
+ ],
+ "hindi": [
+  "शब्द PEPPER के छः अक्षरों को व्यवस्थित करके प्राप्त सभी भिन्न शब्दों (अर्थपूर्ण अथवा अर्थहीन) को शब्दकोश क्रम में सूचीबद्ध किया जाता है। इनमें से एक शब्द यादृच्छया चुना जाता है। माना कि $p$ चुने गए शब्द के सूची में PEPPER से पहले आने की प्रायिकता है तथा $q$ उसके PEPPER के बाद आने की प्रायिकता है। तब $p-q$ का मान ______ है।"
+ ],
+ "solution": [
+  "Letters $E,E,P,P,P,R$: total $N=\\dfrac{6!}{2!\\,3!}=60$; alphabetical order $E<P<R$",
+  "Before PEPPER: E-----: $\\dfrac{5!}{3!}=20$; PEE---: $\\dfrac{3!}{2!}=3$; PEPE--: $2!=2$; then PEPPER itself",
+  "Rank $r=20+3+2+1=26$; $p=\\dfrac{25}{60}$, $q=\\dfrac{60-26}{60}=\\dfrac{34}{60}$",
+  "$p-q=\\dfrac{25-34}{60}=-\\dfrac{9}{60}=-0.15$",
+  "",
+  "Final Answer: -0.15"
+ ],
+ "solution_full": [
+  "PEPPER has the letters $E,E,P,P,P,R$, so the number of distinct words is $N=\\dfrac{6!}{2!\\,3!}=60$. In dictionary order $E<P<R$.",
+  "Words beginning with E: the other letters $E,P,P,P,R$ give $\\dfrac{5!}{3!}=20$ words, all before PEPPER.",
+  "Words beginning with P: next letter E (as in PEPPER). Third letter E: PEE followed by $P,P,R$ gives $\\dfrac{3!}{2!}=3$ words, all before PEPPER.",
+  "Third letter P (as in PEPPER): fourth letter E gives PEPE followed by $P,R$, i.e. 2 words, before PEPPER; fourth letter P gives PEPP followed by $E,R$: PEPPER, PEPPRE, and PEPPER is the first of these.",
+  "So $25$ words precede PEPPER and its rank is $r=26$; the number of words after it is $60-26=34$.",
+  "$p=\\dfrac{25}{60}$, $q=\\dfrac{34}{60}$, so $p-q=\\dfrac{2r-N-1}{N}=-\\dfrac{9}{60}=-0.15$.",
+  "",
+  "Final Answer: -0.15"
+ ],
+ "originality_note": "New: the rank of a word with repeated letters, converted into the difference of 'before' and 'after' probabilities (2r - N - 1)/N, which is exact to two decimals only because N = 60 (way 5: rank and permutations of alike objects linked through a probability). Closest known: 'rank of the word ... among the arrangements of its letters'. Different because: both the rank and the total with repetitions are needed, and the answer is their signed combination.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Formation of words; rank of a word in dictionary order",
+  "Permutations of alike objects"
+ ],
+ "concept_use": {
+  "Formation of words; rank of a word in dictionary order": "The rank of PEPPER is found by counting, letter by letter, the words that come earlier in dictionary order.",
+  "Permutations of alike objects": "Every count (total 60, blocks of 20, 3, 2) is a permutation of alike objects n!/(p!q!...)."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by sorting all 60 distinct arrangements (PEPPER has rank 26), that 'distinct words' removes duplicates from repeated letters, and that -0.15 is a negative decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Computing the rank of PEPPER among 60 words with repeated letters and converting it to p - q.",
+ "justification": "A rank computation with repeated letters at several levels plus the total count; one slip in a block changes the answer and there are no options. Level 3; nearest in kind 2021-P2-Q1 (L2) but longer, with a numerical answer.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

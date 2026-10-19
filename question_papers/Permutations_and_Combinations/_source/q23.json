@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Six distinct beads, of which three are red and three are blue, are strung together to form a necklace, all distinct necklaces being equally likely. Let $p$ be the probability that red and blue beads alternate on the necklace, and let $q$ be the probability that the three red beads are consecutive on the necklace. Then the value of $p-q$ is ______."
+ ],
+ "hindi": [
+  "छः भिन्न मनकों को, जिनमें तीन लाल तथा तीन नीले हैं, एक साथ पिरोकर एक हार बनाया जाता है, सभी भिन्न हार समसम्भाव्य हैं। माना कि $p$ हार पर लाल तथा नीले मनकों के एकान्तर क्रम में होने की प्रायिकता है, तथा $q$ तीनों लाल मनकों के हार पर क्रमागत होने की प्रायिकता है। तब $p-q$ का मान ______ है।"
+ ],
+ "solution": [
+  "Necklaces of 6 distinct beads: $\\dfrac{(6-1)!}{2}=60$ (rotations and turning over identified)",
+  "Alternate: round-table count $2!\\cdot3!=12$ (fix one red; other reds in the alternate places), necklaces $\\dfrac{12}{2}=6$",
+  "Reds consecutive: block of reds ($3!$) with 3 blues: $3!\\cdot3!=36$ round-table arrangements, necklaces $18$",
+  "$p=\\dfrac{6}{60}=0.1$, $q=\\dfrac{18}{60}=0.3$, $p-q=-0.2$",
+  "",
+  "Final Answer: -0.20"
+ ],
+ "solution_full": [
+  "A necklace can be rotated and turned over. For $n$ distinct beads, there are $(n-1)!$ circular arrangements up to rotation, and turning over pairs them (no arrangement of distinct beads with $n\\geq3$ is its own mirror image), so there are $\\dfrac{(n-1)!}{2}$ necklaces. For $n=6$: $\\dfrac{120}{2}=60$.",
+  "Both properties (alternating colours, reds consecutive) are unchanged by rotation and by turning over, so in each case the number of necklaces is half the number of circular arrangements up to rotation.",
+  "Alternating: fix one red bead to remove rotations; the other two reds must be at the positions 2 and 4 places away (2! orders), and the blues fill the remaining 3 positions ($3!$). That gives $12$ arrangements and $6$ necklaces.",
+  "Reds consecutive: treat the reds as a block ($3!$ inner orders); with the 3 blues there are 4 units around a circle, $(4-1)!=6$ arrangements. That gives $36$ arrangements and $18$ necklaces.",
+  "$p=\\dfrac{6}{60}=0.1$ and $q=\\dfrac{18}{60}=0.3$, so $p-q=-0.2$.",
+  "",
+  "Final Answer: -0.20"
+ ],
+ "originality_note": "New: two restricted necklace counts (alternating colours, one colour in a block) compared through probabilities over the 60 necklaces, which needs the 'reflection preserves the property' argument for each count (way 5). Closest known: 'n boys and n girls alternately round a table' and AMC-type bead arrangement probabilities. Different because: the objects are necklaces, so the denominator and both numerators must each be halved for the right reason.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Circular permutations; clockwise/anticlockwise; necklace and garland",
+  "Circular arrangements with restrictions (together, alternating)"
+ ],
+ "concept_use": {
+  "Circular permutations; clockwise/anticlockwise; necklace and garland": "The sample space and both events are counted as necklaces (rotation and turning over identified), (n-1)!/2.",
+  "Circular arrangements with restrictions (together, alternating)": "The two restrictions are the 'alternating' and 'together' circular arrangements with distinct beads."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by reducing all 720 orders modulo the dihedral group (60 necklaces, 6 alternating, 18 with reds consecutive), and that -0.20 is a negative decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Counting both events as necklaces, with the factor 1/2 justified by reflection invariance.",
+ "justification": "Two circular counts plus the necklace correction applied consistently to numerator and denominator; a strong student must be careful about what is being divided by 2. Level 3, comparable to 2023-P2-Q2 (L3) probability.",
+ "nearest_anchor": "2023-P2-Q2 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

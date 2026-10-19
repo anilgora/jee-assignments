@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "english": [
+  "A row has 16 parking slots numbered $1,2,\\ldots,16$. Four identical cars are to be parked, at most one car in a slot, such that slots 1 and 16 remain empty and between any two parked cars there are at least two empty slots. The number of ways of choosing the four slots is",
+  "",
+  "(A) $126$",
+  "(B) $210$",
+  "(C) $495$",
+  "(D) $70$"
+ ],
+ "hindi": [
+  "एक पंक्ति में $1,2,\\ldots,16$ क्रमांकित 16 पार्किंग स्थान हैं। चार सर्वसम कारें इस प्रकार खड़ी करनी हैं कि किसी स्थान पर अधिकतम एक कार हो, स्थान 1 तथा 16 खाली रहें, और किन्हीं दो खड़ी कारों के बीच कम से कम दो खाली स्थान हों। चार स्थानों को चुनने के तरीकों की संख्या है",
+  "",
+  "(A) $126$",
+  "(B) $210$",
+  "(C) $495$",
+  "(D) $70$"
+ ],
+ "solution": [
+  "12 empty slots form gaps $g_{0},\\ldots,g_{4}$ around the 4 cars: $g_{0}+g_{1}+g_{2}+g_{3}+g_{4}=12$",
+  "Ends: $g_{0},g_{4}\\geq1$; between cars: $g_{1},g_{2},g_{3}\\geq2$",
+  "Put $h_{0}=g_{0}-1,\\ h_{4}=g_{4}-1,\\ h_{i}=g_{i}-2$: $\\sum h=12-2-6=4$, $h\\geq0$",
+  "Number $=\\binom{4+4}{4}=70$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "Choosing the slots is the same as choosing the numbers of empty slots before the first car ($g_{0}$), between consecutive cars ($g_{1},g_{2},g_{3}$) and after the last car ($g_{4}$). This correspondence is one-one because the cars are identical.",
+  "There are $16-4=12$ empty slots, so $g_{0}+g_{1}+g_{2}+g_{3}+g_{4}=12$.",
+  "Slot 1 empty means $g_{0}\\geq1$, slot 16 empty means $g_{4}\\geq1$, and at least two empty slots between cars means $g_{1},g_{2},g_{3}\\geq2$.",
+  "Substitute $h_{0}=g_{0}-1$, $h_{4}=g_{4}-1$, $h_{i}=g_{i}-2$ $(i=1,2,3)$: $h_{0}+\\cdots+h_{4}=12-1-1-2-2-2=4$ with all $h\\geq0$.",
+  "By the beggar's (stars and bars) method, the number of non-negative solutions of a sum of 5 variables equal to 4 is $\\binom{4+5-1}{5-1}=\\binom{8}{4}=70$.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: a no-two-consecutive selection strengthened to 'at least two empty slots between cars' with both ends empty, converted to a beggar's-method equation with mixed lower bounds (way 5). Closest known: choosing r of n seats with no two adjacent, C(n-r+1, r). Different because: both the gap size and the end conditions change the lower bounds, so the plain formula gives a distractor.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Selecting r objects from n in a row with no two consecutive",
+  "Non-negative integral solutions of x1+x2+...+xr = n (beggar's method)"
+ ],
+ "concept_use": {
+  "Selecting r objects from n in a row with no two consecutive": "The cars must not be in consecutive slots (in fact must be at least three apart), which is the 'no two consecutive' selection in strengthened form.",
+  "Non-negative integral solutions of x1+x2+...+xr = n (beggar's method)": "The gaps g0..g4 satisfy a linear equation with lower bounds; after the shift, stars and bars gives C(8,4)."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked that 'at most one car in a slot' and 'identical cars' make the count a count of 4-sets of slots, and that 70 is at (D) as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the empty slots as five gaps with lower bounds and applying stars and bars.",
+ "justification": "A routine chain: gap variables, shift for lower bounds, stars and bars; no insight beyond the standard conversion. Level 2, like the routine counting 2021-P2-Q1 (L2).",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

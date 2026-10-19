@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "A convex polygon has 27 diagonals, and no three of its diagonals pass through a common point inside the polygon. Each diagonal is divided into segments by the points at which it meets the other diagonals inside the polygon. Then the total number of these segments, taken over all the diagonals, is ______."
+ ],
+ "hindi": [
+  "एक उत्तल बहुभुज के 27 विकर्ण हैं, और इसके कोई तीन विकर्ण बहुभुज के अन्दर किसी उभयनिष्ठ बिन्दु से नहीं गुजरते। प्रत्येक विकर्ण उन बिन्दुओं द्वारा खण्डों में विभाजित होता है जिन पर वह बहुभुज के अन्दर अन्य विकर्णों से मिलता है। तब सभी विकर्णों पर लिए गए इन खण्डों की कुल संख्या ______ है।"
+ ],
+ "solution": [
+  "$\\dfrac{n(n-3)}{2}=27\\Rightarrow n^{2}-3n-54=0\\Rightarrow n=9$",
+  "Interior intersection points: each set of 4 vertices gives one crossing of two diagonals: $\\binom{9}{4}=126$",
+  "A diagonal with $k$ crossing points has $k+1$ segments; each point lies on 2 diagonals",
+  "Segments $=27+2\\cdot126=279$",
+  "",
+  "Final Answer: 279"
+ ],
+ "solution_full": [
+  "For a convex $n$-gon the number of diagonals is $\\binom{n}{2}-n=\\dfrac{n(n-3)}{2}$. So $\\dfrac{n(n-3)}{2}=27$, i.e. $n^{2}-3n-54=0=(n-9)(n+6)$, and $n=9$.",
+  "Two diagonals cross inside a convex polygon exactly when their four endpoints are distinct and alternate around the polygon; each set of 4 vertices determines exactly one such pair. Since no three diagonals are concurrent, distinct sets give distinct points: there are $\\binom{9}{4}=126$ interior intersection points.",
+  "If a diagonal contains $k$ interior intersection points, they cut it into $k+1$ segments. Summing over all diagonals: total segments $=27+\\sum k$.",
+  "Each interior intersection point lies on exactly 2 diagonals, so $\\sum k=2\\cdot126=252$.",
+  "Total number of segments $=27+252=279$.",
+  "",
+  "Final Answer: 279"
+ ],
+ "originality_note": "New: the number of pieces into which the diagonals of a convex polygon are cut, found from the number of diagonals and the C(n,4) crossings by a double count (each crossing lies on two diagonals) (way 5). Closest known: 'no three diagonals concurrent; number of interior intersection points is 70; find n' (published; the first design reversed it and was replaced). Different because: the asked quantity needs the double-counting step after the C(n,4) result.",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Number of straight lines, triangles and diagonals from n points",
+  "Number of points of intersection and regions formed by lines"
+ ],
+ "concept_use": {
+  "Number of straight lines, triangles and diagonals from n points": "The number of diagonals n(n-3)/2 = 27 gives n = 9.",
+  "Number of points of intersection and regions formed by lines": "The interior intersection points of the diagonals, C(9,4) = 126, each split two diagonals."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked that n(n-3)/2 = 27 has the unique positive root 9, that 'no three concurrent' makes the C(9,4) points distinct, and that 279 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Finding n = 9, then segments = diagonals + 2 x C(9,4).",
+ "justification": "Two standard results (diagonal count, C(n,4) intersections) and one double count; routine. Level 2.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

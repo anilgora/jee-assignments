@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "The five letters of the word MOTTO are arranged in a row at random, all distinct arrangements being equally likely. Then the probability that no two identical letters are adjacent is ______."
+ ],
+ "hindi": [
+  "शब्द MOTTO के पाँच अक्षरों को एक पंक्ति में यादृच्छया व्यवस्थित किया जाता है, सभी भिन्न व्यवस्थाएँ समसम्भाव्य हैं। तब किन्हीं दो सर्वसम अक्षरों के आसन्न न होने की प्रायिकता ______ है।"
+ ],
+ "solution": [
+  "Total $=\\dfrac{5!}{2!\\,2!}=30$. Arrange $M,T,T$ first, then put the two O's into different gaps",
+  "$TMT$: T's already apart; O's in 2 of the 4 gaps: $\\binom{4}{2}=6$",
+  "$TTM$ or $MTT$: one O must go between the T's, the other O into one of the other 3 gaps: $3+3=6$",
+  "Favourable $=12$, probability $=\\dfrac{12}{30}=0.4$",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "solution_full": [
+  "MOTTO has $M$ once and $O$, $T$ twice each, so there are $\\dfrac{5!}{2!\\,2!}=30$ distinct arrangements, all equally likely.",
+  "Gap method: first arrange $M,T,T$ (3 distinct orders: $TMT$, $TTM$, $MTT$), then insert the two O's into the 4 gaps, at most one O per gap so that the O's are not adjacent.",
+  "Order $TMT$: the T's are separated; any 2 of the 4 gaps work: $\\binom{4}{2}=6$ arrangements.",
+  "Order $TTM$: the gaps are $\\_\\,T\\,\\_\\,T\\,\\_\\,M\\,\\_$. The T's are adjacent unless an O goes into the gap between them, so one O takes that gap and the other O takes one of the remaining 3 gaps: 3 arrangements. Order $MTT$: similarly 3.",
+  "Favourable arrangements: $6+3+3=12$. (Inclusion-exclusion check: $30-12-12+6=12$, where $12$ arrangements have $OO$ together, 12 have $TT$ together and 6 have both.)",
+  "Probability $=\\dfrac{12}{30}=\\dfrac{2}{5}=0.4$.",
+  "",
+  "Final Answer: 0.40"
+ ],
+ "originality_note": "New: a word with two different repeated letters where the gap method must be adapted: when the first repeated letter is adjacent, one copy of the second letter is forced into the gap between them (way 5: gap method and the no-two-alike-adjacent condition linked). Closest known: 'arrangements of PERMUTATION where no two vowels and no two identical letters are adjacent' (the first design, TATTOO, followed that published skeleton and was replaced). Different because: the separation of one pair is achieved by the other pair, so the cases differ.",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Arrangements with specified objects separated (gap method)",
+  "Arrangements where no two alike objects are adjacent"
+ ],
+ "concept_use": {
+  "Arrangements with specified objects separated (gap method)": "The O's are inserted into the gaps of an arrangement of M, T, T, at most one per gap.",
+  "Arrangements where no two alike objects are adjacent": "No two identical letters adjacent applies to both repeated letters O and T; the TT-adjacent orders need an O between the T's."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating the 30 distinct arrangements (12 favourable), and that 0.40 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Gap method on M, T, T with the forced O between adjacent T's.",
+ "justification": "A routine gap-method count with a small case split (or a three-term inclusion-exclusion). Level 2.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

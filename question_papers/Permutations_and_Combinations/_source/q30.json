@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "The coefficient of $x^{7}$ in the expansion of $(1-x)^{2}\\left(1+x+x^{2}\\right)^{6}$ is ______."
+ ],
+ "hindi": [
+  "$(1-x)^{2}\\left(1+x+x^{2}\\right)^{6}$ के प्रसार में $x^{7}$ का गुणांक ______ है।"
+ ],
+ "solution": [
+  "$(1-x)(1+x+x^{2})=1-x^{3}\\Rightarrow$ expression $=(1-x^{3})^{2}(1+x+x^{2})^{4}=(1-2x^{3}+x^{6})(1+x+x^{2})^{4}$",
+  "Let $c_{k}=[x^{k}](1+x+x^{2})^{4}$: $c_{k}=\\sum\\dfrac{4!}{p!\\,q!\\,r!}$ over $p+q+r=4$, $q+2r=k$",
+  "$c_{7}$: $(0,1,3)$: $4$; $c_{4}$: $(0,4,0),(1,2,1),(2,0,2)$: $1+12+6=19$; $c_{1}$: $(3,1,0)$: $4$",
+  "Coefficient $=c_{7}-2c_{4}+c_{1}=4-38+4=-30$",
+  "",
+  "Final Answer: -30"
+ ],
+ "solution_full": [
+  "Since $(1-x)(1+x+x^{2})=1-x^{3}$, we have $(1-x)^{2}(1+x+x^{2})^{6}=(1-x^{3})^{2}(1+x+x^{2})^{4}=(1-2x^{3}+x^{6})(1+x+x^{2})^{4}$.",
+  "Let $c_{k}$ be the coefficient of $x^{k}$ in $(1+x+x^{2})^{4}$. By the multinomial theorem, $c_{k}=\\sum\\dfrac{4!}{p!\\,q!\\,r!}$ over non-negative $p,q,r$ with $p+q+r=4$ and $q+2r=k$ (the term is $1^{p}x^{q}(x^{2})^{r}$).",
+  "$c_{7}$: $q+2r=7$, $p+q+r=4$ gives only $(p,q,r)=(0,1,3)$: $\\dfrac{4!}{0!\\,1!\\,3!}=4$.",
+  "$c_{4}$: $(0,4,0)$: $1$; $(1,2,1)$: $\\dfrac{24}{1\\cdot2\\cdot1}=12$; $(2,0,2)$: $\\dfrac{24}{2\\cdot1\\cdot2}=6$; so $c_{4}=19$.",
+  "$c_{1}$: $(3,1,0)$: $\\dfrac{24}{6}=4$.",
+  "The coefficient of $x^{7}$ is $1\\cdot c_{7}-2\\cdot c_{4}+1\\cdot c_{1}=4-38+4=-30$. (The full row of $(1+x+x^{2})^{4}$ is $1,4,10,16,19,16,10,4,1$, which sums to $3^{4}=81$.)",
+  "",
+  "Final Answer: -30"
+ ],
+ "originality_note": "New: a product whose factor (1 - x)(1 + x + x^2) = 1 - x^3 shortens the multinomial work to three coefficients of (1 + x + x^2)^4, each extracted by the multinomial theorem (way 4: a hidden factorisation). Closest known: coefficient of x^7 in (1 - x - x^2 + x^3)^6, where 1 - x - x^2 + x^3 = (1 - x)^2 (1 + x). Different because: the factorisation leaves a trinomial power whose coefficients must still be extracted.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Multinomial theorem as a counting tool (coefficient extraction)",
+  "Multinomial Theorem"
+ ],
+ "concept_use": {
+  "Multinomial theorem as a counting tool (coefficient extraction)": "Each needed coefficient c_k of (1 + x + x^2)^4 is extracted by counting the triples (p, q, r) with q + 2r = k (a counting tool).",
+  "Multinomial Theorem": "The multinomial theorem gives the general term 4!/(p! q! r!) 1^p x^q (x^2)^r."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked with sympy expansion (-30), and that -30 is a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Using (1 - x)(1 + x + x^2) = 1 - x^3, then extracting c_7, c_4, c_1 by the multinomial theorem.",
+ "justification": "One non-obvious simplification plus a multinomial extraction of three coefficients; without the factorisation the direct extraction is long. Level 3, like 2026-P1-Q13 (L3).",
+ "nearest_anchor": "2026-P1-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

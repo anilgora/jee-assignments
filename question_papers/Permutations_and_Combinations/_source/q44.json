@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "A $4\\times4$ board is divided into 16 unit squares by grid lines. A rectangle on the board is a rectangle whose sides lie along the grid lines (every square is also a rectangle). Then the number of rectangles on the board that contain none of the four central unit squares is ______."
+ ],
+ "hindi": [
+  "एक $4\\times4$ बोर्ड को ग्रिड रेखाओं द्वारा 16 इकाई वर्गों में विभाजित किया गया है। बोर्ड पर एक आयत वह आयत है जिसकी भुजाएँ ग्रिड रेखाओं पर स्थित हैं (प्रत्येक वर्ग भी एक आयत है)। तब बोर्ड पर उन आयतों की संख्या, जो चार केन्द्रीय इकाई वर्गों में से किसी को भी नहीं समाहित करते, ______ है।"
+ ],
+ "solution": [
+  "Rectangle $\\leftrightarrow$ (row interval, column interval); $\\binom{5}{2}=10$ intervals each way, total $100$",
+  "It contains a central square iff its row interval meets rows $\\{2,3\\}$ and its column interval meets columns $\\{2,3\\}$",
+  "Row intervals missing both rows 2, 3: only $[1,1]$ and $[4,4]$ $\\Rightarrow$ 8 meet; same for columns",
+  "Containing a central square: $8\\cdot8=64$; required $=100-64=36$",
+  "",
+  "Final Answer: 36"
+ ],
+ "solution_full": [
+  "Bijection: a rectangle is fixed by choosing 2 of the 5 horizontal grid lines and 2 of the 5 vertical grid lines, i.e. by a row interval and a column interval. There are $\\binom{5}{2}=10$ of each, so $100$ rectangles in all.",
+  "Number the rows and columns $1,2,3,4$; the central squares are those in rows 2, 3 and columns 2, 3. A rectangle contains a central square exactly when its row interval contains row 2 or row 3 and its column interval contains column 2 or column 3 (then it contains the square at that row and column).",
+  "A row interval containing neither row 2 nor row 3 must lie in row 1 alone or row 4 alone: 2 intervals. So $10-2=8$ row intervals meet $\\{2,3\\}$; likewise 8 column intervals.",
+  "Complementary counting: rectangles containing at least one central square: $8\\cdot8=64$.",
+  "Rectangles containing none: $100-64=36$.",
+  "",
+  "Final Answer: 36"
+ ],
+ "originality_note": "New: rectangles avoiding a central block, counted through the bijection rectangle = (row interval, column interval) and a complement in which the condition factorises into rows and columns (way 4: a product structure hidden in a 2-D condition). Closest known: 'number of rectangles / squares on an m x n board' (C(m+1,2)C(n+1,2)). Different because: 'contains none of the central squares' is not a product condition, but its complement is.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Number of squares and rectangles in a grid",
+  "Counting by bijection and complementary counting"
+ ],
+ "concept_use": {
+  "Number of squares and rectangles in a grid": "Rectangles on the 4 x 4 board are counted as C(5,2)^2 = 100 by choosing grid lines.",
+  "Counting by bijection and complementary counting": "A rectangle corresponds to a pair (row interval, column interval) (bijection); the complement 'contains a central square' factorises as 8 x 8."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumeration (36), that 'contain' means the unit square is part of the rectangle, and that 36 is a positive 2-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Taking the complement, which factorises into row and column interval conditions.",
+ "justification": "The direct condition is awkward; the complement with the interval bijection makes it a product. Two ideas, numerical answer. Level 3.",
+ "nearest_anchor": "2023-P2-Q16 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

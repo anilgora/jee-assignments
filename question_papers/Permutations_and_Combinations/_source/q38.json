@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $N=2^{6}\\cdot3^{6}\\cdot5^{4}\\cdot7^{2}$. Then the number of ways of writing $N$ as a product $a\\cdot b$ of two even positive integers $a$ and $b$, where $a\\cdot b$ and $b\\cdot a$ are regarded as the same, is ______."
+ ],
+ "hindi": [
+  "माना कि $N=2^{6}\\cdot3^{6}\\cdot5^{4}\\cdot7^{2}$ है। तब $N$ को दो सम धनात्मक पूर्णांकों $a$ तथा $b$ के गुणनफल $a\\cdot b$ के रूप में लिखने के तरीकों की संख्या, जहाँ $a\\cdot b$ तथा $b\\cdot a$ को समान माना जाता है, ______ है।"
+ ],
+ "solution": [
+  "$a=2a'$, $b=2b'$ $\\Rightarrow a'b'=\\dfrac{N}{4}=M=2^{4}\\cdot3^{6}\\cdot5^{4}\\cdot7^{2}$ (any positive $a',b'$)",
+  "$d(M)=5\\cdot7\\cdot5\\cdot3=525$; $M=(2^{2}\\cdot3^{3}\\cdot5^{2}\\cdot7)^{2}$ is a perfect square",
+  "Unordered factorisations of a perfect square: $\\dfrac{d(M)+1}{2}=\\dfrac{526}{2}=263$",
+  "",
+  "Final Answer: 263"
+ ],
+ "solution_full": [
+  "If $a$ and $b$ are even with $ab=N$, write $a=2a'$, $b=2b'$. Then $a'b'=\\dfrac{N}{4}=M=2^{4}\\cdot3^{6}\\cdot5^{4}\\cdot7^{2}$, and conversely every factorisation $M=a'b'$ gives even $a=2a'$, $b=2b'$. So we count unordered factorisations of $M$.",
+  "Number of divisors: $d(M)=(4+1)(6+1)(4+1)(2+1)=525$.",
+  "Ordered factorisations $M=a'\\cdot b'$ correspond to divisors $a'$: 525 of them. All exponents of $M$ are even, so $M$ is a perfect square with $\\sqrt{M}=2^{2}\\cdot3^{3}\\cdot5^{2}\\cdot7=18900$, and exactly one factorisation has $a'=b'$.",
+  "The other $524$ ordered factorisations pair off into $262$ unordered ones, so the number of unordered factorisations is $262+1=\\dfrac{525+1}{2}=263$.",
+  "",
+  "Final Answer: 263"
+ ],
+ "originality_note": "New: factorisations of a perfect square into two factors under a parity restriction, which is removed by the substitution a = 2a', b = 2b' before the (d+1)/2 formula applies (way 5). Closest known: 'number of ways of writing N as a product of two factors' (d/2 or (d+1)/2). Different because: the restriction changes the number being factorised, and the student must check that N/4 is still a perfect square.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Number of divisors, sum of divisors and product of divisors",
+  "Expressing N as a product of two factors (perfect square case)"
+ ],
+ "concept_use": {
+  "Number of divisors, sum of divisors and product of divisors": "d(M) = 5.7.5.3 = 525 is the number of divisors of N/4 from its prime factorisation.",
+  "Expressing N as a product of two factors (perfect square case)": "N/4 is a perfect square, so its unordered factorisations number (d + 1)/2 = 263."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by listing all divisors of N (263 unordered pairs of even factors), that 'a.b and b.a regarded as the same' fixes unordered counting (with a = b allowed), and that 263 is a positive 3-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Reducing to factorisations of N/4 and using (d + 1)/2 for a perfect square.",
+ "justification": "Two ideas linked (removing the parity condition by substitution, then the perfect-square case of the factor-pair formula); numerical answer. Level 3.",
+ "nearest_anchor": "2026-P2-Q6 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

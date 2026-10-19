@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "The number of arrangements of all the letters of the word SUCCESSES that read the same from left to right as from right to left is ______."
+ ],
+ "hindi": [
+  "शब्द SUCCESSES के सभी अक्षरों की उन व्यवस्थाओं की संख्या, जो बाएँ से दाएँ तथा दाएँ से बाएँ समान पढ़ी जाती हैं, ______ है।"
+ ],
+ "solution": [
+  "Letters: $S^{4},C^{2},E^{2},U^{1}$; a palindrome of length 9 has a middle letter and mirror-image halves",
+  "Every letter except the middle one occurs an even number of times, so U is in the middle (5th place)",
+  "Left half (places 1-4) uses $S,S,C,E$ and fixes the right half",
+  "Number $=\\dfrac{4!}{2!}=12$",
+  "",
+  "Final Answer: 12"
+ ],
+ "solution_full": [
+  "SUCCESSES has 9 letters: S four times, C twice, E twice, U once.",
+  "In an arrangement that reads the same both ways, the letters in places $i$ and $10-i$ are equal for $i=1,2,3,4$, and place 5 is the middle.",
+  "So every letter outside place 5 is paired with an equal letter. U occurs once, so it cannot be paired and must be in place 5.",
+  "The remaining letters $S^{4},C^{2},E^{2}$ split equally between the halves: the left half (places 1 to 4) contains $S,S,C,E$, and it determines the right half.",
+  "The number of arrangements of $S,S,C,E$ is $\\dfrac{4!}{2!}=12$, and each gives exactly one such arrangement of SUCCESSES. Hence the answer is 12.",
+  "",
+  "Final Answer: 12"
+ ],
+ "originality_note": "New: arrangements of a word with repeated letters that are palindromes, which reduces to permuting the half-multiset with the odd-count letter forced to the middle (way 4: a hidden symmetry halves the multiset). Closest known: 'arrangements of SUCCESS / MISSISSIPPI with vowels together'. Different because: the palindrome condition changes the object being permuted. The first design used MISSISSIPPI; SUCCESSES was chosen to avoid a familiar word.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Permutations of alike objects"
+ ],
+ "concept_use": {
+  "Permutations of alike objects": "The halves are arrangements of the alike objects S, S, C, E, counted by 4!/2!."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumeration (12 palindromic arrangements among 3780), and that 12 is a positive 2-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Reducing a palindromic arrangement to an arrangement of the half multiset S, S, C, E with U in the middle.",
+ "justification": "One idea (palindrome = half arrangement with forced middle) followed by a standard alike-objects count. Level 2; the idea is less practised than a direct formula, so not level 1.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

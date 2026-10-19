@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Ten lines are drawn in a plane so that no two of them are parallel and no three of them pass through a common point. Let $B$ and $U$ be the numbers of bounded and unbounded regions, respectively, into which these lines divide the plane. Then the value of $\\dfrac{B}{U}$ is ______."
+ ],
+ "hindi": [
+  "एक तल में दस रेखाएँ इस प्रकार खींची जाती हैं कि उनमें से कोई दो समान्तर नहीं हैं और कोई तीन एक उभयनिष्ठ बिन्दु से नहीं गुजरतीं। माना कि ये रेखाएँ तल को जितने परिबद्ध तथा अपरिबद्ध क्षेत्रों में विभाजित करती हैं, उनकी संख्याएँ क्रमशः $B$ तथा $U$ हैं। तब $\\dfrac{B}{U}$ का मान ______ है।"
+ ],
+ "solution": [
+  "The $k$-th line meets the previous $k-1$ lines in $k-1$ new points, is cut into $k$ pieces and adds $k$ regions",
+  "Regions $R=1+(1+2+\\cdots+10)=56$ $\\left(=1+n+\\binom{n}{2}\\right)$",
+  "Unbounded: a large circle enclosing all $\\binom{10}{2}=45$ intersection points meets the lines in 20 points, giving 20 arcs, one per unbounded region: $U=20$",
+  "$B=56-20=36$, $\\dfrac{B}{U}=\\dfrac{36}{20}=1.8$",
+  "",
+  "Final Answer: 1.80"
+ ],
+ "solution_full": [
+  "Add the lines one at a time. The $k$-th line meets the previous $k-1$ lines in $k-1$ distinct points (no two parallel, no three concurrent), so it is divided into $k$ pieces, and each piece splits one existing region into two: the $k$-th line adds $k$ regions.",
+  "Starting from 1 region: $R=1+(1+2+\\cdots+10)=1+55=56$. Equivalently $R=1+n+\\binom{n}{2}$ with $\\binom{10}{2}=45$ points of intersection.",
+  "Draw a circle large enough to contain all 45 points of intersection. Each line crosses it twice, giving 20 points on the circle and 20 arcs. Outside the circle no two lines meet, so each unbounded region contains exactly one arc, and each arc lies in one unbounded region: $U=20$.",
+  "Hence $B=R-U=56-20=36$ (equal to $\\binom{10-1}{2}$).",
+  "$\\dfrac{B}{U}=\\dfrac{36}{20}=1.8$.",
+  "",
+  "Final Answer: 1.80"
+ ],
+ "originality_note": "New: the split of the regions formed by lines in general position into bounded and unbounded ones, using the line-by-line region count and a large circle for the unbounded regions (way 5). Closest known: 'n lines in general position divide the plane into 1 + n + C(n,2) regions'. Different because: the unbounded regions must be counted separately (2n), which is not the usual exercise.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Number of points of intersection and regions formed by lines"
+ ],
+ "concept_use": {
+  "Number of points of intersection and regions formed by lines": "The number of regions 1 + n + C(n,2) comes from the C(10,2) = 45 points of intersection; the unbounded ones are counted by the 2n arcs of a large circle."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked the counts R = 56, U = 20, B = 36 against the standard formulas (2n unbounded, C(n-1,2) bounded), and that 1.80 is a positive decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Counting all regions line by line and the unbounded ones by a large circle.",
+ "justification": "Two standard counts (the second less often practised) and a ratio. Level 2.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

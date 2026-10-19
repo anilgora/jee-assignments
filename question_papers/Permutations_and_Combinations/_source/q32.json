@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $a$ be the number of ways of placing 5 distinct balls in 3 distinct boxes so that no box is empty, and let $b$ be the number of ways of placing 5 identical balls in 3 distinct boxes so that no box is empty. Then the value of $\\dfrac{b}{a}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$, 5 भिन्न गेंदों को 3 भिन्न डिब्बों में इस प्रकार रखने के तरीकों की संख्या है कि कोई डिब्बा रिक्त न रहे, तथा $b$, 5 सर्वसम गेंदों को 3 भिन्न डिब्बों में इस प्रकार रखने के तरीकों की संख्या है कि कोई डिब्बा रिक्त न रहे। तब $\\dfrac{b}{a}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Distinct balls: $a=3^{5}-\\binom{3}{1}2^{5}+\\binom{3}{2}1^{5}=243-96+3=150$",
+  "Identical balls: $x_{1}+x_{2}+x_{3}=5$, $x_{i}\\geq1$: $b=\\binom{4}{2}=6$",
+  "$\\dfrac{b}{a}=\\dfrac{6}{150}=0.04$",
+  "",
+  "Final Answer: 0.04"
+ ],
+ "solution_full": [
+  "Distinct balls: each ball has 3 choices, $3^{5}=243$ placements. By inclusion-exclusion, those with at least one empty box number $\\binom{3}{1}2^{5}-\\binom{3}{2}1^{5}=96-3=93$, so $a=243-93=150$.",
+  "(Check by size patterns: $(3,1,1)$: $3\\cdot\\binom{5}{3}\\cdot2=60$; $(2,2,1)$: $3\\cdot5\\cdot\\binom{4}{2}=90$; total 150.)",
+  "Identical balls: only the numbers $x_{1},x_{2},x_{3}\\geq1$ in the boxes matter, with $x_{1}+x_{2}+x_{3}=5$. Putting $y_{i}=x_{i}-1$: $y_{1}+y_{2}+y_{3}=2$, which has $\\binom{4}{2}=6$ solutions. So $b=6$.",
+  "$\\dfrac{b}{a}=\\dfrac{6}{150}=0.04$.",
+  "",
+  "Final Answer: 0.04"
+ ],
+ "originality_note": "New: the same 'no box empty' distribution counted for distinct and for identical balls, compared by a ratio, so the student must apply both models to one situation (way 5). Closest known: separate exercises 'n distinct balls into k boxes, none empty' and 'n identical balls into k boxes, none empty'. Different because: the ratio forces the two models to be kept apart.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Distribution of distinct objects into distinct boxes (empty allowed / not)",
+  "Distribution of identical objects into distinct boxes"
+ ],
+ "concept_use": {
+  "Distribution of distinct objects into distinct boxes (empty allowed / not)": "a = 150 is the number of placements of distinct balls into distinct boxes with no box empty (inclusion-exclusion).",
+  "Distribution of identical objects into distinct boxes": "b = C(4,2) = 6 is the number of placements of identical balls into distinct boxes with no box empty (stars and bars)."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumeration (a = 150, b = 6), and that 0.04 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Counting the onto placements of distinct balls (150) and the positive solutions for identical balls (6).",
+ "justification": "Two standard counts and a ratio. Level 2.",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

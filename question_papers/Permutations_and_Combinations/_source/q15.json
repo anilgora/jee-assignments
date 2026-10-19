@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Let $a$ be the number of three-digit numbers with distinct digits chosen from $\\{1,2,3,4,5,6,7\\}$ that are divisible by 9, and let $b$ be the number of such three-digit numbers that are divisible by 25. Then the value of $\\dfrac{a}{b}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$, समुच्चय $\\{1,2,3,4,5,6,7\\}$ में से चुने गए भिन्न अंकों वाली उन तीन अंकीय संख्याओं की संख्या है जो 9 से विभाज्य हैं, तथा $b$ ऐसी उन तीन अंकीय संख्याओं की संख्या है जो 25 से विभाज्य हैं। तब $\\dfrac{a}{b}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Divisible by 9: digit sum 9 or 18 (sum lies between 6 and 18)",
+  "Sum 9: $\\{1,2,6\\},\\{1,3,5\\},\\{2,3,4\\}$; sum 18: $\\{5,6,7\\}$ $\\Rightarrow a=4\\cdot3!=24$",
+  "Divisible by 25: last two digits 25 or 75 (00, 50 need a zero); first digit: 5 choices $\\Rightarrow b=2\\cdot5=10$",
+  "$\\dfrac{a}{b}=\\dfrac{24}{10}=2.4$",
+  "",
+  "Final Answer: 2.40"
+ ],
+ "solution_full": [
+  "Three distinct digits from $\\{1,\\ldots,7\\}$ have sum between $1+2+3=6$ and $5+6+7=18$. A number is divisible by 9 iff its digit sum is, so the digit sum must be 9 or 18.",
+  "Sum 9: $\\{1,2,6\\}$, $\\{1,3,5\\}$, $\\{2,3,4\\}$. Sum 18: only $\\{5,6,7\\}$. Each set of three distinct digits gives $3!=6$ numbers, so $a=4\\cdot6=24$.",
+  "A number is divisible by 25 iff its last two digits form 00, 25, 50 or 75. Zero is not available, so the last two digits are 25 or 75 (distinct digits from the set).",
+  "For each ending, the hundreds digit is any of the 5 remaining digits, so $b=2\\cdot5=10$.",
+  "Hence $\\dfrac{a}{b}=\\dfrac{24}{10}=2.4$.",
+  "",
+  "Final Answer: 2.40"
+ ],
+ "originality_note": "New: a ratio of two divisibility counts for the same family of numbers, one decided by the digit sum (a subset problem) and one by the last two digits (a position problem), so the two counts use opposite structures (way 5). Closest known: 'four-digit numbers from 1-6 without repetition divisible by 4' (the first design used it and was replaced). Different because: the digit-sum test turns into finding 3-subsets with sum 9 or 18.",
+ "web_check": "found: redesigned",
+ "blueprint_concepts": [
+  "Formation of numbers divisible by a given number"
+ ],
+ "concept_use": {
+  "Formation of numbers divisible by a given number": "Divisibility by 9 (digit-sum test, via 3-subsets with sum 9 or 18) and by 25 (last two digits 25 or 75) of numbers formed with distinct digits."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all 210 numbers (24 divisible by 9, 10 by 25), and that 2.40 is a positive decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Turning divisibility by 9 into 3-subsets with digit sum 9 or 18 and divisibility by 25 into the endings 25, 75.",
+ "justification": "Two routine divisibility counts and a ratio; no insight. Level 2, like the routine digit counting in 2021-P2-Q1 (L2).",
+ "nearest_anchor": "2021-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

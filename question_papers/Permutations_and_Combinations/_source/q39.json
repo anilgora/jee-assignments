@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Two numbers $a$ and $b$ are chosen independently and at random from the set of positive divisors of 48 (the same divisor may be chosen twice). Let $p$ be the probability that the least common multiple of $a$ and $b$ is 48, and let $q$ be the probability that $a$ divides $b$. Then the value of $p-q$ is ______."
+ ],
+ "hindi": [
+  "48 के धनात्मक भाजकों के समुच्चय में से दो संख्याएँ $a$ तथा $b$ स्वतन्त्र रूप से यादृच्छया चुनी जाती हैं (एक ही भाजक दो बार चुना जा सकता है)। माना कि $p$, $a$ तथा $b$ के लघुत्तम समापवर्त्य के 48 होने की प्रायिकता है, तथा $q$, $a$ के $b$ को विभाजित करने की प्रायिकता है। तब $p-q$ का मान ______ है।"
+ ],
+ "solution": [
+  "$48=2^{4}\\cdot3$: $d(48)=5\\cdot2=10$ divisors, $100$ ordered pairs; write $a=2^{i}3^{j}$, $b=2^{k}3^{l}$",
+  "$\\mathrm{lcm}=48\\Leftrightarrow\\max(i,k)=4,\\ \\max(j,l)=1$: $(5^{2}-4^{2})(2^{2}-1^{2})=9\\cdot3=27$",
+  "$a\\mid b\\Leftrightarrow i\\leq k,\\ j\\leq l$: $\\binom{6}{2}\\cdot\\binom{3}{2}=15\\cdot3=45$",
+  "$p-q=\\dfrac{27-45}{100}=-0.18$",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "solution_full": [
+  "$48=2^{4}\\cdot3$, so its divisors are $2^{i}3^{j}$ with $0\\leq i\\leq4$, $0\\leq j\\leq1$: $d(48)=5\\cdot2=10$. Ordered pairs $(a,b)$: $100$, equally likely.",
+  "Write $a=2^{i}3^{j}$, $b=2^{k}3^{l}$. Then $\\mathrm{lcm}(a,b)=2^{\\max(i,k)}3^{\\max(j,l)}$.",
+  "$\\mathrm{lcm}(a,b)=48$ iff $\\max(i,k)=4$ and $\\max(j,l)=1$. Pairs $(i,k)$ in $\\{0,\\ldots,4\\}^{2}$ with maximum 4: $5^{2}-4^{2}=9$ (that is, $2\\cdot4+1$). Pairs $(j,l)$ with maximum 1: $2^{2}-1=3$. So $27$ pairs and $p=\\dfrac{27}{100}$.",
+  "$a\\mid b$ iff $i\\leq k$ and $j\\leq l$. Pairs with $i\\leq k$ in $\\{0,\\ldots,4\\}$: $\\binom{5}{2}+5=15$; pairs with $j\\leq l$ in $\\{0,1\\}$: $3$. So $45$ pairs and $q=\\dfrac{45}{100}$.",
+  "$p-q=\\dfrac{27-45}{100}=-\\dfrac{18}{100}=-0.18$.",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "originality_note": "New: two probabilities on random pairs of divisors, one for 'lcm equals N' (maximum exponent conditions) and one for 'a divides b' (exponent inequalities), both computed prime by prime and compared (way 5). Closest known: 'number of ordered pairs with lcm N: product of (2e+1)'. Different because: the comparison needs two different exponent counts on the same sample space of d(N)^2 pairs.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Number of divisors, sum of divisors and product of divisors",
+  "Counting ordered pairs with a given GCD or LCM"
+ ],
+ "concept_use": {
+  "Number of divisors, sum of divisors and product of divisors": "The sample space has d(48)^2 = 100 ordered pairs of divisors.",
+  "Counting ordered pairs with a given GCD or LCM": "Ordered pairs with lcm 48 are counted by the exponent rule (2e+1 per prime), giving 27."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating the 100 pairs (27 with lcm 48, 45 with a | b), that independent choice allows a = b, and that -0.18 is a negative decimal as planned. Changed: added '(the same divisor may be chosen twice)'.",
+ "level": 3,
+ "key_step": "Counting exponent pairs prime by prime for the lcm condition and for divisibility.",
+ "justification": "Two exponent-counting ideas on one sample space, with a numerical answer; routine for a strong student but with two separate counts. Level 3, like 2023-P1-Q6 (L3) probability counting.",
+ "nearest_anchor": "2023-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Let $A=\\{1,2,3,4,5\\}$ and $B=\\{1,2,3\\}$. For an onto function $f:A\\to B$, the number of functions $g:B\\to A$ such that $f(g(b))=b$ for every $b\\in B$ is denoted by $N(f)$. Then the arithmetic mean of $N(f)$ over all onto functions $f:A\\to B$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\{1,2,3,4,5\\}$ तथा $B=\\{1,2,3\\}$ है। किसी आच्छादक फलन $f:A\\to B$ के लिए, उन फलनों $g:B\\to A$ की संख्या, जिनके लिए प्रत्येक $b\\in B$ के लिए $f(g(b))=b$ है, $N(f)$ द्वारा निरूपित की जाती है। तब सभी आच्छादक फलनों $f:A\\to B$ पर $N(f)$ का समान्तर माध्य ______ है।"
+ ],
+ "solution": [
+  "$f(g(b))=b\\Leftrightarrow g(b)\\in f^{-1}(b)$, so $N(f)=|f^{-1}(1)|\\cdot|f^{-1}(2)|\\cdot|f^{-1}(3)|$; such $g$ is one-one (disjoint fibres)",
+  "Onto $f$: $3^{5}-3\\cdot2^{5}+3=150$; fibre sizes $(3,1,1)$ in some order: $3\\cdot\\binom{5}{3}\\cdot2=60$, product 3",
+  "$(2,2,1)$ in some order: $3\\cdot5\\cdot\\binom{4}{2}=90$, product 4",
+  "Mean $=\\dfrac{60\\cdot3+90\\cdot4}{150}=\\dfrac{540}{150}=3.6$",
+  "",
+  "Final Answer: 3.60"
+ ],
+ "solution_full": [
+  "For a fixed onto $f$, the condition $f(g(b))=b$ means $g(b)$ is an element of the fibre $f^{-1}(b)$, chosen independently for $b=1,2,3$. Hence $N(f)=|f^{-1}(1)|\\,|f^{-1}(2)|\\,|f^{-1}(3)|$. The fibres are disjoint, so every such $g$ is one-one (and it can never be onto, since $|B|<|A|$).",
+  "Number of onto $f$: by inclusion-exclusion $3^{5}-\\binom{3}{1}2^{5}+\\binom{3}{2}1^{5}=243-96+3=150$.",
+  "The fibre sizes are positive and add to 5, so they are $3,1,1$ or $2,2,1$ in some order.",
+  "Sizes $3,1,1$: choose the value with 3 preimages (3 ways), its preimages ($\\binom{5}{3}=10$), then the other two elements go to the other two values ($2!$): $60$ functions, each with $N(f)=3$.",
+  "Sizes $2,2,1$: choose the value with 1 preimage (3 ways) and that preimage (5 ways), then split the other 4 elements between the remaining two values ($\\binom{4}{2}=6$): $90$ functions, each with $N(f)=4$. (Check: $60+90=150$.)",
+  "Mean $=\\dfrac{60\\cdot3+90\\cdot4}{150}=\\dfrac{180+360}{150}=\\dfrac{540}{150}=3.6$.",
+  "",
+  "Final Answer: 3.60"
+ ],
+ "originality_note": "New: averaging the number of right inverses g of an onto f over all onto f, which equals the product of fibre sizes; the count of onto functions and of one-one sections are combined through the fibre patterns (way 5). Closest known: number of onto functions from a 5-set to a 3-set (150) and of one-one functions from a 3-set to a 5-set (60). Different because: the quantity is a product of fibre sizes averaged over fibre patterns.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Number of onto (surjective) functions via inclusion-exclusion",
+  "Number of one-one and onto functions between finite sets"
+ ],
+ "concept_use": {
+  "Number of onto (surjective) functions via inclusion-exclusion": "The 150 onto functions are counted by inclusion-exclusion and split by fibre pattern (3,1,1) or (2,2,1).",
+  "Number of one-one and onto functions between finite sets": "Each g with f(g(b)) = b is a one-one function from B to A (disjoint fibres), and N(f) counts these one-one sections; no such g is onto."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all onto f and all g (sum of N(f) = 540 over 150 functions), and that 3.60 is a positive decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that N(f) is the product of the fibre sizes, then summing over the two fibre patterns.",
+ "justification": "Two ideas linked (sections of f are choices in fibres; onto functions by fibre pattern), with a numerical answer. Level 3; the composite-function condition is less familiar than a plain count (like 2026-P2-Q10 (L4), which is harder).",
+ "nearest_anchor": "2026-P2-Q10 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

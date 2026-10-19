@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Permutations and Combinations",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $X=\\{1,2,3\\}$ and let $P(X)$ denote the power set of $X$. Then the number of ordered triples $(A,B,C)$ of elements of $P(X)$ such that $A\\subsetneq B\\subsetneq C$ is ______."
+ ],
+ "hindi": [
+  "माना कि $X=\\{1,2,3\\}$ है तथा $P(X)$, $X$ का घात समुच्चय है। तब $P(X)$ के अवयवों के उन क्रमित त्रिकों $(A,B,C)$ की संख्या, जिनके लिए $A\\subsetneq B\\subsetneq C$ है, ______ है।"
+ ],
+ "solution": [
+  "Chains $A\\subseteq B\\subseteq C$: each element is in $A$, in $B\\setminus A$, in $C\\setminus B$ or outside $C$: $4^{3}=64$",
+  "$A=B$: chains $B\\subseteq C$: $3^{3}=27$; $B=C$: $27$; $A=B=C$: $2^{3}=8$",
+  "Strict chains $=64-27-27+8=18$",
+  "",
+  "Final Answer: 18"
+ ],
+ "solution_full": [
+  "First count triples with $A\\subseteq B\\subseteq C$. Such a triple is fixed by saying, for each element of $X$, which of the four regions it lies in: $A$, $B\\setminus A$, $C\\setminus B$ or $X\\setminus C$. So there are $4^{3}=64$ such triples.",
+  "Remove those with $A=B$ or $B=C$ by inclusion-exclusion. Triples with $A=B$ correspond to pairs $B\\subseteq C$: each element in $B$, in $C\\setminus B$ or outside, $3^{3}=27$. Likewise $27$ triples have $B=C$.",
+  "Triples with $A=B=C$ correspond to single subsets: $2^{3}=8$.",
+  "Strict chains: $64-27-27+8=18$.",
+  "Check by sizes: $(|A|,|B|,|C|)=(0,1,2)$: $3\\cdot2=6$; $(0,1,3)$: $3$; $(0,2,3)$: $3$; $(1,2,3)$: $3\\cdot2=6$; total $18$.",
+  "",
+  "Final Answer: 18"
+ ],
+ "originality_note": "New: strict chains of length three in the power set of a 3-element set, counted by assigning each element to one of four regions (4^n, 3^n, 2^n) and removing equalities by inclusion-exclusion (way 5: power-set counting linked with the 2^n-type totals). Closest known: 'number of pairs (A, B) with A subset of B: 3^n' (ISI-type exercises). Different because: the strict inclusions need an inclusion-exclusion over the 4^n, 3^n, 2^n counts.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Total number of combinations (2^n and 2^n - 1 type)",
+  "Subsets, power set, number of subsets and proper subsets"
+ ],
+ "concept_use": {
+  "Total number of combinations (2^n and 2^n - 1 type)": "The counts 4^3, 3^3 and 2^3 extend the 2^n count of subsets: each element independently chooses a region.",
+  "Subsets, power set, number of subsets and proper subsets": "A, B, C are elements of the power set P(X) (8 subsets), and proper inclusion between subsets is the condition."
+ },
+ "stem_review": "Read as a student: every symbol and object is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed by an independent brute-force enumeration in Python (sympy/itertools), is unique and matches the Answer Plan. Checked by enumerating all triples of the 8 subsets (18 strict chains), that 'subsetneq' means proper subset, and that 18 is a positive 2-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Counting weak chains as 4^3 and removing equal neighbours by inclusion-exclusion (or counting by sizes).",
+ "justification": "The region-assignment idea is not routine for most students, and the strictness needs a correction; numerical answer. Level 3, like 2023-P1-Q1 (L3) on counting functions between finite sets.",
+ "nearest_anchor": "2023-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
