@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Relations",
+ "target_level": 2,
+ "answer_plan": "Option C",
+ "english": [
+  "Let $A$ and $B$ be finite sets such that $n(A)=5$, $n(B)=7$ and $n\\big((A\\times B)\\cup(B\\times A)\\big)=54$, where $n(X)$ denotes the number of elements of a finite set $X$. Then $n\\big((A\\cup B)\\times(A\\cap B)\\big)$ is equal to",
+  "",
+  "(A) $24$",
+  "(B) $28$",
+  "(C) $32$",
+  "(D) $36$"
+ ],
+ "hindi": [
+  "माना $A$ तथा $B$ ऐसे परिमित समुच्चय हैं कि $n(A)=5$, $n(B)=7$ तथा $n\\big((A\\times B)\\cup(B\\times A)\\big)=54$, जहाँ $n(X)$ परिमित समुच्चय $X$ के अवयवों की संख्या को दर्शाता है। तब $n\\big((A\\cup B)\\times(A\\cap B)\\big)$ बराबर है",
+  "",
+  "(A) $24$",
+  "(B) $28$",
+  "(C) $32$",
+  "(D) $36$"
+ ],
+ "solution": [
+  "$n(A\\times B)=n(B\\times A)=5\\cdot7=35$",
+  "A pair lies in both products iff both its entries lie in $A\\cap B$: $(A\\times B)\\cap(B\\times A)=(A\\cap B)\\times(A\\cap B)$. With $k=n(A\\cap B)$:",
+  "$54=35+35-k^{2}\\Rightarrow k^{2}=16\\Rightarrow k=4$",
+  "$n(A\\cup B)=5+7-4=8\\Rightarrow n\\big((A\\cup B)\\times(A\\cap B)\\big)=8\\cdot4=32$",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "For finite sets $n(X\\times Y)=n(X)\\,n(Y)$, so $n(A\\times B)=5\\cdot7=35$ and $n(B\\times A)=7\\cdot5=35$.",
+  "An ordered pair $(x,y)$ lies in $A\\times B$ and in $B\\times A$ exactly when $x\\in A$, $y\\in B$, $x\\in B$ and $y\\in A$, that is, when $x\\in A\\cap B$ and $y\\in A\\cap B$. Hence $(A\\times B)\\cap(B\\times A)=(A\\cap B)\\times(A\\cap B)$.",
+  "Let $k=n(A\\cap B)$. Then $n\\big((A\\times B)\\cap(B\\times A)\\big)=k^{2}$ and, by the formula for the number of elements of a union,",
+  "$n\\big((A\\times B)\\cup(B\\times A)\\big)=35+35-k^{2}=70-k^{2}$.",
+  "$70-k^{2}=54\\Rightarrow k^{2}=16\\Rightarrow k=4$ (and $k=4\\le n(A)=5$ is possible).",
+  "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)=5+7-4=8$.",
+  "$n\\big((A\\cup B)\\times(A\\cap B)\\big)=8\\cdot4=32$. (The value $28$ comes from using $n(B)$ in place of $n(A\\cup B)$, and $36$ from taking $n(A\\cup B)=9$.)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: the size of the intersection is recovered from the union of a Cartesian product with its reversed product, via (AxB) n (BxA) = (AnB)x(AnB) used in reverse (way 5: Cartesian product structure linked with the counting formula). Closest known: NCERT-type exercise 'A and B have 3 elements in common, n(A)=3, n(B)=4; find n((AxB)n(BxA))'. Different because: the union count is given and the common part has to be solved for as a perfect square, then used in a new product.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Cartesian Product of two sets",
+  "Cartesian product of sets; number of elements"
+ ],
+ "concept_use": {
+  "Cartesian Product of two sets": "The identity (AxB)n(BxA) = (AnB)x(AnB) decides which pairs are counted twice in the union.",
+  "Cartesian product of sets; number of elements": "n(XxY) = n(X)n(Y) gives 35, 35, k^2 and the final 8*4 = 32."
+ },
+ "stem_review": "Read as a student: every set, relation and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python by brute-force enumeration, is unique and equals the Answer Plan (Option C). Changed: No change.",
+ "level": 2,
+ "key_step": "Seeing (AxB)n(BxA) = (AnB)x(AnB), so the union has 70 - k^2 elements.",
+ "justification": "Three routine steps (product identity, solve k^2 = 16, inclusion-exclusion for A u B) with no real insight; option format allows checking. Level 2 like 2021-P1-Q18.",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

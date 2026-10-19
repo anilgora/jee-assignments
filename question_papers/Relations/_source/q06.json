@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Relations",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $A=\\{1,2,3,4,5,6\\}$. Let $p$ be the number of equivalence relations on $A$ having exactly three equivalence classes, each of which contains at least two elements, and let $q$ be the number of equivalence relations on $A$ having exactly two equivalence classes, each of which contains at least two elements. Then the value of $\\dfrac{p}{q}$ is ______."
+ ],
+ "hindi": [
+  "माना $A=\\{1,2,3,4,5,6\\}$ है। माना $p$, $A$ पर ऐसे तुल्यता संबंधों की संख्या है जिनमें ठीक तीन तुल्यता वर्ग हैं तथा प्रत्येक वर्ग में कम से कम दो अवयव हैं, तथा $q$, $A$ पर ऐसे तुल्यता संबंधों की संख्या है जिनमें ठीक दो तुल्यता वर्ग हैं तथा प्रत्येक वर्ग में कम से कम दो अवयव हैं। तब $\\dfrac{p}{q}$ का मान ______ है।"
+ ],
+ "solution": [
+  "An equivalence relation on $A$ is the same as a partition of $A$ into its classes",
+  "$p$: three classes with at least $2$ elements each from $6$ elements must have exactly $2$ each: $p=\\dfrac{6!}{2!\\,2!\\,2!\\,3!}=15$",
+  "Two classes: fixed by the class $C$ not containing $6$, any non-empty subset of $\\{1,\\dots,5\\}$: $2^{5}-1=31$",
+  "Remove a one-element class: $C$ a singleton ($5$) or $C=\\{1,\\dots,5\\}$, leaving $\\{6\\}$ alone ($1$): $q=31-6=25$",
+  "$\\dfrac{p}{q}=\\dfrac{15}{25}=0.6$",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "solution_full": [
+  "Every equivalence relation on $A$ determines the partition of $A$ into its equivalence classes, and every partition determines exactly one equivalence relation. So $p$ and $q$ count partitions.",
+  "Three classes, each with at least $2$ elements, use at least $6$ elements; as $n(A)=6$, every class has exactly $2$ elements. Choose the classes: $\\binom62\\binom42\\binom22=90$ ordered choices, and the $3!$ orders of the same three classes give the same partition: $p=\\dfrac{90}{6}=15$.",
+  "Two classes: the class $C$ that does not contain $6$ determines the partition (the other class is $A\\setminus C$). $C$ can be any non-empty subset of $\\{1,2,3,4,5\\}$, so there are $2^{5}-1=31$ partitions into two classes.",
+  "A class with one element occurs when $C$ is a singleton ($5$ ways) or when the class of $6$ is $\\{6\\}$, i.e. $C=\\{1,2,3,4,5\\}$ ($1$ way). These $6$ cases are excluded: $q=31-6=25$. (Check: $\\binom62+\\frac12\\binom63=15+10=25$ for the types $2+4$ and $3+3$.)",
+  "$\\dfrac{p}{q}=\\dfrac{15}{25}=\\dfrac35=0.6$.",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "originality_note": "New: equivalence relations counted by number of classes under a minimum class size, with the two-class count obtained as 2^5 - 1 minus the singleton cases (way 5: equivalence relations linked with 2^n - 1 selections). Closest known: 'number of equivalence relations on a set with exactly two classes' (Stirling numbers S(n,2) = 2^(n-1) - 1). Different because: the class-size restriction forces the student to remove the singleton cases and to see that three classes of size >= 2 on six elements must be pairs.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Counting reflexive / symmetric / transitive / equivalence relations on a finite set",
+  "Total number of combinations (2^n and 2^n - 1 type)"
+ ],
+ "concept_use": {
+  "Counting reflexive / symmetric / transitive / equivalence relations on a finite set": "p and q count equivalence relations as partitions of A with the given number and size of classes.",
+  "Total number of combinations (2^n and 2^n - 1 type)": "The two-class partitions are counted as the 2^5 - 1 = 31 non-empty selections C from {1,...,5}."
+ },
+ "stem_review": "Read as a student: every set, relation and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python by brute-force enumeration, is unique and equals the Answer Plan (decimal between 0 and 1). Changed: No change.",
+ "level": 3,
+ "key_step": "Counting two-class partitions as non-empty subsets of the other five elements and removing singleton classes.",
+ "justification": "Two linked counts with a restriction where a missed case (forgetting C = {1,...,5}) changes the answer; numerical format. Lighter than 2026-P1-Q9 (L5) since no sum-of-squares condition. Level 3 before the equivalence adjustment.",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": true
+}

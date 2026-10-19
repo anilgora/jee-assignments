@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Relations",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "Let $A=\\{1,2,3,\\dots,40\\}$ and let $R$ be the relation on $A$ defined by $(a,b)\\in R$ if and only if $b$ is the largest odd divisor of $a$. Let $R^{-1}$ denote the inverse of $R$, and let $S$ be the relation on $A$ consisting of all ordered pairs $(a,c)\\in A\\times A$ for which there exists $b\\in A$ with $(a,b)\\in R$ and $(b,c)\\in R^{-1}$. Then the number of elements in $S$ is ______."
+ ],
+ "hindi": [
+  "माना $A=\\{1,2,3,\\dots,40\\}$ है तथा $A$ पर संबंध $R$ इस प्रकार परिभाषित है कि $(a,b)\\in R$ यदि और केवल यदि $b$, $a$ का सबसे बड़ा विषम भाजक है। माना $R^{-1}$, $R$ का प्रतिलोम संबंध है तथा $S$, $A$ पर वह संबंध है जिसमें वे सभी क्रमित युग्म $(a,c)\\in A\\times A$ हैं जिनके लिए कोई $b\\in A$ ऐसा है कि $(a,b)\\in R$ तथा $(b,c)\\in R^{-1}$ है। तब $S$ में अवयवों की संख्या ______ है।"
+ ],
+ "solution": [
+  "Let $o(a)$ = largest odd divisor of $a$; $(a,b)\\in R\\iff b=o(a)$",
+  "$(b,c)\\in R^{-1}\\iff(c,b)\\in R\\iff b=o(c)$, so $(a,c)\\in S\\iff o(a)=o(c)$",
+  "$S$ is an equivalence relation; classes $\\{m,2m,4m,\\dots\\}\\cap A$, $m$ odd",
+  "Class sizes: $m=1$: $6$; $m=3,5$: $4$; $m=7,9$: $3$; $m=11,13,15,17,19$: $2$; $m=21,23,\\dots,39$: $1$ ($10$ classes)",
+  "$n(S)=36+2\\cdot16+2\\cdot9+5\\cdot4+10\\cdot1=116$",
+  "",
+  "Final Answer: 116"
+ ],
+ "solution_full": [
+  "For $a\\in A$ write $a=2^{r}m$ with $m$ odd; then $m=o(a)$ is the largest odd divisor of $a$ and $o(a)\\le a\\le40$, so $o(a)\\in A$. Thus $(a,b)\\in R\\iff b=o(a)$, and each $a$ has exactly one image.",
+  "By definition of the inverse, $(b,c)\\in R^{-1}\\iff(c,b)\\in R\\iff b=o(c)$.",
+  "So $(a,c)\\in S$ iff some $b\\in A$ satisfies $b=o(a)$ and $b=o(c)$, i.e. iff $o(a)=o(c)$.",
+  "\"Having the same largest odd divisor\" is reflexive, symmetric and transitive, so $S$ is an equivalence relation on $A$. The class of an odd $m$ is $\\{m,2m,4m,\\dots\\}\\cap A$, and a class with $s$ elements contributes $s^{2}$ ordered pairs.",
+  "$m=1$: $\\{1,2,4,8,16,32\\}$, $s=6$. $m=3$: $\\{3,6,12,24\\}$, $m=5$: $\\{5,10,20,40\\}$, $s=4$. $m=7$: $\\{7,14,28\\}$, $m=9$: $\\{9,18,36\\}$, $s=3$. $m=11,13,15,17,19$: $\\{m,2m\\}$, $s=2$. $m=21,23,\\dots,39$: $\\{m\\}$, $s=1$, ten classes. (Total $6+8+6+10+10=40$ elements.)",
+  "$n(S)=6^{2}+2\\cdot4^{2}+2\\cdot3^{2}+5\\cdot2^{2}+10\\cdot1^{2}=36+32+18+20+10=116$.",
+  "",
+  "Final Answer: 116"
+ ],
+ "originality_note": "New: composing the 'largest odd divisor' relation with its inverse to produce the 'same odd part' equivalence relation and counting its pairs by class sizes (way 5: composition and inverse of relations linked with equivalence classes). Closest known: 'R o R^{-1} for a given finite relation' textbook exercises and the 'chains m, 2m, 4m' idea from divisibility selection problems. Different because: the composition has to be decoded into an equivalence relation before the classes can be counted.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Composition and inverse of relations",
+  "Equivalence relations and equivalence classes"
+ ],
+ "concept_use": {
+  "Composition and inverse of relations": "S is the composite of R followed by R^{-1}; decoding it with (b,c) in R^{-1} iff (c,b) in R gives o(a) = o(c).",
+  "Equivalence relations and equivalence classes": "S is the 'same largest odd divisor' equivalence relation; its classes {m,2m,4m,...} give n(S) as a sum of squares of class sizes."
+ },
+ "stem_review": "Read as a student: every set, relation and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python by brute-force enumeration, is unique and equals the Answer Plan (positive 3-digit integer). Changed: No change.",
+ "level": 2,
+ "key_step": "Decoding the composite as 'same largest odd divisor' and listing the chains m, 2m, 4m, ... in A.",
+ "justification": "Routine chain: decode composition, recognise an equivalence relation, list classes and add squares; no real insight but several steps and a careful count. Comparable to 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": true
+}

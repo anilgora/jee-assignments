@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Relations",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $A=\\{1,2,3,4\\}$ and let $I_A=\\{(a,a):a\\in A\\}$ denote the identity relation on $A$. For a relation $R$ on $A$, let $R^{-1}$ denote its inverse. Then the number of relations $R$ on $A$ satisfying $R\\cup R^{-1}=A\\times A$ and $R\\cap R^{-1}=I_A$ is ______."
+ ],
+ "hindi": [
+  "माना $A=\\{1,2,3,4\\}$ है तथा $I_A=\\{(a,a):a\\in A\\}$, $A$ पर तत्समक संबंध है। $A$ पर किसी संबंध $R$ के लिए माना $R^{-1}$ उसका प्रतिलोम संबंध है। तब $A$ पर ऐसे संबंधों $R$ की संख्या, जो $R\\cup R^{-1}=A\\times A$ तथा $R\\cap R^{-1}=I_A$ को संतुष्ट करते हैं, ______ है।"
+ ],
+ "solution": [
+  "$(a,a)\\in R^{-1}\\iff(a,a)\\in R$, so $R\\cap R^{-1}=I_A$ forces $I_A\\subseteq R$ (reflexive)",
+  "For $a\\neq b$: $(a,b),(b,a)$ both in $R$ would put $(a,b)$ in $R\\cap R^{-1}$, not allowed (antisymmetric); $R\\cup R^{-1}=A\\times A$ needs at least one of them",
+  "So for each of the $\\binom42=6$ pairs $\\{a,b\\}$ exactly one of $(a,b),(b,a)$ is in $R$: $2$ ways each",
+  "Number of relations $=2^{6}=64$",
+  "",
+  "Final Answer: 64"
+ ],
+ "solution_full": [
+  "$(x,y)\\in R^{-1}\\iff(y,x)\\in R$. In particular $(a,a)\\in R^{-1}\\iff(a,a)\\in R$.",
+  "Diagonal: $(a,a)\\in R\\cap R^{-1}\\iff(a,a)\\in R$. Since $R\\cap R^{-1}=I_A$ contains every $(a,a)$, $R$ contains every $(a,a)$, i.e. $R$ is reflexive; the union condition on the diagonal is then also satisfied.",
+  "Off the diagonal, take $a\\neq b$. $(a,b)\\in R\\cup R^{-1}$ iff $(a,b)\\in R$ or $(b,a)\\in R$; $(a,b)\\in R\\cap R^{-1}$ iff both are in $R$.",
+  "$R\\cup R^{-1}=A\\times A$ requires at least one of $(a,b),(b,a)$ in $R$, and $R\\cap R^{-1}=I_A$ (which has no off-diagonal pair) forbids both. So exactly one of them is in $R$ (the relation is reflexive, antisymmetric and any two distinct elements are comparable).",
+  "The choices for the $\\binom42=6$ unordered pairs are independent, $2$ ways each: $2^{6}=64$ relations.",
+  "",
+  "Final Answer: 64"
+ ],
+ "originality_note": "New: relations specified only through their union and intersection with the inverse (universal relation and identity relation), which decodes into reflexive antisymmetric relations with every pair comparable (way 5: algebra of a relation and its inverse linked with counting). Closest known: 'number of reflexive antisymmetric relations on an n-set = 3^(n(n-1)/2)'. Different because: the conditions are given as set identities with R^{-1}, and the union condition removes the third choice per pair, changing 3^6 to 2^6.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Miscellaneous concepts of Relations",
+  "Counting reflexive / symmetric / transitive / equivalence relations on a finite set"
+ ],
+ "concept_use": {
+  "Miscellaneous concepts of Relations": "Working with R^{-1}, R u R^{-1} = A x A (universal relation) and R n R^{-1} = I_A (identity relation) to decode the conditions.",
+  "Counting reflexive / symmetric / transitive / equivalence relations on a finite set": "The decoded relations are reflexive and antisymmetric with exactly one orientation per pair, counted as 2^6 = 64."
+ },
+ "stem_review": "Read as a student: every set, relation and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python by brute-force enumeration, is unique and equals the Answer Plan (positive 2-digit integer). Changed: No change.",
+ "level": 2,
+ "key_step": "Translating the two set identities into 'reflexive' plus 'exactly one of (a,b), (b,a)' for each pair.",
+ "justification": "A routine decoding of two conditions followed by a product count; no insight beyond the definitions. Comparable to 2024-P1-Q14 (L2) counting under structural conditions.",
+ "nearest_anchor": "2024-P1-Q14 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
