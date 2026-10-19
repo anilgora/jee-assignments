@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $A=\\begin{pmatrix}\\frac25&\\frac45\\\\[2pt]\\frac{3}{10}&\\frac35\\end{pmatrix}$ and let $I$ be the $2\\times2$ identity matrix. For each positive integer $n$, let $\\left(I-\\dfrac12A\\right)^{n}=\\begin{pmatrix}a_n&b_n\\\\c_n&d_n\\end{pmatrix}$. Then the value of $\\displaystyle\\lim_{n\\to\\infty}a_n$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}\\frac25&\\frac45\\\\[2pt]\\frac{3}{10}&\\frac35\\end{pmatrix}$ है तथा $I$, $2\\times2$ तत्समक आव्यूह है। प्रत्येक धनात्मक पूर्णांक $n$ के लिए माना $\\left(I-\\dfrac12A\\right)^{n}=\\begin{pmatrix}a_n&b_n\\\\c_n&d_n\\end{pmatrix}$ है। तब $\\displaystyle\\lim_{n\\to\\infty}a_n$ का मान ______ है।"
+ ],
+ "solution": [
+  "$A^{2}=\\begin{pmatrix}\\frac{4}{25}+\\frac{6}{25}&\\frac{8}{25}+\\frac{12}{25}\\\\[2pt]\\frac{3}{25}+\\frac{9}{50}&\\frac{6}{25}+\\frac{9}{25}\\end{pmatrix}=A$, so $A$ is idempotent and $A^{k}=A$ for all $k\\ge1$",
+  "$I$ and $A$ commute: $\\left(I-\\frac12A\\right)^{n}=I+\\sum_{k\\ge1}\\binom nk\\left(-\\frac12\\right)^{k}A=I+\\left(\\left(\\frac12\\right)^{n}-1\\right)A$",
+  "$a_n=1+\\left(2^{-n}-1\\right)\\cdot\\dfrac25\\to1-\\dfrac25=\\dfrac35$",
+  "",
+  "Final Answer: 0.60"
+ ],
+ "solution_full": [
+  "Compute $A^{2}$: $(1,1)$ entry $\\frac{4}{25}+\\frac{4}{5}\\cdot\\frac{3}{10}=\\frac{4}{25}+\\frac{6}{25}=\\frac25$; $(1,2)$ entry $\\frac{8}{25}+\\frac{12}{25}=\\frac45$; $(2,1)$ entry $\\frac{6}{50}+\\frac{9}{50}=\\frac{3}{10}$; $(2,2)$ entry $\\frac{6}{25}+\\frac{9}{25}=\\frac35$. So $A^{2}=A$.",
+  "Hence $A^{k}=A$ for every $k\\ge1$ ($A$ is idempotent).",
+  "Since $I$ and $A$ commute, the binomial theorem gives $\\left(I-\\frac12A\\right)^{n}=I+\\sum_{k=1}^{n}\\binom nk\\left(-\\frac12\\right)^{k}A^{k}=I+\\left[\\sum_{k=1}^{n}\\binom nk\\left(-\\frac12\\right)^{k}\\right]A$.",
+  "The bracket equals $\\left(1-\\frac12\\right)^{n}-1=2^{-n}-1$. So $\\left(I-\\frac12A\\right)^{n}=I+\\left(2^{-n}-1\\right)A$.",
+  "Reading the $(1,1)$ entry: $a_n=1+\\left(2^{-n}-1\\right)\\cdot\\dfrac25=\\dfrac35+\\dfrac25\\cdot2^{-n}$.",
+  "As $n\\to\\infty$, $2^{-n}\\to0$, so $\\displaystyle\\lim_{n\\to\\infty}a_n=\\dfrac35=0.60$.",
+  "",
+  "Final Answer: 0.60"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: the powers of a matrix that is a combination of I and a hidden idempotent are found by collapsing the binomial expansion, and a limit of an entry is asked (way 4). Closest known: '(A + I)^n = I + (2^n - 1)A for idempotent A' and the NCERT idempotent matrix [[2,-2,-4],[-1,3,4],[1,-2,-3]]. Different because: the idempotent matrix is new, the coefficient is negative (I - A/2), and the limit picks out the complementary projection I - A.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Special Powers of Matrices: Nilpotent, Idempotent, Involutory matrix powers and patterns.",
+  "Higher integral powers of a square matrices"
+ ],
+ "concept_use": {
+  "Special Powers of Matrices: Nilpotent, Idempotent, Involutory matrix powers and patterns.": "A^2 = A (idempotent), so every power A^k equals A and the binomial expansion collapses.",
+  "Higher integral powers of a square matrices": "The n-th power of I - A/2 is written as I + (2^{-n} - 1)A and its (1,1) entry is followed as n grows."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy confirms A^2 = A and (I - A/2)^k = I + (2^{-k} - 1)A for k = 1..7; the (1,1) entry of (I - A/2)^80 is 0.6 to machine precision. 0.60 is a decimal between 0 and 1 as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Spotting A^2 = A and collapsing the binomial expansion of (I - A/2)^n.",
+ "justification": "A routine chain (check idempotence, binomial collapse, limit); the idempotent trick is well practised. At the level of 2021-P1-Q11 (L2).",
+ "nearest_anchor": "2021-P1-Q11 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

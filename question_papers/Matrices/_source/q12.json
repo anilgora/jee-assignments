@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $A=\\begin{pmatrix}1&-\\sqrt{3}\\\\\\sqrt{3}&1\\end{pmatrix}$ and let $A^{2026}=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$. Then the value of $\\dfrac{c}{a}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}1&-\\sqrt{3}\\\\\\sqrt{3}&1\\end{pmatrix}$ है तथा $A^{2026}=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$ है। तब $\\dfrac{c}{a}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$A=2\\begin{pmatrix}\\cos\\frac{\\pi}{3}&-\\sin\\frac{\\pi}{3}\\\\\\sin\\frac{\\pi}{3}&\\cos\\frac{\\pi}{3}\\end{pmatrix}$; such matrices multiply like $2\\left(\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3}\\right)$",
+  "De Moivre: $A^{n}=2^{n}\\begin{pmatrix}\\cos\\frac{n\\pi}{3}&-\\sin\\frac{n\\pi}{3}\\\\\\sin\\frac{n\\pi}{3}&\\cos\\frac{n\\pi}{3}\\end{pmatrix}$",
+  "$\\dfrac{2026\\pi}{3}=675\\pi+\\dfrac{\\pi}{3}$ with $675$ odd: $\\cos=-\\dfrac12$, $\\sin=-\\dfrac{\\sqrt3}{2}$",
+  "$a=-2^{2025}$, $c=-2^{2025}\\sqrt3\\Rightarrow\\dfrac{c}{a}=\\sqrt3\\approx1.73$",
+  "",
+  "Final Answer: 1.73"
+ ],
+ "solution_full": [
+  "Since $1^{2}+\\left(\\sqrt3\\right)^{2}=4$, write $A=2\\begin{pmatrix}\\frac12&-\\frac{\\sqrt3}{2}\\\\\\frac{\\sqrt3}{2}&\\frac12\\end{pmatrix}=2R_{\\pi/3}$, where $R_{\\theta}=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$.",
+  "The map $x+iy\\mapsto\\begin{pmatrix}x&-y\\\\y&x\\end{pmatrix}$ respects products, so $R_{\\theta}$ corresponds to $\\cos\\theta+i\\sin\\theta$ and $A$ to $1+i\\sqrt3$.",
+  "By De Moivre's theorem, $\\left(\\cos\\theta+i\\sin\\theta\\right)^{n}=\\cos n\\theta+i\\sin n\\theta$, so $R_{\\theta}^{n}=R_{n\\theta}$ and $A^{n}=2^{n}R_{n\\pi/3}$.",
+  "For $n=2026$: $2026=3\\cdot675+1$, so $\\dfrac{2026\\pi}{3}=675\\pi+\\dfrac{\\pi}{3}$. As $675$ is odd, $\\cos\\left(675\\pi+\\frac{\\pi}{3}\\right)=-\\cos\\frac{\\pi}{3}=-\\frac12$ and $\\sin\\left(675\\pi+\\frac{\\pi}{3}\\right)=-\\sin\\frac{\\pi}{3}=-\\frac{\\sqrt3}{2}$.",
+  "So $a=2^{2026}\\left(-\\frac12\\right)=-2^{2025}$ and $c=2^{2026}\\left(-\\frac{\\sqrt3}{2}\\right)=-2^{2025}\\sqrt3$.",
+  "Hence $\\dfrac{c}{a}=\\sqrt3=1.7320\\ldots$, which is $1.73$ correct to two decimal places.",
+  "",
+  "Final Answer: 1.73"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: the ratio of two entries of A^2026 is asked, so only the angle 2026 pi/3 matters and the large factor 2^2026 cancels (way 5). Closest known: A = [[cos, -sin],[sin, cos]] with A^n = R(n theta) (JEE Main type). Different because: the matrix is a scaled rotation written with surds, and the answer needs the reduction 675 pi + pi/3 with the sign from the odd multiple.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Higher integral powers of a square matrices",
+  "De Moivre theorem"
+ ],
+ "concept_use": {
+  "Higher integral powers of a square matrices": "The entries of A^2026 are required; they come from A^n = 2^n R_{n pi/3}.",
+  "De Moivre theorem": "A corresponds to 1 + i sqrt3 = 2(cos pi/3 + i sin pi/3), and De Moivre gives the 2026th power."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy computes A^2026 exactly and c/a = sqrt(3) = 1.7320...; 1.73 is a positive decimal as planned and the rounding is unambiguous. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing A = 2 R_{pi/3} and reducing 2026 pi/3 modulo 2 pi.",
+ "justification": "Routine chain: polar form of the matrix, De Moivre, angle reduction with a sign check. Easier than the power-pattern statements of 2026-P1-Q8 (L3); the idea is familiar.",
+ "nearest_anchor": "2026-P1-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

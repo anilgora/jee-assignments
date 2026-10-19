@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $a$ and $b$ be real numbers, and let $A=\\begin{pmatrix}1&a&b\\\\0&1&a\\\\0&0&1\\end{pmatrix}$ be such that $A^{10}=\\begin{pmatrix}1&2&0\\\\0&1&2\\\\0&0&1\\end{pmatrix}$. Then the value of $b$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$ तथा $b$ वास्तविक संख्याएँ हैं, तथा $A=\\begin{pmatrix}1&a&b\\\\0&1&a\\\\0&0&1\\end{pmatrix}$ इस प्रकार है कि $A^{10}=\\begin{pmatrix}1&2&0\\\\0&1&2\\\\0&0&1\\end{pmatrix}$ है। तब $b$ का मान ______ है।"
+ ],
+ "solution": [
+  "$A=I+N$, $N=\\begin{pmatrix}0&a&b\\\\0&0&a\\\\0&0&0\\end{pmatrix}$, $N^{2}=\\begin{pmatrix}0&0&a^{2}\\\\0&0&0\\\\0&0&0\\end{pmatrix}$, $N^{3}=O$",
+  "$IN=NI$, so $A^{n}=I+nN+\\dfrac{n(n-1)}{2}N^{2}=\\begin{pmatrix}1&na&nb+\\frac{n(n-1)}{2}a^{2}\\\\0&1&na\\\\0&0&1\\end{pmatrix}$ (also seen from $A^{2},A^{3}$ and induction)",
+  "$n=10$: $10a=2\\Rightarrow a=\\dfrac15$",
+  "$(1,3)$ entry: $10b+45a^{2}=0\\Rightarrow10b=-\\dfrac{45}{25}\\Rightarrow b=-\\dfrac{9}{50}=-0.18$",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "solution_full": [
+  "Pattern: $A^{2}=\\begin{pmatrix}1&2a&2b+a^{2}\\\\0&1&2a\\\\0&0&1\\end{pmatrix}$ and $A^{3}=\\begin{pmatrix}1&3a&3b+3a^{2}\\\\0&1&3a\\\\0&0&1\\end{pmatrix}$ suggest $A^{n}=\\begin{pmatrix}1&na&nb+\\frac{n(n-1)}{2}a^{2}\\\\0&1&na\\\\0&0&1\\end{pmatrix}$.",
+  "Induction step: multiplying this by $A$, the $(1,3)$ entry becomes $b+na\\cdot a+nb+\\frac{n(n-1)}{2}a^{2}=(n+1)b+\\frac{(n+1)n}{2}a^{2}$, and the $(1,2)$, $(2,3)$ entries become $(n+1)a$. So the formula holds for all $n$.",
+  "The same formula follows from $A=I+N$ with $N=\\begin{pmatrix}0&a&b\\\\0&0&a\\\\0&0&0\\end{pmatrix}$: $N^{2}$ has only the $(1,3)$ entry $a^{2}$, $N^{3}=O$, and $I$ commutes with $N$, so $(I+N)^{n}=I+nN+\\binom n2N^{2}$.",
+  "For $n=10$ the formula gives $A^{10}=\\begin{pmatrix}1&10a&10b+45a^{2}\\\\0&1&10a\\\\0&0&1\\end{pmatrix}$.",
+  "Comparing the $(1,2)$ and $(2,3)$ entries with the given matrix: $10a=2$, so $a=\\dfrac15$.",
+  "Comparing the $(1,3)$ entries: $10b+45\\cdot\\dfrac{1}{25}=0$, so $10b=-\\dfrac95$ and $b=-\\dfrac{9}{50}=-0.18$.",
+  "(Ignoring the $\\binom{10}{2}a^{2}$ term would wrongly give $b=0$.)",
+  "",
+  "Final Answer: -0.18"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: an inverse problem for matrix powers: A^10 is given and the entries of A are recovered; the (1,3) entry couples b with the C(10,2) a^2 term (way 3, the matrix is fixed by a condition on its power). Closest known: computing A^n for A = [[1,1,1],[0,1,1],[0,0,1]] (JEE Main 2021). Different because: the question runs backwards and the zero (1,3) entry of A^10 forces a negative b.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Higher integral powers of a square matrices",
+  "Higher powers A^n by pattern recognition and induction",
+  "Higher powers using A = I + N with N nilpotent (binomial expansion)"
+ ],
+ "concept_use": {
+  "Higher integral powers of a square matrices": "The tenth power A^10 is compared entry by entry with the given matrix.",
+  "Higher powers A^n by pattern recognition and induction": "A^2 and A^3 suggest the general A^n, which is proved by induction.",
+  "Higher powers using A = I + N with N nilpotent (binomial expansion)": "A = I + N with N^3 = O gives A^n = I + nN + C(n,2) N^2, which explains the a^2 term in the (1,3) entry."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy solves A^10 = given matrix and returns the unique pair a = 1/5, b = -9/50; -0.18 is a negative decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing the general A^n (pattern or binomial with N^3 = O) and keeping the C(10,2) a^2 term in the (1,3) entry.",
+ "justification": "Three concepts chained in an inverse direction, with a precision trap (the a^2 term) and no options. Close in spirit to the power structure of 2026-P1-Q8 (L3); it could be seen as a strong L2, hence Medium.",
+ "nearest_anchor": "2026-P1-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

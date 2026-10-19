@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "A $3\\times3$ matrix $A$ is transformed into the $3\\times3$ identity matrix $I$ by the following elementary row operations, applied in the given order:",
+  "(i) $R_1\\leftrightarrow R_2$;  (ii) $R_1\\to R_1-2R_3$;  (iii) $R_3\\to2R_3$;  (iv) $R_2\\to R_2+2R_1$;  (v) $R_3\\to R_3+2R_2$.",
+  "Then the sum of all the entries of $A$ is ______."
+ ],
+ "hindi": [
+  "एक $3\\times3$ आव्यूह $A$ को निम्नलिखित प्रारम्भिक पंक्ति संक्रियाएँ, दिए गए क्रम में, लगाने पर $3\\times3$ तत्समक आव्यूह $I$ प्राप्त होता है:",
+  "(i) $R_1\\leftrightarrow R_2$;  (ii) $R_1\\to R_1-2R_3$;  (iii) $R_3\\to2R_3$;  (iv) $R_2\\to R_2+2R_1$;  (v) $R_3\\to R_3+2R_2$.",
+  "तब $A$ की सभी प्रविष्टियों का योग ______ है।"
+ ],
+ "solution": [
+  "Each operation is left multiplication by an elementary matrix: $E_5E_4E_3E_2E_1A=I$, so $A^{-1}=E_5\\cdots E_1$ and $A=E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}$",
+  "So $A$ is obtained from $I$ by the inverse operations in reverse order: $R_3\\to R_3-2R_2$, $R_2\\to R_2-2R_1$, $R_3\\to\\frac12R_3$, $R_1\\to R_1+2R_3$, $R_1\\leftrightarrow R_2$",
+  "$I\\to\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&-2&1\\end{pmatrix}\\to\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-2&1\\end{pmatrix}\\to\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}\\to\\begin{pmatrix}1&-2&1\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}\\to\\begin{pmatrix}-2&1&0\\\\1&-2&1\\\\0&-1&\\frac12\\end{pmatrix}=A$",
+  "Sum of entries $=-1+0-\\dfrac12=-1.5$",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "solution_full": [
+  "Each elementary row operation equals left multiplication by the matrix $E$ obtained by doing that operation on $I$. Let $E_1,\\ldots,E_5$ correspond to (i)-(v). Then $E_5E_4E_3E_2E_1A=I$.",
+  "Hence $A$ is invertible with $A^{-1}=E_5E_4E_3E_2E_1$ (the same operations applied to $I$ give $A^{-1}=\\begin{pmatrix}0&1&-2\\\\1&2&-4\\\\2&4&-6\\end{pmatrix}$), and $A=\\left(A^{-1}\\right)^{-1}=E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}$.",
+  "The inverse of each elementary operation is elementary: (i) is undone by $R_1\\leftrightarrow R_2$, (ii) by $R_1\\to R_1+2R_3$, (iii) by $R_3\\to\\frac12R_3$, (iv) by $R_2\\to R_2-2R_1$, (v) by $R_3\\to R_3-2R_2$.",
+  "$A=E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}I$ means: starting from $I$, apply $E_5^{-1}$ first and $E_1^{-1}$ last.",
+  "$E_5^{-1}$ ($R_3\\to R_3-2R_2$): $\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&-2&1\\end{pmatrix}$; then $E_4^{-1}$ ($R_2\\to R_2-2R_1$): $\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-2&1\\end{pmatrix}$.",
+  "Then $E_3^{-1}$ ($R_3\\to\\frac12R_3$): $\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}$; then $E_2^{-1}$ ($R_1\\to R_1+2R_3$): $\\begin{pmatrix}1&-2&1\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}$.",
+  "Finally $E_1^{-1}$ ($R_1\\leftrightarrow R_2$): $A=\\begin{pmatrix}-2&1&0\\\\1&-2&1\\\\0&-1&\\frac12\\end{pmatrix}$.",
+  "Check: applying (i)-(v) to this $A$ gives $\\begin{pmatrix}1&-2&1\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}\\to\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-1&\\frac12\\end{pmatrix}\\to\\begin{pmatrix}1&0&0\\\\-2&1&0\\\\0&-2&1\\end{pmatrix}\\to\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&-2&1\\end{pmatrix}\\to I$.",
+  "Sum of entries of $A$: $(-2+1+0)+(1-2+1)+\\left(0-1+\\frac12\\right)=-1+0-\\frac12=-1.50$.",
+  "",
+  "Final Answer: -1.50"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: the matrix is not given; only the Gauss-Jordan sequence that reduces it to I is given, and A must be rebuilt by inverting the elementary operations in reverse order (way 5). Closest known: finding A^{-1} by applying row operations to [A | I]. Different because: the direction is reversed, so the student must use (E5...E1)^{-1} = E1^{-1}...E5^{-1} and the order of the inverse operations matters.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Inverse of a square matrix",
+  "Finding inverse by elementary operations"
+ ],
+ "concept_use": {
+  "Inverse of a square matrix": "E5E4E3E2E1 A = I gives A^{-1} = E5...E1 and A = (A^{-1})^{-1} = E1^{-1}...E5^{-1}, using the inverse of a product in reverse order.",
+  "Finding inverse by elementary operations": "The row operations that reduce A to I are the Gauss-Jordan operations; undoing them in reverse order on I rebuilds A."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy applies (i)-(v) to the reconstructed A and obtains I; A^{-1} equals the operations applied to I; the sum of entries is -3/2 (a negative decimal as planned). The phrase 'applied in the given order' fixes the reading. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that A = E1^{-1}...E5^{-1}, i.e. undoing the operations in reverse order on I.",
+ "justification": "Two linked ideas (row operations as elementary matrices; inverse of a product in reverse order) with a precision risk in the order of operations and no options. Well above the row-equivalence check of 2026-P1-Q3 (L1); comparable to the matrix identity work of 2021-P1-Q14 (L3).",
+ "nearest_anchor": "2021-P1-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

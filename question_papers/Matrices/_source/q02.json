@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $A$ be a $3\\times3$ real matrix such that $\\mathrm{tr}(A)=6$, $\\mathrm{tr}\\left(A^{2}\\right)=14$ and $\\det(A)=6$, where $\\mathrm{tr}(X)$ denotes the trace of a square matrix $X$. If $\\mathrm{adj}(A)=A^{2}+\\beta A+\\gamma I$ for some real numbers $\\beta$ and $\\gamma$, where $I$ is the $3\\times3$ identity matrix, then $(\\beta,\\gamma)$ is equal to",
+  "",
+  "(A) $(-6,11)$",
+  "(B) $(6,11)$",
+  "(C) $(-6,-11)$",
+  "(D) $(-6,14)$"
+ ],
+ "hindi": [
+  "माना कि $A$ एक $3\\times3$ वास्तविक आव्यूह है जिसके लिए $\\mathrm{tr}(A)=6$, $\\mathrm{tr}\\left(A^{2}\\right)=14$ तथा $\\det(A)=6$ है, जहाँ $\\mathrm{tr}(X)$ वर्ग आव्यूह $X$ का अनुरेख (trace) है। यदि किन्हीं वास्तविक संख्याओं $\\beta$ तथा $\\gamma$ के लिए $\\mathrm{adj}(A)=A^{2}+\\beta A+\\gamma I$ है, जहाँ $I$, $3\\times3$ तत्समक आव्यूह है, तो $(\\beta,\\gamma)$ बराबर है",
+  "",
+  "(A) $(-6,11)$",
+  "(B) $(6,11)$",
+  "(C) $(-6,-11)$",
+  "(D) $(-6,14)$"
+ ],
+ "solution": [
+  "Let the eigenvalues be $\\lambda_1,\\lambda_2,\\lambda_3$: $\\sum\\lambda_i=6$, $\\sum\\lambda_i^{2}=14$, $\\lambda_1\\lambda_2\\lambda_3=6$",
+  "$\\sum\\lambda_i\\lambda_j=\\dfrac{36-14}{2}=11$, so the characteristic equation is $\\lambda^{3}-6\\lambda^{2}+11\\lambda-6=0$, roots $1,2,3$",
+  "Cayley-Hamilton: $A^{3}-6A^{2}+11A-6I=O\\Rightarrow A\\left(A^{2}-6A+11I\\right)=6I=\\det(A)\\,I$",
+  "Since $A\\,\\mathrm{adj}(A)=\\det(A)\\,I$ and $A$ is invertible, $\\mathrm{adj}(A)=A^{2}-6A+11I$",
+  "The eigenvalues are distinct, so no polynomial of degree $\\le2$ kills $A$; hence $I,A,A^{2}$ are independent and $(\\beta,\\gamma)=(-6,11)$ is unique",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Let $\\lambda_1,\\lambda_2,\\lambda_3$ be the eigenvalues of $A$ (roots of $\\det(A-\\lambda I)=0$). Then $\\mathrm{tr}(A)=\\sum\\lambda_i=6$, $\\mathrm{tr}(A^{2})=\\sum\\lambda_i^{2}=14$ and $\\det(A)=\\lambda_1\\lambda_2\\lambda_3=6$.",
+  "From $\\left(\\sum\\lambda_i\\right)^{2}=\\sum\\lambda_i^{2}+2\\sum\\lambda_i\\lambda_j$: $\\sum\\lambda_i\\lambda_j=\\dfrac{36-14}{2}=11$.",
+  "So the characteristic equation is $\\lambda^{3}-6\\lambda^{2}+11\\lambda-6=0$, i.e. $(\\lambda-1)(\\lambda-2)(\\lambda-3)=0$; the eigenvalues are $1,2,3$.",
+  "By the Cayley-Hamilton theorem, $A^{3}-6A^{2}+11A-6I=O$.",
+  "Rewrite it as $A\\left(A^{2}-6A+11I\\right)=6I$.",
+  "Since $\\det(A)=6\\neq0$, $A$ is invertible and $A^{-1}=\\dfrac16\\left(A^{2}-6A+11I\\right)$.",
+  "Also $A\\,\\mathrm{adj}(A)=\\det(A)\\,I=6I$, so $\\mathrm{adj}(A)=6A^{-1}=A^{2}-6A+11I$.",
+  "Uniqueness: if $A^{2}+\\beta A+\\gamma I=A^{2}+\\beta' A+\\gamma' I$ with $(\\beta,\\gamma)\\neq(\\beta',\\gamma')$, then $A$ would satisfy a non-zero polynomial of degree at most $1$, so $A$ would have at most one eigenvalue; but $A$ has three distinct eigenvalues. Hence $\\beta=-6$, $\\gamma=11$.",
+  "(Taking $\\sum\\lambda_i\\lambda_j=14$ or a wrong sign gives the other options.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "answer_plan": "Option A",
+ "originality_note": "New: the characteristic polynomial is not given; it is rebuilt from tr A, tr A^2 and det A (power sums to elementary sums), and the adjugate is then read from Cayley-Hamilton (way 5). Closest known: 'if A^3 - ... = 0 find A^{-1} in terms of A' with an explicit matrix. Different because: no entries are given, the middle coefficient must be found from tr(A^2), and uniqueness of (beta, gamma) needs distinct eigenvalues.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem",
+  "Adjoint of a square matrix"
+ ],
+ "concept_use": {
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem": "tr A, tr A^2 and det A give the characteristic equation lambda^3 - 6 lambda^2 + 11 lambda - 6 = 0, and Cayley-Hamilton gives A^3 - 6A^2 + 11A - 6I = O.",
+  "Adjoint of a square matrix": "A adj(A) = det(A) I turns the Cayley-Hamilton identity into adj(A) = A^2 - 6A + 11I."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: for the triangular matrix [[1,1,0],[0,2,1],[0,0,3]] and for a random similar matrix with the same traces, sympy gives adj(A) = A^2 - 6A + 11I, and solving for (beta, gamma) gives the unique pair (-6, 11). Changed: defined tr(X) and I in the stem.",
+ "level": 2,
+ "key_step": "Getting the sum of pairwise eigenvalue products 11 from tr(A^2), then adj(A) = A^2 - 6A + 11I from Cayley-Hamilton.",
+ "justification": "A routine chain of three standard results (power sums, Cayley-Hamilton, A adj A = det A I) with no hidden idea; options remove the risk. Similar demand to the determinant/trace statement checks of 2021-P1-Q11 (L2).",
+ "nearest_anchor": "2021-P1-Q11 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

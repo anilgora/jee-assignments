@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $R=\\begin{pmatrix}\\cos\\frac{2\\pi}{9}&-\\sin\\frac{2\\pi}{9}\\\\[2pt]\\sin\\frac{2\\pi}{9}&\\cos\\frac{2\\pi}{9}\\end{pmatrix}$ be the matrix of the anticlockwise rotation of the $xy$-plane about the origin through the angle $\\dfrac{2\\pi}{9}$. For $k=1,2,\\ldots,9$, let $(x_k,y_k)$ be the point whose position vector is $R^{k}\\begin{pmatrix}\\frac12\\\\[2pt]\\frac12\\end{pmatrix}$. Then the value of $\\dfrac19\\displaystyle\\sum_{k=1}^{9}x_k^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $R=\\begin{pmatrix}\\cos\\frac{2\\pi}{9}&-\\sin\\frac{2\\pi}{9}\\\\[2pt]\\sin\\frac{2\\pi}{9}&\\cos\\frac{2\\pi}{9}\\end{pmatrix}$, $xy$-तल के मूलबिन्दु के परितः कोण $\\dfrac{2\\pi}{9}$ से वामावर्त घूर्णन का आव्यूह है। $k=1,2,\\ldots,9$ के लिए माना $(x_k,y_k)$ वह बिन्दु है जिसका स्थिति सदिश $R^{k}\\begin{pmatrix}\\frac12\\\\[2pt]\\frac12\\end{pmatrix}$ है। तब $\\dfrac19\\displaystyle\\sum_{k=1}^{9}x_k^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$R$ acts as multiplication by $\\omega=\\cos\\frac{2\\pi}{9}+i\\sin\\frac{2\\pi}{9}$; by De Moivre $R^{k}$ acts as $\\omega^{k}$",
+  "So $z_k=x_k+iy_k=\\omega^{k}z_0$, $z_0=\\frac12+\\frac i2$, $|z_k|^{2}=\\frac12$",
+  "$x_k=\\dfrac{z_k+\\bar z_k}{2}\\Rightarrow x_k^{2}=\\dfrac{z_k^{2}+\\bar z_k^{2}+2|z_k|^{2}}{4}$",
+  "$\\sum_{k=1}^{9}z_k^{2}=z_0^{2}\\sum_{k=1}^{9}\\omega^{2k}=0$, since $\\omega^{2}\\neq1$ and $\\left(\\omega^{2}\\right)^{9}=1$; similarly for $\\bar z_k^{2}$",
+  "$\\sum x_k^{2}=\\dfrac{9\\cdot2\\cdot\\frac12}{4}=\\dfrac94\\Rightarrow\\dfrac19\\sum x_k^{2}=\\dfrac14$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "Identify the point $(x,y)$ with $z=x+iy$. Then $R\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}x\\cos\\theta-y\\sin\\theta\\\\x\\sin\\theta+y\\cos\\theta\\end{pmatrix}$ with $\\theta=\\frac{2\\pi}{9}$ corresponds to $\\omega z$, where $\\omega=\\cos\\theta+i\\sin\\theta$.",
+  "Applying $R$ $k$ times multiplies by $\\omega^{k}$, and by De Moivre's theorem $\\omega^{k}=\\cos k\\theta+i\\sin k\\theta$; so $R^{k}$ is the rotation through $k\\theta$.",
+  "Hence $z_k=x_k+iy_k=\\omega^{k}z_0$ with $z_0=\\frac12+\\frac12i$, and $|z_k|^{2}=|z_0|^{2}=\\frac14+\\frac14=\\frac12$.",
+  "Since $x_k=\\dfrac{z_k+\\bar z_k}{2}$: $x_k^{2}=\\dfrac{z_k^{2}+\\bar z_k^{2}+2z_k\\bar z_k}{4}=\\dfrac{z_k^{2}+\\bar z_k^{2}+1}{4}$.",
+  "$\\sum_{k=1}^{9}z_k^{2}=z_0^{2}\\sum_{k=1}^{9}\\left(\\omega^{2}\\right)^{k}$. Here $\\omega^{2}=\\cos\\frac{4\\pi}{9}+i\\sin\\frac{4\\pi}{9}\\neq1$ and $\\left(\\omega^{2}\\right)^{9}=\\cos4\\pi+i\\sin4\\pi=1$, so the geometric sum is $\\omega^{2}\\dfrac{\\omega^{18}-1}{\\omega^{2}-1}=0$.",
+  "Taking conjugates, $\\sum\\bar z_k^{2}=0$ as well.",
+  "So $\\sum_{k=1}^{9}x_k^{2}=\\dfrac{0+0+9}{4}=\\dfrac94$ and the mean is $\\dfrac19\\cdot\\dfrac94=\\dfrac14=0.25$.",
+  "(In words: over a full set of nine equally spaced rotations the mean of $x^{2}$ is half the squared distance from the origin.)",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: the mean of the squared x-coordinates of the nine images of a point under the powers of a rotation matrix; it equals half the squared distance from the origin because the sum of the 9th roots of unity is zero (way 4, hidden invariant). Closest known: sums of cos(2k pi/n) over roots of unity and powers of a rotation matrix. Different because: the question is posed on matrix images of a point and needs the squared coordinate, i.e. the second harmonic omega^{2k}.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Matrices as transformations: rotation, reflection and shear",
+  "De Moivre theorem"
+ ],
+ "concept_use": {
+  "Matrices as transformations: rotation, reflection and shear": "R is the rotation matrix through 2 pi/9, so R^k maps the point (1/2, 1/2) to its rotation through 2k pi/9.",
+  "De Moivre theorem": "R^k corresponds to omega^k = cos(2k pi/9) + i sin(2k pi/9), and the sum of omega^{2k} over k = 1..9 vanishes because omega^2 is a 9th root of unity other than 1."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: mpmath (30 digits) evaluates the nine points directly and gives a mean of 0.25 exactly; 0.25 is a decimal between 0 and 1 as planned. 'Position vector' and the range k = 1..9 make the set of points unique. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing x_k^2 through z_k and z_k-bar and using that the sum of omega^{2k} over a full period is zero.",
+ "justification": "Two linked ideas (rotation matrix as multiplication by omega, and a vanishing root-of-unity sum for the second harmonic) in numerical form. Comparable to the cis-product reasoning of 2021-P1-Q4 (L3).",
+ "nearest_anchor": "2021-P1-Q4 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

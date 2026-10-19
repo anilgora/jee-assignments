@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $M$ be the $4\\times4$ matrix whose $(i,j)$ entry is $\\min\\{i,j\\}$ for $i,j=1,2,3,4$. Then the sum of all those entries of $M^{-1}$ that do not lie on the principal diagonal is ______."
+ ],
+ "hindi": [
+  "माना कि $M$ वह $4\\times4$ आव्यूह है जिसकी $(i,j)$ प्रविष्टि $i,j=1,2,3,4$ के लिए $\\min\\{i,j\\}$ है। तब $M^{-1}$ की उन सभी प्रविष्टियों का योग, जो मुख्य विकर्ण पर नहीं हैं, ______ है।"
+ ],
+ "solution": [
+  "$M=\\begin{pmatrix}1&1&1&1\\\\1&2&2&2\\\\1&2&3&3\\\\1&2&3&4\\end{pmatrix}$; $R_4\\to R_4-R_3$, $R_3\\to R_3-R_2$, $R_2\\to R_2-R_1$ give the upper triangular all-ones matrix $U$, so $\\det M=1$",
+  "These operations say $M=LU$ with $L=U^{T}$ (lower triangular of ones), i.e. $M=U^{T}U$",
+  "$U^{-1}$: $1$ on the diagonal, $-1$ just above it, $0$ elsewhere (since $U^{-1}$ undoes partial sums)",
+  "$M^{-1}=U^{-1}\\left(U^{-1}\\right)^{T}=\\begin{pmatrix}2&-1&0&0\\\\-1&2&-1&0\\\\0&-1&2&-1\\\\0&0&-1&1\\end{pmatrix}$",
+  "Off-diagonal sum $=6\\times(-1)=-6$",
+  "",
+  "Final Answer: -6"
+ ],
+ "solution_full": [
+  "Here $M=\\begin{pmatrix}1&1&1&1\\\\1&2&2&2\\\\1&2&3&3\\\\1&2&3&4\\end{pmatrix}$.",
+  "Apply $R_4\\to R_4-R_3$, then $R_3\\to R_3-R_2$, then $R_2\\to R_2-R_1$ (each uses the original rows, so do them in this order). These do not change the determinant and give $U=\\begin{pmatrix}1&1&1&1\\\\0&1&1&1\\\\0&0&1&1\\\\0&0&0&1\\end{pmatrix}$. Hence $\\det M=\\det U=1\\neq0$, so $M$ is invertible.",
+  "Equivalently, row $i$ of $M$ is the sum of the first $i$ rows of $U$, i.e. $M=LU$ with $L$ the lower triangular matrix of ones; and $L=U^{T}$. So $M=U^{T}U$ and $\\det M=\\det U^{T}\\det U=1$.",
+  "$U^{-1}=\\begin{pmatrix}1&-1&0&0\\\\0&1&-1&0\\\\0&0&1&-1\\\\0&0&0&1\\end{pmatrix}$: indeed $U\\cdot U^{-1}=I$, because each row of $U$ is $(0,\\ldots,0,1,\\ldots,1)$ and the columns of $U^{-1}$ take differences of neighbouring entries.",
+  "Then $M^{-1}=U^{-1}\\left(U^{T}\\right)^{-1}=U^{-1}\\left(U^{-1}\\right)^{T}$.",
+  "Multiplying: $M^{-1}=\\begin{pmatrix}2&-1&0&0\\\\-1&2&-1&0\\\\0&-1&2&-1\\\\0&0&-1&1\\end{pmatrix}$. Check one product: row $2$ of $M$, $(1,2,2,2)$, times column $2$ of $M^{-1}$, $(-1,2,-1,0)$, is $-1+4-2=1$, and times column $1$, $(2,-1,0,0)$, is $2-2=0$.",
+  "The off-diagonal entries are six entries equal to $-1$ and six zeros, so their sum is $-6$.",
+  "",
+  "Final Answer: -6"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the inverse of the 'min(i,j)' matrix is obtained from the row-difference operations that reduce it to an all-ones triangular matrix, and the off-diagonal sum of the inverse is asked (way 4, hidden structure M = U^T U). Closest known: the 'min matrix' of linear algebra texts (known to have a tridiagonal inverse); not a JEE skeleton. Different because: in JEE terms the student must find the factorisation through determinant-preserving row operations rather than through 16 cofactors.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Inverse of a square matrix",
+  "Application of properties of determinant"
+ ],
+ "concept_use": {
+  "Inverse of a square matrix": "M^{-1} = U^{-1}(U^{-1})^T is computed from the factorisation M = U^T U and the off-diagonal entries are added.",
+  "Application of properties of determinant": "Row operations R4 - R3, R3 - R2, R2 - R1 (which leave the determinant unchanged) reduce M to U, giving det M = 1 and the factorisation M = U^T U."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy gives det M = 1 and M^{-1} tridiagonal with off-diagonal sum -6 (a negative integer as planned). Changed: wrote 'i, j = 1, 2, 3, 4' and 'principal diagonal' explicitly.",
+ "level": 3,
+ "key_step": "Reducing M by successive row differences to the all-ones triangular U, i.e. M = U^T U, so M^{-1} = U^{-1}(U^{-1})^T.",
+ "justification": "Two linked ideas (determinant-preserving row differences revealing M = U^T U; inverse of a product) with a 4 x 4 exact computation and no options. The structure is not standard in JEE practice; comparable to the matrix identities of 2021-P1-Q14 (L3).",
+ "nearest_anchor": "2021-P1-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

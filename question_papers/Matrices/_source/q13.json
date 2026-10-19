@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $A=\\begin{pmatrix}\\frac14&1\\\\[2pt]\\frac{1}{16}&-\\frac14\\end{pmatrix}$ and let $I$ be the $2\\times2$ identity matrix. For each positive integer $n$, let $S_n=I+A+A^{2}+\\cdots+A^{n}$. Then the value of $\\displaystyle\\lim_{n\\to\\infty}$ (sum of all the entries of $S_n$) is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}\\frac14&1\\\\[2pt]\\frac{1}{16}&-\\frac14\\end{pmatrix}$ है तथा $I$, $2\\times2$ तत्समक आव्यूह है। प्रत्येक धनात्मक पूर्णांक $n$ के लिए माना $S_n=I+A+A^{2}+\\cdots+A^{n}$ है। तब $\\displaystyle\\lim_{n\\to\\infty}$ ($S_n$ की सभी प्रविष्टियों का योग) का मान ______ है।"
+ ],
+ "solution": [
+  "$A^{2}=\\begin{pmatrix}\\frac{1}{16}+\\frac{1}{16}&\\frac14-\\frac14\\\\[2pt]\\frac{1}{64}-\\frac{1}{64}&\\frac{1}{16}+\\frac{1}{16}\\end{pmatrix}=\\dfrac18I$",
+  "So $A^{2k}=\\dfrac{1}{8^{k}}I$ and $A^{2k+1}=\\dfrac{1}{8^{k}}A$: the powers split into two GPs with ratio $\\dfrac18$",
+  "$S_{2m+1}=\\left(1+\\dfrac18+\\cdots+\\dfrac{1}{8^{m}}\\right)(I+A)\\to\\dfrac{1}{1-\\frac18}(I+A)=\\dfrac87(I+A)$ (and $S_{2m}$ differs by $A^{2m+1}\\to O$)",
+  "Sum of entries of $I+A$ $=2+\\dfrac14+1+\\dfrac{1}{16}-\\dfrac14=\\dfrac{49}{16}$",
+  "Limit $=\\dfrac87\\cdot\\dfrac{49}{16}=\\dfrac72=3.5$",
+  "",
+  "Final Answer: 3.50"
+ ],
+ "solution_full": [
+  "Compute $A^{2}$: the $(1,1)$ entry is $\\frac{1}{16}+1\\cdot\\frac{1}{16}=\\frac18$, the $(1,2)$ entry is $\\frac14\\cdot1+1\\cdot\\left(-\\frac14\\right)=0$, the $(2,1)$ entry is $\\frac{1}{16}\\cdot\\frac14+\\left(-\\frac14\\right)\\frac{1}{16}=0$, and the $(2,2)$ entry is $\\frac{1}{16}+\\frac{1}{16}=\\frac18$. So $A^{2}=\\frac18I$.",
+  "Hence $A^{2k}=\\left(A^{2}\\right)^{k}=8^{-k}I$ and $A^{2k+1}=8^{-k}A$ for $k\\ge0$.",
+  "Grouping the terms in pairs, $S_{2m+1}=\\sum_{k=0}^{m}\\left(A^{2k}+A^{2k+1}\\right)=\\left(\\sum_{k=0}^{m}8^{-k}\\right)(I+A)$.",
+  "The geometric series has ratio $\\frac18$, so $\\sum_{k=0}^{m}8^{-k}=\\dfrac{1-8^{-(m+1)}}{1-\\frac18}\\to\\dfrac87$.",
+  "Also $S_{2m}=S_{2m+1}-A^{2m+1}=S_{2m+1}-8^{-m}A$, and $8^{-m}A\\to O$, so both subsequences have the same limit $\\dfrac87(I+A)$.",
+  "$I+A=\\begin{pmatrix}\\frac54&1\\\\[2pt]\\frac{1}{16}&\\frac34\\end{pmatrix}$, whose entries add up to $\\frac54+1+\\frac{1}{16}+\\frac34=\\frac{49}{16}$.",
+  "Since the sum of entries is linear, the required limit is $\\dfrac87\\cdot\\dfrac{49}{16}=\\dfrac{7}{2}=3.50$.",
+  "",
+  "Final Answer: 3.50"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: a matrix series I + A + A^2 + ... in which A^2 is a scalar matrix, so the series splits into two scalar GPs multiplying I and A (way 4, hidden structure). Closest known: sum of a GP of numbers, and (I - A)^{-1} as a matrix geometric series (not JEE). Different because: the trace-zero matrix with det -1/8 hides A^2 = (1/8) I, which turns a matrix series into a scalar GP.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Higher integral powers of a square matrices",
+  "Geometric Progression (GP) & Sum of GP"
+ ],
+ "concept_use": {
+  "Higher integral powers of a square matrices": "A^2 = (1/8) I gives every power: A^{2k} = 8^{-k} I and A^{2k+1} = 8^{-k} A.",
+  "Geometric Progression (GP) & Sum of GP": "The even and odd powers form geometric progressions with ratio 1/8, summed to infinity as 8/7."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy sums I + A + ... + A^199 (entry sum 3.5000000000) and gives A^2 = I/8; the limit 7/2 = 3.50 is a positive decimal as planned. Changed: wrote the limit of the sum of entries explicitly so the reading is unique.",
+ "level": 3,
+ "key_step": "Discovering A^2 = (1/8) I, then splitting the matrix series into two geometric progressions.",
+ "justification": "Two linked ideas (a hidden scalar square and a GP sum with an even/odd split) in numerical format. Comparable to the sum-of-powers statement in 2026-P1-Q8 (L3).",
+ "nearest_anchor": "2026-P1-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

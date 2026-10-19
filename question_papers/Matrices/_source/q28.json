@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $A=\\begin{pmatrix}3&-1&0\\\\-1&1&-1\\\\0&-1&2\\end{pmatrix}$. Then the sum of all the entries of $A^{-1}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}3&-1&0\\\\-1&1&-1\\\\0&-1&2\\end{pmatrix}$ है। तब $A^{-1}$ की सभी प्रविष्टियों का योग ______ है।"
+ ],
+ "solution": [
+  "Row operations on $[A\\,|\\,I]$:",
+  "$R_1\\leftrightarrow R_2$, $R_1\\to-R_1$: $\\left(\\begin{array}{ccc|ccc}1&-1&1&0&-1&0\\\\3&-1&0&1&0&0\\\\0&-1&2&0&0&1\\end{array}\\right)$",
+  "$R_2\\to R_2-3R_1$: $(0,2,-3\\,|\\,1,3,0)$; $R_3\\to2R_3$, $R_3\\to R_3+R_2$: $(0,0,1\\,|\\,1,3,2)$",
+  "$R_2\\to R_2+3R_3$, $R_2\\to\\frac12R_2$: $(0,1,0\\,|\\,2,6,3)$; $R_1\\to R_1+R_2-R_3$: $(1,0,0\\,|\\,1,2,1)$",
+  "$A^{-1}=\\begin{pmatrix}1&2&1\\\\2&6&3\\\\1&3&2\\end{pmatrix}$, sum of entries $=4+11+6=21$",
+  "",
+  "Final Answer: 21"
+ ],
+ "solution_full": [
+  "Start from the augmented matrix $[A\\,|\\,I]=\\left(\\begin{array}{ccc|ccc}3&-1&0&1&0&0\\\\-1&1&-1&0&1&0\\\\0&-1&2&0&0&1\\end{array}\\right)$.",
+  "$R_1\\leftrightarrow R_2$ and then $R_1\\to-R_1$: $\\left(\\begin{array}{ccc|ccc}1&-1&1&0&-1&0\\\\3&-1&0&1&0&0\\\\0&-1&2&0&0&1\\end{array}\\right)$.",
+  "$R_2\\to R_2-3R_1$: the second row becomes $(0,2,-3\\,|\\,1,3,0)$.",
+  "$R_3\\to2R_3$: $(0,-2,4\\,|\\,0,0,2)$; then $R_3\\to R_3+R_2$: $(0,0,1\\,|\\,1,3,2)$.",
+  "$R_2\\to R_2+3R_3$: $(0,2,0\\,|\\,4,12,6)$; then $R_2\\to\\frac12R_2$: $(0,1,0\\,|\\,2,6,3)$.",
+  "$R_1\\to R_1+R_2-R_3$: $(1,-1+1-0,1+0-1\\,|\\,0+2-1,-1+6-3,0+3-2)=(1,0,0\\,|\\,1,2,1)$.",
+  "The left block is now $I$, so $A^{-1}=\\begin{pmatrix}1&2&1\\\\2&6&3\\\\1&3&2\\end{pmatrix}$.",
+  "Check: row $1$ of $A$ times the columns of $A^{-1}$ gives $(3-2,\\,6-6,\\,3-3)=(1,0,0)$; similarly for the other rows.",
+  "Sum of all entries: $(1+2+1)+(2+6+3)+(1+3+2)=4+11+6=21$.",
+  "",
+  "Final Answer: 21"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: a symmetric tridiagonal matrix with determinant 1 is chosen so that the inverse has integer entries and Gauss-Jordan stays exact (way 5, single routine concept). Closest known: the textbook exercises 'find A^{-1} by elementary row operations' (e.g. NCERT [[1,2,3],[0,1,4],[5,6,0]]). Different because: the matrix and the asked quantity are new; the method itself is standard, as the row of the blueprint intends.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Finding inverse by elementary operations"
+ ],
+ "concept_use": {
+  "Finding inverse by elementary operations": "A^{-1} is obtained by reducing [A | I] to [I | A^{-1}] with row operations, and its entries are then added."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy gives det A = 1, A^{-1} = [[1,2,1],[2,6,3],[1,3,2]] and the sum 21 (a positive 2-digit integer as planned). Changed: No change.",
+ "level": 2,
+ "key_step": "Carrying out Gauss-Jordan elimination on [A | I] without an arithmetic slip.",
+ "justification": "Single standard procedure applied over several steps with exact arithmetic and no options; more than the one-move invertibility check of 2026-P1-Q3 (L1), so a routine chain at L2.",
+ "nearest_anchor": "2026-P1-Q3 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

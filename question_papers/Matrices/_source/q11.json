@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $A=\\begin{pmatrix}-1&1&0\\\\-2&2&1\\\\2&-1&2\\end{pmatrix}$. Then the sum of all the entries of $A^{10}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}-1&1&0\\\\-2&2&1\\\\2&-1&2\\end{pmatrix}$ है। तब $A^{10}$ की सभी प्रविष्टियों का योग ______ है।"
+ ],
+ "solution": [
+  "Write $A=I+N$, $N=\\begin{pmatrix}-2&1&0\\\\-2&1&1\\\\2&-1&1\\end{pmatrix}$ ($\\mathrm{tr}\\,N=0$ suggests $N$ may be nilpotent)",
+  "$N^{2}=\\begin{pmatrix}2&-1&1\\\\4&-2&2\\\\0&0&0\\end{pmatrix}$, $N^{3}=N^{2}N=O$ (row $1$ of $N^{2}$ times $N$ is $(0,0,0)$, row $2$ is twice row $1$)",
+  "$I$ and $N$ commute, so by the binomial theorem $A^{10}=I+10N+\\binom{10}{2}N^{2}=I+10N+45N^{2}$",
+  "Sums of entries: $I\\to3$, $N\\to1$, $N^{2}\\to6$",
+  "Sum for $A^{10}$ $=3+10\\cdot1+45\\cdot6=283$",
+  "",
+  "Final Answer: 283"
+ ],
+ "solution_full": [
+  "Let $N=A-I=\\begin{pmatrix}-2&1&0\\\\-2&1&1\\\\2&-1&1\\end{pmatrix}$.",
+  "$N^{2}$: row $1$ $(-2,1,0)$ gives $(4-2,\\,-2+1,\\,0+1)=(2,-1,1)$; row $2$ $(-2,1,1)$ gives $(4-2+2,\\,-2+1-1,\\,0+1+1)=(4,-2,2)$; row $3$ $(2,-1,1)$ gives $(-4+2+2,\\,2-1-1,\\,0-1+1)=(0,0,0)$.",
+  "So $N^{2}=\\begin{pmatrix}2&-1&1\\\\4&-2&2\\\\0&0&0\\end{pmatrix}\\neq O$.",
+  "$N^{3}=N^{2}N$: row $1$ $(2,-1,1)$ gives $(-4+2+2,\\,2-1-1,\\,0-1+1)=(0,0,0)$; row $2$ is twice row $1$, so it also gives $0$; row $3$ is $0$. Hence $N^{3}=O$ and $N^{k}=O$ for $k\\ge3$.",
+  "Since $IN=NI$, the binomial theorem applies: $A^{10}=(I+N)^{10}=\\sum_{k=0}^{10}\\binom{10}{k}N^{k}=I+10N+45N^{2}$.",
+  "The sum of entries is linear: sum$(I)=3$, sum$(N)=-2+1+0-2+1+1+2-1+1=1$, sum$\\left(N^{2}\\right)=2-1+1+4-2+2=6$.",
+  "Hence the sum of the entries of $A^{10}$ is $3+10\\cdot1+45\\cdot6=3+10+270=283$.",
+  "",
+  "Final Answer: 283"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the nilpotent part is hidden in a non-triangular integer matrix (A - I has trace 0 and N^3 = O but no zero pattern), so the student must test A - I before expanding (way 4). Closest known: A = I + N with N strictly upper triangular (JEE Main 2021 type) and the NCERT nilpotent matrix [[1,1,3],[5,2,6],[-2,-1,-3]]. Different because: the matrix is new and not triangular, so the I + N split must be discovered.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Higher integral powers of a square matrices",
+  "Higher powers using A = I + N with N nilpotent (binomial expansion)"
+ ],
+ "concept_use": {
+  "Higher integral powers of a square matrices": "A^10 itself is required (its entry sum); direct multiplication is avoided by the expansion.",
+  "Higher powers using A = I + N with N nilpotent (binomial expansion)": "A - I = N has N^3 = O with N^2 != O, so A^10 = I + 10N + 45N^2 by the binomial theorem."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy gives N^2 != O, N^3 = O, characteristic polynomial (lambda-1)^3 and the sum of entries of A^10 directly as 283 (a positive 3-digit integer as planned). Changed: No change.",
+ "level": 3,
+ "key_step": "Noticing that A - I is nilpotent of index 3 although A is not triangular, then expanding (I + N)^10.",
+ "justification": "Two linked ideas: discovering the hidden nilpotent part and the binomial expansion with N^2 != O, with exact arithmetic and no options. Same kind of demand as 2026-P1-Q8 (L3), where (M - I)^2 = 0 drives the powers.",
+ "nearest_anchor": "2026-P1-Q8 (L3)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

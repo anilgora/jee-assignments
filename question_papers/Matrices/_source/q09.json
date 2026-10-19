@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $u=\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$ and $v=\\begin{pmatrix}2\\\\-1\\\\2\\end{pmatrix}$, and let $M=I+uv^{T}$, where $I$ is the $3\\times3$ identity matrix and $v^{T}$ is the transpose of $v$. If $\\left(M^{T}\\right)^{-1}=I+\\lambda\\,vu^{T}$ for a real number $\\lambda$, then the value of $\\lambda$ is ______."
+ ],
+ "hindi": [
+  "माना कि $u=\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$ तथा $v=\\begin{pmatrix}2\\\\-1\\\\2\\end{pmatrix}$ है, और $M=I+uv^{T}$ है, जहाँ $I$, $3\\times3$ तत्समक आव्यूह है तथा $v^{T}$, $v$ का परिवर्त है। यदि किसी वास्तविक संख्या $\\lambda$ के लिए $\\left(M^{T}\\right)^{-1}=I+\\lambda\\,vu^{T}$ है, तो $\\lambda$ का मान ______ है।"
+ ],
+ "solution": [
+  "$M^{T}=I^{T}+\\left(uv^{T}\\right)^{T}=I+vu^{T}$",
+  "$u^{T}v=2-1+2=3$ is a scalar, so $\\left(vu^{T}\\right)\\left(vu^{T}\\right)=v\\left(u^{T}v\\right)u^{T}=3\\,vu^{T}$",
+  "$\\left(I+vu^{T}\\right)\\left(I+\\lambda vu^{T}\\right)=I+(1+\\lambda+3\\lambda)\\,vu^{T}$",
+  "This is $I$ iff $1+4\\lambda=0$ (as $vu^{T}\\neq O$) $\\Rightarrow\\lambda=-\\dfrac14$",
+  "",
+  "Final Answer: -0.25"
+ ],
+ "solution_full": [
+  "By the transpose rules $(X+Y)^{T}=X^{T}+Y^{T}$ and $(XY)^{T}=Y^{T}X^{T}$: $M^{T}=I+\\left(v^{T}\\right)^{T}u^{T}=I+vu^{T}$.",
+  "Here $vu^{T}$ is a $3\\times3$ matrix and $u^{T}v$ is a $1\\times1$ matrix, i.e. the number $1\\cdot2+1\\cdot(-1)+1\\cdot2=3$.",
+  "By associativity, $\\left(vu^{T}\\right)\\left(vu^{T}\\right)=v\\left(u^{T}v\\right)u^{T}=3\\,vu^{T}$.",
+  "Then $\\left(I+vu^{T}\\right)\\left(I+\\lambda vu^{T}\\right)=I+\\lambda vu^{T}+vu^{T}+\\lambda\\left(vu^{T}\\right)^{2}=I+(1+\\lambda+3\\lambda)\\,vu^{T}$.",
+  "Since $vu^{T}=\\begin{pmatrix}2&2&2\\\\-1&-1&-1\\\\2&2&2\\end{pmatrix}\\neq O$, the product equals $I$ exactly when $1+4\\lambda=0$, i.e. $\\lambda=-\\dfrac14$.",
+  "A right inverse of a square matrix is its inverse, so $\\left(M^{T}\\right)^{-1}=I-\\dfrac14vu^{T}$ and $\\lambda=-0.25$.",
+  "",
+  "Final Answer: -0.25"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: the inverse of the transpose of a rank-one update I + u v^T is found by associativity, using that u^T v is a scalar (way 5). Closest known: the Sherman-Morrison formula from linear algebra and JEE questions with A = column times row. Different because: the student must transpose first (the update becomes v u^T) and then use u^T v = 3 to collapse the product.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Matrix Multiplication & Algebraic Properties",
+  "Transpose: properties and (AB)^T = B^T A^T"
+ ],
+ "concept_use": {
+  "Matrix Multiplication & Algebraic Properties": "Associativity turns (v u^T)(v u^T) into v (u^T v) u^T = 3 v u^T, which makes the product (I + v u^T)(I + lambda v u^T) collapse.",
+  "Transpose: properties and (AB)^T = B^T A^T": "(I + u v^T)^T = I + v u^T by the transpose rules for sums and products."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy confirms (M^T)^{-1} = I - (1/4) v u^T exactly; -0.25 is a negative decimal as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Using u^T v = 3 to get (v u^T)^2 = 3 v u^T, then solving 1 + 4 lambda = 0.",
+ "justification": "A short routine chain (transpose of a product, associativity, solve a linear condition); the rank-one idea is familiar from 'column times row' exercises. Same weight as the routine matrix identities of 2021-P1-Q11 (L2).",
+ "nearest_anchor": "2021-P1-Q11 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

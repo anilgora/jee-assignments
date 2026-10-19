@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $A=\\begin{pmatrix}2&3\\\\1&0\\end{pmatrix}$ and let $I$ be the $2\\times2$ identity matrix. If $\\alpha$ and $\\beta$ are real numbers such that $A^{4}+3A^{-1}=\\alpha A+\\beta I$, then the value of $\\alpha+\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A=\\begin{pmatrix}2&3\\\\1&0\\end{pmatrix}$ है तथा $I$, $2\\times2$ तत्समक आव्यूह है। यदि $\\alpha$ तथा $\\beta$ ऐसी वास्तविक संख्याएँ हैं कि $A^{4}+3A^{-1}=\\alpha A+\\beta I$ है, तो $\\alpha+\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Characteristic equation: $\\lambda^{2}-(\\mathrm{tr}A)\\lambda+\\det A=\\lambda^{2}-2\\lambda-3=0$; Cayley-Hamilton: $A^{2}=2A+3I$",
+  "$A^{3}=2A^{2}+3A=7A+6I$, $A^{4}=7A^{2}+6A=20A+21I$",
+  "$A(A-2I)=3I\\Rightarrow A^{-1}=\\dfrac13(A-2I)$, so $3A^{-1}=A-2I$",
+  "$A^{4}+3A^{-1}=21A+19I$; $A$ is not a scalar matrix, so $\\alpha=21,\\ \\beta=19$",
+  "$\\alpha+\\beta=40$",
+  "",
+  "Final Answer: 40"
+ ],
+ "solution_full": [
+  "$\\mathrm{tr}A=2$ and $\\det A=0-3=-3$, so the characteristic equation is $\\lambda^{2}-2\\lambda-3=0$ (eigenvalues $3$ and $-1$).",
+  "By the Cayley-Hamilton theorem, $A^{2}-2A-3I=O$, i.e. $A^{2}=2A+3I$.",
+  "Then $A^{3}=A\\cdot A^{2}=2A^{2}+3A=2(2A+3I)+3A=7A+6I$.",
+  "And $A^{4}=A\\cdot A^{3}=7A^{2}+6A=7(2A+3I)+6A=20A+21I$.",
+  "From $A^{2}-2A=3I$: $A(A-2I)=3I$, so $A$ is invertible and $A^{-1}=\\dfrac13(A-2I)$; hence $3A^{-1}=A-2I$.",
+  "Adding: $A^{4}+3A^{-1}=(20A+21I)+(A-2I)=21A+19I$.",
+  "Since $A$ is not a multiple of $I$, the matrices $A$ and $I$ are linearly independent, so $\\alpha=21$ and $\\beta=19$ are unique.",
+  "Check with eigenvalues: $3^{4}+\\frac33=82=3\\alpha+\\beta$ and $(-1)^{4}-3=-2=-\\alpha+\\beta$ give the same $\\alpha,\\beta$.",
+  "Hence $\\alpha+\\beta=40$.",
+  "",
+  "Final Answer: 40"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "originality_note": "New: a power and the inverse are combined in one linear expression, so Cayley-Hamilton must be used both upwards (A^4) and downwards (A^{-1}) (way 5). Closest known: JEE Main questions of the form '6A^{-1} = A^2 + cA + dI' and 'A^n = pA + qI'. Different because: the matrix and the combination A^4 + 3A^{-1} are new and the two reductions must be combined.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}."
+ ],
+ "concept_use": {
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem": "The characteristic equation lambda^2 - 2 lambda - 3 = 0 and Cayley-Hamilton give A^2 = 2A + 3I.",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}.": "The same identity reduces A^4 to 20A + 21I and gives A^{-1} = (A - 2I)/3."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy solves A^4 + 3A^{-1} = alpha A + beta I and returns alpha = 21, beta = 19; 40 is a positive 2-digit integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Using A^2 = 2A + 3I to reduce A^4 and to write A^{-1} as a linear expression in A.",
+ "justification": "Routine multi-step use of Cayley-Hamilton (two reductions), no hidden idea; at the routine-chain level of 2021-P1-Q11 (L2).",
+ "nearest_anchor": "2021-P1-Q11 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

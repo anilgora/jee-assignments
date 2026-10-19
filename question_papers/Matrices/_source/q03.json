@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Matrices",
+ "target_level": 2,
+ "english": [
+  "Let $Q=\\dfrac{1}{3}\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\2&-2&1\\end{pmatrix}$ and $X=\\begin{pmatrix}1&2&0\\\\0&1&-1\\\\2&0&1\\end{pmatrix}$, and let $M=QX^{T}Q^{T}$, where $Y^{T}$ denotes the transpose of a matrix $Y$. Then the sum of the squares of all the entries of $M$ is",
+  "",
+  "(A) $9$",
+  "(B) $12$",
+  "(C) $16$",
+  "(D) $36$"
+ ],
+ "hindi": [
+  "माना कि $Q=\\dfrac{1}{3}\\begin{pmatrix}1&2&2\\\\2&1&-2\\\\2&-2&1\\end{pmatrix}$ तथा $X=\\begin{pmatrix}1&2&0\\\\0&1&-1\\\\2&0&1\\end{pmatrix}$ है, और $M=QX^{T}Q^{T}$ है, जहाँ $Y^{T}$ आव्यूह $Y$ का परिवर्त (transpose) है। तब $M$ की सभी प्रविष्टियों के वर्गों का योग है",
+  "",
+  "(A) $9$",
+  "(B) $12$",
+  "(C) $16$",
+  "(D) $36$"
+ ],
+ "solution": [
+  "For any square $Y$, the sum of squares of all entries of $Y$ equals $\\mathrm{tr}\\left(Y^{T}Y\\right)$",
+  "Rows of $Q$ are unit vectors and mutually perpendicular, so $QQ^{T}=Q^{T}Q=I$ ($Q$ is orthogonal)",
+  "$M^{T}=\\left(QX^{T}Q^{T}\\right)^{T}=QXQ^{T}$ (reversal rule for transposes)",
+  "$M^{T}M=QXQ^{T}QX^{T}Q^{T}=Q\\left(XX^{T}\\right)Q^{T}$",
+  "$\\mathrm{tr}\\left(M^{T}M\\right)=\\mathrm{tr}\\left(XX^{T}Q^{T}Q\\right)=\\mathrm{tr}\\left(XX^{T}\\right)=$ sum of squares of entries of $X$ $=1+4+1+1+4+1=12$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "For any square matrix $Y=[y_{ij}]$, the $(j,j)$ entry of $Y^{T}Y$ is $\\sum_i y_{ij}^{2}$, so $\\mathrm{tr}\\left(Y^{T}Y\\right)=\\sum_{i,j}y_{ij}^{2}$, the sum of the squares of all entries.",
+  "The rows of $Q$ are $\\frac13(1,2,2)$, $\\frac13(2,1,-2)$, $\\frac13(2,-2,1)$. Each has length $\\frac13\\sqrt{1+4+4}=1$, and the dot products are $\\frac19(2+2-4)=0$, $\\frac19(2-4+2)=0$, $\\frac19(4-2-2)=0$. Hence $QQ^{T}=I$, so $Q^{T}=Q^{-1}$ and $Q^{T}Q=I$.",
+  "By $(ABC)^{T}=C^{T}B^{T}A^{T}$: $M^{T}=\\left(QX^{T}Q^{T}\\right)^{T}=\\left(Q^{T}\\right)^{T}\\left(X^{T}\\right)^{T}Q^{T}=QXQ^{T}$.",
+  "Then $M^{T}M=QXQ^{T}\\cdot QX^{T}Q^{T}=QX\\left(Q^{T}Q\\right)X^{T}Q^{T}=Q\\left(XX^{T}\\right)Q^{T}$.",
+  "Using $\\mathrm{tr}(UV)=\\mathrm{tr}(VU)$ with $U=Q$, $V=XX^{T}Q^{T}$: $\\mathrm{tr}\\left(M^{T}M\\right)=\\mathrm{tr}\\left(XX^{T}Q^{T}Q\\right)=\\mathrm{tr}\\left(XX^{T}\\right)$.",
+  "$\\mathrm{tr}\\left(XX^{T}\\right)$ is the sum of the squares of the entries of $X$: $1^{2}+2^{2}+0+0+1^{2}+(-1)^{2}+2^{2}+0+1^{2}=12$.",
+  "So the required sum is $12$ (a direct multiplication of the three matrices gives the same value).",
+  "",
+  "Correct Option: (B)"
+ ],
+ "answer_plan": "Option B",
+ "originality_note": "New: the sum of squares of the entries of Q X^T Q^T is shown to be independent of the orthogonal Q by writing it as tr(M^T M) (way 4, hidden invariant). Closest known: 'P orthogonal, Q = P A P^T, find P^T Q^n P'. Different because: no powers are involved; the question asks for an invariant (Frobenius norm) and the transpose of a triple product is the key step.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Orthogonal matrices",
+  "Transpose: properties and (AB)^T = B^T A^T"
+ ],
+ "concept_use": {
+  "Orthogonal matrices": "Q is checked to be orthogonal (QQ^T = I), and Q^T Q = I cancels in M^T M.",
+  "Transpose: properties and (AB)^T = B^T A^T": "(Q X^T Q^T)^T = Q X Q^T by the reversal rule, and the sum of squares is written as tr(M^T M)."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy confirms QQ^T = I and that the sum of squares of the entries of M is 12, equal to that of X. Changed: defined the transpose notation.",
+ "level": 2,
+ "key_step": "Writing the sum of squares as tr(M^T M) and cancelling Q^T Q = I.",
+ "justification": "Routine chain (orthogonality check, transpose of a product, trace invariance); a student can also multiply out with the options as a check. Same weight as the matrix statement checks of 2021-P1-Q11 (L2); the orthogonal idea is familiar in this direct form, unlike 2026-P1-Q15 (L4).",
+ "nearest_anchor": "2021-P1-Q11 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

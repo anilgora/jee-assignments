@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $A$ be a $3\\times3$ matrix with real entries such that $\\det(A-I)=\\det(A+I)=\\det(A-2I)=0$, where $I$ is the $3\\times3$ identity matrix. Then the value of $\\det\\left(A^{2}-2A^{-1}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A$ वास्तविक प्रविष्टियों वाला एक $3\\times3$ आव्यूह है जिसके लिए $\\det(A-I)=\\det(A+I)=\\det(A-2I)=0$ है, जहाँ $I$, $3\\times3$ तत्समक आव्यूह है। तब $\\det\\left(A^{2}-2A^{-1}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$1,-1,2$ are roots of $\\det(A-\\lambda I)=0$, a cubic; so they are all the eigenvalues and the characteristic equation is $\\lambda^{3}-2\\lambda^{2}-\\lambda+2=0$",
+  "$\\det A=1\\cdot(-1)\\cdot2=-2\\neq0$, so $A^{-1}$ exists",
+  "Cayley-Hamilton: $A^{3}-2A^{2}-A+2I=O\\Rightarrow A\\left(A^{2}-2A-I\\right)=-2I\\Rightarrow A^{-1}=-\\dfrac12\\left(A^{2}-2A-I\\right)$",
+  "$A^{2}-2A^{-1}=2A^{2}-2A-I$; its eigenvalues are $2\\lambda^{2}-2\\lambda-1$: $-1,\\ 3,\\ 3$ for $\\lambda=1,-1,2$",
+  "$\\det\\left(A^{2}-2A^{-1}\\right)=(-1)(3)(3)=-9$",
+  "",
+  "Final Answer: -9"
+ ],
+ "solution_full": [
+  "$\\det(A-\\lambda I)$ is a cubic polynomial in $\\lambda$ with leading term $-\\lambda^{3}$. It vanishes at $\\lambda=1,-1,2$, so $\\det(A-\\lambda I)=-(\\lambda-1)(\\lambda+1)(\\lambda-2)$.",
+  "Hence the eigenvalues of $A$ are $1,-1,2$, the characteristic equation is $\\lambda^{3}-2\\lambda^{2}-\\lambda+2=0$, and $\\det A=1\\cdot(-1)\\cdot2=-2\\neq0$; so $A$ is invertible.",
+  "By the Cayley-Hamilton theorem, $A^{3}-2A^{2}-A+2I=O$, i.e. $A\\left(A^{2}-2A-I\\right)=-2I$.",
+  "Multiplying by $A^{-1}$: $A^{-1}=-\\dfrac12\\left(A^{2}-2A-I\\right)$, so $-2A^{-1}=A^{2}-2A-I$.",
+  "Therefore $A^{2}-2A^{-1}=A^{2}+A^{2}-2A-I=2A^{2}-2A-I$.",
+  "If $AX=\\lambda X$ with $X\\neq0$, then $\\left(2A^{2}-2A-I\\right)X=\\left(2\\lambda^{2}-2\\lambda-1\\right)X$. So the eigenvalues of $2A^{2}-2A-I$ are $2\\lambda^{2}-2\\lambda-1$ at $\\lambda=1,-1,2$, namely $-1,\\ 3,\\ 3$ (three eigenvalues of a $3\\times3$ matrix, one for each independent eigenvector of $A$).",
+  "The determinant is the product of the eigenvalues: $(-1)(3)(3)=-9$.",
+  "(Direct check with eigenvalues of $A^{-1}$: $\\lambda^{2}-\\dfrac{2}{\\lambda}$ gives $1-2=-1$, $1+2=3$, $4-1=3$, the same values.)",
+  "",
+  "Final Answer: -9"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: A is given only through three singular shifts A - kI; the inverse is turned into a polynomial in A by Cayley-Hamilton and the determinant of a matrix polynomial is read from the eigenvalues (way 3). Closest known: 'eigenvalues 1, 2, 3 given, find det of A^{-1} + ...' (GATE-type) and JEE Main '6A^{-1} = A^2 + cA + dI'. Different because: the data are three determinant conditions and the combination A^2 - 2A^{-1} has a repeated eigenvalue.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}.",
+  "Inverse of a square matrix"
+ ],
+ "concept_use": {
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem": "The three determinant conditions say 1, -1, 2 are the eigenvalues, which fixes the characteristic equation lambda^3 - 2 lambda^2 - lambda + 2 = 0.",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}.": "Cayley-Hamilton gives A^{-1} = -(A^2 - 2A - I)/2, so A^2 - 2A^{-1} becomes the polynomial 2A^2 - 2A - I.",
+  "Inverse of a square matrix": "A is invertible because det A = -2, and A^{-1} enters the matrix A^2 - 2A^{-1} whose determinant is asked."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: for a triangular A with diagonal 1, -1, 2 and for a similar non-triangular matrix, sympy gives det(A^2 - 2A^{-1}) = -9; -9 is a negative integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising the conditions as the full set of eigenvalues and mapping them through 2 lambda^2 - 2 lambda - 1 (or lambda^2 - 2/lambda).",
+ "justification": "Two linked ideas (eigenvalues from determinant conditions; Cayley-Hamilton or eigenvalue mapping for a polynomial with an inverse) with no options. Comparable to the eigenvector and invertibility statements of 2023-P2-Q5 (L3).",
+ "nearest_anchor": "2023-P2-Q5 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

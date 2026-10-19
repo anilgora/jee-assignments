@@ -1,0 +1,56 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "Let $A$ be a $2\\times2$ matrix with real entries such that $\\mathrm{tr}(A)=0$ and $\\det(A)=-1$, where $\\mathrm{tr}(A)$ denotes the trace of $A$. Let $I$ be the $2\\times2$ identity matrix and $B=A+2I$. If $p$ and $q$ are real numbers such that $B^{6}-3B^{-1}=pI+qA$, then the value of $p$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A$ वास्तविक प्रविष्टियों वाला एक $2\\times2$ आव्यूह है जिसके लिए $\\mathrm{tr}(A)=0$ तथा $\\det(A)=-1$ है, जहाँ $\\mathrm{tr}(A)$, $A$ का अनुरेख (trace) है। माना $I$, $2\\times2$ तत्समक आव्यूह है तथा $B=A+2I$ है। यदि $p$ तथा $q$ ऐसी वास्तविक संख्याएँ हैं कि $B^{6}-3B^{-1}=pI+qA$ है, तो $p$ का मान ______ है।"
+ ],
+ "solution": [
+  "Cayley-Hamilton: $A^{2}-(\\mathrm{tr}A)A+(\\det A)I=O\\Rightarrow A^{2}=I$ ($A$ is involutory)",
+  "$A$ commutes with $I$, and $A^{k}=I$ ($k$ even), $A$ ($k$ odd): $B^{6}=\\sum\\binom6k2^{6-k}A^{k}=\\dfrac{3^{6}+1}{2}I+\\dfrac{3^{6}-1}{2}A=365I+364A$",
+  "$(A+2I)(2I-A)=4I-A^{2}=3I\\Rightarrow B^{-1}=\\dfrac13(2I-A)$, so $3B^{-1}=2I-A$",
+  "$B^{6}-3B^{-1}=363I+365A$",
+  "$A$ is not a scalar matrix (a scalar $cI$ with trace $0$ has $\\det=0$), so $p=363$ is unique",
+  "",
+  "Final Answer: 363"
+ ],
+ "solution_full": [
+  "For a $2\\times2$ matrix the characteristic equation is $\\lambda^{2}-(\\mathrm{tr}A)\\lambda+\\det A=0$, here $\\lambda^{2}-1=0$.",
+  "By the Cayley-Hamilton theorem, $A^{2}-I=O$, so $A^{2}=I$: $A$ is involutory, and $A^{k}=I$ for even $k$, $A^{k}=A$ for odd $k$.",
+  "Since $A$ and $2I$ commute, the binomial theorem gives $B^{6}=(2I+A)^{6}=\\sum_{k=0}^{6}\\binom6k2^{6-k}A^{k}$.",
+  "The even-$k$ terms give $\\left(\\sum_{k\\ \\mathrm{even}}\\binom6k2^{6-k}\\right)I=\\dfrac{(2+1)^{6}+(2-1)^{6}}{2}I=\\dfrac{729+1}{2}I=365I$.",
+  "The odd-$k$ terms give $\\dfrac{(2+1)^{6}-(2-1)^{6}}{2}A=364A$. So $B^{6}=365I+364A$.",
+  "Inverse: $(A+2I)(2I-A)=4I-A^{2}=3I$, so $B$ is invertible and $B^{-1}=\\dfrac13(2I-A)$; thus $3B^{-1}=2I-A$.",
+  "Hence $B^{6}-3B^{-1}=(365-2)I+(364+1)A=363I+365A$.",
+  "$A$ is not a scalar matrix: if $A=cI$ then $\\mathrm{tr}A=2c=0$ forces $c=0$ and $\\det A=0\\neq-1$. So $I$ and $A$ are linearly independent, and $p=363$, $q=365$ are unique.",
+  "(The answer does not depend on which such $A$ is taken; for example $A=\\begin{pmatrix}1&2\\\\0&-1\\end{pmatrix}$ gives the same $p$ and $q$.)",
+  "",
+  "Final Answer: 363"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: A is known only through its trace and determinant; Cayley-Hamilton shows A is involutory, and then a power and the inverse of A + 2I are expressed in the basis I, A (way 3, an object fixed by two conditions). Closest known: 'A^2 = I, find (A + I)^n' and 'A^{-1} from the characteristic equation'. Different because: no entries are given, the answer is the same for every such A, and four results must be combined.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}.",
+  "Special Powers of Matrices: Nilpotent, Idempotent, Involutory matrix powers and patterns.",
+  "Inverse of a square matrix"
+ ],
+ "concept_use": {
+  "Characteristic Equation, Eigenvalues, & Cayley-Hamilton Theorem": "tr A = 0 and det A = -1 give the characteristic equation lambda^2 - 1 = 0, and Cayley-Hamilton gives A^2 = I.",
+  "Cayley-Hamilton Theorem & Characteristic Equation: Calculating higher powers A^n$ and inverse A^{-1}.": "The Cayley-Hamilton identity A^2 = I reduces B^6 to 365I + 364A and gives B^{-1} = (2I - A)/3.",
+  "Special Powers of Matrices: Nilpotent, Idempotent, Involutory matrix powers and patterns.": "A is involutory, so its powers alternate between I and A, which splits the binomial expansion into even and odd parts.",
+  "Inverse of a square matrix": "(A + 2I)(2I - A) = 3I gives the inverse of B, needed for the term 3B^{-1}."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: three different matrices with trace 0 and determinant -1 give p = 363, q = 365 in sympy; uniqueness of p, q follows since A is not scalar. 363 is a positive 3-digit integer as planned. Changed: added the definition of tr.",
+ "level": 3,
+ "key_step": "Deducing A^2 = I from Cayley-Hamilton, then splitting (2I + A)^6 into even and odd parts and inverting B with (A + 2I)(2I - A) = 3I.",
+ "justification": "Several linked results (Cayley-Hamilton, involutory powers with a binomial split, an inverse) with exact arithmetic and no options. Same level as the power reasoning in 2026-P1-Q8 (L3).",
+ "nearest_anchor": "2026-P1-Q8 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

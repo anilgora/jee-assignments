@@ -1,0 +1,56 @@
+{
+ "type": "Numerical",
+ "chapter": "Matrices",
+ "target_level": 3,
+ "english": [
+  "For real numbers $a$ and $b$, consider the planes",
+  "$$P_1:\\ x+2y-z=2,\\qquad P_2:\\ 2x-y+az=1,\\qquad P_3:\\ 3x+y+z=b.$$",
+  "Suppose that the system of the three equations of $P_1$, $P_2$, $P_3$ in the unknowns $x,y,z$ has infinitely many solutions, so that the three planes have a common line $L$. If $(\\alpha,\\beta,\\gamma)$ is the foot of the perpendicular drawn from the origin to $L$, then the value of $\\alpha\\beta$ is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्याओं $a$ तथा $b$ के लिए तलों",
+  "$$P_1:\\ x+2y-z=2,\\qquad P_2:\\ 2x-y+az=1,\\qquad P_3:\\ 3x+y+z=b$$",
+  "पर विचार कीजिए। माना कि अज्ञात $x,y,z$ में $P_1$, $P_2$, $P_3$ के तीनों समीकरणों से बने निकाय के अनन्त हल हैं, जिससे तीनों तलों की एक उभयनिष्ठ रेखा $L$ है। यदि मूलबिन्दु से $L$ पर डाले गए लम्ब का पाद $(\\alpha,\\beta,\\gamma)$ है, तो $\\alpha\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Infinitely many solutions $\\Rightarrow\\det\\begin{pmatrix}1&2&-1\\\\2&-1&a\\\\3&1&1\\end{pmatrix}=5a-10=0\\Rightarrow a=2$",
+  "Then $(3,1,1)=(1,2,-1)+(2,-1,2)$, so consistency needs $b=2+1=3$; $P_3$ contains the line $P_1\\cap P_2$",
+  "Direction of $L$: $(1,2,-1)\\times(2,-1,2)=(3,-4,-5)$; with $z=0$: $x+2y=2,\\ 2x-y=1\\Rightarrow Q=\\left(\\frac45,\\frac35,0\\right)\\in L$",
+  "$\\overrightarrow{OQ}\\cdot(3,-4,-5)=\\frac{12}{5}-\\frac{12}{5}=0$, so $Q$ itself is the foot: $(\\alpha,\\beta,\\gamma)=\\left(\\frac45,\\frac35,0\\right)$",
+  "$\\alpha\\beta=\\dfrac{12}{25}=0.48$",
+  "",
+  "Final Answer: 0.48"
+ ],
+ "solution_full": [
+  "Let $D=\\det\\begin{pmatrix}1&2&-1\\\\2&-1&a\\\\3&1&1\\end{pmatrix}=1(-1-a)-2(2-3a)-1(2+3)=5a-10$.",
+  "If $D\\neq0$ the system has a unique solution, so infinitely many solutions require $D=0$, i.e. $a=2$.",
+  "With $a=2$ the left sides satisfy $P_3=P_1+P_2$: $(1+2,\\,2-1,\\,-1+2)=(3,1,1)$. Subtracting the first two equations from the third leaves $0=b-3$, so the system is consistent only if $b=3$; then the third equation is redundant.",
+  "The normals $(1,2,-1)$ and $(2,-1,2)$ of $P_1$, $P_2$ are not parallel, so $P_1\\cap P_2$ is a line $L$, and it lies in $P_3$; this gives the infinitely many solutions.",
+  "Direction of $L$: $\\vec n_1\\times\\vec n_2=\\left(2\\cdot2-(-1)(-1),\\ (-1)\\cdot2-1\\cdot2,\\ 1\\cdot(-1)-2\\cdot2\\right)=(3,-4,-5)$.",
+  "A point of $L$: put $z=0$; $x+2y=2$ and $2x-y=1$ give $x=\\frac45$, $y=\\frac35$. So $Q=\\left(\\frac45,\\frac35,0\\right)$ and $L:\\ \\vec r=\\left(\\frac45,\\frac35,0\\right)+t(3,-4,-5)$.",
+  "The foot $F$ of the perpendicular from $O$ satisfies $\\overrightarrow{OF}\\cdot(3,-4,-5)=0$: $\\left(\\frac45+3t\\right)3+\\left(\\frac35-4t\\right)(-4)+(-5t)(-5)=\\frac{12}{5}-\\frac{12}{5}+50t=0$, so $t=0$.",
+  "Hence $F=Q=\\left(\\frac45,\\frac35,0\\right)$, i.e. $\\alpha=\\frac45$, $\\beta=\\frac35$, $\\gamma=0$, and the distance from $O$ to $L$ is $1$.",
+  "$\\alpha\\beta=\\dfrac{12}{25}=0.48$.",
+  "",
+  "Final Answer: 0.48"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: the parameters of a three-plane system are fixed by 'infinitely many solutions', and the resulting common line is then used geometrically (foot of the perpendicular from the origin), which turns out to be the point of L in the plane z = 0 (way 5). Closest known: JEE Main 'system has infinitely many solutions, find a + b' and 'foot of perpendicular to a line' as separate exercises. Different because: the two are linked; the line exists only for the parameter values found from the system.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "System of linear equations",
+  "Plane"
+ ],
+ "concept_use": {
+  "System of linear equations": "Infinitely many solutions force det = 5a - 10 = 0 and the consistency condition b = 3.",
+  "Plane": "L is the line of intersection of the planes, with direction n1 x n2 = (3,-4,-5); the foot of the perpendicular from O to L is found from this direction."
+ },
+ "stem_review": "Read as a student: every matrix and symbol is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked: sympy gives det = 5a - 10, the consistency value b = 3, direction (3,-4,-5), the point (4/5, 3/5, 0) and the foot parameter t = 0; alpha beta = 12/25 = 0.48 (a decimal between 0 and 1 as planned). Changed: stated that x, y, z are the unknowns.",
+ "level": 3,
+ "key_step": "Getting a = 2, b = 3 from the infinite-solution condition, then the direction of L by a cross product and the foot of the perpendicular.",
+ "justification": "Two linked stages (system consistency, then the plane-line geometry of the common line) with exact computation and no options. Comparable to the planes and lines work of 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
