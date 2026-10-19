@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "answer_plan": "positive 2-digit integer",
+ "target_level": 3,
+ "english": [
+  "The number of solutions of the equation $\\tan\\left(\\pi\\sin x\\right)=1$ in the interval $[0,9\\pi]$ is ______."
+ ],
+ "hindi": [
+  "अन्तराल $[0,9\\pi]$ में समीकरण $\\tan\\left(\\pi\\sin x\\right)=1$ के हलों की संख्या ______ है।"
+ ],
+ "solution": [
+  "General solution of $\\tan\\theta=1$: $\\theta=n\\pi+\\frac{\\pi}{4}$, so $\\pi\\sin x=n\\pi+\\frac{\\pi}{4}\\Rightarrow\\sin x=n+\\frac14$",
+  "$|\\sin x|\\le1\\Rightarrow n=0$ or $n=-1$: $\\sin x=\\frac14$ or $\\sin x=-\\frac34$ (not just the principal value $\\frac{\\pi}{4}$)",
+  "For these values $\\pi\\sin x\\ne\\pm\\frac{\\pi}{2}$, so $\\tan(\\pi\\sin x)$ is defined",
+  "Each period $[2k\\pi,2k\\pi+2\\pi)$: $\\sin x=\\frac14$ twice (in $(2k\\pi,2k\\pi+\\pi)$), $\\sin x=-\\frac34$ twice, so $4$ solutions",
+  "$[0,8\\pi]$: $4\\times4=16$; $[8\\pi,9\\pi]$ has $\\sin x\\ge0$: only $\\sin x=\\frac14$, $2$ solutions",
+  "Total $16+2=18$",
+  "",
+  "Final Answer: 18"
+ ],
+ "solution_full": [
+  "Let $\\theta=\\pi\\sin x$; then $\\theta\\in[-\\pi,\\pi]$. The general solution of $\\tan\\theta=1$ is $\\theta=n\\pi+\\frac{\\pi}{4}$, $n\\in\\mathbb{Z}$.",
+  "In $[-\\pi,\\pi]$ this gives $\\theta=\\frac{\\pi}{4}$ ($n=0$) and $\\theta=-\\frac{3\\pi}{4}$ ($n=-1$). Taking only the principal value $\\frac{\\pi}{4}$ would miss the second family.",
+  "So $\\sin x=\\frac14$ or $\\sin x=-\\frac34$. For both, $\\theta\\ne\\pm\\frac{\\pi}{2}$, so the tangent is defined.",
+  "In one period $[2k\\pi,2k\\pi+2\\pi)$: $\\sin x=\\frac14$ has two solutions, both in $(2k\\pi,2k\\pi+\\pi)$; $\\sin x=-\\frac34$ has two solutions, both in $(2k\\pi+\\pi,2k\\pi+2\\pi)$. That is $4$ solutions per period, none at the ends of a period.",
+  "$[0,8\\pi]$ contains four full periods: $16$ solutions.",
+  "On $[8\\pi,9\\pi]$, $\\sin x\\ge0$, so only $\\sin x=\\frac14$ contributes, with $2$ solutions; $\\sin x=-\\frac34$ contributes none.",
+  "Total number of solutions $=16+2=18$.",
+  "",
+  "Final Answer: 18"
+ ],
+ "originality_note": "New: the general solution of tan theta = 1 is applied to theta = pi sin x, where the bound |sin x| <= 1 keeps exactly two members of the family (n = 0 and n = -1), and the count runs over a non-whole number of periods (way 5). Closest known: sin(pi cos x) = cos(pi sin x) type composite equations. Different because: here the second member n = -1 is the trap and the interval [0, 9pi] ends in mid-period.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "General solution of sin(x) = k, cos(x) = k, tan(x) = k",
+  "Principal solution vs general solution"
+ ],
+ "concept_use": {
+  "General solution of sin(x) = k, cos(x) = k, tan(x) = k": "The general solution theta = n pi + pi/4 of tan theta = 1, and then the solutions of sin x = 1/4 and sin x = -3/4 counted period by period.",
+  "Principal solution vs general solution": "Using only the principal value pi/4 gives sin x = 1/4 alone (10 solutions); the general solution supplies the second value sin x = -3/4."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Checked that no solution falls at 0, 8pi or 9pi, so the closed interval causes no ambiguity. Changed: No change.",
+ "level": 3,
+ "key_step": "Keeping the n = -1 member of the general solution of tan theta = 1 inside [-pi, pi] and counting over 4.5 periods.",
+ "justification": "Two linked ideas (general vs principal value inside a composite argument, then an exact count over a partial period) in numerical format with no options. Close to the trig-equation counting of 2026-P1-Q14 (L3).",
+ "nearest_anchor": "2026-P1-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

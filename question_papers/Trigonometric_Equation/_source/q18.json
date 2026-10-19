@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "answer_plan": "negative decimal",
+ "target_level": 2,
+ "english": [
+  "Let $x$ and $y$ be real numbers such that",
+  "$$x-y=\\frac{\\pi}{2}\\qquad\\text{and}\\qquad3\\sin x-4\\sin y=5.$$",
+  "Then the value of $\\sin(x+y)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $x$ तथा $y$ वास्तविक संख्याएँ हैं जिनके लिए",
+  "$$x-y=\\frac{\\pi}{2}$$",
+  "तथा",
+  "$$3\\sin x-4\\sin y=5$$",
+  "हैं। तब $\\sin(x+y)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$y=x-\\frac{\\pi}{2}\\Rightarrow\\sin y=-\\cos x$, so $3\\sin x+4\\cos x=5$",
+  "$3\\sin x+4\\cos x\\le\\sqrt{3^2+4^2}=5$, equality only when $\\sin x=\\frac35$, $\\cos x=\\frac45$",
+  "$x+y=2x-\\frac{\\pi}{2}\\Rightarrow\\sin(x+y)=-\\cos2x=-(\\cos^2x-\\sin^2x)=-\\frac{16-9}{25}=-0.28$",
+  "",
+  "Final Answer: -0.28"
+ ],
+ "solution_full": [
+  "From the first equation, $y=x-\\frac{\\pi}{2}$, so $\\sin y=\\sin\\left(x-\\frac{\\pi}{2}\\right)=-\\cos x$.",
+  "The second equation becomes $3\\sin x+4\\cos x=5$.",
+  "Write $3\\sin x+4\\cos x=5\\left(\\frac35\\sin x+\\frac45\\cos x\\right)=5\\cos(x-\\beta)$ with $\\cos\\beta=\\frac45$, $\\sin\\beta=\\frac35$. The maximum is $5$, so the equation needs $\\cos(x-\\beta)=1$, i.e. $x=\\beta+2n\\pi$.",
+  "Hence $\\sin x=\\frac35$ and $\\cos x=\\frac45$ for every solution.",
+  "$x+y=2x-\\frac{\\pi}{2}$, so $\\sin(x+y)=\\sin\\left(2x-\\frac{\\pi}{2}\\right)=-\\cos2x=-(\\cos^2x-\\sin^2x)=-\\left(\\frac{16}{25}-\\frac{9}{25}\\right)=-\\frac{7}{25}$.",
+  "So $\\sin(x+y)=-0.28$.",
+  "",
+  "Final Answer: -0.28"
+ ],
+ "originality_note": "New: a two-equation system in which the linear relation x - y = pi/2 turns the second equation into 3 sin x + 4 cos x = 5, an a sin + b cos = c equation at its maximum, which fixes sin x and cos x uniquely (way 5). Closest known: 'if 3 sin x + 4 cos x = 5, find 4 sin x - 3 cos x' and the sin x + sin y = a, cos x + cos y = b systems. Different because: the system form hides the maximum condition and the answer is sin(x + y).",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "System of trigonometric equations",
+  "Solution of a.sin(x) + b.cos(x) = c"
+ ],
+ "concept_use": {
+  "System of trigonometric equations": "The two equations are combined by substituting y = x - pi/2 from the first into the second.",
+  "Solution of a.sin(x) + b.cos(x) = c": "3 sin x + 4 cos x = 5 is solved as 5 cos(x - beta) = 5, giving sin x = 3/5, cos x = 4/5."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. The value sin(x + y) is the same for every solution pair, so the answer is unique. Changed: No change.",
+ "level": 2,
+ "key_step": "Substituting y = x - pi/2 to get 3 sin x + 4 cos x = 5 and recognising its maximum.",
+ "justification": "A short routine chain (substitution, a sin + b cos at its maximum, double angle). Comparable to 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

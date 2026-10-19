@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "answer_plan": "positive decimal",
+ "target_level": 2,
+ "english": [
+  "Let $x$ be a real number, not an integral multiple of $\\dfrac{\\pi}{2}$, such that",
+  "$$\\frac{\\sin3x}{\\sin x}+\\frac{\\cos3x}{\\cos x}+\\frac45=0.$$",
+  "Then the value of $\\tan^2x$ is ______."
+ ],
+ "hindi": [
+  "माना कि $x$ एक वास्तविक संख्या है, जो $\\dfrac{\\pi}{2}$ का पूर्णांक गुणज नहीं है, जिसके लिए",
+  "$$\\frac{\\sin3x}{\\sin x}+\\frac{\\cos3x}{\\cos x}+\\frac45=0$$",
+  "है। तब $\\tan^2x$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\frac{\\sin3x}{\\sin x}=3-4\\sin^2x$, $\\frac{\\cos3x}{\\cos x}=4\\cos^2x-3$; sum $=4(\\cos^2x-\\sin^2x)=4\\cos2x$",
+  "$4\\cos2x=-\\frac45\\Rightarrow\\cos2x=-\\frac15$ (possible, and then $\\sin x,\\cos x\\ne0$)",
+  "$\\tan^2x=\\dfrac{1-\\cos2x}{1+\\cos2x}=\\dfrac{6/5}{4/5}=1.5$",
+  "",
+  "Final Answer: 1.5"
+ ],
+ "solution_full": [
+  "Since $x$ is not a multiple of $\\frac{\\pi}{2}$, $\\sin x\\ne0$ and $\\cos x\\ne0$.",
+  "Triple-angle formulas: $\\sin3x=3\\sin x-4\\sin^3x$, so $\\frac{\\sin3x}{\\sin x}=3-4\\sin^2x$; $\\cos3x=4\\cos^3x-3\\cos x$, so $\\frac{\\cos3x}{\\cos x}=4\\cos^2x-3$.",
+  "Adding: $\\frac{\\sin3x}{\\sin x}+\\frac{\\cos3x}{\\cos x}=4\\cos^2x-4\\sin^2x=4\\cos2x$.",
+  "The equation becomes $4\\cos2x+\\frac45=0$, i.e. $\\cos2x=-\\frac15$. This value lies in $(-1,1)$, so solutions exist, and for them $\\sin x\\ne0,\\cos x\\ne0$ (those would need $\\cos2x=\\pm1$).",
+  "$\\tan^2x=\\dfrac{\\sin^2x}{\\cos^2x}=\\dfrac{1-\\cos2x}{1+\\cos2x}=\\dfrac{1+\\frac15}{1-\\frac15}=\\dfrac{6}{4}=1.5$.",
+  "The value is the same for every solution.",
+  "",
+  "Final Answer: 1.5"
+ ],
+ "originality_note": "New: the expression sin 3x/sin x + cos 3x/cos x collapses to 4 cos 2x (a hidden simplification), so the equation fixes cos 2x and hence tan^2 x (way 4). Closest known: the identity sin 3x/sin x - cos 3x/cos x = 2 (a textbook 'prove that'). Different because: the sum, not the difference, is used and it turns an apparently cubic equation into a linear one in cos 2x.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Miscellaneous trigonometric equations"
+ ],
+ "concept_use": {
+  "Miscellaneous trigonometric equations": "The non-standard equation in sin 3x/sin x and cos 3x/cos x is reduced by triple-angle formulas to cos 2x = -1/5, and tan^2 x follows."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Excluded multiples of pi/2 in the stem so both quotients exist; tan^2 x is the same for every solution. Changed: No change.",
+ "level": 2,
+ "key_step": "Reducing the two quotients with triple-angle formulas to 4 cos 2x.",
+ "justification": "Two standard identities and a half-angle relation; a short routine chain. Comparable to 2026-P1-Q4 (L2) in demand.",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

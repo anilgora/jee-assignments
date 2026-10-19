@@ -1,0 +1,58 @@
+{
+ "type": "SCQ",
+ "answer_plan": "Option A",
+ "target_level": 2,
+ "english": [
+  "The number of solutions of the equation $\\tan^2x+\\cot^2x-3\\left(\\tan x-\\cot x\\right)=2$ in the interval $(0,\\pi)$ is",
+  "",
+  "(A) $4$",
+  "(B) $2$",
+  "(C) $3$",
+  "(D) $6$"
+ ],
+ "hindi": [
+  "अन्तराल $(0,\\pi)$ में समीकरण $\\tan^2x+\\cot^2x-3\\left(\\tan x-\\cot x\\right)=2$ के हलों की संख्या है",
+  "",
+  "(A) $4$",
+  "(B) $2$",
+  "(C) $3$",
+  "(D) $6$"
+ ],
+ "solution": [
+  "Put $u=\\tan x-\\cot x$; then $\\tan^2x+\\cot^2x=u^2+2$ (as $\\tan x\\cot x=1$)",
+  "Equation: $u^2+2-3u=2\\Rightarrow u(u-3)=0$",
+  "$u=0$: $\\tan^2x=1\\Rightarrow x=\\frac{\\pi}{4},\\ \\frac{3\\pi}{4}$",
+  "$u=3$: $\\tan^2x-3\\tan x-1=0$; product of roots $-1$, so one positive and one negative value of $\\tan x$, each giving one $x$ in $(0,\\pi)\\setminus\\{\\frac{\\pi}{2}\\}$",
+  "Total $2+2=4$ solutions",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Both $\\tan x$ and $\\cot x$ must be defined, so $x\\ne\\frac{\\pi}{2}$; in $(0,\\pi)$ every other $x$ is allowed.",
+  "Let $u=\\tan x-\\cot x$. Since $\\tan x\\cot x=1$, $u^2=\\tan^2x+\\cot^2x-2$, so $\\tan^2x+\\cot^2x=u^2+2$.",
+  "The equation becomes $u^2+2-3u=2$, i.e. $u^2-3u=0$, so $u=0$ or $u=3$.",
+  "Case $u=0$: $\\tan x=\\cot x\\Rightarrow\\tan^2x=1\\Rightarrow\\tan x=\\pm1$. In $(0,\\pi)$: $x=\\frac{\\pi}{4}$ and $x=\\frac{3\\pi}{4}$.",
+  "Case $u=3$: with $t=\\tan x$, $t-\\frac1t=3\\Rightarrow t^2-3t-1=0$, discriminant $13>0$, roots $t=\\frac{3\\pm\\sqrt{13}}{2}$.",
+  "Their product is $-1$, so one root is positive and one is negative. On $(0,\\frac{\\pi}{2})$ the tangent takes every positive value exactly once and on $(\\frac{\\pi}{2},\\pi)$ every negative value exactly once, so each root gives exactly one $x$.",
+  "The two cases give different $x$ (values of $u$ differ), so the number of solutions is $2+2=4$.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: tan^2 + cot^2 is written through the single variable u = tan x - cot x (not tan x + cot x), giving u(u - 3) = 0; one branch is the pair tan x = +-1 and the other a quadratic with roots of opposite sign (way 5). Closest known: tan^2 x + 3 cot^2 x = 2 sec^2 x type equations solved through y = tan^2 x. Different because: the substitution is the difference tan x - cot x, and counting uses the sign of the product of roots.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Solution by substitution"
+ ],
+ "concept_use": {
+  "Solution by substitution": "The substitution u = tan x - cot x turns the equation into u(u - 3) = 0, and the back-substitution t = tan x gives the quadratic t^2 - 3t - 1 = 0."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Checked that x = pi/2 is the only excluded point in (0, pi) and is not a root. Changed: No change.",
+ "level": 2,
+ "key_step": "Choosing u = tan x - cot x so that tan^2 + cot^2 = u^2 + 2, then counting the roots of each branch.",
+ "justification": "One substitution followed by two routine branches and a sign-of-roots count; several standard steps but no real insight. Same kind of demand as the solution counting of 2023-P1-Q8 (L2).",
+ "nearest_anchor": "2023-P1-Q8 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

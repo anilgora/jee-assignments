@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "answer_plan": "Option B",
+ "target_level": 2,
+ "english": [
+  "Let $S$ be the set of all $x\\in[0,2\\pi]$, $x\\ne\\dfrac{\\pi}{2},\\dfrac{3\\pi}{2}$, such that $\\tan x>2\\sin x$. Then $S$ is a union of intervals whose total length is",
+  "",
+  "(A) $\\dfrac{\\pi}{2}$",
+  "(B) $\\pi$",
+  "(C) $\\dfrac{4\\pi}{3}$",
+  "(D) $\\dfrac{2\\pi}{3}$"
+ ],
+ "hindi": [
+  "माना कि $S$ उन सभी $x\\in[0,2\\pi]$, $x\\ne\\dfrac{\\pi}{2},\\dfrac{3\\pi}{2}$, का समुच्चय है जिनके लिए $\\tan x>2\\sin x$ है। तब $S$ अन्तरालों का एक सम्मिलन है जिनकी कुल लम्बाई है",
+  "",
+  "(A) $\\dfrac{\\pi}{2}$",
+  "(B) $\\pi$",
+  "(C) $\\dfrac{4\\pi}{3}$",
+  "(D) $\\dfrac{2\\pi}{3}$"
+ ],
+ "solution": [
+  "$\\tan x-2\\sin x=\\dfrac{\\sin x\\,(1-2\\cos x)}{\\cos x}>0$",
+  "Sign changes at $0,\\ \\frac{\\pi}{3},\\ \\frac{\\pi}{2},\\ \\pi,\\ \\frac{3\\pi}{2},\\ \\frac{5\\pi}{3},\\ 2\\pi$",
+  "$(0,\\frac{\\pi}{3})$: $(+)(-)/(+)<0$; $(\\frac{\\pi}{3},\\frac{\\pi}{2})$: $>0$; $(\\frac{\\pi}{2},\\pi)$: $<0$; $(\\pi,\\frac{3\\pi}{2})$: $(-)(+)/(-)>0$; $(\\frac{3\\pi}{2},\\frac{5\\pi}{3})$: $<0$; $(\\frac{5\\pi}{3},2\\pi)$: $(-)(-)/(+)>0$",
+  "$S=\\left(\\frac{\\pi}{3},\\frac{\\pi}{2}\\right)\\cup\\left(\\pi,\\frac{3\\pi}{2}\\right)\\cup\\left(\\frac{5\\pi}{3},2\\pi\\right)$, total length $\\frac{\\pi}{6}+\\frac{\\pi}{2}+\\frac{\\pi}{3}=\\pi$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "For $\\cos x\\ne0$: $\\tan x-2\\sin x=\\dfrac{\\sin x-2\\sin x\\cos x}{\\cos x}=\\dfrac{\\sin x\\,(1-2\\cos x)}{\\cos x}$.",
+  "The factors vanish or change sign at: $\\sin x=0$ ($x=0,\\pi,2\\pi$), $\\cos x=\\frac12$ ($x=\\frac{\\pi}{3},\\frac{5\\pi}{3}$), $\\cos x=0$ ($x=\\frac{\\pi}{2},\\frac{3\\pi}{2}$). At $x=0,\\pi,2\\pi$ the difference is $0$, so these points are not in $S$.",
+  "$(0,\\frac{\\pi}{3})$: $\\sin x>0$, $1-2\\cos x<0$, $\\cos x>0$, so the expression is negative.",
+  "$(\\frac{\\pi}{3},\\frac{\\pi}{2})$: $\\sin x>0$, $1-2\\cos x>0$, $\\cos x>0$: positive.",
+  "$(\\frac{\\pi}{2},\\pi)$: $\\sin x>0$, $1-2\\cos x>0$, $\\cos x<0$: negative.",
+  "$(\\pi,\\frac{3\\pi}{2})$: $\\sin x<0$, $1-2\\cos x>0$, $\\cos x<0$: positive.",
+  "$(\\frac{3\\pi}{2},\\frac{5\\pi}{3})$: $\\sin x<0$, $1-2\\cos x>0$ (as $0<\\cos x<\\frac12$), $\\cos x>0$: negative.",
+  "$(\\frac{5\\pi}{3},2\\pi)$: $\\sin x<0$, $1-2\\cos x<0$, $\\cos x>0$: positive.",
+  "Hence $S=\\left(\\frac{\\pi}{3},\\frac{\\pi}{2}\\right)\\cup\\left(\\pi,\\frac{3\\pi}{2}\\right)\\cup\\left(\\frac{5\\pi}{3},2\\pi\\right)$ with total length $\\frac{\\pi}{6}+\\frac{\\pi}{2}+\\frac{\\pi}{3}=\\pi$.",
+  "Multiplying both sides by $\\cos x$ without regard to its sign would lose the interval $(\\pi,\\frac{3\\pi}{2})$ and give $\\frac{\\pi}{2}$, option (A).",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a three-factor sign chart for tan x - 2 sin x on a full period, asked as the total length of the solution set (way 5: the quotient form plus measure). Closest known: Symbolab-type exercise tan x >= sin x. Different because: the factor 1 - 2 cos x adds the critical points pi/3, 5pi/3 and the answer is a length, not an interval list.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Trigonometric inequalities"
+ ],
+ "concept_use": {
+  "Trigonometric inequalities": "The inequality tan x > 2 sin x is solved by a sign chart of sin x (1 - 2 cos x)/cos x over [0, 2pi]."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Excluded pi/2 and 3pi/2 explicitly in the stem so tan x is defined on the whole set; the answer is a length so endpoints do not matter. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing tan x - 2 sin x as a quotient of three factors and running the sign chart without multiplying by cos x.",
+ "justification": "A standard wavy-curve sign analysis on one period with a trap (multiplying by cos x); routine but multi-step. Similar in demand to the case-split counting of 2021-P1-Q17 (L1) with more stages, so 2.",
+ "nearest_anchor": "2021-P1-Q17 (L1)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

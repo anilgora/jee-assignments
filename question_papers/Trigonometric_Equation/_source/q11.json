@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "answer_plan": "negative integer",
+ "target_level": 3,
+ "english": [
+  "Consider $f(x)=\\sqrt{-\\tan x}+\\log_e\\left(4\\pi^2-x^2\\right)$. Let $D$ be the set of all real numbers $x$ for which $f(x)$ is defined, and let $S=\\{x\\in D:\\ \\sin2x+\\sin x=0\\}$. If the sum of all elements of $S$ is $\\dfrac{k\\pi}{3}$, then the value of $k$ is ______."
+ ],
+ "hindi": [
+  "$f(x)=\\sqrt{-\\tan x}+\\log_e\\left(4\\pi^2-x^2\\right)$ पर विचार कीजिए। माना कि $D$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जिनके लिए $f(x)$ परिभाषित है, तथा $S=\\{x\\in D:\\ \\sin2x+\\sin x=0\\}$ है। यदि $S$ के सभी अवयवों का योग $\\dfrac{k\\pi}{3}$ है, तो $k$ का मान ______ है।"
+ ],
+ "solution": [
+  "$D$: $4\\pi^2-x^2>0\\Rightarrow-2\\pi<x<2\\pi$; $\\tan x$ defined and $\\tan x\\le0$",
+  "$\\sin2x+\\sin x=\\sin x(2\\cos x+1)=0\\Rightarrow\\sin x=0$ or $\\cos x=-\\frac12$",
+  "$\\sin x=0$ in $(-2\\pi,2\\pi)$: $-\\pi,0,\\pi$, all with $\\tan x=0\\le0$, so all in $S$ ($\\pm2\\pi$ excluded by the log)",
+  "$\\cos x=-\\frac12$: $\\pm\\frac{2\\pi}{3},\\pm\\frac{4\\pi}{3}$; $\\tan\\frac{2\\pi}{3}=-\\sqrt3$ and $\\tan\\left(-\\frac{4\\pi}{3}\\right)=-\\sqrt3$ kept; $\\tan\\left(-\\frac{2\\pi}{3}\\right)=\\tan\\frac{4\\pi}{3}=\\sqrt3$ rejected",
+  "Sum $=-\\pi+0+\\pi+\\frac{2\\pi}{3}-\\frac{4\\pi}{3}=-\\frac{2\\pi}{3}\\Rightarrow k=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "Domain of $f$: the logarithm needs $4\\pi^2-x^2>0$, i.e. $-2\\pi<x<2\\pi$. The root needs $\\tan x$ to be defined ($x\\ne\\frac{\\pi}{2}+n\\pi$) and $-\\tan x\\ge0$, i.e. $\\tan x\\le0$.",
+  "So $D=\\{x\\in(-2\\pi,2\\pi):\\ \\tan x\\le0\\}$; note that points with $\\tan x=0$ are included.",
+  "The equation: $\\sin2x+\\sin x=2\\sin x\\cos x+\\sin x=\\sin x\\,(2\\cos x+1)=0$.",
+  "Case $\\sin x=0$: in $(-2\\pi,2\\pi)$, $x=-\\pi,0,\\pi$ (the points $\\pm2\\pi$ are outside $D$ because of the logarithm). At each, $\\tan x=0$, so $\\sqrt{-\\tan x}=0$ is defined. All three are in $S$.",
+  "Case $\\cos x=-\\frac12$: in $(-2\\pi,2\\pi)$, $x=\\frac{2\\pi}{3},\\frac{4\\pi}{3},-\\frac{2\\pi}{3},-\\frac{4\\pi}{3}$.",
+  "$\\tan\\frac{2\\pi}{3}=-\\sqrt3\\le0$: kept. $\\tan\\frac{4\\pi}{3}=\\sqrt3>0$: rejected. $\\tan\\left(-\\frac{2\\pi}{3}\\right)=\\sqrt3>0$: rejected. $\\tan\\left(-\\frac{4\\pi}{3}\\right)=-\\sqrt3\\le0$: kept.",
+  "$S=\\left\\{-\\frac{4\\pi}{3},-\\pi,0,\\frac{2\\pi}{3},\\pi\\right\\}$ and its sum is $-\\frac{4\\pi}{3}+\\frac{2\\pi}{3}=-\\frac{2\\pi}{3}$.",
+  "Hence $\\frac{k\\pi}{3}=-\\frac{2\\pi}{3}$, so $k=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: the domain of a function built from sqrt(-tan x) and log(4pi^2 - x^2) acts as a filter on the roots of sin 2x + sin x = 0; the root sign test keeps tan x = 0 points but only two of the four cos x = -1/2 points, and the log removes +-2pi (way 5). Closest known: 'domain of sqrt(-tan x)' or 'solve sin 2x + sin x = 0 in [0, 2pi]' as separate exercises. Different because: the solutions are filtered by a function's domain and the asymmetric survivors give a nonzero sum.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Domain restrictions from log, root and denominator; rejecting solutions",
+  "Domain of algebraic, logarithmic, exponential and radical functions"
+ ],
+ "concept_use": {
+  "Domain restrictions from log, root and denominator; rejecting solutions": "The roots of sin x (2 cos x + 1) = 0 are tested against tan x <= 0 and |x| < 2pi; x = +-2pi, -2pi/3 and 4pi/3 are rejected.",
+  "Domain of algebraic, logarithmic, exponential and radical functions": "The domain D of f is found from the radical sqrt(-tan x) (tan x <= 0, tan defined) and the logarithm log(4pi^2 - x^2) (|x| < 2pi)."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Avoided calling f a function with an unstated domain: D is defined as the set where f(x) is defined. Checked that tan x = 0 points belong to D (square root of 0). Changed: No change.",
+ "level": 3,
+ "key_step": "Applying the domain filter tan x <= 0, |x| < 2pi to each root of sin x (2 cos x + 1) = 0, keeping the tan x = 0 roots.",
+ "justification": "Two ideas linked (domain of a radical-plus-log function and filtering roots of a trig equation) with several traps (+-2pi, tan x = 0, quadrant signs). Comparable to 2023-P2-Q3 (L3).",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

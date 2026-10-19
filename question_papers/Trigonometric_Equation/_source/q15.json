@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "answer_plan": "positive 3-digit integer",
+ "target_level": 3,
+ "english": [
+  "The number of solutions of the equation $\\sqrt3\\sin x+\\cos x+\\sin\\dfrac{3x}{2}=3$ in the interval $[0,500\\pi]$ is ______."
+ ],
+ "hindi": [
+  "अन्तराल $[0,500\\pi]$ में समीकरण $\\sqrt3\\sin x+\\cos x+\\sin\\dfrac{3x}{2}=3$ के हलों की संख्या ______ है।"
+ ],
+ "solution": [
+  "$\\sqrt3\\sin x+\\cos x=2\\sin\\left(x+\\frac{\\pi}{6}\\right)\\le2$ and $\\sin\\frac{3x}{2}\\le1$, so the left side $\\le3$",
+  "Equality needs both: $\\sin\\left(x+\\frac{\\pi}{6}\\right)=1\\Rightarrow x=\\frac{\\pi}{3}+2n\\pi$, and $\\sin\\frac{3x}{2}=1$",
+  "At $x=\\frac{\\pi}{3}+2n\\pi$: $\\frac{3x}{2}=\\frac{\\pi}{2}+3n\\pi$, $\\sin=\\cos3n\\pi=(-1)^n$, so $n$ must be even",
+  "Solutions $x=\\frac{\\pi}{3}+4m\\pi$; $0\\le\\frac13+4m\\le500\\Rightarrow0\\le m\\le124$: $125$ solutions",
+  "",
+  "Final Answer: 125"
+ ],
+ "solution_full": [
+  "Range of $a\\sin x+b\\cos x$: $\\sqrt3\\sin x+\\cos x=2\\left(\\frac{\\sqrt3}{2}\\sin x+\\frac12\\cos x\\right)=2\\sin\\left(x+\\frac{\\pi}{6}\\right)\\in[-2,2]$.",
+  "Also $\\sin\\frac{3x}{2}\\le1$. Hence the left side is at most $2+1=3$, and the equation holds exactly when both terms take their maximum values at the same $x$.",
+  "$2\\sin\\left(x+\\frac{\\pi}{6}\\right)=2\\iff x+\\frac{\\pi}{6}=\\frac{\\pi}{2}+2n\\pi\\iff x=\\frac{\\pi}{3}+2n\\pi$, $n\\in\\mathbb{Z}$.",
+  "For these $x$: $\\frac{3x}{2}=\\frac{\\pi}{2}+3n\\pi$, so $\\sin\\frac{3x}{2}=\\sin\\left(\\frac{\\pi}{2}+3n\\pi\\right)=\\cos3n\\pi=(-1)^{3n}=(-1)^n$.",
+  "This equals $1$ exactly when $n$ is even, $n=2m$. So the solutions are $x=\\frac{\\pi}{3}+4m\\pi$, $m\\in\\mathbb{Z}$.",
+  "In $[0,500\\pi]$: $0\\le\\frac13+4m\\le500\\iff-\\frac{1}{12}\\le m\\le124.9$, so $m=0,1,\\dots,124$.",
+  "Number of solutions $=125$. (Forgetting the parity condition gives $250$.)",
+  "",
+  "Final Answer: 125"
+ ],
+ "originality_note": "New: a sum of a sin x + b cos x (maximum 2) and sin(3x/2) (maximum 1) equal to 3; the maxima occur together only on every second member of the first family, because sin(3x/2) has period 4pi/3 (way 5). Closest known: sin x + cos x = 2-type 'no solution by range' items and sin^4 + cos^4 + 2 = 4 sin x cos y. Different because: both maxima are attained, but only on a sub-family fixed by parity, and the answer is a count.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Equations solvable only by boundedness (e.g. sin(x).cos(x) = 1)",
+  "Range of a.sin(x) + b.cos(x); maximum and minimum"
+ ],
+ "concept_use": {
+  "Equations solvable only by boundedness (e.g. sin(x).cos(x) = 1)": "The left side is at most 3, so the equation forces both terms to their maxima at the same x, which gives the parity condition.",
+  "Range of a.sin(x) + b.cos(x); maximum and minimum": "sqrt3 sin x + cos x = 2 sin(x + pi/6) has maximum 2, attained only at x = pi/3 + 2n pi."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Checked numerically over one 4pi period that the left side reaches 3 only at pi/3. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that sin(3x/2) = (-1)^n on the family x = pi/3 + 2n pi, so only even n survive.",
+ "justification": "Two ideas linked (range of a sin + b cos and simultaneous maxima) with a parity trap and an exact count; numerical. Comparable to 2026-P1-Q14 (L3).",
+ "nearest_anchor": "2026-P1-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

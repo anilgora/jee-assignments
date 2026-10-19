@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "answer_plan": "negative decimal",
+ "target_level": 3,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\max\\left\\{\\sin|x|,\\ \\cos|x|\\right\\}$. Let $S$ be the set of all $x\\in[-2\\pi,\\pi]$ such that $f(x)=-\\dfrac12$. If the sum of all elements of $S$ is $k\\pi$, then the value of $k$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\max\\left\\{\\sin|x|,\\ \\cos|x|\\right\\}$ द्वारा परिभाषित है। माना कि $S$ उन सभी $x\\in[-2\\pi,\\pi]$ का समुच्चय है जिनके लिए $f(x)=-\\dfrac12$ है। यदि $S$ के सभी अवयवों का योग $k\\pi$ है, तो $k$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f(x)=g(|x|)$ with $g(t)=\\max\\{\\sin t,\\cos t\\}$; for $t\\in[0,2\\pi]$: $g=\\sin t$ on $\\left[\\frac{\\pi}{4},\\frac{5\\pi}{4}\\right]$, $g=\\cos t$ otherwise",
+  "$t\\in[0,\\pi]$: $\\sin t\\ge0$, so $g(t)\\ge0$; hence no $x\\in[0,\\pi]$ is in $S$",
+  "$x\\in[-2\\pi,0)$: $t=-x\\in(0,2\\pi]$. Line $y=-\\frac12$ meets $g$ at $t=\\frac{7\\pi}{6}$ (sine branch, as $\\frac{7\\pi}{6}<\\frac{5\\pi}{4}$) and $t=\\frac{4\\pi}{3}$ (cosine branch, as $\\frac{4\\pi}{3}>\\frac{5\\pi}{4}$)",
+  "$t=\\frac{11\\pi}{6}$ ($\\sin=-\\frac12$) and $t=\\frac{2\\pi}{3}$ ($\\cos=-\\frac12$) are not points of $g=-\\frac12$, since there the other function is larger",
+  "$S=\\left\\{-\\frac{7\\pi}{6},-\\frac{4\\pi}{3}\\right\\}$, sum $-\\frac{5\\pi}{2}\\Rightarrow k=-2.5$",
+  "",
+  "Final Answer: -2.5"
+ ],
+ "solution_full": [
+  "Since $f$ depends on $|x|$, $f(x)=g(|x|)$ where $g(t)=\\max\\{\\sin t,\\cos t\\}$; the graph of $f$ for $x<0$ is the mirror image of that of $g$ for $t>0$.",
+  "On $[0,2\\pi]$, $\\sin t\\ge\\cos t$ exactly on $\\left[\\frac{\\pi}{4},\\frac{5\\pi}{4}\\right]$. So $g(t)=\\cos t$ on $\\left[0,\\frac{\\pi}{4}\\right]$, $g(t)=\\sin t$ on $\\left[\\frac{\\pi}{4},\\frac{5\\pi}{4}\\right]$, and $g(t)=\\cos t$ on $\\left[\\frac{5\\pi}{4},2\\pi\\right]$.",
+  "The graph of $g$ falls from $1$ to $\\frac{1}{\\sqrt2}$, rises to $1$ at $\\frac{\\pi}{2}$, falls to its least value $-\\frac{1}{\\sqrt2}$ at $\\frac{5\\pi}{4}$, then rises to $1$ at $2\\pi$. As $-\\frac{1}{\\sqrt2}<-\\frac12$, the line $y=-\\frac12$ meets it twice in $[0,2\\pi]$, once on each side of $\\frac{5\\pi}{4}$.",
+  "On the sine branch: $\\sin t=-\\frac12$, $t\\in\\left[\\frac{\\pi}{4},\\frac{5\\pi}{4}\\right]\\Rightarrow t=\\frac{7\\pi}{6}$. On the cosine branch: $\\cos t=-\\frac12$, $t\\in\\left[\\frac{5\\pi}{4},2\\pi\\right]\\Rightarrow t=\\frac{4\\pi}{3}$.",
+  "The other roots of $\\sin t=-\\frac12$ and $\\cos t=-\\frac12$ ($t=\\frac{11\\pi}{6}$, $t=\\frac{2\\pi}{3}$) lie on the wrong branch: there $g=\\frac{\\sqrt3}{2}$.",
+  "For $x\\in[0,\\pi]$, $t=x\\in[0,\\pi]$ gives $\\sin t\\ge0$, so $f(x)\\ge0$: no solutions.",
+  "For $x\\in[-2\\pi,0)$, $t=-x\\in(0,2\\pi]$: $x=-\\frac{7\\pi}{6}$ and $x=-\\frac{4\\pi}{3}$.",
+  "Sum $=-\\frac{7\\pi}{6}-\\frac{8\\pi}{6}=-\\frac{15\\pi}{6}=-\\frac{5\\pi}{2}$, so $k=-2.5$.",
+  "",
+  "Final Answer: -2.5"
+ ],
+ "originality_note": "New: the horizontal line y = -1/2 against the graph of max{sin|x|, cos|x|} on the asymmetric interval [-2pi, pi]; the level -1/2 lies between the minimum -1/sqrt2 and 0, so one root comes from each branch and only the left half of the interval contributes (way 5). Closest known: counting solutions of max(sin x, cos x) = 1/2 on (-2pi, 5pi) (ALLEN item). Different because: the |x| reflection, the negative level that cuts both branches near their junction, and a sum instead of a count.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Number of solutions by graphical intersection",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs"
+ ],
+ "concept_use": {
+  "Number of solutions by graphical intersection": "The solutions are the intersections of y = -1/2 with the graph of f; the graph shows one meeting on each side of t = 5pi/4.",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs": "f(x) = g(|x|) is the mirror image of g = max{sin t, cos t}, whose branches switch at pi/4 and 5pi/4; this decides which roots are real points of the graph."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Gave f its domain and codomain; the asymmetric interval [-2pi, pi] makes the sum nonzero. Changed: No change.",
+ "level": 3,
+ "key_step": "Identifying the branches of max{sin t, cos t} and keeping only the roots of sin = -1/2 and cos = -1/2 that lie on the active branch, then reflecting by |x|.",
+ "justification": "Two linked graph ideas (max of two graphs and f(|x|)) with a branch trap and an asymmetric interval, numerical. Comparable to the solution counting in 2026-P1-Q14 (L3).",
+ "nearest_anchor": "2026-P1-Q14 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

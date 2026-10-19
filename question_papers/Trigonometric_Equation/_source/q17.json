@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "answer_plan": "positive decimal",
+ "target_level": 3,
+ "english": [
+  "Let $S$ be the set of all $x\\in(-2\\pi,2\\pi)$ for which $\\sec x$, $\\tan x$ and $\\tan\\dfrac x2$ are defined and",
+  "$$\\sec x+\\tan x=1+4\\tan\\frac x2.$$",
+  "Then the value of $\\displaystyle\\sum_{x\\in S}\\left(\\sin x+\\cos x\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ उन सभी $x\\in(-2\\pi,2\\pi)$ का समुच्चय है जिनके लिए $\\sec x$, $\\tan x$ तथा $\\tan\\dfrac x2$ परिभाषित हैं और",
+  "$$\\sec x+\\tan x=1+4\\tan\\frac x2$$",
+  "है। तब $\\displaystyle\\sum_{x\\in S}\\left(\\sin x+\\cos x\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "With $t=\\tan\\frac x2$: $\\sec x+\\tan x=\\dfrac{1+\\sin x}{\\cos x}=\\dfrac{(1+t)^2}{1-t^2}=\\dfrac{1+t}{1-t}$ ($t\\ne\\pm1$)",
+  "$\\dfrac{1+t}{1-t}=1+4t\\Rightarrow1+t=1+3t-4t^2\\Rightarrow2t(2t-1)=0\\Rightarrow t=0$ or $t=\\frac12$",
+  "$t=0$: $x=0$ ($\\pm2\\pi$ excluded); $\\sin x+\\cos x=1$",
+  "$t=\\frac12$: $\\sin x=\\frac45$, $\\cos x=\\frac35$; $\\frac x2\\in(-\\pi,\\pi)$ gives $\\frac x2=\\tan^{-1}\\frac12$ or $\\tan^{-1}\\frac12-\\pi$: two values of $x$, each with $\\sin x+\\cos x=\\frac75$",
+  "Sum $=1+\\frac75+\\frac75=3.8$",
+  "",
+  "Final Answer: 3.8"
+ ],
+ "solution_full": [
+  "Let $t=\\tan\\frac x2$ (defined since $x\\ne\\pm\\pi$). Then $\\sin x=\\frac{2t}{1+t^2}$, $\\cos x=\\frac{1-t^2}{1+t^2}$, and $\\cos x\\ne0$ means $t\\ne\\pm1$.",
+  "$\\sec x+\\tan x=\\dfrac{1+\\sin x}{\\cos x}=\\dfrac{(1+t^2)+2t}{1-t^2}=\\dfrac{(1+t)^2}{(1-t)(1+t)}=\\dfrac{1+t}{1-t}$.",
+  "The equation is $\\dfrac{1+t}{1-t}=1+4t$, i.e. $1+t=(1+4t)(1-t)=1+3t-4t^2$, i.e. $4t^2-2t=0$, so $t=0$ or $t=\\frac12$ (neither is $\\pm1$).",
+  "As $x$ runs over $(-2\\pi,2\\pi)$, $\\frac x2$ runs over $(-\\pi,\\pi)$, an interval of length $2\\pi$, on which $\\tan\\frac x2$ takes every real value twice except where $\\frac x2=\\pm\\frac{\\pi}{2}$.",
+  "$t=0$: $\\frac x2\\in\\{0\\}$ only ($\\pm\\pi$ are excluded by the open interval), so $x=0$, with $\\sin x+\\cos x=0+1=1$.",
+  "$t=\\frac12$: $\\frac x2=\\alpha$ or $\\alpha-\\pi$, where $\\alpha=\\tan^{-1}\\frac12$; so $x=2\\alpha$ or $2\\alpha-2\\pi$. For both, $\\sin x=\\frac{2t}{1+t^2}=\\frac45$, $\\cos x=\\frac{1-t^2}{1+t^2}=\\frac35$, so $\\sin x+\\cos x=\\frac75$. Check: $\\sec x+\\tan x=\\frac53+\\frac43=3=1+4\\cdot\\frac12$.",
+  "$S=\\{2\\alpha-2\\pi,\\ 0,\\ 2\\alpha\\}$ and $\\displaystyle\\sum_{x\\in S}(\\sin x+\\cos x)=1+\\frac75+\\frac75=\\frac{19}{5}=3.8$.",
+  "",
+  "Final Answer: 3.8"
+ ],
+ "originality_note": "New: sec x + tan x written through t = tan(x/2) collapses to (1+t)/(1-t), so the equation becomes a quadratic in t; the root t = 0 survives only at x = 0 because the interval (-2pi, 2pi) is open, and t = 1/2 gives two values of x (way 5). Closest known: the identity sec x + tan x = tan(pi/4 + x/2) and 'sec x + tan x = k' exercises. Different because: the right side also contains tan(x/2), and the answer depends on counting the members of each family in an open interval of length 4pi.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Miscellaneous trigonometric equations",
+  "Half-angle substitution t = tan(x/2)"
+ ],
+ "concept_use": {
+  "Miscellaneous trigonometric equations": "The non-standard mixture of sec x, tan x and tan(x/2) is reduced through the simplification sec x + tan x = (1+t)/(1-t).",
+  "Half-angle substitution t = tan(x/2)": "sin x = 2t/(1+t^2), cos x = (1-t^2)/(1+t^2) turn the equation into 2t(2t - 1) = 0 and give sin x + cos x for each root."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Stated that sec x, tan x and tan(x/2) must be defined (so x != +-pi/2, +-3pi/2, +-pi). The interval is open, which removes +-2pi from the t = 0 family. Changed: added the 'defined' clause.",
+ "level": 3,
+ "key_step": "Collapsing sec x + tan x to (1+t)/(1-t) and then counting how many x in (-2pi, 2pi) each value of t gives.",
+ "justification": "Two linked ideas (half-angle simplification of sec + tan and careful counting of solutions in an open interval of two periods) with an exact final sum; numerical. Comparable to 2023-P2-Q3 (L3).",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}

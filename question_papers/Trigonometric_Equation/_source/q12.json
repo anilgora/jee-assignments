@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "answer_plan": "positive 2-digit integer",
+ "target_level": 2,
+ "english": [
+  "The number of solutions of the equation $\\cos\\left(\\pi x\\right)=\\dfrac{x^2}{36}$ in the interval $[-5,6]$ is ______."
+ ],
+ "hindi": [
+  "अन्तराल $[-5,6]$ में समीकरण $\\cos\\left(\\pi x\\right)=\\dfrac{x^2}{36}$ के हलों की संख्या ______ है।"
+ ],
+ "solution": [
+  "Graphs: $y=\\cos\\pi x$ (period $2$, value $1$ at even integers, $-1$ at odd integers) and $y=\\frac{x^2}{36}\\in\\left[0,1\\right]$ on $[-6,6]$",
+  "On each unit interval $[m,m+1]$ the cosine runs monotonically between $-1$ and $1$ while $\\frac{x^2}{36}<1$ for $|x|<6$, so exactly one crossing",
+  "$[-5,0]$: one on each of $[-5,-4],\\dots,[-1,0]$: $5$ ($x=0$ is not a root)",
+  "$[0,6]$: one in each of $(0,1),\\dots,(4,5)$: $5$; on $[5,6]$: a crossing in $(5,6)$ and also $x=6$ ($\\cos6\\pi=1=\\frac{36}{36}$): $2$",
+  "Total $5+5+2=12$",
+  "",
+  "Final Answer: 12"
+ ],
+ "solution_full": [
+  "Compare the graphs of $y=\\cos\\pi x$ and $y=\\frac{x^2}{36}$. The cosine has period $2$, equals $1$ at even integers and $-1$ at odd integers, and is monotonic on each interval $[m,m+1]$, $m\\in\\mathbb{Z}$.",
+  "The parabola is $0$ at $x=0$, increases with $|x|$, and is $<1$ for $|x|<6$; it equals $1$ only at $x=\\pm6$.",
+  "On $[m,m+1]$ with $-5\\le m\\le4$, the cosine runs monotonically from $1$ to $-1$ or from $-1$ to $1$, while the parabola stays strictly inside $(0,1)$ and changes by at most $\\frac{9}{36}$. So $g(x)=\\cos\\pi x-\\frac{x^2}{36}$ changes sign on each such interval. The cosine is much steeper than the parabola (slope up to $\\pi$ against at most $\\frac13$), so the graphs cross exactly once there.",
+  "Negative side $[-5,0]$: intervals $[-5,-4],[-4,-3],[-3,-2],[-2,-1],[-1,0]$, one root each: $5$ roots. At $x=0$: $1\\ne0$.",
+  "Positive side: $(0,1),(1,2),(2,3),(3,4),(4,5)$ give $5$ roots. On $[5,6]$: $g(5)=-1-\\frac{25}{36}<0$, and near $x=6$, $\\cos\\pi x\\approx1-\\frac{\\pi^2(6-x)^2}{2}$ while $\\frac{x^2}{36}\\approx1-\\frac{6-x}{3}$, so $g>0$ just left of $6$: one crossing in $(5,6)$; and $x=6$ itself is a root since $\\cos6\\pi=1=\\frac{36}{36}$.",
+  "Total $5+5+2=12$.",
+  "",
+  "Final Answer: 12"
+ ],
+ "originality_note": "New: intersections of cos(pi x) with the parabola x^2/36 counted on the asymmetric interval [-5, 6], where the right end x = 6 is itself a solution (the parabola reaches 1 exactly at a crest) and still leaves a separate crossing in (5, 6) (way 4). Closest known: counting roots of sin x = x/100-type equations. Different because: the parabola and the endpoint touching at a crest decide the last interval.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Number of solutions in a given interval",
+  "Number of solutions by graphical intersection"
+ ],
+ "concept_use": {
+  "Number of solutions in a given interval": "The count is restricted to [-5, 6]; the asymmetric interval gives 5 roots on the left and 7 on the right, including the endpoint x = 6.",
+  "Number of solutions by graphical intersection": "The roots are counted as intersections of y = cos(pi x) and y = x^2/36, one per unit interval plus the crest at x = 6."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath (and a numerical scan), is unique and equals the Answer Plan. Checked by a fine numerical scan that the roots are 5 on [-5, 0) and 7 on (0, 6], with x = 6 exact. Changed: No change.",
+ "level": 2,
+ "key_step": "One crossing per unit interval, plus noticing that x = 6 is a root in addition to the crossing in (5, 6).",
+ "justification": "Standard graphical counting with one subtle endpoint; routine but multi-step. Comparable to the intersection counting of 2026-P2-Q15 (L2).",
+ "nearest_anchor": "2026-P2-Q15 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Equation"
+}
