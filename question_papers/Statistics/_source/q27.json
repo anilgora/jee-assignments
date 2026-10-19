@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "The four observations $a,\\ a+d,\\ a+2d,\\ a+3d$, where $d>0$, have arithmetic mean $11$. In a frequency distribution, the values $a,\\ a+d,\\ a+2d,\\ a+3d$ occur with frequencies $1,3,9,27$, respectively, and the arithmetic mean of this frequency distribution is $15.2$. Then the variance of this frequency distribution is ______."
+ ],
+ "hindi": [
+  "चार प्रेक्षणों $a,\\ a+d,\\ a+2d,\\ a+3d$, जहाँ $d>0$ है, का समान्तर माध्य $11$ है। एक बारंबारता बंटन में मान $a,\\ a+d,\\ a+2d,\\ a+3d$ क्रमशः बारंबारताओं $1,3,9,27$ के साथ आते हैं, तथा इस बारंबारता बंटन का समान्तर माध्य $15.2$ है। तब इस बारंबारता बंटन का प्रसरण ______ है।"
+ ],
+ "solution": [
+  "Mean of the AP: $a+\\dfrac32d=11$",
+  "Weighted mean: $a+d\\cdot\\dfrac{\\sum_{k=0}^3k3^k}{\\sum3^k}=a+d\\cdot\\dfrac{0+3+18+81}{40}=a+2.55d=15.2$",
+  "(AGP: $\\sum_{k=0}^{3}k3^k=\\dfrac{3-4\\cdot3^4+3\\cdot3^5}{(1-3)^2}=102$)",
+  "Subtracting: $1.05d=4.2\\Rightarrow d=4$, $a=5$; values $5,9,13,17$",
+  "With $u=k$: $\\overline{u^2}=\\dfrac{0+3+36+243}{40}=7.05$, $\\bar u=2.55$, $\\sigma_u^2=7.05-6.5025=0.5475$",
+  "Variance $=d^2\\sigma_u^2=16\\times0.5475=8.76$",
+  "",
+  "Final Answer: 8.76"
+ ],
+ "solution_full": [
+  "The mean of the four AP terms is the mean of the first and last: $\\dfrac{a+(a+3d)}{2}=a+\\dfrac32d=11$.",
+  "In the frequency distribution, value $a+kd$ has frequency $3^k$ ($k=0,1,2,3$), $N=1+3+9+27=40$.",
+  "Mean $=a+d\\cdot\\dfrac{\\sum k3^k}{40}$. The arithmetico-geometric sum $S=\\sum_{k=0}^3k3^k$: $S-3S=3+9+27-3\\cdot81=-204$, so $S=102$.",
+  "Mean $=a+\\dfrac{102}{40}d=a+2.55d=15.2$.",
+  "Subtracting $a+1.5d=11$: $1.05d=4.2$, so $d=4$ and $a=11-6=5$. Values $5,9,13,17$.",
+  "Variance by coding $u=k=\\dfrac{x-5}{4}$: $\\sum fu=102$, $\\sum fu^2=0+3+36+243=282$.",
+  "$\\sigma_u^2=\\dfrac{282}{40}-\\left(\\dfrac{102}{40}\\right)^2=7.05-6.5025=0.5475$.",
+  "Variance of $x$: $4^2\\times0.5475=8.76$. Check directly: $\\sum fx^2=25+243+1521+7803=9592$, $\\dfrac{9592}{40}-15.2^2=239.8-231.04=8.76$.",
+  "",
+  "Final Answer: 8.76"
+ ],
+ "originality_note": "New: AP values carry GP frequencies, so the weighted mean is an arithmetico-geometric sum; together with the plain AP mean it fixes a and d, and the variance follows by coding (way 5: AP mean and an AGP inside a frequency distribution). Closest known: 'sum of the AGP 1 + 2x + 3x^2 + ...'. Different because: the AGP appears as a weighted mean and the two means together pin down the progression.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising the weighted mean as a + d (sum k 3^k)/40 and solving with the AP mean.",
+ "justification": "Three stages (AGP sum, solving for a and d, variance) with exact decimals and no options. Above 2026-P2-Q12 (L2); Level 3.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Mean and variance of the first n natural numbers or of an AP": "The mean of the AP, a + 3d/2 = 11, and coding the AP values as a + kd for the variance.",
+  "Sum of an Arithmetico Geometric Progression": "Sum k 3^k (k = 0..3) = 102 for the weighted mean, by the S - rS method."
+ },
+ "blueprint_concepts": [
+  "Mean and variance of the first n natural numbers or of an AP",
+  "Sum of an Arithmetico Geometric Progression"
+ ]
+}

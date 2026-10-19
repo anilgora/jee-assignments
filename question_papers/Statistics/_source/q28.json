@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Two frequency distributions $A$ and $B$ take the values $10,20,30,40,50$ with the following frequencies, where $k$ is a positive integer.",
+  "$$\\begin{array}{c|ccccc}\\text{Value}&10&20&30&40&50\\\\\\hline\\text{Frequency in }A&1&3&3&1&2\\\\\\text{Frequency in }B&2&k&1&3&5\\end{array}$$",
+  "The distributions $A$ and $B$ have the same arithmetic mean. If $\\sigma_A^2$ and $\\sigma_B^2$ denote their variances, then the value of $\\dfrac{\\sigma_A^2}{\\sigma_B^2}$ is ______."
+ ],
+ "hindi": [
+  "दो बारंबारता बंटन $A$ तथा $B$ मान $10,20,30,40,50$ निम्न बारंबारताओं के साथ लेते हैं, जहाँ $k$ एक धनात्मक पूर्णांक है।",
+  "$$\\begin{array}{c|ccccc}\\text{Value}&10&20&30&40&50\\\\\\hline\\text{Frequency in }A&1&3&3&1&2\\\\\\text{Frequency in }B&2&k&1&3&5\\end{array}$$",
+  "बंटनों $A$ तथा $B$ का समान्तर माध्य समान है। यदि $\\sigma_A^2$ तथा $\\sigma_B^2$ इनके प्रसरण हैं, तो $\\dfrac{\\sigma_A^2}{\\sigma_B^2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$u=\\dfrac{x-30}{10}=-2,\\ldots,2$. $A$: $\\sum fu=-2-3+0+1+4=0$, mean $30$",
+  "$B$: $\\sum fu=-4-k+0+3+10=9-k=0\\Rightarrow k=9$, $N_B=20$",
+  "$\\sigma_A^2=100\\cdot\\dfrac{4+3+0+1+8}{10}=160$; $\\sigma_B^2=100\\cdot\\dfrac{8+9+0+3+20}{20}=200$",
+  "$\\dfrac{\\sigma_A^2}{\\sigma_B^2}=\\dfrac{160}{200}=0.8$",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "solution_full": [
+  "Code $u=\\dfrac{x-30}{10}$, so $u=-2,-1,0,1,2$.",
+  "For $A$ ($N=10$): $\\sum fu=-2-3+0+1+4=0$, so the mean of $A$ is $30$.",
+  "For $B$ ($N=11+k$): $\\sum fu=-4-k+0+3+10=9-k$. Equal means require $\\sum fu=0$, so $k=9$ and $N=20$.",
+  "$A$: $\\sum fu^2=4+3+0+1+8=16$, $\\sigma_u^2=1.6$, $\\sigma_A^2=160$.",
+  "$B$: $\\sum fu^2=8+9+0+3+20=40$, $\\sigma_u^2=2$, $\\sigma_B^2=200$.",
+  "$\\dfrac{\\sigma_A^2}{\\sigma_B^2}=\\dfrac{160}{200}=0.8$. With equal means, $A$ is the more consistent distribution.",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "originality_note": "New: an unknown frequency is fixed by the equal-mean condition (a zero coded sum), and the two distributions with the same mean are then compared by their variances (way 3: object fixed by a condition, then compared). Closest known: 'which of two series with the same mean is more consistent'. Different because: the second table is incomplete and the equal means are a condition, not a given.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Using the coded sums: equal means mean sum fu = 0 in B.",
+ "justification": "Routine coded computations with one linear condition. Comparable to 2025-P1-Q14 (L2).",
+ "nearest_anchor": "2025-P1-Q14 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Analysis of frequency distributions with the same mean but different variance": "Equal means give k = 9; the variances 160 and 200 are then compared."
+ },
+ "blueprint_concepts": [
+  "Analysis of frequency distributions with the same mean but different variance"
+ ]
+}

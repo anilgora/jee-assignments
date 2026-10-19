@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x^3-11x$. For $t\\in[-3,0]$, let $D(t)$ denote the mean deviation about the mean of the four observations $t,\\ -t,\\ f(t),\\ f(-t)$. Then the value of $t\\in[-3,0]$ at which $D(t)$ attains its maximum value is ______."
+ ],
+ "hindi": [
+  "माना $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x^3-11x$ द्वारा परिभाषित है। $t\\in[-3,0]$ के लिए माना $D(t)$ चार प्रेक्षणों $t,\\ -t,\\ f(t),\\ f(-t)$ का माध्य के सापेक्ष माध्य विचलन है। तब $t\\in[-3,0]$ का वह मान जिस पर $D(t)$ अपना अधिकतम मान प्राप्त करता है, ______ है।"
+ ],
+ "solution": [
+  "$f$ is odd, so $f(-t)=-f(t)$; the four observations sum to $0$, mean $0$",
+  "$D(t)=\\dfrac{2|t|+2|f(t)|}{4}=\\dfrac{|t|+|f(t)|}{2}$",
+  "On $[-3,0]$: $|t|=-t$ and $f(t)=t(t^2-11)\\ge0$ (as $t\\le0$, $t^2\\le9<11$), so $D(t)=\\dfrac{t^3-12t}{2}$",
+  "$D'(t)=\\dfrac{3t^2-12}{2}=0\\Rightarrow t=-2$; $D''(-2)=-6<0$, local maximum $D(-2)=8$",
+  "Ends: $D(-3)=4.5$, $D(0)=0$, so the maximum is at $t=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "$f(-x)=-x^3+11x=-f(x)$, so $f(-t)=-f(t)$ and the observations are $t,-t,f(t),-f(t)$, with sum $0$ and mean $0$.",
+  "$D(t)=\\dfrac{|t|+|-t|+|f(t)|+|-f(t)|}{4}=\\dfrac{|t|+|f(t)|}{2}$.",
+  "For $t\\in[-3,0]$: $|t|=-t$. Also $f(t)=t(t^2-11)$ with $t\\le0$ and $t^2-11\\le-2<0$, so $f(t)\\ge0$ and $|f(t)|=t^3-11t$.",
+  "Hence $D(t)=\\dfrac{-t+t^3-11t}{2}=\\dfrac{t^3-12t}{2}$ on $[-3,0]$.",
+  "$D'(t)=\\dfrac{3t^2-12}{2}$, which is zero at $t=-2$ in $[-3,0]$. $D'$ is positive on $(-3,-2)$ and negative on $(-2,0)$ (first derivative test); also $D''(t)=3t$, $D''(-2)=-6<0$.",
+  "$D(-2)=\\dfrac{-8+24}{2}=8$, $D(-3)=\\dfrac{-27+36}{2}=4.5$, $D(0)=0$.",
+  "So the maximum of $D$ on $[-3,0]$ is $8$, attained at $t=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: a data set built from an odd function has mean 0 for every t, so its mean deviation is (|t| + |f(t)|)/2, a smooth cubic on the interval once the signs are fixed, maximised by the derivative tests (way 2: a statistic of a moving family, then optimised). Closest known: maxima of a cubic on an interval. Different because: the cubic appears only after the statistic is simplified and the absolute values are resolved on the interval.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Checked numerically on a fine grid that the maximum is at t = -2. Changed: No change.",
+ "level": 3,
+ "key_step": "Noticing the mean is always 0 and resolving the absolute values on [-3,0] to get a cubic.",
+ "justification": "Two ideas linked (statistic of a family, derivative tests with end points) in numerical format. Comparable to the L3 calculus-in-context anchor 2026-P1-Q1 (L3).",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Mean deviation about the mean": "Mean 0 for all t gives D(t) = (|t| + |f(t)|)/2 = (t^3 - 12t)/2 on [-3,0].",
+  "Maxima & Minima: First & Second Derivative Tests": "D'(t) = 0 at t = -2 with D'' < 0 and the end-point comparison."
+ },
+ "blueprint_concepts": [
+  "Mean deviation about the mean",
+  "Maxima & Minima: First & Second Derivative Tests"
+ ]
+}

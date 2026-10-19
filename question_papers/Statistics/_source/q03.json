@@ -1,0 +1,64 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "The marks of $30$ students form the following continuous frequency distribution, in which each class contains its left end point but not its right end point.",
+  "$$\\begin{array}{c|ccccc}\\text{Class}&[0,10)&[10,20)&[20,30)&[30,40)&[40,50)\\\\\\hline\\text{Frequency}&4&6&9&7&4\\end{array}$$",
+  "Five more students obtain the marks $x,\\ 2x,\\ x+8,\\ 28$ and $40$, where $x$ is a real number, and the median of these five marks is $16$. These five marks are entered in the same classes. Then the median of the resulting distribution of $35$ students is",
+  "",
+  "(A) $25$",
+  "(B) $24.5$",
+  "(C) $23.5$",
+  "(D) $25.5$"
+ ],
+ "hindi": [
+  "$30$ विद्यार्थियों के अंक निम्न सतत बारंबारता बंटन बनाते हैं, जिसमें प्रत्येक वर्ग में उसका बायाँ अन्त्य बिन्दु सम्मिलित है परन्तु दायाँ अन्त्य बिन्दु नहीं।",
+  "$$\\begin{array}{c|ccccc}\\text{Class}&[0,10)&[10,20)&[20,30)&[30,40)&[40,50)\\\\\\hline\\text{Frequency}&4&6&9&7&4\\end{array}$$",
+  "पाँच अन्य विद्यार्थी अंक $x,\\ 2x,\\ x+8,\\ 28$ तथा $40$ प्राप्त करते हैं, जहाँ $x$ एक वास्तविक संख्या है, तथा इन पाँच अंकों की माध्यिका $16$ है। इन पाँच अंकों को उन्हीं वर्गों में सम्मिलित किया जाता है। तब $35$ विद्यार्थियों के परिणामी बंटन की माध्यिका है",
+  "",
+  "(A) $25$",
+  "(B) $24.5$",
+  "(C) $23.5$",
+  "(D) $25.5$"
+ ],
+ "solution": [
+  "Median of five values is the 3rd in order, and must be $16$; $28,40\\ne16$, so $x$, $2x$ or $x+8$ equals $16$",
+  "$x=16$: values $16,32,24,28,40$, median $28$, rejected; $2x=16$ or $x+8=16$ gives $x=8$: values $8,16,16,28,40$, median $16$",
+  "New frequencies: $5,8,10,7,5$ ($40$ goes to $[40,50)$), $N=35$, $\\dfrac N2=17.5$, cumulative $5,13,23$",
+  "Median class $[20,30)$: $20+\\dfrac{17.5-13}{10}\\cdot10=24.5$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "The median of five observations is the third one in ascending order, so one of $x,\\ 2x,\\ x+8,\\ 28,\\ 40$ equals $16$; it cannot be $28$ or $40$.",
+  "If $x=16$: the marks are $16,32,24,28,40$, in order $16,24,28,32,40$, median $28\\neq16$. Rejected.",
+  "If $2x=16$, then $x=8$; if $x+8=16$, then also $x=8$. The marks are $8,16,16,28,40$, whose median is $16$. So $x=8$.",
+  "Entering them: $8\\in[0,10)$, $16,16\\in[10,20)$, $28\\in[20,30)$, $40\\in[40,50)$.",
+  "New frequencies $5,8,10,7,5$ with $N=35$; cumulative frequencies $5,13,23,30,35$.",
+  "$\\dfrac N2=17.5$ lies in $[20,30)$, with $l=20$, $C=13$, $f=10$, $h=10$.",
+  "Median $=l+\\dfrac{\\frac N2-C}{f}h=20+\\dfrac{4.5}{10}\\cdot10=24.5$.",
+  "(The median before the five students were added was $20+\\dfrac{15-10}{9}\\cdot10\\approx25.56$.)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: an ungrouped set with a parameter is pinned down by its own median, and is then merged into a grouped distribution whose interpolated median is asked (way 5: median of ungrouped data feeding the median of a continuous distribution). Closest known: missing-frequency median problems. Different because: the new frequencies come from casework on an ungrouped median, not from a given total.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, the class-boundary convention is explicit where it matters, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Checked over all real x that x = 8 is the only solution. Changed: No change.",
+ "level": 3,
+ "key_step": "Casework on which of x, 2x, x+8 is the middle value, then updating the classes and interpolating.",
+ "justification": "Two linked ideas: a parametric ungrouped median with a rejected case, then the grouped median of the merged data. Above the single-formula statistics anchors (2023-P1-Q15 L0, 2025-P1-Q14 L2); comparable to two-stage L3 questions such as 2024-P1-Q3.",
+ "nearest_anchor": "2025-P1-Q14 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Median of ungrouped data": "The third value of x, 2x, x+8, 28, 40 must be 16; casework gives x = 8.",
+  "Median of a continuous frequency distribution": "The median formula l + (N/2 - C) h / f on the updated table gives 24.5."
+ },
+ "blueprint_concepts": [
+  "Median of ungrouped data",
+  "Median of a continuous frequency distribution"
+ ]
+}

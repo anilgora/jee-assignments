@@ -1,0 +1,56 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "Option C",
+ "english": [
+  "Group $P$ has $40$ observations with mean $50$ and variance $9$. Group $Q$ has $60$ observations with variance $16$, and the mean of $Q$ is greater than the mean of $P$. The variance of the $100$ observations of $P$ and $Q$ taken together is $19.2$. Then the mean of the observations of $Q$ is",
+  "",
+  "(A) $45$",
+  "(B) $52.5$",
+  "(C) $55$",
+  "(D) $60$"
+ ],
+ "hindi": [
+  "समूह $P$ में $40$ प्रेक्षण हैं जिनका माध्य $50$ तथा प्रसरण $9$ है। समूह $Q$ में $60$ प्रेक्षण हैं जिनका प्रसरण $16$ है, तथा $Q$ का माध्य $P$ के माध्य से अधिक है। $P$ तथा $Q$ के सभी $100$ प्रेक्षणों को साथ लेने पर प्रसरण $19.2$ है। तब $Q$ के प्रेक्षणों का माध्य है",
+  "",
+  "(A) $45$",
+  "(B) $52.5$",
+  "(C) $55$",
+  "(D) $60$"
+ ],
+ "solution": [
+  "Combined variance $=\\dfrac{n_1\\sigma_1^2+n_2\\sigma_2^2}{n_1+n_2}+\\dfrac{n_1n_2}{(n_1+n_2)^2}(\\bar x_1-\\bar x_2)^2$",
+  "$19.2=\\dfrac{360+960}{100}+\\dfrac{2400}{10000}d^2=13.2+0.24d^2\\Rightarrow d^2=25$",
+  "$\\bar x_Q>\\bar x_P\\Rightarrow\\bar x_Q=50+5=55$",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Let $\\bar x_Q=50+d$. The combined mean is $\\bar x=\\dfrac{40\\cdot50+60(50+d)}{100}=50+0.6d$.",
+  "Deviations of the group means from $\\bar x$: $d_P=-0.6d$, $d_Q=0.4d$.",
+  "Combined variance $=\\dfrac{n_P(\\sigma_P^2+d_P^2)+n_Q(\\sigma_Q^2+d_Q^2)}{n_P+n_Q}=\\dfrac{40(9+0.36d^2)+60(16+0.16d^2)}{100}=13.2+0.24d^2$.",
+  "$13.2+0.24d^2=19.2\\Rightarrow d^2=25\\Rightarrow d=\\pm5$.",
+  "Since the mean of $Q$ exceeds that of $P$, $d=5$ and $\\bar x_Q=55$. (Without that condition, $45$ would also fit.)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: the combined variance is given and the unknown is a group mean, so the between-group term must be inverted, giving two symmetric values separated by an order condition (way 3: two conditions fix the object). Closest known: computing a combined variance from two groups. Different because: the formula is run backwards and the sign must be chosen.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Added the condition that Q's mean exceeds P's, so the answer is unique. Changed: added the order condition.",
+ "level": 2,
+ "key_step": "Inverting the combined-variance formula for the difference of means.",
+ "justification": "A routine reverse use of one standard formula with a sign choice. Comparable to 2026-P2-Q12 (L2), which recovers observations from means and variances.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Combined mean of two or more series": "The combined mean 50 + 0.6d gives the deviations of the group means.",
+  "Variance of a combination of two series": "The combined-variance formula gives 13.2 + 0.24 d^2 = 19.2."
+ },
+ "blueprint_concepts": [
+  "Combined mean of two or more series",
+  "Variance of a combination of two series"
+ ]
+}

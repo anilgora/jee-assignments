@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "The four observations $13,19,21,x$, where $x$ is an integer, have coefficient of variation $25\\%$. When the same real number $c$ is added to each of these four observations, the coefficient of variation of the new observations becomes $40\\%$. Then the value of $c$ is ______."
+ ],
+ "hindi": [
+  "चार प्रेक्षणों $13,19,21,x$, जहाँ $x$ एक पूर्णांक है, का विचरण गुणांक $25\\%$ है। जब इन चारों प्रेक्षणों में से प्रत्येक में एक ही वास्तविक संख्या $c$ जोड़ी जाती है, तब नए प्रेक्षणों का विचरण गुणांक $40\\%$ हो जाता है। तब $c$ का मान ______ है।"
+ ],
+ "solution": [
+  "CV $25\\%\\Rightarrow16\\sigma^2=\\bar x^2$, with $\\bar x=\\dfrac{53+x}{4}$, $\\sigma^2=\\dfrac{971+x^2}{4}-\\bar x^2$",
+  "$64(971+x^2)=17(53+x)^2\\Rightarrow47x^2-1802x+14391=0\\Rightarrow x=27$ or $x=\\dfrac{533}{47}$; integer $\\Rightarrow x=27$",
+  "$13,19,21,27$: $\\bar x=20$, deviations $-7,-1,1,7$, $\\sigma^2=25$, $\\sigma=5$",
+  "Adding $c$: $\\sigma$ unchanged, mean $20+c$: $\\dfrac{5}{20+c}=0.4\\Rightarrow c=-7.5$",
+  "",
+  "Final Answer: -7.5"
+ ],
+ "solution_full": [
+  "CV $=\\dfrac{\\sigma}{\\bar x}\\times100=25$ means $\\sigma=\\dfrac{\\bar x}{4}$, i.e. $16\\sigma^2=\\bar x^2$ (with $\\bar x>0$).",
+  "$\\bar x=\\dfrac{53+x}{4}$ and $\\sum x_i^2=169+361+441+x^2=971+x^2$, so $\\sigma^2=\\dfrac{971+x^2}{4}-\\bar x^2$.",
+  "$16\\sigma^2=\\bar x^2\\Rightarrow4(971+x^2)=17\\bar x^2=\\dfrac{17(53+x)^2}{16}\\Rightarrow64(971+x^2)=17(53+x)^2$.",
+  "$62144+64x^2=47753+1802x+17x^2\\Rightarrow47x^2-1802x+14391=0$.",
+  "Discriminant $=1802^2-4\\cdot47\\cdot14391=541696=736^2$, so $x=\\dfrac{1802\\pm736}{94}$, i.e. $x=27$ or $x=\\dfrac{533}{47}$. As $x$ is an integer, $x=27$.",
+  "Check: $13,19,21,27$ have mean $20$, deviations $-7,-1,1,7$, variance $\\dfrac{100}{4}=25$, $\\sigma=5$, CV $=25\\%$.",
+  "Adding $c$ to every observation leaves $\\sigma=5$ and makes the mean $20+c$. CV $=40\\%$: $\\dfrac{5}{20+c}=\\dfrac{2}{5}\\Rightarrow20+c=12.5\\Rightarrow c=-7.5$.",
+  "",
+  "Final Answer: -7.5"
+ ],
+ "originality_note": "New: an unknown observation is fixed by a CV condition (a quadratic with one integer root), and then a change of origin, which keeps sigma but moves the mean, is tuned to a new CV (way 3: object fixed by two conditions). Closest known: 'adding a constant changes CV'. Different because: sigma is not given; it comes from the quadratic for x, and the required shift is negative.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. The integer condition removes the second root 533/47. Changed: No change.",
+ "level": 3,
+ "key_step": "Setting up the CV condition as a quadratic in x and choosing the integer root, then using that a shift keeps sigma.",
+ "justification": "Two ideas linked with a heavy quadratic and a root selection, in numerical format. Above 2026-P2-Q12 (L2); Level 3.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Coefficient of variation and comparison of consistency": "CV = sigma / mean x 100 gives 16 sigma^2 = mean^2, and the new CV 40 gives c.",
+  "Standard deviation and variance of ungrouped data": "The variance of 13, 19, 21, x as a function of x, and sigma = 5 for x = 27."
+ },
+ "blueprint_concepts": [
+  "Coefficient of variation and comparison of consistency",
+  "Standard deviation and variance of ungrouped data"
+ ]
+}

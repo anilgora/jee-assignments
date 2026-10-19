@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $x$ be a real number such that the mean deviation about the median of the five observations $3,7,10,14,x$ is $4$. Then the sum of all possible values of $x$ is",
+  "",
+  "(A) $17$",
+  "(B) $16$",
+  "(C) $1$",
+  "(D) $18$"
+ ],
+ "hindi": [
+  "माना $x$ एक वास्तविक संख्या है जिसके लिए पाँच प्रेक्षणों $3,7,10,14,x$ का माध्यिका के सापेक्ष माध्य विचलन $4$ है। तब $x$ के सभी सम्भव मानों का योग है",
+  "",
+  "(A) $17$",
+  "(B) $16$",
+  "(C) $1$",
+  "(D) $18$"
+ ],
+ "solution": [
+  "Need $\\sum|x_i-M|=20$",
+  "$x\\le7$: $M=7$, sum $=4+0+3+7+(7-x)=21-x=20\\Rightarrow x=1$ (valid)",
+  "$7\\le x\\le10$: $M=x$, sum $=(x-3)+(x-7)+(10-x)+(14-x)=14\\ne20$",
+  "$x\\ge10$: $M=10$, sum $=7+3+0+4+(x-10)=x+4=20\\Rightarrow x=16$ (valid)",
+  "Sum of values $=1+16=17$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "The mean deviation about the median $M$ is $\\dfrac15\\sum|x_i-M|=4$, so $\\sum|x_i-M|=20$.",
+  "The median is the third value in order, so it depends on where $x$ lies.",
+  "Case $x\\le7$: the order puts $7$ third, $M=7$. Sum $=|3-7|+0+|10-7|+|14-7|+|x-7|=14+7-x=21-x$. Setting $21-x=20$ gives $x=1\\le7$. Valid.",
+  "Case $7\\le x\\le10$: $M=x$. Sum $=(x-3)+(x-7)+(10-x)+(14-x)=14$, a constant, never $20$.",
+  "Case $x\\ge10$: $M=10$. Sum $=7+3+0+4+(x-10)=x+4$. Setting $x+4=20$ gives $x=16\\ge10$. Valid.",
+  "So $x\\in\\{1,16\\}$, and the sum is $17$.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the unknown observation moves the median itself, so the mean deviation about the median is a piecewise function of x with a flat middle piece and two solutions (way 2: a quantity defined by a moving point). Closest known: 'find the missing observation given the mean deviation'. Different because: the centre changes with x and the middle range gives no solution at all.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Splitting by the position of x to fix the median, then solving each linear piece.",
+ "justification": "Routine casework with three cases and no insight. Comparable to the case split of 2021-P1-Q17 (L1) but with more cases and a statistics layer, so Level 2.",
+ "nearest_anchor": "2021-P1-Q17 (L1)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Mean deviation about the median": "The sum of |x_i - M| with M depending on x is set equal to 20 in each case."
+ },
+ "blueprint_concepts": [
+  "Mean deviation about the median"
+ ]
+}

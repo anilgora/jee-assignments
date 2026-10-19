@@ -1,0 +1,58 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "A data set consists of the observation $6$ occurring once, $12$ occurring $4$ times, $16$ occurring $k$ times and $25$ occurring $4$ times, where $k$ is a positive integer. The same data are grouped into the classes $[0,10),[10,20),[20,30)$. The ungrouped data have a unique mode, and this mode is equal to the mode of the grouped frequency distribution. Then $k$ is equal to",
+  "",
+  "(A) $5$",
+  "(B) $6$",
+  "(C) $7$",
+  "(D) $8$"
+ ],
+ "hindi": [
+  "एक आँकड़ा समुच्चय में प्रेक्षण $6$ एक बार, $12$ चार बार, $16$ $k$ बार तथा $25$ चार बार आता है, जहाँ $k$ एक धनात्मक पूर्णांक है। इन्हीं आँकड़ों को वर्गों $[0,10),[10,20),[20,30)$ में समूहित किया जाता है। अवर्गीकृत आँकड़ों का एक अद्वितीय बहुलक है तथा यह बहुलक समूहित बारंबारता बंटन के बहुलक के बराबर है। तब $k$ बराबर है",
+  "",
+  "(A) $5$",
+  "(B) $6$",
+  "(C) $7$",
+  "(D) $8$"
+ ],
+ "solution": [
+  "Unique ungrouped mode: if $k\\le4$, the value $12$ or $25$ ties for the top, so $k\\ge5$ and the mode is $16$",
+  "Grouped frequencies: $1,\\ 4+k,\\ 4$; modal class $[10,20)$ since $4+k>4$",
+  "Grouped mode $=10+\\dfrac{(4+k)-1}{2(4+k)-1-4}\\cdot10=10+\\dfrac{10(k+3)}{2k+3}$",
+  "$10+\\dfrac{10(k+3)}{2k+3}=16\\Rightarrow10k+30=12k+18\\Rightarrow k=6$ ($\\ge5$, valid)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Ungrouped data: $6$ (once), $12$ ($4$ times), $16$ ($k$ times), $25$ ($4$ times).",
+  "If $k\\le4$, then $12$ and $25$ both occur $4$ times and no value occurs more often, so the mode is not unique. Hence $k\\ge5$, and the unique mode is $16$.",
+  "Grouped frequencies: $[0,10)$: $1$; $[10,20)$: $4+k$; $[20,30)$: $4$. As $4+k\\ge9>4$, the modal class is $[10,20)$ with $f_1=4+k$, $f_0=1$, $f_2=4$, $h=10$.",
+  "Mode $=l+\\dfrac{f_1-f_0}{2f_1-f_0-f_2}h=10+\\dfrac{(k+3)\\cdot10}{2k+3}$.",
+  "Setting it equal to $16$: $\\dfrac{10(k+3)}{2k+3}=6\\Rightarrow10k+30=12k+18\\Rightarrow k=6$.",
+  "Check: frequencies $1,10,4$ give $10+\\dfrac{9}{15}\\cdot10=16$, and $16$ occurs $6$ times, more than any other value.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: one data set is read twice, as raw values (unique mode) and as a grouped table (interpolated mode), and the two modes are required to agree, which fixes an unknown frequency (way 3: an object fixed by two conditions). Closest known: missing-frequency problems with a given grouped mode. Different because: the target value of the mode is not given; it comes from the uniqueness condition on the raw data.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, the class-boundary convention is explicit where it matters, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Checked k = 1..14: only k = 6 satisfies both conditions (k = 4 gives three modes). Changed: chose frequencies so that the modal class is the same for every k.",
+ "level": 3,
+ "key_step": "Using the uniqueness of the raw mode to get the target value 16, then solving the grouped-mode formula for k.",
+ "justification": "Two ideas linked (raw mode with a uniqueness case, grouped mode formula). Above the one-table L2 statistics anchors (2025-P1-Q14) because the condition must first be decoded. Borderline 2/3.",
+ "nearest_anchor": "2025-P1-Q14 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Mode of ungrouped data": "Uniqueness of the raw mode forces k >= 5 and makes the mode 16.",
+  "Mode of a continuous frequency distribution": "The grouped mode l + (f1 - f0) h / (2 f1 - f0 - f2) with f1 = 4 + k is set equal to 16."
+ },
+ "blueprint_concepts": [
+  "Mode of ungrouped data",
+  "Mode of a continuous frequency distribution"
+ ]
+}

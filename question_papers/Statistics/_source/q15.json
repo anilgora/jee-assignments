@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "The marks of the students of section $A$ form the following continuous frequency distribution, in which each class contains its left end point but not its right end point, and $f$ is a positive integer.",
+  "$$\\begin{array}{c|cccc}\\text{Class}&[0,20)&[20,40)&[40,60)&[60,80)\\\\\\hline\\text{Frequency}&3&7&f&5\\end{array}$$",
+  "Section $B$ has $25$ students whose mean mark is $52$. The arithmetic mean of the marks of all the students of the two sections taken together, computed with the class marks for section $A$, is $48$. Then the number of students of section $A$ who scored at least $40$ marks is ______."
+ ],
+ "hindi": [
+  "अनुभाग $A$ के विद्यार्थियों के अंक निम्न सतत बारंबारता बंटन बनाते हैं, जिसमें प्रत्येक वर्ग में उसका बायाँ अन्त्य बिन्दु सम्मिलित है परन्तु दायाँ अन्त्य बिन्दु नहीं, तथा $f$ एक धनात्मक पूर्णांक है।",
+  "$$\\begin{array}{c|cccc}\\text{Class}&[0,20)&[20,40)&[40,60)&[60,80)\\\\\\hline\\text{Frequency}&3&7&f&5\\end{array}$$",
+  "अनुभाग $B$ में $25$ विद्यार्थी हैं जिनके अंकों का माध्य $52$ है। दोनों अनुभागों के सभी विद्यार्थियों के अंकों का समान्तर माध्य, अनुभाग $A$ के लिए वर्ग चिह्नों से परिकलित, $48$ है। तब अनुभाग $A$ के उन विद्यार्थियों की संख्या जिन्होंने कम से कम $40$ अंक प्राप्त किए, ______ है।"
+ ],
+ "solution": [
+  "Section $A$: $\\sum f_im_i=3\\cdot10+7\\cdot30+50f+5\\cdot70=590+50f$, $n_A=15+f$; section $B$ total $=1300$",
+  "Combined mean: $\\dfrac{590+50f+1300}{40+f}=48\\Rightarrow1890+50f=1920+48f\\Rightarrow f=15$",
+  "At least $40$ marks: classes $[40,60)$ and $[60,80)$: $15+5=20$",
+  "",
+  "Final Answer: 20"
+ ],
+ "solution_full": [
+  "Class marks of section $A$: $10,30,50,70$. Total of section $A$: $30+210+50f+350=590+50f$, with $15+f$ students.",
+  "Total of section $B$: $25\\times52=1300$.",
+  "Combined mean $=\\dfrac{\\text{total of }A+\\text{total of }B}{n_A+n_B}=\\dfrac{1890+50f}{40+f}=48$.",
+  "$1890+50f=1920+48f\\Rightarrow2f=30\\Rightarrow f=15$.",
+  "Check: section $A$ has $30$ students with mean $\\dfrac{1340}{30}$; $\\dfrac{1340+1300}{55}=48$.",
+  "Students of $A$ with at least $40$ marks are those in $[40,60)$ and $[60,80)$: $15+5=20$.",
+  "",
+  "Final Answer: 20"
+ ],
+ "originality_note": "New: an unknown class frequency of one section is fixed through the combined mean with a second, ungrouped section, and the question asks for a count read from the completed table (way 5: grouped mean inside a combined mean). Closest known: missing frequency from a given mean. Different because: the given mean is the combined one, so the second section's total enters the equation.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. The asked count (20) avoids a bare 'value of f'. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the combined mean with the grouped total of A and solving the linear equation for f.",
+ "justification": "A routine two-step chain (grouped total, combined mean). Comparable to 2025-P1-Q14 (L2).",
+ "nearest_anchor": "2025-P1-Q14 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Arithmetic mean of a continuous frequency distribution": "Section A's total 590 + 50f from the class marks.",
+  "Combined mean of two or more series": "(Total A + Total B)/(n_A + n_B) = 48 gives f = 15."
+ },
+ "blueprint_concepts": [
+  "Arithmetic mean of a continuous frequency distribution",
+  "Combined mean of two or more series"
+ ]
+}

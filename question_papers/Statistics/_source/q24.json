@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "For ten observations $x_1,x_2,\\ldots,x_{10}$, the values $u_i=\\dfrac{x_i-50}{2}$ were computed, and the mean and the variance of $u_1,u_2,\\ldots,u_{10}$ were found to be $-3$ and $4$, respectively. Later it was found that one observation had been recorded as $40$ instead of its correct value $60$. Then the correct variance of $x_1,x_2,\\ldots,x_{10}$ is ______."
+ ],
+ "hindi": [
+  "दस प्रेक्षणों $x_1,x_2,\\ldots,x_{10}$ के लिए मान $u_i=\\dfrac{x_i-50}{2}$ परिकलित किए गए, तथा $u_1,u_2,\\ldots,u_{10}$ का माध्य तथा प्रसरण क्रमशः $-3$ तथा $4$ पाए गए। बाद में ज्ञात हुआ कि एक प्रेक्षण अपने सही मान $60$ के स्थान पर $40$ अंकित किया गया था। तब $x_1,x_2,\\ldots,x_{10}$ का सही प्रसरण ______ है।"
+ ],
+ "solution": [
+  "Recorded: $\\sum u=-30$, $\\sum u^2=10(4+9)=130$",
+  "$x=40\\to u=-5$; $x=60\\to u=5$: corrected $\\sum u=-30+10=-20$, $\\sum u^2=130-25+25=130$",
+  "Corrected $\\bar u=-2$, $\\sigma_u^2=13-4=9$",
+  "$x=2u+50\\Rightarrow\\sigma_x^2=4\\sigma_u^2=36$",
+  "",
+  "Final Answer: 36"
+ ],
+ "solution_full": [
+  "From the recorded values: $\\sum u_i=10(-3)=-30$ and $\\sum u_i^2=10\\left(\\sigma_u^2+\\bar u^2\\right)=10(4+9)=130$.",
+  "The wrong observation $40$ gave $u=\\dfrac{40-50}{2}=-5$; the correct value $60$ gives $u=5$.",
+  "Corrected sums: $\\sum u=-30-(-5)+5=-20$, $\\sum u^2=130-25+25=130$ (the square does not change).",
+  "Corrected mean of $u$: $-2$; corrected variance of $u$: $\\dfrac{130}{10}-(-2)^2=9$.",
+  "Since $x_i=2u_i+50$, the variance of $x$ is $2^2\\cdot9=36$ (the origin $50$ does not affect it).",
+  "(The correct mean of $x$ is $50+2(-2)=46$, and the recorded variance of $x$ was $16$.)",
+  "",
+  "Final Answer: 36"
+ ],
+ "originality_note": "New: the error correction is done on the coded scale, where the wrong and correct values have equal squares (u = -5 and 5), so only the mean shifts and the variance changes through the mean alone (way 4: hidden symmetry). Closest known: 'correct the mean and variance after a misread observation'. Different because: the data are coded, so the student must move between scales, and the unchanged sum of squares is a trap for those who expect the variance to stay the same.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Correcting the sums on the coded scale and converting the variance back with the factor 4.",
+ "justification": "Three ideas chained (coding, correction of both sums, rescaling) in numerical format with a trap. Above 2026-P2-Q12 (L2) by one stage; Level 3.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Effect of change of origin and scale on mean and variance": "x = 2u + 50 gives variance of x = 4 times variance of u, and the wrong/correct values are coded as -5 and 5.",
+  "Standard deviation and variance of ungrouped data": "Sum of u^2 = n(sigma^2 + mean^2) and the variance from the corrected sums.",
+  "Correcting mean and variance after a wrong or omitted observation": "Removing u = -5 and adding u = 5 in both sums."
+ },
+ "blueprint_concepts": [
+  "Effect of change of origin and scale on mean and variance",
+  "Standard deviation and variance of ungrouped data",
+  "Correcting mean and variance after a wrong or omitted observation"
+ ]
+}

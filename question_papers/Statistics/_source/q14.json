@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Six observations $a,ar,ar^2,ar^3,ar^4,ar^5$, where $a>0$ and $r$ is a positive real number with $r\\neq1$, are in geometric progression. The arithmetic mean of all six observations is $\\dfrac45$ times the arithmetic mean of the three observations $a,ar^2,ar^4$. Then the value of $r$ is ______."
+ ],
+ "hindi": [
+  "छः प्रेक्षण $a,ar,ar^2,ar^3,ar^4,ar^5$, जहाँ $a>0$ तथा $r$ एक धनात्मक वास्तविक संख्या है और $r\\neq1$, गुणोत्तर श्रेढ़ी में हैं। सभी छः प्रेक्षणों का समान्तर माध्य, तीन प्रेक्षणों $a,ar^2,ar^4$ के समान्तर माध्य का $\\dfrac45$ गुना है। तब $r$ का मान ______ है।"
+ ],
+ "solution": [
+  "Sum of six terms $=a\\dfrac{r^6-1}{r-1}=a(1+r)(1+r^2+r^4)$, since $r^6-1=(r^2-1)(r^4+r^2+1)$",
+  "$\\dfrac{a(1+r)(1+r^2+r^4)}{6}=\\dfrac45\\cdot\\dfrac{a(1+r^2+r^4)}{3}$",
+  "$1+r^2+r^4>0\\Rightarrow\\dfrac{1+r}{6}=\\dfrac{4}{15}\\Rightarrow r=\\dfrac35=0.6$",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "solution_full": [
+  "Sum of the GP: $S_6=a\\dfrac{r^6-1}{r-1}$ for $r\\ne1$.",
+  "Factorise: $r^6-1=(r^2-1)(r^4+r^2+1)=(r-1)(r+1)(r^4+r^2+1)$, so $S_6=a(1+r)(1+r^2+r^4)$.",
+  "Mean of all six: $\\dfrac{a(1+r)(1+r^2+r^4)}{6}$. Mean of $a,ar^2,ar^4$: $\\dfrac{a(1+r^2+r^4)}{3}$.",
+  "Condition: $\\dfrac{a(1+r)(1+r^2+r^4)}{6}=\\dfrac45\\cdot\\dfrac{a(1+r^2+r^4)}{3}$.",
+  "Divide by $a(1+r^2+r^4)>0$: $\\dfrac{1+r}{6}=\\dfrac{4}{15}$, so $1+r=\\dfrac85$ and $r=\\dfrac35$.",
+  "Check with $a=1$: the six terms sum to $\\dfrac{1-0.6^6}{0.4}=2.38336$, mean $0.397227$; the odd-position terms $1,0.36,0.1296$ have mean $0.496533$, and $0.8\\times0.496533=0.397227$.",
+  "",
+  "Final Answer: 0.6"
+ ],
+ "originality_note": "New: the mean of a six-term GP compared with the mean of its alternate terms; the GP sum splits as (1 + r)(1 + r^2 + r^4), so the ratio of the means is (1 + r)/2 (way 4: a hidden factorisation makes the condition linear). Closest known: 'ratio of the sum of first three to first six terms of a GP'. Different because: the alternate terms form their own GP with ratio r^2 and the comparison is between means of different sizes. (First design, five-term GP with given mean and mean of reciprocals, was found online and replaced.)",
+ "web_check": "found: redesigned",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Stated r > 0 and r != 1 so that the GP sum formula applies and the answer is unique. Changed: replaced the first design after the web check.",
+ "level": 2,
+ "key_step": "Factorising r^6 - 1 so that the GP sum is (1 + r) times the sum of the alternate terms.",
+ "justification": "Routine GP sum work with one factorisation; numerical format. Comparable to the L2 statistics anchor 2026-P2-Q12 and easier than the L4 sequence anchors.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Arithmetic mean of ungrouped data": "The two means are sums divided by 6 and by 3.",
+  "Geometric Progression (GP) & Sum of GP": "S6 = a(r^6 - 1)/(r - 1) and the sum of the alternate terms a(1 + r^2 + r^4)."
+ },
+ "blueprint_concepts": [
+  "Arithmetic mean of ungrouped data",
+  "Geometric Progression (GP) & Sum of GP"
+ ]
+}

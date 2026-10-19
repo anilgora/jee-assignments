@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "Two groups of observations have the same coefficient of variation $20\\%$. The first group has $30$ observations with mean $40$, and the second group has $20$ observations with mean $60$. Then the coefficient of variation, in per cent, of all $50$ observations taken together is",
+  "",
+  "(A) $\\dfrac{25\\sqrt6}{3}$",
+  "(B) $\\dfrac{50}{\\sqrt3}$",
+  "(C) $20$",
+  "(D) $\\dfrac{100}{3}$"
+ ],
+ "hindi": [
+  "प्रेक्षणों के दो समूहों का विचरण गुणांक समान, $20\\%$, है। पहले समूह में $30$ प्रेक्षण हैं जिनका माध्य $40$ है, तथा दूसरे समूह में $20$ प्रेक्षण हैं जिनका माध्य $60$ है। तब सभी $50$ प्रेक्षणों को साथ लेने पर विचरण गुणांक (प्रतिशत में) है",
+  "",
+  "(A) $\\dfrac{25\\sqrt6}{3}$",
+  "(B) $\\dfrac{50}{\\sqrt3}$",
+  "(C) $20$",
+  "(D) $\\dfrac{100}{3}$"
+ ],
+ "solution": [
+  "CV $20\\%$: $\\sigma_1=0.2\\cdot40=8$, $\\sigma_2=0.2\\cdot60=12$",
+  "Combined mean $=\\dfrac{1200+1200}{50}=48$",
+  "Combined variance $=\\dfrac{30\\cdot64+20\\cdot144}{50}+\\dfrac{30\\cdot20}{50^2}(60-40)^2=96+96=192$, $\\sigma=8\\sqrt3$",
+  "CV $=\\dfrac{8\\sqrt3}{48}\\cdot100=\\dfrac{50}{\\sqrt3}$ ($\\approx28.9$; dropping the between-group term would give (A))",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "CV $=\\dfrac{\\sigma}{\\bar x}\\times100$. With CV $=20$: $\\sigma_1=8$ and $\\sigma_2=12$.",
+  "Combined mean: $\\bar x=\\dfrac{30\\cdot40+20\\cdot60}{50}=48$.",
+  "Combined variance: $\\sigma^2=\\dfrac{n_1(\\sigma_1^2+(\\bar x_1-\\bar x)^2)+n_2(\\sigma_2^2+(\\bar x_2-\\bar x)^2)}{n_1+n_2}=\\dfrac{30(64+64)+20(144+144)}{50}=\\dfrac{3840+5760}{50}=192$.",
+  "So $\\sigma=\\sqrt{192}=8\\sqrt3$.",
+  "Combined CV $=\\dfrac{8\\sqrt3}{48}\\times100=\\dfrac{50}{\\sqrt3}\\approx28.87$.",
+  "So pooling two equally consistent groups with different means gives a less consistent whole; the within-group part alone gives $\\sqrt{96}/48\\times100=\\dfrac{25\\sqrt6}{3}$, and averaging the CVs gives $20$, both wrong.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: two groups equally consistent by CV are pooled, and the pooled CV rises because of the between-group variance; the numbers make the within and between parts equal (96 + 96) (way 4: hidden structure making the computation clean). Closest known: 'which of two groups is more consistent'. Different because: the CVs are equal and the question is about the pooled group, so the combined-variance formula is essential.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 3,
+ "key_step": "Recovering the SDs from the CVs and including the between-group term in the pooled variance.",
+ "justification": "Three formulae chained with a conceptual trap (CV does not average, the between-group term matters) and options built on the traps. Above the routine 2026-P2-Q12 (L2); a two-idea link at Level 3.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Combined mean of two or more series": "The pooled mean 48.",
+  "Variance of a combination of two series": "The pooled variance 96 + 96 = 192 including the between-group term.",
+  "Coefficient of variation and comparison of consistency": "The group SDs come from CV = 20, and the answer is the pooled CV 50/sqrt3."
+ },
+ "blueprint_concepts": [
+  "Combined mean of two or more series",
+  "Variance of a combination of two series",
+  "Coefficient of variation and comparison of consistency"
+ ]
+}

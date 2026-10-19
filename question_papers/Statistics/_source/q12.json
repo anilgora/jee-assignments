@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "english": [
+  "Consider the $n$ observations $3,7,11,\\ldots,4n-1$, which are in arithmetic progression. When one more observation, equal to the arithmetic mean of these $n$ observations, is included, the variance of the $n+1$ observations is $120$. Then the largest of the original $n$ observations is",
+  "",
+  "(A) $35$",
+  "(B) $43$",
+  "(C) $41$",
+  "(D) $39$"
+ ],
+ "hindi": [
+  "समान्तर श्रेढ़ी में स्थित $n$ प्रेक्षणों $3,7,11,\\ldots,4n-1$ पर विचार कीजिए। जब इन $n$ प्रेक्षणों के समान्तर माध्य के बराबर एक और प्रेक्षण सम्मिलित किया जाता है, तब $n+1$ प्रेक्षणों का प्रसरण $120$ है। तब मूल $n$ प्रेक्षणों में सबसे बड़ा प्रेक्षण है",
+  "",
+  "(A) $35$",
+  "(B) $43$",
+  "(C) $41$",
+  "(D) $39$"
+ ],
+ "solution": [
+  "Variance of an AP with common difference $d$: $\\dfrac{d^2(n^2-1)}{12}=\\dfrac{4(n^2-1)}{3}$",
+  "Adding the mean keeps $\\sum(x_i-\\bar x)^2$ and the mean, so the new variance $=\\dfrac{n}{n+1}\\cdot\\dfrac{4(n^2-1)}{3}=\\dfrac{4n(n-1)}{3}$",
+  "$\\dfrac{4n(n-1)}{3}=120\\Rightarrow n^2-n-90=0\\Rightarrow n=10$",
+  "Largest observation $=4n-1=39$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "For $n$ terms of an AP with common difference $d$, the variance is $\\dfrac{d^2(n^2-1)}{12}$; here $d=4$, so $\\sigma^2=\\dfrac{4(n^2-1)}{3}$.",
+  "Hence $\\sum_{i=1}^n(x_i-\\bar x)^2=n\\sigma^2=\\dfrac{4n(n^2-1)}{3}$.",
+  "The extra observation equals $\\bar x$, so the mean of the $n+1$ observations is still $\\bar x$, and the extra deviation is $0$.",
+  "New variance $=\\dfrac{1}{n+1}\\cdot\\dfrac{4n(n^2-1)}{3}=\\dfrac{4n(n-1)}{3}$.",
+  "$\\dfrac{4n(n-1)}{3}=120\\Rightarrow n^2-n-90=0\\Rightarrow(n-10)(n+9)=0\\Rightarrow n=10$.",
+  "Check: the AP $3,7,\\ldots,39$ has mean $21$ and variance $132$; with $21$ added the variance is $\\dfrac{10\\cdot132}{11}=120$.",
+  "The largest original observation is $4\\cdot10-1=39$.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: an AP data set is enlarged by its own mean, which scales the variance by n/(n+1), so the AP variance formula leads to a quadratic in n (way 5: AP variance formula and the definition of variance of ungrouped data). Closest known: 'variance of an AP with n terms'. Different because: the variance given is that of the enlarged set; the plain formula gives n^2 = 91, which has no integer root.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Seeing that adding an observation equal to the mean multiplies the variance by n/(n+1).",
+ "justification": "A short routine chain: AP variance formula, the effect of adding the mean, a quadratic. Comparable to 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Mean and variance of the first n natural numbers or of an AP": "The variance d^2 (n^2 - 1)/12 of the AP with d = 4.",
+  "Standard deviation and variance of ungrouped data": "The definition as the mean of squared deviations shows that adding the mean multiplies the variance by n/(n+1)."
+ },
+ "blueprint_concepts": [
+  "Mean and variance of the first n natural numbers or of an AP",
+  "Standard deviation and variance of ungrouped data"
+ ]
+}

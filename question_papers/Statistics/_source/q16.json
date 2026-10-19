@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "english": [
+  "A continuous frequency distribution has the following classes and frequencies.",
+  "$$\\begin{array}{c|ccccc}\\text{Class}&[0,10)&[10,20)&[20,30)&[30,40)&[40,50)\\\\\\hline\\text{Frequency}&1&4&6&4&1\\end{array}$$",
+  "Let $k$ be a real number with $k<10$. The variance of the five observations $10,20,30,40,k$ is five times the variance of the above distribution, computed with the class marks. Then the value of $k$ is ______."
+ ],
+ "hindi": [
+  "एक सतत बारंबारता बंटन के वर्ग तथा बारंबारताएँ निम्न हैं।",
+  "$$\\begin{array}{c|ccccc}\\text{Class}&[0,10)&[10,20)&[20,30)&[30,40)&[40,50)\\\\\\hline\\text{Frequency}&1&4&6&4&1\\end{array}$$",
+  "माना $k$ एक वास्तविक संख्या है जहाँ $k<10$ है। पाँच प्रेक्षणों $10,20,30,40,k$ का प्रसरण, वर्ग चिह्नों से परिकलित उपरोक्त बंटन के प्रसरण का पाँच गुना है। तब $k$ का मान ______ है।"
+ ],
+ "solution": [
+  "Distribution: $u=\\dfrac{m-25}{10}=-2,\\ldots,2$; $\\bar u=0$, $\\sigma_u^2=\\dfrac{4+4+0+4+4}{16}=1\\Rightarrow\\sigma^2=100$",
+  "Five observations: mean $\\dfrac{100+k}{5}$, $\\sigma^2=\\dfrac{3000+k^2}{5}-\\left(\\dfrac{100+k}{5}\\right)^2=\\dfrac{4k^2-200k+5000}{25}$",
+  "$\\dfrac{4k^2-200k+5000}{25}=500\\Rightarrow k^2-50k-1875=0\\Rightarrow(k+25)(k-75)=0$",
+  "$k<10\\Rightarrow k=-25$",
+  "",
+  "Final Answer: -25"
+ ],
+ "solution_full": [
+  "For the distribution, the class marks are $5,15,25,35,45$. With $u=\\dfrac{m-25}{10}$: $u=-2,-1,0,1,2$, frequencies $1,4,6,4,1$, $N=16$.",
+  "$\\sum fu=0$ and $\\sum fu^2=4+4+0+4+4=16$, so $\\sigma_u^2=1$ and $\\sigma^2=10^2\\cdot1=100$.",
+  "For $10,20,30,40,k$: $\\sum x=100+k$, $\\sum x^2=3000+k^2$.",
+  "$\\sigma^2=\\dfrac{3000+k^2}{5}-\\dfrac{(100+k)^2}{25}=\\dfrac{15000+5k^2-10000-200k-k^2}{25}=\\dfrac{4k^2-200k+5000}{25}$.",
+  "Setting this equal to $5\\times100=500$: $4k^2-200k+5000=12500\\Rightarrow k^2-50k-1875=0$.",
+  "$k=\\dfrac{50\\pm\\sqrt{2500+7500}}{2}=\\dfrac{50\\pm100}{2}$, so $k=75$ or $k=-25$.",
+  "Since $k<10$, $k=-25$. Check: $10,20,30,40,-25$ have mean $15$ and $\\sum(x-15)^2=25+25+225+625+1600=2500$, variance $500$.",
+  "",
+  "Final Answer: -25"
+ ],
+ "originality_note": "New: an ungrouped set with one free observation is tied to a grouped distribution through a variance ratio; the quadratic has two roots symmetric about the mean of the other four, and an order condition picks the negative one (way 3: object fixed by two conditions). Closest known: 'find the missing observation given the variance'. Different because: the target variance comes from a separate grouped table and the root is selected by a side condition.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Added k < 10 to make the answer unique (the other root is 75). Changed: added the condition.",
+ "level": 2,
+ "key_step": "Step deviations for the grouped variance, then a quadratic for k with the root chosen by k < 10.",
+ "justification": "Two routine variance computations and a quadratic; no insight. Comparable to 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Standard deviation and variance of ungrouped data": "Variance of 10, 20, 30, 40, k as (4k^2 - 200k + 5000)/25.",
+  "Standard deviation and variance of a continuous frequency distribution": "Step-deviation variance of the grouped table, 100."
+ },
+ "blueprint_concepts": [
+  "Standard deviation and variance of ungrouped data",
+  "Standard deviation and variance of a continuous frequency distribution"
+ ]
+}

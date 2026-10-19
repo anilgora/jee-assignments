@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "chapter": "Statistics",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $a_1,a_2,a_3,\\ldots$ be an arithmetic progression. The arithmetic mean of the ten observations $a_1,a_2,\\ldots,a_{10}$ is $23$, and the arithmetic mean of the twenty observations $a_1,a_2,\\ldots,a_{20}$ is $43$. Then the arithmetic mean of the twenty observations $a_{11},a_{12},\\ldots,a_{30}$ is",
+  "",
+  "(A) $83$",
+  "(B) $63$",
+  "(C) $73$",
+  "(D) $93$"
+ ],
+ "hindi": [
+  "माना $a_1,a_2,a_3,\\ldots$ एक समान्तर श्रेढ़ी है। दस प्रेक्षणों $a_1,a_2,\\ldots,a_{10}$ का समान्तर माध्य $23$ है तथा बीस प्रेक्षणों $a_1,a_2,\\ldots,a_{20}$ का समान्तर माध्य $43$ है। तब बीस प्रेक्षणों $a_{11},a_{12},\\ldots,a_{30}$ का समान्तर माध्य है",
+  "",
+  "(A) $83$",
+  "(B) $63$",
+  "(C) $73$",
+  "(D) $93$"
+ ],
+ "solution": [
+  "Mean of $n$ consecutive AP terms $=$ average of first and last: mean of $a_1,\\ldots,a_n=a+\\dfrac{(n-1)d}{2}$",
+  "$a+\\dfrac92d=23,\\ a+\\dfrac{19}{2}d=43\\Rightarrow 5d=20\\Rightarrow d=4,\\ a=5$",
+  "Mean of $a_{11},\\ldots,a_{30}=\\dfrac{a_{11}+a_{30}}{2}=\\dfrac{45+121}{2}=83$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Let the first term be $a$ and the common difference $d$.",
+  "The sum of the first $n$ terms is $S_n=\\dfrac n2\\left(2a+(n-1)d\\right)$, so the mean of $a_1,\\ldots,a_n$ is $\\dfrac{S_n}{n}=a+\\dfrac{(n-1)d}{2}$.",
+  "$n=10$: $a+\\dfrac{9d}{2}=23$. $n=20$: $a+\\dfrac{19d}{2}=43$.",
+  "Subtracting: $5d=20$, so $d=4$ and $a=23-18=5$.",
+  "$a_{11}=5+40=45$ and $a_{30}=5+116=121$. The mean of the consecutive terms $a_{11},\\ldots,a_{30}$ is the mean of the first and last of them: $\\dfrac{45+121}{2}=83$.",
+  "Check: $S_{30}=15(10+116)=1890$, $S_{10}=230$, and $\\dfrac{1890-230}{20}=83$. (The mean of $a_{11},\\ldots,a_{20}$ alone is $63$, option (B).)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: two running means of an AP fix the progression, and the mean of a block that overlaps the known data only in part is asked (way 5: AP sums and the arithmetic mean). Closest known: 'the mean of the first n terms of an AP'. Different because: the block a11..a30 extends beyond the data given, so the student must recover a and d first.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every observation, class, symbol and condition is introduced before use, the class-boundary convention is explicit where it matters, each sentence has one reading; the answer was recomputed independently in Python (exact fractions / sympy), is unique and equals the Answer Plan. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing each mean as a + (n-1)d/2, solving for a and d, and averaging the end terms of the new block.",
+ "justification": "A routine chain of AP sum formulae with one trap (the block mean 63 versus 83). Comparable to the routine statistics recovery of 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Arithmetic mean of ungrouped data": "Mean = sum / number of observations for the blocks a1..a10, a1..a20 and a11..a30.",
+  "Arithmetic Progression (AP) & Sum of AP": "S_n = n/2 (2a + (n-1)d) gives the two equations and the mean of the block."
+ },
+ "blueprint_concepts": [
+  "Arithmetic mean of ungrouped data",
+  "Arithmetic Progression (AP) & Sum of AP"
+ ]
+}
