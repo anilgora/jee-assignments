@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Limit",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "For a real number $t$, let $\\{t\\}=t-[t]$, where $[t]$ denotes the greatest integer less than or equal to $t$. Then the value of $\\displaystyle\\lim_{n\\to\\infty}n\\left(1-\\left\\{\\sqrt{n^{2}+40n}\\right\\}\\right)$, where $n$ takes natural number values, is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $t$ के लिए माना कि $\\{t\\}=t-[t]$ है, जहाँ $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। तब $\\displaystyle\\lim_{n\\to\\infty}n\\left(1-\\left\\{\\sqrt{n^{2}+40n}\\right\\}\\right)$ का मान, जहाँ $n$ प्राकृत संख्या मान लेता है, ______ है।"
+ ],
+ "solution": [
+  "$n^{2}+40n=(n+20)^{2}-400$, so $n+19<\\sqrt{n^{2}+40n}<n+20$ for $n>\\dfrac{361}{2}$; hence $[\\sqrt{n^{2}+40n}]=n+19$",
+  "$1-\\{\\sqrt{n^{2}+40n}\\}=n+20-\\sqrt{n^{2}+40n}=\\dfrac{400}{n+20+\\sqrt{n^{2}+40n}}$",
+  "$n(1-\\{\\cdot\\})=\\dfrac{400n}{n+20+\\sqrt{n^{2}+40n}}\\to\\dfrac{400}{2}=200$",
+  "(The fractional part tends to $1$, not to $\\{20\\}=0$, because the root approaches $n+20$ from below.)",
+  "",
+  "Final Answer: 200"
+ ],
+ "solution_full": [
+  "Since $n^{2}+40n=(n+20)^{2}-400<(n+20)^{2}$, we have $\\sqrt{n^{2}+40n}<n+20$.",
+  "Also $(n+19)^{2}=n^{2}+38n+361<n^{2}+40n$ exactly when $2n>361$, i.e. $n\\ge181$. So for $n\\ge181$, $n+19<\\sqrt{n^{2}+40n}<n+20$ and $[\\sqrt{n^{2}+40n}]=n+19$.",
+  "Then $\\{\\sqrt{n^{2}+40n}\\}=\\sqrt{n^{2}+40n}-(n+19)$, and $1-\\{\\sqrt{n^{2}+40n}\\}=n+20-\\sqrt{n^{2}+40n}$.",
+  "Rationalising: $n+20-\\sqrt{n^{2}+40n}=\\dfrac{(n+20)^{2}-(n^{2}+40n)}{n+20+\\sqrt{n^{2}+40n}}=\\dfrac{400}{n+20+\\sqrt{n^{2}+40n}}$.",
+  "Hence $n\\left(1-\\{\\sqrt{n^{2}+40n}\\}\\right)=\\dfrac{400}{1+\\frac{20}{n}+\\sqrt{1+\\frac{40}{n}}}\\to\\dfrac{400}{2}=200$.",
+  "Note the trap: $\\sqrt{n^{2}+40n}\\approx n+20$ suggests a fractional part near $0$, but the root is always just below $n+20$, so the fractional part tends to $1$.",
+  "",
+  "Final Answer: 200"
+ ],
+ "originality_note": "New: the square root approaches the integer n + 20 from below, so its fractional part tends to 1 rather than 0, and the rate of approach (400/(2n)) is what is asked (way 4). Closest known: lim {sqrt(n^2 + n)} = 1/2. Different because: with an even coefficient the limit of the fractional part sits at the jump of the fractional-part function, and the second-order term becomes the answer.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Evaluation of limit involving GIF and fractional part"
+ ],
+ "concept_use": {
+  "Evaluation of limit involving GIF and fractional part": "[sqrt(n^2+40n)] = n + 19 for n >= 181 is needed to rewrite 1 - {.} as n + 20 - sqrt(n^2+40n)."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that {t} and [t] are defined, that n ranges over natural numbers (stated), that the floor value holds for n >= 181 so the limit is unaffected, and 200 is a positive 3-digit integer (mpmath at n = 10^9 gives 199.999996). Changed: No change.",
+ "level": 2,
+ "key_step": "Showing the floor is n + 19 (the root is just below n + 20) and rationalising.",
+ "justification": "One GIF observation plus a standard rationalisation, numerical format; the 'tends to 1, not 0' trap adds a step. L2, comparable to 2025-P2-Q1 (L2).",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

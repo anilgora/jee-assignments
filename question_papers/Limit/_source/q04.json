@@ -1,0 +1,54 @@
+{
+ "type": "SCQ",
+ "chapter": "Limit",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "english": [
+  "For $n\\in\\mathbb{N}$, let $a_{n}=\\dfrac{1}{4}\\cdot\\dfrac{\\binom{2n+2}{n+1}}{\\binom{2n}{n}}$. Then $\\displaystyle\\lim_{n\\to\\infty}\\left(a_{n}\\right)^{n}$ is equal to",
+  "",
+  "(A) $e^{-1}$",
+  "(B) $e^{1/2}$",
+  "(C) $1$",
+  "(D) $e^{-1/2}$"
+ ],
+ "hindi": [
+  "$n\\in\\mathbb{N}$ के लिए माना कि $a_{n}=\\dfrac{1}{4}\\cdot\\dfrac{\\binom{2n+2}{n+1}}{\\binom{2n}{n}}$ है। तब $\\displaystyle\\lim_{n\\to\\infty}\\left(a_{n}\\right)^{n}$ बराबर है",
+  "",
+  "(A) $e^{-1}$",
+  "(B) $e^{1/2}$",
+  "(C) $1$",
+  "(D) $e^{-1/2}$"
+ ],
+ "solution": [
+  "$\\dfrac{\\binom{2n+2}{n+1}}{\\binom{2n}{n}}=\\dfrac{(2n+2)(2n+1)}{(n+1)^{2}}=\\dfrac{2(2n+1)}{n+1}$, so $a_{n}=\\dfrac{2n+1}{2n+2}\\to1$: form $1^{\\infty}$",
+  "$\\displaystyle\\lim(a_{n})^{n}=e^{L}$, $L=\\lim n(a_{n}-1)=\\lim\\dfrac{-n}{2n+2}=-\\dfrac12$",
+  "Limit $=e^{-1/2}$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "$\\binom{2n+2}{n+1}=\\dfrac{(2n+2)!}{(n+1)!\\,(n+1)!}=\\dfrac{(2n+2)(2n+1)}{(n+1)(n+1)}\\cdot\\dfrac{(2n)!}{n!\\,n!}$, so the ratio is $\\dfrac{(2n+2)(2n+1)}{(n+1)^{2}}=\\dfrac{2(2n+1)}{n+1}$.",
+  "Hence $a_{n}=\\dfrac{1}{4}\\cdot\\dfrac{2(2n+1)}{n+1}=\\dfrac{2n+1}{2n+2}=1-\\dfrac{1}{2n+2}$, which tends to $1$, while the exponent $n\\to\\infty$: the form is $1^{\\infty}$.",
+  "For $a_{n}\\to1$ and $b_{n}\\to\\infty$, $\\lim a_{n}^{\\,b_{n}}=e^{\\lim b_{n}(a_{n}-1)}$ (from $\\ln a_{n}\\sim a_{n}-1$).",
+  "Here $b_{n}(a_{n}-1)=n\\left(-\\dfrac{1}{2n+2}\\right)=-\\dfrac{n}{2n+2}\\to-\\dfrac{1}{2}$.",
+  "Therefore $\\displaystyle\\lim_{n\\to\\infty}(a_{n})^{n}=e^{-1/2}$. (Answering $1$ treats $1^{\\infty}$ as $1$; dropping the factor $2$ in $2n+2$ gives $e^{-1}$.)",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: the base of the 1^infinity form is the ratio of consecutive central binomial coefficients scaled by 4, which simplifies to (2n+1)/(2n+2) (way 5). Closest known: lim (1 + a/n)^n and lim ((n+a)/(n+b))^n. Different because: the base must first be produced from a binomial-coefficient ratio before the 1^infinity rule applies.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "one raise to infinity form"
+ ],
+ "concept_use": {
+  "one raise to infinity form": "a_n -> 1 with exponent n; the limit is e^{lim n(a_n - 1)} = e^{-1/2}."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that a_n is defined for all n, that a_n -> 1 so the form is 1^infinity, and that only (D) equals e^{-1/2} (mpmath at n = 10^8 gives 0.60653). Changed: No change.",
+ "level": 2,
+ "key_step": "Simplifying the binomial ratio to (2n+1)/(2n+2) and applying the 1^infinity rule.",
+ "justification": "A binomial-coefficient simplification followed by the standard 1^infinity formula: two routine steps chained, so one above the single-move anchor 2024-P2-Q3 (L1, 1^infinity).",
+ "nearest_anchor": "2024-P2-Q3 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

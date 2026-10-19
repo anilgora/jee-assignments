@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Limit",
+ "target_level": 3,
+ "answer_plan": "Option A",
+ "english": [
+  "For $n\\in\\mathbb{N}$, let $S_{n}=\\displaystyle\\sum_{k=1}^{n}\\dfrac{n}{n^{2}+k}$. Then $\\displaystyle\\lim_{n\\to\\infty}n\\left(S_{n}-1\\right)$ is equal to",
+  "",
+  "(A) $-\\dfrac{1}{2}$",
+  "(B) $\\dfrac{1}{2}$",
+  "(C) $0$",
+  "(D) $-1$"
+ ],
+ "hindi": [
+  "$n\\in\\mathbb{N}$ के लिए माना कि $S_{n}=\\displaystyle\\sum_{k=1}^{n}\\dfrac{n}{n^{2}+k}$ है। तब $\\displaystyle\\lim_{n\\to\\infty}n\\left(S_{n}-1\\right)$ बराबर है",
+  "",
+  "(A) $-\\dfrac{1}{2}$",
+  "(B) $\\dfrac{1}{2}$",
+  "(C) $0$",
+  "(D) $-1$"
+ ],
+ "solution": [
+  "$S_{n}\\to1$ only gives $0\\cdot\\infty$; write each term minus $\\dfrac1n$: $\\dfrac{n}{n^{2}+k}-\\dfrac{1}{n}=-\\dfrac{k}{n(n^{2}+k)}$",
+  "So $n(S_{n}-1)=-T_{n}$, $T_{n}=\\displaystyle\\sum_{k=1}^{n}\\dfrac{k}{n^{2}+k}$",
+  "Sandwich: $n^{2}+1\\le n^{2}+k\\le n^{2}+n\\Rightarrow\\dfrac{n(n+1)/2}{n^{2}+n}\\le T_{n}\\le\\dfrac{n(n+1)/2}{n^{2}+1}$",
+  "Both bounds are rational in $n$ with equal leading terms $\\dfrac{n^{2}/2}{n^{2}}$, so both $\\to\\dfrac12$; hence $T_{n}\\to\\dfrac12$",
+  "Limit $=-\\dfrac{1}{2}$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "First, $\\dfrac{n}{n^{2}+n}\\le\\dfrac{n}{n^{2}+k}\\le\\dfrac{n}{n^{2}+1}$, so $\\dfrac{n^{2}}{n^{2}+n}\\le S_{n}\\le\\dfrac{n^{2}}{n^{2}+1}$ and $S_{n}\\to1$. This makes $n(S_{n}-1)$ a $0\\cdot\\infty$ form, so the first-order bound is not enough.",
+  "Subtract $\\dfrac{1}{n}$ from each of the $n$ terms: $S_{n}-1=\\displaystyle\\sum_{k=1}^{n}\\left(\\dfrac{n}{n^{2}+k}-\\dfrac{1}{n}\\right)=\\sum_{k=1}^{n}\\dfrac{n^{2}-(n^{2}+k)}{n(n^{2}+k)}=-\\sum_{k=1}^{n}\\dfrac{k}{n(n^{2}+k)}$.",
+  "Hence $n(S_{n}-1)=-T_{n}$ with $T_{n}=\\displaystyle\\sum_{k=1}^{n}\\dfrac{k}{n^{2}+k}$.",
+  "For $1\\le k\\le n$, $n^{2}+1\\le n^{2}+k\\le n^{2}+n$, so $\\dfrac{k}{n^{2}+n}\\le\\dfrac{k}{n^{2}+k}\\le\\dfrac{k}{n^{2}+1}$. Summing with $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$:",
+  "$$\\dfrac{n(n+1)}{2(n^{2}+n)}\\le T_{n}\\le\\dfrac{n(n+1)}{2(n^{2}+1)}$$",
+  "The left bound equals $\\dfrac{1}{2}$. The right bound is a rational function whose numerator and denominator both have leading term $n^{2}$, giving $\\dfrac{n^{2}}{2n^{2}}\\to\\dfrac{1}{2}$.",
+  "By the sandwich theorem $T_{n}\\to\\dfrac{1}{2}$, so $\\displaystyle\\lim_{n\\to\\infty}n(S_{n}-1)=-\\dfrac{1}{2}$. (Stopping at $S_{n}\\to1$ suggests $0$; losing the sign gives $\\dfrac{1}{2}$.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the first-order sandwich only gives S_n -> 1; the next-order term n(S_n - 1) is turned into a second sum that is itself squeezed (way 4, two orders). Closest known: lim sum n/(n^2+k) = 1 and lim sum k/(n^2+k) = 1/2. Different because: the question asks for the rate of convergence of the first sum, which needs the subtraction step before the standard sandwich.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Sandwich Theorem",
+  "Limits at infinity; dominant term and rational function behaviour"
+ ],
+ "concept_use": {
+  "Sandwich Theorem": "T_n is squeezed between n(n+1)/(2(n^2+n)) and n(n+1)/(2(n^2+1)), both tending to 1/2.",
+  "Limits at infinity; dominant term and rational function behaviour": "The bounds are rational functions of n whose limits come from the leading n^2 terms; also used for S_n -> 1."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that S_n is a finite sum (no ambiguity in k range), that the question is not answerable from S_n -> 1 alone, and that only (A) equals -1/2 (direct sums at n = 10^4, 10^5 give -0.50002, -0.500002). Changed: No change.",
+ "level": 3,
+ "key_step": "Rewriting n(S_n - 1) as -sum k/(n^2+k) and squeezing that sum.",
+ "justification": "Two ideas linked: a subtraction that exposes the second-order term, then a sandwich with rational bounds. A strong student may stop at S_n -> 1. Same family as the sandwich anchor 2023-P1-Q4 (L4) but with an easier squeeze, so L3.",
+ "nearest_anchor": "2023-P1-Q4 (L4)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

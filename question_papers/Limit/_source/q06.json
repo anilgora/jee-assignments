@@ -1,0 +1,55 @@
+{
+ "type": "SCQ",
+ "chapter": "Limit",
+ "target_level": 2,
+ "answer_plan": "Option B",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(y)=\\dfrac{1-\\cos y}{y^{2}}$ for $y\\neq0$ and $f(0)=1$, and let $[t]$ denote the greatest integer less than or equal to $t$. Then $\\displaystyle\\lim_{x\\to0}\\Big(f\\big([\\cos x]\\big)+f(\\sin x)\\Big)$ is equal to",
+  "",
+  "(A) $1$",
+  "(B) $\\dfrac{3}{2}$",
+  "(C) $2$",
+  "(D) $\\dfrac{3}{2}-\\cos1$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $y\\neq0$ के लिए $f(y)=\\dfrac{1-\\cos y}{y^{2}}$ तथा $f(0)=1$ द्वारा परिभाषित है, तथा $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। तब $\\displaystyle\\lim_{x\\to0}\\Big(f\\big([\\cos x]\\big)+f(\\sin x)\\Big)$ बराबर है",
+  "",
+  "(A) $1$",
+  "(B) $\\dfrac{3}{2}$",
+  "(C) $2$",
+  "(D) $\\dfrac{3}{2}-\\cos1$"
+ ],
+ "solution": [
+  "For $0<|x|<\\dfrac{\\pi}{2}$: $0<\\cos x<1\\Rightarrow[\\cos x]=0$, so $f([\\cos x])=f(0)=1$ identically near $0$; first limit $=1$",
+  "(Not $\\displaystyle\\lim_{y\\to0}f(y)=\\dfrac12$: the inner function is constantly $0$, so the value $f(0)$ is used. Not $f([\\cos0])=f(1)$ either.)",
+  "$\\sin x\\to0$ with $\\sin x\\neq0$ for $0<|x|<\\pi$, so $f(\\sin x)\\to\\displaystyle\\lim_{y\\to0}\\dfrac{1-\\cos y}{y^{2}}=\\dfrac12$",
+  "Sum $=1+\\dfrac12=\\dfrac32$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "The two composite limits behave differently, and each must be justified separately.",
+  "First term. For $0<|x|<\\dfrac{\\pi}{2}$ we have $0<\\cos x<1$, hence $[\\cos x]=0$ and $f([\\cos x])=f(0)=1$. The function $x\\mapsto f([\\cos x])$ is constant ($=1$) on a punctured neighbourhood of $0$, so its limit is $1$.",
+  "The substitution 'inner limit, then outer limit' fails here in two ways: $[\\cos x]\\to0$ suggests $\\displaystyle\\lim_{y\\to0}f(y)=\\dfrac{1}{2}$, which is wrong because the inner function equals $0$ exactly; and $[\\cos 0]=1$ suggests $f(1)=1-\\cos1$, which ignores that the limit uses $x\\neq0$.",
+  "Second term. $\\sin x\\to0$ and $\\sin x\\neq0$ for $0<|x|<\\pi$, so $f(\\sin x)=\\dfrac{1-\\cos(\\sin x)}{\\sin^{2}x}$ near $0$, and with $y=\\sin x$ this tends to $\\displaystyle\\lim_{y\\to0}\\dfrac{1-\\cos y}{y^{2}}=\\lim_{y\\to0}\\dfrac{2\\sin^{2}(y/2)}{y^{2}}=\\dfrac{1}{2}$.",
+  "Hence the required limit is $1+\\dfrac{1}{2}=\\dfrac{3}{2}$. (Option (A) uses $\\dfrac{1}{2}$ for both terms; option (D) uses $f(1)$ for the first.)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: one outer function is composed with two inner functions that both tend to 0, but one ([cos x]) is identically 0 near x = 0 and the other (sin x) never equals 0 there, so the same outer f gives f(0) in one term and the limit of f in the other (way 5). Closest known: textbook warnings that lim f(g(x)) need not equal f(lim g(x)). Different because: both behaviours appear side by side with the same f, and a third trap (f([cos 0])) is built into the options.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Limits of composite functions and the substitution pitfall"
+ ],
+ "concept_use": {
+  "Limits of composite functions and the substitution pitfall": "f([cos x]) = f(0) = 1 near 0, not lim_{y->0} f(y) = 1/2, while f(sin x) -> 1/2 because sin x never equals 0 near 0."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked the GIF notation is defined, f is defined on all of R, [cos x] = 0 on 0 < |x| < pi/2, and only (B) equals 3/2 (numerically 1.5). Changed: the GIF definition, first placed after the stem, was moved into the opening sentence.",
+ "level": 2,
+ "key_step": "Seeing that [cos x] is identically 0 near 0, so the first term uses f(0), while sin x is never 0, so the second uses the limit of f.",
+ "justification": "A conceptual trap on composite limits with two routine evaluations; no heavy computation. Similar demand to 2025-P2-Q1 (L2); above the one-move L1 anchors because two different composite behaviours must be handled.",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

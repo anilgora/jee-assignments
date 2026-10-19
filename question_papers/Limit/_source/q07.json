@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Limit",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "english": [
+  "The value of $\\displaystyle\\lim_{x\\to1}\\dfrac{\\sqrt{x+3}+\\sqrt[3]{x+7}-4}{\\sqrt[3]{9-x}-2}$ is ______."
+ ],
+ "hindi": [
+  "$\\displaystyle\\lim_{x\\to1}\\dfrac{\\sqrt{x+3}+\\sqrt[3]{x+7}-4}{\\sqrt[3]{9-x}-2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Form $\\dfrac00$ at $x=1$. Split the numerator: $(\\sqrt{x+3}-2)+(\\sqrt[3]{x+7}-2)$",
+  "$\\sqrt{x+3}-2=\\dfrac{x-1}{\\sqrt{x+3}+2}$, $\\sqrt[3]{x+7}-2=\\dfrac{x-1}{(x+7)^{2/3}+2(x+7)^{1/3}+4}$",
+  "$\\sqrt[3]{9-x}-2=\\dfrac{(9-x)-8}{(9-x)^{2/3}+2(9-x)^{1/3}+4}=\\dfrac{-(x-1)}{(9-x)^{2/3}+2(9-x)^{1/3}+4}$",
+  "Cancel $x-1$ and put $x=1$: $\\dfrac{\\frac14+\\frac1{12}}{-\\frac1{12}}=\\dfrac{1/3}{-1/12}=-4$",
+  "",
+  "Final Answer: -4"
+ ],
+ "solution_full": [
+  "At $x=1$: numerator $\\sqrt4+\\sqrt[3]8-4=0$ and denominator $\\sqrt[3]8-2=0$, a $\\dfrac{0}{0}$ form.",
+  "Write the numerator as $(\\sqrt{x+3}-2)+(\\sqrt[3]{x+7}-2)$, each part vanishing at $x=1$.",
+  "Rationalise: $\\sqrt{x+3}-2=\\dfrac{(x+3)-4}{\\sqrt{x+3}+2}=\\dfrac{x-1}{\\sqrt{x+3}+2}$.",
+  "With $a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$, $a=\\sqrt[3]{x+7}$, $b=2$: $\\sqrt[3]{x+7}-2=\\dfrac{(x+7)-8}{(x+7)^{2/3}+2(x+7)^{1/3}+4}=\\dfrac{x-1}{(x+7)^{2/3}+2(x+7)^{1/3}+4}$.",
+  "Similarly $\\sqrt[3]{9-x}-2=\\dfrac{(9-x)-8}{(9-x)^{2/3}+2(9-x)^{1/3}+4}=\\dfrac{-(x-1)}{(9-x)^{2/3}+2(9-x)^{1/3}+4}$.",
+  "Cancelling $x-1$ $(x\\neq1)$ and letting $x\\to1$: the numerator factor tends to $\\dfrac{1}{4}+\\dfrac{1}{4+4+4}=\\dfrac{1}{4}+\\dfrac{1}{12}=\\dfrac{1}{3}$ and the denominator factor to $-\\dfrac{1}{12}$.",
+  "Hence the limit is $\\dfrac{1/3}{-1/12}=-4$.",
+  "",
+  "Final Answer: -4"
+ ],
+ "originality_note": "New: a numerator mixing a square root and a cube root that vanish together at x = 1 is divided by a cube root of the reflected argument 9 - x, so the limit is a ratio of two derivative-type pieces with a sign change (way 5). Closest known: single-radical rationalisation limits such as lim (sqrt(x+3) - 2)/(x - 1). Different because: two radicals of different orders must be rationalised separately and combined, against a decreasing cube-root denominator.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Evaluation of limit involving algebraic functions"
+ ],
+ "concept_use": {
+  "Evaluation of limit involving algebraic functions": "The 0/0 limit is resolved by rationalising the square root and the two cube roots (a^3 - b^3 factorisation) and cancelling x - 1."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked the expression is defined near x = 1 (x > -3), the form is 0/0, the answer -4 is a negative integer as planned (mpmath at x = 1 + 1e-15 gives -3.9999999). Changed: No change.",
+ "level": 2,
+ "key_step": "Splitting the numerator and rationalising each radical, including the cube roots via a^3 - b^3.",
+ "justification": "Three routine rationalisations combined, no insight; numerical format. Comparable to 2025-P2-Q1 (L2).",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

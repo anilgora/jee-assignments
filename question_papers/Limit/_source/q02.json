@@ -1,0 +1,58 @@
+{
+ "type": "SCQ",
+ "chapter": "Limit",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "english": [
+  "The value of $\\displaystyle\\lim_{x\\to\\pi/6}\\,(2\\cos2x-1)\\tan3x$ is",
+  "",
+  "(A) $\\dfrac{2}{\\sqrt{3}}$",
+  "(B) $\\dfrac{\\sqrt{3}}{2}$",
+  "(C) $-\\dfrac{2}{\\sqrt{3}}$",
+  "(D) $2$"
+ ],
+ "hindi": [
+  "$\\displaystyle\\lim_{x\\to\\pi/6}\\,(2\\cos2x-1)\\tan3x$ का मान है",
+  "",
+  "(A) $\\dfrac{2}{\\sqrt{3}}$",
+  "(B) $\\dfrac{\\sqrt{3}}{2}$",
+  "(C) $-\\dfrac{2}{\\sqrt{3}}$",
+  "(D) $2$"
+ ],
+ "solution": [
+  "Form $0\\cdot\\infty$: $2\\cos\\dfrac{\\pi}{3}-1=0$ and $3x\\to\\dfrac{\\pi}{2}$",
+  "$\\cos3x=4\\cos^{3}x-3\\cos x=\\cos x\\,(4\\cos^{2}x-3)=\\cos x\\,(2\\cos2x-1)$",
+  "So for $x$ near $\\dfrac{\\pi}{6}$, $x\\neq\\dfrac{\\pi}{6}$: $(2\\cos2x-1)\\tan3x=\\dfrac{\\cos3x}{\\cos x}\\cdot\\dfrac{\\sin3x}{\\cos3x}=\\dfrac{\\sin3x}{\\cos x}$",
+  "Limit $=\\dfrac{\\sin(\\pi/2)}{\\cos(\\pi/6)}=\\dfrac{2}{\\sqrt{3}}$ (same from both sides)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "At $x=\\dfrac{\\pi}{6}$, $2\\cos2x-1=2\\cdot\\dfrac12-1=0$, while $\\tan3x$ is unbounded because $3x\\to\\dfrac{\\pi}{2}$. The limit is of the form $0\\cdot\\infty$.",
+  "Triple-angle formula: $\\cos3x=4\\cos^{3}x-3\\cos x=\\cos x\\,(4\\cos^{2}x-3)$.",
+  "Double-angle formula: $4\\cos^{2}x=2(1+\\cos2x)$, so $4\\cos^{2}x-3=2\\cos2x-1$. Hence $\\cos3x=\\cos x\\,(2\\cos2x-1)$, that is, $2\\cos2x-1=\\dfrac{\\cos3x}{\\cos x}$ (valid because $\\cos x\\neq0$ near $\\dfrac{\\pi}{6}$).",
+  "For $x$ near $\\dfrac{\\pi}{6}$ with $x\\neq\\dfrac{\\pi}{6}$, $\\cos3x\\neq0$ and $(2\\cos2x-1)\\tan3x=\\dfrac{\\cos3x}{\\cos x}\\cdot\\dfrac{\\sin3x}{\\cos3x}=\\dfrac{\\sin3x}{\\cos x}$.",
+  "This is continuous at $\\dfrac{\\pi}{6}$, so the limit is $\\dfrac{\\sin(\\pi/2)}{\\cos(\\pi/6)}=\\dfrac{1}{\\sqrt{3}/2}=\\dfrac{2}{\\sqrt{3}}$. The cancelled factor $\\cos3x$ changes sign at $\\dfrac{\\pi}{6}$ in both factors, so the left and right limits agree.",
+  "(A sign slip in L'Hopital's rule gives $-\\dfrac{2}{\\sqrt{3}}$; using $\\sin x$ in place of $\\cos x$ in the denominator gives $2$.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the factor 2cos2x - 1 is exactly cos3x/cos x (triple angle written through the double angle), so the 0 times infinity product with tan3x collapses to sin3x/cos x (way 5). Closest known: lim (1 - tan x)(tan2x) type products resolved by the 2A formula. Different because: the vanishing factor is the double-angle form of the triple-angle identity, which must be recognised to cancel cos3x.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Evaluation of limit involving trigonometric functions",
+  "Multiple angles: ratios of 2A and 3A"
+ ],
+ "concept_use": {
+  "Evaluation of limit involving trigonometric functions": "The 0 times infinity limit at pi/6 is a trigonometric limit resolved by cancelling cos3x.",
+  "Multiple angles: ratios of 2A and 3A": "cos3x = cos x (2cos2x - 1), from the 3A formula and the 2A formula, is the key identity."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the expression is undefined at pi/6 only (both factors behave), that the left and right limits agree (numerically 1.1547 on both sides), and that only (A) equals 2/sqrt3. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing 2cos2x - 1 as cos3x/cos x so that tan3x cancels to sin3x/cos x.",
+ "justification": "One identity link between the 2A and 3A formulas followed by direct evaluation; a 0 times infinity form makes it a little more than one move. Comparable to 2025-P2-Q1 (L2); above 2024-P2-Q3 (L1).",
+ "nearest_anchor": "2025-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

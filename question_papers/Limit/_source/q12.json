@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Limit",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Let $a$ and $b$ be real numbers and let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=[x](x-a)+[2x](x-b)$, where $[t]$ denotes the greatest integer less than or equal to $t$. If $f$ is continuous at every point of the interval $\\left(\\dfrac{5}{4},\\dfrac{9}{4}\\right)$, then the value of $\\displaystyle\\lim_{x\\to3^{-}}f(x)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$ तथा $b$ वास्तविक संख्याएँ हैं तथा $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=[x](x-a)+[2x](x-b)$ द्वारा परिभाषित है, जहाँ $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। यदि $f$ अन्तराल $\\left(\\dfrac{5}{4},\\dfrac{9}{4}\\right)$ के प्रत्येक बिन्दु पर सतत है, तो $\\displaystyle\\lim_{x\\to3^{-}}f(x)$ का मान ______ है।"
+ ],
+ "solution": [
+  "In $\\left(\\dfrac54,\\dfrac94\\right)$, $[x]$ jumps only at $2$ and $[2x]$ only at $\\dfrac32$ and $2$; elsewhere $f$ is a polynomial",
+  "At $x=\\dfrac32$: $[x]=1$ on both sides, $[2x]$: $2\\to3$; jump $=\\dfrac32-b=0\\Rightarrow b=\\dfrac32$",
+  "At $x=2$: $[x]$: $1\\to2$, $[2x]$: $3\\to4$; jump $=(2-a)+(2-b)=0\\Rightarrow a=\\dfrac52$",
+  "For $x\\to3^{-}$: $[x]=2$, $[2x]=5$: $f\\to2\\left(3-\\dfrac52\\right)+5\\left(3-\\dfrac32\\right)=1+7.5=8.5$",
+  "",
+  "Final Answer: 8.50"
+ ],
+ "solution_full": [
+  "$f$ is continuous wherever both $[x]$ and $[2x]$ are locally constant. In $\\left(\\dfrac{5}{4},\\dfrac{9}{4}\\right)$, $[x]$ changes only at $x=2$, and $[2x]$ changes only where $2x$ is an integer, i.e. at $x=\\dfrac{3}{2}$ and $x=2$.",
+  "At $x=\\dfrac{3}{2}$: $[x]=1$ near $\\dfrac32$; $[2x]=2$ for $x<\\dfrac32$ and $3$ for $x\\ge\\dfrac32$. So $\\displaystyle\\lim_{x\\to3/2^{-}}f=\\dfrac12-a+2\\left(\\dfrac32-b\\right)$ and $f\\left(\\dfrac32\\right)=\\dfrac12-a+3\\left(\\dfrac32-b\\right)$. Continuity gives $\\dfrac{3}{2}-b=0$, so $b=\\dfrac{3}{2}$.",
+  "At $x=2$: for $x<2$, $[x]=1$ and $[2x]=3$; for $x\\ge2$, $[x]=2$ and $[2x]=4$. So $\\displaystyle\\lim_{x\\to2^{-}}f=(2-a)+3(2-b)$ and $f(2)=2(2-a)+4(2-b)$. Continuity gives $(2-a)+(2-b)=0$, so $a=4-b=\\dfrac{5}{2}$.",
+  "With these values $f$ is continuous on the whole interval (the end points $\\dfrac54$, $\\dfrac94$ are not jump points, and $x=1$, $x=\\dfrac52$ lie outside).",
+  "Left-hand limit at $3$: for $\\dfrac52\\le x<3$, $[x]=2$ and $[2x]=5$, so $f(x)=2\\left(x-\\dfrac52\\right)+5\\left(x-\\dfrac32\\right)\\to2\\cdot\\dfrac12+5\\cdot\\dfrac32=1+\\dfrac{15}{2}=\\dfrac{17}{2}$.",
+  "Hence $\\displaystyle\\lim_{x\\to3^{-}}f(x)=8.50$ (whereas $f(3)=3\\cdot\\dfrac12+6\\cdot\\dfrac32=10.5$).",
+  "",
+  "Final Answer: 8.50"
+ ],
+ "originality_note": "New: two greatest-integer factors with different step sizes multiply linear factors; continuity on a chosen interval forces exactly the two jump conditions inside it (at 3/2 and at 2), which fixes a and b, and then a one-sided limit at another jump point is asked (way 5). Closest known: f(x) = [x] sin(pi x) or [x](x - a) continuous at integers. Different because: the student must locate which jump points of [x] and [2x] lie in the interval and treat the double jump at x = 2.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Evaluation of limit involving GIF and fractional part",
+  "Continuity and Differentiability of functions involving GIF and fractional part"
+ ],
+ "concept_use": {
+  "Evaluation of limit involving GIF and fractional part": "One-sided limits of [x] and [2x] at 3/2, 2 and 3 give the jump conditions and lim_{x->3-} f = 17/2.",
+  "Continuity and Differentiability of functions involving GIF and fractional part": "Continuity of f on (5/4, 9/4) requires zero jumps at 3/2 and at 2, giving b = 3/2 and a = 5/2."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is given, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the interval (5/4, 9/4) contains exactly the jump points 3/2 and 2, that a and b are then unique, and that a one-sided limit (not f(3)) is asked; numerically f(3-) = 8.5 and jumps vanish at 3/2 and 2. Answer 8.50 is a positive decimal as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Locating the jump points of [x] and [2x] inside the interval and setting each jump to zero.",
+ "justification": "Two linked ideas: locating jump points of two GIF terms (one a double jump) and solving the continuity conditions, then a one-sided limit at another point. Similar to the GIF continuity anchor 2023-P2-Q6 (L3).",
+ "nearest_anchor": "2023-P2-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
