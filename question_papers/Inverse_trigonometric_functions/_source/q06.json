@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $S=\\displaystyle\\sum_{k=1}^{\\infty}\\cot^{-1}\\left(\\dfrac{9k^{2}-15k+5}{3}\\right)$, where $\\cot^{-1}$ takes values in $(0,\\pi)$. Then the value of $\\dfrac{2S}{\\pi}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S=\\displaystyle\\sum_{k=1}^{\\infty}\\cot^{-1}\\left(\\dfrac{9k^{2}-15k+5}{3}\\right)$ है, जहाँ $\\cot^{-1}$ के मान $(0,\\pi)$ में हैं। तब $\\dfrac{2S}{\\pi}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $u_{k}=3k-4$: $u_{k+1}-u_{k}=3$, $1+u_{k}u_{k+1}=1+(3k-4)(3k-1)=9k^{2}-15k+5$",
+  "For $b>a$, $\\theta=\\tan^{-1}b-\\tan^{-1}a\\in(0,\\pi)$ and $\\cot\\theta=\\dfrac{1+ab}{b-a}$; since $\\cot^{-1}$ has range $(0,\\pi)$, $\\cot^{-1}\\dfrac{1+ab}{b-a}=\\tan^{-1}b-\\tan^{-1}a$ always",
+  "So the $k$-th term $=\\tan^{-1}(3k-1)-\\tan^{-1}(3k-4)$, including $k=1$ where the argument is $-\\dfrac13$",
+  "Partial sum $=\\tan^{-1}(3n-1)-\\tan^{-1}(-1)\\to\\dfrac{\\pi}{2}+\\dfrac{\\pi}{4}=\\dfrac{3\\pi}{4}$",
+  "$\\dfrac{2S}{\\pi}=\\dfrac32=1.5$ (writing $\\cot^{-1}x=\\tan^{-1}\\dfrac1x$ at $k=1$ would wrongly give $-0.5$)",
+  "",
+  "Final Answer: 1.50"
+ ],
+ "solution_full": [
+  "Look for $u_{k}$ with $u_{k+1}-u_{k}$ constant and $1+u_{k}u_{k+1}$ equal to the numerator. With $u_{k}=3k-4$: $u_{k+1}=3k-1$, $u_{k+1}-u_{k}=3$ and $1+(3k-4)(3k-1)=1+9k^{2}-15k+4=9k^{2}-15k+5$. So the $k$-th argument is $\\dfrac{1+u_{k}u_{k+1}}{u_{k+1}-u_{k}}$.",
+  "Claim: if $b>a$, then $\\cot^{-1}\\dfrac{1+ab}{b-a}=\\tan^{-1}b-\\tan^{-1}a$. Indeed $\\theta=\\tan^{-1}b-\\tan^{-1}a$ lies in $(0,\\pi)$ because $\\tan^{-1}$ is increasing with values in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$, and $\\cot\\theta=\\dfrac{1+\\tan\\alpha\\tan\\beta}{\\tan\\alpha-\\tan\\beta}$ with $\\tan\\alpha=b$, $\\tan\\beta=a$, which is $\\dfrac{1+ab}{b-a}$. As $\\theta$ is in the range $(0,\\pi)$ of $\\cot^{-1}$, the claim follows. No case split is needed, even when $1+ab<0$.",
+  "For $k=1$: $u_{1}=-1$, $u_{2}=2$, the argument is $\\dfrac{1-2}{3}=-\\dfrac13$, and the term is $\\cot^{-1}\\left(-\\dfrac13\\right)=\\tan^{-1}2-\\tan^{-1}(-1)=\\tan^{-1}2+\\dfrac{\\pi}{4}$, which is greater than $\\dfrac{\\pi}{2}$, as it must be for a negative argument. Using $\\tan^{-1}(-3)$ here instead would be off by $\\pi$.",
+  "The partial sum telescopes: $\\displaystyle\\sum_{k=1}^{n}\\left[\\tan^{-1}(3k-1)-\\tan^{-1}(3k-4)\\right]=\\tan^{-1}(3n-1)-\\tan^{-1}(-1)=\\tan^{-1}(3n-1)+\\dfrac{\\pi}{4}$.",
+  "As $n\\to\\infty$, $\\tan^{-1}(3n-1)\\to\\dfrac{\\pi}{2}$, so $S=\\dfrac{3\\pi}{4}$.",
+  "Therefore $\\dfrac{2S}{\\pi}=\\dfrac32=1.5$.",
+  "",
+  "Final Answer: 1.50"
+ ],
+ "originality_note": "New: a telescoping cot^-1 series with step 3 whose first argument is negative, so the answer depends on the range (0,pi) of cot^-1; the naive conversion cot^-1 x = tan^-1(1/x) loses pi at k = 1 (way 5). Closest known: sum of cot^-1(n^2+n+1) or cot^-1(2n^2) series, all with positive arguments. Different because: the branch at the negative term is the decisive step.",
+ "web_check": "not found",
+ "concept_use": {
+  "Domain and range of inverse trigonometric functions": "The range (0,pi) of cot^-1 makes cot^-1((1+ab)/(b-a)) = tan^-1 b - tan^-1 a valid even for the negative argument -1/3 at k = 1.",
+  "Addition and subtractions of angles involving inverse trigonometric expressions": "Each term is the difference tan^-1(3k-1) - tan^-1(3k-4), from the cot of a difference of angles.",
+  "Summation of series based on ITF": "The series telescopes to tan^-1(3n-1) + pi/4, whose limit is 3pi/4."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, principal values are stated, every condition is given, each sentence has one reading; the answer was recomputed with mpmath/numpy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked numerically that the partial sums approach 1.5 (times pi/2) and that the naive tan^-1 conversion gives -0.5, so the range matters; 1.50 is a positive decimal. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing the term as tan^-1(3k-1) - tan^-1(3k-4) via the range (0,pi) of cot^-1, including the negative first argument.",
+ "justification": "Telescoping with a non-obvious generating sequence plus a branch subtlety at k = 1, numerical answer. Same family as 2021-P1-Q15 (L3) telescoping cot^-1 sum; the range trap keeps it at 3.",
+ "nearest_anchor": "2021-P1-Q15 (L3)",
+ "confidence": "High",
+ "chapter": "Inverse trigonometric functions",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Domain and range of inverse trigonometric functions",
+  "Addition and subtractions of angles involving inverse trigonometric expressions",
+  "Summation of series based on ITF"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

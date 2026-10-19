@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "english": [
+  "For each positive integer $n$, let $S_{n}=\\displaystyle\\sum_{k=1}^{n}\\tan^{-1}\\left(\\dfrac{4k}{k^{4}-k^{2}+4}\\right)$, where $\\tan^{-1}$ takes values in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$. Then $S_{2}+S_{3}$ is equal to",
+  "",
+  "(A) $\\pi-\\tan^{-1}\\left(\\dfrac{9}{17}\\right)$",
+  "(B) $\\pi-\\tan^{-1}\\left(\\dfrac{17}{9}\\right)$",
+  "(C) $\\dfrac{3\\pi}{4}$",
+  "(D) $\\pi-\\tan^{-1}\\left(\\dfrac{9}{19}\\right)$"
+ ],
+ "hindi": [
+  "प्रत्येक धनात्मक पूर्णांक $n$ के लिए, माना कि $S_{n}=\\displaystyle\\sum_{k=1}^{n}\\tan^{-1}\\left(\\dfrac{4k}{k^{4}-k^{2}+4}\\right)$ है, जहाँ $\\tan^{-1}$ के मान $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ में हैं। तब $S_{2}+S_{3}$ बराबर है",
+  "",
+  "(A) $\\pi-\\tan^{-1}\\left(\\dfrac{9}{17}\\right)$",
+  "(B) $\\pi-\\tan^{-1}\\left(\\dfrac{17}{9}\\right)$",
+  "(C) $\\dfrac{3\\pi}{4}$",
+  "(D) $\\pi-\\tan^{-1}\\left(\\dfrac{9}{19}\\right)$"
+ ],
+ "solution": [
+  "Let $T_{k}=\\dfrac{k(k+1)}{2}$. Then $T_{k}-T_{k-1}=k$ and $1+T_{k}T_{k-1}=1+\\dfrac{k^{2}(k^{2}-1)}{4}=\\dfrac{k^{4}-k^{2}+4}{4}$",
+  "So $\\dfrac{4k}{k^{4}-k^{2}+4}=\\dfrac{T_{k}-T_{k-1}}{1+T_{k}T_{k-1}}$ with $T_{k}T_{k-1}\\ge0$, hence each term $=\\tan^{-1}T_{k}-\\tan^{-1}T_{k-1}$",
+  "Telescoping with $T_{0}=0$: $S_{n}=\\tan^{-1}\\dfrac{n(n+1)}{2}$, so $S_{2}=\\tan^{-1}3$, $S_{3}=\\tan^{-1}6$",
+  "$3\\cdot6=18>1$ with both positive, so $\\tan^{-1}3+\\tan^{-1}6=\\pi+\\tan^{-1}\\dfrac{3+6}{1-18}=\\pi-\\tan^{-1}\\dfrac{9}{17}$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Write $T_{k}=\\dfrac{k(k+1)}{2}$ (so $T_{0}=0$, $T_{1}=1$, $T_{2}=3$, $T_{3}=6$). Then $T_{k}-T_{k-1}=\\dfrac{k(k+1)-(k-1)k}{2}=k$ and $T_{k}T_{k-1}=\\dfrac{k(k+1)}{2}\\cdot\\dfrac{k(k-1)}{2}=\\dfrac{k^{2}(k^{2}-1)}{4}$.",
+  "Hence $1+T_{k}T_{k-1}=\\dfrac{k^{4}-k^{2}+4}{4}$ and $\\dfrac{4k}{k^{4}-k^{2}+4}=\\dfrac{k}{1+\\dfrac{k^{2}(k^{2}-1)}{4}}=\\dfrac{T_{k}-T_{k-1}}{1+T_{k}T_{k-1}}$.",
+  "For $a,b\\ge0$ we have $ab>-1$, so the subtraction formula $\\tan^{-1}a-\\tan^{-1}b=\\tan^{-1}\\dfrac{a-b}{1+ab}$ holds without correction. Therefore $\\tan^{-1}\\left(\\dfrac{4k}{k^{4}-k^{2}+4}\\right)=\\tan^{-1}T_{k}-\\tan^{-1}T_{k-1}$.",
+  "Adding for $k=1,2,\\ldots,n$, the sum telescopes: $S_{n}=\\tan^{-1}T_{n}-\\tan^{-1}T_{0}=\\tan^{-1}\\dfrac{n(n+1)}{2}$. Check: $S_{1}=\\tan^{-1}1=\\dfrac{\\pi}{4}$, and the first term is $\\tan^{-1}\\dfrac{4}{4}=\\dfrac{\\pi}{4}$.",
+  "Thus $S_{2}=\\tan^{-1}3$ and $S_{3}=\\tan^{-1}6$.",
+  "For the addition, both numbers are positive and $3\\cdot6=18>1$, so $\\tan^{-1}3+\\tan^{-1}6>\\dfrac{\\pi}{2}$ and the addition formula needs the correction $\\pi$: $\\tan^{-1}3+\\tan^{-1}6=\\pi+\\tan^{-1}\\dfrac{3+6}{1-18}=\\pi+\\tan^{-1}\\left(-\\dfrac{9}{17}\\right)=\\pi-\\tan^{-1}\\dfrac{9}{17}$.",
+  "(Forgetting the correction gives the negative value $-\\tan^{-1}\\dfrac{9}{17}$, impossible for a sum of positive angles.)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: the general term 4k/(k^4-k^2+4) is decoded as a difference of arctangents of consecutive triangular numbers, and the finite partial sums tan^-1 3 + tan^-1 6 are then added, which needs the pi-correction (way 5). Closest known: telescoping sums of tan^-1(1/(n^2+n+1)) and the published identity sum tan^-1(2ak/(k^4-k^2+a^2)) = pi/2. Different because: the question asks for a sum of two partial sums, not the infinite series, so the addition formula with its branch correction carries the answer.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Summation of series based on ITF": "The series is telescoped with u_k = k(k+1)/2 to get S_n = tan^-1(n(n+1)/2).",
+  "Addition and subtractions of angles involving inverse trigonometric expressions": "Each term is written as tan^-1 T_k - tan^-1 T_(k-1), and S_2 + S_3 = tan^-1 3 + tan^-1 6 needs the xy > 1 case with +pi."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, principal values are stated, every condition is given, each sentence has one reading; the answer was recomputed with mpmath/numpy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked the options have one form, (B) is not equal to (A) (pi - tan^-1(17/9) = pi/2 + tan^-1(9/17) is different), and only (A) is correct. Changed: replaced an earlier distractor pi/2 + tan^-1(9/17) because it equalled option (B).",
+ "level": 2,
+ "key_step": "Recognising 4k/(k^4-k^2+4) as (T_k - T_(k-1))/(1 + T_k T_(k-1)) with triangular numbers, then adding tan^-1 3 + tan^-1 6 with the pi correction.",
+ "justification": "A standard telescoping pattern (spotting the generating sequence) followed by one addition with a branch correction; options allow checking. Lighter than the statement-checking 2021-P1-Q15 (L3) telescoping cot^-1 question, comparable to 2026-P1-Q4 (L2).",
+ "nearest_anchor": "2021-P1-Q15 (L3)",
+ "confidence": "Medium",
+ "chapter": "Inverse trigonometric functions",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "blueprint_concepts": [
+  "Summation of series based on ITF",
+  "Addition and subtractions of angles involving inverse trigonometric expressions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

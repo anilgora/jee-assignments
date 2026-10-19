@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $S$ be the set of all real numbers $x$ satisfying $\\sin\\left(2\\tan^{-1}x\\right)=\\cos\\left(2\\tan^{-1}\\dfrac{2x}{3}\\right)$, where $\\tan^{-1}$ takes values in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$. Then the sum of the squares of all the elements of $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जो $\\sin\\left(2\\tan^{-1}x\\right)=\\cos\\left(2\\tan^{-1}\\dfrac{2x}{3}\\right)$ को संतुष्ट करती हैं, जहाँ $\\tan^{-1}$ के मान $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ में हैं। तब $S$ के सभी अवयवों के वर्गों का योग ______ है।"
+ ],
+ "solution": [
+  "Let $\\alpha=\\tan^{-1}x$, $\\beta=\\tan^{-1}\\dfrac{2x}{3}$, both in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ with the same sign as $x$",
+  "$\\cos\\left(\\dfrac{\\pi}{2}-2\\alpha\\right)=\\cos2\\beta\\Rightarrow\\dfrac{\\pi}{2}-2\\alpha=2k\\pi\\pm2\\beta\\Rightarrow\\alpha\\pm\\beta=\\dfrac{\\pi}{4}-k\\pi$",
+  "$\\alpha+\\beta\\in(-\\pi,\\pi)$: $\\alpha+\\beta=\\dfrac{\\pi}{4}$ or $-\\dfrac{3\\pi}{4}$, both give $\\tan(\\alpha+\\beta)=1$: $\\dfrac{x+\\frac{2x}{3}}{1-\\frac{2x^{2}}{3}}=1\\Rightarrow2x^{2}+5x-3=0\\Rightarrow x=\\dfrac12$ or $-3$",
+  "Check: $x=\\dfrac12$: $\\alpha+\\beta=\\tan^{-1}\\dfrac12+\\tan^{-1}\\dfrac13=\\dfrac{\\pi}{4}$; $x=-3$: $\\alpha+\\beta=-(\\tan^{-1}3+\\tan^{-1}2)=-\\dfrac{3\\pi}{4}$. Both valid",
+  "$\\alpha-\\beta$ has $|\\alpha-\\beta|<\\dfrac{\\pi}{2}$, so only $\\alpha-\\beta=\\dfrac{\\pi}{4}$: $\\dfrac{x/3}{1+2x^{2}/3}=1\\Rightarrow2x^{2}-x+3=0$, no real root",
+  "$S=\\left\\{\\dfrac12,-3\\right\\}$, sum of squares $=\\dfrac14+9=9.25$",
+  "",
+  "Final Answer: 9.25"
+ ],
+ "solution_full": [
+  "Let $\\alpha=\\tan^{-1}x$ and $\\beta=\\tan^{-1}\\dfrac{2x}{3}$. Both lie in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ and have the sign of $x$, so $|\\alpha-\\beta|<\\dfrac{\\pi}{2}$ and $\\alpha+\\beta\\in(-\\pi,\\pi)$.",
+  "Trigonometric equation: $\\sin2\\alpha=\\cos2\\beta$ means $\\cos\\left(\\dfrac{\\pi}{2}-2\\alpha\\right)=\\cos2\\beta$, whose general solution is $\\dfrac{\\pi}{2}-2\\alpha=2k\\pi\\pm2\\beta$, $k\\in\\mathbb{Z}$, i.e. $\\alpha+\\beta=\\dfrac{\\pi}{4}-k\\pi$ or $\\alpha-\\beta=\\dfrac{\\pi}{4}-k\\pi$.",
+  "Family $\\alpha+\\beta=\\dfrac{\\pi}{4}-k\\pi$ in $(-\\pi,\\pi)$: only $\\dfrac{\\pi}{4}$ ($k=0$) and $-\\dfrac{3\\pi}{4}$ ($k=1$). In both cases $\\tan(\\alpha+\\beta)=1$, i.e. $\\dfrac{x+\\frac{2x}{3}}{1-\\frac{2x^{2}}{3}}=1$ (with $2x^{2}\\neq3$), so $5x=3-2x^{2}$, $2x^{2}+5x-3=0$, $(2x-1)(x+3)=0$: $x=\\dfrac12$ or $x=-3$.",
+  "Which angle each gives: for $x=\\dfrac12$, $\\alpha,\\beta>0$ and $\\tan^{-1}\\dfrac12+\\tan^{-1}\\dfrac13=\\dfrac{\\pi}{4}$; for $x=-3$, $\\alpha+\\beta=-\\left(\\tan^{-1}3+\\tan^{-1}2\\right)=-\\left(\\pi-\\dfrac{\\pi}{4}\\right)=-\\dfrac{3\\pi}{4}$. Both are members of the family, so both are solutions. (Rejecting $x=-3$ because $\\alpha+\\beta\\neq\\dfrac{\\pi}{4}$ is the trap; the general solution includes $-\\dfrac{3\\pi}{4}$.)",
+  "Family $\\alpha-\\beta=\\dfrac{\\pi}{4}-k\\pi$: as $|\\alpha-\\beta|<\\dfrac{\\pi}{2}$, only $\\alpha-\\beta=\\dfrac{\\pi}{4}$, so $\\dfrac{x-\\frac{2x}{3}}{1+\\frac{2x^{2}}{3}}=1$, i.e. $x=3+2x^{2}$, $2x^{2}-x+3=0$, with discriminant $1-24<0$: no real solution.",
+  "Direct check: $x=\\dfrac12$: $\\sin(2\\alpha)=\\dfrac{2x}{1+x^{2}}=\\dfrac45$ and $\\cos2\\beta=\\dfrac{1-4x^{2}/9}{1+4x^{2}/9}=\\dfrac{8/9}{10/9}=\\dfrac45$. $x=-3$: $\\dfrac{-6}{10}=-\\dfrac35$ and $\\dfrac{1-4}{1+4}=-\\dfrac35$.",
+  "So $S=\\left\\{\\dfrac12,-3\\right\\}$ and the sum of squares is $\\dfrac14+9=9.25$.",
+  "",
+  "Final Answer: 9.25"
+ ],
+ "originality_note": "New: an equation of the form sin(2 tan^-1 x) = cos(2 tan^-1(kx)) is solved through the general solution of cos A = cos B; the family alpha + beta = pi/4 - k pi contains a second admissible member -3pi/4, which gives the negative root x = -3 that a principal-only argument misses (way 5). Closest known: sin(cot^-1(1+x)) = cos(tan^-1 x) (JEE 2004) and 2 tan^-1(cos x) = tan^-1(2 cosec x). Different because: double angles of two different arctangents, and the second branch of the general solution is the point.",
+ "web_check": "not found",
+ "concept_use": {
+  "ITF Equations": "With alpha = tan^-1 x and beta = tan^-1(2x/3), the equation becomes tan(alpha + beta) = 1 on admissible branches, solved by the tan^-1 addition formula: x = 1/2, -3.",
+  "Equations mixing trigonometric and inverse trigonometric functions": "sin 2alpha = cos 2beta is solved by the general solution of cos A = cos B, giving alpha +/- beta = pi/4 - k pi, filtered by the ranges of alpha and beta."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, principal values are stated, every condition is given, each sentence has one reading; the answer was recomputed with mpmath/numpy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked numerically on [-50,50] that there are exactly two real roots (1/2 and -3) and none of large size (the quartic factorises as (2x-1)(x+3)(2x^2-x+3)); 9.25 is a positive decimal. Changed: No change.",
+ "level": 3,
+ "key_step": "Writing sin 2alpha = cos 2beta as alpha +/- beta = pi/4 - k pi and keeping the -3pi/4 member, giving x = 1/2 and x = -3.",
+ "justification": "Links an ITF equation with the general solution of a trigonometric equation and needs branch care to keep the second root; numerical. Same kind as 2025-P2-Q3 (L3) and 2023-P2-Q3 (L3) ITF equations with range care.",
+ "nearest_anchor": "2025-P2-Q3 (L3)",
+ "confidence": "High",
+ "chapter": "Inverse trigonometric functions",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "ITF Equations",
+  "Equations mixing trigonometric and inverse trigonometric functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

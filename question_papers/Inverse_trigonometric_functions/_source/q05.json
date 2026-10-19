@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $D$ be the set of all real numbers $x$ for which both $\\sin^{-1}\\left(\\dfrac{x\\left(3-x^{2}\\right)}{2}\\right)$ and $\\sin^{-1}\\left(\\dfrac{x}{2}\\right)$ are defined, where $\\sin^{-1}$ takes values in $\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$. Let $F:D\\to\\mathbb{R}$ be defined by $F(x)=\\sin^{-1}\\left(\\dfrac{x\\left(3-x^{2}\\right)}{2}\\right)-3\\sin^{-1}\\left(\\dfrac{x}{2}\\right)$. If $m$ is the minimum value of $F$ on $D$, then the value of $\\dfrac{m}{\\pi}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $D$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जिनके लिए $\\sin^{-1}\\left(\\dfrac{x\\left(3-x^{2}\\right)}{2}\\right)$ तथा $\\sin^{-1}\\left(\\dfrac{x}{2}\\right)$ दोनों परिभाषित हैं, जहाँ $\\sin^{-1}$ के मान $\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$ में हैं। माना कि $F:D\\to\\mathbb{R}$, $F(x)=\\sin^{-1}\\left(\\dfrac{x\\left(3-x^{2}\\right)}{2}\\right)-3\\sin^{-1}\\left(\\dfrac{x}{2}\\right)$ द्वारा परिभाषित है। यदि $D$ पर $F$ का न्यूनतम मान $m$ है, तो $\\dfrac{m}{\\pi}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\dfrac{x(3-x^{2})}{2}\\le1\\iff x^{3}-3x+2\\ge0\\iff(x-1)^{2}(x+2)\\ge0\\iff x\\ge-2$",
+  "$\\dfrac{x(3-x^{2})}{2}\\ge-1\\iff x^{3}-3x-2\\le0\\iff(x+1)^{2}(x-2)\\le0\\iff x\\le2$; with $\\left|\\dfrac{x}{2}\\right|\\le1$: $D=[-2,2]$",
+  "Put $x=2\\sin t$, $t\\in\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$: $\\dfrac{x(3-x^{2})}{2}=3\\sin t-4\\sin^{3}t=\\sin3t$, so $F=\\sin^{-1}(\\sin3t)-3t$",
+  "$|x|\\le1$ ($|3t|\\le\\dfrac{\\pi}{2}$): $F=0$; $1\\le x\\le2$: $F=\\pi-6t$, decreasing to $F(2)=\\pi-3\\pi=-2\\pi$; $-2\\le x\\le-1$: $F=-\\pi-6t\\ge0$",
+  "Check: $F(2)=\\sin^{-1}(-1)-3\\sin^{-1}1=-\\dfrac{\\pi}{2}-\\dfrac{3\\pi}{2}=-2\\pi$. So $m=-2\\pi$, $\\dfrac{m}{\\pi}=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "Domain of the first term: we need $-1\\le\\dfrac{x(3-x^{2})}{2}\\le1$.",
+  "Upper bound: $3x-x^{3}\\le2\\iff x^{3}-3x+2\\ge0$. Since $x=1$ is a double root, $x^{3}-3x+2=(x-1)^{2}(x+2)$, which is $\\ge0$ exactly when $x\\ge-2$.",
+  "Lower bound: $3x-x^{3}\\ge-2\\iff x^{3}-3x-2\\le0$, and $x^{3}-3x-2=(x+1)^{2}(x-2)$, which is $\\le0$ exactly when $x\\le2$.",
+  "So the first term is defined on $[-2,2]$; the second needs $|x|\\le2$ as well. Hence $D=[-2,2]$.",
+  "Substitution: for $x\\in[-2,2]$ put $x=2\\sin t$ with $t=\\sin^{-1}\\dfrac{x}{2}\\in\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$. Then $\\dfrac{x(3-x^{2})}{2}=\\sin t\\,(3-4\\sin^{2}t)=\\sin3t$, so $F(x)=\\sin^{-1}(\\sin3t)-3t$ with $3t\\in\\left[-\\dfrac{3\\pi}{2},\\dfrac{3\\pi}{2}\\right]$.",
+  "Case $-\\dfrac{\\pi}{6}\\le t\\le\\dfrac{\\pi}{6}$ ($|x|\\le1$): $3t\\in\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$, so $\\sin^{-1}(\\sin3t)=3t$ and $F=0$.",
+  "Case $\\dfrac{\\pi}{6}\\le t\\le\\dfrac{\\pi}{2}$ ($1\\le x\\le2$): $\\pi-3t\\in\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$ and $\\sin(\\pi-3t)=\\sin3t$, so $\\sin^{-1}(\\sin3t)=\\pi-3t$ and $F=\\pi-6t$. This decreases from $0$ (at $x=1$) to $\\pi-3\\pi=-2\\pi$ (at $x=2$).",
+  "Case $-\\dfrac{\\pi}{2}\\le t\\le-\\dfrac{\\pi}{6}$ ($-2\\le x\\le-1$): $\\sin^{-1}(\\sin3t)=-\\pi-3t$ and $F=-\\pi-6t$, which lies between $0$ and $2\\pi$.",
+  "So the minimum is attained at the end point $x=2$ of the domain. Direct evaluation confirms it: $F(2)=\\sin^{-1}(-1)-3\\sin^{-1}(1)=-\\dfrac{\\pi}{2}-\\dfrac{3\\pi}{2}=-2\\pi$.",
+  "Hence $m=-2\\pi$ and $\\dfrac{m}{\\pi}=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: the domain of sin^-1(x(3-x^2)/2) is found from the double-root factorisations (x-1)^2(x+2) and (x+1)^2(x-2), and the substitution x = 2 sin t turns the argument into sin 3t, so F is 0 on [-1,1] and its minimum sits at the domain end point (way 5). Closest known: sin^-1(3x-4x^3) = 3 sin^-1 x on [-1/2,1/2]. Different because: the scaling by 2 hides the triple-angle form, the domain must be derived by factorisation, and the question asks for an extremum over the whole domain.",
+ "web_check": "not found",
+ "concept_use": {
+  "Domain and range of inverse trigonometric functions": "The domain [-2,2] comes from -1 <= x(3-x^2)/2 <= 1 via (x-1)^2(x+2) >= 0 and (x+1)^2(x-2) <= 0; the minimum lies at its end point x = 2.",
+  "Evaluation of inverse trigonometric expression": "F(2) = sin^-1(-1) - 3 sin^-1(1) = -2pi and the piecewise values are evaluated with principal ranges.",
+  "Simplification of Inverse trigonometric expressions by trigonometric substitutions": "x = 2 sin t gives x(3-x^2)/2 = sin 3t, so F = sin^-1(sin 3t) - 3t piecewise."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, principal values are stated, every condition is given, each sentence has one reading; the answer was recomputed with mpmath/numpy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that D = [-2,2] numerically (the argument leaves [-1,1] just outside), that F is continuous so the minimum exists, and that m/pi = -2 is a negative integer. Changed: No change.",
+ "level": 3,
+ "key_step": "Finding the domain [-2,2] by the double-root factorisation and simplifying with x = 2 sin t to the piecewise form of sin^-1(sin 3t) - 3t.",
+ "justification": "Three linked steps (domain by factorisation, substitution to a triple angle, branch analysis) with a numerical answer; each step is standard but the scaled argument hides the substitution. Comparable to 2023-P2-Q3 (L3) range-care ITF evaluation; below the L4 king-type 2025-P2-Q16.",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "chapter": "Inverse trigonometric functions",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Domain and range of inverse trigonometric functions",
+  "Evaluation of inverse trigonometric expression",
+  "Simplification of Inverse trigonometric expressions by trigonometric substitutions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

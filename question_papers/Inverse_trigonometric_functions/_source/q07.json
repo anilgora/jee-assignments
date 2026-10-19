@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $S=\\left\\{x\\in[0,2\\pi]:x\\neq\\dfrac{\\pi}{2},\\ x\\neq\\dfrac{3\\pi}{2}\\ \\text{and}\\ \\cos^{-1}(\\cos x)<3\\tan^{-1}(\\tan x)\\right\\}$, where the inverse trigonometric functions take their principal values. If the sum of the lengths of the intervals that constitute $S$ is $k\\pi$, then the value of $k$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S=\\left\\{x\\in[0,2\\pi]:x\\neq\\dfrac{\\pi}{2},\\ x\\neq\\dfrac{3\\pi}{2},\\ \\cos^{-1}(\\cos x)<3\\tan^{-1}(\\tan x)\\right\\}$ है, जहाँ प्रतिलोम त्रिकोणमितीय फलन अपने मुख्य मान लेते हैं। यदि $S$ को बनाने वाले अन्तरालों की लम्बाइयों का योग $k\\pi$ है, तो $k$ का मान ______ है।"
+ ],
+ "solution": [
+  "$C(x)=\\cos^{-1}(\\cos x)$: $x$ on $[0,\\pi]$, $2\\pi-x$ on $[\\pi,2\\pi]$; $T(x)=\\tan^{-1}(\\tan x)$: $x$, $x-\\pi$, $x-2\\pi$ on $\\left[0,\\dfrac{\\pi}{2}\\right)$, $\\left(\\dfrac{\\pi}{2},\\dfrac{3\\pi}{2}\\right)$, $\\left(\\dfrac{3\\pi}{2},2\\pi\\right]$",
+  "$\\left[0,\\dfrac{\\pi}{2}\\right)$: $x<3x\\iff x>0$: length $\\dfrac{\\pi}{2}$",
+  "$\\left(\\dfrac{\\pi}{2},\\pi\\right]$: $T\\le0\\le C$: none",
+  "$\\left(\\pi,\\dfrac{3\\pi}{2}\\right)$: $2\\pi-x<3x-3\\pi\\iff x>\\dfrac{5\\pi}{4}$: length $\\dfrac{\\pi}{4}$",
+  "$\\left(\\dfrac{3\\pi}{2},2\\pi\\right]$: $T\\le0\\le C$: none. Total $\\dfrac{3\\pi}{4}\\Rightarrow k=0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "Graph of $C(x)=\\cos^{-1}(\\cos x)$ on $[0,2\\pi]$: $C(x)=x$ for $0\\le x\\le\\pi$ and $C(x)=2\\pi-x$ for $\\pi\\le x\\le2\\pi$ (a tent with peak $\\pi$ at $x=\\pi$, always $\\ge0$).",
+  "Graph of $T(x)=\\tan^{-1}(\\tan x)$: it is $x-n\\pi$ where $n$ is chosen so that the value lies in $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$; so $T=x$ on $\\left[0,\\dfrac{\\pi}{2}\\right)$, $T=x-\\pi$ on $\\left(\\dfrac{\\pi}{2},\\dfrac{3\\pi}{2}\\right)$, and $T=x-2\\pi$ on $\\left(\\dfrac{3\\pi}{2},2\\pi\\right]$.",
+  "On $\\left[0,\\dfrac{\\pi}{2}\\right)$: $x<3x$ holds for $x>0$, giving $\\left(0,\\dfrac{\\pi}{2}\\right)$ of length $\\dfrac{\\pi}{2}$.",
+  "On $\\left(\\dfrac{\\pi}{2},\\pi\\right]$: $T=x-\\pi\\le0$ while $C=x>0$, so $C<3T$ never holds.",
+  "On $\\left(\\pi,\\dfrac{3\\pi}{2}\\right)$: the inequality $2\\pi-x<3(x-\\pi)$ gives $4x>5\\pi$, i.e. $x>\\dfrac{5\\pi}{4}$, so the part $\\left(\\dfrac{5\\pi}{4},\\dfrac{3\\pi}{2}\\right)$ of length $\\dfrac{\\pi}{4}$.",
+  "On $\\left(\\dfrac{3\\pi}{2},2\\pi\\right]$: $T=x-2\\pi\\le0\\le C$, and at $x=2\\pi$ both are $0$, so the strict inequality fails throughout.",
+  "Hence $S=\\left(0,\\dfrac{\\pi}{2}\\right)\\cup\\left(\\dfrac{5\\pi}{4},\\dfrac{3\\pi}{2}\\right)$, total length $\\dfrac{\\pi}{2}+\\dfrac{\\pi}{4}=\\dfrac{3\\pi}{4}$, and $k=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "originality_note": "New: the tent graph of cos^-1(cos x) is compared with three times the sawtooth tan^-1(tan x) over one period, and the answer is the total length of the solution set (way 5). Closest known: solving sin^-1(sin x) = cos^-1(cos x) or sketching each composite separately. Different because: a weighted strict inequality between two different composites, with the sawtooth's negative parts removing two quarters of the period.",
+ "web_check": "not found",
+ "concept_use": {
+  "Graphs of inverse trigonometric functions": "The solution set is read from the tent graph of cos^-1(cos x) and the sawtooth graph of tan^-1(tan x) on each of four subintervals."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, principal values are stated, every condition is given, each sentence has one reading; the answer was recomputed with mpmath/numpy and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the points pi/2 and 3pi/2 (where tan is undefined) are excluded in the stem, that x = 0 and x = 2pi fail the strict inequality, and that the length 3pi/4 gives 0.75. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing cos^-1(cos x) and tan^-1(tan x) piecewise on [0,2pi] and solving a linear inequality on each piece.",
+ "justification": "Routine graph reading of two standard composites and four linear inequalities; several standard steps, no insight. Same demand as 2023-P1-Q8 (L2), counting solutions with tan^-1(tan x) piecewise.",
+ "nearest_anchor": "2023-P1-Q8 (L2)",
+ "confidence": "High",
+ "chapter": "Inverse trigonometric functions",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Graphs of inverse trigonometric functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}
