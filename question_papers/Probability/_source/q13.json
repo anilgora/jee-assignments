@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Five distinct balls are placed into four distinct boxes, each ball being put into any one of the four boxes with equal probability, independently of the other balls. Let $p$ be the probability that no box is empty, and let $q$ be the probability that exactly one box is empty. Then the value of $\\dfrac{q}{p}$ is ______."
+ ],
+ "hindi": [
+  "पाँच भिन्न गेंदें चार भिन्न डिब्बों में रखी जाती हैं, प्रत्येक गेंद अन्य गेंदों से स्वतन्त्र रूप से चारों डिब्बों में से किसी एक में समान प्रायिकता से रखी जाती है। माना कि $p$ इसकी प्रायिकता है कि कोई भी डिब्बा खाली नहीं है, तथा $q$ इसकी प्रायिकता है कि ठीक एक डिब्बा खाली है। तब $\\dfrac{q}{p}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Total $4^{5}=1024$ equally likely placements",
+  "No box empty (inclusion-exclusion over empty boxes): $4^{5}-\\binom{4}{1}3^{5}+\\binom{4}{2}2^{5}-\\binom{4}{3}1^{5}=1024-972+192-4=240$",
+  "Exactly one empty: choose it ($4$ ways), then the $5$ balls fill the other $3$ boxes with none empty: $3^{5}-3\\cdot2^{5}+3=150$; total $600$",
+  "$\\dfrac{q}{p}=\\dfrac{600}{240}=2.5$",
+  "",
+  "Final Answer: 2.50"
+ ],
+ "solution_full": [
+  "Each ball has $4$ choices, so there are $4^{5}=1024$ equally likely placements; $p$ and $q$ are counts divided by $1024$, so $\\dfrac{q}{p}$ is a ratio of counts.",
+  "No box empty. Let $B_{i}$ be the set of placements with box $i$ empty. Placements with $k$ specified boxes empty: $(4-k)^{5}$. By inclusion-exclusion the number with no empty box is $4^{5}-\\binom{4}{1}3^{5}+\\binom{4}{2}2^{5}-\\binom{4}{3}1^{5}=1024-972+192-4=240$. (Check: the occupancy pattern is $2,1,1,1$: $4\\cdot\\binom{5}{2}\\cdot3!=240$.)",
+  "Exactly one box empty. Choose the empty box in $4$ ways. The $5$ balls must then go into the remaining $3$ boxes with none of these empty: $3^{5}-\\binom{3}{1}2^{5}+\\binom{3}{2}1^{5}=243-96+3=150$. Total $4\\cdot150=600$.",
+  "Hence $p=\\dfrac{240}{1024}$, $q=\\dfrac{600}{1024}$ and $\\dfrac{q}{p}=\\dfrac{600}{240}=\\dfrac{5}{2}=2.5$.",
+  "",
+  "Final Answer: 2.50"
+ ],
+ "originality_note": "New: comparing the two leading occupancy events (none empty versus exactly one empty) for 5 balls in 4 boxes, which needs two different onto counts (way 5: probability linked with distributions into distinct boxes with and without empty boxes). Closest known: '5 distinct balls into 5 cells, probability exactly one cell empty'. Different because: both counts are needed, one over four boxes and one over three, and the comparison is the question.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Probability computed using permutations and combinations",
+  "Distribution of distinct objects into distinct boxes (empty allowed / not)"
+ ],
+ "concept_use": {
+  "Probability computed using permutations and combinations": "p and q are counts of placements over the 4^5 equally likely placements.",
+  "Distribution of distinct objects into distinct boxes (empty allowed / not)": "The no-empty and exactly-one-empty counts of distinct balls in distinct boxes are found by inclusion-exclusion."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (positive decimal). Changed: No change.",
+ "level": 3,
+ "key_step": "Counting onto placements into 4 boxes and into the 3 non-empty boxes.",
+ "justification": "Two inclusion-exclusion counts with exact arithmetic in a numerical answer; two ideas linked. Level 3, like 2026-P1-Q11 (L3) bounded distribution counting.",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

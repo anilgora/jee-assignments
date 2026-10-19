@@ -1,0 +1,55 @@
+{
+ "type": "SCQ",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "For every subset $X$ of the set $\\{1,2,3,\\dots,12\\}$, including the empty set and the whole set, the observation $d_{X}=n(X)-n(X')$ is recorded, where $X'$ denotes the complement of $X$ in $\\{1,2,3,\\dots,12\\}$. Then the standard deviation of these $2^{12}$ observations is",
+  "(A) $\\sqrt{3}$",
+  "(B) $2\\sqrt{3}$",
+  "(C) $12$",
+  "(D) $6$"
+ ],
+ "hindi": [
+  "समुच्चय $\\{1,2,3,\\dots,12\\}$ के प्रत्येक उपसमुच्चय $X$ (रिक्त समुच्चय तथा पूर्ण समुच्चय सहित) के लिए प्रेक्षण $d_{X}=n(X)-n(X')$ लिखा जाता है, जहाँ $X'$ समुच्चय $\\{1,2,3,\\dots,12\\}$ में $X$ का पूरक है। तब इन $2^{12}$ प्रेक्षणों का मानक विचलन है",
+  "(A) $\\sqrt{3}$",
+  "(B) $2\\sqrt{3}$",
+  "(C) $12$",
+  "(D) $6$"
+ ],
+ "solution": [
+  "$d_{X}=2n(X)-12$. The value $n(X)=k$ occurs for $\\binom{12}{k}$ subsets, so the frequencies of $n(X)$ are $\\binom{12}{k}$, $k=0,\\dots,12$",
+  "Dividing by $2^{12}$, these relative frequencies are the probabilities of $B\\left(12,\\dfrac{1}{2}\\right)$: mean $6$, variance $12\\cdot\\dfrac{1}{2}\\cdot\\dfrac{1}{2}=3$",
+  "So the data $n(X)$ have mean $6$ and variance $3$; $d=2n(X)-12$ has variance $2^{2}\\cdot3=12$ (shifting does not change variance)",
+  "Standard deviation $=\\sqrt{12}=2\\sqrt{3}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Since $n(X')=12-n(X)$, each observation is $d_{X}=2n(X)-12$.",
+  "Frequency distribution of $n(X)$: exactly $\\binom{12}{k}$ subsets have $k$ elements, $k=0,1,\\dots,12$, and the total frequency is $2^{12}$.",
+  "The relative frequency of $k$ is $\\dfrac{\\binom{12}{k}}{2^{12}}=\\binom{12}{k}\\left(\\dfrac{1}{2}\\right)^{k}\\left(\\dfrac{1}{2}\\right)^{12-k}$, which is the binomial distribution $B\\left(12,\\dfrac{1}{2}\\right)$. The mean and variance of the data equal the mean and variance of this distribution: $\\bar{x}=np=6$, $\\sigma^{2}=npq=3$.",
+  "Effect of a linear change on ungrouped data: if $y_{i}=ax_{i}+b$ then $\\sigma_{y}^{2}=a^{2}\\sigma_{x}^{2}$. With $a=2$, $b=-12$: $\\sigma_{d}^{2}=4\\cdot3=12$, and the mean of $d$ is $2\\cdot6-12=0$.",
+  "Hence $\\sigma_{d}=\\sqrt{12}=2\\sqrt{3}$. (Option (C) is the variance and option (A) is the standard deviation of $n(X)$, both typical slips.)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a data set indexed by all subsets of a 12-element set, whose frequency table is the binomial coefficients, so the standard deviation of the data is read off from the variance of B(12, 1/2) and then rescaled (way 5: binomial mean and variance linked with the variance of ungrouped data). Closest known: 'variance of the first n natural numbers' and 'mean and variance of B(n, p)'. Different because: the student must recognise the binomial distribution inside a data set that does not mention probability.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Mean and variance of a binomial distribution",
+  "Standard deviation and variance of ungrouped data"
+ ],
+ "concept_use": {
+  "Mean and variance of a binomial distribution": "The relative frequencies C(12,k)/2^12 form B(12, 1/2), whose mean 6 and variance 3 are used.",
+  "Standard deviation and variance of ungrouped data": "The standard deviation of the 2^12 observations is found with the rule that y = ax + b scales the variance of ungrouped data by a^2."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (Option B). Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising the frequencies C(12,k) as the binomial distribution B(12, 1/2).",
+ "justification": "Two ideas linked (data set to binomial distribution, then the linear change rule) with traps in the options. Level 3; nearest anchor 2026-P2-Q12 (L2) for the statistics part, one level up for the hidden binomial.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

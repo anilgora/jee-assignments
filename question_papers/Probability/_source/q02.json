@@ -1,0 +1,54 @@
+{
+ "type": "SCQ",
+ "chapter": "Probability",
+ "target_level": 2,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $S=\\{\\omega_{1},\\omega_{2},\\omega_{3},\\omega_{4}\\}$ be the sample space of a random experiment, and let a probability be assigned to its elementary events by $P(\\{\\omega_{1}\\})=a$, $P(\\{\\omega_{2}\\})=2a$, $P(\\{\\omega_{3}\\})=b$ and $P(\\{\\omega_{4}\\})=\\dfrac{3b^{2}}{2}$, where $a$ and $b$ are real numbers. If the odds in favour of the event $\\{\\omega_{1},\\omega_{3}\\}$ are $1:1$, then the odds in favour of the event $\\{\\omega_{4}\\}$ are",
+  "(A) $1:5$",
+  "(B) $1:6$",
+  "(C) $5:1$",
+  "(D) $3:1$"
+ ],
+ "hindi": [
+  "माना कि $S=\\{\\omega_{1},\\omega_{2},\\omega_{3},\\omega_{4}\\}$ एक यादृच्छिक प्रयोग का प्रतिदर्श समष्टि है, तथा इसकी प्रारम्भिक घटनाओं को प्रायिकताएँ $P(\\{\\omega_{1}\\})=a$, $P(\\{\\omega_{2}\\})=2a$, $P(\\{\\omega_{3}\\})=b$ तथा $P(\\{\\omega_{4}\\})=\\dfrac{3b^{2}}{2}$ द्वारा दी गई हैं, जहाँ $a$ तथा $b$ वास्तविक संख्याएँ हैं। यदि घटना $\\{\\omega_{1},\\omega_{3}\\}$ के पक्ष में संयोगानुपात $1:1$ है, तो घटना $\\{\\omega_{4}\\}$ के पक्ष में संयोगानुपात है",
+  "(A) $1:5$",
+  "(B) $1:6$",
+  "(C) $5:1$",
+  "(D) $3:1$"
+ ],
+ "solution": [
+  "Odds $1:1$ $\\Rightarrow P(\\{\\omega_{1},\\omega_{3}\\})=\\dfrac{1}{2}\\Rightarrow a+b=\\dfrac{1}{2}$",
+  "Sum of probabilities $=1$: $3a+b+\\dfrac{3b^{2}}{2}=1\\Rightarrow \\dfrac{3}{2}-2b+\\dfrac{3b^{2}}{2}=1\\Rightarrow 3b^{2}-4b+1=0\\Rightarrow b=1$ or $b=\\dfrac{1}{3}$",
+  "$b=1$ gives $a=-\\dfrac{1}{2}<0$, which violates $P(E)\\ge 0$; so $b=\\dfrac{1}{3}$, $a=\\dfrac{1}{6}$",
+  "$P(\\{\\omega_{4}\\})=\\dfrac{3}{2}\\cdot\\dfrac{1}{9}=\\dfrac{1}{6}$, so the odds in favour are $\\dfrac{1}{6}:\\dfrac{5}{6}=1:5$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Odds in favour of an event $E$ equal to $m:n$ means $P(E)=\\dfrac{m}{m+n}$. Hence $P(\\{\\omega_{1},\\omega_{3}\\})=\\dfrac{1}{2}$. By additivity over the disjoint elementary events, $a+b=\\dfrac{1}{2}$.",
+  "Axiom $P(S)=1$: $a+2a+b+\\dfrac{3b^{2}}{2}=1$, i.e. $3a+b+\\dfrac{3b^{2}}{2}=1$.",
+  "Substituting $a=\\dfrac{1}{2}-b$: $\\dfrac{3}{2}-3b+b+\\dfrac{3b^{2}}{2}=1\\Rightarrow \\dfrac{3b^{2}}{2}-2b+\\dfrac{1}{2}=0\\Rightarrow 3b^{2}-4b+1=0\\Rightarrow (3b-1)(b-1)=0$.",
+  "If $b=1$, then $a=-\\dfrac{1}{2}$, so $P(\\{\\omega_{1}\\})<0$ (and $P(\\{\\omega_{4}\\})=\\dfrac{3}{2}>1$). This violates the axiom $P(E)\\ge 0$, so this root is rejected.",
+  "If $b=\\dfrac{1}{3}$, then $a=\\dfrac{1}{6}$ and the probabilities are $\\dfrac{1}{6},\\dfrac{1}{3},\\dfrac{1}{3},\\dfrac{1}{6}$, all non-negative with sum $1$. This is the assignment.",
+  "$P(\\{\\omega_{4}\\})=\\dfrac{3}{2}\\cdot\\dfrac{1}{9}=\\dfrac{1}{6}$ and $P(\\{\\omega_{4}\\}^{c})=\\dfrac{5}{6}$, so the odds in favour of $\\{\\omega_{4}\\}$ are $1:5$.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: a probability assignment with a quadratic term, where the odds condition and P(S) = 1 give two candidate assignments and the non-negativity axiom (not the algebra) rejects one of them (way 5: odds linked with the axioms). Closest known: 'odds in favour of A are 2:3, find P(A)' and assignments of probabilities to sample points checked for validity. Different because: the validity check is the step that selects the answer.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Axiomatic probability; odds in favour and against"
+ ],
+ "concept_use": {
+  "Axiomatic probability; odds in favour and against": "Odds 1:1 are converted to P = 1/2, P(S) = 1 gives the quadratic, the axiom P(E) >= 0 rejects b = 1, and the answer is stated as odds in favour."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (Option A). Changed: No change.",
+ "level": 2,
+ "key_step": "Rejecting the root b = 1 because it makes P({w1}) negative.",
+ "justification": "A short chain: odds to probability, P(S) = 1, solve a quadratic, reject a root by the axioms, convert back to odds. Routine multi-step with one check, Level 2; comparable to the routine conversions of 2024-P1-Q8 (L2).",
+ "nearest_anchor": "2024-P1-Q8 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

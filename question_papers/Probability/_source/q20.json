@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Let $A$, $B$ and $C$ be three events such that $P(A)=0.5$, $P(B)=0.4$ and $P(C)=0.6$, each pair of the three events is independent, and the probability that none of $A$, $B$, $C$ occurs is $0.15$. Then the value of $P(A\\cap B\\cap C)-P(A)P(B)P(C)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A$, $B$ तथा $C$ तीन घटनाएँ हैं जिनके लिए $P(A)=0.5$, $P(B)=0.4$ तथा $P(C)=0.6$ है, इन तीनों में से प्रत्येक युग्म स्वतन्त्र है, तथा $A$, $B$, $C$ में से किसी के भी घटित न होने की प्रायिकता $0.15$ है। तब $P(A\\cap B\\cap C)-P(A)P(B)P(C)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Pairwise independence and the multiplication theorem: $P(A\\cap B)=0.2$, $P(A\\cap C)=0.3$, $P(B\\cap C)=0.24$",
+  "$P(A\\cup B\\cup C)=1-0.15=0.85=1.5-0.74+P(A\\cap B\\cap C)\\Rightarrow P(A\\cap B\\cap C)=0.09$",
+  "$P(A)P(B)P(C)=0.12$, so the events are not mutually independent; required value $=0.09-0.12=-0.03$",
+  "(Consistency: the Venn regions $0.09,0.11,0.21,0.15,0.09,0.05,0.15,0.15$ are all non-negative)",
+  "",
+  "Final Answer: -0.03"
+ ],
+ "solution_full": [
+  "For independent events the multiplication theorem gives $P(E\\cap F)=P(E)P(F)$. Pairwise independence therefore gives $P(A\\cap B)=0.5\\cdot0.4=0.2$, $P(A\\cap C)=0.5\\cdot0.6=0.3$, $P(B\\cap C)=0.4\\cdot0.6=0.24$. It says nothing about $P(A\\cap B\\cap C)$.",
+  "The probability that at least one occurs is $1-0.15=0.85$. The addition theorem for three events gives $0.85=(0.5+0.4+0.6)-(0.2+0.3+0.24)+P(A\\cap B\\cap C)=0.76+P(A\\cap B\\cap C)$, so $P(A\\cap B\\cap C)=0.09$.",
+  "The data are consistent: the regions 'all three' $0.09$, 'exactly $A,B$' $0.11$, 'exactly $A,C$' $0.21$, 'exactly $B,C$' $0.15$, 'only $A$' $0.09$, 'only $B$' $0.05$, 'only $C$' $0.15$, 'none' $0.15$ are non-negative and add up to $1$.",
+  "Mutual independence would need $P(A\\cap B\\cap C)=P(A)P(B)P(C)=0.12$; here $0.09\\neq0.12$, so the events are pairwise but not mutually independent.",
+  "$P(A\\cap B\\cap C)-P(A)P(B)P(C)=0.09-0.12=-0.03$.",
+  "",
+  "Final Answer: -0.03"
+ ],
+ "originality_note": "New: pairwise independence fixes all pair terms, and the 'none' probability then fixes the triple term through the addition theorem, measuring exactly how far the events are from mutual independence (way 5: pairwise versus mutual independence linked with the multiplication theorem). Closest known: Bernstein's example (two coins, or a four-point space) showing that pairwise does not imply mutual independence. Different because: the failure of mutual independence is computed from given data rather than shown by a fixed example.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Independent events; pairwise vs mutual independence of three events",
+  "Multiplication theorem"
+ ],
+ "concept_use": {
+  "Independent events; pairwise vs mutual independence of three events": "Pairwise independence gives the pair terms but not the triple term; the answer measures the failure of mutual independence.",
+  "Multiplication theorem": "P(A n B) = P(A)P(B) etc. are products by the multiplication theorem for independent events."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (negative decimal). Changed: No change.",
+ "level": 3,
+ "key_step": "Getting P(A n B n C) from the addition theorem instead of assuming it is the product.",
+ "justification": "Two ideas linked (pairwise products and the three-event addition theorem) with the mutual-independence trap; numerical. Level 3, like 2021-P1-Q13 (L3).",
+ "nearest_anchor": "2021-P1-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

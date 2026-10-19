@@ -1,0 +1,44 @@
+{
+ "type": "Numerical",
+ "chapter": "Probability",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $X$ denote the number of successes in $5$ independent trials, each with the same probability of success $p$, where $0<p<1$. It is given that the variance of $X$ is $1.2$ and that $P(X=4)>P(X=1)$. Then the value of $\\dfrac{P(X=5)}{P(X=4)}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $X$, $5$ स्वतन्त्र परीक्षणों में सफलताओं की संख्या है, प्रत्येक परीक्षण में सफलता की प्रायिकता समान $p$ है, जहाँ $0<p<1$ है। दिया है कि $X$ का प्रसरण $1.2$ है तथा $P(X=4)>P(X=1)$ है। तब $\\dfrac{P(X=5)}{P(X=4)}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\mathrm{Var}(X)=5pq=1.2\\Rightarrow pq=0.24\\Rightarrow p=0.6$ or $0.4$",
+  "$\\dfrac{P(X=4)}{P(X=1)}=\\dfrac{5p^{4}q}{5pq^{4}}=\\left(\\dfrac{p}{q}\\right)^{3}>1\\Rightarrow p>q$, so $p=0.6$, $q=0.4$",
+  "$\\dfrac{P(X=5)}{P(X=4)}=\\dfrac{p^{5}}{5p^{4}q}=\\dfrac{p}{5q}=\\dfrac{0.6}{2}=0.3$",
+  "",
+  "Final Answer: 0.30"
+ ],
+ "solution_full": [
+  "$X\\sim B(5,p)$ with $q=1-p$. Variance of a binomial distribution: $npq=5pq=1.2$, so $pq=0.24$, i.e. $p^{2}-p+0.24=0$, giving $p=0.6$ or $p=0.4$.",
+  "Choosing the root: $P(X=4)=\\binom{5}{4}p^{4}q$ and $P(X=1)=\\binom{5}{1}pq^{4}$, so $\\dfrac{P(X=4)}{P(X=1)}=\\left(\\dfrac{p}{q}\\right)^{3}$. This exceeds $1$ only if $p>q$, so $p=0.6$, $q=0.4$ (mean $3$, variance $1.2$).",
+  "$\\dfrac{P(X=5)}{P(X=4)}=\\dfrac{p^{5}}{5p^{4}q}=\\dfrac{p}{5q}=\\dfrac{0.6}{5\\cdot0.4}=0.3$.",
+  "",
+  "Final Answer: 0.30"
+ ],
+ "originality_note": "New: the binomial variance gives two symmetric values of p, and an inequality between two binomial probabilities (not the mean) selects one of them (way 5: variance of a binomial linked with comparison of binomial probabilities). Closest known: 'mean and variance of a binomial are given; find n and p'. Different because: only the variance is given, so the student must break the p, q symmetry with the probability inequality.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Binomial probability distribution",
+  "Mean and variance of a binomial distribution"
+ ],
+ "concept_use": {
+  "Binomial probability distribution": "P(X = 4)/P(X = 1) = (p/q)^3 and P(X = 5)/P(X = 4) = p/(5q) use the binomial probabilities.",
+  "Mean and variance of a binomial distribution": "The variance 5pq = 1.2 of the binomial distribution gives p = 0.6 or 0.4."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (decimal between 0 and 1). Changed: No change.",
+ "level": 2,
+ "key_step": "Selecting p = 0.6 from P(X = 4) > P(X = 1).",
+ "justification": "A quadratic from the variance, a root choice and a ratio; routine. Level 2.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

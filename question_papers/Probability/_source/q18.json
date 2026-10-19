@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "A fair die is rolled, and if it shows the number $k$, an urn is filled with $k$ white balls and $6-k$ black balls. Three balls are then drawn from the urn one after another without replacement. Given that the first two balls drawn are white, the conditional probability that the third ball drawn is also white is ______."
+ ],
+ "hindi": [
+  "एक अनभिनत पासा फेंका जाता है, तथा यदि उस पर संख्या $k$ आती है, तो एक कलश में $k$ सफेद गेंदें तथा $6-k$ काली गेंदें भरी जाती हैं। फिर कलश से तीन गेंदें एक के बाद एक बिना प्रतिस्थापन के निकाली जाती हैं। दिया है कि पहली दो निकाली गई गेंदें सफेद हैं, तो तीसरी निकाली गई गेंद के भी सफेद होने की सप्रतिबन्ध प्रायिकता ______ है।"
+ ],
+ "solution": [
+  "Multiplication theorem: $P(W_{1}W_{2}\\mid k)=\\dfrac{k}{6}\\cdot\\dfrac{k-1}{5}$, $P(W_{1}W_{2}W_{3}\\mid k)=\\dfrac{k(k-1)(k-2)}{120}$",
+  "Total probability: $P(W_{1}W_{2})=\\dfrac{1}{6}\\sum_{k=1}^{6}\\dfrac{k(k-1)}{30}=\\dfrac{70}{180}$, $P(W_{1}W_{2}W_{3})=\\dfrac{1}{6}\\sum\\dfrac{k(k-1)(k-2)}{120}=\\dfrac{210}{720}$",
+  "($\\sum k(k-1)=0+2+6+12+20+30=70$, $\\sum k(k-1)(k-2)=6+24+60+120=210$)",
+  "Required $=\\dfrac{210/720}{70/180}=\\dfrac{3}{4}=0.75$; equivalently the Bayes posterior of $k$ is $\\propto k(k-1)$ and $\\sum\\dfrac{k(k-1)}{70}\\cdot\\dfrac{k-2}{4}=\\dfrac{210}{280}$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "Let $K$ be the number on the die and $W_{i}$ the event that the $i$-th ball is white. Given $K=k$, by the multiplication theorem for draws without replacement: $P(W_{1}\\cap W_{2}\\mid K=k)=\\dfrac{k}{6}\\cdot\\dfrac{k-1}{5}=\\dfrac{k(k-1)}{30}$ and $P(W_{1}\\cap W_{2}\\cap W_{3}\\mid K=k)=\\dfrac{k(k-1)(k-2)}{120}$.",
+  "Law of total probability over $k=1,\\dots,6$: $P(W_{1}\\cap W_{2})=\\dfrac{1}{6}\\cdot\\dfrac{0+2+6+12+20+30}{30}=\\dfrac{70}{180}=\\dfrac{7}{18}$ and $P(W_{1}\\cap W_{2}\\cap W_{3})=\\dfrac{1}{6}\\cdot\\dfrac{0+0+6+24+60+120}{120}=\\dfrac{210}{720}=\\dfrac{7}{24}$.",
+  "Conditional probability: $P(W_{3}\\mid W_{1}\\cap W_{2})=\\dfrac{P(W_{1}\\cap W_{2}\\cap W_{3})}{P(W_{1}\\cap W_{2})}=\\dfrac{7/24}{7/18}=\\dfrac{18}{24}=\\dfrac{3}{4}$.",
+  "The same through Bayes' theorem: $P(K=k\\mid W_{1}\\cap W_{2})=\\dfrac{k(k-1)}{70}$ (so the urn with $6$ white balls has posterior $\\dfrac{30}{70}$); then $P(W_{3}\\mid W_{1}\\cap W_{2})=\\sum_{k}\\dfrac{k(k-1)}{70}\\cdot\\dfrac{k-2}{4}=\\dfrac{210}{280}=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "originality_note": "New: an urn whose composition is set by a die roll, observed through two white draws without replacement, and asked for the next draw; the posterior on the composition is proportional to k(k - 1) (way 5: multiplication theorem, total probability and Bayes linked in one prediction). Closest known: the two-ball urn puzzle on cut-the-knot and Laplace's rule of succession. Different because: the prior comes from a die, draws are without replacement, and the answer is a ratio of two total-probability sums.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Conditional probability and the reduced sample space",
+  "Multiplication theorem",
+  "Law of total probability",
+  "Bayes' theorem"
+ ],
+ "concept_use": {
+  "Conditional probability and the reduced sample space": "The answer is P(W3 | W1 n W2) = P(W1 W2 W3)/P(W1 W2), a conditional probability.",
+  "Multiplication theorem": "P(W1 n W2 | K = k) and P(W1 n W2 n W3 | K = k) are products of successive draw probabilities (multiplication theorem).",
+  "Law of total probability": "P(W1 n W2) and P(W1 n W2 n W3) are sums over the six values of k (law of total probability).",
+  "Bayes' theorem": "The posterior P(K = k | W1 n W2) = k(k - 1)/70 is Bayes' theorem, used in the second route."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (decimal between 0 and 1). Changed: No change.",
+ "level": 3,
+ "key_step": "Weighting the urns by k(k - 1) after two white draws.",
+ "justification": "Total probability and Bayes over six hypotheses with draws without replacement; two ideas linked with exact sums. Level 3, like 2024-P2-Q9 (L3).",
+ "nearest_anchor": "2024-P2-Q9 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

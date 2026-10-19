@@ -1,0 +1,60 @@
+{
+ "type": "SCQ",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "A subset $X$ of $\\{1,2,3,\\dots,10\\}$ is chosen at random, all $2^{10}$ subsets being equally likely. The probability that each of the three sets $X\\cap\\{1,2,3\\}$, $X\\cap\\{3,4,5\\}$ and $X\\cap\\{5,6,7\\}$ is non-empty is",
+  "(A) $\\dfrac{39}{128}$",
+  "(B) $\\dfrac{89}{128}$",
+  "(C) $\\dfrac{343}{512}$",
+  "(D) $\\dfrac{85}{128}$"
+ ],
+ "hindi": [
+  "समुच्चय $\\{1,2,3,\\dots,10\\}$ का एक उपसमुच्चय $X$ यादृच्छया चुना जाता है, सभी $2^{10}$ उपसमुच्चय समसम्भाव्य हैं। तीनों समुच्चयों $X\\cap\\{1,2,3\\}$, $X\\cap\\{3,4,5\\}$ तथा $X\\cap\\{5,6,7\\}$ में से प्रत्येक के अरिक्त होने की प्रायिकता है",
+  "(A) $\\dfrac{39}{128}$",
+  "(B) $\\dfrac{89}{128}$",
+  "(C) $\\dfrac{343}{512}$",
+  "(D) $\\dfrac{85}{128}$"
+ ],
+ "solution": [
+  "Each element is in $X$ with probability $\\dfrac{1}{2}$, independently; $P(X$ misses a given set of $k$ elements$)=2^{-k}$",
+  "Let $A_{1},A_{2},A_{3}$: $X$ misses $\\{1,2,3\\}$, $\\{3,4,5\\}$, $\\{5,6,7\\}$. Required $=1-P(A_{1}\\cup A_{2}\\cup A_{3})$",
+  "$P(A_{i})=\\dfrac{1}{8}$; $A_{1}\\cap A_{2}$: misses $\\{1,\\dots,5\\}$, $\\dfrac{1}{32}$; $A_{2}\\cap A_{3}$: $\\dfrac{1}{32}$; $A_{1}\\cap A_{3}$: misses $6$ elements, $\\dfrac{1}{64}$; $A_{1}\\cap A_{2}\\cap A_{3}$: $\\dfrac{1}{128}$",
+  "$P(A_{1}\\cup A_{2}\\cup A_{3})=\\dfrac{3}{8}-\\left(\\dfrac{1}{32}+\\dfrac{1}{32}+\\dfrac{1}{64}\\right)+\\dfrac{1}{128}=\\dfrac{48-10+1}{128}=\\dfrac{39}{128}$",
+  "Required probability $=1-\\dfrac{39}{128}=\\dfrac{89}{128}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Since all $2^{10}$ subsets are equally likely, each element of $\\{1,\\dots,10\\}$ belongs to $X$ with probability $\\dfrac{1}{2}$, independently of the others. Hence $X$ misses a fixed set of $k$ elements with probability $\\dfrac{2^{10-k}}{2^{10}}=2^{-k}$. Elements $8,9,10$ play no role.",
+  "Complement: let $A_{1}$, $A_{2}$, $A_{3}$ be the events that $X$ contains no element of $\\{1,2,3\\}$, $\\{3,4,5\\}$, $\\{5,6,7\\}$ respectively. The required event is the complement of 'at least one of $A_{1},A_{2},A_{3}$ occurs'.",
+  "Single events: each set has $3$ elements, so $P(A_{1})=P(A_{2})=P(A_{3})=\\dfrac{1}{8}$.",
+  "Pairs: $A_{1}\\cap A_{2}$ means $X$ misses $\\{1,2,3\\}\\cup\\{3,4,5\\}=\\{1,2,3,4,5\\}$ (5 elements, because the sets share 3), probability $\\dfrac{1}{32}$. Similarly $P(A_{2}\\cap A_{3})=\\dfrac{1}{32}$. But $\\{1,2,3\\}$ and $\\{5,6,7\\}$ are disjoint, so $A_{1}\\cap A_{3}$ means missing 6 elements: probability $\\dfrac{1}{64}$.",
+  "Triple: $X$ misses $\\{1,\\dots,7\\}$, probability $\\dfrac{1}{128}$.",
+  "Addition theorem for three events: $P(A_{1}\\cup A_{2}\\cup A_{3})=\\dfrac{3}{8}-\\dfrac{1}{32}-\\dfrac{1}{32}-\\dfrac{1}{64}+\\dfrac{1}{128}=\\dfrac{48-4-4-2+1}{128}=\\dfrac{39}{128}$.",
+  "Hence the required probability is $1-\\dfrac{39}{128}=\\dfrac{89}{128}$. (Treating the three conditions as independent would give $\\left(\\dfrac{7}{8}\\right)^{3}=\\dfrac{343}{512}$, which is wrong because the sets overlap.)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a random subset required to hit three overlapping blocks, so the pairwise intersections of the complementary events have unequal probabilities (shared element versus disjoint blocks) and inclusion-exclusion has to track the overlap structure (way 5: complement, addition theorem for three events and inclusion-exclusion linked). Closest known: 'probability that a number is divisible by 2, 3 or 5' and random-subset hitting problems in research papers. Different because: the unequal pair terms 1/32, 1/32, 1/64 come from the geometry of the blocks, not from given data.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Addition theorem for two and three events",
+  "Probability using the principle of inclusion-exclusion",
+  "Complementary events and 'at least one' problems"
+ ],
+ "concept_use": {
+  "Addition theorem for two and three events": "P(A1 U A2 U A3) is expanded by the addition theorem for three events.",
+  "Probability using the principle of inclusion-exclusion": "The three intersection terms have different sizes and are combined by inclusion-exclusion over the missed blocks.",
+  "Complementary events and 'at least one' problems": "The required 'every block is hit' event is the complement of 'at least one block is missed'."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (Option B). Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that the pair of disjoint blocks gives 1/64 while the overlapping pairs give 1/32.",
+ "justification": "Complement plus three-event inclusion-exclusion with unequal intersection terms; two ideas linked and an independence trap in the options. Level 3, between 2021-P2-Q17 (L1, plain inclusion-exclusion) and 2021-P1-Q13 (L3).",
+ "nearest_anchor": "2021-P1-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Probability",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "In a population, a disease is present in one person out of every ten. A test for the disease gives a positive result with probability $0.9$ for a person who has the disease and with probability $0.1$ for a person who does not. A person chosen at random from the population is tested twice; given the disease status of the person, the results of the two tests are independent. Let $p_{1}$ be the conditional probability that the person has the disease given that the first test is positive, and let $p_{2}$ be the conditional probability that the person has the disease given that both tests are positive. Then the value of $\\dfrac{p_{2}}{p_{1}}$ is ______."
+ ],
+ "hindi": [
+  "एक जनसंख्या में प्रत्येक दस व्यक्तियों में से एक व्यक्ति को एक रोग है। रोग के लिए एक परीक्षण, रोगी व्यक्ति के लिए प्रायिकता $0.9$ से तथा रोगरहित व्यक्ति के लिए प्रायिकता $0.1$ से धनात्मक परिणाम देता है। जनसंख्या से यादृच्छया चुने गए एक व्यक्ति का दो बार परीक्षण किया जाता है; व्यक्ति की रोग-स्थिति दिए होने पर दोनों परीक्षणों के परिणाम स्वतन्त्र हैं। माना कि $p_{1}$ इसकी सप्रतिबन्ध प्रायिकता है कि व्यक्ति रोगी है जबकि पहला परीक्षण धनात्मक है, तथा $p_{2}$ इसकी सप्रतिबन्ध प्रायिकता है कि व्यक्ति रोगी है जबकि दोनों परीक्षण धनात्मक हैं। तब $\\dfrac{p_{2}}{p_{1}}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Total probability: $P(T_{1})=0.1\\cdot0.9+0.9\\cdot0.1=0.18$; Bayes: $p_{1}=\\dfrac{0.09}{0.18}=0.5$",
+  "Conditional independence: $P(T_{1}T_{2}\\mid D)=0.81$, $P(T_{1}T_{2}\\mid D')=0.01$; $P(T_{1}T_{2})=0.081+0.009=0.09$",
+  "Bayes: $p_{2}=\\dfrac{0.081}{0.09}=0.9$",
+  "$\\dfrac{p_{2}}{p_{1}}=1.8$",
+  "",
+  "Final Answer: 1.80"
+ ],
+ "solution_full": [
+  "Let $D$ be 'the person has the disease', $T_{1}$, $T_{2}$ 'first / second test positive'. $P(D)=0.1$, $P(D')=0.9$, $P(T_{i}\\mid D)=0.9$, $P(T_{i}\\mid D')=0.1$.",
+  "One test. Law of total probability: $P(T_{1})=P(D)P(T_{1}\\mid D)+P(D')P(T_{1}\\mid D')=0.09+0.09=0.18$. Bayes' theorem: $p_{1}=P(D\\mid T_{1})=\\dfrac{0.09}{0.18}=0.5$.",
+  "Two tests. Given $D$, the tests are independent, so $P(T_{1}\\cap T_{2}\\mid D)=0.9^{2}=0.81$; given $D'$, $P(T_{1}\\cap T_{2}\\mid D')=0.1^{2}=0.01$.",
+  "Total probability: $P(T_{1}\\cap T_{2})=0.1\\cdot0.81+0.9\\cdot0.01=0.081+0.009=0.09$. Bayes: $p_{2}=\\dfrac{0.081}{0.09}=0.9$.",
+  "(Equivalently, the posterior $0.5$ after the first test serves as the prior for the second: $\\dfrac{0.5\\cdot0.9}{0.5\\cdot0.9+0.5\\cdot0.1}=0.9$.)",
+  "$\\dfrac{p_{2}}{p_{1}}=\\dfrac{0.9}{0.5}=1.8$. Note that the two tests are not unconditionally independent: $P(T_{1}\\cap T_{2})=0.09\\neq0.18^{2}$.",
+  "",
+  "Final Answer: 1.80"
+ ],
+ "originality_note": "New: one test raises the posterior from 0.1 to 0.5 and a second conditionally independent test to 0.9, and the question compares the two posteriors (way 5: total probability and Bayes applied twice with conditional independence). Closest known: standard single-test diagnostic Bayes problems and sequential Bayes updating in statistics courses. Different because: the second total probability needs conditional, not unconditional, independence, and the trap of squaring P(T1) is built in.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Law of total probability",
+  "Bayes' theorem"
+ ],
+ "concept_use": {
+  "Law of total probability": "P(T1) = 0.18 and P(T1 n T2) = 0.09 are found by the law of total probability over D and D'.",
+  "Bayes' theorem": "p1 = 0.5 and p2 = 0.9 are posteriors by Bayes' theorem."
+ },
+ "stem_review": "Read as a student: every symbol, object and random experiment is defined before use, every condition is stated, each sentence has one reading; the answer was recomputed independently in Python (exact fractions, brute-force enumeration or sympy), is unique and equals the Answer Plan (positive decimal). Changed: No change.",
+ "level": 3,
+ "key_step": "Using conditional independence of the tests given the disease status for the second update.",
+ "justification": "Two Bayes computations with a conditional-independence point; two ideas linked. Level 3, like 2025-P2-Q11 (L3).",
+ "nearest_anchor": "2025-P2-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}
