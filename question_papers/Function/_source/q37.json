@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $a$ be a positive real number and let $f:[1,2]\\to\\mathbb{R}$ be defined by $f(x)=x+\\dfrac{a}{x}$. If the least value of $f$ is $\\dfrac{9}{5}$, then the value of $a$ is ______."
+ ],
+ "hindi": [
+  "माना $a$ एक धनात्मक वास्तविक संख्या है तथा $f:[1,2]\\to\\mathbb{R}$, $f(x)=x+\\dfrac{a}{x}$ द्वारा परिभाषित है। यदि $f$ का न्यूनतम मान $\\dfrac{9}{5}$ है, तो $a$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f$ is continuous on the closed interval $[1,2]$, so it is bounded and attains its least value, at $x=1$, $x=2$ or at the critical point $x=\\sqrt a$ ($f'(x)=1-\\dfrac{a}{x^{2}}$)",
+  "Case $1\\le a\\le4$ ($\\sqrt a\\in[1,2]$): least value $2\\sqrt a\\ge2>\\dfrac95$, impossible (the AM-GM answer $a=\\dfrac{81}{100}$ has $\\sqrt a=\\dfrac{9}{10}\\notin[1,2]$)",
+  "Case $a>4$: $f'<0$ on $[1,2]$, least value $f(2)=2+\\dfrac a2>4$, impossible",
+  "Case $0<a<1$: $f'>0$ on $[1,2]$, least value $f(1)=1+a=\\dfrac95\\Rightarrow a=\\dfrac45$",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "solution_full": [
+  "$f$ is continuous on the closed, bounded interval $[1,2]$, so it is bounded there and attains a greatest and a least value. The least value occurs at an end point $x=1$, $x=2$ or at an interior critical point.",
+  "$f'(x)=1-\\dfrac{a}{x^{2}}$ vanishes only at $x=\\sqrt a$ (as $x>0$), and $f'$ changes from negative to positive there, so $x=\\sqrt a$ is a minimum point of $f$ on $(0,\\infty)$ with $f(\\sqrt a)=2\\sqrt a$.",
+  "Case $1\\le a\\le4$: $\\sqrt a\\in[1,2]$, so the least value of $f$ on $[1,2]$ is $2\\sqrt a\\ge2$. It cannot equal $\\dfrac95<2$. (Setting $2\\sqrt a=\\dfrac95$ gives $a=\\dfrac{81}{100}$, but then $\\sqrt a=\\dfrac9{10}$ lies outside $[1,2]$, so this value is wrong.)",
+  "Case $a>4$: $\\sqrt a>2$, $f'(x)<0$ on $[1,2]$, $f$ is decreasing, and the least value is $f(2)=2+\\dfrac a2>4$. Impossible.",
+  "Case $0<a<1$: $\\sqrt a<1$, $f'(x)>0$ on $[1,2]$, $f$ is increasing, and the least value is $f(1)=1+a$. Then $1+a=\\dfrac95$ gives $a=\\dfrac45$, which indeed lies in $(0,1)$.",
+  "Check: for $a=\\dfrac45$, $f(1)=\\dfrac95$, $f(2)=\\dfrac{12}{5}$ and $f$ is increasing on $[1,2]$, so the least value is $\\dfrac95$.",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "originality_note": "New: an inverse problem (the least value on a closed interval is given, the parameter is asked) in which the AM-GM critical value 2 sqrt(a) gives a tempting wrong answer 0.81 because the critical point falls outside the interval (way 5, link of interval extremum with the location of the critical point). Closest known: least value of x + a/x for x > 0, which is 2 sqrt(a). Different because: the student must split on the position of sqrt(a) relative to [1, 2], and only the end-point case is consistent.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, function and domain introduced, conditions complete, one reading of each sentence; answer recomputed with sympy/numpy and unique; answer matches the plan. Checked that the least value of f on [1,2] is strictly increasing in a, so a = 4/5 is the only solution (numerical scan over a in (0, 5]). Changed: No change.",
+ "level": 3,
+ "key_step": "Case split on the position of the critical point sqrt(a) relative to [1, 2]; the interior case gives 2 sqrt(a) >= 2 > 9/5, so the minimum is at the end point x = 1.",
+ "justification": "Two linked ideas: the extreme value on a closed interval (end points vs interior critical point) and the consistency check of the case, with a strong trap (a = 0.81) and no options. Comparable to 2026-P1-Q1 (L3), extrema decided by a sign analysis of f'.",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Bounded functions; greatest and least values": "f is continuous on the closed interval [1,2], hence bounded with attained least value; the cases a in [1,4] and a > 4 give least values >= 2 and > 4, so they are rejected.",
+  "Greatest and least value of a function in an interval": "Least value on [1,2] found by comparing the end points with the critical point x = sqrt(a); for 0 < a < 1 it is f(1) = 1 + a = 9/5."
+ },
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Bounded functions; greatest and least values",
+  "Greatest and least value of a function in an interval"
+ ],
+ "chapter": "Function",
+ "multi_concept": false,
+ "eq_relation": false
+}

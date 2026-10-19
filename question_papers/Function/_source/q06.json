@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Let $f:(0,\\infty)\\to\\mathbb{R}$ be a function such that $f(xy)=f(x)+f(y)$ for all $x,y\\in(0,\\infty)$ and $\\displaystyle\\lim_{x\\to1}\\dfrac{f(x)}{x-1}=3$. Then the value of $\\displaystyle\\lim_{n\\to\\infty}\\sum_{r=1}^{n}\\dfrac{r}{n^{2}}\\,f\\left(\\dfrac{r}{n}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to\\mathbb{R}$ एक फलन है, जिसके लिए सभी $x,y\\in(0,\\infty)$ के लिए $f(xy)=f(x)+f(y)$ है तथा $\\displaystyle\\lim_{x\\to1}\\dfrac{f(x)}{x-1}=3$ है। तब $\\displaystyle\\lim_{n\\to\\infty}\\sum_{r=1}^{n}\\dfrac{r}{n^{2}}\\,f\\left(\\dfrac{r}{n}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$x=y=1\\Rightarrow f(1)=0$, so the limit says $f'(1)=3$",
+  "$f(x+t)-f(x)=f\\left(1+\\dfrac tx\\right)\\Rightarrow f'(x)=\\dfrac{3}{x}\\Rightarrow f(x)=3\\log_e x$",
+  "$\\displaystyle\\sum_{r=1}^{n}\\dfrac rn\\cdot3\\log_e\\dfrac rn\\cdot\\dfrac1n\\to\\int_0^1 3x\\log_e x\\,dx$ (integrand $\\to0$ as $x\\to0^{+}$)",
+  "By parts: $\\displaystyle\\int_0^1x\\log_e x\\,dx=\\left[\\dfrac{x^{2}}{2}\\log_e x\\right]_0^1-\\int_0^1\\dfrac x2\\,dx=-\\dfrac14$",
+  "Limit $=3\\cdot\\left(-\\dfrac14\\right)=-0.75$",
+  "",
+  "Final Answer: -0.75"
+ ],
+ "solution_full": [
+  "Putting $x=y=1$ gives $f(1)=2f(1)$, so $f(1)=0$. The given limit is then $\\displaystyle\\lim_{x\\to1}\\dfrac{f(x)-f(1)}{x-1}=3$, i.e. $f'(1)=3$.",
+  "For $x>0$: $f(x+t)=f\\left(x\\left(1+\\dfrac tx\\right)\\right)=f(x)+f\\left(1+\\dfrac tx\\right)$, so $\\dfrac{f(x+t)-f(x)}{t}=\\dfrac1x\\cdot\\dfrac{f\\left(1+\\frac tx\\right)}{t/x}\\to\\dfrac{3}{x}$ as $t\\to0$.",
+  "Thus $f'(x)=\\dfrac3x$ on $(0,\\infty)$ and, with $f(1)=0$, $f(x)=3\\log_e x$.",
+  "The sum is $\\displaystyle\\sum_{r=1}^{n}\\dfrac1n\\cdot\\dfrac rn\\cdot3\\log_e\\dfrac rn$, a Riemann sum of $F(x)=3x\\log_e x$ on $[0,1]$ with right end points. $F$ extends continuously to $[0,1]$ with $F(0)=0$, since $x\\log_e x\\to0$ as $x\\to0^{+}$; so the limit equals $\\displaystyle\\int_0^1 3x\\log_e x\\,dx$.",
+  "By parts, $\\displaystyle\\int_0^1 x\\log_e x\\,dx=\\left[\\dfrac{x^{2}}{2}\\log_e x\\right]_0^1-\\int_0^1\\dfrac{x^{2}}{2}\\cdot\\dfrac1x\\,dx=0-\\dfrac14=-\\dfrac14$, the boundary term at $0$ vanishing because $x^{2}\\log_e x\\to0$.",
+  "Hence the limit is $3\\cdot\\left(-\\dfrac14\\right)=-\\dfrac34=-0.75$ (a direct computation with $n=200000$ gives $-0.7499999$).",
+  "",
+  "Final Answer: -0.75"
+ ],
+ "originality_note": "New: the logarithmic Cauchy equation fixed only by a limit at 1, fed into a weighted Riemann sum whose integrand has a removable end-point behaviour at 0 (way 5). Closest known: f(xy)=f(x)+f(y) with f'(1) given, asking f(e) or f'(x). Different because: the recovered function is never asked directly; it must be turned into a limit of a sum and an integral with a log singularity.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)": "f(xy)=f(x)+f(y) gives f(1)=0 and f'(x)=f'(1)/x, so f(x)=3 ln x.",
+  "Definite integrals combined with limits and functional equations": "The limit of the sum is converted into the definite integral of 3x ln x over [0,1], evaluated by parts as -3/4."
+ },
+ "stem_review": "Read as a student: domain stated; the limit condition defines f'(1) because f(1)=0 follows from the equation. Answer -0.75 checked symbolically and by a direct sum with n=200000. Negative decimal as planned, exact to two places. Changed: No change.",
+ "level": 3,
+ "key_step": "Recovering f=3 ln x from the limit condition, then reading the sum as the integral of 3x ln x on [0,1].",
+ "justification": "Two linked standard ideas (Cauchy equation via derivative at 1, limit of a sum as an integral) plus by-parts with an end-point limit, no options. Comparable to 2023-P2-Q1 (L2) for the integral-equation chain, raised by the numerical format and the sum-to-integral step; near 2025-P2-Q14 (L3).",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium",
+ "blueprint_concepts": [
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)",
+  "Definite integrals combined with limits and functional equations"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

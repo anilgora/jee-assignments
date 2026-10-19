@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\dfrac{5}{4}-4\\left(x-\\dfrac{5}{4}\\right)^{3}$. If $f^{-1}$ is the inverse function of $f$, then the sum of all real numbers $x$ satisfying $f(x)=f^{-1}(x)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\dfrac{5}{4}-4\\left(x-\\dfrac{5}{4}\\right)^{3}$ द्वारा परिभाषित है। यदि $f^{-1}$, $f$ का प्रतिलोम फलन है, तो समीकरण $f(x)=f^{-1}(x)$ को सन्तुष्ट करने वाली सभी वास्तविक संख्याओं $x$ का योग ______ है।"
+ ],
+ "solution": [
+  "$f'(x)=-12\\left(x-\\dfrac54\\right)^{2}\\le0$, zero only at one point, so $f$ is strictly decreasing and onto $\\mathbb{R}$: $f^{-1}$ exists",
+  "$f$ is decreasing, so the common points of $y=f(x)$ and its mirror image in $y=x$ need not lie on $y=x$",
+  "$f(x)=f^{-1}(x)=y\\iff y=f(x)$ and $x=f(y)\\iff f(f(x))=x$",
+  "Put $u=x-\\dfrac54$: $f$ acts as $u\\mapsto-4u^{3}$, so $f(f(x))=x\\iff-4(-4u^{3})^{3}=u\\iff256u^{9}=u$",
+  "$u=0$ or $u^{8}=\\dfrac{1}{256}\\Rightarrow u=0,\\pm\\dfrac12$, i.e. $x=\\dfrac54,\\ \\dfrac74,\\ \\dfrac34$",
+  "Check: $f\\left(\\dfrac34\\right)=\\dfrac74$, $f\\left(\\dfrac74\\right)=\\dfrac34$ (a pair symmetric about $y=x$)",
+  "Sum $=\\dfrac{15}{4}=3.75$ (only $\\dfrac54$ lies on $y=x$)",
+  "",
+  "Final Answer: 3.75"
+ ],
+ "solution_full": [
+  "$f'(x)=-12\\left(x-\\dfrac54\\right)^{2}\\le0$, with equality only at $x=\\dfrac54$, so $f$ is strictly decreasing, hence one-one. It is a cubic with negative leading coefficient, so $f(x)\\to\\mp\\infty$ as $x\\to\\pm\\infty$ and, being continuous, $f$ is onto $\\mathbb{R}$. Thus $f^{-1}:\\mathbb{R}\\to\\mathbb{R}$ exists, and its graph is the reflection of the graph of $f$ in $y=x$.",
+  "For an increasing function the two graphs can meet only on $y=x$; here $f$ is decreasing, so common points off $y=x$ are possible and must be looked for.",
+  "If $f(x)=f^{-1}(x)=y$, then $y=f(x)$ and $f(y)=x$, so $f(f(x))=x$. Conversely, if $f(f(x))=x$, apply $f^{-1}$: $f(x)=f^{-1}(x)$. So the required $x$ are exactly the solutions of $f(f(x))=x$.",
+  "Let $u=x-\\dfrac54$. Then $f(x)-\\dfrac54=-4u^{3}$, so in the variable $u$ the map $f$ is $u\\mapsto-4u^{3}$. Applying it twice: $u\\mapsto-4(-4u^{3})^{3}=256u^{9}$.",
+  "So $f(f(x))=x\\iff256u^{9}=u\\iff u\\left(256u^{8}-1\\right)=0\\iff u=0$ or $u^{8}=\\dfrac{1}{256}=\\left(\\dfrac12\\right)^{8}$. The real solutions are $u=0,\\ \\dfrac12,\\ -\\dfrac12$.",
+  "Hence $x=\\dfrac54,\\ \\dfrac74,\\ \\dfrac34$. Check: $f\\left(\\dfrac54\\right)=\\dfrac54$; $f\\left(\\dfrac74\\right)=\\dfrac54-4\\cdot\\dfrac18=\\dfrac34$ and $f\\left(\\dfrac34\\right)=\\dfrac54+\\dfrac12=\\dfrac74$, so $f^{-1}\\left(\\dfrac74\\right)=\\dfrac34=f\\left(\\dfrac74\\right)$ and $f^{-1}\\left(\\dfrac34\\right)=\\dfrac74=f\\left(\\dfrac34\\right)$.",
+  "The sum is $\\dfrac54+\\dfrac74+\\dfrac34=\\dfrac{15}{4}=3.75$. Solving only $f(x)=x$ would give the single root $\\dfrac54$ and miss the symmetric pair $\\left(\\dfrac34,\\dfrac74\\right)$, $\\left(\\dfrac74,\\dfrac34\\right)$.",
+  "",
+  "Final Answer: 3.75"
+ ],
+ "originality_note": "New: a strictly decreasing cubic that is conjugate (by a shift) to u -> -4u^3, so f o f is u -> 256u^9 and the graph of f meets its mirror image at a 2-cycle off the line y = x (way 4, hidden structure). Closest known: (1/16)^x = log_{1/16} x, the classic decreasing case with off-diagonal solutions. Different because: a polynomial with a centre of symmetry is used, the 2-cycle is found algebraically from f(f(x)) = x after the shift, and the trap 'solve f(x) = x only' gives 1.25.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every set, function and symbol introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with code and unique; answer matches the plan. Checked that f is a bijection of R (so f^{-1} is defined on all of R), that f(f(x)) = x has exactly three real roots, and verified each against the explicit inverse with sympy. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising that for a decreasing function f(x) = f^{-1}(x) is equivalent to f(f(x)) = x, not to f(x) = x, and solving it after the shift u = x - 5/4.",
+ "justification": "Two ideas linked: existence and symmetry of the inverse, and the decreasing-function trap that produces solutions off y = x; execution is light after the shift. Comparable to 2023-P2-Q3 (L3), where a range/branch subtlety decides the solution set; numerical format, no options.",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Inverse of a function: existence, graph symmetry about y = x",
+  "Solving f(x) = f_inv(x)"
+ ],
+ "concept_use": {
+  "Inverse of a function: existence, graph symmetry about y = x": "f is strictly decreasing and onto R, so f^{-1} exists and its graph is the mirror image of the graph of f in y = x; for a decreasing f the common points need not lie on y = x.",
+  "Solving f(x) = f_inv(x)": "f(x) = f^{-1}(x) is rewritten as f(f(x)) = x, giving 256u^9 = u and the solutions 3/4, 5/4, 7/4."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

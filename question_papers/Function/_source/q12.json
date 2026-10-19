@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "english": [
+  "For a real number $t$, let $[t]$ denote the greatest integer less than or equal to $t$. Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\left[\\dfrac{6x}{1+x^{2}}\\right]$. Let $m$ be the number of elements in the range of $f$, and let $n$ be the number of real numbers $a$ for which $\\displaystyle\\lim_{x\\to a}f(x)$ does not exist. Then the value of $m+n$ is ______."
+ ],
+ "hindi": [
+  "किसी वास्तविक संख्या $t$ के लिए, $[t]$ उस महत्तम पूर्णांक को दर्शाता है जो $t$ से छोटा या उसके बराबर है। माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\left[\\dfrac{6x}{1+x^{2}}\\right]$ द्वारा परिभाषित है। माना कि $f$ के परिसर में अवयवों की संख्या $m$ है, तथा उन वास्तविक संख्याओं $a$ की संख्या $n$ है जिनके लिए $\\displaystyle\\lim_{x\\to a}f(x)$ का अस्तित्व नहीं है। तब $m+n$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $u(x)=\\dfrac{6x}{1+x^{2}}$. For $x>0$, $u=\\dfrac{6}{x+\\frac1x}\\le3$ (AM-GM), equality at $x=1$; $u$ is odd, so the range of $u$ is $[-3,3]$, with $u=\\pm3$ only at $x=\\pm1$",
+  "Range of $f=\\{-3,-2,-1,0,1,2,3\\}\\Rightarrow m=7$",
+  "$f$ is locally constant except where $u$ passes through an integer $k$: $kx^{2}-6x+k=0$",
+  "$k=0$: $x=0$, $u$ changes sign there, limit fails (1 point)",
+  "$k=\\pm1,\\pm2$: discriminant $36-4k^{2}>0$, two roots each, $u$ crosses $k$ at each (since $u$ is monotonic on $(-\\infty,-1],[-1,1],[1,\\infty)$), limit fails (8 points)",
+  "$k=\\pm3$: $x=\\pm1$ are the extreme points; near $x=1$, $u<3$ on both sides so $\\lim f=2$; near $x=-1$, $u>-3$ on both sides so $\\lim f=-3$. Limits exist",
+  "$n=9\\Rightarrow m+n=16$",
+  "",
+  "Final Answer: 16"
+ ],
+ "solution_full": [
+  "Let $u(x)=\\dfrac{6x}{1+x^{2}}$. Then $u(0)=0$, and for $x>0$, $u(x)=\\dfrac{6}{x+\\frac1x}\\le\\dfrac{6}{2}=3$ by AM-GM, with equality only at $x=1$. Since $u(-x)=-u(x)$, $-3\\le u(x)\\le3$ for all $x$, with $u=-3$ only at $x=-1$. As $u$ is continuous and takes the values $-3$ and $3$, its range is $[-3,3]$.",
+  "Also $u'(x)=\\dfrac{6(1-x^{2})}{(1+x^{2})^{2}}$, so $u$ decreases on $(-\\infty,-1]$, increases on $[-1,1]$ and decreases on $[1,\\infty)$.",
+  "Range of $f$: $[u(x)]$ takes every integer from $-3$ to $3$, so the range is $\\{-3,-2,-1,0,1,2,3\\}$ and $m=7$.",
+  "Since $u$ is continuous, $f=[u]$ is constant near every point where $u$ is not an integer, so the limit exists there. It can fail only at points where $u(x)=k\\in\\{-3,\\dots,3\\}$, i.e. $kx^{2}-6x+k=0$.",
+  "$k=0$: only $x=0$, where $u$ is increasing and changes sign: $\\lim_{x\\to0^-}f=-1$, $\\lim_{x\\to0^+}f=0$. The limit does not exist.",
+  "$k=\\pm1,\\pm2$: the discriminant $36-4k^{2}>0$, so there are two distinct roots, none equal to $\\pm1$. At each, $u$ is strictly monotonic, so $u$ crosses the integer $k$ and $f$ jumps by $1$: the limit does not exist. This gives $4\\times2=8$ points.",
+  "$k=3$: only $x=1$, a maximum of $u$. For $x$ near $1$, $x\\ne1$, $2<u(x)<3$, so $\\lim_{x\\to1}f(x)=2$ exists (it differs from $f(1)=3$, but the limit exists).",
+  "$k=-3$: only $x=-1$, a minimum of $u$. For $x$ near $-1$, $x\\ne-1$, $-3<u(x)<-2$, so $\\lim_{x\\to-1}f(x)=-3$ exists.",
+  "Hence $n=1+8=9$ and $m+n=7+9=16$.",
+  "",
+  "Final Answer: 16"
+ ],
+ "originality_note": "New: the range of the GIF of a bounded rational function, and the points where the limit of the GIF fails, with the extreme points (where u touches +-3) as the trap since there the limit exists although f is discontinuous (way 5). Closest known: [x^2] - [x]^2 type discontinuity counts and the range of 2x/(1+x^2). Different because: the limit fails only where u crosses an integer, not where it touches one, and the touching points are decided by the range.",
+ "web_check": "not found",
+ "concept_use": {
+  "Domain and range of functions involving the greatest integer function": "The range of u = 6x/(1+x^2) is [-3,3] (AM-GM), so the range of f = [u] is {-3, ..., 3} and m = 7.",
+  "Evaluation of limit involving GIF and fractional part": "Limits of [u(x)]: the limit fails where u crosses an integer (x = 0 and the roots for k = +-1, +-2) and exists at x = +-1 where u only touches +-3."
+ },
+ "stem_review": "Read as a student: every symbol and the domain of every function introduced, conditions complete, one reading of each sentence; answer recomputed with code by an independent route, unique and equal to the plan. First design ([x^2] - [x]^2 on [0,5)) was replaced after the web check found it to be a past JEE function. Checked the 9 crossing points numerically. Changed: replaced the function before writing the final stem.",
+ "level": 3,
+ "key_step": "Separating crossing points of an integer level (limit fails) from touching points at the extremes x = +-1 (limit exists).",
+ "justification": "Range by AM-GM plus a careful count of crossing versus touching points; one slip (counting x = +-1) gives 18. Comparable to 2023-P2-Q6 (L3); below 2026-P2-Q14 (L4) because there is only one function and no cancellations.",
+ "nearest_anchor": "2023-P2-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "blueprint_concepts": [
+  "Domain and range of functions involving the greatest integer function",
+  "Evaluation of limit involving GIF and fractional part"
+ ],
+ "answer_plan": "positive 2-digit integer",
+ "target_level": 3,
+ "chapter": "Function"
+}

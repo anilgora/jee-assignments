@@ -1,0 +1,59 @@
+{
+ "type": "SCQ",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x^{3}+2x-2$, and let $g:\\mathbb{R}\\to\\mathbb{R}$ be the inverse of $f$. Let $P$ be a point at which the curves $y=f(x)$ and $y=g(x)$ intersect, and let $\\theta$ be the acute angle between these two curves at $P$. Then $\\tan\\theta$ is equal to",
+  "",
+  "(A) $\\dfrac{24}{5}$",
+  "(B) $\\dfrac{12}{5}$",
+  "(C) $\\dfrac{5}{12}$",
+  "(D) $\\dfrac{12}{13}$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x^{3}+2x-2$ द्वारा परिभाषित है, तथा $g:\\mathbb{R}\\to\\mathbb{R}$, $f$ का प्रतिलोम फलन है। माना कि $P$ एक ऐसा बिन्दु है जिस पर वक्र $y=f(x)$ तथा $y=g(x)$ प्रतिच्छेद करते हैं, तथा $P$ पर इन दोनों वक्रों के बीच का न्यून कोण $\\theta$ है। तब $\\tan\\theta$ बराबर है",
+  "",
+  "(A) $\\dfrac{24}{5}$",
+  "(B) $\\dfrac{12}{5}$",
+  "(C) $\\dfrac{5}{12}$",
+  "(D) $\\dfrac{12}{13}$"
+ ],
+ "solution": [
+  "$f'(x)=3x^{2}+2>0$: $f$ strictly increasing, and onto $\\mathbb{R}$ (cubic), so $g$ exists",
+  "Graphs of $f$ and $g$ are mirror images in $y=x$; for increasing $f$ they meet only on $y=x$ (if $f(a)=b,\\ f(b)=a$ with $a<b$ then $b<a$)",
+  "$f(x)=x\\Rightarrow x^{3}+x-2=(x-1)(x^{2}+x+2)=0\\Rightarrow x=1$, so $P(1,1)$",
+  "Slopes at $P$: $m_1=f'(1)=5$, $m_2=g'(1)=\\dfrac{1}{f'(g(1))}=\\dfrac15$",
+  "$\\tan\\theta=\\left|\\dfrac{m_1-m_2}{1+m_1m_2}\\right|=\\dfrac{24/5}{2}=\\dfrac{12}{5}$ ($\\dfrac{24}{5}$ forgets $1+m_1m_2=2$; $\\dfrac{12}{13}$ is $\\sin\\theta$)",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "$f'(x)=3x^{2}+2>0$ for all $x$, so $f$ is strictly increasing and one-one; a cubic tends to $\\pm\\infty$ at $\\pm\\infty$ and is continuous, so $f$ is onto $\\mathbb{R}$. Hence $g=f^{-1}:\\mathbb{R}\\to\\mathbb{R}$ exists.",
+  "The graph of $g$ is the reflection of the graph of $f$ in the line $y=x$. Suppose $(a,b)$ lies on both curves: $b=f(a)$ and $b=g(a)$, i.e. $f(b)=a$. If $a<b$ then, $f$ being increasing, $f(a)<f(b)$, i.e. $b<a$, a contradiction; similarly $a>b$ is impossible. So $a=b$ and $P$ lies on $y=x$ with $f(a)=a$.",
+  "$f(x)=x$ gives $x^{3}+x-2=0$, i.e. $(x-1)(x^{2}+x+2)=0$; the quadratic has discriminant $1-8<0$, so $x=1$ and $P=(1,1)$ is the only common point.",
+  "Slope of $y=f(x)$ at $P$: $m_1=f'(1)=3+2=5$. By the derivative of the inverse, $g'(1)=\\dfrac{1}{f'(g(1))}=\\dfrac{1}{f'(1)}=\\dfrac15=m_2$ (the reflected tangent has the reciprocal slope).",
+  "The acute angle between the tangents satisfies $\\tan\\theta=\\left|\\dfrac{m_1-m_2}{1+m_1m_2}\\right|=\\dfrac{5-\\frac15}{1+1}=\\dfrac{24/5}{2}=\\dfrac{12}{5}$.",
+  "Option (A) omits the denominator $1+m_1m_2=2$, (C) is $\\cot\\theta$, and (D) is $\\sin\\theta=\\dfrac{12}{13}$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: the angle at which a curve meets the graph of its own inverse, built from the mirror symmetry (common point on y=x for an increasing function) and the reciprocal slope of the inverse (way 5). Closest known: g'(b)=1/f'(a) evaluation questions and the angle between two given curves. Different because: the second curve is never written down; its slope comes only from the inverse-derivative rule, and the intersection point must be argued to lie on y=x.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Inverse of a function: existence, graph symmetry about y = x": "f is strictly increasing and onto, so g exists; the graphs are mirror images in y=x and therefore meet only on y=x, at P(1,1).",
+  "Derivative of inverse of a function": "The slope of y=g(x) at P is g'(1)=1/f'(1)=1/5, used in the angle formula."
+ },
+ "stem_review": "Read as a student: f, g with domains defined; 'a point P' is fine because the common point is unique (checked: x^3+x-2 has one real root). tan theta = 12/5 verified symbolically and by a numerical derivative of the inverse (0.2). Changed: wrote 'a point at which' instead of 'the point' to avoid presupposing uniqueness.",
+ "level": 3,
+ "key_step": "Arguing that an increasing function meets its inverse only on y=x, then g'(1)=1/f'(1).",
+ "justification": "Two ideas linked (symmetry of inverse graphs with the increasing-function argument, and the derivative of the inverse) plus the angle formula; options help checking. Comparable to 2025-P2-Q14 (L3, derivative of f o g^{-1}) and above 2026-P2-Q17 (L2, angle between tangents).",
+ "nearest_anchor": "2025-P2-Q14 (L3)",
+ "confidence": "Medium",
+ "blueprint_concepts": [
+  "Inverse of a function: existence, graph symmetry about y = x",
+  "Derivative of inverse of a function"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

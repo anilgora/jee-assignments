@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a continuous function such that the function $g:\\mathbb{R}\\to\\mathbb{R}$ defined by $g(x)=(x+1)f(x)$ is an odd function, and",
+  "$$\\int_{-x}^{x}f(t)\\,dt=-\\dfrac{2x^{5}}{5}\\quad\\text{for all } x\\in\\mathbb{R}.$$",
+  "Then the value of $f(3)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक सतत फलन है, इस प्रकार कि $g(x)=(x+1)f(x)$ द्वारा परिभाषित फलन $g:\\mathbb{R}\\to\\mathbb{R}$ एक विषम फलन है, तथा सभी $x\\in\\mathbb{R}$ के लिए",
+  "$$\\int_{-x}^{x}f(t)\\,dt=-\\dfrac{2x^{5}}{5}$$",
+  "है। तब $f(3)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Write $f=E+O$ ($E$ even, $O$ odd). Then $(x+1)f=\\big(xE+O\\big)+\\big(xO+E\\big)$, where $xE+O$ is odd and $xO+E$ is even",
+  "$g$ odd $\\Rightarrow$ its even part is zero: $E(x)=-xO(x)$",
+  "$\\displaystyle\\int_{-x}^{x}O=0$, so $\\displaystyle\\int_{-x}^{x}f=2\\int_{0}^{x}E(t)\\,dt=-\\dfrac{2x^{5}}{5}$; differentiating ($E$ continuous): $E(x)=-x^{4}$",
+  "$\\Rightarrow O(x)=x^{3}$ for $x\\ne0$, and $O(0)=0$; so $f(x)=x^{3}-x^{4}$",
+  "Check: $(x+1)(x^{3}-x^{4})=x^{3}-x^{5}$, odd",
+  "$f(3)=27-81=-54$",
+  "",
+  "Final Answer: -54"
+ ],
+ "solution_full": [
+  "Every $f:\\mathbb{R}\\to\\mathbb{R}$ is uniquely $f=E+O$ with $E(x)=\\dfrac{f(x)+f(-x)}{2}$ even and $O(x)=\\dfrac{f(x)-f(-x)}{2}$ odd; both are continuous because $f$ is.",
+  "$g(x)=(x+1)f(x)=xE(x)+xO(x)+E(x)+O(x)$. The product of the odd function $x$ with an even function is odd and with an odd function is even. So the odd part of $g$ is $xE(x)+O(x)$ and the even part of $g$ is $xO(x)+E(x)$.",
+  "$g$ is odd, so its even part vanishes: $E(x)=-xO(x)$ for all $x$.",
+  "For an odd continuous function $\\displaystyle\\int_{-x}^{x}O(t)\\,dt=0$, and for an even one $\\displaystyle\\int_{-x}^{x}E(t)\\,dt=2\\int_{0}^{x}E(t)\\,dt$. Hence $2\\displaystyle\\int_{0}^{x}E(t)\\,dt=-\\dfrac{2x^{5}}{5}$ for all $x$; differentiating, $2E(x)=-2x^{4}$, so $E(x)=-x^{4}$.",
+  "Then $-xO(x)=-x^{4}$ gives $O(x)=x^{3}$ for $x\\ne0$, and $O(0)=0$ for any odd function, so $O(x)=x^{3}$ for all $x$.",
+  "Therefore $f(x)=x^{3}-x^{4}$. Check: $(x+1)(x^{3}-x^{4})=x^{3}-x^{5}$ is odd, and $\\displaystyle\\int_{-x}^{x}(t^{3}-t^{4})\\,dt=0-\\dfrac{2x^{5}}{5}$.",
+  "$f(3)=27-81=-54$.",
+  "",
+  "Final Answer: -54"
+ ],
+ "originality_note": "New: f is recovered from two parity conditions - the product (x+1)f(x) is odd, which ties the even part to the odd part (E = -xO), and a symmetric integral that sees only the even part (way 5). Closest known: f(x) + f(-x) = c type questions (ax^5 + b sin x + c) and simple even/odd decomposition. Different because: neither part of f is given directly; the parity of a product and the vanishing of the integral of an odd function must both be used.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every set, function and symbol introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with code and unique; answer matches the plan. Checked uniqueness (E and O are forced, including O(0) = 0), that the integral condition holds for negative x as well, and recomputed f(3) = -54 with sympy. Earlier draft gave f(x) - f(-x) = 2x^3 directly, which made the question a two-line substitution; replaced by the integral condition so that the property of odd and even integrals is needed. Changed: second condition replaced before writing the final files.",
+ "level": 3,
+ "key_step": "Splitting (x+1)f(x) into odd part xE + O and even part xO + E, so E = -xO, then using that the symmetric integral sees only E.",
+ "justification": "Two parity properties must be combined (parity of a product, integral of odd/even functions over [-x, x]) to recover f; neither alone suffices, numerical answer. Comparable to 2026-P1-Q7 (L3), which reasons about g = x f(x) and parity/regularity implications.",
+ "nearest_anchor": "2026-P1-Q7 (L3)",
+ "confidence": "Medium",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Even and odd functions; decomposition into even and odd parts",
+  "Property for odd and even functions"
+ ],
+ "concept_use": {
+  "Even and odd functions; decomposition into even and odd parts": "f is split as E + O, and the odd part of (x+1)f(x) is xE + O while its even part is xO + E, so g odd forces E = -xO.",
+  "Property for odd and even functions": "Properties of odd and even functions: x times an even function is odd, x times an odd function is even, the integral of an odd function over [-x, x] is 0, and that of an even function is twice the integral over [0, x]."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

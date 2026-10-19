@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$f(x)=\\left(\\sin\\left(\\dfrac{\\pi x}{10}+\\dfrac{\\pi}{6}\\right)+\\sin\\left(\\dfrac{\\pi x}{10}-\\dfrac{\\pi}{6}\\right)\\right)\\left(\\cos\\left(\\dfrac{\\pi x}{30}-\\dfrac{\\pi}{3}\\right)-\\cos\\left(\\dfrac{\\pi x}{30}+\\dfrac{\\pi}{3}\\right)\\right).$$",
+  "Then the fundamental period of $f$ is ______."
+ ],
+ "hindi": [
+  "माना $f:\\mathbb{R}\\to\\mathbb{R}$",
+  "$$f(x)=\\left(\\sin\\left(\\dfrac{\\pi x}{10}+\\dfrac{\\pi}{6}\\right)+\\sin\\left(\\dfrac{\\pi x}{10}-\\dfrac{\\pi}{6}\\right)\\right)\\left(\\cos\\left(\\dfrac{\\pi x}{30}-\\dfrac{\\pi}{3}\\right)-\\cos\\left(\\dfrac{\\pi x}{30}+\\dfrac{\\pi}{3}\\right)\\right)$$",
+  "द्वारा परिभाषित है। तब $f$ का मूल आवर्तकाल ______ है।"
+ ],
+ "solution": [
+  "$\\sin(A+B)+\\sin(A-B)=2\\sin A\\cos B$: first factor $=2\\sin\\dfrac{\\pi x}{10}\\cos\\dfrac{\\pi}{6}=\\sqrt3\\sin\\dfrac{\\pi x}{10}$ (period $20$)",
+  "$\\cos(A-B)-\\cos(A+B)=2\\sin A\\sin B$: second factor $=2\\sin\\dfrac{\\pi x}{30}\\sin\\dfrac{\\pi}{3}=\\sqrt3\\sin\\dfrac{\\pi x}{30}$ (period $60$)",
+  "$f(x)=3\\sin\\dfrac{\\pi x}{10}\\sin\\dfrac{\\pi x}{30}=\\dfrac32\\left(\\cos\\dfrac{\\pi x}{15}-\\cos\\dfrac{2\\pi x}{15}\\right)$",
+  "Periods of the two cosines: $30$ and $15$; they cannot cancel, so the fundamental period is $30$",
+  "Check: $x\\to x+30$ changes the sign of both sine factors, so the product is unchanged; $\\mathrm{LCM}(20,60)=60$ is a period but not the least",
+  "",
+  "Final Answer: 30"
+ ],
+ "solution_full": [
+  "By the compound-angle formulas, $\\sin(A+B)+\\sin(A-B)=2\\sin A\\cos B$. With $A=\\dfrac{\\pi x}{10}$, $B=\\dfrac{\\pi}{6}$ the first factor is $2\\cdot\\dfrac{\\sqrt3}{2}\\sin\\dfrac{\\pi x}{10}=\\sqrt3\\sin\\dfrac{\\pi x}{10}$, of period $\\dfrac{2\\pi}{\\pi/10}=20$.",
+  "Similarly $\\cos(A-B)-\\cos(A+B)=2\\sin A\\sin B$. With $A=\\dfrac{\\pi x}{30}$, $B=\\dfrac{\\pi}{3}$ the second factor is $2\\cdot\\dfrac{\\sqrt3}{2}\\sin\\dfrac{\\pi x}{30}=\\sqrt3\\sin\\dfrac{\\pi x}{30}$, of period $60$.",
+  "So $f(x)=3\\sin\\dfrac{\\pi x}{10}\\sin\\dfrac{\\pi x}{30}$. Using $2\\sin P\\sin Q=\\cos(P-Q)-\\cos(P+Q)$: $f(x)=\\dfrac32\\left(\\cos\\dfrac{\\pi x}{15}-\\cos\\dfrac{2\\pi x}{15}\\right)$.",
+  "$\\cos\\dfrac{\\pi x}{15}$ has period $30$ and $\\cos\\dfrac{2\\pi x}{15}$ has period $15$. Two cosines with different frequencies cannot cancel, so $T$ is a period of $f$ exactly when it is a period of both, i.e. a multiple of $30$.",
+  "Hence the fundamental period of $f$ is $30$. Directly: $\\sin\\left(\\dfrac{\\pi x}{10}+3\\pi\\right)=-\\sin\\dfrac{\\pi x}{10}$ and $\\sin\\left(\\dfrac{\\pi x}{30}+\\pi\\right)=-\\sin\\dfrac{\\pi x}{30}$, so $f(x+30)=f(x)$.",
+  "The LCM of the periods of the two factors, $60$, is a period of $f$ but not the fundamental one, because both factors change sign after $30$.",
+  "",
+  "Final Answer: 30"
+ ],
+ "originality_note": "New: each factor collapses by a compound-angle identity to a single sine, and the product of the two sines has fundamental period half the LCM of the factor periods, because both factors change sign together after 30 (way 4, hidden symmetry). Closest known: period of a sum such as sin(pi x/3) + cos(pi x/4) by LCM. Different because: the apparent periods (20, 60) and their LCM 60 are both misleading; the student must simplify and then see the sign cancellation.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, function and domain introduced, conditions complete, one reading of each sentence; answer recomputed with sympy/numpy and unique; answer matches the plan. Checked symbolically that the factors equal sqrt3 sin(pi x/10) and sqrt3 sin(pi x/30), and numerically that 30 is the least period. Changed: No change.",
+ "level": 3,
+ "key_step": "After the compound-angle simplification, the product sin(pi x/10) sin(pi x/30) is a difference of cosines of periods 30 and 15, so the period is 30, not LCM(20, 60) = 60.",
+ "justification": "Two ideas linked: compound-angle simplification of each factor, and the period of a product being smaller than the LCM because of simultaneous sign change; numerical. Comparable to 2024-P1-Q3 (L3), a trigonometric expression that must be simplified by compound angles before evaluation.",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Period of a sum, product or composite of periodic functions": "Period of the product: written as (3/2)(cos(pi x/15) - cos(2 pi x/15)), periods 30 and 15, so 30 rather than LCM(20, 60).",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "sin(A+B) + sin(A-B) = 2 sin A cos B and cos(A-B) - cos(A+B) = 2 sin A sin B reduce the factors to sqrt3 sin(pi x/10) and sqrt3 sin(pi x/30)."
+ },
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Period of a sum, product or composite of periodic functions",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)"
+ ],
+ "chapter": "Function",
+ "multi_concept": false,
+ "eq_relation": false
+}

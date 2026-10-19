@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\displaystyle\\lim_{n\\to\\infty}\\left((4|x|)^{n}+|x-5|^{n}\\right)^{1/n}$. Then the greatest value of the function $g:\\mathbb{R}\\to\\mathbb{R}$, $g(x)=\\dfrac{1}{f(x)}$, is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\displaystyle\\lim_{n\\to\\infty}\\left((4|x|)^{n}+|x-5|^{n}\\right)^{1/n}$ द्वारा परिभाषित है। तब फलन $g:\\mathbb{R}\\to\\mathbb{R}$, $g(x)=\\dfrac{1}{f(x)}$ का अधिकतम मान ______ है।"
+ ],
+ "solution": [
+  "For $p,q\\ge0$, not both $0$, with $M=\\max\\{p,q\\}$: $M\\le(p^{n}+q^{n})^{1/n}\\le2^{1/n}M\\to M$",
+  "$\\Rightarrow f(x)=\\max\\{4|x|,\\,|x-5|\\}$, defined for all $x$ and $f(x)>0$ (both terms vanish together nowhere)",
+  "Least value of the maximum: where the two graphs cross, $4|x|=|x-5|$: $x=1$ (value $4$) or $x=-\\dfrac53$ (value $\\dfrac{20}{3}$)",
+  "For $x\\le0$, $f(x)\\ge|x-5|\\ge5$; for $x\\ge0$, $f$ is least where the increasing $4x$ meets the decreasing $5-x$, at $x=1$",
+  "Range of $f=[4,\\infty)\\Rightarrow$ range of $g=\\left(0,\\dfrac14\\right]$; greatest value $0.25$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "Let $p,q\\ge0$, not both zero, and $M=\\max\\{p,q\\}>0$. Then $M^{n}\\le p^{n}+q^{n}\\le2M^{n}$, so $M\\le(p^{n}+q^{n})^{1/n}\\le2^{1/n}M$. Since $2^{1/n}\\to1$, the limit is $M$.",
+  "With $p=4|x|$ and $q=|x-5|$ (never both zero, since $x=0$ gives $q=5$), $f(x)=\\max\\{4|x|,\\,|x-5|\\}$ for every real $x$, and $f(x)>0$. So $g=\\dfrac1f$ is defined on $\\mathbb{R}$.",
+  "For $x\\le0$: $f(x)\\ge|x-5|=5-x\\ge5$.",
+  "For $0\\le x\\le5$: $4|x|=4x$ is increasing and $|x-5|=5-x$ is decreasing; they are equal at $4x=5-x$, $x=1$. For $x<1$, $f(x)=5-x>4$; for $x\\ge1$, $f(x)\\ge4x\\ge4$. So the least value on this interval is $f(1)=4$.",
+  "For $x\\ge5$: $f(x)\\ge4x\\ge20$.",
+  "Hence the least value of $f$ is $4$, attained at $x=1$, and $f$ is continuous and unbounded, so its range is $[4,\\infty)$.",
+  "Then $g$ takes exactly the values in $\\left(0,\\dfrac14\\right]$, and its greatest value is $\\dfrac14=0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: a function defined by the limit (p^n + q^n)^{1/n}, which turns into the maximum of a stretched modulus and a shifted modulus; its range, then the reciprocal (way 2, function defined by a limit). Closest known: lim (a^n + b^n)^{1/n} = max(a, b) for constants. Different because: here p and q depend on x, so the limit defines a max-function whose range must be found.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Domain and range of functions involving max / min operators": "f = max{4|x|, |x - 5|} is defined and positive on R; its range [4, infinity) comes from the crossing at x = 1, giving the range (0, 1/4] of g.",
+  "Evaluation of limit involving max min operators": "The limit (p^n + q^n)^{1/n} = max{p, q} is evaluated by the squeeze M <= (p^n + q^n)^{1/n} <= 2^{1/n} M."
+ },
+ "stem_review": "Read as a student: every symbol and the domain of every function introduced, conditions complete, one reading of each sentence; answer recomputed with code by an independent route, unique and equal to the plan. Checked the limit numerically at x = 1, 0, -5/3, 2 with n = 2000. Changed: No change.",
+ "level": 2,
+ "key_step": "Evaluating the limit as max{4|x|, |x - 5|} and locating its minimum at the crossing x = 1.",
+ "justification": "A standard limit (max of the bases) followed by the routine least value of the maximum of two modulus graphs; a short chain with no insight. Comparable to 2024-P2-Q3 (L1) for the limit plus 2025-P1-Q1 (L2) for the routine function step, so 2.",
+ "nearest_anchor": "2025-P1-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "blueprint_concepts": [
+  "Domain and range of functions involving max / min operators",
+  "Evaluation of limit involving max min operators"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "target_level": 2,
+ "chapter": "Function"
+}

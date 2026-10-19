@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\dfrac{x^{3}+x}{5}$. If $f^{-1}$ is the inverse function of $f$, then the total area of the regions enclosed between the curves $y=f(x)$ and $y=f^{-1}(x)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\dfrac{x^{3}+x}{5}$ द्वारा परिभाषित है। यदि $f^{-1}$, $f$ का प्रतिलोम फलन है, तो वक्रों $y=f(x)$ तथा $y=f^{-1}(x)$ के बीच घिरे क्षेत्रों का कुल क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "$f'(x)=\\dfrac{3x^{2}+1}{5}>0$ and $f$ is onto $\\mathbb{R}$, so $f^{-1}$ exists; its graph is the mirror image of $y=f(x)$ in $y=x$",
+  "$f$ increasing $\\Rightarrow$ the curves meet only on $y=x$: $\\dfrac{x^{3}+x}{5}=x\\Rightarrow x=0,\\pm2$",
+  "On $(0,2)$: $x-f(x)=\\dfrac{4x-x^{3}}{5}>0$, so $f$ is below $y=x$ and $f^{-1}$ above; each loop is bisected by $y=x$",
+  "Loop on $[0,2]$: $2\\displaystyle\\int_{0}^{2}\\dfrac{4x-x^{3}}{5}\\,dx=2\\cdot\\dfrac{8-4}{5}=\\dfrac85$",
+  "$f$ is odd, so the loop on $[-2,0]$ has the same area",
+  "Total $=\\dfrac{16}{5}=3.2$",
+  "",
+  "Final Answer: 3.2"
+ ],
+ "solution_full": [
+  "$f'(x)=\\dfrac{3x^{2}+1}{5}>0$ for all $x$, so $f$ is strictly increasing; as a cubic with positive leading coefficient it is onto $\\mathbb{R}$. Hence $f^{-1}:\\mathbb{R}\\to\\mathbb{R}$ exists, and the graph of $y=f^{-1}(x)$ is the reflection of the graph of $y=f(x)$ in the line $y=x$.",
+  "For a strictly increasing $f$, if $f(a)=f^{-1}(a)=b$ then $f(b)=a$; $a<b$ would give $f(a)<f(b)$, i.e. $b<a$, and similarly $a>b$ is impossible. So the curves meet only on $y=x$, where $\\dfrac{x^{3}+x}{5}=x$, i.e. $x^{3}-4x=0$, $x=-2,0,2$.",
+  "On $(0,2)$: $x-f(x)=\\dfrac{4x-x^{3}}{5}=\\dfrac{x(2-x)(2+x)}{5}>0$, so $y=f(x)$ lies below $y=x$ and, by reflection, $y=f^{-1}(x)$ lies above it. The loop between the curves over $[0,2]$ is symmetric about $y=x$, so its area is twice the area between $y=x$ and $y=f(x)$.",
+  "$\\displaystyle\\int_{0}^{2}\\left(x-\\dfrac{x^{3}+x}{5}\\right)dx=\\dfrac15\\int_{0}^{2}\\left(4x-x^{3}\\right)dx=\\dfrac15\\left(8-4\\right)=\\dfrac45$, so this loop has area $\\dfrac85$. (No formula for $f^{-1}$ is needed.)",
+  "$f$ is odd, so $f^{-1}$ is odd as well, and the whole picture is symmetric about the origin: the loop over $[-2,0]$ also has area $\\dfrac85$.",
+  "Total area $=\\dfrac85+\\dfrac85=\\dfrac{16}{5}=3.2$. (Numerical integration of $\\left|f(x)-f^{-1}(x)\\right|$ over $[-2,2]$ also gives $3.2$.)",
+  "",
+  "Final Answer: 3.2"
+ ],
+ "originality_note": "New: two loops, symmetric about the origin, between an odd increasing cubic and its inverse, whose inverse has no usable closed form, so the symmetry about y = x and the oddness both have to be used (way 4). Closest known: area between y = x^3 (or x + sin x) and its inverse in the first quadrant. Different because: the student must first show that the curves meet only on y = x, find both loops and use oddness for the second one.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every set, function and symbol introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with code and unique; answer matches the plan. Checked that 'regions enclosed between the curves' means both bounded loops (over [-2,0] and [0,2]) and that there are no others (the curves meet only at -2, 0, 2); numerical integration with mpmath of |f - f^{-1}| gives 3.2. Changed: No change.",
+ "level": 3,
+ "key_step": "Using reflection in y = x: the area between f and f^{-1} is twice the area between f and y = x, after showing the curves meet only on y = x.",
+ "justification": "Two ideas linked (meeting points of an increasing function and its inverse lie on y = x; area doubled by symmetry) plus oddness for the second loop; the computation is light. Comparable to 2026-P2-Q18 (L3), an area found by a symmetry argument.",
+ "nearest_anchor": "2026-P2-Q18 (L3)",
+ "confidence": "Medium",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Inverse of a function: existence, graph symmetry about y = x",
+  "Area bounded by a curve and its inverse"
+ ],
+ "concept_use": {
+  "Inverse of a function: existence, graph symmetry about y = x": "f is strictly increasing and onto, so f^{-1} exists and its graph is the reflection of y = f(x) in y = x; the curves therefore meet only on y = x, at x = 0 and x = ±2.",
+  "Area bounded by a curve and its inverse": "The area between y = f(x) and y = f^{-1}(x) is computed as twice the area between y = f(x) and y = x on each loop, giving 8/5 + 8/5."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

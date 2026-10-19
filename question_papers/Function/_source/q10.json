@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f(x)=\\sqrt{x^{2}-110x+1000}$ and $g(x)=\\sqrt{x-10}\\,\\sqrt{x-100}$, each defined on the set of all real numbers $x$ for which its expression is a real number. Let $D$ be the largest subset of $\\mathbb{R}$ on which $f$ and $g$ are identical functions, and let $h:D\\to\\mathbb{R}$ be defined by $h(x)=x+\\dfrac{2500}{x}$. Then the least value of $h$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f(x)=\\sqrt{x^{2}-110x+1000}$ तथा $g(x)=\\sqrt{x-10}\\,\\sqrt{x-100}$ हैं, जिनमें से प्रत्येक उन सभी वास्तविक संख्याओं $x$ के समुच्चय पर परिभाषित है जिनके लिए उसका व्यंजक एक वास्तविक संख्या है। माना कि $D$, $\\mathbb{R}$ का वह सबसे बड़ा उपसमुच्चय है जिस पर $f$ तथा $g$ सर्वसम फलन हैं, तथा $h:D\\to\\mathbb{R}$, $h(x)=x+\\dfrac{2500}{x}$ द्वारा परिभाषित है। तब $h$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$x^{2}-110x+1000=(x-10)(x-100)$: domain of $f$ is $(-\\infty,10]\\cup[100,\\infty)$; domain of $g$ needs $x\\ge10$ and $x\\ge100$, i.e. $[100,\\infty)$",
+  "On $[100,\\infty)$ both factors are $\\ge0$, so $\\sqrt{x-10}\\sqrt{x-100}=\\sqrt{(x-10)(x-100)}$; for $x\\le10$ only $f$ is defined",
+  "$\\Rightarrow D=[100,\\infty)$",
+  "AM-GM gives $h(x)\\ge2\\sqrt{2500}=100$ only at $x=50\\notin D$",
+  "$h'(x)=1-\\dfrac{2500}{x^{2}}>0$ for $x>50$, so $h$ is increasing on $D$ and its range is $[h(100),\\infty)$",
+  "Least value $=h(100)=100+25=125$",
+  "",
+  "Final Answer: 125"
+ ],
+ "solution_full": [
+  "Since $x^{2}-110x+1000=(x-10)(x-100)$, $f$ is defined when $(x-10)(x-100)\\ge0$, i.e. on $(-\\infty,10]\\cup[100,\\infty)$.",
+  "$g$ is defined when both $x-10\\ge0$ and $x-100\\ge0$, i.e. on $[100,\\infty)$.",
+  "Two functions are identical on a set when both are defined there and agree at every point. For $x\\ge100$, both $x-10$ and $x-100$ are non-negative, so $\\sqrt{x-10}\\,\\sqrt{x-100}=\\sqrt{(x-10)(x-100)}$ and $f(x)=g(x)$. For $x\\le10$, $g$ is not defined. Hence $D=[100,\\infty)$.",
+  "On $(0,\\infty)$, AM-GM gives $x+\\dfrac{2500}{x}\\ge2\\sqrt{2500}=100$, with equality only at $x=50$. But $50\\notin D$, so this bound is not attained on $D$.",
+  "$h'(x)=1-\\dfrac{2500}{x^{2}}=\\dfrac{(x-50)(x+50)}{x^{2}}>0$ for $x>50$, so $h$ is strictly increasing on $D=[100,\\infty)$, and $h(x)\\to\\infty$ as $x\\to\\infty$.",
+  "Hence the range of $h$ is $[h(100),\\infty)=[125,\\infty)$, since $h(100)=100+\\dfrac{2500}{100}=125$. The least value of $h$ is $125$.",
+  "",
+  "Final Answer: 125"
+ ],
+ "originality_note": "New: the domain of the range problem is the set on which two radical expressions are identical, and that set excludes the AM-GM equality point, so the minimum moves to the boundary (way 5). Closest known: 'find x for which sqrt(ab) = sqrt(a) sqrt(b)' and AM-GM minimum of x + k/x. Different because: the identical-function domain cuts off the AM-GM point; the AM-GM value 100 is the trap.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Definition of a function; vertical line test; identical functions": "D is the largest set on which f and g are identical: both defined and equal, which is [100, infinity).",
+  "Domain of algebraic, logarithmic, exponential and radical functions": "The radical domains (x - 10)(x - 100) >= 0 for f and x >= 10, x >= 100 for g decide D.",
+  "Range by inverse method, boundedness, AM-GM or discriminant": "Range of h = x + 2500/x on D: AM-GM gives 100 only at x = 50 outside D, so h is increasing on D and its range is [125, infinity)."
+ },
+ "stem_review": "Read as a student: every symbol and the domain of every function introduced, conditions complete, one reading of each sentence; answer recomputed with code by an independent route, unique and equal to the plan. Checked that x <= 10 is excluded from D (g undefined) and that h is increasing on D. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising that D = [100, infinity) excludes the AM-GM point x = 50, so the least value is at the end point 100.",
+ "justification": "Three routine pieces (radical domains, identical-function condition, range of x + k/x) are chained, with a trap in the AM-GM value; numerical answer. Comparable to 2021-P1-Q12 (L2) and 2026-P1-Q1 (L3); placed at 3 because the domain decides the answer.",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "blueprint_concepts": [
+  "Definition of a function; vertical line test; identical functions",
+  "Domain of algebraic, logarithmic, exponential and radical functions",
+  "Range by inverse method, boundedness, AM-GM or discriminant"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "target_level": 3,
+ "chapter": "Function"
+}

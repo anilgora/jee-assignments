@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function, continuous at $x=0$, such that $f(x+y)=f(x)f(y)$ for all $x,y\\in\\mathbb{R}$ and $f(x)\\ge1+2x$ for all $x\\in\\mathbb{R}$. Then the value of $f(\\log_e6)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ एक फलन है, जो $x=0$ पर सतत है, तथा सभी $x,y\\in\\mathbb{R}$ के लिए $f(x+y)=f(x)f(y)$ एवं सभी $x\\in\\mathbb{R}$ के लिए $f(x)\\ge1+2x$ है। तब $f(\\log_e6)$ का मान ______ है।"
+ ],
+ "solution": [
+  "$f(1)\\ge3$, so $f\\not\\equiv0$; if $f(a)=0$ then $f(x)=f(a)f(x-a)=0$ for all $x$. Hence $f(x)=f\\left(\\dfrac x2\\right)^{2}>0$ and $f(0)=f(0)^{2}\\Rightarrow f(0)=1$",
+  "Continuity at $0$ spreads: $f(x+t)=f(x)f(t)\\to f(x)f(0)=f(x)$ as $t\\to0$, so $f$ is continuous on $\\mathbb{R}$",
+  "$\\log_e f$ is continuous and additive $\\Rightarrow\\log_e f(x)=kx$, i.e. $f(x)=e^{kx}$",
+  "$\\varphi(x)=e^{kx}-1-2x\\ge0$ with $\\varphi(0)=0$: $x=0$ is a minimum, so $\\varphi'(0)=k-2=0\\Rightarrow k=2$ (and $e^{2x}\\ge1+2x$ does hold)",
+  "$f(\\log_e6)=e^{2\\log_e6}=36$",
+  "",
+  "Final Answer: 36"
+ ],
+ "solution_full": [
+  "From the inequality, $f(1)\\ge3$, so $f$ is not identically zero. If $f(a)=0$ for some $a$, then $f(x)=f(a)f(x-a)=0$ for every $x$, which is impossible; hence $f(x)\\ne0$ for all $x$.",
+  "Then $f(x)=f\\left(\\dfrac x2\\right)f\\left(\\dfrac x2\\right)=f\\left(\\dfrac x2\\right)^{2}>0$ for all $x$, and $f(0)=f(0)^{2}$ with $f(0)\\ne0$ gives $f(0)=1$.",
+  "Continuity everywhere: for any $x$, $f(x+t)=f(x)f(t)$ and $f(t)\\to f(0)=1$ as $t\\to0$ (continuity at $0$), so $f(x+t)\\to f(x)$; thus $f$ is continuous on $\\mathbb{R}$.",
+  "Let $g(x)=\\log_e f(x)$. Then $g$ is continuous and $g(x+y)=g(x)+g(y)$. This gives $g(n)=ng(1)$, then $g\\left(\\dfrac pq\\right)=\\dfrac pq\\,g(1)$ for rationals, and by continuity $g(x)=kx$ for all real $x$, where $k=g(1)$. So $f(x)=e^{kx}$.",
+  "Now $\\varphi(x)=e^{kx}-1-2x\\ge0$ for all $x$ and $\\varphi(0)=0$, so $\\varphi$ has a minimum at $x=0$ and $\\varphi'(0)=k-2=0$, i.e. $k=2$. (If $k>2$, $\\varphi<0$ just left of $0$; if $k<2$, just right of $0$.) Conversely $e^{2x}\\ge1+2x$ for all real $x$, since $e^{t}\\ge1+t$.",
+  "Therefore $f(x)=e^{2x}$ and $f(\\log_e6)=e^{2\\log_e6}=6^{2}=36$.",
+  "",
+  "Final Answer: 36"
+ ],
+ "originality_note": "New: the exponential Cauchy equation with continuity at one point, where the base is fixed not by a value but by a global tangent-line inequality f(x)>=1+2x (way 5). Closest known: f(x+y)=f(x)f(y) with f(x)=1+x g(x), g(x)->2, giving f'(x)=2f(x). Different because: the student must see that the inequality touches at x=0 and forces k=2 through a minimum condition.",
+ "web_check": "not found",
+ "concept_use": {
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)": "f(x+y)=f(x)f(y) gives f(0)=1, f>0 and, via ln f additive, the form f(x)=e^{kx}.",
+  "Continuity of a function defined by a functional equation": "Continuity at x=0 is extended to all of R through f(x+t)=f(x)f(t), which is what makes the additive equation for ln f linear."
+ },
+ "stem_review": "Read as a student: domain, continuity at 0 only, the equation and the inequality are stated for all reals; uniqueness of k=2 checked numerically (k=1.9 and 2.1 violate the inequality). Answer 36, positive 2-digit integer as planned. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that e^{kx}>=1+2x for all x forces the touching slope k=2.",
+ "justification": "Two linked ideas with no options: deriving the exponential form from the equation plus continuity at a point, and converting a global inequality into k=2 via a minimum at 0. Comparable to 2024-P2-Q8 (L2, Cauchy equations, evaluate) with a genuine extra idea; below 2025-P1-Q12 (L4).",
+ "nearest_anchor": "2024-P2-Q8 (L2)",
+ "confidence": "Medium",
+ "blueprint_concepts": [
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)",
+  "Continuity of a function defined by a functional equation"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}\\setminus\\{-1,1\\}$ be a function such that $f(x+1)=\\dfrac{f(x)-3}{f(x)+1}$ for all $x\\in\\mathbb{R}$, and $f(11)=-\\dfrac{9}{7}$. Then the value of $f(2026)$ is ______."
+ ],
+ "hindi": [
+  "माना $f:\\mathbb{R}\\to\\mathbb{R}\\setminus\\{-1,1\\}$ एक ऐसा फलन है कि सभी $x\\in\\mathbb{R}$ के लिए $f(x+1)=\\dfrac{f(x)-3}{f(x)+1}$ है, तथा $f(11)=-\\dfrac{9}{7}$ है। तब $f(2026)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $\\varphi(y)=\\dfrac{y-3}{y+1}$, so $f(x+1)=\\varphi(f(x))$",
+  "$\\varphi(\\varphi(y))=\\dfrac{(y-3)-3(y+1)}{(y-3)+(y+1)}=-\\dfrac{y+3}{y-1}$, $\\varphi(\\varphi(\\varphi(y)))=\\dfrac{-(y+3)-3(y-1)}{-(y+3)+(y-1)}=y$",
+  "$\\Rightarrow f(x+3)=f(x)$ for all $x$; $3$ is the least positive integer period, since $\\varphi(y)=y$ and $\\varphi(\\varphi(y))=y$ both give $y^{2}=-3$",
+  "$2026=3\\cdot675+1$ and $11=3\\cdot3+2$: $f(2026)=f(1)$, $f(2)=f(11)=-\\dfrac97$",
+  "$f(1)=\\varphi^{-1}(f(2))=\\varphi(\\varphi(f(2)))=-\\dfrac{-\\frac97+3}{-\\frac97-1}=-\\dfrac{12/7}{-16/7}=\\dfrac34$",
+  "Check: $\\varphi\\left(\\dfrac34\\right)=\\dfrac{-9/4}{7/4}=-\\dfrac97$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "Write $\\varphi(y)=\\dfrac{y-3}{y+1}$, so that $f(x+1)=\\varphi(f(x))$. The value $\\varphi(y)$ is never $1$, and it is $-1$ only for $y=1$, so $\\varphi$ maps $\\mathbb{R}\\setminus\\{-1,1\\}$ into itself and the relation can be iterated.",
+  "$f(x+2)=\\varphi(\\varphi(f(x)))$, where $\\varphi(\\varphi(y))=\\dfrac{\\frac{y-3}{y+1}-3}{\\frac{y-3}{y+1}+1}=\\dfrac{(y-3)-3(y+1)}{(y-3)+(y+1)}=\\dfrac{-2y-6}{2y-2}=-\\dfrac{y+3}{y-1}$.",
+  "$f(x+3)=\\varphi(\\varphi(\\varphi(f(x))))$, where $\\varphi\\left(-\\dfrac{y+3}{y-1}\\right)=\\dfrac{-(y+3)-3(y-1)}{-(y+3)+(y-1)}=\\dfrac{-4y}{-4}=y$.",
+  "Hence $f(x+3)=f(x)$ for all $x\\in\\mathbb{R}$: $f$ is periodic with period $3$. The periods $1$ and $2$ are impossible, because $\\varphi(y)=y$ gives $y^{2}+y=y-3$, i.e. $y^{2}=-3$, and $\\varphi(\\varphi(y))=y$ gives $-(y+3)=y^{2}-y$, i.e. $y^{2}=-3$; neither has a real root. So $3$ is the least positive integer period.",
+  "For a function with period $3$, $f(x+3k)=f(x)$ for every integer $k$. Since $2026=3\\cdot675+1$, $f(2026)=f(1)$; since $11=3\\cdot3+2$, $f(2)=f(11)=-\\dfrac97$.",
+  "Now $f(2)=\\varphi(f(1))$, so $f(1)=\\varphi^{-1}(f(2))$. As $\\varphi^{3}$ is the identity, $\\varphi^{-1}=\\varphi\\circ\\varphi$, and $f(1)=-\\dfrac{f(2)+3}{f(2)-1}=-\\dfrac{-\\frac97+3}{-\\frac97-1}=-\\dfrac{12/7}{-16/7}=\\dfrac34$.",
+  "Check: $\\varphi\\left(\\dfrac34\\right)=\\dfrac{\\frac34-3}{\\frac34+1}=\\dfrac{-9/4}{7/4}=-\\dfrac97=f(2)$.",
+  "Therefore $f(2026)=\\dfrac34=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "originality_note": "New: a recurrence of order three (the map y -> (y-3)/(y+1) composed three times is the identity) gives period 3, and the given value lies one step AFTER the required residue, so the map must be inverted (way 1, iteration). Closest known: f(x+p) = (f(x)-5)/(f(x)-3) or f(x+1) = (1+f(x))/(1-f(x)) asking for the period (period 4p / 4). Different because: here the cycle length is 3, the inverse map is the double composite, and the answer is a value, not the period.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, function and domain introduced, conditions complete, one reading of each sentence; answer recomputed with sympy/numpy and unique; answer matches the plan. Checked that the codomain R minus {-1, 1} is preserved by the map, that no real fixed point or 2-cycle exists, and that f(1) = 3/4 maps to f(2) = -9/7. Changed: No change.",
+ "level": 3,
+ "key_step": "Composing y -> (y-3)/(y+1) three times gives the identity, so f has period 3; then f(1) is recovered from f(2) by the inverse map.",
+ "justification": "Two linked ideas: discovering the period from the iterated map (three compositions) and using the periodic property backwards with an inverse step; numerical, exact arithmetic. Between 2024-P2-Q8 (L2, functional equations evaluated) and 2025-P1-Q12 (L4, functional equation with an AP).",
+ "nearest_anchor": "2024-P2-Q8 (L2)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Periodic functions: fundamental period": "The map composed three times is the identity, so f(x+3) = f(x); 1 and 2 are not periods since y^2 = -3 has no real root, so 3 is the least integer period.",
+  "Property for periodic functions": "Property f(x + 3k) = f(x) for every integer k reduces f(2026) to f(1) and f(11) to f(2)."
+ },
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Periodic functions: fundamental period",
+  "Property for periodic functions"
+ ],
+ "chapter": "Function",
+ "multi_concept": false,
+ "eq_relation": false
+}

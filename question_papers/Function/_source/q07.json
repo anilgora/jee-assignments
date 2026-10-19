@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "chapter": "Function",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $f:\\mathbb{R}\\setminus\\{0,1\\}\\to\\mathbb{R}$ be a function such that $2f(x)+f\\left(\\dfrac{1}{1-x}\\right)=6x$ for all $x\\in\\mathbb{R}\\setminus\\{0,1\\}$. Then the value of $f(-1)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\setminus\\{0,1\\}\\to\\mathbb{R}$ एक फलन है, जिसके लिए सभी $x\\in\\mathbb{R}\\setminus\\{0,1\\}$ के लिए $2f(x)+f\\left(\\dfrac{1}{1-x}\\right)=6x$ है। तब $f(-1)$ का मान ______ है।"
+ ],
+ "solution": [
+  "The map $x\\mapsto\\dfrac{1}{1-x}$ cycles $-1\\mapsto\\dfrac12\\mapsto2\\mapsto-1$",
+  "Let $p=f(-1),\\ q=f\\left(\\dfrac12\\right),\\ s=f(2)$. Putting $x=-1,\\ \\dfrac12,\\ 2$:",
+  "$2p+q=-6,\\quad 2q+s=3,\\quad 2s+p=12$",
+  "$q=-6-2p\\Rightarrow s=3-2q=15+4p\\Rightarrow 2(15+4p)+p=12\\Rightarrow 9p=-18\\Rightarrow p=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "Let $T(x)=\\dfrac{1}{1-x}$. Then $T(T(x))=\\dfrac{1}{1-\\frac{1}{1-x}}=\\dfrac{x-1}{x}$ and $T(T(T(x)))=x$, so $T$ permutes each orbit $\\left\\{x,\\dfrac{1}{1-x},\\dfrac{x-1}{x}\\right\\}$ cyclically; all three points avoid $0$ and $1$ when $x\\ne0,1$.",
+  "For $x=-1$: $T(-1)=\\dfrac12$, $T\\left(\\dfrac12\\right)=2$, $T(2)=-1$. Write $p=f(-1)$, $q=f\\left(\\dfrac12\\right)$, $s=f(2)$.",
+  "The given relation at $x=-1$: $2p+q=-6$. At $x=\\dfrac12$: $2q+s=3$. At $x=2$: $2s+p=12$.",
+  "From the first, $q=-6-2p$; then $s=3-2q=3+12+4p=15+4p$; the third gives $30+8p+p=12$, so $9p=-18$ and $p=-2$.",
+  "Check: $q=-2$, $s=7$: $2(-2)+(-2)=-6$, $2(-2)+7=3$, $2(7)+(-2)=12$. (The general solution is $f(x)=\\dfrac{8x}{3}-\\dfrac{4}{3(1-x)}+\\dfrac{2(x-1)}{3x}$, which also gives $f(-1)=-2$.)",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: a functional relation linking x with its image under the order-3 map x -> 1/(1-x), solved on a single orbit {-1, 1/2, 2} by a 3x3 linear system (way 5). Closest known: f(x)+2f(1/x)=3x (order-2 substitution) and the olympiad f(x)+f(1-1/x)=1+x. Different because: the orbit has three points and the coefficients 2,1 make the system non-symmetric; only one orbit is needed.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Miscellaneous concepts of Functions": "The 3-cycle x -> 1/(1-x) -> (x-1)/x of a functional relation is used to set up and solve three linear equations for f(-1), f(1/2), f(2)."
+ },
+ "stem_review": "Read as a student: domain excludes 0 and 1, where 1/(1-x) or the orbit is undefined; the relation determines f uniquely (system determinant 9). Answer -2 checked by solving the general system in sympy. Negative integer as planned. Changed: No change.",
+ "level": 2,
+ "key_step": "Noticing that x -> 1/(1-x) has order 3 so that -1, 1/2, 2 close up into three equations.",
+ "justification": "Routine but multi-step: find the orbit, write three equations, solve. No real insight beyond the familiar substitution trick. Comparable to 2024-P2-Q8 (L2, functional equations, evaluate) and 2025-P1-Q1 (L2).",
+ "nearest_anchor": "2024-P2-Q8 (L2)",
+ "confidence": "High",
+ "blueprint_concepts": [
+  "Miscellaneous concepts of Functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

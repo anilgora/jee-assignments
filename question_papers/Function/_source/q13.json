@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=x^{2}-4x$, and let $h:\\mathbb{R}\\to\\mathbb{R}$ be defined by $h(x)=\\max\\left\\{f(|x|),\\ \\dfrac{x-5}{2}\\right\\}$. Then the least value of $h$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=x^{2}-4x$ द्वारा परिभाषित है, तथा $h:\\mathbb{R}\\to\\mathbb{R}$, $h(x)=\\max\\left\\{f(|x|),\\ \\dfrac{x-5}{2}\\right\\}$ द्वारा परिभाषित है। तब $h$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$f(|x|)=x^{2}-4|x|$: the graph of $f$ for $x\\ge0$ reflected in the $y$-axis; minimum $-4$ at $x=\\pm2$. Let $L(x)=\\dfrac{x-5}{2}$; $h\\ge L$ and $h\\ge f(|x|)$",
+  "$x\\ge0$: $h(x)\\ge L(x)\\ge L(0)=-\\dfrac52$",
+  "$x<0$: $x^{2}+4x=\\dfrac{x-5}{2}\\Rightarrow2x^{2}+7x+5=0\\Rightarrow x=-\\dfrac52,\\,-1$",
+  "On $\\left[-\\dfrac52,-1\\right]$ the parabola is below the line, so $h=L$, increasing: least $L\\left(-\\dfrac52\\right)=-\\dfrac{15}{4}$",
+  "$x<-\\dfrac52$: $h\\ge x^{2}+4x$, decreasing there, so $h>-\\dfrac{15}{4}$; $-1<x<0$: $h\\ge L(x)>L(-1)=-3$",
+  "Least value $=-\\dfrac{15}{4}=-3.75$",
+  "",
+  "Final Answer: -3.75"
+ ],
+ "solution_full": [
+  "For $x\\ge0$, $f(|x|)=x^{2}-4x$, and for $x<0$, $f(|x|)=x^{2}+4x$. So the graph of $y=f(|x|)$ is the part of $y=x^{2}-4x$ for $x\\ge0$ together with its mirror image in the $y$-axis: a W-shaped curve with minimum $-4$ at $x=\\pm2$, passing through $(0,0)$ and $(\\pm4,0)$.",
+  "Let $L(x)=\\dfrac{x-5}{2}$. The graph of $h$ is the upper of the two graphs, so $h(x)\\ge L(x)$ and $h(x)\\ge f(|x|)$ for all $x$.",
+  "For $x\\ge0$: $h(x)\\ge L(x)\\ge L(0)=-\\dfrac52$. (At $x=2$, $L(2)=-\\dfrac32>-4$, so the bottom of the right arc is covered by the line.)",
+  "For $x<0$: the left arc meets the line where $x^{2}+4x=\\dfrac{x-5}{2}$, i.e. $2x^{2}+7x+5=0$, $(2x+5)(x+1)=0$, $x=-\\dfrac52$ or $x=-1$.",
+  "For $-\\dfrac52\\le x\\le-1$, $x^{2}+4x\\le\\dfrac{x-5}{2}$ (the quadratic $2x^{2}+7x+5\\le0$ there), so $h(x)=L(x)$, which is increasing; its least value on this interval is $L\\left(-\\dfrac52\\right)=-\\dfrac{15}{4}$.",
+  "For $x<-\\dfrac52$: $h(x)\\ge x^{2}+4x$, and $x^{2}+4x$ is decreasing on $(-\\infty,-2]$, so $x^{2}+4x>\\left(-\\dfrac52\\right)^{2}+4\\left(-\\dfrac52\\right)=-\\dfrac{15}{4}$.",
+  "For $-1<x<0$: $h(x)\\ge L(x)>L(-1)=-3$.",
+  "Combining all cases, $h(x)\\ge-\\dfrac{15}{4}$ with equality at $x=-\\dfrac52$. The range of $h$ is $\\left[-\\dfrac{15}{4},\\infty\\right)$ and the least value is $-3.75$. (Using $f(x)$ instead of $f(|x|)$ would give the irrational value $L\\left(\\dfrac{9-\\sqrt{41}}{4}\\right)$.)",
+  "",
+  "Final Answer: -3.75"
+ ],
+ "originality_note": "New: least value of the maximum of a W-shaped graph f(|x|) and a slanting line; the line hides the right well, and the minimum sits at an intersection on the left arc, not at a bottom of either graph (way 5). Closest known: max/min of two graphs and graphs of f(|x|). Different because: the answer comes from the reflected arc only, so the graph of f(|x|) is essential.",
+ "web_check": "not found",
+ "concept_use": {
+  "Domain and range of functions involving max / min operators": "Range of h = max{f(|x|), L}: h >= both, and the least value -15/4 is found at the crossing x = -5/2 where the maximum switches from the parabola to the line.",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs": "The graph of f(|x|) is the right half of y = x^2 - 4x reflected in the y-axis; only its left arc x^2 + 4x meets the line where the minimum of h occurs."
+ },
+ "stem_review": "Read as a student: every symbol and the domain of every function introduced, conditions complete, one reading of each sentence; answer recomputed with code by an independent route, unique and equal to the plan. Checked on a dense grid that min h = -3.75 at x = -2.5. Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing that the minimum of the maximum is at the left crossing x = -5/2 of the reflected arc and the line.",
+ "justification": "Needs the graph of f(|x|), the upper envelope with a line and a case split on both sides; numerical answer. Comparable to 2026-P1-Q1 (L3) in being a two-idea function analysis with a sign/region decision.",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "blueprint_concepts": [
+  "Domain and range of functions involving max / min operators",
+  "Graphs of |f(x)|, f(|x|), |f(|x|)| and max/min of two graphs"
+ ],
+ "answer_plan": "negative decimal",
+ "target_level": 3,
+ "chapter": "Function"
+}

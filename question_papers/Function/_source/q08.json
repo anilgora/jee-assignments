@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Let $D_1$ be the set of all real numbers $x$ for which $\\log_e\\left(\\dfrac{2x^{2}-5x-7}{x^{2}-2x-8}\\right)$ is defined, and let $D_2$ be the set of all real numbers $x$ for which $\\log_e\\left(2x^{2}-5x-7\\right)-\\log_e\\left(x^{2}-2x-8\\right)$ is defined. Let $f:D_1\\to\\mathbb{R}$ and $g:D_2\\to\\mathbb{R}$ be defined by $f(x)=\\log_e\\left(\\dfrac{2x^{2}-5x-7}{x^{2}-2x-8}\\right)$ and $g(x)=\\log_e\\left(2x^{2}-5x-7\\right)-\\log_e\\left(x^{2}-2x-8\\right)$. Let $S$ be the set of all $x\\in D_1$ such that either $x\\notin D_2$ or $f(x)\\ne g(x)$. Then the sum of the lengths of the intervals that make up $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $D_1$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जिनके लिए $\\log_e\\left(\\dfrac{2x^{2}-5x-7}{x^{2}-2x-8}\\right)$ परिभाषित है, तथा $D_2$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जिनके लिए $\\log_e\\left(2x^{2}-5x-7\\right)-\\log_e\\left(x^{2}-2x-8\\right)$ परिभाषित है। माना कि $f:D_1\\to\\mathbb{R}$ तथा $g:D_2\\to\\mathbb{R}$ क्रमशः $f(x)=\\log_e\\left(\\dfrac{2x^{2}-5x-7}{x^{2}-2x-8}\\right)$ तथा $g(x)=\\log_e\\left(2x^{2}-5x-7\\right)-\\log_e\\left(x^{2}-2x-8\\right)$ द्वारा परिभाषित हैं। माना कि $S$ उन सभी $x\\in D_1$ का समुच्चय है जिनके लिए या तो $x\\notin D_2$ है या $f(x)\\ne g(x)$ है। तब $S$ को बनाने वाले अन्तरालों की लम्बाइयों का योग ______ है।"
+ ],
+ "solution": [
+  "$2x^{2}-5x-7=(2x-7)(x+1)$, $x^{2}-2x-8=(x-4)(x+2)$; critical points $-2,-1,\\dfrac72,4$",
+  "$D_1$: $\\dfrac{(2x-7)(x+1)}{(x-4)(x+2)}>0\\Rightarrow x\\in(-\\infty,-2)\\cup\\left(-1,\\dfrac72\\right)\\cup(4,\\infty)$",
+  "$D_2$: both factors positive: $\\left(x<-1\\text{ or }x>\\dfrac72\\right)$ and $(x<-2\\text{ or }x>4)\\Rightarrow(-\\infty,-2)\\cup(4,\\infty)$",
+  "On $D_2$ both arguments are positive, so $\\log_e\\dfrac AB=\\log_e A-\\log_e B$: $f=g$ there",
+  "$S=D_1\\setminus D_2=\\left(-1,\\dfrac72\\right)$ (both numerator and denominator negative), length $\\dfrac92=4.5$",
+  "",
+  "Final Answer: 4.5"
+ ],
+ "solution_full": [
+  "Factorise: $2x^{2}-5x-7=(2x-7)(x+1)$ and $x^{2}-2x-8=(x-4)(x+2)$. The critical points in increasing order are $-2,\\,-1,\\,\\dfrac72,\\,4$.",
+  "$D_1$ needs $\\dfrac{(2x-7)(x+1)}{(x-4)(x+2)}>0$. By the sign scheme the expression is positive on $(-\\infty,-2)$, negative on $(-2,-1)$, positive on $\\left(-1,\\dfrac72\\right)$, negative on $\\left(\\dfrac72,4\\right)$ and positive on $(4,\\infty)$. So $D_1=(-\\infty,-2)\\cup\\left(-1,\\dfrac72\\right)\\cup(4,\\infty)$.",
+  "$D_2$ needs both $(2x-7)(x+1)>0$, i.e. $x<-1$ or $x>\\dfrac72$, and $(x-4)(x+2)>0$, i.e. $x<-2$ or $x>4$. Together: $D_2=(-\\infty,-2)\\cup(4,\\infty)$, a subset of $D_1$.",
+  "For $x\\in D_2$, $A=2x^{2}-5x-7>0$ and $B=x^{2}-2x-8>0$, so $\\log_e\\dfrac AB=\\log_e A-\\log_e B$ and $f(x)=g(x)$. Hence the condition $f(x)\\ne g(x)$ never holds on $D_2$, and $f$ and $g$ are identical as functions only when both are restricted to $D_2$.",
+  "Therefore $S=D_1\\setminus D_2=\\left(-1,\\dfrac72\\right)$: there both $A$ and $B$ are negative, so the quotient is positive but the separate logarithms are undefined.",
+  "$S$ is a single interval of length $\\dfrac72-(-1)=\\dfrac92=4.5$ (a Monte Carlo estimate on $[-10,10]$ gives about $4.46$).",
+  "",
+  "Final Answer: 4.5"
+ ],
+ "originality_note": "New: the gap between the domains of log(A/B) and log A - log B, measured as a length, with factors chosen so that the gap is an interior interval where both factors are negative (way 5). Closest known: 'are log(x^2) and 2 log x identical' type questions. Different because: the student must run a four-point sign scheme for D1 and an intersection of two conditions for D2, and justify that the functions agree on D2.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Miscellaneous concepts of Functions": "Sign scheme (wavy-curve method) of a rational expression with four critical points gives D1, and the two separate conditions give D2.",
+  "Definition of a function; vertical line test; identical functions": "f and g are compared as functions: they agree wherever both are defined, so they fail to be identical exactly on D1 \\ D2, whose length is the answer."
+ },
+ "stem_review": "Read as a student: both domains defined explicitly as sets of real x where the expressions make sense; S defined without hinting that f=g on D2; 'sum of the lengths of the intervals' is robust even though S is one interval. Answer 4.5 checked with sympy set algebra and Monte Carlo. Positive decimal as planned. Changed: replaced 'the length of the interval S' by 'the sum of the lengths of the intervals that make up S' so the stem does not reveal that S is one interval.",
+ "level": 3,
+ "key_step": "Separating where the quotient is positive (four-point sign scheme) from where both factors are positive, and seeing that the difference is the interval where both are negative.",
+ "justification": "A routine sign-scheme chain plus the identical-functions comparison; the trap (both factors negative) is common, but the numerical format with two domains and a set definition adds checking. Comparable to 2023-P1-Q8 (L2) for domain-type counting, nudged up by format; near 2025-P2-Q3 (L3).",
+ "nearest_anchor": "2023-P1-Q8 (L2)",
+ "confidence": "Low",
+ "blueprint_concepts": [
+  "Miscellaneous concepts of Functions",
+  "Definition of a function; vertical line test; identical functions"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

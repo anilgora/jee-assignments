@@ -1,0 +1,57 @@
+{
+ "type": "SCQ",
+ "chapter": "Function",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\sin\\left(\\cos\\dfrac{\\pi x}{2}\\right)+\\cos\\left(\\sin\\dfrac{2\\pi x}{3}\\right)$. Then the fundamental period of $f$ is",
+  "",
+  "(A) $6$",
+  "(B) $24$",
+  "(C) $4$",
+  "(D) $12$"
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\sin\\left(\\cos\\dfrac{\\pi x}{2}\\right)+\\cos\\left(\\sin\\dfrac{2\\pi x}{3}\\right)$ द्वारा परिभाषित है। तब $f$ का मूल आवर्तकाल है",
+  "",
+  "(A) $6$",
+  "(B) $24$",
+  "(C) $4$",
+  "(D) $12$"
+ ],
+ "solution": [
+  "$\\sin(\\cos(t+\\pi))=\\sin(-\\cos t)=-\\sin(\\cos t)$, so $\\sin(\\cos t)$ has fundamental period $2\\pi$ (not $\\pi$); with $t=\\dfrac{\\pi x}{2}$: period $4$",
+  "$\\cos(\\sin(t+\\pi))=\\cos(-\\sin t)=\\cos(\\sin t)$, and no smaller shift works, so $\\cos(\\sin t)$ has period $\\pi$; with $t=\\dfrac{2\\pi x}{3}$: period $\\dfrac32$",
+  "Period of the sum $=\\mathrm{LCM}\\left(4,\\dfrac32\\right)=\\dfrac{\\mathrm{LCM}(8,3)}{2}=12$",
+  "Check: $f(x+6)=-\\sin\\left(\\cos\\dfrac{\\pi x}{2}\\right)+\\cos\\left(\\sin\\dfrac{2\\pi x}{3}\\right)\\ne f(x)$ (at $x=0$: $1-\\sin1\\ne1+\\sin1$), so $6$ is not a period ($6$ comes from taking $\\pi$ as the period of $\\sin(\\cos t)$)",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "First term $u(x)=\\sin\\left(\\cos\\dfrac{\\pi x}{2}\\right)$. Put $t=\\dfrac{\\pi x}{2}$. Since $\\cos(t+\\pi)=-\\cos t$ and $\\sin$ is odd, $\\sin(\\cos(t+\\pi))=-\\sin(\\cos t)$, which is not identically equal to $\\sin(\\cos t)$ (at $t=0$ the values are $-\\sin1$ and $\\sin1$). Since $\\cos t$ has fundamental period $2\\pi$ and $\\sin$ is one-one on $[-1,1]$, the fundamental period of $\\sin(\\cos t)$ is $2\\pi$; in $x$ it is $\\dfrac{2\\pi}{\\pi/2}=4$.",
+  "Second term $v(x)=\\cos\\left(\\sin\\dfrac{2\\pi x}{3}\\right)$. Put $s=\\dfrac{2\\pi x}{3}$. Since $\\sin(s+\\pi)=-\\sin s$ and $\\cos$ is even, $\\cos(\\sin(s+\\pi))=\\cos(\\sin s)$. As $\\cos$ is one-one on $[0,1]$, $\\cos(\\sin s)$ repeats exactly when $|\\sin s|$ repeats, whose fundamental period is $\\pi$. In $x$ the period is $\\dfrac{\\pi}{2\\pi/3}=\\dfrac32$.",
+  "The periods $4$ and $\\dfrac32$ are commensurable, with $\\dfrac{4}{3/2}=\\dfrac83$ in lowest terms, so the period of $f=u+v$ is their LCM: $\\dfrac{\\mathrm{LCM}(8,3)}{\\mathrm{HCF}(2,2)}=\\dfrac{24}{2}=12$; indeed $12=3\\cdot4=8\\cdot\\dfrac32$.",
+  "No proper divisor of the form $\\dfrac{12}{k}$ works. For example $f(x+6)=-u(x)+v(x)$, which differs from $f(x)$ at $x=0$; and $f(x+4)=u(x)+\\cos\\left(\\sin\\left(\\dfrac{2\\pi x}{3}+\\dfrac{8\\pi}{3}\\right)\\right)$, which at $x=0$ equals $\\sin1+\\cos\\dfrac{\\sqrt3}{2}\\ne\\sin1+1$. A numerical scan of all shifts $T\\in(0,12)$ confirms that $12$ is the least period.",
+  "Option (A) results from taking $\\pi$ as the period of $\\sin(\\cos t)$, and (C) is the period of the first term alone.",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: a sum of the two mirror composites sin(cos) and cos(sin) with different inner frequencies, chosen so that the classic slip (both having period pi) changes the answer from 12 to 6 (way 5). Closest known: period of sin(cos x) or cos(sin x) alone, and of |sin x|+|cos x|. Different because: the two composites behave differently under a half-period shift and the sum's LCM must be formed with a fractional period.",
+ "web_check": "not found",
+ "concept_use": {
+  "Period of a sum, product or composite of periodic functions": "The period of the sum is the LCM of 4 and 3/2, which is 12.",
+  "Periodic functions: fundamental period": "The fundamental periods of sin(cos t) (2 pi) and cos(sin t) (pi) are established, and 12 is checked to be the least period (6 and 4 fail)."
+ },
+ "stem_review": "Read as a student: f defined with domain; 'fundamental period' is standard. Numerical scan of shifts in (0,12) found no smaller period; f(x+12)=f(x) to 1e-14. Options all numbers; plan D. Changed: No change.",
+ "level": 2,
+ "key_step": "Recognising that sin(cos t) has period 2 pi while cos(sin t) has period pi, then taking LCM(4, 3/2).",
+ "justification": "Routine multi-step chain: two composite periods plus an LCM with a fractional period; the trap is a familiar one. Comparable to 2024-P1-Q3 (L3 trig evaluation) on the lower side and to routine L2 period questions; below 2026-P1-Q14 (L3).",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "High",
+ "blueprint_concepts": [
+  "Period of a sum, product or composite of periodic functions",
+  "Periodic functions: fundamental period"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

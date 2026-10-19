@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "english": [
+  "For $x\\ge 0$, let $\\theta_x$ denote the radian measure of the angle subtended at the centre of a circle of radius $\\dfrac{40}{\\pi}$ cm by an arc of length $x$ cm of the circle. Let $f:[0,\\infty)\\to\\mathbb{R}$ be defined by $f(x)=\\sin^{2}(x^{\\circ})+\\left|\\cos\\theta_x\\right|$, where $x^{\\circ}$ denotes an angle of $x$ degrees. Then the fundamental period of $f$ is ______."
+ ],
+ "hindi": [
+  "$x\\ge 0$ के लिए, माना $\\theta_x$ उस कोण की रेडियन माप है जो $\\dfrac{40}{\\pi}$ cm त्रिज्या वाले वृत्त के $x$ cm लम्बाई के चाप द्वारा वृत्त के केन्द्र पर अंतरित होता है। माना $f:[0,\\infty)\\to\\mathbb{R}$, $f(x)=\\sin^{2}(x^{\\circ})+\\left|\\cos\\theta_x\\right|$ द्वारा परिभाषित है, जहाँ $x^{\\circ}$ का अर्थ $x$ अंश का कोण है। तब $f$ का मूल आवर्तकाल ______ है।"
+ ],
+ "solution": [
+  "$x^{\\circ}=\\dfrac{\\pi x}{180}$ radian, so $\\sin^{2}(x^{\\circ})=\\dfrac12-\\dfrac12\\cos\\dfrac{\\pi x}{90}$: period $180$",
+  "Arc $=r\\theta$: $\\theta_x=\\dfrac{x}{40/\\pi}=\\dfrac{\\pi x}{40}$; $|\\cos t|$ has period $\\pi$, so $\\left|\\cos\\dfrac{\\pi x}{40}\\right|$ has period $40$",
+  "A period $T$ of $f$ must be a period of each part: the first part contains only the frequency of $\\cos\\dfrac{\\pi x}{90}$, the second only those of $\\cos\\dfrac{2k\\pi x}{40}$, and none of these equals $\\dfrac{\\pi}{90}$ ($k=\\dfrac{2}{9}$ is not an integer), so no cancellation is possible",
+  "$T=\\mathrm{LCM}(180,40)=360$ (ignoring both halvings would give $\\mathrm{LCM}(360,80)=720$)",
+  "",
+  "Final Answer: 360"
+ ],
+ "solution_full": [
+  "Degree to radian: $x^{\\circ}=\\dfrac{\\pi x}{180}$ radian. Hence $\\sin^{2}(x^{\\circ})=\\dfrac{1-\\cos(2x^{\\circ})}{2}=\\dfrac12-\\dfrac12\\cos\\dfrac{\\pi x}{90}$, whose fundamental period is $\\dfrac{2\\pi}{\\pi/90}=180$ (half of the period $360$ of $\\sin(x^{\\circ})$).",
+  "An arc of length $l$ on a circle of radius $r$ subtends $\\theta=\\dfrac{l}{r}$ radian at the centre. So $\\theta_x=\\dfrac{x}{40/\\pi}=\\dfrac{\\pi x}{40}$.",
+  "$\\cos\\dfrac{\\pi x}{40}$ has period $80$, but $|\\cos t|$ has fundamental period $\\pi$, so $\\left|\\cos\\dfrac{\\pi x}{40}\\right|$ has fundamental period $\\dfrac{\\pi}{\\pi/40}=40$.",
+  "Write $f=u+v$ with $u(x)=\\sin^{2}(x^{\\circ})$ and $v(x)=\\left|\\cos\\dfrac{\\pi x}{40}\\right|$. If $f(x+T)=f(x)$ for all $x\\ge0$, then $u(x+T)-u(x)=v(x)-v(x+T)$. The left side is a combination of $\\cos\\dfrac{\\pi x}{90}$ and $\\sin\\dfrac{\\pi x}{90}$; the right side, like $v$, repeats every $40$. A non-zero combination of $\\cos\\dfrac{\\pi x}{90}$, $\\sin\\dfrac{\\pi x}{90}$ does not repeat every $40$ (that would need $\\dfrac{40}{180}$ to be an integer), so both sides are $0$: $T$ is a period of $u$ and of $v$.",
+  "Hence $T$ is a common multiple of $180$ and $40$, and the least one is $\\mathrm{LCM}(180,40)=360$. Indeed $f(x+360)=f(x)$, as $360=2\\cdot180=9\\cdot40$.",
+  "Therefore the fundamental period of $f$ is $360$.",
+  "",
+  "Final Answer: 360"
+ ],
+ "originality_note": "New: one term uses an angle in degrees and the other an angle defined by an arc of a circle whose radius contains pi, so the two measures must be converted to the same variable before the periods (each halved by a square or a modulus) are combined (way 5). Closest known: period of sin(x degrees) or of |sin x| + |cos x|-type sums. Different because: the radian measure comes from arc = r theta with r = 40/pi, and both halvings (square and modulus) affect the LCM (720 without them).",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every symbol, function and domain introduced, conditions complete, one reading of each sentence; answer recomputed with sympy/numpy and unique; answer matches the plan. Domain [0, infinity) chosen because an arc length is non-negative; checked numerically that 360 is the least period on [0, 2000]. Changed: No change.",
+ "level": 3,
+ "key_step": "Convert x degrees and the arc-length angle to pi x/180 and pi x/40, halve both periods (square, modulus), then LCM(180, 40) = 360.",
+ "justification": "Several routine conversions (degree to radian, arc = r theta) followed by two period-halving traps and an LCM, with no options; each step is standard, but the chain and the traps put it at the Advanced average for a numerical. Comparable to 2026-P1-Q4 (L2, angle conversion with range shift) plus the period combination, so placed one level above it.",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "Medium",
+ "concept_use": {
+  "Periodic functions: fundamental period": "Fundamental periods 180 of sin^2(x degrees) and 40 of |cos(pi x/40)|, combined by LCM into 360 after showing no cancellation.",
+  "Measurement of angles: degree, radian, arc length and sector area": "x degrees = pi x/180 radian, and the arc-length relation theta = l/r with r = 40/pi gives theta_x = pi x/40."
+ },
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Periodic functions: fundamental period",
+  "Measurement of angles: degree, radian, arc length and sector area"
+ ],
+ "chapter": "Function",
+ "multi_concept": false,
+ "eq_relation": false
+}

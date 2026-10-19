@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "Option C",
+ "english": [
+  "Let $S=\\{1,2,3,\\ldots,10\\}$ and $T=\\{0,1,2,3\\}$. Then the number of functions $f:S\\to T$ such that $f(xy)=f(x)+f(y)$ for all $x,y\\in S$ with $xy\\in S$ is",
+  "",
+  "(A) $64$",
+  "(B) $48$",
+  "(C) $56$",
+  "(D) $72$"
+ ],
+ "hindi": [
+  "माना कि $S=\\{1,2,3,\\ldots,10\\}$ तथा $T=\\{0,1,2,3\\}$ है। तब ऐसे फलनों $f:S\\to T$ की संख्या, जिनके लिए $xy\\in S$ वाले सभी $x,y\\in S$ के लिए $f(xy)=f(x)+f(y)$ है, बराबर है",
+  "",
+  "(A) $64$",
+  "(B) $48$",
+  "(C) $56$",
+  "(D) $72$"
+ ],
+ "solution": [
+  "$x=y=1$: $f(1)=2f(1)\\Rightarrow f(1)=0$; with $1$ as a factor the condition then holds automatically",
+  "Products inside $S$: $4=2\\cdot2$, $6=2\\cdot3$, $8=2\\cdot4$, $9=3\\cdot3$, $10=2\\cdot5$, so $f(4)=2a,\\ f(8)=3a,\\ f(9)=2b,\\ f(6)=a+b,\\ f(10)=a+c$ where $a=f(2),\\ b=f(3),\\ c=f(5)$; $f(7)$ is free",
+  "Values must lie in $T$: $3a\\le3\\Rightarrow a\\in\\{0,1\\}$; $2b\\le3\\Rightarrow b\\in\\{0,1\\}$; $a+c\\le3$",
+  "$a=0$: $2\\cdot4\\cdot4=32$ choices of $(b,c,f(7))$; $a=1$: $c\\in\\{0,1,2\\}$, so $2\\cdot3\\cdot4=24$",
+  "Total $=32+24=56$ ($64$ ignores the condition on $f(10)$)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Put $x=y=1$ (allowed, since $1\\cdot1=1\\in S$): $f(1)=f(1)+f(1)$, so $f(1)=0$. Then every relation with $x=1$ or $y=1$ reads $f(y)=0+f(y)$ and gives no restriction.",
+  "The remaining products $xy\\le10$ with $x,y\\ge2$ are $2\\cdot2=4$, $2\\cdot3=6$, $2\\cdot4=8$, $2\\cdot5=10$, $3\\cdot3=9$ (and the same with the factors exchanged). Write $a=f(2)$, $b=f(3)$, $c=f(5)$.",
+  "Then $f(4)=2a$, $f(6)=a+b$, $f(8)=f(2)+f(4)=3a$, $f(9)=2b$, $f(10)=a+c$. The value $f(7)$ appears in no relation, so it can be any of the $4$ elements of $T$.",
+  "Every value must lie in $T=\\{0,1,2,3\\}$. From $f(8)=3a\\le3$: $a\\in\\{0,1\\}$. From $f(9)=2b\\le3$: $b\\in\\{0,1\\}$; then $f(6)=a+b\\le2$ automatically. From $f(10)=a+c\\le3$: $c\\le3-a$.",
+  "Conversely, any such choice of $a,b,c,f(7)$ defines $f$ on all of $S$ with values in $T$, and all the relations hold, so the functions correspond exactly to these choices.",
+  "Case $a=0$: $b$ has $2$ choices, $c$ has $4$, $f(7)$ has $4$: $32$ functions.",
+  "Case $a=1$: $b$ has $2$ choices, $c\\in\\{0,1,2\\}$ has $3$, $f(7)$ has $4$: $24$ functions.",
+  "Total $=32+24=56$. (Ignoring the bound on $f(10)$ gives $64$; also forcing $c\\le2$ when $a=0$ gives $48$.) A direct computer enumeration of all $4^{10}$ maps confirms $56$.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: counting the solutions of the logarithmic Cauchy equation on a truncated set {1,...,10} with a bounded codomain, where the truncation decides which constraints exist (way 5). Closest known: counting homomorphism-like maps or f(xy)=f(x)+f(y) on all of N (determined by values at primes). Different because: only products inside the set are constrained, so f(7) is free and the codomain bound couples f(2) with f(5) through f(10).",
+ "web_check": "not found",
+ "concept_use": {
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)": "f(xy)=f(x)+f(y) gives f(1)=0 and expresses f(4), f(6), f(8), f(9), f(10) through f(2), f(3), f(5).",
+  "Counting functions with prescribed properties": "The codomain {0,1,2,3} restricts f(2), f(3), f(5); the admissible choices are counted case by case (32+24)."
+ },
+ "stem_review": "Read as a student: S, T and the condition (only when xy lies in S) are stated; f(1) is covered by x=y=1. Answer 56 confirmed by brute-force enumeration of all 4^10 maps; options all integers, plan C. Changed: added 'with xy in S' so the condition is meaningful for every pair.",
+ "level": 3,
+ "key_step": "Reduce f to its values at 2, 3, 5, 7 and read the bounds 3f(2)<=3, 2f(3)<=3, f(2)+f(5)<=3 off the products inside the set.",
+ "justification": "Two ideas linked: the functional equation fixes f by prime values, and the truncated domain/codomain turns it into a bounded count with a coupled constraint (f(10)) that is easy to miss. Comparable to 2026-P2-Q10 (L4, counting functions with conditions) but shorter, and to 2026-P1-Q11 (L3, bounded count).",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "blueprint_concepts": [
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)",
+  "Counting functions with prescribed properties"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}

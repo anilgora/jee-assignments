@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=9\\left\\{\\dfrac{x}{3}\\right\\}^{2}-6\\left\\{\\dfrac{x}{3}\\right\\}$, where $\\{t\\}=t-[t]$ and $[t]$ denotes the greatest integer less than or equal to $t$. Let $g:\\mathbb{R}\\to\\mathbb{R}$ be an even function and $h:\\mathbb{R}\\to\\mathbb{R}$ be an odd function such that $f(x)=g(x)+h(x)$ for all $x\\in\\mathbb{R}$. Then the value of $h\\left(\\dfrac{37}{4}\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=9\\left\\{\\dfrac{x}{3}\\right\\}^{2}-6\\left\\{\\dfrac{x}{3}\\right\\}$ द्वारा परिभाषित है, जहाँ $\\{t\\}=t-[t]$ तथा $[t]$, $t$ से कम या उसके बराबर महत्तम पूर्णांक को दर्शाता है। माना $g:\\mathbb{R}\\to\\mathbb{R}$ एक सम फलन तथा $h:\\mathbb{R}\\to\\mathbb{R}$ एक विषम फलन है जिनके लिए सभी $x\\in\\mathbb{R}$ के लिए $f(x)=g(x)+h(x)$ है। तब $h\\left(\\dfrac{37}{4}\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "The decomposition is unique: $h(x)=\\dfrac{f(x)-f(-x)}{2}$",
+  "With $s=3\\left\\{\\dfrac x3\\right\\}\\in[0,3)$: $f(x)=s^{2}-2s$, and $f(x+3)=f(x)$ (fundamental period $3$)",
+  "$\\dfrac{37}{4}=9+\\dfrac14\\Rightarrow f\\left(\\dfrac{37}{4}\\right)=f\\left(\\dfrac14\\right)=\\dfrac1{16}-\\dfrac12=-\\dfrac{7}{16}$",
+  "$-\\dfrac{37}{4}=-12+\\dfrac{11}{4}\\Rightarrow f\\left(-\\dfrac{37}{4}\\right)=f\\left(\\dfrac{11}{4}\\right)=\\dfrac{121}{16}-\\dfrac{88}{16}=\\dfrac{33}{16}$",
+  "$h\\left(\\dfrac{37}{4}\\right)=\\dfrac12\\left(-\\dfrac{7}{16}-\\dfrac{33}{16}\\right)=-\\dfrac54=-1.25$",
+  "",
+  "Final Answer: -1.25"
+ ],
+ "solution_full": [
+  "If $f=g+h$ with $g$ even and $h$ odd, then $f(-x)=g(x)-h(x)$, so $g(x)=\\dfrac{f(x)+f(-x)}{2}$ and $h(x)=\\dfrac{f(x)-f(-x)}{2}$; the decomposition is unique.",
+  "Let $s=3\\left\\{\\dfrac x3\\right\\}$. Then $0\\le s<3$, $x-s$ is a multiple of $3$, and $f(x)=s^{2}-2s$. Since $\\left\\{\\dfrac{x+3}{3}\\right\\}=\\left\\{\\dfrac x3\\right\\}$, $f(x+3)=f(x)$. No smaller positive period exists: a period $p\\in(0,3)$ would need $f(p)=f(0)=0$, so $p=2$, but $f(1)=-1\\ne0=f(3)$. So $3$ is the fundamental period and $f(x)=f(x-3k)$ for every integer $k$.",
+  "$\\dfrac{37}{4}-9=\\dfrac14\\in[0,3)$, so $f\\left(\\dfrac{37}{4}\\right)=f\\left(\\dfrac14\\right)=\\dfrac{1}{16}-\\dfrac{1}{2}=-\\dfrac{7}{16}$.",
+  "$-\\dfrac{37}{4}+12=\\dfrac{11}{4}\\in[0,3)$, so $f\\left(-\\dfrac{37}{4}\\right)=f\\left(\\dfrac{11}{4}\\right)=\\dfrac{121}{16}-\\dfrac{11}{2}=\\dfrac{33}{16}$.",
+  "Therefore $h\\left(\\dfrac{37}{4}\\right)=\\dfrac12\\left(-\\dfrac{7}{16}-\\dfrac{33}{16}\\right)=\\dfrac12\\cdot\\left(-\\dfrac{40}{16}\\right)=-\\dfrac54=-1.25$. (For comparison, $g\\left(\\dfrac{37}{4}\\right)=\\dfrac{13}{16}$; the trap $f(-x)=-f(x)$ would give $-\\dfrac{7}{16}$.)",
+  "",
+  "Final Answer: -1.25"
+ ],
+ "originality_note": "New: the odd part of a periodic function given through the fractional part {x/3}, so the period 3 is not stated and f(-x) must be reduced into a different point of the basic period (way 5). Closest known: writing a given algebraic function as the sum of its even and odd parts. Different because: f has neither parity, its period must be read from {x/3}, and the two reductions (37/4 to 1/4 and -37/4 to 11/4) land in different places.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every set, function and symbol introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with code and unique; answer matches the plan. Checked the definition of {t} for negative t (stated as t - [t]), and recomputed h(37/4) = -5/4 with exact rationals. Changed: No change.",
+ "level": 2,
+ "key_step": "h(x) = (f(x) - f(-x))/2 with both values reduced by the period 3 read from {x/3}.",
+ "justification": "Routine chain of three standard steps (decomposition formula, period from the fractional part, evaluation at two reduced points) with no real insight. Comparable to 2025-P1-Q1 (L2), a direct function computation; numerical format.",
+ "nearest_anchor": "2025-P1-Q1 (L2)",
+ "confidence": "High",
+ "chapter": "Function",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Even and odd functions; decomposition into even and odd parts",
+  "Periodic functions: fundamental period"
+ ],
+ "concept_use": {
+  "Even and odd functions; decomposition into even and odd parts": "The odd part is h(x) = (f(x) - f(-x))/2, by the unique decomposition of f into an even part g and an odd part h.",
+  "Periodic functions: fundamental period": "f(x) = s^2 - 2s with s = 3{x/3} has fundamental period 3, used to reduce f(37/4) to f(1/4) and f(-37/4) to f(11/4)."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

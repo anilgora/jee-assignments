@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "english": [
+  "For a real number $t$, let $[t]$ denote the greatest integer less than or equal to $t$. Let $f:D\\to\\mathbb{R}$ be defined by $f(x)=\\sqrt{\\dfrac{([x]+6)([x]-1)}{\\log_{1/2}(|x|-3)}}$, where $D$ is the set of all real numbers $x$ for which this expression is a real number. Then the sum of all the integers in $D$ is ______."
+ ],
+ "hindi": [
+  "किसी वास्तविक संख्या $t$ के लिए, $[t]$ उस महत्तम पूर्णांक को दर्शाता है जो $t$ से छोटा या उसके बराबर है। माना कि $f:D\\to\\mathbb{R}$, $f(x)=\\sqrt{\\dfrac{([x]+6)([x]-1)}{\\log_{1/2}(|x|-3)}}$ द्वारा परिभाषित है, जहाँ $D$ उन सभी वास्तविक संख्याओं $x$ का समुच्चय है जिनके लिए यह व्यंजक एक वास्तविक संख्या है। तब $D$ में स्थित सभी पूर्णांकों का योगफल ______ है।"
+ ],
+ "solution": [
+  "Log defined: $|x|>3$; denominator $\\ne0$: $|x|-3\\ne1\\Rightarrow|x|\\ne4$",
+  "Base $\\dfrac12<1$: $\\log_{1/2}(|x|-3)>0$ for $3<|x|<4$ and $<0$ for $|x|>4$",
+  "Let $N=([x]+6)([x]-1)$. Need $N\\ge0$ where the log is positive and $N\\le0$ where it is negative",
+  "$3<x<4$: $[x]=3$, $N=18>0$, included. $-4<x<-3$: $[x]=-4$, $N=-10<0$, excluded",
+  "$|x|>4$: $N\\le0\\Leftrightarrow-6\\le[x]\\le1\\Leftrightarrow-6\\le x<2$; with $|x|>4$: $x\\in[-6,-4)$",
+  "$D=[-6,-4)\\cup(3,4)$; integers in $D$: $-6,-5$ ($x=-4$ makes the denominator $0$)",
+  "Sum $=-11$",
+  "",
+  "Final Answer: -11"
+ ],
+ "solution_full": [
+  "The logarithm needs $|x|-3>0$, i.e. $|x|>3$. The fraction needs $\\log_{1/2}(|x|-3)\\ne0$, i.e. $|x|-3\\ne1$, so $x\\ne\\pm4$.",
+  "Because the base $\\dfrac12$ is less than $1$, $\\log_{1/2}u>0$ for $0<u<1$ and $\\log_{1/2}u<0$ for $u>1$. So the denominator is positive for $3<|x|<4$ and negative for $|x|>4$.",
+  "The square root needs the fraction to be $\\ge0$. With $N=([x]+6)([x]-1)$, this means $N\\ge0$ when $3<|x|<4$, and $N\\le0$ when $|x|>4$.",
+  "Case $3<x<4$: $[x]=3$, $N=9\\cdot2=18>0$, so all of $(3,4)$ is in $D$.",
+  "Case $-4<x<-3$: $[x]=-4$, $N=2\\cdot(-5)=-10<0$ while the denominator is positive, so this interval is excluded.",
+  "Case $|x|>4$: $N\\le0$ means $-6\\le[x]\\le1$, i.e. $-6\\le x<2$. Combined with $|x|>4$ this gives $-6\\le x<-4$ (no $x>4$ satisfies $x<2$). At $x=-6$, $N=0$ and the fraction is $0$, which is allowed.",
+  "So $D=[-6,-4)\\cup(3,4)$. The point $x=-4$ is excluded because there the logarithm is $\\log_{1/2}1=0$.",
+  "The integers in $D$ are $-6$ and $-5$; their sum is $-11$.",
+  "",
+  "Final Answer: -11"
+ ],
+ "originality_note": "New: sign analysis of a GIF product over a log with base below 1 whose argument is |x| - 3, so the sign of the denominator flips at |x| = 4 and the GIF numerator is tested on each side (way 5). Closest known: domains of sqrt(log_{1/2}(...)) and of expressions with [x]. Different because: the two sign regions of the denominator require opposite signs of the GIF product, and x = -4 (an integer) is excluded only through the logarithm.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Domain and range of functions involving the greatest integer function": "The numerator ([x] + 6)([x] - 1) is constant on each integer block; its sign condition becomes -6 <= [x] <= 1, i.e. -6 <= x < 2, and [x] = 3 or -4 on (3,4) and (-4,-3).",
+  "Domain of algebraic, logarithmic, exponential and radical functions": "The log needs |x| > 3, the denominator is non-zero only for |x| != 4, the base 1/2 reverses the sign at |x| = 4, and the square root needs a non-negative radicand."
+ },
+ "stem_review": "Read as a student: every symbol and the domain of every function introduced, conditions complete, one reading of each sentence; answer recomputed with code by an independent route, unique and equal to the plan. Checked x = -6 (radicand 0, included), x = -4 (denominator 0, excluded) and the interval (-4,-3) (excluded). Changed: No change.",
+ "level": 3,
+ "key_step": "Splitting at |x| = 4 where log base 1/2 changes sign and requiring opposite signs of the GIF product on the two sides.",
+ "justification": "Several domain conditions interact (log argument, zero denominator, sign reversal for base below 1, GIF blocks), and one slip (including -4, or keeping (-4,-3)) changes the answer; numerical. Comparable to 2023-P1-Q8 (L2) but with more interacting conditions, so 3.",
+ "nearest_anchor": "2023-P1-Q8 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "blueprint_concepts": [
+  "Domain and range of functions involving the greatest integer function",
+  "Domain of algebraic, logarithmic, exponential and radical functions"
+ ],
+ "answer_plan": "negative integer",
+ "target_level": 3,
+ "chapter": "Function"
+}

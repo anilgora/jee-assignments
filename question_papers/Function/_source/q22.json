@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Function",
+ "target_level": 3,
+ "english": [
+  "For a real number $a$, let $f_a:[0,\\infty)\\to\\mathbb{R}$ be defined by $f_a(x)=2x^{2}-3|x-a|$. Let $S$ be the set of all real numbers $a$ for which $f_a$ is one-one. Then the least element of $S$ is ______."
+ ],
+ "hindi": [
+  "वास्तविक संख्या $a$ के लिए, माना $f_a:[0,\\infty)\\to\\mathbb{R}$, $f_a(x)=2x^{2}-3|x-a|$ द्वारा परिभाषित है। माना $S$ उन सभी वास्तविक संख्याओं $a$ का समुच्चय है जिनके लिए $f_a$ एकैकी है। तब $S$ का न्यूनतम अवयव ______ है।"
+ ],
+ "solution": [
+  "$f_a$ is continuous on the interval $[0,\\infty)$, so it is one-one iff it is strictly monotonic there",
+  "For $x<a$: $f_a=2x^{2}+3x-3a$, $f_a'=4x+3>0$ on $x\\geq0$, increasing",
+  "For $x\\geq a$: $f_a=2x^{2}-3x+3a$, $f_a'=4x-3$: decreasing on $\\left[a,\\dfrac34\\right]$ if $a<\\dfrac34$, increasing for $x\\geq\\dfrac34$",
+  "$a<0$: $f_a=2x^{2}-3x+3a$ on all of $[0,\\infty)$, decreasing then increasing, not one-one",
+  "$0\\leq a<\\dfrac34$: increasing on $[0,a]$, decreasing on $\\left[a,\\dfrac34\\right]$, increasing after, not one-one",
+  "$a\\geq\\dfrac34$: increasing on $[0,a]$ and on $[a,\\infty)$, continuous at $a$, so strictly increasing and one-one",
+  "$S=\\left[\\dfrac34,\\infty\\right)$, least element $0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "$f_a$ is continuous on the interval $[0,\\infty)$. A continuous function on an interval is one-one exactly when it is strictly monotonic, so we find the intervals of monotonicity of $f_a$.",
+  "For $x<a$, $|x-a|=a-x$ and $f_a(x)=2x^{2}+3x-3a$, with $f_a'(x)=4x+3$. For $x\\geq0$ this is positive, so $f_a$ is increasing on $[0,a]$ whenever $a>0$.",
+  "For $x\\geq a$, $|x-a|=x-a$ and $f_a(x)=2x^{2}-3x+3a$, with $f_a'(x)=4x-3$. This is negative for $x<\\dfrac34$ and positive for $x>\\dfrac34$.",
+  "Case $a<0$: every $x\\geq0$ satisfies $x\\geq a$, so $f_a(x)=2x^{2}-3x+3a$ on $[0,\\infty)$. It decreases on $\\left[0,\\dfrac34\\right]$ and increases after, so, for example, $f_a(0)=f_a\\left(\\dfrac32\\right)=3a$; $f_a$ is not one-one.",
+  "Case $0\\leq a<\\dfrac34$: $f_a$ increases on $[0,a]$, decreases on $\\left[a,\\dfrac34\\right]$ and increases on $\\left[\\dfrac34,\\infty\\right)$. A continuous function that decreases and then increases takes values near $f_a\\left(\\dfrac34\\right)$ twice, so $f_a$ is not one-one.",
+  "Case $a\\geq\\dfrac34$: on $[0,a]$, $f_a'=4x+3>0$; on $[a,\\infty)$, $f_a'=4x-3\\geq4a-3\\geq0$ with equality at most at one point. Since $f_a$ is continuous at $x=a$, it is strictly increasing on $[0,\\infty)$ and therefore one-one.",
+  "So $S=\\left[\\dfrac34,\\infty\\right)$ and its least element is $\\dfrac34=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a one-parameter family with a moving kink, where one-one-ness on [0, infinity) is decided by whether the kink lies beyond the turning point of the right-hand piece (way 3, family defined by a condition). Closest known: least a for which x^2 + ax + ... is one-one on an interval (vertex test). Different because: the turning point belongs to only one of the two pieces, and the cases a < 0, 0 <= a < 3/4 and a >= 3/4 must all be examined.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests",
+  "Intervals of monotonicity"
+ ],
+ "concept_use": {
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests": "For a continuous function on an interval, one-one is equivalent to strictly monotonic; for a < 3/4 a repeated value (e.g. f(0) = f(3/2) when a < 0) shows f_a is many-one.",
+  "Intervals of monotonicity": "The two pieces have derivatives 4x + 3 > 0 and 4x - 3, so the right piece decreases on [a, 3/4] when a < 3/4 and f_a is increasing everywhere when a >= 3/4."
+ },
+ "stem_review": "Read as a student: the family, its domain [0, infinity) and the set S are defined; S = [3/4, infinity) has a least element, so the question has one answer; verified numerically for a = -0.5, 0, 0.5, 0.74, 0.75, 0.76, 1, 2; matches the plan 'decimal between 0 and 1'. Changed: No change.",
+ "level": 3,
+ "key_step": "One-one on an interval means strictly monotonic; the right piece 2x^2 - 3x + 3a is monotonic on [a, infinity) only when a >= 3/4.",
+ "justification": "Two ideas linked (one-one via monotonicity on an interval, and monotonicity of a piecewise function with a moving kink), with a three-way case split and no options. Comparable to 2026-P1-Q1 (L3), monotonicity decided by the sign of a derivative on pieces.",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

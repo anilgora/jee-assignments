@@ -1,0 +1,61 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ and $g:\\mathbb{R}\\to\\mathbb{R}$ be defined by",
+  "$$f(x)=\\begin{cases}-\\dfrac{x}{8}, & x<0\\\\ x^{2}-x+\\dfrac{1}{2}, & 0\\le x\\le 1\\\\ \\dfrac{3}{2}-x, & x>1\\end{cases}\\qquad g(x)=\\begin{cases}x+1, & x<\\tfrac{1}{4}\\\\ 2x, & x\\ge \\tfrac{1}{4}\\end{cases}$$",
+  "Let $h:\\mathbb{R}\\to\\mathbb{R}$ be defined by $h(x)=g(f(x))$, and let $S$ be the set of all points of $\\mathbb{R}$ at which $h$ is NOT differentiable. Then the sum of all the elements of $S$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$ तथा $g:\\mathbb{R}\\to\\mathbb{R}$ इस प्रकार परिभाषित हैं",
+  "$$f(x)=\\begin{cases}-\\dfrac{x}{8}, & x<0\\\\ x^{2}-x+\\dfrac{1}{2}, & 0\\le x\\le 1\\\\ \\dfrac{3}{2}-x, & x>1\\end{cases}\\qquad g(x)=\\begin{cases}x+1, & x<\\tfrac{1}{4}\\\\ 2x, & x\\ge \\tfrac{1}{4}\\end{cases}$$",
+  "माना $h:\\mathbb{R}\\to\\mathbb{R}$, $h(x)=g(f(x))$ द्वारा परिभाषित है, तथा $S$, $\\mathbb{R}$ के उन सभी बिन्दुओं का समुच्चय है जिन पर $h$ अवकलनीय नहीं है। तब $S$ के सभी अवयवों का योग ______ है।"
+ ],
+ "solution": [
+  "$g$ changes form only at $f(x)=\\dfrac14$, so split by the sign of $f(x)-\\dfrac14$",
+  "$x<0$: $f=-\\dfrac x8<\\dfrac14\\iff x>-2$; so $h=-\\dfrac x4$ for $x\\le-2$ and $h=1-\\dfrac x8$ for $-2<x<0$",
+  "$0\\le x\\le1$: $f=\\left(x-\\dfrac12\\right)^{2}+\\dfrac14\\ge\\dfrac14$, so $h=2x^{2}-2x+1$ (at $x=\\dfrac12$ $f$ only touches $\\dfrac14$, so $h$ stays smooth)",
+  "$x>1$: $f=\\dfrac32-x\\ge\\dfrac14\\iff x\\le\\dfrac54$; so $h=3-2x$ on $\\left(1,\\dfrac54\\right]$ and $h=\\dfrac52-x$ for $x>\\dfrac54$",
+  "$x=-2$: $h(-2^-)=\\dfrac12$, $h(-2^+)=\\dfrac54$, discontinuous",
+  "$x=0$: $f$ jumps ($0$ to $\\dfrac12$) but $h(0^-)=1=h(0)$, so $h$ is continuous; slopes $-\\dfrac18$ and $-2$ differ, not differentiable",
+  "$x=1$: $h=1$ from both sides; slopes $2$ and $-2$, not differentiable",
+  "$x=\\dfrac54$: $h(\\tfrac54^-)=\\dfrac12$, $h(\\tfrac54^+)=\\dfrac54$, discontinuous",
+  "$S=\\left\\{-2,0,1,\\dfrac54\\right\\}$, sum $=0.25$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "The rule for $g(t)$ changes only at $t=\\dfrac14$, and $g$ is discontinuous there ($g(\\tfrac14^-)=\\dfrac54$, $g(\\tfrac14)=\\dfrac12$). So $h=g\\circ f$ can fail to be smooth only where $f$ changes its rule ($x=0$, $x=1$) or where $f(x)$ crosses $\\dfrac14$.",
+  "For $x<0$: $f(x)=-\\dfrac x8>0$ and $f(x)<\\dfrac14\\iff x>-2$. Hence $h(x)=2f(x)=-\\dfrac x4$ for $x\\le-2$ and $h(x)=f(x)+1=1-\\dfrac x8$ for $-2<x<0$.",
+  "For $0\\le x\\le1$: $f(x)=x^{2}-x+\\dfrac12=\\left(x-\\dfrac12\\right)^{2}+\\dfrac14\\ge\\dfrac14$, with equality only at $x=\\dfrac12$. So $h(x)=2f(x)=2x^{2}-2x+1$ on the whole interval. At $x=\\dfrac12$ the value of $f$ touches $\\dfrac14$ from above and never goes below it, so $h$ uses the same rule on both sides and is differentiable there.",
+  "For $x>1$: $f(x)=\\dfrac32-x$, and $f(x)\\ge\\dfrac14\\iff x\\le\\dfrac54$. So $h(x)=2f(x)=3-2x$ on $\\left(1,\\dfrac54\\right]$ and $h(x)=f(x)+1=\\dfrac52-x$ for $x>\\dfrac54$.",
+  "At $x=-2$: $h(-2)=\\dfrac12$ and $\\lim_{x\\to-2^-}h(x)=\\dfrac12$, but $\\lim_{x\\to-2^+}h(x)=1+\\dfrac14=\\dfrac54$. So $h$ is discontinuous, hence not differentiable, at $-2$.",
+  "At $x=0$: $f$ itself is discontinuous ($f(0^-)=0$, $f(0)=\\dfrac12$), yet $\\lim_{x\\to0^-}h(x)=1$ and $h(0)=2\\cdot\\dfrac12=1=\\lim_{x\\to0^+}h(x)$, so $h$ is continuous at $0$. The left derivative is $-\\dfrac18$ and the right derivative is $4x-2\\big|_{x=0}=-2$, so $h$ is not differentiable at $0$.",
+  "At $x=1$: $h(1)=1$ and $\\lim_{x\\to1^+}(3-2x)=1$, so $h$ is continuous; the left derivative is $4x-2\\big|_{x=1}=2$ and the right derivative is $-2$, so $h$ is not differentiable at $1$.",
+  "At $x=\\dfrac54$: $h\\left(\\dfrac54\\right)=\\dfrac12$ and the left limit is $\\dfrac12$, but the right limit is $\\dfrac52-\\dfrac54=\\dfrac54$. So $h$ is discontinuous at $\\dfrac54$.",
+  "Every piece of $h$ is a polynomial, so $h$ is differentiable at all other points, including $x=\\dfrac12$.",
+  "Hence $S=\\left\\{-2,0,1,\\dfrac54\\right\\}$ and the sum of its elements is $-2+0+1+\\dfrac54=\\dfrac14=0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: a composite of two piecewise functions in which the outer jump is triggered only where the inner function crosses the jump value, while a tangential touch (x = 1/2) and a jump of the inner function (x = 0) are both healed in the composite (way 5). Closest known: continuity of g(f(x)) for piecewise f and g in JEE Main. Different because: the student must separate crossing from touching and see that a discontinuity of f can disappear in g o f, yet still leave a corner.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every set, function and symbol introduced with its domain, conditions complete, one reading of each sentence; answer recomputed with code and unique; answer matches the plan. Checked each of the six candidate points (-2, 0, 1/2, 1, 5/4 and the junctions) numerically with one-sided limits and difference quotients on a fine grid; only -2, 0, 1, 5/4 fail. The word NOT is capitalised as in JEE. Changed: No change.",
+ "level": 2,
+ "key_step": "Splitting by the sign of f(x) - 1/4 and checking each junction, noticing that x = 1/2 (touch) is harmless and x = 0 (jump of f) gives a corner but no jump.",
+ "justification": "A routine chain of piecewise checks with two small traps; no non-routine idea. Below 2023-P2-Q6 (L3), which needs a product with a greatest-integer factor and statement checks; above 2025-P1-Q15 (L1) short parts. Numerical format keeps it at the top of level 2.",
+ "nearest_anchor": "2023-P2-Q6 (L3)",
+ "confidence": "Medium",
+ "chapter": "Function",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Composite functions: domain and composition of piecewise functions",
+  "Continuity and Differentiability of composite functions"
+ ],
+ "concept_use": {
+  "Composite functions: domain and composition of piecewise functions": "h = g(f(x)) is written piece by piece by composing the piecewise rules of f and g, splitting at f(x) = 1/4.",
+  "Continuity and Differentiability of composite functions": "One-sided limits and one-sided derivatives of h at -2, 0, 1 and 5/4 decide continuity and differentiability of the composite."
+ },
+ "multi_concept": false,
+ "eq_relation": false
+}

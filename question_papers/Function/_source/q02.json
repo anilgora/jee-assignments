@@ -1,0 +1,65 @@
+{
+ "type": "SCQ",
+ "chapter": "Function",
+ "target_level": 3,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $f:(0,\\infty)\\to\\mathbb{R}$ be a function, differentiable at $x=1$, such that $f(xy)=f(x)+f(y)$ for all $x,y\\in(0,\\infty)$ and $f'(1)=2$. Let $h:(0,\\infty)\\to\\mathbb{R}$ be defined by $h(x)=x^{2}-3x+f(x)$. Then which of the following statements is TRUE?",
+  "",
+  "(A) $h$ is a bijection, and the equation $h(x)=h^{-1}(x)$ has exactly one solution, which lies in the interval $(3,4)$",
+  "(B) $h$ is a bijection, and the equation $h(x)=h^{-1}(x)$ has exactly one solution, namely $x=1$",
+  "(C) $h$ is a bijection, and the equation $h(x)=h^{-1}(x)$ has exactly three solutions",
+  "(D) $h$ is not one-one"
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to\\mathbb{R}$ एक फलन है, जो $x=1$ पर अवकलनीय है, तथा सभी $x,y\\in(0,\\infty)$ के लिए $f(xy)=f(x)+f(y)$ एवं $f'(1)=2$ है। माना कि $h:(0,\\infty)\\to\\mathbb{R}$, $h(x)=x^{2}-3x+f(x)$ द्वारा परिभाषित है। तब निम्न में से कौन-सा कथन सत्य है?",
+  "",
+  "(A) $h$ एकैकी तथा आच्छादक है, और समीकरण $h(x)=h^{-1}(x)$ का ठीक एक हल है, जो अन्तराल $(3,4)$ में स्थित है",
+  "(B) $h$ एकैकी तथा आच्छादक है, और समीकरण $h(x)=h^{-1}(x)$ का ठीक एक हल है, अर्थात् $x=1$",
+  "(C) $h$ एकैकी तथा आच्छादक है, और समीकरण $h(x)=h^{-1}(x)$ के ठीक तीन हल हैं",
+  "(D) $h$ एकैकी नहीं है"
+ ],
+ "solution": [
+  "$x=y=1\\Rightarrow f(1)=0$; $f(x+t)-f(x)=f\\left(1+\\dfrac tx\\right)\\Rightarrow f'(x)=\\dfrac{f'(1)}{x}=\\dfrac2x\\Rightarrow f(x)=2\\log_e x$",
+  "$h'(x)=2x-3+\\dfrac2x=\\dfrac{2x^{2}-3x+2}{x}>0$ (discriminant $9-16<0$), so $h$ is strictly increasing, hence one-one; $h\\to-\\infty$ as $x\\to0^{+}$ and $h\\to\\infty$ as $x\\to\\infty$, so $h$ is onto $\\mathbb{R}$",
+  "For increasing $h$: if $h(x)=h^{-1}(x)=y$ then $h(y)=x$; $x<y\\Rightarrow h(x)<h(y)$, i.e. $y<x$, contradiction (similarly $x>y$). So $h(x)=h^{-1}(x)\\iff h(x)=x$ (graphs meet only on $y=x$)",
+  "$g(x)=h(x)-x=x^{2}-4x+2\\log_e x$, $g'(x)=\\dfrac{2(x-1)^{2}}{x}\\ge0$: $g$ strictly increasing, at most one root",
+  "$g(3)=2\\log_e3-3<0$, $g(4)=2\\log_e4>0$: exactly one root, in $(3,4)$ ($g(1)=-3\\ne0$, so (B) is wrong)",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "Putting $x=y=1$: $f(1)=2f(1)$, so $f(1)=0$. For $x>0$ and small $t$: $f(x+t)=f\\left(x\\left(1+\\dfrac tx\\right)\\right)=f(x)+f\\left(1+\\dfrac tx\\right)$.",
+  "Hence $\\dfrac{f(x+t)-f(x)}{t}=\\dfrac1x\\cdot\\dfrac{f\\left(1+\\frac tx\\right)-f(1)}{t/x}\\to\\dfrac{f'(1)}{x}=\\dfrac2x$ as $t\\to0$. So $f$ is differentiable on $(0,\\infty)$ with $f'(x)=\\dfrac2x$, and with $f(1)=0$ this gives $f(x)=2\\log_e x$.",
+  "Then $h(x)=x^{2}-3x+2\\log_e x$ and $h'(x)=2x-3+\\dfrac2x=\\dfrac{2x^{2}-3x+2}{x}$. The quadratic $2x^{2}-3x+2$ has discriminant $9-16<0$ and positive leading coefficient, so $h'(x)>0$ on $(0,\\infty)$: $h$ is strictly increasing and therefore one-one, so (D) is wrong.",
+  "As $x\\to0^{+}$, $2\\log_e x\\to-\\infty$ while $x^{2}-3x\\to0$, so $h(x)\\to-\\infty$; as $x\\to\\infty$, $h(x)\\to\\infty$. Being continuous, $h$ takes every real value: $h$ is a bijection from $(0,\\infty)$ onto $\\mathbb{R}$ and $h^{-1}:\\mathbb{R}\\to(0,\\infty)$ exists.",
+  "Let $x>0$ satisfy $h(x)=h^{-1}(x)$ and put $y=h(x)$; then $y>0$ and $h(y)=x$. If $x<y$, monotonicity gives $h(x)<h(y)$, i.e. $y<x$, a contradiction; if $x>y$ we get $y>x$, again a contradiction. So $y=x$. Conversely $h(x)=x$ gives $h^{-1}(x)=x=h(x)$. Thus the equation is equivalent to $h(x)=x$: the graph of an increasing function meets its mirror image in $y=x$ only on that line.",
+  "Let $g(x)=h(x)-x=x^{2}-4x+2\\log_e x$. Then $g'(x)=2x-4+\\dfrac2x=\\dfrac{2(x-1)^{2}}{x}\\ge0$, with equality only at $x=1$, so $g$ is strictly increasing on $(0,\\infty)$ and has at most one zero.",
+  "$g(3)=9-12+2\\log_e3=2\\log_e3-3<0$ since $\\log_e3<1.5$, and $g(4)=16-16+2\\log_e4>0$. By the intermediate value theorem $g$ has exactly one zero, lying in $(3,4)$ (numerically $x\\approx3.28$).",
+  "So $h(x)=h^{-1}(x)$ has exactly one solution, in $(3,4)$: (A) is true. $g(1)=-3\\ne0$, so (B) is wrong, and three solutions (as can happen for a decreasing function) is impossible here, so (C) is wrong.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: a logarithmic Cauchy equation produces h(x)=x^2-3x+2 ln x, whose monotonicity (a negative discriminant) gives the inverse, and then h=h^{-1} is reduced to h(x)=x, located by IVT (way 5). Closest known: (1/16)^x = log_{1/16} x (decreasing case, three solutions) and f=f^{-1} for an increasing cubic. Different because: f must first be recovered from the equation, and the root has no closed form, so the student must prove uniqueness and locate it.",
+ "web_check": "not found",
+ "concept_use": {
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)": "f(xy)=f(x)+f(y) with f'(1)=2 is solved to give f(x)=2 ln x.",
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests": "h'(x)=(2x^2-3x+2)/x>0 shows h is strictly increasing, hence one-one (statement D is wrong).",
+  "Inverse of a function: existence, graph symmetry about y = x": "h is a continuous increasing map of (0,inf) onto R, so h^{-1} exists, and its graph is the mirror image of h in y=x.",
+  "Solving f(x) = f_inv(x)": "For increasing h, h(x)=h^{-1}(x) is shown equivalent to h(x)=x, whose unique root in (3,4) is found by monotonicity of g and IVT."
+ },
+ "stem_review": "Read as a student: f's domain, the equation, differentiability only at 1 and f'(1)=2 stated; h defined with domain and codomain. The four options are all statements about h, exactly (A) true (root about 3.2756, checked numerically, and a scan of h(h(t))=t found one sign change only). Changed: No change.",
+ "level": 3,
+ "key_step": "For strictly increasing h, h(x)=h^{-1}(x) reduces to h(x)=x; then g=x^2-4x+2 ln x is increasing with g(3)<0<g(4).",
+ "justification": "Several linked ideas: solving the Cauchy equation from differentiability at one point, a monotonicity check for invertibility, the increasing-function reduction to y=x, and IVT. Each is standard, the chain is genuine. Comparable to 2026-P1-Q1 (L3, sign of f' via an auxiliary function) and 2024-P2-Q10 (L1, monotone root count).",
+ "nearest_anchor": "2026-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "blueprint_concepts": [
+  "Cauchy’s Functional Equations: Standard forms like f(x+y)=f(x)f(y), f(xy)=f(x)+f(y)",
+  "One-one vs many-one: monotonicity, horizontal line and algebraic tests",
+  "Inverse of a function: existence, graph symmetry about y = x",
+  "Solving f(x) = f_inv(x)"
+ ],
+ "multi_concept": false,
+ "eq_relation": false
+}
