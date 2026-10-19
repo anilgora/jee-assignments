@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $F:(0,\\infty)\\to\\mathbb{R}$ be a differentiable function such that $F'(x)=\\dfrac{1}{x^{2}\\sqrt{x^{2}+x+1}}$ for all $x>0$ and $\\displaystyle\\lim_{x\\to\\infty}F(x)=0$. Then $F(1)$ is equal to",
+  "",
+  "(A) $1-\\sqrt3-\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(B) $1-\\sqrt3+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(C) $\\sqrt3-1+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(D) $1-\\sqrt3+\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$"
+ ],
+ "hindi": [
+  "माना कि $F:(0,\\infty)\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए सभी $x>0$ के लिए $F'(x)=\\dfrac{1}{x^{2}\\sqrt{x^{2}+x+1}}$ तथा $\\displaystyle\\lim_{x\\to\\infty}F(x)=0$ है। तब $F(1)$ बराबर है",
+  "",
+  "(A) $1-\\sqrt3-\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(B) $1-\\sqrt3+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(C) $\\sqrt3-1+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "(D) $1-\\sqrt3+\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$"
+ ],
+ "solution": [
+  "Put $x=\\dfrac1t$ ($t>0$): $\\sqrt{x^{2}+x+1}=\\dfrac{\\sqrt{t^{2}+t+1}}{t}$, $dx=-\\dfrac{dt}{t^{2}}$, so $F'(x)\\,dx=-\\dfrac{t\\,dt}{\\sqrt{t^{2}+t+1}}$",
+  "$t=\\dfrac12(2t+1)-\\dfrac12$: $\\displaystyle\\int\\dfrac{t\\,dt}{\\sqrt{t^{2}+t+1}}=\\sqrt{t^{2}+t+1}-\\dfrac12\\int\\dfrac{dt}{\\sqrt{\\left(t+\\frac12\\right)^{2}+\\frac34}}$",
+  "$F=-\\sqrt{t^{2}+t+1}+\\dfrac12\\log_{e}\\left(t+\\dfrac12+\\sqrt{t^{2}+t+1}\\right)+C$",
+  "$x\\to\\infty\\Leftrightarrow t\\to0^{+}$: $-1+\\dfrac12\\log_{e}\\dfrac32+C=0\\Rightarrow C=1-\\dfrac12\\log_{e}\\dfrac32$",
+  "$x=1\\Leftrightarrow t=1$: $F(1)=1-\\sqrt3+\\dfrac12\\log_{e}\\dfrac{\\frac32+\\sqrt3}{\\frac32}=1-\\sqrt3+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "For $x>0$ put $x=\\dfrac1t$ with $t>0$. Then $x^{2}+x+1=\\dfrac{1+t+t^{2}}{t^{2}}$, so $\\sqrt{x^{2}+x+1}=\\dfrac{\\sqrt{t^{2}+t+1}}{t}$, and $dx=-\\dfrac{dt}{t^{2}}$.",
+  "Hence $\\dfrac{dx}{x^{2}\\sqrt{x^{2}+x+1}}=t^{2}\\cdot\\dfrac{t}{\\sqrt{t^{2}+t+1}}\\cdot\\left(-\\dfrac{dt}{t^{2}}\\right)=-\\dfrac{t\\,dt}{\\sqrt{t^{2}+t+1}}$.",
+  "Since $\\dfrac{d}{dt}\\sqrt{t^{2}+t+1}=\\dfrac{2t+1}{2\\sqrt{t^{2}+t+1}}$, write $t=\\dfrac12(2t+1)-\\dfrac12$.",
+  "Then $\\displaystyle\\int\\dfrac{t\\,dt}{\\sqrt{t^{2}+t+1}}=\\sqrt{t^{2}+t+1}-\\dfrac12\\int\\dfrac{dt}{\\sqrt{\\left(t+\\frac12\\right)^{2}+\\frac34}}=\\sqrt{t^{2}+t+1}-\\dfrac12\\log_{e}\\left(t+\\dfrac12+\\sqrt{t^{2}+t+1}\\right)$.",
+  "So $F=-\\sqrt{t^{2}+t+1}+\\dfrac12\\log_{e}\\left(t+\\dfrac12+\\sqrt{t^{2}+t+1}\\right)+C$ with $t=\\dfrac1x$.",
+  "As $x\\to\\infty$, $t\\to0^{+}$ and $F\\to-1+\\dfrac12\\log_{e}\\dfrac32+C$. This must be $0$, so $C=1-\\dfrac12\\log_{e}\\dfrac32$.",
+  "At $x=1$ ($t=1$): $F(1)=-\\sqrt3+\\dfrac12\\log_{e}\\left(\\dfrac32+\\sqrt3\\right)+1-\\dfrac12\\log_{e}\\dfrac32=1-\\sqrt3+\\dfrac12\\log_{e}\\left(1+\\dfrac{2}{\\sqrt3}\\right)$.",
+  "Check: $F'>0$ and $F\\to0$ at infinity, so $F(1)<0$; indeed $1-\\sqrt3+\\dfrac12\\log_{e}(2.155)\\approx-0.348$. Options (A) and (C) carry sign slips and (D) loses the factor $\\dfrac12$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: the antiderivative is pinned down by its limit at infinity, which after the reciprocal substitution becomes the value at t = 0, so the normalising constant contains a logarithm that partly cancels with the value at t = 1 (way 5). Closest known: textbook integrals of 1/(x^2 sqrt(ax^2+bx+c)) by x = 1/t. Different because: the evaluation is relative to infinity, which the substitution turns into an ordinary endpoint.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "x = 1/t reduces the integrand to -t/sqrt(t^2+t+1), which is split into a derivative part and a standard 1/sqrt(quadratic) part.",
+ "justification": "A routine chain of standard steps (reciprocal substitution, numerator splitting, standard form, two evaluations) with no hidden idea. Level 2 like 2026-P2-Q3 (L2) separable-DE chain; options allow a sign check.",
+ "nearest_anchor": "2026-P2-Q3 (L2)",
+ "confidence": "High",
+ "chapter": "Indefinite Integration",
+ "target_level": 2,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Integrals of the form int dx/(x^k.sqrt(ax^2+bx+c))",
+  "Integrals of the form int dx/(ax^2+bx+c) and int dx/sqrt(ax^2+bx+c)"
+ ],
+ "concept_use": {
+  "Integrals of the form int dx/(x^k.sqrt(ax^2+bx+c))": "The integrand has the form 1/(x^k sqrt(ax^2+bx+c)) with k = 2; the substitution x = 1/t reduces it to -t/sqrt(t^2+t+1).",
+  "Integrals of the form int dx/(ax^2+bx+c) and int dx/sqrt(ax^2+bx+c)": "After splitting t = (1/2)(2t+1) - 1/2, the standard integral of 1/sqrt((t+1/2)^2 + 3/4) gives the logarithmic term."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that x > 0 gives t > 0 so the square root simplifies without a sign, and that the limit at infinity fixes C. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

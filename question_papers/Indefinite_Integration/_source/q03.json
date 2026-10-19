@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $p$ and $q$ be real numbers and let $F:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function such that $F(-2)=0$ and $F'(x)=\\dfrac{px+q}{x^{2}+4x+13}$ for all $x\\in\\mathbb{R}$. Suppose that the function $F(x)-\\log_{e}\\left(x^{2}+4x+13\\right)$ is bounded on $\\mathbb{R}$ and that $\\displaystyle\\lim_{x\\to\\infty}\\left(F(x)-F(-x)\\right)=\\pi$. Then $F(1)$ is equal to",
+  "",
+  "(A) $\\log_{e}2+\\dfrac{\\pi}{2}$",
+  "(B) $\\log_{e}2+\\dfrac{\\pi}{4}$",
+  "(C) $2\\log_{e}2+\\dfrac{\\pi}{4}$",
+  "(D) $\\log_{e}2+\\dfrac{\\pi}{12}$"
+ ],
+ "hindi": [
+  "माना कि $p$ तथा $q$ वास्तविक संख्याएँ हैं तथा $F:\\mathbb{R}\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए $F(-2)=0$ तथा सभी $x\\in\\mathbb{R}$ के लिए $F'(x)=\\dfrac{px+q}{x^{2}+4x+13}$ है। माना कि फलन $F(x)-\\log_{e}\\left(x^{2}+4x+13\\right)$, $\\mathbb{R}$ पर परिबद्ध है तथा $\\displaystyle\\lim_{x\\to\\infty}\\left(F(x)-F(-x)\\right)=\\pi$ है। तब $F(1)$ बराबर है",
+  "",
+  "(A) $\\log_{e}2+\\dfrac{\\pi}{2}$",
+  "(B) $\\log_{e}2+\\dfrac{\\pi}{4}$",
+  "(C) $2\\log_{e}2+\\dfrac{\\pi}{4}$",
+  "(D) $\\log_{e}2+\\dfrac{\\pi}{12}$"
+ ],
+ "solution": [
+  "$px+q=\\dfrac p2(2x+4)+(q-2p)$ and $x^{2}+4x+13=(x+2)^{2}+9$",
+  "$F(x)=\\dfrac p2\\log_{e}\\left(x^{2}+4x+13\\right)+\\dfrac{q-2p}{3}\\tan^{-1}\\dfrac{x+2}{3}+C$",
+  "Bounded difference: the $\\tan^{-1}$ part is bounded, so $\\dfrac p2=1\\Rightarrow p=2$",
+  "$F(x)-F(-x)$: the log parts differ by $\\log_{e}\\dfrac{x^{2}+4x+13}{x^{2}-4x+13}\\to 0$; the $\\tan^{-1}$ parts give $\\dfrac{q-4}{3}\\left(\\dfrac{\\pi}{2}+\\dfrac{\\pi}{2}\\right)$",
+  "$\\dfrac{(q-4)\\pi}{3}=\\pi\\Rightarrow q=7$; $F(-2)=0\\Rightarrow C=-\\log_{e}9$",
+  "$F(1)=\\log_{e}18-\\log_{e}9+\\tan^{-1}1=\\log_{e}2+\\dfrac{\\pi}{4}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Write the numerator in terms of the derivative of the denominator: $px+q=\\dfrac p2(2x+4)+(q-2p)$.",
+  "Then $F'(x)=\\dfrac p2\\cdot\\dfrac{2x+4}{x^{2}+4x+13}+\\dfrac{q-2p}{(x+2)^{2}+3^{2}}$, so $F(x)=\\dfrac p2\\log_{e}\\left(x^{2}+4x+13\\right)+\\dfrac{q-2p}{3}\\tan^{-1}\\dfrac{x+2}{3}+C$.",
+  "$F(x)-\\log_{e}\\left(x^{2}+4x+13\\right)=\\left(\\dfrac p2-1\\right)\\log_{e}\\left(x^{2}+4x+13\\right)+\\dfrac{q-2p}{3}\\tan^{-1}\\dfrac{x+2}{3}+C$. The $\\tan^{-1}$ term is bounded and the log term is unbounded as $x\\to\\infty$, so boundedness forces $\\dfrac p2=1$, i.e. $p=2$.",
+  "Now $F(x)-F(-x)=\\log_{e}\\dfrac{x^{2}+4x+13}{x^{2}-4x+13}+\\dfrac{q-4}{3}\\left(\\tan^{-1}\\dfrac{x+2}{3}-\\tan^{-1}\\dfrac{2-x}{3}\\right)$.",
+  "As $x\\to\\infty$ the ratio inside the logarithm tends to $1$, while $\\tan^{-1}\\dfrac{x+2}{3}\\to\\dfrac{\\pi}{2}$ and $\\tan^{-1}\\dfrac{2-x}{3}\\to-\\dfrac{\\pi}{2}$. So the limit is $\\dfrac{q-4}{3}\\pi$.",
+  "Setting it equal to $\\pi$: $q-4=3$, so $q=7$, and $F(x)=\\log_{e}\\left(x^{2}+4x+13\\right)+\\tan^{-1}\\dfrac{x+2}{3}+C$.",
+  "$F(-2)=\\log_{e}9+0+C=0$ gives $C=-\\log_{e}9$.",
+  "$F(1)=\\log_{e}18+\\tan^{-1}1-\\log_{e}9=\\log_{e}2+\\dfrac{\\pi}{4}$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: the two unknown coefficients are fixed by asymptotic conditions on the antiderivative itself: boundedness of F minus a log fixes the log coefficient, and the limit of F(x) - F(-x) isolates the arctan coefficient because the log parts cancel at infinity (way 5). Closest known: integral of (px+q)/(ax^2+bx+c) by splitting the numerator. Different because: the solver must see which part of the antiderivative survives each condition.",
+ "web_check": "ingredient only",
+ "level": 3,
+ "key_step": "Splitting the numerator, then using boundedness for p and the odd-part limit for q (log terms cancel, arctan terms add).",
+ "justification": "Standard integral form, but the two coefficients are recovered from limit behaviour of the antiderivative, which needs care with which terms survive. Two ideas linked, options help; comparable to 2025-P2-Q1 (L2) limit-with-a-given-function raised to L3 by the two-condition setup, near 2023-P2-Q3 (L3).",
+ "nearest_anchor": "2023-P2-Q3 (L3)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Integrals of the form int dx/(ax^2+bx+c) and int dx/sqrt(ax^2+bx+c)",
+  "Integrals of the form int (px+q)/(ax^2+bx+c) dx and with a square root"
+ ],
+ "concept_use": {
+  "Integrals of the form int dx/(ax^2+bx+c) and int dx/sqrt(ax^2+bx+c)": "The part q - 2p over (x+2)^2 + 9 integrates to ((q-2p)/3) tan^-1((x+2)/3), whose limits at plus and minus infinity give q = 7.",
+  "Integrals of the form int (px+q)/(ax^2+bx+c) dx and with a square root": "The numerator is split as (p/2)(2x+4) + (q-2p) so the first part integrates to (p/2) ln(x^2+4x+13); boundedness then gives p = 2."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that boundedness fixes p and the limit fixes q uniquely, and that F(-2)=0 fixes C. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

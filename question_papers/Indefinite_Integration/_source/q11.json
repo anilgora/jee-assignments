@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $F:\\mathbb{R}\\to\\mathbb{R}$ and $G:\\mathbb{R}\\to\\mathbb{R}$ be differentiable functions such that $F'(x)=e^{5x}\\sin12x$ and $G'(x)=F(x)$ for all $x\\in\\mathbb{R}$, and $\\displaystyle\\lim_{x\\to-\\infty}F(x)=\\lim_{x\\to-\\infty}G(x)=0$. Let $M$ be the maximum value of $e^{-5x}G(x)$ on $\\mathbb{R}$. Then the value of $\\dfrac{1}{M}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $F:\\mathbb{R}\\to\\mathbb{R}$ तथा $G:\\mathbb{R}\\to\\mathbb{R}$ अवकलनीय फलन हैं जिनके लिए सभी $x\\in\\mathbb{R}$ के लिए $F'(x)=e^{5x}\\sin12x$ तथा $G'(x)=F(x)$ हैं, और $\\displaystyle\\lim_{x\\to-\\infty}F(x)=\\lim_{x\\to-\\infty}G(x)=0$ है। माना कि $\\mathbb{R}$ पर $e^{-5x}G(x)$ का अधिकतम मान $M$ है। तब $\\dfrac{1}{M}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Parts twice (repeating integral): $\\displaystyle\\int e^{5x}\\sin12x\\,dx=\\dfrac{e^{5x}(5\\sin12x-12\\cos12x)}{169}+C_{1}$",
+  "$e^{5x}\\to0$ as $x\\to-\\infty$, so the limit condition gives $C_{1}=0$",
+  "With $\\displaystyle\\int e^{5x}\\cos12x\\,dx=\\dfrac{e^{5x}(5\\cos12x+12\\sin12x)}{169}$:",
+  "$G(x)=\\dfrac{5}{169}\\cdot\\dfrac{e^{5x}(5\\sin12x-12\\cos12x)}{169}-\\dfrac{12}{169}\\cdot\\dfrac{e^{5x}(5\\cos12x+12\\sin12x)}{169}=\\dfrac{e^{5x}(-119\\sin12x-120\\cos12x)}{169^{2}}$ (again $C_{2}=0$)",
+  "$\\max\\left(-119\\sin12x-120\\cos12x\\right)=\\sqrt{119^{2}+120^{2}}=169\\Rightarrow M=\\dfrac{169}{169^{2}}=\\dfrac{1}{169}$",
+  "",
+  "Final Answer: 169"
+ ],
+ "solution_full": [
+  "Let $I=\\displaystyle\\int e^{5x}\\sin12x\\,dx$ and $J=\\displaystyle\\int e^{5x}\\cos12x\\,dx$. Integrating by parts with $e^{5x}$ as the function to integrate:",
+  "$I=\\dfrac{e^{5x}\\sin12x}{5}-\\dfrac{12}{5}J$ and $J=\\dfrac{e^{5x}\\cos12x}{5}+\\dfrac{12}{5}I$.",
+  "Substituting $J$ into $I$: $I=\\dfrac{e^{5x}\\sin12x}{5}-\\dfrac{12e^{5x}\\cos12x}{25}-\\dfrac{144}{25}I$, so $\\dfrac{169}{25}I=\\dfrac{e^{5x}(5\\sin12x-12\\cos12x)}{25}$ and $I=\\dfrac{e^{5x}(5\\sin12x-12\\cos12x)}{169}$. Similarly $J=\\dfrac{e^{5x}(5\\cos12x+12\\sin12x)}{169}$.",
+  "So $F(x)=\\dfrac{e^{5x}(5\\sin12x-12\\cos12x)}{169}+C_{1}$. The bracket is bounded and $e^{5x}\\to0$ as $x\\to-\\infty$, so $\\displaystyle\\lim_{x\\to-\\infty}F=C_{1}=0$.",
+  "Then $G(x)=\\dfrac{1}{169}\\left(5I-12J\\right)+C_{2}=\\dfrac{e^{5x}}{169^{2}}\\left(25\\sin12x-60\\cos12x-60\\cos12x-144\\sin12x\\right)+C_{2}$.",
+  "Hence $G(x)=\\dfrac{e^{5x}(-119\\sin12x-120\\cos12x)}{28561}+C_{2}$, and the same limit argument gives $C_{2}=0$.",
+  "$e^{-5x}G(x)=\\dfrac{-119\\sin12x-120\\cos12x}{28561}$. The maximum of $a\\sin\\theta+b\\cos\\theta$ is $\\sqrt{a^{2}+b^{2}}$, and $\\sqrt{119^{2}+120^{2}}=\\sqrt{28561}=169$.",
+  "So $M=\\dfrac{169}{28561}=\\dfrac{1}{169}$ and $\\dfrac1M=169$.",
+  "",
+  "Final Answer: 169"
+ ],
+ "originality_note": "New: the repeating-integral formula is applied twice (a second antiderivative), both constants are fixed by decay at minus infinity, and the amplitude of the second antiderivative turns out to be 1/169 through the triple 119-120-169 (way 1). Closest known: the single integral of e^(ax) sin(bx). Different because: the second antiderivative and its amplitude are asked, so the solver must iterate the formula and combine the sine and cosine integrals.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "Applying the e^(ax) sin(bx) formula twice and computing the amplitude sqrt(119^2 + 120^2) = 169.",
+ "justification": "A routine but multi-step chain of standard results (repeating integral twice, limit fixing constants, amplitude). No insight needed; numerical format but clean numbers. Level 2 like 2023-P2-Q9 (L2).",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "chapter": "Indefinite Integration",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Repeating-integral technique: int e^(ax).sin(bx) dx",
+  "Integration by parts"
+ ],
+ "concept_use": {
+  "Repeating-integral technique: int e^(ax).sin(bx) dx": "The integrals of e^(5x) sin 12x and e^(5x) cos 12x are found by the repeating-integral method, solving for the integral that reappears.",
+  "Integration by parts": "Integration by parts, applied twice to each integral, produces the two linear equations in I and J that the repeating method solves."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that decay at minus infinity fixes both constants and that the maximum of e^(-5x)G is exactly 1/169, giving the planned 3-digit integer. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

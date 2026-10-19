@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $I$ be an open interval containing $1$ and let $f:I\\to(0,1)$ be a differentiable function with $f(1)=\\dfrac13$ such that $y=f(x)$ satisfies the differential equation",
+  "$$\\left(y+y^{3}-x^{2}y^{2}\\right)dx+\\left(x-xy^{2}\\right)dy=0$$",
+  "for all $x\\in I$. If $\\dfrac32\\in I$, then the value of $f\\left(\\dfrac32\\right)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $I$ एक विवृत अन्तराल है जिसमें $1$ है, तथा $f:I\\to(0,1)$ एक अवकलनीय फलन है जिसके लिए $f(1)=\\dfrac13$ है और $y=f(x)$ सभी $x\\in I$ के लिए अवकल समीकरण",
+  "$$\\left(y+y^{3}-x^{2}y^{2}\\right)dx+\\left(x-xy^{2}\\right)dy=0$$",
+  "को सन्तुष्ट करता है। यदि $\\dfrac32\\in I$ है, तो $f\\left(\\dfrac32\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Regroup: $(y\\,dx+x\\,dy)+y^{2}(y\\,dx-x\\,dy)-x^{2}y^{2}\\,dx=0$",
+  "$y\\,dx+x\\,dy=d(xy)$ and $y\\,dx-x\\,dy=-x^{2}\\,d\\left(\\dfrac yx\\right)$: $d(xy)-x^{2}y^{2}\\,d\\left(\\dfrac yx\\right)-x^{2}y^{2}\\,dx=0$",
+  "Integrating factor $\\dfrac{1}{x^{2}y^{2}}$: $\\dfrac{d(xy)}{(xy)^{2}}=d\\left(\\dfrac yx\\right)+dx\\Rightarrow-\\dfrac{1}{xy}=\\dfrac yx+x+C$",
+  "$(1,\\tfrac13)$: $-3=\\dfrac13+1+C\\Rightarrow C=-\\dfrac{13}{3}$; multiplying by $-xy$: $y+\\dfrac1y=\\dfrac{13x}{3}-x^{2}$",
+  "At $x=\\dfrac32$: $y+\\dfrac1y=\\dfrac{13}{2}-\\dfrac94=\\dfrac{17}{4}\\Rightarrow y=\\dfrac14$ or $4$; $f<1$ gives $f\\left(\\dfrac32\\right)=\\dfrac14$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "The equation is not separable and not exact as written. Expand and regroup: $y\\,dx+x\\,dy+y^{3}\\,dx-xy^{2}\\,dy-x^{2}y^{2}\\,dx=(y\\,dx+x\\,dy)+y^{2}(y\\,dx-x\\,dy)-x^{2}y^{2}\\,dx$.",
+  "Recognise the perfect differentials $y\\,dx+x\\,dy=d(xy)$ and $x\\,dy-y\\,dx=x^{2}\\,d\\left(\\dfrac yx\\right)$, so $y^{2}(y\\,dx-x\\,dy)=-x^{2}y^{2}\\,d\\left(\\dfrac yx\\right)$.",
+  "The equation becomes $d(xy)=x^{2}y^{2}\\left[d\\left(\\dfrac yx\\right)+dx\\right]$. Since $x\\neq0$ and $y\\neq0$ near $(1,\\tfrac13)$, divide by $(xy)^{2}$ (integrating factor $\\dfrac{1}{x^{2}y^{2}}$ found by inspection): $\\dfrac{d(xy)}{(xy)^{2}}=d\\left(\\dfrac yx\\right)+dx$.",
+  "Each side is exact: $-\\dfrac{1}{xy}=\\dfrac yx+x+C$.",
+  "At $x=1$, $y=\\dfrac13$: $-3=\\dfrac13+1+C$, so $C=-\\dfrac{13}{3}$. Multiplying by $-xy$: $1=-y^{2}-x^{2}y+\\dfrac{13}{3}xy$, i.e. $y+\\dfrac1y=\\dfrac{13x}{3}-x^{2}$.",
+  "Let $g(x)=\\dfrac{13x}{3}-x^{2}$. On $\\left[1,\\dfrac32\\right]$, $g$ increases from $\\dfrac{10}{3}$ to $\\dfrac{17}{4}$, so $g>2$ and the branch $y=\\dfrac{g-\\sqrt{g^{2}-4}}{2}\\in(0,1)$ is a differentiable solution there; the coefficient $x-xy^{2}$ stays non-zero because $y<1$.",
+  "At $x=\\dfrac32$: $y+\\dfrac1y=\\dfrac{17}{4}$, so $4y^{2}-17y+4=0$, $(4y-1)(y-4)=0$. Since $0<f<1$, $f\\left(\\dfrac32\\right)=\\dfrac14=0.25$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: a non-separable equation built from three exact pieces d(xy), d(y/x) and dx, which become exact only after the integrating factor 1/(x^2y^2) found by inspection; the solution is an implicit curve y + 1/y = 13x/3 - x^2 and the range condition picks the branch (way 5). Closest known: the textbook equation y(1+xy)dx + x(1-xy)dy = 0 with integrating factor 1/(x^2y^2). Different because: the regrouping involves d(y/x) and an extra x^2y^2 dx term, and the answer needs the branch choice.",
+ "web_check": "not found",
+ "level": 3,
+ "key_step": "Regrouping into d(xy) - x^2y^2 [d(y/x) + dx] = 0 and dividing by (xy)^2.",
+ "justification": "Integrating factor by inspection is a less practised idea (F1) and must be found in a non-standard grouping, then a branch decision, in numerical format. Comparable to 2021-P2-Q4 (L3) and the DE anchors at L2-L3; L3.",
+ "nearest_anchor": "2021-P2-Q4 (L3)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Recognising a perfect differential d(u/v) or d(uv)",
+  "Exact differential equations; integrating factors by inspection"
+ ],
+ "concept_use": {
+  "Recognising a perfect differential d(u/v) or d(uv)": "y dx + x dy is recognised as d(xy) and x dy - y dx as x^2 d(y/x), which makes the regrouped equation integrable.",
+  "Exact differential equations; integrating factors by inspection": "The equation is not exact as given; the integrating factor 1/(x^2 y^2) found by inspection makes each piece exact, giving -1/(xy) = y/x + x + C."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that the solution branch with 0 < y < 1 exists on [1, 3/2], that the range condition removes the root y = 4, and that the answer 0.25 is between 0 and 1. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

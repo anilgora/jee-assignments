@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $f:[0,\\infty)\\to[0,\\infty)$ be a continuous function with $f(0)=0$ and $f(x)>0$ for $x>0$, which is differentiable on $(0,\\infty)$. For each $x>0$, let $M$ be the foot of the perpendicular from the point $P(x,f(x))$ to the $x$-axis, and let the normal to the curve $y=f(x)$ at $P$ meet the $x$-axis at $N$. Suppose that $MN=3x\\sqrt{x^{2}+9}$ for every $x>0$. Then the value of $f(4)$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:[0,\\infty)\\to[0,\\infty)$ एक सतत फलन है जिसके लिए $f(0)=0$ तथा $x>0$ के लिए $f(x)>0$ है, और $f$, $(0,\\infty)$ पर अवकलनीय है। प्रत्येक $x>0$ के लिए, माना कि बिन्दु $P(x,f(x))$ से $x$-अक्ष पर डाले गए लम्ब का पाद $M$ है, तथा $P$ पर वक्र $y=f(x)$ का अभिलम्ब $x$-अक्ष को $N$ पर मिलता है। माना कि प्रत्येक $x>0$ के लिए $MN=3x\\sqrt{x^{2}+9}$ है। तब $f(4)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Normal at $P(x,y)$ meets the $x$-axis at $N(x+yy',0)$, so $MN=|yy'|$ (the subnormal)",
+  "If $yy'<0$ somewhere, $\\dfrac{d}{dx}(y^{2})<0$ there; since $|yy'|>0$ for all $x>0$ the sign is constant, and $y^{2}$ cannot decrease from $y(0)^{2}=0$. So $yy'=3x\\sqrt{x^{2}+9}$",
+  "Separate: $\\displaystyle\\int y\\,dy=\\int3x\\sqrt{x^{2}+9}\\,dx$; with $u=x^{2}+9$: $\\dfrac{y^{2}}{2}=\\left(x^{2}+9\\right)^{3/2}+C$",
+  "$y(0)=0$ (continuity) $\\Rightarrow C=-27$, so $y^{2}=2\\left(x^{2}+9\\right)^{3/2}-54$",
+  "$f(4)^{2}=2\\cdot125-54=196\\Rightarrow f(4)=14$",
+  "",
+  "Final Answer: 14"
+ ],
+ "solution_full": [
+  "Write $y=f(x)$. The normal at $P(x,y)$ is $X-x+y'(Y-y)=0$. Putting $Y=0$ gives $X=x+yy'$, so $N=(x+yy',0)$ while $M=(x,0)$. Hence $MN=|yy'|$.",
+  "The condition is $|yy'|=3x\\sqrt{x^{2}+9}$, which is positive for every $x>0$. Since $yy'=\\dfrac12\\dfrac{d}{dx}\\left(y^{2}\\right)$ is continuous on $(0,\\infty)$ and never zero, it has one sign there.",
+  "If it were negative, $y^{2}$ would be strictly decreasing on $(0,\\infty)$; but $y^{2}\\to0$ as $x\\to0^{+}$ and $y^{2}>0$ for $x>0$, which is impossible. So $yy'=3x\\sqrt{x^{2}+9}$.",
+  "Separate the variables: $y\\,dy=3x\\sqrt{x^{2}+9}\\,dx$.",
+  "Substitute $u=x^{2}+9$, $du=2x\\,dx$: $\\displaystyle\\int3x\\sqrt{x^{2}+9}\\,dx=\\dfrac32\\int u^{1/2}\\,du=u^{3/2}=\\left(x^{2}+9\\right)^{3/2}$.",
+  "So $\\dfrac{y^{2}}{2}=\\left(x^{2}+9\\right)^{3/2}+C$. Letting $x\\to0^{+}$ and using $f(0)=0$: $0=27+C$, so $C=-27$.",
+  "Thus $f(x)^{2}=2\\left(x^{2}+9\\right)^{3/2}-54$ and $f(x)>0$ for $x>0$.",
+  "At $x=4$: $x^{2}+9=25$, $(25)^{3/2}=125$, so $f(4)^{2}=250-54=196$ and $f(4)=14$.",
+  "",
+  "Final Answer: 14"
+ ],
+ "originality_note": "New: the curve is defined by the length of its subnormal MN, given as 3x sqrt(x^2+9), with the curve starting at the origin; the sign of yy' must be argued before separating, and the integral needs the substitution u = x^2 + 9 (way 5). Closest known: textbook curves whose subnormal is constant or proportional to x. Different because: the length condition hides a sign decision and the starting point is the origin, where the equation is degenerate.",
+ "web_check": "not found",
+ "level": 3,
+ "key_step": "Reading MN as the subnormal |yy'|, fixing its sign from f(0)=0, then the substitution u = x^2 + 9.",
+ "justification": "Three linked stages (geometric translation with a sign argument, separation, substitution) in numerical format. Above 2026-P2-Q3 (L2) because of the geometric set-up and the sign decision; comparable to 2025-P2-Q9 (L2) plus a stage, so L3.",
+ "nearest_anchor": "2025-P2-Q9 (L2)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Integration by substitution",
+  "Variable separable equations"
+ ],
+ "concept_use": {
+  "Integration by substitution": "The integral of 3x sqrt(x^2+9) is found by the substitution u = x^2 + 9, giving (x^2+9)^(3/2).",
+  "Variable separable equations": "The subnormal condition gives y dy/dx = 3x sqrt(x^2+9), whose variables separate to y^2/2 = (x^2+9)^(3/2) + C."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked the sign argument for yy', that the constant is fixed by continuity at 0, and that f(4) = 14 is a positive 2-digit integer. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

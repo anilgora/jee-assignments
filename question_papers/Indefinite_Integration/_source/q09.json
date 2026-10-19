@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $F:(-3,3)\\to\\mathbb{R}$ be a differentiable function such that $F(0)=0$ and $F'(x)=\\dfrac{x^{2}}{\\sqrt{9-x^{2}}}$ for all $x\\in(-3,3)$. Let $\\theta$ be the angle with $-90^{\\circ}<\\theta<90^{\\circ}$ such that $F(3\\sin\\theta)=\\dfrac{9\\sqrt2}{8}-\\dfrac{9\\pi}{16}$. If $\\theta$ is measured in degrees, then the value of $\\theta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $F:(-3,3)\\to\\mathbb{R}$ एक अवकलनीय फलन है जिसके लिए $F(0)=0$ तथा सभी $x\\in(-3,3)$ के लिए $F'(x)=\\dfrac{x^{2}}{\\sqrt{9-x^{2}}}$ है। माना कि $\\theta$ वह कोण है जिसके लिए $-90^{\\circ}<\\theta<90^{\\circ}$ तथा $F(3\\sin\\theta)=\\dfrac{9\\sqrt2}{8}-\\dfrac{9\\pi}{16}$ है। यदि $\\theta$ को अंशों (degrees) में मापा जाए, तो $\\theta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Put $x=3\\sin\\phi$, $\\phi$ in radians, $|\\phi|<\\dfrac{\\pi}{2}$: $\\sqrt{9-x^{2}}=3\\cos\\phi$, $dx=3\\cos\\phi\\,d\\phi$",
+  "$\\displaystyle\\int\\dfrac{x^{2}\\,dx}{\\sqrt{9-x^{2}}}=\\int9\\sin^{2}\\phi\\,d\\phi=\\dfrac92\\phi-\\dfrac94\\sin2\\phi$; with $F(0)=0$, $F(3\\sin\\phi)=\\dfrac92\\phi-\\dfrac94\\sin2\\phi$",
+  "$F'\\geq0$ and $3\\sin\\phi$ is increasing, so $\\phi\\mapsto F(3\\sin\\phi)$ is strictly increasing: at most one solution",
+  "$\\phi=-\\dfrac{\\pi}{8}$: $\\dfrac92\\left(-\\dfrac{\\pi}{8}\\right)-\\dfrac94\\left(-\\dfrac{\\sqrt2}{2}\\right)=-\\dfrac{9\\pi}{16}+\\dfrac{9\\sqrt2}{8}$, which matches",
+  "In degrees: $-\\dfrac{\\pi}{8}$ rad $=-\\dfrac{180^{\\circ}}{8}=-22.5^{\\circ}$",
+  "",
+  "Final Answer: -22.50"
+ ],
+ "solution_full": [
+  "Use the substitution $x=3\\sin\\phi$ with $\\phi\\in\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ measured in radians (calculus formulas require radians). Then $\\cos\\phi>0$, $\\sqrt{9-x^{2}}=3\\cos\\phi$ and $dx=3\\cos\\phi\\,d\\phi$.",
+  "The integrand becomes $\\dfrac{9\\sin^{2}\\phi}{3\\cos\\phi}\\cdot3\\cos\\phi\\,d\\phi=9\\sin^{2}\\phi\\,d\\phi=\\dfrac92\\left(1-\\cos2\\phi\\right)d\\phi$.",
+  "Integrating: $\\dfrac92\\phi-\\dfrac94\\sin2\\phi+C$. Since $F(0)=0$ corresponds to $\\phi=0$, $C=0$ and $F(3\\sin\\phi)=\\dfrac92\\phi-\\dfrac94\\sin2\\phi$. (Geometrically, $\\dfrac92\\cdot2\\phi$ is the area of a sector of radius $3$ and angle $2\\phi$, so $F$ is half a sector minus a triangle.)",
+  "Uniqueness: $F'(x)\\geq0$ with equality only at $x=0$, so $F$ is strictly increasing; $\\phi\\mapsto3\\sin\\phi$ is strictly increasing, so the composition is strictly increasing and the equation has at most one root.",
+  "Compare $\\dfrac92\\phi-\\dfrac94\\sin2\\phi$ with $-\\dfrac{9\\pi}{16}+\\dfrac{9\\sqrt2}{8}$: the choice $\\phi=-\\dfrac{\\pi}{8}$ gives $\\dfrac92\\phi=-\\dfrac{9\\pi}{16}$ and $\\sin2\\phi=\\sin\\left(-\\dfrac{\\pi}{4}\\right)=-\\dfrac{\\sqrt2}{2}$, so $-\\dfrac94\\sin2\\phi=\\dfrac{9\\sqrt2}{8}$. It is a root, hence the only one.",
+  "Convert to degrees with $\\pi$ rad $=180^{\\circ}$: $\\theta=-\\dfrac{\\pi}{8}\\cdot\\dfrac{180^{\\circ}}{\\pi}=-22.5^{\\circ}$.",
+  "",
+  "Final Answer: -22.50"
+ ],
+ "originality_note": "New: the antiderivative of x^2/sqrt(9-x^2) is read in the angle variable (half a sector minus a triangle), and the angle at which it takes a given value is asked in degrees, so the radian result of the trigonometric substitution must be converted (way 5). Closest known: integral of x^2/sqrt(a^2-x^2) by x = a sin(theta). Different because: the question inverts the antiderivative, needs a monotonicity argument for uniqueness, and asks for a degree measure.",
+ "web_check": "ingredient only",
+ "level": 3,
+ "key_step": "Substituting x = 3 sin(theta) to get (9/2)theta - (9/4) sin 2theta, matching the given value at theta = -pi/8 with uniqueness, and converting to degrees.",
+ "justification": "Trigonometric substitution plus an inverse step (matching a value, with a monotonicity check) and a units conversion, with no options. Two ideas linked; comparable to 2024-P2-Q16 (L2) circle-area integral raised one level by the inversion and numerical format, near 2023-P2-Q8 (L3).",
+ "nearest_anchor": "2023-P2-Q8 (L3)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Integration by trigonometric substitution",
+  "Measurement of angles: degree, radian, arc length and sector area"
+ ],
+ "concept_use": {
+  "Integration by trigonometric substitution": "The substitution x = 3 sin(theta) turns x^2/sqrt(9-x^2) dx into 9 sin^2(theta) d(theta), integrated by power reduction.",
+  "Measurement of angles: degree, radian, arc length and sector area": "The angle found in radians (-pi/8) is converted to degrees (-22.5); the antiderivative is half a sector area of radius 3 minus a triangle, which is why radian measure is required."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that F is strictly increasing so theta is unique, that the given value is exactly attained at -pi/8, and that the answer -22.50 is a negative decimal. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}

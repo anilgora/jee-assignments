@@ -1,0 +1,58 @@
+{
+ "type": "Numerical",
+ "english": [
+  "Let $a$ and $b$ be real numbers with $a>0$ and $a+b>0$. Let $F:\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\to\\mathbb{R}$ and $G:(-\\pi,\\pi)\\to\\mathbb{R}$ be differentiable functions such that $F(0)=G(0)=0$,",
+  "$$F'(x)=\\dfrac{1}{a+b\\sin^{2}x}\\quad\\text{and}\\quad G'(x)=\\dfrac{1}{5+3\\cos x}$$",
+  "for all $x$ in their respective domains. If $F\\left(\\dfrac{\\pi}{4}\\right)=G\\left(\\dfrac{\\pi}{2}\\right)$ and $F\\left(\\dfrac{\\pi}{3}\\right)=G\\left(\\dfrac{2\\pi}{3}\\right)$, then the value of $a^{2}+b^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $a$ तथा $b$ वास्तविक संख्याएँ हैं जिनके लिए $a>0$ तथा $a+b>0$ है। माना कि $F:\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)\\to\\mathbb{R}$ तथा $G:(-\\pi,\\pi)\\to\\mathbb{R}$ अवकलनीय फलन हैं जिनके लिए $F(0)=G(0)=0$ है, तथा अपने-अपने प्रांत के सभी $x$ के लिए",
+  "$$F'(x)=\\dfrac{1}{a+b\\sin^{2}x}$$",
+  "तथा",
+  "$$G'(x)=\\dfrac{1}{5+3\\cos x}$$",
+  "हैं। यदि $F\\left(\\dfrac{\\pi}{4}\\right)=G\\left(\\dfrac{\\pi}{2}\\right)$ तथा $F\\left(\\dfrac{\\pi}{3}\\right)=G\\left(\\dfrac{2\\pi}{3}\\right)$ है, तो $a^{2}+b^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "$G$: $t=\\tan\\dfrac x2$, $\\cos x=\\dfrac{1-t^{2}}{1+t^{2}}$, $dx=\\dfrac{2\\,dt}{1+t^{2}}$: $\\displaystyle\\int\\dfrac{2\\,dt}{8+2t^{2}}=\\dfrac12\\tan^{-1}\\dfrac t2$, so $G(x)=\\dfrac12\\tan^{-1}\\left(\\dfrac12\\tan\\dfrac x2\\right)$",
+  "$F$: divide by $\\cos^{2}x$, $u=\\tan x$: $\\displaystyle\\int\\dfrac{du}{a+(a+b)u^{2}}$; with $s=\\sqrt{\\dfrac{a+b}{a}}$, $F(x)=\\dfrac{1}{as}\\tan^{-1}(s\\tan x)$",
+  "Conditions: $\\dfrac{\\tan^{-1}s}{as}=\\dfrac12\\tan^{-1}\\dfrac12$ and $\\dfrac{\\tan^{-1}(\\sqrt3s)}{as}=\\dfrac12\\tan^{-1}\\dfrac{\\sqrt3}{2}$",
+  "Dividing, $\\dfrac{\\tan^{-1}(\\sqrt3s)}{\\tan^{-1}s}$ is strictly decreasing in $s>0$ and equals the right side at $s=\\dfrac12$; so $s=\\dfrac12$ and then $as=2$",
+  "$a=4$, $\\dfrac{a+b}{a}=\\dfrac14\\Rightarrow b=-3$; $a^{2}+b^{2}=25$",
+  "",
+  "Final Answer: 25"
+ ],
+ "solution_full": [
+  "For $G$ on $(-\\pi,\\pi)$ put $t=\\tan\\dfrac x2$: $\\cos x=\\dfrac{1-t^{2}}{1+t^{2}}$ and $dx=\\dfrac{2\\,dt}{1+t^{2}}$, so $\\dfrac{dx}{5+3\\cos x}=\\dfrac{2\\,dt}{5(1+t^{2})+3(1-t^{2})}=\\dfrac{2\\,dt}{8+2t^{2}}=\\dfrac{dt}{4+t^{2}}$.",
+  "Hence $G(x)=\\dfrac12\\tan^{-1}\\left(\\dfrac12\\tan\\dfrac x2\\right)$ (with $G(0)=0$). So $G\\left(\\dfrac{\\pi}{2}\\right)=\\dfrac12\\tan^{-1}\\dfrac12$ and $G\\left(\\dfrac{2\\pi}{3}\\right)=\\dfrac12\\tan^{-1}\\dfrac{\\sqrt3}{2}$.",
+  "For $F$ on $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$ divide numerator and denominator by $\\cos^{2}x$: $\\dfrac{\\sec^{2}x\\,dx}{a\\sec^{2}x+b\\tan^{2}x}=\\dfrac{du}{a+(a+b)u^{2}}$ with $u=\\tan x$.",
+  "With $s=\\sqrt{\\dfrac{a+b}{a}}>0$: $F(x)=\\dfrac{1}{a s}\\tan^{-1}(s\\tan x)$, so $F\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{\\tan^{-1}s}{as}$ and $F\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{\\tan^{-1}(\\sqrt3 s)}{as}$.",
+  "Dividing the two conditions removes $a$: $\\dfrac{\\tan^{-1}(\\sqrt3s)}{\\tan^{-1}s}=\\dfrac{\\tan^{-1}(\\sqrt3/2)}{\\tan^{-1}(1/2)}$.",
+  "The left side decreases strictly from $\\sqrt3$ (as $s\\to0^{+}$) towards $\\dfrac23$ (as $s\\to\\infty$), so the equation has exactly one root, and $s=\\dfrac12$ is that root.",
+  "Then $\\dfrac{\\tan^{-1}(1/2)}{a/2}=\\dfrac12\\tan^{-1}\\dfrac12$ gives $a=4$, and $\\dfrac{a+b}{a}=s^{2}=\\dfrac14$ gives $a+b=1$, $b=-3$.",
+  "Check: $4-3\\sin^{2}x=\\dfrac{5+3\\cos2x}{2}$, so $F(x)=G(2x)$ for all $x$, consistent with both conditions.",
+  "$a^{2}+b^{2}=16+9=25$.",
+  "",
+  "Final Answer: 25"
+ ],
+ "originality_note": "New: an unknown integrand of the a + b sin^2 x type is identified from two values of its antiderivative, which are matched with values of the tan(x/2)-antiderivative of 1/(5 + 3 cos x); the hidden fact is F(x) = G(2x) (way 4). Closest known: separate textbook integrals of 1/(a + b sin^2 x) and 1/(a + b cos x). Different because: the two methods must be compared through their antiderivatives and the parameters recovered from two equations.",
+ "web_check": "ingredient only",
+ "level": 2,
+ "key_step": "Integrating both forms (tan x and tan(x/2) substitutions) and matching tan^-1(s)/(as) with (1/2) tan^-1(1/2) to get s = 1/2, a = 4.",
+ "justification": "Two standard integrals and a matching of parameters; the matching is guided by the structure. A routine multi-step chain without a real insight, level 2 like 2026-P2-Q12 (L2), which also recovers unknowns from two given values.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Integrals of the form int dx/(a + b.sin^2 x) and int dx/(a + b.cos^2 x)",
+  "Integrals of the form int dx/(a.sin x + b.cos x + c) using t = tan(x/2)"
+ ],
+ "concept_use": {
+  "Integrals of the form int dx/(a + b.sin^2 x) and int dx/(a + b.cos^2 x)": "F' = 1/(a + b sin^2 x) is integrated by dividing by cos^2 x and putting u = tan x, giving (1/(as)) tan^-1(s tan x).",
+  "Integrals of the form int dx/(a.sin x + b.cos x + c) using t = tan(x/2)": "G' = 1/(5 + 3 cos x) is integrated by t = tan(x/2), giving (1/2) tan^-1((1/2) tan(x/2)), which supplies the two target values."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that a > 0 and a + b > 0 keep F' defined, that the ratio equation has exactly one root s = 1/2, and that a^2 + b^2 = 25 is a positive 2-digit integer. Hindi keeps the word for 'and' outside the maths. Changed: split the display so that no words appear inside the maths in Hindi.",
+ "multi_concept": false,
+ "eq_relation": false
+}

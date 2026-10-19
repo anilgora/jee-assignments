@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "english": [
+  "Let $f:(0,\\infty)\\to(0,\\infty)$ be a differentiable function with $f(1)=1$. For every $x>0$, the tangent to the curve $y=f(x)$ at the point $P(x,f(x))$ meets the $y$-axis at a point whose ordinate is $f(x)\\left(1-x^{2}\\log_{e}x\\right)$. Then $f\\left(\\sqrt{e}\\right)$ is equal to",
+  "",
+  "(A) $e^{e/4}$",
+  "(B) $e^{(2e-1)/4}$",
+  "(C) $e^{1/4}$",
+  "(D) $e^{-1/4}$"
+ ],
+ "hindi": [
+  "माना कि $f:(0,\\infty)\\to(0,\\infty)$ एक अवकलनीय फलन है जिसके लिए $f(1)=1$ है। प्रत्येक $x>0$ के लिए, वक्र $y=f(x)$ के बिन्दु $P(x,f(x))$ पर खींची गई स्पर्श रेखा $y$-अक्ष को ऐसे बिन्दु पर मिलती है जिसकी कोटि $f(x)\\left(1-x^{2}\\log_{e}x\\right)$ है। तब $f\\left(\\sqrt{e}\\right)$ बराबर है",
+  "",
+  "(A) $e^{e/4}$",
+  "(B) $e^{(2e-1)/4}$",
+  "(C) $e^{1/4}$",
+  "(D) $e^{-1/4}$"
+ ],
+ "solution": [
+  "Tangent at $P$: $Y-y=y'(X-x)$; at $X=0$ the ordinate is $y-xy'$",
+  "$y-xy'=y-x^{2}y\\log_{e}x\\Rightarrow \\dfrac{y'}{y}=x\\log_{e}x$ (separable, $y>0$)",
+  "By parts: $\\displaystyle\\int x\\log_{e}x\\,dx=\\dfrac{x^{2}}{2}\\log_{e}x-\\dfrac{x^{2}}{4}$",
+  "$\\log_{e}y=\\dfrac{x^{2}}{2}\\log_{e}x-\\dfrac{x^{2}}{4}+C$; $f(1)=1\\Rightarrow C=\\dfrac14$",
+  "At $x=\\sqrt{e}$: $\\log_{e}y=\\dfrac{e}{2}\\cdot\\dfrac12-\\dfrac{e}{4}+\\dfrac14=\\dfrac14\\Rightarrow f(\\sqrt{e})=e^{1/4}$",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Write $y=f(x)$. The tangent at $P(x,y)$ is $Y-y=y'(X-x)$. Putting $X=0$ gives the ordinate of its point on the $y$-axis: $Y=y-xy'$.",
+  "The given condition is $y-xy'=y\\left(1-x^{2}\\log_{e}x\\right)=y-x^{2}y\\log_{e}x$. Cancelling $y$ and dividing by $x>0$ gives $y'=xy\\log_{e}x$.",
+  "Since $y>0$, the variables separate: $\\dfrac{dy}{y}=x\\log_{e}x\\,dx$.",
+  "Integrate the right side by parts with $u=\\log_{e}x$, $dv=x\\,dx$: $\\displaystyle\\int x\\log_{e}x\\,dx=\\dfrac{x^{2}}{2}\\log_{e}x-\\int\\dfrac{x^{2}}{2}\\cdot\\dfrac{1}{x}\\,dx=\\dfrac{x^{2}}{2}\\log_{e}x-\\dfrac{x^{2}}{4}$.",
+  "Hence $\\log_{e}y=\\dfrac{x^{2}}{2}\\log_{e}x-\\dfrac{x^{2}}{4}+C$.",
+  "At $x=1$: $\\log_{e}1=0-\\dfrac14+C$, so $C=\\dfrac14$ and $f(x)=x^{x^{2}/2}e^{(1-x^{2})/4}$.",
+  "At $x=\\sqrt{e}$: $x^{2}=e$ and $\\log_{e}x=\\dfrac12$, so $\\log_{e}f(\\sqrt{e})=\\dfrac{e}{4}-\\dfrac{e}{4}+\\dfrac14=\\dfrac14$.",
+  "Therefore $f(\\sqrt{e})=e^{1/4}$. Dropping the $-\\dfrac{x^{2}}{4}$ term gives (A); a sign slip in the by-parts step gives (B).",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: the curve is defined by where its tangent meets the y-axis, the intercept condition y - xy' = y(1 - x^2 ln x) turns into the separable equation y'/y = x ln x, and the evaluation point sqrt(e) makes the two by-parts terms cancel (way 5). Closest known: curves defined by a y-intercept of the tangent (usually giving linear equations); integral of x ln x. Different because: the intercept is proportional to y, so the equation is separable, and the answer depends on handling both by-parts terms correctly.",
+ "web_check": "not found",
+ "level": 3,
+ "key_step": "Translating the tangent's y-intercept into y'/y = x ln x, then integrating x ln x by parts and fixing the constant.",
+ "justification": "Three linked stages (tangent intercept, separation, by parts) with a by-parts sign trap the options exploit. Above the plain separable DE 2026-P2-Q3 (L2) because the equation must first be extracted from a geometric condition; comparable to 2023-P2-Q1 (L2) plus one stage.",
+ "nearest_anchor": "2026-P2-Q3 (L2)",
+ "confidence": "Medium",
+ "chapter": "Indefinite Integration",
+ "target_level": 3,
+ "answer_plan": "Option C",
+ "blueprint_concepts": [
+  "Integration by parts",
+  "Variable separable equations"
+ ],
+ "concept_use": {
+  "Integration by parts": "The integral of x ln x needed after separating variables is found by parts: (x^2/2) ln x - x^2/4.",
+  "Variable separable equations": "The tangent condition gives y'/y = x ln x, a variables separable equation solved with f(1) = 1 fixing the constant."
+ },
+ "stem_review": "Read as a student: every function has a stated domain, every symbol is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed with sympy/mpmath and is unique and equal to the Answer Plan; no hyperbolic functions or asymptotes. Checked that y > 0 makes the division by y valid and that the constant is fixed uniquely by f(1) = 1. Changed: No change.",
+ "multi_concept": false,
+ "eq_relation": false
+}
