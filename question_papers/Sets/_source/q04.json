@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Sets",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $U=\\{x\\in\\mathbb{Z}:|x|\\le 10\\}$ be the universal set, and let $A=\\{x\\in U:x \\text{ is a multiple of } 3\\}$, $B=\\{x\\in U:x^2>20\\}$ and $C=\\{x\\in U:x<2\\}$. For a subset $Y$ of $U$, let $Y'=U\\setminus Y$, and for subsets $M,N$ of $U$, let $M\\,\\Delta\\,N=(M\\setminus N)\\cup(N\\setminus M)$. Let $X$ be the subset of $U$ satisfying $(A\\,\\Delta\\,X)'=B\\cup C'$. Then the sum of all the elements of $X$ is ______."
+ ],
+ "hindi": [
+  "माना $U=\\{x\\in\\mathbb{Z}:|x|\\le 10\\}$ सार्वत्रिक समुच्चय है, तथा माना $B=\\{x\\in U:x^2>20\\}$ तथा $C=\\{x\\in U:x<2\\}$ हैं, और $A$ समुच्चय $U$ के उन सभी अवयवों का समुच्चय है जो $3$ के गुणज हैं। $U$ के किसी उपसमुच्चय $Y$ के लिए माना $Y'=U\\setminus Y$ है, तथा $U$ के उपसमुच्चयों $M,N$ के लिए माना $M\\,\\Delta\\,N=(M\\setminus N)\\cup(N\\setminus M)$ है। माना $X$, $U$ का वह उपसमुच्चय है जो $(A\\,\\Delta\\,X)'=B\\cup C'$ को संतुष्ट करता है। तब $X$ के सभी अवयवों का योग ______ है।"
+ ],
+ "solution": [
+  "De Morgan: $A\\,\\Delta\\,X=(B\\cup C')'=B'\\cap C=C\\setminus B$",
+  "$C\\setminus B=\\{x\\in U:x<2,\\ x^2\\le20\\}=\\{-4,-3,-2,-1,0,1\\}$",
+  "$\\Delta$ is associative, $A\\,\\Delta\\,A=\\emptyset$, $\\emptyset\\,\\Delta\\,X=X$: so $X=A\\,\\Delta\\,(A\\,\\Delta\\,X)=A\\,\\Delta\\,(C\\setminus B)$, and $X$ is unique",
+  "$A=\\{0,\\pm3,\\pm6,\\pm9\\}$, $A\\cap(C\\setminus B)=\\{-3,0\\}$",
+  "$X=\\{-9,-6,3,6,9\\}\\cup\\{-4,-2,-1,1\\}$",
+  "Sum $=(-9-6+3+6+9)+(-4-2-1+1)=3-6=-3$",
+  "",
+  "Final Answer: -3"
+ ],
+ "solution_full": [
+  "Take complements (in $U$) of both sides: $A\\,\\Delta\\,X=\\left((A\\,\\Delta\\,X)'\\right)'=(B\\cup C')'$.",
+  "By De Morgan's law, $(B\\cup C')'=B'\\cap(C')'=B'\\cap C=C\\setminus B$.",
+  "$B'=\\{x\\in U:x^2\\le 20\\}=\\{-4,-3,\\dots,4\\}$ and $C=\\{-10,\\dots,1\\}$, so $C\\setminus B=B'\\cap C=\\{-4,-3,-2,-1,0,1\\}$.",
+  "To recover $X$, use the algebraic properties of $\\Delta$: it is associative, $A\\,\\Delta\\,A=\\emptyset$ and $\\emptyset\\,\\Delta\\,X=X$. Hence $A\\,\\Delta\\,(A\\,\\Delta\\,X)=(A\\,\\Delta\\,A)\\,\\Delta\\,X=X$.",
+  "So $X=A\\,\\Delta\\,(C\\setminus B)$. Conversely this set satisfies the equation, so the subset $X$ exists and is unique.",
+  "$A$ consists of the multiples of $3$ in $U$: $A=\\{-9,-6,-3,0,3,6,9\\}$.",
+  "$A\\cap(C\\setminus B)=\\{-3,0\\}$, so $A\\,\\Delta\\,(C\\setminus B)=(A\\cup(C\\setminus B))\\setminus\\{-3,0\\}$.",
+  "Hence $X=\\{-9,-6,3,6,9\\}\\cup\\{-4,-2,-1,1\\}=\\{-9,-6,-4,-2,-1,1,3,6,9\\}$.",
+  "Sum of the elements $=(-9-6+3+6+9)+(-4-2-1+1)=3+(-6)=-3$. (Taking $A\\cup(C\\setminus B)$ instead of the symmetric difference would give $-6$.)",
+  "",
+  "Final Answer: -3"
+ ],
+ "originality_note": "New: a set equation (A Delta X)' = B union C' solved for the unknown set X by De Morgan's law and the cancellation law of the symmetric difference, then evaluated on concrete integer sets (way 5: link between De Morgan's laws and the group property of Delta). Closest known: textbook identities 'prove that A Delta B = (A union B) minus (A intersect B)' and the abstract exercise 'solve A Delta X = B'. Different because: the complement must first be removed by De Morgan and the answer is a signed sum, so element-by-element care is needed.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every set, the universal set where needed and every symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy and brute force), is unique and equals the Answer Plan. Stated the universal set and the complement Y' = U minus Y, defined Delta, and checked that X exists and is unique (Delta with A is a bijection on subsets of U). Changed: wrote 'the subset X' only after confirming uniqueness, and wrote the Delta definition with letters M, N so that X is used only for the unknown set; no other change.",
+ "level": 3,
+ "key_step": "Using De Morgan to get A Delta X = C minus B and then cancelling A (A Delta A = empty set) to get X = A Delta (C minus B).",
+ "justification": "Two linked ideas that students practise less than Venn counting: remove the complement by De Morgan, then solve the set equation using associativity and A Delta A = empty set; a signed sum with no options punishes one misplaced element. Comparable to two-idea questions such as 2021-P1-Q13 (L3); above routine L2 chains.",
+ "nearest_anchor": "2021-P1-Q13 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Union, intersection, complement, difference and symmetric difference": "The sets B', C minus B, A intersect (C minus B) and the symmetric difference A Delta (C minus B) are computed to list X.",
+  "Algebraic properties of set operations and De Morgan's laws": "De Morgan gives (B union C')' = B' intersect C; associativity of Delta with A Delta A = empty set and empty set Delta X = X solves for X."
+ },
+ "blueprint_concepts": [
+  "Union, intersection, complement, difference and symmetric difference",
+  "Algebraic properties of set operations and De Morgan's laws"
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Sets",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "Let $A=\\{x\\in\\mathbb{Z}:x^2\\le 6x\\}$ and $B=\\{x\\in\\mathbb{Z}:4\\le x^2\\le 16\\}$. For sets $M$ and $N$, let $M\\,\\Delta\\,N=(M\\setminus N)\\cup(N\\setminus M)$. Then the number of subsets $X$ of $A\\cup B$ such that $X$ and $A$ are equivalent sets, $X\\neq A$ and $A\\,\\Delta\\,X\\subseteq B$ is ______."
+ ],
+ "hindi": [
+  "माना $A=\\{x\\in\\mathbb{Z}:x^2\\le 6x\\}$ तथा $B=\\{x\\in\\mathbb{Z}:4\\le x^2\\le 16\\}$ है। समुच्चयों $M$ तथा $N$ के लिए माना $M\\,\\Delta\\,N=(M\\setminus N)\\cup(N\\setminus M)$ है। तब $A\\cup B$ के ऐसे उपसमुच्चयों $X$ की संख्या, जिनके लिए $X$ तथा $A$ तुल्य समुच्चय हैं, $X\\neq A$ है तथा $A\\,\\Delta\\,X\\subseteq B$ है, ______ है।"
+ ],
+ "solution": [
+  "$x^2\\le 6x\\iff 0\\le x\\le 6\\Rightarrow A=\\{0,1,\\dots,6\\},\\ n(A)=7$; $B=\\{\\pm2,\\pm3,\\pm4\\}$",
+  "$A\\setminus B=\\{0,1,5,6\\}$, and every element of $A\\cup B$ outside $B$ lies in $A\\setminus B$",
+  "$A\\,\\Delta\\,X\\subseteq B$ means $X$ and $A$ contain the same elements outside $B$, so $X=\\{0,1,5,6\\}\\cup Y$ with $Y\\subseteq B$",
+  "Equivalent to $A$: $n(X)=7\\Rightarrow n(Y)=3$, giving $\\binom{6}{3}=20$ subsets",
+  "$X=A$ corresponds to $Y=A\\cap B=\\{2,3,4\\}$; excluding it: $20-1=19$",
+  "",
+  "Final Answer: 19"
+ ],
+ "solution_full": [
+  "Set $A$: $x^2\\le 6x\\iff x(x-6)\\le 0\\iff 0\\le x\\le 6$. Hence $A=\\{0,1,2,3,4,5,6\\}$ and $n(A)=7$.",
+  "Set $B$: $4\\le x^2\\le 16\\iff 2\\le|x|\\le 4$. Hence $B=\\{-4,-3,-2,2,3,4\\}$ and $n(B)=6$.",
+  "Then $A\\cap B=\\{2,3,4\\}$, $A\\setminus B=\\{0,1,5,6\\}$, $B\\setminus A=\\{-4,-3,-2\\}$ and $A\\cup B=\\{-4,-3,-2,0,1,2,3,4,5,6\\}$.",
+  "An element $t$ lies in $A\\,\\Delta\\,X$ exactly when it lies in one of $A$, $X$ but not in the other. So $A\\,\\Delta\\,X\\subseteq B$ means: for every $t\\notin B$, either $t$ is in both $A$ and $X$ or in neither.",
+  "The elements of $A\\cup B$ not in $B$ are $0,1,5,6$, all of which lie in $A$; hence each of them must lie in $X$. The elements of $B$ are unrestricted.",
+  "So the admissible sets are exactly $X=\\{0,1,5,6\\}\\cup Y$ with $Y\\subseteq B$, and different $Y$ give different $X$.",
+  "$X$ and $A$ are equivalent iff $n(X)=n(A)=7$, that is, $4+n(Y)=7$, $n(Y)=3$. The number of $3$-element subsets of the $6$-element set $B$ is $\\binom{6}{3}=20$.",
+  "Among these, $X=A$ occurs exactly once, for $Y=\\{2,3,4\\}=A\\cap B$. The condition $X\\neq A$ removes it.",
+  "Required number $=20-1=19$.",
+  "",
+  "Final Answer: 19"
+ ],
+ "originality_note": "New: subsets X that are equivalent but not equal to A and differ from A only inside B (the symmetric-difference condition A Delta X subset of B), with A and B given in set-builder form (way 5: link between symmetric difference and counting subsets of fixed size). Closest known: 'number of subsets of A containing a given set' and 'n(P(A))' exercises. Different because: the condition A Delta X subset of B must be decoded into 'agree outside B' before the equivalence condition turns it into a binomial count.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every set, the universal set where needed and every symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy and brute force), is unique and equals the Answer Plan. Defined the symbol Delta in the stem because it is not used uniformly in textbooks; checked that 'equivalent' means equal cardinality and that X = A is excluded explicitly. Changed: added the definition of Delta, written with letters M, N so that X is used only for the subsets being counted; no other change.",
+ "level": 3,
+ "key_step": "Decoding A Delta X subset of B as 'X agrees with A outside B', so X = {0,1,5,6} together with a 3-element subset of B, minus X = A.",
+ "justification": "Two linked ideas: translate the symmetric-difference condition into a structural description of X, then combine it with equivalence (equal size) and inequality to count; numerical answer with an easy off-by-one trap (X = A). Comparable to the bounded-count reasoning of 2026-P1-Q11 (L3), above the direct set-counting statements of 2021-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Representation of sets; empty, finite, infinite, equal and equivalent sets": "A and B are converted from set-builder to roster form; 'X and A are equivalent' gives n(X) = 7 and 'X not equal to A' removes one set.",
+  "Subsets, power set, number of subsets and proper subsets": "The admissible X correspond to subsets Y of B; counting 3-element subsets of a 6-element set gives C(6,3) = 20.",
+  "Union, intersection, complement, difference and symmetric difference": "A union B, A intersect B, A minus B are formed and the condition A Delta X subset of B is decoded element by element."
+ },
+ "blueprint_concepts": [
+  "Representation of sets; empty, finite, infinite, equal and equivalent sets",
+  "Subsets, power set, number of subsets and proper subsets",
+  "Union, intersection, complement, difference and symmetric difference"
+ ]
+}

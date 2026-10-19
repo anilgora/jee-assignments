@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "chapter": "Sets",
+ "target_level": 2,
+ "answer_plan": "Option C",
+ "english": [
+  "Consider the sets $P=\\{x\\in\\mathbb{R}:x^3=x\\}$, $Q=\\{x\\in\\mathbb{R}:|x|=x^2\\}$, $R=\\{x\\in\\mathbb{Z}:|x-1|+|x+1|=2\\}$, $T=\\{x\\in\\mathbb{R}:|x-1|+|x+1|=2\\}$ and $W=\\{x\\in\\mathbb{R}:|x-1|+|x+1|<2\\}$. Then which of the following statements is TRUE?",
+  "",
+  "(A) $P=Q$ and $W=\\{0\\}$",
+  "(B) $Q\\neq R$ and $W=\\emptyset$",
+  "(C) $P=Q=R$ and $W=\\emptyset$",
+  "(D) $R$ and $T$ are equivalent sets"
+ ],
+ "hindi": [
+  "समुच्चयों $P=\\{x\\in\\mathbb{R}:x^3=x\\}$, $Q=\\{x\\in\\mathbb{R}:|x|=x^2\\}$, $R=\\{x\\in\\mathbb{Z}:|x-1|+|x+1|=2\\}$, $T=\\{x\\in\\mathbb{R}:|x-1|+|x+1|=2\\}$ तथा $W=\\{x\\in\\mathbb{R}:|x-1|+|x+1|<2\\}$ पर विचार कीजिए। तब निम्न में से कौन-सा कथन सत्य है?",
+  "",
+  "(A) $P=Q$ तथा $W=\\{0\\}$",
+  "(B) $Q\\neq R$ तथा $W=\\emptyset$",
+  "(C) $P=Q=R$ तथा $W=\\emptyset$",
+  "(D) $R$ तथा $T$ तुल्य समुच्चय हैं"
+ ],
+ "solution": [
+  "$x^3=x\\Rightarrow x(x-1)(x+1)=0\\Rightarrow P=\\{-1,0,1\\}$",
+  "$|x|=x^2=|x|^2\\Rightarrow |x|(|x|-1)=0\\Rightarrow Q=\\{-1,0,1\\}$",
+  "$|x-1|+|x+1|\\ge|(x+1)-(x-1)|=2$, with equality iff $-1\\le x\\le 1$",
+  "So $T=[-1,1]$ (infinite), $R=T\\cap\\mathbb{Z}=\\{-1,0,1\\}$ and $W=\\emptyset$ (the sum is never less than $2$)",
+  "(A): $0\\notin W$ since the sum at $0$ is $2$, so (A) is wrong; (B): $Q=R$, so (B) is wrong",
+  "(D): $n(R)=3$ but $T$ is infinite, so they are not equivalent and (D) is wrong; (C) is correct",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Set $P$: $x^3=x$ gives $x^3-x=x(x-1)(x+1)=0$, so $x\\in\\{-1,0,1\\}$. Hence $P=\\{-1,0,1\\}$.",
+  "Set $Q$: since $x^2=|x|^2$, the condition $|x|=x^2$ becomes $|x|^2-|x|=0$, that is, $|x|(|x|-1)=0$. So $|x|=0$ or $|x|=1$, giving $x\\in\\{-1,0,1\\}$. Hence $Q=\\{-1,0,1\\}$.",
+  "For the sets $R$, $T$ and $W$ use the triangle inequality: $|x-1|+|x+1|=|1-x|+|x+1|\\ge|(1-x)+(x+1)|=2$ for every real $x$.",
+  "Equality holds if and only if $1-x$ and $x+1$ are both non-negative, that is, $-1\\le x\\le 1$. (Directly: for $x>1$ the sum is $2x>2$ and for $x<-1$ it is $-2x>2$.)",
+  "Therefore $T=\\{x\\in\\mathbb{R}:-1\\le x\\le 1\\}=[-1,1]$, an infinite set, and $R$, which keeps only the integers of $T$, is $R=\\{-1,0,1\\}$.",
+  "Since the sum is never less than $2$, no real number satisfies $|x-1|+|x+1|<2$; so $W=\\emptyset$.",
+  "Statement (A): $P=Q$ is true, but at $x=0$ the sum is $1+1=2$, which is not less than $2$, so $0\\notin W$ and $W\\neq\\{0\\}$. So (A) is wrong.",
+  "Statement (B): $Q=\\{-1,0,1\\}=R$, so $Q\\neq R$ is false and (B) is wrong.",
+  "Statement (C): $P=Q=R=\\{-1,0,1\\}$ and $W=\\emptyset$; both parts hold, so (C) is correct.",
+  "Statement (D): equivalent sets have the same number of elements. $R$ is finite with $n(R)=3$, while $T=[-1,1]$ is infinite, so $R$ and $T$ are not equivalent and (D) is wrong.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: one finite set hidden behind three unrelated defining conditions (a cubic, the equation |x| = x^2, and the integer solutions of a distance-sum equation), set against the real solution set of the same distance-sum equation (an interval) and its strict version (empty) (way 5: link between equality, equivalence and empty/infinite sets through the triangle-inequality equality case). Closest known: textbook 'which of the following sets are equal / empty' lists. Different because: every set must be solved and the equality, emptiness and equivalence verdicts all hinge on the equality case of |x-1|+|x+1| >= 2.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every set, the universal set where needed and every symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy and brute force), is unique and equals the Answer Plan. Checked that 'equivalent sets' is the standard NCERT term (same number of elements) and that exactly one option is true. Changed: wrote W with a strict inequality so that it is empty for a reason rather than by a trivial equation; no other change.",
+ "level": 2,
+ "key_step": "Recognising |x-1|+|x+1| >= 2 with equality exactly on [-1,1], so T is an interval, R = {-1,0,1} and W is empty.",
+ "justification": "Four short routine solutions (cubic, |x| = x^2, distance-sum equation and inequality) chained, then an equivalence check; no real insight, options allow checking. Routine chain like 2026-P1-Q4 (L2), more steps than the single case split of 2021-P1-Q17 (L1).",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Representation of sets; empty, finite, infinite, equal and equivalent sets": "Each set is converted from set-builder to roster or interval form; the options test equality P = Q = R, the empty set W, T infinite and the non-equivalence of R and T."
+ },
+ "blueprint_concepts": [
+  "Representation of sets; empty, finite, infinite, equal and equivalent sets"
+ ]
+}
