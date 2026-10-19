@@ -1,0 +1,55 @@
+{
+ "type": "Numerical",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "english": [
+  "In a triangle $ABC$, $\\sin A:\\sin B:\\sin C=7:8:9$. Let $I$ be the incentre of the triangle. If $CI=2\\sqrt{14}$, then the perimeter of the triangle $ABC$ is ______."
+ ],
+ "hindi": [
+  "एक त्रिभुज $ABC$ में $\\sin A:\\sin B:\\sin C=7:8:9$ है। माना $I$ त्रिभुज का अन्तःकेन्द्र है। यदि $CI=2\\sqrt{14}$ है, तो त्रिभुज $ABC$ का परिमाप ______ है।"
+ ],
+ "solution": [
+  "Sine law: $a:b:c=7:8:9$, so $a=7k,\\ b=8k,\\ c=9k$, $s=12k$, $s-c=3k$",
+  "Cosine rule: $\\cos C=\\dfrac{49+64-81}{2\\cdot7\\cdot8}=\\dfrac27$",
+  "Half-angle formula: $\\cos\\dfrac C2=\\sqrt{\\dfrac{s(s-c)}{ab}}=\\sqrt{\\dfrac{36k^2}{56k^2}}=\\dfrac{3}{\\sqrt{14}}$ (agrees with $\\sqrt{\\frac{1+\\cos C}{2}}=\\sqrt{\\frac{9}{14}}$)",
+  "Incircle touches $CA$ at $E$ with $CE=s-c$ and $IE\\perp CA$, $\\angle ICE=\\dfrac C2$: $CI=\\dfrac{s-c}{\\cos\\frac C2}=3k\\cdot\\dfrac{\\sqrt{14}}{3}=\\sqrt{14}\\,k$",
+  "$\\sqrt{14}\\,k=2\\sqrt{14}\\Rightarrow k=2$; perimeter $=24k=48$",
+  "",
+  "Final Answer: 48"
+ ],
+ "solution_full": [
+  "By the sine law $a:b:c=\\sin A:\\sin B:\\sin C=7:8:9$. Write $a=7k$, $b=8k$, $c=9k$ with $k>0$.",
+  "Then $s=\\dfrac{a+b+c}{2}=12k$, $s-a=5k$, $s-b=4k$, $s-c=3k$.",
+  "Cosine rule: $\\cos C=\\dfrac{a^2+b^2-c^2}{2ab}=\\dfrac{49+64-81}{112}=\\dfrac{32}{112}=\\dfrac27$.",
+  "Half-angle formula: $\\cos\\dfrac C2=\\sqrt{\\dfrac{s(s-c)}{ab}}=\\sqrt{\\dfrac{12k\\cdot3k}{56k^2}}=\\sqrt{\\dfrac{9}{14}}=\\dfrac{3}{\\sqrt{14}}$; the same value follows from $\\cos^2\\dfrac C2=\\dfrac{1+\\cos C}{2}=\\dfrac{9}{14}$.",
+  "Let the incircle touch $CA$ at $E$. The tangent length from $C$ is $CE=s-c=3k$, $IE\\perp CA$, and $CI$ bisects angle $C$, so $\\angle ICE=\\dfrac C2$.",
+  "In the right triangle $CEI$: $CI=\\dfrac{CE}{\\cos\\frac C2}=\\dfrac{3k\\sqrt{14}}{3}=\\sqrt{14}\\,k$. (Equivalently $r=(s-c)\\tan\\dfrac C2=\\sqrt5\\,k$ and $CI=\\dfrac{r}{\\sin\\frac C2}$.)",
+  "Given $CI=2\\sqrt{14}$: $k=2$, so the sides are $14,16,18$.",
+  "Perimeter $=2s=24k=48$.",
+  "",
+  "Final Answer: 48"
+ ],
+ "originality_note": "New: the scale of a triangle known only up to similarity (from a sine ratio) is fixed by the distance from a vertex to the incentre, through the right triangle formed by the vertex, the incentre and the point of contact (way 5: sine law, cosine rule, half-angle formula and incircle geometry in one chain). Closest known: 'sides in ratio, given inradius or circumradius, find the area'. Different because: the given length is CI, which needs the half-angle of C and the tangent length s - c.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Checked that the triangle 14, 16, 18 has CI = 2 sqrt14 exactly. Changed: No change.",
+ "level": 3,
+ "key_step": "Expressing CI as (s-c)/cos(C/2) and getting cos(C/2) from the half-angle formula to fix the scale.",
+ "justification": "Four standard results chained in a numerical answer, with the incentre-distance relation as the less routine link; no casework. Above 2021-P1-Q18 (L2), below the inradius part 2023-P2-Q15 (L4).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Sine Law": "sin A : sin B : sin C = 7 : 8 : 9 gives a : b : c = 7 : 8 : 9.",
+  "Cosine rule": "cos C = 2/7 from the sides.",
+  "Half angle formula": "cos(C/2) = sqrt(s(s-c)/(ab)) = 3/sqrt14.",
+  "Inradius and incenter based questions": "CI = (s-c)/cos(C/2) from the tangent length and the bisector through the incentre."
+ },
+ "blueprint_concepts": [
+  "Sine Law",
+  "Cosine rule",
+  "Half angle formula",
+  "Inradius and incenter based questions"
+ ]
+}

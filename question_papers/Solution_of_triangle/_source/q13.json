@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Let $A=(2,1)$ and $B=(5,5)$, and let $C$ be a point on the line $y=1$ such that the angle $BAC$ is obtuse. The internal bisector of the angle $BAC$ meets the side $BC$ at the point $D$. If $AD=\\dfrac{2\\sqrt5}{3}$, then the $x$-coordinate of $C$ is ______."
+ ],
+ "hindi": [
+  "माना $A=(2,1)$ तथा $B=(5,5)$ हैं, तथा $C$ रेखा $y=1$ पर एक ऐसा बिन्दु है कि कोण $BAC$ अधिक कोण है। कोण $BAC$ का आन्तरिक समद्विभाजक भुजा $BC$ को बिन्दु $D$ पर मिलता है। यदि $AD=\\dfrac{2\\sqrt5}{3}$ है, तो $C$ का $x$-निर्देशांक ______ है।"
+ ],
+ "solution": [
+  "$AB$: $4x-3y-5=0$, $AB=5$; $AC$: $y=1$; $\\angle BAC$ obtuse $\\Rightarrow C=(2-b,1)$ with $b=AC$",
+  "Bisectors of the angle between the lines: $\\dfrac{4x-3y-5}{5}=\\pm(y-1)$; the one containing the obtuse angle (direction $(3,4)/5+(-1,0)\\propto(-1,2)$) is $2x+y-5=0$",
+  "Angle between this bisector and $AC$: $\\cos\\dfrac A2=\\dfrac{1}{\\sqrt5}$",
+  "Bisector length: $AD=\\dfrac{2bc}{b+c}\\cos\\dfrac A2=\\dfrac{10b}{\\sqrt5(b+5)}=\\dfrac{2\\sqrt5}{3}\\Rightarrow30b=10b+50\\Rightarrow b=\\dfrac52$",
+  "$x$-coordinate of $C=2-\\dfrac52=-0.5$",
+  "",
+  "Final Answer: -0.5"
+ ],
+ "solution_full": [
+  "Line $AB$: slope $\\dfrac{4}{3}$ through $A$, i.e. $4x-3y-5=0$, and $c=AB=\\sqrt{9+16}=5$. Line $AC$ is $y=1$; write $C=(2+t,1)$.",
+  "$\\cos\\angle BAC=\\dfrac{(3,4)\\cdot(t,0)}{5|t|}=\\dfrac{3t}{5|t|}$, which is negative only for $t<0$. So $C=(2-b,1)$ with $b=AC>0$, and $\\cos A=-\\dfrac35$.",
+  "The bisectors of the angles between $4x-3y-5=0$ and $y-1=0$ are $\\dfrac{4x-3y-5}{5}=\\pm(y-1)$, i.e. $x-2y=0$ and $2x+y-5=0$.",
+  "The bisector of $\\angle BAC$ has direction $\\dfrac{(3,4)}{5}+(-1,0)=\\left(-\\dfrac25,\\dfrac45\\right)\\propto(-1,2)$, so it is $2x+y-5=0$ (the other one bisects the acute angle).",
+  "Half-angle: the angle between $(-1,2)$ and $(-1,0)$ has $\\cos\\dfrac A2=\\dfrac{1}{\\sqrt5}$ (consistent with $\\cos A=2\\cdot\\dfrac15-1=-\\dfrac35$).",
+  "Length of the angle bisector: $AD=\\dfrac{2bc}{b+c}\\cos\\dfrac A2=\\dfrac{2\\cdot5b}{b+5}\\cdot\\dfrac1{\\sqrt5}$.",
+  "Setting $\\dfrac{10b}{\\sqrt5(b+5)}=\\dfrac{2\\sqrt5}{3}$: $30b=10(b+5)$, so $b=\\dfrac52$ (unique, as $\\dfrac{10b}{b+5}$ is increasing).",
+  "Hence $C=\\left(2-\\dfrac52,1\\right)=\\left(-\\dfrac12,1\\right)$.",
+  "Check: $D$ divides $BC$ in $AB:AC=2:1$, $D=\\dfrac{1\\cdot B+2\\cdot C}{3}=\\left(\\dfrac43,\\dfrac73\\right)$, which lies on $2x+y-5=0$, and $AD^2=\\dfrac49+\\dfrac{16}{9}=\\dfrac{20}{9}$.",
+  "So the $x$-coordinate of $C$ is $-0.5$.",
+  "",
+  "Final Answer: -0.5"
+ ],
+ "originality_note": "New: the vertex C is located on a given line from the length of the internal bisector, after the correct bisector of the obtuse angle between two lines has been chosen (way 5: bisector length formula and equations of angle bisectors). Closest known: 'find the bisector of the angle containing a point' and 'length of the bisector from the sides'. Different because: the bisector length is the datum and the unknown side is solved for, with the obtuse condition deciding both the ray and the bisector.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. The obtuse condition fixes C to the left of A; checked that b = 5/2 is the only solution and that D lies on the side BC. Changed: No change.",
+ "level": 3,
+ "key_step": "Choosing the bisector of the obtuse angle to get cos(A/2) and solving the bisector-length equation for AC.",
+ "justification": "Two linked ideas (correct bisector of two lines, then the bisector-length formula solved for a side) in a numerical answer with a sign decided by the obtuse condition. Comparable to 2021-P1-Q1 (L3) in coordinate demand, above 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Length of angle bisector": "AD = (2bc/(b+c)) cos(A/2) is solved for b = AC = 5/2.",
+  "Angle bisectors": "The two bisectors (4x-3y-5)/5 = +-(y-1) are formed and 2x + y - 5 = 0 is chosen as the bisector of the obtuse angle BAC, giving cos(A/2) = 1/sqrt5."
+ },
+ "blueprint_concepts": [
+  "Length of angle bisector",
+  "Angle bisectors"
+ ]
+}

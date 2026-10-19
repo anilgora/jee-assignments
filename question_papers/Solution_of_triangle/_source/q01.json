@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "Option C",
+ "english": [
+  "Let $ABC$ be a triangle with $\\angle B-\\angle C=\\dfrac{\\pi}{2}$, and let $a,b,c$ denote the lengths of the sides $BC,CA,AB$, respectively. Then which of the following relations is TRUE?",
+  "",
+  "(A) $(b^2+c^2)^2=a^2(b^2-c^2)$",
+  "(B) $b^2-c^2=a^2$",
+  "(C) $(b^2-c^2)^2=a^2(b^2+c^2)$",
+  "(D) $b^2+c^2=2a^2$"
+ ],
+ "hindi": [
+  "माना $ABC$ एक त्रिभुज है जिसमें $\\angle B-\\angle C=\\dfrac{\\pi}{2}$ है, तथा $a,b,c$ क्रमशः भुजाओं $BC,CA,AB$ की लम्बाइयाँ हैं। तब निम्न में से कौन-सा सम्बन्ध सत्य है?",
+  "",
+  "(A) $(b^2+c^2)^2=a^2(b^2-c^2)$",
+  "(B) $b^2-c^2=a^2$",
+  "(C) $(b^2-c^2)^2=a^2(b^2+c^2)$",
+  "(D) $b^2+c^2=2a^2$"
+ ],
+ "solution": [
+  "Take $C=\\theta$ as parameter: $B=\\dfrac{\\pi}{2}+\\theta$, $A=\\pi-B-C=\\dfrac{\\pi}{2}-2\\theta$",
+  "Sine law with $k=2R$: $a=k\\cos 2\\theta,\\ b=k\\cos\\theta,\\ c=k\\sin\\theta$",
+  "$b^2+c^2=k^2$ and $b^2-c^2=k^2\\cos 2\\theta=k\\,a$",
+  "Eliminating $k$: $(b^2-c^2)^2=k^2a^2=a^2(b^2+c^2)$",
+  "(B) would need $k=a$, i.e. $\\cos 2\\theta=1$, impossible; (A), (D) fail for $\\theta=\\dfrac{\\pi}{12}$ (then $b^2+c^2=k^2,\\ a^2=\\dfrac{3k^2}{4}$)",
+  "",
+  "Correct Option: (C)"
+ ],
+ "solution_full": [
+  "Let $C=\\theta$. Since $B-C=\\dfrac{\\pi}{2}$, $B=\\dfrac{\\pi}{2}+\\theta$, and $A=\\pi-B-C=\\dfrac{\\pi}{2}-2\\theta$. For $A>0$ we need $0<\\theta<\\dfrac{\\pi}{4}$; $\\theta$ is the parameter to be eliminated.",
+  "By the sine law, $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C}=k$ (where $k=2R$).",
+  "$\\sin A=\\sin\\left(\\dfrac{\\pi}{2}-2\\theta\\right)=\\cos 2\\theta$, $\\sin B=\\sin\\left(\\dfrac{\\pi}{2}+\\theta\\right)=\\cos\\theta$, $\\sin C=\\sin\\theta$.",
+  "Hence $a=k\\cos 2\\theta$, $b=k\\cos\\theta$, $c=k\\sin\\theta$.",
+  "Then $b^2+c^2=k^2(\\cos^2\\theta+\\sin^2\\theta)=k^2$ and $b^2-c^2=k^2(\\cos^2\\theta-\\sin^2\\theta)=k^2\\cos 2\\theta=k\\cdot a$.",
+  "From the second relation $k=\\dfrac{b^2-c^2}{a}$; substituting in the first: $\\dfrac{(b^2-c^2)^2}{a^2}=b^2+c^2$, i.e. $(b^2-c^2)^2=a^2(b^2+c^2)$. So (C) is true.",
+  "Check of the others with $\\theta=\\dfrac{\\pi}{12}$: $b^2+c^2=k^2$, $b^2-c^2=k^2\\cos\\dfrac{\\pi}{6}=\\dfrac{\\sqrt3}{2}k^2$, $a^2=k^2\\cos^2\\dfrac{\\pi}{6}=\\dfrac{3}{4}k^2$.",
+  "(A): $k^4\\neq\\dfrac{3}{4}k^2\\cdot\\dfrac{\\sqrt3}{2}k^2$; (B): $\\dfrac{\\sqrt3}{2}k^2\\neq\\dfrac34k^2$; (D): $k^2\\neq\\dfrac32k^2$. So (A), (B), (D) are wrong.",
+  "",
+  "Correct Option: (C)"
+ ],
+ "originality_note": "New: angle condition B - C = pi/2 turned into a one-parameter family (C = theta) whose sides by the sine law are k cos 2theta, k cos theta, k sin theta; eliminating theta and k gives (b^2-c^2)^2 = a^2(b^2+c^2) (way 5: sine law plus elimination). Closest known: 'B = 2A gives b^2 = a(a+c)' and 'B = 3A' side relations (the B = 3A version was found on the web and rejected during design); the identity (b^2-c^2)/a^2 = sin(B-C)/sin A. Different because: the difference (not a multiple) of two angles is fixed, so the elimination runs through cos^2 + sin^2 and cos 2theta.",
+ "web_check": "ingredient only",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Stated that a, b, c are the sides BC, CA, AB; checked that only (C) holds for several theta in (0, pi/4). Changed: replaced the first design (B = 3A), which the web check showed is a published problem.",
+ "level": 3,
+ "key_step": "Parametrising the angles by C = theta and eliminating theta between b^2 + c^2 = k^2 and b^2 - c^2 = k a.",
+ "justification": "Two linked ideas: sine law with a well-chosen parameter, then an elimination that is not a standard identity; options allow a check by a special triangle, which keeps it at 3. Harder than the cosine-rule ratio of 2021-P1-Q18 (L2), comparable to the triangle inequalities of 2021-P2-Q2 (L3).",
+ "nearest_anchor": "2021-P2-Q2 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Sine Law": "Sides are written as a = k cos 2theta, b = k cos theta, c = k sin theta with k = 2R.",
+  "Elimination of a parameter from trigonometric relations": "theta (and k) are eliminated from b^2 + c^2 = k^2 and b^2 - c^2 = k a."
+ },
+ "blueprint_concepts": [
+  "Sine Law",
+  "Elimination of a parameter from trigonometric relations"
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "type": "SCQ",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "Option A",
+ "english": [
+  "Let $A,B,C,D$ be points in a plane such that $C$ and $D$ lie on opposite sides of the line $AB$, $AB=21$, $BC=13$, $CA=20$, $AD=10$ and $\\angle CAD=\\dfrac{\\pi}{2}$. Then $\\tan\\angle CBD$ is equal to",
+  "",
+  "(A) $-\\dfrac{220}{21}$",
+  "(B) $\\dfrac{220}{21}$",
+  "(C) $-\\dfrac{21}{220}$",
+  "(D) $\\dfrac{21}{220}$"
+ ],
+ "hindi": [
+  "माना एक तल में बिन्दु $A,B,C,D$ इस प्रकार हैं कि $C$ तथा $D$ रेखा $AB$ के विपरीत पक्षों में स्थित हैं, $AB=21$, $BC=13$, $CA=20$, $AD=10$ तथा $\\angle CAD=\\dfrac{\\pi}{2}$ है। तब $\\tan\\angle CBD$ बराबर है",
+  "",
+  "(A) $-\\dfrac{220}{21}$",
+  "(B) $\\dfrac{220}{21}$",
+  "(C) $-\\dfrac{21}{220}$",
+  "(D) $\\dfrac{21}{220}$"
+ ],
+ "solution": [
+  "Triangle $ABC$: $\\cos\\angle CAB=\\dfrac{441+400-169}{2\\cdot21\\cdot20}=\\dfrac45$, so $\\sin\\angle CAB=\\dfrac35$",
+  "$C$, $D$ on opposite sides: $\\angle BAD=\\dfrac{\\pi}{2}-\\angle CAB\\Rightarrow\\cos\\angle BAD=\\dfrac35$",
+  "$BD^2=441+100-2\\cdot21\\cdot10\\cdot\\dfrac35=289\\Rightarrow BD=17$",
+  "$\\cos\\angle ABC=\\dfrac{441+169-400}{2\\cdot21\\cdot13}=\\dfrac{5}{13}\\Rightarrow\\tan\\angle ABC=\\dfrac{12}{5}$; $\\cos\\angle ABD=\\dfrac{441+289-100}{2\\cdot21\\cdot17}=\\dfrac{15}{17}\\Rightarrow\\tan\\angle ABD=\\dfrac{8}{15}$",
+  "$\\angle CBD=\\angle ABC+\\angle ABD$: $\\tan\\angle CBD=\\dfrac{\\frac{12}{5}+\\frac{8}{15}}{1-\\frac{12}{5}\\cdot\\frac{8}{15}}=\\dfrac{44/15}{-21/75}=-\\dfrac{220}{21}$",
+  "",
+  "Correct Option: (A)"
+ ],
+ "solution_full": [
+  "In triangle $ABC$, by the cosine rule, $\\cos\\angle CAB=\\dfrac{AB^2+AC^2-BC^2}{2\\cdot AB\\cdot AC}=\\dfrac{441+400-169}{840}=\\dfrac{672}{840}=\\dfrac45$, so $\\sin\\angle CAB=\\dfrac35$.",
+  "Since $C$ and $D$ lie on opposite sides of $AB$ and $\\angle CAD=\\dfrac{\\pi}{2}$, the ray $AB$ lies inside $\\angle CAD$ (as $\\angle CAB<\\dfrac{\\pi}{2}$), so $\\angle BAD=\\dfrac{\\pi}{2}-\\angle CAB$.",
+  "Compound angle: $\\cos\\angle BAD=\\cos\\left(\\dfrac{\\pi}{2}-\\angle CAB\\right)=\\sin\\angle CAB=\\dfrac35$.",
+  "Cosine rule in triangle $ABD$: $BD^2=21^2+10^2-2\\cdot21\\cdot10\\cdot\\dfrac35=541-252=289$, so $BD=17$.",
+  "Cosine rule at $B$: $\\cos\\angle ABC=\\dfrac{441+169-400}{2\\cdot21\\cdot13}=\\dfrac{210}{546}=\\dfrac5{13}$, so $\\sin\\angle ABC=\\dfrac{12}{13}$, $\\tan\\angle ABC=\\dfrac{12}{5}$.",
+  "$\\cos\\angle ABD=\\dfrac{441+289-100}{2\\cdot21\\cdot17}=\\dfrac{630}{714}=\\dfrac{15}{17}$, so $\\sin\\angle ABD=\\dfrac8{17}$, $\\tan\\angle ABD=\\dfrac8{15}$.",
+  "As $C$ and $D$ are on opposite sides of $AB$, $\\angle CBD=\\angle ABC+\\angle ABD$ (their sum is less than $\\pi$).",
+  "$\\tan\\angle CBD=\\dfrac{\\tan\\angle ABC+\\tan\\angle ABD}{1-\\tan\\angle ABC\\tan\\angle ABD}=\\dfrac{\\frac{36+8}{15}}{1-\\frac{96}{75}}=\\dfrac{44}{15}\\cdot\\left(-\\dfrac{75}{21}\\right)=-\\dfrac{220}{21}$.",
+  "The negative value means $\\angle CBD$ is obtuse; check: $CD^2=20^2+10^2=500$ and $13^2+17^2-2\\cdot13\\cdot17\\cos\\angle CBD=458+42=500$ with $\\cos\\angle CBD=-\\dfrac{21}{221}$.",
+  "",
+  "Correct Option: (A)"
+ ],
+ "originality_note": "New: a second triangle ABD attached across AB and fixed only by AD and a right angle CAD, so its third side BD must first be recovered through a complementary angle; then the angle CBD is the sum of two cosine-rule angles (way 5: cosine rule and compound angles). Closest known: 'find cos(A-B) from the sides' or 'two triangles on a common base'. Different because: D is not given by its distances, the complement step is needed to get BD, and the answer is the tangent of a sum, obtuse in this configuration.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Checked that D is unique (the other perpendicular direction puts D on the same side as C) and that angle CBD = angle ABC + angle ABD. Changed: No change.",
+ "level": 3,
+ "key_step": "Recovering BD through angle BAD = pi/2 - angle CAB, then tan of the sum of two cosine-rule angles with the obtuse sign.",
+ "justification": "A four-stage chain (cosine rule, complement, cosine rule, tan of a sum) with a sign trap; nothing is non-routine but the configuration must be read correctly. Above the single cosine-rule computation of 2021-P1-Q18 (L2), comparable to 2024-P1-Q3 (L3).",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Cosine rule": "Used for angle CAB, for BD in triangle ABD, and for angles ABC and ABD.",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "cos(pi/2 - CAB) = sin CAB gives angle BAD, and tan(ABC + ABD) gives tan CBD."
+ },
+ "blueprint_concepts": [
+  "Cosine rule",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)"
+ ]
+}

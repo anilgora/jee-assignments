@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Solution of triangle",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "english": [
+  "In a triangle $ABC$, let $a,b,c$ denote the lengths of the sides opposite to the angles $A,B,C$, respectively. The incircle of the triangle and the excircle opposite to the vertex $A$ touch the side $BC$ at the points $P$ and $Q$, respectively. If the inradius is $7$, the radius of the excircle opposite to $A$ is $12$ and $PQ=8$, then the area of the triangle $ABC$ is ______."
+ ],
+ "hindi": [
+  "एक त्रिभुज $ABC$ में माना $a,b,c$ क्रमशः कोणों $A,B,C$ की सम्मुख भुजाओं की लम्बाइयाँ हैं। त्रिभुज का अन्तःवृत्त तथा शीर्ष $A$ के सम्मुख बाह्यवृत्त भुजा $BC$ को क्रमशः बिन्दुओं $P$ तथा $Q$ पर स्पर्श करते हैं। यदि अन्तःत्रिज्या $7$ है, शीर्ष $A$ के सम्मुख बाह्यवृत्त की त्रिज्या $12$ है तथा $PQ=8$ है, तो त्रिभुज $ABC$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "Tangent lengths: $BP=s-b$, $BQ=s-c$, so $PQ=|b-c|=8$",
+  "$r\\,r_1=\\dfrac{\\Delta}{s}\\cdot\\dfrac{\\Delta}{s-a}=(s-b)(s-c)=84$ (Heron)",
+  "$\\{s-b,s-c\\}=\\{6,14\\}$ (difference $8$, product $84$) $\\Rightarrow a=(s-b)+(s-c)=20$",
+  "$\\dfrac{r_1}{r}=\\dfrac{s}{s-a}=\\dfrac{12}{7}\\Rightarrow7s=12s-240\\Rightarrow s=48$",
+  "$\\Delta=rs=7\\cdot48=336$ (sides $20,42,34$ or $20,34,42$)",
+  "",
+  "Final Answer: 336"
+ ],
+ "solution_full": [
+  "Let $x=s-b$ and $y=s-c$. The incircle touches $BC$ at $P$ with $BP=s-b=x$; the excircle opposite to $A$ touches $BC$ at $Q$ with $BQ=s-c=y$.",
+  "Hence $PQ=|x-y|=|c-b|=8$, and $a=BC=x+y$.",
+  "Inradius $r=\\dfrac{\\Delta}{s}$ and exradius $r_1=\\dfrac{\\Delta}{s-a}$, so $r\\,r_1=\\dfrac{\\Delta^2}{s(s-a)}=\\dfrac{s(s-a)(s-b)(s-c)}{s(s-a)}=xy$.",
+  "So $xy=7\\cdot12=84$ and $|x-y|=8$; then $(x+y)^2=(x-y)^2+4xy=64+336=400$, so $x+y=20$ and $\\{x,y\\}=\\{6,14\\}$.",
+  "Thus $a=20$.",
+  "Also $\\dfrac{r_1}{r}=\\dfrac{s}{s-a}=\\dfrac{12}{7}$, so $7s=12(s-20)$, giving $s=48$.",
+  "Area $\\Delta=rs=7\\cdot48=336$.",
+  "Check: $b=s-x$, $c=s-y$ are $42,34$ (in some order); Heron: $\\sqrt{48\\cdot28\\cdot6\\cdot14}=\\sqrt{112896}=336$, and $\\dfrac{336}{28}=12=r_1$.",
+  "",
+  "Final Answer: 336"
+ ],
+ "originality_note": "New: the two points where the incircle and the A-excircle touch BC are given by their distance, which equals |b - c|, and together with r r1 = (s-b)(s-c) this fixes s - b and s - c (way 5: excircle and incircle tangent lengths combined with the product of radii). Closest known: 'given r1, r2, r3 find the area' (1/r = sum 1/r_i, Delta^2 = r r1 r2 r3). Different because: only r and r1 are given, and the missing datum is a distance on BC that must be read as b - c.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Checked that the data give a real triangle (20, 42, 34) and that the order of b and c does not change the area. Changed: No change.",
+ "level": 2,
+ "key_step": "Reading PQ as |b - c| and using r r1 = (s-b)(s-c) to get s - b and s - c.",
+ "justification": "Routine chain of standard incircle/excircle results with one small link (PQ = |b - c|); numerical but no casework. Comparable to 2021-P1-Q18 (L2), below the inradius part 2023-P2-Q15 (L4).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Excenters and exradius": "BQ = s - c for the A-excircle and r1 = Delta/(s-a), giving r1/r = s/(s-a).",
+  "Inradius and incenter based questions": "BP = s - b for the incircle, r = Delta/s, and r r1 = (s-b)(s-c)."
+ },
+ "blueprint_concepts": [
+  "Excenters and exradius",
+  "Inradius and incenter based questions"
+ ]
+}

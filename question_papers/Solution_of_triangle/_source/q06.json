@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Solution of triangle",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "english": [
+  "In a triangle $ABC$, let $a,b,c$ denote the lengths of the sides opposite to the angles $A,B,C$, respectively. Suppose $c\\cos B=1$, $b\\cos C=3$ and $\\sin B=2\\sin C$. Then the value of $\\cos A$ is ______."
+ ],
+ "hindi": [
+  "एक त्रिभुज $ABC$ में माना $a,b,c$ क्रमशः कोणों $A,B,C$ की सम्मुख भुजाओं की लम्बाइयाँ हैं। माना $c\\cos B=1$, $b\\cos C=3$ तथा $\\sin B=2\\sin C$ है। तब $\\cos A$ का मान ______ है।"
+ ],
+ "solution": [
+  "Projection: $a=b\\cos C+c\\cos B=4$; sine law: $b=2c$",
+  "Projections $b=a\\cos C+c\\cos A$, $c=a\\cos B+b\\cos A$, multiplied by $b$ and $c$ and subtracted: $b^2-c^2=a(b\\cos C-c\\cos B)=4\\cdot2=8$",
+  "$4c^2-c^2=8\\Rightarrow c^2=\\dfrac83,\\ b^2=\\dfrac{32}{3},\\ bc=2c^2=\\dfrac{16}{3}$",
+  "$b^2=ab\\cos C+bc\\cos A\\Rightarrow\\dfrac{32}{3}=4\\cdot3+\\dfrac{16}{3}\\cos A\\Rightarrow\\cos A=-\\dfrac14$",
+  "",
+  "Final Answer: -0.25"
+ ],
+ "solution_full": [
+  "Projection formula on side $a$: $a=b\\cos C+c\\cos B=3+1=4$.",
+  "Sine law: $\\dfrac{b}{c}=\\dfrac{\\sin B}{\\sin C}=2$, so $b=2c$.",
+  "Projection formulae on sides $b$ and $c$: $b=a\\cos C+c\\cos A$ and $c=a\\cos B+b\\cos A$.",
+  "Multiply the first by $b$ and the second by $c$: $b^2=a\\,b\\cos C+bc\\cos A$ and $c^2=a\\,c\\cos B+bc\\cos A$.",
+  "Subtracting: $b^2-c^2=a(b\\cos C-c\\cos B)=4(3-1)=8$.",
+  "With $b=2c$: $3c^2=8$, so $c^2=\\dfrac83$, $b^2=\\dfrac{32}{3}$ and $bc=2c^2=\\dfrac{16}{3}$.",
+  "From $b^2=ab\\cos C+bc\\cos A$: $\\dfrac{32}{3}=4\\cdot3+\\dfrac{16}{3}\\cos A$, so $\\dfrac{16}{3}\\cos A=-\\dfrac43$ and $\\cos A=-\\dfrac14$.",
+  "Check: $a=4$, $b=\\dfrac{4\\sqrt6}{3}\\approx3.27$, $c=\\dfrac{2\\sqrt6}{3}\\approx1.63$ form a triangle, and $\\cos B=\\dfrac1c>0$, $\\cos C=\\dfrac3b<1$ are consistent; the cosine rule also gives $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{40/3-16}{32/3}=-\\dfrac14$.",
+  "So $\\cos A=-0.25$.",
+  "",
+  "Final Answer: -0.25"
+ ],
+ "originality_note": "New: the two projections of AB and AC on BC are given separately together with a sine ratio, so the projection formula is used three times (for a, for b^2 - c^2, and for cos A) (way 5: projection formula and sine law). Closest known: proving a(b cos C - c cos B) = b^2 - c^2. Different because: the identity is a step inside a computation that recovers the triangle, and A turns out obtuse.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Checked that a triangle with these data exists and is unique. Changed: No change.",
+ "level": 2,
+ "key_step": "Using projection formulae to get a and then b^2 - c^2 = a(b cos C - c cos B), with b = 2c from the sine law.",
+ "justification": "A routine multi-step chain of standard formulae with no insight; numerical format with a sign. Comparable to the cosine-rule ratio 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Projection formula": "a = b cos C + c cos B = 4; the projections on b and c give b^2 - c^2 = 8 and cos A.",
+  "Sine Law": "sin B = 2 sin C gives b = 2c."
+ },
+ "blueprint_concepts": [
+  "Projection formula",
+  "Sine Law"
+ ]
+}

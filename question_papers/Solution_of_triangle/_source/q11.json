@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "english": [
+  "Let $ABC$ be a triangle with the vertex $A=(-6,4)$, circumcentre $O=(0,1)$ and orthocentre $H=(-3,1)$. Let $D$ be the foot of the perpendicular from $A$ to the side $BC$. If $D=(\\alpha,\\beta)$, then the value of $\\alpha+\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना $ABC$ एक त्रिभुज है जिसका शीर्ष $A=(-6,4)$, परिकेन्द्र $O=(0,1)$ तथा लम्बकेन्द्र $H=(-3,1)$ है। माना $D$, $A$ से भुजा $BC$ पर डाले गए लम्ब का पाद है। यदि $D=(\\alpha,\\beta)$ है, तो $\\alpha+\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Centroid $G$ divides $OH$ in $1:2$: $G=\\dfrac{2O+H}{3}=(-1,1)$",
+  "$G$ divides the median $AM$ in $2:1$: $M=\\dfrac{3G-A}{2}=\\left(\\dfrac32,-\\dfrac12\\right)$, the midpoint of $BC$",
+  "$AH\\perp BC$ with $\\overrightarrow{AH}=(3,-3)$: $BC$ has slope $1$ through $M$: $y=x-2$",
+  "$D$ is on the altitude $AH$: $y=-x-2$; intersecting, $D=(0,-2)$",
+  "$\\alpha+\\beta=-2$",
+  "",
+  "Final Answer: -2"
+ ],
+ "solution_full": [
+  "On the Euler line, the centroid $G$ divides $OH$ internally in the ratio $1:2$, so $G=\\dfrac{2O+H}{3}=\\left(\\dfrac{0-3}{3},\\dfrac{2+1}{3}\\right)=(-1,1)$.",
+  "$G$ divides the median from $A$ in the ratio $2:1$, so the midpoint $M$ of $BC$ satisfies $G=\\dfrac{A+2M}{3}$: $M=\\dfrac{3G-A}{2}=\\left(\\dfrac{-3+6}{2},\\dfrac{3-4}{2}\\right)=\\left(\\dfrac32,-\\dfrac12\\right)$.",
+  "The altitude from $A$ passes through $H$, so $AH\\perp BC$. $\\overrightarrow{AH}=(3,-3)$ has slope $-1$, hence $BC$ has slope $1$; through $M$: $y+\\dfrac12=x-\\dfrac32$, i.e. $y=x-2$.",
+  "(Consistent with $OM\\perp BC$: $\\overrightarrow{OM}=\\left(\\dfrac32,-\\dfrac32\\right)$.)",
+  "The foot $D$ lies on line $AH$: $y-4=-(x+6)$, i.e. $y=-x-2$.",
+  "Intersection with $y=x-2$: $x=0$, $y=-2$, so $D=(0,-2)$, a vertex of the pedal triangle.",
+  "Check: $B,C$ are the points of $y=x-2$ at distance $OA=\\sqrt{45}$ from $O$: $(6,4)$ and $(-3,-5)$; then $A+B+C-2O=(-3,1)=H$, and the triangle is acute, so $D$ lies on the side $BC$.",
+  "Hence $\\alpha+\\beta=0+(-2)=-2$.",
+  "",
+  "Final Answer: -2"
+ ],
+ "originality_note": "New: the foot of an altitude (a vertex of the pedal triangle) is recovered from one vertex, the circumcentre and the orthocentre alone, through the centroid on the Euler line and the midpoint of BC, without finding B and C (way 5: four centres and pedal triangle). Closest known: 'given orthocentre, circumcentre and line BC, find vertex A'. Different because: the unknown is the foot D and the line BC itself has to be built from G and the direction of AH.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Checked that the data determine a real acute triangle B(6,4), C(-3,-5), so D lies on the side BC. Changed: No change.",
+ "level": 3,
+ "key_step": "Getting G from O and H, then the midpoint M of BC, then BC as the line through M perpendicular to AH.",
+ "justification": "Two linked ideas (Euler-line ratio, then building BC from M and the altitude direction) in a numerical answer; routine coordinate work otherwise. Comparable to 2021-P1-Q1 (L3), triangle from orthocentre data.",
+ "nearest_anchor": "2021-P1-Q1 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Orthocenter and Pedal triangle": "D is the foot of the altitude through A and H (a pedal-triangle vertex); AH is perpendicular to BC.",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle": "G = (2O + H)/3 on the Euler line and G divides the median AM in 2:1."
+ },
+ "blueprint_concepts": [
+  "Orthocenter and Pedal triangle",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle"
+ ]
+}

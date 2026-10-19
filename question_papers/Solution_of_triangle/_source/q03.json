@@ -1,0 +1,61 @@
+{
+ "type": "SCQ",
+ "chapter": "Solution of triangle",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "english": [
+  "In a triangle $ABC$, let $a,b,c$ denote the lengths of the sides opposite to the angles $A,B,C$, respectively. Suppose $\\dfrac{b-c}{b+c}=\\dfrac13$ and $\\tan\\dfrac{B}{2}\\tan\\dfrac{C}{2}=\\dfrac13$. Then $\\tan\\dfrac{B-C}{2}$ is equal to",
+  "",
+  "(A) $\\dfrac{\\sqrt{15}}{9}$",
+  "(B) $\\dfrac{\\sqrt{15}}{5}$",
+  "(C) $\\dfrac{\\sqrt{15}}{3}$",
+  "(D) $\\dfrac{3\\sqrt{15}}{5}$"
+ ],
+ "hindi": [
+  "एक त्रिभुज $ABC$ में माना $a,b,c$ क्रमशः कोणों $A,B,C$ की सम्मुख भुजाओं की लम्बाइयाँ हैं। माना $\\dfrac{b-c}{b+c}=\\dfrac13$ तथा $\\tan\\dfrac{B}{2}\\tan\\dfrac{C}{2}=\\dfrac13$ है। तब $\\tan\\dfrac{B-C}{2}$ बराबर है",
+  "",
+  "(A) $\\dfrac{\\sqrt{15}}{9}$",
+  "(B) $\\dfrac{\\sqrt{15}}{5}$",
+  "(C) $\\dfrac{\\sqrt{15}}{3}$",
+  "(D) $\\dfrac{3\\sqrt{15}}{5}$"
+ ],
+ "solution": [
+  "Let $x=\\tan\\dfrac B2,\\ y=\\tan\\dfrac C2,\\ z=\\tan\\dfrac A2$. Since $A+B+C=\\pi$: $xy+yz+zx=1\\Rightarrow z(x+y)=1-xy=\\dfrac23$",
+  "Tangent rule: $\\tan\\dfrac{B-C}{2}=\\dfrac{b-c}{b+c}\\cot\\dfrac A2\\Rightarrow\\dfrac{x-y}{1+xy}=\\dfrac{1}{3z}\\Rightarrow x-y=\\dfrac{4}{9z}$",
+  "With $x+y=\\dfrac{2}{3z}$: $x=\\dfrac{5}{9z},\\ y=\\dfrac{1}{9z}$; $xy=\\dfrac{5}{81z^2}=\\dfrac13\\Rightarrow z^2=\\dfrac{15}{81},\\ z=\\dfrac{\\sqrt{15}}{9}$",
+  "$\\tan\\dfrac{B-C}{2}=\\dfrac13\\cdot\\dfrac{9}{\\sqrt{15}}=\\dfrac{3}{\\sqrt{15}}=\\dfrac{\\sqrt{15}}{5}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "Write $x=\\tan\\dfrac B2$, $y=\\tan\\dfrac C2$, $z=\\tan\\dfrac A2$; all are positive since each half-angle lies in $\\left(0,\\dfrac{\\pi}{2}\\right)$.",
+  "Conditional identity: $A+B+C=\\pi$ gives $\\dfrac{B+C}{2}=\\dfrac{\\pi}{2}-\\dfrac A2$, so $\\tan\\dfrac{B+C}{2}=\\cot\\dfrac A2$, i.e. $\\dfrac{x+y}{1-xy}=\\dfrac1z$, equivalently $xy+yz+zx=1$.",
+  "With $xy=\\dfrac13$: $z(x+y)=\\dfrac23$, so $x+y=\\dfrac{2}{3z}$.",
+  "Tangent rule (Napier's analogy): $\\tan\\dfrac{B-C}{2}=\\dfrac{b-c}{b+c}\\cot\\dfrac A2=\\dfrac{1}{3z}$.",
+  "Also $\\tan\\dfrac{B-C}{2}=\\dfrac{x-y}{1+xy}=\\dfrac{3(x-y)}{4}$. Hence $x-y=\\dfrac{4}{9z}$ (positive, as $b>c$ gives $B>C$).",
+  "Solving: $x=\\dfrac12\\left(\\dfrac{2}{3z}+\\dfrac{4}{9z}\\right)=\\dfrac{5}{9z}$, $y=\\dfrac12\\left(\\dfrac{2}{3z}-\\dfrac{4}{9z}\\right)=\\dfrac{1}{9z}$.",
+  "Then $xy=\\dfrac{5}{81z^2}=\\dfrac13$, so $z^2=\\dfrac{15}{81}$ and $z=\\dfrac{\\sqrt{15}}{9}$.",
+  "Therefore $\\tan\\dfrac{B-C}{2}=\\dfrac{1}{3z}=\\dfrac{9}{3\\sqrt{15}}=\\dfrac{3}{\\sqrt{15}}=\\dfrac{\\sqrt{15}}{5}$.",
+  "Check: the data describe the triangle with $a:b:c=3:4:2$, for which $\\tan\\dfrac B2\\tan\\dfrac C2=\\dfrac{s-a}{s}=\\dfrac13$ and $\\dfrac{b-c}{b+c}=\\dfrac13$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: tan(B/2), tan(C/2) and tan(A/2) are recovered as unknowns from the product condition, the identity xy + yz + zx = 1 and Napier's analogy written in half-angle tangents, a small 3-unknown system (way 5: tangent rule and conditional identity). Closest known: direct Napier's analogy exercises with A given, and 'tan(B/2)tan(C/2) = (s-a)/s' exercises. Different because: angle A is not given and has to be found from the system before the tangent rule gives the answer.",
+ "web_check": "not found",
+ "stem_review": "Read as a student: every point, side, angle and symbol is introduced before use, all conditions are stated, each sentence has one reading; the answer was recomputed independently in Python (sympy), is unique and equals the Answer Plan. Stated which side is opposite which angle; checked that a triangle with these data exists (sides 3 : 4 : 2). Changed: No change.",
+ "level": 3,
+ "key_step": "Combining the half-angle identity xy + yz + zx = 1 with Napier's analogy to solve for tan(A/2).",
+ "justification": "Two standard results must be linked into a small system before either gives the answer; options exclude the slips (sqrt15/9 is tan(A/2) itself). Comparable to 2024-P1-Q3 (L3), above the one-formula ratio of 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "concept_use": {
+  "Tangent rule": "tan((B-C)/2) = ((b-c)/(b+c)) cot(A/2) gives x - y = 4/(9z) and the final value.",
+  "Conditional identities when A + B + C = pi": "xy + yz + zx = 1 for the half-angle tangents gives x + y = 2/(3z)."
+ },
+ "blueprint_concepts": [
+  "Tangent rule",
+  "Conditional identities when A + B + C = pi"
+ ]
+}
