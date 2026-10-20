@@ -1,0 +1,56 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Algebraic operations on a vector",
+  "Range of a.sin(x) + b.cos(x); maximum and minimum"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\overrightarrow{a}=2\\hat{i}+4\\hat{j}+4\\hat{k}$, $\\overrightarrow{b}=4\\hat{i}+2\\hat{j}-4\\hat{k}$ and $\\overrightarrow{c}=5\\hat{i}+2\\hat{j}$. For $\\theta\\in\\left[0,\\dfrac{\\pi}{2}\\right]$, let $\\overrightarrow{r}(\\theta)=\\overrightarrow{c}+(\\cos\\theta)\\,\\overrightarrow{a}+(\\sin\\theta)\\,\\overrightarrow{b}$. Let $M$ and $m$ denote the maximum value and the minimum value, respectively, of $\\left|\\overrightarrow{r}(\\theta)\\right|^2$ for $\\theta\\in\\left[0,\\dfrac{\\pi}{2}\\right]$. Then the value of $M+m$ is ______."
+ ],
+ "hindi": [
+  "माना $\\overrightarrow{a}=2\\hat{i}+4\\hat{j}+4\\hat{k}$, $\\overrightarrow{b}=4\\hat{i}+2\\hat{j}-4\\hat{k}$ तथा $\\overrightarrow{c}=5\\hat{i}+2\\hat{j}$ हैं। $\\theta\\in\\left[0,\\dfrac{\\pi}{2}\\right]$ के लिए माना $\\overrightarrow{r}(\\theta)=\\overrightarrow{c}+(\\cos\\theta)\\,\\overrightarrow{a}+(\\sin\\theta)\\,\\overrightarrow{b}$ है। माना $\\theta\\in\\left[0,\\dfrac{\\pi}{2}\\right]$ के लिए $\\left|\\overrightarrow{r}(\\theta)\\right|^2$ के अधिकतम तथा न्यूनतम मान क्रमशः $M$ तथा $m$ हैं। तब $M+m$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\overrightarrow{r}(\\theta)=(5+2\\cos\\theta+4\\sin\\theta)\\hat{i}+(2+4\\cos\\theta+2\\sin\\theta)\\hat{j}+(4\\cos\\theta-4\\sin\\theta)\\hat{k}$",
+  "Squaring and adding: the $\\cos^2\\theta$ and $\\sin^2\\theta$ terms give $36(\\cos^2\\theta+\\sin^2\\theta)=36$ and the $\\sin\\theta\\cos\\theta$ terms cancel ($16+16-32=0$)",
+  "$\\left|\\overrightarrow{r}\\right|^2=29+36+36\\cos\\theta+48\\sin\\theta=65+60\\cos(\\theta-\\varphi)$, where $\\cos\\varphi=\\dfrac35,\\ \\sin\\varphi=\\dfrac45$, $\\varphi\\in\\left(0,\\dfrac{\\pi}{2}\\right)$",
+  "$\\theta=\\varphi$ lies in the interval $\\Rightarrow M=125$",
+  "$\\theta-\\varphi\\in\\left[-\\varphi,\\dfrac{\\pi}{2}-\\varphi\\right]$; $\\varphi>\\dfrac{\\pi}{4}$, so the minimum is at $\\theta=0$: $m=65+36=101$ (at $\\theta=\\dfrac{\\pi}{2}$ the value is $113$)",
+  "$M+m=226$",
+  "",
+  "Final Answer: 226"
+ ],
+ "solution_full": [
+  "Collecting components, $\\overrightarrow{r}(\\theta)=x\\hat{i}+y\\hat{j}+z\\hat{k}$ with $x=5+2\\cos\\theta+4\\sin\\theta$, $y=2+4\\cos\\theta+2\\sin\\theta$, $z=4\\cos\\theta-4\\sin\\theta$.",
+  "$x^2=25+4\\cos^2\\theta+16\\sin^2\\theta+20\\cos\\theta+40\\sin\\theta+16\\sin\\theta\\cos\\theta$.",
+  "$y^2=4+16\\cos^2\\theta+4\\sin^2\\theta+16\\cos\\theta+8\\sin\\theta+16\\sin\\theta\\cos\\theta$.",
+  "$z^2=16\\cos^2\\theta+16\\sin^2\\theta-32\\sin\\theta\\cos\\theta$.",
+  "Adding: constants $29$; $\\cos^2\\theta$ and $\\sin^2\\theta$ both have coefficient $36$, giving $36$; the $\\sin\\theta\\cos\\theta$ terms cancel; linear terms $36\\cos\\theta+48\\sin\\theta$.",
+  "So $f(\\theta)=\\left|\\overrightarrow{r}(\\theta)\\right|^2=65+36\\cos\\theta+48\\sin\\theta$.",
+  "Since $\\sqrt{36^2+48^2}=60$, $36\\cos\\theta+48\\sin\\theta=60\\cos(\\theta-\\varphi)$ with $\\cos\\varphi=\\dfrac35$, $\\sin\\varphi=\\dfrac45$, so $\\varphi=\\tan^{-1}\\dfrac43\\in\\left(\\dfrac{\\pi}{4},\\dfrac{\\pi}{2}\\right)$.",
+  "The overall range of $a\\cos\\theta+b\\sin\\theta$ is $\\left[-\\sqrt{a^2+b^2},\\sqrt{a^2+b^2}\\right]$, but here $\\theta$ is restricted, so the attained values must be checked.",
+  "Maximum: $\\theta=\\varphi\\in\\left[0,\\dfrac{\\pi}{2}\\right]$ is allowed, so $M=65+60=125$.",
+  "Minimum: on $\\left[0,\\dfrac{\\pi}{2}\\right]$, $\\theta-\\varphi$ runs over $\\left[-\\varphi,\\dfrac{\\pi}{2}-\\varphi\\right]$, which contains $0$ and has no point where cosine reaches $-1$; $\\cos(\\theta-\\varphi)$ decreases as $|\\theta-\\varphi|$ grows, so the minimum is at the end farther from $\\varphi$.",
+  "$f(0)=65+36=101$ and $f\\left(\\dfrac{\\pi}{2}\\right)=65+48=113$, so $m=101$.",
+  "Therefore $M+m=125+101=226$.",
+  "",
+  "Final Answer: 226"
+ ],
+ "originality_note": "New: a vector curve c + (cos t) a + (sin t) b in which a and b are hidden perpendicular vectors of equal length, so |r|^2 collapses to 65 + 36 cos t + 48 sin t; the restriction t in [0, pi/2] then makes the minimum an end-point value (way 4, hidden invariant). Closest known: 'maximum of a cos t + b sin t + c' as a plain trigonometric exercise. Different because: the expression must be built from vector components and the cancellation of cos^2, sin^2 and sin cos terms is the key, followed by an end-point check.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Algebraic operations on a vector": "Scalar multiples and the sum c + (cos t) a + (sin t) b give the components of r(t), whose squares are added to get |r|^2 = 65 + 36 cos t + 48 sin t.",
+  "Range of a.sin(x) + b.cos(x); maximum and minimum": "36 cos t + 48 sin t = 60 cos(t - phi) gives the maximum 125 at t = phi and, on the restricted interval, the minimum 101 at an end point."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Stated the interval for theta twice (in the definition and for M, m) so the extremes are taken on [0, pi/2] only; M and m defined with 'respectively'. Changed: added the interval to the definition of M and m.",
+ "level": 3,
+ "key_step": "Cancellation in |r|^2 to 65 + 36 cos t + 48 sin t, then the restricted-interval extremes (interior maximum, end-point minimum).",
+ "justification": "Two ideas linked: a vector expansion whose cross terms cancel, and the range of a cos + b sin on a restricted interval where the minimum is an end point (a typical trap of using 65 - 60). Numerical with no options; comparable to 2024-P1-Q3 (L3) in demand.",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium"
+}

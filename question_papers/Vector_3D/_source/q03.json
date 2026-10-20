@@ -1,0 +1,57 @@
+{
+ "english": [
+  "Let $\\Pi_1$ and $\\Pi_2$ be the planes $x+2y+2z=12$ and $2x-2y+z+6=0$, respectively. Let $B$ be the image of the point $A(1,0,1)$ in the plane $\\Pi_1$, and let $C$ be the image of the point $B$ in the plane $\\Pi_2$. Then $C$ is the point",
+  "",
+  "(A) $(3,4,5)$",
+  "(B) $(-1,8,3)$",
+  "(C) $(1,-8,-3)$",
+  "(D) $(-3,4,-1)$"
+ ],
+ "hindi": [
+  "माना $\\Pi_1$ तथा $\\Pi_2$ क्रमशः समतल $x+2y+2z=12$ तथा $2x-2y+z+6=0$ हैं। माना समतल $\\Pi_1$ में बिन्दु $A(1,0,1)$ का प्रतिबिम्ब $B$ है, तथा समतल $\\Pi_2$ में बिन्दु $B$ का प्रतिबिम्ब $C$ है। तब $C$ बिन्दु है",
+  "",
+  "(A) $(3,4,5)$",
+  "(B) $(-1,8,3)$",
+  "(C) $(1,-8,-3)$",
+  "(D) $(-3,4,-1)$"
+ ],
+ "solution": [
+  "Image of $(x_1,y_1,z_1)$ in $ax+by+cz+d=0$: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=\\dfrac{-2(ax_1+by_1+cz_1+d)}{a^2+b^2+c^2}$",
+  "In $\\Pi_1$: $\\dfrac{-2(1+0+2-12)}{9}=2\\Rightarrow B=(1,0,1)+2(1,2,2)=(3,4,5)$",
+  "In $\\Pi_2$: $\\dfrac{-2(6-8+5+6)}{9}=-2\\Rightarrow C=(3,4,5)-2(2,-2,1)=(-1,8,3)$",
+  "Check: $\\Pi_1\\perp\\Pi_2$ ($2-4+2=0$), so $C$ is the image of $A$ in the line $\\Pi_1\\cap\\Pi_2$; the midpoint $(0,4,2)$ of $AC$ lies on both planes",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "For the plane $ax+by+cz+d=0$, the image $(x,y,z)$ of $(x_1,y_1,z_1)$ lies on the normal through the point, at the same distance on the other side: $\\dfrac{x-x_1}{a}=\\dfrac{y-y_1}{b}=\\dfrac{z-z_1}{c}=\\dfrac{-2(ax_1+by_1+cz_1+d)}{a^2+b^2+c^2}$.",
+  "Image of $A(1,0,1)$ in $\\Pi_1: x+2y+2z-12=0$: $ax_1+by_1+cz_1+d=1+0+2-12=-9$, $a^2+b^2+c^2=9$, ratio $=\\dfrac{18}{9}=2$.",
+  "So $B=(1+2\\cdot1,\\ 0+2\\cdot2,\\ 1+2\\cdot2)=(3,4,5)$. Check: the midpoint $(2,2,3)$ satisfies $2+4+6=12$.",
+  "Image of $B(3,4,5)$ in $\\Pi_2: 2x-2y+z+6=0$: $6-8+5+6=9$, $a^2+b^2+c^2=9$, ratio $=-2$.",
+  "So $C=(3-2\\cdot2,\\ 4-2(-2),\\ 5-2\\cdot1)=(-1,8,3)$. Check: the midpoint $(1,6,4)$ satisfies $2-12+4+6=0$.",
+  "Further check: the normals satisfy $(1,2,2)\\cdot(2,-2,1)=0$, so the planes are perpendicular and the two reflections together are a half-turn about their line of intersection. The midpoint of $AC$ is $(0,4,2)$, which lies on $\\Pi_1$ ($0+8+4=12$) and on $\\Pi_2$ ($0-8+2+6=0$), as it must.",
+  "Options (A) and (D) are the single images of $A$ in $\\Pi_1$ and in $\\Pi_2$; (C) has a sign error.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: a double reflection in two perpendicular planes (way 4: a composite map with a hidden half-turn about their common line). Closest known: the image of a point in one plane. Different because: two images are chained, and the result can be checked through the line of intersection.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Concept of image in three dimensional geometry": "B is the image of A in Pi_1 and C is the image of B in Pi_2, each found with the image formula."
+ },
+ "stem_review": "Read as a student: every point, line and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and numpy, is unique and equals the Answer Plan; the options have one form and exactly one is correct. The order of the two reflections is stated (A in Pi_1, then B in Pi_2). Changed: No change.",
+ "level": 2,
+ "key_step": "Applying the image formula twice without a sign slip.",
+ "justification": "Two applications of a standard formula with a check: routine multi-step, no insight. Above the one-step planes item 2024-P2-Q6 (L1), at the level of the routine 3D chain 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "type": "SCQ",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Concept of image in three dimensional geometry"
+ ],
+ "eq_relation": false
+}

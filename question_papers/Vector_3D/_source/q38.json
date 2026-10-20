@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Family of planes",
+  "Concept of image in three dimensional geometry"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "For each real number $\\lambda$, let $\\Pi_\\lambda$ be the plane $(4x-3z-7)+\\lambda(4x+y-3z-9)=0$, and let $A_\\lambda$ denote the image of the point $A(2,2,-2)$ in the plane $\\Pi_\\lambda$. Then the maximum value of the distance between $A_\\lambda$ and $A_\\mu$, as $\\lambda$ and $\\mu$ vary over $\\mathbb{R}$, is ______."
+ ],
+ "hindi": [
+  "प्रत्येक वास्तविक संख्या $\\lambda$ के लिए, माना कि $\\Pi_\\lambda$ तल $(4x-3z-7)+\\lambda(4x+y-3z-9)=0$ है, तथा $A_\\lambda$ तल $\\Pi_\\lambda$ में बिन्दु $A(2,2,-2)$ का प्रतिबिम्ब है। जब $\\lambda$ तथा $\\mu$ सभी वास्तविक मानों पर परिवर्तित होते हैं, तब $A_\\lambda$ तथा $A_\\mu$ के बीच की दूरी का अधिकतम मान ______ है।"
+ ],
+ "solution": [
+  "Every $\\Pi_\\lambda$ contains the line $L$: $4x-3z=7$, $4x+y-3z=9$, through $P_0(1,2,-1)$ with direction $(4,0,-3)\\times(4,1,-3)=(3,0,4)$",
+  "Reflection in $\\Pi_\\lambda$ fixes every point of $L$, so $A_\\lambda$ is as far from each point of $L$ as $A$ is. Hence all $A_\\lambda$ lie on the circle in the plane through $A$ perpendicular to $L$, with centre the foot $N$ of $A$ on $L$ and radius $r=AN$",
+  "Each point of that circle is the image of $A$ in exactly one plane through $L$; only the image in $4x+y-3z=9$ is missing, so a full diameter is attained",
+  "$\\overrightarrow{P_0A}=(1,0,-1)$, component along $L$: $\\dfrac{3-4}{5}=-\\dfrac15$, so $r^2=2-\\dfrac1{25}=\\dfrac{49}{25}$, $r=\\dfrac75$",
+  "Maximum distance $=2r=2.8$",
+  "",
+  "Final Answer: 2.8"
+ ],
+ "solution_full": [
+  "$\\Pi_\\lambda$ is the family of planes through the line $L$ of intersection of $4x-3z-7=0$ and $4x+y-3z-9=0$; every member contains $L$, and the members are all planes through $L$ except $4x+y-3z=9$ itself.",
+  "Direction of $L$: $(4,0,-3)\\times(4,1,-3)=(0\\cdot(-3)-(-3)\\cdot1,\\ (-3)\\cdot4-4\\cdot(-3),\\ 4\\cdot1-0\\cdot4)=(3,0,4)$. The point $P_0(1,2,-1)$ satisfies $4+3=7$ and $4+2+3=9$, so it lies on $L$.",
+  "Reflection in a plane preserves distances and fixes every point of the plane, in particular every point of $L$. So for every point $X$ of $L$, $XA_\\lambda=XA$.",
+  "Let $N$ be the foot of the perpendicular from $A$ to $L$ and $r=AN$. Then $A_\\lambda$ is at distance $r$ from $N$, and $A_\\lambda$ lies in the plane through $A$ perpendicular to $L$ (the segment $AA_\\lambda$ is perpendicular to $\\Pi_\\lambda$, hence to $L$, and its midpoint lies in $\\Pi_\\lambda$). So every $A_\\lambda$ lies on the circle with centre $N$ and radius $r$ in that perpendicular plane.",
+  "Conversely, for a point $Y\\neq A$ of this circle, the perpendicular bisector plane of $AY$ contains $N$ and the direction of $L$, so it is a plane through $L$ in which $Y$ is the image of $A$. Therefore the images fill the whole circle except the single point that is the image of $A$ in $4x+y-3z=9$.",
+  "Two images are at most a diameter $2r$ apart, and a diameter not using the missing point is attained by two members of the family. So the maximum distance is $2r$.",
+  "$\\overrightarrow{P_0A}=(2-1,\\ 2-2,\\ -2+1)=(1,0,-1)$, $|\\overrightarrow{P_0A}|^2=2$; its component along $L$ is $\\dfrac{(1,0,-1)\\cdot(3,0,4)}{5}=-\\dfrac15$.",
+  "$r^2=2-\\dfrac{1}{25}=\\dfrac{49}{25}$, so $r=\\dfrac75=1.4$ and $2r=2.8$.",
+  "",
+  "Final Answer: 2.8"
+ ],
+ "originality_note": "New: the images of one point in all members of a family of planes through a line lie on a circle centred on the line (reflections fix the line pointwise), so the greatest distance between two images is a diameter (way 4, hidden invariant). Closest known: in two dimensions, the locus of the image of a point in a pencil of lines is a circle (a published JEE problem); in three dimensions, the image of a point in one given plane. Different because: the three-dimensional family of planes and the attainment argument for the diameter are new; the 2D analogue is only an ingredient.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Family of planes": "The planes Pi_lambda form the family through the line of intersection of 4x - 3z = 7 and 4x + y - 3z = 9; the line, its direction and the missing member are read from the family.",
+  "Concept of image in three dimensional geometry": "Image of A in each plane of the family; reflection fixes the line, so the images lie on a circle of radius dist(A, L)."
+ },
+ "stem_review": "Read as a student: every point, line, plane, vector and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy, is unique and equals the Answer Plan. Checked that the maximum is attained (only one point of the circle is not an image) so the word maximum is correct, and confirmed 2.8 by sampling 122 members of the family. Changed: no change.",
+ "level": 3,
+ "key_step": "Recognising that the images lie on a circle of radius dist(A, L) centred on L, so the answer is 2 dist(A, L).",
+ "justification": "The direct route (image as a function of lambda, then maximise a distance between two images) is heavy; the intended route needs the invariant that reflection in a plane through L preserves distances to L. One non-obvious link plus a point-line distance, numerical format. Comparable to the planes-containing-a-line optimisation of 2023-P1-Q16 (L3).",
+ "nearest_anchor": "2023-P1-Q16 (L3)",
+ "confidence": "Medium"
+}

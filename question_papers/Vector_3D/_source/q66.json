@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "english": [
+  "Let $S$ be the sphere $x^{2}+y^{2}+z^{2}-4x+2y-6z-86=0$ and let $\\Pi$ be the plane $x+2y+2z+12=0$. The plane $\\Pi$ cuts $S$ in a circle $\\Gamma$. The line of intersection of $\\Pi$ with the plane $2x+y-2z=15$ meets $\\Gamma$ at the points $P$ and $Q$. Let $R$ be any point of the larger of the two arcs of $\\Gamma$ determined by $P$ and $Q$. Then the value of $\\cos\\angle PRQ$ is ______."
+ ],
+ "hindi": [
+  "माना कि $S$ गोला $x^{2}+y^{2}+z^{2}-4x+2y-6z-86=0$ है तथा $\\Pi$ तल $x+2y+2z+12=0$ है। तल $\\Pi$ गोले $S$ को एक वृत्त $\\Gamma$ में काटता है। तल $\\Pi$ तथा तल $2x+y-2z=15$ की प्रतिच्छेदन रेखा $\\Gamma$ से बिन्दुओं $P$ तथा $Q$ पर मिलती है। माना कि $R$, $P$ तथा $Q$ द्वारा निर्धारित $\\Gamma$ के दो चापों में से बड़े चाप का कोई बिन्दु है। तब $\\cos\\angle PRQ$ का मान ______ है।"
+ ],
+ "solution": [
+  "$S$: centre $C(2,-1,3)$, $R_0^2=4+1+9+86=100$; distance of $C$ from $\\Pi$: $\\dfrac{|2-2+6+12|}{3}=6$, so $\\Gamma$ has radius $\\sqrt{100-36}=8$",
+  "Centre of $\\Gamma$: $F=C-\\dfrac{18}{9}(1,2,2)=(0,-5,-1)$",
+  "Normals $(1,2,2)\\cdot(2,1,-2)=0$, so the second plane $\\Sigma$ is perpendicular to $\\Pi$; hence the distance of $F$ from the chord $PQ$ equals its distance from $\\Sigma$: $\\dfrac{|0-5+2-15|}{3}=6$",
+  "Perpendicular from the centre bisects $PQ$: half the central angle $\\alpha=\\frac12\\angle PFQ$ has $\\cos\\alpha=\\dfrac68=\\dfrac34$",
+  "Inscribed angle on the major arc $=\\frac12\\angle PFQ=\\alpha$, so $\\cos\\angle PRQ=\\dfrac34=0.75$",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "solution_full": [
+  "$S$: $(x-2)^2+(y+1)^2+(z-3)^2=4+1+9+86=100$, so the centre is $C(2,-1,3)$ and the radius is $10$.",
+  "Distance of $C$ from $\\Pi$: $\\dfrac{|2-2+6+12|}{\\sqrt{1+4+4}}=\\dfrac{18}{3}=6<10$, so $\\Gamma$ is a real circle of radius $\\sqrt{100-36}=8$.",
+  "Its centre is the foot of the perpendicular from $C$: $F=C-\\dfrac{18}{9}(1,2,2)=(0,-5,-1)$; check $0-10-2+12=0$.",
+  "Let $\\Sigma$ be the plane $2x+y-2z=15$. Since $(1,2,2)\\cdot(2,1,-2)=2+2-4=0$, $\\Sigma\\perp\\Pi$. For a point $F$ of $\\Pi$, the perpendicular from $F$ to $\\Sigma$ then lies in $\\Pi$ and meets $\\Sigma$ on the line $\\ell=\\Pi\\cap\\Sigma$, so the distance of $F$ from $\\ell$ equals its distance from $\\Sigma$: $h=\\dfrac{|0-5+2-15|}{3}=\\dfrac{18}{3}=6$.",
+  "$h=6<8$, so $\\ell$ cuts $\\Gamma$ at two points $P$, $Q$. The perpendicular $FM$ from the centre to the chord bisects it, and in the right triangle $FMP$, $FM=6$, $FP=8$, so $\\angle PFM=\\alpha$ with $\\cos\\alpha=\\dfrac{6}{8}=\\dfrac34$ and $\\angle PFQ=2\\alpha$.",
+  "$\\alpha<\\frac{\\pi}{2}$, so $\\angle PFQ<\\pi$ and the larger arc lies on the same side of $PQ$ as $F$. The angle subtended by a chord at a point of the major arc is half the angle at the centre, so $\\angle PRQ=\\alpha$ for every such $R$.",
+  "Hence $\\cos\\angle PRQ=\\cos\\alpha=\\dfrac34=0.75$.",
+  "",
+  "Final Answer: 0.75"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: a chord of a sphere's section circle is cut out by a second plane perpendicular to the section plane; the distance of the circle's centre from the chord comes from a point-plane distance, and the inscribed-angle theorem turns it into the angle at the circumference (way 5). Closest known: angle subtended by a chord at a point of the major arc of a given circle. Different because: the circle and the chord exist only as intersections in space, and the perpendicularity of the two planes is what makes the chord distance a plane distance.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Sphere in three dimensions",
+  "Basic geometry about circle"
+ ],
+ "concept_use": {
+  "Sphere in three dimensions": "Centre and radius of S, distance of the centre from Pi, foot of the perpendicular as the centre of the section circle, radius 8 = sqrt(100 - 36).",
+  "Basic geometry about circle": "The perpendicular from the centre bisects the chord (cos alpha = 6/8) and the angle at the circumference on the major arc is half the angle at the centre."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Specified the larger arc so the angle PRQ is the same for every R and acute; checked that the line meets the circle in two points (6 < 8). Changed: replaced the earlier tangents-from-a-point design, which clashed with Q12.",
+ "level": 2,
+ "key_step": "Finding the section circle (centre (0, -5, -1), radius 8) and the distance 6 of its centre from the chord, then the inscribed-angle theorem.",
+ "justification": "Routine chain: sphere centre and radius, two point-plane distances, a perpendicular-plane observation and an inscribed-angle fact; no insight beyond noticing the planes are perpendicular. Like the conic-tangent chain of 2026-P2-Q17 (L2).",
+ "nearest_anchor": "2026-P2-Q17 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

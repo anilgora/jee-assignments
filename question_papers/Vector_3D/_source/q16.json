@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Algebraic operations on a vector"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\overrightarrow{a}_0$, $\\overrightarrow{b}_0$, $\\overrightarrow{c}_0$ be three non-coplanar vectors. For every integer $n\\ge 0$, define $\\overrightarrow{a}_{n+1}=\\dfrac{\\overrightarrow{b}_n+\\overrightarrow{c}_n}{2}$, $\\overrightarrow{b}_{n+1}=\\dfrac{\\overrightarrow{c}_n+\\overrightarrow{a}_n}{2}$ and $\\overrightarrow{c}_{n+1}=\\dfrac{\\overrightarrow{a}_n+\\overrightarrow{b}_n}{2}$. If $\\overrightarrow{c}_3=\\lambda\\overrightarrow{a}_0+\\mu\\overrightarrow{b}_0+\\nu\\overrightarrow{c}_0$, where $\\lambda$, $\\mu$, $\\nu$ are real numbers, then the value of $\\nu$ is ______."
+ ],
+ "hindi": [
+  "माना $\\overrightarrow{a}_0$, $\\overrightarrow{b}_0$, $\\overrightarrow{c}_0$ तीन असमतलीय सदिश हैं। प्रत्येक पूर्णांक $n\\ge 0$ के लिए $\\overrightarrow{a}_{n+1}=\\dfrac{\\overrightarrow{b}_n+\\overrightarrow{c}_n}{2}$, $\\overrightarrow{b}_{n+1}=\\dfrac{\\overrightarrow{c}_n+\\overrightarrow{a}_n}{2}$ तथा $\\overrightarrow{c}_{n+1}=\\dfrac{\\overrightarrow{a}_n+\\overrightarrow{b}_n}{2}$ परिभाषित कीजिए। यदि $\\overrightarrow{c}_3=\\lambda\\overrightarrow{a}_0+\\mu\\overrightarrow{b}_0+\\nu\\overrightarrow{c}_0$ है, जहाँ $\\lambda$, $\\mu$, $\\nu$ वास्तविक संख्याएँ हैं, तो $\\nu$ का मान ______ है।"
+ ],
+ "solution": [
+  "Adding the three relations: $\\overrightarrow{S}=\\overrightarrow{a}_n+\\overrightarrow{b}_n+\\overrightarrow{c}_n$ is the same for every $n$",
+  "$\\overrightarrow{c}_{n+1}=\\dfrac{\\overrightarrow{S}-\\overrightarrow{c}_n}{2}\\Rightarrow\\overrightarrow{c}_{n+1}-\\dfrac{\\overrightarrow{S}}{3}=-\\dfrac12\\left(\\overrightarrow{c}_n-\\dfrac{\\overrightarrow{S}}{3}\\right)$",
+  "$\\overrightarrow{c}_3=\\dfrac{\\overrightarrow{S}}{3}-\\dfrac18\\left(\\overrightarrow{c}_0-\\dfrac{\\overrightarrow{S}}{3}\\right)=\\dfrac38\\overrightarrow{S}-\\dfrac18\\overrightarrow{c}_0=\\dfrac38\\overrightarrow{a}_0+\\dfrac38\\overrightarrow{b}_0+\\dfrac14\\overrightarrow{c}_0$",
+  "$\\overrightarrow{a}_0,\\overrightarrow{b}_0,\\overrightarrow{c}_0$ non-coplanar, so the coefficients are unique: $\\nu=\\dfrac14=0.25$",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "solution_full": [
+  "Adding the three defining relations gives $\\overrightarrow{a}_{n+1}+\\overrightarrow{b}_{n+1}+\\overrightarrow{c}_{n+1}=\\overrightarrow{a}_n+\\overrightarrow{b}_n+\\overrightarrow{c}_n$, so $\\overrightarrow{S}=\\overrightarrow{a}_0+\\overrightarrow{b}_0+\\overrightarrow{c}_0$ equals $\\overrightarrow{a}_n+\\overrightarrow{b}_n+\\overrightarrow{c}_n$ for every $n$.",
+  "Hence $\\overrightarrow{c}_{n+1}=\\dfrac{\\overrightarrow{a}_n+\\overrightarrow{b}_n}{2}=\\dfrac{\\overrightarrow{S}-\\overrightarrow{c}_n}{2}$.",
+  "Subtracting $\\dfrac{\\overrightarrow{S}}{3}$ from both sides: $\\overrightarrow{c}_{n+1}-\\dfrac{\\overrightarrow{S}}{3}=\\dfrac{\\overrightarrow{S}}{6}-\\dfrac{\\overrightarrow{c}_n}{2}=-\\dfrac12\\left(\\overrightarrow{c}_n-\\dfrac{\\overrightarrow{S}}{3}\\right)$.",
+  "Applying this three times: $\\overrightarrow{c}_3-\\dfrac{\\overrightarrow{S}}{3}=\\left(-\\dfrac12\\right)^3\\left(\\overrightarrow{c}_0-\\dfrac{\\overrightarrow{S}}{3}\\right)=-\\dfrac18\\overrightarrow{c}_0+\\dfrac{1}{24}\\overrightarrow{S}$.",
+  "So $\\overrightarrow{c}_3=\\dfrac{\\overrightarrow{S}}{3}+\\dfrac{\\overrightarrow{S}}{24}-\\dfrac{\\overrightarrow{c}_0}{8}=\\dfrac{3}{8}\\overrightarrow{S}-\\dfrac{1}{8}\\overrightarrow{c}_0=\\dfrac38\\overrightarrow{a}_0+\\dfrac38\\overrightarrow{b}_0+\\dfrac14\\overrightarrow{c}_0$.",
+  "Direct check: $\\overrightarrow{a}_2=\\dfrac{\\overrightarrow{b}_1+\\overrightarrow{c}_1}{2}=\\dfrac{2\\overrightarrow{a}_0+\\overrightarrow{b}_0+\\overrightarrow{c}_0}{4}$, $\\overrightarrow{b}_2=\\dfrac{\\overrightarrow{a}_0+2\\overrightarrow{b}_0+\\overrightarrow{c}_0}{4}$, and $\\overrightarrow{c}_3=\\dfrac{\\overrightarrow{a}_2+\\overrightarrow{b}_2}{2}=\\dfrac{3\\overrightarrow{a}_0+3\\overrightarrow{b}_0+2\\overrightarrow{c}_0}{8}$.",
+  "Because $\\overrightarrow{a}_0,\\overrightarrow{b}_0,\\overrightarrow{c}_0$ are non-coplanar, every vector has a unique expression as their linear combination, so $\\lambda=\\mu=\\dfrac38$ and $\\nu=\\dfrac14$.",
+  "",
+  "Final Answer: 0.25"
+ ],
+ "originality_note": "New: a simultaneous averaging map on three vectors iterated three times; the invariant sum S and the factor -1/2 on c_n - S/3 make the coefficients clean (way 1, iteration with an invariant). Closest known: 'express a vector in terms of three non-coplanar vectors' and the medial-triangle iteration for points. Different because: the recursion acts on free vectors and the coefficient of c_0 must be tracked through the invariant or three rounds of averaging.",
+ "web_check": "not found",
+ "concept_use": {
+  "Algebraic operations on a vector": "Vector addition and scalar multiplication give the invariant sum S and the relation c_{n+1} - S/3 = -(c_n - S/3)/2; unique coefficients because a_0, b_0, c_0 are non-coplanar."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Stated that the recursion holds for every integer n >= 0 and that lambda, mu, nu are real; non-coplanarity makes the coefficients unique so nu is well defined. Changed: No change.",
+ "level": 2,
+ "key_step": "Noticing the invariant sum (or iterating three times) and comparing coefficients using non-coplanarity.",
+ "justification": "Three rounds of routine vector averaging (or one invariant), then uniqueness of coefficients from non-coplanarity: multi-step but with no insight, so Level 2, like the routine vector chain of 2026-P2-Q1 (L2) and above the one-step basis expression of 2024-P2-Q11 (L0).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "Medium"
+}

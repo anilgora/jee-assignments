@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Line and a plane",
+  "Concept of image in three dimensional geometry"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\Pi$ be the plane $2x-y+2z=d$, where $d$ is a real number, such that the image of the point $A(1,2,3)$ in $\\Pi$ lies on the line $L:\\ x+2=y-5=z$. Let $Q$ be the point of intersection of $L$ and $\\Pi$. Then the value of $(AQ)^2$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\Pi$ तल $2x-y+2z=d$ है, जहाँ $d$ एक वास्तविक संख्या है, इस प्रकार कि तल $\\Pi$ में बिन्दु $A(1,2,3)$ का प्रतिबिम्ब रेखा $L:\\ x+2=y-5=z$ पर स्थित है। माना कि $Q$, रेखा $L$ तथा तल $\\Pi$ का प्रतिच्छेदन बिन्दु है। तब $(AQ)^2$ का मान ______ है।"
+ ],
+ "solution": [
+  "Image of $A$ in $\\Pi$: $A'=(1+2s,\\ 2-s,\\ 3+2s)$ with $s=-\\dfrac{2(6-d)}{9}$ (since $2-2+6=6$)",
+  "$A'\\in L$: $x+2=3+2s$, $y-5=-3-s$, $z=3+2s$; equal $\\Rightarrow 3+2s=-3-s\\Rightarrow s=-2$, $A'=(-3,4,-1)$",
+  "$-\\dfrac{2(6-d)}{9}=-2\\Rightarrow d=-3$",
+  "Point of $L$: $(t-2,\\ t+5,\\ t)$; on $\\Pi$: $2(t-2)-(t+5)+2t=-3\\Rightarrow 3t-9=-3\\Rightarrow t=2$, $Q=(0,7,2)$",
+  "$(AQ)^2=1+25+1=27$",
+  "",
+  "Final Answer: 27"
+ ],
+ "solution_full": [
+  "The image $A'$ of $A$ in the plane $2x-y+2z=d$ is given by $\\dfrac{x-1}{2}=\\dfrac{y-2}{-1}=\\dfrac{z-3}{2}=-\\dfrac{2(2\\cdot1-2+2\\cdot3-d)}{4+1+4}=-\\dfrac{2(6-d)}{9}=s$, say.",
+  "So $A'=(1+2s,\\ 2-s,\\ 3+2s)$.",
+  "$L$ is $x+2=y-5=z$. For $A'$: $x+2=3+2s$, $y-5=-3-s$, $z=3+2s$.",
+  "The first and third are always equal; equating the first two: $3+2s=-3-s\\Rightarrow 3s=-6\\Rightarrow s=-2$. Then $A'=(-3,4,-1)$, and indeed $-3+2=4-5=-1$.",
+  "From $s=-\\dfrac{2(6-d)}{9}=-2$: $6-d=9\\Rightarrow d=-3$, so $\\Pi:\\ 2x-y+2z=-3$. (Check: the midpoint of $AA'$ is $(-1,3,1)$ and $-2-3+2=-3$.)",
+  "A general point of $L$ is $(t-2,\\ t+5,\\ t)$. It lies on $\\Pi$ when $2(t-2)-(t+5)+2t=-3$, i.e. $3t-9=-3$, so $t=2$ and $Q=(0,7,2)$. ($L$ is not parallel to $\\Pi$, since $(1,1,1)\\cdot(2,-1,2)=3\\neq0$.)",
+  "$\\overrightarrow{AQ}=(-1,5,-1)$, so $(AQ)^2=1+25+1=27$.",
+  "",
+  "Final Answer: 27"
+ ],
+ "originality_note": "New: the plane is not given; it is fixed only by the requirement that the image of a point lies on a given line (the image moves along the normal through A as d varies, and the line picks one position), after which the same line is cut by the plane (way 5). Closest known: image of a point in a given plane; point of intersection of a line and a plane. Different because: the image condition is used in reverse to determine the plane.",
+ "web_check": "not found",
+ "concept_use": {
+  "Line and a plane": "Point of intersection Q of the line L with the plane Pi once d is known.",
+  "Concept of image in three dimensional geometry": "Image of A in the plane 2x - y + 2z = d as a function of d, required to lie on L, which fixes d = -3."
+ },
+ "stem_review": "Read as a student: every point, line, plane and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy, is unique and equals the Answer Plan. Checked that the image condition gives one value of d and that L meets Pi in exactly one point. Changed: no change.",
+ "level": 2,
+ "key_step": "Writing the image of A in terms of d and imposing that it satisfies the line's equations.",
+ "justification": "Routine multi-step: image formula with a parameter, line conditions, then line-plane intersection and a distance. Above the one-step plane work of 2024-P2-Q6 (L1), below the multi-object 2026-P2-Q7 (L3).",
+ "nearest_anchor": "2024-P2-Q6 (L1)",
+ "confidence": "Medium"
+}

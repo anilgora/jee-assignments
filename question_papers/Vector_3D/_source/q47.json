@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Application of Vector triple product"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\overrightarrow{a}=2\\hat{i}-\\hat{j}+\\hat{k}$ and let $\\overrightarrow{r}$ be a vector satisfying $\\overrightarrow{r}+\\overrightarrow{a}\\times\\left(\\overrightarrow{a}\\times\\overrightarrow{r}\\right)=-11\\hat{i}-7\\hat{j}+12\\hat{k}$. Then the value of $\\left|\\overrightarrow{r}\\times\\overrightarrow{a}\\right|^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\overrightarrow{a}=2\\hat{i}-\\hat{j}+\\hat{k}$ है तथा $\\overrightarrow{r}$ एक ऐसा सदिश है जो $\\overrightarrow{r}+\\overrightarrow{a}\\times\\left(\\overrightarrow{a}\\times\\overrightarrow{r}\\right)=-11\\hat{i}-7\\hat{j}+12\\hat{k}$ को संतुष्ट करता है। तब $\\left|\\overrightarrow{r}\\times\\overrightarrow{a}\\right|^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $\\overrightarrow{c}=-11\\hat{i}-7\\hat{j}+12\\hat{k}$, $|\\overrightarrow{a}|^2=6$",
+  "$\\overrightarrow{a}\\times(\\overrightarrow{a}\\times\\overrightarrow{r})=(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-6\\overrightarrow{r}$, so the equation is $(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-5\\overrightarrow{r}=\\overrightarrow{c}$",
+  "Dot with $\\overrightarrow{a}$: $6(\\overrightarrow{a}\\cdot\\overrightarrow{r})-5(\\overrightarrow{a}\\cdot\\overrightarrow{r})=\\overrightarrow{a}\\cdot\\overrightarrow{c}=-22+7+12=-3\\Rightarrow\\overrightarrow{a}\\cdot\\overrightarrow{r}=-3$",
+  "$\\overrightarrow{r}=\\dfrac{-3\\overrightarrow{a}-\\overrightarrow{c}}{5}=\\dfrac{5\\hat{i}+10\\hat{j}-15\\hat{k}}{5}=\\hat{i}+2\\hat{j}-3\\hat{k}$",
+  "$\\left|\\overrightarrow{r}\\times\\overrightarrow{a}\\right|^2=|\\overrightarrow{r}|^2|\\overrightarrow{a}|^2-(\\overrightarrow{r}\\cdot\\overrightarrow{a})^2=14\\cdot 6-9=75$",
+  "",
+  "Final Answer: 75"
+ ],
+ "solution_full": [
+  "Write $\\overrightarrow{c}=-11\\hat{i}-7\\hat{j}+12\\hat{k}$. Here $|\\overrightarrow{a}|^2=4+1+1=6$.",
+  "By the vector triple product, $\\overrightarrow{a}\\times(\\overrightarrow{a}\\times\\overrightarrow{r})=(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-(\\overrightarrow{a}\\cdot\\overrightarrow{a})\\overrightarrow{r}=(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-6\\overrightarrow{r}$.",
+  "The given equation becomes $\\overrightarrow{r}+(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-6\\overrightarrow{r}=\\overrightarrow{c}$, that is $(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-5\\overrightarrow{r}=\\overrightarrow{c}$.",
+  "The unknown scalar $\\overrightarrow{a}\\cdot\\overrightarrow{r}$ is found by taking the dot product with $\\overrightarrow{a}$: $(\\overrightarrow{a}\\cdot\\overrightarrow{r})|\\overrightarrow{a}|^2-5(\\overrightarrow{a}\\cdot\\overrightarrow{r})=\\overrightarrow{a}\\cdot\\overrightarrow{c}$.",
+  "$\\overrightarrow{a}\\cdot\\overrightarrow{c}=2(-11)+(-1)(-7)+1(12)=-22+7+12=-3$, so $6(\\overrightarrow{a}\\cdot\\overrightarrow{r})-5(\\overrightarrow{a}\\cdot\\overrightarrow{r})=-3$, i.e. $\\overrightarrow{a}\\cdot\\overrightarrow{r}=-3$.",
+  "Then $5\\overrightarrow{r}=(\\overrightarrow{a}\\cdot\\overrightarrow{r})\\overrightarrow{a}-\\overrightarrow{c}=-3(2\\hat{i}-\\hat{j}+\\hat{k})+11\\hat{i}+7\\hat{j}-12\\hat{k}=5\\hat{i}+10\\hat{j}-15\\hat{k}$, so $\\overrightarrow{r}=\\hat{i}+2\\hat{j}-3\\hat{k}$ (unique).",
+  "Check: $\\overrightarrow{a}\\cdot\\overrightarrow{r}=2-2-3=-3$, consistent.",
+  "By Lagrange's identity, $\\left|\\overrightarrow{r}\\times\\overrightarrow{a}\\right|^2=|\\overrightarrow{r}|^2|\\overrightarrow{a}|^2-(\\overrightarrow{r}\\cdot\\overrightarrow{a})^2=14\\times 6-(-3)^2=84-9=75$.",
+  "",
+  "Final Answer: 75"
+ ],
+ "originality_note": "New: a linear vector equation r + a x (a x r) = c in which the triple product turns r into a combination of r and a, and one dot product with a collapses the unknown scalar a.r (way 5). Closest known: the standard equation x + (x x a) = b solved by dotting and crossing with a. Different because: here only one dot product is needed and the coefficient 1 - |a|^2 decides solvability; then the answer asks for |r x a|^2.",
+ "web_check": "not found",
+ "concept_use": {
+  "Application of Vector triple product": "a x (a x r) = (a.r) a - |a|^2 r turns the equation into (a.r) a - 5 r = c, solved after dotting with a."
+ },
+ "stem_review": "Read as a student: every symbol and object is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Since 1 - |a|^2 = -5 is non-zero, r is unique. Changed: No change.",
+ "level": 2,
+ "key_step": "Expanding a x (a x r) and dotting with a to find a.r.",
+ "justification": "Routine chain: triple product expansion, one dot product, back-substitution and |r x a|^2 by Lagrange's identity; no insight beyond the standard expansion. Like 2026-P2-Q1 (L2) in length.",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

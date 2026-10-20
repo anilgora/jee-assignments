@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Angle bisector, centroid and incentre in vector form"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $A(1,2,-3)$, $B(-5,-4,0)$ and $C(3,-4,0)$ be the vertices of a triangle $ABC$. In the plane of the triangle, let $J(\\alpha,\\beta,\\gamma)$ be the point of intersection of the internal bisector of $\\angle BAC$ with the external bisectors of $\\angle ABC$ and $\\angle ACB$. Then the value of $\\alpha+\\beta+\\gamma$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A(1,2,-3)$, $B(-5,-4,0)$ तथा $C(3,-4,0)$ त्रिभुज $ABC$ के शीर्ष हैं। त्रिभुज के तल में, माना कि $J(\\alpha,\\beta,\\gamma)$ कोण $\\angle BAC$ के आन्तरिक समद्विभाजक तथा कोणों $\\angle ABC$ और $\\angle ACB$ के बाह्य समद्विभाजकों का प्रतिच्छेदन बिन्दु है। तब $\\alpha+\\beta+\\gamma$ का मान ______ है।"
+ ],
+ "solution": [
+  "$J$ is the excentre opposite $A$: $\\overrightarrow{J}=\\dfrac{-a\\overrightarrow{A}+b\\overrightarrow{B}+c\\overrightarrow{C}}{-a+b+c}$ with $a=BC$, $b=CA$, $c=AB$",
+  "$a=|(8,0,0)|=8$, $b=|(-2,6,-3)|=7$, $c=|(-6,-6,3)|=9$, $-a+b+c=8$",
+  "$\\overrightarrow{J}=\\dfrac{-8(1,2,-3)+7(-5,-4,0)+9(3,-4,0)}{8}=\\dfrac{(-16,-80,24)}{8}=(-2,-10,3)$",
+  "$\\alpha+\\beta+\\gamma=-2-10+3=-9$",
+  "",
+  "Final Answer: -9"
+ ],
+ "solution_full": [
+  "The internal bisector of $\\angle A$ and the external bisectors of $\\angle B$ and $\\angle C$ meet at the excentre $I_1$ opposite $A$, whose position vector is $\\dfrac{-a\\overrightarrow{A}+b\\overrightarrow{B}+c\\overrightarrow{C}}{-a+b+c}$, where $a=BC$, $b=CA$, $c=AB$.",
+  "(Reason: the internal bisector from $A$ meets $BC$ at $D$ with $BD:DC=c:b$; the external bisector from $B$ divides $AD$ externally in the ratio $AB:BD$, which gives these weights.)",
+  "Side lengths: $\\overrightarrow{BC}=(8,0,0)$, $a=8$; $\\overrightarrow{CA}=(-2,6,-3)$, $b=\\sqrt{4+36+9}=7$; $\\overrightarrow{AB}=(-6,-6,3)$, $c=\\sqrt{36+36+9}=9$.",
+  "$-a+b+c=-8+7+9=8$.",
+  "$-8\\overrightarrow{A}=(-8,-16,24)$, $7\\overrightarrow{B}=(-35,-28,0)$, $9\\overrightarrow{C}=(27,-36,0)$; the sum is $(-16,-80,24)$.",
+  "So $J=\\left(\\dfrac{-16}{8},\\dfrac{-80}{8},\\dfrac{24}{8}\\right)=(-2,-10,3)$.",
+  "Check: $J$ is at distance $3\\sqrt5$ from each of the lines $AB$, $BC$, $CA$, and lies on the other side of $BC$ from $A$.",
+  "$\\alpha+\\beta+\\gamma=-2-10+3=-9$.",
+  "",
+  "Final Answer: -9"
+ ],
+ "originality_note": "New: the point is described by its bisectors (one internal, two external) instead of by name, so the student must recognise the excentre and use the signed-weight vector formula for a triangle in space with integer sides 8, 7, 9 (way 5). Closest known: incentre of a triangle from its vertices in 3D. Different because: the weights carry a minus sign, and the triangle is in space, not in a coordinate plane.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Angle bisector, centroid and incentre in vector form": "Vector form of the excentre (-a A + b B + c C)/(-a + b + c), from the internal bisector at A and external bisectors at B and C."
+ },
+ "stem_review": "Read as a student: every symbol and object is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Added 'in the plane of the triangle' so that the external bisectors are lines, not planes; verified J is equidistant from the three side lines. Changed: added the plane clause.",
+ "level": 2,
+ "key_step": "Recognising the excentre opposite A and applying the signed weights.",
+ "justification": "Three side lengths in space and one weighted formula with a sign change; recognising the excentre from the description is the only decision. Routine multi-step like 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

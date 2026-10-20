@@ -1,0 +1,59 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "english": [
+  "Let $L_1$ be the line $\\dfrac{x-1}{2}=\\dfrac{y+1}{-1}=\\dfrac{z-a}{1}$, where $a$ is a negative real number. Let $L_2$ be the line through the point $(2,\\mu,0)$ parallel to the vector $\\hat{i}+2\\hat{j}-2\\hat{k}$, where $\\mu$ is the real number for which $L_2$ intersects the line $L_3:\\ \\dfrac{x}{1}=\\dfrac{y+1}{2}=\\dfrac{z+1}{1}$. The shortest distance between $L_1$ and $L_2$ is $3\\sqrt{2}$. If the line of shortest distance between $L_1$ and $L_2$ meets $L_1$ at the point $(\\alpha,\\beta,\\gamma)$, then the value of $\\alpha+\\beta+\\gamma$ is ______."
+ ],
+ "hindi": [
+  "माना कि $L_1$ रेखा $\\dfrac{x-1}{2}=\\dfrac{y+1}{-1}=\\dfrac{z-a}{1}$ है, जहाँ $a$ एक ऋणात्मक वास्तविक संख्या है। माना कि $L_2$ बिन्दु $(2,\\mu,0)$ से होकर जाने वाली तथा सदिश $\\hat{i}+2\\hat{j}-2\\hat{k}$ के समान्तर रेखा है, जहाँ $\\mu$ वह वास्तविक संख्या है जिसके लिए $L_2$ रेखा $L_3:\\ \\dfrac{x}{1}=\\dfrac{y+1}{2}=\\dfrac{z+1}{1}$ को प्रतिच्छेद करती है। $L_1$ तथा $L_2$ के बीच की न्यूनतम दूरी $3\\sqrt{2}$ है। यदि $L_1$ तथा $L_2$ के बीच की न्यूनतम दूरी की रेखा $L_1$ से बिन्दु $(\\alpha,\\beta,\\gamma)$ पर मिलती है, तो $\\alpha+\\beta+\\gamma$ का मान ______ है।"
+ ],
+ "solution": [
+  "$L_2$, $L_3$ coplanar (not parallel): $\\begin{vmatrix}2&\\mu+1&1\\\\1&2&-2\\\\1&2&1\\end{vmatrix}=2(6)-(\\mu+1)(3)+0=0\\Rightarrow\\mu=3$",
+  "$\\overrightarrow{u}\\times\\overrightarrow{v}=(2,-1,1)\\times(1,2,-2)=(0,5,5)$, $|\\overrightarrow{u}\\times\\overrightarrow{v}|=5\\sqrt2$",
+  "Scalar triple product with $(2,3,0)-(1,-1,a)=(1,4,-a)$: $20-5a$; $\\dfrac{|20-5a|}{5\\sqrt2}=3\\sqrt2\\Rightarrow|20-5a|=30\\Rightarrow a=-2$ (as $a<0$)",
+  "$P(1+2s,-1-s,-2+s)$, $Q(2+t,3+2t,-2t)$; $\\overrightarrow{PQ}\\parallel(0,1,1)$: $1+t-2s=0$ and $4+2t+s=2-2t-s$",
+  "$\\Rightarrow t=2s-1,\\ 2t+s=-1\\Rightarrow s=\\dfrac15,\\ t=-\\dfrac35$; $P\\left(\\dfrac75,-\\dfrac65,-\\dfrac95\\right)$ (and $PQ=|(0,3,3)|=3\\sqrt2$)",
+  "$\\alpha+\\beta+\\gamma=\\dfrac{7-6-9}{5}=-1.6$",
+  "",
+  "Final Answer: -1.6"
+ ],
+ "solution_full": [
+  "Step 1 ($\\mu$). $L_2$ passes through $B(2,\\mu,0)$ with direction $\\overrightarrow{v}=(1,2,-2)$; $L_3$ passes through $C(0,-1,-1)$ with direction $\\overrightarrow{w}=(1,2,1)$. These directions are not parallel, so the lines intersect if and only if they are coplanar:",
+  "$\\begin{vmatrix}2-0&\\mu+1&0+1\\\\1&2&-2\\\\1&2&1\\end{vmatrix}=2(2+4)-(\\mu+1)(1+2)+1(2-2)=12-3(\\mu+1)=0$, so $\\mu=3$ and $B=(2,3,0)$.",
+  "Step 2 ($a$). $L_1$ passes through $A(1,-1,a)$ with direction $\\overrightarrow{u}=(2,-1,1)$. $\\overrightarrow{u}\\times\\overrightarrow{v}=((-1)(-2)-1\\cdot2,\\ 1\\cdot1-2(-2),\\ 2\\cdot2-(-1)\\cdot1)=(0,5,5)$, of magnitude $5\\sqrt2$.",
+  "The scalar triple product $[\\overrightarrow{AB}\\ \\overrightarrow{u}\\ \\overrightarrow{v}]=(1,4,-a)\\cdot(0,5,5)=20-5a$.",
+  "Shortest distance $=\\dfrac{|20-5a|}{5\\sqrt2}=3\\sqrt2\\Rightarrow|20-5a|=30\\Rightarrow a=-2$ or $a=10$; since $a<0$, $a=-2$ and $A=(1,-1,-2)$.",
+  "Step 3 (line of shortest distance). General points: $P(1+2s,\\,-1-s,\\,-2+s)$ on $L_1$ and $Q(2+t,\\,3+2t,\\,-2t)$ on $L_2$.",
+  "$\\overrightarrow{PQ}=(1+t-2s,\\ 4+2t+s,\\ 2-2t-s)$ must be parallel to $\\overrightarrow{u}\\times\\overrightarrow{v}=(0,5,5)$, that is, first component $0$ and second $=$ third:",
+  "$1+t-2s=0$ and $4+2t+s=2-2t-s\\Rightarrow 2t+s=-1$.",
+  "With $t=2s-1$: $4s-2+s=-1\\Rightarrow s=\\dfrac15$, $t=-\\dfrac35$.",
+  "So $P=\\left(\\dfrac75,-\\dfrac65,-\\dfrac95\\right)$ and $Q=\\left(\\dfrac75,\\dfrac95,\\dfrac65\\right)$; $\\overrightarrow{PQ}=(0,3,3)$ has length $3\\sqrt2$, as it must.",
+  "$\\alpha+\\beta+\\gamma=\\dfrac75-\\dfrac65-\\dfrac95=-\\dfrac85=-1.6$.",
+  "",
+  "Final Answer: -1.6"
+ ],
+ "originality_note": "New: three lines in a chain: the position of L2 is fixed by its meeting L3 (coplanarity determinant), the position of L1 by the value of the shortest distance (scalar triple product, two roots, sign condition), and only then is the common perpendicular located (way 5). Closest known: shortest distance and feet for two fully given skew lines. Different because: both lines carry an unknown fixed by a different condition, and the wrong root a = 10 gives a different foot.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Shortest distance between two lines",
+  "Shortest Distance Line Equation: Finding the symmetrical equation of the line of shortest distance between skew lines.",
+  "Coplanarity of two lines (determinant condition)",
+  "Application of Scalar triple product"
+ ],
+ "concept_use": {
+  "Shortest distance between two lines": "The condition d = 3 sqrt2 = |[AB u v]|/|u x v| fixes a (two roots, a < 0 picks a = -2); PQ = 3 sqrt2 checks the feet.",
+  "Shortest Distance Line Equation: Finding the symmetrical equation of the line of shortest distance between skew lines.": "PQ parallel to u x v = (0,5,5) gives s = 1/5, t = -3/5 and the foot P(7/5, -6/5, -9/5) on L1.",
+  "Coplanarity of two lines (determinant condition)": "L2 meets L3 iff the determinant of BC, v, w vanishes: 12 - 3(mu+1) = 0 gives mu = 3.",
+  "Application of Scalar triple product": "[AB u v] = (1,4,-a).(0,5,5) = 20 - 5a is the numerator of the shortest-distance formula."
+ },
+ "stem_review": "Read as a student: every line, point and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and a numerical least-squares check, is unique and equals the Answer Plan. Checked that L2 and L3 are not parallel (so 'intersects' means coplanar and mu is unique), that both roots a = -2, 10 exist so the sign condition is needed, and that L1, L2 are skew for a = -2. Changed: said 'mu is the real number for which' to make mu unique.",
+ "level": 3,
+ "key_step": "Running three linked conditions in order: coplanarity determinant for mu, scalar-triple-product distance with the sign choice for a, then the feet of the common perpendicular.",
+ "justification": "Several standard results chained with two parameter conditions and a root choice; no single step is hard but the chain is long and exact, in numerical format. Comparable to 2025-P1-Q5 (L3) and 2026-P1-Q6 (L3) line-plane chains.",
+ "nearest_anchor": "2025-P1-Q5 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

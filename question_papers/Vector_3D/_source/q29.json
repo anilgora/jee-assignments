@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "english": [
+  "Let $\\overrightarrow{a}$ and $\\overrightarrow{b}$ be two vectors with $|\\overrightarrow{a}|=|\\overrightarrow{b}|=5$ such that $\\overrightarrow{a}\\cdot\\overrightarrow{b}-|\\overrightarrow{a}\\times\\overrightarrow{b}|=17$. Let $O$ be the origin and let $A$ and $B$ be the points such that $\\overrightarrow{OA}=\\overrightarrow{a}$ and $\\overrightarrow{OB}=\\overrightarrow{b}$. Then the area of triangle $OAB$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\overrightarrow{a}$ तथा $\\overrightarrow{b}$ दो सदिश हैं जिनके लिए $|\\overrightarrow{a}|=|\\overrightarrow{b}|=5$ तथा $\\overrightarrow{a}\\cdot\\overrightarrow{b}-|\\overrightarrow{a}\\times\\overrightarrow{b}|=17$ है। माना कि $O$ मूलबिन्दु है तथा $A$ और $B$ ऐसे बिन्दु हैं कि $\\overrightarrow{OA}=\\overrightarrow{a}$ तथा $\\overrightarrow{OB}=\\overrightarrow{b}$ है। तब त्रिभुज $OAB$ का क्षेत्रफल ______ है।"
+ ],
+ "solution": [
+  "Let $p=\\overrightarrow{a}\\cdot\\overrightarrow{b}$, $q=|\\overrightarrow{a}\\times\\overrightarrow{b}|\\ge 0$. Lagrange: $p^2+q^2=|\\overrightarrow{a}|^2|\\overrightarrow{b}|^2=625$",
+  "$p=q+17\\Rightarrow (q+17)^2+q^2=625\\Rightarrow q^2+17q-168=0\\Rightarrow (q-7)(q+24)=0$",
+  "$q\\ge0\\Rightarrow q=7$ (then $p=24$)",
+  "Area of $OAB=\\dfrac12 q=3.5$",
+  "",
+  "Final Answer: 3.5"
+ ],
+ "solution_full": [
+  "Let $p=\\overrightarrow{a}\\cdot\\overrightarrow{b}$ and $q=|\\overrightarrow{a}\\times\\overrightarrow{b}|$; note $q\\ge 0$ because it is a magnitude.",
+  "Lagrange's identity: $|\\overrightarrow{a}\\times\\overrightarrow{b}|^2+(\\overrightarrow{a}\\cdot\\overrightarrow{b})^2=|\\overrightarrow{a}|^2|\\overrightarrow{b}|^2$, so $p^2+q^2=25\\cdot 25=625$.",
+  "The given condition is $p=q+17$. Substituting: $(q+17)^2+q^2=625\\Rightarrow 2q^2+34q+289-625=0\\Rightarrow q^2+17q-168=0$.",
+  "Factorising: $(q-7)(q+24)=0$, so $q=7$ or $q=-24$; the second is rejected since $q\\ge0$.",
+  "Hence $q=7$ and $p=24$ (check: $24^2+7^2=576+49=625$).",
+  "The area of triangle $OAB$ is $\\dfrac12|\\overrightarrow{a}\\times\\overrightarrow{b}|=\\dfrac12\\cdot 7=3.5$.",
+  "",
+  "Final Answer: 3.5"
+ ],
+ "originality_note": "New: the angle is not given; the difference a.b - |a x b| together with Lagrange's identity gives a quadratic in |a x b| whose negative root must be rejected (way 5). Closest known: area from |a|, |b| and a.b. Different because: neither a.b nor the angle is known; the sign condition on a magnitude decides the root.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Lagrange’s Identity in Vectors"
+ ],
+ "concept_use": {
+  "Lagrange’s Identity in Vectors": "(a.b)^2 + |a x b|^2 = |a|^2|b|^2 = 625 combined with a.b = |a x b| + 17 gives the quadratic for |a x b|."
+ },
+ "stem_review": "Read as a student: every vector, line and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and numpy, is unique and equals the Answer Plan. Checked that the data are consistent (cos = 24/25, sin = 7/25), that the rejected root is negative, and named the triangle explicitly. Changed: replaced 'triangle with sides a and b' by triangle OAB with OA = a, OB = b.",
+ "level": 2,
+ "key_step": "Writing Lagrange's identity as p^2 + q^2 = 625 and solving with p - q = 17, rejecting q < 0.",
+ "justification": "Routine chain: an identity, a quadratic, a root rejection and the area formula. No insight; same routine level as 2026-P2-Q1 (L2) vector area.",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

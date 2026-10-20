@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Angle bisector, centroid and incentre in vector form",
+  "Angle bisectors"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "A ray of light starts from the point $B(5,1)$ in the $xy$-plane, travels along a straight line and strikes a plane mirror, which is perpendicular to the $xy$-plane, at the point $A(2,-3)$. After reflection the ray passes through the point $C(-3,9)$. The line in which the mirror meets the $xy$-plane meets the $y$-axis at the point $(0,k)$. Then the value of $k$ is ______."
+ ],
+ "hindi": [
+  "प्रकाश की एक किरण $xy$-तल में बिन्दु $B(5,1)$ से चलकर एक सरल रेखा के अनुदिश जाती है तथा एक समतल दर्पण से, जो $xy$-तल के लम्बवत् है, बिन्दु $A(2,-3)$ पर टकराती है। परावर्तन के पश्चात किरण बिन्दु $C(-3,9)$ से होकर जाती है। जिस रेखा में दर्पण $xy$-तल को काटता है, वह $y$-अक्ष से बिन्दु $(0,k)$ पर मिलती है। तब $k$ का मान ______ है।"
+ ],
+ "solution": [
+  "Unit vectors from $A$: $\\hat{u}=\\dfrac{\\overrightarrow{AB}}{5}=\\dfrac{3\\hat{i}+4\\hat{j}}{5}$, $\\hat{v}=\\dfrac{\\overrightarrow{AC}}{13}=\\dfrac{-5\\hat{i}+12\\hat{j}}{13}$",
+  "Equal angles with the normal: the normal to the mirror is along the internal bisector of $\\angle BAC$, $\\hat{u}+\\hat{v}=\\dfrac{14\\hat{i}+112\\hat{j}}{65}\\parallel\\hat{i}+8\\hat{j}$",
+  "Mirror line: through $A$ with normal $\\hat{i}+8\\hat{j}$: $(x-2)+8(y+3)=0$, i.e. $x+8y+22=0$",
+  "Check with the bisectors of $AB: 4x-3y-17=0$ and $AC: 12x+5y-9=0$: $\\dfrac{4x-3y-17}{5}=\\pm\\dfrac{12x+5y-9}{13}$ gives $x+8y+22=0$ and $8x-y-19=0$; the second contains $\\hat{i}+8\\hat{j}$, so it is the internal bisector, and the mirror is the other one",
+  "$x=0\\Rightarrow k=-\\dfrac{22}{8}=-2.75$",
+  "",
+  "Final Answer: -2.75"
+ ],
+ "solution_full": [
+  "At the point of incidence the incident ray $AB$ (traced back) and the reflected ray $AC$ make equal angles with the normal to the mirror, on opposite sides. So the normal at $A$ bisects $\\angle BAC$ internally, and the mirror line is the other (external) bisector of the angle between the lines $AB$ and $AC$.",
+  "Vector form of the internal bisector: its direction is $\\hat{u}+\\hat{v}$, the sum of the unit vectors along $\\overrightarrow{AB}$ and $\\overrightarrow{AC}$.",
+  "$\\overrightarrow{AB}=3\\hat{i}+4\\hat{j}$, $AB=5$, $\\hat{u}=\\dfrac{3\\hat{i}+4\\hat{j}}{5}$; $\\overrightarrow{AC}=-5\\hat{i}+12\\hat{j}$, $AC=13$, $\\hat{v}=\\dfrac{-5\\hat{i}+12\\hat{j}}{13}$.",
+  "$\\hat{u}+\\hat{v}=\\dfrac{39\\hat{i}+52\\hat{j}-25\\hat{i}+60\\hat{j}}{65}=\\dfrac{14\\hat{i}+112\\hat{j}}{65}$, parallel to $\\hat{i}+8\\hat{j}$.",
+  "The mirror line passes through $A(2,-3)$ and is perpendicular to $\\hat{i}+8\\hat{j}$: $1\\cdot(x-2)+8(y+3)=0$, that is $x+8y+22=0$.",
+  "The same result from the angle bisectors of two lines: $AB$ is $4x-3y-17=0$ and $AC$ is $12x+5y-9=0$; their bisectors are $\\dfrac{4x-3y-17}{5}=\\pm\\dfrac{12x+5y-9}{13}$.",
+  "The $+$ sign gives $52x-39y-221=60x+25y-45$, i.e. $x+8y+22=0$; the $-$ sign gives $112x-14y-266=0$, i.e. $8x-y-19=0$.",
+  "The line $8x-y-19=0$ has direction $\\hat{i}+8\\hat{j}$, so it is the internal bisector of $\\angle BAC$ (the normal); the mirror is $x+8y+22=0$.",
+  "Check by reflection: the incident direction $\\dfrac{-3\\hat{i}-4\\hat{j}}{5}$ reflected in $x+8y+22=0$ becomes $\\dfrac{-5\\hat{i}+12\\hat{j}}{13}$, the direction of $\\overrightarrow{AC}$.",
+  "Putting $x=0$: $8y=-22$, $k=-\\dfrac{11}{4}=-2.75$.",
+  "",
+  "Final Answer: -2.75"
+ ],
+ "originality_note": "New: the mirror is not given; it is recovered from the incident and reflected rays, and the decision between the two angle bisectors is made by the vector sum of unit vectors (way 5). Closest known: equation of the reflected ray for a given mirror; bisector of the angle containing a given point. Different because: the unknown is the mirror, and the correct bisector is the external one, chosen through the unit-vector sum.",
+ "web_check": "not found",
+ "concept_use": {
+  "Angle bisector, centroid and incentre in vector form": "Direction of the internal bisector of angle BAC = unit vector along AB + unit vector along AC = (14, 112)/65, which is the normal of the mirror.",
+  "Angle bisectors": "Bisectors of the lines 4x - 3y - 17 = 0 and 12x + 5y - 9 = 0 by equal distances; the one perpendicular to the internal bisector is the mirror."
+ },
+ "stem_review": "Read as a student: every symbol and object is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Stated that the mirror is perpendicular to the xy-plane so that its trace is a line and the ray stays in the plane; checked the reflection numerically. Changed: added the perpendicular-mirror clause.",
+ "level": 2,
+ "key_step": "Seeing that the mirror is the external bisector of angle BAC (normal = internal bisector, from the unit-vector sum).",
+ "justification": "Routine chain: two unit vectors, their sum, a line through A; the only decision is which bisector is the mirror, settled by the law of reflection. Like 2026-P2-Q17 (L2), an angle question with tangent-direction vectors.",
+ "nearest_anchor": "2026-P2-Q17 (L2)",
+ "confidence": "Medium"
+}

@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "negative decimal",
+ "blueprint_concepts": [
+  "Position vector, distance formula, section formula",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $A$, $B$ and $C$ be the points with position vectors $\\hat{i}+2\\hat{j}+2\\hat{k}$, $2\\hat{i}+\\hat{j}-2\\hat{k}$ and $\\hat{i}-\\dfrac{2}{5}\\hat{j}-\\dfrac{14}{5}\\hat{k}$ respectively. Then the $z$-coordinate of the orthocentre of the triangle $ABC$ is ______."
+ ],
+ "hindi": [
+  "माना $A$, $B$ तथा $C$ वे बिन्दु हैं जिनके स्थिति सदिश क्रमशः $\\hat{i}+2\\hat{j}+2\\hat{k}$, $2\\hat{i}+\\hat{j}-2\\hat{k}$ तथा $\\hat{i}-\\dfrac{2}{5}\\hat{j}-\\dfrac{14}{5}\\hat{k}$ हैं। तब त्रिभुज $ABC$ के लम्बकेन्द्र का $z$-निर्देशांक ______ है।"
+ ],
+ "solution": [
+  "$|\\overrightarrow{a}|^2=|\\overrightarrow{b}|^2=9$ and $|\\overrightarrow{c}|^2=1+\\dfrac{4}{25}+\\dfrac{196}{25}=9$, so $OA=OB=OC=3$",
+  "$\\begin{vmatrix}1&2&2\\\\2&1&-2\\\\1&-\\frac25&-\\frac{14}{5}\\end{vmatrix}=-\\dfrac{18}{5}+\\dfrac{36}{5}-\\dfrac{18}{5}=0$, so $O$ lies in the plane $ABC$; hence $O$ is the circumcentre",
+  "Centroid $\\overrightarrow{g}=\\dfrac{\\overrightarrow{a}+\\overrightarrow{b}+\\overrightarrow{c}}{3}$ divides $OH$ in $1:2$ (Euler line) $\\Rightarrow\\overrightarrow{h}=3\\overrightarrow{g}=\\overrightarrow{a}+\\overrightarrow{b}+\\overrightarrow{c}$",
+  "$\\overrightarrow{h}=4\\hat{i}+\\dfrac{13}{5}\\hat{j}-\\dfrac{14}{5}\\hat{k}$; check: $(\\overrightarrow{h}-\\overrightarrow{a})\\cdot(\\overrightarrow{b}-\\overrightarrow{c})=3+\\dfrac{21}{25}-\\dfrac{96}{25}=0$",
+  "$z$-coordinate $=-\\dfrac{14}{5}=-2.8$",
+  "",
+  "Final Answer: -2.8"
+ ],
+ "solution_full": [
+  "Let $\\overrightarrow{a}$, $\\overrightarrow{b}$, $\\overrightarrow{c}$ be the position vectors of $A$, $B$, $C$ with respect to the origin $O$.",
+  "$|\\overrightarrow{a}|^2=1+4+4=9$, $|\\overrightarrow{b}|^2=4+1+4=9$, $|\\overrightarrow{c}|^2=1+\\dfrac{4}{25}+\\dfrac{196}{25}=\\dfrac{225}{25}=9$. So $O$ is at distance $3$ from each vertex.",
+  "Equal distances alone do not make $O$ the circumcentre in space; $O$ must also lie in the plane of the triangle. The scalar triple product is",
+  "$$\\left[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}\\right]=1\\left(-\\dfrac{14}{5}-\\dfrac45\\right)-2\\left(-\\dfrac{28}{5}+2\\right)+2\\left(-\\dfrac45-1\\right)=-\\dfrac{18}{5}+\\dfrac{36}{5}-\\dfrac{18}{5}=0$$",
+  "so $O$, $A$, $B$, $C$ are coplanar and $O$ is the circumcentre of triangle $ABC$.",
+  "The centroid has position vector $\\overrightarrow{g}=\\dfrac{\\overrightarrow{a}+\\overrightarrow{b}+\\overrightarrow{c}}{3}$.",
+  "On the Euler line, the centroid divides the segment from the circumcentre $O$ to the orthocentre $H$ internally in the ratio $1:2$, so $\\overrightarrow{g}=\\dfrac{2\\cdot\\overrightarrow{0}+1\\cdot\\overrightarrow{h}}{3}$, giving $\\overrightarrow{h}=\\overrightarrow{a}+\\overrightarrow{b}+\\overrightarrow{c}$.",
+  "$\\overrightarrow{h}=(1+2+1)\\hat{i}+\\left(2+1-\\dfrac25\\right)\\hat{j}+\\left(2-2-\\dfrac{14}{5}\\right)\\hat{k}=4\\hat{i}+\\dfrac{13}{5}\\hat{j}-\\dfrac{14}{5}\\hat{k}$.",
+  "Check: $\\overrightarrow{h}-\\overrightarrow{a}=3\\hat{i}+\\dfrac35\\hat{j}-\\dfrac{24}{5}\\hat{k}$ and $\\overrightarrow{b}-\\overrightarrow{c}=\\hat{i}+\\dfrac75\\hat{j}+\\dfrac45\\hat{k}$; their dot product is $3+\\dfrac{21}{25}-\\dfrac{96}{25}=0$, so $AH\\perp BC$. Similarly $(\\overrightarrow{h}-\\overrightarrow{b})\\cdot(\\overrightarrow{c}-\\overrightarrow{a})=2\\cdot0+\\dfrac85\\left(-\\dfrac{12}{5}\\right)+\\left(-\\dfrac45\\right)\\left(-\\dfrac{24}{5}\\right)=0$.",
+  "The $z$-coordinate of the orthocentre is $-\\dfrac{14}{5}=-2.8$.",
+  "",
+  "Final Answer: -2.8"
+ ],
+ "originality_note": "New: a triangle in space whose vertices are equidistant from the origin and coplanar with it, so the origin is the circumcentre and the orthocentre is simply a + b + c through the Euler-line section ratio; nothing in the stem names the circumcentre (way 4, hidden configuration). Closest known: 'if the circumcentre is the origin then the orthocentre is a + b + c' as a stated result. Different because: the solver must discover that O is the circumcentre (equal lengths and a zero triple product) before using the Euler line.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Position vector, distance formula, section formula": "Position vectors of the vertices, the distance formula for OA = OB = OC = 3, the centroid (a+b+c)/3 and the 1:2 section of OH by G.",
+  "Four points(Centroid, Incenter, circumcenter, orthocenter) of a triangle": "Circumcentre (the origin), centroid and orthocentre of the triangle, linked by the Euler line H = 3G - 2O."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. The position vectors are with respect to the origin; the triangle is non-degenerate (A, B, C not collinear); the orthocentre of a triangle in space is the point of its plane where the altitudes meet, and it was checked directly. Changed: No change.",
+ "level": 3,
+ "key_step": "Recognising the origin as the circumcentre (equal distances and a zero triple product), then H = a + b + c from the Euler-line ratio.",
+ "justification": "Two ideas linked: discovering the hidden circumcentre and using the Euler-line section ratio; otherwise a heavy 3D orthocentre computation. Like the 3D orthocentre work in 2026-P2-Q7 (L3).",
+ "nearest_anchor": "2026-P2-Q7 (L3)",
+ "confidence": "Medium"
+}

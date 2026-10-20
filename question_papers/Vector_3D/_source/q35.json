@@ -1,0 +1,54 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "blueprint_concepts": [
+  "Plane",
+  "Line and a plane"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\Pi$ be the plane $2x-y+2z=4$ and let $\\ell$ be the line of intersection of $\\Pi$ and the plane $x+2z=6$. Let $A$ be the point $(3,-1,3)$, and let $B$ and $C$ be the two distinct points on $\\ell$ such that each of the lines $AB$ and $AC$ makes an angle $\\sin^{-1}\\left(\\frac{3}{5}\\right)$ with the plane $\\Pi$. Then the value of $\\cos\\angle BAC$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\Pi$ तल $2x-y+2z=4$ है तथा $\\ell$, तल $\\Pi$ और तल $x+2z=6$ की प्रतिच्छेदन रेखा है। माना कि $A$ बिन्दु $(3,-1,3)$ है, तथा $B$ और $C$ रेखा $\\ell$ पर ऐसे दो भिन्न बिन्दु हैं कि रेखाओं $AB$ तथा $AC$ में से प्रत्येक तल $\\Pi$ के साथ $\\sin^{-1}\\left(\\frac{3}{5}\\right)$ का कोण बनाती है। तब $\\cos\\angle BAC$ का मान ______ है।"
+ ],
+ "solution": [
+  "Direction of $\\ell$: $(2,-1,2)\\times(1,0,2)=(-2,-2,1)$; $(0,2,3)$ lies on both planes, so $\\ell:\\ (x,y,z)=(-2t,\\ 2-2t,\\ 3+t)$",
+  "Distance of $A$ from $\\Pi$: $\\dfrac{|6+1+6-4|}{3}=3$. Since $\\ell$ lies in $\\Pi$, for $P$ on $\\ell$ the angle $\\theta$ of $AP$ with $\\Pi$ satisfies $\\sin\\theta=\\dfrac{3}{AP}$",
+  "$\\sin\\theta=\\dfrac35\\Rightarrow AP=5$",
+  "$\\overrightarrow{AP}=(-2t-3,\\ 3-2t,\\ t)$, $AP^2=9t^2+18=25\\Rightarrow t=\\pm\\dfrac{\\sqrt7}{3}$ (these give $B$ and $C$)",
+  "$\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=(9-4t^2)+(9-4t^2)-t^2=18-9t^2=18-7=11$",
+  "$\\cos\\angle BAC=\\dfrac{11}{5\\cdot 5}=0.44$",
+  "",
+  "Final Answer: 0.44"
+ ],
+ "solution_full": [
+  "The normals of $\\Pi$ and of $x+2z=6$ are $(2,-1,2)$ and $(1,0,2)$. The direction of their line of intersection is $(2,-1,2)\\times(1,0,2)=(-2\\cdot2-2\\cdot0,\\ 2\\cdot1-2\\cdot2,\\ 2\\cdot0-(-1)\\cdot1)=(-2,-2,1)$.",
+  "A common point: $x=0$ gives $z=3$ from $x+2z=6$, and then $-y+6=4$ gives $y=2$. So $(0,2,3)$ lies on $\\ell$ and $\\ell:\\ (x,y,z)=(-2t,\\ 2-2t,\\ 3+t)$, $t\\in\\mathbb{R}$.",
+  "Distance of $A(3,-1,3)$ from $\\Pi$: $h=\\dfrac{|2(3)-(-1)+2(3)-4|}{\\sqrt{4+1+4}}=\\dfrac{9}{3}=3$.",
+  "If a line through $A$ meets $\\Pi$ at $P$ and makes an angle $\\theta$ with $\\Pi$, then $h=AP\\sin\\theta$ (the perpendicular from $A$, the segment $AP$ and its projection on $\\Pi$ form a right triangle). Every point $P$ of $\\ell$ lies on $\\Pi$, so $\\sin\\theta=\\dfrac{3}{AP}$.",
+  "The condition $\\sin\\theta=\\dfrac35$ is therefore $AP=5$.",
+  "For $P(-2t,\\ 2-2t,\\ 3+t)$: $\\overrightarrow{AP}=(-2t-3,\\ 3-2t,\\ t)$ and $AP^2=(2t+3)^2+(3-2t)^2+t^2=8t^2+18+t^2=9t^2+18$.",
+  "$9t^2+18=25\\Rightarrow t^2=\\dfrac79\\Rightarrow t=\\pm\\dfrac{\\sqrt7}{3}$. Two distinct points, so these are $B$ and $C$, and $AB=AC=5$.",
+  "With $\\overrightarrow{AB}=(-2t-3,\\ 3-2t,\\ t)$ and $\\overrightarrow{AC}=(2t-3,\\ 3+2t,\\ -t)$ for $t=\\dfrac{\\sqrt7}{3}$:",
+  "$\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=-(2t+3)(2t-3)+(3-2t)(3+2t)-t^2=(9-4t^2)+(9-4t^2)-t^2=18-9t^2=18-7=11$.",
+  "Hence $\\cos\\angle BAC=\\dfrac{\\overrightarrow{AB}\\cdot\\overrightarrow{AC}}{AB\\cdot AC}=\\dfrac{11}{25}=0.44$.",
+  "",
+  "Final Answer: 0.44"
+ ],
+ "originality_note": "New: the points of a line lying in a plane from which a fixed external point is seen at a fixed angle to the plane; since the height is constant along the line, the angle condition becomes a fixed distance AP = 5, and the answer is the apex angle of the isosceles triangle ABC (way 5: line-plane angle combined with the line of intersection). Closest known: angle between a given line and a given plane; line of intersection of two planes. Different because: the line AP is unknown and the angle condition must be converted into a distance before the two points can be found.",
+ "web_check": "not found",
+ "concept_use": {
+  "Plane": "Distance of A from the plane Pi (h = 3) and the line of intersection of Pi with x + 2z = 6 (cross product of normals, common point).",
+  "Line and a plane": "Angle between the line AP and the plane Pi: sin(theta) = h/AP, giving AP = 5 for every admissible P on the line."
+ },
+ "stem_review": "Read as a student: every point, line, plane and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy, is unique and equals the Answer Plan. Checked that exactly two points of the line satisfy the condition (t = +/- sqrt7/3) and that the line lies in Pi. Changed: no change.",
+ "level": 3,
+ "key_step": "Seeing that for points of a line lying in Pi the angle condition is AP = h/sin(theta) = 5, then solving on the parametrised line of intersection.",
+ "justification": "Two linked ideas: the line of intersection of two planes and the conversion of a line-plane angle into a fixed length, then an exact dot product. Comparable to the plane-and-line statement work of 2026-P1-Q6 (L3) and 2025-P1-Q5 (L3); numerical format with no options.",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Medium"
+}

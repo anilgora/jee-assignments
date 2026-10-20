@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Concept of image in three dimensional geometry",
+  "Foot of perpendicular and image of a point in a line"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $L$ be the line $\\dfrac{x}{2}=y-2=\\dfrac{z-5}{2}$ and let $A$ be the point $(-3,-1,5)$. Let $\\Pi$ be the plane $x+2y+\\lambda z=k$, where $\\lambda$ and $k$ are real numbers, such that the image of $A$ in $\\Pi$ coincides with the image of $A$ in the line $L$. Then the value of $\\lambda+k$ is ______."
+ ],
+ "hindi": [
+  "माना कि $L$ रेखा $\\dfrac{x}{2}=y-2=\\dfrac{z-5}{2}$ है तथा $A$ बिन्दु $(-3,-1,5)$ है। माना कि $\\Pi$ तल $x+2y+\\lambda z=k$ है, जहाँ $\\lambda$ तथा $k$ वास्तविक संख्याएँ हैं, इस प्रकार कि तल $\\Pi$ में $A$ का प्रतिबिम्ब, रेखा $L$ में $A$ के प्रतिबिम्ब के सम्पाती है। तब $\\lambda+k$ का मान ______ है।"
+ ],
+ "solution": [
+  "Foot of $A$ on $L$: $N=(2t,\\ 2+t,\\ 5+2t)$, $\\overrightarrow{AN}=(2t+3,\\ t+3,\\ 2t)$, $\\overrightarrow{AN}\\cdot(2,1,2)=9t+9=0\\Rightarrow t=-1$, $N=(-2,1,3)$",
+  "Image of $A$ in $L$: $B=2N-A=(-1,3,1)$",
+  "The image of $A$ in $\\Pi$ is $B$ only if $\\Pi$ is the perpendicular bisector plane of $AB$: normal $\\parallel\\overrightarrow{AB}=(2,4,-4)\\parallel(1,2,-2)\\Rightarrow\\lambda=-2$",
+  "$\\Pi$ passes through the midpoint $N(-2,1,3)$: $k=-2+2-6=-6$",
+  "$\\lambda+k=-8$",
+  "",
+  "Final Answer: -8"
+ ],
+ "solution_full": [
+  "A general point of $L$ is $(2t,\\ 2+t,\\ 5+2t)$ and the direction of $L$ is $(2,1,2)$.",
+  "For the foot $N$ of the perpendicular from $A(-3,-1,5)$: $\\overrightarrow{AN}=(2t+3,\\ t+3,\\ 2t)$ and $\\overrightarrow{AN}\\cdot(2,1,2)=2(2t+3)+(t+3)+2(2t)=9t+9=0$, so $t=-1$ and $N=(-2,1,3)$.",
+  "The image of $A$ in $L$ is $B$ with $N$ the midpoint of $AB$: $B=2N-A=(-4+3,\\ 2+1,\\ 6-5)=(-1,3,1)$.",
+  "The image of $A$ in a plane is $B$ exactly when the plane is perpendicular to $AB$ and passes through the midpoint of $AB$. Here $\\overrightarrow{AB}=(2,4,-4)=2(1,2,-2)$ and the midpoint is $N(-2,1,3)$.",
+  "The normal $(1,2,\\lambda)$ of $\\Pi$ must be parallel to $(1,2,-2)$, so $\\lambda=-2$.",
+  "Then $N$ lies on $x+2y-2z=k$: $k=-2+2-6=-6$.",
+  "Hence $\\lambda+k=-2-6=-8$.",
+  "",
+  "Final Answer: -8"
+ ],
+ "originality_note": "New: a plane is fixed by requiring that it reflects a point to the same place as a given line does, so the plane is the perpendicular bisector of the point and its line image (way 5). Closest known: image of a point in a line; image of a point in a plane. Different because: the two image concepts are tied by an equality that determines two unknown coefficients of the plane.",
+ "web_check": "not found",
+ "concept_use": {
+  "Concept of image in three dimensional geometry": "Image of A in the plane Pi equals B exactly when Pi is the perpendicular bisector plane of AB, giving lambda and k.",
+  "Foot of perpendicular and image of a point in a line": "Foot of the perpendicular N from A to the line L and the image B = 2N - A."
+ },
+ "stem_review": "Read as a student: every point, line, plane, vector and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy, is unique and equals the Answer Plan. Checked that A is not on L, so B differs from A and the plane is unique. Changed: no change.",
+ "level": 2,
+ "key_step": "Foot of perpendicular on the line, then reading the plane as the perpendicular bisector of A and its image.",
+ "justification": "Routine chain of two standard image constructions and one comparison of coefficients, no insight. Between the one-step plane question 2024-P2-Q6 (L1) and the foot-of-perpendicular chain 2026-P2-Q7 (L3).",
+ "nearest_anchor": "2026-P2-Q7 (L3)",
+ "confidence": "Medium"
+}

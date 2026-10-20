@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "negative integer",
+ "blueprint_concepts": [
+  "Application of dot product",
+  "Application of cross product"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\overrightarrow{a}$ and $\\overrightarrow{b}$ be two vectors of equal magnitude such that $\\overrightarrow{a}+\\overrightarrow{b}=2\\hat{i}+2\\hat{j}+2\\hat{k}$ and $\\overrightarrow{a}\\times\\overrightarrow{b}=6\\hat{i}-6\\hat{j}$. Then the value of $\\overrightarrow{a}\\cdot\\overrightarrow{b}$ is ______."
+ ],
+ "hindi": [
+  "माना $\\overrightarrow{a}$ तथा $\\overrightarrow{b}$ समान परिमाण वाले दो सदिश इस प्रकार हैं कि $\\overrightarrow{a}+\\overrightarrow{b}=2\\hat{i}+2\\hat{j}+2\\hat{k}$ तथा $\\overrightarrow{a}\\times\\overrightarrow{b}=6\\hat{i}-6\\hat{j}$ है। तब $\\overrightarrow{a}\\cdot\\overrightarrow{b}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $\\overrightarrow{s}=\\overrightarrow{a}+\\overrightarrow{b}$, $\\overrightarrow{d}=\\overrightarrow{a}-\\overrightarrow{b}$ (diagonals of the rhombus on $\\overrightarrow{a},\\overrightarrow{b}$)",
+  "$\\overrightarrow{s}\\cdot\\overrightarrow{d}=|\\overrightarrow{a}|^2-|\\overrightarrow{b}|^2=0$ and $\\overrightarrow{s}\\times\\overrightarrow{d}=-2\\,\\overrightarrow{a}\\times\\overrightarrow{b}$",
+  "$\\overrightarrow{s}\\perp\\overrightarrow{d}\\Rightarrow|\\overrightarrow{s}||\\overrightarrow{d}|=2|\\overrightarrow{a}\\times\\overrightarrow{b}|\\Rightarrow 2\\sqrt3\\,|\\overrightarrow{d}|=12\\sqrt2\\Rightarrow|\\overrightarrow{d}|^2=24$",
+  "$\\overrightarrow{a}\\cdot\\overrightarrow{b}=\\dfrac{|\\overrightarrow{s}|^2-|\\overrightarrow{d}|^2}{4}=\\dfrac{12-24}{4}=-3$",
+  "",
+  "Final Answer: -3"
+ ],
+ "solution_full": [
+  "Put $\\overrightarrow{s}=\\overrightarrow{a}+\\overrightarrow{b}=2\\hat{i}+2\\hat{j}+2\\hat{k}$ and $\\overrightarrow{d}=\\overrightarrow{a}-\\overrightarrow{b}$. Since $|\\overrightarrow{a}|=|\\overrightarrow{b}|$, these are the diagonals of a rhombus.",
+  "Dot product: $\\overrightarrow{s}\\cdot\\overrightarrow{d}=|\\overrightarrow{a}|^2-|\\overrightarrow{b}|^2=0$, so the diagonals are perpendicular.",
+  "Cross product: $\\overrightarrow{s}\\times\\overrightarrow{d}=\\overrightarrow{a}\\times\\overrightarrow{a}-\\overrightarrow{a}\\times\\overrightarrow{b}+\\overrightarrow{b}\\times\\overrightarrow{a}-\\overrightarrow{b}\\times\\overrightarrow{b}=-2\\,\\overrightarrow{a}\\times\\overrightarrow{b}$.",
+  "Taking magnitudes, with the angle between $\\overrightarrow{s}$ and $\\overrightarrow{d}$ equal to $\\dfrac{\\pi}{2}$: $|\\overrightarrow{s}||\\overrightarrow{d}|=2|\\overrightarrow{a}\\times\\overrightarrow{b}|=2\\sqrt{36+36}=12\\sqrt2$.",
+  "$|\\overrightarrow{s}|=\\sqrt{12}=2\\sqrt3$, so $|\\overrightarrow{d}|=\\dfrac{12\\sqrt2}{2\\sqrt3}=2\\sqrt6$ and $|\\overrightarrow{d}|^2=24$.",
+  "Also $|\\overrightarrow{s}|^2-|\\overrightarrow{d}|^2=4\\,\\overrightarrow{a}\\cdot\\overrightarrow{b}$, so $\\overrightarrow{a}\\cdot\\overrightarrow{b}=\\dfrac{12-24}{4}=-3$.",
+  "Check by finding the vectors: $\\overrightarrow{d}\\perp\\overrightarrow{s}$ and $\\overrightarrow{s}\\times\\overrightarrow{d}=-12\\hat{i}+12\\hat{j}$ give $\\overrightarrow{d}=\\dfrac{2(\\overrightarrow{s}\\times(\\overrightarrow{a}\\times\\overrightarrow{b}))}{|\\overrightarrow{s}|^2}=2\\hat{i}+2\\hat{j}-4\\hat{k}$, so $\\overrightarrow{a}=2\\hat{i}+2\\hat{j}-\\hat{k}$, $\\overrightarrow{b}=3\\hat{k}$; indeed $|\\overrightarrow{a}|=|\\overrightarrow{b}|=3$, $\\overrightarrow{a}\\times\\overrightarrow{b}=6\\hat{i}-6\\hat{j}$ and $\\overrightarrow{a}\\cdot\\overrightarrow{b}=-3$.",
+  "",
+  "Final Answer: -3"
+ ],
+ "originality_note": "New: two vectors are known only through their sum, their cross product and equal length; the rhombus diagonals s and d are perpendicular, |s||d| = 2|a x b| gives |d|, and a.b = (|s|^2 - |d|^2)/4 (way 4, hidden configuration). Closest known: 'diagonals of a parallelogram are given, find its area' and 'solve r x a = b with r.c given'. Different because: the data are a sum and a cross product, and the equal-length condition is what turns them into perpendicular diagonals.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Application of dot product": "s.d = |a|^2 - |b|^2 = 0 (perpendicular diagonals) and a.b = (|s|^2 - |d|^2)/4.",
+  "Application of cross product": "s x d = -2 a x b and |s x d| = |s||d| for perpendicular vectors give |d|^2 = 24."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Checked consistency: (a+b).(a x b) = 12 - 12 = 0 as required, and the data determine a, b uniquely (a = 2i+2j-k, b = 3k). Changed: No change.",
+ "level": 3,
+ "key_step": "Seeing a+b and a-b as perpendicular rhombus diagonals with |s x d| = 2|a x b|.",
+ "justification": "Two ideas linked (perpendicular diagonals from equal lengths, the cross product of the diagonals), with no options; the direct route of solving for a needs a vector triple product. Comparable to 2021-P1-Q19 (L3) for combining dot and cross data.",
+ "nearest_anchor": "2021-P1-Q19 (L3)",
+ "confidence": "Medium"
+}

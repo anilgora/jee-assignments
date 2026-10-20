@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "english": [
+  "Let $L_1$ be the line through the point $(2,1,2)$ parallel to the vector $\\hat{i}+2\\hat{j}+2\\hat{k}$, and let $L_2$ be the line through the point $(0,-1,-2)$ parallel to the vector $\\hat{i}+2\\hat{j}-2\\hat{k}$. The locus of a point of the $xy$-plane which is equidistant from $L_1$ and $L_2$ meets the $x$-axis only at $(\\alpha,0,0)$ and the $y$-axis only at $(0,\\beta,0)$. Then the value of $\\alpha+\\beta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $L_1$ बिन्दु $(2,1,2)$ से होकर जाने वाली तथा सदिश $\\hat{i}+2\\hat{j}+2\\hat{k}$ के समान्तर रेखा है, तथा $L_2$ बिन्दु $(0,-1,-2)$ से होकर जाने वाली तथा सदिश $\\hat{i}+2\\hat{j}-2\\hat{k}$ के समान्तर रेखा है। $xy$-तल के उस बिन्दु का बिन्दुपथ, जो $L_1$ तथा $L_2$ से समदूरस्थ है, $x$-अक्ष से केवल $(\\alpha,0,0)$ पर तथा $y$-अक्ष से केवल $(0,\\beta,0)$ पर मिलता है। तब $\\alpha+\\beta$ का मान ______ है।"
+ ],
+ "solution": [
+  "For $P(x,y,0)$, distance$^2$ from a line through $A$ along $\\overrightarrow{u}$: $|\\overrightarrow{AP}|^2-\\dfrac{(\\overrightarrow{AP}\\cdot\\overrightarrow{u})^2}{|\\overrightarrow{u}|^2}$",
+  "$L_1$: $\\overrightarrow{AP}=(x-2,y-1,-2)$, $\\overrightarrow{AP}\\cdot\\overrightarrow{u}=x+2y-8$; $L_2$: $\\overrightarrow{BP}=(x,y+1,2)$, $\\overrightarrow{BP}\\cdot\\overrightarrow{v}=x+2y-2$",
+  "$d_1^2-d_2^2=(4-4x)+(-4y)-\\dfrac{(x+2y-8)^2-(x+2y-2)^2}{9}=4-4x-4y+\\dfrac{6(2x+4y-10)}{9}$",
+  "The quadratic terms cancel because $\\overrightarrow{u}$, $\\overrightarrow{v}$ have the same $x$, $y$ components: $d_1^2-d_2^2=\\dfrac{-8x-4y-8}{3}=0\\Rightarrow 2x+y+2=0$",
+  "A straight line in the $xy$-plane: $\\alpha=-1$, $\\beta=-2$, so $\\alpha+\\beta=-3$",
+  "",
+  "Final Answer: -3"
+ ],
+ "solution_full": [
+  "For a point $P$ and a line through $A$ with direction $\\overrightarrow{u}$, the foot of the perpendicular splits $\\overrightarrow{AP}$ into a part along $\\overrightarrow{u}$ of length $\\dfrac{|\\overrightarrow{AP}\\cdot\\overrightarrow{u}|}{|\\overrightarrow{u}|}$ and a perpendicular part, so the distance $d$ satisfies $d^2=|\\overrightarrow{AP}|^2-\\dfrac{(\\overrightarrow{AP}\\cdot\\overrightarrow{u})^2}{|\\overrightarrow{u}|^2}$.",
+  "Let $P(x,y,0)$. For $L_1$: $A(2,1,2)$, $\\overrightarrow{u}=(1,2,2)$, $|\\overrightarrow{u}|^2=9$, $\\overrightarrow{AP}=(x-2,y-1,-2)$, $\\overrightarrow{AP}\\cdot\\overrightarrow{u}=x-2+2y-2-4=x+2y-8$.",
+  "$d_1^2=(x-2)^2+(y-1)^2+4-\\dfrac{(x+2y-8)^2}{9}$.",
+  "For $L_2$: $B(0,-1,-2)$, $\\overrightarrow{v}=(1,2,-2)$, $|\\overrightarrow{v}|^2=9$, $\\overrightarrow{BP}=(x,y+1,2)$, $\\overrightarrow{BP}\\cdot\\overrightarrow{v}=x+2y+2-4=x+2y-2$.",
+  "$d_2^2=x^2+(y+1)^2+4-\\dfrac{(x+2y-2)^2}{9}$.",
+  "$d_1^2-d_2^2=\\left[(x-2)^2-x^2\\right]+\\left[(y-1)^2-(y+1)^2\\right]-\\dfrac{(x+2y-8)^2-(x+2y-2)^2}{9}$.",
+  "$(x-2)^2-x^2=4-4x$, $(y-1)^2-(y+1)^2=-4y$, and $(x+2y-8)^2-(x+2y-2)^2=(-6)(2x+4y-10)$.",
+  "So $d_1^2-d_2^2=4-4x-4y+\\dfrac{6(2x+4y-10)}{9}=\\dfrac{12-12x-12y+4x+8y-20}{3}=\\dfrac{-8x-4y-8}{3}$.",
+  "Equidistance ($d_1=d_2$, equivalently $d_1^2=d_2^2$) gives $2x+y+2=0$: in the $xy$-plane the locus is this straight line. The $x^2$, $y^2$, $xy$ terms cancelled because the directions differ only in the sign of the $z$-component.",
+  "It meets the $x$-axis only at $x=-1$ and the $y$-axis only at $y=-2$, so $\\alpha=-1$, $\\beta=-2$ and $\\alpha+\\beta=-3$.",
+  "",
+  "Final Answer: -3"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: points of a coordinate plane equidistant from two skew lines whose directions are mirror images in that plane; the quadratic parts of the two point-line distances cancel, so the planar locus is a straight line (way 4: hidden symmetry). Closest known: locus of points equidistant from two given points (perpendicular bisector) or from two intersecting lines in a plane. Different because: the lines are skew, the distance to each is a quadratic expression, and the cancellation is what must be discovered.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Locus problems in three dimensions",
+  "Locus based questions"
+ ],
+ "concept_use": {
+  "Locus problems in three dimensions": "The distance of a general point of the xy-plane from each 3D line is written by the projection formula, and the equidistance condition is set up as a locus in space restricted to z = 0.",
+  "Locus based questions": "The equation in x, y simplifies to the straight line 2x + y + 2 = 0, read in the coordinate plane through its intercepts (2D locus)."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Avoided saying in the stem that the locus is a straight line (said only that it meets each axis at one point) so the cancellation is not revealed; both intercepts are unique. Changed: removed 'is a straight line' from an earlier draft.",
+ "level": 3,
+ "key_step": "Writing the squared distance from (x, y, 0) to each line and noticing that the quadratic parts cancel, leaving a straight line.",
+ "justification": "Two ideas linked: the point-to-line distance in space for a general point, and a 2D locus whose linearity depends on a hidden symmetry of the directions; exact algebra with no options. Comparable to the 3D foot-of-perpendicular work of 2026-P2-Q7 (L3).",
+ "nearest_anchor": "2026-P2-Q7 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

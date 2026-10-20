@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Position vector, distance formula, section formula",
+  "Equation of a line"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $L_1$ and $L_2$ be the lines $\\dfrac{x-2}{1}=\\dfrac{y+1}{2}=\\dfrac{z-3}{2}$ and $\\dfrac{x+1}{2}=\\dfrac{y-4}{-1}=\\dfrac{z}{2}$ respectively. Let $P$ be a point on $L_1$ and $Q$ be a point on $L_2$ such that the mid-point of the line segment $PQ$ is $\\left(4,\\dfrac{9}{4},6\\right)$. Then the length of $PQ$ is ______."
+ ],
+ "hindi": [
+  "माना $L_1$ तथा $L_2$ क्रमशः रेखाएँ $\\dfrac{x-2}{1}=\\dfrac{y+1}{2}=\\dfrac{z-3}{2}$ तथा $\\dfrac{x+1}{2}=\\dfrac{y-4}{-1}=\\dfrac{z}{2}$ हैं। माना $L_1$ पर एक बिन्दु $P$ तथा $L_2$ पर एक बिन्दु $Q$ इस प्रकार हैं कि रेखाखण्ड $PQ$ का मध्यबिन्दु $\\left(4,\\dfrac{9}{4},6\\right)$ है। तब $PQ$ की लम्बाई ______ है।"
+ ],
+ "solution": [
+  "$P=(2+s,\\,-1+2s,\\,3+2s)$, $Q=(-1+2t,\\,4-t,\\,2t)$",
+  "Mid-point: $1+s+2t=8$, $3+2s-t=\\dfrac92$, $3+2s+2t=12$",
+  "First and third: $s+2t=7,\\ 2s+2t=9\\Rightarrow s=2,\\ t=\\dfrac52$; second: $3+4-\\dfrac52=\\dfrac92$, consistent",
+  "$P=(4,3,7)$, $Q=\\left(4,\\dfrac32,5\\right)$, $PQ=\\sqrt{0+\\dfrac94+4}=\\dfrac52=2.5$",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "solution_full": [
+  "Writing each symmetric equation equal to a parameter, a general point of $L_1$ is $P=(2+s,\\,-1+2s,\\,3+2s)$ and a general point of $L_2$ is $Q=(-1+2t,\\,4-t,\\,2t)$, $s,t\\in\\mathbb{R}$.",
+  "By the section (mid-point) formula, the mid-point of $PQ$ is $\\left(\\dfrac{1+s+2t}{2},\\dfrac{3+2s-t}{2},\\dfrac{3+2s+2t}{2}\\right)$.",
+  "Equating with $\\left(4,\\dfrac94,6\\right)$: $s+2t=7$, $2s-t=\\dfrac32$, $2s+2t=9$.",
+  "Subtracting the first from the third gives $s=2$; then $t=\\dfrac52$.",
+  "These satisfy the second equation: $2(2)-\\dfrac52=\\dfrac32$. So the three equations are consistent and the solution is unique (the directions of $L_1$, $L_2$ are not parallel).",
+  "$P=(4,3,7)$ and $Q=\\left(-1+5,\\,4-\\dfrac52,\\,5\\right)=\\left(4,\\dfrac32,5\\right)$.",
+  "By the distance formula, $PQ=\\sqrt{(4-4)^2+\\left(3-\\dfrac32\\right)^2+(7-5)^2}=\\sqrt{\\dfrac94+4}=\\sqrt{\\dfrac{25}{4}}=\\dfrac52$.",
+  "",
+  "Final Answer: 2.5"
+ ],
+ "originality_note": "New: a segment with one end on each of two non-intersecting lines is fixed by its mid-point; three mid-point equations in two parameters must be consistent and give the ends (way 3, an object defined by two conditions). Closest known: in two dimensions, 'line through a point bisected between two lines'. Different because: in space the mid-point condition gives an over-determined linear system, and no line through the mid-point is asked for.",
+ "web_check": "not found",
+ "concept_use": {
+  "Position vector, distance formula, section formula": "Mid-point (section) formula for PQ gives three linear equations; the distance formula gives PQ = 2.5.",
+  "Equation of a line": "Converting the symmetric (Cartesian) equations of L1 and L2 to general points with parameters s and t."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Checked that the three mid-point equations in the two parameters are consistent, so P and Q exist, and that they are unique because the lines are not parallel; 'line segment PQ' and the coordinates are explicit. Changed: No change.",
+ "level": 2,
+ "key_step": "Writing general points of the two lines and solving the mid-point equations (checking the third for consistency).",
+ "justification": "Routine chain of standard steps: parametric points, mid-point formula, a linear system and a distance. No insight, so Level 2, like 2026-P2-Q1 (L2) and 2024-P1-Q16 items.",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

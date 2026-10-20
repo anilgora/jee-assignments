@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "english": [
+  "For $\\theta,\\phi\\in\\left(0,\\frac{\\pi}{2}\\right)$, let $\\overrightarrow{u}(\\theta,\\phi)$ denote the unit vector which makes an angle $\\theta$ with the $xy$-plane, has a positive $z$-component, and whose projection on the $xy$-plane makes an angle $\\phi$ with the positive $x$-axis. Let $\\theta_1,\\theta_2,\\phi_1,\\phi_2\\in\\left(0,\\frac{\\pi}{2}\\right)$ be such that $\\tan\\theta_1=\\frac{3}{4}$, $\\tan\\theta_2=\\frac{12}{5}$, $\\tan\\phi_1=\\frac{4}{3}$ and $\\tan\\phi_2=\\frac{7}{24}$. If $\\psi$ is the angle between the vectors $\\overrightarrow{u}(\\theta_1,\\phi_1)$ and $\\overrightarrow{u}(\\theta_2,\\phi_2)$, then the value of $\\cos\\psi$ is ______."
+ ],
+ "hindi": [
+  "$\\theta,\\phi\\in\\left(0,\\frac{\\pi}{2}\\right)$ के लिए, माना कि $\\overrightarrow{u}(\\theta,\\phi)$ वह मात्रक सदिश है जो $xy$-तल से $\\theta$ कोण बनाता है, जिसका $z$-घटक धनात्मक है, तथा $xy$-तल पर जिसका प्रक्षेप धनात्मक $x$-अक्ष से $\\phi$ कोण बनाता है। माना कि $\\theta_1,\\theta_2,\\phi_1,\\phi_2\\in\\left(0,\\frac{\\pi}{2}\\right)$ इस प्रकार हैं कि $\\tan\\theta_1=\\frac{3}{4}$, $\\tan\\theta_2=\\frac{12}{5}$, $\\tan\\phi_1=\\frac{4}{3}$ तथा $\\tan\\phi_2=\\frac{7}{24}$ है। यदि सदिशों $\\overrightarrow{u}(\\theta_1,\\phi_1)$ तथा $\\overrightarrow{u}(\\theta_2,\\phi_2)$ के बीच का कोण $\\psi$ है, तो $\\cos\\psi$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\overrightarrow{u}(\\theta,\\phi)=\\cos\\theta\\cos\\phi\\,\\hat{i}+\\cos\\theta\\sin\\phi\\,\\hat{j}+\\sin\\theta\\,\\hat{k}$ (projection of length $\\cos\\theta$ along angle $\\phi$, height $\\sin\\theta$)",
+  "$\\cos\\psi=\\overrightarrow{u}_1\\cdot\\overrightarrow{u}_2=\\cos\\theta_1\\cos\\theta_2(\\cos\\phi_1\\cos\\phi_2+\\sin\\phi_1\\sin\\phi_2)+\\sin\\theta_1\\sin\\theta_2=\\cos\\theta_1\\cos\\theta_2\\cos(\\phi_1-\\phi_2)+\\sin\\theta_1\\sin\\theta_2$",
+  "$\\cos\\theta_1=\\frac45,\\ \\sin\\theta_1=\\frac35;\\ \\cos\\theta_2=\\frac{5}{13},\\ \\sin\\theta_2=\\frac{12}{13};\\ \\cos\\phi_1=\\frac35,\\ \\sin\\phi_1=\\frac45;\\ \\cos\\phi_2=\\frac{24}{25},\\ \\sin\\phi_2=\\frac{7}{25}$",
+  "$\\cos(\\phi_1-\\phi_2)=\\frac{72}{125}+\\frac{28}{125}=\\frac45$",
+  "$\\cos\\psi=\\frac45\\cdot\\frac{5}{13}\\cdot\\frac45+\\frac35\\cdot\\frac{12}{13}=\\frac{16}{65}+\\frac{36}{65}=\\frac{52}{65}=0.8$",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "solution_full": [
+  "A unit vector making angle $\\theta$ with the $xy$-plane has $z$-component $\\sin\\theta$ (positive here) and a projection of length $\\cos\\theta$ on the $xy$-plane. That projection makes angle $\\phi$ with the $x$-axis, so $\\overrightarrow{u}(\\theta,\\phi)=\\cos\\theta\\cos\\phi\\,\\hat{i}+\\cos\\theta\\sin\\phi\\,\\hat{j}+\\sin\\theta\\,\\hat{k}$; its length is $\\sqrt{\\cos^2\\theta+\\sin^2\\theta}=1$.",
+  "For unit vectors, $\\cos\\psi=\\overrightarrow{u}(\\theta_1,\\phi_1)\\cdot\\overrightarrow{u}(\\theta_2,\\phi_2)=\\cos\\theta_1\\cos\\theta_2\\cos\\phi_1\\cos\\phi_2+\\cos\\theta_1\\cos\\theta_2\\sin\\phi_1\\sin\\phi_2+\\sin\\theta_1\\sin\\theta_2$.",
+  "By the compound-angle formula $\\cos\\phi_1\\cos\\phi_2+\\sin\\phi_1\\sin\\phi_2=\\cos(\\phi_1-\\phi_2)$, so $\\cos\\psi=\\cos\\theta_1\\cos\\theta_2\\cos(\\phi_1-\\phi_2)+\\sin\\theta_1\\sin\\theta_2$.",
+  "All angles are acute, so all ratios are positive: $\\tan\\theta_1=\\frac34\\Rightarrow\\cos\\theta_1=\\frac45,\\ \\sin\\theta_1=\\frac35$; $\\tan\\theta_2=\\frac{12}{5}\\Rightarrow\\cos\\theta_2=\\frac{5}{13},\\ \\sin\\theta_2=\\frac{12}{13}$.",
+  "$\\tan\\phi_1=\\frac43\\Rightarrow\\cos\\phi_1=\\frac35,\\ \\sin\\phi_1=\\frac45$; $\\tan\\phi_2=\\frac{7}{24}\\Rightarrow\\cos\\phi_2=\\frac{24}{25},\\ \\sin\\phi_2=\\frac{7}{25}$.",
+  "$\\cos(\\phi_1-\\phi_2)=\\frac35\\cdot\\frac{24}{25}+\\frac45\\cdot\\frac{7}{25}=\\frac{72+28}{125}=\\frac45$.",
+  "$\\cos\\psi=\\frac45\\cdot\\frac{5}{13}\\cdot\\frac45+\\frac35\\cdot\\frac{12}{13}=\\frac{16}{65}+\\frac{36}{65}=\\frac{52}{65}=\\frac45=0.8$.",
+  "",
+  "Final Answer: 0.8"
+ ],
+ "answer_plan": "decimal between 0 and 1",
+ "originality_note": "New: two directions given by elevation and azimuth (as in lines of sight); the dot product yields the vector form cos(psi) = cos t1 cos t2 cos(p1 - p2) + sin t1 sin t2, and the compound-angle formula evaluates the azimuth difference (way 5). Closest known: proving cos(A - B) by the dot product of two unit vectors in a plane. Different because: the vectors are in space, the plane result appears only as one factor, and four angles given by tangents must be combined.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Vectors applied to prove trigonometric and geometric results",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)"
+ ],
+ "concept_use": {
+  "Vectors applied to prove trigonometric and geometric results": "The dot product of the two unit vectors written in elevation-azimuth form proves the angle formula cos(psi) = cos t1 cos t2 cos(p1-p2) + sin t1 sin t2.",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "cos(p1 - p2) = cos p1 cos p2 + sin p1 sin p2 = 4/5 from the given tangents."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Stated the sign of the z-component and the reference axis for the projection so each vector is unique; all angles restricted to (0, pi/2) so the signs of the ratios are fixed. Changed: replaced an earlier design (unit vectors along the sides of a triangle, a known resultant-of-forces result) by this one.",
+ "level": 2,
+ "key_step": "Writing u(theta, phi) in components and recognising cos(p1-p2) inside the dot product.",
+ "justification": "Routine chain: components of a direction, a dot product, a compound-angle evaluation and four ratio conversions; no insight beyond setting up the vector. Like the routine vector computation of 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}

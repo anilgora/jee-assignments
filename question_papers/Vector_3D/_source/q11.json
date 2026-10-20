@@ -1,0 +1,63 @@
+{
+ "english": [
+  "Let $S_0$ be the sphere $x^2+y^2+z^2=18$ and let $C$ be the circle in which $S_0$ meets the plane $x+2y+2z=9$. Let $L$ be the line $x=-1,\\ y+3=z-2$. There are exactly two spheres each of which contains the circle $C$ and touches the line $L$. Then the radius of the smaller of these two spheres is",
+  "",
+  "(A) $3$",
+  "(B) $\\dfrac{15}{4}$",
+  "(C) $\\dfrac{3\\sqrt{41}}{4}$",
+  "(D) $3\\sqrt{2}$"
+ ],
+ "hindi": [
+  "माना $S_0$ गोला $x^2+y^2+z^2=18$ है तथा $C$ वह वृत्त है जिसमें $S_0$ समतल $x+2y+2z=9$ से मिलता है। माना $L$ रेखा $x=-1,\\ y+3=z-2$ है। ठीक दो गोले ऐसे हैं जिनमें से प्रत्येक वृत्त $C$ को समाहित करता है तथा रेखा $L$ को स्पर्श करता है। तब इन दोनों गोलों में से छोटे गोले की त्रिज्या है",
+  "",
+  "(A) $3$",
+  "(B) $\\dfrac{15}{4}$",
+  "(C) $\\dfrac{3\\sqrt{41}}{4}$",
+  "(D) $3\\sqrt{2}$"
+ ],
+ "solution": [
+  "Distance of $O$ from the plane $=\\dfrac93=3$: $C$ has centre $N(1,2,2)$ (foot of the perpendicular from $O$) and radius $\\sqrt{18-9}=3$",
+  "A sphere containing $C$ has its centre on the normal to the plane through $N$: $K=(1+\\lambda,2+2\\lambda,2+2\\lambda)$, $R^2=9+NK^2=9+9\\lambda^2$",
+  "$L$: point $A(-1,-3,2)$, direction $(0,1,1)$; $\\overrightarrow{AK}=(2+\\lambda,5+2\\lambda,2\\lambda)$, $\\overrightarrow{AK}\\times(0,1,1)=(5,\\,-2-\\lambda,\\,2+\\lambda)$",
+  "Touching $L$: $\\dfrac{25+2(2+\\lambda)^2}{2}=9+9\\lambda^2\\Rightarrow16\\lambda^2-8\\lambda-15=0\\Rightarrow\\lambda=-\\dfrac34$ or $\\dfrac54$",
+  "$R^2=9+\\dfrac{81}{16}=\\dfrac{225}{16}$ or $9+\\dfrac{225}{16}=\\dfrac{369}{16}$; smaller radius $=\\dfrac{15}{4}$",
+  "",
+  "Correct Option: (B)"
+ ],
+ "solution_full": [
+  "The distance of the centre $O$ of $S_0$ from the plane $x+2y+2z=9$ is $\\dfrac{9}{\\sqrt{1+4+4}}=3<3\\sqrt2$, so the plane cuts $S_0$ in a circle.",
+  "The centre of $C$ is the foot $N$ of the perpendicular from $O$ to the plane: $N=\\dfrac{9}{9}(1,2,2)=(1,2,2)$; its radius is $\\sqrt{18-9}=3$.",
+  "Every point of $C$ is at distance $3$ from $N$ in the plane, so a point $K$ is equidistant from all points of $C$ exactly when $K$ lies on the line through $N$ perpendicular to the plane. So the centre of a sphere containing $C$ is $K=(1+\\lambda,\\,2+2\\lambda,\\,2+2\\lambda)$, and its radius satisfies $R^2=NK^2+3^2=9\\lambda^2+9$.",
+  "The line $L$ passes through $A(-1,-3,2)$ with direction $\\overrightarrow{e}=(0,1,1)$, $|\\overrightarrow{e}|=\\sqrt2$.",
+  "$\\overrightarrow{AK}=(2+\\lambda,\\,5+2\\lambda,\\,2\\lambda)$ and $\\overrightarrow{AK}\\times\\overrightarrow{e}=\\left((5+2\\lambda)-2\\lambda,\\ -(2+\\lambda),\\ 2+\\lambda\\right)=(5,\\,-2-\\lambda,\\,2+\\lambda)$.",
+  "Distance of $K$ from $L$: $d^2=\\dfrac{25+2(2+\\lambda)^2}{2}$.",
+  "The sphere touches $L$ when $d=R$: $25+2(4+4\\lambda+\\lambda^2)=18+18\\lambda^2$, i.e. $16\\lambda^2-8\\lambda-15=0$, so $\\lambda=\\dfrac{8\\pm32}{32}$: $\\lambda=\\dfrac54$ or $\\lambda=-\\dfrac34$.",
+  "$\\lambda=-\\dfrac34$: $R^2=9+9\\cdot\\dfrac{9}{16}=\\dfrac{225}{16}$, $R=\\dfrac{15}{4}$, centre $\\left(\\dfrac14,\\dfrac12,\\dfrac12\\right)$.",
+  "$\\lambda=\\dfrac54$: $R^2=9+9\\cdot\\dfrac{25}{16}=\\dfrac{369}{16}$, $R=\\dfrac{3\\sqrt{41}}{4}$. ($S_0$ itself, $\\lambda=-1$, does not touch $L$: its centre is at distance $\\sqrt{\\frac{27}{2}}$ from $L$, not $3\\sqrt2$.)",
+  "The smaller radius is $\\dfrac{15}{4}$.",
+  "",
+  "Correct Option: (B)"
+ ],
+ "originality_note": "New: the spheres through a fixed circle form a one-parameter family with centres on the normal through the circle centre, and the member is fixed by tangency to a line (way 3: a family with a second condition). Closest known: the sphere through the circle S + lambda P = 0 that touches a given plane, or passes through a point. Different because: tangency to a line (point-line distance) replaces tangency to a plane, giving a quadratic with two genuine spheres to compare.",
+ "web_check": "not found",
+ "concept_use": {
+  "Sphere in three dimensions": "The circle C (centre N, radius 3) as a section of S_0, and every sphere through C has centre K on the normal at N with R^2 = 9 + NK^2.",
+  "Line and a plane": "The foot of the perpendicular from O to the plane gives N, the centre line is the normal to the plane through N, and the tangency condition is the distance of K from the line L."
+ },
+ "stem_review": "Read as a student: every point, line and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and numpy, is unique and equals the Answer Plan; the options have one form and exactly one is correct. Checked that the plane cuts S_0, that S_0 itself does not touch L (so exactly two spheres), and that 'smaller' picks one of them. Changed: altered the sphere from radius 5 to radius 3 sqrt 2 so that no option equals the radius of S_0 by coincidence.",
+ "level": 3,
+ "key_step": "Recognising that the centres of spheres through C lie on the normal at N with R^2 = 9 + NK^2, then the tangency to L as a point-line distance.",
+ "justification": "Two linked ideas (family of spheres through a circle, distance of a point from a line) and a quadratic; typical average Advanced 3D work. Comparable with 2023-P1-Q16 (L3) and 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2023-P1-Q16 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "type": "SCQ",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "Option B",
+ "blueprint_concepts": [
+  "Sphere in three dimensions",
+  "Line and a plane"
+ ],
+ "eq_relation": false
+}

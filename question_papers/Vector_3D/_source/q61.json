@@ -1,0 +1,52 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "english": [
+  "Let $A(1,-1,-2)$, $B(3,1,-4)$, $C(-2,4,-1)$ and $D(0,-3,-1)$ be the vertices of a tetrahedron. Let $M$ be the mid-point of the edge $AB$, let $N$ be the point on the edge $AC$ such that $AN:NC=1:2$, and let $G$ be the centroid of the triangle $BCD$. The plane through $M$, $N$ and $D$ meets the line $AG$ at the point $X(\\alpha,\\beta,\\gamma)$. Then the value of $\\alpha+\\beta+\\gamma$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A(1,-1,-2)$, $B(3,1,-4)$, $C(-2,4,-1)$ तथा $D(0,-3,-1)$ एक चतुष्फलक के शीर्ष हैं। माना कि $M$ कोर $AB$ का मध्य-बिन्दु है, $N$ कोर $AC$ पर वह बिन्दु है जिसके लिए $AN:NC=1:2$ है, तथा $G$ त्रिभुज $BCD$ का केन्द्रक है। बिन्दुओं $M$, $N$ तथा $D$ से होकर जाने वाला तल रेखा $AG$ से बिन्दु $X(\\alpha,\\beta,\\gamma)$ पर मिलता है। तब $\\alpha+\\beta+\\gamma$ का मान ______ है।"
+ ],
+ "solution": [
+  "Section formulae: $M=(2,0,-3)$, $N=A+\\dfrac13(C-A)=\\left(0,\\dfrac23,-\\dfrac53\\right)$, $G=\\left(\\dfrac13,\\dfrac23,-2\\right)$",
+  "$\\overrightarrow{MN}=\\left(-2,\\dfrac23,\\dfrac43\\right)$, $\\overrightarrow{MD}=(-2,-3,2)$, $\\overrightarrow{MN}\\times\\overrightarrow{MD}=\\left(\\dfrac{16}{3},\\dfrac43,\\dfrac{22}{3}\\right)\\parallel(8,2,11)$",
+  "Plane through $M$: $8x+2y+11z+17=0$ (check $D$: $0-6-11+17=0$)",
+  "Line $AG$: $\\left(1-\\dfrac{2t}{3},\\,-1+\\dfrac{5t}{3},\\,-2\\right)$; substituting: $8-\\dfrac{16t}{3}-2+\\dfrac{10t}{3}-22+17=1-2t=0\\Rightarrow t=\\dfrac12$",
+  "$X=\\left(\\dfrac23,-\\dfrac16,-2\\right)$, so $\\alpha+\\beta+\\gamma=\\dfrac{4-1-12}{6}=-1.5$",
+  "",
+  "Final Answer: -1.5"
+ ],
+ "solution_full": [
+  "Mid-point formula: $M=\\left(\\dfrac{1+3}{2},\\dfrac{-1+1}{2},\\dfrac{-2-4}{2}\\right)=(2,0,-3)$.",
+  "Section formula with $AN:NC=1:2$: $N=\\dfrac{2A+C}{3}=\\left(\\dfrac{2-2}{3},\\dfrac{-2+4}{3},\\dfrac{-4-1}{3}\\right)=\\left(0,\\dfrac23,-\\dfrac53\\right)$.",
+  "Centroid: $G=\\dfrac{B+C+D}{3}=\\left(\\dfrac13,\\dfrac23,-2\\right)$.",
+  "Normal of the plane $MND$: $\\overrightarrow{MN}=\\left(-2,\\dfrac23,\\dfrac43\\right)$, $\\overrightarrow{MD}=(-2,-3,2)$, and $\\overrightarrow{MN}\\times\\overrightarrow{MD}=\\left(\\dfrac23\\cdot2-\\dfrac43(-3),\\ \\dfrac43(-2)-(-2)(2),\\ (-2)(-3)-\\dfrac23(-2)\\right)=\\left(\\dfrac{16}{3},\\dfrac43,\\dfrac{22}{3}\\right)$, parallel to $(8,2,11)$.",
+  "Plane through $M(2,0,-3)$: $8(x-2)+2y+11(z+3)=0$, that is $8x+2y+11z+17=0$. Check: $N$ gives $0+\\dfrac43-\\dfrac{55}{3}+17=0$ and $D$ gives $0-6-11+17=0$.",
+  "$G-A=\\left(-\\dfrac23,\\dfrac53,0\\right)$, so the line $AG$ is $\\left(1-\\dfrac{2t}{3},\\,-1+\\dfrac{5t}{3},\\,-2\\right)$, $t\\in\\mathbb{R}$.",
+  "Substituting in the plane: $8-\\dfrac{16t}{3}-2+\\dfrac{10t}{3}-22+17=1-2t=0$, so $t=\\dfrac12$ (the plane meets $AG$ at its mid-point).",
+  "$X=\\left(1-\\dfrac13,\\,-1+\\dfrac56,\\,-2\\right)=\\left(\\dfrac23,-\\dfrac16,-2\\right)$.",
+  "$\\alpha+\\beta+\\gamma=\\dfrac23-\\dfrac16-2=\\dfrac{4-1-12}{6}=-\\dfrac96=-1.5$.",
+  "",
+  "Final Answer: -1.5"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a cutting plane of a tetrahedron through a mid-point, a trisection point and a vertex meets the median AG of the tetrahedron; coordinates of three section points, a plane through them and its intersection with the median (way 5). Closest known: ratio in which a plane divides a segment joining two given points. Different because: both the plane and the line are built from section points of the tetrahedron, and the intersection lands at the mid-point of AG, which a vector argument also shows.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Coordinates in space; distance and section formulae",
+  "Plane"
+ ],
+ "concept_use": {
+  "Coordinates in space; distance and section formulae": "Mid-point, internal-division (1:2) and centroid formulae give M, N, G; the final coordinates of X come from the line AG at t = 1/2.",
+  "Plane": "Normal by the cross product of MN and MD, equation of the plane through three points, and its intersection with the line AG."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Specified which point divides AC (AN:NC = 1:2, measured from A) and which line (AG, A to the centroid of BCD); the plane meets AG at one point since the equation in t has a non-zero coefficient. Changed: No change.",
+ "level": 3,
+ "key_step": "Building the plane through three section points (cross product with fractional coordinates) and intersecting it with the median AG.",
+ "justification": "Two ideas linked (section points of a tetrahedron, then plane through three points and line-plane intersection) with fractional arithmetic and no options. Matches the plane-construction demand of 2026-P1-Q6 (L3).",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

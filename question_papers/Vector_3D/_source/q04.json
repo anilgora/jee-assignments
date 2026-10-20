@@ -1,0 +1,59 @@
+{
+ "english": [
+  "Let $A(1,0,1)$, $B(-1,1,2)$ and $C(2,2,1)$ be three points, and let $D$ be a point of the parabola $y=x^2$ lying in the plane $z=0$. As $D$ varies on this parabola, the least value of the volume of the tetrahedron $ABCD$ is",
+  "",
+  "(A) $6$",
+  "(B) $\\dfrac{7}{6}$",
+  "(C) $\\dfrac{1}{2}$",
+  "(D) $1$"
+ ],
+ "hindi": [
+  "माना $A(1,0,1)$, $B(-1,1,2)$ तथा $C(2,2,1)$ तीन बिन्दु हैं, तथा $D$ समतल $z=0$ में स्थित परवलय $y=x^2$ का एक बिन्दु है। जब $D$ इस परवलय पर गति करता है, तब चतुष्फलक $ABCD$ के आयतन का न्यूनतम मान है",
+  "",
+  "(A) $6$",
+  "(B) $\\dfrac{7}{6}$",
+  "(C) $\\dfrac{1}{2}$",
+  "(D) $1$"
+ ],
+ "solution": [
+  "$D=(t,t^2,0)$: $\\overrightarrow{AB}=(-2,1,1)$, $\\overrightarrow{AC}=(1,2,0)$, $\\overrightarrow{AD}=(t-1,t^2,-1)$",
+  "$\\left[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}\\right]=\\begin{vmatrix}-2&1&1\\\\1&2&0\\\\t-1&t^2&-1\\end{vmatrix}=4+1+(t^2-2t+2)=t^2-2t+7$",
+  "$t^2-2t+7=(t-1)^2+6>0$, so $ABCD$ is never degenerate",
+  "$V=\\dfrac16\\left[(t-1)^2+6\\right]\\ge1$, with equality at $t=1$, $D=(1,1,0)$",
+  "",
+  "Correct Option: (D)"
+ ],
+ "solution_full": [
+  "A point of the parabola $y=x^2$ in the plane $z=0$ is $D=(t,t^2,0)$, $t\\in\\mathbb{R}$.",
+  "Edges from $A$: $\\overrightarrow{AB}=(-2,1,1)$, $\\overrightarrow{AC}=(1,2,0)$, $\\overrightarrow{AD}=(t-1,\\,t^2,\\,-1)$.",
+  "The volume of the tetrahedron is $V=\\dfrac16\\left|\\left[\\overrightarrow{AB}\\ \\overrightarrow{AC}\\ \\overrightarrow{AD}\\right]\\right|$.",
+  "Expanding along the first row: $\\begin{vmatrix}-2&1&1\\\\1&2&0\\\\t-1&t^2&-1\\end{vmatrix}=-2(-2-0)-1(-1-0)+1\\left(t^2-2(t-1)\\right)=4+1+t^2-2t+2=t^2-2t+7$.",
+  "Completing the square, $t^2-2t+7=(t-1)^2+6\\ge6$, so the scalar triple product is always positive: $D$ never lies in the plane $ABC$.",
+  "Hence $V(t)=\\dfrac{(t-1)^2+6}{6}$, which is least when $t=1$, that is, at $D=(1,1,0)$, and the least value is $\\dfrac66=1$.",
+  "(Option (B) is the volume at $t=0$; option (A) forgets the factor $\\dfrac16$.)",
+  "",
+  "Correct Option: (D)"
+ ],
+ "originality_note": "New: one vertex of the tetrahedron runs along a parabola, so the scalar triple product becomes a quadratic in the parameter whose minimum gives the least volume (way 2: a function of a moving point). Closest known: the volume of a tetrahedron with four given vertices, or a parameter fixed by a given volume. Different because: the volume is optimised over a curve and the non-degeneracy of every position has to be seen.",
+ "web_check": "not found",
+ "concept_use": {
+  "Questions based on tetrahedron": "Volume of tetrahedron ABCD = one sixth of the absolute triple product, minimised over the moving vertex D.",
+  "Application of Scalar triple product": "The triple product [AB AC AD] is computed as a determinant and equals t^2-2t+7, which is positive, so the vertices are never coplanar."
+ },
+ "stem_review": "Read as a student: every point, line and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and numpy, is unique and equals the Answer Plan; the options have one form and exactly one is correct. Specified that the parabola lies in the plane z=0, so D=(t,t^2,0). Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the triple product as the quadratic (t-1)^2+6 and minimising it.",
+ "justification": "A routine chain: parametrise D, a 3x3 determinant, completing the square. No unfamiliar idea. Slightly above the direct triple-product items 2024-P1-Q12 (L1) because of the optimisation step; like 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2024-P1-Q12 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "type": "SCQ",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "Option D",
+ "blueprint_concepts": [
+  "Questions based on tetrahedron",
+  "Application of Scalar triple product"
+ ],
+ "eq_relation": false
+}

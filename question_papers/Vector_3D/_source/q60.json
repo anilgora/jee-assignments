@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "english": [
+  "Let $A(6,-2,6)$, $B(-4,-2,1)$, $C(-4,3,-3)$ and $D(-3,-4,5)$ be four points in space. Let $P$ be the point on the line $AB$ which is equidistant from $C$ and $D$. If $\\overrightarrow{AP}=\\lambda\\,\\overrightarrow{PB}$, then the value of $\\lambda$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A(6,-2,6)$, $B(-4,-2,1)$, $C(-4,3,-3)$ तथा $D(-3,-4,5)$ आकाश में चार बिन्दु हैं। माना कि $P$ रेखा $AB$ पर वह बिन्दु है जो $C$ तथा $D$ से समदूरस्थ है। यदि $\\overrightarrow{AP}=\\lambda\\,\\overrightarrow{PB}$ है, तो $\\lambda$ का मान ______ है।"
+ ],
+ "solution": [
+  "Point of line $AB$: $P=A+t(B-A)=(6-10t,\\,-2,\\,6-5t)$",
+  "$PC^2=PD^2$: $(10-10t)^2+25+(9-5t)^2=(9-10t)^2+4+(1-5t)^2$",
+  "$\\Rightarrow 206-290t+125t^2=86-190t+125t^2\\Rightarrow t=\\dfrac65$, so $P=(-6,-2,0)$",
+  "Section formula: $P=\\dfrac{A+\\lambda B}{1+\\lambda}$ gives $t=\\dfrac{\\lambda}{1+\\lambda}\\Rightarrow\\lambda=\\dfrac{t}{1-t}=-6$ (external division)",
+  "Check: $\\overrightarrow{AP}=(-12,0,-6)=-6(2,0,1)=-6\\,\\overrightarrow{PB}$",
+  "",
+  "Final Answer: -6"
+ ],
+ "solution_full": [
+  "Every point of the line $AB$ is $P=A+t(B-A)$ with $B-A=(-10,0,-5)$, so $P=(6-10t,\\,-2,\\,6-5t)$.",
+  "$P-C=(10-10t,\\,-5,\\,9-5t)$ and $P-D=(9-10t,\\,2,\\,1-5t)$.",
+  "By the distance formula, $PC^2=(10-10t)^2+25+(9-5t)^2=100-200t+100t^2+25+81-90t+25t^2=206-290t+125t^2$.",
+  "$PD^2=(9-10t)^2+4+(1-5t)^2=81-180t+100t^2+4+1-10t+25t^2=86-190t+125t^2$.",
+  "$PC^2=PD^2$: the quadratic terms cancel and $206-290t=86-190t$, so $t=\\dfrac{120}{100}=\\dfrac65$. Hence $P=(-6,-2,0)$, a unique point.",
+  "$\\overrightarrow{AP}=\\lambda\\overrightarrow{PB}$ means $P=\\dfrac{A+\\lambda B}{1+\\lambda}$ (section formula), that is $P=A+\\dfrac{\\lambda}{1+\\lambda}(B-A)$, so $\\dfrac{\\lambda}{1+\\lambda}=\\dfrac65$, giving $5\\lambda=6+6\\lambda$ and $\\lambda=-6$.",
+  "Check: $\\overrightarrow{AP}=(-12,0,-6)$ and $\\overrightarrow{PB}=(2,0,1)$, so $\\overrightarrow{AP}=-6\\,\\overrightarrow{PB}$; $P$ divides $AB$ externally, beyond $B$. Also $PC^2=4+25+9=38=9+4+25=PD^2$.",
+  "",
+  "Final Answer: -6"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the line AB is cut by the condition PC = PD; the quadratic terms of the two distance formulas cancel to give the parameter, which the section formula turns into a signed ratio that comes out external (way 5). Closest known: ratio in which a coordinate plane divides a segment. Different because: the dividing set is given only as an equidistance condition, and the answer is the signed ratio of an external division.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Coordinates in space; distance and section formulae"
+ ],
+ "concept_use": {
+  "Coordinates in space; distance and section formulae": "The distance formula writes PC^2 = PD^2 for a general point of AB, and the section formula P = (A + lambda B)/(1 + lambda) converts the parameter t = 6/5 into lambda = -6."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Wrote the ratio as the vector relation AP = lambda PB so the sign convention is unambiguous; P exists and is unique because the equation in t is linear with non-zero coefficient. Changed: No change.",
+ "level": 2,
+ "key_step": "Equating squared distances from a general point of AB, where the t^2 terms cancel, then converting t to the signed section ratio.",
+ "justification": "Routine chain of distance formula, a linear equation and the section formula; the only trap is the sign of an external division. Above the direct section checks of 2023-P2-Q4 (L1) because of the chain and the numerical format.",
+ "nearest_anchor": "2023-P2-Q4 (L1)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

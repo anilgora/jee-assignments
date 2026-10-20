@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Basic properties of a vector",
+  "Algebraic operations on a vector"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Consider the vectors $\\overrightarrow{a}=\\hat{i}+2\\hat{j}+2\\hat{k}$, $\\overrightarrow{b}=2\\hat{i}-2\\hat{j}+\\hat{k}$ and $\\overrightarrow{c}=-2\\hat{i}-\\hat{j}+2\\hat{k}$. A particle starts from the origin $O$ and makes five successive straight-line moves. For $k=1,2,3,4,5$, in the $k$-th move it travels a distance of $k$ units in the direction of $\\overrightarrow{a}$, $\\overrightarrow{b}$, $\\overrightarrow{c}$, $\\overrightarrow{a}$, $\\overrightarrow{b}$ respectively. If $P$ is the final position of the particle, then the value of $OP^2$ is ______."
+ ],
+ "hindi": [
+  "सदिशों $\\overrightarrow{a}=\\hat{i}+2\\hat{j}+2\\hat{k}$, $\\overrightarrow{b}=2\\hat{i}-2\\hat{j}+\\hat{k}$ तथा $\\overrightarrow{c}=-2\\hat{i}-\\hat{j}+2\\hat{k}$ पर विचार कीजिए। एक कण मूलबिन्दु $O$ से चलना प्रारम्भ करता है तथा क्रमागत पाँच सरल रेखीय चालें चलता है। $k=1,2,3,4,5$ के लिए, $k$-वीं चाल में वह क्रमशः $\\overrightarrow{a}$, $\\overrightarrow{b}$, $\\overrightarrow{c}$, $\\overrightarrow{a}$, $\\overrightarrow{b}$ की दिशा में $k$ इकाई की दूरी तय करता है। यदि $P$ कण की अन्तिम स्थिति है, तो $OP^2$ का मान ______ है।"
+ ],
+ "solution": [
+  "$|\\overrightarrow{a}|=|\\overrightarrow{b}|=|\\overrightarrow{c}|=3$, so a move of $k$ units along $\\overrightarrow{v}$ is $k\\hat{v}=\\dfrac{k}{3}\\overrightarrow{v}$",
+  "$\\overrightarrow{OP}=\\dfrac{(1+4)\\overrightarrow{a}+(2+5)\\overrightarrow{b}+3\\overrightarrow{c}}{3}=\\dfrac{5\\overrightarrow{a}+7\\overrightarrow{b}+3\\overrightarrow{c}}{3}$",
+  "$5\\overrightarrow{a}+7\\overrightarrow{b}+3\\overrightarrow{c}=(5+14-6)\\hat{i}+(10-14-3)\\hat{j}+(10+7+6)\\hat{k}=13\\hat{i}-7\\hat{j}+23\\hat{k}$",
+  "$OP^2=\\dfrac{169+49+529}{9}=\\dfrac{747}{9}=83$",
+  "",
+  "Final Answer: 83"
+ ],
+ "solution_full": [
+  "Each given vector has magnitude $3$: $|\\overrightarrow{a}|=\\sqrt{1+4+4}=3$, $|\\overrightarrow{b}|=\\sqrt{4+4+1}=3$, $|\\overrightarrow{c}|=\\sqrt{4+1+4}=3$.",
+  "A move of $k$ units in the direction of $\\overrightarrow{v}$ is the displacement $k\\hat{v}=\\dfrac{k}{|\\overrightarrow{v}|}\\overrightarrow{v}=\\dfrac{k}{3}\\overrightarrow{v}$.",
+  "The five displacements are $\\dfrac13\\overrightarrow{a}$, $\\dfrac23\\overrightarrow{b}$, $\\dfrac33\\overrightarrow{c}$, $\\dfrac43\\overrightarrow{a}$, $\\dfrac53\\overrightarrow{b}$.",
+  "Adding (vector addition is commutative and associative): $\\overrightarrow{OP}=\\dfrac{5\\overrightarrow{a}+7\\overrightarrow{b}+3\\overrightarrow{c}}{3}$.",
+  "$5\\overrightarrow{a}=5\\hat{i}+10\\hat{j}+10\\hat{k}$, $7\\overrightarrow{b}=14\\hat{i}-14\\hat{j}+7\\hat{k}$, $3\\overrightarrow{c}=-6\\hat{i}-3\\hat{j}+6\\hat{k}$.",
+  "Sum $=13\\hat{i}-7\\hat{j}+23\\hat{k}$, so $\\overrightarrow{OP}=\\dfrac{13}{3}\\hat{i}-\\dfrac{7}{3}\\hat{j}+\\dfrac{23}{3}\\hat{k}$.",
+  "$OP^2=\\dfrac{13^2+7^2+23^2}{9}=\\dfrac{169+49+529}{9}=\\dfrac{747}{9}=83$.",
+  "(Check: $\\overrightarrow{a},\\overrightarrow{b},\\overrightarrow{c}$ are mutually perpendicular, so $OP^2=5^2+7^2+3^2=83$ as well.)",
+  "",
+  "Final Answer: 83"
+ ],
+ "originality_note": "New: a walk whose step lengths grow 1,2,3,4,5 while the directions cycle through three non-unit vectors; the solver must normalise, group the steps by direction and add (way 1, a repeated process). The three vectors are hidden mutually perpendicular vectors of equal length, which makes the answer clean. Closest known: 'resultant of displacements' exercises. Different because: the cyclic directions with growing lengths must be grouped before adding.",
+ "web_check": "not found",
+ "concept_use": {
+  "Basic properties of a vector": "Magnitudes |a| = |b| = |c| = 3 and the unit vectors a/3, b/3, c/3 give each move's displacement; |OP|^2 from the components.",
+  "Algebraic operations on a vector": "Scalar multiples k a/3 and the sum of five displacements, grouped as (5a + 7b + 3c)/3."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Made the assignment of direction to each move explicit ('for k = 1,...,5 ... respectively') and stated that every move is a straight line. Changed: added 'straight-line'.",
+ "level": 2,
+ "key_step": "Normalising the direction vectors and grouping the five displacements as (5a + 7b + 3c)/3.",
+ "justification": "Routine chain: unit vectors, scalar multiples, grouping and addition, then a magnitude. Three or more routine steps with no insight, so Level 2, like 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "answer_plan": "positive 3-digit integer",
+ "blueprint_concepts": [
+  "Questions based on parallelopiped",
+  "Questions based on tetrahedron"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $ABCDEFGH$ be a parallelepiped in which $ABCD$ is a face and $AE$, $BF$, $CG$, $DH$ are edges, where $A=(1,0,2)$, $B=(7,1,2)$, $D=(2,7,1)$ and $E=(2,2,10)$. Then the volume of the tetrahedron $ACFH$ is ______."
+ ],
+ "hindi": [
+  "माना कि $ABCDEFGH$ एक समान्तर षट्फलक है जिसमें $ABCD$ एक फलक है तथा $AE$, $BF$, $CG$, $DH$ इसकी कोरें हैं, जहाँ $A=(1,0,2)$, $B=(7,1,2)$, $D=(2,7,1)$ तथा $E=(2,2,10)$ हैं। तब चतुष्फलक $ACFH$ का आयतन ______ है।"
+ ],
+ "solution": [
+  "$\\overrightarrow{AB}=(6,1,0)$, $\\overrightarrow{AD}=(1,7,-1)$, $\\overrightarrow{AE}=(1,2,8)$",
+  "$C=B+D-A=(8,8,1)$, $F=B+\\overrightarrow{AE}=(8,3,10)$, $H=D+\\overrightarrow{AE}=(3,9,9)$",
+  "$\\overrightarrow{AC}=(7,8,-1)$, $\\overrightarrow{AF}=(7,3,8)$, $\\overrightarrow{AH}=(2,9,7)$",
+  "$$\\begin{vmatrix}7&8&-1\\\\7&3&8\\\\2&9&7\\end{vmatrix}=7(-51)-8(33)-(57)=-678$$",
+  "Volume $=\\dfrac{678}{6}=113$ (one third of the parallelepiped's volume $339$)",
+  "",
+  "Final Answer: 113"
+ ],
+ "solution_full": [
+  "Coterminous edges at $A$: $\\overrightarrow{a}=\\overrightarrow{AB}=(6,1,0)$, $\\overrightarrow{b}=\\overrightarrow{AD}=(1,7,-1)$, $\\overrightarrow{c}=\\overrightarrow{AE}=(1,2,8)$.",
+  "$ABCD$ is a parallelogram, so $C=B+D-A=(8,8,1)$. The edges $BF$ and $DH$ are equal and parallel to $AE$, so $F=B+\\overrightarrow{AE}=(8,3,10)$ and $H=D+\\overrightarrow{AE}=(3,9,9)$.",
+  "$\\overrightarrow{AC}=\\overrightarrow{a}+\\overrightarrow{b}=(7,8,-1)$, $\\overrightarrow{AF}=\\overrightarrow{a}+\\overrightarrow{c}=(7,3,8)$, $\\overrightarrow{AH}=\\overrightarrow{b}+\\overrightarrow{c}=(2,9,7)$.",
+  "Volume of tetrahedron $ACFH=\\dfrac16\\left|[\\overrightarrow{AC}\\ \\overrightarrow{AF}\\ \\overrightarrow{AH}]\\right|$, with",
+  "$$[\\overrightarrow{AC}\\ \\overrightarrow{AF}\\ \\overrightarrow{AH}]=\\begin{vmatrix}7&8&-1\\\\7&3&8\\\\2&9&7\\end{vmatrix}=7(21-72)-8(49-16)+(-1)(63-6)=-357-264-57=-678.$$",
+  "So the volume is $\\dfrac{678}{6}=113$.",
+  "Check: $[\\overrightarrow{a}+\\overrightarrow{b}\\ \\ \\overrightarrow{a}+\\overrightarrow{c}\\ \\ \\overrightarrow{b}+\\overrightarrow{c}]=-2[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]$, and $[\\overrightarrow{a}\\ \\overrightarrow{b}\\ \\overrightarrow{c}]=6(56+2)-1(8+1)+0=339$, so the tetrahedron has one third of the parallelepiped's volume: $\\dfrac{339}{3}=113$.",
+  "",
+  "Final Answer: 113"
+ ],
+ "originality_note": "New: the tetrahedron on four mutually non-adjacent vertices of an oblique parallelepiped given by four vertices, whose volume is one third of the parallelepiped (way 4). Closest known: the regular tetrahedron inside a cube with one third of its volume (a known geometric fact). Different because: the parallelepiped is oblique and given only by four vertices, so the other vertices must be built from the face and edge structure before the volume is found.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Questions based on parallelopiped": "Vertices C, F, H from the face ABCD and the parallel edges AE, BF, DH; the parallelepiped volume 339 in the check.",
+  "Questions based on tetrahedron": "Volume of tetrahedron ACFH as one sixth of the box product of AC, AF, AH."
+ },
+ "stem_review": "Read as a student: every vertex, vector and parameter is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy, is unique and equals the Answer Plan. The labelling (ABCD a face, AE, BF, CG, DH edges) fixes every vertex uniquely. Changed: no change.",
+ "level": 2,
+ "key_step": "Locating C, F, H from the parallelepiped structure, then a 3 x 3 box product.",
+ "justification": "Routine: build three vertices, one determinant, divide by 6 (or use the one-third relation). Several standard steps, no insight; like 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P2-Q1 (L2)",
+ "confidence": "High"
+}

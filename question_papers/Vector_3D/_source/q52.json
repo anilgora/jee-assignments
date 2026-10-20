@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Vector Equation",
+  "Application of Vector triple product"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\overrightarrow{a}=\\hat{i}+\\hat{k}$ and let $\\overrightarrow{r}$ be a vector satisfying $\\overrightarrow{r}\\times\\left(\\overrightarrow{r}\\times\\overrightarrow{a}\\right)=-5\\hat{i}-7\\hat{j}+2\\hat{k}$. Then the value of $\\left|\\overrightarrow{r}\\right|^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\overrightarrow{a}=\\hat{i}+\\hat{k}$ है तथा $\\overrightarrow{r}$ एक ऐसा सदिश है जो $\\overrightarrow{r}\\times\\left(\\overrightarrow{r}\\times\\overrightarrow{a}\\right)=-5\\hat{i}-7\\hat{j}+2\\hat{k}$ को संतुष्ट करता है। तब $\\left|\\overrightarrow{r}\\right|^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $\\overrightarrow{c}=-5\\hat{i}-7\\hat{j}+2\\hat{k}$, $s=|\\overrightarrow{r}|^2$, $m=\\overrightarrow{r}\\cdot\\overrightarrow{a}$",
+  "Vector triple product: $\\overrightarrow{r}\\times(\\overrightarrow{r}\\times\\overrightarrow{a})=m\\overrightarrow{r}-s\\overrightarrow{a}=\\overrightarrow{c}$",
+  "Dot with $\\overrightarrow{a}$: $m^2-2s=\\overrightarrow{a}\\cdot\\overrightarrow{c}=-3$ ($|\\overrightarrow{a}|^2=2$)",
+  "Dot with $\\overrightarrow{r}$: $ms-sm=\\overrightarrow{r}\\cdot\\overrightarrow{c}\\Rightarrow\\overrightarrow{r}\\cdot\\overrightarrow{c}=0$",
+  "$|\\overrightarrow{c}|^2=(m\\overrightarrow{r}-s\\overrightarrow{a})\\cdot\\overrightarrow{c}=-s(\\overrightarrow{a}\\cdot\\overrightarrow{c})=3s$, and $|\\overrightarrow{c}|^2=25+49+4=78$",
+  "$\\Rightarrow s=26$ (indeed $m^2=49$, $\\overrightarrow{r}=\\pm(3\\hat{i}-\\hat{j}+4\\hat{k})$)",
+  "",
+  "Final Answer: 26"
+ ],
+ "solution_full": [
+  "Write $\\overrightarrow{c}=-5\\hat{i}-7\\hat{j}+2\\hat{k}$ and put $s=|\\overrightarrow{r}|^2$, $m=\\overrightarrow{r}\\cdot\\overrightarrow{a}$. Here $|\\overrightarrow{a}|^2=2$ and $\\overrightarrow{a}\\cdot\\overrightarrow{c}=-5+0+2=-3$.",
+  "By the vector triple product, $\\overrightarrow{r}\\times(\\overrightarrow{r}\\times\\overrightarrow{a})=(\\overrightarrow{r}\\cdot\\overrightarrow{a})\\overrightarrow{r}-(\\overrightarrow{r}\\cdot\\overrightarrow{r})\\overrightarrow{a}$, so the equation is $m\\overrightarrow{r}-s\\overrightarrow{a}=\\overrightarrow{c}$.",
+  "The equation is not linear in $\\overrightarrow{r}$, so instead of components use dot products.",
+  "Dot with $\\overrightarrow{r}$: $m s-s m=\\overrightarrow{r}\\cdot\\overrightarrow{c}$, so $\\overrightarrow{r}\\cdot\\overrightarrow{c}=0$ (as expected, since $\\overrightarrow{r}\\times(\\cdots)$ is perpendicular to $\\overrightarrow{r}$).",
+  "Dot with $\\overrightarrow{c}$: $|\\overrightarrow{c}|^2=m(\\overrightarrow{r}\\cdot\\overrightarrow{c})-s(\\overrightarrow{a}\\cdot\\overrightarrow{c})=0-s(-3)=3s$.",
+  "$|\\overrightarrow{c}|^2=25+49+4=78$, hence $s=26$.",
+  "Consistency: dot with $\\overrightarrow{a}$ gives $m^2-2s=-3$, so $m^2=49$, $m=\\pm7$; then $\\overrightarrow{r}=\\dfrac{\\overrightarrow{c}+s\\overrightarrow{a}}{m}=\\dfrac{21\\hat{i}-7\\hat{j}+28\\hat{k}}{\\pm 7}=\\pm(3\\hat{i}-\\hat{j}+4\\hat{k})$, and both satisfy the equation with $|\\overrightarrow{r}|^2=26$.",
+  "",
+  "Final Answer: 26"
+ ],
+ "originality_note": "New: a quadratic vector equation r x (r x a) = c; after the triple-product expansion m r - s a = c, the dot products with r and with c give r.c = 0 and |c|^2 = -s(a.c), so |r|^2 is fixed without solving for r (way 4: hidden invariant). Closest known: linear vector equations r x a = b x a with r.c = 0, or x + a x x = b. Different because: the unknown appears twice, the equation is non-linear, and the answer comes from |c|^2 rather than from back-substitution.",
+ "web_check": "not found",
+ "concept_use": {
+  "Vector Equation": "The non-linear vector equation r x (r x a) = c is solved for |r|^2 by taking dot products with r and c.",
+  "Application of Vector triple product": "r x (r x a) = (r.a) r - |r|^2 a turns the equation into m r - s a = c."
+ },
+ "stem_review": "Read as a student: every symbol and object is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Solved the system fully: exactly two solutions r = +-(3i - j + 4k), both with |r|^2 = 26, so 'a vector satisfying' gives a unique answer. Changed: replaced the earlier two-cross-condition design (duplicate of Q07's setup) by this one.",
+ "level": 3,
+ "key_step": "Expanding to m r - s a = c and dotting with c (using r.c = 0) to get |c|^2 = -s(a.c).",
+ "justification": "The triple-product expansion is routine, but the equation is non-linear and the useful move (dot with r, then with c) must be found; components lead to a messy quadratic system. Two linked ideas with a numerical answer, like 2021-P1-Q19 (L3).",
+ "nearest_anchor": "2021-P1-Q19 (L3)",
+ "confidence": "Medium"
+}

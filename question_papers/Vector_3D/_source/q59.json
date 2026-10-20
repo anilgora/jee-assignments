@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "english": [
+  "Let $OABC$ be a tetrahedron in which the edge $OA$ is perpendicular to the edge $BC$ and the edge $OB$ is perpendicular to the edge $CA$. Suppose $OA=6$, $OB=8$, $OC=10$ and $\\angle AOB=\\frac{\\pi}{3}$. Then the value of $AB^{2}+BC^{2}+CA^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $OABC$ एक चतुष्फलक है जिसमें कोर $OA$ कोर $BC$ पर लम्ब है तथा कोर $OB$ कोर $CA$ पर लम्ब है। माना कि $OA=6$, $OB=8$, $OC=10$ तथा $\\angle AOB=\\frac{\\pi}{3}$ है। तब $AB^{2}+BC^{2}+CA^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "Origin at $O$, $\\overrightarrow{OA}=\\overrightarrow{a}$, $\\overrightarrow{OB}=\\overrightarrow{b}$, $\\overrightarrow{OC}=\\overrightarrow{c}$; $\\overrightarrow{a}\\cdot\\overrightarrow{b}=6\\cdot8\\cos\\frac{\\pi}{3}=24$",
+  "$OA\\perp BC$: $\\overrightarrow{a}\\cdot(\\overrightarrow{c}-\\overrightarrow{b})=0\\Rightarrow\\overrightarrow{a}\\cdot\\overrightarrow{c}=24$; $OB\\perp CA$: $\\overrightarrow{b}\\cdot(\\overrightarrow{a}-\\overrightarrow{c})=0\\Rightarrow\\overrightarrow{b}\\cdot\\overrightarrow{c}=24$ (so $OC\\perp AB$ as well)",
+  "Hence $\\cos\\angle BOC=\\dfrac{24}{80}=\\dfrac{3}{10}$, $\\cos\\angle COA=\\dfrac{24}{60}=\\dfrac25$",
+  "Cosine rule in the faces at $O$: $AB^2=36+64-2(24)=52$, $BC^2=64+100-2(24)=116$, $CA^2=100+36-2(24)=88$",
+  "$AB^2+BC^2+CA^2=52+116+88=256$",
+  "",
+  "Final Answer: 256"
+ ],
+ "solution_full": [
+  "Take $O$ as the origin and $\\overrightarrow{OA}=\\overrightarrow{a}$, $\\overrightarrow{OB}=\\overrightarrow{b}$, $\\overrightarrow{OC}=\\overrightarrow{c}$, with $|\\overrightarrow{a}|=6$, $|\\overrightarrow{b}|=8$, $|\\overrightarrow{c}|=10$.",
+  "From $\\angle AOB=\\frac{\\pi}{3}$: $\\overrightarrow{a}\\cdot\\overrightarrow{b}=6\\cdot 8\\cdot\\frac12=24$.",
+  "$OA\\perp BC$ means $\\overrightarrow{a}\\cdot(\\overrightarrow{c}-\\overrightarrow{b})=0$, so $\\overrightarrow{a}\\cdot\\overrightarrow{c}=\\overrightarrow{a}\\cdot\\overrightarrow{b}=24$.",
+  "$OB\\perp CA$ means $\\overrightarrow{b}\\cdot(\\overrightarrow{a}-\\overrightarrow{c})=0$, so $\\overrightarrow{b}\\cdot\\overrightarrow{c}=\\overrightarrow{a}\\cdot\\overrightarrow{b}=24$.",
+  "(Then $\\overrightarrow{c}\\cdot(\\overrightarrow{b}-\\overrightarrow{a})=24-24=0$, which proves that the third pair $OC$, $AB$ is also perpendicular.)",
+  "So $\\cos\\angle BOC=\\dfrac{\\overrightarrow{b}\\cdot\\overrightarrow{c}}{8\\cdot 10}=\\dfrac{3}{10}$ and $\\cos\\angle COA=\\dfrac{\\overrightarrow{c}\\cdot\\overrightarrow{a}}{10\\cdot 6}=\\dfrac{2}{5}$.",
+  "Cosine rule in triangle $AOB$: $AB^2=6^2+8^2-2\\cdot 6\\cdot 8\\cdot\\frac12=100-48=52$.",
+  "Cosine rule in triangle $BOC$: $BC^2=8^2+10^2-2\\cdot 8\\cdot 10\\cdot\\frac{3}{10}=164-48=116$.",
+  "Cosine rule in triangle $COA$: $CA^2=10^2+6^2-2\\cdot 10\\cdot 6\\cdot\\frac25=136-48=88$.",
+  "$AB^2+BC^2+CA^2=52+116+88=256$. (The Gram determinant of $\\overrightarrow{a},\\overrightarrow{b},\\overrightarrow{c}$ is $142848>0$, so such a tetrahedron exists.)",
+  "",
+  "Final Answer: 256"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: a tetrahedron with two pairs of perpendicular opposite edges; the vector proof that then a.b = b.c = c.a (and the third pair is perpendicular) turns one face angle into all three face angles at O, and the cosine rule in each face gives the edges (way 5). Closest known: the textbook vector proof that two pairs of perpendicular opposite edges force the third pair. Different because: the property is used as a tool to transfer the angle AOB to the other two faces, and the edges must then be found by the cosine rule.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Vectors applied to prove trigonometric and geometric results",
+  "Cosine rule"
+ ],
+ "concept_use": {
+  "Vectors applied to prove trigonometric and geometric results": "The perpendicularity conditions are written as dot products and give a.c = b.c = a.b = 24 (vector proof of the orthocentric-tetrahedron property).",
+  "Cosine rule": "The cosine rule in the three faces at O gives AB^2 = 52, BC^2 = 116, CA^2 = 88 from the face angles."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Named every edge and angle; checked that a tetrahedron with these data exists (Gram determinant positive) and that the answer does not depend on any further choice. Changed: replaced the earlier weighted-centroid design, which clashed with Q56.",
+ "level": 3,
+ "key_step": "Turning OA perpendicular to BC and OB perpendicular to CA into a.b = b.c = c.a, then applying the cosine rule in each face at O.",
+ "justification": "Two ideas linked: the vector argument that equalises the three dot products, which students rarely use actively, and three cosine-rule computations with no options. Same kind of dot-product transfer as 2021-P1-Q19 (L3).",
+ "nearest_anchor": "2021-P1-Q19 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false
+}

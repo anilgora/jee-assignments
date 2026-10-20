@@ -1,0 +1,50 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "positive 2-digit integer",
+ "blueprint_concepts": [
+  "Equation of a line",
+  "Parametric form of a line"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $L$ be the line $\\dfrac{2x-1}{3}=\\dfrac{3y+1}{2}=\\dfrac{z-2}{-4}$. Then the number of points on $L$ whose coordinates are all integers and whose $z$-coordinate satisfies $|z|\\le 500$ is ______."
+ ],
+ "hindi": [
+  "माना $L$ रेखा $\\dfrac{2x-1}{3}=\\dfrac{3y+1}{2}=\\dfrac{z-2}{-4}$ है। तब $L$ पर स्थित उन बिन्दुओं की संख्या, जिनके सभी निर्देशांक पूर्णांक हैं तथा जिनका $z$-निर्देशांक $|z|\\le 500$ को सन्तुष्ट करता है, ______ है।"
+ ],
+ "solution": [
+  "Common ratio $t$: $x=\\dfrac{1+3t}{2}$, $y=\\dfrac{2t-1}{3}$, $z=2-4t$",
+  "Integer $x,y$ $\\Rightarrow 3t=2x-1\\in\\mathbb{Z},\\ 2t=3y+1\\in\\mathbb{Z}\\Rightarrow t=3t-2t\\in\\mathbb{Z}$",
+  "$x\\in\\mathbb{Z}\\Leftrightarrow t$ odd; $y\\in\\mathbb{Z}\\Leftrightarrow t\\equiv2\\pmod 3$; together $t=6k+5$, giving $(9k+8,\\,4k+3,\\,-24k-18)$",
+  "$|24k+18|\\le500\\Rightarrow -\\dfrac{518}{24}\\le k\\le\\dfrac{482}{24}\\Rightarrow -21\\le k\\le 20$",
+  "Number of points $=42$",
+  "",
+  "Final Answer: 42"
+ ],
+ "solution_full": [
+  "Put each ratio equal to $t$: $2x-1=3t$, $3y+1=2t$, $z-2=-4t$, so $x=\\dfrac{1+3t}{2}$, $y=\\dfrac{2t-1}{3}$, $z=2-4t$ (parametric form of $L$; it passes through $\\left(\\dfrac12,-\\dfrac13,2\\right)$ with direction ratios $\\dfrac32,\\dfrac23,-4$).",
+  "If $x$ and $y$ are integers then $3t=2x-1$ and $2t=3y+1$ are integers, so $t=3t-2t$ is an integer; then $z=2-4t$ is automatically an integer.",
+  "For integer $t$: $x\\in\\mathbb{Z}$ requires $1+3t$ even, that is $t$ odd; $y\\in\\mathbb{Z}$ requires $3\\mid 2t-1$, that is $t\\equiv2\\pmod3$.",
+  "$t$ odd and $t\\equiv2\\pmod 3$ together mean $t\\equiv5\\pmod 6$. Write $t=6k+5$, $k\\in\\mathbb{Z}$.",
+  "Then $x=\\dfrac{16+18k}{2}=9k+8$, $y=\\dfrac{12k+9}{3}=4k+3$, $z=2-24k-20=-24k-18$; every integer $k$ gives an integer point, and distinct $k$ give distinct points.",
+  "Condition $|z|\\le500$: $-500\\le 24k+18\\le500\\Rightarrow -518\\le24k\\le482\\Rightarrow -21.58\\ldots\\le k\\le20.08\\ldots$",
+  "So $k=-21,-20,\\ldots,20$: that is $42$ values (end checks: $k=-21$ gives $z=486$, $k=20$ gives $z=-498$, $k=-22$ gives $z=510$, $k=21$ gives $z=-522$).",
+  "",
+  "Final Answer: 42"
+ ],
+ "originality_note": "New: lattice points on a space line whose symmetric equation has coefficients on x and y, so the integrality of all coordinates becomes a pair of congruences on the parameter (way 5, linking the line equation with integrality). Closest known: 'number of integer points on a segment in the plane' (gcd count). Different because: the line is not given through a lattice point with integer direction ratios; the solver must convert the form and solve t odd, t = 2 mod 3.",
+ "web_check": "not found",
+ "concept_use": {
+  "Equation of a line": "Reading the symmetric (Cartesian) equation with coefficients on x and y: point (1/2, -1/3, 2) and direction ratios 3/2, 2/3, -4.",
+  "Parametric form of a line": "Parametric form x = (1+3t)/2, y = (2t-1)/3, z = 2-4t, used to turn integrality into conditions on t and to count the parameters with |z| <= 500."
+ },
+ "stem_review": "Read as a student: every symbol, vector and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Stated 'coordinates are all integers' and the bound only on z, so the count is finite and unique; checked the end values k = -21 and k = 20 and that k = -22, 21 fail. Changed: No change.",
+ "level": 3,
+ "key_step": "Showing t must be an integer and solving t odd, t = 2 (mod 3) to get the lattice points (9k+8, 4k+3, -24k-18).",
+ "justification": "Two ideas linked: converting a non-standard symmetric form to parametric form, and a congruence argument with an end-point count where a slip changes the answer. Numerical; comparable in demand to the bounded counting of 2026-P1-Q11 (L3).",
+ "nearest_anchor": "2026-P1-Q11 (L3)",
+ "confidence": "Medium"
+}

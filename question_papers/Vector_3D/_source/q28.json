@@ -1,0 +1,53 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "decimal between 0 and 1",
+ "english": [
+  "Let $A(2,1,0)$, $B(-3,5,0)$ and $C(3,-3,c)$, where $c>0$, be the vertices of a triangle such that the area of triangle $ABC$ is $\\dfrac{25}{16}$ times the area of the triangle whose vertices are the feet of the perpendiculars drawn from $A$, $B$ and $C$ to the $xy$-plane. Let $\\theta$ be the acute angle between the plane of triangle $ABC$ and the $yz$-plane. Then the value of $\\cos\\theta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A(2,1,0)$, $B(-3,5,0)$ तथा $C(3,-3,c)$, जहाँ $c>0$ है, एक त्रिभुज के शीर्ष हैं जिससे त्रिभुज $ABC$ का क्षेत्रफल उस त्रिभुज के क्षेत्रफल का $\\dfrac{25}{16}$ गुना है जिसके शीर्ष $A$, $B$ तथा $C$ से $xy$-तल पर डाले गए लम्बों के पाद हैं। माना कि $\\theta$ त्रिभुज $ABC$ के तल तथा $yz$-तल के बीच का न्यून कोण है। तब $\\cos\\theta$ का मान ______ है।"
+ ],
+ "solution": [
+  "Feet on the $xy$-plane: $(2,1)$, $(-3,5)$, $(3,-3)$; area $=\\dfrac12\\left|2(5+3)-3(-3-1)+3(1-5)\\right|=\\dfrac12|16+12-12|=8$",
+  "So area of $ABC=\\dfrac{25}{16}\\cdot 8=\\dfrac{25}{2}$",
+  "$\\overrightarrow{AB}\\times\\overrightarrow{AC}=(-5,4,0)\\times(1,-4,c)=(4c,\\,5c,\\,16)$, area $=\\dfrac12\\sqrt{41c^2+256}=\\dfrac{25}{2}\\Rightarrow 41c^2=369\\Rightarrow c=3$",
+  "Normal of plane $ABC$: $(12,15,16)$, magnitude $25$; normal of the $yz$-plane: $\\hat{i}$",
+  "$\\cos\\theta=\\dfrac{12}{25}=0.48$",
+  "",
+  "Final Answer: 0.48"
+ ],
+ "solution_full": [
+  "The feet of the perpendiculars from $A$, $B$, $C$ to the $xy$-plane are $A'(2,1,0)$, $B'(-3,5,0)$, $C'(3,-3,0)$; the third coordinate is dropped and the first two are unchanged.",
+  "Area of $A'B'C'$ by the coordinate formula $\\dfrac12\\left|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)\\right|$:",
+  "$\\dfrac12\\left|2(5-(-3))+(-3)(-3-1)+3(1-5)\\right|=\\dfrac12|16+12-12|=8$.",
+  "Hence the area of triangle $ABC$ is $\\dfrac{25}{16}\\times 8=\\dfrac{25}{2}$.",
+  "$\\overrightarrow{AB}=(-5,4,0)$ and $\\overrightarrow{AC}=(1,-4,c)$, so $\\overrightarrow{AB}\\times\\overrightarrow{AC}=(4c-0,\\ 0-(-5c),\\ 20-4)=(4c,\\,5c,\\,16)$.",
+  "Area of $ABC=\\dfrac12|\\overrightarrow{AB}\\times\\overrightarrow{AC}|=\\dfrac12\\sqrt{16c^2+25c^2+256}$.",
+  "$\\dfrac12\\sqrt{41c^2+256}=\\dfrac{25}{2}\\Rightarrow 41c^2+256=625\\Rightarrow c^2=9$, and $c>0$ gives $c=3$.",
+  "Then a normal to the plane $ABC$ is $\\overrightarrow{n}=(12,15,16)$ with $|\\overrightarrow{n}|=\\sqrt{144+225+256}=25$. (Check: the $\\hat{k}$-component $16$ gives $\\cos$ of the angle with the $xy$-plane $=\\dfrac{16}{25}$, matching the area ratio.)",
+  "The angle between two planes is the angle between their normals; the $yz$-plane has normal $\\hat{i}$.",
+  "$\\cos\\theta=\\dfrac{|\\overrightarrow{n}\\cdot\\hat{i}|}{|\\overrightarrow{n}|}=\\dfrac{12}{25}=0.48$.",
+  "",
+  "Final Answer: 0.48"
+ ],
+ "originality_note": "New: the third vertex is fixed only through the ratio of the triangle's area to the area of its shadow on the xy-plane (2D coordinate area formula), and the cross-product components then give the inclination to a different coordinate plane (way 5). Closest known: area of a triangle from its vertices by the cross product; projection of an area onto a plane. Different because: the unknown coordinate enters only through the area ratio, and the answer is read from another component of the normal.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Application of cross product",
+  "Area of triangle"
+ ],
+ "concept_use": {
+  "Application of cross product": "AB x AC = (4c, 5c, 16) gives the area (1/2)sqrt(41c^2+256) = 25/2, so c = 3, and its components are the normal used for cos theta = 12/25.",
+  "Area of triangle": "Area of the projected triangle with vertices (2,1), (-3,5), (3,-3) by the coordinate formula equals 8, which fixes the area of ABC as 25/2."
+ },
+ "stem_review": "Read as a student: every vector, line and point is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy and numpy, is unique and equals the Answer Plan. Checked that the triangle is non-degenerate for c = 3, that c > 0 removes c = -3, and that 'acute angle between the planes' gives a unique cosine. Changed: No change.",
+ "level": 3,
+ "key_step": "Turning the area ratio into an equation for c via the 2D area of the projection and |AB x AC|, then reading the yz-plane inclination from the normal.",
+ "justification": "Two ideas linked: the coordinate area of the projected triangle and the cross-product area in space, then the angle between planes from the normal. Comparable to the plane-and-area statements of 2026-P1-Q6 (L3); more than the single area computation of 2026-P2-Q1 (L2).",
+ "nearest_anchor": "2026-P1-Q6 (L3)",
+ "confidence": "Low",
+ "multi_concept": false,
+ "eq_relation": false
+}

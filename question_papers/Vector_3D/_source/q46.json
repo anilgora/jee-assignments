@@ -1,0 +1,57 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 3,
+ "answer_plan": "positive decimal",
+ "blueprint_concepts": [
+  "Application of Scalar triple product",
+  "Application of properties of determinant"
+ ],
+ "multi_concept": false,
+ "eq_relation": false,
+ "english": [
+  "Let $\\alpha$, $\\beta$, $\\gamma$ be the roots of the equation $x^{3}-3x^{2}+1=0$. Let $A$, $B$, $C$ be the points whose position vectors with respect to the origin $O$ are $\\hat{i}+\\alpha\\hat{j}+\\alpha^{3}\\hat{k}$, $\\hat{i}+\\beta\\hat{j}+\\beta^{3}\\hat{k}$ and $\\hat{i}+\\gamma\\hat{j}+\\gamma^{3}\\hat{k}$, respectively. Then the volume of the tetrahedron $OABC$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\alpha$, $\\beta$, $\\gamma$ समीकरण $x^{3}-3x^{2}+1=0$ के मूल हैं। माना कि $A$, $B$, $C$ वे बिन्दु हैं जिनके मूलबिन्दु $O$ के सापेक्ष स्थिति सदिश क्रमशः $\\hat{i}+\\alpha\\hat{j}+\\alpha^{3}\\hat{k}$, $\\hat{i}+\\beta\\hat{j}+\\beta^{3}\\hat{k}$ तथा $\\hat{i}+\\gamma\\hat{j}+\\gamma^{3}\\hat{k}$ हैं। तब चतुष्फलक $OABC$ का आयतन ______ है।"
+ ],
+ "solution": [
+  "Volume $=\\dfrac{1}{6}\\left|\\left[\\overrightarrow{OA}\\ \\overrightarrow{OB}\\ \\overrightarrow{OC}\\right]\\right|=\\dfrac{1}{6}|\\Delta|$, $\\Delta=\\begin{vmatrix}1&\\alpha&\\alpha^{3}\\\\1&\\beta&\\beta^{3}\\\\1&\\gamma&\\gamma^{3}\\end{vmatrix}$",
+  "$R_2-R_1$, $R_3-R_1$ and the factors $(\\beta-\\alpha)(\\gamma-\\alpha)$ give $\\Delta=(\\beta-\\alpha)(\\gamma-\\alpha)(\\gamma-\\beta)(\\alpha+\\beta+\\gamma)$",
+  "$\\alpha+\\beta+\\gamma=3$, $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=0$, $\\alpha\\beta\\gamma=-1$",
+  "With $f(x)=x^3-3x^2+1=(x-\\alpha)(x-\\beta)(x-\\gamma)$: $f'(\\alpha)=(\\alpha-\\beta)(\\alpha-\\gamma)$ etc., so $f'(\\alpha)f'(\\beta)f'(\\gamma)=-\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2$",
+  "$f'(x)=3x(x-2)$: $f'(\\alpha)f'(\\beta)f'(\\gamma)=27\\,\\alpha\\beta\\gamma\\,(\\alpha-2)(\\beta-2)(\\gamma-2)=27(-1)(-f(2))=27(-1)(3)=-81$",
+  "$\\Rightarrow|(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)|=9$, $|\\Delta|=9\\cdot 3=27$",
+  "Volume $=\\dfrac{27}{6}=4.5$",
+  "",
+  "Final Answer: 4.5"
+ ],
+ "solution_full": [
+  "For a tetrahedron with one vertex at the origin, volume $=\\dfrac{1}{6}\\left|\\left[\\overrightarrow{OA}\\ \\overrightarrow{OB}\\ \\overrightarrow{OC}\\right]\\right|$, and the scalar triple product is the determinant of the components:",
+  "$$\\left[\\overrightarrow{OA}\\ \\overrightarrow{OB}\\ \\overrightarrow{OC}\\right]=\\Delta=\\begin{vmatrix}1&\\alpha&\\alpha^{3}\\\\1&\\beta&\\beta^{3}\\\\1&\\gamma&\\gamma^{3}\\end{vmatrix}$$",
+  "Subtracting the first row from the second and third rows: $R_2-R_1$ gives $(0,\\ \\beta-\\alpha,\\ \\beta^3-\\alpha^3)$ and $R_3-R_1$ gives $(0,\\ \\gamma-\\alpha,\\ \\gamma^3-\\alpha^3)$.",
+  "Taking the factors $(\\beta-\\alpha)$ and $(\\gamma-\\alpha)$ out of these rows: $\\Delta=(\\beta-\\alpha)(\\gamma-\\alpha)\\begin{vmatrix}1&\\beta^2+\\alpha\\beta+\\alpha^2\\\\1&\\gamma^2+\\alpha\\gamma+\\alpha^2\\end{vmatrix}$.",
+  "The $2\\times 2$ determinant is $\\gamma^2-\\beta^2+\\alpha(\\gamma-\\beta)=(\\gamma-\\beta)(\\alpha+\\beta+\\gamma)$.",
+  "So $\\Delta=(\\beta-\\alpha)(\\gamma-\\alpha)(\\gamma-\\beta)(\\alpha+\\beta+\\gamma)$ and $|\\Delta|=|(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)|\\,|\\alpha+\\beta+\\gamma|$.",
+  "From $x^3-3x^2+0\\cdot x+1=0$: $\\alpha+\\beta+\\gamma=3$, $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=0$, $\\alpha\\beta\\gamma=-1$.",
+  "For the product of differences write $f(x)=x^3-3x^2+1=(x-\\alpha)(x-\\beta)(x-\\gamma)$. Differentiating the product and putting $x=\\alpha$ gives $f'(\\alpha)=(\\alpha-\\beta)(\\alpha-\\gamma)$; similarly $f'(\\beta)=(\\beta-\\alpha)(\\beta-\\gamma)$ and $f'(\\gamma)=(\\gamma-\\alpha)(\\gamma-\\beta)$.",
+  "Multiplying, $f'(\\alpha)f'(\\beta)f'(\\gamma)=-\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2$ (three sign changes).",
+  "Now $f'(x)=3x^2-6x=3x(x-2)$, so $f'(\\alpha)f'(\\beta)f'(\\gamma)=27\\,\\alpha\\beta\\gamma\\,(\\alpha-2)(\\beta-2)(\\gamma-2)$. Here $\\alpha\\beta\\gamma=-1$ and $(\\alpha-2)(\\beta-2)(\\gamma-2)=-f(2)=-(8-12+1)=3$, so the product is $-81$.",
+  "Hence $\\left[(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)\\right]^2=81$ and $|(\\alpha-\\beta)(\\beta-\\gamma)(\\gamma-\\alpha)|=9$ (the roots are real and distinct).",
+  "Hence $|\\Delta|=9\\times 3=27$ and the volume is $\\dfrac{27}{6}=4.5$.",
+  "",
+  "Final Answer: 4.5"
+ ],
+ "originality_note": "New: the vertices are points (1, t, t^3) at the three roots of a cubic, so the volume is a generalized Vandermonde determinant (a-b)(b-c)(c-a)(a+b+c) whose size is fixed by the discriminant and the sum of roots (way 5). Closest known: volume of a tetrahedron from given position vectors; the textbook factorisation of the (1, a, a^3) determinant. Different because: the roots are never found; the volume comes from symmetric functions through the discriminant.",
+ "web_check": "ingredient only",
+ "concept_use": {
+  "Application of Scalar triple product": "Volume of tetrahedron OABC = (1/6)|[OA OB OC]|, written as the 3x3 determinant of components.",
+  "Application of properties of determinant": "Row operations and factor theorem reduce the determinant to (beta-alpha)(gamma-alpha)(gamma-beta)(alpha+beta+gamma)."
+ },
+ "stem_review": "Read as a student: every symbol and object is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. The cubic has three distinct real roots (discriminant 81), so A, B, C exist and the volume does not depend on the order of the roots. Changed: No change.",
+ "level": 3,
+ "key_step": "Factorising the (1, t, t^3) determinant as product of differences times the sum, then the product of differences from f'(alpha)f'(beta)f'(gamma) with f' = 3x(x-2).",
+ "justification": "Two linked ideas: determinant factorisation by properties and the discriminant via symmetric functions, with no roots available; numerical format, no options. Comparable to 2025-P2-Q12 (L4) in using triple-product algebra, but each step here is standard coaching material, so L3 as 2021-P1-Q19 (L3).",
+ "nearest_anchor": "2021-P1-Q19 (L3)",
+ "confidence": "Medium"
+}

@@ -1,0 +1,47 @@
+{
+ "type": "Numerical",
+ "chapter": "Vector 3D",
+ "target_level": 2,
+ "english": [
+  "Let $A$ be the point $(3,-2,4)$. A point $P$ moves in space so that the sum of the squares of its distances from the three coordinate axes is equal to $3PA^{2}$. The locus of $P$ is a sphere of radius $r$. Then the value of $r^{2}$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A$ बिन्दु $(3,-2,4)$ है। एक बिन्दु $P$ आकाश में इस प्रकार गति करता है कि तीनों निर्देशांक अक्षों से इसकी दूरियों के वर्गों का योग $3PA^{2}$ के बराबर है। $P$ का बिन्दुपथ त्रिज्या $r$ का एक गोला है। तब $r^{2}$ का मान ______ है।"
+ ],
+ "solution": [
+  "For $P(x,y,z)$: distances$^2$ from the axes are $y^2+z^2$, $z^2+x^2$, $x^2+y^2$, with sum $2(x^2+y^2+z^2)$",
+  "$2(x^2+y^2+z^2)=3\\left[(x-3)^2+(y+2)^2+(z-4)^2\\right]\\Rightarrow x^2+y^2+z^2-18x+12y-24z+87=0$",
+  "Sphere with centre $(9,-6,12)$ and $r^2=81+36+144-87=174$",
+  "",
+  "Final Answer: 174"
+ ],
+ "solution_full": [
+  "For $P(x,y,z)$ the foot of the perpendicular on the $x$-axis is $(x,0,0)$, so the squared distance from the $x$-axis is $y^2+z^2$; similarly $z^2+x^2$ and $x^2+y^2$ for the $y$- and $z$-axes.",
+  "Sum of the squares $=2(x^2+y^2+z^2)$.",
+  "$PA^2=(x-3)^2+(y+2)^2+(z-4)^2=x^2+y^2+z^2-6x+4y-8z+29$.",
+  "The condition $2(x^2+y^2+z^2)=3PA^2$ gives $2(x^2+y^2+z^2)=3(x^2+y^2+z^2)-18x+12y-24z+87$, that is $x^2+y^2+z^2-18x+12y-24z+87=0$.",
+  "Completing squares: $(x-9)^2+(y+6)^2+(z-12)^2=81+36+144-87=174>0$, a sphere with centre $(9,-6,12)$, that is $3A$.",
+  "Hence $r^2=174$.",
+  "",
+  "Final Answer: 174"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the locus compares the sum of squared distances from the coordinate axes with a multiple of the squared distance from a fixed point; the coefficients 2 and 3 leave one square, so the locus is a sphere centred at 3A (way 5). Closest known: 'sum of squares of distances from the axes is a constant' (a sphere about the origin), a published exercise. Different because: the right side is a distance from a point off the origin, so the centre moves to 3A and the radius has to be computed from the completed square.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Locus problems in three dimensions",
+  "Sphere in three dimensions"
+ ],
+ "concept_use": {
+  "Locus problems in three dimensions": "The condition on the moving point P is converted into an equation in x, y, z (distance from an axis, distance formula) and simplified to the locus.",
+  "Sphere in three dimensions": "Completing squares identifies the locus as the sphere with centre (9, -6, 12) and radius squared 174."
+ },
+ "stem_review": "Read as a student: every point, line, vector and plane is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/numpy, is unique and equals the Answer Plan. Defined the distances (from the three coordinate axes, squared) and the fixed point; the locus is a real sphere since 174 > 0. Changed: replaced the earlier PA.PB = k design (a published locus). Standard ingredient: the constant-sum version of this locus is published.",
+ "level": 2,
+ "key_step": "Distance from an axis as y^2 + z^2, then completing squares in 2(x^2+y^2+z^2) = 3PA^2.",
+ "justification": "Routine chain: distance from an axis, expansion, completing squares; no insight. Above a one-move Level 1 such as 2024-P1-Q12 (L1) because of the chain and numerical format.",
+ "nearest_anchor": "2024-P1-Q12 (L1)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false
+}
