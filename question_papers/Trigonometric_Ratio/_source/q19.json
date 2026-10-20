@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "Let $x$ and $y$ be real numbers such that $0\\le y\\le x\\le\\pi$ and $\\sin x+\\sin y=1$. Then the greatest possible value of $x-y$, in degrees, is ______."
+ ],
+ "hindi": [
+  "माना कि $x$ तथा $y$ वास्तविक संख्याएँ हैं जिनके लिए $0\\le y\\le x\\le\\pi$ तथा $\\sin x+\\sin y=1$ है। तब $x-y$ का अधिकतम सम्भव मान, डिग्री में, ______ है।"
+ ],
+ "solution": [
+  "$(\\sin x+\\sin y)^2+(\\cos x+\\cos y)^2=2+2\\cos(x-y)$",
+  "$\\Rightarrow 2+2\\cos(x-y)=1+(\\cos x+\\cos y)^2\\ge1\\Rightarrow\\cos(x-y)\\ge-\\dfrac12$",
+  "$x-y\\in[0,\\pi]\\Rightarrow x-y\\le\\dfrac{2\\pi}{3}$; equality at $x=150^\\circ$, $y=30^\\circ$ ($\\sin x+\\sin y=1$, $\\cos x+\\cos y=0$)",
+  "Greatest value $=120^\\circ$",
+  "",
+  "Final Answer: 120"
+ ],
+ "solution_full": [
+  "Add the squares: $(\\sin x+\\sin y)^2+(\\cos x+\\cos y)^2=2+2(\\cos x\\cos y+\\sin x\\sin y)=2+2\\cos(x-y)$.",
+  "With $\\sin x+\\sin y=1$: $2+2\\cos(x-y)=1+(\\cos x+\\cos y)^2\\ge1$, so $\\cos(x-y)\\ge-\\dfrac12$.",
+  "Since $0\\le x-y\\le\\pi$ and cosine decreases on $[0,\\pi]$, this means $x-y\\le\\dfrac{2\\pi}{3}$.",
+  "Equality needs $\\cos x+\\cos y=0$ and $x-y=\\dfrac{2\\pi}{3}$: $x=\\dfrac{5\\pi}{6}$, $y=\\dfrac{\\pi}{6}$ satisfy $0\\le y\\le x\\le\\pi$ and $\\sin x+\\sin y=\\dfrac12+\\dfrac12=1$.",
+  "So the greatest value of $x-y$ is $\\dfrac{2\\pi}{3}$, that is $120^\\circ$.",
+  "",
+  "Final Answer: 120"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the constraint sin x + sin y = 1 bounds the GAP x - y through the sum-of-squares identity, the free quantity cos x + cos y absorbing the slack (way 4). Closest known: 'if sin x + sin y = a and cos x + cos y = b, find cos(x - y)'. Different because: only one equation is given, so an inequality replaces an equation and attainment must be shown.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Maximum and minimum of general trigonometric expressions under constraints"
+ ],
+ "concept_use": {
+  "Maximum and minimum of general trigonometric expressions under constraints": "Under sin x + sin y = 1 the identity 2 + 2cos(x - y) = 1 + (cos x + cos y)^2 gives cos(x - y) >= -1/2, and attainment at (150, 30) degrees gives the maximum 120 degrees."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Added 0 <= y <= x <= pi so that x - y is a well-defined gap in [0, pi] (without it x - y could be shifted by 2pi). Changed: added the ordering condition.",
+ "level": 2,
+ "key_step": "Squaring and adding to get cos(x - y) >= -1/2.",
+ "justification": "One familiar trick (sum of squares) plus an attainment check; numerical. Like 2026-P2-Q2 (L2).",
+ "nearest_anchor": "2026-P2-Q2 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

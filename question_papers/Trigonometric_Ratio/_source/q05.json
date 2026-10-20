@@ -1,0 +1,48 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "A ceiling fan has three blades whose tips $P$, $Q$, $R$ are at a distance of $0.9$ m from the axis, the angle between the lines from the axis to any two of the tips being $120^\\circ$, and $Q$, $R$ follow $P$ in the anticlockwise sense. Take the axis as the origin, the $x$-axis pointing east and the $y$-axis pointing north, with distances in metres. Initially $P$ is at $(0.9,0)$. The fan turns anticlockwise until the tip $P$ has travelled a distance of $19.05\\pi$ m along its circular path. Then the sum of the $y$-coordinates of those tips that lie below the $x$-axis is ______."
+ ],
+ "hindi": [
+  "एक छत के पंखे की तीन पंखुड़ियों के सिरे $P$, $Q$, $R$ अक्ष से $0.9$ m की दूरी पर हैं, अक्ष से किन्हीं दो सिरों तक की रेखाओं के बीच का कोण $120^\\circ$ है, तथा वामावर्त दिशा में $P$ के बाद $Q$, $R$ आते हैं। अक्ष को मूलबिन्दु, $x$-अक्ष को पूर्व की ओर तथा $y$-अक्ष को उत्तर की ओर लीजिए, दूरियाँ मीटर में हैं। प्रारम्भ में $P$ बिन्दु $(0.9,0)$ पर है। पंखा वामावर्त घूमता है जब तक सिरा $P$ अपने वृत्तीय पथ पर $19.05\\pi$ m की दूरी तय नहीं कर लेता। तब $x$-अक्ष के नीचे स्थित सिरों के $y$-निर्देशांकों का योग ______ है।"
+ ],
+ "solution": [
+  "Angle turned $\\theta=\\dfrac{\\ell}{r}=\\dfrac{19.05\\pi}{0.9}=\\dfrac{127\\pi}{6}=20\\pi+\\dfrac{7\\pi}{6}$, so $P$ is at angle $\\dfrac{7\\pi}{6}$",
+  "$Q$, $R$ at $\\dfrac{7\\pi}{6}+\\dfrac{2\\pi}{3}=\\dfrac{11\\pi}{6}$ and $\\dfrac{7\\pi}{6}+\\dfrac{4\\pi}{3}=\\dfrac{5\\pi}{2}\\equiv\\dfrac{\\pi}{2}$",
+  "$y_P=0.9\\sin\\dfrac{7\\pi}{6}=-0.9\\sin\\dfrac{\\pi}{6}=-0.45$ (third quadrant), $y_Q=0.9\\sin\\dfrac{11\\pi}{6}=-0.45$ (fourth quadrant), $y_R=0.9>0$",
+  "Sum for the tips below the $x$-axis $=-0.45-0.45=-0.9$",
+  "",
+  "Final Answer: -0.9"
+ ],
+ "solution_full": [
+  "Arc length $\\ell=r\\theta$ with $\\theta$ in radians: $\\theta=\\dfrac{19.05\\pi}{0.9}=\\dfrac{127\\pi}{6}$.",
+  "Since $\\dfrac{127\\pi}{6}=10(2\\pi)+\\dfrac{7\\pi}{6}$, after ten full turns $P$ is at the angle $\\dfrac{7\\pi}{6}$ (that is $210^\\circ$) from the positive $x$-axis.",
+  "$Q$ and $R$ are $120^\\circ$ and $240^\\circ$ ahead of $P$ anticlockwise: at $210^\\circ+120^\\circ=330^\\circ$ and $210^\\circ+240^\\circ=450^\\circ$, that is $90^\\circ$.",
+  "Allied angles: $\\sin 210^\\circ=\\sin(180^\\circ+30^\\circ)=-\\sin 30^\\circ=-\\dfrac12$ (third quadrant, sine negative); $\\sin 330^\\circ=\\sin(360^\\circ-30^\\circ)=-\\dfrac12$ (fourth quadrant); $\\sin 90^\\circ=1$.",
+  "So $y_P=0.9\\left(-\\dfrac12\\right)=-0.45$, $y_Q=-0.45$ and $y_R=0.9$. Only $P$ and $Q$ are below the $x$-axis.",
+  "Required sum $=-0.45+(-0.45)=-0.9$.",
+  "",
+  "Final Answer: -0.9"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a rotating three-blade configuration where the arc travelled by one tip fixes the turn (127 pi/6, ten full turns plus 210 degrees) and the 120 degree offsets send the other tips into different quadrants (way 5). Closest known: position of one point on a rotating wheel or fan blade. Different because: three tips must be placed, and the quadrant of each decides whether it counts.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Measurement of angles: degree, radian, arc length and sector area",
+  "Trigonometric ratios of allied angles; signs in the four quadrants"
+ ],
+ "concept_use": {
+  "Measurement of angles: degree, radian, arc length and sector area": "theta = l/r = 127 pi/6 radian, reduced by 10 full turns to 210 degrees.",
+  "Trigonometric ratios of allied angles; signs in the four quadrants": "sin 210 = -sin 30, sin 330 = -sin 30, sin 450 = sin 90, with the quadrant deciding the sign and which tips are below the x-axis."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Defined the coordinate frame, the starting position, the sense of rotation and the order of the blades so the positions are unique. Changed: added that Q, R follow P anticlockwise.",
+ "level": 2,
+ "key_step": "theta = l/r = 127 pi/6, then reducing to 210 degrees and placing the other tips by allied angles.",
+ "justification": "Routine multi-step: arc to radian, removal of full turns, allied-angle signs for three positions. Like the range-shift evaluation of 2026-P1-Q4 (L2).",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

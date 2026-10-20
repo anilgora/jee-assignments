@@ -1,0 +1,45 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "For $k=1,2,\\ldots,11$, let $\\theta_k=\\dfrac{k\\pi}{6}$. Then the value of $\\displaystyle\\sum_{1\\le j<k\\le 11}\\cos\\left(\\theta_k-\\theta_j\\right)$ is ______."
+ ],
+ "hindi": [
+  "$k=1,2,\\ldots,11$ के लिए माना कि $\\theta_k=\\dfrac{k\\pi}{6}$ है। तब $\\displaystyle\\sum_{1\\le j<k\\le 11}\\cos\\left(\\theta_k-\\theta_j\\right)$ का मान ______ है।"
+ ],
+ "solution": [
+  "Let $P=\\sum\\cos\\theta_k$, $Q=\\sum\\sin\\theta_k$: $P^2+Q^2=11+2\\sum_{j<k}\\cos(\\theta_k-\\theta_j)$",
+  "AP sums ($d=\\dfrac{\\pi}{6}$, $11$ terms): $P=\\dfrac{\\sin\\frac{11\\pi}{12}}{\\sin\\frac{\\pi}{12}}\\cos\\pi=-1$, $Q=\\dfrac{\\sin\\frac{11\\pi}{12}}{\\sin\\frac{\\pi}{12}}\\sin\\pi=0$",
+  "$1=11+2S\\Rightarrow S=-5$",
+  "",
+  "Final Answer: -5"
+ ],
+ "solution_full": [
+  "Let $S$ be the required sum, $P=\\displaystyle\\sum_{k=1}^{11}\\cos\\theta_k$ and $Q=\\displaystyle\\sum_{k=1}^{11}\\sin\\theta_k$.",
+  "$P^2+Q^2=\\sum_k(\\cos^2\\theta_k+\\sin^2\\theta_k)+2\\sum_{j<k}(\\cos\\theta_j\\cos\\theta_k+\\sin\\theta_j\\sin\\theta_k)=11+2\\sum_{j<k}\\cos(\\theta_k-\\theta_j)=11+2S$.",
+  "Sum of cosines with angles in AP: $\\displaystyle\\sum_{k=1}^{n}\\cos k\\alpha=\\frac{\\sin\\frac{n\\alpha}{2}}{\\sin\\frac{\\alpha}{2}}\\cos\\frac{(n+1)\\alpha}{2}$, and similarly for sines with $\\sin\\dfrac{(n+1)\\alpha}{2}$.",
+  "Here $n=11$, $\\alpha=\\dfrac{\\pi}{6}$: $\\dfrac{\\sin\\frac{11\\pi}{12}}{\\sin\\frac{\\pi}{12}}=1$ and $\\dfrac{(n+1)\\alpha}{2}=\\pi$, so $P=\\cos\\pi=-1$ and $Q=\\sin\\pi=0$.",
+  "Therefore $1=11+2S$, giving $S=-5$.",
+  "(Check by counting: $S=\\sum_{d=1}^{10}(11-d)\\cos\\dfrac{d\\pi}{6}$, whose $\\sqrt3$ terms cancel, also gives $-5$.)",
+  "",
+  "Final Answer: -5"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: the sum of cosines of all 55 pairwise differences of an AP of angles that does NOT close the circle (11 of the 12 directions), evaluated through |sum of unit vectors|^2 and the AP sum formulas (way 4). Closest known: sin a + sin b + sin c = 0 = cos a + cos b + cos c implies sum cos(a - b) = -3/2. Different because: the vector sum is not zero here (P = -1), and it must be found by the AP formula.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Summation of trigonometric series with angles in AP"
+ ],
+ "concept_use": {
+  "Summation of trigonometric series with angles in AP": "P = sum cos(k pi/6) = -1 and Q = sum sin(k pi/6) = 0 by the AP sum formulas give 1 = 11 + 2S."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. The sum is over unordered pairs j < k (stated by the index set). Changed: No change.",
+ "level": 2,
+ "key_step": "Writing the pairwise sum through P^2 + Q^2 and evaluating P, Q by AP sums.",
+ "justification": "One known trick (square of the vector sum) plus two routine AP sums. Numerical but short. Like 2026-P2-Q12 (L2).",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

@@ -1,0 +1,43 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "Let $\\theta\\in\\left(0,\\dfrac{\\pi}{2}\\right)$ be such that $\\cos2\\theta=\\dfrac13$. Then the value of $\\tan3\\theta\\cot\\theta$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\theta\\in\\left(0,\\dfrac{\\pi}{2}\\right)$ इस प्रकार है कि $\\cos2\\theta=\\dfrac13$ है। तब $\\tan3\\theta\\cot\\theta$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\tan^2\\theta=\\dfrac{1-\\cos2\\theta}{1+\\cos2\\theta}=\\dfrac{2/3}{4/3}=\\dfrac12$",
+  "$\\tan3\\theta=\\dfrac{3\\tan\\theta-\\tan^3\\theta}{1-3\\tan^2\\theta}\\Rightarrow\\tan3\\theta\\cot\\theta=\\dfrac{3-\\tan^2\\theta}{1-3\\tan^2\\theta}=\\dfrac{5/2}{-1/2}=-5$",
+  "($1-3\\tan^2\\theta\\ne0$, so $\\tan3\\theta$ is defined)",
+  "",
+  "Final Answer: -5"
+ ],
+ "solution_full": [
+  "Double angle: $\\cos2\\theta=\\dfrac{1-\\tan^2\\theta}{1+\\tan^2\\theta}$. With $\\cos2\\theta=\\dfrac13$: $3(1-t^2)=1+t^2$, so $t^2=\\tan^2\\theta=\\dfrac12$.",
+  "Triple angle: $\\tan3\\theta=\\dfrac{3\\tan\\theta-\\tan^3\\theta}{1-3\\tan^2\\theta}$, defined because $1-3\\cdot\\dfrac12=-\\dfrac12\\ne0$.",
+  "Dividing by $\\tan\\theta\\ne0$: $\\tan3\\theta\\cot\\theta=\\dfrac{3-\\tan^2\\theta}{1-3\\tan^2\\theta}=\\dfrac{3-\\frac12}{1-\\frac32}=\\dfrac{5/2}{-1/2}=-5$.",
+  "Check by another route: $\\dfrac{\\sin3\\theta}{\\sin\\theta}=1+2\\cos2\\theta=\\dfrac53$ and $\\dfrac{\\cos3\\theta}{\\cos\\theta}=2\\cos2\\theta-1=-\\dfrac13$, whose ratio is $-5$.",
+  "",
+  "Final Answer: -5"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: tan 3theta/tan theta is a function of cos 2theta alone, (1 + 2cos 2theta)/(2cos 2theta - 1), so the data cos 2theta = 1/3 suffice without finding theta (way 4, hidden invariant). Closest known: evaluating tan 3theta from a given tan theta. Different because: only cos 2theta is given, and the negative sign (3theta beyond pi/2) is the trap.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Multiple angles: ratios of 2A and 3A"
+ ],
+ "concept_use": {
+  "Multiple angles: ratios of 2A and 3A": "cos 2theta in terms of tan^2 theta gives tan^2 theta = 1/2; the tan 3theta formula gives the ratio -5."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Checked tan 3theta is defined and theta is unique in (0, pi/2). Changed: No change.",
+ "level": 2,
+ "key_step": "tan^2 theta from cos 2theta, then the tan 3theta formula.",
+ "justification": "Two routine multiple-angle formulas chained, no insight. Like the routine range-shift evaluation of 2026-P1-Q4 (L2).",
+ "nearest_anchor": "2026-P1-Q4 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

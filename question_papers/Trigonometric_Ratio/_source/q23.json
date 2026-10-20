@@ -1,0 +1,46 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "Let $\\theta$ be a real number with $\\sin\\theta\\ne-1$ and $\\cos\\theta\\ne-1$, and let $x=\\dfrac{\\cos\\theta}{1+\\sin\\theta}$ and $y=\\dfrac{\\sin\\theta}{1+\\cos\\theta}$. If $x=4$, then the value of $y$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\theta$ एक वास्तविक संख्या है जिसके लिए $\\sin\\theta\\ne-1$ तथा $\\cos\\theta\\ne-1$ है, तथा $x=\\dfrac{\\cos\\theta}{1+\\sin\\theta}$ और $y=\\dfrac{\\sin\\theta}{1+\\cos\\theta}$ है। यदि $x=4$ है, तो $y$ का मान ______ है।"
+ ],
+ "solution": [
+  "Eliminate $\\theta$: with $c=\\cos\\theta$, $s=\\sin\\theta$, $x+y+xy=\\dfrac{c(1+c)+s(1+s)+cs}{(1+s)(1+c)}=\\dfrac{1+c+s+cs}{(1+s)(1+c)}=1$",
+  "$x=4$: $4+5y=1\\Rightarrow y=-\\dfrac35=-0.6$",
+  "(Such $\\theta$ exists: $\\sin\\theta=-\\dfrac{15}{17}$, $\\cos\\theta=\\dfrac{8}{17}$.)",
+  "",
+  "Final Answer: -0.6"
+ ],
+ "solution_full": [
+  "Write $c=\\cos\\theta$, $s=\\sin\\theta$; the denominators $1+s$ and $1+c$ are non-zero.",
+  "$x+y+xy=\\dfrac{c}{1+s}+\\dfrac{s}{1+c}+\\dfrac{cs}{(1+s)(1+c)}=\\dfrac{c(1+c)+s(1+s)+cs}{(1+s)(1+c)}$.",
+  "Numerator $=c+s+(c^2+s^2)+cs=1+c+s+cs=(1+c)(1+s)$, using $c^2+s^2=1$.",
+  "So $\\theta$ is eliminated: $x+y+xy=1$ for every admissible $\\theta$.",
+  "(Equivalently $y=\\tan\\dfrac{\\theta}{2}$ and $x=\\tan\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right)=\\dfrac{1-y}{1+y}$.)",
+  "With $x=4$: $4+y+4y=1$, so $y=-\\dfrac35=-0.6$.",
+  "Existence check: $\\cos\\theta=4(1+\\sin\\theta)$ with $\\sin\\theta=-\\dfrac{15}{17}$, $\\cos\\theta=\\dfrac{8}{17}$ gives $x=4$ and $y=\\dfrac{-15/17}{25/17}=-0.6$.",
+  "",
+  "Final Answer: -0.6"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: two half-angle-type quotients cos/(1 + sin) and sin/(1 + cos) are linked by the theta-free relation x + y + xy = 1 (they are tan(pi/4 - theta/2) and tan(theta/2)) (way 5). Closest known: x = sec + tan, y = sec - tan gives xy = 1. Different because: the eliminant is not a product or a sum of squares; it needs the factorisation (1 + c)(1 + s).",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Elimination of a parameter from trigonometric relations"
+ ],
+ "concept_use": {
+  "Elimination of a parameter from trigonometric relations": "Eliminating theta gives x + y + xy = 1, from which y is read off when x = 4."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Stated sin theta != -1 and cos theta != -1 so x, y are defined; checked a theta with x = 4 exists. Changed: No change.",
+ "level": 2,
+ "key_step": "Finding the eliminant x + y + xy = 1.",
+ "justification": "A short elimination with one factorisation (or a direct solve); routine multi-step. Like 2026-P2-Q12 (L2) recovery-type problems.",
+ "nearest_anchor": "2026-P2-Q12 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

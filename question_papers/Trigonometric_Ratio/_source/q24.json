@@ -1,0 +1,49 @@
+{
+ "type": "Numerical",
+ "target_level": 3,
+ "english": [
+  "Let $\\alpha\\in\\left(0,\\dfrac{\\pi}{2}\\right)$ with $\\tan\\alpha=\\dfrac34$. For $\\theta\\in\\mathbb{R}$, let $x=5\\cos(\\theta+\\alpha)$ and $y=5\\cos(\\theta-\\alpha)$. Eliminating $\\theta$, the relation between $x$ and $y$ can be written as $px^2+qxy+py^2=r$, where $p$, $q$, $r$ are integers having no common factor other than $1$ and $p>0$. Then the value of $r$ is ______."
+ ],
+ "hindi": [
+  "माना कि $\\alpha\\in\\left(0,\\dfrac{\\pi}{2}\\right)$ तथा $\\tan\\alpha=\\dfrac34$ है। $\\theta\\in\\mathbb{R}$ के लिए माना कि $x=5\\cos(\\theta+\\alpha)$ तथा $y=5\\cos(\\theta-\\alpha)$ है। $\\theta$ का विलोपन करने पर $x$ तथा $y$ के बीच का सम्बन्ध $px^2+qxy+py^2=r$ के रूप में लिखा जा सकता है, जहाँ $p$, $q$, $r$ ऐसे पूर्णांक हैं जिनका $1$ के अतिरिक्त कोई उभयनिष्ठ गुणनखण्ड नहीं है तथा $p>0$ है। तब $r$ का मान ______ है।"
+ ],
+ "solution": [
+  "$\\cos\\alpha=\\dfrac45$, $\\sin\\alpha=\\dfrac35$: $x=4\\cos\\theta-3\\sin\\theta$, $y=4\\cos\\theta+3\\sin\\theta$",
+  "$\\cos\\theta=\\dfrac{x+y}{8}$, $\\sin\\theta=\\dfrac{y-x}{6}$; $\\cos^2\\theta+\\sin^2\\theta=1\\Rightarrow\\dfrac{(x+y)^2}{64}+\\dfrac{(x-y)^2}{36}=1$",
+  "$\\times576$: $9(x+y)^2+16(x-y)^2=576\\Rightarrow25x^2-14xy+25y^2=576$",
+  "$\\gcd(25,14,576)=1$, so $r=576$",
+  "",
+  "Final Answer: 576"
+ ],
+ "solution_full": [
+  "From $\\tan\\alpha=\\dfrac34$ with $\\alpha$ acute: $\\cos\\alpha=\\dfrac45$, $\\sin\\alpha=\\dfrac35$.",
+  "Compound angles: $x=5(\\cos\\theta\\cos\\alpha-\\sin\\theta\\sin\\alpha)=4\\cos\\theta-3\\sin\\theta$ and $y=5(\\cos\\theta\\cos\\alpha+\\sin\\theta\\sin\\alpha)=4\\cos\\theta+3\\sin\\theta$.",
+  "Adding and subtracting: $x+y=8\\cos\\theta$ and $y-x=6\\sin\\theta$.",
+  "Eliminate $\\theta$ by $\\cos^2\\theta+\\sin^2\\theta=1$: $\\dfrac{(x+y)^2}{64}+\\dfrac{(x-y)^2}{36}=1$.",
+  "Multiply by $576$ (the LCM of $64$ and $36$): $9(x+y)^2+16(x-y)^2=576$, i.e. $25x^2+25y^2+(18-32)xy=576$, so $25x^2-14xy+25y^2=576$.",
+  "The coefficients $25$, $-14$, $576$ have no common factor ($25=5^2$, $14=2\\cdot7$), and $p=25>0$; the form is unique under these conditions. Hence $r=576$.",
+  "(Check: $\\theta=0$ gives $x=y=4$ and $25\\cdot16-14\\cdot16+25\\cdot16=576$.)",
+  "",
+  "Final Answer: 576"
+ ],
+ "answer_plan": "positive 3-digit integer",
+ "originality_note": "New: the parameter appears with a fixed phase +-alpha inside the same cosine, and alpha with tan alpha = 3/4 makes the eliminant an integer conic 25x^2 - 14xy + 25y^2 = 576 (way 5). Closest known: eliminating theta from x = a cos(theta - alpha), y = b cos(theta - beta) (textbook result x^2/a^2 - 2xy cos(alpha - beta)/ab + y^2/b^2 = sin^2(alpha - beta)). Different because: here the numbers must be carried through to the reduced integer form; the general result is the ingredient.",
+ "web_check": "ingredient only",
+ "blueprint_concepts": [
+  "Elimination of a parameter from trigonometric relations",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)"
+ ],
+ "concept_use": {
+  "Elimination of a parameter from trigonometric relations": "x + y = 8cos theta and y - x = 6 sin theta, then cos^2 + sin^2 = 1 removes theta.",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "cos(theta +- alpha) = cos theta cos alpha -+ sin theta sin alpha with cos alpha = 4/5, sin alpha = 3/5."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Fixed the normalisation (integers, no common factor, p > 0) so that r is unique. Changed: added the normalisation sentence.",
+ "level": 3,
+ "key_step": "Expanding both compound angles, solving for cos theta and sin theta, and clearing to the reduced integer form.",
+ "justification": "Two linked stages (compound expansion with values of alpha, then elimination and exact normalisation) with no options to check; a slip in the LCM or a sign changes r. Comparable to 2024-P1-Q3 (L3).",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

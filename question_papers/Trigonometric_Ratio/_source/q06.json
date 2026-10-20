@@ -1,0 +1,51 @@
+{
+ "type": "Numerical",
+ "target_level": 3,
+ "english": [
+  "A particle moves anticlockwise on the circle $x^2+y^2=125^2$, starting from $A(125,0)$. It travels an arc of length $\\ell$ to reach a point $B$, and then a further arc of length $2\\ell$ to reach a point $C$, where $\\ell$ is less than half the circumference of the circle. If the chord $AB$ has length $50\\sqrt{5}$, then the $x$-coordinate of $C$ is ______."
+ ],
+ "hindi": [
+  "एक कण वृत्त $x^2+y^2=125^2$ पर बिन्दु $A(125,0)$ से प्रारम्भ होकर वामावर्त गति करता है। यह $\\ell$ लम्बाई का चाप तय करके बिन्दु $B$ पर पहुँचता है, तथा फिर $2\\ell$ लम्बाई का और चाप तय करके बिन्दु $C$ पर पहुँचता है, जहाँ $\\ell$ वृत्त की परिधि के आधे से कम है। यदि जीवा $AB$ की लम्बाई $50\\sqrt{5}$ है, तो $C$ का $x$-निर्देशांक ______ है।"
+ ],
+ "solution": [
+  "Let $\\theta=\\dfrac{\\ell}{125}$ (radian), $0<\\theta<\\pi$; equal arcs subtend equal angles, so $\\angle AOB=\\theta$, $\\angle AOC=\\theta+2\\theta=3\\theta$",
+  "Chord $AB=2\\cdot125\\sin\\dfrac{\\theta}{2}=50\\sqrt5\\Rightarrow\\sin\\dfrac{\\theta}{2}=\\dfrac{1}{\\sqrt5}\\Rightarrow\\cos\\theta=1-\\dfrac{2}{5}=\\dfrac35$, $\\sin\\theta=\\dfrac45$",
+  "$\\cos2\\theta=-\\dfrac{7}{25}$, $\\sin2\\theta=\\dfrac{24}{25}$; $\\cos3\\theta=\\cos\\theta\\cos2\\theta-\\sin\\theta\\sin2\\theta=-\\dfrac{21}{125}-\\dfrac{96}{125}=-\\dfrac{117}{125}$",
+  "$x_C=125\\cos3\\theta=-117$",
+  "",
+  "Final Answer: -117"
+ ],
+ "solution_full": [
+  "Arc length $=$ radius $\\times$ angle (radian). With $\\theta=\\dfrac{\\ell}{125}$, the arc $AB$ subtends $\\theta$ at $O$, and the arc $BC$ of length $2\\ell$ subtends $2\\theta$. Since $\\ell<125\\pi$, $0<\\theta<\\pi$.",
+  "So $B=(125\\cos\\theta,125\\sin\\theta)$ and $C=(125\\cos3\\theta,125\\sin3\\theta)$ (angles measured from $OA$).",
+  "Chord length: $AB=2r\\sin\\dfrac{\\theta}{2}$. Thus $250\\sin\\dfrac{\\theta}{2}=50\\sqrt5$, so $\\sin\\dfrac{\\theta}{2}=\\dfrac{1}{\\sqrt5}$; this fixes $\\theta$ uniquely because $\\dfrac{\\theta}{2}\\in\\left(0,\\dfrac{\\pi}{2}\\right)$.",
+  "Then $\\cos\\theta=1-2\\sin^2\\dfrac{\\theta}{2}=\\dfrac35$ and $\\sin\\theta=\\dfrac45$ (positive, as $0<\\theta<\\pi$).",
+  "Double angle: $\\cos2\\theta=2\\cos^2\\theta-1=-\\dfrac{7}{25}$, $\\sin2\\theta=2\\sin\\theta\\cos\\theta=\\dfrac{24}{25}$.",
+  "Compound angle: $\\cos3\\theta=\\cos(2\\theta+\\theta)=\\cos2\\theta\\cos\\theta-\\sin2\\theta\\sin\\theta=-\\dfrac{21}{125}-\\dfrac{96}{125}=-\\dfrac{117}{125}$ (the same as $4\\cos^3\\theta-3\\cos\\theta$).",
+  "Hence the $x$-coordinate of $C$ is $125\\cdot\\left(-\\dfrac{117}{125}\\right)=-117$.",
+  "",
+  "Final Answer: -117"
+ ],
+ "answer_plan": "negative integer",
+ "originality_note": "New: a point reached by successive arcs l and 2l, where only a chord length is known, so the angle comes from the chord (half angle) and the final position needs the compound angle theta + 2 theta (way 5). Closest known: coordinates of a point after turning through a given angle. Different because: the angle is never given; it must be recovered from a chord and then tripled.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Measurement of angles: degree, radian, arc length and sector area",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)",
+  "Multiple angles: ratios of 2A and 3A"
+ ],
+ "concept_use": {
+  "Measurement of angles: degree, radian, arc length and sector area": "Arc = radius x angle: arcs l and 2l subtend theta and 2 theta, and l < half the circumference gives 0 < theta < pi.",
+  "Compound angles: sin(A+/-B), cos(A+/-B), tan(A+/-B)": "cos(theta + 2 theta) = cos 2theta cos theta - sin 2theta sin theta gives the position of C.",
+  "Multiple angles: ratios of 2A and 3A": "cos 2theta = 2cos^2 theta - 1, sin 2theta = 2 sin theta cos theta, and the check cos 3theta = 4cos^3 theta - 3 cos theta."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Added the condition that l is less than half the circumference so that the chord fixes theta uniquely; the sense of motion is stated. Changed: added 'l is less than half the circumference'.",
+ "level": 3,
+ "key_step": "Recovering cos theta = 3/5 from the chord by the half-angle relation and then cos 3 theta.",
+ "justification": "Two linked ideas (arc-angle proportionality with chord-to-angle recovery, then a triple angle) with a uniqueness condition, numerical answer. Comparable to the evaluation chain of 2024-P1-Q3 (L3).",
+ "nearest_anchor": "2024-P1-Q3 (L3)",
+ "confidence": "Medium",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

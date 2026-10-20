@@ -1,0 +1,43 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\cos x\\,(3\\sin x-4\\cos x)$. Then the minimum value of $f$ is ______."
+ ],
+ "hindi": [
+  "माना कि $f:\\mathbb{R}\\to\\mathbb{R}$, $f(x)=\\cos x\\,(3\\sin x-4\\cos x)$ द्वारा परिभाषित है। तब $f$ का न्यूनतम मान ______ है।"
+ ],
+ "solution": [
+  "$f(x)=3\\sin x\\cos x-4\\cos^2x=\\dfrac32\\sin2x-2(1+\\cos2x)=\\dfrac32\\sin2x-2\\cos2x-2$",
+  "$\\dfrac32\\sin2x-2\\cos2x$ ranges over $\\left[-\\sqrt{\\dfrac94+4},\\sqrt{\\dfrac94+4}\\right]=\\left[-\\dfrac52,\\dfrac52\\right]$",
+  "Minimum of $f=-\\dfrac52-2=-4.5$",
+  "",
+  "Final Answer: -4.5"
+ ],
+ "solution_full": [
+  "Expand: $f(x)=3\\sin x\\cos x-4\\cos^2x$.",
+  "Double angle: $\\sin x\\cos x=\\dfrac12\\sin2x$ and $\\cos^2x=\\dfrac{1+\\cos2x}{2}$, so $f(x)=\\dfrac32\\sin2x-2\\cos2x-2$.",
+  "For real $a,b$, $a\\sin t+b\\cos t$ takes every value in $\\left[-\\sqrt{a^2+b^2},\\sqrt{a^2+b^2}\\right]$. Here $\\sqrt{\\dfrac94+4}=\\dfrac52$.",
+  "So $f$ ranges over $\\left[-\\dfrac52-2,\\dfrac52-2\\right]=\\left[-\\dfrac92,\\dfrac12\\right]$, and the minimum $-\\dfrac92=-4.5$ is attained when $\\dfrac32\\sin2x-2\\cos2x=-\\dfrac52$, i.e. $\\sin2x=-\\dfrac35$, $\\cos2x=\\dfrac45$.",
+  "",
+  "Final Answer: -4.5"
+ ],
+ "answer_plan": "negative decimal",
+ "originality_note": "New: a product of cos x with a linear combination becomes, after double-angle reduction, a shifted a sin 2x + b cos 2x with a 3-4-5 amplitude (way 5). Closest known: min of 3 cos x + 4 sin x + c. Different because: the expression is not in linear form; the constant shift -2 comes from cos^2 x.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Range of a.sin(x) + b.cos(x); maximum and minimum"
+ ],
+ "concept_use": {
+  "Range of a.sin(x) + b.cos(x); maximum and minimum": "(3/2) sin 2x - 2 cos 2x has range [-5/2, 5/2], which gives the minimum -5/2 - 2."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Domain and codomain of f stated. Changed: No change.",
+ "level": 2,
+ "key_step": "Rewriting f as (3/2) sin 2x - 2 cos 2x - 2.",
+ "justification": "Routine: double-angle reduction then the amplitude bound. Like 2023-P2-Q9-type routine chains rated 2.",
+ "nearest_anchor": "2023-P2-Q9 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}

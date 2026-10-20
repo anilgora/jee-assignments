@@ -1,0 +1,44 @@
+{
+ "type": "Numerical",
+ "target_level": 2,
+ "english": [
+  "Let $A$, $B$ and $C$ be the angles of a triangle such that $\\cot A+\\cot B+\\cot C=\\dfrac52$. Then the value of $\\operatorname{cosec}^2A+\\operatorname{cosec}^2B+\\operatorname{cosec}^2C$ is ______."
+ ],
+ "hindi": [
+  "माना कि $A$, $B$ तथा $C$ एक त्रिभुज के कोण हैं जिनके लिए $\\cot A+\\cot B+\\cot C=\\dfrac52$ है। तब $\\operatorname{cosec}^2A+\\operatorname{cosec}^2B+\\operatorname{cosec}^2C$ का मान ______ है।"
+ ],
+ "solution": [
+  "$A+B=\\pi-C\\Rightarrow\\cot(A+B)=-\\cot C\\Rightarrow\\dfrac{\\cot A\\cot B-1}{\\cot A+\\cot B}=-\\cot C$",
+  "$\\Rightarrow\\cot A\\cot B+\\cot B\\cot C+\\cot C\\cot A=1$",
+  "$\\sum\\cot^2A=\\left(\\dfrac52\\right)^2-2\\cdot1=\\dfrac{17}{4}$, so $\\sum\\operatorname{cosec}^2A=3+\\dfrac{17}{4}=\\dfrac{29}{4}=7.25$",
+  "",
+  "Final Answer: 7.25"
+ ],
+ "solution_full": [
+  "Since $A+B+C=\\pi$, $\\cot(A+B)=\\cot(\\pi-C)=-\\cot C$.",
+  "$\\cot(A+B)=\\dfrac{\\cot A\\cot B-1}{\\cot A+\\cot B}$, so $\\cot A\\cot B-1=-\\cot C(\\cot A+\\cot B)$, i.e. $\\cot A\\cot B+\\cot B\\cot C+\\cot C\\cot A=1$. (If one angle is a right angle, its cotangent is $0$ and the identity still holds.)",
+  "Squaring the given sum: $\\left(\\sum\\cot A\\right)^2=\\sum\\cot^2A+2\\sum\\cot A\\cot B$, so $\\sum\\cot^2A=\\dfrac{25}{4}-2=\\dfrac{17}{4}$.",
+  "Using $\\operatorname{cosec}^2x=1+\\cot^2x$: $\\sum\\operatorname{cosec}^2A=3+\\dfrac{17}{4}=\\dfrac{29}{4}=7.25$.",
+  "(Such triangles exist: $\\cot A+\\cot B+\\cot C$ takes every value $\\ge\\sqrt3$, and $\\dfrac52>\\sqrt3$.)",
+  "",
+  "Final Answer: 7.25"
+ ],
+ "answer_plan": "positive decimal",
+ "originality_note": "New: the sum of cosec^2 of the angles is a function of the sum of cotangents alone, via the conditional identity sum cot A cot B = 1 (way 4). Closest known: proving sum cot A cot B = 1 and cot A + cot B + cot C >= sqrt3. Different because: the identity is used as a tool to convert a given sum into a sum of squares, not proved.",
+ "web_check": "not found",
+ "blueprint_concepts": [
+  "Conditional identities when A + B + C = pi"
+ ],
+ "concept_use": {
+  "Conditional identities when A + B + C = pi": "cot A cot B + cot B cot C + cot C cot A = 1 for A + B + C = pi turns the square of the given sum into the sum of cot^2."
+ },
+ "stem_review": "Read as a student: every symbol, function and interval is introduced before use, every condition is stated, each sentence has one reading; the answer was recomputed independently with sympy/mpmath, is unique and equals the Answer Plan. Checked that such triangles exist (the cot sum ranges over [sqrt3, infinity)). Changed: No change.",
+ "level": 2,
+ "key_step": "Using sum cot A cot B = 1 after squaring the given sum.",
+ "justification": "A single well-known conditional identity plus routine algebra; two steps. Like the cot-ratio chain of 2021-P1-Q18 (L2).",
+ "nearest_anchor": "2021-P1-Q18 (L2)",
+ "confidence": "High",
+ "multi_concept": false,
+ "eq_relation": false,
+ "chapter": "Trigonometric Ratio"
+}
