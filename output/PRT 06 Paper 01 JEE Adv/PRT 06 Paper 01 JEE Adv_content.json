@@ -1,0 +1,864 @@
+{
+ "title": "PRT 06 — Paper Analysis",
+ "subtitle": "Paper 01 · JEE Adv · detailed solutions",
+ "source": "papers/PRT 06 Paper 01 JEE Adv.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "PRT 06 Paper 01",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 4,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "One or more than one Correct Type",
+   "from": 5,
+   "to": 8,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 9,
+   "to": 10,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 3 per question assumed"
+   ]
+  },
+  {
+   "title": "Integer Type (0 to 9)",
+   "from": 11,
+   "to": 15,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 16,
+   "to": 18,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Branches of $\\sin^{-1}\\frac{2x}{1+x^2}$ and inverse trigonometric equations"
+   ],
+   "level": 2,
+   "question": "If $x_0$ is a real solution of the equation $\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)=2\\tan^{-1}(x+1)$, then the value of $2x_0+1$ is:",
+   "options": [
+    "$\\sqrt5$",
+    "$-\\sqrt5$",
+    "$\\sqrt3$",
+    "$-\\sqrt3$"
+   ],
+   "answer": "(B) $-\\sqrt{5}$",
+   "key_idea": "$\\sin^{-1}\\frac{2x}{1+x^2}$ is $2\\tan^{-1}x$ only on $[-1,1]$; it changes form for $x>1$ and $x<-1$, so solve interval by interval.",
+   "solution": [
+    "The function splits by intervals: $\\sin^{-1}\\frac{2x}{1+x^2}=-\\pi-2\\tan^{-1}x$ for $x<-1$; $=2\\tan^{-1}x$ for $-1\\le x\\le1$; $=\\pi-2\\tan^{-1}x$ for $x>1$.",
+    "Case 1, $-1\\le x\\le 1$: $2\\tan^{-1}x=2\\tan^{-1}(x+1)\\Rightarrow x=x+1\\Rightarrow 0=1$, which is impossible. No solution.",
+    "Case 2, $x>1$: $\\pi-2\\tan^{-1}x=2\\tan^{-1}(x+1)\\Rightarrow \\tan^{-1}x+\\tan^{-1}(x+1)=\\frac{\\pi}{2}$.",
+    "Both arguments are positive, so $x(x+1)=1\\Rightarrow x^2+x-1=0\\Rightarrow x=\\frac{-1\\pm\\sqrt5}{2}$.",
+    "But $\\frac{-1+\\sqrt5}{2}\\approx0.618<1$ and the other root is negative, so both fail $x>1$. No solution in this interval.",
+    "Case 3, $x<-1$: $-\\pi-2\\tan^{-1}x=2\\tan^{-1}(x+1)\\Rightarrow\\tan^{-1}x+\\tan^{-1}(x+1)=-\\frac{\\pi}{2}$.",
+    "Put $x=-y$ with $y>1$: $\\tan^{-1}y+\\tan^{-1}(y-1)=\\frac{\\pi}{2}$. Both terms are positive, so $y(y-1)=1\\Rightarrow y^2-y-1=0\\Rightarrow y=\\frac{1+\\sqrt5}{2}$ (as $y>1$).",
+    "Hence $x_0=-y=\\frac{-1-\\sqrt5}{2}\\approx-1.618<-1$, so it is the unique real solution.",
+    "Therefore $2x_0+1=2\\cdot\\frac{-1-\\sqrt5}{2}+1=-\\sqrt5$. Correct option: (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Restrict the range first: the left side lies in $[-\\frac{\\pi}{2},\\frac{\\pi}{2}]$, then take sine of both sides.",
+     "solution": [
+      "The left side is a $\\sin^{-1}$, so it lies in $[-\\frac{\\pi}{2},\\frac{\\pi}{2}]$. Hence $-\\frac{\\pi}{4}\\le\\tan^{-1}(x+1)\\le\\frac{\\pi}{4}$, i.e. $-1\\le x+1\\le1$, so $-2\\le x\\le0$.",
+      "On this range $2\\tan^{-1}(x+1)$ is itself in $[-\\frac{\\pi}{2},\\frac{\\pi}{2}]$, so $\\sin^{-1}(\\sin\\theta)=\\theta$ applies and the equation is equivalent to $\\frac{2x}{1+x^2}=\\sin\\left(2\\tan^{-1}(x+1)\\right)$.",
+      "Use $\\sin(2\\tan^{-1}u)=\\frac{2u}{1+u^2}$ with $u=x+1$: $\\frac{2x}{1+x^2}=\\frac{2(x+1)}{x^2+2x+2}$.",
+      "Cross-multiply: $x(x^2+2x+2)=(x+1)(1+x^2)\\Rightarrow x^3+2x^2+2x=x^3+x^2+x+1$.",
+      "This reduces to $x^2+x-1=0$, so $x=\\frac{-1\\pm\\sqrt5}{2}$.",
+      "Only $x=\\frac{-1-\\sqrt5}{2}\\approx-1.618$ lies in $[-2,0]$ (the other root $0.618$ does not).",
+      "So $2x_0+1=-\\sqrt5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $|u|\\le1$: $\\sin^{-1}\\frac{2u}{1+u^2}=2\\tan^{-1}u$; for $u>1$ it is $\\pi-2\\tan^{-1}u$; for $u<-1$ it is $-\\pi-2\\tan^{-1}u$. Similarly $\\cos^{-1}\\frac{1-u^2}{1+u^2}=2\\tan^{-1}u$ only for $u\\ge0$.",
+    "$\\sin^{-1}s=\\theta$ holds exactly when $\\sin\\theta=s$ and $\\theta\\in[-\\frac{\\pi}{2},\\frac{\\pi}{2}]$. Reading the range of the other side first often removes all casework.",
+    "$\\tan^{-1}a+\\tan^{-1}b=\\frac{\\pi}{2}$ with $a,b>0$ is equivalent to $ab=1$.",
+    "In this question the range test $-2\\le x\\le0$ also shows that the root $0.618$ (which satisfies $x^2+x-1=0$) is extraneous."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits involving the greatest integer and fractional part functions"
+   ],
+   "level": 2,
+   "question": "Let $\\lfloor x\\rfloor$ denote the greatest integer less than or equal to $x$ and $\\{x\\}$ denote the fractional part of $x$. Then the value of the limit $\\lim_{x\\to0}\\frac{\\sin^2x}{\\{x\\}^2+\\lfloor x\\rfloor(2x+1)}$ is:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "does not exist"
+   ],
+   "answer": "(B) 1",
+   "key_idea": "On both sides of $0$ the denominator collapses to $x^2$, so the limit is the standard $\\frac{\\sin^2x}{x^2}\\to1$.",
+   "solution": [
+    "Evaluate the right-hand limit (RHL) and the left-hand limit (LHL) separately.",
+    "RHL: for $x\\to0^+$, $x\\in(0,1)$, so $\\lfloor x\\rfloor=0$ and $\\{x\\}=x$.",
+    "The denominator becomes $\\{x\\}^2+\\lfloor x\\rfloor(2x+1)=x^2+0\\cdot(2x+1)=x^2$.",
+    "So RHL $=\\lim_{x\\to0^+}\\frac{\\sin^2x}{x^2}=1$.",
+    "LHL: for $x\\to0^-$, $x\\in(-1,0)$, so $\\lfloor x\\rfloor=-1$ and $\\{x\\}=x-\\lfloor x\\rfloor=x+1$.",
+    "The denominator becomes $(x+1)^2+(-1)(2x+1)=x^2+2x+1-2x-1=x^2$.",
+    "So LHL $=\\lim_{x\\to0^-}\\frac{\\sin^2x}{x^2}=1$.",
+    "Since RHL $=$ LHL $=1$, the limit exists and equals $1$. Correct option: (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $n=\\lfloor x\\rfloor$ the denominator is the single expression $x^2+n(n+1)$, valid for every $x$.",
+     "solution": [
+      "Write $n=\\lfloor x\\rfloor$, so $\\{x\\}=x-n$.",
+      "Denominator $=(x-n)^2+n(2x+1)=x^2-2nx+n^2+2nx+n=x^2+n(n+1)$.",
+      "So the denominator equals $x^2+\\lfloor x\\rfloor(\\lfloor x\\rfloor+1)$ for all real $x$.",
+      "For $x\\in[-1,1)$ we have $n\\in\\{-1,0\\}$, and $n(n+1)=0$ in both cases. So near $0$ (on both sides) the denominator is exactly $x^2$.",
+      "Hence the limit is $\\lim_{x\\to0}\\frac{\\sin^2x}{x^2}=1$, with no need to treat the two sides separately."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\{x\\}^2+\\lfloor x\\rfloor(2x+1)=x^2+n(n+1)$ with $n=\\lfloor x\\rfloor$. The extra term $n(n+1)$ is zero exactly when $n=0$ or $n=-1$, i.e. for $x\\in[-1,1)$ (check: $x=1.5$ gives $0.25+1\\cdot4=4.25=2.25+2$).",
+    "Near an integer $k$ replace $\\lfloor x\\rfloor$ by $k$ (right side) or $k-1$ (left side) and $\\{x\\}$ by $x-k$ or $x-k+1$; always compute the two one-sided limits when $\\lfloor\\,\\rfloor$ or $\\{\\,\\}$ appears.",
+    "Standard limits to recognise: $\\frac{\\sin x}{x}\\to1$, so $\\frac{\\sin^2x}{x^2}\\to1$ from both sides."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a piecewise function with a modulus",
+    "Standard series limits ($\\sin x$, $\\ln(1+x)$)"
+   ],
+   "level": 2,
+   "question": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=ae^x+b|x-1|$ if $x<0$; $f(x)=2$ if $x=0$; $f(x)=\\frac{\\sin x+c\\ln(1+x)}{x}$ if $x>0$, where $a,b,c$ are real constants. If $f(x)$ is differentiable at $x=0$, then the value of $4a+4b+c$ is:",
+   "options": [
+    "$7$",
+    "$9$",
+    "$11$",
+    "$13$"
+   ],
+   "answer": "(B) 9",
+   "key_idea": "Differentiability needs continuity first (this fixes $a+b$ and $c$), then equality of the one-sided slopes gives $a-b$.",
+   "solution": [
+    "For $f$ to be differentiable at $x=0$ it must first be continuous there: $\\lim_{x\\to0^-}f(x)=\\lim_{x\\to0^+}f(x)=f(0)=2$.",
+    "For $x<0$, $|x-1|=1-x$, so $\\lim_{x\\to0^-}f(x)=\\lim(ae^x+b(1-x))=a+b$.",
+    "For $x>0$: $\\lim_{x\\to0^+}\\frac{\\sin x+c\\ln(1+x)}{x}=1+c$. Equating with $f(0)=2$ gives $a+b=2$ ...(1) and $1+c=2$, so $c=1$ ...(2).",
+    "Left-hand derivative: $\\frac{d}{dx}(ae^x+b-bx)=ae^x-b$, so LHD $=a-b$.",
+    "Right-hand derivative, using $c=1$: $\\sin x=x-\\frac{x^3}{6}+\\dots$ and $\\ln(1+x)=x-\\frac{x^2}{2}+\\dots$",
+    "Then $f(x)=\\frac{2x-\\frac{x^2}{2}-\\frac{x^3}{6}+\\dots}{x}=2-\\frac{x}{2}-\\frac{x^2}{6}+\\dots$",
+    "RHD $=\\lim_{x\\to0^+}\\frac{f(x)-f(0)}{x}=\\lim\\frac{-\\frac{x}{2}-\\frac{x^2}{6}}{x}=-\\frac{1}{2}$.",
+    "Equating LHD and RHD: $a-b=-\\frac{1}{2}$ ...(3).",
+    "Solving (1) and (3): $2a=\\frac{3}{2}\\Rightarrow a=\\frac{3}{4}$ and $2b=\\frac{5}{2}\\Rightarrow b=\\frac{5}{4}$.",
+    "Therefore $4a+4b+c=3+5+1=9$. Correct option: (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Match one-sided slopes with L'Hospital on the difference quotient instead of series expansions.",
+     "solution": [
+      "Continuity gives $a+b=2$ and $c=1$ exactly as before, so for $x>0$: $f(x)-2=\\frac{\\sin x+\\ln(1+x)-2x}{x}$.",
+      "RHD $=\\lim_{x\\to0^+}\\frac{\\sin x+\\ln(1+x)-2x}{x^2}$, a $\\frac00$ form. Apply L'Hospital: $\\lim\\frac{\\cos x+\\frac{1}{1+x}-2}{2x}$.",
+      "This is again $\\frac00$. Apply L'Hospital once more: $\\lim\\frac{-\\sin x-\\frac{1}{(1+x)^2}}{2}=-\\frac{1}{2}$.",
+      "LHD $=a-b$, so $a-b=-\\frac12$. With $a+b=2$ we get $a=\\frac34$, $b=\\frac54$.",
+      "$4a+4b+c=3+5+1=9$, the same value as in the main solution."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Differentiable at $x_0$ $\\Rightarrow$ continuous at $x_0$ first; use continuity to fix as many constants as possible, then equate $f'(x_0^-)=f'(x_0^+)$.",
+    "Near $0$: $\\sin x=x-\\frac{x^3}{6}+\\dots$, $\\ln(1+x)=x-\\frac{x^2}{2}+\\dots$, $e^x=1+x+\\dots$. A one-sided derivative at $0$ is the coefficient of $x$ in the expansion of $f$ (after subtracting $f(0)$).",
+    "A modulus $|x-1|$ near $x=0$ is just $1-x$ (the kink is at $x=1$, not at $0$): check where the zero of the modulus lies before splitting.",
+    "Check of the answer: with $a=\\frac34,b=\\frac54,c=1$ both one-sided slopes equal $-\\frac12$ and $a+b=2=f(0)$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Conditional probability",
+    "Counting pairs of subsets; binomial sum over odd terms"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{1,2,3,4,5\\}$. Two subsets $A$ and $B$ of $S$ are chosen at random and independently from the power set of $S$. Given that the intersection $A\\cap B$ contains an odd number of elements, the probability that $A\\cup B=S$ is:",
+   "options": [
+    "$\\frac{121}{496}$",
+    "$\\frac{121}{512}$",
+    "$\\frac{61}{248}$",
+    "$\\frac{125}{496}$"
+   ],
+   "answer": "(A) $\\frac{121}{496}$",
+   "key_idea": "Each element is in exactly one of four regions (both, only $A$, only $B$, neither); the odd-size condition is handled by $\\frac{(p+q)^5-(p-q)^5}{2}$.",
+   "solution": [
+    "The total number of ordered pairs $(A,B)$ is $2^5\\times2^5=1024$, all equally likely.",
+    "Let $F$ = \"$A\\cap B$ has an odd number of elements\" and $E$ = \"$A\\cup B=S$\". Then $P(E|F)=\\frac{n(E\\cap F)}{n(F)}$.",
+    "Let $|A\\cap B|=k$ with $k\\in\\{1,3,5\\}$. Choose these $k$ elements in $\\binom5k$ ways.",
+    "Each of the remaining $5-k$ elements lies in exactly one of three regions: only $A$, only $B$, or neither. This gives $3^{5-k}$ choices, so $n(F)=\\sum_{k\\ \\mathrm{odd}}\\binom5k3^{5-k}$.",
+    "$n(F)=\\binom51 3^4+\\binom53 3^2+\\binom55 3^0=405+90+1=496$. (Binomial check: $\\frac{(3+1)^5-(3-1)^5}{2}=\\frac{1024-32}{2}=496$.)",
+    "For $E\\cap F$, $A\\cup B=S$ means no element is in \"neither\", so each remaining $5-k$ element has only $2$ choices (only $A$ or only $B$).",
+    "$n(E\\cap F)=\\binom51 2^4+\\binom53 2^2+\\binom55 2^0=80+40+1=121$. (Binomial check: $\\frac{(2+1)^5-(2-1)^5}{2}=\\frac{243-1}{2}=121$.)",
+    "Therefore $P(E|F)=\\frac{121}{496}$. Correct option: (A)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat the five elements as independent trials with four equally likely states each, and extract the odd-count part with a generating function.",
+     "solution": [
+      "For each element, independently, the state is one of: in $A\\cap B$, only in $A$, only in $B$, neither, each with probability $\\frac14$.",
+      "Let $s$ mark an element lying in $A\\cap B$. One element contributes the factor $\\frac14 s+\\frac14+\\frac14+\\frac14=\\frac{3+s}{4}$, so the five elements give $\\left(\\frac{3+s}{4}\\right)^5$.",
+      "$P(F)$ is the sum of odd-power coefficients: $\\frac{1}{2}\\left[\\left(\\frac{4}{4}\\right)^5-\\left(\\frac{2}{4}\\right)^5\\right]=\\frac12\\left(1-\\frac1{32}\\right)=\\frac{31}{64}$.",
+      "For $A\\cup B=S$ the \"neither\" state is forbidden, so one element contributes $\\frac14s+\\frac12$, i.e. $\\frac{s+2}{4}$.",
+      "$P(E\\cap F)=\\frac12\\left[\\left(\\frac34\\right)^5-\\left(\\frac14\\right)^5\\right]=\\frac{243-1}{2\\cdot1024}=\\frac{121}{1024}$.",
+      "$P(E|F)=\\frac{121/1024}{31/64}=\\frac{121}{1024}\\cdot\\frac{64}{31}=\\frac{121}{496}$, the same answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Pairs $(A,B)$ of subsets of an $n$-set correspond to assigning each element one of 4 states; the number of pairs with $A\\cup B=S$ is $3^n$ and with $A\\cap B=\\emptyset$ is also $3^n$.",
+    "Sum of the odd-index terms of a binomial expansion: $\\sum_{k\\ \\mathrm{odd}}\\binom nk p^{n-k}q^k=\\frac{(p+q)^n-(p-q)^n}{2}$ (here $p=3,q=1$ and $p=2,q=1$, $n=5$).",
+    "$P(\\text{odd number of successes in }n\\text{ independent trials with probability }p)=\\frac{1-(1-2p)^n}{2}$. With $p=\\frac14,n=5$ this gives $\\frac{31}{64}$, matching $\\frac{496}{1024}$.",
+    "Whenever the condition is a parity condition on a count, use $x=1$ and $x=-1$ in a generating function."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a piecewise function",
+    "Limit of the derivative with bounded oscillating factors"
+   ],
+   "level": 3,
+   "question": "Let $\\mathbb{R}$ denote the set of all real numbers and $\\mathbb{Z}$ the set of all integers. Consider $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=(1-x^2)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)$ for $x<1$, $x\\notin\\mathbb{Z}$; $f(x)=e^{-\\frac{1}{(x-1)^2}}\\sin\\left(\\frac{1}{\\{x\\}}\\right)$ for $x>1$, $x\\notin\\mathbb{Z}$; and $f(x)=0$ for $x\\in\\mathbb{Z}$, where $\\{x\\}$ is the fractional part of $x$. Which of the following statements is (are) TRUE?",
+   "options": [
+    "$f$ is continuous at $x=1$ but not differentiable at $x=1$",
+    "$f$ is differentiable at $x=-1$ and $f'(-1)=6$",
+    "$\\lim_{x\\to1^+}f'(x)=0$",
+    "$f$ is continuous at $x=0$"
+   ],
+   "answer": "(A, B, C)",
+   "key_idea": "A factor tending to $0$ times a bounded oscillating factor gives continuity; the difference quotient decides differentiability.",
+   "solution": [
+    "(A) Continuity at $x=1$. LHL $=\\lim_{x\\to1^-}(1-x^2)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)=0$, since $\\left|2+\\sin\\frac{\\pi}{1-x}\\right|\\le3$ is bounded and $1-x^2\\to0$.",
+    "For $1<x<2$, $\\{x\\}=x-1$, so RHL $=\\lim_{x\\to1^+}e^{-\\frac{1}{(x-1)^2}}\\sin\\frac{1}{x-1}=0$, because $e^{-1/(x-1)^2}\\to0$ and $\\sin\\frac{1}{x-1}$ is bounded.",
+    "LHL $=$ RHL $=f(1)=0$, so $f$ is continuous at $x=1$.",
+    "Differentiability at $x=1$: LHD $=\\lim_{x\\to1^-}\\frac{f(x)-f(1)}{x-1}=\\lim_{x\\to1^-}\\frac{(1-x)(1+x)(2+\\sin\\frac{\\pi}{1-x})}{x-1}=\\lim-(1+x)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)$.",
+    "As $x\\to1^-$, $\\sin\\frac{\\pi}{1-x}$ oscillates infinitely often between $-1$ and $1$, so this limit does not exist. $f$ is not differentiable at $x=1$, and (A) is TRUE.",
+    "(B) At $x=-1$ (an integer) $f(-1)=0$, and in a deleted neighbourhood of $-1$, $x<1$ and $x\\notin\\mathbb{Z}$, so $f(x)=(1-x^2)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)$.",
+    "$f'(-1)=\\lim_{x\\to-1}\\frac{f(x)-f(-1)}{x+1}=\\lim_{x\\to-1}(1-x)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)=2\\left(2+\\sin\\frac{\\pi}{2}\\right)=2(2+1)=6$. (B) is TRUE.",
+    "(C) For $x\\in(1,2)$, $f(x)=e^{-\\frac{1}{(x-1)^2}}\\sin\\frac{1}{x-1}$. Let $u=x-1\\to0^+$: $f=e^{-u^{-2}}\\sin(u^{-1})$ and $f'=2u^{-3}e^{-u^{-2}}\\sin(u^{-1})-u^{-2}e^{-u^{-2}}\\cos(u^{-1})$.",
+    "Put $t=u^{-1}\\to\\infty$: $\\lim f'=\\lim\\left(2t^3e^{-t^2}\\sin t-t^2e^{-t^2}\\cos t\\right)$. Since $t^3e^{-t^2}\\to0$, $t^2e^{-t^2}\\to0$ and $\\sin t,\\cos t$ are bounded, the limit is $0$. (C) is TRUE.",
+    "(D) $f(0)=0$ as $0\\in\\mathbb{Z}$, but $\\lim_{x\\to0}f(x)=\\lim(1-x^2)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)=1\\cdot(2+\\sin\\pi)=2\\ne f(0)$. So $f$ is discontinuous at $0$ and (D) is FALSE.",
+    "Correct options: (A), (B), (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Show non-differentiability with two explicit sequences, and settle (B) and (C) with the factor-out-the-zero lemma and a squeeze.",
+     "solution": [
+      "Write $f(x)=(1-x)\\,g(x)$ near $x=-1$ with $g(x)=(1+x)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)$; then $\\frac{f(x)-f(-1)}{x+1}=(1-x)\\left(2+\\sin\\frac{\\pi}{1-x}\\right)$ is continuous at $x=-1$ and its value there is $2\\cdot3=6$ (B).",
+      "For (A) take $x_n=1-\\frac{2}{4n+1}$: then $\\frac{\\pi}{1-x_n}=\\frac{(4n+1)\\pi}{2}$, $\\sin=1$ and the left quotient $-(1+x_n)\\cdot3\\to-6$.",
+      "Take $y_n=1-\\frac{2}{4n+3}$: then $\\sin\\frac{\\pi}{1-y_n}=\\sin\\frac{(4n+3)\\pi}{2}=-1$ and the left quotient $-(1+y_n)\\cdot1\\to-2$.",
+      "Two sequences tending to $1^-$ give different limits $-6$ and $-2$, so the left derivative at $1$ does not exist, while $f$ is continuous at $1$ (bounded $\\times$ zero). (A) holds.",
+      "For (C): $|f'(x)|\\le2t^3e^{-t^2}+t^2e^{-t^2}$ with $t=\\frac{1}{x-1}\\to\\infty$, and the bound tends to $0$ because $e^{-t^2}$ beats any power of $t$. By the squeeze theorem $f'(x)\\to0$.",
+      "For (D): along $x\\to0$ the function tends to $2$ but $f(0)=0$, so it is discontinuous. Conclusion: (A), (B), (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Bounded $\\times$ (quantity $\\to0$) $\\to0$: the standard route to continuity for $(1-x^2)(2+\\sin\\frac{\\pi}{1-x})$ and $e^{-1/(x-1)^2}\\sin\\frac1{x-1}$.",
+    "If $f(x)=(x-a)g(x)$ with $g$ continuous at $a$ and $f(a)=0$, then $f'(a)=g(a)$. If $g$ merely oscillates, the derivative fails to exist.",
+    "$e^{-1/u^2}$ goes to $0$ faster than any power of $u$, so $f'(x)\\to0$ as $u\\to0^+$ even though $f'$ contains the unbounded-looking terms $u^{-3}$ and $u^{-2}$ (substitute $t=1/u$: $t^ne^{-t^2}\\to0$).",
+    "$f$ can be differentiable at a point yet have $f'$ discontinuous there (e.g. $x^2\\sin\\frac1x$); do not confuse $\\lim f'(x)=0$ with $f'(1)$ existing: here $\\lim_{x\\to1^+}f'(x)=0$ but $f'(1)$ does not exist."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability with greatest integer function and modulus"
+   ],
+   "level": 4,
+   "question": "Let $\\lfloor x\\rfloor$ denote the greatest integer less than or equal to $x$. Consider $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\lfloor x\\rfloor\\,|x^2-4x+3|\\,\\sin(\\pi x)$. Which of the following statements is/are TRUE?",
+   "options": [
+    "$f$ is continuous on $\\mathbb{R}$.",
+    "$f$ is differentiable at $x=1$ and $x=3$.",
+    "The left-hand derivative of $f$ at $x=2$ is $\\pi$ and the right-hand derivative of $f$ at $x=2$ is $2\\pi$.",
+    "The set of points where $f$ is not differentiable is $\\mathbb{Z}-\\{1,3\\}$, where $\\mathbb{Z}$ is the set of all integers."
+   ],
+   "answer": "(A, B, C, D)",
+   "key_idea": "At an integer $k$, $\\sin\\pi x$ vanishes, which kills the jump of $\\lfloor x\\rfloor$, but the one-sided slopes still differ unless $|x^2-4x+3|=0$ there.",
+   "solution": [
+    "Continuity. At a non-integer $x$, $\\lfloor x\\rfloor$ is locally constant and $|x^2-4x+3|$, $\\sin\\pi x$ are continuous, so $f$ is continuous.",
+    "At an integer $k$: $\\lim_{x\\to k^-}f=(k-1)|k^2-4k+3|\\cdot0=0$ and $\\lim_{x\\to k^+}f=k|k^2-4k+3|\\cdot0=0$. Since $f(k)=0$, $f$ is continuous on $\\mathbb{R}$. (A) is TRUE.",
+    "Left derivative at $x=k\\in\\mathbb{Z}$: $f'_-(k)=\\lim_{h\\to0^+}\\frac{(k-1)|(k-h-1)(k-h-3)|\\sin(\\pi(k-h))}{-h}$.",
+    "Using $\\sin(k\\pi-\\pi h)=(-1)^{k+1}\\sin\\pi h\\approx(-1)^{k+1}\\pi h$: $f'_-(k)=(-1)^k\\pi(k-1)|(k-1)(k-3)|$.",
+    "Right derivative: $f'_+(k)=\\lim_{h\\to0^+}\\frac{k|(k+h-1)(k+h-3)|\\sin(\\pi(k+h))}{h}$, and $\\sin(k\\pi+\\pi h)=(-1)^k\\sin\\pi h\\approx(-1)^k\\pi h$, so $f'_+(k)=(-1)^k\\pi k|(k-1)(k-3)|$.",
+    "Differentiability at $k$ requires $f'_-(k)=f'_+(k)$, i.e. $(-1)^k\\pi(k-1)|(k-1)(k-3)|=(-1)^k\\pi k|(k-1)(k-3)|$.",
+    "Case 1: $|(k-1)(k-3)|=0$, i.e. $k=1$ or $k=3$. Both derivatives are $0$, so $f$ is differentiable at $x=1$ and $x=3$. (B) is TRUE.",
+    "Case 2: $|(k-1)(k-3)|\\ne0$. Dividing by $(-1)^k\\pi|(k-1)(k-3)|$ gives $k-1=k$, i.e. $-1=0$, impossible. So $f$ is not differentiable at any integer $k\\in\\mathbb{Z}\\setminus\\{1,3\\}$.",
+    "At non-integers $f$ is differentiable (product of differentiable functions near such points), so the set of non-differentiability is exactly $\\mathbb{Z}-\\{1,3\\}$. (D) is TRUE.",
+    "At $k=2$: $f'_-(2)=(-1)^2\\pi(1)|(1)(-1)|=\\pi$ and $f'_+(2)=(-1)^2\\pi(2)|(1)(-1)|=2\\pi$. (C) is TRUE.",
+    "Correct options: (A), (B), (C), (D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $f=\\sin(\\pi x)\\cdot g(x)$ and use $f'(k^\\pm)=\\pi(-1)^k\\,g(k^\\pm)$: differentiable at $k$ iff $g$ has no jump at $k$.",
+     "solution": [
+      "Let $g(x)=\\lfloor x\\rfloor\\,|x^2-4x+3|$ so $f(x)=g(x)\\sin\\pi x$. Near an integer $k$, $\\sin\\pi x=(-1)^k\\sin(\\pi(x-k))\\approx(-1)^k\\pi(x-k)$.",
+      "Since $g$ is bounded near $k$ with one-sided limits $g(k^\\pm)$, $f(x)\\approx(-1)^k\\pi\\,g(k^\\pm)(x-k)$ on each side, and $f(k)=0$. So $f$ is continuous at $k$ and $f'(k^\\pm)=(-1)^k\\pi\\,g(k^\\pm)$.",
+      "Here $g(k^-)=(k-1)|q|$ and $g(k^+)=k|q|$ with $q=(k-1)(k-3)$. The jump of $g$ at $k$ is $|q|=|(k-1)(k-3)|$.",
+      "$f$ is differentiable at $k$ iff $g(k^+)=g(k^-)$ iff $|(k-1)(k-3)|=0$ iff $k\\in\\{1,3\\}$. Hence the non-differentiable set is $\\mathbb{Z}-\\{1,3\\}$ (D), and (B) holds.",
+      "At $k=2$: $|q|=1$, $g(2^-)=1$, $g(2^+)=2$, so $f'_-(2)=\\pi\\cdot1=\\pi$ and $f'_+(2)=\\pi\\cdot2=2\\pi$ (C). Continuity everywhere follows from $\\sin\\pi k=0$ (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f(x)=g(x)\\sin\\pi x$ with $g$ bounded and having one-sided limits at an integer $k$: $f$ is continuous at $k$ and $f'(k^\\pm)=(-1)^k\\pi g(k^\\pm)$. So $f$ is differentiable at $k$ exactly when $g$ is continuous at $k$ (no jump).",
+    "If $h$ has a simple zero at the integer $k$ then $\\lfloor x\\rfloor h(x)$ is continuous at $k$ with one-sided slopes $(k-1)h'(k)$ and $k\\,h'(k)$, which agree only when $h'(k)=0$. So a jump of $\\lfloor x\\rfloor$ is smoothed into a corner, not removed.",
+    "Typical exam family: $f(x)=\\lfloor x\\rfloor\\sin\\pi x$, $f(x)=\\lfloor x\\rfloor^2 \\sin\\pi x$, $f(x)=\\lfloor x\\rfloor|x^2-a|$: always examine one-sided derivatives at integers using $\\sin(k\\pi\\pm\\pi h)\\approx(-1)^k(\\pm\\pi h)$.",
+    "Here the extra factor $|x^2-4x+3|=|(x-1)(x-3)|$ vanishes exactly at $1$ and $3$, which is why those two integers are the exceptions."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Total probability and Bayes' theorem"
+   ],
+   "level": 2,
+   "question": "Consider three bags $B_1,B_2,B_3$. Bag $B_1$ contains 2 white and 3 black balls, bag $B_2$ contains 3 white and 2 black balls, and bag $B_3$ contains 4 white and 1 black ball. A fair six-sided die is rolled. Let $D$ denote the number on the top face. If $D=1$, bag $B_1$ is selected; if $D\\in\\{2,3\\}$, bag $B_2$ is selected; and if $D\\in\\{4,5,6\\}$, bag $B_3$ is selected. A ball is then drawn at random from the selected bag. Which of the following statements is (are) TRUE?",
+   "options": [
+    "The probability that the drawn ball is white is $\\frac23$",
+    "Given that the drawn ball is white, the probability that the die showed a number greater than $3$ is $\\frac35$",
+    "Given that the drawn ball is white, the probability that the die showed an even number is $\\frac{11}{20}$",
+    "Given that the drawn ball is black, the probability that the die showed an even number is $\\frac12$"
+   ],
+   "answer": "(A, B, C)",
+   "key_idea": "Total probability for $P(W)$, then Bayes' theorem; a roll greater than $3$ is exactly the event \"bag $B_3$\".",
+   "solution": [
+    "$P(B_1)=P(D=1)=\\frac16$, $P(B_2)=P(D\\in\\{2,3\\})=\\frac26=\\frac13$, $P(B_3)=P(D\\in\\{4,5,6\\})=\\frac36=\\frac12$.",
+    "Let $W$ be \"the drawn ball is white\". Then $P(W|B_1)=\\frac25$, $P(W|B_2)=\\frac35$, $P(W|B_3)=\\frac45$.",
+    "Total probability: $P(W)=\\frac16\\cdot\\frac25+\\frac13\\cdot\\frac35+\\frac12\\cdot\\frac45=\\frac{2}{30}+\\frac{6}{30}+\\frac{12}{30}=\\frac{20}{30}=\\frac23$. (A) is TRUE.",
+    "(B) $D>3$ is exactly $B_3$ being selected. By Bayes' theorem $P(D>3|W)=P(B_3|W)=\\frac{P(B_3\\cap W)}{P(W)}=\\frac{\\frac12\\cdot\\frac45}{\\frac23}=\\frac{2/5}{2/3}=\\frac35$. (B) is TRUE.",
+    "(C) Let $F$ be \"$D$ is even\", i.e. $D\\in\\{2,4,6\\}$. $P(F\\cap W)=\\frac16\\cdot\\frac35+\\frac16\\cdot\\frac45+\\frac16\\cdot\\frac45=\\frac{3+4+4}{30}=\\frac{11}{30}$.",
+    "$P(F|W)=\\frac{11/30}{2/3}=\\frac{11}{20}$. (C) is TRUE.",
+    "(D) $P(W^c)=1-\\frac23=\\frac13$. $P(F\\cap W^c)=\\frac16\\cdot\\frac25+\\frac16\\cdot\\frac15+\\frac16\\cdot\\frac15=\\frac{2+1+1}{30}=\\frac{4}{30}$.",
+    "$P(F|W^c)=\\frac{4/30}{1/3}=\\frac{4}{10}=\\frac25\\ne\\frac12$. (D) is FALSE.",
+    "Correct options: (A), (B), (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Make the sample space equiprobable: 6 faces $\\times$ 5 balls $=30$ equally likely outcomes, then every probability is a ratio of counts.",
+     "solution": [
+      "Each die face is followed by a draw from a bag of 5 balls, so there are $6\\times5=30$ equally likely (face, ball) outcomes.",
+      "White outcomes: face 1 gives $2$; faces 2, 3 give $3$ each ($6$); faces 4, 5, 6 give $4$ each ($12$). Total white $=2+6+12=20$, so $P(W)=\\frac{20}{30}=\\frac23$ (A).",
+      "Among the 20 white outcomes, those with face $>3$ number $12$, so $P(D>3|W)=\\frac{12}{20}=\\frac35$ (B).",
+      "Even faces $2,4,6$ give $3+4+4=11$ white outcomes, so $P(\\text{even}|W)=\\frac{11}{20}$ (C).",
+      "Black outcomes: $10$ in all ($3$ for face 1, $2+2$ for faces 2, 3, $1+1+1$ for faces 4, 5, 6). Even faces give $2+1+1=4$ of them, so $P(\\text{even}|B)=\\frac{4}{10}=\\frac25\\neq\\frac12$ (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Because each bag has the same number of balls (5), the 30 (face, ball) outcomes are equally likely; conditional probabilities become simple ratios of counts. (If bag sizes differ, use total probability and weights instead.)",
+    "Bayes in one line: $P(A_i|W)=\\frac{P(A_i)P(W|A_i)}{\\sum_jP(A_j)P(W|A_j)}$. Recognise when an event (here $D>3$) is a union of whole partition classes.",
+    "Quick sanity check: the conditional probabilities of the three bags given $W$ must sum to $1$: $\\frac{2/30}{2/3}+\\frac{6/30}{2/3}+\\frac{12/30}{2/3}=\\frac1{10}+\\frac3{10}+\\frac35=1$.",
+    "Probability of even given white is $\\frac{11}{20}=0.55$ while given black is $0.4$; \"even\" is not independent of the colour because the bag depends on the face."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Statistics: mean, median and mode of a data set",
+    "Counting integer solutions by casework"
+   ],
+   "level": 4,
+   "question": "Consider a data set of $7$ positive integers $x_1,x_2,\\dots,x_7$ with $x_1\\le x_2\\le\\dots\\le x_7$. The arithmetic mean, the median and the unique mode of this data set are all integers, with the arithmetic mean being $6$, the median being $6$ and the unique mode being $8$. Which of the following statements is/are TRUE?",
+   "options": [
+    "The total number of such distinct data sets is $5$.",
+    "The maximum possible range of such a data set is $7$.",
+    "The number of observations strictly less than the arithmetic mean can be $3$.",
+    "The least possible value of $x_3$ is $4$."
+   ],
+   "answer": "(C)",
+   "key_idea": "The mode $8$ occurs $2$ or $3$ times among $x_5,x_6,x_7$ (with $x_7>8$ free when it occurs twice); for \"can be / least / maximum\" statements one valid data set is enough.",
+   "solution": [
+    "Median is $x_4=6$ (7 observations). Mean $6$ gives $x_1+x_2+\\dots+x_7=42$.",
+    "The unique mode is $8>6=x_4$, so every $8$ lies among $x_5,x_6,x_7$. A unique mode must occur at least twice, and $4$ or more $8$'s would force $x_4=8$. So $8$ occurs exactly $2$ or exactly $3$ times.",
+    "Case I: $8$ occurs three times. $x_5=x_6=x_7=8$, so $x_1+x_2+x_3=42-6-24=12$ with $1\\le x_1\\le x_2\\le x_3\\le6$.",
+    "The triples are $(1,5,6),(2,4,6),(3,3,6),(2,5,5),(3,4,5)$. The triple $(4,4,4)$ is rejected because $4$ would also occur three times (a second mode). Case I gives $5$ data sets.",
+    "Case II: $8$ occurs exactly twice. Every other value may then occur at most once, so $x_1<x_2<x_3<6$, i.e. three distinct numbers from $\\{1,2,3,4,5\\}$, with $x_5>6$.",
+    "The two $8$'s are $x_5,x_6$ (then $x_7=v>8$) or $x_6,x_7$ (then $x_5=v=7$). If $x_5=7$: $x_1+x_2+x_3=42-6-7-16=13>12$, which is impossible. So $x_5=x_6=8$ and $x_7=v>8$.",
+    "Then $x_1+x_2+x_3=42-6-16-v=20-v$. Distinct triples from $\\{1,\\dots,5\\}$ have sum between $6$ and $12$, and $v>8$ forces the sum $\\le11$: sums $11,10,9,8,7,6$ for $v=9,\\dots,14$.",
+    "The triples: $(2,4,5)$; $(1,4,5),(2,3,5)$; $(1,3,5),(2,3,4)$; $(1,2,5),(1,3,4)$; $(1,2,4)$; $(1,2,3)$. That is $9$ data sets, e.g. $\\{1,2,3,6,8,8,14\\}$.",
+    "Total $=5+9=14$ distinct data sets, not $5$, so (A) is FALSE.",
+    "The range is $x_7-x_1$. For $\\{1,2,3,6,8,8,14\\}$ it is $13$, so the maximum range is $13$, not $7$. (B) is FALSE.",
+    "For $\\{2,5,5,6,8,8,8\\}$ the observations below the mean $6$ are $2,5,5$: exactly $3$. So (C) is TRUE.",
+    "The data set $\\{1,2,3,6,8,8,14\\}$ has $x_3=3<4$, so the least value of $x_3$ is not $4$ (it is $3$). (D) is FALSE. Correct option: (C)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF assumed that if $8$ occurs twice then $x_6=x_7=8$ (so $x_7$ is $8$), ignoring $x_5=x_6=8$ with $x_7>8$ (and $x_5=7$). That gave only 5 data sets, max range 7 and least $x_3=5$ and the PDF text concluded that A, B, C are true and D false, contradicting its own key (C). Correct: 14 data sets (checked by brute force), max range 13, least $x_3=3$, so A, B, D are false and only C is true. The key (C) is right; the PDF working was wrong.",
+   "alternate_solutions": [
+    {
+     "idea": "For \"total number\", \"maximum\", \"can be\" and \"least\" statements, one explicit valid data set settles each, with no full enumeration.",
+     "solution": [
+      "First list the conditions a data set must satisfy: $x_4=6$, $\\sum x_i=42$, and $8$ the unique mode (occurring at least twice, others less often).",
+      "Test $S_1=\\{1,2,3,6,8,8,14\\}$: sorted, $x_4=6$, sum $=1+2+3+6+8+8+14=42$, and $8$ occurs twice while every other value occurs once. So $S_1$ is valid.",
+      "(A) Total number is $5$? The five sets listed in the PDF all have $x_7=8$, but $S_1$ (with $x_7=14$) is a sixth valid set. So the number is not $5$: (A) is FALSE.",
+      "(B) $S_1$ has range $14-1=13>7$, so the maximum range cannot be $7$: (B) is FALSE.",
+      "(D) $S_1$ has $x_3=3<4$, so $4$ is not the least value of $x_3$: (D) is FALSE.",
+      "(C) $S_2=\\{2,5,5,6,8,8,8\\}$ is valid (sum $42$, median $6$, $8$ occurs three times, $5$ twice) and exactly three observations ($2,5,5$) are below $6$: (C) is TRUE. Answer (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For a data set with $n$ values, median and mean conditions give two equations ($x_{(n+1)/2}$ and $\\sum x_i$); the mode condition then bounds the frequencies. A unique mode must occur strictly more often than every other value.",
+    "A mode larger than the median must lie entirely in the upper half, so it occurs at most $(n-1)/2$ times and at least twice.",
+    "Counting sorted triples: the number of multisets $x_1\\le x_2\\le x_3\\le6$ with a given sum is a partition-counting problem; with the \"all distinct\" restriction it is a subset-sum count from $\\{1,\\dots,5\\}$ (sums $6..12$ with counts $1,1,2,2,2,1,1$).",
+    "In existence-type statements (\"can be\", \"least possible\", \"maximum\"), exhibit one data set and, for exactness, check against a brute-force list; never assume a symmetric structure (such as $x_6=x_7$) without justification."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Total probability with a geometric number of trials and a binomial distribution"
+   ],
+   "level": 2,
+   "paragraph": "Two players, A and B, alternately roll a fair six-sided die, starting with player A. The game finishes as soon as either player rolls a '6'. Let $N$ denote the total number of rolls made in the game. After the game concludes, a biased coin with probability of showing heads equal to $\\frac15$ is tossed exactly $N$ times. Let $X$ denote the total number of heads obtained from these $N$ coin tosses.",
+   "question": "The probability that no heads are obtained ($X=0$) is:",
+   "options": [
+    "$\\frac15$",
+    "$\\frac25$",
+    "$\\frac35$",
+    "$\\frac12$"
+   ],
+   "answer": "(B) $\\frac25$",
+   "key_idea": "Condition on $N$: $P(X=0)=\\sum_nP(N=n)\\left(\\frac45\\right)^n$, a geometric series.",
+   "solution": [
+    "$N$ is geometric with success probability $\\frac16$ (a roll of 6): $P(N=n)=\\left(\\frac56\\right)^{n-1}\\left(\\frac16\\right)$ for $n\\ge1$.",
+    "Given $N=n$, $X\\sim B\\left(n,\\frac15\\right)$, so $P(X=0|N=n)=\\binom n0\\left(\\frac15\\right)^0\\left(\\frac45\\right)^n=\\left(\\frac45\\right)^n$.",
+    "Law of total probability: $P(X=0)=\\sum_{n=1}^\\infty\\left(\\frac56\\right)^{n-1}\\left(\\frac16\\right)\\left(\\frac45\\right)^n=\\frac16\\cdot\\frac65\\sum_{n=1}^\\infty\\left(\\frac56\\cdot\\frac45\\right)^n$.",
+    "$=\\frac15\\sum_{n=1}^\\infty\\left(\\frac23\\right)^n=\\frac15\\cdot\\frac{2/3}{1-2/3}=\\frac15\\cdot2=\\frac25$. Correct option: (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "First-step analysis: pair every roll with one coin toss and set up an equation for $P=P(X=0)$.",
+     "solution": [
+      "Think of each roll as being followed by one coin toss; $X=0$ means all the tosses are tails (probability $\\frac45$ each).",
+      "Let $P=P(X=0)$. After the first roll: with probability $\\frac16$ the game ends and the single toss must be a tail; with probability $\\frac56$ the game continues and the situation restarts.",
+      "So $P=\\frac45\\left[\\frac16+\\frac56P\\right]$, because the first toss must be a tail in either case.",
+      "$P=\\frac{2}{15}+\\frac23P\\Rightarrow\\frac13P=\\frac{2}{15}\\Rightarrow P=\\frac25$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Recursion trick: if a process restarts identically after a failed step, write $P=(\\text{success now})+(\\text{continue})\\cdot P$ instead of summing the series.",
+    "Probability generating function of a geometric $N$ (success $p$): $E[s^N]=\\frac{ps}{1-(1-p)s}$. Then $P(X=0)=E\\left[\\left(\\frac45\\right)^N\\right]$; here $=\\frac{\\frac16\\cdot\\frac45}{1-\\frac56\\cdot\\frac45}=\\frac{2/15}{1/3}=\\frac25$.",
+    "For a thinned count: if each of $N$ trials is a success with probability $q$, then $P(X=x)=\\sum_n P(N=n)\\binom nx q^x(1-q)^{n-x}$; the $x=0$ case is the simplest.",
+    "A roll of $6$ ends the game, so $P(\\text{A wins})=\\frac{1/6}{1-(5/6)^2}=\\frac{6}{11}$ (A rolls on odd $N$)."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Conditional probability with a geometric and binomial distribution",
+    "Summation of infinite series"
+   ],
+   "level": 4,
+   "paragraph": "Two players, A and B, alternately roll a fair six-sided die, starting with player A. The game finishes as soon as either player rolls a '6'. Let $N$ denote the total number of rolls made in the game. After the game concludes, a biased coin with probability of showing heads equal to $\\frac15$ is tossed exactly $N$ times. Let $X$ denote the total number of heads obtained from these $N$ coin tosses.",
+   "question": "Given that exactly $2$ heads are obtained ($X=2$), the conditional probability that player A won the die-rolling game is:",
+   "options": [
+    "$\\frac{31}{125}$",
+    "$\\frac{62}{125}$",
+    "$\\frac{63}{125}$",
+    "$\\frac{19}{50}$"
+   ],
+   "answer": "(B) $\\frac{62}{125}$",
+   "key_idea": "A wins exactly when $N$ is odd; evaluate $P(X=2\\text{ and }N\\text{ odd})$ with $\\sum_{k\\ge1}\\binom{2k+1}{2}t^k=\\frac{t(3+t)}{(1-t)^3}$.",
+   "solution": [
+    "For $x\\ge1$: $P(X=x)=\\sum_{n\\ge x}\\left(\\frac56\\right)^{n-1}\\frac16\\binom nx\\left(\\frac15\\right)^x\\left(\\frac45\\right)^{n-x}=\\frac35\\left(\\frac12\\right)^x$. So $P(X=2)=\\frac35\\cdot\\frac14=\\frac{3}{20}$.",
+    "Player A rolls first, so A wins when the game ends on an odd roll: $N=2k+1$ with $k\\ge1$ (since $N\\ge X=2$ we need $N\\ge3$).",
+    "$P(X=2\\text{ and }N\\text{ odd})=\\sum_{k\\ge1}P(N=2k+1)P(X=2|N=2k+1)=\\sum_{k\\ge1}\\left(\\frac56\\right)^{2k}\\frac16\\binom{2k+1}{2}\\left(\\frac15\\right)^2\\left(\\frac45\\right)^{2k-1}$.",
+    "Simplifying the constants: $=\\frac{1}{120}\\sum_{k\\ge1}\\binom{2k+1}{2}\\left(\\frac49\\right)^k$.",
+    "Use the identity $\\sum_{k\\ge1}\\binom{2k+1}{2}t^k=\\frac{t(3+t)}{(1-t)^3}$ with $t=\\frac49$.",
+    "$\\frac{\\frac49\\left(3+\\frac49\\right)}{\\left(1-\\frac49\\right)^3}=\\frac{\\frac49\\cdot\\frac{31}9}{\\frac{125}{729}}=\\frac{1116}{125}$. Hence $P(X=2\\text{ and }N\\text{ odd})=\\frac1{120}\\cdot\\frac{1116}{125}=\\frac{93}{1250}$.",
+    "By Bayes' theorem: $P(N\\text{ odd}|X=2)=\\frac{93/1250}{3/20}=\\frac{93}{1250}\\cdot\\frac{20}{3}=\\frac{62}{125}$. Correct option: (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use probability generating functions in the head-count variable $s$: both $P(X=2)$ and $P(X=2,\\,N\\text{ odd})$ become coefficients of $s^2$ in rational functions.",
+     "solution": [
+      "Let $q=\\frac{4+s}{5}$ be the generating function of one coin toss ($\\frac45+\\frac s5$). Given $N=n$, the head-count generating function is $q^n$.",
+      "$G(s)=\\sum_{n\\ge1}\\frac16\\left(\\frac56\\right)^{n-1}q^n=\\frac{q/6}{1-5q/6}=\\frac{q}{6-5q}=\\frac{4+s}{5(2-s)}$, using $5q=4+s$.",
+      "$[s^2]\\,G=\\frac1{10}[s^2]\\,(4+s)\\sum\\left(\\frac s2\\right)^k=\\frac1{10}\\left(\\frac44+\\frac12\\right)=\\frac{3}{20}=P(X=2)$.",
+      "A wins on odd $N$: $G_{o}(s)=\\sum_{n\\ \\mathrm{odd}}\\frac16\\left(\\frac56\\right)^{n-1}q^n=\\frac{q/6}{1-\\frac{25}{36}q^2}=\\frac{6q}{(6-5q)(6+5q)}=\\frac{6(4+s)}{5(2-s)(10+s)}$.",
+      "$\\frac1{(2-s)(10+s)}=\\frac1{20}\\left(1+\\frac s2+\\frac{s^2}4\\right)\\left(1-\\frac s{10}+\\frac{s^2}{100}\\right)=\\frac1{20}\\left(1+\\frac{2s}5+\\frac{21s^2}{100}+\\dots\\right)$.",
+      "$[s^2]\\,G_{o}=\\frac65\\cdot\\frac1{20}\\left(4\\cdot\\frac{21}{100}+\\frac25\\right)=\\frac{6}{100}\\cdot\\frac{124}{100}=\\frac{93}{1250}$.",
+      "Hence $P(A\\text{ wins}|X=2)=\\frac{93/1250}{3/20}=\\frac{62}{125}$, the same value."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Thinning a random count: if $N$ has generating function $E[z^N]$ and each trial is a head with probability $p$, then $E[s^X]=E\\left[(1-p+ps)^N\\right]$; every $P(X=x)$ is a coefficient. Here $E[s^X]=\\frac{4+s}{5(2-s)}$, which shows $P(X=x)=\\frac35\\left(\\frac12\\right)^x$ for $x\\ge1$.",
+    "Series identity: $\\sum_{k\\ge1}\\binom{2k+1}{2}t^k=\\frac{t(3+t)}{(1-t)^3}$ (check $t=0.1$: LHS $\\approx0.4252$, RHS $=\\frac{0.1\\times3.1}{0.729}=0.4252$). General tool: $\\sum_{n\\ge m}\\binom nm t^n=\\frac{t^m}{(1-t)^{m+1}}$, split into odd and even $n$ via $\\frac{f(t)\\mp f(-t)}{2}$.",
+    "\"First player wins\" in an alternating game means \"game ends on an odd step\": use $\\sum_{n\\ \\mathrm{odd}}$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Lattice paths and inclusion-exclusion"
+   ],
+   "level": 1,
+   "question": "Let $S$ be the set of all shortest paths from the origin $(0,0)$ to the point $(3,3)$ in the Cartesian plane, where each step is either $1$ unit to the right or $1$ unit upwards along the grid lines. If $N$ denotes the number of such paths in $S$ that pass through neither $(1,1)$ nor $(2,2)$, then find the value of $N$.",
+   "answer": "4",
+   "key_idea": "Count all paths, then subtract those through $(1,1)$ or $(2,2)$ by inclusion-exclusion.",
+   "solution": [
+    "The total number of paths from $(0,0)$ to $(3,3)$ is $T=\\binom{3+3}{3}=\\binom63=20$.",
+    "Let $A$ be the event that a path passes through $(1,1)$: $n(A)=\\binom{1+1}{1}\\times\\binom{2+2}{2}=2\\times6=12$.",
+    "Let $B$ be the event that a path passes through $(2,2)$: $n(B)=\\binom{2+2}{2}\\times\\binom{1+1}{1}=6\\times2=12$.",
+    "Paths through both: $n(A\\cap B)=\\binom{1+1}{1}\\times\\binom{1+1}{1}\\times\\binom{1+1}{1}=2\\times2\\times2=8$.",
+    "Inclusion-exclusion: $n(A\\cup B)=12+12-8=16$.",
+    "Paths through neither point: $N=T-n(A\\cup B)=20-16=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Avoiding $(1,1)$ and $(2,2)$ means never touching the diagonal except at the ends, so the path stays strictly on one side, and by symmetry $N=2\\times$ (Catalan number).",
+     "solution": [
+      "The diagonal points on the way from $(0,0)$ to $(3,3)$ are $(0,0),(1,1),(2,2),(3,3)$. A path avoiding $(1,1)$ and $(2,2)$ meets the line $y=x$ only at its two ends.",
+      "A path that never touches the diagonal in between cannot cross it, so it stays strictly above or strictly below $y=x$. The two cases are mirror images, so $N=2\\times$(number of paths strictly above).",
+      "The first step must be up (to $(0,1)$) and the last step must be right (from $(2,3)$). Between $(0,1)$ and $(2,3)$ the path must stay on or above $y=x+1$.",
+      "The number of such paths is the Catalan number $C_2=\\frac1{3}\\binom42=2$: the middle parts are UURR and URUR, giving the full paths UUURRR and UURURR.",
+      "Hence $N=2\\times2=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Paths from $(0,0)$ to $(a,b)$ through a point $(p,q)$: $\\binom{p+q}{p}\\binom{a-p+b-q}{a-p}$; for several forced points multiply the segment counts.",
+    "Paths from $(0,0)$ to $(n,n)$ that stay strictly above the diagonal (apart from the ends) number the Catalan number $C_{n-1}=\\frac{1}{n}\\binom{2n-2}{n-1}$; so paths touching the diagonal only at the ends number $2C_{n-1}$ (for $n=3$: $2C_2=4$).",
+    "Paths that never go above the diagonal: $C_n=\\frac1{n+1}\\binom{2n}n$ ($C_3=5$).",
+    "Check on the total: the $20$ paths split by how many diagonal points they touch: $4$ touch only the ends, $16$ touch at least one of $(1,1),(2,2)$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Limits involving max and min functions"
+   ],
+   "level": 2,
+   "question": "Let $L=\\lim_{x\\to0}\\frac{2\\max\\{x,3x\\}\\min\\{x^2,2x^2\\}+\\max\\{0,x^3\\}+5\\min\\{0,x^3\\}}{x^2\\ln(1+x)}$. Then the value of $L$ is equal to ______.",
+   "answer": "7",
+   "key_idea": "Decide each $\\max/\\min$ by the sign of $x$ and the numerator becomes $7x^3$ on both sides.",
+   "solution": [
+    "Evaluate the right-hand limit and the left-hand limit separately.",
+    "Case $x>0$: $\\max\\{x,3x\\}=3x$, $\\min\\{x^2,2x^2\\}=x^2$, $\\max\\{0,x^3\\}=x^3$, $\\min\\{0,x^3\\}=0$.",
+    "RHL $=\\lim_{x\\to0^+}\\frac{2(3x)(x^2)+x^3+0}{x^2\\ln(1+x)}=\\lim_{x\\to0^+}\\frac{7x^3}{x^2\\cdot x}=7$, using $\\ln(1+x)\\sim x$.",
+    "Case $x<0$: $\\max\\{x,3x\\}=x$, $\\min\\{x^2,2x^2\\}=x^2$, $\\max\\{0,x^3\\}=0$, $\\min\\{0,x^3\\}=x^3$.",
+    "LHL $=\\lim_{x\\to0^-}\\frac{2(x)(x^2)+0+5x^3}{x^2\\ln(1+x)}=\\lim_{x\\to0^-}\\frac{7x^3}{x^2\\cdot x}=7$.",
+    "Since LHL $=$ RHL $=7$, $L=7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace $\\max/\\min$ by modulus formulas, $\\max\\{a,b\\}=\\frac{a+b+|a-b|}{2}$, so one expression works for both signs of $x$.",
+     "solution": [
+      "$\\max\\{x,3x\\}=\\frac{4x+2|x|}{2}=2x+|x|$ and $\\min\\{x^2,2x^2\\}=x^2$ (as $x^2\\ge0$, the smaller of $x^2,2x^2$ is $x^2$).",
+      "$\\max\\{0,x^3\\}=\\frac{x^3+|x^3|}{2}$ and $\\min\\{0,x^3\\}=\\frac{x^3-|x^3|}{2}$.",
+      "Numerator $=2(2x+|x|)x^2+\\frac{x^3+|x|^3}{2}+\\frac{5(x^3-|x|^3)}{2}=4x^3+2|x|x^2+3x^3-2|x|^3$.",
+      "Since $|x|x^2=|x|^3$, the terms $2|x|x^2-2|x|^3$ cancel, leaving the numerator $=7x^3$ for every $x$.",
+      "So the expression equals $\\frac{7x^3}{x^2\\ln(1+x)}=\\frac{7x}{\\ln(1+x)}\\to7$ as $x\\to0$, with no one-sided treatment needed."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\max\\{a,b\\}=\\frac{a+b+|a-b|}{2}$ and $\\min\\{a,b\\}=\\frac{a+b-|a-b|}{2}$ turn max/min problems into modulus problems valid for all $x$.",
+    "A numerator built from products and sums of $\\max/\\min$ of multiples of $x$ and of $x^2$, $x^3$ is positively homogeneous of degree $3$: it equals $\\kappa_+x^3$ for $x>0$ and $\\kappa_-x^3$ for $x<0$. Here $\\kappa_+=6+1=7$ and $\\kappa_-=2+5=7$, and the limit exists iff $\\kappa_+=\\kappa_-$.",
+    "Denominator: $x^2\\ln(1+x)\\sim x^3$ as $x\\to0$ ($\\ln(1+x)\\sim x$ on both sides).",
+    "Always check both one-sided limits when $\\max$ or $\\min$ of expressions with sign changes appears."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Non-differentiability of the maximum of two functions",
+    "Graphs of inverse trigonometric and modulus functions"
+   ],
+   "level": 4,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\max\\left\\{\\left|\\frac4\\pi\\tan^{-1}x\\right|,\\ |2x^2-1|\\right\\}$. If $n$ is the total number of points in $\\mathbb{R}$ where $f(x)$ is not differentiable, then the value of $n$ is ______.",
+   "answer": "4",
+   "key_idea": "The maximum of two functions has corners only where the graphs cross with different slopes (or where the dominant function has its own corner).",
+   "solution": [
+    "Let $g(x)=\\left|\\frac4\\pi\\tan^{-1}x\\right|$ and $h(x)=|2x^2-1|$; both are even, so $f=\\max\\{g,h\\}$ is even. Sketch both graphs.",
+    "$g$ rises from $0$ at $x=0$ towards $2$ as $|x|\\to\\infty$ (with a corner at $0$); $h$ is $1$ at $x=0$, falls to $0$ at $x=\\pm\\frac1{\\sqrt2}$ and then rises like $2x^2$.",
+    "At $x=0$: $g(0)=0<h(0)=1$, so near $0$ the maximum is $h=1-2x^2$, which is smooth. At $x=\\pm\\frac1{\\sqrt2}$: $h=0<g$, so the corner of $h$ is hidden under $g$. Both of these points are differentiable.",
+    "The graphs cross at $x=\\pm1$, where $g=\\frac4\\pi\\cdot\\frac\\pi4=1=|2-1|=h$. The slopes there are different ($g'(1)=\\frac2\\pi$, $h'(1)=4$), so $f$ has corners at $x=\\pm1$.",
+    "On $\\left(0,\\frac1{\\sqrt2}\\right)$, $h=1-2x^2$ decreases from $1$ to $0$ while $g$ increases from $0$, so there is exactly one more crossing, with different slopes. By symmetry there is a mirror crossing on the negative side (approximately $x=\\pm0.47$).",
+    "Total corners: $x=\\pm1$ and the two points $x\\approx\\pm0.47$, i.e. $n=4$ (the graph shows four corner points)."
+   ],
+   "solution_source": "written",
+   "alternate_solutions": [
+    {
+     "idea": "Use convexity to prove that the equation $g=h$ has exactly two positive roots, so no crossing is missed or double counted.",
+     "solution": [
+      "$f$ is even, so count non-differentiable points for $x>0$ and double. At $x=0$ the maximum is the smooth branch $h=1-2x^2$, so $0$ is not one.",
+      "A max of two differentiable functions fails to be differentiable only where $g=h$ and $g'\\ne h'$ (a corner of $g$ or $h$ hidden below the other does not matter).",
+      "For $x>0$ the corners of $g$ and $h$ are at $0$ and $\\frac1{\\sqrt2}$, where the other function is larger. So only crossings count.",
+      "Roots of $g=h$ on $\\left(0,\\frac1{\\sqrt2}\\right)$: $1-2x^2-g$ decreases strictly from $1$ to $-g\\left(\\frac1{\\sqrt2}\\right)<0$, so there is exactly one root.",
+      "Roots on $x\\ge\\frac1{\\sqrt2}$: let $\\varphi=2x^2-1-\\frac4\\pi\\tan^{-1}x$. Then $\\varphi'=4x-\\frac{4}{\\pi(1+x^2)}$ and $\\varphi''=4+\\frac{8x}{\\pi(1+x^2)^2}>0$, so $\\varphi$ is convex for $x>0$ with $\\varphi(0)=-1<0$, so it has exactly one positive root, namely $x=1$ since $\\varphi(1)=0$.",
+      "At each of the two crossings the slopes differ (one function is decreasing and the other increasing at the first; $\\frac2\\pi\\neq4$ at $x=1$). So there are $2$ corners for $x>0$ and $2$ for $x<0$: $n=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f=\\max\\{g,h\\}$ with $g,h$ differentiable: $f$ is non-differentiable exactly at the points where $g=h$ and $g'\\ne h'$.",
+    "If $g$ or $h$ itself has a corner (such as $|x|$-type points), it matters only where that function is the larger one at that point.",
+    "A convex function with a negative value at one point has at most two zeros; this is a quick way to show that two graphs cross a fixed number of times.",
+    "Even functions: count corners on $x>0$ and double, and check $x=0$ separately (here $f$ is smooth at $0$ because $h(0)=1>g(0)=0$)."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Shortest distance between a parabola and a circle (common normal)"
+   ],
+   "level": 2,
+   "question": "Let $P$ be a point on the parabola $y^2=4x$ and $Q$ be a point on the circle $x^2+y^2-6x+8=0$. If the distance $PQ$ is minimum and $C$ is the centre of the circle, then the value of $(PC)^2$ is equal to ______.",
+   "answer": "8",
+   "key_idea": "The shortest distance between a curve and a circle lies along the common normal, which passes through the centre, so minimise $PC$.",
+   "solution": [
+    "The circle is $(x-3)^2+y^2=1$, with centre $C(3,0)$ and radius $r=1$.",
+    "The shortest distance between a parabola and a circle lies along the common normal, which necessarily passes through the centre $C$. So we minimise $PC$.",
+    "Take $P(t^2,2t)$ on the parabola. Then $(PC)^2=(t^2-3)^2+(2t-0)^2=t^4-2t^2+9$.",
+    "Differentiate with respect to $t$: $\\frac{d}{dt}(PC)^2=4t^3-4t=0\\Rightarrow t=0$ or $t=\\pm1$.",
+    "For $t=0$: $(PC)^2=9$. For $t=\\pm1$: $(PC)^2=1-2+9=8$.",
+    "Since $8<9$, the minimum value of $(PC)^2$ is $8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the abscissa of $P$ as the variable: $(PC)^2$ is a quadratic in $x$, so completing the square gives the minimum with no calculus.",
+     "solution": [
+      "For $P(x,y)$ on $y^2=4x$ (so $x\\ge0$): $(PC)^2=(x-3)^2+y^2=(x-3)^2+4x=x^2-2x+9$.",
+      "Complete the square: $x^2-2x+9=(x-1)^2+8$.",
+      "Since $x=1\\ge0$ is allowed (it is the point $(1,\\pm2)$), the minimum is $8$ at $x=1$. The minimum of $PQ$ is then $\\sqrt8-1$ along the line $PC$.",
+      "Hence $(PC)^2=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Shortest distance between a curve $\\mathcal C$ and a circle with centre $C$ outside it equals $\\min_{P\\in\\mathcal C}PC-r$, attained along the line $PC$ (the common normal).",
+    "For $y^2=4x$ and the point $(h,0)$ on the axis: $(PC)^2=x^2+(4-2h)x+h^2$, which is minimised at $x=h-2$ when $h>2$ (here $h=3$, $x=1$). The minimum is $4h-4=8$.",
+    "Normal to $y^2=4ax$ at $(at^2,2at)$: $y=-tx+2at+at^3$. Passing through $(3,0)$ gives $t^3-t=0$: the same $t=0,\\pm1$ found by differentiation.",
+    "For a point on the axis with $h\\le2$ (for $a=1$), the nearest point of the parabola is its vertex."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Integer Type(0 to 9)",
+   "short_type": "Integer (0-9)",
+   "marks": 4,
+   "concepts": [
+    "Functional equations",
+    "Higher-order derivatives"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function satisfying the functional equation $f(x+y)=e^xf(y)+e^yf(x)$ for all $x,y\\in\\mathbb{R}$. If the straight line $y=4ex-2e$ is tangent to the curve $y=f(x)$ at $x=1$, then the value of $f^{(4)}(0)-f^{(3)}(0)$ is equal to ______ (where $f^{(n)}(x)$ is the $n$-th derivative of $f(x)$ with respect to $x$).",
+   "answer": "2",
+   "key_idea": "Dividing by $e^{x+y}$ makes $g(t)=\\frac{f(t)}{e^t}$ additive, so $g(t)=kt$ and $f(t)=kte^t$.",
+   "solution": [
+    "Divide both sides of $f(x+y)=e^xf(y)+e^yf(x)$ by $e^{x+y}$: $\\frac{f(x+y)}{e^{x+y}}=\\frac{f(x)}{e^x}+\\frac{f(y)}{e^y}$ ...(1).",
+    "Define $g(t)=\\frac{f(t)}{e^t}$. Then (1) says $g(x+y)=g(x)+g(y)$. Since $f$ is differentiable, $g$ is continuous, so $g(t)=kt$.",
+    "Hence $f(t)=kte^t$.",
+    "The tangent $y=4ex-2e$ at $x=1$ has slope $4e$, so $f'(1)=4e$.",
+    "$f'(t)=k(1+t)e^t$, so $f'(1)=2ke=4e\\Rightarrow k=2$.",
+    "Therefore $f(t)=2te^t$.",
+    "Differentiating $n$ times: $f^{(n)}(t)=2e^t(t+n)$ (by Leibniz or induction).",
+    "$f^{(4)}(0)=2(4)=8$ and $f^{(3)}(0)=2(3)=6$, so $f^{(4)}(0)-f^{(3)}(0)=8-6=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate the functional equation with respect to $y$ at $y=0$ to turn it into a first-order linear ODE.",
+     "solution": [
+      "Put $x=y=0$: $f(0)=2f(0)$, so $f(0)=0$.",
+      "Differentiate with respect to $y$ and set $y=0$: $f'(x)=e^xf'(0)+f(x)$, i.e. $f'(x)-f(x)=ke^x$ with $k=f'(0)$.",
+      "Multiply by the integrating factor $e^{-x}$: $\\frac{d}{dx}\\left(e^{-x}f\\right)=k$, so $e^{-x}f=kx+C$. With $f(0)=0$, $C=0$ and $f(x)=kxe^x$.",
+      "The tangent condition $f'(1)=2ke=4e$ gives $k=2$, so $f(x)=2xe^x$.",
+      "Then $f^{(4)}(0)-f^{(3)}(0)=2\\cdot4-2\\cdot3=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x+y)=e^xf(y)+e^yf(x)$ becomes additive after dividing by $e^{x+y}$; its differentiable solutions are exactly $f(x)=kxe^x$ (compare $(xe^x)'=e^x+xe^x$).",
+    "Cauchy's equation $g(x+y)=g(x)+g(y)$ with $g$ continuous (or differentiable) at one point gives $g(x)=kx$.",
+    "$\\frac{d^n}{dx^n}\\left(xe^x\\right)=(x+n)e^x$ (Leibniz: only two non-zero terms because $x''=0$). So $f^{(n)}(0)=2n$ for $f=2xe^x$.",
+    "General recipe: put $x=y=0$ to get $f(0)$, then differentiate in $y$ at $y=0$ to get an ODE in $x$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Median of a continuous frequency distribution"
+   ],
+   "level": 1,
+   "question": "Consider the following continuous frequency distribution where the frequency $k$ of the class interval $20-30$ is missing: $0-10$: $6$; $10-20$: $10$; $20-30$: $k$; $30-40$: $8$; $40-50$: $4$. If the median of this distribution is $23$, then the value of $k$ is ______.",
+   "answer": "10",
+   "key_idea": "The median $23$ lies in the class $20-30$, so use the median formula with $N=28+k$ and cumulative frequency $16$ below the class.",
+   "solution": [
+    "Since the median is $23$, it lies in the interval $20-30$, which is the median class.",
+    "Lower limit $L=20$; frequency of the median class $f=k$; class width $h=10$; cumulative frequency of the class preceding it $CF=6+10=16$; total frequency $N=6+10+k+8+4=28+k$.",
+    "Median $=L+\\left(\\frac{\\frac N2-CF}{f}\\right)\\times h$.",
+    "$23=20+\\left(\\frac{\\frac{28+k}{2}-16}{k}\\right)\\times10$, so $3=\\left(\\frac{14+\\frac k2-16}{k}\\right)\\times10=\\left(\\frac{\\frac k2-2}{k}\\right)\\times10$.",
+    "$3=\\frac{5k-20}{k}\\Rightarrow3k=5k-20\\Rightarrow2k=20\\Rightarrow k=10$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read the median as linear interpolation on the cumulative-frequency curve: $23$ is $30\\%$ of the way through the class, so $30\\%$ of the class frequency lies below it.",
+     "solution": [
+      "The cumulative frequency at $20$ is $16$ and at $30$ is $16+k$; the median is the point where the cumulative frequency equals $\\frac N2=\\frac{28+k}{2}$.",
+      "Within the class $20-30$ the cumulative frequency is linear in $x$, so at $x=23$ it equals $16+\\frac{23-20}{10}k=16+0.3k$.",
+      "Set $16+0.3k=\\frac{28+k}{2}=14+0.5k$.",
+      "$2=0.2k\\Rightarrow k=10$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Median of grouped data: $L+\\frac{\\frac N2-CF}{f}h$; it assumes frequencies are spread uniformly inside the median class, i.e. linear interpolation of the cumulative curve (ogive).",
+    "Because the median is given, the unknown $k$ appears in $N$ and in $f$: solve the resulting linear equation. Check that the answer places the median inside the assumed class: with $k=10$, $N=38$, $\\frac N2=19$ lies between $16$ and $26$.",
+    "Similar formulas: mode $=L+\\frac{f_1-f_0}{2f_1-f_0-f_2}h$; the quartiles use $\\frac N4$ and $\\frac{3N}4$.",
+    "Verification here: with $k=10$ the median is $20+\\frac{19-16}{10}\\times10=23$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Combinations: selections with no two consecutive elements",
+    "Complementary counting"
+   ],
+   "level": 3,
+   "question": "Let $S=\\{1,2,3,\\dots,10\\}$. Find the number of subsets $X$ of $S$ such that $X$ contains exactly $4$ elements, no two elements in $X$ are consecutive integers, and the product of all elements in $X$ is a multiple of $3$.",
+   "answer": "27",
+   "key_idea": "Count all non-consecutive $4$-subsets, then subtract those with no multiple of $3$; the leftover numbers fall into consecutive pairs plus one isolated number.",
+   "solution": [
+    "The number of ways to choose $k$ non-consecutive elements from $n$ is $\\binom{n-k+1}{k}$; here the total is $\\binom{10-4+1}{4}=\\binom74=35$.",
+    "The product is a multiple of $3$ unless $X$ contains none of the multiples of $3$, namely $3,6,9$. So subtract the subsets with none of them.",
+    "Without $3,6,9$ the available numbers are $S'=\\{1,2,4,5,7,8,10\\}$.",
+    "Group $S'$ into consecutive pairs and one isolated number: $\\{1,2\\},\\{4,5\\},\\{7,8\\}$ and $\\{10\\}$.",
+    "At most one element can be taken from each pair, so to get $4$ elements we must take $10$ and exactly one element from each of the three pairs.",
+    "Number of such subsets $=\\binom21\\times\\binom21\\times\\binom21\\times1=8$.",
+    "Required number $=35-8=27$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Inclusion-exclusion on which of $3,6,9$ the set contains, counting completions around each forced element.",
+     "solution": [
+      "Let $E_3,E_6,E_9$ be the events that $X$ contains $3$, $6$, $9$ respectively. We need $|E_3\\cup E_6\\cup E_9|$.",
+      "$|E_3|$: $2,4$ are excluded; choose $3$ non-consecutive numbers from $\\{1\\}\\cup\\{5,\\dots,10\\}$: with $1$: $\\binom52=10$; without $1$: $\\binom43=4$; total $14$.",
+      "$|E_6|$: $5,7$ are excluded; choose $3$ non-consecutive from the blocks $\\{1,2,3,4\\}$ and $\\{8,9,10\\}$: $2$ from the first, $1$ from the second: $\\binom32\\times3=9$; $1$ from the first, $2$ from the second: $4\\times1=4$; total $13$.",
+      "$|E_9|$: $8,10$ are excluded; choose $3$ non-consecutive from $\\{1,\\dots,7\\}$: $\\binom53=10$.",
+      "Pairs: $|E_3E_6|$: remaining $2$ from $\\{1,8,9,10\\}$: $4$. $|E_3E_9|$: remaining $2$ from $\\{1,5,6,7\\}$: $4$. $|E_6E_9|$: remaining $2$ from $\\{1,2,3,4\\}$: $3$. Triple $|E_3E_6E_9|$: the fourth element must be $1$: $1$.",
+      "$|E_3\\cup E_6\\cup E_9|=(14+13+10)-(4+4+3)+1=37-11+1=27$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Number of $k$-subsets of $\\{1,\\dots,n\\}$ with no two consecutive elements $=\\binom{n-k+1}{k}$ (bijection: subtract $0,1,\\dots,k-1$ from the sorted elements).",
+    "\"Product is a multiple of $3$\" $\\iff$ at least one multiple of $3$: use complement (all elements non-multiples).",
+    "A set whose elements are split into runs of consecutive numbers allows at most one choice per run when no two chosen elements may be adjacent; the number of selections is then a product of choices per run when exactly one is taken from each.",
+    "Cross-check by direct count: $35$ non-consecutive $4$-subsets, of which $8$ avoid $\\{3,6,9\\}$, leaving $27$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Binomial theorem: coefficient in a product of expansions"
+   ],
+   "level": 2,
+   "question": "Let $A(x)=\\sum_{r=0}^{10}\\binom{10}{r}x^r(1+x)^r$ and $B(x)=\\sum_{k=0}^{10}\\binom{10}{k}2^{10-k}(-1)^k(1+x)^k$ be two polynomial expressions. If the coefficient of $x^6$ in the product $A(x)\\cdot B(x)$ is $C$, then the value of $C$ is ______.",
+   "answer": "45",
+   "key_idea": "Recognise both sums as binomial expansions: $A=(1+x+x^2)^{10}$ and $B=(1-x)^{10}$, whose product is $(1-x^3)^{10}$.",
+   "solution": [
+    "Substitute $y=x(1+x)=x+x^2$ in $A$: $A(x)=\\sum_{r=0}^{10}\\binom{10}{r}(x+x^2)^r=(1+x+x^2)^{10}$.",
+    "Rewrite $B$: $B(x)=\\sum_{k=0}^{10}\\binom{10}{k}2^{10-k}\\left(-(1+x)\\right)^k=\\left(2-(1+x)\\right)^{10}=(1-x)^{10}$.",
+    "The product: $A(x)B(x)=(1+x+x^2)^{10}(1-x)^{10}=\\left[(1-x)(1+x+x^2)\\right]^{10}=(1-x^3)^{10}$.",
+    "General term of $(1-x^3)^{10}$: $T_{m+1}=\\binom{10}{m}(-1)^m(x^3)^m=\\binom{10}{m}(-1)^mx^{3m}$.",
+    "For $x^6$ set $3m=6\\Rightarrow m=2$.",
+    "$C=\\binom{10}{2}(-1)^2=\\frac{10\\times9}{2}=45$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Recognise $\\sum\\binom nr u^r=(1+u)^n$ with $u=x(1+x)$, and $\\sum\\binom nk a^{n-k}(-v)^k=(a-v)^n$ with $a=2$, $v=1+x$.",
+    "Identity $(1-x)(1+x+x^2)=1-x^3$; generally $(1-x)(1+x+\\dots+x^{m-1})=1-x^m$. So $(1+x+x^2)^n(1-x)^n=(1-x^3)^n$.",
+    "Coefficient of $x^{3m}$ in $(1-x^3)^{10}$ is $(-1)^m\\binom{10}{m}$; coefficients of powers not divisible by $3$ are $0$ (e.g. the coefficient of $x^5$ is $0$).",
+    "Verified computationally: the coefficient of $x^6$ in $A\\cdot B$ is $45$."
+   ]
+  }
+ ]
+}
