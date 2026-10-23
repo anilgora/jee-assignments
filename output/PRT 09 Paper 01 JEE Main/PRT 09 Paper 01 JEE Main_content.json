@@ -1,0 +1,1220 @@
+{
+ "title": "PRT 09 — Paper Analysis",
+ "subtitle": "Paper 01 · JEE Main · detailed solutions",
+ "source": "papers/PRT 09 Paper 01 JEE Main.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "PRT 09 Paper 01",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 21,
+   "to": 25,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Focus-directrix definition of a parabola",
+    "Area bounded by a parabola and a line"
+   ],
+   "level": 1,
+   "question": "Let $C$ be a curve defined as the locus of a point $P(x,y)$ such that its distance from the point $S(2,1)$ is equal to its perpendicular distance from the line $x=0$. The area (in sq. units) of the region bounded by the curve $C$ and the line $x=2$ is:",
+   "options": [
+    "$\\frac{8}{3}$",
+    "$\\frac{16}{3}$",
+    "$\\frac{4}{3}$",
+    "$\\frac{10}{3}$"
+   ],
+   "answer": "(A) $\\frac{8}{3}$",
+   "key_idea": "The locus is the parabola $(y-1)^2=4(x-1)$, and $x=2$ is its latus rectum (through the focus $S$).",
+   "solution": [
+    "By the focus-directrix property $PS=PM$, the distance of $P(x,y)$ from $S(2,1)$ equals its distance from the line $x=0$: $\\sqrt{(x-2)^2+(y-1)^2}=|x|$.",
+    "Squaring both sides: $(x-2)^2+(y-1)^2=x^2$.",
+    "$x^2-4x+4+(y-1)^2=x^2$.",
+    "$(y-1)^2=4(x-1)$.",
+    "This is a parabola with vertex $(1,1)$ opening towards the positive $x$-axis.",
+    "The required area bounded by the parabola and the line $x=2$ is $\\text{Area}=\\int_1^2 2\\sqrt{4(x-1)}\\,dx=4\\int_1^2\\sqrt{x-1}\\,dx$.",
+    "$\\text{Area}=4\\left[\\frac23(x-1)^{3/2}\\right]_1^2=\\frac83$ sq. units."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Archimedes: the area between a parabola and its latus rectum is $\\frac23\\times$(chord)$\\times$(distance of the vertex from the chord).",
+     "solution": [
+      "From $(y-1)^2=4(x-1)$ the parabola has $a=1$, vertex $(1,1)$, focus $(2,1)$.",
+      "The line $x=2$ passes through the focus perpendicular to the axis, so it is the latus rectum.",
+      "Its length is $4a=4$ (the chord runs from $(2,-1)$ to $(2,3)$).",
+      "The vertex is at distance $a=1$ from this chord.",
+      "The area of a parabolic segment is $\\frac23\\times\\text{chord}\\times\\text{height}=\\frac23\\times4\\times1=\\frac83$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "The area between $y^2=4ax$ and its latus rectum $x=a$ is $\\frac{8a^2}{3}$; here $a=1$ gives $\\frac83$.",
+    "Archimedes: a parabolic segment cut by a chord perpendicular to the axis has area $\\frac23\\times$ chord $\\times$ height (height = distance from vertex to chord).",
+    "$PS=PM$ with $S$ not on the directrix always signals a parabola: the axis is the perpendicular from $S$ to the directrix, and the vertex is the midpoint of $S$ and its foot."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Simplification of inverse trigonometric functions",
+    "Derivative of one function with respect to another"
+   ],
+   "level": 2,
+   "question": "For $x\\in(0,1)$, let $f(x)=\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}+\\sqrt{1-x^2}}{\\sqrt{1+x^2}-\\sqrt{1-x^2}}\\right)$ and $g(x)=\\cos^{-1}(2x^2-1)$. Then the derivative of $f(x)$ with respect to $g(x)$ at $x=\\frac12$ is equal to:",
+   "options": [
+    "$\\frac{1}{2\\sqrt5}$",
+    "$\\frac{1}{\\sqrt5}$",
+    "$\\frac{1}{4\\sqrt5}$",
+    "$\\frac{\\sqrt5}{4}$"
+   ],
+   "answer": "(A) $\\frac{1}{2\\sqrt5}$",
+   "key_idea": "Put $x^2=\\cos2\\theta$: then $\\sqrt{1\\pm x^2}=\\sqrt2\\cos\\theta,\\ \\sqrt2\\sin\\theta$ and the fraction is $\\tan\\left(\\frac\\pi4+\\theta\\right)$.",
+   "solution": [
+    "To simplify $f(x)$, substitute $x^2=\\cos2\\theta$, where $\\theta\\in\\left(0,\\frac\\pi4\\right)$ since $x\\in(0,1)$.",
+    "$f(x)=\\tan^{-1}\\left(\\frac{\\sqrt2\\cos\\theta+\\sqrt2\\sin\\theta}{\\sqrt2\\cos\\theta-\\sqrt2\\sin\\theta}\\right)=\\tan^{-1}\\left(\\tan\\left(\\frac\\pi4+\\theta\\right)\\right)$.",
+    "Since $\\theta\\in\\left(0,\\frac\\pi4\\right)$, we have $\\frac\\pi4+\\theta\\in\\left(\\frac\\pi4,\\frac\\pi2\\right)$, inside the principal range.",
+    "Thus $f(x)=\\frac\\pi4+\\theta=\\frac\\pi4+\\frac12\\cos^{-1}(x^2)$.",
+    "$f'(x)=\\frac12\\cdot\\left(-\\frac{1}{\\sqrt{1-x^4}}\\right)\\cdot(2x)=-\\frac{x}{\\sqrt{1-x^4}}$.",
+    "For $g(x)=\\cos^{-1}(2x^2-1)$, substitute $x=\\cos\\phi$ with $\\phi\\in\\left(0,\\frac\\pi2\\right)$: $g(x)=\\cos^{-1}(2\\cos^2\\phi-1)=\\cos^{-1}(\\cos2\\phi)=2\\phi=2\\cos^{-1}x$.",
+    "$g'(x)=-\\frac{2}{\\sqrt{1-x^2}}$.",
+    "The derivative of $f$ with respect to $g$ is $\\frac{df}{dg}=\\frac{f'(x)}{g'(x)}=\\frac{-x/\\sqrt{1-x^4}}{-2/\\sqrt{1-x^2}}=\\frac x2\\sqrt{\\frac{1-x^2}{1-x^4}}=\\frac{x}{2\\sqrt{1+x^2}}$.",
+    "At $x=\\frac12$: $\\frac{df}{dg}=\\frac{1/2}{2\\sqrt{1+\\frac14}}=\\frac{1/2}{2\\cdot\\frac{\\sqrt5}{2}}=\\frac{1}{2\\sqrt5}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $g=2\\cos^{-1}x$ to take $\\phi=\\cos^{-1}x$ as a common parameter and compute $\\frac{df/d\\phi}{dg/d\\phi}$.",
+     "solution": [
+      "For $x\\in(0,1)$, $g(x)=\\cos^{-1}(2x^2-1)=2\\cos^{-1}x$. Let $\\phi=\\cos^{-1}x$, so $x=\\cos\\phi$ and $g=2\\phi$, $\\frac{dg}{d\\phi}=2$.",
+      "With $x^2=\\cos2\\theta$ we get $f=\\frac\\pi4+\\theta=\\frac\\pi4+\\frac12\\cos^{-1}(\\cos^2\\phi)$.",
+      "$\\frac{df}{d\\phi}=\\frac12\\cdot\\frac{-1}{\\sqrt{1-\\cos^4\\phi}}\\cdot(-2\\cos\\phi\\sin\\phi)=\\frac{\\cos\\phi\\sin\\phi}{\\sin\\phi\\sqrt{1+\\cos^2\\phi}}=\\frac{\\cos\\phi}{\\sqrt{1+\\cos^2\\phi}}$.",
+      "Hence $\\frac{df}{dg}=\\frac{df/d\\phi}{dg/d\\phi}=\\frac{\\cos\\phi}{2\\sqrt{1+\\cos^2\\phi}}$.",
+      "At $x=\\frac12$, $\\cos\\phi=\\frac12$: $\\frac{df}{dg}=\\frac{1/2}{2\\sqrt{5/4}}=\\frac{1/2}{\\sqrt5}=\\frac{1}{2\\sqrt5}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $x\\in[0,1]$: $\\cos^{-1}(2x^2-1)=2\\cos^{-1}x$. For $x\\in[-1,1]$: $\\cos^{-1}(2x^2-1)=2\\cos^{-1}|x|$.",
+    "When $\\sqrt{1+u}$ and $\\sqrt{1-u}$ both appear, put $u=\\cos2\\theta$: they become $\\sqrt2\\cos\\theta$ and $\\sqrt2\\sin\\theta$.",
+    "$\\tan^{-1}\\frac{1+t}{1-t}=\\frac\\pi4+\\tan^{-1}t$ for $t<1$ (for $t>1$ add $\\pi$); here $t=\\tan\\theta$.",
+    "Derivative of $f$ with respect to $g$ is $\\frac{f'(x)}{g'(x)}$; always check the range of the inverse function before simplifying."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Normal to a parabola in parametric form"
+   ],
+   "level": 1,
+   "question": "If a normal to the parabola $y^2=8x$ is parallel to the line $x-y+3=0$ and intersects the parabola again at the point $Q$, then the coordinates of $Q$ are:",
+   "options": [
+    "$(18,12)$",
+    "$(18,-12)$",
+    "$(8,8)$",
+    "$(8,-8)$"
+   ],
+   "answer": "(A) $(18,12)$",
+   "key_idea": "A normal at parameter $t_1$ meets $y^2=4ax$ again at $t_2=-t_1-\\frac{2}{t_1}$.",
+   "solution": [
+    "For the parabola $y^2=8x$, $4a=8\\Rightarrow a=2$.",
+    "The parametric coordinates of any point on the parabola are $(at^2,2at)=(2t^2,4t)$.",
+    "The slope of the normal to the parabola at parameter $t_1$ is $m=-t_1$.",
+    "The line $x-y+3=0$ has slope $m=1$, so the normal is parallel to it when $-t_1=1\\Rightarrow t_1=-1$.",
+    "If a normal drawn at parameter $t_1$ intersects the parabola again at parameter $t_2$, then $t_2=-t_1-\\frac{2}{t_1}$.",
+    "$t_2=-(-1)-\\frac{2}{-1}=1+2=3$.",
+    "The coordinates of $Q$ for $t_2=3$: $Q=(at_2^2,2at_2)=(2(3)^2,2(2)(3))=(18,12)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the normal in slope form $y=mx-2am-am^3$ with $m=1$ and intersect it with the parabola.",
+     "solution": [
+      "For $y^2=4ax$ with $a=2$, the normal of slope $m$ is $y=mx-2am-am^3$.",
+      "For $m=1$: $y=x-4-2=x-6$.",
+      "Substituting in $y^2=8x$: $(x-6)^2=8x\\Rightarrow x^2-20x+36=0\\Rightarrow(x-2)(x-18)=0$.",
+      "$x=2$ gives $y=-4$, the foot of the normal (parameter $t_1=-1$, point $(2,-4)$).",
+      "The other intersection is $x=18$, $y=18-6=12$, so $Q=(18,12)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $y^2=4ax$: the normal at $t_1$ meets the curve again at $t_2=-t_1-\\frac{2}{t_1}$; the normal of slope $m$ is $y=mx-2am-am^3$ (foot $(am^2,-2am)$).",
+    "The chord joining parameters $t_1,t_2$ has slope $\\frac{2}{t_1+t_2}$ and the chord is a focal chord iff $t_1t_2=-1$.",
+    "Substituting a normal's equation into the parabola gives a quadratic one of whose roots is the known foot, so the other root is found by sum or product of roots."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Orthogonal trajectories of a family of curves"
+   ],
+   "level": 2,
+   "question": "If the curve representing the orthogonal trajectory of the family of curves $y=c(x+1)e^x$ (where $c$ is an arbitrary constant and $x>-1$) passes through the point $(0,2)$, then its equation is:",
+   "options": [
+    "$y^2+2x-4=\\ln\\left(\\frac{x+2}{2}\\right)^2$",
+    "$y^2-2x-4=\\ln\\left(\\frac{x+2}{2}\\right)^2$",
+    "$y^2+2x-4=2\\ln(x+2)$",
+    "$y^2-2x+4=\\ln\\left(\\frac{x+2}{2}\\right)^2$"
+   ],
+   "answer": "(A) $y^2+2x-4=\\ln\\left(\\frac{x+2}{2}\\right)^2$",
+   "key_idea": "For the orthogonal family replace $\\frac{dy}{dx}$ by $-\\frac{dx}{dy}$ in the differential equation of the given family.",
+   "solution": [
+    "The given family of curves is $y=c(x+1)e^x$.",
+    "$\\frac{dy}{dx}=ce^x(x+1)+ce^x(1)=ce^x(x+2)$.",
+    "Eliminating $c$: $\\frac{dy}{dx}=\\frac{y(x+2)}{x+1}$.",
+    "To find the differential equation of the orthogonal trajectory, replace $\\frac{dy}{dx}$ with $-\\frac{dx}{dy}$: $-\\frac{dx}{dy}=\\frac{y(x+2)}{x+1}\\Rightarrow\\frac{dy}{dx}=-\\frac{x+1}{(x+2)y}$.",
+    "$y\\,dy=-\\frac{x+1}{x+2}dx=-\\left(1-\\frac{1}{x+2}\\right)dx$.",
+    "$\\int y\\,dy=\\int\\left(\\frac{1}{x+2}-1\\right)dx$.",
+    "$\\frac{y^2}{2}=\\ln(x+2)-x+C_1$, i.e. $y^2+2x-2\\ln(x+2)=C$.",
+    "Since the curve passes through $(0,2)$: $2^2+2(0)-2\\ln2=C\\Rightarrow C=4-2\\ln2$.",
+    "$y^2+2x-4=2\\ln(x+2)-2\\ln2=2\\ln\\left(\\frac{x+2}{2}\\right)=\\ln\\left(\\frac{x+2}{2}\\right)^2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test the options: the orthogonal trajectory must pass through $(0,2)$ with slope $-\\frac14$ there (the family has slope $4$ at $(0,2)$).",
+     "solution": [
+      "The family curve through $(0,2)$ has $c=2$ and slope $\\frac{y(x+2)}{x+1}=\\frac{2\\cdot2}{1}=4$.",
+      "So the orthogonal trajectory through $(0,2)$ must have slope $-\\frac14$ at that point.",
+      "Put $(0,2)$ in the options: (A) $4+0-4=0=\\ln1$ holds; (B) $4-0-4=0=\\ln1$ holds; (C) $0=2\\ln2$ fails; (D) $4+4=8\\ne0$ fails.",
+      "For (A), differentiating $y^2+2x-4=2\\ln\\frac{x+2}{2}$ gives $2yy'+2=\\frac{2}{x+2}$; at $(0,2)$: $4y'+2=1\\Rightarrow y'=-\\frac14$, as required.",
+      "For (B), $2yy'-2=\\frac{2}{x+2}$; at $(0,2)$: $4y'-2=1\\Rightarrow y'=\\frac34\\ne-\\frac14$, so (B) is rejected.",
+      "Hence only (A) is the orthogonal trajectory."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Orthogonal trajectories: eliminate the parameter to get $F(x,y,y')=0$, then replace $y'$ by $-\\frac1{y'}$ (Cartesian) or $r\\frac{d\\theta}{dr}$ by $-\\frac{dr}{r\\,d\\theta}$ (polar).",
+    "For $y=cf(x)$ the family's DE is $\\frac{y'}{y}=\\frac{f'}{f}$, so the orthogonal trajectories satisfy $y\\,y'=-\\frac{f}{f'}$ and $\\frac{y^2}{2}=-\\int\\frac{f}{f'}dx$.",
+    "In MCQs on trajectories, the point condition and the slope at that point eliminate options quickly (slopes must multiply to $-1$).",
+    "Instance: $f=(x+1)e^x$ gives $\\frac{f}{f'}=\\frac{x+1}{x+2}$."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Polar substitution in a differential equation",
+    "Integration by partial fractions"
+   ],
+   "level": 3,
+   "question": "Consider the differential equation $2(x\\,dx+y\\,dy)=(x^2+y^2-1)(x\\,dy-y\\,dx)$. Using the polar substitution $x=r\\cos\\theta$ and $y=r\\sin\\theta$, the general solution of the differential equation is given by (where $C$ is an arbitrary constant):",
+   "options": [
+    "$\\ln\\left|1-\\frac{1}{x^2+y^2}\\right|=\\tan^{-1}\\left(\\frac yx\\right)+C$",
+    "$\\ln\\left|1+\\frac{1}{x^2+y^2}\\right|=\\tan^{-1}\\left(\\frac yx\\right)+C$",
+    "$\\ln\\left|\\frac{x^2+y^2}{x^2+y^2-1}\\right|=\\tan^{-1}\\left(\\frac yx\\right)+C$",
+    "$\\ln|x^2+y^2-1|=2\\tan^{-1}\\left(\\frac yx\\right)+C$"
+   ],
+   "answer": "(A) $\\ln\\left|1-\\frac{1}{x^2+y^2}\\right|=\\tan^{-1}\\left(\\frac yx\\right)+C$",
+   "key_idea": "In polar form $x\\,dx+y\\,dy=r\\,dr$ and $x\\,dy-y\\,dx=r^2d\\theta$, so the DE separates in $r$ and $\\theta$.",
+   "solution": [
+    "Substitute $x=r\\cos\\theta$ and $y=r\\sin\\theta$.",
+    "We have $x^2+y^2=r^2$.",
+    "Differentiating gives $x\\,dx+y\\,dy=r\\,dr$ and $x\\,dy-y\\,dx=r^2d\\theta$.",
+    "Substituting these into the given differential equation: $2(r\\,dr)=(r^2-1)(r^2d\\theta)$.",
+    "$\\frac{2}{r(r^2-1)}dr=d\\theta$.",
+    "$\\int\\left(-\\frac2r+\\frac{1}{r-1}+\\frac{1}{r+1}\\right)dr=\\int d\\theta$.",
+    "$-2\\ln|r|+\\ln|r-1|+\\ln|r+1|=\\theta+C$.",
+    "$\\ln\\left|\\frac{(r-1)(r+1)}{r^2}\\right|=\\theta+C$.",
+    "$\\ln\\left|1-\\frac{1}{r^2}\\right|=\\theta+C$.",
+    "Substituting $r^2=x^2+y^2$ and $\\theta=\\tan^{-1}\\left(\\frac yx\\right)$: $\\ln\\left|1-\\frac{1}{x^2+y^2}\\right|=\\tan^{-1}\\left(\\frac yx\\right)+C$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Avoid polar coordinates: use $u=x^2+y^2$ and the exact differential $d\\left(\\tan^{-1}\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2+y^2}$.",
+     "solution": [
+      "Let $u=x^2+y^2$, so $du=2(x\\,dx+y\\,dy)$ and the left side of the DE is $du$.",
+      "Divide the DE by $u=x^2+y^2$: $\\frac{du}{u}=(u-1)\\frac{x\\,dy-y\\,dx}{x^2+y^2}=(u-1)\\,d\\left(\\tan^{-1}\\frac yx\\right)$.",
+      "Separate: $\\frac{du}{u(u-1)}=d\\left(\\tan^{-1}\\frac yx\\right)$.",
+      "$\\frac{1}{u(u-1)}=\\frac{1}{u-1}-\\frac1u$, so integrating: $\\ln\\left|\\frac{u-1}{u}\\right|=\\tan^{-1}\\frac yx+C$.",
+      "$\\ln\\left|1-\\frac1{x^2+y^2}\\right|=\\tan^{-1}\\frac yx+C$, option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Recognition cues: $x\\,dx+y\\,dy=\\frac12d(x^2+y^2)=r\\,dr$; $x\\,dy-y\\,dx=r^2d\\theta=x^2d\\left(\\frac yx\\right)=(x^2+y^2)\\,d\\left(\\tan^{-1}\\frac yx\\right)$.",
+    "If a DE contains $x^2+y^2$ together with these two combinations, polar coordinates (or $u=x^2+y^2$ and $\\tan^{-1}\\frac yx$) separate the variables.",
+    "Partial fractions: $\\frac{1}{r(r^2-1)}=-\\frac1r+\\frac{1}{2(r-1)}+\\frac{1}{2(r+1)}$, so $\\int\\frac{2\\,dr}{r(r^2-1)}=\\ln\\left|1-\\frac1{r^2}\\right|$.",
+    "Always change back with $r^2=x^2+y^2$ and $\\theta=\\tan^{-1}\\frac yx$ (valid for $x>0$; adjust the constant on other quadrants)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by a modulus curve and a line"
+   ],
+   "level": 2,
+   "question": "The area (in sq. units) of the region bounded by the curve $y=|x^2-4x+3|$ and the line $y=x-1$ is:",
+   "options": [
+    "$\\frac{11}{6}$",
+    "$\\frac{13}{6}$",
+    "$\\frac52$",
+    "$\\frac73$"
+   ],
+   "answer": "(B) $\\frac{13}{6}$",
+   "key_idea": "Split at $x=1,2,3,4$: the curves cross at $x=1,2,4$ and $|x^2-4x+3|$ changes form at $x=1,3$.",
+   "solution": [
+    "First, find the points of intersection of $y=|x^2-4x+3|$ and $y=x-1$.",
+    "Case 1 ($x\\ge3$ or $x\\le1$): $x^2-4x+3=x-1\\Rightarrow x^2-5x+4=0\\Rightarrow x=1,4$.",
+    "Case 2 ($1<x<3$): $-(x^2-4x+3)=x-1\\Rightarrow x^2-3x+2=0\\Rightarrow x=1,2$.",
+    "Thus the bounded region spans from $x=1$ to $x=4$, and we split the integral into three sub-intervals.",
+    "For $x\\in[1,2]$, $y=-x^2+4x-3\\ge y=x-1$: $A_1=\\int_1^2(-x^2+3x-2)\\,dx=\\left[-\\frac{x^3}{3}+\\frac{3x^2}{2}-2x\\right]_1^2=\\frac16$.",
+    "For $x\\in[2,3]$, $y=x-1\\ge y=-x^2+4x-3$: $A_2=\\int_2^3(x^2-3x+2)\\,dx=\\left[\\frac{x^3}{3}-\\frac{3x^2}{2}+2x\\right]_2^3=\\frac56$.",
+    "For $x\\in[3,4]$, $y=x-1\\ge y=x^2-4x+3$: $A_3=\\int_3^4(-x^2+5x-4)\\,dx=\\left[-\\frac{x^3}{3}+\\frac{5x^2}{2}-4x\\right]_3^4=\\frac76$.",
+    "Total required area: $A=A_1+A_2+A_3=\\frac16+\\frac56+\\frac76=\\frac{13}{6}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use Archimedes' segment formula $\\frac{|a|(\\beta-\\alpha)^3}{6}$ for the parabola $p(x)=x^2-4x+3$ and the line, then correct for the reflected lobe.",
+     "solution": [
+      "The line $y=x-1$ meets the parabola $p(x)=x^2-4x+3$ where $x^2-5x+4=0$, i.e. at $x=1$ and $x=4$.",
+      "The signed integral $\\int_1^4\\big((x-1)-|p|\\big)dx$ equals $\\int_1^4\\big((x-1)-p\\big)dx+\\int_1^3(p-|p|)\\,dx$, because $|p|=-p$ only on $[1,3]$.",
+      "First term: area of the parabolic segment between the line and $p$: $\\frac{1\\cdot(4-1)^3}{6}=\\frac92$.",
+      "Second term: $p-|p|=2p$ on $[1,3]$ and $\\int_1^3p\\,dx=-\\frac{1\\cdot(3-1)^3}{6}=-\\frac43$, so it equals $-\\frac83$.",
+      "The signed integral is $\\frac92-\\frac83=\\frac{11}{6}$. It counts the part $[1,2]$ (where $|p|$ is above the line) as negative.",
+      "On $[1,2]$ the gap $|p|-(x-1)=(x-1)(2-x)$ is a parabolic segment of area $\\frac{(2-1)^3}{6}=\\frac16$; the true area replaces $-\\frac16$ by $+\\frac16$, adding $2\\times\\frac16$.",
+      "Area $=\\frac{11}{6}+\\frac13=\\frac{13}{6}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between a parabola $y=ax^2+bx+c$ and a chord/line meeting it at $x=\\alpha,\\beta$ is $\\frac{|a|(\\beta-\\alpha)^3}{6}$.",
+    "For $y=|p(x)|$ areas, the part of the parabola below the $x$-axis is reflected upward; areas can be obtained from the plain parabola by adding twice the reflected lobe.",
+    "Always solve intersections separately on each piece of a modulus function and discard roots outside that piece's domain.",
+    "Sort the curves on each sub-interval (which is above) before integrating; a sign change in the integrand signals a crossing."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Point of contact condition for two conics",
+    "Eccentricity of a hyperbola"
+   ],
+   "level": 2,
+   "question": "If the parabola $x^2=4ay$ (where $a>0$) touches the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ at two distinct points, then the eccentricity of the hyperbola is equal to:",
+   "options": [
+    "$\\frac{\\sqrt5}{2}$",
+    "$\\frac{\\sqrt3}{2}$",
+    "$\\sqrt2$",
+    "$\\frac{\\sqrt6}{2}$"
+   ],
+   "answer": "(A) $\\frac{\\sqrt5}{2}$",
+   "key_idea": "Touching at two points $\\pm x_1$ means the resulting quadratic in $x^2$ must have equal roots, so $D=0$.",
+   "solution": [
+    "From the equation of the parabola, $y=\\frac{x^2}{4a}$.",
+    "Substituting $y$ into the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $\\frac{x^2}{a^2}-\\frac{x^4}{16a^2b^2}=1$.",
+    "$x^4-16b^2x^2+16a^2b^2=0$.",
+    "Since the parabola and hyperbola touch each other, this quadratic equation in $x^2$ must have equal roots.",
+    "Therefore the discriminant must be zero: $D=(-16b^2)^2-4(1)(16a^2b^2)=0$.",
+    "$256b^4-64a^2b^2=0$.",
+    "Since $b\\ne0$: $\\frac{b^2}{a^2}=\\frac{64}{256}=\\frac14$.",
+    "The eccentricity of the hyperbola is $e=\\sqrt{1+\\frac{b^2}{a^2}}=\\sqrt{1+\\frac14}=\\frac{\\sqrt5}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Touching at a point means a common point and a common slope: equate the slopes at $(x_1,y_1)$.",
+     "solution": [
+      "Let the contact point be $(x_1,y_1)$ with $x_1\\ne0$ (two distinct, symmetric points $\\pm x_1$).",
+      "Slope of the parabola $x^2=4ay$: $\\frac{dy}{dx}=\\frac{x_1}{2a}$. Slope of the hyperbola: $\\frac{dy}{dx}=\\frac{b^2x_1}{a^2y_1}$.",
+      "Equating: $\\frac{x_1}{2a}=\\frac{b^2x_1}{a^2y_1}\\Rightarrow y_1=\\frac{2b^2}{a}$.",
+      "On the parabola: $x_1^2=4ay_1=8b^2$.",
+      "On the hyperbola: $\\frac{8b^2}{a^2}-\\frac{y_1^2}{b^2}=\\frac{8b^2}{a^2}-\\frac{4b^2}{a^2}=\\frac{4b^2}{a^2}=1$, so $\\frac{b^2}{a^2}=\\frac14$.",
+      "Hence $e=\\sqrt{1+\\frac14}=\\frac{\\sqrt5}{2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two conics touch at a point iff they share the point and the tangent there; algebraically, eliminating one variable gives a repeated root.",
+    "When the curves are symmetric about an axis, a contact at $(x_1,y_1)$ forces one at $(-x_1,y_1)$, so 'touches at two points' means a double root in $x^2$ (not in $x$).",
+    "For $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$: $e^2=1+\\frac{b^2}{a^2}$; the condition here is $b^2=\\frac{a^2}{4}$ for every $a>0$, so $e=\\frac{\\sqrt5}{2}$ regardless of $a$.",
+    "Check: at $b^2=\\frac{a^2}{4}$ the quadratic is $(x^2-8b^2)^2=0$, i.e. $x=\\pm2\\sqrt2\\,b$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Normal to a hyperbola",
+    "Circle with the focal distance as a diameter"
+   ],
+   "level": 3,
+   "question": "Let $H:\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ $(a>0,b>0)$ be a hyperbola with eccentricity $e$. Let $S$ and $S'$ be the foci of $H$. A circle $C_1$ is drawn taking $SS'$ as a diameter. Let $P$ be the point of intersection of $H$ and $C_1$ lying in the first quadrant. If the normal to $H$ at $P$ passes through the point $(0,2b)$, then the eccentricity $e$ of the hyperbola is equal to:",
+   "options": [
+    "$\\frac{2}{\\sqrt3}$",
+    "$\\sqrt2$",
+    "$\\frac{\\sqrt5}{2}$",
+    "$\\frac32$"
+   ],
+   "answer": "(A) $\\frac{2}{\\sqrt3}$",
+   "key_idea": "The circle on $SS'$ is $x^2+y^2=a^2+b^2$; combining it with the hyperbola and the normal gives a single equation in $k=\\frac{b^2}{a^2}$.",
+   "solution": [
+    "The foci of the hyperbola $H$ are $S(ae,0)$ and $S'(-ae,0)$.",
+    "Since $SS'$ is the diameter of the circle $C_1$, its centre is the origin and its radius is $ae=\\sqrt{a^2+b^2}$.",
+    "Thus the equation of $C_1$ is $x^2+y^2=a^2+b^2$. Let $P(x_1,y_1)$ be the point of intersection in the first quadrant.",
+    "Since $P$ lies on both $C_1$ and $H$: $x_1^2+y_1^2=a^2+b^2$ ... (1) and $\\frac{x_1^2}{a^2}-\\frac{y_1^2}{b^2}=1$ ... (2).",
+    "The equation of the normal to $H$ at $P(x_1,y_1)$ is $\\frac{a^2x}{x_1}+\\frac{b^2y}{y_1}=a^2+b^2$.",
+    "Since this normal passes through $(0,2b)$: $\\frac{b^2(2b)}{y_1}=a^2+b^2\\Rightarrow y_1=\\frac{2b^3}{a^2+b^2}$.",
+    "From (1): $x_1^2=(a^2+b^2)-y_1^2=(a^2+b^2)-\\frac{4b^6}{(a^2+b^2)^2}$.",
+    "Substituting $x_1^2$ and $y_1$ into (2): $\\frac{a^2+b^2}{a^2}-\\frac{4b^6}{a^2(a^2+b^2)^2}-\\frac{4b^4}{(a^2+b^2)^2}=1$.",
+    "Let $k=\\frac{b^2}{a^2}$. Dividing by $a^2$ in numerators and denominators gives $(1+k)-\\frac{4k^3}{(1+k)^2}-\\frac{4k^2}{(1+k)^2}=1$.",
+    "So $k=\\frac{4k^2(k+1)}{(1+k)^2}=\\frac{4k^2}{1+k}$. Since $k>0$: $1+k=4k\\Rightarrow k=\\frac13$.",
+    "Therefore the eccentricity is $e=\\sqrt{1+\\frac{b^2}{a^2}}=\\sqrt{1+\\frac13}=\\frac{2}{\\sqrt3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise $P=(a\\sec\\theta,b\\tan\\theta)$: the circle gives $\\tan^2\\theta$ directly and the normal gives $\\tan\\theta$.",
+     "solution": [
+      "Let $P=(a\\sec\\theta,\\,b\\tan\\theta)$ with $\\theta\\in\\left(0,\\frac\\pi2\\right)$. The normal at $P$ is $\\frac{ax}{\\sec\\theta}+\\frac{by}{\\tan\\theta}=a^2+b^2$.",
+      "It passes through $(0,2b)$: $\\frac{2b^2}{\\tan\\theta}=a^2+b^2$, so $\\tan\\theta=\\frac{2b^2}{a^2+b^2}=\\frac{2k}{1+k}$ with $k=\\frac{b^2}{a^2}$.",
+      "$P$ lies on the circle $x^2+y^2=a^2+b^2$: $a^2\\sec^2\\theta+b^2\\tan^2\\theta=a^2+b^2$, i.e. $a^2+(a^2+b^2)\\tan^2\\theta=a^2+b^2$.",
+      "Hence $\\tan^2\\theta=\\frac{b^2}{a^2+b^2}=\\frac{k}{1+k}$.",
+      "Equate the two expressions: $\\frac{4k^2}{(1+k)^2}=\\frac{k}{1+k}\\Rightarrow4k=1+k\\Rightarrow k=\\frac13$.",
+      "So $e=\\sqrt{1+k}=\\frac{2}{\\sqrt3}$ (check: $\\tan\\theta=\\frac12$ both ways)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A circle with the focal chord $SS'$ as diameter passes through the points of the hyperbola/ellipse seen at a right angle from the foci; for the hyperbola its equation is $x^2+y^2=a^2e^2=a^2+b^2$.",
+    "Hyperbola with $P=(a\\sec\\theta,b\\tan\\theta)$: tangent $\\frac{x\\sec\\theta}{a}-\\frac{y\\tan\\theta}{b}=1$; normal $\\frac{ax}{\\sec\\theta}+\\frac{by}{\\tan\\theta}=a^2+b^2$.",
+    "The normal at $P(x_1,y_1)$ cuts the $x$-axis at $(e^2x_1,0)$ and the $y$-axis at $\\left(0,\\frac{(a^2+b^2)y_1}{b^2}\\right)$.",
+    "Introduce $k=\\frac{b^2}{a^2}$ early: $e^2=1+k$ and many conic conditions become single-variable equations."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Separable differential equation with substitution",
+    "Integration by partial fractions"
+   ],
+   "level": 2,
+   "question": "The rate of change of a quantity $y$ with respect to $x$ is given by $\\frac{dy}{dx}=\\frac{1}{x(x^3+1)}$ for $x>0$. If $y(1)=0$, then the value of $y(2)$ is equal to:",
+   "options": [
+    "$\\frac13\\ln\\left(\\frac{16}{9}\\right)$",
+    "$\\frac13\\ln\\left(\\frac{8}{9}\\right)$",
+    "$\\frac13\\ln\\left(\\frac{4}{9}\\right)$",
+    "$\\frac16\\ln\\left(\\frac{16}{9}\\right)$"
+   ],
+   "answer": "(A) $\\frac13\\ln\\left(\\frac{16}{9}\\right)$",
+   "key_idea": "Multiply numerator and denominator by $x^2$ so that $x^2dx=\\frac{dt}{3}$ with $t=x^3$.",
+   "solution": [
+    "The given rate equation is $dy=\\frac{dx}{x(x^3+1)}$.",
+    "$dy=\\frac{x^2\\,dx}{x^3(x^3+1)}$, so $y=\\int\\frac{x^2\\,dx}{x^3(x^3+1)}$.",
+    "Let $t=x^3$, then $dt=3x^2dx\\Rightarrow x^2dx=\\frac{dt}{3}$.",
+    "$y=\\frac13\\int\\frac{dt}{t(t+1)}=\\frac13\\int\\left(\\frac1t-\\frac{1}{t+1}\\right)dt$.",
+    "$y=\\frac13\\ln\\left|\\frac{t}{t+1}\\right|+C=\\frac13\\ln\\left(\\frac{x^3}{x^3+1}\\right)+C$.",
+    "Given $y(1)=0$: $0=\\frac13\\ln\\left(\\frac12\\right)+C\\Rightarrow C=-\\frac13\\ln\\left(\\frac12\\right)=\\frac13\\ln2$.",
+    "Thus $y(x)=\\frac13\\ln\\left(\\frac{2x^3}{x^3+1}\\right)$.",
+    "Evaluating at $x=2$: $y(2)=\\frac13\\ln\\left(\\frac{2(2)^3}{2^3+1}\\right)=\\frac13\\ln\\left(\\frac{16}{9}\\right)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Split $\\frac{1}{x(x^3+1)}=\\frac1x-\\frac{x^2}{x^3+1}$ and integrate from $1$ to $2$ (definite integral, no constant).",
+     "solution": [
+      "Check: $\\frac1x-\\frac{x^2}{x^3+1}=\\frac{x^3+1-x^3}{x(x^3+1)}=\\frac{1}{x(x^3+1)}$.",
+      "Since $y(1)=0$: $y(2)=\\int_1^2\\left(\\frac1x-\\frac{x^2}{x^3+1}\\right)dx=\\left[\\ln x-\\frac13\\ln(x^3+1)\\right]_1^2$.",
+      "At $x=2$: $\\ln2-\\frac13\\ln9$. At $x=1$: $0-\\frac13\\ln2$.",
+      "$y(2)=\\ln2-\\frac13\\ln9+\\frac13\\ln2=\\frac43\\ln2-\\frac13\\ln9=\\frac13\\ln\\frac{16}{9}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{1}{x(x^n+1)}=\\frac1x-\\frac{x^{n-1}}{x^n+1}$, so $\\int\\frac{dx}{x(x^n+1)}=\\ln x-\\frac1n\\ln(x^n+1)+C=\\frac1n\\ln\\frac{x^n}{x^n+1}+C$.",
+    "With an initial condition $y(a)=0$, $y(b)=\\int_a^b y'(x)\\,dx$ avoids the constant altogether.",
+    "Similarly $\\int\\frac{dx}{x(x^n+k)}=\\frac{1}{nk}\\ln\\left|\\frac{x^n}{x^n+k}\\right|+C$.",
+    "Whenever $f'(x)$ is a rational function of $x$ and $x^n$, try $t=x^n$ after multiplying by $\\frac{x^{n-1}}{x^{n-1}}$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Linear differential equation and integrating factor"
+   ],
+   "level": 3,
+   "question": "Let $y(x)$ be the solution of the differential equation $(1+x^2)x\\frac{dy}{dx}+(1+2x^2)y=x(1+x^2)^{3/2}$ for $x>0$, satisfying $y(1)=\\frac{3}{4\\sqrt2}$. Then the value of $y(\\sqrt3)$ is equal to:",
+   "options": [
+    "$\\frac{5\\sqrt3}{8}$",
+    "$\\frac{3\\sqrt3}{8}$",
+    "$\\frac{5\\sqrt3}{4}$",
+    "$\\frac{\\sqrt3}{2}$"
+   ],
+   "answer": "(A) $\\frac{5\\sqrt3}{8}$",
+   "key_idea": "Split $\\frac{1+2x^2}{1+x^2}=1+\\frac{x^2}{1+x^2}$ so that $x\\frac{dy}{dx}+y=\\frac{d(xy)}{dx}$ and the DE is linear in $u=xy$.",
+   "solution": [
+    "Divide by $(1+x^2)$: $x\\frac{dy}{dx}+\\left(\\frac{1+2x^2}{1+x^2}\\right)y=x\\sqrt{1+x^2}$.",
+    "Write $\\frac{1+2x^2}{1+x^2}=1+\\frac{x^2}{1+x^2}$: $\\left(x\\frac{dy}{dx}+y\\right)+\\frac{x^2y}{1+x^2}=x\\sqrt{1+x^2}$.",
+    "$\\frac{d(xy)}{dx}+\\frac{x}{1+x^2}(xy)=x\\sqrt{1+x^2}$. Let $u=xy$.",
+    "$\\frac{du}{dx}+\\frac{x}{1+x^2}u=x\\sqrt{1+x^2}$, a linear equation in $u$.",
+    "The integrating factor is $\\text{I.F.}=e^{\\int\\frac{x}{1+x^2}dx}=e^{\\frac12\\ln(1+x^2)}=\\sqrt{1+x^2}$.",
+    "$u\\sqrt{1+x^2}=\\int x\\sqrt{1+x^2}\\cdot\\sqrt{1+x^2}\\,dx+C$.",
+    "$xy\\sqrt{1+x^2}=\\int(x+x^3)\\,dx+C=\\frac{x^2}{2}+\\frac{x^4}{4}+C$.",
+    "Using $y(1)=\\frac{3}{4\\sqrt2}$: $1\\cdot\\frac{3}{4\\sqrt2}\\cdot\\sqrt2=\\frac12+\\frac14+C\\Rightarrow\\frac34=\\frac34+C\\Rightarrow C=0$.",
+    "Thus, for $x>0$: $y\\sqrt{1+x^2}=\\frac{x(2+x^2)}{4}$.",
+    "Substitute $x=\\sqrt3$: $y(\\sqrt3)\\sqrt{1+3}=\\frac{\\sqrt3(2+3)}{4}\\Rightarrow2y(\\sqrt3)=\\frac{5\\sqrt3}{4}\\Rightarrow y(\\sqrt3)=\\frac{5\\sqrt3}{8}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat it as a standard linear equation in $y$ directly: $P=\\frac1x+\\frac{x}{1+x^2}$ gives the integrating factor $x\\sqrt{1+x^2}$ in one step.",
+     "solution": [
+      "Normal form: $\\frac{dy}{dx}+\\frac{1+2x^2}{x(1+x^2)}y=\\sqrt{1+x^2}$.",
+      "Partial fractions: $\\frac{1+2x^2}{x(1+x^2)}=\\frac1x+\\frac{x}{1+x^2}$.",
+      "So $\\int P\\,dx=\\ln x+\\frac12\\ln(1+x^2)$ and the integrating factor is $x\\sqrt{1+x^2}$.",
+      "$\\frac{d}{dx}\\left(y\\,x\\sqrt{1+x^2}\\right)=x\\sqrt{1+x^2}\\cdot\\sqrt{1+x^2}=x(1+x^2)$.",
+      "Integrating: $y\\,x\\sqrt{1+x^2}=\\frac{x^2}{2}+\\frac{x^4}{4}+C$; $y(1)=\\frac{3}{4\\sqrt2}$ gives $\\frac34=\\frac34+C$, so $C=0$.",
+      "At $x=\\sqrt3$: $y\\cdot\\sqrt3\\cdot2=\\frac32+\\frac94=\\frac{15}{4}$, so $y=\\frac{15}{8\\sqrt3}=\\frac{5\\sqrt3}{8}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Linear DE $y'+Py=Q$: multiply by $e^{\\int P\\,dx}$ so that $\\left(ye^{\\int P}\\right)'=Qe^{\\int P}$.",
+    "Decompose $P$ by partial fractions: $\\frac{1+2x^2}{x(1+x^2)}=\\frac1x+\\frac{x}{1+x^2}$ gives the integrating factor $x\\sqrt{1+x^2}$ without guessing.",
+    "Recognition cue: $x\\frac{dy}{dx}+y=(xy)'$, so a coefficient of the form $1+(\\text{something})$ on $y$ suggests the substitution $u=xy$.",
+    "Closed form here: $y=\\frac{x(2+x^2)}{4\\sqrt{1+x^2}}$; check by substituting back into the DE."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Polar of a point with respect to an ellipse",
+    "Eccentricity and latus rectum of an ellipse"
+   ],
+   "level": 2,
+   "question": "Consider an ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ $(a>b>0)$ whose eccentricity is $\\frac{1}{\\sqrt2}$ and the length of its latus rectum is $4$. Let $P(\\alpha,\\beta)$ be any point lying on the line $x+y=6$. If the polar of the point $P$ with respect to the ellipse always passes through a fixed point $Q(x_0,y_0)$, then the distance of $Q$ from the origin is:",
+   "options": [
+    "$\\frac{4\\sqrt5}{3}$",
+    "$\\frac{2\\sqrt5}{3}$",
+    "$\\frac{8\\sqrt5}{3}$",
+    "$\\frac{5\\sqrt3}{4}$"
+   ],
+   "answer": "(A) $\\frac{4\\sqrt5}{3}$",
+   "key_idea": "The polar of $P(\\alpha,6-\\alpha)$ is linear in $\\alpha$, so all polars pass through the intersection of the two lines multiplying $\\alpha$ and the constant part.",
+   "solution": [
+    "Given $e=\\frac{1}{\\sqrt2}$: $e^2=1-\\frac{b^2}{a^2}\\Rightarrow\\frac12=1-\\frac{b^2}{a^2}\\Rightarrow a^2=2b^2$.",
+    "The length of the latus rectum is $4$: $\\frac{2b^2}{a}=4\\Rightarrow\\frac{a^2}{a}=4\\Rightarrow a=4$.",
+    "Thus $a^2=16$ and $b^2=8$. The equation of the ellipse is $\\frac{x^2}{16}+\\frac{y^2}{8}=1$.",
+    "Since $P(\\alpha,\\beta)$ lies on $x+y=6$: $\\alpha+\\beta=6\\Rightarrow\\beta=6-\\alpha$.",
+    "The polar of $P(\\alpha,\\beta)$ with respect to the ellipse is $T=0$: $\\frac{\\alpha x}{16}+\\frac{\\beta y}{8}=1$.",
+    "Substituting $\\beta=6-\\alpha$: $\\frac{\\alpha x}{16}+\\frac{(6-\\alpha)y}{8}=1$.",
+    "Grouping in $\\alpha$: $\\alpha\\left(\\frac{x}{16}-\\frac y8\\right)+\\left(\\frac{3y}{4}-1\\right)=0$.",
+    "This represents a family of lines passing through the intersection of $\\frac{3y}{4}-1=0\\Rightarrow y=\\frac43$ and $\\frac{x}{16}-\\frac y8=0\\Rightarrow x=2y=\\frac83$.",
+    "Hence the fixed point is $Q\\left(\\frac83,\\frac43\\right)$.",
+    "The distance of $Q$ from the origin is $OQ=\\sqrt{\\left(\\frac83\\right)^2+\\left(\\frac43\\right)^2}=\\sqrt{\\frac{64+16}{9}}=\\frac{\\sqrt{80}}{3}=\\frac{4\\sqrt5}{3}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "La Hire's theorem: if $P$ lies on a line, its polar passes through the pole of that line; so $Q$ is simply the pole of $x+y=6$.",
+     "solution": [
+      "From $e=\\frac1{\\sqrt2}$ and latus rectum $4$: the ellipse is $\\frac{x^2}{16}+\\frac{y^2}{8}=1$ (as before).",
+      "For any $P$ on the line $\\ell:x+y=6$, the pole of $\\ell$ lies on the polar of $P$ (La Hire). So every polar passes through the pole $Q$ of $\\ell$.",
+      "The polar of $Q(x_0,y_0)$ is $\\frac{x_0x}{16}+\\frac{y_0y}{8}=1$; this must be the line $x+y=6$, i.e. $\\frac{x_0}{16}x+\\frac{y_0}{8}y=1\\equiv\\frac x6+\\frac y6=1$.",
+      "$\\frac{x_0}{16}=\\frac16\\Rightarrow x_0=\\frac83$ and $\\frac{y_0}{8}=\\frac16\\Rightarrow y_0=\\frac43$.",
+      "$OQ=\\sqrt{\\frac{64}{9}+\\frac{16}{9}}=\\frac{4\\sqrt5}{3}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "La Hire: $A$ lies on the polar of $B$ iff $B$ lies on the polar of $A$. Hence the polars of all points of a line pass through one point, the pole of that line.",
+    "Pole of the line $lx+my=n$ with respect to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is $\\left(\\frac{la^2}{n},\\frac{mb^2}{n}\\right)$; here $\\left(\\frac{16}{6},\\frac{8}{6}\\right)$.",
+    "Ellipse data: $e^2=1-\\frac{b^2}{a^2}$, latus rectum $\\frac{2b^2}{a}$; $e=\\frac1{\\sqrt2}$ gives $a^2=2b^2$.",
+    "A family $L_1+\\lambda L_2=0$ always passes through the intersection of $L_1=0$ and $L_2=0$; use this when a parameter enters linearly."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Lagrange's mean value theorem and Rolle's theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:[0,2]\\to\\mathbb R$ be a function which is continuous on $[0,2]$ and twice differentiable on $(0,2)$. If $f(0)=0$, $f(1)=3$, and $f(2)=3$, then which of the following statements MUST be TRUE?",
+   "options": [
+    "There exists at least one $c\\in(0,2)$ such that $f''(c)<-\\frac32$",
+    "There exists at least one $c\\in(0,2)$ such that $f''(c)=0$",
+    "There exists at least one $c\\in(0,2)$ such that $f''(c)>\\frac32$",
+    "$f'(c)>0$ for all $c\\in(0,1)$"
+   ],
+   "answer": "(A) There exists at least one $c\\in(0,2)$ such that $f''(c)<-\\frac32$",
+   "key_idea": "Find $c_1\\in(0,1)$ with $f'(c_1)=3$ and $c_2\\in(1,2)$ with $f'(c_2)=0$; then $f''(c)=\\frac{-3}{c_2-c_1}$ and $c_2-c_1<2$.",
+   "solution": [
+    "Applying Lagrange's mean value theorem to $f(x)$ on $[0,1]$: $f$ is continuous on $[0,1]$ and differentiable on $(0,1)$, so there exists $c_1\\in(0,1)$ with $f'(c_1)=\\frac{f(1)-f(0)}{1-0}=\\frac{3-0}{1}=3$.",
+    "Applying Rolle's theorem to $f(x)$ on $[1,2]$: $f$ is continuous on $[1,2]$, differentiable on $(1,2)$ and $f(1)=f(2)=3$, so there exists $c_2\\in(1,2)$ with $f'(c_2)=0$.",
+    "Now apply LMVT to $f'(x)$ on $[c_1,c_2]\\subset(0,2)$: $f'$ is continuous on $[c_1,c_2]$ and differentiable on $(c_1,c_2)$, so there exists $c\\in(c_1,c_2)\\subset(0,2)$ with $f''(c)=\\frac{f'(c_2)-f'(c_1)}{c_2-c_1}=\\frac{0-3}{c_2-c_1}=-\\frac{3}{c_2-c_1}$.",
+    "Since $c_1\\in(0,1)$ and $c_2\\in(1,2)$, the length of the interval satisfies $0<c_2-c_1<2\\Rightarrow\\frac{1}{c_2-c_1}>\\frac12$.",
+    "Hence $f''(c)=-\\frac{3}{c_2-c_1}<-\\frac32$.",
+    "Thus there must exist at least one $c\\in(0,2)$ such that $f''(c)<-\\frac32$; (A) is true.",
+    "The other options are not forced. For $f(x)=\\frac92x-\\frac32x^2$ (which satisfies all the data) $f''\\equiv-3$, so (B) and (C) fail. For $f(x)=\\frac92x-\\frac32x^2-3x(x-1)(x-2)$ the data also hold, but $f'(0)=-\\frac32<0$, so $f'<0$ near $0$ and (D) fails."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Proof by contradiction with convexity: if $f''\\ge-\\frac32$ everywhere then $\\varphi(x)=f(x)+\\frac34x^2$ is convex, which the values at $0,1,2$ forbid.",
+     "solution": [
+      "Suppose, to the contrary, that $f''(x)\\ge-\\frac32$ for every $x\\in(0,2)$.",
+      "Let $\\varphi(x)=f(x)+\\frac34x^2$. Then $\\varphi''(x)=f''(x)+\\frac32\\ge0$, so $\\varphi$ is convex on $[0,2]$.",
+      "Convexity gives $\\varphi(1)\\le\\frac{\\varphi(0)+\\varphi(2)}{2}$.",
+      "But $\\varphi(0)=0$, $\\varphi(1)=3+\\frac34=\\frac{15}{4}$, $\\varphi(2)=3+3=6$, so the right side is $3$ and $\\frac{15}{4}\\le3$ is false.",
+      "This contradiction shows that $f''(c)<-\\frac32$ for some $c\\in(0,2)$, so (A) is true."
+     ]
+    },
+    {
+     "idea": "Second-difference mean value theorem: $f(0)-2f(1)+f(2)=f''(c)$ for some $c\\in(0,2)$, which gives the exact value $-3$.",
+     "solution": [
+      "Let $\\psi(x)=f(x+1)-f(x)$ on $[0,1]$. It is continuous on $[0,1]$ and differentiable on $(0,1)$.",
+      "$\\psi(0)=f(1)-f(0)=3$ and $\\psi(1)=f(2)-f(1)=0$, so by LMVT $\\psi'(\\xi)=-3$ for some $\\xi\\in(0,1)$, i.e. $f'(\\xi+1)-f'(\\xi)=-3$.",
+      "Apply LMVT to $f'$ on $[\\xi,\\xi+1]\\subset(0,2)$: $f'(\\xi+1)-f'(\\xi)=f''(c)\\cdot1$ for some $c\\in(\\xi,\\xi+1)$.",
+      "Hence $f''(c)=-3$ for some $c\\in(0,2)$, and $-3<-\\frac32$, so (A) holds.",
+      "Check with $f(x)=\\frac92x-\\frac32x^2$: $f(0)=0,f(1)=3,f(2)=3$ and $f''\\equiv-3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ takes the same value at three points, Rolle gives two zeros of $f'$ and then one zero of $f''$; with unequal values use LMVT in place of Rolle and track the quotients.",
+    "Second-difference theorem: $f(x+h)-2f(x)+f(x-h)=h^2f''(c)$ for some $c\\in(x-h,x+h)$ (needs $f$ continuous on the closed interval and twice differentiable inside).",
+    "To show a statement is 'not forced' build a simple counterexample (a quadratic or cubic through the given data) and test each option on it.",
+    "Bounds such as $0<c_2-c_1<2$ turn $f''=\\frac{\\Delta f'}{\\Delta x}$ into an inequality; keep the direction of the inequality when taking reciprocals of positive numbers."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Chord of contact and pair of tangents to a conic"
+   ],
+   "level": 2,
+   "question": "If the chord of contact of a point $P$ with respect to the parabola $y^2=4x$ is given by $2x-y+1=0$, and the equation of the pair of tangents drawn from $P$ to the ellipse $2x^2+y^2=2$ is written as $ax^2+bxy+cy^2+dx+ey+f=0$ (where $a,b,c,d,e,f$ are integers having no common factor greater than $1$ and $a>0$), then the value of $a+b+c+d+e+f$ is equal to:",
+   "options": [
+    "$1$",
+    "$2$",
+    "$3$",
+    "$4$"
+   ],
+   "answer": "(A) $1$",
+   "key_idea": "The chord of contact $T=0$ pins down $P\\left(\\frac12,1\\right)$, and the pair of tangents is $SS_1=T^2$.",
+   "solution": [
+    "Let the coordinates of point $P$ be $(h,k)$.",
+    "The chord of contact of $P(h,k)$ with respect to the parabola $y^2=4x$ is $T=0$: $yk=2(x+h)\\Rightarrow2x-ky+2h=0$.",
+    "Comparing this with the given equation $2x-y+1=0$ we get $k=1$ and $2h=1\\Rightarrow h=\\frac12$.",
+    "Thus the coordinates of point $P$ are $\\left(\\frac12,1\\right)$.",
+    "For the ellipse $2x^2+y^2=2$, let $S\\equiv2x^2+y^2-2=0$. The pair of tangents from $P$ is $SS_1=T^2$.",
+    "$S_1=2\\cdot\\frac14+1-2=-\\frac12$ and $T=2x\\cdot\\frac12+y\\cdot1-2=x+y-2$.",
+    "$(2x^2+y^2-2)\\left(-\\frac12\\right)=(x+y-2)^2$.",
+    "$-x^2-\\frac{y^2}{2}+1=x^2+y^2+4+2xy-4x-4y$; bringing all terms to one side and multiplying by $2$ gives $4x^2+4xy+3y^2-8x-8y+6=0$.",
+    "So $a=4,\\ b=4,\\ c=3,\\ d=-8,\\ e=-8,\\ f=6$ (no common factor greater than $1$).",
+    "Therefore the required sum is $a+b+c+d+e+f=4+4+3-8-8+6=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the slope condition for tangency: lines through $P$ touching the ellipse give a quadratic in $m$; replace $m$ by $\\frac{y-1}{x-\\frac12}$.",
+     "solution": [
+      "As before, $P=\\left(\\frac12,1\\right)$. The ellipse is $\\frac{x^2}{1}+\\frac{y^2}{2}=1$ with $a^2=1,\\ b^2=2$.",
+      "A tangent of slope $m$ is $y=mx+c$ with $c^2=a^2m^2+b^2=m^2+2$. Through $P$: $c=1-\\frac m2$.",
+      "$\\left(1-\\frac m2\\right)^2=m^2+2\\Rightarrow1-m+\\frac{m^2}{4}=m^2+2\\Rightarrow3m^2+4m+4=0$.",
+      "The pair of tangents is obtained by putting $m=\\frac{y-1}{x-\\frac12}$: $3(y-1)^2+4(y-1)\\left(x-\\frac12\\right)+4\\left(x-\\frac12\\right)^2=0$.",
+      "Expanding: $3y^2-6y+3+4xy-2y-4x+2+4x^2-4x+1=4x^2+4xy+3y^2-8x-8y+6=0$.",
+      "The same coefficients as before, so $a+b+c+d+e+f=1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Chord of contact of $(h,k)$ w.r.t. $y^2=4ax$: $yk=2a(x+h)$; w.r.t. a conic it is the polar $T=0$.",
+    "Pair of tangents from $(x_1,y_1)$ to a conic $S=0$: $SS_1=T^2$.",
+    "The sum $a+b+c+d+e+f$ of the coefficients is the value of the final quadratic expression at $x=y=1$: $4+4+3-8-8+6=1$.",
+    "Tangents of slope $m$ to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ satisfy $c^2=a^2m^2+b^2$; use it when the point is given and the slopes are wanted."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Polar substitution in a differential equation"
+   ],
+   "level": 3,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $\\left(x+y\\sqrt{x^2+y^2}\\right)dx+\\left(y-x\\sqrt{x^2+y^2}\\right)dy=0$ satisfying $y(1)=0$. If $y(x_0)=x_0$ for some $x_0>0$, then the value of $x_0^2+(y(x_0))^2$ is equal to:",
+   "options": [
+    "$\\frac{16}{(4-\\pi)^2}$",
+    "$\\frac{4}{4-\\pi}$",
+    "$\\frac{16}{(4+\\pi)^2}$",
+    "$\\frac{4}{4+\\pi}$"
+   ],
+   "answer": "(A) $\\frac{16}{(4-\\pi)^2}$",
+   "key_idea": "Regroup as $(x\\,dx+y\\,dy)+\\sqrt{x^2+y^2}\\,(y\\,dx-x\\,dy)=0$ and use $x=r\\cos\\theta,\\ y=r\\sin\\theta$.",
+   "solution": [
+    "The given differential equation is $(x\\,dx+y\\,dy)+\\sqrt{x^2+y^2}\\,(y\\,dx-x\\,dy)=0$.",
+    "Using the polar substitution $x=r\\cos\\theta$ and $y=r\\sin\\theta$ we have $x\\,dx+y\\,dy=r\\,dr$ and $y\\,dx-x\\,dy=-r^2d\\theta$.",
+    "$r\\,dr+r(-r^2d\\theta)=0$.",
+    "$r\\,dr-r^3d\\theta=0$.",
+    "$\\frac{dr}{r^2}=d\\theta$.",
+    "Integrating both sides: $-\\frac1r=\\theta+C$.",
+    "Given $y(1)=0$, which corresponds to $x=1,y=0\\Rightarrow r=1,\\theta=0$: $-\\frac11=0+C\\Rightarrow C=-1$.",
+    "Thus the relation becomes $\\frac1r=1-\\theta\\Rightarrow r=\\frac{1}{1-\\theta}$.",
+    "For $y(x_0)=x_0$ with $x_0>0$: $\\tan\\theta=\\frac{y(x_0)}{x_0}=1\\Rightarrow\\theta=\\frac\\pi4$.",
+    "So the value of $r$ at $x=x_0$ is $r=\\frac{1}{1-\\frac\\pi4}=\\frac{4}{4-\\pi}$.",
+    "We are required to find $x_0^2+(y(x_0))^2=r^2=\\left(\\frac{4}{4-\\pi}\\right)^2=\\frac{16}{(4-\\pi)^2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Stay in Cartesian form: divide by $(x^2+y^2)^{3/2}$ so both sides become exact differentials, $d\\left(\\frac1{\\sqrt{x^2+y^2}}\\right)$ and $d\\left(\\tan^{-1}\\frac yx\\right)$.",
+     "solution": [
+      "Regroup: $(x\\,dx+y\\,dy)=\\sqrt{x^2+y^2}\\,(x\\,dy-y\\,dx)$. Divide by $(x^2+y^2)^{3/2}$.",
+      "Left side: $\\frac{x\\,dx+y\\,dy}{(x^2+y^2)^{3/2}}=-d\\left(\\frac{1}{\\sqrt{x^2+y^2}}\\right)$. Right side: $\\frac{x\\,dy-y\\,dx}{x^2+y^2}=d\\left(\\tan^{-1}\\frac yx\\right)$.",
+      "So $d\\left(\\frac{1}{\\sqrt{x^2+y^2}}+\\tan^{-1}\\frac yx\\right)=0$, i.e. $\\frac{1}{\\sqrt{x^2+y^2}}+\\tan^{-1}\\frac yx=\\text{constant}$.",
+      "At $(1,0)$: $1+0=1$. At $y=x$: $\\tan^{-1}1=\\frac\\pi4$, so $\\frac{1}{\\sqrt{x_0^2+y_0^2}}=1-\\frac\\pi4=\\frac{4-\\pi}{4}$.",
+      "Hence $x_0^2+y_0^2=\\frac{16}{(4-\\pi)^2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Dictionary: $x\\,dx+y\\,dy=\\frac12d(x^2+y^2)=r\\,dr$; $x\\,dy-y\\,dx=r^2d\\theta$; $d\\left(\\frac1r\\right)=-\\frac{dr}{r^2}$; $d\\left(\\tan^{-1}\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2+y^2}$.",
+    "If the DE mixes these two combinations with powers of $x^2+y^2$, integrating factors of the form $(x^2+y^2)^{-k}$ make it exact.",
+    "Polar curves: $\\frac1r=c-\\theta$ here; the initial point $(1,0)$ fixes $c=1$, and the line $y=x$ is $\\theta=\\frac\\pi4$.",
+    "Quantities asked as $x^2+y^2$ are simply $r^2$ in polar form, so the Cartesian answer follows from $r$ alone."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Leibniz rule for differentiation under the integral sign",
+    "Integral of the fractional part and greatest integer function"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\int_0^x(t-\\lfloor t\\rfloor)\\,dt$ for $x>0$, where $\\lfloor\\cdot\\rfloor$ denotes the greatest integer function. If $g(x)=\\int_0^{f(x)}\\frac{1}{1+t^2}\\,dt$, then the value of $g'\\left(\\frac32\\right)$ is equal to:",
+   "options": [
+    "$\\frac{32}{89}$",
+    "$\\frac{16}{89}$",
+    "$\\frac{32}{65}$",
+    "$\\frac{16}{65}$"
+   ],
+   "answer": "(A) $\\frac{32}{89}$",
+   "key_idea": "$g'(x)=\\frac{f'(x)}{1+f(x)^2}$, with $f'(x)=x-\\lfloor x\\rfloor$ away from integers.",
+   "solution": [
+    "First, evaluate $f\\left(\\frac32\\right)$ by breaking the integral at the point of discontinuity: $f\\left(\\frac32\\right)=\\int_0^1t\\,dt+\\int_1^{3/2}(t-1)\\,dt$.",
+    "$=\\left[\\frac{t^2}{2}\\right]_0^1+\\left[\\frac{(t-1)^2}{2}\\right]_1^{3/2}=\\frac12+\\frac18=\\frac58$.",
+    "Since $x=\\frac32$ is not an integer, the integrand $t-\\lfloor t\\rfloor$ is continuous at $t=\\frac32$.",
+    "Applying the Leibniz rule to $f(x)$: $f'\\left(\\frac32\\right)=\\frac32-\\left\\lfloor\\frac32\\right\\rfloor=\\frac32-1=\\frac12$.",
+    "Now, using the Leibniz rule to differentiate $g(x)$: $g'(x)=\\frac{d}{dx}\\int_0^{f(x)}\\frac{1}{1+t^2}dt=\\frac{1}{1+(f(x))^2}\\cdot f'(x)$.",
+    "Substituting $x=\\frac32$: $g'\\left(\\frac32\\right)=\\frac{1}{1+\\left(f\\left(\\frac32\\right)\\right)^2}\\cdot f'\\left(\\frac32\\right)=\\frac{1}{1+\\frac{25}{64}}\\cdot\\frac12$.",
+    "$=\\frac{64}{89}\\cdot\\frac12=\\frac{32}{89}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use closed forms: $\\int_0^x\\{t\\}\\,dt=\\frac{\\lfloor x\\rfloor+\\{x\\}^2}{2}$ and $g(x)=\\tan^{-1}f(x)$, then differentiate.",
+     "solution": [
+      "Each unit interval contributes $\\int_0^1\\{t\\}\\,dt=\\frac12$, so for $x=n+\\{x\\}$: $f(x)=\\frac n2+\\frac{\\{x\\}^2}{2}=\\frac{\\lfloor x\\rfloor+\\{x\\}^2}{2}$.",
+      "At $x=\\frac32$: $f=\\frac{1+\\frac14}{2}=\\frac58$. Between integers $f'(x)=\\{x\\}$, so $f'\\left(\\frac32\\right)=\\frac12$.",
+      "Also $g(x)=\\int_0^{f(x)}\\frac{dt}{1+t^2}=\\tan^{-1}\\left(f(x)\\right)$.",
+      "$g'(x)=\\frac{f'(x)}{1+f(x)^2}$, so $g'\\left(\\frac32\\right)=\\frac{\\frac12}{1+\\frac{25}{64}}=\\frac12\\cdot\\frac{64}{89}=\\frac{32}{89}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\int_0^x\\{t\\}\\,dt=\\frac{\\lfloor x\\rfloor+\\{x\\}^2}{2}$, and $\\frac{d}{dx}\\int_0^x\\{t\\}\\,dt=\\{x\\}$ for non-integer $x$ (the integrand is continuous there).",
+    "Leibniz: $\\frac{d}{dx}\\int_{a}^{h(x)}\\varphi(t)\\,dt=\\varphi(h(x))\\,h'(x)$ if $\\varphi$ is continuous at $h(x)$; for $\\varphi=\\frac1{1+t^2}$ the integral is $\\tan^{-1}h(x)$.",
+    "Break the integral at every integer when the integrand has $\\lfloor t\\rfloor$; the integral of a piecewise-continuous function is continuous even where the integrand jumps.",
+    "Instance: $f\\left(\\frac32\\right)=\\frac58$, $f'\\left(\\frac32\\right)=\\frac12$."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Homogeneous differential equation",
+    "Order and degree of a differential equation"
+   ],
+   "level": 3,
+   "question": "Let $y=f(x)$ be the solution of the differential equation $\\frac{x\\,dy-y\\,dx}{\\sqrt{x^2-y^2}}=dx$ $(x>0)$ satisfying the initial condition $f(1)=0$. If $m$ and $n$ are the order and degree, respectively, of the differential equation corresponding to the family of curves $y=C_1f(x)+C_2f'(x)$ where $C_1$ and $C_2$ are arbitrary constants, then the value of $m+2n$ is equal to:",
+   "options": [
+    "$3$",
+    "$4$",
+    "$5$",
+    "$6$"
+   ],
+   "answer": "(B) $4$",
+   "key_idea": "$\\frac{x\\,dy-y\\,dx}{x^2}=d\\left(\\frac yx\\right)$ turns the DE into $\\frac{dv}{\\sqrt{1-v^2}}=\\frac{dx}{x}$; two linear constants give order $2$, degree $1$.",
+   "solution": [
+    "Given differential equation: $\\frac{x\\,dy-y\\,dx}{\\sqrt{x^2-y^2}}=dx$.",
+    "Divide numerator and denominator by $x^2$: $\\frac{\\frac{x\\,dy-y\\,dx}{x^2}}{\\frac1x\\sqrt{x^2-y^2}}=dx\\Rightarrow\\frac{d\\left(\\frac yx\\right)}{\\sqrt{1-\\left(\\frac yx\\right)^2}}=\\frac{dx}{x}$.",
+    "Integrating both sides: $\\arcsin\\left(\\frac yx\\right)=\\ln x+C$.",
+    "Given $f(1)=0$: $y=0$ when $x=1$, so $\\arcsin(0)=\\ln(1)+C\\Rightarrow C=0$.",
+    "Thus $\\frac yx=\\sin(\\ln x)\\Rightarrow f(x)=x\\sin(\\ln x)$.",
+    "Differentiating: $f'(x)=\\sin(\\ln x)+x\\cdot\\frac1x\\cos(\\ln x)=\\sin(\\ln x)+\\cos(\\ln x)$.",
+    "The given family of curves is $y=C_1x\\sin(\\ln x)+C_2\\left(\\sin(\\ln x)+\\cos(\\ln x)\\right)$.",
+    "Since there are $2$ independent arbitrary constants ($C_1$ and $C_2$), the order of the corresponding differential equation is $m=2$.",
+    "Since $C_1$ and $C_2$ occur linearly in the family of curves, eliminating them yields a linear differential equation in $y$ and its derivatives, so the degree of the highest derivative is $n=1$.",
+    "Therefore $m+2n=2+2(1)=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate $C_1,C_2$ with a determinant: the coefficient of $y''$ is the Wronskian of $f,f'$, which is non-zero, so the order is exactly $2$ and the degree is $1$.",
+     "solution": [
+      "Put $y=vx$: $x\\,dy-y\\,dx=x^2dv$ and $\\sqrt{x^2-y^2}=x\\sqrt{1-v^2}$, so $\\frac{dv}{\\sqrt{1-v^2}}=\\frac{dx}{x}$, giving $v=\\sin(\\ln x)$ and $f=x\\sin(\\ln x)$ (with $f(1)=0$).",
+      "Eliminating $C_1,C_2$ from $y=C_1f+C_2f'$, $y'=C_1f'+C_2f''$, $y''=C_1f''+C_2f'''$ gives $\\begin{vmatrix}y&f&f'\\\\y'&f'&f''\\\\y''&f''&f'''\\end{vmatrix}=0$.",
+      "Expanding along the first column, the equation is linear in $y,y',y''$, so each derivative occurs to the power $1$: degree $n=1$.",
+      "The coefficient of $y''$ is $\\begin{vmatrix}f&f'\\\\f'&f''\\end{vmatrix}=ff''-f'^2$, which is not identically zero here (at $x=1$: $f=0$, $f'=1$, giving $-1\\ne0$). Hence $y''$ really occurs: order $m=2$.",
+      "$m+2n=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A homogeneous first-order DE $\\frac{dy}{dx}=F\\left(\\frac yx\\right)$ is solved with $y=vx$ (or $d\\left(\\frac yx\\right)=\\frac{x\\,dy-y\\,dx}{x^2}$); $\\int\\frac{dv}{\\sqrt{1-v^2}}=\\sin^{-1}v$.",
+    "Order = number of independent arbitrary constants in the family; $y=C_1f+C_2g$ with $f,g$ independent satisfies a linear DE of order exactly $2$ (degree $1$).",
+    "The linear ODE of the family $y=C_1f+C_2g$ is $\\begin{vmatrix}y&f&g\\\\y'&f'&g'\\\\y''&f''&g''\\end{vmatrix}=0$; its $y''$-coefficient is the Wronskian $fg'-f'g$.",
+    "Degree is defined only when the DE is polynomial in its derivatives; it is the power of the highest-order derivative."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Intermediate value theorem and Rolle's theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:[0,4]\\to\\mathbb R$ be a continuous function on $[0,4]$ and differentiable on $(0,4)$ such that $f(0)=1$, $f(1)=3$, $f(2)=0$, $f(3)=4$, and $f(4)=1$. The minimum number of roots of the equation $f'(x)=0$ in the interval $(0,4)$ is:",
+   "options": [
+    "$2$",
+    "$3$",
+    "$4$",
+    "$1$"
+   ],
+   "answer": "(B) $3$",
+   "key_idea": "$f(0)=f(4)=1$ and $f$ crosses the level $1$ twice in between, so $f(x)=1$ has at least $4$ roots and Rolle gives $3$ zeros of $f'$.",
+   "solution": [
+    "Define the auxiliary function $g(x)=f(x)-1$.",
+    "Evaluating $g$ at the given points: $g(0)=0$, $g(1)=2>0$, $g(2)=-1<0$, $g(3)=3>0$, $g(4)=0$.",
+    "By the intermediate value theorem applied to $g$: since $g(1)>0$ and $g(2)<0$ there exists $\\alpha\\in(1,2)$ with $g(\\alpha)=0$.",
+    "Since $g(2)<0$ and $g(3)>0$ there exists $\\beta\\in(2,3)$ with $g(\\beta)=0$.",
+    "Thus $g(x)=0$ at $x=0,\\alpha,\\beta,4$ where $0<\\alpha<2<\\beta<4$.",
+    "Applying Rolle's theorem to $g$ on $[0,\\alpha]$: $g(0)=g(\\alpha)=0$, so there exists $c_1\\in(0,\\alpha)$ with $g'(c_1)=f'(c_1)=0$.",
+    "On $[\\alpha,\\beta]$: $g(\\alpha)=g(\\beta)=0$, so there exists $c_2\\in(\\alpha,\\beta)$ with $f'(c_2)=0$.",
+    "On $[\\beta,4]$: $g(\\beta)=g(4)=0$, so there exists $c_3\\in(\\beta,4)$ with $f'(c_3)=0$.",
+    "Since $0<c_1<\\alpha<c_2<\\beta<c_3<4$, the points $c_1,c_2,c_3$ are distinct and lie in $(0,4)$.",
+    "Hence $f'(x)=0$ has at least $3$ roots in $(0,4)$. A smooth curve through the five points with only four monotone pieces has exactly $3$, so the minimum is $3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Darboux's theorem: the mean-value slopes between consecutive points alternate in sign $+,-,+,-$, so $f'$ takes values of both signs three times over and must vanish between them.",
+     "solution": [
+      "By LMVT on $[0,1],[1,2],[2,3],[3,4]$ there are points $p_1<p_2<p_3<p_4$ (one in each unit interval) with $f'(p_1)=\\frac{3-1}{1}=2$, $f'(p_2)=\\frac{0-3}{1}=-3$, $f'(p_3)=\\frac{4-0}{1}=4$, $f'(p_4)=\\frac{1-4}{1}=-3$.",
+      "A derivative has the intermediate value property (Darboux), so $f'$ vanishes at some point in each of $(p_1,p_2)$, $(p_2,p_3)$ and $(p_3,p_4)$.",
+      "These three intervals are disjoint, so $f'(x)=0$ has at least $3$ roots in $(0,4)$.",
+      "Sharpness: take a smooth curve that rises $1\\to3$, falls to $0$, rises to $4$ and falls to $1$; it has exactly $3$ turning points. So the minimum is $3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ takes the same value $k$ at $n+1$ distinct points, then $f'$ has at least $n$ zeros (Rolle), and these lie strictly between consecutive such points.",
+    "To count solutions of $f(x)=k$ use IVT on sign changes of $f-k$ between the given sample points.",
+    "Darboux: a derivative on an interval has the intermediate value property even when $f'$ is not continuous; if $f'$ takes values of opposite sign it vanishes in between.",
+    "The 'minimum number' is attained by a piecewise-monotone curve with exactly the forced turning points: count the monotone pieces minus $1$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Periodic functions and the fractional part function",
+    "King property of definite integrals"
+   ],
+   "level": 2,
+   "question": "If $\\{x\\}$ denotes the fractional part of $x$, then the value of the definite integral $\\int_0^{60}\\frac{3^{\\{x\\}}}{3^{\\{x\\}}+3^{\\{-x\\}}}\\,dx$ is equal to:",
+   "options": [
+    "$15$",
+    "$30$",
+    "$60$",
+    "$0$"
+   ],
+   "answer": "(B) $30$",
+   "key_idea": "The integrand has period $1$, and on $(0,1)$ it equals $\\frac{3^x}{3^x+3^{1-x}}$, to which the King property applies.",
+   "solution": [
+    "Let $f(x)=\\frac{3^{\\{x\\}}}{3^{\\{x\\}}+3^{\\{-x\\}}}$.",
+    "Since $\\{x+1\\}=\\{x\\}$ and $\\{-x-1\\}=\\{-x\\}$, the function $f(x)$ is periodic with period $T=1$.",
+    "Using the property of periodic functions $\\int_0^{nT}f(x)\\,dx=n\\int_0^Tf(x)\\,dx$: $I=\\int_0^{60}f(x)\\,dx=60\\int_0^1\\frac{3^{\\{x\\}}}{3^{\\{x\\}}+3^{\\{-x\\}}}dx$.",
+    "For $x\\in(0,1)$ we have $\\{x\\}=x$ and $\\{-x\\}=1-x$, so $I=60\\int_0^1\\frac{3^x}{3^x+3^{1-x}}dx$.",
+    "Let $J=\\int_0^1\\frac{3^x}{3^x+3^{1-x}}dx$. Applying $\\int_0^ag(x)\\,dx=\\int_0^ag(a-x)\\,dx$: $J=\\int_0^1\\frac{3^{1-x}}{3^{1-x}+3^x}dx$.",
+    "Adding the two expressions for $J$: $2J=\\int_0^1\\frac{3^x+3^{1-x}}{3^x+3^{1-x}}dx=\\int_0^11\\,dx=1\\Rightarrow J=\\frac12$.",
+    "Hence $I=60\\times J=60\\times\\frac12=30$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Integrate the unit-interval integral directly: divide by $3^x$ and put $u=9^x$, getting a logarithm with no symmetry argument.",
+     "solution": [
+      "After periodicity, $I=60\\int_0^1\\frac{3^x}{3^x+3^{1-x}}dx$ with $\\frac{3^x}{3^x+3\\cdot3^{-x}}=\\frac{9^x}{9^x+3}$ (multiply numerator and denominator by $3^x$).",
+      "Let $u=9^x$, so $du=9^x\\ln9\\,dx$ and $9^x\\,dx=\\frac{du}{\\ln9}$.",
+      "$\\int_0^1\\frac{9^x}{9^x+3}dx=\\frac{1}{\\ln9}\\int_1^9\\frac{du}{u+3}=\\frac{1}{\\ln9}\\ln\\frac{12}{4}=\\frac{\\ln3}{\\ln9}=\\frac12$.",
+      "So $I=60\\cdot\\frac12=30$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x+T)=f(x)$ then $\\int_a^{a+nT}f(x)\\,dx=n\\int_0^Tf(x)\\,dx$; $\\{x\\}$ and $\\lfloor\\cdot\\rfloor$-differences are periodic with period $1$.",
+    "King property: $\\int_0^a\\frac{g(x)}{g(x)+g(a-x)}dx=\\frac a2$. Here $g(x)=3^x$, $a=1$.",
+    "For non-integer $x$: $\\{-x\\}=1-\\{x\\}$, so $3^{\\{x\\}}+3^{\\{-x\\}}=3^{\\{x\\}}+3^{1-\\{x\\}}$.",
+    "Generalisation: $\\int_0^{n}\\frac{p^{\\{x\\}}}{p^{\\{x\\}}+p^{\\{-x\\}}}dx=\\frac n2$ for every $p>0$ and integer $n$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Director circle of an ellipse",
+    "Chord of contact and condition of tangency of a line to an ellipse"
+   ],
+   "level": 3,
+   "question": "Let $E_1:\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ $(a>b>0)$ be an ellipse with eccentricity $e_1$. From any point $P$ on the director circle of $E_1$, tangents $PA$ and $PB$ are drawn to $E_1$, where $A$ and $B$ are the points of contact. As $P$ moves along the director circle, the chord of contact $AB$ always touches a fixed ellipse $E_2:\\frac{x^2}{\\alpha^2}+\\frac{y^2}{\\beta^2}=1$ $(\\alpha>\\beta>0)$ having eccentricity $e_2$. If $e_1=\\frac12$, then the eccentricity $e_2$ of $E_2$ is equal to:",
+   "options": [
+    "$\\frac{\\sqrt5}{4}$",
+    "$\\frac{\\sqrt7}{4}$",
+    "$\\frac{\\sqrt3}{2}$",
+    "$\\frac{\\sqrt7}{2\\sqrt2}$"
+   ],
+   "answer": "(B) $\\frac{\\sqrt7}{4}$",
+   "key_idea": "The chord of contact is $\\frac{x_0}{a^2}x+\\frac{y_0}{b^2}y=1$; the tangency condition for $E_2$ becomes a linear relation in $x_0^2,y_0^2$, which can be matched with $x_0^2+y_0^2=a^2+b^2$.",
+   "solution": [
+    "The equation of the director circle of $E_1$ is $x^2+y^2=a^2+b^2$. Let $P(x_0,y_0)$ be any point on it, so $x_0^2+y_0^2=a^2+b^2$.",
+    "The equation of the chord of contact $AB$ with respect to $E_1$ is $\\frac{xx_0}{a^2}+\\frac{yy_0}{b^2}=1$.",
+    "The condition for a line $Ax+By=1$ to be tangent to the ellipse $E_2:\\frac{x^2}{\\alpha^2}+\\frac{y^2}{\\beta^2}=1$ is $A^2\\alpha^2+B^2\\beta^2=1$.",
+    "Here $A=\\frac{x_0}{a^2}$ and $B=\\frac{y_0}{b^2}$, so $\\frac{x_0^2\\alpha^2}{a^4}+\\frac{y_0^2\\beta^2}{b^4}=1$.",
+    "Since $x_0^2+y_0^2=a^2+b^2$, we have $\\frac{x_0^2}{a^2+b^2}+\\frac{y_0^2}{a^2+b^2}=1$.",
+    "Comparing the two identities (valid for all $P$ on the circle) yields $\\alpha^2=\\frac{a^4}{a^2+b^2}$ and $\\beta^2=\\frac{b^4}{a^2+b^2}$.",
+    "The eccentricity $e_2$ of $E_2$ is given by $e_2^2=1-\\frac{\\beta^2}{\\alpha^2}=1-\\frac{b^4}{a^4}=1-(1-e_1^2)^2=2e_1^2-e_1^4$.",
+    "Given $e_1=\\frac12$: $e_2^2=2\\left(\\frac14\\right)-\\frac{1}{16}=\\frac12-\\frac1{16}=\\frac{7}{16}\\Rightarrow e_2=\\frac{\\sqrt7}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take two special positions of $P$ on the director circle, on the axes: the chords of contact are the lines $x=\\pm\\alpha$ and $y=\\pm\\beta$ tangent to $E_2$ at its vertices.",
+     "solution": [
+      "Take $P=\\left(\\sqrt{a^2+b^2},0\\right)$ on the director circle. Its chord of contact is $\\frac{x\\sqrt{a^2+b^2}}{a^2}=1$, i.e. $x=\\frac{a^2}{\\sqrt{a^2+b^2}}$.",
+      "This vertical line touches the axis-parallel ellipse $E_2$ only at its vertex, so $\\alpha=\\frac{a^2}{\\sqrt{a^2+b^2}}$.",
+      "Take $P=\\left(0,\\sqrt{a^2+b^2}\\right)$: the chord of contact is $y=\\frac{b^2}{\\sqrt{a^2+b^2}}$, a horizontal tangent of $E_2$, so $\\beta=\\frac{b^2}{\\sqrt{a^2+b^2}}$.",
+      "Then $\\frac{\\beta^2}{\\alpha^2}=\\frac{b^4}{a^4}$, so $e_2^2=1-\\left(\\frac{b^2}{a^2}\\right)^2$.",
+      "$e_1=\\frac12\\Rightarrow\\frac{b^2}{a^2}=1-\\frac14=\\frac34$, so $e_2^2=1-\\frac{9}{16}=\\frac7{16}$ and $e_2=\\frac{\\sqrt7}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Director circle of $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$: $x^2+y^2=a^2+b^2$ (tangents from its points are perpendicular).",
+    "Line $Ax+By=1$ touches $\\frac{x^2}{\\alpha^2}+\\frac{y^2}{\\beta^2}=1$ iff $A^2\\alpha^2+B^2\\beta^2=1$.",
+    "The chords of contact from the director circle envelop the ellipse $\\frac{x^2}{a^4/(a^2+b^2)}+\\frac{y^2}{b^4/(a^2+b^2)}=1$, with $e_2^2=1-(1-e_1^2)^2=e_1^2(2-e_1^2)$.",
+    "When the question promises a fixed curve of a known type, evaluating a few special positions of the moving point (here on the axes) quickly identifies its parameters."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Leibniz rule for differentiation under the integral sign",
+    "Periodic functions"
+   ],
+   "level": 1,
+   "question": "Let $f:\\mathbb R\\to\\mathbb R$ be a continuous function satisfying $f(x+3)=f(x)$ for all $x\\in\\mathbb R$. Define a function $g(x)=\\int_0^{x^2}f(t)\\,dt$. If $g'(1)=6$, then the value of $g'(2)$ is equal to:",
+   "options": [
+    "$6$",
+    "$12$",
+    "$18$",
+    "$24$"
+   ],
+   "answer": "(B) $12$",
+   "key_idea": "Leibniz gives $g'(x)=2x\\,f(x^2)$, and period $3$ links $f(4)$ to $f(1)$.",
+   "solution": [
+    "Using the Leibniz rule for differentiation under the integral sign: $g'(x)=\\frac{d}{dx}\\left(\\int_0^{x^2}f(t)\\,dt\\right)=f(x^2)\\cdot\\frac{d}{dx}(x^2)-f(0)\\cdot\\frac{d}{dx}(0)=2x\\,f(x^2)$.",
+    "Given $g'(1)=6$: $g'(1)=2(1)f(1^2)=2f(1)=6\\Rightarrow f(1)=3$.",
+    "Now, for $x=2$: $g'(2)=2(2)f(2^2)=4f(4)$.",
+    "Since $f(x)$ is a periodic function with period $3$, we have $f(4)=f(1+3)=f(1)=3$.",
+    "Substituting $f(4)=3$: $g'(2)=4\\times3=12$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Leibniz: $\\frac{d}{dx}\\int_{a}^{h(x)}f(t)\\,dt=f(h(x))\\,h'(x)$ for continuous $f$; with $h(x)=x^2$, $g'(x)=2x\\,f(x^2)$.",
+    "If $f(x+T)=f(x)$ for all $x$, then $f(x+nT)=f(x)$ for every integer $n$; here $f(4)=f(1)=f(-2)=\\dots$.",
+    "Note $\\int_0^{x^2}f$ is not periodic in general; only $f$ is. Do not transfer periodicity to $g$.",
+    "Instance: $\\frac{g'(2)}{4}=f(4)=f(1)=\\frac{g'(1)}{2}$, so $g'(2)=2g'(1)=12$."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Exact differentials and homogeneous differential equation"
+   ],
+   "level": 3,
+   "question": "Let $y=y(x)$ be the solution of the differential equation $x^2(x\\,dx+y\\,dy)=(x^2+y^2)(x\\,dy-y\\,dx)$ satisfying the condition $y(1)=0$. If $x_0>0$ such that $y(x_0)=x_0\\ln3$, then the value of $x_0^2+(y(x_0))^2$ is equal to ______.",
+   "answer": "9",
+   "key_idea": "Dividing by $x^2(x^2+y^2)$ gives $\\frac{x\\,dx+y\\,dy}{x^2+y^2}=\\frac{x\\,dy-y\\,dx}{x^2}$, i.e. $\\frac12d\\left(\\ln(x^2+y^2)\\right)=d\\left(\\frac yx\\right)$.",
+   "solution": [
+    "The given differential equation is $x^2(x\\,dx+y\\,dy)=(x^2+y^2)(x\\,dy-y\\,dx)$.",
+    "Divide by $x^2(x^2+y^2)$: $\\frac{x\\,dx+y\\,dy}{x^2+y^2}=\\frac{x\\,dy-y\\,dx}{x^2}$.",
+    "$\\frac12d\\left(\\ln(x^2+y^2)\\right)=d\\left(\\frac yx\\right)$.",
+    "Integrating both sides: $\\frac12\\ln(x^2+y^2)=\\frac yx+C$.",
+    "Applying the initial condition $y(1)=0$: $\\frac12\\ln(1^2+0^2)=\\frac01+C\\Rightarrow C=0$.",
+    "Thus the implicit solution is $\\ln(x^2+y^2)=\\frac{2y}{x}\\Rightarrow x^2+y^2=e^{\\frac{2y}{x}}$.",
+    "For $x=x_0$ we are given $y(x_0)=x_0\\ln3$, which implies $\\frac{y(x_0)}{x_0}=\\ln3$.",
+    "Substituting this into the equation: $x_0^2+(y(x_0))^2=e^{2\\ln3}=e^{\\ln(3^2)}=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat it as a homogeneous equation: put $y=vx$, separate variables, and read the answer from $x^2(1+v^2)=e^{2v}$.",
+     "solution": [
+      "Let $y=vx$. Then $x\\,dx+y\\,dy=x(1+v^2)\\,dx+vx^2dv$ and $x\\,dy-y\\,dx=x^2dv$.",
+      "The DE becomes $x^2\\left[x(1+v^2)dx+vx^2dv\\right]=x^2(1+v^2)\\cdot x^2dv$.",
+      "Dividing by $x^4$: $(1+v^2)\\frac{dx}{x}+v\\,dv=(1+v^2)\\,dv$, so $\\frac{dx}{x}=dv-\\frac{v\\,dv}{1+v^2}$.",
+      "Integrating: $\\ln x=v-\\frac12\\ln(1+v^2)+C$. At $(1,0)$, $v=0$ gives $C=0$.",
+      "Hence $\\ln\\left(x^2(1+v^2)\\right)=2v$, i.e. $x^2+y^2=e^{2v}$ with $v=\\frac yx$.",
+      "At $x_0$: $v=\\ln3$, so $x_0^2+y(x_0)^2=e^{2\\ln3}=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Useful exact differentials: $x\\,dx+y\\,dy=\\frac12d(x^2+y^2)$; $\\frac{x\\,dy-y\\,dx}{x^2}=d\\left(\\frac yx\\right)$; $\\frac{x\\,dy-y\\,dx}{y^2}=-d\\left(\\frac xy\\right)$; $\\frac{x\\,dy-y\\,dx}{x^2+y^2}=d\\left(\\tan^{-1}\\frac yx\\right)$.",
+    "$\\frac{x\\,dx+y\\,dy}{x^2+y^2}=\\frac12d\\ln(x^2+y^2)$. When a DE contains both pairs, divide by a suitable product to separate them.",
+    "The question asks for $x_0^2+y_0^2$, exactly the quantity inside the logarithm, so the answer can be read without finding $x_0$.",
+    "Check: $y=\\ln3\\cdot x$ with $x^2(1+\\ln^23)=9$ gives $x_0=\\frac{3}{\\sqrt{1+\\ln^23}}$ and $x_0^2+y_0^2=9$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by modulus curves"
+   ],
+   "level": 2,
+   "question": "If $A$ is the area of the region bounded by the curves $y=|x-1|$ and $y=3-|x|$, then the value of $A$ is equal to ______.",
+   "answer": "4",
+   "key_idea": "The two curves meet at $x=-1$ and $x=2$, and the integrand $(3-|x|)-|x-1|$ changes form at $x=0$ and $x=1$.",
+   "solution": [
+    "To find the points of intersection of $y=|x-1|$ and $y=3-|x|$: for $x\\ge1$: $x-1=3-x\\Rightarrow2x=4\\Rightarrow x=2$.",
+    "For $x\\le0$: $1-x=3+x\\Rightarrow2x=-2\\Rightarrow x=-1$.",
+    "For $0<x<1$: $1-x=3-x\\Rightarrow1=3$ (no solution).",
+    "Thus the curves intersect at $x=-1$ and $x=2$.",
+    "In the interval $[-1,2]$, $3-|x|\\ge|x-1|$. The bounded area is $A=\\int_{-1}^2\\big((3-|x|)-|x-1|\\big)dx$.",
+    "Splitting the integral across the critical points $x=0$ and $x=1$: $A=\\int_{-1}^0\\big((3+x)-(1-x)\\big)dx+\\int_0^1\\big((3-x)-(1-x)\\big)dx+\\int_1^2\\big((3-x)-(x-1)\\big)dx$.",
+    "$A=\\int_{-1}^0(2+2x)\\,dx+\\int_0^12\\,dx+\\int_1^2(4-2x)\\,dx$.",
+    "$A=1+2+1=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Geometry: the region is bounded by four lines of slopes $\\pm1$, so it is a rectangle; find its side lengths from the distances between parallel lines.",
+     "solution": [
+      "The region is bounded by the lines $y=x-1$ and $y=1-x$ (below, the V of $|x-1|$) and $y=3+x$ and $y=3-x$ (above, the inverted V of $3-|x|$).",
+      "Lines of slope $+1$: $y=x-1$ and $y=x+3$, at distance $\\frac{|3-(-1)|}{\\sqrt2}=2\\sqrt2$.",
+      "Lines of slope $-1$: $y=-x+1$ and $y=-x+3$, at distance $\\frac{|3-1|}{\\sqrt2}=\\sqrt2$.",
+      "Lines of slopes $1$ and $-1$ are perpendicular, so the region is a rectangle with sides $2\\sqrt2$ and $\\sqrt2$, area $2\\sqrt2\\cdot\\sqrt2=4$.",
+      "Check with vertices $(1,0),(2,1),(0,3),(-1,2)$: sides $(1,1)$ and $(-2,2)$ are perpendicular with lengths $\\sqrt2$ and $2\\sqrt2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two V-shaped graphs with slopes $\\pm1$ enclose a rectangle (sides along perpendicular directions $y=x+c$ and $y=-x+d$); area $=\\frac{|\\Delta c|\\,|\\Delta d|}{2}$ for the lines $y=x+c_1,x+c_2$ and $y=-x+d_1,-x+d_2$.",
+    "For the intersections of modulus graphs solve on each linear piece and keep only roots inside the piece.",
+    "Always identify which curve is above on each sub-interval before integrating, and split at every kink of the modulus.",
+    "Instance: $c$-gap $=3-(-1)=4$, $d$-gap $=3-1=2$, area $=\\frac{4\\cdot2}{2}=4$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Area bounded by modulus curves"
+   ],
+   "level": 2,
+   "question": "If $A$ is the area (in sq. units) of the region bounded by the curves $y=|x^2-4|$ and $y=5$, then the value of $3A$ is equal to ______.",
+   "answer": "44",
+   "key_idea": "Only $x^2-4=5$ gives intersections ($x=\\pm3$); the graph is symmetric about the $y$-axis, so $A=2\\int_0^3\\big(5-|x^2-4|\\big)dx$.",
+   "solution": [
+    "To find the points of intersection of $y=|x^2-4|$ and $y=5$: $|x^2-4|=5\\Rightarrow x^2-4=5\\Rightarrow x^2=9\\Rightarrow x=\\pm3$.",
+    "(Note that $x^2-4=-5\\Rightarrow x^2=-1$, which gives no real solution.)",
+    "Due to symmetry about the $y$-axis, the total area is $A=2\\int_0^3\\big(5-|x^2-4|\\big)dx$.",
+    "Split at $x=2$ where $x^2-4$ changes sign: $\\int_0^2\\big(5-(4-x^2)\\big)dx=\\int_0^2(1+x^2)\\,dx=2+\\frac83=\\frac{14}{3}$.",
+    "$\\int_2^3\\big(5-(x^2-4)\\big)dx=\\int_2^3(9-x^2)\\,dx=9-\\frac{27-8}{3}=\\frac83$.",
+    "$A=2\\left(\\frac{14}{3}+\\frac83\\right)=\\frac{44}{3}$.",
+    "Thus $3A=44$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Archimedes plus reflection: take the parabolic segment between $y=x^2-4$ and $y=5$, then remove the lobe below the $x$-axis twice (it is not part of the region after reflection).",
+     "solution": [
+      "The parabola $y=x^2-4$ meets $y=5$ at $x=\\pm3$; the segment between them has area $\\frac{1\\cdot(3-(-3))^3}{6}=36$.",
+      "This segment contains the lobe between the parabola and the $x$-axis on $[-2,2]$, of area $\\frac{(4)^3}{6}=\\frac{32}{3}$.",
+      "Taking $|x^2-4|$ reflects that lobe upward, so the region above the new curve loses the old lobe $\\frac{32}{3}$ and also the reflected lobe $\\frac{32}{3}$ now lying under the curve.",
+      "$A=36-2\\cdot\\frac{32}{3}=\\frac{108-64}{3}=\\frac{44}{3}$, so $3A=44$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Area between a parabola $y=ax^2+bx+c$ and a horizontal or oblique chord meeting it at $x=\\alpha,\\beta$ is $\\frac{|a|(\\beta-\\alpha)^3}{6}$.",
+    "The lobe of $y=x^2-r^2$ below the axis has area $\\frac{(2r)^3}{6}=\\frac{4r^3}{3}$; here $r=2$ gives $\\frac{32}{3}$.",
+    "Taking the modulus of a function reflects the negative part: areas above the reflected curve change by twice the lobe area.",
+    "Check by direct integration: $2\\int_0^3(5-|x^2-4|)dx=\\frac{44}{3}$."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Maximum volume of a cylinder inscribed in a sphere",
+    "Rate of change (related rates)"
+   ],
+   "level": 2,
+   "question": "A sphere of radius $R$ is expanding such that its radius increases at a constant rate of $2$ cm/s. At any instant, a right circular cylinder of maximum volume is inscribed in this sphere. If the rate of change of the maximum volume of the cylinder at the instant when $R=6$ cm is $k\\sqrt3\\,\\pi$ cm$^3$/s, then the value of $k$ is equal to ______.",
+   "answer": "96",
+   "key_idea": "The largest cylinder has $h=\\frac{2R}{\\sqrt3}$ and $V_{max}=\\frac{4\\pi R^3}{3\\sqrt3}\\propto R^3$, so $\\frac{dV}{dt}=\\frac{4\\pi R^2}{\\sqrt3}\\frac{dR}{dt}$.",
+   "solution": [
+    "Let $r$ and $h$ be the radius and height of the cylinder inscribed in the sphere of radius $R$. From geometry, $r^2+\\left(\\frac h2\\right)^2=R^2\\Rightarrow r^2=R^2-\\frac{h^2}{4}$.",
+    "The volume of the cylinder is $V=\\pi r^2h=\\pi\\left(R^2-\\frac{h^2}{4}\\right)h=\\pi\\left(R^2h-\\frac{h^3}{4}\\right)$.",
+    "For maximum volume, $\\frac{dV}{dh}=0$: $\\pi\\left(R^2-\\frac{3h^2}{4}\\right)=0\\Rightarrow h=\\frac{2R}{\\sqrt3}$.",
+    "Also $\\frac{d^2V}{dh^2}=-\\frac{3\\pi h}{2}<0$, which ensures maximum volume.",
+    "Substituting $h=\\frac{2R}{\\sqrt3}$ into $V$: $V_{max}=\\pi\\left(R^2\\cdot\\frac{2R}{\\sqrt3}-\\frac14\\cdot\\frac{8R^3}{3\\sqrt3}\\right)=\\frac{4\\pi R^3}{3\\sqrt3}$.",
+    "$\\frac{dV_{max}}{dt}=\\frac{4\\pi}{3\\sqrt3}\\cdot3R^2\\frac{dR}{dt}=\\frac{4\\pi R^2}{\\sqrt3}\\frac{dR}{dt}$.",
+    "Given $R=6$ cm and $\\frac{dR}{dt}=2$ cm/s: $\\frac{dV_{max}}{dt}=\\frac{4\\pi(6)^2(2)}{\\sqrt3}=\\frac{288\\pi}{\\sqrt3}=96\\sqrt3\\,\\pi$ cm$^3$/s.",
+    "Comparing with $k\\sqrt3\\,\\pi$, we get $k=96$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Parametrise by the angle $\\phi$ with the axis and maximise $\\cos\\phi\\,(1-\\cos^2\\phi)$ by AM-GM; then use scaling: $V_{max}\\propto R^3$ gives $\\frac{dV}{dt}=3V\\frac{R'}{R}$.",
+     "solution": [
+      "Let the diagonal of the axial section make angle $\\phi$ with the axis: $h=2R\\cos\\phi$ and $r=R\\sin\\phi$, so $V=2\\pi R^3\\sin^2\\phi\\cos\\phi=2\\pi R^3\\,c(1-c^2)$ with $c=\\cos\\phi$.",
+      "By AM-GM on $2c^2,\\ 1-c^2,\\ 1-c^2$ (sum $2$): $2c^2(1-c^2)^2\\le\\left(\\frac23\\right)^3$, so $c(1-c^2)\\le\\frac{2}{3\\sqrt3}$ with equality at $2c^2=1-c^2$, i.e. $c=\\frac{1}{\\sqrt3}$.",
+      "Hence $V_{max}=2\\pi R^3\\cdot\\frac{2}{3\\sqrt3}=\\frac{4\\pi R^3}{3\\sqrt3}$. At $R=6$: $V_{max}=\\frac{4\\pi\\cdot216}{3\\sqrt3}=96\\sqrt3\\,\\pi$.",
+      "Since $V_{max}=\\lambda R^3$ with $\\lambda$ constant, $\\frac{dV_{max}}{dt}=3V_{max}\\frac{1}{R}\\frac{dR}{dt}=3\\cdot96\\sqrt3\\,\\pi\\cdot\\frac16\\cdot2=96\\sqrt3\\,\\pi$.",
+      "So $k=96$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Largest right circular cylinder in a sphere of radius $R$: $h=\\frac{2R}{\\sqrt3}$, $r=R\\sqrt{\\frac23}$, $V=\\frac{4\\pi R^3}{3\\sqrt3}$ (a fraction $\\frac{1}{\\sqrt3}$ of the sphere's volume).",
+    "By scaling every optimum solid in a sphere has volume proportional to $R^3$, so $\\frac{dV_{max}}{dt}=3V_{max}\\frac{R'}{R}$ with no second optimisation.",
+    "Largest cone in a sphere: $h=\\frac{4R}{3}$, $V=\\frac{32\\pi R^3}{81}$ (check: $\\frac{8}{27}$ of the sphere's volume).",
+    "Related rates: first express the quantity as a function of one variable (using the optimum), then differentiate with respect to $t$ using the chain rule."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Reduction of a differential equation to homogeneous form",
+    "Area bounded by a parabola and a line"
+   ],
+   "level": 2,
+   "question": "Let $y=f(x)$ be the solution of the differential equation $\\frac{dy}{dx}=\\frac{y-2}{2x+6}$ passing through the point $(0,5)$. If $A$ is the area of the region bounded by the curve $y=f(x)$ and the line $x=0$, then find the value of $A$.",
+   "answer": "12",
+   "key_idea": "Shifting the origin to $(-3,2)$ gives $\\frac{dY}{dX}=\\frac{Y}{2X}$, so the curve is the parabola $(y-2)^2=3(x+3)$.",
+   "solution": [
+    "To reduce the given differential equation to homogeneous form, substitute $x=X-3$ and $y=Y+2$: $\\frac{dY}{dX}=\\frac{Y}{2X}$.",
+    "This is a homogeneous differential equation: $\\int\\frac{dY}{Y}=\\frac12\\int\\frac{dX}{X}\\Rightarrow\\ln|Y|=\\frac12\\ln|X|+\\ln C\\Rightarrow Y^2=cX$.",
+    "Substituting back $X=x+3$ and $Y=y-2$: $(y-2)^2=c(x+3)$.",
+    "Since the curve passes through $(0,5)$: $(5-2)^2=c(0+3)\\Rightarrow9=3c\\Rightarrow c=3$.",
+    "Thus the equation of the curve is $(y-2)^2=3(x+3)\\Rightarrow x=\\frac{(y-2)^2}{3}-3$.",
+    "The curve intersects the line $x=0$ at $\\frac{(y-2)^2}{3}-3=0\\Rightarrow(y-2)^2=9\\Rightarrow y=-1$ and $y=5$.",
+    "The area $A$ bounded by the curve and $x=0$ is $A=\\int_{-1}^5(0-x)\\,dy=\\int_{-1}^5\\left(3-\\frac{(y-2)^2}{3}\\right)dy$.",
+    "Let $t=y-2\\Rightarrow dt=dy$: $A=\\int_{-3}^3\\left(3-\\frac{t^2}{3}\\right)dt=2\\left[3t-\\frac{t^3}{9}\\right]_0^3=2(9-3)=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Separate variables directly, then use Archimedes: the area between a parabola and a chord perpendicular to its axis is $\\frac23\\times$ chord $\\times$ sagitta.",
+     "solution": [
+      "Separating: $\\frac{dy}{y-2}=\\frac{dx}{2(x+3)}\\Rightarrow\\ln|y-2|=\\frac12\\ln(x+3)+\\text{const}$, so $(y-2)^2=c(x+3)$; $(0,5)$ gives $c=3$.",
+      "The curve is a parabola with vertex $(-3,2)$ whose axis is the horizontal line $y=2$.",
+      "The line $x=0$ is perpendicular to the axis and cuts the parabola at $y=-1$ and $y=5$: a chord of length $6$.",
+      "The vertex is at horizontal distance $3$ from this chord.",
+      "Area $=\\frac23\\times6\\times3=12$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{dy}{dx}=\\frac{y-k}{m(x-h)}$ separates directly: $(y-k)^m=C(x-h)$; here $m=2$, giving a parabola with vertex $(h,k)$.",
+    "A DE $\\frac{dy}{dx}=\\frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$ with non-parallel lines is reduced to homogeneous form by moving the origin to the intersection of the two lines.",
+    "Area of a parabolic segment cut by a chord perpendicular to the axis: $\\frac23\\times\\text{chord}\\times\\text{sagitta}$ (vertex distance).",
+    "When integrating area along $y$, take (right curve $-$ left curve) in $x$; here the line $x=0$ is the right boundary."
+   ]
+  }
+ ]
+}
