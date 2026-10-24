@@ -1,0 +1,817 @@
+{
+ "title": "RPT 02 — Paper Analysis",
+ "subtitle": "Paper 02 · JEE Adv · detailed solutions",
+ "source": "papers/RPT 02 Paper 02 JEE Adv.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "RPT 02 Paper 02",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 4,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "One or more than one Correct Type",
+   "from": 5,
+   "to": 8,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Paragraph Based Single Correct Type",
+   "from": 9,
+   "to": 10,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 3 per question assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 11,
+   "to": 17,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a composite function",
+    "Piecewise-defined functions"
+   ],
+   "level": 1,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\begin{cases}x+2, & x<1\\\\ 4, & x=1\\\\ x^2+1, & x>1\\end{cases}$ and let $g(x)=1-x^2$. Then $\\lim_{x\\to0}f(g(x))$ is equal to:",
+   "options": [
+    "4",
+    "3",
+    "2",
+    "Does not exist"
+   ],
+   "answer": "(B) 3",
+   "key_idea": "Since $g(x)=1-x^2<1$ for $x\\ne0$, the inner function approaches $1$ from the left on both sides, so only $f(1^-)$ matters, not $f(1)=4$.",
+   "solution": [
+    "Right-hand limit: as $x\\to0^+$, $g(x)=1-x^2\\to1^-$, so $\\lim_{x\\to0^+}f(g(x))=f(1^-)$.",
+    "For $t<1$ the rule is $f(t)=t+2$, hence $f(1^-)=1+2=3$.",
+    "Left-hand limit: as $x\\to0^-$, $g(x)=1-x^2\\to1^-$ as well, so $\\lim_{x\\to0^-}f(g(x))=f(1^-)=3$.",
+    "Both one-sided limits equal $3$, therefore $\\lim_{x\\to0}f(g(x))=3$ (the value $f(1)=4$ plays no role)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compose first: for every $x\\ne0$ the argument $g(x)$ lies in the branch $t<1$, so $f(g(x))$ is one explicit polynomial.",
+     "solution": [
+      "For $x\\ne0$ we have $x^2>0$, so $g(x)=1-x^2<1$.",
+      "Hence $f(g(x))=g(x)+2=3-x^2$ for all $x\\ne0$ (only the first branch of $f$ is ever used near $x=0$, $x\\neq0$).",
+      "Therefore $\\lim_{x\\to0}f(g(x))=\\lim_{x\\to0}(3-x^2)=3$.",
+      "The value $g(0)=1$, where $f(1)=4$, is excluded from the limit, so option (B) $3$ is the answer."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $\\lim_{x\\to a}f(g(x))$ find the limit of $g$ AND the side from which $g(x)$ approaches it; if $f$ is discontinuous at that point, $\\lim f(g(x))\\ne f(\\lim g(x))$ in general.",
+    "If $g(x)\\ne c$ for $x\\ne a$ near $a$, the value $f(c)$ is irrelevant: only $f(c^-)$ or $f(c^+)$ (or both) matter.",
+    "An even function such as $1-x^2$ approaches its extreme value from the same side on both sides of $0$, so left and right limits of the composite agree automatically."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Odd function and one-one function",
+    "Monotonicity using derivative"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=(a^2-3a+2)\\cos x+\\ln\\left(x+\\sqrt{x^2+1}\\right)+(b-1)x^3$ where $a,b\\in\\mathbb{R}$. If $f(x)$ is an odd function which is also one-one (injective) on $\\mathbb{R}$, then the set of all possible ordered pairs $(a,b)$ is :",
+   "options": [
+    "$\\{1,2\\}\\times[1,\\infty)$",
+    "$\\{1,2\\}\\times(1,\\infty)$",
+    "$[1,2]\\times[1,\\infty)$",
+    "$\\{1\\}\\times[1,\\infty)$"
+   ],
+   "answer": "(A) $\\{1,2\\}\\times[1,\\infty)$",
+   "key_idea": "$\\ln\\left(x+\\sqrt{x^2+1}\\right)$ and $x^3$ are already odd, so only the even term $\\cos x$ must be killed; then one-one needs $f'\\ge0$.",
+   "solution": [
+    "For $f$ to be odd, $f(-x)=-f(x)$ must hold for all $x\\in\\mathbb{R}$.",
+    "Note that $\\ln\\left(-x+\\sqrt{x^2+1}\\right)=\\ln\\left(\\frac{1}{x+\\sqrt{x^2+1}}\\right)=-\\ln\\left(x+\\sqrt{x^2+1}\\right)$.",
+    "Thus $f(-x)=(a^2-3a+2)\\cos x-\\ln\\left(x+\\sqrt{x^2+1}\\right)-(b-1)x^3$.",
+    "Setting $f(-x)=-f(x)$ yields $2(a^2-3a+2)\\cos x=0$ for all $x\\in\\mathbb{R}$, so $a^2-3a+2=0$, i.e. $a=1$ or $a=2$.",
+    "For $a\\in\\{1,2\\}$ the function reduces to $f(x)=\\ln\\left(x+\\sqrt{x^2+1}\\right)+(b-1)x^3$.",
+    "Differentiating, $f'(x)=\\frac{1}{\\sqrt{x^2+1}}+3(b-1)x^2$.",
+    "Since $f'(0)=1>0$, for $f$ to be one-one (strictly monotonic) on $\\mathbb{R}$ we must have $f'(x)\\ge0$ for all $x\\in\\mathbb{R}$.",
+    "If $b\\ge1$, then $3(b-1)x^2\\ge0$, giving $f'(x)>0$ for all $x$. Hence $f$ is strictly increasing and one-one.",
+    "If $b<1$, then as $x\\to\\infty$, $f'(x)\\to-\\infty$, so $f'(x)$ changes sign and $f$ is many-one. Therefore $b\\in[1,\\infty)$.",
+    "The set of all ordered pairs $(a,b)$ is $\\{1,2\\}\\times[1,\\infty)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Recognise $\\ln\\left(x+\\sqrt{x^2+1}\\right)=\\sinh^{-1}x$ and use growth at infinity plus the intermediate value theorem instead of the sign of $f'$.",
+     "solution": [
+      "$\\sinh^{-1}x=\\ln\\left(x+\\sqrt{x^2+1}\\right)$ is odd and strictly increasing, and $x^3$ is odd; so the only even part of $f$ is $(a^2-3a+2)\\cos x$.",
+      "An odd function has no even part, so $a^2-3a+2=0$, giving $a\\in\\{1,2\\}$, and then $f(x)=\\sinh^{-1}x+(b-1)x^3$.",
+      "If $b\\ge1$, $f$ is a sum of a strictly increasing function and a non-decreasing function ($(b-1)x^3$), so it is strictly increasing, hence one-one.",
+      "If $b<1$, put $c=1-b>0$: $f(x)=\\sinh^{-1}x-cx^3$. Since $\\sinh^{-1}x$ grows like $\\ln 2x$ while $cx^3$ grows much faster, $f(x)\\to-\\infty$ as $x\\to\\infty$.",
+      "Also $f(x)>0$ for small $x>0$ (because $f(x)\\approx x$ near $0$). So $f$ rises from $0$ to some positive value and then falls to $-\\infty$.",
+      "By the intermediate value theorem every small positive value is then taken at least twice, so $f$ is many-one. Hence $b\\ge1$ is necessary.",
+      "Answer: $(a,b)\\in\\{1,2\\}\\times[1,\\infty)$, option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\ln\\left(x+\\sqrt{x^2+1}\\right)=\\sinh^{-1}x$ is odd, strictly increasing and unbounded; its derivative is $\\frac{1}{\\sqrt{x^2+1}}$.",
+    "A function is odd iff its even part vanishes: write $f$ as a sum of an even and an odd part, $f=\\frac{f(x)+f(-x)}{2}+\\frac{f(x)-f(-x)}{2}$, and set the even part to $0$.",
+    "A continuous function on $\\mathbb{R}$ is one-one iff it is strictly monotonic; a derivative that changes sign (or a function with different limits that force a turning point) rules this out.",
+    "A polynomial/cubic term dominates logarithmic and trigonometric terms for large $|x|$, so its coefficient decides the end behaviour (here the sign of $b-1$)."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Fundamental period of periodic functions",
+    "Counting many-one functions"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a periodic function defined by $f(x)=\\left|\\sin\\left(\\frac{2\\pi x}{3}\\right)\\right|+\\left|\\cos\\left(\\frac{\\pi x}{2}\\right)\\right|$. Let $T$ be the fundamental period of $f(x)$. Consider the sets $A=\\{1,2,3,4\\}$ and $B=\\{1,2,\\ldots,T\\}$. The total number of functions $g:A\\to B$ such that $g(1)<g(2)$, $g(3)\\le g(4)$, and $g$ is a many-one function is :",
+   "options": [
+    "135",
+    "180",
+    "225",
+    "315"
+   ],
+   "answer": "(C) 225",
+   "key_idea": "Many-one $=$ total $-$ injective: count all functions with the two order conditions, then remove those with four distinct values.",
+   "solution": [
+    "The fundamental period of $f(x)$ is $T=6$ (the periods of the two terms are $\\frac32$ and $2$, with lcm $6$).",
+    "Thus $B=\\{1,2,3,4,5,6\\}$. Next we count the functions $g:A\\to B$ where $A=\\{1,2,3,4\\}$.",
+    "Ways to choose $(g(1),g(2))$ with $g(1)<g(2)$: select $2$ distinct elements from $B$ in $\\binom62=15$ ways.",
+    "Ways to choose $(g(3),g(4))$ with $g(3)\\le g(4)$: choosing $2$ elements from $B$ with repetition allowed gives $\\binom{6+2-1}{2}=\\binom72=21$ ways.",
+    "Total number of functions satisfying $g(1)<g(2)$ and $g(3)\\le g(4)$ without restriction on injectivity: $N_{\\text{total}}=15\\times21=315$.",
+    "The number of injective functions is $N_{\\text{injective}}=\\binom64\\times\\binom42=15\\times6=90$.",
+    "Therefore the number of many-one functions is $N_{\\text{many-one}}=N_{\\text{total}}-N_{\\text{injective}}=315-90=225$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Count the many-one functions directly: split on whether $g(3)=g(4)$, and otherwise count pairs of $2$-subsets that overlap.",
+     "solution": [
+      "Think of $g(1)<g(2)$ as a $2$-element subset $P\\subset B$ ($15$ choices) and $g(3)\\le g(4)$ as either a repeated value or a $2$-element subset $Q$.",
+      "Case 1: $g(3)=g(4)=v$. Then $g$ is automatically many-one. Number of functions: $15\\times6=90$.",
+      "Case 2: $g(3)<g(4)$, a $2$-subset $Q$ ($15$ choices). $g$ is many-one iff $P\\cap Q\\ne\\emptyset$.",
+      "Disjoint pairs: for each $P$, $Q$ must come from the other $4$ elements, $\\binom42=6$ ways, so disjoint $(P,Q)$ pairs number $15\\times6=90$.",
+      "Overlapping pairs $=15\\times15-90=135$.",
+      "Total many-one functions $=90+135=225$, option (C), matching the complement count $315-90$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Fundamental period of a sum $f_1+f_2$ of periodic functions with periods $T_1,T_2$ is a divisor of $\\mathrm{lcm}(T_1,T_2)$ (here $\\mathrm{lcm}\\left(\\frac32,2\\right)=6$); it equals the lcm unless a cancellation occurs, so check smaller candidates.",
+    "$|\\sin(\\alpha x)|$ has period $\\frac{\\pi}{\\alpha}$ and $|\\cos(\\beta x)|$ has period $\\frac{\\pi}{\\beta}$ (the modulus halves the period).",
+    "Non-decreasing pairs: the number of $(u,v)$ with $1\\le u\\le v\\le n$ is $\\binom{n+1}{2}$ (choose $2$ elements with repetition); strictly increasing pairs: $\\binom n2$.",
+    "Many-one counting is easiest by complement: total minus injective. Here injective means four distinct values, split as two increasing pairs: $\\binom64\\binom42$."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of composite functions",
+    "Greatest integer, signum and tangent limits"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\setminus\\{2\\}\\to\\mathbb{R}$ be a function defined as $f(x)=\\begin{cases}[x]+\\operatorname{sgn}(\\sin(\\pi x))+\\frac{\\tan(\\pi x)}{x-2}, & x<2\\\\ \\frac{2^x-4}{x-2}, & x>2\\end{cases}$ where $[\\cdot]$ denotes the greatest integer function and $\\operatorname{sgn}(\\cdot)$ denotes the signum function. Let $g(x)=\\frac{x\\sin x}{1-\\cos x}$ for $x\\ne0$. Then $\\lim_{x\\to0}f(g(x))$ is equal to :",
+   "options": [
+    "$1+\\pi$",
+    "$2+\\pi$",
+    "$4\\ln2$",
+    "$\\pi$"
+   ],
+   "answer": "(D) $\\pi$",
+   "key_idea": "$g(x)\\to2$ from the left, so $f$ is needed at $2^-$, where $[t]=1$ and $\\operatorname{sgn}(\\sin\\pi t)=-1$.",
+   "solution": [
+    "First analyse $g(x)$ as $x\\to0$: $g(x)=\\frac{x\\sin x}{1-\\cos x}=\\frac{x\\left(2\\sin\\frac x2\\cos\\frac x2\\right)}{2\\sin^2\\frac x2}=2\\cdot\\frac{\\frac x2}{\\tan\\frac x2}$.",
+    "Since $\\frac{y}{\\tan y}<1$ for small $y\\ne0$ and $\\to1$, $g(x)\\to2^-$ as $x\\to0$.",
+    "To evaluate $\\lim_{x\\to0}f(g(x))$ substitute $t=g(x)$, so $t\\to2^-$ and the limit becomes $\\lim_{t\\to2^-}\\left([t]+\\operatorname{sgn}(\\sin\\pi t)+\\frac{\\tan\\pi t}{t-2}\\right)$.",
+    "For $t\\to2^-$: $[t]=1$ and $\\sin\\pi t<0$ (as $t\\in(1,2)$), so $\\operatorname{sgn}(\\sin\\pi t)=-1$.",
+    "Also $\\frac{\\tan\\pi t}{t-2}=\\frac{\\tan(\\pi(t-2))}{\\pi(t-2)}\\cdot\\pi\\to\\pi$ because $\\tan(\\pi t)=\\tan(\\pi(t-2))$.",
+    "Hence the limit is $1-1+\\pi=\\pi$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Show $g(x)<2$ without series by proving $h(x)=2-2\\cos x-x\\sin x>0$ with a derivative, then read the one-sided limit.",
+     "solution": [
+      "Write $2-g(x)=\\frac{2-2\\cos x-x\\sin x}{1-\\cos x}$ and let $h(x)=2-2\\cos x-x\\sin x$, so $h(0)=0$.",
+      "$h'(x)=2\\sin x-\\sin x-x\\cos x=\\sin x-x\\cos x=\\cos x\\,(\\tan x-x)>0$ for $x\\in\\left(0,\\frac\\pi2\\right)$, because $\\tan x>x$ there.",
+      "So $h(x)>0$ for small $x>0$; $h$ is even, so $h(x)>0$ for small $x\\ne0$ as well, and $1-\\cos x>0$. Hence $g(x)<2$ near $0$.",
+      "Also $\\lim_{x\\to0}g(x)=\\lim\\frac{x\\cdot x}{x^2/2}=2$ (standard limits), so $g(x)\\to2^-$ and we need $f(2^-)$.",
+      "On $(1,2)$: $[t]=1$, $\\sin\\pi t<0\\Rightarrow\\operatorname{sgn}=-1$, and $\\frac{\\tan\\pi t}{t-2}\\to\\pi$ by $\\lim_{u\\to0}\\frac{\\tan u}{u}=1$ with $u=\\pi(t-2)$.",
+      "So $f(2^-)=1-1+\\pi=\\pi$, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Always determine the SIDE from which the inner function approaches its limit; greatest-integer and signum make the outer function different on the two sides of $2$.",
+    "$\\frac{x\\sin x}{1-\\cos x}=\\frac{2\\cdot\\frac x2}{\\tan\\frac x2}$ and $\\frac{y}{\\tan y}<1$ for $0<|y|<\\frac\\pi2$, so $\\frac{x\\sin x}{1-\\cos x}\\to2^-$ as $x\\to0$.",
+    "Since $\\tan$ has period $\\pi$: $\\tan(\\pi t)=\\tan(\\pi(t-n))$ for integer $n$, so $\\lim_{t\\to n}\\frac{\\tan\\pi t}{t-n}=\\pi$.",
+    "For $t\\in(1,2)$: $[t]=1$ and $\\sin\\pi t<0$; for $t\\in(2,3)$: $[t]=2$ and $\\sin\\pi t>0$. Check the sign of the sine in each unit interval."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Range, bijectivity and inverse of a rational function",
+    "Intermediate value theorem"
+   ],
+   "level": 3,
+   "question": "Consider the function $f:[-1,1]\\to\\left[\\frac13,3\\right]$ defined by $f(x)=\\frac{x^2-x+1}{x^2+x+1}$. Which of the following statement(s) is/are CORRECT?",
+   "options": [
+    "The equation $f(x)=f^{-1}(x)$ has exactly three real solutions in the common domain of $f$ and $f^{-1}$.",
+    "$f(x)$ is a bijective function, and its inverse function $f^{-1}:\\left[\\frac13,3\\right]\\to[-1,1]$ satisfies $f^{-1}(1)=0$.",
+    "The equation $f(x)=f^{-1}(x)$ has a unique real solution $x=\\alpha$ in the common domain of $f$ and $f^{-1}$, where $\\alpha\\in\\left(\\frac13,\\frac12\\right)$.",
+    "The range of the function $g(x)=\\frac{x^2-x+1}{x^2+x+1}$ for $x\\in\\mathbb{R}$ is $\\left[\\frac13,3\\right]$."
+   ],
+   "answer": "(B, C, D)",
+   "key_idea": "$f$ is strictly decreasing from $3$ to $\\frac13$, so it is bijective; $f=f^{-1}$ reduces to $f(x)=x$, i.e. $x^3+2x-1=0$, located by IVT.",
+   "solution": [
+    "Range of $g$ on $\\mathbb{R}$: let $y=\\frac{x^2-x+1}{x^2+x+1}$, which rearranges to $(y-1)x^2+(y+1)x+(y-1)=0$.",
+    "For $y=1$, $x=0\\in\\mathbb{R}$. For $y\\ne1$, since $x\\in\\mathbb{R}$, the discriminant $D\\ge0$: $D=(y+1)^2-4(y-1)^2\\ge0\\Rightarrow(3-y)(3y-1)\\ge0\\Rightarrow y\\in\\left[\\frac13,3\\right]$. So (D) is correct.",
+    "$f'(x)=\\frac{2(x^2-1)}{(x^2+x+1)^2}$. For $x\\in(-1,1)$, $f'(x)<0$, so $f$ is strictly decreasing on $[-1,1]$.",
+    "$f(-1)=3$ and $f(1)=\\frac13$. Since $f$ is continuous and strictly decreasing, its image is $\\left[\\frac13,3\\right]$, so $f$ is bijective.",
+    "Also $f(0)=1\\Rightarrow f^{-1}(1)=0$. Thus (B) is correct.",
+    "The common domain of $f$ and $f^{-1}$ is $[-1,1]\\cap\\left[\\frac13,3\\right]=\\left[\\frac13,1\\right]$.",
+    "Setting $f(x)=x$: $\\frac{x^2-x+1}{x^2+x+1}=x\\Rightarrow x^3+2x-1=0$. (Solutions of $f(x)=f^{-1}(x)$ are roots of $f(f(x))=x$; the numerator of $f(f(x))-x$ factors as $-(3x^2-x+1)(x^3+2x-1)$ and $3x^2-x+1$ has no real root, so there is no other solution.)",
+    "Let $h(x)=x^3+2x-1$. $h\\left(\\frac13\\right)=\\frac1{27}+\\frac23-1=-\\frac8{27}<0$ and $h\\left(\\frac12\\right)=\\frac18+1-1=\\frac18>0$, and $h$ is strictly increasing.",
+    "By the Intermediate Value Theorem the unique root is $\\alpha\\in\\left(\\frac13,\\frac12\\right)$. Thus (C) is correct and (A) (three solutions) is false. Answer: (B, C, D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $f=1-\\frac{2x}{x^2+x+1}$ and use AM-GM for the range; count solutions of $f=f^{-1}$ through the factorisation of $f(f(x))-x$.",
+     "solution": [
+      "$f(x)=\\frac{x^2-x+1}{x^2+x+1}=1-\\frac{2x}{x^2+x+1}$. Put $u=\\frac{x}{x^2+x+1}$.",
+      "For $x>0$: $u=\\frac{1}{x+\\frac1x+1}\\in\\left(0,\\frac13\\right]$ by AM-GM ($x+\\frac1x\\ge2$, equality at $x=1$).",
+      "For $x<0$: $x+\\frac1x\\le-2$, so $x+\\frac1x+1\\le-1<0$ and $u\\in[-1,0)$ (equality at $x=-1$). Also $u=0$ at $x=0$.",
+      "So $u\\in\\left[-1,\\frac13\\right]$ and $g=1-2u\\in\\left[\\frac13,3\\right]$: statement (D) holds, with $g=3$ at $x=-1$ and $g=\\frac13$ at $x=1$.",
+      "On $[-1,1]$, $f$ is decreasing (derivative $\\frac{2(x^2-1)}{(x^2+x+1)^2}\\le0$) from $3$ to $\\frac13$, so it is bijective and $f(0)=1\\Rightarrow f^{-1}(1)=0$: (B) holds.",
+      "$f(x)=f^{-1}(x)\\iff f(f(x))=x$, and $f(f(x))-x=-\\frac{(3x^2-x+1)(x^3+2x-1)}{\\text{(positive denominator)}}$; the quadratic factor has discriminant $1-12<0$, so the only real solutions are the roots of $x^3+2x-1$.",
+      "$x^3+2x-1$ is strictly increasing, so it has exactly one real root, and since $h\\left(\\frac13\\right)<0<h\\left(\\frac12\\right)$ it lies in $\\left(\\frac13,\\frac12\\right)$. Hence (C) true, (A) false. Answer: (B, C, D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A quotient of two quadratics: write $y=\\frac{ax^2+bx+c}{px^2+qx+r}$ as a quadratic in $x$ and demand $D\\ge0$ for real $x$; also treat the value of $y$ that makes the leading coefficient vanish separately (here $y=1$).",
+    "$\\frac{x}{x^2+x+1}=\\frac{1}{x+\\frac1x+1}$ gives the range quickly by AM-GM: $x+\\frac1x\\ge2$ for $x>0$ and $\\le-2$ for $x<0$.",
+    "For a strictly decreasing bijection $f$, $f(x)=f^{-1}(x)\\iff f(f(x))=x$. This always contains the fixed points $f(x)=x$ but may also contain $2$-cycles; check by factoring $f(f(x))-x$ (the factor $f(x)-x$ always divides it).",
+    "The common domain of $f$ and $f^{-1}$ is $\\text{dom}(f)\\cap\\text{range}(f)$; solutions of $f=f^{-1}$ must lie there."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of max/min piecewise functions",
+    "Intermediate value theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:[-2,2]\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}\\max\\left(x+2,x^2\\right)+ax, & -2\\le x<0\\\\ \\min\\left(2-x,2-x^2\\right)+bx, & 0\\le x\\le2\\end{cases}$ where $a,b\\in\\mathbb{R}$. Which of the following statement(s) is/are CORRECT?",
+   "options": [
+    "$f(x)$ is continuous on $[-2,2]$ for all real values of $a$ and $b$.",
+    "The function $f(x)$ is non-differentiable at exactly two points in $(-2,2)$ if and only if $b-a=2$.",
+    "If $a=3$ and $b=-2$, then by the Intermediate Value Theorem, the equation $f(x)=0$ has at least one real root in $(-2,0)$ and at least one real root in $(0,2)$.",
+    "There exists at least one pair of real numbers $(a,b)$ such that $f(x)$ is differentiable at all points in $(-2,2)$."
+   ],
+   "answer": "(A, B, C)",
+   "key_idea": "Resolve $\\max$ and $\\min$ into polynomial pieces; the only possible corners are $x=-1,0,1$, and at $x=\\pm1$ the slopes always differ.",
+   "solution": [
+    "Resolving the max and min: $f(x)=\\begin{cases}x^2+ax, & -2\\le x\\le-1\\\\ x+2+ax, & -1<x<0\\\\ 2-x+bx, & 0\\le x\\le1\\\\ 2-x^2+bx, & 1<x\\le2\\end{cases}$.",
+    "Continuity at $x=-1$: $\\lim_{x\\to-1^-}f(x)=1-a=\\lim_{x\\to-1^+}f(x)=f(-1)$.",
+    "At $x=0$: $\\lim_{x\\to0^-}f(x)=2=\\lim_{x\\to0^+}f(x)=f(0)$. At $x=1$: $\\lim_{x\\to1^-}f(x)=1+b=\\lim_{x\\to1^+}f(x)=f(1)$.",
+    "Each piece is a polynomial and continuous, so $f$ is continuous on $[-2,2]$ for all $a,b$. Hence (A) is correct.",
+    "Derivatives at the transition points: at $x=-1$, $LHD=-2+a$ and $RHD=1+a$. Since $LHD\\ne RHD$, $f$ is never differentiable at $x=-1$.",
+    "At $x=1$: $LHD=-1+b$ and $RHD=-2+b$, so $LHD\\ne RHD$ and $f$ is never differentiable at $x=1$.",
+    "At $x=0$: $LHD=1+a$ and $RHD=-1+b$, so $f$ is differentiable at $x=0\\iff1+a=-1+b\\iff b-a=2$.",
+    "If $b-a=2$ the non-differentiability points in $(-2,2)$ are exactly $\\{-1,1\\}$ (2 points); if $b-a\\ne2$ they are $\\{-1,0,1\\}$ (3 points). Hence (B) is correct, and (D) is incorrect since $x=\\pm1$ are always non-differentiable.",
+    "For $a=3,b=-2$: $f(-2)=(-2)^2+3(-2)=-2<0$ and $f(0)=2>0$. $f$ is continuous on $[-2,0]$ and $f(-2)f(0)<0$, so by IVT some $c_1\\in(-2,0)$ has $f(c_1)=0$.",
+    "$f(2)=2-2^2+(-2)(2)=-6<0$ and $f(0)=2>0$, so by IVT some $c_2\\in(0,2)$ has $f(c_2)=0$. Hence (C) is correct."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $\\max(u,v)=\\frac{u+v+|u-v|}{2}$ and $\\min(u,v)=\\frac{u+v-|u-v|}{2}$: a max/min has corners only where the two expressions cross, with a slope jump independent of $a,b$.",
+     "solution": [
+      "$\\max(x+2,x^2)=\\frac{x^2+x+2+|x^2-x-2|}{2}$ and $x^2-x-2=(x-2)(x+1)$, so on $[-2,0)$ the only crossing is $x=-1$.",
+      "$\\min(2-x,2-x^2)=\\frac{4-x-x^2-|x^2-x|}{2}$ and $x^2-x=x(x-1)$, so on $[0,2]$ the crossings are $x=0$ (an endpoint, handled as a junction) and $x=1$.",
+      "At the crossing $x=-1$ the slopes of $x^2$ and $x+2$ are $-2$ and $1$, so the slope jumps by $3$; the added $ax$ shifts both equally and cannot cancel it. Likewise at $x=1$ the slopes of $2-x$ and $2-x^2$ are $-1$ and $-2$ (jump $1$), unaffected by $bx$.",
+      "So $x=\\pm1$ are always corners: (D) is false. Both pieces equal $2$ at $x=0$ (value of $x+2+ax$ and $2-x+bx$ there) and the pieces are polynomials, so $f$ is continuous for all $a,b$: (A) true.",
+      "At $x=0$ the slopes are $1+a$ (from the left) and $-1+b$ (from the right): equal iff $b-a=2$. Then the corners are exactly $x=\\pm1$, otherwise $x=-1,0,1$: (B) true.",
+      "(C): $f(-2)=4-2a=-2$, $f(0)=2$, $f(2)=-2+2b=-6$ for $a=3,b=-2$; sign changes on $(-2,0)$ and $(0,2)$ give the roots by IVT. Answer (A, B, C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\max(u,v)=\\frac{u+v+|u-v|}{2}$, $\\min(u,v)=\\frac{u+v-|u-v|}{2}$: corners of a max/min occur only where $u=v$, and the slope jump there is $|u'-v'|$ (unchanged by adding a common linear term $ax$).",
+    "Adding $ax$ (or any common differentiable function) to a function does not change which points are non-differentiable among the max/min corners; it only shifts the slopes on both sides equally.",
+    "At a junction of two differentiable pieces, differentiability needs equal values AND equal one-sided derivatives; a piecewise-polynomial function is automatically continuous only if the values match (here they always do).",
+    "IVT existence of roots: find endpoints (or interior points) where a continuous $f$ changes sign; each sign change on an interval guarantees at least one root there."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a function defined through a running maximum",
+    "Intermediate value theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:[0,3]\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}\\max_{0\\le t\\le x}\\left(t^3-3t+2\\right), & \\text{if }0\\le x\\le2\\\\ x^2+5x-10, & \\text{if }2<x\\le3\\end{cases}$ Which of the following statements is/are CORRECT ?",
+   "options": [
+    "$f(x)$ is non-differentiable at exactly one point in $(0,3)$.",
+    "The equation $f(x)=2x$ has exactly two solutions in the interval $[0,3]$.",
+    "$f(x)$ is discontinuous at $x=\\sqrt3$.",
+    "By the Intermediate Value Theorem, there exists at least one $c\\in(1,2)$ such that $f(c)=5$."
+   ],
+   "answer": "(A, B)",
+   "key_idea": "$t^3-3t+2$ equals $2$ again at $t=\\sqrt3$, so the running maximum stays $2$ on $[0,\\sqrt3]$ and then follows the cubic.",
+   "solution": [
+    "The running maximum gives $f(x)=\\begin{cases}2, & 0\\le x\\le\\sqrt3\\\\ x^3-3x+2, & \\sqrt3<x\\le2\\\\ x^2+5x-10, & 2<x\\le3\\end{cases}$.",
+    "Continuity at $x=\\sqrt3$: $\\lim_{x\\to\\sqrt3^-}f(x)=2$ and $\\lim_{x\\to\\sqrt3^+}f(x)=(\\sqrt3)^3-3\\sqrt3+2=2=f(\\sqrt3)$. Continuous, so option (C) is incorrect.",
+    "At $x=2$: $\\lim_{x\\to2^-}f(x)=2^3-3(2)+2=4$ and $\\lim_{x\\to2^+}f(x)=2^2+5(2)-10=4=f(2)$. Continuous. Thus $f$ is continuous everywhere on $[0,3]$.",
+    "Differentiability at $x=\\sqrt3$: $f'_-(\\sqrt3)=0$, whereas $f'_+(\\sqrt3)=\\frac{d}{dx}(x^3-3x+2)\\big|_{x=\\sqrt3}=3(\\sqrt3)^2-3=6$. Since $f'_-\\ne f'_+$, $f$ is non-differentiable at $x=\\sqrt3$.",
+    "At $x=2$: $f'_-(2)=3(2)^2-3=9$ and $f'_+(2)=2(2)+5=9$, so $f$ is differentiable at $x=2$. Hence $f$ is non-differentiable at exactly one point $x=\\sqrt3$ in $(0,3)$: (A) is correct.",
+    "Solving $f(x)=2x$ on $[0,\\sqrt3]$: $2=2x\\Rightarrow x=1\\in[0,\\sqrt3]$.",
+    "On $(\\sqrt3,2]$: $x^3-3x+2=2x\\Rightarrow x^3-5x+2=0$. At $x=2$, $2^3-5(2)+2=0$, so $x=2$ is a root in $(\\sqrt3,2]$.",
+    "For $x\\in[\\sqrt3,2]$, $\\frac{d}{dx}(x^3-5x+2)=3x^2-5\\ge4>0$, so no other roots exist in this subinterval.",
+    "On $(2,3]$: $x^2+5x-10=2x\\Rightarrow x^2+3x-10=0\\Rightarrow(x+5)(x-2)=0$, no root in $(2,3]$. So $f(x)=2x$ has exactly two solutions ($x=1$ and $x=2$): (B) is correct.",
+    "On $[1,2]$, $f$ is continuous and ranges from $f(1)=2$ to $f(2)=4$. Since $5\\notin[2,4]$ there is no $c\\in(1,2)$ with $f(c)=5$, so (D) is incorrect. Answer: (A, B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factor the difference of the two pieces: $(x^2+5x-10)-(x^3-3x+2)=-(x-2)^2(x+3)$ has a double root at $2$, so the two pieces join smoothly (equal value and slope).",
+     "solution": [
+      "$h(t)=t^3-3t+2=(t-1)^2(t+2)$ decreases on $[0,1]$ from $2$ to $0$ and increases afterwards, with $h(\\sqrt3)=2$; so the running maximum equals $2$ until $t=\\sqrt3$ and equals $h(x)$ after that.",
+      "At $\\sqrt3$ the left slope is $0$ (flat) and the right slope is $h'(\\sqrt3)=3\\cdot3-3=6\\ne0$: one corner (A), no jump in value (C false).",
+      "At $x=2$: $(x^2+5x-10)-(x^3-3x+2)=-x^3+x^2+8x-12=-(x-2)^2(x+3)$. A double root means both pieces share value and derivative at $2$, so $f$ is differentiable there. Hence exactly one non-differentiable point: (A) true.",
+      "$f(x)-2x$: on $[0,\\sqrt3]$ it is $2-2x$ (zero only at $x=1$); on $(\\sqrt3,2]$ it is $x^3-5x+2=(x-2)(x^2+2x-1)$, whose other roots are $-1\\pm\\sqrt2\\notin(\\sqrt3,2)$; on $(2,3]$ it is $(x+5)(x-2)>0$.",
+      "So the solutions are exactly $x=1$ and $x=2$: (B) true.",
+      "On $[1,2]$ $f$ is non-decreasing from $2$ to $4$ (flat then increasing), so it never reaches $5$: (D) false. Answer (A, B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A running maximum $M(x)=\\max_{0\\le t\\le x}h(t)$ is non-decreasing and continuous when $h$ is continuous; it is constant while $h$ stays below its previous peak, and equals $h$ when $h$ is increasing past the old peak.",
+    "If $p(x)-q(x)$ has a factor $(x-c)^2$, then the polynomials $p$ and $q$ have the same value and the same derivative at $c$, so gluing them at $c$ gives a differentiable function. A simple root (factor $(x-c)$ only) gives a continuous join with a corner.",
+    "$t^3-3t+2=(t-1)^2(t+2)$: a cubic with a double root at $t=1$ has a turning point there; the level $h=h(0)=2$ is met again at $t=\\sqrt3$ since $t^3-3t=0$.",
+    "IVT can only produce values between the end values of a continuous function on an interval (and only when the function is continuous); check whether the target value lies in that range."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "One or more than one Correct Type",
+   "short_type": "One or More Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits using series expansion",
+    "Types of discontinuity (removable, jump, infinite)"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}\\frac{a\\cos x+bx\\sin x+ce^x-1-x}{x^3}, & x<0\\\\ d, & x=0\\\\ \\frac{e^{kx}-1-kx-mx^2}{x^3}, & x>0\\end{cases}$ where $a,b,c,d,k,m\\in\\mathbb{R}$. Which of the following statement(s) is/are CORRECT ?",
+   "options": [
+    "If $a=0$, $b=-\\frac12$, $c=1$, $k=1$, $m=\\frac12$, and $d=\\frac16$, then $f(x)$ is continuous at $x=0$.",
+    "If $a=0$, $b=-\\frac12$, $c=1$, $k=1$, $m=\\frac12$, and $d\\ne\\frac16$, then $f(x)$ has a removable isolated point discontinuity at $x=0$.",
+    "If $a=0$, $b=-\\frac12$, $c=1$, $k=2$, and $m=2$, then $f(x)$ has a non-removable jump discontinuity at $x=0$ of magnitude $\\frac16$ for any real value of $d$.",
+    "If $a=0$, $c=1$, and $b=\\frac12$, then $f(x)$ has an essential infinite discontinuity at $x=0$."
+   ],
+   "answer": "(A, B, D)",
+   "key_idea": "Expand the numerators in powers of $x$: a finite limit needs the constant, $x$ and $x^2$ coefficients to vanish, and the $x^3$ coefficient is then the limit.",
+   "solution": [
+    "Left-hand limit ($x<0$): expanding the numerator, $\\;a\\cos x+bx\\sin x+ce^x-1-x=(a+c-1)+x(c-1)+x^2\\left(b-\\frac a2+\\frac c2\\right)+x^3\\left(\\frac c6\\right)+O(x^4)$.",
+    "For $\\lim_{x\\to0^-}f(x)$ to exist finitely: (1) $a+c-1=0$; (2) $c-1=0\\Rightarrow c=1\\Rightarrow a=0$; (3) $b-\\frac a2+\\frac c2=0\\Rightarrow b+\\frac12=0\\Rightarrow b=-\\frac12$.",
+    "When $a=0,b=-\\frac12,c=1$: $LHL=\\frac c6=\\frac16$.",
+    "Right-hand limit ($x>0$): $e^{kx}-1-kx-mx^2=x^2\\left(\\frac{k^2}{2}-m\\right)+x^3\\left(\\frac{k^3}{6}\\right)+O(x^4)$.",
+    "For $\\lim_{x\\to0^+}f(x)$ to exist finitely: $\\frac{k^2}{2}-m=0\\Rightarrow m=\\frac{k^2}{2}$. Then $RHL=\\frac{k^3}{6}$.",
+    "Option (A): $k=1,m=\\frac12\\Rightarrow RHL=\\frac16$. Since $LHL=RHL=f(0)=d=\\frac16$, $f$ is continuous at $x=0$. (A) is correct.",
+    "Option (B): $LHL=RHL=\\frac16\\ne d$. The limit exists but does not equal $f(0)$, so it is a removable isolated point discontinuity. (B) is correct.",
+    "Option (C): $k=2,m=2\\Rightarrow m=\\frac{k^2}{2}$ holds, $RHL=\\frac{2^3}{6}=\\frac86=\\frac43$ and $LHL=\\frac16$. Both limits are finite but unequal; the magnitude of the jump is $\\left|\\frac86-\\frac16\\right|=\\frac76$, not $\\frac16$. So (C) is incorrect.",
+    "Option (D): $a=0,c=1,b=\\frac12$: $b-\\frac a2+\\frac c2=\\frac12+\\frac12=1\\ne0$. So the numerator is $N(x)=x^2+\\frac16x^3+O(x^4)$ and $f(x)=\\frac1x+\\frac16+O(x)$ as $x\\to0^-$.",
+    "Hence $\\lim_{x\\to0^-}f(x)=-\\infty$, so $x=0$ is an essential (infinite) discontinuity. (D) is correct. Answer: (A, B, D)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Replace the series by derivatives: for $\\frac{N(x)}{x^3}$ with $N(0)=N'(0)=N''(0)=0$ the limit is $\\frac{N'''(0)}{6}$ (repeated L'Hôpital), and the first non-vanishing derivative of $N$ gives the order.",
+     "solution": [
+      "Left side: let $N(x)=a\\cos x+bx\\sin x+ce^x-1-x$, so $N(0)=a+c-1$ and $N'(x)=-a\\sin x+b\\sin x+bx\\cos x+ce^x-1$, giving $N'(0)=c-1$.",
+      "Differentiating again: $N''=-a\\cos x+2b\\cos x-bx\\sin x+ce^x$, so $N''(0)=-a+2b+c$; and $N'''=a\\sin x-3b\\sin x-bx\\cos x+ce^x$, so $N'''(0)=c$.",
+      "A finite limit needs $N(0)=N'(0)=N''(0)=0$: $a+c=1$, $c=1$, $-a+2b+c=0$, i.e. $a=0,c=1,b=-\\frac12$. Then $\\lim_{x\\to0^-}\\frac{N}{x^3}=\\frac{N'''(0)}{3!}=\\frac c6=\\frac16$.",
+      "Right side: $M(x)=e^{kx}-1-kx-mx^2$: $M(0)=M'(0)=0$ and $M''(0)=k^2-2m$, which must be $0$, so $m=\\frac{k^2}2$; then the limit is $\\frac{M'''(0)}{6}=\\frac{k^3}{6}$.",
+      "(A): $k=1$ gives $\\frac16=d$: continuous. (B): same limit $\\frac16\\ne d$: removable. (C): $k=2$ gives $\\frac86=\\frac43$, jump $\\frac43-\\frac16=\\frac76\\ne\\frac16$: false.",
+      "(D): with $b=\\frac12$, $a=0,c=1$: $N(0)=N'(0)=0$ but $N''(0)=-0+1+1=2\\ne0$, so $N(x)\\sim x^2$ and $f(x)\\sim\\frac1x\\to-\\infty$ as $x\\to0^-$: infinite discontinuity. Answer (A, B, D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to0}\\frac{N(x)}{x^p}$ is finite iff the first $p$ Taylor coefficients (orders $0,\\ldots,p-1$) of $N$ vanish; the limit is then the coefficient of $x^p$. If the first non-zero coefficient has order $q<p$, then $\\frac{N}{x^p}\\sim\\frac{c_q}{x^{p-q}}$.",
+    "Maclaurin expansions: $e^{kx}=1+kx+\\frac{k^2x^2}{2}+\\frac{k^3x^3}{6}+\\cdots$, $\\cos x=1-\\frac{x^2}{2}+\\cdots$, $x\\sin x=x^2-\\frac{x^4}{6}+\\cdots$.",
+    "Classification: removable (limit exists, $\\ne f(0)$ or $f(0)$ undefined), jump (both one-sided limits finite and unequal), infinite (a one-sided limit is $\\pm\\infty$), oscillatory (no limit at all).",
+    "A jump is $|RHL-LHL|$: check the magnitude explicitly ($\\frac43-\\frac16=\\frac76$ here)."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Higher-order differentiability of $x^m\\sin(1/x^n)$ type functions",
+    "Continuity of derivatives"
+   ],
+   "level": 3,
+   "paragraph": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\begin{cases}x^m\\sin\\left(\\frac1{x^n}\\right), & \\text{if }x>0\\\\ 0, & \\text{if }x=0\\\\ -(-x)^m\\sin\\left(\\frac1{(-x)^n}\\right), & \\text{if }x<0\\end{cases}$ where $m\\in\\mathbb{R}$ and $n\\in\\mathbb{R}^+$.",
+   "question": "Let $n=2$. If $f(x)$ is twice differentiable at $x=0$, but $f''(x)$ is NOT continuous at $x=0$, then the complete set of values of $m$ is:",
+   "options": [
+    "$(4,6]$",
+    "$(4,6)$",
+    "$[4,6)$",
+    "$(2,4]$"
+   ],
+   "answer": "(A) $(4,6]$",
+   "key_idea": "Each differentiation lowers the power of $x$ by $n+1$ in the oscillating terms, so compare the lowest power with $0$.",
+   "solution": [
+    "Analysis of higher derivatives at the origin. For $x>0$, successive differentiation yields $f(x)\\sim x^m\\sin(x^{-n})$.",
+    "$f'(x)\\sim x^{m-n-1}\\cos(x^{-n})+$ higher power terms; $f''(x)\\sim x^{m-2n-2}\\sin(x^{-n})+$ higher power terms.",
+    "In general $f^{(k)}(x)\\sim x^{m-kn-k}\\,(\\sin(x^{-n})\\text{ or }\\cos(x^{-n}))+$ higher power terms.",
+    "$f^{(k)}(0)$ exists iff the lowest power in $\\frac{f^{(k-1)}(x)}{x}$ is strictly positive: $m-(k-1)n-(k-1)-1>0\\Rightarrow m>(k-1)n+k$.",
+    "$f^{(k)}(x)$ is continuous at $x=0$ iff the lowest power in $f^{(k)}(x)$ is strictly positive: $m-kn-k>0\\Rightarrow m>k(n+1)$.",
+    "Given $n=2$: $f''(0)$ exists $\\iff m>(2-1)(2)+2\\Rightarrow m>4$.",
+    "$f''(x)$ is continuous at $x=0\\iff m>2(2+1)\\Rightarrow m>6$.",
+    "Thus $f''(0)$ exists but $f''(x)$ is NOT continuous at $x=0$ when $m\\in(4,6]$.",
+    "(At $m=6$, $f''(x)$ contains a term proportional to $\\sin(x^{-2})$, which oscillates rapidly as $x\\to0$ without approaching a single limit, so $f''(x)$ is discontinuous at $x=0$.) Answer: (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $f(x)=x^m\\sin\\left(x^{-n}\\right)$, $x>0$, each derivative lowers the exponent of the oscillating terms by $n+1$: $f^{(k)}\\sim x^{m-k(n+1)}\\times(\\sin\\text{ or }\\cos)\\left(x^{-n}\\right)$.",
+    "$f^{(k)}(0)$ exists iff $m>(k-1)n+k$, and $f^{(k)}$ is continuous at $0$ iff $m>k(n+1)$. The gap $(k-1)n+k<m\\le k(n+1)$ is exactly where $f^{(k)}(0)$ exists but $f^{(k)}$ is discontinuous.",
+    "At the boundary $m=k(n+1)$ the leading term is $c\\,\\sin(x^{-n})$ or $c\\,\\cos(x^{-n})$ with exponent $0$: it oscillates between $-c$ and $c$, so there is no limit (discontinuous). At $m=(k-1)n+k$ the difference quotient oscillates and the derivative does not exist.",
+    "The negative side is the odd reflection $f(-x)=-f(x)$, so one-sided analysis for $x>0$ suffices. Check (the case $n=1$, $k=1$): $x^2\\sin\\frac1x$ has $f'(0)=0$ but $f'$ is discontinuous at $0$: $m=2=k(n+1)$.",
+    "Plugging in $n=2,k=2$: $f''(0)$ exists iff $m>4$ and $f''$ continuous iff $m>6$, matching $(4,6]$."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Paragraph Based Single Correct Type",
+   "short_type": "Paragraph Single Correct",
+   "marks": 3,
+   "concepts": [
+    "Higher-order differentiability of $x^m\\sin(1/x^n)$ type functions",
+    "Continuity of derivatives"
+   ],
+   "level": 4,
+   "paragraph": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\begin{cases}x^m\\sin\\left(\\frac1{x^n}\\right), & \\text{if }x>0\\\\ 0, & \\text{if }x=0\\\\ -(-x)^m\\sin\\left(\\frac1{(-x)^n}\\right), & \\text{if }x<0\\end{cases}$ where $m\\in\\mathbb{R}$ and $n\\in\\mathbb{R}^+$.",
+   "question": "Let $m=7$ and $n=1$. Let $g(x)=f'(x)$ for all $x\\in\\mathbb{R}$. Which of the following statements is TRUE?",
+   "options": [
+    "$g'(x)$ is continuous at $x=0$, but $g'(x)$ is not differentiable at $x=0$",
+    "$g''(x)$ is continuous at $x=0$, but $g''(x)$ is not differentiable at $x=0$",
+    "$g''(x)$ is not continuous at $x=0$, but $g''(0)$ exists",
+    "$g(x)$ is not differentiable at $x=0$"
+   ],
+   "answer": "(B)",
+   "key_idea": "$g''=f'''$: compare $m=7$ with $k(n+1)=6$ (continuity of $f'''$) and with $(k-1)n+k=7$ for $k=4$ (existence of $f^{(4)}(0)$).",
+   "solution": [
+    "Given $m=7$, $n=1$ and $g(x)=f'(x)$: $g'(x)=f''(x)$ and $g''(x)=f'''(x)$.",
+    "For $k=3$ (which corresponds to $g''(x)=f'''(x)$): the lowest power exponent in $f'''(x)$ is $m-3n-3=7-3-3=1$.",
+    "Since $1>0$, $\\lim_{x\\to0}g''(x)=0=g''(0)$, so $g''(x)$ is continuous at $x=0$.",
+    "For differentiability of $g''(x)$ at $x=0$ (that is, $g'''(0)=f^{(4)}(0)$): $f^{(4)}(0)$ exists $\\iff m>(4-1)(1)+4=7$.",
+    "Since $m=7$, the condition $m>7$ is FALSE.",
+    "Explicitly, $g'''(0)=\\lim_{x\\to0}\\frac{g''(x)-0}{x}=\\lim_{x\\to0}\\frac{x\\cdot C\\cdot\\cos(x^{-1})}{x}=\\lim_{x\\to0}C\\cos(1/x)$, which does not exist.",
+    "Hence $g''(x)$ is continuous at $x=0$, but $g''(x)$ is not differentiable at $x=0$. Answer: (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "With $n=1$: $f^{(k)}(0)$ exists iff $m>(k-1)+k=2k-1$, and $f^{(k)}$ is continuous iff $m>2k$. For $k=3$: $m>5$ and $m>6$; for $k=4$: $m>7$ and $m>8$.",
+    "A function with $m=7$, $n=1$: $f'''$ exists and is continuous at $0$ ($7>6$), but $f^{(4)}(0)$ fails to exist ($7\\not>7$): the integer $m=2k-1$ is the exact threshold for $k=4$.",
+    "At the threshold, the difference quotient $\\frac{f^{(k-1)}(x)}{x}$ behaves like $C\\cos(1/x^n)$, which oscillates in $[-C,C]$ and has no limit. Always test the borderline value separately.",
+    "Shifting the label ($g=f'$) just shifts the order: $g^{(j)}=f^{(j+1)}$. Convert every statement to $f^{(k)}$ before applying the thresholds."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Telescoping sum of inverse tangents",
+    "Limits at infinity"
+   ],
+   "level": 3,
+   "question": "For $n\\in\\mathbb{N}$, let $S_n=\\sum_{k=1}^{n}\\tan^{-1}\\left(\\frac{2k}{k^4+k^2+2}\\right)$ and let $S_\\infty=\\lim_{n\\to\\infty}S_n$. Evaluate the value of the limit: $L=\\lim_{n\\to\\infty}\\left(\\frac{4n^3+7n^2+2}{n+3}\\cdot(S_\\infty-S_n)\\right)$.",
+   "answer": "4",
+   "key_idea": "$k^4+k^2+2=1+(k^2+k+1)(k^2-k+1)$ turns each term into a difference $\\tan^{-1}(k^2+k+1)-\\tan^{-1}(k^2-k+1)$.",
+   "solution": [
+    "$T_k=\\tan^{-1}\\left(\\frac{2k}{k^4+k^2+2}\\right)=\\tan^{-1}\\left(\\frac{(k^2+k+1)-(k^2-k+1)}{1+(k^2+k+1)(k^2-k+1)}\\right)$, using $(k^2+k+1)(k^2-k+1)=k^4+k^2+1$.",
+    "$T_k=\\tan^{-1}(k^2+k+1)-\\tan^{-1}(k^2-k+1)$, and the terms telescope since $(k+1)^2-(k+1)+1=k^2+k+1$.",
+    "$S_n=\\tan^{-1}(n^2+n+1)-\\tan^{-1}(1)=\\tan^{-1}(n^2+n+1)-\\frac\\pi4$.",
+    "$S_\\infty=\\lim_{n\\to\\infty}S_n=\\frac\\pi2-\\frac\\pi4=\\frac\\pi4$.",
+    "Thus $S_\\infty-S_n=\\frac\\pi2-\\tan^{-1}(n^2+n+1)=\\cot^{-1}(n^2+n+1)=\\tan^{-1}\\left(\\frac{1}{n^2+n+1}\\right)$.",
+    "Substituting: $L=\\lim_{n\\to\\infty}\\frac{4n^3+7n^2+2}{n+3}\\cdot\\tan^{-1}\\left(\\frac{1}{n^2+n+1}\\right)$.",
+    "$=\\lim_{n\\to\\infty}\\frac{4n^3+7n^2+2}{(n+3)(n^2+n+1)}\\cdot\\frac{\\tan^{-1}\\left(\\frac1{n^2+n+1}\\right)}{\\frac1{n^2+n+1}}=4\\cdot1=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Estimate the tail without telescoping: $T_k\\approx\\frac{2}{k^3}$ for large $k$, so $S_\\infty-S_n\\approx\\sum_{k>n}\\frac2{k^3}\\approx\\frac1{n^2}$.",
+     "solution": [
+      "For large $k$, $\\tan^{-1}\\left(\\frac{2k}{k^4+k^2+2}\\right)\\approx\\frac{2k}{k^4}=\\frac{2}{k^3}$ (since $\\tan^{-1}u\\sim u$ and $\\frac{2k}{k^4+k^2+2}\\sim\\frac2{k^3}$).",
+      "Hence $S_\\infty-S_n=\\sum_{k>n}T_k\\approx\\sum_{k>n}\\frac2{k^3}\\approx\\int_n^\\infty\\frac{2}{t^3}\\,dt=\\frac1{n^2}$.",
+      "Also $\\frac{4n^3+7n^2+2}{n+3}\\sim4n^2$ as $n\\to\\infty$.",
+      "So $L\\approx4n^2\\cdot\\frac1{n^2}=4$. (Numerical check with the exact tail $\\frac\\pi2-\\tan^{-1}(n^2+n+1)$: $n=1000$ gives $3.99102$, $n=10000$ gives $3.99910$, tending to $4$.)",
+      "Hence $L=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}p-\\tan^{-1}q=\\tan^{-1}\\frac{p-q}{1+pq}$ (for $pq>-1$): look for $1+pq$ in the denominator; here $p=k^2+k+1,\\ q=k^2-k+1$ with $pq=k^4+k^2+1$.",
+    "$k^4+k^2+1=(k^2+k+1)(k^2-k+1)$ and $(k+1)^2-(k+1)+1=k^2+k+1$: the factors $f(k)=k^2+k+1$ and $f(k-1)=k^2-k+1$ telescope.",
+    "Tail of a convergent series of positive terms: if $T_k\\sim\\frac{c}{k^p}$, $p>1$, then $\\sum_{k>n}T_k\\sim\\frac{c}{(p-1)n^{p-1}}$ (here $c=2,p=3$: $\\frac{1}{n^2}$).",
+    "$\\frac\\pi2-\\tan^{-1}u=\\cot^{-1}u=\\tan^{-1}\\frac1u$ for $u>0$, and $\\frac{\\tan^{-1}v}{v}\\to1$ as $v\\to0$."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of composite modulus functions",
+    "Definite integral by area"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=||x-1|-2|$ and let $g:\\mathbb{R}\\to\\mathbb{R}$ be defined by $g(x)=1-f(2x-3)$. Consider the composite function $h:\\mathbb{R}\\to\\mathbb{R}$ given by $h(x)=(f\\circ g)(x)$. If $N$ represents the total number of points in $\\mathbb{R}$ where $h(x)$ is not differentiable, and $I=\\int_0^4h(x)\\,dx$, then find the value of $N+I$.",
+   "answer": "9",
+   "key_idea": "$h$ is a nested modulus, so its graph is a zig-zag of straight segments with corners at $x=0,1,2,3,4$; $N$ counts corners and $I$ is a sum of triangle areas.",
+   "solution": [
+    "$f(2x-3)=||2x-3-1|-2|=||2x-4|-2|$, so $g(x)=1-||2x-4|-2|$.",
+    "$h(x)=f(g(x))=||g(x)-1|-2|=|||2x-4|-2|-2|$ (because $g(x)-1=-||2x-4|-2|$).",
+    "Values: $h(0)=||4-2|-2|=0$, $h(1)=||2-2|-2|=2$, $h(2)=||0-2|-2|=0$, $h(3)=2$, $h(4)=0$; $h$ is linear between consecutive integers and symmetric about $x=2$, so its graph is a zig-zag with peaks at $x=1$ and $x=3$ (and rising again outside $[0,4]$).",
+    "Corners (slope changes) occur at $x=0,1,2,3,4$, so $N=5$.",
+    "$I=\\int_0^4h(x)\\,dx=\\left(\\frac12\\times2\\times2\\right)\\times2=4$ (two triangles of base $2$ and height $2$).",
+    "Therefore $N+I=5+4=9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Find every corner as a zero of an inner modulus expression (each $|\\cdot|$ is non-differentiable only where its argument is $0$) and use the symmetry $h(2+u)=h(2-u)$ for the integral.",
+     "solution": [
+      "Corners of $|||2x-4|-2|-2|$ can only be where an argument of a modulus is $0$.",
+      "Innermost: $2x-4=0\\Rightarrow x=2$. Middle: $|2x-4|-2=0\\Rightarrow x=1,3$. Outer: $||2x-4|-2|-2=0\\Rightarrow|2x-4|=4$ or $0\\Rightarrow x=0,4$ or $x=2$.",
+      "The set of candidate points is $\\{0,1,2,3,4\\}$, and at each one the slope really changes (e.g. at $x=2$: $h=|2x-4|$ locally, slopes $\\mp2$; at $x=1$ the peak has slopes $+2,-2$). So $N=5$.",
+      "$h(2+u)$ depends on $|u|$ only, so $\\int_0^4h\\,dx=2\\int_2^4h\\,dx=2\\int_0^2\\left||2u-2|-2\\right|du$ with $u=x-2$.",
+      "For $u\\in[0,1]$ the integrand is $\\left||2u-2|-2\\right|=2u$ and for $u\\in[1,2]$ it is $4-2u$: a triangle with base $2$ and height $2$, area $2$. So $I=2\\times2=4$.",
+      "$N+I=5+4=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A function built from nested $|\\cdot|$ (and $\\max,\\min$) is piecewise linear: its possible corners are exactly the points where an inner expression is $0$, but each candidate must be checked since cancellations can remove a corner.",
+    "$f(x)=||x-c|-d|$ is a zig-zag symmetric about $x=c$ with corners at $c,\\ c\\pm d$; composing with $2x-3$ rescales and shifts the picture horizontally.",
+    "$\\int$ of a piecewise-linear function is the sum of trapezoid/triangle areas; use the symmetry $h(c+u)=h(c-u)$ to halve the work.",
+    "Number of corners of $|||x|-a|-b|$ with $a>0,b>0$: the points $0,\\pm a,\\pm(a\\pm b)$, counted without repetition."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Set operations and Venn-diagram regions",
+    "Counting ordered triples of subsets"
+   ],
+   "level": 3,
+   "question": "Let $U=\\{1,2,3\\}$ be the universal set. Let $S$ be the set of all ordered triples $(A,B,C)$ of subsets of $U$ that simultaneously satisfy the following three conditions: (i) $\\left[(A\\cup B^c)\\cap(B\\cup C^c)\\cap(C\\cup A^c)\\right]^c=U$; (ii) $(A\\cup B)^c\\cup(B\\cup C)^c\\cup(C\\cup A)^c=\\emptyset$; (iii) $A\\cap B\\ne\\emptyset$, $B\\cap C\\ne\\emptyset$, and $C\\cap A\\ne\\emptyset$, where $X^c$ denotes the complement of set $X$ with respect to $U$. Find the number of elements in $S$.",
+   "answer": "6",
+   "key_idea": "Split $U$ into the $8$ Venn regions; (i) and (ii) kill five regions, leaving $A\\cap B\\cap C^c$, $A\\cap B^c\\cap C$, $A^c\\cap B\\cap C$ to be filled one element each.",
+   "solution": [
+    "Let the $8$ disjoint regions be $R_1=A\\cap B\\cap C$, $R_2=A\\cap B\\cap C^c$, $R_3=A\\cap B^c\\cap C$, $R_4=A\\cap B^c\\cap C^c$, $R_5=A^c\\cap B\\cap C$, $R_6=A^c\\cap B\\cap C^c$, $R_7=A^c\\cap B^c\\cap C$, $R_8=A^c\\cap B^c\\cap C^c$.",
+    "Condition (i): let $X=(A\\cup B^c)\\cap(B\\cup C^c)\\cap(C\\cup A^c)$. $X^c=U\\Rightarrow X=\\emptyset$.",
+    "An element $x\\in X$ iff $x\\in A\\cap B\\cap C$ or $x\\in A^c\\cap B^c\\cap C^c$. Thus $X=R_1\\cup R_8=\\emptyset\\Rightarrow R_1=\\emptyset$ and $R_8=\\emptyset$.",
+    "Condition (ii): $(A\\cup B)^c\\cup(B\\cup C)^c\\cup(C\\cup A)^c=\\emptyset\\Rightarrow(A\\cup B)^c=\\emptyset$, $(B\\cup C)^c=\\emptyset$, $(C\\cup A)^c=\\emptyset$, i.e. $A\\cup B=B\\cup C=C\\cup A=U$.",
+    "$(A\\cup B)^c=\\emptyset\\Rightarrow R_7=\\emptyset,R_8=\\emptyset$; $(B\\cup C)^c=\\emptyset\\Rightarrow R_4=\\emptyset,R_8=\\emptyset$; $(C\\cup A)^c=\\emptyset\\Rightarrow R_6=\\emptyset,R_8=\\emptyset$.",
+    "Combining (i) and (ii): $R_1=R_4=R_6=R_7=R_8=\\emptyset$. The only remaining regions are $R_2,R_3,R_5$.",
+    "Condition (iii): since $R_1=\\emptyset$, $A\\cap B=R_2\\ne\\emptyset$; $C\\cap A=R_3\\ne\\emptyset$; $B\\cap C=R_5\\ne\\emptyset$.",
+    "$U=\\{1,2,3\\}$ has $3$ elements and $R_2,R_3,R_5$ are pairwise disjoint, non-empty sets whose union is $U$, so each region contains exactly $1$ element.",
+    "The number of ways to distribute the $3$ distinct elements into the $3$ labelled non-empty regions $R_2,R_3,R_5$ is $3!=6$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Work element by element with membership truth-values: (i) forbids ``all three or none'', (ii) forces ``at least two sets'', so every element lies in exactly two sets; then count surjections onto the three pair-types.",
+     "solution": [
+      "Describe each element $x\\in U$ by $(a,b,c)\\in\\{0,1\\}^3$, where $a=1$ iff $x\\in A$, and so on.",
+      "$x\\in(A\\cup B^c)\\cap(B\\cup C^c)\\cap(C\\cup A^c)$ iff $(b\\Rightarrow a)$, $(c\\Rightarrow b)$ and $(a\\Rightarrow c)$, i.e. the cycle $a\\Rightarrow c\\Rightarrow b\\Rightarrow a$, i.e. $a=b=c$. Condition (i) says no element has $a=b=c$.",
+      "Condition (ii) says $A\\cup B=B\\cup C=C\\cup A=U$: every element is in at least two of the three sets.",
+      "Together: every element is in exactly two of the three sets, so its type is one of $AB,\\ BC,\\ CA$ (3 types).",
+      "Condition (iii): each of $A\\cap B$, $B\\cap C$, $C\\cap A$ is non-empty, so every type must occur: the type assignment $U\\to\\{AB,BC,CA\\}$ is onto.",
+      "Number of onto maps from a $3$-set onto a $3$-set: $3^3-3\\cdot2^3+3\\cdot1^3=27-24+3=6$. Hence $|S|=6$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $n$ sets there are $2^n$ Venn regions; any condition on set expressions becomes a condition on which regions are empty. For three sets: $A\\cup B=U$ empties $A^cB^c$ (regions $\\bar A\\bar B C$ and $\\bar A\\bar B\\bar C$).",
+    "$(A\\cup B^c)\\cap(B\\cup C^c)\\cap(C\\cup A^c)$ is the cyclic implication chain $b\\to a,\\ c\\to b,\\ a\\to c$, true exactly for $a=b=c$: the set $ABC\\ \\cup\\ A^cB^cC^c$.",
+    "Counting triples of subsets of an $n$-set = counting maps from the $n$ elements to the allowed Venn regions; non-emptiness conditions turn them into surjections.",
+    "Surjections from an $m$-set onto an $r$-set: $\\sum_{j}(-1)^j\\binom rj(r-j)^m$ (inclusion-exclusion); for $m=r$ it is $r!$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Reflexive and symmetric relations",
+    "Equivalence relations and Bell numbers"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{1,2,3\\}$. Find the number of relations on $A$ which are both reflexive and symmetric, but not transitive.",
+   "answer": "3",
+   "key_idea": "Count all reflexive-symmetric relations ($2^3=8$) and subtract those that are transitive, which are exactly the equivalence relations ($5$).",
+   "solution": [
+    "Let $A=\\{1,2,3\\}$. A reflexive symmetric relation is fixed by its choice among the three unordered pairs $\\{1,2\\},\\{1,3\\},\\{2,3\\}$, so the total is $2^3=8$.",
+    "An equivalence relation is a relation that is reflexive, symmetric and transitive.",
+    "The number of equivalence relations on $A=\\{1,2,3\\}$ equals the number of partitions of $A$ (the Bell number $B_3$): $1+3+1=5$.",
+    "Every equivalence relation is reflexive and symmetric, so the relations that are reflexive and symmetric but NOT transitive number $8-5=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read a reflexive symmetric relation as a graph on $3$ vertices; it is transitive iff it is a disjoint union of cliques, so only the paths with exactly two edges fail.",
+     "solution": [
+      "A reflexive symmetric relation on $\\{1,2,3\\}$ is the same as a simple graph on the $3$ vertices (each of the $3$ possible edges present or absent): $8$ graphs.",
+      "Transitivity of $R$ means: if $a\\sim b$ and $b\\sim c$ then $a\\sim c$, i.e. every connected component is a complete graph.",
+      "$0$ edges: $3$ isolated vertices (cliques) $\\checkmark$. $1$ edge: an edge plus an isolated vertex $\\checkmark$. $3$ edges: the triangle $\\checkmark$.",
+      "$2$ edges: a path $a-b-c$ with $a\\not\\sim c$ $\\times$ (not transitive). There are $3$ such graphs, one for each choice of the middle vertex $b$.",
+      "So exactly $3$ relations are reflexive, symmetric and not transitive."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Reflexive symmetric relations on an $n$-set number $2^{\\binom n2}$; reflexive only: $2^{n^2-n}$; symmetric only: $2^{n(n+1)/2}$.",
+    "Equivalence relations on an $n$-set correspond to set partitions; counts are the Bell numbers $B_1,B_2,B_3,B_4,B_5=1,2,5,15,52$.",
+    "A reflexive symmetric relation is transitive iff every pair of related elements has the same neighbours, i.e. the graph is a union of disjoint cliques; non-transitive ones need an induced path $a-b-c$.",
+    "For $n=3$: 8 reflexive-symmetric $=5$ equivalence $+\\ 3$ not transitive; for $n=4$: $2^6=64$, of which $15$ are equivalence relations, so $49$ fail transitivity."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Composition and inverse of relations",
+    "Equivalence relations and Bell numbers"
+   ],
+   "level": 3,
+   "question": "Let $A=\\{1,2,3\\}$. Let $R$ be a reflexive relation on $A$ satisfying $R\\circ R^{-1}=R$, where $R^{-1}$ denotes the inverse of relation $R$ and $\\circ$ denotes the composition of relations. The total number of such relations $R$ on $A$ is (Note: for $R\\subseteq A\\times B$ and $S\\subseteq B\\times C$, $S\\circ R=\\{(a,c)\\in A\\times C\\mid\\exists\\,b\\in B\\text{ such that }(a,b)\\in R\\text{ and }(b,c)\\in S\\}$.)",
+   "answer": "5",
+   "key_idea": "$R\\circ R^{-1}$ is always symmetric, so $R=R\\circ R^{-1}$ forces symmetry; then $R\\circ R=R$ gives transitivity, so $R$ is an equivalence relation.",
+   "solution": [
+    "Given that $R$ is a reflexive relation on $A=\\{1,2,3\\}$, we have $(x,x)\\in R$ for all $x\\in A$. We are given $R\\circ R^{-1}=R$.",
+    "Symmetry: let $(x,y)\\in R$. Since $R$ is reflexive, $(x,x)\\in R$.",
+    "By the definition of composition, $(a,b)\\in R\\circ R^{-1}$ if there exists $c\\in A$ such that $(c,a)\\in R$ and $(c,b)\\in R$.",
+    "Choosing $c=x$, $a=y$ and $b=x$, we have $(x,y)\\in R$ and $(x,x)\\in R$. This implies $(y,x)\\in R\\circ R^{-1}$.",
+    "Since $R\\circ R^{-1}=R$, it follows that $(y,x)\\in R$. Thus $R$ is symmetric, which implies $R^{-1}=R$.",
+    "Transitivity: since $R^{-1}=R$, the given condition becomes $R\\circ R=R$.",
+    "If $(x,y)\\in R$ and $(y,z)\\in R$, then by the definition of composition $(x,z)\\in R\\circ R=R$. Thus $R$ is transitive.",
+    "Therefore $R$ is reflexive, symmetric and transitive, i.e. an equivalence relation on $A$.",
+    "Conversely, if $R$ is an equivalence relation then $R^{-1}=R$ and $R\\circ R=R$, so $R\\circ R^{-1}=R$ holds. So the relations required are exactly the equivalence relations on $A$.",
+    "The number of equivalence relations on a set with $3$ elements is equal to the number of partitions of $A=\\{1,2,3\\}$, which is $5$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the Boolean matrix $M$ of $R$: $M\\vee I=M$ (reflexive) and $R\\circ R^{-1}$ has matrix $M^TM$ (Boolean product), which is automatically symmetric.",
+     "solution": [
+      "Let $M$ be the Boolean ($0/1$, with $1+1=1$) matrix of $R$, with $M_{xy}=1$ iff $(x,y)\\in R$. Reflexive means every diagonal entry is $1$.",
+      "$(a,b)\\in R\\circ R^{-1}$ iff $\\exists c:\\ M_{ca}=1$ and $M_{cb}=1$; that is, the matrix of $R\\circ R^{-1}$ is the Boolean product $M^TM$.",
+      "$M^TM$ is symmetric because $(M^TM)^T=M^TM$. So $M=M^TM$ forces $M=M^T$: $R$ is symmetric. Then $M=M^TM=M\\cdot M$ (Boolean), i.e. $R\\circ R=R$: transitive.",
+      "Conversely, an equivalence relation has $M=M^T=M^2$ (idempotent, symmetric), hence $M^TM=M$.",
+      "So the admissible $R$ are exactly the equivalence relations on $\\{1,2,3\\}$, which correspond to the set partitions: $\\{123\\}$, three of type $\\{ab\\}\\{c\\}$, and $\\{1\\}\\{2\\}\\{3\\}$, i.e. $1+3+1=5$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For any relation $R$, $R\\circ R^{-1}$ (pairs with a common predecessor $c$ with $cRa$ and $cRb$) is symmetric, and when $R$ is reflexive it contains $R$ (take $c=x$ for $(x,y)\\in R$).",
+    "A reflexive relation with $R\\circ R^{-1}=R$ (or with $R^{-1}\\circ R=R$ similarly) is an equivalence relation; conversely every equivalence relation satisfies it. Number on an $n$-set: Bell number $B_n$ ($B_3=5$).",
+    "Composition convention: $S\\circ R$ means first $R$ then $S$; always rewrite the defining condition in terms of ``exists $c$ such that $(c,a)\\in R$ and $(c,b)\\in R$'' before reasoning.",
+    "Matrix reading: composition of relations is the Boolean matrix product, converse is the transpose; $M=M^TM$ immediately gives symmetry and idempotence."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Inverse trigonometric functions: sum of tan$^{-1}$ terms",
+    "Solving an inverse trigonometric equation"
+   ],
+   "level": 2,
+   "question": "If $x>0$ is a real solution to the equation $\\sum_{k=1}^{2}\\tan^{-1}\\left(\\frac{2k}{k^4+k^2+2}\\right)+\\sin^{-1}\\left(\\frac{1}{\\sqrt{1+x^2}}\\right)=\\frac\\pi4$, then the value of $x$ is equal to",
+   "answer": "7",
+   "key_idea": "Evaluate the two $\\tan^{-1}$ terms, combine them with the addition formula, and convert $\\sin^{-1}\\frac{1}{\\sqrt{1+x^2}}$ to $\\tan^{-1}\\frac1x$.",
+   "solution": [
+    "For $k=1$: $\\frac{2}{1+1+2}=\\frac12$; for $k=2$: $\\frac{4}{16+4+2}=\\frac{2}{11}$. The equation becomes $\\tan^{-1}\\left(\\frac12\\right)+\\tan^{-1}\\left(\\frac{2}{11}\\right)+\\sin^{-1}\\left(\\frac{1}{\\sqrt{1+x^2}}\\right)=\\frac\\pi4$.",
+    "$\\tan^{-1}\\frac12+\\tan^{-1}\\frac2{11}=\\tan^{-1}\\frac{\\frac12+\\frac2{11}}{1-\\frac1{11}}=\\tan^{-1}\\frac34$.",
+    "So $\\tan^{-1}\\left(\\frac34\\right)+\\sin^{-1}\\left(\\frac1{\\sqrt{1+x^2}}\\right)=\\frac\\pi4$.",
+    "$\\sin^{-1}\\left(\\frac1{\\sqrt{1+x^2}}\\right)=\\frac\\pi4-\\tan^{-1}\\frac34=\\tan^{-1}\\frac{1-\\frac34}{1+\\frac34}=\\tan^{-1}\\left(\\frac17\\right)=\\sin^{-1}\\left(\\frac1{\\sqrt{50}}\\right)$.",
+    "Hence $\\frac{1}{\\sqrt{1+x^2}}=\\frac1{\\sqrt{50}}\\Rightarrow1+x^2=50\\Rightarrow x=7$ (as $x>0$)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Add the angles as arguments of Gaussian integers, so each $\\tan^{-1}$ sum becomes one complex multiplication.",
+     "solution": [
+      "$\\tan^{-1}\\frac12=\\arg(2+i)$ and $\\tan^{-1}\\frac2{11}=\\arg(11+2i)$ (first-quadrant arguments).",
+      "$(2+i)(11+2i)=22+4i+11i-2=20+15i$, whose argument is $\\tan^{-1}\\frac{15}{20}=\\tan^{-1}\\frac34$ (the sum $<\\frac\\pi2$, so no extra $\\pi$).",
+      "We need $\\theta=\\sin^{-1}\\frac{1}{\\sqrt{1+x^2}}=\\frac\\pi4-\\arg(20+15i)$, i.e. $\\theta=\\arg\\left((1+i)(20-15i)\\right)=\\arg(35+5i)=\\arg(7+i)$.",
+      "$\\sin\\theta=\\frac{1}{\\sqrt{7^2+1}}=\\frac1{\\sqrt{50}}$ and $\\sin\\theta=\\frac1{\\sqrt{1+x^2}}$, so $1+x^2=50$ and $x=7$ (taking $x>0$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}p+\\tan^{-1}q=\\tan^{-1}\\frac{p+q}{1-pq}$ valid for $pq<1$ (add $\\pi$ if $pq>1$ and $p,q>0$); the same sum is $\\arg\\left((1+ip)(1+iq)\\right)$ in disguise.",
+    "For $x>0$: $\\sin^{-1}\\frac{1}{\\sqrt{1+x^2}}=\\tan^{-1}\\frac1x=\\cot^{-1}x$ (right triangle with legs $1$ and $x$).",
+    "With the given sum, $\\sum_{k=1}^{n}\\tan^{-1}\\frac{2k}{k^4+k^2+2}=\\tan^{-1}(n^2+n+1)-\\frac\\pi4$ telescopes: for $n=2$ it gives $\\tan^{-1}7-\\frac\\pi4=\\tan^{-1}\\frac34$ (consistent with $\\tan^{-1}\\frac12+\\tan^{-1}\\frac2{11}$).",
+    "Always check the principal-value range before combining: each term here is in $\\left(0,\\frac\\pi2\\right)$ and the sum is $\\frac\\pi4$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form $1^\\infty$",
+    "Equivalence relation and equivalence classes"
+   ],
+   "level": 2,
+   "question": "Let $S=\\{-3,-2,-1,0,1,2,3\\}$. For each $a\\in S$, define $f(a)=\\lim_{x\\to0}\\left(\\frac{\\cos(2ax)}{\\cos(a^2x)}\\right)^{\\frac1{x^2}}$. An equivalence relation $R$ is defined on $S$ by $aRb\\iff f(a)=f(b)$. Let $k$ be the total number of distinct equivalence classes of $S$ under $R$, and let $E$ be the equivalence class containing the element $a=2$. If $|E|$ denotes the number of elements in $E$, then find the value of $k\\cdot|E|+\\sum_{x\\in E}x^2$.",
+   "answer": "17",
+   "key_idea": "The $1^\\infty$ limit gives $f(a)=e^{(a^4-4a^2)/2}$, so $aRb$ depends only on the value of $a^4-4a^2$.",
+   "solution": [
+    "$f(a)=\\exp\\left(\\lim_{x\\to0}\\frac1{x^2}\\left(\\frac{\\cos(2ax)}{\\cos(a^2x)}-1\\right)\\right)=\\exp\\left(\\lim_{x\\to0}\\frac{\\cos(2ax)-\\cos(a^2x)}{x^2\\cos(a^2x)}\\right)$.",
+    "$\\lim_{x\\to0}\\frac{\\cos(2ax)-\\cos(a^2x)}{x^2\\cos(a^2x)}=\\frac{a^4-4a^2}{2}$. Thus $f(a)=e^{\\frac{a^4-4a^2}{2}}$.",
+    "Evaluate $P(a)=a^4-4a^2$: for $a=0$, $P(0)=0\\Rightarrow f(0)=e^0=1$.",
+    "For $a=1,-1$: $P(1)=P(-1)=1-4=-3\\Rightarrow f(1)=f(-1)=e^{-3/2}$.",
+    "For $a=2,-2$: $P(2)=P(-2)=16-16=0\\Rightarrow f(2)=f(-2)=e^0=1$.",
+    "For $a=3,-3$: $P(3)=P(-3)=81-36=45\\Rightarrow f(3)=f(-3)=e^{45/2}$.",
+    "The relation $aRb\\iff f(a)=f(b)$ partitions $S$ into the equivalence classes $E_1=\\{-2,0,2\\}$, $E_2=\\{-1,1\\}$, $E_3=\\{-3,3\\}$.",
+    "Hence the total number of distinct equivalence classes is $k=3$. The class containing $a=2$ is $E=E_1=\\{-2,0,2\\}$, so $|E|=3$.",
+    "$\\sum_{x\\in E}x^2=(-2)^2+0^2+2^2=4+0+4=8$.",
+    "$k\\cdot|E|+\\sum_{x\\in E}x^2=3\\cdot3+8=9+8=17$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Take logarithms and use $\\ln\\cos u\\sim-\\frac{u^2}{2}$; then read the classes from the quadratic $t(t-4)$ in $t=a^2$, which is symmetric about $t=2$.",
+     "solution": [
+      "$\\ln f(a)=\\lim_{x\\to0}\\frac{\\ln\\cos(2ax)-\\ln\\cos(a^2x)}{x^2}$. Using $\\ln\\cos u=-\\frac{u^2}2+O(u^4)$: $\\ln f(a)=\\frac{-\\frac{(2ax)^2}{2}+\\frac{(a^2x)^2}{2}}{x^2}=-2a^2+\\frac{a^4}2=\\frac{a^4-4a^2}{2}$.",
+      "So $f(a)=e^{\\frac{a^4-4a^2}2}$ and $f(a)=f(b)\\iff t(t-4)=s(s-4)$ with $t=a^2,\\ s=b^2$.",
+      "$t(t-4)=s(s-4)\\iff(t-s)(t+s-4)=0\\iff t=s$ or $t+s=4$. So $a^2=b^2$ or $a^2+b^2=4$.",
+      "The values $t=a^2$ present in $S$ are $0,1,4,9$; the pairs with $t+s=4$ are $(0,4)$ (and $(4,0)$) only, since $1+3$ and $9+(-5)$ are not available. So the classes are $\\{0,\\pm2\\}$, $\\{\\pm1\\}$, $\\{\\pm3\\}$: $k=3$, $|E|=3$, $\\sum_{E}x^2=8$.",
+      "Answer: $3\\cdot3+8=17$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$1^\\infty$ form: $\\lim\\left(u(x)\\right)^{v(x)}=e^{\\lim(u-1)v}$ when $u\\to1$, $v\\to\\infty$. Here $u=\\frac{\\cos2ax}{\\cos a^2x}$, $v=\\frac1{x^2}$.",
+    "Small-angle forms: $1-\\cos u\\sim\\frac{u^2}{2}$ and $\\ln\\cos u\\sim-\\frac{u^2}{2}$ as $u\\to0$. Hence $\\lim\\frac{\\cos\\alpha x-\\cos\\beta x}{x^2}=\\frac{\\beta^2-\\alpha^2}{2}$ (here $\\alpha=2a$, $\\beta=a^2$).",
+    "A function $f$ on a set defines an equivalence relation $aRb\\iff f(a)=f(b)$; its classes are the fibres of $f$ (level sets), and the number of classes equals the number of distinct values.",
+    "$t(t-4)=s(s-4)\\iff t=s$ or $t+s=4$: a quadratic takes equal values at two points symmetric about its axis."
+   ]
+  }
+ ]
+}
