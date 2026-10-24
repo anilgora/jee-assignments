@@ -1,0 +1,1182 @@
+{
+ "title": "RPT 02 — Paper Analysis",
+ "subtitle": "Paper 01 · JEE Main · detailed solutions",
+ "source": "papers/RPT 02 Paper 01 JEE Main.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "RPT 02 Paper 01",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 21,
+   "to": 25,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Simplification of inverse trigonometric expressions"
+   ],
+   "level": 2,
+   "question": "If $f(x)=\\tan^{-1}\\left(\\frac{x}{1+\\sqrt{1-x^2}}\\right)+\\cos^{-1}(2x^2-1)$ for $x\\in\\left(0,\\frac{1}{\\sqrt2}\\right)$, then $f(x)$ is equal to:",
+   "options": [
+    "$\\frac{\\pi}{2}+\\frac{3}{2}\\sin^{-1}x$",
+    "$\\pi-\\frac{1}{2}\\sin^{-1}x$",
+    "$\\pi-\\frac{3}{2}\\sin^{-1}x$",
+    "$\\frac{1}{2}\\sin^{-1}x$"
+   ],
+   "answer": "(C) $\\pi-\\frac{3}{2}\\sin^{-1}x$",
+   "key_idea": "Put $x=\\sin\\theta$: the first term is $\\tan^{-1}\\tan\\frac{\\theta}{2}$ and the second is $\\cos^{-1}(-\\cos2\\theta)$, with $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)$.",
+   "solution": [
+    "Let $x=\\sin\\theta$. Since $x\\in\\left(0,\\frac{1}{\\sqrt2}\\right)$, $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)$.",
+    "$\\tan^{-1}\\left(\\frac{\\sin\\theta}{1+\\cos\\theta}\\right)=\\tan^{-1}\\left(\\frac{2\\sin\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}}{2\\cos^2\\frac{\\theta}{2}}\\right)=\\tan^{-1}\\left(\\tan\\frac{\\theta}{2}\\right)$.",
+    "Since $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)$, $\\frac{\\theta}{2}\\in\\left(0,\\frac{\\pi}{8}\\right)$, so $\\tan^{-1}\\left(\\tan\\frac{\\theta}{2}\\right)=\\frac{\\theta}{2}=\\frac{1}{2}\\sin^{-1}x$.",
+    "$\\cos^{-1}(2x^2-1)=\\cos^{-1}(2\\sin^2\\theta-1)=\\cos^{-1}(-\\cos2\\theta)=\\pi-\\cos^{-1}(\\cos2\\theta)$.",
+    "Since $\\theta\\in\\left(0,\\frac{\\pi}{4}\\right)$, $2\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)$, so $\\cos^{-1}(\\cos2\\theta)=2\\theta=2\\sin^{-1}x$.",
+    "So $\\cos^{-1}(2x^2-1)=\\pi-2\\sin^{-1}x$.",
+    "$f(x)=\\frac{1}{2}\\sin^{-1}x+\\pi-2\\sin^{-1}x=\\pi-\\frac{3}{2}\\sin^{-1}x$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Options are linear in $\\sin^{-1}x$, so the value as $x\\to0^+$ and one more test point decide the option.",
+     "solution": [
+      "As $x\\to0^+$: $\\tan^{-1}(0)+\\cos^{-1}(-1)=0+\\pi=\\pi$, so $f(0^+)=\\pi$.",
+      "Option (A) gives $\\frac{\\pi}{2}$ and option (D) gives $0$ at $x=0$, so both are rejected; (B) and (C) remain.",
+      "Test $x=\\frac{1}{2}$ (inside the interval): $\\tan^{-1}\\left(\\frac{1/2}{1+\\sqrt3/2}\\right)=\\tan^{-1}\\left(\\frac{1}{2+\\sqrt3}\\right)=\\tan^{-1}(2-\\sqrt3)=\\frac{\\pi}{12}$.",
+      "$\\cos^{-1}\\left(2\\cdot\\frac14-1\\right)=\\cos^{-1}\\left(-\\frac12\\right)=\\frac{2\\pi}{3}$, so $f\\left(\\frac12\\right)=\\frac{\\pi}{12}+\\frac{2\\pi}{3}=\\frac{3\\pi}{4}$.",
+      "With $\\sin^{-1}\\frac12=\\frac{\\pi}{6}$: option (B) gives $\\pi-\\frac{\\pi}{12}=\\frac{11\\pi}{12}\\ne\\frac{3\\pi}{4}$, option (C) gives $\\pi-\\frac{3}{2}\\cdot\\frac{\\pi}{6}=\\frac{3\\pi}{4}$.",
+      "Hence option (C), $f(x)=\\pi-\\frac{3}{2}\\sin^{-1}x$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}\\left(\\frac{\\sin\\theta}{1+\\cos\\theta}\\right)=\\frac{\\theta}{2}$ and $\\tan^{-1}\\left(\\frac{1-\\cos\\theta}{\\sin\\theta}\\right)=\\frac{\\theta}{2}$ for $\\theta\\in(-\\pi,\\pi)$; also $\\frac{x}{1+\\sqrt{1-x^2}}=\\frac{1-\\sqrt{1-x^2}}{x}$.",
+    "$\\cos^{-1}(-t)=\\pi-\\cos^{-1}t$; $\\cos^{-1}(\\cos u)=u$ only for $u\\in[0,\\pi]$ - always check the interval of the angle before cancelling.",
+    "When the options have a fixed form $a\\pi+b\\sin^{-1}x$, two test values (an end value and one nice interior value) identify the option quickly."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Functional equation and differentiability of $|f(x)|$"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function satisfying $f(x+y)=f(x)+f(y)+2xy$ for all $x,y\\in\\mathbb{R}$. If $\\lim_{x\\to0}\\frac{f(x)}{x}=1$, then the function $g(x)=|f(x)|$ is non-differentiable at:",
+   "options": [
+    "exactly one point",
+    "exactly two points",
+    "exactly three points",
+    "no point in $\\mathbb{R}$"
+   ],
+   "answer": "(B) exactly two points",
+   "key_idea": "The functional equation plus $\\lim\\frac{f(h)}{h}=1$ gives $f'(x)=2x+1$; $|f|$ has a corner at each simple zero of $f$.",
+   "solution": [
+    "By definition $f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$.",
+    "Using $f(x+h)=f(x)+f(h)+2xh$: $f'(x)=\\lim_{h\\to0}\\frac{f(h)+2xh}{h}=\\lim_{h\\to0}\\frac{f(h)}{h}+2x$.",
+    "Given $\\lim_{h\\to0}\\frac{f(h)}{h}=1$, so $f'(x)=2x+1$.",
+    "Integrating, $f(x)=x^2+x+C$. Putting $x=y=0$ in the functional equation gives $f(0)=0$, so $C=0$.",
+    "Thus $f(x)=x^2+x=x(x+1)$ and $g(x)=|x(x+1)|$.",
+    "$f(x)=0$ at $x=0$ and $x=-1$. At $x=0$, $f'(0)=1\\ne0$; at $x=-1$, $f'(-1)=-1\\ne0$.",
+    "Since $f'\\ne0$ at these simple roots, $|f|$ has a corner there, so $g$ is non-differentiable at $x=0$ and $x=-1$ only.",
+    "Hence $g$ is non-differentiable at exactly two points."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract $x^2$: $h(x)=f(x)-x^2$ is additive, and a differentiable additive function is linear.",
+     "solution": [
+      "Let $h(x)=f(x)-x^2$. Then $h(x+y)=f(x+y)-(x+y)^2=f(x)+f(y)+2xy-x^2-2xy-y^2=h(x)+h(y)$.",
+      "So $h$ is additive (Cauchy's equation); being differentiable, $h(x)=cx$ for a constant $c$.",
+      "Hence $f(x)=x^2+cx$ and $\\frac{f(x)}{x}=x+c\\to c$ as $x\\to0$, so $c=1$: $f(x)=x^2+x$.",
+      "The graph of $f$ is an upward parabola cutting the $x$-axis at $x=-1$ and $x=0$ at non-zero slope.",
+      "Taking $|f|$ reflects the part below the axis (for $-1<x<0$), creating one corner at each of the two crossing points.",
+      "So $g$ is non-differentiable at exactly two points."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f(x+y)=f(x)+f(y)+2xy$ then $f(x)-x^2$ is additive; more generally subtract the polynomial part to reduce to Cauchy's equation.",
+    "A differentiable additive function satisfies $h(x)=h'(0)\\,x$.",
+    "For a differentiable $f$ and a zero $a$ of $f$: $|f|$ is differentiable at $a$ if and only if $f'(a)=0$. So $|f|$ is non-differentiable exactly at the zeros where $f'\\ne0$ (simple zeros); a double root such as that of $(x-a)^2$ gives no corner.",
+    "Instance: $f=x(x+1)$ has two simple zeros, giving two corners of $|f|$."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of a piecewise function",
+    "Inverse of a strictly increasing function ($f=f^{-1}$)"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function defined by $f(x)=\\begin{cases}x^3+2x+a,&x\\ge0\\\\cx-2,&x<0\\end{cases}$ where $a$ and $c$ are real constants. If $f^{-1}(x)$ exists for all $x\\in\\mathbb{R}$, then the sum of all real values of $x$ satisfying $f(x)=f^{-1}(x)$ is equal to:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$-1$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "$f$ is strictly increasing, so $f(x)=f^{-1}(x)$ has the same solutions as $f(x)=x$.",
+   "solution": [
+    "$f$ is differentiable on $\\mathbb{R}$, so it is continuous and differentiable at $x=0$.",
+    "Continuity at $x=0$: $\\lim_{x\\to0^+}f(x)=\\lim_{x\\to0^-}f(x)=f(0)$ gives $a=-2$.",
+    "Differentiability at $x=0$: $f'(0^+)=f'(0^-)$, i.e. $\\left.\\frac{d}{dx}(x^3+2x-2)\\right|_{x=0}=\\left.\\frac{d}{dx}(cx-2)\\right|_{x=0}$, so $3(0)^2+2=c$ and $c=2$.",
+    "Thus $f(x)=\\begin{cases}x^3+2x-2,&x\\ge0\\\\2x-2,&x<0\\end{cases}$.",
+    "For $x>0$, $f'(x)=3x^2+2>0$; for $x<0$, $f'(x)=2>0$. So $f'(x)>0$ for all $x$ and $f$ is strictly increasing on $\\mathbb{R}$.",
+    "For a strictly increasing invertible function, the solutions of $f(x)=f^{-1}(x)$ are the same as the solutions of $f(x)=x$.",
+    "Case 1, $x\\ge0$: $x^3+2x-2=x\\Rightarrow x^3+x-2=0\\Rightarrow(x-1)(x^2+x+2)=0$.",
+    "$x^2+x+2=0$ has discriminant $1-8=-7<0$, so the only real root is $x=1$, which satisfies $x\\ge0$.",
+    "Case 2, $x<0$: $2x-2=x\\Rightarrow x=2$, which is not less than $0$, so it is rejected.",
+    "Hence the only solution is $x=1$ and the required sum is $1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "With $a=-2,\\ c=2$, the function $\\varphi(x)=f(x)-x$ is strictly increasing, so it has at most one zero, found by inspection.",
+     "solution": [
+      "As before, continuity and differentiability at $0$ give $a=-2$ and $c=2$.",
+      "Let $\\varphi(x)=f(x)-x$. Then $\\varphi'(x)=3x^2+1>0$ for $x>0$ and $\\varphi'(x)=2-1=1>0$ for $x<0$, so $\\varphi$ is strictly increasing.",
+      "Since $f$ is strictly increasing, $f(x)=f^{-1}(x)\\iff f(x)=x\\iff\\varphi(x)=0$.",
+      "A strictly increasing function has at most one zero. $\\varphi(1)=1+2-2-1=0$, so $x=1$ is that zero.",
+      "$\\varphi(0)=-2<0<\\varphi(1)$ confirms there is no zero in $x<0$ (there $\\varphi(x)=x-2<0$).",
+      "So the equation has the single solution $x=1$, and the sum is $1$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f$ is strictly increasing, then $f(x)=f^{-1}(x)\\iff f(x)=x$ (graphs of $f$ and $f^{-1}$ meet on the line $y=x$). This fails for decreasing $f$, where they can meet off the line.",
+    "A piecewise function is differentiable at a joining point iff the pieces agree in value and in left/right derivative - this fixes two unknown constants.",
+    "A function with $f'>0$ everywhere is one-one, hence $f^{-1}$ exists; a strictly monotonic $\\varphi$ has at most one root."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Relation from a set $A$ to a set $B$ and its number of elements"
+   ],
+   "level": 2,
+   "question": "Let $A=\\{x\\in\\mathbb{Z}:|x^2-4|\\le12\\}$ and $B=\\{x\\in\\mathbb{Z}:x^2-4x-5\\le0\\}$ be two sets. If a relation $R$ from $A$ to $B$ is defined as $R=\\{(a,b)\\in A\\times B:a+b \\text{ is divisible by } 2\\}$, then the total number of elements in the relation $R$ is:",
+   "options": [
+    "$28$",
+    "$32$",
+    "$36$",
+    "$31$"
+   ],
+   "answer": "(D) $31$",
+   "key_idea": "$a+b$ is even exactly when $a,b$ have the same parity, so count (even,even) and (odd,odd) pairs.",
+   "solution": [
+    "For $A$: $|x^2-4|\\le12\\Rightarrow-12\\le x^2-4\\Rightarrow-8\\le x^2\\le16$.",
+    "Since $x\\in\\mathbb{Z}$, $x^2\\in\\{0,1,4,9,16\\}$, so $A=\\{-4,-3,-2,-1,0,1,2,3,4\\}$.",
+    "Even elements in $A$: $5$ (namely $\\{-4,-2,0,2,4\\}$); odd elements in $A$: $4$ (namely $\\{-3,-1,1,3\\}$).",
+    "For $B$: $x^2-4x-5\\le0\\Rightarrow(x-5)(x+1)\\le0\\Rightarrow-1\\le x\\le5$, so $B=\\{-1,0,1,2,3,4,5\\}$.",
+    "Even elements in $B$: $3$ (namely $\\{0,2,4\\}$); odd elements in $B$: $4$ (namely $\\{-1,1,3,5\\}$).",
+    "For $(a,b)\\in R$, $a+b$ must be even, which happens when both are even or both are odd.",
+    "$n(R)=(\\text{even in }A)\\times(\\text{even in }B)+(\\text{odd in }A)\\times(\\text{odd in }B)$.",
+    "$n(R)=(5\\times3)+(4\\times4)=15+16=31$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Complement counting: total pairs minus the pairs of opposite parity.",
+     "solution": [
+      "$A=\\{-4,\\dots,4\\}$ has $9$ elements and $B=\\{-1,\\dots,5\\}$ has $7$ elements, so $|A\\times B|=63$.",
+      "A pair has $a+b$ odd exactly when the parities differ.",
+      "(even $a$, odd $b$): $5\\times4=20$ pairs; (odd $a$, even $b$): $4\\times3=12$ pairs.",
+      "Pairs with $a+b$ odd: $20+12=32$.",
+      "Hence $n(R)=63-32=31$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$a+b$ is even $\\iff a\\equiv b\\pmod2$; count by parity classes: $n(R)=e_Ae_B+o_Ao_B$.",
+    "Total pairs $=|A||B|$; the pairs with $a+b$ even and odd partition it, so either count can be found from the other.",
+    "$|x^2-c|\\le d$ with $x\\in\\mathbb{Z}$: reduce to $x^2$ lying in a range and list the perfect squares in it."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit at infinity of a function defined through the parity of $[x]$"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a non-uniformly defined function given by $f(x)=\\begin{cases}\\frac{x^3+\\alpha x^2+1}{x^2+2x}-x,&\\text{if }[x]\\text{ is even}\\\\\\frac{\\beta x^2+3x+2}{2x-1}-\\frac{x}{2},&\\text{if }[x]\\text{ is odd}\\end{cases}$ where $[\\cdot]$ denotes the greatest integer function. If $\\lim_{x\\to\\infty}f(x)=L$ exists as a finite real number, then the value of $(4\\alpha+2\\beta+4L)$ is equal to:",
+   "options": [
+    "$16$",
+    "$24$",
+    "$18$",
+    "$26$"
+   ],
+   "answer": "(B) $24$",
+   "key_idea": "Both branches occur for arbitrarily large $x$, so each branch must tend to the same finite limit $L$.",
+   "solution": [
+    "For $\\lim_{x\\to\\infty}f(x)=L$ to exist, the limits of both branches as $x\\to\\infty$ must be equal to $L$.",
+    "Case 1, $[x]$ even: $g_1(x)=\\frac{x^3+\\alpha x^2+1}{x^2+2x}-x=\\frac{(\\alpha-2)x^2+1}{x^2+2x}$.",
+    "$\\lim_{x\\to\\infty}g_1(x)=\\lim_{x\\to\\infty}\\frac{(\\alpha-2)+\\frac{1}{x^2}}{1+\\frac{2}{x}}=\\alpha-2$, so $L=\\alpha-2$.",
+    "Case 2, $[x]$ odd: $g_2(x)=\\frac{\\beta x^2+3x+2}{2x-1}-\\frac{x}{2}=\\frac{2(\\beta-1)x^2+7x+4}{2(2x-1)}$.",
+    "For $\\lim g_2$ to be finite, the coefficient of $x^2$ in the numerator must vanish: $2(\\beta-1)=0\\Rightarrow\\beta=1$.",
+    "Then $\\lim_{x\\to\\infty}g_2(x)=\\lim_{x\\to\\infty}\\frac{7x+4}{4x-2}=\\frac{7}{4}$, so $L=\\frac{7}{4}$.",
+    "Equating the two limits: $\\alpha-2=\\frac{7}{4}\\Rightarrow\\alpha=\\frac{15}{4}$.",
+    "$4\\alpha+2\\beta+4L=4\\left(\\frac{15}{4}\\right)+2(1)+4\\left(\\frac{7}{4}\\right)=15+2+7=24$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Long division: each fraction is (linear term) + constant + $O(1/x)$, so the finite limit forces the linear part to cancel.",
+     "solution": [
+      "Divide: $\\frac{x^3+\\alpha x^2+1}{x^2+2x}=x+(\\alpha-2)+O\\left(\\frac1x\\right)$, so the even branch is $f(x)=(\\alpha-2)+O\\left(\\frac1x\\right)$ and tends to $\\alpha-2$.",
+      "Divide: $\\frac{\\beta x^2+3x+2}{2x-1}=\\frac{\\beta}{2}x+\\left(\\frac32+\\frac{\\beta}{4}\\right)+O\\left(\\frac1x\\right)$.",
+      "The odd branch is therefore $\\left(\\frac{\\beta}{2}-\\frac12\\right)x+\\left(\\frac32+\\frac{\\beta}{4}\\right)+O\\left(\\frac1x\\right)$.",
+      "A finite limit needs the slope $\\frac{\\beta}{2}-\\frac12=0$, so $\\beta=1$, and then $L=\\frac32+\\frac14=\\frac74$.",
+      "The two branches must agree: $\\alpha-2=\\frac74\\Rightarrow\\alpha=\\frac{15}{4}$.",
+      "$4\\alpha+2\\beta+4L=15+2+7=24$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If a function takes two different rules on sets of $x$ that are unbounded (e.g. $[x]$ even or odd), then $\\lim_{x\\to\\infty}f(x)$ exists only when both rules have the same limit.",
+    "$\\frac{p(x)}{q(x)}$ with $\\deg p=\\deg q+1$ equals (oblique asymptote) $+O(1/x)$; a finite limit after subtracting a linear term requires the oblique asymptote to match the subtracted term.",
+    "Instance: even branch $\\to\\alpha-2$, odd branch $\\to\\frac74$ (when $\\beta=1$)."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Fundamental period of trigonometric functions",
+    "Onto and into functions (range)"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to[0,1]$ be a function defined by $f(x)=\\sin^2(3x)+\\cos^4(3x)$. Then $f(x)$ is:",
+   "options": [
+    "an onto function with fundamental period $\\frac{\\pi}{3}$",
+    "an into function with fundamental period $\\frac{\\pi}{6}$",
+    "an onto function with fundamental period $\\frac{\\pi}{6}$",
+    "an into function with fundamental period $\\frac{\\pi}{3}$"
+   ],
+   "answer": "(B) an into function with fundamental period $\\frac{\\pi}{6}$",
+   "key_idea": "$\\sin^2\\theta+\\cos^4\\theta=1-\\sin^2\\theta\\cos^2\\theta$ reduces $f$ to $\\frac78+\\frac18\\cos12x$.",
+   "solution": [
+    "$f(x)=\\sin^2(3x)+\\cos^2(3x)\\left(1-\\sin^2(3x)\\right)=\\left(\\sin^2(3x)+\\cos^2(3x)\\right)-\\sin^2(3x)\\cos^2(3x)$.",
+    "$f(x)=1-\\frac14\\sin^2(6x)=1-\\frac14\\left(\\frac{1-\\cos(12x)}{2}\\right)=\\frac78+\\frac18\\cos(12x)$.",
+    "Fundamental period: that of $\\cos(12x)$ is $T=\\frac{2\\pi}{12}=\\frac{\\pi}{6}$, so the fundamental period of $f$ is $\\frac{\\pi}{6}$.",
+    "Range: since $-1\\le\\cos(12x)\\le1$, $\\frac78-\\frac18\\le f(x)\\le\\frac78+\\frac18$, so the range of $f$ is $\\left[\\frac34,1\\right]$.",
+    "The range $\\left[\\frac34,1\\right]$ is not equal to the codomain $[0,1]$, so the function is into.",
+    "Hence $f$ is an into function with fundamental period $\\frac{\\pi}{6}$, option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $t=\\sin^2 3x\\in[0,1]$: then $f=t^2-t+1$, symmetric under $t\\to1-t$, which is a shift of $\\frac{\\pi}{6}$.",
+     "solution": [
+      "Let $t=\\sin^2(3x)\\in[0,1]$; then $\\cos^4(3x)=(1-t)^2$ and $f=t+(1-t)^2=t^2-t+1=\\left(t-\\frac12\\right)^2+\\frac34$.",
+      "On $t\\in[0,1]$ this has minimum $\\frac34$ (at $t=\\frac12$) and maximum $1$ (at $t=0,1$), so the range is $\\left[\\frac34,1\\right]\\ne[0,1]$: into.",
+      "$f$ is unchanged by $t\\to1-t$. Replacing $x$ by $x+\\frac{\\pi}{6}$ turns $\\sin^2(3x)$ into $\\sin^2\\left(3x+\\frac{\\pi}{2}\\right)=\\cos^2(3x)=1-t$, so $f\\left(x+\\frac{\\pi}{6}\\right)=f(x)$.",
+      "The maximum value $1$ occurs exactly when $t=0$ or $1$, i.e. $\\sin(6x)=0$, i.e. at $x=\\frac{n\\pi}{6}$; consecutive maxima are $\\frac{\\pi}{6}$ apart, so no smaller period is possible.",
+      "The fundamental period is $\\frac{\\pi}{6}$. Hence option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^4\\theta+\\cos^4\\theta=1-\\frac12\\sin^22\\theta=\\frac34+\\frac14\\cos4\\theta$ and $\\sin^6\\theta+\\cos^6\\theta=1-3\\sin^2\\theta\\cos^2\\theta=\\frac58+\\frac38\\cos4\\theta$.",
+    "$\\sin^2\\theta+\\cos^4\\theta=1-\\sin^2\\theta\\cos^2\\theta=\\frac78+\\frac18\\cos4\\theta$; for $\\theta=3x$ the period is $\\frac{2\\pi}{12}=\\frac{\\pi}{6}$.",
+    "Onto/into: compare the range (from the bounds of $\\cos$) with the stated codomain - they must be equal for onto.",
+    "A function of $\\sin^2$ that is symmetric under $\\sin^2\\leftrightarrow\\cos^2$ has half the period of $\\sin^2$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Domain and simplification of inverse trigonometric functions"
+   ],
+   "level": 2,
+   "question": "Let $D$ be the maximal real domain of the function $f(x)=\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)+\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)$. Then the domain $D$ and the simplified value of $f(x)$ for $x\\in D\\cap(-1,0)$ are respectively:",
+   "options": [
+    "$D=\\mathbb{R}\\setminus\\{-1,1\\}$ and $f(x)=0$",
+    "$D=\\mathbb{R}$ and $f(x)=4\\tan^{-1}(x)$",
+    "$D=\\mathbb{R}\\setminus\\{-1,1\\}$ and $f(x)=-4\\tan^{-1}(x)$",
+    "$D=(-1,1)$ and $f(x)=0$"
+   ],
+   "answer": "(A) $D=\\mathbb{R}\\setminus\\{-1,1\\}$ and $f(x)=0$",
+   "key_idea": "For $x=\\tan\\theta<0$ the angle $2\\theta$ is negative, so $\\cos^{-1}(\\cos2\\theta)=-2\\theta$ while $\\tan^{-1}(\\tan2\\theta)=2\\theta$.",
+   "solution": [
+    "$\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)$ needs $-1\\le\\frac{1-x^2}{1+x^2}\\le1$; since $1+x^2>0$ for all real $x$, this holds for every $x\\in\\mathbb{R}$.",
+    "$\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)$ needs the denominator non-zero: $1-x^2\\ne0\\Rightarrow x\\ne\\pm1$.",
+    "Thus the maximal domain is $D=\\mathbb{R}\\setminus\\{-1,1\\}$.",
+    "Let $x=\\tan\\theta$. For $x\\in(-1,0)$, $\\theta\\in\\left(-\\frac{\\pi}{4},0\\right)$, which implies $2\\theta\\in\\left(-\\frac{\\pi}{2},0\\right)$.",
+    "$\\cos^{-1}\\left(\\frac{1-\\tan^2\\theta}{1+\\tan^2\\theta}\\right)=\\cos^{-1}(\\cos2\\theta)$. Since $2\\theta\\in\\left(-\\frac{\\pi}{2},0\\right)$, $-2\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)$, so $\\cos^{-1}(\\cos2\\theta)=-2\\theta=-2\\tan^{-1}x$.",
+    "$\\tan^{-1}\\left(\\frac{2\\tan\\theta}{1-\\tan^2\\theta}\\right)=\\tan^{-1}(\\tan2\\theta)$. Since $2\\theta\\in\\left(-\\frac{\\pi}{2},0\\right)\\subset\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, this equals $2\\theta=2\\tan^{-1}x$.",
+    "Adding the two terms: $f(x)=-2\\tan^{-1}x+2\\tan^{-1}x=0$ on $D\\cap(-1,0)$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Differentiate: $f'(x)=0$ on $(-1,0)$, so $f$ is constant there and equals its limit at $0^-$.",
+     "solution": [
+      "Let $u=\\frac{1-x^2}{1+x^2}$. Then $u'=\\frac{-4x}{(1+x^2)^2}$ and $\\sqrt{1-u^2}=\\frac{2|x|}{1+x^2}$.",
+      "$\\frac{d}{dx}\\cos^{-1}u=-\\frac{u'}{\\sqrt{1-u^2}}=\\frac{4x}{(1+x^2)^2}\\cdot\\frac{1+x^2}{2|x|}=\\frac{2x}{|x|(1+x^2)}=-\\frac{2}{1+x^2}$ for $x<0$.",
+      "$\\frac{d}{dx}\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)=\\frac{2}{1+x^2}$ on $(-1,1)$ (standard).",
+      "So $f'(x)=-\\frac{2}{1+x^2}+\\frac{2}{1+x^2}=0$ for $x\\in(-1,0)$, and $f$ is constant there.",
+      "As $x\\to0^-$: $f\\to\\cos^{-1}(1)+\\tan^{-1}(0)=0+0=0$, so the constant is $0$.",
+      "Hence $f(x)=0$ on $(-1,0)$; together with $D=\\mathbb{R}\\setminus\\{-1,1\\}$ this is option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)=2\\tan^{-1}|x|$ for all real $x$ (it is $2\\tan^{-1}x$ for $x\\ge0$, $-2\\tan^{-1}x$ for $x<0$).",
+    "$\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)=2\\tan^{-1}x$ for $|x|<1$, $\\pi+2\\tan^{-1}x$ for $x>1$, $-\\pi+2\\tan^{-1}x$ for $x<-1$.",
+    "$\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)=2\\tan^{-1}x$ only for $|x|\\le1$ - always check the branch (interval) before simplifying.",
+    "Maximal domain of a sum of inverse functions: intersect the domains of each term, and exclude the points where an inside expression is undefined (here $1-x^2=0$)."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Three-set cardinality (inclusion-exclusion) and equality of sets"
+   ],
+   "level": 3,
+   "question": "In a group of $100$ students, three sports - Cricket, Football and Basketball - are offered. Let $A$, $B$ and $C$ be the sets of students playing Cricket, Football and Basketball respectively, such that $n(A)=50$, $n(B)=40$, $n(C)=35$, $n(A\\cap B)=20$, $n(B\\cap C)=15$ and $n(C\\cap A)=10$. Let $S$ be the set of all possible cardinalities $n(A\\cup B\\cup C)$, and consider the set $P=\\{x\\in\\mathbb{N}:x^2-170x+7200\\le0\\}$. Which of the following statements is CORRECT?",
+   "options": [
+    "$S$ is an infinite set",
+    "$S$ and $P$ are equal sets",
+    "$S$ is an empty set",
+    "$S$ and $P$ are equivalent but not equal sets"
+   ],
+   "answer": "(B) $S$ and $P$ are equal sets",
+   "key_idea": "Everything depends on $k=n(A\\cap B\\cap C)$: the union is $80+k$ and the non-negativity of the seven Venn regions bounds $k$.",
+   "solution": [
+    "Let $k=n(A\\cap B\\cap C)$.",
+    "$n(A\\cup B\\cup C)=50+40+35-20-15-10+k=80+k$.",
+    "All seven Venn regions must be non-negative integers.",
+    "$n(A\\text{ only})=50-(20-k+10-k+k)=20+k\\ge0\\Rightarrow k\\ge-20$.",
+    "$n(B\\text{ only})=40-(20-k+15-k+k)=5+k\\ge0\\Rightarrow k\\ge-5$.",
+    "$n(C\\text{ only})=35-(10-k+15-k+k)=10+k\\ge0\\Rightarrow k\\ge-10$.",
+    "$n(A\\cap B\\text{ only})=20-k\\ge0\\Rightarrow k\\le20$; $n(B\\cap C\\text{ only})=15-k\\ge0\\Rightarrow k\\le15$; $n(C\\cap A\\text{ only})=10-k\\ge0\\Rightarrow k\\le10$.",
+    "Also $k=n(A\\cap B\\cap C)\\ge0$. Combining, $0\\le k\\le10$ with $k\\in\\mathbb{Z}$.",
+    "Also $n(A\\cup B\\cup C)=80+k\\le100\\Rightarrow k\\le20$, which is already satisfied. So $k\\in\\{0,1,\\dots,10\\}$.",
+    "Therefore $n(A\\cup B\\cup C)\\in\\{80,81,\\dots,90\\}$, i.e. $S=\\{80,81,\\dots,90\\}$.",
+    "For $P$: $x^2-170x+7200\\le0\\Rightarrow(x-80)(x-90)\\le0\\Rightarrow80\\le x\\le90$, and $x\\in\\mathbb{N}$ gives $P=\\{80,81,\\dots,90\\}$.",
+    "$S$ and $P$ contain precisely the same elements, so $S=P$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the union formula $80+k$ and note that $k$ is capped by the smallest pairwise intersection; check the endpoints directly.",
+     "solution": [
+      "$n(A\\cup B\\cup C)=80+k$, where $0\\le k\\le\\min\\{n(A\\cap B),n(B\\cap C),n(C\\cap A)\\}=10$ because the triple intersection lies inside every pairwise intersection.",
+      "Check $k=0$: regions are $A$ only $20$, $B$ only $5$, $C$ only $10$, pairwise-only $20,15,10$, triple $0$ - all non-negative, total $80$.",
+      "Check $k=10$: singles $30,15,20$, pairwise-only $10,5,0$, triple $10$ - all non-negative, total $90$.",
+      "As $k$ increases the singles increase and only the pairwise-only regions decrease (to $\\ge0$ for $k\\le10$), so every integer $k\\in[0,10]$ is attainable and $S=\\{80,\\dots,90\\}$.",
+      "The quadratic $x^2-170x+7200=(x-80)(x-90)$ has roots $80$ and $90$, so $P=\\{80,\\dots,90\\}$ as well.",
+      "Both sets are identical, so option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Three-set formula: $n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$; with the pairwise sizes fixed, the union is linear in $k=n(A\\cap B\\cap C)$.",
+    "The triple intersection satisfies $\\max\\{0,\\ \\text{lower bounds}\\}\\le k\\le\\min$ of pairwise intersections; the seven Venn-region counts must all be non-negative.",
+    "Equal sets have the same elements; equivalent sets only need the same number of elements.",
+    "A quadratic inequality in $\\mathbb{N}$ with factorable roots gives a consecutive block of integers."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Simplification of inverse trigonometric functions using branch (range) checks"
+   ],
+   "level": 3,
+   "question": "Let $f:\\left(\\frac{1}{\\sqrt3},1\\right)\\to\\mathbb{R}$ be defined by $f(x)=2\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)+\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)-\\tan^{-1}\\left(\\frac{3x-x^3}{1-3x^2}\\right)$ and $g:(0,1)\\to\\mathbb{R}$ be defined by $g(x)=\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)+2\\tan^{-1}\\left(\\frac{1-x}{1+x}\\right)$. Then for any $x\\in\\left(\\frac{1}{\\sqrt3},1\\right)$, the value of $\\tan\\left(\\frac{f(x)+g(x)}{6}\\right)$ is equal to:",
+   "options": [
+    "$2$",
+    "$\\sqrt3$",
+    "$\\frac{1}{\\sqrt3}$",
+    "$1$"
+   ],
+   "answer": "(D) $1$",
+   "key_idea": "With $x=\\tan\\theta$, $\\theta\\in\\left(\\frac{\\pi}{6},\\frac{\\pi}{4}\\right)$, the third term is $\\tan^{-1}(\\tan3\\theta)=3\\theta-\\pi$ because $3\\theta\\in\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)$.",
+   "solution": [
+    "For $f$, let $x=\\tan\\theta$. Since $x\\in\\left(\\frac{1}{\\sqrt3},1\\right)$, $\\theta\\in\\left(\\frac{\\pi}{6},\\frac{\\pi}{4}\\right)$.",
+    "Term 1: $2\\tan^{-1}\\left(\\frac{\\sqrt{1+\\tan^2\\theta}-1}{\\tan\\theta}\\right)=2\\tan^{-1}\\left(\\tan\\frac{\\theta}{2}\\right)=2\\cdot\\frac{\\theta}{2}=\\theta$, as $\\frac{\\theta}{2}\\in\\left(\\frac{\\pi}{12},\\frac{\\pi}{8}\\right)$.",
+    "Term 2: $\\sin^{-1}\\left(\\frac{2\\tan\\theta}{1+\\tan^2\\theta}\\right)=\\sin^{-1}(\\sin2\\theta)=2\\theta$, as $2\\theta\\in\\left(\\frac{\\pi}{3},\\frac{\\pi}{2}\\right)\\subset\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+    "Term 3: $\\tan^{-1}\\left(\\frac{3\\tan\\theta-\\tan^3\\theta}{1-3\\tan^2\\theta}\\right)=\\tan^{-1}(\\tan3\\theta)=3\\theta-\\pi$, as $3\\theta\\in\\left(\\frac{\\pi}{2},\\frac{3\\pi}{4}\\right)$.",
+    "Hence $f(x)=\\theta+2\\theta-(3\\theta-\\pi)=\\pi$.",
+    "For $g$, let $x=\\tan\\phi$. For $x\\in(0,1)$, $\\phi\\in\\left(0,\\frac{\\pi}{4}\\right)$.",
+    "Term 1: $\\cos^{-1}\\left(\\frac{1-\\tan^2\\phi}{1+\\tan^2\\phi}\\right)=\\cos^{-1}(\\cos2\\phi)=2\\phi$, as $2\\phi\\in\\left(0,\\frac{\\pi}{2}\\right)$.",
+    "Term 2: $2\\tan^{-1}\\left(\\frac{1-\\tan\\phi}{1+\\tan\\phi}\\right)=2\\tan^{-1}\\left(\\tan\\left(\\frac{\\pi}{4}-\\phi\\right)\\right)=2\\left(\\frac{\\pi}{4}-\\phi\\right)=\\frac{\\pi}{2}-2\\phi$.",
+    "Hence $g(x)=2\\phi+\\frac{\\pi}{2}-2\\phi=\\frac{\\pi}{2}$.",
+    "$\\tan\\left(\\frac{f(x)+g(x)}{6}\\right)=\\tan\\left(\\frac{\\pi+\\frac{\\pi}{2}}{6}\\right)=\\tan\\left(\\frac{3\\pi}{12}\\right)=\\tan\\frac{\\pi}{4}=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The options are constants, so the expression is constant on the interval; evaluate it at the end-point $x\\to1^-$, where every term is continuous.",
+     "solution": [
+      "The question gives constant options, so $\\tan\\frac{f+g}{6}$ does not depend on $x$; evaluate it at $x\\to1^-$ (all inverse functions below are continuous at $x=1$).",
+      "$f(1)=2\\tan^{-1}\\left(\\sqrt2-1\\right)+\\sin^{-1}(1)-\\tan^{-1}\\left(\\frac{3-1}{1-3}\\right)=2\\cdot\\frac{\\pi}{8}+\\frac{\\pi}{2}-\\tan^{-1}(-1)$.",
+      "$\\tan^{-1}(\\sqrt2-1)=\\frac{\\pi}{8}$ and $\\tan^{-1}(-1)=-\\frac{\\pi}{4}$, so $f(1)=\\frac{\\pi}{4}+\\frac{\\pi}{2}+\\frac{\\pi}{4}=\\pi$.",
+      "$g(1)=\\cos^{-1}(0)+2\\tan^{-1}(0)=\\frac{\\pi}{2}+0=\\frac{\\pi}{2}$.",
+      "$\\tan\\left(\\frac{\\pi+\\frac{\\pi}{2}}{6}\\right)=\\tan\\frac{\\pi}{4}=1$, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)=\\frac12\\tan^{-1}x$ for all $x\\ne0$ (put $x=\\tan\\theta$; the expression is $\\tan\\frac{\\theta}{2}$).",
+    "$\\tan^{-1}\\left(\\frac{3x-x^3}{1-3x^2}\\right)=3\\tan^{-1}x$ for $|x|<\\frac{1}{\\sqrt3}$, $3\\tan^{-1}x-\\pi$ for $x>\\frac{1}{\\sqrt3}$ and $3\\tan^{-1}x+\\pi$ for $x<-\\frac{1}{\\sqrt3}$ - the branch changes at $|x|=\\frac{1}{\\sqrt3}$.",
+    "$\\tan^{-1}\\left(\\frac{1-x}{1+x}\\right)=\\frac{\\pi}{4}-\\tan^{-1}x$ for $x>-1$.",
+    "If all answer options are constants, the quantity is constant and a convenient limiting value (an end-point of the interval) gives the answer."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Fundamental period of trigonometric functions",
+    "Onto and into functions (range)"
+   ],
+   "level": 2,
+   "question": "Consider the function $f:\\mathbb{R}\\to[0,1]$ defined by $f(x)=2\\sin^4\\left(\\frac{\\pi x}{4}\\right)+2\\cos^4\\left(\\frac{\\pi x}{4}\\right)-1$. If $T$ is the fundamental period of $f(x)$, then which of the following statements is CORRECT?",
+   "options": [
+    "$f(x)$ is an into function and $T=4$",
+    "$f(x)$ is an onto function and $T=2$",
+    "$f(x)$ is an onto function and $T=4$",
+    "$f(x)$ is an into function and $T=2$"
+   ],
+   "answer": "(B) $f(x)$ is an onto function and $T=2$",
+   "key_idea": "$\\sin^4\\theta+\\cos^4\\theta=1-\\frac12\\sin^22\\theta$ collapses $f$ to $\\cos^2\\left(\\frac{\\pi x}{2}\\right)=\\frac{1+\\cos\\pi x}{2}$.",
+   "solution": [
+    "Use $\\sin^4\\theta+\\cos^4\\theta=1-2\\sin^2\\theta\\cos^2\\theta=1-\\frac12\\sin^2(2\\theta)$.",
+    "$f(x)=2\\left(1-\\frac12\\sin^2\\left(\\frac{\\pi x}{2}\\right)\\right)-1$.",
+    "$f(x)=2-\\sin^2\\left(\\frac{\\pi x}{2}\\right)-1=1-\\sin^2\\left(\\frac{\\pi x}{2}\\right)=\\cos^2\\left(\\frac{\\pi x}{2}\\right)$.",
+    "By the double-angle formula, $f(x)=\\frac{1+\\cos(\\pi x)}{2}$.",
+    "Range: since $-1\\le\\cos(\\pi x)\\le1$, $0\\le\\frac{1+\\cos(\\pi x)}{2}\\le1$, so the range of $f$ is $[0,1]$.",
+    "The codomain is $[0,1]$ and equals the range, so $f$ is onto.",
+    "Fundamental period: that of $\\cos(\\pi x)$ is $T=\\frac{2\\pi}{\\pi}=2$, so the fundamental period of $f$ is $2$.",
+    "Hence $f$ is onto and $T=2$: option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Let $u=\\sin^2\\frac{\\pi x}{4}\\in[0,1]$: $f=(2u-1)^2$, so the range is read off a perfect square and the period from its zeros and maxima.",
+     "solution": [
+      "Put $u=\\sin^2\\left(\\frac{\\pi x}{4}\\right)\\in[0,1]$, so $\\cos^2\\left(\\frac{\\pi x}{4}\\right)=1-u$.",
+      "$f=2\\left[u^2+(1-u)^2\\right]-1=4u^2-4u+1=(2u-1)^2$.",
+      "As $u$ runs over $[0,1]$, $2u-1$ runs over $[-1,1]$, so $(2u-1)^2$ takes every value in $[0,1]$: $f$ is onto.",
+      "$2u-1=-\\cos\\left(\\frac{\\pi x}{2}\\right)$, so $f(x)=\\cos^2\\left(\\frac{\\pi x}{2}\\right)$: it equals $1$ at even integers and $0$ at odd integers.",
+      "Consecutive zeros (odd integers) are $2$ apart, so the period is a divisor of $2$; $T=1$ fails because $f(0)=1\\ne f(1)=0$. Hence $T=2$.",
+      "So $f$ is onto with $T=2$: option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f=a\\sin^4\\theta+a\\cos^4\\theta+b$ write $f=a\\left(1-\\frac12\\sin^22\\theta\\right)+b$; its period in $\\theta$ is $\\frac{\\pi}{2}$.",
+    "$\\cos^2(kx)$ has fundamental period $\\frac{\\pi}{k}$ (not $\\frac{2\\pi}{k}$).",
+    "Onto check: compare the exact range with the declared codomain; a quadratic in $\\sin^2$ over $[0,1]$ takes extremes at $u=0,1$ and at the vertex.",
+    "Instance: $f(x)=\\cos^2\\frac{\\pi x}{2}$, range $[0,1]$, period $2$."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Symmetric difference of sets"
+   ],
+   "level": 1,
+   "question": "Let $U=\\{x\\in\\mathbb{Z}:-3\\le x\\le5\\}$ be the universal set. Consider the sets $A=\\{x\\in U:x^2-2x-3\\le0\\}$ and $B=\\{x\\in U:x\\text{ is a prime number}\\}$. If $A\\Delta B$ denotes the symmetric difference of $A$ and $B$, then the number of elements in $A\\Delta B$, denoted $n(A\\Delta B)$, is equal to",
+   "options": [
+    "$3$",
+    "$4$",
+    "$5$",
+    "$6$"
+   ],
+   "answer": "(B) $4$",
+   "key_idea": "$A\\Delta B=(A\\setminus B)\\cup(B\\setminus A)$; list $A$ and $B$ inside $U$ and read off the elements in exactly one of them.",
+   "solution": [
+    "The universal set is $U=\\{-3,-2,-1,0,1,2,3,4,5\\}$.",
+    "For $A$: $x^2-2x-3\\le0\\Rightarrow(x-3)(x+1)\\le0\\Rightarrow-1\\le x\\le3$. Since $x\\in\\mathbb{Z}$, $A=\\{-1,0,1,2,3\\}$.",
+    "For $B$: the prime numbers in $U$ are $2,3,5$, so $B=\\{2,3,5\\}$.",
+    "The symmetric difference is $A\\Delta B=(A\\setminus B)\\cup(B\\setminus A)$.",
+    "Here $A\\setminus B=\\{-1,0,1\\}$ and $B\\setminus A=\\{5\\}$.",
+    "Therefore $A\\Delta B=\\{-1,0,1,5\\}$.",
+    "Hence $n(A\\Delta B)=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use $n(A\\Delta B)=n(A)+n(B)-2\\,n(A\\cap B)$.",
+     "solution": [
+      "$A=\\{-1,0,1,2,3\\}$ gives $n(A)=5$; $B=\\{2,3,5\\}$ gives $n(B)=3$.",
+      "$A\\cap B=\\{2,3\\}$, so $n(A\\cap B)=2$.",
+      "Elements counted in both $A$ and $B$ are counted twice in $n(A)+n(B)$ but belong to neither exclusive part, so they are removed twice.",
+      "$n(A\\Delta B)=5+3-2(2)=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$n(A\\Delta B)=n(A)+n(B)-2\\,n(A\\cap B)=n(A\\cup B)-n(A\\cap B)$.",
+    "$A\\Delta B=(A\\cup B)\\setminus(A\\cap B)$; it is associative and commutative, and $A\\Delta A=\\varnothing$.",
+    "$1$ is not a prime number - a frequent trap when listing primes in a given range; also negative integers are not prime."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Non-differentiability of the maximum of two functions"
+   ],
+   "level": 4,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\max\\{|x^2-2x|,\\ k(x-1)+1\\}$, where $k\\in\\mathbb{R}$. Let $S$ be the set of all values of $k$ for which the number of points at which $f(x)$ is not differentiable is minimum. Then $S$ is equal to:",
+   "options": [
+    "$\\{-1,1\\}$",
+    "$\\{1\\}$",
+    "$\\{0\\}$",
+    "$\\mathbb{R}$"
+   ],
+   "answer": "(C) $\\{0\\}$",
+   "key_idea": "Every line $y=k(x-1)+1$ passes through $(1,1)$, the peak of the hump of $|x^2-2x|$ where the slope is $0$; the line merges smoothly only when $k=0$.",
+   "solution": [
+    "Let $g(x)=|x^2-2x|$ and $h(x)=k(x-1)+1$. At $x=1$: $g(1)=|1-2|=1$ and $h(1)=k(0)+1=1$, so the line $y=h(x)$ always passes through $(1,1)$.",
+    "For $x\\in(0,2)$, $g(x)=2x-x^2$, which has its local maximum at $x=1$ with $g'(1)=0$.",
+    "Case 1, $k=0$: $h(x)=1$ and $f(x)=\\max\\{|x^2-2x|,1\\}$.",
+    "Solving $|x^2-2x|=1$: $x^2-2x-1=0\\Rightarrow x=1\\pm\\sqrt2$ (the equation $x^2-2x=-1$ only touches at $x=1$).",
+    "$|x^2-2x|\\le1$ for $x\\in[1-\\sqrt2,1+\\sqrt2]$, so $f(x)=x^2-2x$ for $x\\le1-\\sqrt2$, $f(x)=1$ for $1-\\sqrt2<x<1+\\sqrt2$, and $f(x)=x^2-2x$ for $x\\ge1+\\sqrt2$.",
+    "At $x=1-\\sqrt2$: $f'\\left((1-\\sqrt2)^-\\right)=2(1-\\sqrt2)-2=-2\\sqrt2$ and $f'\\left((1-\\sqrt2)^+\\right)=0$, so $f$ is non-differentiable there.",
+    "At $x=1+\\sqrt2$: $f'\\left((1+\\sqrt2)^-\\right)=0$ and $f'\\left((1+\\sqrt2)^+\\right)=2(1+\\sqrt2)-2=2\\sqrt2$, so $f$ is non-differentiable there.",
+    "For all other points $f$ is smooth. Hence for $k=0$ the number of points of non-differentiability is exactly $2$.",
+    "Case 2, $k\\ne0$: near $x=1$, $g(x)=2x-x^2$ has $g'(1)=0$ while $h'(1)=k\\ne0$, so $h$ and $g$ cross transversally at $x=1$ and $f$ is non-differentiable at $x=1$.",
+    "Since $g(2-x)=g(x)$ and $h$ with slope $k$ becomes $h$ with slope $-k$ under $x\\to2-x$, the cases $k$ and $-k$ are mirror images; take $k>0$.",
+    "To the right of $x=1$: $h$ meets the outer branch $y=x^2-2x$ at $x=\\frac{k+2+\\sqrt{k^2+8}}{2}>2$, where the slopes differ by $\\sqrt{k^2+8}\\ne0$, so this is a second point of non-differentiability.",
+    "To the left of $x=1$: if $0<k\\le1$, $h$ meets $g=2x-x^2$ again at $x=1-k\\in[0,1)$ with slopes $2k\\ne k$ (at $k=1$ this point is the corner $x=0$ of $g$); if $k>1$, $h(0)=1-k<0=g(0)$, so $f=g$ near $x=0$ and the corner of $g$ at $x=0$ is a point of non-differentiability.",
+    "Thus for every $k\\ne0$ there are at least $3$ points of non-differentiability.",
+    "The minimum number of non-differentiable points is therefore $2$, attained only for $k=0$, so $S=\\{0\\}$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "PDF Case 2 claims h meets the curve at x=1, x=1-k and two outer points 'giving at least 4 points for any k not 0'. This is wrong: x=1-k lies in (0,2) (so is a valid crossing) only for |k|<1, and the outer roots (k+2 +/- sqrt(k^2+8))/2 are valid only when they lie in x<=0 or x>=2. A direct count gives 4 points for 0<|k|<1 and 3 points for |k|>=1 (k=2: x=0, 1, 2+sqrt3). The conclusion S={0} and the answer (C) are unchanged, since 3>2; the working now argues for 'at least 3'.",
+   "alternate_solutions": [
+    {
+     "idea": "Shift to $t=x-1$: the hump becomes $|t^2-1|$ and the line becomes $1+kt$; the symmetry $t\\to-t$ pairs $k$ with $-k$.",
+     "solution": [
+      "Put $t=x-1$. Then $x^2-2x=t^2-1$, so $F(t)=\\max\\{|t^2-1|,\\ 1+kt\\}$, and the problem is unchanged in nature.",
+      "$F$ with $k$ and $F$ with $-k$ are mirror images ($t\\to-t$), so take $k\\ge0$.",
+      "$k=0$: $F=\\max\\{|t^2-1|,1\\}$ equals $1$ for $|t|\\le\\sqrt2$ (the peak $t=0$ only touches the line) and $t^2-1$ beyond, giving exactly two corners at $t=\\pm\\sqrt2$.",
+      "$k>0$: at $t=0$, $|t^2-1|=1-t^2$ has slope $0$ but the line has slope $k$, so $F$ has a corner at $t=0$.",
+      "Right side: $t^2-1=1+kt$ has the root $t=\\frac{k+\\sqrt{k^2+8}}{2}>1$ with slope difference $2t-k=\\sqrt{k^2+8}\\ne0$: a second corner.",
+      "Left side: $\\varphi(t)=|t^2-1|-(1+kt)$ is $+\\infty$ as $t\\to-\\infty$ and $\\varphi(-1)=k-1$. If $k\\ge1$, $\\varphi(-1)\\ge0$ and $F=|t^2-1|$ near $t=-1$, so its corner at $t=-1$ is a non-differentiable point; if $0<k<1$, $\\varphi(-1)<0$ forces a sign change of $\\varphi$ for some $t<-1$, a transversal crossing - a third corner.",
+      "So every $k\\ne0$ gives at least $3$ corners, while $k=0$ gives only $2$. Hence $S=\\{0\\}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $f=\\max\\{g,h\\}$ the non-differentiable points are the points where $g$ and $h$ cross with different slopes, plus the corners of whichever function is active; a tangential meeting (equal slopes) creates no corner.",
+    "$|x^2-2x|$ is symmetric about $x=1$ (peak $(1,1)$, corners at $x=0,2$); shifting $t=x-1$ gives $|t^2-1|$, which makes such counting much easier.",
+    "If a family of lines passes through a fixed point of a curve, only the tangent line avoids a crossing there.",
+    "Instance: a line through the peak $(1,1)$ of $|x^2-2x|$ with slope $k\\ne0$ always produces a corner at $x=1$; with $k=0$ it is tangent."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of a function defined through $x^{2n}$ as $n\\to\\infty$",
+    "Set operations on solution sets of inequalities"
+   ],
+   "level": 3,
+   "question": "Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\lim_{n\\to\\infty}\\frac{x^{2n+1}+x^2+1}{x^{2n}+1}$. Let $A=\\{x\\in\\mathbb{R}:f(x)\\ge2\\}$ and $B=\\{x\\in\\mathbb{R}:f(x)\\le x+1\\}$. Then the set $B\\setminus A$ is equal to:",
+   "options": [
+    "$(-\\infty,-1)\\cup[0,2)$",
+    "$(-\\infty,-1]\\cup(0,2]$",
+    "$(-\\infty,-1)\\cup(0,2]$",
+    "$(-\\infty,-1]\\cup[0,2)$"
+   ],
+   "answer": "(A) $(-\\infty,-1)\\cup[0,2)$",
+   "key_idea": "Evaluate $f$ on the four regions $|x|<1$, $|x|>1$, $x=1$, $x=-1$, and then treat the endpoints $\\pm1$ separately.",
+   "solution": [
+    "For $|x|<1$: as $n\\to\\infty$, $x^{2n}\\to0$ and $x^{2n+1}\\to0$, so $f(x)=\\frac{0+x^2+1}{0+1}=x^2+1$.",
+    "For $|x|>1$: dividing numerator and denominator by $x^{2n}$, $f(x)=\\lim_{n\\to\\infty}\\frac{x+x^{2-2n}+x^{-2n}}{1+x^{-2n}}=x$.",
+    "For $x=1$: $f(1)=\\frac{1+1+1}{1+1}=\\frac32$.",
+    "For $x=-1$: $f(-1)=\\frac{-1+1+1}{1+1}=\\frac12$.",
+    "Set $A=\\{f(x)\\ge2\\}$: for $|x|<1$, $x^2+1\\ge2\\Rightarrow x^2\\ge1$, no solution in $(-1,1)$.",
+    "For $|x|>1$: $x\\ge2$, so $x\\in[2,\\infty)$.",
+    "At $x=\\pm1$: $f(1)=\\frac32<2$ and $f(-1)=\\frac12<2$. Hence $A=[2,\\infty)$.",
+    "Set $B=\\{f(x)\\le x+1\\}$: for $|x|>1$, $x\\le x+1\\Rightarrow0\\le1$, which is always true, so $(-\\infty,-1)\\cup(1,\\infty)\\subseteq B$.",
+    "For $|x|<1$: $x^2+1\\le x+1\\Rightarrow x(x-1)\\le0\\Rightarrow x\\in[0,1]$, so $x\\in[0,1)$ within $(-1,1)$.",
+    "At $x=1$: $f(1)=\\frac32\\le1+1=2$ is true, so $1\\in B$. At $x=-1$: $f(-1)=\\frac12\\le-1+1=0$ is false, so $-1\\notin B$.",
+    "Hence $B=(-\\infty,-1)\\cup[0,\\infty)$.",
+    "$B\\setminus A=\\left((-\\infty,-1)\\cup[0,\\infty)\\right)\\setminus[2,\\infty)=(-\\infty,-1)\\cup[0,2)$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Two sign slips in the PDF: (i) in set A for |x|>1 it writes 'x <= 2 => x in [2, infinity)'; it should read 'x >= 2'. (ii) in set B for |x|>1 it writes 'x >= x+1 => 0 >= 1 which is always true'; it should read 'x <= x+1 => 0 <= 1'. The final sets and the answer (A) are unchanged. The last line of the PDF has a typeset typo ('BA = ...') which is dropped.",
+   "alternate_solutions": [
+    {
+     "idea": "One sweep over the regions: $x\\in B\\setminus A\\iff f(x)\\le x+1$ and $f(x)<2$.",
+     "solution": [
+      "$f(x)=x^2+1$ on $(-1,1)$, $f(x)=x$ for $|x|>1$, $f(1)=\\frac32$, $f(-1)=\\frac12$.",
+      "$x<-1$: $f=x<2$ and $x\\le x+1$ both true, so all of $(-\\infty,-1)$ is in $B\\setminus A$.",
+      "$x=-1$: $f=\\frac12>0=x+1$, so not in $B$; excluded.",
+      "$-1<x<1$: $f=x^2+1<2$ always, so only $x^2+1\\le x+1\\Leftrightarrow0\\le x\\le1$ matters: $[0,1)$ is included.",
+      "$x=1$: $f=\\frac32\\le2$ and $\\frac32<2$, so $1$ is included.",
+      "$1<x<2$: $f=x<2$ and $x\\le x+1$, included; $x\\ge2$: $f=x\\ge2$, so excluded.",
+      "Collecting: $(-\\infty,-1)\\cup[0,1)\\cup\\{1\\}\\cup(1,2)=(-\\infty,-1)\\cup[0,2)$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{n\\to\\infty}x^{2n}=0$ for $|x|<1$, $=1$ for $|x|=1$, $=\\infty$ for $|x|>1$; such limits always give a piecewise function whose points $x=\\pm1$ must be evaluated separately (they often differ from both neighbouring formulas).",
+    "For $|x|>1$ divide by the highest power of $x$ present; for $|x|<1$ simply drop $x^{2n}$ terms.",
+    "When forming $B\\setminus A$, track endpoints and the isolated points $x=\\pm1$ carefully - the correct option often differs from the others only in round/square brackets.",
+    "$x^2+1\\le x+1\\iff x(x-1)\\le0\\iff0\\le x\\le1$."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits involving the greatest integer and fractional part functions"
+   ],
+   "level": 3,
+   "question": "Let $[t]$ denote the greatest integer less than or equal to $t$, and $\\{t\\}$ denote the fractional part of $t$. Evaluate the limit $\\lim_{x\\to0^+}\\dfrac{3x\\left[\\frac{2}{x}\\right]+4\\left[\\frac{\\sin x}{x}\\right]+\\left\\{\\frac{x}{\\sin x}\\right\\}}{2\\left\\{\\frac{\\sin x}{x}\\right\\}+3\\left[\\frac{x}{\\tan x}\\right]+5x^2\\left[\\frac{1}{x^2}\\right]}$",
+   "options": [
+    "$1$",
+    "$2$",
+    "$\\frac35$",
+    "$\\frac67$"
+   ],
+   "answer": "(D) $\\frac67$",
+   "key_idea": "Evaluate each term separately: $x[\\frac{a}{x}]\\to a$, and for small $x>0$ the ratios $\\frac{\\sin x}{x},\\frac{x}{\\tan x}\\in(0,1)$ and $\\frac{x}{\\sin x}\\in(1,2)$.",
+   "solution": [
+    "We analyse each term for $x\\in\\left(0,\\frac{\\pi}{2}\\right)$, $x\\to0^+$.",
+    "Term $3x\\left[\\frac{2}{x}\\right]$: from $u-1<[u]\\le u$, $3x\\left(\\frac2x-1\\right)<3x\\left[\\frac2x\\right]\\le3x\\cdot\\frac2x$, i.e. $6-3x<3x\\left[\\frac{2}{x}\\right]\\le6$. By the squeeze theorem the limit is $6$.",
+    "Term $4\\left[\\frac{\\sin x}{x}\\right]$: since $\\sin x<x$, $0<\\frac{\\sin x}{x}<1$, so $\\left[\\frac{\\sin x}{x}\\right]=0$ and the term tends to $0$.",
+    "Term $\\left\\{\\frac{x}{\\sin x}\\right\\}$: $\\frac{x}{\\sin x}>1$ and $\\frac{x}{\\sin x}\\to1^+$, so for small $x>0$, $1<\\frac{x}{\\sin x}<2$ and $\\left\\{\\frac{x}{\\sin x}\\right\\}=\\frac{x}{\\sin x}-1\\to1-1=0$.",
+    "Term $2\\left\\{\\frac{\\sin x}{x}\\right\\}$: since $0<\\frac{\\sin x}{x}<1$, $\\left\\{\\frac{\\sin x}{x}\\right\\}=\\frac{\\sin x}{x}$, so the term tends to $2\\times1=2$.",
+    "Term $3\\left[\\frac{x}{\\tan x}\\right]$: $\\tan x>x$ gives $0<\\frac{x}{\\tan x}<1$, so $\\left[\\frac{x}{\\tan x}\\right]=0$ and the term tends to $0$.",
+    "Term $5x^2\\left[\\frac{1}{x^2}\\right]$: by the squeeze theorem, $5-5x^2<5x^2\\left[\\frac{1}{x^2}\\right]\\le5$, so the limit is $5$.",
+    "Substituting the limits: numerator $\\to6+0+0=6$, denominator $\\to2+0+5=7$.",
+    "Hence the limit is $\\frac{6}{7}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $a>0$: $\\lim_{x\\to0^+}x\\left[\\frac{a}{x}\\right]=a$ (since $x\\left[\\frac ax\\right]=a-x\\left\\{\\frac ax\\right\\}$ and $0\\le x\\{\\cdot\\}<x$); similarly $\\lim_{x\\to0^+}x^2\\left[\\frac{1}{x^2}\\right]=1$.",
+    "For small $x>0$: $\\sin x<x<\\tan x$, hence $\\left[\\frac{\\sin x}{x}\\right]=0$, $\\left[\\frac{x}{\\tan x}\\right]=0$, $\\left[\\frac{x}{\\sin x}\\right]=1$, $\\left\\{\\frac{x}{\\sin x}\\right\\}=\\frac{x}{\\sin x}-1\\to0$ and $\\left\\{\\frac{\\sin x}{x}\\right\\}\\to1^-$.",
+    "If the limit of a ratio exists with a non-zero denominator limit, treat numerator and denominator limits separately (all terms here are finite)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity, differentiability and the Intermediate Value Theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:\\left[0,\\frac{2}{\\pi}\\right]\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}x^{\\alpha}\\sin\\left(\\frac1x\\right)+2x-1,&x\\in\\left(0,\\frac2\\pi\\right]\\\\\\beta,&x=0\\end{cases}$. If $f(x)$ is continuous on $\\left[0,\\frac{2}{\\pi}\\right]$ and differentiable at $x=0$, then which of the following options is CORRECT?",
+   "options": [
+    "$\\beta=-1$, $\\alpha>1$, and $f(x)=0$ has at least one root in $\\left(0,\\frac2\\pi\\right)$",
+    "$\\beta=-1$, $\\alpha>0$, and $f(x)=0$ has no root in $\\left(0,\\frac2\\pi\\right)$",
+    "$\\beta=0$, $\\alpha>1$, and $f(x)=0$ has at least one root in $\\left(0,\\frac2\\pi\\right)$",
+    "$\\beta=-1$, $\\alpha<1$, and $f(x)=0$ has no root in $\\left(0,\\frac2\\pi\\right)$"
+   ],
+   "answer": "(A)",
+   "key_idea": "Differentiability at $0$ forces $h^{\\alpha-1}\\sin\\frac1h$ to have a limit, i.e. $\\alpha>1$; then $f(0)<0<f\\left(\\frac{2}{\\pi}\\right)$ and the IVT gives a root.",
+   "solution": [
+    "Continuity at $x=0$: we need $\\lim_{x\\to0^+}f(x)=f(0)=\\beta$.",
+    "$\\lim_{x\\to0^+}\\left(x^{\\alpha}\\sin\\frac1x+2x-1\\right)=0+0-1=-1$ (for $\\alpha>0$, $\\left|\\sin\\frac1x\\right|\\le1$ gives $x^{\\alpha}\\sin\\frac1x\\to0$ by the squeeze theorem). Thus $\\beta=-1$.",
+    "Differentiability at $x=0$: $f'(0^+)=\\lim_{h\\to0^+}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0^+}\\frac{h^{\\alpha}\\sin\\frac1h+2h-1-(-1)}{h}$.",
+    "$=\\lim_{h\\to0^+}\\left(h^{\\alpha-1}\\sin\\frac1h+2\\right)$.",
+    "For this limit to exist finitely we must have $\\alpha-1>0$, i.e. $\\alpha>1$.",
+    "Since $\\alpha>1$, $f$ is continuous on the closed interval $\\left[0,\\frac2\\pi\\right]$, and $f(0)=-1<0$.",
+    "$f\\left(\\frac2\\pi\\right)=\\left(\\frac2\\pi\\right)^{\\alpha}\\sin\\frac\\pi2+2\\cdot\\frac2\\pi-1=\\left(\\frac2\\pi\\right)^{\\alpha}+\\frac4\\pi-1$.",
+    "Since $\\left(\\frac2\\pi\\right)^{\\alpha}>0$ and $\\frac4\\pi>1$, $f\\left(\\frac2\\pi\\right)>0$.",
+    "Since $f(0)<0$ and $f\\left(\\frac2\\pi\\right)>0$, the Intermediate Value Theorem gives at least one $c\\in\\left(0,\\frac2\\pi\\right)$ with $f(c)=0$.",
+    "Hence the correct option is (A)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\lim_{x\\to0^+}x^{p}\\sin\\frac1x$ exists (and equals $0$) iff $p>0$; $f(x)=x^p\\sin\\frac1x$, $f(0)=0$ is differentiable at $0$ iff $p>1$ and has a continuous derivative at $0$ iff $p>2$.",
+    "The derivative from first principles gives $h^{p-1}\\sin\\frac1h$: it oscillates between $\\pm1$ for $p=1$ (no limit) and is unbounded for $p<1$.",
+    "IVT shortcut: if $f$ is continuous on $[a,b]$ and $f(a)f(b)<0$, there is a root in $(a,b)$ - evaluate the sign at an end where the oscillating factor is a clean value (here $\\sin\\frac{\\pi}{2}=1$)."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Reflexive relations on a Cartesian product of sets"
+   ],
+   "level": 1,
+   "question": "Let $A=\\{1,2\\}$ and $B=\\{a,b\\}$. If $C=A\\times B$, then the total number of reflexive relations that can be defined on the set $C$ is equal to:",
+   "options": [
+    "$2^8$",
+    "$2^{10}$",
+    "$2^{12}$",
+    "$2^{16}$"
+   ],
+   "answer": "(C) $2^{12}$",
+   "key_idea": "A reflexive relation must contain all $m$ diagonal pairs, and each of the $m^2-m$ other ordered pairs is free: $2^{m^2-m}$.",
+   "solution": [
+    "The number of elements in $A$ is $n(A)=2$ and in $B$ is $n(B)=2$.",
+    "$C=A\\times B$ has $n(C)=n(A)\\times n(B)=2\\times2=4$ elements.",
+    "For a finite set $S$ with $m$ elements, the total number of reflexive relations on $S$ is $2^{m^2-m}$.",
+    "Here $m=n(C)=4$.",
+    "Number of reflexive relations $=2^{4^2-4}=2^{16-4}=2^{12}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Think of a relation as a directed graph on $4$ vertices: reflexivity fixes all loops, leaving $4\\times3$ optional arrows.",
+     "solution": [
+      "$C=A\\times B$ has $2\\times2=4$ elements, so a relation on $C$ is a set of ordered pairs from $C\\times C$, which has $16$ pairs.",
+      "Reflexive means all $4$ loops $(c,c)$ are present - they are forced and contribute a factor $1$.",
+      "Each of the remaining $16-4=12$ ordered pairs $(c,c')$ with $c\\ne c'$ is independently present or absent.",
+      "The number of reflexive relations is $2^{12}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "On an $m$-element set: reflexive relations $2^{m(m-1)}$; symmetric relations $2^{m(m+1)/2}$; reflexive and symmetric $2^{m(m-1)/2}$; all relations $2^{m^2}$; antisymmetric $2^m3^{m(m-1)/2}$.",
+    "$n(A\\times B)=n(A)\\,n(B)$ - the set on which the relation is defined may itself be a Cartesian product, so first count its elements.",
+    "Instance: $m=4$ gives $2^{12}=4096$ reflexive relations."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Types of discontinuity (removable, jump, essential, infinite)"
+   ],
+   "level": 1,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}\\frac{\\tan x}{x}+\\sin x\\cdot\\cos\\left(\\frac1x\\right),&x\\ne0\\\\2,&x=0\\end{cases}$. Then at $x=0$, the function $f(x)$ has:",
+   "options": [
+    "a removable discontinuity",
+    "a jump (non-removable of first kind) discontinuity",
+    "an essential (oscillatory) discontinuity",
+    "an infinite discontinuity"
+   ],
+   "answer": "(A) a removable discontinuity",
+   "key_idea": "$\\sin x\\cos\\frac1x\\to0$ by the squeeze theorem, so $\\lim_{x\\to0}f(x)=1\\ne f(0)=2$.",
+   "solution": [
+    "To classify the discontinuity at $x=0$ we first find $\\lim_{x\\to0}f(x)=\\lim_{x\\to0}\\left(\\frac{\\tan x}{x}+\\sin x\\cos\\frac1x\\right)$.",
+    "Standard limit: $\\lim_{x\\to0}\\frac{\\tan x}{x}=1$.",
+    "For $\\sin x\\cos\\frac1x$: $-1\\le\\cos\\frac1x\\le1$ for all $x\\ne0$ and $\\lim_{x\\to0}\\sin x=0$, so by the sandwich theorem $\\lim_{x\\to0}\\sin x\\cos\\frac1x=0$.",
+    "Therefore $\\lim_{x\\to0}f(x)=1+0=1$.",
+    "The value at $x=0$ is $f(0)=2$.",
+    "Since $\\lim_{x\\to0}f(x)$ exists finitely but $\\ne f(0)$, the function has a removable discontinuity at $x=0$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Classification at $x=a$: removable if $\\lim_{x\\to a}f$ exists finitely and $\\ne f(a)$ (or $f(a)$ is undefined); jump if both one-sided limits exist and differ; infinite if a one-sided limit is $\\pm\\infty$; essential/oscillatory if a one-sided limit fails to exist without being infinite.",
+    "A bounded oscillating factor times a function tending to $0$ tends to $0$: $\\sin x\\cos\\frac1x\\to0$, $x\\sin\\frac1x\\to0$; but $\\cos\\frac1x$ alone has no limit as $x\\to0$.",
+    "A removable discontinuity is repaired by redefining $f(0)=\\lim f$; here $f(0)=1$ would make $f$ continuous."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Fundamental period of trigonometric functions",
+    "One-one functions and monotonicity"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\sin^4x+\\cos^4x$ for all $x\\in\\mathbb{R}$, and let $T$ be the fundamental period of $f(x)$. Consider the function $g:\\left[0,\\frac T2\\right]\\to\\mathbb{R}$ defined as $g(x)=f(x)$. Which of the following statements is CORRECT?",
+   "options": [
+    "$T=\\pi$ and $g(x)$ is a many-one function",
+    "$T=\\frac{\\pi}{2}$ and $g(x)$ is a strictly increasing one-one function",
+    "$T=\\frac{\\pi}{2}$ and $g(x)$ is a strictly decreasing one-one function",
+    "$T=\\pi$ and $g(x)$ is a strictly decreasing one-one function"
+   ],
+   "answer": "(C) $T=\\frac{\\pi}{2}$ and $g(x)$ is a strictly decreasing one-one function",
+   "key_idea": "$f(x)=\\frac34+\\frac14\\cos4x$ has period $\\frac{\\pi}{2}$, and on $\\left[0,\\frac{\\pi}{4}\\right]$ the angle $4x$ runs over $[0,\\pi]$ where cosine decreases.",
+   "solution": [
+    "$f(x)=\\left(\\sin^2x+\\cos^2x\\right)^2-2\\sin^2x\\cos^2x=1-\\frac12\\sin^22x$.",
+    "$f(x)=1-\\frac12\\cdot\\frac{1-\\cos4x}{2}=\\frac34+\\frac14\\cos4x$.",
+    "The fundamental period of $\\cos4x$ is $T=\\frac{2\\pi}{4}=\\frac{\\pi}{2}$.",
+    "Thus the domain of $g$ is $\\left[0,\\frac T2\\right]=\\left[0,\\frac{\\pi}{4}\\right]$.",
+    "To check monotonicity and injectivity of $g$ on $\\left[0,\\frac\\pi4\\right]$: $g'(x)=-\\sin4x$.",
+    "For $x\\in\\left(0,\\frac\\pi4\\right)$, $4x\\in(0,\\pi)$, which gives $\\sin4x>0\\Rightarrow g'(x)<0$.",
+    "Since $g'(x)<0$ on $\\left(0,\\frac\\pi4\\right)$, $g(x)$ is strictly decreasing on $\\left[0,\\frac\\pi4\\right]$.",
+    "Any strictly monotonic function on an interval is one-one.",
+    "Hence $T=\\frac\\pi2$ and $g(x)$ is a strictly decreasing one-one function, option (C)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Fourth powers make $f$ invariant under $x\\to x+\\frac{\\pi}{2}$ (sine and cosine swap), and cosine is decreasing on $[0,\\pi]$ - no calculus needed.",
+     "solution": [
+      "$\\sin\\left(x+\\frac\\pi2\\right)=\\cos x$ and $\\cos\\left(x+\\frac\\pi2\\right)=-\\sin x$, so $f\\left(x+\\frac\\pi2\\right)=\\cos^4x+\\sin^4x=f(x)$: $\\frac{\\pi}{2}$ is a period.",
+      "$f(0)=1$ is the maximum value ($f=1-2\\sin^2x\\cos^2x\\le1$ with equality iff $\\sin x\\cos x=0$, i.e. $x=\\frac{n\\pi}{2}$). Consecutive maxima are $\\frac\\pi2$ apart, so no smaller period exists: $T=\\frac{\\pi}{2}$.",
+      "This eliminates the options with $T=\\pi$, so the domain of $g$ is $\\left[0,\\frac\\pi4\\right]$.",
+      "$f(x)=\\frac34+\\frac14\\cos4x$; for $x\\in\\left[0,\\frac\\pi4\\right]$ the angle $4x$ runs through $[0,\\pi]$, where $\\cos$ is strictly decreasing, so $g$ is strictly decreasing.",
+      "A strictly decreasing function is one-one: option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\sin^4x+\\cos^4x=\\frac34+\\frac14\\cos4x$ and $\\sin^6x+\\cos^6x=\\frac58+\\frac38\\cos4x$; both have fundamental period $\\frac{\\pi}{2}$ and range $\\left[\\frac12,1\\right]$ and $\\left[\\frac14,1\\right]$ respectively.",
+    "Even powers halve the period: $\\sin^2x$, $\\cos^2x$, $|\\sin x|$ have period $\\pi$, not $2\\pi$.",
+    "On a half-period of a $\\cos$-type function ($\\cos kx$ over $\\left[0,\\frac\\pi k\\right]$) the function is strictly monotonic, so it is one-one there.",
+    "A strictly monotonic function on an interval is one-one; the converse is false for discontinuous functions."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Counting reflexive-symmetric and equivalence relations on a set",
+    "Continuity and standard limits (series expansion)"
+   ],
+   "level": 2.5,
+   "question": "Let $S=\\{1,2,3\\}$. Let $a$ be the number of relations on $S$ that are both reflexive and symmetric, and let $b$ be the total number of equivalence relations on $S$. Consider the function $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=\\begin{cases}\\frac{e^{ax}-1-ax}{x^2},&x>0\\\\c,&x=0\\\\\\frac{1-\\cos(bx)}{x\\sin x}+d,&x<0\\end{cases}$. If $f(x)$ is continuous at $x=0$, then the value of $c+2d$ is equal to:",
+   "options": [
+    "$64$",
+    "$71$",
+    "$83$",
+    "$56$"
+   ],
+   "answer": "(B) $71$",
+   "key_idea": "Count $a=2^3=8$ (free choice for each unordered pair) and $b=5$ (partitions of a $3$-set); then right limit $=\\frac{a^2}{2}$ and left limit $=\\frac{b^2}{2}+d$.",
+   "solution": [
+    "Count $a$: a reflexive relation contains the diagonal pairs $(i,i)$; symmetry means each of the $\\frac{3(3-1)}{2}=3$ non-diagonal pairs $\\{i,j\\}$ has both $(i,j),(j,i)$ in $R$ or neither.",
+    "So $a=2^{\\frac{3(3-1)}{2}}=2^3=8$.",
+    "Count $b$: equivalence relations on $S$ correspond to partitions of $S$. Type $\\{1,2,3\\}$: $1$ way; type $\\{1,2\\},\\{3\\}$: $3$ ways; type $\\{1\\},\\{2\\},\\{3\\}$: $1$ way.",
+    "So $b=1+3+1=5$.",
+    "Right-hand limit: $\\lim_{x\\to0^+}f(x)=\\lim_{x\\to0^+}\\frac{e^{8x}-1-8x}{x^2}$. Using $e^{8x}=1+8x+\\frac{(8x)^2}{2!}+\\dots$, the limit is $\\frac{8^2}{2}=32$.",
+    "Left-hand limit: $\\lim_{x\\to0^-}f(x)=\\lim_{x\\to0^-}\\left(\\frac{1-\\cos5x}{x^2}\\cdot\\frac{x}{\\sin x}+d\\right)=\\frac{5^2}{2}\\cdot1+d=\\frac{25}{2}+d$.",
+    "Continuity at $0$: RHL $=$ LHL $=f(0)$, so $c=32$.",
+    "$\\frac{25}{2}+d=32\\Rightarrow2d=64-25=39$.",
+    "Thus $c+2d=32+39=71$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the standard limits $\\frac{e^t-1-t}{t^2}\\to\\frac12$ and $\\frac{1-\\cos u}{u^2}\\to\\frac12$ (or L'Hopital), and count equivalence relations with the Bell recurrence.",
+     "solution": [
+      "Bell recurrence: $B_{n+1}=\\sum_{k=0}^{n}\\binom nkB_k$ with $B_0=B_1=1$, so $B_2=1+1=2$ and $b=B_3=\\binom20B_0+\\binom21B_1+\\binom22B_2=1+2+2=5$; and $a=2^{\\binom32}=8$.",
+      "Right limit: with $t=8x$, $\\frac{e^{8x}-1-8x}{x^2}=64\\cdot\\frac{e^t-1-t}{t^2}\\to64\\cdot\\frac12=32$.",
+      "Left limit: $\\frac{1-\\cos5x}{x\\sin x}=\\frac{1-\\cos5x}{(5x)^2}\\cdot25\\cdot\\frac{x}{\\sin x}\\to\\frac12\\cdot25\\cdot1=\\frac{25}{2}$.",
+      "Continuity: $c=32$ and $32=\\frac{25}{2}+d\\Rightarrow d=\\frac{39}{2}$.",
+      "$c+2d=32+39=71$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "On an $n$-element set: number of equivalence relations is the Bell number $B_n$: $1,2,5,15,52,\\dots$ for $n=1,2,3,4,5$.",
+    "Reflexive and symmetric relations on $n$ elements: $2^{n(n-1)/2}$ (here $8$ for $n=3$).",
+    "$\\lim_{x\\to0}\\frac{e^{kx}-1-kx}{x^2}=\\frac{k^2}{2}$ and $\\lim_{x\\to0}\\frac{1-\\cos kx}{x^2}=\\frac{k^2}{2}$.",
+    "$\\lim_{x\\to0}\\frac{1-\\cos kx}{x\\sin x}=\\frac{k^2}{2}$; continuity at $0$ means both one-sided limits equal $f(0)$."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Fundamental period of a sum of trigonometric functions",
+    "Domain of a relation"
+   ],
+   "level": 2,
+   "question": "Let $T$ be the fundamental period of the function $f(x)=\\sin\\left(\\frac{\\pi x}{4}\\right)+\\cos\\left(\\frac{\\pi x}{3}\\right)$. A relation $R$ is defined on the set $A=\\{1,2,3,\\dots,T\\}$ by $R=\\{(x,y)\\in A\\times A:x+3y=T\\}$. Then the number of elements in the domain of $R$ is:",
+   "options": [
+    "$6$",
+    "$7$",
+    "$8$",
+    "$24$"
+   ],
+   "answer": "(B) $7$",
+   "key_idea": "$T=\\operatorname{lcm}(8,6)=24$; then $x=24-3y$ with $x,y\\in\\{1,\\dots,24\\}$ restricts $y$ to $1,\\dots,7$.",
+   "solution": [
+    "Period of $\\sin\\left(\\frac{\\pi x}{4}\\right)$ is $T_1=\\frac{2\\pi}{\\pi/4}=8$.",
+    "Period of $\\cos\\left(\\frac{\\pi x}{3}\\right)$ is $T_2=\\frac{2\\pi}{\\pi/3}=6$.",
+    "The fundamental period of $f$ is $T=\\operatorname{LCM}(8,6)=24$, so $A=\\{1,2,3,\\dots,24\\}$.",
+    "The relation is $R=\\{(x,y)\\in A\\times A:x+3y=24\\}$, i.e. $x=24-3y$.",
+    "Since $x\\in A$: $1\\le24-3y\\le24\\Rightarrow0\\le3y\\le23$, and since $y\\in A$ means $y\\ge1$, $y\\in\\{1,2,3,4,5,6,7\\}$.",
+    "The corresponding values of $x$: $y=1\\Rightarrow x=21$; $y=2\\Rightarrow x=18$; $y=3\\Rightarrow x=15$; $y=4\\Rightarrow x=12$; $y=5\\Rightarrow x=9$; $y=6\\Rightarrow x=6$; $y=7\\Rightarrow x=3$.",
+    "The domain of $R$ is the set of first elements: $\\{3,6,9,12,15,18,21\\}$.",
+    "The number of elements in the domain of $R$ is $7$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Read the domain by divisibility: $x=24-3y$ forces $3\\mid x$, and $y\\in A$ pins down the range of $x$.",
+     "solution": [
+      "As before $T=24$ and $A=\\{1,\\dots,24\\}$.",
+      "$x+3y=24\\Rightarrow x=24-3y\\equiv0\\pmod3$, so every first coordinate is a multiple of $3$.",
+      "Conversely for each multiple of $3$, $x=3m$ in $A$, $y=\\frac{24-x}{3}=8-m$ is an integer; it lies in $A$ iff $y\\ge1$, i.e. $m\\le7$ (and $y\\le24$ always).",
+      "So the domain is $\\{3m:1\\le m\\le7\\}=\\{3,6,\\dots,21\\}$, which has $7$ elements."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Period of $\\sin(ax)$ or $\\cos(ax)$ is $\\frac{2\\pi}{|a|}$; for a sum, a period is the LCM of the periods (and it is the fundamental one unless special cancellation occurs). With periods $8$ and $6$ the LCM is $24$.",
+    "Domain of a relation $\\{(x,y):px+qy=n\\}$ on $\\{1,\\dots,N\\}$: solve for one variable, impose both ranges, and the domain is an arithmetic progression (here with common difference $3$).",
+    "Always intersect the conditions for both coordinates ($x\\in A$ and $y\\in A$), not just one."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Non-differentiability of a maximum function and of $f(|x|)$"
+   ],
+   "level": 3,
+   "question": "Let $f(x)=\\max\\{|x-2|,\\ x^2-4\\}$ for all $x\\in\\mathbb{R}$. If $L=\\lim_{x\\to2^-}\\frac{f(x)-f(2)}{x-2}$ and $R=\\lim_{x\\to2^+}\\frac{f(x)-f(2)}{x-2}$, and $N$ denotes the total number of points in $\\mathbb{R}$ where the composite function $g(x)=f(|x|)$ is not differentiable, then find the value of $(R-L)+N$.",
+   "answer": "8",
+   "key_idea": "$f(x)=2-x$ on $(-3,2)$ and $x^2-4$ elsewhere, so $f$ has a corner at $x=2$ (slopes $-1$ and $4$); $f(|x|)$ inherits corners at $\\pm2$ and adds one at $0$.",
+   "solution": [
+    "Compare $|x-2|$ and $x^2-4$. For $x\\in(-3,2)$: $x^2-4<2-x=|x-2|$, so $f(x)=2-x$.",
+    "For $x\\ge2$: $x^2-4\\ge x-2=|x-2|$, so $f(x)=x^2-4$. For $x\\le-3$: $x^2-4\\ge2-x=|x-2|$, so $f(x)=x^2-4$.",
+    "Hence $f(2)=0$.",
+    "Left-hand limit: $L=\\lim_{x\\to2^-}\\frac{(2-x)-0}{x-2}=-1$.",
+    "Right-hand limit: $R=\\lim_{x\\to2^+}\\frac{(x^2-4)-0}{x-2}=\\lim_{x\\to2^+}(x+2)=4$.",
+    "Thus $R-L=4-(-1)=5$.",
+    "Next $g(x)=f(|x|)$. For $0\\le|x|<2$, i.e. $x\\in(-2,2)$, $g(x)=2-|x|$. For $|x|\\ge2$, i.e. $x\\le-2$ or $x\\ge2$, $g(x)=|x|^2-4=x^2-4$.",
+    "Explicitly $g(x)=x^2-4$ for $x\\le-2$; $2+x$ for $-2<x<0$; $2-x$ for $0\\le x<2$; $x^2-4$ for $x\\ge2$.",
+    "At $x=-2$: left derivative $=-4$, right derivative $=1$, so non-differentiable.",
+    "At $x=0$: left derivative $=1$, right derivative $=-1$, so non-differentiable.",
+    "At $x=2$: left derivative $=-1$, right derivative $=4$, so non-differentiable.",
+    "$g$ is differentiable at all other points, so $N=3$.",
+    "Finally $(R-L)+N=5+3=8$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rule for $f(|x|)$: it is non-differentiable at $\\pm p$ for each corner $p>0$ of $f$, and at $0$ iff $f'(0^+)\\ne0$.",
+     "solution": [
+      "Slopes at $x=2$: just left, $f=|x-2|=2-x$ has slope $-1$; just right, $f=x^2-4$ has slope $2x=4$. So $L=-1$, $R=4$, $R-L=5$.",
+      "Corners of $f$: where the active branch changes or $|x-2|$ is active at its own corner, i.e. $x=2$ and the crossing $x=-3$ (where $2-x=x^2-4$).",
+      "$g(x)=f(|x|)$ only uses $f$ on $[0,\\infty)$, so only the corner $x=2$ of $f$ is seen, and it is seen at both $x=2$ and (by evenness) $x=-2$.",
+      "At $x=0$: $g$ is even, so it is differentiable at $0$ iff $f'(0^+)=0$; but $f(x)=2-x$ near $0^+$, so $f'(0^+)=-1\\ne0$ and $g$ has a corner at $0$.",
+      "Thus $N=|\\{-2,0,2\\}|=3$ and $(R-L)+N=5+3=8$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(|x|)$ is even; it is differentiable at $0$ iff $f'(0^+)=0$ (for $f$ differentiable from the right at $0$), and its other corners are the mirror images of the corners of $f$ on $x>0$.",
+    "$\\max\\{p,q\\}$ switches branch where $p=q$ and has a corner there unless the two branches meet with equal slope; a branch like $|x-2|$ also contributes its own corner when it is the active branch.",
+    "The corners of $f(x)=\\max\\{|x-2|,x^2-4\\}$ are at $x=2$ (slope $-1\\to4$) and $x=-3$ (slope $-6\\to-1$); only the first one matters for $f(|x|)$."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Domain of a function involving piecewise-defined functions"
+   ],
+   "level": 2,
+   "question": "Let $f(x)$ and $g(x)$ be defined as $f(x)=\\begin{cases}2-x,&x<1\\\\x^2-2x+3,&x\\ge1\\end{cases}$ and $g(x)=\\begin{cases}x+3,&-4\\le x\\le2\\\\7-x,&2<x\\le6\\end{cases}$. If $D$ is the domain of the function $h(x)=\\frac{\\sqrt{f(x)-2}}{g(x)-3}$, then the number of integers contained in $D$ is equal to ______.",
+   "answer": "9",
+   "key_idea": "$h$ needs $x\\in[-4,6]$, $f(x)\\ge2$ and $g(x)\\ne3$ simultaneously.",
+   "solution": [
+    "$x$ must lie in the domain of $g$, which is $[-4,6]$.",
+    "The numerator requires $f(x)-2\\ge0\\Rightarrow f(x)\\ge2$.",
+    "For $x<1$: $2-x\\ge2\\Rightarrow x\\le0$.",
+    "For $x\\ge1$: $x^2-2x+3\\ge2\\Rightarrow(x-1)^2\\ge0$, which holds for all $x\\ge1$.",
+    "So $f(x)\\ge2\\Rightarrow x\\in(-\\infty,0]\\cup[1,\\infty)$.",
+    "The denominator requires $g(x)-3\\ne0\\Rightarrow g(x)\\ne3$.",
+    "For $-4\\le x\\le2$: $x+3\\ne3\\Rightarrow x\\ne0$. For $2<x\\le6$: $7-x\\ne3\\Rightarrow x\\ne4$. So $x\\ne0$ and $x\\ne4$.",
+    "Intersecting all conditions: $D=[-4,6]\\cap\\left((-\\infty,0]\\cup[1,\\infty)\\right)\\setminus\\{0,4\\}=[-4,0)\\cup[1,4)\\cup(4,6]$.",
+    "Integers in $D$: $-4,-3,-2,-1,1,2,3,5,6$.",
+    "The total number of integers is $9$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Test the $11$ integers $-4,\\dots,6$ directly: the only integers in the gap $0<x<1$ of $f\\ge2$ do not exist, so only the zeros of $g-3$ remove integers.",
+     "solution": [
+      "Integers in the domain of $g$: $-4,-3,\\dots,6$, which are $11$ integers.",
+      "$f(x)\\ge2$ fails only for $0<x<1$, which contains no integer; so every one of the $11$ integers satisfies $f(n)\\ge2$ (check: $n\\le0\\Rightarrow2-n\\ge2$; $n\\ge1\\Rightarrow(n-1)^2+2\\ge2$).",
+      "$g(n)=3$ for $n=0$ (first piece, $0+3$) and $n=4$ (second piece, $7-4$); these two integers make the denominator zero.",
+      "Number of integers in $D$: $11-2=9$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Domain of $\\frac{\\sqrt{u}}{v}$: $u\\ge0$ and $v\\ne0$ (and the points must also lie in the domains of the inner functions $f,g$).",
+    "With piecewise inner functions, solve each condition piece by piece and intersect with that piece's own interval.",
+    "When only the number of integers in a domain is asked, test the integers of the allowed interval rather than describing the whole set."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits involving greatest integer and fractional part functions with series expansion"
+   ],
+   "level": 3,
+   "question": "Evaluate the value of the limit $L=\\lim_{x\\to0^+}\\dfrac{24\\left(e^x-1-x-\\frac{x^2}{2}\\right)-4x^3\\left\\lfloor\\frac{\\tan x}{x}\\right\\rfloor+2x^4\\left\\lfloor1+\\frac{\\sin x}{x}\\right\\rfloor}{x^3\\{x\\}}$ where $\\lfloor\\cdot\\rfloor$ denotes the greatest integer function and $\\{\\cdot\\}$ denotes the fractional part function.",
+   "answer": "3",
+   "key_idea": "For small $x>0$ both floors equal $1$ and $\\{x\\}=x$; the $x^3$ terms cancel, leaving $3x^4$ over $x^4$.",
+   "solution": [
+    "For $x\\in\\left(0,\\frac\\pi2\\right)$: $\\{x\\}=x$.",
+    "$\\tan x>x\\Rightarrow\\frac{\\tan x}{x}>1$, so $\\left\\lfloor\\frac{\\tan x}{x}\\right\\rfloor=1$ (for small $x$, $\\frac{\\tan x}{x}<2$).",
+    "$\\sin x<x\\Rightarrow0<\\frac{\\sin x}{x}<1\\Rightarrow1<1+\\frac{\\sin x}{x}<2$, so $\\left\\lfloor1+\\frac{\\sin x}{x}\\right\\rfloor=1$.",
+    "Maclaurin series: $e^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}+\\frac{x^4}{24}+O(x^5)$.",
+    "Numerator $N(x)=24\\left(\\frac{x^3}{6}+\\frac{x^4}{24}+O(x^5)\\right)-4x^3(1)+2x^4(1)$.",
+    "$N(x)=\\left(4x^3+x^4+O(x^5)\\right)-4x^3+2x^4=3x^4+O(x^5)$.",
+    "Denominator $D(x)=x^3\\cdot x=x^4$.",
+    "$L=\\lim_{x\\to0^+}\\frac{3x^4+O(x^5)}{x^4}=3$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "After replacing the floors by $1$ and $\\{x\\}$ by $x$, apply L'Hopital four times (no series needed).",
+     "solution": [
+      "As before, near $0^+$: both floors are $1$ and $\\{x\\}=x$, so $L=\\lim_{x\\to0^+}\\frac{N(x)}{x^4}$ with $N(x)=24\\left(e^x-1-x-\\frac{x^2}{2}\\right)-4x^3+2x^4$; $N(0)=0$.",
+      "$N'(x)=24\\left(e^x-1-x\\right)-12x^2+8x^3$, $N'(0)=0$.",
+      "$N''(x)=24\\left(e^x-1\\right)-24x+24x^2$, $N''(0)=0$.",
+      "$N'''(x)=24e^x-24+48x$, $N'''(0)=0$.",
+      "$N^{(4)}(x)=24e^x+48$, so $N^{(4)}(0)=72$, while $\\frac{d^4}{dx^4}x^4=24$.",
+      "Applying L'Hopital four times, $L=\\frac{72}{24}=3$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For $0<x<\\frac{\\pi}{2}$: $\\sin x<x<\\tan x$, so $\\left\\lfloor\\frac{\\tan x}{x}\\right\\rfloor=1$ for small $x$, $\\left\\lfloor\\frac{\\sin x}{x}\\right\\rfloor=0$ and $\\left\\lfloor1+\\frac{\\sin x}{x}\\right\\rfloor=1$.",
+    "$e^x-1-x-\\frac{x^2}{2}\\sim\\frac{x^3}{6}$ and $e^x-1-x-\\frac{x^2}{2}-\\frac{x^3}{6}\\sim\\frac{x^4}{24}$ as $x\\to0$; when leading terms cancel, carry one more order of the series.",
+    "Near $0^+$, $\\{x\\}=x$ (and $\\{x\\}=x+1$ near $0^-$, since $\\lfloor x\\rfloor=-1$ there) - the one-sided limit matters."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of a function involving $[x]$ and $\\{x\\}$",
+    "Difference of inverse tangents"
+   ],
+   "level": 3,
+   "question": "Let $f:(0,6)\\to\\mathbb{R}$ be a function defined by $f(x)=\\tan^{-1}(x)-\\tan^{-1}([x])-\\tan^{-1}(\\{x\\})$ where $[\\cdot]$ denotes the greatest integer function and $\\{\\cdot\\}$ denotes the fractional part function. If $N$ is the total number of points in the open interval $(0,6)$ at which $f(x)$ is not differentiable, then the value of $N$ is equal to ______.",
+   "answer": "5",
+   "key_idea": "Inside $(k,k+1)$, $f$ is smooth; at an integer $k\\ge2$ the left limit is $\\tan^{-1}\\frac{1}{1+k(k-1)}-\\frac\\pi4\\ne0$, a jump, while at $k=1$ $f$ is continuous but has a corner.",
+   "solution": [
+    "For an integer $k\\in\\{0,1,2,3,4,5\\}$ and $x\\in(k,k+1)$: $[x]=k$ and $\\{x\\}=x-k$.",
+    "So $f(x)=\\tan^{-1}(x)-\\tan^{-1}(k)-\\tan^{-1}(x-k)$, which is smooth on every open interval $(k,k+1)$.",
+    "Hence non-differentiability can occur only at $x\\in\\{1,2,3,4,5\\}$.",
+    "At $x=1$: left-hand limit $\\lim_{x\\to1^-}f(x)=\\lim\\left(\\tan^{-1}x-\\tan^{-1}0-\\tan^{-1}x\\right)=0$.",
+    "Right-hand limit $\\lim_{x\\to1^+}f(x)=\\tan^{-1}1-\\tan^{-1}1-\\tan^{-1}0=0$, and $f(1)=\\tan^{-1}1-\\tan^{-1}1-\\tan^{-1}0=0$.",
+    "So $f$ is continuous at $x=1$. Left derivative: on $(0,1)$ $f\\equiv0$, so $f'(1^-)=0$.",
+    "Right derivative: $f'(1^+)=\\lim_{x\\to1^+}\\left(\\frac{1}{1+x^2}-\\frac{1}{1+(x-1)^2}\\right)=\\frac12-1=-\\frac12$.",
+    "Since $f'(1^-)\\ne f'(1^+)$, $f$ is not differentiable at $x=1$.",
+    "At $x=k\\in\\{2,3,4,5\\}$: left-hand limit $\\lim_{x\\to k^-}f(x)=\\tan^{-1}k-\\tan^{-1}(k-1)-\\tan^{-1}1=\\tan^{-1}\\left(\\frac{1}{1+k(k-1)}\\right)-\\frac\\pi4$.",
+    "Since $k(k-1)>0$ for $k\\ge2$, $\\frac{1}{1+k(k-1)}<1$, so $\\tan^{-1}\\left(\\frac{1}{1+k(k-1)}\\right)\\ne\\frac\\pi4$ and the left-hand limit is not $0$.",
+    "The right-hand limit is $\\lim_{x\\to k^+}f(x)=\\tan^{-1}k-\\tan^{-1}k-\\tan^{-1}0=0$, so $f$ is discontinuous at $x=2,3,4,5$ and hence not differentiable there ($4$ points).",
+    "Total number of points of non-differentiability: $N=1+4=5$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "On each interval $(k,k+1)$ the functions $[x]$ and $\\{x\\}$ are smooth ($[x]=k$, $\\{x\\}=x-k$); problems about $[x]$, $\\{x\\}$ reduce to checking the integers only.",
+    "$\\tan^{-1}a-\\tan^{-1}b=\\tan^{-1}\\frac{a-b}{1+ab}$ for $ab>-1$; here $\\tan^{-1}k-\\tan^{-1}(k-1)=\\tan^{-1}\\frac{1}{1+k(k-1)}$.",
+    "A discontinuity automatically means non-differentiability, so check continuity first and test one-sided derivatives only at the points where the function is continuous.",
+    "Instance: the exceptional integer $x=1$ is continuous because $\\tan^{-1}\\frac{1}{1+0}=\\frac\\pi4$ exactly cancels the $-\\frac\\pi4$."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Non-differentiability of modulus and composite functions",
+    "Telescoping sum of inverse tangents"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\max\\{\\tan^{-1}x,\\ -\\tan^{-1}x\\}$. Consider the function $g(x)=f(|x|-1)$. If $N$ denotes the total number of points in $\\mathbb{R}$ where $g(x)$ is non-differentiable, and $S=\\sum_{r=1}^{N}\\tan^{-1}\\left(\\frac{1}{r^2+r+1}\\right)$, then find the value of $100\\tan(S)$.",
+   "answer": "60",
+   "key_idea": "$f=|\\tan^{-1}x|$, so $g=|\\tan^{-1}(|x|-1)|$ has corners at $x=0$ and $x=\\pm1$; then $\\tan^{-1}\\frac{1}{r^2+r+1}=\\tan^{-1}(r+1)-\\tan^{-1}r$ telescopes.",
+   "solution": [
+    "$f(x)=\\max\\{\\tan^{-1}x,-\\tan^{-1}x\\}=|\\tan^{-1}x|$.",
+    "$g(x)=f(|x|-1)=\\left|\\tan^{-1}(|x|-1)\\right|$.",
+    "The inner $|x|$ has a corner at $x=0$; since $\\tan^{-1}(|0|-1)=-\\frac\\pi4\\ne0$, the outer modulus does not smooth it, so the corner at $x=0$ persists.",
+    "The outer modulus $|\\tan^{-1}u|$ creates non-differentiable points where $u=0$, i.e. $|x|-1=0\\Rightarrow x=\\pm1$.",
+    "At $x=1$: $g'(1^+)=1$ and $g'(1^-)=-1$, so non-differentiable. At $x=-1$: $g'(-1^+)=1$ and $g'(-1^-)=-1$, so non-differentiable.",
+    "At $x=0$: $g'(0^+)=-\\frac12$ and $g'(0^-)=\\frac12$, so non-differentiable.",
+    "Thus $g$ is non-differentiable exactly at $x\\in\\{-1,0,1\\}$, and $N=3$.",
+    "$S=\\sum_{r=1}^{3}\\tan^{-1}\\left(\\frac{1}{r^2+r+1}\\right)$.",
+    "Using $\\tan^{-1}\\left(\\frac{1}{r^2+r+1}\\right)=\\tan^{-1}(r+1)-\\tan^{-1}r$: $S=\\sum_{r=1}^{3}\\left(\\tan^{-1}(r+1)-\\tan^{-1}r\\right)=\\tan^{-1}4-\\tan^{-1}1$.",
+    "$\\tan S=\\tan\\left(\\tan^{-1}4-\\tan^{-1}1\\right)=\\frac{4-1}{1+4\\cdot1}=\\frac35$.",
+    "$100\\tan S=100\\times\\frac35=60$."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "Minor: the PDF gives the one-sided slopes of g at x=0 as -1 and +1. The correct values are g'(0+) = -1/(1+(0-1)^2) = -1/2 and g'(0-) = +1/2 (the slopes at x=+-1 are indeed +-1). The slopes still differ in sign, so x=0 is still a point of non-differentiability; N=3 and the answer 60 are unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Add the three angles directly with the tangent addition formula, with no telescoping identity needed.",
+     "solution": [
+      "$N=3$ as above (corners of $g=\\left|\\tan^{-1}(|x|-1)\\right|$ at $0,\\pm1$).",
+      "$S=\\tan^{-1}\\frac13+\\tan^{-1}\\frac17+\\tan^{-1}\\frac1{13}$ (the terms for $r=1,2,3$: $r^2+r+1=3,7,13$).",
+      "$\\tan\\left(\\tan^{-1}\\frac13+\\tan^{-1}\\frac17\\right)=\\frac{\\frac13+\\frac17}{1-\\frac1{21}}=\\frac{10/21}{20/21}=\\frac12$.",
+      "Adding the third angle: $\\tan S=\\frac{\\frac12+\\frac1{13}}{1-\\frac12\\cdot\\frac1{13}}=\\frac{15/26}{25/26}=\\frac35$ (the product of tangents is below $1$, so the addition formula is valid).",
+      "$100\\tan S=60$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\max\\{u,-u\\}=|u|$. For $\\left|\\phi(|x|)\\right|$ the corners are at the zeros of $\\phi(|x|)$ (where $\\phi'\\ne0$) and at $x=0$ whenever $\\phi(0)\\ne0$ and $\\phi'(0^+)\\ne0$.",
+    "$\\tan^{-1}\\frac{1}{r^2+r+1}=\\tan^{-1}(r+1)-\\tan^{-1}r$, since $\\frac{(r+1)-r}{1+r(r+1)}=\\frac{1}{r^2+r+1}$; hence $\\sum_{r=1}^{n}\\tan^{-1}\\frac{1}{r^2+r+1}=\\tan^{-1}(n+1)-\\tan^{-1}1=\\tan^{-1}\\frac{n}{n+2}$.",
+    "Instance: $n=3$ gives $\\tan S=\\frac35$. More generally the sum equals $\\tan^{-1}\\frac{n}{n+2}$ for every $n$ (checked for $n=1,2,3$).",
+    "$\\tan^{-1}\\frac{1}{1+r(r+1)}$-type terms ($\\tan^{-1}\\frac{d}{1+a(a+d)}=\\tan^{-1}(a+d)-\\tan^{-1}a$) always telescope."
+   ]
+  }
+ ]
+}
