@@ -1,0 +1,1100 @@
+{
+ "title": "RPT 03 — Paper Analysis",
+ "subtitle": "Paper 01 · JEE Main · detailed solutions",
+ "source": "papers/RPT 03 Paper 01 JEE Main.pdf (solutions as printed in the PDF); no blueprint",
+ "paper_name": "RPT 03 Paper 01",
+ "sections": [
+  {
+   "title": "Single Correct Type",
+   "from": 1,
+   "to": 20,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  },
+  {
+   "title": "Numerical Type",
+   "from": 21,
+   "to": 25,
+   "marking": [
+    "Marks not printed in the paper: JEE Advanced default of 4 per question assumed"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "q_no": 1,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Absolute extrema on a closed interval and point of inflection"
+   ],
+   "level": 2,
+   "question": "Let $f:[0,3]\\to\\mathbb{R}$ be a function defined by $f(x)=2x^3-9x^2+12x+1$. Let $M$ and $m$ be the absolute maximum and absolute minimum values of $f(x)$ on $[0,3]$, respectively. If $(x_0,y_0)$ is the point of inflection on the graph of $y=f(x)$, then the value of $M+m+x_0+y_0$ is equal to:",
+   "options": [
+    "$16$",
+    "$18$",
+    "$20$",
+    "$22$"
+   ],
+   "answer": "(B) $18$",
+   "key_idea": "On a closed interval compare the critical-point values with the end-point values; the inflection point is where $f''$ changes sign.",
+   "solution": [
+    "$f'(x)=6x^2-18x+12=6(x-1)(x-2)$.",
+    "Critical points in $[0,3]$ are $x=1$ and $x=2$.",
+    "$f(0)=1,\\ f(1)=6,\\ f(2)=5,\\ f(3)=10$.",
+    "Thus the absolute maximum is $M=10$ and the absolute minimum is $m=1$.",
+    "$f''(x)=12x-18$; setting $f''(x)=0$ gives $x_0=\\frac{3}{2}$.",
+    "Since $f''(x)$ changes sign across $x=\\frac{3}{2}$, $(x_0,y_0)$ is a point of inflection.",
+    "$y_0=f\\left(\\frac{3}{2}\\right)=2\\left(\\frac{27}{8}\\right)-9\\left(\\frac{9}{4}\\right)+12\\left(\\frac{3}{2}\\right)+1=\\frac{11}{2}$.",
+    "$M+m+x_0+y_0=10+1+\\frac{3}{2}+\\frac{11}{2}=11+7=18$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "A cubic is point-symmetric about its inflection point, and $[0,3]$ is symmetric about $x_0=\\frac{3}{2}$, so $M+m=2y_0$.",
+     "solution": [
+      "Put $x=\\frac{3}{2}+u$: $f=2u^3-\\frac{3}{2}u+\\frac{11}{2}$, an odd function of $u$ plus the constant $\\frac{11}{2}$.",
+      "Hence $f\\left(\\frac{3}{2}+u\\right)+f\\left(\\frac{3}{2}-u\\right)=11$: the graph is symmetric about its inflection point $\\left(\\frac{3}{2},\\frac{11}{2}\\right)$, so $x_0=\\frac{3}{2}$, $y_0=\\frac{11}{2}$.",
+      "The interval $[0,3]$ is symmetric about $x_0=\\frac{3}{2}$, so the point reflection maps the graph on $[0,3]$ onto itself and swaps its highest and lowest points.",
+      "Therefore $M+m=2y_0=11$ (no need to evaluate $f$ at the critical points).",
+      "$M+m+x_0+y_0=3y_0+x_0=\\frac{33}{2}+\\frac{3}{2}=18$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Every cubic $ax^3+bx^2+cx+d$ is point-symmetric about its inflection point $x_0=-\\frac{b}{3a}$: $f(x_0+u)+f(x_0-u)=2y_0$.",
+    "For a cubic on an interval symmetric about $x_0$, the absolute maximum and minimum are reflections of each other, so $M+m=2y_0$.",
+    "Absolute extrema on $[a,b]$: compare $f$ at the end points and at the critical points; a critical point is not automatically an extremum of the interval."
+   ]
+  },
+  {
+   "q_no": 2,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limit of the form $0^0$",
+    "Intermediate Value Theorem"
+   ],
+   "level": 2,
+   "question": "Let $L=\\lim_{x\\to0^+}(\\sin x)^x$. Consider the function $f:\\left[0,\\frac{\\pi}{2}\\right]\\to\\mathbb{R}$ defined by $f(x)=\\begin{cases}(\\sin x)^x,&x\\in\\left(0,\\frac{\\pi}{2}\\right]\\\\L,&x=0\\end{cases}$. If $g(x)=f(x)-x-\\frac{1}{2}$, then the equation $g(x)=0$ has:",
+   "options": [
+    "no root in the interval $\\left(0,\\frac{\\pi}{2}\\right)$",
+    "no root in the interval $\\left[0,\\frac{\\pi}{2}\\right]$",
+    "exactly two roots in the interval $\\left(\\frac{\\pi}{2},\\pi\\right)$",
+    "at least one root in the interval $\\left(0,\\frac{\\pi}{2}\\right)$"
+   ],
+   "answer": "(D) at least one root in the interval $\\left(0,\\frac{\\pi}{2}\\right)$",
+   "key_idea": "$L=1$ makes $f$ continuous at $0$, so $g$ changes sign on $\\left[0,\\frac{\\pi}{2}\\right]$ and the Intermediate Value Theorem gives a root.",
+   "solution": [
+    "$\\ln L=\\lim_{x\\to0^+}x\\ln(\\sin x)=\\lim_{x\\to0^+}\\frac{\\ln(\\sin x)}{\\frac{1}{x}}$, which is of the form $\\frac{\\infty}{\\infty}$.",
+    "By L'Hopital's rule $\\ln L=\\lim_{x\\to0^+}\\frac{\\cot x}{-\\frac{1}{x^2}}=-\\lim_{x\\to0^+}\\frac{x^2}{\\tan x}=0\\Rightarrow L=e^0=1$.",
+    "Thus $f(0)=1=\\lim_{x\\to0^+}f(x)$, so $f$ is continuous at $x=0$ and hence on the closed interval $\\left[0,\\frac{\\pi}{2}\\right]$.",
+    "The function $g(x)=f(x)-x-\\frac{1}{2}$ is also continuous on $\\left[0,\\frac{\\pi}{2}\\right]$.",
+    "$g(0)=f(0)-0-\\frac{1}{2}=1-\\frac{1}{2}=\\frac{1}{2}>0$.",
+    "$g\\left(\\frac{\\pi}{2}\\right)=\\left(\\sin\\frac{\\pi}{2}\\right)^{\\pi/2}-\\frac{\\pi}{2}-\\frac{1}{2}=1-\\frac{\\pi}{2}-\\frac{1}{2}=\\frac{1-\\pi}{2}<0$.",
+    "Since $g(0)\\cdot g\\left(\\frac{\\pi}{2}\\right)<0$ and $g$ is continuous on $\\left[0,\\frac{\\pi}{2}\\right]$, by the Intermediate Value Theorem there is at least one $c\\in\\left(0,\\frac{\\pi}{2}\\right)$ with $g(c)=0$.",
+    "Options (A) and (B) are therefore false, and (C) is meaningless because $f$ is defined only on $\\left[0,\\frac{\\pi}{2}\\right]$. Option (D)."
+   ],
+   "solution_source": "corrected",
+   "correction_note": "The PDF writes the limit as $x\\to0^-$ in the first two lines of the limit computation; $(\\sin x)^x$ is defined only for $x>0$ near $0$, so the limit is one-sided $x\\to0^+$ (corrected in the working). Values and answer (D) unchanged.",
+   "alternate_solutions": [
+    {
+     "idea": "Evaluate the limit with the standard limit $x\\ln x\\to0$ instead of L'Hopital, then bracket a root with an explicit interior point.",
+     "solution": [
+      "$\\ln\\sin x=\\ln x+\\ln\\frac{\\sin x}{x}$ and $\\frac{\\sin x}{x}\\to1$, so $x\\ln\\sin x=x\\ln x+x\\ln\\frac{\\sin x}{x}\\to0+0$.",
+      "Hence $L=e^0=1$ and $f(0)=1$, so $f$ is continuous on $\\left[0,\\frac{\\pi}{2}\\right]$.",
+      "Take the interior point $x=1\\in\\left(0,\\frac{\\pi}{2}\\right)$: $g(1)=\\sin1-1-\\frac{1}{2}<0$ because $\\sin1<1$.",
+      "With $g(0)=\\frac{1}{2}>0$, the sign change on $[0,1]\\subset\\left(0,\\frac{\\pi}{2}\\right]$ and continuity give a root in $(0,1)$, which lies in $\\left(0,\\frac{\\pi}{2}\\right)$.",
+      "So option (D) holds."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Indeterminate powers: $\\lim_{x\\to0^+}x^x=1$, $\\lim_{x\\to0^+}(\\sin x)^x=1$, $\\lim_{x\\to0^+}x^{\\sin x}=1$; in general $\\lim x\\ln x=0$ and $\\lim x^a\\ln x=0$ for $a>0$.",
+    "IVT recipe: a continuous $g$ on $[a,b]$ with $g(a)g(b)<0$ has a root in $(a,b)$ - first redefine or check continuity at a removable point such as $x=0$.",
+    "Any option that quotes an interval outside the stated domain of $f$ can be discarded at once."
+   ]
+  },
+  {
+   "q_no": 3,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Types of discontinuity"
+   ],
+   "level": 1,
+   "question": "Let $y=f(x)$ be a continuous function defined on $\\mathbb{R}$. For all $x\\neq2$, the slope of the tangent to the curve $y=f(x)$ at the point $(x,f(x))$ is given by $g(x)=\\frac{x^2-4}{|x-2|}$. The type of discontinuity possessed by the slope function $g(x)$ at $x=2$ is:",
+   "options": [
+    "Removable discontinuity",
+    "Jump discontinuity",
+    "Infinite discontinuity",
+    "Oscillatory discontinuity"
+   ],
+   "answer": "(B) Jump discontinuity",
+   "key_idea": "Split $|x-2|$ on the two sides of $2$ and compare the finite one-sided limits.",
+   "solution": [
+    "$g(x)=\\frac{(x-2)(x+2)}{|x-2|}$ for $x\\neq2$.",
+    "RHL $=\\lim_{x\\to2^+}g(x)=\\lim_{x\\to2^+}\\frac{(x-2)(x+2)}{x-2}=\\lim_{x\\to2^+}(x+2)=4$.",
+    "LHL $=\\lim_{x\\to2^-}g(x)=\\lim_{x\\to2^-}\\frac{(x-2)(x+2)}{-(x-2)}=\\lim_{x\\to2^-}-(x+2)=-4$.",
+    "Both LHL and RHL exist and are finite but unequal (LHL $\\neq$ RHL), so $g(x)$ has a jump discontinuity (non-removable, first kind) at $x=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $g(x)=(x+2)\\,\\mathrm{sgn}(x-2)$: a continuous factor times the sign function, so the jump is read off directly.",
+     "solution": [
+      "For $x\\neq2$, $\\frac{x-2}{|x-2|}=\\mathrm{sgn}(x-2)$, so $g(x)=(x+2)\\,\\mathrm{sgn}(x-2)$.",
+      "The factor $x+2$ is continuous and equals $4\\neq0$ at $x=2$.",
+      "$\\mathrm{sgn}(x-2)$ jumps from $-1$ to $+1$ at $x=2$, so $g$ jumps from $-4$ to $4$ (a jump of size $8$).",
+      "Finite unequal one-sided limits: a jump discontinuity, option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\frac{x^2-a^2}{|x-a|}=(x+a)\\,\\mathrm{sgn}(x-a)$: in general $h(x)\\,\\mathrm{sgn}(x-a)$ with $h$ continuous has a jump of size $2|h(a)|$ at $a$ when $h(a)\\neq0$, and is continuous (value $0$ taken as the limit) only when $h(a)=0$.",
+    "Classification: removable (limit exists, differs from value or value missing), jump (both one-sided limits finite and unequal), infinite (a one-sided limit is $\\pm\\infty$), oscillatory (no limit, e.g. $\\sin\\frac{1}{x}$).",
+    "A removable discontinuity is never a jump: check one-sided limits before naming the type."
+   ]
+  },
+  {
+   "q_no": 4,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Functional equation and derivative from first principles",
+    "Derivative of an inverse function"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a differentiable function satisfying $f(x+y)=f(x)+f(y)+3xy(x+y)$ for all $x,y\\in\\mathbb{R}$. If $f'(0)=1$ and $g(x)$ is the inverse function of $f(x)$, then the value of $g'(2)$ is equal to:",
+   "options": [
+    "$\\frac{1}{4}$",
+    "$\\frac{1}{2}$",
+    "$4$",
+    "$\\frac{1}{7}$"
+   ],
+   "answer": "(A) $\\frac{1}{4}$",
+   "key_idea": "Differentiating the functional equation from first principles gives $f'(x)=3x^2+f'(0)$; then use $g'(b)=\\frac{1}{f'(g(b))}$.",
+   "solution": [
+    "Putting $x=y=0$ gives $f(0)=2f(0)$, so $f(0)=0$.",
+    "$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=\\lim_{h\\to0}\\frac{f(h)+3xh(x+h)}{h}$.",
+    "$f'(x)=\\lim_{h\\to0}\\frac{f(h)}{h}+\\lim_{h\\to0}3x(x+h)=f'(0)+3x^2=3x^2+1$.",
+    "Integrating $f'(x)=3x^2+1$ with $f(0)=0$ gives $f(x)=x^3+x$.",
+    "Since $g(x)=f^{-1}(x)$, $f(g(x))=x$, so $g'(x)=\\frac{1}{f'(g(x))}$.",
+    "Let $f(x)=2\\Rightarrow x^3+x=2\\Rightarrow x=1$, so $g(2)=1$.",
+    "$g'(2)=\\frac{1}{f'(1)}$, and $f'(1)=3(1)^2+1=4$, so $g'(2)=\\frac{1}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract the cube: $h(x)=f(x)-x^3$ turns the equation into the additive Cauchy equation $h(x+y)=h(x)+h(y)$.",
+     "solution": [
+      "Since $(x+y)^3=x^3+y^3+3xy(x+y)$, the function $h(x)=f(x)-x^3$ satisfies $h(x+y)=h(x)+h(y)$.",
+      "$h$ is differentiable, and a differentiable additive function is linear: $h(x)=cx$ with $c=h'(0)=f'(0)-0=1$.",
+      "So $f(x)=x^3+x$, which is strictly increasing ($f'(x)=3x^2+1>0$), hence invertible.",
+      "$f(1)=2$ gives $g(2)=1$, and $g'(2)=\\frac{1}{f'(1)}=\\frac{1}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x+y)=f(x)+f(y)+3xy(x+y)\\Rightarrow f(x)=x^3+cx$; likewise $f(x+y)=f(x)+f(y)+2xy\\Rightarrow f(x)=x^2+cx$ - subtract the polynomial that produces the extra term and the rest is additive.",
+    "A differentiable (or merely continuous) solution of $h(x+y)=h(x)+h(y)$ is $h(x)=cx$.",
+    "Inverse functions: $g'(b)=\\frac{1}{f'(a)}$ where $f(a)=b$; solving for $a$ is enough, the inverse need not be found."
+   ]
+  },
+  {
+   "q_no": 5,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Monotonicity and inequalities",
+    "Rolle's theorem"
+   ],
+   "level": 3,
+   "question": "Let $f:[1,e]\\to\\mathbb{R}$ be a continuous function on $[1,e]$ and differentiable on $(1,e)$ such that $f(1)=0$ and $f(e)=e$. Consider the function $g:[1,\\infty)\\to\\mathbb{R}$ defined by $g(x)=x\\ln x-(x-1)e^{x-1}$. Which of the following options is CORRECT?",
+   "options": [
+    "$g(x)>0$ for all $x>1$, and there exists at least one $c\\in(1,e)$ such that $f'(c)=1+\\ln c$.",
+    "$g(x)<0$ for all $x>1$, and there exists at least one $c\\in(1,e)$ such that $f'(c)=1+\\ln c$.",
+    "$g(x)>0$ for all $x>1$, and there exists at least one $c\\in(1,e)$ such that $f'(c)=\\ln c$.",
+    "$g(x)<0$ for all $x>1$, and there exists at least one $c\\in(1,e)$ such that $f'(c)=\\ln c$."
+   ],
+   "answer": "(B)",
+   "key_idea": "Differentiate twice to fix the sign of $g$; apply Rolle's theorem to $f(x)-x\\ln x$, which vanishes at both end points.",
+   "solution": [
+    "$g'(x)=1+\\ln x-e^{x-1}-(x-1)e^{x-1}=1+\\ln x-xe^{x-1}$.",
+    "Let $k(x)=g'(x)=1+\\ln x-xe^{x-1}$. Then $k'(x)=\\frac{1}{x}-e^{x-1}-xe^{x-1}=\\frac{1}{x}-(x+1)e^{x-1}$.",
+    "For $x>1$: $\\frac{1}{x}<1$ and $(x+1)e^{x-1}>2$, so $k'(x)<0$.",
+    "Since $k'(x)<0$, $k(x)$ is strictly decreasing on $[1,\\infty)$; with $k(1)=1+0-1=0$ we get $g'(x)=k(x)<0$ for $x>1$.",
+    "Since $g'(x)<0$, $g(x)$ is strictly decreasing on $[1,\\infty)$; with $g(1)=0$ we conclude $g(x)<0$ for all $x>1$.",
+    "Define $h(x)=f(x)-x\\ln x$ on $[1,e]$: $h(1)=f(1)-1\\cdot\\ln1=0$ and $h(e)=f(e)-e\\ln e=e-e=0$.",
+    "$h$ is continuous on $[1,e]$ and differentiable on $(1,e)$, so by Rolle's theorem there is $c\\in(1,e)$ with $h'(c)=0$.",
+    "$h'(x)=f'(x)-(1+\\ln x)$, so $h'(c)=0\\Rightarrow f'(c)=1+\\ln c$. Hence option (B)."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Compare the two terms with $\\ln x<x-1$ and $e^{t}\\ge1+t$; for the derivative use the Cauchy mean value theorem with $\\varphi(x)=x\\ln x$.",
+     "solution": [
+      "For $x>1$, $\\ln x<x-1$, so $x\\ln x<x(x-1)$.",
+      "Since $e^{t}\\ge1+t$, taking $t=x-1$ gives $e^{x-1}\\ge x$, so $x(x-1)\\le(x-1)e^{x-1}$ (as $x-1>0$).",
+      "Therefore $x\\ln x<(x-1)e^{x-1}$, i.e. $g(x)<0$ for all $x>1$.",
+      "Let $\\varphi(x)=x\\ln x$ with $\\varphi'(x)=1+\\ln x>0$ on $(1,e)$. Cauchy's mean value theorem on $f,\\varphi$ gives $c\\in(1,e)$ with $\\frac{f'(c)}{\\varphi'(c)}=\\frac{f(e)-f(1)}{\\varphi(e)-\\varphi(1)}=\\frac{e-0}{e-0}=1$.",
+      "So $f'(c)=1+\\ln c$, and option (B) is the correct one."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Standard inequalities: $\\ln x\\le x-1$ and $e^t\\ge1+t$ (equality only at $x=1$, $t=0$); chaining them often settles the sign of expressions mixing $\\ln$ and $\\exp$.",
+    "To prove a function is negative, show it starts at $0$ and decreases; if $g'$ is unclear differentiate again until a sign is clear.",
+    "If $f$ and $\\varphi$ agree at both end points of $[a,b]$, Rolle on $f-\\varphi$ gives $f'(c)=\\varphi'(c)$; with $\\varphi=x\\ln x$ the target is $1+\\ln c$, not $\\ln c$."
+   ]
+  },
+  {
+   "q_no": 6,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Determinants",
+    "Implicit differentiation"
+   ],
+   "level": 1,
+   "question": "Let $y=y(x)$ be a differentiable function defined implicitly by the determinant equation $\\left|\\begin{matrix}y&x^2\\\\x&y\\end{matrix}\\right|=3$. If $y(1)=2$, then the value of $\\left.\\frac{dy}{dx}\\right|_{x=1}$ is equal to:",
+   "options": [
+    "$\\frac{3}{4}$",
+    "$\\frac{4}{3}$",
+    "$\\frac{1}{2}$",
+    "$\\frac{2}{3}$"
+   ],
+   "answer": "(A) $\\frac{3}{4}$",
+   "key_idea": "Expand the $2\\times2$ determinant to $y^2-x^3=3$, then differentiate implicitly.",
+   "solution": [
+    "The determinant equation is $y^2-x^3=3$.",
+    "Differentiating with respect to $x$: $2y\\frac{dy}{dx}-3x^2=0\\Rightarrow\\frac{dy}{dx}=\\frac{3x^2}{2y}$.",
+    "The point $(1,2)$ lies on the curve: $4-1=3$.",
+    "At $x=1,\\ y=2$: $\\left.\\frac{dy}{dx}\\right|_{(1,2)}=\\frac{3(1)^2}{2(2)}=\\frac{3}{4}$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\left|\\begin{matrix}a&b\\\\c&d\\end{matrix}\\right|=ad-bc$, so the curve here is $y^2=x^3+3$ (an elliptic curve) with slope $\\frac{3x^2}{2y}$.",
+    "For $F(x,y)=0$: $\\frac{dy}{dx}=-\\frac{F_x}{F_y}$ where $F_y\\neq0$; always check that the given point satisfies the equation.",
+    "The sign of $y$ at the point fixes the branch: $y(1)=2>0$ selects $y=+\\sqrt{x^3+3}$."
+   ]
+  },
+  {
+   "q_no": 7,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of $\\max\\{f,g\\}$"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\max\\{|x-1|,\\,x^2-2x\\}$. Then the function $f(x)$ is:",
+   "options": [
+    "continuous everywhere and non-differentiable at exactly $2$ points",
+    "discontinuous at $1$ point and non-differentiable at $3$ points",
+    "continuous everywhere and non-differentiable at exactly $3$ points",
+    "continuous everywhere and non-differentiable at exactly $1$ point"
+   ],
+   "answer": "(C) continuous everywhere and non-differentiable at exactly $3$ points",
+   "key_idea": "Find where the graphs of $|x-1|$ and $x^2-2x$ cross, then compare one-sided slopes at the crossing points and at the kink of $|x-1|$.",
+   "solution": [
+    "Since $g(x)=|x-1|$ and $h(x)=x^2-2x$ are continuous on $\\mathbb{R}$, $f(x)=\\max\\{g(x),h(x)\\}$ is continuous everywhere.",
+    "For $x<1$ compare $x^2-2x$ with $1-x$: $x^2-x-1=0\\Rightarrow x=\\frac{1\\pm\\sqrt5}{2}$; only $\\frac{1-\\sqrt5}{2}<1$ is valid on this branch.",
+    "For $x\\ge1$ compare $x^2-2x$ with $x-1$: $x^2-3x+1=0\\Rightarrow x=\\frac{3\\pm\\sqrt5}{2}$; only $\\frac{3+\\sqrt5}{2}\\ge1$ is valid.",
+    "So $f(x)=x^2-2x$ for $x<\\frac{1-\\sqrt5}{2}$; $f(x)=1-x$ for $\\frac{1-\\sqrt5}{2}\\le x<1$; $f(x)=x-1$ for $1\\le x<\\frac{3+\\sqrt5}{2}$; $f(x)=x^2-2x$ for $x\\ge\\frac{3+\\sqrt5}{2}$.",
+    "At $x=\\frac{1-\\sqrt5}{2}$: $f'(x^-)=2x-2\\neq-1=f'(x^+)$ (since $2x-2=-1-\\sqrt5$).",
+    "At $x=1$: $f'(x^-)=-1\\neq1=f'(x^+)$.",
+    "At $x=\\frac{3+\\sqrt5}{2}$: $f'(x^-)=1\\neq2x-2=f'(x^+)$ (since $2x-2=1+\\sqrt5$).",
+    "Hence $f(x)$ is continuous everywhere and non-differentiable at exactly $3$ points: $x=\\frac{1-\\sqrt5}{2},\\ 1,\\ \\frac{3+\\sqrt5}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Shift $t=x-1$: then $f=\\max\\{|t|,\\,t^2-1\\}$ is an even function and the parabola wins exactly when $|t|>\\frac{1+\\sqrt5}{2}$.",
+     "solution": [
+      "With $t=x-1$: $|x-1|=|t|$ and $x^2-2x=(x-1)^2-1=t^2-1$.",
+      "$t^2-1>|t|\\iff|t|^2-|t|-1>0\\iff|t|>\\varphi$, where $\\varphi=\\frac{1+\\sqrt5}{2}$.",
+      "So $f=|t|$ for $|t|\\le\\varphi$ and $f=t^2-1$ for $|t|>\\varphi$; $f$ is continuous (both formulas equal $\\varphi$ at $|t|=\\varphi$).",
+      "At $|t|=\\varphi$ the slopes are $\\pm1$ (from $|t|$) and $\\pm2\\varphi$ (from the parabola), which differ: two corners, $t=\\pm\\varphi$.",
+      "At $t=0$ the function is $|t|$ with a corner (slopes $-1$ and $1$).",
+      "Elsewhere $f$ is a single smooth piece, so there are exactly $3$ corners: $x=1\\pm\\varphi=\\frac{3+\\sqrt5}{2},\\frac{1-\\sqrt5}{2}$ and $x=1$. Option (C)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\max\\{f,g\\}$ and $\\min\\{f,g\\}$ of continuous functions are continuous; non-differentiable points occur where the graphs cross with different slopes, or at kinks of the piece that is active.",
+    "A crossing point of two curves is on the maximum only if the correct branch of each modulus is used - discard roots that fall on the wrong branch.",
+    "$\\max\\{a,b\\}=\\frac{a+b+|a-b|}{2}$; shifting to the axis of symmetry ($t=x-1$) often makes such problems even and quick.",
+    "The golden ratio $\\varphi=\\frac{1+\\sqrt5}{2}$ solves $\\varphi^2=\\varphi+1$; it appears whenever $t^2-t-1=0$."
+   ]
+  },
+  {
+   "q_no": 8,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Local extrema of a cubic",
+    "Distance of a point from a line"
+   ],
+   "level": 1,
+   "question": "Let $f(x)=x^3-3x+2$. If $P(x_0,y_0)$ is the point corresponding to the local minimum of $f(x)$, then the shortest distance from the point $P$ to the line $y=x-4$ is equal to:",
+   "options": [
+    "$\\sqrt2$",
+    "$\\frac{3}{\\sqrt2}$",
+    "$2\\sqrt2$",
+    "$\\frac{5}{\\sqrt2}$"
+   ],
+   "answer": "(B) $\\frac{3}{\\sqrt2}$",
+   "key_idea": "Find the local minimum by $f'=0$, $f''>0$, then use the point-to-line distance formula.",
+   "solution": [
+    "$f'(x)=3x^2-3=3(x-1)(x+1)$.",
+    "Setting $f'(x)=0$ gives $x=1$ and $x=-1$.",
+    "Since $f''(x)=6x$ and $f''(1)=6>0$, $x=1$ is the point of local minimum.",
+    "At $x=1$, $f(1)=1^3-3(1)+2=0$.",
+    "Thus the local minimum point is $P(1,0)$.",
+    "The line is $x-y-4=0$.",
+    "The perpendicular distance from $P(1,0)$ to the line is $d=\\frac{|1-0-4|}{\\sqrt{1^2+(-1)^2}}=\\frac{3}{\\sqrt2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Factorise $f(x)=(x-1)^2(x+2)$: it touches the $x$-axis at $x=1$ and is $\\ge0$ to the right of $-2$, so $(1,0)$ is the local minimum.",
+     "solution": [
+      "$x^3-3x+2=(x-1)^2(x+2)$.",
+      "For $x$ near $1$ we have $x+2>0$, so $f(x)=(x-1)^2(x+2)\\ge0=f(1)$: $x=1$ is a local minimum with $y_0=0$.",
+      "(The other critical point $x=-1$ gives $f(-1)=4$, a local maximum.)",
+      "Distance from $(1,0)$ to $x-y-4=0$: $\\frac{|1-4|}{\\sqrt2}=\\frac{3}{\\sqrt2}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "A polynomial with a repeated root $r$ touches the axis at $r$: $f=(x-r)^2q(x)$ has a local minimum there when $q(r)>0$ and a local maximum when $q(r)<0$.",
+    "Distance from $(x_0,y_0)$ to $ax+by+c=0$ is $\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$.",
+    "For $x^3-3x+k$: local maximum at $x=-1$, local minimum at $x=1$, and the cubic has three distinct real roots iff $-2<k<2$."
+   ]
+  },
+  {
+   "q_no": 9,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of composite functions",
+    "Greatest integer and fractional part functions"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=[x]+\\{x\\}^2$, where $[x]$ and $\\{x\\}$ denote the greatest integer function and the fractional part function of $x$, respectively. Let $g(x)=|2x-1|$. The total number of points in the open interval $(0,2)$ at which the composite function $h(x)=(f\\circ g)(x)$ is non-differentiable is:",
+   "options": [
+    "$1$",
+    "$4$",
+    "$3$",
+    "$2$"
+   ],
+   "answer": "(D) $2$",
+   "key_idea": "$f$ is smooth except at integers; $f\\circ g$ can fail only where $g$ is an integer or where $g$ itself has its corner, and each case must be checked.",
+   "solution": [
+    "For any $x\\in\\mathbb{R}$ let $n=[x]\\in\\mathbb{Z}$. Then for $x\\in[n,n+1)$, $f(x)=n+(x-n)^2$.",
+    "$\\lim_{x\\to n^-}f(x)=(n-1)+1^2=n=f(n)=\\lim_{x\\to n^+}f(x)$, so $f$ is continuous everywhere.",
+    "$f'(n^-)=\\left.\\frac{d}{dx}\\left((n-1)+(x-n+1)^2\\right)\\right|_{x=n}=2$ and $f'(n^+)=\\left.\\frac{d}{dx}\\left(n+(x-n)^2\\right)\\right|_{x=n}=0$.",
+    "Thus $f$ is non-differentiable exactly at the integers.",
+    "Now $h(x)=f(g(x))=f(|2x-1|)$ for $x\\in(0,2)$. At $x=\\frac{1}{2}$: $g\\left(\\frac{1}{2}\\right)=0$; for $x\\in(0,1)$, $0\\le g(x)<1$, so $[g(x)]=0$.",
+    "Hence $h(x)=(g(x))^2=(2x-1)^2$ on $(0,1)$, a polynomial, so $h$ is differentiable at $x=\\frac{1}{2}$.",
+    "At $x=1$: $g(1)=1$ is an integer. For $x\\in\\left(\\frac{1}{2},1\\right)$, $h(x)=(2x-1)^2$, so $\\lim_{x\\to1^-}h'(x)=4$.",
+    "For $x\\in\\left(1,\\frac{3}{2}\\right)$, $g(x)\\in(1,2)$, so $h(x)=1+(2x-2)^2$ and $\\lim_{x\\to1^+}h'(x)=0$. Since LHD $\\neq$ RHD, $h$ is non-differentiable at $x=1$.",
+    "At $x=\\frac{3}{2}$: $g\\left(\\frac{3}{2}\\right)=2$. For $x\\in\\left(1,\\frac{3}{2}\\right)$, $h(x)=1+(2x-2)^2$ gives $\\lim_{x\\to(3/2)^-}h'(x)=4$.",
+    "For $x\\in\\left(\\frac{3}{2},2\\right)$, $g(x)\\in(2,3)$, so $h(x)=2+(2x-3)^2$ and $\\lim_{x\\to(3/2)^+}h'(x)=0$. Since LHD $\\neq$ RHD, $h$ is non-differentiable at $x=\\frac{3}{2}$.",
+    "At every other point of $(0,2)$, $g(x)$ is not an integer and $g$ is differentiable, so $h$ is differentiable. Hence $h$ is non-differentiable at exactly $2$ points, $x=1$ and $x=\\frac{3}{2}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Rewrite $f(t)=t-\\{t\\}(1-\\{t\\})$: the correction term has slope-jumps only at integers, and near $g=0$ it behaves like $g^2$, which hides the corner of $|2x-1|$.",
+     "solution": [
+      "$[t]+\\{t\\}^2=t-\\{t\\}+\\{t\\}^2=t-\\{t\\}(1-\\{t\\})$.",
+      "The term $s(1-s)$ with $s=\\{t\\}$ has derivative $1-2s$: it is $1$ just after an integer and $-1$ just before, so its slope jumps by $2$ at every integer, while it equals $0$ at the integers.",
+      "So $h(x)=g-\\{g\\}(1-\\{g\\})$ with $g=|2x-1|$; on $(0,2)$ the values of $g$ run over $[0,3)$, hitting the integers $0,1,2$ at $x=\\frac{1}{2},1,\\frac{3}{2}$.",
+      "At $g=1$ and $g=2$ ($x=1,\\frac{3}{2}$), $g'=2\\neq0$, so the slope jump of $2$ is carried into $h$: non-differentiable at $x=1$ and $x=\\frac{3}{2}$.",
+      "At $g=0$ ($x=\\frac{1}{2}$): $\\{g\\}=g$ for small $g\\ge0$, so $h=g-g(1-g)=g^2=(2x-1)^2$, which is smooth; the corner of $|2x-1|$ cancels.",
+      "Everywhere else $g$ is smooth and not an integer, so $h$ is differentiable. Exactly $2$ points, option (D)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$[x]+\\{x\\}^2=x-\\{x\\}(1-\\{x\\})$; $\\{x\\}^2$-type pieces have equal values but unequal slopes ($2$ from the left, $0$ from the right) at integers.",
+    "For $f\\circ g$ with $f$ non-differentiable at integers: check each $x$ with $g(x)$ an integer; the corner survives only if $g'(x)\\neq0$ there.",
+    "A corner of the inner function can be absorbed: if $f(t)\\approx t^2$ near $t=0$ then $f(|u|)\\approx u^2$ is smooth even though $|u|$ is not.",
+    "Count the integer values $g$ takes on the open interval, and exclude values attained only at the end points."
+   ]
+  },
+  {
+   "q_no": 10,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Orthogonal intersection of curves",
+    "Number of real roots of a cubic"
+   ],
+   "level": 2,
+   "question": "If the curves $C_1:y=x^3+ax$ and $C_2:y=k-\\frac{x^2}{8}$ intersect orthogonally at a point with $x$-coordinate $1$, then the number of distinct real roots of the equation $x^3+ax-k=0$ is equal to:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$3$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "Orthogonality gives $a$ from $m_1m_2=-1$, the common point gives $k$, and the cubic is then strictly increasing.",
+   "solution": [
+    "For $C_1$: $\\frac{dy}{dx}=3x^2+a$; at $x=1$, $m_1=3+a$.",
+    "For $C_2$: $\\frac{dy}{dx}=-\\frac{x}{4}$; at $x=1$, $m_2=-\\frac{1}{4}$.",
+    "Orthogonal intersection: $m_1m_2=-1\\Rightarrow(3+a)\\left(-\\frac{1}{4}\\right)=-1\\Rightarrow a=1$.",
+    "At the common point the $y$-coordinates are equal: $y_1(1)=1^3+1\\cdot1=2$ and $y_2(1)=k-\\frac{1}{8}=2\\Rightarrow k=\\frac{17}{8}$.",
+    "Consider $f(x)=x^3+ax-k=x^3+x-\\frac{17}{8}$.",
+    "$f'(x)=3x^2+1>0$ for all $x\\in\\mathbb{R}$.",
+    "Since $f$ is strictly increasing and continuous (and tends to $\\pm\\infty$), by the Intermediate Value Theorem $f(x)=0$ has exactly $1$ real root."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Use the discriminant of the depressed cubic $x^3+px+q$: with $p=1>0$ it can have only one real root.",
+     "solution": [
+      "After $a=1$ and $k=\\frac{17}{8}$ the equation is $x^3+px+q=0$ with $p=1$, $q=-\\frac{17}{8}$.",
+      "The discriminant of $x^3+px+q$ is $\\Delta=-4p^3-27q^2=-4-27\\left(\\frac{17}{8}\\right)^2<0$.",
+      "$\\Delta<0$ means one real root and two non-real complex roots.",
+      "So the number of distinct real roots is $1$, option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Two curves meet orthogonally at a point when the product of the slopes of their tangents there is $-1$ (and the point lies on both curves).",
+    "$x^3+px+q=0$ with $p\\ge0$ has exactly one real root; with $p<0$ it has three distinct real roots iff $4p^3+27q^2<0$.",
+    "A continuous strictly monotone function that changes sign has exactly one zero."
+   ]
+  },
+  {
+   "q_no": 11,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Tangents to a parabola",
+    "Rate of change (related rates)"
+   ],
+   "level": 3,
+   "question": "A point $P$ moves along the negative $y$-axis away from the origin at a constant speed of $2$ units/sec. From $P$, two tangents are drawn to the parabola $y=x^2$. If $\\theta$ is the acute angle between these two tangents, then the rate of change of $\\theta$ (in rad/s) at the instant when $P$ is at $(0,-1)$ is equal to:",
+   "options": [
+    "$-\\frac{4}{5}$",
+    "$-\\frac{2}{5}$",
+    "$\\frac{4}{5}$",
+    "$\\frac{3}{5}$"
+   ],
+   "answer": "(A) $-\\frac{4}{5}$",
+   "key_idea": "Tangents from $(0,-a)$ have slopes $\\pm2\\sqrt a$; express $\\tan\\theta$ in $a$ and differentiate with respect to time using $\\frac{da}{dt}=2$.",
+   "solution": [
+    "Let $P$ be $(0,-a)$ at time $t$, with $a>0$. Since $P$ moves away from the origin at $2$ units/sec, $\\frac{da}{dt}=2$.",
+    "A tangent to $y=x^2$ with slope $m$ is $y=mx-\\frac{m^2}{4}$.",
+    "It passes through $P(0,-a)$: $-a=-\\frac{m^2}{4}\\Rightarrow m^2=4a\\Rightarrow m=\\pm2\\sqrt a$.",
+    "The slopes of the two tangents are $m_1=2\\sqrt a$ and $m_2=-2\\sqrt a$.",
+    "The acute angle satisfies $\\tan\\theta=\\left|\\frac{m_1-m_2}{1+m_1m_2}\\right|=\\left|\\frac{4\\sqrt a}{1-4a}\\right|$.",
+    "For $a>\\frac{1}{4}$, $1-4a<0$, so $\\tan\\theta=\\frac{4\\sqrt a}{4a-1}$.",
+    "Differentiating with respect to $t$: $\\sec^2\\theta\\frac{d\\theta}{dt}=\\frac{(4a-1)\\cdot\\frac{2}{\\sqrt a}-4\\sqrt a\\cdot4}{(4a-1)^2}\\cdot\\frac{da}{dt}$.",
+    "When $P$ is at $(0,-1)$, $a=1$: $\\tan\\theta=\\frac{4}{3}\\Rightarrow\\sec^2\\theta=1+\\tan^2\\theta=\\frac{25}{9}$.",
+    "Substituting $a=1$, $\\sec^2\\theta=\\frac{25}{9}$, $\\frac{da}{dt}=2$: $\\frac{25}{9}\\frac{d\\theta}{dt}=\\frac{(3)(2)-16}{3^2}\\cdot2=-\\frac{10}{9}\\cdot2=-\\frac{20}{9}$.",
+    "$\\frac{d\\theta}{dt}=-\\frac{20}{25}=-\\frac{4}{5}$ rad/s."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The tangents are symmetric about the axis of the parabola, so $\\theta$ is twice the angle one tangent makes with the $y$-axis: $\\theta=2\\tan^{-1}\\frac{1}{2\\sqrt a}$.",
+     "solution": [
+      "A tangent from $(0,-a)$ has slope $m=2\\sqrt a$, so its angle $\\alpha$ with the vertical axis has $\\tan\\alpha=\\frac{1}{m}=\\frac{1}{2\\sqrt a}$.",
+      "The two tangents are mirror images in the $y$-axis, so the angle between them (the one containing the parabola, acute for $a>\\frac{1}{4}$) is $\\theta=2\\alpha=2\\tan^{-1}\\frac{1}{2\\sqrt a}$.",
+      "$\\frac{d\\theta}{da}=2\\cdot\\frac{1}{1+\\frac{1}{4a}}\\cdot\\left(-\\frac{1}{4a^{3/2}}\\right)=-\\frac{2}{(4a+1)\\sqrt a}$.",
+      "At $a=1$: $\\frac{d\\theta}{da}=-\\frac{2}{5}$ (and $\\tan\\theta=\\frac{2\\cdot\\frac12}{1-\\frac14}=\\frac{4}{3}$ is consistent).",
+      "$\\frac{d\\theta}{dt}=\\frac{d\\theta}{da}\\cdot\\frac{da}{dt}=-\\frac{2}{5}\\cdot2=-\\frac{4}{5}$ rad/s."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Tangents from $(0,-a)$ to $y=x^2$ have slopes $\\pm2\\sqrt a$; they are perpendicular exactly when $a=\\frac{1}{4}$ (the point is on the directrix $y=-\\frac{1}{4}$).",
+    "Angle between tangents from $(x_1,y_1)$ to $y^2=4ax$: $\\tan\\theta=\\frac{\\sqrt{y_1^2-4ax_1}}{|x_1+a|}$ (here, for $x^2=4Ay$ from $(0,-a)$: $\\tan\\theta=\\frac{\\sqrt a}{|a-\\frac{1}{4}|}$).",
+    "As the point moves away from the vertex the angle between the tangents decreases, so a negative $\\frac{d\\theta}{dt}$ is expected.",
+    "Related rates: write the quantity as a function of one variable, differentiate with the chain rule, then substitute the instant's values."
+   ]
+  },
+  {
+   "q_no": 12,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiability of $x^m\\sin\\frac{1}{x}$",
+    "Maxima and minima: cylinder inscribed in a cone"
+   ],
+   "level": 2,
+   "question": "Let $m$ be the smallest positive integer such that the function $f(x)=\\begin{cases}x^m\\sin\\left(\\frac{1}{x}\\right),&x\\neq0\\\\0,&x=0\\end{cases}$ is differentiable at $x=0$. A right circular cylinder of maximum volume is inscribed inside a right circular cone of base radius $m$ units and height $3m$ units. The maximum volume of this inscribed cylinder (in cubic units) is:",
+   "options": [
+    "$\\frac{16\\pi}{9}$",
+    "$\\frac{32\\pi}{9}$",
+    "$\\frac{8\\pi}{3}$",
+    "$\\frac{64\\pi}{27}$"
+   ],
+   "answer": "(B) $\\frac{32\\pi}{9}$",
+   "key_idea": "$m>1$ makes $h^{m-1}\\sin\\frac{1}{h}\\to0$, so $m=2$; then maximise $\\pi r^2h$ with $h=6-3r$.",
+   "solution": [
+    "$f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\frac{h^m\\sin\\left(\\frac{1}{h}\\right)-0}{h}=\\lim_{h\\to0}h^{m-1}\\sin\\left(\\frac{1}{h}\\right)$.",
+    "Since $\\sin\\left(\\frac{1}{h}\\right)$ oscillates between $-1$ and $1$, the limit exists and equals $0$ if and only if $m-1>0\\Rightarrow m>1$.",
+    "The smallest positive integer is $m=2$.",
+    "For the cone: base radius $R=m=2$ and height $H=3m=6$.",
+    "By similar triangles $\\frac{r}{R}=\\frac{H-h}{H}\\Rightarrow\\frac{r}{2}=\\frac{6-h}{6}\\Rightarrow h=6-3r$.",
+    "Volume of the cylinder $V(r)=\\pi r^2h=\\pi r^2(6-3r)=3\\pi(2r^2-r^3)$, where $0<r<2$.",
+    "$\\frac{dV}{dr}=3\\pi(4r-3r^2)=0\\Rightarrow r=\\frac{4}{3}$.",
+    "$\\left.\\frac{d^2V}{dr^2}\\right|_{r=4/3}=3\\pi(4-6r)\\big|_{r=4/3}=-12\\pi<0$, which confirms a local maximum.",
+    "$V_{\\max}=3\\pi\\left[2\\left(\\frac{4}{3}\\right)^2-\\left(\\frac{4}{3}\\right)^3\\right]=3\\pi\\left(\\frac{32}{9}-\\frac{64}{27}\\right)=\\frac{32\\pi}{9}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "AM-GM on $r\\cdot r\\cdot(2-r)$ with weights chosen so that the sum is constant: no derivative is needed for the volume.",
+     "solution": [
+      "$m=2$ as before; the cylinder has $h=6-3r$, so $V=\\pi r^2(6-3r)=3\\pi\\,r^2(2-r)$.",
+      "Write $r^2(2-r)=4\\cdot\\frac{r}{2}\\cdot\\frac{r}{2}\\cdot(2-r)$; the three factors $\\frac{r}{2},\\frac{r}{2},2-r$ have constant sum $2$.",
+      "By AM-GM, $\\frac{r}{2}\\cdot\\frac{r}{2}\\cdot(2-r)\\le\\left(\\frac{2}{3}\\right)^3=\\frac{8}{27}$, with equality when $\\frac{r}{2}=2-r$, i.e. $r=\\frac{4}{3}$.",
+      "So $r^2(2-r)\\le\\frac{32}{27}$ and $V_{\\max}=3\\pi\\cdot\\frac{32}{27}=\\frac{32\\pi}{9}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$x^m\\sin\\frac{1}{x}$ (and $x^m\\cos\\frac{1}{x}$), with value $0$ at $0$: continuous iff $m>0$, differentiable iff $m>1$, derivative continuous iff $m>2$.",
+    "Cylinder of maximum volume in a cone of radius $R$ and height $H$: $r=\\frac{2R}{3}$, $h=\\frac{H}{3}$, $V_{\\max}=\\frac{4}{27}\\pi R^2H$; here $\\frac{4}{27}\\pi\\cdot4\\cdot6=\\frac{32\\pi}{9}$.",
+    "For products with a fixed sum of weighted factors, AM-GM gives the maximum without calculus: $x\\cdot x\\cdot(c-x)$-type volumes."
+   ]
+  },
+  {
+   "q_no": 13,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Intervals of monotonicity",
+    "Approximation using differentials"
+   ],
+   "level": 2,
+   "question": "If the function $f(x)=x^3-3x^2-9x+5$ is strictly decreasing in the interval $(a,b)$, then using differentials, the approximate value of $\\sqrt{b-a+0.24}$ is equal to:",
+   "options": [
+    "$2.060$",
+    "$2.063$",
+    "$2.057$",
+    "$2.054$"
+   ],
+   "answer": "(A) $2.060$",
+   "key_idea": "The decreasing interval is between the roots of $f'$, so $b-a=4$; then $\\sqrt{4.24}\\approx2+\\frac{0.24}{4}$.",
+   "solution": [
+    "$f'(x)=3x^2-6x-9=3(x-3)(x+1)$.",
+    "For $f(x)$ to be strictly decreasing, $f'(x)<0\\Rightarrow(x-3)(x+1)<0\\Rightarrow x\\in(-1,3)$.",
+    "Thus $a=-1$ and $b=3$, and hence $b-a=3-(-1)=4$.",
+    "We need to approximate $g(4.24)$ where $g(x)=\\sqrt x$. Let $x=4$ and $\\Delta x=0.24$.",
+    "$g(x+\\Delta x)\\approx g(x)+g'(x)\\Delta x$, so $\\sqrt{4.24}\\approx\\sqrt4+\\frac{1}{2\\sqrt4}(0.24)$.",
+    "$=2+\\frac{0.24}{4}=2+0.06=2.06$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "The length between the roots of $f'$ comes from the quadratic formula, $b-a=\\frac{\\sqrt{D}}{|A|}$, and the square root is expanded binomially.",
+     "solution": [
+      "$f'(x)=3x^2-6x-9$ has $A=3$, $B=-6$, $C=-9$, so the distance between its roots is $\\frac{\\sqrt{B^2-4AC}}{|A|}=\\frac{\\sqrt{36+108}}{3}=4$.",
+      "Since $A>0$, $f'<0$ between the roots, so $b-a=4$.",
+      "$\\sqrt{4.24}=2\\sqrt{1+0.06}\\approx2\\left(1+\\frac{0.06}{2}\\right)=2(1.03)=2.06$.",
+      "Option (A), $2.060$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f'(x)=A(x-\\alpha)(x-\\beta)$ with $A>0$, then $f$ decreases exactly on $(\\alpha,\\beta)$ and $\\beta-\\alpha=\\frac{\\sqrt{B^2-4AC}}{A}$.",
+    "Differentials: $\\sqrt{x+\\Delta x}\\approx\\sqrt x+\\frac{\\Delta x}{2\\sqrt x}$ and $(1+\\epsilon)^n\\approx1+n\\epsilon$; since $\\sqrt{\\ }$ is concave the approximation slightly overestimates ($\\sqrt{4.24}=2.0591$).",
+    "When several options are close, choose the one that matches the first-order estimate to the stated number of decimals."
+   ]
+  },
+  {
+   "q_no": 14,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Continuity and differentiability of piecewise functions",
+    "Derivative of one function with respect to another"
+   ],
+   "level": 2,
+   "question": "Let $f(x)$ and $g(x)$ be two real-valued functions defined as: $f(x)=\\begin{cases}x^3+3x,&x\\ge1\\\\3x^2+1,&x<1\\end{cases}$ and $g(x)=\\begin{cases}e^{x-1}+x,&x\\ge1\\\\x^2+1,&x<1\\end{cases}$. Then the derivative of $f(x)$ with respect to $g(x)$ at $x=1$ is:",
+   "options": [
+    "$6$",
+    "$2$",
+    "$3$",
+    "Does not exist"
+   ],
+   "answer": "(C) $3$",
+   "key_idea": "Show both functions are differentiable at $x=1$ (continuity and equal one-sided derivatives), then $\\frac{df}{dg}=\\frac{f'(1)}{g'(1)}$.",
+   "solution": [
+    "For $f$: $\\lim_{x\\to1^+}f(x)=f(1)=1^3+3(1)=4$ and $\\lim_{x\\to1^-}f(x)=3(1)^2+1=4$, so $f$ is continuous at $x=1$.",
+    "$Rf'(1)=\\left.\\frac{d}{dx}(x^3+3x)\\right|_{x=1}=3(1)^2+3=6$.",
+    "$Lf'(1)=\\left.\\frac{d}{dx}(3x^2+1)\\right|_{x=1}=6(1)=6$.",
+    "Since $Rf'(1)=Lf'(1)=6$, $f$ is differentiable at $x=1$ and $f'(1)=6$.",
+    "For $g$: $\\lim_{x\\to1^+}g(x)=g(1)=e^0+1=2$ and $\\lim_{x\\to1^-}g(x)=1^2+1=2$, so $g$ is continuous at $x=1$.",
+    "$Rg'(1)=\\left.\\frac{d}{dx}(e^{x-1}+x)\\right|_{x=1}=e^0+1=2$ and $Lg'(1)=\\left.\\frac{d}{dx}(x^2+1)\\right|_{x=1}=2(1)=2$.",
+    "Since $Rg'(1)=Lg'(1)=2$, $g$ is differentiable at $x=1$ and $g'(1)=2$.",
+    "The derivative of $f(x)$ with respect to $g(x)$ at $x=1$ is $\\left.\\frac{df}{dg}\\right|_{x=1}=\\frac{f'(1)}{g'(1)}=\\frac{6}{2}=3$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$\\frac{df}{dg}=\\frac{f'(x)}{g'(x)}$ whenever $g'(x)\\neq0$; for piecewise functions first prove differentiability at the junction (continuity plus equal one-sided derivatives).",
+    "If either one-sided derivative disagrees, $f'(1)$ does not exist and the answer would be 'does not exist' - the check is what rules out option (D).",
+    "Quick junction test: both pieces must have equal values and equal slopes at the join (a smooth, $C^1$ join)."
+   ]
+  },
+  {
+   "q_no": 15,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Greatest integer function",
+    "Types of discontinuity"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be defined by $f(x)=\\min\\{2-x^2,|x|\\}$, and let $g(x)=\\lfloor f(x)\\rfloor$, where $\\lfloor\\cdot\\rfloor$ denotes the greatest integer function. Then at $x=1$, the function $g(x)$ has:",
+   "options": [
+    "a removable discontinuity",
+    "a jump (non-removable) discontinuity",
+    "an essential (infinite) discontinuity",
+    "continuity"
+   ],
+   "answer": "(A) a removable discontinuity",
+   "key_idea": "Near $x=1$ the value of $f$ stays strictly below $1$ on both sides, so $\\lfloor f\\rfloor=0$ on both sides but $\\lfloor f(1)\\rfloor=1$.",
+   "solution": [
+    "$f(x)=\\min\\{2-x^2,|x|\\}$. For $x\\in(0,1)$, $|x|=x<2-x^2$, so $f(x)=x$.",
+    "For $x\\in(0,1)$, $0<f(x)<1\\Rightarrow g(x)=\\lfloor f(x)\\rfloor=0$, so $\\lim_{x\\to1^-}g(x)=0$.",
+    "For $x\\in(1,\\sqrt2)$, $2-x^2<|x|=x$, so $f(x)=2-x^2$; as $x\\to1^+$, $2-x^2$ approaches $1$ from values strictly less than $1$.",
+    "Thus for $x\\in(1,\\sqrt2)$, $0<f(x)<1\\Rightarrow g(x)=0$, so $\\lim_{x\\to1^+}g(x)=0$.",
+    "At $x=1$: $f(1)=\\min\\{2-1^2,|1|\\}=1\\Rightarrow g(1)=\\lfloor1\\rfloor=1$.",
+    "Since $\\lim_{x\\to1}g(x)=0$ exists and is finite but $\\lim_{x\\to1}g(x)\\neq g(1)$, $g(x)$ has a removable discontinuity at $x=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "$x=1$ is a strict peak of $f$ with peak value exactly $1$: $f<1$ nearby, $f(1)=1$, so $\\lfloor f\\rfloor$ has an isolated spike.",
+     "solution": [
+      "$|x|=2-x^2\\iff x^2+|x|-2=0\\iff|x|=1$, so the two pieces cross at $x=\\pm1$.",
+      "Near $x=1$: $f=x$ on the left (increasing) and $f=2-x^2$ on the right (decreasing), so $f$ has a strict local maximum $f(1)=1$.",
+      "Hence $0<f(x)<1$ for $x\\neq1$ near $1$, so $\\lfloor f(x)\\rfloor=0$ there, while $\\lfloor f(1)\\rfloor=1$.",
+      "The limit is $0$, the value is $1$: a removable discontinuity, option (A)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lfloor f\\rfloor$ can be discontinuous only where $f$ takes an integer value; if $f$ has a strict local maximum equal to an integer $n$, then $\\lfloor f\\rfloor$ has a removable discontinuity (isolated spike); a strict local minimum equal to $n$ is continuous (the floor equals $n$ on both sides).",
+    "If $f$ crosses an integer, $\\lfloor f\\rfloor$ has a jump discontinuity (one side $n-1$, other side $n$, or the reverse).",
+    "$\\min\\{f,g\\}$ of continuous functions is continuous and has a peak where an increasing piece meets a decreasing piece."
+   ]
+  },
+  {
+   "q_no": 16,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Normal to a curve",
+    "Types of discontinuity"
+   ],
+   "level": 2,
+   "question": "Let $C$ be the curve defined by $y=x\\ln x$ for $x>0$. For any point $P(x,y)$ on $C$ with $x\\neq\\frac{1}{e}$, let $g(x)$ denote the $y$-intercept of the normal to the curve $C$ at $P$. Define the function $f:(0,\\infty)\\to\\mathbb{R}$ as: $f(x)=\\begin{cases}g(x),&x\\neq\\frac{1}{e}\\\\0,&x=\\frac{1}{e}\\end{cases}$. Then at $x=\\frac{1}{e}$, the function $f(x)$ has:",
+   "options": [
+    "a removable discontinuity",
+    "a non-removable jump discontinuity",
+    "an essential (infinite) discontinuity",
+    "no discontinuity (it is continuous)"
+   ],
+   "answer": "(C) an essential (infinite) discontinuity",
+   "key_idea": "At $x=\\frac{1}{e}$ the tangent is horizontal, so the normal is vertical; the intercept $\\frac{x}{1+\\ln x}$ blows up with opposite signs on the two sides.",
+   "solution": [
+    "For the curve $y=x\\ln x$: $\\frac{dy}{dx}=1+\\ln x$, so the slope of the normal is $m_N=-\\frac{1}{1+\\ln x}$.",
+    "Equation of the normal: $Y-x\\ln x=-\\frac{1}{1+\\ln x}(X-x)$.",
+    "The $y$-intercept ($X=0$) is $g(x)=x\\ln x+\\frac{x}{1+\\ln x}$.",
+    "As $x\\to\\left(\\frac{1}{e}\\right)^+$, $\\ln x>-1$, so $1+\\ln x\\to0^+$ and $\\frac{x}{1+\\ln x}\\to+\\infty$; thus $\\lim_{x\\to(1/e)^+}f(x)=+\\infty$.",
+    "As $x\\to\\left(\\frac{1}{e}\\right)^-$, $\\ln x<-1$, so $1+\\ln x\\to0^-$ and $\\frac{x}{1+\\ln x}\\to-\\infty$; thus $\\lim_{x\\to(1/e)^-}f(x)=-\\infty$.",
+    "The one-sided limits are infinite (not finite), so $f(x)$ has an essential (infinite) discontinuity at $x=\\frac{1}{e}$, whatever value is assigned there."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "Normal at $(x,y)$ with $y'\\neq0$: $Y-y=-\\frac{1}{y'}(X-x)$, so its $y$-intercept is $y+\\frac{x}{y'}$.",
+    "Where the tangent is horizontal ($y'=0$) the normal is vertical and has no finite $y$-intercept: the intercept function blows up at such points.",
+    "An infinite discontinuity cannot be removed by redefining the value at the point (here $f(\\frac{1}{e})=0$ does not help).",
+    "For $y=x\\ln x$: minimum at $x=\\frac{1}{e}$ with $y=-\\frac{1}{e}$."
+   ]
+  },
+  {
+   "q_no": 17,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Limits of the form $x^{1/x}$",
+    "Higher-order derivatives"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=x^{\\frac{1}{x}}$ for $x>0$. If $L=\\lim_{x\\to\\infty}f(x)$ and $y(x)=\\ln(f(x))$, then the value of $L+e^3y''(e)$ is equal to:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "$e$"
+   ],
+   "answer": "(A) $0$",
+   "key_idea": "$y=\\frac{\\ln x}{x}$, so $L=e^{\\lim y}=1$ and $y''$ is a routine quotient-rule computation.",
+   "solution": [
+    "$\\ln L=\\lim_{x\\to\\infty}\\frac{\\ln x}{x}=\\lim_{x\\to\\infty}\\frac{\\frac{1}{x}}{1}=0\\Rightarrow L=e^0=1$.",
+    "$y(x)=\\ln(f(x))=\\frac{\\ln x}{x}$.",
+    "$y'(x)=\\frac{\\frac{1}{x}\\cdot x-\\ln x\\cdot1}{x^2}=\\frac{1-\\ln x}{x^2}$.",
+    "$y''(x)=\\frac{\\left(-\\frac{1}{x}\\right)x^2-(1-\\ln x)(2x)}{x^4}=\\frac{-x-2x+2x\\ln x}{x^4}=\\frac{2\\ln x-3}{x^3}$.",
+    "$y''(e)=\\frac{2\\ln e-3}{e^3}=\\frac{2(1)-3}{e^3}=-\\frac{1}{e^3}$.",
+    "$L+e^3y''(e)=1+e^3\\left(-\\frac{1}{e^3}\\right)=1-1=0$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Treat $y=x^{-1}\\ln x$ as a product and use the Leibniz rule for $y''$; get $L$ from the standard limit $\\frac{\\ln x}{x}\\to0$.",
+     "solution": [
+      "$L=\\lim e^{\\frac{\\ln x}{x}}=e^0=1$ because $\\ln x$ grows slower than any positive power of $x$.",
+      "With $u=x^{-1}$, $v=\\ln x$: $u'=-x^{-2}$, $u''=2x^{-3}$, $v'=x^{-1}$, $v''=-x^{-2}$.",
+      "Leibniz: $y''=u''v+2u'v'+uv''=\\frac{2\\ln x}{x^3}-\\frac{2}{x^3}-\\frac{1}{x^3}=\\frac{2\\ln x-3}{x^3}$.",
+      "At $x=e$: $y''(e)=-\\frac{1}{e^3}$, so $L+e^3y''(e)=1-1=0$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$\\lim_{x\\to\\infty}x^{1/x}=1$, $\\lim_{x\\to0^+}x^x=1$, $\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^x=e$: take logarithms and reduce to $\\frac{\\ln x}{x}$ or $x\\ln x$.",
+    "For $y=\\frac{\\ln x}{x}$: $y'=\\frac{1-\\ln x}{x^2}$, maximum at $x=e$ with value $\\frac{1}{e}$, and $y''=\\frac{2\\ln x-3}{x^3}$ (inflection at $x=e^{3/2}$).",
+    "$n^{1/n}$ is largest at $n=3$ among integers, since $x^{1/x}$ peaks at $x=e$."
+   ]
+  },
+  {
+   "q_no": 18,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Differentiation of determinants",
+    "Derivative of one function with respect to another"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=\\left|\\begin{matrix}x^3&\\sin x&\\cos x\\\\6&-1&0\\\\p&p^2&p^3\\end{matrix}\\right|$, where $p$ is a real constant. Let $g(x)=\\tan^{-1}x$. If the derivative of $f(x)$ with respect to $g(x)$ at $x=0$ is equal to $f''(0)$, then the sum of all possible real values of $p$ is:",
+   "options": [
+    "$0$",
+    "$1$",
+    "$-1$",
+    "$2$"
+   ],
+   "answer": "(B) $1$",
+   "key_idea": "Only the first row depends on $x$, so differentiate that row alone; $\\frac{df}{dg}=\\frac{f'(0)}{g'(0)}$ with $g'(0)=1$ gives a cubic in $p$.",
+   "solution": [
+    "$f'(x)=\\left|\\begin{matrix}3x^2&\\cos x&-\\sin x\\\\6&-1&0\\\\p&p^2&p^3\\end{matrix}\\right|$ and $f''(x)=\\left|\\begin{matrix}6x&-\\sin x&-\\cos x\\\\6&-1&0\\\\p&p^2&p^3\\end{matrix}\\right|$.",
+    "At $x=0$: $f'(0)=\\left|\\begin{matrix}0&1&0\\\\6&-1&0\\\\p&p^2&p^3\\end{matrix}\\right|=-6p^3$.",
+    "$f''(0)=\\left|\\begin{matrix}0&0&-1\\\\6&-1&0\\\\p&p^2&p^3\\end{matrix}\\right|=-1(6p^2+p)=-6p^2-p$.",
+    "$g(x)=\\tan^{-1}x\\Rightarrow g'(x)=\\frac{1}{1+x^2}\\Rightarrow g'(0)=1$.",
+    "$\\left.\\frac{df}{dg}\\right|_{x=0}=\\frac{f'(0)}{g'(0)}=\\frac{-6p^3}{1}=-6p^3$.",
+    "Given $\\left.\\frac{df}{dg}\\right|_{x=0}=f''(0)$: $-6p^3=-6p^2-p\\Rightarrow6p^3-6p^2-p=0\\Rightarrow p(6p^2-6p-1)=0$.",
+    "The real values of $p$ are $p=0$ and the roots of $6p^2-6p-1=0$, which are real since the discriminant $D=36-4(6)(-1)=60>0$.",
+    "The sum of all real values of $p$ is $0+\\left(-\\frac{-6}{6}\\right)=1$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Expand the determinant along the first row first; then $f(x)$ is an explicit combination of $x^3,\\sin x,\\cos x$ and the differentiation is immediate.",
+     "solution": [
+      "Expanding along the first row: $f(x)=x^3(-p^3)-\\sin x\\,(6p^3)+\\cos x\\,(6p^2+p)$.",
+      "$f'(x)=-3p^3x^2-6p^3\\cos x-(6p^2+p)\\sin x$, so $f'(0)=-6p^3$.",
+      "$f''(x)=-6p^3x+6p^3\\sin x-(6p^2+p)\\cos x$, so $f''(0)=-(6p^2+p)$.",
+      "The condition $f'(0)=f''(0)$ (as $g'(0)=1$) gives the cubic $6p^3-6p^2-p=0$.",
+      "All three roots are real ($p=0$ and a quadratic with $D=60>0$), so by Vieta the sum of the roots is $-\\frac{-6}{6}=1$ without solving. Option (B)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If only one row of a determinant depends on $x$, $\\frac{d}{dx}$ of the determinant is the determinant with that row differentiated; in general it is the sum over rows.",
+    "Vieta: the sum of the roots of $ax^3+bx^2+cx+d=0$ is $-\\frac{b}{a}$ - valid for the sum of real roots only when all roots are real, so check the discriminant first.",
+    "$\\frac{df}{dg}=\\frac{f'}{g'}$ with $g=\\tan^{-1}x$ has $g'(0)=1$, so at the origin the derivative of $f$ with respect to $g$ equals $f'(0)$."
+   ]
+  },
+  {
+   "q_no": 19,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Parametric differentiation"
+   ],
+   "level": 0,
+   "question": "If a curve is given parametrically by the equations $x=2t^2+3$ and $y=4t^3-t$, where $t$ is a real parameter, then the value of $\\frac{dy}{dx}$ at $t=1$ is equal to:",
+   "options": [
+    "$\\frac{11}{4}$",
+    "$\\frac{13}{4}$",
+    "$\\frac{9}{4}$",
+    "$\\frac{5}{2}$"
+   ],
+   "answer": "(A) $\\frac{11}{4}$",
+   "key_idea": "$\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}$ evaluated at $t=1$.",
+   "solution": [
+    "$x=2t^2+3$ and $y=4t^3-t$.",
+    "$\\frac{dx}{dt}=4t$ and $\\frac{dy}{dt}=12t^2-1$.",
+    "$\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=\\frac{12t^2-1}{4t}$.",
+    "At $t=1$: $\\left.\\frac{dy}{dx}\\right|_{t=1}=\\frac{12(1)^2-1}{4(1)}=\\frac{11}{4}$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Eliminate the parameter near $t=1$ (where $t>0$): $y=(2x-7)\\sqrt{\\frac{x-3}{2}}$, then differentiate directly in $x$.",
+     "solution": [
+      "$t^2=\\frac{x-3}{2}$ and for $t>0$, $t=\\sqrt{\\frac{x-3}{2}}$; $y=t(4t^2-1)=(2x-7)\\sqrt{\\frac{x-3}{2}}$.",
+      "$\\frac{dy}{dx}=2\\sqrt{\\frac{x-3}{2}}+(2x-7)\\cdot\\frac{1}{2\\sqrt2\\sqrt{x-3}}$.",
+      "$t=1$ corresponds to $x=5$: $\\sqrt{\\frac{2}{2}}=1$ and $2\\sqrt2\\sqrt2=4$.",
+      "$\\left.\\frac{dy}{dx}\\right|_{x=5}=2+\\frac{3}{4}=\\frac{11}{4}$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Parametric derivative: $\\frac{dy}{dx}=\\frac{\\dot y}{\\dot x}$ if $\\dot x\\neq0$; second derivative $\\frac{d^2y}{dx^2}=\\frac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{\\frac{dx}{dt}}$ (not $\\frac{\\ddot y}{\\ddot x}$).",
+    "Tangent is horizontal where $\\dot y=0,\\ \\dot x\\neq0$ and vertical where $\\dot x=0,\\ \\dot y\\neq0$; here $\\frac{dy}{dx}=\\frac{12t^2-1}{4t}$ is horizontal at $t=\\pm\\frac{1}{2\\sqrt3}$.",
+    "Eliminating the parameter is useful only when it can be inverted on the branch of interest (here $t>0$)."
+   ]
+  },
+  {
+   "q_no": 20,
+   "type_label": "Single Correct Type",
+   "short_type": "Single Correct",
+   "marks": 4,
+   "concepts": [
+    "Strictly increasing functions",
+    "Length of subnormal"
+   ],
+   "level": 2,
+   "question": "If the function $f(x)=\\frac{x^3}{3}-ax^2+4x+1$ is strictly increasing on $\\mathbb{R}$, and $a_0$ is the maximum non-negative integer value of $a$, then the length of the subnormal to the curve $y=f(x)$ at $x=1$ for $a=a_0$ is:",
+   "options": [
+    "$\\frac{5}{3}$",
+    "$\\frac{10}{3}$",
+    "$\\frac{20}{3}$",
+    "$10$"
+   ],
+   "answer": "(B) $\\frac{10}{3}$",
+   "key_idea": "$f'(x)\\ge0$ for all $x$ needs $D\\le0$, giving $a\\le2$; the subnormal length is $|y\\,f'(x)|$.",
+   "solution": [
+    "For $f(x)$ to be strictly increasing on $\\mathbb{R}$, $f'(x)\\ge0$ for all $x\\in\\mathbb{R}$.",
+    "$f'(x)=x^2-2ax+4\\ge0$. Since the coefficient of $x^2$ is positive, the discriminant must satisfy $D\\le0$.",
+    "$(-2a)^2-4(1)(4)\\le0\\Rightarrow4a^2-16\\le0\\Rightarrow a^2\\le4\\Rightarrow-2\\le a\\le2$.",
+    "The maximum non-negative integer value of $a$ is $a_0=2$.",
+    "For $a=2$: $f(x)=\\frac{x^3}{3}-2x^2+4x+1$.",
+    "At $x=1$: $y=f(1)=\\frac{1}{3}-2+4+1=\\frac{10}{3}$ and $f'(1)=1^2-4(1)+4=1$.",
+    "The length of the subnormal is $|y\\cdot f'(x)|=\\left|\\frac{10}{3}\\cdot1\\right|=\\frac{10}{3}$. Option (B)."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "$x^2-2ax+4=(x-a)^2+4-a^2\\ge0$ for all $x\\iff a^2\\le4$; the equality cases $a=\\pm2$ are allowed because $f'$ vanishes only at one point (so $f$ is still strictly increasing).",
+    "Tangent/normal lengths at $(x,y)$ with $m=\\frac{dy}{dx}$: subtangent $\\left|\\frac{y}{m}\\right|$, subnormal $|ym|$, tangent $\\left|\\frac{y\\sqrt{1+m^2}}{m}\\right|$, normal $|y|\\sqrt{1+m^2}$.",
+    "The subnormal is the projection of the normal on the $x$-axis."
+   ]
+  },
+  {
+   "q_no": 21,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Shortest distance from a point to a curve (normal)",
+    "Parametric curves"
+   ],
+   "level": 3,
+   "question": "Let a curve be defined parametrically by $x=2t$ and $y=t^2+1$, where $t\\in\\mathbb{R}$. If the shortest distance between the point $P(0,5)$ and any point on the curve is $d$, then the value of $d^2$ is equal to ______.",
+   "answer": "12",
+   "key_idea": "The shortest distance from a point to a curve is along the normal, which gives $t^2=2$ when the normal at $(2t,t^2+1)$ passes through $P$.",
+   "solution": [
+    "$\\frac{dx}{dt}=2$ and $\\frac{dy}{dt}=2t\\Rightarrow\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=t$.",
+    "The slope of the tangent at $Q(2t,t^2+1)$ is $m_T=t$, so the slope of the normal is $m_N=-\\frac{1}{t}$ (for $t\\neq0$).",
+    "The shortest distance from the point $P(0,5)$ to the curve occurs along the normal to the curve passing through $P$.",
+    "The normal at $Q$: $y-(t^2+1)=-\\frac{1}{t}(x-2t)$.",
+    "Since it passes through $P(0,5)$: $5-(t^2+1)=-\\frac{1}{t}(0-2t)\\Rightarrow4-t^2=2\\Rightarrow t^2=2$.",
+    "The square of the distance is $d^2=(2t-0)^2+(t^2+1-5)^2=4t^2+(t^2-4)^2$.",
+    "Substituting $t^2=2$: $d^2=4(2)+(2-4)^2=8+4=12$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Write $d^2$ as a function of $t$ and complete the square: $d^2=(t^2-2)^2+12$.",
+     "solution": [
+      "For the point $Q(2t,t^2+1)$: $d^2=(2t)^2+(t^2+1-5)^2=4t^2+(t^2-4)^2$.",
+      "Expanding, $d^2=t^4-8t^2+16+4t^2=t^4-4t^2+16$.",
+      "Completing the square: $d^2=(t^2-2)^2+12\\ge12$.",
+      "Equality holds at $t^2=2$, which is attainable, so the minimum value is $d^2=12$ (this also covers the case $t=0$, where $d^2=16$)."
+     ]
+    }
+   ],
+   "useful_results": [
+    "For the parabola $x^2=4ay$ and a point $(0,k)$ on its axis (measured from the vertex), if $k>2a$ the nearest points are at height $y=k-2a$ and $d^2=4a(k-a)$; for $k\\le2a$ the vertex is nearest. Here $a=1$, $k=4$: $d^2=4\\cdot1\\cdot3=12$.",
+    "Minimising the squared distance (a polynomial in the parameter) is equivalent to the normal condition and avoids dividing by $t$.",
+    "The line joining a point to its nearest point on a curve is normal to the curve at that point."
+   ]
+  },
+  {
+   "q_no": 22,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Limits: L'Hopital's rule and series expansion"
+   ],
+   "level": 2,
+   "question": "Let $f:(0,\\infty)\\to\\mathbb{R}$ be defined by $f(x)=x^x$. If the value of the limit $\\lim_{x\\to1}\\frac{f(x)-x}{x-1-\\ln x}$ is equal to $L$, then the value of $L$ is ______.",
+   "answer": "2",
+   "key_idea": "Both numerator and denominator vanish to second order at $x=1$, so apply L'Hopital twice.",
+   "solution": [
+    "$f(x)=x^x\\Rightarrow\\ln f(x)=x\\ln x\\Rightarrow\\frac{f'(x)}{f(x)}=1+\\ln x\\Rightarrow f'(x)=x^x(1+\\ln x)$.",
+    "Also $f''(x)=x^x(1+\\ln x)^2+x^{x-1}$. At $x=1$: $f(1)=1$, $f'(1)=1$, $f''(1)=2$.",
+    "$L=\\lim_{x\\to1}\\frac{x^x-x}{x-1-\\ln x}=\\lim_{x\\to1}\\frac{x^x(1+\\ln x)-1}{1-\\frac{1}{x}}$, which is again of the form $\\frac{0}{0}$.",
+    "$L=\\lim_{x\\to1}\\frac{x^x(1+\\ln x)^2+x^{x-1}}{\\frac{1}{x^2}}=\\frac{1(1+0)^2+1}{1}=2$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Put $x=1+h$ and use Taylor series: $x^x=1+h+h^2+\\cdots$ and $x-1-\\ln x=\\frac{h^2}{2}+\\cdots$.",
+     "solution": [
+      "$\\ln x=h-\\frac{h^2}{2}+\\frac{h^3}{3}-\\cdots$, so $x\\ln x=(1+h)\\left(h-\\frac{h^2}{2}+\\cdots\\right)=h+\\frac{h^2}{2}+O(h^3)$.",
+      "$x^x=e^{x\\ln x}=1+\\left(h+\\frac{h^2}{2}\\right)+\\frac{h^2}{2}+O(h^3)=1+h+h^2+O(h^3)$.",
+      "Numerator: $x^x-x=1+h+h^2-(1+h)+O(h^3)=h^2+O(h^3)$.",
+      "Denominator: $x-1-\\ln x=h-\\left(h-\\frac{h^2}{2}\\right)+O(h^3)=\\frac{h^2}{2}+O(h^3)$.",
+      "$L=\\lim_{h\\to0}\\frac{h^2}{h^2/2}=2$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "Near $x=1$ (with $h=x-1$): $x^x=1+h+h^2+O(h^3)$, $\\ln x=h-\\frac{h^2}{2}+\\cdots$, $x-1-\\ln x\\sim\\frac{h^2}{2}$.",
+    "$\\frac{d}{dx}x^x=x^x(1+\\ln x)$ (logarithmic differentiation); $\\frac{d}{dx}x^{f(x)}$ needs the same method.",
+    "If a $\\frac{0}{0}$ limit has numerator and denominator vanishing to the same order $k$, the limit equals the ratio of the $k$-th derivatives (after one or more L'Hopital steps), here $\\frac{f''(1)}{\\frac{d^2}{dx^2}(x-1-\\ln x)|_1}=\\frac{2}{1}$."
+   ]
+  },
+  {
+   "q_no": 23,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Functional equation and derivative from first principles",
+    "Differentiability of a piecewise function"
+   ],
+   "level": 2,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a continuous function satisfying $f(x+y)=f(x)+f(y)+3xy(x+y)$ for all $x,y$, with $f'(0)=2$. Consider the non-uniformly defined function $g:\\mathbb{R}\\to\\mathbb{R}$ given by $g(x)=\\begin{cases}f(x),&x\\le1\\\\\\alpha x^2+\\beta x+1,&x>1\\end{cases}$. If $g(x)$ is differentiable at $x=1$, then the value of $\\alpha-\\beta$ is equal to ______.",
+   "answer": "4",
+   "key_idea": "The functional equation gives $f'(x)=3x^2+f'(0)$, so $f(x)=x^3+2x$; differentiability of $g$ at $1$ means equal values and equal slopes.",
+   "solution": [
+    "$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$ and $f(x+h)=f(x)+f(h)+3xh(x+h)$.",
+    "$f'(x)=\\lim_{h\\to0}\\frac{f(h)+3xh(x+h)}{h}=\\lim_{h\\to0}\\frac{f(h)}{h}+\\lim_{h\\to0}3x(x+h)=f'(0)+3x^2=3x^2+2$.",
+    "$f(0)=0$ gives $f(x)=x^3+2x$.",
+    "For $g(x)$ to be differentiable at $x=1$ it must first be continuous: $\\lim_{x\\to1^-}g(x)=\\lim_{x\\to1^+}g(x)=g(1)$.",
+    "$f(1)=\\alpha(1)^2+\\beta(1)+1\\Rightarrow1^3+2(1)=\\alpha+\\beta+1\\Rightarrow\\alpha+\\beta=2$ ... (i).",
+    "$g'(1^-)=f'(1)=3(1)^2+2=5$ and $g'(1^+)=\\left.\\frac{d}{dx}(\\alpha x^2+\\beta x+1)\\right|_{x=1}=2\\alpha+\\beta$.",
+    "Since $g$ is differentiable at $x=1$: $2\\alpha+\\beta=5$ ... (ii).",
+    "Solving (i) and (ii): $\\alpha=3$, $\\beta=-1$, so $\\alpha-\\beta=3-(-1)=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "Subtract the cube: $h(x)=f(x)-x^3$ is additive, hence $h(x)=2x$; and $\\alpha-\\beta$ is the combination $2(2\\alpha+\\beta)-3(\\alpha+\\beta)$ of the two conditions.",
+     "solution": [
+      "$(x+y)^3=x^3+y^3+3xy(x+y)$, so $h(x)=f(x)-x^3$ satisfies $h(x+y)=h(x)+h(y)$ and is continuous.",
+      "A continuous additive function is $h(x)=cx$; $c=h'(0)=f'(0)=2$, so $f(x)=x^3+2x$.",
+      "Continuity at $1$: $f(1)=3=\\alpha+\\beta+1$, so $\\alpha+\\beta=2$. Equal slopes at $1$: $f'(1)=5=2\\alpha+\\beta$.",
+      "Then $\\alpha-\\beta=2(2\\alpha+\\beta)-3(\\alpha+\\beta)=2\\cdot5-3\\cdot2=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "$f(x+y)=f(x)+f(y)+3xy(x+y)$ gives $f(x)=x^3+cx$ with $c=f'(0)$ (the cube absorbs the cross term, the remainder is Cauchy-additive).",
+    "A piecewise function is differentiable at the join iff it is continuous there and the one-sided derivatives are equal - two equations for two unknown coefficients.",
+    "Quick linear combination: to get $\\alpha-\\beta$ from $\\alpha+\\beta=2$ and $2\\alpha+\\beta=5$, use $\\alpha-\\beta=2(2\\alpha+\\beta)-3(\\alpha+\\beta)$."
+   ]
+  },
+  {
+   "q_no": 24,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Differentiability and continuity of the derivative of $x^m\\cos\\frac{1}{x}$"
+   ],
+   "level": 3,
+   "question": "Let $f:\\mathbb{R}\\to\\mathbb{R}$ be a function defined by $f(x)=\\begin{cases}x^m\\cos\\left(\\frac{1}{x}\\right),&x\\neq0\\\\0,&x=0\\end{cases}$ where $m\\in\\{1,2,3,4,5,6,7,8,9,10\\}$. Let $A$ denote the number of values of $m$ for which $f(x)$ is differentiable at $x=0$, and let $B$ denote the number of values of $m$ for which $f'(x)$ is continuous at $x=0$. Find the value of $A+B$ ______.",
+   "answer": "17",
+   "key_idea": "Differentiable at $0$ iff $m>1$, and $f'$ continuous at $0$ iff both terms of $f'(x)$ tend to $0$, i.e. $m>2$.",
+   "solution": [
+    "$f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\frac{h^m\\cos\\left(\\frac{1}{h}\\right)-0}{h}=\\lim_{h\\to0}h^{m-1}\\cos\\left(\\frac{1}{h}\\right)$.",
+    "This limit exists and equals $0$ if and only if $m-1>0\\Rightarrow m>1$.",
+    "Since $m\\in\\{1,2,\\dots,10\\}$, $f(x)$ is differentiable at $x=0$ for $m\\in\\{2,3,\\dots,10\\}$. Thus $A=9$.",
+    "For $x\\neq0$ the derivative is $f'(x)=mx^{m-1}\\cos\\left(\\frac{1}{x}\\right)+x^{m-2}\\sin\\left(\\frac{1}{x}\\right)$.",
+    "For $f'$ to be continuous at $0$ we need $\\lim_{x\\to0}f'(x)=f'(0)=0$.",
+    "This requires both $m-1>0$ and $m-2>0\\Rightarrow m>2$.",
+    "Thus $f'$ is continuous at $x=0$ for $m\\in\\{3,4,\\dots,10\\}$, which gives $B=8$.",
+    "Hence $A+B=9+8=17$."
+   ],
+   "solution_source": "pdf",
+   "useful_results": [
+    "For $f(x)=x^m\\cos\\frac{1}{x}$ or $x^m\\sin\\frac{1}{x}$ with $f(0)=0$: continuous iff $m>0$; differentiable at $0$ iff $m>1$; $f'$ continuous at $0$ iff $m>2$; in general $f$ is $C^k$ at $0$ iff $m>2k$.",
+    "For $m=2$ the function is differentiable but $f'(x)=2x\\cos\\frac{1}{x}+\\sin\\frac{1}{x}$ has no limit at $0$: differentiable does not imply continuously differentiable.",
+    "Squeeze: $|x^{p}\\cos\\frac{1}{x}|\\le|x|^p\\to0$ for $p>0$; for $p=0$ the term $\\sin\\frac{1}{x}$ has no limit."
+   ]
+  },
+  {
+   "q_no": 25,
+   "type_label": "Numerical Type ",
+   "short_type": "Numerical",
+   "marks": 4,
+   "concepts": [
+    "Intervals of monotonicity of a quartic",
+    "Second derivative"
+   ],
+   "level": 2,
+   "question": "Let $f(x)=x^4-4x^3+4x^2+10$. Let $(a,b)$ be the open interval of maximum length contained in $(0,\\infty)$ in which the function $f(x)$ is strictly decreasing. If $f''(x)$ denotes the second derivative of $f(x)$, then the value of $f''(a)+f''(b)$ is equal to ______.",
+   "answer": "4",
+   "key_idea": "Sign-scan $f'(x)=4x(x-1)(x-2)$ on $(0,\\infty)$: it is negative only on $(1,2)$.",
+   "solution": [
+    "$f(x)=x^4-4x^3+4x^2+10$, so $f'(x)=4x^3-12x^2+8x=4x(x^2-3x+2)=4x(x-1)(x-2)$.",
+    "For $x>0$, $f'(x)<0$ when $(x-1)(x-2)<0$, which gives $x\\in(1,2)$.",
+    "Thus the required interval is $(a,b)=(1,2)$, so $a=1$ and $b=2$.",
+    "$f''(x)=\\frac{d}{dx}(4x^3-12x^2+8x)=12x^2-24x+8$.",
+    "$f''(1)=12(1)^2-24(1)+8=-4$ and $f''(2)=12(2)^2-24(2)+8=8$.",
+    "Therefore $f''(a)+f''(b)=f''(1)+f''(2)=-4+8=4$."
+   ],
+   "solution_source": "pdf",
+   "alternate_solutions": [
+    {
+     "idea": "At a simple root $r$ of $f'$, $f''(r)$ is the product of the leading coefficient and the distances to the other roots: $f''(r)=4\\prod_{s\\neq r}(r-s)$.",
+     "solution": [
+      "$f'(x)=4x(x-1)(x-2)$ has simple roots $0,1,2$, and $f'$ is negative on $(1,2)$ (and on $(-\\infty,0)$), so $(a,b)=(1,2)$.",
+      "If $f'(x)=4(x-r)q(x)$, then $f''(r)=4q(r)$ (the other factor's derivative multiplies $(x-r)=0$).",
+      "$f''(1)=4\\cdot1\\cdot(1-2)=-4$ (from $x(x-2)$ at $x=1$) and $f''(2)=4\\cdot2\\cdot(2-1)=8$.",
+      "$f''(1)+f''(2)=-4+8=4$."
+     ]
+    }
+   ],
+   "useful_results": [
+    "If $f'(x)=k(x-r)q(x)$ then $f''(r)=k\\,q(r)$ - second derivative at a simple critical point without differentiating again.",
+    "Sign of $f'$ alternates across simple roots; with leading coefficient positive and roots $0<1<2$, $f'<0$ exactly on $(1,2)$ within $(0,\\infty)$.",
+    "At a simple root, $f''<0$ means local maximum (here $x=1$ is a local max, $x=2$ a local min) - the endpoints of a decreasing interval are a local max on the left and a local min on the right."
+   ]
+  }
+ ]
+}
