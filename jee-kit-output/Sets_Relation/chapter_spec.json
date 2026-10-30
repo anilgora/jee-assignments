@@ -1,0 +1,2241 @@
+{
+ "chapter": {
+  "en": "Sets & Relation",
+  "hi": "समुच्चय तथा सम्बन्ध",
+  "slug": "Sets_Relation"
+ },
+ "batches": {
+  "XII": {
+   "jm": "J-M(XII)"
+  },
+  "XIII": {
+   "jm": "J-M(XIII)"
+  }
+ },
+ "qb_overlap": {
+  "XIII": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35
+  ]
+ },
+ "quick_review": {
+  "sections": [
+   {
+    "en": "Set and its Representation",
+    "hi": "समुच्चय तथा उसका निरूपण",
+    "items": [
+     {
+      "id": "N1",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:1",
+      "q": [
+       "What is a set? What is its cardinal number?",
+       "समुच्चय क्या है? इसकी गणनांक संख्या क्या है?"
+      ],
+      "a": [
+       [
+        "A set is a well-defined collection of distinct, distinguishable objects (elements). $a\\in A$: $a$ is an element of $A$.",
+        "समुच्चय सुपरिभाषित, भिन्न तथा पहचाने जा सकने वाली वस्तुओं (अवयवों) का संग्रह है। $a\\in A$: $a$, $A$ का अवयव है।"
+       ],
+       [
+        "Cardinal number $n(A)$ (or $|A|$) = number of elements of $A$.",
+        "गणनांक $n(A)$ (या $|A|$) = $A$ के अवयवों की संख्या।"
+       ],
+       [
+        "Ex: $A=\\{x_1,x_2,x_3\\}\\Rightarrow n(A)=3$.",
+        "उदा.: $A=\\{x_1,x_2,x_3\\}\\Rightarrow n(A)=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "N2",
+      "o": null,
+      "tag": "added",
+      "src": "theory sheet (no question needs it directly)",
+      "q": [
+       "How is a set written in roster form and in set-builder form?",
+       "समुच्चय को रोस्टर (सारणी) रूप तथा समुच्चय-निर्माण रूप में कैसे लिखते हैं?"
+      ],
+      "a": [
+       [
+        "Roster: list the elements inside braces, e.g. $\\{2,4,6\\}$ (order and repetition do not matter).",
+        "रोस्टर रूप: अवयवों को कोष्ठक में सूचीबद्ध करें, जैसे $\\{2,4,6\\}$ (क्रम व पुनरावृत्ति का महत्व नहीं)।"
+       ],
+       [
+        "Set-builder: $\\{x : P(x)\\}$ = set of all $x$ for which the property $P(x)$ holds.",
+        "समुच्चय-निर्माण रूप: $\\{x : P(x)\\}$ = वे सभी $x$ जिनके लिए गुण $P(x)$ सत्य है।"
+       ],
+       [
+        "Ex: $\\{x\\in\\mathbb N : x+3y=12 \\text{ for some } y\\in\\mathbb N\\}=\\{9,6,3\\}$.",
+        "उदा.: $\\{x\\in\\mathbb N : x+3y=12,\\ y\\in\\mathbb N\\}=\\{9,6,3\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N3",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:2, J-I:7, J-I:10, J-I:12, QB:1, QB:7 (+11 more)",
+      "q": [
+       "A set is given by an equation or inequality. How do you list or count its elements?",
+       "समुच्चय किसी समीकरण या असमिका से दिया है। उसके अवयव कैसे सूचीबद्ध करें या गिनें?"
+      ],
+      "a": [
+       [
+        "Solve the condition first, then keep only the values in the stated universe ($\\mathbb N$, $\\mathbb Z$, $\\mathbb R$, $\\mathbb N\\times\\mathbb N$...). Check the domain (square roots, $x\\ge0$, denominators).",
+        "पहले प्रतिबन्ध हल करें, फिर केवल दिए गए सार्वत्रिक क्षेत्र ($\\mathbb N$, $\\mathbb Z$, $\\mathbb R$, $\\mathbb N\\times\\mathbb N$...) के मान रखें। प्रांत (वर्गमूल, $x\\ge0$, हर) जाँचें।"
+       ],
+       [
+        "For integer points in a region, fix one coordinate and count the other.",
+        "किसी क्षेत्र के पूर्णांक बिन्दुओं के लिए एक निर्देशांक स्थिर कर दूसरा गिनें।"
+       ],
+       [
+        "Ex: $\\{x\\in\\mathbb Z: (x+2)(x^2-5x+6)=0\\}=\\{-2,2,3\\}$.",
+        "उदा.: $\\{x\\in\\mathbb Z: (x+2)(x^2-5x+6)=0\\}=\\{-2,2,3\\}$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Types of Sets",
+    "hi": "समुच्चयों के प्रकार",
+    "items": [
+     {
+      "id": "N4",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:2, J-I:4, J-I:5, J-I:10",
+      "q": [
+       "Define finite, infinite, singleton and null sets.",
+       "परिमित, अपरिमित, एकल तथा रिक्त समुच्चय परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "Finite: $n(A)$ is a natural number or $0$. Infinite: the elements cannot be counted to an end, e.g. $\\{x\\in\\mathbb R: 0<x<0.0001\\}$.",
+        "परिमित: $n(A)$ प्राकृत संख्या या $0$ है। अपरिमित: अवयवों की गिनती समाप्त नहीं होती, जैसे $\\{x\\in\\mathbb R: 0<x<0.0001\\}$।"
+       ],
+       [
+        "Singleton: $n(A)=1$. Null (empty, void) set $\\phi=\\{\\}$: $n(\\phi)=0$.",
+        "एकल समुच्चय: $n(A)=1$। रिक्त समुच्चय $\\phi=\\{\\}$: $n(\\phi)=0$।"
+       ],
+       [
+        "Ex: $\\{\\phi\\}$ and $\\{0\\}$ are singletons, not empty; $\\{x\\in\\mathbb R: x^2+x+1=0\\}=\\phi$.",
+        "उदा.: $\\{\\phi\\}$ व $\\{0\\}$ एकल समुच्चय हैं, रिक्त नहीं; $\\{x\\in\\mathbb R: x^2+x+1=0\\}=\\phi$।"
+       ]
+      ]
+     },
+     {
+      "id": "N5",
+      "o": null,
+      "tag": "added",
+      "src": "theory sheet (no question needs it directly)",
+      "q": [
+       "What is the difference between equal sets and equivalent sets?",
+       "समान समुच्चय तथा तुल्य समुच्चय में क्या अन्तर है?"
+      ],
+      "a": [
+       [
+        "Equal: $A=B$ if they have exactly the same elements ($A\\subseteq B$ and $B\\subseteq A$). Equivalent: $n(A)=n(B)$ (finite sets).",
+        "समान: $A=B$ यदि दोनों के अवयव ठीक वही हैं ($A\\subseteq B$ तथा $B\\subseteq A$)। तुल्य: $n(A)=n(B)$ (परिमित समुच्चय)।"
+       ],
+       [
+        "Ex: $\\{1,2,3\\}$ and $\\{a,b,c\\}$ are equivalent, not equal.",
+        "उदा.: $\\{1,2,3\\}$ व $\\{a,b,c\\}$ तुल्य हैं, समान नहीं।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Subsets and Power Set",
+    "hi": "उपसमुच्चय तथा घात समुच्चय",
+    "items": [
+     {
+      "id": "N6",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:3, J-I:11, QB:1, QB:21, J-M(XIII):22, J-M(XIII):57",
+      "q": [
+       "What is a subset and a proper subset? How many subsets does a set with $n$ elements have?",
+       "उपसमुच्चय व उचित उपसमुच्चय क्या है? $n$ अवयवों वाले समुच्चय के कितने उपसमुच्चय होते हैं?"
+      ],
+      "a": [
+       [
+        "$A\\subseteq B$ if $x\\in A\\Rightarrow x\\in B$. Proper subset $A\\subset B$: $A\\subseteq B$ and $A\\neq B$. $\\phi$ and $A$ are subsets of every $A$.",
+        "$A\\subseteq B$ यदि $x\\in A\\Rightarrow x\\in B$। उचित उपसमुच्चय $A\\subset B$: $A\\subseteq B$ तथा $A\\neq B$। $\\phi$ व $A$ स्वयं, $A$ के उपसमुच्चय हैं।"
+       ],
+       "$\\text{Subsets}={}^nC_0+{}^nC_1+\\dots+{}^nC_n=2^n,\\qquad \\text{proper (or non-empty)}=2^n-1$",
+       [
+        "Ex: $2^m-2^n=56\\Rightarrow 2^n(2^{m-n}-1)=8\\cdot 7\\Rightarrow m=6,\\ n=3$.",
+        "उदा.: $2^m-2^n=56\\Rightarrow 2^n(2^{m-n}-1)=8\\cdot 7\\Rightarrow m=6,\\ n=3$।"
+       ]
+      ]
+     },
+     {
+      "id": "31",
+      "o": 31,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define superset.",
+       "अधिसमुच्चय परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "If $A\\subseteq B$, then $B$ is a superset of $A$, written $B\\supseteq A$ (proper: $B\\supset A$).",
+        "यदि $A\\subseteq B$, तो $B$, $A$ का अधिसमुच्चय है: $B\\supseteq A$ (उचित: $B\\supset A$)।"
+       ],
+       [
+        "Ex: $\\{a,e,i,o,u\\}\\supset\\{i,o\\}$.",
+        "उदा.: $\\{a,e,i,o,u\\}\\supset\\{i,o\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "32",
+      "o": 32,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the power set of a set?",
+       "किसी समुच्चय का घात समुच्चय क्या है?"
+      ],
+      "a": [
+       [
+        "$P(A)=\\{X : X\\subseteq A\\}$, the set of all subsets of $A$.",
+        "$P(A)=\\{X : X\\subseteq A\\}$, अर्थात् $A$ के सभी उपसमुच्चयों का समुच्चय।"
+       ],
+       "$n(A)=n\\Rightarrow n(P(A))=2^n,\\qquad n(P(P(A)))=2^{2^n}$",
+       [
+        "Ex: $P(\\phi)=\\{\\phi\\}$, $P(P(\\phi))=\\{\\phi,\\{\\phi\\}\\}$, so $n(P(P(P(\\phi))))=4$.",
+        "उदा.: $P(\\phi)=\\{\\phi\\}$, $P(P(\\phi))=\\{\\phi,\\{\\phi\\}\\}$, अतः $n(P(P(P(\\phi))))=4$।"
+       ]
+      ]
+     },
+     {
+      "id": "N7",
+      "o": null,
+      "tag": "added",
+      "src": "QB:25, J-M(XIII):9, J-M(XIII):10, J-M(XIII):31, J-M(XIII):32, J-M(XIII):43 (+1 more)",
+      "q": [
+       "How do you count subsets (or pairs of subsets) that satisfy a condition?",
+       "किसी प्रतिबन्ध को सन्तुष्ट करने वाले उपसमुच्चयों (या उपसमुच्चय-युग्मों) को कैसे गिनें?"
+      ],
+      "a": [
+       [
+        "Decide each element independently: subsets containing $k$ fixed elements $=2^{n-k}$; meeting a set $B$: $2^n-2^{\\,n-n(A\\cap B)}$ (use the complement).",
+        "प्रत्येक अवयव का निर्णय स्वतंत्र रूप से करें: $k$ निश्चित अवयवों वाले उपसमुच्चय $=2^{n-k}$; $B$ से प्रतिच्छेद करने वाले: $2^n-2^{\\,n-n(A\\cap B)}$ (पूरक से)।"
+       ],
+       [
+        "Ordered pairs $(Y,Z)$ of subsets with $Y\\cap Z=\\phi$: each element has 3 choices $\\Rightarrow 3^n$.",
+        "उपसमुच्चयों के क्रमित युग्म $(Y,Z)$ जिनमें $Y\\cap Z=\\phi$: प्रत्येक अवयव के 3 विकल्प $\\Rightarrow 3^n$।"
+       ],
+       [
+        "Ex: $X=\\{1,2,3,4,5\\}$: number of $(Y,Z)$ with $Y\\cap Z=\\phi$ is $3^5=243$.",
+        "उदा.: $X=\\{1,2,3,4,5\\}$: $Y\\cap Z=\\phi$ वाले $(Y,Z)$ की संख्या $3^5=243$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Operations on Sets and Venn Diagram",
+    "hi": "समुच्चयों पर संक्रियाएँ तथा वेन आरेख",
+    "items": [
+     {
+      "id": "N8",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:17, J-I:22, J-M(XIII):22",
+      "q": [
+       "What are the universal set and the complement of a set?",
+       "सार्वत्रिक समुच्चय तथा किसी समुच्चय का पूरक क्या है?"
+      ],
+      "a": [
+       [
+        "Universal set $U$: contains all sets under consideration. Complement $A'=A^c=\\{x\\in U : x\\notin A\\}=U-A$.",
+        "सार्वत्रिक समुच्चय $U$: विचाराधीन सभी समुच्चयों को समाहित करता है। पूरक $A'=A^c=\\{x\\in U : x\\notin A\\}=U-A$।"
+       ],
+       "$(A')'=A,\\quad A\\cup A'=U,\\quad A\\cap A'=\\phi,\\quad \\phi'=U$"
+      ]
+     },
+     {
+      "id": "N9",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:7, J-I:8, J-I:12, J-I:22, QB:8, QB:35 (+8 more)",
+      "q": [
+       "Define union, intersection, difference and symmetric difference of two sets.",
+       "दो समुच्चयों का सम्मिलन, सर्वनिष्ठ, अन्तर तथा सममित अन्तर परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "$A\\cup B=\\{x: x\\in A \\text{ or } x\\in B\\}$, $A\\cap B=\\{x: x\\in A \\text{ and } x\\in B\\}$.",
+        "$A\\cup B$: $A$ या $B$ में; $A\\cap B$: $A$ तथा $B$ दोनों में।"
+       ],
+       "$A-B=\\{x: x\\in A,\\ x\\notin B\\}=A\\cap B',\\qquad A\\,\\Delta\\, B=(A-B)\\cup(B-A)$",
+       [
+        "Ex: $A=\\{2,3,4,5,6,7\\}$, $B=\\{3,5,7,9,11,13\\}$: $A-B=\\{2,4,6\\}$, $B-A=\\{9,11,13\\}$.",
+        "उदा.: $A=\\{2,3,4,5,6,7\\}$, $B=\\{3,5,7,9,11,13\\}$: $A-B=\\{2,4,6\\}$, $B-A=\\{9,11,13\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N10",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:15, J-I:16",
+      "q": [
+       "When are two sets disjoint?",
+       "दो समुच्चय असंयुक्त कब होते हैं?"
+      ],
+      "a": [
+       [
+        "$A,B$ are disjoint if $A\\cap B=\\phi$; then $n(A\\cup B)=n(A)+n(B)$. Otherwise they are overlapping.",
+        "$A,B$ असंयुक्त हैं यदि $A\\cap B=\\phi$; तब $n(A\\cup B)=n(A)+n(B)$। अन्यथा वे अतिव्यापी हैं।"
+       ],
+       [
+        "Ex: $A-B$, $A\\cap B$, $B-A$ are pairwise disjoint and their union is $A\\cup B$.",
+        "उदा.: $A-B$, $A\\cap B$, $B-A$ परस्पर असंयुक्त हैं तथा इनका सम्मिलन $A\\cup B$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "N11",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:17, J-I:19, J-M(XIII):5",
+      "q": [
+       "State the laws of algebra of sets.",
+       "समुच्चयों के बीजगणित के नियम लिखिए।"
+      ],
+      "a": [
+       [
+        "Idempotent $A\\cup A=A,\\ A\\cap A=A$; identity $A\\cup\\phi=A,\\ A\\cap U=A$; commutative and associative for $\\cup,\\cap$.",
+        "वर्गसम $A\\cup A=A,\\ A\\cap A=A$; तत्समक $A\\cup\\phi=A,\\ A\\cap U=A$; $\\cup,\\cap$ क्रमविनिमेय व साहचर्य हैं।"
+       ],
+       "$A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C),\\qquad A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C)$",
+       [
+        "Also useful: $A\\cup(A\\cap B)=A$; if $A\\cup B=A\\cup C$ and $A\\cap B=A\\cap C$ then $B=C$.",
+        "उपयोगी: $A\\cup(A\\cap B)=A$; यदि $A\\cup B=A\\cup C$ तथा $A\\cap B=A\\cap C$ तो $B=C$।"
+       ],
+       [
+        "Ex: $X\\cap(Y\\cup X)'=X\\cap Y'\\cap X'=\\phi$.",
+        "उदा.: $X\\cap(Y\\cup X)'=X\\cap Y'\\cap X'=\\phi$।"
+       ]
+      ]
+     },
+     {
+      "id": "N12",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:17, J-I:18, J-I:19",
+      "q": [
+       "State De Morgan's laws.",
+       "डी-मॉर्गन के नियम लिखिए।"
+      ],
+      "a": [
+       "$(A\\cup B)'=A'\\cap B',\\qquad (A\\cap B)'=A'\\cup B'$",
+       [
+        "Also $A-(B\\cup C)=(A-B)\\cap(A-C)$ and $A-(B\\cap C)=(A-B)\\cup(A-C)$.",
+        "साथ ही $A-(B\\cup C)=(A-B)\\cap(A-C)$ तथा $A-(B\\cap C)=(A-B)\\cup(A-C)$।"
+       ],
+       [
+        "Ex: $(A\\cup B')'\\cup(B\\cap C)=(A'\\cap B)\\cup(B\\cap C)=B\\cap(A'\\cup C)$.",
+        "उदा.: $(A\\cup B')'\\cup(B\\cap C)=(A'\\cap B)\\cup(B\\cap C)=B\\cap(A'\\cup C)$।"
+       ]
+      ]
+     },
+     {
+      "id": "N13",
+      "o": null,
+      "tag": "added",
+      "src": "J-M(XIII):15",
+      "q": [
+       "How do you read a statement in a Venn diagram?",
+       "किसी कथन को वेन आरेख में कैसे पढ़ते हैं?"
+      ],
+      "a": [
+       [
+        "$U$ is a rectangle, sets are circles; three sets give 8 regions (only $A$, only $A\\cap B$, ..., none). Shade exactly the regions the statement describes.",
+        "$U$ एक आयत, समुच्चय वृत्त; तीन समुच्चयों से 8 क्षेत्र (केवल $A$, केवल $A\\cap B$, ..., कोई नहीं)। कथन में वर्णित क्षेत्र ही छायांकित करें।"
+       ],
+       [
+        "Ex: \"some play two games, none play all three\": the regions for exactly two are non-empty and $A\\cap B\\cap C=\\phi$.",
+        "उदा.: \"कुछ दो खेल खेलते हैं, कोई तीनों नहीं\": ठीक दो वाले क्षेत्र अरिक्त तथा $A\\cap B\\cap C=\\phi$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Number of Elements in Sets",
+    "hi": "समुच्चयों में अवयवों की संख्या",
+    "items": [
+     {
+      "id": "N14",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:15, J-I:16, J-I:18, J-I:21, QB:17, J-M(XIII):45 (+1 more)",
+      "q": [
+       "Write the formulas for the number of elements in the union, difference and complement of two sets.",
+       "दो समुच्चयों के सम्मिलन, अन्तर तथा पूरक में अवयवों की संख्या के सूत्र लिखिए।"
+      ],
+      "a": [
+       "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+       "$n(A-B)=n(A)-n(A\\cap B),\\qquad n(A\\,\\Delta\\, B)=n(A)+n(B)-2n(A\\cap B)$",
+       "$n(A'\\cap B')=n(U)-n(A\\cup B),\\qquad n(A'\\cup B')=n(U)-n(A\\cap B)$",
+       [
+        "Ex: 100 students, 55 pass Maths, 67 pass Physics, none fail: both $=22$, Physics only $=67-22=45$.",
+        "उदा.: 100 छात्र, 55 गणित में, 67 भौतिकी में उत्तीर्ण, कोई अनुत्तीर्ण नहीं: दोनों $=22$, केवल भौतिकी $=67-22=45$।"
+       ]
+      ]
+     },
+     {
+      "id": "N15",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:14, QB:28, QB:31, J-M(XIII):49, J-M(XIII):62, J-M(XIII):72",
+      "q": [
+       "Write the formula for $n(A\\cup B\\cup C)$. How do you find \"exactly one\" and \"exactly two\"?",
+       "$n(A\\cup B\\cup C)$ का सूत्र लिखिए। \"ठीक एक\" तथा \"ठीक दो\" कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+       [
+        "Exactly two $=\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$; exactly one $=\\sum n(A)-2\\sum n(A\\cap B)+3n(A\\cap B\\cap C)$.",
+        "ठीक दो $=\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$; ठीक एक $=\\sum n(A)-2\\sum n(A\\cap B)+3n(A\\cap B\\cap C)$।"
+       ],
+       [
+        "Ex: medals $48+25+18=91$ to 60 men, 5 got all three: $e_1+e_2=55,\\ e_1+2e_2+15=91\\Rightarrow e_2=21$.",
+        "उदा.: पदक $48+25+18=91$, 60 व्यक्ति, 5 को तीनों: $e_1+e_2=55,\\ e_1+2e_2+15=91\\Rightarrow e_2=21$।"
+       ]
+      ]
+     },
+     {
+      "id": "N16",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:13, J-I:20, QB:28, QB:31, J-M(XIII):20, J-M(XIII):62 (+1 more)",
+      "q": [
+       "How do you find the greatest and least possible values of $n(A\\cap B)$ or $n(A\\cup B)$?",
+       "$n(A\\cap B)$ या $n(A\\cup B)$ के अधिकतम व न्यूनतम सम्भव मान कैसे ज्ञात करें?"
+      ],
+      "a": [
+       "$\\max(0,\\ n(A)+n(B)-n(U))\\le n(A\\cap B)\\le \\min(n(A),n(B))$",
+       "$\\max(n(A),n(B))\\le n(A\\cup B)\\le \\min(n(A)+n(B),\\ n(U))$",
+       [
+        "Ex: 63% read A, 76% read B, $x\\%$ both: $39\\le x\\le 63$.",
+        "उदा.: 63% A, 76% B पढ़ते हैं, $x\\%$ दोनों: $39\\le x\\le 63$।"
+       ]
+      ]
+     },
+     {
+      "id": "N17",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:9, QB:17, J-M(XIII):12, J-M(XIII):19, J-M(XIII):26, J-M(XIII):45 (+1 more)",
+      "q": [
+       "How do you count (or add) the multiples of given numbers in a range?",
+       "किसी परिसर में दी गई संख्याओं के गुणजों को कैसे गिनें (या जोड़ें)?"
+      ],
+      "a": [
+       [
+        "Multiples of $k$ in $1..N$: $\\left[\\frac Nk\\right]$. Multiples of $a$ and $b$ = multiples of $\\mathrm{lcm}(a,b)$, e.g. $N_6\\cap N_8=N_{24}$. Use inclusion-exclusion for \"or\", complement for \"neither\".",
+        "$1..N$ में $k$ के गुणज: $\\left[\\frac Nk\\right]$। $a$ व $b$ दोनों के गुणज = $\\mathrm{lcm}(a,b)$ के गुणज, जैसे $N_6\\cap N_8=N_{24}$। \"या\" के लिए समावेशन-अपवर्जन, \"कोई नहीं\" के लिए पूरक।"
+       ],
+       [
+        "Sets like $\\{9k+2\\}$ inside a range are A.P.s: count with $T_n$, add with $S_n$.",
+        "$\\{9k+2\\}$ जैसे समुच्चय किसी परिसर में स.श्रे. होते हैं: $T_n$ से गिनें, $S_n$ से जोड़ें।"
+       ],
+       [
+        "Ex: in $1..140$, numbers divisible by none of $2,3,5$: $140-102=38$.",
+        "उदा.: $1..140$ में $2,3,5$ में से किसी से विभाज्य नहीं: $140-102=38$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Cartesian Product of two sets",
+    "hi": "दो समुच्चयों का कार्तीय गुणन",
+    "items": [
+     {
+      "id": "33",
+      "o": 33,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How is the cartesian product of sets A and B represented?",
+       "समुच्चयों A तथा B का कार्तीय गुणन कैसे निरूपित करते हैं?"
+      ],
+      "a": [
+       [
+        "$A\\times B$ (read \"A cross B\"); its elements are ordered pairs $(a,b)$, listed in roster form or drawn as points/arrows.",
+        "$A\\times B$ (\"A क्रॉस B\"); इसके अवयव क्रमित युग्म $(a,b)$ हैं, रोस्टर रूप में या बिन्दुओं/तीरों से दर्शाए जाते हैं।"
+       ],
+       [
+        "Ex: $A=\\{2,3\\},B=\\{1,2\\}$: $A\\times B=\\{(2,1),(2,2),(3,1),(3,2)\\}$.",
+        "उदा.: $A=\\{2,3\\},B=\\{1,2\\}$: $A\\times B=\\{(2,1),(2,2),(3,1),(3,2)\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "34",
+      "o": 34,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define cartesian product of sets A and B.",
+       "समुच्चयों A तथा B का कार्तीय गुणन परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$A\\times B=\\{(a,b) : a\\in A,\\ b\\in B\\}$",
+       [
+        "$(a,b)=(c,d)\\iff a=c,\\ b=d$; in general $A\\times B\\neq B\\times A$ (equal only if $A=B$ or one set is empty); $A\\times\\phi=\\phi$.",
+        "$(a,b)=(c,d)\\iff a=c,\\ b=d$; सामान्यतः $A\\times B\\neq B\\times A$ (समान केवल यदि $A=B$ या कोई रिक्त हो); $A\\times\\phi=\\phi$।"
+       ]
+      ]
+     },
+     {
+      "id": "35",
+      "o": 35,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Find the number of elements in $A\\times B$.",
+       "$A\\times B$ में अवयवों की संख्या ज्ञात कीजिए।"
+      ],
+      "a": [
+       "$n(A\\times B)=n(A)\\cdot n(B),\\qquad n(P(A\\times B))=2^{mn}$",
+       [
+        "Ex: $n(A)=2,\\ n(B)=4$: subsets of $A\\times B$ with at least 3 elements $=2^8-1-8-28=219$.",
+        "उदा.: $n(A)=2,\\ n(B)=4$: $A\\times B$ के कम से कम 3 अवयव वाले उपसमुच्चय $=2^8-1-8-28=219$।"
+       ]
+      ]
+     },
+     {
+      "id": "N18",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:23, J-I:24, J-I:25, J-M(XIII):10, J-M(XIII):46",
+      "q": [
+       "Which identities hold for the cartesian product?",
+       "कार्तीय गुणन के लिए कौन सी सर्वसमिकाएँ सत्य हैं?"
+      ],
+      "a": [
+       "$A\\times(B\\cup C)=(A\\times B)\\cup(A\\times C),\\qquad A\\times(B\\cap C)=(A\\times B)\\cap(A\\times C)$",
+       "$(A\\times B)\\cap(C\\times D)=(A\\cap C)\\times(B\\cap D),\\qquad A\\times(B-C)=(A\\times B)-(A\\times C)$",
+       [
+        "Hence $A\\times B$ and $B\\times A$ have $n(A\\cap B)^2$ elements in common. Ex: $A=\\{a,b,c,d\\},B=\\{b,c,d,e\\}$: $3^2=9$.",
+        "अतः $A\\times B$ तथा $B\\times A$ में $n(A\\cap B)^2$ अवयव उभयनिष्ठ। उदा.: $A=\\{a,b,c,d\\},B=\\{b,c,d,e\\}$: $3^2=9$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Relation",
+    "hi": "सम्बन्ध",
+    "items": [
+     {
+      "id": "36",
+      "o": 36,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define relation.",
+       "सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       [
+        "A relation $R$ from $A$ to $B$ is any subset of $A\\times B$; $(a,b)\\in R$ is written $aRb$. A relation on $A$ is a subset of $A\\times A$.",
+        "$A$ से $B$ तक सम्बन्ध $R$, $A\\times B$ का कोई भी उपसमुच्चय है; $(a,b)\\in R$ को $aRb$ लिखते हैं। $A$ पर सम्बन्ध, $A\\times A$ का उपसमुच्चय है।"
+       ],
+       [
+        "Ex: $\\{(1,1),(2,1),(3,3)\\}\\subseteq X\\times Y$ for $X=\\{1,2,3\\},Y=\\{1,3,5\\}$ is a relation from $X$ to $Y$.",
+        "उदा.: $X=\\{1,2,3\\},Y=\\{1,3,5\\}$ के लिए $\\{(1,1),(2,1),(3,3)\\}\\subseteq X\\times Y$, $X$ से $Y$ तक सम्बन्ध है।"
+       ]
+      ]
+     },
+     {
+      "id": "37",
+      "o": 37,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How can a relation from A to B be represented?",
+       "A से B तक के सम्बन्ध को किस प्रकार निरूपित किया जा सकता है?"
+      ],
+      "a": [
+       [
+        "Roster form (list of ordered pairs), set-builder form $\\{(x,y): \\text{rule}\\}$, or an arrow diagram.",
+        "रोस्टर रूप (क्रमित युग्मों की सूची), समुच्चय-निर्माण रूप $\\{(x,y): \\text{rule}\\}$, या तीर आरेख।"
+       ],
+       [
+        "Ex: $R=\\{(x,y)\\in\\mathbb N^2: x+3y=12\\}=\\{(9,1),(6,2),(3,3)\\}$.",
+        "उदा.: $R=\\{(x,y)\\in\\mathbb N^2: x+3y=12\\}=\\{(9,1),(6,2),(3,3)\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "38",
+      "o": 38,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by pre-image and image of an element in a relation?",
+       "किसी सम्बन्ध में अवयव के पूर्व-प्रतिबिम्ब तथा प्रतिबिम्ब से क्या तात्पर्य है?"
+      ],
+      "a": [
+       [
+        "If $(a,b)\\in R$, then $b$ is an image of $a$ and $a$ is a pre-image of $b$. One element may have many images (unlike a function).",
+        "यदि $(a,b)\\in R$, तो $b$, $a$ का प्रतिबिम्ब तथा $a$, $b$ का पूर्व-प्रतिबिम्ब है। एक अवयव के अनेक प्रतिबिम्ब हो सकते हैं (फलन के विपरीत)।"
+       ]
+      ]
+     },
+     {
+      "id": "39",
+      "o": 39,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the domain of a relation?",
+       "किसी सम्बन्ध का प्रांत क्या है?"
+      ],
+      "a": [
+       "$\\text{Dom}(R)=\\{a : (a,b)\\in R \\text{ for some } b\\}$",
+       [
+        "= set of all first entries (pre-images). Ex: $R=\\{(9,1),(6,2),(3,3)\\}$: Dom $=\\{3,6,9\\}$.",
+        "= सभी प्रथम घटकों (पूर्व-प्रतिबिम्बों) का समुच्चय। उदा.: $R=\\{(9,1),(6,2),(3,3)\\}$: प्रांत $=\\{3,6,9\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "40",
+      "o": 40,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the co-domain of a relation?",
+       "किसी सम्बन्ध का सहप्रान्त क्या है?"
+      ],
+      "a": [
+       [
+        "For $R: A\\to B$ the co-domain is the whole set $B$, whether or not each element is related.",
+        "$R: A\\to B$ के लिए सहप्रान्त पूरा समुच्चय $B$ है, चाहे प्रत्येक अवयव सम्बन्धित हो या नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "41",
+      "o": 41,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the range of a relation?",
+       "किसी सम्बन्ध का परिसर क्या है?"
+      ],
+      "a": [
+       "$\\text{Range}(R)=\\{b : (a,b)\\in R \\text{ for some } a\\}\\subseteq \\text{co-domain}$",
+       [
+        "Ex: $A=\\{1,2,3\\},B=\\{1,4,6,9\\}$, $xRy\\iff x>y$: $R=\\{(2,1),(3,1)\\}$, range $=\\{1\\}$.",
+        "उदा.: $A=\\{1,2,3\\},B=\\{1,4,6,9\\}$, $xRy\\iff x>y$: $R=\\{(2,1),(3,1)\\}$, परिसर $=\\{1\\}$।"
+       ]
+      ]
+     },
+     {
+      "id": "N19",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:28",
+      "q": [
+       "How many relations are there from A to B, and on A?",
+       "A से B तक तथा A पर कितने सम्बन्ध होते हैं?"
+      ],
+      "a": [
+       "$n(A)=m,\\ n(B)=n:\\quad \\#\\{R: A\\to B\\}=2^{mn},\\qquad \\#\\{R \\text{ on } A\\}=2^{m^2}$",
+       [
+        "Ex: on $\\{1,2,3\\}$ there are $2^9=512$ relations.",
+        "उदा.: $\\{1,2,3\\}$ पर $2^9=512$ सम्बन्ध हैं।"
+       ]
+      ]
+     },
+     {
+      "id": "N20",
+      "o": null,
+      "tag": "added",
+      "src": "QB:2, QB:3, QB:4, QB:5, QB:6, QB:16 (+16 more)",
+      "q": [
+       "A relation is given by a rule. How do you count its elements?",
+       "कोई सम्बन्ध नियम से दिया है। उसके अवयवों को कैसे गिनें?"
+      ],
+      "a": [
+       [
+        "Fix the first entry (or the value of an expression), count the allowed second entries, then add. For a relation on $A\\times B$, the pairs are $((a_1,b_1),(a_2,b_2))$: count the choices of each of the 4 entries.",
+        "प्रथम घटक (या किसी व्यंजक का मान) स्थिर करें, अनुमत द्वितीय घटक गिनें, फिर जोड़ें। $A\\times B$ पर सम्बन्ध में युग्म $((a_1,b_1),(a_2,b_2))$ हैं: चारों घटकों के विकल्प गिनें।"
+       ],
+       [
+        "Ex: on $\\{1,\\dots,5\\}$, $4x\\le 5y$: for $x=1..5$ the counts are $5,4,3,2,2$, so $n(R)=16$.",
+        "उदा.: $\\{1,\\dots,5\\}$ पर $4x\\le 5y$: $x=1..5$ के लिए गिनती $5,4,3,2,2$, अतः $n(R)=16$।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Types of a relation",
+    "hi": "सम्बन्धों के प्रकार",
+    "items": [
+     {
+      "id": "N21",
+      "o": null,
+      "tag": "added",
+      "src": "J-II:2",
+      "q": [
+       "What are the void relation and the universal relation? Which properties do they have?",
+       "रिक्त सम्बन्ध तथा सार्वत्रिक सम्बन्ध क्या हैं? इनके कौन से गुण हैं?"
+      ],
+      "a": [
+       [
+        "Void $R=\\phi$: symmetric and transitive, not reflexive (for $A\\neq\\phi$). Universal $R=A\\times A$: reflexive, symmetric, transitive.",
+        "रिक्त $R=\\phi$: सममित व संक्रामक, स्वतुल्य नहीं ($A\\neq\\phi$ हेतु)। सार्वत्रिक $R=A\\times A$: स्वतुल्य, सममित, संक्रामक।"
+       ],
+       [
+        "Every singleton relation $\\{(a,b)\\}$ is transitive.",
+        "प्रत्येक एकल सम्बन्ध $\\{(a,b)\\}$ संक्रामक है।"
+       ]
+      ]
+     },
+     {
+      "id": "42",
+      "o": 42,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define reflexive relation.",
+       "स्वतुल्य सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$R \\text{ on } A \\text{ is reflexive} \\iff (a,a)\\in R\\ \\ \\forall a\\in A$",
+       [
+        "Ex: on $\\{1,2,3\\}$, $\\{(1,1),(2,2)\\}$ is not reflexive ($(3,3)$ missing).",
+        "उदा.: $\\{1,2,3\\}$ पर $\\{(1,1),(2,2)\\}$ स्वतुल्य नहीं ($(3,3)$ नहीं है)।"
+       ]
+      ]
+     },
+     {
+      "id": "43",
+      "o": 43,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a given relation is reflexive?",
+       "कैसे जाँचें कि दिया गया सम्बन्ध स्वतुल्य है?"
+      ],
+      "a": [
+       [
+        "Listed relation: all $n$ pairs $(a,a)$ must be present. Rule: put $y=x$ in the rule; it must hold for every $x$ in the set.",
+        "सूचीबद्ध सम्बन्ध: सभी $n$ युग्म $(a,a)$ उपस्थित हों। नियम: नियम में $y=x$ रखें; यह समुच्चय के प्रत्येक $x$ के लिए सत्य हो।"
+       ],
+       [
+        "Ex: $1+ab>0$: $1+a^2>0$ always, so reflexive. $a$ divides $b$ on $\\mathbb Z$: fails at $a=0$.",
+        "उदा.: $1+ab>0$: $1+a^2>0$ सदैव, अतः स्वतुल्य। $\\mathbb Z$ पर \"$a$, $b$ को विभाजित करता है\": $a=0$ पर असत्य।"
+       ]
+      ]
+     },
+     {
+      "id": "44",
+      "o": 44,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define identity relation.",
+       "तत्समक सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$I_A=\\{(a,a): a\\in A\\}$",
+       [
+        "Every element is related only to itself. Identity is reflexive, but a reflexive relation need not be the identity.",
+        "प्रत्येक अवयव केवल स्वयं से सम्बन्धित। तत्समक सम्बन्ध स्वतुल्य है, परन्तु हर स्वतुल्य सम्बन्ध तत्समक नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "45",
+      "o": 45,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define symmetric relation.",
+       "सममित सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$R \\text{ is symmetric} \\iff (a,b)\\in R\\Rightarrow (b,a)\\in R$",
+       [
+        "Ex: perpendicularity of lines in a plane is symmetric (but not reflexive or transitive).",
+        "उदा.: समतल में रेखाओं की लम्बवतता सममित है (स्वतुल्य व संक्रामक नहीं)।"
+       ]
+      ]
+     },
+     {
+      "id": "46",
+      "o": 46,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a given relation is symmetric?",
+       "कैसे जाँचें कि दिया गया सम्बन्ध सममित है?"
+      ],
+      "a": [
+       [
+        "Listed: every $(a,b)$ must have its mirror $(b,a)$. Rule: swap $x,y$; the rule must stay the same (or follow from the original).",
+        "सूचीबद्ध: प्रत्येक $(a,b)$ का दर्पण युग्म $(b,a)$ हो। नियम: $x,y$ बदलें; नियम वही रहे (या मूल नियम से प्राप्त हो)।"
+       ],
+       [
+        "Ex: $x^2-4xy+3y^2=0\\iff x=y$ or $x=3y$: $(3,1)\\in R$ but $(1,3)\\notin R$, so not symmetric.",
+        "उदा.: $x^2-4xy+3y^2=0\\iff x=y$ या $x=3y$: $(3,1)\\in R$ परन्तु $(1,3)\\notin R$, अतः सममित नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "47",
+      "o": 47,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define transitive relation.",
+       "संक्रामक सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$R \\text{ is transitive} \\iff (a,b)\\in R,\\ (b,c)\\in R\\Rightarrow (a,c)\\in R$",
+       [
+        "Ex: \"is a brother of\" is transitive among the children of a family (not symmetric).",
+        "उदा.: एक परिवार के बच्चों में \"का भाई है\" संक्रामक है (सममित नहीं)।"
+       ]
+      ]
+     },
+     {
+      "id": "48",
+      "o": 48,
+      "tag": null,
+      "src": "",
+      "q": [
+       "How to check whether a given relation is transitive?",
+       "कैसे जाँचें कि दिया गया सम्बन्ध संक्रामक है?"
+      ],
+      "a": [
+       [
+        "Listed: for every chain $(a,b),(b,c)$ check that $(a,c)$ is present (pairs with $a=b$ or $b=c$ add nothing). Rule: try to prove it; otherwise find a counter-example with small numbers.",
+        "सूचीबद्ध: प्रत्येक शृंखला $(a,b),(b,c)$ के लिए $(a,c)$ जाँचें ($a=b$ या $b=c$ वाले युग्म कुछ नहीं जोड़ते)। नियम: सिद्ध करने का प्रयास करें; अन्यथा छोटी संख्याओं से प्रति-उदाहरण खोजें।"
+       ],
+       [
+        "Ex: $1+ab>0$: $(1,\\tfrac12),(\\tfrac12,-1)\\in R$ but $(1,-1)\\notin R$, so not transitive.",
+        "उदा.: $1+ab>0$: $(1,\\tfrac12),(\\tfrac12,-1)\\in R$ परन्तु $(1,-1)\\notin R$, अतः संक्रामक नहीं।"
+       ]
+      ]
+     },
+     {
+      "id": "49",
+      "o": 49,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What do you mean by equivalence relation?",
+       "तुल्यता सम्बन्ध से आप क्या समझते हैं?"
+      ],
+      "a": [
+       [
+        "$R$ is an equivalence relation if it is reflexive, symmetric and transitive. Test all three separately.",
+        "$R$ तुल्यता सम्बन्ध है यदि वह स्वतुल्य, सममित तथा संक्रामक है। तीनों अलग-अलग जाँचें।"
+       ],
+       [
+        "Typical equivalences: $a-b$ divisible by $n$; $a-b\\in\\mathbb Z$; $|x|=|y|$; parallel lines; congruent or similar triangles; similar matrices $B=P^{-1}AP$; $ad=bc$ on pairs.",
+        "प्रचलित तुल्यता सम्बन्ध: $a-b$, $n$ से विभाज्य; $a-b\\in\\mathbb Z$; $|x|=|y|$; समान्तर रेखाएँ; सर्वांगसम या समरूप त्रिभुज; समरूप आव्यूह $B=P^{-1}AP$; युग्मों पर $ad=bc$।"
+       ],
+       [
+        "Ex: $2a+3b$ multiple of 5 $\\iff 5\\mid 5a-3(a-b)\\iff 5\\mid a-b$: an equivalence relation.",
+        "उदा.: $2a+3b$, 5 का गुणज $\\iff 5\\mid 5a-3(a-b)\\iff 5\\mid a-b$: तुल्यता सम्बन्ध।"
+       ]
+      ]
+     },
+     {
+      "id": "50",
+      "o": 50,
+      "tag": null,
+      "src": "",
+      "q": [
+       "Define anti-symmetric relation.",
+       "प्रति-सममित सम्बन्ध परिभाषित कीजिए।"
+      ],
+      "a": [
+       "$R \\text{ is anti-symmetric} \\iff (a,b)\\in R \\text{ and } (b,a)\\in R\\Rightarrow a=b$",
+       [
+        "Ex: $\\subseteq$, $\\le$, \"divides\" on $\\mathbb N$ (not on $\\mathbb Z$: $2\\mid -2,\\ -2\\mid 2$).",
+        "उदा.: $\\subseteq$, $\\le$, $\\mathbb N$ पर \"विभाजित करता है\" ($\\mathbb Z$ पर नहीं: $2\\mid -2,\\ -2\\mid 2$)।"
+       ]
+      ]
+     },
+     {
+      "id": "51",
+      "o": 51,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is the equivalence class of an element in a relation?",
+       "किसी सम्बन्ध में किसी अवयव का तुल्यता वर्ग क्या है?"
+      ],
+      "a": [
+       "$[a]=\\{x\\in A : xRa\\}$",
+       [
+        "Equivalence classes are disjoint and their union is $A$ (a partition); conversely every partition $A=A_1\\cup\\dots\\cup A_k$ gives \"same block\" as an equivalence relation.",
+        "तुल्यता वर्ग असंयुक्त हैं तथा उनका सम्मिलन $A$ है (विभाजन); विलोमतः प्रत्येक विभाजन $A=A_1\\cup\\dots\\cup A_k$ से \"एक ही खण्ड में\" तुल्यता सम्बन्ध बनता है।"
+       ],
+       [
+        "Ex: \"same distance from O\": class of $(1,-1)$ is the circle $x^2+y^2=2$.",
+        "उदा.: \"O से समान दूरी\": $(1,-1)$ का वर्ग वृत्त $x^2+y^2=2$ है।"
+       ]
+      ]
+     },
+     {
+      "id": "N22",
+      "o": null,
+      "tag": "added",
+      "src": "QB:9, QB:26, QB:27, QB:32, J-M(XIII):53, J-M(XIII):63",
+      "q": [
+       "How many reflexive, symmetric and equivalence relations can be defined on a set of $n$ elements?",
+       "$n$ अवयवों वाले समुच्चय पर कितने स्वतुल्य, सममित तथा तुल्यता सम्बन्ध हो सकते हैं?"
+      ],
+      "a": [
+       "$\\text{reflexive}: 2^{n(n-1)},\\quad \\text{symmetric}: 2^{\\frac{n(n+1)}{2}},\\quad \\text{reflexive and symmetric}: 2^{\\frac{n(n-1)}{2}}$",
+       [
+        "Anti-symmetric: $2^n\\cdot 3^{\\frac{n(n-1)}{2}}$. Equivalence relations = Bell number $B_n$ ($B_3=5,\\ B_4=15$).",
+        "प्रति-सममित: $2^n\\cdot 3^{\\frac{n(n-1)}{2}}$। तुल्यता सम्बन्ध = बेल संख्या $B_n$ ($B_3=5,\\ B_4=15$)।"
+       ],
+       [
+        "Ex: symmetric but not reflexive on 4 elements: $2^{10}-2^{6}=960$.",
+        "उदा.: 4 अवयवों पर सममित परन्तु स्वतुल्य नहीं: $2^{10}-2^{6}=960$।"
+       ]
+      ]
+     },
+     {
+      "id": "N23",
+      "o": null,
+      "tag": "added",
+      "src": "J-I:35, J-I:36, QB:3, QB:4, QB:5, QB:10 (+14 more)",
+      "q": [
+       "What is the least number of pairs to add so that a relation becomes reflexive / symmetric / transitive / an equivalence?",
+       "किसी सम्बन्ध को स्वतुल्य / सममित / संक्रामक / तुल्यता बनाने के लिए न्यूनतम कितने युग्म जोड़ने होंगे?"
+      ],
+      "a": [
+       [
+        "Reflexive: add the missing $(a,a)$. Symmetric: add the missing mirrors $(b,a)$. Transitive: keep adding $(a,c)$ for every chain until none is missing.",
+        "स्वतुल्य: अनुपस्थित $(a,a)$ जोड़ें। सममित: अनुपस्थित दर्पण $(b,a)$ जोड़ें। संक्रामक: प्रत्येक शृंखला के लिए $(a,c)$ तब तक जोड़ें जब तक कुछ शेष न रहे।"
+       ],
+       [
+        "Equivalence: join the related elements into blocks; the smallest equivalence has $\\sum s_i^2$ pairs ($s_i$ = block sizes); subtract the pairs already present.",
+        "तुल्यता: सम्बन्धित अवयवों को खण्डों में मिलाएँ; न्यूनतम तुल्यता सम्बन्ध में $\\sum s_i^2$ युग्म ($s_i$ = खण्डों के आकार); पहले से उपस्थित युग्म घटाएँ।"
+       ],
+       [
+        "Ex: $R=\\{(1,2),(2,3)\\}$ on $\\{1,2,3\\}$: one block of 3, $9-2=7$ pairs to add.",
+        "उदा.: $\\{1,2,3\\}$ पर $R=\\{(1,2),(2,3)\\}$: 3 का एक खण्ड, $9-2=7$ युग्म जोड़ने होंगे।"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "en": "Inverse of a relation",
+    "hi": "सम्बन्ध का प्रतिलोम",
+    "items": [
+     {
+      "id": "52",
+      "o": 52,
+      "tag": null,
+      "src": "",
+      "q": [
+       "What is inverse of a relation?",
+       "सम्बन्ध का प्रतिलोम क्या है?"
+      ],
+      "a": [
+       "$R^{-1}=\\{(b,a): (a,b)\\in R\\},\\qquad \\text{Dom}(R^{-1})=\\text{Range}(R),\\quad \\text{Range}(R^{-1})=\\text{Dom}(R)$",
+       [
+        "Ex: $R=\\{(2,4),(4,3),(6,2),(8,1)\\}\\Rightarrow R^{-1}=\\{(4,2),(3,4),(2,6),(1,8)\\}$. $R$ is symmetric $\\iff R=R^{-1}$.",
+        "उदा.: $R=\\{(2,4),(4,3),(6,2),(8,1)\\}\\Rightarrow R^{-1}=\\{(4,2),(3,4),(2,6),(1,8)\\}$। $R$ सममित $\\iff R=R^{-1}$।"
+       ]
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "notes": {
+  "howto": [
+   "How to use these notes: read the Formulas box, follow the Steps and Key points, and avoid the Watch out points.",
+   "इन नोट्स का उपयोग: सूत्र वाला बॉक्स पढ़िए, चरणों व मुख्य बिन्दुओं को अपनाइए, और सावधानी वाले बिन्दुओं से बचिए।"
+  ],
+  "sections": [
+   {
+    "en": "1. Sets, representation and types",
+    "hi": "1. समुच्चय, निरूपण तथा प्रकार",
+    "color": "blue",
+    "blocks": [
+     [
+      "points",
+      [
+       [
+        "Set = well-defined collection of distinct objects; $n(A)$ = number of elements.",
+        "समुच्चय = भिन्न वस्तुओं का सुपरिभाषित संग्रह; $n(A)$ = अवयवों की संख्या।"
+       ],
+       [
+        "Roster $\\{1,2,3\\}$; set-builder $\\{x: P(x)\\}$.",
+        "रोस्टर $\\{1,2,3\\}$; समुच्चय-निर्माण $\\{x: P(x)\\}$।"
+       ],
+       [
+        "Finite / infinite; singleton $n=1$; null $\\phi$, $n=0$.",
+        "परिमित / अपरिमित; एकल $n=1$; रिक्त $\\phi$, $n=0$।"
+       ],
+       [
+        "Equal: same elements. Equivalent: same number of elements.",
+        "समान: वही अवयव। तुल्य: अवयवों की संख्या समान।"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Set given by a condition: solve it, keep only values in the universe ($\\mathbb N,\\mathbb Z,\\mathbb R$), then list or count.",
+        "प्रतिबन्ध से दिया समुच्चय: हल करें, केवल सार्वत्रिक क्षेत्र ($\\mathbb N,\\mathbb Z,\\mathbb R$) के मान रखें, फिर सूची बनाएँ या गिनें।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$\\{\\phi\\}$ and $\\{0\\}$ are not empty; $\\phi\\neq\\{\\phi\\}$.",
+        "$\\{\\phi\\}$ व $\\{0\\}$ रिक्त नहीं; $\\phi\\neq\\{\\phi\\}$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "2. Subsets and power set",
+    "hi": "2. उपसमुच्चय तथा घात समुच्चय",
+    "color": "teal",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\#\\text{subsets}=2^n,\\quad \\#\\text{proper}=2^n-1,\\quad n(P(A))=2^n$",
+        "$\\#\\text{subsets}=2^n,\\quad \\#\\text{proper}=2^n-1,\\quad n(P(A))=2^n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$A\\subseteq B$: every element of $A$ is in $B$; then $B\\supseteq A$ (superset).",
+        "$A\\subseteq B$: $A$ का प्रत्येक अवयव $B$ में; तब $B\\supseteq A$ (अधिसमुच्चय)।"
+       ],
+       [
+        "$\\phi\\subseteq A$ and $A\\subseteq A$ always.",
+        "$\\phi\\subseteq A$ तथा $A\\subseteq A$ सदैव।"
+       ],
+       [
+        "Containing $k$ fixed elements: $2^{n-k}$; disjoint ordered pairs $(Y,Z)$: $3^n$.",
+        "$k$ निश्चित अवयवों वाले: $2^{n-k}$; असंयुक्त क्रमित युग्म $(Y,Z)$: $3^n$।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$a\\in A$ but $\\{a\\}\\subseteq A$: do not mix $\\in$ and $\\subseteq$.",
+        "$a\\in A$ परन्तु $\\{a\\}\\subseteq A$: $\\in$ तथा $\\subseteq$ को न मिलाएँ।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "3. Operations and laws",
+    "hi": "3. संक्रियाएँ तथा नियम",
+    "color": "green",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$A-B=A\\cap B',\\qquad A\\,\\Delta\\,B=(A-B)\\cup(B-A)$",
+        "$A-B=A\\cap B',\\qquad A\\,\\Delta\\,B=(A-B)\\cup(B-A)$"
+       ],
+       [
+        "$(A\\cup B)'=A'\\cap B',\\qquad (A\\cap B)'=A'\\cup B'$",
+        "$(A\\cup B)'=A'\\cap B',\\qquad (A\\cap B)'=A'\\cup B'$"
+       ],
+       [
+        "$A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C),\\quad A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C)$",
+        "$A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C),\\quad A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Idempotent, identity ($A\\cup\\phi=A$, $A\\cap U=A$), commutative, associative laws.",
+        "वर्गसम, तत्समक ($A\\cup\\phi=A$, $A\\cap U=A$), क्रमविनिमेय, साहचर्य नियम।"
+       ],
+       [
+        "Disjoint: $A\\cap B=\\phi$. $A\\cup B=A\\cup C$ and $A\\cap B=A\\cap C\\Rightarrow B=C$.",
+        "असंयुक्त: $A\\cap B=\\phi$। $A\\cup B=A\\cup C$ तथा $A\\cap B=A\\cap C\\Rightarrow B=C$।"
+       ],
+       [
+        "Venn diagram: 3 sets make 8 regions; read the statement region by region.",
+        "वेन आरेख: 3 समुच्चयों से 8 क्षेत्र; कथन को क्षेत्रवार पढ़ें।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "Interval sets: check the end points when taking $A-B$, $B-A$.",
+        "अन्तराल समुच्चय: $A-B$, $B-A$ लेते समय अन्त्य बिन्दु जाँचें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "4. Number of elements",
+    "hi": "4. अवयवों की संख्या",
+    "color": "orange",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+        "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$"
+       ],
+       [
+        "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+        "$n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$"
+       ],
+       [
+        "$\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$",
+        "$\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Only $A$ $=n(A)-n(A\\cap B)$; none $=n(U)-n(A\\cup B)$.",
+        "केवल $A$ $=n(A)-n(A\\cap B)$; कोई नहीं $=n(U)-n(A\\cup B)$।"
+       ],
+       [
+        "Exactly two $=\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$.",
+        "ठीक दो $=\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$।"
+       ],
+       [
+        "Multiples of $k$ in $1..N$: $[N/k]$; \"$a$ and $b$\" means multiples of $\\mathrm{lcm}(a,b)$.",
+        "$1..N$ में $k$ के गुणज: $[N/k]$; \"$a$ तथा $b$\" का अर्थ $\\mathrm{lcm}(a,b)$ के गुणज।"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Draw the Venn diagram and fill the centre first ($A\\cap B\\cap C$), then the \"two only\" regions, then \"one only\".",
+        "वेन आरेख बनाएँ और पहले केन्द्र ($A\\cap B\\cap C$), फिर \"केवल दो\" क्षेत्र, फिर \"केवल एक\" भरें।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "\"Only $A$\" is not $n(A)$; percentages: take $n(U)=100$.",
+        "\"केवल $A$\", $n(A)$ नहीं है; प्रतिशत में $n(U)=100$ लें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "5. Cartesian product",
+    "hi": "5. कार्तीय गुणन",
+    "color": "violet",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$A\\times B=\\{(a,b): a\\in A,\\ b\\in B\\},\\qquad n(A\\times B)=mn$",
+        "$A\\times B=\\{(a,b): a\\in A,\\ b\\in B\\},\\qquad n(A\\times B)=mn$"
+       ],
+       [
+        "$(A\\times B)\\cap(C\\times D)=(A\\cap C)\\times(B\\cap D)$",
+        "$(A\\times B)\\cap(C\\times D)=(A\\cap C)\\times(B\\cap D)$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "$\\times$ distributes over $\\cup$, $\\cap$, $-$.",
+        "$\\times$, $\\cup$, $\\cap$, $-$ पर वितरित होता है।"
+       ],
+       [
+        "Common elements of $A\\times B$ and $B\\times A$: $n(A\\cap B)^2$.",
+        "$A\\times B$ व $B\\times A$ के उभयनिष्ठ अवयव: $n(A\\cap B)^2$।"
+       ],
+       [
+        "Subsets of $A\\times B$ with exactly $r$ elements: ${}^{mn}C_r$.",
+        "$A\\times B$ के ठीक $r$ अवयवों वाले उपसमुच्चय: ${}^{mn}C_r$।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "$A\\times B\\neq B\\times A$ in general; $(a,b)\\neq(b,a)$.",
+        "सामान्यतः $A\\times B\\neq B\\times A$; $(a,b)\\neq(b,a)$।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "6. Relation: domain, range, counting",
+    "hi": "6. सम्बन्ध: प्रांत, परिसर, गणना",
+    "color": "brown",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$R\\subseteq A\\times B,\\qquad \\#\\{R: A\\to B\\}=2^{mn},\\qquad \\#\\{R \\text{ on } A\\}=2^{n^2}$",
+        "$R\\subseteq A\\times B,\\qquad \\#\\{R: A\\to B\\}=2^{mn},\\qquad \\#\\{R \\text{ on } A\\}=2^{n^2}$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Domain = first entries; range = second entries; co-domain = whole $B$.",
+        "प्रांत = प्रथम घटक; परिसर = द्वितीय घटक; सहप्रान्त = पूरा $B$।"
+       ],
+       [
+        "$(a,b)\\in R$: $b$ is an image of $a$, $a$ a pre-image of $b$.",
+        "$(a,b)\\in R$: $b$, $a$ का प्रतिबिम्ब, $a$, $b$ का पूर्व-प्रतिबिम्ब।"
+       ],
+       [
+        "Inverse $R^{-1}=\\{(b,a)\\}$: domain and range swap.",
+        "प्रतिलोम $R^{-1}=\\{(b,a)\\}$: प्रांत व परिसर आपस में बदलते हैं।"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Counting a relation given by a rule: fix the first entry, count the second, add.",
+        "नियम से दिए सम्बन्ध की गणना: प्रथम घटक स्थिर करें, द्वितीय गिनें, जोड़ें।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "7. Reflexive, symmetric, transitive",
+    "hi": "7. स्वतुल्य, सममित, संक्रामक",
+    "color": "red",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{Ref}: (a,a)\\in R\\ \\forall a;\\quad \\text{Sym}: aRb\\Rightarrow bRa;\\quad \\text{Trans}: aRb,\\ bRc\\Rightarrow aRc$",
+        "$\\text{Ref}: (a,a)\\in R\\ \\forall a;\\quad \\text{Sym}: aRb\\Rightarrow bRa;\\quad \\text{Trans}: aRb,\\ bRc\\Rightarrow aRc$"
+       ],
+       [
+        "$\\text{Anti-symmetric}: aRb,\\ bRa\\Rightarrow a=b$",
+        "$\\text{Anti-symmetric}: aRb,\\ bRa\\Rightarrow a=b$"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Reflexive: put $y=x$ in the rule.",
+        "स्वतुल्य: नियम में $y=x$ रखें।"
+       ],
+       [
+        "Symmetric: swap $x$ and $y$.",
+        "सममित: $x$ व $y$ बदलें।"
+       ],
+       [
+        "Transitive: prove, or find a counter-example with $0$, $\\pm1$, $\\tfrac12$, irrational numbers.",
+        "संक्रामक: सिद्ध करें, या $0$, $\\pm1$, $\\tfrac12$, अपरिमेय संख्याओं से प्रति-उदाहरण खोजें।"
+       ],
+       [
+        "Equivalence = all three; equivalence classes form a partition.",
+        "तुल्यता = तीनों; तुल्यता वर्ग विभाजन बनाते हैं।"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Void relation: symmetric and transitive; universal and identity: equivalence.",
+        "रिक्त सम्बन्ध: सममित व संक्रामक; सार्वत्रिक व तत्समक: तुल्यता।"
+       ],
+       [
+        "Factorise rules like $x^2-4xy+3y^2=0\\Rightarrow x=y$ or $x=3y$ before testing.",
+        "$x^2-4xy+3y^2=0\\Rightarrow x=y$ या $x=3y$ जैसे नियमों को जाँच से पहले गुणनखण्डित करें।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "The set matters: \"divides\" is anti-symmetric on $\\mathbb N$ but not on $\\mathbb Z$; $0$ breaks reflexivity on $\\mathbb Z$.",
+        "समुच्चय महत्वपूर्ण: \"विभाजित करता है\" $\\mathbb N$ पर प्रति-सममित, $\\mathbb Z$ पर नहीं; $\\mathbb Z$ पर $0$ स्वतुल्यता तोड़ता है।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "8. Counting relations and closures",
+    "hi": "8. सम्बन्धों की गणना तथा संवरक",
+    "color": "blue",
+    "blocks": [
+     [
+      "formula",
+      [
+       [
+        "$\\text{Ref}: 2^{n(n-1)},\\quad \\text{Sym}: 2^{\\frac{n(n+1)}2},\\quad \\text{Ref and Sym}: 2^{\\frac{n(n-1)}2},\\quad \\text{Equiv}: B_n$",
+        "$\\text{Ref}: 2^{n(n-1)},\\quad \\text{Sym}: 2^{\\frac{n(n+1)}2},\\quad \\text{Ref and Sym}: 2^{\\frac{n(n-1)}2},\\quad \\text{Equiv}: B_n$"
+       ]
+      ]
+     ],
+     [
+      "points",
+      [
+       [
+        "Bell numbers: $B_1=1,\\ B_2=2,\\ B_3=5,\\ B_4=15$.",
+        "बेल संख्याएँ: $B_1=1,\\ B_2=2,\\ B_3=5,\\ B_4=15$।"
+       ],
+       [
+        "Smallest equivalence containing $R$: blocks of connected elements, $\\sum s_i^2$ pairs ($s_i$ = block sizes).",
+        "$R$ को समाहित करने वाला न्यूनतम तुल्यता सम्बन्ध: जुड़े अवयवों के खण्ड, $\\sum s_i^2$ युग्म ($s_i$ = खण्डों के आकार)।"
+       ]
+      ]
+     ],
+     [
+      "steps",
+      [
+       [
+        "Make reflexive: add missing $(a,a)$; symmetric: add missing $(b,a)$; transitive: add $(a,c)$ for each chain, repeat.",
+        "स्वतुल्य: अनुपस्थित $(a,a)$ जोड़ें; सममित: अनुपस्थित $(b,a)$; संक्रामक: प्रत्येक शृंखला हेतु $(a,c)$, दोहराएँ।"
+       ],
+       [
+        "Answer = pairs in the new relation − pairs already in $R$.",
+        "उत्तर = नए सम्बन्ध के युग्म − $R$ में पहले से उपस्थित युग्म।"
+       ]
+      ]
+     ],
+     [
+      "watch",
+      [
+       [
+        "After adding mirrors for symmetry, re-check transitivity (it may force $(a,a)$).",
+        "सममिति हेतु दर्पण जोड़ने के बाद संक्रामकता पुनः जाँचें (इससे $(a,a)$ आवश्यक हो सकता है)।"
+       ]
+      ]
+     ]
+    ]
+   },
+   {
+    "en": "9. Common mistakes checklist",
+    "hi": "9. सामान्य त्रुटियों की जाँच-सूची",
+    "color": "red",
+    "blocks": [
+     [
+      "steps",
+      [
+       [
+        "Universe of the set ($\\mathbb N$ starts at 1; $\\mathbb Z$ includes negatives and 0).",
+        "समुच्चय का सार्वत्रिक क्षेत्र ($\\mathbb N$ 1 से; $\\mathbb Z$ में ऋणात्मक व 0)।"
+       ],
+       [
+        "Count each region of a Venn diagram once.",
+        "वेन आरेख का प्रत्येक क्षेत्र एक बार गिनें।"
+       ],
+       [
+        "Non-empty subsets $=2^n-1$; \"at least 3 elements\" = total − sizes 0, 1, 2.",
+        "अरिक्त उपसमुच्चय $=2^n-1$; \"कम से कम 3 अवयव\" = कुल − 0, 1, 2 आकार वाले।"
+       ],
+       [
+        "Reflexive needs every $(a,a)$, not just some.",
+        "स्वतुल्य के लिए प्रत्येक $(a,a)$ चाहिए, केवल कुछ नहीं।"
+       ],
+       [
+        "Relation on $A\\times B$: its elements are pairs of pairs.",
+        "$A\\times B$ पर सम्बन्ध: इसके अवयव युग्मों के युग्म हैं।"
+       ]
+      ]
+     ]
+    ]
+   }
+  ]
+ },
+ "formula": {
+  "sections": [
+   {
+    "en": "1. Sets and subsets",
+    "hi": "1. समुच्चय तथा उपसमुच्चय",
+    "lines": [
+     [
+      "Subsets: $2^n$;  proper / non-empty: $2^n-1$",
+      "उपसमुच्चय: $2^n$;  उचित / अरिक्त: $2^n-1$"
+     ],
+     [
+      "Power set: $n(P(A))=2^n,\\ n(P(P(A)))=2^{2^n}$",
+      "घात समुच्चय: $n(P(A))=2^n,\\ n(P(P(A)))=2^{2^n}$"
+     ],
+     [
+      "Containing $k$ given elements: $2^{n-k}$",
+      "$k$ दिए अवयवों वाले: $2^{n-k}$"
+     ],
+     [
+      "Ordered pairs $(Y,Z)$, $Y\\cap Z=\\phi$: $3^n$",
+      "क्रमित युग्म $(Y,Z)$, $Y\\cap Z=\\phi$: $3^n$"
+     ]
+    ]
+   },
+   {
+    "en": "2. Operations",
+    "hi": "2. संक्रियाएँ",
+    "lines": [
+     [
+      "Difference: $A-B=A\\cap B'$",
+      "अन्तर: $A-B=A\\cap B'$"
+     ],
+     [
+      "Symmetric difference: $A\\,\\Delta\\,B=(A-B)\\cup(B-A)$",
+      "सममित अन्तर: $A\\,\\Delta\\,B=(A-B)\\cup(B-A)$"
+     ],
+     [
+      "De Morgan: $(A\\cup B)'=A'\\cap B',\\ (A\\cap B)'=A'\\cup B'$",
+      "डी-मॉर्गन: $(A\\cup B)'=A'\\cap B',\\ (A\\cap B)'=A'\\cup B'$"
+     ],
+     [
+      "Distributive: $A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C)$",
+      "वितरण: $A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C)$"
+     ],
+     [
+      "Distributive: $A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)$",
+      "वितरण: $A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)$"
+     ]
+    ]
+   },
+   {
+    "en": "3. Number of elements",
+    "hi": "3. अवयवों की संख्या",
+    "lines": [
+     [
+      "Two sets: $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+      "दो समुच्चय: $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$"
+     ],
+     [
+      "Only $A$: $n(A-B)=n(A)-n(A\\cap B)$",
+      "केवल $A$: $n(A-B)=n(A)-n(A\\cap B)$"
+     ],
+     [
+      "$n(A\\,\\Delta\\,B)=n(A)+n(B)-2n(A\\cap B)$",
+      "$n(A\\,\\Delta\\,B)=n(A)+n(B)-2n(A\\cap B)$"
+     ],
+     [
+      "None: $n(A'\\cap B')=n(U)-n(A\\cup B)$",
+      "कोई नहीं: $n(A'\\cap B')=n(U)-n(A\\cup B)$"
+     ],
+     [
+      "Three sets: $n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$",
+      "तीन समुच्चय: $n(A\\cup B\\cup C)=\\sum n(A)-\\sum n(A\\cap B)+n(A\\cap B\\cap C)$"
+     ],
+     [
+      "Exactly two: $\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$",
+      "ठीक दो: $\\sum n(A\\cap B)-3n(A\\cap B\\cap C)$"
+     ],
+     [
+      "Exactly one: $\\sum n(A)-2\\sum n(A\\cap B)+3n(A\\cap B\\cap C)$",
+      "ठीक एक: $\\sum n(A)-2\\sum n(A\\cap B)+3n(A\\cap B\\cap C)$"
+     ]
+    ]
+   },
+   {
+    "en": "4. Bounds and multiples",
+    "hi": "4. सीमाएँ तथा गुणज",
+    "lines": [
+     [
+      "Intersection: $\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$",
+      "सर्वनिष्ठ: $\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$"
+     ],
+     [
+      "Union: $\\max(n(A),n(B))\\le n(A\\cup B)\\le\\min(n(A)+n(B),n(U))$",
+      "सम्मिलन: $\\max(n(A),n(B))\\le n(A\\cup B)\\le\\min(n(A)+n(B),n(U))$"
+     ],
+     [
+      "Multiples of $k$ in $1..N$: $[N/k]$",
+      "$1..N$ में $k$ के गुणज: $[N/k]$"
+     ],
+     [
+      "$N_a\\cap N_b=N_{\\mathrm{lcm}(a,b)}$",
+      "$N_a\\cap N_b=N_{\\mathrm{lcm}(a,b)}$"
+     ]
+    ]
+   },
+   {
+    "en": "5. Cartesian product",
+    "hi": "5. कार्तीय गुणन",
+    "lines": [
+     [
+      "$n(A\\times B)=n(A)\\,n(B)$",
+      "$n(A\\times B)=n(A)\\,n(B)$"
+     ],
+     [
+      "$A\\times(B\\cup C)=(A\\times B)\\cup(A\\times C)$",
+      "$A\\times(B\\cup C)=(A\\times B)\\cup(A\\times C)$"
+     ],
+     [
+      "$A\\times(B\\cap C)=(A\\times B)\\cap(A\\times C)$",
+      "$A\\times(B\\cap C)=(A\\times B)\\cap(A\\times C)$"
+     ],
+     [
+      "$(A\\times B)\\cap(C\\times D)=(A\\cap C)\\times(B\\cap D)$",
+      "$(A\\times B)\\cap(C\\times D)=(A\\cap C)\\times(B\\cap D)$"
+     ],
+     [
+      "Common to $A\\times B$, $B\\times A$: $n(A\\cap B)^2$",
+      "$A\\times B$, $B\\times A$ में उभयनिष्ठ: $n(A\\cap B)^2$"
+     ]
+    ]
+   },
+   {
+    "en": "6. Relations",
+    "hi": "6. सम्बन्ध",
+    "lines": [
+     [
+      "Relations $A\\to B$: $2^{mn}$;  on $A$: $2^{n^2}$",
+      "सम्बन्ध $A\\to B$: $2^{mn}$;  $A$ पर: $2^{n^2}$"
+     ],
+     [
+      "Reflexive: $2^{n(n-1)}$",
+      "स्वतुल्य: $2^{n(n-1)}$"
+     ],
+     [
+      "Symmetric: $2^{n(n+1)/2}$",
+      "सममित: $2^{n(n+1)/2}$"
+     ],
+     [
+      "Reflexive and symmetric: $2^{n(n-1)/2}$",
+      "स्वतुल्य व सममित: $2^{n(n-1)/2}$"
+     ],
+     [
+      "Anti-symmetric: $2^n\\,3^{n(n-1)/2}$",
+      "प्रति-सममित: $2^n\\,3^{n(n-1)/2}$"
+     ],
+     [
+      "Equivalence: $B_n$;  $B_3=5,\\ B_4=15$",
+      "तुल्यता: $B_n$;  $B_3=5,\\ B_4=15$"
+     ],
+     [
+      "Inverse: $R^{-1}=\\{(b,a):(a,b)\\in R\\}$",
+      "प्रतिलोम: $R^{-1}=\\{(b,a):(a,b)\\in R\\}$"
+     ],
+     [
+      "Equivalence class: $[a]=\\{x: xRa\\}$",
+      "तुल्यता वर्ग: $[a]=\\{x: xRa\\}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "mindmap": {
+  "branches": [
+   {
+    "en": "Sets",
+    "hi": "समुच्चय",
+    "leaves": [
+     [
+      "Roster / set-builder",
+      "रोस्टर / समुच्चय-निर्माण"
+     ],
+     [
+      "Finite, infinite, singleton, $\\phi$",
+      "परिमित, अपरिमित, एकल, $\\phi$"
+     ],
+     [
+      "Equal vs equivalent",
+      "समान बनाम तुल्य"
+     ]
+    ]
+   },
+   {
+    "en": "Subsets",
+    "hi": "उपसमुच्चय",
+    "leaves": [
+     [
+      "$2^n$ subsets, $2^n-1$ proper",
+      "$2^n$ उपसमुच्चय, $2^n-1$ उचित"
+     ],
+     [
+      "Superset $B\\supseteq A$",
+      "अधिसमुच्चय $B\\supseteq A$"
+     ],
+     [
+      "$n(P(A))=2^n$",
+      "$n(P(A))=2^n$"
+     ]
+    ]
+   },
+   {
+    "en": "Operations",
+    "hi": "संक्रियाएँ",
+    "leaves": [
+     [
+      "$\\cup,\\ \\cap,\\ A-B=A\\cap B'$",
+      "$\\cup,\\ \\cap,\\ A-B=A\\cap B'$"
+     ],
+     [
+      "$A\\,\\Delta\\,B$, complement",
+      "$A\\,\\Delta\\,B$, पूरक"
+     ],
+     [
+      "Disjoint: $A\\cap B=\\phi$",
+      "असंयुक्त: $A\\cap B=\\phi$"
+     ]
+    ]
+   },
+   {
+    "en": "Laws",
+    "hi": "नियम",
+    "leaves": [
+     [
+      "Distributive laws",
+      "वितरण नियम"
+     ],
+     [
+      "$(A\\cup B)'=A'\\cap B'$",
+      "$(A\\cup B)'=A'\\cap B'$"
+     ],
+     [
+      "Venn: 8 regions for 3 sets",
+      "वेन: 3 समुच्चयों के 8 क्षेत्र"
+     ]
+    ]
+   },
+   {
+    "en": "Counting elements",
+    "hi": "अवयवों की गणना",
+    "leaves": [
+     [
+      "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+      "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$"
+     ],
+     [
+      "Three-set formula, exactly one / two",
+      "तीन समुच्चय सूत्र, ठीक एक / दो"
+     ],
+     [
+      "Bounds on $n(A\\cap B)$",
+      "$n(A\\cap B)$ की सीमाएँ"
+     ],
+     [
+      "Multiples: $[N/k]$, lcm",
+      "गुणज: $[N/k]$, lcm"
+     ]
+    ]
+   },
+   {
+    "en": "Cartesian product",
+    "hi": "कार्तीय गुणन",
+    "leaves": [
+     [
+      "$n(A\\times B)=mn$",
+      "$n(A\\times B)=mn$"
+     ],
+     [
+      "Distributes over $\\cup,\\cap$",
+      "$\\cup,\\cap$ पर वितरित"
+     ],
+     [
+      "Common part $n(A\\cap B)^2$",
+      "उभयनिष्ठ भाग $n(A\\cap B)^2$"
+     ]
+    ]
+   },
+   {
+    "en": "Relation",
+    "hi": "सम्बन्ध",
+    "leaves": [
+     [
+      "$R\\subseteq A\\times B$",
+      "$R\\subseteq A\\times B$"
+     ],
+     [
+      "Domain, co-domain, range",
+      "प्रांत, सहप्रान्त, परिसर"
+     ],
+     [
+      "$2^{mn}$ relations",
+      "$2^{mn}$ सम्बन्ध"
+     ]
+    ]
+   },
+   {
+    "en": "Properties",
+    "hi": "गुण",
+    "leaves": [
+     [
+      "Reflexive: $y=x$ test",
+      "स्वतुल्य: $y=x$ परीक्षण"
+     ],
+     [
+      "Symmetric: swap test",
+      "सममित: अदला-बदली परीक्षण"
+     ],
+     [
+      "Transitive: chain / counter-example",
+      "संक्रामक: शृंखला / प्रति-उदाहरण"
+     ],
+     [
+      "Anti-symmetric",
+      "प्रति-सममित"
+     ]
+    ]
+   },
+   {
+    "en": "Equivalence",
+    "hi": "तुल्यता",
+    "leaves": [
+     [
+      "R + S + T",
+      "स्व. + सम. + संक्रा."
+     ],
+     [
+      "Classes form a partition",
+      "वर्ग विभाजन बनाते हैं"
+     ],
+     [
+      "Bell numbers $B_3=5,\\ B_4=15$",
+      "बेल संख्याएँ $B_3=5,\\ B_4=15$"
+     ]
+    ]
+   },
+   {
+    "en": "Counting relations",
+    "hi": "सम्बन्धों की गणना",
+    "leaves": [
+     [
+      "Ref $2^{n(n-1)}$, Sym $2^{n(n+1)/2}$",
+      "स्व. $2^{n(n-1)}$, सम. $2^{n(n+1)/2}$"
+     ],
+     [
+      "Minimum pairs to add",
+      "जोड़े जाने वाले न्यूनतम युग्म"
+     ],
+     [
+      "Count by fixing first entry",
+      "प्रथम घटक स्थिर कर गणना"
+     ]
+    ]
+   },
+   {
+    "en": "Inverse relation",
+    "hi": "प्रतिलोम सम्बन्ध",
+    "leaves": [
+     [
+      "$R^{-1}=\\{(b,a)\\}$",
+      "$R^{-1}=\\{(b,a)\\}$"
+     ],
+     [
+      "Dom and range swap",
+      "प्रांत व परिसर बदलते हैं"
+     ],
+     [
+      "Symmetric $\\iff R=R^{-1}$",
+      "सममित $\\iff R=R^{-1}$"
+     ]
+    ]
+   }
+  ]
+ },
+ "flowcharts": [
+  {
+   "title": [
+    "Flowchart 1: Counting elements of sets",
+    "प्रवाह-चित्र 1: समुच्चयों के अवयवों की गणना"
+   ],
+   "start": [
+    "A question asks for a number of elements",
+    "प्रश्न में अवयवों की संख्या पूछी गई है"
+   ],
+   "color": "blue",
+   "steps": [
+    {
+     "q": [
+      "Two sets with sizes given?",
+      "दो समुच्चय, आकार दिए हैं?"
+     ],
+     "a": [
+      [
+       "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$; only $A$: $n(A)-n(A\\cap B)$."
+      ],
+      [
+       "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$; केवल $A$: $n(A)-n(A\\cap B)$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Three sets (survey, medals, subjects)?",
+      "तीन समुच्चय (सर्वेक्षण, पदक, विषय)?"
+     ],
+     "a": [
+      [
+       "Venn diagram; fill $A\\cap B\\cap C$ first; use the three-set formula."
+      ],
+      [
+       "वेन आरेख; पहले $A\\cap B\\cap C$ भरें; तीन समुच्चय सूत्र।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only bounds or percentages are given?",
+      "केवल सीमाएँ या प्रतिशत दिए हैं?"
+     ],
+     "a": [
+      [
+       "$\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$."
+      ],
+      [
+       "$\\max(0,n(A)+n(B)-n(U))\\le n(A\\cap B)\\le\\min(n(A),n(B))$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Multiples / divisibility in a range?",
+      "किसी परिसर में गुणज / विभाज्यता?"
+     ],
+     "a": [
+      [
+       "Count $[N/k]$; \"and\" = lcm; \"or\" = inclusion-exclusion; \"neither\" = complement."
+      ],
+      [
+       "$[N/k]$ गिनें; \"तथा\" = lcm; \"या\" = समावेशन-अपवर्जन; \"कोई नहीं\" = पूरक।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Set defined by an equation or inequality?",
+      "समुच्चय समीकरण या असमिका से परिभाषित?"
+     ],
+     "a": [
+      [
+       "Solve, keep values in the universe, then count."
+      ],
+      [
+       "हल करें, सार्वत्रिक क्षेत्र के मान रखें, फिर गिनें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "List the elements in roster form and count."
+    ],
+    [
+     "अवयवों को रोस्टर रूप में लिखकर गिनें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 2: Counting subsets",
+    "प्रवाह-चित्र 2: उपसमुच्चयों की गणना"
+   ],
+   "start": [
+    "Number of subsets with a property",
+    "किसी गुण वाले उपसमुच्चयों की संख्या"
+   ],
+   "color": "teal",
+   "steps": [
+    {
+     "q": [
+      "All subsets / power set?",
+      "सभी उपसमुच्चय / घात समुच्चय?"
+     ],
+     "a": [
+      [
+       "$2^n$ (non-empty or proper: $2^n-1$)."
+      ],
+      [
+       "$2^n$ (अरिक्त या उचित: $2^n-1$)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Subsets of $A\\times B$ of given sizes?",
+      "$A\\times B$ के दिए आकार वाले उपसमुच्चय?"
+     ],
+     "a": [
+      [
+       "$N=mn$; add ${}^NC_r$ over the allowed $r$ (or total minus the rest)."
+      ],
+      [
+       "$N=mn$; अनुमत $r$ पर ${}^NC_r$ जोड़ें (या कुल में से शेष घटाएँ)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Must contain / avoid certain elements?",
+      "कुछ अवयव अवश्य हों / न हों?"
+     ],
+     "a": [
+      [
+       "Fix them: $2^{n-k}$; \"meets $B$\" = $2^n-2^{n-n(A\\cap B)}$."
+      ],
+      [
+       "उन्हें स्थिर करें: $2^{n-k}$; \"$B$ से मिलता है\" = $2^n-2^{n-n(A\\cap B)}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Ordered pairs of subsets with a condition?",
+      "प्रतिबन्ध सहित उपसमुच्चयों के क्रमित युग्म?"
+     ],
+     "a": [
+      [
+       "Choices per element: $Y\\cap Z=\\phi\\Rightarrow 3^n$; $Y\\subseteq Z\\Rightarrow 3^n$."
+      ],
+      [
+       "प्रति अवयव विकल्प: $Y\\cap Z=\\phi\\Rightarrow 3^n$; $Y\\subseteq Z\\Rightarrow 3^n$।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Condition on the sum or on consecutive numbers: split by residues / cases and count directly."
+    ],
+    [
+     "योग या क्रमागत संख्याओं पर प्रतिबन्ध: शेषफल / स्थितियों में बाँटकर सीधे गिनें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 3: Which properties does R have?",
+    "प्रवाह-चित्र 3: R के कौन से गुण हैं?"
+   ],
+   "start": [
+    "A relation is given; classify it",
+    "एक सम्बन्ध दिया है; उसका वर्गीकरण करें"
+   ],
+   "color": "red",
+   "steps": [
+    {
+     "q": [
+      "Given as a list of pairs?",
+      "युग्मों की सूची के रूप में दिया है?"
+     ],
+     "a": [
+      [
+       "Check all $(a,a)$; mirror of each pair; every chain $(a,b),(b,c)$."
+      ],
+      [
+       "सभी $(a,a)$; प्रत्येक युग्म का दर्पण; प्रत्येक शृंखला $(a,b),(b,c)$ जाँचें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Rule can be factorised or simplified?",
+      "नियम का गुणनखण्ड या सरलीकरण सम्भव?"
+     ],
+     "a": [
+      [
+       "Rewrite it first (e.g. $x=y$ or $x=3y$; $5\\mid a-b$)."
+      ],
+      [
+       "पहले उसे पुनः लिखें (जैसे $x=y$ या $x=3y$; $5\\mid a-b$)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Reflexive?",
+      "स्वतुल्य?"
+     ],
+     "a": [
+      [
+       "Put $y=x$; watch $0$ and negative numbers."
+      ],
+      [
+       "$y=x$ रखें; $0$ व ऋणात्मक संख्याओं पर ध्यान दें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Symmetric?",
+      "सममित?"
+     ],
+     "a": [
+      [
+       "Swap $x,y$ in the rule."
+      ],
+      [
+       "नियम में $x,y$ बदलें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Transitive?",
+      "संक्रामक?"
+     ],
+     "a": [
+      [
+       "Combine the two conditions; else try $1,\\tfrac12,-1$ or irrationals for a counter-example."
+      ],
+      [
+       "दोनों प्रतिबन्ध मिलाएँ; अन्यथा प्रति-उदाहरण हेतु $1,\\tfrac12,-1$ या अपरिमेय लें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Relation on pairs $(a,b)R(c,d)$?",
+      "युग्मों पर सम्बन्ध $(a,b)R(c,d)$?"
+     ],
+     "a": [
+      [
+       "Look for a form $f(a,b)=f(c,d)$: then it is an equivalence."
+      ],
+      [
+       "$f(a,b)=f(c,d)$ रूप खोजें: तब यह तुल्यता है।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "All three hold: equivalence relation; describe the classes."
+    ],
+    [
+     "तीनों सत्य: तुल्यता सम्बन्ध; वर्गों का वर्णन करें।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 4: Least pairs to add",
+    "प्रवाह-चित्र 4: जोड़े जाने वाले न्यूनतम युग्म"
+   ],
+   "start": [
+    "Make R reflexive / symmetric / transitive / equivalence",
+    "R को स्वतुल्य / सममित / संक्रामक / तुल्यता बनाना है"
+   ],
+   "color": "orange",
+   "steps": [
+    {
+     "q": [
+      "Only reflexive?",
+      "केवल स्वतुल्य?"
+     ],
+     "a": [
+      [
+       "Add the missing $(a,a)$: $n-$(diagonal pairs present)."
+      ],
+      [
+       "अनुपस्थित $(a,a)$ जोड़ें: $n-$(उपस्थित विकर्ण युग्म)।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Only symmetric?",
+      "केवल सममित?"
+     ],
+     "a": [
+      [
+       "Add the mirror of each non-diagonal pair that lacks one."
+      ],
+      [
+       "प्रत्येक बिना दर्पण वाले अविकर्ण युग्म का दर्पण जोड़ें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Symmetric and transitive?",
+      "सममित तथा संक्रामक?"
+     ],
+     "a": [
+      [
+       "Make it symmetric, then close under chains; $(a,a)$ appears for every $a$ that is related to something."
+      ],
+      [
+       "सममित बनाएँ, फिर शृंखलाओं से पूर्ण करें; जो $a$ किसी से सम्बन्धित है उसके लिए $(a,a)$ आएगा।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Equivalence?",
+      "तुल्यता?"
+     ],
+     "a": [
+      [
+       "Blocks of connected elements; total $=\\sum s_i^2$ ($s_i$ = block sizes); subtract pairs already present."
+      ],
+      [
+       "जुड़े अवयवों के खण्ड; कुल $=\\sum s_i^2$ ($s_i$ = खण्डों के आकार); उपस्थित युग्म घटाएँ।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Transitive only: add $(a,c)$ for each chain and repeat until nothing changes."
+    ],
+    [
+     "केवल संक्रामक: प्रत्येक शृंखला हेतु $(a,c)$ जोड़ें, परिवर्तन रुकने तक दोहराएँ।"
+    ]
+   ]
+  },
+  {
+   "title": [
+    "Flowchart 5: Counting relations",
+    "प्रवाह-चित्र 5: सम्बन्धों की गणना"
+   ],
+   "start": [
+    "How many relations / how many pairs in R?",
+    "कितने सम्बन्ध / R में कितने युग्म?"
+   ],
+   "color": "violet",
+   "steps": [
+    {
+     "q": [
+      "Number of all relations?",
+      "सभी सम्बन्धों की संख्या?"
+     ],
+     "a": [
+      [
+       "$2^{mn}$ from $A$ to $B$; $2^{n^2}$ on $A$."
+      ],
+      [
+       "$A$ से $B$: $2^{mn}$; $A$ पर: $2^{n^2}$।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "With a property (reflexive, symmetric, ...)?",
+      "किसी गुण सहित (स्वतुल्य, सममित, ...)?"
+     ],
+     "a": [
+      [
+       "$2^{n(n-1)}$, $2^{n(n+1)/2}$, $2^{n(n-1)/2}$; equivalence $B_n$; \"not\" = total minus."
+      ],
+      [
+       "$2^{n(n-1)}$, $2^{n(n+1)/2}$, $2^{n(n-1)/2}$; तुल्यता $B_n$; \"नहीं\" = कुल में से घटाएँ।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Must contain given pairs and be reflexive and transitive?",
+      "दिए युग्म समाहित हों तथा स्वतुल्य व संक्रामक हो?"
+     ],
+     "a": [
+      [
+       "Start from the forced pairs and list the possible additions case by case."
+      ],
+      [
+       "अनिवार्य युग्मों से शुरू कर सम्भव जोड़ स्थितिवार सूचीबद्ध करें।"
+      ]
+     ]
+    },
+    {
+     "q": [
+      "Elements of one relation given by a rule?",
+      "नियम से दिए एक सम्बन्ध के अवयव?"
+     ],
+     "a": [
+      [
+       "Fix the first entry (or the value of the expression), count, add."
+      ],
+      [
+       "प्रथम घटक (या व्यंजक का मान) स्थिर करें, गिनें, जोड़ें।"
+      ]
+     ]
+    }
+   ],
+   "else": [
+    [
+     "Difference of two relations $R_1-R_2$: count $R_1$, subtract the common pairs."
+    ],
+    [
+     "दो सम्बन्धों का अन्तर $R_1-R_2$: $R_1$ गिनें, उभयनिष्ठ युग्म घटाएँ।"
+    ]
+   ]
+  }
+ ]
+}

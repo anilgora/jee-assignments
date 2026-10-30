@@ -37,7 +37,7 @@ Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_
 | Definite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Definite_Integration/QB.pdf | — | — | DONE* |
 | Differential Equation | chapters/Differential_Equation/Theory.pdf | chapters/Differential_Equation/XII.pdf | chapters/Differential_Equation/XIII.pdf | — | chapters/Differential_Equation/QB.pdf | — | DPP | DONE* |
 | Area Under Curve | chapters/Area_Under_Curve/Theory.pdf | chapters/Area_Under_Curve/XII.pdf | chapters/Area_Under_Curve/XIII.pdf | — | chapters/Area_Under_Curve/QB.pdf | — | DPP | DONE* |
-| Sets & Relation (NOT in master index) | chapters/01_Sets_&_Relation/THEORY SHEET.pdf | chapters/01_Sets_&_Relation/XII.pdf | chapters/01_Sets_&_Relation/XIII.pdf | — | chapters/01_Sets_&_Relation/QB.pdf | master Quick Review section (see note) | DPP | WAITING for master index entry |
+| Sets & Relation (NOT in master index) | chapters/01_Sets_&_Relation/THEORY SHEET.pdf | chapters/01_Sets_&_Relation/XII.pdf | chapters/01_Sets_&_Relation/XIII.pdf | — | chapters/01_Sets_&_Relation/QB.pdf | — (built on request; master prompts taken from Vector 3D #31-52) | DPP | DONE |
 
 ## Unassigned PDFs
 
@@ -61,3 +61,5 @@ _Inventory re-checked 2026-10-18 (later scheduled run): still 123 PDFs, no new f
 - **Sets & Relation cannot be built yet.** It is not a chapter in the skill's master_index.json (30 chapters). Its prompts appear to have been merged into the "Vector 3D" section by the master split: Vector 3D prompts #31-52 are "Define superset", "Power set", "Cartesian Product of two sets", "Relation", "Types of a relation", "Inverse of a relation". To enable it, add either `jee-inputs/quick_review_all_chapters.pdf` (so the index can be re-split with a Sets & Relation chapter) or a corrected `jee-inputs/master_index.json` that has a "Sets & Relation" chapter (and Vector 3D without those prompts), and state where in the chapter order it goes.
 
 _Inventory refreshed 2026-10-30: no chapter in the master index is ready to build._
+
+_2026-10-30 (later, on the owner's request): Sets & Relation built in `jee-kit-output/Sets_Relation/` even though it is not in the master index. See its REPORT.md for how the prompt list was rebuilt._
