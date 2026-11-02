@@ -1,0 +1,252 @@
+# Master index review - Vector 3D (corrected 2026-11-02)
+
+Source: Quick_Review_English_Mathematics_v2.pdf, pages 57-63, transcribed from the page images (not OCR).
+jee-inputs/master_index.json = the skill index with only the Vector 3D entry replaced. Pages 64-65 of the master are "Sets & Relations" (unit Differential Calculus, 52 prompts) - not one of the 30 chapters, so not indexed.
+
+- **Introduction**
+  - 1. Define vector, initial point, terminal point, head and tail of a vector
+  - 2. What is the direction of a vector?
+  - 3. What is the magnitude of a vector?
+  - 4. What is line of support of a vector?
+- **Important Definitions**
+  - 5. Define null vector and how is it represented?
+  - 6. Define unit vector and how is it represented?
+  - 7. How to find magnitude of a vector expressed in i, j and k form?
+  - 8. What is the role of unit vector?
+  - 9. When are two vectors equal?
+  - 10. How to equate two vectors expressed in i, j and k form?
+  - 11. How is the angle between two vectors defined and how is angle denoted?
+  - 12. What is the range of angle between two vectors?
+  - 13. How to calculate angle if head and tail are placed together?
+  - 14. What do you mean by collinear vectors?
+  - 15. How to check whether two collinear vectors are like or unlike vectors?
+  - 16. What is the condition of two vectors, expressed in i, j and k form, to be collinear?
+  - 17. How to assume a vector parallel to a given vector p?
+  - 18. What do you mean by coplanar vectors?
+  - 19. How to check coplanarity of two vectors?
+  - 20. What to keep in mind while shifting vectors in Mathematics?
+- **Addition of vectors**
+  - 21. How to write relation between vectors forming a closed figure?
+  - 22. How to write diagonal vectors of a parallelogram whose adjacent side vectors are a and b?
+  - 23. How to add two vectors expressed in i, j and k form?
+  - 24. What do you mean by additive inverse?
+  - 25. Write expression of triangle inequality.
+  - 26. What is the condition on two vectors in case of equality in triangle inequality?
+- **Multiplication of a vector by scalar**
+  - 27. What is the effect on magnitude of a vector if a vector gets multiplied by λ?
+  - 28. What is the effect on direction of a vector if a vector gets multiplied by λ?
+- **Coordinate System in 3D**
+  - 29. How to define x, y and z coordinates of a point?
+  - 30. What is the condition on coordinates if P(a,b,c) lies on x-axis/y-axis/z-axis?
+  - 31. What is the condition on coordinates if P(a,b,c) lies on XY plane/YZ plane/ZX plane?
+  - 32. What are coordinates of foot of perpendicular from P(a,b,c) on x-axis/y-axis/z-axis?
+  - 33. What are coordinates of foot of perpendicular from P(a,b,c) on XY plane/YZ plane/ZX plane?
+  - 34. What is the distance of point P(a,b,c) from x-axis/y-axis/z-axis?
+  - 35. What is the distance of point P(a,b,c) from XY plane/YZ plane/ZX plane?
+  - 36. How to find new coordinates of a point if origin is shifted to (a,b,c)?
+- **Position Vector and Distance Formula**
+  - 37. How to find position vector of point P(a,b,c)?
+  - 38. How to find coordinates of a point if position vector is given and vice versa?
+  - 39. How to express vector joining two points A and B in terms of their position vectors/coordinates?
+  - 40. What is the distance formula in 3D?
+  - 41. How to find distance between two points expressed in form of position vectors/coordinates?
+- **Section Formulae**
+  - 42. Write expression for section formula for internal division in form of position vectors/coordinates?
+  - 43. Write expression for section formula for external division in form of position vectors/coordinates?
+  - 44. How to find centroid of a triangle when all three vertices are given?
+  - 45. How to find Incenter/Excenters of a triangle when all three vertices are given?
+  - 46. What is the formula for position vector of circumcenter of a triangle?
+  - 47. What is the formula for position vector of orthocenter of a triangle?
+- **Collinearity of 3 points**
+  - 48. How to check whether three given points are collinear?
+  - 49. Explain the note on linear relation between position vectors of three collinear points.
+- **Linearly Independent and Dependent Vectors**
+  - 50. What do you mean by linear combination of vectors?
+  - 51. What do you mean by linearly independent vectors and linearly dependent vectors?
+  - 52. When can we equate coefficients of vectors on both sides?
+  - 53. When do two vectors are linearly independent?
+  - 54. When do three vectors are linearly independent?
+  - 55. When do more than three vectors are linearly independent?
+  - 56. Explain chivas theorem.
+- **Vector Equation of Line**
+  - 57. How to write vector equation of line and what to keep in mind?
+  - 58. How to find direction vector of a line passing through 2 points?
+  - 59. What does r denotes in equation of a line?
+  - 60. How to assume a point on a line whose equation is known?
+  - 61. How to find direction vector of a line whose equation is known?
+- **Classification of line**
+  - 62. How to find point of intersection of two intersecting lines whose equations are given?
+  - 63. How to check whether lines are intersecting or skew if their equations are known?
+  - 64. How to check whether lines are parallel if their equations are known?
+  - 65. How to check whether parallel lines are coincident or disjoint if their equations are known?
+  - 66. How to check whether two equations expressed differently represent same line?
+- **Vector Equation of Angle Bisector**
+  - 67. How to find vector in direction of angle bisectors of two lines whose direction vectors are known?
+- **Dot Product**
+  - 68. Write expression of a.b
+  - 69. When is dot product of two vectors positive/zero/negative?
+  - 70. Does order of vectors matter in dot product?
+  - 71. What is the formula of a.b if a and b are expressed in i, j and k form?
+  - 72. What is the condition for two vectors to be perpendicular?
+  - 73. What do you mean by squaring a vector?
+  - 74. What pattern is followed while we do squaring of sum/difference of two or more vectors?
+  - 75. How to find magnitude of a vector which can not be expressed in i, j and k form?
+- **Application of Dot product**
+  - 76. How to find angle between two vectors?
+  - 77. How to find angle between two lines whose equations are known?
+  - 78. What does projection of one vector along another vector represent?
+  - 79. What is the formula for projection of p along q?
+  - 80. Can projection be negative? If yes then explain why?
+  - 81. How to find vector component of one vector along/perpendicular to another vector?
+  - 82. How to find foot of perpendicular from a point on a line whose equation is given?
+  - 83. How to find image of a point on a line whose equation is given?
+  - 84. How to find distance of a point from a line by formula of cross product?
+- **Linear Combination theorem in plane**
+  - 85. Explain linear combination theorem in plane
+  - 86. How to assume a vector in plane of two vectors a and b?
+  - 87. How to calculate unknown scalars in questions of linear combination theorem in plane?
+- **Cross Product**
+  - 88. Write expression for cross product.
+  - 89. What is the direction of a×b?
+  - 90. What is the relation between a×b and b×a?
+  - 91. How to compute a×b when a and b are expressed in i, j and k form?
+  - 92. What is the relation between a and b if a×b = 0?
+  - 93. What is cross product of two vectors taken from i, j and k?
+  - 94. How to assume a vector perpendicular to a and b?
+  - 95. If a×b = a×c then find a in terms of b and c?
+- **Application of cross product**
+  - 96. How to express equation of line, expressed in cross product form, into vector form?
+  - 97. How to find area of triangle if side vectors are known?
+  - 98. How to find area of triangle if vertices are given?
+  - 99. Write expression of area of triangle whose vertices are a, b and c?
+  - 100. How to find area of a parallelogram?
+  - 101. How to find area of quadrilateral?
+- **Direction Cosines and Direction ratios**
+  - 102. Define direction angles and direction cosines
+  - 103. How are direction cosines generally denoted?
+  - 104. How to find direction cosines of any direction if vector along that direction is known and vice versa?
+  - 105. What are direction cosines of coordinate axes?
+  - 106. Define direction ratios.
+  - 107. How to find direction ratios of any direction if vector along that direction is known and vice versa?
+  - 108. What is the relation between direction cosines and unit vector along that direction?
+  - 109. How to find direction cosines of a line if two relations involving l, m and n are given?
+  - 110. How to find angle between two lines if direction ratios of lines are known?
+- **Symmetric Form of Line**
+  - 111. How to write symmetric form of line and what to keep in mind?
+  - 112. How to convert symmetric form of line to vector form?
+  - 113. What to keep in mind while converting several different symmetric forms to vector forms?
+- **Shortest Distance between two lines**
+  - 114. What does the shortest distance between two lines mean?
+  - 115. What is the shortest distance between two intersecting lines?
+  - 116. How to find shortest distance between two parallel lines?
+  - 117. What is the formula of shortest distance between two skew lines?
+  - 118. What does formula of shortest distance between two skew lines represent?
+  - 119. How to find equation of line of shortest distance between two skew lines?
+- **Plane**
+  - 120. Define Plane
+  - 121. What is normal vector of a plane?
+  - 122. What is general equation of plane?
+  - 123. What is the relation between normal vector and cartesian equation of plane?
+  - 124. How to convert dot product form of equation of plane to cartesian form?
+  - 125. What to keep in mind while finding cartesian equation of plane?
+  - 126. How to find normal vector of a plane if two vectors parallel to the plane are given?
+  - 127. Write equations of coordinate planes.
+  - 128. How to find point of intersection of a line and a plane?
+- **Angle between two planes**
+  - 129. How to find angle between two planes?
+  - 130. How to check whether two given planes are parallel?
+  - 131. How to check whether two given planes are perpendicular?
+- **Angle between line and plane**
+  - 132. How to find angle between line and plane?
+  - 133. How to check whether a line is perpendicular to a plane?
+  - 134. How to check whether a line is parallel to a plane?
+  - 135. How to check whether a line is contained in a plane?
+- **Equation of plane**
+  - 136. Write expression for parametric form of equation of plane.
+  - 137. What does p and q represents in parametric form?
+  - 138. How to convert parametric form of equation of plane into cartesian form?
+  - 139. Define x-intercept/y-intercept/z-intercept of a plane?
+  - 140. What is intercept form of equation of plane and when to use it?
+  - 141. How to find intercepts of plane on coordinate axes if cartesian form is given?
+- **Distance of a Point from a plane**
+  - 142. What is the formula to find distance of a point from plane?
+  - 143. What is the formula to find distance between two parallel planes?
+- **Position of two points wrt a plane**
+  - 144. How to find relative positions of two given points wrt a given plane?
+- **Angle Bisector Plane between two planes**
+  - 145. What is the definition of angle bisector plane of two planes?
+  - 146. What is formula for angle bisector plane of two planes?
+  - 147. How to differentiate acute and obtuse angle bisector from the equations of angle bisectors?
+  - 148. What do you mean by angle bisector containing a fixed point?
+  - 149. How to find equation of angle bisector containing a fixed point?
+- **Family of planes**
+  - 150. How to find equation of a plane passing through line of intersection of two planes P1 and P2?
+  - 151. How to find equation of a plane containing a line whose equation is given in unsymmetrical form?
+- **Line of intersection of two planes**
+  - 152. How to find equation of line of intersection of two given planes?
+- **Unsymmetrical Form of a line**
+  - 153. How does unsymmetrical form of a line represented?
+  - 154. What does unsymmetrical form of a line represent?
+- **Equation of plane**
+  - 155. How to find distance of a point from a given plane measured parallel to a given line?
+  - 156. How to find distance of a point from a given line measured parallel to a given plane?
+  - 157. How to find foot of perpendicular from a point on a given plane?
+- **Concept of Image in 3D**
+  - 158. How to find image of a point wrt a given plane?
+  - 159. How to find image of a line wrt another parallel line?
+  - 160. How to find image of a line wrt another intersecting line?
+  - 161. How to find image of a line wrt a plane if line intersects the plane?
+  - 162. How to find image of a line wrt a plane if line is parallel to the plane?
+  - 163. How to find image of a plane wrt another parallel plane?
+  - 164. How to find image of a plane wrt another intersecting plane?
+  - 165. How to find image of a point wrt a given plane parallel to a given line?
+- **Tetrahedron and its properties**
+  - 166. What is a tetrahedron?
+  - 167. Find number of faces, vertices and edges of a tetrahedron.
+  - 168. What do you mean by lateral edges for a tetrahedron?
+  - 169. What do you mean by coterminus edges for a tetrahedron?
+  - 170. What is the formula for volume of tetrahedron?
+  - 171. How to find height of a tetrahedron?
+  - 172. What is formula of position vector of center of tetrahedron?
+  - 173. What is point of intersection of lines joining mid points of opposite edges?
+  - 174. What is point of intersection of lines joining all vertices to centroids of opposite faces?
+  - 175. What do you mean by regular tetrahedron?
+- **Parallelopiped and its properties**
+  - 176. What is a parallelopiped?
+  - 177. Find number of faces, vertices and edges of a parallelopiped.
+  - 178. Find number of face diagonals and body diagonals.
+  - 179. What is the formula for volume of parallelopiped?
+  - 180. How to find height of a parallelopiped?
+  - 181. How to find position vector of center of tetrahedron?
+- **STP**
+  - 182. Write expression of (a×b).c
+  - 183. Find value of (a×b).c if vectors are expressed in i, j and k form.
+  - 184. What is the effect on value of STP if we change vectors in cyclic order?
+  - 185. What is the effect on value of STP if we interchange two vectors?
+  - 186. Can dot and cross be interchanged in STP?
+  - 187. What is the value of STP of i, j and k?
+  - 188. What is the effect on value of STP if we multiply one vector by a real number k?
+  - 189. How to find STP of three vectors if they are expressed as linear combination of other three vectors?
+  - 190. How to find STP of three vectors in terms of dot products between them?
+  - 191. How to find volume of parallelopiped?
+  - 192. How to find volume of tetrahedron?
+  - 193. What is value of [a+b b+c c+a]?
+- **Coplanarity of three vectors**
+  - 194. What is the condition for three vectors to be coplanar?
+  - 195. How to check whether 4 points are coplanar?
+  - 196. How to check whether two lines are coplanar?
+- **VTP**
+  - 197. What is the direction of (a×b)×c?
+  - 198. What is the formula of (a×b)×c?
+  - 199. How to assume a vector coplanar with p and q and perpendicular to r?
+  - 200. What is value of [a×b b×c c×a]?
+  - 201. What is the result of (a×b).(c×d)?
+  - 202. How to apply vtp results if more than three vectors are given?
+- **Linear Combination theorem in space**
+  - 203. Explain linear combination theorem in space.
+  - 204. What is the condition to express any vector as linear combination of three vectors?
+  - 205. How to express r in terms of a×b, b×c and c×a?
+- **Vector Equation**
+  - 206. What to keep in mind while solving vector equation?
+- **Line of Greatest slope**
+  - 207. How to find line of greatest slope?
