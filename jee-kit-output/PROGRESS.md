@@ -18,3 +18,18 @@ Trigonometric_Ratio: DONE 2026-10-17
 Trigonometric_Equation: DONE 2026-10-17
 Solution_of_Triangle: DONE 2026-10-17
 Vector_3D: DONE 2026-10-17
+Function: DONE 2026-10-17
+Inverse_Trigonometric_Function: DONE 2026-10-17
+Limit: DONE 2026-10-17
+Continuity_Differentiability: DONE 2026-10-18
+Method_of_Differentiation: DONE 2026-10-18
+Tangent_Normal: DONE 2026-10-18
+Monotonicity: DONE 2026-10-18
+Maxima_and_Minima: DONE 2026-10-18
+Indefinite_Integration: DONE 2026-10-18
+Definite_Integration: DONE 2026-10-18
+Differential_Equation: DONE 2026-10-18
+Area_Under_Curve: DONE 2026-10-18
+No chapter ready 2026-10-18 (all 30 chapters DONE)
+No chapter ready 2026-10-30 (30 index chapters DONE per this log, output folders removed by sync commit 65968b9; Sets & Relation files present but chapter not in master index - see INVENTORY.md)
+Sets_Relation: DONE 2026-10-30 (built on request; chapter not in master index)

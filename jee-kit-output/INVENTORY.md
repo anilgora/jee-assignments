@@ -1,47 +1,65 @@
 # Inventory
 
 ## Tool check
-READY: all tools present (2026-10-17, re-checked this run for Vector 3D)
+READY: all tools present (re-checked 2026-10-30, scheduled run: no chapter ready)
 
 Roles: Theory, XII, XIII, DPP, QB. Group folders (Conic_Section, Application_of_Derivative, Integration) hold the combined theory/XII/XIII/DPP files shared by their chapters; each such chapter has its own QB folder. Logarithm needs only Theory and DPP.
 
 | Chapter | Theory | XII | XIII | DPP | QB | Missing (required) | Optional absent | Status |
 |---|---|---|---|---|---|---|---|---|
-| Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | DONE |
-| Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | DONE |
-| Sequence & Progression | chapters/Sequence_Progression/Theory.pdf | chapters/Sequence_Progression/XII.pdf | chapters/Sequence_Progression/XIII.pdf | chapters/Sequence_Progression/DPP.pdf | chapters/Sequence_Progression/QB.pdf | — | — | DONE |
-| Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | DONE |
-| Matrices | chapters/Matrices/Theory.pdf | chapters/Matrices/XII.pdf | chapters/Matrices/XIII.pdf | chapters/Matrices/DPP.pdf | chapters/Matrices/QB.pdf | — | — | DONE |
-| Permutations & Combinations | chapters/Permutations_Combinations/Theory.pdf | chapters/Permutations_Combinations/XII.pdf | chapters/Permutations_Combinations/XIII.pdf | chapters/Permutations_Combinations/DPP.pdf | chapters/Permutations_Combinations/QB.pdf | — | — | DONE |
-| Binomial Theorem | chapters/Binomial_Theorem/Theory.pdf | chapters/Binomial_Theorem/XII.pdf | chapters/Binomial_Theorem/XIII.pdf | chapters/Binomial_Theorem/DPP.pdf | chapters/Binomial_Theorem/QB.pdf | — | — | DONE |
-| Complex Number | chapters/Complex_Number/Theory.pdf | chapters/Complex_Number/XII.pdf | chapters/Complex_Number/XIII.pdf | chapters/Complex_Number/DPP.pdf | chapters/Complex_Number/QB.pdf | — | — | DONE |
-| Probability | chapters/Probability/Theory.pdf | chapters/Probability/XII.pdf | chapters/Probability/XIII.pdf | chapters/Probability/DPP.pdf | chapters/Probability/QB.pdf | — | — | DONE |
-| Straight Line | chapters/Straight_Line/Theory.pdf | chapters/Straight_Line/XII.pdf | chapters/Straight_Line/XIII.pdf | chapters/Straight_Line/DPP.pdf | chapters/Straight_Line/QB.pdf | — | — | DONE |
-| Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | DONE |
-| Parabola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Parabola/QB.pdf | — | — | DONE |
-| Ellipse | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Ellipse/QB.pdf | — | — | DONE |
-| Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | DONE |
-| Trigonometric Ratio | chapters/Trigonometric_Ratio/Theory.pdf | chapters/Trigonometric_Ratio/XII.pdf | chapters/Trigonometric_Ratio/XIII.pdf | chapters/Trigonometric_Ratio/DPP.pdf | chapters/Trigonometric_Ratio/QB.pdf | — | — | DONE |
-| Trigonometric Equation | chapters/Trigonometric_Equation/Theory.pdf | chapters/Trigonometric_Equation/XII.pdf | chapters/Trigonometric_Equation/XIII.pdf | chapters/Trigonometric_Equation/DPP.pdf | chapters/Trigonometric_Equation/QB.pdf | — | — | DONE |
-| Solution of Triangle | chapters/Solution_of_Triangle/Theory.pdf | chapters/Solution_of_Triangle/XII.pdf | chapters/Solution_of_Triangle/XIII.pdf | chapters/Solution_of_Triangle/DPP.pdf | — | — | QB | DONE |
-| Vector 3D | chapters/Vector_3D/Theory.pdf | chapters/Vector_3D/XII.pdf | chapters/Vector_3D/XIII.pdf | chapters/Vector_3D/DPP.pdf | chapters/Vector_3D/QB.pdf | — | — | DONE |
-| Function | chapters/Function/Theory.pdf | chapters/Function/XII.pdf | chapters/Function/XIII.pdf | chapters/Function/DPP.pdf | chapters/Function/QB.pdf | — | — | READY |
-| Inverse Trigonometric Function | chapters/Inverse_Trigonometric_Function/Theory.pdf | chapters/Inverse_Trigonometric_Function/XII.pdf | chapters/Inverse_Trigonometric_Function/XIII.pdf | chapters/Inverse_Trigonometric_Function/DPP.pdf | chapters/Inverse_Trigonometric_Function/QB.pdf | — | — | READY |
-| Limit | chapters/Limit/Theory.pdf | chapters/Limit/XII.pdf | chapters/Limit/XIII.pdf | chapters/Limit/DPP.pdf | chapters/Limit/QB.pdf | — | — | READY |
-| Continuity & Differentiability | chapters/Continuity_Differentiability/Theory.pdf | chapters/Continuity_Differentiability/XII.pdf | chapters/Continuity_Differentiability/XIII.pdf | chapters/Continuity_Differentiability/DPP.pdf | chapters/Continuity_Differentiability/QB.pdf | — | — | READY |
-| Method of Differentiation | chapters/Method_of_Differentiation/Theory.pdf | chapters/Method_of_Differentiation/XII.pdf | chapters/Method_of_Differentiation/XIII.pdf | — | chapters/Method_of_Differentiation/QB.pdf | — | DPP | READY |
-| Tangent & Normal | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Tangent_Normal/QB.pdf | — | — | READY |
-| Monotonicity | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Monotonicity/QB.pdf | — | — | READY |
-| Maxima and Minima | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Maxima_and_Minima/QB.pdf | — | — | READY |
-| Indefinite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Indefinite_Integration/QB.pdf | — | — | READY |
-| Definite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Definite_Integration/QB.pdf | — | — | READY |
-| Differential Equation | chapters/Differential_Equation/Theory.pdf | chapters/Differential_Equation/XII.pdf | chapters/Differential_Equation/XIII.pdf | — | chapters/Differential_Equation/QB.pdf | — | DPP | READY |
-| Area Under Curve | chapters/Area_Under_Curve/Theory.pdf | chapters/Area_Under_Curve/XII.pdf | chapters/Area_Under_Curve/XIII.pdf | — | chapters/Area_Under_Curve/QB.pdf | — | DPP | READY |
+| Quadratic Equation | chapters/Quadratic_Equation/Theory.pdf | chapters/Quadratic_Equation/XII.pdf | chapters/Quadratic_Equation/XIII.pdf | chapters/Quadratic_Equation/DPP.pdf | chapters/Quadratic_Equation/QB.pdf | — | — | DONE* |
+| Logarithm | chapters/Logarithm/Theory.pdf | — | — | chapters/Logarithm/DPP.pdf | — | — | QB | DONE* |
+| Sequence & Progression | chapters/Sequence_Progression/Theory.pdf | chapters/Sequence_Progression/XII.pdf | chapters/Sequence_Progression/XIII.pdf | chapters/Sequence_Progression/DPP.pdf | chapters/Sequence_Progression/QB.pdf | — | — | DONE* |
+| Determinant | chapters/Determinant/Theory.pdf | chapters/Determinant/XII.pdf | chapters/Determinant/XIII.pdf | chapters/Determinant/DPP.pdf | chapters/Determinant/QB.pdf | — | — | DONE* |
+| Matrices | chapters/Matrices/Theory.pdf | chapters/Matrices/XII.pdf | chapters/Matrices/XIII.pdf | chapters/Matrices/DPP.pdf | chapters/Matrices/QB.pdf | — | — | DONE* |
+| Permutations & Combinations | chapters/Permutations_Combinations/Theory.pdf | chapters/Permutations_Combinations/XII.pdf | chapters/Permutations_Combinations/XIII.pdf | chapters/Permutations_Combinations/DPP.pdf | chapters/Permutations_Combinations/QB.pdf | — | — | DONE* |
+| Binomial Theorem | chapters/Binomial_Theorem/Theory.pdf | chapters/Binomial_Theorem/XII.pdf | chapters/Binomial_Theorem/XIII.pdf | chapters/Binomial_Theorem/DPP.pdf | chapters/Binomial_Theorem/QB.pdf | — | — | DONE* |
+| Complex Number | chapters/Complex_Number/Theory.pdf | chapters/Complex_Number/XII.pdf | chapters/Complex_Number/XIII.pdf | chapters/Complex_Number/DPP.pdf | chapters/Complex_Number/QB.pdf | — | — | DONE* |
+| Probability | chapters/Probability/Theory.pdf | chapters/Probability/XII.pdf | chapters/Probability/XIII.pdf | chapters/Probability/DPP.pdf | chapters/Probability/QB.pdf | — | — | DONE* |
+| Straight Line | chapters/Straight_Line/Theory.pdf | chapters/Straight_Line/XII.pdf | chapters/Straight_Line/XIII.pdf | chapters/Straight_Line/DPP.pdf | chapters/Straight_Line/QB.pdf | — | — | DONE* |
+| Circle | chapters/Circle/Theory.pdf | chapters/Circle/XII.pdf | chapters/Circle/XIII.pdf | chapters/Circle/DPP.pdf | chapters/Circle/QB.pdf | — | — | DONE* |
+| Parabola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Parabola/QB.pdf | — | — | DONE* |
+| Ellipse | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Ellipse/QB.pdf | — | — | DONE* |
+| Hyperbola | chapters/Conic_Section/Theory.pdf | chapters/Conic_Section/XII.pdf | chapters/Conic_Section/XIII.pdf | chapters/Conic_Section/DPP.pdf | chapters/Hyperbola/QB.pdf | — | — | DONE* |
+| Trigonometric Ratio | chapters/Trigonometric_Ratio/Theory.pdf | chapters/Trigonometric_Ratio/XII.pdf | chapters/Trigonometric_Ratio/XIII.pdf | chapters/Trigonometric_Ratio/DPP.pdf | chapters/Trigonometric_Ratio/QB.pdf | — | — | DONE* |
+| Trigonometric Equation | chapters/Trigonometric_Equation/Theory.pdf | chapters/Trigonometric_Equation/XII.pdf | chapters/Trigonometric_Equation/XIII.pdf | chapters/Trigonometric_Equation/DPP.pdf | chapters/Trigonometric_Equation/QB.pdf | — | — | DONE* |
+| Solution of Triangle | chapters/Solution_of_Triangle/Theory.pdf | chapters/Solution_of_Triangle/XII.pdf | chapters/Solution_of_Triangle/XIII.pdf | chapters/Solution_of_Triangle/DPP.pdf | — | — | QB | DONE* |
+| Vector 3D | chapters/Vector_3D/Theory.pdf | chapters/Vector_3D/XII.pdf | chapters/Vector_3D/XIII.pdf | chapters/Vector_3D/DPP.pdf | chapters/Vector_3D/QB.pdf | — | — | DONE* |
+| Function | chapters/Function/Theory.pdf | chapters/Function/XII.pdf | chapters/Function/XIII.pdf | chapters/Function/DPP.pdf | chapters/Function/QB.pdf | — | — | DONE* |
+| Inverse Trigonometric Function | chapters/Inverse_Trigonometric_Function/Theory.pdf | chapters/Inverse_Trigonometric_Function/XII.pdf | chapters/Inverse_Trigonometric_Function/XIII.pdf | chapters/Inverse_Trigonometric_Function/DPP.pdf | chapters/Inverse_Trigonometric_Function/QB.pdf | — | — | DONE* |
+| Limit | chapters/Limit/Theory.pdf | chapters/Limit/XII.pdf | chapters/Limit/XIII.pdf | chapters/Limit/DPP.pdf | chapters/Limit/QB.pdf | — | — | DONE* |
+| Continuity & Differentiability | chapters/Continuity_Differentiability/Theory.pdf | chapters/Continuity_Differentiability/XII.pdf | chapters/Continuity_Differentiability/XIII.pdf | chapters/Continuity_Differentiability/DPP.pdf | chapters/Continuity_Differentiability/QB.pdf | — | — | DONE* |
+| Method of Differentiation | chapters/Method_of_Differentiation/Theory.pdf | chapters/Method_of_Differentiation/XII.pdf | chapters/Method_of_Differentiation/XIII.pdf | — | chapters/Method_of_Differentiation/QB.pdf | — | DPP | DONE* |
+| Tangent & Normal | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Tangent_Normal/QB.pdf | — | — | DONE* |
+| Monotonicity | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Monotonicity/QB.pdf | — | — | DONE* |
+| Maxima and Minima | chapters/Application_of_Derivative/Theory.pdf | chapters/Application_of_Derivative/XII.pdf | chapters/Application_of_Derivative/XIII.pdf | chapters/Application_of_Derivative/DPP.pdf | chapters/Maxima_and_Minima/QB.pdf | — | — | DONE* |
+| Indefinite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Indefinite_Integration/QB.pdf | — | — | DONE* |
+| Definite Integration | chapters/Integration/Theory.pdf | chapters/Integration/XII.pdf | chapters/Integration/XIII.pdf | chapters/Integration/DPP.pdf | chapters/Definite_Integration/QB.pdf | — | — | DONE* |
+| Differential Equation | chapters/Differential_Equation/Theory.pdf | chapters/Differential_Equation/XII.pdf | chapters/Differential_Equation/XIII.pdf | — | chapters/Differential_Equation/QB.pdf | — | DPP | DONE* |
+| Area Under Curve | chapters/Area_Under_Curve/Theory.pdf | chapters/Area_Under_Curve/XII.pdf | chapters/Area_Under_Curve/XIII.pdf | — | chapters/Area_Under_Curve/QB.pdf | — | DPP | DONE* |
+| Sets & Relation (NOT in master index) | chapters/01_Sets_&_Relation/THEORY SHEET.pdf | chapters/01_Sets_&_Relation/XII.pdf | chapters/01_Sets_&_Relation/XIII.pdf | — | chapters/01_Sets_&_Relation/QB.pdf | — (built on request; master prompts taken from Vector 3D #31-52) | DPP | DONE |
 
 ## Unassigned PDFs
 
-None.
+None from chapter folders. `papers/` holds 14 test-paper PDFs (RPT/PRT papers) - not chapter material, ignored.
 
 ## Chapters where two files could fit the same role
 
 None found — each folder has at most one file per role.
+
+## Note on the combined Integration DPP
+`chapters/Integration/DPP.pdf` holds two series that both start at DPP #1: pages 1-56 are the Indefinite Integration DPPs #1-5, and pages 57-124 are the Definite Integration DPPs #1-5. In the kits, the Definite series is keyed DPP-D1 ... DPP-D5. The Definite Integration QB is numbered 21-88 (it continues the Indefinite QB 1-20).
+
+_Inventory refreshed 2026-10-18 (Area Under Curve run): all 123 PDFs re-listed; no new or changed files since the previous run. Every chapter in the master index is now DONE._
+
+_Inventory re-checked 2026-10-18 (later scheduled run): still 123 PDFs, no new files merged from main. All 30 chapters DONE; no chapter ready to build._
+
+## Run 2026-10-30 (scheduled)
+
+- Merged origin/main: 4 new PDFs in `chapters/01_Sets_&_Relation/` (THEORY SHEET 15 pp, XII 67 pp, XIII 69 pp, QB 23 pp - roles confirmed from first pages). No DPP. 141 PDFs in total (127 under chapters/, 14 under papers/).
+- **\* DONE status - outputs missing from the branch.** The commit 65968b9 "Sync local files and folders to GitHub" (2026-10-18 15:27 +0530, made on this branch) deleted every `jee-kit-output/<Slug>/` folder, so no `REPORT.md` exists on the branch now. I did NOT rebuild them: PROGRESS.md records all 30 as DONE and every REPORT.md is still in git history. Decision recorded here; to restore them on the branch run `git checkout 65968b9~1 -- jee-kit-output` (then re-apply this INVENTORY/PROGRESS), or delete the PROGRESS line of a chapter you want rebuilt and say so in the routine prompt.
+- **Sets & Relation cannot be built yet.** It is not a chapter in the skill's master_index.json (30 chapters). Its prompts appear to have been merged into the "Vector 3D" section by the master split: Vector 3D prompts #31-52 are "Define superset", "Power set", "Cartesian Product of two sets", "Relation", "Types of a relation", "Inverse of a relation". To enable it, add either `jee-inputs/quick_review_all_chapters.pdf` (so the index can be re-split with a Sets & Relation chapter) or a corrected `jee-inputs/master_index.json` that has a "Sets & Relation" chapter (and Vector 3D without those prompts), and state where in the chapter order it goes.
+
+_Inventory refreshed 2026-10-30: no chapter in the master index is ready to build._
+
+_2026-10-30 (later, on the owner's request): Sets & Relation built in `jee-kit-output/Sets_Relation/` even though it is not in the master index. See its REPORT.md for how the prompt list was rebuilt._

@@ -1,5 +1,5 @@
 ---
-name: jee-advanced-difficulty-calibrated
+name: "jee-advanced-difficulty-calibrated"
 description: Rate JEE / JEE Advanced mathematics questions on the user's own 0-5 difficulty scale, calibrated against their ratings of 172 official JEE Advanced questions (2021-2026), and produce an Excel report with question-wise levels, justifications, the level distribution and the marks-weighted difficulty index compared with official papers, applying the user's rules for equivalence relations (+0.5) and multi-concept multi-correct questions (floor 2.5). Use this whenever the user uploads a question paper, mock test, assignment, DPP or question bank with maths questions and asks how hard it is, what level each question is, for a difficulty index, or how it compares with JEE Advanced - including casual phrasings like "rate this paper", "difficulty of this mock", "tag levels", "is this Advanced standard". Prefer this calibrated evaluator over any generic JEE difficulty skill whenever the user wants ratings that match their own standard.
 ---
 
